@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 2.1 - Creating and configuring ASP.NET Core applications in Linux
 
-_Applies to:_ &nbsp;
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
 This article introduces how to create and configure ASP.NET Core applications in Linux.
 
@@ -36,7 +36,7 @@ You will use the `dotnet new` command to create your first ASP.NET Core project 
 
 You will use the .NET CLI to create your first web application by using the following command:
 
-```console
+```dotnetcli
 dotnet new <template_type> -n <project_name> -o <output_directory>
 ```
 
@@ -50,7 +50,7 @@ You are welcome to find creative names for the directory and project itself. How
 
 To create the project, run the following command:
 
-```console
+```dotnetcli
 dotnet new webapp -n AspNetCoreDemo -o firstwebapp 
 ```
 
@@ -110,7 +110,7 @@ You must close your application before you can edit it. First close the open ter
 
 To edit `Startup.cs` file, run the following command:
 
-```console
+```bash
 vi ~/firstwebapp/Startup.cs
 ```
 
@@ -145,7 +145,7 @@ Change to the project folder, and then run `dotnet publish` to create a publishi
 
 The screenshot shows that the `dotnet publish` command created publishing files in the `~/firstwebapp/bin/Debug/net5.0/publish/ folder`. Then, the following command was used to copy all files to `/var/firstwebapp/ folder`:
 
-```console
+```bash
 sudo cp -a ~/firstwebapp/bin/Debug/net5.0/publish/ /var/firstwebapp/
 ```
 
@@ -154,7 +154,7 @@ sudo cp -a ~/firstwebapp/bin/Debug/net5.0/publish/ /var/firstwebapp/
 
 To run your application from a published folder, run the following command:
 
-```console
+```dotnetcli
 dotnet /var/firstwebapp/AspNetCoreDemo.dll
 ```
 

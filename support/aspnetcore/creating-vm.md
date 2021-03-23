@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 1.1 - Creating a Linux virtual machine in Azure and connecting to it
 
-_Applies to:_ &nbsp;
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
 **Goal of this part**
 
@@ -115,13 +115,13 @@ This article covers the following connection options:
 
 If you are running on Windows 10, version 1809 or a later version, you can use the built-in PowerShell SSH client. To connect to a virtual machine, open PowerShell, and run an SSH command in the following format:
 
-```console
+```powershell
 ssh -i <path to .pem private key file> <user>@<host>
 ```
 
 For example:
 
-```console
+```powershell
 ssh -i d:\Learn\Linux\myPrivateKey.pem <UserName>@127.0.0.1
 ```
 

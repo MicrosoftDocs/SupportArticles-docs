@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Overview of ASP.NET Core on Linux troubleshooting
 
-_Applies to:_ &nbsp;
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
 This article provides an overview of how to troubleshoot ASP.NET Core applications on Linux and what you should consider before the troubleshooting.
 

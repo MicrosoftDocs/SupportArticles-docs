@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 1.3 - Installing .NET Core in Linux
 
-_Applies to:_ &nbsp;
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
 **Goal of this part**
 
@@ -34,7 +34,7 @@ In this article, you can select your Linux version to obtain instructions for yo
 
 Begin by running the following commands:
 
-```console
+```bash
 wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
  
 sudo dpkg -i packages-microsoft-prod.deb

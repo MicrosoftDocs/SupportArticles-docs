@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 1.2 - Linux special directories, elevated users, and package managers
 
-_Applies to:_ &nbsp;
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
 **Goal of this part**
 
@@ -71,7 +71,7 @@ The `/etc/` folder is where system configuration files are located. This folder 
 
 Run the following command:
 
-```console
+```bash
 echo hello world > /etc/helloworld.txt
 ```
 
@@ -103,13 +103,13 @@ You should notice two things: When you become root, the dollar sign character (`
 
 Now, run the same command one more time:
 
-```console
+```bash
 echo hello world > /etc/helloworld.txt
 ```
 
 This time, you don't receive any error message. But is the file actually created? To verify this, run the following command:
 
-```console
+```bash
 ll /etc/hello*
 ```
 
@@ -139,7 +139,7 @@ For example, if you run `restart` while you're not elevated to superuser status,
 
 To run this command as a superuser instead, you can either change the session context to root (by running `sudo su`) or add the "sudo" prefix, as follows:
 
-```console
+```bash
 sudo reboot
 ```
 
@@ -207,7 +207,7 @@ When you run `apt list --installed | grep apache2`, you should see that the pack
 
 Now that you've determined that you've found the desired package and that it's not already installed, you can proceed with the installation. Run the following command:
 
-```console
+```bash
 sudo apt install apache2
 ```
 

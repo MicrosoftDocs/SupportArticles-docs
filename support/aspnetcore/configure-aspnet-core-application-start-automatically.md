@@ -7,9 +7,9 @@ ms.reviewer: ramakoni
 ---
 # Part 2.3 - Configuring the ASP.NET Core application to start automatically
 
-_Applies to:_ &nbsp;
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
-This article introduces how to configure the ASP.NET Core application to ensure that the application starts automatically after a restart.
+This article introduces how to configure the ASP.NET Core application to ensure that the application starts automatically after the server restarts.
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ This is what the Nginx service file looks like.
 
 The following example unit file content is taken from [Host ASP.NET Core on Linux with Nginx](/aspnet/core/host-and-deploy/linux-nginx):
 
-```xml
+```ini
 [Unit]
 Description=Example .NET Web API App running on Ubuntu
 
@@ -91,7 +91,7 @@ You'll use `vi` to create and edit the service file. Your service file will go i
 
 Here is the final configuration file:
 
-```xml
+```ini
 [Unit]
 Description=My very first ASP.NET Core applications running on Ubuntu
 
@@ -129,7 +129,7 @@ Should the web application stop unexpectedly, it will automatically start again 
 
 There is one final step: The service is running but not enabled. "Enabled" means that it starts automatically after the server is started. This is the desired final configuration. Run the following command to make sure that the service is enabled:
 
-```console
+```bash
 Sudo systemctl enable myfirstwebapp.service
 ```
 
@@ -152,7 +152,7 @@ Therefore, whenever the ASP.NET Core service stops, it should restart in 10 seco
 
 To force the process to stop, run the following command:
 
-```console
+```bash
 sudo kill -9 <PID>
 ```
 

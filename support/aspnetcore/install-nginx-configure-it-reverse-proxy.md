@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 2.2 - Installing Nginx and configuring it as a reverse proxy
 
-_Applies to:_ &nbsp;
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
 This article introduces how to install Nginx and configure it as a reverse proxy.
 
@@ -121,7 +121,7 @@ Now that you've learned how to start, stop, and restart the Nginx service, you'l
 
 Here's the required configuration. Some of the key parts are highlighted.
 
-```xml
+```nginx
 server {
     listen        80;
     server_name _;
@@ -204,7 +204,7 @@ As you can see here, the configuration file that was changed appears to be corre
 
 We have to restart Nginx so that the changes take effect: 
 
-```console
+```bash
 sudo systemctl restart nginx
 ```
 
