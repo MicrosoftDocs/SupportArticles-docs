@@ -25,9 +25,9 @@ _Applies to:_ &nbsp; Windows 10, all SACs
 
 In response to the Covid-19 pandemic, an increasing number of users now work, learn, and socialize from home. They connect to the workplace by using VPN connections. These VPN users report that when they are added to or removed from security groups, the changes might not take effect as expected. They report symptoms such as the following:
 
-- Changes to network resource access do not take effect.
+- Changes to network resource access don't take effect.
 - Group Policies that target specific security groups don't apply correctly.
-- Folder Redirection policy is not applied correctly.
+- Folder Redirection policy isn't applied correctly.
 - Applocker rules that target specific security groups don't work.
 - Logon scripts that create mapped drives, including user home folder or GPP drive maps, don't work.
 - The `whoami /groups` command (run by using a Command Prompt window) reports an out-of-date list of group memberships for the user's local security context.
@@ -60,15 +60,15 @@ For example, suppose that while a user was offline, the user was assigned to a g
 
 The effects of the cached information on the user's access to resources depend on the following factors:
 
-- **Whether the resources are on the client or on the network.**  
+- **Whether the resources are on the client or on the network**  
   Resources on the network require an additional authentication step (a network logon instead of an interactive logon). This step means that the group information that the resource uses to determine access always comes from a domain controller, not the client cache.
-- **Whether those resources use Kerberos tickets or other technologies (such as NTLM access tokens) to authenticate and authorize users.**  
+- **Whether those resources use Kerberos tickets or other technologies (such as NTLM access tokens) to authenticate and authorize users**  
   NTLM-secured resources are typically local to the client. The AMA mechanism precludes the use of NTLM for network resources.
-- **Whether the user locks and unlocks the client while connected to the VPN.**  
+- **Whether the user locks and unlocks the client while connected to the VPN**  
   If the user locks the client while connected to the VPN and then unlocks it, the client updates its cache of user groups. However, this change does not affect the existing user security context or any sessions that were running when the user locked the client.
-- **Whether the user signs out of the client while connected to the VPN, and then signs in again.**  
+- **Whether the user signs out of the client while connected to the VPN, and then signs in again**  
   The effects of signing out and then signing in differ depending on whether the user has locked and unlocked the client first while connected to the VPN.
-- **Whether the user is resuming an existing resource session or starting a new resource session.**  
+- **Whether the user is resuming an existing resource session or starting a new resource session**  
 
 #### Resources that rely on NTLM authentication
 
@@ -101,7 +101,7 @@ The client caches the TGT and continues to use it each time the user starts a ne
 > - **A change in group membership does not affect existing sessions.** Existing sessions continue until either the user signs out or otherwise ends the session, or until the session expires. When a session expires, one of the following happens:
 >   - The client re-submits the session ticket or submits a new session ticket. This operation renews the session.
 >   - The client does not attempt to connect again. The session does not renew.
-> - **A change in group membership does not affect the current TGT, or any session tickets that are created by using TGT.** The ticket granting service (TGS) uses the group information from the TGT to create a session ticket instead of querying Active Directory itself. The TGT isn't renewed until the user locks the client, signs out, or until the TGT expires (usually 10 hours).
+> - **A change in group membership does not affect the current TGT, or any session tickets that are created by using that TGT.** The ticket granting service (TGS) uses the group information from the TGT to create a session ticket instead of querying Active Directory itself. The TGT isn't renewed until the user locks the client, signs out, or until the TGT expires (typically 10 hours) A TGT can be renewed for 10 days.
 
 You can use the [`klist` command](/windows-server/administration/windows-commands/klist) to manually purge a client's ticket cache.
 
@@ -145,9 +145,9 @@ The Group Policy service maintains group membership information on the client, i
 > [!NOTE]  
 > You can turn off the Resultant Set of Policy reporting function by enabling the [Turn off Resultant Set of Policy logging](https://gpsearch.azurewebsites.net/#347) policy.
 
-The Group Policy service does not update the group information in WMI under the following circumstances:
+The Group Policy service doesn't update the group information in WMI under the following circumstances:
 
-- When Group Policy runs in the background, such as during periodic refreshes after the computer has started or a user has signed in. This also applies if a user runs the `gpupdate /force` command to refresh Group Policy.
+- When Group Policy runs in the background, such as during periodic refreshes after the computer has started or a user has signed in. When a user runs the `gpupdate /force` command to refresh Group Policy, Group Policy runs in the background.
 - When Group Policy runs from the group policy cache, such as when the user signs in while the client does not have access to a domain controller.
 
 This behavior means that the group list on a VPN-only client might always be stale, because the Group Policy service cannot connect to the network during user sign-in. When Group Policy runs and does not update the group information in WMI, the Group Policy service might record an event that resembles the following:
@@ -180,7 +180,7 @@ After you add a user to a group or remove a user from a group, provide the follo
    You can verify the group membership information by opening a Command Prompt window and then running `whoami /all`.
 
 > [!NOTE]  
-> You can use the following Windows Powershell script to automate the lock and unlock steps of this procedure. The user has to sign in as part of this process, and still has to sign out of Windows after the script runs.
+> You can use the following Windows PowerShell script to automate the lock and unlock steps of this procedure. The user has to sign in as part of this process, and still has to sign out of Windows after the script runs.
 >  
 > ```powershell
 > $fullname = $env:userdnsdomain + "\" + "$env:username" > $MyCred = Get-Credential -Username $fullname -Message "Update Logon Credentials"
