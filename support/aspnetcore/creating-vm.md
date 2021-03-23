@@ -122,7 +122,7 @@ ssh -i <path to .pem private key file> <user>@<host>
 For example:
 
 ```console
-ssh -i d:\Learn\Linux\myPrivateKey.pem ahmetmithat@127.0.0.1
+ssh -i d:\Learn\Linux\myPrivateKey.pem <UserName>@127.0.0.1
 ```
 
 If you have never connected to this server before, you receive the following warning message:

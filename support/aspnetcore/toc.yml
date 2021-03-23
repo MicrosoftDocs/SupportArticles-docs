@@ -2,9 +2,15 @@
   items:
   - name: Overview of ASP.NET Core on Linux troubleshooting
     href: introduction.md
-  - name: Part 1.1 Creating a Linux virtual machine in Azure
+  - name: Part 1.1 Create a Linux virtual machine in Azure
     href: creating-vm.md
   - name: Part 1.2 Linux special directories
     href: linux-special-directories-users-package-managers.md
-  - name: Part 1.3 Installing .NET Core in Linux
+  - name: Part 1.3 Install .NET Core in Linux
     href: install-dotnet-core-linux.md
+  - name: Part 2.1 Create and configure ASP.NET Core applications
+    href: create-configure-aspnet-core-applications.md
+  - name: Part 2.2 Install Nginx and configure it as a reverse proxy
+    href: install-nginx-configure-it-reverse-proxy.md
+  - name: Part 2.3 Configure the ASP.NET Core application to start automatically
+    href: configure-aspnet-core-application-start-automatically.md
