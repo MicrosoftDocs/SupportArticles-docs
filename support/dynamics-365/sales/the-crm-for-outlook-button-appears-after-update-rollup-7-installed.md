@@ -22,7 +22,7 @@ Once Microsoft Dynamics CRM for Microsoft Office Outlook is installed then you n
 - Start Microsoft Office Outlook and the Configuration Wizard will launch automatically.
 - Select **Start**, select **All Programs**, select **Microsoft Dynamics CRM 2011**, and select **Configuration Wizard**.
 
-The Configuration Wizard verifies if the client computer has a Default_Client_Config.xml file in the C:\Users\username\AppData\Roaming\Microsoft\MSCRM directory. If the Default_Client_Config.xml file exists there, it will use that xml file for the configuration. If the Default_Client_Config.xml file does not exist there, it will use the default values and input will be required for the server url and the organization to connect to.
+The Configuration Wizard verifies if the client computer has a Default_Client_Config.xml file in the C:\Users\\*\<username>*\AppData\Roaming\Microsoft\MSCRM directory. If the Default_Client_Config.xml file exists there, it will use that xml file for the configuration. If the Default_Client_Config.xml file does not exist there, it will use the default values and input will be required for the server url and the organization to connect to.
 
 > [!NOTE]
 > More information on creating this configuration file can be found in the Chapter 7 of the Installing Guide in the Implementation Guide.

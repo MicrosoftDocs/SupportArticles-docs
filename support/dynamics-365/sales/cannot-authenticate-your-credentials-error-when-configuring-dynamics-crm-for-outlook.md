@@ -18,7 +18,7 @@ When trying to configure Microsoft Dynamics CRM for Outlook using the Configurat
 
 > Cannot connect to Microsoft Dynamics CRM server because we cannot authenticate your credentials. Check your connection or contact your administrator for more help.
 
-In the Microsoft Dynamics CRM Configuration log, (default location: C:\Users\\*username*\AppData\Local\Microsoft\MSCRM\Logs\Crm50ClientConfig.log), you will see an error similar to the following:
+In the Microsoft Dynamics CRM Configuration log, (default location: C:\Users\\*\<username>*\AppData\Local\Microsoft\MSCRM\Logs\Crm50ClientConfig.log), you will see an error similar to the following:
 
 > Error| Error connecting to URL: [https://dev.crm.dynamics.com/XRMServices/2011/Discovery.svc](https://dev.crm.dynamics.com/xrmservices/2011/discovery.svc) Exception:  Microsoft.Crm.Passport.IdCrl.IdCrlException: InitializeEx()  
 at Microsoft.Crm.Passport.IdCrl.FederationLogOnManager.Initialize(String environment)  

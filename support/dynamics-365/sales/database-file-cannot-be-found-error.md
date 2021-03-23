@@ -20,7 +20,7 @@ When you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook, y
 
 When you select details, the following additional detail is shown:
 
-> The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\\\<user>\AppData\Local\Microsoft\MSCRM\Client\MetadataCache-93d47f8c-8eb3-45a6-98c8-d668f4ff9b4c.sdf ] at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)  
+> The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\\*\<user>*\AppData\Local\Microsoft\MSCRM\Client\MetadataCache-93d47f8c-8eb3-45a6-98c8-d668f4ff9b4c.sdf ] at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)  
  at System.Data.SqlServerCe.SqlCeConnection.Open()  
  at Microsoft.Crm.Application.SMWrappers.CrmSqlCeConnection.Open()  
  at Microsoft.Crm.Application.SMWrappers.CrmSqlCeConnection.ExecuteInNewConnection[TReturn](String connectionString, Func\`2 actions, Func\`2 exceptionHandler, Boolean disposeConnection)  
