@@ -19,22 +19,21 @@ appliesto:
 ---
 # Time zone setting for shared mailboxes in OWA
 
-When you [create a shared mailbox](/microsoft-365/admin/email/create-a-shared-mailbox), a license won't be assigned before users sign in to the shared mailbox. This behavior is by design. Therefore, a time zone isn't set automatically after a shared mailbox is created. See [About shared mailboxes](/microsoft-365/admin/email/about-shared-mailboxes) about when a license will be assigned to a shared mailbox.
+When you [create a shared mailbox](/microsoft-365/admin/email/create-a-shared-mailbox), it is not assigned a license right away because users don't log into a shared mailbox directly. This behavior is by design. As a result, a time zone is not set automatically after a shared mailbox is created. For information about when licenses are assigned to shared mailboxes, see [About shared mailboxes](/microsoft-365/admin/email/about-shared-mailboxes).
 
-To check and set the time zone for a new shared mailbox, sign in to Microsoft 365 as a tenant admin and run the [Get-MailboxRegionalConfiguration](/powershell/module/exchange/get-mailboxregionalconfiguration) cmdlet as follows:
-
-**To check the time zone setting:**
+To check the time zone setting on a new shared mailbox, log into your Microsoft 365 account as a tenant administrator and run the [Get-MailboxRegionalConfiguration](/powershell/module/exchange/get-mailboxregionalconfiguration) cmdlet:
 
 `Get-MailboxRegionalConfiguration -Identity "<Shared_mailbox_name>"`
 
-In the output from the cmdlet, some fields such as **TimeZone** will display the value **\<null>** or **no value set**.
+In the output from the cmdlet, fields such as "TimeZone" will display the value **\<null>** or **no value set**.
 
-**To set the time zone setting:**
+To set the time zone for a shared mailbox, run the [Set-MailboxRegionalConfiguration](/powershell/module/exchange/set-mailboxregionalconfiguration) cmdlet:
 
 `Set-MailboxRegionalConfiguration -Identity "<Shared_mailbox_name>" -TimeZone "<Supported_time_zone_key_name>"`
 
-For example, to set the time zone for a shared mailbox named **Shared Mailbox A** to **Central Standard Time**, the cmdlet will look as follows:
+For example, to set the time zone for the shared mailbox named **Shared mailbox B** to **Central Standard Time**, the cmdlet will look as follows:
 
-`Set-MailboxRegionalConfiguration -Identity "Shared Mailbox A" -TimeZone "Central Standard Time"`
+`Set-MailboxRegionalConfiguration -Identity "Shared mailbox B" -TimeZone "Central Standard Time"`
 
+---
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
