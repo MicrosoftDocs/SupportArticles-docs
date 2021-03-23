@@ -18,7 +18,7 @@ You notice that password hash synchronization for Microsoft Azure Active Directo
 
 ## Resolution
 
-Install the latest version of the Azure Active Directory Synchronization tool. To do this, go to the following Microsoft website: [Install or upgrade the Directory Sync tool](https://technet.microsoft.com/library/jj151800.aspx).
+Install the latest version of the Azure Active Directory Synchronization tool. To do this, go to the following Microsoft website: [Install or upgrade the Directory Sync tool](/azure/active-directory/hybrid/how-to-dirsync-upgrade-get-started.md).
 
 ## More information
 
