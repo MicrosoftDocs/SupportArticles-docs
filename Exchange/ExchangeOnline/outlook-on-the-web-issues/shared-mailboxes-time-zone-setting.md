@@ -1,6 +1,6 @@
 ---
-title: Setting the time zone for a shared mailbox in Outlook on the web
-description: Discusses  how to set and check the time zone setting for shared mailboxes in OWA.
+title: Time zone settings for shared mailboxes in Outlook on the web
+description: Discusses how to check and set the time zone for shared mailboxes in Outlook on the web.
 author: simonxjx
 ms.reviewer: ldusoli, mhaque
 audience: ITPro
@@ -17,7 +17,7 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-# Setting the time zone for a shared mailbox in Outlook on the web
+# Time zone settings for shared mailboxes in Outlook on the web
 
 When you [create a shared mailbox](/microsoft-365/admin/email/create-a-shared-mailbox), the mailbox isn't immediately assigned a license. This behavior is by design. A time zone isn't automatically set after a shared mailbox is created because users don't sign in to shared mailboxes directly. For information about when licenses are assigned to shared mailboxes, see [About shared mailboxes](/microsoft-365/admin/email/about-shared-mailboxes).
 
