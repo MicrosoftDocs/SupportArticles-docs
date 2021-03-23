@@ -24,7 +24,6 @@ Below is a collection of top issues. If your issue isn't listed there, browse th
 
 ## Top SharePoint Server troubleshooting articles
 
-- ["The language of this installation package is not supported by your system" error when moving a SharePoint 2010 external list offline to Outlook 2010](https://support.microsoft.com/help/983010)
 - [Troubleshooting common SPMT issues and errors](https://docs.microsoft.com/sharepointmigration/troubleshooting-common-spmt-issues)
 - ["Server Error in '/' Application. Access to the path is denied" when you log on to Windows SharePoint Services 2.0](./security/access-to-the-path-is-denied-during-logon.md)
 - [How to uninstall Groove](https://support.microsoft.com/help/907504)
