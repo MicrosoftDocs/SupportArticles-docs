@@ -1,7 +1,7 @@
 ---
 title: Group membership changes do not update over some VPN connections
 description: Describes a situation in which VPN users might experience resource access or configuration problems after their group membership changes.
-ms.date: 03/24/2020
+ms.date: 03/25/2020
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
@@ -35,10 +35,9 @@ In response to the Covid-19 pandemic, an increasing number of users now work, le
 
 If the user locks and then unlocks Windows while the client remains connected to the VPN, some of these symptoms resolve. For example, some resource access changes take effect. Subsequently, if the user signs out of Windows and then signs back in (closing all sessions that use network resources), more of the symptoms resolve. However, logon scripts might not function correctly, and the `gpresult /r` command may still not reflect group membership changes. The user cannot work around the problem by using the `runas` command to start a new Windows session on the client. This command simply uses the same credential information to start the new session.
 
-## Cause
+The scope of this article includes environments that have implemented Authentication Mechanism Assurance (AMA) in the domain, and where users have to authenticate by using a Smart Card in order to access network resources. For more information, see [Description of AMA usage in interactive logon scenarios in Windows](https://support.microsoft.com/topic/description-of-ama-usage-in-interactive-logon-scenarios-in-windows-a61e0931-f11a-73ad-6221-e117ed6e913f).
 
-> [!IMPORTANT]  
-> In this article, we assume that you have implemented Authentication Mechanism Assurance (AMA) in the domain, and that you require the user to authenticate by using a Smart Card in order to access network resources. These network resources use Kerberos tickets to manage user access. For more information, see [Description of AMA usage in interactive logon scenarios in Windows](https://support.microsoft.com/topic/description-of-ama-usage-in-interactive-logon-scenarios-in-windows-a61e0931-f11a-73ad-6221-e117ed6e913f).
+## Cause
 
 In an office environment, it's common for a user to sign out of Windows at the end of the workday. When the user signs in the next day, the client is already connected to the network and has direct access to a domain controller. Under these conditions, changes to group membership take effect quickly. The user has the correct access levels the next day (the next time the user signs in). Similarly, changes to Group Policy appear to take effect within a day or two (after the user signs in once or twice, depending policies that are due to apply).
 
