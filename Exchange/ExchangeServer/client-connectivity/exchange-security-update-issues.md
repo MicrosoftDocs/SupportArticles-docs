@@ -92,8 +92,9 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 | Exchange Server 2019  | For CU8: 15.02.0792.010</br>For CU7: 15.02.0721.013</br>For CU6: 15.02.0659.012</br>For CU5: 15.02.0595.008</br>For CU4: 15.02.0529.013</br>For CU3: 15.02.0464.015</br>For CU2: 15.02.0397.011</br>For CU1: 15.02.0330.011</br>For RTM: 15.02.0221.018 |
 | Exchange Server 2016  | For CU19: 15.01.2176.009</br>For CU18: 15.01.2106.013</br>For CU17: 15.01.2044.013</br>For CU16: 15.01.1979.008</br>For CU15: 15.01.1913.012</br>For CU14: 15.01.1847.012</br>For CU13: 15.01.1779.008</br>For CU12: 15.01.1713.010</br>For CU11: 15.01.1591.018</br>For CU10: 15.01.1531.012</br>For CU9: 15.01.1466.013</br>For CU8: 15.01.1415.008 |
 | Exchange Server 2013  | For CU23: 15.00.1497.012</br>For CU22: 15.00.1473.006</br>For CU21: 15.00.1395.012  |
+|||
 
-For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
+For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](https://support.microsoft.com/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
 
 [Back to top](#summary)
 
@@ -173,7 +174,7 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 
     ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
 
-For more information, see [this article](/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
+For more information, see [this article](https://support.microsoft.com/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
 
 [Back to top](#summary)
 
