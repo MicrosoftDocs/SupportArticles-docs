@@ -80,8 +80,8 @@ Here is the output of the `netstat -tlp` command from the second terminal sessio
 
 You can use [curl](https://curl.se/docs/manpage.html) and [wget](https://www.computerhope.com/unix/wget.htm) to test your website. Both commands make an HTTP call to the target side, but they behave differently:
 
-- Curl is simply a command line browser tool. It makes an HTTP request to the given target, and it shows only the plain output of the HTTP response. For example, it shows the HTML source markup for a web application.
-- Wget is an HTTP downloader. It makes an HTTP request, and it downloads the given resource. For example, wget `http://server/file.zip` downloads *file.zip* from `http://server` and save it to the current directory.
+- `Curl` is simply a command line browser tool. It makes an HTTP request to the given target, and it shows only the plain output of the HTTP response. For example, it shows the HTML source markup for a web application.
+- `Wget` is an HTTP downloader. It makes an HTTP request, and it downloads the given resource. For example, wget `http://server/file.zip` downloads *file.zip* from `http://server` and save it to the current directory.
 
 The `wget` command also shows us some more details, such as redirection and any error messages you might receive. Therefore, you can use it as a primitive version of an HTTP trace tool whenever you need that.
 
@@ -143,7 +143,7 @@ Change to the project folder, and then run `dotnet publish` to create a publishi
 
 :::image type="content" source="./media/create-configure-aspnet-core-applications/publish.png" alt-text="BuggyAmb publish" border="true":::
 
-The screenshot shows that the `dotnet publish` command created publishing files in the `~/firstwebapp/bin/Debug/net5.0/publish/ folder (1)`. Then, the following command was used to copy all files to `/var/firstwebapp/ folder (2)`:
+The screenshot shows that the `dotnet publish` command created publishing files in the `~/firstwebapp/bin/Debug/net5.0/publish/ folder`. Then, the following command was used to copy all files to `/var/firstwebapp/ folder`:
 
 ```console
 sudo cp -a ~/firstwebapp/bin/Debug/net5.0/publish/ /var/firstwebapp/

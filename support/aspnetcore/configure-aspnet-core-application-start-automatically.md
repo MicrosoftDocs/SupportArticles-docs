@@ -31,7 +31,7 @@ If you run the ASP.NET Core by having IIS as a proxy, the IIS ASP.NET Core Modul
 
 Recall that the `systemctl` command is used to manage the "services", or "daemons". A daemon is a similar concept to that of a Windows service. Such a service can be restarted automatically when the system starts.
 
-## What is a service file?
+### What is a service file?
 
 In Linux, there are also unit configuration files that have a ".service" extension that is used to control the behavior of daemons when the process exits. These are also known as *service files*, *unit files*, and *service unit files*.
 
@@ -48,7 +48,7 @@ This is what the Nginx service file looks like.
 
 :::image type="content" source="./media/configure-aspnet-core-application-start-automatically/cat.png" alt-text="BuggyAmb cat" border="true":::
 
-## Sample service file for ASP.NET Core applications
+### Sample service file for ASP.NET Core applications
 
 The following example unit file content is taken from [Host ASP.NET Core on Linux with Nginx](/aspnet/core/host-and-deploy/linux-nginx):
 
@@ -85,7 +85,7 @@ Here are some key aspects of this content:
 > [!NOTE]
 > The `www-data` user is a special user in the system. You can make use of this account. You'll create a new user for practicing user permissions in Linux. However, it's fine to use `www-data` if you don't want to create another Linux user.
 
-## Creating a service file for the ASP.NET Core application
+### Creating a service file for the ASP.NET Core application
 
 You'll use `vi` to create and edit the service file. Your service file will go into the `/etc/systemd/system/` folder. Remember that, in this series, you published your first application to the `/var/firstwebapp/` folder. Therefore, `WorkingDirectory` should point to this folder.
 
