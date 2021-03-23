@@ -50,7 +50,7 @@ To work around the issue, delete the empty **Servers** container. This can't be 
 > [!WARNING]
 > If you use the ADSI Edit snap-in, the LDP utility, or any other LDAP version 3 client, and you incorrectly modify the attributes of Active Directory objects, you can cause serious problems. These problems may require you to reinstall Microsoft Windows 2003 Server, Microsoft Windows Server 2008, Microsoft Exchange 2010 Server or both Windows and Exchange. Microsoft can't guarantee that problems that occur if you incorrectly modify Active Directory object attributes can be solved. Modify these attributes at your own risk.
 
-1. Start the [ADSI Edit](https://technet.microsoft.com/library/cc773354%28ws.10%29.aspx) tool. To do this, click **Start** > **Run**, type *adsiedit.msc*, and then click **OK**.
+1. Start the [ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)) tool. To do this, click **Start** > **Run**, type *adsiedit.msc*, and then click **OK**.
 1. Expand Configuration Container [`servername.domainname.com`], and then expand **CN=Configuration,DC=DomainName,DC=com**.
 1. Expand **CN=Services** > **CN=Microsoft Exchange** > **CN=OrganizationName**, where OrganizationName is the name of your Exchange organization.
 1. You'll see the empty Administrative Group. Expand the **CN=AdministrativeGroupName**.
@@ -60,6 +60,6 @@ To work around the issue, delete the empty **Servers** container. This can't be 
 
 ## More information
 
-[ADSI Edit (adsiedit.msc)](https://technet.microsoft.com/library/cc773354%28ws.10%29.aspx)
+[ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10))
 
-[How to Remove the Last Legacy Exchange Server from an Organization](https://technet.microsoft.com/library/bb288905%28exchg.80%29.aspx)
+[How to Remove the Last Legacy Exchange Server from an Organization](/previous-versions/office/exchange-server-2007/bb288905(v=exchg.80))

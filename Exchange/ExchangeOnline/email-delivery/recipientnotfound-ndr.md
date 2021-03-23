@@ -43,12 +43,12 @@ To resolve this problem, create a remote mailbox in the on-premises environment 
 1. Create an on-premises object for the cloud mailbox by using the New-RemoteMailbox cmdlet in the Exchange Management Shell.
 
     > [!NOTE]
-    > This object must have the same name, alias, and user principal name (UPN) as the cloud mailbox. For more information, see [New-RemoteMailbox](https://technet.microsoft.com/library/ff607480%28v=exchg.160%29.aspx).
+    > This object must have the same name, alias, and user principal name (UPN) as the cloud mailbox. For more information, see [New-RemoteMailbox](/powershell/module/exchange/new-remotemailbox).
 
 1. Set the ExchangeGuid property on the new on-premises object that you created in step 1 to match the cloud mailbox. To do this, follow these steps:
    1. Connect to Exchange Online by using a remote PowerShell.
 
-        For more information, see [Connect to Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+        For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
    1. Use the Get-Mailbox cmdlet to retrieve the value of the `ExchangeGuid` property of the cloud mailbox. For example, run the following command:
 
@@ -56,7 +56,7 @@ To resolve this problem, create a remote mailbox in the on-premises environment 
         Get-Mailbox <MailboxName>| FL ExchangeGuid
         ```
 
-        For more information, see [Get-Mailbox](https://technet.microsoft.com/library/bb123685%28v=exchg.160%29.aspx).
+        For more information, see [Get-Mailbox](/powershell/module/exchange/get-mailbox).
 
    1. Open the Exchange Management Shell on the on-premises Exchange server.
    1. Use the `Set-RemoteMailbox` cmdlet to set the value of the `ExchangeGuid` property on the on-premises object to the value that you retrieved in step 2b. For example, run the following command:
@@ -65,11 +65,11 @@ To resolve this problem, create a remote mailbox in the on-premises environment 
       Set-RemoteMailbox <MailboxName> -ExchangeGuid <GUID>
       ```
 
-      For more information, see [Set-RemoteMailbox](https://technet.microsoft.com/library/ff607302%28v=exchg.160%29.aspx).
+      For more information, see [Set-RemoteMailbox](/powershell/module/exchange/set-remotemailbox).
 
 1. Wait for directory synchronization to occur. Or, force directory synchronization.
 
-    For more information, see [Synchronize your directories](https://technet.microsoft.com/library/jj151771.aspx).
+    For more information, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 1. Make sure that the Office 365 user object is displayed as **Synced with Active Directory**.
 

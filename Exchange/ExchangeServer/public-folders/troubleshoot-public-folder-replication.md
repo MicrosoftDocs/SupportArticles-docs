@@ -1229,7 +1229,7 @@ Usually, the hub transport server will log an event 1020 that describes the prob
 
 **Do you see a 1020 event with source MSExchange Store Driver on that hub transport server?**
 
-- If yes, you see 1020 event and contain the error **The Active Directory user wasn’t found**, follow the instructions given in [Fail to replicate the public folder content to Exchange Server 2010](/exchange/troubleshoot/migration/public-folders-not-replicate). If you contact support about this issue, tell them there is an Empty Servers Container.
+- If yes, you see 1020 event and contain the error **The Active Directory user wasn’t found**, follow the instructions given in [Fail to replicate the public folder content to Exchange Server 2010](../migration/public-folders-not-replicate.md). If you contact support about this issue, tell them there is an Empty Servers Container.
 
   Is this information helpful?
 

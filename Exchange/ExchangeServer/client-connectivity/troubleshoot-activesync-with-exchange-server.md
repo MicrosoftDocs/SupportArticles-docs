@@ -80,7 +80,7 @@ To resolve this issue, review the results of the test and address any found issu
 
 Most Exchange ActiveSync devices request the email address and password to set up the device. This combination only works when the user principal name value matches the email address for the user. Verify these two attributes have the same value. To do this, follow these steps:
 
-1. Open the [Exchange Management Shell](https://technet.microsoft.com/library/dd638134%28v=exchg.150%29.aspx).
+1. Open the [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
 2. Run the following cmdlet to retrieve the attribute values:
 
     ```powershell

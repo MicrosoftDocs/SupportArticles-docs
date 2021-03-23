@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 3142512
 
 The .NET Framework 4.6.1 was announced by the .NET team on the [.NET Blog](https://devblogs.microsoft.com/dotnet/). This version is a recommended update for Windows Server 2012 R2. This means that anyone who's running Exchange Server 2013 or Exchange Server 2016 on a Windows Server 2012 R2-based server that has automatic updates enabled can receive the update automatically.
 
-However, after the 4.6.1 update is installed, [Mailboxes are quarantined and databases fail over unexpectedly](https://support.microsoft.com/help/3095369) in Exchange Server because .NET Framework 4.6.1 isn't currently supported by any versions of Exchange. For more information about the required component for supported versions, see [Exchange Server supportability matrix](https://technet.microsoft.com/library/ff728623%28v=exchg.150%29.aspx).
+However, after the 4.6.1 update is installed, [Mailboxes are quarantined and databases fail over unexpectedly](https://support.microsoft.com/help/3095369) in Exchange Server because .NET Framework 4.6.1 isn't currently supported by any versions of Exchange. For more information about the required component for supported versions, see [Exchange Server supportability matrix](/Exchange/plan-and-deploy/supportability-matrix).
 
 For up-to-date information about .NET Framework 4.6.1 and Exchange Server, see [On .NET Framework 4.6.1 and Exchange compatibility](https://techcommunity.microsoft.com/t5/exchange-team-blog/on-net-framework-4-6-1-and-exchange-compatibility/ba-p/604561).
 

@@ -86,7 +86,7 @@ Create a remote mailbox in the on-premises environment, and then move the mailbo
 
 4. Wait for directory synchronization to occur. Or, force directory synchronization.
 
-    For more information, see [Synchronize your directories](https://technet.microsoft.com/library/jj151771.aspx).
+    For more information, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 5. Make sure that the Office 365 user object is displayed as **Synced with Active Directory**.
 6. Move the mailbox from Exchange Online to the on-premises environment.
 

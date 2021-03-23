@@ -64,7 +64,7 @@ To resolve this issue, follow these steps.
 ### Step 1: Sign in to the portal
 
 - If you're using Office 365 or CRM Online, go to [https://portal.office.com](https://portal.office.com/).
-- If you're using Azure, go to [https://manage.windowsazure.com/?whr=azure.com](https://manage.windowsazure.com/?whr=azure.com).
+- If you're using Azure, go to [https://portal.azure.com/](https://portal.azure.com/).
 - If you're using Intune, go to [https://aka.ms/intuneportal](https://aka.ms/intuneportal).
 
 ### Step 2: Use the solution that's appropriate for your sign-in experience
