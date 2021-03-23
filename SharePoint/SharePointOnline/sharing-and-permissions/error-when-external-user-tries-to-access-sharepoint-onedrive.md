@@ -43,7 +43,7 @@ Use the appropriate method for the situation in which the user receives the erro
 
 ### An external user is accessing a site
 
-1. Determine which <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> (member, owner, and so on) the user should have to the site. Then, verify the permissions through the **Check Permissions** feature, as follows:
+1. Determine which <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> (member, owner, and so on) the user should have to the site. Then, verify the permissions through the **Check Permissions** feature, as follows:
 
    1. Navigate to the User.aspx page. To do this, select the gear icon in the upper-right corner, select **Site Permissions**, and then select **Advanced permissions settings**.
 
@@ -215,7 +215,7 @@ For more information about how to use this tool, see [Introduction to the ShareP
 
 Next, you have to remove the account from Azure Active Directory. To do this, follow these steps:
 
-1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To do this, see [Manage Azure AD using Windows PowerShell](https://technet.microsoft.com/library/jj151815.aspx).
+1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To do this, see [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 
    ```

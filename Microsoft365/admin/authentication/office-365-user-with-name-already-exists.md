@@ -69,7 +69,7 @@ To check whether an email address already exists, follow these steps:
 
 1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, go to the following Microsoft website:
    
-   [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)   
+   [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)   
 2. Run the following cmdlet:
 
    ```powershell

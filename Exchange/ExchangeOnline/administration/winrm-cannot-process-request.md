@@ -56,6 +56,6 @@ To resolve this issue, check whether the Windows Remote Management service is in
 
 ## More information
 
-For more information about how to connect to Exchange Online by using remote PowerShell, go to [Connect to Exchange Online using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+For more information about how to connect to Exchange Online by using remote PowerShell, go to [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

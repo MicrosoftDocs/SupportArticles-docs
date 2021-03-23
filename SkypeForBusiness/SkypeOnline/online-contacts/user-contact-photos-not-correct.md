@@ -59,11 +59,11 @@ These issues may occur for one of the following reasons:
 
 First, connect to Exchange Online by using remote PowerShell by using the instructions at the following Microsoft website: 
 
-[Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx)
+[Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
 As soon as you are connected, use the Set-UserPhoto cmdlet to upload a photo directly to the user's Exchange mailbox. For more information about the Set-UserPhoto cmdlet and its usages, go to the following Microsoft TechNet website: 
 
-[Set-UserPhoto](https://technet.microsoft.com/library/jj218694.aspx)
+[Set-UserPhoto](/powershell/module/exchange/set-userphoto)
 
 ### How to populate the "thumbnailPhoto" attribute in AD DS
 

@@ -55,7 +55,7 @@ To resolve this issue, follow these steps:
         ![Office status](./media/subscription-issue-in-office-mobile/office-status.png)
    4. If an entry for **The latest desktop version of Office** does not appear in the list, contact your administrator or go to the following website:
 
-        - [Assign or remove licenses, or view a list of unlicensed users](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/assign-licenses-to-users?redirectSourcePath=%252fen-us%252farticle%252fassign-licenses-to-users-in-office-365-for-business-997596b5-4173-4627-b915-36abac6786dc&view=o365-worldwide&preserve-view=true)
+        - [Assign or remove licenses, or view a list of unlicensed users](/office365/admin/subscriptions-and-billing/assign-licenses-to-users?preserve-view=true&view=o365-worldwide)
 
 2. Verify the status of the service health for the Office Subscription service.
 

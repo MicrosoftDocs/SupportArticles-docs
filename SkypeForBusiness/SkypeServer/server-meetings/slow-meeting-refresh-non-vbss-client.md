@@ -76,6 +76,6 @@ If users experience this issue in a peer-to-peer scenario without any involvemen
 
 For more information about how to judge the value of VbSS, see the "Planning" section of the following TechNet topic:
 
-[Video based Screen Sharing for Skype for Business Server 2015](https://technet.microsoft.com/library/mt756736.aspx)
+[Video based Screen Sharing for Skype for Business Server 2015](/skypeforbusiness/manage/video-based-screen-sharing)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

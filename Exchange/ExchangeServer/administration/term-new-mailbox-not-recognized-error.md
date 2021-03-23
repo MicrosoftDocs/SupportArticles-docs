@@ -42,11 +42,11 @@ This issue occurs because split permissions separate management tasks between Ex
 
 To resolve this issue, use EMS to change the RBAC split permissions. Or, run the `Setup.com` command at a command prompt to change the Active Directory split permissions to the default Exchange 2010 shared permissions.
 
-For more information about how to change from RBAC split permissions or Active Directory split permissions to shared permissions, see [How to configure Exchange 2010 to use shared permissions](https://technet.microsoft.com/library/dd638146.aspx).
+For more information about how to change from RBAC split permissions or Active Directory split permissions to shared permissions, see [How to configure Exchange 2010 to use shared permissions](/exchange/configure-exchange-2013-for-shared-permissions-exchange-2013-help).
 
 > [!NOTE]
 > You can't use EMC to change the RBAC split permissions or the Active Directory split permissions to shared permissions.
 
 ## More information
 
-For more information about split permissions, see [General information about split permissions](https://technet.microsoft.com/library/dd638106%28v=exchg.141%29.aspx#split).
+For more information about split permissions, see [General information about split permissions](/previous-versions/office/exchange-server-2010/dd638106(v=exchg.141)#split).

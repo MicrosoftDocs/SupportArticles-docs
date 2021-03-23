@@ -48,7 +48,7 @@ This change causes Non-Delivery Reports (NDRs) to return to Office 365 instead 
 > [!NOTE]
 > SRS rewriting is used to prevent spoofing of unverified domains. Customers are advised to send messages only from domains that they own and for which they have verified their ownership through the Accepted Domains list. For more information about Accepted Domains in Office 365, see the following TechNet topic:
 >  
-> [Manage accepted domains in Exchange Online](https://technet.microsoft.com/library/jj945194%28v=exchg.150%29.aspx)
+> [Manage accepted domains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)
 
 ## More information
 

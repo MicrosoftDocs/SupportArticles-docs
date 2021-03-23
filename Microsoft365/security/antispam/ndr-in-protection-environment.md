@@ -41,7 +41,7 @@ Contact CASA because the cause of the issue is rooted in the CASA CBL, and the r
 To resolve the issue, try the following:
 
 - If the recipient messaging system uses the CASA CBL, contact the recipient mail administrator to have the following Exchange Online Protection outgoing edge server IP addresses added to an allow list to bypass the CASA CBL checks:
-  > [Exchange Online Protection IP Addresses](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
+  > [Exchange Online Protection IP Addresses](/office365/enterprise/urls-and-ip-address-ranges)
 
 ## More information
 

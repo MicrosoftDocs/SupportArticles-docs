@@ -91,13 +91,13 @@ In order to increase the recompilation, limit the numRecompilesBeforeAppRestart 
 <compilation debug="false" numRecompilesBeforeAppRestart="50" />
 ```
 
-See [Compilation Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/s10awwz0%28v=vs.90%29.aspx) for details.
+See [Compilation Element (ASP.NET Settings Schema)](/previous-versions/dotnet/netframework-3.5/s10awwz0(v=vs.90)) for details.
 
 ## Long-term Solution
 
 Move the server-side inline scripts from the pages, page layouts, and master pages into server controls. Deploy these controls using solutions and features and remove the PageParserPath directive.
 
-- [Developing Custom ASP.NET Server Controls](https://msdn.microsoft.com/library/zt27tfhy%28v=vs.85%29.aspx)
+- [Developing Custom ASP.NET Server Controls](/previous-versions/dotnet/netframework-3.0/zt27tfhy(v=vs.85))
 
 ## More information
 
