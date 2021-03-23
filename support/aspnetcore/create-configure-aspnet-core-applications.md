@@ -21,7 +21,7 @@ You will learn how to create an ASP.NET Core web application by using .NET Core 
 
 ## .NET CLI
 
-According to this [.NET CLI documentation](dotnet/core/tools/), the .NET CLI is a cross-platform toolchain for developing, building, running, and publishing .NET applications. The .NET CLI is installed together with the .NET SDK.
+According to this [.NET CLI documentation](/dotnet/core/tools/), the .NET CLI is a cross-platform toolchain for developing, building, running, and publishing .NET applications. The .NET CLI is installed together with the .NET SDK.
 
 These trainings use the `dotnet` command frequently. This command is powerful and has two main functions:
 
