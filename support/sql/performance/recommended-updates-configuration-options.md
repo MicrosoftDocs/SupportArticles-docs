@@ -11,12 +11,12 @@ ms.prod: sql
 
 This article includes a list of performance improvements and configuration options that are available for SQL Server 2012 and later versions.
 
-_Original product version:_ &nbsp; SQL Server  
+_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012  
 _Original KB number:_ &nbsp; 2964518
 
-## Apply the recommended updates and improve the performance of SQL Server 2012 and SQL Server 2014
+## Apply the recommended updates and improve the performance of SQL Server 2014 and SQL Server 2012
 
-This article describes the performance improvements and changes that are available for SQL Server 2012 and SQL Server 2014 versions through various product updates and configuration options. You can consider applying these updates in order to improve the performance of the instance of SQL Server. The degree of improvement that you see will depend on various factors that include workload pattern, contention points, processor layout (number of processor groups, sockets, NUMA nodes, cores in a NUMA node) and amount of memory present in the system. SQL Server support team has used these updates and configuration changes to achieve reasonable performance gains for customer workloads that used hardware systems that had several NUMA nodes and lots of processors. The support team will continue to update this article with other updates in the future.
+This article describes the performance improvements and changes that are available for SQL Server 2014 and SQL Server 2012 versions through various product updates and configuration options. You can consider applying these updates in order to improve the performance of the instance of SQL Server. The degree of improvement that you see will depend on various factors that include workload pattern, contention points, processor layout (number of processor groups, sockets, NUMA nodes, cores in a NUMA node) and amount of memory present in the system. SQL Server support team has used these updates and configuration changes to achieve reasonable performance gains for customer workloads that used hardware systems that had several NUMA nodes and lots of processors. The support team will continue to update this article with other updates in the future.
 
 High-end systems
 A high-end system typically has multiple sockets, eight cores or more per socket, and a half terabyte or more of memory.
