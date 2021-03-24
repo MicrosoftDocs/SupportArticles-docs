@@ -39,7 +39,8 @@ This problem can occur because of the following reasons:
     User:          N/A  
     Computer:      <Server name>  
     Description:
-    CREATE FILE encountered operating system error 3(The system cannot find the path specified.) while attempting to open or create the physical file <FilePath>.
+    CREATE FILE encountered operating system error 3(The system cannot find the path specified.)
+    while attempting to open or create the physical file <FilePath>.
 
     Log Name:      Application  
     Source:        MSSQLSERVER  
@@ -63,7 +64,9 @@ This problem can occur because of the following reasons:
     User:          N/A
     Computer:      <Server name>  
     Description:
-    Could not create tempdb. You may not have enough disk space available. Free additional disk space by deleting other files on the tempdb drive and then restart SQL Server. Check for additional errors in the operating system error log that may indicate why the tempdb files could not be initialized.
+    Could not create tempdb. You may not have enough disk space available.
+    Free additional disk space by deleting other files on the tempdb drive and then restart SQL Server.
+    Check for additional errors in the operating system error log that may indicate why the tempdb files could not be initialized.
     ```
 
 1. To resolve the problem, move the Tempdb file to a different location by using the procedure that's mentioned in the **Failure Recovery Procedure** section of [Move System Databases](/sql/relational-databases/databases/move-system-databases#Failure).

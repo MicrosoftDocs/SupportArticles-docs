@@ -26,7 +26,7 @@ You run one of the following DBCC commands in Microsoft SQL Server:
 
 After you do this, error messages that resemble the following may be logged in the SQL Server error log:
 
-```console
+```output
 2006-09-01 17:33:24.48 spid54 35 transactions rolled forward in database 'ProductionData' (11). This is an informational message only. No user action is required.
 2006-09-01 17:35:39.16 spid54 4 transactions rolled back in database 'ProductionData' (11). This is an informational message only. No user action is required.
 2006-09-01 17:36:31.76 spid53 Error: 17053, Severity: 16, State: 1.

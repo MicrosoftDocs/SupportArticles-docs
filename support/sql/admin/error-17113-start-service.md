@@ -35,7 +35,9 @@ When you try to start SQL Server in this scenario, the SQL Server service doesnâ
 
     ```output
     <Datetime> Server      Error: 17113, Severity: 16, State: 1.  
-    <Datetime> Server      Error 2(The system cannot find the file specified.) occurred while opening file 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf' to obtain configuration information at startup. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.
+    <Datetime> Server      Error 2(The system cannot find the file specified.) occurred while opening file
+                           'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf' to obtain configuration information at startup.
+                           An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.
     ```
 
 2. Verify the location of the master.mdf file. If the path is incorrect, fix the path by using SQL Server Configuration Manager or Registry Editor.

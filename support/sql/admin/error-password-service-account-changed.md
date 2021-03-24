@@ -11,13 +11,13 @@ When you try to restart Microsoft SQL Server or the SQL Server Agent, the servic
 
 - By using the Services applet:
   
-    > `Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.`  
-    `Error 1069: The service did not start due to a logon failure.`
+    > Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.  
+    Error 1069: The service did not start due to a logon failure.
 
 - By using a command prompt:
 
-    > `System error 1069 has occurred.`  
-      `The service did not start due to a logon failure.`
+    > System error 1069 has occurred.  
+      The service did not start due to a logon failure.
 
 This problem occurs because there is an issue either with the service account itself or the information that is currently saved for the service account.
 
@@ -32,29 +32,33 @@ To use this troubleshooter, open the System event log, and note the Event ID and
 
 The complete message entry in event log should resemble the following:
 
->`Log Name:      System`  
-`Source:        Service Control Manager`  
-`Date:          <Datetime>`  
-`Event ID:      7041`  
-`Task Category: None`  
-`Level:         Error`  
-`Keywords:      Classic`  
-`User:          N/A`  
-`Computer:      <Server name>`  
-`Description:
+```output
+Log Name:      System  
+Source:        Service Control Manager  
+Date:          <Datetime> 
+Event ID:      7041  
+Task Category: None  
+Level:         Error  
+Keywords:      Classic  
+User:          N/A  
+Computer:      <Server name>  
+Description:
 The MSSQLSERVER service was unable to log on as NT Service\MSSQLSERVER with the currently configured password due to the following error:  
-Logon failure: the user has not been granted the requested logon type at this computer.`
->
-> `Service: MSSQLSERVER`  
-`Domain and account: <Account name>`
->
-> `This service account does not have the required user right "Log on as a service."`
->
-> `User Action`
->
-> `Assign "Log on as a service" to the service account on this computer. You can use Local Security Settings (Secpol.msc) to do this. If this computer is a node in a cluster, check that this user right is assigned to the Cluster service account on all nodes in the cluster.`
->
-> `If you have already assigned this user right to the service account, and the user right appears to be removed, check with your domain administrator to find out if a Group Policy object associated with this node might be removing the right.`
+Logon failure: the user has not been granted the requested logon type at this computer.
+
+ Service: MSSQLSERVER  
+Domain and account: <Account name>
+
+ This service account does not have the required user right "Log on as a service."
+
+ User Action
+
+ Assign "Log on as a service" to the service account on this computer. You can use Local Security Settings (Secpol.msc) to do this.
+ If this computer is a node in a cluster, check that this user right is assigned to the Cluster service account on all nodes in the cluster.
+
+ If you have already assigned this user right to the service account, and the user right appears to be removed,
+ check with your domain administrator to find out if a Group Policy object associated with this node might be removing the right.
+```
 
 **User Action**
 
@@ -68,20 +72,22 @@ Check which permissions are assigned to the \<Account Name> service account usin
 
 The complete message entry in event log should resemble the following:
 
-> `Log Name:      System`  
-`Source:        Service Control Manager`  
-`Date:          <Datetime>`  
-`Event ID:      7038`  
-`Task Category: None`  
-`Level:         Error`  
-`Keywords:      Classic`  
-`User:          N/A`  
-`Computer:      <Server name>`  
-`Description:
+```output
+Log Name:      System  
+Source:        Service Control Manager  
+Date:          <Datetime>  
+Event ID:      7038  
+Task Category: None  
+Level:         Error  
+Keywords:      Classic  
+User:          N/A  
+Computer:      <Server name>  
+Description:
 The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-This user can't sign in because this account is currently disabled.`  
->
-> `To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).`
+This user can't sign in because this account is currently disabled.  
+
+To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
+```
 
 **User action**
 
@@ -93,20 +99,22 @@ This user can't sign in because this account is currently disabled.`
 
 The complete message entry in event log should resemble the following:
 
-> `Log Name:      System`  
-`Source:        Service Control Manager`  
-`Date:          <Datetime>`  
-`Event ID:      7038`  
-`Task Category: None`  
-`Level:         Error`  
-`Keywords:      Classic`  
-`User:          N/A`  
-`Computer:      <Server name>`  
-`Description:
+```output
+Log Name:      System  
+Source:        Service Control Manager  
+Date:          <Datetime>  
+Event ID:      7038  
+Task Category: None  
+Level:         Error  
+Keywords:      Classic  
+User:          N/A  
+Computer:      <Server name>  
+Description:
 The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-The user's password must be changed before signing in.`  
->  
-> `To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).`
+The user's password must be changed before signing in.  
+
+To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
+```
 
 **User action**
 
@@ -120,20 +128,22 @@ The user's password must be changed before signing in.`
 
 The complete message entry in event log should resemble the following:
 
-> `Log Name:      System`  
-`Source:        Service Control Manager`  
-`Date:          <Datetime>`  
-`Event ID:      7038`  
-`Task Category: None`  
-`Level:         Error`  
-`Keywords:      Classic`  
-`User:          N/A`  
-`Computer:      <Server name>`  
-`Description:
+```output
+Log Name:      System  
+Source:        Service Control Manager  
+Date:          <Datetime>  
+Event ID:      7038  
+Task Category: None  
+Level:         Error  
+Keywords:      Classic  
+User:          N/A  
+Computer:      <Server name>  
+Description:
 The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-The user name or password is incorrect.`  
->
-> `To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).`
+The user name or password is incorrect.  
+
+To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
+```
 
 **User action**
 
@@ -147,20 +157,22 @@ Type the correct password in the SQL Server service account on the SQL Server ho
 
 The complete message entry in event log should resemble the following:
 
-> `Log Name:      System`  
-`Source:        Service Control Manager`  
-`Date:          <Datetime>`  
-`Event ID:      7038`  
-`Task Category: None`  
-`Level:         Error`  
-`Keywords:      Classic`  
-`User:          N/A`  
-`Computer:      <Server name>`  
-`Description:
+```output
+Log Name:      System  
+Source:        Service Control Manager  
+Date:          <Datetime>  
+Event ID:      7038  
+Task Category: None  
+Level:         Error  
+Keywords:      Classic  
+User:          N/A  
+Computer:      <Server name>  
+Description:
 The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-The referenced account is currently locked out and may not be logged on to.`  
->
-> `To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).`
+The referenced account is currently locked out and may not be logged on to.  
+
+To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
+```
 
 **User action**
 
