@@ -7,7 +7,14 @@ ms.prod: sql
 ---
 # Logon failure and SQL Server service does not start
 
-When you try to restart Microsoft SQL Server or the SQL Server Agent, the service doesn’t start, and you receive the following error message, depending on how you try to start the service:
+This problem occurs because there is an issue either with the service account itself or the information that is currently saved for the service account.
+
+_Original product version:_ &nbsp; SQL Server  
+_Original KB number:_ &nbsp; 282254
+
+## Symptoms
+
+When you try to restart Microsoft SQL Server or the SQL Server Agent, the service doesn't start, and you receive the following error message, depending on how you try to start the service:
 
 - By using the Services applet:
   
@@ -19,14 +26,9 @@ When you try to restart Microsoft SQL Server or the SQL Server Agent, the servic
     > System error 1069 has occurred.  
       The service did not start due to a logon failure.
 
-This problem occurs because there is an issue either with the service account itself or the information that is currently saved for the service account.
-
-_Original product version:_ &nbsp; SQL Server  
-_Original KB number:_ &nbsp; 282254
-
 ## Prerequisites
 
-To use this troubleshooter, open the System event log, and note the Event ID and description of the event that’s associated with the failure. Then, use the following information to resolve the problem.  
+To use this troubleshooter, open the System event log, and note the Event ID and description of the event that's associated with the failure. Then, use the following information to resolve the problem.  
 
 ## Event ID: 7041, Logon failure: the user has not been granted the requested logon type at this computer
 
