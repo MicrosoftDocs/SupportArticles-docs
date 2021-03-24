@@ -18,11 +18,15 @@ appliesto:
 - Office 365
 search.appverid: MET150
 ---
-# Troubleshooting Import service issues in Microsoft 365
+# Issues with PST import jobs
 
-This article provides basic troubleshooting steps to identify and resolve common issues when you use the Import service to import PST files into Microsoft 365.
+When you use the Import service in the [Security & Compliance Center](https://protection.office.com) to import PST files to user mailboxes in your organization, the last step in the procedure is to start the import job that you create. When the import job runs, you might experience issues such as the slow speed of the import job or failed import jobs. This article lists some of the common issues related to PST import jobs and provides resolutions that you can try.  
 
-## An import job is stuck or slow
+- [Import job is stuck or running slowly](#import-job-is-stuck-or-running-slowly)
+- [Import job fails due to errors in PST files](#import-job-fails-due-to-errors-in-PST-files)
+- [Import job fails with "MapiExceptionShutoffQuotaExceeded" error](#import-job-fails-with-mapiexceptionshutoffquotaexceeded-error)
+
+## Import job is stuck or running slowly
 
 The typical ingestion rate for the Microsoft 365 Import service is approximately 24 gigabytes (GBs) per day. This rate could be lower because the Import service runs in a multi-tenant shared environment. Large PST files cause this issue.
 
@@ -40,7 +44,7 @@ To learn more, see the following articles:
 > [!NOTE]
 > Using PowerShell to create a new import job isn't supported, use the Import service UI in Microsoft 365 instead.
 
-## An import job fails with bad items
+## Import job fails due to errors in PST files
 
 If an import job fails and you encounter bad items, follow these steps:
 
@@ -82,7 +86,7 @@ Here's an example of output:
 > Report                     :  
 > …
 
-## An import job fails with the "MapiExceptionShutoffQuotaExceeded" error
+## Import job fails with MapiExceptionShutoffQuotaExceeded error
 
 This issue occurs because the data being imported is larger than the space available in the target mailbox.
 
