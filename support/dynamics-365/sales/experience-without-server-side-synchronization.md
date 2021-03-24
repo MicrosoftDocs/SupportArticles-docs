@@ -28,7 +28,7 @@ To fix issues with Server-Side Synchronization, contact your administrator, who 
 
 ## Additional possible cause
 
-One other potential cause of this message is if the email address in Dynamics 365 does not match the Primary SMTP address in Microsoft Exchange. For example: If a user's mailbox in Dynamics 365 has the email address value of federson@contoso.com but the primary SMTP address in Exchange is felix.henderson@contoso.com, that would also cause this symptom. Update the email address in Dynamics 365 to match the primary STMP email address in Exchange. When viewing the properties of a mailbox in Exchange, the primary SMTP email address is the one that appears in bold.
+One other potential cause of this message is if the email address in Dynamics 365 does not match the Primary SMTP address in Microsoft Exchange. For example: If a user's mailbox in Dynamics 365 has the email address value of John@contoso.com but the primary SMTP address in Exchange is John@contoso.com, that would also cause this symptom. Update the email address in Dynamics 365 to match the primary STMP email address in Exchange. When viewing the properties of a mailbox in Exchange, the primary SMTP email address is the one that appears in bold.
 
 ## Additional information
 
