@@ -16,30 +16,32 @@ When the Microsoft SQL Server binary file (Sqlservr.exe) is renamed on the syste
 
 - By using the Services applet:
   
-    > `Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.`  
-      `Error 2: The system cannot find the file specified.`
+    > Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.  
+      Error 2: The system cannot find the file specified.
 
 - By using a command prompt:
 
-    > `System error 2 has occurred.`  
-      `The system cannot find the file specified.`
+    > System error 2 has occurred.  
+      The system cannot find the file specified.
 
 ## Resolution
 
 1. Check the Windows System log, and verify that you see an error message entry that resembles the following:
 
-    > `Log Name:      System`  
-    `Source:        Service Control Manager`  
-    `Date:          <Datetime>`  
-    `Event ID:      7000`  
-    `Task Category: None`  
-    `Level:         Error`  
-    `Keywords:      Classic`  
-    `User:          N/A`  
-    `Computer:      <Server name>`
-    `Description:
+    ```output
+    Log Name:      System  
+    Source:        Service Control Manager  
+    Date:          <Datetime>  
+    Event ID:      7000  
+    Task Category: None  
+    Level:         Error  
+    Keywords:      Classic  
+    User:          N/A  
+    Computer:      <Server name>
+    Description:
     The SQL Server (MSSQLSERVER) service failed to start due to the following error:  
-    The system cannot find the file specified.`  
+    The system cannot find the file specified. 
+    ```
 
 1. Go to the SQL Server [installation folder](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server) and verify that it doesn't contain the Sqlservr.exe file.
 
