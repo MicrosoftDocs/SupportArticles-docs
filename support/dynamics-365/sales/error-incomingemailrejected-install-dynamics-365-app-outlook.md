@@ -24,7 +24,7 @@ Crm : IncomingEmailRejected
 This error can occur for one of the following reasons:
 
 - The email address for the mailbox record in Dynamics 365 has not been approved.
-- The Exchange mailbox is currently linked to another Dynamics 365 organization. An Exchange mailbox (email address) can only synchronize appointments, contacts, and tasks with one organization, and a user that belongs to that organization can only synchronize appointments, contacts, and tasks with one Exchange mailbox. Click [here](https://docs.microsoft.com/) for additional information.
+- The Exchange mailbox is currently linked to another Dynamics 365 organization. An Exchange mailbox (email address) can only synchronize appointments, contacts, and tasks with one organization, and a user that belongs to that organization can only synchronize appointments, contacts, and tasks with one Exchange mailbox.
 
 ## Resolution
 
