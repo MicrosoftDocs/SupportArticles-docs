@@ -86,7 +86,7 @@ When using the query `https://[organizationURL]/api/data/v8.2/EntityDefinitions(
  "Label": "Marketing List",
  "LanguageCode": 1033,
  "IsManaged": true,
- "MetadataId": "479709b3-2241-db11-898a-0007e9e17ebd",
+ "MetadataId": "<ID>",
  "HasChanged": null
  }
  ],
