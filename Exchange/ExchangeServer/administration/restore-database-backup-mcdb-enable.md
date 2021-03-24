@@ -41,6 +41,6 @@ This example shows a log generation prefix of E01 and a recovery database path o
 
 ## More information
 
-MCDB is a new feature in Exchange Server 2019 that enables solid state drives to cache the most frequently used data from a database. For more information, see [MetaCacheDatabase (MCDB) setup](https://docs.microsoft.com/exchange/high-availability/database-availability-groups/metacachedatabase-setup).
+MCDB is a new feature in Exchange Server 2019 that enables solid state drives to cache the most frequently used data from a database. For more information, see [MetaCacheDatabase (MCDB) setup](/exchange/high-availability/database-availability-groups/metacachedatabase-setup).
 
-For detailed steps about how to recover a database, see [Restore data using a recovery database](https://docs.microsoft.com/exchange/restore-data-using-a-recovery-database-exchange-2013-help#use-the-shell-to-recover-data-using-a-recovery-database)
+For detailed steps about how to recover a database, see [Restore data using a recovery database](/exchange/restore-data-using-a-recovery-database-exchange-2013-help#use-the-shell-to-recover-data-using-a-recovery-database)

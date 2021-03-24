@@ -638,7 +638,7 @@ Because of the way Exchange Online Account provisioning in Microsoft 365 works, 
 Solution:  
 Follow steps below to recover the mailbox.
 
-1. Connect to [Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. We need to determine the state of the soft-deleted mailbox.
 

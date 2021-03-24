@@ -22,4 +22,4 @@ Welcome to Office 365! Here's a collection of information on how to identify and
 
 ## Still need help
 
-Go to [Microsoft Community](https://answers.microsoft.com) or the [Office 365 help center](https://docs.microsoft.com/Office365/Enterprise/).
+Go to [Microsoft Community](https://answers.microsoft.com) or the [Office 365 help center](/Office365/Enterprise/).

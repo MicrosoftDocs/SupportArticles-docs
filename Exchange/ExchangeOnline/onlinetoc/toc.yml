@@ -490,7 +490,7 @@
     - name: Inline UUEncoded attachments are garbled or unreadable
       href: ../send-emails/inline-uuencoded-attachments-garbled-unreadable.md
     - name: Issues with OOF replies
-      href: ../send-emails/understand-troubleshoot-oof-replies.md
+      href: ../email-delivery/understand-troubleshoot-oof-replies.md
   - name: User and Shared Mailboxes
     items:
     - name: Can't access a shared mailbox using OWA

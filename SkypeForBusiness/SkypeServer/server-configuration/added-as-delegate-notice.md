@@ -56,7 +56,7 @@ Current Channel: Builds 16.0.6741.2017 and later builds
 First Release Deferred Channel: 16.0.6741.2017 and later builds
 Deferred Channel: 16.0.6741.2048and later builds
 
-For more information about C2R Channel builds, see [Office 365 client update channel releases](https://technet.microsoft.com/office/mt465751).
+For more information about C2R Channel builds, see [Office 365 client update channel releases](/officeupdates/release-notes-microsoft365-apps).
 
 ## Workaround
 

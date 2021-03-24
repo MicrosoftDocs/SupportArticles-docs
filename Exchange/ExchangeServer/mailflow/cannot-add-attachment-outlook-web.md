@@ -68,4 +68,4 @@ To resolve this issue, follow these steps:
 
 For more information about client-specific message size limits, see the following Microsoft Exchange website:
 
-[Configure Client-Specific Message Size Limits on Client Access Servers](https://technet.microsoft.com/library/hh529949%28v=exchg.150%29.aspx)
+[Configure Client-Specific Message Size Limits on Client Access Servers](/exchange/configure-client-specific-message-size-limits-exchange-2013-help)

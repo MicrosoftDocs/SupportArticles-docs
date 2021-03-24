@@ -72,7 +72,7 @@ Reset Search Folders, and then restore the default views for the user's profile 
 
 ## More information
 
-To obtain the move request report and confirm this issue, you can run the following command while connected to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true):
+To obtain the move request report and confirm this issue, you can run the following command while connected to [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?preserve-view=true&view=exchange-ps):
 
 ```console
 $stats = Get-MoveRequestStatistics -identity [user@contoso.com](mailto:user@contoso.com) -IncludeReport

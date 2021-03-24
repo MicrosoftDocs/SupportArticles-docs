@@ -42,7 +42,7 @@ To resolve this issue, users must be either site collection administrators or be
 
 If an affected user should be a site collection administrator, go to the following Microsoft website for more information about how to manage administrators for your sites:
 
-[Manage site collection administrators](https://docs.microsoft.com/sharepoint/manage-site-collection-administrators)
+[Manage site collection administrators](/sharepoint/manage-site-collection-administrators)
 
 ### Add the user to the Owners group for the site
 
@@ -101,6 +101,6 @@ This issue occurs because only site collection administrators or users who are m
 
 For more information about how to set up and manage access requests, go to [Set up and manage access requests](https://support.office.com/article/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3).
 
-For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
+For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

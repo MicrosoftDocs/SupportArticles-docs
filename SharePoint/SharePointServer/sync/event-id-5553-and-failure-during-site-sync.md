@@ -56,8 +56,8 @@ You must run the stsadm shell as the farm account for the previous commands to w
 
 ## More Information  
 
-[Move Content Databases](https://technet.microsoft.com/library/cc287899.aspx)  
+[Move Content Databases](/previous-versions/office/sharepoint-foundation-2010/cc287899(v=office.14))  
 
-[Stsadm Sync Commands](https://technet.microsoft.com/library/cc263196%28v=office.12%29.aspx)
+[Stsadm Sync Commands](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263196(v=office.12))
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

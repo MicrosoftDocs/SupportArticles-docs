@@ -33,7 +33,7 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 
 - [OneDrive for work or school help](https://support.microsoft.com/office/1eaa32e9-3229-47c2-b363-0a5306cb8c37)
 - [Troubleshooting documentation for end users](https://support.microsoft.com/office/36110213-f3f6-490d-8cb7-3833539def0b)
-- [OneDrive administrator documentation](https://docs.microsoft.com/onedrive/onedrive)
+- [OneDrive administrator documentation](/onedrive/onedrive)
 - [OneDrive for Business training](https://support.microsoft.com/office/b30da4eb-ddd2-44b6-943b-e6fbfc6b8dde)
 
 ## Still need help

@@ -26,7 +26,7 @@ Statistics for query optimization are objects that contain statistical informati
 
 For example, the query optimizer can improve query performance by using cardinality estimates to select the index seek operator instead of the more resource-intensive index scan operator. Otherwise, outdated statistics may decrease query performance by using inefficient query plans.  
 
-Large enterprise SharePoint deployments must have database maintenance plans to update database statistics on content databases that reside in Microsoft SQL Server. Customers should not rely only on SharePoint-based database maintenance jobs to perform these tasks. For more information, see [Best practices for SQL Server in a SharePoint Server farm](https://technet.microsoft.com/library/hh292622.aspx).  
+Large enterprise SharePoint deployments must have database maintenance plans to update database statistics on content databases that reside in Microsoft SQL Server. Customers should not rely only on SharePoint-based database maintenance jobs to perform these tasks. For more information, see [Best practices for SQL Server in a SharePoint Server farm](/SharePoint/administration/best-practices-for-sql-server-in-a-sharepoint-server-farm).  
 
 ## Symptoms  
 
@@ -67,13 +67,13 @@ If these conditions aren't monitored closely and if corrective actions aren't ta
 
 ## Resolution  
 
-To prevent these symptoms and potential service outages, SQL Server maintenance plans should be implemented to keep SharePoint content database statistics updated by using the FULLSCAN option. For more information, see [Index statistics](https://technet.microsoft.com/library/ms190397%28sql.90%29.aspx).  
+To prevent these symptoms and potential service outages, SQL Server maintenance plans should be implemented to keep SharePoint content database statistics updated by using the FULLSCAN option. For more information, see [Index statistics](/previous-versions/sql/sql-server-2005/ms190397(v=sql.90)).  
 
-When implementing the SQL Server maintenance plan to update the statistics on your SharePoint databases, it is not required to disable the job from SharePoint. However, because these maintenance tasks perform similar functions from both locations, it is permissible to disable the "Databases used by SharePoint have outdated index statistics" Heath Analyzer rule from the SharePoint farm if databases are being managed by SQL. For more information about how to manage the index update job from SharePoint Server, see [Databases used by SharePoint have outdated index statistics (SharePoint 2013)](https://technet.microsoft.com/library/hh564122.aspx).   
+When implementing the SQL Server maintenance plan to update the statistics on your SharePoint databases, it is not required to disable the job from SharePoint. However, because these maintenance tasks perform similar functions from both locations, it is permissible to disable the "Databases used by SharePoint have outdated index statistics" Heath Analyzer rule from the SharePoint farm if databases are being managed by SQL. For more information about how to manage the index update job from SharePoint Server, see [Databases used by SharePoint have outdated index statistics (SharePoint 2013)](/SharePoint/technical-reference/databases-used-by-sharepoint-have-outdated-index-statistics).   
 
 ## More Information  
 
-Updating the statistics of SharePoint content databases, using the FULLSCAN option, on a daily basis from the SQL Server is a recommend best practice. For more information, see [Best practices for SQL Server in a SharePoint Server farm](https://technet.microsoft.com/library/hh292622.aspx) and [Database maintenance for SharePoint Foundation 2010](https://technet.microsoft.com/library/hh133453%28v=office.14%29.aspx).   
+Updating the statistics of SharePoint content databases, using the FULLSCAN option, on a daily basis from the SQL Server is a recommend best practice. For more information, see [Best practices for SQL Server in a SharePoint Server farm](/SharePoint/administration/best-practices-for-sql-server-in-a-sharepoint-server-farm) and [Database maintenance for SharePoint Foundation 2010](/previous-versions/office/sharepoint-foundation-2010/hh133453(v=office.14)).   
 
 However, if your SharePoint farm is currently experiencing performance issues because of outdated STATS, the following information can be used as a one-time mitigation step to alleviate this issue.   
 
@@ -98,9 +98,9 @@ To update database statistics on a single database that uses the FULLSCAN option
 EXEC sp_MSforeachtable 'UPDATE STATISTICS ? WITH FULLSCAN'  
 ```  
 
-Important note  The "sp_MSforeachtable" option is an undocumented procedure that's provided "as is" and should only be used to mitigate the immediate issue. We do not recommended that you use this procedure as part of a regular maintenance plan. Instead, see our [UPDATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/library/ms187348.aspx) documentation about how to implement a plan to UPDATE STATISTICS, using the FULLSCAN option.   
+Important note  The "sp_MSforeachtable" option is an undocumented procedure that's provided "as is" and should only be used to mitigate the immediate issue. We do not recommended that you use this procedure as part of a regular maintenance plan. Instead, see our [UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql) documentation about how to implement a plan to UPDATE STATISTICS, using the FULLSCAN option.   
 
-Depending on how outdated the database statistics have become, you may have to clear the query plan cache by running the [DBCC FREEPROCCACHE](https://msdn.microsoft.com/library/ms174283.aspx) command after you update the database statistics. You'll find the syntax and arguments for this procedure in [DBCC FREEPROCCACHE (Transact-SQL)](https://msdn.microsoft.com/library/ms174283.aspx). Doing this makes sure that new queries use the optimal execution plan after the database statistics are updated. For example, see the following query:  
+Depending on how outdated the database statistics have become, you may have to clear the query plan cache by running the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command after you update the database statistics. You'll find the syntax and arguments for this procedure in [DBCC FREEPROCCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql). Doing this makes sure that new queries use the optimal execution plan after the database statistics are updated. For example, see the following query:  
 
 ```  
 -- Remove all elements from the plan cache  
@@ -110,7 +110,7 @@ DBCC FREEPROCCACHE
 > [!IMPORTANT]
 > Running the DBCC FREEPROCCACHE command clears the cache for all query plans in in the SQL instance. This command should be well understood before you execute it during production hours.  
 
-If the [DBCC FREEPROCCACHE](https://msdn.microsoft.com/library/ms174283.aspx) command was not executed after updating the outdated database statistics, queries with inefficient execution plans may still reside in cache and be used. If this is the case, force a recompile on the specified stored procedure by using the stored procedure (see [sp_recompile (Transact-SQL)](https://msdn.microsoft.com/library/ms181647.aspx)). For example, see the following query:   
+If the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command was not executed after updating the outdated database statistics, queries with inefficient execution plans may still reside in cache and be used. If this is the case, force a recompile on the specified stored procedure by using the stored procedure (see [sp_recompile (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-recompile-transact-sql)). For example, see the following query:   
 
 ```  
 USE SP2013_Content_DB  
@@ -118,6 +118,6 @@ GO
 sp_recompile proc_getwebnavstruct  
 ```  
 
-Running the [sp_recompile](https://msdn.microsoft.com/library/ms181647.aspx) command together with procedure, function, or table parameters target a single element in the cache for removal without affecting the instance.
+Running the [sp_recompile](/sql/relational-databases/system-stored-procedures/sp-recompile-transact-sql) command together with procedure, function, or table parameters target a single element in the cache for removal without affecting the instance.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

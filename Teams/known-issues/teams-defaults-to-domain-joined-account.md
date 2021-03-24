@@ -37,6 +37,6 @@ If users are signed in to a domain-joined computer and don't want their user nam
 
 > [!NOTE]
 > Skipping the user name pre-fill for user names that end in ".local" or ".corp" is activated by default, so a registry key does not need to be set to turn these off. 
-For more information, see [Sign in to Microsoft Teams using modern authentication](https://docs.microsoft.com/microsoftteams/sign-in-teams).
+For more information, see [Sign in to Microsoft Teams using modern authentication](/microsoftteams/sign-in-teams).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
