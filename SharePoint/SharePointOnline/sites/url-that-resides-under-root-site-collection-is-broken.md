@@ -40,6 +40,6 @@ To address issues caused by deleting a root site, and to continue to allow the a
 
 - To allow admins to manage which site is at the root, [Site Swap](/sharepoint/modern-root-site#swap-your-root-site) has been introduced. Site Swap will allow admins to replace the root site with either a modern communication site or a classic team site. 
    > [!IMPORTANT]
-   > Site Swap is available as a PowerShell cmdlet only. For more info about using this cmdlet and what happens with the previous root site, see [Invoke-SPOSiteSwap](/powershell/module/sharepoint-online/invoke-spositeswap?view=sharepoint-ps). Site Swap will be available in the Modern SharePoint Admin Center as a **Replace** button in future versions. 
+   > Site Swap is available as a PowerShell cmdlet only. For more info about using this cmdlet and what happens with the previous root site, see [Invoke-SPOSiteSwap](/powershell/module/sharepoint-online/invoke-spositeswap). Site Swap will be available in the Modern SharePoint Admin Center as a **Replace** button in future versions. 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
