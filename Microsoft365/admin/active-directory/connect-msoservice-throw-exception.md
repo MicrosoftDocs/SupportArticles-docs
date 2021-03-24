@@ -47,6 +47,6 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-For more information about Azure Active Directory Module for Windows PowerShell, see [Azure Active Directory Cmdlets](https://aka.ms/aadposh).
+For more information about Azure Active Directory Module for Windows PowerShell, see [Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

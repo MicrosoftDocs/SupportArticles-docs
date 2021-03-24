@@ -37,7 +37,7 @@ https://meet.lync.com/litwareinc/user1/45GZFH99
 
 To resolve this issue, administrators should run the **Update-CsTenantMeetingUrl** cmdlet. This cmdlet replaces the old meeting URL with a new one that contains the custom URL instead. For example: https://meet.lync.com/onmicrosoft/user1/37JYLP71.
 
-For more information about the **Update-CsTenantMeetingUrl** cmdlet, see [Update-CsTenantMeetingUrl](https://technet.microsoft.com/library/dn424754.aspx).
+For more information about the **Update-CsTenantMeetingUrl** cmdlet, see [Update-CsTenantMeetingUrl](/powershell/module/skype/Update-CsTenantMeetingUrl).
 
 ## More Information
 

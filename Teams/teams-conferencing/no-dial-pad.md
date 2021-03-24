@@ -35,9 +35,9 @@ Here are the four possible causes of this issue:
 
 ## Resolution
 
-- Make sure the user has been assigned a [Teams license](https://docs.microsoft.com/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
-- Make sure the user has been assigned a [Calling Plan](https://docs.microsoft.com/microsoftteams/calling-plan-landing-page).
-- Enable the user for [Enterprise Voice](https://docs.microsoft.com/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-enterprise-voice-online-and-phone-system-voicemail).
+- Make sure the user has been assigned a [Teams license](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
+- Make sure the user has been assigned a [Calling Plan](/microsoftteams/calling-plan-landing-page).
+- Enable the user for [Enterprise Voice](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-enterprise-voice-online-and-phone-system-voicemail).
 - Teams administrators should remove the user's **OnlineVoiceRoutingPolicy** value and set the correct value for the policy as shown in this example:
 
     ```powershell

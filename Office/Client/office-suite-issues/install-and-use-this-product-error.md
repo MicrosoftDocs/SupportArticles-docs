@@ -1,8 +1,8 @@
 ---
 title: To install and use this product error when you install Office 2010
 description: Provides methods to troubleshoot and resolve the error to install and use this product you must be running one of the following operating systems.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

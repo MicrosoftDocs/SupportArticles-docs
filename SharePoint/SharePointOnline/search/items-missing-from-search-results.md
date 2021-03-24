@@ -29,7 +29,7 @@ To resolve this issue, keep SharePoint group membership size under 2,000 users.
 
 If you need to grant access to many individual users, use an O365 security group as an alternative. To do this, create a security group, and then add the security group to the SharePoint group instead of adding the individual users to the SharePoint group. Next, add the individual users to the security group.
 
-For more information about security groups in Office 365, see [Create, edit, or delete a security group in the admin center](https://docs.microsoft.com/office365/admin/email/create-edit-or-delete-a-security-group?redirectSourcePath=%252fen-us%252farticle%252fcreate-edit-or-delete-a-security-group-in-the-office-365-admin-center-55c96b32-e086-4c9e-948b-a018b44510cb&view=o365-worldwide).
+For more information about security groups in Office 365, see [Create, edit, or delete a security group in the admin center](/office365/admin/email/create-edit-or-delete-a-security-group).
 
 ## More information
 

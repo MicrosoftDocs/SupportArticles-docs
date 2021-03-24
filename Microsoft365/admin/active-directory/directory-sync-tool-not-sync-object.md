@@ -43,14 +43,14 @@ This issue occurs if you're using the 32-bit version of the Microsoft Online Se
 
 ## Solution
 
-Upgrade to the latest version of the Directory Sync tool. This is now called the Azure Active Directory Synchronization tool, and it must be installed on a 64-bit edition of Windows Server. To download the latest version of the Directory Sync tool, go to [What is hybrid identity with Azure Active Directory?](https://technet.microsoft.com/library/jj151800.aspx).
+Upgrade to the latest version of the Directory Sync tool. This is now called the Azure Active Directory Synchronization tool, and it must be installed on a 64-bit edition of Windows Server. To download the latest version of the Directory Sync tool, go to [What is hybrid identity with Azure Active Directory?](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 ## More information
 
-To learn about the system and software requirements for the Directory Sync tool, see [Prepare for directory synchronization](https://technet.microsoft.com/library/jj151831.aspx).
+To learn about the system and software requirements for the Directory Sync tool, see [Prepare for directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 For a list of attributes that are synchronized by the Azure Active Directory Sync tool, see the following wiki article:
 
-[Azure AD Connect sync: Attributes synchronized to Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized)
+[Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

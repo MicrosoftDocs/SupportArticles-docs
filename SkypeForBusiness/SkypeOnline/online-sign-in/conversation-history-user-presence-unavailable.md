@@ -51,8 +51,8 @@ In the Lync client, you may receive one of the following error messages:
 
 Make sure that you're using the most up-to-date Lync client. For more information, go to the following Microsoft websites:
 
-- [Updates resource center for Lync 2013](https://technet.microsoft.com/lync/dn146014.aspx)   
-- [Updates resource center for Lync 2010](https://technet.microsoft.com/lync/gg131945.aspx)   
+- [Updates resource center for Lync 2013](/SkypeForBusiness/software-updates)   
+- [Updates resource center for Lync 2010](/SkypeForBusiness/software-updates)   
 
 #### Is Outlook running and configured to use the correct profile?
 

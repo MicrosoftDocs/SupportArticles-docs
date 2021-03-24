@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you try to use the **[Set-CsUser](/powershell/module/skype/set-csuser?view=skype-ps)** cmdlet to change a user or group of users in Skype for Business Online (formerly Lync Online), you receive the following error message:
+When you try to use the **[Set-CsUser](/powershell/module/skype/set-csuser)** cmdlet to change a user or group of users in Skype for Business Online (formerly Lync Online), you receive the following error message:
 
 **Unable to set "SipAddress". This parameter is restricted within Remote Tenant PowerShell.**
 
@@ -35,6 +35,6 @@ When you try to use the **[Set-CsUser](/powershell/module/skype/set-csuser?view=
 
 The **Set-CsUser** cmdlet is included in the set of cmdlets that are available to Skype for Business Online administrators. However, you can't currently use the **Set-CsUser** cmdlet to manage Skype for Business Online. The only exception is that you can use this cmdlet to set the AudioVideoDisabled parameter. This is by design.
 
-For more information about how to perform various administrative tasks by using Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](https://technet.microsoft.com/library/dn362801.aspx).
+For more information about how to perform various administrative tasks by using Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -27,7 +27,7 @@ When you try to update a Microsoft SharePoint app that you're developing by usin
 
 To resolve this issue, use a later version number in the App element of the Appmanifest.xml file.
 
-For more information, see [Update SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/update-sharepoint-add-ins).
+For more information, see [Update SharePoint Add-ins](/sharepoint/dev/sp-add-ins/update-sharepoint-add-ins).
 
 ## More information
 

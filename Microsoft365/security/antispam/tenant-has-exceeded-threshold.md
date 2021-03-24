@@ -37,7 +37,7 @@ The increased level of spam can occur for several different reasons. The most co
 
 - Sending bulk mail. This is because bulk mail violates the Office 365 terms of service. Exchange Online customers who have to send legitimate bulk commercial email (for example, customer newsletters) should use third-party providers that specialize in these services.
 
-  For more information, see the "Receiving and sending limits" section of [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#receiving-and-sending-limits).
+  For more information, see the "Receiving and sending limits" section of [Exchange Online Limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#receiving-and-sending-limits).
 - A compromised system, in which attackers can use your tenant to send email without your knowledge.
 
 ## Resolution
@@ -53,7 +53,7 @@ To fix this issue, follow these steps:
 
 1. Check the audit logs to determine whether a connector was created recently. Spammers are known to create connectors, send out lots of mails on that connector, and then delete the connector to cover their tracks.
 1. Because an admin account was compromised, change the passwords for all your admins.
-1. To prevent future compromise, enable multi-factor authentication (MFA) for, at least, the admin accounts. For more information, see [Set up multi-factor authentication](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide&preserve-view=true).
+1. To prevent future compromise, enable multi-factor authentication (MFA) for, at least, the admin accounts. For more information, see [Set up multi-factor authentication](/office365/admin/security-and-compliance/set-up-multi-factor-authentication?preserve-view=true&view=o365-worldwide).
 1. Contact Microsoft Support to unblock the tenant.
 
 ## References

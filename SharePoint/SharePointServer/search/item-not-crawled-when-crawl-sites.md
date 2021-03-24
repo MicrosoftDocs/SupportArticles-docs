@@ -28,14 +28,14 @@ When you try to crawl a SharePoint 2016 or 2013 website, you receive the followi
 
 To fix this issue, try the following methods in the given order. If one method doesn't fix the issue, try the next method.    
 
-- Examine the crawl rules in the Search service application to make sure that there isn't an existing rule that prevents the site from being crawled. For more information about crawl rules, see [Manage crawl rules in SharePoint Server](https://technet.microsoft.com/library/jj219686.aspx).    
+- Examine the crawl rules in the Search service application to make sure that there isn't an existing rule that prevents the site from being crawled. For more information about crawl rules, see [Manage crawl rules in SharePoint Server](/SharePoint/search/manage-crawl-rules).    
 - If you use a Robots.txt file for the site, examine the **User-agent** and **Disallow** settings to make sure that they don't exclude the crawler from the site.    
-- If the crawler uses TLS 1.2, make sure that the site supports TLS 1.2. For more information about TLS support, see [Enable TLS and SSL support in SharePoint](https://technet.microsoft.com/library/60913d6d-c069-4dfc-9399-71d5344da4e0%28v=office.16%29.aspx).    
+- If the crawler uses TLS 1.2, make sure that the site supports TLS 1.2. For more information about TLS support, see [Enable TLS and SSL support in SharePoint](/SharePoint/security-for-sharepoint-server/enable-tls-and-ssl-support-in-sharepoint-2013).    
 - If the site is in a content source, examine the crawl settings in the content source. For example, examine the page depth and number of server hops.      
 
 ## References  
 
-[Manage crawling in SharePoint Server](https://technet.microsoft.com/library/ee792876.aspx)
+[Manage crawling in SharePoint Server](/SharePoint/search/manage-crawling)
 
 ## More information
 

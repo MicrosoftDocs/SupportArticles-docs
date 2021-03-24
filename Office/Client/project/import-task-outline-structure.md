@@ -1,8 +1,8 @@
 ---
 title: Importing a Task Outline Structure into Project
 description: Introduces how to import a task outline structure into Project.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

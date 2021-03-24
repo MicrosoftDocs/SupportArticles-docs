@@ -29,9 +29,9 @@ appliesto:
 > [!NOTE]
 >
 > - Don't use this article if you use a [Microsoft account](https://support.microsoft.com/search?query=what%20is%20a%20microsoft%20account%3F) to sign in.
-> - If you use Azure Multi-Factor Authentication, contact your administrator for help. For more information, see [How it works: Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks).
-> - For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](https://docs.microsoft.com/azure/active-directory/user-help/multi-factor-authentication-end-user-signin).
-> - To reset your password, see [Reset my Office 365 tenant admin password](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password&preserve-view=true).
+> - If you use Azure Multi-Factor Authentication, contact your administrator for help. For more information, see [How it works: Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
+> - For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](/azure/active-directory/user-help/multi-factor-authentication-end-user-signin).
+> - To reset your password, see [Reset my Office 365 tenant admin password](/microsoft-365/admin/add-users/reset-passwords?preserve-view=true&view=o365-worldwide#reset-my-office-365-tenant-admin-password).
 
 You can't sign in to Microsoft Office 365, Microsoft Azure, or Microsoft Intune. You might be trying to sign in by using a portal such as [https://login.microsoftonline.com](https://login.microsoftonline.com/). Or, you might be trying to sign in by using a non-browser–based app, such as one of the following:
 
@@ -74,7 +74,7 @@ To resolve this issue, follow these steps.
 If you can sign in to the portal, but you can't sign in to a non-browser–based app, such as an Office app or an app on your mobile device to check email, follow these steps:
 
 1. Work with your admin to make sure that you have the correct licenses applied to your account.
-2. If you're enabled for multi-factor authentication, make sure that you have set up app passwords. For more information about multi-factor authentication, see [Manage your settings for two-step verification](https://docs.microsoft.com/azure/active-directory/user-help/multi-factor-authentication-end-user-manage-settings).
+2. If you're enabled for multi-factor authentication, make sure that you have set up app passwords. For more information about multi-factor authentication, see [Manage your settings for two-step verification](/azure/active-directory/user-help/multi-factor-authentication-end-user-manage-settings).
 3. If you use a mail app such as Outlook, and if you're a federated user, see [Federated users can't connect to an Exchange Online mailbox](https://support.microsoft.com/help/2466333).
 4. For more information about how to troubleshoot sign-in issues that use non-browser–based apps, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1).
   
@@ -102,6 +102,6 @@ If you can't sign in to the portal, use one of the solutions in the following ta
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
 
-- **If you are an admin for a Microsoft Business Subscription** who requires assisted technical support, see [Ways to contact support for business products - Admin Help](https://docs.microsoft.com/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=phone&preserve-view=true).
+- **If you are an admin for a Microsoft Business Subscription** who requires assisted technical support, see [Ways to contact support for business products - Admin Help](/microsoft-365/admin/contact-support-for-business-products?preserve-view=true&tabs=phone&view=o365-worldwide).
 
 - **For all others**, [contact Microsoft Support](https://support.microsoft.com/help/4027136/office-contact-microsoft-office-support).

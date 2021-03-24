@@ -151,7 +151,7 @@ After defining port ranges, you must also create QoS policies that specify the D
  
    Microsoft outlines the complete steps here:
    
-   [Configuring a Quality of Service policy in Lync Server 2013 for your Conferencing, Application, and Mediation servers](https://technet.microsoft.com/enus/library/jj205076(v=ocs.15).aspx)
+   [Configuring a Quality of Service policy in Lync Server 2013 for your Conferencing, Application, and Mediation servers](/previous-versions/office/lync-server-2013/lync-server-2013-configuring-a-quality-of-service-policy-for-your-conferencing-application-and-mediation-servers)
 
 
    1. You must have consolidated all your computer objects to a single Organization Unit (OU). (for example, a computer.)

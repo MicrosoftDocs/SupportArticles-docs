@@ -1,6 +1,6 @@
 ---
 title: Compatibility Report about text queries in Excel Online
-author: AmandaAZ
+author: simonxjx
 ms.author: jhaak
 manager: dcscontentpm
 localization_priority: Normal

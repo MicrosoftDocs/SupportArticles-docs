@@ -1,6 +1,6 @@
 ---
 title: Errors when you access documents in Microsoft Offices Online 2013 or Office Online Server from SharePoint web applications where Forms-Based Authentication is enabled
-author: AmandaAZ
+author: simonxjx
 ms.author: thempel
 manager: dcscontentpm
 localization_priority: Normal

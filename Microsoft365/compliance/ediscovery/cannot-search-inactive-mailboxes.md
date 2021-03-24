@@ -37,6 +37,6 @@ This is a known issue. Microsoft is working to address the issue and will post m
 
 ## More information
 
-For more info about inactive mailboxes, go to [Manage inactive mailboxes in Exchange Online](https://technet.microsoft.com/library/dn144876%28v=exchg.150%29.aspx ).
+For more info about inactive mailboxes, go to [Manage inactive mailboxes in Exchange Online](/microsoft-365/security/office-365-security/exchange-online-protection-overview).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

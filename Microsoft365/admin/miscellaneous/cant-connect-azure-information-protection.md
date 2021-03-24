@@ -1,8 +1,8 @@
 ---
 title: You can't connect to the Azure Information Protection service in Office 365
 description: Describes an issue that you cannot connect to the Azure Information Protection service in Office 365. Provides a resolution.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -41,7 +41,7 @@ To fix this issue, follow these steps:
 
 1. Make sure that your company is enabled for Azure Information Protection. For more info about how to do this, go to the following Microsoft TechNet website:
 
-   [Azure Information Protection deployment roadmap](https://technet.microsoft.com/library/jj585005.aspx)   
+   [Azure Information Protection deployment roadmap](/azure/information-protection/deployment-roadmap)   
 2. Work with the network admin to make sure that the network meets the requirements for connecting to the Azure Information Protection. The requirements are as follows: 
   - Incoming and outgoing connections to *.aadrm.com are enabled   
   - Incoming and outgoing connections to *.cloudapp.net (rmsoprod*-b-rms*.cloudapp.net) are enabled    
@@ -53,6 +53,6 @@ To fix this issue, follow these steps:
 
 For more info about Azure Information Protection, go to the following Microsoft TechNet website:
 
-[Azure Information Protection Documentation](https://technet.microsoft.com/library/jj585024.aspx)
+[Azure Information Protection Documentation](/information-protection/)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

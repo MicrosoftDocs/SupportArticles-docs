@@ -1,6 +1,6 @@
 ---
 title: A SharePoint file is downloaded instead of opening the Office application with a direct connection to it
-author: AmandaAZ
+author: simonxjx
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

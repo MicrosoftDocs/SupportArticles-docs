@@ -117,7 +117,7 @@ Reinstall the security update from an elevated command prompt.
 1. Type the full path of the .msp file for the security update, and then press **Enter**.
 1. After the update installs, restart the server.
 
-For more information, see [OWA or ECP stops working after you install a security update](https://docs.microsoft.com/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update).
+For more information, see [OWA or ECP stops working after you install a security update](./owa-stops-working-after-update.md).
 
 [Back to top](#summary)
 
@@ -195,7 +195,7 @@ This issue occurs because the Exchange Server Open Authentication (OAuth) certif
 
 **Resolution**
 
-Follow the steps in this [article](/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired#resolution&preserve-view=true) to fix the issue.
+Follow the steps in this [article](../administration/cannot-access-owa-or-ecp-if-oauth-expired.md?preserve-view=true#resolution) to fix the issue.
 
 [Back to top](#summary)
 
@@ -244,7 +244,7 @@ Do the following:
     Restart-Service WAS,W3SVC
     ```
 
-    For more information, see [this article](/exchange/troubleshoot/client-connectivity/event-1309-code-3005-cannot-access-owa-ecp).
+    For more information, see [this article](./event-1309-code-3005-cannot-access-owa-ecp.md).
 
 [Back to top](#summary)
 
@@ -273,7 +273,7 @@ In the absence of these conditions, another setup.exe file located in `C:\Progra
 
 Run the upgrade by using "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt).
 
-For more information, see [this article](https://docs.microsoft.com/exchange/troubleshoot/setup/ex2019-setup-does-not-run-correctly-started-powershell).
+For more information, see [this article](../setup/ex2019-setup-does-not-run-correctly-started-powershell.md).
 
 [Back to top](#summary)
 
@@ -302,7 +302,7 @@ The installation fails because services didn't stop properly.
 
 **Resolution**
 
-Use the best practice to reboot the server before installing the CU or SU. For the antivirus software you're running, set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019&preserve-view=true) or consider turning it off during the setup. In some cases where services still don't stop or start as expected, do the following.
+Use the best practice to reboot the server before installing the CU or SU. For the antivirus software you're running, set proper [exclusions](/Exchange/antispam-and-antimalware/windows-antivirus-software?preserve-view=true&view=exchserver-2019) or consider turning it off during the setup. In some cases where services still don't stop or start as expected, do the following.
 
 1. Rename the C:\ExchangeSetupLogs folder (for example, ExchangeSetupLogs-OLD).
 2. Change the startup type for Exchange services in the services.msc console to **Automatic**.
@@ -600,7 +600,7 @@ When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (
 If your scenario meets both the following conditions, apply the update rollup on the internet-facing CAS before you apply the update rollup on the non–internet-facing CAS:
 
 - You’re a CAS Proxy Deployment Guidance customer.
-- You have deployed [CAS-CAS proxying](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)?redirectedfrom=MSDN).
+- You have deployed [CAS-CAS proxying](/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)).
 
 > [!NOTE]
 > For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in a specific order.

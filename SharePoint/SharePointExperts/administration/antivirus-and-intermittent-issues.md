@@ -1,6 +1,6 @@
 ---
 title: Antivirus and intermittent issues when you view Office documents by using Microsoft Offices Online or Office Online Server
-author: AmandaAZ
+author: simonxjx
 ms.author: jhaak
 manager: dcscontentpm
 localization_priority: Normal

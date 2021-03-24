@@ -6,7 +6,7 @@ ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 02/03/2021
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
@@ -43,7 +43,7 @@ To remove the **Invalid retention hold**, try one of the following methods, depe
 
 ### Non-administrators
 
-If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles).
+If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles).
 
 ### Administrators
 

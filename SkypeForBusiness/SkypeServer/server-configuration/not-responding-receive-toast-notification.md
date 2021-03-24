@@ -33,7 +33,7 @@ To fix this issue, install the April 2, 2019 update for Skype for Business for a
  
 ![The screenshot for Update Options](./media/not-responding-receive-toast-notification/update-options.png) 
 
-Don't see your Skype for Business client in the list? Click [here](https://technet.microsoft.com/office/dn788954) for a complete list of clients. You can download the Click-to-Run client from the [Office365 Portal](https://portal.office.com/ols/mysoftware.aspx).  
+Don't see your Skype for Business client in the list? Click [here](/SkypeForBusiness/software-updates) for a complete list of clients. You can download the Click-to-Run client from the [Office365 Portal](https://portal.office.com/ols/mysoftware.aspx).  
 
 After you apply the update, create a Group Policy to set the following registry key on clients:
 

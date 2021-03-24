@@ -1,7 +1,7 @@
 ---
 title: Can't import attribute-centric XML
 description: Explains why you cannot import all tables of an XML document. This article gives solutions to the problem.
-author: AmandaAZ
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: v-six
 ms.reviewer: REBC
 appliesto:
 - Access 2007

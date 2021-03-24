@@ -1,8 +1,8 @@
 ---
 title: Office applications crash when you open an IRM document if HTTPS proxy is enabled
 description: Fixes an issue that causes Office 2016 and Office 2013 applications to crash when you try to open an information rights management (IRM)–protected document.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
