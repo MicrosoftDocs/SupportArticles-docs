@@ -36,7 +36,7 @@ FROM duplicate_table
 DROP TABLE duplicate_table
 ```
 
-When this script runs, the program takes the following actions in the given order:
+When this script runs, the program will take the following actions in the given order:
 
 - Move one instance of any duplicate row in the original table to a duplicate table.
 - Delete all rows from the original table that also reside in the duplicate table.
