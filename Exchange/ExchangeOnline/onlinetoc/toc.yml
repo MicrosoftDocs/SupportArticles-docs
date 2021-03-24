@@ -445,6 +445,8 @@
       href: ../outlook-on-the-web-issues/there-are-multiple-recipients-matching-the-identity-error.md
     - name: This calendar isn't available error when accessing calendar
       href: ../outlook-on-the-web-issues/this-calendar-not-available-error-when-accessing-calendar.md
+    - name: Time zone setting for shared mailboxes
+      href: ../outlook-on-the-web-issues/shared-mailboxes-time-zone-setting.md
     - name: You may have already signed in to Outlook Web App error
       href: ../outlook-on-the-web-issues/you-may-have-already-signed-in-to-outlook-web-app-error.md
   - name: Public Folders
