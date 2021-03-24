@@ -39,7 +39,7 @@ To work around this issue, use one of the follow methods.
 
 ### Method 2
 
-Install the [latest Hotfix for App-V](https://blogs.technet.microsoft.com/appv/2016/02/22/hotfix-package-2-for-microsoft-app-v-5-1-and-hotfix-package-3-for-microsoft-app-v-5-0-sp3-now-available/).
+Install the [latest Hotfix for App-V](/archive/blogs/appv/hotfix-package-2-for-microsoft-app-v-5-1-and-hotfix-package-3-for-microsoft-app-v-5-0-sp3-now-available).
 
 > [!NOTE]
 > If there are no Internet Explorer app-V add-ins, Method 1 or Method 2 is a safer route.

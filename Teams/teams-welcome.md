@@ -18,7 +18,7 @@ appliesto:
 
 # Teams troubleshooting
 
-Welcome to Teams troubleshooting! If you're looking for known issues, you're in the right place. We've organized each known issue into its own article and grouped them in categories to make them easier to find. You'll also find information on how to identify and fix errors you may experience when using Microsoft Teams.
+Welcome to Teams troubleshooting! If you're looking for known issues, you are in the right place. We've organized each known issue into its own article and grouped them in categories to make them easier to find. You'll also find information on how to identify and fix errors you may experience when using Microsoft Teams.
 
 Below is a collection of the top issues. If your issue isn't listed there, browse the table of contents or use the filter box on the left to locate the information about your specific issue.
 
@@ -37,5 +37,5 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 
 - [Remote teaching and learning in Office 365 Education](https://support.microsoft.com/office/remote-teaching-and-learning-in-office-365-education-f651ccae-7b65-478b-8366-51bb884025c4)
 - [Microsoft Teams end user documentation](https://support.office.com/teams)
-- [Microsoft Teams administrator documentation](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
-- [Microsoft Teams training](https://docs.microsoft.com/MicrosoftTeams/training-microsoft-teams-landing-page)
+- [Microsoft Teams administrator documentation](/MicrosoftTeams/teams-overview)
+- [Microsoft Teams training](/MicrosoftTeams/training-microsoft-teams-landing-page)

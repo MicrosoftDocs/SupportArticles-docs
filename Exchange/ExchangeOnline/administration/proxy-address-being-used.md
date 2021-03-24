@@ -38,11 +38,11 @@ An object that has the same proxy address already exists in Exchange Online.
 Check for objects have the same proxy address, and then remove or change the proxy address of the object that's in conflict.
 To determine which objects share the proxy address of a specified user, follow these steps:
 
-1. Connect to Exchange Online by using a remote Windows PowerShell session. For more information about how to do this, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+1. Connect to Exchange Online by using a remote Windows PowerShell session. For more information about how to do this, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Run the following command:
 
     ```powershell
-    Get-Recipient | Where-Object {$_.EmailAddresses -match "user@contoso.onmicrosoft.com"} | Format-List Name, RecipientType, emailaddresses
+    Get-EXORecipient | Where-Object {$_.EmailAddresses -match "user@contoso.onmicrosoft.com"} | Format-List Name, RecipientType, emailaddresses
     ```
 
     This command lists all mail recipients that have a type that matches the proxy address of a specified user. The duplicate proxy address may be associated with any of the following:
@@ -57,6 +57,6 @@ Only one proxy address at a time can be assigned to an object. After you determi
 
 ## More information
 
-For more information about primary addresses and proxy addresses, see [Add or remove email addresses for a mailbox](https://technet.microsoft.com/library/bb123794%28v=exchg.150%29.aspx).
+For more information about primary addresses and proxy addresses, see [Add or remove email addresses for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

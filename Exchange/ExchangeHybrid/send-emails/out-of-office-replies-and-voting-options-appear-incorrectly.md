@@ -76,7 +76,8 @@ Set-RemoteDomain "default" -TNEFEnabled $true -AllowedOOFType "InternalLegacy"
 Create remote domains for each of your on-premises domains that have to use TNEF-based features. Then, set the **TNEFEnabled** parameter on those specific remote on-premises domains. To do this, run the following commands in Exchange Online:
 
 ```powershell
-New-RemoteDomain -DomainName contoso.com Set-RemoteDomain "contoso.com" -TNEFEnabled $true -AllowedOOFType "InternalLegacy"
+New-RemoteDomain -DomainName contoso.com
+Set-RemoteDomain "contoso.com" -TNEFEnabled $true -AllowedOOFType "InternalLegacy"
 ```
 
 ## More information

@@ -31,9 +31,9 @@ The local web client service on the machine is disabled.
 
 Click Start and type Services in the search pane. Open the Services window, right-click the Web client service and choose Properties. Change the startup type to Manual, then click OK and exit the Services window.
 
-If you are running Windows Server 2008 or Windows Server 2012, the web client service must first be installed as a part of the Desktop Experience. For instructions on how to install the Desktop Experience on Server 2008, please see [Desktop Experience Overview](https://technet.microsoft.com/library/cc772567.aspx).
+If you are running Windows Server 2008 or Windows Server 2012, the web client service must first be installed as a part of the Desktop Experience. For instructions on how to install the Desktop Experience on Server 2008, please see [Desktop Experience Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772567(v=ws.11)).
 
-For instructions on how to install the Desktop Experience on Server 2012, please see [Install Desktop Experience](https://technet.microsoft.com/library/cc754314).
+For instructions on how to install the Desktop Experience on Server 2012, please see [Install Desktop Experience](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754314(v=ws.11)).
 
 ## More Information
 

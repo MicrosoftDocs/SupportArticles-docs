@@ -60,11 +60,11 @@ The following is a list of potential reasons for a list or library not to render
 
 **More information:**
 
-* [SharePoint Column Formatting](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting)
-* [SharePoint Field Customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer)
-* [Migrating JSLink customizations to SharePoint Framework Field Customizers](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-jslink-to-spfx-extensions)
-* [Tutorial - Migrating from JSLink to SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions)
-* [SharePoint Field Customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer)
+* [SharePoint Column Formatting](/sharepoint/dev/declarative-customization/column-formatting)
+* [SharePoint Field Customizer](/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer)
+* [Migrating JSLink customizations to SharePoint Framework Field Customizers](/sharepoint/dev/spfx/extensions/guidance/migrate-jslink-to-spfx-extensions)
+* [Tutorial - Migrating from JSLink to SharePoint Framework Extensions](/sharepoint/dev/spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions)
+* [SharePoint Field Customizer](/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer)
 
 ## XslLink based customizations detected
 
@@ -74,8 +74,8 @@ The following is a list of potential reasons for a list or library not to render
 
 **More information:**
 
-* [Customizing "modern" lists and libraries](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
-* [SharePoint Column Formatting](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting)
+* [Customizing "modern" lists and libraries](/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
+* [SharePoint Column Formatting](/sharepoint/dev/declarative-customization/column-formatting)
 
 ## The View's List or Library cannot be found
 
@@ -174,7 +174,7 @@ Supported Lists:
 
 Run the following PNP commands:
 
-1. [Install SharePoint PnP](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)
+1. [Install SharePoint PnP](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets)
 2. Start PowerShell
 3. Enter the following commands:
    ``` powershell
@@ -193,7 +193,7 @@ Run the following PNP commands:
 
 Run the following PNP commands:
 
-1. [Install SharePoint PnP](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)
+1. [Install SharePoint PnP](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets)
 2. Start PowerShell
 3. Enter the following:
    ``` powershell
@@ -206,7 +206,7 @@ Run the following PNP commands:
 
 **Detection:** The form page has been customized.
 
-**Recommendation:** Recreate the form page or consider using [PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form).
+**Recommendation:** Recreate the form page or consider using [PowerApps](/powerapps/maker/canvas-apps/customize-list-form).
 
 **More information:**
 
@@ -272,11 +272,11 @@ The following columns are supported:
 
 **Detection:** The form page contains an invalid control mode.
 
-**Recommendation:** Recreate the form page or consider using [PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form).
+**Recommendation:** Recreate the form page or consider using [PowerApps](/powerapps/maker/canvas-apps/customize-list-form).
 
 **More information:**
 
-* [Customize a SharePoint list form by using PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
+* [Customize a SharePoint list form by using PowerApps](/powerapps/maker/canvas-apps/customize-list-form)
 
 ## The form page is customized
 
@@ -286,7 +286,7 @@ The following columns are supported:
 
 **More information:**
 
-* [Customize a SharePoint list form by using PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
+* [Customize a SharePoint list form by using PowerApps](/powerapps/maker/canvas-apps/customize-list-form)
 
 ## The View is customized
 

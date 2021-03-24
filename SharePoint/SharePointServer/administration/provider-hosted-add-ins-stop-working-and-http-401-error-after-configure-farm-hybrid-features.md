@@ -134,16 +134,16 @@ To repair authentication-related issues that are associated with provider-hosted
 
    If you deployed cross-farm trust scenarios before you configured hybrid features, use the methods in the following TechNet topics to fix the scenarios manually:
 
-   - [Share service applications across farms i﻿n SharePoint Server](https://technet.microsoft.com/library/ff621100%28v=office.16%29.aspx)
+   - [Share service applications across farms i﻿n SharePoint Server](/SharePoint/administration/share-service-applications-across-farms)
 
 ## More Information  
 
 In the scenario where you configure hybrid workloads that require S2S before you implement the provider-hosted add-ins or Workflow Manager, the add-ins will be registered after the SPAuthenticationRealm cmdlet is updated to match the Office 365 tenant context ID. They'll always work because the RealmID value won't change again. If hybrid workloads are added or reconfigured, the realm ID remains the same as the Office 365 tenant context ID.
-To create a server-to-server trust between your SharePoint on-premises environment and Office 365, run the [Set-SPAuthenticationRealm cmdlet](https://technet.microsoft.com/library/jj219756.aspx).
+To create a server-to-server trust between your SharePoint on-premises environment and Office 365, run the [Set-SPAuthenticationRealm cmdlet](/powershell/module/sharepoint-server/Set-SPAuthenticationRealm).
 
 > [!IMPORTANT]  
 > The topic contains a "Caution" section that warns that any access tokens that are created for a specific realm won't work after you change the **SPAuthenticationRealm** value.  
 
-To create SharePoint provider-hosted add-ins, see [Get started creating provider-hosted SharePoint Add-ins](https://msdn.microsoft.com/library/office/fp142381.aspx).
+To create SharePoint provider-hosted add-ins, see [Get started creating provider-hosted SharePoint Add-ins](/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

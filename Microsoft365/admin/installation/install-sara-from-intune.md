@@ -1,7 +1,7 @@
 ---
 title: Deploy the SaRA tool using Microsoft Intune
 description: Learn how to deploy SaRA to multiple users using Microsoft Intune.
-author: McCoyBot
+author: helenclu
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
@@ -21,12 +21,12 @@ search.appverid: MET150
 
 ## Summary
 
-The Support and Recovery Assistant (SaRA) tool can be manually installed on one computer at a time by using either the [internet download](https://aka.ms/SaRA_Home) or a [network installation](https://docs.microsoft.com/office365/troubleshoot/installation/install-sara-from-network-share). However, you can also get SaRA deployed to users more efficiently as a Win32 app by using Microsoft Intune. To deploy SaRA as a Win32 app by using Microsoft Intune, use the steps in the following sections.
+The Support and Recovery Assistant (SaRA) tool can be manually installed on one computer at a time by using either the [internet download](https://aka.ms/SaRA_Home) or a [network installation](./install-sara-from-network-share.md). However, you can also get SaRA deployed to users more efficiently as a Win32 app by using Microsoft Intune. To deploy SaRA as a Win32 app by using Microsoft Intune, use the steps in the following sections.
 
 For complete information about app deployment by using Microsoft Intune, see the following articles:
 
-- [Add apps to Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-add)
-- [Intune Standalone - Win32 app management](https://docs.microsoft.com/mem/intune/apps/apps-win32-app-management)
+- [Add apps to Microsoft Intune](/mem/intune/apps/apps-add)
+- [Intune Standalone - Win32 app management](/mem/intune/apps/apps-win32-app-management)
 
 ## More information
 
@@ -42,7 +42,7 @@ For complete information about app deployment by using Microsoft Intune, see the
 
 2.	**Prepare SaraSetup.exe as a Win32 app for upload to Microsoft Intune**
 
-    Convert SaraSetup.exe to the .intunewin format by using the **Microsoft Win32 Content Prep Tool**. (See [Intune Standalone - Win32 app management](https://docs.microsoft.com/mem/intune/apps/apps-win32-app-management) for complete details about this process.)
+    Convert SaraSetup.exe to the .intunewin format by using the **Microsoft Win32 Content Prep Tool**. (See [Intune Standalone - Win32 app management](/mem/intune/apps/apps-win32-app-management) for complete details about this process.)
 
     The following figure shows an example PowerShell session by using an interactive session in the Microsoft Win32 Content Prep Tool (IntuneWinAppUtil.exe) to create the Sarasetup.intunewin file.
 
@@ -65,13 +65,13 @@ For complete information about app deployment by using Microsoft Intune, see the
 
     5.	Browse and select the Intunewin file that you created, and then select **OK**.
  
-        :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-5.png" alt-text="Select the Intune file you created.":::
+        :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-5.png" alt-text="Select the Intune file you created":::
 
         :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-6.png" alt-text="Select the Intune file you created.":::
  
     6.	Enter the name for the **Publisher** (required) and update the **Name** of the app (optional), and then select **Next**.
 
-        :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-7.png" alt-text="Enter the publisher name and select Next.":::
+        :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-7.png" alt-text="Enter the publisher name and select Next":::
  
     7.	For **Program** settings, enter the **Install command** (required), select **User** for **Install behavior**, and then select **Next**.
     
@@ -116,9 +116,9 @@ For complete information about app deployment by using Microsoft Intune, see the
     11.	No **Scope tags** are required. Select **Next**.
  
         :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-16.png" alt-text="No Scope tags are required.":::
-    12.	For **Assignments**, see [Assign apps to groups with Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-deploy) for information about how to assign the app to users or devices.
+    12.	For **Assignments**, see [Assign apps to groups with Microsoft Intune](/mem/intune/apps/apps-deploy) for information about how to assign the app to users or devices.
  
-        :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-17.png" alt-text="Add Assignments.":::
+        :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-17.png" alt-text="Add Assignments":::
         Once you have made your assignments, select **Next**.
 
     13.	On the **Review + create** section, review your settings, and then select **Create**.
@@ -141,6 +141,6 @@ For complete information about app deployment by using Microsoft Intune, see the
  
         :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-23.png" alt-text="Type support.":::
         > [!NOTE]
-        > The SaRA tool requires access to network endpoints needed for connectivity from a user of Office 365 across an enterprise perimeter network. The current list of endpoint is provided in [Additional endpoints not included in the Office 365 IP Address and URL Web service](https://docs.microsoft.com/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls?view=o365-worldwide).
+        > The SaRA tool requires access to network endpoints needed for connectivity from a user of Office 365 across an enterprise perimeter network. The current list of endpoint is provided in [Additional endpoints not included in the Office 365 IP Address and URL Web service](/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls?view=o365-worldwide&preserve-view=true).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

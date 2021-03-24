@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-administration
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: v-lanac
@@ -52,7 +52,7 @@ Use Office 365 and the Azure Active Directory Module for PowerShell as follows t
 
 To recover a user account that was deleted manually, use one of the following methods:
 
-- Use the Office 365 portal to recover the user account. For more information about how to do this, [Restore a user](https://docs.microsoft.com/microsoft-365/admin/add-users/restore-user?view=o365-worldwide).
+- Use the Office 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user).
 - Use the Azure Active Directory Module for Windows PowerShell to recover the user account. To do this, type the following command, and then press Enter:
 
     **`Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`**
@@ -71,13 +71,13 @@ To recover a user account that was deleted manually, use one of the following me
 
 To recover deleted user accounts, make sure that directory synchronization filtering (scoping) is set in such a way that the scope includes the objects that you want to recover. 
 
-For more information, see [Azure AD Connect sync: Configure filtering](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering).
+For more information, see [Azure AD Connect sync: Configure filtering](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering).
 
 ### Resolution 3: Recover accounts deleted because the on-premises user object was deleted from the on-premises Active Directory schema
 
 To recover an item that was deleted from the on-premises Active Directory schema, try the following methods:
 
-- Try to restore the deleted item from the Active Directory recycle bin. To do this, see [Active Directory Recycle Bin Step-by-Step Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)?redirectedfrom=MSDN).
+- Try to restore the deleted item from the Active Directory recycle bin. To do this, see [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)).
 
     > [!NOTE]
     > - The Active Directory recycle bin is available only by having the functional level of Windows 2008 R2 or later versions.
@@ -85,7 +85,7 @@ To recover an item that was deleted from the on-premises Active Directory schema
 
 - If the Active Directory recycle bin is unavailable, or if the object in question is no longer in the recycle bin, try to recover the deleted item by using the AdRestore tool. To do this, follow these steps:
 
-   1. Install the [AdRestore](https://docs.microsoft.com/sysinternals/downloads/adrestore) tool.
+   1. Install the [AdRestore](/sysinternals/downloads/adrestore) tool.
    2. Use AdRestore together with a search filter to locate the deleted on-premises user object. The following examples use a “UserA” string to search for usernames that match.
 
         1. Use AdRestore to enumerate all user objects that have a "UserA" string in their name:
@@ -153,7 +153,7 @@ To recover an item that was deleted from the on-premises Active Directory schema
 
 - Make sure that only the user objects that you want to restore are marked as authoritative. Active Directory objects that are marked as authoritative in the restore process may cause many Active Directory service issues.
 
-    For more information about how to run an authoritative restore of Active Directory objects, see [Performing an Authoritative Restore of Active Directory Objects](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc779573(v=ws.10)).
+    For more information about how to run an authoritative restore of Active Directory objects, see [Performing an Authoritative Restore of Active Directory Objects](/previous-versions/windows/it-pro/windows-server-2003/cc779573(v=ws.10)).
 
 - After you restore the object by using any Resolution 3 method, the object may not have all service attributes (such as Exchange Online and Skype for Business Online) automatically restored. 
 
@@ -202,4 +202,4 @@ The Office 365 portal shows the equivalent error messages in the form of the Win
 
 To restore users who are in this state, complete the information that is requested in the form.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://docs.microsoft.com/answers/products/?WT.mc_id=msdnredirect-web-msdn) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](/answers/products/?WT.mc_id=msdnredirect-web-msdn) website.

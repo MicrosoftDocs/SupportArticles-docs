@@ -48,7 +48,7 @@ To resolve this issue, determine whether the Search Service Application Proxy wa
 
 - Office 365 doesn't support incoming Hybrid Search queries when the on-premises Search Service Application Proxy is deployed in partitioned mode.
 
-- Follow best operational practices and perform a backup before you follow these steps. For more information, go to [Back up Search service applications in SharePoint Server](https://docs.microsoft.com/SharePoint/administration/back-up-a-search-service-application).
+- Follow best operational practices and perform a backup before you follow these steps. For more information, go to [Back up Search service applications in SharePoint Server](/SharePoint/administration/back-up-a-search-service-application).
 
 
 To do this, follow these steps in the SharePoint Management Shell.
@@ -98,6 +98,6 @@ After you follow these steps, the SharePoint 2013 on-premises search farm should
 
 ## More information
 
-For more information, go to [Understanding multi-tenancy in SharePoint Server 2013](https://docs.microsoft.com/SharePoint/administration/understanding-multi-tenancy).
+For more information, go to [Understanding multi-tenancy in SharePoint Server 2013](/SharePoint/administration/understanding-multi-tenancy).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -1,7 +1,7 @@
 ---
 title: OneNote temporary limit to file size download
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 4/1/2020
 audience: Admin

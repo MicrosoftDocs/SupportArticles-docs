@@ -1,7 +1,7 @@
 ---
 title: Cannot determine group type error when checking group in Office 365 admin center
 description: Cannot determine group type error occurs in Office 365 admin center when you convert a group to a room list by using Set-DistributionGroup.
-author: TobyTu
+author: helenclu
 ms.author: aubelin
 manager: dcscontentpm
 audience: ITPro 

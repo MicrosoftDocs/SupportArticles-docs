@@ -49,6 +49,6 @@ Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Ena
 
 ## More information
 
-For more information on the activation state of the parser that corresponds to the specified file format, see [Set-SPEnterpriseSearchFileFormatState](https://technet.microsoft.com/library/jj730455.aspx).
+For more information on the activation state of the parser that corresponds to the specified file format, see [Set-SPEnterpriseSearchFileFormatState](/powershell/module/sharepoint-server/Set-SPEnterpriseSearchFileFormatState).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -75,6 +75,8 @@
       href: ../administration/how-to-create-organizational-forms-library.md
     - name: How to disable Exchange ActiveSync for users
       href: ../administration/how-to-disable-exchange-activesync-for-users.md
+    - name: How to migrate AD RMS to Azure RMS in Exchange Online
+      href: ../administration/migrate-ad-rms-to-azure.md
     - name: How to use PowerShell to grant admin access to all mailboxes
       href: ../administration/how-to-use-powershell-to-grant-admin-access-to-all-mailboxes.md
     - name: Inactive mailbox isn't automatically reconnected to AD
@@ -249,6 +251,8 @@
       href: ../email-delivery/wrong-office-365-region-exo.md
     - name: Emails aren't received for a new domain
       href: ../email-delivery/emails-not-received-for-new-domain.md
+    - name: Errors when sending/receiving emails
+      href: ../email-delivery/send-receive-emails-socketerror.md
     - name: External recipients can't get distribution group emails
       href: ../email-delivery/external-recipients-not-receiving-distribution-group-emails.md
     - name: Find and fix email delivery issues
@@ -441,6 +445,8 @@
       href: ../outlook-on-the-web-issues/there-are-multiple-recipients-matching-the-identity-error.md
     - name: This calendar isn't available error when accessing calendar
       href: ../outlook-on-the-web-issues/this-calendar-not-available-error-when-accessing-calendar.md
+    - name: Time zone setting for shared mailboxes
+      href: ../outlook-on-the-web-issues/shared-mailboxes-time-zone-setting.md
     - name: You may have already signed in to Outlook Web App error
       href: ../outlook-on-the-web-issues/you-may-have-already-signed-in-to-outlook-web-app-error.md
   - name: Public Folders
@@ -451,6 +457,8 @@
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can't apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
+    - name: Can't apply the read and unread setting
+      href: ../public-folders/cannot-apply-read-unread-setting.md
     - name: Can't connect to public folders via Outlook or OWA
       href: ../public-folders/outlook-or-owa-cannot-connect-to-public-folders.md
     - name: Can't delete items
@@ -482,7 +490,7 @@
     - name: Inline UUEncoded attachments are garbled or unreadable
       href: ../send-emails/inline-uuencoded-attachments-garbled-unreadable.md
     - name: Issues with OOF replies
-      href: ../send-emails/understand-troubleshoot-oof-replies.md
+      href: ../email-delivery/understand-troubleshoot-oof-replies.md
   - name: User and Shared Mailboxes
     items:
     - name: Can't access a shared mailbox using OWA
@@ -519,4 +527,3 @@
       href: ../user-and-shared-mailboxes/set-automatic-replies.md
     - name: The Read status of email messages isn't updated
       href: ../user-and-shared-mailboxes/email-message-read-status-not-update.md
-

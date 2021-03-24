@@ -57,7 +57,7 @@ To fix this issue, follow these steps:
         Get-RemoteDomain exchangedelegation.contoso.com | FL
         ```  
 
-   2. In the output, make sure that the `TrustedMailOutboundEnabled`, `TargetDeliverDomain`, and `IsInternal` attributes are set to **True**.
+   2. In the output, make sure that the `TrustedMailOutboundEnabled`, `TargetDeliveryDomain`, and `IsInternal` attributes are set to **True**.
 
    3. If the attributes in step 2b aren't set to **True**, use the `Set-RemoteDomain` command to change the value to **True**.
 
