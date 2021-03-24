@@ -1,6 +1,6 @@
 ﻿---
 title: Rebuild an Microsoft Office Web Apps server farm easily
-author: AmandaAZ
+author: simonxjx
 ms.author: brbering
 manager: dcscontentpm
 localization_priority: Normal

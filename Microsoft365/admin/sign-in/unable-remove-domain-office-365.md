@@ -43,7 +43,7 @@ This issue occurs if one or more of the following conditions are true:
 
 Use the Microsoft 365 admin center to remove the domain. The Domain Manager in Office 365 will help admins remove any dependencies that block domain removal without having to use Windows PowerShell. 
 
-For more info about how to remove a domain in the Microsoft 365 admin center, go to [Remove a domain](/microsoft-365/admin/get-help-with-domains/remove-a-domain?view=o365-worldwide). 
+For more info about how to remove a domain in the Microsoft 365 admin center, go to [Remove a domain](/microsoft-365/admin/get-help-with-domains/remove-a-domain). 
 
 ### Troubleshoot domain removal by using Windows PowerShell
 

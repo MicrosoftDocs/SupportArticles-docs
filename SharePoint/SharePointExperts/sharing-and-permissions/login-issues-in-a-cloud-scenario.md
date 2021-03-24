@@ -1,6 +1,7 @@
 ---
 title: SharePoint Designer 2013 login Issues in a cloud scenario
-author: AmandaAZ
+description: Describes the login issues in a cloud scenario of SharePoint Designer 2013.
+author: simonxjx
 ms.author: joergsi
 manager: dcscontentpm
 localization_priority: Normal
@@ -41,7 +42,7 @@ Office 2013, including SharePoint Designer 2013, is not configured to use ADAL. 
 
 ## Resolution
 
-To fix this issue, set the value of the **EnableADAL** registry key to 1 and check the **Version** registry key. For the two registry keys, see [Enable Modern Authentication for Office 2013 on Windows devices](/office365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide).
+To fix this issue, set the value of the **EnableADAL** registry key to 1 and check the **Version** registry key. For the two registry keys, see [Enable Modern Authentication for Office 2013 on Windows devices](/office365/admin/security-and-compliance/enable-modern-authentication).
 
 After you set the registry key, restart SharePoint Designer 2013. Then the sign-in dialog box will be displayed as follows:
 
@@ -59,15 +60,14 @@ If SharePoint Designer is experiencing connection issues to SharePoint sites, tr
 
    1. Close SharePoint Designer 2013.
    2. On the local computer, remove all files found in each of the following folders.
-   ```
-   %APPDATA%\Microsoft\Web Server Extensions\Cache
-   %APPDATA%\Microsoft\SharePoint Designer\ProxyAssemblyCache
-   %USERPROFILE%\AppData\Local\Microsoft\WebsiteCache
-   ```
+
+       > %APPDATA%\Microsoft\Web Server Extensions\Cache  
+       %APPDATA%\Microsoft\SharePoint Designer\ProxyAssemblyCache  
+       %USERPROFILE%\AppData\Local\Microsoft\WebsiteCache
 
    3. Open SharePoint Designer 2013 and enter the account again to see if it works.
 
-3. [Enable Modern Authentication for Office 2013 on Windows Devices](/microsoft-365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide).
+3. [Enable Modern Authentication for Office 2013 on Windows Devices](/microsoft-365/admin/security-and-compliance/enable-modern-authentication).
 
 4. Administrators will need to **Allow Custom Script** in the SharePoint Admin Center settings to allow the SharePoint Designer connection. See [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script) for more information.
 

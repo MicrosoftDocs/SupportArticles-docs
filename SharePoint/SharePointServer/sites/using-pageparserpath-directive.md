@@ -1,5 +1,6 @@
 ---
 title: Using PageParserPath directive can cause performance problems
+description: Describes performance problems when using PageParserPath directive.
 author: v-miegge
 manager: dcscontentpm
 localization_priority: Normal

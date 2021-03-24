@@ -1,8 +1,8 @@
 ---
 title: Office 2010 Click-to-Run compatibility with add-ins
 description: Discusses Office 2010 Click-to-Run compatibility with add-ins.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

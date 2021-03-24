@@ -1,6 +1,6 @@
 ---
 title: Orphaned record for PowerPivot service application database
-author: AmandaAZ
+author: simonxjx
 ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal

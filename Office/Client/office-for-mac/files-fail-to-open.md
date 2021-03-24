@@ -1,8 +1,8 @@
 ---
 title: Office files in SharePoint fail to open from an Office 2016 client
 description: Can't open Office documents from SharePoint because of Network List Service is stopped and disabled.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

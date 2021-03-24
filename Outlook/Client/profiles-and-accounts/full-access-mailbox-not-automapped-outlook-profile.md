@@ -1,8 +1,8 @@
 ---
 title: Mailboxes aren't automapped to Outlook profile
 description: Discusses an issue in which mailboxes to which your account has full access aren't automapped to your Outlook profile.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

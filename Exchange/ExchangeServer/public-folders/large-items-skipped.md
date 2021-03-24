@@ -68,7 +68,7 @@ Then, check the current limits that are set in Exchange Online and in Exchange S
 
    **Notes:**
 
-   - If the size of the largest items that were skipped is more than the current limit but less than 150 MB, increase the current limit to a greater value to accommodate the size of the items.
+   - If the size of the largest item that was skipped is more than the current limit but less than 150 MB, increase the current limit to a greater value to accommodate the size of the item.
    - If the size of the large items that were skipped is more than 150 MB, the items were skipped by design. In this case, you can safely ignore the issue. If this skipping isn't acceptable, you can stop the migration.
 
 ### Check the current item limit for individual public folders in Exchange Server on-premises
@@ -144,7 +144,7 @@ If items are marked as large and skipped during public folder migration, the "Ma
 
    57370, 32794, 53274, 40986, 45098, 61482, 59176, 34600, 42114, 58498
 
-   These Lids might have the keyword "Limitation" appended to them as shown in the following example for Lid 59176:
+   These Lids might have the keyword "Limitation" appended to them, as shown in the following example for Lid 59176:
 
    > Lid: 59176   dwParam: **0x800000**   Msg: Limitation
 

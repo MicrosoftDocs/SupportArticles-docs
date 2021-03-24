@@ -29,7 +29,7 @@ The on-premises Exchange user account that was used to sign in to the EAC doesn'
 
 ## Solution
 
-Add the user to at least the View-Only Organization Management role group or the Organization Management role group. For more information, see [Manage role group members](/Exchange/permissions/role-group-members?view=exchserver-2019).
+Add the user to at least the View-Only Organization Management role group or the Organization Management role group. For more information, see [Manage role group members](/Exchange/permissions/role-group-members).
 
 ## More information
 

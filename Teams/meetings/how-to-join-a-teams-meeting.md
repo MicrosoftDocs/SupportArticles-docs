@@ -1,8 +1,8 @@
 ---
 title: How to join a Teams meeting
 description: Explains how to join a Teams meeting as well as troubleshooting tips.
-author: lucciz01
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

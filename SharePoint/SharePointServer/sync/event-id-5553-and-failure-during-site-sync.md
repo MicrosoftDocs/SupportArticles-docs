@@ -1,5 +1,6 @@
 ---
 title: Failure trying to synch site  - Event ID 5553
+description: Provides information about the event ID 5553 during a site synchronization.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal

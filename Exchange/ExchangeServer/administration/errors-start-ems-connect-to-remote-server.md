@@ -1,8 +1,8 @@
 ---
 title: Errors when you start EMS
 description: Exchange Management Shell and remote PowerShell fail to launch after the July 2017 security update KB4025333 for Windows Server is installed.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
