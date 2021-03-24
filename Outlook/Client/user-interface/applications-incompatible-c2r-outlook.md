@@ -1,8 +1,8 @@
 ---
 title: Extensibility support for Outlook 2010
 description: Describes an issue in which some applications such as Windows Mobile Device Center don't detect Outlook 2010 as installed.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

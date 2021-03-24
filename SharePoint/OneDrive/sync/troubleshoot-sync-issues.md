@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot OneDrive for Business sync issues
 description: Helps you resolve issues that you can't sync OneDrive for Business.
-author: lucciz01
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

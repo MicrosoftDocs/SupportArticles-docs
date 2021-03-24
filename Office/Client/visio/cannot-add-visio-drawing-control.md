@@ -1,8 +1,8 @@
 ---
 title: Cannot add Visio drawing control to Windows Form application
 description: Provides a workaround for problems that occur when you work with the Microsoft Visio 2013 and 2010 drawing control in a Windows Form application in Visual Studio on a computer that has the 64-bit version of Visio 2010 installed.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

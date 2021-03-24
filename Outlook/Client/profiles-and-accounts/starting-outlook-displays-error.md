@@ -1,8 +1,8 @@
 ---
 title: Outlook fails to start
 description: This article describes the error that occurs when Outlook fails to start, and provides a resolution. 
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

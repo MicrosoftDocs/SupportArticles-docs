@@ -1,8 +1,8 @@
 ---
 title: Error when you click on the Projects link in the top navigation bar in Project Online
 description: Fixes the error that occurs when you click the Project link if your MySite collection has not yet been manually upgraded.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

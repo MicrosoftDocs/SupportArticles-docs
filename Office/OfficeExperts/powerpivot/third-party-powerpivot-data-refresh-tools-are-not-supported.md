@@ -1,6 +1,6 @@
 ---
 title: Third-party PowerPivot data refresh tools are not supported
-author: AmandaAZ
+author: simonxjx
 ms.author: randring
 manager: dcscontentpm
 localization_priority: Normal

@@ -1,7 +1,7 @@
 ---
 title: How Table Analyzer Wizard works
 description: Provides information about how to run the Table Analyzer Wizard and how the Table Analyzer Wizard works.
-author: AmandaAZ
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: v-six
 ms.reviewer: V-SHIRAP
 appliesto:
 - Access 2007

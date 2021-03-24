@@ -1,8 +1,8 @@
 ---
 title: Can't change office phone number when setting up Azure Multi-Factor Authentication
 description: Describes a scenario that prevents a user from changing his office phone number when he sets up Azure Multi-Factor Authentication. A solution is provided.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
