@@ -47,13 +47,9 @@ This current version of the RML Utilities for SQL Server supersedes any earlier 
 
 ## Obtain the RML Utilities for SQL Server
 
-The following files are available for download from the Download Center:  
+RML Utilities can be downloaded from here:
 
-- The RML Utilities for SQL Server, x86 version  
-[Download the RMLSetup_X86.msi package now.](https://www.microsoft.com/download/details.aspx?id=8161)
-
-- The RML Utilities for SQL Server, x64 version  
-[Download the RMLSetup_AMD64.msi package now.](https://www.microsoft.com/download/details.aspx?id=4511)
+https://github.com/microsoft/SqlNexus/wiki/RML-Utility
 
 > [!NOTE]
 > Microsoft provides the RML Utilities for SQL Server as-is. Microsoft Customer Support Services (CSS) does not provide support or updates for the RML Utilities for SQL Server. If you have a suggestion or if you want to report a bug, you can use the e-mail address in the Problems and Assistance topic in the Help file (*RML Help.pdf*). The Help file is included with the RML Utilities for SQL Server.
