@@ -99,7 +99,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
    - If the test is successful, Autodiscover is working correctly.
    - If the test fails, verify that the Autodiscover service is set up correctly. For more information, see the following resources:
 
-     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record that points to "autodiscover.outlook.com". For more information, see [Create DNS records for Office 365 at any DNS hosting provider](https://support.office.com/article/create-dns-records-for-office-365-at-any-dns-hosting-provider-7b7b075d-79f9-4e37-8a9e-fb60c1d95166) and [External Domain Name System records for Office 365](/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide).
+     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record that points to "autodiscover.outlook.com". For more information, see [Create DNS records for Office 365 at any DNS hosting provider](https://support.office.com/article/create-dns-records-for-office-365-at-any-dns-hosting-provider-7b7b075d-79f9-4e37-8a9e-fb60c1d95166) and [External Domain Name System records for Office 365](/microsoft-365/enterprise/external-domain-name-system-records).
 
      - If you have an Exchange hybrid deployment, set up the Autodiscover public DNS records for your existing SMTP domains to point to an on-premises Exchange server. For more information, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
 

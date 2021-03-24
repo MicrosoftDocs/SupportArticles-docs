@@ -49,7 +49,7 @@ To fix this problem, use either of the following methods (but only one).
 
 ### Method 1:  Create a mailbox for the service account
 
-Use the Exchange Admin Center or Exchange Management Shell to create a mailbox for the service account. For more information about how to create a mailbox for an existing user, see [Create user mailboxes in Exchange Server](/Exchange/recipients/create-user-mailboxes?view=exchserver-2019).
+Use the Exchange Admin Center or Exchange Management Shell to create a mailbox for the service account. For more information about how to create a mailbox for an existing user, see [Create user mailboxes in Exchange Server](/Exchange/recipients/create-user-mailboxes).
 
 ### Method 2:  Add a primary SMTP address to the proxyAddresses attribute
 

@@ -174,7 +174,7 @@ Supported Lists:
 
 Run the following PNP commands:
 
-1. [Install SharePoint PnP](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)
+1. [Install SharePoint PnP](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets)
 2. Start PowerShell
 3. Enter the following commands:
    ``` powershell
@@ -193,7 +193,7 @@ Run the following PNP commands:
 
 Run the following PNP commands:
 
-1. [Install SharePoint PnP](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)
+1. [Install SharePoint PnP](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets)
 2. Start PowerShell
 3. Enter the following:
    ``` powershell

@@ -21,7 +21,7 @@ appliesto:
 
 # Info about AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online
 
-## Introduction 
+## Introduction
 
 This article contains information about the **AllowAdalForNonLyncIndependentOfLync** setting in Skype for Business 2016, Skype for Business 2015, Lync 2013, and Exchange Online. This article also describes which Exchange Online and Skype for Business deployments require this setting.  
 
@@ -89,10 +89,10 @@ Set-CsClientPolicy -Identity Global -PolicyEntry @{Add=$a}
 > [!IMPORTANT]
 > To enable Modern Authentication for Office 2013 applications on a Windows-based device, you must set the following additional registry key.
 
-|Registry key |Type Value |
-|-|-|
-|HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|1 |
-|HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\Version|REG_DWORD|1 |
+|Registry key |Type| Value |
+|-|-|-|
+|`HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL`|REG_DWORD|1 |
+|`HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\Version`|REG_DWORD|1 |
 
 For more information about the EnableADAL setting, go to the following Microsoft website: 
 

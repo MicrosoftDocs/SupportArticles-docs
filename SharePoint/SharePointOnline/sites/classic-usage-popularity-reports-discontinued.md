@@ -35,7 +35,7 @@ The data from the classic popularity reports will not be available after August 
 
 Site usage data for classic sites will no longer be available in popularity reports starting on August 8, 2020. Instead, you can get site usage data from the modern **Site Usage** page. The modern **Site Usage** page will also start supporting the download of data in Excel before the classic reports are removed.
 
-To get usage reports for individual items (list items, documents), you can use the [GetItemAnalytics Graph API](/graph/api/itemanalytics-get?view=graph-rest-1.0).
+To get usage reports for individual items (list items, documents), you can use the [GetItemAnalytics Graph API](/graph/api/itemanalytics-get).
 
 To see the page, select **Site settings** > **Popularity trends** > **Usage**. You can access usage data for the last 90 days.
 

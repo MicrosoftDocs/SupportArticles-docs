@@ -6,7 +6,7 @@ ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 02/03/2021
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
