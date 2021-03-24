@@ -1,8 +1,8 @@
 ---
 title: Can't set security verification with Azure MFA
 description: Describes an issue that triggers an error message when you try to set up additional security verification settings for a user for Azure Multi-Factor Authentication.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

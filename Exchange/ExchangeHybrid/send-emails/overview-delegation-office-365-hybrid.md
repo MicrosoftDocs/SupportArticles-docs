@@ -1,8 +1,8 @@
 ---
 title: Overview of delegation in an Office 365 hybrid environment
 description: Describes the Full Access, Send As, Send on Behalf of, and Folder permissions and how they work in a hybrid deployment.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 

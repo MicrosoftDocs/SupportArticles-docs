@@ -1,8 +1,8 @@
 ---
 title: Incompatibilities between Adobe Acrobat PDFMaker Office COM add-in and Office programs
 description: This article describes how to verify that the PDFMaker add-in is installed on your computer.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for Outlook Experts
 description: This article lists Outlook related issues.
-author: AmandaAZ
+author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: v-six
 localization_priority: Normal
 search.appverid: 
 - MET150

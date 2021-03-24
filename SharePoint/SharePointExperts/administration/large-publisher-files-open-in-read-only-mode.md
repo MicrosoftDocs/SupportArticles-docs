@@ -1,6 +1,6 @@
 ---
 title: Large Publisher files open in read-only mode in SharePoint
-author: AmandaAZ
+author: simonxjx
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
