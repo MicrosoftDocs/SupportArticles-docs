@@ -16,7 +16,8 @@
     }
   ],
   "notification_subscribers": [
-    "genemi@microsoft.com"
+    "genemi@microsoft.com",
+    " ramakoni@microsoft.com"
   ],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
