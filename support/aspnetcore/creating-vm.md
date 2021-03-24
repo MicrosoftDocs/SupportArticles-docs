@@ -30,7 +30,7 @@ This part (1.1) contains the following steps:
   - [By using PowerShell SSH client](#connecting-by-using-powershell-ssh-terminal)
   - [By using PuTTY](#connecting-by-using-putty)
 
-If you're familiar with Linux, you might want to skip this part entirely and go directly to [Part 1.2 - Linux special directories, elevated users, and package managers](linus-special-directories.md).
+If you're familiar with Linux, you might want to skip this part entirely and go directly to [Part 1.2 - Linux special directories, elevated users, and package managers](linux-special-directories.md).
 
 ## Creating a Linux virtual machine in Windows Azure
 
