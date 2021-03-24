@@ -2,7 +2,7 @@
 title: Creating a Linux virtual machine in Azure
 description: This article introduces how to create a Linux virtual machine in Azure and connect to it.
 ms.date: 03/08/2021
-ms.prod: aspnet-core-api
+ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
 # Part 1.1 - Creating a Linux virtual machine in Azure and connecting to it
@@ -30,7 +30,7 @@ This part (1.1) contains the following steps:
   - [By using PowerShell SSH client](#connecting-by-using-powershell-ssh-terminal)
   - [By using PuTTY](#connecting-by-using-putty)
 
-If you're familiar with Linux, you might want to skip this part entirely and go directly to [Part 1.2 - Linux special directories, elevated users, and package managers](/troubleshoot/aspnetcore/linus-special-directories).
+If you're familiar with Linux, you might want to skip this part entirely and go directly to [Part 1.2 - Linux special directories, elevated users, and package managers](linus-special-directories.md).
 
 ## Creating a Linux virtual machine in Windows Azure
 
@@ -217,6 +217,6 @@ To convert files, follow these steps:
 
 ## Next steps
 
-[Part 1.2 - Linux special directories, elevated users, and package managers](/troubleshoot/aspnetcore/linux-special-directories-users-package-managers)
+[Part 1.2 - Linux special directories, elevated users, and package managers](linux-special-directories-users-package-managers.md)
 
 [!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]

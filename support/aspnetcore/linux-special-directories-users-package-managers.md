@@ -282,6 +282,6 @@ As final step, run the `apt purge` command to see its effect. You can run a purg
 
 ## Next steps
 
-[Part 1.3 - Installing .NET Core in Linux](/troubleshoot/aspnetcore/install-dotnet-core-linux)
+[Part 1.3 - Installing .NET Core in Linux](install-dotnet-core-linux.md)
 
 [!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
