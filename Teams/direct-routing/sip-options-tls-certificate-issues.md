@@ -22,12 +22,12 @@ ms.reviewer: mikebis
 
 # SBC connectivity issues
 
-When you use Direct Routing, you might experience the following Session Border Controller (SBC) connectivity issues:
+When you set up Direct Routing, you might experience the following Session Border Controller (SBC) connectivity issues:
 
 - **Session Initiation Protocol** (SIP) options are not received.
 - **Transport Layer Security** (TLS) connections problems occur.
 - The SBC doesn’t respond.
-- The SBC is marked as inactive in the Admin portal.
+- The SBC is marked as inactive in the Teams Admin portal.
 
 Such issues are most likely caused by either or both of the following conditions:
 
@@ -49,7 +49,7 @@ This article lists some common issues that are related to SIP options and TLS ce
 
 - If the SBC FQDN is detected and recognized, the SIP proxy sends a **200 OK** message by using the same TLS connection.
 
-- The SIP proxy sends SIP options to the SBC FQDN that is listed in the Contact header of the SBC SIP options.
+- The SIP proxy sends SIP options to the SBC FQDN that is listed in the Contact header of the SIP options received from the SBC.
 
 - After receiving SIP options from the SIP proxy, the SBC responds by sending a **200 OK** message. This step confirms that the SBC is healthy.
 
@@ -67,14 +67,14 @@ After the TLS connection is successfully established, and the SBC is able to sen
 
 This situation might occur if you’re using an older version of TLS. To enforce stricter security, enable TLS 1.2.
 
-Make sure that your SBC certificate is not self-signed and that you got it from a trusted Certificate Authority (CA).
+Make sure that your SBC certificate is not self-signed and that you got it from a [trusted Certificate Authority (CA)](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc?preserve-view=true#resolution).
 
-If you’re using the minimum required version of TLS, and your SBC certificate is valid, then the issue might occur because the FQDN is misconfigured in your SIP profile and not recognized as belonging to any tenant. Check for the following conditions, and fix any errors that you find:
+If you’re using the minimum required version of TLS or higher, and your SBC certificate is valid, then the issue might occur because the FQDN is misconfigured in your SIP profile and not recognized as belonging to any tenant. Check for the following conditions, and fix any errors that you find:
 
 - The FQDN provided by the SBC in the Record-Route or Contact header is different from what is configured in Teams.
 - The Contact header contains an IP address instead of the FQDN.
 - The domain isn’t [fully validated](/microsoft-365/admin/setup/add-domain). If you add an FQDN that wasn’t validated previously, you must validate it now.
-- After you register an SBC domain name, you must activate it by [adding at least one E3- or E5-licensed user](/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant).
+- After you register an SBC domain name, you must activate it by [adding at least one E3- or E5-licensed user](/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant?preserve-view=true#resolution).
 
 </details>
 
@@ -82,9 +82,9 @@ If you’re using the minimum required version of TLS, and your SBC certificate 
 
 <summary><b>SBC receives "200 OK" response but not SIP options</b></summary>
 
-The SBC receives the **200 OK** response from the SIP proxy but not the SIP options that were sent. If this error occurs, make sure that the FQDN that's listed in the Record-Route or Contact header is correct and resolves to the correct IP address.
+The SBC receives the **200 OK** response from the SIP proxy but not the SIP options that were sent from the SIP proxy. If this error occurs, make sure that the FQDN that's listed in the Record-Route or Contact header is correct and resolves to the correct IP address.
 
-Another possible cause for this issue might be firewall rules that are preventing incoming traffic. Make sure that firewall rules are configured to allow incoming connections.
+Another possible cause for this issue might be firewall rules that are preventing incoming traffic. Make sure that firewall rules are configured to allow incoming connections from all [SIP proxy signalling IP addresses](/microsoftteams/direct-routing-plan#sip-signaling-fqdns?preserve-view=true#resolution).
 
 </details>
 
@@ -109,9 +109,9 @@ For more information, see [SIP Signaling: FQDNS](/microsoftteams/direct-routing-
 </details>
 
 <details>
-<summary><b>FQDN doesn’t match the contents of CN or SAN certificates</b></summary>
+<summary><b>FQDN doesn’t match the contents of CN or SAN in the provided certificate</b></summary>
 
-This issue occurs if a wildcard doesn't match a lower-level subdomain. For example, the wildcard `\*\.contoso.com` would match sbc1.contoso.com, but not customer10.sbc1.contoso.com. You can't have multiple levels of subdomains under a wildcard. If the FQDN doesn’t match the contents of the Common Name (CN) certificate or Subject Alternate Name (SAN) certificate, request a certificate that matches your domains.
+This issue occurs if a wildcard doesn't match a lower-level subdomain. For example, the wildcard `\*\.contoso.com` would match sbc1.contoso.com, but not customer10.sbc1.contoso.com. You can't have multiple levels of subdomains under a wildcard. If the FQDN doesn’t match the Common Name (CN) or Subject Alternate Name (SAN) in the provided certificate, then request a new certificate that matches your domain names.
 
 For more information about certificates, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 </details>
