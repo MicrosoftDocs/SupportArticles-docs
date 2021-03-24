@@ -1,8 +1,8 @@
 ---
 title: Exchange Management Shell/Console doesn't start
 description: Provides resolutions to resolve the error (The connection to the specified remote host was refused) when you try to start Exchange Management Shell or Exchange Management Console.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

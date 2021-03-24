@@ -1,8 +1,8 @@
 ---
 title: Hyperlink to MHT File in Office documents fails to load in Internet Explorer
 description: Fixes the issue that MHT file can't be loaded when you click the hyperlink of the MHT file.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

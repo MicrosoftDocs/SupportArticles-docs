@@ -1,8 +1,8 @@
 ---
 title: Error message Microsoft Excel has stopped working after installing KB3118373
 description: Fixes the error message Microsoft Excel has stopped working, which occurs after installing KB3118373.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

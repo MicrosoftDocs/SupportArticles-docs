@@ -1,8 +1,8 @@
 ---
 title: Certificate-based authentication for iOS fails to prompt for user certificates
 description: Fixes an issue that federated users on iOS devices cannot use Certificate-Based Authentication (CBA) to authenticate.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

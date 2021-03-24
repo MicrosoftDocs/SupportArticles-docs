@@ -1,8 +1,8 @@
 ---
 title: Installing PST Capture tool fails
 description: Describes an error that occurs if the Windows Firewall service is disabled. Provides a resolution.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

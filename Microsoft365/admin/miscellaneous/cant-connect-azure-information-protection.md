@@ -1,8 +1,8 @@
 ---
 title: You can't connect to the Azure Information Protection service in Office 365
 description: Describes an issue that you cannot connect to the Azure Information Protection service in Office 365. Provides a resolution.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
