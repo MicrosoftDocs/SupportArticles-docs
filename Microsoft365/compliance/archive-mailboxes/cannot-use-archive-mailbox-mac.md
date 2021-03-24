@@ -36,7 +36,8 @@ To work around this behavior, use Outlook Web App for mail, and apply retention 
 |Personal 1-years move to archive|Personal|365|Move to archive|
 |Personal 5-years move to archive|Personal|1825|Move to archive|
 |*Personal never move to archive|Personal|No age limit|Move to archive|
-|||||*This tag is not enabled by default. Items that have this retention tag are either never moved or never deleted.
+
+*This tag is not enabled by default. Items that have this retention tag are either never moved or never deleted.
 
 For more information about retention policies in Exchange Online, see [Retention tags and retention policies](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies).
 

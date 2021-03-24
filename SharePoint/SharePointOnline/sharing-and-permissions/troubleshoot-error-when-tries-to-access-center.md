@@ -27,15 +27,15 @@ When a delegated partner administrator tries to access the SharePoint Online Adm
 
 To resolve this issue, use the SharePoint Online management shell to delete the external user account from the client's organization. To do this, run the following cmdlet:
 
-```
+```powershell
 Remove-SPOExternalUser
 ```
 
 For more information about this cmdlet, go to the following Microsoft websites:
 
-- [Remove-SPOExternalUser](/powershell/module/sharepoint-online/Remove-SPOExternalUser?view=sharepoint-ps)
+- [Remove-SPOExternalUser](/powershell/module/sharepoint-online/Remove-SPOExternalUser)
 
-- [What is the SharePoint Online Management Shell?](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)
+- [What is the SharePoint Online Management Shell?](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
 
 ## More information
 

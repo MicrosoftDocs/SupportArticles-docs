@@ -40,7 +40,7 @@ Block the following URLs:
 - filetransfer.trafficmanager.net
 
 > [!NOTE]
-> In some settings, you cannot block https://transfer.office.com/ because it's part of the allowed (whitelisted) *.office.com class of URLs. This is not a concern because https://transfer.office.com/ redirects to one of the other URLs that are mentioned in the list. If you post the blocking, your users in the organizational firewalls will be unable to use this feature for sending or receiving files.
+> In some settings, you cannot block `https://transfer.office.com/` because it's part of the allowed (whitelisted) *.office.com class of URLs. This is not a concern because `https://transfer.office.com/` redirects to one of the other URLs that are mentioned in the list. If you post the blocking, your users in the organizational firewalls will be unable to use this feature for sending or receiving files.
 
 ### Method 2: Block IP addresses
 

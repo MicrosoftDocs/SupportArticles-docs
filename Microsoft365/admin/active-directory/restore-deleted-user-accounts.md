@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-administration
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: v-lanac
@@ -52,7 +52,7 @@ Use Office 365 and the Azure Active Directory Module for PowerShell as follows t
 
 To recover a user account that was deleted manually, use one of the following methods:
 
-- Use the Office 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user?view=o365-worldwide).
+- Use the Office 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user).
 - Use the Azure Active Directory Module for Windows PowerShell to recover the user account. To do this, type the following command, and then press Enter:
 
     **`Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`**

@@ -65,7 +65,7 @@ Set-SPOTenant -IPAddressWACTokenLifetime 20
 
 For more information, see the following articles:  
 
-- [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps)    
+- [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)    
 - [Manage SharePoint Online with Office 365 PowerShell](/office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell)    
 
 ## More Information

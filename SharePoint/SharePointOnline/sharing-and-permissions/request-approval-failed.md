@@ -76,11 +76,11 @@ If the Owners group is changed or was removed from the **Access requests** list,
 
 1. In the search box on the right hand side of the page, type **pagelistid:**, and then press Enter.
 
-    ![pagelistid](./media/request-approval-failed/pagelistid.png)
+    ![Page list ID](./media/request-approval-failed/pagelistid.png)
 
 1. Copy the GUID that follows the pageListId located in the listedit.aspx page. The GUID will be between an opening brace ( { ) character and a closing brace ( } ) character as follows:
 
-    ![guid](./media/request-approval-failed/guid.png)
+    ![guid image](./media/request-approval-failed/guid.png)
 
 1. In the browser address bar, enter **https://contoso.sharepoint.com>/_layouts/15/ListEdit.aspx?List=<{GUID}>**.
 
