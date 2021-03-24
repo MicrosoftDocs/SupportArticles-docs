@@ -43,7 +43,7 @@ To work around this issue, create send connectors for the affected remote domain
 
    ![The screenshot for step C](./media/dns-query-failed/step-c.png)
 
-   For other settings, you can use the default value. For more information, see [Configure a Dedicated Send Connector for a Specific Domain](https://technet.microsoft.com/library/jj657457%28v=exchg.160%29.aspx).   
+   For other settings, you can use the default value. For more information, see [Configure a Dedicated Send Connector for a Specific Domain](/Exchange/mail-flow/connectors/internet-mail-send-connectors).   
 
 When Exchange Server sends email to this remote domain, it will now bypass the DNS query and connect the mail server in the remote domain by using the IP address directly. 
 

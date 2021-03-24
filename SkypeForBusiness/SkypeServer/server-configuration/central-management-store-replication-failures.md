@@ -164,7 +164,7 @@ Make sure that the perimeter network's internal firewall is configured to allow 
 
 For more information about port configurations for the Lync Server perimeter network configuration, go to the following Microsoft website:
 
-[Port Summary for Single Consolidated Edge](https://technet.microsoft.com/library/gg425891.aspx)
+[Port Summary for Single Consolidated Edge](/previous-versions/office/lync-server-2013/lync-server-2013-port-summary-single-consolidated-edge-with-private-ip-addresses-using-nat)
 
 Use The Windows Telnet client to test the route from the Lync Server front end server to the internal interface of each of the Lync Server Edge server(s) in the Lync Server Edge Server pool by using TCP 4443.
 
@@ -190,20 +190,20 @@ Use the steps listed below to test routing between the Lync Server front end ser
     > [!NOTE]
     > Microsoft Windows Vista, Windows Server 2008 and later versions of the Windows Server operating systems require the installation of the Telnet client. For more information about how to install Telnet client, go to the following Microsoft web site:
     
-    [Install Telnet Client](https://technet.microsoft.com/library/cc771275%28v=ws.10%29.aspx)
+    [Install Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771275(v=ws.10))
 
 3. Perform steps 1 through 6 that are previously listed at the beginning of the Resolution section.   
 
 > [!NOTE]
 > Some hardware load balancer vendors have specific configurations for TCP port 4443 for the Lync Server Replicator Agent service on the Lync  Edge pool internal interface. For more details please review the following Microsoft TechNet documentation:
 
-[Infrastructure qualified for Microsoft Lync](https://technet.microsoft.com/lync/gg131938)
+[Infrastructure qualified for Microsoft Lync](/SkypeForBusiness/lync-cert/qualified-ip-pbx-gateway)
 
 ### Scenario 2
 
 To troubleshoot the certificate related issue described in the Symptoms section, Windows Server certificate snap-in can be used to analyze the issue. Use the following TechNet information to add the Certificates Snap-in to an MMC and review the certificate's information:
 
-[Add the Certificates Snap-in to an MMC](https://technet.microsoft.com/library/cc754431)
+[Add the Certificates Snap-in to an MMC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754431(v=ws.11))
 
 > [!NOTE]
 > Make sure that you use the instructions labeled - To add the Certificates snap-in to an MMC for a computer account
@@ -215,11 +215,11 @@ Use the following steps to ensure that each of the Lync Server Edge server(s) th
 1. Add the Certificate Snap-in.   
 2. Use the following TechNet information to view the General information for the Server certificate that is used to authenticate the Lync Server Edge server(s) internal interfaces that belong to the Lync Server Edge server pool:
 
-    [General Tab](https://technet.microsoft.com/library/cc753240)
+    [General Tab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753240(v=ws.11))
 
 3. The Certificate Information on the General tab of the Certificate dialog box should say "You have a private key assigned to this certificate". If this line is missing from the Certificate Information, read the "To export the certificate with the private key for Edge Servers in a pool" section of the following TechNet article for more information on how to troubleshoot this issue:
 
-    [Details Tab](https://technet.microsoft.com/library/cc771722)
+    [Details Tab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771722(v=ws.11))
 
 4. Use steps 1 through 6 that are previously listed at the beginning of the Resolution section.   
 
@@ -258,17 +258,17 @@ Use the steps listed below to evaluate the Access Control List (ACL) of the xds
 
 For detailed information on the how the Lync Server manages the replications services review the following list of TechNet articles on the topic:
 
-- [What is Central Management Store (CMS)](https://blogs.technet.com/b/jenstr/archive/2010/10/13/what-is-central-management-store-cms.aspx)
-- [Confirm Local Configuration Store Replication Status](https://technet.microsoft.com/library/gg195701.aspx)
-- [Get-CsManagementStoreReplicationStatus](https://technet.microsoft.com/library/gg399052.aspx)
-- [Invoke-CsManagementStoreReplication](https://technet.microsoft.com/library/gg413060.aspx)
-- [Ports and Protocols for Internal Servers](https://technet.microsoft.com/library/gg398833.aspx)
-- [Move the Configuration Management Server to another SQL Server](https://technet.microsoft.com/library/gg195644.aspx)
-- [Move Lync File Store Data to New File Store](https://technet.microsoft.com/library/gg195742.aspx)
+- [What is Central Management Store (CMS)](/archive/blogs/jenstr/what-is-central-management-store-cms)
+- [Confirm Local Configuration Store Replication Status](/previous-versions/office/skype-server-2010/gg195701(v=ocs.14))
+- [Get-CsManagementStoreReplicationStatus](/powershell/module/skype/Get-CsManagementStoreReplicationStatus)
+- [Invoke-CsManagementStoreReplication](/powershell/module/skype/Invoke-CsManagementStoreReplication)
+- [Ports and Protocols for Internal Servers](/skypeforbusiness/plan-your-deployment/network-requirements/ports-and-protocols)
+- [Move the Configuration Management Server to another SQL Server](/previous-versions/office/skype-server-2010/gg195644(v=ocs.14))
+- [Move Lync File Store Data to New File Store](/previous-versions/office/communications/gg195742(v=ocs.16))
 
 The Lync Server CMS file replication process uses TCP 445 as the destination port for its client / server requests for shared replica folder access. The Server Message Block (SMB) protocol is used to make sure that secure communications for each client / server connection that is used for file replica replication.
 
-[Server Message Block overview](https://technet.microsoft.com/library/hh831795.aspx)
+[Server Message Block overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))
 
 Here's a summary of how permissions are applied and then used to secure access to the xds-master folder and subfolders for Lync Server Enterprise Edition:
 

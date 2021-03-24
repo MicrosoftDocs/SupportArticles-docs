@@ -32,8 +32,8 @@ Below is a collection of top issues. If your issue isn't listed there, browse th
 
 - [Skype for Business help & learning](https://support.office.com/skype-for-business)
 - [Skype for Business end user troubleshooting](https://support.microsoft.com/office/5e3d4ad2-3074-465a-8d0a-a5ab3a7bb11b)
-- [Skype for Business Server administrator documentation](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-server-2019)
-- [PowerShell Reference for Skype for Business](https://docs.microsoft.com/powershell/skype/intro)
+- [Skype for Business Server administrator documentation](/SkypeForBusiness/skype-for-business-server-2019)
+- [PowerShell Reference for Skype for Business](/powershell/skype/intro)
 
 ## Still need help
 

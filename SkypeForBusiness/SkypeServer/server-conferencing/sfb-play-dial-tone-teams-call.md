@@ -60,7 +60,7 @@ Access Windows settings to change the dial tone setting, as follows:
 
 ### Method 2
 
-Set `PlayAbbreviatedDialTone` to **True** in the client policy. If `PlayAbbreviatedDialTone` is set to **True**, a three-second dial tone is played when a Skype for Business-compatible handset is taken off the hook. To learn more, see [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy). To set the value, run the following command:
+Set `PlayAbbreviatedDialTone` to **True** in the client policy. If `PlayAbbreviatedDialTone` is set to **True**, a three-second dial tone is played when a Skype for Business-compatible handset is taken off the hook. To learn more, see [Set-CsClientPolicy](/powershell/module/skype/set-csclientpolicy). To set the value, run the following command:
 
 ```powershell
 Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True

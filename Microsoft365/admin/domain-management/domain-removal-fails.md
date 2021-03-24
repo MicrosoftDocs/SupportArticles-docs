@@ -21,31 +21,31 @@ appliesto:
 
 ## Symptoms
 
-When you use the **Remove-MsolDomain -domain name domain.com** PowerShell cmdlet to remove a domain from Office 365, you receive the following error message: 
+When you use the **Remove-MsolDomain -domain name domain.com** PowerShell cmdlet to remove a domain from Office 365, you receive the following error message:
 
 "An Error Occurred"
 
 ## More information
 
-This error occurs when an Azure Active Directory application uses IdentifierURIs to refer to the domain that is being removed. 
+This error occurs when an Azure Active Directory application uses IdentifierURIs to refer to the domain that is being removed.
 You can retrieve a list of applications that refer to the domain by running the following cmdlet.
 
 > [!IMPORTANT]
-> The cmdlet requires that you install[Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0).     
+> The cmdlet requires that you install[Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
 
 ```pwoershell
 Get-AzureADApplication | Where-Object -Property identifieruris -Match '<domain to remove>' 
 ```
 
-**Note** In this command, replace \<domain to remove> with the domain to be removed 
+**Note** In this command, replace \<domain to remove> with the domain to be removed.
 
 ## Solution
 
 To resolve the issue, update the **identifierURIs** attribute to refer to the .onmicrosoft.com domain of the tenant. Do this in each of the Azure AD applications that refer to the domain.
- 
+
 To make the replacement, use the following cmdlets:
 
-```powershell 
+```powershell
 $apps=Get-AzureADApplication | Where-Object -Property identifieruris -Match '<domain to remove>'
 
 $apps | foreach {$newid=$_.IdentifierUris -replace "<domain to remove>","<tenant name>.onmicrosoft.com";Set-AzureADApplication -ObjectId $_.objectid -IdentifierUris $newid}

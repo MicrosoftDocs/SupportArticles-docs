@@ -31,7 +31,7 @@ This article identifies the commands to use to enable or disable the following i
 ## More information
 
 > [!NOTE]
-> Before you run any of the commands in the following steps, you have to first connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
+> Before you run any of the commands in the following steps, you have to first connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 
 ### Enable or disable POP3 for an Exchange Online mailbox
 

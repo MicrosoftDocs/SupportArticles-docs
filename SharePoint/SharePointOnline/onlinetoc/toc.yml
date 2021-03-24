@@ -48,7 +48,7 @@
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Using relative URLs isn't supported
-      href: ../administration/using-relative-urls-not-supported.md
+      href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
   - name: Diagnostics
     items:
     - name: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive 
@@ -385,5 +385,3 @@
       href: ../Workflows/connecting-site-workflow-problems.md
     - name: Workflow platform creates Word files that can't be opened
       href: ../Workflows/workflow-platform-created-word-fails-opening.md
-
-

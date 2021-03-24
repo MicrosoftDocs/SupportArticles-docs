@@ -56,8 +56,8 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 | **Access denied to a site or the web** |  Diagnose permission-related issues when accessing a site or the web. | Diag: Access Denied to Site |
 | **Unable to synchronize OneDrive with a sync client** | Validates that the OneDrive library can be synchronized via the sync client. | Diag: OneDrive Sync |
 | **Unable to synchronize a SharePoint Document Library with sync client** |  Validates that the SharePoint document library is configured properly to allow synchronization of files. | Diag: Library Sync |
-| **Access Denied due to organizational policies** |  If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy this diagnostic can unlock you. | Diag: Access Denied due to Network Location Restriction |[Access Denied due to organizational policies](https://docs.microsoft.com/sharepoint/troubleshoot/sharing-and-permissions/access-denied-due-to-org-policies)
-| **Invalid retention hold** | This diagnostic can be used to detect and remove an invalid retention hold that may be blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](https://docs.microsoft.com/sharepoint/troubleshoot/sites/compliance-policy-blocking-site-deletion)
+| **Access Denied due to organizational policies** |  If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy this diagnostic can unlock you. | Diag: Access Denied due to Network Location Restriction |[Access Denied due to organizational policies](../sharing-and-permissions/access-denied-due-to-org-policies.md)
+| **Invalid retention hold** | This diagnostic can be used to detect and remove an invalid retention hold that may be blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](../sites/compliance-policy-blocking-site-deletion.md)
 
 ### How do I run these diagnostics?
 

@@ -175,6 +175,6 @@ After you determine conflicting or invalid attribute values, troubleshoot the is
 
 The Windows PowerShell commands in this article require the Azure Active Directory Module for Windows PowerShell. For more information about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website:
 
-[Azure Active Directory Cmdlets](https://aka.ms/aadposh)
+[Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
