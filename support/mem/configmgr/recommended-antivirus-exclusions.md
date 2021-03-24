@@ -77,6 +77,8 @@ We recommend that you add the following real-time protection exclusions to preve
 - C:\Windows\CCMCache
 - C:\Windows\CCMSetup
 - *Client installation folder*\Logs
+- C:\Windows\Setup\Scripts
+- C:\Windows\SMSTSPostUpgrade
 
 ### File exclusions for MPs
 
