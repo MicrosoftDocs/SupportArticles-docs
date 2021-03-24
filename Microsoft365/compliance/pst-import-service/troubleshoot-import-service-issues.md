@@ -23,7 +23,7 @@ search.appverid: MET150
 When you use the Import service in the [Security & Compliance Center](https://protection.office.com) to import PST files to user mailboxes in your organization, the last step in the procedure is to start the import job that you create. When the import job runs, you might experience issues such as the slow speed of the import job or failed import jobs. This article lists some of the common issues related to PST import jobs and provides resolutions that you can try.  
 
 - [Import job is stuck or running slowly](#import-job-is-stuck-or-running-slowly)
-- [Import job fails due to errors in PST files](#import-job-fails-due-to-errors-in-PST-files)
+- [Import job fails due to errors in PST files](#import-job-fails-due-to-errors-in-pst-files)
 - [Import job fails with "MapiExceptionShutoffQuotaExceeded" error](#import-job-fails-with-mapiexceptionshutoffquotaexceeded-error)
 
 ## Import job is stuck or running slowly
