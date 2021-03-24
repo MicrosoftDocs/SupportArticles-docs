@@ -1,14 +1,13 @@
 ---
 title: The Remote Desktop license server isn't available when you connect to an Azure VM | Microsoft Docs
 description: Learn how to troubleshoot RDP fail issues because no Remote Desktop license server is available | Microsoft Docs
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure

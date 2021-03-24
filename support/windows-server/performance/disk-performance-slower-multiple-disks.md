@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 929491
 
 ## Symptoms
 
-Disk performance may be slower than expected when you use multiple disks in Microsoft Windows Server 2003, in Microsoft Windows XP, and in Microsoft Windows 2000. For example, performance may slow when you use a hardware-based redundant array of independent disks (RAID) or a software-based RAID.
+Disk performance may be slower than expected when you use multiple disks in Windows. For example, performance may slow when you use a hardware-based redundant array of independent disks (RAID) or a software-based RAID.
 
 ## Cause
 
@@ -30,7 +30,7 @@ This issue may occur if the starting location of the partition is not aligned wi
 
 A volume cluster may be created over a stripe unit boundary instead of next to the stripe unit boundary. This is because Windows uses a factor of 512 bytes to create volume clusters. This behavior causes a misaligned partition. Two disk groups are accessed when a single volume cluster is updated on a misaligned partition.
 
-Windows creates partitions that are based on a predefined number of sectors. The starting location for a disk partition in Windows Server 2003 is either the 32nd or the 64th sector, depending on the information that is presented to the operating system by the mass storage controller.
+Windows creates partitions that are based on a predefined number of sectors. The starting location for a disk partition in Windows is either the 32nd or the 64th sector, depending on the information that is presented to the operating system by the mass storage controller.
 
 > [!NOTE]
 > Disk partitions always reserve the first sector of the partition for code and for partition information, such as the number of sectors and the starting sector. The actual data part of the partition starts from the second sector of the partition.
@@ -70,7 +70,7 @@ To align a disk partition on a RAID that has a 2,048-sector offset, follow these
 
    - select disk  
 
-      Use the select disk command to set the focus to the disk that has the specified Microsoft Windows NT disk number. If you do not specify a disk number, the command displays the current disk that is in focus.
+      Use the select disk command to set the focus to the disk that has the specified disk number. If you do not specify a disk number, the command displays the current disk that is in focus.
    - create partition primary align=1024  
 
      > [!NOTE]  

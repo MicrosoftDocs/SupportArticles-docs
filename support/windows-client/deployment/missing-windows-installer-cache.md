@@ -26,23 +26,6 @@ The Windows Installer Cache is used to store important files for applications th
 
 When a product is installed by using the Windows Installer, important files are stored in the Windows Installer cache that are required for uninstalling and updating applications. Missing files cannot be copied between computers because the files are unique.
 
-## Determine whether you are missing files
-
-The Windows Installer Cache Verifier Package troubleshooter is integrated with the Microsoft Support Diagnostics service. This service can run an automated diagnostic analysis to determine solutions.
-
-To run the troubleshooter, follow these steps:
-
-1. Open the link to the [Microsoft Support Diagnostics](https://home.diagnostics.support.microsoft.com/) tool.
-2. If you are prompted, sign in by using your Windows Live ID.
-3. To create a new diagnostic session, select Windows Installer Cache Diagnostic from the list.
-4. Enter a descriptive session name, then click **Create**.
-
-    > [!NOTE]
-    > You will use the name that you enter to view the analysis results later.
-5. Follow the instructions to download and run the analysis package.
-6. To view the analysis results, select Recent Sessions near the top of the page.
-7. Click the Session Name that you created to view the results. A report is also available locally. (See the [More information](#more-information) section.)
-
 ## More information
 
 If application files are missing from the Windows Installer Cache, ask the vendor or support team for the application about the missing files. You must follow the procedures or steps recommended by the application vendor to restore the files. In some cases, you may have to rebuild the operating system and reinstall the application to fix the problem.

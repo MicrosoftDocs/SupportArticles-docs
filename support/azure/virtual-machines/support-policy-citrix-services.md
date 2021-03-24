@@ -20,8 +20,8 @@ Microsoft will provide support for Azure Platform and Services only. Support for
 
 For more information about Citrix Support, see the following:
 
-- [XenDesktop Support](https://support.citrix.com/en/products/xendesktop)
-- [XenApp Support](https://support.citrix.com/en/products/xenapp)
+- [XenDesktop Support](https://support.citrix.com/plp/products/citrix_virtual_apps_and_desktops_xenapp_xendesktop/tabs/popular-solutions)
+- [XenApp Support](https://support.citrix.com/plp/products/citrix_virtual_apps_and_desktops_xenapp_xendesktop/tabs/popular-solutions)
 - [Citrix ADC Support](https://support.citrix.com/en/products/citrix-adc)
 - [Citrix SD-WAN Support](https://support.citrix.com/en/products/citrix-sd-wan)
 

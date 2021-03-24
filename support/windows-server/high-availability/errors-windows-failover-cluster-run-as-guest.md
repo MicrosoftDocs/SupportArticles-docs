@@ -1,6 +1,6 @@
 ---
-title: Unexpected warning and error messages in a virtualized Windows Server 2008 R2 failover cluster
-description: Describes an issue where unexpected warning and error messages occur in a Windows Server 2008 R2 failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment.
+title: Unexpected warning and error messages in a virtualized Windows Server failover cluster
+description: Describes an issue where unexpected warning and error messages occur in a Windows Server failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,16 +13,16 @@ ms.reviewer: ctimon, sdwyer, kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
 ms.technology: windows-server-high-availability
 ---
-# Unexpected warning and error messages in a virtualized Windows Server 2008 R2 failover cluster
+# Unexpected warning and error messages in a virtualized Windows Server failover cluster
 
-This article describes an issue where unexpected warning and error messages occur in a Windows Server 2008 R2 failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment.
+This article describes an issue where unexpected warning and error messages occur in a Windows Server failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2014304
 
 ## Symptoms
 
-In a Windows Server 2008 R2 failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment, the following messages are written to the logs that are indicated in the message details:
+In a Windows Server failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment, the following messages are written to the logs that are indicated in the message details:
 
 > Warning message:
 >
@@ -41,7 +41,7 @@ Failed to set the migration networks at the VMMS: Class not registered (0x800401
 
 ## Cause
 
-These messages are registered because of the new functionality in Windows Server 2008 R2 failover clusters. This new functionality includes better interoperability with Hyper-V. Even when the failover cluster is running in a virtualized environment as a guest (virtual machine), the failover clustering feature expects aspects of the Hyper-V role to be available. When the failover cluster doesn't find these Hyper-V aspects, these messages are written to the logs in question.
+These messages are registered because of the new functionality in Windows Server failover clusters. This new functionality includes better interoperability with Hyper-V. Even when the failover cluster is running in a virtualized environment as a guest (virtual machine), the failover clustering feature expects aspects of the Hyper-V role to be available. When the failover cluster doesn't find these Hyper-V aspects, these messages are written to the logs in question.
 
 ## Resolution
 

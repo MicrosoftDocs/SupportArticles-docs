@@ -4,6 +4,8 @@ description: Fixes an issue in which Azure Windows virtual machines that have mu
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: chadmat
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # No Internet access from Azure Windows VM that has multiple IP addresses
 

@@ -101,9 +101,6 @@ The problem usually occurs when you are running an evaluation instance of SQL Se
     5. Type *3*, and then click **OK**.
     6. Quit **Registry Editor**.
     7. Rerun the [Upgrade to a Different Edition of SQL Server (Setup)](/sql/database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup) procedure to complete the upgrade of all the components to a licensed edition.
-    8. After the edition upgrade is complete, refer to the following Knowledge Base article to prevent issues with future updates to the instance.
-
-       [Updates to Microsoft SQL server 2008 will fail after an edition upgrade](https://support.microsoft.com/help/970608)
 
 ## Check whether SSMS will expire
 

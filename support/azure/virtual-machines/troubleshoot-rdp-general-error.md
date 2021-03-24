@@ -1,14 +1,13 @@
 ---
 title: Troubleshoot an RDP general error to a Windows VM in Azure | Microsoft Docs
 description: Learn how to troubleshoot an RDP general error to a Windows VM in Azure | Microsoft Docs
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
@@ -187,8 +186,8 @@ For more information, see [Remote Desktop disconnects frequently in Azure VM](tr
 5. Open an elevated command prompt session (**Run as administrator**). Run the following scripts. In this script, we assume that the drive letter that is assigned to the attached OS disk is F. Replace this drive letter with the appropriate value for your VM.
 
       ```
-      reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM.hiv 
-      reg load HKLM\BROKENSOFTWARE F:\windows\system32\config\SOFTWARE.hiv 
+      reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
+      reg load HKLM\BROKENSOFTWARE F:\windows\system32\config\SOFTWARE
  
       REM Ensure that Terminal Server is enabled 
 

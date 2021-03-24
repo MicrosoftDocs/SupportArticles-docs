@@ -125,9 +125,7 @@ To resolve the problem, use one of the following methods:
 
 ## More information
 
-The error messages that are mentioned in the [Symptoms](#symptoms) section may have other causes. If the steps in the [Resolution](#resolution) section do not resolve the problem, you may be experiencing a different problem. For more information, go to the following Microsoft websites:
-
-- To verify your installation media by using the Microsoft File Checksum Integrity Verifier tool, see [Microsoft File Checksum Integrity Verifier](https://www.microsoft.com/download/details.aspx?id=11533).
+The error messages that are mentioned in the [Symptoms](#symptoms) section may have other causes. If the steps in the [Resolution](#resolution) section do not resolve the problem, you may be experiencing a different problem.
 
 - For more information about how to install SQL Server 2008 R2, see [How to: Install SQL Server 2008 R2 (Setup)](/previous-versions/sql/sql-server-2008-r2/ms143219(v=sql.105)).
 
