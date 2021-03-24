@@ -1,8 +1,8 @@
 ---
 title: Can't resend a delayed delivery message
 description: This article describes an issue that occurs when you are connecting to an Exchange Server 2013 mailbox by using an Online Mode Outlook profile.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

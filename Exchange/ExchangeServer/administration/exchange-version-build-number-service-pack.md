@@ -1,8 +1,8 @@
 ---
 title: Determine version number and service pack
 description: Provides information about how to determine the version number, the build number, and the service pack level of Exchange Server through viewing server properties.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for Office 365 Enterprise
 description: This article lists Office 365 related issues.
-author: AmandaAZ
+author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
-ms.author: v-weizhu
+ms.author: v-six
 localization_priority: Normal
 search.appverid: 
 - MET150

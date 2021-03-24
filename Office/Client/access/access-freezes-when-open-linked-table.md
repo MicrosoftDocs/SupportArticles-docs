@@ -1,8 +1,8 @@
 ---
 title: Access freezes when you open a linked table to a SharePoint list
 description: Describes an issue in which Microsoft Access hangs when you open a linked table to a SharePoint list.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

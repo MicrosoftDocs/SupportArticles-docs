@@ -1,8 +1,8 @@
 ---
 title: Download Microsoft Office Web Apps Server
 description: Describes the download for Microsoft Office Web Apps Server from the Volume Licensing Service Center.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
