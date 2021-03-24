@@ -65,7 +65,9 @@ To resolve this problem, follow these steps:
         chmod 600 /mnt/swapfile
         mkswap /mnt/swapfile
         swapon /mnt/swapfile
-        swapon -a ; fi
+        swapon -a 
+        else
+        swapon /mnt/swapfile; fi
         ```
 
     2. Make the file executable by using the `# chmod +x create_swapfile.sh` command.
