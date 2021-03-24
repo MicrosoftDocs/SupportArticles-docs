@@ -288,7 +288,7 @@ WUAHandler then parses the results, which include the applicability state for ea
 
 ### Step 5: Update store records the status and raises a state message for each update in WMI
 
-Once the scan results are available, these results are stored in the updates store. Update store records the current state of each update and creates a state message for each update. These state messages are forwarded to the site server in bulk at the end of the status message reporting cycle (which is minutes, by default).
+Once the scan results are available, these results are stored in the updates store. Update store records the current state of each update and creates a state message for each update. These state messages are forwarded to the site server in bulk at the end of the status message reporting cycle (which is 15 minutes, by default).
 
 UpdatesStore.log showing state for missing update (KB2862152) being recorded and a state message being raised:
 
@@ -451,7 +451,7 @@ Before software update compliance data can be presented in the console or report
 
 For most of these tasks, the status logged by StateSys.log isn't an error code. Instead, it's the number of rows returned by the appropriate SQL Server stored procedure that performs the summarization.
 
-Summarization tasks specified to software updates are:
+Summarization tasks specific to software updates are:
 
 - **SUM Assignment Compliance Evaluator**  
 
