@@ -59,7 +59,7 @@ Try the following options to help recover your lost, unsaved, or corrupted Word 
 1.	On the taskbar, select the **Start** or **Search** icon.
 2.	Type the document name, and then press **Enter**. 
     - If the **File** list contains the document, double-click the document to open it in Word.
-    - If the **File** list does not contain the file, go to Option 2.
+    - If the **File** list doesn't contain the file, go to Option 2.
 
 
 
@@ -98,8 +98,8 @@ Try the following options to help recover your lost, unsaved, or corrupted Word 
 
 </a>
 
-Check the Desktop Recycle Bin to see if your document is there.
-- **Commercial customers**: Check the  Sharepoint Recycle Bin. For more information, see [Restore items in the recycle bin that were deleted from SharePoint or Team](https://support.microsoft.com/office/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams-6df466b6-55f2-4898-8d6e-c0dff851a0be).
+Check the Desktop Recycle bin to see if your document is there. If you save documents on OneDrive, also check the OneDrive Recycle bin.
+- **Commercial customers**: Check the  Sharepoint Recycle Bin. For more information, see [Restore items in the recycle bin that were deleted from SharePoint or Teams](https://support.microsoft.com/office/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams-6df466b6-55f2-4898-8d6e-c0dff851a0be).
 
 
 </td>
@@ -114,12 +114,12 @@ Check the Desktop Recycle Bin to see if your document is there.
 </td>
 <td><a href="#option4">
 
-**Search for auto-recover files**
+**Search for AutoRecover files**
 
 </a>
 
 1. Right-click the taskbar and select **Task Manager**.
-2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Microsoft Word.
+2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you've exited all instances of Winword.exe and Microsoft Word.
 3. Close the **Windows Task Manager** dialog box, and then start Word.
 
    Double-click the file in the **Document Recovery** pane, select **Save As** on the **File** menu, and then save the document as a .docx file. To manually change the extension to .docx, right-click the file and select **Rename**.
@@ -207,10 +207,10 @@ The following section provides more detailed descriptions of these options.
 
 </a>
 
-Type the document name, in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the Start Search box on the Start menu (in earlier versions of Windows), and then press **Enter**. 
+Type the document name in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the Start Search box on the Start menu (in earlier versions of Windows), and then press **Enter**.
 
 - If the **File** list contains the document, double-click the document to open it in Word.
-- If the **File** list does not contain the file, go to Option 2.
+- If the **File** list doesn't contain the file, go to Option 2.
 
 
 <a id="option2">
@@ -265,7 +265,7 @@ If you find any files that have the name "Backup of" followed by the name of the
 
 **Recovering deleted Word documents from the Recycle Bin**
 
-If you deleted a Word document without emptying the recycle bin, you may be able to restore the document.
+If you deleted a Word document without emptying the recycle bin, you might be able to restore the document.
 
 1. Double-click the Recycle Bin on the Desktop. 
 1. Search through the list of documents to see if the deleted word file is still there. If you don't know the name, look for file types such as DOC, DOCX, DOT, etc.
@@ -273,7 +273,12 @@ If you deleted a Word document without emptying the recycle bin, you may be able
 
     :::image type="content" source="media/recover-lost-document/word-recycle.png" alt-text="Select Restore to recover the document. " border="false":::
 
-    If you have emptied the recycle bin after deleting files, the deleted Word file may have been permanently removed. If so, go to Option 4. 
+If you have saved files to a SharePoint site, see **Restore a SharePoint item from the Microsoft 365 site collection Recycle Bin**, below.
+
+If you have saved files to OneDrive, check the OneDrive Recycle bin. For more information about that, see [Restore deleted files or folders in OneDrive](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f).
+
+If you have emptied the recycle bin after deleting files, the deleted Word file may have been permanently removed. If you are on Windows 10, version 2004 or higher, you can try the Windows File Recovery tool, available from the Microsoft Store. For more information about that tool, see [Recover lost files on Windows 10](https://aka.ms/winfrhelp).
+If you are unable to find the file using those methods, go to Option 4.
 
 **Restore a SharePoint item from the Microsoft 365 site collection Recycle Bin**
 
@@ -312,9 +317,9 @@ If you restore an item that was originally located in a deleted folder, the fold
 
 </a>
 
-AutoRecover file names end in the .asd file name extension. By default, Word searches for auto-recover files every time that it starts, and then it displays any files found in the **Document Recovery** task pane.
+AutoRecover file names end in the .asd file name extension. By default, Word searches for autorecover files every time that it starts, and then it displays any files found in the **Document Recovery** task pane.
 
-1. Use Word to automatically find the auto-recovered files. To do this, follow these steps:
+1. Use Word to automatically find the autorecovered files. To do this, follow these steps:
 
    1. Right-click the taskbar, and select **Task Manager**.
     
@@ -328,11 +333,11 @@ AutoRecover file names end in the .asd file name extension. By default, Word sea
 
        :::image type="content" source="media/recover-lost-document/word.png" alt-text="Screenshot of starting Word." border="false":::
 
-If Word finds the auto-recovered file, the **Document Recovery** task pane opens on the left side of the screen, and the missing document is listed as "**document name** [Original]" or as "**document name** [Recovered]." If this occurs, double-click the file in the Document Recovery pane, select **File** > **Save As**, and then save the document as a .docx file. To manually change the extension to .docx, right-click the file, and select **Rename**.
+If Word finds the autorecovered file, the **Document Recovery** task pane opens on the left side of the screen, and the missing document is listed as "**document name** [Original]" or as "**document name** [Recovered]." If this occurs, double-click the file in the Document Recovery pane, select **File** > **Save As**, and then save the document as a .docx file. To manually change the extension to .docx, right-click the file, and select **Rename**.
 
-**Manually search for auto-recovered files**
+**Manually search for autorecovered files**
 
-If the **Document Recovery** pane does not open, manually search for auto-recovered files. To do this, use one of the following procedures, as appropriate for the version of Word that you're running.
+If the **Document Recovery** pane does not open, manually search for autorecovered files. To do this, use one of the following procedures, as appropriate for the version of Word that you're running.
 
 **Word for Office 365**, **Word 2019**, **Word 2016**, and **Word 2013** 
 
@@ -348,11 +353,11 @@ If the **Document Recovery** pane does not open, manually search for auto-recove
 
 **Search for .asd files**
 
-If you can't locate an auto-recovered file in the location that is identified in the **Folder name** list, search your whole drive for any .asd files. To do this, follow these steps:
+If you can't locate an autorecovered file in the location that is identified in the **Folder name** list, search your whole drive for any .asd files. To do this, follow these steps:
 
 Type **.asd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.
 
-   - If the **File** list does not contain auto-recovered files, go to Option 5.
+   - If the **File** list does not contain autorecovered files, go to Option 5.
   
    - If you find any files that have the .asd extension, use one of the following procedures, as appropriate for the version of Word that you're running:
 
@@ -417,13 +422,13 @@ In certain situations, it's possible to completely lose a Word document. For exa
 > [!NOTE]
 > The whole document may be lost if you have not recently saved the document. If you have saved your document, you may lose only the changes that you made since the last save. **Be aware that some lost documents may not be recoverable.**
 
-The AutoRecover feature in Word performs an emergency Backup of open documents when an error occurs. Some errors can interfere with the auto-recovery functionality. The AutoRecover feature is not a substitute for saving your files.
+The AutoRecover feature in Word performs an emergency Backup of open documents when an error occurs. Some errors can interfere with the autorecovery functionality. The AutoRecover feature is not a substitute for saving your files.
 
 We do not provide any utilities to recover deleted documents. However, some third-party utilities to recover deleted documents might be available from the internet.
 
 For more information about AutoRecover, see the following articles:
 
-- [What is Auto-Save?](https://support.office.com/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)
+- [What is AutoSave?](https://support.office.com/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)
 - [WD2000: Why you are unable to recover a lost document](https://support.microsoft.com/help/212273)
 - [WD2000: Automatically Saving Current Work (Open Document)](https://support.microsoft.com/help/211762)
 - [How Word creates and recovers the AutoRecover files](https://support.microsoft.com/help/107686)
