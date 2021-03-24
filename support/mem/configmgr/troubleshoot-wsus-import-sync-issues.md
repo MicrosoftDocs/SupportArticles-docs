@@ -37,7 +37,7 @@ When you experience WSUS synchronization or manual import problems, first check 
    $config.MUUrl
    ```
 
-Windows 2012 and later versions should be configured to use the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint. If you're still using the [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com) endpoint, change it to the new endpoint with the steps in [WSUS synchronization fails with SoapException](wsus-synchronization-fails-with-soapexception.md#resolution). If necessary, troubleshoot connection issues with [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
+Windows Server 2012 and later versions should be configured to use the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint. If you're still using the [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com) endpoint, change it to the new endpoint with the steps in [WSUS synchronization fails with SoapException](wsus-synchronization-fails-with-soapexception.md#resolution). If necessary, troubleshoot connection issues with [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
 
 ## Issue 1: Manual import fails, but synchronization succeeds
 
@@ -52,7 +52,7 @@ This issue occurs on WSUS servers running Windows Server 2012, Windows Server 20
 ### Troubleshoot issue 1
 
 1. Run the PowerShell script in [Endpoints](#endpoints) to determine which endpoints the WSUS servers use. You'll probably find that working servers are communicating with [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com), and failing servers are communicating with [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
-2. Check the SoftwareDistribution.log file under `%Program Files%\Update Services\LogFiles` for errors when you manually import updates. Look for errors that are similar to the following example:
+2. Check the `%Program Files%\Update Services\LogFiles\SoftwareDistribution.log` file for errors when you manually import updates. Look for errors that are similar to the following example:
 
    ```output
    ProcessWebServiceProxyException found Exception was WebException. Action: Retry. Exception Details: System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
@@ -77,11 +77,13 @@ In the network capture, frame 874 is the Client Hello packet using TLS 1.0. Fram
 
 ### Resolution for issue 1
 
+This issue occurs because WSUS import functionality can't use TLS 1.2.
+
 To fix this issue, use one of the following methods:
 
 - Configure .NET Framework to use TLS 1.2 by using registry keys
 
-  To set the registry keys, see [Configure for strong cryptography](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server#configure-for-strong-cryptography). Restart the computer after you set the registry keys.
+  To set the registry keys, see [Configure for strong cryptography](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server#configure-for-strong-cryptography). Restart the server after you set the registry keys.
 - Create or update the w3wp.exe.config file to enable TLS 1.2
 
   > [!NOTE]
@@ -105,7 +107,7 @@ To fix this issue, use one of the following methods:
   If the `%SystemRoot%\system32\inetsrv\w3wp.exe.config` file already exists, follow these steps:
 
   1. Open the file in Notepad, or another text editor.
-  2. Add the following lines immediate under the <configuration> element, and then save the file:
+  2. Add the following lines immediately under the \<configuration> element, and then save the file:
   
      ```xml
      <runtime>
@@ -150,7 +152,7 @@ Let's look at the network capture of the connection attempt:
 
 In the network capture, frames 1518-1520 show the three-way handshake (SYN, SYN ACK, ACK) between the client and server. Frame 1536 is an ACK FIN packet from the WSUS server.
 
-WSUS closes the connection, because all protocols it knows how to use for import (SSL3, TLS 1.0, TLS 1.0) are disabled and it can't use TLS 1.2.
+WSUS closes the connection, because all protocols it knows how to use for import (SSL3, TLS 1.0, TLS 1.1) are disabled and it can't use TLS 1.2.
 
 ### Resolution for issue 2
 
@@ -163,12 +165,12 @@ Windows Server 2012 and Windows Server 2012 R2 servicing contains the following 
 - A security-only update, which isn't cumulative. It contains only security fixes. For example, [June 9, 2020—KB4561673 (Security-only update)](https://support.microsoft.com/topic/june-9-2020-kb4561673-security-only-update-d96ab2c7-9a80-d9de-7f8b-cd59c3ae6d4a).
 - A Monthly Rollup, which is cumulative. It contains all security fixes from the security-only update, and other non-security fixes. For example, [June 9, 2020—KB4561666 (Monthly Rollup)](https://support.microsoft.com/topic/june-9-2020-kb4561666-monthly-rollup-25c80876-4902-1fe8-6606-80fd28074f67).
 
-WSUS on Windows Server 2012 and Windows Server 2012 R2 can't use TLS 1.2 for synchronization, unless one of the following Monthly Rollups is installed:
+WSUS on Windows Server 2012 and Windows Server 2012 R2 can't use TLS 1.2 for synchronization, unless one of the following or later Monthly Rollups is installed:
 
 - [June 27, 2017—KB4022721 (Preview of Monthly Rollup)](https://support.microsoft.com/topic/june-27-2017-kb4022721-preview-of-monthly-rollup-16a4b074-5202-c1c3-2c8a-34c1edd452f8) for Windows Server 2012
 - [June 27, 2017—KB4022720 (Preview of Monthly Rollup)](https://support.microsoft.com/topic/june-27-2017-kb4022720-preview-of-monthly-rollup-b98970bb-6f11-46c3-8681-a6b85d5d8eb4) for Windows Server 2012 R2
 
-The change that enabled WSUS to use TLS 1.2 is non-security fix, it's included only in the Monthly Rollups.
+The change that enables WSUS to use TLS 1.2 is a non-security fix, it's included only in the Monthly Rollups.
 
 Some users opt to install only the security-only updates and never install the Monthly Rollups. So their WSUS servers don't have the update that enables TLS 1.2 installed. After the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint is changed to accept only TLS 1.2 connections, these WSUS servers can no longer synchronize with the endpoint. This issue also occurs on a freshly installed Windows Server 2012 or Windows Server 2012 R2 WSUS server that hasn't installed any Monthly Rollups.
 
@@ -203,7 +205,7 @@ In the network capture, frame 95 is the Client Hello packet using TLS 1.0. Frame
 
 ### Resolution for issue 3
 
-To fix the issue, install the latest Monthly Rollup for Windows Server 2012 or Windows Server 2012 R2. Also apply [Resolution for issue 1](#resolution-for-issue-1) to fix the manual import failure.
+To fix the issue, install the latest Monthly Rollup for Windows Server 2012 or Windows Server 2012 R2. Also apply [Resolution for issue 1](#resolution-for-issue-1) to prevent the manual import failure.
 
 ## Issue 4: Synchronization fails after July 2020 when WSUS is integrated with Configuration Manager
 
@@ -281,7 +283,7 @@ In the network capture, frame 400 is the Client Hello packet using TLS 1.2. The 
 
 ### Resolution for issue 5
 
-To fix the issue in Windows Server 2016 and Windows Server 2019:
+To fix the issue, follow these steps:
 
 1. Use the output of `gpresult` to determine the GPO that specifies the SSL Cipher Suite Order, and remove the GPO. Or change it to include ciphers that are supported by [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
 
@@ -309,7 +311,7 @@ Also apply [Resolution for issue 1](#resolution-for-issue-1) to prevent manual i
 
 ## A successful connection
 
-Let's look at an example of successful connection. Here's a network capture when a Windows Server 2016 server synchronizes updates:
+Let's look at an example of successful connection. Here's a network capture when a Windows Server 2016 WSUS server synchronizes updates:
 
 :::image type="content" source="media/troubleshoot-wsus-import-sync-issues/network-capture-5.png" alt-text="Network capture 5":::
 
@@ -327,6 +329,6 @@ When you use a proxy, you need to know the IP address of internal interface of t
 
 ## References
 
-- [WSUS Synchronization fails with SoapException[(wsus-synchronization-fails-with-soapexception.md)
+- [WSUS Synchronization fails with SoapException](wsus-synchronization-fails-with-soapexception.md)
 - [How to enable TLS 1.2 on the site servers and remote site systems](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server)
 - [TLS registry settings](/windows-server/security/tls/tls-registry-settings)
