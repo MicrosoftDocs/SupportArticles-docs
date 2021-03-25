@@ -180,7 +180,7 @@
         "cpp/**/*.md": [ "Visual Studio" ],
         "iis/**/*.md": [ "Web Apps" ],
         "aspnet/**/*.md": [ "Web Apps" ],
-        "sql/**/*.md": [ "SQL Server" ],
+        "sql/**/*.md": [ "sql","SQL Server" ],
         "webapps/**/*.md": [ "Web Apps" ],
         "windows/win32/**/*.md": [ "Application Developer" ],
         "windows-hardware/drivers/**/*.md": [ "Hardware Developer" ],
