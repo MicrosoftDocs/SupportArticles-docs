@@ -115,13 +115,13 @@
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
       items:
-      - name: Fraud Protection
+      - name: Dynamics 365 Fraud Protection
         tocHref: /troubleshoot/dynamics-365/fraud-protection/
         topicHref: /troubleshoot/dynamics-365/fraud-protection/welcome-fraud-protection
-      - name: Marketing
+      - name: Dynamics 365 Marketing
         tocHref: /troubleshoot/dynamics-365/marketing/
         topicHref: /troubleshoot/dynamics-365/marketing/welcome-marketing
-      - name: Sales
+      - name: Dynamics 365 Sales
         tocHref: /troubleshoot/dynamics-365/sales/
         topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
 
