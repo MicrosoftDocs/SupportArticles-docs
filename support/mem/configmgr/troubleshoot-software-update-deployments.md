@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot software update deployments
-description: Describes how to troubleshoot software update deployments that don't run successfully, such as updates fail to download and there are unexpected reboots during update installation.
+description: Describes how to troubleshoot software update deployments that don't run successfully. For example, updates fail to download and there are unexpected reboots during update installation.
 ms.date: 05/25/2020
 ms.prod-support-area-path:
 ---
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3090264
 
 ## Summary
 
-When you deploy software updates in Configuration Manager (ConfigMgr 2012 or ConfigMgr 2012 R2), you typically add the updates to a software update group and then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers, and the update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. Normally this process is completed successfully with little effort. However, issues may sometimes arise that cause update deployment to fail. We cover the two most common failure scenarios and provide troubleshooting suggestions for each.
+When you deploy software updates in Configuration Manager, you typically add the updates to a software update group. Then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers. The update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. Normally this process is completed successfully with little effort. However, issues may sometimes arise that cause update deployment to fail. We cover the two most common failure scenarios and provide troubleshooting suggestions for each.
 
 For more information about software updates in Configuration Manager, see [Software updates introduction](software-updates-introduction.md).
 
@@ -26,9 +26,9 @@ When software update deployment fails, the problem generally falls into one of t
 
 1. When updates don't get downloaded to the client, first check the CAS.log, ContentTransferManager.log, and DataTransferService.log files for errors. To learn about how updates are downloaded, see [Track the software update deployment process in Configuration Manager](track-software-update-deployment-process.md)
 
-2. Verify that the client is in the appropriate boundary associated with the boundary group for the distribution point. For more information about boundary groups, see [Configuring boundaries and boundary groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427326(v=technet.10)?redirectedfrom=MSDN).
+2. Verify that the client is in the appropriate boundary associated with the boundary group for the distribution point. For more information about boundary groups, see [Configuring boundaries and boundary groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427326(v=technet.10)).
 
-3. Check the Software Update Package status and verify that the updates are downloaded and installed on the distribution points. If the content is not installed on the distribution point that's associated with the client's boundary group, check whether fallback for content location must be enabled. For more information, see [What is fallback and what does it mean?](/archive/blogs/cmpfekevin/what-is-fallback-and-what-does-it-mean).
+3. Check the Software Update Package status and verify that the updates are downloaded and installed on the distribution points. If the content isn't installed on the distribution point that's associated with the client's boundary group, check whether fallback for content location must be enabled. For more information, see [What is fallback and what does it mean?](/archive/blogs/cmpfekevin/what-is-fallback-and-what-does-it-mean).
 
 4. If the client receives the download location but fails to download content, try to download the content manually by accessing the URL for the content. You can find the URL by reviewing DataTransferServices.log.
 
@@ -36,7 +36,7 @@ When software update deployment fails, the problem generally falls into one of t
 
 1. Check to see whether the scan failed during the deployment evaluation. For more information about scan failures, see [Troubleshoot software update scan failures in Configuration Manager](troubleshoot-software-update-scan-failures.md).
 2. Review WUAHandler.log and WindowsUpdate.log to find the errors received during update installation.
-3. To rule out an installation issue with the update itself, try to manually install the update or install it from Microsoft Update (if possible) to see whether the update installation is successful.
+3. To rule out an installation issue with the update itself, manually install the update or install it from Microsoft Update (if possible). See whether the update installation is successful.
 4. Most .NET Framework update failures are caused by corrupted .NET Framework installations. In these cases, try to manually install the update. If the installation process fails, see [Fix Windows Update errors](https://support.microsoft.com/help/10164/fix-windows-update-errors).
 
 For more information, see [Installation, supersedence, or detection issues with specific updates](troubleshoot-software-update-management.md#installation-supersedence-or-detection-issues-with-specific-updates).
@@ -49,7 +49,7 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
 
    ServiceWindowManager.log contains information about maintenance windows and their start and end time. This information can be very useful when you troubleshoot issues related to software update installation on clients.
 
-    To find a list of available maintenance windows (service windows) on a client, open ServiceWindowManager.log, and search for the **Refreshing Service Windows** string. Immediately following this line, you will see a list of the applicable service windows on the computer, as in the following example:
+    To find a list of available maintenance windows (service windows) on a client, open ServiceWindowManager.log, and search for the **Refreshing Service Windows** string. Immediately following this line, you'll see a list of the applicable service windows on the computer, as in the following example:
 
     > Refreshing Service Windows..... ServiceWindowManager  
     > Populating instance of ServiceWindow with ID=7cb56688-692f-4fae-b398-0e3ff4413adb, ScheduleString=02C159C0381A200002C159C0381B200002C159C0381C200002C159C0381D200002C159C0381E2000, Type=6 ServiceWindowManager  
@@ -80,13 +80,13 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
     > StartTime is 02/10/14 22:00:00 ServiceWindowManager  
     > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager
 
-    Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. These are based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319 (which is a maintenance window defined for the collection that holds the client).
+    Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. They're based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows, except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319. This window is a maintenance window defined for the collection that holds the client.
 
-2. Review the UpdatesDeployment.log file, and locate the following line to check whether the deployment was set to ignore the maintenance window:
+2. Review the UpdatesDeployment.log file. Locate the following line to check whether the deployment was set to ignore the maintenance window:
 
     > Notify reboot with deadline = Sunday, Feb 09, 2014. - 21:30:17, **Ignore reboot Window = True**, NotifyUI = True
 
-3. Review the MaintenanceCoordinator.log file, and locate the following line to check whether the deployment was set to ignore the maintenance window. A value of **1** for `swoverride` means that the ignore maintenance window setting is enabled.
+3. Review the MaintenanceCoordinator.log file. Locate the following line to check whether the deployment was set to ignore the maintenance window. A value of **1** for `swoverride` means that the ignore maintenance window setting is enabled.
 
     > RequestPersistence(id=Update download job, persist=1, **swoverride=1**, swType=4, pendingWFDisable=0, deadline=1)
 
@@ -100,7 +100,7 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
 
    To review audit status messages, navigate to Configuration Manager console > **Monitoring**  > **System Status** > **Status Message Queries**. Right-click **All Status Messages**, click **Show Messages**, select the timeframe, and then click **OK**.
 
-   In the Configuration Manager **Status Message Viewer** window, navigate to **View** > **Filter**, and then filter for **Message ID = 30197**. If the deployment was modified, you'll see a status message that resembles the following:
+   In the Configuration Manager **Status Message Viewer** window, navigate to **View** > **Filter**, and then filter for **Message ID = 30197**. If the deployment was modified, you'll see a status message that resembles the following one:
 
    > Severity Type Site code Date / Time System Component Message ID Description  
    > Information Audit PR1 2/9/2014 11:57:49 PM PR1SITE.CONTOSO.COM Microsoft.ConfigurationManagement.exe 30197 User "DOMAIN\User" modified updates assignment 4 ({BAFB1BDB-7A6C-4DCF-9866-6C22DF92346A}).

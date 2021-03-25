@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot managed device to NDES communication in Microsoft Intune | Microsoft Docs
+title: Troubleshoot managed device to NDES communication in Microsoft Intune
 description: Troubleshoot managed device to NDES server communication when using SCEP certificate profiles to deploy certificates with Intune.
 ms.date: 08/28/2020
 ms.reviewer: lacranda

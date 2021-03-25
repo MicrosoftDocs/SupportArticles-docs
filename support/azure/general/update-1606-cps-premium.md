@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: azure-stack
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: jameshed
 ---
 # Update 1606 for Cloud Platform System (CPS) Premium

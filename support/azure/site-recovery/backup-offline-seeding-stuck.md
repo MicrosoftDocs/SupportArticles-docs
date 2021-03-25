@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Microsoft Azure Backup offline seeding is stuck at waiting for Azure import job to complete

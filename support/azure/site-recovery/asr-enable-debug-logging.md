@@ -1,11 +1,11 @@
 ---
 title: How to enable debug logging for the Azure Site Recovery in Hyper-V Site Protection
 description: Describes how to enable debug logging (also known as ETL tracing) for Microsoft Azure Site Recovery (ASR) in Hyper-V Site to Azure protection scenarios running on a Windows Server 2012 R2 Hyper-V server.
-ms.date: 10/10/2020
+ms.date: 03/05/2021
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: markstan
 ---
 # How to enable debug logging for the Azure Site Recovery in Hyper-V Site Protection
@@ -59,10 +59,10 @@ To enable debug logging for the ASR Provider, use the following steps:
 6. Collect debug logs from the folder \<installation folder>\Temp. The default location will be *C:\Program Files\Microsoft Azure Recovery Services Agent\Temp*.
 7. Use these steps to collect SRS logs from the Azure Site Recovery portal:
 
-    1. Log on to the [Microsoft Azure portal](http://manage.windowsazure.com/).
-    2. Select Recovery Services.
+    1. Log on to the [Azure portal](https://portal.azure.com).
+    2. Select **Recovery Services vaults**.
     3. Select the vault that hosts your ASR data.
-    4. Select Jobs.
+    4. Select **Site Recovery jobs**.
     5. Select Export Jobs to begin the export process.
     6. Specify a file location, and then click Save to export the job details to an .xlsx file.
 

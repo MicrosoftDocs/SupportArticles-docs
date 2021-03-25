@@ -1,17 +1,16 @@
 ---
 title: Troubleshoot deploying Windows virtual machine issues in Azure | Microsoft Docs
 description: Troubleshoot deploying Windows virtual machine issues in the Azure Resource Manager deployment model.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
-
 ms.topic: troubleshooting
 ms.date: 11/01/2018
 ms.author: genli
