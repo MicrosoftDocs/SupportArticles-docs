@@ -306,7 +306,7 @@
 
 - name: VM performance issues
   items:
-  - name: Performance diagnostics (Perfinsights)
+  - name: Performance diagnostics (PerfInsights)
     items:
     - name: Performance diagnostics in the Azure Portal
       href: performance-diagnostics.md
@@ -320,16 +320,16 @@
         href: how-to-use-perfinsights.md
       - name: PerfInsights in Linux
         href: how-to-use-perfinsights-linux.md
-- name: Troubleshoot VM Performance issues
-  items:
-  - name: Troubleshoot performance issues through Monitoring
-    href: troubleshoot-performance-virtual-machine-linux-windows.md
-  - name: Troubleshoot high CPU issues for Azure Windows virtual machines
-    href: troubleshoot-high-cpu-issues-azure-windows-vm.md
-- name: Known performance issues
-  items:
-  - name: Poor performance on Windows Server 2012 R2
-    href: poor-performance-emulated-storage-stack.md
+  - name: Troubleshoot VM Performance issues
+    items:
+    - name: Troubleshoot performance issues through Monitoring
+      href: troubleshoot-performance-virtual-machine-linux-windows.md
+    - name: Troubleshoot high CPU issues for Azure Windows virtual machines
+      href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+  - name: Known performance issues
+    items:
+    - name: Poor performance on Windows Server 2012 R2
+      href: poor-performance-emulated-storage-stack.md
 
 - name: Help with VM password reset
   items:
