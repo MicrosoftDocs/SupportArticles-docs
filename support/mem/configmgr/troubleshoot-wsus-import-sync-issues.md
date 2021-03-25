@@ -41,7 +41,7 @@ Windows Server 2012 and later versions should be configured to use the [https://
 
 ## Issue 1: Manual import fails, but synchronization succeeds
 
-Many users import updates into WSUS manually, and don't synchronize into WSUS. For example, you do so for preview updates that are released in the third and fourth weeks of the month. But you can no longer manually import updates since the end of July 2020. 
+Many users import updates into WSUS manually, and some updates must be imported manually. For example, preview updates that are released in the third and fourth weeks of the month must be manually imported. Since the end of July 2020, you may find you can't manually import updates.
 
 :::image type="content" source="media/troubleshoot-wsus-import-sync-issues/import-failure.png" alt-text="Import fails":::
 
@@ -119,7 +119,7 @@ To fix this issue, use one of the following methods:
 
 ## Issue 2: Manual import fails after you disable TLS 1.0 or TLS 1.1
 
-TLS 1.0 and TLS 1.1 are being phased out because they're considered insecure. After you disable these protocols, you can no longer import updates. But synchronization continues to work.
+TLS 1.0 and TLS 1.1 are being phased out because they're considered insecure. After you disable these protocols, you can no longer import updates, but synchronization continues to work.
 
 This issue occurs on WSUS servers running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.
 
@@ -172,7 +172,7 @@ WSUS on Windows Server 2012 and Windows Server 2012 R2 can't use TLS 1.2 for syn
 
 The change that enables WSUS to use TLS 1.2 is a non-security fix, it's included only in the Monthly Rollups.
 
-Some users opt to install only the security-only updates and never install the Monthly Rollups. So their WSUS servers don't have the update that enables TLS 1.2 installed. After the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint is changed to accept only TLS 1.2 connections, these WSUS servers can no longer synchronize with the endpoint. This issue also occurs on a freshly installed Windows Server 2012 or Windows Server 2012 R2 WSUS server that hasn't installed any Monthly Rollups.
+Some users opt to install only the security-only updates and never install the Monthly Rollups, so their WSUS servers don't have the update that enables TLS 1.2 installed. After the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint is changed to accept only TLS 1.2 connections, these WSUS servers can no longer synchronize with the endpoint. This issue also occurs on a freshly installed Windows Server 2012 or Windows Server 2012 R2 WSUS server that hasn't installed any Monthly Rollups.
 
 ## Troubleshoot issue 3
 
