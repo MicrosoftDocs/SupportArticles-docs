@@ -2534,6 +2534,8 @@
     items:
     - name: Event ID 106
       href: ./virtualization/event-id-106-hyper-v-virtual-switch-bound-lbfo-team.md
+    - name: Get-VMNetworkAdapter command doesn't report IP addresses
+      href: ./virtualization/get-vmnetworkadapter-command-doesnt-report-ip-addresses.md
   - name: Hyper-V Replica
     items:
     - name: Events 18210 and 3041 when Hyper-V Replica is configured

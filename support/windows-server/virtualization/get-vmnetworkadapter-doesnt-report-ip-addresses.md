@@ -23,7 +23,7 @@ _Applies to:_ &nbsp; Windows Server (all versions)
 
 ## Symptoms
 
-You run the [`Get-VMNetworkAdapter`](/powershell/module/hyper-v/get-vmnetworkadapter?view=windowsserver2019-ps) command in a Command Prompt window on a virtual machine. For example,
+You run the [`Get-VMNetworkAdapter`](/powershell/module/hyper-v/get-vmnetworkadapter) command in a Command Prompt window on a virtual machine. For example,
 
 ```powershell
 PS C:\> Get-VMNetworkAdapter -VMName clu3vm1
@@ -102,7 +102,7 @@ At line:1 char:1
 
 ## Cause
 
-The [`NetTCPIP`](https://docs.microsoft.com/powershell/module/nettcpip/?view=windowsserver2019-ps) WMI provider isn't installed in the guest operating system (the virtual machine).
+The [`NetTCPIP`](/powershell/module/nettcpip) WMI provider isn't installed in the guest operating system (the virtual machine).
 
 ## Resolution
 
