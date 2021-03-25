@@ -48,7 +48,9 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+
+      "feedback_system": "None", 
+
       "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
       "searchScope": ["Troubleshoot"]
     },
@@ -114,7 +116,6 @@
         "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
-        "**/*.md": "",
         "biztalk/**/*.md": "",
         "dotnet/**/*.md": "",
         "aspnet/**/*.md": "",
@@ -179,7 +180,7 @@
         "cpp/**/*.md": [ "Visual Studio" ],
         "iis/**/*.md": [ "Web Apps" ],
         "aspnet/**/*.md": [ "Web Apps" ],
-        "sql/**/*.md": [ "SQL Server" ],
+        "sql/**/*.md": [ "sql","SQL Server" ],
         "webapps/**/*.md": [ "Web Apps" ],
         "windows/win32/**/*.md": [ "Application Developer" ],
         "windows-hardware/drivers/**/*.md": [ "Hardware Developer" ],

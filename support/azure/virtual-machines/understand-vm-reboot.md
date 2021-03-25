@@ -7,9 +7,7 @@ author: genlin
 manager: dcscontentpm
 editor: ''
 tags: ''
-
 ms.service: virtual-machines
-
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services

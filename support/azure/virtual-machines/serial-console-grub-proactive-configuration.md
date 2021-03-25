@@ -1,14 +1,14 @@
 ---
 title: Azure Serial Console proactive GRUB configuration| Microsoft Docs
 description: Configure GRUB across various distributions allowing single user and recovery mode access in Azure virtual machines.
-services: virtual-machines-linux
+services: virtual-machines
 documentationcenter: ''
 author: mimckitt
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm-linux

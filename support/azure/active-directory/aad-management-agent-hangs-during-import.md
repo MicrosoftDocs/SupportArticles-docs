@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: active-directory
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Azure AD Management Agent hangs during Full Import or Delta Import with error: System.Collections.Generic.KeyNotFoundException

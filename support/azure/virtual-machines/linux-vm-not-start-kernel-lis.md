@@ -3,10 +3,11 @@ title: A Linux VM does not start correctly with kernel 3.10.0-514.16 after an LI
 description: Describes that A Linux VM does not start correctly with kernel 3.10.0-514.16 after a Linux Integration Services (LIS) upgrade. Provides a workaround.
 ms.date: 11/26/2020
 ms.prod-support-area-path: 
-ms.service: linux-vms
 ms.author: genli
 author: genli
 ms.reviewer: delhan, craigw
+ms.service: virtual-machines
+ms.collection: linux
 ---
 # A Linux VM does not start correctly with kernel 3.10.0-514.16 after an LIS upgrade
 

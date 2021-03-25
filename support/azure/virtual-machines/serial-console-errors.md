@@ -7,7 +7,6 @@ author: asinn826
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
 ms.service: virtual-machines
 ms.devlang: na
 ms.topic: article
