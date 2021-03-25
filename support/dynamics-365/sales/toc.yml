@@ -621,6 +621,8 @@
       href: error-when-you-test-enable-a-mailbox.md
     - name: Attachments aren't tracked after Office 365 ATP is enabled
       href: attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
+    - name: Business unit is disabled when using App for Outlook
+      href: error-use-dynamics-365-app-outlook.md
     - name: Buttons such as Track and Set Regarding are missing
       href: buttons-such-as-track-and-set-regarding-are-missing.md
     - name: Can't access App for Outlook due to email address is not recognized
@@ -671,6 +673,8 @@
       href: email-fails-sent-received.md
     - name: Email fails to create with NoCorrelationMatch sync
       href: email-fails-to-create-with-nocorrelationmatch-error.md
+    - name: Email is saved in another mailbox when using App for Outlook
+      href: error-when-using-dynamics-365-app-outlook.md
     - name: Email message can't be sent because the mailbox is deactivated
       href: email-message-cannot-be-sent.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
@@ -719,12 +723,6 @@
       href: error-search-outlook-dynamics-365-app.md
     - name: Error when selecting the Test & Enable Mailbox button
       href: error-occurs-mailbox-record.md
-    - name: Error when using App for Outlook
-      href: error-when-using-365-app-outlook.md
-    - name: Error when using App for Outlook
-      href: error-use-dynamics-365-app-outlook.md
-    - name: Error when using App for Outlook
-      href: error-when-using-dynamics-365-app-outlook.md
     - name: Error when you access the CRM App for Outlook
       href: error-access-dynamics-crm-app-outlook.md
     - name: Error when you test and enable a mailbox
@@ -817,6 +815,8 @@
       href: outlook-has-not-been-configured-with-an-account-yet-error.md
     - name: Privilege error when using App for Outlook
       href: privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
+    - name: Profile is disabled when using App for Outlook
+      href: error-when-using-365-app-outlook.md
     - name: Records don't synchronize or are missing Track and Set Regarding buttons
       href: dynamics-crm-for-outlook-records-do-not-sync-or-missing-track-and-set-regarding.md
     - name: Ribbon buttons overlap the left navigation pane of the form
