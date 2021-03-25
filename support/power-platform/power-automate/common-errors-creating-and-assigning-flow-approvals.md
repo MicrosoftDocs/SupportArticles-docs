@@ -162,7 +162,7 @@ The approval title was null or empty, which is not supported.
 
 ### XrmApplyUserNotMemberOfSecurityGroup
 
-> Could not create a CDS system record representing user '447d6a60-1794-4f74-9ddb-397e41d86ba7'. Please ask a database administrator to add the user to the authorized security group.'.
+> Could not create a CDS system record representing user '\<User ID>'. Please ask a database administrator to add the user to the authorized security group.'.
 
 The CDS database for this environment is protected by a security group. An owner of the security group will need to add all approval creators, requestors, and recipients to the security group. The security group can be configured from the Power Platform Admin Center.
 
