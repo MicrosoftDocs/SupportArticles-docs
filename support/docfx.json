@@ -48,7 +48,9 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+
       "feedback_system": "None", 
+
       "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
       "searchScope": ["Troubleshoot"]
     },
@@ -95,7 +97,6 @@
       "ms.topic": {
         "**/*.md": "troubleshooting"
       },
-
       "ms.prod": {
         "biztalk/**/*.md": "biztalk-server",
         "dotnet/**/*.md": ".net",
@@ -137,7 +138,6 @@
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services"
       },
-
       "titleSuffix": {
         "biztalk/**/*.md": "BizTalk Server",
         "dotnet/**/*.md": ".NET",
@@ -193,10 +193,8 @@
         "system-center/**/*.md": [ "System Center" ],
       }
     },
-
     "template": [],
     "dest": "support1-docset",
     "markdownEngineName": "markdig"
-
   }
 }
