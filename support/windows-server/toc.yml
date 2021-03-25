@@ -2534,8 +2534,6 @@
     items:
     - name: Event ID 106
       href: ./virtualization/event-id-106-hyper-v-virtual-switch-bound-lbfo-team.md
-    - name: Get-VMNetworkAdapter command doesn't report IP addresses
-      href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
   - name: Hyper-V Replica
     items:
     - name: Events 18210 and 3041 when Hyper-V Replica is configured
@@ -2616,6 +2614,8 @@
       href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
   - name: Virtual machine state
     items:
+    - name: Get-VMNetworkAdapter command doesn't report IP addresses
+      href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: virtual machine shutdown actions don't run
       href: ./virtualization/vm-shutdown-actions-not-run.md
     - name: Virtual Machines enter the paused state
