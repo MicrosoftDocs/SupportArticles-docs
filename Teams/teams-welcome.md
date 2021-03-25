@@ -1,12 +1,12 @@
 ---
 title: Information about Teams known issues
 description: This article lists Microsoft Teams related issues.
-author: AmandaAZ
+author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.service: msteams
 ms.topic: article
-ms.author: v-weizhu
+ms.author: v-six
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -37,5 +37,5 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 
 - [Remote teaching and learning in Office 365 Education](https://support.microsoft.com/office/remote-teaching-and-learning-in-office-365-education-f651ccae-7b65-478b-8366-51bb884025c4)
 - [Microsoft Teams end user documentation](https://support.office.com/teams)
-- [Microsoft Teams administrator documentation](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
-- [Microsoft Teams training](https://docs.microsoft.com/MicrosoftTeams/training-microsoft-teams-landing-page)
+- [Microsoft Teams administrator documentation](/MicrosoftTeams/teams-overview)
+- [Microsoft Teams training](/MicrosoftTeams/training-microsoft-teams-landing-page)

@@ -32,6 +32,6 @@ We recommend that you use Teams in a browser instead of the desktop app.
 
 ## More information
 
-[What is Conditional Access?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+[What is Conditional Access?](/azure/active-directory/conditional-access/overview)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

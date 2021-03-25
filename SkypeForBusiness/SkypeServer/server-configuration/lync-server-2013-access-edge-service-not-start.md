@@ -99,7 +99,7 @@ After the CMS store replication has finished successfully, restart the Lync Serv
 
 For more information about how to configure the Lync Server 2013 Access Edge service, go to the following Microsoft TechNet websites:
 
-- [Set-CsAccessEdgeConfiguration](https://technet.microsoft.com/library/gg413017.aspx)
-- [Get-CsAccessEdgeConfiguration](https://technet.microsoft.com/library/gg398574.aspx)
+- [Set-CsAccessEdgeConfiguration](/powershell/module/skype/Set-CsAccessEdgeConfiguration)
+- [Get-CsAccessEdgeConfiguration](/powershell/module/skype/Get-CsAccessEdgeConfiguration)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

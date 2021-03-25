@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp;3054391
 
 ## Symptoms
 
-When you run the [Search-AdminAuditLog](https://technet.microsoft.com/library/ff459250%28v=exchg.150%29.aspx) or [Search-MailboxAuditLog](https://technet.microsoft.com/library/ff522360%28v=exchg.150%29.aspx) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results may not be returned as expected.
+When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results may not be returned as expected.
 
 This issue occurs in Microsoft Exchange Server 2013 and Exchange Server 2016.
 

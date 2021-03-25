@@ -1,7 +1,7 @@
 ---
 title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
 description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
-author: AmandaAZ
+author: simonxjx
 ms.author: luche
 ms.date: 2/26/2020
 manager: dcscontentpm
@@ -38,7 +38,7 @@ The following product IDs are supported by the Office Deployment Tool in Office 
 - AccessRuntimeRetail
 - LanguagePack
 
-For more information about using these product IDs with the Office Deployment Tool, see [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/deployoffice/configuration-options-for-the-office-2016-deployment-tool) (**Product element** section).
+For more information about using these product IDs with the Office Deployment Tool, see [Configuration options for the Office Deployment Tool](/deployoffice/configuration-options-for-the-office-2016-deployment-tool) (**Product element** section).
 
 > [!NOTE]
 > If you use the wrong product ID, you can't activate Office.

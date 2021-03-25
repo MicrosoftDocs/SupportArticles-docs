@@ -79,7 +79,7 @@ The SharePoint Online Public Websites feature is primarily used by a small perce
 On October 2, 2017, when Microsoft deletes the public site collection in SharePoint Online, customers will no longer have access to the content, images, pages or any other files that reside on their public website. Customers can, however, recover their content through the Recycle Bin. To recover files from the Recycle Bin, follow [these instructions](https://support.office.com/article/6df466b6-55f2-4898-8d6e-c0dff851a0be).
 
 > [!NOTE]
-> When you delete an item from a site recycle bin, that item automatically goes into the [second-stage recycle bin](https://support.office.com/article/5fa924ee-16d7-487b-9a0a-021b9062d14b) or site collection recycle bin, where it remains for approximately 30 days, after which it's completely purged from SharePoint.
+> When you delete an item from a site recycle bin, that item automatically goes into the [second-stage recycle bin](https://support.microsoft.com/office/manage-the-recycle-bin-of-a-sharepoint-site-8a6c2198-910e-42dc-9a9c-bc5bc4f327da) or site collection recycle bin, where it remains for approximately 30 days, after which it's completely purged from SharePoint.
 
 ### What does this mean for new Office 365 customers?
 

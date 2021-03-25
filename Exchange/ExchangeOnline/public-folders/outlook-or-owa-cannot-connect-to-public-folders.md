@@ -343,7 +343,7 @@ In Exchange Online
 
 ### What is the version of Exchange Server that's hosting the PFs
 
-For more information about Exchange Server build numbers and release dates, see [Exchange Server build numbers and release dates](/exchange/new-features/build-numbers-and-release-dates?view=exchserver-2019).
+For more information about Exchange Server build numbers and release dates, see [Exchange Server build numbers and release dates](/exchange/new-features/build-numbers-and-release-dates).
 
 - [Exchange 2010](#is-outlook-anywhere-enabled-on-the-server-that-hosts-the-pf-database)
 - [Exchange 2019, 2016, or 2013](#collect-logs-at-on-premises-exchange-server)
@@ -358,7 +358,7 @@ Alternatively, add X500 address manually by running this command on-premises:
 Set-RemoteMailbox -Identity "mailbox name" -EmailAddresses @{add="X500:replace with legacyexchangeDN value from the cloud object"}
 ```
 
-For more information about `Set-RemoteMailbox`, see this [article](https://docs.microsoft.com/powershell/module/exchange/set-remotemailbox?view=exchange-ps).
+For more information about `Set-RemoteMailbox`, see this [article](/powershell/module/exchange/set-remotemailboxs).
 
 **Does this resolve your issue?**
 

@@ -445,6 +445,8 @@
       href: ../outlook-on-the-web-issues/there-are-multiple-recipients-matching-the-identity-error.md
     - name: This calendar isn't available error when accessing calendar
       href: ../outlook-on-the-web-issues/this-calendar-not-available-error-when-accessing-calendar.md
+    - name: Time zone setting for shared mailboxes
+      href: ../outlook-on-the-web-issues/shared-mailboxes-time-zone-setting.md
     - name: You may have already signed in to Outlook Web App error
       href: ../outlook-on-the-web-issues/you-may-have-already-signed-in-to-outlook-web-app-error.md
   - name: Public Folders
@@ -488,7 +490,7 @@
     - name: Inline UUEncoded attachments are garbled or unreadable
       href: ../send-emails/inline-uuencoded-attachments-garbled-unreadable.md
     - name: Issues with OOF replies
-      href: ../send-emails/understand-troubleshoot-oof-replies.md
+      href: ../email-delivery/understand-troubleshoot-oof-replies.md
   - name: User and Shared Mailboxes
     items:
     - name: Can't access a shared mailbox using OWA

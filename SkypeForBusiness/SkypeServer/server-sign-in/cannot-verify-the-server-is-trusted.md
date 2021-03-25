@@ -71,7 +71,7 @@ To prevent display of the Trust Model dialog box, use the **Trusted Domain List 
 
    This setting specifies the list of domains to be trusted—for example: contoso.com, contoso.co.in.
 
-For more information about the Lync 2013 Trusted Domain List (TrustModelData) Group Policy setting, see [Configuring client bootstrapping policies](https://technet.microsoft.com/library/gg425941.aspx).
+For more information about the Lync 2013 Trusted Domain List (TrustModelData) Group Policy setting, see [Configuring client bootstrapping policies](/skypeforbusiness/deploy/deploy-clients/configure-client-bootstrapping-policies).
 
 For more information about the Lync 2013.admx (ADMX) and .adml (ADML) Administrative Templates, see [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization tool](https://www.microsoft.com/download/details.aspx?id=35554). 
 

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot account issues for federated users in Office 365, Azure, or Intune
 description: Describes how to troubleshoot single sign-on (SSO) user account issues in Office 365, Azure, or Microsoft Intune.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -85,7 +85,7 @@ To resolve this issue, use one or more of the following methods:
 
   To resolve this issue, remove the subdomain from the Office 365 portal. For more info about how to remove a domain, go to the following Microsoft website:
 
-   [Remove a domain](https://docs.microsoft.com/microsoft-365/admin/get-help-with-domains/remove-a-domain)
+   [Remove a domain](/microsoft-365/admin/get-help-with-domains/remove-a-domain)
 
   After the domain is removed, you have to re-create the domain.
 
@@ -98,11 +98,11 @@ To resolve this issue, use one or more of the following methods:
   1. Make a minor (arbitrary) change to the on-premises Active Directory user account.   
   2. Force directory synchronization. For more info about how to force synchronization, go to the following Microsoft website:
 
-     [Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories)
+     [Force directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_synchronizedirectories)
 
      For info about how to determine whether synchronization was successful, go to the following Microsoft website: 
 
-     [Verify directory synchronization](https://technet.microsoft.com/library/jj151797.aspx)
+     [Verify directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity)
 
      If minor changes are not synced to the Office 365 user account, a directory synchronization problem may cause this issue.
 

@@ -1,8 +1,8 @@
 ---
 title: Junk email settings aren't synchronized
 description: Describes an issue in which junk email message settings are not synchronized between Outlook 2013 and Outlook.com. This issue occurs when you use Outlook 2013 to connect to an Outlook.com account.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

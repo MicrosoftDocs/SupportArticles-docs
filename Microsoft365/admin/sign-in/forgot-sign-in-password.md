@@ -36,9 +36,9 @@ To fix this issue, do one of the following:
   - If you're using a Microsoft account, go to [https://account.live.com/ResetPassword.aspx](https://account.live.com/resetpassword.aspx).
 
   If the admin turned on the capability to let you to reset your own password, you will be able to reset your own password. Otherwise, the password reset form gives you the option to contact your admin.
-- If you're an admin and you want to enable password reset for your users, see [Quickstart: Self-service password reset](https://docs.microsoft.com/azure/active-directory/authentication/quickstart-sspr).
+- If you're an admin and you want to enable password reset for your users, see [Quickstart: Self-service password reset](/azure/active-directory/authentication/quickstart-sspr).
 - If you're an admin, you can try to reset your own password if you had already set up an alternate email address and a mobile phone number.
-  - For more info about how to reset the password for your company admin account in Azure or Intune, see [Quickstart: Self-service password reset](https://docs.microsoft.com/azure/active-directory/authentication/quickstart-sspr).
+  - For more info about how to reset the password for your company admin account in Azure or Intune, see [Quickstart: Self-service password reset](/azure/active-directory/authentication/quickstart-sspr).
 - If you're an admin and your company has more than one admin, ask another admin to reset your password.
 
 > [!NOTE]
@@ -47,6 +47,6 @@ To fix this issue, do one of the following:
 
 ## More information
 
-For more info about how to reset a user's password, see [Reset a user's password](https://msdn.microsoft.com/library/azure/hh967634.aspx).
+For more info about how to reset a user's password, see [Reset a user's password](/azure/active-directory/fundamentals/active-directory-users-reset-password-azure-portal).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

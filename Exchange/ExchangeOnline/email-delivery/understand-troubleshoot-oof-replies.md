@@ -33,7 +33,7 @@ Automatic replies can be configured as follows:
 
 - By using the automatic reply feature from within Outlook [as explained here](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67)
 - By using other clients, such as Outlook on the web (OWA)
-- By running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration))
+- By running a PowerShell command ([Set-MailboxAutoReplyConfiguration](/powershell/module/exchange/set-mailboxautoreplyconfiguration))
 
 Admins can set up OOF replies from the M365 Admin Portal on behalf of users.
 
@@ -41,7 +41,7 @@ If automatic replies are enabled, only one reply is sent to each sender even if 
 
 In addition to using the built-in OOF functionality in their client, people sometimes [use rules to create an Out of Office message](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403) while they are away.
 
-By design, Exchange Online Protection uses the [high risk delivery pool](https://docs.microsoft.com/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages) (HRDP) to send OOF replies. This is because OOF replies are lower-priority messages.
+By design, Exchange Online Protection uses the [high risk delivery pool](/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages) (HRDP) to send OOF replies. This is because OOF replies are lower-priority messages.
 
 ## Types of OOF rules
 
@@ -96,7 +96,7 @@ The following sections discuss some of the scenarios in which OOF replies are no
 
 If an OOF reply appears not to have been sent for all users in the tenant, a transport rule is usually to blame. Check all the transport rules that may apply to the affected mailbox by using step 2 of [this article](https://support.microsoft.com/help/2866165/senders-don-t-receive-out-of-office-notifications-from-an-office-365-u).
 
-If you suspect a delivery problem, run a [message trace](https://docs.microsoft.com/microsoft-365/security/office-365-security/message-trace-scc) from the Office 365 tenant. For OOF messages, the sender of the original message becomes the recipient during tracking. You should be able to determine whether the OOF reply has been triggered and sent to an external or internal recipient. The message trace will clearly indicate whether a transport rule is blocking the OOF response.
+If you suspect a delivery problem, run a [message trace](/microsoft-365/security/office-365-security/message-trace-scc) from the Office 365 tenant. For OOF messages, the sender of the original message becomes the recipient during tracking. You should be able to determine whether the OOF reply has been triggered and sent to an external or internal recipient. The message trace will clearly indicate whether a transport rule is blocking the OOF response.
 
 There is one scenario that is worth highlighting when it comes to transport rules blocking OOF replies. Let's assume that you moved the MX record to a third-party anti-spam program. You have created a transport rule to reject any email message that is sent from any IP address other than the third-party anti-spam program.
 
@@ -113,7 +113,7 @@ The transport rule will look something like this:
 Because OOF rules have a blank (<>) return path, the OOF rule unexpectedly matches the transport rule, and OOF responses get blocked.
 
 To fix this issue, change the "Match sender address in message" transport rule property to "Header or envelope" so that the checks will also be done against the **From**(also known as "Header From"), **Sender**, or **Reply-To** fields. For more information about mail flow rule conditions, see the "Senders" section of
-[this article](https://docs.microsoft.com/Exchange/policy-and-compliance/mail-flow-rules/conditions-and-exceptions).
+[this article](/Exchange/policy-and-compliance/mail-flow-rules/conditions-and-exceptions).
 
 :::image type="content" source="media/understand-troubleshoot-oof-replies/OOF04.png" alt-text="Screenshot 3 of OOF rule templates in MFCMapi.":::
 
@@ -125,7 +125,7 @@ For more information about how to resolve this issue, see [this article](https:/
 
 ### Forwarding SMTP address is enabled on the mailbox
 
-If the affected user mailbox has [SMTP forwarding](https://docs.microsoft.com/microsoft-365/admin/email/configure-email-forwarding?view=o365-worldwide#configure-email-forwarding&preserve-view=true) enabled, OOF replies won't be generated. This can be checked in any of the following locations:
+If the affected user mailbox has [SMTP forwarding](/microsoft-365/admin/email/configure-email-forwarding?preserve-view=true&view=o365-worldwide#configure-email-forwarding) enabled, OOF replies won't be generated. This can be checked in any of the following locations:
 
 - In the user mailbox settings in the client (such as OWA):
 
@@ -147,7 +147,7 @@ For information about how to resolve this issue, see [this article](https://supp
 
 ### OOF reply type that is set on remote domains
 
-You have to pay attention to which OOF reply type is set up on [remote domains](https://docs.microsoft.com/exchange/mail-flow-best-practices/remote-domains/manage-remote-domains) because this will affect the OOF reply. If the configuration of the OOF reply type is incorrect, an OOF reply may not be generated at all.
+You have to pay attention to which OOF reply type is set up on [remote domains](/exchange/mail-flow-best-practices/remote-domains/manage-remote-domains) because this will affect the OOF reply. If the configuration of the OOF reply type is incorrect, an OOF reply may not be generated at all.
 
 There are four OOF reply types:
 
@@ -156,7 +156,7 @@ There are four OOF reply types:
 - InternalLegacy
 - None
 
-For more information about these OOF types, see the **AllowedOOFType** entry in the "Parameters" section of [Set-RemoteDomain](https://docs.microsoft.com/powershell/module/exchange/set-remotedomain?view=exchange-ps#parameters&preserve-view=true).
+For more information about these OOF types, see the **AllowedOOFType** entry in the "Parameters" section of [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain?preserve-view=true&view=exchange-ps#parameters).
 
 You can check the OOF reply type from **Exchange Admin Center** > **Mail flow** > **Remote domains**.
 

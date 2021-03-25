@@ -1,8 +1,8 @@
 ---
 title: Progress bars not drawn for tasks that are in progress
 description: More details about the issue that task progress bars not working as expected in Gantt Chart view.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

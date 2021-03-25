@@ -47,7 +47,7 @@ This issue occurs because TLS 1.1 and TLS 1.0 are deprecated in Microsoft 365.
 To resolve this issue, enable TLS 1.2 on the on-premises server that sends and receives email. Here's how to enable TLS 1.2 by modifying the registry:
 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. As a preventive measure, [back up the registry for restoration](/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before you modify it.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. As a preventive measure, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before you modify it.
 
 1. Install the latest Windows and Exchange updates. This is because some Windows and Exchange versions require the latest updates for TLS 1.2 to be enabled.
 2. Locate each of the following registry subkeys:

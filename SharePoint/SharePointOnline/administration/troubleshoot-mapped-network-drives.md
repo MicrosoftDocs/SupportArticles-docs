@@ -122,6 +122,6 @@ When you browse to a SharePoint Online document library through a mapped network
 
 - For more info about ways to work with site library files in File Explorer, see [Ways to work with site library files in File Explorer](https://support.office.live.com/article/751148de-f579-42f9-bc8c-fcd80ccf0f53).
 
-- For more information about Office 365 URLs, see [URLs and IP address ranges for Office 365 operated by 21Vianet](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges-21vianet). 
+- For more information about Office 365 URLs, see [URLs and IP address ranges for Office 365 operated by 21Vianet](/office365/enterprise/urls-and-ip-address-ranges-21vianet). 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -28,7 +28,7 @@ This article discusses why you should not bypass spam filters in Microsoft Offic
 
 If you use these lists or options, consider the following guidelines:
 
-- We recommend that you do not use these features because they may override the verdict that is set by Office 365 spam filters. Instead, we suggest that you [report junk email messages to Microsoft](https://docs.microsoft.com/office365/SecurityCompliance/report-junk-email-messages-to-microsoft) for analysis to help reduce the number and effect of future junk email messages.
+- We recommend that you do not use these features because they may override the verdict that is set by Office 365 spam filters. Instead, we suggest that you [report junk email messages to Microsoft](/office365/SecurityCompliance/report-junk-email-messages-to-microsoft) for analysis to help reduce the number and effect of future junk email messages.
 - If you have to set bypassing, you should do this carefully because Microsoft will honor your configuration request and potentially let harmful messages pass through. Additionally, bypassing should be done only on a temporary basis. This is because spam filters can evolve, and verdicts could improve over time.
 - It is important that you take the following precautions:
 
@@ -36,4 +36,4 @@ If you use these lists or options, consider the following guidelines:
   - Never put common domains, such as microsoft.com and office.com, onto the Allow and blocklists.
   - Do not keep domains on the lists permanently unless you disagree with the verdict of Microsoft.
 
-For more information, see the various methods available to create [safe sender](https://docs.microsoft.com/office365/securitycompliance/create-safe-sender-lists-in-office-365) and [block sender](https://docs.microsoft.com/office365/securitycompliance/create-block-sender-lists-in-office-365) lists and when to use them.
+For more information, see the various methods available to create [safe sender](/office365/securitycompliance/create-safe-sender-lists-in-office-365) and [block sender](/office365/securitycompliance/create-block-sender-lists-in-office-365) lists and when to use them.

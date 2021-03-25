@@ -49,7 +49,7 @@ To do this, follow these steps:
 
     For more information about how to configure an HTTP-based proxy PAC file, go to the following Microsoft website: [Automatic Detection and Configuration of Browser Settings](https://technet.microsoft.com/library/dd361887.aspx)
 
-    For more information about how to deploy WPAD, go to the following Microsoft website: [Configuring Web proxy clients to automatically detect a Forefront TMG server](https://technet.microsoft.com/library/cc995139.aspx)   
+    For more information about how to deploy WPAD, go to the following Microsoft website: [Configuring Web proxy clients to automatically detect a Forefront TMG server](/previous-versions/tn-archive/cc995139(v=technet.10))   
 5. Click **OK**, and then click **OK** again.   
 
 ### Method 2 (for admins): Create an application entry for Msoidsvc.exe in TMG
@@ -82,6 +82,6 @@ For example, this issue may occur in a scenario where all the following conditio
     > [!NOTE]
     > The only location that the Lync and Skype for Business clients use to detect network proxy configuration information is in the **LAN settings** option on the **Connections** tab in **Internet options**.   
 
-For more information about the WinHTTP limitations of supporting a file-based proxy, see [WinHTTP AutoProxy Support](https://docs.microsoft.com/windows/win32/winhttp/winhttp-autoproxy-support).
+For more information about the WinHTTP limitations of supporting a file-based proxy, see [WinHTTP AutoProxy Support](/windows/win32/winhttp/winhttp-autoproxy-support).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

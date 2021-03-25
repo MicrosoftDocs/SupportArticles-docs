@@ -81,6 +81,6 @@ To do this, rerun the AD FS Federation Server Proxy Configuration Wizard from th
 
 For more info about how to expose the AD FS service to the Internet by using an AD FS proxy server, go to the following Microsoft website:
 
-[Plan for and deploy AD FS 2.0 for use with single sign-on](https://docs.microsoft.com/previous-versions//ff652539(v=technet.10)#bk_deployfsp)
+[Plan for and deploy AD FS 2.0 for use with single sign-on](/previous-versions//ff652539(v=technet.10)#bk_deployfsp)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,8 +1,8 @@
 ---
 title: There is problem with website security certificate error when federated user signs out
 description: Describes an issue in which a federated user receives an error message when the user signs out of Office 365, Microsoft Intune, or Azure. Provides a resolution.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

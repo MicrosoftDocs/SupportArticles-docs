@@ -36,7 +36,7 @@ To create a room list and to add existing rooms to the room list, follow these s
 
 1. Do one of the following:  
    - In on-premises Exchange Server or in an Exchange hybrid environment, open the Exchange Management Shell.
-   - In Exchange Online, connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+   - In Exchange Online, connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 1. Run the following command to create a room list:
 
@@ -50,6 +50,6 @@ To create a room list and to add existing rooms to the room list, follow these s
     Add-DistributionGroupMember <RoomListName> -Member <RoomMailbox>
     ```
 
-For more information, see [Create a room list distribution group](https://technet.microsoft.com/library/ee633471%28v=exchg.141%29.aspx) and [Create and manage room mailboxes](https://technet.microsoft.com/library/jj215781%28v=exchg.160%29.aspx).
+For more information, see [Create a room list distribution group](/previous-versions/office/exchange-server-2010/ee633471(v=exchg.141)) and [Create and manage room mailboxes](/Exchange/recipients/room-mailboxes).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

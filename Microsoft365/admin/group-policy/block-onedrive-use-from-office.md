@@ -81,5 +81,4 @@ To block the use of OneDrive from within Windows, see [How to block OneDrive.exe
 
 To configure the update settings for Microsoft 365 Apps for enterprise, see the following TechNet resource:
 
-[Configure update settings for Microsoft 365 Apps for enterprise](https://technet.microsoft.com/library/dn761708.aspx)
-
+[Configure update settings for Microsoft 365 Apps for enterprise](/deployoffice/configure-update-settings-microsoft-365-apps)
