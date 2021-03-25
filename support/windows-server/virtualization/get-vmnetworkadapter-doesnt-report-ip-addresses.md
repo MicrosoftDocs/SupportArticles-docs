@@ -1,6 +1,6 @@
 ---
-title: Get-VMNetworkAdapter command does not report IP Addresses
-description: 
+title: Get-VMNetworkAdapter command does not report IP addresses
+description: Describes a problem in which the output of the `Get-VMNetworkAdapter` command doesn't contain the IP addresses that are associated with the specified adapter.
 ms.date: 04/06/2021
 author: Teresa-Motiv
 ms.author: v-tea
@@ -15,9 +15,9 @@ ms.technology: virtualization
 keywords: 
 ---
 
-# `Get-VMNetworkAdapter` command doesn't report IP Addresses
+# `Get-VMNetworkAdapter` command doesn't report IP addresses
 
-This article 
+This article describes a problem in which the output of the `Get-VMNetworkAdapter` command doesn't contain the IP addresses that are associated with the specified adapter.
 
 _Applies to:_ &nbsp; Windows Server (all versions)
 
@@ -37,9 +37,9 @@ Name            IsManagementOs VMName  SwitchName MacAddress   Status IPAddresse
 Network Adapter False          CLU3VM1 Public     00155D081704 {Ok}   {}
 ```
 
-Instead of containing the expected data, the **IPAddress** column of the table is empty.
+Instead of containing the expected data, the **:::no-loc text="IPAddress":::** column of the table is empty.
 
-To troubleshoot this issue, first verify that the the Key-Value Pair Exchange Integration Service is enabled. At the command prompt, run the following command:
+To troubleshoot this issue, first verify that the Key-Value Pair Exchange Integration Service is enabled. At the command prompt, run the following command:
 
 ```powershell
 PS C:\> (Get-VM -VMName clu3vm1).VMIntegrationService
@@ -56,7 +56,7 @@ CLU3VM1 Time Synchronization    True    OK
 CLU3VM1 VSS                     True    OK
 ```
 
-If the Key-Value Pair Exchange service is not enabled, enable it and then run `Get-VMNetworkAdapter` again. If the IP Address information is still missing and the service is enabled, the `NetTCPIP` WMI provider is probably missing from the virtual machine. To verify this, at the command prompt, run the `Get-WmiObject` command on the `Root\\Standardcimv2` namespace, as follows:
+If the Key-Value Pair Exchange service isn't enabled, enable it and then run `Get-VMNetworkAdapter` again. If the IP Address information is still missing and the service is enabled, the `NetTCPIP` WMI provider is probably missing from the virtual machine. At the command prompt, run the `Get-WmiObject` command on the `Root\\Standardcimv2` namespace, as follows:
 
 ```powershell
 PS C:\> Get-WmiObject -Namespace "root\standardcimv2" -Class __Win32Provider | select __NAMESPACE, Name
@@ -102,7 +102,7 @@ At line:1 char:1
 
 ## Cause
 
-The [`NetTCPIP`](powershell/module/nettcpip/?view=windowsserver2019-ps) WMI provider is not installed in the guest operating system (the virtual machine).
+The [`NetTCPIP`](https://docs.microsoft.com/powershell/module/nettcpip/?view=windowsserver2019-ps) WMI provider isn't installed in the guest operating system (the virtual machine).
 
 ## Resolution
 
