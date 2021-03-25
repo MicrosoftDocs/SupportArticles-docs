@@ -1,7 +1,7 @@
 ---
 title: Windows Update hangs and updates are uninstalled
 description: Discusses that Windows Update hangs and newly installed updates are uninstalled after a system restart in Windows. Provides a workaround.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
