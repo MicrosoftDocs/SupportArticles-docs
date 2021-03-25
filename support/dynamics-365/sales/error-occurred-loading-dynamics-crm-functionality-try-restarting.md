@@ -12,7 +12,9 @@ This article provides resolutions for the issues that may occur when you start t
 _Applies to:_ &nbsp; Microsoft CRM client for Microsoft Office Outlook  
 _Original KB number:_ &nbsp; 911384
 
-## Symptoms 1
+## Symptoms
+
+### Symptoms 1
 
 When you open the Microsoft Dynamics CRM client for Microsoft Office Outlook, you receive the following error message:
 
@@ -36,7 +38,7 @@ Error message 3
 
 > The description for Event ID ( 5944 ) in Source ( MSCRMAddin ) cannot be found. The local computer may not have the necessary registry information or message DLL files to display messages from a remote computer. You may be able to use the /AUXSOURCE= flag to retrieve this description; see Help and Support for details. The following information is part of the event: 80004005, , CAddin::HrInitializeUI, 137.
 
-## Symptoms 2
+### Symptoms 2
 
 When you use Windows Vista with the Microsoft Dynamics CRM for Outlook and when you enable platform tracing, you receive an error message that resembles the following:
 
@@ -47,7 +49,7 @@ System.Activator.CreateInstance(Type type, Boolean nonPublic) at
 Microsoft.Crm.Outlook.Diagnostics.ComponentObjectModelDiagnosticCheck.Execute(BackgroundWorker backgroundWorker) --- End of inner exception stack trace --- at  
 Microsoft.Crm.Outlook.Diagnostics.ComponentObjectModelDiagnosticCheck.Execute(BackgroundWorker backgroundWorker) at Microsoft.Crm.Outlook.Diagnostics.DiagnosticCheck.DeepExecute(BackgroundWorker backgroundWorker)
 
-## Symptoms 3
+### Symptoms 3
 
 When you try to run the Microsoft Dynamics CRM client for Outlook, you cannot view the Microsoft Dynamics CRM folder structure. Additionally, you receive the following error message:
 
@@ -60,13 +62,13 @@ The following error messages are logged in the event log:
 > [!NOTE]
 > In this error message, the Date and Time placeholder represents the actual date and the actual time. For example, the actual date and the actual time could be "2007-10-19 17:53:26.138."
 
-## Symptoms 4
+### Symptoms 4
 
 When you start the Microsoft Dynamics CRM client for Outlook, you receive the following error message:
 
 > An error occurred loading Microsoft CRM functionality, try restarting Outlook. Additionally, Error event 80072f19 is referenced in the Application log: Event: 16941 A problem occurred initializing the initialization progress toolbar. Restart Microsoft CRM and try again. HR=0x80072f19. Context=. Function=CAddin::HrActivateAddin. Line=322.
 
-## Symptoms 5
+### Symptoms 5
 
 When you try to start Microsoft Office Outlook on a computer that has the Microsoft Dynamics CRM client for Outlook installed, you receive the following error message:
 
@@ -94,27 +96,31 @@ Description:
 >
 > The Microsoft CRM Outlook add-in could not be initialized correctly. Restart Microsoft Outlook and try again. HR=0x80070057. Context=. Function=CAddin::OnConnection. Line=196.
 
-## Cause 1
+## Cause
+
+### Cause 1
 
 This problem occurs because the role that is assigned to the user account does not have Read access to the Saved View entity in Microsoft Dynamics CRM. See Resolution 1.
 
-## Cause 2
+### Cause 2
 
 The Disable Folder Home Page configuration is enabled through Group Policy. The Disable Folder Home Page configuration is a Microsoft Office 2003 Administrative Template (OUTLK11.adm) configuration. If this setting is enabled, Office 2003 cannot load the Microsoft Dynamics CRM folder structure. See Resolution 2.
 
-## Cause 3
+### Cause 3
 
 This problem occurs if IIS is missing the mappings for the .srf extensions that point to the CRMisapi.dll file. See Resolution 3.
 
-## Cause 4
+### Cause 4
 
 This problem occurs because the check for server certificate revocation is enabled. See Resolution 4.
 
-## Cause 5
+### Cause 5
 
 This problem occurs because the Outlook.exe.config file exists in the Microsoft Office installation folder. This file is used in troubleshooting instances for the Microsoft Outlook CRM client for Outlook so that Outlook can use a specific version of the Microsoft .NET Framework. See Resolution 5.
 
-## Resolution 1
+## Resolution
+
+### Resolution 1
 
 To correctly start the Microsoft Dynamics CRM client for Outlook, the role that is assigned to the user account must have Read access to the Saved View entity. To change the user's access, follow these steps:
 
@@ -122,7 +128,7 @@ To correctly start the Microsoft Dynamics CRM client for Outlook, the role that 
 2. Select **Settings**, select **Settings**, select **Business Unit Settings**, select **Users**, and then double-click the user to open the user.
 3. Select **Roles**, double-click the role to open the role, select the **Core Records** tab, and then select **Read** access for the **Saved View** entity.
 
-## Resolution 2
+### Resolution 2
 
 To resolve this problem, change the setting of the Disable Folder Home Page configuration to **disabled** status. To do this, follow these steps for Outlook 2003:
 
@@ -144,7 +150,7 @@ Follow these steps for Outlook 2007:
 5. Exit **Group Policy Object Editor**.
 6. Reboot the affected client computer.
 
-## Resolution 3
+### Resolution 3
 
 To resolve this problem, add the .srf mapping to the Microsoft Dynamics CRM Web site. To do this, follow these steps:
 
@@ -159,7 +165,7 @@ To resolve this problem, add the .srf mapping to the Microsoft Dynamics CRM Web 
 8. Select the **Script engine** check box and the **Verify that file exists** check box, and then select **OK**.
 9. Reset IIS. To do this, select **Start**, select **Run**, type *iisreset* in the **Open** box, and then select **OK**.
 
-## Resolution 4
+### Resolution 4
 
 To resolve this problem, follow these steps:
 
@@ -167,6 +173,6 @@ To resolve this problem, follow these steps:
 2. Select the **Advanced** tab, and then clear the **Check for server certificate revocation** (requires restart) check box.
 3. Restart Outlook.
 
-## Resolution 5
+### Resolution 5
 
 To resolve this problem, remove or rename the Outlook.exe.config file, and then restart Outlook.

@@ -61,7 +61,7 @@ at Microsoft.Crm.Application.Platform.ServiceCommands.PlatformCommand.XrmExecute
 
 If the user is a member of a team that only has user level Read access to the Mailbox entity, and they don't have a security role assigned directly to their user record with user level Read access to the Mailbox entity, the log file contains the following error with the Owner ID and Calling User reference matching your SystemUserId:
 
-> 17:16:47|  Error| Exception : SecLib::AccessCheckEx failed. Returned hr = -2147187962, ObjectID: \<ID>, OwnerId: \<ID>,  OwnerIdType: 8 and CallingUser: \<ID>. ObjectTypeCode: 9606, objectBusinessUnitId: 8bce1ea5-1e75-e411-80cf-c4346bac89f4, AccessRights: ReadAccess  
+> 17:16:47|  Error| Exception : SecLib::AccessCheckEx failed. Returned hr = -2147187962, ObjectID: \<ID>, OwnerId: \<ID>,  OwnerIdType: 8 and CallingUser: \<ID>. ObjectTypeCode: 9606, objectBusinessUnitId: \<ID>, AccessRights: ReadAccess  
 Server stack trace:  
    at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)  
    at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)  

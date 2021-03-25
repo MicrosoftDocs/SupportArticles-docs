@@ -25,7 +25,7 @@ If the Microsoft Dynamics CRM platform trace is enabled, the platform trace incl
 > \--------------------------------------------------------------------------------------------------------  
 > Error: Server was unable to process request.  
 > Error Number: 0x80040220  
-> Error Message: SecLib::CrmCheckPrivilege failed. Returned hr = -2147220960 on UserId: e65023ae-54d1-da11-8e39-00145e3d5192 and PrivilegeId: a8ecac53-09e8-4a13-b598-8d8c87bc3d33
+> Error Message: SecLib::CrmCheckPrivilege failed. Returned hr = -2147220960 on UserId: \<ID> and PrivilegeId: \<ID>
 
 > [!NOTE]
 > In this example information, the UserId value and the PrivilegeId value are placeholders for the actual values.
