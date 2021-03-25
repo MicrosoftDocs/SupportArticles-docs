@@ -715,10 +715,6 @@
       href: error-when-creating-an-incoming-email.md
     - name: Error when Dynamics Connector plugin executes
       href: error-when-connector-plugin-executes.md
-    - name: Error when installing App for Outlook
-      href: error-incomingemailrejected-install-dynamics-365-app-outlook.md
-    - name: Error when installing App for Outlook
-      href: error-install-dynamics-365-app-outlook.md
     - name: Error when searching App for Outlook
       href: error-search-outlook-dynamics-365-app.md
     - name: Error when selecting the Test & Enable Mailbox button
@@ -763,6 +759,10 @@
       href: http-server-returned-forbidden-exception.md
     - name: Http server returned ServiceUnavailable exception warning level message
       href: http-server-returned-serviceunavailable.md
+    - name: IncomingEmailRejected error when installing App for Outlook
+      href: error-incomingemailrejected-install-dynamics-365-app-outlook.md
+    - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
+      href: error-install-dynamics-365-app-outlook.md
     - name: IncomingMailboxInternalCrmError
       href: incomingmailboxinternalcrmerror.md
     - name: Installation can't proceed
