@@ -48,7 +48,7 @@ If you're still coming across issues, connect CRM for Outlook to your CRM Online
 
 The log file contains the following error with the Principal user reference matching your SystemUserId:
 
-> 09:17:01|  Error| Exception : Principal user (Id=\<ID>, type=8) is missing prvReadMailbox privilege (Id=8e17de3a-5a69-479c-9535-1f7be75b2987)  
+> 09:17:01|  Error| Exception : Principal user (Id=\<ID>, type=8) is missing prvReadMailbox privilege (Id=\<ID>)  
 at Microsoft.Crm.Application.Platform.ServiceCommands.PlatformCommand.XrmExecuteInternal()  
    at Microsoft.Crm.Application.Platform.ServiceCommands.RetrieveCommand.Execute()  
    at Microsoft.Crm.Caching.MailboxWebServiceCacheLoader.LoadCacheData(Guid key, IOrganizationContext context)  

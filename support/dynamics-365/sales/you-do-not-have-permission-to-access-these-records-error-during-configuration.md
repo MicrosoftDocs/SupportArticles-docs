@@ -20,7 +20,7 @@ When you attempt to connect Microsoft Dynamics CRM for Microsoft Office Outlook,
 
 If you select **Details**, you see the following more details:
 
-> Principal user (Id=\<GUID>, type=8) is missing prvWriteUserSettings privilege (Id=588725dd-c878-41c5-a4c3-5efc93cd3ffd) at Microsoft.Crm.Application.Commands.ApplicationCommand.UpdateUserSettingsLanguage(String propertyName, Int32 oldLcid, Int32 lcid, IOrganizationContextEx context, Boolean allowThrowingCrmException)  
+> Principal user (Id=\<GUID>, type=8) is missing prvWriteUserSettings privilege (Id=\<ID>) at Microsoft.Crm.Application.Commands.ApplicationCommand.UpdateUserSettingsLanguage(String propertyName, Int32 oldLcid, Int32 lcid, IOrganizationContextEx context, Boolean allowThrowingCrmException)  
  at Microsoft.Crm.Application.Commands.ApplicationCommand.UpdateUserSettingsUICulture(Int32 lcid, IOrganizationContextEx context, Boolean allowThrowingCrmException)  
  at Microsoft.Crm.Application.Outlook.Config.OutlookConfigurator.InitializeMapiStoreForFirstTime()  
  at Microsoft.Crm.Application.Outlook.Config.OutlookConfigurator.Configure(IProgressEventHandler progressEventHandler)  

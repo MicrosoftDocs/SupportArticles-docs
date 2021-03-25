@@ -30,4 +30,4 @@ Sign into Microsoft Dynamics CRM as a user with the System Administrator role. L
 
 If you capture [How to enable tracing for the Microsoft Dynamics CRM for Outlook client](https://support.microsoft.com/help/2862031), the following information is logged:
 
-> Principal user (Id={GUID}, type=8) is missing prvReadQueue privilege (Id=b140e729-dfeb-4ba1-a33f-39ff830bac90)
+> Principal user (Id={GUID}, type=8) is missing prvReadQueue privilege (Id=\<ID>)

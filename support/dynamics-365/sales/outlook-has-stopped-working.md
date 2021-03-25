@@ -43,7 +43,7 @@ Faulting module name: System.DirectoryServices.AccountManagement.ni.dll, version
 > Faulting process id: 0xf40  
 > Faulting application start time: 0x01ce1388bca5f53f  
 > Faulting application path: C:\Program Files (x86)\Microsoft Office\Office14\OUTLOOK.EXE  
-> Faulting module path: C:\Windows\assembly\NativeImages_v4.0.30319_32\System.DirectorySer#\46a7f51ef1a9d917598b96f7a758a459\System.DirectoryServices.AccountManagement.ni.dll  
+> Faulting module path: C:\Windows\assembly\NativeImages_v4.0.30319_32\System.DirectorySer#\\\<ID>\System.DirectoryServices.AccountManagement.ni.dll  
 > Report Id: \<ID>
 
 ## Cause
