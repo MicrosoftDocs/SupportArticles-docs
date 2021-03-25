@@ -1081,7 +1081,7 @@
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Windows 7 Extended Security Updates (ESU)
-    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
+    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.yml
   - name: Windows 7 ESU offers for E5 customers
     href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
   - name: Troubleshoot issues in ESU
