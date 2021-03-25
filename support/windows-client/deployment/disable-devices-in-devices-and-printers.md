@@ -1,7 +1,7 @@
 ---
 title: Disable Devices in Devices and Printers
 description: Describes how to hide or disable **Devices** in **Devices and Printers**.
- ms.date: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Create a user-defined service
 description: Describes how to create a Windows NT user-defined service.
- ms.date: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm

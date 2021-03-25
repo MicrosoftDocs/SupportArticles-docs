@@ -1,7 +1,7 @@
 ---
 title: Customize default local user profile
 description: Describes how to customize a default user profile or a mandatory user profile in Windows 7.
- ms.date: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm

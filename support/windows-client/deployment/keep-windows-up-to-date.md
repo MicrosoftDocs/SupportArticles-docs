@@ -1,7 +1,7 @@
 ---
 title: How to keep Windows up to date
 description: This article introduces solutions for keeping the latest updates on Windows computers.
- ms.date: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
