@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: windows-server-deployment
+ms.technology: windows-server-deployment 
 ---
 # Windows Server support and installation instructions for AMD Rome processors
 
