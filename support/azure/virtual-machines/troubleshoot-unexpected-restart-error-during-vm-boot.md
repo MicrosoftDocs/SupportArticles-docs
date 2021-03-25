@@ -1,14 +1,14 @@
 ---
 title: OS start-up – Computer restarted unexpectedly or encountered an unexpected error
 description: This article provides steps to resolve issues where the VM experiences an unexpected restart or error while installing Windows.
-services: virtual-machines-windows, azure-resource-manager
+services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: v-miegge
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting

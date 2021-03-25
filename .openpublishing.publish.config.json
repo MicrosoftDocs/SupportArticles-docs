@@ -16,9 +16,14 @@
     }
   ],
   "notification_subscribers": [
-    "genemi@microsoft.com"
+    "genemi@microsoft.com",
+    " ramakoni@microsoft.com"
   ],
-  "sync_notification_subscribers": [],
+  "sync_notification_subscribers": [
+    "ramakoni@microsoft.com",
+    " kaushik.ainapure@microsoft.com",
+    " Lin.Gen@microsoft.com"
+  ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/SupportArticles-docs",
   "git_repository_branch_open_to_public_contributors": "main",

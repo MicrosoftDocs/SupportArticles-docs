@@ -16,31 +16,34 @@ If the Microsoft SQL Server service can’t find the path that's configured to c
 
 - By using the Services applet:
 
-  > `Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.`  
-  > `Error 1067: The process terminated unexpectedly.`
+  > Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.  
+  > Error 1067: The process terminated unexpectedly.
 
 - By using a command prompt:
 
     > The SQL Server (MSSQLSERVER) service is starting.  
     > The SQL Server (MSSQLSERVER) service could not be started.  
-    > `A service specific error occurred: 13.`  
-    > `More help is available by typing NET HELPMSG 3523.`
+    > A service specific error occurred: 13.  
+    > More help is available by typing NET HELPMSG 3523.
 
 ## Resolution
 
 1. Check the Application log, and verify that you see an error message entry that resembles the following:
 
-    > `Log Name:      Application`  
-    > `Source:        MSSQLSERVER`  
-    > `Date:          <Datetime>`  
-    > `Event ID:      17058`  
-    > `Task Category: Server`  
-    > `Level:         Error`  
-    > `Keywords:      Classic`  
-    > `User:          N/A`  
-    > `Computer:      <Server name>`  
-    > `Description:  
-    initerrlog: Could not open error log file 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVR\MSSQL\Log\ERRORLOG'. Operating system error = 3(The system cannot find the path specified.).`  
+    ```output
+    Log Name:      Application  
+    Source:        MSSQLSERVER  
+    Date:          <Datetime>  
+    Event ID:      17058  
+    Task Category: Server  
+    Level:         Error  
+    Keywords:      Classic  
+    User:          N/A  
+    Computer:      <Server name>  
+    Description:  
+    initerrlog: Could not open error log file 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVR\MSSQL\Log\ERRORLOG'. 
+    Operating system error = 3(The system cannot find the path specified.).  
+    ```
 
 2. Verify the path that's set for the ErrorLog file by using SQL Server Configuration Manager.
 
@@ -61,7 +64,7 @@ If the Microsoft SQL Server service can’t find the path that's configured to c
    C:\>dir  "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVR\MSSQL\Log"
    ```
 
-   > `The system cannot find the path specified.`
+   > The system cannot find the path specified.
 
    Here's a correct command:
 

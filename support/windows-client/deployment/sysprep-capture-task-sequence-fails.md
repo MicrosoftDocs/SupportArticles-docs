@@ -1,7 +1,7 @@
 ---
 title: Sysprep and capture task sequence fails
 description: Provides a workaround for an issue where the Sysprep and Capture task sequence fails when it tries to capture Windows images.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
 ms.technology: windows-client-deployment
 ---
-# Sysprep and Capture task sequence fails when it tries to capture Windows 8 or Windows 8.1 images
+# Sysprep and Capture task sequence fails when it tries to capture Windows images
 
 This article provides a workaround for an issue where the Sysprep and Capture task sequence fails when it tries to capture Windows images.
 
@@ -27,7 +27,7 @@ The issue affects the Sysprep and captures TS in the following products:
 - Microsoft Deployment 2012 Update 1
 - Microsoft Deployment Toolkit 2013
 
-The Sysprep and Capture task sequence fails when it tries to capture a Windows 8 or Windows 8.1 image that was installed from a media. Additionally, you may receive the following errors:
+The Sysprep and Capture task sequence fails when it tries to capture a Windows image that was installed from a media. Additionally, you may receive the following errors:
 
 > Deployment Summary
 >
@@ -85,6 +85,6 @@ End if
 
 ## More information
 
-This issue doesn't occur if you capture a Windows 8 or Windows 8.1 image that was originally deployed by using MDT 2012 Update 1. This is because when Windows 8 or Windows 8.1 is deployed by using MDT, a System Reserved partition is created that has a size of 499 megabytes (MB). There is enough free space in the System Reserved partition to apply the WinPE image that is required for the capture.
+This issue doesn't occur if you capture a Windows image that was originally deployed by using MDT 2012 Update 1. This is because when Windows is deployed by using MDT, a System Reserved partition is created that has a size of 499 megabytes (MB). There is enough free space in the System Reserved partition to apply the WinPE image that is required for the capture.
 
-If the Windows 8 or Windows 8.1 image that you are trying to capture with the Sysprep and Capture task sequence was originally deployed from a Windows 8 or Windows 8.1 media, the System Reserved partition that is created has a size of 350 MB. And because it already contains the WinRE image, it does not have enough free space for MDT to apply the WinPE image. In this case, the LTIApply script automatically selects the System Partition to apply the WinPE image. As part of this process, the LTIApply script changes ownership on the bootmgr file and the boot folder on the System Partition. The problem occurs because the LTIApply script doesn't check for the existence of the boot folder on the System Partition before it runs the `takeown.exe` command to change ownership.
+If the Windows image that you are trying to capture with the Sysprep and Capture task sequence was originally deployed from a Windows media, the System Reserved partition that is created has a size of 350 MB. And because it already contains the WinRE image, it does not have enough free space for MDT to apply the WinPE image. In this case, the LTIApply script automatically selects the System Partition to apply the WinPE image. As part of this process, the LTIApply script changes ownership on the bootmgr file and the boot folder on the System Partition. The problem occurs because the LTIApply script doesn't check for the existence of the boot folder on the System Partition before it runs the `takeown.exe` command to change ownership.

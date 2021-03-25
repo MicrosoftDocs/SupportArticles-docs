@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
 ms.technology: networking
 ---
-# IP address and default gateway settings are assigned incorrectly in Windows Vista, in Windows Server 2008, in Windows 7, and in Windows Server 2008 R2
+# IP address and default gateway settings are assigned incorrectly in Windows
 
 This article provides a workaround for an issue where IP address and default gateway settings are assigned incorrectly.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2473489
 
 ## Symptoms
 
-On a computer that is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, you may experience one of the following issues:
+On a Windows computer, you may experience one of the following issues:
 
 - IP address and default gateway settings are assigned incorrectly.
 - After you configure additional IP addresses, the IP addresses are displayed incorrectly when you run the `ipconfig` command.

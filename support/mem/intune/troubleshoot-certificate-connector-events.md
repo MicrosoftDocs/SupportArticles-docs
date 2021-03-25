@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot the Microsoft Intune certificate connector and event IDs  | Microsoft Docs
+title: Troubleshoot the Microsoft Intune certificate connector and event IDs
 description:  Troubleshoot the Microsoft Intune certificate connector by reviewing Event IDs and descriptions, and review diagnostic codes for the Intune connector service.
 ms.date: 05/01/2019
 ms.reviewer: lacranda
@@ -54,4 +54,4 @@ Starting with version 6.1806.x.x, the Intune Connector Service logs events in th
 
 ## Next steps
 
-For additional assistance, use the [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](troubleshoot-scep-certificate-profiles.md) guide.
+For further assistance, use the [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](troubleshoot-scep-certificate-profiles.md) guide.

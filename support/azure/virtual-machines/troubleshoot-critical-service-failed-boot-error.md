@@ -1,14 +1,13 @@
 ---
 title: CRITICAL SERVICE FAILED when booting an Azure VM | Microsoft Docs
 description: Learn how to troubleshoot the "0x0000005A-CRITICAL SERVICE FAILED" error that occurs when booting | Microsoft Docs
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
@@ -60,7 +59,7 @@ To enable dump logs and Serial Console, run the following script.
     In this script, we assume that the drive letter that's assigned to the attached OS disk is F. You should replace it with the appropriate value for your VM.
 
     ```powershell
-    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM.hiv
+    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
     REM Enable Serial Console
     bcdedit /store F:\boot\bcd /set {bootmgr} displaybootmenu yes
