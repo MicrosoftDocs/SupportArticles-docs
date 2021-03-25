@@ -1,7 +1,7 @@
 ---
 title: Can't turn off a computer from Audit mode
 description: Discusses that a local administrator account is disabled when you turn off a computer by using the Start menu in Audit mode.
-ms.data: 09/08/2020
+ ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm

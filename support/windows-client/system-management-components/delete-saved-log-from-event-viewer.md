@@ -1,7 +1,7 @@
 ---
 title: Delete saved logs from Event Viewer
 description: Describes how to delete files under Saved Logs from the Event Viewer.
-ms.data: 09/08/2020
+ ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
