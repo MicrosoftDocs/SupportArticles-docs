@@ -324,13 +324,23 @@ The table below maps common symptoms to their probable causes.
 The `wait_type`, `open_transaction_count`, and `status` columns refer to information returned by [sys.dm_exec_request](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql), other columns may be returned by [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql). The "Resolves?" column indicates whether or not the blocking will resolve on its own, or whether the session should be killed via the `KILL` command. For more information, see [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql).
 
 | Scenario | Wait_type | Open_Tran | Status | Resolves? | Other Symptoms |  
-|:-|:-|:-|:-|:-|:-|   
+|-|-|-|-|-|-|   
 | 1 | NOT NULL | >= 0 | runnable | Yes, when query finishes. | In `sys.dm_exec_sessions`, `reads`, ``cpu_time`, and/or `memory_usage` columns will increase over time. Duration for the query will be high when completed. |  
 | 2 | NULL | \>0 | sleeping | No, but SPID can be killed. | An attention signal may be seen in the Extended Event session for this SPID, indicating a query timeout or cancel has occurred. |   
 | 3 | NULL | \>= 0 | runnable | No. Will not resolve until client fetches all rows or closes connection. SPID can be killed, but it may take up to 30 seconds. | If open_transaction_count = 0, and the SPID holds locks while the transaction isolation level is default (READ COMMMITTED), this is a likely cause. |  
 | 4 | Varies | \>= 0 | runnable | No. Will not resolve until client cancels queries or closes connections. SPIDs can be killed, but may take up to 30 seconds. | The `hostname` column in `sys.dm_exec_sessions` for the SPID at the head of a blocking chain will be the same as one of the SPID it is blocking. |  
 | 5 | NULL | \>0 | rollback | Yes. | An attention signal may be seen in the Extended Events session for this SPID, indicating a query timeout or cancel has occurred, or simply a rollback statement has been issued. |  
 | 6 | NULL | \>0 | sleeping | Eventually. When Windows NT determines the session is no longer active, the connection will be broken. | The `last_request_start_time` value in `sys.dm_exec_sessions` is much earlier than the current time. |
+
+| Scenario | Wait_type | Open_Tran | Status | Resolves? | Other Symptoms |  
+|-|-|-|-|-|-|   
+| 1 | NOT NULL | >= 0 | runnable | Yes, when query finishes. | In sys.dm_exec_sessions, reads, cpu_time, and/or memory_usage columns will increase over time. Duration for the query will be high when completed. |  
+| 2 | NULL | \>0 | sleeping | No, but SPID can be killed. | An attention signal may be seen in the Extended Event session for this SPID, indicating a query timeout or cancel has occurred. |   
+| 3 | NULL | \>= 0 | runnable | No. Will not resolve until client fetches all rows or closes connection. SPID can be killed, but it may take up to 30 seconds. | If open_transaction_count = 0, and the SPID holds locks while the transaction isolation level is default (READ COMMMITTED), this is a likely cause. |  
+| 4 | Varies | \>= 0 | runnable | No. Will not resolve until client cancels queries or closes connections. SPIDs can be killed, but may take up to 30 seconds. | The hostname column in sys.dm_exec_sessions for the SPID at the head of a blocking chain will be the same as one of the SPID it is blocking. |  
+| 5 | NULL | \>0 | rollback | Yes. | An attention signal may be seen in the Extended Events session for this SPID, indicating a query timeout or cancel has occurred, or simply a rollback statement has been issued. |  
+| 6 | NULL | \>0 | sleeping | Eventually. When Windows NT determines the session is no longer active, the connection will be broken. | The last_request_start_time value in sys.dm_exec_sessions is much earlier than the current time. |
+
 
 ## Detailed blocking scenarios
 
