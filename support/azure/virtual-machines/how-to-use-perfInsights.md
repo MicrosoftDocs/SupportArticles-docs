@@ -1,17 +1,16 @@
 ---
 title: How to use PerfInsights in Microsoft Azure| Microsoft Docs
 description: Learns how to use PerfInsights to troubleshoot Windows VM performance problems.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
 editor: na
 tags: ''
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: troubleshooting
 ms.date: 10/31/2018
 ms.author: genli

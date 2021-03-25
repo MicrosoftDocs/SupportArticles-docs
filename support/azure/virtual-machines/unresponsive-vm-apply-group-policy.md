@@ -1,13 +1,14 @@
 ---
 title: Azure virtual machine is unresponsive when applying policy
 description: This article provides steps to resolve issues where the load screen doesn't respond when applying a policy during startup in an Azure VM.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: TobyTu
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
