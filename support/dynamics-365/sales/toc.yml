@@ -111,10 +111,10 @@
       href: error-code-80040203-invalid-argument-error.md
     - name: Error 80048539 when importing a solution patch
       href: error-code-80048539-when-importing-solution-patch.md
+    - name: Error 80048541 when importing a solution
+      href: error-occurs-when-importing-solution.md
     - name: Error 8004F042 when importing solution patch
       href: error-code-8004f042-occurs.md
-    - name: Error when importing a solution
-      href: error-occurs-when-importing-solution.md
     - name: Error when importing AttributeMap
       href: error-when-importing-attributemap.md
     - name: Error when uninstalling a managed solution
@@ -507,7 +507,7 @@
       href: failed-to-add-user-using-distinguishedname-error-when-importing-organization.md
     - name: FileNotFoundException when creating a CRM organization
       href: filenotfoundexception-occurs.md
-    - name: FIPS 140-2 compliancy with CRM 2011
+    - name: FIPS 140-2 compliancy with CRM 2011 Update Rollup 12
       href: fips-140-2-compliancy-with-dynamics-crm.md
     - name: FIPS 140-2 Compliancy with CRM 2011
       href: fips-140-2-compliancy.md
