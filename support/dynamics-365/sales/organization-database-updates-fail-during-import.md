@@ -21,7 +21,7 @@ Error message reported in Dmsnap-in log for the database update failures:
 > Info| Applying slipstream dbUpdates to organization. Id=\<GUID>, UniqueName=CRMtest.  
 Error| Applying database updates to organization with name = CRMtest Id=\<GUID> failed with Exception:  
 System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. --->  
-System.AggregateException: One or more errors occurred. ---> Microsoft.Crm.BusinessEntities.CrmObjectNotFoundException: No rows could be found for Entity with id b5fa3433-7692-11e0-a0f5-1cc1de634cfe if Entity were published
+System.AggregateException: One or more errors occurred. ---> Microsoft.Crm.BusinessEntities.CrmObjectNotFoundException: No rows could be found for Entity with id \<ID> if Entity were published
 
 Error reported in update rollup installation log:
 
