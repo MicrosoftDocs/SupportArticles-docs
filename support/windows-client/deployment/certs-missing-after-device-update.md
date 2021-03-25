@@ -65,6 +65,9 @@ To add the latest LCU to the update source, follow these steps:
 
 1. Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and then download the LCU.
 
+   > [!NOTE]  
+   > If you are using WSUS to manage updates, see [WSUS and the Catalog Site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site#the-microsoft-update-catalog-site). This article describes how to use WSUS to download updates from the Microsoft Update Catalog.
+
 1. To add the LCU to the image, open an administrative Command Prompt window and run the following command:
 
    ```console
