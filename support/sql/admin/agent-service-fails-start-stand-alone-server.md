@@ -16,11 +16,11 @@ _Original KB number:_ &nbsp; 307288
 
 - Issue 1: On a standalone server, the MSSQLSERVER service may fail to start, and you receive the following error message:
 
-  > `An error 1068 - (The dependency service or group failed to start.) occurred while performing this service operation on the MSSQLServer Service.`
+  > An error 1068 - (The dependency service or group failed to start.) occurred while performing this service operation on the MSSQLServer Service.
 
 - Issue 2: Similarly, the SQLServerAgent service may also fail to start, and you receive the following error message:
 
-  > `An error 1068 - (The dependency service or group failed to start.) occurred while performing this service operation on the SQLServerAgent Service.`
+  > An error 1068 - (The dependency service or group failed to start.) occurred while performing this service operation on the SQLServerAgent Service.
 
   Issue 1 and Issue 2 occur when both of the following conditions are true:
 
@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 307288
 
 - Issue 3: On a domain member server, the MSSQLSERVER service may not start during the server start, and you receive the following error message:
 
-  > `The MSSQLSERVER service was unable to log on as domain\mssqlsvc with the currently configured password due to the following error: Source: NetLogon Description: There are currently no logon servers available to service the logon request. The MSSQLSERVER service terminated unexpectedly.`
+  > The MSSQLSERVER service was unable to log on as domain\mssqlsvc with the currently configured password due to the following error: Source: NetLogon Description: There are currently no logon servers available to service the logon request. The MSSQLSERVER service terminated unexpectedly.
 
 This problem occurs when all the following conditions are true:
 
