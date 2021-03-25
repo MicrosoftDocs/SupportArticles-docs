@@ -1,5 +1,5 @@
 ---
-title: Get-VMNetworkAdapter command doesn't report IP Addresses
+title: Get-VMNetworkAdapter command does not report IP Addresses
 description: 
 ms.date: 04/06/2021
 author: Teresa-Motiv
@@ -7,7 +7,7 @@ ms.author: v-tea
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 
