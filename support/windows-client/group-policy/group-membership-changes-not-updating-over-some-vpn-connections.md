@@ -62,11 +62,12 @@ The effects of the cached information on the user's access to resources depend o
 - **Whether the resources are on the client or on the network**  
   Resources on the network require an additional authentication step (a network logon instead of an interactive logon). This step means that the group information that the resource uses to determine access always comes from a domain controller, not the client cache.
 - **Whether those resources use Kerberos tickets or other technologies (such as NTLM access tokens) to authenticate and authorize users**  
-  NTLM-secured resources are typically local to the client. The AMA mechanism precludes the use of NTLM for network resources.
+  - For details about how cached information affects user access to NTLM-secured resources, see [Resources that rely on NTLM authentication](#resources-that-rely-on-NTLM-authentication).
+  - For details about how cached information affects user access to Kerberos-secured resources, see [Resources that rely on Kerberos tickets](#resources-that-rely-on-Kerberos-tickets).
 - **Whether the user locks and unlocks the client while connected to the VPN**  
   If the user locks the client while connected to the VPN and then unlocks it, the client updates its cache of user groups. However, this change does not affect the existing user security context or any sessions that were running when the user locked the client.
 - **Whether the user signs out of the client while connected to the VPN, and then signs in again**  
-  The effects of signing out and then signing in differ depending on whether the user has locked and unlocked the client first while connected to the VPN.
+  The effects of signing out and then signing in differ depending on whether the user has locked and unlocked the client first while connected to the VPN. Locking the client and then unlocking it updates the cache of user information, which the client uses at the next sign-in.
 - **Whether the user is resuming an existing resource session or starting a new resource session**  
 
 #### Resources that rely on NTLM authentication
@@ -82,11 +83,6 @@ This category of resources includes the following:
 These resource sessions, including the user session on the client, do not expire. They continue to run until the user ends the session (such as when the user signs out of Windows). Locking and then unlocking the client does not end the existing sessions.
 
 #### Resources that rely on Kerberos tickets
-
-After the user signs in, Windows uses cached information to allow the user to access any local resources that require Kerberos tickets.
-
-> [!NOTE]  
-> Any local resource sessions that the user starts before accessing the network are not affected by subsequent Kerberos transactions. They continue to run based on the cached information until the user ends them or signs out of Windows.
 
 When the user connects to the VPN and attempts to access a network resource that relies on Kerberos tickets, the Kerberos Key Distribution Center (KDC) gets the user's information from Active Directory. The KDC uses information from Active Directory to authenticate the user and create a ticket-getting-ticket (TGT). The group membership information in the TGT is up-to-date at the time the TGT is created.
 
@@ -109,7 +105,7 @@ You can use the [`klist` command](/windows-server/administration/windows-command
 
 ### Effects on start-up and sign-in processes
 
-The Group Policy service is optimized to speed up the application of group policy and to reduce adverse effects on client performance. [Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj573586(v=ws.11)) provides an in-depth explanation of how Group Policy interacts with start-up and sign-in processes. The Group Policy service can run in the foreground (such as at startup) or in the background (during user session). The service processes Group Policy in the following ways:
+The Group Policy service is optimized to speed up the application of group policy and to reduce adverse effects on client performance. [Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj573586(v=ws.11)) provides an in-depth explanation of how Group Policy interacts with start-up and sign-in processes. The Group Policy service can run in the foreground (at startup or sign-in) or in the background (during the user session). The service processes Group Policy in the following ways:
 
 - *Asynchronous* processing refers to processes that do not depend on the outcome of other processes.
 - *Synchronous* processing refers to processes that depend on each other’s outcome. Therefore, synchronous processes must wait for the previous process to finish before the next process can start.
@@ -123,7 +119,7 @@ The following table summarizes the events that trigger foreground or background 
 |Scheduled (during the user session) |Asynchronous |Background |
 |User action (`gpupdate /force`) |Asynchronous |Background |
 
-In order to apply configuration changes, some client-side extensions (CSEs) require synchronous processing (at user sign-in or computer startup). In such cases, the CSE identifies the need for a change during background processing. The next time the user signs in, the CSE completes the change as part of the synchronous processing phase.
+In order to apply configuration changes, some client-side extensions (CSEs) require synchronous processing (at user sign-in or computer startup). In such cases, the CSE identifies the need for a change during background processing. The next time the user signs in or the computer starts up, the CSE completes the change as part of the synchronous processing phase.
 
 Some of these CSEs have an additional complication: they have to connect to domain controllers or other network servers *while* the synchronous processing runs. The Folder Redirection and Scripts CSEs are two of the CSEs in this category.
 
