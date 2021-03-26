@@ -78,6 +78,13 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 | **Windows Server Update Services tools**| Windows Server Update Services tools include the Windows Server Update Services snap-in, WSUS.msc, and PowerShell cmdlets.| **√**| **√** |
 |||||
 
+## RSAT for Windows 10 platform installation 1809 or higher
+> [!NOTE]
+> You can't use the Turn Windows features on and off dialog from the Control Panel 
+
+Installing the RSAT Tools for Windows 10 1809+ is slighty different to former times. RSAT is now part of the Operating System an can be installed via Optional Features. 
+To enable the tools, click **Start**, click **Settings**, click **Apps**, and then click **Optional features**, after that click on the panel **Add a feature** and enter Remote in the search bar.
+
 ## References
 
 - [Deploy Remote Server Administration Tools](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831501(v=ws.11))
