@@ -36,10 +36,9 @@ In this scenario, you receive the following error messages:
 
 During investigation, you notice that Consent.exe crashes when the issue occurs. The error maps to the following information:
 
-| **Code**| **Symbolic Name**| **Error Description**| **Header** |
+| Code| Symbolic Name| Error Description| Header |
 |---|---|---|---|
-| **Hex**| **Dec** |
-|0xc000027b|-1073741189|STATUS_STOWED_EXCEPTION|An application-internal exception has occurred.|ntstatus.h|
+|Hex: 0xc000027b<br />Dec: -1073741189|STATUS_STOWED_EXCEPTION|An application-internal exception has occurred.|ntstatus.h|
 |||||
 
 > [!Note]
