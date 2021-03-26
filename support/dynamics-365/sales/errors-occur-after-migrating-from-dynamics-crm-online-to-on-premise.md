@@ -32,7 +32,7 @@ After importing a Microsoft Dynamics CRM Online organization into a Microsoft Dy
     Error Details:
 
     > Unhandled Exception: System.ServiceModel.FaultException`1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: Assembly Microsoft.Crm.Yammer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 can not be loaded from GAC.Detail:  
-    \<OrganizationServiceFault xmlns:i="[https://www.w3.org/2001/XMLSchema-instance](https://www.w3.org/2001/xmlschema-instance)" xmlns="[https://schemas.microsoft.com/xrm/2011/Contracts](https://schemas.microsoft.com/xrm/2011/contracts)">  
+    \<OrganizationServiceFault xmlns:i="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/xrm/2011/Contracts">  
     \<ErrorCode>-2147204719\</ErrorCode>  
     \<ErrorDetails xmlns:d2p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
     \<Message>Assembly Microsoft.Crm.Yammer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 can not be loaded from GAC.\</Message>  

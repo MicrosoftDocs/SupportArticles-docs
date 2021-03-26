@@ -20,7 +20,8 @@ When trying to configure Microsoft Dynamics CRM for Outlook using the Configurat
 
 In the Microsoft Dynamics CRM Configuration log, (default location: C:\Users\\*\<username>*\AppData\Local\Microsoft\MSCRM\Logs\Crm50ClientConfig.log), you will see an error similar to the following:
 
-> Error| Error connecting to URL: [https://dev.crm.dynamics.com/XRMServices/2011/Discovery.svc](https://dev.crm.dynamics.com/xrmservices/2011/discovery.svc) Exception:  Microsoft.Crm.Passport.IdCrl.IdCrlException: InitializeEx()  
+> Error| Error connecting to URL: `https://dev.crm.dynamics.com/XRMServices/2011/Discovery.svc`  
+Exception:  Microsoft.Crm.Passport.IdCrl.IdCrlException: InitializeEx()  
 at Microsoft.Crm.Passport.IdCrl.FederationLogOnManager.Initialize(String environment)  
 at Microsoft.Crm.Passport.IdCrl.FederationLogOnManager..ctor(String environment)  
 at Microsoft.Crm.Outlook.ClientAuth.PassportAuthProvider\`1.GetLogonManager()  

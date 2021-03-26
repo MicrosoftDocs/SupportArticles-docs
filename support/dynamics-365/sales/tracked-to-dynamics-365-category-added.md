@@ -30,7 +30,7 @@ This experience is part of a feature that's now enabled by default:
 
 You can disable this feature within the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com):
 
-1. Access [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com/) as an administrator.
+1. Access [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/) as an administrator.
 2. On the **Environments** tab, click **...** next to the name of the environment and then click **Settings**.
 3. Click **Email Tracking**.
 4. Locate the **People can use categories to track emails and appointments** option and switch the option to **Off**.

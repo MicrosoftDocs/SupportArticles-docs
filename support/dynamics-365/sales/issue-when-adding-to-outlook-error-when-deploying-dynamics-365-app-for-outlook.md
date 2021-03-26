@@ -28,12 +28,13 @@ If you navigate to Manage addins from a user's mailbox, you will see the followi
 
 This is due to the Discovery search from Exchange Admin Center (EAC). Whenever discovery search is performed for the first time using EAC in Exchange Server 2013, it will check for the following 6 internal URLs in the background and it will cache it locally.
 
-- Found URL: [https://e15-cas.contoso.com/owa](https://e15-cas.contoso.com/owa)
-- Found URL: [https://e15-cas.contoso.com/ecp](https://e15-cas.contoso.com/ecp)
-- Found URL: [https://e15-cas.contoso.com/EWS/Exchange.asmx](https://e15-cas.contoso.com/EWS/Exchange.asmx)
-- Found URL: [https://e15-cas.contoso.com/Microsoft-Server-ActiveSync](https://e15-cas.contoso.com/Microsoft-Server-ActiveSync)
-- Found URL: [https://e15-cas.contoso.com/OAB](https://e15-cas.contoso.com/OAB)
-- Found URL: [https://e15-cas.contoso.com/mapi](https://e15-cas.contoso.com/mapi)  
+- Found URL: `https://e15-cas.contoso.com/owa`
+- Found URL: `https://e15-cas.contoso.com/ecp`
+- Found URL: `https://e15-cas.contoso.com/EWS/Exchange.asmx`
+- Found URL: `https://e15-cas.contoso.com/Microsoft-Server-ActiveSync`
+- Found URL: `https://e15-cas.contoso.com/OAB`
+- Found URL: `https://e15-cas.contoso.com/mapi`
+
 [GlobalServiceUrls.DiscoverUrlsIfNeeded] Successfully found all needed VDirs
 
 ## Resolution

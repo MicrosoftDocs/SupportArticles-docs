@@ -75,7 +75,7 @@ Step by step on how to configure the environment:
    2. In a **PowerShell** window, execute the following command.
 
         ```powershell
-        Add-AdfsClient -ClientId "a672d62c-fc7b-4e81-a576-e60dc46e951d" -Name "Microsoft Power BI" -RedirectUri @("[https://de-users-preview.sqlazurelabs.com/account/reply/](https://de-users-preview.sqlazurelabs.com/account/reply/)", "[https://preview.powerbi.com/views/oauthredirect.html](https://preview.powerbi.com/views/oauthredirect.html)") -Description "ADFS OAuth 2.0 client for Microsoft Power BI"
+        Add-AdfsClient -ClientId "a672d62c-fc7b-4e81-a576-e60dc46e951d" -Name "Microsoft Power BI" -RedirectUri @("https://de-users-preview.sqlazurelabs.com/account/reply/", "https://preview.powerbi.com/views/oauthredirect.html") -Description "ADFS OAuth 2.0 client for Microsoft Power BI"
         ```
 
 4. Configure Power Query for Excel

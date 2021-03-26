@@ -44,7 +44,7 @@ Changing the value Data from **1** to **0**, or removing the Value Name entirely
 
 Below is an example error from the log file:
 
-> *DateTime*| Info| Error connecting to URL: {0} Exception: {1}| [https://contoso.contoso.com/XRMServices/2011/Organization.svc](https://contoso.contoso.com/xrmservices/2011/organization.svc), Microsoft.Crm.CrmException: Server was unable to process request.  
+> *DateTime*| Info| Error connecting to URL: {0} Exception: {1}| `https://contoso.contoso.com/XRMServices/2011/Organization.svc`, Microsoft.Crm.CrmException: Server was unable to process request.  
  at Microsoft.Crm.CredentialManager.WriteCredentials(Uri target, Credential userCredentials, Boolean allowPhysicalStore)  
  at Microsoft.Crm.Outlook.ClientAuth.ClientAuthProvider\`1.set_Credentials(Credential value)  
  at Microsoft.Crm.Outlook.ClientAuth.ClientAuthUtility.CopyAuthenticationContext[TService1,TService2](IClientAuthProvider\`1 authenticatedProvider, IClientAuthProvider\`1 nonAuthenticatedProvider)  

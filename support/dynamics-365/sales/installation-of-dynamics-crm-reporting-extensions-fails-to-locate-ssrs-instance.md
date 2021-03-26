@@ -18,7 +18,7 @@ When installing the Microsoft Dynamics CRM Reporting Extensions on SQL Reporting
 
 Reviewing the Reporting Extensions install log file, a warning is logged:
 
-> Could not find a local RS instance corresponding to the reporting url [https:///reportserver](https://ldndsm020004277/reportserver_crmrs) for organization \<orgname>
+> Could not find a local RS instance corresponding to the reporting url `https:///reportserver` for organization \<orgname>
 
 > [!NOTE]
 > By default, the Reporting Extensions install log file can be found at `%appdata%\Microsoft\MSCRM\Logs\SrsDataConnectorSetup.log`.
