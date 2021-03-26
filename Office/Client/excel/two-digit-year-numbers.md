@@ -49,7 +49,8 @@ To change the century cutoff date, follow these steps:
 The following table illustrates the effect that various cutoff years will have when you type a two-digit year in Excel:
 
 Regional Settings
-|Setting  |Date typed |Date used|
+
+|Setting|Date typed |Date used|
 |----------|------------|------|
 |2039| 9/7/70| 9/7/1970|
 |2039| 2/3/27| 2/3/2027|
@@ -66,9 +67,8 @@ By default, Excel determines the century by using a cutoff year of 2029, which r
 - Dates in the inclusive range from January 1, 1900 (1/1/1900) to December 31, 9999 (12/31/9999) are valid.
 
 - When you type a date that uses a two-digit year, Excel uses the following centuries:
-
-    Two-digit 
-    |year typed| Century used|
+    
+    |Two-digit year typed| Century used|
     |----------|----------------|
     |00-29| 21st (year 2000)|
     |30-99 |20th (year 1900)|
