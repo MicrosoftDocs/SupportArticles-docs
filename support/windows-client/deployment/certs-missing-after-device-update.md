@@ -12,7 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: deployment
 ms.technology: windows-client-deployment
-keywords: managed devices, certificates, WSUS, MECM
+keywords: managed devices, certificates, WSUS, MECM, Windows Update
 ---
 
 # Certificates are missing after you update a device to a newer version of Windows 10
