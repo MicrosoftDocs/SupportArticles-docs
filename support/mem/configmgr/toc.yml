@@ -352,6 +352,8 @@
           href: error-0x800f0831-installing-update.md
         - name: .NET Framework 4.7.2 updates fail to sync
           href: dotnet-framework-updates-fail-to-sync.md
+        - name: Updates aren't downloaded when an ADR runs
+          href: adr-updates-download-failure.md
     - name: State messaging
       href: state-messaging-description.md
     - name: Understand software update management
