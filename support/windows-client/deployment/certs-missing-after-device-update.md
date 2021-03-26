@@ -52,31 +52,31 @@ To mitigate this issue, do one of the following:
 To roll back, follow these steps:
 
 1. Select **Start** > **Settings** > **Update & Security** > **Recovery**.
-1. Under **Go back to the previous version of Windows 10**, select **Get started**.  
+2. Under **Go back to the previous version of Windows 10**, select **Get started**.  
 
 To add the latest LCU to the update source, follow these steps:
 
 1. Mount the source ISO image, and then copy the install.wim file to a writeable location.  
 
    > [!NOTE]  
-   > If the image has an install.esd file instead of an install.wim file, use the [**Dism /Export-Image**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
+   > If the image has an install.esd file instead of an install.wim file, use the [**:::no-loc text="Dism /Export-Image":::**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
 
-1. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) and look up the correct LCU number for your system version.
+2. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) and look up the correct LCU number for your system version.
 
-1. Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and then download the LCU.
+3. Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and then download the LCU.
 
    > [!NOTE]  
    >
    > - If you are using WSUS to manage updates, see [WSUS and the Catalog Site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site#the-microsoft-update-catalog-site). This article describes how to use WSUS to download updates from the Microsoft Update Catalog.
    > - If you are using Microsoft Enpoint Manager to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
 
-1. To add the LCU to the image, open an administrative Command Prompt window and run the following command:
+4. To add the LCU to the image, open an administrative Command Prompt window and run the following command:
 
    ```console
-   Dism /Add-Package /Image:"C:\Mount\Windows" /PackagePath="windows10.0-kb4586781-x64_bd543ce012ec1695201cdb2d324a2206bd445132.msu"  /LogPath=C:\Mount\Dism.log
+   Dism /Add-Package /Image:"C:\Mount\Windows" /PackagePath="windows10.0-kb4586781-x64_bd543ce012ec1695201cdb2d324a2206bd445132.msu" /LogPath=C:\Mount\Dism.log
    ```
 
-1. Review the list of packages that the **Dism** command produced, and verify that the list contains the package. To view the list, run the following command:
+5. Review the list of packages that the `Dism` command produced, and verify that the list contains the package. To view the list, run the following command:
 
    ```console
    Dism /Get-Packages /Image:<Path_to_Image>
@@ -85,7 +85,7 @@ To add the latest LCU to the update source, follow these steps:
    > [!NOTE]  
    > In this command, \<*Path_to_Image*> is the path and filename of the image file.
 
-1. Commit and unmount the image. To do this, run the following command:
+6. Commit and unmount the image. To do this, run the following command:
 
    ```console
    Dism /Unmount-Image /MountDir:<Path_to_Mount_Directory> /Commit
@@ -94,7 +94,7 @@ To add the latest LCU to the update source, follow these steps:
    > [!NOTE]  
    > In this command, \<*Path_to_Mount_Directory*> is the path to the mounted image.
 
-1. (Optional) Use the updated file to recreate the image. to do this, run the following command:
+7. (Optional) Use the updated file to recreate the image. to do this, run the following command:
 
    ```console
    Oscdimg –n –d –m “<Source>” “<Target.iso>”
