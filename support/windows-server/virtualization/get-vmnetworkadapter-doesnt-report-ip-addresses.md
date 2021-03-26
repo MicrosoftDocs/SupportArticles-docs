@@ -15,7 +15,7 @@ ms.technology: virtualization
 keywords: 
 ---
 
-# `Get-VMNetworkAdapter` command doesn't report IP addresses
+# Get-VMNetworkAdapter command doesn't report IP addresses
 
 This article describes a problem in which the output of the `Get-VMNetworkAdapter` command doesn't contain the IP addresses that are associated with the specified adapter.
 
@@ -23,7 +23,7 @@ _Applies to:_ &nbsp; Windows Server (all versions)
 
 ## Symptoms
 
-You run the [`Get-VMNetworkAdapter`](/powershell/module/hyper-v/get-vmnetworkadapter) command in a Command Prompt window on a virtual machine. For example,
+You run the [:::no-loc text="Get-VMNetworkAdapter":::](/powershell/module/hyper-v/get-vmnetworkadapter) command in a Command Prompt window on a virtual machine. For example,
 
 ```powershell
 PS C:\> Get-VMNetworkAdapter -VMName clu3vm1
@@ -83,7 +83,7 @@ ROOT\Standardcimv2 NetPeerDist
 ROOT\Standardcimv2 NetNcCim 
 ```
 
-In addition, use `Get-WmiObject` to view the attributes of the ['MSFT_NetIPInterfaceAdapter'](/previous-versions/windows/desktop/nettcpipprov/msft-netipinterfaceadapter) class, as follows:
+In addition, use `Get-WmiObject` to view the attributes of the [:::no-loc text="MSFT_NetIPInterfaceAdapter":::](/previous-versions/windows/desktop/nettcpipprov/msft-netipinterfaceadapter) class, as follows:
 
 ```powershell
 PS C:\> Get-WmiObject -Namespace "root\standardcimv2" -Class "MSFT_NetIPInterfaceAdapter"
@@ -102,7 +102,7 @@ At line:1 char:1
 
 ## Cause
 
-The [`NetTCPIP`](/powershell/module/nettcpip) WMI provider isn't installed in the guest operating system (the virtual machine).
+The [:::no-loc text="NetTCPIP":::](/powershell/module/nettcpip) WMI provider isn't installed in the guest operating system (the virtual machine).
 
 ## Resolution
 
