@@ -87,7 +87,7 @@ If you've applied the techniques in this article and you're still having problem
 - Are you using the Cache-Control header with the ASP `Response.CacheControl` property or through a returned HTTP header? It's the only way to truly prevent caching in Internet Explorer.
 - Are you using Internet Explorer 4.01 Service Pack 2 or higher? There's no way to completely prevent caching in earlier versions of the browser.
 - Have you double-checked that your web server has HTTP 1.1 turned on and is returning HTTP 1.1 responses to Internet Explorer? Cache-Control headers are invalid in HTTP 1.0 responses.
-- If you're using CGI/ISAPI/Servlets on the server side, are you following the HTTP 1.1 specification exactly, particularly in respect to CRLF termination of HTTP headers? In the interest of performance, Internet Explorer is typically unforgiving of responses that violate the HTTP 1.1 specification. This usually results in ignored headers or reports of unexpected server errors.
+- If you're using CGI/ISAPI/Servlets on the server side, are you following the HTTP 1.1 specification exactly, particularly about CRLF termination of HTTP headers? In the interest of performance, Internet Explorer is typically unforgiving of responses that violate the HTTP 1.1 specification. This usually results in ignored headers or reports of unexpected server errors.
 - Are the HTTP headers spelled correctly?
 
 ## References

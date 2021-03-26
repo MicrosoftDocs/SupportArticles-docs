@@ -36,7 +36,7 @@ When state messages are received, two things occur. First, state messages are st
 
 In the diagram, the client installation piece is shown separately for clarity. During the client installation, the management point is located and targeted for state messages. State messages about the client installation are forwarded to the fallback status point (FSP) that's configured under one of the following conditions:
 
-- Before the management point is reached.
+- The management point isn't reached.
 - The management point is down for some reason.
 
 For everything else, traffic goes directly to the management point.
