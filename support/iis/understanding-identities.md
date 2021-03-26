@@ -166,7 +166,7 @@ This tells IIS to use the new built-in account for all anonymous authentication 
 
 You can also provide anonymous authentication to your website by using a specific Windows account or application pool identity instead of  an `IUSR` account.
 
-### ISUR versus Connect as
+### IUSR versus Connect as
 
 **Connect as** is an option in IIS that enables you to decide which credentials you want to use to access the website. You can use either the authenticated user credentials or specific user credentials. To understand the difference, consider the following scenario:
 
