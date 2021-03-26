@@ -78,12 +78,12 @@ If your SQL Server Failover Clustered Instance does require MSDTC and does requi
 3. Set the MSDTC network authentication by using the following script:
 
     ```powershell
-    Set-DtcNetworkSetting -AuthenticationLevel Mutual;
-    -DtcName "Local" -InboundTransactionsEnabled $True;
-    -LUTransactionsEnabled $True;
-    -OutboundTransactionsEnabled $True;
-    -RemoteAdministrationAccessEnabled $False;
-    -RemoteClientAccessEnabled $False;
+    Set-DtcNetworkSetting -AuthenticationLevel Mutual `
+    -DtcName "Local" -InboundTransactionsEnabled $True `
+    -LUTransactionsEnabled $True `
+    -OutboundTransactionsEnabled $True `
+    -RemoteAdministrationAccessEnabled $False `
+    -RemoteClientAccessEnabled $False `
     -XATransactionsEnabled $True -verbose
     ```
 

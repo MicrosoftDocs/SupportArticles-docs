@@ -98,5 +98,5 @@ For most uses of ASP.NET, a single server can handle all requests quickly. Howev
 
 For more information about how to deploy applications that are built on the .NET Framework, and about .NET interoperability, visit the following Microsoft web sites:
 
-- [.NET Framework Deployment Guide](/previous-versions/dotnet/articles/ms994336(v=msdn.10))
+- [Deploying the .NET Framework](/dotnet/framework/deployment/deploying-the-net-framework)
 - [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new)
