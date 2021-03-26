@@ -40,7 +40,7 @@ The root directory shortcut is **~** (tilde). You can use the `cd ~` command at 
 
 Review and try the following commands (shown in the next screenshot):
 
-- `pwd` (print working directory): Prints the current directory and the /etc/systemd directory.
+- `pwd` (print working directory): Prints the current directory and the `/etc/systemd` directory.
 - `echo`: Prints the value of the ~ (root) directory.
 - `cd ~`: Returns you to the root directory.
 
@@ -78,7 +78,7 @@ echo hello world > /etc/helloworld.txt
 The `echo` command writes all the text that follows it to the output. The angle bracket (`>`) tells the system to send the output to the `/etc/helloworld.txt` file instead of the console. This is similar to how Windows works.
 
 > [!NOTE]
-> Linux is case-sensitive: `Helloworld.txt`, `helloworld.txt` and `helloworld.Txt` are different files.
+> Linux is case-sensitive: *Helloworld.txt*, *helloworld.txt* and *helloworld.Txt* are different files.
 
 You don't have to provide a file name extension. The name "helloworld" by itself is perfectly valid. (The "txt" extension is used here only as an example.)
 
