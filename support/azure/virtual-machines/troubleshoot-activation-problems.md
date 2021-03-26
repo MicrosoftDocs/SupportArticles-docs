@@ -48,7 +48,7 @@ Generally, Azure VM activation issues occur if the Windows VM is not configured 
 ### Step 1 Configure the appropriate KMS client setup key
 
 > [!NOTE]
-> For VMs running **Windows 10 Enterprise multi-session** (also known as **Windows 10 Enterprise for Virtual Desktops**) in [Windows Virtual Desktop](virtual-desktop/overview.md), this step **is not** required.
+> For VMs running **Windows 10 Enterprise multi-session** (also known as **Windows 10 Enterprise for Virtual Desktops**) in [Windows Virtual Desktop](azure/virtual-desktop/overview.md), this step **is not** required.
 >
 > If you deploy a Windows 10 Enterprise multi-session VM, and then update the product key to another edition, you won't be able to switch the VM back to Windows 10 Enterprise multi-session, and you will need to redeploy the VM.
 >
@@ -60,7 +60,7 @@ Generally, Azure VM activation issues occur if the Windows VM is not configured 
 >
 > If the result returns **Name: Windows(R), ServerRdsh edition**, then this step is not required.
 >
-> For more information, please refer to: [Windows 10 Enterprise multi-session FAQ](virtual-desktop/windows-10-multisession-faq#can-i-upgrade-a-windows-10-vm-to-windows-10-enterprise-multi-session.md)
+> For more information, please refer to: [Windows 10 Enterprise multi-session FAQ](azure/virtual-desktop/windows-10-multisession-faq#can-i-upgrade-a-windows-10-vm-to-windows-10-enterprise-multi-session.md)
 
 For the VM that is created from a custom image, you must configure the appropriate KMS client setup key for the VM.
 
