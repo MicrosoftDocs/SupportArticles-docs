@@ -1,7 +1,7 @@
 ---
 title: How to disable and re-enable hibernation
 description: Explains how to turn off the hibernation feature in Windows.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika, patste, v-jomcc
 ms.prod-support-area-path: Power Management
 ms.technology: windows-client-deployment
+adobe-target: true
 ---
 # How to disable and re-enable hibernation on a computer that is running Windows
 
@@ -44,3 +45,7 @@ _Original KB number:_ &nbsp; 920730
 The Hiberfil.sys hidden system file is located in the root folder of the drive where the operating system is installed. The Windows Kernel Power Manager reserves this file when you install Windows. The size of this file is approximately equal to how much random access memory (RAM) is installed on the computer.
 
 The computer uses the Hiberfil.sys file to store a copy of the system memory on the hard disk when the hybrid sleep setting is turned on. If this file is not present, the computer cannot hibernate.
+
+## Reference
+
+To add the Hibernate option to Start menu, see the Hibernate section of [Shut down, sleep, or hibernate your PC](https://support.microsoft.com/windows/2941d165-7d0a-a5e8-c5ad-8c972e8e6eff).

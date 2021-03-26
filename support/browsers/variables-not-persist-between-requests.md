@@ -47,6 +47,4 @@ This behavior is by design.
 
 ## References
 
-For more information about IIS configuration changes that may be necessary after you rename the server, see [Updating IIS After You Change the Computer Name](https://support.microsoft.com/help/234142/updating-iis-after-you-change-the-computer-name).
-
 For more information about the RFC 883 specifications, see [DOMAIN NAMES - IMPLEMENTATION and SPECIFICATION](https://www.ietf.org/rfc/rfc883.txt?number=883).

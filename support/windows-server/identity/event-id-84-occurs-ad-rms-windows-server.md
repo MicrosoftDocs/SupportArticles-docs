@@ -74,16 +74,16 @@ SqlError-0.Class: 16
         SqlError-1.State: 0  
         SqlError-0.Server: `sql01.treyresearch.net`,1441  
         SqlError-0.Class: 16  
-  + System.Data.SqlClient.SqlException  
-  +         Message: Arithmetic overflow error converting IDENTITY to data type smallint.
+  \+ System.Data.SqlClient.SqlException  
+  \+         Message: Arithmetic overflow error converting IDENTITY to data type smallint.
 Arithmetic overflow occurred.  
-  +         HelpLink.ProdName: Microsoft SQL Server  
-  +         HelpLink.ProdVer: 10.50.4000  
-  +         HelpLink.EvtSrc: MSSQLServer  
-  +         HelpLink.EvtID: 8115  
-  +         HelpLink.BaseHelpUrl: `https://go.microsoft.com/fwlink`  
-  +         HelpLink.LinkId: 20476  
-  +         Context: ComponentBase.LogResults  
+  \+         HelpLink.ProdName: Microsoft SQL Server  
+  \+         HelpLink.ProdVer: 10.50.4000  
+  \+         HelpLink.EvtSrc: MSSQLServer  
+  \+         HelpLink.EvtID: 8115  
+  \+         HelpLink.BaseHelpUrl: `https://go.microsoft.com/fwlink`  
+  \+         HelpLink.LinkId: 20476  
+  \+         Context: ComponentBase.LogResults  
 
 ## Cause
 

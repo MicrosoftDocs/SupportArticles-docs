@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4469580
 
 ## Symptoms
 
-When you try to start a computer through the PXE boot by using Configuration Manager, the PXE boot process doesn't work.
+When you try to start a computer through the PXE boot by using Configuration Manager, the PXE boot process doesn't work.
 
 When this problem occurs, the following error entry is logged in the SMSPXE log on the PXE-enabled distribution point (DP) when you start Windows Deployment Services (WDS):
 
@@ -42,41 +42,41 @@ When this problem occurs, the following error entry is logged in the SMSPXE log 
 
 Additionally, the SMSPXE.log file includes the following error entries when you try to run a PXE boot:
 
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    PXE::MP_GetList failed; 0x80092002  
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    PXE::MP_GetList failed; 0x80092002  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    PXE::MP_LookupDevice failed; 0x80092002  
-> SMSPXE    PXE::MP_GetList failed; 0x80092002  
-> SMSPXE    PXE::MP_LookupDevice failed; 0x80092002  
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    PXE::MP_LookupDevice failed; 0x80092002  
+> SMSPXE    PXE::MP_GetList failed; 0x80092002  
+> SMSPXE    PXE::MP_LookupDevice failed; 0x80092002  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    PXE::MP_GetList failed; 0x80092002  
-> SMSPXE    PXE::MP_ReportStatus failed; 0x80092002  
-> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
+> SMSPXE    PXE::MP_GetList failed; 0x80092002  
+> SMSPXE    PXE::MP_ReportStatus failed; 0x80092002  
+> SMSPXE    Failed to create certificate store from encoded certificate. Verify the provided Certificate was provisioned correctly. .  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    PXE Provider failed to process message.  
+> SMSPXE    PXE Provider failed to process message.  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)  
-> SMSPXE    PXE::MP_GetList failed; 0x80092002  
-> SMSPXE    PXE::MP_ReportStatus failed; 0x80092002  
-> SMSPXE    PXE Provider failed to process message.  
+> SMSPXE    PXE::MP_GetList failed; 0x80092002  
+> SMSPXE    PXE::MP_ReportStatus failed; 0x80092002  
+> SMSPXE    PXE Provider failed to process message.  
 > An error occurred during encode or decode operation. (Error: 80092002; Source: Windows)
 
 If you try to fix the problem by re-creating the self-signed certificate in the properties of the DP by changing the date or time of the self-signed certificate, the certificate isn't re-created.  
 
 > [!NOTE]
-> You can view certificates for the DP in the Configuration Manager console under **Administration** > **Security** > **Certificates**.
+> You can view certificates for the DP in the Configuration Manager console under **Administration** > **Security** > **Certificates**.
 
-When you re-create the self-signed certificate for a DP, the **Start Date** value should be approximately the time when the date and time values were changed for the certificate in the DP properties.
+When you re-create the self-signed certificate for a DP, the **Start Date** value should be approximately the time when the date and time values were changed for the certificate in the DP properties.
 
 When this problem occurs, the CertMgr.log file includes the following error entries:
 
@@ -90,12 +90,12 @@ When this problem occurs, the CertMgr.log file includes the following error entr
 
 ## Cause
 
-This issue occurs if the `IssuingCertificateList` registry key is missing from the following registry subkey on the DP:
+This issue occurs if the `IssuingCertificateList` registry key is missing from the following registry subkey on the DP:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Security`
 
 > [!NOTE]
-> The registry key value could also be missing on the management point.
+> The registry key value could also be missing on the management point.
 
 ## Resolution
 
@@ -103,14 +103,14 @@ To fix the issue, copy the `IssuingCertificateList` registry key value from the 
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Security`
 
-Then, copy this value to the same registry key on the DP. To do this, you can run the following command at an elevated command prompt on the DP:
+Then, copy this value to the same registry key on the DP. To do this, you can run the following command at an elevated command prompt on the DP:
 
 ```console
 REG.exe ADD "HKLM\SOFTWARE\Microsoft\SMS\Security" /v IssuingCertificateList /t REG_MULTI_SZ /d <Value_From_MP> /f
 ```
 
 > [!NOTE]
-> In this command, replace <*Value_From_MP*> with the value that you got from the management point (without the angle brackets).
+> In this command, replace <*Value_From_MP*> with the value that you got from the management point (without the angle brackets).
 
 If the registry key value is also missing on the management point, open SQL Server Management Studio on the primary site, and then run the following query against the primary site database:
 
@@ -124,13 +124,13 @@ WHERE SCP.Name = 'IssuingCertificateList'
 > [!IMPORTANT]
 > The value in the **Value1** column must be copied to the registry on both the DP and the management point.
 
-Copy the value in the **Value1** column, and then run the following command at an elevated command prompt on both the DP and management point:
+Copy the value in the **Value1** column, and then run the following command at an elevated command prompt on both the DP and management point:
 
 ```console
 REG.exe ADD "HKLM\SOFTWARE\Microsoft\SMS\Security" /v IssuingCertificateList /t REG_MULTI_SZ /d <Value_from_DB> /f
 ```
 
 > [!NOTE]
-> In this command, replace <*Value_from_DB*> with the value that you copied from the primary site database (without the angle brackets).
+> In this command, replace <*Value_from_DB*> with the value that you copied from the primary site database (without the angle brackets).
 
-You may want to check the CertMgr.log file to see whether additional DPs are affected. If they are, run the `REG.exe` command on the additional DPs.
+You may want to check the CertMgr.log file to see whether additional DPs are affected. If they are, run the `REG.exe` command on the additional DPs.

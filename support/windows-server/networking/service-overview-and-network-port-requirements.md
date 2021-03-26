@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
 ms.technology: networking
+adobe-target: true
 ---
 # Service overview and network port requirements for Windows
 
@@ -389,7 +390,7 @@ System service name: **MSFTPSVC**
 
 To successfully apply Group Policy, a client computer must be able to contact a domain controller over the Kerberos, LDAP, SMB, and RPC protocols. Windows XP and Windows Server 2003 additionally require the ICMP protocol.
 
-If any one of these protocols is unavailable or blocked between the client and a relevant domain controller, Group Policy will not apply or update. For a cross-domain logon, where a computer is in one domain and the user account is in another domain, these protocols may be required for the client, the resource domain, and the account domain to communicate. ICMP is used for slow link detection. For more information about slow link detection, see [Group Policy Slow Link Detection](https://support.microsoft.com/help/2008977).
+If any one of these protocols is unavailable or blocked between the client and a relevant domain controller, Group Policy will not apply or update. For a cross-domain logon, where a computer is in one domain and the user account is in another domain, these protocols may be required for the client, the resource domain, and the account domain to communicate. ICMP is used for slow link detection.
 
 System service name: **Group Policy**
 
@@ -1390,14 +1391,6 @@ For more information about the ports that are used by Microsoft Message Queuing,
 ### Microsoft Operations Manager
 
 For information about how to plan for and to deploy MOM, see [System Center Developer Documentation Library](/previous-versions/system-center/developer/cc817313(v=msdn.10)).
-
-### Systems Management Server
-
-For more information about the ports that are used by SMS 2003, see [Ports that Systems Management Server 2003 uses to communicate through a firewall or through a proxy server](https://support.microsoft.com/help/826852).
-
-### SQL Server
-
-For more information about the ports that are used by SQL Server 7.0 and SQL Server 2000 for OLAP, see [INF: TCP Ports Used by OLAP Services when Connecting Through a Firewall](https://support.microsoft.com/help/301901).
 
 ### Terminal Services
 

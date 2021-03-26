@@ -30,13 +30,15 @@
     href: deploy-windows-update-packages-as-win32-apps.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
+  - name: Error 0x87D13BA2 when you deploy a macOS LOB app
+    href: error-0x87d13ba2-deploy-macos-lob-app.md  
   - name: Fingerprint authentication not prompted for policy-managed apps
     href: no-prompt-for-fingerprint-identity.md
-  - name: macOS LOB apps aren't deployed
+  - name: macOS LOB apps aren't deployed
     href: macos-lob-apps-not-deployed.md
   - name: Managed Browser policy triggers error 0x87D1FDE8
     href: managed-browser-policy-triggers-error-0x87d1fde8.md
-  - name: Mismatch between value type and configuration value
+  - name: Mismatch between value type and configuration value
     href: mismatch-error-configuration-value-ampersand.md
   - name: OneDrive supports Open-in protection on unenrolled devices
     href: open-in-protection-unenrolled-devices.md
@@ -50,7 +52,7 @@
     href: save-application-failed-error.md
   - name: Saving images locally not restricted
     href: saving-images-locally-not-restricted.md
-  - name: Set up and validate app protection policies
+  - name: Set up and validate app protection policies
     href: set-up-app-protection-policies-ios-device.md
   - name: Support tip - Deployment, delivery, and processing of a Win32 application
     href: develop-deliver-working-win32-app-via-intune.md
@@ -74,7 +76,7 @@
     href: troubleshoot-co-management-workloads.md
 - name: Device configuration
   items:
-  - name: 2016341112 -iOS device is currently busy
+  - name: 2016341112 -iOS device is currently busy
     href: 2016341112-ios-device-is-currently-busy.md
   - name: Connectivity issues due to root certificates
     href: fix-connectivity-issues.md
@@ -144,13 +146,13 @@
       href: windows10-enroll-error-80180002b.md
     - name: Can't enroll devices with a non-administrator account
       href: no-permission-to-enroll-windows-devices.md
-    - name: Cannot delete autopilot deployment profile
+    - name: Cannot delete autopilot deployment profile
       href: cannot-delete-autopilot-deployment-profile.md
     - name: Error 806 or 808 when importing CSV files
       href: import-windows-autopilot-device-csv-files-errors.md
     - name: Error 0xcaa9001f in MDM enrollment
       href: mdm-enrollment-error-0xcaa9001f.md
-    - name: Intune Connector for AD doesn't appear
+    - name: Intune Connector for AD doesn't appear
       href: intune-connector-for-ad-not-appear.md
     - name: Support tip - Azure AD device registration and Windows Autopilot
       href: azure-ad-device-registration-autopilot.md
@@ -198,7 +200,7 @@
       href: devices-receive-scep-certificates-error-0x80094800.md
     - name: Intune Certificate Connector events and diagnostic codes
       href: troubleshoot-certificate-connector-events.md
-    - name: Intune Connector Setup Wizard ended prematurely
+    - name: Intune Connector Setup Wizard ended prematurely
       href: connector-setup-wizard-ends-prematurely.md
     - name: NDES certificate not installed
       href: error-0x80090014-installing-ndes-certificate.md
@@ -206,7 +208,7 @@
       href: reinstall-the-intune-connector.md
     - name: SCEP certificate deployment fails after CA renewal
       href: scep-deployment-to-win10-devices-fails.md
-    - name: SCEP certificate request fails on CRP
+    - name: SCEP certificate request fails on CRP
       href: scep-certificate-request-fails.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
@@ -234,9 +236,9 @@
     items:
     - name: Can't move an Intune Exchange connector
       href: fails-moving-intune-exchange-connector.md
-    - name: Could not retrieve access token for Graph API
+    - name: Could not retrieve access token for Graph API
       href: could-not-retrieve-access-token.md
-    - name: Intune Exchange Connector version is not supported
+    - name: Intune Exchange Connector version is not supported
       href: exchange-connector-version-not-supported.md
     - name: Troubleshoot Conditional Access
       href: troubleshoot-conditional-access.md
@@ -250,7 +252,7 @@
         href: troubleshoot-exchange-connector-common-errors.md
     - name: Troubleshoot Jamf Pro integration
       href: troubleshoot-jamf.md
-    - name: Unable to connect or send inventory information
+    - name: Unable to connect or send inventory information
       href: unable-to-connect-send-inventory-information.md
   - name: Error -2016281112 deploying a password policy
     href: error-deploying-password-policy.md

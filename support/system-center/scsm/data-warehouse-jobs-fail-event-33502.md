@@ -26,7 +26,7 @@ Data warehouse jobs fail in Microsoft System Center 2012 Service Manager. When t
 > Module name: TransformEntityRelatesToEntityFact  
 > Message: ErrorNumber="50000" Message="Unable to acquire applock - another instance of the module must already be running." Severity="18" State="1" ProcedureName="InitializeTransform" LineNumber="52" Task="(null)"
 
-Also, when you run certain data Warehouse-related cmdlets, you frequently see a time-out error recorded for the `TransformEntityRelatesToEntityFact` module that resembles the following:
+Also, when you run certain data Warehouse-related cmdlets, you frequently see a time-out error recorded for the `TransformEntityRelatesToEntityFact` module that resembles the following:
 
 > Get-SCDWJobModule -JobName transform.common  
 > ...  
@@ -39,9 +39,9 @@ This problem can occur if the volume of transform data exceeds the amount that c
 
 ## Resolution 1
 
-If you are currently in a failed state, use Resolution 1 to process the backlog and return the operation to a functioning status. The other two methods are ways to prevent the issue from reoccurring. To do it, wait for the status of all data warehouse jobs to be displayed as **Not Started** or **Failed**, and then follow these steps:
+If you are currently in a failed state, use Resolution 1 to process the backlog and return the operation to a functioning status. The other two methods are ways to prevent the issue from reoccurring. To do it, wait for the status of all data warehouse jobs to be displayed as **Not Started** or **Failed**, and then follow these steps:
 
-1. On the data warehouse server, stop the **HealthService** service at an elevated command prompt. To do it, run the following command:  
+1. On the data warehouse server, stop the **HealthService** service at an elevated command prompt. To do it, run the following command:  
 
     ```console
     Net Stop HealthService
@@ -50,7 +50,7 @@ If you are currently in a failed state, use Resolution 1 to process the backlog
     > [!NOTE]
     > Depending on your version of Service Manager, this service name might be displayed as either **Microsoft Monitoring agent** or **System Center Management**.
 
-2. Update the following SQL query to reflect the `ModuleName` value of the module in the `Transform.Common` job that's failing. This example uses `TransformEntityRelatesToEntityFact`.
+2. Update the following SQL query to reflect the `ModuleName` value of the module in the `Transform.Common` job that's failing. This example uses `TransformEntityRelatesToEntityFact`.
 
     > [!NOTE]
     > The simplest way to see the `ModuleName` value for the module that's failing is to open the Service Manager console, select **Data Warehouse**, select **Data Warehouse** again, select **Data Warehouse jobs**, and then select `Transform.Common`. In the bottom-center pane, you can see a list of modules and the current status. After you make the changes, run the query.
@@ -137,7 +137,7 @@ If you are currently in a failed state, use Resolution 1 to process the backlog
 >
 > - You may have to run the SQL query several times until it finishes quickly.
 > - Don't log off when you are running the query.
-> - Run the query as quickly as possible, because new data that's captured in Service Manager will surge to the data warehouse when the service is restarted.  
+> - Run the query as quickly as possible, because new data that's captured in Service Manager will surge to the data warehouse when the service is restarted.  
 > - If it takes you a long time to run the query several times, you may have another surge of data.
 > - Use [Resolution 3](#resolution-3) as the long-term solution.
 

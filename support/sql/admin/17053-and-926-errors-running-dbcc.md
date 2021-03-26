@@ -18,15 +18,15 @@ _Original KB number:_ &nbsp; 926070
 
 You run one of the following DBCC commands in Microsoft SQL Server:
 
-- DBCC CHECKDB
-- DBCC CHECKALLOC
-- DBCC CHECKTABLE
-- DBCC CHECKCATALOG
-- DBCC CHECKFILEGROUP
+- `DBCC CHECKDB`
+- `DBCC CHECKALLOC`
+- `DBCC CHECKTABLE`
+- `DBCC CHECKCATALOG`
+- `DBCC CHECKFILEGROUP`
 
 After you do this, error messages that resemble the following may be logged in the SQL Server error log:
 
-```console
+```output
 2006-09-01 17:33:24.48 spid54 35 transactions rolled forward in database 'ProductionData' (11). This is an informational message only. No user action is required.
 2006-09-01 17:35:39.16 spid54 4 transactions rolled back in database 'ProductionData' (11). This is an informational message only. No user action is required.
 2006-09-01 17:36:31.76 spid53 Error: 17053, Severity: 16, State: 1.
@@ -120,7 +120,7 @@ If the snapshot could not be created at all, you receive error messages that res
 
 If the internal database snapshot runs into 1450 or 665 errors, here is a typical sequence you will notice in the SQL Server error log:
 
-```console
+```output
 2008-05-21 13:03:45.67 spid500 272 transactions rolled forward in database 'MYDATABASE' (12). This is an informational message only. No user action is required.
 2008-05-21 13:03:45.84 spid500 2 transactions rolled back in database 'MYDATABASE' (12). This is an informational message only. No user action is required.
 2008-05-21 13:03:46.97 spid500 Recovery completed for database MYDATABASE (database ID 12) in 5 second(s) (analysis 602 ms, redo 3954 ms, undo 105 ms.) This is an informational message only. No user action is required.

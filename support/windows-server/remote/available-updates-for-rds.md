@@ -128,8 +128,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 - [2964832](https://support2.microsoft.com/help/2964832) RemoteApp program pop-up window is hidden in Windows
 
-- [2930340](https://support.microsoft.com/help/2930340)  Ctrl+Alt+Insert Remote Desktop keyboard shortcut doesn't work in Windows 8.1 or Windows Server 2012 R2
-
 - [2925429](https://support.microsoft.com/help/2925429) Print jobs are lost or an application crashes in Microsoft Enterprise Desktop Virtualization 2.0 in Windows
 
 - [2916266](https://support.microsoft.com/help/2916266)  Mstsc.exe crashes when you print a large document from an RDS session
@@ -143,8 +141,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 - [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](/troubleshoot/windows-server/remote/communication-issues)
 
 ## Remote Desktop Gateway
-
-- [3162871](https://support.microsoft.com/help/3162871) RD Gateway Manager console crashes with the latest .NET Framework 4.6.1 update on Windows Server 2012 R2
 
 - [3123913](https://support.microsoft.com/help/3123913) Remote Desktop Gateway server crashes during certain user disconnect scenarios in Windows Server 2012 R2
 

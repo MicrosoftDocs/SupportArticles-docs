@@ -1,8 +1,9 @@
 ---
 title: Troubleshooting Windows Azure Guest Agent
 description: Troubleshoot the Windows Azure Guest Agent is not working issues
-services: virtual-machines-windows
-ms.service: virtual-machines-windows
+services: virtual-machines
+ms.service: virtual-machines
+ms.collection: windows
 author: dkdiksha
 manager: dcscontentpm
 editor: 

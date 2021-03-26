@@ -7,8 +7,8 @@ author: asinn826
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm

@@ -12,7 +12,7 @@ This article describes how to determine the version of System Center 2012 Virtua
 _Original product version:_ &nbsp; System Center 2012 Virtual Machine Manager, System Center 2012 R2 Virtual Machine Manager  
 _Original help number:_ &nbsp; 2627355
 
-To determine whether any update rollups have been applied, open the **Programs and Features** item in Control Panel, and then select **View Installed Updates**. Identify any items that are listed under System Center Virtual Machine Manager. See the following tables to determine which update rollup has been applied to your VMM computer.
+To determine whether any update rollups have been applied, open the **Programs and Features** item in Control Panel, and then select **View Installed Updates**. Identify any items that are listed under System Center Virtual Machine Manager. See the following tables to determine which update rollup has been applied to your VMM computer.
 
 ## System Center 2012 Virtual Machine Manager
 
@@ -52,13 +52,13 @@ To determine whether any update rollups have been applied, open the **Programs a
 |Update Rollup 2 for System Center 2012 R2 Virtual Machine Manager|2932926|2/10/2014|3.2.7634.0| [https://support.microsoft.com/help/2932926](https://support.microsoft.com/help/2932926) |
 |Update rollup 3 for System Center 2012 R2 Virtual Machine Manager|2965414|5/1/2014|3.2.7672.0| [https://support.microsoft.com/help/2965414](https://support.microsoft.com/help/2965414) |
 |Update Rollup 4 for System Center 2012 R2 Virtual Machine Manager|2992024|8/11/2014|3.2.7768.0| [https://support.microsoft.com/help/2992024](https://support.microsoft.com/help/2992024) |
-|Update Rollup 5 for System Center 2012 R2 Virtual Machine Manager|3023195|2/10/2105|3.2.7895.0| [https://support.microsoft.com/help/3023195](https://support.microsoft.com/help/3023195) |
-|Update Rollup 6 for System Center 2012 R2 Virtual Machine Manager|3050317|4/28/2015|3.2.8002.0| [https://support.microsoft.com/help/3050317](https://support.microsoft.com/help/3050317) |
-|Update Rollup 7 for System Center 2012 R2 Virtual Machine Manager|3066340|7/29/2015|3.2.8071.0| [https://support.microsoft.com/help/3066340](https://support.microsoft.com/help/3066340) |
-|Update Rollup 8 for System Center 2012 R2 Virtual Machine Manager|3096389|10/27/2015|3.2.8117.0| [https://support.microsoft.com/help/3096389](https://support.microsoft.com/help/3096389) |
-|Update Rollup 9 for System Center 2012 R2 Virtual Machine Manager|3129784|01/27/2016|3.2.8145.0| [https://support.microsoft.com/help/3129784](https://support.microsoft.com/help/3129784) |
-|Update Rollup 10 for System Center 2012 R2 Virtual Machine Manager|3147167|05/23/2016|3.2.8169.0| [https://support.microsoft.com/help/3147167](https://support.microsoft.com/help/3147167) |
-|Update Rollup 11 for System Center 2012 R2 Virtual Machine Manager|3184831|08/24/2016|3.2.8224.0| [https://support.microsoft.com/help/3184831](https://support.microsoft.com/help/3184831) |
+|Update Rollup 5 for System Center 2012 R2 Virtual Machine Manager|3023195|2/10/2105|3.2.7895.0| [https://support.microsoft.com/help/3023195](https://support.microsoft.com/help/3023195) |
+|Update Rollup 6 for System Center 2012 R2 Virtual Machine Manager|3050317|4/28/2015|3.2.8002.0| [https://support.microsoft.com/help/3050317](https://support.microsoft.com/help/3050317) |
+|Update Rollup 7 for System Center 2012 R2 Virtual Machine Manager|3066340|7/29/2015|3.2.8071.0| [https://support.microsoft.com/help/3066340](https://support.microsoft.com/help/3066340) |
+|Update Rollup 8 for System Center 2012 R2 Virtual Machine Manager|3096389|10/27/2015|3.2.8117.0| [https://support.microsoft.com/help/3096389](https://support.microsoft.com/help/3096389) |
+|Update Rollup 9 for System Center 2012 R2 Virtual Machine Manager|3129784|01/27/2016|3.2.8145.0| [https://support.microsoft.com/help/3129784](https://support.microsoft.com/help/3129784) |
+|Update Rollup 10 for System Center 2012 R2 Virtual Machine Manager|3147167|05/23/2016|3.2.8169.0| [https://support.microsoft.com/help/3147167](https://support.microsoft.com/help/3147167) |
+|Update Rollup 11 for System Center 2012 R2 Virtual Machine Manager|3184831|08/24/2016|3.2.8224.0| [https://support.microsoft.com/help/3184831](https://support.microsoft.com/help/3184831) |
 ||||||
 
 ## More information

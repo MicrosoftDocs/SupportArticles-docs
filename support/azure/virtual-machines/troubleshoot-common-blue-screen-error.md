@@ -2,14 +2,13 @@
 
 title: Blue screen errors when booting an Azure VM| Microsoft Docs
 description: Learn how to troubleshoot the issue that the blue screen error is received when booting| Microsoft Docs
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
@@ -68,7 +67,7 @@ To enable dump log and Serial Console, run the following script.
     In this script, we assume that the drive letter that is assigned to the attached OS disk is F.  Replace it with the appropriate value in your VM.
 
     ```powershell
-    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM.hiv
+    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
     REM Enable Serial Console
     bcdedit /store F:\boot\bcd /set {bootmgr} displaybootmenu yes
@@ -93,7 +92,7 @@ To enable dump log and Serial Console, run the following script.
     2. If there's not enough space or this is a large size VM (G, GS or E series), you could then change the location where this file will be created and refer that to any other data disk which is attached to the VM. To do this, you will need to change the following key:
 
     ```config-reg
-    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM.hiv
+    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f

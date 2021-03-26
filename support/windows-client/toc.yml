@@ -46,7 +46,7 @@
     items:
     - name: 64-bit versions of Windows don't support 16-bit applications
       href: ./application-management/x64-windows-not-support-16-bit-programs.md
-    - name: Availability and description of FCIV
+    - name: Third-party virtualization applications don't work with Hyper-V
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
     - name: Registering OCX and DLL files as System Globals
       href: ./application-management/registering-ocx-dll-files-system-globals.md
@@ -354,7 +354,7 @@
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
-    - name: Error 0x80042468 when creating a single partition
+    - name: Error 0x80042468 when creating a single partition
       href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
       href: ./deployment/event-10-is-logged-in-application-log.md
@@ -398,11 +398,11 @@
       href: ./deployment/windows-setup-log-file-locations.md
     - name: Windows SIM can't generate a catalog
       href: ./deployment/windows-sim-unable-generate-catalog-error.md
-    - name: Windows 7 Upgrade Advisor tool failed to run
+    - name: Windows 7 Upgrade Advisor tool failed to run
       href: ./deployment/upgrade-advisor-tool-failed-to-run.md
     - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
-    - name: You can't access an EFI system partition
+    - name: You can't access an EFI system partition
       href: ./deployment/cant-access-efi-system-partition.md
 - name: Group Policy
   items:
@@ -464,6 +464,8 @@
       href: ./networking/access-denied-access-smb-file-share.md
     - name: Can access offline files even if the file server is removed
       href: ./networking/access-offline-files-file-server-removed-from-network.md
+    - name: Can't access shared folders from File Explorer
+      href: ./networking/cannot-access-shared-folder-file-explorer.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
     - name: Mapped drive connection to network share is lost
@@ -1079,7 +1081,7 @@
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Windows 7 Extended Security Updates (ESU)
-    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
+    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.yml
   - name: Windows 7 ESU offers for E5 customers
     href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
   - name: Troubleshoot issues in ESU

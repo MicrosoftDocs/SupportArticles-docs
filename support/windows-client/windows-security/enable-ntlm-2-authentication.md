@@ -1,7 +1,7 @@
 ---
 title: Enable NTLM 2 authentication
 description: Describes how to enable NTLM 2 authentication.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -32,10 +32,6 @@ Recent improvements in computer hardware and software algorithms have made these
 After you upgrade all computers that are based on Windows 95, Windows 98, Windows 98 Second Edition, and Windows NT 4.0, you can greatly improve your organization's security by configuring clients, servers, and domain controllers to use only NTLM 2 (not LM or NTLM).
 
 ## More information
-
-For additional information about installing the appropriate Active Directory Client Extension, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[288358](https://support.microsoft.com/help/288358) How to install the Active Directory client extension  
 
 When you install Active Directory Client Extensions on a computer that is running Windows 98, the system files that provide NTLM 2 support are also automatically installed. These files are Secur32.dll, Msnp32.dll, Vredir.vxd, and Vnetsup.vxd. If you remove Active Directory Client Extension, the NTLM 2 system files are not removed because the files provide both enhanced security functionality and security-related fixes.
 

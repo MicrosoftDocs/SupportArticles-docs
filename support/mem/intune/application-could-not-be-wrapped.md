@@ -45,7 +45,7 @@ When you wrap a LOB app by using the Microsoft Intune App Wrapping Tool for Andr
 > com.microsoft.intune.mam.apppackager.AppPackager.packageApp(AppPackager.java:111)  
 > com.microsoft.intune.mam.apppackager.PackagerMain.mainInternal(PackagerMain.java:213)  
 > com.microsoft.intune.mam.apppackager.PackagerMain.main(PackagerMain.java:57)  
-> org.jf.util.ExceptionWithContext: Unsigned short value out of range: <65536 or a value that's greater than 65536>  
+> org.jf.util.ExceptionWithContext: Unsigned short value out of range: <65536 or a value that's greater than 65536>  
 > org.jf.dexlib2.writer.DexDataWriter.writeUshort(DexDataWriter.java:116)  
 > org.jf.dexlib2.writer.InstructionWriter.write(InstructionWriter.java:348)  
 > org.jf.dexlib2.writer.DexWriter.writeCodeItem(DexWriter.java:1058)
@@ -61,13 +61,13 @@ To fix this problem, follow these steps:
 1. Install the latest version of the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
 2. [Enable multidex](https://developer.android.com/studio/build/multidex) for your Android app.
 
-Test whether the problem is fixed. If the problem persists, try the methods that are provided in the next section.
+Test whether the problem is fixed. If the problem persists, try the methods that are provided in the next section.
 
 ## Workaround
 
 To work around this problem, try the following methods in the given order:
 
-- Examine the multidex configuration to see whether you specify any classes in the primary DEX file. You may experience problems if too many classes are added to the primary DEX file. For more information, see [https://developer.android.com/studio/build/multidex#keep](https://developer.android.com/studio/build/multidex#keep).
+- Examine the multidex configuration to see whether you specify any classes in the primary DEX file. You may experience problems if too many classes are added to the primary DEX file. For more information, see [https://developer.android.com/studio/build/multidex#keep](https://developer.android.com/studio/build/multidex#keep).
 
     To work around this problem, reduce the number of classes that are specified in the primary DEX file.
 
@@ -78,7 +78,7 @@ To work around this problem, try the following methods in the given order:
 
 ## More Information
 
-For more information about the 64K method reference limit of DEX files, see [Enable multidex for apps with over 64K methods](https://developer.android.com/studio/build/multidex).
+For more information about the 64K method reference limit of DEX files, see [Enable multidex for apps with over 64K methods](https://developer.android.com/studio/build/multidex).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

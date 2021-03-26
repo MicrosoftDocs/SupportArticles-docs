@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot delivery of SCEP certificates for Intune | Microsoft Docs
+title: Troubleshoot delivery of Simple Certificate Enrollment Protocol (SCEP) certificates
 description: Troubleshoot the delivery of a certificate to a device from the CA when using SCEP certificate profiles with Intune to deploy certificates.
 ms.date: 01/30/2020
 ms.reviewer: lacranda
@@ -26,9 +26,9 @@ For device administrator enrolled devices, you'll see a notification similar to 
 
 For Android Enterprise or Samsung Knox, the certificate installation is automatic, and silent.
 
-To view an installed certificate on Android, use a 3rd party certificate viewing app.
+To view an installed certificate on Android, use a third party certificate viewing app.
 
-You can also review the [devices OMADM log](troubleshoot-scep-certificate-profiles.md#logs-for-android-devices). Look for entries that resemble the following, which are logged when certificates install:
+You can also review the [devices OMADM log](troubleshoot-scep-certificate-profiles.md#logs-for-android-devices). Look for entries that resemble the following examples, which are logged when certificates install:
 
 **Root certificate**:
 

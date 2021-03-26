@@ -1,7 +1,7 @@
 ---
-title: TPM is not recognized
-description: Trusted Platform Module (TPM) isn't recognized on some Windows 7-based devices. Provides a resolution.
-ms.data: 09/08/2020
+title: Trusted Platform Module (TPM) isn't recognized
+description: TPM isn't recognized on some Windows 7 devices. Provides a resolution.
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -13,16 +13,16 @@ ms.reviewer: kaushika, manojse, raverma, suhasm
 ms.prod-support-area-path: Secure Boot and UEFI
 ms.technology: windows-client-security
 ---
-# A Trusted Platform Module (TPM) isn't recognized on some Windows 7-based devices
+# A Trusted Platform Module (TPM) isn't recognized on some Windows 7 devices
 
-This article provides a resolution for the issue that a Trusted Platform Module (TPM) isn't recognized as a compatible device on some Windows 7-based devices.
+This article solves the issue that a TPM isn't recognized as a compatible device on some Windows 7 devices.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2895212
 
 ## Symptoms
 
-On some Windows 7-based devices, a TPM isn't recognized as a compatible device and can't be used for certain applications such as BitLocker Drive Encryption and Virtual Smart Card. Additionally, if you check the status of the TPM by using Windows TPM Management Console, you receive a **Compatible TPM cannot be found** message.
+On some Windows 7 devices, a TPM isn't recognized as a compatible device. And it can't be used for certain applications, such as BitLocker Drive Encryption and Virtual Smart Card. Additionally, if you check the status of the TPM by using Windows TPM Management Console, you receive a **Compatible TPM cannot be found** message.
 
 Also, you may experience the same behavior on some Windows-based devices when you do an in-place upgrade from Windows XP or Windows Vista to Windows 7.
 

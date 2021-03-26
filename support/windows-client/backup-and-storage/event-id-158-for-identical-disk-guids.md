@@ -1,7 +1,7 @@
 ---
 title: Event ID 158 for identical disk GUIDs
 description: Discusses that Event ID 158 is logged if identical disk GUIDs are found. Provides a resolution.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -29,10 +29,10 @@ An error event for Event ID 158 is logged. The event indicates that two or more 
 
 ## Cause
 
-This problem may be caused by any one of several different situations. The two most common situations are the following:
+This problem may be caused by any one of several different situations. The two most common situations are the following ones:
 
-- If multiple paths to the same physical disk device are available, but Microsoft Multipath I/O (MPIO) isn't enabled, the device is exposed to the system by all paths that are available. This causes the same device ID data (such as Device Serial Number, Vendor ID, Product ID, and so on) to be exposed multiple times.
-- If Virtual Hard Disks (VHD) are duplicated by using a copy-and-paste operation to create additional virtual machines (VMs), none of the internal data structures are changed. Therefore, the VMs have the same disk GUIDs and the same ID information (such as Device Serial Number, Vendor ID, Product ID, and so on).
+- Multiple paths to the same physical disk device are available. But Microsoft Multipath I/O (MPIO) isn't enabled. In this situation, the device is exposed to the system by all paths that are available. It causes the same device ID data (such as Device Serial Number, Vendor ID, Product ID, and so on) to be exposed multiple times.
+- If Virtual Hard Disks (VHD) are duplicated by using a copy-and-paste operation to create more virtual machines (VMs), none of the internal data structures are changed. So, the VMs have the same disk GUIDs and the same ID information (such as Device Serial Number, Vendor ID, Product ID, and so on).
 
 ## Resolution
 

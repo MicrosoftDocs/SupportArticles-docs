@@ -13,27 +13,27 @@ _Original KB number:_ &nbsp; 4466369
 
 ## Symptoms
 
-You receive the following notification in the Jamf console:
+You receive the following notification in the Jamf console:
 
 > Unable to connect to Microsoft Intune  
 > Check your Microsoft Intune Integration configuration
 >
 > Unable to send inventory information to Microsoft Intune  
-> Test your Microsoft Intune Integration configuration
+> Test your Microsoft Intune Integration configuration
 
 :::image type="content" source="media/unable-to-connect-send-inventory-information/notifications.png" alt-text="screenshot of notification" border="false":::
 
 ## Cause
 
-This issue occurs because your Jamf license has expired.
+This issue occurs because your Jamf license has expired.
 
 ## Resolution
 
-To resolve this issue, contact [Jamf Software](https://www.jamf.com/) for assistance.
+To resolve this issue, contact [Jamf Software](https://www.jamf.com/) for assistance.
 
 ## More information
 
-You may also notice that the connection status for Jamf is inactive or shows **Terminated** in the Intune Admin console.
+You may also notice that the connection status for Jamf is inactive or shows **Terminated** in the Intune Admin console.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

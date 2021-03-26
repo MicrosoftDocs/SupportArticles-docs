@@ -161,7 +161,7 @@ To confirm that the RDP port assignment has been changed, use the netstat tool.
 2. At the command prompt, type `netstat -a` then press ENTER.
 3. Look for an entry for the port number that you assigned to RDP. The port should appear in the list and have a status of Listening. 
 
-Remote Desktop Connection and the Terminal Server Web Client use port 3389, by default, to connect to a Terminal Server. If you change the RDP port on the Terminal Server, you will need to modify the port used by Remote Desktop Connection and the Terminal Server Web Client. For more information, see [How to change the Listening Port in the Windows Terminal Server Web Client](https://support.microsoft.com/help/326945).
+Remote Desktop Connection and the Terminal Server Web Client use port 3389, by default, to connect to a Terminal Server. If you change the RDP port on the Terminal Server, you will need to modify the port used by Remote Desktop Connection and the Terminal Server Web Client.
 
 #### Verify that the listener on the Terminal Server is working properly
 
@@ -280,7 +280,7 @@ Terminal Services clients may be repeatedly denied access to the Terminal Server
     > Remote desktop disconnected. Because of a security error, the client could not connect to the remote computer. Verify that you are logged onto the network and then try connecting again.
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/).
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
 
 To resolve this issue, back up and then remove the X509 Certificate registry keys, restart the computer, and then reactivate the Terminal Services Licensing server. To do this, follow these steps.
 

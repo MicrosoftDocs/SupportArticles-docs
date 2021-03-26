@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 3.5 installation errors
 description: This article describes a problem where you receive an 0x800F0906, 0x800F081F, or 0x800F0907 error code when you try to install the .NET Framework 3.5 in Windows.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: .NET Framework installation
 ms.technology: windows-client-application-compatibility
+adobe-target: true
 ---
 # .NET Framework 3.5 installation errors: 0x800F0906, 0x800F081F, 0x800F0907, 0x800F0922
 
@@ -76,7 +77,7 @@ To configure the Group Policy setting, follow these steps:
 
 6. Tap or click **OK**.
 
-7. At an elevated command prompt, type `gpupdate/force`, and then press **Enter** to apply the policy immediately.
+7. At an elevated command prompt, type `gpupdate /force`, and then press **Enter** to apply the policy immediately.
 
 #### Method 3: Use Windows installation media
 
@@ -170,7 +171,7 @@ To do this, follow these steps:
 
 1. Tap or click **OK**.
 
-1. At an elevated command prompt, type the `gpupdate/force`, and then press **Enter** to apply the policy immediately.
+1. At an elevated command prompt, type the `gpupdate /force`, and then press **Enter** to apply the policy immediately.
 
 ## Resolution for Windows 10
 
@@ -184,7 +185,7 @@ To do this, follow these steps:
 
        1. Mount the ISO image that's created in step 1.
        2. Point the **Alternate source file path** to the ISO `sources\sxs` folder from the ISO.
-       3. Run the `gpupdate/force` command.
+       3. Run the `gpupdate /force` command.
        4. Add the .NET Framework feature.  
 
 - **Error code 0x800F0922**
