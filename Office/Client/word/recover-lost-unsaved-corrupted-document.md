@@ -422,6 +422,8 @@ In certain situations, it's possible to completely lose a Word document. For exa
 > [!NOTE]
 > The whole document may be lost if you have not recently saved the document. If you have saved your document, you may lose only the changes that you made since the last save. **Be aware that some lost documents may not be recoverable.**
 
+If a file saved to OneDrive has become corrupted or isn't found in the Recycle bin, it is possible to roll back changes to your OneDrive files. For more information, see [Restore your OneDrive](https://support.microsoft.com/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15).
+
 The AutoRecover feature in Word performs an emergency Backup of open documents when an error occurs. Some errors can interfere with the autorecovery functionality. The AutoRecover feature is not a substitute for saving your files.
 
 We do not provide any utilities to recover deleted documents. However, some third-party utilities to recover deleted documents might be available from the internet.
