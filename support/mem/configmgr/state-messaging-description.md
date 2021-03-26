@@ -32,15 +32,26 @@ The following diagram provides a good description of how the state messaging sys
 
 The green box represents the state messaging system. The components inside the box are components that feed information to the system.
 
-When state messages are received, two things occur. First, state messages are stored in the Windows Management Instrumentation (WMI) provider. Second, the state system scrapes WMI on a 15-minute cycle (default) for any state messages that haven't yet been sent, and then forwards them to the management point. The cycle period can be changed.
+When state messages are received, two things occur. First, state messages are stored in the Windows Management Instrumentation (WMI) provider. Second, the state system scrapes WMI on a 15-minute cycle (default) for any state messages that haven't yet been sent. Then the state system forwards them to the management point. The cycle period can be changed.
 
-In the diagram, the client installation piece is shown separately for clarity. During the client installation, the management point is located and targeted for state messages. Before that point is reached, or if the management point is down for some reason, state messages about the client installation are forwarded to the fallback status point (FSP), if it's configured. For everything else, traffic goes directly to the management point.
+In the diagram, the client installation piece is shown separately for clarity. During the client installation, the management point is located and targeted for state messages. State messages about the client installation are forwarded to the fallback status point (FSP) that's configured under one of the following conditions:
 
-State messages that arrive at the management point are processed into the `.smx` files by the MP Relay component, and put into the `auth\statesys.box\incoming` folder on the site server. Then, they're processed into the database to complete the workflow.
+- Before the management point is reached.
+- The management point is down for some reason.
+
+For everything else, traffic goes directly to the management point.
+
+State messages that arrive at the management point are processed into the *`.smx`* files by the MP Relay component, and put into the `auth\statesys.box\incoming` folder on the site server. Then, they're processed into the database to complete the workflow.
 
 ## Digging deeper
 
-We have to make sure that verbose logging is enabled for the client, management point, and state messaging components on the site server. To set verbose or debug logging on a Configuration Manager client or management point, edit (or create) the following registry entries:
+We have to make sure that verbose logging is enabled for:
+
+- the client
+- the management point
+- the state messaging components on the site server
+
+To set verbose or debug logging on a Configuration Manager client or management point, edit or create the following registry entries:
 
 |Registry subkey|DWORD name|Value data|
 |---|---|---|
@@ -209,11 +220,11 @@ In the Statemessage.log file, you can see that the state message information is 
 > [!NOTE]
 > This example is truncated to a single state message because of the size of the XML file.
 
-Although the Statemessage.log file records that the messages are dispatched to the management point, the state messaging system doesn't actually move data to the management point. In the following example, you can see that `CCMMessaging` does this. There's more that go on behind the scenes at this point. However, it's sufficient to know that `CCMMessaging` sends the data to the management point (in this case, the `MP_Relay` component).
+Although the *Statemessage.log* file records that the messages are dispatched to the management point, the state messaging system doesn't actually move data to the management point. In the following example, you can see that `CCMMessaging` does this operation. There's more that go on behind the scenes at this point. However, it's sufficient to know that `CCMMessaging` sends the data to the management point (in this case, the `MP_Relay` component).
 
 > \<![LOG[OutgoingMessage(Queue='mp_**mp_relay**endpoint', ID={A9E7A07D-223D-4F5D-93D5-15AF5B72E05C}): Delivered successfully to host '*host_name*'.]LOG]!>
 
-When the data arrives for processing at `MP_Relay`, it's processed and translated to the `.smx` file format, and then put into the `auth\statesys.box\incoming` folder.
+When the data arrives for processing at `MP_Relay`, it's processed and translated to the *`.smx`* file format, and then put into the `auth\statesys.box\incoming` folder.
 
 > Inv-Relay Task: Processing message body  
 > Relay: FileType= SMX  
@@ -222,20 +233,20 @@ When the data arrives for processing at `MP_Relay`, it's processed and translate
 > Relay: 0 of 0 attachments successfully processed  
 > Inv-Relay: Task completed successfully  
 
-In the `auth\statesys.box\incoming` folder, you can see the `.smx` files being processed. Typically, you won't see them here. But if the files remain in this folder, you may have to investigate what the messages are and why they aren't being processed. If you find an `.smx` file, you can open it by using a text editor such as Notepad to see the details. However, the formatting of the file may be unreadable, as in the following example:
+In the `auth\statesys.box\incoming` folder, you can see the *`.smx`* files being processed. Typically, you won't see them here. But if the files remain in this folder, you need to investigate what the messages are and why they aren't being processed. If you find an *`.smx`* file, you can open it by using a text editor such as Notepad to see the details. However, the formatting of the file may be unreadable, as in the following example:
 
-:::image type="content" source="./media/state-messaging-description/notepad-example.png" alt-text="An example of smx file in Notepad." border="false":::
+:::image type="content" source="./media/state-messaging-description/notepad-example.png" alt-text="An example of SMX file in Notepad." border="false":::
 
-If you rename the `.smx` file by adding the `.xml` extension so that the file is named *file_name*.smx.xml, and then you double-click the new file name, the XML file is opened in Internet Explorer and is much easier to read.
+If you rename the *`.smx`* file by adding the *`.xml`* extension so that the file is named *file_name*.smx.xml, and then you double-click the new file name, the XML file is opened in Internet Explorer and is much easier to read.
 
 The following image is an example of an XML file opened in Internet Explorer. The details of the computer and state message are highlighted. The highlight shows the file contains the information that we've previously discussed combined with the unique **State Message ID** value.
 
 > [!NOTE]
-> If you rename these files, you should first copy them to a different folder so that you don't affect the Statesys.box folder.
+> If you rename these files, you should first copy them to a different folder so that you don't affect the *Statesys.box* folder.
 
 :::image type="content" source="./media/state-messaging-description/xml.png" alt-text="An example .smx.xml file in Internet Explorer." border="false":::
 
-Finally, the state messages must be processed into the database. In the Statesys.log file, you can see such messages that resemble the following:
+Finally, the state messages must be processed into the database. In the *Statesys.log* file, you can see such messages similar to the following example:
 
 > Found new state messages to process, starting processing thread  
 > Thread "State Message Processing Thread #0" id:5076 started  
@@ -246,7 +257,7 @@ Finally, the state messages must be processed into the database. In the Statesys
 > CMessageProcessor - Processed 1 message files in this batch, with 0 bad files.  
 > Thread "State Message Processing Thread #0" id:5076 terminated normally
 
-The database processing component can be made visible by enabling SQL tracing. However, that doesn't help much here. So we must use the SQL profiler instead. The profiler gives us a hint of what's occurring behind the scenes - but not completely. Several SQL stored procedures are responsible for processing state messages. Additionally, several tables in the database store the state messaging data. The stored procedures that do state message processing generally start with the name `spProcess`. There are many of these.
+The database processing component can be made visible by enabling SQL tracing. However, that doesn't help much here. So we must use the SQL profiler instead. The profiler gives us a hint of what's occurring behind the scenes - but not completely. Several SQL stored procedures are responsible for processing state messages. Additionally, several tables in the database store the state messaging data. The stored procedures that do state message processing generally start with the name `spProcess`. There are many of these procedures.
 
 The site server tracks state messages as they arrive. It can flag any missing messages and periodically request a resync, as necessary. State messages are important. You don't want to miss any.
 
