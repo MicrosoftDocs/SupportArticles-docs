@@ -1,6 +1,6 @@
 ---
 title: Debuggers, core dumps and collecting core dumps
-description: This article describes the debuggers, core dumps and collecting core dumps.
+description: This article describes the debuggers, core dumps, and the tools to capture and analyze core dump files in Linux.
 ms.date: 03/25/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
@@ -9,25 +9,17 @@ ms.reviewer: ramakoni
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
-This article introduces the debuggers, core dumps and collecting core dumps.
+This article introduces the debuggers, core dumps, and the tools to capture and analyze core dump files in Linux.
 
-## Prerequisites
-
-Like the two chapters that preceded it, this part is structured to place more emphasis on the theory and principals to follow when starting to troubleshoot. It does not have any prerequisites, but you should have following set up at the moment if you followed all the steps of this training so far:
-
-- Nginx has two web sites:
-  - The first web site listening for requests with the **myfirstwebsite** host header (`http://myfirstwebsite`) and routing the requests to the demo ASP.NET Core application, which is listening on port 5000.
-  - The second web site listening for requests with host header **buggyamb** (`http://buggyamb`) and routing the requests to the second ASP.NET Core sample buggy application, which is listening on port 5001.
-- Both ASP.NET Core applications should be running as services, which restart automatically when the server is rebooted, or the applications stops or crashes.
-- Linux local firewall is enabled and configured to allow SSH and HTTP traffic.
+[!INCLUDE [Prerequisites](prerequisites.md)]
 
 ## Goal of this part
 
-This part is aimed at introducing you to the concept of [core dumps](https://wikipedia.org/wiki/Core_dump), debuggers, and the tools to capture and analyze core dump files. Most of the techniques and tools described in this part will be used in the next troubleshooting labs.
+This part is aimed at introducing you to the concept of core dumps, debuggers, and the tools to capture and analyze core dump files. Most of the techniques and tools described in this part will be used in the next troubleshooting labs.
 
 ## Core dump
 
-Just like a user mode memory dump in Windows, a core dump is a snapshot of the memory of a process. Core dumps are frequently needed for troubleshooting crash or performance problems in Linux.
+Just like a user mode memory dump in Windows, a [core dump](https://wikipedia.org/wiki/Core_dump) is a snapshot of the memory of a process. Core dumps are frequently needed for troubleshooting crash or performance problems in Linux.
 
 A core dump can be generated on-demand by a debugger (manual dump collection) or can be configured to be collected automatically after a process crash.
 

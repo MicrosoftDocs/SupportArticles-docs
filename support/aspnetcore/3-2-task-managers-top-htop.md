@@ -1,7 +1,6 @@
 ---
-title: Linux task managers, top and htop
-description: This article describes the Linux task managers, top, and htop.
-ms.date: 03/18/2021
+title: Use top, htop command to monitor processes
+description: This article describes how to use top, htop command-line utilities to monitor processes.
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
@@ -9,17 +8,9 @@ ms.reviewer: ramakoni
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
-This article introduces the Linux task managers, top, and htop.
+This article introduces how to use `top`, `htop` command-line utilities to monitor processes.
 
-## Prerequisites
-
-Like the chapter that preceded it, this part is structured to place more emphasis on the theory and principals to follow when starting to troubleshoot. It does not have any prerequisites, but you should have following set up at the moment if you followed all the steps of this training so far:
-
-- Nginx has two web sites:
-  - The first web site listening for requests with the **myfirstwebsite** host header (`http://myfirstwebsite`) and routing the requests to the demo ASP.NET Core application, which is listening on port 5000.
-  - The second web site listening for requests with host header **buggyamb** (`http://buggyamb`) and routing the requests to the second ASP.NET Core sample buggy application, which is listening on port 5001.
-- Both ASP.NET Core applications should be running as services, which restart automatically when the server is rebooted, or the applications stops or crashes.
-- Linux local firewall is enabled and configured to allow SSH and HTTP traffic.
+[!INCLUDE [Prerequisites](prerequisites.md)]
 
 ## Goal of this part
 
@@ -37,7 +28,7 @@ In the example above, inspecting the first listed process with PID 19933, you ca
 
 ### Selecting / deselecting columns
 
-To add or remove columns to the view that the top utility provides you can hit **f** key while running the tool. The columns marked with * are the ones selected for display. Use the arrow keys to move through the available columns and use the **space** bar to select or deselect the columns and then hit **esc** to exit:
+To add or remove columns to the view that the `top` utility provides you can hit **f** key while running the tool. The columns marked with * are the ones selected for display. Use the arrow keys to move through the available columns and use the **space** bar to select or deselect the columns and then hit **esc** to exit:
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/columns.png" alt-text="BuggyAmb columns" border="true":::
 
@@ -45,7 +36,7 @@ The changes will be saved for your user account and the next time you run `top`,
 
 ### Filtering the output by users
 
-To be able to target problematic resource consumption scenarios, it is important to know how to filter the top output. One of the most common ways is to filter processes by username. You can hit **u** and type the username. The below screenshot shows the top tool filtering through the available processes' snapshots for the www-data user:
+To be able to target problematic resource consumption scenarios, it is important to know how to filter the `top` output. One of the most common ways is to filter processes by username. You can hit **u** and type the username. The below screenshot shows the `top` tool filtering through the available processes' snapshots for the www-data user:
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/users.png" alt-text="BuggyAmb users" border="true":::
 
@@ -53,13 +44,13 @@ When you hit **enter**, you will see the processes that are run by the given use
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/user.png" alt-text="BuggyAmb user" border="true":::
 
-When inspecting the output of the filtered top view, two of the processes are dotnet processes - those are the processes running the two ASP.NET Core applications, while the other two processes belong to Nginx.
+When inspecting the output of the filtered `top` view, two of the processes are dotnet processes - those are the processes running the two ASP.NET Core applications, while the other two processes belong to Nginx.
 
-You can use filters when running top command directly. For example, if you run the `top -u www-data` command then it will yield the same output as with opening the top tool and hitting **u** to filter by user.
+You can use filters when running `top` command directly. For example, if you run the `top -u www-data` command then it will yield the same output as with opening the `top` tool and hitting **u** to filter by user.
 
 ### Removing idle processes
 
-Hitting **i** key or running the `top -i` command will filter the top output to only show the processes that are consuming CPU. The following shows the output of `top -i -u www-data` command. The below screenshot shows that the `top` output hides the idle processes although there are four processes, which were started using the www-data user account. Only the process with PID=19933 consumes CPU in the following screenshot:
+Hitting **i** key or running the `top -i` command will filter the `top` output to only show the processes that are consuming CPU. The following shows the output of `top -i -u www-data` command. The below screenshot shows that the `top` output hides the idle processes although there are four processes, which were started using the www-data user account. Only the process with PID=19933 consumes CPU in the following screenshot:
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/remove.png" alt-text="BuggyAmb remove" border="true":::
 
@@ -67,11 +58,11 @@ Hitting **i** key again will toggle the switch and show the idle processes as we
 
 ### Killing processes
 
-To kill / terminate a process, you need to send a kill signal to the process. You may remember that we used the `sudo kill -9 <PID>` command before to kill a process. You can also kill processes using `top`. Hit **k** to kill a process when top is running and then we type the PID of the process that you wish to kill:
+To kill / terminate a process, you need to send a kill signal to the process. You may remember that we used the `sudo kill -9 <PID>` command before to kill a process. You can also kill processes using `top`. Hit **k** to kill a process when `top` is running and then we type the PID of the process that you wish to kill:
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/kill1.png" alt-text="BuggyAmb kill1" border="true":::
 
-After you hit **enter**, top asks for the signal type. Hit **enter** once again to send the terminate signal (`15/sigterm`):
+After you hit **enter**, `top` asks for the signal type. Hit **enter** once again to send the terminate signal (`15/sigterm`):
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/kill2.png" alt-text="BuggyAmb kill2" border="true":::
 
@@ -92,7 +83,7 @@ Simply run `htop` command to start it. You will see a colorful output like the b
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/mem.png" alt-text="BuggyAmb mem" border="true":::
 
-As with the top command, you can use keyboard shortcuts for several functions. Hit **u** and choose the username from list:
+As with the `top` command, you can use keyboard shortcuts for several functions. Hit **u** and choose the username from list:
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/username.png" alt-text="BuggyAmb username" border="true":::
 
