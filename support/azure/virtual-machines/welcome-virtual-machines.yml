@@ -97,7 +97,7 @@ landingContent:
           - text:  Boot configuration update error
             url: ./troubleshoot-vm-boot-configure-update.md
           - text:  VM lifecycle and states
-            url: /azure/virtual-machines/states-lifecycle
+            url: /azure/virtual-machines/states-billing
 
   # Card
   - title: Unexpected VM restart
@@ -144,9 +144,11 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text:  Troubleshooting shared image galleries-replication is slow
-            url: /azure/virtual-machines/troubleshooting-shared-images#replication-speed
-        
+          - text:  Performance diagnostics in the Azure Portal
+            url: /azure/virtual-machines/performance-diagnostics
+          - text:  Troubleshoot performance issues through Monitoring
+            url: /azure/virtual-machines/troubleshoot-performance-virtual-machine-linux-windows
+       
    # Card
   - title: VM Extension issues
     linkLists:

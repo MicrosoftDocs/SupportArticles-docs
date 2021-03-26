@@ -1,13 +1,14 @@
 ---
 title: Windows stop error - #0x000000EF "critical process died"
 description: Provides steps to resolve issues where a critical process dies during boot in an Azure VM.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: v-miegge
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting

@@ -49,12 +49,10 @@ For more information about the updates that are included in Microsoft Windows Se
 |[244139](https://support.microsoft.com/help/244139)|Windows feature lets you generate a memory dump file by using the keyboard|Drivers|
 |[898544](https://support.microsoft.com/help/898544)|FIX: You cannot burn a CD or a DVD on a computer that is running Windows Server 2003|Drivers|
 |[921883](https://support.microsoft.com/help/921883)|MS06-040: Vulnerability in Server service could allow remote code execution|Distributed Systems (DS)|
-|[896422](https://support.microsoft.com/help/896422)|MS05-027: Vulnerability in Server Message Block could allow remote code execution|File Systems|
 |[906866](https://support.microsoft.com/help/906866)|You may receive a "STOP 0x00000035 NO_MORE_IRP_STACK_LOCATIONS" error message when you try to log on to a domain|File Systems|
 |[922582](https://support.microsoft.com/help/922582)|Error message when you try to update a Microsoft Windows-based computer: "0x80070002"|File Systems|
 |[896358](https://support.microsoft.com/help/896358)|MS05-026: A vulnerability in HTML Help could allow remote code execution|Help|
 |[917557](https://support.microsoft.com/help/917557)|FIX: You may experience slow performance when you use Integrated Windows authentication together with the Kerberos authentication protocol in IIS 6.0|IIS 6.0|
-|[886801](https://support.microsoft.com/help/886801)|FIX: A program that calls Wininet.dll takes longer than expected to quit|Internet Explorer|
 |[896688](https://support.microsoft.com/help/896688)|MS05-052: Cumulative security update for Internet Explorer|Internet Explorer|
 |[899812](https://support.microsoft.com/help/899812)|You receive a "Internet Explorer has encountered a problem and needs to close" error when you use Internet Explorer 6 to view a Web page that hosts an ActiveX control|Internet Explorer|
 |[912812](https://support.microsoft.com/help/912812)|MS06-013: Cumulative security update for Internet Explorer|Internet Explorer|

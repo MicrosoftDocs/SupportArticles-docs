@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp;2840544
 
 Consider the following scenario:
 
-- You connect a USB keyboard to a computer that is running Windows 7 or Windows 8.
+- You connect a USB keyboard to a computer that is running Windows.
 - Automatic logon is enabled.
     > [!Note]
     > To enable automatic logon, set the AutoAdminLogon registry value to 1 by using Registry Editor. For more information, see the More information section at the end of this KB article.

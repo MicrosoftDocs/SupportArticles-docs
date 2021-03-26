@@ -37,8 +37,6 @@ Microsoft has confirmed that this is a problem in the products that are listed i
 
 - [Known issues for Visual Studio 2013](https://support.microsoft.com/help/2890846)
 
-- [Known issues for Visual Studio 2013 RC](https://support.microsoft.com/help/2876195)
-
 ## Applies to
 
 - Visual Studio Professional 2013

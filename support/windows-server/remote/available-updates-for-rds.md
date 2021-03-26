@@ -142,8 +142,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 ## Remote Desktop Gateway
 
-- [3162871](https://support.microsoft.com/help/3162871) RD Gateway Manager console crashes with the latest .NET Framework 4.6.1 update on Windows Server 2012 R2
-
 - [3123913](https://support.microsoft.com/help/3123913) Remote Desktop Gateway server crashes during certain user disconnect scenarios in Windows Server 2012 R2
 
 - [3042843](https://support.microsoft.com/help/3042843) **Your computer can't connect to the remote computer** error because RD Gateway service freezes in Windows Server 2012 R2
