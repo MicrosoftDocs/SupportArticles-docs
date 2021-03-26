@@ -66,7 +66,7 @@ _Original KB number:_ &nbsp; 2020053
 
 3. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the five statuses are logged in the Directory Service event log.
 
-    Active Directory events that commonly cite the 8524 status include but aren't limited to the following one:
+    Active Directory events that commonly cite the 8524 status include but aren't limited to:
 
     | Event source| ID| Event string |
     |---|---|---|
@@ -124,15 +124,15 @@ _Original KB number:_ &nbsp; 2020053
 
 ## Cause
 
-Active Directory domain controllers support multi-master replication where any domain controller that is holding a writable partition can originate a create, modify, or delete of an object or attribute (value). Knowledge of object/attribute deletion persists for tombstone lifetime number of days. (See [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205/).
+Active Directory domain controllers support multi-master replication. Any domain controller that holds a writable partition can originate a create, modify, or delete of an object or attribute (value). Knowledge of object/attribute deletion persists for tombstone lifetime number of days. (See [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205/).
 
-Active Directory requires end-to-end replication from all partition holders to transitively replicate originating deletes for directory partitions to partition holders. Failure to inbound-replicate a directory partition in a rolling TSL number of days results in lingering objects. (A lingering object is an object that has been intentionally deleted by at least one DC but that incorrectly exists on destination DCs that failed to inbound-replicate the transient knowledge of unique deletions.)
+Active Directory requires end-to-end replication from all partition holders to transitively replicate all originating deletes for directory partitions to all partition holders. Failure to inbound-replicate a directory partition in a rolling TSL number of days results in lingering objects. A lingering object is an object that has been intentionally deleted by at least one DC, but incorrectly exists on destination DCs which failed to inbound-replicate the transient knowledge of unique deletions.
 
-Error 8614 is an example of logic added in domain controllers that are running Windows Server 2003 or a later version to quarantine the spread of lingering objects and to identify long-term replication failures that cause inconsistent directory partitions.
+Error 8614 is an example of logic added in domain controllers that are running Windows Server 2003 or a later version. It quarantines the spread of lingering objects and identifies long-term replication failures that cause inconsistent directory partitions.
 
-Root causes for error 8614 and for NTDS Replication Event 2042 include the following scenarios:
+Root causes for error 8614 and NTDS Replication Event 2042 include:
 
-1. The destination DC that is logging the 8614 error failed to inbound-replicate a directory partition from one or more source DCs for tombstone lifetime number of days.
+1. The destination DC that logs the 8614 error failed to inbound-replicate a directory partition from one or more source DCs for tombstone lifetime number of days.
 
 2. System time on the destination DC moved, or jumped, tombstone lifetime one or more numbers of days in the future since the last successful replication. It gives the *appearance* to the replication engine that the destination DC failed to inbound-replicate a directory partition for tombstone lifetime elapsed number of days.
 
@@ -145,16 +145,16 @@ Root causes for error 8614 and for NTDS Replication Event 2042 include the follo
 
     Time jumps from current time to a date/time tombstone lifetime or more days in the past, successfully inbound-replicates. Then it tries to inbound-replicate after it adopts time TSL or more number of days in the future.
 
-Basically, the cause and resolution steps for replication error status 8614 apply equally to the cause and to the resolution of NTDS replication event 2042.
+Basically, the cause and resolution for replication error 8614 apply equally to the cause and resolution for NTDS replication event 2042.
 
 ## Resolution
 
 > [!NOTE]
-> There are two action plans to recover Active Directory domain controllers that are logging error status 8614 or NTDS Replication event 2042. You can either force-demote the domain controller or use the action plan below that says, **Check for required fixes, look for time jumps, check for lingering objects, and remove them if present, remove any replication quarantines, resolve replication failures, then put the DC back into service.** Force-demoting such DCs may be easier and faster but can also result in the loss of originating updates (that is, data loss) on the domain controller that is being force-demoted. Active Directory recovers gracefully from this condition by following the steps below. Select the best solution for your scenario, but do not assume that a force demotion is the only workable solution, especially where that replication failure is easy to resolve or is external to Active Directory.
+> There are two action plans to recover Active Directory domain controllers that log error status 8614 or NTDS Replication event 2042. You can either force-demote the domain controller, or use the action plan below that says, **Check for required fixes, look for time jumps, check for lingering objects, and remove them if present, remove any replication quarantines, resolve replication failures, then put the DC back into service.** Force-demoting such DCs may be easier and faster, but can result in the loss of originating updates (that is, data loss) on the domain controller that's being force-demoted. Active Directory recovers gracefully from this condition by following the steps below. Select the best solution for your scenario. Don't assume that a force demotion is the only workable solution, especially when replication failure is easy to resolve or is external to Active Directory.
 
 1. Check for nondefault values of tombstone lifetime.
 
-    By default, tombstone lifetime uses either 60 or 180 days, depending on the version of Windows that is deployed in your forest. Microsoft Support regularly sees DCs that have failed inbound replication for those periods of time. It's also possible that the tombstone lifetime has been configured to a short period such as two days. If so, DCs that didn't inbound-replicate for, say, five days will fail the following test.
+    By default, tombstone lifetime uses either 60 or 180 days, depending on the version of Windows deployed in your forest. Microsoft Support regularly sees DCs that have failed inbound replication for those periods of time. It's also possible that the tombstone lifetime has been configured to a short period, such as two days. If so, DCs that didn't inbound-replicate for, say, five days will fail the following test:
 
     **All DCs must replicate with a rolling TSL number of days**
 
@@ -164,11 +164,11 @@ Basically, the cause and resolution steps for replication error status 8614 appl
     repadmin /showattr "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=<forest root domain>,DC=<top level domain>"
     ```
 
-    If the attribute is not present in the `showattr` output, an internal default value is being used.
+    If the attribute isn't present in the `showattr` output, an internal default value is being used.
 
-2. Check for DCs that failed inbound replication for TSL number of days  
+2. Check for DCs that failed inbound replication for TSL number of days. 
 
-    Run `repadmin /showrepl * /csv` parsed by using Excel as specified in the [Verify successful replication to a domain controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794749(v=ws.10)) section. Sort the replsum output in Excel on the last replication success column from least current to the most current date and time order.
+    Run `repadmin /showrepl * /csv` parsed by using Excel as specified in the [Verify successful replication to a domain controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794749(v=ws.10)) section. Sort the replsum output in Excel on the last replication success column in the order from least current to the most current date and time.
 
 3. Check for Windows Server 2003 RTM domain controllers.
 
@@ -176,22 +176,22 @@ Basically, the cause and resolution steps for replication error status 8614 appl
 
 4. Check for time jumps.
 
-    To determine whether a time *jump* occurred, check event and diagnostic logs (`repadmin /showreps`, dcdiag logs) on destination DCs that are logging 8614 errors for the following scenarios:
+    To determine whether a time *jump* occurred, check event and diagnostic logs (`repadmin /showreps`, dcdiag logs) on destination DCs that are logging 8614 errors for the following timestamps:
 
-    - Date stamps that predate the release of an operating system. For example, date stamps from Windows Server 2003 for an OS released in Windows Server 2008
-    - Date stamps that predate the installation of the operating system in your forest
-    - Date stamps in the future
-    - No events being logged in a given date range
+    - Date stamps that predate the release of an operating system. For example, date stamps from Windows Server 2003 for an OS released in Windows Server 2008.
+    - Date stamps that predate the installation of the operating system in your forest.
+    - Date stamps in the future.
+    - No events being logged in a given date range.
 
     Microsoft Support teams have seen system time on production domain controllers incorrectly jump hours, days, weeks, years, and even tens of years in the past and future.
 
-    If system time was found to be inaccurate, you should correct it and then try to determine why time jumped and what can be done to prevent inaccurate time going forward vs. just correcting the bad time. Possible areas to investigate include the following scenarios:
+    If system time was found to be inaccurate, correct it. Then try to determine why time jumped, and what can be done to prevent inaccurate time going forward vs. just correcting the bad time. Possible areas to investigate include:
 
     - Was the forest root PDC configured by using an external time source?
     - Are reference time sources online, available on the network, and resolvable in DNS?
     - Was the Microsoft or third-party time service running and in an error-free state?
     - Are DC-role computers configured to use NT5DS hierarchy to source time?
-    - Was the time rollback protection that is described in [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) in place?
+    - Was the time rollback protection described in [How to configure the Windows Time service against a large time offset](https://support.microsoft.com/help/884776) in place?
     - Do system clocks have good batteries and accurate time in the BIOS?
     - Are virtual host and guest computers configured to source time according to the hosting manufacturers recommendations?
 
@@ -201,7 +201,7 @@ Basically, the cause and resolution steps for replication error status 8614 appl
 
     The point of the 8614 error replication quarantine is to check for lingering objects and remove them, if present, in each locally held partition before setting **Allow Replication with divergent and corrupt partner** to 1 in the registry of the destination DC, even if you think that all destination DCs in the forest are running in strict replication consistency.
 
-    The removal of lingering objects is beyond the scope of this article. More information can be found in the following sources:
+    Removing lingering objects is beyond the scope of this article. For more information, see the following articles:
 
     - [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205).
 
@@ -218,7 +218,7 @@ Basically, the cause and resolution steps for replication error status 8614 appl
 
     Strict mode replication prevents lingering objects from being reanimated on destination DCs that have used garbage collection to create, delete, and reclaim intentionally deleted objects.
 
-    The registry key for strict replication is the following one:
+    The registry key for strict replication:
 
     - Path: `HKEY_LOCAL_MACHINE\system\ccs\services\ntds\parameters`
     - Setting: Strict Replication Consistency   \<- not case sensitive>
@@ -251,9 +251,14 @@ Basically, the cause and resolution steps for replication error status 8614 appl
 
 8. Resolve AD replication failures if they're present.
 
-    When the 8614 error status is logged on a destination DC, prior replication errors are masked. The prior replication errors were logged in the previous TSL number of days.
+    When the 8614 error status is logged on a destination DC, prior replication errors that were logged in the previous TSL number of days are masked.
 
-    The fact that the 8614 error was reported by the destination DC doesn't mean that the replication fault resides on the destination DC. Instead, the source of the replication failure could lie with the network or DNS name resolution. Or, there could be a problem with authentication, with jet database, with topology, or with the replication engine on either the source DC or the destination DC.
+    The fact that the 8614 error was reported by the destination DC doesn't mean that the replication fault resides on the destination DC. Instead, the source of the replication failure could lie with the network or DNS name resolution. Or, there could be one of the following problems on either the source DC or the destination DC:
+    
+    - authentication
+    - jet database
+    - topology
+    - the replication engine 
 
     Review past Directory Service events and diagnostic output (dcdiag, `repadmin` logs) that was generated by the source DC, by the destination DC, and by alternative replication partners in the past to identify the scope and failure status that is preventing replication between the destination DC and the source DC.
 
@@ -271,7 +276,7 @@ Basically, the cause and resolution steps for replication error status 8614 appl
     - The destination DC
     - The underlying network
 
-    Therefore, make an effort to determine the cause and where the fault is before you take preventive action.
+    Therefore, try to determine the cause and where the fault is before you take preventive action.
 
 ## References
 
