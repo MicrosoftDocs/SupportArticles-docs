@@ -167,7 +167,7 @@ PuTTY is easy to use. However, keep in mind that PuTTY does not accept the PEM f
 
 To convert files, follow these steps:
 
-1. Start PuTTYgen, and make sure that RSA is selected as the type of key to generate.
+1. Start PuTTYgen, and make sure that **RSA** is selected as the type of key to generate.
 2. Select **Load** to select the private key file that has the .pem extension.
 
     ![putty key](./media/creating-vm/puttykey.png)

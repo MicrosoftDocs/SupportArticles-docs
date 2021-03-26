@@ -40,7 +40,7 @@ wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-The first command is a `wget` command. According to its help page, `wget` is a non-interactive network downloader. It downloads files from HTTP servers in a directory. It can run in the background even if the user is not logged in. This `wget` command downloads the `Packages-microsoft-prod.deb file` from `packages.microsoft.com` servers in the current directory.
+The first command is a `wget` command. According to its help page, `wget` is a non-interactive network downloader. It downloads files from HTTP servers in a directory. It can run in the background even if the user is not logged in. This `wget` command downloads the *Packages-microsoft-prod.deb* file from `packages.microsoft.com` servers in the current directory.
 
 If we run `ls` after we run the `wget` command, we should see that the package is downloaded in the current directory.
 

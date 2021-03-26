@@ -175,7 +175,7 @@ Therefore, the `/etc/nginx/sites-enabled/default file` will have to be edited to
 
 ### Editing the configuration file by using vi
 
-You learned how to edit files when you edited the `Startup.cs` file to remove HTTPS redirection from the ASP.NET pipeline. Now, you'll use vi again to change the nginx configuration file.
+You learned how to edit files when you edited the *Startup.cs* file to remove HTTPS redirection from the ASP.NET pipeline. Now, you'll use vi again to change the nginx configuration file.
 
 > [!TIP]
 > Always back up the files that you are changing. If something were to go wrong after editing, you can use that copy to restore the file to its previous state. In this case, run `cp /etc/nginx/sites-enabled/default ~/nginx-default-backup` to copy the configuration file to your home directory. The backup file name will be `nginx-default-backup`. Notice that the backup was not made in the same directory as the original file. This is because Nginx loads all the configuration files from that directory, and you don't want to break the configuration by loading two different versions of server directive.

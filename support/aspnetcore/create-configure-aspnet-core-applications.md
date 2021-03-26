@@ -87,7 +87,7 @@ The `wget` command also shows us some more details, such as redirection and any 
 
 For more information about the difference between `curl` and `wget`, go to [StackExchange webpage](https://unix.stackexchange.com/questions/47434/what-is-the-difference-between-curl-and-wget).
 
-In this training series, you previously used `wget` to download the .deb package manager file from Microsoft servers before you installed .NET Core.
+In this training series, you previously used `wget` to download the *.deb* package manager file from Microsoft servers before you installed .NET Core.
 
 If you run `curl http://localhost`, nothing occurs. This most likely means that there is no HTTP response. You can then run `wget http://localhost` to check whether more information is displayed when you try to access the site.
 
@@ -100,7 +100,7 @@ This is what occurs now:
 - Wget is smart enough to follow this redirect and make a new request to `https://localhost:5001`.
 - You connect successfully again. However, `wget` does not trust the SSL certificate. Therefore, the connection fails.
 
-The `wget` command recommends that you work around this issue by using the `--no-check-certificate` switch to connect insecurely. However,  this approach involves SSL certificate settings that are **out-of-scope** for this training. Instead, you can configure your ASP.NET Core application so that it will not redirect the HTTP requests to HTTPS. If you're familiar with ASP.NET Core application development (or just configuration), you may already know how to do this: Edit the `Startup.cs` file to remove the redirection configuration.
+The `wget` command recommends that you work around this issue by using the `--no-check-certificate` switch to connect insecurely. However,  this approach involves SSL certificate settings that are **out-of-scope** for this training. Instead, you can configure your ASP.NET Core application so that it will not redirect the HTTP requests to HTTPS. If you're familiar with ASP.NET Core application development (or just configuration), you may already know how to do this: Edit the *Startup.cs* file to remove the redirection configuration.
 
 ## Editing files by using vi
 
@@ -108,7 +108,7 @@ You can use the [vi](https://www.guru99.com/the-vi-editor.html) text editor for 
 
 You must close your application before you can edit it. First close the open terminal session. Then, press **Ctrl+C** to shut down the application.
 
-To edit `Startup.cs` file, run the following command:
+To edit *Startup.cs* file, run the following command:
 
 ```bash
 vi ~/firstwebapp/Startup.cs
@@ -125,7 +125,7 @@ Press **esc** to exit editing mode, enter [:wq!](https://www.cyberciti.biz/faq/s
 
 :::image type="content" source="./media/create-configure-aspnet-core-applications/wq.png" alt-text="BuggyAmb wq" border="true":::
 
-After you press Enter, the changes should be saved. You can verify the changes by running cat ~/firstwebapp/Startup.cs. This command displays the contents of the Startup.cs file.
+After you press Enter, the changes should be saved. You can verify the changes by running `cat ~/firstwebapp/Startup.cs`. This command displays the contents of the *Startup.cs* file.
 
 Restart your application. To do this, change the current directory to the `~/firstwebapp` directory, and run dotnet run again. Then, open another terminal session to your server, and run the `curl http://localhost:5000` command again. This time, the command should return the HTML contents of the home page.
 
@@ -143,7 +143,7 @@ Change to the project folder, and then run `dotnet publish` to create a publishi
 
 :::image type="content" source="./media/create-configure-aspnet-core-applications/publish.png" alt-text="BuggyAmb publish" border="true":::
 
-The screenshot shows that the `dotnet publish` command created publishing files in the `~/firstwebapp/bin/Debug/net5.0/publish/ folder`. Then, the following command was used to copy all files to `/var/firstwebapp/ folder`:
+The screenshot shows that the `dotnet publish` command created publishing files in the `~/firstwebapp/bin/Debug/net5.0/publish/` folder. Then, the following command was used to copy all files to `/var/firstwebapp/` folder:
 
 ```bash
 sudo cp -a ~/firstwebapp/bin/Debug/net5.0/publish/ /var/firstwebapp/
