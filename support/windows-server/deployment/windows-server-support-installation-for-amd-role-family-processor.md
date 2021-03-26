@@ -13,47 +13,66 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
 ms.technology: windows-server-deployment
 ---
-# Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors
+# Windows Server support and installation instructions for AMD Rome processors
 
-This article introduces the Windows Server operating system (OS) installation instructions and support statements for AMD EPYC series server processors. Additionally, this article describes several known limitations to the support for these processors.
+This article introduces the Windows Server operating system (OS) installation instructions and support statements for the AMD EPYC 7*xx*2 (AMD Rome) family of processors. Additionally, this article describes several known limitations to the support for these processors.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4514607
 
 ## Windows Server support
 
-This section provides Windows Server support with respect to total number of logical processors.
+This section provides information about Windows Server support with respect to total number of logical processors.
 
-- Windows Server 2019
+    Windows Server 2019 supports AMD EPYC 7*xx*2-series CPUs. Use the Windows Server 2019 refreshed media image that was released in early October 2019. You can obtain this image from the appropriate licensing channel, as applicable.
 
-    Windows Server 2019 supports all AMD EPYC 7000 Series processors. For AMD EPYC 7002 and EPYC 7003 Series processors, use at least the refreshed media image released early October 2019.
+- Windows Server 2019 and Windows Server 2016  
 
-- Windows Server 2016
-
-    Windows Server 2016 supports all AMD EPYC processors. The support is limited to a maximum of 255 logical processors. Windows Server 2016 doesn’t support the x2APIC mode. For AMD EPYC 7002 and 7003 series processors, disable the x2APIC mode and IOMMU in the computer's basic input/output system (BIOS). For dual processor servers using 64 core AMD EPYC 7002 or 64 core 7003 Series Processors SKUs, make sure SMT is also disabled in the BIOS.
+    Windows Server 2016 supports AMD EPYC 7*xx*2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2016 does not support X2APIC mode. You should disable this mode in the computer BIOS. Use the latest refreshed media image (minimum version: FMR February 2018). You can obtain this image from the appropriate licensing channel, as applicable."
 
 - Windows Server 2012 R2
 
-    Windows Server 2012 R2 supports all AMD EPYC processors. The support is limited to a maximum of 255 logical processors. Windows Server 2012 R2 doesn’t support the x2APIC mode. For AMD EPYC 7002 and 7003 Series processors, disable the x2APIC mode and IOMMU in the BIOS. For dual processor servers using 64 core, make sure SMT is also disabled in the BIOS.
 
     > [!NOTE]
-    > Windows Server 20012 R2 is in [extended support cycle](/lifecycle/products/?alpha=Windows%20Server%202012%20R2). We recommend that you upgrade to the latest modern Windows Server 2019 operating system.
+    > Windows Server 20012 R2 is in [extended support](/lifecycle/products/?alpha=Windows%20Server%202012%20R2). We recommend that you upgrade to the latest modern Windows Server 2019 operating system.
 
-## AMD EPYC Processor SKU support
+## AMD processor SKU support
 
-AMD offers a wide range of EPYC 7000 Series Processors, including the EPYC 7002 and EPYC 7003 Series Processors. You can determine the specific processor model SKUs and the corresponding maximum threads in the following articles:
+The following table lists support for each AMD processor SKU and Windows Server OS version.
 
-- [AMD EPYC™ 7002 Series Processors](https://www.amd.com/en/processors/epyc-7002-series)
-- [AMD EPYC™ 7003 Series Processors](https://www.amd.com/en/processors/epyc-7003-series)
+|AMD EPYC 7*xx*2 (AMD Rome)|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|
+|---|---|---|---|
+|AMD EPYC 7742 64C|Supported|Supported: Requires that you disable AMD simultaneous multithreading (SMT).|Supported: Requires that you disable AMD SMT.|
+|AMD EPYC 7702 64C|Supported|Supported: Requires that you disable AMD SMT.|Supported: Requires that you disable AMD SMT.|
+|AMD EPYC 7702P 64C|Supported|Supported: Requires that you disable AMD SMT.|Supported: Requires that you disable AMD SMT.|
+|AMD EPYC 7552 48C|Supported|Supported|Supported|
+|AMD EPYC 7502 32C|Supported|Supported|Supported|
+|AMD EPYC 7502P 32C|Supported|Supported|Supported|
+|AMD EPYC 7402 24C|Supported|Supported|Supported|
+|AMD EPYC 7402P 24C|Supported|Supported|Supported|
+|AMD EPYC 7352 24C|Supported|Supported|Supported|
+|AMD EPYC 7302 16C|Supported|Supported|Supported|
+|AMD EPYC 7302P 16C|Supported|Supported|Supported|
+|AMD EPYC 7262 8C|Supported|Supported|Supported|
+|||||
 
-For Windows Server OS releases prior to Windows Server 2019 and on server configurations where both processor sockets are populated, the total number of processor threads enabled should be set to less than 256 and remain so during the OS installation and restart process.  
+## Install Windows Server on a computer that uses AMD Rome
 
-## Install Windows Server on a computer that uses AMD EPYC 7002 and 7003 Series processors
+To install Windows Server on a computer that uses AMD EPYC 7*xx*2 (AMD Rome) processors, follow these steps:
 
+1. In the computer BIOS, disable the SMT settings (such as the logical processors setting).
+2. In the computer BIOS, disable the X2APIC setting.
+3. Use the OS media to install Windows Server.
+4. Install the latest Windows Server updates for the respective Windows Server OS that you installed.
+=======
+  Windows Server 2019 and Windows Server 2016 support AMD EPYC 7*xx*2-series CPUs. The following list identifies the minimum build versions that this support requires:
+
+  - Windows Server 2019 servers that have X2APIC enabled: October 2019 Full Media Refresh (FMR) image build version 17763.737.
+  - Windows Server 2019 servers that have X2APIC disabled: November 2018 image build version 17763.107.
 > [!NOTE]
-> When installing any version of Windows Server, use the latest installation media image from an appropriate licensing channel.  After the initial Windows installation is completed, update the system to the most recent Windows Update release.
+> When you install any version of Windows Server, use the latest installation media image from an appropriate licensing channel. After the initial Windows installation is completed, update the system to the most recent Windows Update release.
 
-For servers configured to enable 256 processor threads and that are running either Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019 (prior to October 2019), follow these steps:
+For servers that are configured to enable 256 processor threads and that are running either Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019 (prior to October 2019), follow these steps:
 
 1. Disable the SMT settings (such as the logical processors setting) in the BIOS.
 2. Disable the x2APIC settings and IOMMU in the BIOS.
@@ -71,7 +90,7 @@ For example, see the following figure.
 
 ### Task Manager displays an incorrect number of sockets with more than 64 logical processors enabled
 
-For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
+- Task Manager displays an incorrect number of Numa nodes.
 
 ### Task Manager displays an incorrect number of NUMA nodes with more than 64 logical processors enabled
 

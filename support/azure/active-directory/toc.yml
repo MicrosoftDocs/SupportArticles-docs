@@ -3,26 +3,30 @@
 
 - name: App Integration and Development 
   items:
-  - name: Troubleshoot signing in to SAML-based single sign-on configured apps
-    href: troubleshoot-sign-in-saml-based-apps.md
-  - name: Error AADSTS50003 - certificate or key not configured
-    href: error-code-AADSTS50003-cert-or-key-not-configured.md
-  - name: Error AADSTS50011 - reply URL mismatch
-    href: error-code-AADSTS50011-reply-url-mismatch.md
-  - name: Error AADSTS50105 - user not assigned a role
-    href: error-code-AADSTS50105-user-not-assigned-role.md
-  - name: Error AADSTS650056 - misconfigured app
-    href: error-code-AADSTS650056-misconfigured-app.md
-  - name: Error AADSTS70001 - app not found in directory
-    href: error-code-AADSTS70001-app-not-found-in-directory.md
-  - name: Error AADSTS75011 - authentication method mismatch
-    href: error-code-AADSTS75011-auth-method-mismatch.md
-  - name: Error AADSTS75005 - not a valid saml request
-    href: error-code-AADSTS75005-not-a-valid-saml-request.md
-  - name: Error AADSTS750054 - SAML request or response not present
-    href: error-code-AADSTS750054-saml-request-not-present.md
-  - name: User redirected to incorrect reply URL or localhost
-    href: reply-url-redirected-to-localhost.md
+  - name: Troubleshoot adding apps
+    href: troubleshoot-adding-apps.md
+  - name: Troubleshoot sign-in to SAML-based SSO apps
+    items:
+      - name: Troubleshoot signing in to SAML-based single sign-on configured apps
+        href: troubleshoot-sign-in-saml-based-apps.md
+      - name: Error AADSTS50003 - certificate or key not configured
+        href: error-code-AADSTS50003-cert-or-key-not-configured.md
+      - name: Error AADSTS50011 - reply URL mismatch
+        href: error-code-AADSTS50011-reply-url-mismatch.md
+      - name: Error AADSTS50105 - user not assigned a role
+        href: error-code-AADSTS50105-user-not-assigned-role.md
+      - name: Error AADSTS650056 - misconfigured app
+        href: error-code-AADSTS650056-misconfigured-app.md
+      - name: Error AADSTS70001 - app not found in directory
+        href: error-code-AADSTS70001-app-not-found-in-directory.md
+      - name: Error AADSTS75011 - authentication method mismatch
+        href: error-code-AADSTS75011-auth-method-mismatch.md
+      - name: Error AADSTS75005 - not a valid saml request
+        href: error-code-AADSTS75005-not-a-valid-saml-request.md
+      - name: Error AADSTS750054 - SAML request or response not present
+        href: error-code-AADSTS750054-saml-request-not-present.md
+      - name: User redirected to incorrect reply URL or localhost
+        href: reply-url-redirected-to-localhost.md
 
 - name: Sign-in and Multi-factor authentication
   items:
@@ -102,6 +106,8 @@
     href: upgrade-fails-error-code-1603.md
   - name: Error 80070005 in Azure AD Sync Services config wizard
     href: aad-sync-services-config-wizard-error.md
+  - name: Errors with event ID 6301 after installing Azure AD Connect
+    href: tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md
   - name: Fail to install Azure AD Module
     href: unable-install-aad-module-powershell.md
   - name: Fail to sync domain-based filtering changes
@@ -184,6 +190,8 @@
     href: could-not-verify-account-reset-pwd.md
   - name: Connect-MsolService fails with access denied error
     href: cannot-connect-cloud-services-powershell.md
+  - name: Enable support for TLS 1.2 in your environment
+    href: enable-support-tls-environment.md
   - name: Fail to connect ADFS service
     href: connection-adfs-failed-set-msoladfscontex.md
   - name: Fail to convert domain to Standard
@@ -202,7 +210,7 @@
     href: remove-msoluser-user-not-found-recyclebin.md
   - name: Request isn't processed when resetting password
     href: request-not-processed-reset-pwd.md
-  - name: Set up your enterprise for working remotely faq
+  - name: Set up your enterprise for working remotely FAQ
     href: faq-set-up-enterprise-work-remotely.md
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md

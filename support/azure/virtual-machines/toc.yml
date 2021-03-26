@@ -65,7 +65,7 @@
   - name: VM startup is stuck
     href: troubleshoot-vm-boot-configure-update.md
   - name: VM lifecycle and states
-    href: /azure/virtual-machines/states-lifecycle
+    href: /azure/virtual-machines/states-billing
 - name: Cannot connect to my VM
   items:
   - name: Linux
@@ -306,28 +306,30 @@
 
 - name: VM performance issues
   items:
-  - name: Poor performance on Windows Server 2012 R2
-    href: poor-performance-emulated-storage-stack.md
-  - name: Troubleshoot Azure VM Performance issues
+  - name: Performance diagnostics (PerfInsights)
     items:
-    - name: Performance issues on Linux or Windows
-      href: troubleshoot-performance-virtual-machine-linux-windows.md
-    - name: Performance diagnostics
+    - name: Performance diagnostics in the Azure Portal
       href: performance-diagnostics.md
-    - name: Troubleshoot high CPU issues for Azure Windows Virtual Machine
-      href: troubleshoot-high-cpu-issues-azure-windows-vm.md
-  - name: PerfInsights
-    items:
-    - name: Windows
+    - name: Performance diagnostics VM extension
       items:
-      - name: How to use PerfInsights
-        href: how-to-use-perfinsights.md
-      - name: Performance diagnostics extension
+      - name: Performance diagnostics extension in Windows
         href: performance-diagnostics-vm-extension.md
-    - name: Linux
+    - name: PerfInsights standalone tool
       items:
-      - name: How to use PerfInsights
+      - name: PerfInsights in Windows
+        href: how-to-use-perfinsights.md
+      - name: PerfInsights in Linux
         href: how-to-use-perfinsights-linux.md
+  - name: Troubleshoot VM Performance issues
+    items:
+    - name: Troubleshoot performance issues through Monitoring
+      href: troubleshoot-performance-virtual-machine-linux-windows.md
+    - name: Troubleshoot high CPU issues for Azure Windows virtual machines
+      href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+  - name: Known performance issues
+    items:
+    - name: Poor performance on Windows Server 2012 R2
+      href: poor-performance-emulated-storage-stack.md
 
 - name: Help with VM password reset
   items:
@@ -474,6 +476,15 @@
     href: failed-get-contents-log-error.md
   - name: Out of memory error in Linux VM
     href: oom-swap-file-linux-vm.md
+
+- name: Windows Server 2008 R2 Support
+  items:
+  - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
+    href: https://docs.microsoft.com/windows-server/get-started/extended-security-updates
+  - name: Windows Server 2008/2008 R2 Extended Security Updates
+    href: https://docs.microsoft.com/windows-server/get-started/uploading-specialized-ws08-image-to-azure
+  - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
+    href: https://docs.microsoft.com//windows-server/get-started/modernize-windows-server-2008
 
 - name: Support statements
   items:

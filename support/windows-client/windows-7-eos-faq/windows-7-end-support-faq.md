@@ -15,7 +15,7 @@ ms.technology: windows-client-eos
 ---
 # Windows 7 EoS FAQ documentation
 
-The topics in this section summarize the frequently asked questions about the end of support for Windows 7.
+This article summarizes the frequently asked questions about the end of support for Windows 7.
 
 This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support ended on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).
 
@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 4527873
 Get answers to common questions about the following end-of-support topics for Windows 7:
 
 - [General information](./windows-7-end-support-faq-general.md)
-- [Windows 7 Extended Security Updates (ESU)](./windows-7-extended-security-updates-faq.md)
+- [FAQ about Extended Security Updates (ESU) for Windows 7](./windows-7-extended-security-updates-faq.yml)
   - ESU purchasing
   - ESU coverage
   - ESU deployment
