@@ -27,8 +27,8 @@ From the VLSC, you can download software included in your contract. On the secti
 ## Download and burn an ISO file
 
 1. Access the Volume License Service Center ([VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)).
-2. Enter your Windows Live ID E-mail address and password; then select the **Sign-In** button.
-3. Select **Downloads** > **Licensed Downloads** and search for your product.
+2. Enter your Windows Live ID E-mail address and password, then select the **Sign-In** button.
+3. Select **Downloads** > **Licensed Downloads**, and then search for your product.
 
     ![Screenshot of Licensed Downloads tab](./media/iso-file-on-vlsc/licensed-downloads-tab.png)
 
@@ -36,7 +36,7 @@ From the VLSC, you can download software included in your contract. On the secti
 
     ![Screenshot of Download settings](./media/iso-file-on-vlsc/download-settings.png)
 
-5. Select the **Continue Download** button.
+5. Select **Continue Download**.
 6. You may choose either **Download Manager** or the **Web Browser**.
 
     1. Download Manager is a program to pause and resume the download at any time by selecting the **Pause** button. You can cancel the download if required by clicking the **Cancel** button.
