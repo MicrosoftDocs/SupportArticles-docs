@@ -306,7 +306,7 @@
 
 - name: VM performance issues
   items:
-  - name: Performance diagnostics (Perfinsights)
+  - name: Performance diagnostics (PerfInsights)
     items:
     - name: Performance diagnostics in the Azure Portal
       href: performance-diagnostics.md
@@ -320,16 +320,16 @@
         href: how-to-use-perfinsights.md
       - name: PerfInsights in Linux
         href: how-to-use-perfinsights-linux.md
-- name: Troubleshoot VM Performance issues
-  items:
-  - name: Troubleshoot performance issues through Monitoring
-    href: troubleshoot-performance-virtual-machine-linux-windows.md
-  - name: Troubleshoot high CPU issues for Azure Windows virtual machines
-    href: troubleshoot-high-cpu-issues-azure-windows-vm.md
-- name: Known performance issues
-  items:
-  - name: Poor performance on Windows Server 2012 R2
-    href: poor-performance-emulated-storage-stack.md
+  - name: Troubleshoot VM Performance issues
+    items:
+    - name: Troubleshoot performance issues through Monitoring
+      href: troubleshoot-performance-virtual-machine-linux-windows.md
+    - name: Troubleshoot high CPU issues for Azure Windows virtual machines
+      href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+  - name: Known performance issues
+    items:
+    - name: Poor performance on Windows Server 2012 R2
+      href: poor-performance-emulated-storage-stack.md
 
 - name: Help with VM password reset
   items:
@@ -425,7 +425,7 @@
     - name: Overview
       href: /azure/virtual-machines/windows/disk-encryption-overview
     - name: Troubleshoot
-      href: /virtual-machines/windows/disk-encryption-troubleshooting
+      href: /azure/virtual-machines/windows/disk-encryption-troubleshooting
     - name: FAQ
       href: /azure/virtual-machines/windows/disk-encryption-faq
   - name: Linux
@@ -476,6 +476,15 @@
     href: failed-get-contents-log-error.md
   - name: Out of memory error in Linux VM
     href: oom-swap-file-linux-vm.md
+
+- name: Windows Server 2008 R2 Support
+  items:
+  - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
+    href: https://docs.microsoft.com/windows-server/get-started/extended-security-updates
+  - name: Windows Server 2008/2008 R2 Extended Security Updates
+    href: https://docs.microsoft.com/windows-server/get-started/uploading-specialized-ws08-image-to-azure
+  - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
+    href: https://docs.microsoft.com//windows-server/get-started/modernize-windows-server-2008
 
 - name: Support statements
   items:
