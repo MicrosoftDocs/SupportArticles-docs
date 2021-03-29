@@ -46,7 +46,7 @@ Next, it's synchronized to Office 365 and assigned an Exchange Online license. I
 The following attributes are set in Azure AD on the synchronized user object:
 
 > UPN: `onprema@contoso.com`  
-> mail: `[onprema@contoso.com](mailto:onprema@contoso.com)`  
+> mail: `onprema@contoso.com`  
 > mailNickName: onprema  
 > proxyAddresses: {smtp:`onprema@contoso.onmicrosoft.com`,SMTP:`onprema@contoso.com`}
 
