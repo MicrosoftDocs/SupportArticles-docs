@@ -26,8 +26,8 @@ On Domain Controllers with more than one NIC where each NIC is connected to sepa
 
 If one of the following conditions is true, the client will fail to contact the DC causing authentication and many other issues:
 
-- The client queries for DC's DNS records and gets an unwanted record.
-- The record of a different network that isn't reachable to the client.
+- The client queries for DC's DNS records, and gets an unwanted record.
+- The client queries for DC's DNS records, and gets a record of a different network that isn't reachable to the client.
 
 ## Cause
 
