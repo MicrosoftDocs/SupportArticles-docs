@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 326460
 
 ## Symptoms
 
-If you try to start the BITS service on a Windows 2000-based computer on which Terminal Services is installed, you may experience the following symptoms:
+If you try to start the BITS service on a Windows computer on which Terminal Services is installed, you may experience the following symptoms:
 
 - You receive one of the following error messages:
 
@@ -32,7 +32,7 @@ If you try to start the BITS service on a Windows 2000-based computer on which T
 
     > A service-specific error occurred: -2147944102.
 
-- The following event is recorded in the System log of Windows NT Event Viewer:
+- The following event is recorded in the System log of Windows Event Viewer:
 
     > Event Type: Error  
     Event Source: Service Control Manager  
@@ -49,7 +49,7 @@ By default, when the Terminal Services component is installed, the startup type 
 
 ## Resolution
 
-To resolve this problem, obtain the latest service pack for Microsoft Windows 2000.
+To resolve this problem, obtain the latest service pack for Windows.
 
 ## Workaround
 
