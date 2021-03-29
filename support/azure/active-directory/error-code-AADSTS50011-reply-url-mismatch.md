@@ -27,4 +27,4 @@ After you've updated the Reply URL value in Azure AD, and it matches the value s
 
 ## More Information
 
-For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
