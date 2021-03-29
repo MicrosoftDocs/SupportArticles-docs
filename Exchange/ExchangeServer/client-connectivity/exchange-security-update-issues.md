@@ -100,13 +100,13 @@ For details about the available SUs, see [Description of the security update for
 
 ### HTTP 500 errors in OWA or ECP
 
-**Issue**
+**Issue:**
 
 HTTP 500 errors might occur in Outlook on the Web (OWA) and Exchange Control Panel (ECP) after updates are installed. After you provide credentials to log on to OWA or ECP, the login process may fail with the following error message:
 
 > Could not load file or assembly Microsoft.Exchange.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
 
-**Resolution**
+**Resolution:**
 
 Reinstall the security update from an elevated command prompt.
 
@@ -123,15 +123,15 @@ For more information, see [OWA or ECP stops working after you install a security
 
 ### Missing images in ECP
 
-**Issue**
+**Issue:**
 
 After installing the SU, OWA or ECP may not display images.
 
-**Cause**
+**Cause:**
 
 This issue occurs if the SU is not installed properly.
 
-**Resolution**
+**Resolution:**
 
 Uninstall and reinstall the .msp file by running the update from an administrative command prompt. Then reboot the server after the installation is complete.
 
@@ -139,11 +139,11 @@ Uninstall and reinstall the .msp file by running the update from an administrati
 
 ### Blank page in EAC or OWA
 
-**Issue**
+**Issue:**
 
 A blank page displays when you log in to the Exchange Admin Center (EAC) or OWA from Exchange Server 2016 or Exchange Server 2013. When this issue occurs, event ID 15021 may be logged.  
 
-**Cause**
+**Cause:**
 
 This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the following problems:  
 
@@ -151,7 +151,7 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 - The binding doesn’t have a certificate assigned.  
 - The binding contains incorrect information.  
 
-**Resolution**
+**Resolution:**
 
 1. On the Client Access Server (CAS), open Internet Information Services (IIS).  
 
@@ -174,13 +174,13 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 
     ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
 
-For more information, see [this article](https://support.microsoft.com/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
+For more information, see [this article](/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
 
 [Back to top](#summary)
 
 ### Can't sign in to OWA or EAC
 
-**Issue**
+**Issue:**
 
 When you try to sign in to OWA or the EAC in Exchange Server, the web browser freezes or you see a message that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer.
 
@@ -189,11 +189,11 @@ When you try to sign in to OWA or the EAC in Exchange Server, the web browser fr
 >An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.
 >at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
 
-**Cause**
+**Cause:**
 
 This issue occurs because the Exchange Server Open Authentication (OAuth) certificate has expired.
 
-**Resolution**
+**Resolution:**
 
 Follow the steps in this [article](../administration/cannot-access-owa-or-ecp-if-oauth-expired.md?preserve-view=true#resolution) to fix the issue.
 
@@ -201,7 +201,7 @@ Follow the steps in this [article](../administration/cannot-access-owa-or-ecp-if
 
 ### Can't access EAC or OWA after Exchange installation
 
-**Issue**
+**Issue:**
 
 When installing Exchange Server 2016 or Exchange Server 2013, the installation process might have failed or been interrupted at some stage, then resumed and finally completed successfully. However, when you try to access EAC or OWA, you receive the following error message:
 
@@ -209,14 +209,14 @@ When installing Exchange Server 2016 or Exchange Server 2013, the installation p
 >
 >Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
 
-**Cause**
+**Cause:**
 
 This issue occurs if the SharedWebConfig.config file is missing from one of the following locations:
 
 - C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess
 - C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy
 
-**Resolution**
+**Resolution:**
 
 Do the following:
 
@@ -250,7 +250,7 @@ Do the following:
 
 ### Exchange Server setup does not run
 
-**Issue**
+**Issue:**
 
 You run an unattended installation to upgrade Microsoft Exchange Server 2019, Microsoft Exchange Server 2016, or Microsoft Exchange Server 2013 from PowerShell or command prompt by using setup.exe. The Setup program starts and may indicate that it has completed successfully. However, Exchange isn't updated.
 
@@ -279,16 +279,17 @@ For more information, see [this article](../setup/ex2019-setup-does-not-run-corr
 
 ### Upgrade patch can't be installed
 
-**Issue**
+**Issue:**
 
 You might see the following error message when installing the SU:
 
 >The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
 
-**Cause**
+**Cause:**
+
 This error message displays if the versions of the CU and SU don't match.
 
-**Resolution**
+**Resolution:**
 
 Either upgrade to the correct CU or download the correct SU for the intended CU.
 
@@ -296,11 +297,11 @@ Either upgrade to the correct CU or download the correct SU for the intended CU.
 
 ### Installation fails due to services not stopping
 
-**Issue**
+**Issue:**
 
 The installation fails because services didn't stop properly.
 
-**Resolution**
+**Resolution:**
 
 Use the best practice to reboot the server before installing the CU or SU. For the antivirus software you're running, set proper [exclusions](/Exchange/antispam-and-antimalware/windows-antivirus-software?preserve-view=true&view=exchserver-2019) or consider turning it off during the setup. In some cases where services still don't stop or start as expected, do the following.
 
@@ -315,11 +316,11 @@ Then run the setup again.
 
 ### Services don't start after SU installation
 
-**Issue**
+**Issue:**
 
 Exchange services don't start after you complete installing the SU installation.
 
-**Resolution**
+**Resolution:**
 
 Check the state of the services. If they are **Disabled**, set them to **Automatic** and start them manually.
 
@@ -329,13 +330,13 @@ Check the state of the services. If they are **Disabled**, set them to **Automat
 
 ### Error during Setup in Setup log
 
-**Issue**
+**Issue:**
 
 You receive the following error message during Setup in the Setup logs:
 
 >Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role isn’t installed on this computer.
 
-**Resolution**
+**Resolution:**
 
 Download and run the Exchange Setup log reviewer script [SetupLogReviewer.ps1](https://aka.ms/ExSetupScripts). This script reviews the ExchangeSetup.log, determines whether this error is a known issue and presents an action you can take to resolve the issue.
 After you download the script, point it to the Exchange Setup log as shown below and review the output.
@@ -362,13 +363,13 @@ To find the Domain Controller (DC) which holds the schema master, run the follow
 
 ### Error during update rollup installation
 
-**Issue**
+**Issue:**
 
 When you install the update rollup on a computer that isn’t connected to the internet, you may experience a long installation delay. Additionally, you may receive the following error message:
 
 >Creating Native images for .Net assemblies.
 
-**Cause**
+**Cause:**
 
 This issue is caused by the network requests to connect to the following URL:
 
@@ -376,7 +377,7 @@ This issue is caused by the network requests to connect to the following URL:
 
 The network requests are attempts to access the Certificate Revocation List for each assembly for which Native image generation (Ngen) compiles to native code. Because the server that’s running Exchange Server isn’t connected to the internet, each request must wait to time out before the process can continue.
 
-**Resolution**
+**Resolution:**
 
 Do the following:
 
@@ -393,14 +394,14 @@ Do the following:
 
 ### Setup fails with "Cannot start the service" error
 
-**Issue**
+**Issue:**
 
 The CU setup might fail with the following error message:
 >Cannot start the service Microsoft Exchange Service Host
 
 You might find that the Microsoft Exchange Service Host and/or all other Exchange services are stopped and in **Disabled** mode.
 
-**Resolution**
+**Resolution:**
 
 Do the following:
 
@@ -414,17 +415,17 @@ Do the following:
 
 ### SU installation fails because of existing IU
 
-**Issue**
+**Issue:**
 
 During the SU installation, you might see the following error message:
 
 >Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration.
 
-**Resolution 1**
+**Resolution 1:**
 
 Uninstall the previously installed Interim Update (IU) before applying this SU because the updates are cumulative. You can find the previous IUs in **Add/Remove Programs**.
 
-**Resolution 2**
+**Resolution 2:**
 
 This error message may also display on a server that has no IUs installed but is not connected to the internet. So it can't check the Certificate Revocation List. In this situation, do the following:
 
@@ -441,17 +442,17 @@ This error message may also display on a server that has no IUs installed but is
 
 ### Setup installs older CU or fails to install language pack
 
-**Issue**
+**Issue:**
 
 You're upgrading to the latest CU but Setup either displays that it is installing an existing CU on the server OR fails with the following error message:
 
 > Couldn't open package **'C:\Program Files\Microsoft\Exchange Server\V15\bin\Setup\\\<package name>**. This installation package could not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package. Error code is 1619.
 
-**Cause**
+**Cause:**
 
 These issues occur if you start the installation from Windows PowerShell and use the Setup.EXE command.
 
-**Resolution**
+**Resolution:**
 
 If the Exchange CU media is on D: drive, run an upgrade using PowerShell by using either of the following commands:
 "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt)
@@ -460,13 +461,13 @@ If the Exchange CU media is on D: drive, run an upgrade using PowerShell by usin
 
 ### Restart from previous installation is pending
 
-**Issue**
+**Issue:**
 
 You keep getting the following error message even after restarting the server several times:
 
 > Microsoft Exchange Server setup cannot continue because a restart from a previous installation or update is pending.
 
-**Resolution**
+**Resolution:**
 
 Follow the information provided in [A Restart from a Previous Installation is Pending](/previous-versions/office/exchange-server-analyzer/cc164360(v=exchg.80)) to fix the issue.
 
@@ -479,11 +480,11 @@ If you still see the error message, do the following:
 
 ### Mail flow has stopped
 
-**Issue**
+**Issue:**
 
 Mail flow stops after you install a CU or an SU.
 
-**Resolution**
+**Resolution:**
 
 To get mail flow working again, make sure that the following requirements are met:
 
@@ -495,7 +496,7 @@ To get mail flow working again, make sure that the following requirements are me
 
 ### Exchange Setup or PrepareAD error
 
-**Issue**
+**Issue:**
 
 When you run either Exchange setup or the PrepareAD command, the process fails with the following error message:
 
@@ -527,13 +528,13 @@ Now you should be able to continue with the setup.
 
 ### Exchange setup fails with error code 1603
 
-**Issue**
+**Issue:**
 
 You see the following error message during Exchange installation:
 
 >Installing product F:\exchangeserver.msi failed. Fatal error during installation. Error code is 1603. Last error reported by the MSI package is 'The installer has insufficient privileges to access this directory: C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\15.1.2106'.
 
-**Resolution**
+**Resolution:**
 
 1. Make sure that the setup is run by using a local administrator account.
 2. Check whether the following permissions are assigned to the folder specified in the error:
