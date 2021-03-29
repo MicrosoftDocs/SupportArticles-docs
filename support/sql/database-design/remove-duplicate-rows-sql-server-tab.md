@@ -86,7 +86,7 @@ WHERE DupRank > 1
 
 This script takes the following actions in the given order:
 
-- Uses the `ROW_NUMBER` function to partition the data based on the `key_value`. The result will be one or more columns of values separated by commas.
+- Uses the `ROW_NUMBER` function to partition the data based on the `key_value` which may be one or more columns separated by commas.
 - Deletes all records that received a `DupRank` value that is greater than 1. This value indicates that the records are duplicates.
 
 Because of the `(SELECT NULL)` expression, the script does not sort the partitioned data based on any condition. If your logic to delete duplicates requires choosing which records to delete and which to keep based on the sorting order of other columns, you could use the ORDER BY expression to do this.
