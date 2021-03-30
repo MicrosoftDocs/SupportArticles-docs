@@ -29,9 +29,9 @@ Follow the steps given below to manually update the scan engines in Exchange Ser
 
 The manual update involves running the Update-Engines.ps1 PowerShell script. This script can be changed according to your needs. The update path, list of engines, and list of platforms can be changed in the script, or passed as parameters when the script is executed.
 
-When defining a specific engine(s), you must use the following naming conventions:
+When defining a specific engine(s), you must use the following naming convention for AMD64:
 
-- AMD64: Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
+Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
 
 > [!NOTE]
 > The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for 64-bit platforms.
