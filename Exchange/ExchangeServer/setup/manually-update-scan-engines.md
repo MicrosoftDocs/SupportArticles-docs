@@ -80,7 +80,7 @@ When defining a specific engine(s), you must use the following naming convention
     ""
     "Examples: "
     "     Update-Engines.ps1 -EngineDirPath C:\Engines\"
-    "     Update-Engines.ps1 -EngineDirPath C:\Engines\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64, x86"
+    "     Update-Engines.ps1 -EngineDirPath C:\Engines\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64"
     ""
     exit
     }
@@ -355,11 +355,11 @@ When defining a specific engine(s), you must use the following naming convention
     ```
 
     ```powershell
-    Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64, x86
+    Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64
     ```
 
     ```powershell
-    Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64, x86
+    Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64
     ```
 
 4. You can now configure the servers to download updates from the directory created in step 1 by using the UNC path of a share name, such as `\\server_name\share_name`.
