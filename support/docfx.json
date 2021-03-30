@@ -189,8 +189,8 @@
         "browsers/**/*.md": [ "Browsers" ],
         "azure/**/*.md": [ "Azure" ],
         "mem/intune/**/*.md": [ "Intune" ],
-        "mem/configmgr/**/*.md": [ "Configuration Manager" ],
-        "system-center/**/*.md": [ "System Center" ],
+        "mem/configmgr/**/*.md": [ "ConfigMgr" ],
+        "system-center/**/*.md": [ "System Center" ]
       }
     },
 
