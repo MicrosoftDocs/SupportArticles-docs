@@ -15,14 +15,10 @@ ms.technology: windows-server-active-directory
 ---
 # Phantoms, tombstones, and the infrastructure master
 
-This article describes the behavior of non-GCs when object links are managed across domains in a forest.
+This article describes how phantoms are used in Windows Server.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;248047
-
-## Summary
-
-This article describes how phantoms are used in Windows Server.
 
 ## More information
 
