@@ -31,7 +31,6 @@ The manual update involves running the Update-Engines.ps1 PowerShell script. Thi
 
 When defining a specific engine(s), you must use the following naming conventions:
 
-- X86: Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist
 - AMD64: Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
 
 > [!NOTE]
