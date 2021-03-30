@@ -80,9 +80,8 @@ sections:
           
           2. Extract IEHArden_V5.bat from the compressed (.zip) file, and then run it either at an administrative command prompt or as part of log-in script by using the procedure that is documented at [How to assign user logon scripts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789190(v=ws.11)#how-to-assign-user-logon-scripts).
           
-      - question: |
-          Contents of the batch file
-        answer: |
+          ### Contents of the batch file
+
           ```console
           ECHO OFF
           REM  IEHarden Removal Project
