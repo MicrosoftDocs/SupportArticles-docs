@@ -26,7 +26,7 @@ appliesto:
 
 <a id="summary"></a>
 
-This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
+This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers, lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
 
 ## Assess the health of on-premises Exchange Servers
 
