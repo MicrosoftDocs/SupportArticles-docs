@@ -230,11 +230,13 @@ If the SCEP application pool isn't started, check the application event log on t
   **Resolution**: Update the reference with the thumbprint of a valid certificate.
   1. Identify a replacement certificate:
      - Renew the existing certificate
-     - Select a different certificate with similar properties (subject, EKU, key type and length, etc.)
+     - Select a different certificate with similar properties (subject, EKU, key type and length, etc.).
      - Enroll a new certificate
+     - Client Authentication is required and without this EKU the CertificateRegistrationSvc will return an HTTP 403 response to NDESPlugin requests, visible in the IIS logs.
   2. Export the `NDESPolicy` Registry key to back up the current values.
   3. Replace the data of the `NDESCertThumbprint` Registry value with the thumbprint of the new certificate, removing all whitespace and converting the text to lowercase.
-  4. Restart the NDES IIS App Pools or execute `iisreset` from an elevated command prompt.
+  4. If you're using a service account like a gMSA to run NDES components, especially if you're Error 12186 in `NDESPlugin.log`, ensure that identity has the Read permission on the private key of the certificate specified by the `NDESCertThumbprint` value.
+  5. Restart the NDES IIS App Pools or execute `iisreset` from an elevated command prompt.
 
 #### GatewayTimeout
 
