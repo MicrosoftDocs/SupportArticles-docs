@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4505439
 The first step in troubleshooting synchronization issues is to verify that the following prerequisites are met:
 
 - Verify that [Prerequisites for software updates in Configuration Manager](/mem/configmgr/sum/plan-design/prerequisites-for-software-updates) are met.
-- When you installed the software update point on a remote site system server, the WSUS Administration console must be installed on the site server.
+- When you install the software update point on a remote site system server, the WSUS Administration console must be installed on the site server.
 - Verify that WSUS running on a software update point isn't configured to be a replica.
 
     To verify it, open the WSUS console on the software update point. Select **Options** in the console tree pane, and then select **Update Source and Proxy Server** in the display pane.
@@ -50,22 +50,22 @@ Verify that the following settings are configured correctly:
   **Server name**: It should be the fully qualified domain name (FQDN) of the upstream update source.
 
   - For the first software update point in the primary site, it should be the software update point for the parent site.
-  - For more software update points in the site, it should be the first software update point on the same site.
+  - For other software update points in the site, it should be the first software update point on the same site.
   - For an Internet-based software update point, it should be the first software update point on the same site.
 
   **Port number**: It should be the port number for the upstream WSUS server. To determine the port number on the upstream WSUS server, see [Determine the port settings used by WSUS and the software update point](troubleshoot-software-update-scan-failures.md#determine-the-port-settings-used-by-wsus-and-the-software-update-point).
 
-  **Use SSL when synchronizing update information**: When the software update point is in HTTPS mode, this setting must be selected. When using SSL (Secure Sockets Layer) for software updates, several requirements apply. For more information, see [Check SSL configuration](troubleshoot-software-update-scan-failures.md#check-ssl-configuration).
+  **Use SSL when synchronizing update information**: When the software update point is in HTTPS mode, this setting must be selected. When using Secure Sockets Layer (SSL) for software updates, several requirements apply. For more information, see [Check SSL configuration](troubleshoot-software-update-scan-failures.md#check-ssl-configuration).
 
   **This server is a replica of the upstream server**: Never select this setting on the software update point for the top-level site or the first software update point for the primary site. This setting should be selected on:
 
   - Internet-based software update points
-  - More software update points for the primary site.
+  - Other software update points for the primary site.
   - Software update points for a secondary site
 
 ## Synchronization fails because of authentication and proxy issues
 
-WSUS Configuration Manager configures the WSUS server once every hour. Doing so to ensure that the settings configured in WSUS match the setting specified in the Configuration Manager console.
+WSUS Configuration Manager configures the WSUS server once every hour. It does so to ensure that the settings configured in WSUS match the setting specified in the Configuration Manager console.
 
 If WCM fails to configure the WSUS server properly, synchronization attempts can fail with an error similar to the following screenshot:
 
@@ -155,9 +155,9 @@ To troubleshoot this issue, follow these steps:
 
 ## WSUS Control Manager reports an error
 
-Unlike WCM and WSyncMgr, WSUS Control Manager (WSUSCtrl) resides on the software update point (SUP) itself. If SUP is remote, WSUSCtrl.log will be present on the SUP instead of on the site server. WSUS Control Manager periodically checks WSUS to make sure WSUS components are healthy. If WSUS components are unhealthy, WCM and WSyncMgr can't communicate with WSUS. In most cases, errors in WCM.log resemble the errors in WsyncMgr.log. However, an exception to this case could be when the SUP is remote from the site server. If WSUS components are healthy, WSUSCtrl.log on the remote SUP doesn't report any errors. However, if the site server can't connect to the WSUS server remotely, you'll see errors in WCM.log or WSyncMgr.log even though WSUS itself is healthy.
+Unlike WCM and WSyncMgr, WSUS Control Manager (WSUSCtrl) resides on the software update point (SUP) itself. If SUP is remote, WSUSCtrl.log will be present on the SUP instead of on the site server. WSUS Control Manager periodically checks WSUS to make sure WSUS components are healthy. If WSUS components are unhealthy, WCM and WSyncMgr can't communicate with WSUS. In most cases, errors in WCM.log resemble the errors in WsyncMgr.log. However, an exception could be when the SUP is remote from the site server. If WSUS components are healthy, WSUSCtrl.log on the remote SUP doesn't report any errors. However, if the site server can't connect to the WSUS server remotely, you'll see errors in WCM.log and/or WSyncMgr.log even though WSUS itself is healthy.
 
-To check whether WSUS is functioning as expected, run the following command on the WSUS server. Then review the Application log entry in Event Viewer for errors:
+To check whether WSUS is functioning as expected, run the following command on the WSUS server. Then review the Application log in Event Viewer for errors:
 
 ```console
 %ProgramFiles%\Update Services\Tools\wsusutil.exe check health
@@ -165,7 +165,7 @@ To check whether WSUS is functioning as expected, run the following command on t
 
 ### Check connectivity from the site server to the WSUS server
 
-If the WSUS server is remote from the site server, the WSUS Administration console must be installed on the site server. Because the console installs the required APIs that are used by Configuration Manager to connect to the WSUS server. To test whether Configuration Manager can connect to the WSUS server, use the locally installed WSUS Administration console.
+If the WSUS server is remote from the site server, the WSUS Administration console must be installed on the site server. The console installs the required APIs that are used by Configuration Manager to connect to the WSUS server. To test whether Configuration Manager can connect to the WSUS server, use the locally installed WSUS Administration console.
 
 To connect to the remote WSUS server by using the WSUS Administration console, follow these steps:
 
