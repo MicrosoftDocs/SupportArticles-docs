@@ -88,7 +88,7 @@ The configuration of the federated domain has to be repaired in the scenarios th
 To repair the federated domain configuration on a domain-joined computer that has Azure Active Directory Module for Windows PowerShell installed, follow these steps.
 
 > [!WARNING]
-> - The following procedure removes any customizations that are created by [limiting access to Office 365 services by using the location of the client](https://technet.microsoft.com/library/hh526961%28ws.10%29.aspx). After the configuration of the federated domain is repaired, you may have to reconfigure limited AD FS access.   
+> - The following procedure removes any customizations that are created by [limiting access to Office 365 services by using the location of the client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh526961(v=ws.10)). After the configuration of the federated domain is repaired, you may have to reconfigure limited AD FS access.   
 > - The following steps should be planned carefully. Users for whom the SSO functionality is enabled in the federated domain will be unable to authenticate during this operation from the completion of step 4 until the completion of step 5. If the update-MSOLFederatedDomain cmdlet test in step 1 is not followed successfully, step 5 will not finish correctly. Federated users will be unable to authenticate until the update-MSOLFederatedDomain cmdlet can be run successfully.   
 
 1. Run the steps in the "How to update the federated domain configuration" section earlier in this article to make sure that the update-MSOLFederatedDomain cmdlet finished successfully.

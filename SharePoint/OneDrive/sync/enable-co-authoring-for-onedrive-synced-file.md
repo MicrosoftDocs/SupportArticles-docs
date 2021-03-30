@@ -1,8 +1,8 @@
 ---
 title: Enable coauthoring for OneDrive-synced files
 description: Explains how to enable coauthoring for OneDrive-synced files in Office 365 after an October 2019 change removes the feature.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -37,7 +37,7 @@ If you are affected by this change, you can use one of the following workarounds
 ### Workaround 1: Use the OneDrive sync client for SharePoint workloads
 
 The OneDrive Sync Client (OneDrive.exe) is the recommended client for syncing SharePoint Online and SharePoint 2019 content. It will continue to allow coauthoring capabilities for synced files, together with features and improvements such as Files On-Demand. We recommend that all users and organizations move to the OneDrive sync client. 
-For more information about how to deploy the OneDrive sync client, see [The OneDrive sync client](https://docs.microsoft.com/onedrive/one-drive-sync).
+For more information about how to deploy the OneDrive sync client, see [The OneDrive sync client](/onedrive/one-drive-sync).
 
 ### Workaround 2: Open the file directly from SharePoint 
 

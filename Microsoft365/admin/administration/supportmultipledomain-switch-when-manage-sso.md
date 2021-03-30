@@ -1,8 +1,8 @@
 ---
 title: SupportMultipleDomain switch when managing SSO to Office 365
 description: SupportMultipleDomain switch when managing SSO to Office 365.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -147,6 +147,6 @@ Set-MSOLDomainFederationSettings -domain name  Contoso.com –issueruri `http:/
 
 ### More information that should help you write your own claim rules.**
 
-- [The Role of the Claim Rule Language](https://technet.microsoft.com/library/dd807118%28WS.10%29.aspx)
+- [The Role of the Claim Rule Language](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd807118(v=ws.10))
 - [Understanding Claim Rule Language in AD FS 2.0](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0.aspx#General_Syntax_of_the_Claim_Rule_Language)
-- [Regular Expressions](https://technet.microsoft.com/library/hh440535.aspx)
+- [Regular Expressions](/previous-versions/system-center/system-center-2012-R2/hh440535(v=sc.12))

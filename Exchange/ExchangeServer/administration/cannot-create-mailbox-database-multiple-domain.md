@@ -61,7 +61,7 @@ To resolve this issue, set the preferred Active Directory server in Exchange Man
 Set-ADServerSettings -PreferredServer <DC FQDN>
 ```
 
-For more information about the Set-AdServerSettings cmdlet, see [Set-AdServerSettings](https://technet.microsoft.com/library/dd298063%28exchg.140%29.aspx).
+For more information about the Set-AdServerSettings cmdlet, see [Set-AdServerSettings](/powershell/module/exchange/set-adserversettings).
 
 ## Status
 

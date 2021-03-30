@@ -39,7 +39,7 @@ This issue may occur if the recipient domain doesn't comply with Domain Keys Ide
 
 Do one of the following:
 
-- Recommended method: Enable DKIM by creating a CNAME record for your domain in Office 365. For more information, see [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email?view=o365-worldwide&preserve-view=true).
+- Recommended method: Enable DKIM by creating a CNAME record for your domain in Office 365. For more information, see [Use DKIM to validate outbound email sent from your custom domain in Office 365](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email?preserve-view=true&view=o365-worldwide).
 - Contact the recipient domain and suggest that they comply with DKIM RFC 6376. Consider the message to be unsigned if a DKIM authentication failure occurs.
 
 ## More information

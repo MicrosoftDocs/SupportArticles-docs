@@ -1,8 +1,8 @@
 ---
 title: Outlook for Mac repeatedly prompts for credentials
 description: Describes an issue in which you're repeatedly prompted for your credentials in Outlook for Mac version 15.21 when you use a federated account and modern authentication is enabled. Provides a resolution.
-ms.author: v-weizhu
-author: AmandaAZ
+ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

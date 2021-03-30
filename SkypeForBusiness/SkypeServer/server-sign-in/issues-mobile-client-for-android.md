@@ -85,7 +85,7 @@ For guides, FAQ, and references to help you use the Lync 2010 mobile client on G
 #### Comparison with other mobile clients  
 For a feature comparison of Lync 2010 mobile clients, go to the following Microsoft TechNet website: 
 
-[Mobile Client Comparison Tables](https://technet.microsoft.com/library/hh691004%28v=ocs.14%29.aspx)
+[Mobile Client Comparison Tables](/previous-versions/office/skype-server-2010/hh691004(v=ocs.14))
 
 #### Sending logs to support  
  

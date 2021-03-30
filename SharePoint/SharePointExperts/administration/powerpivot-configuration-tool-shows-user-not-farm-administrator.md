@@ -1,6 +1,6 @@
 ---
 title: PowerPivot Configuration Tool shows "The user is not a farm administrator" error 
-author: AmandaAZ
+author: simonxjx
 ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal

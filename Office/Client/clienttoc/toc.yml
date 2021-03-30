@@ -637,6 +637,8 @@
           href: ../installation/office-installtion-need-msxml.md
         - name: Office setup issues
           href: ../installation/office-setup-issues.md
+        - name: Use SaRA to collect data about Microsoft 365 Apps installations
+          href: ../installation/use-sara-to-collect-install-info.md
         - name: The ability to uninstall Office updates
           href: ../installation/ability-to-uninstall-office.md
         - name: Windows Installer service could not be accessed
@@ -759,6 +761,8 @@
           href: ../office-suite-issues/office-docuemnt-image-quality-loss.md
         - name: Manage templates in Office program
           href: ../office-suite-issues/manage-office-program-templates.md
+        - name: Microsoft 365 apps open files from SharePoint On-Premises that aren’t the current version
+          href: ../office-suite-issues/office-opens-outdated-files.md
         - name: Missing file error with a web page file
           href: ../office-suite-issues/web-page-missing-file-error.md
         - name: Missing fonts issue in documents
@@ -1059,8 +1063,6 @@
           href: ../word/print-failures-word-for-office-365-on-win-10.md
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
-        - name: Word could not create the work file
-          href: ../word/word-could-not-create-the-work-file.md
         - name: Word slows or stops responding
           href: ../word/word-stops-responding.md
         - name: You're prompted to save changes to global template

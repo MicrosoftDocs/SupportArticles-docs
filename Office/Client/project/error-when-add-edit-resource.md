@@ -1,8 +1,8 @@
 ---
 title: Error when you add or edit a resource in Enterprise Resource Pool
 description: Explanation and resolution steps if you receive an error when you attempt to Add or Edit a resource in Project Enterprise Resource Pool.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

@@ -1,8 +1,8 @@
 ---
 title: Can't verify domain error when you try to verify a domain in Office 365
 description: Describes a scenario in which you can't verify a domain in Office 365 if the domain exists in another Microsoft cloud service or was federated with Exchange Online. Provides a resolution.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -45,7 +45,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
 ### You previously set up an Exchange federation trust (Exchange delegation) 
 If the domain exists from an Exchange federation trust that was previously set up, remove the Exchange federation trust. For more information about how to do this, go to the following Microsoft website:
 
-[Remove a Federation Trust](https://technet.microsoft.com/library/dd297972.aspx)
+[Remove a Federation Trust](/previous-versions/office/exchange-server-2010/dd297972(v=exchg.141))
 
 ### You still receive the error message
 

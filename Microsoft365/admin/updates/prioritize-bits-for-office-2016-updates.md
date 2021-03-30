@@ -69,7 +69,7 @@ Registry subkey:
  
 ### How to set up an internal HTTP site to distribute Office sources
 
-1. Download the latest Office BITS (by using [Office Deployment Tool (ODT)](https://technet.microsoft.com/library/jj219426.aspx)). BITS will resemble the following:
+1. Download the latest Office BITS (by using [Office Deployment Tool (ODT)](/deployoffice/office-deployment-tool-configuration-options)). BITS will resemble the following:
 
     [Drive:\<my-download-directory>\<new-office-download>\office\data\*.cab]
 

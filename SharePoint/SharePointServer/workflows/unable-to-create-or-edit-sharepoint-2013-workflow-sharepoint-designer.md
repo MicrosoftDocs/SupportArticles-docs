@@ -1,8 +1,8 @@
 ---
 title: Unable to create or edit SharePoint 2013 workflow in SharePoint Designer
 description: Resolves a situation where you cannot create or edit a SharePoint 2013 workflow in SharePoint Designer. 
-author: McCoyBot
-ms.author: v-todmc
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
@@ -50,7 +50,7 @@ If the issue persists, it is possible that the configuration cache might still h
 
 To clear the SharePoint configuration cache, see the following blog post:
 
-[Clear the SharePoint Configuration Cache](https://blogs.msdn.microsoft.com/josrod/2007/12/12/clear-the-sharepoint-configuration-cache/)
+[Clear the SharePoint Configuration Cache](/archive/blogs/josrod/clear-the-sharepoint-configuration-cache)
 
 ## More information
 When you attempt to create or edit a SharePoint 2013 Workflow using SharePoint Designer, it must first build a cache of all workflow activities. These include SharePoint built-in activities and any other product or features installed in the SharePoint farm (such as Project, Nintex, etc.). The SharePoint server provides the workflow activity details to SharePoint Designer when Designer makes a GetActivitySignatures call to the server:

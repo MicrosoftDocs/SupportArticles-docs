@@ -24,7 +24,7 @@ search.appverid:
 
 This article describes how administrators of Microsoft 365 tenants can manage access to Microsoft Fluid Framework preview by disabling user sign-ins in the [Azure portal](https://portal.azure.com/).
 
-Follow the instructions in [Disable user sign-ins for an enterprise app in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/disable-user-sign-in-portal).
+Follow the instructions in [Disable user sign-ins for an enterprise app in Azure Active Directory](/azure/active-directory/manage-apps/disable-user-sign-in-portal).
 
 The Microsoft Fluid preview experience is listed as follows:
 
@@ -41,7 +41,7 @@ ID: **660d4be7-2665-497f-9611-a42c2668dbce**
 
 If you do not find "Microsoft Fluid Framework preview" in the list of enterprise applications, follow these steps to create the service principal in your tenant:
 
-1. [Install the AAD PowerShell Module v2](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
+1. [Install the AAD PowerShell Module v2](/powershell/azure/active-directory/install-adv2?preserve-view=true&view=azureadps-2.0#installing-the-azure-ad-module).
 2. Run the following cmdlet, and sign in by using your tenant admin credentials:
 
    ```powershell

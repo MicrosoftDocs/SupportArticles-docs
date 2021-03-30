@@ -1,6 +1,6 @@
 ---
-title: Repair failed installations of Exchange cumulative and security updates
-description: Works around the issues that occur after you install the security updates for Exchange server.
+title: Repair failed installations of Exchange Cumulative and Security updates
+description: Fix issues that occur during CU or SU installations for Exchange Server.
 author: genlin
 ms.author: meerak
 manager: dcscontentpm
@@ -8,9 +8,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.reviewer: mbro; robwhal
+ms.reviewer: mbro; robwhal; batre
 ms.custom: 
-- CI 144977
+- CI 145217
 - Exchange Server
 - CSSTroubleshoot
 search.appverid:
@@ -22,136 +22,209 @@ appliesto:
 - Exchange Server 2010 Service Pack 3
 ---
 
-# Repair failed installations of Exchange cumulative and security updates
+# Repair failed installations of Exchange Cumulative and Security updates
 
-This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
+<a id="summary"></a>
 
-## Check for Indicators of Compromise (IOC) and verify the update
-</br>
-<details>
-<summary>Looking Indicators of Compromise (IOC)</summary>
-</br>
+This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers, lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
 
-This script automates all four of the commands found in the [Microsoft Threat Intelligence Center (MSTIC) Blog](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at the Exchange Support GitHub repository [aka.ms/TestProxyLogon](https://aka.ms/TestProxyLogon).  
-</br>
-</details>
+## Assess the health of on-premises Exchange Servers
 
-<details>
-<summary>How to verify the installation of Cumulative Updates & Security Updates</summary>
-
-### Option 1 (Recommended)
-
- Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the build number.
- 
- ![The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
-
-### Option 2
-
-Run the following command and verify that the file version matches the information in the table below the screenshot.
-
-```
-Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
-```
-
-| Exchange version  | Patched systems file versions  |
-|---|---|
-| Exchange Server 2019  | For CU7: 15.02.0721.013</br>For CU8: 15.02.0792.010|
-| Exchange Server 2016  | For CU18: 15.01.2106.013</br>For CU19: 15.01.2176.009|
-| Exchange Server 2013  | For CU23: 15.00.1497.012  |
-
-</details>
+- [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
+- [Verify the installation of CUs & SUs](#verify-the-installation-of-cus--sus)
 
 ## Resolve errors during CU or SU installation
 
-### OWA or ECP 500 errors
+- [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
+- [Missing images in ECP](#missing-images-in-ecp)
+- [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
+- [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
+- [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
+- [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
+- [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
+- [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
+- [Services don't start after SU installation](#services-dont-start-after-su-installation)
+- [Error during Setup in Setup log](#error-during-setup-in-setup-log)
+- [Error during update rollup installation](#error-during-update-rollup-installation)
+- [Setup fails with "Cannot start the service" error](#setup-fails-with-cannot-start-the-service-error)
+- [SU installation fails because of existing IU](#su-installation-fails-because-of-existing-iu)
+- [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
+- [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
+- [Mail flow has stopped](#mail-flow-has-stopped)
+- [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
+- [Exchange setup fails with error code 1603](#exchange-setup-fails-with-error-code-1603)
+- [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
+- [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
+- [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
+- [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
-**Issue**
+## Additional information
 
-OWA and ECP may experience HTTP 500 errors after installation. After providing credentials to log on to OWA/ECP, it may fail with an error similar to:
+- [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
+- [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
+- [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
+- [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
+
+### Check for Indicators of Compromise (IOCs)
+
+Use the following script that automates testing for all four vulnerabilities described in the [Microsoft Threat Intelligence Center (MSTIC) blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). The script provides a progress bar and performance tweaks to make the test for CVE-2021-26855 test run fast. Download the latest version of the script from the Exchange Support GitHub repository [aka.ms/TestProxyLogon](https://aka.ms/TestProxyLogon).  
+
+[Back to top](#summary)
+
+### Verify the installation of CUs & SUs
+
+#### Option 1 (Recommended)
+
+Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the build number.
+
+![Screenshot of the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
+
+#### Option 2
+
+Run the following command and verify that the file version in the output matches the information in the table below.
+
+```powershell
+Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
+```
+
+| Exchange version  | File versions of patched systems   |
+|---|---|
+| Exchange Server 2019  | For CU8: 15.02.0792.010</br>For CU7: 15.02.0721.013</br>For CU6: 15.02.0659.012</br>For CU5: 15.02.0595.008</br>For CU4: 15.02.0529.013</br>For CU3: 15.02.0464.015</br>For CU2: 15.02.0397.011</br>For CU1: 15.02.0330.011</br>For RTM: 15.02.0221.018 |
+| Exchange Server 2016  | For CU19: 15.01.2176.009</br>For CU18: 15.01.2106.013</br>For CU17: 15.01.2044.013</br>For CU16: 15.01.1979.008</br>For CU15: 15.01.1913.012</br>For CU14: 15.01.1847.012</br>For CU13: 15.01.1779.008</br>For CU12: 15.01.1713.010</br>For CU11: 15.01.1591.018</br>For CU10: 15.01.1531.012</br>For CU9: 15.01.1466.013</br>For CU8: 15.01.1415.008 |
+| Exchange Server 2013  | For CU23: 15.00.1497.012</br>For CU22: 15.00.1473.006</br>For CU21: 15.00.1395.012  |
+|||
+
+For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](https://support.microsoft.com/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
+
+[Back to top](#summary)
+
+### HTTP 500 errors in OWA or ECP
+
+**Issue:**
+
+HTTP 500 errors might occur in Outlook on the Web (OWA) and Exchange Control Panel (ECP) after updates are installed. After you provide credentials to log on to OWA or ECP, the login process may fail with the following error message:
 
 > Could not load file or assembly Microsoft.Exchange.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
 
-**Resolution**
+**Resolution:**
 
-If this occurs, run the following scripts to restore the configuration for OWA and ECP.
-The scripts can be found in the folder: \Program Files\Microsoft\Exchange Server\v15\Bin\ directory. (Where “V15“ will be “V14” for Exchange 2010)
-The scripts are located in the following location: \Program Files\Microsoft\Exchange Server\v15\Bin\ directory. Where “V15“ will be “V14” for Exchange 2010.
+Reinstall the security update from an elevated command prompt.
 
-Run the scripts `.\UpdateCas.ps1` and `.\UpdateConfigFiles.ps1`.
+1. Select **Start**, and then type **cmd**.
+1. Right-click **Command Prompt** from the search results, and then select **Run as administrator**.
+1. If the **User Account Control** window appears, select the option to open an elevated Command Prompt window, and then select **Continue**.
+   If the UAC window doesn’t appear, continue to the next step.
+1. Type the full path of the .msp file for the security update, and then press **Enter**.
+1. After the update installs, restart the server.
 
-Then go to a command prompt as administrator and run `iisreset`.
+For more information, see [OWA or ECP stops working after you install a security update](./owa-stops-working-after-update.md).
 
-If this fails please review and follow the steps in [this Docs article](https://docs.microsoft.com/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update).
+[Back to top](#summary)
 
-### ECP Missing Images
+### Missing images in ECP
 
-**Issue**
+**Issue:**
 
-After Security Update installation, OWA or ECP may show missing images similar to the following:
+After installing the SU, OWA or ECP may not display images.
 
-**Resolution**
+**Cause:**
 
-The SU was not installed properly. Make sure to always follow the best practice by running the update from an administrative command prompt and then reboot after the application. To mitigate this issue the MSP will need to be uninstalled and reinstalled using the best practices from above.
-## Blank page after logging in EAC or OWA  
+This issue occurs if the SU is not installed properly.
 
-**Issue**
+**Resolution:**
 
-When you log in the Exchange Admin Center(EAC) or Outlook on the web (OWA) in Microsoft Exchange Server 2016 or Exchange Server 2013, you get a blank page. When this issue occurs, event ID 15021 may be logged.  
+Uninstall and reinstall the .msp file by running the update from an administrative command prompt. Then reboot the server after the installation is complete.
 
-**Cause**
+[Back to top](#summary)
 
-This issue occurs if the SSL binding on 0.0.0.0:444 has one of more of the following issues:  
+### Blank page in EAC or OWA
+
+**Issue:**
+
+A blank page displays when you log in to the Exchange Admin Center (EAC) or OWA from Exchange Server 2016 or Exchange Server 2013. When this issue occurs, event ID 15021 may be logged.  
+
+**Cause:**
+
+This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the following problems:  
 
 - The binding is installed incorrectly  
 - The binding doesn’t have a certificate assigned.  
 - The binding contains incorrect information.  
 
-**Workaround**
+**Resolution:**
 
-1. On the CAS server, open Internet Information Services (IIS).  
+1. On the Client Access Server (CAS), open Internet Information Services (IIS).  
 
-2. Expand **Sites**, click **Default Web Site**, and then click **Bindings** on the **Actions** pane.  
+2. Expand **Sites**, select **Default Web Site**, and then click **Bindings** on the **Actions** pane.  
 
-3. In the **Site Bindings** dialog box, open the binding for https on IP address \* and port 443.  
+3. In the **Site Bindings** dialog box, open the binding for the following values: </br>
+   **Type**: **https**; **Port**: **443**.  
 
-4. Verify that a valid SSL certificate is specified for the site. If not, specify a valid SSL certificate, for example the **Microsoft Exchange** certificate, and restart the IIS service by running the following command in the Elevated PowerShell window: 
-    ````Powershell
-    Restart-Service WAS,W3SVC  
-    ````
+4. Check whether a valid SSL certificate is specified for the default web site. If not, specify a valid SSL certificate, such as **Microsoft Exchange**, and select **OK**.
 
-   ![Verify the SSL certificate for the SSL binding for the default web site on the CAS server.](./media/exchange-security-update-issues/front-end-binding.png)  
+5. Run the following command in an elevated PowerShell window to restart IIS:
 
-5. On the mailbox server, do the same verification for the **Exchange Back End** site.  
-    ![Verify the SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
+   ```Powershell
+   Restart-Service WAS,W3SVC  
+   ```
 
-More information available at [support.microsoft.com](https://support.microsoft.com/en-us/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7)
+   ![The SSL certificate for the SSL binding for the default web site on the CAS server.](./media/exchange-security-update-issues/front-end-binding.png)  
 
-## Event ID 1309 and you cannot access EAC or OWA
+6. On the Mailbox server, perform the verification steps 1 through 5 for the **Exchange Back End** site.
 
-**Issue**  
+    ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
 
-You successfully installed Microsoft Exchange Server 2016 or Exchange Server 2013. The installation process may have failed or been interrupted at some stage and then resumed and finally completed successfully. However, when you try to access Exchange Control Panel (ECP) or Outlook Web App (OWA), you receive the following error message:
+For more information, see [this article](/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
 
-something went wrong
+[Back to top](#summary)
 
-Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
+### Can't sign in to OWA or EAC
 
-**Cause**  
+**Issue:**
 
-This issue occurs if SharedWebConfig.config is missing from either of the following locations:
+When you try to sign in to OWA or the EAC in Exchange Server, the web browser freezes or you see a message that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer.
 
-- C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy
+>Event ID: 1003
+>Source: MSExchange Front End HTTPS Proxy
+>An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.
+>at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
+
+**Cause:**
+
+This issue occurs because the Exchange Server Open Authentication (OAuth) certificate has expired.
+
+**Resolution:**
+
+Follow the steps in this [article](../administration/cannot-access-owa-or-ecp-if-oauth-expired.md?preserve-view=true#resolution) to fix the issue.
+
+[Back to top](#summary)
+
+### Can't access EAC or OWA after Exchange installation
+
+**Issue:**
+
+When installing Exchange Server 2016 or Exchange Server 2013, the installation process might have failed or been interrupted at some stage, then resumed and finally completed successfully. However, when you try to access EAC or OWA, you receive the following error message:
+
+>something went wrong
+>
+>Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
+
+**Cause:**
+
+This issue occurs if the SharedWebConfig.config file is missing from one of the following locations:
+
 - C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess
+- C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy
 
-**Resolution**  
+**Resolution:**
 
-To resolve this issue, follow these steps:  
+Do the following:
 
-1. On the server that's facing the problem, identify the location that the file is missing from.
+1. On the server in which the error is occurring, identify the location where the SharedWebConfig.config file is missing.
 2. Generate the missing file:
 
-    1. Run `cd %ExchangeInstallPath%\bin` to change the current directory to the bin folder that's under the Exchange installation path.
-    2. Use the DependentAssemblyGenerator.exe tool to generate the file:
+    1. Run `cd %ExchangeInstallPath%\bin` to change the current directory to the bin folder that is under the Exchange installation path.
+    2. Use the DependentAssemblyGenerator.exe tool to generate the file as appropriate:
 
         - If the file is missing from *C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess*, run the following command:
 
@@ -165,211 +238,384 @@ To resolve this issue, follow these steps:
         DependentAssemblyGenerator.exe -exchangePath "%ExchangeInstallPath%\bin" -exchangePath "%ExchangeInstallPath%\FrontEnd\HttpProxy" -configFile "%ExchangeInstallPath%\FrontEnd\HttpProxy\SharedWebConfig.config"
         ```
 
-3. Restart the server or open a elevated PowerShell session and Run 
+3. Restart the server or open an elevated PowerShell session and run the following command:
 
-```Powershell
-Restart-Service WAS,W3SVC
-```
+    ```Powershell
+    Restart-Service WAS,W3SVC
+    ```
 
-More information available at [support.microsoft.com](https://docs.microsoft.com/en-us/exchange/troubleshoot/client-connectivity/event-1309-code-3005-cannot-access-owa-ecp)
+    For more information, see [this article](./event-1309-code-3005-cannot-access-owa-ecp.md).
 
-### Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe
+[Back to top](#summary)
 
-**Issue**  
+### Exchange Server setup does not run
 
-Consider the following scenario:
+**Issue:**
 
-- You plan to run an unattended setup to upgrade Microsoft Exchange Server 2019, Microsoft Exchange Server 2016, or Microsoft Exchange Server 2013 from PowerShell or command prompt using Setup.exe
-- The setup media is located on D: drive
-- The unattended installation is started from PowerShell or command prompt as "`setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" instead of "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell or command prompt).
+You run an unattended installation to upgrade Microsoft Exchange Server 2019, Microsoft Exchange Server 2016, or Microsoft Exchange Server 2013 from PowerShell or command prompt by using setup.exe. The Setup program starts and may indicate that it has completed successfully. However, Exchange isn't updated.
 
-In this situation, the Exchange Server Setup program starts, and may indicate that it's successfully completed. However, Exchange itself isn't updated.
+The Setup media is located on D: drive and the unattended installation is started by using one of the following commands:</br>
+"`setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (from PowerShell or command prompt) instead of</br>
+"`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (from PowerShell) or</br>
+"`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (from PowerShell or command prompt).
 
 **Cause:**  
 
-When you run a command in PowerShell or command prompt, the paths in the System environment variable "Path" are first checked to verify the command being executed, before the current path in PowerShell or command prompt is checked, unless:
+When you run a command in PowerShell or command prompt, the paths in the System environment variable "Path" are checked first to verify the command to be executed, before the current path in PowerShell or command prompt is checked. This order of checks is used unless the following conditions are true:
 
-- ".\" is entered in front of the command or program being executed in PowerShell, or
-- the Tab key is used to automatically add the ".\" in front of the command or program being executed in PowerShell, or
-- the full path is used to run the setup.exe (for example "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`") in PowerShell or command prompt.
+- ".\" is entered in front of the command or program being executed in PowerShell.
+- The Tab key is used to automatically add ".\" in front of the command or program being executed in PowerShell.
+- The full path is used to run setup.exe (for example "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`") in PowerShell or command prompt.
 
-A setup.exe file located in `C:\Program Files\Microsoft\Exchange Server\V15\bin` is found and executed by PowerShell, instead of the setup.exe in the current path.
+In the absence of these conditions, another setup.exe file located in `C:\Program Files\Microsoft\Exchange Server\V15\bin` is found and executed by PowerShell instead of the setup.exe in the correct path.
 
-**Workaround:**  
+**Resolution:**  
 
-If you run an upgrade, use "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt) to start the command.
+Run the upgrade by using "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt).
 
-More information available at [support.microsoft.com](https://docs.microsoft.com/exchange/troubleshoot/setup/ex2019-setup-does-not-run-correctly-started-powershell)
+For more information, see [this article](../setup/ex2019-setup-does-not-run-correctly-started-powershell.md).
 
-### The upgrade patch cannot be installed by the Windows Installer service
+[Back to top](#summary)
 
-**Issue**
+### Upgrade patch can't be installed
 
-This error may be seen when installing the Security Update:
+**Issue:**
+
+You might see the following error message when installing the SU:
 
 >The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
 
-**Resolution**
+**Cause:**
 
-This means the Cumulative Update or Security Update version mismatch and it did not meet the requirements. You need to upgrade to the correct Cumulative Update first or validate that you have downloaded the correct Cumulative Update for your intended Cumulative Update.
+This error message displays if the versions of the CU and SU don't match.
 
-### Installation fails because service cannot stop properly
+**Resolution:**
 
-**Issue**
+Either upgrade to the correct CU or download the correct SU for the intended CU.
 
-The Installation fails because services don't stop properly.
+[Back to top](#summary)
 
-**Resolution**
+### Installation fails due to services not stopping
 
-Try the best practice to reboot the server first before installing the Cumulative Update or Security Update. Also make sure antivirus software is ruled out (set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019&preserve-view=true) or consider turning it off for the time of the installation). In some cases where services still wouldn’t stop/start as expected, try the following steps:
+**Issue:**
 
-1. Rename the C:\ExchangeSetupLogs folder (such as ExchangeSetupLogs-OLD)
-2. Change the startup type of Exchange services in the services.msc console to Automatic (note: do this only for the Exchange services which were active prior to the setup attempt. POP3 and IMAP4 are stopped by default and only need to run if there are indeed any users who need them).
-3. Run setup again.
-The reason is that setup may get interrupted in a phase where services are already disabled. Starting setup again in this phase may record the “before” state of services as disabled and will try to restore this state.
+The installation fails because services didn't stop properly.
 
-### Services are not started after Security Update installation is completed
+**Resolution:**
 
-**Issue**
+Use the best practice to reboot the server before installing the CU or SU. For the antivirus software you're running, set proper [exclusions](/Exchange/antispam-and-antimalware/windows-antivirus-software?preserve-view=true&view=exchserver-2019) or consider turning it off during the setup. In some cases where services still don't stop or start as expected, do the following.
 
-Services are not started after Security Update installation is completed.
+1. Rename the C:\ExchangeSetupLogs folder (for example, ExchangeSetupLogs-OLD).
+2. Change the startup type for Exchange services in the services.msc console to **Automatic**.
 
-**Resolution**
+    **Note**: Do so only for the Exchange services that were active before the setup attempt. The POP3 and IMAP4 services are stopped by default. They need to run only if there are users who need them.
 
-After the application of the security update, you notice that the Exchange services are not starting, check the service state, if they are Disabled, set them to Automatic and start them manually. Please note that the services **MSExchangeIMAP4**, **MSExchangeIMAP4BE**, **MSExchangePOP3** and **MSExchangePOP3BE** are typically disabled by default you can refer to the log `C:\ExchangeSetupLogs\ServiceControl.log` to see what was disabled during setup by searching for Disabling services.
+Then run the setup again.
 
-### Error during Setup: Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role Isn’t Installed on this Computer
+[Back to top](#summary)
 
-**Issue**
+### Services don't start after SU installation
 
-You receive the following error during Setup: 
+**Issue:**
 
->Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role Isn’t Installed on this Computer.
+Exchange services don't start after you complete installing the SU installation.
 
-**Resolution**
+**Resolution:**
 
-If the above are seen in the setup logs, consider running the Exchange Setup log reviewer script [SetupLogReviewer.ps1](https://aka.ms/ExSetupScripts) This script reviews the ExchangeSetup.log and determines if it is a known issue and reports an action to take to resolve the issue.
-Once you have downloaded the script just point it to the Exchange Setup log like below and review the output:
+Check the state of the services. If they are **Disabled**, set them to **Automatic** and start them manually.
 
-````PowerShell
+**Note**: The services **MSExchangeIMAP4**, **MSExchangeIMAP4BE**, **MSExchangePOP3**, and **MSExchangePOP3BE** are typically disabled by default. Check the Exchange log located at `C:\ExchangeSetupLogs\ServiceControl.log` to see which services were disabled during the SU installation.
+
+[Back to top](#summary)
+
+### Error during Setup in Setup log
+
+**Issue:**
+
+You receive the following error message during Setup in the Setup logs:
+
+>Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role isn’t installed on this computer.
+
+**Resolution:**
+
+Download and run the Exchange Setup log reviewer script [SetupLogReviewer.ps1](https://aka.ms/ExSetupScripts). This script reviews the ExchangeSetup.log, determines whether this error is a known issue and presents an action you can take to resolve the issue.
+After you download the script, point it to the Exchange Setup log as shown below and review the output.
+
+````powershell
 .\SetupLogReviewer.ps1 -SetupLog C:\ExchangeSetupLogs\ExchangeSetup.log
 ````
 
-Otherwise you can review the log located at `C:\ExchangeSetupLogs\ExchangeSetup.log` for the following error:
+Alternatively you can review the log located at `C:\ExchangeSetupLogs\ExchangeSetup.log` for the following error:
 
-"Setup encountered a problem while validating the state of Active Directory: Exchange organization-level objects have not been created, and setup cannot create them because the local computer is not in the same domain and site as the schema master.  Run setup with the /prepareAD parameter on a computer in the domain domainnname and site Default-First-Site-Name, and wait for replication to complete."
+"Setup encountered a problem while validating the state of Active Directory: Exchange organization-level objects have not been created, and setup cannot create them because the local computer is not in the same domain and site as the schema master. Run setup with the /prepareAD parameter on a computer in the domain \<domain_name> and site \<Default_First_Site_Name>, and wait for replication to complete."
 
-If the error exists, then run `.\setup.exe /PrepareAD /IAcceptExchangeServerLicenseTerms` from a machine in the same domain as the schema master (user must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin**)
-To find the DC that holds the schema master run the following from administrative command prompt on the DC: `netdom query fsmo`.
+If you find this error, run the following command from a machine that is in the same domain as the schema master.
 
-### Error during install: Creating Native images for .NET assemblies
+`.\setup.exe /PrepareAD /IAcceptExchangeServerLicenseTerms`
 
-**Issue**
+**Note**: The user who runs the command must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin** groups.
 
-When you install this update rollup on a computer that isn’t connected to the internet, you may experience a long installation time. Additionally, you may receive the following message:
+To find the Domain Controller (DC) which holds the schema master, run the following command from administrative command prompt on the DC:
+
+`netdom query fsmo`
+
+[Back to top](#summary)
+
+### Error during update rollup installation
+
+**Issue:**
+
+When you install the update rollup on a computer that isn’t connected to the internet, you may experience a long installation delay. Additionally, you may receive the following error message:
 
 >Creating Native images for .Net assemblies.
 
-**Resolution** 
+**Cause:**
 
-This issue is caused by network requests to connect to the following URL:
+This issue is caused by the network requests to connect to the following URL:
 
 ``http://crl.microsoft.com/pki/crl/products/CodeSigPCA.crl``
 
-These network requests are attempts to access the certificate revocation list for each assembly that native image generation (Ngen) compiles to native code. However, because the server that’s running Exchange Server isn’t connected to the internet, each request must wait to time out before the process can continue.
+The network requests are attempts to access the Certificate Revocation List for each assembly for which Native image generation (Ngen) compiles to native code. Because the server that’s running Exchange Server isn’t connected to the internet, each request must wait to time out before the process can continue.
 
-To fix this issue, follow these steps:
+**Resolution:**
 
-1. In Internet Explorer, select **Internet Options** on the **Tools** menu, and then select **Advanced**.
-1. In the **Security** section, clear the Check for publisher’s certificate revocation check box, and then select **OK**. 
- 
+Do the following:
+
+1. In Internet Explorer, select **Tools** > **Internet Options**.
+2. Select the **Advanced** tab.
+3. In the **Security** section, clear the **Check for publisher’s certificate revocation** check box, and then select **OK**.
+
     > [!NOTE]
     > Clear this security option only if the computer is in a tightly-controlled environment.
   
-1. When the Setup process is finished, select the Check for publisher’s certificate revocation check box again.
+4. After the Setup process completes, select the **Check for publisher’s certificate revocation** check box again.
 
-### Security Update Installation fails due to previous IU installation
+[Back to top](#summary)
 
-**Issue**
+### Setup fails with "Cannot start the service" error
 
-You may see the following error: 
+**Issue:**
+
+The CU setup might fail with the following error message:
+>Cannot start the service Microsoft Exchange Service Host
+
+You might find that the Microsoft Exchange Service Host and/or all other Exchange services are stopped and in **Disabled** mode.
+
+**Resolution:**
+
+Do the following:
+
+1. Rename the C:\ExchangeSetupLogs folder (for example, ExchangeSetupLogs-OLD).
+2. Change the startup type for all Exchange services in the services.msc console to **Automatic**.
+3. Assuming that the Exchange CU media is on D: drive, open a command prompt as administrator and resume setup by using the following command:
+
+   `D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`
+
+[Back to top](#summary)
+
+### SU installation fails because of existing IU
+
+**Issue:**
+
+During the SU installation, you might see the following error message:
 
 >Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration.
 
-**Resolution** 
+**Resolution 1:**
 
-You need to uninstall the previous installed IU before applying this SU as it is cumulative. You can find previous IU’s in add/remove programs.
+Uninstall the previously installed Interim Update (IU) before applying this SU because the updates are cumulative. You can find the previous IUs in **Add/Remove Programs**.
 
-## Additional information
+**Resolution 2:**
 
-### How to update .NET when migrating from an unsupported CU
+This error message may also display on a server that has no IUs installed but is not connected to the internet. So it can't check the Certificate Revocation List. In this situation, do the following:
 
-If you are upgrading Exchange Server from an unsupported CU to the current CU and no intermediate CUs are available, you should first upgrade to the latest version of .NET that's supported by your version of Exchange Server and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest supported CU. Microsoft makes no claim that an upgrade failure will not occur using this method, which may result in the need to contact Microsoft Support Services.
+1. In Internet Explorer, select **Tools** > **Internet Options**.
+2. Select the **Advanced** tab.
+3. In the **Security** section, clear the **Check for publisher’s certificate revocation** check box, and then select **OK**.
+
+    > [!NOTE]
+    > Clear this security option only if the computer is in a tightly-controlled environment.
+  
+4. After the Setup process completes, select the **Check for publisher’s certificate revocation** check box again.
+
+[Back to top](#summary)
+
+### Setup installs older CU or fails to install language pack
+
+**Issue:**
+
+You're upgrading to the latest CU but Setup either displays that it is installing an existing CU on the server OR fails with the following error message:
+
+> Couldn't open package **'C:\Program Files\Microsoft\Exchange Server\V15\bin\Setup\\\<package name>**. This installation package could not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package. Error code is 1619.
+
+**Cause:**
+
+These issues occur if you start the installation from Windows PowerShell and use the Setup.EXE command.
+
+**Resolution:**
+
+If the Exchange CU media is on D: drive, run an upgrade using PowerShell by using either of the following commands:
+"`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt)
+
+[Back to top](#summary)
+
+### Restart from previous installation is pending
+
+**Issue:**
+
+You keep getting the following error message even after restarting the server several times:
+
+> Microsoft Exchange Server setup cannot continue because a restart from a previous installation or update is pending.
+
+**Resolution:**
+
+Follow the information provided in [A Restart from a Previous Installation is Pending](/previous-versions/office/exchange-server-analyzer/cc164360(v=exchg.80)) to fix the issue.
+
+If you still see the error message, do the following:
+
+1. Run the [HealthChecker script](https://aka.ms/exchangehealthchecker).
+1. Run the [SetupAssist.ps1](https://aka.ms/ExSetupAssist) script.
+
+[Back to top](#summary)
+
+### Mail flow has stopped
+
+**Issue:**
+
+Mail flow stops after you install a CU or an SU.
+
+**Resolution:**
+
+To get mail flow working again, make sure that the following requirements are met:
+
+1. All Exchange services are enabled and running.
+2. The server is not in [Maintenance mode](/exchange/high-availability/manage-ha/manage-dags?view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true)
+3. There is enough free space available in the [Exchange message queue database](/exchange/back-pressure-exchange-2013-help#free-hard-drive-space-for-the-message-queue-database&preserve-view=true).
+
+[Back to top](#summary)
+
+### Exchange Setup or PrepareAD error
+
+**Issue:**
+
+When you run either Exchange setup or the PrepareAD command, the process fails with the following error message:
+
+>The well-known object entry B:<guid>:CN=Recipient Management\0ADEL:<guid>,CN=Deleted Objects,DC=contoso,DC=com on the otherWellKnownObjects attribute in the container object CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com points to an invalid DN or a deleted object. Remove the entry, and then rerun the task. at Microsoft.Exchange.Configuration.Tasks.Task.ThrowError(Exception exception, ErrorCategory errorCategory, Object target, String helpUrl)
+
+**Cause:**
+
+This issue occurs because “otherWellKnownObjects”, the object referenced in the error, is no longer in Active Directory. So the link to the object needs to be removed.
+
+**Resolution:**
+
+Download and run the [SetupAssist.ps1](https://aka.ms/ExSetupAssist) script.
+
+````powershell
+.\SetupAssist.ps1 -OtherWellKnownObjects
+````
+
+The script will dump the otherWellKnownObjects attribute into a file named ExchangeContainerOriginal.txt. Then it will check the file for deleted objects. If any are found, the script will generate a new file named ExchangeContainerImport.txt and use it to remove the bad values.
+
+If the script asks you to verify the results, do the following:
+
+1. Review the ExchangeContainerImport.txt file for the changes made by the script.
+2. Import the ExchangeContainerImport.txt file into Active Directory by following the instructions provided by the script.
+3. Rerun the PrepareAD command.
+
+Now you should be able to continue with the setup.
+
+[Back to top](#summary)
+
+### Exchange setup fails with error code 1603
+
+**Issue:**
+
+You see the following error message during Exchange installation:
+
+>Installing product F:\exchangeserver.msi failed. Fatal error during installation. Error code is 1603. Last error reported by the MSI package is 'The installer has insufficient privileges to access this directory: C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\15.1.2106'.
+
+**Resolution:**
+
+1. Make sure that the setup is run by using a local administrator account.
+2. Check whether the following permissions are assigned to the folder specified in the error:
+    1. Read permission to Authenticated users
+    1. Full Control permission to System
+    1. Full Control to <local_machine>\administrators>
+3. Make sure that inheritance is enabled on the folder. If it isn't, then enable inheritance.
+
+After updating folder permissions, resume setup.
+
+If the error message still occurs, follow the steps provided in [this article](/troubleshoot/windows-server/application-management/msi-installation-error-1603).
+
+[Back to top](#summary)
+
+### Update .NET when migrating from an unsupported CU
+
+If you're upgrading Exchange Server from an unsupported CU to the current CU and no intermediate CUs are available, you should first upgrade to the latest version of .NET that's supported by your version of Exchange Server and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest supported CU. Microsoft makes no claim that an upgrade failure will not occur by using this method.
 
 > [!IMPORTANT]
-> Versions of the .NET Framework that aren't listed in the tables on the [supportability matrix](https://docs.microsoft.com/en-us/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019) are not supported on any version of Exchange. This includes minor and patch-level releases of the .NET Framework.  
+> Versions of the .NET Framework that aren't listed in the tables in the [Exchange Server supportability matrix](/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019&preserve-view=true) are not supported on any version of Exchange. This includes minor and patch-level releases of the .NET Framework.  
 
-Follow these steps below to install the latest .NET Framework
+Follow these steps to install the latest version of the .NET Framework:
 
-1.  Put the Server into [Maintenance
-    Mode](https://docs.microsoft.com/en-us/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
-    For example,
+1. Put the server into [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true).
+    Run the following command:
 
-    set-servercomponentstate \<server_name\> -Component serverwideoffline -State
-    inactive -Requester Maintenance
+    `set-servercomponentstate \<server_name\> -Component serverwideoffline -State inactive -Requester Maintenance`
 
-2.  Stop all of the Exchange Services.
+2. Stop all Exchange Services by using either the Services MMC or PowerShell. If you want to use PowerShell, run the following command twice to stop all Exchange services:
 
-3.  Either by the services MMC
+    `Get-service \*exch\* \| stop-service`
 
-4.  Or by utilizing Powershell. Run the below command twice to stop all Exchange
-    services. We do not recommend using the -Force command to stop all the
-    services.
+    **Note**: It is not recommended to use the -Force command to stop all the services.
 
-    Get-service \*exch\* \| stop-service
+3. Download and install the correct version of the .NET Framework according to the [Exchange Server supportability matrix](/exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019&preserve-view=true).
 
-5.  Download and install the correct new .Net Version according to the
-    [supportability
-    table](https://docs.microsoft.com/en-us/exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019).
+4. After the installation is complete, reboot the server.
 
-6.  After the install is complete, reboot the server.
+5. Update to the newest CU available for Exchange 2013, 2016, or 2019.
 
-7.  Update to the newest Cumulative Update available for Exchange 2013, 2016, or
-    2019.
+6. Reboot the server after the CU is installed.
 
-8.  Make sure to reboot the server after the Cumulative Update is installed.
+7. Ensure all Exchange services are in their normal start mode and have started. You can use PowerShell to run the following command to start them:
 
-9.  Ensure all Exchange services are in their normal start Mode and started. You
-    can use PowerShell to run: Get-service \*exch\*
+    `Get-service \*exch\*`
 
-10. Take the server out of [Maintenance
-    Mode](https://docs.microsoft.com/en-us/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
-    For example:  
-    set-servercomponentstate \<server_name\> -Component serverwideoffline -State
-    active - Requester Maintenance
+8. Take the server out of [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true). Run the following command:
 
-### Customized OWA or .config files
+    `set-servercomponentstate \<server_name\> -Component serverwideoffline -State active - Requester Maintenance`
+
+[Back to top](#summary)
+
+### Handle customized OWA or .config files
 
 > [!IMPORTANT]
 > Before you apply a CU, make a backup copy of your customized files.
 
-When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server 2010), the process updates Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. 
+When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server 2010), the process updates OWA files and .config files if necessary. As a result, any customization that you may have made to Exchange or Internet Information Server (IIS) settings in Exchange XML application configuration files on the Exchange server will be overwritten when you install an Exchange CU. Examples of such application configuration files include web.config files, EdgeTransport.exe.config files, and any customized logon.aspx Outlook on the web files. Make sure to save this information so you can easily reapply the settings after the CU is installed.
 
-### How to install this update for customers who deploy CAS-CAS Proxying - CAS Proxy Deployment Guidance in Exchange 2010
+[Back to top](#summary)
 
-If your scenario meets both the following conditions, apply the update rollup on the internet-facing Client Access servers (CAS) before you apply the update rollup on the non–internet-facing CAS: 
+### Install the update for CAS-CAS Proxying deployment
+
+If your scenario meets both the following conditions, apply the update rollup on the internet-facing CAS before you apply the update rollup on the non–internet-facing CAS:
+
 - You’re a CAS Proxy Deployment Guidance customer.
-- You have deployed [CAS-CAS proxying](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)?redirectedfrom=MSDN).
+- You have deployed [CAS-CAS proxying](/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)).
 
 > [!NOTE]
-> For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in any particular order.
+> For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in a specific order.
 
-### How to install this update on a DBCE version of Windows Server 2012
+[Back to top](#summary)
 
-You can’t install or uninstall Update Rollup 32 for Exchange Server 2010 SP3 on a double byte character set (DBCS) version of Windows Server 2012 if the language preference for non-Unicode programs is set to the default language. To work around this issue, you must first change this setting. To do this, follow these steps:
+### Install the update on DBCS version of Windows Server 2012
 
-1. In Control Panel, select **Clock, Region and Language**, select **Region**, and then select **Administrative**.
+To install or uninstall Update Rollup 32 for Exchange Server 2010 SP3 on a Double Byte Character Set (DBCS) version of Windows Server 2012, the language preference for non-Unicode programs should not be set to the default language. If it is, then you must change this setting before beginning the installation.
+
+1. In Control Panel, select **Clock, Region, and Language** > **Region** > **Administrative**.
 2. In the **Language for non-Unicode programs** area, select **Change system locale**.
 3. In the **Current system locale** list, select **English (United States)**, and then select **OK**.
 
-After you successfully install or uninstall Update Rollup 32, revert this language setting, as appropriate.
+Now you can install or uninstall Update Rollup 32 as needed. After the process completes, revert the language setting as appropriate.
+
+[Back to top](#summary)

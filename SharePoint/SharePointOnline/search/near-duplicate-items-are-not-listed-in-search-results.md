@@ -48,6 +48,6 @@ To resolve this issue, enable the **Show View Duplicates link** option, or chang
 
 For more information about the Search Center in SharePoint Online, see [Manage the Search Center in SharePoint Online](https://support.office.com/article/manage-the-search-center-in-sharepoint-online-174d36e0-2f85-461a-ad9a-8b3f434a4213).
 
-For more information about the Search Center in SharePoint Server 2013, see [Set up a Search Center in SharePoint Server](https://technet.microsoft.com/library/dn794206.aspx).
+For more information about the Search Center in SharePoint Server 2013, see [Set up a Search Center in SharePoint Server](/SharePoint/search/set-up-a-search-center).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

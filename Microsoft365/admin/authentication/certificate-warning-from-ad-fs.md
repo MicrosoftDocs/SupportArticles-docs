@@ -90,7 +90,7 @@ To resolve time-valid issues, follow these steps.
 You can resolve issuing certification authority (CA) trust issues by performing one of the following tasks: 
  
 - Get and use a certificate from a source that participates in the Microsoft Root Certificate Program.    
-- Request that the certificate issuer enroll in the Microsoft Root Certificate Program. For more information about the Root Certificate Program and the operation of root certificates in Windows, see [Microsoft Root Certificate Program](https://technet.microsoft.com/library/cc751157.aspx).     
+- Request that the certificate issuer enroll in the Microsoft Root Certificate Program. For more information about the Root Certificate Program and the operation of root certificates in Windows, see [Microsoft Root Certificate Program](/previous-versions//cc751157(v=technet.10)).     
  
 > [!WARNING]
 > We don't recommend that AD FS use an internal CA when it's leveraged for SSO with Office 365. Using a certificate chain that's not trusted by the Office 365 data center will cause Microsoft Outlook connectivity to Microsoft Exchange Online to fail when Outlook is used with SSO features. 

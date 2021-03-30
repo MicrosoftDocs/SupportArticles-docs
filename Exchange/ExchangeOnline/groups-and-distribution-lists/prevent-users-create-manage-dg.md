@@ -76,7 +76,7 @@ To apply the role assignment policy, use one of the following methods, as approp
 
   To apply the role assignment policy to all users in the organization by using remote PowerShell, follow these steps:
 
-  1. Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+  1. Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
   2. At the PowerShell prompt, type the following command, and then press Enter:
 
         ```powershell

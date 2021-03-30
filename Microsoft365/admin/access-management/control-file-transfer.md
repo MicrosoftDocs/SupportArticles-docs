@@ -40,7 +40,7 @@ Block the following URLs:
 - filetransfer.trafficmanager.net
 
 > [!NOTE]
-> In some settings, you cannot block https://transfer.office.com/ because it's part of the allowed (whitelisted) *.office.com class of URLs. This is not a concern because https://transfer.office.com/ redirects to one of the other URLs that are mentioned in the list. If you post the blocking, your users in the organizational firewalls will be unable to use this feature for sending or receiving files.
+> In some settings, you cannot block `https://transfer.office.com/` because it's part of the allowed *.office.com class of URLs. This is not a concern because `https://transfer.office.com/` redirects to one of the other URLs that are mentioned in the list. If you post the blocking, your users in the organizational firewalls will be unable to use this feature for sending or receiving files.
 
 ### Method 2: Block IP addresses
 
@@ -55,5 +55,5 @@ Depending on how the firewall is configured, you may have to block the following
 ## References
 
 - [Support Tip: How to enable Intune app protection policies with the Office mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493)
-- [How to: Require approved client apps for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access)
-- [Require approved client app](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app)
+- [How to: Require approved client apps for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-based-conditional-access)
+- [Require approved client app](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app)

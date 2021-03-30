@@ -30,21 +30,21 @@ After you install a security update on a server that’s running Microsoft Excha
 
 OWA displays the following error message:
 
-Something went wrong<br/>
+Something went wrong</br>
 Your request couldn’t be completed. HTTP Status code: 500
 
 ![Something went wrong. Your request couldn’t be completed. HTTP Status code: 500](./media/owa-stops-working-after-update/ExchangeServer-OWA-SomethingWentWrong.png)
 
 ECP displays the following error message:
 
->Server Error in ‘/ecp’ Application.<br>
+>Server Error in ‘/ecp’ Application.</br>
 Could not load file or assembly ‘Microsoft.Exchange.Common, Version=15.0.0.0 …Culture=neutral, PublicKeyToken=31bf3856ad364e54’ or one of its dependencies. The system cannot find the file specified.
 
 ![Server Error in ecp Application Could not load file or assembly Microsoft.Exchange.Common](./media/owa-stops-working-after-update/Could-not-load-file-or-assembly.png)
 
 ## Cause
 
-These errors occur if the security update was manually installed on a server that has UAC (User Account Control) enabled, but without using elevated permissions.
+These errors occur if the security update was manually installed on a server that has User Account Control (UAC) enabled, but without using elevated permissions.
 
 ## Resolution
 
@@ -52,7 +52,7 @@ Use elevated permissions to reinstall the security update on the server.
 
 1. Select **Start**, and then type **cmd**.
 1. Right-click **Command Prompt** from the search results, and then select **Run as administrator**.
-1. If the **User Account Control** window appears, select the option to start an elevated Command Prompt window, and then select **Continue**. 
+1. If the **User Account Control** window appears, select the option to open an elevated Command Prompt window, and then select **Continue**.
    If the UAC window doesn’t appear, continue to the next step.
 1. Type the full path of the .msp file for the security update, and then press **Enter**.
 1. After the update installs, restart the server.
@@ -61,30 +61,29 @@ Check whether you can now access OWA and ECP on the server without getting an er
 
 If the ECP error message continues to display, do the following:
 
-1. Start **IIS Manager** on the server. 
-1. Navigate to **Exchange Backend website** > **ECP Virtual directory**
-1. Select **Application settings** > **BinsearchFolder**
+1. Start **IIS Manager** on the server.
+1. Navigate to **Exchange Backend website** > **ECP Virtual directory**.
+1. Select **Application settings** > **BinsearchFolder**.
 1. Check the paths to the Exchange directories that are listed. You might see directory paths that resemble the following:
 
-   **%ExchangeInstallDir%bin;%ExchangeInstallDir%bin\CmdletExtensionAgents;%ExchangeInstallDir%ClientAccess\Owa\bin**
+- %ExchangeInstallDir%bin;%ExchangeInstallDir%bin\CmdletExtensionAgents;%ExchangeInstallDir%ClientAccess\Owa\bin
 
-1. Replace the paths with the following paths.<br>
-   **C:\Program Files\Microsoft\Exchange Server\V15\bin;<br/>
-C:\Program Files\Microsoft\Exchange Server\V15\bin\CmdletExtensionAgents;<br/>
-C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess\Owa\bin**
+1. Replace the paths with the following paths:
 
-**Note** The path must point to where Exchange Server is installed. The following examples assume that the program is installed on drive C and that the version is Microsoft Exchange Server 2013. If it is installed on a different drive on your server, or if you’re using a different version such as Microsoft Exchange Server 2010, then use the path and version information that's appropriate for your installation.
+- C:\Program Files\Microsoft\Exchange Server\V15\bin;
+- C:\Program Files\Microsoft\Exchange Server\V15\bin\CmdletExtensionAgents;
+- C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess\Owa\bin
+
+**Note. The paths must point to where Exchange Server is installed. The following examples assume that the program is installed on drive C and that the version is Microsoft Exchange Server 2013. If it is installed on a different drive on your server, or if you’re using a different version such as Microsoft Exchange Server 2010, then use the path and version information that's appropriate for your installation.
 
 1. Navigate to a folder that includes Exchange Server scripts. By default, scripts are located in the following path for Exchange Server 2013:
 
-   **C:\Program Files\Microsoft\Exchange Server\v15\Bin\directory**<br/>
+- C:\Program Files\Microsoft\Exchange Server\v15\Bin\ directory
 **Note** For Exchange Server 2010, the scripts will be in the “V14” folder instead.
 
-1. Start Exchange Management Shell as an administrator and run the following commands:
-
-   **.\UpdateCas.ps1<br/>
-   .\UpdateConfigFiles.ps1**
+1. Start Exchange Management Shell as an administrator and run the following scripts:
+`.\UpdateCas.ps1` and `.\UpdateConfigFiles.ps1`.
 
 1. Exit Exchange Management Shell and open a Command Prompt window as an administrator.
-1. Run the **iisreset** command.
+1. Run `iisreset`.
 1. Restart the server, and verify that you no longer get an error message when you access ECP.

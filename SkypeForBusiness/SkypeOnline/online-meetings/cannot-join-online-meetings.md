@@ -59,7 +59,7 @@ Be aware that each column and each row are mutually exclusive. That is, the issu
 To resolve any client or computer issue, first make sure that the computer is up to date. The computer should have the latest operating system updates, audio and video drivers, and software application updates to make connecting to a Skype for Business Online meeting a successful experience. To do this, follow these steps:
 
 1. Run Windows Update, and then verify that all optional hardware updates are installed. Specifically, make sure that video, audio, and network drivers are up to date.    
-2. Verify that Lync is up to date. See [Lync Downloads and Updates](https://technet.microsoft.com/lync/dn146015.aspx) for the latest Lync updates.
+2. Verify that Lync is up to date. See [Lync Downloads and Updates](/SkypeForBusiness/software-updates) for the latest Lync updates.
 
     Select your version (2013 or 2010), and then select **Lync client** under **Category**.
 
@@ -107,7 +107,7 @@ If external users (and only external users) can't join a Skype for Business Onli
 - If the user is trying to join as an authenticated user from another Lync or OCS organization:
   - Your Skype for Business Online organization must have External Communications enabled, and external communication must be completely open. Or, the external user's domain must be in the **Allow** list.
   - The external organization must have federation configured correctly from their side, too.   
-  - For more information about federating with a Skype for Business Online organization, go to the following Microsoft TechNet website: [Configuring Federation support for a Skype for Business Online customer](https://technet.microsoft.com/library/hh202193.aspx)   
+  - For more information about federating with a Skype for Business Online organization, go to the following Microsoft TechNet website: [Configuring Federation support for a Skype for Business Online customer](/previous-versions/office/lync-server-2013/lync-server-2013-configuring-federation-support-for-a-lync-online-customer)   
   - If authenticated join doesn't work, Lync should automatically try to join as an anonymous or guest user.
 - If the user is trying to join as an anonymous user from Lync Attendee, or if the Lync Web App or is dialing in to a Skype for Business Online conference with an ACP access number:
   - For anonymous join to work, a specific DNS SRV record must be present in DNS.    

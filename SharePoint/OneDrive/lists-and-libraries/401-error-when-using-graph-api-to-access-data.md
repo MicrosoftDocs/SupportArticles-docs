@@ -19,7 +19,7 @@ appliesto:
 
 ## Symptoms
 
-An application calls the [Microsoft Graph API](https://developer.microsoft.com/graph/docs/concepts/use_the_api) to query OneDrive resources. If a location-based policy is enabled, requests to the Graph API return a 401 "Unauthorized" error message. This occurs even if the user is within the trusted boundary.
+An application calls the [Microsoft Graph API](/graph/use-the-api) to query OneDrive resources. If a location-based policy is enabled, requests to the Graph API return a 401 "Unauthorized" error message. This occurs even if the user is within the trusted boundary.
 
 ## Cause
 
@@ -29,7 +29,7 @@ For more information about this issue, see [Control access to SharePoint Online 
 
 ## Workaround
 
-To work around this issue, [set conditional access in Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+To work around this issue, [set conditional access in Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## Status
 

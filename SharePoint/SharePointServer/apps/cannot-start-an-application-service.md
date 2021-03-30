@@ -46,7 +46,7 @@ To resolve the issue, follow these steps:
    ```  
 
 3. After the SharePoint Foundation Web Application service is stopped, check whether there are any remnants of SharePoint sites in IIS Manager, and delete any existing sites from IIS Manager.    
-4. Clear the SharePoint configuration cache. For the steps to do this, see [this Developer article](https://blogs.msdn.microsoft.com/josrod/2007/12/12/clear-the-sharepoint-configuration-cache).    
+4. Clear the SharePoint configuration cache. For the steps to do this, see [this Developer article](/archive/blogs/josrod/clear-the-sharepoint-configuration-cache).    
 5. Run the following command to provision the service:  
 
    ```  

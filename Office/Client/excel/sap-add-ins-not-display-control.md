@@ -34,9 +34,7 @@ In this scenario, the SAP add-in can no longer display some controls in dialog b
 
 To resolve the issue, update Office to version 1808, or a later version, and update Windows to version 1809 or a later version.
 
-**Third-party disclaimer information** 
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.    
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## Workaround
 

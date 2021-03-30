@@ -1,7 +1,7 @@
 ---
 title: Only two Excel attachments can be opened from different email messages if the file name is identical
 description: Provide two resolutions to an issue in which only two Excel attachments can be opened from different email messages if the file name is identical in Outlook
-author: TobyTu
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

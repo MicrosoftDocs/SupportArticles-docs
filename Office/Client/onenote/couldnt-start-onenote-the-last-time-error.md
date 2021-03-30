@@ -1,7 +1,7 @@
 ---
 title: Error "We couldn't start OneNote the last time we tried" 
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 4/28/2020
 audience: Admin

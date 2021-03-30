@@ -1,11 +1,11 @@
 ---
 title: SharePoint Online or OneDrive for Business access denied error message 
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/5/2020
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
@@ -39,7 +39,7 @@ Use the appropriate method for the [SharePoint](#accessing-a-sharepoint-site) or
 
 ### Accessing a SharePoint site
 
-1. Determine which <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> (member, owner, and so on) the user should have to the site. Then, verify the permissions through the **Check Permissions** feature, as follows:
+1. Determine which <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> (member, owner, and so on) the user should have to the site. Then, verify the permissions through the **Check Permissions** feature, as follows:
 
    1. Navigate to the User.aspx page. To do this, select the gear icon in the upper-right corner, select **Site Permissions**, and then select **Advanced permissions settings**.
 
@@ -70,8 +70,8 @@ Use the appropriate method for the [SharePoint](#accessing-a-sharepoint-site) or
 
     1.	To resolve this issue, delete the new UPN (if it exists), and restore the original UPN.
 
-        1. To delete the new UPN, follow the steps in  [Add or delete users using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
-        2. After the new user is deleted, restore the original user by following the steps in [Restore or remove a recently deleted user using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-restore).
+        1. To delete the new UPN, follow the steps in  [Add or delete users using Azure Active Directory](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
+        2. After the new user is deleted, restore the original user by following the steps in [Restore or remove a recently deleted user using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-restore).
 
     2. If you cannot restore the original user, and the issue persists, create a support request, as follows:
     
@@ -92,7 +92,7 @@ Use the appropriate method for the [SharePoint](#accessing-a-sharepoint-site) or
 
 - **If the user is trying to access another user's OneDrive site**
 
-  1. Determine which <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> (member, owner, and so on) the user should have to the site. Then, verify the permissions through the Check Permissions feature, as follows:
+  1. Determine which <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> (member, owner, and so on) the user should have to the site. Then, verify the permissions through the Check Permissions feature, as follows:
   
      1. Navigate to the User.aspx page. For example, the full URL will resemble the following: 
      

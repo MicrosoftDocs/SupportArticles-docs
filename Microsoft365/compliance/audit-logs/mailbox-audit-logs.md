@@ -105,7 +105,7 @@ To run the script, follow these steps:
 1. On the **File** menu, click **Save As**.
 1. In the **Save as type** box, click **All File**.
 1. In the **File name** box, type **Run-MailboxAuditLogSearcher.ps1**, and then click **Save**.
-1. Start Windows PowerShell, and then connect to [Windows Remote PowerShell](https://docs.microsoft.com/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7&preserve-view=true).
+1. Start Windows PowerShell, and then connect to [Windows Remote PowerShell](/powershell/scripting/learn/remoting/running-remote-commands?preserve-view=true&view=powershell-7).
 1. Locate the directory in which you saved the script, and then run the script.
 
     ```powershell
@@ -236,7 +236,7 @@ The most useful columns of the .csv file are exported. Some of these columns are
 
   For more information about the cmdlet, go to the following TechNet article:
 
-  [Search-MailboxAuditLog](https://technet.microsoft.com/library/ff522360.aspx)
+  [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog)
 - You can search one or more mailboxes asynchronously. To do this, run the following cmdlet in Windows Remote PowerShell:
 
     ```powershell
@@ -245,8 +245,8 @@ The most useful columns of the .csv file are exported. Some of these columns are
 
     For more information about this cmdlet, go to the following TechNet article:
 
-    [New-MailboxAuditLogSearch](https://technet.microsoft.com/library/ff522362.aspx)
+    [New-MailboxAuditLogSearch](/powershell/module/exchange/new-mailboxauditlogsearch)
 
     For more information about the default mailbox audit logging entries, go to the 'Mailbox audit log entries' section of the following TechNet article:
 
-    [Mailbox Audit Logging in Exchange 2016](https://technet.microsoft.com/library/ff459237.aspx#mailbox)
+    [Mailbox Audit Logging in Exchange 2016](/Exchange/policy-and-compliance/mailbox-audit-logging/mailbox-audit-logging#mailbox)

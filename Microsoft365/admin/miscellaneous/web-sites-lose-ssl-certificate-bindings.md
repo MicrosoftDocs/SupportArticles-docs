@@ -41,4 +41,4 @@ To fix this issue, make sure that the certificate has a unique **Friendly name**
 
 ## References
 
-[Plan Office Online Server](https://technet.microsoft.com/library/jj219435.aspx)
+[Plan Office Online Server](/officeonlineserver/plan-office-online-server)

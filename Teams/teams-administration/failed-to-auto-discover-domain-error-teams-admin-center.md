@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams admin center error FAILED_TO_AUTO_DISCOVER_DOMAIN
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 3/19/2020
 audience: ITPro
@@ -34,11 +34,11 @@ This issue can be resolved by following these steps:
 
 1. Connect to Skype for Business Online with PowerShell:
 
-   - [Manage Skype for Business Online with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell)
+   - [Manage Skype for Business Online with Office 365 PowerShell](/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell)
 
-2. Verify that SIPDomain is enabled by running [Get-CsOnlineSipDomain](https://docs.microsoft.com/powershell/module/skype/get-csonlinesipdomain).
+2. Verify that SIPDomain is enabled by running [Get-CsOnlineSipDomain](/powershell/module/skype/get-csonlinesipdomain).
 
-3. Enable [SipDomain for the domain](https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain).<br/>
+3. Enable [SipDomain for the domain](/powershell/module/skype/enable-csonlinesipdomain).<br/>
    PowerShell cmdlet: `Enable-CsOnlineSipDomain -Domain <yourdomain>`
 
 This fix can take from 15 minutes to an hour to take effect.
@@ -60,11 +60,11 @@ This fix can take 24 hours for synchronization to take effect.
 
 ### IP and URLs are not allowed
 
-To resolve this issue, follow the guidance in [Skype for Business Online and Microsoft Teams](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams) to allow (or allowlist) IPs and URLs that are required for Teams portal access.​
+To resolve this issue, follow the guidance in [Skype for Business Online and Microsoft Teams](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams) to allow (or allowlist) IPs and URLs that are required for Teams portal access.​
 
 ### A Skype for Business hybrid connection is not set up for Skype for Business on-premises and Teams interoperability (hybrid configuration only)
 
-For Skype for Business and Teams interoperability, [a Skype for Business hybrid model is required](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+For Skype for Business and Teams interoperability, [a Skype for Business hybrid model is required](/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 ### The result of an ongoing service incident
 

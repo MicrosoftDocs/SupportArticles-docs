@@ -1,8 +1,8 @@
 ---
 title: Circular Relationship Error when indenting Task
 description: Fixes an error that occurs when you indent tasks that are linked in a predecessor or successor relationship.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
