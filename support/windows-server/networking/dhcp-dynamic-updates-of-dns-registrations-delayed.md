@@ -48,7 +48,7 @@ To prevent failing updates and delayed pending updates, specify DNS servers that
 
 ## Workaround
 
-Use the following registry value to override the default behavior in Windows Server 2008 and Windows Server 2008 R2.
+Use the following registry value to override the default behavior in Windows Server.
 
 > [!NOTE]
 > This method works for IPv4 scopes only. This value lets you specify the DNS server that should be used for dynamic updates. This overrides the default functionality for all scopes and causes DHCP to use only the specified DNS server for all IPv4 dynamic updates.

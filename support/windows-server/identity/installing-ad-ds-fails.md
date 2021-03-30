@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2000622
 
 ## Symptoms
 
-When you attempt to install Active Directory Domain Services on a Windows Server 2008 or Windows Server 2008 R2 computer, you may receive the following error:
+When you attempt to install Active Directory Domain Services on a Windows Server computer, you may receive the following error:
 
 > Error Joining Domain  
 The operation failed because: The attempt to join this computer to the \<target DNS domain> failed. The specified user already exists.  
