@@ -66,7 +66,7 @@ When defining a specific engine(s), you must use the following naming convention
     [string]$EngineDirPath,
     [string]$UpdatePathUrl = "http://forefrontdl.microsoft.com/server/scanengineupdate/",
     [string[]]$Engines = ("Microsoft", "Norman", "Command", "VBuster", "Kaspersky", "WormList", "Cloudmark"),
-    [string[]]$Platforms = ("x86", "amd64")
+    [string[]]$Platforms = ("amd64")
     )
 
     # Display Help
