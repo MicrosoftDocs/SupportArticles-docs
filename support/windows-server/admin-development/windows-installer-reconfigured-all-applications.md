@@ -81,6 +81,6 @@ To narrow down the application that causes the problem, you can follow the *Clea
 
 ## More information
 
-`Win32_product` class isn't query optimized. Queries such as `select * from Win32_Product where (name like 'Sniffer%')` require WMI to use the MSI provider to enumerate all of the installed products and then parse the full list sequentially to handle the `where` clause. This process also starts a consistency check of packages installed, verifying, and repairing the install. An account with only user privileges may cause delay in application launch and an event 11708 stating an installation failure, as the user account may not have access to query a few locations.
+`Win32_product` class isn't query optimized. Queries such as `select * from Win32_Product where (name like 'Sniffer%')` require WMI to use the MSI provider to enumerate all of the installed products and then parse the full list sequentially to handle the `where` clause. This process also starts a consistency check of packages installed, verifying, and repairing the install. An account with only user privileges may cause delay in application launch and an event 11708 stating an installation failure, as the user account may not have access to quite a few locations.
 
 `Win32reg_AddRemovePrograms` is a much lighter and effective way to do so, which avoids the calls to do a resiliency check, especially in a locked down environment. So when using `Win32reg_AddRemovePrograms`, we won't be calling on msiprov.dll and won't be initiating a resiliency check.
