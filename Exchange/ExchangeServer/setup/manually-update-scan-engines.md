@@ -35,7 +35,7 @@ When defining a specific engine(s), you must use the following naming convention
 - AMD64: Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
 
 > [!NOTE]
-> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for both the 32-bit and 64-bit platforms.
+> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for 64-bit platforms.
 
 ## Steps to update scan engines
 
