@@ -1,7 +1,7 @@
 ---
 title: Microsoft Project opens a calendar from a different instance when editing
 description: "Describes what to do if Microsoft Project opens a calendar from a PWA instance other than the one currently being edited."
-author: McCoyBot
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -11,7 +11,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-todmc
+ms.author: luche
 appliesto:
 - Microsoft Project
 ---

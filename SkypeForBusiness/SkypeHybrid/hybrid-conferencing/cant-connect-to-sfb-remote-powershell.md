@@ -38,6 +38,6 @@ $cssession = New-CsOnlineSession –Credential $cred –OverrideAdminDomain "con
 
 This issue occurs when the DNS records for AutoDiscover are pointed to the on-premises Lync server.
 
-For more information about the **New-CsOnlineSession** cmdlet, or about how to manage Skype for Business Online with Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](https://technet.microsoft.com/library/dn362831.aspx).
+For more information about the **New-CsOnlineSession** cmdlet, or about how to manage Skype for Business Online with Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

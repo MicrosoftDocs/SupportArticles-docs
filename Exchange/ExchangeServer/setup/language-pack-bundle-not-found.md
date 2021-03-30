@@ -1,8 +1,8 @@
 ---
 title: The installation in RecoverServer mode fails
 description: Describes an issue that causes an Exchange Server 2013 installation attempt to fail. This issue is language pack-related, and it occurs when you're using RecoverServer mode. The resolution involves changing a registry setting.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -52,5 +52,5 @@ The Exchange Setup log shows the following error data in this situation:
 
 > [01/03/2015 01:08:36.0915] [1] Failed [Rule:LangPackBundleCheck] [Message:The language pack bundle could not be found or is corrupt.]  
 > [01/03/2015 01:08:37.0008] [1] [REQUIRED] The language pack bundle could not be found or is corrupt.  
-> [01/03/2015 01:08:37.0008] [1] Help URL: [ms.exch.setupreadiness.LangPackBundleCheck](https://technet.microsoft.com/library(EXCHG.150)/ms.exch.setupreadiness.LangPackBundleCheck.aspx)
+> [01/03/2015 01:08:37.0008] [1] Help URL: [ms.exch.setupreadiness.LangPackBundleCheck](/previous-versions/exchange-server/exchange-160/jj126675(v=exchg.160))
 > [01/03/2015 01:08:37.0039] [1] Ending processing test-SetupPrerequisites

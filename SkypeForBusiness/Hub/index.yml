@@ -71,13 +71,13 @@ productDirectory:
     - title: Skype for Business
       imageSrc: https://docs.microsoft.com/media/logos/logo_Skype_for_Business.svg
       links:
-        - url: /skypeforbusiness/troubleshoot/skype-server-welcome
+        - url: ../SkypeServer/skype-server-welcome.md
           text: Skype for Business Server
-        - url: /skypeforbusiness/troubleshoot/skype-online-welcome
+        - url: ../SkypeOnline/skype-online-welcome.md
           text: Skype for Business Online
-        - url: /skypeforbusiness/troubleshoot/skype-hybrid-welcome
+        - url: ../SkypeHybrid/skype-hybrid-welcome.md
           text: Skype for Business Hybrid
-        - url: /skypeforbusiness/troubleshoot/skype-experts-welcome
+        - url: ../SkypeExperts/skype-experts-welcome.md
           text: From the Skype for Business Experts
     # Card
     - title: Microsoft Outlook

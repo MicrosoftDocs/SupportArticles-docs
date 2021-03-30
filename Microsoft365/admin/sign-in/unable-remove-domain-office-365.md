@@ -43,7 +43,7 @@ This issue occurs if one or more of the following conditions are true:
 
 Use the Microsoft 365 admin center to remove the domain. The Domain Manager in Office 365 will help admins remove any dependencies that block domain removal without having to use Windows PowerShell. 
 
-For more info about how to remove a domain in the Microsoft 365 admin center, go to [Remove a domain](https://docs.microsoft.com/microsoft-365/admin/get-help-with-domains/remove-a-domain?view=o365-worldwide). 
+For more info about how to remove a domain in the Microsoft 365 admin center, go to [Remove a domain](/microsoft-365/admin/get-help-with-domains/remove-a-domain). 
 
 ### Troubleshoot domain removal by using Windows PowerShell
 
@@ -79,7 +79,7 @@ To check whether user names contain the domain name, follow these steps:
 
 To check email addresses, follow these steps: 
 
-1. Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).     
+1. Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).     
 2. Find all users and groups that use the domain that you're trying to remove. To do this, run the following cmdlet. (In this cmdlet, contoso.com represents the domain in question).   
    ```powershell
    get-recipient | where {$_.EmailAddresses -match "contoso.com"} | fl Name, RecipientType, EmailAddresses
@@ -90,15 +90,15 @@ To check email addresses, follow these steps:
    ```
 
 4. Do one of the following, as appropriate for your situation:  
-   - If RecipientType is set to UserMailbox, you can use the Set-Mailboxcmdlet together with the EmailAddresses parameter to change the smtp, SMTP, and SIP addresses. To learn more about this cmdlet, see [Set-Mailbox](https://technet.microsoft.com/library/bb123981%28v=exchg.150%29.aspx). 
+   - If RecipientType is set to UserMailbox, you can use the Set-Mailboxcmdlet together with the EmailAddresses parameter to change the smtp, SMTP, and SIP addresses. To learn more about this cmdlet, see [Set-Mailbox](/powershell/module/exchange/set-mailbox). 
       
      Or, you can remove the user or license. However, we don't recommend doing this.
      > [!NOTE]
      > If this is the last administrator user, create a new global administrator, sign in, and then remove the problem user.    
-   - If RecipientType is set to MailUniversalDistributionGroupor MailUniversalSecurityGroup, you can use the Set-DistributionGroup cmdlet together with the EmailAddresses parameter to change the smtp and SMTP addresses. To learn more about this cmdlet, see [Set-Distribution Group](https://technet.microsoft.com/library/bb124955%28v=exchg.150%29.aspx).
+   - If RecipientType is set to MailUniversalDistributionGroupor MailUniversalSecurityGroup, you can use the Set-DistributionGroup cmdlet together with the EmailAddresses parameter to change the smtp and SMTP addresses. To learn more about this cmdlet, see [Set-Distribution Group](/powershell/module/exchange/set-distributiongroup).
         
       Or, you can remove the group. However, we don't recommend doing this. If you can't remove the group, follow the steps in ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group in Office 365"](https://support.microsoft.com/help/2731947).      
-   - If the RecipientType is set to DynamicDistributionGroup, you can use the Set-DynamicDistributionGroup cmdlet together with the EmailAddresses parameter to change the smtp and SMTP addresses. To learn more about this cmdlet, see [Set-DynamicDistributionGroup](https://technet.microsoft.com/library/bb123796%28v=exchg.150%29.aspx).
+   - If the RecipientType is set to DynamicDistributionGroup, you can use the Set-DynamicDistributionGroup cmdlet together with the EmailAddresses parameter to change the smtp and SMTP addresses. To learn more about this cmdlet, see [Set-DynamicDistributionGroup](/powershell/module/exchange/set-dynamicdistributiongroup).
         
      Or, you can remove the group. However, we don't recommend doing this. If you can't remove the group, follow the steps in ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group in Office 365"](https://support.microsoft.com/help/2731947).      
      

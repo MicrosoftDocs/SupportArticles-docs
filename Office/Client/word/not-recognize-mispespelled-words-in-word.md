@@ -29,7 +29,7 @@ Spell Check does not recognize misspelled words.
 
 ### Symptom 2
 
-When you select the **Spelling & Grammar** button in the **Proofing** group on the **Review** tab, you receive one of the following messages: 
+When you select the **Spelling & Grammar** button in the **Proofing** group on the **Review** tab, you receive one of the following messages:
 
 - The spelling and grammar check is complete.
 - Proofing Tools are not installed for <default language>, try re-installing proofing tools.
@@ -39,7 +39,7 @@ When you select the **Spelling & Grammar** button in the **Proofing** group on t
 This issue might occur for any of the following reasons:
 
 - Proofing tools are not installed.
-- The speller EN-US add-in is disabled.
+- The speller EN-US (or the equivalent for your language, for example: ES-ES, FR-FR, JA-JP, CH-ZN, etc.) add-in is disabled.
 - The **Do not check spelling or grammar** check box is selected.
 - Another language is set as default.
 - The following subkey exists in the registry:**HKEY_CURRENT_USER\Software\Microsoft\Shared Tools\ProofingTools\1.0\Override\**
@@ -53,13 +53,14 @@ To resolve this problem, use the following methods in the given order. If you ha
 To install the proofing tools, follow these steps:
 
 1. Exit all programs.
-2. Select **Start** > **Control Panel**.
+2. Select **Start**.
 3. Follow the appropriate step for your operating system:  
-   - In Windows 7, click **Uninstall a program** under **Programs**.
-   - In Windows Vista, double-click **Programs and Features**.
-   - In earlier versions of Windows, double-click **Add or Remove Programs**.
+   - In Windows 10, type **uninstall** and then select **Add or remove programs**.
+   - In Windows 8.1, type **programs and features** and select **Programs and Features** from the search results.
+   - In Windows 7, Select **Control Panel** and then click **Uninstall a program** under **Programs**.
 
-4. Select **Microsoft Office <*Edition*>**, and then select **Change**.
+
+4. Select **Microsoft Office <*Edition*>**, and then select **Change** or **Modify**, depending on your Windows version.
 
     > [!NOTE]
     > In this step and in the following step, <*Edition*> is a placeholder for the edition of Office that's installed on the computer.

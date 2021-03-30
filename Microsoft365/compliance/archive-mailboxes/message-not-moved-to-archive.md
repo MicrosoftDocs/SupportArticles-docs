@@ -45,6 +45,6 @@ For mailboxes that are smaller than 10 MB, manually run the Start-ManagedFolderA
 
 ## More information 
 
-For more information about how to set up and manage retention policies in Exchange Online, see [Set Up and Manage Retention Policies in Exchange Online with Windows PowerShell](https://technet.microsoft.com/exchangelabshelp/gg271153#defaulttags).
+For more information about how to set up and manage retention policies in Exchange Online, see [Set Up and Manage Retention Policies in Exchange Online with Windows PowerShell](/previous-versions/exchange-server/exchangeserver-149/gg271153(v=exchsrvcs.149)#defaulttags).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

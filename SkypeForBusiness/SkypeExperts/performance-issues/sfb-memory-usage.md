@@ -1,6 +1,7 @@
 ---
 title: The Great Skype for Business Memory Mystery
-author: TobyTu
+description: Describes the Great Skype for Business Memory Mystery.
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -40,7 +41,7 @@ So, Skype has consumed about 32 MB in 24 hours. That isn't much, right? It reall
 
 ## Show me the memory
 
-There are many tools that can profile memory. One of the most popular – at least at Microsoft – is the SysInternals tool VMMap, available at [VMMap v3.26](https://docs.microsoft.com/sysinternals/downloads/vmmap). We can use it to look at the process memory, and see whether we can profile the Skype for Business memory.
+There are many tools that can profile memory. One of the most popular – at least at Microsoft – is the SysInternals tool VMMap, available at [VMMap v3.26](/sysinternals/downloads/vmmap). We can use it to look at the process memory, and see whether we can profile the Skype for Business memory.
 
 After you've downloaded **VMMap**, run it. As it starts, it will open a process list so that you can choose the process that you want to examine. I'll choose **lync.exe** and click **OK**.
 

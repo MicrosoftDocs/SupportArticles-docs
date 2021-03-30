@@ -135,7 +135,7 @@ If the **Bytes Per Sector** and **Bytes Per Physical Sector** fields are both se
 Skype for Business Server 2015 uses Windows Fabric 3.0, which is not supported on 4K native disks. You must install Skype for Business Server 2015 on non-4K native disks.
 For more information about 4k sector disks, see the following articles:
 
-- [Advanced format (4K) disk compatibility update](https://msdn.microsoft.com/windows/compatibility/advanced-format-disk-compatibility-update) 
+- [Advanced format (4K) disk compatibility update](/windows/compatibility/advanced-format-disk-compatibility-update) 
 - [Microsoft support policy for 4K sector hard drives in Windows](https://support.microsoft.com/help/2510009)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

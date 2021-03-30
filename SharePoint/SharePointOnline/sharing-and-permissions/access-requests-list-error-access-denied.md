@@ -1,11 +1,11 @@
 ---
 title: Access Denied error when trying to access an "Access Requests" list in SharePoint
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/5/2020
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
@@ -42,7 +42,7 @@ Use the method appropriate for your specific configuration
 
 - #### User should be a site admin
 
-   If an affected user should be a site collection administrator, see [Manage site collection administrators](https://docs.microsoft.com/sharepoint/manage-site-collection-administrators) for more information about how to manage administrators for your sites.
+   If an affected user should be a site collection administrator, see [Manage site collection administrators](/sharepoint/manage-site-collection-administrators) for more information about how to manage administrators for your sites.
 
 - #### User should be a site owner
 
@@ -96,7 +96,7 @@ This issue occurs because only site admins or users who are members of the Owner
 
 For more information about how to set up and manage access requests, see [Set up and manage access requests](https://support.office.com/article/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3).
 
-For more information about how to use the F12 developer tools, see [Using the F12 developer tools](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
+For more information about how to use the F12 developer tools, see [Using the F12 developer tools](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
 
 For more information about permission levels in SharePoint Online, see [Understanding permission levels](https://support.office.com/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848?ocmsassetID=HA102772294&CorrelationId=8cb2ee53-10d3-48ec-baee-588885e94ba3&ui=en-US&rs=en-US&ad=US).
 

@@ -1,7 +1,7 @@
 ---
 title: Enter Parameter Value dialog box appears
 description: Describes a problem that may occur when you try to run a query, a form, or a report in Access. The Enter Parameter Value dialog box may appear unexpectedly.
-author: AmandaAZ
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: v-six
 ms.reviewer: STECLEVE
 appliesto:
 - Access 2007

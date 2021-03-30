@@ -114,6 +114,6 @@ This is a known issue when you deploy the April 2014 Cumulative Update or later 
 
 For more information about how to configure hybrid search for SharePoint Server 2013, go to the following Microsoft website:
 
-[SharePoint Server 2013 hybrid configuration roadmaps](https://technet.microsoft.com/library/dn197168.aspx)  
+[SharePoint Server 2013 hybrid configuration roadmaps](/SharePoint/hybrid/configuration-roadmaps)  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

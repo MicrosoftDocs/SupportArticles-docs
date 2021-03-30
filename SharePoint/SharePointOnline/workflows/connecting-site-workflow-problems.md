@@ -56,7 +56,7 @@ To resolve these issues, install [SharePoint Designer 2013](https://www.microsof
 
 ## More information
 
-If you're experiencing the message "This web site has been configured to disallow editing with SharePoint Designer" in an on-premises installation of SharePoint Foundation 2013 or SharePoint Server 2013, be aware that a site definition configuration may be responsible for the message. For more information, go to [Project Element (Site)](https://docs.microsoft.com/sharepoint/dev/schema/project-element-site).
+If you're experiencing the message "This web site has been configured to disallow editing with SharePoint Designer" in an on-premises installation of SharePoint Foundation 2013 or SharePoint Server 2013, be aware that a site definition configuration may be responsible for the message. For more information, go to [Project Element (Site)](/sharepoint/dev/schema/project-element-site).
 
 If changes were made to the site by using SharePoint Designer 2010 before you installed SharePoint Designer 2013, you may continue to experience one or more of the symptoms in the "Problem" section. If you're still experiencing these issues, follow these steps:
 

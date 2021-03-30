@@ -49,8 +49,8 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-For more information about how to add UPN suffixes by using Active Directory Domains and Trusts, see [How to add UPN suffixes](https://technet.microsoft.com/library/cc772007.aspx).
+For more information about how to add UPN suffixes by using Active Directory Domains and Trusts, see [How to add UPN suffixes](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772007(v=ws.11)).
 
-For more information about the `Get-UserPrincipalNamesSuffix` cmdlet, see [General information about the Get-UserPrincipalNamesSuffix cmdlet](https://technet.microsoft.com/library/dd298092%28v=exchg.150%29.aspx).
+For more information about the `Get-UserPrincipalNamesSuffix` cmdlet, see [General information about the Get-UserPrincipalNamesSuffix cmdlet](/powershell/module/exchange/get-userprincipalnamessuffix).
 
-For more information about the ADSI Edit tool, see [ADSI Edit](https://technet.microsoft.com/library/cc773354%28v=ws.10%29.aspx).
+For more information about the ADSI Edit tool, see [ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).

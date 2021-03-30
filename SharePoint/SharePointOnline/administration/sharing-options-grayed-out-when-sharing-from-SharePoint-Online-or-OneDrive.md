@@ -1,11 +1,11 @@
 ---
 title: Sharing options are grayed out when sharing from SharePoint Online or OneDrive
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 4/15/2020
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
@@ -82,8 +82,8 @@ To resolve this issue, follow the steps below:
 
 
 ## More information
-For more information on external sharing settings, see [Turn external Sharing on or Off](https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off). 
+For more information on external sharing settings, see [Turn external Sharing on or Off](/sharepoint/turn-external-sharing-on-or-off). 
 
-For information on the various Sharing settings within M365, see [Microsoft 365 guest sharing settings reference](https://docs.microsoft.com/Office365/Enterprise/microsoft-365-guest-settings). 
+For information on the various Sharing settings within M365, see [Microsoft 365 guest sharing settings reference](/Office365/Enterprise/microsoft-365-guest-settings). 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

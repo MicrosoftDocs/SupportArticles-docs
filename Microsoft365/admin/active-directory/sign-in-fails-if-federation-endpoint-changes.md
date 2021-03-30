@@ -1,8 +1,8 @@
 ---
 title: Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint
 description: Describes an issue that occurs when AD FS service endpoints are inappropriately configured. Provides resolutions.
-author: lucciz
-ms.author: v-zolu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

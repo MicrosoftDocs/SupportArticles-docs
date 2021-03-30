@@ -1,7 +1,7 @@
 ---
 title: How to activate guest users in the Microsoft Teams admin center
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 04/28/2020
 audience: Admin
@@ -37,6 +37,6 @@ By default, guest access in Teams is turned off. To enable guest access, follow 
 
 ## More information
 
-For a more detailed explanation about how to enable guest user access in Teams, see [Turn on or turn off guest access to Microsoft Teams](https://docs.microsoft.com/microsoftteams/set-up-guests).
+For a more detailed explanation about how to enable guest user access in Teams, see [Turn on or turn off guest access to Microsoft Teams](/microsoftteams/set-up-guests).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

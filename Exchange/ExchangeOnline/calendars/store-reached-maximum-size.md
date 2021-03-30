@@ -53,6 +53,6 @@ An item is considered soft-deleted in the following cases:
 
 Users can use the **Recover Deleted Items** feature in Outlook or Outlook Web App to recover a deleted item.
 
-For more information about deleted item recovery, see [Recoverable Items folder](https://technet.microsoft.com/library/ee364755%28v=exchg.150%29.aspx).
+For more information about deleted item recovery, see [Recoverable Items folder](/exchange/recoverable-items-folder-exchange-2013-help).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

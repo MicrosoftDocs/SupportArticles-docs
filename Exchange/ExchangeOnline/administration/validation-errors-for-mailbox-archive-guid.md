@@ -80,7 +80,7 @@ Here's how to keep the `ArchiveGuid` property value consistent between Exchange 
 In this scenario, you must install an Exchange server to manage the Exchange-related attributes for synchronized users.
 
 > [!NOTE]
-> Managing the Exchange attributes for cloud users from the Active Directory PowerShell or from ADSIEDIT isn't supported. We strongly recommend that you keep at least one active Exchange server in AD to manage the Exchange attributes for synchronized users. For more information, see the "Can third-party management tools be used?" section of [How and when to decommission your on-premises Exchange servers in a hybrid deployment](https://docs.microsoft.com/exchange/decommission-on-premises-exchange?redirectedfrom=MSDN#can-third-party-management-tools-be-used).
+> Managing the Exchange attributes for cloud users from the Active Directory PowerShell or from ADSIEDIT isn't supported. We strongly recommend that you keep at least one active Exchange server in AD to manage the Exchange attributes for synchronized users. For more information, see the "Can third-party management tools be used?" section of [How and when to decommission your on-premises Exchange servers in a hybrid deployment](/exchange/decommission-on-premises-exchange#can-third-party-management-tools-be-used).
 
 To update the `ArchiveGuid` property value, run the following cmdlets from Active Directory PowerShell in a domain controller:
 

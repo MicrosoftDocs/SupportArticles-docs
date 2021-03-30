@@ -1,7 +1,7 @@
 ---
 title: SharePoint site metadata is at or near limit error message
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 5/28/2020
 audience: Admin
@@ -34,7 +34,7 @@ or
 
 ## Cause
 
-Your site is approaching or has exceeded the metadata storage limit set for the site. More information about the limit can be found in the article [SharePoint limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
+Your site is approaching or has exceeded the metadata storage limit set for the site. More information about the limit can be found in the article [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
 
 ## Resolution
 

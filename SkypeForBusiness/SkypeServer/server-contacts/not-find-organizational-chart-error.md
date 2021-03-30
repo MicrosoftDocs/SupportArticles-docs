@@ -25,7 +25,7 @@ You can no longer find contact organization information in Microsoft Skype for
 
 > We didn't find an organizational chart.
 
-Additionally, MAPI is displayed as disconnected, or you see a "Your Exchange Server is currently unavailable" status in **MAPI Information** in Skype for Business [Configuration Information](/skypeforbusiness/troubleshoot/server-configuration/how-to-use-configuration-information).  
+Additionally, MAPI is displayed as disconnected, or you see a "Your Exchange Server is currently unavailable" status in **MAPI Information** in Skype for Business [Configuration Information](../server-configuration/how-to-use-configuration-information.md).  
 
 ## Cause
 

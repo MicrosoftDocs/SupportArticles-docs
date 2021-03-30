@@ -81,10 +81,10 @@ To work around this issue, use a global override to disable the probes that are 
 
 For more information, go to the following Microsoft websites:
 
-[Server Health and Performance](https://technet.microsoft.com/library/jj150551%28v=exchg.150%29.aspx)
+[Server Health and Performance](/exchange/server-health-and-performance-exchange-2013-help)
 
-[Add-GlobalMonitoringOverride](https://technet.microsoft.com/library/jj218683.aspx)
+[Add-GlobalMonitoringOverride](/powershell/module/exchange/add-globalmonitoringoverride)
 
-[Journaling](https://technet.microsoft.com/library/aa998649%28v=exchg.150%29.aspx)
+[Journaling](/exchange/journaling-exchange-2013-help)
 
-[New-JournalRule](https://technet.microsoft.com/library/bb125242%28v=exchg.150%29.aspx)
+[New-JournalRule](/powershell/module/exchange/new-journalrule)

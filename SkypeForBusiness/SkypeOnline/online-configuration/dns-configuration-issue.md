@@ -87,7 +87,7 @@ Some UNIX or Linux OS servers that host DNS don't require the underscore (_) whe
 
 For more information about how to create and verify DNS SRV records if you have an on-premises DNS host, go to the following Microsoft TechNet website: 
 
-[Create and Verify DNS SRV Records](https://technet.microsoft.com/library/gg398680.aspx) 
+[Create and Verify DNS SRV Records](/previous-versions/office/lync-server-2013/lync-server-2013-create-and-verify-dns-srv-records) 
 
 For Office 365 for professionals and businesses, go to this article in the Microsoft Knowledge Base:
 

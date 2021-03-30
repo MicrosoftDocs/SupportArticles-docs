@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams Room can't open PowerPoint presentations after disabling TLS 1.0 and TLS 1.1 in Skype for Business Server 2019 and Skype for Business Server 2015
 description: Describes an issue in which Microsoft Teams Room displays an error message when opening PowerPoint presentations after disabling TLS 1.0 and TLS 1.1. 
-author: TobyTu
+author: helenclu
 ms.author: nichburk
 manager: dcscontentpm
 audience: ITPro 
@@ -36,7 +36,7 @@ Install the March 31, 2020 update for Microsoft Teams Room version 4.4.25.0.
 
 ## More information
 
-- [Disable TLS 1.0/1.1 in Skype for Business Server 2015](https://docs.microsoft.com/skypeforbusiness/manage/topology/disable-tls-1.0-1.1)
+- [Disable TLS 1.0/1.1 in Skype for Business Server 2015](/skypeforbusiness/manage/topology/disable-tls-1.0-1.1)
 - [Disable TLS 1.0/1.1 in Skype for Business Server 2015: Part 1](https://techcommunity.microsoft.com/t5/skype-for-business-blog/disabling-tls-1-0-1-1-in-skype-for-business-server-2015-part-1/ba-p/621485)
 - [Disable TLS 1.0/1.1 in Skype for Business Server 2015: Part 2](https://techcommunity.microsoft.com/t5/skype-for-business-blog/disabling-tls-1-0-1-1-in-skype-for-business-server-2015-8211/ba-p/621487)
 

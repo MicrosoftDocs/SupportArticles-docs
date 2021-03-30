@@ -1,7 +1,7 @@
 ---
 title: Multi-factor authentication error in Microsoft Teams
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -40,6 +40,6 @@ Set-MsolDomainFederationSettings -DomainName yourdomainhere -PreferredAuthentica
 
 ## More information
 
-For more information, see [Active Directory Federation Services prompt=login parameter support](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/ad-fs-prompt-login).
+For more information, see [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

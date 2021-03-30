@@ -36,9 +36,10 @@ To work around this behavior, use Outlook Web App for mail, and apply retention 
 |Personal 1-years move to archive|Personal|365|Move to archive|
 |Personal 5-years move to archive|Personal|1825|Move to archive|
 |*Personal never move to archive|Personal|No age limit|Move to archive|
-|||||*This tag is not enabled by default. Items that have this retention tag are either never moved or never deleted.
 
-For more information about retention policies in Exchange Online, see [Retention tags and retention policies](https://technet.microsoft.com/library/dd297955%28v=exchg.150%29.aspx).
+*This tag is not enabled by default. Items that have this retention tag are either never moved or never deleted.
+
+For more information about retention policies in Exchange Online, see [Retention tags and retention policies](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies).
 
 Whereas Outlook for Mac 2011 doesn't support the archive feature, Outlook 2016 for Mac does support the archive feature. When you use Outlook 2016 for Mac, you can access your archive and move mail items into your archive.
 
@@ -46,6 +47,6 @@ Whereas Outlook for Mac 2011 doesn't support the archive feature, Outlook 2016 f
 
 You can create an archive mailbox for a user's primary cloud-based mailbox. Users can use the archive mailbox (also known as a personal archive) to store historical messaging data by moving or copying messages from their primary mailbox to their archive mailbox. The archived messages reside in the cloud, and users can access the messages by using Outlook 2016 for Mac, Outlook 2013, Outlook 2010, or Outlook Web App.
 
-For more information about the archive mailbox feature in Exchange Online, see [Enable or disable an archive mailbox in Exchange Online](https://technet.microsoft.com/library/jj984357%28v=exchg.150%29.aspx).
+For more information about the archive mailbox feature in Exchange Online, see [Enable or disable an archive mailbox in Exchange Online](/microsoft-365/compliance/enable-archive-mailboxes).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

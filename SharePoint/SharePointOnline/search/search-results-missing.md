@@ -105,6 +105,6 @@ If a subsite on the site collection doesn't inherit permissions, .aspx pages won
 For more information about search, see the following Microsoft webpages: 
 
 - [Not getting the search results you're looking for in SharePoint?](https://support.office.com/article/not-getting-the-search-results-you-re-looking-for-in-sharepoint-d80687f7-1010-4e6d-add9-584b423289d9)
-- [Specify search settings for a site collection or a site](https://docs.microsoft.com/sharepoint/override-default-search-center)
+- [Specify search settings for a site collection or a site](/sharepoint/override-default-search-center)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -1,6 +1,6 @@
 ﻿---
 title: Office doesn't render a custom DUO API multi-factor authentication login page
-author: AmandaAZ
+author: simonxjx
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

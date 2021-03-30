@@ -37,7 +37,7 @@ If the DNS record is created correctly but you continue to receive the error mes
 
 1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see the following help topic: 
   
-   [Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx)
+   [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 1. Run the **Get-Mailbox** cmdlet on the affected users, and then save the results. For more info about this cmdlet, see the following help topic:
 
    [Get-Mailbox](http://help.outlook.com/140/dd575549.aspx#mailboxes)

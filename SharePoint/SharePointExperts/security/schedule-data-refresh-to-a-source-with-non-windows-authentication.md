@@ -1,6 +1,6 @@
 ---
 title: Schedule data refresh to a data source with non-Windows Authentication
-author: AmandaAZ
+author: simonxjx
 ms.author: randring
 manager: dcscontentpm
 localization_priority: Normal

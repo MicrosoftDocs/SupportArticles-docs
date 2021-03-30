@@ -58,6 +58,6 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-For more information, see [Export eDiscovery search results to a PST file](https://technet.microsoft.com/library/dn440164%28v=exchg.150%29.aspx).
+For more information, see [Export eDiscovery search results to a PST file](/exchange/security-and-compliance/in-place-ediscovery/export-search-results).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
