@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot blocking caused by compile locks
-description: This article describes how to troubleshoot blocking caused by compile locks.
+title: Troubleshoot blocking issues caused by compile locks
+description: This article describes how to troubleshoot and resolve blocking issues caused by compile locks.
 ms.date: 09/25/2020
 ms.prod-support-area-path: Performance
 ms.topic: how-to
 ms.prod: sql
 ---
-# Troubleshoot blocking caused by compile locks
+# Troubleshoot blocking issues caused by compile locks
 
-This article describes how to troubleshoot blocking caused by compile locks.
+This article describes how to troubleshoot and resolve blocking issues caused by compile locks.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 263889

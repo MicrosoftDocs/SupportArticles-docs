@@ -1,6 +1,6 @@
 ---
 title: 999 Acknowledgments for HIPAA 5010
-description: This article describes how to generate 999 functional acknowledgments using a custom pipeline with this new 999 schema.
+description: This article describes how to generate 999 functional acknowledgments by using a custom pipeline with this new 999 schema.
 ms.date: 09/27/2020
 ms.prod-support-area-path: Accelerators
 ms.reviewer: anandsi, MQuian
