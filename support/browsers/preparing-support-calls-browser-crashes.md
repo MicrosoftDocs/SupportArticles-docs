@@ -24,7 +24,7 @@ Windows automatically captures mini dumps every time that it encounters a proce
 ## Collecting data
 
 > [!IMPORTANT]
-> By following the procedures in this article, you may capture sensitive Personal Data. If sharing this data is a concern for you, you should work with [Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) to explore alternative ways to troubleshoot the issue. Microsoft is committed to protecting your privacy. See the [Microsoft Privacy Statement](/privacystatement) for more information.
+> By following the procedures in this article, you may capture sensitive Personal Data. If sharing this data is a concern for you, you should work with [Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) to explore alternative ways to troubleshoot the issue. Microsoft is committed to protecting your privacy. See the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) for more information.
 
 The quickest way to collect a full process dump is by using Windows Error Reporting (WER). (See [Collecting dumps through WER](#collecting-dumps-through-wer))
 

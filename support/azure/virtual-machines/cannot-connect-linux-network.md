@@ -5,7 +5,8 @@ ms.date: 07/21/2020
 ms.prod-support-area-path: 
 author: genlin
 ms.author: genli
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 ms.reviewer: 
 ---
 # Can't connect to Azure Linux VM through network

@@ -26,17 +26,13 @@ The articles in this series also include the following ones:
 
 The *Web.config* file is an XML file that contains application-specific settings that override system defaults. While most ASP applications that are built on the .NET Framework are deployed with a *Web.config* file, the *Web.config* file is optional. You may have to create a *Web.config* file to override default settings on an application-by-application basis.
 
-For additional information about how to create a *Web.config* file for an application that doesn't already have one, visit [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178).
+For more information about how to create a *Web.config* file for an application that doesn't already have one, visit [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178).
 
 ## Edit the configuration of an ASP.NET application
 
 All systems where the .NET Framework has been deployed have system-wide ASP.NET configuration settings that are defined in the \<system.web> element of the *Machine.config* file. You can modify these settings (frequently, you must modify these settings) on an application-by-application basis.
 
-For additional information about how to override .NET framework default configuration settings for a specific application, visit the following articles:
-
-- [INFO: ASP.NET Configuration Overview](https://support.microsoft.com/help/307626)
-
-- [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178)
+For more information about how to override .NET framework default configuration settings for a specific application, see [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178).
 
 ## Determine if a client system meets the minimum requirements for installing the .NET Framework
 
@@ -102,5 +98,5 @@ For most uses of ASP.NET, a single server can handle all requests quickly. Howev
 
 For more information about how to deploy applications that are built on the .NET Framework, and about .NET interoperability, visit the following Microsoft web sites:
 
-- [.NET Framework Deployment Guide](/previous-versions/dotnet/articles/ms994336(v=msdn.10))
+- [Deploying the .NET Framework](/dotnet/framework/deployment/deploying-the-net-framework)
 - [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new)

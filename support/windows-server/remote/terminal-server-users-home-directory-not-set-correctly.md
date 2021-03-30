@@ -46,7 +46,3 @@ Subst %RootDrive% %HomeDrive%%HomePath%
 ## Resolution
 
 To resolve this issue, delete the mapped drive from the user's profile or set the home directory to another drive letter.
-
-## More information
-
-For more detailed information on how Rootdrive is used in Terminal Server, see [How and Why ROOTDRIVE Is Used on Windows Terminal Server](https://support.microsoft.com/help/195950).
