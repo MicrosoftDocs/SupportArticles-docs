@@ -32,13 +32,13 @@ Selecting either **Yes** or **No** to this message causes no change to the exist
 
 This article describes methods that you can use to change the number of IP hosts on any particular subnet. The following three methods are covered:
 
-- Scope Extension
+- Scope extension
 - Resubnetting
 - Superscoping
 
 ### Scope extension
 
-If you already have a DHCP scope and the Start Address and End Address don't currently include all addresses for your given subnet, you can increase the number of addresses in the scope by extending the Start Address or End Address in the scope properties.
+Assume that you already have a DHCP scope. The Start Address and End Address don't currently include all addresses for your given subnet. In this case, to increase the number of addresses in the scope, you can extend the Start Address or End Address in the scope properties.
 
 The following example shows a Class C network with the following settings:
 
@@ -60,7 +60,7 @@ To increase the number of addresses available to clients, you can change either 
 
 If your scope already covers the entire range and is fully used, you only have two other options: superscoping or resubnetting. Both of these options require you to make architectural changes to your network.
 
-Simply changing the DHCP scope parameters doesn't give you more leases. DHCP runs on top of your network subnet architecture and can hand out addresses however you want. Always treat the need to expand address ranges as a subnet architecture exercise first and foremost. After you decide which architecture to use, you can configure DHCP to conform to your network design.
+Simply changing the DHCP scope parameters doesn't give you more leases. DHCP runs on top of your network subnet architecture and can hand out addresses however you want. Primarily, always treat the need to expand address ranges as a subnet architecture exercise. After you decide which architecture to use, you can configure DHCP to conform to your network design.
 
 ### Resubnetting
 
@@ -69,7 +69,7 @@ Resubnetting is the recommended procedure for increasing a DHCP scope when the c
 - All routers and other statically assigned computers be reconfigured.
 - All DHCP clients have renewed their lease obtaining the new parameters.
 
-Additionally, the entire DHCP scope or scopes must first be deleted and then re-created using the new subnet mask. The potential for duplicate addresses exists during this period if you don't take steps to prevent leasing addresses that other clients may use. Despite all of the caveats, resubnetting is still the recommended procedure. The resubnetting configuration creates no extra overhead on the subnet routers or gateways, and keeps all hosts on the same broadcast address.
+Additionally, the entire DHCP scope or scopes must first be deleted and then re-created using the new subnet mask. If you don't take steps to prevent leasing addresses that other clients may use, duplicate addresses may occur during this period. Despite all of the caveats, resubnetting is still the recommended procedure. The resubnetting configuration creates no extra overhead on the subnet routers or gateways, and keeps all hosts on the same broadcast address.
 
 The following example shows a depleted subnet with the following settings:
 
@@ -93,7 +93,7 @@ After:
 
 ### Superscoping
 
-Superscoping (also referred to as multinetting) may meet your requirements. If you don't want to change the subnetting of an existing network, you can add more logical networks to the same physical wire. This method puts more burden on the router or gateway configured with multiple logical subnets running on a single physical port. The more burden may result in reduced network performance. Hosts on one logical subnet must be routed through the gateway to communicate with hosts on the other logical subnet, despite sharing the same physical wire.
+Superscoping (also referred to as multinetting) may meet your requirements. If you don't want to change the subnetting of an existing network, you can add more logical networks to the same physical wire. This method puts more burden on the router or gateway. The router or gateway is configured with multiple logical subnets that's running on a single physical port. The extra burden may result in reduced network performance. Hosts on one logical subnet must be routed through the gateway to communicate with hosts on the other logical subnet, despite sharing the same physical wire.
 
 The following example shows a depleted subnet with the following settings:
 
@@ -117,7 +117,7 @@ After you decide which option you want to use, you can choose the corresponding 
 
 If you use the resubnetting option, you need to delete and re-create the DHCP scope with the new subnet mask. It's not possible to change only the mask for a particular scope.
 
-If you're servicing existing clients within a portion of this range, you should turn on conflict detection until all your clients are migrated into the new scope. This action requires you to do the following steps:
+If you're servicing existing clients within a portion of this range, you should turn on conflict detection until all your clients are migrated into the new scope. This action requires you to take the following steps:
 
 1. Configure the interface of each connected router and change the IP address for the connected interface, its subnet address, and its subnet mask.
 2. Delete your current DHCP scope.
