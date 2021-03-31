@@ -47,6 +47,6 @@ Use the following guidance to enable TLS 1.2 for the instances of Exchange Serve
 
 Athough Exchange Server versions 2010 and later versions can be updated to enable TLS 1.2, earlier versions of Exchange Server have only the option to upgrade to a later version to be able to use Outlook for iOS or Outlook for Android.
 
-If your environment already uses TLS 1.2 or later versions, you might experience an issue that affects TLS certificate for Exchange Server. In this case, do the following:
+If your environment already uses TLS 1.2 or later versions, do the following:
 - Check whether you’re using a valid TLS certificate, and whether it's installed correctly. For more information, see [Certificate procedures in Exchange Server](/exchange/architecture/client-access/certificate-procedures) for details. 
 - If the TLS certificate is expired, renew the certificate by following the steps that are provided in [Renew an Exchange Server certificate](/exchange/architecture/client-access/renew-certificates).
