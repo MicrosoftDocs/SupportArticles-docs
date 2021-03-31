@@ -59,7 +59,7 @@ For example, suppose that a user is assigned to a group in Active Directory whil
 
 The effect of the cached information on the user's access to resources depends on the following factors:
 
-- **Whether the resources are on the client or on the network**
+- **Whether the resources are on the client or on the network**  
   Resources on the network require an additional authentication step (a network logon instead of an interactive logon). This step means that the group information that the resource uses to determine access always comes from a domain controller, not the client cache.
 - **Whether the resources use Kerberos tickets or other technologies (such as NTLM access tokens) to authenticate and authorize users**  
   - For details about how cached information affects user access to NTLM-secured resources, see [Resources that rely on NTLM authentication](#resources-that-rely-on-NTLM-authentication).
@@ -94,10 +94,12 @@ The client caches the TGT and continues to use it each time the user starts a ne
 > [!IMPORTANT]
 > If the user's group membership changes after the user has started resource sessions, the user's access is not immediately affected.
 >  
-> - **A change in group membership does not affect existing sessions.** Existing sessions continue until either the user signs out or otherwise ends the session, or until the session expires. When a session expires, one of the following things occurs:
+> - **A change in group membership does not affect existing sessions.**  
+  Existing sessions continue until either the user signs out or otherwise ends the session, or until the session expires. When a session expires, one of the following things occurs:
 >   - The client resubmits the session ticket or submits a new session ticket. This operation renews the session.
 >   - The client does not try to connect again. The session does not renew.
-> - **A change in group membership does not affect the current TGT, or any session tickets that are created by using that TGT.** The ticket granting service (TGS) uses the group information from the TGT to create a session ticket instead of querying Active Directory itself. The TGT isn't renewed until the user locks the client or signs out, or until the TGT expires (typically 10 hours). A TGT can be renewed for 10 days.
+> - **A change in group membership does not affect the current TGT, or any session tickets that are created by using that TGT.**  
+  The ticket granting service (TGS) uses the group information from the TGT to create a session ticket instead of querying Active Directory itself. The TGT isn't renewed until the user locks the client or signs out, or until the TGT expires (typically 10 hours). A TGT can be renewed for 10 days.
 
 You can use the [`klist` command](/windows-server/administration/windows-commands/klist) to manually purge a client's ticket cache.
 
@@ -186,7 +188,7 @@ You can verify the group membership information by opening a Command Prompt wind
 > Start-Process C:\Windows\System32\cmd.exe -ArgumentList ("/C", "exit 0") -Credential $MyCred -WindowStyle Hidden -PassThru -Wait
 > ```
 
-### Workarounds for sign-in processes, including Group Policy
+### Workaround for sign-in processes, including Group Policy
 
 You can mitigate some problems by making configuration changes manually, by making script changes so that scripts can run after the user signs in, or by having the user connect to the VPN and then sign out of Windows. You may have to combine these approaches. For Group Policy, in particular, the key is to understand when and how Group Policy can function.
 
