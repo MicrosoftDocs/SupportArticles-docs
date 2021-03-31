@@ -19,7 +19,7 @@ The article describes blocking in SQL Server and demonstrates how to troubleshoo
 In this article, the term connection refers to a single logged-on session of the database. Each connection appears as a session ID (SPID) or session_id in many DMVs. Each of these SPIDs is often referred to as a process, although it is not a separate process context in the usual sense. Rather, each SPID consists of the server resources and data structures necessary to service the requests of a single connection from a given client. A single client application may have one or more connections. From the perspective of SQL Server, there is no difference between multiple connections from a single client application on a single client computer and multiple connections from multiple client applications or multiple client computers; they are atomic. One connection can block another connection, regardless of the source client.
 
 > [!NOTE]
-> **This article is focused on SQL Server instances, including Azure SQL Managed Instances.** For information specific to troubleshooting blocking in Azure SQL Database, see [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking.md).
+> **This article is focused on SQL Server instances, including Azure SQL Managed Instances.** For information specific to troubleshooting blocking in Azure SQL Database, see [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking).
 
 ## What is blocking
 
@@ -33,7 +33,7 @@ For queries executed within a transaction, the duration for which the locks are 
 * [Customizing Locking and Row Versioning](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#customizing-locking-and-row-versioning)
 * [Lock Modes](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#lock_modes)
 * [Lock Compatibility](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#lock_compatibility)
-* [Row Versioning-based Isolation Levels in the Database Engine](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Row_versioning)
+* [Row Versioning-based Isolation Levels in the Database Engine](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#Row_versioning)
 * [Transactions](/sql/t-sql/language-elements/transactions-transact-sql)
 
 When locking and blocking persists to the point where there is a detrimental effect on system performance, it is due to one of the following reasons:
@@ -75,7 +75,7 @@ To gather this data, there are two complimentary methods.
 
 The first is to query dynamic management objects (DMOs) and store the results for comparison over time. Some objects referenced in this article are dynamic management views (DMVs) and some are dynamic management functions (DMFs).
  
-The second is to use [Extended Events](/sql/relational-databases/extended-events/extended-events.md)(XEvents) or [SQL Profiler Traces](/sql/relational-databases/sql-trace/sql-trace.md) to capture what is executing. Since SQL Trace and SQL Server Profiler are deprecated, this troubleshooting guide will focus on XEvents. 
+The second is to use [Extended Events](/sql/relational-databases/extended-events/extended-events)(XEvents) or [SQL Profiler Traces](/sql/relational-databases/sql-trace/sql-trace) to capture what is executing. Since SQL Trace and SQL Server Profiler are deprecated, this troubleshooting guide will focus on XEvents. 
 
 ## Gather information from DMVs
 
