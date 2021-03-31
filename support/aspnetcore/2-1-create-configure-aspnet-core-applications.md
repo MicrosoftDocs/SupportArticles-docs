@@ -13,7 +13,7 @@ This article introduces how to create and configure ASP.NET Core applications in
 
 ## Prerequisites
 
-To follow the exercises in this part, you must have a .NET Core SDK installed. To install the SDK, refer to the installation instructions in [Part 1](creating-vm.md), as necessary.
+To follow the exercises in this part, you must have a .NET Core SDK installed. To install the SDK, refer to the installation instructions in [Part 1](1-1-creating-vm.md), as necessary.
 
 ## Goal of this part
 
@@ -170,7 +170,7 @@ If the application requires constant uptime, running .NET Core application withi
 
 ## Next steps
 
-[Part 2.2 - Installing Nginx and configuring it as a reverse proxy server](install-nginx-configure-it-reverse-proxy.md)
+[Part 2.2 - Installing Nginx and configuring it as a reverse proxy server](2-2-install-nginx-configure-it-reverse-proxy.md)
 
 Make sure that the web application starts automatically. Install and configure Nginx as a reverse proxy to route HTTP requests that are made to port 80 to the dotnet application instead (so that clients can connect without having to provide the port number).
 
