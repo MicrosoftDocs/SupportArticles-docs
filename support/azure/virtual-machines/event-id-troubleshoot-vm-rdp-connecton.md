@@ -11,6 +11,7 @@ tags: ''
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
+ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 11/01/2018

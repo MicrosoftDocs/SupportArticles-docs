@@ -353,5 +353,3 @@ Several tests were done to validate the above behavior.
     in GetIpAddrByDnsNameHelper  
     start GetAddrInfoW: 18:11:27.244  
     end   GetAddrInfoW: 18:11:58.265
-
-For more information, see [Initial synchronization requirements for Windows 2000 Server and Windows Server 2003 operations master role holders](https://support.microsoft.com/help/305476).

@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot a Windows VM in the Azure portal | Microsoft Docs
 description: Learn how to troubleshoot Windows virtual machine problems in Azure by connecting the OS disk to a recovery VM through the Azure portal.
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
@@ -116,11 +116,11 @@ Detach the existing virtual hard disk from your troubleshooting VM. You can't us
     ![Screenshot that shows setting the data disk as offline in Server Manager.](./media/troubleshoot-recovery-disks-portal-windows/server-manager-set-disk-offline.png)
 
 3. Detach the virtual hard disk from the VM. Select your VM in the Azure portal, and then select **Disks**. 
-4. Select **Edit**, select the OS disk that you attached, and then select **Delete**.
+4. Select **Edit**, select the OS disk that you attached, and then select **Detach**.
 
     ![Screenshot that shows selections for detaching an existing virtual hard disk.](./media/troubleshoot-recovery-disks-portal-windows/detach-disk.png)
 
-    Before you continue, wait until the data disk is successfully deleted in the VM.
+    Before you continue, wait until the data disk is successfully detached from the VM.
 
 ## Swap the OS disk for the VM
 

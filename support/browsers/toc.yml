@@ -376,7 +376,7 @@
       href: cannot-open-certain-files.md
 
     - name: FAQs about Enhanced Security Configuration
-      href: enhanced-security-configuration-faq.md
+      href: enhanced-security-configuration-faq.yml
 
     - name: Https site can't be displayed
       href: cannot-display-https-site.md

@@ -41,7 +41,7 @@ _Original product version:_ &nbsp;Windows 10
     4. Select **Turn on file and printer sharing** under **Private**.
     5. Select **Save changes**.
 
-        :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/turn-on-network-discovery-share-settings.png" alt-text="Turn on network discovery and file and printer sharing options." border="false":::
+        :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/turn-on-network-discovery-share-settings.png" alt-text="Turn on network discovery and file and printer sharing options." border="true":::
 - Set the startup type of specified services to **Automatic** to make the computer visible on the network. Here's how to proceed:
     1. Go to Start.
     2. Go to Search, enter the word *Services*, and press Enter.
@@ -66,30 +66,30 @@ You may receive these error messages:
     3. Select **Permissions**, check **Allow** for **Full Control** of **Everyone**, and then press Enter.
     4. Select **OK** on the **Advanced Sharing** dialog box.
 
-    :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-1-share-permission.png" alt-text="Share permission to Everyone." border="false":::
+    :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-1-share-permission.png" alt-text="Share permission to Everyone." border="true":::
 2. Here's how to allow the **Full Control** permission to **Everyone**:
     1. Select **Edit** on the **Security** tab.
     2. Select **Add**, enter *Everyone* in the **Enter the object names to select** field, and then press Enter.
     3. Check **Allow** for **Full control** of **Everyone**, and press Enter.
     4. Close the **Properties** dialog box.
 
-    :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-1-allow-permission.png" alt-text="Allow the Full control permission to Everyone." border="false":::
+    :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-1-allow-permission.png" alt-text="Allow the Full control permission to Everyone." border="true":::
 3. Here's how to make sure TCP/IP NetBIOS is enabled:
     1. Go to Start.
     2. Go to Search, enter the word *Services*, and press Enter.
     3. Double-click **TCP/IP NetBIOS Helper** on the right pane, and make sure the **Startup type** property is set to **Automatic**.
 
-       :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/configure-tcpip-netbios-service.png" alt-text="Configure TCP/IP NetBIOS service." border="false":::
+       :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/configure-tcpip-netbios-service.png" alt-text="Configure TCP/IP NetBIOS service." border="true":::
     4. Go to **Control Panel** > **Network and Internet** > **Network and Sharing Center**, select **Change adapter settings** on the left pane, and then double-click **Ethernet**.
     5. Select **Properties** and double-click **Internet Protocol Version 4 (TCP/IPv4)** on the **Networking** tab.
     6. Select **Advanced**, select **Enable NetBIOS over TCP/IP** on the **WINS** tab, and then press Enter.
     7. Select **OK** twice to close the dialog box.
 
-       :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/enable-netbios-over-tcpip.png" alt-text="Enable NetBIOS over TCP/IP." border="false":::
+       :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/enable-netbios-over-tcpip.png" alt-text="Enable NetBIOS over TCP/IP." border="true":::
 
 ## You can't access this shared folder because your organization's security policies block unauthenticated guest access
 
-:::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-2.png" alt-text="You can't access this shared folder because your organization's security policies block unauthenticated guest access." border="false":::
+:::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-2.png" alt-text="You can't access this shared folder because your organization's security policies block unauthenticated guest access." border="true":::
 
 ### Resolution
 
@@ -102,7 +102,7 @@ You can enable the guest access from your computer by using one of the following
     > [!NOTE]
     > You must create the key if it doesn't exist. Press and hold (right-click) **Windows**, select **New** > **Key**, and then name the key *LanmanWorkstation*.
 
-3. Press and hold (right-click) **LanmanWorkstation**, select **New** > **DWORD (32-bit) Value**, and then name it *AllowInsecureGuestAuth*. Double-click it, set the **Value data** to *1*, and then press Enter.
+3. Press and hold (right-click) **LanmanWorkstation**, select **New** > **DWORD (32-bit) Value**, and then name it *AllowInsecureGuestAuth*. Double-click it, set the **Value data** to *1*, and then press Enter.
 
 **Method 2**: Enable insecure guest logons with **Local Group Policy Editor**
 
@@ -112,11 +112,11 @@ You can enable the guest access from your computer by using one of the following
 4. From the right-side pane, double-click **Enable insecure guest logons**.
 5. Select **Enabled**, and then press Enter.
 
-    :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/gpo-setting.png" alt-text="Enable insecure guest logons with Local Group Policy Editor." border="false":::
+    :::image type="content" source="./media/cannot-access-shared-folder-file-explorer/gpo-setting.png" alt-text="Enable insecure guest logons with Local Group Policy Editor." border="true":::
 
 ## Error code: 0x80004005. Unspecified error
 
-:::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-3.png" alt-text="Error code: 0x80004005. Unspecified error." border="false":::
+:::image type="content" source="./media/cannot-access-shared-folder-file-explorer/error-3.png" alt-text="Error code: 0x80004005. Unspecified error." border="true":::
 
 Instead of obtaining an IP address automatically, specify an IP address. Follow these instructions:
 

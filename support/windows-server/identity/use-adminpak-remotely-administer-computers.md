@@ -65,24 +65,24 @@ The Windows 2000 Administration Tools Pack is located in the I386 folder on the 
 
 The Windows Server 2003 Administration Tools Pack is located in the I386 folder of the Windows Server 2003 CD and is available as a free download on `www.microsoft.com`. The following table summarizes the operating systems on which you can install the Adminpak from Windows 2000, from Windows Server 2003 original (RTM), from Windows Server 2003 Service Pack 1 (SP1), or from Windows Server 2003 Service Pack 2. Additionally, the table summarizes the operating systems that the Adminpaks from these sources can remotely administer.
 
-|Windows 2000 Server Adminpak|Windows Server 2003 original (RTM) Adminpak|Windows Server 2003 SP1 Adminpak|Windows Server 2003 SP2 Adminpak|Remote Server Administration Tool (RSAT)|
-|---|---|---|---|---|
-| Installs and runs on these operating systems |
-|Windows Server 2003 32-bit family|No|Yes|Yes|Yes|
-|Windows Server 2003 64-bit family|No|No|Yes|Yes|
-|Windows XP Professional with Service Pack 2|No|Yes|Yes|Yes|
-|Windows XP Professional SP1 or later versions|No|Yes|Yes|Yes|
-|Windows XP Professional 64-bit Edition|No|No|Yes|Yes|
-|Windows 2000 Professional|Yes|No|No|No|
-|Windows 2000 Server family|Yes|No|No|No|
-|Windows Vista|No|No|No|No|Yes, RSAT for Windows Vista|
-|Windows 7|No|No|No|No|Yes, RSAT for Windows 7|
-|Windows Server 2008|No|No|No|No|Yes, RSAT for Windows Server 2008|
-|Windows Server 2008 R2|No|No|No|No|Yes, RSAT for Windows Server 2008|
-| Remotely manages these operating systems |
-|Windows Server 2003 32-bit family|Yes|Yes|Yes|Yes|
-|Windows Server 2003 64-bit family|Yes|Yes|Yes|Yes|
-|Windows 2000 Server family|Yes|Yes|Yes|Yes|
+||Windows 2000 Server Adminpak|Windows Server 2003 original (RTM) Adminpak|Windows Server 2003 SP1 Adminpak|Windows Server 2003 SP2 Adminpak|Remote Server Administration Tool (RSAT)|
+|---|---|---|---|---|---|
+| **Installs and runs on these operating systems** ||||||
+|**Windows Server 2003 32-bit family**|No|Yes|Yes|Yes||
+|**Windows Server 2003 64-bit family**|No|No|Yes|Yes||
+|**Windows XP Professional with Service Pack 2**|No|Yes|Yes|Yes||
+|**Windows XP Professional SP1 or later versions**|No|Yes|Yes|Yes||
+|**Windows XP Professional 64-bit Edition**|No|No|Yes|Yes||
+|**Windows 2000 Professional**|Yes|No|No|No||
+|**Windows 2000 Server family**|Yes|No|No|No||
+|**Windows Vista**|No|No|No|No|Yes, RSAT for Windows Vista|
+|**Windows 7**|No|No|No|No|Yes, RSAT for Windows 7|
+|**Windows Server 2008**|No|No|No|No|Yes, RSAT for Windows Server 2008|
+|**Windows Server 2008 R2**|No|No|No|No|Yes, RSAT for Windows Server 2008|
+| **Remotely manages these operating systems** ||||||
+|**Windows Server 2003 32-bit family**|Yes|Yes|Yes|Yes||
+|**Windows Server 2003 64-bit family**|Yes|Yes|Yes|Yes||
+|**Windows 2000 Server family**|Yes|Yes|Yes|Yes||
 
 ### Windows Server 2003 Administration Tools Pack installation and compatibility overview
 
@@ -469,10 +469,6 @@ The original-release version of the Windows Server 2003 Administration Tools Pac
 #### Remote Access User Extensions
 
 Remote Access User Extensions have been removed from the original-release version of the Windows Server 2003 Administration Tools Pack. The Remote Access User Extensions are available if the version of the Adminpak.msi file that is included in Windows Server 2003 Service Pack 2 (SP2) is installed on your Windows XP Professional-based computer. If you have the RTM or SP1 version of the Adminpak.msi file installed, you must uninstall it and then install the Windows Server 2003 SP2 version.
-
-For more information about how to obtain the latest Windows Server 2003 service pack, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[889100](https://support.microsoft.com/help/889100) How to obtain the latest service pack for Windows Server 2003  
 
 #### Remote Desktop
 

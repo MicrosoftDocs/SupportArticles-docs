@@ -43,7 +43,7 @@ To work around this issue, follow these steps:
 2. Run an offline defrag of the .edb file from a command prompt by running the following commands:
 
     ```console
-    Sc config wsearch start=disable
+    Sc config wsearch start=disabled
     Net stop wsearch
 
     EsentUtl.exe /d %AllUsersProfile%\Microsoft\Search\Data\Applications\Windows\Windows.edb

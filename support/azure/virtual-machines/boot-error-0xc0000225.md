@@ -4,6 +4,8 @@ description: Fixes an issue that triggers error 0xc0000225 when you try to start
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error 0xc0000225 on an Azure VM
 

@@ -53,6 +53,5 @@ Download and replace the version 3 of the Outlook custom action UEV template fro
 
 For more information, see the following articles:  
 
-- [Understanding the limitations of roaming Outlook signatures in Microsoft UE-V](https://support.microsoft.com/help/2930271)  
 - [Unregister and register UE-V template](/powershell/module/uev/?view=win10-ps&preserve-view=true )  
 - [Sync Methods for UE-V 2.x](/microsoft-desktop-optimization-pack/uev-v2/sync-methods-for-ue-v-2x-both-uevv2)  

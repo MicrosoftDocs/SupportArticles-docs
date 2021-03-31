@@ -4,6 +4,8 @@ description: Discusses support policy for the VM agent for Microsoft Azure Virtu
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: extensions
 ---
 # Support for VM agent extensions in Microsoft Azure
 
@@ -21,10 +23,10 @@ Support for third-party VM agent extensions is provided directly by the vendor.
 
 |VM agent extension|Reference|Microsoft Support policy|Link for support|
 |---|---|---|---|
-|DSC|Azure PowerShell DSC (Desired State Configuration) extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
-|MSEnterpriseApplication|System Center Role Authoring Extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
-|BGInfo|Background Info extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
-|VMAccessagent|VM Extension to enable Remote Desktop and password reset|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
+|DSC|Azure PowerShell DSC (Desired State Configuration) extension|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
+|MSEnterpriseApplication|System Center Role Authoring Extension|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
+|BGInfo|Background Info extension|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
+|VMAccessagent|VM Extension to enable Remote Desktop and password reset|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
 |Chefclient|Chef software agent|Supported by Chef software|[https://www.chef.io/support/](https://www.chef.io/support/)|
 |PuppetEnterpriseAgent|PuppetLabs agent|Supported by PuppetLabs| [https://support.puppet.com/hc/](https://support.puppet.com/hc/)|
 |Symantec Endpoint Protection|Symantec antivirus|Supported by Symantec| [http://www.symantec.com/business/support/index?page=contactsupport&key=54619](http://www.symantec.com/business/support/index?page=contactsupport&key=54619) |

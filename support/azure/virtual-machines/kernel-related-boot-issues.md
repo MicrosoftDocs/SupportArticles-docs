@@ -4,6 +4,8 @@ description: Provides solutions to an issue in which a Linux virtual machine (VM
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: linux
 ---
 # How to recover an Azure Linux virtual machine from kernel-related boot issues
 
