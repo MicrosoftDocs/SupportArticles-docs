@@ -84,11 +84,11 @@ If you want to retain the old `iostream` library (*iostream.h*), include one or 
 
 If you want to make the Standard C++ Libraries the default, include one or more of the new Standard C++ headers. You can't mix calls to the old `iostream` and the new Standard C++ library. Existing libraries (static or dynamic link) that use old `iostream` functions will have to be modified to use Standard C++ library `iostream` functions.
 
-## Question 5: Will using Standard C++ Libraries in MFC applications cause conflicts with C-Runtime Libraries
+## Question 5: If I use Standard C++ Libraries in MFC applications, will it cause conflicts with C-Runtime Libraries
 
 No. Microsoft Foundation Classes (MFC) doesn't use any C-Runtime functions that will conflict with the Standard C++ Libraries.
 
-## Question 6: Why I get error (error C2065: 'cout' : undeclared identifier) even though I have included `iostream`
+## Question 6: Why I get error (error C2065: '`cout`' : undeclared identifier) even though I have included `iostream`
 
 Standard C++ library is implemented in its own namespace `std`. Make sure to add the following statement in the beginning of your program:
 

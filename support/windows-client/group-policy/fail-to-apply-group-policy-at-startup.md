@@ -77,7 +77,7 @@ Policy Location: Computer Configuration > Policies > Admin Templates > System > 
 Setting Name: Startup policy processing wait time
 Registry Key: `HKLM\Software\Policies\Microsoft\Windows\System!GpNetworkStartTimeoutPolicyValue`
 
-If you define the Group policy setting, it would override the manual setting. If manual and Group Policy setting aren't defined, the value is picked from the following registry location:
+If you define the Group policy setting, it would override the manual setting. When manual and Group Policy setting aren't defined, the value is picked from the following registry location:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\History`
 

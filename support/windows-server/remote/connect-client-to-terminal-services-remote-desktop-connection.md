@@ -37,7 +37,7 @@ To create a Terminal Services connection, follow these steps:
     > [!NOTE]
     > To connect to the console session of the remote computer, type **computername or IP address**/console.
 3. Select **Connect**.
-4. In the **Log On to Windows** dialog box, type your user name, password, and domain (if necessary), and then select **OK**.  
+4. In the logon dialog box, type your user name, password, and domain (if necessary), and then select **OK**.  
 
     [back to the top](#more-information)  
 
@@ -85,6 +85,6 @@ To open a saved connection, follow these steps:
 To log off and end a session, follow these steps:
 
 1. In the Remote Desktop Connection window, select **Start**, and then select **Shut Down**.
-2. In the **Shut Down Windows** dialog box, select **Log Off *username***, and then select **OK**.
+2. In the **Shut Down Windows** dialog box, select **log off \<username>**, and then select **OK**.
 
     [back to the top](#more-information)  

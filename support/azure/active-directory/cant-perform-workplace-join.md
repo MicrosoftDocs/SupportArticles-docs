@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 3045387
 
 ## Symptoms
 
-When a user tries to perform a Workplace Join by using Device Registration Services, the user receives one of the following messages:
+When a user tries to do a Workplace Join by using Device Registration Services, the user receives one of the following messages:
 
 - The user receives the following message *before* providing the user's user name and password:
 
@@ -30,7 +30,7 @@ To resolve either of these problems, use the method that's appropriate for the s
 
 ### Method 1
 
-To fix the problem for message 1, review the Event logs on the client computer that's trying to perform a Workplace Join to determine the correct solution.
+To fix the problem for message 1, review the Event logs on the client computer that's trying to do a Workplace Join to determine the correct solution.
 
 An administrator may see details in Event Viewer that resemble the following example:
 
@@ -87,22 +87,22 @@ ipconfig /FlushDNS
 
 ### Verify that Device Registration is enabled
 
-If you try to perform Workplace Join to Azure Active Directory:
+If you try to do Workplace Join to Azure Active Directory:
 
-1. Sign in to the Azure portal, or start the Azure AD console from M365 admin center as a Company Administrator.
-2. Go to the directory where the user is trying to perform the join.
+1. Sign in to the Azure portal, or start the Azure AD console from Microsoft 365 admin center as a Company Administrator.
+2. Go to the directory where the user is trying to do the join.
 3. Go to **Configure**.
 4. Scroll down to the **Device Registration** section.
 5. Make sure the setting labeled **ENABLE WORKPLACE JOIN** is toggled to **Yes**. ("Yes" will be blue.)
 
-If you try to perform Workplace Join to your local Active Directory domain, take the following actions:
+If you try to do Workplace Join to your local Active Directory domain, take the following actions:
 
 - Open the Active Directory Federation Services (AD FS) management console.
 - Select **Relying Party Trusts** to determine whether the Device Registration Service trust is enabled on each node of the AD FS farm.
 
 ### Verify that the Active Directory Federation Services service and the Device Registration Services service are running
 
-If you try to perform a Workplace Join to your local Active Directory, you should log on to each node of the AD FS farm and then follow these steps:
+If you try to do a Workplace Join to your local Active Directory, you should log on to each node of the AD FS farm and then follow these steps:
 
 1. Go to **Control Panel**, **Administrative Tools**, and then **Services** (Services.msc).
 2. Locate the Active Directory Federation Services service, and verify its status.
@@ -111,7 +111,7 @@ If you try to perform a Workplace Join to your local Active Directory, you shoul
 
 ### Verify that the host name bindings are registered for each node in the AD FS farm
 
-If you try to perform a Workplace Join to your local Active Directory, follow the steps at the following Microsoft TechNet website:
+If you try to do a Workplace Join to your local Active Directory, follow the steps at the following Microsoft TechNet website:
 
  [Configure a Host Header for a Web Site (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753195(v=ws.10)?redirectedfrom=MSDN)
 
@@ -123,4 +123,4 @@ Run [Microsoft Update](https://update.microsoft.com/), and make sure that the [U
 
 ### Verify that traffic is enabled if you're using a third-party proxy or firewall server
 
-If you try to perform a Workplace Join to your local Active Directory, verify that there's a rule to enable incoming TCP connections to EnterpriseRegistration. **domain_name**. **domain_extension**. It should allow for traffic to pass through to the DRS server.
+If you try to do a Workplace Join to your local Active Directory, verify that there's a rule to enable incoming TCP connections to EnterpriseRegistration. **domain_name**. **domain_extension**. It should allow for traffic to pass through to the DRS server.

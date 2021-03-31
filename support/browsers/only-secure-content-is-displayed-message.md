@@ -1,6 +1,6 @@
 ---
 title: Display non-secure content in Internet Explorer
-description: When you access a website that contains non-secure content or mixed content, you receive a **only secure content is displayed** notification. 
+description: When you access a website that contains non-secure content or mixed content, you receive "only secure content is displayed". 
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -20,7 +20,7 @@ When viewing a website in Internet Explorer 9 or later, you receive the followin
 
 ## Cause
 
-This message means that there may be both secure and non-secure content on the page. Secure and non-secure content, or mixed content, means that a webpage is trying to display elements using both secure (HTTPS/SSL) and non-secure (HTTP) web server connections. It often happens with online stores or financial sites that display images, banners, or scripts that are coming from a server that isn't secured. The risk of displaying mixed content is that a non-secure webpage or script might be able to access information from the secure content.
+This message means that there may be secure and non-secure content (mixed content) on the page. It means that a webpage tries to display elements using both secure (HTTPS/SSL) and non-secure (HTTP) web server connections. It often happens with online stores or financial sites. The webpage displays images, banners, or scripts from a server that isn't secured. The risk of displaying mixed content is that a non-secure webpage or script might be able to access information from the secure content.
 
 ## Resolution
 

@@ -20,7 +20,7 @@ This article describes the support policies for [Endorsed Linux distributions](h
 
 ## Linux in Azure
 
-The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. It's recommended to use an [Endorsed Linux distribution](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros), because they are maintained by some of the most well-known Linux vendors in the world. You're welcome to bring your distributions of Linux into Azure. All distributions are welcome.
+The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. It's recommended to use an [Endorsed Linux distribution](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros), because they're maintained by some of the most well-known Linux vendors in the world. You're welcome to bring your distributions of Linux into Azure. All distributions are welcome.
 
 ## Linux support matrix
 
@@ -46,14 +46,14 @@ Microsoft offers Linux support for [endorsed Linux distributions](https://docs.m
 - Customizing Linux is one of the hallmarks of the operating system. We encourage you to use a Linux solution that benefits your organization. However, some modifications may not be supported by the Linux vendor, such as custom kernel or modules. For vendor support, you may be required to use stock kernels or libraries for your image. For more information, contact your Linux vendor.
 - Microsoft may provide recommendations about Azure platform and services. For some troubleshooting and performance tuning within Linux or applications, the customer should directly contact the vendor of the supported Linux distribution or application.
 - Microsoft Support doesn't assist in the design, architecture, or deployment of applications or solutions on Azure.
-- Scenarios that are related to security aren't supported. They include but aren't limited to:
+- Scenarios related to security aren't supported. They include but aren't limited to:
 
   - compromised virtual machines
   - security forensics
   - DDoS
   - intrusion-prevention assistance
 
-## Open Source technology support matrix
+## Open-source technology support matrix
 
 Microsoft may offer support for the following specific open-source technologies (subject to change):
 
@@ -62,7 +62,7 @@ Microsoft may offer support for the following specific open-source technologies 
 - Web and application servers: Apache, Tomcat
 - Frameworks: WordPress
 
-## Open source technology support scope
+## Open-source technology support scope
 
 Microsoft will assist with supported open-source technologies. Customers who request support for design guidance or development assistance may be directed to forums or community support. Customers may also have to work with our Linux partners or software vendors directly for scenarios that aren't supported by Microsoft. Examples include, but aren't limited to:
 
