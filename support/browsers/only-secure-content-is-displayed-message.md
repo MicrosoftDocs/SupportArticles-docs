@@ -1,6 +1,6 @@
 ---
 title: Display non-secure content in Internet Explorer
-description: This article describes that when you access a website that contains non-secure content or mixed content, you will receive a **only secure content is displayed** notification. 
+description: When you access a website that contains non-secure content or mixed content, you receive a **only secure content is displayed** notification. 
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -14,11 +14,13 @@ _Original KB number:_ &nbsp; 2625928
 
 ## Symptoms
 
-When viewing a website in Internet Explorer 9 or later, you receive a message that says "Only secure content is displayed."
+When viewing a website in Internet Explorer 9 or later, you receive the following message:
+
+> Only secure content is displayed.
 
 ## Cause
 
-This message is telling you that there may be both secure and non-secure content on the page. Secure and non-secure content, or mixed content, means that a webpage is trying to display elements using both secure (HTTPS/SSL) and non-secure (HTTP) web server connections. This often happens with online stores or financial sites that display images, banners, or scripts that are coming from a server that is not secured. The risk of displaying mixed content is that a non-secure webpage or script might be able to access information from the secure content.
+This message means that there may be both secure and non-secure content on the page. Secure and non-secure content, or mixed content, means that a webpage is trying to display elements using both secure (HTTPS/SSL) and non-secure (HTTP) web server connections. It often happens with online stores or financial sites that display images, banners, or scripts that are coming from a server that isn't secured. The risk of displaying mixed content is that a non-secure webpage or script might be able to access information from the secure content.
 
 ## Resolution
 
@@ -30,8 +32,8 @@ This message is telling you that there may be both secure and non-secure content
 To Disable/Enable/Prompt the **Only secure content is displayed** message:
 
 1. Open Internet Explorer from the Start screen.
-2. On the **Tool** menu, click **Internet Options**.
-3. Click the **Security** tab, and then click **Custom level**.
+2. On the **Tool** menu, select **Internet Options**.
+3. Select the **Security** tab, and then select **Custom level**.
 4. In the **Settings** box, scroll down to the **Miscellaneous** section, and under Display mixed content choose from the following options:
 
     **Disable**, will not display non-secure items.  
@@ -43,11 +45,11 @@ To Disable/Enable/Prompt the **Only secure content is displayed** message:
 To Disable/Enable/Prompt the **Only secure content is displayed** message:
 
 1. From the start screen, type **Internet Options**.
-2. Tap or click the **Settings option** below the Search box, and then tap or click **Internet Options**.
-3. Tap or click the **Security** tab, and then tap or click the **Custom Level**.
+2. Tap or select the **Settings option** below the Search box, and then tap or select **Internet Options**.
+3. Tap or select the **Security** tab, and then tap or select the **Custom Level**.
 4. In the **Settings** box, scroll down to the **Miscellaneous** section, and under Display mixed content choose from the following options:
 
-    **Disable**, will not display non-secure items.  
+    **Disable**, won't display non-secure items.  
     **Enable**, will always display non-secure items without asking.  
     **Prompt**, will prompt you when a webpage is using non-secure content.
 
@@ -56,11 +58,11 @@ To Disable/Enable/Prompt the **Only secure content is displayed** message:
 To Disable/Enable/Prompt the **Only secure content is displayed** message:
 
 1. Start Internet Explorer.
-2. On the **Tool** menu, click **Internet Options**.
-3. Click the **Security** tab, and then click **Custom level**.
+2. On the **Tool** menu, select **Internet Options**.
+3. Select the **Security** tab, and then select **Custom level**.
 4. In the **Settings** box, scroll down to the **Miscellaneous** section, and under Display mixed content choose from the following options:
 
-    **Disable**, will not display non-secure items.  
+    **Disable**, won't display non-secure items.  
     **Enable**, will always display non-secure items without asking.  
     **Prompt**, will prompt you when a webpage is using non-secure content.  
 
