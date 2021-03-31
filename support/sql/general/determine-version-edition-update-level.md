@@ -309,13 +309,13 @@ To find the version of your instance of SQL Server CE and related information, s
 
 To find the version of PolyBase and related features in Windows, first try these two approaches. 
 
-1. If the PolyBase service is running, use: 
+- If the PolyBase service is running, run the following PowerShell script:
 
 ```powershell
 Get-Process mpdwsvc -FileVersionInfo | Format-Table -AutoSize
 ```
 
-2. If the PolyBase service is not running or cannot start:
+- If the PolyBase service is not running or can't be started, run the following PowerShell script:
 
 ```powershell
 cd 'C:\Program Files\Microsoft SQL Server'
