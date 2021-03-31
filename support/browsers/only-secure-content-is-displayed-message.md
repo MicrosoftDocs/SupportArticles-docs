@@ -20,7 +20,7 @@ When viewing a website in Internet Explorer 9 or later, you receive the followin
 
 ## Cause
 
-This message means that there may be secure and non-secure content (mixed content) on the page. It means that a webpage tries to display elements using both secure (HTTPS/SSL) and non-secure (HTTP) web server connections. It often happens with online stores or financial sites. The webpage displays images, banners, or scripts from a server that isn't secured. The risk of displaying mixed content is that a non-secure webpage or script might be able to access information from the secure content.
+This message means there may be secure and non-secure content (mixed content) on the page. The webpage tries to display elements using both secure (HTTPS/SSL) and non-secure (HTTP) web server connections. This issue often happens with online stores or financial sites. The webpage displays images, banners, or scripts from a server that isn't secured. The risk of displaying mixed content is that a non-secure webpage or script may access information from the secure content.
 
 ## Resolution
 
@@ -36,7 +36,7 @@ To Disable/Enable/Prompt the **Only secure content is displayed** message:
 3. Select the **Security** tab, and then select **Custom level**.
 4. In the **Settings** box, scroll down to the **Miscellaneous** section, and under Display mixed content choose from the following options:
 
-    **Disable**, will not display non-secure items.  
+    **Disable**, won't display non-secure items.  
     **Enable**, will always display non-secure items without asking.  
     **Prompt**, will prompt you when a webpage is using non-secure content.
 
