@@ -1,7 +1,7 @@
 ---
 title: Group membership changes do not update over some VPN connections
 description: Describes a situation in which VPN users might experience resource access or configuration problems after their group membership changes.
-ms.date: 03/25/2020
+ms.date: 03/31/2021
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
@@ -26,7 +26,7 @@ _Applies to:_ &nbsp; Windows 10, all SACs
 In response to the Covid-19 pandemic, an increasing number of users now work, learn, and socialize from home. They connect to the workplace by using VPN connections. These VPN users report that when they are added to or removed from security groups, the changes might not take effect as expected. They report symptoms such as the following:
 
 - Changes to network resource access don't take effect.
-- Group Policy policies that target specific security groups don't apply correctly.
+- Group Policy Objects (GPOs) that target specific security groups don't apply correctly.
 - Folder Redirection policy isn't applied correctly.
 - Applocker rules that target specific security groups don't work.
 - Logon scripts that create mapped drives, including user home folder or GPP drive maps, don't work.
@@ -62,8 +62,8 @@ The effect of the cached information on the user's access to resources depends o
 - **Whether the resources are on the client or on the network**  
   Resources on the network require an additional authentication step (a network logon instead of an interactive logon). This step means that the group information that the resource uses to determine access always comes from a domain controller, not the client cache.
 - **Whether the resources use Kerberos tickets or other technologies (such as NTLM access tokens) to authenticate and authorize users**  
-  - For details about how cached information affects user access to NTLM-secured resources, see [Resources that rely on NTLM authentication](#resources-that-rely-on-NTLM-authentication).
-  - For details about how cached information affects user access to Kerberos-secured resources, see [Resources that rely on Kerberos tickets](#resources-that-rely-on-Kerberos-tickets).
+  - For details about how cached information affects user access to NTLM-secured resources, see [Resources that rely on NTLM authentication](#resources-that-rely-on-ntlm-authentication).
+  - For details about how cached information affects user access to Kerberos-secured resources, see [Resources that rely on Kerberos tickets](#resources-that-rely-on-kerberos-tickets).
 - **Whether the user is resuming an existing resource session or starting a new resource session**
 - **Whether the user locks and unlocks the client while connected to the VPN**  
   If the user locks the client while connected to the VPN and then unlocks it, the client updates its cache of user groups. However, this change does not affect the existing user security context or any sessions that were running when the user locked the client.
@@ -92,7 +92,7 @@ Windows then uses the TGT to get a session ticket for the requested resource. Th
 The client caches the TGT and continues to use it each time the user starts a new resource session, whether local or on the network. The client also caches the session ticket so that it can continue to connect to the resource (such as when the resource session expires). When the session ticket expires, the client resubmits the TGT for a fresh session ticket.
 
 > [!IMPORTANT]
-> If the user's group membership changes after the user has started resource sessions, the user's access is not immediately affected.
+> If the user's group membership changes after the user has started resource sessions, the following factors control when the change actually affects the user's resource access:  
 >  
 > - **A change in group membership does not affect existing sessions.**  
   Existing sessions continue until either the user signs out or otherwise ends the session, or until the session expires. When a session expires, one of the following things occurs:
@@ -101,7 +101,7 @@ The client caches the TGT and continues to use it each time the user starts a ne
 > - **A change in group membership does not affect the current TGT, or any session tickets that are created by using that TGT.**  
   The ticket granting service (TGS) uses the group information from the TGT to create a session ticket instead of querying Active Directory itself. The TGT isn't renewed until the user locks the client or signs out, or until the TGT expires (typically 10 hours). A TGT can be renewed for 10 days.
 
-You can use the [`klist` command](/windows-server/administration/windows-commands/klist) to manually purge a client's ticket cache.
+You can use the [klist command](/windows-server/administration/windows-commands/klist) to manually purge a client's ticket cache.
 
 > [!NOTE]  
 > The ticket cache stores tickets for all of the user sessions on the computer. You can use the `klist` command-line options to target the command to specific users or tickets.
@@ -138,7 +138,7 @@ In fact, this change can involve two sign-ins. During the first sign-in, the Fol
 
 ### Effects on Group Policy reporting
 
-The Group Policy service maintains group membership information on the client, in Windows Management Instrumentation (WMI), and in the registry. The WMI store is used in the Resultant Set of Policy report (produced by running `gpresult /r`). It is not used to make decisions about which Group Policy Objects (GPOs) are applied.
+The Group Policy service maintains group membership information on the client, in Windows Management Instrumentation (WMI), and in the registry. The WMI store is used in the Resultant Set of Policy report (produced by running `gpresult /r`). It is not used to make decisions about which GPOs are applied.
 
 > [!NOTE]  
 > You can turn off the Resultant Set of Policy reporting function by enabling the [Turn off Resultant Set of Policy logging](https://gpsearch.azurewebsites.net/#347) policy.
@@ -174,7 +174,7 @@ After you add a user to a group or remove a user from a group, provide the follo
 1. Sign in to the client computer, and then connect to the VPN as you usually do.
 2. When you are sure that the client computer is connected to the VPN, lock Windows.
 3. Unlock the client computer, and then sign out of Windows.
-4. Sign in to Windows again. 
+4. Sign in to Windows again.
 
 The group membership information (and resource access) is now up-to-date.
 
