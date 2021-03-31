@@ -24,16 +24,16 @@ This article was written by [Simon Geary](https://social.msdn.microsoft.com/prof
 
 ## More Information
 
-Follow these step-by-step instructions to list all currently locked out accounts in a Windows Server 2003 domain:
+Follow these step-by-step instructions to list all currently locked out accounts in a domain:
 
 1. Sign in to a Domain Controller with administrative privileges in the domain, and open Active Directory Users & Computers.
-2. Right-click **Saved Queries** and select **New**>**Query**.
-3. Give the query a name and optionally a description. Select Define Query.
-4. Select Custom Search from the drop-down dialogue box.
-5. Select Advanced and enter this LDAP filter in the query box:
+2. Right-click **Saved Queries** and select **New** > **Query**.
+3. Give the query a name and optionally a description. Select **Define Query**.
+4. Select **Custom Search** from the drop-down dialogue box.
+5. Select **Advanced** and enter this LDAP filter in the query box:
 
     *(&(objectCategory=Person)(objectClass=User)(lockoutTime>=1))*
 
-6. Select OK twice and the new query appears under the Saved Queries folder in Active Directory Users & Computers.
+6. Select **OK** twice and the new query appears under the **Saved Queries** folder in Active Directory Users & Computers.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
