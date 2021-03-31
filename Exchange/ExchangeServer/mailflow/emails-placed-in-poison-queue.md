@@ -31,7 +31,7 @@ When you check events in Event Viewer, you see the following error message:
 
 > Transport engine failed to evaluate condition due to Filtering Service error…FIPS test Extraction file with error 'Scanning Process caught exception: … Unknown Error 2214608899. Unable to reserve MSAM for file parsing – the engine is permanently offline.'
 
-The detailed events appear as the following example. All the events detailed below are related, but events 4010, 4999, and 2203 are particularly relevant.
+The detailed events resemble the following. All the events detailed below are related, and events 4010, 4999, and 2203 are particularly relevant.
 
 ```output
 Event 10001 – Source: MSExchangeTransport – Task Category: PoisonMessage – Message: X messages have reached or exceeded the configured poison threshold of 2. After the Microsoft Exchange Transport service restarted, these messages were moved to the poison message queue."
