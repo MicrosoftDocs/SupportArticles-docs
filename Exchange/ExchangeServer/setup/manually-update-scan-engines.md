@@ -29,13 +29,12 @@ Follow the steps given below to manually update the scan engines in Exchange Ser
 
 The manual update involves running the Update-Engines.ps1 PowerShell script. This script can be changed according to your needs. The update path, list of engines, and list of platforms can be changed in the script, or passed as parameters when the script is executed.
 
-When defining a specific engine(s), you must use the following naming conventions:
+When defining a specific engine(s), you must use the following naming convention for AMD64:
 
-- X86: Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist
-- AMD64: Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
+Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
 
 > [!NOTE]
-> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for both the 32-bit and 64-bit platforms.
+> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for 64-bit platforms.
 
 ## Steps to update scan engines
 
@@ -66,7 +65,7 @@ When defining a specific engine(s), you must use the following naming convention
     [string]$EngineDirPath,
     [string]$UpdatePathUrl = "http://forefrontdl.microsoft.com/server/scanengineupdate/",
     [string[]]$Engines = ("Microsoft", "Norman", "Command", "VBuster", "Kaspersky", "WormList", "Cloudmark"),
-    [string[]]$Platforms = ("x86", "amd64")
+    [string[]]$Platforms = ("amd64")
     )
 
     # Display Help
@@ -80,7 +79,7 @@ When defining a specific engine(s), you must use the following naming convention
     ""
     "Examples: "
     "     Update-Engines.ps1 -EngineDirPath C:\Engines\"
-    "     Update-Engines.ps1 -EngineDirPath C:\Engines\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64, x86"
+    "     Update-Engines.ps1 -EngineDirPath C:\Engines\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64"
     ""
     exit
     }
@@ -355,11 +354,7 @@ When defining a specific engine(s), you must use the following naming convention
     ```
 
     ```powershell
-    Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64, x86
-    ```
-
-    ```powershell
-    Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64, x86
+    Update-Engines.ps1 -EngineDirPath C:\ScanEngineUpdates\ -UpdatePathUrl http://forefrontdl.microsoft.com/server/scanengineupdate/ -Engines Microsoft -Platforms amd64
     ```
 
 4. You can now configure the servers to download updates from the directory created in step 1 by using the UNC path of a share name, such as `\\server_name\share_name`.
