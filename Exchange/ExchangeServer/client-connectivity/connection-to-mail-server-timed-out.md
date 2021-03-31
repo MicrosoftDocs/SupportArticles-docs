@@ -40,7 +40,7 @@ This issue occurs if either of the following conditions is true:
 
 [Both TLS 1.0 and 1.1 are deprecated](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365).
 
-Outlook for iOS and Outlook for Android now block users from signing in to an environment that uses TLS 1.1 and 1. They support only versions of Exchange Server and operating system environments that use TLS 1.2 or later versions.
+Outlook for iOS and Outlook for Android now block users from signing in to an environment that uses TLS 1.1 or 1.0. They support only versions of Exchange Server and operating system environments that use TLS 1.2 or later versions.
 
 If your operating system currently uses TLS 1.2, the issue might be caused by an expired TLS certificate.
 
