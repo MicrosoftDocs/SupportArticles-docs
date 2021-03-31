@@ -14,24 +14,27 @@ _Applies to:_ &nbsp; SQL Server
 
 In Microsoft SQL Server Configuration Manager, you provision a server-side certificate and enable the encryption. However, the SQL Server service doesn't start, and you receive the following error message:
 
-> `Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log.`  
-`If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 13.`
+> Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log.  
+If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 13.
 
 ## Resolution
 
 1. Check the Application log and verify that you see two event entries that resemble the following:
 
-    > `Log Name:      Application`  
-    > `Source:        MSSQLSERVER`  
-    > `Date:          <Datetime>`  
-    > `Event ID:      33556`  
-    > `Task Category: Server`  
-    > `Level:         Error`  
-    > `Keywords:      Classic`  
-    > `User:          N/A`  
-    > `Computer:      <Server name>`  
-    > `Description:  
-    Invalid character in the thumbprint [Cert Hash(sha1) " \<Cert Hash number> "]. Please provide a certificate with a valid thumbprint.`
+    ```output
+    Log Name:      Application  
+    Source:        MSSQLSERVER  
+    Date:          <Datetime>
+    Event ID:      33556  
+    Task Category: Server  
+    Level:         Error  
+    Keywords:      Classic  
+    User:          N/A  
+    Computer:      <Server name> 
+    Description:  
+    Invalid character in the thumbprint [Cert Hash(sha1) " \<Cert Hash number"].
+    Please provide a certificate with a valid thumbprint.
+    ```
 
     > [!NOTE]
     > This error typically indicates that the certificate isn't provisioned through Configuration Manager. It's provisioned by manually copying the thumbprint value into the following registry key:

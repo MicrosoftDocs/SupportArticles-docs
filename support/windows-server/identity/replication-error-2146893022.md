@@ -44,13 +44,13 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     Using `repadmin`:
 
     ```console
-    Repadmin replicate destinationDC sourceDC DN_of_Domain_NC
+    Repadmin /replicate destinationDC sourceDC DN_of_Domain_NC
     ```
 
     For example, if replication is failing on `ContosoDC2.contoso.com`, run the following command on `ContosoDC1.contoso.com`:
 
     ```console
-    Repadmin replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
+    Repadmin /replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
     ```
 
 3. Start the Kerberos KDC service on the destination domain controller by running the following command:
