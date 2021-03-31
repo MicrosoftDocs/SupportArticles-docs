@@ -60,7 +60,7 @@ Azure automatically generates an SSH key pair for you, and lets you save it to d
 
 Select the **SSH public key** and **Generate new key pair** options when you create the administrator account.
 
-![Select username](./media/creating-vm/username.png)
+![Select username](./media/1-1-creating-vm/username.png)
 
 For the **Username** field, you can choose whichever name you want among the names that you provided when you created the virtual machine.
 
@@ -68,7 +68,7 @@ For the **Username** field, you can choose whichever name you want among the nam
 
 To enable connectivity to your newly created virtual machine, select both SSH and HTTP for inbound port rules. This is because you'll use the SSH protocol to connect to the virtual machine, and you'll use the HTTP protocol when you access the ASP.NET Core application that's running on Linux.
 
-![Inbound port rules](./media/creating-vm/rules.png)
+![Inbound port rules](./media/1-1-creating-vm/rules.png)
 
 ### Saving the private key
 
@@ -76,7 +76,7 @@ Because the SSK public key option is selected, you'll see the following message 
 
 > Generate new key pair
 
-![New key pair](./media/creating-vm/keypair.png)
+![New key pair](./media/1-1-creating-vm/keypair.png)
 
 Select **Download private key and create resource**, and then save the private key to your local disk. The extension of the file is .pem ([Privacy-Enhanced Mail](https://wikipedia.org/wiki/Privacy-Enhanced_Mail)).
 
@@ -129,11 +129,11 @@ If you have never connected to this server before, you receive the following war
 
 > The authenticity of host '\<HostName>' can't be established.
 
-:::image type="content" source="./media/creating-vm/yes.png" alt-text="enter yes" border="true":::
+:::image type="content" source="./media/1-1-creating-vm/yes.png" alt-text="enter yes" border="true":::
 
 If you enter *yes*, you receive the following additional warning:
 
-:::image type="content" source="./media/creating-vm/yes2.png" alt-text="enter yes2" border="true":::
+:::image type="content" source="./media/1-1-creating-vm/yes2.png" alt-text="enter yes2" border="true":::
 
 Essentially, the SSH client wants the private key to be "more private". In other words, the private key that is contained in the .pem file is accessible to other users on the computer that you're connecting to. The expectation is that a private key should be accessible to only the user who will initialize the connections to the Linux virtual machine.
 
@@ -141,23 +141,23 @@ To fix this problem, change the permissions on that private key file. To do this
 
 1. Locate and right-click the private key file, select **Properties**, and then select the **Security** tab. In this example, you see the following permissions that are inherited from the folder.
 
-    ![pem property](./media/creating-vm/property.png)
+    ![pem property](./media/1-1-creating-vm/property.png)
 
     For this example, you want only the **SYSTEM** group and your account to have access to this file. Because the permissions are inherited from the folder, you must disable that inheritance before you can edit the permissions. Select **Advanced**, and then select **Disable Inheritance**. You're prompted by the following question:
 
     > What would like to do with the current inherited permissions?
 
-    ![block inheritance](./media/creating-vm/block.png)
+    ![block inheritance](./media/1-1-creating-vm/block.png)
 
     Select **Convert inherited permissions into explicit permissions on this object**.
 
 1. Remove all the groups but **SYSTEM**, and then add your own account. The following are the final permissions that are granted for your private key.
 
-    ![pem property2](./media/creating-vm/property2.png)
+    ![pem property2](./media/1-1-creating-vm/property2.png)
 
 1. Try again to connect by using the same SSH command. This time, the connection should be established without any errors.
 
-    ![ssh command](./media/creating-vm/ssh.png)
+    ![ssh command](./media/1-1-creating-vm/ssh.png)
 
 ## Connecting by using PuTTY
 
@@ -170,19 +170,19 @@ To convert files, follow these steps:
 1. Start PuTTYgen, and make sure that **RSA** is selected as the type of key to generate.
 2. Select **Load** to select the private key file that has the .pem extension.
 
-    ![putty key](./media/creating-vm/puttykey.png)
+    ![putty key](./media/1-1-creating-vm/puttykey.png)
 
 3. Make sure that **All Files** is selected because the default selection for PuTTYgen is PPK.
 
-    :::image type="content" source="./media/creating-vm/allfiles.png" alt-text="all files" border="true":::
+    :::image type="content" source="./media/1-1-creating-vm/allfiles.png" alt-text="all files" border="true":::
 
 4. Locate and open the desired PEM file. You should see the following message that indicates that PuTTYgen was able to import the key. Now, you can save the private key in PPK format.
 
-    ![putty notice](./media/creating-vm/notice.png)
+    ![putty notice](./media/1-1-creating-vm/notice.png)
 
 5. Select **OK**, and then select **Save private key**:
 
-    :::image type="content" source="./media/creating-vm/savekey.png" alt-text="save key" border="true":::
+    :::image type="content" source="./media/1-1-creating-vm/savekey.png" alt-text="save key" border="true":::
 
     PuTTYgen will prompt you to confirm that you want to save the key without a passphrase. Select **yes**, and save the private key in PPK format.
 
@@ -190,11 +190,11 @@ To convert files, follow these steps:
 
 6. Start PuTTY. You'll use the same \<username>@<host | IP address> format for the connection information. You can save this session information to reuse later. The next screenshot shows the **PuTTY Configuration** dialog box after the current session was saved. The dialog box shows the host information in \<username>@<host | IP address> format and the session name after it was selected from the available list.
 
-    ![configuration](./media/creating-vm/config.png)
+    ![configuration](./media/1-1-creating-vm/config.png)
 
 7. Because you're using SSH public key authentication, you have to tell PuTTY where to find the private key. To do this, expand **SSH**, and select **Auth** in the **Category** pane, and then select **Browse**.
 
-    ![configuration2](./media/creating-vm/config2.png)
+    ![configuration2](./media/1-1-creating-vm/config2.png)
 
 8. Locate and select the PPK file that you created by using PuTTYgen.
 9. Select **Open** to start the session.
@@ -204,13 +204,13 @@ To convert files, follow these steps:
 
     > The server's host key is not cached in the registry. You have no guarantee that the server is the computer you think it is.
 
-    :::image type="content" source="./media/creating-vm/alert.png" alt-text="alert window" border="true":::
+    :::image type="content" source="./media/1-1-creating-vm/alert.png" alt-text="alert window" border="true":::
 
     This message resembles the message that's generated the first time that you connect to the virtual machine by using an SSH client in PowerShell.
 
 10. Select **Yes** to connect to the virtual machine.
   
-    ![buggy command](./media/creating-vm/command.png)
+    ![buggy command](./media/1-1-creating-vm/command.png)
 
 > [!NOTE]
 > You'll use PowerShell SSH to connect to your virtual machine for the remainder of these tutorials.

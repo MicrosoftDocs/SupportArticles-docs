@@ -44,15 +44,15 @@ The first command is a `wget` command. According to its help page, `wget` is a n
 
 If we run `ls` after we run the `wget` command, we should see that the package is downloaded in the current directory.
 
-![Buggy wget](./media/install-dotnet-core-linux/wget.png)
+![Buggy wget](./media/1-3-install-dotnet-core-linux/wget.png)
 
 In the second command, `dpkg` is the package manager for Debian and Ubuntu. This command adds the Microsoft package signing key to the list of trusted keys, and then adds the package repository.
 
-![Buggy sudo](./media/install-dotnet-core-linux/sudo.png)
+![Buggy sudo](./media/1-3-install-dotnet-core-linux/sudo.png)
 
 Because we've downloaded and added a new package repository, the package manager has to know about it. Therefore, we have to update the package manager by using the `sudo apt update` command.
 
-![Buggy update](./media/install-dotnet-core-linux/update.png)
+![Buggy update](./media/1-3-install-dotnet-core-linux/update.png)
 
 Now, the package manager is aware of the Microsoft repository, and we can continue the installation.
 
@@ -76,22 +76,22 @@ Because you have to install the .NET Core 3.1 SDK for this series of articles, t
 
 You should know how to install packages by using APT. If you do not, refer to the previous parts. To install the .NET Core 3.1 SDK, run `sudo apt install dotnet-sdk-3.1`.
 
-![Buggy sdk](./media/install-dotnet-core-linux/sdk.png)
+![Buggy sdk](./media/1-3-install-dotnet-core-linux/sdk.png)
 
 Enter *y* and press Enter. The package manager downloads and install both .NET Core and ASP.NET Core runtimes and SDKs.
 
-![Buggy sudoapt](./media/install-dotnet-core-linux/sudoapt.png)
+![Buggy sudoapt](./media/1-3-install-dotnet-core-linux/sudoapt.png)
 
 > [!NOTE]
 > You can also installing the .NET Core 5.0 SDK by running the `sudo apt install dotnet-sdk-5.0` command.
 
 Now, verify the installation of the runtimes and SDKs by running `dotnet --info`. The next screenshot shows that .NET Core 3.1 and 5.0 runtimes and SDKs are installed side by side.
 
-![Buggy info](./media/install-dotnet-core-linux/info.png)
+![Buggy info](./media/1-3-install-dotnet-core-linux/info.png)
 
 Both .NET Core and ASP.NET Core runtimes are installed together with the .NET Core SDK. If you examine the SDK folder by running `ll /usr/share/dotnet/sdk`, you can see both versions there, too.
 
-![Buggy ll](./media/install-dotnet-core-linux/ll.png)
+![Buggy ll](./media/1-3-install-dotnet-core-linux/ll.png)
 
 The .NET Core SDKs and runtimes are now installed. In the next part, we'll create an ASP.NET Core application by using .NET CLI tools.
 

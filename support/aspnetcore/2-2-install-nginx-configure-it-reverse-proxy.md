@@ -40,11 +40,11 @@ Nginx runs as a [daemon](https://wikipedia.org/wiki/Daemon_(computing)). A daemo
 
 Installing Nginx is straightforward. Run the `sudo apt install nginx` command to install the program on the Ubuntu virtual machine.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/sudo.png" alt-text="BuggyAmb sudo" border="true":::
 
 After the installation finishes, run `whereis nginx` to discover where the program is installed. You can see where the Nginx configuration files are located by inspecting the output. The next screenshot shows that the configuration files are located in the `/etc/nginx` folder.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/whereis.png" alt-text="BuggyAmb whereis" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/whereis.png" alt-text="BuggyAmb whereis" border="true":::
 
 > [!NOTE]
 > If you run a distribution other than Ubuntu or Debian, you can find the equivalent package manager installation command or instructions from the [official Nginx installation documentation](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/).
@@ -57,7 +57,7 @@ After the installation finishes, Nginx is already configured to start automatica
 
 The `systemctl` command is used to manage "services" for such tasks as showing the status of the service, or starting and stopping it. Some available parameters are start, stop, restart, enable, disable, and status. To check the status of Nginx, run `systemctl status nginx`.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/systemctl.png" alt-text="BuggyAmb systemctl" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/systemctl.png" alt-text="BuggyAmb systemctl" border="true":::
 
 This command generates some useful information. As this screenshot shows, Nginx is in `active (running)` status, and the process ID of the Nginx instance is 8539. Also notice the `enabled` and `vendor preset: enabled` statements. `Enabled` means that this daemon will start when the machine is restarted, and `vendor preset: enabled` means that Nginx is enabled by default when it's installed. Therefore, Nginx will start automatically when the server is started.
 
@@ -65,7 +65,7 @@ This command generates some useful information. As this screenshot shows, Nginx 
 
 By default, Nginx listens on port 80. Because it's running, you should be able to access the main page of Nginx when you browse localhost. Use `curl` to test Nginx by running `curl localhost`. The yellow highlighted text in the next screenshot shows the Nginx default web page. Therefore, Nginx is running:
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/curl.png" alt-text="BuggyAmb curl" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/curl.png" alt-text="BuggyAmb curl" border="true":::
 
 ## systemctl command options
 
@@ -79,7 +79,7 @@ You might have to restart the daemons from time to time. To restart a daemon, ru
 
 To stop a daemon, run `sudo systemctl stop <daemon_name>`. To stop Nginx, run `sudo systemctl stop nginx`, and then check the status of Nginx by running `systemctl status nginx` again. This time, the service is shown as inactive (dead) but still enabled. This means that although the service is not running, it will start automatically after the server is restarted.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/stop.png" alt-text="BuggyAmb stop" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/stop.png" alt-text="BuggyAmb stop" border="true":::
 
 > [!NOTE]
 > The `systemctl status` command also displays several lines of previous log entries for the daemon.
@@ -89,13 +89,13 @@ After you stop Nginx, run `curl localhost` again.
 > [!NOTE]
 > The connection is refused because nothing is listening for incoming traffic on port 80.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/localhost.png" alt-text="BuggyAmb localhost" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/localhost.png" alt-text="BuggyAmb localhost" border="true":::
 
 ### Disabling daemons
 
 Disabling a daemon is different from stopping a daemon. A disabled daemon could be running, but it will not start automatically after the server is restarted. To disable the Nginx daemon, run `sudo systemctl disable nginx`, and then check the status of Nginx.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/disable.png" alt-text="BuggyAmb disable" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/disable.png" alt-text="BuggyAmb disable" border="true":::
 
 This screenshot shows that Nginx is not running, and it's disabled. This means that Nginx will not start automatically after a restart.
 
@@ -103,7 +103,7 @@ This screenshot shows that Nginx is not running, and it's disabled. This means t
 
 To start a daemon, run `sudo systemctl start <daemon_name>`. To start Nginx, run the `sudo systemctl start nginx`, and then check the status of the service again.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/start.png" alt-text="BuggyAmb start" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/start.png" alt-text="BuggyAmb start" border="true":::
 
 This screenshot shows that Nginx is started but is still disabled. Although the service is running, Nginx will not start automatically after a restart because it's a disabled service.
 
@@ -111,7 +111,7 @@ This screenshot shows that Nginx is started but is still disabled. Although the 
 
 Enabling a service means that it will start automatically after a restart. To enable Nginx, run `sudo systemctl enable nginx`, and then check the status of Nginx again.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/enable.png" alt-text="BuggyAmb enable" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/enable.png" alt-text="BuggyAmb enable" border="true":::
 
 This screenshot shows that Nginx is running, and it will be started after the server is restarted.
 
@@ -152,11 +152,11 @@ The configuration changes appear straightforward. We will use this code to repla
 
 The primary Nginx configuration file is `/etc/nginx/nginx.conf`. To inspect the configuration, use the `cat /etc/nginx/nginx.conf` command, and search for the server directive.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/cat.png" alt-text="BuggyAmb cat" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/cat.png" alt-text="BuggyAmb cat" border="true":::
 
 Scroll through the configuration to locate the server directive. You should expect not to find it. We can put the desired configuration changes somewhere inside the configuration file. However, ideally, you wouldn't want to replace the original configuration file. This is to prevent introducing configuration errors that might prevent the server from starting correctly. The `server` section is not in the main configuration file. If you keep scrolling through the configuration file, you'll discover that there are some `include` directives.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/include.png" alt-text="BuggyAmb include" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/include.png" alt-text="BuggyAmb include" border="true":::
 
 Include directives make it easier to manage the configuration by splitting it into chunks to be included in the main configuration file. The main configuration file can be kept simple, and some specific configuration parts can be moved to other files. The highlighted lines in this screenshot indicate the following:
 
@@ -165,11 +165,11 @@ Include directives make it easier to manage the configuration by splitting it in
 
 If you inspect these directories, you won't find any configuration files in `/etc/nginx/conf.d`. However, there is one file in `/etc/nginx/sites-enabled`.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/conf.png" alt-text="BuggyAmb conf" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/conf.png" alt-text="BuggyAmb conf" border="true":::
 
 The default configuration file looks like a prime candidate to host the configuration that we're looking for. If you inspect the `/etc/nginx/sites-enabled/default file` by using `cat /etc/nginx/sites-enabled/default`, you would see that the default server directive is put within the following code.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/default.png" alt-text="BuggyAmb default" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/default.png" alt-text="BuggyAmb default" border="true":::
 
 Therefore, the `/etc/nginx/sites-enabled/default file` will have to be edited to change the configuration.
 
@@ -182,7 +182,7 @@ You learned how to edit files when you edited the *Startup.cs* file to remove HT
 
 Run `sudo vi /etc/nginx/sites-enabled/default` to edit the configuration file and replace the server directive, as shown in the following screenshot.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/vi.png" alt-text="BuggyAmb vi" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/vi.png" alt-text="BuggyAmb vi" border="true":::
 
 Here are some tips and tricks for editing files by using vi:
 
@@ -198,7 +198,7 @@ Here are some tips and tricks for editing files by using vi:
 
 The changes are now saved, and you have to restart the Nginx service for these changes to take effect. Before you restart the service, you can run the `sudo nginx -t` command to test the configuration file. When this command runs, Nginx checks the configuration file syntax, and then it tries to open the files that are referenced in the configuration file.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/t.png" alt-text="BuggyAmb t" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/t.png" alt-text="BuggyAmb t" border="true":::
 
 As you can see here, the configuration file that was changed appears to be correct.
 
@@ -212,7 +212,7 @@ After the restart, you expect to see a response from the ASP.NET Core applicatio
 
 Restart the Nginx service for the changes to take effect, and then make a request to localhost by running `curl localhost`. However, this command will fail. The next step is to run `wget localhost`, and then search for some hints as to the source of the problem.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/wget.png" alt-text="BuggyAmb wget" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/wget.png" alt-text="BuggyAmb wget" border="true":::
 
 ## Troubleshooting the Nginx proxy problem
 
@@ -231,7 +231,7 @@ The third line indicates the source of the problem. You receive an **HTTP 502 Ba
 
 To start troubleshooting, run the same `netstat` command as before. This time, use the grep to filter your application's port 5000. Then, run `netstat -tlp | grep 5000`.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/netstat.png" alt-text="BuggyAmb netstat" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/netstat.png" alt-text="BuggyAmb netstat" border="true":::
 
 This sample output indicates that nothing is listening on port 5000. Therefore, this is the cause of the **HTTP 502** response that's coming from Nginx because it can find a process that's listening on port 5000.
 
@@ -243,17 +243,17 @@ Because you work closely with Nginx when you set up ASP.NET Core applications in
 
 If you run `cat /etc/nginx/nginx.conf` again, and then look for the `logging settings`, you should notice the following.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/log.png" alt-text="BuggyAmb log" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/log.png" alt-text="BuggyAmb log" border="true":::
 
 This shows that Nginx has two kinds of logs: Access logs and Error logs. These are stored in the `/var/log/nginx/` directory.
 
 Access logs are similar to IIS log files. A quick inspection of the content reveals that they resemble the following screenshot.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/access.png" alt-text="BuggyAmb access" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/access.png" alt-text="BuggyAmb access" border="true":::
 
 Access logs do not show new information other than the HTTP 502 response status that you already knew. You can also inspect the error logs by running `cat /var/log/nginx/error.log`. These reveal lots more about the cause of the problem.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/error.png" alt-text="BuggyAmb error" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/error.png" alt-text="BuggyAmb error" border="true":::
 
 The indications are clear: Nginx can get the request from the client, but it can't connect to the `upstream` server at `http://127.0.0.1:5000` and to the ASP.NET Core application that should have been running and listening on that port.
 
@@ -261,11 +261,11 @@ The indications are clear: Nginx can get the request from the client, but it can
 
 To work around this problem, start your ASP.NET Core application manually. Connect to the server by using a second terminal session, and then run the ASP.NET Core application as before.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/aspnet.png" alt-text="BuggyAmb aspnet" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/aspnet.png" alt-text="BuggyAmb aspnet" border="true":::
 
 While your ASP.NET Core application is running, switch to the other terminal session, and run the same `curl localhost` command. Now, you can access your ASP.NET Core application that running behind Nginx. The next screenshot shows that you made a request to localhost, the request was handled by Nginx and routed to the back-end application, and you received a response from your ASP.NET Core application.
 
-:::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/curllocalhost.png" alt-text="BuggyAmb curllocalhost" border="true":::
+:::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/curllocalhost.png" alt-text="BuggyAmb curllocalhost" border="true":::
 
 You have now configured Nginx to behave as a reverse proxy for your ASP.NET Core application that's running in Linux.
 

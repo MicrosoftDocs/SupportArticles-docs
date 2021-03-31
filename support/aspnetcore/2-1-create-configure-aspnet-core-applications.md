@@ -30,7 +30,7 @@ These trainings use the `dotnet` command frequently. This command is powerful an
 
 You will use the `dotnet new` command to create your first ASP.NET Core project in Linux. This command gets the type of the project as an argument. The project types are explained in [this document](/dotnet/core/tools/dotnet-new). You can also display a list of types by running `dotnet new` without a parameter. Web-related project types are highlighted in yellow in the following screenshot.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/dotnetnew.png" alt-text="BuggyAmb dotnetnew" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/dotnetnew.png" alt-text="BuggyAmb dotnetnew" border="true":::
 
 ## Creating a .NET Core web application using SDK
 
@@ -56,11 +56,11 @@ dotnet new webapp -n AspNetCoreDemo -o firstwebapp
 
 Examine the output to see the directory and project names. The next screenshot also lists the content of the output directory. You should be familiar with the directory structure if you have created an ASP.NET Core web application on Windows before.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/firstwebapp.png" alt-text="BuggyAmb firstwebapp" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/firstwebapp.png" alt-text="BuggyAmb firstwebapp" border="true":::
 
 You have created your first application. The next task will be to run it. Change the directory to the project folder, and run `dotnet run`.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/run.png" alt-text="BuggyAmb run" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/run.png" alt-text="BuggyAmb run" border="true":::
 
 > [!NOTE]
 > The following items in this screenshot:
@@ -76,7 +76,7 @@ In your new terminal session, verify that your application is listening on ports
 
 Here is the output of the `netstat -tlp` command from the second terminal session. It shows that the AspNetCoreDemo process is running by using PID 781, and is listening on ports 5000 and 5001 for both IPv4 and IPv6.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/netstat.png" alt-text="BuggyAmb netstat" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/netstat.png" alt-text="BuggyAmb netstat" border="true":::
 
 You can use [curl](https://curl.se/docs/manpage.html) and [wget](https://www.computerhope.com/unix/wget.htm) to test your website. Both commands make an HTTP call to the target side, but they behave differently:
 
@@ -91,7 +91,7 @@ In this training series, you previously used `wget` to download the *.deb* packa
 
 If you run `curl http://localhost`, nothing occurs. This most likely means that there is no HTTP response. You can then run `wget http://localhost` to check whether more information is displayed when you try to access the site.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/curl.png" alt-text="BuggyAmb curl" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/curl.png" alt-text="BuggyAmb curl" border="true":::
 
 This is what occurs now:
 
@@ -119,17 +119,17 @@ vi ~/firstwebapp/Startup.cs
 
 Press the **I** (Insert) key to enable edit mode. You should now see -- **INSERT** -- at the bottom of the command line. Use the arrow keys to navigate within the file. Comment both the `app.UseHsTs()`; and `app.UseHttpsRedirection()`; lines by adding `//` at the start of them, as shown in the following screenshot.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/insert.png" alt-text="BuggyAmb insert" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/insert.png" alt-text="BuggyAmb insert" border="true":::
 
 Press **esc** to exit editing mode, enter [:wq!](https://www.cyberciti.biz/faq/save-file-in-vi-vim-linux-apple-macos-unix-bsd/), and then press **Enter**. Notice that the colon character (`:`) means that you are entering a command, `w` means write, `q` means quit, and `!` forces writing.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/wq.png" alt-text="BuggyAmb wq" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/wq.png" alt-text="BuggyAmb wq" border="true":::
 
 After you press Enter, the changes should be saved. You can verify the changes by running `cat ~/firstwebapp/Startup.cs`. This command displays the contents of the *Startup.cs* file.
 
 Restart your application. To do this, change the current directory to the `~/firstwebapp` directory, and run dotnet run again. Then, open another terminal session to your server, and run the `curl http://localhost:5000` command again. This time, the command should return the HTML contents of the home page.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/curl2.png" alt-text="BuggyAmb curl2" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/curl2.png" alt-text="BuggyAmb curl2" border="true":::
 
 You have now successfully run your first ASP.NET Core Web App on Linux.
 
@@ -141,7 +141,7 @@ Remember that the `/var` directory is used to store content and log files by var
 
 Change to the project folder, and then run `dotnet publish` to create a publishing folder. Copy that folder to the /var directory.
 
-:::image type="content" source="./media/create-configure-aspnet-core-applications/publish.png" alt-text="BuggyAmb publish" border="true":::
+:::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/publish.png" alt-text="BuggyAmb publish" border="true":::
 
 The screenshot shows that the `dotnet publish` command created publishing files in the `~/firstwebapp/bin/Debug/net5.0/publish/` folder. Then, the following command was used to copy all files to `/var/firstwebapp/` folder:
 

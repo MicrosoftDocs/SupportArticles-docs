@@ -44,7 +44,7 @@ Review and try the following commands (shown in the next screenshot):
 - `echo`: Prints the value of the ~ (root) directory.
 - `cd ~`: Returns you to the root directory.
 
-![Buggy command](./media/linux-special-directories-users-package-managers/command.png)
+![Buggy command](./media/1-2-linux-special-directories-users-package-managers/command.png)
 
 This example doesn't include listing the directory contents. However, a later step in this training covers working with files and folders. Some of those tasks will require superuser permissions. The next section explains how to elevate yourself to superuser status.
 
@@ -84,19 +84,19 @@ You don't have to provide a file name extension. The name "helloworld" by itself
 
 When you run this command, you receive a **permission denied** error message.
 
-![Buggy command1](./media/linux-special-directories-users-package-managers/command1.png)
+![Buggy command1](./media/1-2-linux-special-directories-users-package-managers/command1.png)
 
 The operation fails because the `/etc` folder is special folder that a standard user can't change. Verify the user by running the `id` command.
 
-![Buggy command2](./media/linux-special-directories-users-package-managers/command2.png)
+![Buggy command2](./media/1-2-linux-special-directories-users-package-managers/command2.png)
 
 To become the root account user, run the `sudo su` command.
 
-![Buggy command3](./media/linux-special-directories-users-package-managers/command3.png)
+![Buggy command3](./media/1-2-linux-special-directories-users-package-managers/command3.png)
 
 You should notice two things: When you become root, the dollar sign character (`$`) becomes a pound sign character (`#`). Also, the username is changed to **root**. If you run the same `id` command again, you see that the user and group ID of root are **0**.
 
-![Buggy root](./media/linux-special-directories-users-package-managers/root.png)
+![Buggy root](./media/1-2-linux-special-directories-users-package-managers/root.png)
 
 > [!IMPORTANT]
 > Now you have elevated yourself to the "superuser" role in your session, you have complete access to the system. Keep in mind that this is a potentially dangerous situation, and you should exercise caution as you continue.
@@ -115,17 +115,17 @@ ll /etc/hello*
 
 The `ll` command lists the files and subfolders that are in a specified folder. In this example, the `/etc/hello*` parameter value limits the command output to the files or folders whose name begins in `hello`.
 
-![Buggy hello](./media/linux-special-directories-users-package-managers/hello.png)
+![Buggy hello](./media/1-2-linux-special-directories-users-package-managers/hello.png)
 
 The output shows that the file was created. What if we want to examine the content of the file? The `cat` command helps here. To see the content, run `cat /etc/helloworld.txt`.
 
-![Buggy cat](./media/linux-special-directories-users-package-managers/cat.png)
+![Buggy cat](./media/1-2-linux-special-directories-users-package-managers/cat.png)
 
 The `cat` command reads files sequentially, and writes their content to the standard output. Therefore, it writes "hello world" in the console.
 
 To prevent mistakes that could damage the system while you're elevated to root status, it's a good practice to exit the root session and return to your standard user session to avoid some dangerous operations. To do this, simply run `exit`. You can see that the pound sign reverts to a dollar sign, and the username is displayed as your standard user.
 
-![Buggy exit](./media/linux-special-directories-users-package-managers/exit.png)
+![Buggy exit](./media/1-2-linux-special-directories-users-package-managers/exit.png)
 
 For additional practice, run the same `ll` and `cat` commands within your standard user context. You'll see that you can't create the file in the `/etc/` folder, but can you list the file and read the contents.
 
@@ -135,7 +135,7 @@ Instead of becoming the root account user in your session, you can run commands 
 
 For example, if you run `restart` while you're not elevated to superuser status, the result is as follows.
 
-![Buggy restart](./media/linux-special-directories-users-package-managers/restart.png)
+![Buggy restart](./media/1-2-linux-special-directories-users-package-managers/restart.png)
 
 To run this command as a superuser instead, you can either change the session context to root (by running `sudo su`) or add the "sudo" prefix, as follows:
 
@@ -145,7 +145,7 @@ sudo reboot
 
 Now, the restart operation runs as expected by the virtual machine.
 
-![Buggy reboot](./media/linux-special-directories-users-package-managers/reboot.png)
+![Buggy reboot](./media/1-2-linux-special-directories-users-package-managers/reboot.png)
 
 ## Package managers
 
@@ -161,15 +161,15 @@ APT works on a database of available packages. We recommend that you update the 
 
 To update the package database on Ubuntu, run `sudo apt update`. Notice that the `sudo` prefix is entered before the `apt` command. By doing this, you run the `apt` command as a root user without actually changing the session context to that of the root user.
 
-![Buggy apt1](./media/linux-special-directories-users-package-managers/apt1.png)
+![Buggy apt1](./media/1-2-linux-special-directories-users-package-managers/apt1.png)
 
 The update command does not actually upgrade any of the installed software packages. Instead, it updates the package database. The actual upgrade is done by the `sudo apt upgrade` command.
 
-![Buggy apt2](./media/linux-special-directories-users-package-managers/apt2.png)
+![Buggy apt2](./media/1-2-linux-special-directories-users-package-managers/apt2.png)
 
 After you type *Y* and then press **Enter**, the packages are upgraded.
 
-![Buggy apt3](./media/linux-special-directories-users-package-managers/apt3.png)
+![Buggy apt3](./media/1-2-linux-special-directories-users-package-managers/apt3.png)
 
 ## Searching for packages by using package managers
 
@@ -177,7 +177,7 @@ The following example of how to use package managers to search for packages demo
 
 Start by searching on "apache web server" by using the `apt search` command. APT does a full text search, and displays the results. You will install Apache HTTP Server by using the package name of `apache2`.
 
-![Buggy apache2](./media/linux-special-directories-users-package-managers/apache2.png)
+![Buggy apache2](./media/1-2-linux-special-directories-users-package-managers/apache2.png)
 
 > [!NOTE]
 > The use of the command. The `sudo` prefix is not added because you don't have to be a root user to search through packages.
@@ -188,7 +188,7 @@ Start by searching on "apache web server" by using the `apt search` command. APT
 
 To verify that you have the correct package, run `apt show` to see the package details, as shown in the next screenshot. Again, notice that the `sudo` prefix is not necessary here.
 
-![Buggy aptshow](./media/linux-special-directories-users-package-managers/aptshow.png)
+![Buggy aptshow](./media/1-2-linux-special-directories-users-package-managers/aptshow.png)
 
 ## Listing installed packages and using grep to filter the list
 
@@ -201,7 +201,7 @@ To do this, use the `apt list --installed` command to list the installed applica
 
 When you run `apt list --installed | grep apache2`, you should see that the package is not installed on the virtual machine.
 
-![Buggy grep](./media/linux-special-directories-users-package-managers/grep.png)
+![Buggy grep](./media/1-2-linux-special-directories-users-package-managers/grep.png)
 
 ## Installing the package
 
@@ -214,15 +214,15 @@ sudo apt install apache2
 > [!NOTE]
 > This time, we do prefix the command by using `sudo` because this command changes the system. Therefore, it must be the root account to run correctly. The package manager is kind enough to prompt you about whether you really want to really install the application.
 
-![Buggy sudo](./media/linux-special-directories-users-package-managers/sudo.png)
+![Buggy sudo](./media/1-2-linux-special-directories-users-package-managers/sudo.png)
 
 Type *Y* (yes), and press **Enter** to install `Apache2`. The package manager will show a progress bar to indicate the status of the installation.
 
-![Buggy y](./media/linux-special-directories-users-package-managers/y.png)
+![Buggy y](./media/1-2-linux-special-directories-users-package-managers/y.png)
 
 If you run the same `apt list --installed | grep apache2` command again, you see that the Apache 2 package installed together with some other apache2-related packages that are installed automatically.
 
-![Buggy aptlist](./media/linux-special-directories-users-package-managers/aptlist.png)
+![Buggy aptlist](./media/1-2-linux-special-directories-users-package-managers/aptlist.png)
 
 Although you have just installed Apache 2, you actually have to use Nginx. Therefore, you no longer need Apache, and you can remove that package from the virtual machine.
 
@@ -236,7 +236,7 @@ Installing a package (in this case, Apache 2) is reversible. You can remove the 
 
 Remove the package by using `apt remove` as a root user to see the result. To do this, run `sudo apt remove apache2`. When you're prompted to confirm the removal, type *Y*, and then press **Enter**.
 
-![Buggy remove](./media/linux-special-directories-users-package-managers/remove.png)
+![Buggy remove](./media/1-2-linux-special-directories-users-package-managers/remove.png)
 
 The command output tells you the following:
 
@@ -245,15 +245,15 @@ The command output tells you the following:
 
 List the installed packages again. You see that the `apache2` package is removed but that the automatically installed packages that were provided with it remain installed.
 
-![Buggy aptlist2](./media/linux-special-directories-users-package-managers/aptlist2.png)
+![Buggy aptlist2](./media/1-2-linux-special-directories-users-package-managers/aptlist2.png)
 
 Follow the recommendation to run `sudo apt autoremove` again to remove the leftover packages.
 
-![Buggy autoremove](./media/linux-special-directories-users-package-managers/autoremove.png)
+![Buggy autoremove](./media/1-2-linux-special-directories-users-package-managers/autoremove.png)
 
 List the installed packages one more time. Now, you should see no apache2-related packages installed.
 
-![Buggy aptlist3](./media/linux-special-directories-users-package-managers/aptlist3.png)
+![Buggy aptlist3](./media/1-2-linux-special-directories-users-package-managers/aptlist3.png)
 
 This procedure is not quite finished. Remember that the difference between `apt remove` and `apt purge` is whether the configuration file is removed. In this exercise, you didn't remove it. So where is it?
 
@@ -268,17 +268,17 @@ According to the Help page for `whereis`, the definition is as follows:
 
 If you run `whereis apache2`, you should find the `/etc/apache2` installation.
 
-![Buggy whereis](./media/linux-special-directories-users-package-managers/whereis.png)
+![Buggy whereis](./media/1-2-linux-special-directories-users-package-managers/whereis.png)
 
 Remember that the `/etc/` directory is where the system configuration files are located. To learn whether "apache2"is a file or folder, run `ll /etc/apache2`. As you can see, this is a folder, and it contains the apache2 configuration files.
 
-![Buggy ll](./media/linux-special-directories-users-package-managers/ll.png)
+![Buggy ll](./media/1-2-linux-special-directories-users-package-managers/ll.png)
 
 You expect `apache2` to contain these files and folders because you used the `apt remove` command that does not delete the configuration files.
 
 As final step, run the `apt purge` command to see its effect. You can run a purge to clean up the installation folder even after you remove the package. The next screenshot shows that `whereis` did not find anything. This is because the `purge` command removed the configuration files together with the binaries.
 
-![Buggy purge](./media/linux-special-directories-users-package-managers/purge.png)
+![Buggy purge](./media/1-2-linux-special-directories-users-package-managers/purge.png)
 
 ## Next steps
 

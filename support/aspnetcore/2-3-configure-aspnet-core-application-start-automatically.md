@@ -42,11 +42,11 @@ These service files are located in one of the following directories:
 
 Inspect the Nginx service file. It's installed through a package manager. Its configuration file should be in the /usr/lib/systemd/system/ folder. Running the `systemctl status nginx` command also displays the location of the service file.
 
-:::image type="content" source="./media/configure-aspnet-core-application-start-automatically/systemctl.png" alt-text="BuggyAmb systemctl" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/systemctl.png" alt-text="BuggyAmb systemctl" border="true":::
 
 This is what the Nginx service file looks like.
 
-:::image type="content" source="./media/configure-aspnet-core-application-start-automatically/cat.png" alt-text="BuggyAmb cat" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/cat.png" alt-text="BuggyAmb cat" border="true":::
 
 ### Sample service file for ASP.NET Core applications
 
@@ -113,17 +113,17 @@ WantedBy=multi-user.target
 
 Run sudo `vi /etc/systemd/system/myfirstwebapp.service` , paste the final configuration, and save the file.
 
-:::image type="content" source="./media/configure-aspnet-core-application-start-automatically/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo.png" alt-text="BuggyAmb sudo" border="true":::
 
 This completes the required configuration for the ASP.NET Core web application to run as a daemon.
 
 Because the web application is now configured as a service, you can check its status by running `systemctl status myfirstwebapp.service`. As you can see in the next screenshot, the application is disabled (won't start automatically after a system restart), and it's not currently running.
 
-:::image type="content" source="./media/configure-aspnet-core-application-start-automatically/systemctl2.png" alt-text="BuggyAmb systemctl2" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/systemctl2.png" alt-text="BuggyAmb systemctl2" border="true":::
 
 To start the service, run the `sudo systemctl start myfirstwebapp.service` command, and then check the status again. This time, you should see the service running, and a process ID should be listed next to it. The command output also shows the final few lines from system logs for the newly created service, and it shows that the service is listening on `http://localhost:5000`.
 
-:::image type="content" source="./media/configure-aspnet-core-application-start-automatically/sudo2.png" alt-text="BuggyAmb sudo2" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo2.png" alt-text="BuggyAmb sudo2" border="true":::
 
 Should the web application stop unexpectedly, it will automatically start again after 10 seconds.
 
@@ -133,7 +133,7 @@ There is one final step: The service is running but not enabled. "Enabled" means
 Sudo systemctl enable myfirstwebapp.service
 ```
 
-:::image type="content" source="./media/configure-aspnet-core-application-start-automatically/sudo3.png" alt-text="BuggyAmb sudo3" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo3.png" alt-text="BuggyAmb sudo3" border="true":::
 
 This is a milestone for your ASP.NET Core application because you have configured it to start automatically after a server restart or a process termination.
 
@@ -161,7 +161,7 @@ sudo kill -9 <PID>
 
 Run the `systemctl status myfirstwebapp.service` command immediately after the `kill` command, wait for about 10 seconds, and then run the same command again.
 
-:::image type="content" source="./media/configure-aspnet-core-application-start-automatically/kill.png" alt-text="BuggyAmb kill" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/kill.png" alt-text="BuggyAmb kill" border="true":::
 
 In this screenshot, you can see the following information:
 
