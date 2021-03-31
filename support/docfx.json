@@ -74,7 +74,9 @@
         "azure/cloud-services/*.md": "genlin",
         "azure/virtual-machines/*.md": "genlin",
         "mem/**/*.md": "helenclu",
-        "system-center/**/*.md":"helenclu"
+        "system-center/**/*.md":"helenclu",
+        "dynamics-365/**/*.md":"David-Pack",
+        "power-platform/**/*.md":"David-Pack"
       },
       "ms.author": {
         "**/*.md": "ramakoni",
@@ -82,7 +84,9 @@
         "azure/cloud-services/*.md": "genli",
         "azure/virtual-machines/*.md": "genli",
         "mem/**/*.md": "luche",
-        "system-center/**/*.md": "luche"
+        "system-center/**/*.md": "luche",
+        "dynamics-365/**/*.md": "davidpac",
+        "power-platform/**/*.md": "davidpac"
       },
       "ms.localizationpriority": {
         "**/*.md": "medium"
@@ -112,7 +116,8 @@
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "browsers/**/*.md": "internet-explorer"
+        "browsers/**/*.md": "internet-explorer",
+        "dynamics-365/**/*.md": "dynamics-365"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
@@ -135,7 +140,8 @@
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "virtual-machines",
-        "azure/cloud-services/*.md": "cloud-services"
+        "azure/cloud-services/*.md": "cloud-services",
+        "power-platform/**/*.md": "power-platform"
       },
 
       "titleSuffix": {
@@ -170,7 +176,12 @@
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",
         "azure/active-directory/*.md": "Active Directory",
-        "azure/devops/*.md": "Active DevOps"
+        "azure/devops/*.md": "Active DevOps",
+        "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
+        "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
+        "dynamics-365/sales/*.md": "Dynamics 365 Sales",
+        "power-platform/power-apps/*.md": "Power Apps",
+        "power-platform/power-automate/*.md": "Power Automate"
       },
       "searchScope": {
         "biztalk/**/*.md": [ "BizTalk Server" ],
@@ -190,7 +201,9 @@
         "azure/**/*.md": [ "Azure" ],
         "mem/intune/**/*.md": [ "Intune" ],
         "mem/configmgr/**/*.md": [ "ConfigMgr" ],
-        "system-center/**/*.md": [ "System Center" ]
+        "system-center/**/*.md": [ "System Center" ],
+        "dynamics-365/**/*.md": [ "Dynamics 365" ],
+        "power-platform/**/*.md": [ "Power Platform" ]
       }
     },
 

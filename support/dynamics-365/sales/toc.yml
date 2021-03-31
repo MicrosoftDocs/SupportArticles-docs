@@ -1,0 +1,961 @@
+- name: Dynamics 365 Sales
+  href: welcome-sales.yml
+  items:
+  - name: Access Issues
+    items:
+    - name: Can't get to your Dynamics 365 environment
+      href: cannot-get-your-dynamics-365-environment.md
+    - name: Can't log into after planned System Maintenance
+      href: unable-log-into-planned-system-maintenance.md
+    - name: Changing instance URL after portal deployment causes Runtime
+      href: changing-crm-online-instance-url-after-portal-deployment-causes-runtime-error.md
+    - name: Could not establish trust relationship for the SSL/TLS secure channel
+      href: could-not-establish-trust-relationship-for-the-ssltls-secure-channel-error.md
+    - name: CRM Online users don't sync from Office 365
+      href: crm-users-do-not-sync-office-365.md
+    - name: Error when accessing an app module
+      href: error-when-accessing-app-module.md
+    - name: Errors when signing into Dynamics 365 online
+      href: error-when-signing-dynamics-365.md
+    - name: Internet accessible URLs required for connectivity
+      href: internet-accessible-urls.md
+    - name: UCI Dashboard doesn't load after the 2003.5 release
+      href: uci-dashboard-does-not-load.md
+    - name: You are not a member of this organization
+      href: you-are-not-member-this-organization.md
+  - name: Administration Center
+    items:
+    - name: Can't complete the purchasing process
+      href: unable-complete-purchasing-process.md
+    - name: CRM IPv6 supportability
+      href: dynamics-crm-ipv6-supportability.md
+    - name: Installing product updates seems to stay in Installing status
+      href: installing-product-updates-status-not-updated.md
+  - name: Applications and Add-ons
+    items:
+    - name: Chrome becomes unresponsive
+      href: chrome-becomes-unresponsive.md
+    - name: Error when creating Service Activities from Service Calendar
+      href: error-create-service-activities-service-calendar.md
+    - name: Error when saving a record
+      href: the-specified-user-is-either-disabled.md
+    - name: Error when setting Relationship Behavior to Cascade Active
+      href: error-set-relationship-behavior-cascade-active.md
+    - name: Lookup fields fail to save or provide results in Chrome
+      href: lookup-fields-fail-to-save-or-provide-results-with-google-chrome-38.md
+    - name: New button is disabled when adding a new user
+      href: new-button-disabled-you-add-new-user.md
+    - name: Organization entitlement doesn't match your tenant
+      href: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
+    - name: Perform specific operations
+      href: dynamics-365-how-to-articles.md
+    - name: Problem with deploying Marketing application
+      href: dynamics-365-marketing-problem-with-deployment.md
+    - name: Something went wrong while initializing the app
+      href: error-occurs-child-business-units.md
+    - name: The record could not be deleted because of an association
+      href: the-record-could-not-be-deleted.md
+  - name: Connectors for Dynamics 365
+    items:
+    - name: Business object not found
+      href: business-object-not-found-error-when-running-account-to-customer-map.md
+    - name: Can't connect to SharePoint through integration
+      href: unable-connect-sharepoint-through-integration.md
+    - name: Configuration tool creates duplicate configuration file
+      href: configuration-tool-creates-duplicate-configuration-file.md
+    - name: Document management features present script errors
+      href: document-management-features-script-error.md
+    - name: GP Company not showing in the Connector for CRM dropdown
+      href: dynamics-gp-company-not-appearing-in-available-companies.md
+    - name: Integration between CRM Online and SharePoint Online
+      href: integration-crm-sharepoint-online.md
+    - name: Integrations with other products
+      href: 365-integrations-other-products.md
+    - name: Legacy Adxstudio Portals and Portals Supportability
+      href: support-legacy-adxstudio-365-portals.md
+    - name: Portal Entity Permission Enhancement requires record modifications
+      href: portal-entity-permission-enhancement.md
+    - name: The Adapter is not of type GPAdapter
+      href: adapter-is-not-of-type-gpadapter-error-when-activating-map-in-the-connector.md
+    - name: Upgrade solutions for a CRM Portals Deployment
+      href: upgrade-solutions-for-a-portals-deployment.md
+  - name: Customization and Solutions
+    items:
+    - name: A user doesn't appear in the All Eligible Users list
+      href: a-user-disappears-all-eligible-users.md
+    - name: Action isn't available
+      href: action-not-available.md
+    - name: An item with the same key has already been added
+      href: an-item-with-same-key-has-been-added.md
+    - name: Assembly version error when importing a solution
+      href: assembly-version-error-importing-dynamics-365-solution.md
+    - name: Button in command bar don't show after grid item selection
+      href: button-in-command-bar-not-appear-after-grid-item-selection.md
+    - name: Can't change from publisher name to other publisher name
+      href: the-publisher-name-cannot-be-changed.md
+    - name: Can't complete this action for this component
+      href: you-cannot-complete-this-action-for-this-component-error-when-importing-solution.md
+    - name: Can't import a solution or install an app
+      href: unable-import-dynamics-365-solution.md
+    - name: Can't open an XML formatted file downloaded from CRM 2011 in Excel 2010
+      href: error-when-opening-xml-formatted-file-downloaded-from-dynamics-crm-in-excel.md
+    - name: Can't save a folder-level tracking mapping
+      href: error-occurs-when-saving-folder-level-tracking-mapping.md
+    - name: Can't Uninstall Solution when removing solutions
+      href: cannot-uninstall-solution-error-when-deleting-solution.md
+    - name: Cascading settings revert to the value in solution
+      href: cascading-settings-revert-value-solution.md
+    - name: Dependency error when uninstalling Portals solutions
+      href: error-when-uninstalling-portals-solutions.md
+    - name: Error 80040203 (Invalid Argument)
+      href: error-code-80040203-invalid-argument-error.md
+    - name: Error 80048539 when importing a solution patch
+      href: error-code-80048539-when-importing-solution-patch.md
+    - name: Error 80048541 when importing a solution
+      href: error-occurs-when-importing-solution.md
+    - name: Error 8004F042 when importing solution patch
+      href: error-code-8004f042-occurs.md
+    - name: Error when importing AttributeMap
+      href: error-when-importing-attributemap.md
+    - name: Error when uninstalling a managed solution
+      href: error-when-uninstalling-managed-solution.md
+    - name: Import Generic Error 8004801e when importing a solution
+      href: import-generic-error.md
+    - name: Input string was not in a correct format when importing solution
+      href: input-string-was-not-in-a-correct-format-error.md
+    - name: Invalid Export - Business Process Entity Missing
+      href: failed-export-business-process.md
+    - name: Invalid file error 80048000 when importing a solution
+      href: invalid-file-error-parentheses-80048000.md
+    - name: InvalidPluginAssemblyContent when importing a solution
+      href: invalidpluginassemblycontent-error-when-importing-solution.md
+    - name: My Apps area is missing from navigation
+      href: my-apps-area-is-missing.md
+    - name: Only import solutions with package version of 9.0 or earlier
+      href: only-import-solutions-a-package.md
+    - name: Permission error 80040220 when importing or deleting solution
+      href: error-when-you-import-delete-solution.md
+    - name: Queue views perform poorly or fail to load
+      href: queue-views-perform-poorly-fail-load.md
+    - name: Selecting Set Properties in the Workflow designer fails
+      href: workflow-designer-fails-load.md
+    - name: Solution can't be deleted due to dependencies
+      href: solution-cannot-be-deleted.md
+    - name: Solution import errors
+      href: troubleshoot-solution-import-errors-in-dynamics-365.md
+    - name: Solution install fails because of dependencies
+      href: solution-install-fails-due-dependencies.md
+    - name: Solution update fails
+      href: solution-update-fails-error.md
+    - name: SQL error 80044150 when importing a solution
+      href: sql-error-80044150-when-importing-solution.md
+    - name: SQL timeout error 80044151 when importing or exporting solution
+      href: sql-timeout-error-80044151-when-importing-or-exporting-dynamics-365-solution.md
+    - name: The [Solution Name] solution doesn't have an upgrade
+      href: error-when-selecting-a-solution.md
+    - name: The display order must be greater or equal to 10000
+      href: invalid-display-order-value.md
+    - name: The element savedquery has incomplete content
+      href: element-savedquery-has-incomplete-content.md
+    - name: The element Workflow has invalid child element ProcessTriggers
+      href: workflow-element-has-invalid-child-element.md
+    - name: The file provided was not uploaded
+      href: the-file-provided-was-not-uploaded-error.md
+    - name: The import file is too large to upload
+      href: the-import-file-is-too-large-upload.md
+    - name: The import of a solution may be unsuccessful
+      href: the-import-a-solution-is-unsuccessful.md
+    - name: The import of solution failed when importing solution
+      href: the-import-of-solution-failed-error-when-importing-solution.md
+    - name: The import of solution failed with error 8004f016
+      href: the-import-of-solution-failed-error-code-8004f016.md
+    - name: The import of the solution failed
+      href: import-of-solution-fails-due-to-missing-components.md
+    - name: The solution file is invalid
+      href: the-solution-file-is-invalid.md
+    - name: The solution installation or removal failed
+      href: solution-installation-or-removal-failed-error-when-installing-or-removing-solution.md
+    - name: The solution is already installed as a managed solution
+      href: the-solution-is-installed-a-managed-one.md
+    - name: The solution is already installed on this system
+      href: the-solution-is-installed-this-system.md
+    - name: The solution package was generated on Dynamics 365 Online
+      href: the-solution-package-was-365-online.md
+    - name: There was an error calculating dependencies for this component
+      href: an-error-calculating-dependencies.md
+    - name: This solution package can't be imported
+      href: this-solution-package-cannot-be-imported.md
+    - name: ThresholdDate might be set back after upgrade
+      href: thresholddate-set-back-after-upgrade.md
+    - name: Unexpected error 80040216 when importing solution
+      href: unexpected-error-when-importing-solution.md
+    - name: Workflow generating system jobs and logs
+      href: workflow-creates-large-volume-of-system-jobs-and-logs.md
+    - name: You can't import patch for the solution
+      href: cannot-import-the-patch-the-solution.md
+  - name: Data Import
+    items:
+    - name: Error when importing SavedQuery
+      href: error-importing-savedquery-in-dynamics-365.md
+  - name: Data Management
+    items:
+    - name: Error 8004f016 when importing contact-lead AttributeMap
+      href: error-code-8004f016-when-importing-contact-lead-attributemap.md
+  - name: Dynamics 365 client for Outlook
+    items:
+    - name: An error occurred promoting this item to CRM
+      href: error-occurs-when-tracking-outgoing-email-in-dynamics-crm-for-outlook.md
+    - name: App for Outlook doesn't appear within Outlook
+      href: app-does-not-appear-within-outlook.md
+    - name: Appointments are not syncing to Exchange or Outlook
+      href: appointments-do-not-sync-exchange.md
+    - name: Automatic Record Creation Rules fail if sender is a contact and user
+      href: automatic-record-creation-rules-fail.md
+    - name: Blank page within App for Outlook
+      href: blank-page-appears.md
+    - name: Can't add CRM add-in to Favorites pane in Outlook
+      href: cannot-add-crm-add-in-to-favorites-pane-in-outlook.md
+    - name: Can't add CRM App due to Missing Email Address
+      href: unable-add-crm-app-outlook-due-missing-email.md
+    - name: Can't configure CRM 2011 Outlook client
+      href: cannot-configure-crm-2011-outlook-client.md
+    - name: Can't connect to your CRM server
+      href: error-when-configuring-crm-outlook.md
+    - name: Can't load this app because email account isn't configured
+      href: we-cannot-load-this-app.md
+    - name: Can't resynchronize contacts from CRM 2011 to Outlook
+      href: cannot-resynchronize-contacts-from-dynamics-crm-to-outlook-after-being-removed.md
+    - name: Can't see expected data after exporting worksheets or Pivot Tables
+      href: no-expected-data-after-exporting-dynamics-worksheets-or-pivot-tables.md
+    - name: Can't set up CRM for Outlook to external IFD web address
+      href: dynamics-crm-outlook-fails-to-set-to-external-ifd-web-address.md
+    - name: Can't set up CRM for Outlook via App Passwords for authentication
+      href: dynamics-crm-outlook-fails-to-configure-if-using-app-passwords-for-authentication.md
+    - name: Can't sign in to Office 365 Services CRM organization
+      href: cannot-sign-in-to-office-365-services-crm-organization.md
+    - name: Can't track email when it's sent and moved to an alternative location
+      href: cannot-track-email-after-it-is-sent-and-moved-to-alternative-folder.md
+    - name: Can't track emails in CRM App for Outlook
+      href: cannot-track-emails-in-crm-app-for-outlook.md
+    - name: Communication was blocked perhaps by your computer's firewall settings
+      href: communication-was-blocked-error.md
+    - name: Configuration of Outlook client fails with an error
+      href: configuration-outlook-client-fails-with-error.md
+    - name: Could not load file or assembly System.Data.SqlServerCe
+      href: could-not-load-file.md
+    - name: CRM 2011 for Outlook Preview Pane isn't displaying
+      href: dynamics-crm-for-outlook-client-preview-pane-not-showing.md
+    - name: CRM Client for Outlook Configuration Collector
+      href: data-collected-by-dynamics-crm-for-outlook-configuration-collector.md
+    - name: CRM Client Performance diagnostic tool
+      href: data-collected-by-dynamics-crm-performance-diagnostic-tool.md
+    - name: CRM for Outlook Configuration Wizard error 80044501
+      href: dynamics-crm-for-outlook-configuration-wizard-error-80044501.md
+    - name: CRM for Outlook isn't installed or incorrect version
+      href: dynamics-crm-for-outlook-not-installed.md
+    - name: CRM for Outlook support with multiple CRM deployments
+      href: dynamics-crm-for-outlook-support-with-multiple-crm-deployments.md
+    - name: CRM preview/form region shows no information in Outlook
+      href: dynamics-crm-preview-form-region-shows-no-data.md
+    - name: Culture isn't supported
+      href: culture-not-supported-error.md
+    - name: Email fails to synchronize to Dynamics 365
+      href: email-fails-synchronize-dynamics-365.md
+    - name: Email is not tracked in CRM
+      href: email-not-tracked-dynamics-crm.md
+    - name: Email server error Crm.80042f09.UserNotAssignedRoles
+      href: email-server-error-code-crm-80042f09-usernotassignedroles.md
+    - name: Email shows as Received/Incoming when using Server-Side Sync
+      href: email-shows-received-or-incoming.md
+    - name: Enable tracing for Dynamics CRM for Outlook
+      href: how-to-enable-tracing-for-dynamics-crm-for-outlook.md
+    - name: Error 80044311 when CRM organization fails
+      href: error-80044311-crm-organization-fails.md
+    - name: Error 80044500 for CRM for Outlook Configuration Wizard
+      href: error-code-80044500.md
+    - name: Error 80044505 for CRM for Outlook Configuration Wizard 
+      href: dynamics-crm-outlook-configuration-wizard-error-80044505.md
+    - name: Error during Loading Outlook Profile of Configuration Wizard
+      href: error-occurs-during-loading-outlook-profile-of-configuration-wizard.md
+    - name: Error when completing a mail merge
+      href: error-complete-mail-merge.md
+    - name: Error when configuring CRM 2011 for Outlook
+      href: error-when-configuring-crm-2011-client.md
+    - name: Error when configuring CRM for Outlook
+      href: cannot-access-these-records.md
+    - name: Error when installing CRM 2016 for Outlook
+      href: error-when-installing-crm-2016-outlook.md
+    - name: Error when installing Update Rollup for CRM for Outlook
+      href: cannot-load-counter-name-data.md
+    - name: Error when running the Synchronize with CRM function
+      href: error-occurs-when-running-sync.md
+    - name: Error when synchronizing appointments
+      href: error-you-synchronize-appointments.md
+    - name: Error when users navigate to Office Groups in IE11
+      href: error-users-navigate-office-groups-ie11.md
+    - name: Error when you send tracked email message to another user
+      href: error-send-tracked-email-message-another-user.md
+    - name: Error_Message_0x80070000 when using App for Outlook
+      href: error-underscore-message-underscore-0x80070000.md
+    - name: Errors when opening App for Outlook
+      href: errors-when-opening-365-app-outlook.md
+    - name: Experience without Server-Side Synchronization
+      href: experience-without-server-side-synchronization.md
+    - name: Failure after selecting Test & Enable Mailbox
+      href: failure-when-selecting-test-enable-mailbox.md
+    - name: GeneralIncomingEmailServerError when installingApp for Outlook
+      href: generalincomingemailservererror-when-installing-dynamics-crm-for-outlook.md
+    - name: Installation can't proceed for CRM for Outlook
+      href: installation-cannot-proceed-error-when-installing-dynamics-crm-for-outlook.md
+    - name: InternetSetCookie failed when configuring CRM
+      href: internetsetcookie-failed-error.md
+    - name: Intranet Settings Alerts displayed when you go offline
+      href: alerts-occur-when-you-go-offline.md
+    - name: Navigation bars do not function on a record form
+      href: navigation-bars-not-function-record-form.md
+    - name: New Forms are formatted incorrectly or don't appear
+      href: new-forms-formatted-incorrectly.md
+    - name: No organization appear in the list
+      href: no-organization-appear-list.md
+    - name: Object reference not set to an instance of an object
+      href: object-reference-not-set-instance.md
+    - name: Office 2016 support for CRM for Outlook 2013
+      href: office-2016-support-crm-outlook.md
+    - name: Out of memory and network disconnections with many PST files loaded
+      href: out-of-memory-and-network-disconnections-with-many-pst-files-loaded.md
+    - name: Outlook client configuration fails
+      href: outlook-client-configuration-fails-error.md
+    - name: Outlook Client Language Packs can't be installed
+      href: outlook-client-language-packs-cannot-installed.md
+    - name: Outlook closes unexpectedly during startup
+      href: outlook-has-stopped-working.md
+    - name: Outlook keyboard shortcuts not responding
+      href: outlook-keyboard-shortcuts-not-responding-if-crm-add-in-enabled.md
+    - name: Outlook may become unresponsive in non-admin mode
+      href: outlook-become-unresponsive-non-admin-mode.md
+    - name: Personal Options unexpectedly revert to only the online Personal Options
+      href: dynamics-crm-for-outlook-personal-options-convert-to-online-options.md
+    - name: Quick find in Outlook Client displays unexpected results
+      href: quick-find-outlook-client-displays-unexpected-results.md
+    - name: Quick find varies between the web and CRM
+      href: quick-find-varies-between-web-crm.md
+    - name: Signed-in user doesn't have appropriate security permissions to view records
+      href: signed-in-user-not-have-appropriate-security-permissions-to-view-records-error.md
+    - name: Slow performance for CRM 2011 for Outlook
+      href: slow-performance-crm-2011-client.md
+    - name: Some buttons and tabs are missing
+      href: some-buttons-and-tabs-are-missing-from-web-client.md
+    - name: Something went wrong during sign-in when accessing App for Outlook
+      href: something-went-wrong-during-sign.md
+    - name: Something went wrong during sign-in when using App for Outlook
+      href: something-went-wrong-during-sign-in.md
+    - name: Something went wrong when using CRM App for Outlook
+      href: sorry-something-went-wrong-error.md
+    - name: Something went wrong while initializing the app
+      href: sorry-something-went-wrong-while-initializing-the-app-error.md
+    - name: Support with CRM 2011 and Office 2013
+      href: support-dynamics-crm-2011-office-2013.md
+    - name: Sync the private property from Outlook appointments
+      href: sync-private-property-from-outlook-appointment.md
+    - name: The authentication was not successful
+      href: the-authentication-was-not-successful.md
+    - name: The given key wasn't present in the dictionary
+      href: the-given-key-was-not-present-in-dictionary.md
+    - name: The New button for a custom entity is unavailable
+      href: new-button-unavailable-after-publishing.md
+    - name: The Outlook ribbon disappears
+      href: outlook-ribbon-disappears.md
+    - name: The server address (URL) is not valid
+      href: the-server-address-is-not-valid.md
+    - name: This organization has already been configured
+      href: this-organization-has-already-been-configured-error-when-connecting.md
+    - name: Time stamp of reminder is wrong when creating a phone call or task activity
+      href: time-stamp-of-reminder-is-wrong-when-creating-phone-call-or-task-activity.md
+    - name: Track and Set Regarding options are missing
+      href: track-set-regarding-options-miss.md
+    - name: Tracking an email can't resolve to associated record
+      href: tracking-email-cannot-resolve-associated-record.md
+    - name: Troubleshoot App for Outlook
+      href: troubleshoot-dynamics-365-app-outlook.md
+    - name: Update client app's registration in AD FS
+      href: update-client-app-registration-ad-fs.md
+    - name: Update Rollup 12 changes quick find search behavior
+      href: update-rollup-12-changes-quick-find-search.md
+    - name: User role doesn't have required permissions
+      href: current-user-role-not-have-required-permissions.md
+    - name: WCF failures occur when communicating through a load balancer
+      href: wcf-failures-occur-when-dynamics-365-is-set-up-behind-load-balancer.md
+    - name: You do not have permission to access these records
+      href: you-do-not-have-permission-to-access-these-records-error.md
+    - name: You do not see the Get CRM for Outlook button
+      href: you-do-not-see-get-crm-outlook-button.md
+    - name: You don't have permission to access these records
+      href: error-when-selecting-track-crm-email.md
+    - name: You don't have permission to access these records during setup
+      href: you-do-not-have-permission-to-access-these-records-error-during-configuration.md
+    - name: Your browser is currently unsupported
+      href: your-browser-is-currently-unsupported.md
+    - name: Your device is currently unsupported
+      href: your-device-is-currently-unsupported.md
+    - name: You're prompted for credentials when opening CRM for Outlook
+      href: prompted-for-user-name-and-password-when-opening-dynamics-crm.md
+  - name: Dynamics 365 for Phones
+    items:
+    - name: CRM for Phone and Tablets can't connect due to length of TokenLifetime
+      href: dynamics-crm-for-phone-and-tablets-cannot-connect-to-organization.md
+    - name: CRM Mobile client offline and online access modes
+      href: crm-mobile-client-offline-online-access-modes.md
+    - name: Error while configuring CRM for phones and tablets
+      href: error-after-installing-dynamics-crm-phone.md
+    - name: Support for Tablet Browser, CRM for Tablets, and CRM for Phones
+      href: supportability-dynamics-crm.md
+    - name: Users are redirected to Mobile Express
+      href: users-redirected-mobile-express.md
+  - name: Dynamics 365 for Tablets
+    items:
+    - name: An error when connecting to the CRM app
+      href: error-occurs-when-connecting-crm-app.md
+    - name: Can't open entity records using an iPad
+      href: unable-open-entity-records-using-ipad.md
+    - name: Edit button doesn't appear in read optimized forms
+      href: edit-button-not-appear-read-optimized-forms.md
+    - name: Error when CRM 2011 is accessed through a mobile device
+      href: error-message-dynamics-crm-2011-accessed.md
+  - name: Dynamics 365 Server
+    items:
+    - name: A change that limits the editable CRM forms
+      href: change-that-limits-editable-crm-forms.md
+    - name: A problem communicating with CRM server
+      href: error-when-configuring-dynamics-crm-client.md
+    - name: AppData folder redirect causes Lookup fields to break
+      href: appdata-redirect-causes-lookup-fields-to-break.md
+    - name: Can't access CRM website after repair
+      href: cannot-access-dynamics-crm-website-after-repair.md
+    - name: Can't access web pages after applying Update Rollup 12
+      href: generic-sql-error-after-applying-update-rollup-12.md
+    - name: Can't add a new Deployment Administrator from trusted domain
+      href: cannot-add-a-new-deployment-administrator.md
+    - name: Can't add CRM Application Pool account as a user
+      href: cannot-add-crm-application-pool-account-as-a-user.md
+    - name: Can't connect to CRM organization
+      href: unable-to-connect-to-dynamics-crm-organization-because-it-is-disabled-error.md
+    - name: Can't connect to CRM server
+      href: cannot-connect-dynamics-crm-server-because-credentials.md
+    - name: Can't connect to the Dynamics 365 server
+      href: cannot-connect-your-dynamics-365-server.md
+    - name: Can't create the External Relying Party Trust
+      href: unable-create-external-relying-party-trust.md
+    - name: Can't install CRM 2011 server
+      href: unable-install-crm-2011-server.md
+    - name: Can't Install CRM Update Rollups
+      href: unable-install-dynamics-crm-update-rollups.md
+    - name: Can't open database requested by the login
+      href: cannot-open-database-requested-by-the-login-error-when-signing-in.md
+    - name: Can't open records after upgrade to version 8.2
+      href: unable-to-open-records-after-upgrade-to-dynamics-365-version-8-2.md
+    - name: Can't sign in via IFD and the 2007 SDK endpoints
+      href: error-occurs-when-signing-in-via-ifd-and-2007-sdk-endpoints.md
+    - name: Change incoming or outgoing Exchange settings
+      href: how-to-change-incoming-or-outgoing-exchange-server-settings-after-installation.md
+    - name: Company News Timeline version 1.0.1.0
+      href: company-news-timeline-version-1-0-1-0-for-dynamics-365-release.md
+    - name: Compatibility with CRM 2011
+      href: compatibility-with-dynamics-crm-2011.md
+    - name: Compatibility with CRM 2013
+      href: compatibility-with-dynamics-crm-2013.md
+    - name: Compatibility with CRM 2015
+      href: compatibility-with-dynamics-crm-2015.md
+    - name: Compatibility with CRM 2016
+      href: compatibility-dynamics-crm-2016.md
+    - name: CRM app may crash and Internet Explorer reloads
+      href: crm-app-crash-internet-explorer-reloads.md
+    - name: CRM Claims and IFD Collector
+      href: dynamics-crm-claims-ifd-collector.md
+    - name: CRM Government Cloud organization integration with Azure Service Bus
+      href: crm-integration-azure-service-bus.md
+    - name: CRM IIS Memory Dump diagnostic
+      href: data-collected-by-dynamics-crm-iis-memory-dump-diagnostic.md
+    - name: CRM Installations, Updates, and Documentation
+      href: dynamics-crm-installations-updates-and-documentation.md
+    - name: CRM supportability with Internet Explorer 11
+      href: dynamics-crm-supportability-with-internet-explorer-11.md
+    - name: Database can't be started in this edition of SQL Server when restoring database
+      href: database-cannot-be-started-in-this-edition-of-sql-error-when-restoring.md
+    - name: Dynamics 365 (on-premises) v9.0
+      href: dynamics-365-on-premises-v9-0.md
+    - name: Enable and disable Scheduled Tracing
+      href: how-to-enable-and-disable-scheduled-tracing.md
+    - name: Enable tracing in CRM 2013 and 2011
+      href: how-to-enable-tracing-in-dynamics-crm.md
+    - name: Error when accessing a CRM 2011 organization
+      href: 404-error-when-accessing-organization.md
+    - name: Error when installing CRM
+      href: error-install-dynamics-crm.md
+    - name: Error when installing CRM Server 2016
+      href: error-when-installing-dynamics-crm-server.md
+    - name: Error when logging into CRM
+      href: error-logging-into-dynamics-crm.md
+    - name: Error when retrieving data from OData endpoint
+      href: error-retrieve-data-odata-endpoint.md
+    - name: Error when the CRMAppPool user account is a CRM user
+      href: problems-that-occur-when-crmapppool-user-account-is-dynamics-crm-user.md
+    - name: Error when upgrading to CRM 2011
+      href: error-upgrade-dynamics-crm-2011.md
+    - name: Errors when working with SystemUser records
+      href: errors-occur-after-migrating-from-dynamics-crm-online-to-on-premise.md
+    - name: Failed to add user using the DistinguishedName
+      href: failed-to-add-user-using-distinguishedname-error-when-importing-organization.md
+    - name: FileNotFoundException when creating a CRM organization
+      href: filenotfoundexception-occurs.md
+    - name: FIPS 140-2 compliancy with CRM 2011 Update Rollup 12
+      href: fips-140-2-compliancy-with-dynamics-crm.md
+    - name: FIPS 140-2 Compliancy with CRM 2011
+      href: fips-140-2-compliancy.md
+    - name: Firefox or Chrome users are repeatedly prompted for credentials
+      href: firefox-or-chrome-users-repeatedly-prompted-credentials.md
+    - name: HTTP 503 Service Unavailable when accessing CRM Federation Metadata URL
+      href: http-503-service-unavailable-error-when-accessing-federation-metadata-url.md
+    - name: HTTP Error 401 Unauthorized when using NLB address
+      href: http-error-401-unauthorized-when-accessing-dynamics-crm-using-nlb-address.md
+    - name: Icons in Queue Views don't show after update
+      href: icons-in-queue-views-do-not-appear-after-update.md
+    - name: Install CRM 2011 from the Splash Screen
+      href: error-install-dynamics-crm-2011-splash-screen.md
+    - name: Install CRM with the minimum required permissions
+      href: how-to-install-dynamics-crm-with-the-minimum-required-permissions.md
+    - name: Integrated authentication with Firefox in Update Rollup 12
+      href: integrated-authentication-firefox-update-rollup-12.md
+    - name: Invalid Argument after applying CRM Update Rollup 10
+      href: invalid-argument-error-after-installing-crm-2011-update-rollup-10.md
+    - name: MSCRMSandboxClient errors in the Event Viewer
+      href: mscrmsandboxclient-errors-event-viewer.md
+    - name: MspInstallAction failed when installing an Update Rollup
+      href: mspinstallaction-failed.md
+    - name: No CRM user exists with the specified domain name and user ID
+      href: error-occurs-when-accessing-internal-url-with-claims-based-authentication.md
+    - name: Organization database updates fail during the import process
+      href: organization-database-updates-fail-during-import.md
+    - name: Organization is not updated to RTM
+      href: organization-not-updated-rtm.md
+    - name: Outdated client ID error after upgrading to December 2016 update
+      href: outdated-client-id-error.md
+    - name: Problem communicating with the CRM Server
+      href: cannot-configure-dynamics-crm-client.md
+    - name: Records not written to Workflowlogbase for single-step workflows
+      href: records-not-written-to-workflowlogbase-for-single-step-workflows.md
+    - name: Script errors after applying update
+      href: client-side-scripts-no-longer-work.md
+    - name: Slow performance with McAfee antivirus
+      href: slow-performance-with-mcafee-antivirus.md
+    - name: Support for CRM with SQL Server 2012
+      href: support-for-dynamics-crm-with-sql-server-2012.md
+    - name: Support with CRM 2011 and Internet Explorer 10
+      href: support-with-dynamics-crm-2011-and-internet-explorer-10.md
+    - name: The CRM For Outlook button appears after installing Update Rollup 7
+      href: the-crm-for-outlook-button-appears-after-update-rollup-7-installed.md
+    - name: The logged-on user does not have the appropriate security permissions error
+      href: logged-on-user-does-not-have-appropriate-security-permissions-after-upgrading.md
+    - name: The same client browser session has made 6 requests
+      href: error-when-accessing-dynamics-365-ifd.md
+    - name: Timeout when administrator changes user record
+      href: timeout-administrator-changes-user-record.md
+    - name: Type or namespace does not exist
+      href: type-namespace-does-not-exist-error.md
+    - name: Unauthorized Access is Denied when using Claims-Based Authentication
+      href: 401-unauthorized-access-is-denied.md
+    - name: Validation error when setting SharePoint integration
+      href: validation-error-when-setting-server-based-sharepoint-integration-for-crm.md
+    - name: Web server returned SendFailure exception warning
+      href: web-server-returned-sendfailure-exception.md
+    - name: Windows NT user or group not found when importing organization
+      href: windows-nt-user-or-group-not-found-error-when-importing-organization.md
+    - name: You are not authorized to view this page
+      href: you-are-not-authorized-to-view-this-page-error-when-accessing-crm-web-site.md
+    - name: You only have administrative or read-only
+      href: only-administrative-read-only-error.md
+  - name: Email and Office Integration
+    items:
+    - name: 401 Unauthorized exception when using Server-Side Synchronization
+      href: exception-when-using-server-side-sync.md
+    - name: A blank window when signing into Yammer
+      href: a-blank-window-appears.md
+    - name: A failure occurred in CrmSecurity when approving email address
+      href: a-failure-occurred-crmsecurity.md
+    - name: A general mailbox access error occurred while receiving email
+      href: general-mailbox-access-error-occurred.md
+    - name: A general mailbox access error while receiving email through the mailbox
+      href: general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md
+    - name: Access is denied when connecting CRM for Outlook
+      href: access-is-denied-error.md
+    - name: Accessing_ws_metadata_exchange_failed when configuring
+      href: receiving-error-accessing-ws-metadata-exchange-failed-during-configuration.md
+    - name: Alert appears in the user's mailbox record
+      href: alert-appears-users-dynamics-365-mailbox-record.md
+    - name: An email fails to be created with an error
+      href: email-fails-be-created-error.md
+    - name: An email fails to be created with InternalEmailReject sync
+      href: an-email-fails-be-created.md
+    - name: An email fails to be created with sync
+      href: an-email-fails-be-created-with-duplicate.md
+    - name: An error occurred in sending email for mailbox
+      href: error-occurs-sending-email-for-mailbox.md
+    - name: An error occurred loading CRM functionality
+      href: error-occurred-loading-dynamics-crm-functionality-try-restarting.md
+    - name: An impersonation error occurred in accessing the mailbox
+      href: an-impersonation-error-occurred-when-connecting-dynamics-365-to-exchange.md
+    - name: An unknown error occurred while synchronizing data to Outlook
+      href: an-unknown-error-occurred-while-synchronizing-data-to-outlook.md
+    - name: An unknown error when sending email messages
+      href: error-while-sending-the-email-message.md
+    - name: Another Configuration Wizard is already running
+      href: another-configuration-wizard-is-already-running-error.md
+    - name: App for Outlook didn't load completely
+      href: dynamics-365-app-outlook-did-not-load.md
+    - name: App for Outlook is missing
+      href: dynamics-365-app-for-outlook-is-missing.md
+    - name: Appointment aren't synchronized to Exchange or Outlook
+      href: appointments-do-not-synchronize-to-exchange-or-outlook.md
+    - name: Appointments don't sync to Exchange for some users
+      href: appointments-do-not-sync-to-exchange-for-some-users.md
+    - name: Appointments, contacts, and tasks can't be synchronized
+      href: error-when-you-test-enable-a-mailbox.md
+    - name: Attachments aren't tracked after Office 365 ATP is enabled
+      href: attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
+    - name: Business unit is disabled when using App for Outlook
+      href: error-use-dynamics-365-app-outlook.md
+    - name: Buttons such as Track and Set Regarding are missing
+      href: buttons-such-as-track-and-set-regarding-are-missing.md
+    - name: Can't access App for Outlook due to email address is not recognized
+      href: trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
+    - name: Can't authenticate your credentials
+      href: cannot-authenticate-your-credentials-error-when-configuring-dynamics-crm-for-outlook.md
+    - name: Can't cast object
+      href: unable-cast-object-error.md
+    - name: Can't configure CRM Email Router
+      href: unable-configure-crm-email-router.md
+    - name: Can't configure the CRM 2011 Client for Outlook
+      href: unable-to-configure-the-dynamics-crm-2011.md
+    - name: Can't connect CRM 2013 to CRM Online
+      href: cannot-connect-dynamics-crm-server.md
+    - name: Can't connect to a CRM on-premises organization
+      href: cannot-connect-to-dynamics-crm-server-because-we-cannot-authenticate-credentials.md
+    - name: Can't connect to Exchange message 
+      href: cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
+    - name: Can't find any organizations on the server
+      href: cannot-find-any-organization-on-the-server.md
+    - name: Can't go offline or configure CRM Client
+      href: cannot-go-offline-configure-crm-client.md
+    - name: Can't open the app because the user's mailbox is inactive
+      href: we-cannot-open-the-app.md
+    - name: Can't send email as the selected user
+      href: cannot-send-email-as-another-user.md
+    - name: Changes to mailbox approval
+      href: changes-to-mailbox-approval-in-dynamics-365.md
+    - name: Contacts are duplicated when recreating a deleted contact
+      href: contacts-duplicated-if-recreate-deleted-contact.md
+    - name: CRM client for Outlook diagnostic tool
+      href: data-collected-by-dynamics-crm-for-outlook-diagnostic-tool.md
+    - name: CRM Email Router Collector
+      href: dynamics-crm-email-router-collector.md
+    - name: CRM for Outlook is disabled
+      href: dynamics-crm-outlook-is-disabled.md
+    - name: CRM for Outlook isn't enabled in Outlook
+      href: dynamics-crm-outlook-is-not-enabled.md
+    - name: Crm.80040216. An unexpected error occurred
+      href: an-error-occurred-while-synchronizing-item.md
+    - name: Email can't be received because the license is invalid for the mailbox
+      href: email-cannot-be-received-because-license-is-invalid-error.md
+    - name: Email can't be received for mailbox
+      href: email-cannot-be-received-because-associated-user-does-not-have-valid-license-error.md
+    - name: Email fails to be created with NoRecipientMatch
+      href: email-fails-to-create-with-norecipientmatch-error.md
+    - name: Email fails to be sent or received
+      href: email-fails-sent-received.md
+    - name: Email fails to create with NoCorrelationMatch sync
+      href: email-fails-to-create-with-nocorrelationmatch-error.md
+    - name: Email is saved in another mailbox when using App for Outlook
+      href: error-when-using-dynamics-365-app-outlook.md
+    - name: Email message can't be sent because the mailbox is deactivated
+      href: email-message-cannot-be-sent.md
+    - name: Email or appointment tracked by App for Outlook shows as Track pending
+      href: emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
+    - name: Email Router fails to send emails
+      href: email-router-fails-send-email.md
+    - name: Email server location or incoming email port is incorrect
+      href: email-cannot-be-received-mailbox.md
+    - name: Email Setup or Configuration
+      href: dynamics-365-email-setup-configuration.md
+    - name: Emails aren't being synced because email address is configured for another organization
+      href: emails-not-synced-because-email-is-configured-for-another-organization-error.md
+    - name: Error 0x8006ffff when accessing Dynamics 365
+      href: error_message_0x8006fff-when-accessing-dynamics-365-in-add-ins-of-outlook.md
+    - name: Error 2147209462 logged in mailbox record
+      href: error-2147209462-logged-mailbox-record.md
+    - name: Error in App for Outlook
+      href: error-when-opening-365-app-outlook.md
+    - name: Error on configuration due to incorrect time settings
+      href: error-occurs-when-configuring-dynamics-crm-for-outlook-due-to-wrong-time-setting.md
+    - name: Error when accessing CRM App for Outlook
+      href: error-when-accessing-crm-app-outlook.md
+    - name: Error when accessing Dynamics 365 App for Outlook
+      href: error-access-dynamics-365-app-outlook.md
+    - name: Error when accessing the app for Outlook
+      href: error-you-access-app-outlook.md
+    - name: Error when configuring CRM for Office Outlook
+      href: error-configure-dynamics-crm-office-outlook.md
+    - name: Error when configuring CRM Online Client for Outlook
+      href: error-configure-dynamics-crm-online-client-outlook.md
+    - name: Error when connecting CRM 2013 for Outlook
+      href: error-when-connect-crm-outlook.md
+    - name: Error when connecting CRM for Outlook
+      href: errors-connecting-dynamics-crm-for-outlook.md
+    - name: Error when connecting CRM Online to Exchange on-premises
+      href: error-when-enabling-mailbox.md
+    - name: Error when creating the incoming email
+      href: error-when-creating-an-incoming-email.md
+    - name: Error when Dynamics Connector plugin executes
+      href: error-when-connector-plugin-executes.md
+    - name: Error when searching App for Outlook
+      href: error-search-outlook-dynamics-365-app.md
+    - name: Error when selecting the Test & Enable Mailbox button
+      href: error-occurs-mailbox-record.md
+    - name: Error when you access the CRM App for Outlook
+      href: error-access-dynamics-crm-app-outlook.md
+    - name: Error when you test and enable a mailbox
+      href: email-cannot-be-sent.md
+    - name: Error when you test and enable a user's mailbox
+      href: error-test-and-enable-user-mailbox.md
+    - name: Error when you try to go offline
+      href: error-user-tries-go-offline.md
+    - name: Error while synchronizing appointments, contacts, and tasks
+      href: an-internal-dynamics-365-error.md
+    - name: ErrorInternalServerTransientError error in mailbox
+      href: errorinternalservertransienterror-error.md
+    - name: ErrorQuotaExceeded. Exchange.server returned 403 error
+      href: errorquotaexceeded-exchange-server-returned-403-error.md
+    - name: Errors when sending on behalf of or sending as another user
+      href: errors-occur-when-sending-on-behalf-of-or-send-as-another-user-via-crm-email-router.md
+    - name: Errors when you install/configure CRM Client
+      href: installation-configuration-issue.md
+    - name: ErrorSubmissionQuotaExceeded exception in mailbox
+      href: errorsubmissionquotaexceeded-exception.md
+    - name: Exchange email address is currently in use
+      href: exchange-email-address-is-currently-use.md
+    - name: Exchange error in alert in a mailbox
+      href: exchange-error-in-dynamics-365-mailbox-alert.md
+    - name: Exchange.server returned 203 error in mailbox alert
+      href: exchange-server-returned-203-error-in-mailbox-alert.md
+    - name: ExchangeSyncSchedulingConflictsError
+      href: scheduling-conflict-saving-appointment.md
+    - name: File already exists when configuring CRM for Outlook
+      href: file-already-exists-error.md
+    - name: GeneralOutgoingEmailServerError
+      href: generaloutgoingemailservererror-error.md
+    - name: HResult 0x80004005 error when configuration
+      href: hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook.md
+    - name: Http server returned 404 NotFound during server-side synchronization
+      href: http-server-returned-404-notfound-exception.md
+    - name: Http server returned Forbidden exception
+      href: http-server-returned-forbidden-exception.md
+    - name: Http server returned ServiceUnavailable exception warning level message
+      href: http-server-returned-serviceunavailable.md
+    - name: IncomingEmailRejected error when installing App for Outlook
+      href: error-incomingemailrejected-install-dynamics-365-app-outlook.md
+    - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
+      href: error-install-dynamics-365-app-outlook.md
+    - name: IncomingMailboxInternalCrmError
+      href: incomingmailboxinternalcrmerror.md
+    - name: Installation can't proceed
+      href: installation-cannot-proceed-error-when-installing-crm-2011-for-outlook.md
+    - name: Installation of Windows Live ID Sign-in Assistant failed
+      href: installation-of-windows-live-id-sign-in-assistant-failed-exit-code-1603.md
+    - name: InstallPSTAction failed when installing CRM for Outlook
+      href: installpstaction-failed-error-when-installing-dynamics-crm-for-outlook.md
+    - name: Integrated Authentication fails for Outlook client
+      href: integrated-authentication-fails-outlook-client.md
+    - name: Invalid Argument when configuring CRM for Outlook
+      href: invalid-argument-error.md
+    - name: InvalidOutgoingMailboxEmailAddress in mailbox alert
+      href: invalidoutgoingmailboxemailaddress-error-in-mailbox-alert.md
+    - name: Issue when adding to outlook 
+      href: issue-when-adding-to-outlook-error-when-deploying-dynamics-365-app-for-outlook.md
+    - name: It looks like the app isn't installed for your Outlook mailbox
+      href: it-looks-like-the-app-is-not-installed-for-your-outlook-mailbox-error.md
+    - name: Item level Server-Side Synchronization issues
+      href: troubleshoot-item-level-server-side-synchronization-issues.md
+    - name: List doesn't support this operation
+      href: list-does-not-support-this-operation.md
+    - name: Mailbox doesn't have a valid email address
+      href: mailbox-not-have-valid-email-address-error.md
+    - name: Mailbox doesn't have an email server profile
+      href: mailbox-does-not-have-email-server-profile.md
+    - name: Mailbox fails to be tested and enabled
+      href: mailbox-fails-tested-enabled.md
+    - name: Mailbox requires an approval by an Office 365 administrator alerts
+      href: alerts-about-mailbox-requires-approval-by-office-365-administrator.md
+    - name: MailboxNotEnabledForRESTAPI warning in mailbox alert
+      href: mailboxnotenabledforrestapi-warning-occurs.md
+    - name: Make sure the credentials specified in mailbox are correct and have sufficient permissions
+      href: make-sure-credentials-specified-in-mailbox-correct-and-have-sufficient-permission.md
+    - name: No option to add entities to favorites
+      href: no-option-add-entities-favorites.md
+    - name: No organization was specified in the configuration file
+      href: error-no-organization-specified-configuration-file.md
+    - name: No search results returned in Regarding lookup
+      href: no-search-results-regarding-lookup.md
+    - name: Offline synchronization fails
+      href: offline-synchronization-fails-in-dynamics-crm-for-outlook.md
+    - name: One or more duplicate records when saving items from Exchange
+      href: one-or-more-duplicate-records-were-found-in-dynamics-365-when-saving-item-error.md
+    - name: OutgoingEmailAuthenticationError in mailbox alert
+      href: outgoingemailauthenticationerror-shows-in-mailbox-alert.md
+    - name: Outlook crashes when tracking an email
+      href: outlook-crashes-when-you-track-an-email.md
+    - name: Outlook has not been configured with an account yet
+      href: outlook-has-not-been-configured-with-an-account-yet-error.md
+    - name: Privilege error when using App for Outlook
+      href: privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
+    - name: Profile is disabled when using App for Outlook
+      href: error-when-using-365-app-outlook.md
+    - name: Records don't synchronize or are missing Track and Set Regarding buttons
+      href: dynamics-crm-for-outlook-records-do-not-sync-or-missing-track-and-set-regarding.md
+    - name: Ribbon buttons overlap the left navigation pane of the form
+      href: ribbon-buttons-overlap-left-navigation-pane-form.md
+    - name: Silverlight web resources can't be viewed
+      href: silverlight-web-resources-cannot-be-viewed.md
+    - name: Smtp server returned GeneralOutgoingEmailServerError GeneralFailure exception
+      href: generaloutgoingemailservererror.md
+    - name: Something went wrong while initializing the app
+      href: sorry-something-went-wrong-while-initializing-the-app.md
+    - name: Specified field does not exist during configuration
+      href: the-specified-field-does-not-exist-in-dynamics-365-error.md
+    - name: Test Connection fails from Email Server Profile
+      href: test-connection-fails-email-server.md
+    - name: The account does not have permission to impersonate the requested user
+      href: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
+    - name: The database file can't be found
+      href: database-file-cannot-be-found-error.md
+    - name: The E-mail Router service configuration parameter Emailuser is missing
+      href: email-router-service-configuration-parameter-emailuser-is-missing-error.md
+    - name: The Exchange MAPI subsystem is not installed on this system
+      href: exchange-mapi-subsystem-is-not-installed-on-this-system-error.md
+    - name: The file you are trying to open is in a different format than specified warning
+      href: warning-message-when-opening-the-file-exported-from-crm-to-excel.md
+    - name: The mailbox location could not be determined
+      href: error-when-testing-enabling-mailbox.md
+    - name: The recipient doesn't receive emails sent via CRM web client
+      href: recipient-does-not-receive-emails-sent-from-dynamics-crm-web-client.md
+    - name: The remote server returned an error (440) Login Timeout
+      href: incoming-status-failure-the-remote-server-returned-an-error-440-login-timeout.md
+    - name: The server address (URL) is not valid
+      href: server-address-url-is-not-valid.md
+    - name: The server might be unavailable when setting up CRM for Outlook
+      href: server-might-be-unavailable-1-0-error-when-configuring-dynamics-crm-for-outlook.md
+    - name: The SMTP address has no mailbox associated with it
+      href: the-smtp-address-has-no-mailbox.md
+    - name: The specified subscription does not exist when going offline
+      href: the-specified-subscription-does-not-exist-error-when-going-offline.md
+    - name: The view is not available when opening an email
+      href: the-view-is-not-available-error-when-opening-emails.md
+    - name: There is a problem communicating with the CRM server
+      href: dynamics-crm-for-office-outlook-installation-fails-during-initializing-orgnization.md
+    - name: This operation failed because you're offline
+      href: operation-failed-because-you-are-offline.md
+    - name: Tracked to category added to user's mailbox
+      href: tracked-to-dynamics-365-category-added.md
+    - name: Troubleshoot Server-Side Synchronization
+      href: troubleshoot-server-side-synchronization.md
+    - name: UnknownIncomingEmailIntegrationError -2147167669
+      href: unknownincomingemailintegrationerror-2147167669-shows-in-alert-in-mailbox.md
+    - name: UnknownIncomingEmailIntegrationError -2147220192
+      href: unknownincomingemailintegrationerror-2147220192.md
+    - name: unknownincomingemailintegrationerror -2147220891
+      href: unknownincomingemailintegrationerror-2147220891.md
+    - name: UnknownIncomingEmailIntegrationError -2147220956
+      href: exception-appears-server-side-sync.md
+    - name: UnknownIncomingEmailIntegrationError -2147220970
+      href: unknownincomingemailintegrationerror-2147220970-exception.md
+    - name: UnknownIncomingEmailIntegrationError in Dynamics 365 mailbox
+      href: unknownincomingemailintegrationerror.md
+    - name: Warning shows when viewing alerts for a mailbox 
+      href: warning-occurs-when-viewing-alerts-for-mailboxes.md
+    - name: Web server returned SecureChannelFailure exception
+      href: web-server-returned-securechannelfailure.md
+    - name: We're unable to connect to your server
+      href: we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
+    - name: Windows within CRM Outlook don't render properly
+      href: windows-within-dynamics-crm-outlook-do-not-render-correctly.md
+    - name: You already have CRM Client for Outlook installed on another computer
+      href: error-occurs-when-synchronizing-outlook-with-dynamics-crm-server.md
+    - name: You are not part of this organization
+      href: you-are-not-part-this-organization.md
+    - name: You are signed out of CRM Online Outlook Client
+      href: you-are-signed-out-of-crm-online-outlook.md
+    - name: You don't have a license to use this app
+      href: you-do-not-have-license-to-use-this-app-error.md
+    - name: You don't have a license when configuring CRM for Outlook
+      href: you-do-not-have-a-license-error-when-configuring-dynamics-crm-for-outlook.md
+    - name: You don't have permission to access this app
+      href: you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md
+    - name: You don't have required role or privilege
+      href: you-do-not-have-required-role-privilege.md
+    - name: You don't have the required role or privilege to complete this action
+      href: you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
+  - name: Integrations with Other Products
+    items:
+    - name: Connector doesn't handle null strings and dates correctly
+      href: dynamics-connector-does-not-handle-null-strings-and-dates-correctly.md
+  - name: Mobile Apps
+    items:
+    - name: We can't find any apps for your role
+      href: we-cannot-find-any-apps-your-role.md
+  - name: Other Funcationality
+    items:
+    - name: Business Process Flow deletion fails
+      href: business-process-flow-deletion-fails.md
+    - name: Can't integrate Yammer
+      href: unable-integrate-yammer.md
+    - name: Currency data type not available in Import Data Wizard
+      href: currency-data-type-not-available-import-data-wizard.md
+    - name: Failed to access the default store for users
+      href: crm-rule-deployment-wizard-fails-to-apply-rules-to-users.md
+    - name: List Component for SharePoint 2013 Configuration is case-sensitive
+      href: list-component-case-sensitive.md
+    - name: Microsoft Flow Extension Package shows Installation failed
+      href: flow-extension-package-shows-installation-failed.md
+    - name: Online outbound phone calls default to Lync not Skype
+      href: dynamics-crm-online-outbound-phone-calls-default-to-lync.md
+    - name: Relevance Search doesn't work for sandbox instances
+      href: relevance-search-not-working-as-expected-for-sandbox-instances.md
+  - name: Portal Add-on
+    items:
+    - name: Change the audience and type of a portal
+      href: how-to-change-audience-and-type-of-dynamics-365-portal.md
+    - name: Determine the version of CRM portals installed
+      href: how-to-determine-the-version-of-dynamics-crm-portals-installed.md
+    - name: Portal capabilities for Dynamics 365 FAQ
+      href: portal-capabilities-dynamics-365-faq.md
+    - name: Portal Solution update consistency for Multi-Portal Deployments
+      href: dynamics-365-portal-solution-update.md
+  - name: Programmability and Software Development
+    items:
+    - name: Can't connect to Dynamics 365 (online), version 9.0
+      href: cannot-connect-dynamics-365-online.md
+    - name: Can't connect to the remote server
+      href: unable-connect-the-remote-server.md
+    - name: The security token could not be authenticated or authorized
+      href: error-after-planned-system-maintenance.md
+    - name: TLS 1.2 is required for connectivity
+      href: tls-1-dot-2-required-for-connectivity.md
+  - name: Reports
+    items:
+    - name: Custom code that is allowed for use in FetchXML Reports
+      href: custom-code-that-is-allowed-use.md
+    - name: Installing Reporting Extensions can't locate SSRS instance
+      href: installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md
+    - name: Visual Studio 2015 stops working
+      href: visual-studio-2015-stops-working.md
+  - name: Sales
+    items:
+    - name: The Convert Lead dialog box no longer appears during lead qualification
+      href: convert-lead-dialog-box-no-longer-shows-duriing-lead-qualification.md
