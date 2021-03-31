@@ -75,8 +75,8 @@
         "azure/virtual-machines/*.md": "genlin",
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md":"helenclu",
-        "dynamics-365/**/*.md":"ramakoni1",
-        "power-platform/**/*.md":"ramakoni1"
+        "dynamics-365/**/*.md":"David-Pack",
+        "power-platform/**/*.md":"David-Pack"
       },
       "ms.author": {
         "**/*.md": "ramakoni",
@@ -85,8 +85,8 @@
         "azure/virtual-machines/*.md": "genli",
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
-        "dynamics-365/**/*.md": "ramakoni",
-        "power-platform/**/*.md": "ramakoni"
+        "dynamics-365/**/*.md": "davidpac",
+        "power-platform/**/*.md": "davidpac"
       },
       "ms.localizationpriority": {
         "**/*.md": "medium"
