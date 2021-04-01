@@ -123,7 +123,7 @@ TLS 1.1 and TLS 1.0 are being phased out because they're considered insecure. Af
 
 This issue occurs on WSUS servers that are running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019.
 
-## Troubleshoot issue 2
+### Troubleshoot issue 2
 
 WSUS logs which SSL/TLS versions are enabled when it starts. To determine the SSL/TLS versions, follow these steps:
 
@@ -174,7 +174,7 @@ The change that enables WSUS to use TLS 1.2 is a non-security fix, it's included
 
 Some users opt to install only the security-only updates and never install the Monthly Rollups. Therefore, their WSUS servers don't have the update that enables TLS 1.2 installed. After the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint is changed to accept only TLS 1.2 connections, these WSUS servers can no longer synchronize with the endpoint. This issue also occurs on a freshly installed Windows Server 2012 or Windows Server 2012 R2 WSUS server that hasn't installed any Monthly Rollups.
 
-## Troubleshoot issue 3
+### Troubleshoot issue 3
 
 If the WSUS server has the correct updates installed, WSUS will log which SSL/TLS versions are enabled when it starts. Follow these steps on the WSUS server:
 
@@ -241,7 +241,7 @@ You may disable various ciphers to secure TLS connections. Starting from July 20
 
 This issue occurs on WSUS servers that are running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019.
 
-## Troubleshoot issue 5
+### Troubleshoot issue 5
 
 The `%Program Files\Update Services\LogFiles\SoftwareDistribution.log` file logs the following errors when synchronizing:
 
