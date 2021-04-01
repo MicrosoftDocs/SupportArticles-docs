@@ -15,14 +15,10 @@ ms.technology: windows-client-rds
 ---
 # Use MSTSC or universal Remote Desktop client instead of RDMan in Windows 10
 
-This article provides some information about using MSTSC or universal Remote Desktop client instead of RDMan in Windows 10.
+Virtualization and remote desktops are an important part of your infrastructure and work. And, we recommend that you use in-box remote desktop client (MSTSC) or [universal Remote Desktop client](https://aka.ms/rdwin) instead of Remote Desktop Connection Manager (RDCMan).
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4512838
-
-## Summary
-
-Virtualization and remote desktops are an important part of your infrastructure and work. And, we recommend that you use in-box remote desktop client (MSTSC) or [universal Remote Desktop client](https://aka.ms/rdwin) instead of Remote Desktop Connection Manager (RDCMan).
 
 ## More information
 

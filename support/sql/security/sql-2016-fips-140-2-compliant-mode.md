@@ -12,8 +12,6 @@ This article introduces the FIPS 140-2 instructions and how to use SQL Server201
 _Original product version:_ &nbsp; SQL Server 2016  
 _Original KB number:_ &nbsp; 4014354
 
-This article discusses FIPS 140-2 instructions and how to use SQL Server 2016 in FIPS 140-2-compliant mode.
-
 > [!NOTE]
 > - The terms "FIPS 140-2 compliant," "FIPS 140-2 compliance," and "FIPS 140-2-compliant mode" are defined here for use and clarity. These terms are not recognized or defined government terms. The United States and Canadian governments recognize the validation of cryptographic modules against standards like FIPS 140-2 instead of using cryptographic modules in a specified or conformant manner.
 >
