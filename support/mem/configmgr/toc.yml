@@ -404,6 +404,8 @@
           href: troubleshoot-wsus-connection-failures.md
         - name: Troubleshoot WSUS high CPU usage
           href: troubleshoot-wsus-server-high-cpu-usage.md
+        - name: Troubleshoot WSUS synchronization and import issues
+          href: troubleshoot-wsus-import-sync-issues.md 
         - name: WSUS and Windows Update Agent diagnostics
           href: wsus-and-windows-update-agent-diagnostics.md
         - name: WSUS best practices
