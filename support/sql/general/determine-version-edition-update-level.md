@@ -1,7 +1,7 @@
 ---
 title: Determine the version, edition, and update level
 description: This article lists various builds or updates that are available for different versions of  SQL Server and describe the procedures to determine the version of SQL Server that is running on a given system.
-ms.date: 02/10/2021
+ms.date: 03/05/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -301,24 +301,45 @@ To find the version of your instance of SQL Server CE and related information, s
 
 ## PolyBase
 
-To find the version of PolyBase and related features, refer to a fresh discovery report that runs within the SQL Setup tools.
+### Windows 
 
-In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added. 
+To find the version of PolyBase and its related features in Windows, try the following methods: 
 
-It is recommended to refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
+- If the PolyBase service is running, run the following PowerShell script:
+
+```powershell
+Get-Process mpdwsvc -FileVersionInfo | Format-Table -AutoSize
+```
+
+- If the PolyBase service is not running or can't be started, run the following PowerShell script:
+
+```powershell
+cd 'C:\Program Files\Microsoft SQL Server'
+ls mpdwsvc.exe -r -ea silentlycontinue | % versioninfo | Format-Table -AutoSize
+```  
+
+Alternatively, try the SQL Server Setup steps in the next section.
+    
+### Windows or Linux
+
+To find the version of PolyBase and its related features, refer to a fresh discovery report that runs within the SQL Server Setup tools.
+
+In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the Summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added. 
+
+We recommend that you refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
 
 ## Machine Learning services
 
- For Windows servers, refer to the CAB file versions which change with SQL Server cumulative updates. Refer to the Rlauncher.config or PythonLauncher.Config files in the `Program Files\Microsoft SQL Server\MSSQL.nn\MSSQL\Binn` directory, to find the RHOME or PYTHONHOME folder locations of the CAB files. For the CAB versions that come with SQL Server CU versions, see [CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-cab-downloads).
+ For Windows servers, refer to the CAB file versions which change with SQL Server cumulative updates. Refer to the Rlauncher.config or PythonLauncher.config files in the `Program Files\Microsoft SQL Server\MSSQL.nn\MSSQL\Binn` directory to find the RHOME or PYTHONHOME folder locations of the CAB files. For the CAB versions that are included with SQL Server CU versions, see [CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-cab-downloads).
 
- For Linux servers, the following command returns a list of all mssql specific installed packages, along with their version numbers: 
+ For Linux servers, the following command returns a list of all mssql-specific installed packages, together with their version numbers: 
 ```console
 apt-get list --installed | --grep mssql
 ```
 
  The version number of the mssql-server-extensibility package version is the SQL Server version of the Machine Learning Services feature.
 
- The version number of the mssql-mlservices-packages-r or mssql-mlservices-packages-py refers to each language package files, for more information, see [Install SQL Server Machine Learning Services on Linux (Offline installation)](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning#offline-installation).
+ The version number of the mssql-mlservices-packages-r or mssql-mlservices-packages-py refers to each language package file. For more information, see [Install SQL Server Machine Learning Services on Linux (Offline installation)](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning#offline-installation).
 
 ## Frequently asked questions
 
