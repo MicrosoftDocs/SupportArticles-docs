@@ -7,7 +7,7 @@ ms.reviewer: JIANGES
 ---
 # Frequently asked questions about the Standard C++ library
 
-This article presents a list of frequently asked questions (FAQs) about the Standard C++ libraries and the answers to those questions.
+This article provides a list of frequently asked questions (FAQs) about the Standard C++ libraries and the answers to those questions.
 
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 154419
@@ -26,7 +26,7 @@ The Standard C++ library can be divided into the following categories:
 
     - Iterators: the glue that pastes algorithms and containers together, such as utility, iterator, and memory.
 
-2. Input/Output includes components for forward declarations of iostreams (`iosfwd`), predefined iostreams objects (`iostream`), base iostreams classes (`ios`), stream buffering (`streambuf`), stream formatting and manipulators (`iosmanip`, `istream`, `ostream`), string streams (`sstream`), and file streams (`fstream`).
+2. Input/Output includes components for forward declarations of `iostreams` (`iosfwd`), predefined `iostreams` objects (`iostream`), base `iostreams` classes (`ios`), stream buffering (`streambuf`), stream formatting and manipulators (`iosmanip`, `istream`, `ostream`), string streams (`sstream`), and file streams (`fstream`).
 
 3. Other Standard C++ headers include:
 
@@ -40,7 +40,7 @@ The Standard C++ library can be divided into the following categories:
 
 ## Question 2: What is difference between CRT and Standard C++ library? What libraries will Runtime library compiler options include
 
-Visual C++ include the following libraries in addition to the Microsoft Foundation Classes (MFC) libraries:
+Visual C++ include the following libraries besides the Microsoft Foundation Classes (MFC) libraries:
 
 - Basic C-Runtime library
 - Standard C++ library
@@ -52,7 +52,7 @@ Visual C++ include the following libraries in addition to the Microsoft Foundati
 |Multithreaded (/MT)|LIBCMT.LIB / LIBCPMT.LIB|
 |Debug Multithreaded (/MTd)|LIBCMTD.LIB / LIBCPMTD.LIB|
 |Multithreaded DLL (/MD)|MSVCRT.LIB / MSVCPRT.LIB|
-|Debug Multithreaded /DLL (MDd)|MSVCRTD.LIB / MSVCPRTD.LIB|
+|Debug Multithreaded /DLL (`MDd`)|MSVCRTD.LIB / MSVCPRTD.LIB|
 |||
 
 > [!NOTE]
@@ -76,7 +76,7 @@ Standard C++ headers
 |TYPEINFO|UTILITY|VALARRAY|VECTOR|
 |||||
 
-## Question 3: How to retain old iostream functionality from Visual C++ .NET 2003 or earlier versions if I port my project from an earlier version
+## Question 3: How to retain old `iostream` functionality from Visual C++ .NET 2003 or earlier versions if I port my project from an earlier version
 
 If you want to retain the old `iostream` library (*iostream.h*), include one or more of the old `iostream` header files in your code. Don't use the new Standard C++ headers. You can't mix calls to the old `iostream` library and the new Standard C++ library.
 
@@ -84,11 +84,11 @@ If you want to retain the old `iostream` library (*iostream.h*), include one or 
 
 If you want to make the Standard C++ Libraries the default, include one or more of the new Standard C++ headers. You can't mix calls to the old `iostream` and the new Standard C++ library. Existing libraries (static or dynamic link) that use old `iostream` functions will have to be modified to use Standard C++ library `iostream` functions.
 
-## Question 5: Will using Standard C++ Libraries in MFC applications cause conflicts with C-Runtime Libraries
+## Question 5: If I use Standard C++ Libraries in MFC applications, will it cause conflicts with C-Runtime Libraries
 
 No. Microsoft Foundation Classes (MFC) doesn't use any C-Runtime functions that will conflict with the Standard C++ Libraries.
 
-## Question 6: Why I get error (error C2065: 'cout' : undeclared identifier) even though I have included iostream
+## Question 6: Why I get error (error C2065: '`cout`' : undeclared identifier) even though I have included `iostream`
 
 Standard C++ library is implemented in its own namespace `std`. Make sure to add the following statement in the beginning of your program:
 
@@ -127,13 +127,13 @@ In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard
     |TYPEINFO|UTILITY|VALARRAY|VECTOR|
     |||||
 
-## Question 8: Why I get message (LNK2001: unresolved external symbol 'symbol';) on iostream function calls when the project is built with Ignore Default Libraries
+## Question 8: Why I get message (LNK2001: unresolved external symbol 'symbol';) on `iostream` function calls when the project is built with Ignore Default Libraries
 
 The `iostream` functions have been removed from the C-Runtime library.
 
-If you're using the old `iostream` functions, you must add an additional library *LIBCI.lib* (single-threaded **ML**), *LIBCIMT.lib* (multithreaded **MT**), or *MSVCIRT.lib* (multithreaded dll **MD**). These libraries have been removed from Visual C++.
+If you're using the old `iostream` functions, you must add another library *LIBCI.lib* (single-threaded **ML**), *LIBCIMT.lib* (multithreaded **MT**), or *MSVCIRT.lib* (multithreaded dll **MD**). These libraries have been removed from Visual C++.
 
-If you're using the new `iostream` functions included with the Standard C++ library, you must add an additional library *LIBCP.lib* (single-threaded **ML**), *LIBCPMT.lib* (multithreaded **MT**), or *MSVCPRT.lib* (multithreaded dll **MD**).
+If you're using the new `iostream` functions included with the Standard C++ library, you must add another library *LIBCP.lib* (single-threaded **ML**), *LIBCPMT.lib* (multithreaded **MT**), or *MSVCPRT.lib* (multithreaded dll **MD**).
 
 Don't mix different versions of the libraries. For example, if you're using the single-threaded version of the C-Runtime library, you must also use the single-threaded version of the old `iostream` library or Standard C++ library.
 
@@ -141,7 +141,7 @@ You can't mix calls to the old `iostream` library functions and the new Standard
 
 ## Question 9: Why do I get compiler warnings C4786 or C4788? None of the symbols in my program is anywhere near 255 characters in length
 
-C4786 or C4788 is issued when a symbol's name exceeds 255 characters in length. This often happens with template class, and `STL` uses template class extensively.
+C4786 or C4788 is issued when a symbol's name exceeds 255 characters in length. This issue often happens with template class, and `STL` uses template class extensively.
 
 Ignoring this warning is safe. Use a `#pragma` warning (disable: 4786,4788) to suppress the messages.
 
@@ -166,4 +166,4 @@ The problem is caused by the consecutive `>>` at the end of the declaration. The
 vector<int, allocator<int> > iV;
 ```
 
-This is consistent with the proposed ANSII specification.
+It's consistent with the proposed ANSII specification.
