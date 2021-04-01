@@ -31,7 +31,7 @@ PS C:\> Get-VMNetworkAdapter -VMName clu3vm1
 
 The command output resembles the following:
 
-```console
+```output
 Name            IsManagementOs VMName  SwitchName MacAddress   Status IPAddresses
 ----            -------------- ------  ---------- ----------   ------ -----------
 Network Adapter False          CLU3VM1 Public     00155D081704 {Ok}   {}
@@ -45,7 +45,7 @@ To troubleshoot this problem, first verify that the Key-Value Pair Exchange Inte
 PS C:\> (Get-VM -VMName clu3vm1).VMIntegrationService
 ```
 
-```powershell
+```output
 VMName  Name                    Enabled PrimaryStatusDescription SecondaryStatusDescription
 ------  ----                    ------- ------------------------ --------------------------
 CLU3VM1 Guest Service Interface False   OK
@@ -64,7 +64,7 @@ PS C:\> Get-WmiObject -Namespace "root\standardcimv2" -Class __Win32Provider | s
 
 The output resembles the following example. Notice that `ROOT\Standardcimv2 NetTCPIP` is missing.
 
-```powershell
+```output
 __NAMESPACE        Name
 -----------        ----
 ROOT\Standardcimv2 NetEventPacketCapture
@@ -91,7 +91,7 @@ PS C:\> Get-WmiObject -Namespace "root\standardcimv2" -Class "MSFT_NetIPInterfac
 
 Instead of the response that you expect, the output that resembles the following example:
 
-```powershell
+```output
 Get-WmiObject : Invalid class "MSFT_NetIPInterfaceAdapter"
 At line:1 char:1
 + Get-WmiObject -Namespace "root\Standardcimv2" -Class "MSFT_NetIPInter ...
@@ -116,7 +116,7 @@ C:\Windows\System32\wbem>mofcomp.exe NetTCPIP.mof
 
 You should see the following output:
 
-```console
+```output
 Microsoft (R) MOF Compiler Version 10.0.14393.0
 Copyright (c) Microsoft Corp. 1997-2006. All rights reserved.
 Parsing MOF file: NetTCPIP.mof
