@@ -13,7 +13,7 @@ ms.reviewer: kaushika, v-parapa
 ms.prod-support-area-path: Slow Performance
 ms.technology: windows-server-performance
 ---
-# Cannot delete certain registry keys and Error while deleting key occurs
+# Can't delete certain registry keys and Error while deleting key occurs
 
 This article provides a resolution to solve the **Error while deleting key** error that occurs when trying to remove certain registry keys.
 
@@ -28,11 +28,11 @@ You may get the following error message when trying to delete a registry key:
 
 ## Cause
 
-This can be caused if you attempt to delete a registry key that contains embedded null characters. These characters aren't visible when viewing the registry entry.
+This issue can be caused if you attempt to delete a registry key that contains embedded null characters. These characters aren't visible when viewing the registry entry.
 
 ## Resolution
 
-To delete a registry key that contains an embedded null character, you must first replace the null character with another character. You can accomplish this by using the [RegDelNull v1.11](/sysinternals/downloads/regdelnull) tool from Sysinternals.
+To delete a registry key that contains an embedded null character, you must first replace the null character with another character. You can accomplish this operation by using the [RegDelNull v1.11](/sysinternals/downloads/regdelnull) tool from Sysinternals.
 
 ## More information
 
@@ -41,4 +41,4 @@ Usage: regdelnull <path> [-s]
 -s Recurse into subkeys.
 ```
 
-It isn't possible to manually create a registry entry with an embedded null character. This usually occurs because of a corrupt application install or similar. It's also possible for the Windows kernel to embed a NULL character in a string to form a complete key name. If this entry is then accessed from user-mode, it isn't possible to open the key containing the embedded null string.
+You can't manually create a registry entry with an embedded null character. This issue usually occurs because of a corrupt application installation or similar. Windows kernel may embed a NULL character in a string to form a complete key name. If this entry is accessed from user-mode, it's not possible to open the key containing the embedded null string.

@@ -436,6 +436,8 @@
       href: ./group-policy/fail-to-apply-group-policy-at-startup.md
     - name: Disable screen saver passwords by using policies
       href: ./group-policy/disable-screen-saver-passwords.md
+    - name: Group membership changes do not update over some VPN connections
+      href: ./group-policy/group-membership-changes-not-updating-over-some-vpn-connections.md
     - name: Group Policy is not applied to a user account
       href: ./group-policy/group-policy-not-applied-user-account-runas.md
     - name: Group Policy Screensaver setting isn't working

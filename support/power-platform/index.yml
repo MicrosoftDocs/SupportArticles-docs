@@ -1,0 +1,19 @@
+### YamlMime:Hub
+title: Microsoft Power Platform troubleshooting
+summary: Technical content to troubleshoot issues in Microsoft Power Platform
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.service: power-platform
+
+productDirectory:
+  items:
+  - title: Power Apps
+    imageSrc: "../media/hub-landing/power-apps.svg"
+    summary: Troubleshooting articles for Power Apps
+    url: power-apps/welcome-power-apps.yml
+  - title: Power Automate
+    imageSrc: "../media/hub-landing/power-automate.svg"
+    summary: Troubleshooting articles for Power Automate
+    url: power-automate/welcome-power-automate.yml
