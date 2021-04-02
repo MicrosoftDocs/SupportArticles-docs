@@ -26,29 +26,35 @@ summary: |
 
 sections:
   - name: General information
-    questions:
-      - question: Is Windows 7 Year 1 ESU included with Microsoft 365 E5?
+    questions: 
+      - question: |
+          Is Windows 7 Year 1 ESU included with Microsoft 365 E5?
         answer: |
           Yes. Starting March 1, 2020, Microsoft is introducing a new program that includes Windows 7 Year 1 ESU together with Microsoft 365 E5, Microsoft 365 E5 Security, and Microsoft 365 Security + Compliance Subscription License.       
           
-      - question: In this new program, which subscriptions include Windows 7 Year 1 ESU?
+      - question: |
+          In this new program, which subscriptions include Windows 7 Year 1 ESU?
         answer: |
           - Microsoft 365 E5
           - Microsoft 365 E5 Security
           - Microsoft 365 Security + Compliance Subscription License (SL)
 
-      - question: Who can take advantage of this program?
+      - question: |
+          Who can take advantage of this program?
         answer: |
           Windows 7 Year 1 ESU combined with Microsoft 365 E5 is available to Volume Licensing (VL) customers who purchase through EA or EAS agreements.
 
-      - question: What are the effective dates of this program?
+      - question: |
+          What are the effective dates of this program?
         answer: |
           March 1, 2020 - December 31, 2020.
 
-      - question: Do customers have to maintain Microsoft 365 E5 subscriptions throughout the ESU coverage period?
+      - question: |
+          Do customers have to maintain Microsoft 365 E5 subscriptions throughout the ESU coverage period?
         answer: |
           Yes. Customers must maintain the qualifying E5 SKUs through the end of the Windows 7 Year 1 ESU period (January 12, 2021) to benefit from the included ESU.
 
-      - question: Why is only Windows 7 Year 1 ESU included?
+      - question: |
+          Why is only Windows 7 Year 1 ESU included?
         answer: |
           We believe that most customers who have to purchase Windows 7 ESU require only Year 1 coverage as they continue to deploy Windows 10.
