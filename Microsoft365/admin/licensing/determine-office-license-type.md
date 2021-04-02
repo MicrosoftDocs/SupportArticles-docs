@@ -74,19 +74,17 @@ If you're using a Microsoft 365 product, see [View Microsoft 365 licenses and se
 
     `cd c:\Program Files\Microsoft Office\Office16\`
 
-3. Type the following command, and then press Enter:
-
-    `cscript ospp.vbs /dstatus`
+3. Type `cscript ospp.vbs /dstatus`, and then press Enter.
 
     :::image type="content" source="media/determine-office-license-type/determine-office-license-type-2.png" alt-text="The screen will display the license type. ":::
 
-4. In this example, the screen displays the **Retail type** license. If you have a volume license (VL) product, the license type is displayed as **VL** or **Volume Licensing**.
+   In this example, the screen displays the **Retail type** license. If you have a volume license (VL) product, the license type is displayed as **VL** or **Volume Licensing**.
 
 ### Office 2013
 
 #### Method 1: Search DVD or ISO file for Admin folder
 
-This method requires that you have access to the DVD or ISO file that was used to install your Office product.
+This method requires that you have access to the DVD or ISO file that's used to install your Office product.
 
 1. Open File Explorer, and navigate to the DVD or ISO file.
 2. Search for a folder that’s named **Admin**.
@@ -101,7 +99,7 @@ This method requires that you have access to the DVD or ISO file that was used t
 
 #### Method 2: Use the command-line interface
 
-1. Open an elevated Command Prompt window**
+1. Open an elevated Command Prompt window.
 
    - **Windows 10, Windows 8.1, or Windows 8**
 
