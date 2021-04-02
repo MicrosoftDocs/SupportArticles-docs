@@ -38,7 +38,7 @@ The TCP features can be changed by changing the entries in the registry.
 > This following sections, methods, or tasks contain steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
-### TCP window size
+## TCP window size
 
 The TCP receive window size is the amount of receive data (in bytes) that can be buffered during a connection. The sending host can send only that amount of data before it must wait for an acknowledgment and window update from the receiving host. The Windows TCP/IP stack is designed to self-tune itself in most environments, and uses larger default window sizes than earlier versions.
 
@@ -80,9 +80,9 @@ This value isn't present by default. When you add the TcpWindowSize value, it ov
 > [!NOTE]
 > TcpWindowSize can also be added to the Parameters key to set the window size globally for all interfaces.
 
-### TCP options now supported
+## TCP options now supported
 
-In the past, TCP options were used primarily for negotiating maximum segment sizes. In Windows, TCP options are used for Window Scaling, Time Stamp, and Selective ACK.
+Previously, TCP options were used primarily for negotiating maximum segment sizes. In Windows, TCP options are used for Window Scaling, Time Stamp, and Selective ACK.
 
 There are two types of TCP options:
 
@@ -126,7 +126,7 @@ Length: Varies
 Option: TCP SACK Option  
 Description: Used by hosts to identify whether out-of-order packets were received.
 
-### Windows scaling
+## Windows scaling
 
 For more efficient use of high-bandwidth networks, a larger TCP window size may be used. The TCP window size field controls the flow of data and is limited to 2 bytes, or a window size of 65,535 bytes.
 
@@ -194,7 +194,7 @@ It means that the first data packet sent after the three-way handshake is the ac
 |14|16384|65535|1,073,725,440|
 |||||
 
-For Example:
+For example:
 
 If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the three-way handshake is 13. Because a scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
 
@@ -222,11 +222,16 @@ The Tcp1323Opts value in the following registry key can be added to control scal
 
 This registry entry controls RFC 1323 timestamps and window scaling options. Timestamps and Window scaling are enabled by default, but can be manipulated with flag bits. Bit **0** controls window scaling. Bit **1** controls timestamps.
 
-### Timestamps
+## Timestamps
 
 Previously, the TCP/IP stack used one sample per window of data sent to calculate the round-trip time (RTT). A timer (retransmit timer) was set when the packet was sent, until the acknowledgment was received. For example, if the window size was 64,240 bytes (44 full segments) on an Ethernet network, only one of every 44 packets were used to recalculate the round-trip time. With a maximum window size of 65,535 bytes, this sampling rate was sufficient. Using window scaling, and a maximum window size of 1 Gigabyte, this RTT sampling rate isn't sufficient.
 
-The TCP Timestamp option can now be used on segments (data and ACK) deemed appropriate by the stack, to perform operations such as RTT computation, PAWS check, and so on. Using this data, the RTT can be accurately calculated with large window sizes. RTT is used to calculate retransmission intervals. Accurate RTT and retransmission timeouts are needed for optimum throughput.
+The TCP Timestamp option can now be used on segments (data and ACK) deemed appropriate by the stack, to perform operations such as:
+
+- RTT computation
+- PAWS check
+
+Using this data, the RTT can be accurately calculated with large window sizes. RTT is used to calculate retransmission intervals. Accurate RTT and retransmission time-outs are needed for optimum throughput.
 
 When TCP time stamp is used in a TCP session, the originator of the session sends the option in its first packet of the TCP three-way handshake (SYN packet). Either side can then use the TCP option during the session.
 
@@ -250,7 +255,7 @@ The TCP sequence number field is limited to 32 bits, which limits the number of 
 
 ## Selective Acknowledgments (SACKs)
 
-Windows introduces support for a performance feature known as Selective Acknowledgment, or SACK. SACK is especially important for connections that use large TCP window sizes. Prior to SACK, a receiver could only acknowledge the latest sequence number of a contiguous data stream that had been received, or the "left edge" of the receive window. With SACK enabled, the receiver continues to use the ACK number to acknowledge the left edge of the receive window, but it can also acknowledge other blocks of received data individually. SACK uses TCP header options, as shown below.
+Windows introduces support for a performance feature known as Selective Acknowledgment, or SACK. SACK is especially important for connections that use large TCP window sizes. Before SACK, a receiver could only acknowledge the latest sequence number of a contiguous data stream that had been received, or the "left edge" of the receive window. With SACK enabled, the receiver continues to use the ACK number to acknowledge the left edge of the receive window, but it can also acknowledge other blocks of received data individually. SACK uses TCP header options, as shown below.
 
 SACK uses two types of TCP Options.
 
@@ -312,17 +317,17 @@ TCP: Option Length = 10 (0xA)
  TCP: Left Edge of Block = 54858789 (0x3451425)  
  TCP: Right Edge of Block = 54861685 (0x3451F75)  
 
-### TCP retransmission behavior and fast retransmit
+## TCP retransmission behavior and fast retransmit
 
-TCP Retransmission
+### TCP retransmission
 
 As a review of normal retransmission behavior, TCP starts a retransmission timer when each outbound segment is handed down to the Internet Protocol (IP). If no acknowledgment has been received for the data in a given segment before the timer expires, then the segment is retransmitted.
 
 The retransmission timeout (RTO) is adjusted continuously to match the characteristics of the connection using Smoothed Round Trip Time (SRTT) calculations as described in RFC 793. The timer for a given segment is doubled after each retransmission of that segment. Using this algorithm, TCP tunes itself to the normal delay of a connection.
 
-Fast Retransmit
+### Fast retransmit
 
-TCP retransmits data before the retransmission timer expires under some circumstances. The most common of these occur because of a feature known as fast retransmit. When a receiver that supports fast retransmits receives data with a sequence number beyond the current expected one, it's likely that some data was dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do this for each additional TCP segment that arrives. When the sender starts to receive a stream of ACKs that's acknowledging the same sequence number, it's likely that a segment has been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
+TCP retransmits data before the retransmission timer expires under some circumstances. The most common cause is a feature known as fast retransmit. When a receiver that supports fast retransmit receives data with a sequence number beyond the current expected one, some data was likely dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do so for other TCP segments that arrive. When the sender starts to receive a stream of ACKs that's acknowledging the same sequence number, a segment likely has been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
 
 By default, Windows resends a segment if:
 
