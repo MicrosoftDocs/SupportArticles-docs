@@ -1,15 +1,17 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 05/11/2020
+ms.date: 04/02/2021
 ms.prod-support-area-path: 
-ms.reviewer: elvinf
+ms.reviewer: jafritts
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
 When you are reviewing your sign-in reports, you may see an application in your sign-in report that you don’t own and want to identify the application. You also may wonder how you signed into that app, as you don’t remember accessing the app.
 
-:::image type="content" source="media/FOLDER/IMAGE NAME.png" alt-text="DESCRIPTION." border="false":::
+Here is an example of a sign-in report:
+
+:::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-application-sign-in-report.png" alt-text="An example of a sign-in report in Azure Active Directory." border="true":::
 
 For example, when you access **docs.microsoft.com**, the application shown in the sign-in log may say **dev-rel-auth-prod**, which is not descriptive regarding **doc.microsoft.com**.
 
@@ -23,17 +25,17 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 3. In the **Application Type** drop-down menu, select **Microsoft Applications** and hit apply.  All applications listed here are owned by Microsoft.
 
-   :::image type="content" source="media/FOLDER/IMAGE NAME.png" alt-text="DESCRIPTION." border="false":::
+   :::image type="content" source="media/verify-first-party-apps-sign-in/select-microsoft-applications-in-application-type-menu.png" alt-text="Select Microsoft Applications in the Application Type drop-down menu." border="true":::
   
 4. In the search box below the selectable drop-down menus, filter the list by adding a specific **Display Name** or **Application ID**.
 
-   :::image type="content" source="media/FOLDER/IMAGE NAME.png" alt-text="DESCRIPTION." border="false":::
+   :::image type="content" source="media/verify-first-party-apps-sign-in/add-display-name-in-search-box.png" alt-text="Enter a display name in the search box." border="true":::
 
 5. Select the desired app, then select **Properties** in the left-hand menu to open the listed app's properties and confirm the message that:
 
    ``You can’t delete this application because it’s a Microsoft first party application.``
 
-   :::image type="content" source="media/FOLDER/IMAGE NAME.png" alt-text="DESCRIPTION." border="false":::
+   :::image type="content" source="media/verify-first-party-apps-sign-in/you-cant-delete-this-application.png" alt-text="A message that displays the statement you can’t delete this application because it’s a Microsoft first party application." border="true":::
 
 ## Verify a 1st Party Microsoft Service Principal through PowerShell
 
@@ -49,7 +51,7 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 3. Review the result's **AppOwnerTenantId**.
 
-   :::image type="content" source="media/FOLDER/IMAGE NAME.png" alt-text="DESCRIPTION." border="false":::
+   :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id.png" alt-text="The output of a request to show the Azure AD service principal." border="true":::
 
    In the previous screenshot, **f8cdef31-a31e-4b4a-93e4-5f571e91255a** is the Microsoft Service's AAD tenant ID.
 

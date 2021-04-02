@@ -3,7 +3,7 @@
 
 - name: Azure Active Directory Reports
   items:
-  - name: Verify 1st party Microsoft apps
+  - name: Verify 1st party Microsoft apps in sign-in reports
     href: verify-first-party-apps-sign-in.md
 
 - name: Azure AD Governance, Compliance and Reporting 
