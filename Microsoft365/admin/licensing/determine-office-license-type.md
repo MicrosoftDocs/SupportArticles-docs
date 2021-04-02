@@ -41,19 +41,19 @@ description: Describes how to determine the license type of your Microsoft Offic
 
 ## Summary
 
-This article helps you to determine the licensing type of your Microsoft Office product, whether it is Microsoft 365, Office 2019, Office 2016, or Office 2013.
+This article helps you determine the licensing type of your Microsoft Office product, whether it's Microsoft 365, Office 2019, Office 2016, or Office 2013.
 
 ## License types
 
 ## [Windows](#tab/windows)
 
-To determine whether you have a retail edition or a volume license edition, use one of the following methods, depending on which version of Microsoft Office product you have installed.
+To determine whether you have a retail edition or a volume license edition, use one of the following methods, depending on which version of Microsoft Office product you've installed.
 
 ### Microsoft 365
 
-If you are using a Microsoft 365 product, see View Microsoft 365 licenses and services with PowerShell, and follow the steps to find your license type and other details about your version of Office.
+If you're using a Microsoft 365 product, see [View Microsoft 365 licenses and services with PowerShell](/microsoft-365/enterprise/view-licenses-and-services-with-microsoft-365-powershell). Follow the steps to find your license type and other details about your version of Office.
 
-### Office 2019 and Office 2016 
+### Office 2019 and Office 2016
 
 1. Press Windows logo key+X on your keyboard to open the quick action menu.
 2. Select Command Prompt (Admin).
@@ -99,7 +99,7 @@ This method requires that you have access to the DVD or ISO file that was used t
         :::image type="content" source="media/determine-office-license-type/determine-office-license-type-3.png" alt-text="ProPlus will have the letter R before WW. ":::
     For example, the installation file for Proplus retail is Proplus**r**WW.msi in the Proplus**r**WW folder. Proplus non-retail is ProplusWW.msi in the PlusplusWW.
 
-#### Method 2: Use the command line interface
+#### Method 2: Use the command-line interface
 
 1. Open an elevated Command Prompt window**
 
@@ -114,7 +114,7 @@ This method requires that you have access to the DVD or ISO file that was used t
    - **Windows 7**
 
      1. Select **Start**, and type **cmd**.
-     2. On the **Start** menu, right click **Command Prompt**, and then select **Run as administrator**.
+     2. On the **Start** menu, right-click **Command Prompt**, and then select **Run as administrator**.
      3. If a security prompt window is displayed, select **Allow**.
 2. Type the following command to navigate to the Office folder:
 
@@ -135,7 +135,7 @@ This method requires that you have access to the DVD or ISO file that was used t
 
 ### Volume licenses
 
-To determine the Office volume license type on a Mac, open an Office app (such as PowerPoint), select the name of the app in the menu, and then **About (app)**.
+To determine the Office volume license type on a Mac, open an Office app (such as PowerPoint), select the name of the app in the menu, and then select **About (app)**.
 
 :::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="Select the Office product name from the menu.":::
 
@@ -145,7 +145,7 @@ The license type will be listed below the Product ID.
 
 ### Subscription licenses
 
-To determine the Office subscription license type, open an open an Office app (such as PowerPoint), select the name of the app in the menu, and then **About (app)**.
+To determine the Office subscription license type, open an Office app (such as PowerPoint), select the name of the app in the menu, and then **About (app)**.
 
 :::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="The Volume License type will be displayed. ":::
 
@@ -159,6 +159,6 @@ The license type will be listed below the Product ID.
 
 For more information, see [Find details for other versions of Office](https://support.microsoft.com/office/find-details-for-other-versions-of-office-8e83dd74-3b83-4528-bda6-6ff6118f8293).
 
-To get support for your Microsoft product, you can go to the [Office product page](https://www.office.com/?auth=1), and log in to your My [Account panel](https://account.microsoft.com/services/). Within the panel, you can find your product details, support options, and information about any subscriptions that you have.
+To get support for your Microsoft product, go to the [Office product page](https://www.office.com/?auth=1), and log in to your [My Account panel](https://account.microsoft.com/services/). Within the panel, you can find your product details, support options, and information about any subscriptions that you have.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
