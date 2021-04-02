@@ -73,7 +73,7 @@ Disabling lock escalation is possible in SQL Server but is not the recommended m
 The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
 
 > [!NOTE]
-> When a 1204 error occurs, it stops the processing of the current statement and causes a rollback of the active transaction. The rollback itself may block users or lead to a long database recovery time if you restart the SQL Server service. You can add this trace flag (-T1211), using [SQL Server Configuration Manager](/sql/database-engine/configure-windows/scm-services-configure-server-startup-options).  
+> When a 1204 error occurs, it stops the processing of the current statement and causes a rollback of the active transaction. The rollback itself may block users or lead to a long database recovery time if you restart the SQL Server service. 
 >You must restart the SQL Server service for a new startup parameter to take effect. If you run the query `DBCC TRACEON (1211, -1)` the trace flag takes effect immediately.  
 > However, if you do not add the -T1211 startup parameter, the effect of a `DBCC TRACEON` command is lost when the SQL Server service is restarted. Turning on the trace flag prevents any future lock escalations, but it does not reverse any lock escalations that have already occurred in an active transaction.
 
