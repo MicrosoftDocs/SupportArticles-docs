@@ -24,27 +24,25 @@ _Original KB number:_ &nbsp; 224829
 
 This article describes the following TCP features in Windows:  
 
-- TCP Window Size
-- TCP Options Now Supported
-- Windows Scaling - RFC 1323
+- TCP window size
+- TCP options now supported
+- Windows scaling - RFC 1323
 - Timestamp - RFC 1323
 - Protection against Wrapped Sequence Numbers (PAWS)
 - Selective Acknowledgments (SACKS) - RFC 2018
-- TCP Retransmission Behavior and Fast Retransmit
+- TCP retransmission behavior and fast retransmit
 
 The TCP features can be changed by changing the entries in the registry.
 
-## More information
-
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
+> This following sections, methods, or tasks contain steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
 ### TCP window size
 
 The TCP receive window size is the amount of receive data (in bytes) that can be buffered during a connection. The sending host can send only that amount of data before it must wait for an acknowledgment and window update from the receiving host. The Windows TCP/IP stack is designed to self-tune itself in most environments, and uses larger default window sizes than earlier versions.
 
-Instead of using a hard-coded default receive window size; TCP adjusts to even increments of the maximum segment size (MSS), which is negotiated during connection setup. Adjusting the receive window to even increments of the MSS increases the percentage of full-sized TCP segments utilized during bulk data transmissions.
+Instead of using a hard-coded default receive window size, TCP adjusts to even increments of the maximum segment size (MSS). The MSS is negotiated during connection setup. Adjusting the receive window to even increments of the MSS increases the percentage of full-sized TCP segments used during bulk data transmissions.
 
 The receive window size is determined in the following manner:  
 
@@ -59,9 +57,9 @@ For Ethernet connections, the window size will normally be set to 17,520 bytes (
 
 In previous versions of Windows NT, the window size for an Ethernet connection was 8,760 bytes, or six 1460-byte segments.
 
-To set the receive window size to a specific value, add the TcpWindowSize value to the registry subkey specific to your version of Windows. To do this, follow these steps:  
+To set the receive window size to a specific value, add the TcpWindowSize value to the registry subkey specific to your version of Windows. To do so, follow these steps:  
 
-1. Click **Start**, click **Run**, type Regedit, and then click **OK**.
+1. Select **Start** > **Run**, type `Regedit`, and then select **OK**.
 2. Expand the registry subkey specific to your version of Windows:
     - For Windows 2000, expand the following subkey:
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces`
@@ -69,9 +67,9 @@ To set the receive window size to a specific value, add the TcpWindowSize value 
     - For Windows Server 2003, expand the following subkey:
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`  
 
-3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
+3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 4. Type TcpWindowSize in the **New Value** box, and then press Enter
-5. Click **Modify** on the **Edit** menu.
+5. Select **Modify** on the **Edit** menu.
 6. Type the desired window size in the **Value data** box.
 
     > [!NOTE]
@@ -96,17 +94,17 @@ The following list shows each TCP option kind, length, name, and description.
 Kind: 0  
 Length: 1  
 Option: End of Option List  
-Description: This is used when padding is needed for the last TCP option.  
+Description: Used when padding is needed for the last TCP option.  
 
 Kind: 1  
 Length: 1  
 Option: No Operation  
-Description: This is used when padding is needed and more TCP options follow within the same packet.
+Description: Used when padding is needed and more TCP options follow within the same packet.
 
 Kind: 2  
 Length: 4  
 Option: Maximum Segment Size  
-Description: This indicates the maximum size for a TCP segment that can be sent across the network.
+Description: Indicates the maximum size for a TCP segment that can be sent across the network.
 
 Kind: 3  
 Length: 3  
@@ -134,14 +132,14 @@ For more efficient use of high-bandwidth networks, a larger TCP window size may 
 
 Since the size field can't be expanded, a scaling factor is used. TCP window scale is an option used to increase the maximum window size from 65,535 bytes to 1 Gigabyte.
 
-The window scale option is used only during the TCP 3-way handshake. The window scale value represents the number of bits to left-shift the 16-bit window size field. The window scale value can be set from 0 (no shift) to 14.
+The window scale option is used only during the TCP three-way handshake. The window scale value represents the number of bits to left-shift the 16-bit window size field. The window scale value can be set from 0 (no shift) to 14.
 
 To calculate the true window size, multiply the window size by 2^S where S is the scale value.
 
 For Example:
 
 If the window size is 65,535 bytes with a window scale factor of 3.  
-True window size = 65535*2^3  
+True window size = 65535*2^three  
 True window size = 524280  
 
 The following Network Monitor trace shows how the window scale option is used:
@@ -171,9 +169,11 @@ TCP: Option Nop = 1 (0x1)
 TCP: Option Nop = 1 (0x1)  
 \+ TCP: SACK Permitted Option  
 
-It's important to note that the window size used in the actual three-way handshake is NOT the window size that is scaled. This is per RFC 1323 section 2.2, "The Window field in a SYN (for example, a [SYN] or [SYN,ACK]) segment itself is never scaled."
+The window size used in the actual three-way handshake isn't the window size that's scaled. This statement is per RFC 1323 section 2.2:
 
-This means that the first data packet sent after the three-way handshake is the actual window size. If there is a scaling factor, the initial window size of 65,535 bytes is always used. The window size is then multiplied by the scaling factor identified in the three-way handshake. The table below represents the scaling factor boundaries for various window sizes.
+"The Window field in a SYN (for example, a [SYN] or [SYN,ACK]) segment itself is never scaled."
+
+It means that the first data packet sent after the three-way handshake is the actual window size. If there's a scaling factor, the initial window size of 65,535 bytes is always used. The window size is then multiplied by the scaling factor identified in the three-way handshake. The table below represents the scaling factor boundaries for various window sizes.
 
 |Scale Factor|Scale Value|Initial Window|Window Scaled|
 |---|---|---|---|
@@ -196,37 +196,37 @@ This means that the first data packet sent after the three-way handshake is the 
 
 For Example:
 
-If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the 3-way handshake is 13, because a scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
+If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the three-way handshake is 13. Because a scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
 
 The initial window size in this example would be calculated as follows:  
 65,535 bytes with a window scale factor of 13.  
 True window size = 65535*2^13  
 True window size = 536,862,720  
 
-When the value for window size is added to the registry and its size is larger than the default value, Windows attempts to use a scale value that accommodates the new window size.
+When the value for window size is added to the registry, and its size is larger than the default value, Windows attempts to use a scale value that accommodates the new window size.
 
 The Tcp1323Opts value in the following registry key can be added to control scaling windows and timestamp:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters`
 
-1. On the toolbar click Start, click Run, and then type Regedit to start the Registry Editor.
-2. In the Registry Editor, click Edit, point to New, and then click DWORD Value.
-3. In the New Value box, type Tcp1323Opts, press ENTER, and then on the Edit menu, click Modify.  
+1. On the toolbar, select **Start** > **Run**, and then type `Regedit` to start the Registry Editor.
+2. In the Registry Editor, select **Edit**, point to **New**, and then select **DWORD Value**.
+3. In the New Value box, type `Tcp1323Opts`, press ENTER, and then on the **Edit** menu, select **Modify**.  
 
     > [!NOTE]
-    > The valid range is 0,1,2 or 3 where:  
+    > The valid range is 0, 1, 2 or 3 where:  
     0 (disable RFC 1323 options)  
     1 (window scale enabled only)  
     2 (timestamps enabled only)  
     3 (both options enabled)  
 
-This registry entry controls RFC 1323 timestamps and window scaling options. Timestamps and Window scaling are enabled by default, but can be manipulated with flag bits. Bit 0 controls window scaling, and bit 1 controls timestamps.
+This registry entry controls RFC 1323 timestamps and window scaling options. Timestamps and Window scaling are enabled by default, but can be manipulated with flag bits. Bit **0** controls window scaling. Bit **1** controls timestamps.
 
 ### Timestamps
 
-Previously, the TCP/IP stack used one sample per window of data sent to calculate the round trip time (RTT). A timer (retransmit timer) was set when the packet was sent, until the acknowledgment was received. For example, if the window size was 64,240 bytes (44 full segments) on an Ethernet network, only one of every 44 packets were used to recalculate the round trip time. With a maximum window size of 65,535 bytes, this sampling rate was sufficient. Using window scaling, and a maximum window size of 1 Gigabyte, this RTT sampling rate isn't sufficient.
+Previously, the TCP/IP stack used one sample per window of data sent to calculate the round-trip time (RTT). A timer (retransmit timer) was set when the packet was sent, until the acknowledgment was received. For example, if the window size was 64,240 bytes (44 full segments) on an Ethernet network, only one of every 44 packets were used to recalculate the round-trip time. With a maximum window size of 65,535 bytes, this sampling rate was sufficient. Using window scaling, and a maximum window size of 1 Gigabyte, this RTT sampling rate isn't sufficient.
 
-The TCP Timestamp option can now be set to be used on segments (data and ACK) deemed appropriate by the stack, to perform operations such as RTT computation, PAWS check, and so on. Using this data, the RTT can be accurately calculated with large window sizes. RTT is used to calculate retransmission intervals. Accurate RTT and retransmission timeouts are needed for optimum throughput.
+The TCP Timestamp option can now be used on segments (data and ACK) deemed appropriate by the stack, to perform operations such as RTT computation, PAWS check, and so on. Using this data, the RTT can be accurately calculated with large window sizes. RTT is used to calculate retransmission intervals. Accurate RTT and retransmission timeouts are needed for optimum throughput.
 
 When TCP time stamp is used in a TCP session, the originator of the session sends the option in its first packet of the TCP three-way handshake (SYN packet). Either side can then use the TCP option during the session.
 
@@ -244,11 +244,11 @@ TCP: Option Length = 10 (0xA)
 TCP: Timestamp = 2525186 (0x268802)  
 TCP: Reply Timestamp = 1823192 (0x1BD1D8)  
 
-### Protection against Wrapped Sequence Numbers (PAWS)
+## Protection against Wrapped Sequence Numbers (PAWS)
 
-The TCP sequence number field is limited to 32 bits, which limits the number of sequence numbers available. With high capacity networks and a large data transfer, it's possible to wrap sequence numbers before a packet traverses the network. If sending data on a one Giga-byte per second (Gbps) network, the sequence numbers could wrap in as little as 34 seconds. If a packet is delayed, a different packet could potentially exist with the same sequence number. To avoid confusion in the event of duplicate sequence numbers, the TCP timestamp is used as an extension to the sequence number. Packets have current and progressing time stamps. An old packet has an older time stamp and is discarded.
+The TCP sequence number field is limited to 32 bits, which limits the number of sequence numbers available. With high capacity networks and a large data transfer, it's possible to wrap sequence numbers before a packet traverses the network. If sending data on a one Giga-byte per second (Gbps) network, the sequence numbers could wrap in as little as 34 seconds. If a packet is delayed, a different packet could potentially exist with the same sequence number. To avoid confusion of duplicate sequence numbers, the TCP timestamp is used as an extension to the sequence number. Packets have current and progressing time stamps. An old packet has an older time stamp and is discarded.
 
-### Selective Acknowledgments (SACKs)
+## Selective Acknowledgments (SACKs)
 
 Windows introduces support for a performance feature known as Selective Acknowledgment, or SACK. SACK is especially important for connections that use large TCP window sizes. Prior to SACK, a receiver could only acknowledge the latest sequence number of a contiguous data stream that had been received, or the "left edge" of the receive window. With SACK enabled, the receiver continues to use the ACK number to acknowledge the left edge of the receive window, but it can also acknowledge other blocks of received data individually. SACK uses TCP header options, as shown below.
 
@@ -256,9 +256,9 @@ SACK uses two types of TCP Options.
 
 The TCP Sack-Permitted Option is used only in a SYN packet (during the TCP connection establishment) to indicate that it can do selective ACK.
 
-The second TCP option, TCP Sack Option, contains acknowledgment for one or more blocks of data. The data blocks are identified using the sequence number at the start and at the end of that block of data. This is also known as the left and right edge of the block of data.
+The second TCP option, TCP Sack Option, contains acknowledgment for one or more blocks of data. The data blocks are identified using the sequence number at the start and at the end of that block of data. It's also known as the left and right edge of the block of data.
 
-Kind 4 is TCP Sack-Permitted Option, Kind 5 is TCP Sack Option. Length is the length in bytes of this TCP option.
+Kind 4 is TCP Sack-Permitted Option. Kind 5 is TCP Sack Option. Length is the length in bytes of this TCP option.
 
 Tcp SACK Permitted:
 
@@ -274,14 +274,14 @@ Tcp SACK Option:
 |1 byte|Left edge of first block to Right edge of first block<br/>...<br/>Left edge of Nth block to Right edge of Nth block|
 |||
 
-With SACK enabled (default), a packet or series of packets can be dropped, and the receiver informs the sender which data has been received, and where there may be "holes" in the data. The sender can then selectively retransmit the missing data without a retransmission of blocks of data that have already been received successfully. SACK is controlled by the SackOpts registry parameter.
+With SACK enabled (default), a packet or series of packets can be dropped. The receiver informs the sender which data has been received, and where there may be "holes" in the data. The sender can then selectively retransmit the missing data without a retransmission of blocks of data that have already been received successfully. SACK is controlled by the SackOpts registry parameter.
 
 The SackOpts value in the following registry key can be edited to control the use of selective acknowledgments:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
-1. On the toolbar click Start, click Run, and then type Regedit to start the Registry Editor.
-2. Locate and click the above key in the Registry Editor, and then click Modify on the Edit menu.
+1. On the toolbar select **Start** > **Run**, and then type `Regedit` to start the Registry Editor.
+2. Locate and click the above key in the Registry Editor, and then select **Modify** on the Edit menu.
 3. Type the desired value in the Value data box.  
 
 > [!NOTE]
@@ -322,16 +322,21 @@ The retransmission timeout (RTO) is adjusted continuously to match the character
 
 Fast Retransmit
 
-TCP retransmits data before the retransmission timer expires under some circumstances. The most common of these occur due to a feature known as fast retransmit. When a receiver that supports fast retransmits receives data with a sequence number beyond the current expected one, and then it is likely that some data was dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do this for each additional TCP segment that arrives. When the sender starts to receive a stream of ACKs that is acknowledging the same sequence number, it is likely that a segment has been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
+TCP retransmits data before the retransmission timer expires under some circumstances. The most common of these occur because of a feature known as fast retransmit. When a receiver that supports fast retransmits receives data with a sequence number beyond the current expected one, it's likely that some data was dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do this for each additional TCP segment that arrives. When the sender starts to receive a stream of ACKs that's acknowledging the same sequence number, it's likely that a segment has been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
 
-By default, Windows resends a segment if it receives three ACKs for the same sequence number (one ACK and two duplicates) and that sequence number lags the current one. This is controllable with the TcpMaxDupAcks registry parameter.
+By default, Windows resends a segment if:
+
+- It receives three ACKs for the same sequence number: one ACK and two duplicates.
+- That sequence number lags the current one.
+
+This process is controllable with the TcpMaxDupAcks registry parameter.
 
 The TcpMaxDupAcks value in the following registry key can be edited to control the number of ACKs necessary to start a fast retransmits:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
-1. On the toolbar click Start, click Run, and then type Regedit to start the Registry Editor.
-2. Locate and click the above key in the Registry Editor, and then click Modify on the Edit menu.
+1. On the toolbar, select **Start** > **Run**, and then type `Regedit` to start the Registry Editor.
+2. Locate and click the above key in the Registry Editor, and then select **Modify** on the Edit menu.
 3. Type the desired value in the Value data box.  
 
 > [!NOTE]
