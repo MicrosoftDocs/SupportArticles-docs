@@ -149,7 +149,7 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
 
 The following roles are not supported on Microsoft Azure Virtual Machines:
 
-- Dynamic Host Configuration Protocol Server
+- Dynamic Host Configuration Protocol Server (not supported for use on a NIC directly connected to an Azure VNet, but it is supported on internal networks used in nested virtualization scenarios)
 - Hyper-V (Hyper-V role is supported in Azure Ev3, and Dv3 series VMs only)
 - Rights Management Services
 - Windows Deployment Services
