@@ -53,6 +53,12 @@ Add-MailboxDatabaseCopy DB01 -MailboxServer Contoso-E16B -ConfigurationOnly
 
 This cmdlet adds a copy of the mailbox database without invoking automatic seeding. In this example, a copy of mailbox database DB01 is added to mailbox server Contoso-E16B.
 
+Next, run the following cmdlet to suspend the copy of the database on the target server to be able to allow the seeding of the copy:
+
+```powershell
+Suspend-MailboxDatabaseCopy -Identity DB01\Contoso-E16B
+```
+
 Next, run the following cmdlet to seed a copy of the database on the target mailbox server:
 
 ```powershell
