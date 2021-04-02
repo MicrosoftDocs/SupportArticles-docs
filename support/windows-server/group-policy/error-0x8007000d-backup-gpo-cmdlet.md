@@ -17,6 +17,8 @@ ms.technology: windows-server-group-policy
 
 On a computer that is running Windows Server 2016 or Windows Server 2019 Core edition and has the Group Policy Management Console (GPMC) feature installed, you can't use the `Backup-GPO` PowerShell CmdLet to back up a group policy that contains folder redirection settings.
 
+_Applies to:_ &nbsp; Windows Server 2016 Core edition, Windows Server 2019 Core edition
+
 ## PowerShell output example
 
 This result appears in the PowerShell window:
@@ -34,6 +36,7 @@ At line:1 char:1
 ```
 
 > [!Note]
+>
 > - The error code **0x8007000D** stands for **ERROR_INVALID_DATA**.
 > - The issue doesn't occurs when you run this command on a Windows Server 2016 or Windows Server 2019 Desktop version.
 
@@ -42,11 +45,11 @@ At line:1 char:1
 This issue is a known issue. Some modules aren't present by default in Windows Server Core editions.
 
 During the backup process, the system checks settings related to the type of policy found. On Windows Server Core version, a Client-Side Extension (CSE) related library used for Folder Redirection policies isn't present. This causes a COM Exception.
- 
+
 ## How to work around this issue
- 
+
 Here are three workarounds:
- 
+
 - Run group policy backups on Desktop version of Windows Server 2016 or Windows Server 2019.
 - Run group policy backups remotely from Windows 10 workstation with Remote Service Administration Tools (RSAT) installed for GPMC.
 - Run the `wbadmin` application with the `systemstatebackup` option instead. This backup includes both Active Directory database and sysvol folder content.
