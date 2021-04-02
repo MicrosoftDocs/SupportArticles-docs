@@ -82,7 +82,7 @@ Using a lock hint such as ROWLOCK only alters the initial lock plan. Lock hints 
 ## Lock Escalation Thresholds
 
 Lock escalation may occur under one of two conditions:
-1. **Memory threshold is reached** A  memory threshold of 40 percent of lock memory is reached. When lock memory exceeds 24 percent of buffer pool a lock escalation may be triggered. Lock memory is limited to 60 percent of visible buffer pool. Lock escalation threshold is set at 40% of the lock memory, which is 40 percent of 60 percent of the buffer pool, which is 24%. If lock memory exceeds the 60 percent limit (this is much more possible, if lock escalation is disabled), all attempts to allocate additional locks fail and `1204` errors are generated.
+1. **Memory threshold is reached** A  memory threshold of 40% of lock memory is reached. When lock memory exceeds 24% of buffer pool a lock escalation may be triggered. Lock memory is limited to 60% of visible buffer pool. Lock escalation threshold is set at 40% of the lock memory, which is 40% of 60% of the buffer pool, which is 24%. If lock memory exceeds the 60% limit (this is much more likely if lock escalation is disabled), all attempts to allocate additional locks fail and `1204` errors are generated.
 
 1. **A lock threshold is reached** After memory threshold is checked, the number of locks acquired on the current object is assessed. If the number has exceeded 5000, a lock escalation is triggered.
 
