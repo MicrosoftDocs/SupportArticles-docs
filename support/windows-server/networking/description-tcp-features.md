@@ -59,7 +59,7 @@ In previous versions of Windows NT, the window size for an Ethernet connection w
 
 To set the receive window size to a specific value, add the TcpWindowSize value to the registry subkey specific to your version of Windows. To do so, follow these steps:  
 
-1. Select **Start** > **Run**, type `Regedit`, and then select **OK**.
+1. Select **Start** > **Run**, type *`Regedit`*, and then select **OK**.
 2. Expand the registry subkey specific to your version of Windows:
     - For Windows 2000, expand the following subkey:
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces`
@@ -68,7 +68,7 @@ To set the receive window size to a specific value, add the TcpWindowSize value 
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`  
 
 3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-4. Type TcpWindowSize in the **New Value** box, and then press Enter
+4. Type *`TcpWindowSize`* in the **New Value** box, and then press Enter
 5. Select **Modify** on the **Edit** menu.
 6. Type the desired window size in the **Value data** box.
 
@@ -139,7 +139,8 @@ To calculate the true window size, multiply the window size by 2^S where S is th
 For Example:
 
 If the window size is 65,535 bytes with a window scale factor of 3.  
-True window size = 65535*2^three  
+True window size = 65535*2^three
+
 True window size = 524280  
 
 The following Network Monitor trace shows how the window scale option is used:
@@ -209,9 +210,9 @@ The Tcp1323Opts value in the following registry key can be added to control scal
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters`
 
-1. On the toolbar, select **Start** > **Run**, and then type `Regedit` to start the Registry Editor.
+1. On the toolbar, select **Start** > **Run**, and then type *`Regedit`* to start the Registry Editor.
 2. In the Registry Editor, select **Edit**, point to **New**, and then select **DWORD Value**.
-3. In the New Value box, type `Tcp1323Opts`, press ENTER, and then on the **Edit** menu, select **Modify**.  
+3. In the New Value box, type *`Tcp1323Opts`*, press ENTER, and then on the **Edit** menu, select **Modify**.  
 
     > [!NOTE]
     > The valid range is 0, 1, 2 or 3 where:  
@@ -226,7 +227,7 @@ This registry entry controls RFC 1323 timestamps and window scaling options. Tim
 
 Previously, the TCP/IP stack used one sample per window of data sent to calculate the round-trip time (RTT). A timer (retransmit timer) was set when the packet was sent, until the acknowledgment was received. For example, if the window size was 64,240 bytes (44 full segments) on an Ethernet network, only one of every 44 packets were used to recalculate the round-trip time. With a maximum window size of 65,535 bytes, this sampling rate was sufficient. Using window scaling, and a maximum window size of 1 Gigabyte, this RTT sampling rate isn't sufficient.
 
-The TCP Timestamp option can now be used on segments (data and ACK) deemed appropriate by the stack, to perform operations such as:
+The TCP Timestamp option can now be used on segments (data and ACK) considered appropriate by the stack, to do operations such as:
 
 - RTT computation
 - PAWS check
@@ -285,9 +286,9 @@ The SackOpts value in the following registry key can be edited to control the us
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
-1. On the toolbar select **Start** > **Run**, and then type `Regedit` to start the Registry Editor.
-2. Locate and click the above key in the Registry Editor, and then select **Modify** on the Edit menu.
-3. Type the desired value in the Value data box.  
+1. On the toolbar select **Start** > **Run**, and then type *`Regedit`* to start the Registry Editor.
+2. Locate and click the above key in the Registry Editor, and then select **Modify** on the **Edit** menu.
+3. Type the desired value in the **Value data** box.  
 
 > [!NOTE]
 > The valid binary value is 0 or 1, the default value is 1. This parameter controls whether or not Selective ACK (SACK - RFC 2018) support is enabled.
@@ -340,9 +341,9 @@ The TcpMaxDupAcks value in the following registry key can be edited to control t
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
-1. On the toolbar, select **Start** > **Run**, and then type `Regedit` to start the Registry Editor.
-2. Locate and click the above key in the Registry Editor, and then select **Modify** on the Edit menu.
-3. Type the desired value in the Value data box.  
+1. On the toolbar, select **Start** > **Run**, and then type *`Regedit`* to start the Registry Editor.
+2. Locate and click the above key in the Registry Editor, and then select **Modify** on the **Edit** menu.
+3. Type the desired value in the **Value data** box.  
 
 > [!NOTE]
 > The valid range is 1-3, the default value is 2.

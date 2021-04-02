@@ -106,10 +106,6 @@ To do so, follow these steps:
 > [!NOTE]
 > We don't recommend this workaround because the permissions are reapplied during Group Policy updates. However, you have to fix the incorrect security only one time after the upgrade.
 
-## Status
-
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.  
-
 ## More information
 
 For more information about the `runas` command, visit the following Microsoft TechNet Web site:
