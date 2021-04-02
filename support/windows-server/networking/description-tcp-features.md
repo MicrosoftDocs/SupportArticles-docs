@@ -53,7 +53,7 @@ The receive window size is determined in the following manner:
 > [!NOTE]
 > See the "Windows scaling" section.
 
-For Ethernet connections, the window size will normally be set to 17,520 bytes (16K rounded up to twelve 1460-byte segments). The window size may decrease when a connection is established to a computer that supports extended TCP head options, such as Selective Acknowledgments (SACKS) and Timestamps. These two options increase the TCP header size to more than 20 bytes, which results in less room for data.
+For Ethernet connections, the window size will normally be set to 17,520 bytes (16K rounded up to twelve 1460-byte segments). The window size may reduce when a connection is established to a computer that supports extended TCP head options, such as Selective Acknowledgments (SACKS) and Timestamps. These two options increase the TCP header size to more than 20 bytes, which results in less room for data.
 
 In previous versions of Windows NT, the window size for an Ethernet connection was 8,760 bytes, or six 1460-byte segments.
 
