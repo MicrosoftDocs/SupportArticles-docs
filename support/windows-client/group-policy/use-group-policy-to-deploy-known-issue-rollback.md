@@ -7,11 +7,11 @@ ms.author: v-tea
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: node removed from the cluster
-ms.technology: high-availability
+ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.technology: windows-client-group-policy
 keywords: Windows Update, known issue, kir, group policy
 ---
 
@@ -35,7 +35,7 @@ Microsoft provides KIR policy definition MSI files for enterprises, so that they
 When Microsoft determines that a non-security update has a critical regression or similar issue, Microsoft generates a KIR. Microsoft announces the KIR in the Windows Health Dashboard, and adds the information to the following locations:
 
 - The Known Issues section of the applicable Windows Update KB article.
-- The Known Issues list for the affected versions of Windows (for example, [Windows 10, version 20H2 and Windows Server, version 20H2](./windows/release-health/status-windows-10-20h2#known-issues)).
+- The Known Issues list for the affected versions of Windows (for example, [Windows 10, version 20H2 and Windows Server, version 20H2](/windows/release-health/status-windows-10-20h2#known-issues)).
 
 For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is needed. For enterprise customers, Microsoft provides a policy definition MSI file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
 
@@ -85,7 +85,7 @@ You can apply a KIR policy definition to your on-premises AD DS-managed or AAD-m
 1. Right-click your domain name, and then select **Create a GPO in this domain, and link it here**.
 1. Enter the name of the new GPO (for example, **KIR Issue *XXX***), and then select **OK**.  
 
-For more information about creating GPOs, see [Create a Group Policy Object](./windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
+For more information about creating GPOs, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
 
 ### <a id="wmi"></a>3. Create and configure a WMI filter that applies the GPO
 
@@ -149,6 +149,6 @@ To speed this process along, you might run `gpupdate` on affected devices to man
 - [Working with the Administrative Template policy settings using the Local Group Policy Editor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11))
 - [Group Policy Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831791(v=ws.11))
 - [GPMC How To](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc783034(v=ws.10))
-- [Create WMI Filters for the GPO (Windows 10) - Windows security](/.windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo)
+- [Create WMI Filters for the GPO (Windows 10) - Windows security](/windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo)
 - [Edit a Group Policy object from GPMC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10))
-- [Create and manage group policy in Azure AD Domain Services](./azure/active-directory-domain-services/manage-group-policy)
+- [Create and manage group policy in Azure AD Domain Services](/azure/active-directory-domain-services/manage-group-policy)
