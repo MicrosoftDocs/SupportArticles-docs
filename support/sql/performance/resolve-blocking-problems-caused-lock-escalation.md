@@ -63,7 +63,7 @@ The simplest and safest way to prevent lock escalation is to keep transactions s
 
   This query acquires and holds an IX lock on mytable for one hour, which prevents lock escalation on the table during that time. This batch does not modify any data or block other queries (unless the other query forces a table lock with the TABLOCK hint or if an administrator has disabled page or row locks by using an `sp_indexoption` stored procedure).
 
-## Disable Lock Escalation 
+## Disable lock escalation 
 
 Disabling lock escalation is possible in SQL Server but is not the recommended method. Use the prevention strategies described in the [Prevent Lock Escalation](#prevent-lock-escalation) section, instead. 
 - **Table level:** You can disable lock escalation at the table level. See [`ALTER TABLE ... SET (LOCK_ESCALATION = DISABLE)`](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql). To determine which table to target, examine the T-SQL queries. If that is not possible, use [Extended events](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server), enable _lock_escalation_ event and examine the _object_id_ column. Alternatively use the [Lock:Escalation event](https://docs.microsoft.com/sql/relational-databases/event-classes/lock-escalation-event-class) and examine the ObjectID2 column with SQL Profiler.
