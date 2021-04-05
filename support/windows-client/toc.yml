@@ -446,6 +446,8 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: Use Group Policy to deploy a Known Issue Rollback
+      href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
   items:
   - name: High Availability
