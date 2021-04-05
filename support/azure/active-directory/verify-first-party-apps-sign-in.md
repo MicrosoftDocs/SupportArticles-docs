@@ -59,7 +59,7 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 The following table lists some, but not all, application IDs for commonly used Microsoft applications.  
 
-|Application Name|Application ID|
+|Application Name|Application IDs|
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
