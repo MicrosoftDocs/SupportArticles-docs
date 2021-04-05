@@ -23,19 +23,22 @@ _Applies to:_ &nbsp; Windows 10, version 1809 and newer versions
 
 ## Summary
 
-Microsoft has developed a new Windows servicing technology called [KIR](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831). A KIR rolls back a specific change that was applied as part of a non-security Windows Update release, instead of rolling back the entire update.
+Microsoft has developed a new Windows servicing technology called [KIR](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831). For the supported versions of Windows, a KIR rolls back a specific change that was applied as part of a non-security Windows Update release. All other changes that were made as a part of that release remain intact. Using this technology, if a Windows update causes a regression or other problem, you don't have to roll back the entire update. You roll back only the change that caused the problem. This roll back is temporary. After Microsoft releases a new update that fixes the problem, the rollback is no longer needed.
 
 > [!IMPORTANT]  
-> KIRs only apply to non-security updates, where rolling back fixes doesn't create a potential vulnerabilities.
+> KIRs only apply to non-security updates, where rolling back fixes doesn't create a potential security vulnerability.
 
 Microsoft provides KIR policy definition MSI files for enterprises, so that they can use Group Policy to deploy KIRs in an Azure Active Directory (AAD) or Active Directory Domain Services (AD DS) domains.
+
+> [!NOTE]  
+> The affected computers have to restart in order to apply this Group Policy change.
 
 ## The KIR process
 
 When Microsoft determines that a non-security update has a critical regression or similar issue, Microsoft generates a KIR. Microsoft announces the KIR in the Windows Health Dashboard, and adds the information to the following locations:
 
 - The Known Issues section of the applicable Windows Update KB article.
-- The Known Issues list for the affected versions of Windows (for example, [Windows 10, version 20H2 and Windows Server, version 20H2](/windows/release-health/status-windows-10-20h2#known-issues)).
+- The Known Issues list on the Windows Health Release Dashboard at https://aka.ms/windowsreleasehealth for the affected versions of Windows (for example, [Windows 10, version 20H2 and Windows Server, version 20H2](/windows/release-health/status-windows-10-20h2#known-issues)).
 
 For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is needed. For enterprise customers, Microsoft provides a policy definition MSI file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
 
@@ -54,7 +57,7 @@ To use Group Policy to apply a KIR to a single device, follow these steps:
 1. Open the Local Group Policy Editor. To do this, select **Start** and then enter **gpedit.msc**.
 1. Select **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **KB&nbsp;*#######* Issue *XXX* Rollback** > **Windows 10, version *YYMM***.
    > [!NOTE]  
-   > In this step, *#######* is the KB article number, *XXX* is the issue number, and *YYMM* is the Windows 10 version number.
+   > In this step, *#######* is the KB article number of the update that caused the problem.*XXX* is the issue number, and *YYMM* is the Windows 10 version number.
 1. Right-click the policy, select **Edit**, select **Disabled**, and then select **OK**.
 1. Restart the device.
 
