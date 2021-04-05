@@ -69,7 +69,7 @@ The following table lists some, but not all, application IDs for commonly used M
 |Common Data Service|00000007-0000-0000-c000-000000000000|
 |CRM Power BI Integration|e64aa8bc-8eb4-40e2-898b-cf261a25954f|
 |Microsoft App Access Panel|0000000c-0000-0000-c000-000000000000|
-|Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74|
+|Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
 |Microsoft Cloud App Security|3090ab82-f1c1-4cdf-af2c-5d7a6f3e2cc7|
 |Microsoft Docs|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
