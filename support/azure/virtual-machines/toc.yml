@@ -425,7 +425,7 @@
     - name: Overview
       href: /azure/virtual-machines/windows/disk-encryption-overview
     - name: Troubleshoot
-      href: /virtual-machines/windows/disk-encryption-troubleshooting
+      href: /azure/virtual-machines/windows/disk-encryption-troubleshooting
     - name: FAQ
       href: /azure/virtual-machines/windows/disk-encryption-faq
   - name: Linux
