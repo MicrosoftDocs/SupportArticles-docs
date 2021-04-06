@@ -9,7 +9,10 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 144604
+- CI 147050
 ms.author: v-matham
 appliesto:
 - SharePoint Online
@@ -41,7 +44,7 @@ If the homepage isn't in the recycle bin or site collection recycle bin, do eith
 1. Go to the Site Pages library.
 
    Example Site Pages library URL:
-   https://contoso.sharepoint.com/SitePages/Forms/ByAuthor.aspx
+   `https://contoso.sharepoint.com/SitePages/Forms/ByAuthor.aspx`
 
 1. Select the three vertical dots after the name of the page that you want to use as the homepage.
 1. Select **Make homepage**.
@@ -49,7 +52,7 @@ If the homepage isn't in the recycle bin or site collection recycle bin, do eith
 **Create a new homepage**
 
 1. Go to the Site Pages library.
-1. select **New** > **Site page**.
+1. Select **New** > **Site page**.
 1. Enter the page content.
 1. Select **Save as draft** > **Publish**.
 1. Go back to the Site Pages library, and select the three vertical dots after the page name.
