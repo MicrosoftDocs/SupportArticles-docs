@@ -170,3 +170,7 @@ In this screenshot, you can see the following information:
 - A few seconds later, a new process (PID 5181) was started.
 
 If you try to access the site by using `curl localhost`, you should see that the ASP.NET Core application is still responding.
+
+## Next steps
+
+[Configuring the ASP.NET Core application in Linux to start automatically under a different user](2-3-1-configure-aspnet-core-application-start-automatically.md).
