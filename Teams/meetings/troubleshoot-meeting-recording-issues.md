@@ -24,6 +24,9 @@ You experience one of the following issues in Microsoft Teams:
 - The meeting recording button is missing.
 - The meeting recording link isn't included or visible in a chat window.
 
+You may diagnose the issue to see if this is a problem with your account by running the Teams Meeting Recording Test at https://aka.ms/MRCA-TMR. 
+This test verifies if your account meets all requirements to record a meeting in Teams, if the issue persists please continue to follow the information below.
+
 To troubleshoot the issue, begin by asking your administrator to run the [Meeting Recording Support Diagnostic](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-for-teams-meeting-recording/ba-p/1918982) that's available in the Microsoft 365 admin center.
 
 The diagnostic can check the following prerequisites for Teams meeting recordings:
