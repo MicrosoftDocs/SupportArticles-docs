@@ -2,6 +2,14 @@
 
 
 
+## Week of March 29, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/29/2021 | [Outlook.exe.log in %Temp% consumes too much disk space](/outlook/troubleshoot/performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space) | modified |
+
+
 ## Week of March 22, 2021
 
 
