@@ -26,7 +26,7 @@ Microsoft Dynamics 365 App for Outlook was unable to connect to the authorizatio
 
 Cause 2
 
-This issue can occur if your Dynamics 365 (online) URL was changed after the Dynamics 365 App for Outlook was installed. For example: If your Dynamics 365 URL was <https://contosocorp.crm.dynamics.com> when you deployed the app but you changed the URL to <https://contoso.crm.dynamics.com> later.
+This issue can occur if your Dynamics 365 (online) URL was changed after the Dynamics 365 App for Outlook was installed. For example: If your Dynamics 365 URL was <`https://contosocorp.crm.dynamics.com`> when you deployed the app but you changed the URL to <`https://contoso.crm.dynamics.com`> later.
 
 ## Resolution
 

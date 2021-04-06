@@ -133,7 +133,7 @@ When RDL Sandboxing is enabled, only certain classes and methods can be used in 
    - SYD
    - ToString
 
-7. Microsoft.VisualBasic.Conversion (For more information, see [Conversion](/dotnet/api/system.dbnull/dotnet/api/microsoft.visualbasic.conversion))
+7. Microsoft.VisualBasic.Conversion (For more information, see [Conversion](/dotnet/api/microsoft.visualbasic.conversion))
 
    - CTypeDynamic
    - Hex

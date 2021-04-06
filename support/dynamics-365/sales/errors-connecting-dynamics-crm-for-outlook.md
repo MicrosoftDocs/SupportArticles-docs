@@ -32,4 +32,4 @@ To fix this issue, see the following articles:
 
 ## More information
 
-If you are still encountering issues connecting CRM for Outlook to your CRM Online organization, run the [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) to diagnose and fix the problem.
+If you are still encountering issues connecting CRM for Outlook to your CRM Online organization, run the [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) to diagnose and fix the problem.
