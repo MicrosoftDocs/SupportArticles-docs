@@ -37,7 +37,7 @@ Follow the steps below to remove the incomplete CRM data file in Outlook:
 7. Close the **Data Files** dialog.
 8. Attempt to configure CRM for Outlook again.
 
-If you still meet issues installing, enabling, or connecting CRM for Outlook with a CRM Online organization, run the [Microsoft Support and Recovery Assistant](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+If you still meet issues installing, enabling, or connecting CRM for Outlook with a CRM Online organization, run the [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant).
 
 ## More information
 
