@@ -1,11 +1,11 @@
 ---
 title: HTTP error 401.1 with pre-authentication headers
-description: Describes an unexpected 401.1 status returned when you use Pre-Authentication headers with Internet Explorer and Internet Information Services.
+description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and Internet Information Services (IIS).
 ms.date: 04/03/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: bretb, mlaing
 ---
-# An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and Internet Information Services
+# An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS
 
 This article resolves the problem where an unexpected 401.1 status is returned with Pre-Authentication headers. It occurs when you use Internet Explorer to browser to a web application hosted on Internet Information Services (IIS).
 
@@ -76,7 +76,7 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
 
 ## More information
 
-To determine if the prompt is caused by the issue described in this article, use the Fiddler tool. This tool can view the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer. You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The below example uses Internet Explorer 9 to illustrate this behavior:
+To determine if the prompt is caused by the issue described in this article, use the Fiddler tool. Use the tool to view the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer. You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The following example uses Internet Explorer 9 to illustrate this behavior:
 
 1. Start the Fiddler Tool and enable traffic capture.
 2. Browse to the IIS web application such that it will result in the prompt for credentials.
