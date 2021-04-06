@@ -1,6 +1,6 @@
 ---
 title: COM and .NET errors after Office architecture migration
-description: Describes an issue where you might encounter an error when COM or .NET is used, after migrating Office to 64-bit architecture.
+description: Describes an issue where you might get an error when COM or .NET is used, after migrating Office to 64-bit architecture.
 author: v-matham
 manager: dcscontentpm
 localization_priority: Normal
@@ -53,7 +53,7 @@ You can run the scripts found at the following GitHub location to detect and rem
 
 [Office TypeLib Remediation](https://github.com/bobclements-msft/Office-TypeLib-Remediation)
 
-You can also check for orphaned entries manually. The effected device might have orphaned subkeys like the following: 
+You can also check for orphaned entries manually. The affected device might have orphaned subkeys like the following:
 
 *:::no-loc text="HKEY_CLASSES_ROOT\WOW6432Node\TypeLib\GUID\1.9\0\Win32":::* (where ":::no-loc text="GUID":::" is a string specific to the subkey)
 
