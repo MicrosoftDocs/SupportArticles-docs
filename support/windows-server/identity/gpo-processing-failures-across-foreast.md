@@ -13,6 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
 ms.technology: windows-server-active-directory
 ---
+
 # Troubleshoot Group Policy object processing failures that occur across multiple forests
 
 This article describes how to troubleshoot Group Policy object (GPO) processing failures that occur across multiple forests.

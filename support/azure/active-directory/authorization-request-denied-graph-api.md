@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 3004133
 
 ## Symptoms
 
-If you try to change the password of a Microsoft Azure Active Directory (Azure AD) user, and if the **Organizational Role**  setting for that user is set to any "Administrator" option, the process fails and generates the following error message:
+You try to change the password of a Microsoft Azure Active Directory (Azure AD) user. If the **Organizational Role** setting for that user is set to any "Administrator" option, the process fails. It generates the following error message:
 
 > {"odata.error":{"code":"Authorization_RequestDenied","message":{"lang":"en","value":"Insufficient privileges to complete the operation." }} }
 
-When you give the **Read and write directory data** permission to your application or Application Service Principal, you enable the application to change the password of a typical Azure AD user by using Graph API. This setting is shown in the following screenshot.
+When you give the **Read and write directory data** permission to your application or Application Service Principal, the application can change the password of a typical Azure AD user by using Graph API. This setting is shown in the following screenshot.
 
 :::image type="content" source="media/authorization-requestdenied-change-password-graph-api/3004143.png" alt-text="screenshot of permissions.":::
 
@@ -28,17 +28,17 @@ You can delegate an Azure AD user as an administrator by changing the user's **O
 
 ## Cause
 
-This problem occurs because the users who have any of the **Administrator** organizational roles are not members of **Company Administrator** or **User Account Administrator** in the Office 365 administrative roles.
+This problem occurs because the users who have any of the **Administrator** organizational roles aren't members of **Company Administrator** or **User Account Administrator** in the Office 365 administrative roles.
 
 ## Resolution
 
-To resolve this problem, add your application to **Company Administrator** in the Office 365 administrative roles. To do this, run all the following Azure AD Module for Windows PowerShell (MSOL) cmdlets:
+To resolve this problem, add your application to **Company Administrator** in the Office 365 administrative roles. To do so, run all the following Azure AD Module for Windows PowerShell (MSOL) cmdlets:
 
  ```powershell
  Connect-MsolService
  ```
 
- This will prompt you for your tenant's credential. You should be able to use your Azure AD administrative user name in the `admin@tenant.onmicrosoft.com` format.
+ It will prompt you for your tenant's credential. You should be able to use your Azure AD administrative user name in the `admin@tenant.onmicrosoft.com` format.
 
 ```powershell
 $displayName = "Application Name" $objectId = (Get-MsolServicePrincipal -SearchString $displayName).ObjectId
@@ -50,7 +50,7 @@ Replace the "Application Name" with the name of your "Application Service Princi
 $roleName = "Company Administrator" Add-MsolRoleMember -RoleName $roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
 ```
 
-This will add your "Application Service Principal" to the Company Administrator role.
+It will add your "Application Service Principal" to the Company Administrator role.
 
 Also, you must add your application to **User Account Administrator** in the Office 365 administrative roles if the Azure AD user has any of the following **Administrator** organizational roles:
 
@@ -58,7 +58,7 @@ Also, you must add your application to **User Account Administrator** in the Off
 - Billing Administrator
 - Service Administrator
 
-To do this, run all the following MSOL cmdlets:
+To do so, run all the following MSOL cmdlets:
 
 ```powershell
 Connect-MsolService

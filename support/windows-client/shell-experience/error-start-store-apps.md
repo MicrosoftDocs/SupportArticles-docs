@@ -1,7 +1,7 @@
 ---
 title: Fail to start Microsoft Store apps
-description: Describes and provides a resolution for an issue in which you receive an error message when you try to start a Windows Store app in Windows 8 or Windows Server 2012.
-ms.data: 09/08/2020
+description: You receive an error message when you try to start a Windows Store app in Windows 8 or Windows Server 2012.
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -34,7 +34,7 @@ This issue occurs because an administrator has deployed an application control p
 
 ## Resolution
 
-To allow the Microsoft Store app to run, a domain administrator can use AppLocker to edit application control policies by using one of the following methods (whichever is most appropriate to their situation):
+To allow the Microsoft Store app to run, a domain administrator can use AppLocker to edit application control policies. To do so, use one of the following methods, whichever is most appropriate to their situation:
 
 1. Create a default rule that allows all Microsoft Store apps.
 2. Create rules that allow individual Microsoft Store apps.

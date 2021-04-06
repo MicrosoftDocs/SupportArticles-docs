@@ -1,14 +1,13 @@
 ---
 title: Cannot connect to Azure VMs because the RDP port is not enabled in NSG | Microsoft Docs
 description: Learn how to troubleshoot a problem in which RDP fails because of the NSG configuration in the Azure portal | Microsoft Docs
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: v-jesits
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure

@@ -26,14 +26,19 @@ The MachineKeys folder stores certificate pair keys for both the computer and us
 
 ## Default permissions for MachineKeys folder
 
-The MachineKeys folder is located under the `All Users Profile\Application Data\Microsoft\Crypto\RSA` folder. If the administrator did not set the folder to the minimum level, a user may receive the **Failed to Generate Certificate Request** and **Internal Server Error** (The Private Key that you are importing might require a cryptographic service provider that is not installed on your system) when the user generates a server certificate by using Microsoft Internet Information Server (IIS). The following settings are the default permissions for the MachineKeys folder:
+The MachineKeys folder is located under the `All Users Profile\Application Data\Microsoft\Crypto\RSA` folder. If the administrator didn't set the folder to the minimum level, a user may receive the following errors when generating a server certificate by using Internet Information Server (IIS).:
+
+- **Failed to Generate Certificate Request**
+- **Internal Server Error** (The Private Key that you are importing might require a cryptographic service provider that is not installed on your system)
+
+The following settings are the default permissions for the MachineKeys folder:
 
 - Administrators (Full Control) This folder only
 - Everyone (Special) This folder only
 
 ## Permissions for Everyone group
 
-To view the special permissions for the Everyone group, right-click the **MachineKeys** folder, click **Advanced** on the **Security** tab, and then click **View/Edit**. The permissions consist of the following permissions:
+To view the special permissions for the Everyone group, right-click the **MachineKeys** folder, select **Advanced** on the **Security** tab, and then select **View/Edit**. The permissions consist of the following permissions:
 
 - List Folder/Read Data
 - Read Attributes
@@ -44,6 +49,8 @@ To view the special permissions for the Everyone group, right-click the **Machin
 - Write Extended Attributes
 - Read Permissions
 
-Select the **Reset Permissions on all Child objects and enable propagation of inheritable permissions** check box. The administrator does not have full control on child objects to protect a user's private part of the key pair. However, the administrator can still delete certificates for a user.
+Select the **Reset Permissions on all Child objects and enable propagation of inheritable permissions** check box. The administrator doesn't have full control on child objects to protect a user's private part of the key pair. But the administrator can still delete certificates for a user.
 
-For more information, see [How to set required NTFS permissions and user rights for an IIS 5.0, IIS 5.1, or IIS 6.0 Web server](https://support.microsoft.com/help/271071).
+For more information, see the following article:
+
+[How to set required NTFS permissions and user rights for an IIS 5.0, IIS 5.1, or IIS 6.0 Web server](https://support.microsoft.com/help/271071).

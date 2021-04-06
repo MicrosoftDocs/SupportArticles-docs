@@ -184,5 +184,3 @@ Steps to build the CGI Hello.exe file:
 - [RFC 2068, Hypertext Transfer Protocol](http://www.ietf.org/rfc/rfc2068.txt)
 
 - [RFC 1738, Uniform Resource Locators (URL)](http://www.ietf.org/rfc/rfc1738.txt)
-
-- [How to access network files from IIS applications](https://support.microsoft.com/help/207671)

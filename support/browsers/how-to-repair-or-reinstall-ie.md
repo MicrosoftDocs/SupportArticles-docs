@@ -76,7 +76,7 @@ You can use the System File Checker tool to repair missing or corrupted system f
 |Windows version |Internet Explorer version that can be installed |
 |---|---|
 |Windows 7, Windows Server 2008 R2 |[Download Internet Explorer 11 (Offline installer)](https://support.microsoft.com/topic/download-internet-explorer-11-offline-installer-99d492a1-3a62-077b-c476-cf028aff9a7f)|
-|Windows Vista, Windows Server 2008 SP2|- [Windows Internet Explorer 9 (64 Bit)](https://www.microsoft.com/download/details.aspx?id=43374)<br/>- [Windows Internet Explorer 9 (32 Bit)](https://www.microsoft.com/download/details.aspx?id=29254)|
+|Windows Vista, Windows Server 2008 SP2|- Windows Internet Explorer 9 (64 Bit)<br/>- Windows Internet Explorer 9 (32 Bit)|
 |||
 
 **Step 2:** Uninstall the version of Internet Explorer that you may have installed on top of Internet Explorer 8.0 (For Windows Vista it is Internet Explorer 7.0) that natively ships with and installed as part of the operating system.

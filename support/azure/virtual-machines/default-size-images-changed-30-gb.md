@@ -4,6 +4,8 @@ description: Provides a workaround to an issue in which the default size of Wind
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: scotro
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # The default size of Windows Server images in Azure is changed from 128 GB to 30 GB
 

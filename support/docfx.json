@@ -48,12 +48,16 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+      "feedback_system": "None", 
+      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
       "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
-
+      "feedback_system": {
+        "azure/*.md": "GitHub",
+        "azure/**/*.md": "GitHub"
+      },
       "layout": {
         "**/index.yml": "LandingPage"
       },
@@ -70,7 +74,9 @@
         "azure/cloud-services/*.md": "genlin",
         "azure/virtual-machines/*.md": "genlin",
         "mem/**/*.md": "helenclu",
-        "system-center/**/*.md":"helenclu"
+        "system-center/**/*.md":"helenclu",
+        "dynamics-365/**/*.md":"David-Pack",
+        "power-platform/**/*.md":"David-Pack"
       },
       "ms.author": {
         "**/*.md": "ramakoni",
@@ -78,10 +84,12 @@
         "azure/cloud-services/*.md": "genli",
         "azure/virtual-machines/*.md": "genli",
         "mem/**/*.md": "luche",
-        "system-center/**/*.md": "luche"
+        "system-center/**/*.md": "luche",
+        "dynamics-365/**/*.md": "davidpac",
+        "power-platform/**/*.md": "davidpac"
       },
       "ms.localizationpriority": {
-        "**/*.md": "Normal"
+        "**/*.md": "medium"
       },
       "ms.reviewer": {
         "**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar",
@@ -108,10 +116,10 @@
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "browsers/**/*.md": "internet-explorer"
+        "browsers/**/*.md": "internet-explorer",
+        "dynamics-365/**/*.md": "dynamics-365"
       },
       "ms.technology": {
-        "**/*.md": "",
         "biztalk/**/*.md": "",
         "dotnet/**/*.md": "",
         "aspnet/**/*.md": "",
@@ -132,7 +140,8 @@
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "virtual-machines",
-        "azure/cloud-services/*.md": "cloud-services"
+        "azure/cloud-services/*.md": "cloud-services",
+        "power-platform/**/*.md": "power-platform"
       },
 
       "titleSuffix": {
@@ -167,27 +176,34 @@
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",
         "azure/active-directory/*.md": "Active Directory",
-        "azure/devops/*.md": "Active DevOps"
+        "azure/devops/*.md": "Active DevOps",
+        "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
+        "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
+        "dynamics-365/sales/*.md": "Dynamics 365 Sales",
+        "power-platform/power-apps/*.md": "Power Apps",
+        "power-platform/power-automate/*.md": "Power Automate"
       },
       "searchScope": {
         "biztalk/**/*.md": [ "BizTalk Server" ],
         "dotnet/**/*.md": [ ".NET" ],
         "host-integration-server/**/*.md": [ "Host Integration Server" ],
-        "visualstudio/**/*.md": [ "Visual Studio" ],
-        "cpp/**/*.md": [ "Visual Studio" ],
-        "iis/**/*.md": [ "Web Apps" ],
-        "aspnet/**/*.md": [ "Web Apps" ],
-        "sql/**/*.md": [ "SQL Server" ],
+        "visualstudio/**/*.md": [ "VS IDE" ],
+        "cpp/**/*.md": [ "VS IDE" ],
+        "iis/**/*.md": [ "IIS" ],
+        "aspnet/**/*.md": [ "ASP.NET","ASP.NET Core" ],
+        "sql/**/*.md": [ "sql" ],
         "webapps/**/*.md": [ "Web Apps" ],
-        "windows/win32/**/*.md": [ "Application Developer" ],
-        "windows-hardware/drivers/**/*.md": [ "Hardware Developer" ],
+        "windows/win32/**/*.md": [ "Windows", "Desktop" ],
+        "windows-hardware/drivers/**/*.md": [ "Drivers" ],
         "windows-server/**/*.md": [ "Windows Server" ],
         "windows-client/**/*.md": [ "Windows Client" ],
         "browsers/**/*.md": [ "Browsers" ],
         "azure/**/*.md": [ "Azure" ],
         "mem/intune/**/*.md": [ "Intune" ],
-        "mem/configmgr/**/*.md": [ "Configuration Manager" ],
+        "mem/configmgr/**/*.md": [ "ConfigMgr" ],
         "system-center/**/*.md": [ "System Center" ],
+        "dynamics-365/**/*.md": [ "Dynamics 365" ],
+        "power-platform/**/*.md": [ "Power Platform" ]
       }
     },
 

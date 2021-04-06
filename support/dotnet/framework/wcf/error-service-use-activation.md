@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article helps you resolve the error that occurs when Windows Communication Foundation service use net.tcp activation.
 
-_Original product version:_ &nbsp; .NET, Windows Communication Foundation  
+_Original product version:_ &nbsp; .NET Framework, Windows Communication Foundation  
 _Original KB number:_ &nbsp; 2026177
 
 ## Symptoms

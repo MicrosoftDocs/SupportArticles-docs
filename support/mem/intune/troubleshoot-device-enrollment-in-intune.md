@@ -144,7 +144,7 @@ Tell your users to try upgrading to Android 6.0. The deactivation issue doesn't 
 
 **Resolution 3:**
 
-If Resolution 2 doesn't work, have your users follow these steps to make Smart Manager exclude the  Company Portal app:
+If Resolution 2 doesn't work, have your users follow these steps to make Smart Manager exclude the Company Portal app:
 
 1. Launch the Smart Manager app on the device.
 

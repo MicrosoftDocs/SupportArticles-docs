@@ -1,14 +1,13 @@
 ---
 title: Troubleshooting BitLocker boot errors on an Azure VM | Microsoft Docs
 description: Learn how to troubleshoot BitLocker boot errors in an Azure VM
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: v-jesits
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
@@ -125,7 +124,7 @@ If this method does not the resolve the problem, follow these steps to restore t
 8. After the disk was successfully unlocked by using the BEK key, detach the disk from the recovery VM, and then recreate the VM by using this new OS disk.
 
     > [!NOTE]
-    > Swapping OS Disk is not supported for VMs using disk encryption.
+    > Swapping OS disk is available for any VM encrypted with Single pass ADE version, but is not supported for Dual Pass.
 
 9. If the new VM still cannot boot normally, try one of following steps after you unlock the drive:
 

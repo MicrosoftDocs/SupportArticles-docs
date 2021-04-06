@@ -2,17 +2,16 @@
 title: Use SQL 2014 in FIPS 140-2-compliant mode
 description: Discusses Federal Information Processing Standard Publication 140-2 (FIPS 140-2) instructions and how to use Microsoft SQL Server 2014 in the FIPS 140-2-compliant mode.
 ms.date: 02/17/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Security Issues
 ms.prod: sql
 ---
 # Instructions for using SQL Server 2014 in the FIPS 140-2-compliant mode
 
-**Applies to**: SQL Server
+This article discusses the instructions for Federal Information Processing Standard Publication 140-2 (FIPS 140-2) and how to use Microsoft SQL Server 2014 in the FIPS 140-2-compliant mode.
 
-_Original product version:_ &nbsp; 2014  
+_Original product version:_ &nbsp; SQL Server 2014  
 _Original KB number:_ &nbsp; 3141890
 
-This article discusses the instructions for Federal Information Processing Standard Publication 140-2 (FIPS 140-2) and how to use Microsoft SQL Server 2014 in the FIPS 140-2-compliant mode.
 
 > [!NOTE]
 > - The terms "FIPS 140-2–compliant," "FIPS 140-2 compliance," and "FIPS 140-2–compliant mode" are defined here for use and clarity. These terms are not recognized or defined government terms. The United States and Canadian governments recognize the validation of cryptographic modules against standards such as FIPS 140-2 but not the use of cryptographic modules in a specified or conformant manner. In this article, we use "FIPS 140-2–compliant," "FIPS 140-2 compliance," and "FIPS 140-2–compliant mode" in the sense that SQL Server 2014 uses only FIPS 140-2-validated instances of algorithms and hashing functions in all instances in which encrypted or hashed data is imported to or exported from SQL Server 2014. Additionally, this means that SQL Server 2014 manages keys in a secure manner, as required of FIPS 140-2-validated cryptographic modules. The key-management process also includes both key generation and key storage.
@@ -80,19 +79,19 @@ The FIPS mode must be set before SQL Server 2014 is started. SQL Server reads th
 
 ### SQL Server administrator requirement
 
-- When the SQL Server service (when an endpoint is configured for either Service Broker or Database Mirroring) detects that the FIPS mode is enabled at startup, SQL Server logs the following message in the SQL Server error log:
+When the SQL Server service (when an endpoint is configured for either Service Broker or Database Mirroring) detects that the FIPS mode is enabled at startup, SQL Server logs the following message in the SQL Server error log:
 
-  > Service Broker transport is running in FIPS compliance mode.
+> Service Broker transport is running in FIPS compliance mode.
 
-  Additionally, you may find the following message logged in the Windows event log:
+Additionally, you may find the following message logged in the Windows event log:
 
-  > Database Mirroring transport is running in FIPS–compliance mode.
+> Database Mirroring transport is running in FIPS–compliance mode.
 
-  You can verify that the server is running in the FIPS mode by looking for these messages.
+You can verify that the server is running in the FIPS mode by looking for these messages.
 
-  - For dialog security (between services), the encryption uses the FIPS-certified instance of Advanced Encryption Standard (AES) if the FIPS mode is enabled. If the FIPS mode is disabled, the encryption uses RC4.
+- For dialog security (between services), the encryption uses the FIPS-certified instance of Advanced Encryption Standard (AES) if the FIPS mode is enabled. If the FIPS mode is disabled, the encryption uses RC4.
 
-  - When you configure a service broker endpoint in the FIPS mode, the administrator must specify "AES" for the service broker. If the endpoint is configured to RC4, SQL Server will generate an error. Therefore, the transport layer won't start.
+- When you configure a service broker endpoint in the FIPS mode, the administrator must specify "AES" for the service broker. If the endpoint is configured to RC4, SQL Server will generate an error. Therefore, the transport layer won't start.
 
 ## How is SQL Server 2014 operated in FIPS 140-2–compliant mode?
 
@@ -118,8 +117,4 @@ For more information about the FIPS 140-2 standard, see the following NIST publi
 
 [Security Requirements For Cryptographic Modules](https://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf)
 
-## References
-
-**Third-party information disclaimer**
-
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

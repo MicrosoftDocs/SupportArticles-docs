@@ -2,14 +2,14 @@
 title: Cannot connect with RDP to a Windows VM in Azure | Microsoft Docs
 description: Troubleshoot issues when you cannot connect to your Windows virtual machine in Azure using Remote Desktop
 keywords: Remote desktop error,remote desktop connection error,cannot connect to VM,remote desktop troubleshooting
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: axayjo
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue,azure-service-management,azure-resource-manager
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting

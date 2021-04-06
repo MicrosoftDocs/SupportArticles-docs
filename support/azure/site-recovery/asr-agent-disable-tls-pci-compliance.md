@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: site-recovery 
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: manayar, anoopkv
 ---
 # How to resolve Azure Site Recovery agent issues after disabling TLS 1.0 for PCI compliance
