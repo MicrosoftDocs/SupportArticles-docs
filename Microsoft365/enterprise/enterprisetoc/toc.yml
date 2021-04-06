@@ -3,6 +3,8 @@
   items:
   - name: Administration
     items:
+        - name: COM and .NET errors after Office architecture migration
+      href: ../administration/com-net-errors-after-migration.md
     - name: Can't insert scriptable ActiveX controls
       href: ../administration/insert-scriptable-activex-control.md
     - name: Format of the CSV file isn't correct error
