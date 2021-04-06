@@ -34,8 +34,6 @@ To resolve this issue, remove these kinds of customizations and instead use supp
 
 ## More information
 
-To download the Microsoft Dynamics CRM 2011 SDK, see [Microsoft Dynamics CRM 2011 Software Development Kit (SDK)](https://www.microsoft.com/download/details.aspx?id=24004).
-
 To  download the Microsoft Dynamics CRM 2011 SDK on the Microsoft Developer Network (MSDN), see [Development for Microsoft Dynamics CRM 2015 (CRM SDK)](/previous-versions/dynamicscrm-2015/developers-guide/gg309408(v=crm.7)).
 
 Support assistance with unsupported customizations may be considered billable.

@@ -33,4 +33,4 @@ If the CRM organization is already configured but you want to configure to that 
 
 ## More information
 
-If you're still meeting issues connecting CRM for Outlook to your CRM Online organization, [a diagnostic tool](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) is available to help diagnose the issue.
+If you're still meeting issues connecting CRM for Outlook to your CRM Online organization, [a diagnostic tool](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) is available to help diagnose the issue.
