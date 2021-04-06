@@ -40,7 +40,7 @@ When Microsoft determines that a non-security update has a critical regression o
 - The Known Issues section of the applicable Windows Update KB article.
 - The Known Issues list on the Windows Health Release Dashboard at https://aka.ms/windowsreleasehealth for the affected versions of Windows (for example, [Windows 10, version 20H2 and Windows Server, version 20H2](/windows/release-health/status-windows-10-20h2#known-issues)).
 
-For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is needed. 
+For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is needed.
 
 For enterprise customers, Microsoft provides a policy definition MSI file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
 
@@ -79,8 +79,6 @@ You can apply a KIR policy definition to your on-premises AD DS-managed or AAD-m
 ### <a id="install"></a>1. Download and install the KIR MSI files
 
 1. Check the KIR release information or the known issues lists to identify which operating system versions you have to update.  
-   >[!NOTE]  
-   > One MSI file may support multiple versions.
 1. Download the KIR policy definition MSI files that you need to update to the computer that you use to manage Group Policy for your domain.
 1. Run the MSI files. This action installs the KIR policy definition in the Administrative Template.  
 
@@ -144,9 +142,12 @@ For more information about editing GPOs, see [Edit a Group Policy object from GP
 
 ### <a id="monitor"></a>6. Monitor the GPO results
 
-In the default configuration of Group Policy, managed devices should apply the new policy within 90 to 120 minutes. After applying the new policy, each device restarts. After the device restarts, the fix that introduced the issue is disabled.
+In the default configuration of Group Policy, managed devices should apply the new policy within 90 to 120 minutes. To speed this process along, you might run `gpupdate` on affected devices to manually check for updated policies.
 
-To speed this process along, you might run `gpupdate` on affected devices to manually check for updated policies.
+Make sure that each affected device restarts after it applies the policy.
+
+> [!IMPORTANT]  
+> The fix that introduced the issue is disabled after the device applies the policy and then restarts.
 
 ## More information
 
