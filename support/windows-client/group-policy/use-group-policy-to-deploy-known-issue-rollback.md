@@ -40,15 +40,17 @@ When Microsoft determines that a non-security update has a critical regression o
 - The Known Issues section of the applicable Windows Update KB article.
 - The Known Issues list on the Windows Health Release Dashboard at https://aka.ms/windowsreleasehealth for the affected versions of Windows (for example, [Windows 10, version 20H2 and Windows Server, version 20H2](/windows/release-health/status-windows-10-20h2#known-issues)).
 
-For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is needed. For enterprise customers, Microsoft provides a policy definition MSI file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
+For non-enterprise customers, the Windows Update process applies the KIR automatically. No user action is needed. 
+
+For enterprise customers, Microsoft provides a policy definition MSI file. Enterprise customers can propagate the KIR to managed systems by using the enterprise Group Policy infrastructure.
 
 To see an example of a KIR MSI file, download [Windows 10 (2004 & 20H2) Known Issue Rollback 031321 01.msi](https://download.microsoft.com/download/b/8/9/b89221d0-d5db-40a7-bf25-cecbee25f713/Windows%2010%20(2004%20&%2020H2)%20Known%20Issue%20Rollback%20031321%2001.msi).
 
 A KIR policy definition has a limited lifespan (a few months, at most). After Microsoft publishes an amended update to address the original issue, the KIR is no longer needed. The policy definition can be removed from the Group Policy infrastructure.
 
-## Using Group Policy to apply a KIR to a local device
+## Using Group Policy to apply a KIR to an enterprise device
 
-To use Group Policy to apply a KIR to a single device, follow these steps:
+To use Group Policy to apply a KIR to a single enterprise device, follow these steps:
 
 1. Download the KIR policy definition MSI file to the device.  
    > [!IMPORTANT]  
