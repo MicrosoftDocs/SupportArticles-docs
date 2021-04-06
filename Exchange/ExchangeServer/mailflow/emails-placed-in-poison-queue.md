@@ -68,7 +68,7 @@ ErrorReportingEnabled: False
 
 Event 2203 – Source: FIPFS – Message: A FIP-FS Scan process returned error 0x84004003 PID: [<PID>] Msg: 
 Scanning Process caught exception "Unable to reserve MSAM for file parsing – the engine is permanently 
-offline ID: {[<GUI
+offline ID: {[<GUID]}"
 ```
 
 ### Errors in the message tracking log
