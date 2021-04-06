@@ -69,7 +69,7 @@ For more information about how to use Dump Check Utility in Windows XP, Windows 
 
 Or, you can use the Windows Debugger (WinDbg.exe) tool or the Kernel Debugger (KD.exe) tool to read small memory dump files. WinDbg and KD.exe are included with the latest version of the Debugging Tools for Windows package.
 
-To install the debugging tools, see the [Download and Install Debugging Tools for Windows](/windows-hardware/drivers/download-the-wdk) webpage. Select the Typical installation. By default, the installer installs the debugging tools in the following folder:
+To install the debugging tools, see the [Download and Install Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) webpage. Select the Typical installation. By default, the installer installs the debugging tools in the following folder:
 
 `C:\Program Files\Debugging Tools for Windows`
 
