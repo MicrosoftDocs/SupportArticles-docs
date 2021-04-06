@@ -2,6 +2,20 @@
 
 
 
+## Week of March 29, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/29/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 3/30/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 3/31/2021 | [Manually update scan engines](/exchange/troubleshoot/setup/manually-update-scan-engines) | modified |
+| 3/31/2021 | [“The connection to your mail server timed out” error in Outlook for iOS or Outlook for Android](/exchange/troubleshoot/client-connectivity/connection-to-mail-server-timed-out) | added |
+| 3/31/2021 | [“The connection to your mail server timed out” error in Outlook for iOS or Outlook for Android](/exchange/troubleshoot/client-connectivity/connection-to-mail-server-timed-out) | modified |
+| 4/1/2021 | [Outlook or OWA cannot connect to Public Folders](/exchange/troubleshoot/public-folders/outlook-or-owa-cannot-connect-to-public-folders) | modified |
+| 4/1/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+
+
 ## Week of March 22, 2021
 
 

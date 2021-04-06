@@ -1,5 +1,5 @@
 ---
-title: Error when trying to create a list From Excel - Something went wrong. The file does not exist
+title: Error when creating a list from Excel - Something went wrong. The file does not exist
 description: This article describes the steps to resolve a missing list file in Excel.
 author: v-miegge
 ms.author: prbalusu
@@ -15,15 +15,15 @@ appliesto:
 - SharePoint Online
 ---
 
-# Error when trying to create a list From Excel: Something went wrong. The file does not exist
+# Error when creating a list from Excel: Something went wrong. The file does not exist
 
 ## Symptoms
 
-When you try to create a list From Excel in a SharePoint site, you receive the following error when you try to choose a file already on the site.
+When you try to create a list from Excel in a SharePoint site, you receive the following error when you try to choose a file already on the site.
 
-*Something went wrong.*
-
-*The file [xxxx] does not exist.*
+> Something went wrong.
+>
+> The file [xxxx] does not exist.
 
 ![Error message that the file does not exist](./media/error-create-list-excel/error-message.png)
 
