@@ -80,4 +80,4 @@ This issue occurs because files are missing in the *:::no-loc text="%ExchangeIns
 
 Verify that the appropriate files are present in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\Data\Engines\amd64":::* folder. You must first copy the files in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\Data\Engines\amd64":::* folder from another working Exchange server, and then paste the files in the folder of the affected server.
 
-**Note:** The *:::no-loc text="%ExchangeInstallPath%":::* value is typically **:::no-loc text="C:\Program Files\Microsoft\Exchange Server\V15\":::** (includes a trailing "\\").
+**Note:** The *:::no-loc text="%ExchangeInstallPath%":::* value is typically *:::no-loc text="C:\Program Files\Microsoft\Exchange Server\V15\\":::* (includes a trailing "\\").
