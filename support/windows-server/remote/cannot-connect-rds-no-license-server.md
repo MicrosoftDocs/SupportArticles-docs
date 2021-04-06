@@ -19,7 +19,7 @@ keywords: RD Licensing server, RD CAL
 
 This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Symptoms
 
@@ -49,7 +49,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
    > [!NOTE]  
    > For more information about this configuration, see [Install RDS client access licenses on the Remote Desktop license server](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-install-cals).  
 
-   The configuration of the licenses should resemble the following screenshot.
+   The configuration of the licenses should resemble the following screenshot. There should be a green check mark beside the license server name, and the numbers in the columns should reflect the numbers of total and available licenses.
 
    :::image type="content" source="media/cannot-connect-rds-no-license-server/rd-licensing -manager-config.png" alt-text="RD Licensing Manager, showing a correctly configured license server":::
 
