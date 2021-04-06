@@ -19,16 +19,16 @@ keywords: Windows Update, known issue, kir, group policy, rollback
 
 This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed or local devices.
 
-_Applies to:_ &nbsp; Windows 10, version 1809 and newer versions
+_Applies to:_ &nbsp; Windows Server 2019, version 1809 and newer versions; Windows 10, version 1809 and newer versions
 
 ## Summary
 
-Microsoft has developed a new Windows servicing technology called [KIR](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831). For the supported versions of Windows, a KIR rolls back a specific change that was applied as part of a non-security Windows Update release. All other changes that were made as a part of that release remain intact. Using this technology, if a Windows update causes a regression or other problem, you don't have to roll back the entire update. You roll back only the change that caused the problem. This roll back is temporary. After Microsoft releases a new update that fixes the problem, the rollback is no longer needed.
+Microsoft has developed a new Windows servicing technology called [KIR](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831) for Windows Server 2019 and Windows 10, versions 1809 and newer. For the supported versions of Windows, a KIR rolls back a specific change that was applied as part of a non-security Windows Update release. All other changes that were made as a part of that release remain intact. Using this technology, if a Windows update causes a regression or other problem, you don't have to uninstall the entire update and return the system to a last known good configuration. You roll back only the change that caused the problem. This roll back is temporary. After Microsoft releases a new update that fixes the problem, the rollback is no longer needed.
 
 > [!IMPORTANT]  
-> KIRs only apply to non-security updates, where rolling back fixes doesn't create a potential security vulnerability.
+> KIRs only apply to non-security updates. For a non-security update, rolling back a fix doesn't create a potential security vulnerability.
 
-Microsoft provides KIR policy definition MSI files for enterprises, so that they can use Group Policy to deploy KIRs in an Azure Active Directory (AAD) or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for non-enterprise devices. For enterprises, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in an Azure Active Directory (AAD) or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > The affected computers have to restart in order to apply this Group Policy change.
