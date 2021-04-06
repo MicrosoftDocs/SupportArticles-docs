@@ -8,7 +8,10 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 144048
+- CI 147050
 ms.prod: office-perpetual-itpro
 ms.author: v-matham
 appliesto:
@@ -52,7 +55,7 @@ To install Support and Recovery Assistant and automatically start collecting ROI
 [Advanced diagnostics – Full ROIScan](https://aka.ms/sara-roiscanfull)
 
 > [!NOTE]
-> In addition to Normal ROIScan, Full ROIScan creates verbose .xml files for [MSI-based installations of Office products](https://docs.microsoft.com/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer#installation-technologies-used-by-office). These are helpful in scenarios that require in-depth analysis of file versions and file states.
+> In addition to Normal ROIScan, Full ROIScan creates verbose .xml files for [MSI-based installations of Office products](/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer#installation-technologies-used-by-office). These are helpful in scenarios that require in-depth analysis of file versions and file states.
 
 ## Collect the Robust Office Inventory Scan
 
