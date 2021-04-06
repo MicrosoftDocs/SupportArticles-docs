@@ -58,4 +58,4 @@ If you're using early versions of Office 365 and Windows, use the steps in [Trou
 If you're using a Mac, see [Clearing the Office application's cache on a Mac](/office/dev/add-ins/testing/debug-office-add-ins-on-ipad-and-mac#clearing-the-office-applications-cache-on-a-mac).
 
 **Resolution 4:**  
-If the conditions mentioned in Cause 4 are true, install [Version 1910: October 30](/officeupdates/monthly-channel-2019#version-1910-october-30) or later that includes a fix for this type of issue.
+If the conditions mentioned in Cause 4 are true, install [Version 1910: October 30](/officeupdates/monthly-channel-archived#version-1910-october-30) or later that includes a fix for this type of issue.

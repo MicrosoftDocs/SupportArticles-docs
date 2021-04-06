@@ -45,4 +45,4 @@ Install [Microsoft® SQL Server® Compact 4.0 SP1](https://www.microsoft.com/dow
 
 ## More information
 
-If you're still coming with issues connecting CRM for Outlook to your CRM Online organization, [CRM for Outlook Configuration Diagnostic](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) is available to help diagnose the issue.
+If you're still coming with issues connecting CRM for Outlook to your CRM Online organization, [CRM for Outlook Configuration Diagnostic](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) is available to help diagnose the issue.

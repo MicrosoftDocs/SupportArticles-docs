@@ -50,4 +50,4 @@ Run the Microsoft Dynamics CRM Configuration Wizard:
 
 7. Select **OK**.
 
-If you're unable to successfully connect to your CRM Online organization, use [Microsoft Support and Recovery Assistant](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+If you're unable to successfully connect to your CRM Online organization, use [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant).

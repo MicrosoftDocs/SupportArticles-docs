@@ -31,7 +31,7 @@ First try clearing the browser cache in Internet Explorer:
 
 1. Clear the cache in Internet Explorer.
 
-    - [View and delete your browsing history in Internet Explorer](/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678)
+    - [View and delete your browsing history in Internet Explorer](https://support.microsoft.com/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678)
 
 2. Close all Internet Explorer and Outlook Desktop windows and make sure through Task Manager there are no remaining Internet Explorer or Outlook processes running.
 
