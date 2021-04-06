@@ -59,6 +59,6 @@ You can also check for orphaned entries manually. The affected device might have
 
 The subkey will have a value that points to a missing Office executable in the Program Files (x86) file path, such as *:::no-loc text="C:\Program Files (x86)\Microsoft Office\Root\Office16\EXCEL.EXE":::*. There should also be an adjacent subkey that points to the correct 64-bit Program Files location.
 
-### Step 2: Delete orphaned or corrupted subkeys 
+### Step 2: Delete orphaned subkeys
 
 If you ran the PowerShell script in Step 1, it should delete the orphaned subkeys. If you didn’t run the script, delete the orphaned subkeys (*:::no-loc text="HKEY_CLASSES_ROOT\WOW6432Node\TypeLib\GUID\1.9\0\Win32":::*) manually.
