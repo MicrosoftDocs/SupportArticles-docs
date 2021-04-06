@@ -204,7 +204,7 @@ To disable the required encryption between Outlook and Exchange, follow these st
     To re-enable the RPC encryption requirement on your Exchange servers that have the **Client Access Server** role, run the following command in the Exchange Management Shell:
 
     ```powershell
-     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True -EncryptionRequired:$True
+     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True
     ```
 
     > [!NOTE]
