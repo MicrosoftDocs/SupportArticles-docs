@@ -39,10 +39,11 @@ The simplest and safest way to prevent lock escalation is to keep transactions s
   By removing these records a few hundred at a time, you can dramatically reduce the number of locks that accumulate per transaction and prevent lock escalation. For example:
 
     ```sql
-    WHILE (1 = 1)
+    DECLARE @rows int = 500;
+    WHILE (@rows > = 500)
     BEGIN
         DELETE TOP(500) FROM LogMessages WHERE LogDate < '20020102';
-        IF @@ROWCOUNT < 500 BREAK;
+        SET @rows = @@ROWCOUNT;
     END;
     ```
 
