@@ -1,6 +1,18 @@
 - name: Welcome
   href: welcome-azure-ad.yml
 
+- name: Azure Active Directory Reports
+  items:
+  - name: Verify 1st party Microsoft apps in sign-in reports
+    href: verify-first-party-apps-sign-in.md
+
+- name: Azure AD Governance, Compliance and Reporting 
+  items:
+  - name: Audit Logs
+    items:
+      - name: Unknown Actors in Audit Reports
+        href: unknown-actors-in-audit-reports.md
+
 - name: App Integration and Development 
   items:
   - name: Troubleshoot adding apps
@@ -178,7 +190,6 @@
     href: exclude-user-primary-group.md
   - name: Yellow exclamation mark in Office 2013
     href: yellow-exclamation-mark-office2013.md
-
 
 - name: Configuration and Management
   items:
