@@ -36,15 +36,15 @@ In many cases, Web servers have one or more volatile pages on a server that cont
 
 ## The Cache-Control header
 
-Certain pages, however, are so volatile or sensitive that they require no disk caching. To this end, Internet Explorer supports the HTTP 1.1 Cache-Control header. This behavior prevents all caching of a particular Web resource when the no-cache value is specified by an HTTP 1.1 server.
+Certain pages, however, are so volatile or sensitive that they require no disk caching. To this end, Internet Explorer supports the HTTP 1.1 Cache-Control header. This header prevents all caching of a particular Web resource when the no-cache value is specified by an HTTP 1.1 server.
 
-Only when the browser can recontact the Web server, pages that are kept out of the cache are accessible. So servers should use the Cache-Control header sparingly. In most cases, the use of Expires: -1 is preferred.
+Pages that are kept out of the cache aren't accessible until the browser can recontact the Web server. So, servers should use the Cache-Control header sparingly. In most cases, the use of Expires: -1 is preferred.
 
 ## The Pragma: No-Cache header
 
 Unfortunately, legacy HTTP 1.0 servers can't use the Cache-Control header. For purposes of backward compatibility with HTTP 1.0 servers, Internet Explorer supports a special usage of the HTTP Pragma: no-cache header. If the client communicates with the server over a secure connection (`https://`) and the server returns a Pragma: no-cache header with the response, Internet Explorer doesn't cache the response.
 
-But the Pragma: no-cache header wasn't for this purpose. According to the HTTP 1.0 and 1.1 specifications, this header is defined in the context of a request only, not a response. It's intended for proxy servers that may prevent certain important requests from reaching the destination Web server. For future applications, the Cache-Control header is the proper means for controlling caching.
+However, the Pragma: no-cache header wasn't for this purpose. According to the HTTP 1.0 and 1.1 specifications, this header is defined in the context of a request only, not a response. It's intended for proxy servers that may prevent certain important requests from reaching the destination Web server. For future applications, the Cache-Control header is the proper means for controlling caching.
 
 ## HTTP-EQUIV META tags
 
@@ -72,13 +72,13 @@ Cache-Control META HTTP-EQUIV tags are ignored and have no effect in Internet Ex
 
 When the Cache-Control header needs to be used on non-ASP pages, it may be necessary to use options in the server configuration to add this header automatically. For the process of adding HTTP headers to server responses for a particular directory, refer to your server document. For example, in IIS 4, follow these steps:
 
-1. Invoke the Internet Services Manager.
-1. Open the Default Web Server (or web server in question) by using the computer and services tree. Then, find the directory containing the content that needs the Cache-Control header.
-1. Bring up the **Properties** dialog for that directory.
-1. Choose the **HTTP Headers** tab.
-1. Select the **Add** button in the Custom HTTP Headers group and add Cache-Control for the header name and no-cache for the header value.
+1. Start the IIS Manager.
+1. In the computer and services tree, open the Default Web Server, or the web server in question. Find the directory containing the content that needs the Cache-Control header.
+1. Open the **Properties** dialog for that directory.
+1. Select the **HTTP Headers** tab.
+1. Select the **Add** button in the Custom HTTP Headers group, and add Cache-Control for the header name and no-cache for the header value.
 
-It's not a good idea to use this header globally across the entire Web server. Restrict its use purely to content that absolutely must not be cached on the client.
+It's not a good idea to use this header globally across the entire Web server. Restrict its use purely to content that absolutely mustn't be cached on the client.
 
 ## Problem checklist
 
@@ -87,7 +87,7 @@ If you've applied the techniques in this article and you're still having problem
 - Are you using the Cache-Control header with the ASP `Response.CacheControl` property or through a returned HTTP header? It's the only way to truly prevent caching in Internet Explorer.
 - Are you using Internet Explorer 4.01 Service Pack 2 or higher? There's no way to completely prevent caching in earlier versions of the browser.
 - Have you double-checked that your web server has HTTP 1.1 turned on and is returning HTTP 1.1 responses to Internet Explorer? Cache-Control headers are invalid in HTTP 1.0 responses.
-- If you're using CGI/ISAPI/Servlets on the server side, are you following the HTTP 1.1 specification exactly, particularly about CRLF termination of HTTP headers? In the interest of performance, Internet Explorer is typically unforgiving of responses that violate the HTTP 1.1 specification. This usually results in ignored headers or reports of unexpected server errors.
+- If you're using CGI/ISAPI/Servlets on the server side, are you following the HTTP 1.1 specification exactly, particularly about CRLF termination of HTTP headers? In the interest of performance, Internet Explorer is typically unforgiving of responses that violate the HTTP 1.1 specification. It usually results in ignored headers or reports of unexpected server errors.
 - Are the HTTP headers spelled correctly?
 
 ## References
