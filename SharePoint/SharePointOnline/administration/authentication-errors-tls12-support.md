@@ -27,6 +27,7 @@ appliesto:
 As previously communicated in the Microsoft 365 Admin Center (for example, communication MC240160 in February 2021), we're moving all online services to Transport Layer Security (TLS) 1.2+. This change started on October 15, 2020. Support for TLS 1.2+ will continue to be added to all Microsoft 365 environments for the next several months. If you haven't taken steps to prepare for this change, your connectivity to Microsoft 365 might be affected.
 
 ## Known issues
+<br/>
 
 ## .NET Framework not configured for TLS 1.2
 
@@ -75,15 +76,14 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
    ### Symptom
    
    Authentication issues or failures to access SharePoint from known apps that don't support TLS 1.2+ occur. The following browsers don’t support TLS 1.2:
+- Android 4.3 and earlier versions
+- Firefox version 5.0 and earlier versions
+- Internet Explorer 8-10 on Windows 7 and earlier
+- Internet Explorer 10 on Windows Phone 8
+- Safari 6.0.4/OS X10.8.4 and earlier versions
 
-    - Android 4.3 and earlier versions
-    - Firefox version 5.0 and earlier versions
-    - Internet Explorer 8-10 on Windows 7 and earlier
-    - Internet Explorer 10 on Windows Phone 8
-    - Safari 6.0.4/OS X10.8.4 and earlier versions
 
-
-   ### Resolution
+### Resolution
    
    Upgrade to a later version of the browser.
    
