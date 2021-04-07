@@ -146,8 +146,6 @@ For a Key Encryption Key scenario, follow these steps:
 
 1. Make sure that the logged-in user account requires the "unwrapped" permission in the Key Vault Access policies in the **USER|Key permissions|Cryptographic Operations|Unwrap Key**.
 2. Save the following script to a .PS1 file:
-    > [!NOTE]
-    > The script only applies to [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions.
 
     ```powershell
     #Set the Parameters for the script
