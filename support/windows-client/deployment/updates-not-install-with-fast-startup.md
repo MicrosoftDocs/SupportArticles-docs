@@ -28,6 +28,6 @@ Windows updates might not be installed on your system after you shut down your c
 
 The Fast Startup feature in Windows 10 allows your computer start up faster after a shutdown. When you shut down your computer, Fast Startup will put your computer into a hibernation state instead of a full shutdown. Fast Startup is enabled by default if your computer is capable of hibernation.
 
-Installation of some Windows updates can be completed only when starting your computer after a full shutdown. Since Fast Startup uses hibernation instead of a full shutdown, installation of those updates will not be completed when you start your computer after having shut it down. In order to make sure pending updates are completed, you have to choose Restart from the Power menu.
+Installation of some Windows updates can be completed only when starting your computer after a full shutdown. Since Fast Startup uses hibernation instead of a full shutdown, installation of those updates will not be completed before a full shutdown. In order to make sure pending updates are completed, you have to choose **Restart** from the **Power** menu.
 
-Even in environments managed with Microsoft Endpoint Manager Configuration Manager (MEMCM), Fast Startup may delay the completion of updates. There are plans to address this in a future version of Windows.
+In environments managed with Microsoft Endpoint Manager Configuration Manager (MEMCM), Fast Startup may delay the completion of updates as well. There are plans to address this in a future version of Windows.
