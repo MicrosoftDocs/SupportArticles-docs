@@ -190,15 +190,17 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 
 2. Identify the packages that the tool can't fix. For example, you may find the following in the log file:
 
-    > Summary:
-    >
-    > Seconds executed: 264  
-    > Found 3 errors  
-    > CBS MUM Missing Total Count: 3  
-    > Unavailable repair files:  
-    >
-    > servicing\packages\Package_for_KB958690_sc_0~31bf3856ad364e35~amd64~~6.0.1.6.mum  
-    > ...
+    ```output
+    Summary:
+    
+    Seconds executed: 264  
+    Found 3 errors  
+    CBS MUM Missing Total Count: 3  
+    Unavailable repair files:  
+    
+    servicing\packages\Package_for_KB958690_sc_0~31bf3856ad364e35~amd64~~6.0.1.6.mum  
+    ...
+    ```
 
     In this case, the package that is corrupted is KB958690.
 
