@@ -41,10 +41,10 @@ To rebuild the Tokens.dat file, follow these steps:
           `cd %windir%\system32\spp\store\2.0`
 
         For Windows 8.1, Windows Server 2012 and Windows Server 2012 R2:
-          `cd%windir%\ServiceProfiles\LocalService\AppData\Local\Microsoft\WSLicense`
+          `cd %windir%\ServiceProfiles\LocalService\AppData\Local\Microsoft\WSLicense`
 
         For Windows 7, Windows Server 2008 and Windows Server 2008 R2:  
-          `cd%windir%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform`
+          `cd %windir%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform`
 
     3. `ren tokens.dat tokens.bar`
 
