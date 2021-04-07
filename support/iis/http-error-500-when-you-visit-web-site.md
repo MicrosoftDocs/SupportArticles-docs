@@ -125,27 +125,23 @@ HTTP Error 500.0 - Internal Server Error
 HRESULT: 0x8007007f  
 Description of HRESULT Calling GetProcAddress on ISAPI filter "path_of_isapi" failed.
 
-- > Server Error in Application "*application name*"  
-HTTP Error 500.0 - Internal Server Error  
-HRESULT: 0x8007007f  
-Description of HRESULT There is a problem with the resource you are looking for, so it cannot be displayed.
+    This problem occurs because an ISAPI filter that is not valid is loaded at the global level or at the Web site level.
 
-### Cause for 0x8007007f
-
-- This first possible problem occurs because an ISAPI filter that is not valid is loaded at the global level or at the Web site level.
-
-- This second possible problem occurs because the handler mapping for the requested resource points to a *.dll* file that cannot process the request.
-
-### Resolution for 0x8007007f
-
-- For the first possible error, remove the ISAPI filter that is not valid. To do this, follow these steps:
+    To resolve the problem, remove the ISAPI filter that is not valid. To do this, follow these steps:
 
     1. Click **Start**, click **Run**, type *inetmgr.exe*, and then click **OK**.
     2. In IIS Manager, expand **\<server name>**, expand **Web sites**, and then click the Web site that you want to modify.
     3. In **Features** view, double-click **ISAPI Filters**.
     4. Right-click the ISAPI filter that you want to remove, and then click **Remove**.
 
-- For the second possible error, edit the handler mapping for the requested resource to point to the *.dll* file that can process the request. To do this, follow these steps:
+- > Server Error in Application "*application name*"  
+HTTP Error 500.0 - Internal Server Error  
+HRESULT: 0x8007007f  
+Description of HRESULT There is a problem with the resource you are looking for, so it cannot be displayed.
+
+    This problem occurs because the handler mapping for the requested resource points to a *.dll* file that cannot process the request.
+
+    To resolve the problem, edit the handler mapping for the requested resource to point to the *.dll* file that can process the request. To do this, follow these steps:
 
     1. Click **Start**, click **Run**, type *inetmgr.exe*, and then click **OK**.
     2. In IIS Manager, expand **\<server name>**, expand **Web sites**, and then click the Web site that you want to modify.
