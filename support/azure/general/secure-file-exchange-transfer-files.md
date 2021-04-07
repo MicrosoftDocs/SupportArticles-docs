@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4012140
 
 ## Summary
 
-When you work with Microsoft Support, it is frequently necessary to transfer files to facilitate the troubleshooting process. We recognize that these files may contain sensitive data and must be handled securely. Therefore, the **Secure File Exchange** was built to enable the fast and secure transfer and storage of files.
+When you work with Microsoft Support, it's frequently necessary to transfer files to help the troubleshooting process. We recognize that these files may contain sensitive data and must be handled securely. The **Secure File Exchange** was built to enable the fast and secure transfer and storage of files.
 
 The main features of Secure File Exchange are as follows:
 
@@ -32,22 +32,22 @@ The main features of Secure File Exchange are as follows:
 
 ### Communication
 
-If a file transfer is required to assist with the resolution of a support case, you will receive an email message from a Microsoft Support Professional that contains a link that provides access to your Secure File Exchange workspace.
+If a file transfer is required to assist with the resolution of a support case, you'll receive an email message from a Microsoft Support Professional that contains a link that provides access to your Secure File Exchange workspace.
 
 ### Secure File Exchange "Sign in" and capabilities
 
-Open the Secure File Exchange workspace using the link provided to in the email from the Microsoft Support Professional. You must sign in with your "work or school, or personal Microsoft account." to authenticate your access to the workspace. Signing in allows you to add, download, and delete files.
+Open the Secure File Exchange workspace by using the link provided to in the email from the Microsoft Support Professional. Sign in with your "work or school, or personal Microsoft account." to authenticate your access to the workspace. Signing in allows you to add, download, and delete files.
 
-If you sign in with a "work or school, or personal Microsoft account", that has not been added to your service request by the Microsoft Support Professional, you cannot add, download, or delete files from the workspace. If you need additional accounts added to the Secure File Transfer Workspace, ask your Microsoft Support Professional and they will add them to the account allowed to interact with the workspace.
+If you sign in with a "work or school, or personal Microsoft account", that hasn't been added to your service request by the Microsoft Support Professional, you can't add, download, or delete files from the workspace. If you need other accounts added to the Secure File Transfer Workspace, ask your Microsoft Support Professional and they will add them to the account allowed to interact with the workspace.
 
-If for any reason you cannot use that "work or school, or personal Microsoft account" to sign in, and you need to **view**, **download**, or **delete** files in your workspace, the Microsoft Support Professional assigned to your service request can provide you with a temporary "work or school Microsoft account" to sign in with.
+If for any reason you can't use that "work or school, or personal Microsoft account" to sign in, and you need to **view**, **download**, or **delete** files in your workspace, the Microsoft Support Professional assigned to your service request can provide you with a temporary "work or school Microsoft account" to sign in with.
 
 ![Mircosoft Account sign in dialog](./media/secure-file-exchange-transfer-files/4493616_en_1.jpg)  
 
 #### Authentication (Have you signed in using a "work or school, or personal Microsoft account") 
 
-- A [personal Microsoft account](https://account.microsoft.com/account), is the combination of an email address and a password that you can use to sign in to all consumer-oriented Microsoft products and cloud services such as Outlook (Hotmail), Messenger, OneDrive, MSN, Windows Phone or Xbox Live. If you use an email address and password to sign in to these or other services, then you will have a Microsoft account-but you can also sign up for a new one at any time. Here are some examples of personal Microsoft accounts: username@yahoo.com, username@hotmail.com.
-- A work or school Microsoft account is an account created by an organization's administrator to enable you, as a member of your organization, access to all Microsoft cloud services such as Microsoft Azure, Microsoft Intune or Office 365. A work account can take the form of your work email address, such as **username@orgname.com**, when an organization federates or synchronizes its Active Directory accounts with Azure Active Directory.
+- A [personal Microsoft account](https://account.microsoft.com/account), is the combination of an email address and a password that you can use to sign in to all consumer-oriented Microsoft products and cloud services such as Outlook (Hotmail), Messenger, OneDrive, MSN, Windows Phone or Xbox Live. If you use an email address and password to sign in to these or other services, you'll have a Microsoft account, but you can also sign up for a new one at any time. Here are some examples of personal Microsoft accounts: username@yahoo.com, username@hotmail.com.
+- A work or school Microsoft account is an account created by an organization's administrator to enable you, as a member of your organization, access to all Microsoft cloud services such as Microsoft Azure, Microsoft Intune, or Office 365. A work account can take the form of your work email address, such as **username@orgname.com**, when an organization federates or synchronizes its Active Directory accounts with Azure Active Directory.
 
     > [!NOTE]
     > A "work or school Microsoft account" cannot also be a "personal Microsoft account" and vice versa.
@@ -58,7 +58,7 @@ To authorize, your "work or school, or personal Microsoft account" must be assoc
 
 ### The Secure File Exchange Experience
 
-The following is an example of Secure File Exchange being used by a customer:
+Below is an example of Secure File Exchange being used by a customer:
 
 - dmpsetup.log is being uploaded by the customer and has 107 seconds remaining. The upload can also be canceled at any time.
 - failovercollection.ps was uploaded by a Microsoft Support Professional (`user@microsoft.com`) for the customer to download.
@@ -72,9 +72,9 @@ All files are physically located in the location of the workspace. The location 
 
 When you open a support case and the country that you specify is:
 
-- in Europe, Secure File Exchange will physically create the workspace in Europe. 
-- the United States, Secure File Exchange will physically create the workspace in the United States.
-- any other country, Secure File Exchange will find the closest location to the Microsoft Support Professional that is creating the workspace, and that is where the workspace will be physically created.  
+- In Europe, Secure File Exchange will physically create the workspace in Europe.
+- In the United States, Secure File Exchange will physically create the workspace in the United States.
+- In any other country, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace, and that's where the workspace will be physically created.  
 
 ## The endpoints that are required to be open on your intranet
 
@@ -89,6 +89,6 @@ When you open a support case and the country that you specify is:
 
 ## What happens when my case is closed?
 
-- The Secure File Exchange workspace link that you received from the Microsoft Support Professional will expire 90 days after it is issued to you, regardless of whether the service request is opened or closed.  If your link has expired and your case is active, ask your Microsoft Support Professional for a new link.
-- When the service request is closed by the Microsoft Support Professional, the workspace itself will be inaccessible.   If the service request is reopened, and the link has not expired, the workspace will be accessible.
+- The Secure File Exchange workspace link that you received from the Microsoft Support Professional will expire 90 days after it's issued to you, regardless of whether the service request is opened or closed.  If your link has expired and your case is active, ask your Microsoft Support Professional for a new link.
+- When the service request is closed by the Microsoft Support Professional, the workspace itself will be inaccessible. If the service request is reopened, and the link hasn't expired, the workspace will be accessible.
 - 90 days after the service request is closed, all files in the workspace and the workspace itself will be permanently deleted.
