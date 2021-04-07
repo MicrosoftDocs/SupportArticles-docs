@@ -118,7 +118,9 @@ Remove the ISAPI filter that is not valid. To do this, follow these steps:
 
 ## HResult code 0x8007007f
 
-There are two possibilities for such an HResult code 0x8007007f to occur:
+There are two possibilities for HResult 0x8007007f:
+
+### Message 1
 
 - > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
@@ -133,6 +135,8 @@ Description of HRESULT Calling GetProcAddress on ISAPI filter "path_of_isapi" fa
     2. In IIS Manager, expand **\<server name>**, expand **Web sites**, and then click the Web site that you want to modify.
     3. In **Features** view, double-click **ISAPI Filters**.
     4. Right-click the ISAPI filter that you want to remove, and then click **Remove**.
+
+### Message 2
 
 - > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
