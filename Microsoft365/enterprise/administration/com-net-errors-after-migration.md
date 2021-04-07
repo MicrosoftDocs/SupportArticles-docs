@@ -47,7 +47,7 @@ The errors are caused by orphaned registry subkeys that are created by the migra
 
 ## Resolution
 
-To fix this problem, try the following methods in the given order.
+To fix this problem, use either of the following methods.
 
 ### Method 1: Delete orphaned subkeys automatically
 
