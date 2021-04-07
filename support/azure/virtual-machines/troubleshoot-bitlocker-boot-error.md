@@ -146,6 +146,8 @@ For a Key Encryption Key scenario, follow these steps:
 
 1. Make sure that the logged-in user account requires the "unwrapped" permission in the Key Vault Access policies in the **USER|Key permissions|Cryptographic Operations|Unwrap Key**.
 2. Save the following script to a .PS1 file:
+    > [!NOTE]
+    > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. 
 
     ```powershell
     #Set the Parameters for the script
@@ -166,7 +168,8 @@ For a Key Encryption Key scenario, follow these steps:
             [string] 
             $adTenant
             )
-    # Load ADAL Assemblies
+    # Load ADAL Assemblies. 
+
     $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -last 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
     $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -last 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
     If ((Test-Path -Path $adal) -and (Test-Path -Path $adalforms)) { 
