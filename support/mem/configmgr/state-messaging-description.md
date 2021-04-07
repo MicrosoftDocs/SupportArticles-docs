@@ -22,7 +22,11 @@ A status message viewer is built right into the console so that status messages 
 - various data in the console, such as the number of systems that have to be updated
 - client logs
 
-State messages contain concise information about conditions in-place on the client. The state messaging system is used by specific components of Configuration Manager. The components include software updates, desired configuration management, and network access protection, and so on.
+State messages contain concise information about conditions in-place on the client. The state messaging system is used by specific components of Configuration Manager, including:
+
+- software updates
+- desired configuration management
+- network access protection
 
 Critical software update data relies on the state messaging system in Configuration Manager. Understanding state messaging will become even more important in future versions of Configuration Manager as more components take advantage of it.
 
@@ -32,9 +36,12 @@ The following diagram provides a good description of how the state messaging sys
 
 The green box represents the state messaging system. The components inside the box are components that feed information to the system.
 
-When state messages are received, two things occur. First, state messages are stored in the Windows Management Instrumentation (WMI) provider. Second, the state system scrapes WMI on a 15-minute cycle (default) for any state messages that haven't yet been sent. Then the state system forwards them to the management point. The cycle period can be changed.
+When state messages are received, two things occur:
 
-In the diagram, the client installation piece is shown separately for clarity. During the client installation, the management point is located and targeted for state messages. State messages about the client installation are forwarded to the fallback status point (FSP) that's configured under one of the following conditions:
+1. State messages are stored in the Windows Management Instrumentation (WMI) provider.
+2. The state system scrapes WMI on a 15-minute cycle (default) for any state messages that haven't been sent, and then forwards them to the management point. The cycle period can be changed.
+
+In the diagram, the client installation piece is shown separately for clarity. During the client installation, the management point is located and targeted for state messages. State messages about the client installation are forwarded to the fallback status point (FSP) (if it's configured) under one of the following conditions:
 
 - The management point isn't reached.
 - The management point is down for some reason.
@@ -70,7 +77,7 @@ Tracing SQL commands requires that SQL tracing is enabled for Configuration Mana
 
 Before we examine log code examples, we have to understand the state message format. The state message itself consists of several parts, including **Topic Type** and **State Message ID**. At some locations in the logs, the **Topic Type** seems to already be interpreted for you.
 
-You won't always see **Topic Type** and **State Message ID** together in the same log. One type of data without the other doesn't really help you determine what is needed. However, even if you have both **Topic Type** and **State Message ID**, the information isn't helpful unless you can interpret it.
+You won't always see **Topic Type** and **State Message ID** together in the same log. One type of data without the other doesn't really help you determine what's needed. However, even if you have both **Topic Type** and **State Message ID**, the information isn't helpful unless you can interpret it.
 
 The following chart can help you to interpret the combination of `TopicType` and `StateID` to obtain meaningful data.
 
@@ -207,7 +214,7 @@ Typically, a Visual Basic script (VBScript) is run by using `cscript`. Notice th
 
 When the next state message polling cycle occurs, all state messages are sent to the management point.
 
-In the Statemessage.log file, you can see that the state message information is pulled, formatted into XML, and then sent to the management point. The state message should resemble the following information:
+In the Statemessage.log file, you can see that the state message information is pulled, formatted into XML, and then sent to the management point. The state message information should resemble the following example:
 
 > \<![LOG[StateMessage body: \<?xml version="1.0" encoding="UTF-16"?>  
 > \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID:*GUID*\</ClientID>  
@@ -239,10 +246,10 @@ In the `auth\statesys.box\incoming` folder, you can see the *`.smx`* files being
 
 If you rename the *`.smx`* file by adding the *`.xml`* extension so that the file is named *file_name*.smx.xml, and then you double-click the new file name, the XML file is opened in Internet Explorer and is much easier to read.
 
-The following image is an example of an XML file opened in Internet Explorer. The details of the computer and state message are highlighted. The highlight shows the file contains the information that we've previously discussed combined with the unique **State Message ID** value.
+The following image is an example of an XML file opened in Internet Explorer. The details of the computer and state message are highlighted. It contains the information that we've previously discussed, combined with the unique **State Message ID** value.
 
 > [!NOTE]
-> If you rename these files, you should first copy them to a different folder so that you don't affect the *Statesys.box* folder.
+> If you rename these files, first copy them to a different folder so that you don't affect the *Statesys.box* folder.
 
 :::image type="content" source="./media/state-messaging-description/xml.png" alt-text="An example .smx.xml file in Internet Explorer." border="false":::
 
@@ -257,9 +264,9 @@ Finally, the state messages must be processed into the database. In the *Statesy
 > CMessageProcessor - Processed 1 message files in this batch, with 0 bad files.  
 > Thread "State Message Processing Thread #0" id:5076 terminated normally
 
-The database processing component can be made visible by enabling SQL tracing. However, that doesn't help much here. So we must use the SQL profiler instead. The profiler gives us a hint of what's occurring behind the scenes - but not completely. Several SQL stored procedures are responsible for processing state messages. Additionally, several tables in the database store the state messaging data. The stored procedures that do state message processing generally start with the name `spProcess`. There are many of these procedures.
+The database processing component can be made visible by enabling SQL tracing, but it doesn't help much. We must use the SQL profiler instead. The profiler gives us a hint of what's occurring behind the scenes, but not completely. Several SQL stored procedures are responsible for processing state messages. Besides, several tables in the database store the state messaging data. The stored procedures that do state message processing generally start with the name `spProcess`. There are many of such procedures.
 
-The site server tracks state messages as they arrive. It can flag any missing messages and periodically request a resync, as necessary. State messages are important. You don't want to miss any.
+The site server tracks state messages as they arrive, so it can flag any missing messages and periodically request a resync when necessary. State messages are important. You don't want to miss any.
 
 As state messages arrive, the unique ID is read and stored in the database. As processing continues, the data is regularly updated. If a gap is detected, that data is flagged and stored as missing state messages in the `SR_MissingMessageRanges` table. Ideally, this table will be empty. However, in production, you may see data in the table. This table helps track state messages that require a resync.
 
