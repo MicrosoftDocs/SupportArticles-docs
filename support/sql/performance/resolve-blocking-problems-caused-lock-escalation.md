@@ -1,7 +1,7 @@
 ---
 title: Resolve blocking problem caused by lock escalation
 description: This article describes how to determine whether lock escalation is causing blocking and how to deal with undesirable lock escalation.
-ms.date: 11/18/2020
+ms.date: 4/7/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: BARTD
 ms.topic: how-to
@@ -86,7 +86,7 @@ Lock escalation may occur under one of two conditions:
 
 1. **A lock threshold is reached** After memory threshold is checked, the number of locks acquired on the current current table or index is assessed. If the number has exceeded 5000, a lock escalation is triggered.
 
-To understand which threshold was reached, use Extended events, enable the  _lock_escalation_ event and examine the _escalated_lock_count_ and _escalation_cause_  columns. Alternatively, use the [Lock:Escalation event](https://docs.microsoft.com/sql/relational-databases/event-classes/lock-escalation-event-class) and examine the EventSubClass, where 0 - LOCK_THRESHOLD indicates the statement exceeded the lock threshold and 1 - MEMORY_THRESHOLD indicates the statement exceeded the memory threshold. Also examine IntegerData and IntegerData2 columns.
+To understand which threshold was reached, use Extended events, enable the  _lock_escalation_ event and examine the _escalated_lock_count_ and _escalation_cause_  columns. Alternatively, use the [Lock:Escalation event](https://docs.microsoft.com/sql/relational-databases/event-classes/lock-escalation-event-class) and examine the `EventSubClass`, where 0 - LOCK_THRESHOLD indicates the statement exceeded the lock threshold and 1 - MEMORY_THRESHOLD indicates the statement exceeded the memory threshold. Also examine `IntegerData` and `IntegerData2` columns.
 
 ## Recommendations:
 The methods that are discussed in the [Prevent Lock Escalation](#prevent-lock-escalation) section are better options than disabling escalation at table or instance level. Additionally, the preventive methods generally result in better performance for the query than disabling lock escalation. Microsoft recommends enabling this trace flag only to mitigate severe blocking that is caused by lock escalation while other options, such as those discussed earlier in this article, are being investigated. 
