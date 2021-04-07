@@ -79,10 +79,10 @@ When you search the [message tracking](/exchange/mail-flow/transport-logs/messag
 
 ## Cause
 
-This issue occurs because files are missing in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\Data\Engines\amd64":::* folder. If that's the case, when the FIP-FS engine tries to scan email messages and categorize them, it generates the event errors described in the Symptoms section and places email messages in the Poison queue.
+This issue occurs because files are missing in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\\Data\\Engines\\amd64":::* folder. If that's the case, when the FIP-FS engine tries to scan email messages and categorize them, it generates the event errors described in the Symptoms section and places email messages in the Poison queue.
 
 ## Resolution
 
-Verify that the appropriate files are present in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\Data\Engines\amd64":::* folder. You must first copy the files in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\Data\Engines\amd64":::* folder from another working Exchange server, and then paste the files in the folder of the affected server.
+Verify that the appropriate files are present in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\\Data\\Engines\\amd64":::* folder. You must first copy the files in the *:::no-loc text="%ExchangeInstallPath%FIP-FS\\Data\\Engines\\amd64":::* folder from another working Exchange server, and then paste the files in the folder of the affected server.
 
 **Note:** The *:::no-loc text="%ExchangeInstallPath%":::* value is typically *:::no-loc text="C:\\Program Files\\Microsoft\\Exchange Server\\V15\\":::* (includes a trailing "\\").
