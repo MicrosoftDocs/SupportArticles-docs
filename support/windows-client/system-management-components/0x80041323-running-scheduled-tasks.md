@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2696472
 
 Consider the scenario:  
 
-- You have a Windows-based computer that runs high number of Scheduled tasks under one user account.
+- You have a Windows computer that runs high number of Scheduled tasks under one user account.
 
 - The tasks are failing intermittently and under the LastRun option, you may see following error message
 
@@ -83,13 +83,13 @@ To resolve this particular issue, increase the value for the quota keys to maxim
 
 1. Click **Start**, type *regedit*, and then press ENTER.
 2. Locate and then click the following registry key:
-`HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Schedule\Configuration`
+   `HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Schedule\Configuration`
 3. Right-click **TasksInMemoryQueue**, click **Edit**, and then click **Modify**.
-4. In the **Value data** box, type *1000*.
+4. In the **Value data** box, type *1000* \(Decimal\).
 5. Right-click **TasksPerHighestPrivEngine**, click **Edit**, and then click **Modify**.
-6. In the **Value data** box, type *1000*.
+6. In the **Value data** box, type *1000* \(Decimal\).
 7. Right-click **TasksPerLeastPrivEngine**, click **Edit**, and then click **Modify**.
-8. In the **Value data** box, type *1000*.
+8. In the **Value data** box, type *1000* \(Decimal\).
 9. Exit **Registry Editor** and reboot the machine.
 
 ## More information

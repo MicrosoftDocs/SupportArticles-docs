@@ -47,15 +47,25 @@ You can also perform the above four steps using a PowerShell script. Run the bel
 ```powershell
 $SubscriptionId = "your-subscription-id" # Subscription Id$CloudServiceName = "mycloudservice" # Cloud Service name$CertPassword = "CertPassword" # Password for the self-signed certificate$CertExportFilePath = "C:\my-cert-file.pfx" # Local file path where self-signed certificate will be exported$RdpUserName = "RemoteUserName" # RDP user name$RdpUserPassw0rd = "RdpPassword" # RDP user password$Slot = "Production" # Cloud Service slot$RdpAccountExpiry = $(Get-Date).AddDays(365) # RDP user account expiration DateTime
 
-# Creating self-signed certificateWrite-Host (Get-Date).ToString()" : Creating self-signed certificate." -ForegroundColor Magenta$cert = New-SelfSignedCertificate -DnsName ($CloudServiceName + ".cloudapp.net") -CertStoreLocation "cert:\LocalMachine\My" -KeyLength 2048 -KeySpec "KeyExchange"$SecureCertPassword = ConvertTo-SecureString -String $CertPassword -Force -AsPlainTextExport-PfxCertificate -Cert $cert -FilePath $CertExportFilePath -Password $SecureCertPasswordWrite-Host (Get-Date).ToString()" : Self-signed certificate created successfully at" $CertExportFilePath -ForegroundColor Magenta
+# Creating self-signed certificate
 
-# Login to your Azure accountWrite-Host (Get-Date).ToString()" : Logging into your Azure account." -ForegroundColor MagentaAdd-AzureAccountSelect-AzureSubscription -SubscriptionId $SubscriptionIdWrite-Host (Get-Date).ToString()" : Logged in successfully." -ForegroundColor Magenta
+Write-Host (Get-Date).ToString()" : Creating self-signed certificate." -ForegroundColor Magenta$cert = New-SelfSignedCertificate -DnsName ($CloudServiceName + ".cloudapp.net") -CertStoreLocation "cert:\LocalMachine\My" -KeyLength 2048 -KeySpec "KeyExchange"$SecureCertPassword = ConvertTo-SecureString -String $CertPassword -Force -AsPlainTextExport-PfxCertificate -Cert $cert -FilePath $CertExportFilePath -Password $SecureCertPasswordWrite-Host (Get-Date).ToString()" : Self-signed certificate created successfully at" $CertExportFilePath -ForegroundColor Magenta
 
-# Uploading self-signed certificate to the cloud service certificate storeWrite-Host (Get-Date).ToString()" : Uploading self-signed certificate to the cloud service certificate store." -ForegroundColor MagentaAdd-AzureCertificate -serviceName $CloudServiceName -certToDeploy $CertExportFilePath -password $CertPasswordWrite-Host (Get-Date).ToString()" : Self-signed certificate uploaded successfully." -ForegroundColor Magenta
+# Login to your Azure account
 
-# Delete all the existing RDP extensions for a given cloud service slotWrite-Host (Get-Date).ToString()" : Deleting all the existing RDP extensions for" $Slot "slot." -ForegroundColor MagentaRemove-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -UninstallConfiguration -Slot $SlotWrite-Host (Get-Date).ToString()" : Successfully deleted all the existing RDP extensions for" $Slot "slot." -ForegroundColor Magenta
+Write-Host (Get-Date).ToString()" : Logging into your Azure account." -ForegroundColor MagentaAdd-AzureAccountSelect-AzureSubscription -SubscriptionId $SubscriptionIdWrite-Host (Get-Date).ToString()" : Logged in successfully." -ForegroundColor Magenta
 
-# Enabling remote desktop extension on specified role(s) or all roles on a cloud service slotWrite-Host (Get-Date).ToString()" : Enabling remote desktop extension on all the roles." -ForegroundColor Magenta$SecureRdpPassword = ConvertTo-SecureString -String $RdpUserPassw0rd -Force -AsPlainText$Credential = New-Object System.Management.Automation.PSCredential $RdpUserName,$SecureRdpPasswordSet-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -Credential $Credential -CertificateThumbprint$cert.Thumbprint -Expiration $RdpAccountExpiry -Slot $SlotWrite-Host (Get-Date).ToString()" : Remote desktop extension applied successfully." -ForegroundColor Magenta
+# Uploading self-signed certificate to the cloud service certificate store
+
+Write-Host (Get-Date).ToString()" : Uploading self-signed certificate to the cloud service certificate store." -ForegroundColor MagentaAdd-AzureCertificate -serviceName $CloudServiceName -certToDeploy $CertExportFilePath -password $CertPasswordWrite-Host (Get-Date).ToString()" : Self-signed certificate uploaded successfully." -ForegroundColor Magenta
+
+# Delete all the existing RDP extensions for a given cloud service slot
+
+Write-Host (Get-Date).ToString()" : Deleting all the existing RDP extensions for" $Slot "slot." -ForegroundColor MagentaRemove-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -UninstallConfiguration -Slot $SlotWrite-Host (Get-Date).ToString()" : Successfully deleted all the existing RDP extensions for" $Slot "slot." -ForegroundColor Magenta
+
+# Enabling remote desktop extension on specified role(s) or all roles on a cloud service slot
+
+Write-Host (Get-Date).ToString()" : Enabling remote desktop extension on all the roles." -ForegroundColor Magenta$SecureRdpPassword = ConvertTo-SecureString -String $RdpUserPassw0rd -Force -AsPlainText$Credential = New-Object System.Management.Automation.PSCredential $RdpUserName,$SecureRdpPasswordSet-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -Credential $Credential -CertificateThumbprint$cert.Thumbprint -Expiration $RdpAccountExpiry -Slot $SlotWrite-Host (Get-Date).ToString()" : Remote desktop extension applied successfully." -ForegroundColor Magenta
 ```
 
 Output of the script will be something like below:

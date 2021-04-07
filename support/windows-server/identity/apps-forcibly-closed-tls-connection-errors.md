@@ -101,7 +101,8 @@ foreach ($CipherSuite in $(Get-TlsCipherSuite).Name)
 
 You can confirm that you're encountering this issue during the connection establishment. When the issue occurs, you can see the following sequence in the network trace on the server.
 
-> 1103479 *\<DateTime>* 382.4104867 \<Application IP> **\<Server IP>** TCP:Flags=CE....S., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174047, Ack=0, Win=8192 ( Negotiating scale factor 0x8 ) = 8192  
+```output
+1103479 *\<DateTime>* 382.4104867 \<Application IP> **\<Server IP>** TCP:Flags=CE....S., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174047, Ack=0, Win=8192 ( Negotiating scale factor 0x8 ) = 8192  
 1103486 *\<DateTime>* 382.4105589 \<Server IP> \<Application IP> TCP: [Bad CheckSum]Flags=...A..S., SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267349053, Ack=829174048, Win=65535 ( Negotiated scale factor 0x8 ) = 16776960  
 1103493 *\<DateTime>* 382.4113628 \<Application IP> \<Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174048, Ack=267349054, Win=513 (scale factor 0x8) = 131328  
 1103515 *\<DateTime>* 382.4117349 \<Application IP> \<Server IP> TDS:Prelogin, Version = 7.300000(No version information available, using the default version), SPID = 0, PacketID = 1, Flags=...AP..., SrcPort=62702, DstPort=1433, PayloadLen=88, Seq=829174048 - 829174136, Ack=267349054, Win=131328  
@@ -114,10 +115,12 @@ You can confirm that you're encountering this issue during the connection establ
 1103696 *\<DateTime>* 382.4918048 \<Application IP> \<Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174648, Ack=267351025, Win=513 (scale factor 0x8) = 131328  
 1103718 *\<DateTime>* 382.4931068 \<Application IP> \<Server IP> TCP:Flags=...A...F, SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174648, Ack=267351025, Win=513 (scale factor 0x8) = 131328  
 1103723 *\<DateTime>* 382.4931475 \<Server IP> \<Application IP> TCP: [Bad CheckSum]Flags=...A...., SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267351025, Ack=829174649, Win=8210 (scale factor 0x8) = 2101760  
+```
 
 Examining the Server Hello packet to see the cipher suite being used:
 
-> Frame: Number = 1103584, Captured Frame Length = 2093, MediaType = NetEvent  
+```output
+Frame: Number = 1103584, Captured Frame Length = 2093, MediaType = NetEvent  
 +NetEvent:  
 +MicrosoftWindowsNDISPacketCapture: Packet Fragment (1976 (0x7B8) bytes)  
 +Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[00-00-0C-9F-F4-5C],SourceAddress:[00-1D-D8-B8-3A-7B]  
@@ -152,6 +155,7 @@ ServerKeyExchange: Binary Large Object (1034 Bytes)
 HandShakeType: Server Hello Done(0x0E)  
 Length: 0 (0x0)  
 +Tds: Prelogin, Version = 7.300000(No version information available, using the default version), Reassembled Packet
+```
 
 ## Reference
 
