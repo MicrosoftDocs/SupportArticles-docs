@@ -40,10 +40,10 @@ The simplest and safest way to prevent lock escalation is to keep transactions s
 
     ```sql
     DECLARE @done bit = 0;
-WHILE (@done = 0)
+    WHILE (@done = 0)
     BEGIN
         DELETE TOP(1000) FROM LogMessages WHERE LogDate < '20020102';
-                IF @@rowcount < 1000 SET @done = 1;
+        IF @@rowcount < 1000 SET @done = 1;
     END;
     ```
 
