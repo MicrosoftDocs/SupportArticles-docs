@@ -118,7 +118,7 @@ Remove the ISAPI filter that is not valid. To do this, follow these steps:
 
 ## HResult code 0x8007007f
 
-There are two possibilities for such an HResult code to occur:
+There are two possibilities for such an HResult code 0x8007007f to occur:
 
 - > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
