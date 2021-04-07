@@ -26,11 +26,11 @@ Error message:
 
 Cause
 
-This problem occurs because the ApplicationHost.config or Web.config file contains a malformed or unidentified XML element. IIS can't identify the XML elements of modules that are not installed. For example, IIS **URL Rewrite** module.
+This problem occurs because the ApplicationHost.config or Web.config file contains a malformed or unidentified XML element. IIS can't identify the XML elements of the modules that are not installed. For example, IIS **URL Rewrite** module.
 
 Resolution
 
-Try the following methods:
+Use one of the following methods:
 
 - Delete the malformed XML element from the ApplicationHost.config or Web.config file.
 - Check the unidentified XML elements, and then install the relevant IIS modules.
