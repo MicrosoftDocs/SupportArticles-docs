@@ -15,26 +15,20 @@ ms.technology: windows-server-deployment
 ---
 # How to rebuild the Tokens.dat file when you troubleshoot Windows activation issues
 
-This article provides a solution to an issue that you may rebuild the Tokens.dat file when you troubleshoot Windows activation issues.
+When you troubleshoot Windows activation issues, you may have to rebuild the Tokens.dat file.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2736303
 
-## Summary
-
-When you troubleshoot Windows activation issues, you may have to rebuild the Tokens.dat file.
-
-## Resolution
-
-To rebuild the Tokens.dat file, follow these steps:
+## Rebuild the Tokens.dat file
 
 1. Open an elevated command prompt:
 
-    1. Swipe in from the right edge of the screen, and then tap **Search**. Or, if you're using a mouse, point to the lower-right corner of the screen, and then select **Search**.
-    2. In the search box, type **cmd**.
-    3. Swipe across or right-click the displayed **Command Prompt** icon.
-    4. Tap or select **Run as administrator**.
+    1. Open Start menu or Start screen, search **cmd**.
+    2. Right click **Command Prompt** in the search results, and select **Run as administrator**.
+
 2. Type the following commands in the order in which they're presented. Press **Enter** after each command.
+
     1. `net stop sppsvc`
 
     2. For Windows 10, Windows Server 2016 and later versions of Windows:  
