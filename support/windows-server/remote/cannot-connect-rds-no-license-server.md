@@ -31,11 +31,7 @@ Clients cannot connect to Remote Desktop Services, and they display messages tha
 
 This situation usually indicates a problem in the Remote Desktop licensing configuration.
 
-## Resolution
-
-First, [check the RD Licensing configuration](#check-the-rd-licensing-configuration). If you still experience problems, check the [additional troubleshooting methods](#additional-troubleshooting-methods).
-
-### Check the RD Licensing configuration
+## Check the RD Licensing configuration
 
 You can check the RD Licensing configuration by using Server Manager and RD Licensing Manager. Verify the following:
 
@@ -55,10 +51,10 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 
 - The RDS deployment uses the correct license server, licensing mode, and policy settings. The details of the configuration depend on the type of deployment that you have:
 
-  - [RDS deployment that includes the Remote Desktop Connection Broker (RD Connection Broker) role](#rdcb).
-  - [RDS deployment that includes only the Remote Desktop Session Host (RD Session Host) role and the RD Licensing role](#nordcb).
+  - [Configure licensing for an RDS deployment that includes the Remote Desktop Connection Broker (RD Connection Broker) role](#rdcb).
+  - [Configure licensing for an RDS deployment that includes only the Remote Desktop Session Host (RD Session Host) role and the RD Licensing role](#nordcb).
 
-#### <a id=rdcb></a>Configure licensing for an RDS deployment that includes the RD Connection Broker role
+### <a id=rdcb></a>Configure licensing for an RDS deployment that includes the RD Connection Broker role
 
 1. On the RD Connection Broker computer, open Server Manager.
 2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.
@@ -69,7 +65,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
    > If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs are not permitted.
 4. Specify a license server.
 
-#### <a id=nordcb></a>Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
+### <a id=nordcb></a>Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
 
 1. On the RD Session Host computer, select **Start**, and then enter **gpedit.msc** to open Local Group Policy Editor.
 2. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Licensing**.
@@ -83,7 +79,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 8. Under **Specify the licensing mode for the Remote Desktop Session Host server**, select **Per Device** or **Per User**, as appropriate for your deployment.
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-specify-licensing-mode.png" alt-text="Policy settings for Remote Desktop licensing mode":::
 
-### Additional troubleshooting methods
+## Additional troubleshooting methods
 
 If you verify that the licensing configuration is correct, but the system still isn't correctly issuing CALs, follow these steps:
 
@@ -91,7 +87,7 @@ If you verify that the licensing configuration is correct, but the system still 
 2. [Make sure that the versions of your RDS CALs, RD Session Hosts, and RD License Servers are compatible](#extra2)
 3. [Make sure that you're using the appropriate type of RDS CAL for your RDS environment](#extra3)
 
-#### <a id="extra1"></a>Step 1: Use RD Licensing Diagnoser to check for issues
+### <a id="extra1"></a>Step 1: Use RD Licensing Diagnoser to check for issues
 
 To open RD Licensing Diagnoser, open Server Manager, and select **Tools** > **Terminal Services** > **RD Licensing Diagnoser**.
 
@@ -103,7 +99,7 @@ The top window of the RD Licensing Diagnoser lists problems that the diagnoser h
 
 The **RD Licensing Diagnoser Information** section shows more information about the problem, including its possible causes and the steps to follow to remediate it.
 
-#### <a id="extra2"></a>Step 2: Make sure that the versions of your RDS CALs, RD Session Hosts, and RD License Servers are compatible
+### <a id="extra2"></a>Step 2: Make sure that the versions of your RDS CALs, RD Session Hosts, and RD License Servers are compatible
 
 The following table shows which RDS CAL and RD Session Host versions are compatible with one another.
 
@@ -127,6 +123,6 @@ The following table shows which RDS CAL and license server versions are compatib
 
 For more information, see [RDS CAL version compatibility](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
 
-#### <a id="extra3"></a>Step 3: Make sure that you're using the appropriate type of RDS CAL for your RDS environment
+### <a id="extra3"></a>Step 3: Make sure that you're using the appropriate type of RDS CAL for your RDS environment
 
 If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs aren't permitted.
