@@ -801,9 +801,9 @@ An empty result set indicates no trace flag is active. Conversely, if 2551 is st
             Write-Host "Generated $cntr memory dump(s)." -ForegroundColor Green
     
             if ($cntr -ge $DumpCountInt)
-                {
-                    break
-                }
+            {
+                break
+            }
             Start-Sleep -S $DelayIntervalInt
         }
     
