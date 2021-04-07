@@ -8,7 +8,9 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 147067
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -39,10 +41,60 @@ Try the following options to help recover your document. Select the image or hea
 <td valign="top">
 <a href="#option1">
 
-![Option 1](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png" alt-text="Option 1":::
 
 </a>
-</td><td><a href="#option1">Ignore DDE</a>
+</td><td><a href="#option1">Check for hidden sheets</a>
+
+1. Go to the **View** tab.
+1. Select **Unhide**.
+1. Select a workbook from the list.
+1. Select **OK**.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option2">
+
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png" alt-text="Option 2":::
+
+</a>
+</td>
+<td><a href="#option2">Minimizing and maximizing the window</a>
+
+1. Select the minimize button in the top-right corner of the Excel spreadsheet.
+1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option3">
+
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png" alt-text="Option 3":::
+
+</a>
+</td>
+<td><a href="#option3">Disable hardware acceleration</a>
+
+1. Start any Office 2013, 2016, 2019, or O365 program.
+1. On the **File** tab, select **Options**.
+1. In the **Options** dialog box, select **Advanced**.
+1. In the list of available options, select the **Disable hardware graphics acceleration** check box.
+1. Select the **OK** button.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option4">
+
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png" alt-text="Option 4":::
+
+</a>
+</td>
+<td><a href="#option4">Ignore DDE</a>
 
 > [!NOTE]
 > This step can be skipped for Excel 2019 and Excel O365.
@@ -56,28 +108,13 @@ Try the following options to help recover your document. Select the image or hea
 </tr>
 <tr>
 <td valign="top">
-<a href="#option2">
+<a href="#option5">
 
-![Option 2](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
-
-</a>
-</td>
-<td><a href="#option2">Repair User Experience Virtualization (UE-V)</a>
-
-If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
-
-[2927019](https://support.microsoft.com/help/2927019) Hotfix Package 1 for Microsoft User Experience Virtualization 2.0
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option3">
-
-![Option 3](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png" alt-text="Option 5":::
 
 </a>
 </td>
-<td><a href="#option3">Reset file associations</a>
+<td><a href="#option5">Reset file associations</a>
 
 Windows 10
 
@@ -98,13 +135,30 @@ To open this type of file in a different app:
 </tr>
 <tr>
 <td valign="top">
-<a href="#option4">
+<a href="#option6">
 
-![Option 4](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png" alt-text="Option 6":::
 
 </a>
 </td>
-<td><a href="#option4">Delete the Word Options registry key</a>
+<td><a href="#option6">Repair User Experience Virtualization (UE-V)</a>
+
+
+If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
+
+[2927019](https://support.microsoft.com/help/2927019) Hotfix Package 1 for Microsoft User Experience Virtualization 2.0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option7">
+
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-7.png" alt-text="Option 7":::
+
+</a>
+</td>
+<td><a href="#option7">Repair Office</a>
 
 For an Office 365 or Office 2019 Click-to-Run installation
 
@@ -117,17 +171,16 @@ Windows 10
 1. Select or tap the **Modify** button.
 1. In the **How would you like to repair your Office programs** window, select or tap the **Online Repair** radio button, then select or tap the **Repair** button.
 
-</td>
-</tr>
+</td></tr>
 <tr>
 <td valign="top">
-<a href="#option5">
+<a href="#option8">
 
-![Option 5](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
+:::image type="content" source="../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-8.png" alt-text="Option 8":::
 
 </a>
 </td>
-<td><a href="#option5">Turn off add-ins</a>
+<td><a href="#option8">Turn off add-ins</a>
 
 1. On the **File** menu, select **Options**, then select **Add-Ins**.
 1. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** item, then select **Go**.
@@ -135,53 +188,6 @@ Windows 10
 1. Restart Excel by double-clicking the icon or file name for the workbook that you are trying to open.
 1. If the problem persists, repeat steps 1-4, except select a different add-in in step 3.
 1. If the problem persists after you clear all the COM add-ins, repeat steps 1-4, except select **Excel Add-Ins** in step 2, and then try each of the Excel add-ins one at a time in step 3.  
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option6">
-
-![Option 6](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png)
-
-</a>
-</td>
-<td><a href="#option6">Disable hardware acceleration</a>
-
-1. Start any Office 2013, 2016, 2019, or O365 program.
-1. On the **File** tab, select **Options**.
-1. In the **Options** dialog box, select **Advanced**.
-1. In the list of available options, select the **Disable hardware graphics acceleration** check box.
-1. Select the **OK** button.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option7">
-
-![Option 7](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-7.png)
-
-</a>
-</td>
-<td><a href="#option7">Minimizing and maximizing the window</a>
-
-1. Select the minimize button in the top-right corner of the Excel spreadsheet.
-1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
-
-</td></tr>
-<tr>
-<td valign="top">
-<a href="#option8">
-
-![Option 8](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-8.png)
-
-</a>
-</td>
-<td><a href="#option8">Check for hidden sheets</a>
-
-1. Select the minimize button in the top-right corner of the Excel spreadsheet.
-1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
 
 </td>
 </tr>
@@ -193,7 +199,59 @@ To resolve this problem, try the following options, as appropriate, in the given
 
 <a id="option1">
 
-## Option 1: Ignore DDE
+## Option 1: Check for hidden sheets
+
+</a>
+
+An Excel sheet may inadvertently have been saved as a hidden document. To check this, follow these steps:
+
+1. Go to the **View** tab.
+1. Select **Unhide**.
+1. Select a workbook from the list.
+1. Select **OK**.
+
+<a id="option2">
+
+## Option 2: Minimizing and maximizing the window
+
+</a>
+
+Minimizing and then maximizing the window can sometimes refresh the Excel page and cause any hidden data to appear.
+
+1. In the top-right corner of the Excel spreadsheet, select the minimize button.
+1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
+
+After your sheet is maximized, your data may appear.
+
+<a id="option3">
+
+## Option 3: Disable hardware acceleration
+
+</a>
+
+To work around this problem, disable hardware acceleration until a fix is released by your video adapter manufacturer. Make sure to check regularly for updates to your video adapter driver.
+
+To disable hardware acceleration, follow these steps:
+
+1. Start any Office 2013, 2016, 2019, or O365 program.
+1. On the **File** tab, select **Options**.
+1. In the **Options** dialog box, select **Advanced**.
+1. In the list of available options, select the **Disable hardware graphics acceleration** check box.
+
+   The following screenshot shows this option in Excel.
+
+   ![Screenshot of the Disable hardware graphics acceleration check box.](./media/excel-opens-blank/disable-hardware-acceleration.png)
+
+1. Select the **OK** button.
+
+> [!NOTE]
+> For more information about hardware acceleration, see the following Knowledge Base article:
+>
+>[2768648](https://support.microsoft.com/help/2768648) Display issues in Office 2013 client applications
+
+<a id="option4">
+
+## Option 4: Ignore DDE
 
 </a>
 
@@ -216,25 +274,9 @@ To correct this setting, follow these steps.
 > [!NOTE]
 > For more information about how to turn off DDE, see ["An error occurred when sending commands to the program" in Excel](https://docs.microsoft.com/office/troubleshoot/excel/error-when-send-commands-in-excel).
 
-If these steps do not resolve the problem, continue to **Option 2**.
+<a id="option5">
 
-<a id="option2">
-
-## Option 2: Repair User Experience Virtualization (UE-V)
-
-</a>
-
-If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
-
-[2927019](https://support.microsoft.com/help/2927019) Hotfix Package 1 for Microsoft User Experience Virtualization 2.0
-
-If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
-
-If these steps do not resolve the problem, continue to **Option 3**.
-
-<a id="option3">
-
-## Option 3: Reset file associations
+## Option 5: Reset file associations
 
 </a>
 
@@ -272,11 +314,21 @@ To open this type of file in a different app:
 1. Under **Recommended Programs**, select **Microsoft Excel**.
 1. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe**, then select **Excel**.
 
-If these steps do not resolve the problem, continue to **Option 4**.
+<a id="option6">
 
-<a id="option4">
+## Option 6: Repair User Experience Virtualization (UE-V)
 
-## Option 4: Repair Office
+</a>
+
+If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
+
+[2927019](https://support.microsoft.com/help/2927019) Hotfix Package 1 for Microsoft User Experience Virtualization 2.0
+
+If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
+
+<a id="option7">
+
+## Option 7: Repair Office
 
 </a>
 
@@ -319,11 +371,9 @@ To repair Office 2013, Office 2010, or Office 2007, follow the steps in the foll
 
 [Repair an Office application](https://office.microsoft.com/outlook-help/repair-office-programs-ha010357402.aspx)
 
-If these steps do not resolve the problem, continue to **Option 5**.
+<a id="option8">
 
-<a id="option5">
-
-## Option 5: Turn off add-ins
+## Option 8: Turn off add-ins
 
 </a>
 
@@ -340,60 +390,6 @@ If Excel loads the file, the add-in that you last turned off is causing the prob
 
 If Excel does not open the file after you turn off all the add-ins, the problem has a different cause.
 
-If these steps do not resolve the problem, continue to **Option 6**.
-
-<a id="option6">
-
-## Option 6: Disable hardware acceleration
-
-</a>
-
-To work around this problem, disable hardware acceleration until a fix is released by your video adapter manufacturer. Make sure to check regularly for updates to your video adapter driver.
-
-To disable hardware acceleration, follow these steps:
-
-1. Start any Office 2013, 2016, 2019, or O365 program.
-1. On the **File** tab, select **Options**.
-1. In the **Options** dialog box, select **Advanced**.
-1. In the list of available options, select the **Disable hardware graphics acceleration** check box.
-
-   The following screenshot shows this option in Excel.
-
-   ![Screenshot of the Disable hardware graphics acceleration check box.](./media/excel-opens-blank/disable-hardware-acceleration.png)
-
-1. Select the **OK** button.
-
-> [!NOTE]
-> For more information about hardware acceleration, see the following Knowledge Base article:
->
->[2768648](https://support.microsoft.com/help/2768648) Display issues in Office 2013 client applications
-
-<a id="option7">
-
-## Option 7: Minimizing and maximizing the window
-
-</a>
-
-Minimizing and then maximizing the window can sometimes refresh the Excel page and cause any hidden data to appear.
-
-1. In the top-right corner of the Excel spreadsheet, select the minimize button.
-1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
-
-After your sheet is maximized, your data may appear.
-
-<a id="option8">
-
-## Option 8: Check for hidden sheets
-
-</a>
-
-An Excel sheet may inadvertently have been saved as a hidden document. To check this, follow these steps:
-
-1. Go to the **View** tab.
-1. Select **Unhide**.
-1. Select a workbook from the list.
-1. Select **OK**.
+If none of the above options works, please make sure Excel is not in Compatibility mode.
 
 If you still experience this problem after you try all these options, contact [Microsoft Support](https://support.microsoft.com/) for additional troubleshooting help.
-
-If none of the above options works, please make sure Excel is not in Compatibility mode.
