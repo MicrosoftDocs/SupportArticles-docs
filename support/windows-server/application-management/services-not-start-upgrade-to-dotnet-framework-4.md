@@ -1,6 +1,6 @@
 ---
 title: Services depending on ASP.NET State Service don't start
-description: Describes an issue that may occur on a computer that is running Windows Server 2008 R2. Provides a workaround.
+description: Describes an issue that may occur on a Windows Server computer. Provides a workaround.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2963657
 
 Consider the following scenario:  
 
-- You have a computer that is running Windows Server 2008 R2.
+- You have a computer that is running Windows Server.
 - The ASP.NET State Service is installed as part of Internet Information Services (IIS).
 - An installed service depends on the ASP.NET State Service.
 - You upgrade the Microsoft .NET Framework 3.51 to the .NET Framework 4.0.

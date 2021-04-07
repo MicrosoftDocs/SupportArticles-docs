@@ -1,7 +1,7 @@
 ---
 title: Description of the standard terminology
 description: This article describes the standard terminology that Microsoft uses to describe software updates.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -46,7 +46,7 @@ Microsoft security updates are available for customers to download and are accom
 
 ## Service pack
 
-A tested, cumulative set of all hotfixes, security updates, critical updates, and updates. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product. Service packs my also contain a limited number of customer-requested design changes or features.
+A tested, cumulative set of all hotfixes, security updates, critical updates, and updates. Additionally, service packs may contain additional fixes for problems that are found internally since the release of the product. Service packs may also contain a limited number of customer-requested design changes or features.
 
 ## Tool
 

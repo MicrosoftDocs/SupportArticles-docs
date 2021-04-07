@@ -51,7 +51,7 @@ To use Registry Editor to turn on automatic logon, follow these steps:
 7. Type *AutoAdminLogon*, and then press Enter.
 8. Double-click **AutoAdminLogon**.
 9. In the **Edit String** dialog box, type **1** and then click **OK**.
-10. If you have joined the computer to a domain, you should add the **DefaultDomain** value, and the data for the value should be set as the fully qualified domain name (FQDN) of the domain.
+10. If you have joined the computer to a domain, you should add the **DefaultDomainName** value, and the data for the value should be set as the fully qualified domain name (FQDN) of the domain, for example `contoso.com.`.
 11. Exit Registry Editor.
 12. Click **Start**, click **Shutdown**, and then type a reason in the **Comment** text box.
 13. Click **OK** to turn off your computer.

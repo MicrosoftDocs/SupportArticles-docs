@@ -134,7 +134,3 @@ To assign required permissions to the worker process account on the Temp directo
 6. Run the web application.
 
     You may receive the error that is mentioned in the [Symptoms](#symptoms) section of this article.
-
-## References
-
-[HOW TO: Configure NTFS File Permissions for Security of ASP.NET Applications](https://support.microsoft.com/help/815153)

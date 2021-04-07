@@ -21,10 +21,7 @@ When using forms-based authentication in ASP.NET applications, only authenticate
 
 ## Configure access to a specific file and folder
 
-1. Set up forms-based authentication. For more information, see the following articles:
-
-    - [How to implement Forms-Based Authentication in Your ASP.NET Application by Using Visual Basic .NET](https://support.microsoft.com/help/308157)
-    - [How to implement Forms-Based Authentication in Your ASP.NET Application by Using C# .NET](https://support.microsoft.com/help/301240)
+1. Set up forms-based authentication. For more information, see [How to implement Forms-Based Authentication in Your ASP.NET Application by Using C# .NET](https://support.microsoft.com/help/301240).
 
 2. Request any page in your application to be redirected to *Logon.aspx* automatically.
 3. In the *Web.config* file, type or paste the following code.

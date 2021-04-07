@@ -8,7 +8,7 @@ ms.prod-support-area-path: C and C++ Libraries
 
 This article describes a problem that occurs when you read lines of text by using the `Fscanf` function.
 
-_Original product version:_ &nbsp; C  
+_Original product version:_ &nbsp; Visual C  
 _Original KB number:_ &nbsp; 60336
 
 ## Summary

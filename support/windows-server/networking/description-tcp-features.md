@@ -1,6 +1,6 @@
 ---
 title: Description of Windows TCP features
-description: Describes the TCP features in Windows 2000 and Windows Server 2003.
+description: Describes the TCP features in Windows.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: networking
 ---
 # Description of Windows TCP features
 
-This article describes the TCP features in Windows 2000 and Windows Server 2003.
+This article describes the TCP features in Windows.
 
 _Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 224829
 
 ## Summary
 
-This article describes the following TCP features in Microsoft Windows 2000 and Microsoft Windows Server 2003:  
+This article describes the following TCP features in Windows:  
 
 - TCP Window Size
 - TCP Options Now Supported

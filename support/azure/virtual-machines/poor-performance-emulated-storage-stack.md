@@ -4,6 +4,8 @@ description: Describes an issue that causes poor performance to occur for VMs th
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: mohak, genli, scotro, clandis, jamesca, nagag, rakkim
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Poor performance for VMs that run with an emulated mode storage stack on Windows Server 2012 R2
 

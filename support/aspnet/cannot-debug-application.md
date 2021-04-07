@@ -52,7 +52,3 @@ To use the `Aspnet_regiis.exe` utility, follow these steps:
     > You must replace *Windows Directory* in this path with the correct directory for your system and replace *Version* with the version of the .NET Framework installed on your system.
 
 4. Type `aspnet_regiis -i` to configure the required application mappings correctly.
-
-## References
-
-For additional information about other ASP.NET debugging problems, see [Common Errors When You Debug ASP.NET Applications in Visual Studio .NET](https://support.microsoft.com/help/306172/info-common-errors-when-you-debug-asp-net-applications-in-visual-studi).

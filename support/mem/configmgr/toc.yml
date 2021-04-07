@@ -352,6 +352,8 @@
           href: error-0x800f0831-installing-update.md
         - name: .NET Framework 4.7.2 updates fail to sync
           href: dotnet-framework-updates-fail-to-sync.md
+        - name: Updates aren't downloaded when an ADR runs
+          href: adr-updates-download-failure.md
     - name: State messaging
       href: state-messaging-description.md
     - name: Understand software update management
@@ -392,6 +394,8 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
+        - name: Reindex the WSUS database
+          href: reindex-the-wsus-database.md  
         - name: The spDeleteUpdate stored procedure runs slowly
           href: spdeleteupdate-slow-performance.md          
         - name: Troubleshoot issues with WSUS client agents
@@ -400,6 +404,8 @@
           href: troubleshoot-wsus-connection-failures.md
         - name: Troubleshoot WSUS high CPU usage
           href: troubleshoot-wsus-server-high-cpu-usage.md
+        - name: Troubleshoot WSUS synchronization and import issues
+          href: troubleshoot-wsus-import-sync-issues.md 
         - name: WSUS and Windows Update Agent diagnostics
           href: wsus-and-windows-update-agent-diagnostics.md
         - name: WSUS best practices
