@@ -51,8 +51,11 @@ Windows Server 2008 R2 or Windows Server 2008
 
 1. Restart the server while you hold Shift+F8.
 2. Select **Directory Services Repair Mode** (DSRM), and then log on by using the DSRM account.
-3. Validate that the role was removed. For example, to do it on Windows Server 2008 R2, use the following command:  
-    dism.exe /online /get-features  
+3. Validate that the role was removed. For example, to do it on Windows Server 2008 R2, use the following command:
+
+   ```console
+   dism.exe /online /get-features
+   ```
 
 4. Add the DirectoryServices-DomainController role back to the server. For example, to do it on Windows Server 2008 R2, use the following command:
 
@@ -88,7 +91,7 @@ Windows Server 2008 R2 or Windows Server 2008
 5. Restart, select **Directory Services Restore Mode** again, and log on by using the DSRM account.
 6. Use Server Manager or Windows PowerShell, and apply a -ForceRemoval parameter to remove Active Directory Domain Services from the domain controller. To do it, run the following command:  
 
-   ```console
+   ```powershell
    Uninstall-AddsDomaincontroller -ForceRemoval  
    ```
 
