@@ -79,7 +79,7 @@ However, if you do not add the -T1211 startup parameter, the effect of a `
 
 Using a lock hint such as ROWLOCK only alters the initial lock plan. Lock hints do not prevent lock escalation.
 
-## Lock Escalation Thresholds
+## Lock escalation thresholds
 
 Lock escalation may occur under one of two conditions:
 1. **Memory threshold is reached** A  memory threshold of 40% of lock memory is reached. When lock memory exceeds 24% of buffer pool a lock escalation may be triggered. Lock memory is limited to 60% of visible buffer pool. Lock escalation threshold is set at 40% of the lock memory, which is 40% of 60% of the buffer pool, which is 24%. If lock memory exceeds the 60% limit (this is much more likely if lock escalation is disabled), all attempts to allocate additional locks fail and `1204` errors are generated.
