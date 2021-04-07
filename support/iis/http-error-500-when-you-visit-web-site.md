@@ -26,46 +26,52 @@ The following is the details of these errors.
 
 ## HResult code 0x80070032
 
+Error message:
+
 > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x80070032  
 Description of HRESULT ISAPI filter *:::no-loc text="drive:\FilePath\ISAPI_FLT.dll":::* tried to register for `SF_NOTIFY_READ_RAW_DATA` notification.
 
-### Cause for 0x80070032
+Cause
 
 This problem occurs because IIS 7.0 does not support the Internet Server API (ISAPI) filter that registers for the `SF_NOTIFY_READ_RAW_DATA` notification.
 
-### Resolution for 0x80070032
+Resolution
 
 Do not use the ISAPI filter that registers for the `SF_NOTIFY_READ_RAW_DATA` notification in IIS.
 
 ## HResult code 0x80070035
+
+Error message:
 
 > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x80070035  
 Description of HRESULT The page cannot be displayed because an internal server error has occurred.
 
-### Cause for 0x80070035
+Cause
 
 This problem occurs because the server that is running IIS 7.0 cannot access the configured root directory of the requested location.
 
-### Resolution for 0x80070035
+Resolution
 
 Make sure that the server that is running IIS 7.0 can access the configured root directory of the requested location.
 
 ## HResult code 0x8007000d
+
+Error message:
 
 > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x8007000d  
 Description of HRESULT Handler "ASPClassic" has a bad module "IsapiModule" in its module list.
 
-### Cause for 0x8007000d
+Cause
 
 This problem occurs because the ISAPIModule module is missing from the modules list for the Web site. The ISAPIModule module is in this location:  *:::no-loc text="drive:\Windows\System32\inetsrv\isapi.dll":::*.
 
-### Resolution for 0x8007000d
+Resolution
 
 Add the ISAPIModule module to the modules list for the Web site. To do this, follow these steps:
 
@@ -77,16 +83,18 @@ Add the ISAPIModule module to the modules list for the Web site. To do this, fol
 
 ## HResult code 0x800700c1
 
+Error message:
+
 > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x800700c1  
 Description of HRESULT The page cannot be displayed because an internal server error has occurred.
 
-### Cause for 0x800700c1
+Cause
 
 This problem occurs because a script mapping is not valid.
 
-### Resolution for 0x800700c1
+Resolution
 
 Make sure that the script-mapping points to the *ISAPI.dll* file that can process the request. To do this, follow these steps:
 
@@ -98,16 +106,18 @@ Make sure that the script-mapping points to the *ISAPI.dll* file that can proces
 
 ## HResult code 0x80070005
 
+Error message:
+
 >Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x80070005  
 Description of HRESULT LoadLibraryEx on ISAPI filter "path_of_isapi" failed.
 
-### Cause for 0x80070005
+Cause
 
 This problem occurs because an ISAPI filter that is not valid is loaded at the global level or at the Web site level.
 
-### Resolution for 0x80070005
+Resolution
 
 Remove the ISAPI filter that is not valid. To do this, follow these steps:
 
@@ -120,14 +130,18 @@ Remove the ISAPI filter that is not valid. To do this, follow these steps:
 
 There are two possibilities for HResult 0x8007007f:
 
-### Message 1
+- Error message 1:
 
-- > Server Error in Application "*application name*"  
-HTTP Error 500.0 - Internal Server Error  
-HRESULT: 0x8007007f  
-Description of HRESULT Calling GetProcAddress on ISAPI filter "path_of_isapi" failed.
+    > Server Error in Application "*application name*"  
+    HTTP Error 500.0 - Internal Server Error  
+    HRESULT: 0x8007007f  
+    Description of HRESULT Calling GetProcAddress on ISAPI filter "path_of_isapi" failed.
+
+    Cause
 
     This problem occurs because an ISAPI filter that is not valid is loaded at the global level or at the Web site level.
+
+    Resolution
 
     To resolve the problem, remove the ISAPI filter that is not valid. To do this, follow these steps:
 
@@ -136,14 +150,18 @@ Description of HRESULT Calling GetProcAddress on ISAPI filter "path_of_isapi" fa
     3. In **Features** view, double-click **ISAPI Filters**.
     4. Right-click the ISAPI filter that you want to remove, and then click **Remove**.
 
-### Message 2
+- Error message 2:
 
-- > Server Error in Application "*application name*"  
-HTTP Error 500.0 - Internal Server Error  
-HRESULT: 0x8007007f  
-Description of HRESULT There is a problem with the resource you are looking for, so it cannot be displayed.
+    > Server Error in Application "*application name*"  
+    HTTP Error 500.0 - Internal Server Error  
+    HRESULT: 0x8007007f  
+    Description of HRESULT There is a problem with the resource you are looking for, so it cannot be displayed.
+
+    Cause
 
     This problem occurs because the handler mapping for the requested resource points to a *.dll* file that cannot process the request.
+
+    Resolution
 
     To resolve the problem, edit the handler mapping for the requested resource to point to the *.dll* file that can process the request. To do this, follow these steps:
 
