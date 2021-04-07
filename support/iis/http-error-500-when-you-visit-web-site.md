@@ -31,8 +31,6 @@ HTTP Error 500.0 - Internal Server Error
 HRESULT: 0x80070032  
 Description of HRESULT ISAPI filter *:::no-loc text="drive:\FilePath\ISAPI_FLT.dll":::* tried to register for `SF_NOTIFY_READ_RAW_DATA` notification.
 
-
-
 ### Cause for 0x80070032
 
 This problem occurs because IIS 7.0 does not support the Internet Server API (ISAPI) filter that registers for the `SF_NOTIFY_READ_RAW_DATA` notification.
@@ -65,7 +63,7 @@ Description of HRESULT Handler "ASPClassic" has a bad module "IsapiModule" in it
 
 ### Cause for 0x8007000d
 
-This problem occurs because the ISAPIModule module is missing from the modules list for the Web site. The ISAPIModule module is in the this location:  *:::no-loc text="drive:\Windows\System32\inetsrv\isapi.dll":::*.
+This problem occurs because the ISAPIModule module is missing from the modules list for the Web site. The ISAPIModule module is in this location:  *:::no-loc text="drive:\Windows\System32\inetsrv\isapi.dll":::*.
 
 ### Resolution for 0x8007000d
 
@@ -120,7 +118,7 @@ Remove the ISAPI filter that is not valid. To do this, follow these steps:
 
 ## HResult code 0x8007007f
 
-There are two possibilities for such a HResult code to occur:
+There are two possibilities for such an HResult code to occur:
 
 - > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
