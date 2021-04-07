@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 2510009
 
 ## Summary
 
-Over the next few years, the data storage industry will be transitioning the physical format of hard disk drives from 512-byte sectors to 4,096-byte sectors (also known as 4K or 4KB sectors). This transition is driven by several factors, including increases in storage density and reliability. This transition causes incompatibility issues with existing software (including operating systems and applications).
+Over the next few years, the data storage industry will be transitioning the physical format of hard disk drives from 512-byte sectors to 4,096-byte sectors (also known as 4K, or 4KB sectors). This transition is driven by several factors, including increases in storage density and reliability. This transition causes incompatibility issues with existing software (including operating systems and applications).
 
 This article describes the current Microsoft support policy for these new drive types in Windows. Applications and hardware devices may have reliability and performance issues when they're connected to these new kinds of drives. Contact your application and hardware vendors about their support policies for these new drive types.
 
-There are three drive types that we will discuss here. Because Microsoft support policy differs for each, you should verify the drive type that you have installed before you read any further.
+There are three drive types that we'll discuss here. Because Microsoft support policy differs for each, you should verify the drive type that you've installed before you read any further.
 
 |Common Names|Reported Logical Sector Size|Reported Physical Sector Size|Windows Version with Support|
 |---|---|---|---|
@@ -45,16 +45,21 @@ To verify the kind of drive that you have, follow these steps:
     Fsutil fsinfo ntfsinfo x:
     ```
 
-    where `x:` represents the drive that you are checking.
+    where `x:` represents the drive that you're checking.
 
-3. Use the values for **Bytes Per Sector** and **Bytes per Physical Sector** to determine the kind of drive that you have. To do so, use the following table:
+3. Use the following values to determine the kind of drive that you have.
+  
+   - Bytes Per Sector
+   - Bytes per Physical Sector
+  
+    To do so, use the following table:
 
-| Bytes Per Sector value| Bytes per Physical Sector value| Drive type |
-|---|---|---|
-|4096|4096|4K native|
-|512|4096|Advanced Format (also known as 512E)|
-|512|512|512-byte native|
-||||
+   | Bytes Per Sector value| Bytes per Physical Sector value| Drive type |
+   |---|---|---|
+   |4096|4096|4K native|
+   |512|4096|Advanced Format (also known as 512E)|
+   |512|512|512-byte native|
+   ||||
 
 ## Specific requirements for Microsoft support by operating system version
 
@@ -62,7 +67,7 @@ To verify the kind of drive that you have, follow these steps:
 
     The below list summarizes the new features delivered as part of Windows 8 and Windows Server 2012 to help improve customer experience with large sector disks. For more detailed description for each item, see [Advanced format (4K) disk compatibility update](/windows/win32/w8cookbook/advanced-format--4k--disk-compatibility-update).
 
-  - Builds upon the Windows 7 SP1 support for 4K disks with emulation (512e), and provides full inbox support for disks with 4K sector size without emulation (4K Native). Some supported apps and scenarios include:
+  - Builds upon the Windows 7 SP1 support for 4K disks with emulation (512e). And provides full inbox support for disks with 4K sector size without emulation (4K Native). Some supported apps and scenarios include:
 
     - Ability to install Windows to and boot from a 4K sector disk without emulation (4K Native Disk)
     - New VHDx file format
@@ -98,9 +103,9 @@ In addition to Windows operating system support, administrators and users should
 
 The following are known compatibility issues that may occur when you use large-sector drives:
 
-- If your Windows partitions were created using a version of Windows PE (or Windows Setup) based on a Windows codebase prior to Windows Vista SP1 (including Windows Vista RTM and all versions of Windows XP), the default partitions will be unaligned. Therefore, all I/O issued to the volume, even with the hotfixes (if applicable to your platform), will by nature be unaligned. It's recommended that you create the partitions using a Windows PE version based on the Windows Vista SP1 codebase or newer.
+- If your Windows partitions were created using a version of Windows PE (or Windows Setup) based on a Windows codebase before Windows Vista SP1 (including Windows Vista RTM and all versions of Windows XP), the default partitions will be unaligned. Therefore, all I/O issued to the volume, even with the hotfixes (if applicable to your platform), will by nature be unaligned. It's recommended that you create the partitions using a Windows PE version based on the Windows Vista SP1 codebase or newer.
 
-- On Windows 7 and Windows 2008 R2, installation will fail with an error (Windows Setup could not configure Windows on this computer's hardware) under the conditions that are outlined in the following article:
+- On Windows 7 and Windows 2008 R2, installation will fail with an error **Windows Setup could not configure Windows on this computer's hardware**. This issue occurs under the conditions that are outlined in the following article:
 
   ["Windows Setup could not configure Windows on this computer's hardware" installation error on a Windows 7 or Windows Server 2008 R2 computer](https://support.microsoft.com/help/2466753).
 
@@ -133,7 +138,7 @@ The following are known compatibility issues that may occur when you use large-s
 
 ## Unsupported scenarios
 
-If your storage device and operating system are noted as unsupported, Microsoft Support will offer troubleshooting tips if the customer requests them. Microsoft doesn't guarantee that a resolution will be found for problems that involve unsupported storage devices. If no resolution is found, the cost of investigating the incident isn't refunded. If it is not agreed that a solution isn't guaranteed, Microsoft Support won't troubleshoot the issue and will refund the cost of investigating the incident.
+If your storage device and operating system are noted as unsupported, Microsoft Support will offer troubleshooting tips if the customer requests them. Microsoft doesn't guarantee that a resolution will be found for problems that involve unsupported storage devices. If no resolution is found, the cost of investigating the incident isn't refunded. If it's not agreed that a solution isn't guaranteed, Microsoft Support won't troubleshoot the issue and will refund the cost of investigating the incident.
 
 Microsoft Support will use standard troubleshooting processes to isolate the storage issue. Some typical troubleshooting methods that Microsoft Support will use include:
 

@@ -22,7 +22,7 @@ When you work with Microsoft Support, it's frequently necessary to transfer file
 The main features of Secure File Exchange are as follows:
 
 - Secure file transfer and storage in the Azure public cloud.
-- An ISO 27001 certified system that has been independently verified as meeting the industry standards for security and protection of data.
+- An ISO 27001 certified system. It has been independently verified as meeting the industry standards for security and protection of data.
 - The use of "work or school, or personal Microsoft accounts" for customer authentication.
 - Restricted access to your files to only those Microsoft Support Professionals who are actively working on your case.
 - Compliance with contractual, regulatory, and certification requirements.
@@ -32,25 +32,25 @@ The main features of Secure File Exchange are as follows:
 
 ### Communication
 
-If a file transfer is required to assist with the resolution of a support case, you'll receive an email message from a Microsoft Support Professional that contains a link that provides access to your Secure File Exchange workspace.
+If a file transfer is required to assist with the resolution of a support case, you'll receive an email message from a Microsoft Support Professional. It contains a link that provides access to your Secure File Exchange workspace.
 
 ### Secure File Exchange "Sign in" and capabilities
 
 Open the Secure File Exchange workspace by using the link provided to in the email from the Microsoft Support Professional. Sign in with your "work or school, or personal Microsoft account." to authenticate your access to the workspace. Signing in allows you to add, download, and delete files.
 
-If you sign in with a "work or school, or personal Microsoft account", that hasn't been added to your service request by the Microsoft Support Professional, you can't add, download, or delete files from the workspace. If you need other accounts added to the Secure File Transfer Workspace, ask your Microsoft Support Professional and they will add them to the account allowed to interact with the workspace.
+If you sign in with a "work or school, or personal Microsoft account" that hasn't been added to your service request by the Microsoft Support Professional, you can't add, download, or delete files from the workspace. If you need other accounts added to the Secure File Transfer Workspace, ask your Microsoft Support Professional and they will add them to the account allowed to interact with the workspace.
 
-If for any reason you can't use that "work or school, or personal Microsoft account" to sign in, and you need to **view**, **download**, or **delete** files in your workspace, the Microsoft Support Professional assigned to your service request can provide you with a temporary "work or school Microsoft account" to sign in with.
+If you can't use that "work or school, or personal Microsoft account" to sign in, and you need to **view**, **download**, or **delete** files in your workspace, the Microsoft Support Professional assigned to your service request can provide you with a temporary "work or school Microsoft account" to sign in with.
 
 ![Mircosoft Account sign in dialog](./media/secure-file-exchange-transfer-files/4493616_en_1.jpg)  
 
-#### Authentication (Have you signed in using a "work or school, or personal Microsoft account") 
+#### Authentication (Have you signed in using a "work or school, or personal Microsoft account")
 
-- A [personal Microsoft account](https://account.microsoft.com/account), is the combination of an email address and a password that you can use to sign in to all consumer-oriented Microsoft products and cloud services such as Outlook (Hotmail), Messenger, OneDrive, MSN, Windows Phone or Xbox Live. If you use an email address and password to sign in to these or other services, you'll have a Microsoft account, but you can also sign up for a new one at any time. Here are some examples of personal Microsoft accounts: username@yahoo.com, username@hotmail.com.
-- A work or school Microsoft account is an account created by an organization's administrator to enable you, as a member of your organization, access to all Microsoft cloud services such as Microsoft Azure, Microsoft Intune, or Office 365. A work account can take the form of your work email address, such as **username@orgname.com**, when an organization federates or synchronizes its Active Directory accounts with Azure Active Directory.
+- A [personal Microsoft account](https://account.microsoft.com/account), is the combination of an email address and a password that you can use to sign in to all consumer-oriented Microsoft products and cloud services. For example, Outlook (Hotmail), Messenger, OneDrive, MSN, Windows Phone, or Xbox Live. If you use an email address and password to sign in to these or other services, you'll have a Microsoft account. You can also sign up for a new one at any time. Here are some examples of personal Microsoft accounts: username@yahoo.com, username@hotmail.com.
+- A work or school Microsoft account is an account created by an organization's administrator. It enable you, as a member of your organization, access to all Microsoft cloud services, such as Microsoft Azure, Microsoft Intune, or Office 365. A work account can take the form of your work email address when an organization federates or synchronizes its Active Directory accounts with Azure AD. For example, **username@contoso.com**.
 
     > [!NOTE]
-    > A "work or school Microsoft account" cannot also be a "personal Microsoft account" and vice versa.
+    > A "work or school Microsoft account" can't also be a "personal Microsoft account" and vice versa.
 
 #### Authorization (Is the "work or school, or personal Microsoft account" that you have signed in with associated with your support case?)
 
@@ -74,7 +74,7 @@ When you open a support case and the country that you specify is:
 
 - In Europe, Secure File Exchange will physically create the workspace in Europe.
 - In the United States, Secure File Exchange will physically create the workspace in the United States.
-- In any other country, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace, and that's where the workspace will be physically created.  
+- In any other country, Secure File Exchange will find the closest location to the Microsoft Support Professional that's creating the workspace. And it's where the workspace will be physically created.  
 
 ## The endpoints that are required to be open on your intranet
 

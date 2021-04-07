@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4560600
 > [!IMPORTANT]
 > Untrusted root Certificate Authority (CA) certificate problems can be caused by numerous PKI configuration issues. This article illustrates only one of the possible causes of untrusted root CA certificate.
 
-Various applications that use certificates and Public Key Infrastructure (PKI) might experience intermittent problems, such as connectivity errors, one or two times per day/week. These problems occur because of failed verification of end entity certificate. Affected applications might return different connectivity errors, but they will all have untrusted root certificate errors in common. Below is an example of such an error:
+Various applications that use certificates and Public Key Infrastructure (PKI) might experience intermittent problems, such as connectivity errors, once or twice per day/week. These problems occur because of failed verification of end entity certificate. Affected applications might return different connectivity errors, but they will all have untrusted root certificate errors in common. Below is an example of such an error:
 
 |Hex|Decimal|Symbolic|Text version|
 |---|---|---|---|
@@ -58,9 +58,9 @@ Untrusted root CA certificate problems might occur if the root CA certificate is
 
 When distributing the root CA certificate using GPO, the contents of `HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\Root\Certificates` will be deleted and written again. This deletion is by design, as it's how the GP applies registry changes.
 
-Changes in the area of the Windows registry reserved for root CA certificates will notify the [Crypto API component](/windows/win32/api/wincrypt/nf-wincrypt-certcontrolstore) of the client application. And the application will start synchronizing with the registry changes. The synchronization is how the applications are kept up-to-date and made aware of the most current list of valid root CA certificates.
+Changes in the area of the Windows registry that's reserved for root CA certificates will notify the [Crypto API component](/windows/win32/api/wincrypt/nf-wincrypt-certcontrolstore) of the client application. And the application will start synchronizing with the registry changes. The synchronization is how the applications are kept up-to-date and made aware of the most current list of valid root CA certificates.
 
-In some cases, such as scenarios when large number of root CA certificates are distributed via GPO (similar with many **Firewall** or **Applocker** policies), Group Policy processing will take longer. In these scenarios, the application might not receive the complete list of trusted root CA certificates.
+In some scenarios, Group Policy processing will take longer. For example, many root CA certificates are distributed via GPO (similar with many **Firewall** or **`Applocker`** policies). In these scenarios, the application might not receive the complete list of trusted root CA certificates.
 
 Because of this reason, end entity certificates that chain to those missing root CA certificates will be rendered as untrusted. And various certificate-related problems will start to occur. This problem is intermittent, and can be temporarily resolved by reenforcing GPO processing or reboot.
 

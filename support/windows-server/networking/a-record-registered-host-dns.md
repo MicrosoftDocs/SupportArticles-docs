@@ -1,6 +1,6 @@
 ---
 title: Host's A record is registered in DNS
-description: The IP address registers an A record for the host name in its primary DNS suffix zone after you clear the Register this connection's address in DNS check box under Advanced TCP/IP Settings for a network interface.
+description: The IP address registers an A record for the host name in its primary DNS suffix zone. It occurs after you clear the "Register this connection's address in DNS" check box.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: networking
 ---
 # The host's A record is registered in DNS after you choose not to register the connection's address
 
-This article provides methods to fix an issue where the IP address registers an A record for the host name in its primary DNS suffix zone after you clear the **Register this connection's address in DNS** check box.
+This article provides methods to fix an issue where the IP address registers an A record for the host name in its primary DNS suffix zone. This issue occurs after you clear the **Register this connection's address in DNS** check box.
 
 _Original product version:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 275554
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 275554
 
 ## Symptoms
 
-In Windows 2000, if you clear the **Register this connection's address in DNS** check box under Advanced TCP/IP Settings for a network interface, the IP address may register an A record for the host name in its primary DNS suffix zone.
+In Windows 2000, you clear the **Register this connection's address in DNS** check box under Advanced TCP/IP Settings for a network interface. In this scenario, the IP address may register an A record for the host name in its primary DNS suffix zone.
 
 For example, this behavior may occur if you have the following configuration:
 
@@ -38,7 +38,7 @@ The host record for Server1.contoso.com 10.2.2.2 is dynamically added back to th
 
 ## Cause
 
-By default, when the DNS service is installed on a computer that's running Windows 2000, it listens to all of the network interfaces that are configured by using TCP/IP. When DNS causes an interface to listen for DNS queries, the interface tries to register the host A record in the zone that matches its primary DNS suffix. The interface tries to register the host A record regardless of the settings that have been configured in the TCP/IP properties. This behavior is by design and can take place under the following circumstances:
+By default, when the DNS service is installed on a Windows 2000 computer, it listens to all network interfaces that are configured by using TCP/IP. When DNS causes an interface to listen for DNS queries, the interface tries to register the host's A record in the zone that matches its primary DNS suffix. The interface tries to register the host's A record regardless of the settings that have been configured in the TCP/IP properties. This behavior is by design and can take place under the following circumstances:
 
 - The DNS service is installed on the server whose configuration you're trying to change.
 - The DNS zone that matches the primary DNS suffix of the server is enabled to update dynamically.
@@ -78,7 +78,7 @@ Remove the interface from the list of interfaces that the DNS server listens on.
 2. Right-click the DNS server, and then select **Properties**.
 3. Select the **Interfaces** tab.
 4. Under **Listen on**, select the **Only the following IP addresses** check box.
-5. Type the IP addresses that you want the server to listen on. Include only the IP addresses of the interfaces for which you want a host A record registered in DNS.
+5. Type the IP addresses that you want the server to listen on. Include only the IP addresses of the interfaces for which you want a host's A record registered in DNS.
 6. Select **OK**, and then quit the DNS Management MMC.
 
 ## Status
@@ -97,6 +97,6 @@ The registry key to disable dynamic update of the DHCP client service is:
 - Default value: 0
 
 > [!NOTE]
-> This registry key doesn't resolve the issue that's outlined in this article. If the DNS server listens on a specific interface, the host A record for that interface is registered.
+> This registry key doesn't resolve the issue that's outlined in this article. If the DNS server listens on a specific interface, the host's A record for that interface is registered.
 
-If you remove an IP address from the list of the DNS server's listening interfaces, the server no longer accepts DNS requests that are sent to that IP address. This option is sometimes used in situations where the DNS server is also a domain controller and has an interface that's connected to a disjointed network. For this configuration, make sure that Active Directory client computers don't direct any queries to an interface that they can't reach.
+If you remove an IP address from the list of the DNS server's listening interfaces, the server no longer accepts DNS requests that are sent to that IP address. This option is sometimes used in situations where the DNS server is also a domain controller and has an interface that's connected to a disjointed network. For such configuration, make sure that Active Directory client computers don't direct any queries to an interface that they can't reach.
