@@ -54,12 +54,18 @@ Windows Server 2008 R2 or Windows Server 2008
 3. Validate that the role was removed. For example, to do it on Windows Server 2008 R2, use the following command:  
     dism.exe /online /get-features  
 
-4. Add the DirectoryServices-DomainController role back to the server. For example, to do it on Windows Server 2008 R2, use the following command:  
-dism.exe /online /enable-feature /featurename: DirectoryServices-DomainController  
+4. Add the DirectoryServices-DomainController role back to the server. For example, to do it on Windows Server 2008 R2, use the following command:
+
+   ```console
+   dism.exe /online /enable-feature /featurename:DirectoryServices-DomainController
+   ```
 
 5. Restart and select **Directory Services Restore Mode** again.
-6. Apply a /forceremoval parameter to remove Active Directory Domain Services from the domain controller. To do it, run the following command:  
-    dcpromo.exe /forceremoval  
+6. Apply a /forceremoval parameter to remove Active Directory Domain Services from the domain controller. To do it, run the following command:
+
+   ```console
+   dcpromo.exe /forceremoval
+   ```
 
 7. To remove the domain controller metadata, use the ntdsutil.exe or dsa.msc tool.  
 
@@ -67,18 +73,24 @@ dism.exe /online /enable-feature /featurename: DirectoryServices-DomainControlle
 
 1. From the **Choose an option** menu, select **Troubleshoot**, click **Startup Settings**, and then click **Restart**.
 2. Select **Directory Services Repair Mode** (DSRM), and then log on by using the DSRM password.
-3. Validate that the role was removed. To do it, use the following command:  
-    dism.exe /online /get-features  
+3. Validate that the role was removed. To do it, use the following command:
 
-4. Add the DirectoryServices-DomainController role back to the server. To do it, use the following command:  
-    dism.exe /online /enable-feature /featurename: DirectoryServices-DomainController  
+   ```console
+   dism.exe /online /get-features
+   ```
+
+4. Add the DirectoryServices-DomainController role back to the server. To do it, use the following command:
+
+   ```console
+   dism.exe /online /enable-feature /featurename:DirectoryServices-DomainController
+   ```
 
 5. Restart, select **Directory Services Restore Mode** again, and log on by using the DSRM account.
 6. Use Server Manager or Windows PowerShell, and apply a -ForceRemoval parameter to remove Active Directory Domain Services from the domain controller. To do it, run the following command:  
 
-    ```console
-    Uninstall-AddsDomaincontroller -ForceRemoval  
-    ```
+   ```console
+   Uninstall-AddsDomaincontroller -ForceRemoval  
+   ```
 
 7. To remove the domain controller metadata, use the ntdsutil.exe or dsa.msc tool.
 
