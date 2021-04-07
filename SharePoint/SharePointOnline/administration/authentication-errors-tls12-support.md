@@ -26,9 +26,6 @@ appliesto:
 
 As previously communicated in the Microsoft 365 Admin Center (for example, communication MC240160 in February 2021), we're moving all online services to Transport Layer Security (TLS) 1.2+. This change started on October 15, 2020. Support for TLS 1.2+ will continue to be added to all Microsoft 365 environments for the next several months. If you haven't taken steps to prepare for this change, your connectivity to Microsoft 365 might be affected.
 
-## Known issues
-<br/>
-
 ## .NET Framework not configured for TLS 1.2
 
    ### Symptom
