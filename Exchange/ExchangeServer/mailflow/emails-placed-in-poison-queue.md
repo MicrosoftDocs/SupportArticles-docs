@@ -1,7 +1,7 @@
 ---
 title: Transport Rule Agent places messages in the Poison queue
 description: Fixes an issue in which email messages are placed in the Poison queue in the Exchange Server that has the Transport Rule Agent enabled.
-author: josephlarrew
+author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
