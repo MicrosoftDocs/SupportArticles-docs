@@ -56,11 +56,13 @@ To determine the version of SQL Server, you can use any of the following methods
 
 - **Method 2:** Look at the first few lines of the Errorlog file for that instance. By default, the error log is located at `Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG` and *ERRORLOG.n* files. The entries may resemble the following:
 
-  > 2011-03-27 22:31:33.50 Server Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
-March 29 2009 10:11:52  
-Copyright (c) 1988-2008 Microsoft Corporation  
-Express Edition (64-bit)  
-on Windows NT 6.1 \<X64> (Build 7600: )
+  ```output
+  2011-03-27 22:31:33.50 Server Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
+  March 29 2009 10:11:52  
+  Copyright (c) 1988-2008 Microsoft Corporation  
+  Express Edition (64-bit)  
+  on Windows NT 6.1 \<X64> (Build 7600: )
+  ```
 
   This entry provides all the necessary information about the product, such as version, product level, 64-bit versus 32-bit, the edition of SQL Server, and the OS version on which SQL Server is running.
 
@@ -79,10 +81,12 @@ on Windows NT 6.1 \<X64> (Build 7600: )
 
   An example of the output of this query is the following:
 
-  > Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
-March 29 2009 10:11:52
-Copyright (c) 1988-2008 Microsoft Corporation Express Edition (64-bit)  
-on Windows NT 6.1 \<X64> (Build 7600: )
+  ```output
+  Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
+  March 29 2009 10:11:52
+  Copyright (c) 1988-2008 Microsoft Corporation Express Edition (64-bit)  
+  on Windows NT 6.1 \<X64> (Build 7600: )
+  ```
 
   > [!NOTE]
   > The output of this query has been enhanced to show additional information. This is documented in the blog post article, [What build of SQL Server are you using?](https://techcommunity.microsoft.com/t5/sql-server-support/what-build-of-sql-server-are-you-using/ba-p/318613), for the following versions:
