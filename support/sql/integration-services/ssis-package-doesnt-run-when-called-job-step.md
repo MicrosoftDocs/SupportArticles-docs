@@ -79,9 +79,13 @@ Instead of relying on the limited details in the SQL Server Agent Job History, y
 
 SSIS logging and log providers let you capture details about the package execution and failures. By default, the package does not log information. You must configure the package to log information. When you configure the package to log information, detailed information is displayed that resembles the following. In this case, you will know that it is a permissions issue:
 
-> OnError,DOMAINNAME,DOMAINNAME\USERNAME,FTP Task,{C73DE41C-D0A6-450A-BB94-DF6D913797A1},{2F0AF5AF-2FFD-4928-88EE-1B58EB431D74},4/28/2006 1:51:59 PM,4/28/2006 1:51:59 PM,-1073573489,0x,Unable to connect to FTP server using "FTP Connection Manager".
+```output
+OnError,DOMAINNAME,DOMAINNAME\USERNAME,FTP Task,{C73DE41C-D0A6-450A-BB94-DF6D913797A1},{2F0AF5AF-2FFD-4928-88EE-1B58EB431D74},4/28/2006 1:51:59 PM,4/28/2006 1:51:59 PM,-1073573489,0x,Unable to connect to FTP server using "FTP Connection Manager".
+```
 
-> OnError,DOMAINNAME,DOMAINNAME\USERNAME,Execute SQL Task,{C6C7286D-57D4-4490-B12D-AC9867AE5762},{F5761A49-F2F9-4575-9E2B-B3D381D6E1F3},4/28/2006 4:07:00 PM,4/28/2006 4:07:00 PM,-1073573396,0x,Failed to acquire connection "user01.msdb". Connection may not be configured correctly or you may not have the right permissions on this connection.
+```output
+OnError,DOMAINNAME,DOMAINNAME\USERNAME,Execute SQL Task,{C6C7286D-57D4-4490-B12D-AC9867AE5762},{F5761A49-F2F9-4575-9E2B-B3D381D6E1F3},4/28/2006 4:07:00 PM,4/28/2006 4:07:00 PM,-1073573396,0x,Failed to acquire connection "user01.msdb". Connection may not be configured correctly or you may not have the right permissions on this connection.
+```
 
 ### About the exec subsystem command and output information
 
@@ -95,11 +99,17 @@ The following is an example of a command line:
 
 The /console logging returns details that resemble the following:
 
-> Error: 2006-04-27 18:13:34.76 Code: 0xC0202009 Source: AgentTesting Connection manager "(local).msdb" Description: An OLE DB error has occurred. Error code: 0x80040E4D. An OLE DB record is available. Source: "Microsoft SQL Native Client" Hresult: 0x80040E4D Description: "Login failed for user 'DOMAINNAME\username'.". End Error
+```output
+Error: 2006-04-27 18:13:34.76 Code: 0xC0202009 Source: AgentTesting Connection manager "(local).msdb" Description: An OLE DB error has occurred. Error code: 0x80040E4D. An OLE DB record is available. Source: "Microsoft SQL Native Client" Hresult: 0x80040E4D Description: "Login failed for user 'DOMAINNAME\username'.". End Error
+```
 
-> Error: 2006-04-28 13:51:59.19 Code: 0xC0016016 Source: Description: Failed to decrypt protected XML node "DTS:Property" with error 0x80070002 "The system cannot find the file specified.". You may not be authorized to access this information. This error occurs when there is a cryptographic error. Verify that the correct key is available. End Error
+```output
+Error: 2006-04-28 13:51:59.19 Code: 0xC0016016 Source: Description: Failed to decrypt protected XML node "DTS:Property" with error 0x80070002 "The system cannot find the file specified.". You may not be authorized to access this information. This error occurs when there is a cryptographic error. Verify that the correct key is available. End Error
+```
 
-> Log: Name: OnError Computer: COMPUTERNAME Operator: DOMAINNAME\username Source Name: Execute SQL Task Source GUID: {C6C7286D-57D4-4490-B12D-AC9867AE5762} Execution GUID: {7AFE3D9E-5F73-42F0-86FE-5EFE264119C8} Message: Failed to acquire connection "(local).msdb". Connection may not be configured correctly or you may not have the right permissions on this connection. Start Time: 2006-04-27 18:13:34 End Time: 2006-04-27 18:13:34 End Log
+```output
+Log: Name: OnError Computer: COMPUTERNAME Operator: DOMAINNAME\username Source Name: Execute SQL Task Source GUID: {C6C7286D-57D4-4490-B12D-AC9867AE5762} Execution GUID: {7AFE3D9E-5F73-42F0-86FE-5EFE264119C8} Message: Failed to acquire connection "(local).msdb". Connection may not be configured correctly or you may not have the right permissions on this connection. Start Time: 2006-04-27 18:13:34 End Time: 2006-04-27 18:13:34 End Log
+```
 
 ## References
 

@@ -61,7 +61,7 @@ To determine the version of SQL Server, you can use any of the following methods
   March 29 2009 10:11:52  
   Copyright (c) 1988-2008 Microsoft Corporation  
   Express Edition (64-bit)  
-  on Windows NT 6.1 \<X64> (Build 7600: )
+  on Windows NT 6.1 <X64> (Build 7600: )
   ```
 
   This entry provides all the necessary information about the product, such as version, product level, 64-bit versus 32-bit, the edition of SQL Server, and the OS version on which SQL Server is running.
@@ -85,7 +85,7 @@ To determine the version of SQL Server, you can use any of the following methods
   Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
   March 29 2009 10:11:52
   Copyright (c) 1988-2008 Microsoft Corporation Express Edition (64-bit)  
-  on Windows NT 6.1 \<X64> (Build 7600: )
+  on Windows NT 6.1 <X64> (Build 7600: )
   ```
 
   > [!NOTE]
