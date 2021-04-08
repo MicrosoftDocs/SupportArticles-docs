@@ -1,8 +1,8 @@
 ---
 title: Accept button is missing on a calendar from a sharing invitation
 description: Describes a scenario in which the Accept button is missing when a user tries to open a calendar from a sharing invitation in Outlook on the web.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

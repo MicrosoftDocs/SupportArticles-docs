@@ -1,7 +1,7 @@
 ---
 title: Unexpected Autodiscover behavior if settings under the \Autodiscover key
 description: Explains how to use policy to control the different Autodiscover lookup methods that are used by Outlook.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot

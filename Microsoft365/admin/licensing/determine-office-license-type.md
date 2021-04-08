@@ -1,7 +1,7 @@
 ---
 title: Determine the license type of your Microsoft Office product 
-ms.author: luche
-author: helenclu
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 04/02/2021
 audience: Admin

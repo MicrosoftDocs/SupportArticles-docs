@@ -2,8 +2,8 @@
 title: Repair update messages due to TimeZoneMatchCheck failures
 description: Describes an issue that triggers multiple repair update messages in Exchange Server 2016, 2013 or 2010 on an iOS device. These messages indicate that the Calendar Repair Assistant (CRA) has updated scheduled meetings.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

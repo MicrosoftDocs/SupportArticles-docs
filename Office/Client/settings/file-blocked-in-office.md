@@ -1,7 +1,7 @@
 ---
 title: Error message in Office when a file is blocked by registry policy settings
 description: Describes an issue that occurs when you try to open or to save a file type that is blocked by your registry policy setting in one of the Office 2019 or Office 2016 apps.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Word 2016
 - Excel 2016

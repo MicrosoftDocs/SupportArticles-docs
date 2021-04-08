@@ -1,7 +1,7 @@
 ---
 title: Security settings for Dynamic Data Exchange in Excel Trust Center
 description: Describes two new security options under Security Settings for Dynamic Data Exchange (DDE) in Excel Trust Center.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Excel for Office 365

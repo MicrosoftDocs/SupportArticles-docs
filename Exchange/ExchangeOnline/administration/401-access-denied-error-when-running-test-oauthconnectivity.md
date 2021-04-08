@@ -1,8 +1,8 @@
 ---
 title: 401 Access denied when running Test-OAuthConnectivity
 description: Describes an issue that occurs when you run the Test-OAuthConnectivity cmdlet to test OAuth authentication for a user.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: New Hybrid Configuration Wizard crashes error 0xe0434352
 description: Provides methods to solve the error 0xe0434352 that occurs when the new Hybrid Configuration Wizard crashes.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

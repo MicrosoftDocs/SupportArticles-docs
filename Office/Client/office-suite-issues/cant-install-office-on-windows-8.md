@@ -1,7 +1,7 @@
 ---
 title: Can't install Office Starter 2010 on Windows 8
 description: Describes a problem in which Office Starter 2010 cannot be installed on Windows 8.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: patdav, viwoods
 appliesto:
 - Office 2010

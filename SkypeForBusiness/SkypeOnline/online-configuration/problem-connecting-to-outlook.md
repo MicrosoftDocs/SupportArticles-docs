@@ -1,7 +1,7 @@
 ---
 title: There was a problem connecting to Microsoft Office Outlook
 description: Describes an issue that triggers an "email address used in your default Outlook profile is different from the sign-in address" error when you install Lync 2010 on a computer that's running Outlook.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

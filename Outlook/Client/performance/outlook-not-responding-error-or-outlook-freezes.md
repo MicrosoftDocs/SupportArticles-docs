@@ -1,8 +1,8 @@
 ---
 title: Outlook not responding error or Outlook freezes
 description: Describes an issue that triggers an not responding error or Outlook freezes. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

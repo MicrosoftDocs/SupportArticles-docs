@@ -1,7 +1,7 @@
 ---
 title: FAQ about Office Activation Wizard
 description: Contains the answers to frequently asked questions about the Office Activation Wizard and about reduced-functionality mode in Microsoft Office suites and programs.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office 2010
 ---

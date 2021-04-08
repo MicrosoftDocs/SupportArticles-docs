@@ -1,8 +1,8 @@
 ---
 title: Cannot add new apps to Outlook Web App
 description: Describes an issue that occurs because the icon to add a new app from the Office Marketplace is unavailable.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

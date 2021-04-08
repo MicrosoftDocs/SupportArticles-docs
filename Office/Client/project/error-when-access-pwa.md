@@ -1,13 +1,13 @@
 ---
 title: You receive an error when accessing Project Web App
 description: Explains errors when accessing PWA Online if you have no permissions
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150

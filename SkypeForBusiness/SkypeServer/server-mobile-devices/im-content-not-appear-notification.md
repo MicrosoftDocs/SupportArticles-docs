@@ -1,7 +1,7 @@
 ---
 title: Mobile Skype for Business message content does not appear in Apple push notifications
 description: The message content is missing for a Microsoft Skype for Business message on your Apple iPhone or Apple iPad device.
-author: helenclu
+author: Norman-sun
 ms.author: vliorgu
 manager: dcscontentpm
 audience: ITPro 

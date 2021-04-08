@@ -1,8 +1,8 @@
 ---
 title: Email message body is blank in Outlook
 description: Describes an issue that occurs when the Avgoutlook. Addin add-in is enabled in Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

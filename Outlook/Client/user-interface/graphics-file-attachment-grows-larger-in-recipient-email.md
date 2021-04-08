@@ -1,8 +1,8 @@
 ---
 title: Graphics file attachment larger in recipient's email 
 description: Fixes a problem that makes a graphics file attachment look larger in a recipient's email message after you change the resolution to a high DPI setting in Windows.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

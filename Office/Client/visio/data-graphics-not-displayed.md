@@ -1,7 +1,7 @@
 ---
 title: Data graphics are not displayed when you try to apply data graphics to images or objects in your Visio 2007 or Visio 2010 drawing
 description: Describes behavior that occurs in Visio 2007 and Visio 2010 in which data graphics are not displayed when you try to apply data graphics to images or objects in your drawing. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshoot
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Visio Premium 2010
 - Visio Professional 2010

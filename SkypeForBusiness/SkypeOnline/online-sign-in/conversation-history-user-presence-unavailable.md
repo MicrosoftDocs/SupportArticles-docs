@@ -1,7 +1,7 @@
 ---
 title: Conversation history, contact cards, Free/Busy, and Out of Office unavailable
 description: Describes the scenarios in which Conversation history, contact cards, Free/Busy, and Out of Office information are unavailable when Microsoft Lync fails to connect to Microsoft Exchange. Provides solutions.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:

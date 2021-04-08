@@ -1,8 +1,8 @@
 ---
 title: Can't access legacy on-premises public folders
 description: Describes an issue in which an Exchange Online user receives a "The set of folders cannot be opened" error message when they access legacy on-premises public folders in a hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

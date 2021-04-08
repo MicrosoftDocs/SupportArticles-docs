@@ -1,8 +1,8 @@
 ---
 title: Room mailbox doesn't process a meeting request
 description: Describes a scenario in which meeting requests aren't processed by the room mailbox in Exchange Online when the meeting request is created directly in the calendar of the room.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

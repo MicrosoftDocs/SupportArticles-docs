@@ -1,8 +1,8 @@
 ---
 title: Outlook not responding when connecting to Online mailbox
 description: Describes a problem that causes Outlook to hang immediately after startup, and a Not Responding message is displayed on the title bar. Occurs only in mailboxes that were migrated from the on-premises environment to Exchange Online. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

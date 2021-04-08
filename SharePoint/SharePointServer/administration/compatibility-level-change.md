@@ -1,7 +1,7 @@
 ---
 title: Change the compatibility level of content databases for migration
 description: When migrating a content database from a SharePoint farm to another one, the compatibility level of the content database may be lower than the level of the destination SQL Server instance.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Server 2019
 - SharePoint Server 2016

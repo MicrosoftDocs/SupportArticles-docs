@@ -1,7 +1,7 @@
 ---
 title: Office installation Error 1401, 1402 or 1406
 description: Describes an issue that occurs when the Everyone group of the Microsoft Office registry subkey is not set to full control when you install an Office program. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office 2010
 - Office 2007

@@ -1,8 +1,8 @@
 ---
 title: Outlook 2016 hangs at Processing at start-up
 description: Describes how to work around a problem in which Outlook 2016 hangs at the Processing stage on start-up.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

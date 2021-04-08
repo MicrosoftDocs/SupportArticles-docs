@@ -1,8 +1,8 @@
 ---
 title: Cannot preview .msg files in Windows File Explorer
 description: Fixes an issue that prevents you from previewing .msg files in Windows File Explorer. Occurs if you have the 64-bit version of Outlook installed. Workarounds are provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

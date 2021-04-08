@@ -1,8 +1,8 @@
 ---
 title: Iexplorer.exe encountered a problem error when viewing timesheet in PWA
 description: Describes an error message that you receive when you try view a timesheet in Microsoft Project Web Access in Internet Explorer when you have the Google Toolbar installed on your computer.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

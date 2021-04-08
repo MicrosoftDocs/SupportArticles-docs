@@ -1,7 +1,7 @@
 ---
 title: Users can't join online meetings in Skype for Business Online
 description: Describes how to troubleshoot issues that occur when users try to join online meetings in Skype for Business Online in an Office 365 environment.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:

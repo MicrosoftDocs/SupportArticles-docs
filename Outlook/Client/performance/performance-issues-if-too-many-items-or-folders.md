@@ -1,8 +1,8 @@
 ---
 title: Performance issues for too many items or folders
 description: Describes a performance issue that occurs when there are too many items or too many folders in a cached mode .ost file or .pst file folders. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

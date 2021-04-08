@@ -1,7 +1,7 @@
 ---
 title: Formula errors when list separator is not set correctly
 description: Describes formula errors when list separator is not set correctly.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2016
 - Excel 2013

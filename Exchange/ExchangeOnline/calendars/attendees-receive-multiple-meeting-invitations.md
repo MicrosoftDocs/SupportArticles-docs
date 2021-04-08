@@ -1,8 +1,8 @@
 ---
 title: Attendees receive multiple meeting invitations
 description: Describes an issue in which multiple attendees receive multiple meeting invites for different occurrences of the same meeting from the meeting organizer.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

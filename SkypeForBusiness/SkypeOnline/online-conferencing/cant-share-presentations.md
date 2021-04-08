@@ -1,7 +1,7 @@
 ---
 title: Can't share presentations from Lync in Skype for Business Online
 description: Provides steps to troubleshoot issues that prevent you from sharing presentations from Lync 2010 or Lync 2013 in Skype for Business Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:

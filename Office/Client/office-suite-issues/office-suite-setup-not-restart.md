@@ -1,7 +1,7 @@
 ---
 title: Office 2010 Setup programs not restart
 description: Describes a problem in which you cannot rerun an Office suite installation or Office program installation after the first installation is interrupted.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: off12set
 appliesto:
 - Office 2010

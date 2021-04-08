@@ -1,8 +1,8 @@
 ---
 title: SupportMultipleDomain switch when managing SSO to Office 365
 description: SupportMultipleDomain switch when managing SSO to Office 365.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

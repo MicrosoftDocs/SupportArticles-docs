@@ -1,8 +1,8 @@
 ---
 title: Items missing on Exchange ActiveSync client
 description: Addresses an issue in which items are missing on an Exchange ActiveSync client. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

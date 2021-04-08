@@ -1,8 +1,8 @@
 ---
 title: Emails sent to wrong account if profile has many accounts
 description: Describes an issue in which email messages aren't sent to the correct account when a profile has multiple accounts associated with it in Outlook. This issue occurs in a Microsoft 365 environment. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

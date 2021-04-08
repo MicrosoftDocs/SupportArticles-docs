@@ -1,7 +1,7 @@
 ---
 title: Click-to-Run for Office 2010
 description: Discusses Office Click-to-Run, how Office Click-to-Run works, and answers some FAQs.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: bobcool
 appliesto:
 - Office 2010

@@ -1,7 +1,7 @@
 ---
 title: Users don't receive SharePoint Online alert notifications
 description: This article describes an issue that users don't receive SharePoint Online alert notifications, and provides a solution.
-author: v-miegge
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

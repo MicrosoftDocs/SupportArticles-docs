@@ -1,8 +1,8 @@
 ---
 title: Cannot add rooms to meeting requests in OWA
 description: Describes an issue that occurs in a hybrid deployment when Exchange Online users select add room in a meeting request in Outlook Web App.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

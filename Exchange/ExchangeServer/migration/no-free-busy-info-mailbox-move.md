@@ -1,8 +1,8 @@
 ---
 title: Can't see Free/Busy info after a mailbox moves to Exchange 2013 or 2016
 description: Describes an issue that occurs after Outlook mailboxes are migrated from Exchange 2010 to Exchange 2013 or 2016. Outlook can't see Free/Busy data.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

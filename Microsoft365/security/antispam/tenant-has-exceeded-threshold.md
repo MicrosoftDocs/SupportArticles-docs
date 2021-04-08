@@ -1,8 +1,8 @@
 ---
 title: Tenant has exceeded threshold NDR when mail is sent from your organization.
 description: Discusses that you receive a "Tenant has exceeded threshold" NDR when an email is sent.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

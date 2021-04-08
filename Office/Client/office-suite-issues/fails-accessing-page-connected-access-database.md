@@ -1,7 +1,7 @@
 ---
 title: 0x80004005 General Error Unable to Open Registry Key
 description: Fixes an issue in which you receive 0x80004005 error when trying to access a page that connects to an Access database.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Access

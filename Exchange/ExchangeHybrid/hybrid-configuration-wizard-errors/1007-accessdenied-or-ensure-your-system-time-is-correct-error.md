@@ -1,8 +1,8 @@
 ---
 title: 1007 AccessDenied or Unable to federate your domain error
 description: Describes an issue in which you receive an Access Denied or Ensure your system time is correct error message when you run the Hybrid Configuration wizard. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

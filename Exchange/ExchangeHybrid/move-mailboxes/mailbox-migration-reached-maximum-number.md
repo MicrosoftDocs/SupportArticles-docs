@@ -1,8 +1,8 @@
 ---
 title: Mailbox migration number exceeds the default limit
 description: Fixes an issue in which you receive a "Mailbox Replication Proxy Service can't process this request because it has reached the maximum number of active MRS connections allowed" error message when moving mailboxes between on-premises and Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

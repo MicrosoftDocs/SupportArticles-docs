@@ -1,7 +1,7 @@
 ---
 title: Microsoft Online Services Sign In Assistant Error
 description: Describes an error that occurs when you try to activate Office Professional Plus. Troubleshooting information is provided.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft 365 Apps for enterprise

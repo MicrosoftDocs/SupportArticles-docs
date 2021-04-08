@@ -1,8 +1,8 @@
 ---
 title: How to suppress AutoDiscover redirect warning
 description: An Outlook user receives a message that appears when an AutoDiscover operation redirects from HTTP to HTTPS. Users or administrators may want to suppress the warning for a specific HTTP redirection that is expected for their organization.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

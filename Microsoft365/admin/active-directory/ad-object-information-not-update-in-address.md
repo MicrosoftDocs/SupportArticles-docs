@@ -1,8 +1,8 @@
 ---
 title: Changed Active Directory object information is not updated in the address book in Office 365 dedicated/ITAR
 description: Describes a problem in which information in Active Directory is not updated to match the information in the address book in Office 365 dedicated/ITAR. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

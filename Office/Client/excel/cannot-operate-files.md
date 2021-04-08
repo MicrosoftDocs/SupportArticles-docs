@@ -1,7 +1,7 @@
 ---
 title: Office 365 users cannot open or synchronize SharePoint files
 description: Discusses that Office 365 users cannot open or synchronize files that are stored on a SharePoint server. This issue occurs after the Office 2013 update for March 12, 2013 (KB2768349) is installed. Provides a resolution and a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: scotlanw
 appliesto:
 - Office Professional Plus 2013

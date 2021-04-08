@@ -1,8 +1,8 @@
 ---
 title: Exchange error-Insufficient access rights to perform the operation
 description: Exchange Server management tasks fail with insufficient rights.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

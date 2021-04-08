@@ -1,8 +1,8 @@
 ---
 title: Some commands not available when using Quick Reply
 description: The quick response pane does not allow you to use all message and compose features in Microsoft Outlook 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

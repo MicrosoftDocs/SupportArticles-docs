@@ -1,8 +1,8 @@
 ---
 title: Outlook for iOS and Android with ABQ rules are quarantined
 description: Describes a problem in which Exchange Online users who use Outlook for iOS and Android and who also use Device Access (ABQ) rules are unexpectedly quarantined.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

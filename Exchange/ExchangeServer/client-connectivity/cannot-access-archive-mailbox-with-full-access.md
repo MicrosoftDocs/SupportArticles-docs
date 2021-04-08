@@ -1,8 +1,8 @@
 ---
 title: Cannot access archive mailbox with Full Access
 description: Discusses an issue in which on-premises users can't access cloud archive mailbox that they have Full Access permission to in the Outlook client. Provides workarounds.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

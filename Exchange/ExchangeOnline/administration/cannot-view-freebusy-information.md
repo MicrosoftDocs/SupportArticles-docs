@@ -1,8 +1,8 @@
 ---
 title: Cannot view free/busy information
 description: Describes a scenario in which users who have a mailbox in the on-premises environment cannot view free/busy information for mailboxes in Exchange Online in a hybrid environment. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

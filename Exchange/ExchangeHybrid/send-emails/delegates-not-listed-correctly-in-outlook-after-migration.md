@@ -1,8 +1,8 @@
 ---
 title: Delegates not listed correctly after migration
 description: Describes an issue in which delegates are duplicated in the Delegates dialog box after a migration to Office 365 hybrid environment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

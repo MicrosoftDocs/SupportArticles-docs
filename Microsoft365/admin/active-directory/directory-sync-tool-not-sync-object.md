@@ -1,7 +1,7 @@
 ---
 title: Directory Synchronization tool stops syncing objects
 description: Describes an issue in which the 32-bit version of the Microsoft Online Services Directory Synchronization tool no longer syncs objects from your local Active Directory to Office 365, Azure, or Microsoft Intune. Also, event ID 0 is logged.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Cloud Services (Web roles/Worker roles)
 - Azure Active Directory
