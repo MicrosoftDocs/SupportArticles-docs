@@ -2,8 +2,8 @@
 title: Get-VirtualDirectory run slowly
 description: Work around an issue in which the Get-VirtualDirectory cmdlets take longer than expected (about 15 minutes) to complete in an Exchange Server environment.
 ms.date: 06/22/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

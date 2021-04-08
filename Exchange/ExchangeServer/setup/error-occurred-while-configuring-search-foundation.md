@@ -1,8 +1,8 @@
 ---
 title: Installing updates for Mailbox-role server fails
 description: Resolves an issue in which you can't install Exchange Server 2013 CU1 or CU2 for a Mailbox-role server.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

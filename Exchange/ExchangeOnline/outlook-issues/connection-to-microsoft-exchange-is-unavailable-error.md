@@ -1,8 +1,8 @@
 ---
 title: Connection to Microsoft Exchange is unavailable error
 description: Describes an issue in which a user can't set up Outlook for the Office 365 account because the user has an account at a third-party provider that uses the same email address and password that their Office 365 account uses. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

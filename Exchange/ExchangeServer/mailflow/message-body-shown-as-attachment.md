@@ -1,8 +1,8 @@
 ---
 title: Message body is shown as an attachment when sending an email with attachments in Exchange
 description: Fixes an issue in which the body of the message may be shown incorrectly as an attachment when you try to use an application to send a message to an Exchange Server 2007 or 2010 server.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

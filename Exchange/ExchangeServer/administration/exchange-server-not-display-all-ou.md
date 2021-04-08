@@ -1,8 +1,8 @@
 ---
 title: Exchange Server doesn't display all OUs
 description: Describes an Exchange Server issue that blocks the display of organizational units when a new mailbox and associated user account are created. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

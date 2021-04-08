@@ -1,8 +1,8 @@
 ---
 title: Length of the property is too long
 description: Fixes an issue that triggers a "Length of the property is too long" error when you add sender domains to an inbound connector in Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: The pipeline has been stopped error
 description: Describes that you receive a System.Management.Automation.PipelineStoppedException pipeline has been stopped error when you run the Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

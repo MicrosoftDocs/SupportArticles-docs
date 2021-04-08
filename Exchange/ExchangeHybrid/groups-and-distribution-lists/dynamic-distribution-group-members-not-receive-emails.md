@@ -1,8 +1,8 @@
 ---
 title: Dynamic distribution group members don't receive emails
 description: Describes an issue in an Exchange hybrid deployment in which email messages are not delivered to members of a dynamic distribution group. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

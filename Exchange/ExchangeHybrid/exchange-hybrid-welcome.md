@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for Exchange Hybrid
 description: This article lists Hybrid deployment related issues.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 localization_priority: Normal
 search.appverid: 
 - MET150

@@ -1,8 +1,8 @@
 ---
 title: Can't use a number to search for an Excel attachment
 description: Provides a workaround for an issue that causes no result to be displayed in Outlook or Outlook on the web. This issue occurs when you use a number to search for an Excel attachment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

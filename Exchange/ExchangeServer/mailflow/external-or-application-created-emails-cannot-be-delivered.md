@@ -2,8 +2,8 @@
 title: External or app created emails not delivered 
 description: Email messages received from external organizations or application-generated email messages are not delivered to users. Provides a resolution.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,11 +1,11 @@
 ---
 title: Cautions against bypassing Office 365 spam filters.
 description: Describes cautions against bypassing Office 365 spam filters.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: o365-proplus-itpro
 ms.topic: article
-ms.author: luche
+ms.author: v-swei
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot

@@ -1,8 +1,8 @@
 ---
 title: Outlook client displays incorrect policy information
 description: If an organization creates multiple retention policies for either Teams or Skype for Business in the Security & Compliance Center, Outlook client by default displays either the Teams or Skype for Business policy.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

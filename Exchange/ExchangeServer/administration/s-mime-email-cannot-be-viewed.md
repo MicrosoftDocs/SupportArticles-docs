@@ -1,8 +1,8 @@
 ---
 title: S/MIME encoded email cannot be viewed
 description: When a recipient tries to view an email that is encoded by using S/MIME in Exchange Server 2010 Service Pack 2, the recipient receives the Cannot open this item error message or This message can't be decrypted error message.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

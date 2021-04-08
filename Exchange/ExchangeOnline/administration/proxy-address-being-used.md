@@ -1,14 +1,14 @@
 ---
 title: Proxy address is already being used error message in Exchange Online
 description: Describes an issue in which a mailbox isn't created for a user in Exchange Online.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
