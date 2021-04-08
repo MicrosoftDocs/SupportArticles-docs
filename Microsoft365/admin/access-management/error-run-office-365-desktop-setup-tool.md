@@ -1,7 +1,7 @@
 ---
 title: Error when you run the Office 365 Desktop Setup Tool
 description: Describes a problem that occurs when invalid or incorrect credentials are entered to run the Office 365 Desktop Setup Tool. Resolution is provided.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office 365 User and Domain Management
 ---

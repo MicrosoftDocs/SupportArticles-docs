@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot issues when you use Cortana with Microsoft 365
 description: Describes how to troubleshoot issues that you may encounter when you use Cortana with Microsoft 365.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office 365
 ---
