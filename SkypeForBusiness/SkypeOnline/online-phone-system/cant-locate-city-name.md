@@ -1,7 +1,7 @@
 ---
 title: Can't locate city names when you search for emergency locations for PSTN callers
 description: Discusses an issue in Skype for Business Online in which you can't find a city to assign an emergency location to for a PSTN user.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, kristinw, pthota
 appliesto:

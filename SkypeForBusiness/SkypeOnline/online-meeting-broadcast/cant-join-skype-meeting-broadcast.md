@@ -1,7 +1,7 @@
 ---
 title: Can't join a Skype Meeting Broadcast as an Event team member
 description: Describes an issue that blocks you from joining a Skype Meeting Broadcast as an Event team member by using a supported Skype for Business client that has Producer controls. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: landerl, jasco, corbinm, dougl, lynnroe, cbland, rischwen, leonarwo, msp, romanma, tonyq
 appliesto:
 - Skype for Business Online

@@ -1,7 +1,7 @@
 ---
 title: Lync client has a blank conversation window
 description: The Lync client may not display the first set of instant messages for a conference to all the participants.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: tyryan
 ms.custom: CSSTroubleshoot
 appleisto:

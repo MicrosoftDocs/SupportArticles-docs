@@ -1,7 +1,7 @@
 ---
 title: Calls to UM Auto Attendant fail
 description: Discusses a problem in which calls to UM Auto Attendant fail when custom greetings are used. Provides several workarounds.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: seemarah; corbinm; mshaikh  
 appliesto:

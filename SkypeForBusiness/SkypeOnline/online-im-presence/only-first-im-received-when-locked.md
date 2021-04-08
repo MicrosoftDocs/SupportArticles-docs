@@ -1,7 +1,7 @@
 ---
 title: Only first IM received in Skype for Business 2015 when locked or hibernating on Mac
-ms.author: luche
-author: helenclu
+ms.author: v-swei
+author: Norman-sun
 manager: dcscontentpm
 ms.date: 12/17/2020
 audience: Admin

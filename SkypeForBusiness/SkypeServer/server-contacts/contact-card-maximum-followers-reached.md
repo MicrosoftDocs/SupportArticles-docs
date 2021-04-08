@@ -1,7 +1,7 @@
 ---
 title: Lync contact card displays Maximum Followers Reached
 description: The Lync  contact will not display presence and display a Maximum Followers Reached message when the maximum number of subscriptions for category has been reached or exceeded for that Lync user (contact)
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: seemarah 
 ms.custom: CSSTroubleshoot
 appliesto:
