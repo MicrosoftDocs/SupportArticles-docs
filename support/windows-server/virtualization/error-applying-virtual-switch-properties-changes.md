@@ -15,7 +15,7 @@ ms.technology: hyper-v
 ---
 # You receive "Error applying virtual switch properties changes" error on a Windows Server 2019 (Build 17763)-based Hyper-V server
 
-This article provides help to solve an error "Error applying virtual switch properties changes" that occurs when you create Hyper-V virtual switch in Microsoft Windows Server 2019 (Build 17763).
+This article solves an error "Error applying virtual switch properties changes" that occurs when you create Hyper-V virtual switch in Windows Server 2019 (Build 17763).
 
 _Original product version:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4492254
@@ -48,8 +48,7 @@ Additionally, the following event logs are received.
 
 ## Cause
 
-This issue can be caused by the network interface card driver Hewlett Packard Enterprise (HPE) Ethernet 1 Gb 4-port 369i Adapter (Intel 369i or Intel 350i).
- Visual switch creation splits into two parts: the creation part and the binding part. When the issue occurs, the creation part succeeded but the binding part failed.  
+The network interface card driver Hewlett Packard Enterprise (HPE) Ethernet 1 Gb 4-port 369i Adapter (Intel 369i or Intel 350i) can cause the issue. Visual switch creation splits into two parts: the creation part and the binding part. When the issue occurs, the creation part succeeded but the binding part failed.
 
 ## Resolution
 

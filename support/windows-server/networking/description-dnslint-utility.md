@@ -22,21 +22,21 @@ _Original KB number:_ &nbsp; 321045
 
 ## Summary
 
-DNSLint is a Microsoft Windows utility that helps you to diagnose common DNS name resolution issues.
+DNSLint is a Microsoft Windows utility that helps you to diagnose common Domain Name System (DNS) name resolution issues.
 
-For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:
+For more information about how to download Microsoft Support files, see the following article:
 
 [119591](https://support.microsoft.com/help/119591) How to Obtain Microsoft Support Files from Online Services
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help to prevent any unauthorized changes to the file.  
 
-## More information
+## DNSLint functions
 
-DNSLint has three functions that verify Domain Name System (DNS) records and generate an HTML report. The three functions are:
+DNSLint has three functions that verify DNS records and generate an HTML report. The three functions are:
 
-- `dnslint /d`: This diagnoses potential causes of "lame delegation" and other related DNS problems.
-- `dnslint /ql`: This verifies a user-defined set of DNS records on multiple DNS servers.
-- `dnslint /ad`: This verifies DNS records specifically used for Active Directory replication.
+- `dnslint /d`: Diagnoses potential causes of "lame delegation" and other related DNS problems.
+- `dnslint /ql`: Verifies a user-defined set of DNS records on multiple DNS servers.
+- `dnslint /ad`: Verifies DNS records used specifically for Active Directory replication.
 
 DNSLint is a command-line utility. The syntax is:
 
@@ -46,11 +46,11 @@ dnslint /d domain_name | /ad [LDAP_IP_address] | /ql input_file
 [/t] [/test_tcp] [/s DNS_IP_address] [/v] [/y]  
 ```
 
-You must specify either `/d`, `/ad`, or `/ql` when you run DNSLint. Other switches are optional.
+Specify either `/d`, `/ad`, or `/ql` when you run DNSLint. Other switches are optional.
 
 You use the `/d` switch to request domain name tests. This switch is useful when you troubleshoot lame delegation issues.
 
-- You must specify a domain name to test.
+- Specify a domain name to test.
 - You can't use the `/d` switch with the `/ad` switch.
 
 You use the `/ad` switch to request Active Directory tests.
@@ -60,16 +60,16 @@ You use the `/ad` switch to request Active Directory tests.
 
 - You can specify a remote LDAP server IP address (optional).
 - Only valid IP addresses are accepted. Names aren't accepted.  
-Typically, this is an Active Directory domain controller.
-- You must use the `/ad` switch with the `/s` option, where `/s` specifies the IP address of a DNS server that is authoritative for the _msdcs zone in the AD forest root.
+Typically,  it's an Active Directory domain controller.
+- Use the `/ad` switch with the `/s` option, where `/s` specifies the IP address of a DNS server that is authoritative for the _msdcs zone in the AD forest root.
 - You can't use the `/ad` switch with `/d` or `/c`.
 
 You use the `/ql` switch to request DNS query tests from a list.
 
 - The `/ql` switch sends the DNS queries specified in a text input file
-- You must specify the path and name of the input file.
+- Specify the path and name of the input file.
 - the `/ql` switch supports A, PTR, CNAME, SRV, and MX record queries.
-- You create a sample input file by running the following:
+- You create a sample input file by running the following command:
 
     ```console
     dnslint /ql autocreate  
@@ -79,16 +79,16 @@ You use the `/ql` switch to request DNS query tests from a list.
 
 > [!NOTE]
 >
-> - You can't use /d, /ad, and /ql together.
-> - You can't use /c together with /ad or /ql.
-> - When you use /ad, you must also specify /s.
+> - You can't use `/d`, `/ad`, and `/ql` together.
+> - You can't use `/c` together with `/ad` or `/ql`.
+> - When you use `/ad`, you must also specify `/s`.
 
-### Optional switches
+## Optional switches
 
-Use /c to request connectivity tests on e-mail servers.
+Use `/c` to request connectivity tests on e-mail servers.
 
-- The /c switch tests SMTP, POP, and IMAP ports on e-mail servers found.
-- By default, all three (the SMTP, POP, and IMAP ports) are tested. You can specify one or a combination. To do this, use a comma-separated list: `/c pop,imap,smtp`.
+- The `/c` switch tests Simple Mail Transfer Protocol (SMTP), POP, and IMAP ports on e-mail servers found.
+- By default, all three (the SMTP, POP, and IMAP ports) are tested. You can specify one or a combination. To do so, use a comma-separated list: `/c pop,imap,smtp`.
 
 To prevent report from automatically opening, use `/no_open`. The `/no_open` switch is useful in scripts.
 
@@ -98,7 +98,7 @@ Use the `/r` switch to specify the name of the report file that is created.
 - The report is created in HTML format. The default name is Dnslint.htm
 - The default location is the current directory.
 
-Use the `/s` switch to bypass an InterNIC whois lookup.
+Use the `/s` switch to bypass an InterNIC `whois` lookup.
 
 - You can specify DNS server IP address instead of querying InterNIC for one.
 - The `/s` switch starts checking DNS records by using the supplied IP address.
@@ -122,7 +122,7 @@ Use `/v` to request verbose output to the screen.
 
 Use `/y` to overwrite an existing report file without being prompted. The `/y` switch is useful in scripts.
 
-### Required parameters
+## Required parameters
 
 To run DNSLint, you must use one of the three following parameters:
 
@@ -130,13 +130,18 @@ To run DNSLint, you must use one of the three following parameters:
 2. Use `/ad` for Active Directory replication tests.
 3. Use `/ql` for tests specified in a query list.
 
-Use the `/d` (domain name test) switch to test a particular DNS domain name. Use this switch to help diagnose "lame delegation" issues and other related DNS issues. The domain name that you test can be a name that is registered for use on the Internet or a name that is used in a private namespace. When you test domain names on a private network, or domain names registered on the Internet that are more than two levels deep, you must use the `/s` option must be used.
+Use the `/d` (domain name test) switch to test a particular DNS domain name. Use this switch to help diagnose "lame delegation" issues and other related DNS issues. The domain name that you test can be:
 
-Use the `/ad` (Active Directory test) switch to test the DNS records responsible for Active Directory forest replication. After the /ad switch, specify the IP address of an LDAP server that is used for this test. Typically, this is an Active Directory domain controller. If DNSLint is running on a domain controller, no IP address is necessary because the default value for this switch is 127.0.0.1.
+- A name that's registered for use on the Internet.
+- A name that's used in a private namespace.
+
+When you test domain names on a private network, or domain names registered on the Internet that are more than two levels deep, you must use the `/s` option must be used.
+
+Use the `/ad` (Active Directory test) switch to test the DNS records responsible for Active Directory forest replication. After the /ad switch, specify the IP address of an LDAP server that is used for this test. Typically, it's an Active Directory domain controller. If DNSLint is running on a domain controller, no IP address is necessary because the default value for this switch is 127.0.0.1.
 
 Use the `/ql` (query list test) switch to test the DNS records specified in a text input file. Specify the full path and name of the text input file immediately after the switch. Run `dnslint /ql autocreate` to generate a sample text input file called In-dnslint.txt. This file contains an explanation on the required format. You can use this file as a template to create other input files.
 
-### More optional switches
+## More optional switches
 
 The `/v` (verbose) switch turns on "verbose mode". With this switch on, DNSLint will output the steps it's taking to collect data to the screen. You can send this output to a file. For example, `dnslint /v /d msn.com`.
 By default, the name of the report that DNSLint generates is Dnslint.htm. With the `/r` (report) switch, you can specify the name and location of the report file that DNSLint generates. You can give the report file the same name as the domain name or DNS server that was tested. The ".htm" file name extension is appended to the report name automatically because the report is in HTML format.
@@ -151,7 +156,12 @@ By default, when DNSLint detects that a report file with the same name as the on
 
 The command `dnslint /y /d msn.com /r c:\reports\reskit /t` creates two reports in the C:\Reports folder. One report is called Reskit.htm and the other is called Reskit.txt. Existing report files are overwritten without prompting you.
 
-The `/no_open` switch prevents DNSLint from automatically opening the report after it's generated. This option is useful when you use DNSLint in scripts when you don't want to review the reports immediately or review the reports from the system that DNSLint was run from. For example, the command `dnslint /y /d msn.com /no_open` generates a report called Dnslint.htm that overwrites a pre-existing report with the same name, without prompting the user. DNSLint doesn't automatically open the report when it's completed.
+The `/no_open` switch prevents DNSLint from automatically opening the report after it's generated. This option is useful when you use DNSLint in scripts if you don't want to:
+
+- Review the reports immediately.
+- Review the reports from the system that DNSLint was run from.
+
+For example, the command `dnslint /y /d msn.com /no_open` generates a report called Dnslint.htm that overwrites a pre-existing report with the same name, without prompting the user. DNSLint doesn't automatically open the report when it's completed.
 
 Use the `/test_tcp` (test TCP port 53) option to request that TCP port 53 be tested when `/d` is used. Many DNS servers on the Internet today don't accept DNS queries on TCP port 53, to avoid possible attacks on that port. By default, only UDP port 53 is tested when DNSLint is run. Specifying the `/test_tcp` option will get DNSLint to send a single DNS query by TCP and report whether a response was received.
 
@@ -159,15 +169,18 @@ You can use the `/test_tcp` option with `/d` and `/ad`. However, you can't use t
 
 For example: `dnslint /d microsoft.com /v /test_tcp`  
 
-The `/c` (connectivity test) switch requests that DNSLint test well-known e-mail ports on all of the e-mail servers it finds while inspecting DNS servers for the specified domain name. The Simple Mail Transfer Protocol (SMTP), Post Office Protocol (POP version 3), and Internet Message Access Protocol (IMAP version 4) are supported. By default, when the /c switch is specified, DNSLint tries to connect to all three ports on each e-mail server that it finds. That is, TCP port 25 for SMTP, TCP port 110 for POP, and TCP port 143 for IMAP.
+The `/c` (connectivity test) switch requests that DNSLint test well-known e-mail ports on all of the e-mail servers it finds while inspecting DNS servers for the specified domain name. The SMTP, Post Office Protocol (POP version 3), and Internet Message Access Protocol (IMAP version 4) are supported. By default, when the /c switch is specified, DNSLint tries to connect to all three ports on each e-mail server that it finds. That is, TCP port 25 for SMTP, TCP port 110 for POP, and TCP port 143 for IMAP.
 
-DNSLint reports the state that each port is in: "Listening", "Not Listening", or "No Response." If DNSLint finds that a port is Listening, it also returns the response from the port if any is returned. For example, if an SMTP port is listening, it typically returns a response that is consistent with the SMTP protocol specification, such as the following:
+DNSLint reports the state that each port is in: "Listening", "Not Listening", or "No Response." If DNSLint finds that a port is Listening, it also returns the response from the port. For example, if an SMTP port is listening, it typically returns a response that's consistent with the SMTP protocol specification, such as the following example:
 
 220 `mailsrv.reskit.com` Microsoft ESMTP MAIL Service, Version: 5.0.2195.3705 ready at Mon, 13 May 2002 17:08:36 -0700
 
-When a port is reported as "Not Listening", this indicates that the e-mail server being queried has responded with a TCP packet with the Reset flag set. This indicates that there's no service or program listening on the port.
+When a port is reported as "Not Listening", it indicates the e-mail server being queried has responded with a TCP packet with the Reset flag set. It also indicates there's no service or program listening on the port.
 
-"No Response" is reported when the target e-mail server doesn't respond to the connection attempt. Assuming that the target server is operational and running, this indicates that the port is being filtered on the target server or somewhere between the client that is running DNSLint and target server.
+"No Response" is reported when the target e-mail server doesn't respond to the connection attempt. If the target server is operational and running, it indicates that the port is being filtered on:
+
+- The target server.
+- Somewhere between the client that's running DNSLint and target server.
 
 The command `dnslint /y /v /c /d msn.com` generates a report called Dnslint.htm that overwrites a pre-existing report with the same name, without prompting the user. Because the `/c` option is specified, an extra section is appended to the bottom of the standard DNSLint report:
 
@@ -188,9 +201,9 @@ IMAP response: NO RESPONSE (possibly filtered)
 > One or more POP servers didn't respond.  
 One or more IMAP servers didn't respond.
 
-When a target e-mail server doesn't respond to a connection attempt on one of its e-mail ports, DNSLint retries the connection three times. This is standard behavior for a TCP client. Because DNSLint waits for three separate TCP connections attempts to time out before DNSLint indicates that there was "No Response", this process can slow down the completion of the report. To optimize DNSLint operation, you can specify which e-mail port or ports you want to check instead of checking all three all the time.
+When a target e-mail server doesn't respond to a connection attempt on one of its e-mail ports, DNSLint retries the connection three times. This process is standard behavior for a TCP client. Before DNSLint indicates that there was "No Response," it waits for three separate TCP connections attempts to time out. This process can slow down the completion of the report. To optimize DNSLint operation, you can specify which e-mail port or ports you want to check instead of checking all three all the time.
 
-By default, when the `/c` option is specified, all three TCP ports (25, 110, 143) are checked. But you can specify which ports to check after the `/c` option. Specify a comma-delimited list immediately after the `/c` option. Specify valid ports only: smtp, pop, imap. Any combination of these three ports works. For example, the command `dnslint /d reskit.com /c smtp` specifies that only the SMTP port (TCP port 25) should be checked.
+By default, when the `/c` option is specified, all three TCP ports (25, 110, 143) are checked. But you can specify which ports to check after the `/c` option. Specify a comma-delimited list immediately after the `/c` option. Specify valid ports only: `smtp`, `pop`, `imap`. Any combination of these three ports works. For example, the command `dnslint /d reskit.com /c smtp` specifies that only the SMTP port (TCP port 25) should be checked.
 
 The command `dnslint /d reskit.com /c pop`, smtp specifies that only the SMTP port (TCP port 25) and POP port (TCP port 110) should be checked.
 
@@ -198,12 +211,12 @@ The command `dnslint /d reskit.com /c imap`, pop specifies that only the IMAP po
 
 You can use the `/s` (server) switch with the `/d` and `/ad` functions. The `/s` switch has several purposes, but it only takes one type of data, a valid IP address of a DNS server (with one exception).
 
-When you specify `/d`, the `/s` option bypasses the InterNIC Whois lookup that DNSLint performs by default. As a result, DNSLint can run tests on private networks and on domain names that are deeper than the second-level domains on the Internet. DNSLint can also test domain names that are not supported by InterNIC. At the time this article was written, InterNIC supported Whois lookups for the following domains: `.biz`, `.com`, `.coop`, `.edu`, `.info`, `.int`, `.museum`, `.net`, and `.org`.
+When you specify `/d`, the `/s` option bypasses the InterNIC `Whois` lookup that DNSLint performs by default. As a result, DNSLint can run tests on private networks and on domain names that are deeper than the second-level domains on the Internet. DNSLint can also test domain names that are not supported by InterNIC. At the time this article was written, InterNIC supported `Whois` lookups for the following domains: `.biz`, `.com`, `.coop`, `.edu`, `.info`, `.int`, `.museum`, `.net`, and `.org`.
 
-When you use `/ad`, the `/s` switch is used to specify the IP address of a DNS server that is authoritative for the subdomain where DNS records used for Active Directory forest replication are registered. Typically, this is the _msdcs subdomain under the root of the Active Directory forest. For example, if the root of the Active Directory forest is called `myad.reskit.com`, the DNS server that hosts this domain may also be authoritative for the `_msdcs.myad.reskit.com` zone, where the DNS records used in Active directory replication are registered. Alternatively, the `_msdcs.myad.reskit.com` zone may be delegated to a different DNS server. However the DNS infrastructure has been designed, the `/s` option is used to specify a DNS server that is authoritative for the `_msdcs.myad.reskit.com` zone.
+When you use `/ad`, the `/s` switch is used to specify the IP address of a DNS server that's authoritative for the subdomain where DNS records used for Active Directory forest replication are registered. Typically, it's the _msdcs subdomain under the root of the Active Directory forest. For example, if the root of the Active Directory forest is called `myad.reskit.com`, the DNS server that hosts this domain may also be authoritative for the `_msdcs.myad.reskit.com` zone. In the zone, the DNS records used in Active directory replication are registered. Instead, the `_msdcs.myad.reskit.com` zone may be delegated to a different DNS server. However the DNS infrastructure has been designed, the `/s` option is used to specify a DNS server that is authoritative for the `_msdcs.myad.reskit.com` zone.
 
 The `/s` option must specify a valid IP address. The only exception to this rule is the following combination: `dnslint /ad /s localhost`
 
-"localhost" isn't a valid IP address. When you specify this parameter with the `/ad /s` combination, DNSLint tests the local system's (the system that is running DNSLint) ability to resolve the DNS records that are used for Active Directory forest replication. Recursive DNS queries are sent to the local system's configured DNS server(s) to confirm that the local system can resolve the DNS records used for Active Directory forest replication. This can be useful when troubleshooting Active Directory replication problems on a particular domain controller.
+"localhost" isn't a valid IP address. When you specify this parameter with the `/ad /s` combination, DNSLint tests the local system's (the system that is running DNSLint) ability to resolve the DNS records that are used for Active Directory forest replication. Recursive DNS queries are sent to the local system's configured DNS servers. Doing so to confirm that the local system can resolve the DNS records used for Active Directory forest replication. This process can be useful when troubleshooting Active Directory replication problems on a particular domain controller.
 
-Typically, not all of the local system's configured DNS servers are queried during this process. Default DNS client resolver behavior is observed, so if the DNS server at the top of the local system's DNS Server list doesn't respond, the next server in the list is used.
+Typically, not all of the local system's configured DNS servers are queried during this process. Default DNS client resolver behavior is observed. If the DNS server at the top of the local system's DNS Server list doesn't respond, the next server in the list is used.

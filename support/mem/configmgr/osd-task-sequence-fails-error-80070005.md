@@ -1,6 +1,6 @@
 ---
 title: An OSD task sequence fails with error 80070005
-description: Describes an issue in which an OSD task sequence fails during the Setup Windows and ConfigMgr step when the step still runs in Windows PE.
+description: Describes an issue where an OSD task sequence fails during the Setup Windows and ConfigMgr step.
 ms.date: 05/25/2020
 ms.prod-support-area-path: Task sequence tasks
 ---
@@ -39,7 +39,7 @@ The following error messages are logged in the `X:\windows\temp\smstslog\smsts.l
 > TSManager    Failed to run the action: Setup Windows and ConfigMgr. Permissions on the requested may be configured incorrectly.  
 > Access is denied. (Error: 80070005; Source: Windows)
 
-Here is the detail information about error code 80070005 (2147942405):
+Here's the detail information about error code 80070005 (2147942405):
 
 > Error Code: 0x80070005 (2147942405)  
 > Error Name: E_ACCESSDENIED  
@@ -48,11 +48,11 @@ Here is the detail information about error code 80070005 (2147942405):
 
 ## Cause
 
-This issue occurs if a custom SetupComplete.cmd file is specified. OSD task sequences use the SetupComplete.cmd file to continue the task sequence after Windows Setup finishes. If a custom SetupComplete.cmd file is specified, the task sequence can't install its own SetupComplete.cmd file, and returns the **Access is denied** error. Therefore, custom SetupComplete.cmd files aren't allowed with Configuration Manager OSD task sequences.
+This issue occurs if a custom SetupComplete.cmd file is specified. OSD task sequences use the SetupComplete.cmd file to continue the task sequence after Windows Setup finishes. If a custom SetupComplete.cmd file is specified, the task sequence can't install its own SetupComplete.cmd file. And it returns the **Access is denied** error. So custom SetupComplete.cmd files aren't allowed with Configuration Manager OSD task sequences.
 
 A custom SetupComplete.cmd file may be specified in one of the following ways:
 
-- It's copied to the appropriate location in a task (usually a **Run Command Line** task) between the **Apply Operating System** and **Setup Windows and ConfigMgr** tasks. The following is an example of the command line in a **Run Command Line** task:
+- It's copied to the appropriate location in a task (usually a **Run Command Line** task) between the **Apply Operating System** and **Setup Windows and ConfigMgr** tasks. The following command is an example of the command line in a **Run Command Line** task:
 
   `cmd.exe /c copy SetupComplete.cmd %OSDTargetSystemDrive%\Windows\Setup\Scripts`
 
