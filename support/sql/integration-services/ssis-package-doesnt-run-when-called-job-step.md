@@ -97,7 +97,7 @@ The following is an example of a command line:
  dtexec.exe /FILE "C:\_work\SSISPackages\ProtectionLevelTest\ProtectionLevelTest\AgentTesting.dtsx" /MAXCONCURRENT " -1 " /CHECKPOINTING OFF /REPORTING V /CONSOLELOG NCOSGXMT
 ```
 
-The /console logging returns details that resemble the following:
+The console logging returns details that resemble the following:
 
 ```output
 Error: 2006-04-27 18:13:34.76 Code: 0xC0202009 Source: AgentTesting Connection manager "(local).msdb" Description: An OLE DB error has occurred. Error code: 0x80040E4D. An OLE DB record is available. Source: "Microsoft SQL Native Client" Hresult: 0x80040E4D Description: "Login failed for user 'DOMAINNAME\username'.". End Error
