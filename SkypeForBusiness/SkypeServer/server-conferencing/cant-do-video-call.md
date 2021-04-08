@@ -1,7 +1,7 @@
 ---
 title: Video calls not working with Logitech BRIO Webcam
 description: You cannot start a Skype for Business video call with a Logitech BRIO Webcam with firmware update (version 2.0.12).
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: Ermink, Dougand
 ms.custom: CSSTroubleshoot
 appliesto:

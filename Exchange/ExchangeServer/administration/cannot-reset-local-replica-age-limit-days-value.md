@@ -2,8 +2,8 @@
 title: Cannot reset Local replica age limit (days)
 description: Provides workarounds for a problem in which you cannot reset the value of the Local replica age limit (days) setting.
 ms.date: 08/05/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

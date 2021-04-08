@@ -1,8 +1,8 @@
 ---
 title: Details of private appointments not shown
 description: Fixes an issue in which the full details of private appointments on shared calendars may not appear in Outlook or OWA.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

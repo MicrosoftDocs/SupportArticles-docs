@@ -1,7 +1,7 @@
 ---
 title: Error when starting Groove or SharePoint Workspace
 description: Discusses the conditions that will cause you to receive the message Error opening binary file store database when you try to start Groove or Sharepoint Workspace.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: fselkirk
 ms.custom: CSSTroubleshoot
 appliesto:

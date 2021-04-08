@@ -1,7 +1,7 @@
 ---
 title: Error 'A compliance policy is currently blocking this site deletion' when trying to delete a SharePoint site
 description: This article describes how to resolve an issue when there's an error when trying to delete a SharePoint site.
-author: v-miegge
+author: helenclu
 ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal

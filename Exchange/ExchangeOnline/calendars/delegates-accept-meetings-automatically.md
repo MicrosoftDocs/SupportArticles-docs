@@ -1,8 +1,8 @@
 ---
 title: Delegates accept meetings automatically
 description: Describes behavior in which a meeting request that's created by a delegate is automatically accepted and added to the delegate's calendar when the delegate is an attendee.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

@@ -1,8 +1,8 @@
 ---
 title: Cannot open an IRM protected workbook in Protected View
 description: Works around an issue in which you receive an error message and you cannot open an IRM protected Excel 97-2003 workbook. This issue occurs when you try to open the workbook in Protected View in Excel 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

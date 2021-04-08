@@ -1,8 +1,8 @@
 ---
 title: Project and Project Server Support Boundaries - What to Expect
 description: Explain to customer's what they can expect when they call into paid support for Project and Project Server.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

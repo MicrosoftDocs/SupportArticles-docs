@@ -1,8 +1,8 @@
 ---
 title: ActiveSync clients can't connect
 description: Fixes an issue in which Exchange ActiveSync clients can't connect or they experience delays when synchronizing in an Exchange Server environment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

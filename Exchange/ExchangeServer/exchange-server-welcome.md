@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for Exchange Server
 description: This article lists Exchange Server related issues.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 localization_priority: Normal
 search.appverid: 
 - MET150

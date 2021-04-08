@@ -1,7 +1,7 @@
 ---
 title: Services display incorrectly in Research pane
 description: Resolves the issues in which a service is listed two times when you view the list of available services, and a service returns no result when you query that service in the Research pane.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: amaniah
 appliesto:
 - Office 2013

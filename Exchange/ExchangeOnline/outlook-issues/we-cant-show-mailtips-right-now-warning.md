@@ -1,8 +1,8 @@
 ---
 title: We can't show MailTips right now warning
 description: Describes an issue that occurs after you change the From address to the address of a non-mailbox-enabled recipient.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

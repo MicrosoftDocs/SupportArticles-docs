@@ -1,8 +1,8 @@
 ---
 title: HCW8034 or HCW8057 when running Hybrid Configuration wizard
 description: Describes an issue that triggers an HCW8034 or HCW8057 error when you run the Hybrid Configuration wizard. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: MAPI Advise() call returns 0x8007000E (E_OUTOFMEMORY)
 description: Calling the MAPO Advise() function may return 0x8007000E (E_OUTOFMEMORY) if called between 7,800 and 7900 times. You can work around this problem by setting and configuring the SharedMemMaxSize registry key.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

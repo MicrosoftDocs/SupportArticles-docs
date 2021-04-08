@@ -1,7 +1,7 @@
 ---
 title: We can't start this app when installing an Office add-in
 description: Describes an issue that installing an Office Add-in from the Office Store fails with error.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office 365
 - Office 2019

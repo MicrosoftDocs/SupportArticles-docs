@@ -1,6 +1,6 @@
 ﻿---
 title: Unable to Activate Security Token Service Application - Event ID 8306
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -8,7 +8,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2010

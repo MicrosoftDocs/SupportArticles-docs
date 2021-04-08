@@ -1,8 +1,8 @@
 ---
 title: Proof of domain ownership has failed error
 description: Describes an issue in which you receive a Make sure that the TXT record for the specified domain is available in DNS error when you run the Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

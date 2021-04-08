@@ -1,8 +1,8 @@
 ---
 title: Automapping experiences unwanted results
 description: This article describes how unwanted Automapping results may occur when you add or remove mailbox permissions in EAC. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

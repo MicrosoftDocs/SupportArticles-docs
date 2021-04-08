@@ -1,7 +1,7 @@
 ---
 title: This feature has been disabled by your administrator error in Microsoft Office
 description: Describes an issue that triggers an error in Office 2013 applications when you try to sign in or share a file. This issue involves certain registry settings. A resolution is provided.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom:
 - CSSTroubleshoot
 - CI 124941

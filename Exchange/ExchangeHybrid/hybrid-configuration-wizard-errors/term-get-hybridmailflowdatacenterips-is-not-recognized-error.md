@@ -1,8 +1,8 @@
 ---
 title: Get-HybridMailflowDatacenterIPs is not recognized error
 description: Describes that you receive a Get-HybridMailflowDatacenterIPs is not recognized error message when you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

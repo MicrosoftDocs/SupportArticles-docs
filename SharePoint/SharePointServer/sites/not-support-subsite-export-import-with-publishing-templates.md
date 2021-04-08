@@ -1,8 +1,8 @@
 ---
 title: SharePoint doesn't support export/import of subsites with Publishing templates
 description: Describes an issue in which SharePoint Server doesn't support migrations of subsites into root sites or root sites into subsites in site collections that have the Publishing features turned on.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

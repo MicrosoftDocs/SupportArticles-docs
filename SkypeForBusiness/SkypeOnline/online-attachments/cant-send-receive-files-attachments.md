@@ -1,7 +1,7 @@
 ---
 title: You can't send or receive files or attachments in Skype for Business Online
 description: Describes the conditions in which you can't send or receive files from Lync through Skype for Business Online. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

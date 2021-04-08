@@ -1,8 +1,8 @@
 ---
 title: Enable the Hierarchical Address Book feature in Exchange Server 2010
 description: Describes how to enable the Hierarchical Address Book (HAB) feature in Exchange Server 2010.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

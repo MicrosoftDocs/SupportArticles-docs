@@ -10,7 +10,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ms.custom: 

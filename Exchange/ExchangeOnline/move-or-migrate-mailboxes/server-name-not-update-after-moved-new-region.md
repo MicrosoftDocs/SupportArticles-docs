@@ -1,8 +1,8 @@
 ---
 title: Server name doesn't update after moved to a new region
 description: After a mailbox is moved to a new region, the server name doesn't update when you view the mailbox properties. This is by design.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

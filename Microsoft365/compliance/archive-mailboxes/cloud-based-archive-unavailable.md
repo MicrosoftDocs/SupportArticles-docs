@@ -1,8 +1,8 @@
 ---
 title: Your archive appears to be unavailable error in a hybrid deployment.
 description: Describes a scenario in which users can't access a cloud-based archive mailbox by using Outlook Web App and can't update the archive mailbox in Outlook in a hybrid deployment. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

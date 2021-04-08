@@ -1,7 +1,7 @@
 ---
 title: Some fonts not embedded when a PowerPoint 2010 or above presentation is saved in an earlier format
 description: Describes an issue with font embedding when you save a presentation in .PPT format.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshoot
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - PowerPoint for Microsoft 365
 - PowerPoint 2019

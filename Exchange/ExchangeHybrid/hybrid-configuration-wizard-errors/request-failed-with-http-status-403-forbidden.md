@@ -1,8 +1,8 @@
 ---
 title: The request failed with HTTP status 403
 description: Describes an issue in which you receive a "The request failed with HTTP status 403" error message when you run the Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

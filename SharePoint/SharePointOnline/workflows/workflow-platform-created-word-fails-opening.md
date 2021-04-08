@@ -1,7 +1,7 @@
 ---
 title: SharePoint 2010 Workflow platform creates Word files that can't be opened
 description: You cannot open Word documents that's created by SharePoint 2010 Workflow platform.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

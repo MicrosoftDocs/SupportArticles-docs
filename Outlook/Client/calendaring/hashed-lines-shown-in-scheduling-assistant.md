@@ -1,8 +1,8 @@
 ---
 title: Hashed lines shown in scheduling assistant
 description: Hashed lines are shown in scheduling assistant when Exchange Server 2016 tries to retrieve free/busy information across untrusted forests.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

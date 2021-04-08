@@ -1,8 +1,8 @@
 ---
 title: Domains on Outlook Safe Senders list not recognized
 description: Describes an issue in which messages that you receive in Exchange Online or Exchange Online Protection are blocked as junk or spam even though you enabled the Never Block Sender's Domain option in Outlook.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

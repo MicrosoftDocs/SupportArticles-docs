@@ -1,8 +1,8 @@
 ---
 title: How to enable logging in Outlook for Mac
 description: Describes how to enable logging in Microsoft Outlook for Mac and how to collect logs, log file locations, and other important information about logging in Outlook for Mac.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

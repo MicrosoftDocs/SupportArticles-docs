@@ -1,8 +1,8 @@
 ---
 title: Resource ‎CiAgeOfLastNotification‎ is unhealthy
 description: Describes a scenario where you get an error message when you try to move mailboxes from Exchange Online to on-premises Exchange Server in a hybrid deployment or from one on-premises Exchange forest to another. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

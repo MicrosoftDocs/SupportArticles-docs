@@ -1,7 +1,7 @@
 ---
 title: Error when you run a query in Access
 description: Provides a resolution for a problem that occurs in Access 2010. You receive an error message when you run a query in Access 2010 because of a double-byte Arabic number.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: cochen, mattbum
 appliesto:

@@ -1,8 +1,8 @@
 ---
 title: Removed Default or Anonymous permission can't be restored
 description: Fixes an issue in which you can't use the Add-MailboxFolderPermission cmdlet to add Outlook folder Default or Anonymous permission.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

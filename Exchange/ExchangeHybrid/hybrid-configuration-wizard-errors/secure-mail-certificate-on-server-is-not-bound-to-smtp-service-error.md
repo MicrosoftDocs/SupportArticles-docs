@@ -1,8 +1,8 @@
 ---
 title: Secure Mail Certificate on server is not bound error
 description: Describes an issue that occurs if the SMTP service is not bound to the correct certificate. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

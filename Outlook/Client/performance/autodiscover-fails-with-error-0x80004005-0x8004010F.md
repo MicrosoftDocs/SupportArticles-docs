@@ -1,8 +1,8 @@
 ---
 title: AutoDiscover fails with error 0x80004005 or 0x8004010F
 description: Discusses that Outlook AutoDiscover fails and generates a 0x80004005 error (Outlook 2013) or 0x8004010F error (Outlook 2010). Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

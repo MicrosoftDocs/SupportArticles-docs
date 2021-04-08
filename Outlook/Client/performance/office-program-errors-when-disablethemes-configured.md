@@ -1,8 +1,8 @@
 ---
 title: Can't open or save files in Office programs
 description: Fixes an issue in which errors occur in Office programs when you have the __COMPAT_LAYER environment variable and its value contains DisableThemes.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

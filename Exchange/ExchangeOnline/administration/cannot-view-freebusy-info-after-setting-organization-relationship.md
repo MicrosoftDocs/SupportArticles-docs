@@ -1,8 +1,8 @@
 ---
 title: Cannot see free/busy if setting organization relationship
 description: Describes a scenario in which on-premises users can't view calendar availability of cloud users after you set up an organization relationship. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

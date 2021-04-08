@@ -1,8 +1,8 @@
 ---
 title: Out-of-office replies and voting options show wrongly
 description: Discusses that out-of-office replies and voting options in email messages between on-premises users and Exchange Online users do not appear correctly in a hybrid deployment. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

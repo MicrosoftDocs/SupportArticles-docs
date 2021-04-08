@@ -1,13 +1,13 @@
 ---
 title: Resource Plan FTE doesn't calculate as expected when Max Units are 0 or 0%
 description: Explanation of how Project Server calculates resource plans using FTE vs. hours of work.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150

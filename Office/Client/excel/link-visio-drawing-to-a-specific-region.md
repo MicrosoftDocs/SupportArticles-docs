@@ -1,7 +1,7 @@
 ---
 title: How to link a Visio drawing to a specific region in an Excel worksheet
 description: Explains how to embed a link in a Visio drawing to a named region in an Excel worksheet. Introduces the concepts of linking and embedding.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel

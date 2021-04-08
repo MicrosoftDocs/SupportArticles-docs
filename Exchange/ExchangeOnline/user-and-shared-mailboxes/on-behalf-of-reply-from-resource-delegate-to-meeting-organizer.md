@@ -1,8 +1,8 @@
 ---
 title: On behalf of reply from resource delegate to organizer
 description: Describes a scenario in which a meeting acceptance reply is sent to the meeting organizer on behalf of a delegate who has been added to a resource mailbox in Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Your request couldn't be completed. Please try again error when searching audit log.
 description: Describes an error that occurs when a user tries to search the audit log in the Office 365 Security & Compliance Center. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

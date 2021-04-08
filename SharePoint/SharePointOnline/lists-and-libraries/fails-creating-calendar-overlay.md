@@ -1,7 +1,7 @@
 ---
 title: Unexpected error when creating a calendar overlay
 description: Sorry, something went wrong or An unexpected error has occurred when creating a calendar overlay by using a calendar from a SharePoint Online subsite.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

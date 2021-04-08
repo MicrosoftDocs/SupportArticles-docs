@@ -1,7 +1,7 @@
 ---
 title: Split a Access database manually 
 description: Describes how to manually split the database to either a front-end application or a back-end application. Performance improvement and other reasons are listed that describe why you may want to split your database.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: SHAYDEN 
 appliesto:
 - Access 2007

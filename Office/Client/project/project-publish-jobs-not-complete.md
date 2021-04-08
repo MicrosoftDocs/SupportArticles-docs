@@ -1,7 +1,7 @@
 ---
 title: Project Publish jobs process remains at 80 percent for a long time
 description: Resolves an issue in which Project Publish jobs remain at 80 percent for a long time before being completed.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: project-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Project Online

@@ -1,8 +1,8 @@
 ---
 title: The length of the property is too long error
 description: Describes an issue that triggers a The length of the property is too long error when you try to create a new mail contact by using the Exchange admin center in Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Access 2010 wizard error after installing Office 2010 SP1
 description: Fixes an issue in which you receive an error when using the built-in wizards after installing Microsoft Office 2010 SP1.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshoot
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: kswallow
 appliesto:
 - Access 2010 64 bit

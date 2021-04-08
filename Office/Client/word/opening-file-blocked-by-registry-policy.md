@@ -1,8 +1,8 @@
 ---
 title: Opening a file is blocked by your registry policy setting or File Block settings in Word
 description: Describes an issue in which you may receive an error message when a file fails to open in Word.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

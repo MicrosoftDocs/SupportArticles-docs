@@ -1,6 +1,6 @@
 ﻿---
 title: PowerPivot data model does not refresh for the SQL Server authentication
-author: simonxjx
+author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal
