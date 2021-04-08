@@ -1,7 +1,7 @@
 ---
 title: Excel statistical functions CHIINV
 description: Describes the CHIINV function in  Excel 2003 and in later versions of Excel, and discusses an improvement in later versions of Excel that can affect results in extreme cases when compared with earlier versions of Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007

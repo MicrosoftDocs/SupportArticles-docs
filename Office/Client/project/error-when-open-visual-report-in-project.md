@@ -1,8 +1,8 @@
 ---
 title: Error when opening a Visual Report in Project 2010 with Office 2013
 description: Provides the resolution to fix the error that occurs when you open a Visual report in Project 2010 with Visio 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

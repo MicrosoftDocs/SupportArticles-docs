@@ -1,8 +1,8 @@
 ---
 title: Office doesn't start when Windows runs in safe mode
 description: Describes an issue that prevents Office applications from starting and that triggers an error at startup when Windows is running in safe mode. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

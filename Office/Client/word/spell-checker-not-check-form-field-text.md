@@ -1,7 +1,7 @@
 ---
 title: Spell checker doesn't check text in the form fields in Word
 description: Describes how to use a macro to spell check the form fields in Word.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Word for Office 365
 - Word 2019

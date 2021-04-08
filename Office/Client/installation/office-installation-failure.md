@@ -1,7 +1,7 @@
 ---
 title: Office 2010 Installation failure
 description: Describes an issue in which Microsoft Office 2010 encountered an error during setup. Provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office 2010
 ---

@@ -1,13 +1,13 @@
 ---
 title: Office has detected a problem with this file
 description: Works around a problem that generates an Office has detected a problem with this file error message  when an Office 2010 file fails validation.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: mdandige
 ms.custom: CSSTroubleshoot
 search.appverid: 

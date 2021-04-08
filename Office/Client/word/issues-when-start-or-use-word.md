@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot problems that occur when you start or use Word
 description: Provides a guide to identify and resolve problems that you experience when you start Word 2010, Word 2007, or Word 2003 by using different troubleshooting steps.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 ms.date: 5/5/2020
 localization_priority: Normal
@@ -13,7 +13,7 @@ ms.topic: article
 ms.custom: 
 - CI 117479
 - CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Word 2016
 - Word 2013

@@ -1,7 +1,7 @@
 ---
 title: Access linked table to SQL Server database returns Deleted
 description: Describes an issue in which an Access linked table that's connected to a SQL Server database returns.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Access for Office 365
 - Access 2019

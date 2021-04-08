@@ -1,7 +1,7 @@
 ---
 title: Use SQLConfigDataSource to create system DSN
 description: Describes how to create a system DSN. Use VBA in Access to call the SQLConfigDataSource function.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: robdil
 appliesto:
 - Access 2007

@@ -1,7 +1,7 @@
 ---
 title: Chart trendline formula is inaccurate in Excel
 description: This article documents an issue with the trendline function of an Excel chart when you manually enter X values.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshoot
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2010
 - Microsoft Office Excel 2007

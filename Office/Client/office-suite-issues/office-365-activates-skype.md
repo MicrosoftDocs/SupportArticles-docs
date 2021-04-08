@@ -1,7 +1,7 @@
 ---
 title: This feature has been disabled by your Administrator
 description: Fixes an issue in which Skype for Business activation fails if you install it from Microsoft 365 Apps for enterprise as a stand-alone application.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft 365 Apps for enterprise
