@@ -1,8 +1,8 @@
 ---
 title: Enable and collect logs for profile creation issues
 description: Describes the different diagnostic information collecting options available in Outlook for issues with creating profiles.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

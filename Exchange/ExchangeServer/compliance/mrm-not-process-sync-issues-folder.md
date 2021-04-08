@@ -1,8 +1,8 @@
 ---
 title: MRM policy doesn't process or delete items in the Sync Issues folder in Outlook 2007 or 2010
 description: Describes an issue in which a Messaging Records Management (MRM) policy doesn't process or delete items in the Sync Issues folder in Outlook 2007 or Outlook 2010.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

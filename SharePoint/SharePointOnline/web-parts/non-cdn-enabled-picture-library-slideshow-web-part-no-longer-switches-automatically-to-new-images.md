@@ -1,7 +1,7 @@
 ---
 title: Non-CDN-enabled SharePoint Picture Library Slideshow web part no longer switches automatically to new images
 description: Describes an issue in which non-CDN-enabled SharePoint Picture Library Slideshow web part no longer switches automatically to new images.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

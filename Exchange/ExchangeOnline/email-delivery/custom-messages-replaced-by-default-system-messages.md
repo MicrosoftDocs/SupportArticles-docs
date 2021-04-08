@@ -1,8 +1,8 @@
 ---
 title: Custom messages in NDRs are replaced by default system messages
 description: Fixes an issue in which custom messages in NDRs are replaced by default system messages in Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

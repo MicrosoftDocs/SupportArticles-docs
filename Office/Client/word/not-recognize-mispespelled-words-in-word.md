@@ -1,7 +1,7 @@
 ---
 title: Spell Check not working in Word 2010
 description: Provides steps to resolve an issue where the spell checker does not catch spelling mistakes in Word 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Word 2010

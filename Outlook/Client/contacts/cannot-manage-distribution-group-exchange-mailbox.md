@@ -1,8 +1,8 @@
 ---
 title: Can't manage distribution group from Outlook
 description: Describes causes for the issue that Outlook users may be unable to change the membership of groups for which they are listed as the managers after Microsoft Exchange Server 2010 is installed, and provides solutions.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

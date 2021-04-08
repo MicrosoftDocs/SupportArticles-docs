@@ -1,13 +1,13 @@
 ---
 title: Duplicate is displayed in the ERROR column for two or more objects
 description: Describes how to resolve a problem that occurs when you run the IdFix DirSync Error Remediation Tool in your on-premises Active Directory Domain Services (AD DS) environment.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 ms.reviewer: v-chblod, willfid
 search.appverid: 

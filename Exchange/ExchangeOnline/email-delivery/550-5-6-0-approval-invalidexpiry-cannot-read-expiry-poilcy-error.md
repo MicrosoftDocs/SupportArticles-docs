@@ -1,8 +1,8 @@
 ---
 title: 550 5.6.0 APPROVAL.InvalidExpiry error
 description: If a retention policy tag with IsDefaultModeratedRecipientsPolicyTag isn't set for a moderated distribution group, you can't send messages to the group.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

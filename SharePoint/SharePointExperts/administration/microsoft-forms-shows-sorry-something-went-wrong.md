@@ -1,7 +1,7 @@
 ---
 title: Microsoft Forms shows "Sorry, something went wrong"
 description: This article explains how to resolve the Microsoft Forms error, "Sorry, something went wrong".
-author: simonxjx
+author: helenclu
 ms.author: warrenr
 ms.date: 02/08/2021
 manager: dcscontentpm

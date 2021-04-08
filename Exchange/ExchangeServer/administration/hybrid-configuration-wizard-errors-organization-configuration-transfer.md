@@ -1,8 +1,8 @@
 ---
 title: HCW errors in Organization Configuration transfer
 description: Describes HCW8109, HCW8110, and HCW8111 errors and the troubleshooting of these errors.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

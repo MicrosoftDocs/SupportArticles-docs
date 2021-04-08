@@ -1,7 +1,7 @@
 ---
 title: The on-screen keyboard disappears in Skype Room Systems v2
 description: The virtual keyboard isn't displayed in Skype Room Systems v2 after the Windows 10 Creators Update (version 1703) is installed on Surface Pro 4.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: chanh
 ms.custom: CSSTroubleshoot
 appliesto:

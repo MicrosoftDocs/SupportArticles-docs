@@ -1,7 +1,7 @@
 ---
 title: Unable to add an Address (A) or CNAME record in Office 365 Small Business
 description: Describes an issue in which an "Another DNS record already exists with this host name" error occurs when you try to add an Address (A) or CNAME record in the Office 365 portal.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office 365 Small Business
 ---

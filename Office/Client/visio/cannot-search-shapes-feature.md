@@ -1,7 +1,7 @@
 ---
 title: Search for Shapes feature on the Internet is discontinued
 description: Fixes an issue in which the Search for Shapes feature on the Internet is discontinued.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Office Visio Professional 2007
 - Microsoft Office Visio Standard 2003

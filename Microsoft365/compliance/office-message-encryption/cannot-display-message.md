@@ -1,8 +1,8 @@
 ---
 title: We can't display your message right now error in Outlook Web App
 description: Describes an issue that occurs when a user tries to read a message that was encrypted by Office 365 Message Encryption. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,6 +1,6 @@
 ---
 title: A We don't know what happened, but something went wrong error in Excel Web Access Web Parts 
-author: simonxjx
+author: helenclu
 ms.author: remcgurk
 manager: dcscontentpm
 localization_priority: Normal

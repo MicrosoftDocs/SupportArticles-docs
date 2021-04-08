@@ -1,8 +1,8 @@
 ---
 title: Quarantined mailboxes detected on Exchange Server 2010
 description: Fixes an issue that a mailbox is quarantined and users can't access it.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

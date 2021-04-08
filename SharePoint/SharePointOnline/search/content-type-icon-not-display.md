@@ -1,7 +1,7 @@
 ---
 title: The document preview and content type icon aren't displayed
 description: This article describes an issue where the document preview and content type icon aren't displayed in a SharePoint search when you change the search result types display template, and provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 - SharePoint Server

@@ -1,8 +1,8 @@
 ---
 title: Visio Graphics Service application pool isn't recycled
 description: Fixes an issue that blocks Visio files from being displayed in SharePoint Server 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

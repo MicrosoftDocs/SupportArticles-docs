@@ -2,8 +2,8 @@
 title: Outlook or OWA cannot connect to Public Folders
 description: Troubleshoot an issue in which Exchange Online users can't connect to Public Folders by using Outlook or OWA.
 ms.date: 08/19/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

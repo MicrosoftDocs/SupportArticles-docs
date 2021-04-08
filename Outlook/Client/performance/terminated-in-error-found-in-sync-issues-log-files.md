@@ -1,8 +1,8 @@
 ---
 title: Terminated in error found in Sync Issues log files
 description: Documenting an issue for OffCAT rule where errors appear in the Sync Issues folder.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

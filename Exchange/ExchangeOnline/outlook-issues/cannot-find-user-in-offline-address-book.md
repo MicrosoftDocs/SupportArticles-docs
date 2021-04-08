@@ -1,8 +1,8 @@
 ---
 title: Cannot find user in offline address book
 description: Describes an issue in which you can't find a user in the offline address book in Microsoft 365. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

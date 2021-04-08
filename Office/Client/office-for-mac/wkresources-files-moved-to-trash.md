@@ -1,7 +1,7 @@
 ---
 title: Wkresources files in Trash when starting Office for Mac applications
 description: DEscribes an issue where the file "wkresources" gets created and moved to Trash-Recovered Files every time you open Office for Mac 2011 document or application.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office for Mac 2011 
 ---

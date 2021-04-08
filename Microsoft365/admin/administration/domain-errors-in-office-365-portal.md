@@ -1,7 +1,7 @@
 ---
 title: Domain errors in the Office 365 portal
 description: Describes all domain error messages that you may experience in the Office 365 portal.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Azure Active Directory
 - Office 365 User and Domain Management

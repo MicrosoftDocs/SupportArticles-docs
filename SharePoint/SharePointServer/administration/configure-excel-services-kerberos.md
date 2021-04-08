@@ -1,7 +1,7 @@
 ﻿---
 title: Configure Excel Services in SharePoint Server 2010 for Kerberos authentication
 description: Describe how to configure Excel Services in SharePoint Server 2010 for Kerberos authentication.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Excel Services in SharePoint Server 2010

@@ -1,8 +1,8 @@
 ---
 title: Office 365 DLP policy tips are not showing in Outlook or OWA
 description: Policy tips for unified DLP policies created in Office 365 Security and Compliance Center don't work in Microsoft Outlook or Outlook Web App.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: You can't start the eDiscovery PST Export Tool from the Exchange admin center in Exchange Online.
 description: Describes an issue in which you can't start the eDiscovery PST Export Tool in the Exchange admin center in Exchange Online. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

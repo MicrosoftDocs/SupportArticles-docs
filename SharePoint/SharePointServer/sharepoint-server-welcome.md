@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for SharePoint Server
 description: This article lists SharePoint Server-related issues.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150

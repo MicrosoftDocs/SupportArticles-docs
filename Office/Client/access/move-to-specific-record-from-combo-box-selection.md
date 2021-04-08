@@ -1,7 +1,7 @@
 ---
 title: Move to specific record from Combo Box selection
 description: Describes how to programmatically move to a specific record from a Combo Box selection in Microsoft Access. This article assumes that you are familar with Visual Basic controls.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Access 2007
 - Access 2003

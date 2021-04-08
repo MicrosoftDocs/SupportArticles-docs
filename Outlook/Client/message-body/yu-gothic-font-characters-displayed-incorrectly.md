@@ -1,8 +1,8 @@
 ---
 title: Yu Gothic font characters are displayed incorrectly
 description: Fixes an issue in which Yu Gothic font characters can't be read in HTML or rich text mails in Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

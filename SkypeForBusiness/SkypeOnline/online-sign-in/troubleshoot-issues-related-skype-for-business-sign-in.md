@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot O365 issues related to Skype for Business sign-in
 description: Describes a tool you can use to troubleshoot Office 365 issues when signing in to Microsoft Skype for Business.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: WinRM can't determine content type of HTTP response
 description: Provides resolutions to resolve the error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell/Console.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

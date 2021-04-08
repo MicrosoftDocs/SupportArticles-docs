@@ -1,8 +1,8 @@
 ---
 title: Moving migration mailbox fails
 description: This article describes an issue that can occur when you try to move a mailbox by using the New-MigrationBatch cmdlet.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

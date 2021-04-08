@@ -1,7 +1,7 @@
 ---
 title: Video is missing in a Skype for Business 2015 meeting recording
 description: Discusses a problem in which the video track is missing from a Skype for Business 2015 meeting recording after the December 2015 security update 3114351 is installed.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2015

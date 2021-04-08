@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for Exchange Online
 description: This article lists Exchange Online related issues.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 localization_priority: Normal
 search.appverid: 
 - MET150

@@ -1,7 +1,7 @@
 ---
 title: License validation when Office 365 administrator disables a user
 description: Describes an issue that occurs when an administrator tries to disable a Skype for Business Online user in Office 365. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: romanma, corbinm, dahans
 appliesto:

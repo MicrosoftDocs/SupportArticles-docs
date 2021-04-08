@@ -1,13 +1,13 @@
 ---
 title: Blank pages are unexpectedly printed
 description: Discusses a problem in which the blank pages are unexpectedly printed in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: V-RHOWAR
 search.appverid: 

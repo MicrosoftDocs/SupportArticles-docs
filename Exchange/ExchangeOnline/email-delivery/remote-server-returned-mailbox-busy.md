@@ -1,8 +1,8 @@
 ---
 title: 554 4.3.2 mailbox busy when sending mail
 description: Fixes an issue in which you can't send mail to a mailbox in Exchange Online if the mailbox has reached the limit of items in a folder.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

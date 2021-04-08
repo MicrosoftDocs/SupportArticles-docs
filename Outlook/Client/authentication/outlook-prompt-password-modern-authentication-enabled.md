@@ -1,8 +1,8 @@
 ---
 title: Outlook prompts for password when Modern Authentication is enabled
 description: Describes two scenarios in which Outlook prompts for credentials and doesn't use Modern Authentication to connect Office 365. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

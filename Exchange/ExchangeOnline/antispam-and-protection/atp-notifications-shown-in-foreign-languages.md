@@ -1,8 +1,8 @@
 ---
 title: ATP notifications displayed in foreign languages
 description: Discusses an issue in which ATP notifications are randomly displayed in foreign languages in Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

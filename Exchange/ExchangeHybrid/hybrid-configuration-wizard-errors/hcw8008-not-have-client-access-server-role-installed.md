@@ -1,8 +1,8 @@
 ---
 title: HCW8008 error in the Hybrid Configuration wizard
 description: Fixes an issue in which you receive an HCW8008 error when you run the Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Cannot localize the default folders error
 description: Describes an issue that prevents a user from changing the default folder names (such as Inbox) in Outlook on the web to the language that they specified on the Region and time zone settings page.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

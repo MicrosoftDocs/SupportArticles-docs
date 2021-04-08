@@ -1,7 +1,7 @@
 ---
 title: Formula returns "#VALUE!" error
 description: Fixes an issue in which SUMIF, COUNTIF, and COUNTBLANK functions return "#VALUE!" error.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel for Office 365
 - Microsoft Excel 2016

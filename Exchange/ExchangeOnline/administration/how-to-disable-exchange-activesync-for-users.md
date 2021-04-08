@@ -1,8 +1,8 @@
 ---
 title: How to disable Exchange ActiveSync for users
 description: Describes how to disable Exchange ActiveSync for users in Microsoft 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Can't add a new derived SBC for Direct Routing
 description: Provides a resolution to an issue in which you are not able to add a new derived SBC for Direct Routing.
-author: helenclu
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

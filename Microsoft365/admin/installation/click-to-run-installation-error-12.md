@@ -1,7 +1,7 @@
 ---
 title: Error 12 when installing Office Click-to-Run
-ms.author: luche
-author: helenclu
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 10/22/2020
 ms.topic: article

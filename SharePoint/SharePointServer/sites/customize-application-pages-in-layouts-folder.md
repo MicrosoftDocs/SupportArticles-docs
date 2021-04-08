@@ -1,8 +1,8 @@
 ---
 title: Customize appearance and behavior of SharePoint site collections
 description: Describes two methods to customize the appearance and behavior of your site collections in Microsoft Office SharePoint Server and in Microsoft Windows SharePoint Services 3.0.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

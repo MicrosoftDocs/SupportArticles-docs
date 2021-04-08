@@ -1,8 +1,8 @@
 ---
 title: Cannot save conversation history or show voice mail
 description: In Microsoft Skype for Business, a user may experience can't save conversation history or can't see any voice mail.
-ms.author: v-six
-author: simonxjx
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

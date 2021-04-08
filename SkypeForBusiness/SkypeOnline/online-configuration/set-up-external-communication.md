@@ -1,8 +1,8 @@
 ---
 title: Enable external communications
 description: Helps your Skype for Business users communicate with Skype for Business or Skype users in other organizations.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Description of the Auto-Recover functions in Excel
 description: Describes the Auto-Recover functions in Excel. The Auto-Recover feature saves copies of all open Excel workbooks at a fixed interval that you define. You can use this feature to recover the file when Excel closes unexpectedly.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2010
 - Microsoft Office Excel 2007

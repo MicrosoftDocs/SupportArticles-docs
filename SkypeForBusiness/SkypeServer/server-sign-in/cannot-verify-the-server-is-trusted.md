@@ -1,7 +1,7 @@
 ---
 title: Lync can't verify that the server is trusted during client sign-in
 description: Works around an issue in which a Trust Model dialog box appears when a user tries to sign in to Lync. This issue occurs in a Lync Server 2013 environment.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync 2013

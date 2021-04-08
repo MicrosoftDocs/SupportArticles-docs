@@ -1,7 +1,7 @@
 ---
 title: Cannot locate the Internet or proxy server when selecting hyperlink in Office
 description: Describes issues when you select hyperlinks in Office. Provides solutions.
-author: simonxjx
+author: helenclu
 ms.date: 7/17/2020
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,7 +11,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Word for Office 365
 - Word 2019

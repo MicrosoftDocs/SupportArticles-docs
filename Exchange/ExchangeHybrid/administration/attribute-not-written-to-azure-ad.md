@@ -1,14 +1,14 @@
 ---
 title: Exchange Online attributes aren't written back to on-premises AD directory service
 description: Describes issues that occur when you use the Azure Active Directory Sync tool to sync Azure AD with Active Directory in an Exchange hybrid deployment scenario. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.prod: office 365
 ms.topic: troubleshooting
 ms.custom: 
 - Exchange Hybrid
 - CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

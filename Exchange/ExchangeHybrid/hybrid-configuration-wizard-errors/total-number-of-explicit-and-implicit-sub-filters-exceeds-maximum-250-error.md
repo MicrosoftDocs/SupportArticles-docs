@@ -1,8 +1,8 @@
 ---
 title: Cannot add more than 250 domains
 description: Discusses an error message that you receive when you run the Hybrid Configuration Wizard to set up an Exchange hybrid deployment. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

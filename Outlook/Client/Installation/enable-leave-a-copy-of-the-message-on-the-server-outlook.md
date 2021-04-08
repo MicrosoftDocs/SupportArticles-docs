@@ -1,8 +1,8 @@
 ---
 title: Leave a copy of the message on the server is missing in Outlook
 description: How to enable the Leave a Copy of the Message on the Server options in Outlook 2010 and later versions.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

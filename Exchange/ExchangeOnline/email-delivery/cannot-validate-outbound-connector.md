@@ -1,8 +1,8 @@
 ---
 title: Can't validate an outbound connector
 description: Discusses an error message that you receive when you try to validate a connector in the Exchange admin center in Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

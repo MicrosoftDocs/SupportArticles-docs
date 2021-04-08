@@ -1,8 +1,8 @@
 ---
 title: Multiple Send Connectors found for AddressSpace
 description: Fixes the HCW8011 error that occurs when you run the Hybrid Configuration wizard. 
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

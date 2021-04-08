@@ -1,7 +1,7 @@
 ---
 title: You can't open any Access wizard
 description: Describes a problem in which you receive and error message when you try to open a wizard in Access 2007. This problem occurs when you have the Disable Trusted Locations and Disable all macros except digitally signed macros options enabled.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: mattbum
 appliesto:
 - Access 2007

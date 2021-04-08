@@ -1,6 +1,6 @@
 ---
 title: Office viewers or Microsoft Offices Online shows the "This page can't be displayed" error
-author: simonxjx
+author: helenclu
 ms.author: arhinesm
 manager: dcscontentpm
 localization_priority: Normal

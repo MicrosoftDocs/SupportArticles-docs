@@ -1,8 +1,8 @@
 ---
 title: MSExchangeDSAccess Event ID 2080
 description: Describes the columns in Event 2080 and their contents and how to use the information in Event ID 2080 to diagnose DSAccess problems.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
