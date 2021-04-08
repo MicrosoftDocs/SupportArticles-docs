@@ -29,7 +29,7 @@ In Microsoft Outlook, if a user who has sufficient permissions to a public folde
 
 > Unable to expand folder. failed attempt to connect to Microsoft Exchange.
 
-In Outlook on the web, if the user tries to add the public folder to **Favorites**, the "adding public folder" window does not appear. Additionally, if you look for the **GetFolder** request by using the [F12 diagnostic tools](/microsoft-edge/devtools-guide/network), you can capture the following error message in the response text:
+In Outlook on the web, if the user tries to add the public folder to **Favorites**, the "adding public folder" window does not appear. Additionally, if you look for the **GetFolder** request by using the [F12 diagnostic tools](/archive/microsoft-edge/legacy/developer/), you can capture the following error message in the response text:
 
 > "Mailbox must be accessed as owner. Owner: public folder mailbox guid; Accessing user: User ExchangelegacyDN"
 
