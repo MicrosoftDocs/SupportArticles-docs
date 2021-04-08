@@ -50,7 +50,7 @@ When this problem occurs, Event ID 6301 is logged in the server Application log,
 
 This event indicates that an error occurs when Azure AD Connect attempts a read or write operation over the LocalDB database by using table-valued parameters.
 
-For more information about table-valued parameters, see [Use Table-Valued Parameters (Database Engine)](https://docs.microsoft.com/sql/relational-databases/tables/use-table-valued-parameters-database-engine?text=Table-valued%20parameters%20are%20declared,temporary%20table%20or%20many%20parameters).
+For more information about table-valued parameters, see [Use Table-Valued Parameters (Database Engine)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine?text=Table-valued%20parameters%20are%20declared,temporary%20table%20or%20many%20parameters).
 
 ## Cause
 
@@ -86,4 +86,4 @@ To change the setting, follow these steps:
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/en-us) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
