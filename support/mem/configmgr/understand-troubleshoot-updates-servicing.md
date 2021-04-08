@@ -462,8 +462,8 @@ Review the following logs:
 
 To do so, compare the following folders:
 
-- \\\\\<Service Connection Point>\EasySetupPayloader\\\<*PackageGUID*>
-- SCCMContentLib\DataLib\\<*PackageGUID*> (on the site servers)
+- \\\\\<Service Connection Point>\EasySetupPayloader\\\<PackageGUID>
+- SCCMContentLib\DataLib\\<PackageGUID> (on the site servers)
 
 ### Step 4: Retry content replication for EasySetup package
 
@@ -474,7 +474,7 @@ To do so, follow these steps:
 3. Enter `SMS_CM_UpdatePackages` in **Object Path**, and select **OK**.
 4. Select **RetryContentReplication** from **Method**, and select **Edit in Parameters**.
 5. Select the **ForceRetry** property, and select **Edit Property**.
-6. In **Value**, select **Not Null**, and enter **1**.
+6. In **Value**, select **Not Null**, and enter *1*.
 7. Select **Save Property** > **Save Object**.
 8. Select **Execute!**.
 9. Review Distmgr.log to check whether the package replicates successfully.
@@ -704,7 +704,7 @@ The following entries are logged:
 > Successfully copied file from C:\Program Files\Microsoft Configuration Manager\CMUStaging\10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C\SMSSetup\bin\x64\cmupdate.exe to C:\Program Files\Microsoft Configuration Manager\bin\x64\cmupdate.exe  
 > INFO: Starting service CONFIGURATION_MANAGER_UPDATE
 
-### Step 3: Extract the update package and verify redistributables
+### Step 3: Extract the update package and verify redistributable packages
 
 The following entries are logged in CMUpdate.log:
 
@@ -773,7 +773,7 @@ When an update gets stuck in the **Installing** state in the console, it may be 
 
     If the error shows a script or table failure, collect more logs, such as SQL Server logs, and then find the relevant table.
 
-### Issue 1: Failed to open file \\\\?\C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1606-KB3184153_AppCheck.sql for reading. Code 0x80070003
+### Issue 1: Failed to open file \\\\?\C: \Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1606-KB3184153_AppCheck.sql for reading. Code 0x80070003
 
 **Symptom**
 
@@ -785,7 +785,7 @@ You receive an error message that resembles the following example in CMUpdate.lo
 
 To fix this issue, check whether the file exists. If not, delete the CMUStaging folder, and restart Smsexec. If the files aren't downloaded, reinstall the Service Connection Point role to start downloading.  
 
-### Issue 2: Error in verifying the trust of file \\\\?\C:\Program Files\Microsoft Configuration Manager\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab
+### Issue 2: Error in verifying the trust of file \\\\?\C: \Program Files\Microsoft Configuration Manager\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab
 
 **Symptom**
 
@@ -832,7 +832,7 @@ It tells `HMan` to start a package notification and update thread in DistMgr to 
 
 ### Issue 5: Update is installed on central administration site and primary sites, but console still displays Installing
 
-When a primary site completes the installation, it drops a state message for sites and serverdata tables. It changes the actual state of site in sites table, but it doesn't change the status in CM tables. A global replication group that is named **`CMUpdates`** is used to replicate changes to all sites. By default, **`CMUpdates`** has 1 minute of sync time.
+When a primary site completes the installation, it drops a state message for sites and server data tables. It changes the actual state of site in sites table, but it doesn't change the status in CM tables. A global replication group that is named **`CMUpdates`** is used to replicate changes to all sites. By default, **`CMUpdates`** has 1 minute of sync time.
 
 To find which tables are replicated, run the following SQL queries:
 
