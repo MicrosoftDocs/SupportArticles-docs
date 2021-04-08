@@ -27,7 +27,7 @@ Using an IFilter for PDF parsing will eventually help you to improve the PDF Par
 
 ## PDF iFilter tool
 
-The commercial PDF IFilter tools is available. The following is among the most commonly used:
+The commercial PDF IFilter tool is available. This tool is among the most commonly used:
 
 - [Foxit PDF IFilter (commercial)](https://www.foxitsoftware.com/products/pdf-ifilter/)
 
