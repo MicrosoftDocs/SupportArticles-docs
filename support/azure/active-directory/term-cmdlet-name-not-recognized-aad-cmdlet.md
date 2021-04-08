@@ -37,7 +37,7 @@ To resolve this issue, follow these steps.
 3. At the Windows PowerShell command prompt, type `Get-Module`, and then press Enter.
 4. In the output, check that the `MSOnline` module is present. The output should look similar to the following one:
 
-    ```console
+    ```output
     Module Type Name Exported Commands
     -------------- -------- ----------------
     Binary MSOnline {Add-MsolRoleMember, Remove-MsolContact...
