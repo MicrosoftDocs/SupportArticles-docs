@@ -1,8 +1,8 @@
 ---
 title: Error 0x8004010F when sending or receiving email
 description: Resolves an issue in which you receive a 0x8004010F error when you try to send or receive email messages.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

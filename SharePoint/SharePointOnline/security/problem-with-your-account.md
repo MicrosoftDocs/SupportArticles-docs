@@ -1,7 +1,7 @@
 ---
 title: There is a problem with your account, please try again later
 description: This article describes a "There is a problem with your account, please try again later" error when you try to open Office documents from OneDrive for Business or SharePoint Online, and provides solutions.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 - OneDrive for Business

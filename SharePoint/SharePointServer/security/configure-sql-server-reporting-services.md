@@ -1,8 +1,8 @@
 ---
 title: Configure SQL Server Reporting Services in SharePoint
 description: Describes how to configure SQL Server Reporting Services in Microsoft SharePoint Server for Kerberos authentication
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

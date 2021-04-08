@@ -1,7 +1,7 @@
 ---
 title: SharePoint crawler has insufficient permissions to crawl file shares
 description: The crawl account did not have sufficient privileges to access the security attributes of this file or folder when searching a file in the crawled file shares.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Server 2013
 ---

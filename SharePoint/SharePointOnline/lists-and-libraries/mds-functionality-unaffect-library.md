@@ -1,7 +1,7 @@
 ---
 title: Minimal Download Strategy doesn't work as expected for library
 description: Minimal Download Strategy (MDS) doesn't work for SharePoint document library even it's Active for the site.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

@@ -1,7 +1,7 @@
 ---
 title: Outlook for Mac support tools.
 description: Describes some useful tools for Microsoft Outlook for Mac.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Outlook for Mac for Office 365
 ---

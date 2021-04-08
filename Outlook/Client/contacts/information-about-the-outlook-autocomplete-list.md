@@ -1,8 +1,8 @@
 ---
 title: Information about the Outlook AutoComplete list
 description: Describes the Outlook AutoComplete list and step-by-step instructions for users to manage the list.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

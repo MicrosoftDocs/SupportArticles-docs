@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for OneDrive for Business
 description: This article lists OneDrive for Business related issues.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150

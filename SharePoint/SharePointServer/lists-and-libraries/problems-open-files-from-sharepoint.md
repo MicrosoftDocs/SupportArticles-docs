@@ -1,7 +1,7 @@
 ---
 title: Problems opening documents from a SharePoint site
 description: Describes issues that may arise when working with Office documents located on a SharePoint site if the local web client service is disabled.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office 2010

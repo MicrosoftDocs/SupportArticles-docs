@@ -1,8 +1,8 @@
 ---
 title: Can't open Outlook items from Windows Search results
 description: Fixes an issue in which you can't open Outlook items from Windows Search results after installing Lync 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

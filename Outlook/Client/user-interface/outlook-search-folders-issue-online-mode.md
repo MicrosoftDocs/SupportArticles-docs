@@ -1,8 +1,8 @@
 ---
 title: Outlook search folders aren't populated in Online mode after migration from Exchange 2013 to 2010
 description: Describes problems in Outlook after your mailbox is migrated from Exchange Server 2013 or Exchange Online to Exchange Server 2010. These problems involve a missing SEARCH_RUNNING flag. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

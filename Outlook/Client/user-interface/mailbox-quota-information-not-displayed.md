@@ -1,8 +1,8 @@
 ---
 title: Mailbox Quota Information isn't displayed
 description: Describes an issue in Outlook 2010 in which mailbox Quota Information is not displayed on the Status bar in Outlook 2010.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

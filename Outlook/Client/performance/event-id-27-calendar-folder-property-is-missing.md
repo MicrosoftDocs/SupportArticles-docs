@@ -1,8 +1,8 @@
 ---
 title: Event ID 27 and Calendar Folder property is missing error
 description: Describes an issue in which some users will see lots of instances of Event ID 27 in the Application log.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
