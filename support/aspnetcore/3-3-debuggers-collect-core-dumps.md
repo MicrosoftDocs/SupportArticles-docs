@@ -11,7 +11,7 @@ _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1
 
 This article introduces debuggers and core dumps and the tools to capture and analyze core dump files in Linux.
 
-[!INCLUDE [Prerequisites](prerequisites.md)]
+[!INCLUDE [Prerequisites](3-prerequisites.md)]
 
 ## Goal of this part
 

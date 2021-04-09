@@ -11,7 +11,7 @@ _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1
 
 This article helps you consider the troubleshooting process as a whole.
 
-[!INCLUDE [Prerequisites](prerequisites.md)]
+[!INCLUDE [Prerequisites](3-prerequisites.md)]
 
 ## Goal of this part
 

@@ -10,7 +10,7 @@ _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1
 
 This article introduces how to use `top` and `htop` command line tools to monitor processes.
 
-[!INCLUDE [Prerequisites](prerequisites.md)]
+[!INCLUDE [Prerequisites](3-prerequisites.md)]
 
 ## Goal of this part
 
