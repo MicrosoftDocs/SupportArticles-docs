@@ -32,4 +32,4 @@ For detailed steps on how to assign a license in Office 365, see [Add users and 
 
 ## More information
 
-If you are still encountering issues connecting CRM for Outlook to your CRM Online organization, a diagnostic tool is available to help diagnose the issue: [CRM for Outlook Configuration Diagnostic](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72fb).
+If you are still encountering issues connecting CRM for Outlook to your CRM Online organization, a diagnostic tool is available to help diagnose the issue: [CRM for Outlook Configuration Diagnostic](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant).

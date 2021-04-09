@@ -41,7 +41,8 @@ Also, if a remote server tries to force you to use guest access, or if an admini
 
 ### Log entry 1
 
-> Log Name: Microsoft-Windows-SmbClient/Security  
+```output
+Log Name: Microsoft-Windows-SmbClient/Security  
 Source: Microsoft-Windows-SMBClient  
 Date: Date/Time  
 Event ID: 31017  
@@ -53,6 +54,7 @@ Computer: ServerName.contoso.com
 Description: Rejected an insecure guest logon.  
 User name: Ned  
 Server name: ServerName
+```
 
 #### Guidance
 
@@ -60,7 +62,8 @@ This event indicates that the server tried to log on the user as an unauthentica
 
 ### Log entry 2
 
-> Log Name: Microsoft-Windows-SmbClient/Security  
+```output
+Log Name: Microsoft-Windows-SmbClient/Security  
 Source: Microsoft-Windows-SMBClient  
 Date: Date/Time  
 Event ID: 31018  
@@ -70,6 +73,7 @@ Keywords: (128)
 User: NETWORK SERVICE  
 Computer: ServerName.contoso.com  
 Description: The AllowInsecureGuestAuth registry value is not configured with default settings.
+```
 
 Default registry value:  
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] "AllowInsecureGuestAuth"=dword:0`

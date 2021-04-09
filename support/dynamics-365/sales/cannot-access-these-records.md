@@ -42,7 +42,7 @@ Update the security role to include user level Read access to the Mailbox entity
 8. Select **Save** and **Close**.
 9. Configure Microsoft Dynamics CRM for Office Outlook again.
 
-If you're still coming across issues, connect CRM for Outlook to your CRM Online organization, [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) is available to help diagnose the issue.
+If you're still coming across issues, connect CRM for Outlook to your CRM Online organization, [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) is available to help diagnose the issue.
 
 ## More information
 

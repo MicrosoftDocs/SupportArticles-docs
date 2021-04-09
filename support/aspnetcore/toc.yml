@@ -12,7 +12,7 @@
       href: 1-3-install-dotnet-core-linux.md
   - name: Part 2 Create and run ASP.NET Core apps
     items:
-    - name: Part 2.1 Create and configure an app 
+    - name: Part 2.1 Create and configure an app
       href: 2-1-create-configure-aspnet-core-applications.md
     - name: Part 2.2 Install and configure Nginx
       href: 2-2-install-nginx-configure-it-reverse-proxy.md
@@ -24,3 +24,11 @@
       href: 2-4-use-local-firewall-allowing-http-access.md
     - name: Part 2.5 Copy and extract files from development environment to Linux
       href: 2-5-copy-file-linux-vm-extract-file.md
+  - name: Part 3 - Troubleshooting issues
+    items:
+    - name: Part 3.1 Get ready
+      href: 3-1-get-ready-troubleshooting.md
+    - name: Part 3.2 Monitor processes on Linux
+      href: 3-2-task-managers-top-htop.md
+    - name: Part 3.3 Collect core dumps
+      href: 3-3-debuggers-collect-core-dumps.md
