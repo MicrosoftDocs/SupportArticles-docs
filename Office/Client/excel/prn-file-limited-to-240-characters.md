@@ -1,5 +1,6 @@
 ---
 title: Formatted text is limited to 240 characters per line
+description: Describes the limit per line when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -20,13 +21,14 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Excel, when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file, any characters beyond the two-hundred fortieth character are wrapped to the next line. 
+In Microsoft Excel, when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file, any characters beyond the two-hundred fortieth character are wrapped to the next line.
 
 > [!NOTE]
-> If several rows on the same sheet contain text beyond 240 characters, the text begins wrapping at the row after the last row that contains text. 
+> If several rows on the same sheet contain text beyond 240 characters, the text begins wrapping at the row after the last row that contains text.
 
-For example, consider the following sheet: 
-|Cell|  Number of Characters|
+For example, consider the following sheet:
+
+|Cell|Number of Characters|
 |-----|------------|
 |A1| 40|
 |A2 |255|
@@ -67,15 +69,14 @@ This behavior occurs because, by design, Formatted Text (Space Delimited) (.prn)
 
 ## Workaround
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements. To create a space-delimited text file that exceeds the 240-character per line limitation, use a macro similar to the following sample macro. 
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements. To create a space-delimited text file that exceeds the 240-character per line limitation, use a macro similar to the following sample macro.
 
 > [!NOTE]
-> Before you run this macro, do the following: 
-> -  Select the cells to be included in the text file.   
-> -  Verify that column widths are wide enough to view the largest string in each column.
->    The maximum column width for a single Excel column is 255 characters when formatted with a fixed-width font.    
-> - Use the Style menu commands to format the worksheet to use a fixed-width font.
-> For example, Courier is a fixed-width font.   
+> Before you run this macro, do the following:
+>
+> - Select the cells to be included in the text file.
+> - Verify that column widths are wide enough to view the largest string in each column. The maximum column width for a single Excel column is 255 characters when formatted with a fixed-width font.
+> - Use the Style menu commands to format the worksheet to use a fixed-width font. For example, Courier is a fixed-width font.
 
 The following sample code can be modified to export data delimited with characters other than a space. You must select the range of data to be exported before running this sample macro.
 

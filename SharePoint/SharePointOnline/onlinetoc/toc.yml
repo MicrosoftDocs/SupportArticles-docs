@@ -367,6 +367,8 @@
       href: ../Workflows/copied-workflow-linked-to-source-workflow.md
     - name: Daily email limit has exceeded or unable to send to a recipient
       href: ../Workflows/configured-workflow-fails-running.md
+    - name: Nintex workflow on SharePoint Online fails to start
+      href: ../Workflows/nintex-workflow-fails-to-start.md
     - name: Items revert to the "Pending" status
       href: ../Workflows/item-pending-status.md
     - name: Outlook doesn't respond when approving an online approval workflow

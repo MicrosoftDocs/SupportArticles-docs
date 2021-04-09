@@ -47,8 +47,8 @@ The steady state is reached when one of the following is true:
 Any of the following command line arguments enable the new functionality. Other command line arguments are covered in the **Command-line arguments** table.
 
 - -force
-- -silent ​
-- -rescan ​
+- -silent
+- -rescan
 - -no repair
 
 If these command line arguments are not used, the legacy code of the tool is used, and the tool behaves as it does in earlier versions. Therefore, you have to run Scanpst.exe at a command prompt to benefit from the new functionality to automatically rescan.
@@ -66,13 +66,13 @@ Earlier versions of the Scanpst tool run only eight phases. When you use the *
 
 ### Command line arguments
 
-|Argument| Meaning|Notes| Default|
+|Argument|Meaning|Notes|Default|
 |---|---|---|---|
-|-log| Create a log | Must be followed by one of the following:<br/><br/>append|replace| none | replace|
-|-backupfile| A backup file will be created| Must be followed by the desired backup file name​.||
-|-rescan| Maximum number of scan or repair iterations before reaching steady state| 0-20; any integer greater than 20 defaults to 20.|10 ​|
-|-no repair​| Run the scan without repairing ​ |​|Scan and repair|
-|-force| Do not require the user to select any UI options before running or closing the scan or repair​| UI is displayed without user interaction, also known as Immediate mode​.| Normal mode​|
-|-silent​|Do not show any UI​| User must monitor the process to know when it ends. For example, by looking at the .log file (if any), the creation of the .bak file (if backup option is being used), or checking for Scanpst.exe in Task Manager​.|Normal mode​|
-|-file ​|File to be scanned​|Path to `.pst` or `.ost` file​||
+|-log| Create a log | Must be followed by one of the following:<br/><br/>append, replace, none | replace|
+|-backupfile| A backup file will be created| Must be followed by the desired backup file name.||
+|-rescan| Maximum number of scan or repair iterations before reaching steady state| 0-20; any integer greater than 20 defaults to 20.|10|
+|-no repair| Run the scan without repairing ||Scan and repair|
+|-force| Do not require the user to select any UI options before running or closing the scan or repair| UI is displayed without user interaction, also known as Immediate mode.| Normal mode|
+|-silent|Do not show any UI| User must monitor the process to know when it ends. For example, by looking at the .log file (if any), the creation of the .bak file (if backup option is being used), or checking for Scanpst.exe in Task Manager.|Normal mode|
+|-file|File to be scanned|Path to `.pst` or `.ost` file||
 |||||

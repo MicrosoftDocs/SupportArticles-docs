@@ -63,7 +63,7 @@ Depending on whether the server is designed as SingleUse or MultiUse, another se
 
 The following table serves as a helpful reference when implementing a solution with Microsoft Office. It lists behaviors and attributes of the various versions and applications of Microsoft Office, such as whether the server defaults to being visible when launched, if it is SingleUse or MultiUse, if it has a UserControl property, if it has a Quit method, and the class name for its main window.
 
-|Application(s)|Visible|Instancing|Has UserControl|Has QuitClassName|
+|Application(s)|Visible|Instancing|Has UserControl|Has QuitClassName|Class name|
 |---|---|---|---|---|----|
 |Excel 97, 2000, 2002, 2003, 2007|No|SingleUse|Yes|Yes|XlMain|
 |Word 97, 2000, 2002, 2003, 2007|No|SingleUse|Yes|Yes|OpusApp|
