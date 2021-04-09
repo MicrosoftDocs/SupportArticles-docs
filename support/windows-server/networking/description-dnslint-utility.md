@@ -112,7 +112,7 @@ Use `/t` to request output to a text file.
 - The text file shares the same name as the .htm report, but it has a .txt file name extension.
 - The text file created in the same directory as the .htm report file.
 
-Use `/test_tcp` to request that TCP port 53 be tested.
+Use `/test_tcp` to request to test TCP port 53.
 
 - By default, only UDP port 53 is tested.
 - The `/test_tcp` option checks whether TCP port 53 is responding to queries.
@@ -163,7 +163,7 @@ The `/no_open` switch prevents DNSLint from automatically opening the report aft
 
 For example, the command `dnslint /y /d msn.com /no_open` generates a report called Dnslint.htm that overwrites a pre-existing report with the same name, without prompting the user. DNSLint doesn't automatically open the report when it's completed.
 
-Use the `/test_tcp` (test TCP port 53) option to request that TCP port 53 be tested when `/d` is used. Many DNS servers on the Internet today don't accept DNS queries on TCP port 53, to avoid possible attacks on that port. By default, only UDP port 53 is tested when DNSLint is run. Specifying the `/test_tcp` option will get DNSLint to send a single DNS query by TCP and report whether a response was received.
+Use the `/test_tcp` (test TCP port 53) option to request to test TCP port 53 when `/d` is used. Many DNS servers on the Internet today don't accept DNS queries on TCP port 53, to avoid possible attacks on that port. By default, only UDP port 53 is tested when DNSLint is run. Specifying the `/test_tcp` option will get DNSLint to send a single DNS query by TCP and report whether a response was received.
 
 You can use the `/test_tcp` option with `/d` and `/ad`. However, you can't use the `/test_tcp` option with `/ql` or the `/ad` `/s` localhost combination. With the `/ql` function, TCP port 53 can be tested directly from the input file. The `/ad /s localhost` function tests whether the locally configured DNS servers can resolve DNS records used for Active Directory Forest replication. You can test TCP port 53 connectivity by using `/ad` `/s` **ip_addr** instead, where **ip_addr** is the IP address of a DNS server that is authoritative for the _msdcs zone in the root of the Active Directory domain.
 
