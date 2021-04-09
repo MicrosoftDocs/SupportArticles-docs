@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how to restrict the use of certain cryptographic algorithms and protocols in the Schannel.dll file. This information also applies to independent software vendor (ISV) applications that are written for the Microsoft Cryptographic API (CAPI).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 245030
 
 > [!NOTE]

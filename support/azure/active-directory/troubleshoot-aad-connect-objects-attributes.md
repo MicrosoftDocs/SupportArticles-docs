@@ -571,11 +571,3 @@ Fortunately, the issues that affect these components usually generate an error i
 
       :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/userprinciplename.png" alt-text="Troubleshoot UserPrincipalName or ProxyAddress.":::
 
-### Resources
-
-- Get-AzureADUser `-ObjectId <UserPrincipalName>` | Out-File
-- [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html)
-- [Get-AzureADUserThumbnailPhoto](/powershell/module/azuread/get-azureaduserthumbnailphoto)
-- LDIFDE
-- Get-ADUser `-Identity <username>` | Out-File
-- AADConnector PowerShell Module (Decode AAD DN)

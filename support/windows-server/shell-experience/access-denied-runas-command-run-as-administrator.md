@@ -63,7 +63,7 @@ To do this, follow these steps:
 3. At the command prompt, type the following command, and then press ENTER:
 
     ```console
-    sc sdset seclogon d:(a;;cclcswrpwpdtlocrrc;;;sy)(a;;ccdclcswrpwpdtlocrsdrcwdwo;;;ba)(a;;cclcswrpdtlocrrc;;;iu)(a;;cclcswdtlocrrc;;;su)(a;;cclcswrpdtlocrrc;;;au)s:(au;fa;ccdclcswrpwpdtlocrsdrcwdwo;;;wd)  
+    sc sdset seclogon D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPDTLOCRRC;;;IU)(A;;CCLCSWDTLOCRRC;;;SU)(A;;CCLCSWRPDTLOCRRC;;;AU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)
     ```
 
     > [!NOTE]

@@ -48,17 +48,19 @@ Other available parameters
 
 The Help output for this command shows other parameters that you can use:
 
-> C:\\WINDOWS\\system32>netsh winhttp set proxy ?  
-Usage: set proxy [proxy-server=]\<server name> [bypass-list=]\<hosts list>  
+```console
+C:\WINDOWS\system32>netsh winhttp set proxy ?  
+Usage: set proxy [proxy-server=]<server name> [bypass-list=]<hosts list>  
 Parameters:  
 Tag Value  
 proxy-server - proxy server for use for http and/or https protocol  
 bypass-list - a list of sites that should be visited bypassing the  
-proxy (use "\<local>" to bypass all short name hosts)  
+proxy (use "<local>" to bypass all short name hosts)  
 Examples:  
 set proxy myproxy  
-set proxy myproxy:80 "\<local>;bar"  
-set proxy proxy-server="http=myproxy;https=sproxy:88" bypass-list="\*.foo.com"  
+set proxy myproxy:80 "<local>;bar"  
+set proxy proxy-server="http=myproxy;https=sproxy:88" bypass-list="*.foo.com"  
+```
 
 ### Import the settings through Control Panel
 

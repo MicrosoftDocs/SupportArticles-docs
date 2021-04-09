@@ -184,7 +184,8 @@ You can verify the group membership information by opening a Command Prompt wind
 > You can use the following Windows PowerShell script to automate the lock and unlock steps of this procedure. In this process, the user has to sign in to Windows, and then has to sign out of Windows after the script runs.
 >  
 > ```powershell
-> $fullname = $env:userdnsdomain + "\" + "$env:username" > $MyCred = Get-Credential -Username $fullname -Message "Update Logon Credentials"
+> $fullname = $env:userdnsdomain + "\" + "$env:username" 
+> $MyCred = Get-Credential -Username $fullname -Message "Update Logon Credentials"
 > Start-Process C:\Windows\System32\cmd.exe -ArgumentList ("/C", "exit 0") -Credential $MyCred -WindowStyle Hidden -PassThru -Wait
 > ```
 
