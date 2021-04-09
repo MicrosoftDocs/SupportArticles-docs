@@ -61,39 +61,31 @@ The **A network-related or instance-specific error occurred while establishing a
 
 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections.
 
-    ```console
-    provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified
-    ```
+  > provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified
 
 - SQL Server Native Client Data Link Error
 
-    ```console
-    [Microsoft SQL Server Native Client 10.0]: Login timeout expired
-    [Microsoft SQL Server Native Client 10.0]: A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online.
+  > [Microsoft SQL Server Native Client 10.0]: Login timeout expired  
+    [Microsoft SQL Server Native Client 10.0]: A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online.  
     [Microsoft SQL Server Native Client 10.0]: SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF].
-    ```
 
 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections.
 
-    ```console
-    provider: TCP Provider, error: 0
-    A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+  > provider: TCP Provider, error: 0  
+    A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.  
     Microsoft SQL Server, Error: 10060
-    ```
 
 - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections.
 
-    ```console
-    provider: Named Pipes Provider, error:40 - Could not open a connection to SQL Server
-    Microsoft SQL Server, Error:53
+  > provider: Named Pipes Provider, error:40 - Could not open a connection to SQL Server  
+    Microsoft SQL Server, Error:53  
     The network path was not found
-    ```
 
-- ```console
-    [Microsoft][SQL Server Native Client 11.0]TCP Provider: No connection could be made because the target machine actively refused it.
-    [Microsoft][SQL Server Native Client 11.0]Login timeout expired
+-
+    > [Microsoft][SQL Server Native Client 11.0]TCP Provider: No connection could be made because the target machine actively refused it.  
+    [Microsoft][SQL Server Native Client 11.0]Login timeout expired  
     [Microsoft][SQL Server Native Client 11.0]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online.
-  ```
+
 
 You can start troubleshooting from this section: [Common causes of various connection issues](#common-causes-of-various-connection-issues).
 
@@ -315,11 +307,9 @@ For more information about the no connection error, move to [The full error mess
 
 You may get an error that is similar to the following:
 
-```console
-[Microsoft][SQL Server Native Client 11.0]TCP Provider: No connection could be made because the target machine actively refused it.
-[Microsoft][SQL Server Native Client 11.0]Login timeout expired.
+> [Microsoft][SQL Server Native Client 11.0]TCP Provider: No connection could be made because the target machine actively refused it.  
+[Microsoft][SQL Server Native Client 11.0]Login timeout expired.  
 [Microsoft][SQL Server Native Client 11.0]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online.
-```
 
 You can start troubleshooting from this section: [Common causes of various connection issues](#common-causes-of-various-connection-issues).
 
@@ -386,7 +376,7 @@ Kerberos authentication failures can happen due to a variety of reasons. The maj
 
             The content of the generateSPNs, will be similar to the following:
 
-            ```console
+            ```output
             :: This script is generated by the Microsoft(c) SQL Server(c) Kerberos Configuration Manager tool.
             :: The script may update the system information, SPN settings and Delegation configurations of a given server.
             :: SPN and Delegation configuration updates require Windows Domain Administrator permission to execute.
@@ -461,7 +451,7 @@ To diagnose and resolve these SPN issues, move to [Troubleshooting authenticatio
 
 For example, you may see an error that is similar to the following:
 
-```console
+```output
 Source: NETLOGON
 Date: 8/12/2012 8:22:16 PM
 Event ID: 5719
@@ -503,29 +493,21 @@ If this does not resolve your issue, move to [Still having problems](#still-havi
 
 The Timeout expired error represents one or more of the following error messages:
 
- ```console
-    Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
-  ```
+> Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
 
- ```console
-    System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.
-    The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment.
-    This could be because the pre-login handshake failed or the server was unable to respond back in time.
-    The duration spent while attempting to connect to this server was [Pre-Login] initialization=23; handshake=14979; ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.
-  ```
+> System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  
+The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment.  
+This could be because the pre-login handshake failed or the server was unable to respond back in time.  
+The duration spent while attempting to connect to this server was [Pre-Login] initialization=23; handshake=14979; ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.
 
- ```console
-    System.Data.SqlClient.SqlException (0x80131904): Timeout expired.
-    The timeout period elapsed prior to completion of the operation or the server is not responding.
-    System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.
-  ```
+> System.Data.SqlClient.SqlException (0x80131904): Timeout expired.  
+The timeout period elapsed prior to completion of the operation or the server is not responding.  
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.
 
- ```console
-    Connection Timeout Expired.
-    The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment.
-    This could be because the pre-login handshake failed or the server was unable to respond back in time.
-    The duration spent while attempting to connect to this server was [Pre-Login] initialization=21036; handshake=0; (Microsoft SQL Server, Error: -2).
-  ```
+> Connection Timeout Expired.  
+The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment.  
+This could be because the pre-login handshake failed or the server was unable to respond back in time.  
+The duration spent while attempting to connect to this server was [Pre-Login] initialization=21036; handshake=0; (Microsoft SQL Server, Error: -2).
 
 > [!NOTE]
 > The second and third error messages occurs when .Net Framework 4.5 or higher is installed.
@@ -544,41 +526,41 @@ A timeout is when something takes longer than it is allowed. We are basically ab
 
 - A connection timeout call stack looks similar to this:
 
-    ```console
+    ```output
     System.Data.SqlClient.SqlException: Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
-     at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-     at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
-     at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
-     at System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
-     at System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
-     at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt,Boolean trustServerCert, Boolean& marsCapable)
-     at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnectionowningObject)
-     at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfoserverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
-     at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
-     at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
-     at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
-     at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
-     at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)  
+    at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+    at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+    at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+    at System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
+    at System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
+    at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt,Boolean trustServerCert, Boolean& marsCapable)
+    at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnectionowningObject)
+    at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfoserverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+    at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+    at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+    at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+    at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+    at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)  
     at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject) at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
-     at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
-     at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
-     at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
-     at System.Data.SqlClient.SqlConnection.Open() <-- SqlConnection along with Open tells us that we are trying to open a connection. So, this is not related to a query.  
+    at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+    at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+    at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+    at System.Data.SqlClient.SqlConnection.Open() <-- SqlConnection along with Open tells us that we are trying to open a connection. So, this is not related to a query.  
     ```
 
 - A command timeout in .NET 2.0 Framework looks similar to this:
 
-    ```console
+    ```output
     System.Data.SqlClient.SqlException: Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
-     at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-     at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
-     at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-     at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
-     at System.Data.SqlClient.SqlDataReader.get_MetaData()
-     at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString) at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-     at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-     at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
-     at System.Data.SqlClient.SqlCommand.ExecuteScalar() <-- SqlCommand is used to work with a query, not a connection. ExecuteScalar is used to actually execute a query. You could also see other items like an ExecuteReader or ExecuteNonQuery for example.
+    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+    at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+    at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+    at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+    at System.Data.SqlClient.SqlDataReader.get_MetaData()
+    at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString) at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+    at System.Data.SqlClient.SqlCommand.ExecuteScalar() <-- SqlCommand is used to work with a query, not a connection. ExecuteScalar is used to actually execute a query. You could also see other items like an ExecuteReader or ExecuteNonQuery for example.
     ```
 
 **Resolution steps**:

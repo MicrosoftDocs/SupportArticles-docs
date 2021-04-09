@@ -30,11 +30,15 @@ Additionally when this problem occurs, Event ID 4 and Event ID 1097 are logged i
 
 - Event ID 4
 
-    > The Kerberos client received a KRB_AP_ERR_MODIFIED error from the server server_name$. The target name used was server_name$. This indicates that the target server failed to decrypt the ticket provided by the client. This can occur when the target server principal name (SPN) is registered on an account other than the account the target service is using. Please ensure that the target SPN is registered on, and only registered on, the account used by the server. This error can also happen when the target service is using a different password for the target service account than what the Kerberos Key Distribution Center (KDC) has for the target service account. Please ensure that the service on the server and the KDC are both updated to use the current password. If the server name is not fully qualified, and the target domain (DNS_prefix.dns_suffix) is different from the client domain (DNS_prefix.dns_suffix), check if there are identically named server accounts in these two domains, or use the fully-qualified name to identify the server.
+  ```output
+  The Kerberos client received a KRB_AP_ERR_MODIFIED error from the server server_name$. The target name used was server_name$. This indicates that the target server failed to decrypt the ticket provided by the client. This can occur when the target server principal name (SPN) is registered on an account other than the account the target service is using. Please ensure that the target SPN is registered on, and only registered on, the account used by the server. This error can also happen when the target service is using a different password for the target service account than what the Kerberos Key Distribution Center (KDC) has for the target service account. Please ensure that the service on the server and the KDC are both updated to use the current password. If the server name is not fully qualified, and the target domain (DNS_prefix.dns_suffix) is different from the client domain (DNS_prefix.dns_suffix), check if there are identically named server accounts in these two domains, or use the fully-qualified name to identify the server.
+  ```
 
 - Event ID 1097
 
-    > The processing of Group Policy failed. Windows could not determine the computer account to enforce Group Policy settings. This may be transient. Group Policy settings, including computer configuration, will not be enforced for this computer.
+  ```output
+  The processing of Group Policy failed. Windows could not determine the computer account to enforce Group Policy settings. This may be transient. Group Policy settings, including computer configuration, will not be enforced for this computer.
+  ```
 
 ## Cause
 
