@@ -24,7 +24,8 @@ _Original KB number:_ &nbsp; 2545227
 
 After you install Windows 7 Service Pack 1 (SP1) or Windows Server 2008 R2 SP1 using integrated media, the following WMI error is logged in the application log after every reboot:
 
-> Log Name - Application  
+```output
+Log Name - Application  
 Source - WMI  
 EventID - 10  
 Level - Error  
@@ -33,6 +34,7 @@ OpCode - Info
 Task Cat - None  
 Keywords - Classic  
 Details - Event filter with query "SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_Processor" AND TargetInstance.LoadPercentage > 99" could not be reactivated in namespace "//./root/CIMV2" because of error 0x80041003. Events cannot be delivered through this filter until the problem is corrected.
+```
 
 ## Cause
 

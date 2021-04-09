@@ -30,11 +30,13 @@ GPRESULT /V > GPRESULT.TXT
 
 Open the text file in Notepad and find the name of your WSUS policy. For example, if your WSUS policy is named **WSUS**, you can find it in the GPRESULT.TXT file within the **Computer Settings** section under the **Applied Group Policy Objects** heading. Below is an example:
 
-> Applied Group Policy Objects  
-> \-----------------------------  
-> Default Domain Policy  
-> WSUS  
-> Local Group Policy
+```output
+Applied Group Policy Objects  
+-----------------------------  
+Default Domain Policy  
+WSUS  
+Local Group Policy
+```
 
 If the WSUS settings aren't present, possible causes include:
 
@@ -61,7 +63,9 @@ The BITS service must run under the **LocalSystem** account by default. To confi
 
     A space must occur between **obj=** and **LocalSystem**. If successful, you should receive the following output:
 
-    > [SC] ChangeServiceConfig SUCCESS
+    ```output
+    [SC] ChangeServiceConfig SUCCESS
+    ```
 
 2. Stop and restart BITS.
 
@@ -73,15 +77,19 @@ sc query bits
 
 If BITS is running, you should see the following output:
 
-> SERVICE_NAME: bits  
-> TYPE: 20 WIN32_SHARE_PROCESS  
-> STATE: 4 RUNNING
+```output
+SERVICE_NAME: bits  
+TYPE: 20 WIN32_SHARE_PROCESS  
+STATE: 4 RUNNING
+```
 
 If BITS isn't running, you'll see the following output:
 
-> SERVICE_NAME: bits  
-> TYPE: 20 WIN32_SHARE_PROCESS  
-> STATE: 1 STOPPED
+```output
+SERVICE_NAME: bits  
+TYPE: 20 WIN32_SHARE_PROCESS  
+STATE: 1 STOPPED
+```
 
 Usually it's possible to resolve BITS issues by stopping the service and restarting it. To stop and restart the BITS service, run the following commands from a Command Prompt:
 
@@ -161,15 +169,19 @@ sc query wuauserv
 
 If WUAUSERV is running, you should see the following output:
 
-> SERVICE_NAME: wuauserv  
-> TYPE: 20 WIN32_SHARE_PROCESS  
-> STATE: 4 RUNNING
+```output
+SERVICE_NAME: wuauserv  
+TYPE: 20 WIN32_SHARE_PROCESS  
+STATE: 4 RUNNING
+```
 
 If WUAUSERV isn't running, you see the following output:
 
-> SERVICE_NAME: wuauserv  
-> TYPE: 20 WIN32_SHARE_PROCESS  
-> STATE: 1 STOPPED
+```output
+SERVICE_NAME: wuauserv  
+TYPE: 20 WIN32_SHARE_PROCESS  
+STATE: 1 STOPPED
+```
 
 Verify that you can start the WUAUSERV service successfully. You must be logged on as a local administrator to stop and restart WUAUSERV.
 

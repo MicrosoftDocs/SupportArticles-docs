@@ -146,30 +146,32 @@ True window size = 524280
 
 The following Network Monitor trace shows how the window scale option is used:
 
-> TCP: ....S., len:0, seq:725163-725163, ack:0, win:65535, src:1217 dst:139(NBT Session)  
+```output
+TCP: ....S., len:0, seq:725163-725163, ack:0, win:65535, src:1217 dst:139(NBT Session)  
 TCP: Source Port = 0x04C1  
 TCP: Destination Port = NETBIOS Session Service  
 TCP: Sequence Number = 725163 (0xB10AB)  
 TCP: Acknowledgement Number = 0 (0x0)  
 TCP: Data Offset = 44 (0x2C)  
 TCP: Reserved = 0 (0x0000)  
-\+ TCP: Flags = 0x02 : ....S.  
- TCP: Window = 65535 (0xFFFF)  
++ TCP: Flags = 0x02 : ....S.  
+TCP: Window = 65535 (0xFFFF)  
 TCP: Checksum = 0x8565  
 TCP: Urgent Pointer = 0 (0x0)  
 TCP: Options  
-\+ TCP: Maximum Segment Size Option  
++ TCP: Maximum Segment Size Option  
 TCP: Option Nop = 1 (0x1)  
- TCP: Window Scale Option  
+TCP: Window Scale Option  
 TCP: Option Type = Window Scale  
 TCP: Option Length = 3 (0x3)  
 TCP: Window Scale = 3 (0x3)  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
-\+ TCP: Timestamps Option  
++ TCP: Timestamps Option  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
-\+ TCP: SACK Permitted Option  
++ TCP: SACK Permitted Option  
+```
 
 It's important to note that the window size used in the actual three-way handshake is NOT the window size that is scaled. This is per RFC 1323 section 2.2, "The Window field in a SYN (for example, a [SYN] or [SYN,ACK]) segment itself is never scaled."
 
@@ -238,11 +240,14 @@ TCP Timestamps Option (TSopt):
 |||||
 
 The timestamp option field can be viewed in a Network Monitor trace by expanding the TCP options field, as shown below:  
-> TCP: Timestamps Option  
+
+```output
+TCP: Timestamps Option  
 TCP: Option Type = Timestamps  
 TCP: Option Length = 10 (0xA)  
 TCP: Timestamp = 2525186 (0x268802)  
-TCP: Reply Timestamp = 1823192 (0x1BD1D8)  
+TCP: Reply Timestamp = 1823192 (0x1BD1D8)
+```
 
 ### Protection against Wrapped Sequence Numbers (PAWS)
 
@@ -289,28 +294,30 @@ The SackOpts value in the following registry key can be edited to control the us
 
 The following Network Monitor trace illustrates a host acknowledging all data up to sequence number 54857341, plus the data from sequence number 54858789-54861685. The missing data is from 54857341 to 54858788.
 
-> TCP: .A...., len:0, seq:925104-925104, ack:54857341, win:32722, src:1242 dst:139  
+```output
+TCP: .A...., len:0, seq:925104-925104, ack:54857341, win:32722, src:1242 dst:139  
 TCP: Source Port = 0x04DA  
 TCP: Destination Port = NETBIOS Session Service  
 TCP: Sequence Number = 925104 (0xE1DB0)  
- TCP: Acknowledgement Number = 54857341 (0x3450E7D)  
+TCP: Acknowledgement Number = 54857341 (0x3450E7D)  
 TCP: Data Offset = 44 (0x2C)  
 TCP: Reserved = 0 (0x0000)  
-\+ TCP: Flags = 0x10 : .A....  
++ TCP: Flags = 0x10 : .A....  
 TCP: Window = 32722 (0x7FD2)  
 TCP: Checksum = 0x4A72  
 TCP: Urgent Pointer = 0 (0x0)  
 TCP: Options  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
-\+ TCP: Timestamps Option  
++ TCP: Timestamps Option  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
 TCP: SACK Option  
 TCP: Option Type = 0x05  
 TCP: Option Length = 10 (0xA)  
- TCP: Left Edge of Block = 54858789 (0x3451425)  
- TCP: Right Edge of Block = 54861685 (0x3451F75)  
+TCP: Left Edge of Block = 54858789 (0x3451425)  
+TCP: Right Edge of Block = 54861685 (0x3451F75)
+```
 
 ### TCP retransmission behavior and fast retransmit
 
