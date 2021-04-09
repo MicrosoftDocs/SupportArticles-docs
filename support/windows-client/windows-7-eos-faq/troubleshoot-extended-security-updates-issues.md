@@ -544,7 +544,9 @@ When you install ESU on a device that runs a Windows Embedded operating system, 
 
 You have a device with a Windows product key that falls within the range of keys defined for embedded editions of Windows. When you install an ESU update, some of the updates don't install. And the CBS log contains entries similar to the following example:
 
-> ESU: NO ESU KEY FOUND  
+```output
+ESU: NO ESU KEY FOUND
+```
 
 For example, you see the following log entries.  
 
@@ -562,8 +564,10 @@ Install a valid Windows Embedded ESU key on the computer, and then try to instal
 
 You have a device that has a Windows product key that falls within the range of keys that has been defined for embedded editions of Windows. When you install an ESU update, some of the updates don't install, and the CBS log contains entries similar to the following example:
 
-> ESU: Windows is not activated.  
+```output
+ESU: Windows is not activated.  
 ESU: not eligible:HRESULT_FROM_WIN32(1633)  
+```
 
 For example, you see the following log entries.  
 
@@ -581,8 +585,10 @@ Activate the Windows product key or the ESU product key (or both) and try to ins
 
 You have a device with a Windows product key that doesn't fall within the range of keys defined for embedded editions of Windows. When you install an ESU update, some of the updates don't install and the CBS log contains entries similar to the following example:
 
-> ESU: Windows is not activated.  
+```output
+ESU: Windows is not activated.  
 ESU: not eligible:HRESULT_FROM_WIN32(1633)  
+```
 
 For example, you see the following log entries.
 
