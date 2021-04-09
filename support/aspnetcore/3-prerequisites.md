@@ -7,7 +7,7 @@ ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
 
-**Prerequisites**
+# Prerequisites
 
 As in the [previous parts](2-1-create-configure-aspnet-core-applications.md), this part is structured to put more emphasis on the theory and principals to follow when you start to troubleshoot. It does not have any prerequisites. However, you should have following items already set up if you followed all the steps of this training so far:
 
