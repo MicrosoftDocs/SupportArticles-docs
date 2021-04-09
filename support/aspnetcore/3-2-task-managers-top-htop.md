@@ -1,6 +1,6 @@
 ---
 title: Use top, htop command to monitor processes
-description: This article describes how to use top, htop command-line utilities to monitor processes.
+description: This article describes how to use top and htop command line tools to monitor processes.
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
@@ -8,99 +8,99 @@ ms.reviewer: ramakoni
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
-This article introduces how to use `top`, `htop` command-line utilities to monitor processes.
+This article introduces how to use `top` and `htop` command line tools to monitor processes.
 
 [!INCLUDE [Prerequisites](prerequisites.md)]
 
 ## Goal of this part
 
-When troubleshooting a performance problem, you may need to monitor the CPU and memory usage of a process to understand how its resource consumption evolves over time. The "task manager" in Windows can be used for such a purpose and there are several tools in Linux, which aim at achieving the same thing.
+When you troubleshoot a performance problem, you might have to monitor the CPU and memory usage of a process to understand how its resource consumption evolves over time. In Windows, you can use Task Manager to do this. Linux has several tools that aim to achieve the same thing.
 
-This part will examine the `top` and `htop` command-line utilities to monitor processes.
+This part will examine the `top` and `htop` command line tools to monitor processes.
 
 ## top
 
-You can run the `top` command to open the "task manager" equivalent in Linux:
+To open the Task Manager equivalent in Linux, run the `top` command.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/top.png" alt-text="BuggyAmb top" border="true":::
 
-In the example above, inspecting the first listed process with PID 19933, you can observe that the process is exhibiting a high CPU usage and the memory usage is also high.
+In this example, you can observe in the first listed process for PID 19933 that the process exhibits high CPU usage, and memory usage is also high.
 
-### Selecting / deselecting columns
+### Selecting and deselecting columns
 
-To add or remove columns to the view that the `top` utility provides you can hit **f** key while running the tool. The columns marked with * are the ones selected for display. Use the arrow keys to move through the available columns and use the **space** bar to select or deselect the columns and then hit **esc** to exit:
+To add or remove columns in the view that the `top` tool provides, press the F key while you run the tool. The columns that are marked by an asterisk (*) are the ones that are selected for display. Use the arrow keys to move through the available columns, and use the Spacebar to select or deselect the columns. Then, press Esc to exit.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/columns.png" alt-text="BuggyAmb columns" border="true":::
 
-The changes will be saved for your user account and the next time you run `top`, you will see the columns you have selected.
+The changes will be saved for your user account. The next time that you run `top`, you will see the columns that you selected.
 
 ### Filtering the output by users
 
-To be able to target problematic resource consumption scenarios, it is important to know how to filter the `top` output. One of the most common ways is to filter processes by username. You can hit **u** and type the username. The below screenshot shows the `top` tool filtering through the available processes' snapshots for the www-data user:
+To be able to target problematic resource consumption scenarios, it's important to know how to filter the `top` output. One of the most common methods to do this is to filter processes by username. You can press U, and then type the username. The following screenshot shows the `top` tool filtering the available process snapshots for the www-data user.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/users.png" alt-text="BuggyAmb users" border="true":::
 
-When you hit **enter**, you will see the processes that are run by the given user, the www-data user in the above sample:
+When you press Enter, you will see the processes that are run by the given user (the www-data user in this example).
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/user.png" alt-text="BuggyAmb user" border="true":::
 
-When inspecting the output of the filtered `top` view, two of the processes are dotnet processes - those are the processes running the two ASP.NET Core applications, while the other two processes belong to Nginx.
+When you inspecting the output of the filtered `top` view, you can see that two of the processes are .NET processes. These are the processes that run the two ASP.NET Core applications, while the other two processes belong to Nginx.
 
-You can use filters when running `top` command directly. For example, if you run the `top -u www-data` command then it will yield the same output as with opening the `top` tool and hitting **u** to filter by user.
+You can use filters when you run `top` command directly. For example, if you run the `top -u www-data` command, it will yield the same output as you would get if you were to open the `top` tool and press U to filter by user.
 
 ### Removing idle processes
 
-Hitting **i** key or running the `top -i` command will filter the `top` output to only show the processes that are consuming CPU. The following shows the output of `top -i -u www-data` command. The below screenshot shows that the `top` output hides the idle processes although there are four processes, which were started using the www-data user account. Only the process with PID=19933 consumes CPU in the following screenshot:
+Press I or run the `top -i` command to filter the `top` output to show only the processes that are consuming CPU. The following screenshot shows the output of `top -i -u www-data` command. Notice that the `top` output hides the idle processes even though there are four processes that were started by using the www-data user account. Only the process that has PID=19933 consumes CPU.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/remove.png" alt-text="BuggyAmb remove" border="true":::
 
-Hitting **i** key again will toggle the switch and show the idle processes as well.
+Press I again to toggle the switch and show the idle processes, too.
 
 ### Killing processes
 
-To kill / terminate a process, you need to send a kill signal to the process. You may remember that we used the `sudo kill -9 <PID>` command before to kill a process. You can also kill processes using `top`. Hit **k** to kill a process when `top` is running and then we type the PID of the process that you wish to kill:
+To kill or terminate a process, you have to send a kill signal to the process. You might recall that we used the `sudo kill -9 <PID>` command earlier to kill a process. You can also kill processes by using `top`. Press K to kill a process while `top` is running, and then type the PID of the process that you want to kill.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/kill1.png" alt-text="BuggyAmb kill1" border="true":::
 
-After you hit **enter**, `top` asks for the signal type. Hit **enter** once again to send the terminate signal (`15/sigterm`):
+After you press Enter, `top` asks for the signal type. Press Enter one more time to send the terminate signal (`15/sigterm`).
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/kill2.png" alt-text="BuggyAmb kill2" border="true":::
 
-After a few seconds you will see that the process with PID 122632 has disappeared from the listing. Remember that in the listings above, the process 122632 was the process corresponding to the BuggyAmb ASP.NET Core Application and since it was configured to start automatically you will see a new dotnet process with a new PID starting up following the shutdown.
+After a few seconds, you will see that the process for PID 122632 is missing from the listing. Remember that in the listings, the "122632" process corresponds to the BuggyAmb ASP.NET Core application. Because it was configured to start automatically, you will see that a new .NET process that has a new PID starts after the shutdown.
 
 ## htop
 
-[htop](https://htop.dev/) is a process viewer and a text mode application for system monitoring in real-time like top. htop displays a complete list of the processes that are running and is easy to use.
+[Htop](https://htop.dev/) is a process viewer and a text mode application for system monitoring in real-time, similar to `top`. It's easy to use, and it displays a complete list of the processes that are running.
 
-`htop` came as pre-installed in the distribution of Ubuntu Linux used to install the virtual server for this course. If `htop` is not installed in your Linux distro then you can use the package managers in Linux to install it (see previous section 1.3 for details)
+The `htop` tool is pre-installed in the distribution of Ubuntu Linux that is used to install the virtual server for this course. If `htop` is not installed in your Linux distro, you can use the package managers in Linux to install it. (See Part 1.3 for details.)
 
-Simply run `htop` command to start it. You will see a colorful output like the below:
+To start the tool, simply run the `htop` command. You will see a colorful output that resembles the following.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/htop.png" alt-text="BuggyAmb htop" border="true":::
 
 > [!NOTE]
-> The bottom line which indicates that you can make use of function keys. Press the **F6** key to sort by different options and use the arrow keys to select the `PERCENT_MEM` column and hit **enter**. This will result in having the processes sorted by memory usage:
+> The bottom line indicates the function keys that you can use. Press F6 key to sort by different options, use the arrow keys to select the `PERCENT_MEM` column, and then press Enter. This sorts the processes by memory usage.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/mem.png" alt-text="BuggyAmb mem" border="true":::
 
-As with the `top` command, you can use keyboard shortcuts for several functions. Hit **u** and choose the username from list:
+As with the `top` command, you can use keyboard shortcuts for several functions. For example, press U to select the username from a list.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/username.png" alt-text="BuggyAmb username" border="true":::
 
-However, there is something confusing in the `htop` output. Based on the output of the last examples, you should be expecting four processes for www-data user, but we see that there are many more entries. What could be causing this?
+However, there is something confusing in the `htop` output. Based on the output of the last examples, you should expect to see four processes for www-data user. However, we see that there are many more entries. What could be causing this?
 
-The difference in output is because `htop` shows both processes and their threads by default. Unless we want to see the threads, it is recommended you always prefer disabling thread view because the output will be much clearer. To disable thread view and see just the processes, you can just hit **H** (not **h** but **shift + h**). The following is a screenshot just showing the processes but not threads:
+The difference in the output occurs because `htop` shows both processes and their threads by default. Unless you want to see the threads, we recommend that you always disable thread view to make the output clearer. To disable thread view and see only the processes, press Shift+H. The following screenshot shows the processes without threads.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/process.png" alt-text="BuggyAmb process" border="true":::
 
-Should you need to kill a process, select the process using the arrow keys and hit **F9** to send the terminate signal by hitting **enter**:
+If you have to kill a process, select the process by using the arrow keys, press F9, and then press Enter to send the "terminate" signal.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/terminate.png" alt-text="BuggyAmb terminate" border="true":::
 
-This succinct overview should allow you to understand what processes are running and consuming resources on your system. To exit `htop`, either hit **F10** or use **Ctrl-c** shortcut.
+This succinct overview should allow you to understand which processes are running and consuming resources on your system. To exit `htop`, press either F10 or Ctrl+C.
 
 ## Next steps
 
-[Part 3.3 - Debuggers, core dumps and collecting core dumps](3-3-debuggers-collect-core-dumps.md)
+[Part 3.3 - Debuggers, core dumps, and collecting core dumps](3-3-debuggers-collect-core-dumps.md)
 
-The next part of this chapter ("getting ready for troubleshooting") will discuss debuggers and dump files.
+The next part of this series ("Getting ready for troubleshooting") discusses debuggers and dump files.

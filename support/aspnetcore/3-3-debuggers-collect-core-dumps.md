@@ -1,228 +1,230 @@
 ---
-title: Debuggers, core dumps and collecting core dumps
-description: This article describes the debuggers, core dumps, and the tools to capture and analyze core dump files in Linux.
+title: Debuggers, core dumps, and collecting core dumps
+description: This article describes the debuggers, core dumps, and other tools to capture and analyze core dump files in Linux.
 ms.date: 03/25/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 3.3 - Debuggers, core dumps and collecting core dumps
+# Part 3.3 - Debuggers, core dumps, and collecting core dumps
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
-This article introduces the debuggers, core dumps, and the tools to capture and analyze core dump files in Linux.
+This article introduces debuggers and core dumps and the tools to capture and analyze core dump files in Linux.
 
 [!INCLUDE [Prerequisites](prerequisites.md)]
 
 ## Goal of this part
 
-This part is aimed at introducing you to the concept of core dumps, debuggers, and the tools to capture and analyze core dump files. Most of the techniques and tools described in this part will be used in the next troubleshooting labs.
+This part introduces the concept of core dumps and debuggers, and the tools that you can use to capture and analyze core dump files. Most of the techniques and tools that are described in this part will be used in the next troubleshooting labs.
 
 ## Core dump
 
-Just like a user mode memory dump in Windows, a [core dump](https://wikipedia.org/wiki/Core_dump) is a snapshot of the memory of a process. Core dumps are frequently needed for troubleshooting crash or performance problems in Linux.
+Just like a user-mode memory dump in Windows, a [core dump](https://wikipedia.org/wiki/Core_dump) is a snapshot of the memory of a process. Core dumps are frequently needed to troubleshoot performance problems in Linux.
 
-A core dump can be generated on-demand by a debugger (manual dump collection) or can be configured to be collected automatically after a process crash.
+A core dump can be generated on-demand by a debugger (manual dump collection) or can be configured to be collected automatically after a process failure.
 
-## What happens when a process crashes in Linux?
+## What happens when a process fails in Linux?
 
-Most Linux systems have core dumps enabled by default and systemd generates a core dump for any process when it is terminated unexpectedly. This is much like the way in which Windows Error Reporting (WER) in Windows generates dumps for processes that terminate abnormally.
+Most Linux systems have core dumps enabled by default. The system generates a core dump for any process that is terminated unexpectedly. This is similar to the manner in which Windows Error Reporting (WER) generates dumps for processes that terminate abnormally.
 
-Here are some key behaviors of a Linux system related to core dumps generation:
+Here are some key aspects of how a Linux system behaves related to core dump file generation:
 
-- By default, a core dump is generated when a process is terminated unexpectedly.
-- The Core dump file is named as core and is created in current the working directory or in *:::no-loc text="/var/lib/systemd/coredump":::* directory.
-- Although the default behavior is for the operating system to generate a core dump, this setting can be overwritten in *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the core dump into another application.
+- By default, a core dump file is generated when a process is terminated unexpectedly.
+- The Core dump file is named "core" and is created in the current working directory or in the *:::no-loc text="/var/lib/systemd/coredump":::* directory.
+- Although the default behavior is for the operating system to generate a core dump file, this setting can be overwritten in *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the core dump file into another application.
 
-These defaults along with some other settings such as the size limits can be configured using configuration files. The following resources go into greater depth of this subject:
+These defaults settings and some others, such as the size limits, can be set in configuration files. The following resources go into greater depth about this subject:
 
 - [Core dumps](https://wiki.archlinux.org/index.php/Core_dump)
 
 - [Ubuntu man page core - core dump file](https://manpages.ubuntu.com/manpages/precise/man5/core.5.html)
 
-## Apport - Ubuntu's way to manage core dumps
+## Apport: Ubuntu's way to manage core dumps
 
-In Ubuntu, there is [apport](https://wiki.ubuntu.com/Apport) which runs as a system service to manage core dump generation and even if the operating system's core dump generation is disabled, apport will still create coredump files.
+In Ubuntu, the [apport](https://wiki.ubuntu.com/Apport) system service manages core dump generation. Even if the operating system's core dump generation is disabled, apport will still create core dump files.
 
-According to the default documentation, apport uses *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the core dump into apport. If you run the `cat /proc/sys/kernel/core_pattern` command, when apport is running, you should see the following:
+Apport uses *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the core dump file into apport. If you run the `cat /proc/sys/kernel/core_pattern` command while apport is running, you should see the following result.
 
 :::image type="content" source="./media/3-3-debuggers-collect-core-dumps/core.png" alt-text="BuggyAmb core" border="true":::
 
-If you disable apport, this will not disable core dump generation on process termination, it will just stop apport and the system behave in line with the default behavior where core dumps are generated by system. If you run the same `cat /proc/sys/kernel/core_pattern` after apport is stopped, you will see the following, which is the default system behavior:
+If you disable apport, this does not prevent core dump generation upon process termination. Instead, it simply stops apport. The system will then revert to its default behavior by generating core dumps itself. If you run the same `cat /proc/sys/kernel/core_pattern` after apport is stopped, you will see the following default system behavior.
 
 :::image type="content" source="./media/3-3-debuggers-collect-core-dumps/cat.png" alt-text="BuggyAmb cat" border="true":::
 
 ## Disabling automatic core dump generation
 
-Even if you configure the operating system to stop generating core dump files, these will be generated by apport if it is running. To start, do the following two things:
+To disable automatic core dump file generation, do the following:
 
 1. Stop and disable apport.
-2. Disable system's behavior.
+2. Disable the system action.
 
-Apport can be stopped and disabled just like any other service. Use the `sudo systemctl stop apport` command and the `sudo systemctl disable apport` commands to stop and then disable this service to prevent it from being restarted:
+Apport can be stopped and disabled the same as any other service. Use the `sudo systemctl stop apport` command and the `sudo systemctl disable apport` command to stop the service, and then disable it to prevent it from being restarted.
 
 :::image type="content" source="./media/3-3-debuggers-collect-core-dumps/stop.png" alt-text="BuggyAmb stop" border="true":::
 
-To disable the operating system's automatic dump generation for all processes running under all user accounts on the machine you have to take the steps that are clearly outlined in several articles, [such as this one](https://wiki.archlinux.org/index.php/Core_dump), on the Internet.
+To disable the operating system's automatic dump file generation for all processes that are running under all user accounts on the computer, you have to take the steps that are provided in such articles [as this one](https://wiki.archlinux.org/index.php/Core_dump).
 
 ## Capturing core dump and debuggers
 
-There are several tools to capture a core dump such as [gcore](https://www.linux.org/docs/man1/gcore.html), gdb, and several tools to analyze a core dump, such as [objdump](https://wikipedia.org/wiki/Objdump), [kdump](https://wikipedia.org/wiki/Kdump_(Linux)), [gdb](https://www.geeksforgeeks.org/gdb-command-in-linux-with-examples/) and [lldb](https://wikipedia.org/wiki/LLDB_(debugger)).
+Several tools are available to capture a core dump file, such as [gcore](https://www.linux.org/docs/man1/gcore.html), gdb, and several tools to analyze a core dump file, such as [objdump](https://wikipedia.org/wiki/Objdump), [kdump](https://wikipedia.org/wiki/Kdump_(Linux)), [gdb](https://www.geeksforgeeks.org/gdb-command-in-linux-with-examples/), and [lldb](https://wikipedia.org/wiki/LLDB_(debugger)).
 
-However, there are some important difficulties when working with these tools and attempting to perform .NET debugging:
+However, you will encounter some significant difficulties when you work with these tools to try to do .NET debugging:
 
-- Configuration could be difficult when compared with the process of setting up symbols for the WinDbg debugger on Windows.
-- Core dump files are large because these tools do not know which memory region is used in a .NET Core process and cannot trim the memory information to only what is needed.
-- Dumps are not portable: you will need to analyze the dumps in the Linux machine where they were generated. If you want to analyze the dump in on different Linux machine, then extra steps need to be taken to configure the host machine for the debugging session.
+- Configuration could be difficult compared to the process of setting up symbols for the WinDbg debugger on Windows.
+- Core dump files are large because these tools do not know which memory region is used in a .NET Core process, and they can't trim the memory information to only what is needed.
+- Dump files are not portable. You will have to analyze the dump files on the Linux computer on which they were generated. If you want to analyze the dump files on different Linux computer, then extra steps are necessary to configure the host computer for the debugging session.
 
 ## lldb
 
-[lldb](https://wikipedia.org/wiki/LLDB_(debugger)) is the recommend tool for analyzing dotnet core dumps and the dotnet SDK includes useful tools to configure lldb correctly. However, you need to install at least version 3.9 to be able to perform such debug analysis for .NET Core.
+[Lldb](https://wikipedia.org/wiki/LLDB_(debugger)) is the recommended tool for analyzing .NET Core dump. The .NET SDK includes useful tools to configure lldb correctly. However, you have to install at least version 3.9 to be able to do such debugging analysis for .NET Core.
 
-To install lldb 3.9 or later, use package manager (for example: `sudo apt install lldb`).
+To install lldb 3.9 or a later version, use Package Manager (for example: `sudo apt install lldb`).
 
 ## Tools and commands available in the .NET Core runtime and SDK
 
-There are some useful tools that come with .NET Core runtime. For example, createdump is installed with every runtime installation of .NET Core.
+Several useful tools are included together with .NET Core runtime. For example, `createdump` is installed as part of every runtime installation of .NET Core.
 
-There are also "tools" that can be installed. You can also develop your own tools or chose to make use of several tools developed by third parties. The Microsoft .NET Core platform also comes with some .NET Core tools that are helpful when debugging .NET Core problems. Some of them are listed below:
+You can also develop your own tools or choose to make use of several third-party tools. The Microsoft .NET Core platform also includes some .NET Core tools that are helpful to debug .NET Core problems. These include the following:
 
 - dotnet-dump
 - dotnet-gcdump
 - dotnet-symbol
 
-To install these tools along with the other ones, you need to have .NET Core SDK installed. To get more information about .NET Core SDK, see: [.NET SDK overview](/dotnet/core/sdk).
+To install these tools together with the others, you have to have .NET Core SDK installed. For more information about .NET Core SDK, see: [.NET SDK overview](/dotnet/core/sdk).
 
 > [!NOTE]
-> procdump should be mentioned as well although it is not part of SDK. An in-depth discussion of procdump options can be found at the end of this chapter.
+> Procdump is also worthy of a mention, although it's not part of SDK. An in-depth discussion of procdump options can be found at the end of this part.
 
 ## createdump
 
-createdump is installed with every .NET Core version. The implementation details are explained [here](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md).
+Createdump is installed in every .NET Core version. For more information, see [the implementation details](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md).
 
-The best way to generate a crash core dump in Linux is to use createdump because the dumps generated automatically by system may not have all the managed state and some SOS or dotnet-dump commands may display "UNKNOWN" for type and function names.
+Createdump is the best way to generate a core dump file in Linux. This is because the dump files that are generated automatically by the system might not include all the managed states. Also, some SOS or dotnet-dump commands may display "UNKNOWN" for type and function names.
 
-Similarly, the manual dumps created with gdb or gcore will not have all the managed state information and some SOS or dotnet-dump commands may display "UNKNOWN" for type and function names as well. The recommend way to capture manual dumps is using either createdump or other dotnet tools, including procdump.
+Similarly, the manual dump files that are created by using gdb or gcore will not include all the managed state information, and some SOS or dotnet-dump commands might display "UNKNOWN" for type and function names, too. The recommend way to capture manual dump files is by using createdump or some other .NET Core tool, such as procdump.
 
 Here are some important features of createdump:
 
-- Automatic generation of minimal size minidumps.
-- Easy to configure with a non-root user.
-- Can be used to capture on-demand (manual) or crash core dumps.
-- Most of the stack overflow crashes are detected.
+- Minimally sized minidumps are automatically generated.
+- It's easy to configure with a non-root user.
+- You can use it to capture on-demand (manual) or system failure core dump files.
+- Most stack overflow failures are detected.
 
-You need to use lldb 3.9 or later to analyze the core dump files captured with createdump.
+You have to use lldb 3.9 or a later version to analyze the core dump files that are captured by using createdump.
 
-createdump can be found in .NET Core installation directory. To find the .NET Core installation directories, run the `dotnet --list-runtimes` command. As seen in the screenshot below, I have two runtimes running so I have two createdump file for both versions:
+You can find createdump in the .NET Core installation directory. To find this directory, run the `dotnet --list-runtimes` command. As shown in the following screenshot, separate createdump file was created for the two versions of active runtimes.
 
 :::image type="content" source="./media/3-3-debuggers-collect-core-dumps/dotnet.png" alt-text="BuggyAmb dotnet" border="true":::
 
 ## dotnet-dump
 
-You need to have .NET Core SDK installed to be able to install this tool. [dotnet-dump](/dotnet/core/diagnostics/dotnet-dump) was introduced with the .NET Core 3.0 SDK and later versions and it helps collecting and analyzing core dumps without any native debugger. It allows you to run SOS commands to analyze crashes and the garbage collector (GC).
+You have to have .NET Core SDK installed to be able to install this tool. [Dotnet-dump](/dotnet/core/diagnostics/dotnet-dump) was introduced in the .NET Core 3.0 SDK. It helps to collect and analyze core dump files without needing any native debugger. It lets you run SOS commands to analyze failures and garbage collector (GC) output.
 
 > [!NOTE]
-> It is not a native debugger, so some features such as displaying the native stack frames are not available. The dump generated is not portable and you cannot open it in Windows.
+> Dotnet-dump is not a native debugger. Therefore, some features, such as displaying the native stack frames, are not available. The dump file that is generated is not portable, and you cannot open it in Windows.
 
-To install this tool, you need to run the following command:
+To install this tool, run the following command:
 
 ```dotnetcli
 dotnet tool install -g dotnet-dump
 ```
 
-We will use this tool to capture and analyze core dumps in the upcoming lab sections.
+You will use this tool to capture and analyze core dump files in the upcoming lab sections.
 
 ## dotnet-gcdump
 
-This is another tool that requires .NET Core SDK. [dotnet-gcdump](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/) is available in .NET Core 3.1 or later versions.
+This is another tool that requires .NET Core SDK. [Dotnet-gcdump](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/) is available in .NET Core 3.1 or later versions.
 
-This is an interesting approach for analyzing GC heaps. The idea behind this tool is that a full process dump is not required for investigations in many scenarios, so the tool captures only the managed heap information and generates a report based on it.
+This is an interesting approach for analyzing GC heaps. The idea behind this tool is that a full process dump file is not required for investigations in many scenarios. Therefore, the tool captures only the managed heap information and generates a report based on it.
 
-Most importantly, the dump files generated by this tool are portable and can be analyzed in PerfView or Visual Studio in Windows.
+Most importantly, the dump files that are generated by this tool are portable and can be analyzed in PerfView or Visual Studio in Windows.
 
-As briefly explained [here](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/), a full GC is triggered with this tool to stream the information to an "event pipe" to generate the dump file.
+As briefly explained [here](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/), a full garbage collection is triggered by this tool to stream the information to an "event pipe" to generate the dump file.
 
 > [!NOTE]
-> Since a full Gen 2 GC is triggered in the target process, the performance characteristics of the application can be changed and as expected, while the information is written to the core dump file the threads will be suspended. The larger the heap size the longer pauses to write the information to the file and the longer the threads will stay paused.
+> Because a full Gen 2 garbage collection is triggered in the target process, the performance characteristics of the application can be changed. As you might expect, while the information is written to the core dump file, the threads will be suspended. The larger the heap size, the longer are the pauses to write the information to the file, and the longer the threads will stay paused.
 
-These information contained inside such core dumps will be useful when:
+The information that's contained inside such core dump files will be useful in the following circumstances:
 
-- Comparing number of objects by type on the managed heap
+- Comparing the number of objects by type on the managed heap
 - Analyzing object roots
-- Finding what objects have a reference to what type
+- Determining what objects have a reference to what type
 - Other statistical analysis about objects on the heap
 
-Once the data is generated the file can be exported outside of the machine where it was created, and it can be analyzed in PerfView or in Visual Studio.
+After the data is generated, the file can be exported outside of the computer on which it was created, and it can be analyzed in PerfView or in Visual Studio.
 
-To install this tool, you need to run the following command:
+To install this tool, run the following command:
 
 ```dotnetcli
 dotnet tool install -g dotnet-gcdump
 ```
 
-We will use to generate some reports for .NET Core heaps in the upcoming lab sections.
+You will use this command to generate some reports for .NET Core heaps in the upcoming lab sections.
 
 ## dotnet-symbol
 
-[dotnet-symbol](/dotnet/core/diagnostics/dotnet-symbol) is a useful tool for getting symbols for managed debugging and was introduced in .NET Core 2.1 or later. Just like the two other tools detailed above, these tools also require .NET Core SDK to be installed.
+[Dotnet-symbol](/dotnet/core/diagnostics/dotnet-symbol) is a useful tool to get symbols for managed debugging. It was introduced in .NET Core 2.1. As for the two other tools that are mentioned earlier, these tools also require .NET Core SDK to be installed.
 
-dotnet-symbol downloads all the files needed for debugging (symbols, modules, SOS, and DAC for the coreclr module) for any given core dump.
+`Dotnet-symbol` downloads all the files that are needed for debugging (symbols, modules, SOS, and DAC for the coreclr module) for any given core dump files.
 
-To install this tool, you need to run the following command:
+To install this tool, run the following command:
 
 ```dotnetcli
 dotnet tool install -g dotnet-symbol
 ```
 
-We will use this tool to configure debugger in the upcoming lab sections.
+You will use this tool to configure the debugger in the upcoming lab sections.
 
 ## procdump
 
-[A linux version of procdump](https://github.com/Sysinternals/ProcDump-for-Linux) is also available with some limited feature sets compared to its Windows counterpart. It does not support every feature the Windows version has. For example, it cannot be configured to collect core dumps when the process crashes or throws a first chance exception.
+[A linux version of procdump](https://github.com/Sysinternals/ProcDump-for-Linux) is also available. It has some limited feature sets compared to its Windows counterpart. It does not support every feature that the Windows version does. For example, it cannot be configured to collect core dump files when the process crashes or throws a first-chance exception. However it is still a powerful tool.
 
-However it is still a powerful tool. The following command-line options should give you a preview of what it can be used for:
+The following command-line options for procdump trigger core dump files generation in the specified conditions.
 
 ```cmd
--C: Trigger core dump generation when CPU exceeds or equals specified value (0 to 100 * nCPU)
--c: Trigger core dump generation when CPU is less than specified value (0 to 100 * nCPU)
--M: Trigger core dump generation when memory commit exceeds or equals specified value (MB)
--m: Trigger core dump generation when when memory commit is less than specified value (MB)
--T: Trigger when thread count exceeds or equals specified value.
--F: Trigger when filedescriptor count exceeds or equals specified value.
+-C: CPU exceeds or equals a specified value (0 to 100 * nCPU)
+-c: CPU is less than a specified value (0 to 100 * nCPU)
+-M: The memory commit exceeds or equals a specified value (MB)
+-m: The memory commit is less than a specified value (MB)
+-T: The thread count exceeds or equals a specified value
+-F: The filedescriptor count exceeds or equals a specified value
 ```
 
 Follow the [installation instructions](https://github.com/Sysinternals/ProcDump-for-Linux/blob/master/INSTALL.md) to install procdump in your environment.
 
-We will use this tool to capture a core dump based on CPU usage in the upcoming lab sections.
+You will use this tool to capture a core dump file that's based on CPU usage in the upcoming lab sections.
 
-## A note about selecting the SDK version to use
+## A note about selecting the SDK version
 
-By default, the SDK installs in a "side-by-side" which means multiple versions can run together on a single machine. How the version gets picked when you're running CLI commands is explained in more detail in the [Select the .NET Core version to use](/dotnet/core/versions/selection) article. As explained in the article the process for selecting an SDK version can be summarized like below:
+By default, the SDK installs in a "side-by-side" configuration. This means that multiple versions can run together on a single computer. How the version gets picked when you're running CLI commands is explained in more detail in the [Select the .NET Core version to use](/dotnet/core/versions/selection) article. However, the process for selecting an SDK version can be summarized as follows:
 
-- dotnet searches for a *global.json* file iteratively reverse navigating the path upward from the current working directory.
-- dotnet uses the SDK specified in the first *global.json* found.
-- dotnet uses the latest installed SDK if no *global.json* is found.
+- .NET Core searches for a *global.json* file iteratively reverse navigating the path upward from the current working directory.
+- .NET Core uses the SDK that's specified in the first *global.json* that's found.
+- .NET Core uses the latest installed SDK if no *global.json* instance is found.
 
-For example, on the test Linux virtual machine you should have both the .NET Core 3.1 and 5.0 SDKs installed. If you run dotnet with --version switch, you should see that the latest version is being used:
+For example, on the test Linux virtual machine, you should have both the .NET Core 3.1 and 5.0 SDKs installed. If you run .NET Core by including the `--version` switch, you should see that the latest version is used.
 
 :::image type="content" source="./media/3-3-debuggers-collect-core-dumps/list.png" alt-text="BuggyAmb list" border="true":::
 
-Now create a *global.json* file in the current directory, which is your home directory and set the version explicitly using the cat tool as shown below. Then check the version once again and it is now showing the exact SDK version you placed inside the *global.json* file:
+Now, create a *global.json* file in the current directory (your home directory), and set the version explicitly by using the cat tool, as shown. Then, check the version again. It is now showing the exact SDK version that you put inside the *global.json* file.
 
 :::image type="content" source="./media/3-3-debuggers-collect-core-dumps/json.png" alt-text="BuggyAmb json" border="true":::
 
-This is important to know when you run some SDK commands such as creating new application with dotnet new command. However, mostly you won't need to do this when working with dotnet-dump and dotnet-gcdump tools.
+This is important to know when you run some SDK commands, such as creating an application by using the .NET Core `new` command. However, you won't have to do this when you use the dotnet-dump and dotnet-gcdump tools.
 
-.NET Core SDK will install the latest version of the tools no matter which SDK you have selected. For example, if you have executed the commands to install the dotnet-dump, dotnet-gcdump and dotnet-symbol tools when the .NET Core SDK 3.1 is selected, the latest versions of these tools will be downloaded and installed as seen in the screenshot below (where version 5 of the tools for dotnet-dump and dotnet-gcdump have been installed):
+.NET Core SDK installs the latest version of the tools regardless of which SDK you selected. For example, if you ran the commands to install the dotnet-dump, dotnet-gcdump, and dotnet-symbol tools for .NET Core SDK 3.1, the latest versions of these tools will be downloaded and installed, as shown in the next screenshot (where version 5 of the tools for dotnet-dump and dotnet-gcdump have been installed).
 
 :::image type="content" source="./media/3-3-debuggers-collect-core-dumps/tool.png" alt-text="BuggyAmb tool" border="true":::
 
-Following articles are great resources to continue reading about .NET tools:
+The following articles are great resources for more information about .NET Core tools:
 
 - [How to manage .NET tools](/dotnet/core/tools/global-tools)
 
 - [dotnet tool install](/dotnet/core/tools/dotnet-tool-install)
 
 > [!NOTE]
-> Selecting the runtime version to use is different than selecting the SDK version. If you want to use a specific version of the .NET Runtime, use the **--fx-version \<VERSION>** option as explained in [this article](/dotnet/core/tools/).
+> Selecting the runtime version to use is different than selecting the SDK version. If you want to use a specific version of the .NET runtime, use the **--fx-version \<VERSION>** option, as explained in  [this article](/dotnet/core/tools/).
 
-You are now ready to continue with troubleshooting labs. You will learn how to use these tools to troubleshoot problems in the next chapters.
+## Next steps
+
+You are now ready to begin the troubleshooting labs. In the labs, you will learn how to use the tools that are discussed here to troubleshoot problems.
