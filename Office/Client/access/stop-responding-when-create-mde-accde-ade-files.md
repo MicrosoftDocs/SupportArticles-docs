@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm 
 audience: ITPro 
-ms.topic: troubleshoot
+ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
