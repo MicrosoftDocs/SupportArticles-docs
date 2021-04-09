@@ -66,7 +66,7 @@ Earlier versions of the Scanpst tool run only eight phases. When you use the *
 
 ### Command line arguments
 
-|Argument| Meaning|Notes| Default|
+|Argument|Meaning|Notes|Default|
 |---|---|---|---|
 |-log| Create a log | Must be followed by one of the following:<br/><br/>append|replace| none | replace|
 |-backupfile| A backup file will be created| Must be followed by the desired backup file name​.||
