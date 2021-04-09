@@ -24,19 +24,23 @@ _Original KB number:_ &nbsp; 4480781
 
 When you deploy Windows on a device, these events are logged:
 
-> Log Name: Microsoft-Windows-User Device Registration/Admin  
+```output
+Log Name: Microsoft-Windows-User Device Registration/Admin  
 Source: User Device Registration  
 Event ID: 307  
 Level: Error  
 Description:  
 Automatic registration failed. Failed to lookup the registration service information from Active Directory. Exit code: Unknown HResult Error code: 0x801c001d. See https://go.microsoft.com/fwlink/?LinkId=623042
+```
 
-> Log Name: Microsoft-Windows-User Device Registration/Admin  
+```output
+Log Name: Microsoft-Windows-User Device Registration/Admin  
 Source: Microsoft-Windows-User Device Registration  
 Event ID: 304  
 Level: Error  
 Description:  
 Automatic registration failed at join phase.  Exit code: Unknown HResult Error code: 0x801c001d. Server error:. Debug Output:\r\n undefined.
+```
 
 Here is an example of the event IDs:
 

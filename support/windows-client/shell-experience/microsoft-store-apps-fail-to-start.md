@@ -29,17 +29,19 @@ When you select a Microsoft Store App, the App begins to start, and then Windows
 
 Microsoft-Windows-Immersive-Shell event 5961 is logged under the *Applications and Services Logs\Microsoft\Windows\Apps\Microsoft-Windows-TWinUI/Operational event log* path:
 
-> Log Name:      Microsoft-Windows-TWinUI/Operational  
+```output
+Log Name:      Microsoft-Windows-TWinUI/Operational  
 Source:        Microsoft-Windows-Immersive-Shell  
-Date:          *DateTime*  
+Date:          DateTime  
 Event ID:      5961  
 Task Category: (5961)  
-Level:         Error  \
-Keywords:  \
-User:          *UserName*  
-Computer:      *ComputerName*  
+Level:         Error  
+Keywords:  
+User:          UserName  
+Computer:      ComputerName  
 Description:  
-Activation of the app \<app name> for the Windows.Launch contract failed with error: The app didn't start.
+Activation of the app <app name> for the Windows.Launch contract failed with error: The app didn't start.
+```
 
 > [!NOTE]
 > The app portion of the example event, \<app name>, will change depending on the application that fails to start.
@@ -75,7 +77,8 @@ Microsoft.ZuneVideo_8wekyb3d8bbwe!\<app identifier>
 
 You can't start a Microsoft Store App, open Start screen, and use Search in Windows. Additionally, you receive the following event log in Application logs:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: Application Error  
 Event ID: 1000  
 Task Category: (100)  
@@ -85,10 +88,11 @@ User: N/A
 Description:  
 Faulting application name: xxxx.exe, version: 10.1605.1606.6002, time stamp: 0x5755acef  
 Faulting module name: xxxxxx.dll, version: 10.0.14393.1198, time stamp: 0x5902836c  
-**Exception code: 0xc000027b**  
+Exception code: 0xc000027b  
 Fault offset: 0x00000000006d5eab  
 Faulting process id: 0x29c4  
-**0xc000027b:** An application-internal exception has occurred. This error occurs when an **access denied** error happens during app initialization that is fatal and cause an exception that leads to the crash.
+0xc000027b: An application-internal exception has occurred. This error occurs when an access denied error happens during app initialization that is fatal and cause an exception that leads to the crash.
+```
 
 If you use Process Monitor to track the Apps' executable or related files, you may see **access denied** is logged. It points to the missing permissions for the current logon user. It includes:
 

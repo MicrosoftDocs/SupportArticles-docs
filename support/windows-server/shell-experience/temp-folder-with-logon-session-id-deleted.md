@@ -31,7 +31,7 @@ C:\Users\Administrator>set TEMP
 TEMP=C:\Users\ADMINI~1\AppData\Local\Temp\1
 ```
 
-```console
+```output
 C:\Users\Administrator>dir %TEMP%
 Volume in drive C has no label.
 

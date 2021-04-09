@@ -75,7 +75,8 @@ You can use the following methods to verify and troubleshoot the issue.
 
     Then, you can see the following result that shows the SYNCHRONIZE bit is set:
 
-    > [2] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users  
+    ```output
+    [2] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users  
     [OBJECT_INHERIT_ACE]  
     [CONTAINER_INHERIT_ACE]  
     [INHERITED_ACE]  
@@ -85,6 +86,7 @@ You can use the following methods to verify and troubleshoot the issue.
     FILE_TRAVERSE  
     SYNCHRONIZE  
     READ_CONTROL
+    ```
 
     See the [behavior of the SYNCHRONIZE bit](/openspecs/windows_protocols/ms-smb2/a64e55aa-1152-48e4-8206-edd96444e7f7) on Windows SMB2 clients.
 
