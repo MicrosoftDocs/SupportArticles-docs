@@ -32,4 +32,4 @@ Upgrade CRM for Outlook to be the same major version of your CRM instance or a m
 
 ## More information
 
-If you still meet issues installing, enabling, or connecting CRM for Outlook with a CRM Online organization, run the [Microsoft Support and Recovery Assistant](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+If you still meet issues installing, enabling, or connecting CRM for Outlook with a CRM Online organization, run the [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant).
