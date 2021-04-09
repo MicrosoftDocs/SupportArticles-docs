@@ -1,5 +1,6 @@
 ---
 title: Formatted text is limited to 240 characters per line
+description: Describes the limit per line when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -20,10 +21,10 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Excel, when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file, any characters beyond the two-hundred fortieth character are wrapped to the next line. 
+In Microsoft Excel, when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file, any characters beyond the two-hundred fortieth character are wrapped to the next line.
 
 > [!NOTE]
-> If several rows on the same sheet contain text beyond 240 characters, the text begins wrapping at the row after the last row that contains text. 
+> If several rows on the same sheet contain text beyond 240 characters, the text begins wrapping at the row after the last row that contains text.
 
 For example, consider the following sheet:
 

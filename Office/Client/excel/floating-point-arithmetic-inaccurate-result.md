@@ -70,7 +70,7 @@ All computers have a maximum and a minimum number that can be handled. Because t
 
 A floating-point number is stored in binary in three parts within a 65-bit range: the sign, the exponent, and the mantissa.
 
-|The sign|The exponent|The mantissa||
+|The sign|The exponent|The mantissa|
 |---|---|---|
 |1 sign bit|11 bits exponent|1 implied bit + 52 bits fraction|
 

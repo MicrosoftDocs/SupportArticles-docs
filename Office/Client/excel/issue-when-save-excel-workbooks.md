@@ -356,10 +356,10 @@ If your workbook contains VBA macros, copy the modules from the old workbook to 
 
 Try to save the workbook to another location, such as a local hard disk, a network drive, or a removable drive. If you are successful, the following are possible causes of the problem:
 
-- [Antivirus software conflict](#tab/antivirus)
-- [Restricted permissions](#tab/restricted)
-- [File name length](#tab/file-name-length)
-- [File sharing conflict](#tab/file-share-conflict)
+- Antivirus software conflict
+- Restricted permissions
+- File name length
+- File sharing conflict
 
 <a id="option5">
 
@@ -379,12 +379,12 @@ To save a new Excel file to the original location, follow these steps:
 
  If you can save a new workbook to the original location, the following are possible causes of the problem:
 
-- [File name length](#tab/file-name-length)
-- [File sharing conflict](#tab/file-share-conflict)
+- File name length
+- File sharing conflict
 
 If you can't save a new workbook to the original location, the following is a possible cause of the problem:
 
-- [Insufficient drive space](#tab/ins-disk-space)
+- Insufficient drive space
 
 If you have sufficient drive space, try Option 3.
 
@@ -407,10 +407,10 @@ If the workbook saves after you restart Windows in safe mode, try again to save 
 
 If the workbook doesn't save after you restart Windows in safe mode, the following are possible causes:
 
-- [Third-party add-ins](#tab/third-party)
-- [Antivirus software conflict](#tab/antivirus)
-- [Restricted permissions](#tab/restricted)
-- [File name length](#tab/file-name-length)
+- Third-party add-ins
+- Antivirus software conflict
+- Restricted permissions
+- File name length
 
 ## More information
 
