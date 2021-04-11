@@ -2,6 +2,15 @@
 
 
 
+## Week of April 05, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/5/2021 | [Outlook connection issues with Exchange mailboxes because of the RPC encryption requirement](/exchange/troubleshoot/client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement) | modified |
+| 4/9/2021 | [MSExchangeServicesAppPool crashes](/exchange/troubleshoot/administration/event-id-4999-msexchangeservicesapppool-crash) | modified |
+
+
 ## Week of March 29, 2021
 
 
