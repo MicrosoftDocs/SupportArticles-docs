@@ -28,35 +28,33 @@ appliesto:
 
 This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers, lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
 
-## Assess the health of on-premises Exchange Servers
-
-- [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
-- [Verify the installation of CUs & SUs](#verify-the-installation-of-cus--sus)
-
 ## Resolve errors during CU or SU installation
 
-- [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
-- [Missing images in ECP](#missing-images-in-ecp)
-- [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
-- [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
-- [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
-- [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
-- [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
-- [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
-- [Services don't start after SU installation](#services-dont-start-after-su-installation)
-- [Error during Setup in Setup log](#error-during-setup-in-setup-log)
-- [Error during update rollup installation](#error-during-update-rollup-installation)
-- [Setup fails with "Cannot start the service" error](#setup-fails-with-cannot-start-the-service-error)
-- [SU installation fails because of existing IU](#su-installation-fails-because-of-existing-iu)
-- [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
-- [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
-- [Mail flow has stopped](#mail-flow-has-stopped)
-- [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
-- [Exchange setup fails with error code 1603](#exchange-setup-fails-with-error-code-1603)
-- [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
-- [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
-- [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
-- [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
+- [Repair failed installations of Exchange Cumulative and Security updates](#repair-failed-installations-of-exchange-cumulative-and-security-updates)
+  - [Resolve errors during CU or SU installation](#resolve-errors-during-cu-or-su-installation)
+  - [Additional information](#additional-information)
+    - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
+    - [Missing images in ECP](#missing-images-in-ecp)
+    - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
+    - [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
+    - [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
+    - [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
+    - [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
+    - [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
+    - [Services don't start after SU installation](#services-dont-start-after-su-installation)
+    - [Error during Setup in Setup log](#error-during-setup-in-setup-log)
+    - [Error during update rollup installation](#error-during-update-rollup-installation)
+    - [Setup fails with "Cannot start the service" error](#setup-fails-with-cannot-start-the-service-error)
+    - [SU installation fails because of existing IU](#su-installation-fails-because-of-existing-iu)
+    - [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
+    - [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
+    - [Mail flow has stopped](#mail-flow-has-stopped)
+    - [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
+    - [Exchange setup fails with error code 1603](#exchange-setup-fails-with-error-code-1603)
+    - [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
+    - [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
+    - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
+    - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
 ## Additional information
 
@@ -64,39 +62,6 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
 - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
 - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
-
-### Check for Indicators of Compromise (IOCs)
-
-Use the following script that automates testing for all four vulnerabilities described in the [Microsoft Threat Intelligence Center (MSTIC) blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). The script provides a progress bar and performance tweaks to make the test for CVE-2021-26855 test run fast. Download the latest version of the script from the Exchange Support GitHub repository [aka.ms/TestProxyLogon](https://aka.ms/TestProxyLogon).  
-
-[Back to top](#summary)
-
-### Verify the installation of CUs & SUs
-
-#### Option 1 (Recommended)
-
-Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the build number.
-
-![Screenshot of the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
-
-#### Option 2
-
-Run the following command and verify that the file version in the output matches the information in the table below.
-
-```powershell
-Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
-```
-
-| Exchange version  | File versions of patched systems   |
-|---|---|
-| Exchange Server 2019  | For CU8: 15.02.0792.010</br>For CU7: 15.02.0721.013</br>For CU6: 15.02.0659.012</br>For CU5: 15.02.0595.008</br>For CU4: 15.02.0529.013</br>For CU3: 15.02.0464.015</br>For CU2: 15.02.0397.011</br>For CU1: 15.02.0330.011</br>For RTM: 15.02.0221.018 |
-| Exchange Server 2016  | For CU19: 15.01.2176.009</br>For CU18: 15.01.2106.013</br>For CU17: 15.01.2044.013</br>For CU16: 15.01.1979.008</br>For CU15: 15.01.1913.012</br>For CU14: 15.01.1847.012</br>For CU13: 15.01.1779.008</br>For CU12: 15.01.1713.010</br>For CU11: 15.01.1591.018</br>For CU10: 15.01.1531.012</br>For CU9: 15.01.1466.013</br>For CU8: 15.01.1415.008 |
-| Exchange Server 2013  | For CU23: 15.00.1497.012</br>For CU22: 15.00.1473.006</br>For CU21: 15.00.1395.012  |
-|||
-
-For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](https://support.microsoft.com/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
-
-[Back to top](#summary)
 
 ### HTTP 500 errors in OWA or ECP
 
