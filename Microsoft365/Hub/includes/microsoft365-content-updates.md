@@ -2,6 +2,14 @@
 
 
 
+## Week of April 05, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/5/2021 | [Determine the license type of your Microsoft Office product](/office365/troubleshoot/licensing/determine-office-license-type) | modified |
+
+
 ## Week of March 22, 2021
 
 
