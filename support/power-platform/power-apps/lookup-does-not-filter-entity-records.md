@@ -7,7 +7,7 @@ ms.date: 4/12/2021
 ---
 # Lookup doesn't filter records as expected for particular entity in Dynamics 365
 
-This article describes best practices around updating Microsoft Flows used by Power Apps.
+This article fixes an issue in which the lookup displays all records instead of only the records that are related to what you typed in.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4603850
@@ -33,7 +33,7 @@ The Lookup view determines what columns are displayed inside of the lookup contr
 
 The reason why the displayed and searched columns can be different is their performance. The fewer columns searched, the faster the search can be executed. However, you might want to see lots of information in the lookup control to make sure you select the right record.
 
-For the steps to add "find" columns, see Workaround 1.
+For the steps to add "find" columns, see [Workaround 1](#workaround-1).
 
 ### Cause 2
 
@@ -41,7 +41,7 @@ The issue occurs because there are no string type columns in the view being used
 
 The lookup control can't filter non-string type columns. The view being used needs to have at least one string type column, such as text, email, phone, url, and so on.
 
-For the steps to add a string type column, see Workaround 2.
+For the steps to add a string type column, see [Workaround 2](#workaround-2).
 
 ## Workarounds
 
