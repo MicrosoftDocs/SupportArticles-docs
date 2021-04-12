@@ -75,26 +75,28 @@ _Original KB number:_ &nbsp; 2020053
 
 4. NTDS Replication Event 2042 may be logged in the Directory Service event log:
 
-    > Event Type: Error  
-    Event Source: NTDS Replication  
-    Event Category: Replication  
-    Event ID: 2042  
-    User: NT AUTHORITY\ANONYMOUS LOGON  
-    Computer: \<name of DC that logged event>
-    >
-    > Description:  
+    ```output
+    Event Type: Error
+    Event Source: NTDS Replication
+    Event Category: Replication
+    Event ID: 2042
+    User: NT AUTHORITY\ANONYMOUS LOGON
+    Computer: <name of DC that logged event>
+    
+    Description:  
     It has been too long since this machine last replicated with the named source
     machine. The time between replications with this source has exceeded the tombstone
     lifetime. Replication has been stopped with this source.
-    >
-    > The reason that replication is not allowed to continue is that the two machine's views of deleted objects may now be different. The source machine may still have copies of objects that have been deleted (and garbage collected) on this machine. If they were allowed to replicate, the source machine might return objects which have already been deleted.
-    >
-    > Time of last successful replication: YYYY-MM-DD HH:MM:SS  
-    Invocation ID of source: \<32 character GUID for source DC>  
-    Name of source: \<fully qualified cname record of source DC>  
-    Tombstone lifetime (days): \<current TSL value. Default = 60 or 180 days>
-    >
-    > The replication operation has failed.
+    
+    The reason that replication is not allowed to continue is that the two machine's views of deleted objects may now be different. The source machine may still have copies of objects that have been deleted (and garbage collected) on this machine. If they were allowed to replicate, the source machine might return objects which have already been deleted.
+    
+    Time of last successful replication: YYYY-MM-DD HH:MM:SS
+    Invocation ID of source: <32 character GUID for source DC>
+    Name of source: <fully qualified cname record of source DC>
+    Tombstone lifetime (days): <current TSL value. Default = 60 or 180 days>
+    
+    The replication operation has failed.
+    ```
 
     User Action:
 

@@ -15,13 +15,17 @@ _Original KB number:_ &nbsp; 4096317
 
 You use WSUS to deploy software updates to computers in your organization. When a WSUS client computer scans for updates on the WSUS server, you see the following error message in the WindowsUpdate.log file on the client computer:
 
-> WS error: \<detail>\<ErrorCode>InvalidParameters\</ErrorCode>\<Message>parameters.InstalledNonLeafUpdateIDs\</Message>\<ID>GUID\</ID>\<Method>`http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates`"\</Method>\</detail>"
->
-> \*FAILED\* [80244007] SyncUpdates_WithRecovery failed
+```output
+WS error: <detail><ErrorCode>InvalidParameters</ErrorCode><Message>parameters.InstalledNonLeafUpdateIDs</Message><ID>GUID</ID><Method> http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates"</Method></detail>"
+
+*FAILED\* [80244007] SyncUpdates_WithRecovery failed
+```
 
 Additionally, the following exception is logged in the SoftwareDistribution.log file on the WSUS server:
 
-> ThrowException: actor = `http://WSUSServerName:8530/ClientWebService/client.asmx`, ID=GUID, ErrorCode=InvalidParameters, Message=parameters.InstalledNonLeafUpdateIDs, Client=Client_ID
+```output
+ThrowException: actor = http://WSUSServerName:8530/ClientWebService/client.asmxs, ID=GUID, ErrorCode=InvalidParameters, Message=parameters.InstalledNonLeafUpdateIDs, Client=Client_ID
+```
 
 ## Cause
 
@@ -45,7 +49,9 @@ To fix the issue, follow these steps on the WSUS server:
 
 3. Locate the following line in web.config:
 
-   > \<add key="maxInstalledPrerequisites" value="400"/>
+   ```xml
+   <add key="maxInstalledPrerequisites" value="400"/>
+   ```
 
 4. Change the value from **400** to **800**.
 5. Save the web.config file.
