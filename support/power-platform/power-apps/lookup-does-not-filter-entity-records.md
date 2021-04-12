@@ -1,13 +1,13 @@
 ---
 title: Records aren't filtered in lookup for particular entity
-description: Fixes an issue in which the lookup displays all records instead of only the records that are related to what you typed in.
+description: Provides workarounds to an issue in which the lookup displays all records instead of only the records that are related to what you typed in.
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 4/12/2021
 ---
 # Lookup doesn't filter records as expected for particular entity in Dynamics 365
 
-This article fixes an issue in which the lookup displays all records instead of only the records that are related to what you typed in.
+This article provides workarounds to an issue in which the lookup displays all records instead of only the records that are related to what you typed in.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4603850
