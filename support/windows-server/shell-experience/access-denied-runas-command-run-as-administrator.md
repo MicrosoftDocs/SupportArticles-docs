@@ -80,16 +80,16 @@ To do so, follow these steps:
 1. Edit Group Policy in the Group Policy Management Console.
 2. Locate the policy: **Computer Configuration\Policies\Windows Settings\Security Settings\System Services**.  
 3. Open the **Secondary Logon** service.
-4. Click to select the **Define this policy setting** check box, and then select **Enabled**.
+4. Select the **Define this policy setting** check box, and then select **Enabled**.
 5. Set the service startup mode to **Manual**.
 6. Expand the **Security** node to make sure that the following properties and objects are set to **Allow**.
 
     |Property|Objects|
     |---|---|
-    |Authenticated Users|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User-Defined Control|
+    |Authenticated Users|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User Defined Control|
     |Builtin\Administrators|Full Control|
-    |Interactive|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User-Defined Control|
-    |Service|Query Template, Query Status, Enumerate Dependents, Pause, and continue, Interrogate, User-Defined Control|
+    |Interactive|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User Defined Control|
+    |Service|Query Template, Query Status, Enumerate Dependents, Pause, and continue, Interrogate, User Defined Control|
     |System|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Stop|
 
 7. Select **OK** to apply the security changes.
