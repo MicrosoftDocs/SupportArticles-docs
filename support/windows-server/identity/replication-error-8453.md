@@ -73,77 +73,85 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 - The DCDIAG Replication test (`DCDIAG /TEST:NCSecDesc`) reports that the tested domain controller **failed test replications** and has a status of 8453: Replication access was denied:
 
-    > Starting test: Replications  
-    >    [Replications Check,<destination domain controller] A recent replication attempt failed:  
-    >       From \<source DC> to <Destination DC  
-    >       Naming Context: <DN path of failing directory partition>  
-    >       The replication generated an error (8453):  
-    >       Replication access was denied.  
-    >       The failure occurred at \<date> \<time>.  
-    >       The last success occurred at \<date> \<time>.  
-    >       %#% failures have occurred since the last success.  
-    >       The machine account for the destination \<destination DC>.  
-    >       is not configured properly.  
-    >       Check the userAccountControl field.  
-    >       Kerberos Error.  
-    >       The machine account is not present, or does not match on the.  
-    >       destination, source or KDC servers.  
-    >       Verify domain partition of KDC is in sync with rest of enterprise.  
-    >       The tool repadmin/syncall can be used for this purpose.  
-    > ......................... \<DC tested by DCDIAG> failed test Replications
+  ```output
+  Starting test: Replications  
+  [Replications Check,<destination domain controller] A recent replication attempt failed:  
+  From <source DC> to <Destination DC  
+  Naming Context: <DN path of failing directory partition>  
+  The replication generated an error (8453):  
+  Replication access was denied.  
+  The failure occurred at <date> <time>.  
+  The last success occurred at <date> <time>.  
+  %#% failures have occurred since the last success.  
+  The machine account for the destination <destination DC>.  
+  is not configured properly.  
+  Check the userAccountControl field.  
+  Kerberos Error.  
+  The machine account is not present, or does not match on the.  
+  destination, source or KDC servers.  
+  Verify domain partition of KDC is in sync with rest of enterprise.  
+  The tool repadmin/syncall can be used for this purpose.  
+  ......................... <DC tested by DCDIAG> failed test Replications
+  ```
 
 - The DCDIAG NCSecDesc test (`DCDIAG /TEST:NCSecDes`) reports that the domain controller that was tested by DCDIAG **failed test NCSecDec** and that one or more permissions are missing on the NC head of one or more directory partitions on the tested domain controller that was tested by DCDIAG:
 
-   > Starting test: NCSecDesc  
-       Error NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS doesn't have  
-       Replicating Directory Changes                               <- List of missing access  
-       Replication Synchronization                                 <- rights required for each Manage Replication Topology                                       <- security group could vary  
-       Replicating Directory Changes In Filtered Set               <- depending in missing  
-       access rights for the naming context:                          <- right in your environment  
-       DC=contoso,DC=com  
-       Error CONTOSO\Domain Controllers doesn't have  
-       Replicating Directory Changes All  
-       access rights for the naming context:  
-       DC=contoso,DC=com  
-       Error CONTOSO\Enterprise Read-Only Domain Controllers doesn't have  
-       Replicating Directory Changes  
-       access rights for the naming context:  
-       DC=contoso,DC=com  
-       ......................... CONTOSO-DC2 failed test NCSecDesc
+  ```output
+  Starting test: NCSecDesc  
+  Error NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS doesn't have  
+  Replicating Directory Changes                               <- List of missing access  
+  Replication Synchronization                                 <- rights required for each Manage Replication Topology                                       <- security group could vary  
+  Replicating Directory Changes In Filtered Set               <- depending in missing  
+  access rights for the naming context:                          <- right in your environment  
+  DC=contoso,DC=com  
+  Error CONTOSO\Domain Controllers doesn't have  
+  Replicating Directory Changes All  
+  access rights for the naming context:  
+  DC=contoso,DC=com  
+  Error CONTOSO\Enterprise Read-Only Domain Controllers doesn't have  
+  Replicating Directory Changes  
+  access rights for the naming context:  
+  DC=contoso,DC=com  
+  ......................... CONTOSO-DC2 failed test NCSecDesc
+  ```
 
 - The DCDIAG MachineAccount test (`DCDIAG /TEST:MachineAccount`) reports that the domain controller that was tested by DCDIAG **failed test MachineAccount** because the **UserAccountControl** attribute on the domain controllers computer account is missing the **SERVER_TRUST_ACCOUNT** or **TRUSTED_FOR_DELEGATION** flags:
 
-    > Starting test: MachineAccount  
-        The account CONTOSO-DC2 is not trusted for delegation . It cannot  
-        replicate.  
-        The account CONTOSO-DC2 is not a DC account. It cannot replicate.  
-        Warning: Attribute userAccountControl of CONTOSO-DC2 is:  
-        0x288 = ( HOMEDIR_REQUIRED | ENCRYPTED_TEXT_PASSWORD_ALLOWED | NORMAL_ACCOUNT )  
-        Typical setting for a DC is  
-        0x82000 = ( SERVER_TRUST_ACCOUNT | TRUSTED_FOR_DELEGATION )  
-        This may be affecting replication?  
-        ......................... CONTOSO-DC2 failed test MachineAccount
+  ```output
+  Starting test: MachineAccount  
+  The account CONTOSO-DC2 is not trusted for delegation . It cannot  
+  replicate.  
+  The account CONTOSO-DC2 is not a DC account. It cannot replicate.  
+  Warning: Attribute userAccountControl of CONTOSO-DC2 is:  
+  0x288 = ( HOMEDIR_REQUIRED | ENCRYPTED_TEXT_PASSWORD_ALLOWED | NORMAL_ACCOUNT )  
+  Typical setting for a DC is  
+  0x82000 = ( SERVER_TRUST_ACCOUNT | TRUSTED_FOR_DELEGATION )  
+  This may be affecting replication? 
+  ......................... CONTOSO-DC2 failed test MachineAccount
+  ```
 
 - The DCDIAG KCC event log test indicates the hexadecimal equivalent of Microsoft-Windows-ActiveDirectory_DomainService event 2896:
 
     B50 hex = 2896 decimal. This error may be logged every 60 seconds on the infrastructure master domain controller.
 
-    > Starting test: KccEvent  
-    >   The KCC Event log test  
-        An error event occurred. EventID: 0xC0000B50  
-        Time Generated: 06/25/2010 07:45:07
-    >
-    >   Event String:  
-        A client made a DirSync LDAP request for a directory partition. Access was denied due to the following error.
-    >
-    >   Directory partition:  
-        \<DN path of directory partition>
-    >
-    >   Error value:  
-        8453 Replication access was denied.
-    >
-    >   User Action  
-        The client may not have access for this request. If the client requires it, they should be assigned the control access right "Replicating Directory Changes" on the directory partition in question.
+  ```output
+  Starting test: KccEvent  
+  The KCC Event log test  
+  An error event occurred. EventID: 0xC0000B50  
+  Time Generated: 06/25/2010 07:45:07
+  
+  Event String:  
+  A client made a DirSync LDAP request for a directory partition. Access was denied due to the following error.
+  
+  Directory partition:  
+  <DN path of directory partition>
+  
+  Error value:  
+  8453 Replication access was denied.
+  
+  User Action  
+  The client may not have access for this request. If the client requires it, they should be assigned the control access right "Replicating Directory Changes" on the directory partition in question.
+   ```
 
 - REPADMIN.EXE reports that a replication attempt failed and returned an 8453 status.
 
@@ -160,29 +168,33 @@ When this problem occurs, you experience one or more of the following symptoms:
 
     Sample output from `REPADMIN /SHOWREPS`showing inbound replication from CONTOSO-DC2 to CONTOSO-DC1 that fail and return the **replication access was denied** error is as follows:
 
-    > Default-First-Site-Name\CONTOSO-DC1  
+    ```output
+    Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
     Site Options: (none)  
     DSA object GUID:  
     DSA invocationID:  
     DC=contoso,DC=com  
-      Default-First-Site-Name\CONTOSO-DC2 via RPC  
-        DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
-        Last attempt @ \<date> \<time> failed, result 8453 (0x2105):  
-         Replication access was denied.  
-        <#> consecutive failure(s).  
-        Last success @ \<date> \<time>.
+    Default-First-Site-Name\CONTOSO-DC2 via RPC  
+    DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
+    Last attempt @ <date> <time> failed, result 8453 (0x2105):  
+    Replication access was denied.  
+    <#> consecutive failure(s).  
+    Last success @ <date> <time>.
+    ```
 
 - The **replicate now** command in Active Directory Sites and Services (DSSITE.MSC) returns a **replication access was denied** error.
 
     Right-clicking the connection object from a source domain controller and then selecting **replicate now** fails. And a **replication access was denied** error is returned. The following error message is displayed:
 
-    > Dialog title text: Replicate Now  
-    Dialog message text: The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller \<Source DC> to Domain Controller \<Destination DC>:  
+    ```output
+    Dialog title text: Replicate Now  
+    Dialog message text: The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller <Source DC> to Domain Controller <Destination DC>:  
     Replication access was denied  
-    >
-    > The operation will not continue  
+    
+    The operation will not continue  
     Buttons in Dialog: OK
+    ```
 
     ![Screenshot of the error message](./media/replication-error-8453/error-message-dialog-box.png)
 

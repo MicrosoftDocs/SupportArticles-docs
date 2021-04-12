@@ -3,7 +3,7 @@ title: Error on configuration due to incorrect time settings
 description: This article explains one of the reasons the Microsoft Dynamics CRM for Outlook Client fails to configure correctly.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error on configuration of Microsoft Dynamics CRM for Outlook due to incorrect time settings
 

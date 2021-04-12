@@ -3,7 +3,7 @@ title: Lookup fields cannot save or provide results with Chrome 38
 description: Microsoft Dynamics CRM lookups fail to save or provide results when using Google Chrome 38. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM lookup fields fail to save or provide results when using Google Chrome version 38
 

@@ -3,7 +3,7 @@ title: Dynamic content picker missing dynamic content from previous steps
 description: No dynamic content available in dynamic content picker. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Dynamic content picker missing dynamic content from previous steps
 

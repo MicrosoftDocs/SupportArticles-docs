@@ -3,7 +3,7 @@ title: No organization appear in the list
 description: This article provides a resolution for the problem that occurs when no organizations are available in the dropdown list when you run the configuration for the Microsoft Dynamics CRM Client for Microsoft Office Outlook.
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # No Organization Appear When Configuring the Microsoft Dynamics CRM Client for Microsoft Office Outlook
 

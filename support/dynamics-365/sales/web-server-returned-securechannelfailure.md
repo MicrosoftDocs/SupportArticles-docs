@@ -3,7 +3,7 @@ title: Web server returned SecureChannelFailure
 description: Describes an error that occurs in Microsoft Dynamics 365 mailbox alert.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Web server returned SecureChannelFailure exception error appears in Microsoft Dynamics 365 mailbox alert
 

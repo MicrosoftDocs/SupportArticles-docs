@@ -3,7 +3,7 @@ title: Best practices when updating a Flow
 description: This article describes best practices around updating Microsoft Flows used by Power Apps.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Best practices when updating a Flow used by a Power App
 

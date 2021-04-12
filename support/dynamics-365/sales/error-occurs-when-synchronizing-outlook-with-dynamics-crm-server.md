@@ -3,7 +3,7 @@ title: Cannot synchronize Outlook with Dynamics CRM server
 description: Describes an error message that occurs when you try to synchronize Microsoft Office Outlook with the Microsoft Dynamics CRM server.
 ms.reviewer: jbsimon
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error occurs when synchronizing Microsoft Office Outlook with the Microsoft Dynamics CRM server
 

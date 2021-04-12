@@ -3,7 +3,7 @@ title: Email Server Error Code Crm.80042f09.UserNotAssignedRoles
 description: Email Server Error Code Crm.80042f09.UserNotAssignedRoles occurs after you select the Test & Enable Mailbox button on a mailbox record in Microsoft Dynamics 365. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Email Server Error Code Crm.80042f09.UserNotAssignedRoles after selecting Test & Enable Mailbox on a mailbox record
 

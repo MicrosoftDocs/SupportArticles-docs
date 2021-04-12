@@ -26,21 +26,25 @@ When you use the Performance Monitor tool, some counters may be missing or don't
 
 You may see the following errors in the application log:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: Microsoft-Windows-IIS-W3SVC-PerfCounters  
 Event ID: 2002  
 Level: Error  
 Keywords: Classic  
 Description:  
 Setting up Web Service counters failed, please make sure your Web Service counters are registered correctly.
+```
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: IISInfoCtrs  
 Event ID: 1001  
 Level: Error  
 Keywords: Classic  
 Description:  
 Unable to read the first counter index value from the registry. The error code returned by the registry is data DWORD 0.
+```
 
 ## Cause
 
@@ -96,21 +100,25 @@ For many counters, the location of the ini files to install perf counters is und
 
 If you see the following errors:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: Microsoft-Windows-IIS-W3SVC-PerfCounters  
 Event ID: 2002  
 Level: Error  
 Keywords: Classic  
 Description:  
 Setting up Web Service counters failed, please make sure your Web Service counters are registered correctly.
+```
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: IISInfoCtrs  
 Event ID: 1001  
 Level: Error  
 Keywords: Classic  
 Description:  
 Unable to read the first counter index value from the registry. The error code returned by the registry is data DWORD 0.
+```
 
 You'll need to use the counter install ini files in the directory `c:\Windows\winsxs`.
 
@@ -126,12 +134,14 @@ In this example, try installing the infoctrs.ini from each folder using:
 
 When it's successful, you'll see the following entry in the application log:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: Microsoft-Windows-LoadPerf  
 Event ID: 1000  
 Level: Information  
 Description:  
 Performance counters for the inetinfo (inetinfo) service were loaded successfully. The Record Data in the data section contains the new index values assigned to this service.
+```
 
 You need do the same for the following counters:
 
@@ -141,12 +151,14 @@ amd64_microsoft-windows-iis-w3svc*
 
 After which you'll see:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: Microsoft-Windows-LoadPerf  
 Event ID: 1000  
 Level: Information  
 Description:  
 Performance counters for the W3SVC (World Wide Web Publishing Service) service were loaded successfully. The Record Data in the data section contains the new index values assigned to this service.
+```
 
 Following these steps, rerun `WINMGMT /RESYNCPERF`.
 
@@ -157,5 +169,4 @@ There's a hotfix for known issues with PerfDisk.dll on Windows Server 2008 and V
 ## References
 
 - [The report generation process may stop responding when you run Perfmon.exe with the Active Directory Diagnostics template to generate a report on a Windows Server 2008-based domain controller](https://support.microsoft.com/help/971714)
-
 - [Error message when you try to access the Performance Monitor (Perfmon.exe) on a remote computer: "Access Is Denied"](https://support.microsoft.com/help/969639)

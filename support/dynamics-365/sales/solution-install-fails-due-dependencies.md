@@ -3,7 +3,7 @@ title: Solution install fails due to dependencies
 description: Provides a solution to an issue where solution install fails because of dependencies that don't exist in a CDS environment.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Solution install fails because of dependencies that don't exist in a CDS environment
 

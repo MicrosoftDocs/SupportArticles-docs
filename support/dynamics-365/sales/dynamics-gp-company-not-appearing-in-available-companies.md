@@ -3,7 +3,7 @@ title: GP Company not showing in Dynamics Connector for CRM dropdown
 description: A Microsoft Dynamics GP company does not show up in the list of available Companies when creating a new integration in the Microsoft Dynamics Connector for CRM. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # A Microsoft Dynamics GP Company not showing in the Dynamics Connector for CRM dropdown as an available Company for integration
 

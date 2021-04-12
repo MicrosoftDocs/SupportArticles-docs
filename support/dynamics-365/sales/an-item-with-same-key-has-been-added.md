@@ -3,7 +3,7 @@ title: An item with the same key has been added
 description: Provides a solution to an error that occurs when you create a new or editing an existing workflow in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An item with the same key has already been added error occurs when creating a workflow in Microsoft Dynamics 365
 

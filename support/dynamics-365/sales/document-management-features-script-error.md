@@ -3,7 +3,7 @@ title: Document management features present script errors
 description: This article provides a resolution for the problem that occurs after updating the SharePoint List component for compatibility with the Microsoft Dynamics CRM Online December 2012 Service Update or Update Rollup 12.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # After updating the SharePoint List component, Microsoft Dynamics CRM document management features are unavailable or present script errors
 

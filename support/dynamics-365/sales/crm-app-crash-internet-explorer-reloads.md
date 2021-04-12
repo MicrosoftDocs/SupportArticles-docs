@@ -3,7 +3,7 @@ title: CRM app may crash and Internet Explorer reloads
 description: This article provides a workaround for the problem that occurs when you open or close Microsoft Dynamics CRM 2011 records.
 ms.topic: troubleshooting
 ms.reviewer: 
-ms.date: 
+ms.date: 3/31/2021
 ---
 # When you use Microsoft Dynamics CRM 2011, Internet Explorer 9 may reload and cause CRM to crash
 

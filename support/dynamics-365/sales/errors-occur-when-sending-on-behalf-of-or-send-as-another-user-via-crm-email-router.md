@@ -3,7 +3,7 @@ title: Errors when sending on behalf of or sending as another user
 description: This article explains why some errors may occur when using the Microsoft Dynamics CRM Email Router with Office 365 Exchange Online. And provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Errors occur when sending on behalf of or sending as another user when using Dynamics CRM Email Router with Exchange Online
 

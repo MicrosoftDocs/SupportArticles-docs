@@ -3,7 +3,7 @@ title: Error when accessing Dynamics 365 over IFD
 description: Describes how to add Microsoft Dynamics 365 IFD DNS records to Internet Explorer Trusted Sites.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The same client browser session has made 6 requests in the last 2 seconds error message displays when accessing Microsoft Dynamics 365 over IFD
 

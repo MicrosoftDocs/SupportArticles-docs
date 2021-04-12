@@ -3,7 +3,7 @@ title: The authentication wasn't successful
 description: Provides a solution to an error that occurs when you try to use the Dynamics 365 App for Outlook on Outlook desktop.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Sorry, the authentication was not successful error occurs in Microsoft Dynamics 365 App for Outlook
 

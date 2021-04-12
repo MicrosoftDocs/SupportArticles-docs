@@ -3,7 +3,7 @@ title: Outlook client configuration fails with error
 description: This article provides a resolution for the problem that occurs when you configure the Microsoft Dynamics CRM Client for Microsoft Office Outlook and connect to an OnPremise deployment.
 ms.reviewer: henningp, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM 2011 Outlook client configuration fails with error (The specified Microsoft Dynamics CRM server address (URL) is not responding)
 

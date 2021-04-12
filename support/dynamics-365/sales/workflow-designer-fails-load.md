@@ -3,7 +3,7 @@ title: Workflow designer fails to load
 description: Workflow designer fails to load after entity form customization.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Selecting Set Properties in the Workflow designer fails after entity form customization
 

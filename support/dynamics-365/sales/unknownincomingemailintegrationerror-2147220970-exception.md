@@ -3,7 +3,7 @@ title: UnknownIncomingEmailIntegrationError 2147220970 exception
 description: UnknownIncomingEmailIntegrationError -2147220970 exception occurs in Microsoft Dynamics 365. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # UnknownIncomingEmailIntegrationError -2147220970 exception appears in Microsoft Dynamics 365
 

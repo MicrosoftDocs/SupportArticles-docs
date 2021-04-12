@@ -3,7 +3,7 @@ title: Failed to export Business Process
 description: Solution export blocked if it contains a business process flow but not its corresponding entity.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Invalid Export - Business Process Entity Missing
 

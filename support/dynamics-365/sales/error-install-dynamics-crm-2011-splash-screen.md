@@ -3,7 +3,7 @@ title: Install Microsoft Dynamics CRM 2011 from the Splash Screen
 description: This article provides a resolution for the problem that occurs when you try to install Microsoft Dynamics CRM from the Splash Screen with Internet Explorer 9.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Microsoft CRM Splash Screen has stopped working" error occurs when trying to install Microsoft Dynamics CRM 2011 from the Splash Screen
 

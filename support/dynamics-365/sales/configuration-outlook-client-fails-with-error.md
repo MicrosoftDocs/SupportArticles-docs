@@ -3,7 +3,7 @@ title: Configuration of Outlook client fails with an error
 description: This article provides three resolutions for the problem where The server address (URL) is not valid occurs. 
 ms.reviewer: ehagen, debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Configuration of the Microsoft Dynamics CRM 2011 Outlook client fails with the error: The server address (URL) is not valid
 

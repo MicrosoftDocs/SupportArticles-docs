@@ -3,7 +3,7 @@ title: Currency data type not available in Import Data Wizard
 description: This article provides a resolution for the problem that occurs when you import data using the Import Data Wizard.
 ms.reviewer: mmaasjo
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Currency Data Type Not Available in Microsoft Dynamics CRM Import Data Wizard
 

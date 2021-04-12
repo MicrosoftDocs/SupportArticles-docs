@@ -3,7 +3,7 @@ title: Business object not found error when running Account to Customer map in D
 description: When you run the Account to Customer map in Microsoft Dynamics GP Connector, you receive a Business object not found error. Provides a resolution.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Business object not found" error when running the Account to Customer map in Microsoft Dynamics GP Connector
 

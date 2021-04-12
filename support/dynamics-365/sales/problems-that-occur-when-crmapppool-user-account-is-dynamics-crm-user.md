@@ -3,7 +3,7 @@ title: Problems occur when CRMAppPool user account is CRM user
 description: List the issue that may occur when the CRMAppPool account is configured as a Microsoft Dynamics CRM user. Provides resolutions.
 ms.reviewer: mikehamm
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Problems occur when the CRMAppPool user account is a Microsoft Dynamics CRM user
 

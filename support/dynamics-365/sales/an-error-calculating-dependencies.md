@@ -3,7 +3,7 @@ title: There was an error calculating dependencies for this component
 description: Provides a solution to an error in which solution import failed when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # There was an error calculating dependencies for this component. Missing component id [GUID] error occurs when importing a solution into Microsoft Dynamics 365
 

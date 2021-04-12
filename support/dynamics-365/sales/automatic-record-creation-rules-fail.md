@@ -3,7 +3,7 @@ title: Automatic Record Creation Rules fail
 description: Automatic Record Creation Rules fail when the sender of the email is a Contact and a User in Microsoft Dynamics CRM. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Automatic Record Creation Rules fail when the sender of the email is a Contact and a User in Microsoft Dynamics CRM
 

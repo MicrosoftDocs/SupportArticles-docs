@@ -3,7 +3,7 @@ title: Http server returned 404 NotFound exception
 description: When you try to test and enable a mailbox in Microsoft Dynamics 365, you receive an Http server returned 404 NotFound exception. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Http server returned 404 NotFound exception when using server-side synchronization in Microsoft Dynamics 365
 

@@ -3,7 +3,7 @@ title: How to install with the minimum required permissions
 description: Describes the minimum permissions that are required for a user to install Microsoft Dynamics CRM.
 ms.reviewer: chanson
 ms.topic: how-to
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to install Microsoft Dynamics CRM with the minimum required permissions
 

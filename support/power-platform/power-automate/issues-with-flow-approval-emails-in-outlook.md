@@ -3,7 +3,7 @@ title: Issues with flow approval emails in Outlook
 description: Known issues and errors that users may face when receiving or responding to actionable flow approval emails directly within Outlook Desktop and Web.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Issues with flow approval emails in Outlook Desktop and Web
 

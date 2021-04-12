@@ -3,7 +3,7 @@ title: Cannot add CRM Application Pool account as a user
 description: Fixes an issue that occurs in which Microsoft Dynamics CRM 2013 is inaccessible. Provides a resolution.
 ms.reviewer: aaronric
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Cannot add the Microsoft Dynamics CRM Application Pool account as a user in Microsoft Dynamics CRM 2013
 

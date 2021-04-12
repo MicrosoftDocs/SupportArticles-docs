@@ -3,7 +3,7 @@ title: Mailbox fails to be tested and enabled
 description: This article provides a resolution for the problem that occurs when a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Troubleshooting Server-Side Synchronization with Gmail
 

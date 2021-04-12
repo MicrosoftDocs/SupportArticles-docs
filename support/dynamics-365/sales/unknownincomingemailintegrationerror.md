@@ -3,7 +3,7 @@ title: UnknownIncomingEmailIntegrationError
 description: Provides a solution to the UnknownIncomingEmailIntegrationError error that occurs within a Dynamics 365 mailbox record.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "UnknownIncomingEmailIntegrationError" error appears in Microsoft Dynamics 365 mailbox
 

@@ -1,6 +1,6 @@
 ---
 title: Printer redirection and drive redirection don't work
-description: This KB article fixes the printer redirection failure issues and hard drive redirection failure issues because of incorrect registry settings.
+description: Fixes the printer redirection failure issues and hard drive redirection failure issues because of incorrect registry settings.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: windows-server-printing
 ---
 # Printer redirection and drive redirection don't work in a Terminal Server session
 
-This article helps fixes the printer redirection failure issues and hard drive redirection failure issues because of incorrect registry settings.
+This article helps fixes the printer redirection failures and hard drive redirection failures because of incorrect registry settings.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2492632
@@ -32,7 +32,7 @@ In this scenario, printers and hard drives on the client machine aren't redirect
 
 ## Cause
 
-The issue is caused if the values of both registry entries below are set to 0:
+The issue is caused if the values of both registry entries below are set to **0**:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\fEnablePrintRDR`
 
@@ -40,4 +40,4 @@ The issue is caused if the values of both registry entries below are set to 0:
 
 ## Resolution
 
-Set these values to 1.
+Set these values to **1**.

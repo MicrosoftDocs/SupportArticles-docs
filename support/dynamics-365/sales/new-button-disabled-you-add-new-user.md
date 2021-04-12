@@ -3,7 +3,7 @@ title: New button is disabled when you add a new user
 description: This article provides a resolution for the problem that occurs when you try to add a user to Microsoft Dynamics CRM Online.
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The New button is disabled when trying to add a new user in Microsoft Dynamics CRM Online
 
