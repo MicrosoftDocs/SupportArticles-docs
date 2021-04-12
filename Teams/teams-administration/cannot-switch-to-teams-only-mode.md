@@ -24,7 +24,7 @@ search.appverid:
 
 When you try to switch a tenant to Teams Only mode at the organization level either by using the Microsoft Teams admin center or by running the `Grant-CsTeamsUpgradePolicy` cmdlet, the action does not finish, and you receive an error message that resembles one of the following messages, depending on which UI you're using.
 
-**Microsoft Teams admin center**
+### Microsoft Teams admin center
 
 Please see the unsaved sections highlighted in red below.
 
@@ -32,9 +32,9 @@ Please see the unsaved sections highlighted in red below.
 
 **Note:** If you encounter this error in the Microsoft Teams admin center, we recommend that you run the `Grant-CsTeamsUpgradePolicy` cmdlet which will display the following detailed error message.
 
-**Teams PowerShell**
+### Teams PowerShell
 
-> WARNING: \*All* users in this tenant are now full Teams-only users, except for any users that have an explicit policy assignment of TeamsUpgradePolicy. Teams-only users cannot use Skype for Business clients, except to join Skype for Business meetings. For details, see [http://aka.ms/UpgradeToTeams](/MicrosoftTeams/teams-only-mode-considerations). This organization cannot be upgraded to TeamsOnly mode. One or more M365 domains have a public DNS record that points to an on-premises Skype for Business Server deployment. The domain records at fault are {[lyncdiscover.<domain_name>.<IP_address>];}. To upgrade this tenant to TeamsOnly, first complete the migration of all users from on-premises Skype for Business Server to the cloud (using Move-CsUser), and then disable Skype for Business hybrid configuration for this tenant and update the DNS records to point to M365. After these steps are complete, you can execute this command, after which all users and any subsequently created new users will be TeamsOnly.
+> WARNING: \*All* users in this tenant are now full Teams-only users, except for any users that have an explicit policy assignment of TeamsUpgradePolicy. Teams-only users cannot use Skype for Business clients, except to join Skype for Business meetings. For details, see [http://aka.ms/UpgradeToTeams](/MicrosoftTeams/teams-only-mode-considerations). This organization cannot be upgraded to TeamsOnly mode. One or more M365 domains have a public DNS record that points to an on-premises Skype for Business Server deployment. The domain records at fault are {[lyncdiscover.\<domain_name>.\<IP_address>];}. To upgrade this tenant to TeamsOnly, first complete the migration of all users from on-premises Skype for Business Server to the cloud (using `Move-CsUser`), and then disable Skype for Business hybrid configuration for this tenant and update the DNS records to point to M365. After these steps are complete, you can execute this command, after which all users and any subsequently created new users will be TeamsOnly.
 
 :::image type="content" source="media/cannot-switch-to-teams-only-mode/teams-only-powershell-error.png" alt-text="Screenshot of the PowerShell error when switching o Teams Only mode.":::
 
@@ -58,13 +58,13 @@ To fix this error, do the following:
     1. Connect to [Teams PowerShell](/microsoft-365/enterprise/manage-skype-for-business-online-with-microsoft-365-powershell).
     2. Run the [Get-CsOnlineSipDomain](/powershell/module/skype/get-csonlinesipdomain) cmdlet to get a list of all online SIP domains and their status as enabled or disabled.
 
-2. For each domain whose status is Enabled, determine whether it's in use. To do this, run the following cmdlet in Teams PowerShell:
+2. For each domain whose status is **Enabled**, determine whether it's in use. To do this, run the following cmdlet in Teams PowerShell:
 
    ```powershell
    Get-CsOnlineUser -ResultSize Unlimited | select userprincipalname,sipaddress | Export-Csv C:\<Path>\allteamsusersexport.csv
    ```
 
-   **Note:** In this cmdlet, replace \<Path> with the folder location where you want to save the output. The output will be exported to the Allteamsusersexport.csv file that will be saved in the path you specify. It will list all users together with their User Principal Names (UPNs) and SIP addresses. You can filter the .csv file by SIP domains to determine which SIP-enabled domains are being used. You can also determine the SIP-enabled domain that's assigned to each user.
+   **Note:** In this cmdlet, replace \<Path> with the folder location where you want to save the output. The output will be exported to the *Allteamsusersexport.csv* file that will be saved in the path you specify. It will list all users together with their User Principal Names (UPNs) and SIP addresses. You can filter the .csv file by SIP domains to determine which SIP-enabled domains are being used. You can also determine the SIP-enabled domain that's assigned to each user.
 
 3. For each SIP-enabled domain that is being used, check the existing DNS records:
 
@@ -74,7 +74,7 @@ To fix this error, do the following:
 
     **Note:** The default SIP-enabled `onmicrosoft.com` domains in your tenant are either owned or managed by Microsoft. You don't have to check their DNS records because that information is updated automatically by Microsoft.
 
-4. Identify the unused SIP-enabled domains by comparing the list of all SIP-enabled domains from step 1b with the list of currently used domains in the Allteamsusersexport.csv file from step 2. The domains that are in the "1b" list but not in the .csv file will be those that are not in use.
+4. Identify the unused SIP-enabled domains by comparing the list of all SIP-enabled domains from step 1b with the list of currently used domains in the *Allteamsusersexport.csv* file from step 2. The domains that are in the "1b" list but not in the .csv file will be those that are not in use.
 
 5. For each unused SIP enabled domain, use either Method 1 or Method 2:
 
