@@ -1,7 +1,7 @@
 ---
 title: Records aren't filtered in lookup for particular entity
 description: Fixes an issue in which the lookup displays all records instead of only the records that are related to what you typed in.
-ms.reviewer: 
+ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 4/12/2021
 ---
