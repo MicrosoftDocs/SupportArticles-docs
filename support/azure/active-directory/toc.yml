@@ -1,17 +1,17 @@
 - name: Welcome
   href: welcome-azure-ad.yml
 
-- name: Azure Active Directory Reports
-  items:
-  - name: Verify 1st party Microsoft apps in sign-in reports
-    href: verify-first-party-apps-sign-in.md
-
 - name: Azure AD Governance, Compliance and Reporting 
   items:
   - name: Audit Logs
     items:
       - name: Unknown Actors in Audit Reports
         href: unknown-actors-in-audit-reports.md
+
+  - name: Sign-in Activity Reports
+    items:
+      - name: Verify 1st party Microsoft apps in sign-in reports
+        href: verify-first-party-apps-sign-in.md
 
 - name: App Integration and Development 
   items:
