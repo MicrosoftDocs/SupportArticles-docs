@@ -3,7 +3,7 @@ title: Error occurs in sending email for mailbox
 description: Provides a solution to an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An error occurred in sending email for mailbox error appears when testing and enabling a mailbox in Microsoft Dynamics 365
 

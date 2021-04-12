@@ -3,7 +3,7 @@ title: Dynamics 365 E-mail Setup / Configuration
 description: Lists Microsoft Dynamics 365 E-mail Setup / Configuration and Dynamics 365 for Mobile.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics 365 E-mail Setup / Configuration and Microsoft Dynamics 365 for Mobile
 

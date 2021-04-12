@@ -3,7 +3,7 @@ title: Cannot configure CRM 2011 Outlook client
 description: Provides solutions to errors that occur when you try to configure the Microsoft Dynamics CRM 2011 Outlook client on Windows 8.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to configure the Microsoft Dynamics CRM 2011 Outlook client on a Windows 8 computer
 

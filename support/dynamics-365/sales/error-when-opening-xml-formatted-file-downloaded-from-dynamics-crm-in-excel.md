@@ -3,7 +3,7 @@ title: Error occurs when opening an XML formatted file
 description: An error occurs when you open an XML formatted file downloaded from Microsoft Dynamics CRM 2011 in Microsoft Excel 2010. Provides a resolution.
 ms.reviewer: v-anlang
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error occurs when opening an XML formatted file downloaded from Microsoft Dynamics CRM 2011 in Excel 2010
 

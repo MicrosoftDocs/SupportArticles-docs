@@ -3,7 +3,7 @@ title: Email shows as Received/Incoming
 description: Email sent from Outlook with CRM for Outlook client installed, shows as Received/Incoming when using Server-Side Sync in Microsoft Dynamics CRM 2013.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Email sent from Outlook with CRM for Outlook client installed, shows as Received/Incoming when using Server-Side Sync in Microsoft Dynamics CRM 2013
 

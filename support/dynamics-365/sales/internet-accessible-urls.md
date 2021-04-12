@@ -3,7 +3,7 @@ title: Internet accessible URLs
 description: A connectivity issue while accessing the CRM application and as a result the application may fail to load.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Internet accessible URLs required for connectivity to Microsoft Dynamics CRM Online
 

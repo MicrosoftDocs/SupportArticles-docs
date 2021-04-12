@@ -3,7 +3,7 @@ title: Script errors after applying update
 description: Fixes script errors after your Microsoft Dynamics CRM Online organization is updated to the December 2012 Service Update.
 ms.reviewer: dmartens
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Client-side scripts no longer work in Microsoft Dynamics CRM Online after the December 2012 Service Update
 

@@ -3,7 +3,7 @@ title: Tracking an email cannot resolve to associated record
 description: This article provides a resolution for the problem that occurs when you track an email in Microsoft Office Outlook to a record in Microsoft Dynamics CRM 2011.
 ms.reviewer: aaronric
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Tracking an email in Outlook does not resolve to the associated record in Microsoft Dynamics CRM 2011
 

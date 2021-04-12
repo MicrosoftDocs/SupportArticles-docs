@@ -3,7 +3,7 @@ title: The E-mail Router service configuration parameter Emailuser is missing er
 description: Describes an error message that you may receive when you use the Microsoft Dynamics CRM E-mail Router. Provides a resolution.
 ms.reviewer: danhamre
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The E-mail Router service configuration parameter Emailuser is missing error when you use the Microsoft Dynamics CRM E-mail Router
 

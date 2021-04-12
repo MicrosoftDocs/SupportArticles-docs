@@ -3,7 +3,7 @@ title: Exchange server returned 203 error in mailbox alert
 description: The Exchange.server returned 203 error occur in Microsoft Dynamics 365 mailbox alert.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Exchange server returned 203 error in Dynamics 365 mailbox alert
 

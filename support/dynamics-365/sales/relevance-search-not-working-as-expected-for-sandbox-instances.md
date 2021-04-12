@@ -3,7 +3,7 @@ title: Relevance Search does not behave as expected
 description: If Admin Mode is enabled, the Relevance Search does not behave as expected for sandbox instances. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Relevance Search does not behave as expected for sandbox instances when Admin Mode is enabled
 

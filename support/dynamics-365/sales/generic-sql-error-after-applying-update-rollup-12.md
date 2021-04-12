@@ -3,7 +3,7 @@ title: Can't access web pages after applying Update Rollup 12
 description: Fixes an issue in which you can't access any web page after applying Update Rollup 12 to Microsoft Dynamics CRM 2011 Server Update Rollup 11.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An error occurs after applying Update Rollup 12 to Microsoft Dynamics CRM 2011 Server Update Rollup 11: Generic SQL Error
 

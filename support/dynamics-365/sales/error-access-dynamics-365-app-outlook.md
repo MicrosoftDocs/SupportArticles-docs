@@ -3,7 +3,7 @@ title: Error when access the Dynamics 365 app for Outlook
 description: This article provides a resolution for the problem that occurs when you access the Dynamics 365 application for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Sorry, something went wrong while initializing the app" error when you access the Dynamics 365 App for Outlook
 

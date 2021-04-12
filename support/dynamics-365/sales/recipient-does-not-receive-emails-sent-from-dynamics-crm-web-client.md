@@ -3,7 +3,7 @@ title: Recipient does not receive emails sent via CRM web client
 description: Describes a problem that occurs because the SMTP configuration on the Microsoft Dynamics CRM server is not configured to forward email messages to the Exchange server.
 ms.reviewer: frachkid
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The recipient does not receive emails that a Microsoft Dynamics CRM user sends by using the Microsoft Dynamics CRM web client
 

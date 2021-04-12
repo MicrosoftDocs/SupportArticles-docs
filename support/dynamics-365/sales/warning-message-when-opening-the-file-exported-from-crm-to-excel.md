@@ -3,7 +3,7 @@ title: Cannot open the file that you exported to Excel
 description: Describes a problem that occurs when you open a file that you export from Microsoft Dynamics CRM to Excel 2007. A workaround is provided.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The file you are trying to open is in a different format than specified warning when opening a file that is exported to Excel
 

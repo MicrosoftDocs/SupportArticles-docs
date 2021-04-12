@@ -3,7 +3,7 @@ title: An unknown error occurred while synchronizing data to Outlook error when 
 description: An unknown error occurred while synchronizing data to Outlook error occurs when synchronizing records after the data in the organizer field is removed. Provides a resolution.
 ms.reviewer: clintwa, debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An unknown error occurred while synchronizing data to Outlook error when synchronizing records
 

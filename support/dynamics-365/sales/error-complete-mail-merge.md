@@ -3,7 +3,7 @@ title: Error when you complete a mail merge against a non-default Organization
 description: This article provides a resolution for the problem that occurs when you try to create activities with Mail Merge on a non-default organization in Microsoft Dynamics CRM Client for Outlook.
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The Create Activities screen does not display when a Mail Merge is completed against a non-default Organization in the Microsoft Dynamics CRM Client for Outlook
 

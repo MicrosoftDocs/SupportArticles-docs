@@ -3,7 +3,7 @@ title: Error when configuring CRM 2011 Client
 description: Provides a solution to an error that occurs when you configure Microsoft Dynamics CRM 2011 Client for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Exception: System.ServiceModel.Security.SecurityAccessDeniedException: Access is denied. error when configuring the Microsoft Dynamics CRM 2011 Client for Outlook
 

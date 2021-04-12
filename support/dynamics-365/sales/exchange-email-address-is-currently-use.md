@@ -3,7 +3,7 @@ title: Exchange email address is currently in use
 description: Provides a solution to an error that occurs when viewing mailbox alerts in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Exchange email address in [mailbox name] is currently in use for mailbox" warning alert appears in Microsoft Dynamics 365
 

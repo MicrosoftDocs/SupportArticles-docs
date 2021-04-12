@@ -3,7 +3,7 @@ title: Dynamics 365 Marketing problem with the deployment
 description: Problem with the deployment for Microsoft Dynamics 365 Marketing application. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Problem with the deployment for Microsoft Dynamics 365 Marketing application
 

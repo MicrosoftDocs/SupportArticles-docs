@@ -3,7 +3,7 @@ title: Client Request Aborted or Failed to fetch
 description: Provides a solution to errors that occur when you create or save flows or connections, or when navigate pages within the Power Automate product.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Client Request Aborted or Failed to fetch error in Power Automate
 

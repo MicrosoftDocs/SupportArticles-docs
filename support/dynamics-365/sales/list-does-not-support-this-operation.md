@@ -3,7 +3,7 @@ title: List doesn't support this operation
 description: Provides a solution to an error that occurs when you use the new server-based SharePoint integration for Microsoft Dynamics CRM Online and SharePoint Online.
 ms.reviewer: tylerol
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # List does not support this operation error message when using the new server-based SharePoint integration for Microsoft Dynamics CRM Online and SharePoint Online
 

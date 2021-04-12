@@ -3,7 +3,7 @@ title: Authentication failed when signing in to Microsoft Flow
 description: You receive the Authentication failed error when trying to sign in to Microsoft Flow.
 ms.reviewer: trbaratc
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You can't sign in to Microsoft Flow and you receive an "Authentication failed" error
 

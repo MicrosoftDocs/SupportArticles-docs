@@ -3,7 +3,7 @@ title: Cannot import the patch for the solution
 description: Provides a solution to an error that occurs when importing a solution patch in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "You can't import the patch ([patch name]) for the solution ([solution name]) because the solution isn't present" error occurs when importing a solution patch in Microsoft Dynamics 365
 

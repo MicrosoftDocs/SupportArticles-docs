@@ -3,7 +3,7 @@ title: App doesn't appear within Outlook
 description: Dynamics 365 App for Outlook doesn't appear within Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics 365 App for Outlook does not appear within Outlook
 

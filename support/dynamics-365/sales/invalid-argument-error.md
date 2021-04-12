@@ -3,7 +3,7 @@ title: Invalid Argument error when configuring Dynamics CRM
 description: Fixes an issue in which you get the "Invalid Argument" error when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Invalid Argument" error when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

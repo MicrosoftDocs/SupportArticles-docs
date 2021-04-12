@@ -3,7 +3,7 @@ title: Error when signing in to Dynamics 365
 description: Provides a solution to error messages display when you try to sign in to Microsoft Dynamics 365 (online).
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error messages display when you try to sign in to Microsoft Dynamics 365 (online)
 

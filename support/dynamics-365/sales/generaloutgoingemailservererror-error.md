@@ -3,7 +3,7 @@ title: GeneralOutgoingEmailServerError error
 description: Email Server Error Code GeneralOutgoingEmailServerError occurs in a Microsoft Dynamics 365 mailbox record. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # GeneralOutgoingEmailServerError error occurs in Microsoft Dynamics 365 mailbox
 

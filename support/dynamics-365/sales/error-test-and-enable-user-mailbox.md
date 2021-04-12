@@ -3,7 +3,7 @@ title: Error when you test and enable a user's mailbox
 description: This article provides a resolution for the problem that occurs when you select Test and Enable on a user's Mailbox Profile.
 ms.reviewer: taskar
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An error occurs on Test and Enable for a user's Mailbox Profile in Microsoft Dynamics CRM 2013 Server-Side-Synchronization
 

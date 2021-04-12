@@ -3,7 +3,7 @@ title: How to send an email with an embedded image
 description: Introduces how to send an email with an embedded image.
 ms.reviewer:  
 ms.topic: how-to
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to send an email with an embedded image
 

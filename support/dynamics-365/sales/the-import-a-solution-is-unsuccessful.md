@@ -3,7 +3,7 @@ title: The import of a solution is unsuccessful
 description: Provides a solution to an error that occurs when you try to import a solution in Microsoft Dynamics CRM 2011.
 ms.reviewer: chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The import of a solution may be unsuccessful in Microsoft Dynamics CRM 2011
 

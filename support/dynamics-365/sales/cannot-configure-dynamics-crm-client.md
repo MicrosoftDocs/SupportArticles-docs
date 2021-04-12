@@ -3,7 +3,7 @@ title: Can't configure Dynamics CRM client
 description: Discusses the issue that you can't configure the Microsoft Dynamics CRM Client for Outlook because of time zone settings.
 ms.reviewer: debrau, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Problem communicating with the Microsoft Dynamics CRM Server error message when you configure the Dynamics CRM Client for Outlook
 

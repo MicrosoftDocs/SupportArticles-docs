@@ -3,7 +3,7 @@ title: Convert Lead no longer appears during lead qualification
 description: The Convert Lead dialog box does not show during the lead qualification in Microsoft Dynamics CRM Online. This is by design.
 ms.reviewer: debrau
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The Convert Lead dialog box no longer appears during lead qualification in Microsoft Dynamics CRM Online
 
