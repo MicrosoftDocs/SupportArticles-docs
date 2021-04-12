@@ -35,7 +35,7 @@ This article describes the following TCP features in Windows:
 The TCP features can be changed by changing the entries in the registry.
 
 > [!IMPORTANT]
-> This following sections, methods, or tasks contain steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
+> The following sections, methods, or tasks contain steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
 ## TCP window size
@@ -139,7 +139,7 @@ To calculate the true window size, multiply the window size by 2^S where S is th
 For Example:
 
 If the window size is 65,535 bytes with a window scale factor of 3.  
-True window size = 65535*2^three
+True window size = 65535*2^3
 
 True window size = 524280  
 
@@ -170,7 +170,7 @@ TCP: Option Nop = 1 (0x1)
 TCP: Option Nop = 1 (0x1)  
 \+ TCP: SACK Permitted Option  
 
-The window size used in the actual three-way handshake isn't the window size that's scaled. This statement is per RFC 1323 section 2.2:
+The window size used in the actual three-way handshake isn't the window size that's scaled, per RFC 1323 section 2.2:
 
 "The Window field in a SYN (for example, a [SYN] or [SYN,ACK]) segment itself is never scaled."
 
@@ -197,7 +197,7 @@ It means that the first data packet sent after the three-way handshake is the ac
 
 For example:
 
-If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the three-way handshake is 13. Because a scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
+If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the three-way handshake is 13. A scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
 
 The initial window size in this example would be calculated as follows:  
 65,535 bytes with a window scale factor of 13.  
@@ -286,8 +286,8 @@ The SackOpts value in the following registry key can be edited to control the us
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
-1. On the toolbar select **Start** > **Run**, and then type *`Regedit`* to start the Registry Editor.
-2. Locate and click the above key in the Registry Editor, and then select **Modify** on the **Edit** menu.
+1. On the toolbar, select **Start** > **Run**, and then type *`Regedit`* to start the Registry Editor.
+2. Locate and select the above key in the Registry Editor, and then select **Modify** on the **Edit** menu.
 3. Type the desired value in the **Value data** box.  
 
 > [!NOTE]
@@ -328,21 +328,21 @@ The retransmission timeout (RTO) is adjusted continuously to match the character
 
 ### Fast retransmit
 
-TCP retransmits data before the retransmission timer expires under some circumstances. The most common cause is a feature known as fast retransmit. When a receiver that supports fast retransmit receives data with a sequence number beyond the current expected one, some data was likely dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do so for other TCP segments that arrive. When the sender starts to receive a stream of ACKs that's acknowledging the same sequence number, a segment likely has been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
+TCP retransmits data before the retransmission timer expires under some circumstances. The most common cause is a feature known as fast retransmit. When a receiver that supports fast retransmit receives data with a sequence number beyond the current expected one, some data was likely dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do so for each additional TCP segment that arrives. When the sender starts to receive a stream of ACKs that's acknowledging the same sequence number, a segment may have been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
 
-By default, Windows resends a segment if:
+By default, Windows resends a segment under the following conditions:
 
 - It receives three ACKs for the same sequence number: one ACK and two duplicates.
-- That sequence number lags the current one.
+- The sequence number lags the current one.
 
-This process is controllable with the TcpMaxDupAcks registry parameter.
+This behavior is controllable with the `TcpMaxDupAcks` registry parameter.
 
 The TcpMaxDupAcks value in the following registry key can be edited to control the number of ACKs necessary to start a fast retransmits:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
 1. On the toolbar, select **Start** > **Run**, and then type *`Regedit`* to start the Registry Editor.
-2. Locate and click the above key in the Registry Editor, and then select **Modify** on the **Edit** menu.
+2. Locate and select the above key in the Registry Editor, and then select **Modify** on the **Edit** menu.
 3. Type the desired value in the **Value data** box.  
 
 > [!NOTE]
