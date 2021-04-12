@@ -3,7 +3,7 @@ title: Error occurs when setting Dynamics CRM for Outlook
 description: This article provides a resolution to an error you may see when configuring the Microsoft Dynamics CRM Client for Microsoft Office Outlook.
 ms.reviewer: jowells, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Cannot authenticate your credentials error when configuring the Microsoft Dynamics CRM for Outlook client 2011
 

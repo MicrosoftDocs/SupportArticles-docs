@@ -3,7 +3,7 @@ title: TLS 1.2 is required for connectivity in Microsoft Dynamics 365 Customer E
 description: Describes that TLS 1.2 is required in Microsoft Dynamics 365 to connect to customer engagement applications, and identifies if you are impacted and what steps you may need to take.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics 365 Customer Engagement (online) to require TLS 1.2 for connectivity
 

@@ -3,7 +3,7 @@ title: The Campaign Activity can be distributed only once error after deleting C
 description: Discusses an issue that will occur when trying to distribute a campaign activity, if the StatusCode field has values that are deleted. Provides a resolution.
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The Campaign Activity can be distributed only once error after removing Campaign Activity StatusCode field values
 

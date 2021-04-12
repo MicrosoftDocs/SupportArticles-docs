@@ -3,7 +3,7 @@ title: Error when testing access from Dynamics CRM E-mail Router
 description: Describes a problem that occurs when you try to test access from the Microsoft Dynamics CRM E-mail Router. A resolution is provided.
 ms.reviewer: henningp, mmaasjo
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Could not establish trust relationship for the SSL/TLS secure channel error when testing access from Dynamics CRM E-mail Router
 

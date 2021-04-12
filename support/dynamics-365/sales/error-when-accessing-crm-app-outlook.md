@@ -3,7 +3,7 @@ title: Error when accessing CRM App for Outlook
 description: Provides a solution to an error that occurs when you access the App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You only have administrative access to Microsoft Dynamics CRM error message displays when accessing the Microsoft Dynamics CRM App for Outlook
 

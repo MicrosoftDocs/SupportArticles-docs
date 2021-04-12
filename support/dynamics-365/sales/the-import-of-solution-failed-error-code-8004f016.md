@@ -3,7 +3,7 @@ title: The import of solution failed with error code 8004f016
 description: The import of solution failed with error code 8004f016 when importing a solution in Microsoft Dynamics 365.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The import of solution failed with error code 8004f016 in Microsoft Dynamics 365
 

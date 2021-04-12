@@ -3,7 +3,7 @@ title: Input string was not in a correct format error when importing solution
 description: When you import a solution in Microsoft Dynamics 365, you receive an error that states input string was not in a correct format thrown by the application when processing a custom (plug-in) assembly. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Input string was not in a correct format error when importing a solution in Microsoft Dynamics 365
 

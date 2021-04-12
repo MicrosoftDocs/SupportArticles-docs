@@ -3,7 +3,7 @@ title: Unable to configure the Microsoft Dynamics CRM 2011 Client for Outlook
 description: This article provides a resolution for the problem that occurs when you try to configure the Dynamics CRM Client for Outlook against Dynamics CRM Online.
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to Configure the Microsoft Dynamics CRM 2011 Client for Outlook against Dynamics CRM Online
 

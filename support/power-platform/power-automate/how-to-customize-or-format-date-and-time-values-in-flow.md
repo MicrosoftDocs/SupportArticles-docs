@@ -3,7 +3,7 @@ title: How to customize or format Date and Time values in a flow
 description: Introduces how to customize or format date and time (for example, DateTime) values in a flow.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to customize or format Date and Time values in a flow
 

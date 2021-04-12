@@ -3,7 +3,7 @@ title: Configuration tool creates duplicate configuration file
 description: This article provides a resolution for the problem that occurs when you run the Microsoft Dynamics CRM 2011 Adapter Configuration tool to allow other types of records to be integrated in CRM.
 ms.reviewer: clintwa
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Dynamics Connector for Microsoft Dynamics CRM 2011 Configuration Tool Creates Duplicate Configuration File
 

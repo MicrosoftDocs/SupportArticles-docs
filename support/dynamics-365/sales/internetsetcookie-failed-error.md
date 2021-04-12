@@ -3,7 +3,7 @@ title: InternetSetCookie failed error
 description: Fixes an issue that occurs when you configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # InternetSetCookie failed error when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

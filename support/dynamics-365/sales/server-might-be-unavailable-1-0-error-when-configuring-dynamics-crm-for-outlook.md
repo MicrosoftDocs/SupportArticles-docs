@@ -3,7 +3,7 @@ title: The server might be unavailable error when configuring Dynamics CRM for O
 description: When you try to configure the Microsoft Dynamics CRM for Outlook client, you receive an error that states the server might be unavailable. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The server might be unavailable {1}{0}" error when trying to configure Microsoft Dynamics CRM for Outlook
 

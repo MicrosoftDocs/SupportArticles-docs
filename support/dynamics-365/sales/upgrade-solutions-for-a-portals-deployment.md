@@ -3,7 +3,7 @@ title: Upgrade solutions for a Portals Deployment
 description: Describes how to upgrade the solutions for a Microsoft Dynamics CRM Portals Deployment.
 ms.reviewer: jbirnbau
 ms.topic: how-to
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to upgrade the solutions for a Microsoft Dynamics CRM Portals Deployment
 

@@ -3,7 +3,7 @@ title: Cannot add CRM add-in to the Favorites pane in Outlook 2010
 description: You cannot add Microsoft Dynamics CRM entities to the Microsoft Outlook favorites. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Cannot add Microsoft Dynamics CRM add-in to the Favorites pane in Outlook 2010
 

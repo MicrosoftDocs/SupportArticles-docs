@@ -3,7 +3,7 @@ title: Database cannot be started in this edition of SQL Server error
 description: Describes the issue and resolution for restoring a Microsoft Dynamics CRM 2011 with Microsoft SQL Server Enterprise edition database to a server with Microsoft SQL Server Standard edition.
 ms.reviewer: chanson, ehagen
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database
 

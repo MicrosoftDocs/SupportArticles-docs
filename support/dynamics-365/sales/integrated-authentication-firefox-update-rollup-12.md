@@ -3,7 +3,7 @@ title: Integrated authentication with Firefox
 description: This article provides a resolution for the problem that occurs when Mozilla Firefox users attempt to log in to Microsoft Dynamics CRM 2011 by using Integrated Windows authentication.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM 2011 Integrated authentication with Firefox in Update Rollup 12
 

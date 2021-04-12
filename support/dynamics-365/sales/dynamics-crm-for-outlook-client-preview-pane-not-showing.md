@@ -3,7 +3,7 @@ title: Dynamics CRM for Outlook Preview Pane does not show
 description: Microsoft Dynamics CRM 2011 Outlook client Preview Pane not displaying. Provides a resolution.
 ms.reviewer: Kevtunst, aaronric
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM 2011 for Outlook client Preview Pane does not display
 

@@ -3,7 +3,7 @@ title: UnknownIncomingEmailIntegrationError -2147167669 appears in alert in mail
 description: UnknownIncomingEmailIntegrationError -2147167669 appears in alert in Microsoft Dynamics 365 mailbox.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # UnknownIncomingEmailIntegrationError -2147167669 appears in alert in Microsoft Dynamics 365 mailbox
 

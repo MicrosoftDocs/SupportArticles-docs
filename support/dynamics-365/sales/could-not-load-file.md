@@ -3,7 +3,7 @@ title: Couldn't load file
 description: Provides a solution to errors that occur when you configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error messages display when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

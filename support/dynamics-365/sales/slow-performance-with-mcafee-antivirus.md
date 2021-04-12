@@ -3,7 +3,7 @@ title: Slow performance with McAfee antivirus
 description: Provides workarounds for the experience performance issues in Microsoft Dynamics CRM if you are running McAfee Enterprise 8.x virus scanner.
 ms.reviewer: dzilch
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Slow performance with McAfee antivirus
 

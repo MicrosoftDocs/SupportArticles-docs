@@ -3,7 +3,7 @@ title: Desktop flows run failed with AadLogonFailure
 description: UI flows run failed with AadLogonFailure error code. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Desktop flows run failed with AadLogonFailure error code
 

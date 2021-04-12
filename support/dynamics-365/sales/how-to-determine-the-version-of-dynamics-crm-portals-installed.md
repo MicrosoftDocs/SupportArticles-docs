@@ -3,7 +3,7 @@ title: How to determine the version of CRM portals installed
 description: Introduces how to determine the version of a Microsoft Dynamics 365 portal.
 ms.reviewer: jbirnbau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to determine the version of a Microsoft Dynamics 365 portal
 

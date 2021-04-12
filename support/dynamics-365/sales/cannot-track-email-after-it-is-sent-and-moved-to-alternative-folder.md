@@ -3,7 +3,7 @@ title: Cannot track email after sent and moved to another location
 description: You can't track an email in Microsoft Dynamics CRM 2011 for Microsoft Office Outlook when the email is sent and moved to an alternative location other than the Sent Items folder. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Cannot track email when it is sent and moved to an alternative location other than the Sent Items folder
 

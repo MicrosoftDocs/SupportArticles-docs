@@ -3,7 +3,7 @@ title: Error when installing Update Rollup for CRM client for Outlook
 description: Fixes an issue in which you get the "Cannot load Counter Name data" error when trying to install Update Rollups for the Microsoft Dynamics CRM Client for Outlook. 
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An error may occur when trying to install Update Rollup for Microsoft Dynamics CRM client for Outlook
 

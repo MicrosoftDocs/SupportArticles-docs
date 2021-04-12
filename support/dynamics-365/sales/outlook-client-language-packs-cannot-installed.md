@@ -3,7 +3,7 @@ title: Outlook Client Language Packs cannot be installed
 description: This article provides a resolution for the problem that occurs after you install the Critical Update for the Microsoft Dynamics CRM 2011 Outlook Client Language Pack. 
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM 2011 Outlook Client Language Packs cannot be installed through Windows Update
 

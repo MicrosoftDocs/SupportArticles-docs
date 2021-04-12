@@ -3,7 +3,7 @@ title: Troubleshoot UI flow invalid credentials error using AAD account
 description: How to troubleshoot the errors of InvalidConnectionCredentials or WindowsIdentityIncorrect when running your UI flow.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Troubleshoot desktop flow invalid credentials error using AAD account
 

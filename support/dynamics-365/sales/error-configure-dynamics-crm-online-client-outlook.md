@@ -3,7 +3,7 @@ title: Error when you configure Microsoft Dynamics CRM Online Client for Outlook
 description: This article provides a resolution for the problem that occurs when you try to configure the Microsoft Dynamics CRM Online Client.
 ms.reviewer: jadenb, ehagen
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Cannot connect to Microsoft Dynamics CRM server because we cannot authenticate your credentials" error when you configure Microsoft Dynamics CRM Online Client for Outlook
 
