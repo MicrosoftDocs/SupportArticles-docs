@@ -17,6 +17,8 @@
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name:  Can't send messages to a group chat
       href: ./teams-administration/unable-send-message-group-chat.md
+    - name: Error when switching a tenant to Teams Only mode
+      href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Organizations can't prevent users from changing profile photos
