@@ -3,7 +3,7 @@ title: Navigation bars do not function on a record form
 description: This article provides a resolution for the problem where you may notice that the navigation arrows found within a record appear as gray and do not take action when clicked on.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Navigation bars do not function on a record form when using CRM 2011 for Outlook
 

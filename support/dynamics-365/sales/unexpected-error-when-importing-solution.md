@@ -3,7 +3,7 @@ title: Unexpected error when importing solution
 description: Provides a solution to the code 80040216 error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unexpected error (80040216) when importing solution in Microsoft Dynamics 365
 

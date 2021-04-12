@@ -3,7 +3,7 @@ title: Error connecting Microsoft Dynamics CRM for Outlook
 description: Provides links to fix the error when you try to connect Microsoft Dynamics CRM for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Solutions for Microsoft.Crm.Application.Outlook.Config.ConfigException:80131600
 

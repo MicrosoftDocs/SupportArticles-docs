@@ -3,7 +3,7 @@ title: An email fails to be created as the sync error
 description: Provides a solution to an error that occurs when you review email messages that were analyzed for automatic promotion by Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An email fails to be created in Microsoft Dynamics 365 with Duplicate shown as the sync error
 

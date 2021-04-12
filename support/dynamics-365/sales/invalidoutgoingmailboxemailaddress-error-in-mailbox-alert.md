@@ -3,7 +3,7 @@ title: InvalidOutgoingMailboxEmailAddress error in mailbox alert
 description: InvalidOutgoingMailboxEmailAddress error appears in Microsoft Dynamics 365 mailbox alert.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # InvalidOutgoingMailboxEmailAddress error appears in Microsoft Dynamics 365 mailbox alert
 

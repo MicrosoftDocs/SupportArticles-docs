@@ -3,7 +3,7 @@ title: Mailbox doesn't have a valid email address
 description: Fixes an issue in which you get the "Mailbox doesn't have a valid email address" error when using the Server-Side Synchronization in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Mailbox doesn't have a valid email address" error occurs when using Server-Side Synchronization
 

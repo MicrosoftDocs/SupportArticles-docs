@@ -3,7 +3,7 @@ title: Error when you set Relationship Behavior to Cascade Active
 description: This article provides a resolution for the problem that occurs when you try to set the Relationship Behavior to Cascade Active on certain relationships.
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You encounter an error when you set Relationship Behavior to Cascade Active on certain relationships
 

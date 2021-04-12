@@ -3,7 +3,7 @@ title: Error when uninstalling Portals solutions
 description: Provides a solution to a dependency error attempting to uninstall Portals solutions from Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Dependency error when you try to uninstall Portals solutions from Microsoft Dynamics 365
 

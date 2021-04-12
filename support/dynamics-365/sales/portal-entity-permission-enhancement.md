@@ -3,7 +3,7 @@ title: Portal Entity Permission Enhancement
 description: Portal Entity Permission Enhancement requires record modifications.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Portal Entity Permission Enhancement requires record modifications
 

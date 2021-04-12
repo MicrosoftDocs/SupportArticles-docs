@@ -3,7 +3,7 @@ title: Unable to connect to your Microsoft Dynamics 365 server error when using 
 description: When you try to use Microsoft Dynamics 365 App for Outlook, you receive a We're unable to connect to your Microsoft Dynamics 365 server error. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # We're unable to connect to your Microsoft Dynamics 365 server error when using Microsoft Dynamics 365 App for Outlook
 

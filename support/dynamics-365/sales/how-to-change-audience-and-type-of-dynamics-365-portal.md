@@ -3,7 +3,7 @@ title: How to change the audience and type of Dynamics 365 Portal
 description: Introduces how to change the audience and type of a Dynamics 365 Portal.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to change the audience and type of a Microsoft Dynamics 365 Portal
 

@@ -3,7 +3,7 @@ title: Error logging into Microsoft Dynamics CRM
 description: Fix an issue in which you get can't log into Microsoft Dynamics CRM.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "An error has occurred. Try this action again" error occurs when logging into Microsoft Dynamics CRM
 

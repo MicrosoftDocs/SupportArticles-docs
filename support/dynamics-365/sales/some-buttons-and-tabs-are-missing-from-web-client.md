@@ -3,7 +3,7 @@ title: Some buttons and tabs missing from the Web client
 description: Describes an issue that occurs because the Microsoft Dynamics CRM Web client and the Microsoft Dynamics CRM client for Outlook both use the same cookie.
 ms.reviewer: jstrand
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Some buttons and tabs are missing from the Microsoft Dynamics CRM Web client
 

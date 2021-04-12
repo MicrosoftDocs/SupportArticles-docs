@@ -3,7 +3,7 @@ title: Error when you access the app for Outlook
 description: This article provides a resolution for the problem that occurs when you click the Dynamics CRM app in Outlook (anywhere the app is supported).
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The language installed on your company's system isn't available on the app" error when accessing the Microsoft Dynamics CRM App for Outlook
 

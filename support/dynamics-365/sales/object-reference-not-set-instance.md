@@ -3,7 +3,7 @@ title: Object reference not set to an instance
 description: Provides a solution to an error that occurs when you configure the Microsoft Dynamics CRM for Outlook client.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Object reference not set to an instance of an object error message displays when you configure the Microsoft Dynamics CRM for Outlook client
 

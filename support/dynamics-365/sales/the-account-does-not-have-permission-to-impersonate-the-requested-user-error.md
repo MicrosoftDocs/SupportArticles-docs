@@ -3,7 +3,7 @@ title: The account does not have permission to impersonate the requested user er
 description: You may receive an error message that states the account does not have permission to impersonate the requested user. This issue occurs when you select Test Connection on an email server profile. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The account does not have permission to impersonate the requested user error when selecting Test Connection in Microsoft Dynamics 365
 

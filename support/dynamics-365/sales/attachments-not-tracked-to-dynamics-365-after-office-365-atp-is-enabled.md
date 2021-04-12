@@ -3,7 +3,7 @@ title: Attachments not tracked after Office 365 ATP is enabled
 description: Attachments are not tracked to Dynamics 365 after Office 365 Advanced Thread Protection (ATP) is enabled. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Attachments are not tracked to Microsoft Dynamics 365 after Office 365 Advanced Thread Protection(ATP) is enabled
 

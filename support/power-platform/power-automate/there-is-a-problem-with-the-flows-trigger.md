@@ -3,7 +3,7 @@ title: There is a problem with the flow's trigger
 description: You may see an error that states there is a problem with the flow's trigger in a flow's run history. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "There is a problem with the flow's trigger" error shown in a flow's run history
 

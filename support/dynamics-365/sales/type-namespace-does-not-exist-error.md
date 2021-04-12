@@ -3,7 +3,7 @@ title: Type or namespace doesn't exist error
 description: Provides a solution to an error that occurs when a Microsoft Dynamics CRM organization is created by using the name Portal.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Type or namespace does not exist error received when accessing a Microsoft Dynamics CRM organization
 

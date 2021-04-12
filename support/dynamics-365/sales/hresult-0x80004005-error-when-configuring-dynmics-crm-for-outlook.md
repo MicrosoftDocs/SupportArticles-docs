@@ -3,7 +3,7 @@ title: HResult 0x80004005 error when configuring
 description: When you try to set Microsoft Dynamics CRM for Microsoft Office Outlook, you receive the HResult 0x80004005 error. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # HResult 0x80004005 error when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 

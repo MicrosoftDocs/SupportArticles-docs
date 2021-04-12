@@ -3,7 +3,7 @@ title: Unable to create the External Relying Party Trust
 description: This article provides a resolution for the problem that occurs when you configure the CRM External IFD Relying Party in AD FS.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to successfully create the External Relying Party Trust for Microsoft Dynamics CRM 2011
 

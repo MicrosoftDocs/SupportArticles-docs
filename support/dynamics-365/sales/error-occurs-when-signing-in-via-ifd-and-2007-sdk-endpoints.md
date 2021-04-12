@@ -3,7 +3,7 @@ title: Error occurs while signing in via IFD and 2007 SDK endpoints
 description: You receive an error while trying to sign in to Microsoft Dynamics CRM 2011 using IFD and the 2007 (CRM 4.0) SDK endpoints. Provides a resolution.
 ms.reviewer: jrader
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You receive an error while signing in to Microsoft Dynamics CRM 2011 via IFD and the 2007 SDK endpoints
 

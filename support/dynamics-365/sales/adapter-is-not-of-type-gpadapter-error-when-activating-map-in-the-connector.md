@@ -3,7 +3,7 @@ title: The Adapter is not of type GPAdapter error when activating a map in Conne
 description: When you run a map in the Connector for Microsoft Dynamics GP, you receive an error message that states the Adapter is not of type GPAdapter. Provides a resolution.
 ms.reviewer: ehagen
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The Adapter is not of type GPAdapter" error when activating a map in the Connector for Microsoft Dynamics GP
 

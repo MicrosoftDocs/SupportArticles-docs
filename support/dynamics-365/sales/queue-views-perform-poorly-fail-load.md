@@ -3,7 +3,7 @@ title: Queue views perform poorly or fail to load
 description: This article provides a resolution for the problem that occurs when you navigate to Queues in the Service module of Microsoft Dynamics CRM 2015.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Queue views perform poorly, or fail to load in Microsoft Dynamics CRM 2015
 

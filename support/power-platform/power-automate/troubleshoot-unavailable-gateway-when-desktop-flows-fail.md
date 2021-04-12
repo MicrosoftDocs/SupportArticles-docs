@@ -3,7 +3,7 @@ title: Gateway or machine is offline if desktop flows fail with gateway error
 description: Troubleshoot an unavailable gateway.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Gateway or machine should be online when desktop flows fail with a gateway error
 

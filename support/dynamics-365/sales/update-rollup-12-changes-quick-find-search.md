@@ -3,7 +3,7 @@ title: Update Rollup 12 changes quick find search behavior
 description: This article provides a resolution for the problem that occurs after applying Update Rollup 12 to the Microsoft Dynamics CRM 2011 Outlook client. 
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Update Rollup 12 changes quick find search behavior in the Microsoft Dynamics CRM Outlook client
 

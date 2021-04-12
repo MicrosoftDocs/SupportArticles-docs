@@ -3,7 +3,7 @@ title: Microsoft Dynamics CRM Client Performance diagnostic tool
 description: This article describes the data that is collected by the Microsoft Dynamics CRM Client Performance diagnostic tool.
 ms.reviewer: aaronric
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # [SDP 3][f4af120f-5d6c-46ec-b616-694b6600675c]The Microsoft Dynamics CRM Client Performance diagnostic tool
 

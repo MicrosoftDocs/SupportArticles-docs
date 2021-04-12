@@ -3,7 +3,7 @@ title: The server address isn't valid
 description: Fixes an issue in which you receive the server address (URL) is not valid when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The server address (URL) is not valid" error when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

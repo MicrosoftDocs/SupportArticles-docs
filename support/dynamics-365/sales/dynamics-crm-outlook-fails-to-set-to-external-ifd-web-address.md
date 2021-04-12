@@ -3,7 +3,7 @@ title: Cannot set Dynamics CRM Outlook to external IFD web address
 description: You can't configure the Microsoft Dynamics CRM Outlook client to the external web address. Provides a resolution.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The Microsoft Dynamics CRM 2011 Outlook client fails to configure to the external IFD web address
 

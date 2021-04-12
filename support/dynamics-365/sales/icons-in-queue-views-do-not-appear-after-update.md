@@ -3,7 +3,7 @@ title: Icons in Queue Views do not appear after update
 description: Icons in Queue Views do not show after Update Rollup 12 or the December 2012 Service Update for Microsoft Dynamics CRM 2011.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Icons in Queue Views do not show after Update Rollup 12 or the December 2012 Service Update for Microsoft Dynamics CRM 2011
 

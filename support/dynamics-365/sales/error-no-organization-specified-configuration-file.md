@@ -3,7 +3,7 @@ title: Error no organization was specified in the configuration file
 description: This article provides a resolution for the problem that occurs when you configure the Microsoft Dynamics CRM Online client.
 ms.reviewer: jadenb, ehagen
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "No organization was specified in the configuration file" error when you configure the Microsoft Dynamics CRM Online Client for Outlook
 

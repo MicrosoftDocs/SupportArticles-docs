@@ -3,7 +3,7 @@ title: The specified subscription does not exist error when going offline
 description: The specified subscription does not exist - this error occurs when you try to go offline with Microsoft Dynamics CRM for Outlook. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The specified subscription does not exist" error when going offline with Microsoft Dynamics CRM for Outlook
 

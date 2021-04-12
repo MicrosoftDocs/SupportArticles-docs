@@ -3,7 +3,7 @@ title: Error code 8004F042 occurs when import solution patch.
 description: Provides a solution to an error that occurs when attempting to import a solution patch in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error code 8004F042 occurs when attempting to import solution patch in Microsoft Dynamics 365
 

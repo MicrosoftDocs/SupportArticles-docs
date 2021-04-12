@@ -3,7 +3,7 @@ title: No data if exporting Dynamic Worksheets or Pivot Tables
 description: After exporting Microsoft Dynamics CRM Dynamic Worksheets and/or Dynamic Pivot Tables using Claims Authentication, users do not see the expected data within the Excel worksheet.
 ms.reviewer: jowells, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Cannot see the expected data after exporting Dynamic Worksheets and/or Dynamic Pivot Tables
 

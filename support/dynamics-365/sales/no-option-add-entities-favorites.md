@@ -3,7 +3,7 @@ title: No option to add entities to favorites
 description: This article provides a workaround for the problem that occurs when you are using Microsoft Dynamics CRM Client for Outlook with Microsoft Office Outlook 2010.
 ms.reviewer: chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # There is no option to add Microsoft Dynamics CRM entities to favorites in Microsoft Office Outlook 2010
 

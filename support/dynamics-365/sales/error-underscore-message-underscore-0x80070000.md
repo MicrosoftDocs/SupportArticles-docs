@@ -3,7 +3,7 @@ title: Error_Message_0x80070000
 description: Provides a solution to an error that occurs when using Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error_Message_0x80070000 when using Microsoft Dynamics 365 App for Outlook
 

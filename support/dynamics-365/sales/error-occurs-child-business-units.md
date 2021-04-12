@@ -3,7 +3,7 @@ title: Error occurs in child business units
 description: Provides a solution to an error that occurs when you're initially able to connect the app to your Microsoft Dynamics CRM organization.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Something went wrong while initializing the app error message displays in the Microsoft Dynamics CRM app for users in child business units
 

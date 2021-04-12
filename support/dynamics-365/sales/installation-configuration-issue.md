@@ -3,7 +3,7 @@ title: An installation and configuration issue
 description: Discusses an installation and configuration issue with the Microsoft Dynamics CRM Client for Microsoft Office Outlook.
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Errors when you try to install or to configure the Microsoft Dynamics CRM Client for Microsoft Office Outlook
 
