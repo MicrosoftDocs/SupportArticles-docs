@@ -61,10 +61,10 @@ To install Support and Recovery Assistant and automatically start collecting ROI
 
 After Support and Recovery Assistant is successfully installed, collect the ROIScan data:
 
-1. Select **Advanced diagnostics** > **Next**.
+1. Select **Advanced diagnostics** > **Next**.<br/>
 :::image type="content" source="./media/use-sara-to-collect-install-info/open-screen.png" alt-text="Advanced Diagnostics window choose next":::
 
-1. Select **Office** > **Next**.
+1. Select **Office** > **Next**.<br/>
 :::image type="content" source="./media/use-sara-to-collect-install-info/advanced-diagnostics.png" alt-text="Select Office and then Next.":::
 
 1. Select **Normal Robust Office Inventory Scan** or **Full Robust Office Inventory Scan**.
