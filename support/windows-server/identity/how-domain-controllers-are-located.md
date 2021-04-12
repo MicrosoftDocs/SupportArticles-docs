@@ -37,10 +37,15 @@ This sequence describes how the Locator finds a domain controller:
   - For a DNS name, Netlogon queries DNS by using the IP/DNS-compatible Locator--that is, DsGetDcName calls the DnsQuery call to read the Service Resource (SRV) records and "A" records from DNS after it appends the domain name to the appropriate string that specifies the SRV records.
   - A workstation that is logging on to a Windows-based domain queries DNS for SRV records in the general form:
 
-    > _service._protocol.DnsDomainName  
+    ```output
+    _service._protocol.DnsDomainName
+    ```
 
-    Active Directory servers offer the Lightweight Directory Access Protocol (LDAP) service over the TCP protocol. Therefore, clients find an LDAP server by querying DNS for a record of the form:  
-    > _ldap._tcp.DnsDomainName
+    Active Directory servers offer the Lightweight Directory Access Protocol (LDAP) service over the TCP protocol. Therefore, clients find an LDAP server by querying DNS for a record of the form:
+
+    ```output
+    _ldap._tcp.DnsDomainName
+    ```
 
 - For a NetBIOS name, Netlogon performs domain controller discovery by using the Microsoft Windows NT version 4.0-compatible Locator (that is, by using the transport-specific mechanism (for example, WINS).
 
@@ -56,7 +61,9 @@ UDP allows a program on one computer to send a datagram to a program on another 
 
 When a client logs on or joins the network, it must be able to locate a domain controller. The client sends a DNS Lookup query to DNS to find domain controllers, preferably in the client's own subnet. Therefore, clients find a domain controller by querying DNS for a record of the form:
 
->_LDAP._TCP.dc._msdcs.domainname  
+```output
+_LDAP._TCP.dc._msdcs.domainname
+```
 
 After the client locates a domain controller, it establishes communication by using LDAP to gain access to Active Directory. As part of that negotiation, the domain controller identifies which site the client is in based on the IP subnet of that client. If the client is communicating with a domain controller that is not in the closest (most optimal) site, the domain controller returns the name of the client's site. If the client has already tried to find domain controllers in that site (for example, when the client sends a DNS Lookup query to DNS to find domain controllers in the client's subnet), the client uses the domain controller that is not optimal. Otherwise, the client performs a site-specific DNS lookup again with the new optimal site name. The domain controller uses some of the directory service information for identifying sites and subnets.
 

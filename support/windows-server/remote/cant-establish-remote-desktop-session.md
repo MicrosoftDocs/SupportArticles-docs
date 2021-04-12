@@ -33,17 +33,19 @@ OK Help
 
 Additionally, when you view System Event log on the affected server you see the following event:
 
-> Event Type: Error  
+```output
+Event Type: Error  
 Event Source: TermService  
 Event Category: None  
 Event ID: 1036  
-Date: *\<DateTime>*  
-Time: *\<DateTime>*  
+Date: <DateTime>  
+Time: <DateTime>  
 User: N/A  
 Computer: Servername  
 Description:  
 Terminal Server session creation failed. The relevant status code was 0x2740.  
-For more information, see Help and Support Center at.  
+For more information, see Help and Support Center at.
+```
 
 ## Resolution
 
@@ -80,4 +82,3 @@ Use these steps only if you can't do local sign-in to the affected server.
     Change it's data to the value you noted in step 6. If you want RDP to listen on all LAN adapters enter value of 0.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
-

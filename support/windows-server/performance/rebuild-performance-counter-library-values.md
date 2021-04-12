@@ -108,15 +108,17 @@ If you continue to have problems when you start a .NET Framework application aft
 
 If you follow these procedures and remove the counters from the registry for all services installed on a system that has Microsoft System Center Operations Manager 2007 installed, you might have a broken Management Server. The counters for the Config Service, SDK Service, and Database Write modules aren't provided in the form of extensible counters in INI files. Instead, they are registered at the time of installation. So, when you try to start System Center Operations Manager 2007, you may receive an error message similar to the following example because the performance counters are missing:
 
-> Event Type: Error  
-> Event Source: OpsMgr SDK Service  
-> Event Category: None  
-> Event ID: 26380  
-> Date: **date**  
-> Time: **time**  
-> User: N/A  
-> Computer: MOM  
-> Description: The System Center Operations Manager SDK Service failed due to an unhandled exception.
+```output
+Event Type: Error  
+Event Source: OpsMgr SDK Service  
+Event Category: None  
+Event ID: 26380  
+Date: date  
+Time: time  
+User: N/A  
+Computer: MOM  
+Description: The System Center Operations Manager SDK Service failed due to an unhandled exception.
+```
 
 To resolve this problem in System Center Operations Manager 2007, you must reinstall the .NET Framework assemblies that created the performance counters. To do so, use the `/i` option in the .NET Framework Installer Tool (Installutil.exe) to reinstall the following assemblies:
 
