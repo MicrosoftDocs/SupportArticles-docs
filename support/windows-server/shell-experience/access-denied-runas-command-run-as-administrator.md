@@ -86,10 +86,10 @@ To do so, follow these steps:
 
     |Property|Objects|
     |---|---|
-    |Authenticated Users|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User Defined Control|
+    |Authenticated Users|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User-Defined Control|
     |Builtin\Administrators|Full Control|
-    |Interactive|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User Defined Control|
-    |Service|Query Template, Query Status, Enumerate Dependents, Pause, and continue, Interrogate, User Defined Control|
+    |Interactive|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User-Defined Control|
+    |Service|Query Template, Query Status, Enumerate Dependents, Pause, and continue, Interrogate, User-Defined Control|
     |System|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Stop|
 
 7. Select **OK** to apply the security changes.
