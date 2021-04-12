@@ -3,7 +3,7 @@ title: Import Organization failed with 0x80131904 error code
 description: You may receive a Windows NT user or group not found error when importing a Microsoft Dynamics CRM 2011 organization. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Windows NT user or group not found error when trying to import a Microsoft Dynamics CRM 2011 organization
 

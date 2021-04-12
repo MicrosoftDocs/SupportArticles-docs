@@ -3,7 +3,7 @@ title: Quick find in Outlook Client displays unexpected results
 description: This article provides two resolutions for the problem where the Quick find in Outlook Client displays unexpected results.
 ms.reviewer: bhshastr, clintwa
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # When using the Microsoft Dynamics CRM client for Outlook 2011, the Quick find in Outlook Client displays unexpected results
 

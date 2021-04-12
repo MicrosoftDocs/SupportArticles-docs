@@ -3,7 +3,7 @@ title: Cannot open database requested by the login error when you sign in
 description: Describes a problem that occurs when you try to sign in to Microsoft Dynamics CRM 2011. A resolution is provided.
 ms.reviewer: njohnson, svetter
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Cannot open database requested by the login error when you sign in to Microsoft Dynamics CRM
 

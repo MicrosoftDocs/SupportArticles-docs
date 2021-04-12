@@ -3,7 +3,7 @@ title: Error_Message_0x8006ffff when accessing Dynamics 365
 description: Error_Message_0x8006ffff occurs when you access Microsoft Dynamics 365 within the Add-ins area of Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Issue when trying to access Microsoft Dynamics 365 within the Add-ins area of Outlook
 

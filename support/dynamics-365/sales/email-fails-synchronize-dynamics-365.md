@@ -3,7 +3,7 @@ title: Email fails to synchronize to Dynamics 365
 description: Provides a solution to an issue where email fails to synchronize to Microsoft Dynamics 365 when encoded with PEC.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Email fails to synchronize to Microsoft Dynamics 365 when encoded with PEC
 

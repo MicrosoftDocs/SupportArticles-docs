@@ -3,7 +3,7 @@ title: New Forms are formatted incorrectly
 description: Provides a solution to an issue where new forms are formatted incorrectly or don't appear when working offline in the Microsoft Dynamics CRM Outlook client.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # New Forms are formatted incorrectly or don't appear when working offline in the Microsoft Dynamics CRM Outlook client after applying the December 2012 Service Update
 

@@ -3,7 +3,7 @@ title: MSCRMSandboxClient errors in the Event Viewer
 description: This article provides a resolution for the problem where MSCRMSandboxClient errors occur in the Event Viewer.
 ms.reviewer: jowells
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # MSCRMSandboxClient errors in the Event Viewer for Microsoft Dynamics CRM 2011
 

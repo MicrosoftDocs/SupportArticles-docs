@@ -3,7 +3,7 @@ title: Manage orphan flow when owner leaves org
 description: Describes how to manage orphan flows when the owner leaves the organization.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to manage orphan flows when the owner leaves the organization
 

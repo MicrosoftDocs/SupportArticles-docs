@@ -3,7 +3,7 @@ title: Test Connection fails from Email Server
 description: Provides a solution to an issue where Test Connection fails from Email Server Profile in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Test Connection fails from Email Server Profile in Microsoft Dynamics 365
 

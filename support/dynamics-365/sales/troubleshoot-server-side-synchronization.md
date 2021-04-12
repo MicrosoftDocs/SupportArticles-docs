@@ -3,7 +3,7 @@ title: Troubleshoot Server-Side Synchronization
 description: Describes how to troubleshooting Server-Side Synchronization.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Troubleshooting Server-Side Synchronization
 

@@ -3,7 +3,7 @@ title: Error occurs when running the Sync
 description: Provides a solution to errors that occur when you run the Synchronize with CRM function in the Microsoft Dynamics CRM 2011 Outlook Client.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to cast object of type System.DBNull to type System.String error occurs when you run the Synchronize with CRM function in the Microsoft Dynamics CRM 2011 Outlook client
 

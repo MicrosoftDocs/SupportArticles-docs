@@ -3,7 +3,7 @@ title: Slow performance in CRM 2011 client
 description: This article discusses options to modify the time intervals that determine when background activities run and the Microsoft Dynamics CRM client for Outlook is used.
 ms.reviewer: chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Slow performance when you use the Microsoft Dynamics CRM 2011 client for Outlook
 

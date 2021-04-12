@@ -3,7 +3,7 @@ title: Error when uninstalling a managed solution
 description: Discusses an issue that occurs when you try to uninstall a managed solution.
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The object you tried to delete is associated with another object and cannot be deleted error when you try to uninstall a managed solution in Microsoft Dynamics CRM
 

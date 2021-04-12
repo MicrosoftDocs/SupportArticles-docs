@@ -3,7 +3,7 @@ title: Update client app's registration in AD FS
 description: This article describes updated mobile applications and additional Redirect URIs.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Update client app's registration in AD FS (CRM On-Premises)
 

@@ -3,7 +3,7 @@ title: Unable to integrate Yammer
 description: This article provides a resolution for the problem where you are unable to integrate Yammer with Microsoft Dynamics CRM 2011 Online.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to integrate Yammer with Microsoft Dynamics CRM 2011 Online
 

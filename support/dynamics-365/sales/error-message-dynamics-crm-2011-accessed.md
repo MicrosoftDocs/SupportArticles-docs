@@ -3,7 +3,7 @@ title: Error when Dynamics CRM 2011 is accessed through a mobile device
 description: This article provides a resolution for the problem that occurs when Dynamics CRM 2011 is accessed through a mobile device.
 ms.reviewer: v-anlang
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error message when Dynamics CRM 2011 is accessed through a mobile device
 

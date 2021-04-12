@@ -3,7 +3,7 @@ title: Buttons such as Track and Set Regarding are missing
 description: Buttons such as Track and Set Regarding are missing in Microsoft Dynamics 365 App for Outlook. Provides a resolution.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Buttons such as Track and Set Regarding are missing in Microsoft Dynamics 365 App for Outlook
 

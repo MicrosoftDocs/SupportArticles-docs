@@ -3,7 +3,7 @@ title: Error when configuring Dynamics CRM client
 description: Provides a solution to an error that occurs when you configure the Microsoft Dynamics CRM client for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # There is a problem communicating with the Microsoft Dynamics CRM server error message displays when you configure the Microsoft Dynamics CRM client for Outlook
 

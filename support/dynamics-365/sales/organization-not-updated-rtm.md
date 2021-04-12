@@ -3,7 +3,7 @@ title: Organization is not updated to RTM
 description: This article provides a resolution for the problem that occurs when you install Microsoft Dynamics CRM 2011 RTM, and then import an RC organization.
 ms.reviewer: ehagen, mmaasjo
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # When you import a Microsoft Dynamics CRM 2011 RC organization into a Microsoft Dynamics CRM 2011 RTM environment, the database does not get updated
 

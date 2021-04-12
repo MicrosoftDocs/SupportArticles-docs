@@ -3,7 +3,7 @@ title: Recorder not recording applications
 description: Recorder not recording applications.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Recorder not recording applications
 

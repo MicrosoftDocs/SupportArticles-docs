@@ -3,7 +3,7 @@ title: The SMTP address has no mailbox
 description: Provides a solution to an error that occurs when you select Test Connection on an Email Server Profile record in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The SMTP address has no mailbox associated with it error occurs in Microsoft Dynamics 365
 

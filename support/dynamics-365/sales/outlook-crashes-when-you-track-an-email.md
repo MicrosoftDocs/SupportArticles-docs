@@ -3,7 +3,7 @@ title: Outlook crashes when tracking an email
 description: Describes an issue where Outlook crashes when you select Track in CRM or Set Involves in an email with an attachment in Microsoft Dynamics CRM.
 ms.reviewer: dmartens, tasitae
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Outlook crashes when you try to track an email in Microsoft Dynamics CRM
 

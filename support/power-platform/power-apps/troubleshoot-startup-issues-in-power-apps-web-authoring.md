@@ -3,7 +3,7 @@ title: Troubleshooting startup issues in Power Apps Web Authoring
 description: Describes common startup problems in Power Apps Web Authoring. Troubleshooting steps and resolutions are provided.
 ms.reviewer: davidni
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Troubleshooting startup issues in Power Apps Web Authoring
 

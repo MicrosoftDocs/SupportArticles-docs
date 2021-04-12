@@ -3,7 +3,7 @@ title: Error when a user tries to go offline
 description: This article provides a resolution for the problem that occurs when you try to go offline in the Microsoft Dynamics CRM Client for Outlook.
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "An error occurred during deleting database" error when a user tries to go offline in the Microsoft Dynamics CRM Client for Outlook
 

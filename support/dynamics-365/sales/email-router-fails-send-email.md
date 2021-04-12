@@ -3,7 +3,7 @@ title: Email Router fails to send E-mail
 description: Email Router Fails to Send E-mail from Dynamics because of permissions.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Email Router fails to send E-mail from Microsoft Dynamics because of Permissions
 

@@ -3,7 +3,7 @@ title: UI flows fails with UIAElementMismatch
 description: UI flows fails with the UIAElementMismatch error. Provides steps to solve this issue.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # UI flows fails with error UIAElementMismatch
 

@@ -3,7 +3,7 @@ title: Email cannot be sent
 description: Describes an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Email cannot be sent because the email address of the mailbox requires an approval by an Office 365 administrator
 

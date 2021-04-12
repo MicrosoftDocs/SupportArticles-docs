@@ -3,7 +3,7 @@ title: Unable to connect to Dynamics CRM organization because it is disabled err
 description: You may receive an error that states unable to connect to your Microsoft Dynamics CRM organization because it is disabled at this time. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "We're unable to connect to Microsoft Dynamics CRM organization because it is disabled" error in Microsoft Dynamics CRM for Outlook
 

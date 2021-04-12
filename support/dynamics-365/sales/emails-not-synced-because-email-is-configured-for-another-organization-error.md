@@ -3,7 +3,7 @@ title: Emails aren't being synced error
 description: Emails aren't being synced because the email address for the mailbox is configured for another Dynamics 365 organization - this error may occur when you try to Test and Enable a mailbox in Microsoft Dynamics 365. Provides a resolution.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Emails aren't being synced because email address is configured for another organization error
 

@@ -3,7 +3,7 @@ title: An error occurred promoting this item to Microsoft CRM error
 description: When you track an outgoing email in the Microsoft Dynamics CRM for Outlook client, you may receive an error that states an error occurred promoting this item to Microsoft CRM.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An error occurred promoting this item to Microsoft CRM occurs when tracking an outgoing email in Microsoft Dynamics CRM for Outlook
 
