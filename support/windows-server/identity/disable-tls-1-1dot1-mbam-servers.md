@@ -22,22 +22,21 @@ _Original KB number:_ &nbsp; 4558055
 
 ## Symptoms
 
-Microsoft is planning to disable older TLS protocols, in preparation for disabling **TLS 1.0** and **1.1** by default. See [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/).  
+Microsoft is planning to disable older TLS protocols, in preparation for disabling **TLS 1.0** and **TLS 1.1** by default. See [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/).  
 
-Enterprise customers may require disabling TLS 1.0 and 1.1 in their environment for **Microsoft BitLocker Administration and Monitoring (MBAM) Infrastructure**.  
+For enterprise customers, it may require disabling TLS 1.0 and 1.1 in their environment for **Microsoft BitLocker Administration and Monitoring (MBAM) Infrastructure**.
 
 ## Resolution
 
-The following are the steps to disable TLS 1.0 and 1.1 on MBAM servers, and force the use of TLS 1.2.
+Follow these steps to disable TLS 1.0 and 1.1 on MBAM servers, and force the use of TLS 1.2.
 
 1. Download and install the latest available version of Microsoft .NET Framework on all MBAM servers that are：
     - Web Servers running IIS roles
-    - SQL Servers running SQL Server database Engine
-    - SQL Server Reporting Services.
+    - SQL Servers running SQL Server database Engine, and SQL Server Reporting Services
 
     Refer to: [Microsoft .NET Framework 4.8 offline installer for Windows](https://support.microsoft.com/help/4503548/microsoft-net-framework-4-8-offline-installer-for-windows)  
-1. Execute the PowerShell Scripts below. They're used to disable TLS 1.0 and 1.1 and force the use only TLS 1.2.
-1. Reboot the servers, then test the MBAM web applications and confirm that the MBAM clients can communicate with the server to back up recovery information.
+1. Execute the PowerShell scripts below. They're used to disable TLS 1.0 and 1.1, and force the use only TLS 1.2.
+1. Reboot the servers, then test the MBAM web applications. Confirm that the MBAM clients can communicate with the server to back up recovery information.
 
 \<Tighten_DotNet.PS1>
 
