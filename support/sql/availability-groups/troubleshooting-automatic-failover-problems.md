@@ -155,7 +155,7 @@ To check whether the availability databases were in the SYNCHRONIZED status, fol
 
 Conclusion
 
-A successful automatic failover of the availability group requires all availability databases be in the `SYNCHRONIZED` status. For more information about availability modes, go to the following MSDN website:
+A successful automatic failover of the availability group requires all availability databases be in the `SYNCHRONIZED` status. For more information about availability modes, review the following link:
 
 [Availability modes in AlwaysOn availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups)
 
