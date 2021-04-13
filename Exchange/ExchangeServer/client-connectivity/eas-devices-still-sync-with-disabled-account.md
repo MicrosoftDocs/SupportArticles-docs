@@ -1,8 +1,8 @@
 ---
 title: EAS still syncs with disabled account or password
 description: Describes an issue in which EAS devices still sync after an account is disabled or a password is changed.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

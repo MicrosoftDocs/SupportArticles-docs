@@ -1,8 +1,8 @@
 ---
 title: Show a Room list option not shown in Room Finder
 description: Describes an issue that prevents the Show a Room list option from being displayed in the Room Finder pane in Outlook. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Access data connections are slow to refresh in Excel
 description: How to resolve an issue when Access data connections are slow to refresh in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel
 - Access

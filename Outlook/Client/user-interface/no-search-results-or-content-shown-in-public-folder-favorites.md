@@ -1,8 +1,8 @@
 ---
 title: No search results or content shown in favorites
 description: Describes an Outlook 2016 issue in which no search results are displayed when you search public folder favorites, or no content is displayed in public folder favorites. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

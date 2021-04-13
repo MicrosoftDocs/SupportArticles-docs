@@ -2,6 +2,15 @@
 
 
 
+## Week of April 05, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/9/2021 | [Nintex workflow on SharePoint Online does not start](/sharepoint/troubleshoot/workflows/nintex-workflow-fails-to-start) | added |
+| 4/9/2021 | [How to replace the root site in SharePoint Online](/sharepoint/troubleshoot/sites/url-that-resides-under-root-site-collection-is-broken) | modified |
+
+
 ## Week of March 22, 2021
 
 

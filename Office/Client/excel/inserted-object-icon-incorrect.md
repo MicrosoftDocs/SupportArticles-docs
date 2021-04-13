@@ -1,7 +1,7 @@
 ---
 title: Incorrect icon shows when inserting an object in Excel 2019
 description: When you try to insert a synced file in Excel 2019, the icon is displayed incorrectly.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2019
 ---

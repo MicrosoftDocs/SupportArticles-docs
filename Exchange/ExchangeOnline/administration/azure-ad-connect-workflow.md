@@ -1,8 +1,8 @@
 ---
 title: Azure AD Connect workflow in Office 365
 description: Describes the workflow with which Azure AD Connect works in Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

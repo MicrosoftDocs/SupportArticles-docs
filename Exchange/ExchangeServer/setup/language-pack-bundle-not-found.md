@@ -1,8 +1,8 @@
 ---
 title: The installation in RecoverServer mode fails
 description: Describes an issue that causes an Exchange Server 2013 installation attempt to fail. This issue is language pack-related, and it occurs when you're using RecoverServer mode. The resolution involves changing a registry setting.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

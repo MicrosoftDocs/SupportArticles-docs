@@ -1,8 +1,8 @@
 ---
 title: Insecure connection error in Outlook for iOS and Android at Exchange logon
 description: You receive an Insecure connection or Secure connection unavailable error message when you use Outlook for iOS or Android to sign in Exchange Server. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

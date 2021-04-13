@@ -1,8 +1,8 @@
 ---
 title: Use SPQuery to query a list
 description: Describes how to use SPQuery to query a list in SharePoint Server 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -2,6 +2,29 @@
 
 
 
+## Week of April 05, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/5/2021 | [Outlook connection issues with Exchange mailboxes because of the RPC encryption requirement](/exchange/troubleshoot/client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement) | modified |
+| 4/9/2021 | [MSExchangeServicesAppPool crashes](/exchange/troubleshoot/administration/event-id-4999-msexchangeservicesapppool-crash) | modified |
+
+
+## Week of March 29, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/29/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 3/30/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 3/31/2021 | [Manually update scan engines](/exchange/troubleshoot/setup/manually-update-scan-engines) | modified |
+| 3/31/2021 | [“The connection to your mail server timed out” error in Outlook for iOS or Outlook for Android](/exchange/troubleshoot/client-connectivity/connection-to-mail-server-timed-out) | added |
+| 3/31/2021 | [“The connection to your mail server timed out” error in Outlook for iOS or Outlook for Android](/exchange/troubleshoot/client-connectivity/connection-to-mail-server-timed-out) | modified |
+| 4/1/2021 | [Outlook or OWA cannot connect to Public Folders](/exchange/troubleshoot/public-folders/outlook-or-owa-cannot-connect-to-public-folders) | modified |
+| 4/1/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+
+
 ## Week of March 22, 2021
 
 

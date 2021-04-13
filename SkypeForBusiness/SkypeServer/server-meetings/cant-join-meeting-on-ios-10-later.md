@@ -1,7 +1,7 @@
 ---
 title: Can't join a meeting on iOS 10.0 and later
 description: Describes an issue in which you can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 10.0. Provides a workaround.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: jaredgo, pmaloo, jasco, rischwen, amitpeer, mirung, corbinm, landerl  
 appliesto:
 - Lync 2013 for iPad

@@ -1,8 +1,8 @@
 ---
 title: Incorrect holidays in .hol files
 description: This article documents a known issue with the Outlook 2010 holiday (.hol) file. The same issue is present in the updated .hol file that was released for Outlook 2007 in August 2012.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Cannot verify the license for this product when start an Office app
 description: Describes an issue that triggers a licensing error when you try to start an Office 2013 and Office 2016 application. A resolution is provided.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office Professional Plus 2016

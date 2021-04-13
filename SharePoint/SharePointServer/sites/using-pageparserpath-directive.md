@@ -1,7 +1,7 @@
 ---
 title: Using PageParserPath directive can cause performance problems
 description: Describes performance problems when using PageParserPath directive.
-author: v-miegge
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013

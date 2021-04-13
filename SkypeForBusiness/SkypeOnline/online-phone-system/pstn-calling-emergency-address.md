@@ -1,7 +1,7 @@
 ---
 title: Validating a PSTN Calling emergency address returns an abbreviated city name
 description: Explains that validating an emergency address for your organization may return an abbreviated name of the city.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

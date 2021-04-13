@@ -1,8 +1,8 @@
 ---
 title: How to disable the background save feature
 description: Describes how to disable the background save feature in Microsoft Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot
-ms.reviewer: v-six
+ms.reviewer: luche
 appliesto:
 - Outlook 2019
 - Outlook 2016

@@ -1,7 +1,7 @@
 ---
 title: Enable-CsAdForest command fails in a multi domain active directory
 description: Resolves an issue in which Lync Server Enable-CsAdForest command fails in a multi domain active directory.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: seemarah 
 ms.custom: CSSTroubleshoot
 appliesto:

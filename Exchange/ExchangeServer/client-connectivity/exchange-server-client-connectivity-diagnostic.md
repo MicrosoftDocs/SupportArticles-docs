@@ -1,8 +1,8 @@
 ---
 title: Exchange Server Client Connectivity Diagnostic
 description: Describes the Exchange Server Client Connectivity Diagnostic and the information that it collects.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

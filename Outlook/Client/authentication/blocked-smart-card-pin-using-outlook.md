@@ -1,8 +1,8 @@
 ---
 title: Smart card PIN is blocked when using Outlook
 description: By default, Microsoft Outlook 2010 and Outlook 2013 are not configured to work with saved smart card credentials. This article explains how to use the EnableSmartCard registry value to configure Outlook correctly.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

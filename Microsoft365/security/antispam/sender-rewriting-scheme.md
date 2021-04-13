@@ -1,8 +1,8 @@
 ---
 title: Sender Rewriting Scheme (SRS) in Office 365
 description: Describes Sender Rewriting Scheme (SRS) in Office 365.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

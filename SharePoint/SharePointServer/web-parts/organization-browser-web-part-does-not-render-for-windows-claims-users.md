@@ -1,7 +1,7 @@
 ---
 title: Organization Browser web part does not render for Windows Claims users
 description: The Organization Browser webpart does not render the information for Windows Claims users in SharePoint 2010 and SharePoint 2013.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft SharePoint
 ---

@@ -1,8 +1,8 @@
 ---
 title: Delay when Outlook retrieves Autodiscover info
 description: Describes an issue that triggers a delay or other unexpected behavior when Outlook tries to retrieve Autodiscover information for an Exchange Online mailbox in a hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

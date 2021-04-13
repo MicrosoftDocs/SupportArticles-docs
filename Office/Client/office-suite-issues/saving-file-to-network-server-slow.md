@@ -1,7 +1,7 @@
 ---
 title: Saving documents to network server is slow
 description: Describes an issue in which saving documents to a remote server takes longer than expected when you are using EFS.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - office 2016
 - Office 2013

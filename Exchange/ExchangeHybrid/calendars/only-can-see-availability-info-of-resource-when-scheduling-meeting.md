@@ -1,8 +1,8 @@
 ---
 title: Only see availability info of resource when scheduling
 description: Describes a scenario in which on-premises users can't view capacity and description information when they try to create a meeting that uses a resource such as a meeting room or company equipment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

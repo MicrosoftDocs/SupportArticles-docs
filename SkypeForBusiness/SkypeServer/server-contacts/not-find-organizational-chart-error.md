@@ -1,8 +1,8 @@
 ---
 title: Can't view contact organization information
 description: Provides a workaround for an issue in which contact organization information cannot be found and you receive a "We didn't find an organizational chart" error message.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

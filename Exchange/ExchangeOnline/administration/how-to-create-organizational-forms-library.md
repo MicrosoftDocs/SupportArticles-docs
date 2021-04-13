@@ -1,8 +1,8 @@
 ---
 title: How to create organizational forms library
 description: Describes how to create an organizational forms library in Exchange Online and in on-premises Exchange Server 2013 and later versions.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

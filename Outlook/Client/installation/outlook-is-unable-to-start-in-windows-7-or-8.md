@@ -1,8 +1,8 @@
 ---
 title: Cannot start Outlook in Windows 7 or 8
 description: Outlook can't start on a computer that's running Windows 8 or Windows 7. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

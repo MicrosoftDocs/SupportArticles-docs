@@ -1,8 +1,8 @@
 ---
 title: VSS_E_WRITERERROR_RETRYABLE when backing up
 description: When you try to back up a passive database copy in an Exchange DAG, you receive the VSS_E_WRITERERROR_RETRYABLE error message. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

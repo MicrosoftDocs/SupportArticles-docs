@@ -1,8 +1,8 @@
 ---
 title: The WSMan client cannot process the request error
 description: Describes that you receive a The WSMan client cannot process the request. Proxy is not supported under HTTP transport error message when you run the Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

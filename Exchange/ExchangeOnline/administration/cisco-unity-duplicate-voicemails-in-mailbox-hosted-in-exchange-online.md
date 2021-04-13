@@ -1,8 +1,8 @@
 ---
 title: Cisco Unity duplicate voicemails in mailbox
 description: Mailboxes hosted in Exchange Online may receive Cisco Unity duplicate voicemails if the VoiceMessages search folder is configured to use content indexing.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

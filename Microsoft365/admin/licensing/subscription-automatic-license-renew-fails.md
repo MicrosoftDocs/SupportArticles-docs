@@ -1,8 +1,8 @@
 ---
 title: Office 365 subscription automatic license renewal fails when heartbeatcache in wrong location
 description: The intention of this article is to identify reasons why paid subscriptions are not auto renewing as expected.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

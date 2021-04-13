@@ -1,8 +1,8 @@
 ---
 title: Outlook displays incorrect results when searching for users in GAL in Exchange Server
 description: Provides a workaround for an issue in which Outlook displays incorrect search results of a GAL in Exchange Server 2007, Exchange Server 2010, or Exchange Server 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

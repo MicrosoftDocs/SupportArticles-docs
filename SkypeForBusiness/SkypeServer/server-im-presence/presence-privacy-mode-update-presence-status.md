@@ -1,7 +1,7 @@
 ---
 title: Enabling enhanced presence privacy mode updates presence status of contacts
 description: Describes an issue that causes Lync users to have to add other Lync users with whom they want to share their presence to their Lync 2013 client's contact list.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -11,7 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 appliesto:
 - Lync Server 2013
 - Lync Server 2010 Enterprise Edition

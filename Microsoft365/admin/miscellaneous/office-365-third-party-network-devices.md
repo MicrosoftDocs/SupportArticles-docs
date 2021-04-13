@@ -1,14 +1,14 @@
 ---
 title: Use third-party network devices or solutions with Office 365
 description: Recommendations and support position to use advanced network solutions for active decryption, filtering, inspection functions, and other protocol-level or content-level action on Office 365 user traffic.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 search.appverid: 
 - MET150
 appliesto:

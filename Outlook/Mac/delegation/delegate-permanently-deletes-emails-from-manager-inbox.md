@@ -1,8 +1,8 @@
 ---
 title: Delegate permanently removes emails from manager's inbox
 description: Fixes an issue in which delegates permanently delete a manager's email message in Outlook for Mac.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

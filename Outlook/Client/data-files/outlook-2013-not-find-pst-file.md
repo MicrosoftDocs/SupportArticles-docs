@@ -1,8 +1,8 @@
 ---
 title: Outlook 2013 can't find .pst file
 description: This article helps fix an error (The file \<file name>.pst cannot be found.) that occurs when you open or send/receive email messages in Outlook 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
