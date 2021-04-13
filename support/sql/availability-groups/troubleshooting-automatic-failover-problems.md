@@ -159,12 +159,12 @@ A successful automatic failover of the availability group requires all availabil
 
 [Availability modes in AlwaysOn availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups)
 
-## CASE 4: On the SQL Server you are unable to failover to, 'Force Protocol Encryption' configuration has been selected for the client protocols
+## CASE 4: Unable to failover, 'Force Protocol Encryption' configuration has been selected for the client protocols
 
 To check for this configuration:  
 
 1. Launch SQL Server Configuration Manager.  
-1. In **left** pane, right click the **SQL Native Client 11.0 Configuration** and choose **Properties**.  
+1. In **left** pane, right-click the **SQL Native Client 11.0 Configuration** and choose **Properties**.  
 1. In dialog check **Force Encryption**, if set to **Yes**, change to **No**.
 1. Retest failover.  
 
@@ -172,4 +172,4 @@ To check for this configuration:
 
 Conclusion
 
-SQL Server AlwaysOn health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should only be enabled in the Client Configuration section of SQL Server Configuration Manager, if SQL Server itself has been configured to Force Encryptions in SQL Server Configuration Manager under the SQL Server Network Configuration section. For more information see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
+SQL Server AlwaysOn health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should only be enabled in the Client Configuration section of SQL Server Configuration Manager, if SQL Server itself has been configured to Force Encryptions in SQL Server Configuration Manager under the S**QL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
