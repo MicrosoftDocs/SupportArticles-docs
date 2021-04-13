@@ -37,7 +37,7 @@ _Original KB number:_ &nbsp; 2736303
        For Windows 8.1, Windows Server 2012 and Windows Server 2012 R2:  
        `cd %windir%\ServiceProfiles\LocalService\AppData\Local\Microsoft\WSLicense`
 
-       For Windows 8
+       For Windows 8  
        `cd %windir%\system32\spp\store`
 
        For Windows 7, Windows Server 2008 and Windows Server 2008 R2:  
