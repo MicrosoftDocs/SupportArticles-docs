@@ -1,14 +1,14 @@
 ---
 title: Differences between the 1900 and the 1904 date system
 description: Provides the description of the differences between the 1900 date system and the 1904 date system in Excel. Discusses the problems that you may experience when you use these two different date systems in Excel workbooks.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: mikestow
 search.appverid: 
 - MET150 
@@ -116,12 +116,13 @@ If you link from or copy dates between workbooks, or if you change the date syst
 
    **Note** In Excel 2007, select the cells that contain the shifted dates, click **Paste** in the **Clipboard** group on the **Home** tab, and then click **Paste Special**.
 4. In the **Paste Special** dialog box, click to select the **Values** check box under **Paste**, and then click to select either of the following check boxes under **Operation**.
+
     |Select this| If|
     |---|---|
     |Add| The dates must be shifted up by four years and one day.|
     |Subtract |The dates must be shifted down by four years and one day.|
 
-5. Click OK.
+5. Click **OK**.
 
 Repeat these steps until all the shifted dates have been corrected.
 

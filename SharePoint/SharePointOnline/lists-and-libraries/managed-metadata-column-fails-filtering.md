@@ -1,7 +1,7 @@
 ---
 title: Filtering doesn't work for Tasks list with a Managed Metadata column
 description: When trying to filter a Tasks list using the Managed Metadata column, the list doesn't filter as expected.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

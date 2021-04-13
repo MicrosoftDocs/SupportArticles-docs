@@ -1,8 +1,8 @@
 ---
 title: Assertion Failed when you edit a transport rule in Exchange Server 2013
 description: Works around an issue in which you can't edit a transport rule in an Exchange Server 2013 environment. When this issue occurs, you receive an Assertion Failed (The datetime of the DateTimePicker should not be an invalid date) warning message.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

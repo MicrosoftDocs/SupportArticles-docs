@@ -1,6 +1,6 @@
 ---
 title: The workbook must be checked out when run data refresh in PowerPivot 
-author: simonxjx
+author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal

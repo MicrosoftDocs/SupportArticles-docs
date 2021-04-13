@@ -1,8 +1,8 @@
 ---
 title: Cannot preview Word documents
 description: Describes a problem that triggers an error when you try to preview Word documents in Outlook 2013. The fix requires you to delete an Assist subkey from the registry.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

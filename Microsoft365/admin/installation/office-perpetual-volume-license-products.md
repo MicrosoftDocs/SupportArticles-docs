@@ -1,13 +1,13 @@
 ---
 title: Office 2019 perpetual volume license products available as Click-to-Run
 description: Describes the  supported installation way of office 2019.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.reviewer: v-katva, thdevine, Jenl, joselr, meerak
 ms.custom: CSSTroubleshoot
 search.appverid: 

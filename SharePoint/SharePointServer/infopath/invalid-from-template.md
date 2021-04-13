@@ -1,7 +1,7 @@
 ---
 title: (Invalid form template) error when running design checker on a form
 description: Describes the issue in which you receive an error message when you add a combo box control or a drop-down list box control to a form InfoPath Designer 2010. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2010

@@ -1,8 +1,8 @@
 ---
 title: DSUM and DCOUNT functions do not work with PivotTables
 description: Describes the issue in which the DSUM and DCOUNT functions in Excel do not work with PivotTables. These functions return the "#VALUE!" error when they are calculated.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

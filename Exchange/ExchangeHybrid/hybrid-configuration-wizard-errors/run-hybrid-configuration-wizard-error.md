@@ -1,8 +1,8 @@
 ---
 title: Can't run the Hybrid Configuration wizard
 description: Fixes an error message that you receive when you try to run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online in Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

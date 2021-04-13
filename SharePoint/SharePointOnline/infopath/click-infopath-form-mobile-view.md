@@ -1,7 +1,7 @@
 ---
 title: Sorry, something went wrong when you click an InfoPath form in mobile view 
 description: This article describes an issue where Sorry, something went wrong error when you click an InfoPath form in mobile view in SharePoint Online, and provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---

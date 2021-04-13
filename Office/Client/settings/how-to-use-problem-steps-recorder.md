@@ -1,8 +1,8 @@
 ---
 title: How to use Problem Steps Recorder
 description: Describes how to use Problem Steps Recorder (PSR) to automatically capture steps in Microsoft 365.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

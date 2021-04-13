@@ -1,8 +1,8 @@
 ---
 title: How to use Configuration Information 
 description: Describes how to use the Configuration Information component in Office Communicator (OC) R2, Lync Server 2013, Lync Server 2010, or Skype for Business clients. This component is useful in troubleshooting Outlook integration and address book issues.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

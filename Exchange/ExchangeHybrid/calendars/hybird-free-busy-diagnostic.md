@@ -1,8 +1,8 @@
 ---
 title: Exchange Online Hybrid Free/Busy Diagnostic
 description: Describes the data that's collected by the Exchange Online Free/Busy Diagnostic.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

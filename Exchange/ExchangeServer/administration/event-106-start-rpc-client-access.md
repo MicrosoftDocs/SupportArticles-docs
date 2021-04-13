@@ -1,8 +1,8 @@
 ---
 title: Event ID 106 when starting the RPC Client Access service on Exchange Server 2010
 description: Describes a problem in which event ID 106 is logged when you start the RPC Client Access service on an Exchange Server 2010 server that only has the Mailbox role installed.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: How to reset user options and registry settings in Word
 description: Provides a step-by-step guide to reset registry settings and user options in Office Word 2007, Office Word 2003, Word 2002, and Word 2000.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Word
 ---

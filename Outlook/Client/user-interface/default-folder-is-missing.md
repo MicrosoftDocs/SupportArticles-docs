@@ -1,8 +1,8 @@
 ---
 title: Default folder is missing
 description: Documenting issue where folders appear to be missing.  Resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

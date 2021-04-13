@@ -1,8 +1,8 @@
 ---
 title: ErrorItemNotFound when add-ins make REST calls
 description: Describes the ErrorItemNotFound error that occurs when Office add-ins make REST calls against an item ID when Outlook is in Cached Exchange Mode.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: Test-CsFederatedPartner fails
 description: The Test-CsFederatedPartner Lync Server PowerShell cmdlet fails with the use of Office Communicatione Server 2007 R2 Edge Servers
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: shailenv
 ms.custom: CSSTroubleshoot
 appliesto:

@@ -1,8 +1,8 @@
 ---
 title: How to upgrade your Project global template after you install Project 2013
 description: Describes different scenarios for upgrading the global template when you first start Project 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

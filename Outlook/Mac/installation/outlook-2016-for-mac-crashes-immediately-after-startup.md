@@ -1,8 +1,8 @@
 ---
 title: Outlook 2016 for Mac crashes after startup
 description: Describes a scenario in which Outlook 2016 for Mac for crashes immediately after startup and the crash reporter displays an error.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: 5.7.1. Unable To Relay NDR
 description: Fixes an issue that occurs when a sender uses an external email server whose IP address was added to a block list.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

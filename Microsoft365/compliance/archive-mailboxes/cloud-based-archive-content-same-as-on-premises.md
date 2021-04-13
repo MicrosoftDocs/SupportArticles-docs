@@ -1,8 +1,8 @@
 ---
 title: Contents of cloud-based archive are the same as on-premises
 description: Describes an issue in which there's no difference between the contents of cloud-based archive mailboxes and the contents of the associated on-premises primary mailboxes. This issue occurs in an Exchange hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Invitations forwarded by attendee for existing meeting
 description: Describes an issue in which attendees can forward meeting invitations for an existing meeting. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

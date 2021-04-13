@@ -1,8 +1,8 @@
 ---
 title: 550 5.1.1 RESOLVER.ADR.ExRecipNotFound NDR in Office 365
 description: Describes an issue that occurs when you send email messages by using Outlook in Office 365. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

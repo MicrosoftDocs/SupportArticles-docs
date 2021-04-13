@@ -1,7 +1,7 @@
 ---
 title: Shut down a custom Access application remotely
 description: Describes how to gracefully shut down a front-end Access database application remotely. You can also use many of these concepts to compact or to repair the database and to  make backup copies.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: JMACLEOD 
 appliesto:
 - Access 2007

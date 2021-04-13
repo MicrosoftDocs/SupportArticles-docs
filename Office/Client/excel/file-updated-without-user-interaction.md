@@ -1,7 +1,7 @@
 ---
 title: Excel Online updates file stored in document library without user interaction
 description: Describes why some files automatically update in Excel Online when no changes have been made.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel for the web
 ---

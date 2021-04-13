@@ -1,13 +1,13 @@
 ---
 title: Set up ADFS for Office 365 for Single Sign-On
 description: This article includes a step-by-step video that explains how to configure ADFS to work together with Office 365 for Single Sign-On solution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.reviewer: abizerh, willfid, rkiran
 ms.custom: CSSTroubleshoot
 search.appverid: 

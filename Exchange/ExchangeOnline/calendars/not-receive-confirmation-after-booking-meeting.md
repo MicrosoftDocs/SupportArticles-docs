@@ -1,8 +1,8 @@
 ---
 title: No confirmation after successfully scheduling a meeting
 description: Fixes an issue in which you don't receive any confirmation after you schedule a meeting or an appointment for an on-premises room mailbox in either Outlook client or Outlook Web App (OWA) in Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,14 +1,14 @@
 ---
 title: Features to enable collaboration and not to increase security
 description: Describes features in Office products that enable specific collaboration scenarios and features that are designed to help make your documents and files more secure.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: ambroset
 search.appverid: 
 - MET150

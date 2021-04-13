@@ -1,8 +1,8 @@
 ---
 title: Error 0x6f7 when adding a server to a DAG in Exchange Server
 description: Fixes Error 0x6f7 that occurs when you add the first or an additional server to a database availability group.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

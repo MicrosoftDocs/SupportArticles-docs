@@ -1,8 +1,8 @@
 ---
 title: Error when you remove a mailbox database
 description: Fixes an issue that prevents you from removing a mailbox database in Exchange Server 2016.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

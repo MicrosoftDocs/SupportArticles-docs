@@ -1,8 +1,8 @@
 ---
 title: Still can reserve a meeting room even if it's reserved
 description: Describes an Office 365 issue in which the Calendar Attendant doesn't decline conflicting meeting requests for a room mailbox. A solution is included.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

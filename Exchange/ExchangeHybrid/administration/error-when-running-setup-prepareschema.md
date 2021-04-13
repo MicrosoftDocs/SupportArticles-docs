@@ -1,8 +1,8 @@
 ---
 title: Cannot run Setup /PrepareSchema for hybrid
 description: Describes an issue that triggers an error when you try to run Exchange Setup together with the /PrepareSchema switch to prepare the schema for an existing Exchange hybrid deployment. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

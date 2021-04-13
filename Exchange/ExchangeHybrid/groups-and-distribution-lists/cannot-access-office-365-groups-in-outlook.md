@@ -1,8 +1,8 @@
 ---
 title: Cannot access Office 365 groups in Outlook
 description: Describes an issue that prevents users in an Exchange hybrid deployment from accessing Office 365 groups through Outlook 2016, Outlook 2019, and Outlook for Office 365. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: The SharePoint workflow lookup column field is not supported in query
 description: SharePoint workflow is configured to use a site column that performs a lookup doesn't execute with the error saying the field is not supported in query.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

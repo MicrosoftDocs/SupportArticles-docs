@@ -1,7 +1,7 @@
 ---
 title: SharePoint workflow using an impersonation step doesn't complete
 description: SharePoint workflow with an impersonation step that you return field values for a user account as something other than "As a string" does not finish when you run it. 
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

@@ -2,8 +2,8 @@
 title: Email received via EOP not journaled
 description: Discusses that Internet email that is received through EOP is not journaled in an Exchange Server-Office 365 hybrid environment.
 ms.date: 06/22/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Office add-ins not shown correctly
 description: Some fields in custom add-ins cannot be correctly displayed because the add-in requires Internet Explorer 11 and Outlook version 1809 (build 10827.20181) enforces Internet Explorer 10.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

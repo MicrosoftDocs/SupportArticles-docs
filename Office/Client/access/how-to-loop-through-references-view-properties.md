@@ -1,8 +1,8 @@
 ---
 title: How to loop through the references to view their properties in Microsoft Access
 description: Provides the steps to loop through the References collection and get the properties of each reference by using a Visual Basic for Applications procedure in Microsoft Access.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm 
 audience: ITPro 
 ms.topic: troubleshooting

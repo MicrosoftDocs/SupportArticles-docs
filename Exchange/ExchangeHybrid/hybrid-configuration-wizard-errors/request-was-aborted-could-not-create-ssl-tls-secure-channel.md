@@ -1,8 +1,8 @@
 ---
 title: Could not create SSL/TLS secure channel error
 description: Describes an issue in which you receive a Could not create SSL/TLS secure channel error when running Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Update 2874216 breaks the content index in Exchange Server 2013
 description: Security update MS13-061 causes issues in Exchange Server 2013. You can make changes in the registry to work around these issues.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

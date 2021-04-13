@@ -1,8 +1,8 @@
 ---
 title: Insert or delete rows very slow if custom sort on many named columns
 description: Describes an issue in which it takes a very long time to insert or delete rows after you perform a custom sort on many named columns. This issue occurs in Excel 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

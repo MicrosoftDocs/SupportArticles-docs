@@ -1,7 +1,7 @@
 ---
 title: A single-byte font to replace a double-byte font error in PowerPoint 2010
 description: Provides a workaround for an issue in which you receive the "You selected a single-byte font to replace a double-byte font" error message when you try to replace a Japanese font in PowerPoint 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - PowerPoint 2010
 ---

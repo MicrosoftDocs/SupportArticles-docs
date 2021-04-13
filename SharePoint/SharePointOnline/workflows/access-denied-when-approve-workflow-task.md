@@ -1,7 +1,7 @@
 ---
 title: Access denied when a user tries to approve a SharePoint Approval Workflow task in SharePoint Server or SharePoint Online
 description: Describes an issue in which Access denied when a user tries to approve a SharePoint Approval Workflow task in SharePoint Server or SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

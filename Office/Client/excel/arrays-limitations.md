@@ -1,7 +1,7 @@
 ---
 title: Description of the limitations for working with arrays in Excel
 description: Lists the limitations of arrays in Excel. The article also contains examples of array formulas that you can use.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2007
 - Excel 2003

@@ -1,8 +1,8 @@
 ---
 title: Validation errors for a mailbox archive GUID for Microsoft 365 users
 description: You receive a validation error in the Microsoft 365 admin center or in Azure Active Directory.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

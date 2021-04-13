@@ -1,7 +1,7 @@
 ---
 title: Stops responding when receiving a toast notification in Citrix VDI environment
 description: The Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business

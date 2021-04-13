@@ -1,7 +1,7 @@
 ---
 title: Lync Server Move-CsUser and Move-CsLegacyUser commands fail
 description: Lync Server Move-CsUser and Move-CsLegacyUser commands fail. Provides a solution for this issue.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto:

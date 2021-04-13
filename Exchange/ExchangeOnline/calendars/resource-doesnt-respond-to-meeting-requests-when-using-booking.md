@@ -1,8 +1,8 @@
 ---
 title: Resource doesn't respond to meeting requests
 description: Describes an issue in which resource doesn't respond to meeting requests when you try to use Resource Booking to schedule a resource by using Outlook. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

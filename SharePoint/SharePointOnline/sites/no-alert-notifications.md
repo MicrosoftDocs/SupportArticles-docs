@@ -1,7 +1,7 @@
 ---
 title: Users don't receive SharePoint Online alert notifications
 description: This article describes an issue that users don't receive SharePoint Online alert notifications, and provides a solution.
-author: v-miegge
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -60,6 +60,8 @@ If all alerts from multiple files or libraries are not delivered, visit the Serv
 > [!Note]
 >
 > * Check the JUNK folder in your email, as sometimes alerts might go there.
+> 
+> * In cases where an immediate alert rule is generating extremely high volume for a recipient email address SharePoint may apply throttling. This is designed to protect service health and overall alert delivery reliability. If a single email address is receiving several thousand immediate alert emails per hour across all its list or library subscriptions then throttles may be applied.
 > 
 > * It is not possible to send alerts to Distribution or O365 groups. Only mail-enabled security groups are supported.
 >

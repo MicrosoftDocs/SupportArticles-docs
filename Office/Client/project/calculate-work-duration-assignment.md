@@ -1,8 +1,8 @@
 ---
 title: How work and duration are calculated with assignment changes
 description: Describes how work and duration are calculated when you make resource assignment changes.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

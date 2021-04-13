@@ -1,8 +1,8 @@
 ---
 title: Unable to determine routing domain for cloud organization
 description: Describes an issue in which you receive an Unable to determine the routing domain for the cloud organization error message when you run the Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
