@@ -1,138 +1,157 @@
-Lab 2 - Correct way: troubleshooting a crash problem with a core dump captured with createdump 
+---
+title: Capture core crash dumps with createdump tool
+description: This article describes how to use the createdump tool to capture .NET Core crash dumps.
+ms.date: 04/07/2021
+ms.prod: aspnet-core
+ms.reviewer: ramakoni
+---
+# Lab 1.3 Troubleshooting a crash problem - Capturing core crash dumps with createdump tool
 
-Prerequisites
- 
-The minimum requirement to follow these troubleshooting labs are as listed below:
- 
-*    An ASP.NET Core application that demonstrates low and high CPU performance problems and crash issues.
-*    The lldb debugger is installed and configured to load SOS extension when a core dump is opened.
- 
-If you have followed the previous parts of these series up to this point, you should have the following set up ready to continue:
- 
-*    Nginx configured to host two web-sites:
-o    The first web site listening for requests with the myfirstwebsite host header (http://myfirstwebsite) and routing the requests to the demo ASP.NET Core application which is listening on port 5000.
-o    The second web site listening for requests with host header buggyamb (http://buggyamb) and routing the requests to the second ASP.NET Core sample buggy application which is listening on port 5001.
-*    Both ASP.NET Core applications should be running as services which restart automatically when the server is rebooted or the applications stops or crashes.
-*    Linux local firewall is enabled and configured to allow SSH and HTTP traffic.
- 
-Note: If your set up is not ready, there is a quick Linux installation guide to run BuggyAmb behind Nginx here.
- 
-Goal of this lab
- 
-Automatically generated core dumps are not very useful because they do not have all the managed state information present inside. The recommended tool to capture .NET Core core crash dumps is to use createdump.
- 
-In this section you will learn how to capture a crash dump with createdump and open it in lldb to diagnose the same crash problem.
- 
-Configuring createdump to run upon process termination
- 
-createdump is installed automatically with every .NET Core runtime.
- 
-As explained in the createdump configuration policy documentation, configuration options can be set with environment variables. These are passed to createdump command as parameters. Below are the environment variables supported:
- 
-COMPlus_DbgEnableMiniDump: if set to "1", enables automatic core dump generation upon termination. Default is 0.
-COMPlus_DbgMiniDumpType: Default is "2" MiniDumpWithPrivateReadWriteMemory.
-COMPlus_DbgMiniDumpName: if set, use as the template to create the dump path and file name. The pid can be placed in the name using the %d parameter. The default template is /tmp/coredump.%d. Using this environment variable, you can configure the output directory.
-COMPlus_CreateDumpDiagnostics: if set to "1", enables the createdump utilities diagnostic messages (TRACE macro). This setting may be useful if createdump does not work as expected and does not generate a memory dump.
- 
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+
+This article introduces how to use the createdump tool to capture .NET Core crash dumps.
+
+## Prerequisites
+
+The minimum requirement to follow these troubleshooting labs is to have an ASP.NET Core application that demonstrates low and high CPU performance problems and crash issues.
+
+You may find several sample applications that achieve these goals on the Internet. For example, you may download, set up and use [Microsoft's simple webapi sample](/samples/dotnet/samples/diagnostic-scenarios/) which demonstrates undesirable behaviors. Or, you can use BuggyAmb ASP.NET Core application for the sample project.
+
+If you have followed the previous parts of these series up to this point, you should have the following setup ready to continue:
+
+- Nginx configured to host two websites:
+  - The first web site listening for requests with the **myfirstwebsite** host header (`http://myfirstwebsite`) and routing the requests to the demo ASP.NET Core application, which is listening on port 5000.
+  - The second web site listening for requests with host header **buggyamb** (`http://buggyamb`) and routing the requests to the second ASP.NET Core sample buggy application, which is listening on port 5001.
+- Both ASP.NET Core applications should be running as services, which restart automatically when the server is rebooted, or the applications stops or crashes.
+- Linux local firewall is enabled and configured to allow SSH and HTTP traffic.
+
+> [!NOTE]
+> If your set up is not ready, there is a quick Linux installation guide to run BuggyAmb behind Nginx here.
+
+In order to continue with the lab, you will need to have at least one problematic ASP.NET Core web application running behind Nginx.
+
+## Goal of this lab
+
+Automatically generated core dumps are not useful because they do not have all the managed state information present inside. The recommended tool to capture .NET Core core crash dumps is to use createdump.
+
+In this part, you will learn how to capture a crash dump with createdump and open it in lldb to diagnose the same crash problem.
+
+## Configuring createdump to run upon process termination
+
+Createdump is installed automatically with every .NET Core runtime.
+
+As explained in the [createdump configuration policy](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) documentation, configuration options can be set with environment variables. These are passed to createdump command as parameters. Below are the environment variables supported:
+
+- `COMPlus_DbgEnableMiniDump`: if set to *1*, enables automatic core dump generation upon termination. Default is *0*.
+- `COMPlus_DbgMiniDumpType`: Default is *2* `MiniDumpWithPrivateReadWriteMemory`.
+- `COMPlus_DbgMiniDumpName`: if set, use as the template to create the dump path and file name. The pid can be placed in the name using the `%d` parameter. The default template is *:::no-loc text="/tmp/coredump.%d":::*. Using this environment variable, you can configure the output directory.
+- `COMPlus_CreateDumpDiagnostics`: if set to *1*, enables the createdump utilities diagnostic messages (TRACE macro). This setting may be useful if createdump does not work as expected and does not generate a memory dump.
+
 Details for these variables can be found in the same article.
- 
-The important variable here is COMPlus_DbgEnableMiniDump. You need to set this environment variable to 1. There are several options to set this environment:
- 
-*    Set this in your application's configuration file.
-*    Use the export COMPlus_DbgEnableMiniDump=1 command to set it. This will not persist after reboot so you need to set it as persistent if you wish the setting to be present after an operating system restart.
-*    Set it in the ASP.NET Core service unit file.
- 
-Setting it in ASP.NET Core service unit file is the easiest way. The drawback is that the service should be restarted. In this troubleshooting section this will be the option that is demonstrated.
- 
-Open the buggy application's service file and add the COMPlus_DbgEnableMiniDump=1 environment variable, the same as you have done several times in the past chapters of this training:
- 
- 
- 
-You need to reload the service configuration since the configuration is changed, and then restart the BuggyAmb service:
- 
- 
- 
-After these changes, proceed to reproduce the same crash problem again. If createdump works then the dump should be written under /tmp/ directory with the name of coredump.<PID>. Follow the same steps to reproduce our problem:
- 
-*    First, click "Crash 3", the page loads fine with a misguiding message suggesting that the process should have crashed.
-*    Then click "Slow" and this will result in an HTTP 502 response code - Bad Gateway error instead of the product table.
-*    Once the issue starts, none of the pages will render and you will get the same error for ~10 - 15 seconds.
-*    After 10 - 15 seconds the application starts working fine.
- 
-You should have a core dump in /tmp directory:
- 
- 
- 
-You should have one core dump which was generated by createdump now. If you don't have one, make sure that you configured the buggyamb.service file correctly. You also have to reload the service configuration and restart the service.
- 
-Opening the core dump in lldb
- 
-It is recommended you move my dump file to your ~/dumps/ folder to follow along with the analysis. Run lldb --core ~/dumps/coredump.10354 to open the dump file, where you replace the 10354 value with your process's PID.
- 
-Note: If you open a dump and worked with lldb before then it means that you already set up symbols and installed SOS and you can open the same .NET Core version dumps without downloading the symbols again. If you open a different .NET Core version dump where the symbols are not downloaded yet, you will need to download the symbols for that version before starting the analysis.
- 
-Now run SOS's clrstack command to display the managed call stack. Remember that you were getting an error when you ran the same command with a core dump generated by system. This time you should see the correct managed call stack:
- 
- 
- 
-This is good start, however the thread being listed is not the thread causing the crash. This is the main thread of the process being debugged. Unlike WinDbg which directly displays the thread that has encountered the exception, when a crash dump is opened in lldb, it does not automatically select the thread which triggered the debugger to generate the memory dump. WinDbg's behavior is very useful but dos does not constitute a major obstacle in the troubleshooting work you will need to accomplish. 
- 
-It is always good idea to start with a quick inspection of all the thread calls tacks, so you may be able to understand what that process was executing at the time the dump was generated. Look at the native thread list with thread list command first. Notice the * character near the first thread "thread #1" in the list. It means that it is the active thread:
- 
- 
- 
-The native thread inspection does not reveal much, and since this is a .NET Core application take a quick look at the list of CLR threads by running SOS's clrthreads command. This command will list the managed threads running in the application:
- 
- 
- 
-The picture above is not showing all managed threads, however the detail you should you to focus on is listed in the screenshot. Thread #15 has an exception and that is the exception we have seen in our system logs:
- 
- 
- 
-Take look at that thread's call stack. In order to do this, you will need to first select the thread in question - in the memory dump analysis you will be running the thread number most likely will be different. To select another thread as active thread, use thread select command and pass the lldb's dbg thread ID. Run thread select 15 command to switch to thread 15 and then every command you will run in that thread's context. Run the bt command to see the native call stack (back trace):
- 
- 
- 
-As you can see in the screenshot above, this thread is surely the thread triggered crash:
- 
-*    PROCEndProcess and PROCAbort() are called after an unhandled exception.
-*    POCCreateCrashDump tells us that a crash dump is written by .NET Core.
- 
-You can take a look at the managed call stack with clrstack command, but it will not reveal much. Run the pe command to get the exception details:
- 
- 
- 
-The information above indicates the following: a System.Net.HttpWebRequest is triggered in our Crash3 page in the LogTheRequest() method. This is an important piece of information to help locate the problem but what if you want to find the URL of the HTTP request? To proceed further try and inspect the objects referenced on the stack to see if more information cannot be gathered from this listing. To display all managed objects found within the bounds of the current stack with dso command:
- 
- 
- 
-This is not helpful, you should not see any System.Net.HttpWebRequest, there are instances of the exception and you have already inspected it, so this command did not yield new information relating to the cause.
- 
-All of the managed objects are stored in managed heap and we can look at the managed heap with the dumpheap command. Do not run the dumpheap command without any parameter because it will list all the objects inside the managed heap, and their number is quite large. Instead, you can get the statistics of the heap using dumpheap -stat command. You can use one more tactic to narrow down the statistics and run the command in the following format: dumpheap -stat -type System.Net.HttpWebRequest. This command will display the statistics for the managed objects which contain the string System.Net.HttpWebRequest in their name:
- 
- 
- 
-In the sample application, there is just one System.Net.HttpWebRequest object on the managed heap. In the listing above, the address seen next to the HttpWebRequest is NOT that object's address in memory, it is the address corresponding to "method table" of objects of type System.Net.HttpWebRequest. To get the actual list of the objects, you can pass that method table (MT) address to dumpheap command in the following way: dumpheap -mt <address>. Run dumpheap -mt 00007f53623cb640 command and find our object's address:
- 
- 
- 
-Now you are able to identify the address of the problematic object. You can investigate that object's properties using SOS dumpobj command. Simply give the address of the object to the command and you will get a list which contains the properties of this object. Notice the _requestUri, its type is System.Uri. The value of this variable will prove useful for the investigation:
- 
- 
- 
-Copy the address of System.Uri object and investigate it using the dumpobj command again. Run dumpobj 00007f51300bfbb8 command - the address of the object on the memory dump you have generated will most certainly be different. The listing will display _string property of System.Uri:
- 
- 
- 
-Copy the address of _string and one again run the dumpobj command against it. Run dumpobj 00007f51300bfb40 and the result is listed below:
- 
- 
- 
-Finally you were able to find the URL of the HttpWebRequest: http://buggyamb/Problem/Api/NotExistingLoggingApi. As the name suggests, it is probably not an existing page within the application.
- 
-To conclude, the theory of how the crash occurred is the following: an HttpWebRequest is made to a non-existing URL in the LogTheRequest() method in Crash3 page. In a real-world application, the solution to fix this issue should be to handle the errors when HttpWebRequest is made but in this case the solution is much simpler: don not make an HttpWebRequest to a non-existing page :)
- 
-At this stage you should probably have more questions as to how the crash took place: such as, why was the crash triggered after clicking the Slow link? Feel free to continue investigation by yourself. Th next suggested step you could take would be to run the gcroot command with HttpWebRequest object's address to find out where it is rooted. This may help you to build a theory of how the crash took place.
- 
-This concludes the lab. Press CTRL-C to quit the lldb debugger or use the q command.
 
+The important variable here is `COMPlus_DbgEnableMiniDump`. You need to set this environment variable to *1*. There are several options to set this environment:
+
+- Set this in your application's configuration file.
+- Use the export `COMPlus_DbgEnableMiniDump=1` command to set it. This will not persist after reboot so you need to set it as persistent if you wish the setting to be present after an operating system restart.
+- Set it in the ASP.NET Core service unit file.
+
+Setting it in ASP.NET Core service unit file is the easiest way. The drawback is that the service should be restarted. In this troubleshooting section, this will be the option that is demonstrated.
+
+Open the buggy application's service file and add the `COMPlus_DbgEnableMiniDump=1` environment variable, the same as you have done several times in the past chapters of this training:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/buggy.png" alt-text="BuggyAmb buggy" border="true":::
+
+You need to reload the service configuration since the configuration is changed, and then restart the BuggyAmb service:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+
+After these changes, proceed to reproduce the same crash problem again. If createdump works, then the dump should be written under */tmp/* directory with the name of *coredump.\<PID>*. Follow the same steps to reproduce our problem:
+
+- First, click **Crash 3**, the page loads fine with a misguiding message suggesting that the process should have crashed.
+- Then click **Slow** and this will result in an HTTP 502 response code - Bad Gateway error instead of the product table.
+- Once the issue starts, none of the pages will render and you will get the same error for 10 - 15 seconds.
+- After 10 - 15 seconds the application starts working fine.
+
+You should have a core dump in */tmp* directory:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/ll.png" alt-text="BuggyAmb ll" border="true":::
+
+You should have one core dump, which was generated by createdump now. If you don't have one, make sure that you configured the *:::no-loc text="buggyamb.service":::* file correctly. You also have to reload the service configuration and restart the service.
+
+## Opening the core dump in lldb
+
+It is recommended you move my dump file to your *:::no-loc text="~/dumps/":::* folder to follow along with the analysis. Run `lldb --core ~/dumps/coredump.10354` to open the dump file, where you replace the 10354 value with your process's PID.
+
+> [!NOTE]
+> If you open a dump and worked with lldb before then it means that you already set up symbols and installed SOS and you can open the same .NET Core version dumps without downloading the symbols again. If you open a different .NET Core version dump where the symbols are not downloaded yet, you will need to download the symbols for that version before starting the analysis.
+
+Now run SOS's `clrstack` command to display the managed call stack. Remember that you were getting an error when you ran the same command with a core dump generated by system. This time you should see the correct managed call stack:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/lldb.png" alt-text="BuggyAmb lldb" border="true":::
+
+This is good start, however the thread being listed is not the thread causing the crash. This is the main thread of the process being debugged. Unlike WinDbg, which directly displays the thread that has encountered the exception, when a crash dump is opened in lldb, it does not automatically select the thread, which triggered the debugger to generate the memory dump. WinDbg's behavior is useful but dos does not constitute a major obstacle in the troubleshooting work you will need to accomplish.
+
+It is always good idea to start with a quick inspection of all the thread calls tacks, so you may be able to understand what that process was executing at the time the dump was generated. Look at the native thread list with `thread list` command first.
+
+> [!NOTE]
+> The `*` character near the first thread `thread #1` in the list. It means that it is the active thread:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/list.png" alt-text="BuggyAmb list" border="true":::
+
+The native thread inspection does not reveal much, and since this is a .NET Core application take a quick look at the list of CLR threads by running SOS's `clrthreads` command. This command will list the managed threads running in the application:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/clrthreads.png" alt-text="BuggyAmb clrthreads" border="true":::
+
+The picture above is not showing all managed threads, however the detail you should you to focus on is listed in the screenshot. `Thread #15` has an exception and that is the exception we have seen in our system logs:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/thread15.png" alt-text="BuggyAmb thread15" border="true":::
+
+Take look at that thread's call stack. In order to do this, you will need to first select the thread in question - in the memory dump analysis you will be running the thread number most likely will be different. To select another thread as active thread, use `thread select` command and pass the lldb's dbg thread ID. Run `thread select 15 command` to switch to thread 15 and then every command you will run in that thread's context. Run the `bt` command to see the native call stack (back trace):
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/select.png" alt-text="BuggyAmb select" border="true":::
+
+As you can see in the screenshot above, this thread is surely the thread triggered crash:
+
+- `PROCEndProcess` and `PROCAbort()` are called after an unhandled exception.
+- `POCCreateCrashDump` tells us that a crash dump is written by .NET Core.
+
+You can take a look at the managed call stack with `clrstack` command, but it will not reveal much. Run the `pe` command to get the exception details:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/pe.png" alt-text="BuggyAmb pe" border="true":::
+
+The information above indicates the following: a `System.Net.HttpWebRequest` is triggered in our Crash3 page in the `LogTheRequest()` method. This is an important piece of information to help locate the problem but what if you want to find the URL of the HTTP request? To proceed further try and inspect the objects referenced on the stack to see if more information cannot be gathered from this listing. To display all managed objects found within the bounds of the current stack with `dso` command:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dso.png" alt-text="BuggyAmb dso" border="true":::
+
+This is not helpful, you should not see any `System.Net.HttpWebRequest`, there are instances of the exception and you have already inspected it, so this command did not yield new information relating to the cause.
+
+All of the managed objects are stored in managed heap and we can look at the managed heap with the `dumpheap` command. Do not run the `dumpheap` command without any parameter because it will list all the objects inside the managed heap, and their number is large. Instead, you can get the statistics of the heap using `dumpheap -stat` command. You can use one more tactic to narrow down the statistics and run the command in the following format: `dumpheap -stat -type System.Net.HttpWebRequest`. This command will display the statistics for the managed objects, which contain the string `System.Net.HttpWebRequest` in their name:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/request.png" alt-text="BuggyAmb request" border="true":::
+
+In the sample application, there is just one `System.Net.HttpWebRequest` object on the managed heap. In the listing above, the address seen next to the `HttpWebRequest` is NOT that object's address in memory, it is the address corresponding to "method table" of objects of type `System.Net.HttpWebRequest`. To get the actual list of the objects, you can pass that method table (MT) address to dumpheap command in this way: `dumpheap -mt <address>`. Run `dumpheap -mt 00007f53623cb640` command and find our object's address:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dumpheap.png" alt-text="BuggyAmb dumpheap" border="true":::
+
+Now you are able to identify the address of the problematic object. You can investigate that object's properties using SOS `dumpobj` command. Simply give the address of the object to the command and you will get a list, which contains the properties of this object.
+
+> [!NOTE]
+> The `_requestUri`, its type is `System.Uri`. The value of this variable will prove useful for the investigation:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dumpobj.png" alt-text="BuggyAmb dumpobj" border="true":::
+
+Copy the address of `System.Uri` object and investigate it using the `dumpobj` command again. Run `dumpobj 00007f51300bfbb8` command - the address of the object on the memory dump you have generated will most certainly be different. The listing will display `_string` property of `System.Uri`:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dumpobj2.png" alt-text="BuggyAmb dumpobj2" border="true":::
+
+Copy the address of `_string` and one again run the `dumpobj` command against it. Run `dumpobj 00007f51300bfb40` and the result is listed below:
+
+:::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dumpobj3.png" alt-text="BuggyAmb dumpobj3" border="true":::
+
+Finally you were able to find the URL of the HttpWebRequest: `http://buggyamb/Problem/Api/NotExistingLoggingApi`. As the name suggests, it is probably not an existing page within the application.
+
+To conclude, the theory of how the crash occurred is the following: an HttpWebRequest is made to a non-existing URL in the `LogTheRequest()` method in **Crash3** page. In a real-world application, the solution to fix this issue should be to handle the errors when HttpWebRequest is made but in this case the solution is much simpler: do not make an HttpWebRequest to a non-existing page.
+
+At this stage, you should probably have more questions as to how the crash took place: such as, why was the crash triggered after clicking the Slow link? Feel free to continue investigation by yourself. The next suggested step you could take would be to run the `gcroot` command with HttpWebRequest object's address to find out where it is rooted. This may help you to build a theory of how the crash took place.
+
+This concludes the lab. Press Ctrl-C to quit the lldb debugger or use the `q` command.
