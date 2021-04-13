@@ -80,7 +80,7 @@
     href: troubleshoot-azure-mfa-issue.md
   - name: User name or password is incorrect
     href: user-name-pwd-incorrect.md
-  - name: Verification code isn't received in MFA
+  - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
     href: unable-sync-system-discovery-mailbox.md
 
 
