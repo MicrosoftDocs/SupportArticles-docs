@@ -42,7 +42,7 @@ Please see the unsaved sections highlighted in red below.
 
 ## Cause
 
-When you initiate the process to switch your tenant to Teams Only mode, the lyncdiscover DNS record for each SIP-enabled domain in the tenant is checked. If the lyncdiscover DNS record for any domain is either not present or is present but does not point to Microsoft 365, any attempt to switch to Teams Only mode fails.
+When you initiate the process to switch your tenant to Teams Only mode, the lyncdiscover DNS record for each SIP-enabled domain in the tenant is checked. If the lyncdiscover DNS record for any domain is present but does not point to Microsoft 365, any attempt to switch to Teams Only mode fails.
 
 ## Resolution
 
