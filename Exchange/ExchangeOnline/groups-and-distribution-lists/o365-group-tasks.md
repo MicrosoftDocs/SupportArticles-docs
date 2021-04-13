@@ -27,7 +27,7 @@ Tenant administrators perform many common tasks to manage Microsoft 365 groups. 
   - [Control Microsoft 365 group creation](#control-microsoft-365-group-creation)
   - [Display a Microsoft 365 group associated with a team](#display-a-microsoft-365-group-associated-with-a-team)
 - Microsoft 365 group delegation
-  - [Enable specific users to "Send As" a Microsoft 365 group](#enable-specific-users-to-send-as-a-microsot-365-group)
+  - [Enable specific users to "Send As" a Microsoft 365 group](#enable-specific-users-to-send-as-a-microsoft-365-group)
   - [Control user access to specific group resources](#control-user-access-to-specific-group-resources)
   - [Prevent group members from changing a group calendar](#prevent-group-members-from-changing-a-group-calendar)
   - [Microsoft 365 group limits](#microsoft-365-group-limits)
@@ -44,7 +44,7 @@ Tenant administrators perform many common tasks to manage Microsoft 365 groups. 
   - [Restore a Microsoft 365 Group](#restore-a-microsoft-365-group)
   - [Convert to a Microsoft 365 group](#convert-to-a-microsoft-365-group)
   - [Access Microsoft 365 groups from Exchange clients](#access-microsoft-365-groups-from-exchange-clients)
-  - [Microsoft 365 group migration](#microsoft-365-group-migration)
+  - [Microsoft 365 group migration](#microsoft-365-group-migration-between-tenants)
   - [Microsoft 365 group deletion](#microsoft-365-group-deletion)
   - [Export Microsoft 365 Groups information](#export-microsoft-365-groups-information)
 - Useful scripts for Microsoft 365 Groups management
@@ -56,13 +56,13 @@ Tenant administrators perform many common tasks to manage Microsoft 365 groups. 
 
 ### Control Microsoft 365 group creation
 
-By default, all users of the tenant are allowed to create Microsoft 365 groups. However, this can result in unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Microsoft 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide&preserve-view=true).
+By default, all users of the tenant are allowed to create Microsoft 365 groups. However, it can result in unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Microsoft 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide&preserve-view=true).
 
 You can also use the following tools to control Microsoft 365 group creation:
 
 - Microsoft 365 Groups expiration policy
 
-  This feature makes life easier for users, including admins, group owners, and members by automating the expiration and renewal process. It does this by tracking groups for user activity across different apps, such as Teams, SharePoint, and Outlook, that are associated with the group.
+  This feature makes life easier for users, including admins, group owners, and members by automating the expiration and renewal process. It does so by tracking groups for user activity across different apps, such as Teams, SharePoint, and Outlook, that are associated with the group.
 
   To learn more, see:
 
@@ -163,7 +163,7 @@ This table shows the size and membership limits that apply to Microsoft 365 Grou
 |Number of groups a user can be a member of|1,000|
 |File storage|1 Terabyte + 10 GB per subscribed user + any additional storage purchased. You can purchase an unlimited amount of additional storage.|
 |Group mailbox size|50 GB|
-|Maximum email message send/receive size|35/36 MB is the default maximum send/receive limit, respectively. This can be increased by using the [Set-UnifiedGroup](/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps&preserve-view=true) command, as necessary.|
+|Maximum email message send/receive size|35/36 MB is the default maximum send/receive limit, respectively. It can be increased by using the [Set-UnifiedGroup](/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps&preserve-view=true) command, as necessary.|
 |Distribution Group as a member of a Microsoft 365 group|A distribution group that has more than 1,000 members cannot be added to a Microsoft 365 group. This also includes the nested distribution group members.|
 |||
 
@@ -376,7 +376,7 @@ Use the [Microsoft 365 Admin center](https://aka.ms/RestoreDeletedGroup) or Azur
 
 Microsoft provides no tools to convert a shared mailbox to a Microsoft 365 group, or vice versa.
 
-However, you can upgrade distribution lists to Microsoft 365 groups. This is a great way to give your organization's distribution lists all the features and functionality of Microsoft 365 groups. See [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188).
+However, you can upgrade distribution lists to Microsoft 365 groups. It's a great way to give your organization's distribution lists all the features and functionality of Microsoft 365 groups. See [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188).
 
 You can upgrade distribution lists one at a time, or several at the same time. If the distribution list can't be upgraded, a dialog box opens to indicate this. See [Which distribution lists cannot be upgraded?](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide#which-distribution-lists-cannot-be-upgraded&preserve-view=true).
 
