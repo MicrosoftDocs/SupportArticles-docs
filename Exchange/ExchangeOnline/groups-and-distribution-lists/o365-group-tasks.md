@@ -257,7 +257,7 @@ Group owners can enable/disable the subscription from group settings by selectin
 > [!NOTE]
 > The `AutoSubscribeNewMembers` parameter takes effect for new members of a group after the change is made. Existing members are not affected.
 
-Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
+Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/topic/follow-a-group-in-outlook-e147fc19-f548-4cd2-834f-80c6235b7c36).
 
 [Back to top](#summary)
 
@@ -319,7 +319,7 @@ If your sender receives a non-delivery report (NDR) that has the status code 550
 
 #### Issue 2: Messages sent to a Microsoft 365 group are not received by all members
 
-Make sure that all group members have subscribed to the desired messages. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
+Make sure that all group members have subscribed to the desired messages. See [Follow a group in Outlook](https://support.microsoft.com/topic/follow-a-group-in-outlook-e147fc19-f548-4cd2-834f-80c6235b7c36).
 
 To check the message status of members who have subscribed to group email messages, run the following command:
 
@@ -376,7 +376,7 @@ Use the [Microsoft 365 Admin center](https://aka.ms/RestoreDeletedGroup) or Azur
 
 Microsoft provides no tools to convert a shared mailbox to a Microsoft 365 group, or vice versa.
 
-However, you can upgrade distribution lists to Microsoft 365 groups. It's a great way to give your organization's distribution lists all the features and functionality of Microsoft 365 groups. See [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188).
+However, you can upgrade distribution lists to Microsoft 365 groups. It's a great way to give your organization's distribution lists all the features and functionality of Microsoft 365 groups. See [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/topic/why-you-should-upgrade-your-distribution-lists-to-groups-in-outlook-7fb3d880-593b-4909-aafa-950dd50ce188).
 
 You can upgrade distribution lists one at a time, or several at the same time. If the distribution list can't be upgraded, a dialog box opens to indicate this. See [Which distribution lists cannot be upgraded?](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide#which-distribution-lists-cannot-be-upgraded&preserve-view=true).
 
