@@ -135,7 +135,7 @@ For more information about how to create WMI filters, see [Create WMI Filters fo
 Edit your GPO to use the KIR Activation Policy
 
 1. Right-click the GPO that you created [previously](#gpo), and then select **Edit**.
-1. In the Group Policy Editor, select ***GPOName*** > **Computer Configuration** > **Administrative Templates** > **KB *#######* Issue *XXX* Rollback** > **Windows 10, version *YYMM***.  
+1. In the Group Policy Editor, select ***GPOName*** > **Computer Configuration** > **Administrative Templates** > **KB&nbsp;*#######* Issue *XXX* Rollback** > **Windows 10, version *YYMM***.  
 1. Right-click the policy, and then select **Edit** > **Disabled** > **OK**.
 
 For more information about how to edit GPOs, see [Edit a Group Policy object from GPMC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10)).
