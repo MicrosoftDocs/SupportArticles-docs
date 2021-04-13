@@ -16,7 +16,7 @@ appliesto:
 - Office 2013
 ---
 
-# Office Add-in don't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
+# Office Add-in doesn't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
