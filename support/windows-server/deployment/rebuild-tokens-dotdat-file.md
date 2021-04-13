@@ -47,7 +47,7 @@ _Original KB number:_ &nbsp; 2736303
        `cd %windir%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform`
 
        > [!NOTE]
-       > For Windows 8.1 that were upgraded from Windows 8, the location is still %windir%\system32\spp\store.
+       > For Windows 8.1 that were upgraded from Windows 8, the location may still be %windir%\system32\spp\store.
 
     3. `ren tokens.dat tokens.bar`
 
