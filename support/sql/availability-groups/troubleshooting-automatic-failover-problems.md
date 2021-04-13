@@ -159,7 +159,7 @@ A successful automatic failover of the availability group requires all availabil
 
 [Availability modes in AlwaysOn availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups)
 
-## CASE 4: Unable to failover, 'Force Protocol Encryption' configuration has been selected for the client protocols
+## Case 4: Unable to failover, 'Force Protocol Encryption' configuration has been selected for the client protocols
 
 To check for this configuration:  
 
