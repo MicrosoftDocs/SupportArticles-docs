@@ -58,11 +58,11 @@ To resolve this issue, you must rename the document library to “Documents” b
 1. In the **Briefly describe your issue** field, enter *OneDrive Document Library Path Modified*.
 1. In the **Run diagnostics** section, enter a value for **User Principal Name (UPN)** for the user in question, and then select **Run Tests**.
 
-    :::image type="content" source="cannot-upload-files-or-access-onedrive/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::
+    :::image type="content" source="media/cannot-upload-files-or-access-onedrive/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::
 
 1. If the test results indicate that the default document library name was changed, select the checkbox, and then select **Update Settings**.
 
-    :::image type="content" source="cannot-upload-files-or-access-onedrive/update-settings.png" alt-text="Image shows the Update Settings button.":::
+    :::image type="content" source="media/cannot-upload-files-or-access-onedrive/update-settings.png" alt-text="Image shows the Update Settings button.":::
 
 ### Method 2: Use SharePoint Designer
 
@@ -70,7 +70,7 @@ To resolve this issue, you must rename the document library to “Documents” b
 2.	Navigate to **All Files**.
 3.	Right-click the library, select **Rename**, and then rename the library to **Documents**.
 
-    :::image type="content" source="this-item-might-not-exist-error/this-item-might-not-exist-error-2.gif" alt-text="Moving GIF showing how to rename Documents library.":::
+    :::image type="content" source="media/cannot-upload-files-or-access-onedrive/this-item-might-not-exist-error-2.gif" alt-text="Moving GIF showing how to rename Documents library.":::
 
 > [!NOTE]
 > We recommend that you do not use SharePoint Designer to make customizations on OneDrive sites.
