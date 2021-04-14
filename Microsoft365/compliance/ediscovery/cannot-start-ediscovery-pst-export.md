@@ -99,7 +99,7 @@ Use the `netsh` command-line tool to open port 8080 on the proxy server. To do t
 
 ## More information
 
-For more information about eDiscovery, see [eDiscovery solutions in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/ediscovery).
+For more information about eDiscovery, see [eDiscovery solutions in Microsoft 365](/microsoft-365/compliance/ediscovery?view=o365-worldwide&preserve-view=true).
 
 For more information about the latest browser requirements for Office 365, see [System requirements for Office](https://products.office.com/office-system-requirements).
 
