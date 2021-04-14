@@ -32,7 +32,7 @@ _Original KB number:_ &nbsp; 324737
 To use Registry Editor to turn on automatic logon, follow these steps:
 
 1. Click **Start**, and then click **Run**.
-2. In the **Open** box, type *Regedt32.exe*, and then press Enter.
+2. In the **Open** box, type *Regedit.exe*, and then press Enter.
 3. Locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon` subkey in the registry.
 4. Double-click the **DefaultUserName** entry, type your user name, and then click **OK**.
 5. Double-click the **DefaultPassword** entry, type your password, and then click **OK**.
