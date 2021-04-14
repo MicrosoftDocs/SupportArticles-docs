@@ -1,6 +1,6 @@
 ---
 title: Open and analyze system generated core dump
-description: This article describes how to open and analyze system generated core dump in lldb debugger.
+description: This article describes how to install and configure the lldb debugger in Linux, then open and analyze system generated .NET Core dump in lldb debugger.
 ms.date: 04/07/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
@@ -9,7 +9,7 @@ ms.reviewer: ramakoni
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
-This article introduces how to open and analyze system generated core dump in lldb debugger.
+This article introduces how to install and configure the lldb debugger in Linux, then open and analyze system generated .NET Core dump in lldb debugger.
 
 ## Prerequisites
 
