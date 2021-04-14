@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 3165165
 
 ## Summary
 
-On September 28, 2015, Microsoft [announced](https://blogs.microsoft.com/blog/2015/09/28/microsoft-acquires-adxstudio-inc-web-portal-and-application-lifecycle-management-solutions-provider/) the acquisition of Adxstudio Inc., the developers of [Adxstudio Portals](https://community.adxstudio.com/products/adxstudio-portals/). Following the acquisition, Microsoft has continued to develop the portal application, releasing version 8.x as an optional portal add-on for Dynamics 365.
+On September 28, 2015, Microsoft [announced](https://blogs.microsoft.com/blog/2015/09/28/microsoft-acquires-adxstudio-inc-web-portal-and-application-lifecycle-management-solutions-provider/) the acquisition of Adxstudio Inc., the developers of [Adxstudio Portals](/lifecycle/announcements/legacy-adxstudio-portals-v7-end-of-support). Following the acquisition, Microsoft has continued to develop the portal application, releasing version 8.x as an optional portal add-on for Dynamics 365.
 
 ## Support for all versions of the portal application
 
@@ -30,11 +30,11 @@ With the availability of version 8.x, the supportability for previous releases o
   - For Dynamics 365 from version 8.1.1 up to and excluding 9.0.0, Adxstudio Portals version 7.0.0024 or higher will be required.
   - For Dynamics 365 version 9.0.0 or higher, Adxstudio Portals version 7.0.0026 or higher will be required.
 
-  Refer to the Adxstudio [Release Notes](https://community.adxstudio.com/products/adxstudio-portals/releases/adxstudio-portals-7/release-notes/) for the improvements made on each version. Support cases for legacy Adxstudio Portals deployments that meet this requirement can be opened via Microsoft Premier channels, MPN partner channels, or the pay-per-incident process through `https://support.microsoft.com` until August 1, 2018. The support won't be offered for the legacy product after that date, as defined in [Upcoming changes to legacy Adxstudio Portals v7](https://cloudblogs.microsoft.com/dynamics365/it/2017/09/14/changes-coming-for-legacy-adxstudio-portals-v7).
+  Refer to the Adxstudio [Release Notes](/lifecycle/announcements/legacy-adxstudio-portals-v7-end-of-support) for the improvements made on each version. Support cases for legacy Adxstudio Portals deployments that meet this requirement can be opened via Microsoft Premier channels, MPN partner channels, or the pay-per-incident process through `https://support.microsoft.com` until August 1, 2018. The support won't be offered for the legacy product after that date, as defined in [Upcoming changes to legacy Adxstudio Portals v7](https://cloudblogs.microsoft.com/dynamics365/it/2017/09/14/changes-coming-for-legacy-adxstudio-portals-v7).
 
 - **All legacy Adxstudio Portals deployments on version 7.0.0017 and below are unsupported on any version of Dynamics CRM or Dynamics 365.**
   
-  To reach a supported state, organizations with an Adxstudio Portals deployment on version 7.0.0017 or below must upgrade to version 7.0.0018 or higher, and ensure the associated organization is running Dynamics CRM 2015 or higher (including Dynamics 365). Instructions for upgrading to version 7.x can be found [on the legacy Adxstudio Community website](https://community.adxstudio.com/products/adxstudio-portals/releases/adxstudio-portals-7/upgrade-instructions/).
+  To reach a supported state, organizations with an Adxstudio Portals deployment on version 7.0.0017 or below must upgrade to version 7.0.0018 or higher, and ensure the associated organization is running Dynamics CRM 2015 or higher (including Dynamics 365). Instructions for upgrading to version 7.x can be found [on the legacy Adxstudio Community website](/lifecycle/announcements/legacy-adxstudio-portals-v7-end-of-support).
 
 - **Deploying a SaaS (Microsoft-hosted) portal to a Dynamics 365 organization that already contains a version 7.x or lower portal is unsupported and highly discouraged as it can lead to a loss of functionality and may require a full removal of all portal solutions (and therefore all portal data) at a later date.**
   

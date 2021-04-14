@@ -1084,6 +1084,8 @@
       href: ./group-policy/troubleshoot-software-installations-debug-logging.md
     - name: Use Group Policy to configure automatic logon in Terminal Services
       href: ./group-policy/use-group-policy-configure-automatic-logon.md
+    - name: Use Group Policy to deploy a Known Issue Rollback
+      href: ../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md
     - name: Use Group Policy to remotely install softwares
       href: ./group-policy/use-group-policy-to-install-software.md
   - name: Group Policy management - GPMC or AGPM

@@ -13,7 +13,7 @@ ms.reviewer: nedpyle, kaushika
 ms.prod-support-area-path: Desktop Shell
 ms.technology: windows-server-shell-experience
 ---
-# Error when you use the `runas` command, the Run as Administrator option, or the Run as a different user option after you upgrade Windows Server: Access is denied
+# Error when you use the runas command, the Run as Administrator option, or the Run as a different user option after you upgrade Windows Server: Access is denied
 
 This article provides some workarounds for an issue where you can't use the `runas` command, the **Run as Administrator** option, or the **Run as a different user** option after you upgrade Windows Server.
 
@@ -110,7 +110,7 @@ To do so, follow these steps:
 
 For more information about the `runas` command, visit the following Microsoft TechNet Web site:
 
-[`Runas`](https://technet.microsoft.com/library/bb490994.aspx)
+[Runas](https://technet.microsoft.com/library/bb490994.aspx)
 
 For more information about how to use the Group Policy Management Console, visit the following Microsoft TechNet Web site:
 
