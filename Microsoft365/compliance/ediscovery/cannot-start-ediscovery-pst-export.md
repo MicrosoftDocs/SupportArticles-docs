@@ -34,6 +34,7 @@ Consider the following scenario. In Microsoft Exchange Online, you create an eDi
 
 This issue may occur if one or more of the following conditions are true:
 
+- You're not using the latest version of Windows.
 - You're using Internet Explorer 9.0 or later, and you don't have the Microsoft .NET Framework 4.5 or later installed.
 - Local intranet zone settings aren't set up correctly in Internet Explorer.
 - You're using a third-party browser, and you don't have the ClickOnce browser extension installed.
@@ -43,19 +44,23 @@ This issue may occur if one or more of the following conditions are true:
 
 To resolve this issue, do one or more of the following, as appropriate for your situation.
 
-### Scenario 1: You're using Internet Explorer 9.0 or later, and you don't have the .NET Framework 4.5 or later installed
+### Scenario 1: You're not using the latest version of Windows
+
+[Upgrade to Windows 10](https://support.microsoft.com/windows/upgrade-to-windows-10-faq-cce52341-7943-594e-72ce-e1cf00382445).
+
+### Scenario 2: You're using Internet Explorer 9.0 or later, and you don't have the .NET Framework 4.5 or later installed
 
 [Install the .NET Framework 4.5 or a later version](https://www.microsoft.com/download/details.aspx?id=30653).
 
-### Scenario 2: Local intranet zone settings aren't set up correctly in Internet Explorer
+### Scenario 3: Local intranet zone settings aren't set up correctly in Internet Explorer
 
 Make sure that `https://*.outlook.com` is added to the Local intranet zone in Internet Explorer. To do this, follow these steps:
 
 1. In Internet Explorer, click **Internet Options** on the **Tool** menu.
-1. On the **Security** tab, select **Local intranet**.
-1. Click **Site**, and then click **Advanced**.
-1. Add `https://*.outlook.com` (if it's not already listed).
-1. Click **Close**.
+2. On the **Security** tab, select **Local intranet**.
+3. Click **Site**, and then click **Advanced**.
+4. Add `https://*.outlook.com` (if it's not already listed).
+5. Click **Close**.
 
 Additionally, make sure that the following URLs are not listed as Trusted zone sites:
 
@@ -63,14 +68,14 @@ Additionally, make sure that the following URLs are not listed as Trusted zone s
 - `https://r4.res.outlook.com`
 - `https://*.res.outlook.com`
 
-### Scenario 3: You're using a third-party (non-Microsoft) browser, and you don't have the ClickOnce browser extension installed
+### Scenario 4: You're using a third-party (non-Microsoft) browser, and you don't have the ClickOnce browser extension installed
 
 Install the ClickOnce extension. The extension can be found on the add-on webpage for that browser.
 
 - For Mozilla Firefox: [Firefox browser add-ons](https://addons.mozilla.org/firefox/extensions/?sort=featured)
 - For Google Chrome: [Chrome web store](https://chrome.google.com/webstore/category/apps)
 
-### Scenario 4: You're using an outgoing proxy server, and the connection times out
+### Scenario 5: You're using an outgoing proxy server, and the connection times out
 
 Use the `netsh` command-line tool to open port 8080 on the proxy server. To do this, follow these steps:
 
@@ -94,7 +99,7 @@ Use the `netsh` command-line tool to open port 8080 on the proxy server. To do t
 
 ## More information
 
-For more information about eDiscovery, see [eDiscovery in Office 365](https://support.office.com/article/eDiscovery-in-Office-365-143b3ab8-8cb0-4036-a5fc-6536d837bfce).
+For more information about eDiscovery, see [eDiscovery solutions in Microsoft 365](/microsoft-365/compliance/ediscovery?view=o365-worldwide&preserve-view=true).
 
 For more information about the latest browser requirements for Office 365, see [System requirements for Office](https://products.office.com/office-system-requirements).
 
