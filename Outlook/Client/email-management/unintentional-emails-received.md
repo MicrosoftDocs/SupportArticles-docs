@@ -33,16 +33,16 @@ When you use a Microsoft Outlook client to connect to a Microsoft Exchange Serve
 
 These unintentional messages appear in your Inbox if the following events occurred:
 
-1. The sender added a special character to the To, Cc or Bcc fields in the email message inadvertently. Some examples of special characters are an exclamation mark (!), an apostrophe ('), the number sign (#) etc.
-1. When the Outlook client tries to resolve the recipient represented by the special character, it finds a match in one of the Active Directory (AD) attributes set for your user account such as:
+1. The sender inadvertently added a special character to the **To**, **Cc**, or **Bcc** field in the message. Some examples of special characters are the exclamation mark (!), apostrophe ('), and number sign (#).
+1. When the Outlook client tries to resolve the recipient that's represented by the special character, it finds a match in one of the Active Directory (AD) attributes that are set for your user account. These include the following attributes:
 
     - Office
     - Telephone number
     - Home
     - Mobile
 
-1. The Outlook client updates the special character to your user account and sends the email message to you.
+1. The Outlook client updates the special character to your user account, and sends the email message to you.
 
 To prevent this erroneous matching, look for and [remove the special character from the affected AD attribute](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information) for your user account, and wait until the change is replicated to all servers. You must have administrator permissions to update the AD attribute.
 
-**Note:** If the Outlook client doesn't find a match for the special character in any of the AD attributes that it uses for name resolution, it will display an error to the sender that the name can't be resolved, and the email message won't be sent.
+**Note:** If the Outlook client doesn't find a match for the special character in any of the AD attributes that it uses for name resolution, it will display an error message to the sender that states that the name can't be resolved. In this case, the email message is not sent.
