@@ -66,11 +66,9 @@ To resolve this issue, you must rename the document library to “Documents” b
 
 ### Method 2: Use SharePoint Designer
 
-1.	In [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491), open the OneDrive site.
-2.	Navigate to **All Files**.
-3.	Right-click the library, select **Rename**, and then rename the library to **Documents**.
-
-    :::image type="content" source="media/cannot-upload-files-or-access-onedrive/this-item-might-not-exist-error-2.gif" alt-text="Moving GIF showing how to rename Documents library.":::
+1. In [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491), open the OneDrive site.
+2. Navigate to **All Files**.
+3. Right-click the library, select **Rename**, and then rename the library to **Documents**.
 
 > [!NOTE]
 > We recommend that you do not use SharePoint Designer to make customizations on OneDrive sites.
