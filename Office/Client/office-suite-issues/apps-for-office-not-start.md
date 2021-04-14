@@ -60,7 +60,7 @@ Re-enable protected mode for Restricted Sites: 
 4. Restart Internet Explorer.
 
 > [!IMPORTANT]
-> Admin policies take priority over local settings. If enabling Protected Mode through Internet Explorer has no effect, please check your admin settings to see if there is a group policy disabling Protected Mode.
+> Admin policies take priority over local settings. If enabling Protected Mode through Internet Explorer has no effect (or the ability to enable Protected Mode is turned off), please check your admin settings to see if there is a group policy disabling Protected Mode.
 
 ## More Information
 
