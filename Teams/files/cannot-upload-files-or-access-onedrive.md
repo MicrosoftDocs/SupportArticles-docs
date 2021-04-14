@@ -10,6 +10,7 @@ ms.service: msteams
 localization_priority: Normal
 ms.custom: 
 - CI 125872
+- CI 147731
 - CSSTroubleshoot
 ms.reviewer: prbalusu
 appliesto:
@@ -45,9 +46,24 @@ These error messages occur when the document library on your OneDrive site has b
 
 ## Resolution
 
-To resolve this issue, the document library must be renamed to **Documents**.
+To resolve this issue, the document library must be renamed to “Documents”, using one of the following methods.
 
-You must have administrator permissions or contact your administrator to make these changes.
+**Note** You must have administrator permissions or contact your administrator to make these changes.
+
+### Method 1: Rename the library using the Microsoft Admin site
+
+1. Go to the [Microsoft Admin site](https://admin.microsoft.com/).
+1. In the navigation pane, select **Support**, and then select **New Service Request**.
+1. In the **Briefly describe your issue** field, enter *OneDrive Document Library Path Modified*.
+1. In the **Run diagnostics** section, enter the **User Principal Name (UPN)** for the user in question, and then select **Run Tests**.
+
+:::image type="content" source="this-item-might-not-exist-error/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::
+
+5. If the test finds that the default Documents library name has been changed, put a check in the checkbox, and then select **Update Settings**.
+
+:::image type="content" source="this-item-might-not-exist-error/update-settings.png" alt-text="Image shows the Update Settings button.":::
+
+### Method 2: Rename the library using SharePoint Designer
 
 1. In [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491), open your OneDrive site.
 2. Go to **All Files**.
