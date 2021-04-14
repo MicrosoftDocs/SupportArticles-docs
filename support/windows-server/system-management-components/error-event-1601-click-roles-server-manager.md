@@ -1,6 +1,6 @@
 ---
-title: Windows Server 2008-Error message when you select Roles in Server Manager
-description: Resolves the Windows Server 2008 problem in which selecting Roles in Server Manager generates an error message and Event 1601.
+title: Error message when you select Roles in Server Manager on Windows Server
+description: Resolves the Windows Server problem in which selecting Roles in Server Manager generates an error message and Event 1601.
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Server Manager
 ms.technology: windows-server-system-management-components
 ---
-# Windows Server 2008: Error message when you select Roles in Server Manager
+# Error message when you select Roles in Server Manager on Windows Server
 
-This article provides a resolution to the Windows Server 2008 problem in which selecting Roles in Server Manager generates an error message and event 1601.
+This article provides a resolution to the Windows Server problem in which selecting Roles in Server Manager generates an error message and event 1601.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;971509
 
 ## Symptoms
 
-When you click **Roles** in **Server Manager** on a computer that is running Windows Server 2008, your profile doesn't load correctly and you receive an error message. If you select **Error Details**, you see the following message:
+When you click **Roles** in **Server Manager** on a Windows Server computer, your profile doesn't load correctly and you receive an error message. If you select **Error Details**, you see the following message:
 
 > **Server Manager:**  
 Unexpected error refreshing Server Manager; cannot open an anonymous level security token. (Exception from HRESULT: 0x00070543)

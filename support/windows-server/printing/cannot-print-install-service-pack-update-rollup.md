@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;832219
 
 ## Symptoms
 
-After you install Windows 2000 Service Pack 2 (SP2), a service pack for Windows Server 2003 or Windows Server 2012 R2, an update rollup, or a hotfix that updates the Unidrvui.dll file, users may experience both of the following symptoms:
+After you install a service pack, an update rollup, or a hotfix that updates the Unidrvui.dll file on Windows Server, users may experience both of the following symptoms:
 
 - When a client or server tries to print, the Print Spooler service appears to stop responding (or "hang"), and the following error message appears:
 
