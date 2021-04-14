@@ -1,7 +1,7 @@
 ---
 title: Uninstall Office updates
 description: Provides information about how to remove Microsoft Office updates. The ability to remove Office updates was added to certain Office updates that are dated July 12, 2005 and later.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: Entirenet, lthurman, jesko, sloanc, chikae, evasand
 appliesto:
 - Office 2010

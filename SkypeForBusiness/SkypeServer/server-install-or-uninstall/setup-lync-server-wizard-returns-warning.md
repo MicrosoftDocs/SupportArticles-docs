@@ -1,7 +1,7 @@
 ---
 title: Setup Lync Server Components wizard returns Host not found in topology
 description: Resolves an issue in which Setup Lync Server Components wizard returns the warning "Host not found in topology" during the Lync Server Edge server installation.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto:

@@ -1,8 +1,8 @@
 ---
 title: Test-OwaConnectivity and Test-ECPConnectivity cmdlets fail
 description: Describes an issue in which the Test-OwaConnectivity and Test-ECPConnectivity cmdlets fail randomly.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

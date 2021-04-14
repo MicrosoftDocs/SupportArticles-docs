@@ -1,8 +1,8 @@
 ---
 title: Office 365 groups not visible from shared mailbox
 description: Describes a scenario where Office 365 groups aren't visible from a shared mailbox. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

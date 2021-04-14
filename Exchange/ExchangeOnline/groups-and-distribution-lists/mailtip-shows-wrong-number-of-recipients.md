@@ -1,8 +1,8 @@
 ---
 title: A MailTip displays wrong number of recipients
 description: Mail tips display wrong recipient count when you send email to a large distribution group in Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

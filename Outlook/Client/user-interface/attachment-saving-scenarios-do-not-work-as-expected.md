@@ -1,8 +1,8 @@
 ---
 title: Attachment saving not working as expected
 description: Various attachment saving scenarios don't work as expected in Outlook 2016. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

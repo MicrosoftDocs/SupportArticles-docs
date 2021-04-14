@@ -1,8 +1,8 @@
 ---
 title: Messaging Records Management (MRM) and Retention Policies in Office 365.
 description: Describes the retention policy in Office 365 dedicated/ITAR.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

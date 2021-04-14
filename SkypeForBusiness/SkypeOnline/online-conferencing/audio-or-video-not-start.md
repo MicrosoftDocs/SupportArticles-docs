@@ -1,7 +1,7 @@
 ---
 title: Audio or video doesn't start in a peer-to-peer or multiparty conference
 description: Describes an issue in which you can't start audio or video in a peer-to-peer or multiparty conference in Skype for Business Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:

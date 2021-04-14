@@ -1,7 +1,7 @@
 ---
 title: A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing
 description: Provides a workaround for a problem in SharePoint Foundation 2010 in which a virtual List Web Part never finishes refreshing. However, the Web Part is configured to refresh automatically.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2010

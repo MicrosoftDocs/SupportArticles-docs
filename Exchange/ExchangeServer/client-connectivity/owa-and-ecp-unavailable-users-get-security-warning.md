@@ -1,8 +1,8 @@
 ---
 title: Security warning when accessing OWA or ECP
 description: Users get a security error when they try to connect to Outlook on the Web (OWA) or Exchange Control Panel (ECP).
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

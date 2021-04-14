@@ -1,8 +1,8 @@
 ---
 title: 403 Sorry Access denied if signing in to OWA
 description: Describes an issue in which users receive a 403 Sorry! Access denied error if trying to sign in to Outlook Web App in Microsoft 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

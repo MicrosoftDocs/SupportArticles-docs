@@ -1,7 +1,7 @@
 ---
 title: Conference creation, modification, or deletion fails for some application endpoints in Lync or Skype for Business
 description: Conference creation, modification, or deletion fails for some application endpoints. Provides a solution for this issue.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: corbinm, arianr, nsuter
 ms.custom: CSSTroubleshoot
 appliesto:

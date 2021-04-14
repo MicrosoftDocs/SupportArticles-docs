@@ -1,6 +1,6 @@
 ---
 title: Open word documents in edit mode from a hyperlink in an email message
-author: simonxjx
+author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

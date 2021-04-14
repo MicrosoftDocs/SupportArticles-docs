@@ -1,11 +1,11 @@
 ---
 title: How to migrate mailbox data by using the Exchange Admin Center in Office 365
 description: Describes how to migrate mailbox data by using the Exchange Admin Center in Office 365.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 

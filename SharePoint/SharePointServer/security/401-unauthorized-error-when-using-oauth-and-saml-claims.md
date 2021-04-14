@@ -1,7 +1,7 @@
 ---
 title: 401 unauthorized error when using OAuth and SAML claims in SharePoint Server 2013
 description: Discusses a "401 unauthorized" error that occurs when you use OAuth and SAML claim types in a farm that has a version number earlier than the March 2016 cumulative update version of SharePoint 2013. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft SharePoint
 ---

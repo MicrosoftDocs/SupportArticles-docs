@@ -1,7 +1,7 @@
 ---
 title: Cannot sign in after PIC or External Communications is enabled
 description: Describes an issue in which users can't sign in to Skype by using their Microsoft account after PIC or External Communications is enabled in Skype for Business Online. This issue occurs if Office 365 uses the same domain as the user's Microsoft account. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

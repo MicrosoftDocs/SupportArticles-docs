@@ -1,8 +1,8 @@
 ---
 title: How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Office 365
 description: Provides guidance about troubleshooting data loss prevention (DLP) policy tips in Exchange Online Protection in Office 365.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

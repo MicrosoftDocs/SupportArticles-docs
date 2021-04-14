@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot sign-in issues for Lync for Mac 2011 in Skype for Business Online
 description: Contains information about how to troubleshoot Lync for Mac issues in Skype for Business Online for Office 365. Discusses how to sign in to Skype for Business Online by using Lync for Mac and how to collect log files for Lync for Mac issues.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

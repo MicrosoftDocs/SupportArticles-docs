@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for Skype for Business Hybrid
 description: This article lists Skype for Business related issues.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 localization_priority: Normal
 search.appverid: 
 - MET150

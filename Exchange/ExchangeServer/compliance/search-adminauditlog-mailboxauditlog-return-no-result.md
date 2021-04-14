@@ -1,8 +1,8 @@
 ---
 title: Search-AdminAuditLog or Search-MailboxAuditLog with parameter returns empty results in Exchange Server
 description: Fixes an issue that returns an empty result set when you run Search-AdminAuditLog or Search-MailboxAuditLog with parameters. This issue occurs if your account uses a non-English regional setting in an Exchange Server 2013 environment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

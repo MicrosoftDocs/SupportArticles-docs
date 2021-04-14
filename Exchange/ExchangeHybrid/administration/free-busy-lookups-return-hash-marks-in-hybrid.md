@@ -1,8 +1,8 @@
 ---
 title: Free/busy lookups return hash marks
 description: Fixes a problem that occurs when Exchange Online users and on-premises users in a hybrid deployment perform free/busy lookups between their organizations. Instead of availability info, only hash marks are returned.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

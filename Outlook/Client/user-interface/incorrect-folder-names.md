@@ -1,7 +1,7 @@
 ---
 title: Folder names are incorrect or displayed in an incorrect language in Outlook
 description: Fixes an issue in which folder names are displayed in an incorrect language or folder functionality is incorrect in Outlook.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot

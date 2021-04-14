@@ -1,7 +1,7 @@
 ---
 title: Use OnEntry macro to create a running total in a cell comment
 description: Provides step-by-step instruction to create a running total in a cell comment in Excel by using the OnEntry macro.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel

@@ -1,8 +1,8 @@
 ---
 title: UseLegacyFB does not work as expected
 description: Describes the issue where you cannot use the UseLegacyFB registry value in Outlook 2010 or Outlook 2013. The UseLegacyFB registry value is not supported by Outlook 2010 or Outlook 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

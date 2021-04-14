@@ -2,6 +2,14 @@
 
 
 
+## Week of March 29, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/29/2021 | [When setting up a Meet Now in Teams, the CVI information does not autopopulate](/microsoftteams/troubleshoot/known-issues/cvi-info-does-not-populate-in-meet-now) | modified |
+
+
 ## Week of March 22, 2021
 
 

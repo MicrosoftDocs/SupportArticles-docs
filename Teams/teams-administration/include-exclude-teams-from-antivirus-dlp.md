@@ -3,7 +3,7 @@ title: How to include or exclude Teams from antivirus or DLP applications
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 9/9/2019
+ms.date: 04/13/2021
 audience: Admin
 ms.topic: article
 ms.service: msteams
@@ -31,9 +31,9 @@ Antivirus and data loss prevention (DLP) applications can interfere with the Mic
 
 To prevent any interference of Teams, add the following items to the "exclusion list" process in the Antivirus Software.
 
-- %userprofile%\AppData\Local\Microsoft\Teams\current\teams.exe
-- %userprofile%\AppData\Local\Microsoft\Teams\update.exe
-- %userprofile%\AppData\Local\Microsoft\Teams\stage\squirrel.exe
+- `C:\Users\*\AppData\Local\Microsoft\Teams\current\teams.exe`
+- `C:\Users\*\AppData\Local\Microsoft\Teams\update.exe`
+- `C:\Users|*\AppData\Local\Microsoft\Teams\stage\squirrel.exe`
 
 Or, you can add the items to the "safe" ("allowlisted") programs list in the DLP application. (The method to accomplish this varies. For specific instructions, contact the application manufacturer.)
 

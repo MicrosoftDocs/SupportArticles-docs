@@ -1,7 +1,7 @@
 ---
 title: Can't open a document created through SharePoint 2013 Workflow Platform
 description: Fixes an issue in which You are unable to open a document created as part of a workflow that uses SharePoint 2013 Workflow Platform Type in SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 - SharePoint Server 2013

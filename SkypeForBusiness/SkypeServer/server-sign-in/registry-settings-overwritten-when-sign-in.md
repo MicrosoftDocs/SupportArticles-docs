@@ -1,7 +1,7 @@
 ---
 title: Lync becomes the default application for protocols after user signs in
 description: Describes an issue in which the registry settings for multiple protocols are overwritten. This causes Lync 2013, Lync 2010, or Office Communicator 2007 R2 to become the default application for these protocols. This issue occurs after you sign in to the client of any of these applications.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: pankajr， genli 
 appliesto:
 - Office Communicator 2007 R2

@@ -1,6 +1,6 @@
 ---
 title: You receive a "This workbook contains external data connections or BI features that are not supported." error when you use a guest link to a workbook in Excel Online
-author: simonxjx
+author: helenclu
 ms.author: thempel
 manager: dcscontentpm
 localization_priority: Normal

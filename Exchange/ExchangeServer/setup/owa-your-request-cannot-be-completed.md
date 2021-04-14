@@ -1,8 +1,8 @@
 ---
 title: OWA error—Your request cannot be completed right now after updating to Exchange Server 2013 CU 11 or later
 description: Solves an issue where you receive a (Request cannot be completed right now) error when you open, reply to, or forward items in Outlook Web App, or sign in Outlook Web App or select different folders.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

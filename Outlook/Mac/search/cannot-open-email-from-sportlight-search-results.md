@@ -1,8 +1,8 @@
 ---
 title: Cannot open email from Spotlight search results
 description: Discusses that you receive an Outlook cannot open the file because it is not associated with the default identity error when trying to open an email message from the Spotlight search results in macOS X.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

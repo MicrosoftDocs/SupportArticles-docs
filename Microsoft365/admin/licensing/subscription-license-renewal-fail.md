@@ -1,7 +1,7 @@
 ---
 title: Office 365 subscription automatic license renewal fails
 description: The intention of this article is to identify an issue where the O365 subscription renewal fails.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Microsoft 365 Apps for enterprise
 - Office 365 Business

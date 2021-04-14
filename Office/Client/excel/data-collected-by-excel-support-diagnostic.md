@@ -1,7 +1,7 @@
 ---
 title: Data that is collected by Excel Support Diagnostic
 description: Discusses the data that is collected by the Microsoft Excel Baseline Diagnostic.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2010
 - Excel 2013

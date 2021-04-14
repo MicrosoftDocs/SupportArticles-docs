@@ -1,8 +1,8 @@
 ---
 title: Messages do not include default email signature
 description: This article describes why Outlook autosignatures are not added when new email messages are created from a program other than Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

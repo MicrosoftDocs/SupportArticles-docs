@@ -1,8 +1,8 @@
 ---
 title: Scan by using Microsoft Support and Recovery Assistant
 description: Detect and resolve known Outlook issues and create a detailed Outlook configuration report by using the Microsoft Support and Recovery Assistant (SaRA).
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

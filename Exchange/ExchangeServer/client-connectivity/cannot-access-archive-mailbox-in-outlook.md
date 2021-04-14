@@ -1,8 +1,8 @@
 ---
 title: Cannot access archive mailbox in Outlook
 description: Fixes an issue in which the MAPI/HTTP protocol is disabled in an Exchange organization.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

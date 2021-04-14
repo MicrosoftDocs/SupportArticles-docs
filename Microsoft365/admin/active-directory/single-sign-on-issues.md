@@ -1,14 +1,14 @@
 ---
 title: Use Remote Connectivity Analyzer to troubleshoot single sign-on issues
 description: Describes how to use Remote Connectivity Analyzer to diagnose single sign-on (SSO) logon issues in Office 365, Azure, or Microsoft Intune. Also contains information about causes of common SSO failures and links to troubleshooting resources.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 ms.reviewer: v-jocomf
 search.appverid: 
 - MET150

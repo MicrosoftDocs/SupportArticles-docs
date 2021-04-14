@@ -1,7 +1,7 @@
 ---
 title: GetObject and CreateObject functions in VBA
 description: Discusses the different behaviors that occur when you use the GetObject and CreateObject functions with various versions of Microsoft Office applications.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: rtaylor
 appliesto:
 - Microsoft Office
@@ -63,7 +63,7 @@ Depending on whether the server is designed as SingleUse or MultiUse, another se
 
 The following table serves as a helpful reference when implementing a solution with Microsoft Office. It lists behaviors and attributes of the various versions and applications of Microsoft Office, such as whether the server defaults to being visible when launched, if it is SingleUse or MultiUse, if it has a UserControl property, if it has a Quit method, and the class name for its main window.
 
-|Application(s)|Visible|Instancing|Has UserControl|Has QuitClassName|
+|Application(s)|Visible|Instancing|Has UserControl|Has QuitClassName|Class name|
 |---|---|---|---|---|----|
 |Excel 97, 2000, 2002, 2003, 2007|No|SingleUse|Yes|Yes|XlMain|
 |Word 97, 2000, 2002, 2003, 2007|No|SingleUse|Yes|Yes|OpusApp|

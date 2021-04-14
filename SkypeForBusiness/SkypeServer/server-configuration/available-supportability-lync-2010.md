@@ -1,7 +1,7 @@
 ---
 title: Supportability is available for Lync Server 2010 and Lync 2010 clients
 description: Describes supportability for Lync Server 2010 Server roles and Lync 2010 client roles on Windows Server 2012, Windows Server 2012 R2,  and Windows 8 client operating systems.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2010 Enterprise Edition
