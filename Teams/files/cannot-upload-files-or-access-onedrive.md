@@ -22,11 +22,11 @@ search.appverid:
 
 ## Symptoms
 
-In Microsoft Teams, you receive one of these error messages:
+In Microsoft Teams, you experience one of the following errors.
 
 ### Error 1
 
-When uploading a file in a chat, you receive this error message:
+When you upload a file in a chat, you receive the following error message:
 
 > The file <*FileName*> didn't upload.  
 > The file <*FileName*> is locked.
@@ -35,41 +35,45 @@ When uploading a file in a chat, you receive this error message:
 
 ### Error 2
 
-When accessing the OneDrive cloud storage from the **Files** section, you receive this error message:
+When you access the OneDrive cloud storage from the **Files** section, you receive the following error message:
 
 > This item might not exist or is no longer available.  
 > This item might have been deleted, expired, or you might not have permission to view it. Contact the owner of this item for more information.
 
 ## Cause
 
-These error messages occur when the document library on your OneDrive site has been changed from its default name "Documents" to another name.
+You receive these error messages if the default document library name on the OneDrive site was changed from ”Documents” to some other name.
 
 ## Resolution
 
-To resolve this issue, the document library must be renamed to “Documents”, using one of the following methods.
+To resolve this issue, you must rename the document library to “Documents” by using one of the following methods.
 
-**Note** You must have administrator permissions or contact your administrator to make these changes.
+> [!NOTE]
+> You must have administrative permissions to make these changes, or contact your administrator to make these changes.
 
-### Method 1: Rename the library using the Microsoft Admin site
+### Method 1: Use the Microsoft Admin site
 
 1. Go to the [Microsoft Admin site](https://admin.microsoft.com/).
-1. In the navigation pane, select **Support**, and then select **New Service Request**.
+1. In the left pane, select **Support**, and then select **New Service Request**.
 1. In the **Briefly describe your issue** field, enter *OneDrive Document Library Path Modified*.
-1. In the **Run diagnostics** section, enter the **User Principal Name (UPN)** for the user in question, and then select **Run Tests**.
+1. In the **Run diagnostics** section, enter a value for **User Principal Name (UPN)** for the user in question, and then select **Run Tests**.
 
-    :::image type="content" source="./media/cannot-upload-files-or-access-onedrive/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::
+    :::image type="content" source="this-item-might-not-exist-error/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::
 
-5. If the test finds that the default Documents library name has been changed, put a check in the checkbox, and then select **Update Settings**.
+1. If the test results indicate that the default document library name was changed, select the checkbox, and then select **Update Settings**.
 
-    :::image type="content" source="./media/cannot-upload-files-or-access-onedrive/update-settings.png" alt-text="Image shows the Update Settings button.":::
+    :::image type="content" source="this-item-might-not-exist-error/update-settings.png" alt-text="Image shows the Update Settings button.":::
 
-### Method 2: Rename the library using SharePoint Designer
+### Method 2: Use SharePoint Designer
 
-1. In [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491), open your OneDrive site.
-2. Go to **All Files**.
-3. Right-click the document library, select **Rename**, and rename it to **Documents**.
+1.	In [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491), open the OneDrive site.
+2.	Navigate to **All Files**.
+3.	Right-click the library, select **Rename**, and then rename the library to **Documents**.
 
-**Note:** We don't recommend using SharePoint Designer to perform any customization on OneDrive sites.
+    :::image type="content" source="this-item-might-not-exist-error/this-item-might-not-exist-error-2.gif" alt-text="Moving GIF showing how to rename Documents library.":::
+
+> [!NOTE]
+> We recommend that you do not use SharePoint Designer to make customizations on OneDrive sites.
 
 ## More information
 
