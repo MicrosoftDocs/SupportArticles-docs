@@ -58,11 +58,11 @@ To resolve this issue, you must rename the document library to “Documents” b
 1. In the **Briefly describe your issue** field, enter *OneDrive Document Library Path Modified*.
 1. In the **Run diagnostics** section, enter a value for **User Principal Name (UPN)** for the user in question, and then select **Run Tests**.
 
-    :::image type="content" source="this-item-might-not-exist-error/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::
+    :::image type="content" source="cannot-upload-files-or-access-onedrive/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::
 
 1. If the test results indicate that the default document library name was changed, select the checkbox, and then select **Update Settings**.
 
-    :::image type="content" source="this-item-might-not-exist-error/update-settings.png" alt-text="Image shows the Update Settings button.":::
+    :::image type="content" source="cannot-upload-files-or-access-onedrive/update-settings.png" alt-text="Image shows the Update Settings button.":::
 
 ### Method 2: Use SharePoint Designer
 
