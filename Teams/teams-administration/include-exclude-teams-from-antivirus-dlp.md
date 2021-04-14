@@ -33,7 +33,7 @@ To prevent any interference of Teams, add the following items to the "exclusion 
 
 - `C:\Users\*\AppData\Local\Microsoft\Teams\current\teams.exe`
 - `C:\Users\*\AppData\Local\Microsoft\Teams\update.exe`
-- `C:\Users|*\AppData\Local\Microsoft\Teams\stage\squirrel.exe`
+- `C:\Users\*\AppData\Local\Microsoft\Teams\stage\squirrel.exe`
 
 Or, you can add the items to the "safe" ("allowlisted") programs list in the DLP application. (The method to accomplish this varies. For specific instructions, contact the application manufacturer.)
 
