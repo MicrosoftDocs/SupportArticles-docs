@@ -31,31 +31,31 @@ This article describes the methods to verify the installation of Microsoft Excha
 ## Resolve errors during CU or SU installation
 
 - [Repair failed installations of Exchange Cumulative and Security updates](#repair-failed-installations-of-exchange-cumulative-and-security-updates)
-  - [Resolve errors during CU or SU installation](#resolve-errors-during-cu-or-su-installation)
-  - [Additional information](#additional-information)
-    - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
-    - [HTTP 400 errors in OWA and ECP and/or Connection Failure error in PowerShell](#http-400-errors-in-owa-and-ecp-andor-connection-failure-error-in-powershell)
-    - [Missing images in ECP](#missing-images-in-ecp)
-    - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
-    - [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
-    - [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
-    - [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
-    - [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
-    - [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
-    - [Services don't start after SU installation](#services-dont-start-after-su-installation)
-    - [Error during Setup in Setup log](#error-during-setup-in-setup-log)
-    - [Error during update rollup installation](#error-during-update-rollup-installation)
-    - [Setup fails with "Cannot start the service" error](#setup-fails-with-cannot-start-the-service-error)
-    - [SU installation fails because of existing IU](#su-installation-fails-because-of-existing-iu)
-    - [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
-    - [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
-    - [Mail flow has stopped](#mail-flow-has-stopped)
-    - [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
-    - [Exchange setup fails with error code 1603](#exchange-setup-fails-with-error-code-1603)
-    - [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
-    - [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
-    - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
-    - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
+- [Resolve errors during CU or SU installation](#resolve-errors-during-cu-or-su-installation)
+- [Additional information](#additional-information)
+- [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
+- [HTTP 400 errors in OWA and ECP and Connection Failure error in PowerShell](#http-400-errors-in-owa-and-ecp-and-connection-failure-error-in-powershell)
+- [Missing images in ECP](#missing-images-in-ecp)
+- [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
+- [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
+- [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
+- [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
+- [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
+- [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
+- [Services don't start after SU installation](#services-dont-start-after-su-installation)
+- [Error during Setup in Setup log](#error-during-setup-in-setup-log)
+- [Error during update rollup installation](#error-during-update-rollup-installation)
+- [Setup fails with "Cannot start the service" error](#setup-fails-with-cannot-start-the-service-error)
+- [SU installation fails because of existing IU](#su-installation-fails-because-of-existing-iu)
+- [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
+- [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
+- [Mail flow has stopped](#mail-flow-has-stopped)
+- [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
+- [Exchange setup fails with error code 1603](#exchange-setup-fails-with-error-code-1603)
+- [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
+- [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
+- [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
+- [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
 ## Additional information
 
@@ -87,7 +87,7 @@ For more information, see [OWA or ECP stops working after you install a security
 
 [Back to top](#summary)
 
-### HTTP 400 errors in OWA and ECP and/or Connection Failure error in PowerShell
+### HTTP 400 errors in OWA and ECP and Connection Failure error in PowerShell
 
 **Issue:**
 
