@@ -51,7 +51,7 @@ To resolve this issue, try the following general resolutions to change the File 
 5. Try to open or save the file that was blocked again.
 
 > [!NOTE]
-> The **File Block Settings** can be controlled by a Group Policy Object (GPO) and are part of the recommended [security base line](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-for-office-365-proplus-v1908-sept-2019-final/ba-p/873084) settings. If a file type that's blocked by default is enabled, there is a security implication.
+> The **File Block Settings** can be controlled by a Group Policy Object (GPO) and are part of the recommended [security base line](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/security-baseline-for-office-365-proplus-v1908-sept-2019-final/ba-p/873084) settings. Enabling a file type that's blocked by default could compromise security.
 >
 > Here's how to open the GPO:
 >
@@ -60,10 +60,10 @@ To resolve this issue, try the following general resolutions to change the File 
 >
 >     ***User Configuration\Administrative Templates\Microsoft \<Product Name>\\\<Product Name> Options\Security\Trust Center\File Block Settings***
 >
->     Replace \<Product Name> with the affected Office application name, such as Word 2019.
+>     Replace \<Product Name> with the affected Office application name, for example Word 2019.
 >
-> Additionally, you may need to download [Administrative Template files](https://www.microsoft.com/download/details.aspx?id=49030) to use the GPO.
+> You may also have to download [Administrative Template files](https://www.microsoft.com/download/details.aspx?id=49030) to use the GPO.
 
-## More Information
+## More information
 
 The issue can also occur when you open an embedded or linked Office file in an Office application. For example, you have a Visio object embedded in a Word document. When you try to open the Visio object, you receive a similar error message in Word. To resolve this issue, you must change the File Block settings in the application that owns the blocked file type. In this example, you must change the File Block settings in Visio instead of in Word. If the error message mentions Excel file type, go to Excel to change the File Block settings.
