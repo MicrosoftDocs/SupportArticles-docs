@@ -277,8 +277,6 @@
       href: ../administration/winrm-time-out-add-mailbox-server-to-existing-dag.md
   - name: Client Connectivity
     items:
-    - name: Add-ins will stop working in Outlook on the web
-      href: ../client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md
     - name: "\"Insecure connection\" error in Outlook for iOS or Android"
       href: ../client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
     - name: "\"The connection to your mail server timed out\" error in Outlook for iOS or Outlook for Android"
@@ -289,6 +287,8 @@
       href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
     - name: ActiveSync clients can't connect
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
+    - name: Add-ins will stop working in Outlook on the web
+      href: ../client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md
     - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
     - name: Can't access archive mailbox in Outlook
