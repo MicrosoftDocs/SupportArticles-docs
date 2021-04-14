@@ -27,6 +27,11 @@ For more information on how to use Customer Lockbox for your organization, see [
 
 ## Information collected by the Azure Stack Edge support package
 
+The following sections shares list of information which may be collected as part of the support package.
+
+> [!NOTE]
+> This is a representative set of logs. There might be more files which can be collected.
+
 ### Registry subkeys
 
 - HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\Scsi
