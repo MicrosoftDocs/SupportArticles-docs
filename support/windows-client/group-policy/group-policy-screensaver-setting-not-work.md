@@ -1,6 +1,6 @@
 ---
-title: Windows 7/Windows Server 2008 R2 Group Policy Screensaver setting isn't working
-description: Fixes an issue where the Screensaver doesn't start after a Group Policy is configured to enable it in Windows 7 and Windows Server 2008 R2.
+title: Group Policy Screensaver setting isn't working in Windows
+description: Fixes an issue where the Screensaver doesn't start after a Group Policy is configured to enable it in Windows.
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.technology: windows-client-group-policy
 ---
-# Windows 7/Windows Server 2008 R2 Group Policy Screensaver setting isn't working
+# Group Policy Screensaver setting isn't working in Windows
 
-This article helps work around an issue where the Screensaver doesn't start after a Group Policy is configured to enable it in Windows 7 and Windows Server 2008 R2.
+This article helps work around an issue where the Screensaver doesn't start after a Group Policy is configured to enable it in Windows.
 
 _Original product version:_ &nbsp;Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2616727

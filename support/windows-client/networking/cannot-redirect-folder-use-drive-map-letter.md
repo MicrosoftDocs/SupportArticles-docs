@@ -62,7 +62,7 @@ In this scenario, folder redirection fails to apply and the following event is l
 
 ## Cause
 
-When an administrator logs on to Windows Vista or newer, the Local Security Authority (LSA) creates two access tokens. If LSA is notified that the user is a member of the Administrators group, LSA creates the second logon that has the administrator rights removed (filtered). Because LSA created the access tokens during two separate logon sessions, the access tokens contain separate logon IDs. The standard user access token is used to map the drive.
+When an administrator logs on to Windows, the Local Security Authority (LSA) creates two access tokens. If LSA is notified that the user is a member of the Administrators group, LSA creates the second logon that has the administrator rights removed (filtered). Because LSA created the access tokens during two separate logon sessions, the access tokens contain separate logon IDs. The standard user access token is used to map the drive.
 
 When the policy applies, it uses the highest token (admin token) and thus it fails to see the map drive.
 
@@ -76,7 +76,7 @@ To resolve this issue, redirect the folder using UNC path instead of using map d
 
 To work around this issue, use one of the following methods:
 
-- Use "EnableLinkedConnections" registry. This value enables Windows Vista to share network connections between the filtered access token and the full administrator access token for a member of the Administrators group. After you configure this registry value, LSA checks whether there's another access token that is associated with the current user session if a network resource is mapped to an access token. If LSA determines that there's a linked access token, it adds the network share to the linked location.
+- Use "EnableLinkedConnections" registry. This value enables Windows to share network connections between the filtered access token and the full administrator access token for a member of the Administrators group. After you configure this registry value, LSA checks whether there's another access token that is associated with the current user session if a network resource is mapped to an access token. If LSA determines that there's a linked access token, it adds the network share to the linked location.
 
     To configure the EnableLinkedConnections registry value, follow these steps:
 

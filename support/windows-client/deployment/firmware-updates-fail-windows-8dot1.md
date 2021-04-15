@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2909710
 
 ## Summary
 
-Computers that are running Windows 8 and Windows 8.1 may use Windows Update to update their firmware. Specifically, these computers use Windows driver packages to install firmware updates. After a firmware driver package has been installed, Windows hands off the firmware updates to UEFI system firmware for installation during your computer's next restart. UEFI system firmware is provided by your computer manufacturer and is separate from Windows. Windows itself doesn't install firmware updates but instead hands off firmware updates to the UEFI system firmware for your computer.
+Computers that are running Windows may use Windows Update to update their firmware. Specifically, these computers use Windows driver packages to install firmware updates. After a firmware driver package has been installed, Windows hands off the firmware updates to UEFI system firmware for installation during your computer's next restart. UEFI system firmware is provided by your computer manufacturer and is separate from Windows. Windows itself doesn't install firmware updates but instead hands off firmware updates to the UEFI system firmware for your computer.
 
 ## More information
 
