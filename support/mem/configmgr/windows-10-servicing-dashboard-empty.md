@@ -23,7 +23,7 @@ The issue may occur in one of the following situations:
 
 ## Resolution
 
-If the service connection point is running in **Offline** mode, use the [service connection tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import updates which include the Admin UI content payload.
+If the service connection point is running in **Offline** mode, use the [service connection tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import updates that include the Admin UI content payload.
 
 If the service connection point is running in **Online** mode, review the DmpDownloader.log file for any failures when accessing the payload URL. To work around the issue, follow these steps:
 
