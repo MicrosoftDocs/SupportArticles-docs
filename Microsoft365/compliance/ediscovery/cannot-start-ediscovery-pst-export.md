@@ -46,7 +46,7 @@ To resolve this issue, do one or more of the following, as appropriate for your 
 
 ### Scenario 1: You're not using the latest version of Windows
 
-[Upgrade to Windows 10](https://support.microsoft.com/windows/upgrade-to-windows-10-faq-cce52341-7943-594e-72ce-e1cf00382445)
+[Upgrade to Windows 10](https://support.microsoft.com/windows/upgrade-to-windows-10-faq-cce52341-7943-594e-72ce-e1cf00382445).
 
 ### Scenario 2: You're using Internet Explorer 9.0 or later, and you don't have the .NET Framework 4.5 or later installed
 
@@ -99,7 +99,7 @@ Use the `netsh` command-line tool to open port 8080 on the proxy server. To do t
 
 ## More information
 
-For more information about eDiscovery, see [eDiscovery solutions in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/ediscovery).
+For more information about eDiscovery, see [eDiscovery solutions in Microsoft 365](/microsoft-365/compliance/ediscovery?view=o365-worldwide&preserve-view=true).
 
 For more information about the latest browser requirements for Office 365, see [System requirements for Office](https://products.office.com/office-system-requirements).
 
