@@ -3,7 +3,7 @@ title: Invalid Argument error after applying CRM Update Rollup 10
 description: You may see the Invalid Argument error after installing Microsoft Dynamics CRM 2011 Update Rollup 10. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Invalid Argument error after installing Microsoft Dynamics CRM 2011 Update Rollup 10
 

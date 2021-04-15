@@ -3,7 +3,7 @@ title: Organization database updates fail during import
 description: Organization database updates fail during the import process of the organization in Microsoft Dynamics CRM 2011. Provides a resolution.
 ms.reviewer: bhshastr
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Organization database updates fail during the import process of the organization in Microsoft Dynamics CRM 2011
 

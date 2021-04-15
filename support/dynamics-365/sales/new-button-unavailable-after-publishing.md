@@ -3,7 +3,7 @@ title: New button is unavailable after publishing
 description: Provides a solution to an issue where the New button for a custom entity isn't available immediately after publishing in Microsoft Dynamics CRM for Microsoft Outlook.
 ms.reviewer: mmaasjo
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The New button for a custom entity is not available immediately after publishing in Microsoft Dynamics CRM for Microsoft Outlook
 

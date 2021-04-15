@@ -3,7 +3,7 @@ title: List Component is case-sensitive
 description: Provides a solution to an error that occurs when you can't configure the Microsoft Dynamics CRM 2011 List Component for Microsoft SharePoint 2013.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM 2011 List Component for Microsoft SharePoint 2013 Configuration is case-sensitive for SharePoint URLs
 

@@ -3,7 +3,7 @@ title: UI Flows cannot launch recorder
 description: Troubleshooting recorder launch for UI Flows in Power Automate.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # UI flows cannot launch recorder
 
@@ -27,8 +27,8 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
 2. Check that you've enabled the UI flows for Power Automate chromium extension:
 
-    - In Microsoft Edge, navigate to [edge://extensions](edge://extensions)
-    - In Google Chrome, navigate to [chrome://extensions](chrome://extensions)
+    - In Microsoft Edge, navigate to `edge://extensions`
+    - In Google Chrome, navigate to `chrome://extensions`
 
     Verify that the extension is enabled in the extensions page:
 

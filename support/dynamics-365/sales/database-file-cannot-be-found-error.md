@@ -3,7 +3,7 @@ title: The database file cannot be found when configuring CRM for Outlook
 description: Provides a solution to an error that occurs when configuring Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The database file cannot be found error when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 
@@ -42,4 +42,4 @@ Microsoft is aware of a scenario where this error may occur after configuring Mi
 
 Close the Microsoft Dynamics CRM for Outlook Configuration Wizard and attempt the configuration again.
 
-If you're still meeting issues connecting CRM for Outlook to your CRM Online organization, [a diagnostic tool](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) is available to help diagnose the issue.
+If you're still meeting issues connecting CRM for Outlook to your CRM Online organization, [a diagnostic tool](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) is available to help diagnose the issue.

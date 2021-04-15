@@ -3,7 +3,7 @@ title: Support with Dynamics CRM 2011 and Internet Explorer 10
 description: This article discusses about the support with Microsoft Dynamics CRM 2011 and Internet Explorer 10.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Support with Microsoft Dynamics CRM 2011 and Internet Explorer 10
 

@@ -3,7 +3,7 @@ title: File already exists error
 description: Provides a solution to an error that occurs when you configure CRM for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # File already exists error when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 
@@ -28,7 +28,7 @@ This error can occur if a database file from a previous configuration already ex
 
 Option 1 (CRM Online)
 
-1. If you're using CRM Online, you can run the [Microsoft Support and Recovery Assistant](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f), which can fix this issue for you.
+1. If you're using CRM Online, you can run the [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant), which can fix this issue for you.
 2. Choose the **Dynamics CRM Online** option, and then select **I'm having trouble installing, connecting, or enabling CRM for Outlook (Outlook Client)**.
 3. Continue through the wizard. The Remove cache files used by CRM for Outlook action should appear and will remove the existing file referenced in the error.
 4. Run the Microsoft Dynamics CRM Configuration Wizard again.

@@ -3,7 +3,7 @@ title: HTTP Error 401 Unauthorized when accessing CRM via NLB address
 description: The error HTTP Error 401 - Unauthorized occurs when you access Microsoft Dynamics CRM using the Network Load Balancing (NLB) address. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # HTTP Error 401 Unauthorized error when you access Microsoft Dynamics CRM using the NLB address
 

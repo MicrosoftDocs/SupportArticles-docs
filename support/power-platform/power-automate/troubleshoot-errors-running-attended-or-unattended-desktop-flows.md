@@ -3,7 +3,7 @@ title: Windows sessions and UI flows and attended/unattended behavior
 description: Windows sessions and UI flows and attended/unattended behavior. Troubleshoot errors running attended or unattended desktop flows.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Troubleshoot errors running attended or unattended desktop flows
 

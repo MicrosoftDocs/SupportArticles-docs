@@ -3,7 +3,7 @@ title: Mobile Device Fingerprinting
 description: This article describes Mobile device fingerprinting.
 ms.topic: article
 ms.reviewer: 
-ms.date: 
+ms.date: 3/31/2021
 ---
 # DFP and Mobile Device fingerprinting
 

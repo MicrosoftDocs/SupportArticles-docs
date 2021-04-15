@@ -3,7 +3,7 @@ title: Failure when selecting Test&Enable Mailbox
 description: After you select the Test & Enable Mailbox button, one or more of the test results shows as Failure.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Failure after selecting Test & Enable Mailbox in Microsoft Dynamics 365
 

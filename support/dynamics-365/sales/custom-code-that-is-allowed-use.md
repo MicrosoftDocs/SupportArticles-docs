@@ -3,7 +3,7 @@ title: Custom code that is allowed for use
 description: Provides a solution to an error that occurs when you try to upload a custom FetchXML report into a Microsoft Dynamics CRM Online organization.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Custom code that is allowed for use in Microsoft Dynamics CRM Online FetchXML Reports
 
@@ -133,7 +133,7 @@ When RDL Sandboxing is enabled, only certain classes and methods can be used in 
    - SYD
    - ToString
 
-7. Microsoft.VisualBasic.Conversion (For more information, see [Conversion](/dotnet/api/system.dbnull/dotnet/api/microsoft.visualbasic.conversion))
+7. Microsoft.VisualBasic.Conversion (For more information, see [Conversion](/dotnet/api/microsoft.visualbasic.conversion))
 
    - CTypeDynamic
    - Hex

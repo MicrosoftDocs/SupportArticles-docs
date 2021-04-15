@@ -3,7 +3,7 @@ title: The server address isn't valid
 description: Fixes an issue in which you receive the server address (URL) is not valid when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The server address (URL) is not valid" error when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook
 
@@ -26,4 +26,4 @@ The URL you provided is either not valid or isn't working to access Microsoft Dy
 
 To verify that the URL is valid and can successfully access Microsoft Dynamics CRM, try using the exact same URL to access CRM via your web browser. If you're unable to access your CRM organization via your web browser, CRM for Outlook can't access either. If you're attempting to connect to a CRM Online organization, try choosing the CRM Online option instead of typing a URL in the Microsoft Dynamics CRM for Outlook Configuration Wizard.
 
-If you're still meeting issues connecting CRM for Outlook to your CRM Online organization, run the [Microsoft Support and Recovery Assistant](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) to diagnose and fix the problem.
+If you're still meeting issues connecting CRM for Outlook to your CRM Online organization, run the [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) to diagnose and fix the problem.

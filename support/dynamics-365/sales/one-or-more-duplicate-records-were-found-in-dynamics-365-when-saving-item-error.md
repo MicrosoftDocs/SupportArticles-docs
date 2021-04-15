@@ -3,7 +3,7 @@ title: One or more duplicate records were found error when saving item from Exch
 description: One or more duplicate records were found in Microsoft Dynamics 365 when saving item from Exchange to Microsoft Dynamics 365 - this error may occur when you try to track a contact in Microsoft Outlook.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # One or more duplicate records were found in Microsoft Dynamics 365 when saving item from Exchange to Microsoft Dynamics 365
 

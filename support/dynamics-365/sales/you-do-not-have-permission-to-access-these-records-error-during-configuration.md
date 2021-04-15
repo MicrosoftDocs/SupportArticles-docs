@@ -3,7 +3,7 @@ title: You do not have permission to access these records occurs when configurin
 description: You may receive an error that states you do not have permission to access these records. This error occurs when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook. Provides a resolution.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You do not have permission to access these records occurs when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 
@@ -43,7 +43,7 @@ The language setting could not be set at the user level in Microsoft Dynamics CR
 5. Select **Save**.
 6. Attempt to connect Microsoft Dynamics CRM for Microsoft Office Outlook again.
 
-If you are still encountering issues connecting Microsoft Dynamics CRM for Outlook to your Microsoft Dynamics CRM Online organization, run the [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) to diagnose and fix the problem.
+If you are still encountering issues connecting Microsoft Dynamics CRM for Outlook to your Microsoft Dynamics CRM Online organization, run the [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) to diagnose and fix the problem.
 
 ## More information
 

@@ -3,7 +3,7 @@ title: Operation failed because you're offline
 description: Provides a solution to the connection issue that occurs when you access the Microsoft Dynamics CRM App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # This operation failed because you're offline when accessing the Microsoft Dynamics CRM App for Outlook
 

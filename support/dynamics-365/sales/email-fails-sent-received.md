@@ -3,7 +3,7 @@ title: Email fails to be sent or received
 description: Provides solutions to errors that occur when Server-Side Synchronization is configured with Gmail.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Email fails to be sent or received when Server-Side Synchronization is configured with Gmail
 

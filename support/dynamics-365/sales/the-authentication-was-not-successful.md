@@ -3,7 +3,7 @@ title: The authentication wasn't successful
 description: Provides a solution to an error that occurs when you try to use the Dynamics 365 App for Outlook on Outlook desktop.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Sorry, the authentication was not successful error occurs in Microsoft Dynamics 365 App for Outlook
 
@@ -50,9 +50,9 @@ Clear your browser cache.
 
 | **Platform**| **Instructions** |
 |---|---|
-| Outlook (same as Internet Explorer)| [View and delete your browsing history in Internet Explorer](/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678) |
-| Internet Explorer| [View and delete your browsing history in Internet Explorer](/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678) |
-| Edge| [View and delete browser history in Microsoft Edge](/microsoft-edge/view-and-delete-browser-history-in-microsoft-edge-00cf7943-a9e1-975a-a33d-ac10ce454ca4) |
+| Outlook (same as Internet Explorer)| [View and delete your browsing history in Internet Explorer](https://support.microsoft.com/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678) |
+| Internet Explorer| [View and delete your browsing history in Internet Explorer](https://support.microsoft.com/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678) |
+| Edge| [View and delete browser history in Microsoft Edge](https://support.microsoft.com/microsoft-edge/view-and-delete-browser-history-in-microsoft-edge-00cf7943-a9e1-975a-a33d-ac10ce454ca4) |
 | Chrome| [Clear cache & cookies](https://support.google.com/accounts/answer/32050) |
 
 > [!IMPORTANT]

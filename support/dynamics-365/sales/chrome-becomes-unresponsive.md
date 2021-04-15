@@ -3,7 +3,7 @@ title: Google Chrome becomes unresponsive when logging into Microsoft Dynamics C
 description: Fixes an issue in which the Google Chrome browser becomes unresponsive when logging into Microsoft Dynamics CRM Online.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Google Chrome becomes unresponsive when logging into Microsoft Dynamics CRM Online
 

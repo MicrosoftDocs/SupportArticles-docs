@@ -3,7 +3,7 @@ title: An error occurred loading Microsoft Dynamics CRM functionality
 description: Describes a problem that occurs when you try to start Outlook on a computer that has the Microsoft Dynamics CRM client for Outlook installed, and you receive an error message. Includes a resolution.
 ms.reviewer: tlemar
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An error occurred loading Microsoft Dynamics CRM functionality error when starting Outlook
 

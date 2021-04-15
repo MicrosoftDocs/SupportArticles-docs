@@ -3,7 +3,7 @@ title: Internet accessible URLs
 description: A connectivity issue while accessing the CRM application and as a result the application may fail to load.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Internet accessible URLs required for connectivity to Microsoft Dynamics CRM Online
 
@@ -274,7 +274,7 @@ To resolve the issue, add the following URLs to the allow list to access traffic
 - `https://www.crmdynint.com`
 - `https://www.d365ccafpi.com/`
 
-If you still experience issues when you try to connect to your CRM Online organization, [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) is available to help diagnose connection issues that affect the CRM Online web application and also CRM for Outlook.
+If you still experience issues when you try to connect to your CRM Online organization, [About the Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) is available to help diagnose connection issues that affect the CRM Online web application and also CRM for Outlook.
 
 ## More information
 

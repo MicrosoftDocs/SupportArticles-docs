@@ -3,7 +3,7 @@ title: Troubleshooting Flow Custom Connectors
 description: Provide a guide for errors with defining Custom Connectors.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Troubleshooting Flow Custom Connectors
 

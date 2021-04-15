@@ -3,7 +3,7 @@ title: Error when you access the Microsoft Dynamics CRM App for Outlook
 description: This article provides a resolution for the problem that occurs when you click the Dynamics CRM app for Outlook (anywhere the app is supported).
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "This app is not available for your version of Microsoft Dynamics CRM" error when accessing the Microsoft Dynamics CRM App for Outlook
 

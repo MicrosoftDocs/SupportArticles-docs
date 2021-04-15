@@ -66,7 +66,8 @@ This policy does not prevent users from using other programs to gain access to l
 
 The default values are not the only values that you can use. By editing the System.adm file, you can add your own custom values. This is the portion of the System.adm to be modified:
 
-> POLICY !!NoDrives  
+```output
+POLICY !!NoDrives  
      EXPLAIN !!NoDrives_Help  
         PART !!NoDrivesDropdown DROPDOWNLIST NOSORT REQUIRED  
            VALUENAME "NoDrives"  
@@ -82,8 +83,8 @@ The default values are not the only values that you can use. By editing the Syst
             END ITEMLIST  
         END PART  
       END POLICY
->
-> [strings]  
+
+[strings]  
 ABCDOnly="Restrict A, B, C and D drives only"  
 ABConly="Restrict A, B and C drives only"  
 ABOnly="Restrict A and B drives only"  
@@ -91,6 +92,7 @@ ALLDrives="Restrict all drives"
 COnly="Restrict C drive only"  
 DOnly="Restrict D drive only"  
 RestNoDrives="Do not restrict drives"  
+```
 
 The [strings] section represents substitutions of the actual values in the drop-down box.
 
@@ -118,7 +120,8 @@ NAME !!LMNO_Only VALUE NUMERIC 30720
 
 This creates an eighth entry in the drop-down box to hide drives L, M, N, and O only. Use this method to include more values in the drop-down box. The modified section of the System.adm file appears as follows:
 
-> POLICY !!NoDrives  
+```output
+POLICY !!NoDrives  
      EXPLAIN !!NoDrives_Help  
         PART !!NoDrivesDropdown DROPDOWNLIST NOSORT REQUIRED  
            VALUENAME "NoDrives"  
@@ -135,8 +138,8 @@ This creates an eighth entry in the drop-down box to hide drives L, M, N, and O 
             END ITEMLIST
        END PART  
      END POLICY
->
-> [strings]  
+
+[strings]  
 ABCDOnly="Restrict A, B, C and D drives only"  
 ABConly="Restrict A, B and C drives only"  
 ABOnly="Restrict A and B drives only"  
@@ -145,5 +148,6 @@ COnly="Restrict C drive only"
 DOnly="Restrict D drive only"  
 RestNoDrives="Do not restrict drives"  
 LMNO_Only="Restrict L, M, N and O drives only"  
+```
 
 This [strings] section represents substitutions of the actual values in the drop-down box.

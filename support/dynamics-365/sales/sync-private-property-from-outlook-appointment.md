@@ -3,7 +3,7 @@ title: Sync the private property from Outlook appointments
 description: This article describes Microsoft Dynamics CRM 2011 with Update Rollup 12 adds the functionality to synchronize the private property from Office Outlook appointments into Microsoft Dynamics CRM 2011.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Sync the private property from Outlook appointments to Microsoft Dynamics CRM 2011 with Update Rollup 12
 

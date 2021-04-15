@@ -3,7 +3,7 @@ title: UI flow inputs not working
 description: Troubleshooting UI flow inputs not working issue.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # UI flow inputs not working
 

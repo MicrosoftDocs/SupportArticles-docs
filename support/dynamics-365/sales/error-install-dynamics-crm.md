@@ -3,7 +3,7 @@ title: Error when you install Microsoft Dynamics CRM
 description: This article provides a resolution for the problem where the error The Kerberos subsystem encountered an error, The SQL Server instance name must be the same as the computer name occurs.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The Kerberos subsystem encountered an error, The SQL Server instance name must be the same as the computer name" error when you install Microsoft Dynamics CRM
 

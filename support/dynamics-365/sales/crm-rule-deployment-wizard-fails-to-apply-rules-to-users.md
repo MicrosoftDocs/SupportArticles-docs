@@ -3,7 +3,7 @@ title: CRM Rule Deployment Wizard fails to apply rules
 description: Microsoft Dynamics CRM Rule Deployment Wizard fails to apply rules to Microsoft Dynamics CRM users with mailboxes hosted on Microsoft Exchange Server 2010. Provides a resolution.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Failed to access the default store for the user error when CRM Rule Deployment Wizard cannot apply rules
 

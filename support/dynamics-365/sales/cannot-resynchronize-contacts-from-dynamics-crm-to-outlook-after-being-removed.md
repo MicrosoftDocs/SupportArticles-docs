@@ -3,7 +3,7 @@ title: Cannot resynchronize contacts after being deleted
 description: How to restore previously deleted Microsoft Dynamics CRM contacts in Outlook when their corresponding contact record still exists in Microsoft Dynamics CRM.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Cannot resynchronize contacts from Microsoft Dynamics CRM 2011 to Outlook after being previously deleted in Outlook
 

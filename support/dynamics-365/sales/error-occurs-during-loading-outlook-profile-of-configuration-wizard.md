@@ -3,7 +3,7 @@ title: Error occurs when configuring Dynamics CRM for Outlook
 description: When configuring the Microsoft Dynamics CRM 2011 Outlook client, you receive an error during the Loading Outlook Profile portion of Configuration Wizard.
 ms.reviewer: jowells
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error occurs during the Loading Outlook Profile portion of the Microsoft Dynamics CRM Configuration Wizard
 

@@ -3,7 +3,7 @@ title: Error when signing in to Dynamics 365
 description: Provides a solution to error messages display when you try to sign in to Microsoft Dynamics 365 (online).
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error messages display when you try to sign in to Microsoft Dynamics 365 (online)
 
@@ -38,7 +38,7 @@ Ask your Dynamics 365 administrator to add you to the security group that is ass
 
 If you're a Dynamics 365 administrator, navigate to the Dynamics 365 Administration Center. Select the Dynamics 365 instance that the user is unable to access and then select the **Edit** button. If the Security Group field is populated, verify the user is a member of that group. If the security group is managed in Office 365, you can add the user to the group from the [Users area](https://portal.office.com/adminportal/home#/users) or the [Groups area](https://portal.office.com/adminportal/home#/groups) within the [Office 365 portal](https://www.office.com/).
 
-If you're still unable to access Dynamics 365 (online), see [About the Microsoft Support and Recovery Assistant](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f), which includes a diagnostically designed to troubleshoot sign in issues.
+If you're still unable to access Dynamics 365 (online), see [About the Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant), which includes a diagnostically designed to troubleshoot sign in issues.
 
 ## More information
 

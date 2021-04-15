@@ -3,7 +3,7 @@ title: Cannot go offline or configure CRM Client
 description: Provides a solution to errors that occur after you rename the computer.
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You cannot go offline or configure the Microsoft Dynamics CRM Client for Microsoft Office Outlook after you rename the computer
 

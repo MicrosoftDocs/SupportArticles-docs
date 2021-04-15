@@ -3,7 +3,7 @@ title: Sorry something went wrong error
 description: Provides a solution to an error that occurs when you try to use the CRM App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Sorry, something went wrong" error when using CRM App for Outlook
 

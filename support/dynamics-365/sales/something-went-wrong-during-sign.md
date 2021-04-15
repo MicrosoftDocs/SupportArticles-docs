@@ -3,7 +3,7 @@ title: Something went wrong during sign-in when accessing Dynamics 365 App for O
 description: Provides a solution to an error that occurs when you access the Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Something went wrong during sign-in error message displays when you access the Microsoft Dynamics 365 App for Outlook
 
@@ -26,7 +26,7 @@ Microsoft Dynamics 365 App for Outlook was unable to connect to the authorizatio
 
 Cause 2
 
-This issue can occur if your Dynamics 365 (online) URL was changed after the Dynamics 365 App for Outlook was installed. For example: If your Dynamics 365 URL was <https://contosocorp.crm.dynamics.com> when you deployed the app but you changed the URL to <https://contoso.crm.dynamics.com> later.
+This issue can occur if your Dynamics 365 (online) URL was changed after the Dynamics 365 App for Outlook was installed. For example: If your Dynamics 365 URL was <`https://contosocorp.crm.dynamics.com`> when you deployed the app but you changed the URL to <`https://contoso.crm.dynamics.com`> later.
 
 ## Resolution
 

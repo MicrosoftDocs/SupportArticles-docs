@@ -3,7 +3,7 @@ title: This organization has already been configured error
 description: You may receive this organization has already been configured this error when try to connect Microsoft Dynamics CRM for Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # This organization has already been configured error when connecting Microsoft Dynamics CRM for Office Outlook
 
@@ -30,4 +30,4 @@ If you want to connect to this organization as a different user, first delete th
 
 If you are still encountering issues connecting Microsoft Dynamics CRM for Outlook to your Microsoft Dynamics CRM Online organization, a diagnostic tool is available to help diagnose the issue:
 
-[Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
+[Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant)

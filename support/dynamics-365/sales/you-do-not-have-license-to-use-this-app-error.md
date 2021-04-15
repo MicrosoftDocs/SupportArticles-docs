@@ -3,7 +3,7 @@ title: You do not have a license to use this app error occurs
 description: You can't use the Microsoft Dynamics 365 App for Outlook due to You don't have a license to use this app error. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You don't have a license to use this app error occurs in Microsoft Dynamics 365 App for Outlook
 

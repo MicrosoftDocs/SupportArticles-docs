@@ -3,7 +3,7 @@ title: Error when you configure Microsoft Dynamics CRM for Office Outlook
 description: This article provides a resolution for the problem that occurs when you attempt to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Error.AspNetInstallPath.Exception0" error when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 

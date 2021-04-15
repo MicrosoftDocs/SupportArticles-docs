@@ -3,7 +3,7 @@ title: Visual Studio 2015 stops working
 description: Provides a solution to an error that occurs when you start SQL Server Data Tools for Visual Studio.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Visual Studio 2015 stops working after installing the Microsoft Dynamics 365 Report Authoring Extension
 

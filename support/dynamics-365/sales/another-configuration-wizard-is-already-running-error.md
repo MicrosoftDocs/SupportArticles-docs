@@ -3,7 +3,7 @@ title: Another Configuration Wizard is already running error in Dynamics CRM for
 description: You receive a Another Configuration Wizard is already running error in Microsoft Dynamics CRM for Microsoft Office Outlook. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Another Configuration Wizard is already running error occurs in Microsoft Dynamics CRM for Outlook
 
@@ -32,4 +32,4 @@ Complete the currently open Configuration Wizard before trying to start another 
 
 If you are still encountering issues connecting Microsoft Dynamics CRM for Outlook to your CRM Online organization, a diagnostic tool is available to help diagnose the issue:
 
-[Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f?ui=en-us&rs=en-us&ad=us#/Download?env=Prod&referralSite=CRMOCConfigKB)
+[Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant)

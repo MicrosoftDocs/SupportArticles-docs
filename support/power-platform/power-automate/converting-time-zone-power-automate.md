@@ -3,7 +3,7 @@ title: Converting time zone in Power Automate
 description: Provides a solution to an issue where you find a datetime in the wrong time zone.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Converting time zone in Microsoft Power Automate
 

@@ -3,7 +3,7 @@ title: Error when accessing an app module
 description: Provides a solution to an error that occurs when you try to access an app module.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error Code: 2147812097 Invalid License: This application requires a license and you don't have an appropriate license assigned
 

@@ -3,7 +3,7 @@ title: No search results in Regarding lookup
 description: Provides a solution to an error that occurs when you search in the Regarding lookup field of Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # No search results returned in Regarding lookup of Microsoft Dynamics 365 App for Outlook
 
@@ -31,7 +31,7 @@ First try clearing the browser cache in Internet Explorer:
 
 1. Clear the cache in Internet Explorer.
 
-    - [View and delete your browsing history in Internet Explorer](/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678)
+    - [View and delete your browsing history in Internet Explorer](https://support.microsoft.com/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678)
 
 2. Close all Internet Explorer and Outlook Desktop windows and make sure through Task Manager there are no remaining Internet Explorer or Outlook processes running.
 

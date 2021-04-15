@@ -3,7 +3,7 @@ title: Edit button does not appear in read optimized forms
 description: This article provides a resolution for the problem where you notice that the Edit button does not appear for certain entity forms that open in read optimized mode. 
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # When using the iPad browser, the edit button does not appear in Read Optimized forms in Microsoft Dynamics CRM Online
 

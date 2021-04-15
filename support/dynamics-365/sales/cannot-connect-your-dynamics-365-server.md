@@ -3,7 +3,7 @@ title: Cannot connect to your Dynamics 365 server
 description: Provides a solution to an error that occurs when you use Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # We're unable to connect to your Microsoft Dynamics 365 server Error occurs when using Microsoft Dynamics 365 App for Outlook
 
@@ -32,7 +32,7 @@ This error can occur for one of the following reasons:
 
 **Resolution 1:** Clear your web browser cache.
 
-If you're using Outlook Desktop, Outlook uses Internet Explorer to display the web pages. For more information about how to clear the Internet Explorer history and cache, see [View and delete your browsing history in Internet Explorer](/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678).  
+If you're using Outlook Desktop, Outlook uses Internet Explorer to display the web pages. For more information about how to clear the Internet Explorer history and cache, see [View and delete your browsing history in Internet Explorer](https://support.microsoft.com//topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678).  
 
 > [!IMPORTANT]
 > If this error appears to be resolved after clearing your web browser cache but eventually returns, see [Error "We’re unable to connect to your Microsoft Dynamics 365 server" when using Dynamics 365 App for Outlook](https://support.microsoft.com/help/4341413) for a potential solution.

@@ -3,7 +3,7 @@ title: Error occurs when connecting to CRM app
 description: Provides a solution to an error that occurs when you connect an iPhone or iPad to the Dynamics CRM app.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # We're Sorry. Your server is not available or does not support this application. An error occurs when connecting to the CRM app on an iPad or iPhone
 

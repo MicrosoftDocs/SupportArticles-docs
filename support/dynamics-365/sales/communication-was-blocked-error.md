@@ -3,7 +3,7 @@ title: Communication was blocked error when configuring CRM for Outlook
 description: Provides a solution to an issue in which you receive communication was blocked when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Communication was blocked error when you attempt to configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

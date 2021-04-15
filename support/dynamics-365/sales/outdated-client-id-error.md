@@ -3,7 +3,7 @@ title: Outdated client ID error
 description: Provides a solution to an error that occurs after your organization is upgraded to the December 2016 update for Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Outdated client ID error after upgrading to the December 2016 update for Microsoft Dynamics 365
 

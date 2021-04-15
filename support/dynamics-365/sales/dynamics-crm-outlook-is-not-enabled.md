@@ -3,7 +3,7 @@ title: Dynamics CRM for Outlook isn't enabled
 description: Provides a solution to an issue where CRM isn't enabled in Outlook after installing Microsoft Dynamics CRM for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM for Outlook isn't enabled in Outlook
 
@@ -50,4 +50,4 @@ Run the Microsoft Dynamics CRM Configuration Wizard:
 
 7. Select **OK**.
 
-If you're unable to successfully connect to your CRM Online organization, use [Microsoft Support and Recovery Assistant](/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+If you're unable to successfully connect to your CRM Online organization, use [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant).

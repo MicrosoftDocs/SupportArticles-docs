@@ -3,7 +3,7 @@ title: Something went wrong while initializing the app error when accessing Dyna
 description: Sorry, something went wrong while initializing the app error occurs when accessing the Microsoft Dynamics 365 App for Outlook.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "Something went wrong while initializing the app" error when accessing the Microsoft Dynamics 365 App for Outlook
 

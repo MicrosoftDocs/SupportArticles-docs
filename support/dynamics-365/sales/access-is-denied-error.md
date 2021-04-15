@@ -3,7 +3,7 @@ title: Access is denied when connecting CRM for Outlook
 description: Provides a solution to an authentication error that occurs when you try to connect Microsoft Dynamics CRM for Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Access is denied error when you try to connect Microsoft Dynamics CRM for Office Outlook
 

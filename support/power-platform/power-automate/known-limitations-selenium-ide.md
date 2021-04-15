@@ -3,7 +3,7 @@ title: Known limitations of Selenium IDE
 description: Describes the known limitations of Selenium IDE.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Known limitations of Selenium IDE
 
