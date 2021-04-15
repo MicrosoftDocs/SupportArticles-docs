@@ -20,9 +20,13 @@ search.appverid: MET150
 ---
 # Add-ins will stop working in Outlook on the web for Exchange Server 2016 RTM
 
-From May 3, 2021, you won't be able to start add-ins in Outlook on the web that's running on Exchange Server 2016 RTM. The [Outlook add-ins use the Office JavaScript APIs](/office/dev/add-ins/outlook/apis) that are accessed via the Office JS (Office.js) Content Delivery Network (CDN) to [interact with content](/office/dev/add-ins/develop/develop-overview#interacting-with-content-in-an-office-document) in Outlook on the web. These JavaScript APIs are being deprecated for Exchange Server 2016 RTM.
+Starting on May 3, 2021, you will no longer be able to start add-ins in an instance of Outlook on the web that's running on Microsoft Exchange Server 2016 RTM.
 
-When you try to launch an add-in in Outlook on the web, you'll see the following error message:
+This change will occur because the [Outlook add-ins use the Office JavaScript APIs](/office/dev/add-ins/outlook/apis) that are accessed through the Office JS (Office.js) Content Delivery Network (CDN) to [interact with content](/office/dev/add-ins/develop/develop-overview#interacting-with-content-in-an-office-document) in Outlook on the web. These JavaScript APIs will be deprecated for Exchange Server 2016 RTM.
+
+After this change is made, you will receive the following error message when you try to open an add-in in Outlook on the web:
+
+This add-in has been disabled to help keep you safe.
 
 :::image type="content" source="./media/add-ins-will-stop-working-outlook-on-the-web/add-in-disabled-error-message.png" alt-text="The add-in has been disabled error message":::
 
