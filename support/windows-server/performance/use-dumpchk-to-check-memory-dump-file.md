@@ -69,7 +69,8 @@ Additional switches that are only available in Windows 2000 Dumpchk.exe version:
 
 Dumpchk displays some basic information from the memory dump file, then verifies all the virtual and physical addresses in the file. If any errors are found in the memory dump file, Dumpchk reports them. The following is an example of the output of a Dumpchk command:
 
-> Filename . . . . . . .memory.dmp  
+```output
+Filename . . . . . . .memory.dmp  
 Signature. . . . . . .PAGE  
 ValidDump. . . . . . .DUMP  
 MajorVersion . . . . .free system  
@@ -85,12 +86,12 @@ BugCheckParameter1 . .0xe131d948
 BugCheckParameter2 . .0x00000000  
 BugCheckParameter3 . .0x00000000  
 BugCheckParameter4 . .0x00000000  
->
-> ExceptionCode. . . . .0x80000003  
+
+ExceptionCode. . . . .0x80000003  
 ExceptionFlags . . . .0x00000001  
 ExceptionAddress . . .0x80146e1c  
->
-> NumberOfRuns . . . . .0x3  
+
+NumberOfRuns . . . . .0x3  
 NumberOfPages. . . . .0x1f5e  
 Run #1  
 BasePage . . . . . .0x1  
@@ -101,29 +102,20 @@ PageCount. . . . . .0xec0
 Run #3  
 BasePage . . . . . .0x1000  
 PageCount. . . . . .0x1000  
->
->**************  
->**************--> Validating the integrity of the PsLoadedModuleList  
->**************  
->
->**************  
->**************--> Performing a complete check (^C to end)  
->**************  
->**************  
->**************--> Validating all physical addresses  
->**************  
->**************  
->**************--> Validating all virtual addresses  
->**************  
->**************  
->**************--> This dump file is good!  
->**************
+
+**************--> Validating the integrity of the PsLoadedModuleList  
+**************--> Performing a complete check (^C to end)  
+**************--> Validating all physical addresses  
+**************--> Validating all virtual addresses  
+**************--> This dump file is good!
+```
 
 If there is an error during any portion of the output displayed above, the dump file is corrupted and analysis cannot be performed.
 
 In this example, the most important information (from a debugging standpoint) is the following:
 
->MajorVersion . . . . .free system  
+```output
+MajorVersion . . . . .free system  
 MinorVersion . . . . .1057  
 MachineImageType . . .i386  
 NumberProcessors . . .1  
@@ -132,6 +124,7 @@ BugCheckParameter1 . .0xe131d948
 BugCheckParameter2 . .0x00000000  
 BugCheckParameter3 . .0x00000000  
 BugCheckParameter4 . .0x00000000
+```
 
 This information can be used to determine what Kernel STOP Error occurred and, to a certain extent, what version of Windows was in use.
 

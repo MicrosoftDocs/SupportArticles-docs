@@ -1,6 +1,6 @@
 ---
-title: Shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job
-description: Describes an issue in which shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
+title: Shadow copies are deleted on Windows Server when you try to run an FCI classification job
+description: Describes an issue in which shadow copies are deleted on Windows Server when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
 ms.technology: windows-server-backup-and-storage
 ---
-# Shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job
+# Shadow copies are deleted on Windows Server when you try to run an FCI classification job
 
-This article describes an issue in which shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
+This article describes an issue in which shadow copies are deleted on Windows Server when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;977521
 
 ## Symptoms
 
-On a server that is running Windows Server 2008 R2, you have a volume on which you have enabled shadow copies through a Volume Shadow Copy (VSS) provider. On this volume, you run a File Classification Infrastructure (FCI) classification job. However, the classification job doesn't finish, and older shadow copies are deleted faster than expected from the shadow copies storage area. This may result in all shadow copies being deleted from the volume. Additionally, multiple entries that resemble the following may be logged in the System log:
+On a Windows Server computer, you have a volume on which you have enabled shadow copies through a Volume Shadow Copy (VSS) provider. On this volume, you run a File Classification Infrastructure (FCI) classification job. However, the classification job doesn't finish, and older shadow copies are deleted faster than expected from the shadow copies storage area. This may result in all shadow copies being deleted from the volume. Additionally, multiple entries that resemble the following may be logged in the System log:
 
 > The oldest shadow copy of volume **Volume_Letter** : was deleted to keep disk space usage for shadow copies of volume **Volume_Letter** : below the user defined limit.
 

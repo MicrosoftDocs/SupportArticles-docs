@@ -58,7 +58,7 @@ Determine whether the client was able to connect to a domain controller for doma
 
 In the following example, both the DNS domain name `contoso.com` and the NetBIOS domain name CONTOSO are discovered by the client. Two domain controllers were identified for the domain name CONTOSO: 2003server2 and 2003server1. If the client accesses the DNS name `contoso.com`in a request, the entries are displayed under the `contoso.com` entry.
 
-```console
+```output
 [*][2003server1.contoso.com]
 [*][CONTOSO]
 [*][contoso.com]
@@ -81,7 +81,7 @@ If the connection is successful, determine whether a valid DFSN referral is retu
 
 The following output details the expected entries within the client's referral cache after the client accesses the DFSN path `\\contoso.com\dfsroot\link`. The root has two targets (rootserver1 and rootserver2). The link has a single target (fileserver).
 
-```console
+```output
 Entry: \contoso.com\dfsroot
 ShortEntry: \contoso.com\dfsroot
 Expires in 300 seconds

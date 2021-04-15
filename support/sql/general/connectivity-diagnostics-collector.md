@@ -53,7 +53,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |Basic system information. This includes computer name, service pack number, computer model, and processor name and speed.|*<COMPUTER_NAME>_ System_Information.txt*||
+    |Basic system information. This includes computer name, service pack number, computer model, and processor name and speed.|*<COMPUTER_NAME>_ System_Information.txt*|
     |Virtualization information, and so on.|*<COMPUTER_NAME>_ DiscoveryReport.xml*|
     |List of roles and features that are installed on server media. (Windows Server 2008 R2 and later versions)|*<COMPUTER_NAME>_ ResultReport.xml*|
     |||
@@ -65,7 +65,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |System log in TXT, CSV, and EVT or EVTX formats|*<COMPUTER_NAME>_ evt_System.csv*<br/>*<COMPUTER_NAME>_ evt_System.txt*<br/>*<COMPUTER_NAME>_ evt_System.evt* or<br/>*<COMPUTER_NAME>_ evt_System.evtx*|
+    |System log in TXT, CSV, and EVT or EVTX formats|*<COMPUTER_NAME>_ evt_System.csv*</br>*<COMPUTER_NAME>_ evt_System.txt*</br>*<COMPUTER_NAME>_ evt_System.evt* or</br>*<COMPUTER_NAME>_ evt_System.evtx*|
     |||
 
 - **Application log**
@@ -75,14 +75,14 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |Application log in TXT, CSV, and EVT or EVTX format|*<COMPUTER_NAME>_ evt_Application.csv*<br/>*<COMPUTER_NAME>_ evt_Application.txt*<br/>*<COMPUTER_NAME>_ evt_Application.evt* or<br/>*<COMPUTER_NAME>_ evt_Application.evtx*|
+    |Application log in TXT, CSV, and EVT or EVTX format|*<COMPUTER_NAME>_ evt_Application.csv*</br>*<COMPUTER_NAME>_ evt_Application.txt*</br>*<COMPUTER_NAME>_ evt_Application.evt* or</br>*<COMPUTER_NAME>_ evt_Application.evtx*|
     |||
 
 - **Information about user and system environment variables on the destination computer**
 
     | Description| File name |
     |---|---|
-    |Information about user and system environment variables in the context of the current user on the destination computer in XML and TXT format|*<COMPUTER_NAME>_ EnvironmentVariables.xml*<br/>*<COMPUTER_NAME>_ EnvironmentVariables.txt*|
+    |Information about user and system environment variables in the context of the current user on the destination computer in XML and TXT format|*<COMPUTER_NAME>_ EnvironmentVariables.xml*</br>*<COMPUTER_NAME>_ EnvironmentVariables.txt*|
     |||
 
 - **Information about all services that are installed on the destination computer**
@@ -126,9 +126,9 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
     |Basic TCP/IP and networking configuration information such as TCP/IP registry key and outputs from ipconfig, netstat, nbtstat, and netsh commands.|*<COMPUTER_NAME>_TcpIp-Info.txt*|
     |DNS Client hosts file|*<COMPUTER_NAME>_DnsClient_HostsFile.txt*|
     | IPCONFIG/DISPLAYDNS command output|*<COMPUTER_NAME>_DnsClient_ipconfig-displaydns.txt*|
-    | NETSH DNSCLIENT SHOW STATE command output<br/><br/> **NOTE** This command is not valid on Windows Server 2003|*<COMPUTER_NAME>_DnsClient_netsh_dnsclient-show-state.TXT*|
+    | NETSH DNSCLIENT SHOW STATE command output</br></br> **NOTE** This command is not valid on Windows Server 2003|*<COMPUTER_NAME>_DnsClient_netsh_dnsclient-show-state.TXT*|
     |DNS Client registry entries|*<COMPUTER_NAME>_DnsClient_reg_.txt*|
-    |TCP/IP parameters registry key `HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`<br/><br/>|*<COMPUTER_NAME>_TcpIp_Parameters_Registry.xml*|
+    |TCP/IP parameters registry key `HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`</br></br>|*<COMPUTER_NAME>_TcpIp_Parameters_Registry.xml*|
     |Network adapter properties|*<COMPUTER_NAME>_NetworkAdapterConfigurations.xml*|
     |||
 
@@ -215,7 +215,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |`HKLM:\System\CurrentControlSet\Control\Lsa`<br/>`HKLM:\System\CurrentControlSet\Control\Lsa\MSV1_0`<br/>`HKLM:\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters`<br/>`HKLM:\System\CurrentControlSet\Services\LanmanServer\Parameters`<br/>`HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`|*<COMPUTER_NAME>_ Authentication_Registry.xml*|
+    |`HKLM:\System\CurrentControlSet\Control\Lsa`</br>`HKLM:\System\CurrentControlSet\Control\Lsa\MSV1_0`</br>`HKLM:\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters`</br>`HKLM:\System\CurrentControlSet\Services\LanmanServer\Parameters`</br>`HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`|*<COMPUTER_NAME>_ Authentication_Registry.xml*|
     |||
 
 - **Server network configuration of all instances of SQL Server on the destination computer**
@@ -229,7 +229,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |Active directory properties and SPNs of SQL Server service accounts on the destination computer|*<COMPUTER_NAME>_ SqlServiceAccounts_SPN_ADProperties.xml*<br/>*<COMPUTER_NAME>_ SQLInstances_Spn_Summary.xml*|
+    |Active directory properties and SPNs of SQL Server service accounts on the destination computer|*<COMPUTER_NAME>_ SqlServiceAccounts_SPN_ADProperties.xml*</br>*<COMPUTER_NAME>_ SQLInstances_Spn_Summary.xml*|
     |||
 
 - **SQL Server error logs**
@@ -241,7 +241,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
    | Description| File name |
    |---|---|
-   |Collects SQL Server error logs for all instances that are installed on the computer on which the diagnostic tool is executed.| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_ERRORLOG[.n]*<br/><br/> Default instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_ERRORLOG[.n]*|
+   |Collects SQL Server error logs for all instances that are installed on the computer on which the diagnostic tool is executed.| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_ERRORLOG[.n]*</br></br> Default instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_ERRORLOG[.n]*|
    |||
 
     > [!NOTE]
@@ -256,7 +256,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
   | Description| File name |
   |---|---|
-  |Collects SQL Server Agent logs for all instances that are installed on the computer on which the diagnostic tool is executed.| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME >_1033_SQLAGENT.[OUT \| n]*<br/><br/> Default instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER__1033_SQLAGENT.[OUT \|n]*|
+  |Collects SQL Server Agent logs for all instances that are installed on the computer on which the diagnostic tool is executed.| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME >_1033_SQLAGENT.[OUT \| n]*</br></br> Default instance: </br>*<COMPUTER_NAME>_MSSQLSERVER__1033_SQLAGENT.[OUT \|n]*|
   |||
 
     > [!NOTE]
@@ -275,8 +275,8 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
   | Description| File name |
   |---|---|
-  |SQL Server minidump files| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_SqlMiniDumps.zip*<br/><br/> Default instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_1033_SqlMiniDumps .zip*|
-  |A dump inventory report is generated and collected for each discovered instance of SQL Server.| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_DumpInventory.log*<br/><br/> Default Instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_DumpInventory.log*|
+  |SQL Server minidump files| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_SqlMiniDumps.zip*</br></br> Default instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_1033_SqlMiniDumps .zip*|
+  |A dump inventory report is generated and collected for each discovered instance of SQL Server.| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_DumpInventory.log*</br></br> Default Instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_DumpInventory.log*|
   |||
 
     > [!NOTE]
@@ -288,7 +288,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |SQLDIAG script output| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_sp_sqldiag_Shutdown.out*<br/><br/> Default Instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_1033_sp_sqldiag_Shutdown.out*|
+    |SQLDIAG script output| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_sp_sqldiag_Shutdown.out*</br></br> Default Instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_1033_sp_sqldiag_Shutdown.out*|
     |||
 
 - **SQL Server AlwaysOn configuration information**
@@ -298,7 +298,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |SQL Server AlwaysOn configuration information| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.out*<br/><br/> Default Instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.out*|
+    |SQL Server AlwaysOn configuration information| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.out*</br></br> Default Instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.out*|
     |||
 
 - **SQL Server AlwaysOn health logs**
@@ -309,7 +309,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |SQL Server AlwaysOn health logs| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip*<br/><br/> Default Instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip*|
+    |SQL Server AlwaysOn health logs| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip*</br></br> Default Instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip*|
     |||
 
     > [!NOTE]
@@ -323,7 +323,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |SQL Server failover cluster health logs| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_FailoverCluster_health_XeLogs.zip*<br/><br/> Default Instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_FailoverCluster_health_XeLogs.zip*|
+    |SQL Server failover cluster health logs| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_FailoverCluster_health_XeLogs.zip*</br></br> Default Instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_FailoverCluster_health_XeLogs.zip*|
     |||
 
     > [!NOTE]
@@ -335,7 +335,7 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
 
     | Description| File name |
     |---|---|
-    |SQL Server default system health logs| Named instance: <br/>*<COMPUTER_NAME>_<INSTANCE_NAME>_system_health_XeLogs.zip*<br/><br/> Default Instance: <br/>*<COMPUTER_NAME>_MSSQLSERVER_system_health_XeLogs.zip*|
+    |SQL Server default system health logs| Named instance: </br>*<COMPUTER_NAME>_<INSTANCE_NAME>_system_health_XeLogs.zip*</br></br> Default Instance: </br>*<COMPUTER_NAME>_MSSQLSERVER_system_health_XeLogs.zip*|
     |||
 
     > [!NOTE]

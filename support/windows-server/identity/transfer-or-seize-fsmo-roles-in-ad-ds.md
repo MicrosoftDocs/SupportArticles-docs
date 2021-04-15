@@ -110,10 +110,10 @@ For more information, see:
 
 ## Seize or transfer FSMO roles
 
-You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole).
+You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
 
 > [!IMPORTANT]
-> If you have to seize the RID master role, consider using the [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole) cmdlet instead of the Ntdsutil.exe utility.
+> If you have to seize the RID master role, consider using the [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet instead of the Ntdsutil.exe utility.
 >
 > To avoid the risk of duplicate SIDs in the domain, Ntdsutil increments the next available RID in the pool by 10,000 when you seize the RID master role. This behavior can cause your forest to completely consume its available ranges for RID values (also known as RID burn). In contrast, if you use the PowerShell cmdlet to seize the RID master role, the next available RID is not affected.
 
@@ -200,7 +200,7 @@ The Schema master, the Domain Naming master, and the RID master can create objec
 
 For more information, see:
 
-- [Active Directory FSMO roles in Windows](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles)
+- [Active Directory FSMO roles in Windows](/troubleshoot/windows-server/identity/fsmo-roles)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
 - [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)
@@ -211,4 +211,4 @@ For more information, see:
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
 - [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
-- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole?view=win10-ps&preserve-view=true)
+- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole)

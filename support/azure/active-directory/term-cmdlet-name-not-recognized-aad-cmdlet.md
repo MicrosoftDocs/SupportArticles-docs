@@ -14,19 +14,15 @@ _Original KB number:_ &nbsp; 2669552
 
 When you try to run Microsoft Azure Active Directory Module for Windows PowerShell cmdlets, you receive the following error message:
 
-```
-The term <cmdlet name> is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-```
+> The term \<cmdlet name> is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
 For example, you might see the following similar message:
 
-```
-The term 'Connect-MsolService' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-At line:1 char:20
-+ Connect-MsolService <<<<
-+ CategoryInfo : ObjectNotFound: (Connect-MsolService:String) [], CommandNotFoundException
-+ FullyQualifiedErrorId : CommandNotFoundException
-```
+> The term 'Connect-MsolService' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+At line:1 char:20  
+\+ Connect-MsolService <<<<  
+\+ CategoryInfo : ObjectNotFound: (Connect-MsolService:String) [], CommandNotFoundException  
+\+ FullyQualifiedErrorId : CommandNotFoundException
 
 ## Cause
 
@@ -41,7 +37,7 @@ To resolve this issue, follow these steps.
 3. At the Windows PowerShell command prompt, type `Get-Module`, and then press Enter.
 4. In the output, check that the `MSOnline` module is present. The output should look similar to the following one:
 
-    ```
+    ```output
     Module Type Name Exported Commands
     -------------- -------- ----------------
     Binary MSOnline {Add-MsolRoleMember, Remove-MsolContact...
