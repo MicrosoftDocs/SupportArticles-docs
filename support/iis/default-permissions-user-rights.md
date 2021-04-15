@@ -33,10 +33,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
-|Users|Read & execute<br/> List folder contents<br/> Read||
+|Users|Read & execute</br> List folder contents</br> Read||
 |TrustedInstaller|Full control||
 ||||
 
@@ -44,10 +44,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
-|Users|Read & execute<br/> List folder contents<br/> Read<br/>||
+|Users|Read & execute</br> List folder contents</br> Read</br>||
 |TrustedInstaller|Full control||
 ||||
 
@@ -55,10 +55,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only. <br/>Inherited from `\inetpub\AdminScripts`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only. </br>Inherited from `\inetpub\AdminScripts`.|
 |SYSTEM|Full control|Inherited from `\inetpub\AdminScripts`.|
 |Administrators|Full control|Inherited from `\inetpub\AdminScripts`.|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `\inetpub\AdminScripts`.|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub\AdminScripts`.|
 |TrustedInstaller|Full control|Inherited from `\inetpub\AdminScripts`.|
 ||||
 
@@ -66,10 +66,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to Subfolders and files only.<br/> Inherited from `\inetpub`.|
-|SYSTEM|Full control<br/> Special permissions|Full control is inherited from `\inetpub`.<br/> Special Permissions are equivalent to Full control.<br/> Applies to this folder only.|
-|Administrators|Full control<br/> Special permissions|Full control is inherited from `\inetpub`.<br/> Equivalent to Full control.<br/> Applies to this folder only.|
-|Users|Read & execute<br/> List folder contents<br/> Read<br/> Special permissions|Permissions are inherited from `\inetpub` except for special permissions.<br/><br/> Special permissions apply to this folder only, and include the following: <ul><li>Traverse folder / execute file</li><li>List folder / read data</li><li> Read attributes</li><li>Read extended attributes</li><li>Read permissions</li></ul>|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to Subfolders and files only.</br> Inherited from `\inetpub`.|
+|SYSTEM|Full control</br> Special permissions|Full control is inherited from `\inetpub`.</br> Special Permissions are equivalent to Full control.</br> Applies to this folder only.|
+|Administrators|Full control</br> Special permissions|Full control is inherited from `\inetpub`.</br> Equivalent to Full control.</br> Applies to this folder only.|
+|Users|Read & execute</br> List folder contents</br> Read</br> Special permissions|Permissions are inherited from `\inetpub` except for special permissions.</br></br> Special permissions apply to this folder only, and include the following: <ul><li>Traverse folder / execute file</li><li>List folder / read data</li><li> Read attributes</li><li>Read extended attributes</li><li>Read permissions</li></ul>|
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
 
@@ -77,10 +77,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control. <br/>Applies to subfolders and files only.<br/> Inherited from `\inetpub`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control. </br>Applies to subfolders and files only.</br> Inherited from `\inetpub`.|
 |SYSTEM|Full control|Inherited from `\inetpub`.|
 |Administrators|Full control|Inherited from `\inetpub`.|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `\inetpub`.|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub`.|
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
 
@@ -88,10 +88,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.<br/> Inherited from `\inetpub`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.</br> Inherited from `\inetpub`.|
 |SYSTEM|Full control|Inherited from `\inetpub`.|
 |Administrators|Full control|Inherited from `\inetpub`.|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `\inetpub`.|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub`.|
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
 
@@ -107,10 +107,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.<br/> Inherited from `\inetpub`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.</br> Inherited from `\inetpub`.|
 |SYSTEM|Full control|Inherited from `\inetpub`.|
 |Administrators|Full control|Inherited from `\inetpub`.|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `\inetpub`.|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub`.|
 |WMSvc|List folder contents||
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
@@ -128,11 +128,11 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.<br/> Inherited from `\inetpub`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.</br> Inherited from `\inetpub`.|
 |SYSTEM|Full control|Inherited from `\inetpub`.|
 |Administrators|Full control|Inherited from `\inetpub`.|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `\inetpub`.|
-|WMSvc|Modify<br/> Read & execute<br/> List folder contents<br/> Read<br/> Write|List folder contents permission is inherited from `\inetpub\logs`.|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub`.|
+|WMSvc|Modify</br> Read & execute</br> List folder contents</br> Read</br> Write|List folder contents permission is inherited from `\inetpub\logs`.|
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
 
@@ -140,10 +140,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.<br/> Inherited from `\inetpub`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.</br> Inherited from `\inetpub`.|
 |SYSTEM|Full control|Inherited from `\inetpub`.|
 |Administrators|Full control|Inherited from `\inetpub`.|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `\inetpub`.|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub`.|
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
 
@@ -151,7 +151,7 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |IIS_USRS|Read & execute|Inherited from `\inetpub`.|
@@ -177,10 +177,10 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.<br/> Inherited from `\inetpub`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.</br> Inherited from `\inetpub`.|
 |SYSTEM|Full control|Inherited from `\inetpub`.|
 |Administrators|Full control|Inherited from `\inetpub`.|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `\inetpub`.|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `\inetpub`.|
 |IIS_USRS|Read & execute||
 |TrustedInstaller|Full control|Inherited from `\inetpub`.|
 ||||
@@ -192,17 +192,17 @@ The tables in this section list the default New Technology File System (NTFS) pe
 |Everyone|Read||
 |SYSTEM|Full control||
 |Administrators|Full control||
-|Users|Read & execute<br/> List folder contents<br/> Read||
+|Users|Read & execute</br> List folder contents</br> Read||
 ||||
 
 ### %windir%\system32\inetsrv
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
-|SYSTEM|Special permissions|Special permissions allowed for the SYSTEM account for this folder only include the following: <ul><li>Traverse folder / execute file</li><li>List folder / read data</li><li>Read attributes</li><li>Read extended attributes</li><li>Create file / write data</li><li>Create folders / append data</li><li>Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul><br/> Special permission allowed for SYSTEM for subfolders and files only is equivalent to Full control.|
-|Administrators|Special permissions|Special permissions allowed for the Administrators group for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li> Read extended attributes</li><li> Create file / write data</li><li> Create folders / append data</li><li> Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul><br/> Special permission allowed for the Administrators group for subfolders and files only is equivalent to Full control.|
-|Users|Read & execute<br/> List folder contents<br/> Read||
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
+|SYSTEM|Special permissions|Special permissions allowed for the SYSTEM account for this folder only include the following: <ul><li>Traverse folder / execute file</li><li>List folder / read data</li><li>Read attributes</li><li>Read extended attributes</li><li>Create file / write data</li><li>Create folders / append data</li><li>Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul></br> Special permission allowed for SYSTEM for subfolders and files only is equivalent to Full control.|
+|Administrators|Special permissions|Special permissions allowed for the Administrators group for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li> Read extended attributes</li><li> Create file / write data</li><li> Create folders / append data</li><li> Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul></br> Special permission allowed for the Administrators group for subfolders and files only is equivalent to Full control.|
+|Users|Read & execute</br> List folder contents</br> Read||
 |TrustedInstaller|Special permissions|Permissions are equivalent to Full control, and apply to this folder and subfolders.|
 ||||
 
@@ -210,21 +210,21 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.<br/> Inherited from `%windir%\System32\inetsrv`.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.</br> Inherited from `%windir%\System32\inetsrv`.|
 |SYSTEM|Full control|Inherited from `%windir%\System32\inetsrv`.|
 |Administrators|Full control|Inherited from `%windir%\System32\inetsrv`|
-|Users|Read & execute<br/> List folder contents<br/> Read|Inherited from `%windir%\System32\inetsrv`|
-|TrustedInstaller|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.<br/> Inherited from `%windir%\System32\inetsrv`|
+|Users|Read & execute</br> List folder contents</br> Read|Inherited from `%windir%\System32\inetsrv`|
+|TrustedInstaller|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.</br> Inherited from `%windir%\System32\inetsrv`|
 ||||
 
 ### %windir%\System32\inetsrv\config
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
-|Users|Read & execute<br/> List folder contents<br/> Read||
+|Users|Read & execute</br> List folder contents</br> Read||
 |TrustedInstaller|Full control||
 |WMSvc|Read||
 ||||
@@ -233,7 +233,7 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |TrustedInstaller|Full control||
@@ -243,22 +243,22 @@ The tables in this section list the default New Technology File System (NTFS) pe
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
-|SYSTEM|Special permissions|Special permissions allowed for the SYSTEM account for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li> Read extended attributes</li><li> Create file / write data</li><li> Create folders / append data</li><li> Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul><br/>Special permission allowed for SYSTEM for subfolders and files only is equivalent to Full control.|
-|Administrators|Special permissions|Special permissions allowed for the Administrators group for this folder only include the following: <ul><li>Traverse folder / execute file</li><li>List folder / read data</li><li>Read attributes</li><li>Read extended attributes</li><li>Create file / write data</li><li>Create folders / append data</li><li>Write attributes</li><li>Write extended attributes</li><li>Delete</li><li>Read permissions</li></ul><br/>Special permission allowed for the Administrators group for subfolders and files only is equivalent to Full control.|
-|Users|Read & execute<br/> List folder contents<br/> Read||
-|TrustedInstaller|Special permissions|Equivalent to Full control.<br/> Applies to this folder and subfolders.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
+|SYSTEM|Special permissions|Special permissions allowed for the SYSTEM account for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li> Read extended attributes</li><li> Create file / write data</li><li> Create folders / append data</li><li> Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul></br>Special permission allowed for SYSTEM for subfolders and files only is equivalent to Full control.|
+|Administrators|Special permissions|Special permissions allowed for the Administrators group for this folder only include the following: <ul><li>Traverse folder / execute file</li><li>List folder / read data</li><li>Read attributes</li><li>Read extended attributes</li><li>Create file / write data</li><li>Create folders / append data</li><li>Write attributes</li><li>Write extended attributes</li><li>Delete</li><li>Read permissions</li></ul></br>Special permission allowed for the Administrators group for subfolders and files only is equivalent to Full control.|
+|Users|Read & execute</br> List folder contents</br> Read||
+|TrustedInstaller|Special permissions|Equivalent to Full control.</br> Applies to this folder and subfolders.|
 ||||
 
 ### %windir%\System32\inetsrv\en-us
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subfolders and files only.|
-|SYSTEM|Special permissions|Special permissions allowed for the SYSTEM account for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li> Read extended attributes</li><li> Create file / write data</li><li> Create folders / append data</li><li> Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul><br/>Special permission allowed for SYSTEM for subfolders and files only is equivalent to Full control.|
-|Administrators|Special permissions|Special permissions allowed for the Administrators group for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li>Read extended attributes</li><li>Create file / write data</li><li>Create folders / append data</li><li>Write attributes</li><li>Write extended attributes</li><li>Delete</li><li>Read permissions</li></ul><br/>Special permission allowed for the Administrators group for subfolders and files only is equivalent to Full control.|
-|Users|Read & execute<br/> List folder contents<br/> Read||
-|TrustedInstaller|List folder contents<br/> Special permissions|Equivalent to Full control.<br/> Applies to this folder and subfolders.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subfolders and files only.|
+|SYSTEM|Special permissions|Special permissions allowed for the SYSTEM account for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li> Read extended attributes</li><li> Create file / write data</li><li> Create folders / append data</li><li> Write attributes</li><li> Write extended attributes</li><li> Delete</li><li> Read permissions</li></ul></br>Special permission allowed for SYSTEM for subfolders and files only is equivalent to Full control.|
+|Administrators|Special permissions|Special permissions allowed for the Administrators group for this folder only include the following: <ul><li>Traverse folder / execute file</li><li> List folder / read data</li><li> Read attributes</li><li>Read extended attributes</li><li>Create file / write data</li><li>Create folders / append data</li><li>Write attributes</li><li>Write extended attributes</li><li>Delete</li><li>Read permissions</li></ul></br>Special permission allowed for the Administrators group for subfolders and files only is equivalent to Full control.|
+|Users|Read & execute</br> List folder contents</br> Read||
+|TrustedInstaller|List folder contents</br> Special permissions|Equivalent to Full control.</br> Applies to this folder and subfolders.|
 ||||
 
 ### %windir%\System32\inetsrv\History
@@ -290,7 +290,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -300,7 +300,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -310,7 +310,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -320,7 +320,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -330,7 +330,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -340,7 +340,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -350,7 +350,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -360,7 +360,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -370,7 +370,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -380,7 +380,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -390,7 +390,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -403,7 +403,7 @@ The tables in this section list the default registry permissions that are assign
 
 | Users / groups| Allowed permissions| Comments |
 |---|---|---|
-|CREATOR OWNER|Special permissions|Equivalent to Full control.<br/> Applies to subkeys only.|
+|CREATOR OWNER|Special permissions|Equivalent to Full control.</br> Applies to subkeys only.|
 |SYSTEM|Full control||
 |Administrators|Full control||
 |Users|Read||
@@ -417,13 +417,12 @@ The table in this section lists the default local security policies and the user
 
 |Allowed permissions|Users / groups |
 |---|---|
-|Access this computer from the network|Everyone<br/> Administrators<br/> Users<br/> Backup operators||
-|Adjust memory quotas for a process|LOCAL SERVICE<br/> NETWORK SERVICE<br/> Administrators<br/> ApplicationPoolIdentity||
-|Allow sign in locally|Administrators<br/> Users<br/> Backup operators||
-|Bypass traverse checking|Everyone<br/> LOCAL SERVICE<br/> NETWORK SERVICE<br/> Administrators<br/> Users<br/> Backup operators||
-|Generate security audit details|ApplicationPoolIdentity||
-|Impersonate a client after authentication|LOCAL SERVICE<br/> NETWORK SERVICE<br/> Administrators<br/> `IIS_IUSRS`<br/> SERVICE||
-|Sign in as a batch job|Administrators<br/> Backup operators<br/> Performance log users<br/> `IIS_IUSRS`||
-|Sign in as a service|ApplicationPoolIdentity||
-|Replace a process level token|LOCAL SERVICE<br/> NETWORK SERVICE<br/> ApplicationPoolIdentity||
-|||
+|Access this computer from the network|Everyone</br> Administrators</br> Users</br> Backup operators|
+|Adjust memory quotas for a process|LOCAL SERVICE</br> NETWORK SERVICE</br> Administrators</br> ApplicationPoolIdentity|
+|Allow sign in locally|Administrators</br> Users</br> Backup operators|
+|Bypass traverse checking|Everyone</br> LOCAL SERVICE</br> NETWORK SERVICE</br> Administrators</br> Users</br> Backup operators|
+|Generate security audit details|ApplicationPoolIdentity|
+|Impersonate a client after authentication|LOCAL SERVICE</br> NETWORK SERVICE</br> Administrators</br> `IIS_IUSRS`</br> SERVICE|
+|Sign in as a batch job|Administrators</br> Backup operators</br> Performance log users</br> `IIS_IUSRS`|
+|Sign in as a service|ApplicationPoolIdentity|
+|Replace a process level token|LOCAL SERVICE</br> NETWORK SERVICE</br> ApplicationPoolIdentity|

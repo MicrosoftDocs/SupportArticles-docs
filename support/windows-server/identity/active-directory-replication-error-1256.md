@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2200187
 
 ## Symptoms
 
-1. The DCDIAG reports that the Active Directory Replications test has failed with error 1256: The remote system is not available. 
+1. The DCDIAG reports that the Active Directory Replications test has failed with error 1256: The remote system is not available.
 
     > Starting test: Replications  
     [Replications Check, \<Destination DC>] A recent replication attempt failed:  
@@ -139,14 +139,13 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
 
 The following articles contain the troubleshooting procedures for errors typically logged with win32 error 1256:
 
-| **Win32 error**| **Article**|
+|Win32 error|Article|
 |---|---|
 | -2146893022| [Active Directory replication error -2146893022: The target principal name is incorrect](/troubleshoot/windows-server/identity/replication-error-2146893022)|
 | 5| [Active Directory replication error 5 - Access is denied](/troubleshoot/windows-server/identity/replication-error-5)|
-| 1722| [/troubleshoot/windows-server/identity/replication-error-1722-rpc-server-unavailable](/troubleshoot/windows-server/identity/replication-error-1722-rpc-server-unavailable)|
-| 1727| Troubleshooting Active Directory operations that fail with error 1722: The remote procedure call failed and did not execute. |
-| 1753| [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](/troubleshoot/windows-server/identity/replication-error-1753)| Troubleshooting Active Directory operations that fail with error 1753: There are no more endpoints available from the endpoint mapper. |
+| 1722| [Active Directory replication error 1722: The RPC server is unavailable](/troubleshoot/windows-server/identity/replication-error-1722-rpc-server-unavailable)|
+| 1727| [Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute](/troubleshoot/windows-server/identity/remote-procedure-call-failed-and-did-not-execute-error) |
+| 1753| [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](/troubleshoot/windows-server/identity/replication-error-1753)|
 | 1908| [Troubleshooting Active Directory operations that fail with error 1908: Could not find the domain controller for this domain](https://support.microsoft.com/help/2712026)|
 | 8524| [Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](/troubleshoot/windows-server/identity/replication-error-8524)|
 | 8453| [Active Directory replication error 8453: Replication access was denied](/troubleshoot/windows-server/identity/replication-error-8453)|
-|||
