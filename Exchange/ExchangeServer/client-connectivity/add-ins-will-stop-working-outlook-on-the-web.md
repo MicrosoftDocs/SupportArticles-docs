@@ -26,7 +26,7 @@ This change will occur because the [Outlook add-ins use the Office JavaScript AP
 
 After this change is made, you will receive the following error message when you try to open an add-in in Outlook on the web:
 
-This add-in has been disabled to help keep you safe.
+> This add-in has been disabled to help keep you safe.
 
 :::image type="content" source="./media/add-ins-will-stop-working-outlook-on-the-web/add-in-disabled-error-message.png" alt-text="The add-in has been disabled error message":::
 
