@@ -61,9 +61,10 @@ When the client cache setting is deployed to the device collection, you'll see t
 
 The state message is formatted into XML, and sent to the management point (MP_RelayEndpoint) via CCMMessaging.
 
-You'll see the following message body in the MP_Relay.log file:
+You'll see the following entry in the MP_Relay.log file:
 
-```xml
+```output
+Message Body :
 <?xml version="1.0" encoding="UTF-16"?>
 <Report><ReportHeader><Identification><Machine><ClientInstalled>1</ClientInstalled><ClientType>1</ClientType><ClientID>GUID:xxxx</ClientID><ClientVersion>5.00.9040.1015</ClientVersion><NetBIOSName>TestClient</NetBIOSName><CodePage>437</CodePage><SystemDefaultLCID>1033</SystemDefaultLCID><Priority>1</Priority></Machine></Identification></ReportDetails></ReportHeader><ReportBody><Topic ID="Super Peer is now active" Type="7201" IDType="0" User="" UserSID=""/><State ID="2"Criticality="0"/><StateDetails Type="1"><![CDATA[<ContentList><Content id="CAS00015" version="1" Flag="0"/></ContentList>]]></StateDetails><UserParameters Flags="0" Count="1"><Param>8003</Param></UserParameters></StateMessage></ReportBody></Report>
 ```
@@ -78,11 +79,9 @@ When the site server receives the state message, it calls the `spUpdateSuperPeer
 1. In the Configuration Manager console, go to the **Administration** workspace,  select **Hierarchy Configuration** > **Boundary Groups**.
 1. Locate the boundary group that contains the peer cache clients and peer cache sources.
 1. Right-click the boundary group, and then select **Properties**.
-1. Select the **Options**, make sure that the following setting is enabled:
+1. Select the **Options** tab, and then enable the **Allow peer downloads in this boundary group** setting.
 
-   > Allow peer downloads in this boundary group
-
-   :::image type="content" source="media/configure-peer-cache/specify-client-cache-settings.png" alt-text="Allow peer downloads":::
+   :::image type="content" source="media/configure-peer-cache/boundary-group-option.png" alt-text="Allow peer downloads":::
 
 ## Example scenario
 
