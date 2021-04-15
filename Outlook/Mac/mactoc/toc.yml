@@ -55,6 +55,8 @@
     items:
     - name: Font size differs from the original email
       href: ../email-messages/font-size-may-differ-from-original-email.md
+    - name: Unintentional email messages received
+      href: /outlook/troubleshoot/email-management/unintentional-emails-received?context=/outlook/troubleshoot/context/context
   - name: Files and Folders
     items:
     - name: Outlook 2016 for Mac freezes on email folders
