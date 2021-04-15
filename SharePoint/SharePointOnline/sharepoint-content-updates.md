@@ -10,10 +10,11 @@ ms.service: sharepoint-online
 localization_priority: Normal
 search.appverid:
 - MET150
-ms.custom: 
+ms.custom:
+- CI 147469
 - CSSTroubleshoot
 appliesto:
-- SharePoint Online
+- SharePoint
 ---
 # Microsoft SharePoint content updates
 
