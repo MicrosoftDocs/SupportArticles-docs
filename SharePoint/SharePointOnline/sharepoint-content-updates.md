@@ -1,8 +1,8 @@
 ---
 title: Microsoft SharePoint content updates
 description: Lists SharePoint topics that have been changed recently.
-ms.author: MaryQiu1987
-author: v-maqiu
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article
