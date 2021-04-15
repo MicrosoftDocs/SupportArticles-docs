@@ -152,7 +152,7 @@ An IT Professional may choose to use Performance Monitor with Processor, Physica
 **For Windows Server 2008 and above based Domain Controllers:**  
 Performance Monitor in Windows Server 2008 and later includes the key functionality of Server Performance Advisor straight out of the box. Within the System Data Collector Sets, the Active Directory Diagnostics set will, similarly to Server Performance Advisor, produce a report with key metrics for Active Directory Performance investigation and provide warnings for uncharacteristic behavior on Active Directory Domain Controllers. Any warnings are included at the top of the report an example of which is below:  
 
-|WARNING| |
+|WARNING|</br>|
 |---|---|
 | **Symptom:**| The system is experiencing excessive paging |
 | **Cause:**| Available memory on the system is low. |
