@@ -221,7 +221,8 @@ When you try to enroll a Windows 10 device automatically by using Group Policy, 
 
 - In Task Scheduler, under **Microsoft** > **Windows** > **EnterpriseMgmt**, the last run result of the **Schedule created by enrollment client for automatically enrolling in MDM from AAD** task is as follows: **Event 76 Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x8018002b)**
 - In Event Viewer, the following event is logged under **Applications and Services Logs/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/Admin**:
-    ```asciidoc
+
+    ```output
     Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
     Source: DeviceManagement-Enterprise-Diagnostics-Provider
     Event ID: 76
@@ -299,18 +300,17 @@ For more information about how to deploy a Windows device in kiosk mode with Aut
 ### Securing your hardware (Failed: 0x800705b4).
 
 Error 800705b4:
-```
-Securing your hardware (Failed: 0x800705b4)
-Joining your organization's network (Previous step failed)
-Registering your device for mobile management (Previous step failed)
-```
+
+> Securing your hardware (Failed: 0x800705b4)  
+> Joining your organization's network (Previous step failed)  
+> Registering your device for mobile management (Previous step failed)
 
 **Cause:** The targeted Windows device doesn't meet either of the following requirements:
 
 - The device must have a physical TPM 2.0 chip. Devices with virtual TPMs (for example, Hyper-V VMs) or TPM 1.2 chips don't work with self-deploying mode.
 - The device must be running one of the following versions of Windows:
-    - Windows 10 build 1709 or a later version.
-    - If Hybrid Azure AD Join is used, Windows 10 build 1809 or a later version.
+  - Windows 10 build 1709 or a later version.
+  - If Hybrid Azure AD Join is used, Windows 10 build 1809 or a later version.
 
 #### Resolution
 
@@ -339,7 +339,7 @@ Another possible cause for this error is that the Autopilot object's associated 
 
 If the issue persists, on the server that hosts the Offline Domain Join Intune Connector, check to see if Event ID 30312 is logged within the ODJ Connector Service log. Event 30312 resembles the following event:
 
-```
+```output
 Log Name:      ODJ Connector Service
 Source:        ODJ Connector Service Source
 Event ID:      30132

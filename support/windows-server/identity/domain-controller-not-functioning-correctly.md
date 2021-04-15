@@ -58,6 +58,13 @@ LDAP test. . . . . . . . . . . . . : Passed
 
 The following event may be logged in the system event log of the affected domain controller:
 
+```output
+Event Type: Error
+Event Source: Service Control Manager
+Event ID: 7023
+Description: The Kerberos Key Distribution Center service terminated with the following error: The security account manager (SAM) or local security authority (LSA) server was in the wrong state to perform the security operation.
+```
+
 ## Resolution
 
 There are several resolutions for these symptoms. The following is a list of methods to try. The list is followed by steps to perform each method. Try each method until the problem is resolved. Microsoft Knowledge Base articles that describe less common fixes for these symptoms are listed later.

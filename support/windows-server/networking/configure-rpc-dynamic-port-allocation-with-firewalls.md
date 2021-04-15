@@ -92,13 +92,15 @@ You should open up a range of ports above port 5000. Port numbers below 5000 may
 > [!WARNING]
 > If there is an error in the port configuration or there are insufficient ports in the pool, the Endpoint Mapper Service will not be able to register RPC servers with dynamic endpoints. When there is a configuration error, the error code will be 87 (0x57) ERROR_INVALID_PARAMETER. This can affect Windows RPC servers as well, such as Netlogon. It will log event 5820 in this case:
 
-> Log Name: System  
+```output
+Log Name: System  
 Source: NETLOGON  
 Event ID: 5820  
 Level: Error  
 Keywords: Classic  
 Description:  
 The Netlogon service could not add the AuthZ RPC interface. The service was terminated. The following error occurred: The parameter is incorrect.
+```
 
 For more information, see:
 

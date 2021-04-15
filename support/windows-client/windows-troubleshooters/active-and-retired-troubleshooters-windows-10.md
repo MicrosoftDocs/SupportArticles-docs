@@ -17,6 +17,8 @@ ms.technology: windows-client-troubleshooter
 
 This article provides a list of active and retired troubleshooters for Windows 10, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Files On-Demand troubleshooter
 
 Text displayed in Settings:  

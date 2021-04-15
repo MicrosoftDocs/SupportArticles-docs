@@ -1,7 +1,7 @@
 ---
 title: Determine the version, edition, and update level
 description: This article lists various builds or updates that are available for different versions of  SQL Server and describe the procedures to determine the version of SQL Server that is running on a given system.
-ms.date: 02/10/2021
+ms.date: 03/05/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -35,7 +35,7 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest Service Pack|Latest GDR|Latest cumulative update|Complete version information|General Guidance|
   |---|---|---|---|---|---|
-  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU9 for 2019](https://support.microsoft.com/help/5000642) (15.0.4102.2 - February 2021)<br/>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU10 for 2019](https://support.microsoft.com/help/5001090) (15.0.4123.1 - April 2021)<br/>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/4583456) (14.0.2037.2 - January, 2021)|[CU23](https://support.microsoft.com/help/5000685) (14.0.3381.3 - February 2021)<br/>[CU22 + GDR](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2016|[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for SP2](https://support.microsoft.com/help/4583460) (13.0.5103.6 - January, 2021)<br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July, 2019)<br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January, 2018)|[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)<br/>[CU15 + GDR for SP2](https://support.microsoft.com/help/4583461) (13.0.5865.1 - January 2021)<br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for SP2](https://support.microsoft.com/help/4564903) (13.0.5830.85- August 2020)<br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|[SQL Server 2016 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2014|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/>[SP3](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/4583463) (12.0.6164.21 - January, 2021)<br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - January, 2019)<br/>[GDR for SP1](https://support.microsoft.com/help/4032542) (August, 2017)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/4583462) (12.0.6433.1 - January 2021)<br/>[CU4 for SP3](https://support.microsoft.com/help/4022619) (12.0.6329.1 - July 2019)<br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|[SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014)|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
@@ -56,11 +56,13 @@ To determine the version of SQL Server, you can use any of the following methods
 
 - **Method 2:** Look at the first few lines of the Errorlog file for that instance. By default, the error log is located at `Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG` and *ERRORLOG.n* files. The entries may resemble the following:
 
-  > 2011-03-27 22:31:33.50 Server Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
-March 29 2009 10:11:52  
-Copyright (c) 1988-2008 Microsoft Corporation  
-Express Edition (64-bit)  
-on Windows NT 6.1 \<X64> (Build 7600: )
+  ```output
+  2011-03-27 22:31:33.50 Server Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
+  March 29 2009 10:11:52  
+  Copyright (c) 1988-2008 Microsoft Corporation  
+  Express Edition (64-bit)  
+  on Windows NT 6.1 <X64> (Build 7600: )
+  ```
 
   This entry provides all the necessary information about the product, such as version, product level, 64-bit versus 32-bit, the edition of SQL Server, and the OS version on which SQL Server is running.
 
@@ -79,10 +81,12 @@ on Windows NT 6.1 \<X64> (Build 7600: )
 
   An example of the output of this query is the following:
 
-  > Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
-March 29 2009 10:11:52
-Copyright (c) 1988-2008 Microsoft Corporation Express Edition (64-bit)  
-on Windows NT 6.1 \<X64> (Build 7600: )
+  ```output
+  Microsoft SQL Server 2008 (SP1) - 10.0.2531.0 (X64)  
+  March 29 2009 10:11:52
+  Copyright (c) 1988-2008 Microsoft Corporation Express Edition (64-bit)  
+  on Windows NT 6.1 <X64> (Build 7600: )
+  ```
 
   > [!NOTE]
   > The output of this query has been enhanced to show additional information. This is documented in the blog post article, [What build of SQL Server are you using?](https://techcommunity.microsoft.com/t5/sql-server-support/what-build-of-sql-server-are-you-using/ba-p/318613), for the following versions:
@@ -301,24 +305,45 @@ To find the version of your instance of SQL Server CE and related information, s
 
 ## PolyBase
 
-To find the version of PolyBase and related features, refer to a fresh discovery report that runs within the SQL Setup tools.
+### Windows 
 
-In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added. 
+To find the version of PolyBase and its related features in Windows, try the following methods: 
 
-It is recommended to refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
+- If the PolyBase service is running, run the following PowerShell script:
+
+```powershell
+Get-Process mpdwsvc -FileVersionInfo | Format-Table -AutoSize
+```
+
+- If the PolyBase service is not running or can't be started, run the following PowerShell script:
+
+```powershell
+cd 'C:\Program Files\Microsoft SQL Server'
+ls mpdwsvc.exe -r -ea silentlycontinue | % versioninfo | Format-Table -AutoSize
+```  
+
+Alternatively, try the SQL Server Setup steps in the next section.
+    
+### Windows or Linux
+
+To find the version of PolyBase and its related features, refer to a fresh discovery report that runs within the SQL Server Setup tools.
+
+In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the Summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added. 
+
+We recommend that you refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
 
 ## Machine Learning services
 
- For Windows servers, refer to the CAB file versions which change with SQL Server cumulative updates. Refer to the Rlauncher.config or PythonLauncher.Config files in the `Program Files\Microsoft SQL Server\MSSQL.nn\MSSQL\Binn` directory, to find the RHOME or PYTHONHOME folder locations of the CAB files. For the CAB versions that come with SQL Server CU versions, see [CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-cab-downloads).
+ For Windows servers, refer to the CAB file versions which change with SQL Server cumulative updates. Refer to the Rlauncher.config or PythonLauncher.config files in the `Program Files\Microsoft SQL Server\MSSQL.nn\MSSQL\Binn` directory to find the RHOME or PYTHONHOME folder locations of the CAB files. For the CAB versions that are included with SQL Server CU versions, see [CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-cab-downloads).
 
- For Linux servers, the following command returns a list of all mssql specific installed packages, along with their version numbers: 
+ For Linux servers, the following command returns a list of all mssql-specific installed packages, together with their version numbers: 
 ```console
 apt-get list --installed | --grep mssql
 ```
 
  The version number of the mssql-server-extensibility package version is the SQL Server version of the Machine Learning Services feature.
 
- The version number of the mssql-mlservices-packages-r or mssql-mlservices-packages-py refers to each language package files, for more information, see [Install SQL Server Machine Learning Services on Linux (Offline installation)](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning#offline-installation).
+ The version number of the mssql-mlservices-packages-r or mssql-mlservices-packages-py refers to each language package file. For more information, see [Install SQL Server Machine Learning Services on Linux (Offline installation)](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning#offline-installation).
 
 ## Frequently asked questions
 
@@ -384,6 +409,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|15.0.4123.1|None|CU10| [5001090](https://support.microsoft.com/help/5001090)|April 06, 2021|
 |15.0.4102.2|None|CU9| [5000642](https://support.microsoft.com/help/5000642)|February 11, 2021|
 |15.0.4083.2|None|CU8 + GDR| [4583459](https://support.microsoft.com/help/4583459)|January 12, 2021|
 |15.0.4073.23|None|CU8| [4577194](https://support.microsoft.com/help/4577194)|September 30, 2020|

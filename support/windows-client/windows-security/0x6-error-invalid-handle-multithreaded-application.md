@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes how to troubleshoot and fix the "0x6 ERROR_INVALID_HANDLE" error that occurs when a multithreaded application accesses a smart card.
 
-_Applies to_:&nbsp;&nbsp;&nbsp;Windows 10
+_Applies to:_ &nbsp; Windows 10
 
 ## Symptoms
 

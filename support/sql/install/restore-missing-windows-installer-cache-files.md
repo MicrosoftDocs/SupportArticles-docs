@@ -16,6 +16,7 @@ _Original KB number:_ &nbsp; 969052
 
 > [!NOTE]
 > The process that's described in this article provides emergency relief only and not a permanent fix. Customers who use this emergency process should validate their Windows Installer Cache using the Windows Installer Cache Verifier Package, as directed in KB article [Missing Windows Installer cache requires a computer rebuild](https://support.microsoft.com/help/2667628).
+
 ## Symptoms
 
 When you try to install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages, and these may indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores important files for applications installed using the Windows Installer technology and should not be deleted. If the installer cache has been compromised, you may not immediately see problems until you perform an action such as uninstall, repair, or update SQL Server.
@@ -180,7 +181,8 @@ If the error message references a missing Windows Installer database file (.msi)
 
 Different versions of the product generate different error messages for this problem. The error messages that are mentioned in the [Symptoms](#symptoms) section appear for Setup programs for updates starting with SQL Server 2008 SP1. For other updates, you receive error messages that may not clearly specify which patch file is missing from the Windows Installer cache and the specific update details. For these error messages, the setup log files will contain information about the missing Windows Installer cache file. A sample setup log resembles the following:
 
-> MSI (s) (FC:F8) [13:48:58:649]: Opening existing patch 'C:\WINDOWS\Installer\145258.msp'.  
+```output
+MSI (s) (FC:F8) [13:48:58:649]: Opening existing patch 'C:\WINDOWS\Installer\145258.msp'.  
 MSI (s) (FC:F8) [13:48:58:649]: Couldn't find local patch 'C:\WINDOWS\Installer\145258.msp'. Looking for it at its source.  
 MSI (s) (FC:F8) [13:48:58:649]: Resolving Patch source.  
 MSI (s) (FC:F8) [13:48:58:649]: Note: 1: 2203 2: D:\cda162709d239766830bae5ce12b\HotFixSQL\Files\sqlrun_sql.msp 3: -2147287037  
@@ -188,6 +190,7 @@ MSI (s) (FC:F8) [13:48:58:649]: SOURCEMGMT: Source is invalid due to missing/ina
 MSI (s) (FC:F8) [13:49:29:961]: Product: Microsoft SQL Server 2005 -- Installation failed.  
 MSI (s) (FC:F8) [13:49:29:992]: MainEngineThread is returning 1635  
 This patch package could not be opened. Verify that the patch package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer patch package. D:\SQL2K5\Servers\Setup\SqlRun_SQL.msi
+```
 
 If you examine this setup log carefully, it already gives you the information about the Original MSP file that was used by the patch: *sqlrun_sql.msp*.
 
@@ -295,7 +298,8 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     In the *Detail.txt* file:
 
-    > Date/Time Slp: Sco: FileFilePath does not exist  
+    ```output
+    Date/Time Slp: Sco: FileFilePath does not exist  
     Date/Time Slp: Sco: FileFilePathdoes not exist  
     Date/Time Slp: Checkpoint: PREINSTALL_SQLSUPPORT_CPU64_ACTION  
     Date/Time Slp: Sco: Attempting to create base registry key HKEY_LOCAL_MACHINE, machineServer Name
@@ -313,6 +317,7 @@ You can restore from system state backups as described in [Missing Windows Insta
     Date/TimeSlp: InstallPackage: MsiInstallProduct returned the result code 1603.  
     Date/TimeSlp: Using MSI error code to detect the retry option: 1714  
     Date/TimeSlp: No retry-able MSI return code detected.
+    ```
 
 - **For SQL Server 2012 CU2 (and any subsequent CU or SP)**
 
