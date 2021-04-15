@@ -18,6 +18,6 @@ appliesto:
 ---
 # Microsoft SharePoint content updates
 
-This topic lists Microsoft SharePoint topics that have been changed recently.
+This topic lists SharePoint Online and SharePoint Server articles that have been changed over the last several weeks.
 
 [!INCLUDE [SharePoint content updates](../Hub/includes/sharepoint-content-updates.md)]
