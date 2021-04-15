@@ -99,9 +99,9 @@ The state message is sent to the management point via CCMMessaging.
 
 When the site server receives this state message, the SuperPeerContentMap table is updated.
 
-### Deploy an application to the peer cache clients
+### Deploy an application to the peer cache client
 
-The clients download the policy for the application. For a **Required** deployment, the clients send request to the management point for content location.
+The client downloads the policy for the application. For a **Required** deployment, the client sends request to the management point for content locations.
 
 The following entries are logged in LocationServices.log:
 
@@ -112,7 +112,7 @@ DeploymentFlags="9223372036855313105"/><AssignedSite SiteCode="P01"/><ClientLoca
 > [!NOTE]
 > Because the **Allow peer downloads in this boundary group** option is enabled in the boundary group, **AllowSuperPeer** is set to **1** in the request. Otherwise, **AllowSuperPeer** is set to **0** in the request.
 >
-> To use super peer for content download, enable the **Allow peer downloads in this boundary group** option for each boundary group that contains the clients.
+> To use the peer cache source for content download, enable the **Allow peer downloads in this boundary group** option for each boundary group that contains the client.
 
 The management point replies with the list of content locations. You can also find the list in LocationServices.log:
 
@@ -141,4 +141,4 @@ Peer cache clients prioritize peer cache sources for downloading content. It's s
 > [!NOTE]
 > - Clients can only download content from the peer cache sources in their current boundary group.
 > - If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.
-> - If a client is in more than one boundary group, enable the **Allow peer download in this boundary group** option in each boundary group. If this option is disabled in any boundary group, the client won't use delivery optimization.
+> - If a client is in more than one boundary group, enable the **Allow peer download in this boundary group** option in each boundary group. If this option is disabled in any boundary group, the client won't use the peer cache optimization.
