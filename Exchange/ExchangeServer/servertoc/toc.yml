@@ -287,7 +287,7 @@
       href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
     - name: ActiveSync clients can't connect
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
-    - name: Add-ins will stop working in Outlook on the web
+    - name: Add-ins will stop working in OWA
       href: ../client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md
     - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
