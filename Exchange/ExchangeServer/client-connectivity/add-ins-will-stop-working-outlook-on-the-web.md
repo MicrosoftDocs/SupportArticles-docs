@@ -18,7 +18,7 @@ appliesto:
 - Exchange Server 2016 RTM
 search.appverid: MET150
 ---
-# Add-ins will stop working in Outlook on the web
+# Add-ins will stop working in Outlook on the web for Exchange Server 2016 RTM
 
 From May 3, 2021, you won't be able to start add-ins in Outlook on the web that's running on Exchange Server 2016 RTM. The [Outlook add-ins use the Office JavaScript APIs](/office/dev/add-ins/outlook/apis) that are accessed via the Office JS (Office.js) Content Delivery Network (CDN) to [interact with content](/office/dev/add-ins/develop/develop-overview#interacting-with-content-in-an-office-document) in Outlook on the web. These JavaScript APIs are being deprecated for Exchange Server 2016 RTM.
 
