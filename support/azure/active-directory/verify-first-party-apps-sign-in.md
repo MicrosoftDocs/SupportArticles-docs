@@ -57,7 +57,7 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 ## Application IDs for commonly used Microsoft applications
 
-The following table lists some, but not all, application IDs for commonly used Microsoft applications.  
+The following table lists some, but not all, first party Microsoft applications. You may see these applications in the Sign-ins report in Azure AD.  
 
 |Application Name|Application IDs|
 |--|--|
