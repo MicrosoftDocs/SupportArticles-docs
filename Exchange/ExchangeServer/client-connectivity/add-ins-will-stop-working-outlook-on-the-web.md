@@ -30,4 +30,4 @@ This add-in has been disabled to help keep you safe.
 
 :::image type="content" source="./media/add-ins-will-stop-working-outlook-on-the-web/add-in-disabled-error-message.png" alt-text="The add-in has been disabled error message":::
 
-To resolve this issue, upgrade the Exchange server to the latest [Cumulative Update](/exchange/plan-and-deploy/install-cumulative-updates).
+To resolve this issue, upgrade the Exchange-based server to the latest [cumulative update](/exchange/plan-and-deploy/install-cumulative-updates).
