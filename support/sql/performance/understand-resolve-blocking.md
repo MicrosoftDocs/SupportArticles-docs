@@ -483,6 +483,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
 
 ## See also
+
 * [Monitoring performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
 * [Resolve blocking problems that are caused by lock escalation in SQL Server](resolve-blocking-problems-caused-lock-escalation.md)
 * [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

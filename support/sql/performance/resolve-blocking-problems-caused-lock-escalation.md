@@ -91,7 +91,9 @@ To understand which threshold was reached, use Extended events, enable the  _loc
 ## Recommendations:
 The methods that are discussed in the [Prevent Lock Escalation](#prevent-lock-escalation) section are better options than disabling escalation at table or instance level. Additionally, the preventive methods generally result in better performance for the query than disabling lock escalation. Microsoft recommends enabling this trace flag only to mitigate severe blocking that is caused by lock escalation while other options, such as those discussed earlier in this article, are being investigated. 
 
+
 ## See also
+
 * [Monitoring performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
 * [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
 * [Understand and resolve SQL Server blocking problems](understand-resolve-blocking.md)
