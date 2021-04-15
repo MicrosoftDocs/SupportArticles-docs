@@ -111,7 +111,7 @@ Done gathering initial info.
 >DSA transport addr \<source DCs ntds settings object object guid>._msdcs.Contoso.com  
    ......................... DomainController passed test Replications  
 
-### 'NTDS Replication' event 1580 may be logged in the directory service event log:
+### 'NTDS Replication' event 1580 may be logged in the directory service event log
 
 | **Event Source**| **Event ID**| **Event String** |
 |---|---|---|
@@ -152,18 +152,14 @@ An IT Professional may choose to use Performance Monitor with Processor, Physica
 **For Windows Server 2008 and above based Domain Controllers:**  
 Performance Monitor in Windows Server 2008 and later includes the key functionality of Server Performance Advisor straight out of the box. Within the System Data Collector Sets, the Active Directory Diagnostics set will, similarly to Server Performance Advisor, produce a report with key metrics for Active Directory Performance investigation and provide warnings for uncharacteristic behavior on Active Directory Domain Controllers. Any warnings are included at the top of the report an example of which is below:  
 
-| **[WARNING]<br/>** |
-|---|
-|
-
-| **Symptom:**| The system is experiencing excessive paging |
+|WARNING| |
 |---|---|
+| **Symptom:**| The system is experiencing excessive paging |
 | **Cause:**| Available memory on the system is low. |
 | **Details:**| The total physical memory on the system is not capable of handling the load. |
 | **Resolution:**| Upgrade the physical memory or reduce system load |
 | **Related:**| Memory Diagnosis |
 | **Symptom:**| On directory servers, Ntds.dit and Edb.log should be the most active files. In this case, C:\Windows\NTDS\ntds.dit has the highest I/O rate (84.622 operations/sec). |
-||||
 
 ### High rate of change for objects in Active Directory Domain Services (AD DS)  
 
