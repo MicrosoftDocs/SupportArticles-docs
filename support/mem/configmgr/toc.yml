@@ -102,6 +102,8 @@
       href: unhandled-exception-launch-console.md
 - name: Content management
   items:
+    - name: Configure peer cache for Configuration Manager clients
+      href: configure-peer-cache.md
     - name: Distribution point and content distribution
       items:
         - name: A deployment property change isn't saved
