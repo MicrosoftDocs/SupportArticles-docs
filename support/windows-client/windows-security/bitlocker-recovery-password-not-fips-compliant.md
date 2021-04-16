@@ -1,7 +1,7 @@
 ---
 title: The recovery password for Windows BitLocker isn't available when FIPS compliant policy is set in Windows
 description: Explains that the recovery password for Windows BitLocker isn't FIPS-compliant in Windows.
-ms.date: 09/14/2020
+ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
