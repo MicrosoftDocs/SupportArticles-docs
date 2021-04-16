@@ -308,7 +308,7 @@ If you are using the old Az PowerShell module, you must change the two commands 
 |---|---|---|
 |  $keyVaultName | myKeyVault2112852926  | The name of the key Vault that stores the key |
 |$kekName   |mykey   | The name of the key that is used to encrypt the VM|
-|$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key.</br> To find the correct secret name, check the step 6 in the [Unlock the VM locally](#unlock-the-vm-locally) section.|
+|$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key.</br> To find the correct secret name, check the step 6 in the [Decrypt the encrypted OS disk](#decrypt-the-encrypted-os-disk) section.|
 |$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |The path for writing BEK file.|
 |$adTenant  |contoso.onmicrosoft.com   | FQDN or GUID of your Azure Active Directory that hosts the key vault |
 
