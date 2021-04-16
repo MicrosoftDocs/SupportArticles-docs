@@ -34,7 +34,7 @@ ms.custom: has-adal-ref
 
 This problem may occur if the VM cannot locate the BitLocker Recovery Key (BEK) file to decrypt the encrypted disk.
 
-## Unlock the VM locally
+## Decrypt the encrypted OS disk
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
@@ -67,7 +67,7 @@ If this method does not the resolve the problem, follow these steps to restore t
      You cannot attach a managed disk to a VM that was restored from a blob image.
 
 3. After the disk is attached, make a remote desktop connection to the recovery VM.
-1. [Install the Az PowerShell module](#install-az-powerShell-module) in the recovery VM.
+1. [Install the Az PowerShell module](#install-az-powershell-module) in the recovery VM.
 
 4. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands to sign in to Azure subscription:
 
@@ -148,7 +148,7 @@ For a Key Encryption Key scenario, follow these steps:
 1. Make sure that the logged-in user account requires the "unwrapped" permission in the Key Vault Access policies in the **USER|Key permissions|Cryptographic Operations|Unwrap Key**.
 2. Save the following script to a .PS1 file:
     > [!NOTE]
-    > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. To install the Az.Account module, see [Install Az PowerShell module](#install-az-powerShell-module).
+    > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. To install the Az.Account module, see [Install Az PowerShell module](#install-az-powershell-module).
     ```powershell
     #Set the Parameters for the script. If you have question about the Parameters, see the "Parameters samples" section.
     param (
