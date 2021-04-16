@@ -3,7 +3,7 @@ title: The signed-in user does not have the appropriate security permissions err
 description: When a user tries to configure the Microsoft Dynamics CRM client for Outlook, they receive an error stating with The signed-in user does not have the appropriate security permissions to view these records or perform the specific action. Contact your organization's Microsoft Dynamics CRM administrator to review the security permissions for this user. Provides a resolution.
 ms.reviewer: jowells
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An error occurs when trying to configure the Microsoft Dynamics CRM client for Outlook 2011
 

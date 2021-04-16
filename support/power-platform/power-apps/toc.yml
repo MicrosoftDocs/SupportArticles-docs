@@ -9,3 +9,7 @@
     items:
     - name: Best practices when updating a flow
       href: best-practices-when-updating-a-flow.md
+  - name: Others
+    items:
+    - name: Lookup doesn't filter records for particula entity
+      href: lookup-does-not-filter-entity-records.md

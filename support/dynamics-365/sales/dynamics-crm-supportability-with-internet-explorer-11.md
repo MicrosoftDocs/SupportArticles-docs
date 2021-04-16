@@ -3,7 +3,7 @@ title: Dynamics CRM supportability with Internet Explorer 11
 description: Describes the support for Microsoft Dynamics CRM 2011 in Windows 8.1 and Internet Explorer 11.
 ms.reviewer: adonat, aaronric
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM supportability with Internet Explorer 11
 

@@ -3,7 +3,7 @@ title: Prompted for credentials when opening CRM for Outlook
 description: Provides methods for resolving an issue where you are prompted for your user name and password every time that you open Microsoft Dynamics CRM or Microsoft Dynamics CRM client for Microsoft Office Outlook.
 ms.reviewer: dmartens, tlemar
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You are prompted for user name and password when opening Microsoft Dynamics CRM or Dynamics CRM client for Outlook
 

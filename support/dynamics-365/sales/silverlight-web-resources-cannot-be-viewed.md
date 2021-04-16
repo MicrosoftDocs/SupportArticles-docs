@@ -3,7 +3,7 @@ title: Silverlight web resources cannot be viewed
 description: Provides a solution to an issue where Microsoft Silverlight web resources can't be viewed in the 64-bit version of the Microsoft Dynamics CRM Client for Microsoft Office Outlook.
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft SilverLight web resources can't be viewed in the 64-bit version of the Microsoft Dynamics CRM Client for Microsoft Office Outlook
 

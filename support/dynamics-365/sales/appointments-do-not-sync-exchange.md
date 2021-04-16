@@ -3,7 +3,7 @@ title: Appointments don't sync to Exchange
 description: Provides a solution to an issue where appointments aren't syncing to Exchange or Outlook after being created in the CRM for Phones Express app.
 ms.reviewer: taskar, tybosse
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Appointments are not syncing to Exchange or Outlook after being created in the CRM for Phones Express app
 

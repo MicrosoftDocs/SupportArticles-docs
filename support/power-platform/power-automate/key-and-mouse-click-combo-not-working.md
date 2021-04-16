@@ -3,7 +3,7 @@ title: Key and mouse click combo not working
 description: Key and mouse click combo not working. However, currently keyboard and mouse click combo is not supported.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Keyboard and mouse click combinations not working
 

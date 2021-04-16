@@ -3,7 +3,7 @@ title: How to enable tracing in Dynamics CRM
 description: Describes how to create managed and unmanaged trace files in Microsoft Dynamics CRM.
 ms.reviewer: clintwa, danhamre, tlemar
 ms.topic: how-to
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to enable tracing in Microsoft Dynamics CRM 2013 and 2011
 

@@ -3,7 +3,7 @@ title: Timeout when administrator changes user record
 description: This article provides a resolution for the problem where administrator is unable to make changes to a user record in Microsoft Dynamics CRM 2011 and receives a generic SQL Server error message.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # A SQL Server Timeout may occur when changing a name field for a Microsoft Dynamics CRM User
 

@@ -3,7 +3,7 @@ title: Failed to add user using the DistinguishedName error when importing organ
 description: You may receive the Failed to add user using the DistinguishedName error when importing an organization in Microsoft Dynamics CRM.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Failed to add user using the DistinguishedName error when importing an organization in Microsoft Dynamics CRM
 

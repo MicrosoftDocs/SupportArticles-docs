@@ -3,7 +3,7 @@ title: Error when enabling a mailbox
 description: Provides a solution to an error that occurs when you try to connect Microsoft Dynamics CRM Online to Exchange on-premises.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Credentials specified in the associated email server profile are incorrect or have insufficient permissions error when connecting Microsoft Dynamics CRM Online to Exchange on-premises
 

@@ -3,7 +3,7 @@ title: You only have administrative or read-only error
 description: This article provides a resolution for the problem that occurs when you try to configure Microsoft Dynamics CRM for Microsoft Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error (You only have administrative or read-only access to your organization) when you configure Microsoft Dynamics CRM for Microsoft Office Outlook
 

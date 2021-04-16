@@ -3,7 +3,7 @@ title: Out of memory and network disconnections with many PST files loaded
 description: Provides a resolution for the out of memory and network disconnections with many PST files loaded in Microsoft Dynamics CRM Outlook clients.
 ms.reviewer: ehagen
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Out of memory and network disconnections with many PST files loaded in Microsoft Dynamics CRM Outlook clients
 

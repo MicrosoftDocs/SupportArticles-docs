@@ -3,7 +3,7 @@ title: Tracked To Dynamics 365 category added to user's mailbox
 description: Fixes an issue in which users see a new category called Tracked to Dynamics 365 when they're configured to use Server-Side Synchronization with Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Tracked To Dynamics 365 category added to user's mailbox
 

@@ -3,7 +3,7 @@ title: Dynamics 365 Portal Solution update
 description: Provides a solution to an error that occurs when you navigate to a portal associated to a Dynamics 365 instance containing some solutions that haven't yet been upgraded.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics 365 Portal Solution update consistency for Multi-Portal Deployments
 

@@ -3,7 +3,7 @@ title: Cannot open records after upgrade to version 8.2
 description: Unable to open records after upgrade to Dynamics 365 (version 8.2). Form shows as Requesting data from Dynamics 365. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to open records after upgrade to Dynamics 365 (version 8.2)
 

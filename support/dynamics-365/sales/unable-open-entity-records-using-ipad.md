@@ -3,7 +3,7 @@ title: Unable to open entity records using an iPad
 description: This article provides a resolution for the problem that occurs when you attempt to open an entity record by using an iPad.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to open entity records using an iPad in Microsoft Dynamics CRM Online
 

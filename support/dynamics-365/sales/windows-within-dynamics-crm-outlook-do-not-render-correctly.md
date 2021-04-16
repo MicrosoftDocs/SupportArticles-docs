@@ -3,7 +3,7 @@ title: Windows within CRM Outlook client do not render properly
 description: Microsoft Dynamics CRM windows within the Microsoft Dynamics CRM for Microsoft Office Outlook client don't render completely when the zoom level for the system display is great than 100%. Provides a resolution.
 ms.reviewer: jowells
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Windows within the Microsoft Dynamics CRM Outlook client do not render properly
 

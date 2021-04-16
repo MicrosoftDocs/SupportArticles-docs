@@ -3,7 +3,7 @@ title: Quick find varies between the web and CRM
 description: This article provides a resolution for the problem that occurs when you perform a Quick Find Search in either the Microsoft Dynamics CRM 2011 web client or the Microsoft Dynamics CRM 2011 for Outlook client.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM 2011 quick find varies between the web and CRM for Outlook client
 

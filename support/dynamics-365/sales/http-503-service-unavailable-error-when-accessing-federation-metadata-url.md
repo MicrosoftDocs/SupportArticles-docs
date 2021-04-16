@@ -3,7 +3,7 @@ title: HTTP 503 Service Unavailable error when accessing Federation Metadata URL
 description: This article describes the error message received while accessing the Microsoft Dynamics CRM 2011 Internal Federation Metadata URL either on the Microsoft Dynamics CRM server or on the ADFS server after configuring the claims-based Authentication for the Microsoft Dynamics CRM 2011.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "HTTP 503 Service Unavailable" error when accessing Microsoft Dynamics CRM Federation Metadata URL after configuring the claims-based Authentication
 

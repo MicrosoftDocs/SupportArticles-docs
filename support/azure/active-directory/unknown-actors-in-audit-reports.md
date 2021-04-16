@@ -23,6 +23,3 @@ The following are common examples of Microsoft 1st party service principal actor
 |Microsoft Approval Management|Self-Service Group Management Service|Used by self-service group management service (SSGM) for Azure Active Directory [dynamic groups](/azure/active-directory/enterprise-users/groups-create-rule), and Office 365 Group expiration policy operations|
 |
 
-## More information
-
-- [Unknown Actors in Audit Reports](https://supportability.visualstudio.com/AzureAD/_wiki/wikis/AzureAD/183979/Azure-AD-Reporting-Workflow?anchor=unknown-actors-in-audit-reports)

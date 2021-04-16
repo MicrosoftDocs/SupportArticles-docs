@@ -3,7 +3,7 @@ title: The solution is installed on this system
 description: Provides a solution to an error that occurs when you attempt to import a solution in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The solution is already installed on this system as an unmanaged solution" error in Microsoft Dynamics 365
 

@@ -3,7 +3,7 @@ title: Ribbon buttons overlap the left navigation pane of the form
 description: This article provides a resolution for the problem where you may notice that ribbon buttons overlap the left navigation area within forms. 
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Ribbon buttons overlap the left navigation pane of the form while working offline in the Microsoft Dynamics CRM 2011 for Outlook client
 

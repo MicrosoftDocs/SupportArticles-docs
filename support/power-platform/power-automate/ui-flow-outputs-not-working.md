@@ -3,7 +3,7 @@ title: UI flow outputs not working
 description: Troubleshooting the issue that output is not successfully captured from the field that was selected.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # UI flow outputs not working
 

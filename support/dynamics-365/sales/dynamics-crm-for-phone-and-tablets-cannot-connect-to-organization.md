@@ -3,7 +3,7 @@ title: Dynamics CRM for Phone and Tablets cannot connect to organization
 description: Microsoft Dynamics CRM for Phone and Tablets cannot connect to Dynamics CRM organization due to length of TokenLifetime. Provides a resolution.
 ms.reviewer: joalva
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM for Phone and Tablets cannot connect to Dynamics CRM organization due to length of TokenLifetime
 

@@ -3,7 +3,7 @@ title: Compatibility with Microsoft Dynamics CRM 2015
 description: Lists the compatibility of other Microsoft products with Microsoft Dynamics CRM 2015.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Compatibility with Microsoft Dynamics CRM 2015
 
