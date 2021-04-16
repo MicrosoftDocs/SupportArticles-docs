@@ -30,9 +30,6 @@ This article describes the methods to verify the installation of Microsoft Excha
 
 ## Resolve errors during CU or SU installation
 
-- [Repair failed installations of Exchange Cumulative and Security updates](#repair-failed-installations-of-exchange-cumulative-and-security-updates)
-- [Resolve errors during CU or SU installation](#resolve-errors-during-cu-or-su-installation)
-- [Additional information](#additional-information)
 - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
 - [HTTP 400 errors in OWA and ECP and Connection Failure error in PowerShell](#http-400-errors-in-owa-and-ecp-and-connection-failure-error-in-powershell)
 - [Missing images in ECP](#missing-images-in-ecp)
@@ -93,27 +90,22 @@ For more information, see [OWA or ECP stops working after you install a security
 
 HTTP 400 errors might occur in Outlook on the Web (OWA) and Exchange Control Panel (ECP) after updates are installed. After you provide credentials to log on to OWA or ECP, the login process may fail with the following error message:
 
-> HTTP 400 - bad request 
+> HTTP 400 - bad request  
 > Cannot serialize context
 
-Also when you open up Exchange Management Shell you will see the error message:
+Also when you start Exchange Management Shell, you receive the following error message:
 
-`PowerShell
-
-> ErrorCode                   : -2144108477
-> TransportMessage            : The WS-Management service cannot process the request because the XML is invalid.
+> ErrorCode                   : -2144108477  
+> TransportMessage            : The WS-Management service cannot process the request because the XML is invalid.  
 > ErrorRecord                 : Connecting to remote server exchange.contoso.com failed with the following error message :  For more information, see the about_Remote_Troubleshooting Help topic.
 
-`
-
 **Cause:**
-Review the username and confirm that there is not a $ at the end of it for Example:
 
-> admin$
+This issue occurs if the username ends with the dollar sign ($), such as *admin$*.
 
-**Workaround:**
+**Resolution:**
 
-If there is a `$` in the username either remove the `$` or use another administrative account that does not have a `$` in it.
+Remove the dollar sign ($) from the username, or use another administrative account that doesn't end with the dollar sign ($).
 
 [Back to top](#summary)
 
