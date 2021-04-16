@@ -96,5 +96,6 @@ To understand which threshold was reached, use Extended events, enable the  _loc
 ## Recommendations
 The methods that are discussed in the [Prevent Lock Escalation](#prevent-lock-escalation) section are better options than disabling escalation at the table or instance level. Additionally, the preventive methods generally produce better performance for the query than disabling lock escalation. Microsoft recommends that you enable this trace flag only to mitigate severe blocking that is caused by lock escalation while other options, such as those discussed in this article, are being investigated. 
 
-# See also
+## See also
 
+- [Understand and resolve SQL Server blocking problems](understand-resolve-blocking.md)
