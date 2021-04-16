@@ -150,7 +150,7 @@ For a Key Encryption Key scenario, follow these steps:
     > [!NOTE]
     > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. To install the Az.Account module, see [Install Az PowerShell module](#install-az-powerShell-module).
     ```powershell
-    #Set the Parameters for the script. If you have question about the Parameters, see the "Parameters smaples" section.
+    #Set the Parameters for the script. If you have question about the Parameters, see the "Parameters samples" section.
     param (
             [Parameter(Mandatory=$true)]
             [string] 
@@ -302,7 +302,7 @@ This error occurs because the paths of the ADAL Assemblies are wrong. You can se
 
 If you are using the old Az PowerShell module, you must change the two commands to `Get-AzureKeyVaultSecret` and `Get-AzureKeyVaultSecret`.
 
-**Parameters smaples**
+**Parameters samples**
 
 | Parameters  | Value sample  |Comments   |
 |---|---|---|
