@@ -3,7 +3,7 @@ title: Error when using server-side sync
 description: Provides a solution to an error that occurs when you use Server-Side Synchronization in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # 401 Unauthorized exception occurs in Microsoft Dynamics 365 when using Server-Side Synchronization
 

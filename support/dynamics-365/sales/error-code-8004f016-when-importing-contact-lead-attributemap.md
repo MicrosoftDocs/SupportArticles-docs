@@ -3,7 +3,7 @@ title: Error code 8004f016 when importing contact-lead AttributeMap
 description: Error code 8004f016 occurs when you import contact-lead AttributeMap in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error code 8004f016 when importing contact-lead AttributeMap in Microsoft Dynamics 365
 

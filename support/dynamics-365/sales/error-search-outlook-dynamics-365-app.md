@@ -3,7 +3,7 @@ title: Error when you search Outlook in Microsoft Dynamics 365 App
 description: This article provides a resolution for the problem that occurs when you attempt to search in Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "We can't open this app" error occurs when you attempt to search in the Microsoft Dynamics 365 App for Outlook
 

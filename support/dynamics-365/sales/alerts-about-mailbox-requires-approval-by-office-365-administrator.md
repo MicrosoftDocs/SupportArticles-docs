@@ -3,7 +3,7 @@ title: Mailbox requires approval by Office 365 administrator
 description: You receive an alert indicating the mailbox requires approval by an Office 365 administrator. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Mailbox requires an approval by an Office 365 administrator alerts occur after selecting Test & Enable Mailbox
 

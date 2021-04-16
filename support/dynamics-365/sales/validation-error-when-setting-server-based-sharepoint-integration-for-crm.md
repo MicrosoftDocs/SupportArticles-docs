@@ -3,7 +3,7 @@ title: Validation Error when setting SharePoint integration
 description: Discusses an issue in which you receive a Validation Error error message when you try to configure server-based SharePoint integration for Microsoft Dynamics CRM Online and SharePoint Online. Provides a resolution.
 ms.reviewer: tylerol, aaronric
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Validation Error when setting server-based SharePoint integration for Microsoft Dynamics CRM Online and SharePoint Online
 

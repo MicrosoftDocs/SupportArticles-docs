@@ -3,7 +3,7 @@ title: Cannot add a new Deployment Administrator
 description: Provides a solution to an issue where a current Deployment Administrator may be unable to add a new Deployment Administrator from a trusted domain.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to add a new Deployment Administrator from trusted domain in same forest
 

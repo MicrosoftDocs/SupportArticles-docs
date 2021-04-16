@@ -3,7 +3,7 @@ title: Support Dynamics CRM 2011 and Office 2013
 description: Describes the support with Microsoft Dynamics CRM 2011 and Microsoft Office 2013, and the functional differences between Update Rollup 10 and Update Rollup 11.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Support with Microsoft Dynamics CRM 2011 and Microsoft Office 2013
 

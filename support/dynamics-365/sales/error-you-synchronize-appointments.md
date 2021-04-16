@@ -3,7 +3,7 @@ title: Error when you synchronize appointments
 description: This article provides a resolution for the problem that occurs when you synchronize an appointment to the Microsoft Dynamics CRM 2011 Outlook client.
 ms.reviewer: jbirnbau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # 'Unknown Error' When Synchronizing Appointments in the Microsoft Dynamics CRM 2011 Outlook Client
 

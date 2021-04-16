@@ -3,7 +3,7 @@ title: Users are redirected to Mobile Express
 description: This article provides a resolution for the problem that occurs when you attempt to access Microsoft Dynamics CRM Online after the December 2012 Service Update.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Users are redirected to Mobile Express in Internet Explorer 7 after the Microsoft Dynamics CRM Online December 2012 Service Update
 

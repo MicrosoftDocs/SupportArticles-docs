@@ -3,7 +3,7 @@ title: Error when configuring CRM for Outlook
 description: Describes a solution to an error that occurs when you configure CRM for Outlook.
 ms.reviewer: debrau, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # We can't connect to your CRM server when configuring Microsoft Dynamics CRM for Microsoft Office Outlook
 

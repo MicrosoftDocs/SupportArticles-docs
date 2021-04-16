@@ -3,7 +3,7 @@ title: No user exists with the specified domain name and user ID error when acce
 description: No Microsoft Dynamics CRM user exists with the specified domain name and user ID. (0x80040354) this error occurs when accessing internal URL with Claims Based Authentication. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # No user exists with the specified domain name and user ID error when accessing internal URL with Claims Based Authentication
 

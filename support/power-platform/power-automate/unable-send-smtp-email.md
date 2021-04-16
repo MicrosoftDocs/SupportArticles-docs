@@ -3,7 +3,7 @@ title: Unable to send SMTP Email
 description: Provides a solution to an error that occurs when  try to send mails via your own SMTP server from a newly created Flow app.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to send SMTP Email
 

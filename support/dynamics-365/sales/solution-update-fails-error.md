@@ -3,7 +3,7 @@ title: Solution update fails with an error
 description: This article provides two resolutions for the problem that occurs when you install an update to a solution when the installed solution has same ID value for multiple LocLabels.
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Solution update fails with an error "Found more than one RibbonDiff entity"
 

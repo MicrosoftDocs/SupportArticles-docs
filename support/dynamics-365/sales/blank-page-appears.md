@@ -3,7 +3,7 @@ title: Blank page appears
 description: Provides a solution to an issue where a blank page appears when you use the Dynamics 365 App for Outlook on Outlook desktop.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Blank page appears within Microsoft Dynamics App for Outlook
 

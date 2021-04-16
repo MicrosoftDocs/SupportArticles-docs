@@ -26,11 +26,15 @@ One of the DNS servers in your environment starts showing an issue that the zone
 
 Event ID 4000:
 
-> The DNS server was unable to open Active Directory. This DNS server is configured to obtain and use information from the directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and reload the zone. The event data is the error code.
+```output
+The DNS server was unable to open Active Directory. This DNS server is configured to obtain and use information from the directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and reload the zone. The event data is the error code.
+```
 
 Event ID 4007:
 
-> The DNS server was unable to open zone \<zone> in the Active Directory from the application directory partition \<partition name>. This DNS server is configured to obtain and use information from the directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and reload the zone. The event data is the error code.
+```output
+The DNS server was unable to open zone \<zone> in the Active Directory from the application directory partition \<partition name>. This DNS server is configured to obtain and use information from the directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and reload the zone. The event data is the error code.
+```
 
 Also when you try to open the DNS console you get a pop-up giving **Access Denied**.
 

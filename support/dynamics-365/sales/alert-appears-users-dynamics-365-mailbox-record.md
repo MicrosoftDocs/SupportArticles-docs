@@ -3,7 +3,7 @@ title: Alert appears in the user's Dynamics 365 mailbox record
 description: This article provides a resolution for the problem that occurs when an email sent to a Dynamics 365 mailbox is not created as an email activity record.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "UnknownIncomingEmailIntegrationError -2147218677 exception" error appears in Dynamics 365 mailbox alert
 

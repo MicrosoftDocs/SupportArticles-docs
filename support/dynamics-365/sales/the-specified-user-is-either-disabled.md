@@ -3,7 +3,7 @@ title: Error when trying to save a record in Microsoft Dynamics CRM
 description: Provides a solution to an error that occurs when trying to save a record in Microsoft Dynamics CRM.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The specified user is either disabled or is not a member of any business unit" error when trying to save a record in Microsoft Dynamics CRM
 

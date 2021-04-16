@@ -3,7 +3,7 @@ title: Error when users navigate to Office Groups in IE11
 description: This article provides a resolution for the problem that occurs when users navigate to Office Groups in IE11 in Microsoft Dynamics CRM Online 2016 Update 0.1.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # When users navigate to Office Groups in IE11 in Microsoft Dynamics CRM Online 2016 Update 0.1, the users may receive a prompt (Sign in to Office 365)
 

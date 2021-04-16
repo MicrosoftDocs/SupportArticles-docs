@@ -3,7 +3,7 @@ title: Outlook may become unresponsive in non-admin mode
 description: This article provides two workarounds for the problem that occurs when you try to open Microsoft Dynamics CRM Client for Outlook or when you try the offline synchronization process in the Microsoft Dynamics CRM client for Outlook with offline access.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM Outlook Client may become unresponsive in non-admin mode
 

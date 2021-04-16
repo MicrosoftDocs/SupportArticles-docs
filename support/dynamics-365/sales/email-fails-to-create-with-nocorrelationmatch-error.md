@@ -3,7 +3,7 @@ title: Email fails to create with NoCorrelationMatch sync error
 description: An email fails to be created in Microsoft Dynamics 365 with a NoCorrelationMatch sync error.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An email fails to be created in Microsoft Dynamics 365 with a NoCorrelationMatch sync error
 

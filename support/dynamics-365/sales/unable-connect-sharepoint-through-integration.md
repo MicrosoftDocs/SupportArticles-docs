@@ -3,7 +3,7 @@ title: Unable to connect to SharePoint through integration
 description: This article provides a resolution for the problem where you are unable to connect to SharePoint through integration within Microsoft Dynamics CRM 2011.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to connect to SharePoint through integration within Microsoft Dynamics CRM 2011
 

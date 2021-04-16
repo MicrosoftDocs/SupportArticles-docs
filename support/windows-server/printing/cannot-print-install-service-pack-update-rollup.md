@@ -1,7 +1,7 @@
 ---
 title: Users can't print after you install a service pack, update rollup, or printer hotfix on a server in Windows
 description: Describes an issue where you can't print after you install a service pack or printer hotfix on a server.
-ms.date: 09/14/2020
+ms.date: 04/14/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;832219
 
 ## Symptoms
 
-After you install Windows 2000 Service Pack 2 (SP2), a service pack for Windows Server 2003 or Windows Server 2012 R2, an update rollup, or a hotfix that updates the Unidrvui.dll file, users may experience both of the following symptoms:
+After you install a service pack, an update rollup, or a hotfix that updates the Unidrvui.dll file on Windows Server, users may experience both of the following symptoms:
 
 - When a client or server tries to print, the Print Spooler service appears to stop responding (or "hang"), and the following error message appears:
 

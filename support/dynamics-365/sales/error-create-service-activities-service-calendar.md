@@ -3,7 +3,7 @@ title: Error when you create Service Activities from Service Calendar
 description: This article provides a resolution for the problem that occurs when you create a Service Activity from the Service Calendar.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error creating Service Activities from the Service Calendar in Microsoft Dynamics CRM 2015
 

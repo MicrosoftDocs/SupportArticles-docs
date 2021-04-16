@@ -3,7 +3,7 @@ title: InvalidPluginAssemblyContent error when importing solution
 description: InvalidPluginAssemblyContent error when importing a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # InvalidPluginAssemblyContent error when importing a solution in Microsoft Dynamics 365
 

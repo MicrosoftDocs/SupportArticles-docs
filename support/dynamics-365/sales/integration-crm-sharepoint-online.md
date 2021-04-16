@@ -3,7 +3,7 @@ title: Integrate CRM with SharePoint Online
 description: Integration of MS Dynamics CRM 2011 with SharePoint Online 2007 (BPOS).
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Integration between Microsoft Dynamics CRM Online and SharePoint Online
 

@@ -3,7 +3,7 @@ title: Cannot sign in to Office 365 Services CRM organization
 description: An error occurs on the Microsoft Dynamics CRM 2011 for Outlook client when signing in to an Office 365 CRM organization. Provides a resolution.
 ms.reviewer: aaronric
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The Microsoft Online Services Sign-in Assistant is not installed error when signing in to Office 365 Services CRM organization
 

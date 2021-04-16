@@ -3,7 +3,7 @@ title: Dynamics connector handles null strings and dates incorrectly
 description: This article describes a problem in the default maps for Microsoft Dynamics CRM, Microsoft Dynamics GP, and the Microsoft Dynamics Connector with regards to null strings and null datetimes.
 ms.reviewer: clintwa
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Dynamics connector does not handle null strings and dates correctly for Dynamics CRM and Dynamics GP Adapters
 

@@ -3,7 +3,7 @@ title: Error when you test and enable a mailbox
 description: Provides a solution to an error that occurs when you try to Test and Enable a mailbox in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Appointments, contacts, and tasks can't be synchronized for the mailbox because the mailbox user doesn't have sufficient permissions on this mailbox
 

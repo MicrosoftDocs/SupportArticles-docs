@@ -3,7 +3,7 @@ title: A 404 error when accessing an organization
 description: Provides a solution to a 404 error occurs when you try to access a Microsoft Dynamics CRM 2011 organization after applying Update Rollup 12.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # A 404 error occurs when you try to access a Microsoft Dynamics CRM 2011 organization after applying Update Rollup 12
 

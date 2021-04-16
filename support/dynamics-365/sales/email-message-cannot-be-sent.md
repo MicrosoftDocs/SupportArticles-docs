@@ -3,7 +3,7 @@ title: Email message cannot be sent
 description: Provides a solution to an error that occurs after you select the Test & Enable Mailbox button in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The email message "Your mailbox is now connected to Dynamics 365" cannot be sent because the mailbox [Mailbox Name] is deactivated or disabled for outgoing email
 

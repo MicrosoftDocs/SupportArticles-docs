@@ -3,7 +3,7 @@ title: Double-Click, Drag and drop aren't working
 description: Provides a solution to an issue where Double-Click, Drag and Drop aren't working.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Double-Click, Drag and Drop aren't working
 

@@ -3,7 +3,7 @@ title: AppData folder redirect causes Lookup fields to break
 description: AppData folder redirect causes Lookup fields to break and you receive an error stating that the system cannot find the file specified in Microsoft Dynamics CRM 2011. Provides a resolution.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # AppData folder redirect causes Lookup fields to break with the system cannot find the file specified error in Microsoft Dynamics CRM 2011
 

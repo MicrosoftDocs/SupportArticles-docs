@@ -3,7 +3,7 @@ title: Issues triggering emails with attachments from shared mailbox
 description: Provides a resolution to solve the issues that may occur when a flow has When a new email arrives in a shared mailbox (V2) trigger.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Issues triggering emails with attachments from shared mailbox
 

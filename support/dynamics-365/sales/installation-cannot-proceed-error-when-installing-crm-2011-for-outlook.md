@@ -3,7 +3,7 @@ title: Installation cannot proceed error during installation
 description: Either a minimum supported version of Microsoft Outlook is not installed, or 64-bit Microsoft Office is installed. This error may occur when you try to install the Microsoft Dynamics CRM 2011 for Microsoft Office Outlook client. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Installation cannot proceed error when installing Microsoft Dynamics CRM 2011 for Microsoft Office Outlook client
 

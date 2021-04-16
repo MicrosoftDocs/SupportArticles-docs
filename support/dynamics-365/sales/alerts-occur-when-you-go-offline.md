@@ -3,7 +3,7 @@ title: Alerts occur when you go offline
 description: Provides a solution to an error that occurs when Microsoft Dynamics CRM for Microsoft Office Outlook 2010 is in Offline mode.
 ms.reviewer: mmaasjo
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Intranet Settings Alerts displayed when you go offline in Microsoft Dynamics CRM for Microsoft Office Outlook 2010
 

@@ -3,7 +3,7 @@ title: The solution package was on 365 Online
 description: Provides a solution to the code 8004806B error that occurs when attempting to import a solution in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The solution package you are importing was generated on Microsoft Dynamics 365 Online, it cannot be imported into on-premises or hosted versions of Microsoft Dynamics 365
 
