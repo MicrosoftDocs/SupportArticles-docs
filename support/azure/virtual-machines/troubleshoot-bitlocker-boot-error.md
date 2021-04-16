@@ -326,11 +326,11 @@ To install Az PowerShell module for the recovery VM, follow these steps:
     	Install-PackageProvider -Name "Nuget" -Force
 
     ```
-3. Install the latest version of the PowerShellGet package and then restart the PowerShell.
+3. Install the latest version of the PowerShellGet package, and then restart the PowerShell.
     ```powershell
     Install-Module -Name PowerShellGet -Force
     ```
-4. Run the following command to install the latest version Azure Az module: 
+4. Run the following command to install the latest version of the Azure Az module: 
     ```powershell
     Install-Module -Name Az -Scope AllUsers -Repository PSGallery -Force
     ```
