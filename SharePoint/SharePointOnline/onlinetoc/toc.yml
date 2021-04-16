@@ -1,7 +1,7 @@
 - name: SharePoint Online Troubleshooting
   href: ../sharepoint-online-welcome.md
   items:
-  - name: SharePoint content updates
+  - name: SharePoint troubleshooting content updates
     href: ../sharepoint-content-updates.md
   - name: Administration
     items:
