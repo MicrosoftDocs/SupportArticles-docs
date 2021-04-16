@@ -2,7 +2,7 @@
   href: ../sharepoint-online-welcome.md
   items:
   - name: SharePoint troubleshooting content updates
-    href: ../sharepoint-content-updates.md
+    href: ../sharepoint-troubleshoot-content-updates.md
   - name: Administration
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'

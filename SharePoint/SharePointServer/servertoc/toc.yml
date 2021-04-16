@@ -2,7 +2,7 @@
   href: ../sharepoint-server-welcome.md
   items:
   - name: SharePoint troubleshooting content updates
-    href: ../../SharePointOnline/sharepoint-content-updates.md
+    href: ../../SharePointOnline/sharepoint-troubleshoot-content-updates.md
   - name: Administration
     items:
     - name: '"Upgrade Available" status in farms'
