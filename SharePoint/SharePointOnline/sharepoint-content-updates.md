@@ -1,6 +1,6 @@
 ---
-title: Microsoft SharePoint content updates
-description: Lists SharePoint topics that have been changed recently.
+title: Microsoft SharePoint troubleshooting content updates
+description: Lists SharePoint troubleshooting topics that have been changed recently.
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -16,8 +16,8 @@ ms.custom:
 appliesto:
 - SharePoint
 ---
-# Microsoft SharePoint content updates
+# Microsoft SharePoint troubleshooting content updates
 
-This topic lists SharePoint Online and SharePoint Server articles that have been changed over the last several weeks.
+This topic lists SharePoint Online and SharePoint Server troubleshooting articles that have been changed over the last several weeks.
 
 [!INCLUDE [SharePoint content updates](../Hub/includes/sharepoint-content-updates.md)]
