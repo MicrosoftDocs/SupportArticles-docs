@@ -1,7 +1,7 @@
 ---
 title: The recovery password for Windows BitLocker isn't available when FIPS compliant policy is set in Windows
-description: Explains that the recovery password for Windows BitLocker isn't FIPS-compliant in Windows Vista, in Windows Server 2008, in Windows 7, and in Windows Server 2008 R2.
-ms.date: 09/14/2020
+description: Explains that the recovery password for Windows BitLocker isn't FIPS-compliant in Windows.
+ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;947249
 
 ## Introduction
 
-In Windows Vista, Windows Server 2008, Windows 7 and in Windows Server 2008 R2, the key derivation algorithm used with the recovery password for Windows BitLocker Drive Encryption isn't Federal Information Processing Standards (FIPS)-compliant. Therefore, you may encounter the following issues when the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** Group Policy setting is enabled.
+The key derivation algorithm used with the recovery password for Windows BitLocker Drive Encryption isn't Federal Information Processing Standards (FIPS)-compliant in Windows. Therefore, you may encounter the following issues when the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** Group Policy setting is enabled.
 
 ### Issue 1
 
