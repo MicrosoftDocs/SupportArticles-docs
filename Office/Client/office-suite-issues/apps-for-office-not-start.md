@@ -48,9 +48,9 @@ These issues occur because protected mode is not enabled for the Restricted Site
 
 ## Workaround
 
-For Office 2013, first make sure that the update in the following Microsoft Knowledge Base article is installed:
+For Office 2013, first make sure that the following update is installed:
 
-[2986156 ](https://support.microsoft.com/help/2986156) May 12, 2015, update for Office 2013 
+[May 12, 2015, update for Office 2013 (KB2986156)](https://support.microsoft.com/help/2986156) 
 
 Re-enable protected mode for Restricted Sites: 
 
@@ -60,7 +60,7 @@ Re-enable protected mode for Restricted Sites: 
 4. Restart Internet Explorer.
 
 > [!IMPORTANT]
-> Admin policies take priority over local settings. If enabling Protected Mode through Internet Explorer has no effect (or the ability to enable Protected Mode is turned off), please check your admin settings to see if there is a group policy disabling Protected Mode.
+> Admin policies take priority over local settings. If enabling Protected Mode through Internet Explorer has no effect, or the ability to enable Protected Mode is turned off,  check your admin settings to see if there's a Group Policy that disables Protected Mode.
 
 ## More Information
 
