@@ -64,6 +64,8 @@ The simplest and safest method to prevent lock escalation is to keep transaction
 
   This query acquires and holds an IX lock on mytable for one hour. This prevents lock escalation on the table during that time. This batch does not modify any data or block other queries (unless the other query forces a table lock by using the TABLOCK hint or if an administrator has disabled page or row locks by using an `sp_indexoption` stored procedure).
 
+- Eliminate lock escalation caused by lack of SARG-ability. For example a fairly simple query and that does not appear be touching many rows, or perhaps appears to be  touching just a single row, may may end up scanning an entire table/index. This may happen if there is a function on the left side in a WHERE clause; that is a function against one or more of the columns. Common examples include implicit conversion or explicit conversion, ISNULL(), a user-defined function with the column is passed as a parameter, or a computation on the column: `WHERE CONVERT(INT, column1) = @a` or `WHERE Column1*Column2 = 5`. In such cases, the underlying index against the column(s) cannot be utilized because all values must be retrieved first and passed to the function. This which leads to a scan of the entire table or index and results in acquisition of a large number of locks. In such conditions SQL Server can reach the lock count escalation threshold. The solution is to avoid using functions against columns in the WHERE clause, in other words use SARG-able conditions. 
+ 
 ## Disable lock escalation
 
 Although it's possible to disable lock escalation in SQL Server, we don't recommended it. Instead, use the prevention strategies that are described in the [Prevent Lock Escalation](#prevent-lock-escalation) section. 
