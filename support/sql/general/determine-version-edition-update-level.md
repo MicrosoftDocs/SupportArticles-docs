@@ -35,13 +35,13 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest Service Pack|Latest GDR|Latest cumulative update|Complete version information|General Guidance|
   |---|---|---|---|---|---|
-  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU10 for 2019](https://support.microsoft.com/help/5001090) (15.0.4123.1 - April 2021)<br/>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
-  |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/4583456) (14.0.2037.2 - January, 2021)|[CU23](https://support.microsoft.com/help/5000685) (14.0.3381.3 - February 2021)<br/>[CU22 + GDR](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
-  |SQL Server 2016|[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for SP2](https://support.microsoft.com/help/4583460) (13.0.5103.6 - January, 2021)<br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July, 2019)<br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January, 2018)|[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)<br/>[CU15 + GDR for SP2](https://support.microsoft.com/help/4583461) (13.0.5865.1 - January 2021)<br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for SP2](https://support.microsoft.com/help/4564903) (13.0.5830.85- August 2020)<br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|[SQL Server 2016 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
-  |SQL Server 2014|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/>[SP3](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/4583463) (12.0.6164.21 - January, 2021)<br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - January, 2019)<br/>[GDR for SP1](https://support.microsoft.com/help/4032542) (August, 2017)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/4583462) (12.0.6433.1 - January 2021)<br/>[CU4 for SP3](https://support.microsoft.com/help/4022619) (12.0.6329.1 - July 2019)<br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|[SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014)|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
-  |SQL Server 2012| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)<br/>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)<br/>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.00 - November 2012|[GDR for SP4](https://support.microsoft.com/help/4583465) (11.0.7507.2 - January, 2021)<br/>[GDR for SP3](https://support.microsoft.com/help/4057115) (January, 2018)<br/>[MS 16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November, 2016)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December, 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) (11.0.6607.3 - August 2017)<br/>[CU16 for SP2](https://support.microsoft.com/help/3205054) (11.0.5678.0 - January 2017)<br/>[CU16 for SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sqlserver2012)|[SQL Server 2012 Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
-  |SQL Server 2008 R2|[SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/>[SP2](https://support.microsoft.com/help/2630458) (10.50.4000.0 - July 2012)|[GDR for SP3](https://support.microsoft.com/help/4057113) (January, 2018)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|None|[SQL Server 2008 R2 builds](https://support.microsoft.com/help/321185/#sqlserver2008r2)|[SQL Server 2008 R2 SP3 Installation](https://www.microsoft.com/download/details.aspx?id=44271)|
-  |SQL Server 2008|[SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/>[SP3](https://support.microsoft.com/help/2546951) (10.00.5500.00 - October, 2011)|[GDR for SP4](https://support.microsoft.com/help/4057114) (January, 2018)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|None|[SQL Server 2008 builds](https://support.microsoft.com/help/321185/#sqlserver2008)|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
+  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU10 for 2019](https://support.microsoft.com/help/5001090) (15.0.4123.1 - April 2021)</br>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/4583456) (14.0.2037.2 - January, 2021)|[CU23](https://support.microsoft.com/help/5000685) (14.0.3381.3 - February 2021)</br>[CU22 + GDR](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2016|[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)</br>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for SP2](https://support.microsoft.com/help/4583460) (13.0.5103.6 - January, 2021)</br>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July, 2019)</br>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January, 2018)|[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)</br>[CU15 + GDR for SP2](https://support.microsoft.com/help/4583461) (13.0.5865.1 - January 2021)</br>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)</br>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)</br>[CU14 for SP2](https://support.microsoft.com/help/4564903) (13.0.5830.85- August 2020)</br>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|[SQL Server 2016 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2014|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)</br>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)</br>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/4583463) (12.0.6164.21 - January, 2021)</br>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - January, 2019)</br>[GDR for SP1](https://support.microsoft.com/help/4032542) (August, 2017)</br>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/4583462) (12.0.6433.1 - January 2021)</br>[CU4 for SP3](https://support.microsoft.com/help/4500181) (12.0.6329.1 - July 2019)</br>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)</br>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|[SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014)|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
+  |SQL Server 2012| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)</br>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)</br>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)</br>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.00 - November 2012|[GDR for SP4](https://support.microsoft.com/help/4583465) (11.0.7507.2 - January, 2021)</br>[GDR for SP3](https://support.microsoft.com/help/4057115) (January, 2018)</br>[MS 16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November, 2016)</br>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December, 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) (11.0.6607.3 - August 2017)</br>[CU16 for SP2](https://support.microsoft.com/help/3205054) (11.0.5678.0 - January 2017)</br>[CU16 for SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sqlserver2012)|[SQL Server 2012 Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
+  |SQL Server 2008 R2|[SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)</br>[SP2](https://support.microsoft.com/help/2630458) (10.50.4000.0 - July 2012)|[GDR for SP3](https://support.microsoft.com/help/4057113) (January, 2018)</br>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|None|[SQL Server 2008 R2 builds](https://support.microsoft.com/help/321185/#sqlserver2008r2)|[SQL Server 2008 R2 SP3 Installation](https://www.microsoft.com/download/details.aspx?id=44271)|
+  |SQL Server 2008|[SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)</br>[SP3](https://support.microsoft.com/help/2546951) (10.00.5500.00 - October, 2011)|[GDR for SP4](https://support.microsoft.com/help/4057114) (January, 2018)</br>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|None|[SQL Server 2008 builds](https://support.microsoft.com/help/321185/#sqlserver2008)|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 
   > [!NOTE]
   > "Latest" = During the past 12 months
@@ -148,7 +148,7 @@ To determine the version of SQL Server, you can use any of the following methods
 
 ## SQL Server Reporting Services
 
-The version of SQL Server Reporting Services (SSRS) is displayed on the Reporting Services Web Service URL, for example: http://servername/reportserver. The version is also displayed in the Reporting Services Configuration tool.
+The version of SQL Server Reporting Services (SSRS) is displayed on the Reporting Services Web Service URL, for example: `http://servername/reportserver`. The version is also displayed in the Reporting Services Configuration tool.
 
 ## SQL Server Integration Services
 
@@ -175,11 +175,11 @@ To determine the version of SQL Server Analysis Services, use one of the followi
 
   |Analysis Services version|Location|
   |---|---|
-  |2019|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS15.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`<br/><br/`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS15.InstanceName \Setup Keys: PatchLevel , Version, Key Edition`|
-  |2017|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS14.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`<br/><br/`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS14.InstanceName \Setup Keys: PatchLevel , Version, Key Edition`|
-  |2016|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS13.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`<br/><br/`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS13.InstanceName \Setup Keys: PatchLevel , Version, Key Edition`|
-  |2014|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS12.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`<br/><br/`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS12.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`|
-  |2012|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS11.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`<br/><br/`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS11.InstanceName \Setup Keys: PatchLevel , Version, Key Edition` |
+  |2019|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS15.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS15.InstanceName \Setup Keys: PatchLevel , Version, Key Edition`|
+  |2017|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS14.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS14.InstanceName \Setup Keys: PatchLevel , Version, Key Edition`|
+  |2016|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS13.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS13.InstanceName \Setup Keys: PatchLevel , Version, Key Edition`|
+  |2014|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS12.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS12.InstanceName \MSSQLServer\CurrentVersion Key: CurrentVersion`|
+  |2012|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS11.InstanceName\MSSQLServer\CurrentVersion Key: CurrentVersion`</br></br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSAS11.InstanceName \Setup Keys: PatchLevel , Version, Key Edition` |
   |||
 
   For more information about verifying Analysis Services build versions review [Verify Analysis Services cumulative update build version](/analysis-services/instances/analysis-services-component-version).
@@ -272,11 +272,11 @@ To determine the version of SQL Server Native Client, use one of the following m
 
 - **Method 2:** Check the following PatchLevel or Version keys at the following registry locations.
 
-  |SQL version /<br/>SQL Server Native Client version|Registry subkeys|
+  |SQL version /</br>SQL Server Native Client version|Registry subkeys|
   |---|---|
   |SQL Server 2012, SQL Server 2014 and SQL Server 2016/ SQL Server Native Client 11.0 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI10\CurrentVersion|
-  |SQL Server 2008 & SQL Server 2008 R2/<br/> SQL Server Native Client 10 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI10\CurrentVersion|
-  |SQL Server 2005/<br/>SQL Server Native Client 9|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Native Client\CurrentVersion|
+  |SQL Server 2008 & SQL Server 2008 R2/</br> SQL Server Native Client 10 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI10\CurrentVersion|
+  |SQL Server 2005/</br>SQL Server Native Client 9|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Native Client\CurrentVersion|
   |||
 
 ## SQL Server Browser
@@ -305,9 +305,9 @@ To find the version of your instance of SQL Server CE and related information, s
 
 ## PolyBase
 
-### Windows 
+### Windows
 
-To find the version of PolyBase and its related features in Windows, try the following methods: 
+To find the version of PolyBase and its related features in Windows, try the following methods:
 
 - If the PolyBase service is running, run the following PowerShell script:
 
@@ -323,12 +323,12 @@ ls mpdwsvc.exe -r -ea silentlycontinue | % versioninfo | Format-Table -AutoSize
 ```  
 
 Alternatively, try the SQL Server Setup steps in the next section.
-    
+
 ### Windows or Linux
 
 To find the version of PolyBase and its related features, refer to a fresh discovery report that runs within the SQL Server Setup tools.
 
-In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the Summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added. 
+In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the Summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added.
 
 We recommend that you refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
 
@@ -336,7 +336,8 @@ We recommend that you refresh the Summary.txt report by running the features dis
 
  For Windows servers, refer to the CAB file versions which change with SQL Server cumulative updates. Refer to the Rlauncher.config or PythonLauncher.config files in the `Program Files\Microsoft SQL Server\MSSQL.nn\MSSQL\Binn` directory to find the RHOME or PYTHONHOME folder locations of the CAB files. For the CAB versions that are included with SQL Server CU versions, see [CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-cab-downloads).
 
- For Linux servers, the following command returns a list of all mssql-specific installed packages, together with their version numbers: 
+ For Linux servers, the following command returns a list of all mssql-specific installed packages, together with their version numbers:
+
 ```console
 apt-get list --installed | --grep mssql
 ```
