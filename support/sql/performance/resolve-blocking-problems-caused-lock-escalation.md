@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 323630
 
 ## Determine whether lock escalation is causing blocking
 
-Lock escalation does not cause most blocking problems. To determine whether lock escalation is occurring at or near the time when you experience blocking issues, start a Extended Events session that includes the `lock_escalation` event. If you do not see any `lock_escalation` events, lock escalation is not occurring on your server, and the information in this article does not apply to your situation.
+Lock escalation does not cause most blocking problems. To determine whether lock escalation is occurring at or near the time when you experience blocking issues, start an Extended Events session that includes the `lock_escalation` event. If you do not see any `lock_escalation` events, lock escalation is not occurring on your server, and the information in this article does not apply to your situation.
 
 If lock escalation is occurring, verify that the escalated table lock is blocking other users.
 
@@ -28,9 +28,9 @@ If the lock that's blocking other users is anything other than a TAB (table-leve
 
 ## Prevent lock escalation
 
-The simplest and safest method to prevent lock escalation is to keep transactions short and reduce the lock footprint of expensive queries so that the lock escalation thresholds are not exceeded. There are several methods to achieve this goal, including the following:
+The simplest and safest method to prevent lock escalation is to keep transactions short and reduce the lock footprint of expensive queries so that the lock escalation thresholds are not exceeded. There are several methods to achieve this goal, including the following strategies:
 
-- Break up large batch operations into several smaller operations. For example, you run the following query to remove several hundred thousand old records from an audit table, and then you determine that the query caused a lock escalation that blocked other users:
+- Break up large batch operations into several smaller operations. For example, you run the following query to remove 100,000+ old records from an audit table, and then you determine that the query caused a lock escalation that blocked other users:
 
     ```sql
     DELETE FROM LogMessages WHERE LogDate < '20020102';
@@ -62,9 +62,9 @@ The simplest and safest method to prevent lock escalation is to keep transaction
     COMMIT TRAN;
     ```
 
-  This query acquires and holds an IX lock on mytable for one hour. This prevents lock escalation on the table during that time. This batch does not modify any data or block other queries (unless the other query forces a table lock by using the TABLOCK hint or if an administrator has disabled page or row locks by using an `sp_indexoption` stored procedure).
+  This query acquires and holds an IX lock on mytable for one hour. This prevents lock escalation on the table during that time. This batch does not modify any data or block other queries (unless the other query forces a table lock by using the TABLOCK hint or if an administrator has disabled page or row locks using [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)).
 
-- Eliminate lock escalation caused by lack of SARG-ability. For example a fairly simple query and that does not appear be touching many rows, or perhaps appears to be  touching just a single row, may may end up scanning an entire table/index. This may happen if there is a function on the left side in a WHERE clause; that is a function against one or more of the columns. Common examples include implicit conversion or explicit conversion, ISNULL(), a user-defined function with the column is passed as a parameter, or a computation on the column: `WHERE CONVERT(INT, column1) = @a` or `WHERE Column1*Column2 = 5`. In such cases, the underlying index against the column(s) cannot be utilized because all values must be retrieved first and passed to the function. This which leads to a scan of the entire table or index and results in acquisition of a large number of locks. In such conditions SQL Server can reach the lock count escalation threshold. The solution is to avoid using functions against columns in the WHERE clause, in other words use SARG-able conditions. 
+- Eliminate lock escalation caused by lack of SARGability, a relational database term used to describe whether a query can use indexes for predicates and join columns. For more information on SARGability, see [Inside Design Guide Query Considerations](/sql/relational-databases/sql-server-index-design-guide#query-considerations). For example, a fairly simple query that does not appear to be requesting many rows — or perhaps just a single row — may still end up scanning an entire table/index. For example, if there is a function in a WHERE clause for filtering columns. Other examples that lack SARGability include implicit or explicit data type conversions, the ISNULL() system function, a user-defined function with the column is passed as a parameter, or a computation on the column, such as `WHERE CONVERT(INT, column1) = @a` or `WHERE Column1*Column2 = 5`. In such cases, the query cannot SEEK the nonclustered index even if it contains the appropriate columns because all column values must be retrieved first and passed to the function. This leads to a scan of the entire table or index and results in acquisition of a large number of locks. In such conditions SQL Server can reach the lock count escalation threshold. The solution is to avoid using functions against columns in the WHERE clause, ensuring SARGable conditions.
  
 ## Disable lock escalation
 
@@ -85,13 +85,16 @@ If you use a lock hint, such as ROWLOCK, this only alters the initial lock plan.
 
 ## Lock escalation thresholds
 
-Lock escalation may occur under one of the following conditionss:
+Lock escalation may occur under one of the following conditions:
 
-- **Memory threshold is reached** - A  memory threshold of 40 percent of lock memory is reached. When lock memory exceeds 24 percent of the buffer pool, a lock escalation can be triggered. Lock memory is limited to 60 percent of the visible buffer pool. The lock escalation threshold is set at 40 percent of the lock memory. This is 40 percent of 60 percent of the buffer pool, or 24 percent. If lock memory exceeds the 60 percent limit (this is much more likely if lock escalation is disabled), all attempts to allocate additional locks fail, and `1204` errors are generated.
+- **Memory threshold is reached** - A memory threshold of 40 percent of lock memory is reached. When lock memory exceeds 24 percent of the buffer pool, a lock escalation can be triggered. Lock memory is limited to 60 percent of the visible buffer pool. The lock escalation threshold is set at 40 percent of the lock memory. This is 40 percent of 60 percent of the buffer pool, or 24 percent. If lock memory exceeds the 60 percent limit (this is much more likely if lock escalation is disabled), all attempts to allocate additional locks fail, and `1204` errors are generated.
 
-- **A lock threshold is reached** - After memory threshold is checked, the number of locks acquired on the current current table or index is assessed. If the number exceeds 5,000, a lock escalation is triggered.
+- **A lock threshold is reached** - After memory threshold is checked, the number of locks acquired on the current table or index is assessed. If the number exceeds 5,000, a lock escalation is triggered.
 
-To understand which threshold was reached, use Extended events, enable the  _lock_escalation_ event, and examine the _escalated_lock_count_ and _escalation_cause_  columns. Alternatively, use the [Lock:Escalation event](https://docs.microsoft.com/sql/relational-databases/event-classes/lock-escalation-event-class), and examine the `EventSubClass` value, where "0 - LOCK_THRESHOLD" indicates that the statement exceeded the lock threshold, and "1 - MEMORY_THRESHOLD" indicates that the statement exceeded the memory threshold. Also, examine the `IntegerData` and `IntegerData2` columns.
+To understand which threshold was reached, use Extended events, enable the  _lock_escalation_ event, and examine the _escalated_lock_count_ and _escalation_cause_  columns. Alternatively, use the [Lock:Escalation event](/sql/relational-databases/event-classes/lock-escalation-event-class), and examine the `EventSubClass` value, where "0 - LOCK_THRESHOLD" indicates that the statement exceeded the lock threshold, and "1 - MEMORY_THRESHOLD" indicates that the statement exceeded the memory threshold. Also, examine the `IntegerData` and `IntegerData2` columns.
 
 ## Recommendations
-The methods that are discussed in the "[Prevent Lock Escalation](#prevent-lock-escalation)" section are better options than disabling escalation at the table or instance level. Additionally, the preventive methods generally produce better performance for the query than disabling lock escalation. Microsoft recommends that you enable this trace flag only to mitigate severe blocking that is caused by lock escalation while other options, such as those discussed in this article, are being investigated. 
+The methods that are discussed in the [Prevent Lock Escalation](#prevent-lock-escalation) section are better options than disabling escalation at the table or instance level. Additionally, the preventive methods generally produce better performance for the query than disabling lock escalation. Microsoft recommends that you enable this trace flag only to mitigate severe blocking that is caused by lock escalation while other options, such as those discussed in this article, are being investigated. 
+
+# See also
+
