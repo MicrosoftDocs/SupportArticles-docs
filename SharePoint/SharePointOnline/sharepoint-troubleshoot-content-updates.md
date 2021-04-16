@@ -13,8 +13,6 @@ search.appverid:
 ms.custom:
 - CI 147469
 - CSSTroubleshoot
-appliesto:
-- SharePoint
 ---
 # Microsoft SharePoint troubleshooting content updates
 
