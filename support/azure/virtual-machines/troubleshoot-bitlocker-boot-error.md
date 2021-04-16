@@ -67,7 +67,7 @@ If this method does not the resolve the problem, follow these steps to restore t
      You cannot attach a managed disk to a VM that was restored from a blob image.
 
 3. After the disk is attached, make a remote desktop connection to the recovery VM.
-1. [Install the Az PowerShell module](#installaz-powerShell-module) in the recovery VM.
+1. [Install the Az PowerShell module](#install-az-powerShell-module) in the recovery VM.
 
 4. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands to sign in to Azure subscription:
 
@@ -148,10 +148,9 @@ For a Key Encryption Key scenario, follow these steps:
 1. Make sure that the logged-in user account requires the "unwrapped" permission in the Key Vault Access policies in the **USER|Key permissions|Cryptographic Operations|Unwrap Key**.
 2. Save the following script to a .PS1 file:
     > [!NOTE]
-    > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions.
-
+    > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. To install the Az.Account module, see [Install Az PowerShell module](#install-az-powerShell-module).
     ```powershell
-    #Set the Parameters for the script. If you have question about the Parameters, see the ""
+    #Set the Parameters for the script. If you have question about the Parameters, see the "Parameters smaples" section.
     param (
             [Parameter(Mandatory=$true)]
             [string] 
@@ -303,7 +302,7 @@ This error occurs because the paths of the ADAL Assemblies are wrong. You can se
 
 If you are using the old Az PowerShell module, you must change the two commands to `Get-AzureKeyVaultSecret` and `Get-AzureKeyVaultSecret`.
 
-**Parameters samples**
+**Parameters smaples**
 
 | Parameters  | Value sample  |Comments   |
 |---|---|---|
@@ -331,7 +330,11 @@ To install Az PowerShell module for the recovery VM, follow these steps:
     ```powershell
     Install-Module -Name PowerShellGet -Force
     ```
-4. Run the following command to install the Azure Az module 4.6.0: 
+4. Run the following command to install the latest version Azure Az module: 
     ```powershell
-    Install-Module -Name Az -Scope AllUsers -RequiredVersion "4.6.0" -Repository PSGallery -Force
+    Install-Module -Name Az -Scope AllUsers -Repository PSGallery -Force
+    ```
+5. Install the Az.Account 1.9.4 package:
+    ```powershell
+    Install-Module -Name Az.Accounts -Scope AllUsers -RequiredVersion "1.9.4" -Repository PSGallery -Force
     ```
