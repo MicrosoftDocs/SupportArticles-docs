@@ -14,7 +14,7 @@ ms.custom:
 - CI 147469
 - CSSTroubleshoot
 ---
-# Microsoft SharePoint troubleshooting content updates
+# SharePoint troubleshooting content updates
 
 This topic lists SharePoint Online and SharePoint Server troubleshooting articles that have been changed over the last several weeks.
 
