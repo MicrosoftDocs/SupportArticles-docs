@@ -24,14 +24,14 @@ search.appverid: MET150
 The site mailboxes are being retired and will be out of service and removed. Here's a list of frequently asked questions (FAQs) about the retirement of site mailboxes. Select a question to find the answer.
 
 - [What is a site mailbox?](#what-is-a-site-mailbox)
-- How do I know whether my organization is using site mailboxes and how many site mailboxes are in the organization? How can I find SharePoint sites that are associated with the site mailboxes?
-- What should I do if I have been heavily invested in using site mailboxes?
-- What will happen to the SharePoint site that hosts a site mailbox after the site mailbox is deleted?
-- How do I migrate the site mailbox functionality to a group mailbox?
-- Do you have any recommendations for Microsoft 365 Groups not supporting multiple folders?
-- How do I bulk import the site mailbox PST files to a shared mailbox?
-- What will happen to site mailboxes after April 2021? Will they be automatically deleted?
-- Can the retirement deadline of site mailboxes be extended?
+- [How do I know whether my organization is using site mailboxes and how many site mailboxes are in the organization? How can I find SharePoint sites that are associated with the site mailboxes?](#how-do-i-know-whether-my-organization-is-using-site-mailboxes-and-how-many-site-mailboxes-are-in-the-organization-how-can-i-find-sharepoint-sites-that-are-associated-with-the-site-mailboxes)
+- [What should I do if I have been heavily invested in using site mailboxes?](#what-should-i-do-if-i-have-been-heavily-invested-in-using-site-mailboxes)
+- [What will happen to the SharePoint site that hosts a site mailbox after the site mailbox is deleted?](#what-will-happen-to-the-sharepoint-site-that-hosts-a-site-mailbox-after-the-site-mailbox-is-deleted)
+- [How do I migrate the site mailbox functionality to a group mailbox?](#how-do-i-migrate-the-site-mailbox-functionality-to-a-group-mailbox)
+- [Can I keep the folder structure since Microsoft 365 Groups don't support multiple folders?](#can-i-keep-the-folder-structure-since-microsoft-365-groups-dont-support-multiple-folders)
+- [How do I bulk import the site mailbox PST files to a shared mailbox?](#how-do-i-bulk-import-the-site-mailbox-pst-files-to-a-shared-mailbox)
+- [What will happen to site mailboxes after April 2021? Will they be automatically deleted?](#what-will-happen-to-site-mailboxes-after-april-2021-will-they-be-automatically-deleted)
+- [Can the retirement deadline of site mailboxes be extended?](#can-the-retirement-deadline-of-site-mailboxes-be-extended)
 
 ## What is a site mailbox?
 
