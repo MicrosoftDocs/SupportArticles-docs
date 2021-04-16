@@ -11,7 +11,7 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 11/20/2020
+ms.date: 04/16/2021
 ms.author: genli
 ms.custom: has-adal-ref
 ---
@@ -34,17 +34,17 @@ ms.custom: has-adal-ref
 
 This problem may occur if the VM cannot locate the BitLocker Recovery Key (BEK) file to decrypt the encrypted disk.
 
-## Solution
+## Unlock the VM locally
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-To resolve this problem, stop and deallocate the VM, and then start it. This operation forces the VM to retrieve the BEK file from the Azure Key Vault, and then put it on the encrypted disk. 
+To resolve this problem, stop and deallocate the VM, and then start it. This operation forces the VM to retrieve the BEK file from the Azure Key Vault, and then put it on the encrypted disk.
 
 If this method does not the resolve the problem, follow these steps to restore the BEK file manually:
 
 1. Take a snapshot of the system disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md). To run the [manage-bde](/windows-server/administration/windows-commands/manage-bde) command in the step 7, the **BitLocker Drive Encryption** feature must be enabled in the recovery VM.
+2. [Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md). To attach the encrypted disk, the BitLocker must be enabled on the OS disk of the recovery VM. 
 
     When you attach a managed disk, you might receive a "contains encryption settings and therefore cannot be used as a data disk” error message. In this situation, run the following script to try again to attach the disk:
 
@@ -66,7 +66,8 @@ If this method does not the resolve the problem, follow these steps to restore t
     ```
      You cannot attach a managed disk to a VM that was restored from a blob image.
 
-3. After the disk is attached, make a remote desktop connection to the recovery VM so that you can run some Azure PowerShell scripts. Make sure that you have the [latest version of Azure PowerShell](/powershell/azure/) installed on the recovery VM.
+3. After the disk is attached, make a remote desktop connection to the recovery VM.
+1. [Install the Az PowerShell module](#installaz-powerShell-module) in the recovery VM.
 
 4. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands to sign in to Azure subscription:
 
@@ -74,7 +75,7 @@ If this method does not the resolve the problem, follow these steps to restore t
     Add-AzAccount -SubscriptionID [SubscriptionID]
     ```
 
-5. Run the following script to check the name of the BEK file:
+5. Run the following script to check the name of the BEK file (secret name):
 
     ```powershell
     $vmName = "myVM"
@@ -140,17 +141,17 @@ If this method does not the resolve the problem, follow these steps to restore t
     manage-bde -off F:
     ```
 
-### Key Encryption Key scenario
+## Key Encryption Key scenario  (Wrapped BEK)
 
 For a Key Encryption Key scenario, follow these steps:
 
 1. Make sure that the logged-in user account requires the "unwrapped" permission in the Key Vault Access policies in the **USER|Key permissions|Cryptographic Operations|Unwrap Key**.
 2. Save the following script to a .PS1 file:
     > [!NOTE]
-    > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. 
+    > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions.
 
     ```powershell
-    #Set the Parameters for the script
+    #Set the Parameters for the script. If you have question about the Parameters, see the ""
     param (
             [Parameter(Mandatory=$true)]
             [string] 
@@ -170,8 +171,8 @@ For a Key Encryption Key scenario, follow these steps:
             )
     # Load ADAL Assemblies. 
 
-    $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -last 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -last 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
+    $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
+    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
     If ((Test-Path -Path $adal) -and (Test-Path -Path $adalforms)) { 
 
     [System.Reflection.Assembly]::LoadFrom($adal)
@@ -179,8 +180,8 @@ For a Key Encryption Key scenario, follow these steps:
      }
      else
      {
-    $adal="${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts).name) | select -last 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-    $adalforms ="${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts).name) | select -last 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
+    $adal="${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
+    $adalforms ="${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
     [System.Reflection.Assembly]::LoadFrom($adal)
     [System.Reflection.Assembly]::LoadFrom($adalforms)
      }  
@@ -300,7 +301,7 @@ This error occurs because the paths of the ADAL Assemblies are wrong. You can se
 
 **Error: Get-AzKeyVaultSecret or Get-AzKeyVaultSecret is not recognized as the name of a cmdlet**
 
-If you are using the old AZ PowerShell module, you must change the two commands to `Get-AzureKeyVaultSecret` and `Get-AzureKeyVaultSecret`.
+If you are using the old Az PowerShell module, you must change the two commands to `Get-AzureKeyVaultSecret` and `Get-AzureKeyVaultSecret`.
 
 **Parameters samples**
 
@@ -308,6 +309,29 @@ If you are using the old AZ PowerShell module, you must change the two commands 
 |---|---|---|
 |  $keyVaultName | myKeyVault2112852926  | The name of the key Vault that stores the key |
 |$kekName   |mykey   | The name of the key that is used to encrypt the VM|
-|$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key|
+|$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key.</br> To find the correct secret name, check the step 6 in the [Unlock the VM locally](#unlock-the-vm-locally) section.|
 |$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |The path for writing BEK file.|
 |$adTenant  |contoso.onmicrosoft.com   | FQDN or GUID of your Azure Active Directory that hosts the key vault |
+
+## Install Az PowerShell module
+
+To install Az PowerShell module for the recovery VM, follow these steps:
+
+1. Open a PowerShell session as administrator, and set the HTTP APIs security protocol to TLS 1.2 for current session. The security protocol will be reverted to the default value after you close the current session.
+
+    ```powershell
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    ```
+2. Download the latest version of the Nuget package:
+    ```powershell
+    	Install-PackageProvider -Name "Nuget" -Force
+
+    ```
+3. Install the latest version of the PowerShellGet package and then restart the PowerShell.
+    ```powershell
+    Install-Module -Name PowerShellGet -Force
+    ```
+4. Run the following command to install the Azure Az module 4.6.0: 
+    ```powershell
+    Install-Module -Name Az -Scope AllUsers -RequiredVersion "4.6.0" -Repository PSGallery -Force
+    ```
