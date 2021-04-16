@@ -83,7 +83,7 @@ If the issue does not resolve after waiting for the changes to process, you woul
 
 3. Remote desktop to the recovery VM.
 
-4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that cannot boot](./troubleshoot-bitlocker-boot-error.md#solution).
+4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that cannot boot](troubleshoot-bitlocker-boot-error.md#decrypt-the-encrypted-os-disk).
 
 **Locate dump file and submit a support ticket**
 
