@@ -99,3 +99,4 @@ The methods that are discussed in the [Prevent Lock Escalation](#prevent-lock-es
 ## See also
 
 - [Understand and resolve SQL Server blocking problems](understand-resolve-blocking.md)
+- [Troubleshoot slow-running queries on SQL Server](troubleshoot-slow-running-queries.md)
