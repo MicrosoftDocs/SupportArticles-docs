@@ -21,7 +21,7 @@ search.appverid: MET150
 
 <a id="summary"></a>
 
-The site mailboxes are being retired and will be out of service and/or removed. Here's a list of frequently asked questions (FAQs) about the retirement of site mailboxes. Select a question to find the answer.
+The site mailboxes are being retired and will be out of service and removed. Here's a list of frequently asked questions (FAQs) about the retirement of site mailboxes. Select a question to find the answer.
 
 - [What is a site mailbox?](#what-is-a-site-mailbox)
 - How do I know whether my organization is using site mailboxes and how many site mailboxes are in the organization? How can I find SharePoint sites that are associated with the site mailboxes?
@@ -92,7 +92,7 @@ You can [connect the SharePoint team site that hosts the site mailbox to Microso
 
 ## Can I keep the folder structure since Microsoft 365 Groups don't support multiple folders?
 
-Site mailboxes supported multiple subfolders, but Microsoft 365 Groups don't support the folder structure. If you need to retain multi folder structure from site mailbox, you should export the site mailbox data and import the data to a shared mailbox. To learn more about the detailed steps, see [How do I bulk import the site mailbox PST files to a shared mailbox?](#how-do-i-bulk-import-the-site-mailbox-pst-files-to-a-shared-mailbox)
+Site mailboxes support multiple subfolders, but Microsoft 365 Groups don't support the folder structure. To keep the folder structure from a site mailbox, export the site mailbox data, and then import the data to a shared mailbox. For more information about the steps, see [How do I bulk import the site mailbox PST files to a shared mailbox?](#how-do-i-bulk-import-the-site-mailbox-pst-files-to-a-shared-mailbox)
 
 [Back to top](#summary)
 
