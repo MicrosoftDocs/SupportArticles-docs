@@ -38,7 +38,7 @@ The data flow of any SSO communication is predictable. The expected data flow pa
  
 To run Remote Connectivity Analyzer to test SSO authentication, follow these steps:
 
-1. Open a web browser, and then browse to [https://www.testconnectivity.microsoft.com/?testid=SingleSignOn](https://www.testconnectivity.microsoft.com/?testid=singlesignon).   
+1. Open a web browser, and then browse to [https://www.testconnectivity.microsoft.com/tests/SingleSignOn/input](https://www.testconnectivity.microsoft.com/tests/SingleSignOn/input).   
 2. Type your user ID and the password, click to select the security acknowledgement check box, type the verification code, and then click **Perform Test**.
 
     > [!NOTE]
