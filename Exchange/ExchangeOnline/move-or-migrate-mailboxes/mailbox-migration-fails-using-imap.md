@@ -31,7 +31,7 @@ When you migrate mailboxes that are hosted in Exchange Server 2010 to Exchange O
 
 - When you run the `Test-MigrationServerAvailability` cmdlet to test the connection settings to your IMAP server, you receive the "TLS negotiation failed" error message.
 
-    For example, you run the following cmdlet in Exchange Online PowerShell::
+    For example, you run the following cmdlet in Exchange Online PowerShell:
 
     ```powershell
     Test-MigrationServerAvailability -IMAP -Port 993 -RemoteServer <mail.contoso.com>
