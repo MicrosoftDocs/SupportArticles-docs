@@ -98,7 +98,7 @@ If this method does not the resolve the problem, follow these steps to restore t
     ```
     If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the recovery VM.
 
-    If the **Content Type** value is **Wrapped BEK**, go to the [Key Encryption Key (KEK) scenarios](#key-encryption-key-scenario).
+    If the **Content Type** value is **Wrapped BEK**, go to the [Key Encryption Key (KEK) scenarios](#key-encryption-key-scenario--wrapped-bek).
 
     Now that you have the name of the BEK file for the drive, you have to create the secret-file-name.BEK file to unlock the drive.
 
