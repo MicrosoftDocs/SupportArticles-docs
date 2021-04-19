@@ -23,7 +23,7 @@ During the process of a database restoration, SQL Server Database Engine will cr
 
 ## Workaround
 
-Use a different folder name or a different folder path when restoring a database
+Use a different folder name or a different folder path when restoring a database.
 
 ## Script example
 
