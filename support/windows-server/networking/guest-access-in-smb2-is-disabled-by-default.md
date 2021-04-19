@@ -30,7 +30,7 @@ Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2 client no
 SMBv2 has the following behavior in these versions of Windows:
 
 - Windows 10 Enterprise and Windows 10 Education RS3 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows 10 Pro RS5 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows 10 Pro version 1809 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
 - Windows Server 2019 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
 - Windows 10 Home is unchanged from its previous default behavior.
 
