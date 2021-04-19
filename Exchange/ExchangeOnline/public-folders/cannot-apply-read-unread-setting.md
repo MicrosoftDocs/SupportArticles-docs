@@ -1,6 +1,6 @@
 ---
 title: Unable to apply read setting to public folders
-description: Fixes an issue in which you can't apply the read and unread setting to a parent public folder and all its subfolder.
+description: Fixes an issue in which you can't apply the read and unread setting to a parent public folder and all its subfolders.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -21,7 +21,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-In the Exchange admin center (EAC), when you select the **Apply the read and unread setting to this folder and all its subfolder** check box on a parent public folder, you receive the following error message:
+In the Exchange admin center (EAC), when you select the **Apply the read and unread setting to this folder and all its subfolders** check box on a parent public folder, you receive the following error message:
 
 > The operation couldn't be performed because '\public folder identity' couldn't be found.
 
