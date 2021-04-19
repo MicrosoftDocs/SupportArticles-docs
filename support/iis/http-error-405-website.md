@@ -31,7 +31,7 @@ This problem occurs because the client makes a Hypertext Transfer Protocol (HTTP
 This problem occurs because a client makes an HTTP request by sending the `POST` method to a page that is configured to be handled by the `StaticFile` handler. For example, a client sends the `POST` method to a static HTML page. However, pages that are configured for the `StaticFile` handler don't support the `POST` method.
 
 ## Cause 3
-WebDAV Publising interfers with HTTP PUT.
+WebDAV Publishing interferes with HTTP PUT.
 
 
 ## Resolution for cause 1
@@ -56,5 +56,5 @@ Send the POST request to a page that's configured to be handled by a handler oth
 Remove WebDAV modules and handlers from the *Web.config* file. Also remove the WebDAV Publishing feature from your computer if it's not being used. To do so, follow these steps:
 
 1. Select **Start**, type *Turn Windows features on or off* in the **Start Search** box, and then select **Turn Windows features on or off**.
-1. In the Windows Features window, expand Internet Information Services -> Would Wide Web Servies -> Common HTTP Features.
-1. Uncheck the **WebDAV Publising** feature.
+1. In the Windows Features window, expand Internet Information Services -> Would Wide Web Services -> Common HTTP Features.
+1. Uncheck the **WebDAV Publishing** feature.
