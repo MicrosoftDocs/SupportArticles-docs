@@ -1,18 +1,18 @@
 ---
 title: Error 3156 when you restore a database
-description: This article provides workarounds for the 3165 error that occurs when you restore a database with a memory-optimized filegroup.
+description: This article provides workarounds for the 3165 error that occurs when you restore a database with a memory-optimized filegroup in SQL Server.
 ms.date: 04/15/2021
 author: cobibi
 ms.author: v-yunhya
 ms.reviewer: jolamber, sqlblt
 ---
-# Error 3156 when restoring a database with a memory-optimized filegroup
+# Error 3156 when restoring a database with a memory-optimized filegroup in SQL Server
 
 _Applies to:_ &nbsp; SQL Server  
 
 ## Symptom
 
-When trying to restore a database that has a memory-optimized filegroup, you receive the following error message:
+When trying to restore a database that has a memory-optimized filegroup in SQL Server, you receive the following error message:
 
 > Msg 3156, Level 16, State 6, Line 1  
 File '\<Database File>' cannot be restored to '\<Driver>:\\\<Folder Path>\\\<Database Folder>'. Use WITH MOVE to identify a valid location for the file.
