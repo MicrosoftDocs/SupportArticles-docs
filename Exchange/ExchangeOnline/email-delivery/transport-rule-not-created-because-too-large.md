@@ -35,7 +35,7 @@ The maximum size of a single transport rule is 8 KB. The character limit for all
 
 ## Solution
 
-Reduce the number of conditions or actions in the rule so that the rule's size is no more than 4 KB. Or, create multiple rules so that several smaller rules work together to perform the function of one large rule.
+Reduce the number of conditions or actions in the rule so that the rule's size is no more than 8 KB. Or, create multiple rules so that several smaller rules work together to perform the function of one large rule.
 
 ## More information
 
