@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
 
-Starting in Windows 10 RS3 and Windows Server 2019, the SMB2 client no longer allows the following actions:i
+Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2 client no longer allows the following actions: 
 
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
