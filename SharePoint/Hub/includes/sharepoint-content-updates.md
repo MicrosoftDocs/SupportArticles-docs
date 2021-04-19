@@ -2,6 +2,18 @@
 
 
 
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 4/12/2021 | [Users don't receive SharePoint Online alert notifications](/sharepoint/troubleshoot/sites/no-alert-notifications) | modified |
+| 4/14/2021 | [(This item might not exist or is no longer available) error when using OneDrive](/sharepoint/troubleshoot/sharing-and-permissions/this-item-might-not-exist-error) | modified |
+| 4/16/2021 | [Microsoft SharePoint troubleshooting content updates](/sharepoint/troubleshoot/sharepoint-troubleshoot-content-updates) | added |
+| 4/16/2021 | [SharePoint troubleshooting content updates](/sharepoint/troubleshoot/sharepoint-troubleshooting-content-updates) | added |
+
+
 ## Week of April 05, 2021
 
 

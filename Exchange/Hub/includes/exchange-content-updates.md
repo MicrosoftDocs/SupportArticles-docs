@@ -2,6 +2,16 @@
 
 
 
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 4/13/2021 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
+| 4/14/2021 | [Add-ins will stop working in Outlook on the web](/exchange/troubleshoot/client-connectivity/add-ins-will-stop-working-outlook-on-the-web) | added |
+
+
 ## Week of April 05, 2021
 
 

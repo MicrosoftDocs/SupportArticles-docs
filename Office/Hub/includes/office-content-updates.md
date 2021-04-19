@@ -2,6 +2,17 @@
 
 
 
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Use Support and Recovery Assistant to collect data about Microsoft 365 Apps installations](/office/troubleshoot/installation/use-sara-to-collect-install-info) | modified |
+| 4/12/2021 | [Office Add-in doesn't start if you disable protected mode for Restricted Sites zone](/office/troubleshoot/office-suite-issues/apps-for-office-not-start) | modified |
+| 4/14/2021 | [Error message in Office when a file is blocked by registry policy settings](/office/troubleshoot/settings/file-blocked-in-office) | modified |
+| 4/16/2021 | [Office Add-in doesn't start if you disable protected mode for Restricted Sites zone](/office/troubleshoot/office-suite-issues/apps-for-office-not-start) | modified |
+
+
 ## Week of April 05, 2021
 
 
