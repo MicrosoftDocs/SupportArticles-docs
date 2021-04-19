@@ -166,7 +166,7 @@ sections:
       - question: |
          Do Windows 7 Embedded products qualify?
         answer: |
-            Yes, there's an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](#esu-for-windows-7-embedded).  
+            Yes, there's an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](#do-windows-7-embedded-products-qualify-for-esu-).  
           
       - question: |
          Can Windows 7 Pro OEM customers purchase Windows 7 ESU?
@@ -176,7 +176,7 @@ sections:
       - question: |
          Windows 7 VMs hosted in Azure receive free ESU. How are updates delivered to these VMs?
         answer: |
-            ESU for Windows 7 VMs on Azure is delivered by using the same methods as for on-premises clients. For more information, see the [ESU deployment section](#esu-deployment) in this article.  
+            ESU for Windows 7 VMs on Azure is delivered by using the same methods as for on-premises clients. For more information, see the [ESU deployment section](#are-there-any-prerequisites-for-deploying-esu-) in this article.  
           
       - question: |
          Will Microsoft Security Essentials (MSE) continue to protect my computer after end of support?
