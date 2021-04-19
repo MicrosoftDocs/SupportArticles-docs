@@ -2,6 +2,18 @@
 
 
 
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | added |
+| 4/12/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 4/14/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | modified |
+| 4/14/2021 | [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) | modified |
+| 4/14/2021 | [(File is locked) or (item might not exist) error](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
+
+
 ## Week of March 29, 2021
 
 

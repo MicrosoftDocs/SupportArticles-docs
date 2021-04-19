@@ -2,6 +2,15 @@
 
 
 
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [COM and .NET errors after Office architecture migration](/office365/troubleshoot/administration/com-net-errors-after-migration) | modified |
+| 4/14/2021 | [You can't start the eDiscovery PST Export Tool from the Exchange admin center in Exchange Online.](/office365/troubleshoot/ediscovery/cannot-start-ediscovery-pst-export) | modified |
+
+
 ## Week of April 05, 2021
 
 

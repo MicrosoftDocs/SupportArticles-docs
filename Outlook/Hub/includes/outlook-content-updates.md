@@ -2,6 +2,14 @@
 
 
 
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/14/2021 | [Receiving email messages not intended for you](/outlook/troubleshoot/email-management/unintentional-emails-received) | added |
+
+
 ## Week of April 05, 2021
 
 
