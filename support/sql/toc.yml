@@ -141,6 +141,8 @@
       href: admin/defragmenting-database-disk-drives.md
     - name: Error 0x80040e97 when using full-text search
       href: admin/error-0x80040e97-using-full-text-search.md
+    - name: Error 3156 when you restore a database
+      href: admin/error-3156-restore-database.md           
     - name: Error after you perform TDE certificate or key rotation
       href: admin/error-after-perform-tde-certificate-key-rotation.md
     - name: Error when backing up in-memory database

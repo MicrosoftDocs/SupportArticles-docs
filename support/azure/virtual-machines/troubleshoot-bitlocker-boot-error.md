@@ -150,7 +150,7 @@ For a Key Encryption Key scenario, follow these steps:
     > [!NOTE]
     > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. To install the Az.Account module, see [Install Az PowerShell module](#install-az-powershell-module).
     ```powershell
-    #Set the Parameters for the script. If you have question about the Parameters, see the "Parameters samples" section.
+    #Set the Parameters for the script. If you have question about the Parameters, see the "KEK script parameters" section.
     param (
             [Parameter(Mandatory=$true)]
             [string] 
@@ -302,14 +302,14 @@ This error occurs because the paths of the ADAL Assemblies are wrong. You can se
 
 If you are using the old Az PowerShell module, you must change the two commands to `Get-AzureKeyVaultSecret` and `Get-AzureKeyVaultSecret`.
 
-**Parameters samples**
+## KEK script parameters
 
-| Parameters  | Value sample  |Comments   |
+| Parameters  | Example  |How to check   |
 |---|---|---|
-|  $keyVaultName | myKeyVault2112852926  | The name of the key Vault that stores the key |
-|$kekName   |mykey   | The name of the key that is used to encrypt the VM|
+|  $keyVaultName | myKeyVault2707  | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint Expand`and check **Settings** and **KeyEncryptionKeyURL** in the output. Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000` |
+|$kekName   |mykey   | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint Expandand` and check **Settings** and **KeyEncryptionKeyURL** in the output.  Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000`|
 |$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key.</br> To find the correct secret name, check the step 6 in the [Decrypt the encrypted OS disk](#decrypt-the-encrypted-os-disk) section.|
-|$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |The path for writing BEK file.|
+|$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |A local path where you want to save the BEK file. In the example, You need to create the "bek" folder before running the script or it will error out.|
 |$adTenant  |contoso.onmicrosoft.com   | FQDN or GUID of your Azure Active Directory that hosts the key vault |
 
 ## Install Az PowerShell module
