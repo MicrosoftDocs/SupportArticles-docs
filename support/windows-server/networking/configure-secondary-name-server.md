@@ -102,7 +102,7 @@ When you select a zone on the secondary name server, you may receive the followi
 > Zone not loaded by DNS Server
 >
 > The DNS server encountered an error while attempting to load the zone.  
-> The transfer of zone data from the master server failed.
+> The transfer of zone data from the primary server failed.
 
 This issue may occur if zone transfers are disabled. To resolve this issue, follow these steps:
 
