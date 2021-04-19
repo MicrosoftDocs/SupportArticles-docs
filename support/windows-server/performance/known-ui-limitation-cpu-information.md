@@ -25,7 +25,7 @@ If more than 64 logical processors are enabled in Windows Server 2016, the Syste
 See the following screenshots for an example:
 
 |Correct information|Incorrect information|
-|---------|---------|
+|:---------:|:---------:|
 |:::image type="content" source="./media/known-ui-limitation-cpu-information/cpu-performance-windows-server-2019.png" alt-text="CPU performance information for Windows Server 2019":::|:::image type="content" source="./media/known-ui-limitation-cpu-information/cpu-performance-windows-server-2016.png" alt-text="CPU performance information for Windows Server 2016":::|
 
 In this example, the incorrect CPU information is displayed as follows:
