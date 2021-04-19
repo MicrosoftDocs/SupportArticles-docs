@@ -19,7 +19,7 @@ File '\<Database File>' cannot be restored to '\<Driver>:\\\<Folder Path>\\\<Dat
 
 ## Cause
 
-During the process of a database restoration, SQL Server Database Engine will create a folder for a memory-optimized filegroup. This issue occurs if there's already a folder with the same name in the same folder path, and the folder is used by SQL Server or other processes
+During the process of a database restoration, SQL Server Database Engine will create a folder for a memory-optimized filegroup. This issue occurs if there's already a folder with the same name in the same folder path, and the folder is used by SQL Server or other processes.
 
 ## Workaround
 
