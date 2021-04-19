@@ -25,13 +25,13 @@ _Original KB number:_ &nbsp; 3003043
 
 When you try to create or change a transport rule in Exchange Online or in Exchange Online Protection, you receive an error message that resembles the following:
 
-> The rule cannot be created because it is too large. It has \<X> characters and the maximum number of characters is 4096. Reduce the size.
+> The rule cannot be created because it is too large. It has \<X> characters and the maximum number of characters is 8192. Reduce the size.
 
 ## Cause
 
-This problem occurs if the size of the transport rule is more than 4 kilobytes (KB).
+This problem occurs if the size of the transport rule is more than 8 kilobytes (KB).
 
-The maximum size of a single transport rule is 4 KB. The character limit for all regular expressions that are used in all transport rules is 20 KB. This limit applies to the total number of characters that are used by all regular expressions, including keywords.
+The maximum size of a single transport rule is 8 KB. The character limit for all regular expressions that are used in all transport rules is 20 KB. This limit applies to the total number of characters that are used by all regular expressions, including keywords.
 
 ## Solution
 
