@@ -74,14 +74,6 @@ You restored a deleted group but did not see any updated.
 
 - When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
 
-Get help with case.
-
-- Ask question in [Group management Teams channel](https://teams.microsoft.com/l/channel/19%3ac6e22a9b887d4f77b177cd074d345616%40thread.skype/Group%2520management?groupId=56c43627-9135-4509-bfe0-50ebd0e47960&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47) to get further help from aztabot, SMEs, TAs, and PG members. Alternatively, file an IcM incident.
-
-Communicate with the customer.
-
-- Communicate with the customer to determine the root cause and solution.
-
 ## Evaluate whether a group is a dynamic group<a id="1"></a>
 
 There are two options to check when you determine whether a group is dynamic group.
@@ -215,24 +207,10 @@ To evaluate whether a user or device satisfies the rule to be part of a group, u
 
 #### Manual validation
 
-Validate the values for user or device attributes (In Azure Support Center, [Azure Portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser) in the rule.
+Validate the values for user or device attributes (In[Azure Portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser) in the rule.
 
 - Ensure that there are users that satisfy the rule.
 - For devices, check the device properties to ensure that synchronized attributes contain the expected values.
-
-In Azure Support Center:
-
-1. Get the **membershipRule** of the group.
-
-   ![Get the membershipRule of the group](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-membership-rule.png)
-
-2. Double-check the existing membership.
-
-   ![Double-check the existing membership](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-search-full-group-membership.png)
-
-3. Read user attributes to check whether they satisfy the rule.
-
-   ![Check whether user attributes satisfy rules](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-search-and-user-properties.png)
 
 ## Check whether tenant processing is impacted by a guest user addition disallowed by policy<a id="12"></a>
 
