@@ -1,0 +1,448 @@
+### YamlMime:FAQ
+metadata:
+  title: FAQs about GUID Partitioning Table disk
+  description: Provides a list of frequently asked questions about the GUID Partition Table disk architecture.
+  ms.date: 10/15/2020
+  author: Deland-Han
+  ms.author: delhan
+  manager: dscontentpm
+  audience: itpro
+  ms.topic: troubleshooting
+  ms.prod: windows-server
+  localization_priority: medium
+  ms.reviewer: kaushika, MBIAS
+  ms.prod-support-area-path: Partition and volume management
+  ms.technology: windows-server-backup-and-storage
+    
+title: Frequently asked questions about the GUID Partitioning Table disk architecture
+summary: |
+  This article provides a list of frequently asked questions about the GUID Partition Table disk architecture.
+  
+  _Original product version:_ &nbsp; Windows Server 2012 R2  
+  _Original KB number:_ &nbsp; 302873
+  
+  > [!IMPORTANT]
+  > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+  
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          What is a GUID Partition Table disk
+        answer: |
+          The GUID Partition Table disk architecture was introduced as part of the Extensible Firmware Interface initiative. GUID Partition Table is a new disk architecture that expands on the older Master Boot Record (MBR) partitioning scheme that has been common to Intel-based computers.
+          
+          A partition is a contiguous space of storage on a physical or logical disk that functions as though it were a physically separate disk. Partitions are visible to the system firmware and the installed operating systems. Access to a partition is controlled by the system firmware and the operating system that is currently active.
+          
+      - question: |
+          Why do we need GUID Partition Table
+        answer: |
+          GUID Partition Table disks can grow to a large size. As of July 2001, the Microsoft implementation supports a hard disk of up to 18 EB (512 KB LBAs).
+          
+          The number of partitions on a GUID Partition Table disk is not constrained by temporary schemes such as container partitions as defined by the MBR Extended Boot Record. The Microsoft implementation of GUID Partition Table is limited to 128 partitions. However, it is important to note that one partition is used for the EFI System Partition, one for the Microsoft Reserved and two more are used if you use dynamic disks. This leaves 124 partitions for data use.
+          
+          The GUID Partition Table disk partition format is well defined and fully self-identifying. Data that is critical to the operating system is located in partitions and not in unpartitioned or *hidden* sectors. GUID Partition Table does not allow for hidden sectors or partitions. GUID Partition Table disks use primary and backup partition tables for redundancy and CRC32 fields for improved partition data structure integrity. The GUID Partition Table partition format uses version number and size fields for future expansion.
+          
+          Each GUID Partition Table partition has a unique identification GUID and a partition content type, so no coordination is necessary to prevent partition identifier collision. Each GUID Partition Table partition has a 36-character Unicode name, which means that any software can present an easily readable name for the partition without any additional understanding of the partition.
+          
+      - question: |
+          What is wrong with MBR partitioning
+        answer: |
+          MBR disks support only four primary partitions table entries or multiple logical partitions in the extended partition. If more partitions are wanted, a secondary structure, an extended partition, is necessary. Extended partitions are then subdivided into one or more logical disks.
+          
+          Only one extended partition can be present on any given drive, and the maximum number of logical drives is MAXULONG/4. All MBR disk partitions and logical drives must be cylinder-aligned, even on hardware RAID sets that are built from multiple different drives with no clear underlying physical geometry.
+          
+          MBR partitioning rules are complex and poorly specified. For example, does cylinder alignment mean that each partition must be at least one cylinder in length? An MBR partition is identified by a two-byte field, and coordination is necessary to avoid collision. IBM originally provided that coordination, but as of July 2001, there is no single authoritative list of partition identifiers.
+          
+          Another common practice is to use partitioned or "hidden" sectors to hold specific information. That practice is undocumented and results in severe system problems that are difficult to debug. Over the years, broken implementations and tools have been released to the public, making support difficult.
+          
+      - question: |
+          Where can I find the specification for GUID Partition Table disk partitioning
+        answer: |
+          Chapter 16 of the Extensible Firmware Interface specification defines the GUID Partition Table format. This document is available at the following Intel Web site:
+          
+          [The Unified EFI Specification Defines an Interface Between an Operating System and Platform Firmware](https://www.intel.com/content/www/us/en/architecture-and-technology/unified-extensible-firmware-interface/efi-specifications-general-technology.html)
+          
+          [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+          
+      - question: |
+          Is Extensible Firmware Interface required for a GUID Partition Table disk
+        answer: |
+          No. GUID Partition Table disks are self-identifying. All the information that is needed to interpret the partitioning scheme of a GUID Partition Table disk is completely contained in structures in specified locations on the physical media.
+
+      - question: |
+          How big can a GUID Partition Table disk be
+        answer: |
+          In theory, a GUID Partition Table disk can be up to 264 sectors in a single logical block in length. Logical blocks are commonly 512 bytes or one sector in size.
+          
+          In practice, Windows XP supports GUID Partition Table disks of up to approximately 18 exabytes in size.
+          
+      - question: |
+          How many partitions can a GUID Partition Table disk have
+        answer: |
+          In theory, an unlimited number. As the July 2001, the Microsoft implementation is 128 partitions. The number of partitions is limited by the amount of space that is reserved for making partition entries.
+
+      - question: |
+          Can a disk be both a GUID Partition Table disk and an MBR disk
+        answer: |
+          No. However, all GUID Partition Table disks contain a protective MBR that is used for legacy programs that do not understand the GUID Partition Table disk structure.
+
+      - question: |
+          What is a Protective MBR
+        answer: |
+          The Protective MBR, beginning in sector 0, precedes the GUID Partition Table partition table on the disk. The MBR contains one type 0xEE partition that spans the entire length of the disk. This is the same regardless of the number of partitions that are defined in the GUID Partition Table disk entry array.
+
+      - question: |
+          Why does the GUID Partition Table have a Protective MBR
+        answer: |
+          The Protective MBR protects GUID Partition Table disks from previously-released MBR disk tools such as Microsoft MS-DOS FDISK or Microsoft Windows NT Disk Administrator. These tools are not aware of GUID Partition Table and do not know how to properly access a GUID Partition Table disk. Legacy software that does not know about GUID Partition Table interprets only the Protected MBR when it accesses a GUID Partition Table disk. These tools will view a GUID Partition Table disk as having a single encompassing (possibly unrecognized) partition by interpreting the Protected MBR, rather than mistaking the disk for one that is unpartitioned.
+
+      - question: |
+          Why would a GUID Partition Table-partitioned disk appear to have an MBR on it
+        answer: |
+          If this occurred, you must have used an MBR-only-aware disk tool to access the GUID Partition Table disk.
+
+      - question: |
+          If the disk is larger than the maximum size an MBR can report, will the entire disk contents be protected
+        answer: |
+          The EE partition in the Protective MBR is specified to be the maximum size that is allowable in an MBR.
+
+      - question: |
+          Can Windows read, write, and boot from GUID Partition Table disks
+        answer: |
+          - Can the 64-bit version of Windows XP read, write, and boot from GUID Partition Table disks?
+          
+              Yes.
+          
+          - Can the 64-bit version of Windows XP read, write, and boot from MBR disks?
+          
+              The 64-bit version of Windows XP can read and write MBR disks, but cannot boot from MBR disks.
+          
+          - Can the 32-bit version of Windows XP read, write, and boot from GUID Partition Table disks?
+          
+              No. The 32-bit version will see only the Protective MBR. The EE partition will not be mounted or otherwise exposed to program software.
+          
+          - Can the 32-bit version of Windows XP read, write, and boot from MBR disks?
+          
+              Yes.
+          
+          - Can Microsoft Windows 2000, Microsoft Windows NT 4.0, or Microsoft Windows 98/95 read, write, and boot from GUID Partition Table?
+          
+              No. Legacy software will see only the Protective MBR.
+          
+      - question: |
+          What about mixing and matching GUID Partition Table and MBR disks on the same computer
+        answer: |
+          GUID Partition Table and MBR disks can be mixed only on 64-bit systems, and the following restrictions apply:
+          
+          - The Windows XP loader and the boot partition must reside on a GUID Partition Table disk. Other hard disks can be either MBR or GUID Partition Table.
+          
+          - Both MBR and GUID Partition Table disks can be present in a single dynamic disk group. Volume sets can span both MBR and GUID Partition Table disks, however, the MBR cylinder alignment restriction might cause some difficulties with mirroring or striping MBR and GUID Partition Table disks.
+          
+      - question: |
+          What about removable media
+        answer: |
+          Removable media must be MBR or *superfloppy*.
+
+      - question: |
+          What is a superfloppy
+        answer: |
+          Removable media without either GUID Partition Table or MBR formatting is considered a superfloppy. The entire media is treated as a single partition.
+          
+          The media manufacturer performs any MBR partitioning of removable media; Windows never partitions removable media. If the media does have an MBR, only one partition is supported. There is little user-discernible difference between MBR-partitioned media and superfloppies.
+          
+          Examples of removable media include floppy disk drives, JAZZ disk cartridges, magneto-optical media, DVD-ROM, and CD-ROM. Hard disk drives on external buses such as SCSI or IEEE 1394 are not considered removable.
+          
+      - question: |
+          What is the default behavior of Windows when partitioning media
+        answer: |
+          - What is the default behavior of the 64-bit version of Windows XP when partitioning media?
+          
+              Fixed disks are partitioned by using GUID Partition Table partitioning. GUID Partition Table disks can be converted to MBR disks only if all existing partitioning is first deleted, with associated loss of data.
+          
+          - What is the default behavior of the 32-bit version of Windows XP when partitioning media?
+          
+              Only MBR disks can be used. MBR disks cannot be converted to GUID Partition Table disks.
+          
+      - question: |
+          Extensible Firmware Interface Firmware
+        answer: |
+          - How can a drive letter in the operating system be mapped to a partition in Extensible Firmware Interface Firmware?
+          
+              There is no inherent mapping between drive letter and partition that can be used to determine one from the other. A basic data partition must be identified by its partition GUID.
+          
+          - How can an Extensible Firmware Interface System Partition be created?
+          
+              Extensible Firmware Interface System Partitions can be created by using the Extensible Firmware Interface firmware utility Diskpart.efi or the Windows XP command-line utility Diskpart.exe, or they can be created programmatically by using IOCTL_SET_DRIVE_LAYOUT .
+          
+      - question: |
+          What can be changed on a partition
+        answer: |
+          You should not change any partition header entry directly. Do not use disk tools or utilities to make alterations or changes.
+
+      - question: |
+          What partitioning does Windows XP support on detachable disks
+        answer: |
+          Detachable disks are commonly expected to migrate between computers or simply to be unavailable to the operating system at times. Examples of detachable disks are IEEE 1394 disks, which can be easily disconnected by the end user, or Microsoft Cluster Services (MSCS) shared disks, which move between nodes in a cluster. Windows XP supports only MBR partitioning on detachable disks.
+
+      - question: |
+          Extensible Firmware Interface System Partition
+        answer: |
+          - What is the Extensible Firmware Interface System Partition?
+          
+              The Extensible Firmware Interface System Partition contains the NTLDR, Boot.ini, and other files that are necessary to boot the computer, such as drivers. The Partition GUID defines the Extensible Firmware Interface System Partition:
+          
+              DEFINE_GUID (PARTITION_SYSTEM_GUID, 0xC12A7328L, 0xF81F, 0x11D2, 0xBA, 0x4B, 0x00, 0xA0, 0xC9, 0x3E, 0xC9, 0x3B)
+          
+          - Do only GUID Partition Table disks have Extensible Firmware Interface System Partitions?
+          
+              No, MBR disks can also have Extensible Firmware Interface System Partitions. Extensible Firmware Interface specifies booting from either GUID Partition Table or MBR. The Extensible Firmware Interface System Partitions on an MBR disk is identified by partition type 0xEF. However, Windows XP does not support booting Extensible Firmware Interface from MBR disks or 0xEF partitions.
+          
+          - How big is the Extensible Firmware Interface System Partition?
+          
+              The Extensible Firmware Interface System Partition is determined by using the following algorithm:
+          
+              Max (100MB, min (1 percent of physical disk, 1GB))
+          
+              In other words, the size of the Extensible Firmware Interface System Partition must be the larger of these two numbers, 100 MB or 1 percent of the physical disk size (up to 1 GB). The physical disk size is measured at the time of disk partitioning.
+          
+              The value 1 percent of the physical disk is calculated at the time that the Extensible Firmware Interface System Partition is created and does not change if the disk is extended later (for example, by using RAID).
+          
+          - Can there be two Extensible Firmware Interface System Partitions on a single disk?
+          
+              Such a configuration should not be created and will not be supported.
+          
+          - What about two Extensible Firmware Interface System Partitions on two different disks?
+          
+              Extensible Firmware Interface System Partitions can be replicated for high-availability configurations. Replication must be done manually and the contents must be synchronized manually. Extensible Firmware Interface System Partitions cannot be mirrored.
+          
+          - What does Microsoft place in the Extensible Firmware Interface System Partition?
+          
+              Microsoft places the loader, and other files that are necessary to boot the operating system in the Extensible Firmware Interface System Partition.
+          
+          - Where should the Extensible Firmware Interface System Partition be placed on the disk?
+          
+              The Extensible Firmware Interface System Partition must be first on the disk. While there is no architectural requirement, there are numerous reasons why it is beneficial to place the Extensible Firmware Interface System Partition first. The primary reason for this is that it is impossible to span volumes when the Extensible Firmware Interface System Partition is logically between the two data partitions you are attempting to span.
+          
+          - What should a computer or device manufacturer place in the Extensible Firmware Interface System Partition?
+          
+              The Extensible Firmware Interface System Partition should only include files that are required for booting an operating system, platform tools that run before operating system boot, or files that must be accessed before operating system boot, for example in performing pre-boot system maintenance. Other value-added files or diagnostics that are used while the operating system is running should not be placed in the Extensible Firmware Interface System Partition. It is important to note that the space in the Extensible Firmware Interface System Partition is a limited system resource; its primary purpose is to provide storage for the files that are necessary to boot the operating system.
+          
+      - question: |
+          Where should a computer manufacturer place files such as Platform Diagnostics or other value-added files
+        answer: |
+          The preferred option is for computer manufacturers to place value-added contents in an OEM-specific partition. Just like MBR OEM partitions, the contents of GUID Partition Table OEM (or other unrecognized) partitions are not exposed (given drive letters or returned in volume lists). Users are warned that deleting the partition can cause the computer to fail to operate. An OEM-specific partition should be placed before the Microsoft Reserved Partition and after any Extensible Firmware Interface System Partition on the disk. Although not architectural, this placement has the same benefits as placing the Extensible Firmware Interface System Partition first. For example, it is also impossible to span volumes when an OEM-specific partition is logically between the two data partitions you are attempting to span.
+          
+          Placement in the Extensible Firmware Interface System Partition is an option for programs or files that run in the pre-operating system boot environment. However, the Extensible Firmware Interface System Partition is architecturally-shared space and represents a limited resource. Consuming space in the Extensible Firmware Interface System Partition should be considered carefully. Files that are not relevant to the pre-operating system boot environment should not be placed in the Extensible Firmware Interface System Partition.
+          
+      - question: |
+          Microsoft Reserved Partition
+        answer: |
+          - What is a Microsoft Reserved Partition?
+          
+              The Microsoft Reserved Partition reserves space on each disk drive for subsequent use by operating system software. GUID Partition Table disks do not allow hidden sectors. Software components that formerly used hidden sectors now allocate portions of the Microsoft Reserved Partition for component-specific partitions. For example, converting a basic disk to a dynamic disk causes the Microsoft Reserved Partition on that disk to be reduced in size and a newly created partition holds the dynamic disk database. The Microsoft Reserved Partition has the following Partition GUID:
+          
+              DEFINE_GUID (PARTITION_MSFT_RESERVED_GUID, 0xE3C9E316L, 0x0B5C, 0x4DB8, 0x81, 0x7D, 0xF9, 0x2D, 0xF0, 0x02, 0x15, 0xAE
+          
+          - What disks require a Microsoft Reserved Partition?
+          
+              Every GUID Partition Table disk must contain a Microsoft Reserved Partition. The Microsoft Reserved Partition must be the first partition after the Extensible Firmware Interface System Partition (if any) on the disk. It is particularly important that the Microsoft Reserved Partition be created before other primary data partitions.
+          
+          - Who creates the Microsoft Reserved Partition?
+          
+              The Microsoft Reserved Partition must be created when disk-partitioning information is first written to the drive. If the manufacturer partitions the disk, the manufacturer must create the Microsoft Reserved Partition at the same time. If Windows partitions the disk during Setup, it creates the Microsoft Reserved Partition.
+          
+          - Why must the Microsoft Reserved Partition be created when the disk is first partitioned?
+          
+              After the disk is partitioned, there will be no free space left to create a Microsoft Reserved Partition.
+          
+          - How big is the Microsoft Reserved Partition?
+          
+              When initially created, the size of the Microsoft Reserved Partition depends on the size of the disk drive:
+          
+            - On drives that are less than 16 GB, the Microsoft Reserved Partition is 32 MB.
+            - On drives that are greater than or equal to 16 GB, the Microsoft Reserved Partition is 128 MB. As the Microsoft Reserved Partition is divided into other partitions, it becomes smaller.
+          
+      - question: |
+          What partitions are required by Windows XP
+        answer: |
+          Each bootable drive must contain an Extensible Firmware Interface System Partition, a Microsoft Reserved Partition, and at least one basic data partition that contains the operating system. Each data drive must contain at least a Microsoft Reserved Partition and one basic data partition.
+          
+          All basic data partitions on the drive should be contiguous. As previously noted, placing an OEM-specific or other unrecognized partition between data partitions imposes limitations on later volume spanning
+          
+      - question: |
+          What is a basic data partition
+        answer: |
+          Basic data partitions correspond to primary MBR partitions 0x6 (FAT), 0x7 (NTFS), or 0xB (FAT32). There is a direct one-to-one correlation between a basic data partition and a drive letter or mount point, other volume device object, or both. Each basic data partition is represented in Windows as a volume device object, and optionally as a mount point or a drive letter.
+
+      - question: |
+          How is a basic data partition identified
+        answer: |
+          It has the following partition type GUID:
+          
+          DEFINE_GUID (PARTITION_BASIC_DATA_GUID, 0xEBD0A0A2L, 0xB9E5, 0x4433, 0x87, 0xC0, 0x68, 0xB6, 0xB7, 0x26, 0x99, 0xC7)
+          
+      - question: |
+          Will end users see the Extensible Firmware Interface System Partition, Microsoft Reserved Partition, and OEM-specific partitions
+        answer: |
+          The user won't see these partitions exposed in Windows Explorer, nor is any recognized file system exposed to legacy programs such as Context Indexing. The Extensible Firmware Interface System Partition, OEM-specific, and other unrecognized partitions will be visible only in the Disk Management MMC snap-in.
+
+      - question: |
+          What partitions are mounted by default by Windows
+        answer: |
+          Windows XP exposes only basic data partitions. Other partitions with FAT file systems may be mounted, but not exposed (only programmatically). Only basic data partitions are assigned drive letters or mount points.
+          
+          The Extensible Firmware Interface System Partition FAT file system is mounted, but not exposed. This allows programs running under Windows to update the contents of the Extensible Firmware Interface System Partition. The following registry key locates the Extensible Firmware Interface System Partition:
+          
+          `HKEY_LOCAL_MACHINE/System/Setup/SystemPartition`
+          
+          The Microsoft Reserved Partition (and any partitions that are created from the Microsoft Reserved Partition) could have recognizable file systems; none are exposed.
+          
+          Any OEM-specific partitions or partitions that are associated with other operating systems are not recognized by Windows. Unrecognized partitions with recognizable file systems are treated like the Extensible Firmware Interface System Partition. They will be mounted, but not exposed. Unlike MBR disks, there is no practical difference between OEM-specific partitions and other operating system partitions; all are unrecognized.
+          
+      - question: |
+          How can the user see the Extensible Firmware Interface System Partition, OEM, and other unrecognized partitions
+        answer: |
+          The user can use disk management tools such as the Disk Management MMC snap-in or Diskpart.exe. The Microsoft Reserved Partition and any partitions that are created from the Microsoft Reserved Partition are only visible from a command prompt.
+
+      - question: |
+          What about dynamic disks
+        answer: |
+          Dynamic disks use two different GUID Partition Table partitions:
+          
+          - A data container partition corresponding to the MBR partition 0x42, with the following GUID:DEFINE_GUID (PARTITION_LDM_DATA_GUID, 0xAF9B60A0L, 0x1431, 0x4F62, 0xBC, 0x68, 0x33, 0x11, 0x71, 0x4A, 0x69, 0xAD)
+          
+          - A partition to contain the dynamic configuration database, with the following GUID:DEFINE_GUID(PARTITION_LDM_METADATA_GUID, 0x5808C8AAL, 0x7E8F, 0x42E0, 0x85, 0xD2, 0xE1, 0xE9, 0x04, 0x34, 0xCF, 0xB3)
+          Volumes are created in the data container and are mounted by default. This is the same as the contents of 0x42 MBR partitions.
+          
+      - question: |
+          What happens when a basic disk is converted to dynamic
+        answer: |
+          For a drive to be eligible for conversion to dynamic, all basic data partitions on the drive must be contiguous. If other unrecognized partitions separate basic data partitions, the disk cannot be converted. This is one of the reasons that the Microsoft Reserved Partition must be created before any basic data partitions.
+          
+          The first step in conversion is to separate a portion of the Microsoft Reserved Partition to create the configuration database partition. All non-bootable basic partitions are then combined into a single data container partition. Boot partitions are retained as separate data container partitions. This is analogous to conversion of primary partitions.
+          
+          Windows XP differs from Windows 2000 in that basic and extended partitions are preferentially converted to a single 0x42 partition, rather than being retained as multiple distinct 0x42 partitions as on Windows 2000.
+          
+      - question: |
+          How can a specific partition be mounted
+        answer: |
+          You can access the GUID Partition Table disk partitions of different types by using the following tools.
+          
+          Diskpart.efi:  
+          Firmware: Extensible Firmware Interface System Partition  
+          Microsoft Reserved Partition
+          
+          Diskpart.exe:  
+          Windows XP: Extensible Firmware Interface System Partition  
+          Microsoft Reserved Partition
+          
+          Diskgmt.msc:  
+          Windows XP: Extensible Firmware Interface System Partition  
+          DATA
+          
+          Explorer.exe:  
+          Windows XP: DATA
+          
+          You can also develop your own tools (by using the Microsoft Win32 or Microsoft Win64 APIs) to access the GUID Partition Table disk partitions at their primitive levels.
+          
+      - question: |
+          How are GUID Partition Table disks managed in Windows XP
+        answer: |
+          GUID Partition Table and MBR disks are managed the same way. Disks can be formatted as GUID Partition Table or MBR by using the Diskpart.exe command-line utility or by using the Disk Management snap-in. Volumes can be created on both GUID Partition Table and MBR disks, and both kinds of disks can be mixed in the same dynamic disk group.
+
+      - question: |
+          What about FTdisk sets
+        answer: |
+          There is no FTdisk set support on Windows XP for MBR or GUID Partition Table disks. The only support for logical volumes is through dynamic disks.
+
+      - question: |
+          Can a disk be converted from GUID Partition Table to MBR or MBR to GUID Partition Table
+        answer: |
+          Yes, but only if the disk contains no partitions or volumes. Any data on the disk will be destroyed. GUID Partition Table disks are only supported on the 64-bit version of Windows XP.
+
+      - question: |
+          What file systems are supported on GUID Partition Table disks
+        answer: |
+          NTFS is recommended on all basic data partitions and all dynamic volumes. Windows Setup and the Disk Management snap-in offer only NTFS. However, you can still use FAT16 and FAT32 on these partitions as well. To circumvent this, the partition or volume must be formatted explicitly by using the Format tool.
+
+      - question: |
+          Is it possible to make a sector-by-sector copy of a GUID Partition Table disk
+        answer: |
+          No. The Disk and Partition GUIDs will no longer be unique. This must never happen. You can make a sector-by-sector copy of the contents of Extensible Firmware Interface System Partition or basic data partitions.
+
+      - question: |
+          Is there anyway to copy a whole GUID Partition Table disk by using the OPK imaging tools
+        answer: |
+          Yes; however, there are some key caveats. The OEM Preinstallation Kit (OPK) initializes the Disk and Partition GUIDs to zero. On first boot of Windows XP, the operating system generates unique GUIDs. The OPK only supports generation of Extensible Firmware Interface System Partition, Microsoft Reserved Partition, and basic data partitions.
+          
+          If a program has recorded any Disk or Partition GUIDs, the program may not work. Any programs, drivers, utilities, or firmware implementations that are supplied by computer manufacturers or program vendors that rely on GUIDs should be capable of handling GUIDs that change from the OPK initialization values to those that are generated by the operating system.
+          
+      - question: |
+          What is the Diskpart.efi MAKE command
+        answer: |
+          It is a way for OEMs to simplify operating system pre-installation and system recovery. This command can easily be extended to create a default disk configuration for the platform. For example, the computer manufacturer could extend the MAKE command to automatically partition the boot drive with an Extensible Firmware Interface System Partition, Microsoft Reserved Partition, an OEM-specific partition, and one basic data partition. For example, consider a possible disk configuration called BOOT_DISK. In the event of disaster recovery, MAKE BOOT_DISK would allow the customer to completely repartition a boot disk to the original factory defaults.
+
+      - question: |
+          What happens if a duplicate disk or partition GUID is detected
+        answer: |
+          Windows XP will generate new GUIDs for any duplicate Disk GUID, Microsoft Reserved Partition GUID, or Microsoft Reserved Partition basic data GUID upon detection. This is similar to the duplicate MBR signature handling in Windows 2000. Duplicate GUIDs on a dynamic container or database partition cause unpredictable results.
+
+      - question: |
+          What is the maximum NTFS volume size supported on a GPT disk
+        answer: |
+          This depends on the cluster size that is selected at the time of formatting. NTFS is currently limited to 2^32-1 allocation units. This yields a 256TB volume, using 64k clusters. However, this has only been tested to 16TB, or 17,592,186,040,320 bytes, using 4K cluster size. The following chart shows the NTFS limits based on cluster size:
+          
+          |Cluster size|Maximum NTFS Volume Size (bytes RAW)|
+          |---|---|
+          |512|2,199,023,255,040 (2TB)|
+          |1,024|4,398,046,510,080 (4TB)|
+          |2,048|8,796,093,020,160 (8TB)|
+          |4,096|17,592,186,040,320 (16TB)|
+          |8,192|35,184,372,080,640 (32TB)|
+          |16,384|70,368,744,161,280 (64TB)|
+          |32,768|140,737,488,322,560 (128TB)|
+          |65,536|281,474,976,645,120 (256TB)|
+          |||
+          
+          For example, to format a volume that has a cluster size of 8 KB, you would use a command such as the following from a command prompt, where **/a: ####** specifies the number of bytes per cluster:
+          
+          ```console
+          format d: /fs:ntfs /a:8192
+          ```
+          
+          If you choose a cluster size that is too small for the size of the partition, you receive the following error message when you try to format the partition:
+          
+          > The format operation did not complete because the cluster count is higher than expected
+          
+          To determine the cluster size of a volume, run the following command at a command prompt, and then note the **Bytes Per Cluster** value:
+          
+          ```console
+          fsutil fsinfo ntfsinfo <volume>
+          ```
+          
+          > [!NOTE]
+          > The \<volume> placeholder represents the volume letter.
+          
+          For example, when you run the `fsutil fsinfo ntfsinfo c:` command, you may receive results that resemble the following output:
+          
+          > NTFS Volume Serial Number : 0xf4300f6c300f3560  
+          Version : 3.1  
+          Number Sectors : 0x000000001d17dbee  
+          Total Clusters : 0x0000000003a2fb7d  
+          Free Clusters : 0x000000000102bfa0  
+          Total Reserved : 0x0000000000000800  
+          Bytes Per Sector : 512  
+          Bytes Per Cluster : 4096  
+          Bytes Per FileRecord Segment : 1024  
+          Clusters Per FileRecord Segment : 0  
+          Mft Valid Data Length : 0x000000000e630000  
+          Mft Start Lcn : 0x00000000000c0000  
+          Mft2 Start Lcn : 0x0000000001d17dbe  
+          Mft Zone Start : 0x00000000002185a0  
+          Mft Zone End : 0x0000000000218740  
+          RM Identifier : 1587CC47-A713-11DB-9287-806E6F6E6963
+          
+          > [!NOTE]
+          > In this example, the **Bytes Per Cluster** value is 4096. This value represents a 4-kilobyte (KB) cluster size.
