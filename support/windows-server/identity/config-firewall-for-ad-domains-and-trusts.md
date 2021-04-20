@@ -89,9 +89,7 @@ NETBIOS ports as listed for Windows NT are also required for Windows 2000 and Se
 
 ### Active Directory
 
-In Windows 2000 and Windows XP, the Internet Control Message Protocol (ICMP) must be allowed through the firewall from the clients to the domain controllers so that the Active Directory Group Policy client can function correctly through a firewall. ICMP is used to determine whether the link is a slow link or a fast link.
-
-In Windows Server 2008 and later versions, the Network Location Awareness Service provides the bandwidth estimate based on traffic with other stations on the network. There is no traffic generated for the estimate.
+The Microsoft LDAP client uses ICMP ping when a LDAP request is pending for extended time and it waits for a response. It sends ping requests to verify the server is still on the network. If it does not receive ping responses, it fails the LDAP request with LDAP_TIMEOUT.
 
 The Windows Redirector also uses ICMP Ping messages to verify that a server IP is resolved by the DNS service before a connection is made, and when a server is located by using DFS. If you want to minimize ICMP traffic, you can use the following sample firewall rule:
 

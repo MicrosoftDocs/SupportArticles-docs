@@ -19,6 +19,21 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10
 
+## Windows Update troubleshooter
+
+Text displayed in Settings:  
+Automatically repair system files and settings to improve device security
+
+### Description
+
+Some devices running Windows 10, version 1903 or 1909 are not scanning for updates. This troubleshooter resets the update scanning process, which prompts the device to start a new scan.
+
+This troubleshooter runs automatically on devices running Windows 10, version 1903 or 1909 and that have reported the error to the sediment infrastructure.
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|4/15/2021||[https://aka.ms/AAbk72i](https://aka.ms/AAbk72i)|
+
 ## Files On-Demand troubleshooter
 
 Text displayed in Settings:  
