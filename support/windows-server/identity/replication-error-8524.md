@@ -24,7 +24,9 @@ _Original KB number:_ &nbsp;2021446
 
 ## Symptoms
 
-This article describes symptoms, cause, and resolution steps for AD operations that fail with Win32 error 8524: "The DSA operation is unable to proceed because of a DNS lookup failure."
+This article describes symptoms, cause, and resolution steps for AD operations that fail with Win32 error 8524:
+
+> The DSA operation is unable to proceed because of a DNS lookup failure.
 
 1. DCDIAG reports that Active Directory Replications test has failed with status 8524:
 
@@ -62,7 +64,11 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
     Rest of /showrepl output truncated
 
-3. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the 8524 status are logged in the directory service event log.
+3. One of the following events with the 8524 status are logged in the directory service event log:
+
+   - NTDS Knowledge Consistency Checker (KCC)
+   - NTDS General
+   - Microsoft-Windows-ActiveDirectory_DomainService
 
     Active Directory events that commonly cite the 8524 status include but aren't limited to:
 
@@ -70,13 +76,13 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     |---|---|---|
     |Microsoft-Windows-ActiveDirectory_DomainService|2023|This directory server was unable to replicate changes to the following remote directory server for the following directory partition<br/><br/>|
     |NTDS General|1655|Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.<br/><br/>|
-    |NTDS KCC|1308|The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed.<br/><br/> |
-    |NTDS KCC|1865|The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites can't be reached from the local site <br/><br/>|
+    |NTDS KCC|1308|The KCC has detected that successive attempts to replicate with the following directory service has consistently failed.<br/><br/> |
+    |NTDS KCC|1865|The KCC was unable to form a complete spanning tree network topology. As a result, the following list of sites can't be reached from the local site <br/><br/>|
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed. <br/><br/>|
     |NTDS KCC|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed<br/><br/>|
     ||||
 
-4. Domain controllers log NTDS Replication event 2087 and/or NTDS Replication event 2088 in their Directory Service event log:
+4. Domain controllers log NTDS Replication event 2087 and NTDS Replication event 2088 in their Directory Service event log:
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
@@ -89,7 +95,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     Computer: \<dc name>.\<domain name>  
     Description:
 
-    Active Directory Domain Services couldn't resolve the following DNS host name of the source domain controller to an IP address. This error prevents additions, deletions, and changes in Active Directory Domain Services from replicating between one or more domain controllers in the forest. Security groups, group policy, users, and computers and their passwords will be inconsistent between domain controllers until this error is resolved, potentially affecting logon authentication and access to network resources.
+    Active Directory Domain Services couldn't resolve the following DNS host name of the source domain controller to an IP address. This error prevents additions, deletions, and changes in Active Directory Domain Services from replicating between one or more domain controllers in the forest. Security groups, group policy, users, and computers and their passwords will be inconsistent between domain controllers until this error is resolved. It potentially affects logon authentication and access to network resources.
 
     Rest of event truncated, see MSKB [824449](https://support.microsoft.com/?kbid=824449) for full text.
 
@@ -114,11 +120,15 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 ## Cause
 
-Error Status 8524 maps to error string "The DSA operation is unable to proceed because of a DNS lookup failure." This is a catch-all error for all possible DNS failures affecting Active Directory on post Windows Server 2003 SP1 domain controllers.
+Error Status 8524 maps to the following error string:
 
-Microsoft-Windows-ActiveDirectory_DomainService event 2087 is a partner event to other Active Directory events that cite the 8524 status if an Active Directory domain controller is unable to resolve a remote DC by its fully qualified CNAME record (\<object guid for source DCs NTDS Settings object>._msdcs.\<forest root domain>) using DNS.
+> The DSA operation is unable to proceed because of a DNS lookup failure.
 
-Microsoft-Windows-ActiveDirectory_DomainService event 2088 is logged when a source domain controller is successfully resolved by its NetBIOS name but such name resolution fallback only occurs when DNS name resolution fails.
+It's a catch-all error for all possible DNS failures affecting Active Directory on post Windows Server 2003 SP1 domain controllers.
+
+`Microsoft-Windows-ActiveDirectory_DomainService` event 2087 is a partner event to other Active Directory events that cite the 8524 status if an Active Directory domain controller is unable to resolve a remote DC by its fully qualified CNAME record (\<object guid for source DCs NTDS Settings object>._msdcs.\<forest root domain>) using DNS.
+
+`Microsoft-Windows-ActiveDirectory_DomainService` event 2088 is logged when a source domain controller is successfully resolved by its NetBIOS name but such name resolution fallback only occurs when DNS name resolution fails.
 
 The presence of the 8524 status and the Microsoft-Windows-ActiveDirectory_DomainService event 2088 or 2087 events all indicate that DNS name resolution is failing Active Directory.
 
@@ -147,7 +157,7 @@ Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metad
 
 1. Start the Windows 2008 or Windows Server 2008 R2 or W2K8 R2 Active Directory Sites and Services snap-in (DSSITE.MSC).
 
-    This can also be done by starting the Active Directory Sites and Services on a Windows Vista or Windows 7 computer that has been installed as part of the Remote Server Administration Tools (RSAT) package.
+    It can also be done by starting the Active Directory Sites and Services on a Windows Vista or Windows 7 computer that has been installed as part of the Remote Server Administration Tools (RSAT) package.
 
 2. Focus the DSSITE.MSC snap-in on the destination DCs' copy of Active Directory.
 
@@ -157,7 +167,10 @@ Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metad
 
 3. Delete the source DCs NTDS Settings object referenced in the 8524 errors and events. Active Directory Users and Computers (DSA.MSC) snap-in and delete either the source DCs NTDS Settings object.
 
-    A DCs NTDS Settings object appears below the Sites, Site Name, Servers container, and %server name% container and above the inbound connection object displayed in the right-hand pane of Active Directory Sites and Services.
+    A DCs NTDS Settings object appears
+
+    - Below the Sites, Site Name, Servers container, and %server name% container
+    - Above the inbound connection object displayed in the right-hand pane of Active Directory Sites and Services.
 
     The red highlight in the screenshot below shows the NTDS Settings object for CONTOSO-DC2 located below the Default-First-Site-Name site.
 
@@ -171,17 +184,17 @@ Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metad
 
 The legacy or command-line method of deleting stale NTDS Settings objects using the NTDSUTIL metadata cleanup command is documented in MSKB [216498](https://support.microsoft.com/default.aspx?scid=kb;EN-US;216498).
 
-### Run DCDIAG /TEST:DNS on the source DC + destination DC
+### Run `DCDIAG /TEST:DNS` on the source DC + destination DC
   
-DCDIAG /TEST:DNS performs seven different tests to quickly vet the DNS health of a domain controller. This test is NOT run as part of the default execution of DCDIAG.
+`DCDIAG /TEST:DNS` performs seven different tests to quickly vet the DNS health of a domain controller. This test is NOT run as part of the default execution of DCDIAG.
 
 1. Sign in to the console of the destination domain controllers logging the 8524 events with Enterprise Admin credentials.
-2. Open an administrative privileged CMD prompt and run "DCDIAG /TEST:DNS /F on the DC logging the 8424 status AND the source DC that the destination DC is replicating from.
+2. Open an administrative privileged CMD prompt and run `DCDIAG /TEST:DNS /F` on the DC logging the 8424 status AND the source DC that the destination DC is replicating from.
 
-    To run DCDIAG against all DCs in a forest, type "DCDIAG /TEST:DNS /V /E /F:\<File name.txt>.
+    To run DCDIAG against all DCs in a forest, type `DCDIAG /TEST:DNS /V /E /F:<File name.txt>`.
 
-    To run DCDIAG TEST:DNS against a specific DC type "DCDIAG /TEST:DNS /V /S:\<DC NAME> /F:\<File name.txt>.
-3. Locate the summary table at the end of the DCDIAG /TEST:DNS output. Identify and reconcile warning or failure conditions on the relevant DCs of the report.
+    To run DCDIAG TEST:DNS against a specific DC type `DCDIAG /TEST:DNS /V /S:\<DC NAME> /F:<File name.txt>`.
+3. Locate the summary table at the end of the `DCDIAG /TEST:DNS` output. Identify and reconcile warning or failure conditions on the relevant DCs of the report.
 4. If DCDIAG doesn't identify the root cause, take "the long way around" using the steps below.
 
 ### Check Active Directory Name Resolution using PING
@@ -192,13 +205,13 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      From the console of the source DC logging the 8524 error/event, type:
 
-     *c:\\>repadmin /showrepl \<fully qualified hostname of *source* DC cited in the 8524 error (event)>*
+     `c:\>repadmin /showrepl <fully qualified hostname of source DC cited in the 8524 error (event)>`
 
      For example, if the DC referenced in the 8524 error/event is contoso-DC2 in the `contoso.com` domain, type:
 
-     *c:\\>repadmin /showrepl `contoso-dc2.contoso.com`*
+     `c:\>repadmin /showrepl contoso-dc2.contoso.com`
 
-     The "DSA Object GUID" field in the header of the remoted /SHOWREPl command contains the objectGUID of the source DCs *current* NTDS settings object. Use the source DCs' view of its NTDS Settings Object in case replication is slow / failing. The header of the repadmin output will look something like:
+     The "DSA Object GUID" field in the header of the `remoted /SHOWREPl` command contains the objectGUID of the source DCs *current* NTDS settings object. Use the source DCs' view of its NTDS Settings Object in case replication is slow / failing. The header of the `repadmin` output will look something like:
 
     > Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
@@ -211,13 +224,13 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      From the console of the destination DC logging the 8524 error/event, type:
 
-    *c:\\>repadmin /showrepl \<fully qualified hostname of *destination* DC>>*
+    `c:\>repadmin /showrepl <fully qualified hostname of destination DC>`
 
      For example, if the DC logging 8524 error / event is contoso-DC1 in the `contoso.com` domain, type:
 
-     *c:\\>repadmin /showrepl `contoso-dc1.contoso.com`*
+     `c:\>repadmin /showrepl contoso-dc1.contoso.com`
 
-     REPADMIN /SHOWREPL output is shown below. The "DSA Object GUID" field is listed for each source DC the destination DC inbound replicates from.
+     `REPADMIN /SHOWREPL` output is shown below. The "DSA Object GUID" field is listed for each source DC the destination DC inbound replicates from.
 
    ```console
     c:\>repadmin /showreps `contoso-dc1.contoso.com`  
@@ -245,7 +258,7 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      `c:\>ping <ObjectGUID> from source DCs NTDS Settings object._msdcs.<DNS name for Active Directory forest root domain>`
 
-     Using our example of the **8a7baee5...** objectGUID from the repadmin /showreps output above from the contoso-dc1 DC in the `contoso.com` domain, the PING syntax would be:
+     Using our example of the **8a7baee5...** objectGUID from the `repadmin /showreps` output above from the contoso-dc1 DC in the `contoso.com` domain, the PING syntax would be:
 
      `c:\>ping 8a7baee5-cd81-4c8c-9c0f-b10030574016. _msdcs.contoso.com`
 
@@ -275,7 +288,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Options to validate that a DNS Server hosts, forwards, or delegates (that is, "can resolve") such zones include.
 
-    - Start the DNS management tool for your DNS and verify that the DNS Servers that the source DC points to for name resolution host the zones in question.
+    - Start the DNS management tool for your DNS and verify the DNS Servers to which the source DC points for name resolution host the zones in question.
     - Use NSLOOKUP to verify that all of the DNS Servers that the source DC points to can resolve queries for the DNS zones in question.
 
         Run IPCONFIG /ALL on the console of the source DC
@@ -319,7 +332,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Use step 1 from "Check Active Directory Name Resolution using PING" to locate the current CNAME of the source DC.
 
-    Run "ipconfig /all" on the console of the source DC to determine which DNS Servers the source DC points to for name resolution.
+    Run `ipconfig /all` on the console of the source DC to determine to which DNS Servers the source DC points for name resolution.
 
     ```console
     c:\>ipconfig /all
@@ -328,7 +341,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
                                                10.45.41.101                      <secondary DNS Server IP
     ```
 
-    Use NSLOOKUP to query the current DNS Servers for the source DCs' cname record (found via the procedure in "Check Active Directory Name Resolution using PING").
+    Use NSLOOKUP to query the current DNS Servers for the source DCs' CNAME record (found via the procedure in "Check Active Directory Name Resolution using PING").
 
     ```console
     c:\>nslookup -type=cname <fully qualified cname of source DC> <source DCs primary DNS Server IP >
@@ -352,7 +365,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
 
-    CNAME records are registered by the NETLOGON Service during OS startup, NETLOGON service startup and recurring intervals later.
+    CNAME records are registered by the NETLOGON Service during OS startup, NETLOGON service startup, and recurring intervals later.
 
     Each promotion of a DC with the same name may create a new NTDS Settings object with a different objectGUID that therefore registers a different CNAME record. Verify registration of the CNAME record based the last promotion of the source DC vs. the objectGUID for the NTDS Settings object on the destination DC if the source has been promoted more than 1x.
 
@@ -360,11 +373,11 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     If a DCs CNAME record was successfully registered but later disappears, check MSKB [953317](https://support.microsoft.com/help/953317), duplicate DNS zones in different replication scopes or overly aggressive DNS scavenging by the DNS Server.
 
-    If the CNAME record registration is failing on the DNS servers that the source DC points to for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
+    If the CNAME record registration is failing on the DNS servers to which the source DC points for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
 
 3. **Verify that the source DC has registered its host records**
 
-    From the console of the source DC, run ipconfig /all to determine which DNS Servers the source DC points to for name resolution.
+    From the console of the source DC, run `ipconfig /all` to determine to which DNS Servers the source DC points for name resolution.
 
     ```console
     c:\>ipconfig /all
@@ -389,7 +402,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Repeat the NSLOOKUP command against the source DCs secondary DNS Server IP address.
 
-    To dynamically register host "A" records, type the following from the console of the computer:
+    To dynamically register host "A" records, type the following command from the console of the computer:
 
     ```console
     c:\>ipconfig /registerdns
@@ -423,7 +436,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Options to validate that a DNS Server hosts, forwards, or delegates (that is, "can resolve") such zones include:
 
-    - Start the DNS management tool for your DNS and verify that the DNS Servers that the source DC points to for name resolution host the zones in question.
+    - Start the DNS management tool for your DNS and verify the DNS Servers to which the source DC points for name resolution host the zones in question.
 
         OR
 
@@ -472,7 +485,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
 5. **Verify that the DNS Server used by the destination DC can resolve the source DCs CNAME and HOST records**  
 
-    From the console of the destination DC, run "ipconfig /all" to determine which DNS Servers that destination DC points to for name resolution:
+    From the console of the destination DC, run `ipconfig /all` to determine which DNS Servers to which destination DC points for name resolution:
 
     ```console
     DNS Servers that destination DC points to for name resolution:
@@ -483,7 +496,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
                                                  10.45.42.103<- Secondary DNS Server IP>
     ```
 
-    From the console of the destination DC, use NSLOOKUP to query the DNS Servers configured on the destination DC for the source DCs cname and host records:
+    From the console of the destination DC, use NSLOOKUP to query the DNS Servers configured on the destination DC for the source DCs CNAME and host records:
 
     ```console  
     c:\>nslookup -type=cname <fully qualified CNAME of source DC> <destination DCs primary DNS Server IP >
@@ -512,7 +525,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     If the DNS zones used by the source and destination DC are stored in primary and secondary copies of DNS zones, check for:
 
     - The "allow zone transfers" checkbox isn't enabled on the DNS that hosts the primary copy of the zone.
-    - The "Only the following servers" checkbox is enabled but the IP address of the secondary DNS hasn't been added to the allow list on the primary DNS.
+    - The "Only the following servers" checkbox is enabled but the IP address of the secondary DNS hasn't been added to the allowlist on the primary DNS.
     - The DNS zone on the Windows Server 2008 DNS hosting the secondary copy of the zone is empty because of MSKB [953317](https://support.microsoft.com/default.aspx?scid=kb;EN-US;953317).
 
     If the DNS servers used by the source and destination DC have parent / child relationships, check for:
