@@ -3,7 +3,7 @@ title: Can't get to your Dynamics 365 environment
 description: Provides a solution to an error that occurs when you access your Common Data Service environment for the first time.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You cannot get to your Dynamics 365 environment using the above URL. Error message displays when you access your Common Data Service environment for the first time
 

@@ -3,7 +3,7 @@ title: An impersonation error occurred when connecting Dynamics 365 to Exchange
 description: You may receive an error that states an impersonation error occurred in accessing the mailbox while sending or receiving the email when connecting Microsoft Dynamics 365 to Exchange Server on-premises. Provides a resolution.
 ms.reviewer:  
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # An impersonation error occurred when connecting Microsoft Dynamics 365 to Exchange Server on-premises
 

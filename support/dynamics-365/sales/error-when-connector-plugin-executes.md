@@ -3,7 +3,7 @@ title: Error when Connector plugin executes
 description: After applying CRM 2011 updates, an error occurs when the Microsoft Dynamics Connector plugin executes.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # After applying CRM 2011 updates, an error displays when the Microsoft Dynamics Connector plugin executes
 

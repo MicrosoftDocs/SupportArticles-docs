@@ -3,7 +3,7 @@ title: Errors when working with SystemUser records after migrating
 description: Some issues may occur with System User records after you import a Microsoft Dynamics CRM Online organization into a Microsoft Dynamics CRM On-Premise deployment.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Errors occur when working with SystemUser records after migrating from Microsoft Dynamics CRM Online to On Premise
 

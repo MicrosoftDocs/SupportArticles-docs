@@ -3,7 +3,7 @@ title: Firefox or Chrome users are repeatedly prompted for credentials in Micros
 description: This article describes the resolution for issues pertaining to multiple sign-in prompts when using Firefox or Chrome to access Microsoft Dynamics CRM 2011 post Update Rollup 9.
 ms.reviewer: matp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Firefox or Chrome users are repeatedly prompted for credentials in Microsoft Dynamics CRM 2011
 

@@ -3,7 +3,7 @@ title: User doesn't have a service plan error
 description: Provides a solution to an error that occurs when doing any of these actions on a flow that uses premium connectors.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # User doesn't have a service plan adequate for the non-Standard connection error
 

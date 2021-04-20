@@ -3,7 +3,7 @@ title: Common errors creating and assigning flow approvals
 description: Common Power Automate approval errors and potential resolutions.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Common errors creating and assigning flow approvals
 

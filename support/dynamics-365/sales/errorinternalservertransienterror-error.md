@@ -3,7 +3,7 @@ title: ErrorInternalServerTransientError error
 description: Provides a solution to the ErrorInternalServerTransientError error that occurs in Dynamics 365 mailbox.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # ErrorInternalServerTransientError error appears in Microsoft Dynamics 365 mailbox
 

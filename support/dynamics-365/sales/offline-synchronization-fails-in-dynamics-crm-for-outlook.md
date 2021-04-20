@@ -3,7 +3,7 @@ title: Offline synchronization fails
 description: This article discusses how to used advanced configuration options available in the registry for the Microsoft Dynamics CRM client for Outlook offline sync process to improve or resolve errors with data transfer.
 ms.reviewer: clintwa
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Offline synchronization fails in Microsoft Dynamics CRM client for Outlook
 

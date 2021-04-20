@@ -3,7 +3,7 @@ title: Error when installing Dynamics CRM Server
 description: Provides a solution to an error that occurs when you try to install Microsoft Dynamics CRM Server 2016.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # SECDoClientHandshake() SSL Security error connecting SQL Server when you try to install Microsoft Dynamics CRM Server 2016
 

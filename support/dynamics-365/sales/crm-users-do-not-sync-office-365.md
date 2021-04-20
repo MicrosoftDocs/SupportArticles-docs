@@ -3,7 +3,7 @@ title: CRM users don't sync from Office 365
 description: Provides a solution to an issue where Microsoft Dynamics CRM Online users don't sync from Office 365 after deleting O365 Security Group.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM Online users don't sync from Office 365 after deleting O365 security group
 

@@ -3,7 +3,7 @@ title: Dynamics 365 App for Outlook experience without Server-Side Synchronizati
 description: Describes Dynamics 365 App for Outlook experience without Server-Side Synchronization.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics 365 App for Outlook experience without Server-Side Synchronization
 

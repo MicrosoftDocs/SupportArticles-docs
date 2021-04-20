@@ -3,7 +3,7 @@ title: Portal capabilities for Dynamics 365 FAQ
 description: Describes Portal capabilities for Dynamics 365 FAQ.
 ms.reviewer: 
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Portal capabilities for Microsoft Dynamics 365 FAQ
 

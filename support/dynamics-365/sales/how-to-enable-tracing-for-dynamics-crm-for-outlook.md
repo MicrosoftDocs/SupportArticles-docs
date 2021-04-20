@@ -3,7 +3,7 @@ title: How to enable tracing for Dynamics CRM for Outlook
 description: How to enable tracing for the Microsoft Dynamics CRM for Outlook client.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 
+ms.date: 3/31/2021
 ---
 # How to enable tracing for the Microsoft Dynamics CRM for Outlook client
 

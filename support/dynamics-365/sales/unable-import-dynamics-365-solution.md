@@ -3,7 +3,7 @@ title: Unable to import Dynamics 365 solution
 description: Provides a solution to an issue where you can't import Dynamics 365 solution or install an app because of web resource size.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to import Dynamics 365 solution or install an app because of web resource size
 

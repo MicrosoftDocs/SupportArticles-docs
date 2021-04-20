@@ -17,21 +17,22 @@ ms.technology: networking
 
 This article describes information about Windows disabling guest access in SMB2 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019
 _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
 
-In Windows 10, Windows Server 2019, or Windows Server 2016, the SMB2 client no longer allows the following actions:
+Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2 client no longer allows the following actions: 
 
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
 
 SMBv2 has the following behavior in these versions of Windows:
 
-- Windows 10 Enterprise and Windows 10 Education no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows Server 2016 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows 10 Home and Professional editions are unchanged from their previous default behavior.
+- Windows 10 Enterprise and Windows 10 Education RS3 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows 10 Pro version 1809 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows Server 2019 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows 10 Home is unchanged from its previous default behavior.
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive the following error message:
 
@@ -41,7 +42,8 @@ Also, if a remote server tries to force you to use guest access, or if an admini
 
 ### Log entry 1
 
-> Log Name: Microsoft-Windows-SmbClient/Security  
+```output
+Log Name: Microsoft-Windows-SmbClient/Security  
 Source: Microsoft-Windows-SMBClient  
 Date: Date/Time  
 Event ID: 31017  
@@ -53,6 +55,7 @@ Computer: ServerName.contoso.com
 Description: Rejected an insecure guest logon.  
 User name: Ned  
 Server name: ServerName
+```
 
 #### Guidance
 
@@ -60,7 +63,8 @@ This event indicates that the server tried to log on the user as an unauthentica
 
 ### Log entry 2
 
-> Log Name: Microsoft-Windows-SmbClient/Security  
+```output
+Log Name: Microsoft-Windows-SmbClient/Security  
 Source: Microsoft-Windows-SMBClient  
 Date: Date/Time  
 Event ID: 31018  
@@ -70,6 +74,7 @@ Keywords: (128)
 User: NETWORK SERVICE  
 Computer: ServerName.contoso.com  
 Description: The AllowInsecureGuestAuth registry value is not configured with default settings.
+```
 
 Default registry value:  
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] "AllowInsecureGuestAuth"=dword:0`

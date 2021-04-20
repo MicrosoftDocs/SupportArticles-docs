@@ -3,7 +3,7 @@ title: Error when you send tracked email message to another user
 description: This article provides a resolution for the problem that occurs when you attempt to send a tracked email message by using the Microsoft CRM 2011 for Outlook client to another CRM user.
 ms.reviewer: jowells
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Error message when attempting to send tracked email message to another user in Microsoft Dynamics CRM 2011
 

@@ -3,7 +3,7 @@ title: Personal Options revert to only the online options
 description: Microsoft Dynamics CRM client for Outlook Personal Options unexpectedly revert to only the online Personal Options. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Microsoft Dynamics CRM client for Outlook Personal Options unexpectedly revert to only the online Personal Options
 

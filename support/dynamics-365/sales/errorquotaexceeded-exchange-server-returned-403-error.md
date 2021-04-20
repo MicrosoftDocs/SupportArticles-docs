@@ -3,7 +3,7 @@ title: Email remains in Pending Send status with 403 error
 description: You may receive a ErrorQuotaExceeded. Exchange.server returned 403 error when sending an email in Microsoft Dynamics 365. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # ErrorQuotaExceeded Exchange server returned 403 error in Microsoft Dynamics 365 mailbox alert
 

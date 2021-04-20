@@ -3,7 +3,7 @@ title: Error when using 365 App for Outlook
 description: Fixes an issue that occurs when you try to use the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Your profile is either disabled or you are not configured to any business unit error occurs in Microsoft Dynamics 365 App for Outlook
 

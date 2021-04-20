@@ -3,7 +3,7 @@ title: Enabled CRM add-in causes Outlook keyboard shortcuts not working
 description: Some Outlook 2010 keyboard shortcuts don't work after switching to the next or previous message when Dynamics CRM 2011 add-in is enabled.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Outlook 2010 keyboard shortcuts not responding after switching to the next or previous message when Dynamics CRM 2011 add-in is configured
 

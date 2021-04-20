@@ -3,7 +3,7 @@ title: Error occurs when importing a solution
 description: Describes an error that occurs when importing a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The import solution must have a higher version than the existing solution it is upgrading error occurs when importing a Microsoft Dynamics 365 solution
 

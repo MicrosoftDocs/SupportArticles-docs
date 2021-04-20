@@ -3,7 +3,7 @@ title: Cannot connect to Dynamics 365 online
 description: Provides a solution to an issue where you're unable to connect to Dynamics 365 (online), version 9.0, using SDK tools.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to connect to Dynamics 365 (online), version 9.0 using SDK tools
 

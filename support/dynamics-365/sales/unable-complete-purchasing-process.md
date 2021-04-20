@@ -3,7 +3,7 @@ title: Unable to complete the purchasing process
 description: This article provides a workaround for the problem that occurs when you try to complete the Dynamics CRM Online purchasing steps.
 ms.reviewer: chanson, henningp
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Unable to complete the Microsoft Dynamics CRM Online Purchasing Process
 

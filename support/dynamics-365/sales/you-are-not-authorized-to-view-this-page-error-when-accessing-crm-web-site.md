@@ -3,7 +3,7 @@ title: You are not authorized to view this page error when accessing Dynamics CR
 description: Describes a problem that occurs when the IIS authentication for the Microsoft Dynamics CRM Web site is not configured to use Kerberos authentication. A resolution is provided.
 ms.reviewer: snulph
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # You are not authorized to view this page error when you try to access the Microsoft Dynamics CRM Web site
 

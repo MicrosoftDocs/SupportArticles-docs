@@ -3,7 +3,7 @@ title: Check if gateway is in the right region
 description: Provides a solution to an issue where you can't see your gateway in Power Automate.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Check if the gateway is in the right region
 

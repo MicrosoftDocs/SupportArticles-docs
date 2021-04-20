@@ -3,7 +3,7 @@ title: UnknownIncomingEmailIntegrationError 2147220192 error
 description: UnknownIncomingEmailIntegrationError -2147220192 appears in alert in Microsoft Dynamics 365 mailbox. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # UnknownIncomingEmailIntegrationError -2147220192 appears in alert in Microsoft Dynamics 365 mailbox
 

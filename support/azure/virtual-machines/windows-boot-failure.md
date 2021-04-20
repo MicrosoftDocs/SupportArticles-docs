@@ -30,14 +30,14 @@ This issue occurs for one of the following reasons:
 - The Boot Configuration Data (BCD) is corrupted.
 - The partition that contains the Windows installation is inactive.
 
-## Resolution
+## Stop (de-allocate) and start the VM
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, stop (de-allocate) and start the VM then recheck to see if issue persists. If the issue persists, follow these steps:
 
-### Step 1: Verify if the Windows partition is marked as active
+ ## Verify if the Windows partition is marked as active
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
@@ -105,7 +105,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 7. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
 
-### Step 2: Repair the Boot Configuration data
+## Repair the Boot Configuration data
 
 1. Run the following command line as an administrator to verifies the file system integrity and fixes logical file system errors.
 

@@ -3,7 +3,7 @@ title: Error after planned System Maintenance
 description: Provides a solution to an error that occurs after planned System Maintenance when authenticating using a custom application
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The security token could not be authenticated or authorized error occurs after planned System Maintenance when authenticating using a custom application in Microsoft Dynamics CRM 2011 Online
 

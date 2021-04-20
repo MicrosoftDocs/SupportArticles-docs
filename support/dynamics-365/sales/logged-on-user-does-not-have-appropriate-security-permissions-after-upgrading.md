@@ -3,7 +3,7 @@ title: Logged-on user does not have appropriate security permissions error after
 description: Describes a problem that may occur if a user's role is not granted a required privilege. Explains how to determine the missing privilege and grant it to the user.
 ms.reviewer: v-sasing
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # The logged-on user does not have the appropriate security permissions error after upgrading to Microsoft Dynamics CRM 2011
 

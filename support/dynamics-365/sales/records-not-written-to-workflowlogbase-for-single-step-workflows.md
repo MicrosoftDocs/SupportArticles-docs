@@ -3,7 +3,7 @@ title: Records not written to Workflowlogbase for single-step workflows
 description: Describes optimization changes in Update Rollup 1 for Microsoft Dynamics CRM 2011, after which records are not always written to the Workflowlogbase table for single-step workflows.
 ms.reviewer: chanson
 ms.topic: article
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Records not written to Workflowlogbase for single-step workflows after Update Rollup 1 for Microsoft Dynamics CRM 2011 is installed
 

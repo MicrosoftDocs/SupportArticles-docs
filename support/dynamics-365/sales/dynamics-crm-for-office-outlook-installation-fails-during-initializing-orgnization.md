@@ -3,7 +3,7 @@ title: Cannot install Dynamics CRM for Microsoft Office Outlook with error
 description: The installation of Microsoft Dynamics CRM for Outlook fails during the Initializing Organization phase of the configuration process. Provides a resolution.
 ms.reviewer: debrau
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # There is a problem communicating with the Microsoft Dynamics CRM server error when configuring Microsoft Dynamics CRM for Outlook
 

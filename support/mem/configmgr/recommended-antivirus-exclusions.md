@@ -30,7 +30,9 @@ Possible symptoms include:
 - Backlogs occur in the *Install_Directory*\MP\Outboxes subfolders on management points (MP).
 - Software Center isn't populated by deployed software on client systems, or doesn't start. Also, the CCMRepair.log file may contain an error similar to the following example:
 
-  > Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
+  ```output
+  Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
+  ```
 
 - Software that is deployed to clients cannot be installed.
 - Compliance data for software deployments is inaccurate.

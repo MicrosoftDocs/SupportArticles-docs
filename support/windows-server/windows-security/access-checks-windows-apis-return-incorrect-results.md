@@ -2,7 +2,7 @@
 title: Access checks using APIs return incorrect results
 description: Provides resolutions for an issue where access checks using Windows APIs return incorrect results.
 ms.date: 2/7/2021
-author: xl989
+author: v-lianna
 ms.author: v-lianna
 manager: dscontentpm
 audience: itpro

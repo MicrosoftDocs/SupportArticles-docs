@@ -3,7 +3,7 @@ title: Invalid file error (80048000)
 description: Provides a solution to the 80048000 error that occurs when attempting to import a solution in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # Invalid file error (80048000) when importing solution in Microsoft Dynamics 365
 

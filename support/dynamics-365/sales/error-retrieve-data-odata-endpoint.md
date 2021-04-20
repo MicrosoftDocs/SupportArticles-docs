@@ -3,7 +3,7 @@ title: Error when you retrieve data from OData endpoint
 description: This article provides a resolution for the problem that occurs when you attempt to connect Power Query for Excel to Dynamics CRM 2013 Service Pack 1 On Premises using Claims-Based Authentication.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 3/31/2021
 ---
 # "The given URL neither points to an OData service or a feed" error when retrieving data from a Dynamics CRM 2013 OData endpoint
 
