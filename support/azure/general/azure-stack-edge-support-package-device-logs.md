@@ -15,7 +15,7 @@ ms.reviewer: Andrew.Brenner
 
 The **Azure Stack Edge** support package contains all the relevant logs that can assist Microsoft Support team with troubleshooting issues. These logs are collected either automatically during the support ticket submission, or they can be submitted manually.
 
-For more information on how to manually submit the support package for Azure Stack Edge, see [Collect Support package](https://docs.microsoft.com/azure/databox-online/azure-stack-edge-troubleshoot#collect-support-package).
+For more information on how to manually submit the support package for Azure Stack Edge, see [Collect Support package](/azure/databox-online/azure-stack-edge-troubleshoot#collect-support-package).
 
 ## Memory Dumps
 
@@ -23,7 +23,7 @@ Microsoft can collect support logs and memory dumps to help troubleshoot device 
 
 Additionally, for logs containing memory dumps, you can use **Customer Lockbox** to review and approve or reject these requests.
 
-For more information on how to use Customer Lockbox for your organization, see [Customer Lockbox for Microsoft Azure](https://docs.microsoft.com/azure/security/fundamentals/customer-lockbox-overview).
+For more information on how to use Customer Lockbox for your organization, see [Customer Lockbox for Microsoft Azure](/azure/security/fundamentals/customer-lockbox-overview).
 
 ## Information collected by the Azure Stack Edge support package
 
