@@ -30,7 +30,7 @@ In Windows 2000, you clear the **Register this connection's address in DNS** che
 For example, this behavior may occur if you have the following configuration:
 
 - The DNS service is installed on the server.
-- The DNS server zone is contoso.com, where the **example**.com zone can be updated dynamically.
+- The DNS server zone is contoso.com, where the **contoso**.com zone can be updated dynamically.
 - The server host name is Server1.contoso.com, where Server1 has two network adapters that have IP addresses of 10.1.1.1 and 10.2.2.2.
 - You clear the **Register this connection's address in DNS** check box on the network adaptor that has the IP address of 10.2.2.2. Then you delete the host record for Server1.contoso.com 10.2.2.2.
 

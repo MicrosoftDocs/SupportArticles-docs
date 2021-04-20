@@ -67,7 +67,7 @@ To verify the kind of drive that you have, follow these steps:
 
     The below list summarizes the new features delivered as part of Windows 8 and Windows Server 2012 to help improve customer experience with large sector disks. For more detailed description for each item, see [Advanced format (4K) disk compatibility update](/windows/win32/w8cookbook/advanced-format--4k--disk-compatibility-update).
 
-  - Builds upon the Windows 7 SP1 support for 4K disks with emulation (512e). And provides full inbox support for disks with 4K sector size without emulation (4K Native). Some supported apps and scenarios include:
+  - Builds upon the Windows 7 SP1 support for 4K disks with emulation (512e). And it provides full inbox support for disks with 4K sector size without emulation (4K Native). Some supported apps and scenarios include:
 
     - Ability to install Windows to and boot from a 4K sector disk without emulation (4K Native Disk)
     - New VHDx file format
