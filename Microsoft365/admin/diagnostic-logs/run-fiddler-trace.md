@@ -57,6 +57,7 @@ To install and run the Fiddler Trace scenario in the Microsoft Support and Recov
    ![Security warning window](./media/run-fiddler-trace/security-warning.png)
 
 8. Select **Start** to capture the log.
+   Note: The log may contain personal information. You can review the log before you send them to us. You decide whether or not to send us the logs.
 
    ![Select Start to capture log](./media/run-fiddler-trace/record-log.png)
 
