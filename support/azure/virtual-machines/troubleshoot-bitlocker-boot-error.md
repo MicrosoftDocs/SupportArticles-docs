@@ -169,8 +169,8 @@ For a Key Encryption Key scenario, follow these steps:
     # Load ADAL Assemblies. If the ADAL Assemblies cannot be found, please see the "Install Az PowerShell module" section. 
 
     $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-
-    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"    
+    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"  
+  
     If ((Test-Path -Path $adal) -and (Test-Path -Path $adalforms)) { 
 
     [System.Reflection.Assembly]::LoadFrom($adal)
@@ -178,7 +178,8 @@ For a Key Encryption Key scenario, follow these steps:
      }
      else
      {
-      Write-Output "ADAL Assemblies files cannot be found. Please set the correct path for `$adal` and `$adalforms`, then run the script again." 
+      Write-output "ADAL Assemblies files cannot be found. Please set the correct path for `$adal` and `$adalforms`, then run the script again." 
+      exit    
      }  
 
     # Set well-known client ID for AzurePowerShell
