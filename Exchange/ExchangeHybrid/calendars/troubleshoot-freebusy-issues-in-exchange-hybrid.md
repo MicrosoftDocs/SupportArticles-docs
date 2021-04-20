@@ -606,7 +606,7 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 From the Exchange 2010/2013 CAS, run the following command in Exchange Management Shell:
 
 ```powershell
-Get-OrganizationReationship -Identity "On Premises to Exchange Online Organization Relationship"
+Get-OrganizationRelationship -Identity "On Premises to Exchange Online Organization Relationship"
 ```
 
 The output should resemble the following:
