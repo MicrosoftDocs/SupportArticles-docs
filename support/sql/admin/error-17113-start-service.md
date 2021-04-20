@@ -2,7 +2,7 @@
 title: Error 17113 when you start SQL Server service
 description: This article provides resolutions for the Error 17113 problem that occurs when you start SQL Server service.
 ms.date: 1/28/2020
-author: xl989
+author: v-lianna
 ms.author: v-lianna
 ms.reviewer: ramakoni
 ---
@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; SQL Server
 
 In Microsoft SQL Server, the master database records all the system-level information. The master database also records the existence of all other databases, the location of those database files, and the initialization information for SQL Server. Therefore, SQL Server cannot start if the master database is unavailable.
 
-When you try to start SQL Server in this scenario, the SQL Server service doesn’t start, and you receive the following error message, depending on how you try to start the service:
+When you try to start SQL Server in this scenario, the SQL Server service doesn't start, and you receive the following error message, depending on how you try to start the service:
 
 - By using the Services applet:
 
