@@ -22,6 +22,25 @@ _Applies to:_ &nbsp; Windows 10
 ## Windows Update troubleshooter
 
 Text displayed in Settings:  
+Automatically targets the device for an In-Place Upgrade due to recurring installation issues
+
+### Description
+
+Some devices running Windows 10, version 19H1 and above, aren't able to install monthly security updates because of file or metadata corruption within the servicing stack. This troubleshooter marks the device in preparation for an In-Place Upgrade. 
+
+This troubleshooter runs automatically on devices that meet the following criteria:
+
+- Runs on one of these Windows 10 versions: 19H1, 19H2, 20H1, or 20H2
+- Runs a revision below the December 2020 Security Update (12B)
+- Failed a Quality Update installation multiple times
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|4/19/2021||[aka.ms/IPUTroubleshooter](aka.ms/IPUTroubleshooter)|
+
+## Windows Update troubleshooter
+
+Text displayed in Settings:  
 Automatically repair system files and settings to improve device security
 
 ### Description
