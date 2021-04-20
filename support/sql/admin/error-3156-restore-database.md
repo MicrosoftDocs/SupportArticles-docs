@@ -10,7 +10,7 @@ ms.reviewer: jolamber, sqlblt
 
 _Applies to:_ &nbsp; SQL Server  
 
-## Symptom
+## Symptoms
 
 When trying to restore a database that has a memory-optimized filegroup in SQL Server, you receive the following error message:
 
