@@ -1,6 +1,6 @@
 ---
 title: An OSD task sequence fails with error 80070005
-description: Describes an issue where an OSD task sequence fails during the Setup Windows and ConfigMgr step.
+description: Describes an issue where an OSD task sequence fails during the Setup Windows and ConfigMgr step. This issue occurs when the step still runs in Windows PE.
 ms.date: 05/25/2020
 ms.prod-support-area-path: Task sequence tasks
 ---
@@ -52,7 +52,7 @@ This issue occurs if a custom SetupComplete.cmd file is specified. OSD task sequ
 
 A custom SetupComplete.cmd file may be specified in one of the following ways:
 
-- It's copied to the appropriate location in a task (usually a **Run Command Line** task) between the **Apply Operating System** and **Setup Windows and ConfigMgr** tasks. The following command is an example of the command line in a **Run Command Line** task:
+- It's copied to the appropriate location in a task (usually a **Run Command Line** task) between the **Apply Operating System** and **Setup Windows and ConfigMgr** tasks. Below is an example of the command line in a **Run Command Line** task:
 
   `cmd.exe /c copy SetupComplete.cmd %OSDTargetSystemDrive%\Windows\Setup\Scripts`
 
