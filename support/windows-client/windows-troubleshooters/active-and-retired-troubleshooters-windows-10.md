@@ -26,11 +26,11 @@ Automatically targets the device for an In-Place Upgrade due to recurring instal
 
 ### Description
 
-Some devices running Windows 10, version 19H1 and above, aren't able to install monthly security updates because of file or metadata corruption within the servicing stack. This troubleshooter marks the device in preparation for an In-Place Upgrade. 
+Some devices that are running Windows 10, version 1903 and later versions can't install monthly security updates because of file or metadata corruption within the servicing stack. This troubleshooter marks the device in preparation for an In-Place Upgrade.
 
 This troubleshooter runs automatically on devices that meet the following criteria:
 
-- Runs on one of these Windows 10 versions: 19H1, 19H2, 20H1, or 20H2
+- Runs one of these operating systems: Windows 10, versions 1903, Windows 10, version 1909, Windows 10, version 2004 or Windows 10, version 20H2
 - Runs a revision below the December 2020 Security Update (12B)
 - Failed a Quality Update installation multiple times
 
