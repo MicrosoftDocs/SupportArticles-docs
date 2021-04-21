@@ -43,10 +43,8 @@ To resolve this problem, stop and deallocate the VM, and then start it. This ope
 
 If this method does not the resolve the problem, follow these steps to restore the BEK file manually:
 
-1. Take a snapshot of the system disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md). To attach the encrypted disk, the BitLocker must be enabled on the OS disk of the recovery VM. 
-
-    When you attach a managed disk, you might receive a "contains encryption settings and therefore cannot be used as a data disk” error message. In this situation, run the following script to try again to attach the disk:
+1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
+2. [Attach the OS disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md). When you attach a managed disk, you might receive a "contains encryption settings and therefore cannot be used as a data disk” error message. In this situation, run the following script to try again to attach the disk:
 
     ```Powershell
     $rgName = "myResourceGroup"
@@ -67,7 +65,7 @@ If this method does not the resolve the problem, follow these steps to restore t
      You cannot attach a managed disk to a VM that was restored from a blob image.
 
 3. After the disk is attached, make a remote desktop connection to the recovery VM.
-1. [Install the Az PowerShell module](#install-az-powershell-module) in the recovery VM.
+1. [Install the Az PowerShell module and Az.Account 1.9.4](#install-az-powershell-module) in the recovery VM.
 
 4. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands to sign in to Azure subscription:
 
@@ -118,7 +116,7 @@ If this method does not the resolve the problem, follow these steps to restore t
 7.	To unlock the attached disk by using the BEK file, run the following command.
 
     ```powershell
-    manage-bde -unlock F: -RecoveryKey "C:\BEK\EF7B2F5A-50C6-4637-0001-7F599C12F85C.BEK
+    manage-bde -unlock F: -RecoveryKey "C:\BEK\EF7B2F5A-50C6-4637-0001-7F599C12F85C.BEK"
     ```
     In this sample, the attached OS disk is drive F. Make sure that you use the correct drive letter. 
 
@@ -150,7 +148,7 @@ For a Key Encryption Key scenario, follow these steps:
     > [!NOTE]
     > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. To install the Az.Account module, see [Install Az PowerShell module](#install-az-powershell-module).
     ```powershell
-    #Set the Parameters for the script. If you have question about the Parameters, see the "Parameters samples" section.
+    #Set the Parameters for the script. If you have question about the Parameters, see the "KEK script parameters" section.
     param (
             [Parameter(Mandatory=$true)]
             [string] 
@@ -168,10 +166,11 @@ For a Key Encryption Key scenario, follow these steps:
             [string] 
             $adTenant
             )
-    # Load ADAL Assemblies. 
+    # Load ADAL Assemblies. If the ADAL Assemblies cannot be found, please see the "Install Az PowerShell module" section. 
 
-    $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
+    $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
+    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"  
+  
     If ((Test-Path -Path $adal) -and (Test-Path -Path $adalforms)) { 
 
     [System.Reflection.Assembly]::LoadFrom($adal)
@@ -179,10 +178,8 @@ For a Key Encryption Key scenario, follow these steps:
      }
      else
      {
-    $adal="${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-    $adalforms ="${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts\$(((dir ${env:userprofile}\Documents\WindowsPowerShell\Modules\Az.Accounts).name) | select -first 1)\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
-    [System.Reflection.Assembly]::LoadFrom($adal)
-    [System.Reflection.Assembly]::LoadFrom($adalforms)
+      Write-output "ADAL Assemblies files cannot be found. Please set the correct path for `$adal` and `$adalforms`, then run the script again." 
+      exit    
      }  
 
     # Set well-known client ID for AzurePowerShell
@@ -273,10 +270,7 @@ For a Key Encryption Key scenario, follow these steps:
     ```
     In this sample, the attached OS disk is drive F. Make sure that you use the correct drive letter. 
 
-6. After the disk was successfully unlocked by using the BEK key, detach the disk from the recovery VM, and then recreate the VM by using this new OS disk. 
-
-    > [!NOTE]
-    > Swapping OS Disk is not supported for VMs using disk encryption.
+6. After the disk was successfully unlocked by using the BEK key, detach the disk from the recovery VM, and then use the **Swap OS disk** feature to replace the OS disk of the original VM with this repaired disk. 
 
 7. If the new VM still cannot boot normally, try one of following steps after you unlock the drive:
 
@@ -302,14 +296,14 @@ This error occurs because the paths of the ADAL Assemblies are wrong. You can se
 
 If you are using the old Az PowerShell module, you must change the two commands to `Get-AzureKeyVaultSecret` and `Get-AzureKeyVaultSecret`.
 
-**Parameters samples**
+## KEK script parameters
 
-| Parameters  | Value sample  |Comments   |
+| Parameters  | Example  |How to check   |
 |---|---|---|
-|  $keyVaultName | myKeyVault2112852926  | The name of the key Vault that stores the key |
-|$kekName   |mykey   | The name of the key that is used to encrypt the VM|
+|  $keyVaultName | myKeyVault2707  | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint Expand`and check **Settings** and **KeyEncryptionKeyURL** in the output. Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000` |
+|$kekName   |mykey   | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint Expandand` and check **Settings** and **KeyEncryptionKeyURL** in the output.  Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000`|
 |$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key.</br> To find the correct secret name, check the step 6 in the [Decrypt the encrypted OS disk](#decrypt-the-encrypted-os-disk) section.|
-|$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |The path for writing BEK file.|
+|$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |A local path where you want to save the BEK file. In the example, You need to create the "bek" folder before running the script or it will error out.|
 |$adTenant  |contoso.onmicrosoft.com   | FQDN or GUID of your Azure Active Directory that hosts the key vault |
 
 ## Install Az PowerShell module

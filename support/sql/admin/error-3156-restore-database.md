@@ -1,6 +1,6 @@
 ---
 title: Error 3156 when you restore a database
-description: This article provides workarounds for the 3165 error that occurs when you restore a database with a memory-optimized filegroup in SQL Server.
+description: This article provides workarounds for the 3156 error that occurs when you restore a database with a memory-optimized filegroup in SQL Server.
 ms.date: 04/15/2021
 author: cobibi
 ms.author: v-yunhya
@@ -10,7 +10,7 @@ ms.reviewer: jolamber, sqlblt
 
 _Applies to:_ &nbsp; SQL Server  
 
-## Symptom
+## Symptoms
 
 When trying to restore a database that has a memory-optimized filegroup in SQL Server, you receive the following error message:
 
@@ -27,7 +27,7 @@ Use a different folder name or a different folder path when restoring a database
 
 ## Script example
 
-- Script example of create a database with filegroup
+- Script example of creating a database with a filegroup
 
     ```sql
     USE [master];
@@ -69,7 +69,7 @@ Use a different folder name or a different folder path when restoring a database
     ```
 
     > [!NOTE]
-    > If the `<Database Folder>` is not used, `Replace` keyword in the script will ensure that the process of restoration is completed without error.
+    > If the `<Database Folder>` is not used, the `Replace` keyword in the script will ensure that the process of restoration is completed without error.
 
 ## See also
 

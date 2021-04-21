@@ -793,7 +793,7 @@
     - name: Extend a data volume
       href: ./backup-and-storage/extend-data-volume.md
     - name: FAQs about GUID Partitioning Table disk architecture
-      href: ./backup-and-storage/guid-partitioning-table-disk-faq.md
+      href: ./backup-and-storage/guid-partitioning-table-disk-faq.yml
     - name: Fix heavy memory usage in ReFS
       href: ./backup-and-storage/fix-heavy-memory-usage-refs.md
     - name: Hot-swap disks are not recognized
@@ -2869,4 +2869,4 @@
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
-    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
+    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml

@@ -35,6 +35,11 @@
   - name: Warning message in Azure Stack
     href: pending-service-account-password-expiration.md
 
+- name: Azure Stack Edge
+  items:
+  - name: Azure Stack Edge support package and device logs
+    href: azure-stack-edge-support-package-device-logs.md
+
 - name: Cloud Platform System
   items:
   - name: Apply out-of-band updates
