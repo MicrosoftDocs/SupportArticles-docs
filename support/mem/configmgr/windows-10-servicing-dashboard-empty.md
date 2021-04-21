@@ -12,7 +12,7 @@ ms.date: 04/14/2021
 
 ## Symptoms
 
-After you upgrade to Microsoft System Center Configuration Manager version 2103, the [Windows 10 servicing dashboard](/mem/configmgr/osd/deploy-use/manage-windows-as-a-service#bkmk_2103-dashboard) doesn't show any data.
+After you upgrade to Microsoft Endpoint Configuration Manager version 2103, the [Windows 10 servicing dashboard](/mem/configmgr/osd/deploy-use/manage-windows-as-a-service#bkmk_2103-dashboard) doesn't show any data.
 
 ## Cause
 
@@ -23,9 +23,9 @@ The issue might occur in either of the following situations:
 
 ## Resolution
 
-If the service connection point is running in **Offline** mode, use the [service connection tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import updates that include the Admin UI content payload.
+If the service connection point is running in Offline mode, use the [service connection tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool) to download and import updates that include the Admin UI content payload.
 
-If the service connection point is running in Online mode, review the DmpDownloader log for descriptions of failures that occur when you try to access the payload URL. To work around the issue, follow these steps:
+If the service connection point is running in Online mode, review DmpDownloader.log for failures that occur when accessing the payload URL. To work around the issue, follow these steps:
 
 1. Download the *ConfigMgr.AdminUIContent.cab* file from [https://go.microsoft.com/fwlink/?LinkID=619849](https://go.microsoft.com/fwlink/?LinkID=619849).
 2. Copy the ConfigMgr.AdminUIContent.cab file to the top-level site server.
@@ -35,7 +35,7 @@ If the service connection point is running in Online mode, review the DmpDownloa
      `<Configuration Manager installation path>\inboxes\hman.box\CFD`
 
    For example, copy the file to `C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD`.
-5. In the Hman log, you should see entries that resemble the following example:
+5. In Hman.log, you should see entries that resemble the following example:
 
     :::image type="content" source="media/windows-10-servicing-dashboard-empty/hman-log.png" alt-text="Hman.log":::
 6. Try again to open the Windows 10 servicing dashboard.
