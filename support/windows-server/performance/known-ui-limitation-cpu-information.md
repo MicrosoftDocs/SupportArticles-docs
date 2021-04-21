@@ -17,9 +17,6 @@ ms.technology: windows-server-performance
 
 _Original product version:_ &nbsp;Windows Server 2016, Windows Server 2016 Datacenter, Windows Server 2016 Standard  
 
-> [!NOTE]
-> This issue only occurs in Windows Server 2016 and it is fixed in Windows Server 2019.
-
 If more than 64 logical processors are enabled in Windows Server 2016, the System Information (Msinfo32.exe) tool and the **Performance** tab of Task Manager display incorrect processor sockets number, cores number, L1 cache and L2 cache sizes.
 
 See the following screenshots for an example:
@@ -33,3 +30,6 @@ In this example, the incorrect CPU information is displayed as follows:
 - Four sockets are displayed for a two-socket system, and two sockets are displayed for a one-socket system with a single CPU.
 - 112 cores are displayed which exceed the number that is installed.
 - 8.8 MB L1 cache and 140 MB L2 cache are displayed while the actual sizes are 6.3 MB and 100 MB.
+
+> [!NOTE]
+> This is a known limitation of Windows Server 2016. This issue is fixed in Windows Server 2019.
