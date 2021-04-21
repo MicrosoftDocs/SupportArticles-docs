@@ -47,45 +47,26 @@ To work around this problem, increase the maximum number of locks per file. To d
 
 1. Click **Start**, and then click **Run**.   
 2. Type regedit, and then click **OK**.   
-3. Use the appropriate method:
-   - In Microsoft Access 2000, in Microsoft Access 2002, and in Microsoft Office Access 2003 that are running on a 32-bit Windows operating system, use Registry Editor to locate the following registry key:
-
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0**
-
-     In Microsoft Access 2000, in Microsoft Access 2002, and in Microsoft Office Access 2003 that are running on a 64-bit Windows operating system, use Registry Editor to locate the following registry key:
-
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Jet\4.0\Engines\Jet 4.0**
-   - In Microsoft Office Access 2007 that is running on a 32-bit Windows operating system, use Registry Editor to locate the following registry key:
-
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\ACE**
-
-     In Microsoft Office Access 2007 that is running on a 64-bit Windows operating system, use Registry Editor to locate the following registry key:
-
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\ACE**
-
-   - In Microsoft Access 2010 that is running on a 32-bit Windows operating system, use Registry Editor to locate the following registry key:
-
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\ACE**
-
-     In Microsoft Office Access 2010 that is running on a 64-bit Windows operating system, use Registry Editor to locate the following registry key:
-  
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\ACE**
-
-   - In Microsoft Access 2013 that is running on a 32-bit Windows operating system, use Registry Editor to locate the following registry key:
+3. Navigate to the registry key appropriate for your Access installation:
+   
+    **Click-To-Run (C2R) installations**
     
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE**
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE
 
-     In Microsoft Office Access 2013 that is running on a 64-bit Windows operating system, use Registry Editor to locate the following registry key:
-  
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE**
-
-   - In Microsoft Access 2016 that is running on a 32-bit Windows operating system, use Registry Editor to locate the following registry key:
+    **MSI installations**
     
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE**
+      HKEY_LOCAL_MACHINE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE
 
-     In Microsoft Office Access 2016 that is running on a 64-bit Windows operating system, use Registry Editor to locate the following registry key:
-  
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE**
+   **Note 1:** The Wow6432Node key only exists in the key path when using a 32-bit version of Access on a 64-bit version of Windows
+   
+   **Note 2:** The major version identifier used in the example is for the lastest Access version which is used in Access 2016/2019/O365. Select the major version identifier that corresponds to your version of Access. 
+   
+    | Access Version | Major Version Identifier |
+    |----------------|--------------------------|
+    | Access 2016 / 2019 / O365 | 16.0 |
+    | Access 2013 | 15.0 |
+    | Access 2010 |	14.0 |
+    | Access 2007 | 12.0 |
 
 4. In the right pane of Registry Editor, double click **MaxLocksPerFile**.   
 5. On the **Edit DWORD Value** dialog box, click **Decimal**.   
