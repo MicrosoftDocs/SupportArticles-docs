@@ -177,7 +177,7 @@ The `/c` (connectivity test) switch requests that DNSLint test well-known e-mail
 
 DNSLint reports the state that each port is in: "Listening", "Not Listening", or "No Response." If DNSLint finds that a port is Listening, it also returns the response from the port. For example, if an SMTP port is listening, it typically returns a response that's consistent with the SMTP protocol specification, such as the following example:
 
-220 `mailsrv.reskit.com` Microsoft ESMTP MAIL Service, Version: 5.0.2195.3705 ready at Mon, 13 May 2002 17:08:36 -0700
+220 `mailsrv.contoso.com` Microsoft ESMTP MAIL Service, Version: 5.0.2195.3705 ready at Mon, 13 May 2002 17:08:36 -0700
 
 When a port is reported as "Not Listening", it indicates the e-mail server being queried has responded with a TCP packet with the Reset flag set. It also indicates there's no service or program listening on the port.
 
@@ -207,11 +207,11 @@ One or more IMAP servers didn't respond.
 
 When a target e-mail server doesn't respond to a connection attempt on one of its e-mail ports, DNSLint retries the connection three times. It's standard behavior for a TCP client. Before DNSLint indicates that there was "No Response," it waits for three separate TCP connections attempts to time out. This process can slow down the completion of the report. To optimize DNSLint operation, you can specify which e-mail port or ports you want to check instead of always checking all three ports.
 
-By default, when the `/c` option is specified, all three TCP ports (25, 110, 143) are checked. But you can specify which ports to check after the `/c` option. Specify a comma-delimited list immediately after the `/c` option. Specify valid ports only: `smtp`, `pop`, `imap`. Any combination of these three ports works. For example, the command `dnslint /d reskit.com /c smtp` specifies that only the SMTP port (TCP port 25) should be checked.
+By default, when the `/c` option is specified, all three TCP ports (25, 110, 143) are checked. But you can specify which ports to check after the `/c` option. Specify a comma-delimited list immediately after the `/c` option. Specify valid ports only: `smtp`, `pop`, `imap`. Any combination of these three ports works. For example, the command `dnslint /d contoso.com /c smtp` specifies that only the SMTP port (TCP port 25) should be checked.
 
-The command `dnslint /d reskit.com /c pop`, smtp specifies that only the SMTP port (TCP port 25) and POP port (TCP port 110) should be checked.
+The command `dnslint /d contoso.com /c pop`, smtp specifies that only the SMTP port (TCP port 25) and POP port (TCP port 110) should be checked.
 
-The command `dnslint /d reskit.com /c imap`, pop specifies that only the IMAP port (TCP port 143) and POP port (TCP port 110) should be checked.
+The command `dnslint /d contoso.com /c imap`, pop specifies that only the IMAP port (TCP port 143) and POP port (TCP port 110) should be checked.
 
 You can use the `/s` (server) switch with the `/d` and `/ad` functions. The `/s` switch has several purposes, but it only takes one type of data, a valid IP address of a DNS server (with one exception).
 
