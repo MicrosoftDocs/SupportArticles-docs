@@ -30,7 +30,7 @@ More than one reason can prevent Microsoft Teams from automatically updating:
 - Microsoft Teams will update only when Teams is idle.  If a user powers off the computer when finished using Teams, Teams will have no way to run the update process.
 
 > [!NOTE]
-> If you find some features are missing, it is caused becuase Teams is not updated.
+> If you find some features are missing, it is caused because Teams is not updated.
 
 ## Workaround
 
