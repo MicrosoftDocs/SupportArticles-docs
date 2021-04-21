@@ -11,8 +11,6 @@ This article helps administrators understand the **Updates and Serving** node in
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4490424
 
-## Introduction
-
 Configuration Manager synchronizes with the Microsoft cloud service to get updates that apply to your infrastructure and version. You can install these updates from within the Configuration Manager console.
 
 To view and manage the updates, make sure that you have the [required permissions](/mem/configmgr/core/servers/manage/install-in-console-updates#assign-permissions-to-view-and-manage-updates-and-features). Then navigate to **Administration** > **Cloud Services** > **Updates and Servicing** in the Configuration Manager console. For more information, see [Install in-console updates for Configuration Manager](/mem/configmgr/core/servers/manage/install-in-console-updates).
@@ -34,7 +32,7 @@ To view and manage the updates, make sure that you have the [required permission
 
 ## Downloading updates
 
-The [service connection point](/mem/configmgr/core/servers/deploy/configure/about-the-service-connection-point) is responsible for downloading updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. And it downloads new updates that are available for your current infrastructure and product version. By doing so, it makes the new updates available in the Configuration Manager console. When your service connection point is in offline mode, use the [service connection tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool#use-the-service-connection-tool) to manually sync with the Microsoft cloud.
+The [service connection point](/mem/configmgr/core/servers/deploy/configure/about-the-service-connection-point) is responsible for downloading updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. And it downloads available new updates for your current infrastructure and product version to make them available in the Configuration Manager console. When your service connection point is in offline mode, use the [service connection tool](/mem/configmgr/core/servers/manage/use-the-service-connection-tool#use-the-service-connection-tool) to manually sync with the Microsoft cloud.
 
 The following steps explain the [flow](/mem/configmgr/core/servers/manage/download-updates-flowchart) in which an online service connection point downloads in-console updates:
 
@@ -150,7 +148,7 @@ Consider the following relevant folders:
 
 - `%Program Files%\Microsoft Configuration Manager\CMUClient`
 
-    This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. It will become a package that's named **Configuration Manager Client Package** and that gets replicated to all child primary sites.
+    This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. They will become a package that's named **Configuration Manager Client Package** and that gets replicated to all child primary sites.
 
 ## Troubleshoot downloading issues
 
@@ -280,10 +278,10 @@ Review the following applicable update checklist for actions to take before you 
 
 ### Step 2: Test the database upgrade
 
-Because of changes that are introduced in Configuration Manager, testing the database upgrade is no longer a required or recommend step if:
+Because of changes that are introduced in Configuration Manager, testing the database upgrade is no longer a required or recommend step if the following conditions are true:
 
 - Your database isn't suspect.
-- Your database isn't modified by customizations. The customizations aren't explicitly supported by Configuration Manager.
+- Your database isn't modified by customizations that aren't explicitly supported by Configuration Manager.
 
 If you upgrade to Configuration Manager from an older product, such as System Center 2012 Configuration Manager, we still recommend that you test database upgrades.
 
@@ -590,7 +588,7 @@ The following entries are logged in Despool.log at child primary sites:
 > ~Stored Package CAS00008. Stored Package Version = 7  
 > Removed older package version CAS00008.6.
 
-A notification file is then created. the following entry is logged in Hman.log at child primary sites:
+A notification file is then created. The following entry is logged in Hman.log at child primary sites:
 
 > Created notification file (79FB5420-BB10-44FF-81BA-7BB53D4EE22F.CMI) for CONFIGURATION_MANAGER_UPDATE
 
@@ -747,7 +745,7 @@ Here are the detailed steps:
 4. Verify that the RCM component is installed.
 5. Monitor replication initialization.
 6. Update Configuration Manager client preproduction package.
-7. Update client folder on-site server.
+7. Update client folder on the site server.
 8. Update Configuration Manager client package.
 9. Turn on features that are specified in the upgrade wizard. Then reopen the console to display the features.
 
@@ -773,7 +771,7 @@ When an update gets stuck in the **Installing** state in the console, it may be 
 
     If the error shows a script or table failure, collect more logs, such as SQL Server logs, and then find the relevant table.
 
-### Issue 1: Failed to open file \\\\?\C: \Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1606-KB3184153_AppCheck.sql for reading. Code 0x80070003
+### Issue 1: Failed to open file \\\\?\C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1606-KB3184153_AppCheck.sql for reading. Code 0x80070003
 
 **Symptom**
 
@@ -785,7 +783,7 @@ You receive an error message that resembles the following example in CMUpdate.lo
 
 To fix this issue, check whether the file exists. If not, delete the CMUStaging folder, and restart Smsexec. If the files aren't downloaded, reinstall the Service Connection Point role to start downloading.  
 
-### Issue 2: Error in verifying the trust of file \\\\?\C: \Program Files\Microsoft Configuration Manager\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab
+### Issue 2: Error in verifying the trust of file \\\\?\C:\Program Files\Microsoft Configuration Manager\CMUStaging\79FB5420-BB10-44FF-81BA-7BB53D4EE22F\SMSSetup\update.map.cab
 
 **Symptom**
 
@@ -828,11 +826,11 @@ If there's a failure during content replication, retry the replication by runnin
 WMIC /namespace:\\root\sms\site_<site code> path SMS_CM_UpdatePackages WHERE PackageGuid="PackageGUID" CALL RetryContentReplication 1 /NOINTERACTIVE
 ```
 
-It tells `HMan` to start a package notification and update thread in DistMgr to start replicating the content again. Consider that the changes the package version and copies the content to all child primary sites again.
+It tells `HMan` to start a package notification and update thread in DistMgr to start replicating the content again. Consider that it changes the package version and copies the content to all child primary sites again.
 
 ### Issue 5: Update is installed on central administration site and primary sites, but console still displays Installing
 
-When a primary site completes the installation, it drops a state message for sites and server data tables. It changes the actual state of site in sites table, but it doesn't change the status in CM tables. A global replication group that is named **`CMUpdates`** is used to replicate changes to all sites. By default, **`CMUpdates`** has 1 minute of sync time.
+When a primary site completes the installation, it drops a state message for sites and server data tables. It changes the actual state of site in sites table, but it doesn't change the status in CM tables. A global replication group that's named **`CMUpdates`** is used to replicate changes to all sites. By default, **`CMUpdates`** has 1 minute of sync time.
 
 To find which tables are replicated, run the following SQL queries:
 
@@ -1020,7 +1018,7 @@ The following are the state codes and the states that they represent:
 - Restore the Configuration Manager database and Configuration Manager site server if there's an error in `CMUpdate`. Fix the issue, and retry installation.
 - Don't reinstall Service Connection Point if an update is in process.
 - Don't use files from `cd.latest` to install a standalone primary site.
-- Don't use `cd.latest` to upgrade a site that is running version 1511, or sites that are running 2012 R2 SP1 or earlier versions.
+- Don't use `cd.latest` to upgrade a site that's running version 1511, or sites that are running 2012 R2 SP1 or earlier versions.
 - Don't manually clean up any Cm_Update\* tables.
 - Don't restart the `CMUpdate` service during installation.
 - Don't keep the CMUStaging\\\<GUID> folder open during the installation.  
