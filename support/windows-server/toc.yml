@@ -2276,10 +2276,6 @@
   items:
   - name: Security and Malware
     href: ./security-and-malware/security-and-malware-overview.md
-  - name: Malware-related account lockouts
-    items:
-    - name: User accounts are unexpectedly locked
-      href: ./security-and-malware/user-accounts-locked-event-id-12294.md
   - name: Suspicion that an unknown process or service is malicious
     items:
     - name: Virus alert about Blaster worm and its variants
