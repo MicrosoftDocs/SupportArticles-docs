@@ -16,6 +16,9 @@ _Original KB number:_ &nbsp; 4493932
 
 When a user tries to log on to an Azure AD joined Windows 10 computer that has a multi-app kiosk profile assigned, the attempt fails immediately before the user profile is loaded.
 
+![image](https://user-images.githubusercontent.com/67381934/115788050-19996200-a391-11eb-9c89-e51d59702411.png)
+![image](https://user-images.githubusercontent.com/67381934/115788056-1c945280-a391-11eb-8712-7ae59f9eb257.png)
+
 In this situation, the kiosk profile logon type is **AAD User** or **Group**. Additionally, the Windows 10 computer uses a local account, and you notice the following error messages in the Event Viewer logs:
 
 - AAD - Operational logs (Sample 1 - MFA required):
@@ -27,7 +30,7 @@ In this situation, the kiosk profile logon type is **AAD User** or **Group**. Ad
     > Level:         Error  
     > Keywords:      Error,Error    
     > User:          *[User SID]*          
-	> Computer:      *[Computer Name]*       
+    > Computer:      *[Computer Name]*       
     > Description:                       
     > **Error: 0xCAA2000C The request requires user interaction.**	    
     > **Code: interaction_required**	    
@@ -38,27 +41,27 @@ In this situation, the kiosk profile logon type is **AAD User** or **Group**. Ad
     > Source:        Microsoft-Windows-AAD    
     > Date:          *[Timestamp]*      
     > Event ID:      1098   
-	> Task Category: AadTokenBrokerPlugin Operation     
-	> Level:         Error      
-	> Keywords:      Error,Error        
+    > Task Category: AadTokenBrokerPlugin Operation     
+    > Level:         Error      
+    > Keywords:      Error,Error        
     > User:          *[User SID]*          
-	> Computer:      *[Computer Name]*      
-	> Description:      
+    > Computer:      *[Computer Name]*      
+    > Description:      
     > **Error: 0xCAA2000C The request requires user interaction.**      
     > **Code: interaction_required**        
-	> Description: AADSTS50158: External security challenge not satisfied. User will be redirected to another page or authentication provider to satisfy additional authentication challenges.      
+    > Description: AADSTS50158: External security challenge not satisfied. User will be redirected to another page or authentication provider to satisfy additional authentication challenges.      
 
 - Assigned Access - Admin logs:
-	> Log Name:      Microsoft-Windows-AssignedAccess/Admin     
-	> Source:        Microsoft-Windows-AssignedAccess       
+    > Log Name:      Microsoft-Windows-AssignedAccess/Admin     
+    > Source:        Microsoft-Windows-AssignedAccess       
     > Date:          *[Timestamp]*            
     > Event ID:      31000      
-	> Task Category: Applying Assigned Access for current user.     
-	> Level:         Error      
+    > Task Category: Applying Assigned Access for current user.     
+    > Level:         Error      
     > User:          *[User SID]*          
-	> Computer:      *[Computer Name]*     
-	> Description:      
-	> Error Unspecified error applying assigned access for current user, signing out...     
+    > Computer:      *[Computer Name]*     
+    > Description:      
+    > Error Unspecified error applying assigned access for current user, signing out...     
 
 
 ## Cause
