@@ -100,6 +100,8 @@
       href: internal-error-2711-lp3076-during-console-installation.md
     - name: Microsoft.ConfigurationManagement has stopped working
       href: unhandled-exception-launch-console.md
+    - name: No data in the Windows 10 servicing dashboard
+      href: windows-10-servicing-dashboard-empty.md
 - name: Content management
   items:
     - name: Distribution point and content distribution

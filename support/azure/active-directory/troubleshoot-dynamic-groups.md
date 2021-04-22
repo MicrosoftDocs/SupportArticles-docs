@@ -54,7 +54,7 @@ Existing members of the rule are removed.
 
 You don’t see membership changes instantly after adding or changing a rule.
 
-- Membership evaluation is performed periodically in an background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created as a result of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 24 hours or longer to populate.
+- Membership evaluation is performed periodically by a background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created as a result of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 24 hours or longer to populate.
 
 - Check the [membership processing status](/azure/active-directory/users-groups-roles/groups-create-rule#check-processing-status-for-a-rule) to confirm whether the process is complete. Check the last updated date on the group **Overview** page in Azure portal to confirm that the page is updated.
 
@@ -70,7 +70,7 @@ You receive an error when deleting a group.
 
 - Before attempting to delete a group in Azure Active Directory, ensure that you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license). For more information about group deletion in general, see [Delete a group](#21).
 
-You restored a deleted group but did not see any updated.
+You restored a deleted group but did not see any update.
 
 - When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
 
@@ -94,7 +94,7 @@ For more information, see [Validate a dynamic group membership rule (preview) in
 
 ## Troubleshoot dynamic group creation issues<a id="3"></a>
 
-Customers encountered issues in creating dynamic group or rule.
+Customers encountered issues when creating a dynamic group or rule.
 
 ### Cannot create a dynamic group<a id="4"></a>
 
