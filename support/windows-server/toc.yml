@@ -1890,6 +1890,8 @@
       href: ./performance/enable-verbose-startup-shutdown-logon-logoff-status-messages.md
     - name: How to obtain a Console Window Handle
       href: ./performance/obtain-console-window-handle.md
+    - name: Known UI limitation of the CPU information in Windows Server 2016
+      href: ./performance/known-ui-limitation-cpu-information.md
     - name: Log files are deleted when you use Performance Monitor
       href: ./performance/log-files-are-deleted.md
     - name: Manually rebuild performance counters
