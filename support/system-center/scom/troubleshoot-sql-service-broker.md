@@ -15,7 +15,7 @@ This article details the troubleshooting steps for SQL Server Service Broker iss
 1. Discovery Wizard running forever (not crashing or hanging), even though the task in the background completes (**Monitoring** > **Task Status**)
 2. Resetting the health of any monitor never completes, even though the task in the background completes (**Monitoring** > **Task Status**)
 
-## Basic Troubleshooting
+## Basic troubleshooting
 
 1. Ensure that SQL Server Service Broker is enabled by running the following query:
 
@@ -101,7 +101,7 @@ This article details the troubleshooting steps for SQL Server Service Broker iss
 8. After restarting the SDK services, verify that the Broker is still enabled, as in my case it was disabled again after the SQL Broker was recreated. If it was disabled repeat step 2.
 9. Verify that the Queue/Service is generated as per step 3.
 
-## Advanced Troubleshooting
+## Advanced troubleshooting
 
 If the above steps does not help, here are few tips on how to proceed:
 
@@ -142,10 +142,10 @@ Here is an example of how the **MS/Agent Task** (so **Task executed by HealthSer
 - Once the **SDK** (**TaskStatusNotifications.InitializeAndProcessJobStatusNotification(…)**) has the actual status of the **Task** with success/failure and output (if any) and with this, it will call to functions:
 
   - **TaskStatusNotifications.ProcessTaskResults(…)** which will perform some internal processing based on the **Task** results (Outstanding / finished / etc.).
-  
+
   - **TaskStatusNotifications.NotifyTaskStatus(…)** which will **signal the Event** to all " **Clients**" (here the **Console** , but it can be anything connected to the SDK – PowerShell, SCOrch, etc.) that the **Task** has finished by calling **TaskStatusNotifications.Notify(…)** which sends the **Task** data object and signals the **Event** via **ClientInterface.TaskStatusChangeNotification(…)** by queuing a new work(er) thread in the worker threadpool of type **EnterpriseManagementGroupInternal.TaskStatusNotification(…)** which is already on the " **Client**" side of the **SDK** which here means that it has reached the **Console** process and this thread should already be in the **Console** => **EnterpriseManagementGroupInternal.TaskStatusNotification(…)**.
 
-## Additional Resources
+## Additional resources
 
 - [SQL Service Broker Troubleshooting ](https://www.sqlteam.com/articles/how-to-troubleshoot-service-broker-problems)
 
