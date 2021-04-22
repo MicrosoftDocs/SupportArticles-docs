@@ -208,3 +208,5 @@
     href: troubleshoot-oms-onboarding-issues.md
   - name: Unable to register to Advisor Service
     href: error-3000-unable-to-register-to-advisor-service.md
+  - name: Troubleshoot SQL Server Service Broker issues
+    href: troubleshoot-sql-service-broker.md
