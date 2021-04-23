@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to deploy a Known Issue Rollback
 description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
-ms.date: 04/12/2021
+ms.date: 04/26/2021
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
@@ -28,7 +28,7 @@ Microsoft has developed a new Windows servicing technology that's named [KIR](ht
 > [!IMPORTANT]  
 > KIRs apply to only nonsecurity updates. This is because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
 
-Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in an Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > You have to restart the affected computers in order to apply this Group Policy change.
@@ -65,9 +65,9 @@ To use Group Policy to apply a KIR to a single device, follow these steps:
 
 For more information about how to use the Local Group Policy Editor, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11)).
 
-## Using Group Policy to apply a KIR to devices in an Azure AD or AD DS domain
+## Using Group Policy to apply a KIR to devices in a hybrid Azure AD or AD DS domain
 
-To apply a KIR policy definition to your AD DS-managed or Azure AD-managed devices, follow these steps:
+To apply a KIR policy definition to devices that belong to a hybrid Azure AD or AD DS domain, follow these steps:
 
 1. [Download and install the KIR MSI files](#install)
 1. [Create a Group Policy Object (GPO)](#gpo).
