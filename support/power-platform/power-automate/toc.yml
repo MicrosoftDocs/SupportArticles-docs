@@ -1,0 +1,113 @@
+- name: Power Automate
+  href: welcome-power-automate.yml
+  items:
+  - name: Administration
+    items:
+    - name: Customize or format Date and Time values in a flow
+      href: how-to-customize-or-format-date-and-time-values-in-flow.md
+  - name: Connections
+    items:
+    - name: Can't sign into OneDrive connector
+      href: cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md
+    - name: Client Request Aborted or Failed to fetch
+      href: client-request-aborted-failed-fetch.md
+    - name: Converting time zone
+      href: converting-time-zone-power-automate.md
+    - name: User doesn't have service plan adequate for non-Standard connection
+      href: user-does-not-have-a-service-plan-error.md
+  - name: Flows
+    items:
+    - name: Authentication failed when signing in to Microsoft Flow
+      href: cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
+    - name: Can't create UI Flow
+      href: unable-create-ui-flow.md
+    - name: Can't find Excel Online table in Microsoft Flow
+      href: unable-to-find-excel-online-table-in-microsoft-flow.md
+    - name: Can't send SMTP Email
+      href: unable-send-smtp-email.md
+    - name: CDS user role can't access flows
+      href: cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
+    - name: Check if Gateway or machine is online when desktop flows fail with a gateway
+      href: troubleshoot-unavailable-gateway-when-desktop-flows-fail.md
+    - name: Check if the gateway is in the right region
+      href: check-if-gateway-is-the-right-region.md
+    - name: Common errors creating and assigning flow approvals
+      href: common-errors-creating-and-assigning-flow-approvals.md
+    - name: Desktop flow invalid credentials error using AAD account
+      href: troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
+    - name: Desktop flows run failed with AadLogonFailure
+      href: ui-flows-run-failed-with-aadlogonfailure-error.md
+    - name: Differences between flow approval actions
+      href: differences-between-flow-approval-actions.md
+    - name: Double-click, drag and drop aren't working
+      href: double-click-drag-drop-are-not-working.md
+    - name: Dynamic content picker missing dynamic content from previous steps
+      href: dynamic-content-picker-missing-dynamic-content-from-previous-steps.md
+    - name: Errors when running attended or unattended desktop flows
+      href: troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+    - name: Errors with null fields
+      href: getting-errors-null-fields.md
+    - name: Fail to list Excel Online tables retrieving values
+      href: fail-to-list-excel-online-tables-retrieving-values.md
+    - name: Failed to fetch when creating a flow
+      href: failed-fetch-error-when-creating-flow.md
+    - name: Find which machine is failing within a cluster
+      href: find-which-machine-is-failing-within-a-cluster.md
+    - name: Flow Approval CDS Provisioning errors and recommendations
+      href: flow-approval-cds-provisioning-errors.md
+    - name: Flow Editor issues and recommendations
+      href: flow-editor-issues-recommendations.md
+    - name: Flow Management errors and recommendations
+      href: flow-management-errors-recommendations.md
+    - name: Flow Runtime errors and recommendations
+      href: flow-runtime-errors-recommendations.md
+    - name: How to use Flow to copy items between two data sources
+      href: how-to-copy-items-between-two-sharepoint-lists-via-flow.md
+    - name: Issues triggering emails with attachments from shared mailbox
+      href: issues-triggering-emails-with-attachments-from-shared-mailbox.md
+    - name: Issues with flow approval emails in Outlook Desktop and Web
+      href: issues-with-flow-approval-emails-in-outlook.md
+    - name: Keyboard and mouse click combinations not working
+      href: key-and-mouse-click-combo-not-working.md
+    - name: Known limitations of Selenium IDE
+      href: known-limitations-selenium-ide.md
+    - name: Manage orphan flows when the owner leaves the organization
+      href: manage-orphan-flow-when-owner-leaves-org.md
+    - name: Missing runs or triggers history for a flow
+      href: missing-runs-or-triggers-history-for-a-flow.md
+    - name: Multi-screen recording isn't working
+      href: multi-screen-recording-is-not-working.md
+    - name: Power Automate Approval Email delivery information
+      href: power-automate-approval-email-information.md
+    - name: Recommendations for conditional access and multi-factor authentication
+      href: conditional-access-and-multi-factor-authentication-in-flow.md
+    - name: Recorder not recording applications
+      href: recorder-not-recording-applications.md
+    - name: Restart UI flows to recover from a bad state
+      href: reset-ui-flow-service-when-bad-state.md
+    - name: Send an email with an embedded image
+      href: how-to-send-email-with-embedded-image.md
+    - name: SharePoint site isn't listed in trigger or action
+      href: sharepoint-site-not-listed-in-trigger-or-action.md
+    - name: There is a problem with the flow's trigger
+      href: there-is-a-problem-with-the-flows-trigger.md
+    - name: Troubleshoot Flow Connections
+      href: troubleshooting-flow-connections.md
+    - name: Troubleshoot Flow Custom Connectors
+      href: troubleshooting-flow-custom-connectors.md
+    - name: Troubleshoot UI flow Playback
+      href: troubleshooting-ui-flow-playback.md
+    - name: UI flow inputs not working
+      href: ui-flow-inputs-not-working.md
+    - name: UI flow outputs not working
+      href: ui-flow-outputs-not-working.md
+    - name: UI flow playback error KeyboardIdMismatch
+      href: ui-flow-playback-error-keyboardidmismatch.md
+    - name: UI flow playback error UnableToLaunchApplication
+      href: troubleshoot-ui-flow-playback-unabletolaunchapplication.md
+    - name: UI flows can't launch recorder
+      href: ui-flows-cannot-launch-recorder.md
+    - name: UI flows fails with error UIAElementMismatch
+      href: ui-flows-fails-uiaelementmismatch.md
+    - name: UI flows UIAElementNotFound
+      href: issue-with-ui-flows-error-uiaelementnotfound.md

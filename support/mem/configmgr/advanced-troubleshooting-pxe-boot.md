@@ -162,8 +162,10 @@ The most common issues that occur during this phase are driver-related. Overall,
 
 The SMSTS.log file (located in \<*SystemDrive*>:\Windows\temp\SMSTS) is the most useful resource to troubleshoot these issues. (Remember to enable the command prompt during startup so that you can examine this file.) If you don't see a log entry that has a valid IP address and resembles the following entry, you're probably experiencing a driver issue:
 
-> SMSTS.log  
-> Found network adapter "Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)" with IP Address \<IP address>
+```output
+SMSTS.log  
+Found network adapter "Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)" with IP Address <IP address>
+```
 
 To verify this situation, press F8, and then run `IPCONFIG` at the command prompt to determine whether the NIC is recognized and has a valid IP address.
 
@@ -183,16 +185,18 @@ Another common issue that affects PXE boot involves Task Sequence deployments. I
 
 Upon further investigation, you notice the following entry in the SMSPXE log:
 
-> SMSPXE.log  
-> Client lookup reply: \<ClientIDReply>\<Identification Unknown="0" ItemKey="16777299" ServerName="">\<Machine>\<ClientID/>\<NetbiosName/>\</Machine>\</Identification>\</ClientIDReply>  
-> MP_LookupDevice succeeded: 16777299 1 16777299 1 0  
-> 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: device is in the database.  
-> Client boot action reply: \<ClientIDReply>\<Identification Unknown="0" ItemKey="16777299" ServerName="">\<Machine>\<ClientID/>\<NetbiosName/>\</Machine>\</Identification>\<PXEBootAction LastPXEAdvertisementID="" LastPXEAdvertisementTime="" OfferID="" OfferIDTime="" PkgID="" PackageVersion="" packagePath="" BootImageID="" Mandatory=""/>\</ClientIDReply>  
-> Client Identity:  
-> 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: SMSID= OfferID=, PackageID=, PackageVersion=, BootImageID=, PackagePath=, Mandatory=0  
-> 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: no advertisements found  
-> 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: No boot action. Aborted.  
-> 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: Not serviced.
+```output
+SMSPXE.log  
+Client lookup reply: <ClientIDReply><Identification Unknown="0" ItemKey="16777299" ServerName=""><Machine><ClientID/><NetbiosName/></Machine></Identification></ClientIDReply>  
+MP_LookupDevice succeeded: 16777299 1 16777299 1 0  
+00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: device is in the database.  
+Client boot action reply: <ClientIDReply><Identification Unknown="0" ItemKey="16777299" ServerName=""><Machine><ClientID/><NetbiosName/></Machine></Identification><PXEBootAction LastPXEAdvertisementID="" LastPXEAdvertisementTime="" OfferID="" OfferIDTime="" PkgID="" PackageVersion="" packagePath="" BootImageID="" Mandatory=""/></ClientIDReply>  
+Client Identity:  
+00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: SMSID= OfferID=, PackageID=, PackageVersion=, BootImageID=, PackagePath=, Mandatory=0  
+00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: no advertisements found  
+00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: No boot action. Aborted.  
+00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: Not serviced.
+```
 
 You can see in this entry that when the NBS stored procedures ran, they found no available policy. So the boot action was aborted. The reverse can also be true. That is, when a computer is unknown but the Task Sequence is deployed to a collection of known computers.
 

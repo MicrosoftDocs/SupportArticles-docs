@@ -21,7 +21,8 @@ When connecting to SQL Server, you may receive the following error message:
 
 Additionally, the following error message is logged in the Windows System event log
 
-> Log Name:      System  
+```output
+Log Name:      System  
 Source:        Schannel  
 Date:          10/13/2020 3:03:31 PM  
 Event ID:      36882  
@@ -32,6 +33,7 @@ User:        USERNAME
 Computer:     COMPUTERNAME  
 Description:  
 The certificate received from the remote server was issued by an untrusted certificate authority. Because of this, none of the data contained in the certificate can be validated. The TLS connection request has failed. The attached data contains the server certificate.
+```
 
 ## Cause
 
@@ -123,4 +125,3 @@ If the configuration discussed in the previous sections of this article is unint
   - Disable encryption settings (if any) in your client application.
 
   - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, review Configure Server.
-  

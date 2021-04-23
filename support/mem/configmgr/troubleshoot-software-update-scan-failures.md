@@ -195,7 +195,9 @@ The Software Updates feature automatically configures a local Group Policy setti
 
 If an Active Directory Group Policy setting is applied to computers for software update point client installation, it overrides the local Group Policy setting. Unless the value of the setting that's defined in Group Policy is identical to the one that's being set by Configuration Manager (server name and port), the Configuration Manager software update scan will fail on the client. In this case, the WUAHandler.log file shows the following entry:
 
-> Group policy settings were overwritten by a higher authority (Domain Controller) to: Server `http://server` and Policy ENABLED
+```output
+Group policy settings were overwritten by a higher authority (Domain Controller) to: Server http://server and Policy ENABLED
+```
 
 To fix this issue, the software update point for client installation and software updates must be the same server. And it must be specified in the Active Directory Group Policy setting by using the correct name format and port information. For example, if the software update point was using the default website, the software update point would be *`http://server1.contoso.com:80`*.
 

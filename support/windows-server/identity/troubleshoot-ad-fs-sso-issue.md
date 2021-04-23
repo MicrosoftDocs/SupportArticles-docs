@@ -19,6 +19,7 @@ This article helps you resolve single sign-on (SSO) issues with Active Directory
 
 Select one of the following section according to the type of issue that you encounter.
 
+_Original product version:_ &nbsp; Active Directory Federation Services
 _Original KB number:_ &nbsp; 4034932
 
 ## NTLM or forms-based authentication prompt
@@ -716,7 +717,7 @@ Then, check if there is a token-signing algorithm mismatch. To do this, follow t
    Get-ADFSRelyingPartyTrust -Name RPName | FL SignatureAlgorithm
    ```  
 
-   The possible values are [SHA1](http://www.w3.org/2001/04/xmldsig#rsa-sha1) or [SHA256](http://www.w3.org/2001/04/xmldsig-more#rsa-sha256).
+   The possible values are SHA1 or SHA256.
 
 2. Check with the application owner for the algorithm used on the application side.
 3. Check if the two algorithms match.

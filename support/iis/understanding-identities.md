@@ -54,19 +54,21 @@ To understand application pool identities, you have to understand what an identi
 
     If you check the **MyWebAppZone** event log (from scenario 1), you find the following error event logged. It contains a `Requested registry access is not allowed` error message.
 
-    > Exception Type: SecurityException  
+    ```output
+    Exception Type: SecurityException  
     Message: Requested registry access is not allowed.  
     Stack Trace  
-       at Microsoft.Win32.RegistryKey.OpenSubKey(String name, Boolean writable)  
-       at Identities.ChangeTimeServer.Page_Load(Object sender, EventArgs e)  
-       at System.Web.UI.Control.LoadRecursive()  
-       at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
-       at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
-       at System.Web.UI.Page.ProcessRequest()  
-       at System.Web.UI.Page.ProcessRequest(HttpContext context)  
-       at ASP.changetimeserver_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\fd06117a\f8c94323\App_Web_ysqbhk00.2.cs:line 0  
-       at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
-       at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+    at Microsoft.Win32.RegistryKey.OpenSubKey(String name, Boolean writable)  
+    at Identities.ChangeTimeServer.Page_Load(Object sender, EventArgs e)  
+    at System.Web.UI.Control.LoadRecursive()  
+    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+    at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+    at System.Web.UI.Page.ProcessRequest()  
+    at System.Web.UI.Page.ProcessRequest(HttpContext context)  
+    at ASP.changetimeserver_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\fd06117a\f8c94323\App_Web_ysqbhk00.2.cs:line 0  
+    at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
+    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+    ```
 
 - **Scenario 3: Custom account in Kerberos authentication and load-balanced environment**  
 
@@ -166,7 +168,7 @@ This tells IIS to use the new built-in account for all anonymous authentication 
 
 You can also provide anonymous authentication to your website by using a specific Windows account or application pool identity instead of  an `IUSR` account.
 
-### ISUR versus Connect as
+### IUSR versus Connect as
 
 **Connect as** is an option in IIS that enables you to decide which credentials you want to use to access the website. You can use either the authenticated user credentials or specific user credentials. To understand the difference, consider the following scenario:
 

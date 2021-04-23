@@ -177,8 +177,11 @@ The IIS logs are useful in cases of IIS authentication-related errors.
 
 What you need to look for is the status and sub status codes for this particular error.
 
-> 2006-10-12 22:47:28 W3SVC1 65.52.18.230 GET /**MyAPP**/login.aspx - 80  
- **MyDomain**\UserID_91 65.52.22.58 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.2;+SV1;+.NET+CLR+1.1.4322;+.NET+CLR+2.0.50727;+InfoPath.1) 401 3 5
+```output
+2006-10-12 22:47:28 W3SVC1 65.52.18.230 GET /MyAPP/login.aspx - 80  
+MyDomain\UserID_91 65.52.22.58 Mozilla/4.0+  
+(compatible;+MSIE+6.0;+Windows+NT+5.2;+SV1;+.NET+CLR+1.1.4322;+.NET+CLR+2.0.50727;+InfoPath.1) 401 3 5
+```
 
 We see a 401 with the substatus 3, which indicates "Unauthorized due to ACL on resource."
 

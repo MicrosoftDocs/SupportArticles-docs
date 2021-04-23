@@ -250,7 +250,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
 
 5. Run the project. The following output appears in the **Console** window:
 
-    ```console
+    ```output
     Array - Unsorted
 
     Ford 1992
