@@ -16,9 +16,6 @@ ms.author: luche
 appliesto:
 - Access 2016
 - Access 2013
-- Access 2010
-- Access 2007
-- Access 2003
 ---
 
 # "File sharing lock count exceeded…" error during large transaction processing
@@ -46,31 +43,35 @@ To work around this problem, increase the maximum number of locks per file. To d
 ### Method 1: Set the registry key to MaxLocksPerFile to increase the maximum number of locks per file
 
 1. Click **Start**, and then click **Run**.   
-2. Type regedit, and then click **OK**.   
-3. Navigate to the registry key appropriate for your Access installation:
+2. Type `regedit`, and then click **OK**.   
+3. Locate the following registry key depending on your Access installation:
    
-    **Click-To-Run (C2R) installations**
+    **Windows Installer (MSI) installation**
     
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE
-
-    **MSI installations**
+    - For 32-bit version of Access running on 32-bit version of Windows, or 64-bit version of Access running on 64-bit version of Windows
     
-      HKEY_LOCAL_MACHINE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\<x.0>\Access Connectivity Engine\Engines\ACE`
+      
+     - For 32-bit version of Access running on 64-bit version of Windows
 
-   **Note 1:** The Wow6432Node key only exists in the key path when using a 32-bit version of Access on a 64-bit version of Windows
-   
-   **Note 2:** The major version identifier used in the example is for the lastest Access version which is used in Access 2016/2019/O365. Select the major version identifier that corresponds to your version of Access. 
-   
-    | Access Version | Major Version Identifier |
-    |----------------|--------------------------|
-    | Access 2016 / 2019 / O365 | 16.0 |
-    | Access 2013 | 15.0 |
-    | Access 2010 |	14.0 |
-    | Access 2007 | 12.0 |
+       `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\<x.0>\Access Connectivity Engine\Engines\ACE`
+     
+     **Click-to-Run installation**
+     
+     - For 32-bit version of Access running on 32-bit version of Windows, or 64-bit version of Access running on 64-bit version of Windows
+    
+       `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\<x.0>\Access Connectivity Engine\Engines\ACE`
+      
+     - For 32-bit version of Access running on 64-bit version of Windows
 
-4. In the right pane of Registry Editor, double click **MaxLocksPerFile**.   
-5. On the **Edit DWORD Value** dialog box, click **Decimal**.   
-6. Modify the value of the **Value data** box as required, and then click **OK**.
+       `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\<x.0>\Access Connectivity Engine\Engines\ACE`
+    
+     > [!NOTE]
+     > The \<x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Office 365, 15.0 = Office 2013).   
+
+4. In the right pane of Registry Editor, double-click **MaxLocksPerFile**.   
+5. On the **Edit DWORD Value** dialog box, select **Decimal**.   
+6. Modify the value of the **Value data** box as required, and then select **OK**.
 
 **Note** that this method changes the registry setting for all applications that use Microsoft Jet database engine version 4.0.
 
@@ -83,13 +84,11 @@ The SetOption method temporarily overrides the default number of locks per file.
 
 1. Open Microsoft Access.    
 2. Open a database, and then press Alt+F11 to launch the Visual Basic editor.  
-3. On the **Microsoft Visual Basic -\<Database Name>-[\<Module Name> (Code)]** window, click **Immediate Window** in the **View** menu.    
-4. In **Immediate Window**, enter the following code. 
+3. On the **Microsoft Visual Basic -\<Database Name>-[\<Module Name> (Code)]** window, select **Immediate Window** in the **View** menu.    
+4. In **Immediate Window**, enter the following code: 
 
-  **DAO.DBEngine.SetOption dbmaxlocksperfile,15000**
-5. Press the ENTER key to run the line of code.
-
-   **Note** This temporarily sets the MaxLocksPerFile value to 15,000.   
+  `DAO.DBEngine.SetOption dbmaxlocksperfile,15000`
+5. Press the ENTER key to run the line of code. This command temporarily sets the MaxLocksPerFile value to 15,000.   
 
 To process large transactions, set the MaxLocksPerFile value to meet your requirement, and then run the transactions in the session. 
 
@@ -97,4 +96,4 @@ Changes you make to the MaxLocksPerFile setting by using the SetOption method ar
 
 ## More information
 
-The MaxLocksPerFile setting determines the maximum number of locks Microsoft Jet places against a file. The default MaxLocksPerFile value is 9,500. However, do not change this value if you are working on a Novell NetWare server, because the maximum server record locks per connection is 10,000.
+The MaxLocksPerFile setting determines the maximum number of locks Microsoft Jet places against a file. The default MaxLocksPerFile value is 9,500. However, don't change this value if you're working on a Novell NetWare server, because the maximum server record locks per connection is 10,000.
