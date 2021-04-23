@@ -87,7 +87,7 @@ The SetOption method temporarily overrides the default number of locks per file.
 3. On the **Microsoft Visual Basic -\<Database Name>-[\<Module Name> (Code)]** window, select **Immediate Window** in the **View** menu.    
 4. In **Immediate Window**, enter the following code: 
 
-  `DAO.DBEngine.SetOption dbmaxlocksperfile,15000`
+   `DAO.DBEngine.SetOption dbmaxlocksperfile,15000`
   
 5. Press the ENTER key to run the line of code. This command temporarily sets the MaxLocksPerFile value to 15,000.   
 
