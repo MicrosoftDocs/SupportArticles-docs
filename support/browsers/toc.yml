@@ -21,7 +21,7 @@
     - name: Empty IEM is reported as winning
       href: empty-ie-policy-shown-as-winning.md
 
-    - name: Enhanced Protected Mode add-on compatibility
+    - name: Enhanced Protected Mode add-on compatibility
       href: enhanced-protected-mode-add-on-compatibility.md
 
     - name: How Enterprise Mode works in Windows 10
@@ -30,13 +30,13 @@
     - name: How to change homepage and search provider
       href: change-homepage-and-search-provider.md
 
-    - name: How to set Internet Explorer to open Office documents in Office program
+    - name: How to set Internet Explorer to open Office documents in Office program
       href: how-to-set-ie-to-open-office-documents-in-office-program.md
 
     - name: How to check version
       href: check-ie-version.md
 
-    - name: How to set Group Policy Preference settings
+    - name: How to set Group Policy Preference settings
       href: how-to-configure-group-policy-preference-settings.md
 
     - name: How to set advanced settings via GPOs
@@ -54,10 +54,10 @@
     - name: Non-secure content can't be displayed
       href: only-secure-content-is-displayed-message.md
 
-    - name: PAC file isn't read
+    - name: PAC file isn't read
       href: cannot-read-pac-file.md
 
-    - name: 32-bit browser applications don't work as expected
+    - name: 32-bit browser applications don't work as expected
       href: 32-bit-browser-applications-not-working-as-expected.md
 
 - name: Connectivity and Navigation
@@ -68,7 +68,7 @@
     - name: Download html files via download manager
       href: how-ie-downloads-html-files.md
 
-    - name: How to change keep-alive time-out value
+    - name: How to change keep-alive time-out value
       href: change-keep-alive-time-out.md
 
     - name: How to reset proxy settings
@@ -104,7 +104,7 @@
     - name: Persistent cookies lost between Internet Explorer and Office
       href: cookies-not-shared-with-office.md
 
-    - name: Repeatedly prompted for credentials to use proxy server
+    - name: Repeatedly prompted for credentials to use proxy server
       href: repeatedly-prompted-to-enter-credentials-to-use-proxy-server.md
 
     - name: Session variables are missing
@@ -127,7 +127,7 @@
     - name: Can't add local pages to Favorites
       href: cannot-pin-local-webpage.md
 
-    - name: Can't print from the web as another user
+    - name: Can't print from the web as another user
       href: cannot-print-from-web-using-another-user.md
 
     - name: Cursor style remains with pressed mouse
@@ -228,7 +228,7 @@
     - name: How to hide the Clear button
       href: how-to-hide-clear-button-ie-10.md
 
-    - name: Internet Explorer document modes FAQ
+    - name: Internet Explorer document modes FAQ
       href: ie-document-modes-faq.md
 
     - name: Iframe content should be rendered in standard mode
@@ -323,6 +323,9 @@
     - name: WPAD data collection
       href: ie-wpad-diagnostic.md
 
+    - name: Edge icon wrongly shown for url shortcut
+      href: general/edge-icon-show-for-url-shortcut.md
+
 - name: Installation
   items:
     - name: How to create all-inclusive deployment package
@@ -331,7 +334,7 @@
     - name: How to disable Internet Explorer on Windows
       href: disable-internet-explorer-windows.md
 
-    - name: How to repair or reinstall Internet Explorer
+    - name: How to repair or reinstall Internet Explorer
       href: how-to-repair-or-reinstall-ie.md
 
     - name: How to troubleshoot Internet Explorer 9 installation issues
@@ -363,7 +366,7 @@
     - name: Can't view secure web sites
       href: cannot-view-secure-web-sites.md
 
-    - name: Can't sign in to VSTS
+    - name: Can't sign in to VSTS
       href: cannot-sign-in-to-vsts.md
 
     - name: Can't turn off Enhanced Security
@@ -381,19 +384,19 @@
     - name: Https site can't be displayed
       href: cannot-display-https-site.md
 
-    - name: Internet Explorer security zones registry entries
+    - name: Internet Explorer security zones registry entries
       href: ie-security-zones-registry-entries.md
 
-    - name: Information about the Unsafe File List
+    - name: Information about the Unsafe File List
       href: information-about-the-unsafe-file-list.md
 
-    - name: Java security setup
+    - name: Java security setup
       href: how-to-set-java-security.md
 
     - name: Prompt for a password when using authentication
       href: prompt-for-username-and-password.md
 
-    - name: Protect yourself from spoofed Web sites
+    - name: Protect yourself from spoofed Web sites
       href: steps-to-identify-and-protect-from-spoofed-web-sites.md
 
     - name: Smart card pin prompt appears in Internet Explorer 9
@@ -422,7 +425,7 @@
     - name: Internet Explorer 11 stops responding when selecting strings
       href: ie-11-stops-responding-selecting-strings-selection-gripper.md
 
-    - name: Internet Explorer opens, flashes, and closes immediately when starting
+    - name: Internet Explorer opens, flashes, and closes immediately when starting
       href: ie-opens-flashes-and-closes-immediately-when-starting.md
 
     - name: Memory usage rises due to iframes
@@ -440,5 +443,5 @@
     - name: Slow browsing in Internet Explorer
       href: slow-browsing-internet-explorer.md
 
-    - name: We were unable to return you to your webpage error
+    - name: We were unable to return you to your webpage error
       href: we-were-unable-to-return-you-to-your-webpage-error.md
