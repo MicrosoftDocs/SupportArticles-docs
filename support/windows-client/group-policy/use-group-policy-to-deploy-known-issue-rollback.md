@@ -48,9 +48,9 @@ To see an example of a KIR MSI file, download [Windows 10 (2004 & 20H2) Known Is
 
 A KIR policy definition has a limited lifespan (a few months, at most). After Microsoft publishes an amended update to address the original issue, the KIR is no longer necessary. The policy definition can then be removed from the Group Policy infrastructure.
 
-## Using Group Policy to apply a KIR to an enterprise device
+## Using Group Policy to apply a KIR to a single device
 
-To use Group Policy to apply a KIR to a single enterprise device, follow these steps:
+To use Group Policy to apply a KIR to a single local device, follow these steps:
 
 1. Download the KIR policy definition MSI file to the device.  
    > [!IMPORTANT]  
