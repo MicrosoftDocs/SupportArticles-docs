@@ -13,6 +13,10 @@ This article helps you fix an issue in which a user can't log on to an Azure AD 
 
 When a user tries to log on to an Azure AD joined Windows 10 computer that has a multi-app kiosk profile assigned, the attempt fails immediately before the user profile is loaded.
 
+:::image type="content" source="media/users-cannot-logon-windows-multi-app-kiosk/welcome.png" alt-text="Sign in page":::
+
+:::image type="content" source="media/users-cannot-logon-windows-multi-app-kiosk/sign-out.png" alt-text="Sign out":::
+
 In this situation, the kiosk profile logon type is **AAD User** or **Group**. Additionally, the Windows 10 computer uses a local account, and you notice the following error messages in the Event Viewer logs:
 
 - AAD - Operational logs (Sample 1 - MFA required via conditional access):
