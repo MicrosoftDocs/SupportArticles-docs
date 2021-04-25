@@ -1,7 +1,7 @@
 ---
 title: An update for supporting migration from AD RMS to Azure RMS
 description: Describes a fix is available for Office to support AD RMS in Read-Only mode.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Microsoft Azure Active Directory Rights Management
 - Active Directory Rights Management Services Client 2.0

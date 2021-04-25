@@ -2,8 +2,8 @@
 title: Troubleshoot free/busy issues in Exchange hybrid
 description: Resolves free/busy issues in an Exchange hybrid deployment.
 ms.date: 08/19/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -298,7 +298,7 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 1. On the Exchange 2010/2013 CAS, run the following command in the Exchange Management Shell:
 
     ```powershell
-    Get-OrganizationReationship -Identity "On Premises to Exchange Online Organization Relationship"
+    Get-OrganizationRelationship -Identity "On Premises to Exchange Online Organization Relationship"
     ```
 
 The output should resemble the following:
@@ -606,7 +606,7 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 From the Exchange 2010/2013 CAS, run the following command in Exchange Management Shell:
 
 ```powershell
-Get-OrganizationReationship -Identity "On Premises to Exchange Online Organization Relationship"
+Get-OrganizationRelationship -Identity "On Premises to Exchange Online Organization Relationship"
 ```
 
 The output should resemble the following:

@@ -1,8 +1,8 @@
 ---
 title: Event ID 9519 when you mount a database
 description: Describes a problem that triggers a 0x80004005 error when you try to mount a mailbox database or a public folder database, and provides resolutions.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

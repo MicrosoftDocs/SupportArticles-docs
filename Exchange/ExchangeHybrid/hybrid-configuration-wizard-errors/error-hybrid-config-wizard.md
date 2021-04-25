@@ -1,7 +1,7 @@
 ---
 title: ADSTS50011 error when running the Hybrid Configuration Wizard
 description: Describes an issue in which one of the old reply URLs used by the wizard has been removed from the service.
-author: v-miegge
+author: Norman-sun
 ms.author: ninob
 manager: dcscontentpm
 audience: ITPro

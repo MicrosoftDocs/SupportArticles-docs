@@ -1,8 +1,8 @@
 ---
 title: Office 365 Hybrid Configuration Wizard fails on Exchange Server 2016 CU7
 description: Office 365 Hybrid Configuration Wizard fails to run on Exchange Server 2016 CU7, reporting error-Object reference not set to an instance of an object.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

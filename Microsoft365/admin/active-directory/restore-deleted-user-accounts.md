@@ -1,7 +1,7 @@
 ---
 title: How to restore deleted user accounts in Office 365, Azure, and Intune
 description: Describes how to restore deleted user accounts in Office 365, Azure, and Intune.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 ms.reviewer: v-lanac
 appliesto:
 - Microsoft Office 365

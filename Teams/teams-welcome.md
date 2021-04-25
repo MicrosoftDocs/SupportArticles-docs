@@ -1,12 +1,12 @@
 ---
 title: Information about Teams known issues
 description: This article lists Microsoft Teams related issues.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.service: msteams
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150

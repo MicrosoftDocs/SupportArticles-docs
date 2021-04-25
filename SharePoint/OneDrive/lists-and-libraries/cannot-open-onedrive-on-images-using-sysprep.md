@@ -1,8 +1,8 @@
 ---
 title: Can't open OneDrive on images using Sysprep
 description: Describes how to deploy OneDrive for Windows 10 images using SysPrep.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

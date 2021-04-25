@@ -1,8 +1,8 @@
 ---
 title: Can't manage a group hidden from GAL
 description: Describes an issue in which the owner of a mail-enabled security group or a distribution group can't view or manage the group in Exchange admin center if the group is hidden from the global address list.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

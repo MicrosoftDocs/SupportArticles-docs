@@ -1,8 +1,8 @@
 ---
 title: Cannot connect to POP3 or IMAP4
 description: Describes an issue in which users cannot connect to POP3 or IMAP4 in Exchange Server 2016 and Exchange Server 2013.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

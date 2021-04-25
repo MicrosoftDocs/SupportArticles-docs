@@ -1,8 +1,8 @@
 ---
 title: Overview of delegation in an Office 365 hybrid environment
 description: Describes the Full Access, Send As, Send on Behalf of, and Folder permissions and how they work in a hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
@@ -77,7 +77,7 @@ This article describes the necessary configuration, administration details, and
 
   - The Calendar folder works differently in Outlook than other folders do. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](../calendars/cannot-view-cross-forest-calendar-data.md).
   - Private items are viewable only if the user is configured correctly as a delegate. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](./delegates-not-listed-correctly-in-outlook-after-migration.md).
-  - The user cannot view the calendar of a hidden mailbox in Excshange Online. For more information, see [Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](../user-and-shared-mailboxes/cannot-access-hidden-mailbox-in-outlook-after-migration.md).
+  - The user cannot view the calendar of a hidden mailbox in Exchange Online. For more information, see [Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](../user-and-shared-mailboxes/cannot-access-hidden-mailbox-in-outlook-after-migration.md).
 
 ### Send on Behalf of
 

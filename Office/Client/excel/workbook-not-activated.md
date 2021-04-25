@@ -1,13 +1,13 @@
 ---
 title: Excel workbook is not activated when you run a macro
 description: Provides a workaround for an issue that prevents the Workbook.Activate method from working as expected if the ScreenUpdating property is set to False in Excel 2013.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: akeeler, prash, xlkbpre
 ms.custom: CSSTroubleshoot
 search.appverid: 

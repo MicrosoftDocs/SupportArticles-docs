@@ -1,8 +1,8 @@
 ---
 title: The operation has timed out when connecting to OData by using SSIS in Project Online
 description: Works around an issue in which the operation has timed out when connecting to OData by using SSIS in Project Online.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

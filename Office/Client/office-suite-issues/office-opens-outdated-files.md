@@ -38,20 +38,20 @@ If you want Office to open the current file on the server every time, you can tu
 
 ### Turn off AutoSave on an individual computer
 
-1. Select Start, enter **regedit**, and then select **Registry Editor** from the search results.
+1. Select Start, enter *regedit*, and then select **Registry Editor** from the search results.
 2. Navigate to the following subkey:
 
-    *:::no-loc text="HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\word":::*
+    `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\word`
 3. Right-click the subkey, select **New**, and then select **DWORD (32-bit value)**.
 4. Name the value *:::no-loc text="autosavebydefaultadminchoice":::*.
 5. Right-click the new value, select **Modify**, and then set the **Value data** to **2**.
 6. Navigate to the following subkey:
 
-    *:::no-loc text="HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\powerpoint":::*
+    `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\powerpoint`
 7. Repeat steps 3-5 to create the new DWORD value for this subkey.
 
 ### Turn off AutoSave for all users by IT administrators 
 For IT administrators who want to turn off AutoSave for all users by using Group Policy, create the DWORD value **autosavebydefaultadminchoice** in the following registry hives, and set its **Hexadecimal value** to **2**:
 
-- *:::no-loc text="HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\word":::*
-- *:::no-loc text="HKEY_CURRENT_USER\software\policies\microsoft\office\160\powerpoint":::*
+- `HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\word`
+- `HKEY_CURRENT_USER\software\policies\microsoft\office\160\powerpoint`

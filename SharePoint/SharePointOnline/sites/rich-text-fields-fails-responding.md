@@ -1,7 +1,7 @@
 ---
 title: Rich Text fields don't respond when using IE to access a SharePoint site
 description: When you use Internet Explorer to access a SharePoint Online or SharePoint Server 2013 site that contains a Rich Text field, the Rich Text field doesn't respond.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

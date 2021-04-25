@@ -1,8 +1,8 @@
 ---
 title: Email messages redirected from one mailbox to another mailbox are marked as spam
 description: Redirected messages are moved to the Junk folder or to a hosted quarantine.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

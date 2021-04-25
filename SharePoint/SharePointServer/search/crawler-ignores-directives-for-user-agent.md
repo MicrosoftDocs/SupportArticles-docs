@@ -1,8 +1,8 @@
 ---
 title: Directives in Robots.txt aren't recognized
 description: Describes an issue that occurs when you use the SharePoint Server search engine to crawl various sites.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

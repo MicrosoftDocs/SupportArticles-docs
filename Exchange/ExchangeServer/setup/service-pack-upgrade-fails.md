@@ -1,8 +1,8 @@
 ---
 title: Service Pack upgrade fails
 description: Provides a solution to an issue where upgrading Microsoft Exchange Server Service Pack fails.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

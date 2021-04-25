@@ -1,8 +1,8 @@
 ---
 title: Emails are not saved to Sent Items
 description: This article provides a resolution for the issue that email messages that are sent by using Microsoft Outlook 2007 or later versions are not saved to the Sent Items folder.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

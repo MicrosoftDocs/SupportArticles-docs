@@ -1,7 +1,7 @@
 ---
 title: Meeting organizer isn't prompted for leader PIN
 description: Discusses a scenario in which the dial-in conference organizer isn't prompted for their leader PIN when they join their Skype for Business Online meeting. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: landerl, jasco, corbinm, oscarr, nmurav, lynnroe, cbland, rischwen, Leonarwo, msp, romanma, tonyq
 appliesto:
 - Skype for Business Online

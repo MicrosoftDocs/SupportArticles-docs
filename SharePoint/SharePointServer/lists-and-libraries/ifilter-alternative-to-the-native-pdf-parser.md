@@ -1,7 +1,7 @@
 ---
 title:  Native SharePoint PDF parser iFilter alternatives
 description: Describes how to use an iFilter as an alternative to the built-in PDF parser in SharePoint 2013 to make PDF files searchable.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint Server 2019
@@ -25,11 +25,10 @@ To mitigate the possibility of a PDF parsing failure, SharePoint 2013 Search int
 
 Using an IFilter for PDF parsing will eventually help you to improve the PDF Parsing quality in SharePoint Search.
 
-## PDF iFilter tools
+## PDF iFilter tool
 
-There are several PDF IFilter tools available, some free and some commercial. The following are among the most commonly used:  
+The commercial PDF IFilter tool is available. This tool is among the most commonly used:
 
-- [Adobe PDF iFilter (free)](https://www.adobe.com/support/downloads/product.jsp?product=1&platform=windows)  
 - [Foxit PDF IFilter (commercial)](https://www.foxitsoftware.com/products/pdf-ifilter/)
 
 If you're experiencing PDF parsing issues when you use the SharePoint built-in PDF parser, we recommend that you try to use a PDF iFilter instead.

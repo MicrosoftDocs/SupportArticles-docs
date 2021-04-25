@@ -1,8 +1,8 @@
 ---
 title: Can't edit an Office 365 Kiosk user's calendar
 description: Provides workarounds for a scenario in which a user can't use Outlook to edit the calendar of a user who has an Office 365 Kiosk license.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

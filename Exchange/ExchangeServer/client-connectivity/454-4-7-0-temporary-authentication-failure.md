@@ -1,8 +1,8 @@
 ---
 title: 454 4.7.0 Temporary authentication failure
 description: Describes an issue in which a 451 4.4.0 error message is returned and an Event ID 1035 is logged when some e-mail messages are stuck in a remote delivery queue in a Microsoft Exchange server environment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

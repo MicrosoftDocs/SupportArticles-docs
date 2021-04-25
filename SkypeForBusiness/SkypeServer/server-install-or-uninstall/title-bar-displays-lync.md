@@ -1,7 +1,7 @@
 ---
 title: Title bar displays Lync after you install November 2015 update for Lync 2013
 description: Discusses an issue in which Lync is displayed in the title bar of Lync 2013 (Skype for Business 2015) after you install the November 2015 update.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2015

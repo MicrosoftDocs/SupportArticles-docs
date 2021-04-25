@@ -1,8 +1,8 @@
 ---
 title: Issue when you enable mailbox archiving in an Exchange hybrid deployment.
 description: Describes an issue that triggers an error when you use the Exchange admin center in Exchange Online to enable archiving for a mailbox that was moved from your on-premises environment to Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

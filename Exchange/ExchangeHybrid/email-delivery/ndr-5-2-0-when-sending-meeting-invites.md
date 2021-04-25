@@ -1,8 +1,8 @@
 ---
 title: NDR 5.2.0 when sending meeting invites
 description: How to fix non-delivery report users get when sending meeting invites after a delegate or manager's mailbox is moved to a new forest.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

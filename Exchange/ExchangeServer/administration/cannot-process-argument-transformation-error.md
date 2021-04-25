@@ -1,8 +1,8 @@
 ---
 title: Cannot process argument transformation error
 description: You may get the Cannot process argument transformation error when you run some cmdlets in Exchange Server 2013 that has Cumulative Update 11 installed.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

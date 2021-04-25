@@ -1,7 +1,7 @@
 ---
 title: Bug Check 0x133 DPC_WATCHDOG_VIOLATION error on Skype for Business Edge server
 description: Describes Bug Check 0x133 DPC_WATCHDOG_VIOLATION error.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013

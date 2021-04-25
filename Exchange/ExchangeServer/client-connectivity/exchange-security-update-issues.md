@@ -28,14 +28,10 @@ appliesto:
 
 This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers, lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
 
-## Assess the health of on-premises Exchange Servers
-
-- [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
-- [Verify the installation of CUs & SUs](#verify-the-installation-of-cus--sus)
-
 ## Resolve errors during CU or SU installation
 
 - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
+- [HTTP 400 errors in OWA and ECP and Connection Failure error in PowerShell](#http-400-errors-in-owa-and-ecp-and-connection-failure-error-in-powershell)
 - [Missing images in ECP](#missing-images-in-ecp)
 - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
 - [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
@@ -65,39 +61,6 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
 - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
-### Check for Indicators of Compromise (IOCs)
-
-Use the following script that automates testing for all four vulnerabilities described in the [Microsoft Threat Intelligence Center (MSTIC) blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). The script provides a progress bar and performance tweaks to make the test for CVE-2021-26855 test run fast. Download the latest version of the script from the Exchange Support GitHub repository [aka.ms/TestProxyLogon](https://aka.ms/TestProxyLogon).  
-
-[Back to top](#summary)
-
-### Verify the installation of CUs & SUs
-
-#### Option 1 (Recommended)
-
-Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the build number.
-
-![Screenshot of the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
-
-#### Option 2
-
-Run the following command and verify that the file version in the output matches the information in the table below.
-
-```powershell
-Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
-```
-
-| Exchange version  | File versions of patched systems   |
-|---|---|
-| Exchange Server 2019  | For CU8: 15.02.0792.010</br>For CU7: 15.02.0721.013</br>For CU6: 15.02.0659.012</br>For CU5: 15.02.0595.008</br>For CU4: 15.02.0529.013</br>For CU3: 15.02.0464.015</br>For CU2: 15.02.0397.011</br>For CU1: 15.02.0330.011</br>For RTM: 15.02.0221.018 |
-| Exchange Server 2016  | For CU19: 15.01.2176.009</br>For CU18: 15.01.2106.013</br>For CU17: 15.01.2044.013</br>For CU16: 15.01.1979.008</br>For CU15: 15.01.1913.012</br>For CU14: 15.01.1847.012</br>For CU13: 15.01.1779.008</br>For CU12: 15.01.1713.010</br>For CU11: 15.01.1591.018</br>For CU10: 15.01.1531.012</br>For CU9: 15.01.1466.013</br>For CU8: 15.01.1415.008 |
-| Exchange Server 2013  | For CU23: 15.00.1497.012</br>For CU22: 15.00.1473.006</br>For CU21: 15.00.1395.012  |
-|||
-
-For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](https://support.microsoft.com/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
-
-[Back to top](#summary)
-
 ### HTTP 500 errors in OWA or ECP
 
 **Issue:**
@@ -118,6 +81,31 @@ Reinstall the security update from an elevated command prompt.
 1. After the update installs, restart the server.
 
 For more information, see [OWA or ECP stops working after you install a security update](./owa-stops-working-after-update.md).
+
+[Back to top](#summary)
+
+### HTTP 400 errors in OWA and ECP and Connection Failure error in PowerShell
+
+**Issue:**
+
+HTTP 400 errors might occur in Outlook on the Web (OWA) and Exchange Control Panel (ECP) after updates are installed. After you provide credentials to log on to OWA or ECP, the login process may fail with the following error message:
+
+> HTTP 400 - bad request  
+> Cannot serialize context
+
+Also when you start Exchange Management Shell, you receive the following error message:
+
+> ErrorCode                   : -2144108477  
+> TransportMessage            : The WS-Management service cannot process the request because the XML is invalid.  
+> ErrorRecord                 : Connecting to remote server exchange.contoso.com failed with the following error message :  For more information, see the about_Remote_Troubleshooting Help topic.
+
+**Cause:**
+
+This issue occurs if the username ends with the dollar sign ($), such as *admin$*.
+
+**Resolution:**
+
+Remove the dollar sign ($) from the username, or use another administrative account that doesn't end with the dollar sign ($).
 
 [Back to top](#summary)
 

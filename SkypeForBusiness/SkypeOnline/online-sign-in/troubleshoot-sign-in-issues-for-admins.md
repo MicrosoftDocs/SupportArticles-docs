@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot sign-in issues for admins
 description: Helps Office 365 administrators troubleshoot and solve sign-in issues with Skype for Business Online.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -74,6 +74,10 @@ The following diagnostics are currently available with brief scenario descriptio
 | Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | Diag: Meeting Recording
 | Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams. | Diag: Voicemail |
 | Teams Call Forwarding | Validates that a user is properly configured to forward calls to a specified number. | Diag: Teams Call Forwarding |
+| Unable to upload files to Teams chat | Validates if the specified user can upload files in Teams chat. | Diag: Unable to upload files to Teams chat |
+| Unable to access files shared in Teams chat | Validated that a specified user being unable to access files shared by another user in chats. | Diag: Unable to access files shared in Teams chat |
+| Unable to access files in a team | Validates that a specified user has access to files in the Team. | Diag: Unable to access files in a team |
+| Meeting Recording Missing | Attempts to locate a missing Teams Meeting Recording | Diag: Missing Recording |
 
 More diagnostics will be added at a future date.
 

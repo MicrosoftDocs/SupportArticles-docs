@@ -35,7 +35,7 @@ The errors usually occur if the COM application or .NET client is running as a 3
 **Example**
 
 These errors might occur when the following code is run in 86-bit PowerShell:
-```
+```powershell
 $xl = New-Object -ComObject Excel.Application
 
 $xl.Visible = $True
@@ -59,12 +59,12 @@ To detect and remove the orphaned subkeys, run this script from the following Gi
 
 If the PowerShell script from Step 1 doesn't delete the orphaned subkeys, you can also check for orphaned entries manually. The affected device might have orphaned subkeys that resemble the following example:
 
-*:::no-loc text="HKEY_CLASSES_ROOT\WOW6432Node\TypeLib\GUID\1.9\0\Win32":::*
+>*HKEY_CLASSES_ROOT\WOW6432Node\TypeLib\GUID\1.9\0\Win32*
 
-Note: In this example, <:::no-loc text="GUID"> is a string that is specific to the subkey.
+Note: In this example, *:::no-loc text="GUID":::* is a string that is specific to the subkey.
 
 The subkey will have a value that points to a missing Office executable in the Program Files (x86) file path. For example:
 
-> *:::no-loc text="C:\Program Files (x86)\Microsoft Office\Root\Office16\EXCEL.EXE":::*
+> *C:\Program Files (x86)\Microsoft Office\Root\Office16\EXCEL.EXE*
 
 There should also be an adjacent subkey that points to the correct 64-bit Program Files location.

@@ -1,7 +1,7 @@
 ---
 title: Unable to export to Excel from SharePoint Online
 description: Export to excel from SharePoint Online doesn't work, An unexpected error has occurred. Changes to your data cannot be saved. error returned.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel
 ---

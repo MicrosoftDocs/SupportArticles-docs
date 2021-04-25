@@ -2,8 +2,8 @@
 title: Cannot sign in or see wrong interface
 description: Fixes an issue in which an Exchange Server 2013 or Exchange Server 2016 mailbox user can't sign in or sees the Outlook Web App interface for Exchange Server 2010 after a mailbox move.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

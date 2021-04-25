@@ -1,7 +1,7 @@
 ---
 title: SharePoint 2013 workflow HTTP Unauthorized in SharePoint Online
 description: Describes an issue in which you receive "SharePoint 2013 workflow HTTP Unauthorized" error occurs in SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

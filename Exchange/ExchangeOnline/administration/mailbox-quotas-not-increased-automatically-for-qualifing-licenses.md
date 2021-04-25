@@ -1,8 +1,8 @@
 ---
 title: Mailbox quotas not increased automatically for licenses
 description: Describes the problem and a solution when mailbox quotas for qualifying license types do not automatically reflect new quotas.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: How to recover a lost, unsaved, or corrupted Word document
 description: Describes a range of options to locate and recover lost, unsaved, or corrupted Microsoft Word documents. Discusses Word 2019, Word 2016, Word 2013, and Word 2010 under various versions of Windows.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,7 +12,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 118866
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Word for Office 365
 - Word 2019

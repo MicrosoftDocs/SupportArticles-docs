@@ -1,7 +1,7 @@
 ---
 title: Can't save a document in a document library
 description: Provides a workaround for an issue in which you cannot save a document in a SharePoint 2010 document library. This issue occurs when a document library contains a required Business data field.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: erica, harikumh, markmead, russmax, sheyia, zsolti, rrogers, christwe, darinr, majoshi, sridhara, rrogers
 appliesto:

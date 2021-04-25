@@ -1,8 +1,8 @@
 ---
 title: Hybrid deployment errors
 description: Fixes an error that occurs when you move a mailbox to Office 365 from your on-premises environment in a hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

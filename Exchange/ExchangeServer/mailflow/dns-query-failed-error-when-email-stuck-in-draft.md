@@ -2,8 +2,8 @@
 title: DNS query failed when email stuck in Draft
 description: Email messages are stuck in the Draft folder if the Register this connection's addresses in DNS check box is not selected. DNS query failed error occurs in this scenario. Provides resolutions to solve the problem.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

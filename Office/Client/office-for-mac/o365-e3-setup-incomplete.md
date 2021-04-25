@@ -1,7 +1,7 @@
 ---
 title: Office 365 Enterprise E3 setup is incomplete
 description: Describes an issue in which you receive an Office 365 Enterprise E3 setup is incomplete error message in Office 365 for Mac.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: jalalb
 appliesto:

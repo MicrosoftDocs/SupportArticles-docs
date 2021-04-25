@@ -1,7 +1,7 @@
 ---
 title: How to do a clean uninstallation of Lync for Mac 2011
 description: Describes how to cleanly remove Microsoft Lync for Mac 2011 from your computer.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:

@@ -1,8 +1,8 @@
 ---
 title: Cannot set programmatic security settings for Simple MAPI
 description: Discusses an issue in which the programmatic security settings for Simple MAPI cannot be configured by using the existing Outlook Group Policy template.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

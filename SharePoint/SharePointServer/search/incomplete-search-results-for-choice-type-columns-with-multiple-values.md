@@ -1,7 +1,7 @@
 ---
 title: Incomplete search results for choice type columns with multiple values
 description: Fixes an issue in which incomplete search results for choice type columns with multiple values.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Foundation 2013
 - SharePoint Server 2013

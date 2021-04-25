@@ -1,8 +1,8 @@
 ---
 title: Value for nondefault attribute isn't populated in Outlook in Exchange Server 2010
 description: Fixes an issue in which the value for nondefault attribute added to the Outlook Details Template isn't displayed in Exchange Server 2010.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

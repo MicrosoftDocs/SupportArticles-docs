@@ -1,8 +1,8 @@
 ---
 title: Sign-in error when creating or joining a meeting
 description: Provides a workaround for an issue in which users can't sign in to Skype for Business when they start the Skype for Business app, create a Skype meeting, or join a meeting.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

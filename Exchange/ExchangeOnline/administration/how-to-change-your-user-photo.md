@@ -1,8 +1,8 @@
 ---
 title: How to change your user photo
 description: Describes how to change your user photo that's used in Exchange Online in Microsoft 365, Lync 2013, and Lync Web App.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

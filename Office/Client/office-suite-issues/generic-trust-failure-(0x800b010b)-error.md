@@ -1,8 +1,8 @@
 ---
 title: Generic Trust Failure (0x800B010B) error
 description: Fixes an issue in which you receive a Generic Trust Failure (0x800B010B) error message when you try to install Visual Studio 2010 Tools for Office Runtime.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

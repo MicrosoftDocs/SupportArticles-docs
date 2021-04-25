@@ -1,8 +1,8 @@
 ---
 title: The user name or password is incorrect error
 description: Discusses an issue in which you receive a Connecting to the remote server failed error message when you run the Hybrid Configuration wizard. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

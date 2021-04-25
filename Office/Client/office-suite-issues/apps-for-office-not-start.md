@@ -1,14 +1,14 @@
 ---
 title: Office Add-in doesn't start if you disable protected mode for Restricted Sites zone
 description: Resolves issues that blocks Office Add-in from starting if protected mode for the Restricted Sites zone is not enabled in Internet Explorer.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: pconlan, misaun
 search.appverid: 
 - MET150
@@ -16,7 +16,7 @@ appliesto:
 - Office 2013
 ---
 
-# Office Add-in don't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
+# Office Add-in doesn't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -48,16 +48,19 @@ These issues occur because protected mode is not enabled for the Restricted Site
 
 ## Workaround
 
-For Office 2013, first make sure that the update in the following Microsoft Knowledge Base article is installed:
-       
-[2986156 ](https://support.microsoft.com/help/2986156) May 12, 2015, update for Office 2013 
+For Office 2013, first make sure that the following update is installed:
+
+[May 12, 2015, update for Office 2013 (KB2986156)](https://support.microsoft.com/help/2986156) 
 
 Re-enable protected mode for Restricted Sites: 
 
 1. In Internet Explorer, click the **Tools** button, and then click **Internet Options**.   
 2. Click the **Security** tab, and then select the Restricted SitesZone.   
 3. Select the **Enable Protected Mode** check box, and then click **OK**.   
-4. Restart Internet Explorer.   
+4. Restart Internet Explorer.
+
+> [!IMPORTANT]
+> Admin policies take priority over local settings. If enabling Protected Mode through Internet Explorer has no effect, or the ability to enable Protected Mode is turned off,  check your admin settings to see if there's a Group Policy that disables Protected Mode.
 
 ## More Information
 

@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for SharePoint Online
 description: This article lists SharePoint Online related issues.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150

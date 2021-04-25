@@ -1,8 +1,8 @@
 ---
 title: Event ID 1053 Exchange ActiveSync doesn't have sufficient permissions to create container
 description: Describes an issue that occurs when an Exchange Server user tries to synchronize an Exchange ActiveSync device for the first time. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

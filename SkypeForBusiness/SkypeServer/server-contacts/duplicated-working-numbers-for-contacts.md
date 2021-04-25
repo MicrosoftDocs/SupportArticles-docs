@@ -1,7 +1,7 @@
 ---
 title: Duplicated working numbers for contacts are displayed in call drop-down menu
 description: Fixes an issue in which duplicated working numbers are shown for contacts in the drop-down menu in Skype for Business 2015 (Lync 2013).
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: carlsh, suetc, digvish, stankan, jackyfan
 appliesto:

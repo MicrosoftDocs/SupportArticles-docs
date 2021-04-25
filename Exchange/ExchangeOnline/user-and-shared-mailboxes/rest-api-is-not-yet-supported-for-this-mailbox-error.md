@@ -1,8 +1,8 @@
 ---
 title: REST API is not yet supported error
 description: REST API is not supported if you don't have a valid Office 365 mailbox, if an Outlook.com account isn't enabled, or if Flow isn't included in your plan.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

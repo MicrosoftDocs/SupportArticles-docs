@@ -1,7 +1,7 @@
 ---
 title: How to replace the root site in SharePoint Online
 description: Provides steps about how to replace the root site in SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -38,8 +38,6 @@ To address issues caused by deleting a root site, and to continue to allow the a
 
 - The root (top-level) site for your organization can't be deleted. Admins are no longer able to delete the root site from the SharePoint Modern Admin Center or the Manage Site Collections page in the SharePoint Admin Center. After selecting the site from the SharePoint Modern Admin Active Sites, Admins will see the **Delete** button greyed out, and hovering over the **Delete** button will inform the admin that **"The root site can't be deleted."** If you're a global or SharePoint admin in Microsoft 365, you can replace the root site with a different site.
 
-- To allow admins to manage which site is at the root, [Site Swap](/sharepoint/modern-root-site#swap-your-root-site) has been introduced. Site Swap will allow admins to replace the root site with either a modern communication site or a classic team site. 
-   > [!IMPORTANT]
-   > Site Swap is available as a PowerShell cmdlet only. For more info about using this cmdlet and what happens with the previous root site, see [Invoke-SPOSiteSwap](/powershell/module/sharepoint-online/invoke-spositeswap). Site Swap will be available in the Modern SharePoint Admin Center as a **Replace** button in future versions. 
+- To allow admins to manage which site is at the root, [Site Swap](/sharepoint/modern-root-site#swap-your-root-site) has been introduced. Site Swap will allow admins to replace the root site with a modern communication site. 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

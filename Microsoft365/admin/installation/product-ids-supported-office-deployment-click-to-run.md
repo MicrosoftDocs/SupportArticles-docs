@@ -1,8 +1,8 @@
 ---
 title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
 description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
-author: simonxjx
-ms.author: luche
+author: MaryQiu1987
+ms.author: v-maqiu
 ms.date: 2/26/2020
 manager: dcscontentpm
 localization_priority: Normal
@@ -94,6 +94,7 @@ In addition to these product IDs, the following non-Office 365 product IDs are s
 - ProjectStd2019Retail
 - ProjectStd2019Volume
 - ProPlus2019Volume
+- ProPlus2019Retail
 - PublisherRetail
 - Publisher2019Retail
 - Publisher2019Volume
@@ -113,10 +114,10 @@ For managing the Lync or Skype for Business clients, the following table lists t
 
 |**Product**                       |**Version of the Office Deployment Tool**      |**Product ID**     |
 |----------------------------------|-----------------------------------------------|-------------------|
-|Skype for Business Basic 2015     |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/en-us/download/details.aspx?id=36778)             |LyncEntryRetail     |
-|Skype for Business 2015           |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/en-us/download/details.aspx?id=36778)             |LyncRetail          |
-|Skype for Business 2016     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessRetail       |
-|Skype for Business Basic 2016     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessEntryRetail       |
-|Skype for Business 2019           |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusiness2019Retail            |
-|Skype for Business 2019 (volume licensed)         |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusiness2019Volume            |
-|Skype for Business Basic 2019     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessEntry2019Retail            |
+|Skype for Business Basic 2015     |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/download/details.aspx?id=36778)             |LyncEntryRetail     |
+|Skype for Business 2015           |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/download/details.aspx?id=36778)             |LyncRetail          |
+|Skype for Business 2016     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessRetail       |
+|Skype for Business Basic 2016     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessEntryRetail       |
+|Skype for Business 2019           |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusiness2019Retail            |
+|Skype for Business 2019 (volume licensed)         |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusiness2019Volume            |
+|Skype for Business Basic 2019     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessEntry2019Retail            |
