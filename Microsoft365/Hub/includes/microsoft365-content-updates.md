@@ -2,6 +2,15 @@
 
 
 
+## Week of April 19, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/21/2021 | [How to run the Fiddler Trace after installing SaRA](/office365/troubleshoot/diagnostic-logs/run-fiddler-trace) | modified |
+| 4/22/2021 | [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run) | modified |
+
+
 ## Week of April 12, 2021
 
 
@@ -154,11 +163,3 @@
 | 3/24/2021 | [Cannot Access Newly Purchased Project Online with License](/office365/troubleshoot/project-online/cant-access-newly-purchased-project-online) | modified |
 | 3/24/2021 | [Listing some issues for Microsoft 365 Security](/office365/troubleshoot/microsoft-365-security-welcome) | modified |
 | 3/24/2021 | [You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)](/office365/troubleshoot/o365-security/account-security-alert-email) | modified |
-
-
-## Week of March 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/15/2021 | [Office programs may crash with the SendToBluetooth add-in installed](/office365/troubleshoot/administration/office-crash-with-sendtobluetooth) | modified |
