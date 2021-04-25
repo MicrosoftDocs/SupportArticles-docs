@@ -39,11 +39,11 @@ If the affected Exchange server has the Transport Rule agent enabled, then disab
 
 ## Cause of the error
 
-If you see the text in bold in the event logs, they indicate that the issue occurs because the required files are missing from the *:::no-loc text="<%ExchangeInstallPath%>FIP-FS\Data\Engines\amd64":::* folder. When the FIP-FS engine tries to scan emails while they are being categorized, it requires the files in this folder to complete the process. If they're missing, the event IDs listed above are generated, and the email messages are placed in the Poison queue.  
+If you see the text in bold in the event logs, they indicate that the issue occurs because the required files are missing from the *:::no-loc text="<%ExchangeInstallPath%>FIP-FS\\Data\\Engines\\amd64":::* folder. When the FIP-FS engine tries to scan emails while they are being categorized, it requires the files in this folder to complete the process. If they're missing, the event IDs listed above are generated, and the email messages are placed in the Poison queue.  
 
 ## Resolve the error
 
-To resolve this issue, copy all the files in the *:::no-loc text="<%ExchangeInstallPath%>FIP-FS\Data\Engines\amd64":::* folder on an unaffected Exchange server to the same folder on the affected Exchange server.
+To resolve this issue, copy all the files in the *:::no-loc text="<%ExchangeInstallPath%>FIP-FS\\Data\\Engines\\amd64":::* folder on an unaffected Exchange server to the same folder on the affected Exchange server.
 
 **Note:** *:::no-loc text="<%Exchange_Install_Path%>":::* is usually *:::no-loc text="C:\\Program Files\\Microsoft\\Exchange Server\\V15\\":::* (includes a trailing "\\")
 
