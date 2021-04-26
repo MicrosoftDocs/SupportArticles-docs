@@ -1,6 +1,6 @@
 ---
 title: Compute/compare hash values by using C#
-description: Describes how to obtain a hash value and how to compare two hash values to check whether they are identical by using Visual C#. This article also provides a code sample to show how to perform this task.
+description: Describes how to obtain a hash value and how to compare two hash values by using Visual C#.
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: v-ingor
@@ -8,14 +8,12 @@ ms.topic: how-to
 ---
 # Use Visual C# to compute and compare hash values
 
-This article describes how to obtain a hash value and how to compare two hash values to check whether they are identical by using Visual C#.
+This step-by-step article shows you how to obtain a hash value and how to compare two hash values to check whether they're identical by using Visual C#. It also provides a code sample to show how to do this task.
 
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 307020
 
 ## Summary
-
-This step-by-step article shows you how to obtain a hash value and how to compare two hash values to check whether they are identical. This article also provides a code sample to show how to perform this task.
 
 This article refers to the following Microsoft .NET Framework Class Library namespaces:
 
@@ -26,7 +24,7 @@ The `System.Security.Cryptography` class in the .NET Framework makes it easy to 
 
 ## Compute a hash value
 
-It is easy to generate and compare hash values using the cryptographic resources contained in the `System.Security.Cryptography` namespace. Because all hash functions take input of type `Byte[]`, it might be necessary to convert the source into a byte array before it is hashed. To create a hash for a string value, follow these steps:
+It's easy to generate and compare hash values using the cryptographic resources contained in the `System.Security.Cryptography` namespace. Because all hash functions take input of type `Byte[]`, it might be necessary to convert the source into a byte array before it's hashed. To create a hash for a string value, follow these steps:
 
 1. Open Visual Studio .NET or Visual Studio.
 2. Create a new Console Application in Visual C# .NET or in Visual C#  creates a public class for you along with an empty `Main()` method.
@@ -34,7 +32,7 @@ It is easy to generate and compare hash values using the cryptographic resources
     > [!NOTE]
     > In Visual C#. NET, *Class1.cs* is created by default. In Visual C#, *Program.cs* is created by default.
 
-3. Use the `using` directive on the `System`, `System.Security.Cryptography` and `System.Text` namespaces so that you are not required to qualify declarations from these namespaces later in your code. These statements must be used prior to any other declarations.
+3. Use the `using` directive on the `System`, `System.Security.Cryptography`, and `System.Text` namespaces so that you're not required to qualify declarations from these namespaces later in your code. These statements must be used before any other declarations.
 
     ```csharp
     using System;
@@ -50,7 +48,7 @@ It is easy to generate and compare hash values using the cryptographic resources
     byte[] tmpHash;
     ```
 
-5. Use the `GetBytes()` method, which is a member of the `System.Text.ASCIIEncoding` class, to convert your source string into an array of bytes (required as input to the hashing function).
+5. Use the `GetBytes()` method that's a member of the `System.Text.ASCIIEncoding` class, to convert your source string into an array of bytes (required as input to the hashing function).
 
     ```csharp
     sSourceData = "MySourceData";
@@ -68,7 +66,7 @@ It is easy to generate and compare hash values using the cryptographic resources
     tmpHash = new MD5CryptoServiceProvider().ComputeHash(tmpSource);
     ```
 
-7. The `tmpHash` byte array now holds the computed hash value (128-bit value=16 bytes) for your source data. It is often useful to display or store a value like this as a hexadecimal string, which the following code accomplishes:
+7. The `tmpHash` byte array now holds the computed hash value (128-bit value=16 bytes) for your source data. It's often useful to display or store a value like this as a hexadecimal string, which the following code accomplishes:
 
     ```csharp
     Console.WriteLine(ByteArrayToString(tmpHash));
@@ -88,7 +86,12 @@ It is easy to generate and compare hash values using the cryptographic resources
 
 ## Compare two hash values
 
-One of the purposes of creating a hash from source data is to provide a way to see if data has changed over time, or to compare two values without ever working with the actual values. In either case, you need to compare two computed hashes, which is easy if they are both stored as hexadecimal strings (as in the last step of the above section). However, it is quite possible that they will both be in the form of byte arrays. The following code, which continues from the code created in the previous section, shows how to compare two byte arrays.
+The purposes of creating a hash from source data are:
+
+- Providing a way to see if data has changed over time.
+- Comparing two values without ever working with the actual values.
+
+In either case, you need to compare two computed hashes. It's easy if they're both stored as hexadecimal strings (as in the last step of the above section). But it's possible that they'll both be in the form of byte arrays. The following code, which continues from the code created in the previous section, shows how to compare two byte arrays.
 
 1. Just below the creation of a hexadecimal string, create a new hash value based on new source data.
 
@@ -99,7 +102,7 @@ One of the purposes of creating a hash from source data is to provide a way to s
     tmpNewHash = new MD5CryptoServiceProvider().ComputeHash(tmpSource);
     ```
 
-2. The most straightforward way to compare two byte arrays is to loop through the arrays, comparing each individual element to its counterpart from the second value. If any elements are different, or if the two arrays are not the same size, the two values are not equal.
+2. The most straightforward way to compare two byte arrays is to loop through the arrays, comparing each individual element to its counterpart from the second value. If any elements are different, or if the two arrays aren't the same size, the two values aren't equal.
 
     ```csharp
     bool bEqual = false;
@@ -123,7 +126,9 @@ One of the purposes of creating a hash from source data is to provide a way to s
     Console.ReadLine();
     ```
 
-3. Save and then run your project to view the hexadecimal string created from the first hash value, and to find out if the new hash is equal to the original.
+3. Save and then run your project to:
+    - View the hexadecimal string created from the first hash value.
+    - Find out if the new hash is equal to the original.
 
 ## Complete code listing
 
