@@ -108,7 +108,7 @@ Process exclusions are necessary only if aggressive antivirus programs consider 
 - *ConfigMgr installation folder*\bin\x64\Cmupdate.exe
 - *Client installation folder*\Ccmrepair.exe (client-side)
 - *%windir%*\CCMSetup\Ccmsetup.exe (client-side)
-- *%windir%*\CCMSetup\autoupgrade\Ccmsetup*.exe (client-side)  (starting in current branch version 1910, this file has the name changed to Ccmsetup.\<Packageid>.\<PackageVversion>.exe)
+- *%windir%*\CCMSetup\autoupgrade\Ccmsetup*.exe (client-side)  (starting in current branch version 1910, this file has the name changed to Ccmsetup.\<Packageid>.\<PackageVersion>.exe)
 
 ## References
 
