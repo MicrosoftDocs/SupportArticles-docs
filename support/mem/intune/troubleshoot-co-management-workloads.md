@@ -130,6 +130,10 @@ In this case, do the following:
 - If you are taking [Path 1: Auto-enroll existing clients](/mem/configmgr/comanage/quickstart-paths#bkmk_path1), you can ignore this message because CMG isn't used.
 - If you are taking [Path 2: Bootstrap with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2), you must [install and configure the CMG](/mem/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway) and onboard the app to Azure AD.
 
+### I unassign Intune policies from a security group, but some settings remain
+
+Intune does not revert settings ([tattoo removal](https://docs.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot)) if the Device Configuration workload is set to Configuration Manager.  To enable tattoo removal, configure the workload in Configuration Manager and refresh policy on the device.
+
 ## References
 
 For more information about troubleshooting co-management issues, see the following articles:
