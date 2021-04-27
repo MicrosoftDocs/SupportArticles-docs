@@ -19,7 +19,7 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## INTRODUCTION
+## Introduction
 
 The Microsoft OLE DB Provider for Microsoft Jet and the Microsoft Access ODBC driver (Jet ODBC driver) provide an interface to Microsoft Office Access databases. The Microsoft OLE DB Provider for Jet and the Jet ODBC driver are available in 32-bit versions only.
 
