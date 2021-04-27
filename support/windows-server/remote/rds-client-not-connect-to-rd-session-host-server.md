@@ -1,6 +1,6 @@
 ---
 title: RDS client can't connect to RD Session Host server
-description: Discusses that an RDS client cannot connect to a session collection if the IP addresses of RD Session Host servers in the collection are changed. Provides a resolution for this problem.
+description: Solves an issue where an RDS client can't connect to a session collection. It occurs if the IP addresses of RD Session Host servers in the collection are changed.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
 ms.technology: windows-server-rds
 ---
-# RDS client cannot connect to RD Session Host server after the server IP address is changed
+# RDS client can't connect to RD Session Host server after the server IP address is changed
 
-This article provides a solution to an issue where Remote Desktop Services (RDS) client can't connect to RD Session Host server.
+This article provides a solution to an issue where Remote Desktop Services (RDS) client can't connect to Remote Desktop (RD) Session Host server.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2844958
@@ -28,23 +28,32 @@ _Original KB number:_ &nbsp; 2844958
 
 Considering the following scenario:
 
-- You set up a standard deployment of RDS in Windows Server 2012. The deployment contains Remote Desktop (RD) Session Host servers, an RD Connection Broker server, and an RD Web Access server.
+- You set up a standard deployment of RDS in Windows Server 2012. The deployment contains RD Session Host servers, an RD Connection Broker server, and an RD Web Access server.
 - You create a session collection that can be accessed by RDS clients through the RD Web Access website.
-- The IP addresses of all RD Session Host servers in the session collection are changed. In this scenario, the RDS clients cannot connect to the session collection, and you receive the following error message during the connection: Your credentials did not work.
+- The IP addresses of all RD Session Host servers in the session collection are changed.
+
+In this scenario, the RDS clients can't connect to the session collection, and you receive the following error message during the connection:
+
+> Your credentials did not work.
 
 ## Cause
 
-This problem occurs because of an obsolete registry entry in the following subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\ClusterSettings`  
-The SessionDirectoryRedirectionIP registry entry stores the IP address of an RD Session Host server that was assigned when the RDS deployment was created. Although the IP address of the RD Session Host server is changed, the IP address in the RD Connection Broker setting is not updated. Therefore, RDS clients cannot connect to the session collection.
+This problem occurs because of an obsolete registry entry in the following subkey:
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\ClusterSettings`
+
+The **`SessionDirectoryRedirectionIP`** registry entry stores the IP address of an RD Session Host server that was assigned when the RDS deployment was created. Although the IP address of the RD Session Host server is changed, the IP address in the RD Connection Broker setting isn't updated. So RDS clients can't connect to the session collection.
 
 ## Resolution
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
-To resolve this problem, delete the **SessionDirectoryRedirectionIP** registry entry of the following registry subkey from each RD Session Host server in the session collection:  
+To resolve this problem, delete the **`SessionDirectoryRedirectionIP`** registry entry of the following registry subkey from each RD Session Host server in the session collection:  
+
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\ClusterSettings`  
-Alternatively, you can run the following PowerShell script. This script deletes the registry entry from every RD Session Host server in the deployment.
+
+Or, you can run the following PowerShell script. This script deletes the registry entry from every RD Session Host server in the deployment.
 
 ```powershell
 Import-Module RemoteDesktop

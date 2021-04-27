@@ -1,10 +1,10 @@
 ---
-title: HTTPS site cannot be display in Internet Explorer
-description: This article describes the situation where https sites can't be displayed in Internet Explorer when SSL 2.0 and TLS 1.2 are loaded.
+title: HTTPS site can't be displayed in Internet Explorer
+description: Describes an issue where https sites can't display in Internet Explorer when SSL 2.0 and TLS 1.2 are loaded.
 ms.date: 06/09/2020
 ms.reviewer: 
 ---
-# Internet Explorer cannot display an HTTPS site when SSL 2.0 and TLS 1.2 are selected
+# Internet Explorer can't display an HTTPS site when SSL 2.0 and TLS 1.2 are selected
 
 This article provides a solution for Internet Explorer unable to display HTTPS websites.
 
@@ -13,17 +13,19 @@ _Original KB number:_ &nbsp; 2851628
 
 ## Symptoms
 
-Assume that you select SSL 2.0 and TLS 1.2 in the Internet Explorer 11 security settings. When you try to access an HTTPS website in Internet Explorer, you receive the following error message:
+You select SSL 2.0 and TLS 1.2 in the Internet Explorer 11 security settings. When you try to access an HTTPS website in Internet Explorer, you receive the following error message:
 
 > Internet Explorer cannot display the webpage
 
 ## Cause
 
-The issue occurs because SSL 2.0 and TLS 1.2 are not compatible with each other in Internet Explorer 9 and later versions.
+The issue occurs because SSL 2.0 and TLS 1.2 aren't compatible with each other in Internet Explorer 9 and later versions.
 
 ## Resolution
 
-To use client-side certificates to establish an HTTPS connection over TLS 1.2, you must disable SSL 2.0. For more information about how to do this, see [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).
+To use client-side certificates to establish an HTTPS connection over TLS 1.2, you must disable SSL 2.0.
+
+For more information about how to do it, see [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).
 
 > [!NOTE]
 > SSL 2.0 is disabled by default.
