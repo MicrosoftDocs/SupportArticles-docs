@@ -101,3 +101,5 @@
     items:
     - name: Import job fails with MailboxAmbiguous
       href: ../pst-import-service/import-fails-mailboxambiguous.md
+    - name: Import job common issues
+      href: ../pst-import-service/issues-with-pst-import-job.md
