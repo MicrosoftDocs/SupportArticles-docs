@@ -22,7 +22,7 @@ In the April 2005 Support Voice column, we inadvertently provided a link to the 
 
 ## What is considered high memory
 
-Obviously, this question is going to be dependent on volume and activity of specific applications. But, in general, high memory is when your Aspnet_wp.exe process (Internet Information Services (IIS)) or W3wp process (IIS) memory is consistently increasing and isn't returning to a comfortable level.
+Obviously, this question is going to be dependent on volume and activity of specific applications. But, in general, high memory is when your ASP.NET worker process (Aspnet_wp.exe) or Internet Information Services (IIS) worker process (W3wp.exe) memory is consistently increasing and isn't returning to a comfortable level.
 
 In general terms, a comfortable level would be under 600 MB in the default 2-GB user memory address space. Once the memory level is higher than that comfortable level, we're doing less than we should be. This behavior may affect other applications that are running on the system.
 
@@ -52,7 +52,7 @@ Also, when you do a final build of your application, make sure that you do it in
 
 First, batch compile will be disabled, even if it's set in this `compilation` element. What this means is that you create an assembly for every page in your application so that you can break into it. These assemblies can be scattered randomly across your memory space, making it more difficult for you to find the contiguous space to allocate memory.
 
-Second, the `executionTimeout` attribute ([\<httpRuntime> Element](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))) is set to a high number, overriding the default of 90 seconds. It's fine when debugging, because you can't have the application time out while you patiently step through the code to find your blunders. However, it's a significant risk in production. It means that if you have a rogue request for whatever reason, it will hold on to a thread and continue any detrimental behavior for days rather than just a minute and a half.
+Second, the `executionTimeout` attribute ([\<httpRuntime> Element](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))) is set to a high number, overriding the default of 90 seconds. It's fine when debugging, because you can't have the application time out while you patiently step through the code to find your blunders. However, it's a significant risk in production. It means that if you have a rogue request for whatever reason, it will hold on to a thread and continue any detrimental behavior for days rather than few minutes.
 
 Finally, you'll be creating more files in your *Temporary ASP.NET* files folder. And the `System.Diagnostics.DebuggableAttribute` ([System.Diagnostics Namespace](https://docs.microsoft.com/dotnet/api/system.diagnostics?view=dotnet-plat-ext-3.1&preserve-view=true) gets added to all generated code, which can cause performance degradation.
 

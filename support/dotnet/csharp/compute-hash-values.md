@@ -40,7 +40,7 @@ It's easy to generate and compare hash values using the cryptographic resources 
     using System.Text;
     ```
 
-4. Declare a string variable to hold your source data, and two byte arrays (of undefined size) to hold the source bytes and the resulting hash value.
+4. Declare a string variable to hold your source data, and two arrays of bytes (of undefined size) to hold the source bytes and the resulting hash value.
 
     ```csharp
     string sSourceData;
@@ -91,7 +91,7 @@ The purposes of creating a hash from source data are:
 - Providing a way to see if data has changed over time.
 - Comparing two values without ever working with the actual values.
 
-In either case, you need to compare two computed hashes. It's easy if they're both stored as hexadecimal strings (as in the last step of the above section). But it's possible that they'll both be in the form of byte arrays. The following code, which continues from the code created in the previous section, shows how to compare two byte arrays.
+In either case, you need to compare two computed hashes. It's easy if they're both stored as hexadecimal strings (as in the last step of the above section). But it's possible that they'll both be in the form of byte arrays. The following code, which continues from the code created in the previous section, shows how to compare two arrays of bytes.
 
 1. Just below the creation of a hexadecimal string, create a new hash value based on new source data.
 
@@ -102,7 +102,7 @@ In either case, you need to compare two computed hashes. It's easy if they're bo
     tmpNewHash = new MD5CryptoServiceProvider().ComputeHash(tmpSource);
     ```
 
-2. The most straightforward way to compare two byte arrays is to loop through the arrays, comparing each individual element to its counterpart from the second value. If any elements are different, or if the two arrays aren't the same size, the two values aren't equal.
+2. The most straightforward way to compare two arrays of bytes is to loop through the arrays, comparing each individual element to its counterpart from the second value. If any elements are different, or if the two arrays aren't the same size, the two values aren't equal.
 
     ```csharp
     bool bEqual = false;
