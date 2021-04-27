@@ -40,7 +40,7 @@ To fix this issue, follow these steps to verify the status of the JRE installat
      > [!NOTE]
      > The folder is not `C:\Program Files (x86)\Java\`
 
-   - JRE 7 and JRE 8 are both compatible for this copy activity. JRE 6 and v ersions that are earlier than JRE 6 have not been validated for this use.
+   - JRE 7 and JRE 8 are both compatible for this copy activity. JRE 6 and versions that are earlier than JRE 6 have not been validated for this use.
 
 2. Check the registry for the appropriate settings. To do this, follow these steps:
 
