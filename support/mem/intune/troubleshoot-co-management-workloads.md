@@ -132,7 +132,7 @@ In this case, do the following:
 
 ### I unassign Intune policies from a security group, but some settings remain
 
-Intune does not revert settings ([tattoo removal](https://docs.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot)) if the Device Configuration workload is set to Configuration Manager.  To enable tattoo removal, configure the workload in Configuration Manager and refresh policy on the device.
+Intune does not revert settings ([tattoo removal](https://docs.microsoft.com/mem/intune/configuration/device-profile-troubleshoot)) if the Device Configuration workload is set to Configuration Manager. To enable tattoo removal, configure the workload in Configuration Manager and refresh policy on the device.
 
 ## References
 
