@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to deploy a Known Issue Rollback
-description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed or local devices.
-ms.date: 04/12/2021
+description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
+ms.date: 04/26/2021
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
@@ -17,7 +17,7 @@ keywords: Windows Update, known issue, kir, group policy, rollback
 
 # How to use Group Policy to deploy a Known Issue Rollback
 
-This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed or local devices.
+This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 
 _Applies to:_ &nbsp; Windows Server 2019, version 1809 and later versions; Windows 10, version 1809 and later versions
 
@@ -28,7 +28,7 @@ Microsoft has developed a new Windows servicing technology that's named [KIR](ht
 > [!IMPORTANT]  
 > KIRs apply to only nonsecurity updates. This is because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
 
-Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in an Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > You have to restart the affected computers in order to apply this Group Policy change.
@@ -48,9 +48,9 @@ To see an example of a KIR MSI file, download [Windows 10 (2004 & 20H2) Known Is
 
 A KIR policy definition has a limited lifespan (a few months, at most). After Microsoft publishes an amended update to address the original issue, the KIR is no longer necessary. The policy definition can then be removed from the Group Policy infrastructure.
 
-## Using Group Policy to apply a KIR to an enterprise device
+## Using Group Policy to apply a KIR to a single device
 
-To use Group Policy to apply a KIR to a single enterprise device, follow these steps:
+To use Group Policy to apply a KIR to a single device, follow these steps:
 
 1. Download the KIR policy definition MSI file to the device.  
    > [!IMPORTANT]  
@@ -65,9 +65,9 @@ To use Group Policy to apply a KIR to a single enterprise device, follow these s
 
 For more information about how to use the Local Group Policy Editor, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11)).
 
-## Using Group Policy to apply a KIR to devices in an Azure AD or AD DS domain
+## Using Group Policy to apply a KIR to devices in a hybrid Azure AD or AD DS domain
 
-To apply a KIR policy definition to your on-premises AD DS-managed or AAD-managed devices, follow these steps:
+To apply a KIR policy definition to devices that belong to a hybrid Azure AD or AD DS domain, follow these steps:
 
 1. [Download and install the KIR MSI files](#install)
 1. [Create a Group Policy Object (GPO)](#gpo).
