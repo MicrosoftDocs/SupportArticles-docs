@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2851628
 
 ## Symptoms
 
-You select SSL 2.0 and TLS 1.2 in the Internet Explorer 11 security settings. When you try to access an HTTPS website in Internet Explorer, you receive the following error message:
+You select SSL 2.0 and TLS 1.2 in the Internet Explorer 11 security settings. When you access an HTTPS website in Internet Explorer, you receive the following error message:
 
 > Internet Explorer cannot display the webpage
 

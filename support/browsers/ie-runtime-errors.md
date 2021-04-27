@@ -36,7 +36,7 @@ Because this type of error message doesn't apply to you, you can prevent it from
 
 2. In the **Internet Options** dialog box, select the **Advanced** tab.
 
-3. Click to select the **Disable script debugging (Internet Explorer)** and **Disable script debugging (Other)** check boxes, and then click to clear the **Display a notification about every script error** check box.
+3. Click to select the **Disable script debugging (Internet Explorer)** and **Disable script debugging (Other)** check boxes. Then click to clear the **Display a notification about every script error** check box.
 
    :::image type="content" source="media/ie-runtime-errors/internet-options.png" alt-text="Internet Options" border="false":::
 

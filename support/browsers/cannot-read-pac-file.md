@@ -7,7 +7,7 @@ ms.reviewer: Aloot, pierrelc
 ---
 # Windows 10 doesn't read a PAC file referenced by a file protocol
 
-This article solves an issue where a proxy auto-configuration (PAC) file that's referenced by a file protocol can't be read by Internet Explorer or Microsoft Edge.
+This article solves an issue where Internet Explorer or Microsoft Edge can't read a proxy auto-configuration (PAC) file referenced by a file protocol.
 
 _Original product version:_ &nbsp; Windows 10, Microsoft Edge, Internet Explorer 11  
 _Original KB number:_ &nbsp; 4025058
