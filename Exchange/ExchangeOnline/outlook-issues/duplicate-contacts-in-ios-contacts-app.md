@@ -35,6 +35,8 @@ Your Outlook contacts might be affected by this issue if the following condition
 
     In the iOS Contacts app, when you open a contact that was created from Outlook, you see the field "Outlook ms-outlook://people/\<account>" field that's shown in the following screenshot.
 
+    :::image type="content" source="media/duplicate-contacts-in-ios-contacts-app/outlook-contact.png" alt-text="Screenshot of the contact info that's created from Outlook.":::
+
 ## Why Outlook contacts are duplicated
 
 Because of the current design of iOS and the contact synchronization feature in Outlook for iOS, syncs often don't finish. The sync process can't run continuously in the background to ensure a consistent steady state. This causes sync errors. Over time, the accumulated errors cause duplicate contacts to be created.
