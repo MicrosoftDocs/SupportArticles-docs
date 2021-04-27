@@ -33,7 +33,7 @@ Your Outlook contacts might be affected by this issue if the following condition
 
 - Duplicates appear for Outlook contacts only and not for contacts created outside Outlook.
 
-    In the iOS Contacts app, when you open a contact that was created from Outlook, you see the field "Outlook ms-outlook://people/\<account>" field that's shown in the following screenshot.
+    In the iOS Contacts app, when you open a contact that was created from Outlook, you see the "Outlook ms-outlook://people/\<account>" field that's shown in the following screenshot.
 
     :::image type="content" source="media/duplicate-contacts-in-ios-contacts-app/outlook-contact.png" alt-text="Screenshot of the contact info that's created from Outlook.":::
 
@@ -56,7 +56,7 @@ To remove duplicate Outlook contacts, do the following:
 
 3. Re-enable the **Save contacts** setting for the affected account. You might be prompted to keep the phone on and plugged in during the sync process.
 
-**Note:** Although these steps successfully remove the duplicate contacts, the issue might reoccur if you have a large number list of contacts. If the issue does reoccur, you will have to repeat these steps for each occurrence of the issue.
+**Note:** Although these steps successfully remove the duplicate contacts, the issue might reoccur if you have a large list of contacts. If the issue does reoccur, you will have to repeat these steps for each occurrence of the issue.
 
 ## Status
 
