@@ -28,9 +28,7 @@ To work around this problem, use one of the following methods:
 
 Download the VB6 Mouse Wheel.exe file that includes the add-in DLL and the code that is used to create the add-in DLL.
 
-1. Download the VB6 Mouse Wheel.exe file. The following file is available for download from the Microsoft Download Center:  
-[Download the VB6MouseWheel.EXE package now.](https://download.microsoft.com/download/e/f/b/efb39198-7c59-4ace-a5c4-8f0f88e00d34/vb6mousewheel.exe)
-
+1. Download the VB6 Mouse Wheel.exe file.
     For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
 
 2. Click **Start**, click **Run**, type `regsvr32 <path>\VB6IDEMouseWheelAddin.dll`, and then click **OK**.
