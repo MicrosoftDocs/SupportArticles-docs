@@ -21,7 +21,7 @@ search.appverid: MET150
 ---
 # Email messages are sent to the Poison queue
 
-If email messages are stuck in Poison queue on one of the servers in your environment that's running Microsoft Exchange Server, try the following steps to troubleshoot the issue:
+If email messages are stuck in the Poison queue on one of the servers in your environment that's running Microsoft Exchange Server, try the following steps to troubleshoot the issue:
 
 1. Check the event log on the server. You might find several relevant events logged, such as Event IDs 10001, 4010, 4007, 1051, 17025, 4999, or 2203. The messages in event IDs 4010, 4999, and 2203 should resemble the following samples, and will contain the text that's shown as bold.
 
