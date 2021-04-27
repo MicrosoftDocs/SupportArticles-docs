@@ -30,7 +30,8 @@ Start the Spedesign.exe process by using a different user account. To do this, f
 1. Go to the SharePoint Designer 2013 installation folder. By default, the folder is installed in the following location:
 
     `C:\Program Files\Microsoft Office\Office15`
-
+    or
+    `C:\Program Files (x86)\Microsoft Office\Office15`
 2. Press and hold the Shift key, right-click Spedesign.exe, and then click **Run as different user**.
 3. Type the credential of the user and then click **OK**.
 
