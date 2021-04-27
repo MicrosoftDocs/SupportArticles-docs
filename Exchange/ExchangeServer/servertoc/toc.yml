@@ -287,6 +287,8 @@
       href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
     - name: ActiveSync clients can't connect
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
+    - name: Add-ins will stop working in OWA
+      href: ../client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md
     - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
     - name: Can't access archive mailbox in Outlook
@@ -447,6 +449,8 @@
       href: ../mailflow/edge-transport-servers-reject-messages.md
     - name: Email body part is shown incorrectly as an attachment
       href: ../mailflow/message-body-shown-as-attachment.md
+    - name: Emails are placed in the Poison queue
+      href: ../mailflow/emails-placed-in-poison-queue.md
     - name: Emails are stuck in queues
       href: ../mailflow/email-stuck-queues.md
     - name: Emails aren't delivered to all recipients
