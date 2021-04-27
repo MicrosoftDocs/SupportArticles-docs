@@ -34,7 +34,7 @@ If you're importing multiple PSTs into the same mailbox, the ingestion rate of e
 
 ## Import job shows skipped items because of errors
 
-If there are corrupted items within the PST files, they are skipped during the import job. The number of skipped items is indicated in the **Items skipped (corrupted)** column of the Status message in the Import Service portal UI.
+If there are corrupted items within the PST files, they are skipped during the import job. The number of skipped items is indicated in the **Items skipped (corrupted)** column of the Status message in the Import Service UI.
 
 :::image type="content" source="media/issues-with-pst-import-job/status-message.png" alt-text="Screenshot of Status page with items skipped.":::
 
