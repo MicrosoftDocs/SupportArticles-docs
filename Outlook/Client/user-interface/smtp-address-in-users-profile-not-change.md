@@ -1,8 +1,8 @@
 ---
 title: SMTP address in user's profile doesn't change
 description: Describes an Exchange Server 2013 and Exchange Server 2016 issue in which the SMTP address that's displayed in a user's profile fails to change when the user's primary email address is changed. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

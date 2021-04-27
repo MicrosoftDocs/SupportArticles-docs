@@ -1,8 +1,8 @@
 ---
 title: SSO no longer works for sign-in
 description: Provides a workaround for sign-in issues when using SSO if ADAL and AD FS are used in Skype for Business 2016.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

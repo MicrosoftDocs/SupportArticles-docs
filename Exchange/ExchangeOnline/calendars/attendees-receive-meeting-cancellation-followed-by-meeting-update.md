@@ -1,8 +1,8 @@
 ---
 title: Attendees get cancellation followed by meeting update
 description: Describes an issue that triggers a meeting cancellation to external recipients followed by a meeting update that corrects the cancellation. Occurs in Microsoft Exchange. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

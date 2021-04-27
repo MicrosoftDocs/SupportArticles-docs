@@ -1,8 +1,8 @@
 ---
 title: Lots of false positives are generated when the SPF record hard fails advanced spam filtering option is enabled.
 description: Describes how to enforce the ASF rule when the SPF record hard fails advanced spam filtering option is enabled.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

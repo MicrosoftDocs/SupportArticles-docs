@@ -1,8 +1,8 @@
 ---
 title: Excel incorrectly assumes that the year 1900 is a leap year
 description: Explains why the year 1900 is treated as a leap year in Excel 2000. This article outlines the behaviors that occur if this specific issue is corrected.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

@@ -1,8 +1,8 @@
 ---
 title: Can't set up an organization relationship
 description: Fixes an issue in which you receive a "Creating Organization Relationships" error message when you run the Get-FederatedInformation cmdlet to set up an organization relationship.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

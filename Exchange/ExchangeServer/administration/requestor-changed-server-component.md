@@ -1,8 +1,8 @@
 ---
 title: Server component state remains Inactive
 description: This article provides a resolution to resolve the issue that server components remains inactive even if you change the state to Active.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

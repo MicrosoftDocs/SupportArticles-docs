@@ -1,8 +1,8 @@
 ---
 title: Outlook connection issues with Exchange mailboxes because of the RPC encryption requirement
 description: Fixes some mailbox connection issues for Outlook 2013, Outlook 2010, or Outlook 2007 that has an Exchange 2010, Exchange 2013, or Exchange 2016 mailbox configured.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -204,7 +204,7 @@ To disable the required encryption between Outlook and Exchange, follow these st
     To re-enable the RPC encryption requirement on your Exchange servers that have the **Client Access Server** role, run the following command in the Exchange Management Shell:
 
     ```powershell
-     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True -EncryptionRequired:$True
+     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True
     ```
 
     > [!NOTE]

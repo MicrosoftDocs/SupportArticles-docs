@@ -1,8 +1,8 @@
 ---
 title: Outlook Web App doesn't redirect to ADFS login
 description: Describes a problem in which Outlook Web App published through WAP with ADFS pre-authentication doesn't redirect to ADFS login after the ADFS SSO token expires.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

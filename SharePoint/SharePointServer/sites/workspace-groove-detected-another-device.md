@@ -1,7 +1,7 @@
 ---
 title: Error when you start SharePoint Workspace or Groove
 description: Describe an issue that occurs because the SharePoint Worspace or Groove device URL must be unique for each computer. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: lgreer
 ms.custom: CSSTroubleshoot
 appliesto:

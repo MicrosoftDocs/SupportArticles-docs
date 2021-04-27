@@ -1,8 +1,8 @@
 ---
 title: Can't run HCW without sufficient permissions
 description: Fixes an issue that occurs when the user account that you're using to run the wizard doesn't have sufficient permissions.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

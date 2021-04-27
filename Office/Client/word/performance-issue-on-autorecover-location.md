@@ -1,7 +1,7 @@
 ---
 title: Performance issues with Auto-Recover location on network share
 description: If the Auto-Recover file location points to a network share, a general performance degradation is visible after an Auto-Save operation. This includes sluggish typing and slow refresh when scrolling.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Word 2010
 - Word 2013

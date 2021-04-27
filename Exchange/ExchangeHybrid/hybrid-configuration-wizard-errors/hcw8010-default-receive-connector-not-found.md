@@ -1,8 +1,8 @@
 ---
 title: Default Receive Connector cannot be found on server
 description: Fixes an issue that returns HCW8010 error when you run the Hybrid Configuration wizard in an Exchange Online or Exchange Server 2013 environment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

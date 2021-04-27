@@ -285,7 +285,7 @@
       href: ../groups-and-distribution-lists/cannot-remove-members-exceeding-limit.md
     - name: Can't upgrade distribution lists to Office 365 groups
       href: ../groups-and-distribution-lists/cannot-upgrade-distribution-lists-to-office-365-groups.md
-    - name: Common tasks to manage O365 groups
+    - name: Common tasks to manage Microsoft 365 groups
       href: ../groups-and-distribution-lists/o365-group-tasks.md
     - name: Mail-enabled groups aren't synced to O365
       href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md

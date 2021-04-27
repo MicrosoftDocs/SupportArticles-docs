@@ -2,8 +2,8 @@
 title: Test-OwaConnectivity and Test-EcpConnectivity fail
 description: Describes a problem in which the external mode of the Test-OwaConnectivity and Test-EcpConnectivity cmdlet tests fails when an Exchange Server 2013 server acts as a front door for Exchange Server 2010 servers.
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

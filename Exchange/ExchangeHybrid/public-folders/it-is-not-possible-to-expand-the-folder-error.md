@@ -1,8 +1,8 @@
 ---
 title: It is not possible to expand the folder error
 description: Describes an issue that occurs when you try to access Exchange public folders in Exchange Online. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

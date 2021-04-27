@@ -1,8 +1,8 @@
 ---
 title: Cannot view cross-forest calendar data
 description: Describes an issue in which you can't view cross-forest calendar data in Microsoft Office 365 hybrid.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

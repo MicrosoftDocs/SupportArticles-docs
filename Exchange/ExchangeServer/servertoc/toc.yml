@@ -279,12 +279,16 @@
     items:
     - name: "\"Insecure connection\" error in Outlook for iOS or Android"
       href: ../client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
+    - name: "\"The connection to your mail server timed out\" error in Outlook for iOS or Outlook for Android"
+      href: ../client-connectivity/connection-to-mail-server-timed-out.md
     - name: "\"You've exceeded the storage limit for your mailbox\" error"
       href: ../client-connectivity/you-have-exceeded-the-storage-limit-for-your-mailbox.md
     - name: 454 4.7.0 Temporary authentication failure
       href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
     - name: ActiveSync clients can't connect
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
+    - name: Add-ins will stop working in OWA
+      href: ../client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md
     - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
     - name: Can't access archive mailbox in Outlook

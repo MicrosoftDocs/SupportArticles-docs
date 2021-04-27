@@ -1,14 +1,14 @@
 ---
 title: Edge Transport server version isn't updated 
 description: Discusses an issue in which the Exchange Server version for an Edge Server isn't updated in the Exchange Control Panel after upgrade.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.reviewer: v-six, genli, christys, btalb;
+ms.reviewer: v-swei, genli, christys, btalb;
 ms.custom: 
 - Exchange Server
 - CSSTroubleshoot

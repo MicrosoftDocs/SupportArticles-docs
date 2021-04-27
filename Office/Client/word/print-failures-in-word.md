@@ -1,7 +1,7 @@
 ---
 title:  Troubleshooting why Word won't print
 description: Describes how to diagnose print failures in Word, how to isolate the cause of the print failure, how to resolve the issue.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Word 2019
 - Word 2016

@@ -1,7 +1,7 @@
 ---
 title: Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features
 description: Fixes an Authentication realm issue for provider-hosted add-ins, Workflow Manager, and cross-farm trust scenarios that use SharePoint hybrid features.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2016

@@ -1,14 +1,14 @@
 ---
 title: Office 365 app launcher and menu bar icons are blank
 description: Describes a scenario in which icons are missing from the tiles in the Office 365 app launcher and from the menu bar in Outlook on the web.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 search.appverid: 
 - MET150
 appliesto:

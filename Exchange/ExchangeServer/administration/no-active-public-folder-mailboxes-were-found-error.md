@@ -1,8 +1,8 @@
 ---
 title: No active public folder mailboxes were found error
 description: No active public folder mailboxes were found error occurs when you try to create a public folder in Exchange Server 2016 and Exchange Server 2013. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

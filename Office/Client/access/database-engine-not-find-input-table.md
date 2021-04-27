@@ -1,7 +1,7 @@
 ---
 title: Access database engine cannot find the input table
 description: Describes the issue in which you receive an error when you try to open a table in an Access 2010 template (*.accdt). Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: wouterst, tputt, krislill, jenl
 appliesto:

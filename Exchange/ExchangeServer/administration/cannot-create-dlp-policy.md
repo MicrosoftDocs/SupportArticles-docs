@@ -2,8 +2,8 @@
 title: Cannot create a DLP policy
 description: Resolves an issue in which you receive an error message when you try to create a DLP policy in Exchange Server 2013.
 ms.date: 08/05/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

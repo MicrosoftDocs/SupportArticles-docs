@@ -1039,8 +1039,6 @@
           href: ../word/merge-word-documents.md
         - name: Object may not appear in Word 2010
           href: ../word/object-not-appear-in-word-2010.md
-        - name: Opening file is blocked by registry policy
-          href: ../word/opening-file-blocked-by-registry-policy.md
         - name: Operating parameter limitations and specifications
           href: ../word/operating-parameter-limitation.md
         - name: Performance issues with AutoRecover location
@@ -1063,8 +1061,6 @@
           href: ../word/print-failures-word-for-office-365-on-win-10.md
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
-        - name: Word could not create the work file
-          href: ../word/word-could-not-create-the-work-file.md
         - name: Word slows or stops responding
           href: ../word/word-stops-responding.md
         - name: You're prompted to save changes to global template

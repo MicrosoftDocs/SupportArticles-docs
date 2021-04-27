@@ -1,8 +1,8 @@
 ---
 title: 0x8007007A when downloading Offline Address Book
 description: Fixes an issue in which you receive an error message when you try to download an Offline Address Book in Outlook 2013 or Outlook 2010.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

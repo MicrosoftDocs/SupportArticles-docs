@@ -1,8 +1,8 @@
 ---
 title: Can't run Hybrid Configuration wizard with an exception error
 description: Fixes an issue that occurs when you run the Hybrid Configuration wizard from a server on which the Client Access server role isn't installed.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

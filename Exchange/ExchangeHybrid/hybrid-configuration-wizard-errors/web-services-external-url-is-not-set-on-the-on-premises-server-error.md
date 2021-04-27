@@ -1,8 +1,8 @@
 ---
 title: Web Services External Url not set on On-Premises error
 description: Describes a problem that occurs when the external URL is not set up for Exchange Web Services. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

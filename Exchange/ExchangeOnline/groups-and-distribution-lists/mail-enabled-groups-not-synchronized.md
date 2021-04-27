@@ -1,8 +1,8 @@
 ---
 title: Mail-enabled groups aren't synchronized to Office 365
 description: Discusses an issue in which mail-enabled groups that have an email address aren't synced from an on-premises environment to Office 365.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

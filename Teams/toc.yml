@@ -17,6 +17,8 @@
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name:  Can't send messages to a group chat
       href: ./teams-administration/unable-send-message-group-chat.md
+    - name: Error switching a tenant to Teams Only mode
+      href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Organizations can't prevent users from changing profile photos
@@ -127,10 +129,10 @@
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
   - name: Meetings
     items:
+    - name: Issues with meeting recordings
+      href: ./meetings/troubleshoot-meeting-recording-issues.md
     - name: How to join a Microsoft Teams meeting
       href: ./meetings/how-to-join-a-teams-meeting.md
-    - name: Troubleshoot Teams meeting recording issues
-      href: ./meetings/troubleshoot-meeting-recording-issues.md
   - name: Mobile
     items:
     - name: Can't see auto-favorited channels in mobile app

@@ -1,8 +1,8 @@
 ---
 title: Shared mail folders are downloaded in Cached mode
 description: Provides details on how to disable the download of shared mail folders in Cached mode in Outlook 2010 and later versions. By default, Outlook 2010 and later versions download shared folders that contain mail items.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,13 +1,13 @@
 ---
 title: Memory usage in the 32-bit edition of Excel
 description: Describes memory usage after you upgrade from Excel 2010 to Excel 2013.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150

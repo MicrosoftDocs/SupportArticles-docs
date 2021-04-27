@@ -1,8 +1,8 @@
 ---
 title: SharePoint 2013 SP1 is supported in Windows Server 2012 R2
 description: Microsoft supports the installation of SharePoint Server 2013 SP1 in a Windows Server 2012 R2-based environment.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

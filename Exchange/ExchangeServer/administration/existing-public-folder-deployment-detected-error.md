@@ -1,8 +1,8 @@
 ---
 title: An existing Public Folder deployment has been detected error in Exchange Server
 description: Error occurs when you create a public folder mailbox in Exchange 2013 or Exchange 2016, because there's an existing public folder from a legacy version of Exchange whose data must be migrated.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

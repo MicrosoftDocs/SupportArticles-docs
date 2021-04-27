@@ -1,8 +1,8 @@
 ---
 title: Cannot add public folder permissions
 description: Describes an error message that occurs when a user in a hybrid deployment tries to add public folder permissions for a cross-forest user in Outlook. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

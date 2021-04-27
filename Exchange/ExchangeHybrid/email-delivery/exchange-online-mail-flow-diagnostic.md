@@ -1,8 +1,8 @@
 ---
 title: Exchange Online Mail Flow Diagnostic
 description: Describes the data that's collected by the Exchange Online Mail Flow Diagnostic tool.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

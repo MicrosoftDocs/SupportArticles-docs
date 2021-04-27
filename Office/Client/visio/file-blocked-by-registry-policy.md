@@ -1,13 +1,13 @@
 ---
 title: Error when you open a file type blocked by registry policy setting
 description: Resolves an issue in which you receive an error message when you try to open a drawing file whose file type was blocked by an administrator in Visio 2013. This issue also occurs when you try to save a drawing file to a blocked file type.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: dkuy, nathanad
 search.appverid: 

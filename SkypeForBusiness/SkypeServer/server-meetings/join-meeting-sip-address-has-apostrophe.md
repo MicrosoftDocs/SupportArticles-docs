@@ -1,7 +1,7 @@
 ---
 title: Can't join meeting created by a user whose SIP address contains apostrophe
 description: Describes an issue in which Lync Server 2010 does not support the use of an apostrophe (') or a dash (-) in the SIP address of a user.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: v-miazha, chtart, anirudd, terrya, lcse, rtcse, uckbprev, acorman
 appliesto:

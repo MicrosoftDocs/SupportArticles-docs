@@ -1,8 +1,8 @@
 ---
 title: Issues when using Autodiscover service
 description: Describes an issue in which users can't create new Outlook profiles, view free busy, or connect to a shared mailbox or a public folder in Microsoft 365. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

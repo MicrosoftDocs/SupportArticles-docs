@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot directory synchronization errors with event 6941
 description: Discusses an issue in which an admin receives a  "Directory Synchronization Error Report" email message in Office 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Azure Active Directory
 - Office 365 Identity Management
