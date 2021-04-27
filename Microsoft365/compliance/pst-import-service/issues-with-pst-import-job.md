@@ -48,7 +48,7 @@ The output of this cmdlet should resemble the following sample. The number of co
 
 :::image type="content" source="media/issues-with-pst-import-job/baditems.png" alt-text="Screenshot of cmdlet output.":::
 
-To fix the skipped items issue, do the following:
+To fix the skipped items, do the following:
 
 1. Run Scanpst.exe to diagnose and fix the errors in the PST files.
 2. Upload the PST files again to the Azure storage location.
