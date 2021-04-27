@@ -2,6 +2,14 @@
 
 
 
+## Week of April 19, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/22/2021 | [Outlook not responding error or Outlook freezes](/outlook/troubleshoot/performance/outlook-not-responding-error-or-outlook-freezes) | modified |
+
+
 ## Week of April 12, 2021
 
 
@@ -64,11 +72,3 @@
 | 3/24/2021 | [Outlook for Mac repeatedly prompts for credentials](/outlook/troubleshoot/send-receive-emails/prompted-for-credentials-modern-authentication) | modified |
 | 3/24/2021 | [Listing some issues for Outlook for iOS and Android](/outlook/troubleshoot/outlook-mobile-welcome) | modified |
 | 3/24/2021 | [Listing some issues for Outlook Experts](/outlook/troubleshoot/outlook-experts-welcome) | modified |
-
-
-## Week of March 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/15/2021 | [Office program crashes due to the SendToBluetooth add-in](/outlook/troubleshoot/performance/office-program-crashes-caused-by-add-in) | modified |
