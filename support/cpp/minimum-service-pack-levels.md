@@ -16,11 +16,11 @@ _Original KB number:_ &nbsp; 2661358
 
 The Microsoft Download Center pages for Visual C++ Redistributable Packages don't consistently show the specific minimum service pack levels that are required for the target operating systems.
 
-The following sections indicate the supported operating systems and service packs levels for each Visual C++ Redistributable Package. Each section also includes a link to the Download Center page for that package. Because some Redistributable Packages were tested and published before newer Windows versions, newer Windows versions might not be listed in the **Supported platforms** section on the download page. When a new Windows version is released, testing is done to ensure that the compatibility between the Visual C++ Redistributable Package and Windows is maintained.
+The following sections indicate the supported operating systems and service packs levels for each Visual C++ Redistributable Package. Each section also includes a link to the Download Center page for that package. Some Redistributable Packages were tested and published before newer Windows versions. So newer Windows versions might not be listed in the **Supported platforms** section on the download page. When a new Windows version is released, testing is done to ensure the compatibility between the Visual C++ Redistributable Package and Windows.
 
-The support lifecycle for the VC++ Redistributables is tied to the lifecycles of both the corresponding Visual Studio version and the Windows platform on which it's used. If the VC++ Redistributable is installed by a product that is still in support, then the redistributable is in support per the [Lifecycle FAQ—General Policy](https://support.microsoft.com/help/17140) for that product.
+The support lifecycle for the Visual C++ Redistributable is tied to the lifecycles of both the corresponding Visual Studio version and the Windows platform on which it's used. If the Visual C++ Redistributable is installed by a product that's still in support, the redistributable is in support per the [Lifecycle FAQ—General Policy](https://support.microsoft.com/help/17140) for that product.
 
-For more information on the support lifecycle for Visual Studio or Windows versions, search for the specific products on our [Microsoft Support Lifecycle site](https://support.microsoft.com/hub/4095338).
+For more information about the support lifecycle for Visual Studio or Windows versions, see [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338).
 
 ## Visual C++ Redistributable for Visual Studio 2015
 

@@ -2,7 +2,7 @@
 title: API call to performance counters is delayed
 description: Fixes an issue in which API calls of performance counters are delayed 3 or 5 minutes inside a container.
 ms.date: 10/29/2020
-author: xl989
+author: v-lianna
 ms.author: v-lianna
 manager: dscontentpm
 audience: itpro
