@@ -139,7 +139,7 @@ Peer cache clients prioritize peer cache sources to download content. This prece
 ```
 
 > [!NOTE]
-
+>
 > - Clients can download content from only the peer cache sources that are in their current boundary group.
 > - If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.
 > - If a client is in more than one boundary group, enable the **Allow peer download in this boundary group** option in each boundary group. If this option is disabled in any boundary group, the client won't use the peer cache optimization.
