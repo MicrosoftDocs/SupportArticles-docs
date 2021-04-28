@@ -4,7 +4,7 @@ description: Describes and illustrates through log file examples how to configur
 author: helenclu
 ms.author: naghura
 ms.reviewer: vinpa,brianhun
-ms.date: 04/15/2021
+ms.date: 04/16/2021
 ---
 # Configure peer cache for Configuration Manager clients
 
