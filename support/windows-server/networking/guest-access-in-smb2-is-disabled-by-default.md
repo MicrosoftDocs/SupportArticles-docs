@@ -17,21 +17,22 @@ ms.technology: networking
 
 This article describes information about Windows disabling guest access in SMB2 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019
 _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
 
-In Windows 10, Windows Server 2019, or Windows Server 2016, the SMB2 client no longer allows the following actions:
+Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2 client no longer allows the following actions: 
 
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
 
 SMBv2 has the following behavior in these versions of Windows:
 
-- Windows 10 Enterprise and Windows 10 Education no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows Server 2016 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows 10 Home and Professional editions are unchanged from their previous default behavior.
+- Windows 10 Enterprise and Windows 10 Education RS3 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows 10 Pro version 1809 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows Server 2019 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows 10 Home is unchanged from its previous default behavior.
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive the following error message:
 

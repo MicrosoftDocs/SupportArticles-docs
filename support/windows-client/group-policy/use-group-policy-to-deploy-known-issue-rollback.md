@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to deploy a Known Issue Rollback
-description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed or local devices.
-ms.date: 04/12/2021
+description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
+ms.date: 04/26/2021
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
@@ -17,18 +17,18 @@ keywords: Windows Update, known issue, kir, group policy, rollback
 
 # How to use Group Policy to deploy a Known Issue Rollback
 
-This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed or local devices.
+This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 
 _Applies to:_ &nbsp; Windows Server 2019, version 1809 and later versions; Windows 10, version 1809 and later versions
 
 ## Summary
 
-Microsoft has developed a new Windows servicing technology that's named [KIR](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831) for Windows Server 2019 and Windows 10, versions 1809 and later versions. For the supported versions of Windows, a KIR rolls back a specific change that was applied as part of a nonsecurity Windows Update release. All other changes that were made as a part of that release remain intact. By using this technology, if a Windows update causes a regression or other problem, you don't have to uninstall the entire update and return the system to the last known good configuration. You roll back only the change that caused the problem. This rollback is temporary. After Microsoft releases a new update that fixes the problem, the rollback is no longer nevessary.
+Microsoft has developed a new Windows servicing technology that's named [KIR](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831) for Windows Server 2019 and Windows 10, versions 1809 and later versions. For the supported versions of Windows, a KIR rolls back a specific change that was applied as part of a nonsecurity Windows Update release. All other changes that were made as a part of that release remain intact. By using this technology, if a Windows update causes a regression or other problem, you don't have to uninstall the entire update and return the system to the last known good configuration. You roll back only the change that caused the problem. This rollback is temporary. After Microsoft releases a new update that fixes the problem, the rollback is no longer necessary.
 
 > [!IMPORTANT]  
 > KIRs apply to only nonsecurity updates. This is because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
 
-Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in an Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > You have to restart the affected computers in order to apply this Group Policy change.
@@ -48,26 +48,26 @@ To see an example of a KIR MSI file, download [Windows 10 (2004 & 20H2) Known Is
 
 A KIR policy definition has a limited lifespan (a few months, at most). After Microsoft publishes an amended update to address the original issue, the KIR is no longer necessary. The policy definition can then be removed from the Group Policy infrastructure.
 
-## Using Group Policy to apply a KIR to an enterprise device
+## Using Group Policy to apply a KIR to a single device
 
-To use Group Policy to apply a KIR to a single enterprise device, follow these steps:
+To use Group Policy to apply a KIR to a single device, follow these steps:
 
 1. Download the KIR policy definition MSI file to the device.  
    > [!IMPORTANT]  
    > Make sure that the operating system that is listed in the .msi file name matches the operating system of the device that you want to update.
 1. Run the .msi file on the device. This action installs the KIR policy definition in the Administrative Template.  
-1. Open the Local Group Policy Editor. To do this, select **Start**, and then enter **gpedit.msc**.
+1. Open the Local Group Policy Editor. To do this, select **Start**, and then enter *gpedit.msc*.
 1. Select **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **KB *#######* Issue *XXX* Rollback** > **Windows 10, version *YYMM***.
    > [!NOTE]  
-   > In this step, *#######* is the KB article number of the update that caused the problem.*XXX* is the issue number, and *YYMM* is the Windows 10 version number.
-1. Right-click the policy, select **Edit**, select **Disabled**, and then select **OK**.
+   > In this step, *#######* is the KB article number of the update that caused the problem. *XXX* is the issue number, and *YYMM* is the Windows 10 version number.
+1. Right-click the policy, and then select **Edit** > **Disabled** > **OK**.
 1. Restart the device.
 
-For more information about how to use the Local Group Policy Editor, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11)).
+For more information about how to use the Local Group Policy Editor, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11)).
 
-## Using Group Policy to apply a KIR to devices in an Azure AD or AD DS domain
+## Using Group Policy to apply a KIR to devices in a hybrid Azure AD or AD DS domain
 
-To apply a KIR policy definition to your on-premises AD DS-managed or AAD-managed devices, follow these steps:
+To apply a KIR policy definition to devices that belong to a hybrid Azure AD or AD DS domain, follow these steps:
 
 1. [Download and install the KIR MSI files](#install)
 1. [Create a Group Policy Object (GPO)](#gpo).
@@ -103,7 +103,7 @@ For more information about how to create GPOs, see [Create a Group Policy Object
    ```
 
    > [!IMPORTANT]  
-   > In this string, \<*VersionNumber*> represents the Windows version that you want the GPO to apply to. The version number must use the following format (exclude the brackets when you use the number in the string):
+   > In this string, \<VersionNumber> represents the Windows version that you want the GPO to apply to. The version number must use the following format (exclude the brackets when you use the number in the string):
    >  
    > > 10.0.*xxxxx*  
    >  
@@ -138,7 +138,7 @@ Edit your GPO to use the KIR Activation Policy
 1. In the Group Policy Editor, select ***GPOName*** > **Computer Configuration** > **Administrative Templates** > **KB&nbsp;*#######* Issue *XXX* Rollback** > **Windows 10, version *YYMM***.  
 1. Right-click the policy, and then select **Edit** > **Disabled** > **OK**.
 
-For more information about how to edit GPOs, see [Edit a Group Policy object from GPMC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10)).
+For more information about how to edit GPOs, see [Edit a Group Policy object from GPMC](/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10)).
 
 ### <a id="monitor"></a>6. Monitor the GPO results
 
@@ -151,10 +151,10 @@ Make sure that each affected device restarts after it applies the policy.
 
 ## More information
 
-- [Local Group Policy Editor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265982(v=ws.11))
-- [Working with the Administrative Template policy settings using the Local Group Policy Editor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11))
-- [Group Policy Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831791(v=ws.11))
-- [GPMC How To](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc783034(v=ws.10))
+- [Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265982(v=ws.11))
+- [Working with the Administrative Template policy settings using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11))
+- [Group Policy Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831791(v=ws.11))
+- [GPMC How To](/previous-versions/windows/it-pro/windows-server-2003/cc783034(v=ws.10))
 - [Create WMI Filters for the GPO (Windows 10) - Windows security](/windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo)
-- [Edit a Group Policy object from GPMC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10))
+- [Edit a Group Policy object from GPMC](/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10))
 - [Create and manage group policy in Azure AD Domain Services](/azure/active-directory-domain-services/manage-group-policy)

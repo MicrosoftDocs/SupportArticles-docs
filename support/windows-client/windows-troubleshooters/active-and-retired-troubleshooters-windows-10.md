@@ -19,12 +19,46 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10
 
+## Windows Update troubleshooter
+
+Text displayed in Settings:  
+Automatically targets the device for an In-Place Upgrade due to recurring installation issues
+
+### Description
+
+Some devices that are running Windows 10, version 1903 and later versions can't install monthly security updates because of file or metadata corruption within the servicing stack. This troubleshooter marks the device in preparation for an In-Place Upgrade.
+
+This troubleshooter runs automatically on devices that meet the following criteria:
+
+- Runs one of these operating systems: Windows 10, versions 1903, Windows 10, version 1909, Windows 10, version 2004 or Windows 10, version 20H2
+- Runs a revision below the December 2020 Security Update (12B)
+- Failed a Quality Update installation multiple times
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|4/19/2021||[aka.ms/IPUTroubleshooter](https://aka.ms/IPUTroubleshooter)|
+
+## Windows Update troubleshooter
+
+Text displayed in Settings:  
+Automatically repair system files and settings to improve device security
+
+### Description
+
+Some devices running Windows 10, version 1903 or 1909 are not scanning for updates. This troubleshooter resets the update scanning process, which prompts the device to start a new scan.
+
+This troubleshooter runs automatically on devices running Windows 10, version 1903 or 1909 and that have reported the error to the sediment infrastructure.
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|4/15/2021||[https://aka.ms/AAbk72i](https://aka.ms/AAbk72i)|
+
 ## Files On-Demand troubleshooter
 
 Text displayed in Settings:  
 You may have lost access to your Files On-Demand. This troubleshooter restores access or prevents the loss of access from happening in the near future. Important: Please reboot your device once the troubleshooter is finished.
 
-### Description
+**Description:**
 
 After updating to Windows 10, version 2004, some older devices or devices that have certain older apps installed that use legacy [file system filter drivers](/windows-hardware/drivers/ifs/about-file-system-filter-drivers) might be unable to connect to OneDrive through the OneDrive app. Affected devices might not be able to download new Files On-Demand content or open previously synced or downloaded files. This troubleshooter mitigates the issue.
 
@@ -34,12 +68,12 @@ Devices that successfully ran the "Hardware and Devices" troubleshooter will be 
 |---|---|---|
 |6/30/2020|9/30/2020|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
 
-## Hardware and Devices troubleshooter
+**Hardware and Devices troubleshooter:**
 
 Text displayed in Settings:  
 Automatically repair system files and settings to fix a problem on your device.
 
-### Description
+**Description:**
 
 After updating to Windows 10, version 2004, some older devices or devices that have certain older apps installed that use legacy [file system filter drivers](/windows-hardware/drivers/ifs/about-file-system-filter-drivers) might be unable to connect to OneDrive through the OneDrive app. Affected devices might not be able to download new Files On-Demand content or open previously synced or downloaded files. This troubleshooter detects the presence of this issue.
 
@@ -57,7 +91,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 Text displayed in Settings:  
 Automatically restore your previous settings and environment for Storage Spaces.
 
-### Description
+**Description:**
 
 Devices that use Parity Storage Spaces might not be able to use or access their Storage Spaces after you update to Windows 10, version 2004 (the May 2020 update) or Windows Server, version 2004. After [KB4568831](https://support.microsoft.com/help/4568831) has been applied to your device, this troubleshooter restores your previous Storage Spaces settings.
 
@@ -74,7 +108,7 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 Text displayed in Settings:  
 Data corruption was detected on your parity storage space. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions, please see the link below.
 
-### Description
+**Description:**
 
 Devices that use Parity Storage Spaces might experience issues when they try to use or access their Storage Spaces after they update to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter mitigates the issue for some users and restores read and write access to your Parity Storage Spaces.
 
@@ -86,12 +120,12 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter.
 |---|---|---|
 |7/2/2020|10/2/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
-## Hardware and Devices troubleshooter
+**Hardware and Devices troubleshooter:**
 
 Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
 
-### Description
+**Description:**
 
 Devices that use Parity Storage Spaces might experience issues when they try to use or access their Storage Spaces after they are updated to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter helps prevent issues that affect the data on your Storage Spaces. After the troubleshooter runs, you will not be able to write to your Storage Spaces.
 
@@ -111,7 +145,7 @@ The first time, the troubleshooter runs automatically. The second time, it notif
 Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
 
-### Description
+**Description:**
 
 Some devices might not start if Disk Cleanup runs after you install the Windows version 19041.21 update. This troubleshooter temporarily disables the feature to automatically run Disk Cleanup until devices install the Windows 10, version 19041.84 update.
 

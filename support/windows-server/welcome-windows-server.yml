@@ -23,7 +23,7 @@ landingContent:
           - text: Deployment 
             url: ./deployment/deployment-overview.md
           - text: Windows Server End of Support (EoS FAQ)
-            url: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
+            url: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
   - title: Identity and Access
     linkLists:      
       - linkListType: how-to-guide
