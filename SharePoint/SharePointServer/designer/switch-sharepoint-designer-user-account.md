@@ -15,7 +15,7 @@ appliesto:
 - SharePoint Designer 2013
 search.appverid: MET150 
 ---
-# You cannot switch the user account in SharePoint Designer 2013
+# You can't switch the user account in SharePoint Designer 2013
 
 _Original KB number:_ &nbsp; 2738178
 
@@ -25,14 +25,14 @@ This article describes how to start Microsoft SharePoint Designer 2013 as anothe
 
 ## Method 1
 
-Start the Spedesign.exe process by using a different user account. To do this, follow these steps:
+Start the Spedesign.exe process by using a different user account. To do so, follow these steps:
 
-1. Go to the SharePoint Designer 2013 installation folder. By default, the folder is installed in the following location:
+1. Go to the SharePoint Designer 2013 installation folder. By default, the folder is installed in one of the following locations:
 
-    `C:\Program Files\Microsoft Office\Office15`
-
-2. Press and hold the Shift key, right-click Spedesign.exe, and then click **Run as different user**.
-3. Type the credential of the user and then click **OK**.
+   - `C:\Program Files\Microsoft Office\Office15`
+   - `C:\Program Files (x86)\Microsoft Office\Office15`
+2. Press and hold the Shift key, right-click Spedesign.exe, and then select **Run as different user**.
+3. Type the credential of the user, and then click **OK**.
 
 ## Method 2
 
