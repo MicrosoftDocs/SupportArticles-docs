@@ -33,7 +33,7 @@ In this situation, the kiosk profile logon type is **AAD User** or **Group**. Ad
     > User:          *\<User SID>*  
     > Computer:      *\<Computer Name>*  
     > Description:  
-    > **Error: 0xCAA2000C The request requires user interaction.**	
+    > **Error: 0xCAA2000C The request requires user interaction.**  
     > **Code: interaction_required**  
     > Description: AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000003-0000-0000-c000-000000000000'.
 
