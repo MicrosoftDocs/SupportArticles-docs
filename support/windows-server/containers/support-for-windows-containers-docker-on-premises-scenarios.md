@@ -152,7 +152,7 @@ For support of Microsoft applications like IIS, SQL and .NET running in containe
 > If you are trying to move a custom application or a third-party application to Windows Server containers running the Windows Server Core image and have issues with missing .DLLs or other components in the Windows Server core base image, try using the Windows container image as it has the full Windows API set.
 Avoid copying .DLLs from the container host to the Windows Server Core base image as it may cause the application to misbehave.
 
-Microsoft provided some component .DLLs in redistributable package form. For example, the Windows Server Core container base image doesn't include the VB runtime .DLLs. To get the .DLLs, download the redistributable package Service Pack 6 for Visual Basic 6.0: Run-Time Redistribution Pack (vbrun60sp6.exe) and install it in the container image using a Dockerfile.
+Microsoft provided some component .DLLs in redistributable package form. For example, the Windows Server Core container base image doesn't include the VB runtime .DLLs. To get the .DLLs, download the redistributable package Service Pack 6 for Visual Basic 6.0: Run-Time Redistribution Pack (vbrun60sp6.exe) from official Microsoft Download Center and install it in the container image using a Dockerfile.
 
 For guidance on moving legacy apps, see [Lift and shift to containers](/virtualization/windowscontainers/quick-start/lift-shift-to-containers).
 
