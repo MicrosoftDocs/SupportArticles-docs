@@ -61,7 +61,7 @@ When the client cache setting is deployed to the device collection, you'll see t
 
 The state message is formatted as XML, and then sent to the management point (MP_RelayEndpoint) through CCMMessaging.
 
-You'll see the following entry in the MP_Relay.log file:
+You will see the following entry in the MP_Relay.log file:
 
 ```output
 Message Body :
