@@ -222,7 +222,7 @@
   - name: Request isn't processed when resetting password
     href: request-not-processed-reset-pwd.md
   - name: Set up your enterprise for working remotely FAQ
-    href: faq-set-up-enterprise-work-remotely.md
+    href: faq-set-up-enterprise-work-remotely.yml
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
