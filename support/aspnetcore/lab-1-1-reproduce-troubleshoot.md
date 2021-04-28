@@ -152,7 +152,8 @@ Create a dumps folder under your home folder. You'll be instructed to extract th
 
 > [!NOTE]
 > This command creates the `/dumps` folder. The `apport-unpack` command will create the `/dumps/dotnet` folder. Here is the result.
-> :::image type="content" source="./media/ lab-1-1-reproduce-troubleshoot/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/sudo.png" alt-text="BuggyAmb sudo" border="true":::
 
 In the `~/dumps/dotnet` folder, you should see the dump file. The file is named *CoreDump*, and it should be around 191 MB.
 

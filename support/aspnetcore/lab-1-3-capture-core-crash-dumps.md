@@ -131,9 +131,7 @@ You can use one more tactic to narrow down the statistics by running the command
 
 :::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/request.png" alt-text="BuggyAmb request" border="true":::
 
-In the sample application, there is only one `System.Net.HttpWebRequest` object on the managed heap. In the previous listing, the address that's seen next to the `HttpWebRequest` entry is not that object's address in memory. Instead, it's the address that corresponds to the "method table" of objects of the `System.Net .HttpWebRequest` type. To get the actual list of the objects, you can pass that method table (MT) address to the `dumpheap` command in the following manner:
-
-    `dumpheap -mt <address>`. For example, run `dumpheap -mt 00007f53623cb640` to dl find the object's address.
+In the sample application, there is only one `System.Net.HttpWebRequest` object on the managed heap. In the previous listing, the address that's seen next to the `HttpWebRequest` entry is not that object's address in memory. Instead, it's the address that corresponds to the "method table" of objects of the `System.Net .HttpWebRequest` type. To get the actual list of the objects, you can pass that method table (MT) address to the `dumpheap` command in this manner: `dumpheap -mt <address>`. For example, run `dumpheap -mt 00007f53623cb640` to dl find the object's address.
 
 :::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dumpheap.png" alt-text="BuggyAmb dumpheap" border="true":::
 
