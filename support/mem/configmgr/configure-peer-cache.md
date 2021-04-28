@@ -4,7 +4,7 @@ description: Describes and illustrates through log file examples how to configur
 author: helenclu
 ms.author: naghura
 ms.reviewer: vinpa,brianhun
-ms.date: 04/15/2021
+ms.date: 04/16/2021
 ---
 # Configure peer cache for Configuration Manager clients
 
@@ -17,7 +17,7 @@ Peer cache is a built-in solution for Microsoft Endpoint Configuration Manager t
 To enable clients to be peer cache sources, follow these steps:
 
 1. In the Configuration Manager console, create a device collection. Determine which clients you want to enable as peer cache sources, and add them to the collection.
-1. Go to the **Administration** workspace, and select the **Client Settings** node.
+1. Go to the **Administration** workspace, and then select the **Client Settings** node.
 1. Select **Create Custom Client Device Settings**, specify a name and description, and then select the **Client Cache Settings** group.
 
    :::image type="content" source="media/configure-peer-cache/select-client-cache-settings.png" alt-text="Select Client Cache Settings":::
