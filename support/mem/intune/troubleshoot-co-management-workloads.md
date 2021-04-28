@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting co-management workloads
 description: Helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment.
-ms.date: 04/16/2020
+ms.date: 04/28/2021
 ms.prod-support-area-path: Co-management with Configuration Manager
 ms.reviewer: luche
 ---
@@ -132,7 +132,7 @@ In this case, do the following:
 
 ### I unassign Intune policies from a security group, but some settings remain
 
-Intune does not revert settings ([tattoo removal](https://docs.microsoft.com/mem/intune/configuration/device-profile-troubleshoot)) if the Device Configuration workload is set to Configuration Manager. To enable tattoo removal, configure the workload in Configuration Manager and refresh policy on the device.
+Intune doesn't revert settings ([tattoo removal](/mem/intune/configuration/device-profile-troubleshoot)) if the Device Configuration workload is set to Configuration Manager. To enable tattoo removal, configure the workload in Configuration Manager, and refresh policy on the device.
 
 ## References
 
