@@ -154,6 +154,9 @@ To increase the viewing area for the scan results, select **View results in my
 
 After you review your scan results, select **Next**. The next screen provides an opportunity to see the log files that were saved on your computer (**See all logs**) or to view the log again (**View log**).
 
+[!NOTE]
+The scan file is "ConfigurationDetails_randomGuid.html" and it is located in the **%localappdata%\saralogs\UploadLogs** folder (C:\users\<username>\AppData\Local\SaRALogs\UploadLogs).
+
 #### Users who have an Office 365 account
 
 If you sign in to SaRA by using an account in Office 365, you also see an option to send your files to Microsoft. This option is helpful if you are working with a Microsoft support engineer. Select **Send** to have your log files securely uploaded.
