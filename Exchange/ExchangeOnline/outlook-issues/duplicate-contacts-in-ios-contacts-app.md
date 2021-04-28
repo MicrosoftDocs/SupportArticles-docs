@@ -25,7 +25,9 @@ Your Outlook contacts might be affected by this issue if the following condition
 
 - The **[Save Contacts](https://support.microsoft.com/office/outlook-for-ios-and-android-faq-65a01e26-e3c2-4067-bd05-0db6220e5c34#bkmk_savecontacts)** setting is enabled for your Outlook account.
 
-- The **Save Contacts** setting is enabled on multiple iOS devices, such as an iPad and an iPhone. If you have multiple iOS devices, we recommend that you [use an iCloud account to sync your contacts](https://support.microsoft.com/office/how-do-i-save-my-contacts-to-my-device-0c914099-a1a5-4ae3-93d6-f9c85465dc9a) across the devices instead of enabling the **Save Contacts** setting on individual devices.
+- The **Save Contacts** setting is enabled on multiple iOS devices, such as an iPad and an iPhone.
+
+    If you have multiple iOS devices, we recommend that you [use an iCloud account to sync your contacts](https://support.microsoft.com/office/how-do-i-save-my-contacts-to-my-device-0c914099-a1a5-4ae3-93d6-f9c85465dc9a) across the devices instead of enabling the **Save Contacts** setting on individual devices.
 
 - Duplicate contacts don't appear when you search for them in the Outlook app by using **Search** > **People**. They appear only in the native iOS Contacts app.
 
@@ -39,9 +41,9 @@ Your Outlook contacts might be affected by this issue if the following condition
 
 ## Why Outlook contacts are duplicated
 
-Because of the current design of iOS and the contact synchronization feature in Outlook for iOS, syncs often don't finish. The sync process can't run continuously in the background to ensure a consistent steady state. This causes sync errors. Over time, the accumulated errors cause duplicate contacts to be created.
+Because of the current design of iOS and the contact synchronization feature in Outlook for iOS, syncs often don't finish. The sync process cannot run continuously in the background to ensure a consistent steady state. This causes sync errors. Over time, the accumulated errors cause duplicate contacts to be created.
 
-The process to export contacts begins only when Outlook is in the foreground. It continues while Outlook is in active memory, even if the user switches between apps. The process might not finish because of a limitation that's imposed by iOS. This situation can cause data inconsistencies. When Outlook detects these inconsistencies the next time that it syncs, it triggers a reconciliation to remove duplicate contacts that are exported from a previous export activity. If the reconciliation also doesn't finish, you might still see duplicate contacts. In this case, you can remove the duplicates manually.
+The process to export contacts begins only when Outlook is in the foreground. It continues while Outlook is in active memory, even if the user switches between apps. Because of [limitations in iOS](https://www.microsoft.com/microsoft-365/blog/2017/06/05/improving-people-in-outlook-for-ios-and-android/) when syncing with iCloud, the process might not finish and this situation can cause data inconsistencies. When Outlook detects these inconsistencies the next time that it syncs, it triggers a reconciliation to remove duplicate contacts that are exported from a previous export activity. If the reconciliation also doesn't finish, you might still see duplicate contacts. In this case, you can remove the duplicates manually.
 
 ## Remove duplicates manually
 
