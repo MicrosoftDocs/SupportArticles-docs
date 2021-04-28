@@ -39,7 +39,7 @@ Here are some key aspects of how a Linux system behaves related to core dump fil
 
 - By default, a core dump file is generated when a process is terminated unexpectedly.
 - The Core dump file is named "core" and is created in the current working directory or in the *:::no-loc text="/var/lib/systemd/coredump":::* directory.
-- Although the default behavior is for the operating system to generate a core dump file, this setting can be overwritten in *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the core dump file into another application.
+- Although the default behavior is for the operating system to generate a core dump file, this setting can be overwritten in *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the core dump file output into another application.
 
 These defaults settings and some others, such as the size limits, can be set in configuration files. The following resources go into greater depth about this subject:
 
@@ -64,7 +64,7 @@ If you disable apport, this does not prevent core dump generation upon process t
 To disable automatic core dump file generation, do the following:
 
 1. Stop and disable apport.
-2. Disable the system action.
+2. Disable the system's default action.
 
 Apport can be stopped and disabled the same as any other service. Use the `sudo systemctl stop apport` command and the `sudo systemctl disable apport` command to stop the service, and then disable it to prevent it from being restarted.
 
