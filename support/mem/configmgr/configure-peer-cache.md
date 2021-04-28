@@ -8,9 +8,9 @@ ms.date: 04/15/2021
 ---
 # Configure peer cache for Configuration Manager clients
 
-*Applies to*: Microsoft Endpoint Manager Configuration Manager (current branch)
+*Applies to*: Microsoft Endpoint Configuration Manager (current branch)
 
-Peer cache is a built-in solution for Microsoft Endpoint Manager Configuration Manager that enables clients to share content with other clients directly from their local cache. It extends traditional content deployment solutions, such as distribution points. Use peer cache to help manage deployment of content to clients in remote locations. For more information, see [Peer cache for Configuration Manager clients](/mem/configmgr/core/plan-design/hierarchy/client-peer-cache).
+Peer cache is a built-in solution for Microsoft Endpoint Configuration Manager that enables clients to share content with other clients directly from their local cache. It extends traditional content deployment solutions, such as distribution points. Use peer cache to help manage deployment of content to clients in remote locations. For more information, see [Peer cache for Configuration Manager clients](/mem/configmgr/core/plan-design/hierarchy/client-peer-cache).
 
 ## Configure peer cache client settings
 
@@ -21,7 +21,7 @@ To enable clients to be peer cache sources, follow these steps:
 1. Select **Create Custom Client Device Settings**, specify a name and description, and then select the **Client Cache Settings** group.
 
    :::image type="content" source="media/configure-peer-cache/select-client-cache-settings.png" alt-text="Select Client Cache Settings":::
-1. In the left pane, select **Client Cache Settings**, set **Enable as peer cache source** to **Yes**, and then specify the ports.
+1. In the navigation pane, select **Client Cache Settings**, set **Enable as peer cache source** to **Yes**, and then specify the ports.
 
    :::image type="content" source="media/configure-peer-cache/specify-client-cache-settings.png" alt-text="Specify Client Cache Settings":::
 1. Select **OK** to save the settings.
@@ -59,7 +59,7 @@ When the client cache setting is deployed to the device collection, you'll see t
 
 ### Change on the management point
 
-The state message is reformatted as XML, and then sent to the management point (MP_RelayEndpoint) through CCMMessaging.
+The state message is formatted as XML, and then sent to the management point (MP_RelayEndpoint) through CCMMessaging.
 
 You'll see the following entry in the MP_Relay.log file:
 
@@ -132,7 +132,7 @@ ContentTransferManager    4324 (0x10e4)    Persisted locations for CTM job {1394
 (SUBNET) https://P01.Contoso.Com/CCMTOKENAUTH_SMS_DP_SMSPKG$/CAS00015
 ```
 
-Peer cache clients prioritize peer cache sources to download content. This is shown in the following entry in DataTransferService.log:
+Peer cache clients prioritize peer cache sources to download content. This precedence is shown in the following entry in DataTransferService.log:
 
 ```output
  DTSJob {0C3B06F6-E85D-4C54-9B4F-0B316B33AA5B} created to download from 'https://TestClient.Contoso.Com:8003/SCCM_BranchCache$/CAS00015' to 'C:\windows\ccmcache\1'.
