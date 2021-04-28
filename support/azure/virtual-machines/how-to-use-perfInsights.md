@@ -193,7 +193,7 @@ For more information about this option, see [Install Azure Performance Diagnosti
 To run the PerfInsights tool, follow these steps:
 
 
-1. Download [PerfInsights.zip](https://aka.ms/perfinsightsdownload).
+1. Download [PerfInsights.zip](https://www.microsoft.com/en-us/download/details.aspx?id=54915).
 
 2. Unblock the PerfInsights.zip file. To do this, right-click the PerfInsights.zip file, and select **Properties**. In the **General** tab, select **Unblock**, and then select **OK**. This ensures that the tool runs without any additional security prompts.  
 
