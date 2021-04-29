@@ -154,8 +154,8 @@ To increase the viewing area for the scan results, select **View results in my
 
 After you review your scan results, select **Next**. The next screen provides an opportunity to see the log files that were saved on your computer (**See all logs**) or to view the log again (**View log**).
 
-[!NOTE]
-The scan file is "ConfigurationDetails_randomGuid.html" and it is located in the **%localappdata%\saralogs\UploadLogs** folder (C:\users\<username>\AppData\Local\SaRALogs\UploadLogs).
+> [!NOTE]
+> The scan file is ConfigurationDetails_{CorrelationId}.html. It's located in the **%localappdata%\saralogs\UploadLogs** folder, for example, C:\users\\\<username>\AppData\Local\saralogs\UploadLogs.
 
 #### Users who have an Office 365 account
 
