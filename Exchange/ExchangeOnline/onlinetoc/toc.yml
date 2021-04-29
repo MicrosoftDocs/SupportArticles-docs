@@ -304,7 +304,7 @@
     - name: Can't create mail profile on iOS device via Autodiscover
       href: ../mobile-devices/cannot-create-mail-profile-on-ios-device-via-autodiscover.md
     - name: Duplicate Outlook contacts in iOS Contacts app
-      href: ../outlook-issues/duplicate-contacts-in-ios-contacts-app.md
+      href: ../mobile-devices/duplicate-contacts-in-ios-contacts-app.md
     - name: Issues for mobile devices
       href: ../mobile-devices/issues-for-mobile-devices.md
     - name: Mobile devices aren't quarantined as expected
