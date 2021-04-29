@@ -189,11 +189,11 @@ The legacy or command-line method of deleting stale NTDS Settings objects using 
 `DCDIAG /TEST:DNS` does seven different tests to quickly vet the DNS health of a domain controller. This test isn't run as part of the default execution of DCDIAG.
 
 1. Sign in with Enterprise Admin credentials to the console of the destination domain controllers that log the 8524 events.
-2. Open an administrative privileged CMD prompt, and then run `DCDIAG /TEST:DNS /F` on the DC logging the 8424 status AND the source DC that the destination DC is replicating from.
+2. Open an administrative privileged CMD prompt, and then run `DCDIAG /TEST:DNS /F` on the DC logging the 8424 status and the source DC that the destination DC is replicating from.
 
     To run DCDIAG against all DCs in a forest, type `DCDIAG /TEST:DNS /V /E /F:<File name.txt>`.
 
-    To run DCDIAG TEST:DNS against a specific DC type `DCDIAG /TEST:DNS /V /S:\<DC NAME> /F:<File name.txt>`.
+    To run DCDIAG TEST:DNS against a specific DC, type `DCDIAG /TEST:DNS /V /S:<DC NAME> /F:<File name.txt>`.
 3. Locate the summary table at the end of the `DCDIAG /TEST:DNS` output. Identify and reconcile warning or failure conditions on the relevant DCs of the report.
 4. If DCDIAG doesn't identify the root cause, take "the long way around" using the steps below.
 
@@ -205,13 +205,13 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      From the console of the source DC logging the 8524 error/event, type:
 
-     `c:\>repadmin /showrepl <fully qualified hostname of source DC cited in the 8524 error (event)>`
+     `repadmin /showrepl <fully qualified hostname of source DC cited in the 8524 error (event)>`
 
      For example, if the DC referenced in the 8524 error/event is contoso-DC2 in the `contoso.com` domain, type:
 
-     `c:\>repadmin /showrepl contoso-dc2.contoso.com`
+     `repadmin /showrepl contoso-dc2.contoso.com`
 
-     The "DSA Object GUID" field in the header of the `remoted /SHOWREPl` command contains the objectGUID of the source DCs *current* NTDS settings object. Use the source DCs' view of its NTDS Settings Object in case replication is slow / failing. The header of the `repadmin` output will look something like:
+     The "DSA Object GUID" field in the header of the `repadmin /SHOWREPl` command contains the objectGUID of the source DCs *current* NTDS settings object. Use the source DCs' view of its NTDS Settings Object in case replication is slow or failing. The header of the `repadmin` output will look something like:
 
     > Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
@@ -224,11 +224,11 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      From the console of the destination DC logging the 8524 error/event, type:
 
-    `c:\>repadmin /showrepl <fully qualified hostname of destination DC>`
+    `repadmin /showrepl <fully qualified hostname of destination DC>`
 
-     For example, if the DC logging 8524 error / event is contoso-DC1 in the `contoso.com` domain, type:
+     For example, if the DC logging 8524 error/event is contoso-DC1 in the `contoso.com` domain, type:
 
-     `c:\>repadmin /showrepl contoso-dc1.contoso.com`
+     `repadmin /showrepl contoso-dc1.contoso.com`
 
      `REPADMIN /SHOWREPL` output is shown below. The "DSA Object GUID" field is listed for each source DC the destination DC inbound replicates from.
 
@@ -370,7 +370,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     - CNAME records are registered by the NETLOGON Service during OS startup, NETLOGON service startup, and recurring intervals later.
     - Each promotion of a DC with the same name may create a new NTDS Settings object with a different objectGUID that therefore registers a different CNAME record. Verify registration of the CNAME record based the last promotion of the source DC vs. the objectGUID for the NTDS Settings object on the destination DC if the source has been promoted more than 1x.
     - Timing issues during OS startup can delay successful Dynamic DNS registration.
-    - If a DCs CNAME record was successfully registered, but later disappears, check [KB953317](https://support.microsoft.com/help/953317). Duplicate DNS zones in different replication scopes or overly aggressive DNS scavenging by the DNS Server.
+    - If a DC's CNAME record was successfully registered, but later disappears, check [KB953317](https://support.microsoft.com/help/953317). Duplicate DNS zones in different replication scopes or overly aggressive DNS scavenging by the DNS Server.
     - If the CNAME record registration is failing on the DNS servers to which the source DC points for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
 
 3. **Verify that the source DC has registered its host records**
@@ -467,12 +467,12 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     - The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the_msdcs.\<forest root zone>. It won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
     - CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
     - Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid. The only exception is that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
-    - ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
+    - ISP DNS Servers typically don't accept dynamic DNS updates, so CNAME, Host, and SRV records may have to be manually registered.
     - The DNS resolver on the Windows computers is by-design "sticky". It uses DNS servers that are responsive to queries, regardless of whether such DNS Servers host, forward, or delegate the required zones. Restated, the DNS resolver won't fail over and query another DNS server as long as the active DNS is responsive, even if the response from the DNS Server is "I either don't host the record you're looking for or even host a copy of the zone for that record".
 
 5. **Verify that the DNS Server used by the destination DC can resolve the source DCs CNAME and HOST records**  
 
-    From the console of the destination DC, run `ipconfig /all` to determine which DNS Servers to which destination DC points for name resolution:
+    From the console of the destination DC, run `ipconfig /all` to determine the DNS Servers to which destination DC points for name resolution:
 
     ```console
     DNS Servers that destination DC points to for name resolution:
@@ -512,7 +512,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     If the DNS zones used by the source and destination DC are stored in primary and secondary copies of DNS zones, check for:
 
     - The "allow zone transfers" checkbox isn't enabled on the DNS that hosts the primary copy of the zone.
-    - The "Only the following servers" checkbox is enabled but the IP address of the secondary DNS hasn't been added to the allowlist on the primary DNS.
+    - The "Only the following servers" checkbox is enabled, but the IP address of the secondary DNS hasn't been added to the allowlist on the primary DNS.
     - The DNS zone on the Windows Server 2008 DNS hosting the secondary copy of the zone is empty because of MSKB [953317](https://support.microsoft.com/default.aspx?scid=kb;EN-US;953317).
 
     If the DNS servers used by the source and destination DC have parent / child relationships, check for:
