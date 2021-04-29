@@ -1,6 +1,6 @@
 ---
 title: Edge icon incorrectly shown for URL shortcut on Start menu
-description: This article describes an issue where the specified icon doesn't display for the shortcut to a website in Microsoft Edge on Start menu in Windows 10.
+description: This article describes an issue where the specified icon doesn't display for the shortcut to a website in Microsoft Edge on the Windows 10 Start menu.
 ms.date: 04/23/2021
 ms.prod-support-area-path: 
 ms.reviewer: traceytu;DEV_Triage
@@ -10,7 +10,7 @@ ms.author: haiyingyu
 
 # Edge icon incorrectly shown for URL shortcut on Start menu in Windows 10
 
-This article resolves an issue in which the Microsoft Edge browser icon is incorrectly displayed for a website on the Windows 10 Start menu. This issue affects Microsoft Edge 85.0.564.63 and later versions.
+This article resolves an issue in which the Microsoft Edge browser icon is incorrectly displayed for the shortcut to a website in Microsoft Edge on the Windows 10 Start menu. This issue affects Microsoft Edge 85.0.564.63 and later versions.
 
 _Applies to:_ &nbsp; Microsoft Edge, Windows 10  
 
