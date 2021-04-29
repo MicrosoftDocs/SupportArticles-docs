@@ -1,6 +1,6 @@
 ---
 title: Active Directory Replication fails with Win32 error 8524
-description: Describes an issue where Active Directory Replications fail with Win32 error 8524 (The DSA operation is unable to proceed because of a DNS lookup failure).
+description: Describes an issue that Active Directory Replications fail with Win32 error 8524 (The DSA operation is unable to proceed because of a DNS lookup failure).
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,9 @@ ms.technology: windows-server-active-directory
 ---
 # Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure
 
-This article describes an issue where Active Directory Replications fail with Win32 error 8524: "The DSA operation is unable to proceed because of a DNS lookup failure."
+This article describes symptoms, cause, and resolution steps for AD operations that fail with Win32 error 8524:
+
+> The DSA operation is unable to proceed because of a DNS lookup failure.
 
 _Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2021446
@@ -23,10 +25,6 @@ _Original KB number:_ &nbsp;2021446
 **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 
 ## Symptoms
-
-This article describes symptoms, cause, and resolution steps for AD operations that fail with Win32 error 8524:
-
-> The DSA operation is unable to proceed because of a DNS lookup failure.
 
 1. DCDIAG reports that Active Directory Replications test has failed with status 8524:
 
@@ -41,11 +39,11 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 2. REPADMIN reports that a replication attempt has failed with status 8524.
 
-    REPADMIN commands that commonly cite the 8524 status include but aren't limited to:
+    REPADMIN commands that commonly cite the 8524 status include, but aren't limited to:
 
-    - REPADMIN /REPLSUM
-    - REPADMIN /SHOWREPS
-    - REPADMIN /SHOWREPL
+    - `REPADMIN /REPLSUM`
+    - `REPADMIN /SHOWREPS`
+    - `REPADMIN /SHOWREPL`
 
     A sample of 8524 failures from REPADMIN /SHOWREPL is shown below:
 
@@ -93,11 +91,9 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     Keywords: Classic  
     User: ANONYMOUS LOGON  
     Computer: \<dc name>.\<domain name>  
-    Description:
-
-    Active Directory Domain Services couldn't resolve the following DNS host name of the source domain controller to an IP address. This error prevents additions, deletions, and changes in Active Directory Domain Services from replicating between one or more domain controllers in the forest. Security groups, group policy, users, and computers and their passwords will be inconsistent between domain controllers until this error is resolved. It potentially affects logon authentication and access to network resources.
-
-    Rest of event truncated, see MSKB [824449](https://support.microsoft.com/?kbid=824449) for full text.
+    Description:  
+    >  
+    > Active Directory Domain Services couldn't resolve the following DNS host name of the source domain controller to an IP address. This error prevents additions, deletions, and changes in Active Directory Domain Services from replicating between one or more domain controllers in the forest. Security groups, group policy, users, and computers and their passwords will be inconsistent between domain controllers until this error is resolved. It potentially affects logon authentication and access to network resources.
 
     > Log Name:      Directory Service  
     Source:        Microsoft-Windows-ActiveDirectory_DomainService  
@@ -108,16 +104,13 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     Keywords:      Classic  
     User:          ANONYMOUS LOGON  
     Computer:      \<dc name>.\<domain name>  
-    Description:
-
-    Active Directory Domain Services couldn't use DNS to resolve the IP address of the source domain controller listed below. To maintain the consistency of Security groups, group policy, users, and computers and their passwords, Active Directory Domain Services successfully replicated using the NetBIOS or fully qualified computer name of the source domain controller.
-
-    Invalid DNS configuration may be affecting other essential operations on member computers, domain controllers, or application servers in this Active Directory Domain Services forest, including logon authentication or access to network resources.
-
-    You should immediately resolve this DNS configuration error so that this domain controller can resolve the IP address of the source domain controller using DNS.
-
-    Rest of event truncated, see MSKB [824449](https://support.microsoft.com/?kbid=824449) for full text.
-
+    Description:  
+    Active Directory Domain Services couldn't use DNS to resolve the IP address of the source domain controller listed below. To maintain the consistency of Security groups, group policy, users, and computers and their passwords, Active Directory Domain Services successfully replicated using the NetBIOS or fully qualified computer name of the source domain controller.  
+    >  
+    > Invalid DNS configuration may be affecting other essential operations on member computers, domain controllers, or application servers in this Active Directory Domain Services forest, including logon authentication or access to network resources.  
+    >  
+    > You should immediately resolve this DNS configuration error so that this domain controller can resolve the IP address of the source domain controller using DNS.
+    
 ## Cause
 
 Error Status 8524 maps to the following error string:
@@ -132,36 +125,43 @@ It's a catch-all error for all possible DNS failures affecting Active Directory 
 
 The presence of the 8524 status and the Microsoft-Windows-ActiveDirectory_DomainService event 2088 or 2087 events all indicate that DNS name resolution is failing Active Directory.
 
-In summary, the 8524 replication status is logged when a destination DC is unable to resolve the source DC by its CNAME and Host "A" or Host "AAAA" records using DNS. Specific root causes include:
+In summary, the 8524 replication status is logged when a destination DC can't resolve the source DC by its CNAME and Host "A" or Host "AAAA" records using DNS. Specific root causes include:
 
-1. The source DC is offline, or no longer exists but its NTDS Settings object still exist in the destination DCs' copy of Active Directory.
-2. The source DC failed to register the CNAME or host records on one or more DNS Servers either because the registration attempts failed or DNS client settings on the source don't point to DNS Servers that either host, forwarded or delegate its _msdcs.\<forest root domain zone and (or) primary DNS suffix domain zones>.
-3. DNS client settings on the destination DC don't point to DNS Servers that either host, forward or delegate the DNS zones containing the CNAME or host records for the source DC
-4. CNAME and host records registered by the source DC don't exist on DNS servers queried by the destination DC because of simple replication latency, a replication failure, or a zone transfer failure.
-5. Invalid forwarders or delegations are preventing the destination DC from resolving CNAME or Host records for DCs in other domains in the forest.
-6. DNS Servers used by destination DC, source DC, or intermediate DNS Servers aren't functioning properly.
+1. The source DC is offline, or no longer exists, but its NTDS Settings object still exist in the destination DCs' copy of Active Directory.
+2. The source DC failed to register the CNAME or host records on one or more DNS Servers because of the following reasons:
+
+    - The registration attempts failed.
+    - DNS client settings on the source don't point to DNS Servers that either host, forwarded or delegate its _msdcs.\<forest root domain zone and (or) primary DNS suffix domain zones>.
+4. DNS client settings on the destination DC don't point to DNS Servers that either host, forward or delegate the DNS zones containing the CNAME or host records for the source DC
+5. CNAME and host records registered by the source DC don't exist on DNS servers queried by the destination DC because of the following reasons:
+
+    - Simple replication latency
+    - A replication failure
+    - A zone transfer failure
+6. Invalid forwarders or delegations. They prevent the destination DC from resolving CNAME or Host records for DCs in other domains in the forest.
+7. DNS Servers used by destination DC, source DC, or intermediate DNS Servers aren't functioning properly.
 
 ## Resolution
 
 ### Verify whether the 8524 is caused by an offline DC or stale DC metadata
 
-If the 8524 error/event refers to a DC that is currently offline but still a valid DC in the forest, make it operational.
+If the 8524 error/event refers to a DC that's currently offline but still valid in the forest, make it operational.
 
-If the 8524 error/event refers to an inactive DC  - a DC install that no longer exists on the network but whose NTDS Settings object still exists in the destination DCs' copy of Active Directory - remove the stale metadata for that DC from the destination DCs' copy of Active Directory.
+If the 8524 error/event refers to an inactive DC, remove the stale metadata for that DC from the destination DCs' copy of Active Directory. An inactive DC is a DC install that no longer exists on the network, but its NTDS Settings object still exists in the destination DCs' copy of Active Directory - 
 
-Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metadata from previous promotions of a DC with the same computer name that hasn't been removed from Active Directory.  
+Microsoft support regularly finds stale metadata for nonexistent DCs, or stale metadata from previous promotions of a DC with the same computer name that hasn't been removed from Active Directory.  
 
 ### Remove stale DC metadata if present
 
 #### GUI Metadata Cleanup using Active Directory Sites and Services (DSSITE.MSC)
 
-1. Start the Windows 2008 or Windows Server 2008 R2 or W2K8 R2 Active Directory Sites and Services snap-in (DSSITE.MSC).
+1. Start the Windows Server 2008 or Windows Server 2008 R2 Active Directory Sites and Services snap-in (DSSITE.MSC).
 
     It can also be done by starting the Active Directory Sites and Services on a Windows Vista or Windows 7 computer that has been installed as part of the Remote Server Administration Tools (RSAT) package.
 
 2. Focus the DSSITE.MSC snap-in on the destination DCs' copy of Active Directory.
 
-    After starting DSSITE.MSC, right click on the "Active Directory Sites and Services [\<DC Name>]
+    After starting DSSITE.MSC, right-click the "Active Directory Sites and Services [\<DC Name>]
 
     Select the destination DC that's logging the 8524 error/event from the list of DCs visible in the "Change Domain Controller..." list
 
@@ -170,13 +170,13 @@ Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metad
     A DCs NTDS Settings object appears
 
     - Below the Sites, Site Name, Servers container, and %server name% container
-    - Above the inbound connection object displayed in the right-hand pane of Active Directory Sites and Services.
+    - Above the inbound connection object displayed in the right pane of Active Directory Sites and Services.
 
     The red highlight in the screenshot below shows the NTDS Settings object for CONTOSO-DC2 located below the Default-First-Site-Name site.
 
     ![NTDS Settings selected](./media//replication-error-8524/ntds-settings.jpg)
 
-    Right click on the stale NTDS Settings object you want to remove then click "Delete."
+    Right-click the stale NTDS Settings object you want to remove, then select "Delete."
 
     Metadata cleanup can also be done from the W2K8 / W2K8 R2 Active Directory Users and Computers snap-in as documented in [TECHNET](https://technet.microsoft.com/library/cc816907%28WS.10%29.aspx).
 
@@ -186,10 +186,10 @@ The legacy or command-line method of deleting stale NTDS Settings objects using 
 
 ### Run `DCDIAG /TEST:DNS` on the source DC + destination DC
   
-`DCDIAG /TEST:DNS` performs seven different tests to quickly vet the DNS health of a domain controller. This test is NOT run as part of the default execution of DCDIAG.
+`DCDIAG /TEST:DNS` does seven different tests to quickly vet the DNS health of a domain controller. This test isn't run as part of the default execution of DCDIAG.
 
-1. Sign in to the console of the destination domain controllers logging the 8524 events with Enterprise Admin credentials.
-2. Open an administrative privileged CMD prompt and run `DCDIAG /TEST:DNS /F` on the DC logging the 8424 status AND the source DC that the destination DC is replicating from.
+1. Sign in with Enterprise Admin credentials to the console of the destination domain controllers that log the 8524 events.
+2. Open an administrative privileged CMD prompt, and then run `DCDIAG /TEST:DNS /F` on the DC logging the 8424 status AND the source DC that the destination DC is replicating from.
 
     To run DCDIAG against all DCs in a forest, type `DCDIAG /TEST:DNS /V /E /F:<File name.txt>`.
 
@@ -266,7 +266,7 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
 ### Resolve the 8524 DNS lookup failure: The long way around
 
-If the 8524 error/events aren't caused by stale DC metadata and the CNAME PING test fails, vet the DNS health of the source DC, the destination DC, and the DNS Servers used by the source and destination DCs. In summary, verify that:
+If the 8524 error/events aren't caused by stale DC metadata, and the CNAME PING test fails, vet the DNS health of the source DC, the destination DC, and the DNS Servers used by the source and destination DCs. In summary, verify that:
 
 - The source DC has registered the CNAME and host records with a valid DNS.
 - The destination DC points to valid DNS Servers.
@@ -348,7 +348,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     c:\>nslookup -type=cname <fully qualified cname of source DC> <source DCs secondary DNS Server IP>
     ```
 
-    Continuing the example where the NTDS Settings objectGUID for contoso-dc2 in the contoso.com domain is 8a7baee5-cd81-4c8c-9c0f-b10030574016 and points to "10.45.42.99" as primary for DNS name resolution, the NSLOOKUP syntax would be:
+    In the example, the NTDS Settings objectGUID for contoso-dc2 in the contoso.com domain is 8a7baee5-cd81-4c8c-9c0f-b10030574016. It points to "10.45.42.99" as primary for DNS name resolution. The NSLOOKUP syntax would be:
 
     ```console
     c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.99
@@ -496,7 +496,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
                                                  10.45.42.103<- Secondary DNS Server IP>
     ```
 
-    From the console of the destination DC, use NSLOOKUP to query the DNS Servers configured on the destination DC for the source DCs CNAME and host records:
+    From the console of the destination DC, use `NSLOOKUP` to query the DNS Servers configured on the destination DC for the source DCs CNAME and host records:
 
     ```console  
     c:\>nslookup -type=cname <fully qualified CNAME of source DC> <destination DCs primary DNS Server IP >
