@@ -66,9 +66,9 @@ Method 1: [Connect each associated SharePoint site to a new Microsoft 365 group]
 
 Method 2: [Export the data in each site mailbox to a PST file, and then import the PST file to a shared mailbox](/sharepoint/deprecation-of-site-mailboxes).
 
-The *:::no-loc text="Documents":::* folder in the site mailbox is a part of the associated SharePoint site. The links that it contains are shortcuts to the documents that are stored on the SharePoint site. When you export the site mailbox to a PST file, these shortcuts are broken and won't function reliably in the new shared mailbox that you import them to.
+The **Documents** folder in the site mailbox is a part of the associated SharePoint site. The links that it contains are shortcuts to the documents that are stored on the SharePoint site. When you export the site mailbox to a PST file, these shortcuts are broken and won't function reliably in the new shared mailbox that you import them to.
 
-For example, when you access the *:::no-loc text="Documents":::* folder in a shared mailbox from Outlook on the web, email messages will include the SharePoint document links, as shown in the following screenshot. However, the links won't be active.
+For example, when you access the **Documents** folder in a shared mailbox from Outlook on the web, email messages will include the SharePoint document links, as shown in the following screenshot. However, the links won't be active.
 
 :::image type="content" source="media/site-mailbox-retirement-faq/owa-messages.png" alt-text="Screenshot of the links displayed in the Documents folder.":::
 
@@ -86,7 +86,7 @@ Ideally, you would delete the associated SharePoint site to enable Exchange to b
 Get-Mailbox <site_mailbox_name>:* | ?{$_.RecipientTypeDetails -eq "TeamMailbox"} | Remove-Mailbox -Confirm:$false
 ```
 
-**Note:** In this command, replace \<site mailbox name> with the name of the site mailbox that you want to delete.
+**Note:** In this command, replace \<site_mailbox_name> with the name of the site mailbox that you want to delete.
 
 The system will remove the link to the site mailbox from the associated SharePoint site when the site mailbox is deleted. Deleting only the site mailbox won't affect the data that's stored on the SharePoint site.
 
