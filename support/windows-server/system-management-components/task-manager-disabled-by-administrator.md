@@ -15,7 +15,7 @@ ms.technology: windows-server-system-management-components
 ---
 # Error message: Task Manager has been disabled by your administrator
 
-This article provides help to resolve an error "Task Manager has been disabled by your administrator" that occurs when you try to use Task Manager.
+This article resolves an error "Task Manager has been disabled by your administrator" that occurs when you try to use Task Manager.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555480
@@ -38,7 +38,7 @@ When you try to open Windows Task Manger, the following error may appear:
 
     - Local Group Policy
 
-        1. Go to **Start** > **Run** > Write **Gpedit.msc** and press on **Enter** button.
+        1. Go to **Start** > **Run**, type *`Gpedit.msc`*, and then press Enter.
 
         2. Navigate to **User Configuration** > **Administrative Templates** > **System** > **Ctrl+Alt+Del Options**.
 
@@ -46,18 +46,18 @@ When you try to open Windows Task Manger, the following error may appear:
 
         4. Close **Gpedit.msc** MMC.
 
-        5. Go to **Start** > **Run**, write `gpupdate /force` and press on **Enter** button.
+        5. Go to **Start** > **Run**, type *`gpupdate /force`*, and then press Enter.
 
             > [!NOTE]
-            > If you are using Windows 2000, follow KB 227302 instead stage e. Using SECEDIT to force a Group Policy refresh immediately.
+            > If you're using Windows 2000, follow KB 227302 instead stage e. Using `SECEDIT` to force a Group Policy refresh immediately.
 
     - Domain Group Policy
 
-        1. Contact you local IT support team.
+        Contact you local IT support team.
 
 2. Verify correct registry settings:
 
-    1. Go to **Start** > **Run**, write *regedit* and press on **Enter** button.
+    1. Go to **Start** > **Run**, type *`regedit`*, and then press Enter.
 
         > [!WARNING]
         > Modifying your registry can cause serious problems that may require you to reinstall your operating system. Always back up your files before doing this registry hack.
