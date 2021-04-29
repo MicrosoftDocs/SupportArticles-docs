@@ -107,6 +107,8 @@
       href: ../administration/proxy-address-being-used.md
     - name: Repeated calls against the same folder are slow
       href: ../administration/slow-repeated-calls-against-same-folder.md
+    - name: Site mailbox retirement FAQs
+      href: ../administration/site-mailbox-retirement-faq.md
     - name: The length of the property is too long error
       href: ../administration/the-length-of-the-property-is-too-long-error.md
     - name: TooManyBadItemsPermanentException during migration

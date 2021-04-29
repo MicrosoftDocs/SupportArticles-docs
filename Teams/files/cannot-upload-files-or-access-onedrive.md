@@ -1,5 +1,5 @@
 ---
-title: (File is locked) or (item might not exist) error
+title: File is locked or item might not exist error
 description: Fixes an issue in which you get the "file is locked" error when uploading a file or get the "item might not exist or is no longer available" error when accessing OneDrive in Teams.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -42,11 +42,11 @@ When you access the OneDrive cloud storage from the **Files** section, you recei
 
 ## Cause
 
-You receive these error messages if the default document library name on the OneDrive site was changed from ”Documents” to some other name.
+You receive these error messages if the default document library name on the OneDrive site was changed from "Documents" to some other name.
 
 ## Resolution
 
-To resolve this issue, you must rename the document library to “Documents” by using one of the following methods.
+To resolve this issue, you must rename the document library to "Documents" by using one of the following methods.
 
 > [!NOTE]
 > You must have administrative permissions to make these changes, or contact your administrator to make these changes.
