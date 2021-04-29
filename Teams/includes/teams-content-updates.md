@@ -2,6 +2,28 @@
 
 
 
+## Week of April 19, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/21/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
+| 4/22/2021 | [Automatic update not working in Teams](/microsoftteams/troubleshoot/known-issues/teams-doesnt-automatically-update) | modified |
+| 4/22/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+
+
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | added |
+| 4/12/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 4/14/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | modified |
+| 4/14/2021 | [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) | modified |
+| 4/14/2021 | [(File is locked) or (item might not exist) error](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
+
+
 ## Week of March 29, 2021
 
 
@@ -41,13 +63,3 @@
 | 3/24/2021 | [Information about Teams known issues](/microsoftteams/troubleshoot/teams-welcome) | modified |
 | 3/24/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | modified |
 | 3/25/2021 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
-
-
-## Week of March 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/16/2021 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
-| 3/18/2021 | [Lenovo Yoga L13 might shut down during Teams meetings](/microsoftteams/troubleshoot/teams-conferencing/lenovo-shut-down-during-meeting) | added |
-| 3/19/2021 | [Lenovo Yoga L13 might shut down during Teams meetings](/microsoftteams/troubleshoot/teams-conferencing/lenovo-shut-down-during-meeting) | modified |

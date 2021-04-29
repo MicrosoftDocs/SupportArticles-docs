@@ -2,6 +2,25 @@
 
 
 
+## Week of April 19, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/23/2021 | [Can't process transactions in multi-user environment](/office/troubleshoot/access/file-sharing-lock-count-exceeded) | modified |
+
+
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Use Support and Recovery Assistant to collect data about Microsoft 365 Apps installations](/office/troubleshoot/installation/use-sara-to-collect-install-info) | modified |
+| 4/12/2021 | [Office Add-in doesn't start if you disable protected mode for Restricted Sites zone](/office/troubleshoot/office-suite-issues/apps-for-office-not-start) | modified |
+| 4/14/2021 | [Error message in Office when a file is blocked by registry policy settings](/office/troubleshoot/settings/file-blocked-in-office) | modified |
+| 4/16/2021 | [Office Add-in doesn't start if you disable protected mode for Restricted Sites zone](/office/troubleshoot/office-suite-issues/apps-for-office-not-start) | modified |
+
+
 ## Week of April 05, 2021
 
 
@@ -165,21 +184,3 @@
 | 3/24/2021 | Word could not create the work file error message when you save a document | removed |
 | 3/25/2021 | [Excel works with two-digit year numbers](/office/troubleshoot/excel/two-digit-year-numbers) | modified |
 | 3/25/2021 | [Office Add-in doesn't start if you disable protected mode for Restricted Sites zone](/office/troubleshoot/office-suite-issues/apps-for-office-not-start) | modified |
-
-
-## Week of March 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/15/2021 | [Unable to start Excel for Mac](/office/troubleshoot/excel/fails-starting-excel-mac) | modified |
-| 3/15/2021 | [SAP add-ins don't display controls after update to Office 1806 or higher](/office/troubleshoot/excel/sap-add-ins-not-display-control) | modified |
-| 3/15/2021 | [Powerpoint for Mac closes unexpectedly](/office/troubleshoot/office-for-mac/powerpoint-mac-closes-unexpectedly) | modified |
-| 3/15/2021 | [We can't open this add-in from localhost](/office/troubleshoot/office-suite-issues/cannot-open-add-in-from-localhost) | modified |
-| 3/15/2021 | [Unable to start PowerPoint for Mac](/office/troubleshoot/powerpoint/fails-starting-powerpoint-mac) | modified |
-| 3/15/2021 | [Office programs may crash with the SendToBluetooth add-in installed](/office/troubleshoot/third-party-add-ins/office-crash-with-sendtobluetooth) | modified |
-| 3/15/2021 | [Create An Excel Add-In to Calculate Body Mass Index (BMI)](/office/troubleshoot/excel/create-add-in-to-calculate-bmi) | modified |
-| 3/15/2021 | [Request Was Taking Too Long when you open a workbook in Excel Online](/office/troubleshoot/excel/request-too-long-opening-excel-workbook) | modified |
-| 3/15/2021 | [Rename Excel Sheet with Cell Contents by Using Macro](/office/troubleshoot/excel/use-macro-rename-sheet) | modified |
-| 3/16/2021 | Excel Online cross forest KCD data refresh is not supported | removed |
-| 3/16/2021 | [No email notifications for responses to Group Forms](/office/troubleshoot/microsoft-forms/no-email-notifications-for-responses-to-group-forms) | modified |

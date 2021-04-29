@@ -2,6 +2,24 @@
 
 
 
+## Week of April 19, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/21/2021 | [Troubleshoot free/busy issues in Exchange hybrid](/exchange/troubleshoot/calendars/troubleshoot-freebusy-issues-in-exchange-hybrid) | modified |
+
+
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 4/13/2021 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
+| 4/14/2021 | [Add-ins will stop working in Outlook on the web](/exchange/troubleshoot/client-connectivity/add-ins-will-stop-working-outlook-on-the-web) | added |
+
+
 ## Week of April 05, 2021
 
 
@@ -208,19 +226,3 @@
 | 3/24/2021 | [Installing PST Capture tool fails](/exchange/troubleshoot/setup/pst-capture-setup-wizard-ended-prematurely) | modified |
 | 3/24/2021 | [Service Pack upgrade fails](/exchange/troubleshoot/setup/service-pack-upgrade-fails) | modified |
 | 3/24/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
-
-
-## Week of March 15, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/15/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
-| 3/17/2021 | [SocketError when sending or receiving email messages](/exchange/troubleshoot/email-delivery/send-receive-emails-socketerror) | added |
-| 3/18/2021 | [SocketError when sending or receiving email messages](/exchange/troubleshoot/email-delivery/send-receive-emails-socketerror) | modified |
-| 3/18/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
-| 3/18/2021 | [OWA or ECP stops working after you install a security update](/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update) | modified |
-| 3/19/2021 | [How to migrate AD RMS to Azure RMS in Exchange Online](/exchange/troubleshoot/administration/migrate-ad-rms-to-azure) | added |
-| 3/19/2021 | [Large items are skipped during public folder migration](/exchange/troubleshoot/public-folders/large-items-skipped) | added |
-| 3/19/2021 | [Large items are skipped during public folder migration](/exchange/troubleshoot/public-folders/large-items-skipped) | modified |
-| 3/19/2021 | [Emails aren't saved in the Sent Items folder](/exchange/troubleshoot/administration/email-from-shared-mailbox-not-saved-sent-items) | modified |

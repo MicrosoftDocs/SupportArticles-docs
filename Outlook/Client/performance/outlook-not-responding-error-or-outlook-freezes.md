@@ -53,7 +53,7 @@ This problem occurs for one or more of the following reasons:
 > - Many of these items can be automatically checked by the Microsoft Support and Recovery Assistant (SaRA). To start the automated checks, follow these steps:
 >    1. Install the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) tool.
 >    2. Select **Run** when you are prompted by your browser.
->    3. In the report that's generated, review the items on the **Issues found** tab. For configuration details about Outlook, Windows, and you computer, review the settings on the **Detailed View** tab.
+>    3. In the report that's generated, review the items on the **Issues found** tab. For configuration details about Outlook, Windows, and your computer, review the settings on the **Detailed View** tab.
 
 ## Resolution
 
@@ -80,7 +80,7 @@ Performance may be decreased if you use the Outlook AutoArchive feature or sync 
 
 If Outlook is in use by another process, this information is displayed in the status bar at the bottom of the screen. If you try to perform other actions while Outlook is in use, Outlook may not respond. Let the task in process finish its job before you try another action.
 
-### Step 3 - Check the problem that caused by external contents
+### Step 3 - Check the problem caused by external content
 
 To resolve this issue, use one of the following methods:
 

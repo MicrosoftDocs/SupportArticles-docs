@@ -31,6 +31,7 @@ This article describes the methods to verify the installation of Microsoft Excha
 ## Resolve errors during CU or SU installation
 
 - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
+- [HTTP 400 errors in OWA and ECP and Connection Failure error in PowerShell](#http-400-errors-in-owa-and-ecp-and-connection-failure-error-in-powershell)
 - [Missing images in ECP](#missing-images-in-ecp)
 - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
 - [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
@@ -80,6 +81,31 @@ Reinstall the security update from an elevated command prompt.
 1. After the update installs, restart the server.
 
 For more information, see [OWA or ECP stops working after you install a security update](./owa-stops-working-after-update.md).
+
+[Back to top](#summary)
+
+### HTTP 400 errors in OWA and ECP and Connection Failure error in PowerShell
+
+**Issue:**
+
+HTTP 400 errors might occur in Outlook on the Web (OWA) and Exchange Control Panel (ECP) after updates are installed. After you provide credentials to log on to OWA or ECP, the login process may fail with the following error message:
+
+> HTTP 400 - bad request  
+> Cannot serialize context
+
+Also when you start Exchange Management Shell, you receive the following error message:
+
+> ErrorCode                   : -2144108477  
+> TransportMessage            : The WS-Management service cannot process the request because the XML is invalid.  
+> ErrorRecord                 : Connecting to remote server exchange.contoso.com failed with the following error message :  For more information, see the about_Remote_Troubleshooting Help topic.
+
+**Cause:**
+
+This issue occurs if the username ends with the dollar sign ($), such as *admin$*.
+
+**Resolution:**
+
+Remove the dollar sign ($) from the username, or use another administrative account that doesn't end with the dollar sign ($).
 
 [Back to top](#summary)
 
