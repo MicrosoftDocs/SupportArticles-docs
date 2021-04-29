@@ -107,7 +107,7 @@
       href: ../administration/proxy-address-being-used.md
     - name: Repeated calls against the same folder are slow
       href: ../administration/slow-repeated-calls-against-same-folder.md
-    - name: Site mailbox retirement FAQs
+    - name: Site mailbox retirement
       href: ../administration/site-mailbox-retirement-faq.md
     - name: The length of the property is too long error
       href: ../administration/the-length-of-the-property-is-too-long-error.md
@@ -303,6 +303,8 @@
       href: ../mobile-devices/cannot-remove-mobile-device-partnership.md
     - name: Can't create mail profile on iOS device via Autodiscover
       href: ../mobile-devices/cannot-create-mail-profile-on-ios-device-via-autodiscover.md
+    - name: Duplicate Outlook contacts in iOS Contacts app
+      href: ../mobile-devices/duplicate-contacts-in-ios-contacts-app.md
     - name: Issues for mobile devices
       href: ../mobile-devices/issues-for-mobile-devices.md
     - name: Mobile devices aren't quarantined as expected
@@ -379,8 +381,6 @@
       href: ../outlook-issues/connection-to-microsoft-exchange-is-unavailable-error.md
     - name: Control PST use and creation
       href: ../outlook-issues/control-pst-use.md
-    - name: Duplicate Outlook contacts in iOS Contacts app
-      href: ../outlook-issues/duplicate-contacts-in-ios-contacts-app.md
     - name: Emails sent to wrong account if profile has many accounts
       href: ../outlook-issues/emails-sent-to-wrong-account-if-has-many-accounts.md
     - name: Encrypted connection unavailable
