@@ -67,12 +67,6 @@ Supported operating system service pack levels:
 
 ## Visual C++ 2010 SP1 Redistributable Package
 
-Download from the following websites:
-
-- [Microsoft Visual C++ 2010 SP1 Redistributable Package (x86)](https://www.microsoft.com/download/details.aspx?id=8328)
-
-- [Microsoft Visual C++ 2010 SP1 Redistributable Package (x64)](https://www.microsoft.com/download/details.aspx?id=13523)
-
 Supported operating system service pack levels:
 
 - Windows 10 (x64 and x86)
@@ -84,8 +78,6 @@ Supported operating system service pack levels:
 - Windows Server 2008 SP2 or later versions (all editions)
 
 ## Visual C++ 2010 RTM Redistributable Package
-
-Download [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/download/details.aspx?displaylang=en&id=5555).
 
 Supported operating system service pack levels:
 
