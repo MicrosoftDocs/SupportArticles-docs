@@ -20,7 +20,7 @@ In the April 2005 Support Voice column, we inadvertently provided a link to the 
 
 ## What's considered high memory
 
-Obviously, this question dependents on volume and activity of specific applications. In general, high memory is when your ASP.NET worker process (Aspnet_wp.exe) or Internet Information Services (IIS) worker process (W3wp.exe) memory is consistently increasing and isn't returning to a comfortable level.
+Obviously, this question depends on volume and activity of specific applications. In general, high memory is when your ASP.NET worker process (Aspnet_wp.exe) or Internet Information Services (IIS) worker process (W3wp.exe) memory is consistently increasing and isn't returning to a comfortable level.
 
 In general terms, a comfortable level would be under 600 MB in the default 2-GB user memory address space. Once the memory level is higher than that comfortable level, we're doing less than we should be. This behavior may affect other applications that are running on the system.
 
