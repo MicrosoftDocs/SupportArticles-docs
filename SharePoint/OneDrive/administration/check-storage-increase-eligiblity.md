@@ -1,6 +1,6 @@
 ---
-title: Error when accessing OneDrive or Sharepoint
-description: Describes how to resolve an issue when unable to OneDrive or Sharepoint
+title: Check OneDrive site storage  eligibility for storage past 5 TB
+description: Check if a specific user's storage is eligible to be increased to greater than 5TB.
 author: prbalusu
 ms.author: v-matham
 manager: dcscontentpm
