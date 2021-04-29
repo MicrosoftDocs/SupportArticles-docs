@@ -266,11 +266,17 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
 ### Resolve the 8524 DNS lookup failure: The long way around
 
-If the 8524 error/events aren't caused by stale DC metadata, and the CNAME PING test fails, vet the DNS health of the source DC, the destination DC, and the DNS Servers used by the source and destination DCs. In summary, verify that:
+If the 8524 error/events aren't caused by stale DC metadata, and the CNAME PING test fails, vet the DNS health of:
+
+- The source DC
+- The destination DC
+- The DNS Servers used by the source and destination DCs
+
+In summary, verify that:
 
 - The source DC has registered the CNAME and host records with a valid DNS.
 - The destination DC points to valid DNS Servers.
-- That the records of interest registered by source DCs are resolvable by destination DCs.
+- The records of interest registered by source DCs are resolvable by destination DCs.
 
 The error message text in DS RPC Client event 2087 documents a user action for resolving the 8524 error. A more detailed action plan follows:
 
@@ -320,13 +326,10 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Notes:
 
-    The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the _msdcs.\<forest root zone>. This query won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
-
-    CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
-
-    Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
-
-    ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
+    - The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the _msdcs.\<forest root zone>. It won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
+    - CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
+    - Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid. The only exception is that ISP has been contracted (that is, paid), and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
+    - ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
 
 2. **Verify that the source DC has registered its CNAME record**  
 
@@ -355,7 +358,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.101
     ```
 
-    If the source DC hasn't registered its CNAME record on the DNS Servers it points to for name resolution, run the following command from the command prompt of the source DC then recheck the registration of the CNAME record:
+    If the source DC hasn't registered its CNAME record on the DNS Servers it points to for name resolution, run the following command from the source DC. Then recheck the registration of the CNAME record:
 
     ```console
     c:\>net stop netlogon & net start netlogon
@@ -363,17 +366,12 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Notes:
 
-    CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
-
-    CNAME records are registered by the NETLOGON Service during OS startup, NETLOGON service startup, and recurring intervals later.
-
-    Each promotion of a DC with the same name may create a new NTDS Settings object with a different objectGUID that therefore registers a different CNAME record. Verify registration of the CNAME record based the last promotion of the source DC vs. the objectGUID for the NTDS Settings object on the destination DC if the source has been promoted more than 1x.
-
-    Timing issues during OS startup can delay successful Dynamic DNS registration.
-
-    If a DCs CNAME record was successfully registered but later disappears, check MSKB [953317](https://support.microsoft.com/help/953317), duplicate DNS zones in different replication scopes or overly aggressive DNS scavenging by the DNS Server.
-
-    If the CNAME record registration is failing on the DNS servers to which the source DC points for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
+    - CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
+    - CNAME records are registered by the NETLOGON Service during OS startup, NETLOGON service startup, and recurring intervals later.
+    - Each promotion of a DC with the same name may create a new NTDS Settings object with a different objectGUID that therefore registers a different CNAME record. Verify registration of the CNAME record based the last promotion of the source DC vs. the objectGUID for the NTDS Settings object on the destination DC if the source has been promoted more than 1x.
+    - Timing issues during OS startup can delay successful Dynamic DNS registration.
+    - If a DCs CNAME record was successfully registered, but later disappears, check [KB953317](https://support.microsoft.com/help/953317). Duplicate DNS zones in different replication scopes or overly aggressive DNS scavenging by the DNS Server.
+    - If the CNAME record registration is failing on the DNS servers to which the source DC points for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
 
 3. **Verify that the source DC has registered its host records**
 
@@ -410,17 +408,12 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Notes:
 
-    Windows 2000 through Windows Server 2008 R2 computers all register IPv4 host "A" records.
-
-    Windows Server 2008 and Windows Server 2008 R2 computers all register IPv6 host "AAAA" records.
-
-    Host "A" and "AAAA" records are registered in the computers primary DNS suffix zone.
-
-    Disable NICs that don't have network cables attached.
-
-    Disable host record registration on NICs that aren't accessible to DCs and member computers on the network.
-
-    It isn't supported to disable the IPv6 protocol by unchecking the IPv6 checkbox in the network card properties.
+    - Windows 2000 through Windows Server 2008 R2 computers all register IPv4 host "A" records.
+    - Windows Server 2008 and Windows Server 2008 R2 computers all register IPv6 host "AAAA" records.
+    - Host "A" and "AAAA" records are registered in the computers primary DNS suffix zone.
+    - Disable NICs that don't have network cables attached.
+    - Disable host record registration on NICs that aren't accessible to DCs and member computers on the network.
+    - It isn't supported to disable the IPv6 protocol by unchecking the IPv6 checkbox in the network card properties.
 
 4. **Verify that the destination DC points to valid DNS Servers**  
 
@@ -471,17 +464,11 @@ The error message text in DS RPC Client event 2087 documents a user action for r
   
     Notes:
 
-    The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the_msdcs.\<forest root zone>. This query won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
-
-    CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
-
-    Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
-
-    ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
-
-    The DNS resolver on the Windows computers is by-design "sticky" about using DNS servers that are responsive to queries, regardless of whether such DNS Servers host, forward, or delegate the required zones. Restated, the DNS resolver won't fail over and query another DNS server as long as the active DNS is responsive, even if the response from the DNS Server is "I either don't host the record you're looking for or even host a copy of the zone for that record".
-
-    Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) to host, forward or delegate DNS queries for your Active Directory forest.
+    - The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the_msdcs.\<forest root zone>. It won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
+    - CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
+    - Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid. The only exception is that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
+    - ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
+    - The DNS resolver on the Windows computers is by-design "sticky". It uses DNS servers that are responsive to queries, regardless of whether such DNS Servers host, forward, or delegate the required zones. Restated, the DNS resolver won't fail over and query another DNS server as long as the active DNS is responsive, even if the response from the DNS Server is "I either don't host the record you're looking for or even host a copy of the zone for that record".
 
 5. **Verify that the DNS Server used by the destination DC can resolve the source DCs CNAME and HOST records**  
 
@@ -505,7 +492,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     c:\>nslookup -type=host <fully qualified hostname of source DC> <destination DCs secondary DNS Server IP>
     ```
 
-    Continuing the example where contoso-dc2 in the contoso.com domain with GUID 8a7baee5-cd81-4c8c-9c0f-b10030574016 in the Contoso.com forest root domain points to DNS Servers "10.45.42.102" and "10.45.42.103", the NSLOOKUP syntax would be:  
+    In the example, contoso-dc2 in the contoso.com domain with GUID 8a7baee5-cd81-4c8c-9c0f-b10030574016 in the Contoso.com forest root domain points to DNS Servers "10.45.42.102" and "10.45.42.103". The NSLOOKUP syntax would be:  
 
     ```console
     c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.102
