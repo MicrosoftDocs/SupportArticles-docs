@@ -34,7 +34,7 @@ When defining a specific engine(s), you must use the following naming convention
 Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
 
 > [!NOTE]
-> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for 64-bit platforms.
+> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/` and failover to `https://amupdatedl.microsoft.com/server/scanengineupdate/` in case the previous endpoint is not available. By default, all engines will be downloaded for 64-bit platforms.
 
 ## Steps to update scan engines
 
@@ -64,6 +64,7 @@ Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
     param(
     [string]$EngineDirPath,
     [string]$UpdatePathUrl = "http://forefrontdl.microsoft.com/server/scanengineupdate/",
+    [string]$FailoverPathUrl = "https://amupdatedl.microsoft.com/server/scanengineupdate/",
     [string[]]$Engines = ("Microsoft", "Norman", "Command", "VBuster", "Kaspersky", "WormList", "Cloudmark"),
     [string[]]$Platforms = ("amd64")
     )
@@ -186,7 +187,7 @@ Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
     #--------------------------------------------------------------------------------------- 
     # Main Script
     #--------------------------------------------------------------------------------------- 
-
+// implement a clause to failover to the $FailoverPathUrl in case the $UpdatePathUrl isn't available
     Write-Host "Update Path: " $UpdatePathUrl
     Write-Host "Engine Directory: " $EngineDirPath
     Write-Host "Engines: " $Engines
