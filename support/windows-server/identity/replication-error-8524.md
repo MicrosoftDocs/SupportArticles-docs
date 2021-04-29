@@ -492,7 +492,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     c:\>nslookup -type=host <fully qualified hostname of source DC> <destination DCs secondary DNS Server IP>
     ```
 
-    In the example, contoso-dc2 in the contoso.com domain with GUID 8a7baee5-cd81-4c8c-9c0f-b10030574016 in the Contoso.com forest root domain points to DNS Servers "10.45.42.102" and "10.45.42.103". The NSLOOKUP syntax would be:  
+    In the example, contoso-dc2 in the contoso.com domain with GUID 8a7baee5-cd81-4c8c-9c0f-b10030574016 in the `Contoso.com` forest root domain points to DNS Servers "10.45.42.102" and "10.45.42.103". The NSLOOKUP syntax would be:  
 
     ```console
     c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.102
@@ -513,7 +513,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     - The "allow zone transfers" checkbox isn't enabled on the DNS that hosts the primary copy of the zone.
     - The "Only the following servers" checkbox is enabled, but the IP address of the secondary DNS hasn't been added to the allowlist on the primary DNS.
-    - The DNS zone on the Windows Server 2008 DNS hosting the secondary copy of the zone is empty because of MSKB [953317](https://support.microsoft.com/default.aspx?scid=kb;EN-US;953317).
+    - The DNS zone on the Windows Server 2008 DNS hosting the secondary copy of the zone is empty because of [KB953317](https://support.microsoft.com/help/953317).
 
     If the DNS servers used by the source and destination DC have parent / child relationships, check for:
 
