@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 247811
 
 This article details the process of locating a domain by its DNS-style name and its flat-style (NetBIOS) name. The flat-style name is used for backward compatibility. In all other cases, DNS-style names should be used as a matter of policy. This article also addresses troubleshooting the domain controller location process.
 
-## how the Locator finds a domain controller
+## How the Locator finds a domain controller
 
 This sequence describes how the Locator finds a domain controller:
 
@@ -42,7 +42,7 @@ This sequence describes how the Locator finds a domain controller:
     Active Directory servers offer the Lightweight Directory Access Protocol (LDAP) service over the TCP protocol. So clients find an LDAP server by querying DNS for a record of the form:  
     > _ldap._tcp.DnsDomainName
 
-- For a NetBIOS name, Netlogon performs domain controller discovery by using the Microsoft Windows NT version 4.0-compatible Locator. That is, by using the transport-specific mechanism (for example, WINS).
+- For a NetBIOS name, Netlogon performs domain controller discovery by using the Microsoft Windows NT version 4.0-compatible Locator. That is, by using the transport-specific mechanism, such as WINS.
 
     In Windows NT 4.0 and earlier, "discovery" is a process to locate a domain controller for authentication in either the primary domain or a trusted domain.  
 
@@ -60,9 +60,9 @@ When a client logs on or joins the network, it must be able to locate a domain c
 
 After the client locates a domain controller, it establishes communication by using LDAP to gain access to Active Directory. As part of that negotiation, the domain controller identifies which site the client is in based on the IP subnet of that client.
 
-If the client is communicating with a domain controller that isn't in the closest (most optimal) site, the domain controller returns the name of the client's site. If the client has already tried to find domain controllers in that site, the client uses the domain controller that isn't optimal. For example, when the client sends a DNS Lookup query to DNS to find domain controllers in the client's subnet.
+If the client is communicating with a domain controller that isn't in the closest (most optimal) site, the domain controller returns the name of the client's site. If the client has already tried to find domain controllers in that site, the client uses the domain controller that isn't optimal. For example, the client sends a DNS Lookup query to DNS to find domain controllers in the client's subnet.
 
-Otherwise, the client performs a site-specific DNS lookup again with the new optimal site name. The domain controller uses some of the directory service information for identifying sites and subnets.
+Otherwise, the client does a site-specific DNS lookup again with the new optimal site name. The domain controller uses some of the directory service information for identifying sites and subnets.
 
 After the client locates a domain controller, the domain controller entry is cached. If the domain controller isn't in the optimal site, the client flushes the cache after 15 minutes and discards the cache entry. It then attempts to find an optimal domain controller in the same site as the client.
 
@@ -74,7 +74,7 @@ The client establishes an LDAP connection to a domain controller to log on. The 
 
 To troubleshoot the domain locator process:
 
-1. Check Event Viewer on both the client and the server. The event logs may contain error messages indicating that there's a problem. To view Event Viewer, select **Start**, point to **Programs** > **Administrative Tools**, and then select **Event Viewer**. Check the System log on both the client and the server. Also, check the Directory Service logs on the server and DNS logs on the DNS server.
+1. Check Event Viewer on both the client and the server. The event logs may contain error messages indicating that there's a problem. To view Event Viewer, select **Start**, point to **Programs** > **Administrative Tools**, and then select **Event Viewer**. Check the System log on both the client and the server. Also check the Directory Service logs on the server and DNS logs on the DNS server.
 2. Check the IP configuration by using the `ipconfig /all` command at a command prompt.
 3. Use the Ping utility to verify network connectivity and name resolution. Ping both the IP address and the server name. You may also want to ping the domain name.
 4. Use the Netdiag tool to determine whether networking components are working correctly. To send detailed output to a text file, use the following command:
