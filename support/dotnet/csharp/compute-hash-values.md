@@ -32,7 +32,7 @@ It's easy to generate and compare hash values using the cryptographic resources 
     > [!NOTE]
     > In Visual C#. NET, *Class1.cs* is created by default. In Visual C#, *Program.cs* is created by default.
 
-3. Use the `using` directive on the `System`, `System.Security.Cryptography`, and `System.Text` namespaces so that you're not required to qualify declarations from these namespaces later in your code. These statements must be used before any other declarations.
+3. Use the `using` directive on the `System`, `System.Security.Cryptography`, and `System.Text` namespaces so that you aren't required to qualify declarations from these namespaces later in your code. These statements must be used before any other declarations.
 
     ```csharp
     using System;
@@ -40,7 +40,7 @@ It's easy to generate and compare hash values using the cryptographic resources 
     using System.Text;
     ```
 
-4. Declare a string variable to hold your source data, and two arrays of bytes (of undefined size) to hold the source bytes and the resulting hash value.
+4. Declare a string variable to hold your source data, and two byte arrays (of undefined size) to hold the source bytes and the resulting hash value.
 
     ```csharp
     string sSourceData;
@@ -48,7 +48,7 @@ It's easy to generate and compare hash values using the cryptographic resources 
     byte[] tmpHash;
     ```
 
-5. Use the `GetBytes()` method that's a member of the `System.Text.ASCIIEncoding` class, to convert your source string into an array of bytes (required as input to the hashing function).
+5. Use the `GetBytes()` method of the `System.Text.ASCIIEncoding` class to convert your source string into an array of bytes (required as input to the hashing function).
 
     ```csharp
     sSourceData = "MySourceData";
@@ -126,9 +126,7 @@ In either case, you need to compare two computed hashes. It's easy if they're bo
     Console.ReadLine();
     ```
 
-3. Save and then run your project to:
-    - View the hexadecimal string created from the first hash value.
-    - Find out if the new hash is equal to the original.
+3. Save and then run your project to view the hexadecimal string created from the first hash value. Find out if the new hash is equal to the original.
 
 ## Complete code listing
 
