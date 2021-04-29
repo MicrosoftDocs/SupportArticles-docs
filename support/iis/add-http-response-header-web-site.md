@@ -1,20 +1,20 @@
 ---
 title: Add an HTTP response header to a web site
-description: This article explains how to add a custom HTTP response header to a Web site that's hosted by Internet Information Services (IIS) 7.0, 6.0, or earlier versions.
+description: Explains how to add a custom HTTP response header to a Web site that's hosted by Internet Information Services (IIS).
 ms.date: 03/27/2020
 ms.prod-support-area-path: Development
 ms.topic: how-to
 ---
 # Add a custom HTTP response header to a web site that is hosted by IIS
 
-This article discusses how to add a custom Hypertext Transfer Protocol (HTTP) response header to a web site that's hosted by Internet Information Services (IIS). This header may apply to a site or to an application.
+This article discusses how to add a custom HTTP response header to a web site that's hosted by IIS. This header may apply to a site, or an application.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 954002
 
 ## Add custom HTTP response header in IIS 7.0
 
-To add a custom HTTP response header at the web site level in IIS 7.0 on a computer that's running Windows Server 2008, follow these steps:
+To add a custom HTTP response header at the web site level in IIS 7.0 on a Windows Server 2008 computer, follow these steps:
 
 1. Select **Start**, select **Administrative Tools**, and then select **Internet Information Services (IIS) Manager**.
 2. In the connections pane, expand the node for the server, and then expand **Sites**.
