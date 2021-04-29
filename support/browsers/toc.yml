@@ -323,7 +323,7 @@
     - name: WPAD data collection
       href: ie-wpad-diagnostic.md
 
-    - name: Edge icon incorrectly shown for URL shortcut
+    - name: Incorrect URL shortcut icon
       href: general/edge-icon-show-for-url-shortcut.md
 
 - name: Installation
