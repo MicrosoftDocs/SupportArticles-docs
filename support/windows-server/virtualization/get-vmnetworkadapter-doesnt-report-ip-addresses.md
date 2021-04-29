@@ -106,7 +106,7 @@ The [:::no-loc text="NetTCPIP":::](/powershell/module/nettcpip) WMI provider isn
 
 ## Resolution
 
-On the virtual machine, open an elevated Command Prompt window, and then change to the :::no-loc text="%SystemRoot%\System32\wbem"::: folder. At the command prompt, run the following commands:
+On the virtual machine, open an elevated Command Prompt window, and then change to the :::no-loc text="%SystemRoot%\\System32\\wbem"::: folder. At the command prompt, run the following commands:
 
 ```console
 C:\Windows\System32\wbem>regsvr32.exe NetTCPIP.dll
