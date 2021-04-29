@@ -1,6 +1,10 @@
 - name: Outlook for iOS and Android Troubleshooting
   href: ../outlook-mobile-welcome.md
   items:
+  - name: Contacts
+    items:
+    - name: Duplicate Outlook contacts in iOS Contacts app
+      href: /exchange/troubleshoot/mobile-devices/duplicate-contacts-in-ios-contacts-app?context=/outlook/troubleshoot/context/mobile-context
   - name: Exchange ActiveSync
     items:
     - name: Invitations are forwarded by an attendee for an existing meeting
