@@ -13,7 +13,7 @@ ms.custom:
 - Outlook for Mac
 - CI 118817
 - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: abarglo
 appliesto: 
 - Outlook 2019
 - Outlook 2019 for Mac
