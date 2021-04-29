@@ -17,113 +17,77 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Site mailbox retirement FAQs
+# Site mailbox retirement - April 2021
 
 <a id="summary"></a>
 
-The site mailboxes are being retired and will be out of service and removed. Here's a list of frequently asked questions (FAQs) about the retirement of site mailboxes. Select a question to find the answer.
+The site mailbox feature was [deprecated for Exchange Online in 2017](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028). In October 2020, we announced that all site mailboxes will be [discontinued after April 2021](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704). No extension will be provided beyond this timeframe.
+
+To avoid disruption in your services, we encourage you to remove all dependencies from site mailboxes in your organization as soon as possible. This article answers questions that you might have about how the retirement will affect your organization and what actions you should take.
 
 - [What is a site mailbox?](#what-is-a-site-mailbox)
-- [How do I know whether my organization is using site mailboxes and how many site mailboxes are in the organization? How can I find SharePoint sites that are associated with the site mailboxes?](#how-do-i-know-whether-my-organization-is-using-site-mailboxes-and-how-many-site-mailboxes-are-in-the-organization-how-can-i-find-sharepoint-sites-that-are-associated-with-the-site-mailboxes)
-- [What should I do if I have been heavily invested in using site mailboxes?](#what-should-i-do-if-i-have-been-heavily-invested-in-using-site-mailboxes)
-- [What will happen to the SharePoint site that hosts a site mailbox after the site mailbox is deleted?](#what-will-happen-to-the-sharepoint-site-that-hosts-a-site-mailbox-after-the-site-mailbox-is-deleted)
-- [How do I migrate the site mailbox functionality to a group mailbox?](#how-do-i-migrate-the-site-mailbox-functionality-to-a-group-mailbox)
-- [Can I keep the folder structure since Microsoft 365 Groups don't support multiple folders?](#can-i-keep-the-folder-structure-since-microsoft-365-groups-dont-support-multiple-folders)
-- [How do I bulk import the site mailbox PST files to a shared mailbox?](#how-do-i-bulk-import-the-site-mailbox-pst-files-to-a-shared-mailbox)
-- [What will happen to site mailboxes after April 2021? Will they be automatically deleted?](#what-will-happen-to-site-mailboxes-after-april-2021-will-they-be-automatically-deleted)
-- [Can the retirement deadline of site mailboxes be extended?](#can-the-retirement-deadline-of-site-mailboxes-be-extended)
+- [How can I check whether my organization is using site mailboxes?](#how-can-i-check-whether-my-organization-is-using-site-mailboxes)
+- [What should I do if I want to keep the data in my site mailboxes?](#what-should-i-do-if-i-want-to-keep-the-data-in-my-site-mailboxes)
+- [Will deleting a site mailbox remove the documents in the associated SharePoint site?](#will-deleting-a-site-mailbox-remove-the-documents-in-the-associated-sharepoint-site)
 
 ## What is a site mailbox?
 
-The [site mailbox](/exchange/collaboration/site-mailboxes), first introduced in Exchange Server 2013, improves the collaboration and user productivity by allowing access to both Microsoft SharePoint documents and Exchange email messages using the same client interface. A site mailbox is functionally comprised of the following components:
-
-- SharePoint site membership (owners and members)
-- Shared storage through an Exchange mailbox for email messages and a SharePoint site for documents
-- A management interface that addresses provisioning and lifecycle needs
-
-The site mailbox feature was [deprecated for Exchange Online in 2017](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028) and the [retirement of site mailboxes was announced in October 2020](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704). Use [Microsoft 365 Groups](/microsoft-365/admin/create-groups/office-365-groups) as the successor to the site mailbox and related features.
+A site mailbox is a data repository for email messages and documents that collaborating groups of users can access from a single client interface. Each site mailbox is associated with an Exchange mailbox that stores email messages and with a SharePoint site that stores documents. For more information, see [Site mailboxes](/exchange/collaboration/site-mailboxes).
 
 [Back to top](#summary)
 
-## How do I know whether my organization is using site mailboxes and how many site mailboxes are in the organization? How can I find SharePoint sites that are associated with the site mailboxes?
+## How can I check whether my organization is using site mailboxes?
 
-To list site mailboxes that are present in your organization and list the associated SharePoint sites, follow these steps:
+You can use Exchange Online PowerShell to determine the following:
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-1. Run the following cmdlet:
+- Whether your organization is using site mailboxes.
+- How many site mailboxes, if any, it has.
+- The URLs of the associated SharePoint sites.
 
-   ```powershell
-   Get-SiteMailbox -BypassOwnerCheck -ResultSize Unlimited | ft Name, WhenCreated, ClosedTime, SharePointUrl -AutoSize
-   ```
-
-If you don't get any site mailboxes in the result, there is no action required. Otherwise, [backup the mailboxes and remove them](/sharepoint/deprecation-of-site-mailboxes).
-
-[Back to top](#summary)
-
-## What should I do if I have been heavily invested in using site mailboxes?
-
-You can [connect the SharePoint team site that hosts the site mailbox to Microsoft 365 Groups](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/rolling-out-tenant-admin-tools-to-connect-existing-sharepoint/bc-p/188867). Alternatively, you can export the site mailbox data to a PST file, and then import the PST file. For more information about the steps, see [Retirement of site mailboxes](/sharepoint/deprecation-of-site-mailboxes).  
-
-[Back to top](#summary)
-
-## What will happen to the SharePoint site that hosts a site mailbox after the site mailbox is deleted?
-
-Ideally, when you delete a site mailbox, the associated SharePoint site should be deleted. However, if you want to keep the SharePoint site, delete only the site mailbox by using the following [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) command:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following cmdlet:
 
 ```powershell
-Get-Mailbox <site mailbox name>:* | ?{$_.RecipientTypeDetails -eq "TeamMailbox"} | Remove-Mailbox -Confirm:$false 
+Get-SiteMailbox -BypassOwnerCheck -ResultSize Unlimited | ft Name, WhenCreated, ClosedTime, SharePointUrl -AutoSize
 ```
 
-**Note:** Replace \<site mailbox name> with the name of the site mailbox you want to delete. Here's an example:
+If the cmdlet returns a blank output, your organization doesn't use site mailboxes. Therefore, your organization won't be affected by this feature retirement.
 
-```powershell
-Get-Mailbox MDEL:* | ?{$_.RecipientTypeDetails -eq "TeamMailbox"} | Remove-Mailbox -Confirm:$false
-```
-
-By using this command, the system removes the site mailbox link from the SharePoint site when a site mailbox is deleted. Deleting only the site mailbox doesn't affect the data on the SharePoint site.
+If the output is not blank, you'll see a list of the site mailboxes and their associated SharePoint site URLs. To prepare for the site mailbox retirement, we recommend that you [back up the site mailboxes and then delete them](/sharepoint/deprecation-of-site-mailboxes).
 
 [Back to top](#summary)
 
-## How do I migrate the site mailbox functionality to a group mailbox?
+## What should I do if I want to keep the data in my site mailboxes?
 
-You can [connect the SharePoint team site that hosts the site mailbox to Microsoft 365 Groups](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/rolling-out-tenant-admin-tools-to-connect-existing-sharepoint/bc-p/188867). Alternatively, you can export the site mailbox data to a PST file, and then import the PST file. For more information about the steps, see [Retirement of site mailboxes](/sharepoint/deprecation-of-site-mailboxes).
+If you want to keep the data that's in your site mailboxes, you can migrate the site mailboxes to either [Microsoft 365 Groups](/microsoft-365/admin/create-groups/office-365-groups) or shared mailboxes by using one of the following methods.
 
-[Back to top](#summary)
+**Note:** If you have subfolders in your site mailboxes, and you want to preserve their structure after the migration, use Method 2 because Microsoft 365 Groups doesn't support subfolders.
 
-## Can I keep the folder structure since Microsoft 365 Groups don't support multiple folders?
+Method 1: [Connect each associated SharePoint site to a new Microsoft 365 group](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/rolling-out-tenant-admin-tools-to-connect-existing-sharepoint/bc-p/188867).
 
-Site mailboxes support multiple subfolders, but Microsoft 365 Groups don't support the folder structure. To keep the folder structure from a site mailbox, export the site mailbox data, and then import the data to a shared mailbox. For more information about the steps, see [How do I bulk import the site mailbox PST files to a shared mailbox?](#how-do-i-bulk-import-the-site-mailbox-pst-files-to-a-shared-mailbox)
+Method 2: [Export the data in each site mailbox to a PST file, and then import the PST file to a shared mailbox](/sharepoint/deprecation-of-site-mailboxes).
 
-[Back to top](#summary)
+The *:::no-loc text="Documents":::* folder in the site mailbox is a part of the associated SharePoint site. The links that it contains are shortcuts to the documents that are stored on the SharePoint site. When you export the site mailbox to a PST file, these shortcuts are broken and won't function reliably in the new shared mailbox that you import them to.
 
-## How do I bulk import the site mailbox PST files to a shared mailbox?
-
-It's possible to bulk export site mailbox data to PST files, and then bulk import the PST files to shared mailboxes. For more information about the steps, see the following articles:
-
-- [Export site mailboxes to PST (using script)](/sharepoint/deprecation-of-site-mailboxes#export-site-mailboxes-to-pst-using-script)
-- [Use network upload to import PST files to Office 365](/microsoft-365/compliance/use-network-upload-to-import-pst-files)
-- [Use drive shipping to import PST files](/microsoft-365/compliance/use-drive-shipping-to-import-pst-files-to-office-365)
-
-**Note:** The *Documents* folder in a site mailbox is part of a SharePoint site. The folder is supported for operation in only the site mailbox and the associated SharePoint site. The folder stores shortcut links to the actual documents that are stored in the SharePoint site. Exporting the site mailbox to a PST file breaks these shortcut links. If such PST file is imported into a normal user mailbox or a shared mailbox, the folder will behave unreliably. Here's an example:
-
-In Outlook on the web, the *Documents* folder displays the email messages with links to the documents that are stored in the SharePoint site. These links may or may not work.
+For example, when you access the *:::no-loc text="Documents":::* folder in a shared mailbox from Outlook on the web, email messages will include the SharePoint document links, as shown in the following screenshot. However, the links won't be active.
 
 :::image type="content" source="media/site-mailbox-retirement-faq/owa-messages.png" alt-text="Screenshot of the links displayed in the Documents folder.":::
 
-In Outlook, these email messages are displayed as unsafe.
+In the Microsoft Outlook client, the links will be marked as unsafe and won't be displayed.
 
 :::image type="content" source="media/site-mailbox-retirement-faq/outlook-messages.png" alt-text="Screenshot of unsafe message displayed in the Documents folder.":::
 
 [Back to top](#summary)
 
-## What will happen to site mailboxes after April 2021? Will they be automatically deleted?
+## Will deleting a site mailbox remove the documents in the associated SharePoint site?
 
-The retirement of site mailboxes was [announced in October 2020](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704). You're encouraged to export site mailboxes and remove them by following the steps in [retirement of site mailboxes](/sharepoint/deprecation-of-site-mailboxes). You should remove all dependencies from your site mailbox (for example, any workflow that you use for the site mailbox) to avoid any disruptions to services after April 2021.
+Ideally, you would delete the associated SharePoint site to enable Exchange to be notified that it should delete that site mailbox. However, if you want to keep the SharePoint site, you can delete only the site mailbox by running the following cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
-[Back to top](#summary)
+```powershell
+Get-Mailbox <site_mailbox_name>:* | ?{$_.RecipientTypeDetails -eq "TeamMailbox"} | Remove-Mailbox -Confirm:$false
+```
 
-## Can the retirement deadline of site mailboxes be extended?
+**Note:** In this command, replace \<site mailbox name> with the name of the site mailbox that you want to delete.
 
-The site mailbox deprecation was [announced in 2017](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028) and the retirement was [announced in October 2020](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704). No further extension will be provided. We strongly encourage tenants to back up the site mailboxes by following the steps in [retirement of site mailboxes](/sharepoint/deprecation-of-site-mailboxes) and remove the dependencies from the site mailboxes.
+The system will remove the link to the site mailbox from the associated SharePoint site when the site mailbox is deleted. Deleting only the site mailbox won't affect the data that's stored on the SharePoint site.
 
 [Back to top](#summary)
