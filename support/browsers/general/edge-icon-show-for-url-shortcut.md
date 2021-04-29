@@ -20,7 +20,7 @@ Consider the following scenario:
 
 - You're using the Microsoft Edge :::image type="icon" source="./media/edge-icon-show-for-url-shortcut/m365-edge-icon.png" border="false"::: browser that is based on Chromium.
 - You create a shortcut to a website on the desktop of your computer.
-- The shortcut target is *":::no-loc text="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe":::" \<URL\>*.
+- The shortcut target is *":::no-loc text="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe":::" \<URL\>*.
 - You pin the shortcut to the **Start** menu.
 - You change the icon of the shortcut.
   
@@ -41,7 +41,7 @@ To resolve the issue, use *msedge_proxy.exe* as the target application of the sh
 To create a shortcut to a website that opens in Microsoft Edge, and then change the icon, follow these steps:
 
 1. Right-click anywhere in the empty space on the desktop, and then select **New** > **Shortcut** to open the **Create shortcut** window.
-1. In the **Type the location of the item** box, enter *":::no-loc text="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe":::" \<URL\>*, and then select **Next**.
+1. In the **Type the location of the item** box, enter *":::no-loc text="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge_proxy.exe":::" \<URL\>*, and then select **Next**.
     
     **Note:** Replace \<URL\> with the address of the website that you want to create the shortcut to.
 
