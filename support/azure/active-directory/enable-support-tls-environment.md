@@ -64,7 +64,7 @@ For more information, see [Handshake Simulation for various clients connecting t
 
 ### Enable TLS 1.2 common server roles that communicate with Azure AD
 
-Although TLS 1.2 is enabled by default on the supported Windows versions above Windows 2012 R2, you may want to explicitly add the registry values from the "[Enable TLS 1.2"](#enable-tls-12) section on the Windows server roles that interacting with Azure AD, such as the following:
+Although TLS 1.2 is enabled by default on the supported Windows versions that are later than Windows 2012 R2, you may want to explicitly add the registry values from the "[Enable TLS 1.2"](#enable-tls-12) section on the Windows server roles that interact with Azure AD, such as the following:
 
 - Azure AD Connect (version 1.4.38.0 and later enforce TLS 1.2)
   - If you also want to enable TLS 1.2 between the sync engine server and a remote SQL Server, make sure that you have the required versions installed for [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe)
@@ -76,7 +76,7 @@ Although TLS 1.2 is enabled by default on the supported Windows versions above W
 - Azure AD Password Protection proxy service
 
   > [!NOTE]
-  > It's highly recommended that you are running a recent version of the agent, service, or connector.
+  > We highly recommend that you run a recent version of the agent, service, or connector.
 
 For more information, see the following articles:
 
@@ -105,7 +105,7 @@ To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforce
 
 ### Update and configure .NET Framework to support TLS 1.2
 
-Dependencies may include managed applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft Online), V2 (Azure Active Directory), or [Microsoft graph](https://graph.microsoft.com)) using .NET Framework.
+Dependencies might include managed applications and Windows PowerShell scripts (by using Azure AD PowerShell V1 (Microsoft Online), V2 (Azure Active Directory), or [Microsoft graph](https://graph.microsoft.com)) by using .NET Framework.
 
 #### Install .NET updates to enable strong cryptography
 
