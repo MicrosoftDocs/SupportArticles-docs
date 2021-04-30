@@ -20,7 +20,7 @@ appliesto:
 - OneDrive for Business
 ---
 
-# Check OneDrive site storage  eligibility for storage beyond 5 TB
+# Check OneDrive site storage eligibility for storage beyond 5 TB
 
 ## Summary
 
