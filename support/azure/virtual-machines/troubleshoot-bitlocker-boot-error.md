@@ -169,7 +169,7 @@ For a Key Encryption Key scenario, follow these steps:
     # Load ADAL Assemblies. If the ADAL Assemblies cannot be found, please see the "Install Az PowerShell module" section. 
 
     $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"  
+    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"  
   
     If ((Test-Path -Path $adal) -and (Test-Path -Path $adalforms)) { 
 
