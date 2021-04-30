@@ -1,6 +1,6 @@
 ---
 title: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 8 or 7
-description: You experience authentication and connection errors if the client doesn't support TLS 1.2.
+description: You experience authentication errors when connecting to SharePoint or OneDrive from Windows 8 or Windows 7.
 author: v-matham
 manager: dcscontentpm
 localization_priority: Normal
