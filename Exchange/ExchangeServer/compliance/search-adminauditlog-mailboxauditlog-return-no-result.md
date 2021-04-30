@@ -25,11 +25,14 @@ _Original KB number:_ &nbsp;3054391
 
 ## Symptoms
 
-When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results may not be returned as expected.
+When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results may not be returned as expected.
 
-This issue occurs in Microsoft Exchange Server 2013 and Exchange Server 2016.
+This issue occurs in Microsoft Exchange Server 2013 and Exchange Server 2016 and Exchange Server 2019.
 
 ## Workaround
+
+> [!NOTE]
+> Open the **Welcome screen and new user account settings** dialog box in the **Region** settings on the server where the searched mailbox is located, and check the **Format** for **Welcome screen**. If the **Format** for **Welcome screen** is not set to **English (United States)**, you can follow below steps to work around this issue.
 
 To work around this issue, set language and regional settings for the system and network service accounts to English (United States) on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for).
 
@@ -47,14 +50,12 @@ To work around this issue, set language and regional settings for the system and
     1. In the **Welcome screen and new user accounts settings** dialog box, click to select **Welcome screen and system accounts**, and then click **OK**.
 
         > [!NOTE]
-        > The system accounts include the network service account.
+        >
+        > - The system accounts include the network service account.
+        > - You can switch the **Format** for **Current user** back to the original value as long as the **Format** for **Welcome screen** is set to **English (United States)**.
 
-        ![Select the Welcome screen and system accounts option](./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png)
+        :::image type="content" source="./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Select the Welcome screen and system accounts option":::
 
-    1. Click **Change system locale...** and set it **English (United States)**.
-1. Restart Exchange Server.
-
-To verify that the language and regional setting is correct, open a Windows PowerShell window and run the `Get-UICulture` command. The command should return **en-US** on the **Name** column.
 > [!NOTE]
 > The MSExchangeDelivery service may not start with Exchange Server. If the service doesn't start, follow these steps:
 >
