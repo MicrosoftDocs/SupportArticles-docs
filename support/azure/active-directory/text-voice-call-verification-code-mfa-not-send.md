@@ -24,7 +24,9 @@ In this scenario, you can't sign in to your work or school account, such as Offi
 To fix this problem, follow these steps:
 
 1. If you have set up other options for security verification, select **Other verification options**, and then try again by selecting a different option. Also, make sure that your phone numbers are correct in your user account settings.
-2. Ask another global admin to confirm whether your phone numbers are set correctly in your user settings. If steps 1 and 2 don't resolve the problem, your user account may be blocked from using Azure AD MFA. To check whether your user account is blocked, ask a global admin for your Microsoft cloud service to perform the following steps:
+2. Ask another global admin to confirm whether your phone numbers are set correctly in your user settings. 
+
+If steps 1 and 2 don't resolve the problem, your user account may be blocked from using Azure AD MFA. To check whether your user account is blocked, ask a global admin for your Microsoft cloud service to perform the following steps:
 
 If you have an Azure AD MFA or Azure Active Directory Premium subscription
 
