@@ -32,7 +32,7 @@ This issue occurs in Microsoft Exchange Server 2013 and Exchange Server 2016 and
 ## Workaround
 
 > [!NOTE]
-> Open the **Welcome screen and new user account settings** dialog box in the **Region** settings on the server where the searched mailbox is located, and check the **Format** for **Welcome screen**. If the **Format** for **Welcome screen** is not set to **English (United States)**, you can follow below steps to work around this issue.
+> Open the [**Welcome screen and new user account settings**](./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png) dialog box in the **Region** settings on the server where the searched mailbox is located, and check the **Format** for **Welcome screen**. If the **Format** for **Welcome screen** is not set to **English (United States)**, you can follow below steps to work around this issue.
 
 To work around this issue, set language and regional settings for the system and network service accounts to English (United States) on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for).
 
