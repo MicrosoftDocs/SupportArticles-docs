@@ -30,7 +30,7 @@ If steps 1 and 2 don't resolve the problem, your user account may be blocked fro
 
 If you have an Azure AD MFA or Azure Active Directory Premium subscription
 
-1. Go to the [Azure portal](https://portal.azure.com), and then open **Azure Active Directory** .
+1. Go to the [Azure portal](https://portal.azure.com), and then open **Azure Active Directory**.
 2. If you want to change the default active directory, click **Manage tenants**, choose the active directory, and then click **Switch**.
 3. Choose **Users**, open the profile of the user that has the problem.
 4. Check whether the **Block sign in** is enabled. If yes, disable the option.
