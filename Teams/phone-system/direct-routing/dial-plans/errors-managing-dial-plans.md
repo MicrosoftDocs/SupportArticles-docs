@@ -48,4 +48,4 @@ The above actions trigger a query to look up the value of the EffectiveTenantDia
 
 ## Resolution
 
-Your administrator account must be [assigned a Teams license](microsoft-365/admin/manage/assign-licenses-to-users) if you need to [manage dial plans](/microsoftteams/create-and-manage-dial-plans).
+Your administrator account must be [assigned a Teams license](microsoft365/admin/manage/assign-licenses-to-users) if you need to [manage dial plans](/microsoftteams/create-and-manage-dial-plans).

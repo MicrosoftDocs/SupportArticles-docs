@@ -91,10 +91,6 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
-  - name: Direct Routing 
-    items: 
-    - name: Issues with SBC connectivity
-      href: ./direct-routing/sip-options-tls-certificate-issues.md
   - name: Exchange integration
     items:
     - name: Teams and Exchange interaction issues
@@ -151,6 +147,16 @@
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
+  - name: Phone System
+    items: 
+    - name: Dial Plans
+      items: 
+      - name: Errors when trying to manage dial plans
+        href: ./phone-system/dial-plans/errors-managing-dial-plans.md
+    - name: Direct Routing
+      items: 
+      - name: Issues with SBC connectivity
+        href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
   - name: Provisioning
     items:
     - name: Can't create a team 
