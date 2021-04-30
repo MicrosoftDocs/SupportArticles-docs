@@ -18,7 +18,7 @@ This article resolves an issue in which the Microsoft Edge browser icon is incor
 
 Consider the following scenario:
 
-- You're using the Microsoft Edge :::image type="icon" source="./media/edge-icon-show-for-url-shortcut/m365-edge-icon.png" border="false"::: browser that is based on Chromium.
+- You're using the Microsoft Chromium-based Edge :::image type="icon" source="./media/edge-icon-show-for-url-shortcut/m365-edge-icon.png" border="false"::: browser.
 - You create a shortcut to a website on the desktop of your computer.
 - The shortcut target is *:::no-loc text="\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" &lt;URL&gt;":::*.
 - You pin the shortcut to the **Start** menu.
