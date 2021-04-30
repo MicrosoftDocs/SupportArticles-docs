@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting co-management workloads
 description: Helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment.
-ms.date: 04/16/2020
+ms.date: 04/28/2021
 ms.prod-support-area-path: Co-management with Configuration Manager
 ms.reviewer: luche
 ---
@@ -129,6 +129,10 @@ In this case, do the following:
 
 - If you are taking [Path 1: Auto-enroll existing clients](/mem/configmgr/comanage/quickstart-paths#bkmk_path1), you can ignore this message because CMG isn't used.
 - If you are taking [Path 2: Bootstrap with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2), you must [install and configure the CMG](/mem/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway) and onboard the app to Azure AD.
+
+### I unassign Intune policies from a security group, but some settings remain
+
+Intune doesn't revert settings ([tattoo removal](/mem/intune/configuration/device-profile-troubleshoot)) if the Device Configuration workload is set to Configuration Manager. To enable tattoo removal, configure the workload in Configuration Manager, and refresh policy on the device.
 
 ## References
 

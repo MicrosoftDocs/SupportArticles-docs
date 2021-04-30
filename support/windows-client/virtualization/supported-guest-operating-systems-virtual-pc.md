@@ -53,12 +53,6 @@ You can use the following operating systems as a guest operating system in a gue
 
 Additionally, you can install most x86-based operating systems in the Windows Virtual PC environment. For technical issues with third-party operating systems, contact the operating system vendor for support. Support for Microsoft operating systems whose lifecycles have ended may be limited or not available. Microsoft provides support for technical issues with the Windows Virtual PC program, regardless of the installed guest operating system.
 
-For information about how to install any of these guest operating systems on a virtual machine, see the Windows Virtual PC documentation.  
- [https://www.microsoft.com/windows/virtual-pc/support/default.aspx](https://www.microsoft.com/windows/virtual-pc/support/default.aspx)
-
-Windows XP Mode and Windows Virtual PC frequently asked questions:  
- [https://www.microsoft.com/windows/virtual-pc/support/faq.aspx](https://www.microsoft.com/windows/virtual-pc/support/faq.aspx)
-
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.

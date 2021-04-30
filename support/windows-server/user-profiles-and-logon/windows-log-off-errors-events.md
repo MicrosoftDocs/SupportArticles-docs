@@ -88,10 +88,6 @@ To use the Microsoft User Profile Hive Cleanup Service (UPHClean), follow these 
 > - Download UPHClean to your computer again. If you are trying to install UPHClean from a computer on your company's network, copy the UPHClean installer (UPHClean-Setup.msi) to your computer first. Then follow the steps in this section again to install UPHClean.
 > - Install the latest run-time components for Visual C++ applications. Then follow the steps in this section again to install UPHClean. If you are using Windows NT 4.0, restart your computer after you install the latest run-time components for Visual C++ applications.
 
-For more information about how to install the latest run-time components for Visual C++ applications, click the following article number to view the article in the Microsoft Knowledge Base:
-
- [259403](https://support.microsoft.com/help/259403) How to obtain the Visual C++ 6.0 run-time components
-
 ### Verification
 
 To verify that this method worked, log off Windows. Windows should log off immediately. Open the Application log and determine if any event messages indicate that there were user profile errors. For more information about the event messages in the Application log, see the [Event messages in the Application log](#event-messages-in-the-application-log) section.
