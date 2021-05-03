@@ -18,41 +18,23 @@ appliesto:
 
 # Voicemail messages are not delivered in Teams or Skype for Business client
 
-## Symptoms
+## Symptom 1
 
-You experience one of the following symptoms.
+Voicemails are not delivered at all (in Outlook clients and the Skype for Business or Teams client). 
 
-### Symptom 1
-
-Voicemails are not delivered at all (in Outlook clients and the Skype for Business or Teams client). Only voicemails from internal users are delivered. Voicemails that are created by calling from PSTN endpoints (that is, regular telephone calls) are not delivered.
-
-### Symptom 2
-
-Voicemails are delivered to email clients (such as Outlook), but don't appear in the Skype for Business or Teams client.
-
-## Resolution
-
-### For Symptom 1
+## Resolution for Symptom 1
 
 To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled or you use a third-party email system (such as Gmail).
 
-#### For Exchange mail flow rules
+#### Exchange mail flow rules
 
-These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. This means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemails email notification will arrive with SPF fail, if a mail flow rule analyzes the SPF as fail, the email will make what the mail flow rule desires.
+These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. This means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SFP failures will be delivered to Exchange but mail flow rules that anlyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
 
-#### For third-party email systems
+#### Third-party email systems
 
 Third-party email systems are not supported. For more information, see [Set up Phone System voicemail](/microsoftteams/set-up-phone-system-voicemail?bc=%2fskypeforbusiness%2fbreadcrumb%2ftoc.json&toc=%2fskypeforbusiness%2ftoc.json).
 
 The primary issue that affects third-party email systems is that the **FROM** address is formatted for PSTN calls in a non–RFC-compliant manner. However, the Skype for Business or Teams client filters messages depending on the formatting of the **FROM** field. To fix this issue, you can change the mail protection filter of the third-party email system to use the "P1 sender address" instead (which is formatted correctly), and then enable these kinds of email messages to pass through.
-
-### For Symptom 2
-
-A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct.
-
-> ![NOTE]
-> Teams users with on-premises Exchange mailboxes are able to use voicemail with Teams and receive voicemail messages in Outlook, but voicemail messages are not available 
-to view or play within the Teams client.
 
 ## Workaround
 
@@ -65,8 +47,30 @@ Add the Cloud Service IP addresses listed below in an SPF record. Alternatively,
 |52.114.7.28|52.114.128.68|52.114.75.27|
 |52.114.15.0|52.114.159.40|52.114.76.82|
 |52.114.7.29|52.114.128.18|52.114.76.83|
-|52.114.15.1|52.114.159.41|52.114.75.28|
-|
+|52.114.15.1|52.114.159.41|52.114.75.2## Symptom 2
+
+Voicemails are delivered to email clients (such as Outlook), but don't appear in the Skype for Business or Teams client. Only voicemails from internal users are delivered. Voicemails that are created by calling from PSTN endpoints (that is, regular telephone calls) are not delivered.
+
+### Resolution For Symptom 2
+
+#### Exchange Email Connector
+A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct.
+
+> ![NOTE]
+> Teams users with on-premises Exchange mailboxes are able to use voicemail with Teams and receive voicemail messages in Outlook, but voicemail messages are not available 
+to view or play within the Teams client. 
+
+> ![NOTE]
+> Voicemail messages protected with Rights Management Services will be viewable in Teams but can only be played using the Outlook Web client ("OWA") and transcriptions can only be read in either Outlook or OWA. 
+
+#### Exchange mail flow rules
+Exchange mail flow rules can also impact availability of messages in Skype for Business or Teams. If changes are made to headers the messages will not be available in the voicemail folder used by these clients for retrieval. If voicemail messages are visible in Outlook but not Teams, the problem is likely due to changes to the message content preventing the messages from being deposited in the voicemail folder. To investigate, you can use [MFCMAPI from Github](https://github.com/stephenegriffin/mfcmapi/releases), to view the contents of user's outlook **Voice Mail** folder. To access this folder, open MFCMAPI, then open the user's Outlook mailbox from the MFCMAPI Quick Start menu and expand the Root Container\Finder folder. 
+
+> ![NOTE]
+> The bit version of MFCMAPI should match the bit version of Outlook. 
+
+> ![NOTE]
+> Third party spam, or anti-virus filtering, solutions can also modify voicemail headers that will result in voicemails not being available in the voicemail folder. 
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
