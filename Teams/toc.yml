@@ -129,10 +129,10 @@
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
   - name: Meetings
     items:
-    - name: Issues with meeting recordings
-      href: ./meetings/troubleshoot-meeting-recording-issues.md
     - name: How to join a Microsoft Teams meeting
       href: ./meetings/how-to-join-a-teams-meeting.md
+    - name: Issues with meeting recordings
+      href: ./meetings/troubleshoot-meeting-recording-issues.md      
   - name: Mobile
     items:
     - name: Can't see auto-favorited channels in mobile app
