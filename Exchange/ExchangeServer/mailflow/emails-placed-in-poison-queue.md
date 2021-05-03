@@ -1,5 +1,5 @@
 ---
-title: Email messages stuck in the Poison queue
+title: Emails sent to Poison queue with "Unable to reserve MSAM" error
 description: Fixes an issue in which you receive the "Unable to reserve MSAM for file parsing" error message when email messages are sent to the Poison queue.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -19,7 +19,7 @@ appliesto:
 - Exchange Server 2019
 search.appverid: MET150
 ---
-# Email messages are sent to the Poison queue
+# Emails sent to Poison queue with "Unable to reserve MSAM" error
 
 If email messages are stuck in the Poison queue on one of the servers in your environment that's running Microsoft Exchange Server, try the following steps to troubleshoot the issue:
 
