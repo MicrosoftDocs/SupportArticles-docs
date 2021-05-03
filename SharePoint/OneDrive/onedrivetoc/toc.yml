@@ -48,7 +48,7 @@
   - name: Sharing and Permissions
     items:
     - name: Check OneDrive site storage eligibility for storage beyond 5 TB
-      href: ../storage/check-storage-increase-eligibility.md
+      href: ./storage/check-storage-increase-eligibility.md
   - name: Sync
     items:
     - name: Can't connect to the specified SharePoint site
