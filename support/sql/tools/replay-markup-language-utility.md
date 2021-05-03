@@ -3,7 +3,7 @@ title: Replay Markup Language Utilities
 description: This article describes a group of utilities that support professionals use to troubleshoot SQL Server.
 ms.date: 09/03/2020
 ms.prod-support-area-path: Tools
-ms.reviewer: keithelm, jackli, rdorr
+ms.reviewer: sureshka, jopilov, toddhay, troymoen
 ms.topic: article
 ms.prod: sql
 ---
@@ -37,19 +37,24 @@ After you capture a trace for an instance of SQL Server, you can use the RML Uti
 
 |Version number|Description|
 |---|---|
-|9.04.0004|The current Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
+|9.04.0098|The current release packaged with Database Experimentation Assistant utility that supports all released versions of SQL Server|
+|9.04.0097|The current release available from the SQL Nexus site that supports all released versions of SQL Server|
+|9.04.0051|The previous Web release available from www.microsoft.com/download that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
+|9.04.0004|The previous Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
 |9.01.0109|The previous Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2.|
 |9.00.0023|The previous Web release that supports SQL Server 2000 and SQL Server 2005|
 |8.10.0010|The initial Web release that supports SQL Server 7.0 and SQL Server 2000|
 |||
 
-This current version of the RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of the RML Utilities for SQL Server before you install the current version. The current version of the RML Utilities for SQL Server provides support for SQL Server 2000, SQL Server 2005, SQL Server 2008, SQL Server 2008 R2, SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014 CTP2. Additionally, the current version of the RML Utilities for SQL Server contains important software updates, improved features and reports, and performance and scalability improvements.
+This current version of the RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of the RML Utilities for SQL Server before you install the current version. The current version of the RML Utilities for SQL Server provides support for SQL Server 2000, SQL Server 2005, SQL Server 2008, SQL Server 2008 R2, SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, SQL Server 2019. Additionally, the current version of the RML Utilities for SQL Server contains important software updates, improved features (process .trc and .xel files) and reports, and performance and scalability improvements.
 
 ## Obtain the RML Utilities for SQL Server
 
-The following file is available for download from the Download Center:  
+When you install the [Database Experimentation Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=54090) you can get the RML utilities (ReadTrace and ostress) from the folder: C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\
 
-The RML Utilities for SQL Server, x64 version [Download the RMLSetup_AMD64.msi package now.](https://www.microsoft.com/download/details.aspx?id=4511)
+If you are using RML utilities along with [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) utility, you can obtain ReadTrace and ostress from the location: https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097
+
+The RML Utilities for SQL Server is available for download from the [Download Center](https://www.microsoft.com/download/details.aspx?id=4511)
 
 > [!NOTE]
 > Microsoft provides the RML Utilities for SQL Server as-is. Microsoft Customer Support Services (CSS) does not provide support or updates for the RML Utilities for SQL Server. If you have a suggestion or if you want to report a bug, you can use the e-mail address in the Problems and Assistance topic in the Help file (*RML Help.pdf*). The Help file is included with the RML Utilities for SQL Server.
