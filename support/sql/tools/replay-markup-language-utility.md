@@ -50,7 +50,7 @@ This current version of the RML Utilities for SQL Server supersedes any earlier 
 
 ## Obtain the RML Utilities for SQL Server
 
-When you install the [Database Experimentation Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=54090) you can get the RML utilities (ReadTrace and ostress) from the folder: C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\
+When you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090) you can get the RML utilities (ReadTrace and ostress) from the folder: C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\
 
 If you are using RML utilities along with [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) utility, you can obtain ReadTrace and ostress from the location: https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097
 
