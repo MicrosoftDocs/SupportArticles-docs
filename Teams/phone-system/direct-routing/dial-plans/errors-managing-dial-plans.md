@@ -42,7 +42,7 @@ When you try to test a dial plan, you receive the following error message:
 
 **Error message 3**
 
-When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cseffectivetenantdialplan) cmdlet in Teams PowerShell to see the details of a dial plan, you receive the following error message:
+When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cseffectivetenantdialplan) cmdlet in Teams PowerShell to try to see the details of a dial plan, you receive the following error message:
 
 > Management object not found for identity <UPN> 
 
@@ -50,7 +50,7 @@ When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cs
   
 ## Cause
 
-These actions trigger a query to look up the value of the **EffectiveTenantDialPlanName** property. This property is used to populate the information in the dial plan. If you’re an administrator who does not have an applicable product license, this query can’t run. Because the value is not returned, the errors occur.
+These actions trigger a query to look up the value of the **EffectiveTenantDialPlanName** property. This property is used to populate the information in the dial plan. If you’re an administrator who does not have an applicable product license, this query can’t run. Because the value is not returned, an error occurs.
 
 ## Resolution
 
