@@ -17,10 +17,10 @@ appliesto:
 ms.custom: 
 - CI 148559
 - CSSTroubleshoot 
-ms.reviewer: teams_triage
+ms.reviewer: Shea Caperoon
 ---
 
-# Errors when trying to manage dial plans 
+# Errors when trying to manage dial plans
 
 ## Symptoms
 
@@ -30,23 +30,23 @@ When you try to access a dial plan in the Microsoft Teams admin center, you rece
 
 > We can’t get the effective dial plan so the dial plan can’t be tested.
 
-:::image type="content" source="./media/errors-managing-dial-plans/cant-get-dial-plan.png" alt-text="Test dial plan window shows error":::
+:::image type="content" source="./media/errors-managing-dial-plans/cant-get-dial-plan.png" alt-text="Error when accessing a dial plan":::
 
 **Error message 2**
 
 When you try to test a dial plan, you receive the following error message:
 
-> Something went wrong while testing this phone number. If you continue to have problems, contact Microsoft customer support. 
+> Something went wrong while testing this phone number. If you continue to have problems, contact Microsoft customer support.
 
-:::image type="content" source="./media/errors-managing-dial-plans/something-went-wrong.png" alt-text="Test number window shows error":::
+:::image type="content" source="./media/errors-managing-dial-plans/something-went-wrong.png" alt-text="Error when trying to test a phone number":::
 
 **Error message 3**
 
-When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cseffectivetenantdialplan) cmdlet in Teams PowerShell to try to see the details of a dial plan, you receive the following error message:
+When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cseffectivetenantdialplan) cmdlet in Teams PowerShell to see the details of a dial plan, you receive the following error message:
 
-> Management object not found for identity <UPN> 
+> Management object not found for identity <UPN>
 
-:::image type="content" source="./media/errors-managing-dial-plans/management-object.png" alt-text="Teams PowerShell shows error":::
+:::image type="content" source="./media/errors-managing-dial-plans/management-object.png" alt-text="Get CS Effective Tenant dial plan cmdlet error":::
   
 ## Cause
 
