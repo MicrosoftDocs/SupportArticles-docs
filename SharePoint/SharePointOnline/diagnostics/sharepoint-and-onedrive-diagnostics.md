@@ -25,9 +25,9 @@ description: Troubleshoot issues in SharePoint Online and OneDrive using diagnos
 
 ## Summary
 
-It’s important that administrators be able to diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team is releasing new features in the M365 Admin Center.
+It’s important that administrators are able to diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team is releasing new features in the Microsoft 365 admin center.
 
-Currently, we provide diagnostics to our customers through text analytics. This will not change. However, we want to make it easier to find our diagnostics within the current experience. Therefore, we have created a new set of queries to help administrators.
+Currently we provide diagnostics to our customers through text analytics. This will not change. However, we want to make it easier to find our diagnostics within the current experience. Therefore we have created a new set of queries to help administrators.
 
 > [!NOTE]
 > This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany. 
@@ -35,7 +35,7 @@ Currently, we provide diagnostics to our customers through text analytics. This 
 
 ## More information
 
-Diagnostic capabilities first appeared within the M365 Admin Center support portal for certain text queries in December 2018.
+Diagnostic capabilities first released within the Microsoft 365 admin center support portal for certain text queries in December 2018.
 
 :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-1.jpg" alt-text="Diagnostics screen in SharePoint Admin Cener.":::
 
@@ -58,15 +58,15 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 | **Unable to synchronize a SharePoint Document Library with sync client** |  Validates that the SharePoint document library is configured properly to allow synchronization of files. | Diag: Library Sync |
 | **Access Denied due to organizational policies** |  If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy this diagnostic can unlock you. | Diag: Access Denied due to Network Location Restriction |[Access Denied due to organizational policies](../sharing-and-permissions/access-denied-due-to-org-policies.md)
 | **Invalid retention hold** | This diagnostic can be used to detect and remove an invalid retention hold that may be blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](../sites/compliance-policy-blocking-site-deletion.md)
-| **OneDrive web access issue** | This diagnostic can be used to detect and rename OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified | [Error - This item might not exist](../sharing-and-permissions/this-item-might-not-exist-error.md)
-| **OneDrive Storage limited to 5TB**| This diagnostic helps to verify that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](../storage/check-storage-increase-eligibility.md)
+| **OneDrive web access issue** | This diagnostic can be used to detect and rename the OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified | [Error - This item might not exist](../sharing-and-permissions/this-item-might-not-exist-error.md)
+| **OneDrive Storage limited to 5 TB**| This diagnostic helps to verify that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](../storage/check-storage-increase-eligibility.md)
 
 ### How do I run these diagnostics?
 
 > [!note]
-> You must be an M365 Administrator to run diagnostics.
+> You must be an Microsoft 365 administrator to run diagnostics.
 
-Currently, these diagnostics are only available for administrators and can be accessed through the service request section of the M365 Admin Center. To access this area, follow the steps below.
+Currently, these diagnostics are only available for administrators and can be accessed through the service request section of the Microsoft 365 admin center. To access this area, follow the steps below.
 
 1. Go to https://admin.microsoft.com.
 2. On the left navigation pane, select **Support**.
