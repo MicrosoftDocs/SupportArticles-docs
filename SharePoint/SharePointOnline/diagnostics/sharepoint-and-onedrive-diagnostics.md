@@ -58,7 +58,8 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 | **Unable to synchronize a SharePoint Document Library with sync client** |  Validates that the SharePoint document library is configured properly to allow synchronization of files. | Diag: Library Sync |
 | **Access Denied due to organizational policies** |  If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy this diagnostic can unlock you. | Diag: Access Denied due to Network Location Restriction |[Access Denied due to organizational policies](../sharing-and-permissions/access-denied-due-to-org-policies.md)
 | **Invalid retention hold** | This diagnostic can be used to detect and remove an invalid retention hold that may be blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](../sites/compliance-policy-blocking-site-deletion.md)
-| **OneDrive web access issue** | This diagnostic can be used to detect and rename OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified |
+| **OneDrive web access issue** | This diagnostic can be used to detect and rename OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified | [Error - This item might not exist](../sharing-and-permissions/this-item-might-not-exist-error.md)
+| **OneDrive Storage limited to 5TB**| This diagnostic helps to verify that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](../storage/check-storage-increase-eligibility.md)
 
 ### How do I run these diagnostics?
 
