@@ -20,7 +20,7 @@ ms.custom:
 ms.reviewer: teams_triage
 ---
 
-# Errors when trying to manage dial plans 
+# Errors when trying to manage dial plans
 
 ## Symptoms
 
@@ -36,7 +36,7 @@ When you try to access a dial plan in the Microsoft Teams admin center, you rece
 
 When you try to test a dial plan, you receive the following error message:
 
-> Something went wrong while testing this phone number. If you continue to have problems, contact Microsoft customer support. 
+> Something went wrong while testing this phone number. If you continue to have problems, contact Microsoft customer support.
 
 :::image type="content" source="./media/errors-managing-dial-plans/something-went-wrong.png" alt-text="Test number window shows error":::
 
@@ -44,7 +44,7 @@ When you try to test a dial plan, you receive the following error message:
 
 When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cseffectivetenantdialplan) cmdlet in Teams PowerShell to try to see the details of a dial plan, you receive the following error message:
 
-> Management object not found for identity <UPN> 
+> Management object not found for identity \<UPN>
 
 :::image type="content" source="./media/errors-managing-dial-plans/management-object.png" alt-text="Teams PowerShell shows error":::
   
