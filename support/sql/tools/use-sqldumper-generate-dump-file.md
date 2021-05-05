@@ -64,7 +64,7 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
 3. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
 4. At the command prompt, type the following command, and then press ENTER:
 
-    ```console
+    ```dos
     cd SQLServerInstallDrive:\Program Files\Microsoft SQL Server\number\Shared
     ```
 
@@ -74,25 +74,25 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
 5. To generate a specific kind of dump file, type the corresponding command at the command prompt, and then press ENTER:
    - Full dump file
 
-        ```console
+        ```dos
         Sqldumper.exe ProcessID 0 0x01100
         ```
 
    - Mini-dump file
 
-        ```console
-        - Sqldumper.exe ProcessID 0 0x0120
+        ```dos
+        Sqldumper.exe ProcessID 0 0x0120
         ```
 
    - Mini-dump file that includes indirectly referenced memory. This is the recommended option and is also used by SQL Server by default when auto-generating memory dumps
 
-       ```console
+       ```dos
        Sqldumper.exe ProcessID 0 0x0128
        ```
 
    - Filtered dump file
 
-        ```console
+        ```dos
         Sqldumper.exe ProcessID 0 0x8100
         ```
 
@@ -122,13 +122,13 @@ You can specify the directory where you want the Sqldumper.exe utility to write 
 1. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, type the following command, and then press ENTER:
 
-    ```console
+    ```dos
     cd **SQLServerInstallDrive** :\Program Files\Microsoft SQL Server\number\Shared
     ```
 
 3. Type the following command at the command prompt, and then press ENTER:
 
-    ```console
+    ```dos
     Sqldumper.exe ProcessID 0 0x0128 0 MdumpPath
     ```
 
@@ -285,7 +285,7 @@ If any one of the properties is not set, the Sqldumper.exe utility cannot genera
 
 You can use the ALTER SERVER CONFIGURATION (T-SQL) command to modify these properties. For example:
 
-```console
+```sql
 ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpTimeOut =0;
 ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpPath ='C:\temp\';
 ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpFlags =296;
@@ -293,7 +293,7 @@ ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpFlags =2
 
 Alternatively, you can use PowerShell scripts. For example, for a named instance SQL2017AG:
 
-```console
+```powershell
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name "SqlDumperDumpPath" -Value "C:\temp"
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name "SqlDumperDumpFlags" -Value 296
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name "SqlDumperDumpTimeOut" -Value 0
@@ -301,7 +301,7 @@ Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name 
 
 To validate the settings have been applied, you can run this PowerShell command:
 
-```console
+```powershell
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Get-ClusterParameter
 ```
 
@@ -314,44 +314,67 @@ To set the Sqldumper.exe utility properties for cluster failover, follow these s
    - The `SqlDumperDumpFlags` property
 To set the `SqlDumperDumpFlags` property for a specific kind of dump file, type the corresponding command at the command prompt, and then press ENTER:
      - All thread full dump file
-       - Default instance  
-       cluster resource "SQL Server" /priv SqlDumperDumpFlags = 0x01100
+       - Default instance
 
-       - Named instance  
+       ```dos
+       cluster resource "SQL Server" /priv SqlDumperDumpFlags = 0x01100
+       ```
+
+       - Named instance
+
+       ```dos
        cluster resource "SQL Server (INSTANCE1)" /priv SqlDumperDumpFlags = 0x01100
+       ```
 
      - All thread mini-dump file
-       - Default instance  
+       - Default instance
+
+       ```dos
        cluster resource "SQL Server" /priv SqlDumperDumpFlags = 0x0120
-       - Named instance  
+       ```
+
+       - Named instance
+
+       ```dos
        cluster resource "SQL Server (INSTANCE1)" /priv SqlDumperDumpFlags = 0x0120
+       ```
 
      - Filtered all thread dump file
-       - Default instance  
-       cluster resource "SQL Server" /priv SqlDumperDumpFlags = 0x8100
+       - Default instance
 
-       - Named instance  
+       ```dos
+       cluster resource "SQL Server" /priv SqlDumperDumpFlags = 0x8100
+       ```
+
+       - Named instance
+
+       ```dos
        cluster resource "SQL Server  (INSTANCE1)" /priv SqlDumperDumpFlags = 0x8100
+       ```
 
    - The `SqlDumperDumpPath` property
 
-     cluster resource "SQL Server" /priv SqlDumperDumpPath= DirectoryPath  
+     ```dos
+     cluster resource "SQL Server" /priv SqlDumperDumpPath= DirectoryPath     
+     ```
 
-        > [!NOTE]
-        > `DirectoryPath` is a placeholder for the directory in which the dump file will be generated, and it should be specified in quotation marks (" ").
+     > [!NOTE]
+     > `DirectoryPath` is a placeholder for the directory in which the dump file will be generated, and it should be specified in quotation marks (" ").
 
    - The **SqlDumperDumpTimeOut** property
 
+     ```dos
      cluster resource "SQL Server" /priv SqlDumperDumpTimeOut= Timeout  
+     ```
 
-        > [!NOTE]
-        > **Timeout** is a placeholder for the time-out in milliseconds (ms).
+     > [!NOTE]
+     > **Timeout** is a placeholder for the time-out in milliseconds (ms).
 
-        The time that the utility takes to generate a dump file of a SQL Server process depends on the computer configuration. For a computer that has lots of memories, the time could be significant. To obtain an estimate of the time that the process takes, use the Sqldumper.exe utility to manually generate a dump file. The valid values for the **SqlDumperDumpTimeOut** property are from **10,000 ms** to **MAXDWORD.MAXDWORD** represents the highest value in the range of the DWORD data type (4294967295).
+The time that the utility takes to generate a dump file of a SQL Server process depends on the computer configuration. For a computer that has lots of memories, the time could be significant. To obtain an estimate of the time that the process takes, use the Sqldumper.exe utility to manually generate a dump file. The valid values for the **SqlDumperDumpTimeOut** property are from **10,000 ms** to **MAXDWORD.MAXDWORD** represents the highest value in the range of the DWORD data type (4294967295).
 
 To verify that the settings have been enabled, you can run the following command:
 
-```console
+```dos
 cluster resource "SQL Server" /priv "
 ```
 
@@ -360,34 +383,58 @@ To remove the Sqldumper.exe utility properties for cluster failover, follow thes
 1. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. For a specific property, type the corresponding command at the command prompt, and then press ENTER:
    - The `SqlDumperDumpFlags` property
-     - Default instance  
+     - Default instance
+
+    ```dos
      cluster resource "SQL Server" /priv:SqlDumperDumpFlags /usedefault
-     - Named instance  
+    ```
+
+     - Named instance
+
+    ```dos
      cluster resource "SQL Server (INSTANCE1)" /priv:SqlDumperDumpFlags /usedefault
+    ```
 
    - The `SqlDumperDumpPath` property
      - Default instance  
+
+    ```dos
     cluster resource "SQL Server" /priv:SqlDumperDumpPath /usedefault
+    ```
+
      - Named instance  
+
+    ```dos
     cluster resource "SQL Server (INSTANCE1)" /priv:SqlDumperDumpPath /usedefault
+    ```
 
    - The `SqlDumperDumpTimeOut` property
      - Default instance  
+
+    ```dos
     cluster resource "SQL Server" /priv:SqlDumperDumpTimeOut /usedefault
-     - Named instance  
+    ```
+
+     - Named instance
+
+    ```dos
     cluster resource "SQL Server (INSTANCE1)" /priv:SqlDumperDumpTimeOut /usedefault
+    ```
+
 
 ### How to use DBCC STACKDUMP
 
 The `DBCC STACKDUMP` command can help you create a memory dump in the LOG directory of your SQL Server instance installation. The command will by default create a minidump with all threads, which has limited size and is adequate to reflect the state of SQL Server process. Simply execute the following command in a SQL Server client:
 
-```console
+```SQL
  DBCC STACKDUMP
 ```
 
+For extended functionality of DBCC STACKDUMP in SQL Server 2019, see [this section](#extended-dbcc-stackdump-functionality-introduced-in-sql-server-2019).
+
 To enable this method to create a filtered dump, turn on trace flags 2551 with following command:
 
-```console
+```SQL
 dbcc traceon(2551, -1)
 go
 dbcc stackdump
@@ -398,16 +445,15 @@ To create a full dump, use trace flag 2544.
 > [!NOTE]
 > After you get the dump file, you should disable the trace flag by using the following command to avoid inadvertently upgrading all further SQL Server self-diagnostic minidumps to larger dumps:
 
-```console
+```SQL
 DBCC TRACEOFF (TraceNumber, -1);
-GO
 ```
 
 Where `TraceNumber` is the trace flag you have previously enabled like 2551 or 2544.
 
 In case you are unsure of which trace flag remains active, you can execute:
 
-```console
+```SQL
  DBCC TRACESTATUS(-1)
 ```
 
@@ -420,6 +466,24 @@ An empty result set indicates no trace flag is active. Conversely, if 2551 is st
 
 > [!NOTE]
 > The `traceflag` enabled by DBCC TRACEON are reset (removed) after a service restart.
+
+#### Extended DBCC STACKDUMP functionality introduced in SQL Server 2019
+
+Starting with SQL Server 2019 CU2, the DBCC STACKDUMP command was extended to support generating dumps of different types: mini, filtered, full dumps, which eliminates the need for using trace flags. It also allows you to limiting the text output in the additional text file that gets generated with the memory dump. Doing so may provide visible performance gain in the time it takes SQLDumper.exe to generate a memory dump.
+
+```sql
+DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = LIMITED | DETAILED]
+```
+
+The `TEXT_DUMP = LIMITED` is the default option. If you would like to receive detailed output in the SQLDump000X.txt file you can use `TEXT_DUMP = DETAILED`.
+
+To generate a filtered dump with limited output in the .txt file, you can execute the following command:
+
+```sql
+DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED 
+```
+
+
 
 ### How to use a PowerShell script to generate a dump file with SQLDumper
 
