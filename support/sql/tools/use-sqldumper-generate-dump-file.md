@@ -472,7 +472,7 @@ An empty result set indicates no trace flag is active. Conversely, if 2551 is st
 Starting with SQL Server 2019 CU2, the DBCC STACKDUMP command was extended to support generating dumps of different types: mini, filtered, full dumps, which eliminates the need for using trace flags. It also allows you to limit the text output in the additional text file that gets generated with the memory dump. Doing so may provide visible performance gain in the time it takes SQLDumper.exe to generate a memory dump.
 
 ```sql
-DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = *LIMITED* | DETAILED]
+DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = **LIMITED** | DETAILED]
 ```
 
 The `TEXT_DUMP = LIMITED` is the default option. If you would like to receive detailed output in the SQLDump000X.txt file you can use `TEXT_DUMP = DETAILED`.
