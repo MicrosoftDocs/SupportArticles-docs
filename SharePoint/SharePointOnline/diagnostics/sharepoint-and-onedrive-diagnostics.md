@@ -30,8 +30,7 @@ It’s important that administrators are able to diagnose and resolve issues qui
 Currently we provide diagnostics to our customers through text analytics. This will not change. However, we want to make it easier to find our diagnostics within the current experience. Therefore we have created a new set of queries to help administrators.
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany. 
-
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 ## More information
 
@@ -58,8 +57,8 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 | **Unable to synchronize a SharePoint Document Library with sync client** |  Validates that the SharePoint document library is configured properly to allow synchronization of files. | Diag: Library Sync |
 | **Access Denied due to organizational policies** |  If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy this diagnostic can unlock you. | Diag: Access Denied due to Network Location Restriction |[Access Denied due to organizational policies](../sharing-and-permissions/access-denied-due-to-org-policies.md)
 | **Invalid retention hold** | This diagnostic can be used to detect and remove an invalid retention hold that may be blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](../sites/compliance-policy-blocking-site-deletion.md)
-| **OneDrive web access issue** | This diagnostic can be used to detect and rename the OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified | [Error - This item might not exist](../sharing-and-permissions/this-item-might-not-exist-error)
-| **OneDrive Storage limited to 5 TB**| This diagnostic helps to verify that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](../storage/check-storage-increase-eligibility)
+| **OneDrive web access issue** | This diagnostic can be used to detect and rename the OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified | [Error - This item might not exist](/sharepoint/troubleshoot/sharing-and-permissions/this-item-might-not-exist-error)
+| **OneDrive Storage limited to 5 TB**| This diagnostic helps to verify that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](sharepoint/troubleshoot/storage/check-storage-increase-eligibility)
 
 ### How do I run these diagnostics?
 
@@ -68,20 +67,19 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 
 Currently, these diagnostics are only available for administrators and can be accessed through the service request section of the Microsoft 365 admin center. To access this area, follow the steps below.
 
-1. Go to https://admin.microsoft.com.
+1. Navigate to [Microsoft 365 admin center](https://admin.microsoft.com).
 2. On the left navigation pane, select **Support**.
 3. Select **New service request**.
- 
+
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-2.jpg" alt-text="Select New service request. ":::
- 
+
 4. This will activate the “Need help?” pane on the right-hand side of your screen.
- 
+
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-3.jpg" alt-text="The Need Help? screen.":::
 
     > [!NOTE]
     > Diagnostics can also be rendered in O365 assistant. However, the queries may be different.
- 
-5.	If you would like to render one of our specific diagnostics, enter one of the queries listed in the table above under "Shortcut cmd" into the “Need help?” text box.
 
+5. If you would like to render one of our specific diagnostics, enter one of the queries listed in the table above under "Shortcut cmd" into the “Need help?” text box.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
