@@ -58,7 +58,7 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 | **Access Denied due to organizational policies** | Unlocks administrators who are locked out of SharePoint and OneDrive because of a location-based policy. | Diag: Access Denied due to Network Location Restriction |[Access Denied due to organizational policies](../sharing-and-permissions/access-denied-due-to-org-policies.md)
 | **Invalid retention hold** | Detects and removes an invalid retention hold blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](../sites/compliance-policy-blocking-site-deletion.md)
 | **OneDrive web access issue** | Detects and renames the OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified | [Error - This item might not exist](/sharepoint/troubleshoot/sharing-and-permissions/this-item-might-not-exist-error)
-| **OneDrive Storage limited to 5 TB**| Verifies that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](sharepoint/troubleshoot/storage/check-storage-increase-eligibility)
+| **OneDrive Storage limited to 5 TB**| Verifies that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility)
 
 ### How do I run these diagnostics?
 
