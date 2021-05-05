@@ -422,7 +422,7 @@ To remove the Sqldumper.exe utility properties for cluster failover, follow thes
     ```
 
 
-### How to use DBCC STACKDUMP
+## How to use DBCC STACKDUMP
 
 The `DBCC STACKDUMP` command can help you create a memory dump in the LOG directory of your SQL Server instance installation. The command will by default create a minidump with all threads, which has limited size and is adequate to reflect the state of SQL Server process. Simply execute the following command in a SQL Server client:
 
@@ -472,7 +472,7 @@ An empty result set indicates no trace flag is active. Conversely, if 2551 is st
 Starting with SQL Server 2019 CU2, the DBCC STACKDUMP command was extended to support generating dumps of different types: mini, filtered, full dumps, which eliminates the need for using trace flags. It also allows you to limit the text output in the additional text file that gets generated with the memory dump. Doing so may provide visible performance gain in the time it takes SQLDumper.exe to generate a memory dump.
 
 ```syntaxsql
-DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = **LIMITED** | DETAILED]
+DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = LIMITED | DETAILED]
 ```
 
 The `TEXT_DUMP = LIMITED` is the default option. If you would like to receive detailed output in the SQLDump000X.txt file you can use `TEXT_DUMP = DETAILED`.
