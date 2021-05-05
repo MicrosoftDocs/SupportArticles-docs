@@ -44,7 +44,7 @@ When you try to test a dial plan, you receive the following error message:
 
 When you run the [Get-CsEffectiveTenantDialPlan](/powershell/module/skype/get-cseffectivetenantdialplan) cmdlet in Teams PowerShell to see the details of a dial plan, you receive the following error message:
 
-> Management object not found for identity <UPN>
+> Management object not found for identity \<UPN>
 
 :::image type="content" source="./media/errors-managing-dial-plans/management-object.png" alt-text="Get CS Effective Tenant dial plan cmdlet error":::
   
