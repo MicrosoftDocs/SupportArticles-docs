@@ -66,7 +66,7 @@ The most common way to override system defaults for a whole ASP.NET application 
 
 ASP.NET has new features for session state management. Session state settings in ASP.NET are configured through the *Web.config* file of an ASP.NET application. Several sessions state management options are available in ASP.NET. These options include mode (inproc, State Server, SQL Server), cookieless state management, out-of process mode state server, and the port settings.
 
-For more information about ASP.NET Session State Management, visit [ASP.NET Session State](/previous-versions/dotnet/articles/ms972429(v=msdn.10)). For additional information, visit [INFO: ASP.NET Configuration Overview](https://support.microsoft.com/help/307626).
+For more information about ASP.NET Session State Management, visit [ASP.NET Session State](/previous-versions/dotnet/articles/ms972429(v=msdn.10)).
 
 ## Build and deploy a .NET security policy deployment package
 
@@ -98,5 +98,5 @@ For most uses of ASP.NET, a single server can handle all requests quickly. Howev
 
 For more information about how to deploy applications that are built on the .NET Framework, and about .NET interoperability, visit the following Microsoft web sites:
 
-- [.NET Framework Deployment Guide](/previous-versions/dotnet/articles/ms994336(v=msdn.10))
+- [Deploying the .NET Framework](/dotnet/framework/deployment/deploying-the-net-framework)
 - [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new)

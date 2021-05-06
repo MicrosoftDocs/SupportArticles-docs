@@ -1,5 +1,5 @@
 ---
-title: No VSS writers are listed when you run the vssadmin list writers command in Windows Server 2008 R2
+title: No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 description: Fixes an issue where no VSS writers are listed when you run the "vssadmin list writers" command and events are logged.
 ms.date: 09/07/2020
 author: Deland-Han
@@ -13,23 +13,24 @@ ms.reviewer: jeffpatt, kaushika
 ms.prod-support-area-path: Configuring and using Backup software
 ms.technology: windows-server-backup-and-storage
 ---
-# No VSS writers are listed when you run the vssadmin list writers command in Windows Server 2008 R2
+# No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 
-This article helps fix an issue where no VSS writers are listed when you run the "vssadmin list writers" command and events are logged.
+This article helps fix an issue where no VSS writers are listed when you run the `vssadmin list writers` command and events are logged.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2009550
 
 ## Symptoms
 
- When you run the **vssadmin list writers** command in Windows Server 2008 R2, no VSS writers are listed. Additionally, the following events are logged in the Application log:
+When you run the `vssadmin list writers` command in Windows Server, no VSS writers are listed. Additionally, the following events are logged in the Application log:
+
 > Log Name: Application  
 Source: VSS  
 Event ID: 22  
 Level: Error  
 Description:  
 Volume Shadow Copy Service error: A critical component required by the Volume Shadow Copy service is not registered. This might happened if an error occurred during Windows setup or during installation of a Shadow Copy provider. The error returned from CoCreateInstance on class with CLSID {faf53cc4-bd73-4e36-83f1-2b23f46e513e} and Name VSSEvent is [0x80040154, Class not registered].  
->
+
 > Log Name:     Application  
 Source:         VSS  
 Event ID:       8193  
@@ -52,13 +53,13 @@ This problem occurs because the registry path of the Eventcls.dll file is incorr
 
 To resolve this problem, follow these steps:
 
-1. Click **Start**, type **regedit** in the **Search programs and files** box, and then press ENTER.
+1. Click **Start**, type *regedit* in the **Search programs and files** box, and then press ENTER.
 2. Locate and then click the following registry key:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSystem\\{26c409cc-ae86-11d1-b616-00805fc79216}\EventClasses\\{FAF53CC4-BD73-4E36-83F1-2B23F46E513E}-{00000000-0000-0000-0000-000000000000}-{00000000-0000-0000-0000-000000000000}`  
 3. Double-click the **TypeLib** registry value.
 4. In the **Value Data** box, type *%systemroot%\\system32\\EVENTCLS.DLL*, and then click **OK**.
-5. Exit Registry Editor.
+5. Exit **Registry Editor**.
 6. Click **Start**, type *services.msc* in the **Search programs and files** box, and then press ENTER.
 7. Right-click the following services, one at a time. Click **Restart** for each service.
     - **COM+ Event System**

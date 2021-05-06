@@ -1,7 +1,7 @@
 ---
 title: Point and Print Restrictions policies are ignored in Windows
 description: Describes an issue that occurs when a standard user tries to install a network printer. Provides a resolution.
-ms.date: 09/14/2020
+ms.date: 04/14/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp;2307161
 
 Consider the following scenario:
 
-- You have a computer that is running Windows Vista Service Pack 2 (SP2), Windows Server 2008 SP2, or a later Windows operating system.
+- You have a computer that is running Windows.
 - You apply the Point and Print Restrictions policies.
 - A standard user tries to install a network printer.
 
@@ -32,7 +32,7 @@ In this scenario, the Point and Print Restrictions policies are ignored, and the
 
 ## Cause
 
-Windows Vista SP2, Windows Server 2008 SP2, and later Windows operating systems ignore the Point and Print Restrictions policies when the policies are implemented in the user policy context.
+Windows ignore the Point and Print Restrictions policies when the policies are implemented in the user policy context.
 
 The Point and Print Restrictions policies were previously implemented in the following location:
 
@@ -47,7 +47,7 @@ To have a consistent experience, we recommend that you set the policy in both lo
 ## Resolution
 
 > [!NOTE]
-> The following procedure assumes that you're using the version of the Group Policy Management Console (GPMC) that is included with Windows Server 2008 R2, Windows 7 RSAT, and later Windows operating systems. Otherwise, you must have updated ADMX files in your domain central store in order to see these options. To install the GPMC on Windows Server 2008 R2, Windows 7 RSAT, and later Windows operating systems, use the Add Features Wizard of Server Manager.
+> The following procedure assumes that you're using the version of the Group Policy Management Console (GPMC) that is included with Windows. Otherwise, you must have updated ADMX files in your domain central store in order to see these options. To install the GPMC on Windows, use the Add Features Wizard of Server Manager.
 
 ### How to change the Point and Print Restrictions policies setting
 

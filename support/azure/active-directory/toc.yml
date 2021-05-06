@@ -1,6 +1,18 @@
 - name: Welcome
   href: welcome-azure-ad.yml
 
+- name: Azure AD Governance, Compliance and Reporting 
+  items:
+  - name: Audit Logs
+    items:
+      - name: Unknown Actors in Audit Reports
+        href: unknown-actors-in-audit-reports.md
+
+  - name: Sign-in Activity Reports
+    items:
+      - name: Verify 1st party Microsoft apps in sign-in reports
+        href: verify-first-party-apps-sign-in.md
+
 - name: App Integration and Development 
   items:
   - name: Troubleshoot adding apps
@@ -68,7 +80,7 @@
     href: troubleshoot-azure-mfa-issue.md
   - name: User name or password is incorrect
     href: user-name-pwd-incorrect.md
-  - name: Verification code isn't received in MFA
+  - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
     href: unable-sync-system-discovery-mailbox.md
 
 
@@ -179,7 +191,6 @@
   - name: Yellow exclamation mark in Office 2013
     href: yellow-exclamation-mark-office2013.md
 
-
 - name: Configuration and Management
   items:
   - name: Can't delete a directory using portal
@@ -211,7 +222,7 @@
   - name: Request isn't processed when resetting password
     href: request-not-processed-reset-pwd.md
   - name: Set up your enterprise for working remotely FAQ
-    href: faq-set-up-enterprise-work-remotely.md
+    href: faq-set-up-enterprise-work-remotely.yml
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups

@@ -20,13 +20,18 @@ _Original KB number:_ &nbsp; 4492348
 
 ## Symptoms
 
-A computer in a child domain of an Active Directory Domain Services (AD DS) forest cannot access a service that resides in a different domain within the same forest. If you run a network trace on communications to and from the client computer, the trace contains the following Kerberos messages:  
-> 6 9:35:19 AM 8/14/2018   17.8417442   192.168.1.101   192.168.1.2  KerberosV5   KerberosV5:AS Request Cname: Administrator Realm: `contoso.com` Sname: krbtgt/contoso.com   {TCP:4, IPv4:1}  
->  
-> 7 9:35:19 AM 8/14/2018   17.8452544   192.168.1.2   192.168.1.101  KerberosV5   KerberosV5:KRB_ERROR - KDC_ERR_ETYPE_NOSUPP (14)  {TCP:4, IPv4:1}  
+A computer in a child domain of an Active Directory Domain Services (AD DS) forest cannot access a service that resides in a different domain within the same forest. If you run a network trace on communications to and from the client computer, the trace contains the following Kerberos messages:
 
-On the domain controller of the child domain, Event Viewer records the following Event 14 entry:  
-> Log Name: System  
+```output
+6 9:35:19 AM 8/14/2018   17.8417442   192.168.1.101   192.168.1.2  KerberosV5   KerberosV5:AS Request Cname: Administrator Realm: contoso.com Sname: krbtgt/contoso.com   {TCP:4, IPv4:1}  
+  
+7 9:35:19 AM 8/14/2018   17.8452544   192.168.1.2   192.168.1.101  KerberosV5   KerberosV5:KRB_ERROR - KDC_ERR_ETYPE_NOSUPP (14)  {TCP:4, IPv4:1}  
+```
+
+On the domain controller of the child domain, Event Viewer records the following Event 14 entry:
+
+```output
+Log Name: System  
 Source: Microsoft-Windows-Kerberos-Key-Distribution-Center  
 Event ID: 14  
 Task Category: None  
@@ -34,6 +39,7 @@ Level: Error
 Keywords: Classic  
 Description:  
 While processing an AS request for target service krbtgt, the account Administrator did not have a suitable key for generating a Kerberos ticket (the missing key has an ID of 1). The requested etypes : 18 17 3. The accounts available etypes : 23 -133 -128. Changing or resetting the password of Administrator will generate a proper key.  
+```
 
 ## Cause
 

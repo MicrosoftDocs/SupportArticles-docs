@@ -438,6 +438,8 @@
       href: ./group-policy/fail-to-apply-group-policy-at-startup.md
     - name: Disable screen saver passwords by using policies
       href: ./group-policy/disable-screen-saver-passwords.md
+    - name: Group membership changes do not update over some VPN connections
+      href: ./group-policy/group-membership-changes-not-updating-over-some-vpn-connections.md
     - name: Group Policy is not applied to a user account
       href: ./group-policy/group-policy-not-applied-user-account-runas.md
     - name: Group Policy Screensaver setting isn't working
@@ -446,6 +448,8 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: Use Group Policy to deploy a Known Issue Rollback
+      href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
   items:
   - name: High Availability
@@ -1079,15 +1083,15 @@
 - name: Windows 7 End of Support (EoS) FAQ
   items:
   - name: Windows 7 EoS FAQ
-    href: ./windows-7-eos-faq/windows-7-end-support-faq.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq.yml
   - name: Windows 7 end of support
-    href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq-general.yml
   - name: Windows 7 Extended Security Updates (ESU)
     href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.yml
   - name: Windows 7 ESU offers for E5 customers
-    href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
+    href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.yml
   - name: Troubleshoot issues in ESU
-    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
+    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.yml
 - name: Windows Security
   items:
   - name: Windows Security

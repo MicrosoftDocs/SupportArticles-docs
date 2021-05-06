@@ -11,20 +11,13 @@ This article describes the known issues that you may experience after you instal
 _Original product version:_ &nbsp; Visual Studio Ultimate 2012  
 _Original KB number:_ &nbsp; 2851303
 
-## Summary
+## Known issues for Visual Studio 2012
 
 This article lists the known issues that you may experience after you install Microsoft Visual Studio 2012 or one of the following Visual Studio 2012 updates:
 
 - [Description of Visual Studio 2012 Update 3](https://support.microsoft.com/help/2835600)
 - [Description of Visual Studio 2012 Update 2](https://support.microsoft.com/help/2797912)
 - [Description of Visual Studio 2012 Update 1](https://support.microsoft.com/help/2797915)
-
-## Known issues for Visual Studio 2012
-
-|Microsoft Knowledge Base article|Description|Notes|
-|---|---|---|
-| [KB3058656](https://support.microsoft.com/help/3058656)|Visual Studio cannot open the browser when it is installed on Windows 10 Insider Preview||
-||||
 
 ## Applies to
 

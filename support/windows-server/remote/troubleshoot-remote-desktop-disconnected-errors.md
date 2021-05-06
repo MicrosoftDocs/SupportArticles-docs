@@ -90,33 +90,43 @@ Additionally, the following event ID messages may be logged in Event Viewer on t
 
 - Event message 1  
 
-    > Event ID: 50  
-    > Event Source: TermDD  
-    > Event Description: The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client.
+  ```output
+  Event ID: 50  
+  Event Source: TermDD  
+  Event Description: The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client.
+  ```
 
 - Event message 2
 
-    > Event ID: 1088
-    > Event Source: TermService
-    > Event Description: The terminal services licensing grace period has expired and the service has not registered with a license server. A terminal services license server is required for continuous operation. A terminal server can operate without a license server for 90 days after initial start up.
+  ```output
+  Event ID: 1088
+  Event Source: TermService
+  Event Description: The terminal services licensing grace period has expired and the service has not registered with a license server. A terminal services license server is required for continuous operation. A terminal server can operate without a license server for 90 days after initial start up.
+  ```
 
 - Event message 3
 
-    > Event ID: 1004  
-    > Event Source: TermService  
-    > Event Description: The terminal server cannot issue a client license.
+  ```output
+  Event ID: 1004  
+  Event Source: TermService  
+  Event Description: The terminal server cannot issue a client license.
+  ```
 
 - Event message 4
 
-    > Event ID: 1010  
-    > Event Source: TermService  
-    > Event Description: The terminal services could not locate a license server. Confirm that all license servers on the network are registered in WINS/DNS, accepting network requests, and the Terminal Services Licensing Service is running.
+  ```output
+  Event ID: 1010  
+  Event Source: TermService  
+  Event Description: The terminal services could not locate a license server. Confirm that all license servers on the network are registered in WINS/DNS, accepting network requests, and the Terminal Services Licensing Service is running.
+  ```
 
 - Event message 5
 
-    > Event ID: 28  
-    > Event Source: TermServLicensing  
-    > Event Description: Terminal Services Licensing can only be run on Domain Controllers or Server in a Workgroup. See Terminal Server Licensing help topic for more information.
+  ```output
+  Event ID: 28  
+  Event Source: TermServLicensing  
+  Event Description: Terminal Services Licensing can only be run on Domain Controllers or Server in a Workgroup. See Terminal Server Licensing help topic for more information.
+  ```
 
 ## Resolution for Symptom 1
 
