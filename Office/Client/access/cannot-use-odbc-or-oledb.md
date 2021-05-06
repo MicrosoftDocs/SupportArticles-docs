@@ -49,7 +49,7 @@ Additionally, if you try to define an OLEDB connection from an external applicat
 
 Click-to-Run installations of Office run in an isolated virtual environment on the local operating system. Some applications outside Office may not be aware of where to look for the installation in the isolated environment. 
 
-[Overview of the Microsoft 365 Apps admin center](https://docs.microsoft.com/deployoffice/admincenter/overview) 
+[Overview of the Microsoft 365 Apps admin center](/deployoffice/admincenter/overview) 
 
 ## Resolution
 
