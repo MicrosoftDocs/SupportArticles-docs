@@ -18,7 +18,7 @@ adobe-target: true
 
 This article describes how to update the Windows Update Agent to the latest version.
 
-_Original product version:_ &nbsp; Windows 7, Windows 8, Windows Server 2012  
+_Original product version:_ &nbsp; Windows 7, Windows 8, Windows Server 2008 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 949104
 
 ## Summary
