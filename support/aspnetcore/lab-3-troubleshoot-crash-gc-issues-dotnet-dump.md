@@ -170,7 +170,7 @@ The same rule applies to dotnet-gcdump that applied to the dotnet-dump tool: If 
 sudo -H -u <user name of service> bash -c "<full path to dotnet tools>/dotnet-gcdump collect -p <PID> -o <output path>"
 ```
 
-Refer to the [Collecting core dump files by using dotnet-dump](#collecting-core-dumps-with-dotnet-dump.md) section if this command doesn't look familiar to you.
+Refer to the [Collecting core dump files by using dotnet-dump](#collecting-core-dump-files-by-using-dotnet-dump) section if this command doesn't look familiar to you.
 
 You should now have everything that you need to collect process information by using the tool. The objective will be to collect two sets of data, just as you did by using core dump files. The target process is again running for a different user. Therefore, you'll have to use the "bash" format for the startup command.
 
