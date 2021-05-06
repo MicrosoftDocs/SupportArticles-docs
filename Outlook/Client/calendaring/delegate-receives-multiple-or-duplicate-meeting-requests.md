@@ -38,7 +38,7 @@ This issue occurs when there are multiple hidden delegate rules in the Manager's
 To resolve this issue, follow these steps:
 
 1. Close the Manager's and Delegate's Outlook clients.
-2. Download and start Microsoft Foundation Classes MAPI (MFCMAPI) on a computer that has Outlook installed. To do this, go to [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
+2. Download and start Microsoft Foundation Classes MAPI (MFCMAPI) on a computer that has Outlook installed. To do this, go to [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 3. Go to Quick Start, and then select **Inbox Rules**. If you're prompted, select the manager profile.
 4. Find the rule whose `PR_RULE_PROVIDER` option is set to **SCHEDULE+ EMS Interface**, and then delete it.
 5. Start Outlook by using the Manager profile: **File** > **Account Settings** > **Delegate Access**. Then, remove the delegate.
