@@ -29,7 +29,7 @@ Set-WmiInstance -Path "\\localhost\root\CIMV2\TerminalServices:Win32_TSSessionSe
 You can determine the [idle session limit](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754272(v=ws.11)) by using the following PowerShell cmdlet:
 
 ```powershell
-Get-WmiObject -ComputerName localhost -Namespace root\CIMV2\TerminalServices -Class Win32_TSSessionSetting  -filter "TerminalName = 'RDP-Tcp'" | select IdleSessionLimit
+Get-WmiObject -ComputerName localhost -Namespace root\CIMV2\TerminalServices -Class Win32_TSSessionSetting  -filter "TerminalName='RDP-Tcp'" | select IdleSessionLimit
 ```
 
 > [!NOTE]
