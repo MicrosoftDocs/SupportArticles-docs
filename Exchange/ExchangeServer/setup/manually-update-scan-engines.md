@@ -34,7 +34,7 @@ When defining a specific engine(s), you must use the following naming convention
 Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
 
 > [!NOTE]
-> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/` and failover to `https://amupdatedl.microsoft.com/server/scanengineupdate/` in case the previous endpoint is not available. By default, all engines will be downloaded for 64-bit platforms.
+> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. If this endpoint isn't available, it'll use the failover endpoint `https://amupdatedl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for 64-bit platforms.
 
 ## Steps to update scan engines
 
@@ -60,7 +60,8 @@ Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
     # * Downloads and extracts the full update package for the
     # specified engines for each specified platforms. This script
     # automatically creates directories under this root (metadata, x86, amd64)
-    # and a script specific temp directory used during the processing. #---------------------------------------------------------------------------------------
+    # and a script specific temp directory used during the processing.
+    #---------------------------------------------------------------------------------------
     param(
     [string]$EngineDirPath,
     [string]$UpdatePathUrl = "http://forefrontdl.microsoft.com/server/scanengineupdate/",
@@ -187,7 +188,6 @@ Microsoft, Command, VBuster, Kaspersky, Norman, Wormlist, Cloudmark
     #--------------------------------------------------------------------------------------- 
     # Main Script
     #--------------------------------------------------------------------------------------- 
-// implement a clause to failover to the $FailoverPathUrl in case the $UpdatePathUrl isn't available
     Write-Host "Update Path: " $UpdatePathUrl
     Write-Host "Engine Directory: " $EngineDirPath
     Write-Host "Engines: " $Engines
