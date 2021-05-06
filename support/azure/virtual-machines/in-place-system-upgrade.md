@@ -29,10 +29,8 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions supported for in-place system upgrades:
 
-- Windows 10
-- Windows 10, version 1709, all editions
-- Windows 10, version 1803, all editions
-- Windows 10 Enterprise multi-session, all editions
+- Windows 10 single-session, all editions, all versions
+- Windows 10 Enterprise multi-session, all versions
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround):
 
