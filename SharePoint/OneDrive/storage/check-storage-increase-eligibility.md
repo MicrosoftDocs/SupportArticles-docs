@@ -12,6 +12,7 @@ ms.service: one-drive
 ms.custom: 
 - CSSTroubleshoot
 - CI 136478
+- CI 148890
 search.appverid:
 - SPO160
 - MET150
@@ -22,15 +23,13 @@ appliesto:
 
 # Check OneDrive site storage eligibility for storage beyond 5 TB
 
-If users fill their personal quota of 5 TB of OneDrive storage to at least 90 percent capacity, the site administrator can verify that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB without having to first contact Microsoft Support.  
+If a user in your organization needs more OneDrive storage than the default 5 TB, the Microsoft 365 administrator in your organization can check if the user is eligible for an increased storage limit. The user must already have filled 90% of the 5 TB storage.  
 
 **Note:** Users must contact their Microsoft 365 administrator to request a storage size increase.
 
-Admins can request that Microsoft increase the default storage space up to 25 TB per user, although a lower per-user quota can be set at the admin’s discretion.
+Admins can request that Microsoft increase the default storage space up to 25 TB per user, although a lower per-user quota can be set at the admin’s discretion. To verify eligibility and request the increase, use the following steps:
 
-To verify that the storage level has reached at least 90 percent capacity, follow these steps:
-
-1. Go to [https://admin.microsoft.com](https://admin.microsoft.com).
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 1. In the left pane, select **Support**, and then select **New Service Request**.
 
