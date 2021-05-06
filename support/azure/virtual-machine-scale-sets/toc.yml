@@ -1,7 +1,7 @@
 - name: Welcome
-  href: welcome-vmss.yml
+  href: welcome-virtual-machine-scale-sets.yml
 
 - name: Troubleshoot scaling errors
   items:
   - name: QuotaExceeded error when scaling virtual machine scale sets
-    href: vmss-quota-exceeded.md
+    href: virtual-machine-scale-sets-quota-exceeded.md

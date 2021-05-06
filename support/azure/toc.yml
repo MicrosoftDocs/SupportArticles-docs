@@ -8,7 +8,7 @@
   - name: Virtual Machines
     href: virtual-machines/welcome-virtual-machines.yml
   - name: Virtual Machine Scale Sets
-    href: vmss/welcome-vmss.yml
+    href: virtual-machine-scale-sets/welcome-virtual-machine-scale-sets.yml
   - name: Virtual Desktop
     href: virtual-desktop/welcome-virtual-desktop.yml
   - name: Azure DevOps

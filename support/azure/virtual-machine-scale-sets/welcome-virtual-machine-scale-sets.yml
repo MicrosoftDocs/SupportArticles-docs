@@ -25,25 +25,5 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: QuotaExceeded error when scaling virtual machine scale sets
-            url: ./vmss-quota-exceeded.md
-  # Card
-  - title: Cannot update the scale set
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: QuotaExceeded error when scaling virtual machine scale sets
-            url: ./vmss-quota-exceeded.md
-  # Card
-  - title: Orchestration issue with the scale set
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: QuotaExceeded error when scaling virtual machine scale sets
-            url: ./vmss-quota-exceeded.md
-  # Card
-  - title: Scaling issue when using scale-in policy
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: QuotaExceeded error when scaling virtual machine scale sets
-            url: ./vmss-quota-exceeded.md
+            url: ./virtual-machine-scale-sets-quota-exceeded.md
+ 
