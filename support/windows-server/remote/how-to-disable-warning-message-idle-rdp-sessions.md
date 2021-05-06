@@ -35,5 +35,5 @@ Get-WmiObject -ComputerName localhost -Namespace root\CIMV2\TerminalServices -Cl
 > [!NOTE]
 >
 > - Starting from Windows 10, version 2004 and Windows Server, version 2004, the **EnableTimeoutWarning** property is deprecated for third-party protocol providers. You can contact the vendor of the protocol provider for the mechanism to enable or disable the warning message.
-> - If a third-party protocol provider is used, replace the "RDP-Tcp" with the appropriate protocol name for the product.
+> - If a third-party protocol provider is used, replace the "RDP-Tcp" with the appropriate protocol name for the provider.
 > - If you run the cmdlet remotely, ensure the server firewall allow WMI access and replace the "localhost" with the server name.
