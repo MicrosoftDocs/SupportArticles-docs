@@ -48,9 +48,9 @@ Start Network Capture, and then reproduce the issue.
 
 ## Enable Capi2 logging
 
-For information about how to enable Capi2 logging, go to the following Microsoft website:
+For information about how to enable Capi2 logging, go to the following website:
 
-[Enable CAPI2 event logging to troubleshoot PKI and SSL certificate issues]
+[Enable CAPI2 event logging to troubleshoot PKI and SSL certificate issues](https://www.thebestcsharpprogrammerintheworld.com/2013/09/09/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues/)
 
 This enables verbose logging in **Applications and Services Logs/Microsoft/Windows/Capi2** in Event Viewer.
 
