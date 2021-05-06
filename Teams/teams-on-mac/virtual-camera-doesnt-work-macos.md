@@ -3,7 +3,7 @@ title: Virtual camera on MacOS Teams stops working
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 7/13/2020
+ms.date: 05/06/2021
 audience: Admin
 ms.topic: article
 ms.service: msteams
@@ -24,10 +24,12 @@ description: Addresses an issue in Teams on the MacOS where the Virtual Camera s
 
 ## Summary
 
-After security fixes are applied in the Teams client for MacOS, virtual camera apps may stop functioning.
+After security fixes are applied in the Teams client for macOS, virtual camera apps may stop functioning.
 
-# Solution
-Teams client for MacOS is now supported on client version 1.4.00.8872 or higher.
-If you are running an older version of Teams, please upgrade to latest version.
+## Resolution
+
+This issue is fixed in Teams client for macOS version 1.4.00.8872 and later versions.
+
+If you're running an older version of Teams client, upgrade to the latest version.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
