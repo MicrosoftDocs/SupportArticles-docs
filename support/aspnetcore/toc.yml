@@ -40,3 +40,9 @@
       href: lab-1-2-analyze-core-dumps-lldb-debugger.md
     - name: Lab 1.3 Capture core crash dumps
       href: lab-1-3-capture-core-crash-dumps.md
+    - name: Lab 2.1 Capture dumps with createdump
+      href: lab-2-1-capture-dumps-createdump.md
+    - name: Lab 2.2 Capture dumps with procdump
+      href: lab-2-2-capture-dumps-procdump.md
+    - name: Lab 3 Troubleshoot crash and GC issues with dotnet-dump
+      href: lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md
