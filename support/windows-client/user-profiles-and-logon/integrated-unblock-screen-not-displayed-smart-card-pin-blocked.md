@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 _Applies to:_ &nbsp;Windows 10  
 
-Assume that the [Allow Integrated Unblock screen to be displayed at the time of logon](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#allow-integrated-unblock-screen-to-be-displayed-at-the-time-of-logon) group policy is enabled in Windows 10. After several failed logon attempts because of an incorrect PIN, the smart card is blocked and you receive this error message:
+Assume that the [**Allow Integrated Unblock screen to be displayed at the time of logon**](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#allow-integrated-unblock-screen-to-be-displayed-at-the-time-of-logon) group policy is enabled in Windows 10. After several failed logon attempts because of an incorrect PIN, the smart card is blocked and you receive this error message:
 
 > The smart card is blocked. Please contact your administrator for instructions on how to unblock your smart card.
 
