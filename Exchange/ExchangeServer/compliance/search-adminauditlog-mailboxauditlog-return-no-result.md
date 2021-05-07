@@ -31,7 +31,7 @@ This issue occurs in Microsoft Exchange Server 2019, Exchange Server 2016, and E
 
 ## Workaround
 
-You might be able to work around this issue depending on the language settings on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for). On the server, open the [**Welcome screen and new user account settings**](./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png) dialog box in the **Region** settings and check the **Format** setting for **Welcome screen**. If **Format** is not set to **English (United States)**, follow these steps to set the language and regional settings for the system and network service accounts:
+You might be able to work around this issue depending on the language settings on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for). On the server, open the **Welcome screen and new user account settings** dialog box in the **Region** settings and check the **Format** setting for **Welcome screen**. If **Format** is not set to **English (United States)**, follow these steps to set the language and regional settings for the system and network service accounts:
 
 1. Set English (United States) as the primary language.
     1. In **Control Panel**, open the **Language** item.
