@@ -1,6 +1,6 @@
 ---
 title: Listing some issues for Microsoft 365 Security
-description: This article lists Microsoft 365 Security related issues.
+description: This article lists Microsoft 365 security-related issues.
 author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
@@ -12,13 +12,16 @@ search.appverid:
 - MET150
 ms.custom:
 - CSSTroubleshoot
+- CI 148980
 appliesto:
 - Microsoft 365
 ---
 
 # Microsoft 365 Security troubleshooting
 
-Welcome to Microsoft 365 Security! Here's a collection of information on how to identify and fix errors that you may run into about Microsoft 365 Security.
+Welcome to Microsoft 365 security troubleshooting! Here, you will find information on how to identify and fix errors you might experience related to Microsoft 365 security.
+
+Find content related to your issue by browsing the table of contents, or use the search box on the left.
 
 ## Still need help
 
