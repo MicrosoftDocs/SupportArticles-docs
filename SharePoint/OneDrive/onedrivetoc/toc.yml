@@ -41,7 +41,7 @@
       href: ../sharing-and-permissions/this-item-might-not-exist-error.md
   - name: Storage
     items:
-    - name: Check OneDrive site storage eligibility for storage beyond 5 TB
+    - name: Check OneDrive site eligibility for increased storage
       href: ../storage/check-storage-increase-eligibility.md
   - name: Sites
     items:
