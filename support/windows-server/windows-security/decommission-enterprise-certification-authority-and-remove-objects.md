@@ -264,7 +264,7 @@ The `-viewdelstore` action invokes the certificate selection UI on the set of ce
 Use the following command to see the full LDAP path to the NtAuthCertificates object in your Active Directory:
 
 ```console
-certutil store -? | findstr "CN=NTAuth"
+certutil -viewdelstore -? | findstr "CN=NTAuth"
 ```
 
 ## Step 8 - Delete the CA database
