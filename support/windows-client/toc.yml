@@ -1024,6 +1024,8 @@
       href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
   - name: Smart card logon
     items:
+    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
+      href: ./user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
     - name: Registry keys for smart card PIN caching options not available
       href: ./user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md
   - name: User Logon fails
