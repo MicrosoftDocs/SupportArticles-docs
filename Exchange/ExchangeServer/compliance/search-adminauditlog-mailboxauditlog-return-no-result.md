@@ -1,6 +1,6 @@
 ---
-title: Search-AdminAuditLog or Search-MailboxAuditLog with parameter returns empty results in Exchange Server
-description: Fixes an issue that returns an empty result set when you run Search-AdminAuditLog or Search-MailboxAuditLog with parameters. This issue occurs if your account uses a non-English regional setting in an Exchange Server 2013 environment.
+title:  Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
+description: Workaround for an issue that returns empty results when you run Search-AdminAuditLog and Search-MailboxAuditLog cmdlets with parameters. 
 author: Norman-sun
 ms.author: v-swei
 manager: dcscontentpm
@@ -13,13 +13,15 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: excontent, dkhrebin, genli, christys
 appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2016 Standard Edition
+- Exchange Server 2019 Enterprise Edition
+- Exchange Server 2019 Standard Edition
 - Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
+- Exchange Server 2013 Enterprise Edition
+- Exchange Server 2013 Standard Edition
 search.appverid: MET150 
 ---
-# Empty results are returned when you run Search-AdminAuditLog or Search-MailboxAuditLog with a parameter in Exchange Server
+# Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
 
 _Original KB number:_ &nbsp;3054391
 
@@ -27,11 +29,9 @@ _Original KB number:_ &nbsp;3054391
 
 When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
 
-This issue occurs in Microsoft Exchange Server 2019, Exchange Server 2016, and Exchange Server 2013.
-
 ## Workaround
 
-You might be able to work around this issue depending on the language settings on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for). On the server, open the **Welcome screen and new user account settings** dialog box in the **Region** settings and check the **Format** setting for **Welcome screen**. If **Format** is not set to **English (United States)**, follow these steps to set the language and regional settings for the system and network service accounts:
+You might be able to work around this issue depending on the language settings on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for). On the server, open the **Welcome screen and new user accounts settings** dialog box in the **Region** settings and check the **Format** setting for **Welcome screen**. If **Format** is not set to **English (United States)**, follow these steps to set the language and regional settings for the system and network service accounts:
 
 1. Set English (United States) as the primary language.
     1. In **Control Panel**, open the **Language** item.
@@ -53,7 +53,7 @@ You might be able to work around this issue depending on the language settings o
         :::image type="content" source="./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Select the Welcome screen and system accounts option":::
 
 > [!NOTE]
-> The MSExchangeDelivery service may not start with Exchange Server. If the service doesn't start, follow these steps:
+> The MSExchangeDelivery service may not start together with Exchange Server. If the service doesn't start, follow these steps:
 >
 > 1. Change the logon account of the service to **Local System**.
 > 1. Revert the logon account to **Network Service**.
