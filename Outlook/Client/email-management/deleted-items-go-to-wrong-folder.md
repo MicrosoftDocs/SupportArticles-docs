@@ -50,7 +50,7 @@ To change this registry setting, follow these steps:
 
     **HKEY_CURRENT_USER\Software\Microsoft\Office\\<x.0>\Outlook\Options\General**
 
-    **Note** The *<x.0>* placeholder represents your version of Office (16.0 = Office 2016, Office 2019 or Office 365, 15.0 = Office 2013).
+    **Note:** The *<x.0>* placeholder represents your version of Office (16.0 = Office 2016, Office 2019 or Office 365, 15.0 = Office 2013).
 
 1. Right-click the *DelegateWastebasketStyle* value, and then select **Modify**.
 
@@ -68,7 +68,7 @@ To change this registry setting, follow these steps:
 
     - 4 = Stores deleted items in the mailbox owner's folder.
 
-        **Note** Make sure that the delegate user has at least Author-level permissions for the Deleted Items folder of the owner's mailbox. If the delegate does not have these permissions, and this registry option is set to **4**, then either the item is deleted permanently or the user receives one of the following error messages:
+        **Note:** Make sure that the delegate user has at least Author-level permissions for the Deleted Items folder of the owner's mailbox. If the delegate does not have these permissions, and this registry option is set to **4**, then either the item is deleted permanently or the user receives one of the following error messages:
 
     - The item could not be deleted, it was either moved or already deleted, or access was denied.
 
