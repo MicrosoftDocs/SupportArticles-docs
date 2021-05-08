@@ -52,7 +52,7 @@ This article provides common troubleshooting steps for SQL Server Service Broker
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/pid.png" alt-text="SDK service PID":::
 
-   If you have more than one management server, each management server will have a seperate Service Broker queue and service.
+   If you have more than one management server, each management server will have a separate Service Broker queue and service.
 1. If you can't find the corresponding queue and service, restart the OMSDK service again.
 
 If you still can't find the queue and service, the current Service Broker may be corrupted. Continue with the next step to recreate the SQL Server Service Broker.
