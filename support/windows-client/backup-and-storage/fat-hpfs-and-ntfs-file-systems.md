@@ -21,7 +21,7 @@ _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 201
 _Original KB number:_ &nbsp; 100108
 
 > [!NOTE]
-> HPFS is only supported under Windows NT versions 3.1, 3.5, and 3.51. Windows NT 4.0 does not support and cannot access HPFS partitions. Also, support for the FAT32 file system became available in Windows 98/95(OSR2) and Windows 2000.
+> HPFS is only supported under Windows NT versions 3.1, 3.5, and 3.51. Windows NT 4.0 does not support and cannot access HPFS partitions. Also, support for the FAT32 file system became available in Windows 98/Windows 95 OSR2 and Windows 2000.
 
 ## FAT overview
 
