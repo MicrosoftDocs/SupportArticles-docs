@@ -319,8 +319,8 @@
       href: ../move-or-migrate-mailboxes/new-migrationendpoint-returns-error.md
     - name: A different type of Active Directory object already exists error
       href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
-    - name: Can't migrate mailboxes using IMAP
-      href: ../move-or-migrate-mailboxes/mailbox-migration-fails-using-imap.md
+    - name: Can't migrate IMAP mailboxes
+      href: ../move-or-migrate-mailboxes/imap-mailbox-migration-fails.md
     - name: Can't see free/busy information
       href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
     - name: Can't view mailbox folders after an IMAP migration
