@@ -3,8 +3,6 @@
   items:
   - name: Administration
     items:
-    - name:  Update of Client Access Rules
-      href: ../administration/update-of-client-access-rules-for-office-365-customers.md
     - name: 401 Access denied error when you run Test-OAuthConnectivity
       href: ../administration/401-access-denied-error-when-running-test-oauthconnectivity.md
     - name: 554 5.4.14 Hop Count exceeded
@@ -107,6 +105,8 @@
       href: ../administration/proxy-address-being-used.md
     - name: Repeated calls against the same folder are slow
       href: ../administration/slow-repeated-calls-against-same-folder.md
+    - name: Site mailbox retirement
+      href: ../administration/site-mailbox-retirement-faq.md
     - name: The length of the property is too long error
       href: ../administration/the-length-of-the-property-is-too-long-error.md
     - name: TooManyBadItemsPermanentException during migration
@@ -119,6 +119,8 @@
       href: ../administration/get-federationinformation-cmdlet-unsecure-redirect-warning.md
     - name: Update contact information
       href: ../administration/update-contact-information.md
+    - name:  Updates to Client Access Rules
+      href: ../administration/update-of-client-access-rules-for-office-365-customers.md      
     - name: UsageLocation validation error about Enable-UMMailbox
       href: ../administration/enable-ummailbox-cannot-be-performed-error.md
     - name: Validation errors for a mailbox archive GUID
@@ -301,6 +303,8 @@
       href: ../mobile-devices/cannot-remove-mobile-device-partnership.md
     - name: Can't create mail profile on iOS device via Autodiscover
       href: ../mobile-devices/cannot-create-mail-profile-on-ios-device-via-autodiscover.md
+    - name: Duplicate Outlook contacts in iOS Contacts app
+      href: ../mobile-devices/duplicate-contacts-in-ios-contacts-app.md
     - name: Issues for mobile devices
       href: ../mobile-devices/issues-for-mobile-devices.md
     - name: Mobile devices aren't quarantined as expected

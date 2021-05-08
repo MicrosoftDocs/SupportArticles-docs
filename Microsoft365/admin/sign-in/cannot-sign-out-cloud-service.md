@@ -95,4 +95,6 @@ This behavior is by design. Azure Active Directory-based services (including Off
 
 The sign-out process for services forces the session cookies to expire. These session cookies are used to maintain your sign-in state when you use these services. However, because the web browser is still running and may not be updated to handle cookies correctly, you may have a cookie that is not updated to expire and finish the sign-out process. By default, these cookies are valid for eight hours or are set to expire when you close all web browsers.
 
+To prevent session cookies from inadvertently being re-used, it is recomended to close all browsers after signing out of any Office 365 web application.
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

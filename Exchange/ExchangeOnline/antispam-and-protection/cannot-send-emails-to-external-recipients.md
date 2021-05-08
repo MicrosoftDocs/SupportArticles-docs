@@ -27,7 +27,7 @@ When users try to send mail from Microsoft Exchange Online or Microsoft Exchange
 
 ## Cause
 
-The recipient server requires that the server name that's contained in the message HELO string have a corresponding pointer (PTR) resource record (reverse IP lookup). Exchange Online and Exchange Online Protection use multiple IP addresses to send mail. Because of DNS limitations, all these IP addresses can be mapped through the PTR record to the server name that's in the message HELO string.
+The recipient server requires that the server name that's contained in the message HELO string have a corresponding pointer (PTR) resource record (reverse IP lookup). Exchange Online and Exchange Online Protection use multiple IP addresses to send mail. Because of DNS limitations, all these IP addresses can't be mapped through the PTR record to the server name that's in the message HELO string.
 
 ## Resolution
 

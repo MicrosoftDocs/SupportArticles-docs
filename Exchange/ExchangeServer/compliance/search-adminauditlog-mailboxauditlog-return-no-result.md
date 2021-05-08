@@ -1,6 +1,6 @@
 ---
-title: Search-AdminAuditLog or Search-MailboxAuditLog with parameter returns empty results in Exchange Server
-description: Fixes an issue that returns an empty result set when you run Search-AdminAuditLog or Search-MailboxAuditLog with parameters. This issue occurs if your account uses a non-English regional setting in an Exchange Server 2013 environment.
+title:  Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
+description: Workaround for an issue that returns empty results when you run Search-AdminAuditLog and Search-MailboxAuditLog cmdlets with parameters. 
 author: Norman-sun
 ms.author: v-swei
 manager: dcscontentpm
@@ -13,53 +13,50 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: excontent, dkhrebin, genli, christys
 appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2016 Standard Edition
+- Exchange Server 2019 Enterprise Edition
+- Exchange Server 2019 Standard Edition
 - Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
+- Exchange Server 2013 Enterprise Edition
+- Exchange Server 2013 Standard Edition
 search.appverid: MET150 
 ---
-# Empty results are returned when you run Search-AdminAuditLog or Search-MailboxAuditLog with a parameter in Exchange Server
+# Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
 
 _Original KB number:_ &nbsp;3054391
 
 ## Symptoms
 
-When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results may not be returned as expected.
-
-This issue occurs in Microsoft Exchange Server 2013 and Exchange Server 2016.
+When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
 
 ## Workaround
 
-To work around this issue, set language and regional settings for the system and network service accounts to English (United States) on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for).
+You might be able to work around this issue depending on the language settings on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for). On the server, open the **Welcome screen and new user accounts settings** dialog box in the **Region** settings and check the **Format** setting for **Welcome screen**. If **Format** is not set to **English (United States)**, follow these steps to set the language and regional settings for the system and network service accounts:
 
 1. Set English (United States) as the primary language.
-    1. In Control Panel, open **Language**.
+    1. In **Control Panel**, open the **Language** item.
     1. Add the language of **English (United States)**.
-    1. Click **Options** for the added language.
-    1. Click **Download and install language pack** if it appears.
-    1. Click **Make this the primary language**.
+    1. Select **Options** for the added language.
+    1. Select **Download and install language pack** if this option is available.
+    1. Select **Make this the primary language**.
 1. Copy the regional settings.
-    1. In Control Panel, open **Region**.
-    1. Select **English (United States)** as Format in the "Format:" drop down list.
-    1. Click the **Administrative** tab.
-    1. On the **Administrative** tab, click **Copy settings**.
-    1. In the **Welcome screen and new user accounts settings** dialog box, click to select **Welcome screen and system accounts**, and then click **OK**.
+    1. In **Control Panel**, open the **Region** item.
+    1. Select **English (United States)** in the **Format** list.
+    1. Open the **Administrative** tab, and select **Copy settings**.
+    1. In the **Welcome screen and new user accounts settings** dialog box, select **Welcome screen and system accounts**, and then select **OK**.
 
         > [!NOTE]
-        > The system accounts include the network service account.
+        >
+        > - The system accounts include the network service account.
+        > - You can revert the **Format** setting for **Current user** to the original value as long as **Format** for **Welcome screen** is set to **English (United States)**.
 
-        ![Select the Welcome screen and system accounts option](./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png)
+        :::image type="content" source="./media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Select the Welcome screen and system accounts option":::
 
-    1. Click **Change system locale...** and set it **English (United States)**.
-1. Restart Exchange Server.
-
-To verify that the language and regional setting is correct, open a Windows PowerShell window and run the `Get-UICulture` command. The command should return **en-US** on the **Name** column.
 > [!NOTE]
-> The MSExchangeDelivery service may not start with Exchange Server. If the service doesn't start, follow these steps:
+> The MSExchangeDelivery service may not start together with Exchange Server. If the service doesn't start, follow these steps:
 >
-> 1. Change the logon account of the service to Local System.
-> 1. Revert the logon account to Network Service.
+> 1. Change the logon account of the service to **Local System**.
+> 1. Revert the logon account to **Network Service**.
 > 1. Start the service.
 
 ## Status

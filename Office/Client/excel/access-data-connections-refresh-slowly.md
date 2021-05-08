@@ -30,7 +30,7 @@ When the Office Document Cache is utilized for an Excel file, a specialized Acce
 
 ## Status
 
-Microsoft is researching this problem and will post more information in this article when the information becomes available. 
+This issue has been fixed. Details of versions where this is fixed match that of what's detailed in [Access error: "Query is corrupt"](https://support.microsoft.com/en-us/office/access-error-query-is-corrupt-fad205a5-9fd4-49f1-be83-f21636caedec)   
 
 ## More information
 
