@@ -36,9 +36,7 @@ Therefore, you won't be able to migrate mailboxes that are hosted on Exchange Se
 
   **Error message:**
 
-  > Microsoft.Exchange.Migration.MigrationServerConnectionFailedException: The connection to the server 'mail.contoso.com' could not be completed. Microsoft.Exchange.Connections.Common.RemoteNetworkErrorTransientException: We were unable to reach your email provider. Please check your server settings, or try again later.  
-  > Microsoft.Exchange.Connections.Common.SslStreamFailureException: TLS negotiation failed.  
-  > System.ComponentModel.Win32Exception: The client and server cannot communicate, because they do not possess a common algorithm.  
+  :::image type="content" source="media/imap-mailbox-migration-fails/error-message.png" alt-text="Screenshot of the error message after running cmdlet.":::  
 
 To migrate mailboxes from Exchange Server 2010 to Exchange Online, you have the following options:
 
