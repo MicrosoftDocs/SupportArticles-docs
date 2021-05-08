@@ -296,7 +296,7 @@ BEGIN
       PRINT ''
       PRINT 'sys.transmission_queue (toal count, group count, and top 500)'
 
-      -- Using count against MetaData columns rather than COUNT(*) because it is faster, and we don't' need exact counts
+      -- Using count against MetaData columns rather than COUNT(*) because it is faster, and we don't need exact counts
       PRINT '-- TOTAL COUNT sys.transmission_queue --' 
       EXEC ('SELECT p.rows as TQ_Count FROM ' + @dbname + '.sys.objects as o join ' + @dbname + '.sys.partitions as p on p.object_id = o.object_id where o.name = ''sysxmitqueue''')
       -- EXEC ('SELECT count(*) as TQ_Count FROM ' + @dbname + '.sys.transmission_queue with (nolock)');  -- more accurate count
@@ -314,7 +314,7 @@ BEGIN
       
       PRINT ''
       print 'sys.conversation_endpoints (total count, group count, and top 500)'
-      -- Using count against MetaData columns rather than COUNT(*) becuase it is faster, and we dont' need exact counts
+      -- Using count against MetaData columns rather than COUNT(*) becuase it is faster, and we don't need exact counts
       PRINT '-- TOTAL COUNT sys.conversation_endpoints --'
       EXEC ('SELECT p.rows as CE_Count FROM ' + @dbname + '.sys.objects as o join ' + @dbname + '.sys.partitions as p on p.object_id = o.object_id  where o.name = ''sysdesend''')
       -- EXEC ('SELECT count(*) as count FROM ' + @dbname + '.sys.conversation_endpoints with (nolock)');
