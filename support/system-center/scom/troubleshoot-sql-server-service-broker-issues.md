@@ -3,8 +3,8 @@ title: Troubleshoot SQL Server Service Broker related issues
 description: Describes common troubleshooting steps for SQL Server Service Broker related issues in System Center Operations Manager.
 author: helenclu
 ms.author: ibnajjar
-ms.reviewer: ahalmada,
-ms.date: 04/16/2021
+ms.reviewer: ahalmada
+ms.date: 05/08/2021
 ---
 # Troubleshoot SQL Server Service Broker issues in Operations Manager
 
@@ -16,6 +16,9 @@ System Center Operations Manager depends on SQL Server Service Broker to impleme
 - Resetting the health of a monitor never completes, even though the task in the background has finished.
 
 This article provides common troubleshooting steps for SQL Server Service Broker issues.
+
+> [!NOTE]
+> In the SQL queries in this article, the default name of the Operational database `OperationsManager` is used. Replace `OperationsManager` with the name of your Operational database if you use a different database name.
 
 ## Check if SQL Server Service Broker is enabled
 
@@ -33,11 +36,11 @@ This article provides common troubleshooting steps for SQL Server Service Broker
    ALTER DATABASE OperationsManager SET MULTI_USER
    ```
 
-## Restart System Center Data Access Service (OMSDK)
+## Restart System Center Data Access Service
 
 1. After SQL Server Service Broker is enabled, restart the System Center Data Access Service (OMSDK) service.
 1. In SQL Server Management Studio, go to **Databases** > **OperationsManager** > **Service Broker**.
-1. Expand **Queues** > **System Queues** and **Services** > **System Services**.
+1. Expand **Queues** and **Services**.
 1. Verify that there's a queue and service whose name contains the following values:
 
    - The IP address of the management server that created the queue and service.
@@ -45,18 +48,18 @@ This article provides common troubleshooting steps for SQL Server Service Broker
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/queues-services.png" alt-text="Service broker queue and service":::
 
-   In the example, the IP address of the management server is 192.168.10.10. The PID of the OMSDK process (Microsoft.Mom.Sdk.ServiceHost.exe) is 3092.
+   In the example, the IP address of the management server is 192.168.10.10. The PID of the OMSDK service (Microsoft.Mom.Sdk.ServiceHost.exe) is 3092.
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/pid.png" alt-text="SDK service PID":::
 
-   If you have more than one management server, there will be one queue and one service for each management server.
+   If you have more than one management server, each management server will have a separate Service Broker queue and service.
 1. If you can't find the corresponding queue and service, restart the OMSDK service again.
 
 If you still can't find the queue and service, the current Service Broker may be corrupted. Continue with the next step to recreate the SQL Server Service Broker.
 
 ## Recreate the SQL Server Service Broker
 
-1. Run the following SQL queries in order. Replace *OperationsManager* with the name of your operational database if needed.
+1. Run the following SQL queries in order:
 
    ```sql
    declare @i int 
@@ -116,7 +119,7 @@ If you still can't find the queue and service, the current Service Broker may be
    - The second one recreates the service queue
 
 1. Verify that the SQL Server Service Broker is still enabled. If it's disabled, enable it.
-1. Verify that the queue and service are generated, as described in step 4 in previous section.
+1. Verify that the Service Broker queue and service are generated, as described in step 4 in [Restart System Center Data Access Service](#restart-system-center-data-access-service).
 
 ## Advanced troubleshooting
 
@@ -134,7 +137,7 @@ If the previous steps don't resolve the issue, collect SQL Server Profiler trace
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-broker-disabled.png" alt-text="Trace when the Service Broker is disabled":::
 
-Additionally, run the following SQL script against the operational database to collect diagnostic logs.
+Additionally, run the following SQL script against the Operational database to collect diagnostic logs.
 
 ```sql
 USE master
@@ -223,7 +226,7 @@ BEGIN
       
       -- PRINT ''
       -- PRINT '-- sys.service_contract_message_usages --' 
-      -- EXEC ('SELECT * FROM ' + @dbname + '.sys.      service_contract_message_usages');
+      -- EXEC ('SELECT * FROM ' + @dbname + '.sys.service_contract_message_usages');
       
       PRINT ''
       PRINT '-- sys.service_contracts --' 
@@ -261,8 +264,8 @@ BEGIN
       PRINT '-- sys.dm_qn_subscriptions --' 
       EXEC ('SELECT * FROM ' + @dbname + '.sys.dm_qn_subscriptions');
       
-      PRINT '-- sys.dm_broker_queue_monitors, current state, last       activation, current backlog in transmission queue --' 
-      EXEC ('USE ' + @dbname + ';SELECT t1.name AS [Service_Name],  t3.name       AS [Schema_Name],  t2.name AS [Queue_Name],  
+      PRINT '-- sys.dm_broker_queue_monitors, current state, last activation, current backlog in transmission queue --' 
+      EXEC ('USE ' + @dbname + ';SELECT t1.name AS [Service_Name],  t3.name AS [Schema_Name],  t2.name AS [Queue_Name],  
       CASE WHEN t4.state IS NULL THEN ''Not available'' 
       ELSE t4.state 
       END AS [Queue_State],  
@@ -293,7 +296,7 @@ BEGIN
       PRINT ''
       PRINT 'sys.transmission_queue (toal count, group count, and top 500)'
 
-      -- Using count against MetaData columns rather than COUNT(*) because it is faster, and we don't' need exact counts
+      -- Using count against MetaData columns rather than COUNT(*) because it is faster, and we don't need exact counts
       PRINT '-- TOTAL COUNT sys.transmission_queue --' 
       EXEC ('SELECT p.rows as TQ_Count FROM ' + @dbname + '.sys.objects as o join ' + @dbname + '.sys.partitions as p on p.object_id = o.object_id where o.name = ''sysxmitqueue''')
       -- EXEC ('SELECT count(*) as TQ_Count FROM ' + @dbname + '.sys.transmission_queue with (nolock)');  -- more accurate count
@@ -311,7 +314,7 @@ BEGIN
       
       PRINT ''
       print 'sys.conversation_endpoints (total count, group count, and top 500)'
-      -- Using count against MetaData columns rather than COUNT(*) becuase it is faster, and we dont' need exact counts
+      -- Using count against MetaData columns rather than COUNT(*) becuase it is faster, and we don't need exact counts
       PRINT '-- TOTAL COUNT sys.conversation_endpoints --'
       EXEC ('SELECT p.rows as CE_Count FROM ' + @dbname + '.sys.objects as o join ' + @dbname + '.sys.partitions as p on p.object_id = o.object_id  where o.name = ''sysdesend''')
       -- EXEC ('SELECT count(*) as count FROM ' + @dbname + '.sys.conversation_endpoints with (nolock)');
