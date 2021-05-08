@@ -37,10 +37,10 @@ After you capture a trace for an instance of SQL Server, you can use the RML Uti
 
 |Version number|Description|
 |---|---|
-|9.04.0100|The current Web release available from www.microsoft.com/download that supports all released versions of SQL Server|
+|9.04.0100|The current Web release available from Microsoft download center that supports all released versions of SQL Server|
 |9.04.0098|The current release packaged with Database Experimentation Assistant utility that supports all released versions of SQL Server|
 |9.04.0097|The current release available from the SQL Nexus site that supports all released versions of SQL Server|
-|9.04.0051|The previous Web release available from www.microsoft.com/download that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
+|9.04.0051|The previous Web release available from Microsoft download center that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
 |9.04.0004|The previous Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
 |9.01.0109|The previous Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2.|
 |9.00.0023|The previous Web release that supports SQL Server 2000 and SQL Server 2005|
