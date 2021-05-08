@@ -43,7 +43,7 @@ Therefore, you won't be able to migrate mailboxes that are hosted on Exchange Se
 To migrate mailboxes from Exchange Server 2010 to Exchange Online, you have the following options:
 
 - Cutover migration - which uses the RPC/HTTP protocol
-- Hybrid migration – which uses the MRS protocol  
+- Hybrid migration - which uses the MRS protocol  
 - PST import service to migrate PST files
 
 For details about these methods, see [Migrate multiple email accounts](/exchange/mailbox-migration/mailbox-migration).
