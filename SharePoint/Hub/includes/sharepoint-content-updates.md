@@ -2,6 +2,20 @@
 
 
 
+## Week of May 03, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/4/2021 | [Check OneDrive site storage eligibility for storage beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility) | added |
+| 5/4/2021 | [Authentication errors occur when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7) | added |
+| 5/5/2021 | [Check OneDrive site storage eligibility for storage beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility) | modified |
+| 5/5/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 5/6/2021 | [Check OneDrive site storage eligibility for storage beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility) | modified |
+| 5/6/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 5/8/2021 | [Check OneDrive site eligibility for increased storage](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility) | modified |
+
+
 ## Week of April 26, 2021
 
 
