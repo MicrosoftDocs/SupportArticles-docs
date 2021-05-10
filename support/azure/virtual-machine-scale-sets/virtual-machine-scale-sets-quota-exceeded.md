@@ -29,7 +29,7 @@ Additional Required: 56,
 
 ## Cause
 The virtual machine scale set does not have enough quota available in the target Azure location or subscription.
-The Azure resources that are available to each virtual machine scale set, such as the total VM cores, are limited by subscription and by both the region and SKU family being used. For more information, see [Virtual Machine Limits- Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
+The Azure resources that are available to each virtual machine scale set, such as the total VM cores, are limited by subscription and by both the region and SKU family being used. For more information, see [Virtual Machine Limits- Azure Resource Manager](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
-## Resolution
-Consult the following article for steps to confirm that quota limitations are causing the error message, and for information about opening a support request to increase your quota: [Quota errors - Azure Resource Manager | Microsoft Docs](https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota)
+## Resolve errors for resource quotas
+Consult the following article for steps to confirm that quota limitations are causing the error message, and for information about opening a support request to increase your quota: [Quota errors - Azure Resource Manager](/azure/azure-resource-manager/templates/error-resource-quota)
