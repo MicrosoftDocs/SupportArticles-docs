@@ -27,7 +27,8 @@ _Original KB number:_ &nbsp; 2020053
 
 1. DCDIAG reports that Active Directory Replications test failed with error status code 8614: Active Directory can't replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.
 
-    > Testing server: \<site name>\<destination dc name>  
+    ```output
+    Testing server: \<site name>\<destination dc name>  
         Starting test: Replications  
         * Replications Check  
         [Replications Check,\<destination DC name] A recent replication attempt failed:  
@@ -38,6 +39,7 @@ _Original KB number:_ &nbsp; 2020053
         The failure occurred at \<date> \<time>.  
         The last success occurred at \<date> \<time>.  
         3 failures have occurred since the last success.  
+    ```
 
 2. REPADMIN.EXE reports that the last replication attempt failed with status 8614. REPADMIN commands that commonly cite the 8614 status include but aren't limited to:
 
@@ -48,21 +50,23 @@ _Original KB number:_ &nbsp; 2020053
 
     Sample output from `REPADMIN /SHOWREPS` depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the **replication access was denied** error is shown below:
 
-     > Default-First-Site-Name\CONTOSO-DC1  
+    ```output
+     efault-First-Site-Name\CONTOSO-DC1  
      DSA Options: IS_GC  
      Site Options: (none)  
      DSA object GUID:  
      DSA invocationID:  
-    >
-    > ==== INBOUND NEIGHBORS ======================================  
-    >
-    > DC=contoso,DC=com  
+    
+    ==== INBOUND NEIGHBORS ======================================  
+    
+    DC=contoso,DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID:  
     Last attempt @ \<date> \<time> failed, result 8614(0x21a6):
     The Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.  
     <#> consecutive failure(s).  
     Last success @ \<date> \<time>.  
+    ```
 
 3. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the five statuses are logged in the Directory Service event log.
 
@@ -96,15 +100,15 @@ _Original KB number:_ &nbsp; 2020053
     Tombstone lifetime (days): <current TSL value. Default = 60 or 180 days>
     
     The replication operation has failed.
-    ```
 
     User Action:
 
     Determine which of the two machines was disconnected from the forest and is now out of date. You have three options:
 
     1. Demote or reinstall the machine(s) that were disconnected.
-    2. Use the `repadmin /removelingeringobjects` tool to remove inconsistent deleted objects and then resume replication.
+    2. Use the repadmin /removelingeringobjects tool to remove inconsistent deleted objects and then resume replication.
     3. Resume replication. Inconsistent deleted objects may be introduced. You can continue replication by using the following registry key. Once the systems replicate once, it's recommended that you remove the key to reinstate the protection.  
+    ```
 
 5. The **replicate now** command in Active Directory Sites and Services returns the following message:
 
