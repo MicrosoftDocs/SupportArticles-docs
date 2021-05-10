@@ -49,45 +49,56 @@ To align a disk partition on a RAID that has a 2,048-sector offset, follow these
 1. At a command prompt, type diskpart, and then press ENTER.
 2. Type the following commands at the DISKPART prompt, and then press ENTER:  
 
-   - `list disk`
+   ```console
+   list disk
+   ```
 
-       You receive output that resembles the following:  
-       > Disk ### Status Size Free Dyn Gpt  
-       > \-------- ---------- ------- ------- --- ---  
-        Disk 0 Online 37 GB 8033 KB  
-        Disk 1 Online 17 GB 8033 KB
-        Disk 2 Online 17 GB 0 B  
-        Disk 3 Online 17 GB 148 MB \*  
-        Disk 4 Online 17 GB 8 MB \*  
-        Disk 5 Online 17 GB 8 MB \*  
-        Disk 6 Online 17 GB 8 MB \*  
-        Disk 7 Online 17 GB 8 MB \*  
-        Disk 8 Online 17 GB 435 KB \*  
-        Disk 9 Online 17 GB 8 MB \*  
-        Disk 10 Online 17 GB 8033 KB  
+   You receive output that resembles the following:
 
-      The `list disk` command provides summary information about each disk that is installed on the computer. The disk that has the asterisk (*) mark has the current focus. Only fixed disks and removable disks are listed. Fixed disks include integrated device electronics [IDE] and SCSI disks. Removable disks include 1394 and USB disks.  
+   ```output
+   Disk ### Status Size Free Dyn Gpt  
+   -------- ---------- ------- ------- --- ---  
+   Disk 0 Online 37 GB 8033 KB  
+   Disk 1 Online 17 GB 8033 KB
+   Disk 2 Online 17 GB 0 B  
+   Disk 3 Online 17 GB 148 MB *  
+   Disk 4 Online 17 GB 8 MB *  
+   Disk 5 Online 17 GB 8 MB *  
+   Disk 6 Online 17 GB 8 MB *  
+   Disk 7 Online 17 GB 8 MB *  
+   Disk 8 Online 17 GB 435 KB *  
+   Disk 9 Online 17 GB 8 MB *  
+   Disk 10 Online 17 GB 8033 KB
+   ```  
 
-   - select disk  
+   The `list disk` command provides summary information about each disk that is installed on the computer. The disk that has the asterisk (*) mark has the current focus. Only fixed disks and removable disks are listed. Fixed disks include integrated device electronics [IDE] and SCSI disks. Removable disks include 1394 and USB disks.  
 
-      Use the select disk command to set the focus to the disk that has the specified disk number. If you do not specify a disk number, the command displays the current disk that is in focus.
-   - create partition primary align=1024  
+   ```console
+   select disk
+   ```
 
-     > [!NOTE]  
-     >
-     >- When you type this command, you may receive a message that resembles the following:DiskPart succeeded in creating the specified partition.  
-     >- The align= **number** parameter is typically used together with hardware RAID Logical Unit Numbers (LUNs) to improve performance when the logical units are not cylinder aligned. This parameter aligns a primary partition that is not cylinder aligned at the beginning of a disk and then rounds the offset to the closest alignment boundary.  
-     >- **number** is the number of kilobytes (KB) from the beginning of the disk to the closest alignment boundary. The command fails if the primary partition is not at the beginning of the disk. If you use the command together with the offset = **number** option, the offset is within the first usable cylinder on the disk.  
+   Use the select disk command to set the focus to the disk that has the specified disk number. If you do not specify a disk number, the command displays the current disk that is in focus.
 
-   - exit  
+   ```console
+   create partition primary align=1024
+   ```
 
-3. Type exit, and then press ENTER.
-4. Click **Start**, click **Run**, type diskmgmt.msc, and then click **OK**.
-5. In the Disk Management Microsoft Management Console (MMC) snap-in, locate the newly created partition, and then assign it a drive letter.
-6. Use the NTFS file system to format the new partition, and then assign a cluster size.  
+   > [!NOTE]  
+   >
+   >- When you type this command, you may receive a message that resembles the following:DiskPart succeeded in creating the specified partition.  
+   >- The align= **number** parameter is typically used together with hardware RAID Logical Unit Numbers (LUNs) to improve performance when the logical units are not cylinder aligned. This parameter aligns a primary partition that is not cylinder aligned at the beginning of a disk and then rounds the offset to the closest alignment boundary.  
+   >- **number** is the number of kilobytes (KB) from the beginning of the disk to the closest alignment boundary. The command fails if the primary partition is not at the beginning of the disk. If you use the command together with the offset = **number** option, the offset is within the first usable cylinder on the disk.  
 
-    > [!NOTE]
-    > This sample procedure is for a single partition per RAID group.
+   ```console
+   exit
+   ```
+
+3. Click **Start**, click **Run**, type *diskmgmt.msc*, and then click **OK**.
+4. In the Disk Management Microsoft Management Console (MMC) snap-in, locate the newly created partition, and then assign it a drive letter.
+5. Use the NTFS file system to format the new partition, and then assign a cluster size.  
+
+   > [!NOTE]
+   > This sample procedure is for a single partition per RAID group.
 
 ## More information
 
@@ -118,19 +129,25 @@ These examples show that the partition is not aligned correctly for a 256-KB str
 To find the starting offset for a given partition, follow these steps:  
 
 1. Click **Start**, click **Run**, type cmd, and then click **OK**.
-2. Type the following command, and then press Enter: wmic partition gets BlockSize, StartingOffset, Name, Index
-  
-    After you run the command, you receive output that resembles the following:
+2. Type the following command, and then press Enter: 
 
-    > BlockSize Index Name StartingOffset  
-    512 0 Disk #1, Partition #0 32256  
-    512 0 Disk #2, Partition #0 32256  
-    512 0 Disk #3, Partition #0 32256  
-    512 0 Disk #4, Partition #0 1048576  
-    512 0 Disk #0, Partition #0 32256  
-    512 1 Disk #0, Partition #1 41126400
+   ```console
+   wmic partition get BlockSize, StartingOffset, Name, Index
+   ```  
+
+   After you run the command, you receive output that resembles the following:
+
+   ```output
+   BlockSize Index Name StartingOffset  
+   512 0 Disk #1, Partition #0 32256  
+   512 0 Disk #2, Partition #0 32256  
+   512 0 Disk #3, Partition #0 32256  
+   512 0 Disk #4, Partition #0 1048576  
+   512 0 Disk #0, Partition #0 32256  
+   512 1 Disk #0, Partition #1 41126400
+   ```
 
 3. Notice the value of BlockSize and of StartingOffset for each given partition. The Index value that is returned by this command indicates whether a partition is the first partition, the second partition, or other partitions for a given disk drive. For example, a partition index of 0 is the first partition on a given disk.
 4. To determine how many disk sectors a given partition starts from the beginning of the disk, divide the value for StartingOffset by the value of BlockSize. In the example in step 2, the following calculation yields the partition starting offset in sectors:
 
-    32256 / 512 = 63
+   32256 / 512 = 63

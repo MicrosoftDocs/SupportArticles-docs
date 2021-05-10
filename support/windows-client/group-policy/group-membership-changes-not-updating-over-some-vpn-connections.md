@@ -85,7 +85,7 @@ These resource sessions, including the user session on the client, do not expire
 
 #### Resources that rely on Kerberos tickets
 
-When the user connects to the VPN and then tries to access a network resource that relies on Kerberos tickets, the Kerberos Key Distribution Center (KDC) gets the user's information from Active Directory. The KDC uses information from Active Directory to authenticate the user and create a ticket-getting-ticket (TGT). The group membership information in the TGT is up-to-date at the time that the TGT is created.
+When the user connects to the VPN and then tries to access a network resource that relies on Kerberos tickets, the Kerberos Key Distribution Center (KDC) gets the user's information from Active Directory. The KDC uses information from Active Directory to authenticate the user and create a ticket-granting-ticket (TGT). The group membership information in the TGT is up-to-date at the time that the TGT is created.
 
 Windows then uses the TGT to get a session ticket for the requested resource. The session ticket, in turn, uses the group information from the TGT.
 
