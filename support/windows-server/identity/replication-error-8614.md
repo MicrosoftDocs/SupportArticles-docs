@@ -28,17 +28,17 @@ _Original KB number:_ &nbsp; 2020053
 1. DCDIAG reports that Active Directory Replications test failed with error status code 8614: Active Directory can't replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.
 
     ```output
-    Testing server: \<site name>\<destination dc name>  
-        Starting test: Replications  
-        * Replications Check  
-        [Replications Check,\<destination DC name] A recent replication attempt failed:  
-        From \<source DC> to \<destination DC>  
-        Naming Context: \<directory partition DN path>  
-         The replication generated an error (8614):
-         Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.  
-        The failure occurred at \<date> \<time>.  
-        The last success occurred at \<date> \<time>.  
-        3 failures have occurred since the last success.  
+    Testing server: <site name><destination dc name>  
+    Starting test: Replications  
+    * Replications Check  
+    [Replications Check,<destination DC name] A recent replication attempt failed:  
+    From <source DC> to <destination DC>  
+    Naming Context: <directory partition DN path>  
+     The replication generated an error (8614):
+     Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.  
+    The failure occurred at <date> <time>.  
+    The last success occurred at <date> <time>.  
+    3 failures have occurred since the last success.  
     ```
 
 2. REPADMIN.EXE reports that the last replication attempt failed with status 8614. REPADMIN commands that commonly cite the 8614 status include but aren't limited to:
@@ -62,10 +62,10 @@ _Original KB number:_ &nbsp; 2020053
     DC=contoso,DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID:  
-    Last attempt @ \<date> \<time> failed, result 8614(0x21a6):
+    Last attempt @ <date> <time> failed, result 8614(0x21a6):
     The Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.  
     <#> consecutive failure(s).  
-    Last success @ \<date> \<time>.  
+    Last success @ <date> <time>.  
     ```
 
 3. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the five statuses are logged in the Directory Service event log.
