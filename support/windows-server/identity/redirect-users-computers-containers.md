@@ -201,7 +201,7 @@ If Exchange Server 2000 and Exchange Server 2003 `setup /domainprep` is unsucces
 
 The following data appears in the Exchange Server 2000 Setup log that is parsed with log parser. Exchange Server 2003 should be similar.
 
-```console
+```output
 [HH:MM:SS] Completed DomainPrep of Microsoft Exchange 2000 component
 [HH:MM:SS] ScGetExchangeServerGroups (K:\admin\src\libs\exsetup\dsmisc.cxx:301) Error code 0X80072030 (8240): There is no such object on the server.
 [HH:MM:SS] ScCreateExchangeServerGroups (K:\admin\src\libs\exsetup\dsmisc.cxx:373) Error code 0X80072030 (8240): There is no such object on the server.

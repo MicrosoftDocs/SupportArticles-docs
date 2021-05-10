@@ -38,7 +38,9 @@ Before you deploy the software package, test whether the package can be installe
 
 4. It opens a new Command Prompt window as the system context. Type `whoami` at the new command prompt. You should see the following result:
 
-   > nt authority\system
+   ```output
+   nt authority\system
+   ```
 
 5. Navigate to the location of the deployable package, and then run it by using the correct switches for silent installation.
 

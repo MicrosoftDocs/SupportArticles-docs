@@ -26,7 +26,8 @@ You use a network adapter that has remote direct memory access (RDMA) enabled. A
 
 In addition, one or more of the following Event IDs may be logged:
 
-> Log Name:      Microsoft-Windows-SMBClient/Operational  
+```output
+Log Name:      Microsoft-Windows-SMBClient/Operational  
 Source:        Microsoft-Windows-SMBClient  
 Event ID:      30909  
 Level:         Informational  
@@ -35,28 +36,32 @@ The client supports SMB Direct (RDMA) and SMB Signing is in use.
 Share name:ShareName  
 Guidance:  
 For optimal SMB Direct performance, you can disable SMB Signing. This configuration is less secure and you should only consider this configuration on trustworthy private networks with strict access control.
+```
 
-> Log Name:      Microsoft-Windows-SMBClient/Operational  
+```output
+Log Name:      Microsoft-Windows-SMBClient/Operational  
 Source:        Microsoft-Windows-SMBClient  
 Event ID:      30910  
 Level:         Informational  
 Description:  
 The client supports SMB Direct (RDMA) and SMB Encryption is in use.  
-Share name: \<Share name>  
+Share name: <Share name>  
 Guidance:  
 For optimal SMB Direct performance, you can disable SMB Encryption on the server for shares accessed by this client. This configuration is less secure and you should only consider this configuration on trustworthy private networks with strict access control.
+```
 
-> Log Name:      Microsoft-Windows-SmbClient/Security  
+```output
+Log Name:      Microsoft-Windows-SmbClient/Security  
 Source:        Microsoft-Windows-SMBClient  
 Event ID:      31016  
 Level:         Warning  
 Description:  
 The SMB Signing registry value is not configured with default settings.  
 Default Registry Value:  
-[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\\Parameters]
 "EnableSecuritySignature"=dword:1  
 Configured Registry Value:  
-[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters]
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\\Parameters]
 "EnableSecuritySignature"=dword:0  
 Guidance:  
 Even though you can disable, enable, or require SMB Signing, the negotiation rules changed starting with SMB2 and not all combinations operate like SMB1.  
@@ -66,6 +71,7 @@ Client Not Required and Server Required = Signed
 Server Required and Client Not Required = Signed  
 Server Not Required and Client Not Required = Not Signed  
 When requiring SMB Encryption, SMB Signing is not used, regardless of settings. SMB Encryption implicitly provides the same integrity guarantees as SMB Signing.
+```
 
 ## Cause
 

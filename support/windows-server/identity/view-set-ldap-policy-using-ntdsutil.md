@@ -160,7 +160,8 @@ ldifde -i -f ldappolicy.ldf -v -c DC=X DC= forest root
 
 ### Start Ldifde script
 
-> dn: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X  
+```output
+dn: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X  
 changetype: add  
 instanceType: 4  
 lDAPAdminLimits: MaxReceiveBuffer=10485760  
@@ -177,16 +178,19 @@ lDAPAdminLimits: InitRecvTimeout=120
 lDAPAdminLimits: MaxConnections=5000  
 objectClass: queryPolicy  
 showInAdvancedViewOnly: TRUE
+```
 
 After you import the file, you can change the query values by using Adsiedit.msc or Ldp.exe. The MaxQueryDuration setting in this script is 5 minutes.
 
 To link the policy to a DC, use an LDIF import file like this:
 
-> dn: CN=NTDS  
+```output
+dn: CN=NTDS  
 Settings,CN=DC1,CN=Servers,CN=site1,CN=Sites,CN=Configuration, DC=X  
 changetype: modify  
 add: queryPolicyobject  
 queryPolicyobject: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+```
 
 Import it by using the following command:
 
@@ -196,10 +200,12 @@ ldifde -i -f link-policy-dc.ldf -v -c DC=X DC= **forest root**
 
 For a site, the LDIF import file would contain:
 
-> dn: CN=NTDS Site Settings,CN=site1,CN=Sites,CN=Configuration, DC=X  
+```output
+dn: CN=NTDS Site Settings,CN=site1,CN=Sites,CN=Configuration, DC=X  
 changetype: modify  
 add: queryPolicyobject  
 queryPolicyobject: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+```
 
 > [!NOTE]
 > Ntdsutil.exe only displays the value in the default query policy. If any custom policies are defined, they are not displayed by Ntdsutil.exe.

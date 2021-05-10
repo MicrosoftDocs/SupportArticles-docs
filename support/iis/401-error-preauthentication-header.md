@@ -112,7 +112,7 @@ To determine if the prompt is caused by the issue described in this article, use
 > [!NOTE]
 > The initial request to the web application already contains the `Authorization` header, which then results in the 401 response. The corresponding IIS log should show an entry similar to the following one:
 
-```console
+```output
 2012-08-22 17:41:09 2001:4898:0:fff:200:5efe:157.59.113.72 GET /App1/default.aspx - 80 - 2001:4898:0:fff:0:
 5efe:172.18.100.183 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/5.0;+SLCC2;+.NET+CLR+
 2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E;+InfoPath.3;+MS-
