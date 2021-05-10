@@ -33,8 +33,6 @@ Any connections to Dynamics 365 (online) version 9.x or Dynamics 365 (online) Go
 
 All [supported browsers](/previous-versions/dynamicscrm-2016/administering-dynamics-365/hh699710(v=crm.8)) for Dynamics 365 Customer Engagement (versions 7.x - Version 9.x) currently comply with the TLS 1.2 standards and will continue to work as before. However, if you have disabled the TLS 1.2 protocol on your browser, you will be affected and lose connectivity to organizations.
 
-For help identify if your browser supports the TLS 1.2 requirement, go to this [validation test page](https://tls1-2validationtest.crm10.dynamics.com/TLSvalidation.html).
-
 ### For developer tools provided by Microsoft
 
 See [What's new for Customer Engagement developer documentation in version 9.0](https://cloudblogs.microsoft.com/dynamics365/it/2017/11/01/whats-new-for-customer-engagement-developer-documentation-in-version-9-0/) to get the latest on our developer tools documentation. Update to the [latest version of tools](/dynamics365/customerengagement/on-premises/developer/download-tools-nuget), used in development, from NuGet. Examples of developer tools include the Plugin Registration Tool and Configuration Migration Tool. Version 9.0 of these tools are backward compatible and can be used for Dynamics 365 (online) version 8.2 Government.
