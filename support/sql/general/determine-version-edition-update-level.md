@@ -429,7 +429,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|14.0.3390.2|None| CU24| [5001228](https://support.microsoft.com/help/5001228)|May 05, 2021|
+|14.0.3390.2|None| CU24| [5001228](https://support.microsoft.com/help/5001228)|May 10, 2021|
 |14.0.3381.3|None| CU23| [5000685](https://support.microsoft.com/help/5000685)|February 24, 2021|
 |14.0.3370.1|None| CU22 + GDR| [4583457](https://support.microsoft.com/help/4583457)|January 12, 2021|
 |14.0.3356.20|None| CU22| [4577467](https://support.microsoft.com/help/4577467)|September 10, 2020|
