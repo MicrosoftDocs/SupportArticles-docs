@@ -51,50 +51,58 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
 
     To find a list of available maintenance windows (service windows) on a client, open ServiceWindowManager.log, and search for the **Refreshing Service Windows** string. Immediately following this line, you'll see a list of the applicable service windows on the computer, as in the following example:
 
-    > Refreshing Service Windows..... ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=7cb56688-692f-4fae-b398-0e3ff4413adb, ScheduleString=02C159C0381A200002C159C0381B200002C159C0381C200002C159C0381D200002C159C0381E2000, Type=6 ServiceWindowManager  
-    > This is a one shot Service Window that has already finished. ServiceWindowManager  
-    > Duration for the Service Window is Total days: 0, hours: 00, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=90a5f436-364c-48c7-8dc7-c5014abcbea8, ScheduleString=00084AC028592000, Type=6 ServiceWindowManager  
-    > StartTime is 02/09/14 00:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 1, hours: 05, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=45dca355-3249-4845-b8aa-72d0e604548e, ScheduleString=02C24AC0381C2000, Type=6 ServiceWindowManager  
-    > StartTime is 02/12/14 22:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=87e4759c-2884-45e6-9261-c33ba53f596c, ScheduleString=02C24AC0381D2000, Type=6 ServiceWindowManager  
-    > StartTime is 02/13/14 22:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID={1E957DDD-0A26-434C-952A-586F3E31E319}, ScheduleString=00302B0018192000, Type=1 ServiceWindowManager  
-    > StartTime is 02/16/14 01:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 0, hours: 03, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=36da6950-3d1e-4027-be0e-7b16a4daee7e, ScheduleString=02C24AC0101E2000, Type=6 ServiceWindowManager  
-    > StartTime is 02/14/14 22:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 0, hours: 02, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=028bfbc0-7120-4081-a268-0e664a92ac4a, ScheduleString=00074AC0005F2000, Type=6 ServiceWindowManager  
-    > StartTime is 02/15/14 00:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 1, hours: 00, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=49fd80be-ac4b-4877-974d-ecd09958926d, ScheduleString=02C24AC0381B2000, Type=6 ServiceWindowManager  
-    > StartTime is 02/11/14 22:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager  
-    > Populating instance of ServiceWindow with ID=ad27b0ca-8c74-43c7-8200-1f601880bd75, ScheduleString=02C24AC0381A2000, Type=6 ServiceWindowManager  
-    > StartTime is 02/10/14 22:00:00 ServiceWindowManager  
-    > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager
+    ```output
+    Refreshing Service Windows..... ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=7cb56688-692f-4fae-b398-0e3ff4413adb, ScheduleString=02C159C0381A200002C159C0381B200002C159C0381C200002C159C0381D200002C159C0381E2000, Type=6 ServiceWindowManager  
+    This is a one shot Service Window that has already finished. ServiceWindowManager  
+    Duration for the Service Window is Total days: 0, hours: 00, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=90a5f436-364c-48c7-8dc7-c5014abcbea8, ScheduleString=00084AC028592000, Type=6 ServiceWindowManager  
+    StartTime is 02/09/14 00:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 1, hours: 05, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=45dca355-3249-4845-b8aa-72d0e604548e, ScheduleString=02C24AC0381C2000, Type=6 ServiceWindowManager  
+    StartTime is 02/12/14 22:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=87e4759c-2884-45e6-9261-c33ba53f596c, ScheduleString=02C24AC0381D2000, Type=6 ServiceWindowManager  
+    StartTime is 02/13/14 22:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID={1E957DDD-0A26-434C-952A-586F3E31E319}, ScheduleString=00302B0018192000, Type=1 ServiceWindowManager  
+    StartTime is 02/16/14 01:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 0, hours: 03, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=36da6950-3d1e-4027-be0e-7b16a4daee7e, ScheduleString=02C24AC0101E2000, Type=6 ServiceWindowManager  
+    StartTime is 02/14/14 22:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 0, hours: 02, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=028bfbc0-7120-4081-a268-0e664a92ac4a, ScheduleString=00074AC0005F2000, Type=6 ServiceWindowManager  
+    StartTime is 02/15/14 00:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 1, hours: 00, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=49fd80be-ac4b-4877-974d-ecd09958926d, ScheduleString=02C24AC0381B2000, Type=6 ServiceWindowManager  
+    StartTime is 02/11/14 22:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager  
+    Populating instance of ServiceWindow with ID=ad27b0ca-8c74-43c7-8200-1f601880bd75, ScheduleString=02C24AC0381A2000, Type=6 ServiceWindowManager  
+    StartTime is 02/10/14 22:00:00 ServiceWindowManager  
+    Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager
+    ```
 
     Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. They're based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows, except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319. This window is a maintenance window defined for the collection that holds the client.
 
 2. Review the UpdatesDeployment.log file. Locate the following line to check whether the deployment was set to ignore the maintenance window:
 
-    > Notify reboot with deadline = Sunday, Feb 09, 2014. - 21:30:17, **Ignore reboot Window = True**, NotifyUI = True
+    ```output
+    Notify reboot with deadline = Sunday, Feb 09, 2014. - 21:30:17, Ignore reboot Window = True, NotifyUI = True
+    ```
 
 3. Review the MaintenanceCoordinator.log file. Locate the following line to check whether the deployment was set to ignore the maintenance window. A value of **1** for `swoverride` means that the ignore maintenance window setting is enabled.
 
-    > RequestPersistence(id=Update download job, persist=1, **swoverride=1**, swType=4, pendingWFDisable=0, deadline=1)
+    ```output
+    RequestPersistence(id=Update download job, persist=1, swoverride=1, swType=4, pendingWFDisable=0, deadline=1)
+    ```
 
 4. Review the SCNotify.log file, and look for the following lines to check whether the user clicked the restart notification to initiate a restart:
 
-    > ConfirmRestartDialog: User chose to restart/logoff. (Microsoft.SoftwareCenter.Client.Pages.ConfirmRestartDialog at ButtonRestart_Click)  
-    > ConfirmRestartDialog: user is allowed to restart (Microsoft.SoftwareCenter.Client.Pages.ConfirmRestartDialog at ButtonRestart_Click)  
-    > The user is allowed to restart the computer. Initiating restart. (Microsoft.SoftwareCenter.Client.Data.WmiDataConnector at RestartComputer)
+    ```output
+    ConfirmRestartDialog: User chose to restart/logoff. (Microsoft.SoftwareCenter.Client.Pages.ConfirmRestartDialog at ButtonRestart_Click)  
+    ConfirmRestartDialog: user is allowed to restart (Microsoft.SoftwareCenter.Client.Pages.ConfirmRestartDialog at ButtonRestart_Click)  
+    The user is allowed to restart the computer. Initiating restart. (Microsoft.SoftwareCenter.Client.Data.WmiDataConnector at RestartComputer)
+    ```
 
 5. View the deployment properties in the Configuration Manager console to check whether the deployment is set to override maintenance windows. If the deployment isn't set to override maintenance windows, but the client logs suggest that the deployment did override maintenance windows, review the audit status messages to check whether the deployment was modified by someone.
 
@@ -102,5 +110,7 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
 
    In the Configuration Manager **Status Message Viewer** window, navigate to **View** > **Filter**, and then filter for **Message ID = 30197**. If the deployment was modified, you'll see a status message that resembles the following one:
 
-   > Severity Type Site code Date / Time System Component Message ID Description  
-   > Information Audit PR1 2/9/2014 11:57:49 PM PR1SITE.CONTOSO.COM Microsoft.ConfigurationManagement.exe 30197 User "DOMAIN\User" modified updates assignment 4 ({BAFB1BDB-7A6C-4DCF-9866-6C22DF92346A}).
+   ```output
+   Severity Type Site code Date / Time System Component Message ID Description  
+   Information Audit PR1 2/9/2014 11:57:49 PM PR1SITE.CONTOSO.COM Microsoft.ConfigurationManagement.exe 30197 User "DOMAIN\User" modified updates assignment 4 ({BAFB1BDB-7A6C-4DCF-9866-6C22DF92346A}).
+   ```
