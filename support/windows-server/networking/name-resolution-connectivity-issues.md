@@ -43,9 +43,12 @@ After a remote computer connects to the Routing and Remote Access server by usin
 - You can't connect to the http://**server_name**/myconsole  
 site on a Small Business Server 2000 computer.
 - On the Routing and Remote Access server, you receive an event message that is similar to the following:
-    > Event ID: 4319  
-    Source: Netbt  
+
+    ```output
+    Event ID: 4319
+    Source: Netbt
     Description: A duplicate name has been detected on the tcp network. The IP address of the machine that sent the message is in the data. Use NBTSTAT with a switch of N in a command window to see which name is in a conflict state.
+    ```
 
 - You receive error messages when you try to open file shares or map network drives to the Routing and Remote Access server.
 - If the Routing and Remote Access server is also a domain controller, you receive error messages when you try to sign in the network.
