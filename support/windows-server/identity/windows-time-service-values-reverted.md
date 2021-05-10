@@ -217,4 +217,4 @@ To verify that the Windows Time service can now preserve its configuration, foll
 ## References
 
 For more information about related Netlogon issues, click the following article number to view the article in the Microsoft Knowledge Base:  
-[3201247](https://support.microsoft.com/help/3201247) Netlogon service doesn't retain settings after upgrade to Windows Server 2016
+[3201247](https://support.microsoft.com/help/3201247) Netlogon service doesn't retain settings after upgrade to Windows Server 2016 

@@ -37,13 +37,22 @@ If a problem occurs during any of these phases, Windows may not start correctly,
 - The computer stops responding (hangs).
 - You receive an error message.
 
-If a startup problem occurs after you click **Microsoft Windows Server 2003** on either the boot loader menu, or when you receive the "Please select the operating system to start" message, files that the operating system needs may be missing or damaged. Windows provides several options that you can use to troubleshoot this issue, including safe mode, the Recovery Console, and an Automated System Recovery.  
+If a startup problem occurs after you select **Microsoft Windows Server 2003** on either of the following conditions:
+
+- On the boot loader menu,
+- When you receive the "Please select the operating system to start" message,
+
+files that the operating system needs may be missing or damaged. Windows provides several options that you can use to troubleshoot this issue, including:
+
+- Safe mode
+- The Recovery Console
+- An Automated System Recovery
 
 ## How to start the computer by using the last known good configuration
 
 If the startup problem occurs immediately after you make a change to the computer (for example, after you install a new driver), try to start the computer by using the Last Known Good Configuration feature.
 
-When you use the Last Known Good Configuration feature, you start your computer by using the most recent settings that worked. This feature restores registry information and driver settings that were in effect the last time that the computer started successfully. Use this feature when you can't start Windows after you make a change to the computer (for example, after you install or upgrade a device driver).
+When you use the Last Known Good Configuration feature, you start your computer by using the most recent settings that worked. This feature restores registry information and driver settings that were in effect the last time that the computer started successfully. Use this feature when you can't start Windows after you make a change to the computer. For example, you install or upgrade a device driver.
 
 To start the computer by using Last Known Good Configuration, follow these steps:  
 
@@ -62,7 +71,7 @@ To start the computer by using Last Known Good Configuration, follow these steps
     > - By selecting Last Known Good Configuration, you can recover from problems such as a newly added driver that may be incorrect for your hardware. This feature doesn't solve problems caused by corrupted or missing drivers or files.
     > - When you select Last Known Good Configuration, only the information in the following registry key is restored: `HKLM\System\CurrentControlSet` Any changes that you have made in other registry keys remain.  
 
-If you can start your computer by using the Last Known Good Configuration feature, the last change that you made to the computer (for example, the installation of a driver) may be the cause of the incorrect startup behavior. We recommend that you either remove or update the driver or program, and then test Windows to see if it starts correctly.  
+If you can start your computer by using the Last Known Good Configuration feature, the last change that you made to the computer (for example, the installation of a driver) may be the cause of the incorrect startup behavior. We recommend you either remove or update the driver or program, and then test Windows to see if it starts correctly.  
 
 ## How to start the computer in safe mode
 
@@ -116,13 +125,14 @@ The System Information tool displays a comprehensive view of the computer's hard
         > [!NOTE]
         > Any resource conflicts that are listed in the right pane.
 
-   3. If you identify a problem device, perform the appropriate action (for example, remove, disable, or reconfigure the device, or update the driver), and then restart the computer in normal mode.
+   3. If you identify a problem device, perform the appropriate action. For example, remove, disable, or reconfigure the device, or update the driver. Then restart the computer in normal mode.
 
         You can use Device Manager to remove or disable devices and their drivers.
 
         If the computer starts correctly, that particular device may be the cause of the startup problem.
 
         If you disabled a device to resolve the problem, make sure that the device is listed on the Windows Server 2003 Hardware Compatibility List (HCL), and that it's installed correctly. Also, contact the manufacturer to report the behavior and to obtain information about possible updates that can resolve the startup problem.
+
         Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.  
 
 4. If no problem devices or device conflicts are reported by the System Information tool, look for programs that start automatically when Windows starts. To do it, follow these steps:
@@ -232,7 +242,7 @@ The Startup tab lists items that load at startup from the Startup group, Win.ini
 1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
 2. Click the Startup tab.
 3. Clear all check boxes.
-4. To start troubleshooting, select the first check box, click OK, and then restart the computer when you are prompted.
+4. To start troubleshooting, select the first check box, click OK, and then restart the computer when you're prompted.
 
     Repeat this process and select each check box one at a time. Restart your computer every time. Repeat the process until the problem occurs.  
 
@@ -362,9 +372,9 @@ If Chkdsk reports that it can't fix all hard disk problems, your file system or 
 >
 > [326215](https://support.microsoft.com/help/326215) How to use the Recovery Console on a Windows Server 2003-based computer that doesn't start.  
 
-## How to use Automated System Recovery
+## How to use Automated System Recovery (ASR)
 
-To recover from a system failure by using Automated System Recovery (ASR), follow these steps.
+To recover from a system failure by using Automated System Recovery, follow these steps.
 
 1. Make sure that you have the following available before you start the recovery procedure:
    - The ASR disk that you created before.

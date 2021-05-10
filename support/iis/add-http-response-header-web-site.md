@@ -27,4 +27,4 @@ To add a custom HTTP response header at the web site level in IIS 7.0 on a Windo
 
 ## More information
 
-You can also add custom HTTP response headers at the server level. However, we recommend you use custom headers only on a specific site or application. We don't recommend you use custom headers globally.
+You can also add custom HTTP response headers at the server level. However, we recommend you use custom headers only on a specific site or application. We don't recommend you use custom headers globally. 

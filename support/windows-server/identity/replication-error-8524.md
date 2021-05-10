@@ -518,4 +518,4 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     If the DNS servers used by the source and destination DC have parent / child relationships, check for:
 
     - Invalid delegations on the DNS that owns the parent zone that is delegating to the subordinate zone.
-    - Invalid forwarder IP addresses on the DNS server trying to resolve the superior DNS zone (example: a DC in child.contoso.com trying to resolve host records in conto.com zone staying on DNS Servers in the root domain).
+    - Invalid forwarder IP addresses on the DNS server trying to resolve the superior DNS zone (example: a DC in child.contoso.com trying to resolve host records in conto.com zone staying on DNS Servers in the root domain). 
