@@ -122,7 +122,7 @@ Events for troubleshooting Windows Azure Guest Agent is recorded in the followin
 
 The following are some common scenarios in which Windows Azure Guest Agent can enter **Not ready** status or stop working as expected.
 
-++
+
 ### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issue with Sysprep
 
 Running Sysprep.exe on these VMs might end up with the below errors.
@@ -131,12 +131,12 @@ Running Sysprep.exe on these VMs might end up with the below errors.
 The Issue is only with 1004 version, hence we can try upgrading the latest agent version, or we can try upgrading it to 1005 by using below MSI, which has the bug fixed.
 
 MSI on \\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller
-You can download it on your laptop, zip it and share it with customer.
+++You can download it on your laptop, zip it and share it with customer.++ - This line should be removed.
 
 Also, reset the Sysprep state of the VM first. 
 This consists of modifying a few registry keys and is described on https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/.
 
-++
+
 
 ### Agent Stuck on "Starting"
 
