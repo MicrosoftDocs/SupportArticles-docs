@@ -77,9 +77,9 @@ _Original KB number:_ &nbsp; 2002013
 
     |Event|Source|Event String|
     |---|---|---|
-    |NTDS General|1655|``Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.``|
-    |NTDS KCC|1925|``The attempt to establish a replication link for the following writable directory partition failed.``|
-    |NTDS KCC|1926|``The attempt to establish a replication link to a read-only directory partition with the following parameters failed.``|
+    |NTDS General|1655|Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.|
+    |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
+    |NTDS KCC|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed.|
     ||||  
 
 5. The **replicate now** command in Active Directory Sites and Services returns **Access is denied**.
