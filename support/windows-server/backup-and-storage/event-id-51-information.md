@@ -24,7 +24,8 @@ _Original KB number:_ &nbsp; 244780
 
 When you write information to the physical disk, the following event message may be logged in the System log:
 
-> Event ID: 51  
+```output
+Event ID: 51  
 Event Type: Warning  
 Event Source: Disk  
 Description: An error was detected on device \Device\Harddisk3\DR3 during a paging operation.  
@@ -39,6 +40,7 @@ Data:
 0038: 02 84 00 00 00 29 06 00  
 0040: 2a 60 0a 82 75 29 00 00  
 0048: 80 00
+```
 
 > [!NOTE]
 > The device in the description and the specific hexadecimal data may vary.
@@ -51,7 +53,9 @@ However, the computer may log this event message when it loads images from a sto
 
 Under certain circumstances, the system logs the following Event ID 51 event message:
 
-> An error was detected on device \Device\DeviceName during a paging operation
+```output
+An error was detected on device \Device\DeviceName during a paging operation
+```
 
 In this case, no harmful effects are experienced. For example, Event ID 51 is logged when blank media such as CDR, CDRW, DVDR, is inserted into a writable drive while a USB device is plugged in. The system logs the event even though the disc is writable, and the USB device is still usable. In these particular cases, you can safely ignore the log entries. No action is required.
 

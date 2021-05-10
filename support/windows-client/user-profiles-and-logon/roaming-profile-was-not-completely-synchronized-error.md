@@ -30,23 +30,29 @@ Additionally, the system may log the following entries in the event log.
 
 - Event 1509 (source: User Profile General)
 
-    > Windows cannot copy file \\\\?\\C:\\Users\\%username%\\AppData\\Local\\Microsoft\\Windows\\\<Path to a file> to location \\\\?\\UNC Path\\%username%.V6\\AppData\\Local\\Microsoft\\Windows\\\<path to a file>. This error may be caused by network problems or insufficient security rights.  
+    ```output
+    Windows cannot copy file \\?\C:\Users\%username%\AppData\Local\Microsoft\Windows\<Path to a file> to location \\?\UNC Path\%username%.V6\AppData\Local\Microsoft\Windows\<path to a file>. This error may be caused by network problems or insufficient security rights.  
     DETAIL - Access is denied.
+    ```
 
 - Event 509 (source: User Profile General)
 
-    > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\Windows\\UPPS\\UPPS.bin to location \\\\?\\UNC Path\\UserName.V6\\AppData\\Local\\Microsoft\\Windows\\UPPS\\UPPS.bin. This error may be caused by network problems or insufficient security rights.  
+    ```output
+    Windows cannot copy file \\?\C:\Users\UserName\AppData\Local\Microsoft\Windows\UPPS\UPPS.bin to location \\?\UNC Path\UserName.V6\AppData\Local\Microsoft\Windows\UPPS\UPPS.bin. This error may be caused by network problems or insufficient security rights.  
     DETAIL - Access is denied.
-    >
-    > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\MicrosoftEdge.exe to location \\\\?\\UNC\\WS2016DC1\\rup\\UserName.V6\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
+
+    Windows cannot copy file \\?\C:\Users\UserName\AppData\Local\Microsoft\WindowsApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe to location \\?\UNC\WS2016DC1\rup\UserName.V6\AppData\Local\Microsoft\WindowsApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
     DETAIL - The file cannot be accessed by the system.
-    >
-    > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\WindowsApps\\MicrosoftEdge.exe to location \\\\?\\UNC\\WS2016DC1\\rup\\UserName.V6\\AppData\\Local\\Microsoft\\WindowsApps\\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
+
+    Windows cannot copy file \\?\C:\Users\UserName\AppData\Local\Microsoft\WindowsApps\MicrosoftEdge.exe to location \\?\UNC\WS2016DC1\rup\UserName.V6\AppData\Local\Microsoft\WindowsApps\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
     DETAIL - The file cannot be accessed by the system.
+    ```
 
 - Event 1504 (source: User Profile General)
 
-    > Windows cannot update your roaming profile completely. Check previous events for more details.
+     ```output
+     Windows cannot update your roaming profile completely. Check previous events for more details.
+     ```
 
 ## Cause
 
