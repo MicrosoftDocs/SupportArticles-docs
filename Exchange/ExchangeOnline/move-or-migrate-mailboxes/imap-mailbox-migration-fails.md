@@ -20,15 +20,15 @@ search.appverid: MET150
 ---
 # Can't migrate IMAP mailboxes from Exchange Server 2010 to Exchange Online
 
-IMAP for Exchange Server 2010 is hardcoded to use the TLS 1.0 protocol whereas Exchange Online has deprecated both TLS 1.0 and TLS 1.1 which are legacy protocols. Exchange Online only uses the newer version TLS 1.2 now.  
+IMAP for Exchange Server 2010 is hardcoded to use the TLS 1.0 protocol, whereas Exchange Online has deprecated both TLS 1.0 and TLS 1.1 as legacy protocols. Exchange Online now uses only the newer version TLS 1.2.
 
-Therefore, you won't be able to migrate mailboxes that are hosted on Exchange Server 2010 to Exchange Online using the IMAP4 protocol, and will encounter the following issues:
+Therefore, you can't migrate mailboxes that are hosted on Exchange Server 2010 to Exchange Online by using the IMAP4 protocol. If you try to do this, you will experience the following issues:
 
-- Unable to create an IMAP migration endpoint in Exchange Online.
-- TLS protocol related incompatibility between Exchange Online and Exchange 2010 IMAP if you run the SSL test on Remote Connectivity Analyzer for port 993 and the Exchange Server 2010 FQDN.
-- Target server unavailable for IMAP migration:
+- You can't create an IMAP migration endpoint in Exchange Online.
+- You notice a TLS protocol-related incompatibility between Exchange Online and Exchange 2010 IMAP if you run the SSL test on the Remote Connectivity Analyzer for port 993 and the Exchange Server 2010 FQDN.
+- The target server is unavailable for IMAP migration.
 
-  When you run the following cmdlet in Exchange Online PowerShell to check the target server's availability, you see a TLS negotiation error message because of cipher suits mismatch.
+When you run the following cmdlet in Exchange Online PowerShell to check the target server availability, you see a TLS negotiation error message because of a cipher suites mismatch.
 
   ```powershell
   Test-MigrationServerAvailability -IMAP -Port 993 -RemoteServer <mail.contoso.com>
@@ -40,8 +40,8 @@ Therefore, you won't be able to migrate mailboxes that are hosted on Exchange Se
 
 To migrate mailboxes from Exchange Server 2010 to Exchange Online, you have the following options:
 
-- Cutover migration - which uses the RPC/HTTP protocol
-- Hybrid migration - which uses the MRS protocol  
+- Cutover migration: Uses the RPC/HTTP protocol
+- Hybrid migration: Uses the MRS protocol  
 - PST import service to migrate PST files
 
-For details about these methods, see [Migrate multiple email accounts](/exchange/mailbox-migration/mailbox-migration).
+For more information about these methods, see [Migrate multiple email accounts](/exchange/mailbox-migration/mailbox-migration).
