@@ -36,7 +36,7 @@ Domain Controllers log Directory Services Event 2095 in the Directory Services e
 ```output
 Log Name:      <Service name> Service  
 Source:        Microsoft-Windows-ActiveDirectory_DomainService  
-Date:          DateTime 
+Date:          <DateTime>
 Event ID:      2095  
 Task Category: Replication  
 Level:         Error  
