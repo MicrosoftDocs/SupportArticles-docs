@@ -118,17 +118,23 @@ These examples show that the partition is not aligned correctly for a 256-KB str
 To find the starting offset for a given partition, follow these steps:  
 
 1. Click **Start**, click **Run**, type cmd, and then click **OK**.
-2. Type the following command, and then press Enter: wmic partition get BlockSize, StartingOffset, Name, Index
-  
-    After you run the command, you receive output that resembles the following:
+2. Type the following command, and then press Enter: 
+   
+   ```console
+   wmic partition get BlockSize, StartingOffset, Name, Index
+   ```  
+   
+   After you run the command, you receive output that resembles the following:
 
-    > BlockSize Index Name StartingOffset  
-    512 0 Disk #1, Partition #0 32256  
-    512 0 Disk #2, Partition #0 32256  
-    512 0 Disk #3, Partition #0 32256  
-    512 0 Disk #4, Partition #0 1048576  
-    512 0 Disk #0, Partition #0 32256  
-    512 1 Disk #0, Partition #1 41126400
+   ```output
+   BlockSize Index Name StartingOffset  
+   512 0 Disk #1, Partition #0 32256  
+   512 0 Disk #2, Partition #0 32256  
+   512 0 Disk #3, Partition #0 32256  
+   512 0 Disk #4, Partition #0 1048576  
+   512 0 Disk #0, Partition #0 32256  
+   512 1 Disk #0, Partition #1 41126400
+   ```
 
 3. Notice the value of BlockSize and of StartingOffset for each given partition. The Index value that is returned by this command indicates whether a partition is the first partition, the second partition, or other partitions for a given disk drive. For example, a partition index of 0 is the first partition on a given disk.
 4. To determine how many disk sectors a given partition starts from the beginning of the disk, divide the value for StartingOffset by the value of BlockSize. In the example in step 2, the following calculation yields the partition starting offset in sectors:
