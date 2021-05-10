@@ -152,6 +152,6 @@ The WINS server will rebuild the database automatically as computers on the netw
 
 ## Workaround
 
-As a workaround for this issue, you can configure the remote access connections to use a static pool of IP addresses that is on a different IP subnet than the local comphow-to-configure-group-policy-preference-settingsuters. In this case, local computers won't try to connect to the PPP adapter if it registers in DNS or WINS because the PPP adapter is on a different IP subnet.
+As a workaround for this issue, you can configure the remote access connections to use a static pool of IP addresses that is on a different IP subnet than the local computers. In this case, local computers won't try to connect to the PPP adapter if it registers in DNS or WINS because the PPP adapter is on a different IP subnet.
 
 To specify a static address pool in the Routing and Remote Access console, right-click **ServerName**, select **Properties**, select the **IP** tab, select **Static address pool**, and then select **Add**. Add a range that doesn't use the same IP subnet as the local computers. For example, if the local computers are using the 10.0.0.0 subnet, add a static pool that uses the 172.168.0.0 subnet. If the Routing and Remote Access server is running ISA Server 2000, you must add this subnet to the Local Address Table. This scenario is most common on Small Business Server 2000.
