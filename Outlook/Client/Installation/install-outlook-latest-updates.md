@@ -225,10 +225,6 @@ The following hotfix packages dated **February 2013** (or later versions) requir
 
 [3118303](https://support.microsoft.com/help/3118303) MS16-107: Description of the security update for Outlook 2007: September 13, 2016
 
-**Outlook (US English) update**
-
-[2687329](https://support.microsoft.com/help/2687329) Description of the Outlook 2007 hotfix package (Outlook-en-us.msp): August 28, 2012
-
 **Outlook Junk Email Filter update**
 
 [3115461](https://support.microsoft.com/help/3115461) August 2, 2016, update for Outlook 2007 Junk Email Filter (KB3115461)
