@@ -94,8 +94,8 @@ User: N/A
 Computer: 2008-R2-TSPDC2.tailspintoys.com
 Description:
 The DFS Replication service failed to update configuration in Active Directory Domain Services. The service will retry this operation periodically.
->
-> Additional Information:
+
+Additional Information:
 Object Category: msDFSR-LocalSettings
 Object DN: CN=DFSR-LocalSettings,CN=2008-R2-TSPDC2,OU=Domain Controllers,DC=tailspintoys,DC=com**  
 Error: 5 (Access is denied.)
