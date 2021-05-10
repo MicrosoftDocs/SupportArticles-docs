@@ -107,7 +107,7 @@ To troubleshoot this issue, follow these steps:
 
     Search the output for the GUID that you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
 
-    ```console
+    ```output
     Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
     Policy OK
     Details:
@@ -195,7 +195,7 @@ To troubleshoot this issue, follow these steps:
 
     Search the output for the GUID you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
 
-    ```console
+    ```output
     Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
     Policy OK
     Details:
@@ -274,7 +274,7 @@ To troubleshoot this issue, follow these steps:
 
     Search the output for the GUID that you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
 
-    ```console
+    ```output
     Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
     Policy OK
     Details:

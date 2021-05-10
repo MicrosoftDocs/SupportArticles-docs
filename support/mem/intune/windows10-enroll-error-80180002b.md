@@ -18,11 +18,13 @@ When you try to [enroll a Windows 10 device automatically by using Group Policy]
 
 - In Event Viewer, the following event is logged under `Applications and Services Logs/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/Admin`:
 
-  > Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin  
-  > Source: DeviceManagement-Enterprise-Diagnostics-Provider  
-  > Event ID: 76  
-  > Level: Error  
-  > Description: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x80180002b)  
+  ```output
+  Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin  
+  Source: DeviceManagement-Enterprise-Diagnostics-Provider  
+  Event ID: 76  
+  Level: Error  
+  Description: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x80180002b)
+  ```
 
 - When you run the `dsregcmd /status` command on the affected device, the value of `AzureAdPrt` is **NO**. This indicates that the user isn't authenticated to Azure Active Directory (Azure AD) when signing in to the device.
 

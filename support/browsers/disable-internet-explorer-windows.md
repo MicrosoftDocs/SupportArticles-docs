@@ -41,7 +41,8 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 
     The following message is returned:
 
-    > Deployment Image Servicing and Management tool  
+    ```output
+    Deployment Image Servicing and Management tool  
     Version: 6.1.7600.16385  
     Image Version: 6.1.7600.16385  
     Disabling feature(s)  
@@ -49,6 +50,7 @@ On client and server systems, you can use the Deployment Image Servicing and Man
     The operation completed successfully.  
     Restart Windows to complete this operation.  
     Do you want to restart the computer now (Y/N)?
+    ```
 
     > [!NOTE]
     > You must restart the computer to implement the change.
@@ -59,7 +61,8 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 
     The following message is returned:
 
-    > Deployment Image Servicing and Management tool  
+    ```output
+    Deployment Image Servicing and Management tool  
     Version: 6.1.7600.16385  
     Image Version: 6.1.7600.16385  
     Enabling feature(s)  
@@ -67,6 +70,7 @@ On client and server systems, you can use the Deployment Image Servicing and Man
     The operation completed successfully.  
     Restart Windows to complete this operation.  
     Do you want to restart the computer now (Y/N)?  
+    ```
 
     > [!NOTE]
     > You must restart the computer to implement the change.

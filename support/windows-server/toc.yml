@@ -2234,6 +2234,8 @@
       href: ./remote/client-disconnected-group-policy-updates.md
     - name: Connection Broker can't be mixed
       href: ./remote/connection-broker-cant-be-mixed.md
+    - name: How to disable warning message for idle remote desktop sessions
+      href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users

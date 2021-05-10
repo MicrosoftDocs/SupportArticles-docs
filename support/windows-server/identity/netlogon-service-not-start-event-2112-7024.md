@@ -28,19 +28,23 @@ Event Viewer logs the following errors:
 
 - Message 1
 
-    > Event Type: Error  
-    Event Source: NETLOGON  
-    Event Category: None  
-    Event ID: 2114  
-    Description: The Server service is not started.  
+    ```output
+    Event Type: Error
+    Event Source: NETLOGON
+    Event Category: None
+    Event ID: 2114
+    Description: The Server service is not started.
+    ```
 
 - Message 2
 
-    > Event Type: Error  
-    Event Source: Service Control Manager  
-    Event Category:None  
-    Event ID: 7024  
+    ```output
+    Event Type: Error
+    Event Source: Service Control Manager
+    Event Category:None
+    Event ID: 7024
     Description: The Netlogon service terminated with service-specific error 2114.
+    ```
 
 After your computer starts, you can manually start the Netlogon service.
 

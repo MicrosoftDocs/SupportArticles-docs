@@ -44,21 +44,25 @@ The first thing the client does is set the WSUS server that will be its update s
 
 1. When the Configuration Manager client needs to process a software update scan, Scan Agent creates a scan request based on the available policy as noted in ScanAgent.log:
 
-    > CScanAgent::ScanByUpdates- Policy available for UpdateSourceID={*SourceID*}  
-    > ContentVersion=38  
-    > CScanAgent::ScanByUpdates- Added Policy to final ScanRequest List UpdateSourceID={*SourceID*}, Policy-ContentVersion=38, Required-ContentVersion=38
+    ```output
+    CScanAgent::ScanByUpdates- Policy available for UpdateSourceID={SourceID}  
+    ContentVersion=38  
+    CScanAgent::ScanByUpdates- Added Policy to final ScanRequest List UpdateSourceID={SourceID}, Policy-ContentVersion=38, Required-ContentVersion=38
+    ```
 
 2. Scan Agent now sends a WSUS location request to Location Services as noted in ScanAgent.log:
 
-    > Inside CScanAgent::ProcessScanRequest()  
-    > CScanJobManager::Scan- entered  
-    > ScanJob({JobID}): CScanJob::Initialize- entered  
-    > ScanJob({JobID}): CScanJob::Scan- entered  
-    > ScanJob({JobID}): CScanJob::RequestLocations- entered  
-    > \- - - - - -Requesting WSUS Server Locations from LS for {*WSUSLocationID*} version 38  
-    > \- - - - - -Location Request ID = {*LocationRequestID*}  
-    > CScanAgentCache::PersistInstanceInCache- Persisted Instance CCM_ScanJobInstance  
-    > ScanJob({*JobID*}): \- - - - - -Locations requested for ScanJobID={*JobID*} (LocationRequestID={*LocationRequestID*}), will process the scan request once locations are available.
+   ```output
+   Inside CScanAgent::ProcessScanRequest()  
+   CScanJobManager::Scan- entered  
+   ScanJob({JobID}): CScanJob::Initialize- entered  
+   ScanJob({JobID}): CScanJob::Scan- entered  
+   ScanJob({JobID}): CScanJob::RequestLocations- entered  
+   - - - - - -Requesting WSUS Server Locations from LS for {WSUSLocationID} version 38  
+   - - - - - -Location Request ID = {LocationRequestID}  
+   CScanAgentCache::PersistInstanceInCache- Persisted Instance CCM_ScanJobInstance  
+   ScanJob({JobID}): - - - - - -Locations requested for ScanJobID={JobID} (LocationRequestID={LocationRequestID}), will process the scan request once locations are available.
+    ```
 
     > [!TIP]
     > Each scan job is stored in WMI in the `CCM_ScanJobInstance` class:
@@ -67,71 +71,91 @@ The first thing the client does is set the WSUS server that will be its update s
 
 3. Location Services creates a location request and sends it to the management point. The package ID for a WSUS location request is the update source unique ID. In LocationServices.log:
 
-    > CCCMWSUSLocation::GetLocationsAsyncEx  
-    > Attempting to persist WSUS location request for ContentID='{*ContentID*}' and ContentVersion='38'  
-    > Persisted WSUS location request LocationServices  
-    > Attempting to send WSUS Location Request for ContentID='{*ContentID*}'
-    > WSUSLocationRequest : \<WSUSLocationRequest SchemaVersion="1.00">\<Content ID="{*ContentID*}" Version="38"/>\<AssignedSite SiteCode="PS1"/>\<ClientLocationInfo OnInternet="0">\<ADSite Name="CM12-R2PS1"/>\<Forest Name="CONTOSO.COM"/>\<Domain Name="CONTOSO.COM"/>\<IPAddresses>\<IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/>\</IPAddresses>\</ClientLocationInfo>\</WSUSLocationRequest>  
-    > Created and Sent Location Request '{*LocationRequestID*}' for package {*ContentID*}
+    ```output
+    CCCMWSUSLocation::GetLocationsAsyncEx  
+    Attempting to persist WSUS location request for ContentID='{ContentID}' and ContentVersion='38'  
+    Persisted WSUS location request LocationServices  
+    Attempting to send WSUS Location Request for ContentID='{ContentID}'
+    WSUSLocationRequest : <WSUSLocationRequest SchemaVersion="1.00"><Content ID="{ContentID}" Version="38"/><AssignedSite SiteCode="PS1"/><ClientLocationInfo OnInternet="0"><ADSite Name="CM12-R2PS1"/><Forest Name="CONTOSO.COM"/><Domain Name="CONTOSO.COM"/><IPAddresses><IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/></IPAddresses></ClientLocationInfo></WSUSLocationRequest>  
+    Created and Sent Location Request '{LocationRequestID}' for package {ContentID}
+    ```
 
 4. CCM Messaging sends the location request message to the management point. In CcmMessaging.log:
 
-    > Sending async message '{*Message*}' to outgoing queue 'mp:[http]mp_locationmanager'  
-    > Sending outgoing message '{*Message*}'. Flags 0x200, sender account empty
+    ```output
+    Sending async message '{Message}' to outgoing queue 'mp:[http]mp_locationmanager'  
+    Sending outgoing message '{Message}'. Flags 0x200, sender account empty
+    ```
 
 5. The management point parses this request and calls the `MP_GetWSUSServerLocations` stored procedure to get the WSUS locations from the database. In MP_Location.log:
 
-    > MP LM: Message Body : \<WSUSLocationRequest SchemaVersion="1.00">\<Content ID="{*ContentID*}" Version="38"/>\<AssignedSite SiteCode="PS1"/>\<ClientLocationInfo OnInternet="0">\<ADSite Name="CM12-R2PS1"/>\<Forest Name="CONTOSO.COM"/>\<Domain Name="CONTOSO.COM"/>\<IPAddresses>\<IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/>\</IPAddresses>\</ClientLocationInfo>\</WSUSLocationRequest> MP_LocationManager  
-    > MP LM: calling MP_GetWSUSServerLocations
+    ```output
+    MP LM: Message Body : \<WSUSLocationRequest SchemaVersion="1.00"><Content ID="{ContentID}" Version="38"/><AssignedSite SiteCode="PS1"/><ClientLocationInfo OnInternet="0"><ADSite Name="CM12-R2PS1"/><Forest Name="CONTOSO.COM"/><Domain Name="CONTOSO.COM"/><IPAddresses><IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/></IPAddresses></ClientLocationInfo></WSUSLocationRequest> MP_LocationManager  
+    MP LM: calling MP_GetWSUSServerLocations
+    ```
 
     In SQL Server Profiler:
 
-    > exec MP_GetMPSitesFromAssignedSite N'PS1'  
-    > exec MP_GetSiteInfoUnified N'\<ClientLocationInfo OnInternet="0">\<ADSite Name="CM12-R2-PS1"/>\<Forest Name="CONTOSO.COM"/>\<Domain Name="CONTOSO.COM"/>\<IPAddresses>\<IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/>\</IPAddresses>\</ClientLocationInfo>'  
-    > exec MP_GetWSUSServerLocations N'{WSUSServerLocationsID}',N'38',N'PS1',N'PS1',N'0',N'CONTOSO.COM'
+    ```output
+    exec MP_GetMPSitesFromAssignedSite N'PS1'  
+    exec MP_GetSiteInfoUnified N'<ClientLocationInfo OnInternet="0"><ADSite Name="CM12-R2-PS1"/><Forest Name="CONTOSO.COM"/><Domain Name="CONTOSO.COM"/><IPAddresses><IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/></IPAddresses></ClientLocationInfo>'  
+    exec MP_GetWSUSServerLocations N'{WSUSServerLocationsID}',N'38',N'PS1',N'PS1',N'0',N'CONTOSO.COM'
+    ```
 
 6. After getting the results from the stored procedure, the management point sends a response to the client. In MP_Location.log:
 
-    > MP LM: Reply message body: \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="`PS1SYS.CONTOSO.COM`" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>
+    ```output
+    MP LM: Reply message body: <WSUSLocationReply SchemaVersion="1.00"><Sites><Site><MPSite SiteCode="PS1"/><LocationRecords><LocationRecord WSUSURL="http://PS1SITE.CONTOSO.COM:8530" ServerName="PS1SITE.CONTOSO.COM" Version="38"/><LocationRecord WSUSURL="https://PS1SYS.CONTOSO.COM:8531" ServerName="PS1SYS.CONTOSO.COM" Version="38"/></LocationRecords></Site></Sites></WSUSLocationReply>
+    ```
 
 7. CCM Messaging receives the response and sends it back to Location Services. In CcmMessaging.log:
 
-    > Message '{Message1}' got reply '{Message2}' to local endpoint queue 'LS_ReplyLocations'  
-    > OutgoingMessage(Queue='mp_[http]mp_locationmanager', ID={*Message1*}):  
-    > Delivered successfully to host 'PS1SYS.CONTOSO.COM'.  
-    > Message '{*Message2*}' delivered to endpoint 'LS_ReplyLocations'
+    ```output
+    Message '{Message1}' got reply '{Message2}' to local endpoint queue 'LS_ReplyLocations'  
+    OutgoingMessage(Queue='mp_[http]mp_locationmanager', ID={*Message1*}):  
+    Delivered successfully to host 'PS1SYS.CONTOSO.COM'.  
+    Message '{Message2}' delivered to endpoint 'LS_ReplyLocations'
+    ```
 
 8. Location Services parses the response and sends the location back to Scan Agent. In LocationServices.log:
 
-    > Processing Location reply message LocationServices  
-    > WSUSLocationReply : \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>  
-    > Calling back with the following WSUS locations  
-    > WSUS Path='`http://PS1SITE.CONTOSO.COM:8530`', Server='PS1SITE.CONTOSO.COM', Version='38'  
-    > WSUS Path='`https://PS1SYS.CONTOSO.COM:8531`', Server='PS1SYS.CONTOSO.COM', Version='38'  
-    > Calling back with locations for WSUS request {*WSUSLocationID*}
+    ```output
+    Processing Location reply message LocationServices  
+    WSUSLocationReply : <WSUSLocationReply SchemaVersion="1.00"><Sites><Site><MPSite SiteCode="PS1"/><LocationRecords><LocationRecord WSUSURL="http://PS1SITE.CONTOSO.COM:8530" ServerName="PS1SITE.CONTOSO.COM" Version="38"/><LocationRecord WSUSURL="https://PS1SYS.CONTOSO.COM:8531" ServerName="PS1SYS.CONTOSO.COM" Version="38"/></LocationRecords></Site></Sites></WSUSLocationReply>  
+    Calling back with the following WSUS locations  
+    WSUS Path='http://PS1SITE.CONTOSO.COM:8530', Server='PS1SITE.CONTOSO.COM', Version='38'  
+    WSUS Path='https://PS1SYS.CONTOSO.COM:8531', Server='PS1SYS.CONTOSO.COM', Version='38'  
+    Calling back with locations for WSUS request {WSUSLocationID}
+    ```
 
 9. Scan Agent now has the policy and the update source location with the appropriate content version. In ScanAgent.log:
 
-    > *****WSUSLocationUpdate received for location request guid={*LocationGUID*}  
-    > ScanJob({*JobID*}): CScanJob::OnLocationUpdate- Received  
-    > Location=<`http://PS1SITE.CONTOSO.COM:8530`>, Version=38  
-    > ScanJob({*JobID*}): CScanJob::Execute- Adding UpdateSource={SourceID}, ContentType=2, ContentLocation=<`http://PS1SITE.CONTOSO.COM:8530`>, ContentVersion=38
+    ```output
+    *****WSUSLocationUpdate received for location request guid={LocationGUID}  
+    ScanJob({JobID}): CScanJob::OnLocationUpdate- Received  
+    Location=<http://PS1SITE.CONTOSO.COM:8530>, Version=38  
+    ScanJob({JobID}): CScanJob::Execute- Adding UpdateSource={SourceID}, ContentType=2, ContentLocation=<http://PS1SITE.CONTOSO.COM:8530>, ContentVersion=38
+    ```
 
 10. Scan Agent notifies WUAHandler to add the update source. WUAHandler adds the update source to the registry. It initiates a Group Policy refresh if the client is in domain to see whether Group Policy overrides the update server that's added. The following entries are logged in WUAHandler.log showing a new Update Source being added:
 
-    > Its a WSUS Update Source type ({WSUSUpdateSource}), adding it  
-    > Its a completely new WSUS Update Source  
-    > Enabling WUA Managed server policy to use server: <`http://PS1SITE.CONTOSO.COM:8530`>
-    > Policy refresh forced  
-    > Waiting for 2 mins for Group Policy to notify of WUA policy change  
-    > Waiting for 30 secs for policy to take effect on WU Agent.  
-    > Added Update Source ({UpdateSource}) of content type: 2
+    ```output
+    Its a WSUS Update Source type ({WSUSUpdateSource}), adding it  
+    Its a completely new WSUS Update Source  
+    Enabling WUA Managed server policy to use server: <http://PS1SITE.CONTOSO.COM:8530>
+    Policy refresh forced  
+    Waiting for 2 mins for Group Policy to notify of WUA policy change  
+    Waiting for 30 secs for policy to take effect on WU Agent.  
+    Added Update Source ({UpdateSource}) of content type: 2
+    ```
 
     During this time, the Windows Update Agent sees a WSUS configuration change. In WindowsUpdate.log:
 
-    > \* WSUS server: <`http://PS1SITE.CONTOSO.COM:8530`> (Changed)  
-    > \* WSUS status server: <`http://PS1SITE.CONTOSO.COM:8530`> (Changed)  
-    > Sus server changed through policy.
+    ```output
+    * WSUS server: <http://PS1SITE.CONTOSO.COM:8530> (Changed)  
+    * WSUS status server: <http://PS1SITE.CONTOSO.COM:8530> (Changed)  
+    Sus server changed through policy.
+    ```
 
     The following registry keys are checked and set:
 
@@ -143,13 +167,17 @@ The first thing the client does is set the WSUS server that will be its update s
 
     For an existing client, we could expect to see the following message in WUAHandler.log to denote when content version has incremented:
 
-    > Its a WSUS Update Source type ({*WSUSUpdateSource*}), adding it.  
-    > WSUS update source already exists, it has increased version to 38.
+    ```output
+    Its a WSUS Update Source type ({WSUSUpdateSource}), adding it.  
+    WSUS update source already exists, it has increased version to 38.
+    ```
 
 11. After the update source is successfully added, Scan Agent raises a state message and starts the scan. In ScanAgent.log:
 
-    > ScanJob({*JobID*}): Raised UpdateSource ({*UpdateSource*}) state message successfully. StateId = 2  
-    > ScanJob({*JobID*}): CScanJob::Execute - successfully requested Scan, ScanType=1
+    ```output
+    ScanJob({JobID}): Raised UpdateSource ({UpdateSource}) state message successfully. StateId = 2  
+    ScanJob({JobID}): CScanJob::Execute - successfully requested Scan, ScanType=1
+    ```
 
 #### Troubleshoot issues in step 1
 
@@ -172,13 +200,17 @@ After the client has identified and set the WSUS server that will be its update 
 
 The scan triggers an evaluation. In ScanAgent.log:
 
-> ScanJob({JobID}): CScanJob::Execute - successfully requested Scan, ScanType=1  
+```output
+ScanJob({JobID}): CScanJob::Execute - successfully requested Scan, ScanType=1
+```
 
 Scan results will include superseded updates only when they're superseded by service packs and definition updates. In WUAHandler.log:
 
-> Search Criteria is (DeploymentAction=\* AND Type='Software') OR (DeploymentAction=* AND Type='Driver')  
-> Running single-call scan of updates.  
-> Async searching of updates using WUAgent started.
+```output
+Search Criteria is (DeploymentAction=* AND Type='Software') OR (DeploymentAction=* AND Type='Driver')  
+Running single-call scan of updates.  
+Async searching of updates using WUAgent started.
+```
 
 > [!TIP]
 > Review WUAHandler.log after a software update scan to see if any new entries occur. If no new entries occur, it indicates that no SUP is returned by the management point.
@@ -194,7 +226,9 @@ To fix such issues, see [Scan failures due to missing or corrupted components](t
 
 There's a known issue that a 32-bit Windows 7 ConfigMgr 2012 R2 client requesting an update scan fails to return scan results to Configuration Manager. It causes the client to report incorrect compliance status and the updates fail to install when Configuration Manager requests the update cycle. However, if you use the Windows Update control panel applet, the updates usually install fine. When you're experiencing this problem, you receive a message similar to the following one in WindowsUpdate.log:
 
-> WARNING: ISusInternal::GetUpdateMetadata2 failed, hr=8007000E
+```output
+WARNING: ISusInternal::GetUpdateMetadata2 failed, hr=8007000E
+```
 
 It's a memory allocation issue, 64-bit Windows 7 computers won't see this error since their address space is effectively unlimited. However, they'll exhibit high memory and high CPU usage, possibly affecting performance. X86 clients will also exhibit high memory usage (usually around 1.2 GB to 1.4 GB).
 
@@ -208,23 +242,25 @@ Your best source of information will come from the logs and the error codes they
 
 Windows Update Agent starts a scan after receiving a request from the Configuration Manager client (CcmExec). If these registry values are correctly set to a WSUS computer that's a valid SUP for the site through a local policy, you should see a COM API search request from the Configuration Manager client (ClientId = CcmExec). In WindowsUpdate.log:
 
-> COMAPI -- START -- COMAPI: Search [ClientId = CcmExec]  
-> COMAPI <<-- SUBMITTED -- COMAPI: Search [ClientId = CcmExec] PT + ServiceId = {*ServiceID*}, Server URL = <`http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx`>  
-> Agent \** START ** Agent: Finding updates [CallerId = CcmExec]  
-> Agent * Include potentially superseded updates  
-> Agent * Online = Yes; Ignore download priority = Yes  
-> Agent * Criteria = "(DeploymentAction=* AND Type='Software') OR (DeploymentAction=* AND Type='Driver')"  
-> Agent * ServiceID = {*ServiceID*} Managed  
-> Agent * Search Scope = {Machine}
+```output
+COMAPI -- START -- COMAPI: Search [ClientId = CcmExec]  
+COMAPI <<-- SUBMITTED -- COMAPI: Search [ClientId = CcmExec] PT + ServiceId = {ServiceID}, Server URL = <http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx>  
+Agent ** START ** Agent: Finding updates [CallerId = CcmExec]  
+Agent * Include potentially superseded updates  
+Agent * Online = Yes; Ignore download priority = Yes  
+Agent * Criteria = "(DeploymentAction=* AND Type='Software') OR (DeploymentAction=* AND Type='Driver')"  
+Agent * ServiceID = {ServiceID} Managed  
+Agent * Search Scope = {Machine}
 
-> PT + ServiceId = {ServiceID}, Server URL = <`http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx`>  
-> Agent \* Added update {4AE85C00-0EAA-4BE0-B81B-DBD7053D5FAE}.104 to search result  
-> Agent \* Added update {57260DFE-227C-45E3-9FFC-2FC77A67F95A}.104 to search result  
-> Agent * Found 163 updates and 70 categories in search; evaluated appl. rules of 622 out of 1150 deployed entities  
-> Agent ** END ** Agent: Finding updates [CallerId = CcmExec]  
-> COMAPI >>-- RESUMED -- COMAPI: Search [ClientId = CcmExec]  
-> COMAPI - Updates found = 163  
-> COMAPI -- END -- COMAPI: Search [ClientId = CcmExec]  
+PT + ServiceId = {ServiceID}, Server URL = <http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx>  
+Agent * Added update {4AE85C00-0EAA-4BE0-B81B-DBD7053D5FAE}.104 to search result  
+Agent * Added update {57260DFE-227C-45E3-9FFC-2FC77A67F95A}.104 to search result  
+Agent * Found 163 updates and 70 categories in search; evaluated appl. rules of 622 out of 1150 deployed entities  
+Agent ** END ** Agent: Finding updates [CallerId = CcmExec]  
+COMAPI >>-- RESUMED -- COMAPI: Search [ClientId = CcmExec]  
+COMAPI - Updates found = 163  
+COMAPI -- END -- COMAPI: Search [ClientId = CcmExec]
+```
 
 #### Troubleshoot issues in step 3
 
@@ -338,8 +374,10 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
 The following are logged in WUAHandler.log:
 
-> Async searching completed.  
-> Finished searching for everything in single call.
+```output
+Async searching completed.  
+Finished searching for everything in single call.
+```
 
 #### Troubleshoot issues in step 4
 
@@ -355,12 +393,14 @@ WUAHandler then parses the results, which include the applicability state for ea
 
 The following entries are logged in WUAHandler.log:
 
+```output
 > Pruning: update id (70f4f236-0248-4e84-b472-292913576fa1) is superseded by (726b7201-862a-4fde-9b12-f36b38323a6f).  
-> \...  
+> ...  
 > Update (Installed): Security Update for Windows 7 for x64-based Systems (KB2584146) (4ae85c00-0eaa-4be0-b81b-dbd7053d5fae, 104)  
 > Update (Missing): Security Update for Windows 7 for x64-based Systems (KB2862152) (505fda07-b4f3-45fb-83d9-8642554e2773, 200)  
-> \...  
+> ...  
 > Successfully completed scan.
+```
 
 #### Troubleshoot issues in step 5
 
@@ -379,15 +419,19 @@ Once the scan results are available, these results are stored in the updates sto
 
 UpdatesStore.log showing state for missing update (KB2862152) being recorded and a state message being raised:
 
-> Processing update status from update (505fda07-b4f3-45fb-83d9-8642554e2773) with ProductID = 0fa1201d-4330-4fa8-8ae9b877473b6441  
-> Update status from update (505fda07-b4f3-45fb-83d9-8642554e2773) hasn't been reported before, creating new instance.  
-> Successfully raised state message for update (505fda07-b4f3-45fb-83d9-8642554e2773) with state (Missing).  
-> Successfully added WMI instance of update status (505fda07-b4f3-45fb-83d9-8642554e2773).
+```output
+Processing update status from update (505fda07-b4f3-45fb-83d9-8642554e2773) with ProductID = 0fa1201d-4330-4fa8-8ae9b877473b6441  
+Update status from update (505fda07-b4f3-45fb-83d9-8642554e2773) hasn't been reported before, creating new instance.  
+Successfully raised state message for update (505fda07-b4f3-45fb-83d9-8642554e2773) with state (Missing).  
+Successfully added WMI instance of update status (505fda07-b4f3-45fb-83d9-8642554e2773).
+```
 
 StateMessage.log showing state messaged being recorded with **State ID 2** (missing):
 
-> Adding message with TopicType 500 and TopicId 505fda07-b4f3-45fb-83d9-8642554e2773 to WMI  
-> State message(State ID : 2) with TopicType 500 and TopicId 505fda07-b4f3-45fb-83d9-8642554e2773 has been recorded for SYSTEM
+```output
+Adding message with TopicType 500 and TopicId 505fda07-b4f3-45fb-83d9-8642554e2773 to WMI  
+State message(State ID : 2) with TopicType 500 and TopicId 505fda07-b4f3-45fb-83d9-8642554e2773 has been recorded for SYSTEM
+```
 
 > [!TIP]
 > For each update, an instance of the `CCM_UpdateStatus` class is created or updated, and it stores the current status of the update. The `CCM_UpdateStatus` class is located in the `ROOT\CCM\SoftwareUpdates\UpdatesStore` namespace.
@@ -404,8 +448,10 @@ Generally speaking, there are many reasons why a software update scan might fail
 
 When WUAHandler successfully receives the results from the Windows Update Agent, it marks the scan as complete and logs the following message in WUAHandler.log:
 
-> Async searching completed. WUAHandler  
-> Finished searching for everything in single call
+```output
+Async searching completed. WUAHandler  
+Finished searching for everything in single call
+```
 
 #### Troubleshoot issues in step 7
 
@@ -423,14 +469,18 @@ When a synchronization is triggered, we expect to see the following messages wit
 
 **For manual sync:**
 
-> Changew3wp.6AdminDataAccess.StartSubscriptionManuallySynchronization manually started  
-> Info WsusService.27EventLogEventReporter.ReportEvent  
-> EventId=382,Type=Information,Category=Synchronization,Message=A manual synchronization was started.
+```output
+Changew3wp.6AdminDataAccess.StartSubscriptionManuallySynchronization manually started  
+Info WsusService.27EventLogEventReporter.ReportEvent  
+EventId=382,Type=Information,Category=Synchronization,Message=A manual synchronization was started.
+```
 
 **For scheduled synch:**
 
-> InfoWsusService.10EventLogEventReporter.ReportEvent  
-> EventId=381,Type=Information,Category=Synchronization,Message=A scheduled synchronization was started.
+```output
+InfoWsusService.10EventLogEventReporter.ReportEvent  
+EventId=381,Type=Information,Category=Synchronization,Message=A scheduled synchronization was started.
+```
 
 #### Troubleshoot a manual sync in step 1
 
