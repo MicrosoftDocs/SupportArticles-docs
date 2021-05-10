@@ -61,13 +61,13 @@ To align a disk partition on a RAID that has a 2,048-sector offset, follow these
    Disk 0 Online 37 GB 8033 KB  
    Disk 1 Online 17 GB 8033 KB
    Disk 2 Online 17 GB 0 B  
-   Disk 3 Online 17 GB 148 MB \*  
-   Disk 4 Online 17 GB 8 MB \*  
-   Disk 5 Online 17 GB 8 MB \*  
-   Disk 6 Online 17 GB 8 MB \*  
-   Disk 7 Online 17 GB 8 MB \*  
-   Disk 8 Online 17 GB 435 KB \*  
-   Disk 9 Online 17 GB 8 MB \*  
+   Disk 3 Online 17 GB 148 MB *  
+   Disk 4 Online 17 GB 8 MB *  
+   Disk 5 Online 17 GB 8 MB *  
+   Disk 6 Online 17 GB 8 MB *  
+   Disk 7 Online 17 GB 8 MB *  
+   Disk 8 Online 17 GB 435 KB *  
+   Disk 9 Online 17 GB 8 MB *  
    Disk 10 Online 17 GB 8033 KB
    ```  
 
