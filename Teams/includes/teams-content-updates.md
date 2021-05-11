@@ -2,6 +2,17 @@
 
 
 
+## Week of May 03, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/4/2021 | [Errors when trying to manage dial plans](/microsoftteams/troubleshoot/phone-system/dial-plans/errors-managing-dial-plans) | added |
+| 5/4/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/phone-system/direct-routing/sip-options-tls-certificate-issues) | renamed |
+| 5/5/2021 | [Errors when trying to manage dial plans](/microsoftteams/troubleshoot/phone-system/dial-plans/errors-managing-dial-plans) | modified |
+| 5/6/2021 | [Virtual camera on MacOS Teams stops working](/microsoftteams/troubleshoot/teams-on-mac/virtual-camera-doesnt-work-macos) | modified |
+
+
 ## Week of April 26, 2021
 
 
@@ -30,11 +41,3 @@
 | 4/14/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | modified |
 | 4/14/2021 | [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) | modified |
 | 4/14/2021 | [(File is locked) or (item might not exist) error](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
-
-
-## Week of March 29, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/29/2021 | [When setting up a Meet Now in Teams, the CVI information does not autopopulate](/microsoftteams/troubleshoot/known-issues/cvi-info-does-not-populate-in-meet-now) | modified |
