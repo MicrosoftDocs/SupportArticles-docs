@@ -91,7 +91,7 @@ If you find Microsoft .NET Framework 4 Client Profile, follow these steps to rep
 1. Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next. See image.
 
     ![Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next.](./media/error-1935-when-install-office-2010/repair.png)
-1. When the repair is complete, click Finish, and then click Restart Nowto restart the computer.
+1. When the repair is complete, click Finish, and then click Restart Now to restart the computer.
 
 If you can't find Microsoft .NET Framework 4 Client Profile, download and install it to update the computer. You can download the file from:
 
@@ -106,7 +106,7 @@ Uninstall and reinstall Microsoft .NET Framework components IMPORTANT The .NET F
 To uninstall .NET Framework components from the computer follow these steps:
 
 1. Create a temporary folder on your desktop.
-2. Visit the [.NET Framework Cleanup Tool User's Guide](https://docs.microsoft.com/archive/blogs/astebner/net-framework-cleanup-tool-users-guide) blog and download the [dotnetfx_cleanup_tool.zip](https://mirrors.download3k.com/token/d82bf18323611beff3110e6910e6db1d/dotnetfx_cleanup_tool.zip) file.
+2. Visit the [.NET Framework Cleanup Tool User's Guide](https://docs.microsoft.com/archive/blogs/astebner/net-framework-cleanup-tool-users-guide) blog and download the [dotnetfx_cleanup_tool.zip](https://msdnshared.blob.core.windows.net/media/2018/05/dotnetfx_cleanup_tool.zip) file.
 3. When prompted, click **Open**, and then click **Extract Now**. Extract the files to the folder you created.
 4. Find **cleanup_tool.exe** in the folder you created and double-click it.
 5. In the **Do you want to run the .NET Framework Setup Cleanup Utility?** message, click Yes.
