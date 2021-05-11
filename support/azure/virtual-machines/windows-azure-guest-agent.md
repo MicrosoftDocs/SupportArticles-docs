@@ -122,21 +122,23 @@ Events for troubleshooting Windows Azure Guest Agent is recorded in the followin
 
 The following are some common scenarios in which Windows Azure Guest Agent can enter **Not ready** status or stop working as expected.
 
-
 ### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issue with Sysprep
 
 Running Sysprep.exe on these VMs might end up with the below errors.
 
-*-	When sysprep tried for the first time, You will see an error **ADMINISTRATOR: Error Handler**, When sysprep operation is tried more than once, you will see an error “ A fatal error occurred while trying to sysprep the VM”*
-The Issue is only with 1004 version, hence we can try upgrading the latest agent version, or we can try upgrading it to 1005 by using below MSI, which has the bug fixed.
+- When you run Sysprep the first time, you will see the following error:
 
-MSI on \\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller
-++You can download it on your laptop, zip it and share it with customer.++ - This line should be removed.
+  > ADMINISTRATOR: Error Handler
 
-Also, reset the Sysprep state of the VM first. 
-This consists of modifying a few registry keys and is described on https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/.
+- When you run Sysprep more than once, you will see the following error:
 
+  > A fatal error occurred while trying to sysprep the VM
 
+The issue is only with version 1004, hence you can try upgrading the agent to the latest agent version, or you can try upgrading it to version 1005 by using below MSI, which has the bug fixed.
+
+*\\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller*
+
+Also, reset the Sysprep state of the VM first. This consists of [modifying a few registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/).
 
 ### Agent Stuck on "Starting"
 
