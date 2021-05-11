@@ -24,11 +24,11 @@ appliesto:
 
 # Check OneDrive site eligibility for increased storage
 
-If you need more OneDrive storage than the default 5 TB, the Microsoft 365 administrator in your organization can check if you are eligible for an increased storage limit. You must already have filled 90% of the 5 TB storage before requesting an increase.  
+If you need more Microsoft OneDrive storage than the default 5 TB, the Microsoft 365 administrator in your organization can check if you are eligible for an increased storage limit. You must already have filled 90% of the 5 TB storage before requesting an increase.  
 
 **Note:** You must contact your Microsoft 365 administrator to request a storage limit increase.
 
-Admins can request Microsoft to increase the default storage space up to 25 TB per user, although a lower per-user quota can be set at the administrator’s discretion. Microsoft 365 administrators can verify a user's eligibility and then request the increase by using the following steps:
+Admins can request Microsoft to increase the default storage space up to 25 TB per user, although a lower per-user quota can be set at their discretion. Microsoft 365 administrators can verify a user's eligibility and then request the increase by using the following steps:
 
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
 
