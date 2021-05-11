@@ -2,6 +2,15 @@
 
 
 
+## Week of May 03, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/4/2021 | [Access data connections are slow to refresh in Excel](/office/troubleshoot/excel/access-data-connections-refresh-slowly) | modified |
+| 5/6/2021 | [Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run](/office/troubleshoot/access/cannot-use-odbc-or-oledb) | modified |
+
+
 ## Week of April 26, 2021
 
 
@@ -52,11 +61,3 @@
 | 4/9/2021 | [Data graphics are not displayed when you try to apply data graphics to images or objects in your Visio 2007 or Visio 2010 drawing](/office/troubleshoot/visio/data-graphics-not-displayed) | modified |
 | 4/9/2021 | [How to create table of contents in Word entries without a page number](/office/troubleshoot/word/create-toc-entries-no-page-number) | modified |
 | 4/9/2021 | Opening a file is blocked by your registry policy setting or File Block settings in Word | removed |
-
-
-## Week of March 29, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/29/2021 | [How to recover a lost, unsaved, or corrupted Word document](/office/troubleshoot/word/recover-lost-unsaved-corrupted-document) | modified |

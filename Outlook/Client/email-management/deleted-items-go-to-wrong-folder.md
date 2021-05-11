@@ -1,8 +1,8 @@
 ---
 title: Items that are deleted from a shared mailbox go to the wrong folder in Outlook
 description: Deleting items from a shared mailbox  go to your own Deleted Items instead of the mailbox owner's.
-author: Abdias Ruiz
-ms.author: v-matham
+author: v-matham
+ms.author: aruiz
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
