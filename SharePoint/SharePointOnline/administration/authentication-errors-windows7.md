@@ -44,4 +44,4 @@ Install KB 3140245, and then create the related registry value. For more infor
 
 Windows 8 and Windows 7 SP1 clients must have the latest TLS cipher suites installed. For more information, see [Microsoft Security Advisory 3042058](/security-updates/SecurityAdvisories/2015/3042058). This update is already included in the latest cumulative update for Windows 7 and Windows 8.
 
-For more information, see [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft365/compliance/prepare-tls-1.2-in-office-365).
+For more information, see [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365).
