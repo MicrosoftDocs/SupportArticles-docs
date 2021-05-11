@@ -1,18 +1,6 @@
 - name: Welcome
   href: welcome-azure-ad.yml
 
-- name: Azure AD Governance, Compliance and Reporting 
-  items:
-  - name: Audit Logs
-    items:
-      - name: Unknown Actors in Audit Reports
-        href: unknown-actors-in-audit-reports.md
-
-  - name: Sign-in Activity Reports
-    items:
-      - name: Verify 1st party Microsoft apps in sign-in reports
-        href: verify-first-party-apps-sign-in.md
-
 - name: App Integration and Development 
   items:
   - name: Troubleshoot adding apps
@@ -39,6 +27,34 @@
         href: error-code-AADSTS750054-saml-request-not-present.md
       - name: User redirected to incorrect reply URL or localhost
         href: reply-url-redirected-to-localhost.md
+
+- name: Azure Active Directory - Business to Consumer
+  items:
+  - name: An exception occurs in application
+    href: server-error-application-exception.md
+  - name: Can't delete a directory
+    href: cannot-delete-directory.md
+  - name: Server Error in '/' Application error in application
+    href: server-error-application.md
+  - name: Fail to sign in to application
+    href: error-sign-into-app.md
+
+- name: Azure Active Directory - Directories, Domains, and Objects
+  items:
+  - name: Troubleshoot dynamic groups
+    href: troubleshoot-dynamic-groups.md
+
+- name: Azure Active Direcotry - Governance, Compliance and Reporting 
+  items:
+  - name: Audit Logs
+    items:
+      - name: Unknown Actors in Audit Reports
+        href: unknown-actors-in-audit-reports.md
+
+  - name: Sign-in Activity Reports
+    items:
+      - name: Verify 1st party Microsoft apps in sign-in reports
+        href: verify-first-party-apps-sign-in.md
 
 - name: Sign-in and Multi-factor authentication
   items:
@@ -225,8 +241,6 @@
     href: faq-set-up-enterprise-work-remotely.yml
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
-  - name: Troubleshoot dynamic groups
-    href: troubleshoot-dynamic-groups.md
   - name: Troubleshoot MFA issues
     href: troubleshoot-azure-mfa-issue.md
   - name: Unable to register a device
@@ -240,17 +254,6 @@
   items:
   - name: Fail to sign out
     href: unable-sign-out-online-services.md
-
-- name: Azure Active Directory Business to Consumer
-  items:
-  - name: An exception occurs in application
-    href: server-error-application-exception.md
-  - name: Can't delete a directory
-    href: cannot-delete-directory.md
-  - name: Server Error in '/' Application error in application
-    href: server-error-application.md
-  - name: Fail to sign in to application
-    href: error-sign-into-app.md
 
 - name: Reference
   items:
