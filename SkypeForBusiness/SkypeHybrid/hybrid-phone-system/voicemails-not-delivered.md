@@ -26,11 +26,11 @@ Voicemails aren't delivered at all (in Outlook clients and the Skype for Busines
 
 To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).
 
-#### Exchange mail flow rules
+### Exchange mail flow rules
 
 These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. It means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SPF failures will be delivered to Exchange, but mail flow rules that anlyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
 
-#### Third-party email systems
+### Third-party email systems
 
 Third-party email systems aren't supported. For more information, see [Set up Phone System voicemail](/microsoftteams/set-up-phone-system-voicemail?bc=%2fskypeforbusiness%2fbreadcrumb%2ftoc.json&toc=%2fskypeforbusiness%2ftoc.json).
 
