@@ -37,7 +37,7 @@ Common issues in creating a dynamic group or rule:
 
 ### Dynamic membership update issues
 
-You’ve created a dynamic group and configured a rule, but encountered these common issues:
+You've created a dynamic group and configured a rule, but encountered these common issues:
 
 No members appear in the group, some users or devices don't appear in the group, or the wrong users or devices appear in the group.
 
@@ -47,7 +47,7 @@ Existing members of the rule are removed.
 
 - This behavior is expected. Existing members of the group are removed when a rule is enabled or changed, or attributes are changed. The users returned from the evaluation of the rule are added as members to the group.
 
-You don’t see membership changes instantly after adding or changing a rule.
+You don't see membership changes instantly after adding or changing a rule.
 
 - Membership evaluation is performed periodically as a background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created because of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 24 hours or longer to populate.
 
@@ -75,7 +75,7 @@ To determine whether a group is dynamic group:
 
 1. Sign into the [Azure portal](https://ms.portal.azure.com/).
 
-2. Select the group in the [Overview of Group](/enterprise-users/groups-create-rule.md#check-processing-status-for-a-rule) tab, then check whether the **membership type** is set to **Dynamic**.
+2. Select the group in the [Overview of Group](/azure/active-directory/enterprise-users/groups-create-rule#check-processing-status-for-a-rule) tab, then check whether the **membership type** is set to **Dynamic**.
 
 ## Validate dynamic group membership rules<a id="2"></a>
 
@@ -156,7 +156,7 @@ To create any new Dynamic groups, you'll first need to delete some existing Dyna
 
 ## Troubleshoot dynamic membership update issues<a id="9"></a>
 
-You’ve created a dynamic group and configured a rule, but encountered one of these issues:
+You've created a dynamic group and configured a rule, but encountered one of these issues:
 
 - There are no members listed in the group.
 - Some users or devices don't appear in the group.
@@ -177,7 +177,7 @@ You’ve created a dynamic group and configured a rule, but encountered one of t
    - A guest user addition error in one group will block the updates of the same and other groups in the same tenant. You can choose to:
 
       - Allow a guest user addition by following the **Manage guest user** setting for groups in a tenant.
-      - Change the group rule to exclude a guest user by adding: `(user.userType -eq "member”)`.
+      - Change the group rule to exclude a guest user by adding: `(user.userType -eq "member")`.
 
 5. If everything looks correct, allow some time for the group to populate. Depending on the size of your tenant, the group may take up to 24 hours to populate the first time, or after a rule change.
 
