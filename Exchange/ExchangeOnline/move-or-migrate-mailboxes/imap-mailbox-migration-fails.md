@@ -28,7 +28,7 @@ Therefore, you can't migrate mailboxes that are hosted on Exchange Server 2010 t
 - You notice a TLS protocol-related incompatibility between Exchange Online and Exchange 2010 IMAP if you run the SSL test on the Remote Connectivity Analyzer for port 993 and the Exchange Server 2010 FQDN.
 - The target server is unavailable for IMAP migration.
 
-When you run the following cmdlet in Exchange Online PowerShell to check the target server availability, you see a TLS negotiation error message because of a cipher suites mismatch.
+  When you run the following cmdlet in Exchange Online PowerShell to check the target server availability, you see a TLS negotiation error message because of a cipher suites mismatch.
 
   ```powershell
   Test-MigrationServerAvailability -IMAP -Port 993 -RemoteServer <mail.contoso.com>
