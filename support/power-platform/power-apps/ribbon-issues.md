@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Power Apps
 _Original KB number:_ &nbsp; 4552163
 
 > [!IMPORTANT]
-> The ribbon troubleshooting information is only applicable to [Unified Interface applications](https://docs.microsoft.com/powerapps/user/unified-interface); it isn't applicable to the legacy web client interface.
+> The ribbon troubleshooting information is only applicable to [Unified Interface apps](https://docs.microsoft.com/powerapps/user/unified-interface); it isn't applicable to the legacy web client interface.
 
 ## Identify the issue
 
