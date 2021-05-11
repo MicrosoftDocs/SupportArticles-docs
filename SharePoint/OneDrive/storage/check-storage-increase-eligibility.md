@@ -22,9 +22,9 @@ appliesto:
 - OneDrive for Business
 ---
 
-# Check OneDrive site storage eligibility for storage beyond 5 TB
+# Check OneDrive site eligibility for increased storage
 
-If ayou more OneDrive storage than the default 5 TB, the Microsoft 365 administrator in your organization can check if you are eligible for an increased storage limit. You must already have filled 90% of the 5 TB storage before requesting an increase.  
+If you need more OneDrive storage than the default 5 TB, the Microsoft 365 administrator in your organization can check if you are eligible for an increased storage limit. You must already have filled 90% of the 5 TB storage before requesting an increase.  
 
 **Note:** You must contact your Microsoft 365 administrator to request a storage size increase.
 
@@ -40,11 +40,11 @@ Administrators can request that Microsoft increase the default storage space up 
 
 1. In the **Run diagnostics** section, type or paste the User Principle Name (UPN) of the user, and then select **Run Tests**.
 
-:::image type="content" source="media/check-storage-increase-eligibility/storage-limited.png" alt-text="Need Help window says we understand you want to increase OneDrive storage beyond 5 TB.":::
+    :::image type="content" source="media/check-storage-increase-eligibility/storage-limited.png" alt-text="Need Help window says we understand you want to increase OneDrive storage beyond 5 TB.":::
 
 1. If the tests detect that OneDrive sites can be upgraded to exceed the 5 TB quota, you can enable the site to use more than 5 TB by selecting **Update Settings**.
 
-:::image type="content" source="media/check-storage-increase-eligibility/not-configured.png" alt-text="Need Help window says your tenant is not configured to increase a user's OneDrive quota beyond 5 TB.":::
+    :::image type="content" source="media/check-storage-increase-eligibility/not-configured.png" alt-text="Need Help window says your tenant is not configured to increase a user's OneDrive quota beyond 5 TB.":::
 
 1. After OneDrive is set to be able to use more than 5 TB, you can set the storage space from the Microsoft Admin Center or SharePoint Online Management Shell. For more information, see [Change a specific user's OneDrive storage space](/onedrive/change-user-storage).  
 
