@@ -170,7 +170,7 @@ You've created a dynamic group and configured a rule, but encountered one of the
 
 3. Verify that the users or devices satisfy the membership rule or not, following the steps in [Evaluate dynamic membership of a user or device](#11).
 
-4. Verify that processing status is not impacted by the issue of guest user addition disallowed by policy, see [Check whether a tenant processing is impacted by a guest user addition disallowed by policy](#12).
+4. Verify that processing status is not impacted by the issue of guest user addition disallowed by policy.
 
    - If the group is an Office365 group and the user is a guest user, the guest user can't be added to a group if the directory setting does not allow a guest user addition in the tenant.
 
