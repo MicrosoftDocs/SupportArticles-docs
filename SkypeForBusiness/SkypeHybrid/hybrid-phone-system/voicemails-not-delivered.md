@@ -22,7 +22,7 @@ appliesto:
 
 Voicemails aren't delivered at all (in Outlook clients and the Skype for Business or Teams client). 
 
-## Resolution for Symptom 1
+## Resolution for symptom 1
 
 To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).
 
@@ -36,7 +36,7 @@ Third-party email systems aren't supported. For more information, see [Set up Ph
 
 The primary issue that affects third-party email systems is that the **FROM** address is formatted for PSTN calls in a non–RFC-compliant manner. However, the Skype for Business or Teams client filters messages depending on the formatting of the **FROM** field. To fix this issue, you can change the mail protection filter of the third-party email system to use the "P1 sender address" instead (which is formatted correctly), and then enable these kinds of email messages to pass through.
 
-## Workaround for Symptom 1
+## Workaround for symptom 1
 
 Add the Cloud Service IP addresses listed below in an SPF record. Alternatively, create a transport rule to bypass the spam filtering for Cloud Voicemail coming from them.
 
@@ -45,15 +45,13 @@ Add the Cloud Service IP addresses listed below in an SPF record. Alternatively,
 |52.114.7.28|52.114.128.68|52.114.75.27|
 |52.114.15.0|52.114.159.40|52.114.76.82|
 |52.114.7.29|52.114.128.18|52.114.76.83|
-|52.114.15.1|52.114.159.41|52.114.75.2## Symptom 2
-
-Voicemails are delivered to email clients (such as Outlook), but don't appear in the Skype for Business or Teams client. Only voicemails from internal users are delivered. Voicemails that are created by calling from PSTN endpoints (that is, regular telephone calls) are not delivered.
+|52.114.15.1|52.114.159.41|52.114.75.28
 
 ## Symptom 2
 
-Voicemails are delivered to email clients (such as Outlook), but don't appear in the Skype for Business or Teams client.
+Voicemails are delivered to email clients (such as Outlook), but don't appear in the Skype for Business or Teams client. Only voicemails from internal users are delivered. Voicemails that are created by calling from PSTN endpoints (that is, regular telephone calls) are not delivered.
 
-## Resolution For Symptom 2
+## Resolution For symptom 2
 
 ### Exchange Email Connector
 
