@@ -225,7 +225,7 @@ If the SCEP application pool isn't started, check the application event log on t
   **Resolution**: Renew the certificate and reinstall the connector.
 
    1. Use `certlm.msc` to open the local computer certificate store, expand **Personal**, and then select **Certificates**.
-   1. In the list of certificates, find an expired certificate that satisfy the following conditions:
+   1. In the list of certificates, find an expired certificate that satisfies the following conditions:
 
       - The value of **Intended Purposes** is **Client Authentication**.
       - The value of **Issued To** or **Common Name** matches the NDES server name.
