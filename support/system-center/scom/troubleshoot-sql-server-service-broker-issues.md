@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot SQL Server Service Broker related issues
-description: Describes common troubleshooting steps for SQL Server Service Broker related issues in System Center Operations Manager.
+title: Troubleshoot SQL Server Service Broker issues
+description: Describes common troubleshooting steps for SQL Server Service Broker-related issues in System Center Operations Manager.
 author: helenclu
 ms.author: ibnajjar
 ms.reviewer: ahalmada
@@ -10,17 +10,17 @@ ms.date: 05/08/2021
 
 *Applies to*: System Center Operations Manager
 
-System Center Operations Manager depends on SQL Server Service Broker to implement all task operations. If SQL Server Service Broker is disabled, all task operations will be affected. The resulting behavior may vary according to the task that's initiated. For example, you may experience the following issues:
+Microsoft System Center Operations Manager depends on SQL Server Service Broker to implement all task operations. If SQL Server Service Broker is disabled, all task operations are affected. The resulting behavior may vary according to the task that's initiated. For example, you may experience the following issues:
 
-- The Discovery Wizard seems to be running forever, even though the task in the background has finished.
-- Resetting the health of a monitor never completes, even though the task in the background has finished.
+- The Discovery Wizard seems to be running endlessly, even though the task in the background has finished.
+- Resetting the health of a monitor never finishes, even though the task in the background has finished.
 
 This article provides common troubleshooting steps for SQL Server Service Broker issues.
 
 > [!NOTE]
-> In the SQL queries in this article, the default name of the Operational database `OperationsManager` is used. Replace `OperationsManager` with the name of your Operational database if you use a different database name.
+> The SQL queries in this article use a default name of `OperationsManager` for the operational database. Replace `OperationsManager` with the name of your operational database if you use a different database name.
 
-## Check if SQL Server Service Broker is enabled
+## Check whether SQL Server Service Broker is enabled
 
 1. Run the following SQL query:
 
@@ -38,24 +38,24 @@ This article provides common troubleshooting steps for SQL Server Service Broker
 
 ## Restart System Center Data Access Service
 
-1. After SQL Server Service Broker is enabled, restart the System Center Data Access Service (OMSDK) service.
+1. After SQL Server Service Broker is enabled, restart System Center Data Access Service (OMSDK).
 1. In SQL Server Management Studio, go to **Databases** > **OperationsManager** > **Service Broker**.
 1. Expand **Queues** and **Services**.
 1. Verify that there's a queue and service whose name contains the following values:
 
    - The IP address of the management server that created the queue and service.
-   - The process ID of the OMSDK service that's running on that management server.
+   - The process ID of the OMSDK service (Microsoft.Mom.Sdk.ServiceHost.exe) that's running on that management server.
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/queues-services.png" alt-text="Service broker queue and service":::
 
-   In the example, the IP address of the management server is 192.168.10.10. The PID of the OMSDK service (Microsoft.Mom.Sdk.ServiceHost.exe) is 3092.
+   In this example, the IP address of the management server is 192.168.10.10. The PID of the OMSDK service is 3092.
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/pid.png" alt-text="SDK service PID":::
 
    If you have more than one management server, each management server will have a separate Service Broker queue and service.
 1. If you can't find the corresponding queue and service, restart the OMSDK service again.
 
-If you still can't find the queue and service, the current Service Broker may be corrupted. Continue with the next step to recreate the SQL Server Service Broker.
+If you still can't find the queue and service, the current Service Broker may be corrupted. Go to the next step to re-create the SQL Server Service Broker.
 
 ## Recreate the SQL Server Service Broker
 
@@ -113,17 +113,17 @@ If you still can't find the queue and service, the current Service Broker may be
    go
    ```
 
-1. Restart the OMSDK service on the management server(s) to recreate the Service Broker, and the queue and service. It might require two restarts:
+1. Restart the OMSDK service on the management servers to re-create the service broker, and the queue and service. This process might require two restarts:
 
-   - The first one recreates the SQL Server Service Broker
-   - The second one recreates the service queue
+   - The first restart re-creates the Service Broker
+   - The second restart re-creates the service queue
 
 1. Verify that the SQL Server Service Broker is still enabled. If it's disabled, enable it.
 1. Verify that the Service Broker queue and service are generated, as described in step 4 in [Restart System Center Data Access Service](#restart-system-center-data-access-service).
 
 ## Advanced troubleshooting
 
-If the previous steps don't resolve the issue, collect SQL Server Profiler trace with [Service Broker events](/sql/relational-databases/event-classes/broker-event-category).
+If the previous steps don't resolve the issue, collect a SQL Server Profiler trace that includes [Service Broker events](/sql/relational-databases/event-classes/broker-event-category).
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/collect-trace.png" alt-text="Collect SQL Server Profiler trace":::
 
@@ -137,7 +137,7 @@ If the previous steps don't resolve the issue, collect SQL Server Profiler trace
 
    :::image type="content" source="media/troubleshoot-sql-server-service-broker-issues/trace-broker-disabled.png" alt-text="Trace when the Service Broker is disabled":::
 
-Additionally, run the following SQL script against the Operational database to collect diagnostic logs.
+Additionally, run the following SQL script against the operational database to collect diagnostic logs.
 
 ```sql
 USE master
