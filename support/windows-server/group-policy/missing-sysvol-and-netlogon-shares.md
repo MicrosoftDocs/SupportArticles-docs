@@ -123,12 +123,14 @@ Missing netlogon and sysvol shares typically occur on replica domain controllers
 
     Run `NTFRSUTL DS [COMPUTERNAME]` on all replica set members. Subscriber object appears in cn=domain system volume (SYSVOL share),cn=NTFRS Subscriptions,CN=%DCNAME%,OU=Domain Controllers,DC=\<FQDN>. Running this command requires that the machine object exists and has replicated in. NTFRSUTL reports the following when the subscriber object is missing:
 
-    > SUBSCRIPTION: NTFRS SUBSCRIPTIONS DN: cn=ntfrs  
+    ```output
+    SUBSCRIPTION: NTFRS SUBSCRIPTIONS DN: cn=ntfrs  
     subscriptions,cn=W2KPDC,ou=domain controllers,dc=d... Guid:  
     5c44b60b-8f01-48c6-8604c630a695dcdd  
-    Working: f:\\winnt\\ntfrs  
-    Actual Working: f:\\winnt\\ntfrs  
+    Working: f:\winnt\ntfrs  
+    Actual Working: f:\winnt\ntfrs  
     WIN2K-PDC IS NOT A MEMBER OF A REPLICA SET!
+    ```
 
 9. The Replication Schedule must be enabled.
 

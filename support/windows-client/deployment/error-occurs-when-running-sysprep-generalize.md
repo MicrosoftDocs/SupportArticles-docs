@@ -28,9 +28,11 @@ When you try to run the Sysprep in Windows 7, and you use the `/generalize` opti
 
 The Setuperr.log file may contain lines that resemble the following:
 
-> Error [0x0f0082] SYSPRP LaunchDll: Failure occurred while executing 'C:\Windows\System32\slc.dll, SLReArmWindows', returned error code -1073425657  
+```output
+Error [0x0f0082] SYSPRP LaunchDll: Failure occurred while executing 'C:\Windows\System32\slc.dll, SLReArmWindows', returned error code -1073425657  
 Error [0x0f0070] SYSPRP RunExternalDlls: An error occurred while running registry sysprep DLLs, halting sysprep execution. dwRet = -1073425657  
 Error [0x0f00a8] SYSPRP WinMain: Hit failure while processing sysprep generalize providers; hr = 0xc004d307
+```
 
 > [!NOTE]
 > The Setuperr.log file is located in the *\Windows\System32\Sysprep\Panther* folder.
