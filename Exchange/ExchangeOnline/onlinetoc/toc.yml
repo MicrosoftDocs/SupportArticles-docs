@@ -105,6 +105,8 @@
       href: ../administration/proxy-address-being-used.md
     - name: Repeated calls against the same folder are slow
       href: ../administration/slow-repeated-calls-against-same-folder.md
+    - name: Self-help diagnostics
+      href: ../administration/self-help-diagnostics.md
     - name: Site mailbox retirement
       href: ../administration/site-mailbox-retirement-faq.md
     - name: The length of the property is too long error
@@ -403,6 +405,8 @@
       href: ../outlook-issues/outlook-connectivity-issues-when-spi-enabled-on-router.md
     - name: Resources to fix connection issues
       href: ../outlook-issues/office-365-troubleshooting-resources.md
+    - name: Self-help diagnostics
+      href: /exchange/troubleshoot/administration/self-help-diagnostics?context=/exchange/troubleshoot/context/online-context
     - name: Sending and receiving email
       href: ../outlook-issues/outlook-connection-issues.md
     - name: Show a Room list option isn't shown in Room Finder
