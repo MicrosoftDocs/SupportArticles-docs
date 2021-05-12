@@ -10,34 +10,39 @@ title: Cannot extend an encrypted OS volume in Windows
 ---
 
 # Cannot extend an encrypted OS volume in Windows
+
 This article describes a problem that prevents you from easily extending the OS volume on some Azure VMs that have been encrypted with Azure Disk Encryption (ADE). It also describes a workaround that allows you extend the OS volume as needed.
 
 ## Symptom
+
 You see the **Extend Volume…** option grayed for the **Windows (C:)** partition in an Azure VM. A System Reserved partition also appears immediately to the right of the Windows partition. The placement of the System Reserved partition appears to block the C drive from being extended into any unallocated space on the disk.
 
 ![Screenshot that shows Disk Management with the Extend Volume option grayed out on the shortcut menu for the Windows volume.](./media/cannot-extend-encrypted-os-volume/01-cannot-extend.png)
 
 
 ## Cause
-During a default Windows installation, a System Reserved partition is created on Disk 0. This partition holds the Boot Manager code and the Boot Configuration Database, and it reserves space for the startup files required for BitLocker. The System Reserved partition is normally assigned to partition 1, and the Windows volume is assigned to partition 2.  This default arrangement, shown below, allows the C: drive to be extended into adjacent unallocated space as needed.
+
+During a default Windows installation, a System Reserved partition is created on Disk 0. This partition holds the Boot Manager code and the Boot Configuration Database, and it reserves space for the startup files required for BitLocker. Normally, the System Reserved partition is assigned to partition 1, and the Windows volume is assigned to partition 2. This default arrangement, shown below, allows the C: drive to be extended into adjacent unallocated space as needed.
 
 ![Screenshot of Disk 0 in Disk Management with the Windows partition in the middle, next to unallocated space on the right.](./media/cannot-extend-encrypted-os-volume/02-normal.png)
 
 Customers, however, may create VMs based on custom images that assign the Windows (C:) volume to partition 1 and that do not define a System Reserved partition. If Azure Disk Encryption is later applied to the OS disk, a new System Reserved partition must then be added to the disk to support BitLocker. The newly created System Reserved partition in this case is assigned to partition 2, whose placement will appear to block partition 1, the OS volume, from being extended into unallocated disk space.
 
 ## Resolution
+
 To fix this problem, you need to perform the following steps:
 
-1.	Assign a larger disk SKU to the OS disk in Azure portal
+1.	Assign a larger disk SKU to the OS disk in the Azure portal
 2.	Extend the System Reserved volume into the unallocated space
 3.	Create a new boot volume in the remaining unallocated space
 4.	Delete the System Reserved volume and extend the Windows volume
 
 ### Assign a larger disk SKU to the OS disk in the Azure portal
+
 1.	In the Azure portal, stop the VM whose OS disk you want to expand.
 2.	Navigate to the properties page for the OS disk. Take a snapshot to make a backup of the disk. 
-3.	On the properties page of the OS disk, click “Size + performance” on the left menu. 
-4.	In the **Size + performance** window, choose a larger disk SKU that gives you enough storage for  your needs, and then click Resize.
+3.	On the properties page of the OS disk, click **Size + performance** on the left menu. 
+4.	In the **Size + performance** window, choose a larger disk SKU that gives you enough storage for  your needs, and then click **Resize**.
 5.	Start the VM again.
 
 ### Extend the System Reserved volume into the unallocated space
@@ -70,13 +75,13 @@ The disk partition layout will resemble the following example after this last st
 bcdboot C:\Windows /s [drive letter of newest volume]:
 ```
 
-For example, if the last volume you created (the rightmost volume in Disk Management, from the 201 MB of unallocated space) was assigned the F: drive, you would type the following at the command prompt:
+For example, if the last volume you created (the rightmost volume in Disk Management, created from the remaining unallocated space) was assigned the F: drive, you would type the following at the command prompt:
 
 ```console
 bcdboot C:\Windows /s F:
 ```
 
-3. Open Regedit, select HKEY_LOCAL_MACHINE\BCD00000000, then select Unload Hive.
+3. Open Regedit, select HKEY_LOCAL_MACHINE\BCD00000000, and then select Unload Hive from the File menu.
 
    :::image type="content" source="./media/cannot-extend-encrypted-os-volume/09-regedit.png" alt-text="Screenshot of a folder selected in the registry editor and of the Unload Hive option selected from the File menu.":::
 
@@ -92,7 +97,7 @@ For example, if the drive letter of your System Reserved volume is E, and the ne
 Copy E:\boot\bcd F:\boot\bcd
 ```
 
-You need to perform this step because the BCD file created in step 4 does not contain Azure-specific configuration settings. (Note that as an alternative to performing this copy operation, you can follow the “Set the Boot Configuration Data [BCD] settings” instructions found here: [Verify the VM](/azure/virtual-machines/windows/prepare-for-upload-vhd-image#verify-the-vm))
+You need to perform this step because the BCD file created in step 2 does not contain Azure-specific configuration settings. (Note that as an alternative to performing this copy operation, you can follow the “Set the Boot Configuration Data [BCD] settings” instructions found here: [Verify the VM](/azure/virtual-machines/windows/prepare-for-upload-vhd-image#verify-the-vm))
 
 5.	Run the following command to begin the process of changing Windows Boot Manager from the System Reserved partition to the newest (rightmost) partition:
 
@@ -106,9 +111,9 @@ For example, if the newest (rightmost) partition drive letter is F, you would ty
 bcdedit /store F:\boot\bcd /enum /v
 ```
 
-You will see output like in the following example:
+You will see output that looks like the following example:
 
-```output
+```console
 Windows Boot Manager
 --------------------
 identifier              {9dea862c-5cdd-4e70-acc1-f32b344d4795}  <<<<<
@@ -134,10 +139,11 @@ For example, if the newest drive letter is F and the identifier is the same as i
 bcdedit /store F:\boot\bcd /set {9dea862c-5cdd-4e70-acc1-f32b344d4795} device partition=F:
 ```
 
-7.	In Disk Management, right-click the rightmost volume (the last volume you created), and select “Mark Partition as Active.” Click Yes to confirm.
+7.	In Disk Management, right-click the rightmost volume (the last volume you created), and select **Mark Partition as Active**. Click Yes to confirm.
 8.	Restart the VM.
 
 ### Delete the System Reserved volume and extend the Windows volume
+
 1. Log in to the VM again. In Disk Management, delete the old System Reserved partition, and click Yes to confirm.
 
    :::image type="content" source="./media/cannot-extend-encrypted-os-volume/10-delete.png" alt-text="Screenshot of the Delete Volume option being selected for the old System Reserved partition in Disk Management.":::
@@ -147,4 +153,5 @@ bcdedit /store F:\boot\bcd /set {9dea862c-5cdd-4e70-acc1-f32b344d4795} device pa
 :::image type="content" source="./media/cannot-extend-encrypted-os-volume/11-extend.png" alt-text="Screenshot of of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
 
 ## More information
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/).
