@@ -26,43 +26,24 @@ This problem occurs because the NDES policy module still uses the thumbprint fro
 
 ## Resolution
 
-To fix this problem, set the NDES policy module to use the new certificate. To do this, follow these steps on the NDES server:
+To fix this problem, set the NDES policy module to use the new certificate. To do so, follow these steps on the NDES server:
 
-1. Use `certlm.msc` to open the local computer certificate store, expand **Personal**, and then click **Certificates**.
-2. In the list of certificates, find an expired certificate for which the following conditions are true:
+1. Use `certlm.msc` to open the local computer certificate store, expand **Personal**, and then select **Certificates**.
+1. In the list of certificates, find an expired certificate that satisfy the following conditions:
 
    - The value of **Intended Purposes** is **Client Authentication**.
    - The value of **Issued To** or **Common Name** matches the NDES server name.
 
-3. Double-click the certificate to open the **Certificate** dialog box, click the **Details** tab, scroll down to **Thumbprint**, and then verify that the value matches the value of the following registry subkey:
-
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint`
-
-4. Click **OK** to close the **Certificate** dialog box, right-click the certificate, and then select **All Tasks** > **Request Certificate with New Key**.
-5. In the **Certificate Enrollment** dialog box, click **Next**, and then click **More information is required to enroll for this certificate. Click here to configure settings**.
-6. In the **Certificate Properties** dialog box, click the **Subject** tab, and then do the following:
-
-   1. Under **Subject name,** click the **Type** drop-down box and select **Common Name**. In the **Value** box, enter the fully qualified domain name (FQDN) of the NDES server, then click **Add**.
-   2. Under **Alternative name**, click the **Type** list, and then select DNS.
-   3. In the **Value** box, enter the FQDN of the NDES server, and then click **Add**.
-
-7. Click **OK** to close the **Certificate Properties** dialog box.
-8. Click **Enroll**, wait until the enrollment finishes successfully, and then click **Finish**.
-9. Double-click the new certificate, and then click the **Details** tab in the **Certificate** dialog box.
-10. Scroll down to locate and click **Thumbprint**, and then copy the hexadecimal string from the box.
-11. Start Notepad.
-12. Paste the hexadecimal string, remove the spaces between the hexadecimal characters, and then save as a text file.
-
-    > [!NOTE]
-    > If you receive a warning message about the unicode format, click **OK**.
-
-13. Reopen the text file, copy the thumbprint, and then paste it to the value of the following registry subkey:
-
-    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint`
-
-    > [!NOTE]
-    > Don't copy any additional characters, such as the question mark at the beginning of the file.
-
-14. At an elevated command prompt, run the following command:
-
-    `iisreset`
+   > [!NOTE]
+   > The Client Authentication extended key usage (EKU) is required. Without this EKU, CertificateRegistrationSvc will return an HTTP 403 response to NDESPlugin requests. This response will be logged in the IIS logs.
+1. Double-click the certificate. In the **Certificate** dialog box, select the **Details** tab, locate the **Thumbprint** field, and then verify the value matches the value of the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint` registry subkey.
+1. Select **OK** to close the **Certificate** dialog box.
+1. Right-click the certificate, select **All Tasks**, then select **Request Certificate with New Key** or **Renew Certificate with New Key**.
+1. In the **Certificate Enrollment** page, select **Next**, select the correct SSL template, and then select **More information is required to enroll for this certificate. Click here to configure settings**.
+1. In the **Certificate Properties** dialog box, select the **Subject** tab, and then perform the following steps:
+      1. Under **Subject name**, in the **Type** drop-down box, select **Common Name**. In the **Value** box, enter the fully qualified domain name (FQDN) of the NDES server. Then select **Add**.
+      1. Under **Alternative name**, in the **Type** drop-down box, select **DNS**. In the **Value** box, enter the FQDN of the NDES server. Then select **Add**.
+      1. Select **OK** to close the **Certificate Properties** dialog box.
+1. Select **Enroll**, wait until the enrollment finishes successfully, and then select **Finish**.
+1. Reinstall the Intune Certificate Connector to link it to the newly created certificate. For more information, see [How to reinstall the Intune Certificate Connector](./reinstall-the-intune-connector.md).
+1. After you close the Certificate Connector UI, restart the Intune Connector Service and the World Wide Web Publishing Service.
