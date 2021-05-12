@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot issues using diagnostics
-description: Describes how to troubleshoot issue in Exchange Online and Outlook by using diagnostics and describes current covered scenarios.
+title: Self-help diagnostics for issues in Exchange Online and Outlook
+description: Lists diagnostics to troubleshoot issues in Exchange Online and Outlook.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
