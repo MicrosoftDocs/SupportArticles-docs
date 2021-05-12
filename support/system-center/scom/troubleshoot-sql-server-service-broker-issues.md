@@ -57,7 +57,7 @@ This article provides common troubleshooting steps for SQL Server Service Broker
 
 If you still can't find the queue and service, the current Service Broker may be corrupted. Go to the next step to re-create the SQL Server Service Broker.
 
-## Recreate the SQL Server Service Broker
+## Re-create the SQL Server Service Broker
 
 1. Run the following SQL queries in order:
 
