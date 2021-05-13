@@ -38,8 +38,9 @@ When you access your OneDrive cloud storage through the **Files** tab, you recei
 
 ## Error Message 3
 
-> This item might not exist or is no longer available.
-> This item might have been deleted, expired, or you might not have permission to view it. Contact the owner of this item for more information.
+> This item might not exist or is no longer available.  
+> This item might have been deleted, expired, or you might not have permission to view it.  
+> Contact the owner of this item for more information.
 
 ## Resolution
 
