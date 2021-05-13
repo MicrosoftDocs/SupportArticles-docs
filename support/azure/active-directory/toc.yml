@@ -56,6 +56,8 @@
   items:
   - name: Can't delete a directory using portal
     href: cannot-delete-directory-azure-portal.md
+  - name: Can't open Azure AD Module PowerShell
+    href: cant-open-aad-module-powershell.md
   - name: Can't verify account when resetting password
     href: could-not-verify-account-reset-pwd.md
   - name: Method invocation failed error in Azure PowerShell
@@ -272,10 +274,3 @@
     href: security-context-not-associate-domian.md
   - name: Support data collection
     href: support-data-collection-diagnostic-logs.md
-
-(**TO BE REMOVED**)
-
-- name: Configuration and Management
-  items:
-  - name: Can't open Azure AD Module PowerShell
-    href: cant-open-aad-module-powershell.md
