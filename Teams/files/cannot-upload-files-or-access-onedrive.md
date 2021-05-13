@@ -44,15 +44,15 @@ When you access your OneDrive cloud storage through the **Files** tab, you recei
 
 ## Resolution
 
-Error 1 can have multiple causes. To resolve Error 1, try each of the following resolutions in the order in which they're listed. Check whether the issue is resolved after you try each resolution before you go to the next one.
+[Error 1](#error-message-1) can have multiple causes. To resolve Error 1, try each of the following resolutions in the order in which they're listed. Check whether the issue is resolved after you try each resolution before you go to the next one.
 
-To resolve Error 2, try Resolution 2.
+To resolve [Error 2](#error-message-2), try Resolution 2.
 
-To resolve Error 3, try Resolution 1.
+To resolve [Error 3](#error-message-3), try Resolution 1.
 
 ### Resolution 1
 
-Error 1 and Error 3 can occur if the name of the **Documents** folder (the default document library on the OneDrive site) was changed to something else.
+[Error 1](#error-message-1) and [Error 3](#error-message-3) can occur if the name of the **Documents** folder (the default document library on the OneDrive site) was changed to something else.
 
 To fix the error, you must revert the folder name to **Documents** by using an administrative account and following these steps:
 
@@ -68,15 +68,15 @@ To fix the error, you must revert the folder name to **Documents** by using an a
 
 ### Resolution 2
 
-Error 1 can occur if your OneDrive site is set as ReadOnly.
+[Error 1](#error-message-1) can occur if your OneDrive site is set as ReadOnly.
 
-Error 2 can occur if your OneDrive site is set as NoAccess.
+[Error 2](#error-message-2) can occur if your OneDrive site is set as NoAccess.
 
 Both these settings indicate that your OneDrive site is locked. To fix the error, [unlock the site](/sharepoint/manage-lock-status).
 
 ### Resolution 3
 
-Error 1 can occur if a user is deleted and then re-created by using the same User Principal Name (UPN). This situation will cause a user ID mismatch on the OneDrive site.
+[Error 1](#error-message-1) can occur if a user is deleted and then re-created by using the same User Principal Name (UPN). This situation will cause a user ID mismatch on the OneDrive site.
 
 To resolve this error, [delete the re-created user, and restore the original user](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-sharepoint-error#accessing-a-onedrive-site).
 
