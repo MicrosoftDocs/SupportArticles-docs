@@ -5,10 +5,9 @@ author: helenclu
 ms.author: ibnajjar
 ms.reviewer: ahalmada
 ms.date: 05/08/2021
+appliesto: System Center Operations Manager
 ---
 # Troubleshoot SQL Server Service Broker issues in Operations Manager
-
-*Applies to*: System Center Operations Manager
 
 Microsoft System Center Operations Manager depends on SQL Server Service Broker to implement all task operations. If SQL Server Service Broker is disabled, all task operations are affected. The resulting behavior may vary according to the task that's initiated. For example, you may experience the following issues:
 
@@ -113,7 +112,7 @@ If you still can't find the queue and service, the current Service Broker may be
    go
    ```
 
-1. Restart the OMSDK service on the management servers to re-create the service broker, and the queue and service. This process might require two restarts:
+1. Restart the OMSDK service on the management servers to re-create the Service Broker, and the queue and service. This process might require two restarts:
 
    - The first restart re-creates the Service Broker
    - The second restart re-creates the service queue
