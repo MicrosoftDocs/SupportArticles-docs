@@ -31,12 +31,12 @@ When you try to upload a file in a Microsoft Teams chat, you receive either of t
 
 ## Error Message 2
 
-> The file \<FileName> didn't upload.
+> The file \<FileName> didn't upload.  
 > Your OneDrive isn't available.
 
-When you access your OneDrive cloud storage through the **Files** tab, you receive the following error message:
-
 ## Error Message 3
+
+When you access your OneDrive cloud storage through the **Files** tab, you receive the following error message:
 
 > This item might not exist or is no longer available.  
 > This item might have been deleted, expired, or you might not have permission to view it.  
