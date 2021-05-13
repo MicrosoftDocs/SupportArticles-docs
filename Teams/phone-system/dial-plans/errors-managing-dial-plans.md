@@ -54,4 +54,4 @@ These actions trigger a query to look up the value of the **EffectiveTenantDialP
 
 ## Resolution
 
-If you have to [manage dial plans](/microsoftteams/create-and-manage-dial-plans), your administrator account must be [assigned a Teams license](https://docs.microsoft.com/microsoft-365/admin/manage/assign-licenses-to-users).
+If you have to [manage dial plans](/microsoftteams/create-and-manage-dial-plans), your administrator account must be [assigned a Teams license](/microsoft-365/admin/manage/assign-licenses-to-users).
