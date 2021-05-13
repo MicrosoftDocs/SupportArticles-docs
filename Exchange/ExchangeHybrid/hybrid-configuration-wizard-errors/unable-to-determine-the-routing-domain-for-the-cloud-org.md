@@ -35,7 +35,7 @@ at Microsoft.Exchange.Management.Hybrid.Engine.ExecuteTask(ITask taskBase, ITask
 
 Enable directory synchronization. When directory synchronization is enabled, the routing domain is created. To enable directory synchronization, follow these steps:
 
-1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more info about how to do this, see [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
+1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more info about how to do this, see [Install the Azure AD Module](/powershell/azure/active-directory/overview?view=azureadps-1.0&preserve_view=true#install-the-azure-ad-module).
 2. Run the following command:
 
     ```powershell
