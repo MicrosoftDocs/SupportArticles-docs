@@ -44,37 +44,34 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
 > [!NOTE]
 > This process also works for soft-deleted mailboxes if they connect to a new on-premises AD account. The `SoftDeletedMailbox` parameter should be used to replace the `InactiveMailboxOnly` parameter.
 
-1. Run the following command to obtain inactive mailbox attributes from Exchange:
+1. Run the following command to obtain inactive mailbox attributes from Exchange Online powershell:
 
     ```powershell
     $InactiveMailbox = Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox>
     ```
 
-2. Run the following command to temporarily associate the inactive mailbox with a cloud account. An account will be synced back to Azure AD:
+2. Run the following command to temporarily associate the inactive mailbox with a cloud account from Exchange online powershell.
 
    ```powershell
    New-Mailbox -InactiveMailbox $InactiveMailbox.DistinguishedName -Name "<name of inactive mailbox>" -DisplayName "<DisplayName of inactive mailbox>" -MicrosoftOnlineServicesID <alias@*.onmicrosoft.com> -Password (ConvertTo-SecureString -String <PasswordString> -AsPlainText -Force) -ResetPasswordOnNextLogon $true
    ```
 
-3. Obtain the **ImmutableID** parameter value. By default, this is the on-premises `ObjectGUID` attribute as a base-64 string. You can convert `ObjectGUID` by using the following command in Windows PowerShell:
+3. Connect to the exchange management shell on your on premise server and collect the `ObjectGUID` attribute.   You can convert `ObjectGUID` to 'ImmutableID' by using the following command in Windows PowerShell:
 
    ```powershell
    [system.convert]::ToBase64String(([GUID]"<ObjectGUID>").tobytearray())
    ```
-
-4. In Azure AD, obtain the `ObjectID` parameter value for new Azure AD account that was synced back from Exchange Online. To do this, run the following command:
-
-   ```powershell
-   Get-MsolUser -UserPrincipalName <UPN> | fl objectID
-   ```
-
-5. Set the `ImmutableID` parameter in Azure AD:
+  Obtain the immutable ID.
+  
+4. Connect to Azure AD and  Set the `ImmutableID` parameter in Azure AD :
 
     ```powershell
-    Set-MsolUser -ObjectId  <ObjectId>  -ImmutableId <ImmutableId>
+    Set-MsolUser -userprincipalname  -ImmutableId <ImmutableId>
     ```
 
-6. Bring the original Azure AD account into the scope of Azure AD Connect.
+5. Perform a Delta sync on AD Connect.
+
+6.  This connects original Azure AD account into the scope of Azure AD Connect 
 
 7. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
 
