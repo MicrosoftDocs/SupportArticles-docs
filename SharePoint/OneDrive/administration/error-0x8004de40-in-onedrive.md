@@ -64,4 +64,4 @@ If you are using Windows 8 or Windows 7, see the following pages:
 
 - [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392)
 
-- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](../SharePointOnline/administration/authentication-errors-windows7)
+- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](.../SharePointOnline/administration/authentication-errors-windows7)
