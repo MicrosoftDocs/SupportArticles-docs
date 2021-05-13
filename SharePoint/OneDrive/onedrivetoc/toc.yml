@@ -5,6 +5,8 @@
     items:
     - name: Error when accessing OneDrive or Sharepoint
       href: ../administration/error-accessing-onedrive-sharepoint.md
+    - name: Error Code 0x8004de40 when signing in to OneDrive
+      href: ../administration/error-0x8004de40-in-onedrive.md
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data
