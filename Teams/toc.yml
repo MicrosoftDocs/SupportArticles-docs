@@ -22,7 +22,7 @@
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
-      href: /microsoftteams/legacy-login-issues
+      href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Organizations can't prevent users from changing profile photos
       href: ./known-issues/cant-prevent-users-from-changing-profile-picture.md
     - name: Public team list doesn't display all teams
@@ -30,9 +30,9 @@
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: Troubleshoot connectivity issues
-      href: /microsoftteams/connectivity-issues
+      href: /microsoftteams/connectivity-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Troubleshoot installation and update issues
-      href: /microsoftteams/troubleshoot-installation
+      href: /microsoftteams/troubleshoot-installation?context=/MicrosoftTeams/troubleshoot/context/context
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
     - name: User information isn't updated
