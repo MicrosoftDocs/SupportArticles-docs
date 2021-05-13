@@ -16,7 +16,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# (554 5.6.0 Invalid message content) NDR when an Office 365 user sends a message that contains an Excel attachment
+# (554 5.6.0 Invalid message content) NDR when an Office 365 user sends a message that contains an Excel or Word attachment
 
 _Original KB number:_&nbsp;2984127
 
