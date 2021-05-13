@@ -58,10 +58,10 @@ Set the `ExchangeGUID` property on the associated on-premises remote mailbox bef
     Get-Mailbox <MailboxName> | Format-List ExchangeGUID
     ```
 
-4. Run the following command to set the value of the `ExchangeGUID` property on the on-premises remote mailbox to the value that you retrieved in step 3:
+4. Run the following command to set the value of the `ExchangeGUID` property on the on-premises remote mailbox to the value that you retrieved in step 3 and Enclose the whole Guid in double quotation marks
 
     ```powershell
-    Set-RemoteMailbox <MailboxName> -ExchangeGUID <GUID>
+    Set-RemoteMailbox <MailboxName> -ExchangeGUID "GUID"
     ```
 
 5. Force directory synchronization.
