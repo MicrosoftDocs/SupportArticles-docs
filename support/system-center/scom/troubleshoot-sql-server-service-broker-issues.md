@@ -5,7 +5,8 @@ author: helenclu
 ms.author: ibnajjar
 ms.reviewer: ahalmada
 ms.date: 05/08/2021
-appliesto: System Center Operations Manager
+appliesto: 
+- System Center Operations Manager
 ---
 # Troubleshoot SQL Server Service Broker issues in Operations Manager
 
