@@ -75,6 +75,17 @@ Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook
 
 5. Select **Save** to save your changes.
 
+### Use powershell to assign permisisons
+
+Connect to Exchange Online by using remote PowerShell. For info about how to do this, go to [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+
+You need to be assigned Exchange or Global Admin permissions before you can run this cmdlet. This example assigns the user Kevin Kelly Full Access permission to Terry Adams's mailbox.
+
+```powershell
+Add-MailboxPermission -Identity "Terry Adams" -User "Kevin Kelly" -AccessRights FullAccess -InheritanceType All
+```
+
+
 ##### How do I access the mailbox
 
 Depending on the email client you choose, the detailed instructions for accessing the mailbox that you have Full Access permissions to are listed below:
