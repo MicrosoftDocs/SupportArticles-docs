@@ -43,9 +43,6 @@ To resolve this problem, follow these steps:
     #Mount point for the resource disk 
     ResourceDisk.MountPoint=/mnt 
 
-    #Create and use swapfile on resource disk. 
-    ResourceDisk.EnableSwap=n 
-
     # Create and use swapfile on resource disk. 
     ResourceDisk.EnableSwap=n 
 
