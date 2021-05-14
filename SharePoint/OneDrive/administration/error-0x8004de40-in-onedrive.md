@@ -65,7 +65,7 @@ If you are using Windows 8 or Windows 7, see the following pages:
 - [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](../../SharePointOnline/administration/authentication-errors-windows7.md)
 
 
-## More Information 
+## References 
 
 - [TLS cipher suites supported by Office 365](https://docs.microsoft.com/en-us/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365)
 
