@@ -22,15 +22,14 @@ search.appverid: MET150
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!WARNING]
-> There is an issue with the use of this function. The last Monday in some calendar years can be returned as week 53 when it should be week 1. For more information and a workaround, see [Format or DatePart functions can return wrong week number for last Monday in Year](https://docs.microsoft.com/office/troubleshoot/access/functions-return-wrong-week-number).
+> There is an issue with the use of this function. The last Monday in some calendar years can be returned as week 53 when it should be week 1. For more information and a workaround, see [Format or DatePart functions can return wrong week number for last Monday in Year](functions-return-wrong-week-number.md).
 
 ## Symptoms
 
 When you use either the Format or DatePart function to determine the week number for dates using the following syntax:
 
-**Format(AnyDate, "ww", vbMonday, vbFirstFourDays)**
-
-**DatePart("ww", AnyDate, vbMonday, vbFirstFourDays)**
+- `Format(AnyDate, "ww", vbMonday, vbFirstFourDays)`
+- `DatePart("ww", AnyDate, vbMonday, vbFirstFourDays)`
 
 the last Monday in some calendar years is returned as week 53 when it should be week 1.
 
@@ -119,15 +118,16 @@ In Visual Basic and Visual Basic for Applications, all date functionality, excep
 
 4. Use (Ctrl + G) to open the Immediate Window if it's not already open.
 5. Type **?Test1** in the Immediate window and hit Enter, note the following results in the Immediate window:
- 
+
    ```asciidoc
    Format function:
    Date: 12/28/03   Day: Sun   Week: 52
    Date: 12/29/03   Day: Mon   Week: 53
    Date: 12/30/03   Day: Tue   Week: 1
    Date: 12/31/03   Day: Wed   Week: 1
-   ```   
-   Note that with this format, all weeks start with Monday, so that 12/29/2003 should be considered the start of Week 1 and not part of Week 53.
+   ```
+
+   With this format, all weeks start with Monday, so that 12/29/2003 should be considered the start of Week 1 and not part of Week 53.
 
 6. Type **?Test2** in the Immediate window and hit Enter to see a list of dates in the specified range that experience this problem. The list includes the date, Week day (always Monday), the Week # returned by Format (53), and the Week number it should return (1.) For example:
 
@@ -229,4 +229,5 @@ You can avoid using these functions to determine Week number by writing code tha
    Date: 12/30/03   Day: Tue   Week: 1
    Date: 12/31/03   Day: Wed   Week: 1
    ```
+
    Note that Monday is considered to be Week 1 as it should be.
