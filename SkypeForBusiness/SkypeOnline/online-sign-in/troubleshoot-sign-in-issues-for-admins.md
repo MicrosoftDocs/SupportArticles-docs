@@ -42,9 +42,9 @@ If the issue still exists, [contact support](#contact-support).
 Check that the affected users have a valid Skype for Business license with the following steps:
 
 1. Sign in at <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">admin.microsoft.com</a> with your admin account.
-2. Go to **Users** > **Active users**, and then select the user that you want to check the license status.
-4. In the right pane, select **Licenses and Apps**.
-5. Verify that the user is licensed for Skype for Business Online.
+2. Go to **Users** > **Active users**, select the user that you want to check the license status.
+3. In the right pane, select **Licenses and Apps**.
+4. Verify that the user is licensed for Skype for Business Online.
 
     ![Screenshot of licensed users](./media/troubleshoot-sign-in-issues-for-admins/verify-user-licensed.png)
 
