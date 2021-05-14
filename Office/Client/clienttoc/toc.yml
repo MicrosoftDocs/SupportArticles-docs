@@ -22,7 +22,7 @@
         - name: Ambiguous name detected
           href: ../access/ambiguous-name-detected.md
         - name: Automate the process of selecting printer for a report
-          href: ../access/automate-selecte-printer-for-report.md
+          href: ../access/automate-selected-printer-for-report.md
         - name: Build a dynamic query with values from a search form
           href: ../access/build-dynamic-query-from-search-form.md
         - name: Can't add new records programmatically
