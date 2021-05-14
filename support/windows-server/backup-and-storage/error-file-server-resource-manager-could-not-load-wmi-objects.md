@@ -1,7 +1,7 @@
 ---
-title: File Server Resource Manager could not load WMI objects in Windows Server 2012
-description: Fixes an error that occurs when starting the File Server Resource Manager on Windows Server 2012.
-ms.date: 09/14/2020
+title: File Server Resource Manager could not load WMI objects in Windows Server
+description: Fixes an error that occurs when starting the File Server Resource Manager on Windows Server.
+ms.date: 05/12/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: File Server Resource Manager (FSRM)
 ms.technology: windows-server-backup-and-storage
 ---
-# File Server Resource Manager could not load WMI objects in Windows Server 2012
+# File Server Resource Manager could not load WMI objects in Windows Server
 
-This article helps fix an error that occurs when starting the File Server Resource Manager in Windows Server 2012.
+This article helps fix an error that occurs when starting the File Server Resource Manager in Windows Server.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2831687
 
 ## Symptoms
 
-When starting the File Server Resource Manager in Windows Server 2012, you may receive the following error message:
+When starting the File Server Resource Manager in Windows Server, you may receive the following error message:
 
 > File Server Resource Manager could not load WMI objects on "Server Name".
 
