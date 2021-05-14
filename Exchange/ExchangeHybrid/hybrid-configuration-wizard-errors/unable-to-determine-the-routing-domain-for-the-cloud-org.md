@@ -1,8 +1,8 @@
 ---
 title: Unable to determine routing domain for cloud organization
 description: Describes an issue in which you receive an Unable to determine the routing domain for the cloud organization error message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -18,7 +18,7 @@ appliesto:
 - Exchange Server 2013 Standard Edition 
 search.appverid: MET150
 ---
-# (Unable to determine the routing domain for the cloud organization) error when running Hybrid Configuration wizard
+# "Unable to determine the routing domain for the cloud organization" error when running Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3068010
 
@@ -35,7 +35,7 @@ at Microsoft.Exchange.Management.Hybrid.Engine.ExecuteTask(ITask taskBase, ITask
 
 Enable directory synchronization. When directory synchronization is enabled, the routing domain is created. To enable directory synchronization, follow these steps:
 
-1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more info about how to do this, see [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
+1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more information about how to do so, see [Connect to Azure AD](/powershell/azure/active-directory/overview?view=azureadps-1.0&preserve_view=true#connect-to-azure-ad).
 2. Run the following command:
 
     ```powershell
