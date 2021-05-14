@@ -127,10 +127,10 @@ You can substitute the particular printers that you want to use. To automate the
 
 8. Exit the Visual Basic Editor, and then change the **On Click** property of both command buttons to **[Event Procedure]**. To do so, follow these steps:
 
-    1. In Design view, click the command button, and then click **Properties** on the **View** menu.
+     1. In Design view, click the command button, and then click **Properties** on the **View** menu.
 
-      In Access 2007 or a later version, click the command button in the design view, and then click **Property Sheet** in the **Tools** group on the **Design** tab.
-    2. Click the **Event** tab, click the **On Click** property, click the down arrow, and then click **[Event Procedure]**.
+        In Access 2007 or a later version, click the command button in the design view, and then click **Property Sheet** in the **Tools** group on the **Design** tab.
+     2. Click the **Event** tab, click the **On Click** property, click the down arrow, and then click **[Event Procedure]**.
 
 9. To print **rptMyReport** to a specific printer, open **frmForm1** in Form view, and then click the appropriate button.
 
