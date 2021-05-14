@@ -796,6 +796,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/active-directory/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/connection-adfs-failed-set-msoladfscontex",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/windows-server/identity/active-directory-services-domains-part-one.md",
       "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
       "redirect_document_id": false
