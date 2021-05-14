@@ -34,8 +34,6 @@ Error Code 0x8004de40 indicates OneDrive is having trouble connecting to the c
 
 ## Resolution
 
-### Check your internet connection
-
 First, verify that you are connected to the internet. If the affected device is not connected, see [Fix Wi-Fi connection issues in Windows](https://go.microsoft.com/fwlink/?linkid=871051).
 
 If the device is connected to the internet, continue to the following steps based on the version of Windows that the device is running.
