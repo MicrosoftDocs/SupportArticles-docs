@@ -7,7 +7,7 @@ ms.reviewer: ivanpash
 ---
 # HTTP 400 Bad Request (Request Header too long) responses to HTTP requests
 
-When a HTTP request that needs Kerberos authentication is sent to a website that's hosted on Internet Information Services (IIS) and is configured to use Kerberos authentication, the HTTP request header would be very long. This article helps you work around the HTTP 400 error that occurs when the HTTP request header is too long.
+When an HTTP request that needs Kerberos authentication is sent to a website that's hosted on Internet Information Services (IIS) and is configured to use Kerberos authentication, the HTTP request header would be very long. This article helps you work around the HTTP 400 error that occurs when the HTTP request header is too long.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 2020943
