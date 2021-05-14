@@ -18,7 +18,7 @@ ms.technology: windows-server-deployment
 _Original product version:_ &nbsp;Windows Servers  
 _Original KB number:_ &nbsp;4035110
 
-When deploying a hot plug NVM Express (MVMe) solid-state drive (SSD) that supports a maximum payload size (MPS) which is less than the currently configured Peripheral Component Interconnect Express (PCIe) bus MPS, the SSD device cannot be detected or enumerated, and you receive the following error message:
+When deploying a hot plug NVM Express (NVMe) solid-state drive (SSD) that supports a maximum payload size (MPS) which is less than the currently configured Peripheral Component Interconnect Express (PCIe) bus MPS, the SSD device cannot be detected or enumerated, and you receive the following error message:
 
 > This device cannot start. Try upgrading the device drivers for this device. (Code 10)
 
