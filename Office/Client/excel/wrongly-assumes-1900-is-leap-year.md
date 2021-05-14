@@ -26,11 +26,11 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-##  Symptoms
+## Symptoms
 
 Microsoft Excel incorrectly assumes that the year 1900 is a leap year. This article explains why the year 1900 is treated as a leap year, and outlines the behaviors that may occur if this specific issue is corrected.
 
-##  More Information
+## More Information
 
 When Lotus 1-2-3 was first released, the program assumed that the year 1900 was a leap year, even though it actually was not a leap year. This made it easier for the program to handle leap years and caused no harm to almost all date calculations in Lotus 1-2-3.
 
@@ -38,24 +38,20 @@ When Microsoft Multiplan and Microsoft Excel were released, they also assumed th
 
 Although it is technically possible to correct this behavior so that current versions of Microsoft Excel do not assume that 1900 is a leap year, the disadvantages of doing so outweigh the advantages.
 
-If this behavior were to be corrected, many problems would arise, including the following:
-
+If this behavior were to be corrected, many problems would arise, including:
 
 - Almost all dates in current Microsoft Excel worksheets and other documents would be decreased by one day. Correcting this shift would take considerable time and effort, especially in formulas that use dates.
-
 - Some functions, such as the WEEKDAY function, would return different values; this might cause formulas in worksheets to work incorrectly.
-
 - Correcting this behavior would break serial date compatibility between Microsoft Excel and other programs that use dates.
 
 If the behavior remains uncorrected, only one problem occurs:
 
-
-- The WEEKDAY function returns incorrect values for dates before March 1, 1900. Because most users do not use dates before March 1, 1900, this problem is rare. 
+- The WEEKDAY function returns incorrect values for dates before March 1, 1900. Because most users do not use dates before March 1, 1900, this problem is rare.
   
 NOTE: Microsoft Excel correctly handles all other leap years, including century years that are not leap years (for example, 2100). Only the year 1900 is incorrectly handled.
 
-##  References
+## References
 
-For additional information about determining whether a given year is a leap year, click the article number below to view the article in the Microsoft Knowledge Base:
+For more information about determining whether a given year is a leap year, click the article number below to view the article in the Microsoft Knowledge Base:
 
-   [Method to Determine Whether a Year Is a Leap Year](https://docs.microsoft.com/office/troubleshoot/excel/determine-a-leap-year)
+   [Method to Determine Whether a Year Is a Leap Year](determine-a-leap-year.md)
