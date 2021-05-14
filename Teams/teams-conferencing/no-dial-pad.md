@@ -31,7 +31,7 @@ Here are the four possible causes of this issue:
 - The user hasn't assigned a Teams license.
 - The user hasn't assigned a Calling Plan.
 - The user hasn't enabled Enterprise Voice.
-- The user is in Islands mode.
+- The user is in **Islands** mode.
 - The **OnlineVoiceRoutingPolicy** value isn't set correctly for the user.
 
 ## Resolution
@@ -39,7 +39,7 @@ Here are the four possible causes of this issue:
 - Make sure the user has been assigned a [Teams license](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
 - Make sure the user has been assigned a [Calling Plan](/microsoftteams/calling-plan-landing-page).
 - Enable the user for [Enterprise Voice](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-enterprise-voice-online-and-phone-system-voicemail).
-- More details about Islands mode and how to upgrade can be found [here](https://docs.microsoft.com/en-us/microsoftteams/teams-and-skypeforbusiness-coexistence-and-interoperability).
+- For more information about Islands mode, see [Understand Microsoft Teams and Skype for Business coexistence and interoperability](/microsoftteams/teams-and-skypeforbusiness-coexistence-and-interoperability).
 - Teams administrators should remove the user's **OnlineVoiceRoutingPolicy** value and set the correct value for the policy as shown in this example:
 
     ```powershell
