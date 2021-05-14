@@ -23,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-After the Microsoft Azure Active Directory Sync Tool runs to sync your on-premises Active Directory environment to Azure Active Directory, a user's Office 365 email address unexpectedly contains an underscore character "_". 
+After the Microsoft Azure Active Directory Connect Tool runs to sync your on-premises Active Directory environment to Azure Active Directory, a user's Office 365 email address unexpectedly contains an underscore character "_". 
 
 ## Cause
 
@@ -32,7 +32,7 @@ This occurs if the user account in your on-premises environment has a **proxyadd
 |Character | Name |
 |----------|------|
 ||space character |
-|`|apostrophe |
+|`|grave accent |
 |(|opening parenthesis |
 |)|closing parenthesis |
 |'|single quotation mark |
