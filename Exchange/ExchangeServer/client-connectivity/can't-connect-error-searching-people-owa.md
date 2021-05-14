@@ -32,7 +32,7 @@ The default language and locale of Windows Server 2019 aren't US English. The Ad
 
 ## Resolution
 
-Install the language pack using the corresponding language .cab files from [Language Pack ISO for Windows 10](/windows-hardware/manufacture/desktop/add-language-packs-to-windows#get-language-resources-language-pack-iso-and-feature-on-demand-iso). For example, if you changed the language to French, you must add a French language pack.
+Install the language pack using the corresponding language .cab files from [Language Pack ISO for Windows Server](/windows-hardware/manufacture/desktop/add-language-packs-to-windows#get-language-resources-language-pack-iso-and-feature-on-demand-iso). For example, if you changed the language to French, you must add a French language pack.
 
 1. Open Command-Line as administrator and run these commands:
 
