@@ -103,7 +103,7 @@ These steps demonstrate the process of normalizing a fictitious student table.
 
    Note the multiple Class# values for each Student# value in the above table. Class# is not functionally dependent on Student# (primary key), so this relationship is not in second normal form.
 
-   The following three tables demonstrate second normal form:
+   The following tables demonstrate second normal form:
 
    Students:
 
