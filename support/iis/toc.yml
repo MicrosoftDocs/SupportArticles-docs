@@ -81,7 +81,7 @@
   - name: Design customization IIS log file field names
     href: customize-iis-log-file-field-names.md
   - name: Expression Web 4.0 FAQs
-    href: expression-web-faq.md
+    href: expression-web-faq.yml
   - name: IIS Express isn't supported in production environment
     href: express-not-supported-production-environment.md
   - name: Instances where HTTP.sys doesn't cache

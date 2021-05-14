@@ -15,7 +15,7 @@
   - name: Error at thread exit if FLS callback isn't freed
     href: fatal-error-thread-exit-fls-callback.md
   - name: FAQs about Standard C++ library
-    href: faq-standard-cpp-library.md
+    href: faq-standard-cpp-library.yml
   - name: Fscanf function doesn't read consecutive lines
     href: fscanf-does-not-read-consecutive-line.md
   - name: Mark MFC ActiveX controls safe
