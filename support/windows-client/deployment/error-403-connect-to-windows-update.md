@@ -30,14 +30,14 @@ When you try to access the Windows Update website, you receive the following err
 
 This issue occurs for any of the following reasons:
 
-- You are running personal firewall software or some other security, download assistant, or web accelerator software.
+- You're running personal firewall software or some other security, download assistant, or web accelerator software.
 - The Windows Update site control is missing or is damaged on your computer.
 - The Hosts file is damaged or contains incorrect information.
 - There are missing or damaged Internet Explorer files that display the script on the page.
 
 ## Resolution
 
-To resolve this issue, use one of the following procedures based on what's causing the issue. If you don't know what's causing the error message, use these resolutions in the order that they are listed. For example, if the first resolution doesn't solve the issue, continue to the next resolution.
+To resolve this issue, use one of the following procedures based on what's causing the issue. If you don't know what's causing the error message, use these resolutions in the order that they're listed. For example, if the first resolution doesn't solve the issue, continue to the next resolution.
 
 ### Disable security, download assistant, or web accelerator software
 
@@ -49,7 +49,7 @@ To resolve this issue, use one of the following procedures based on what's causi
    - Security software
    - Antivirus software
 
-2. Try to connect to the Windows Update site. To do this, go to Microsoft Update.
+2. Try to connect to the Windows Update site by going to Microsoft Update.
 
 3. If you still can't connect, try the next resolution.
 
@@ -70,7 +70,7 @@ For information about how to reset the Hosts file to the default Hosts file, see
 3. Click **Download** (on the right side of the page).
 4. Click **Save to Disk**, and then save the file to the default location.
 5. On your desktop, double-click the STE56en.exe icon (for Microsoft Windows 98, Microsoft Windows Millennium Edition, and Windows NT) or double-click the Scripten.exe icon (for Microsoft Windows 2000 and Windows XP).
-6. After the installation is complete, you can remove STE56en.exe or Scripten.exe file from your Desktop. To do this, right-click the icon, and then click **Delete**.
+6. After the installation is complete, you can remove STE56en.exe or Scripten.exe file from your Desktop. To do it, right-click the icon, and then click **Delete**.
 7. Restart your computer, and then go to the Windows Update website.
 
 > [!NOTE]
