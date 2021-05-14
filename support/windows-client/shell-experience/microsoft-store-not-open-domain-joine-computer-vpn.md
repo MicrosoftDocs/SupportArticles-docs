@@ -34,7 +34,7 @@ If you do one of the following operations, Microsoft Store opens as expected:
 
 The Microsoft Store app uses a security model that depends on network isolation. Specific network capabilities and boundaries must be enabled for the store app, and network access must be allowed for the app.
 
-When the Windows Firewall profile isn't **Public**, there's a default block rule that blocks all outgoing traffic that has the remote IP set as **0.0.0.0**. While the computer is connected to a VPN connection that has force tunneling enabled, the default gateway IP is set as **0.0.0.0**. Therefore, if the network access boundaries aren't set appropriately, the default block firewall rule is applied, and Microsoft Store app traffic is blocked.
+When the Windows Firewall profile isn't **Public**, a default block rule blocks all outgoing traffic that has the remote IP set as **0.0.0.0**. While the computer is connected to a VPN connection that has force tunneling enabled, the default gateway IP is set as **0.0.0.0**. If the network access boundaries aren't set appropriately, the default block firewall rule is applied, and Microsoft Store app traffic is blocked.
 
 ## Resolution
 
@@ -50,10 +50,10 @@ To fix this issue, follow these steps to create a Group Policy object (GPO):
 6. Double-click **Subnet definitions are authoritative**, select **Enabled**, and then select **OK**.
 7. Restart the client to make sure that the GPO takes effect.
 
-After the Group Policy is applied, the IP range that was added is the only private network range that is available for network isolation. Windows will now create a firewall rule that allows the traffic, and will override the previous outbound block rule with the new rule.
+After the Group Policy is applied, the added IP range is the only private network range that's available for network isolation. Windows will now create a firewall rule that allows the traffic, and will override the previous outbound block rule with the new rule.
 
 > [!NOTE]
-> 
+>
 >- When your VPN address pool range changes, you should change this GPO accordingly. Otherwise, the issue will recur.
 >- You can push the same GPOs from the DC to multiple computers.
 >- On the individual computers, you can check the following registry location to make sure that the GPO takes effect:
@@ -62,7 +62,7 @@ After the Group Policy is applied, the IP range that was added is the only priva
 
 ## More information
 
-You can use the "checknetisolation" built-in tool to check the network capabilities. When the computer is connected to the domain profile and VPN force tunneling, the internetclient and internetclientserver capabilities aren't active. For example:
+You can use the "checknetisolation" built-in tool to check the network capabilities. When the computer is connected to the domain profile and VPN force tunneling, the InternetClient and InternetClientServer capabilities aren't active. For example:
 
 ```console
 C:\Windows\system32>checknetisolation Debug -n=microsoft.windowsstore_8wekyb3d8bbwe
