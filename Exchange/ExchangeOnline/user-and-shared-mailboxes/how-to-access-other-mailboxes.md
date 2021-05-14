@@ -2,8 +2,8 @@
 title: Accessing other people's mailboxes
 description: Describes how to open other people's mailboxes in Microsoft 365.
 ms.date: 08/13/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -203,6 +203,13 @@ You may want to perform this procedure as if an administrator in your organizati
 After you perform these steps, the specified user will be able to access **all** user mailboxes in Microsoft 365. The user will be able to view the contents of the mailboxes from either Outlook or Outlook Web App.
 
 For more information, see [How to use Windows PowerShell to grant an admin access to all user mailboxes in Office 365](https://support.microsoft.com/help/2685435).
+
+To assign permissions to a user mailbox, run the following command:
+
+```powershell
+Add-MailboxPermission -Identity ayla@contoso.com -User Ed@contoso.com -AccessRights fullaccess -InheritanceType all
+```
+This example assigns the user Ed Full Access permission to Ayla's mailbox.
 
 ##### How do I access the mailbox
 
