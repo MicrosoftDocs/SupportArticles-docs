@@ -162,6 +162,8 @@
     href: console-not-open-with-sdk-service-error.md
   - name: The System Center Management service stops responding
     href: system-center-management-service-stops-responding.md
+  - name: Troubleshoot SQL Server Service Broker issues
+    href: troubleshoot-sql-server-service-broker-issues.md 
   - name: Use diagnostic tracing
     href: use-diagnostic-tracing.md
   - name: Web console login errors

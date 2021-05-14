@@ -63,7 +63,7 @@ The following list includes logs or consoles that are referenced in the subseque
 
   This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
 
-  Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
+  Related registry key: *HKLM\Software\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
   Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
