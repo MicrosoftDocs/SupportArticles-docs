@@ -2,8 +2,8 @@
 title: Accessing other people's mailboxes
 description: Describes how to open other people's mailboxes in Microsoft 365.
 ms.date: 08/13/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -74,17 +74,6 @@ Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook
 4. To assign permissions to delegates, select **Add**![Add icon](./media/how-to-access-other-mailboxes/add-icon.gif) under **Full Access** to display a page that lists all recipients in your Exchange organization that can be assigned the permission. Select the recipients you want, add them to the list, and then select **OK**. You can also search for a specific recipient by typing the recipient's name in the search box and then selecting **Search**![Search icon](./media/how-to-access-other-mailboxes/search-icon.gif). To remove a permission for a recipient, under the appropriate permission, select the recipient and then select **Remove**![Remove icon](./media/how-to-access-other-mailboxes/remove-icon.gif).
 
 5. Select **Save** to save your changes.
-
-### Use powershell to assign permisisons
-
-Connect to Exchange Online by using remote PowerShell. For info about how to do this, go to [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
-
-You need to be assigned Exchange or Global Admin permissions before you can run this cmdlet. This example assigns the user Kevin Kelly Full Access permission to Terry Adams's mailbox.
-
-```powershell
-Add-MailboxPermission -Identity "Terry Adams" -User "Kevin Kelly" -AccessRights FullAccess -InheritanceType All
-```
-
 
 ##### How do I access the mailbox
 
@@ -214,6 +203,13 @@ You may want to perform this procedure as if an administrator in your organizati
 After you perform these steps, the specified user will be able to access **all** user mailboxes in Microsoft 365. The user will be able to view the contents of the mailboxes from either Outlook or Outlook Web App.
 
 For more information, see [How to use Windows PowerShell to grant an admin access to all user mailboxes in Office 365](https://support.microsoft.com/help/2685435).
+
+To assign permissions to a user mailbox, run the following command:
+
+```powershell
+Add-MailboxPermission -Identity ayla@contoso.com -User Ed@contoso.com -AccessRights fullaccess -InheritanceType all
+```
+This example assigns the user Ed Full Access permission to Ayla's mailbox.
 
 ##### How do I access the mailbox
 
