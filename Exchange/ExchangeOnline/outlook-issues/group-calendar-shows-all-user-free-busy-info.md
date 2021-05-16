@@ -40,10 +40,7 @@ When you do this, the Office 365 modern group is treated as a distribution list,
 
 To resolve this issue, follow these steps to open the Office 365 modern group calendar:
 
-1. Open your Inbox folder, expand **Groups** in the folder list, and then select the modern group.
-2. Select **Calendar** on the ribbon.
-3. Right-click the calendar name in the navigation pane, and then select **Add to Favorites**.
-4. Close the modern group calendar window.
-5. Open the **Calendar** view in Outlook. You will find the modern group calendar listed under **My Calendars**, and the issue will not occur when you view the calendar.
+1. Open your **Outlook** , expand **All Group Calendars** , and then select the modern group.
+2. The issue will not occur when you view the calendar.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
