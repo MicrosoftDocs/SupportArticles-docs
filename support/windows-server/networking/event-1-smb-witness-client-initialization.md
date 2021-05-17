@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes Event ID 1 that occurs during the deployment of Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4483863
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround for an issue where a computer crashes with error code 0x113.
 
-_Original product version:_ &nbsp;Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp;2990029
 
 ## Symptoms  

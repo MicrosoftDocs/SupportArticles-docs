@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes the behavior of the **Remove this item if it is no longer applied** option in Group Policy preferences.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp;3060859
 
 ## Summary

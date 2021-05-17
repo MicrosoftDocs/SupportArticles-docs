@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article describes a problem that causes a stop error on Lenovo ThinkPad that has KB4568831 or a later update.
 
-_Original product version:_ &nbsp; Windows 10, version 2004  
+_Applies to:_ &nbsp; Windows 10, version 2004  
 _Original KB number:_ &nbsp; 4580649
 
 ## Symptoms

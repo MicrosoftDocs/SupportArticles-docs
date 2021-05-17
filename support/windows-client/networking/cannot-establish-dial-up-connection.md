@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article helps fix an issue where **Error 734: The PPP link control protocol was terminated** occurs when you try to establish a dial-up connection.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 318718
 
 ## Symptoms

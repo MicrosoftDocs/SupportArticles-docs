@@ -18,7 +18,7 @@ ms.technology: windows-client-performance
 
 This article describes an issue in which push-button reset fails because language resources are missing, and provides a workaround for the issue.
 
-_Original product version:_ &nbsp; Windows 10 Education, version 2004
+_Applies to:_ &nbsp; Windows 10 Education, version 2004
 
 ## Symptoms
 

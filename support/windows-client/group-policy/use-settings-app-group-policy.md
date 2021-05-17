@@ -15,7 +15,7 @@ ms.technology: windows-client-group-policy
 ---
 # Use the Settings app Group Policy in Windows 10
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4019502
 
 ## Overview

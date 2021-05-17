@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an error that occurs when you try to access a server locally by using its FQDN or its CNAME alias.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 926642
 
 > [!NOTE]

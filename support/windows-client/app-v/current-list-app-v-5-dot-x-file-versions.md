@@ -17,7 +17,7 @@ ms.technology: windows-client-application-virtualization-app-v
 
 This article provides current list of App-V 5.x file versions.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2940578
 
 ## Summary

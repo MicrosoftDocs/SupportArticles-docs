@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article describes how to consolidate print servers that run in a Microsoft Windows Server 2003 environment.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 870911
 
 ## Introduction

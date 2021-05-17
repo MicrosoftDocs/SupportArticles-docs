@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article provides help to solve an 0xCAA5001C error that occurs when you access Microsoft Store for Business on a Windows 10-based computer.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809, Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809, Windows 10, version 1709  
 _Original KB number:_ &nbsp; 3196528
 
 ## Symptoms

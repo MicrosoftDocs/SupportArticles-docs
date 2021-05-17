@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article describes an issue where the communications port (COM port) settings revert to the default when you restart the computer.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 293762
 
 ## Symptoms

@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 ---
 # "Unsupported etype" error when accessing a resource in a trusted domain
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4492348
 
 ## Symptoms

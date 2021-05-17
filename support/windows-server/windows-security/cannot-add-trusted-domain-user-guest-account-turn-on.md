@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article explains that when you try to add a trusted domain user to a trusting domain, you may receive an error message if the guest account on the trusted domain is turned on.
 
-_Original product version:_ &nbsp; Windows 10, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837328
 
 ## Symptoms

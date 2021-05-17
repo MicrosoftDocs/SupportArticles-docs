@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a solution to an issue where Command prompt and PowerShell don't open after in-place upgrade of Windows 10 S.
 
-_Original product version:_ &nbsp; Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4019568
 
 ## Symptom

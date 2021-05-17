@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article summarizes the available hotfixes and updates for issues that can occur in Terminal Services for Windows Server 2008 environments.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2312539
 
 ## Summary

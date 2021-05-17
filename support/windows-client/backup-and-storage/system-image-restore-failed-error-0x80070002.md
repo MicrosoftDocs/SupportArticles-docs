@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article describes a system image restore problem that occurs in Windows 8.1 when you try to recover from a backup that's stored on a partition on the system disk. A resolution is provided.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2989057
 
 ## Symptoms

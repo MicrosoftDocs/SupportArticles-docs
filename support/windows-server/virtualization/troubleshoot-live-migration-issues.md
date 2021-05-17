@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides information on solving the problem of live migration in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4558514
 
 ## Summary

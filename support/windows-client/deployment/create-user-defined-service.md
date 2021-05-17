@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides the steps to create a Windows NT user-defined service.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 137890
 
 > [!IMPORTANT]

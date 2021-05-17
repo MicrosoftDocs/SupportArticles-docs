@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article discusses an issue where Graphics Processing Unit (GPU) process memory counters show memory leaks for running applications and report incorrect values.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp;4490156
 
 ## Symptoms

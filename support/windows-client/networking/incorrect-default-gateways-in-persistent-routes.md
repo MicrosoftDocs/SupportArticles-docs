@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a solution to an issue where additional default gateways appear in persistent routes when you use Load Balancing and Failover (LBFO).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2966111
 
 ## Symptoms

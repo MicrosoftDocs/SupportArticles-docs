@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article provides a solution to an issue where you fail to set up Folder Redirection component of Group Policy and Event ID 1000 and 101 are logged.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 291087
 
 ## Symptoms

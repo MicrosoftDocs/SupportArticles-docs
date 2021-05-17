@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides a workaround for an issue that causes slow boot and services fail to start.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2004121
 
 ## Symptoms

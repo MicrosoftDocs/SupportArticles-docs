@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an error that occurs when MBAM tries to initialize TPM.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;2640178
 
 ## Symptoms

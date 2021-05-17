@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes how to deactivate or reactivate Terminal Services Licensing on a server that is running Microsoft Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814593
 
 ## Summary

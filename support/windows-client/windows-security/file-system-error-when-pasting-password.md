@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article provides help to fix a File system error that occurs when you paste password into a credential dialog box.
 
-_Original product version:_ &nbsp;Windows 10  
+_Applies to:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp;4092998
 
 ## Symptoms

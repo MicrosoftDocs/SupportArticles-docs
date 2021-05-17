@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides some suggested settings for the problem that occurs when a dial-on-demand link is activated by periodic WAN traffic.  
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 819108
 
 ## Summary

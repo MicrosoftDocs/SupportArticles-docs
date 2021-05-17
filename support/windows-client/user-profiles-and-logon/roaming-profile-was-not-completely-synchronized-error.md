@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article provides help to fix errors, and logon/logoff delays that occur when you use roaming user profiles in Windows 10, version 1803.
 
-_Original product version:_ &nbsp; Windows 10, version 1803  
+_Applies to:_ &nbsp; Windows 10, version 1803  
 _Original KB number:_ &nbsp; 4340390
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps fix an issue where Windows DNS registers duplicate server location (SRV) records for a domain controller if its computer name has uppercase letters.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4496901
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article helps administrators to diagnose and resolve the issue of slow file copy in your organization.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 10118
 
 ## Determine the cause of the issue

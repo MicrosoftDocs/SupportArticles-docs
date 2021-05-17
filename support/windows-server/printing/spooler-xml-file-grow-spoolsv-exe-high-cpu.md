@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article helps resolve an issue where you experience higher CPU utilization in the spoolsv.exe process and the spooler.xml file grows in size.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;960919
 
 ## Symptoms

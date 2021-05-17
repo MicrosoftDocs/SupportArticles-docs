@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to use or reference the system-supplied Usbser.sys driver file from a third-party modem .inf file.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 837637
 
 ## Summary

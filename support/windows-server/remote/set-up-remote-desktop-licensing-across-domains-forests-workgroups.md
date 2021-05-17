@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides information on the questions around the supportability (or recommended approach) of setting up Remote Desktop (RD) licensing across domain, forest, or work groups.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2473823
 
 > [!NOTE]

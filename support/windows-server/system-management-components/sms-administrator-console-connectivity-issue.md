@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article describes how to troubleshoot a new or an existing SMS Administrator console to determine why it cannot connect to the site server.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 317872
 
 ## Summary

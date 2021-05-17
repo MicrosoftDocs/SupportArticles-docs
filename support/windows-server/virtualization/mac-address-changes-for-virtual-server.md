@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to an issue where users in a different subnet are unable to connect to the virtual server after a failover from one cluster node to another.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;244331
 
 ## Symptoms

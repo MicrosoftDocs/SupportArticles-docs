@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to troubleshoot a problem where you are repeatedly offered the same update in Windows Update or Microsoft Update.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 910339
 
 ## Cause

@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an issue where you can't maximize a Remote Desktop Connection session window to full-screen when you use the [Mstsc](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753907(v=ws.10)) `/v` command.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 980876
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides a workaround for an issue where System Restore may fail with error code 0x8007045b.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3074925
 
 ## Symptoms

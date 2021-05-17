@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article helps fix an issue where applications crash or become unresponsive if another user logs off a Remote Desktop session.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2536487
 
 ## Symptoms

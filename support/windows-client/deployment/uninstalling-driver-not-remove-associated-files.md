@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides help to solve an issue where uninstalling a driver through device manager doesn't remove associated files or applications with that driver.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2278714
 
 ## Symptoms

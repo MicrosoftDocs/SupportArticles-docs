@@ -18,7 +18,7 @@ keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 
 This article describes the behavior that occurs when one node of a two-node, two-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## Symptoms
 

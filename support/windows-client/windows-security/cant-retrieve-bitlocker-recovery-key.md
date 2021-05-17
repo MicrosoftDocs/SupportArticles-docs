@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article provides a solution to an error that occurs when you try to open MBAM 2.0 Self Service Portal web page to retrieve BitLocker Recovery Key.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2870849
 
 ## Symptoms

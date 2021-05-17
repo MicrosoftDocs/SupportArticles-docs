@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a workaround for an issue where changes to Group Policy object permissions that's controlled in Advanced Group Policy Management (AGPM) aren't saved as expected.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3174540
 
 ## Symptoms

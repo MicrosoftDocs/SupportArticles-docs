@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes Event ID 10317 that's logged when you turn on a mobile broadband device or resume it from sleep.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2981681
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article discusses that a change in the DHCP Domain Name System (DNS) update behavior may delay DNS registrations and provides help to solve this issue.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3069564
 
 ## Symptoms

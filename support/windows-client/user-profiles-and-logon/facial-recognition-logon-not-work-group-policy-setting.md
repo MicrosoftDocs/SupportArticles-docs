@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article describes an issue that prevents you from logging on by using facial recognition. This issue is caused by a conflicting Group Policy setting (using facial recognition to unlock the device continues to work with the conflicting policy setting).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3169080
 
 ## Introduction

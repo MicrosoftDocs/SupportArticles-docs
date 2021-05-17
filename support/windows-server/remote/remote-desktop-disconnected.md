@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article helps you understand the most common settings that affect establishing a Terminal Services session in an enterprise environment.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 2477023
 
 ## Terminal Server

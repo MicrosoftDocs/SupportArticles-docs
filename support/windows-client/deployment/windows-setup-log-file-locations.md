@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes where to locate these log files and which log files are most useful for troubleshooting each setup phase of Windows 7, of Windows Server 2008 R2, and of Windows Vista.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 927521
 
 ## Introduction

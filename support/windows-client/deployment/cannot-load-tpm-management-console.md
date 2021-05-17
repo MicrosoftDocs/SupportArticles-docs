@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides solutions to fix an error that occurs when you try to run the TPM Management console in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4026023
 
 ## Symptoms

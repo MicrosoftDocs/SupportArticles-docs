@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides help to solve an issue where the process fails when you try to shut down or hibernate the system on a computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3211190
 
 ## Symptoms

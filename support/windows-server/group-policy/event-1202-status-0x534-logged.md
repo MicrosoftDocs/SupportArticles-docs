@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to an event logged on domain controllers after modifying security policy.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000705
 
 ## Symptoms

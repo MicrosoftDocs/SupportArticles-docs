@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses an issue where Windows updates might not be installed with the Fast Startup feature in Windows 10 after you shut down your computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4011287
 
 ## Summary

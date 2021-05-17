@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses an issue that occurs when you remove or update a provisioned Microsoft Store app by using the Microsoft Store and then running sysprep on the computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2769827
 
 ## Introduction

@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes the issue that some programs may stop working, when you toggle Terminal Services to Application Server mode.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 252330
 
 > [!note]

@@ -17,7 +17,7 @@ ms.technology: windows-client-user-experience-virtualization-ue-v
 
 This article describes UE-V registry settings.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2770042
 
 ## Summary

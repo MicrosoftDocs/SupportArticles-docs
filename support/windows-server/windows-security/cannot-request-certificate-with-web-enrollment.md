@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides solutions to an issue where you fail to request a certificate by using web enrollment.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2885758
 
 ## Symptoms

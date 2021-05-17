@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article provides a workaround for the issue of high CPU usage by WmiPrvSE.exe process at regular intervals.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
 _Original KB number:_ &nbsp; 4483874
 
 ## Symptoms

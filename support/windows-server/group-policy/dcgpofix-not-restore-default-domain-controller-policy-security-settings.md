@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article explains that the Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to the same state that they were in after successfully completing Dcpromo and that it's best to use this tool only in disaster recovery scenario.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;833783
 
 ## Symptoms

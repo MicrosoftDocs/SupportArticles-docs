@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how to mark an attribute as confidential in Windows Server 2003 Service Pack 1.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 922836
 
 ## Summary

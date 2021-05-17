@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article helps fix the error code 0x80290300 that occurs when you try to clear the TPM information.
 
-_Original product version:_ &nbsp;Window 10 – all editions  
+_Applies to:_ &nbsp; Window 10 – all editions  
 _Original KB number:_ &nbsp;2561178
 
 ## Symptoms

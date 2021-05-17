@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to mouse and screen resolution issues when managing a virtual machine by using the Hyper-V Manager Console.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2413735
 
 ## Symptoms

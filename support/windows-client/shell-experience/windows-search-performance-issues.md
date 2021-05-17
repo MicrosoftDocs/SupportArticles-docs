@@ -18,7 +18,7 @@ adobe-target: true
 
 This article provides guidelines for troubleshooting poor Windows Search performance.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4558579
 
 ## Summary

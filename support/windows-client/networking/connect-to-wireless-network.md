@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how to connect to a wireless network.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 928429
 
 >[!NOTE]

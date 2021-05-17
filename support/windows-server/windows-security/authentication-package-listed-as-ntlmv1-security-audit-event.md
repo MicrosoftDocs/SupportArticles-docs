@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article discusses an issue where the authentication was actually using NTLMv2 but reporting NTLMv1 in the event log.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2701704
 
 ## Summary

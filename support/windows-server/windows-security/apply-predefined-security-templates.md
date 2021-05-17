@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This step-by-step article describes how to apply predefined security templates.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816585
 
 ## Summary

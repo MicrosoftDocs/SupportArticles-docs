@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article lists the available hotfixes and updates for issues that occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2601888
 
 ## Summary

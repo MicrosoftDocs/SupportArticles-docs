@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes how to troubleshoot the "NTLDR is missing" error message.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 318728
 
 >[!NOTE]

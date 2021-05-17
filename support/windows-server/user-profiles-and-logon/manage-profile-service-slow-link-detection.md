@@ -19,7 +19,7 @@ keywords: ProfSvc
 
 This article describes how to optimize slow link detection to effectively balance the quality of the bandwidth estimate against the amount of time spent calculating the estimate.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8
 
 ## Summary
 

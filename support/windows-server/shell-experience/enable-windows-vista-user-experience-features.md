@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article describes how to configure the user experience features that are available in Windows Vista on a computer that is running Windows Server 2008.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947036
 
 ## Introduction
