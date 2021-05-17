@@ -1,6 +1,6 @@
 ---
 title: Listing some issues for Office products
-description: This article lists Office related issues.
+description: Lists Office client related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro

@@ -46,7 +46,7 @@ appliesto:
 >
 > - If you use Azure Multi-Factor Authentication, contact your administrator for help.
 > - For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](/azure/active-directory/user-help/multi-factor-authentication-end-user-signin).
-> - To reset your password, see [Reset my Office 365 tenant admin password](/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password).
+> - To reset your password, see [Reset my Office 365 tenant admin password](/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password&preserve-view=true).
 
 When you start a Microsoft Office 2016 or Office 2013 application, such as Outlook, Word, Excel, or PowerPoint, you may receive the following error message:
 
