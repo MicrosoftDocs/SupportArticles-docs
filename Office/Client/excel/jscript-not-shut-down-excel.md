@@ -60,7 +60,7 @@ function Cleanup() {
 
 Notice that the CollectGarbage method isn't called directly after Excel's Quit method. You need to give JScript a small amount of time before calling CollectGarbage. A timer is used in this example to show how to wait briefly before forcing garbage collection.
 
-Another workaround is to use VBScript for Automation of Microsoft Excel. Unlike JScript, VBScript isn't a garbage collecting language. Therefore, references are released when you set the variables to Nothing. Using VBScript, Excel shuts down immediately after calling the Quit method and releasing the variables. For more information, see the [References](##references) section.
+Another workaround is to use VBScript for Automation of Microsoft Excel. Unlike JScript, VBScript isn't a garbage collecting language. Therefore, references are released when you set the variables to Nothing. Using VBScript, Excel shuts down immediately after calling the Quit method and releasing the variables. For more information, see the [References](#references) section.
 
 > [!NOTE]
 > The undocumented CollectGarbage method isn't part of the ECMA-262 specification, and may not be available in future versions of the scripting engine. When you force the garbage collector to run by calling CollectGarbage, this may also negatively impact performance.
