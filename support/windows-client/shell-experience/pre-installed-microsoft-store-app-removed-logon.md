@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a workaround for the issue in which a pre-installed Microsoft Store App is unexpectedly removed the first time that a user logs on.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4543142
 
 ## Symptoms

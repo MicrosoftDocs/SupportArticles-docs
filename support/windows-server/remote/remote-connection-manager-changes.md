@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes Remote Connection Manager (RCM) and the changes to RCM in Microsoft Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 3200967
 
 ## Changes to RCM

@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides solutions to an issue where the mapped drive may be disconnected if you map a drive to a network share.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 297684
 
 ## Symptoms

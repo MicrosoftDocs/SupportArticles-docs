@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article helps fix the error 0x8004100E that occurs when Microsoft BitLocker Administration and Monitoring (MBAM) client fails.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2756402
 
 ## Symptoms

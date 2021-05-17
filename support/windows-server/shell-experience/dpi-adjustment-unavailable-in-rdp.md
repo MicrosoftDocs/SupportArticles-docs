@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article describes a technique to make user-interface and font-size adjustments available to users that connect remotely to a Remote Desktop server.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2544872
 
 ## Summary

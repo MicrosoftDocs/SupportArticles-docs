@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to analyze the log files that the Microsoft Windows Resource Checker (SFC.exe) program generates in Windows Vista.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 928228
 
 > [!NOTE]

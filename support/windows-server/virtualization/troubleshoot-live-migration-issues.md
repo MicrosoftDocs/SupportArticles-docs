@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides information on solving the problem of live migration in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4558514
 
 ## Summary
@@ -214,8 +214,8 @@ Get-ClusterNetwork
 
 For more information, see the following websites:
 
-- [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728%28v=ws.11%29)  
-- [Simplified SMB Multichannel and Multi-NIC Cluster Networks](https://docs.microsoft.com/windows-server/failover-clustering/smb-multichannel)  
+- [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728%28v=ws.11%29)  
+- [Simplified SMB Multichannel and Multi-NIC Cluster Networks](/windows-server/failover-clustering/smb-multichannel)  
 - [A live migration of a virtual machine by using Virtual Machine Manager fails with error 0x8007274D](https://support.microsoft.com/help/2853203)  
 
 #### Live migration failed because the hardware on the destination computer isn't compatible with the hardware requirements of this virtual machine
@@ -258,7 +258,7 @@ Here's how to fix this issue:
 
 1. Check if the processor compatibility is flagged. Open the **Hyper-V Manager** console, select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
 2. Make sure the BIOS of the host has the same settings.
-3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. For more information, see [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](https://docs.microsoft.com/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms).
+3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. For more information, see [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms).
 4. Run the [Get-SpeculationControlSettings](https://support.microsoft.com/help/4074629) cmdlet and check the results. It should be the same on all nodes.  
 
 #### Live migration failed because "Virtual Machine Name" failed at migration source "Source Host Name"
@@ -505,7 +505,7 @@ The message comes from a lower performance network when you try the live migrati
 
 Make sure there's enough bandwidth available for the live migration.  
 
-Try to reduce the memory during the live migration. For more information, see [Virtual Machine Live Migration Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831435%28v=ws.11%29?redirectedfrom=MSDN).  
+Try to reduce the memory during the live migration. For more information, see [Virtual Machine Live Migration Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831435%28v=ws.11%29?redirectedfrom=MSDN).  
 
 ## Event ID 21024
 

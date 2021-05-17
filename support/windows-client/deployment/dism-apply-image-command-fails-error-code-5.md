@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a workaround for an issue where `DISM /Apply-Image` command fails with error code 5 (ERROR_ACCESS_DENIED).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3179598
 
 ## Symptoms

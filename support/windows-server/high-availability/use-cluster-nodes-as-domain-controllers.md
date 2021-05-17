@@ -71,7 +71,7 @@ For more information, click the following article numbers to view the articles i
 
 [223787](https://support.microsoft.com/help/223787) Flexible single master operation transfer and seizure process  
 
-[197132](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles) Windows 2000 Active Directory FSMO roles  
+[197132](/troubleshoot/windows-server/identity/fsmo-roles) Windows 2000 Active Directory FSMO roles  
 
 [223346](https://support.microsoft.com/help/223346) FSMO placement and optimization on Windows 2000 domain controllers  
 

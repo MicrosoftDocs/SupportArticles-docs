@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article describes how to enable and use the Run as feature in Microsoft Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325859
 
 ## Summary

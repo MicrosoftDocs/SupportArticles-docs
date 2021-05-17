@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article fixes an issue where event ID 1056 is logged after you install the DHCP Server service on a Windows Server 2003 domain controller.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 282001
 
 ## Symptoms

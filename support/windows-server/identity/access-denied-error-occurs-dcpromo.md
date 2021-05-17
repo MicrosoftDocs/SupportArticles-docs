@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an Access is denied error that occurs with DCPROMO (Domain Controller Promoter).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2002413
 
 ## Symptoms

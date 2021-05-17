@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue where the Open, Print, and Edit items are missing from the context menu when you select multiple items in Windows Explorer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2022295
 
 ## Symptoms

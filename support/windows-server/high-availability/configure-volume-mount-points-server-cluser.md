@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes how to create volume mount points on a server cluster by using the NTFS volume mount points functionality.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947021
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides the steps for fixing the issue that some .CHM files do not render properly.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2021383
 
 ## Symptoms

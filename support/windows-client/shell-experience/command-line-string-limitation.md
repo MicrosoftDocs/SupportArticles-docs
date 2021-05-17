@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article discusses the limitation to the length of the strings that you use from the command prompt in Command Prompt (Cmd.exe). It also provides methods that you can use to work around this limitation.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 830473
 
 ## More information

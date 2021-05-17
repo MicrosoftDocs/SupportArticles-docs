@@ -17,7 +17,7 @@ ms.technology: windows-client-user-experience-virtualization-ue-v
 
 This article provides the steps to troubleshoot replication issues with Microsoft User Experience Virtualization (UE-V).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2844022
 
 ## Summary

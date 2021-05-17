@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a workaround for an issue where the Sysprep and Capture task sequence fails when it tries to capture Windows images.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2797676
 
 ## Symptoms

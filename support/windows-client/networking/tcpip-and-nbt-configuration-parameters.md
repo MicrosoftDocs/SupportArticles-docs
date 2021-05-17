@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article defines all the registry parameters that are used to configure the protocol driver, Tcpip.sys. Tcpip.sys implements the standard TCP/IP network protocols.
 
-_Original product version:_ &nbsp; Windows XP  
+_Applies to:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 314053
 
 ## Introduction

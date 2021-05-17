@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article helps fix a slow network performance issue that can occur when you open a file that is located in a shared folder on a remote network computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 829700
 
 ## Symptoms

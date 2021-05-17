@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to best install and remove service packs and hotfix updates on Windows-based computers that are running in Safe mode.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 818460
 
 ## Summary

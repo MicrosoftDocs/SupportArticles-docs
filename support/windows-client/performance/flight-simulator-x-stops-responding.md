@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a solution to an issue where Microsoft Flight Simulator X stops responding on the loading screen.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 975084
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error. This error message may be displayed when a single-bit error occurs in the  Electric Service Provider (ESP) register of a processor that is running on the computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 842465
 
 ## Symptoms

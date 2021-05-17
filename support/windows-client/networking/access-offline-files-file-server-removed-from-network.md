@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes an issue where you can still access offline files even though the file server is removed from the network.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 942974
 
 ## Symptoms

@@ -25,7 +25,7 @@ summary: |
   - Installing ESU
   - Maintaining ongoing ESU compliance
   
-  _Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+  _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
   _Original KB number:_ &nbsp; 4547184
   
 
@@ -400,7 +400,7 @@ sections:
           - To turn on the WMI service, select **Start** > **Services**, and right-click **Windows Management Instrumentation**. Then select **Restart​**.
           - To configure Windows Firewall, follow the instructions in [Configure Client Computers](/windows/deployment/volume-activation/configure-client-computers-vamt).
           
-          For more information about how to install the VAMT tool and configure client computers, see [Install and Configure VAMT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
+          For more information about how to install the VAMT tool and configure client computers, see [Install and Configure VAMT](/windows/deployment/volume-activation/install-configure-vamt).
           
           ### Error: Access is denied
 
@@ -474,7 +474,7 @@ sections:
           
           > Download and Install Updates
           Some updates were not installed
-          For information about other error codes, refer to the [Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-error-reference) error reference.
+          For information about other error codes, refer to the [Windows Update](/windows/deployment/update/windows-update-error-reference) error reference.
           
           #### Possible causes
 

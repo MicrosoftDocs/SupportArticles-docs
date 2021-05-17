@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article helps to fix the error where we are unable to access the security log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751670
 
 ## Symptoms

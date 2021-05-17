@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses issues that occur when Windows 8 is improperly identified as a Windows To Go installation.
 
-_Original product version:_ &nbsp;Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp;2778881
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes the parameters for the Process Control service components.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 296930
 
 ## Summary

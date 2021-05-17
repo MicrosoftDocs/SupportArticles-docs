@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes procedures that you can use to troubleshoot startup problems in Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325375
 
 > [!NOTE]

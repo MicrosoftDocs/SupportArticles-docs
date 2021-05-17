@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides help to solve the Event ID 8 logged in the Application log.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 317541
 
 ## Symptoms

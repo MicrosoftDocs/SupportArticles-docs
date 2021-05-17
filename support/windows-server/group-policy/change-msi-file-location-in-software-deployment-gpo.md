@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to change the MSI file location in the Software Deployment GPO and set the multiple UNC paths for the same MSI package.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2395088
 
 ## Summary

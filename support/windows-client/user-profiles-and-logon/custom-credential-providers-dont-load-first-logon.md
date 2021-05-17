@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article provides a workaround for an issue where custom credential providers do not work when you first log on.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4073719
 
 ## Symptom

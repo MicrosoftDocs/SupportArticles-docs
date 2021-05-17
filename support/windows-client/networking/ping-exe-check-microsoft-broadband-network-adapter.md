@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides some information about checking your Microsoft Broadband Network Adapter with Ping.exe.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 814155
 
 ## Summary

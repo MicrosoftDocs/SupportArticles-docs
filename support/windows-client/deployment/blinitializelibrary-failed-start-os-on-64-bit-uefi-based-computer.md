@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a workaround for an issue where an error (BlInitializeLibrary failed XXX) occurs when you install or start an operating system on a 64-bit UEFI-based computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4020050
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article provides a workaround for the issue of high CPU usage by WmiPrvSE.exe process at regular intervals.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
 _Original KB number:_ &nbsp; 4483874
 
 ## Symptoms
@@ -44,7 +44,7 @@ This issue can be caused by either of the following factors.
 
 ### One or more processes are using a high number of handles  
 
-All the handles are stored in the kernel structure \BaseNamedObjects. The [WMIPerfClass provider](https://docs.microsoft.com/windows/win32/wmisdk/wmiperfclass-provider) must scan this structure when creating the performance class that is related to the Job objects.
+All the handles are stored in the kernel structure \BaseNamedObjects. The [WMIPerfClass provider](/windows/win32/wmisdk/wmiperfclass-provider) must scan this structure when creating the performance class that is related to the Job objects.
 
 If this structure is bloated because of the high number of handles, the operation will have high CPU usage and will take longer than normal.
 
@@ -101,7 +101,7 @@ As a workaround, you can also disable the monitoring application to prevent the 
 
 ## More information
 
-WMI provides several performance classes. For more information, see [Performance Counter Classes](https://docs.microsoft.com/windows/win32/cimwin32prov/performance-counter-classes).
+WMI provides several performance classes. For more information, see [Performance Counter Classes](/windows/win32/cimwin32prov/performance-counter-classes).
 
 These classes are created dynamically based on the Performance Counters that are available on the system. All the classes are created at the same time, not only the classes that are being queried.
 

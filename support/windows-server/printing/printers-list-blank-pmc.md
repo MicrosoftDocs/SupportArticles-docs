@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article provides a solution to an issue that the list of printers will be blank when you view the printers on a remote server through the Print Management Console (PMC).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2253813
 
 ## Symptoms

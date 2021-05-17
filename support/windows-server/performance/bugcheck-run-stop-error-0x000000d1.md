@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article discusses an issue where Windows Server runs a bugcheck and you receive Stop error 0x000000D1 when you enable a storage controller.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2916984
 
 ## Symptoms

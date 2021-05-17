@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to an issue where Dynamic Memory allocation in a virtual machine does not change, although there is available memory on the host.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2504962
 
 ## Symptoms

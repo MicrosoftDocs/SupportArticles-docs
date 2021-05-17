@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue where the list of available modes is different than the list displayed in Windows 7 when you use multiple displays in "Duplicate" mode in Windows 8.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2813712
 
 ## Symptoms

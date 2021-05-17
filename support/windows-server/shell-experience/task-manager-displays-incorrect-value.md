@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article provides a solution to an issue where task manager may display incorrect value for L2/L3 cache.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4557856
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article provides a solution to an issue where the **Add/Remove Programs** tool in Control Panel displays installed programs incorrectly.
 
-_Original product version:_ &nbsp; Windows XP  
+_Applies to:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 266668
 
 ## Symptoms

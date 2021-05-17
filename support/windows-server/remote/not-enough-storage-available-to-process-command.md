@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an error that occurs when a new user connects to the server through Remote Desktop Protocol (RDP).
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2877056
 
 ## Symptoms

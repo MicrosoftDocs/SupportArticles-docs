@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a resolution for an issue that occurs on a Windows-based computer when you try to access a mapped web share.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 941050
 
 ## Symptoms

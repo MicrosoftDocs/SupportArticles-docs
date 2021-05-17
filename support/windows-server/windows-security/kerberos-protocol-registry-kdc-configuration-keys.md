@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes registry entries about Kerberos version 5 authentication protocol and Key Distribution Center (KDC) configuration.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837361
 
 ## Summary

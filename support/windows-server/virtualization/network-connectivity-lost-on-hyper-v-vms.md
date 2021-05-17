@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to an issue where network connections on Guest VM that use VLAN are lost if Virtual Machine Queue (VMQ) is enabled on the HOST network and disabled on virtual networks.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2681638
 
 ## Symptoms

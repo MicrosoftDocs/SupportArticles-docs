@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a solution to an issue where the validation may fail when you run a cluster validation wizard for Windows Server-based Failover Cluster.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2839292
 
 ## Symptoms

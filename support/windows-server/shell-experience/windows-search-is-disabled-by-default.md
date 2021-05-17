@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article provides the steps to re-enable the Windows Search service in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 3204979
 
 ## Symptoms

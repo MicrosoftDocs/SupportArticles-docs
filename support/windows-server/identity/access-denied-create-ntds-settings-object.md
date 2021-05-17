@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to fix an error (Access is denied) that occurs when you promote new Windows Server 2012 R2 domain controllers in an existing domain.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;3207962
 
 ## Symptoms

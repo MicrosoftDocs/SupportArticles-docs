@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article provides a resolution to make sure you can configure a PIN when Convenience PIN and Hello for Business policies are enabled in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3201940
 
 ## Symptoms

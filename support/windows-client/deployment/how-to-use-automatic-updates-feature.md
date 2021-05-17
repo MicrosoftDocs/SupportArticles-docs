@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article explains how to use the Automatic Updates feature in Windows Server 2003, in Windows XP, and in Windows 2000.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 327838
 
 ## Summary

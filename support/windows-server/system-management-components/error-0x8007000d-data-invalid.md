@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article provides the resolution for the error message "0x8007000d: The data is invalid" when you run an old scheduled task or newly created scheduled task on a domain controller.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 958837
 
 ## Symptoms

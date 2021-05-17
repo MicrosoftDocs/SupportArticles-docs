@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps to resolve the issue where you get Event ID 1925 with the error message that DNS lookup failed, inbound replication of a directory partition has failed on the destination domain controller.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469659
 
 This problem typically occurs when an attempt to establish a replication link fails as a result of a Domain Name System (DNS) lookup problem. If you receive Event ID 1925 with the error message that DNS lookup failed, inbound replication of a directory partition has failed on the destination domain controller, and you must fix the DNS problem.

@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes how to check a memory dump file by using Dumpchk.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 156280
 
 > [!NOTE]

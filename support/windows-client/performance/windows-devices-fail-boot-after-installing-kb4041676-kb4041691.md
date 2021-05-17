@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides workarounds for the issue where Windows devices may fail to boot after installing October 10 version of KB4041676 or KB4041691.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows 10, version 1607, Windows 10, version 1703  
+_Applies to:_ &nbsp; Windows Server 2016, Windows 10, version 1607, Windows 10, version 1703  
 _Original KB number:_ &nbsp; 4049094
 
 ## Overview

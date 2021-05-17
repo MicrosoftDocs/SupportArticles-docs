@@ -17,7 +17,7 @@ ms.technology: windows-client-application-virtualization-app-v
 
 This article describes how to remove a cached copy of an unpublished package in Microsoft App-V v5.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2768945
 
 ## Summary

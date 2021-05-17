@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article describes the policies specific to managing printers and how to use Group Policy settings to manage printers in Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 234270
 
 ## Summary

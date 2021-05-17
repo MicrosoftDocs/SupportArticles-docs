@@ -15,7 +15,7 @@ ms.technology: windows-client-security
 ---
 # Suspend BitLocker protection for non-Microsoft software updates
 
-_Original product version:_ &nbsp; Windows 10
+_Applies to:_ &nbsp; Windows 10
 
 You must temporarily disable BitLocker protection by using the **Suspend protection** feature for non-Microsoft software updates such as:
 

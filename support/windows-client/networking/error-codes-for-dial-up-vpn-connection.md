@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article lists the error codes that you may receive when you make a dial-up connection or a VPN connection.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 824864
 
 > [!NOTE]

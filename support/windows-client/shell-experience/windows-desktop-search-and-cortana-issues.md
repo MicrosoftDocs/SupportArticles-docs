@@ -20,7 +20,7 @@ This article describes the known issues that may occur when you use Windows Desk
 > [!NOTE]
 > Home users: This article is intended for use by support agents and IT professionals. If you're looking for more information about website error messages, please see the following Windows website: [Search for anything, anywhere](https://support.microsoft.com/help/17190)
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3206883
 
 ## Known issues

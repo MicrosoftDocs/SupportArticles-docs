@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article provides a resolution to solve the WMI-Activity event ID 5858 that's logged with ResultCode = 0x80041032 in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3124914
 
 ## Symptoms

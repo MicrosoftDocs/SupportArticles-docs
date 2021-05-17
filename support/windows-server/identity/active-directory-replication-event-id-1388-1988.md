@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps you troubleshoot Active Directory replication Event ID 1388 and 1988.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469619
 
 ## Summary
