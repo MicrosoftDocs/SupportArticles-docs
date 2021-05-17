@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article helps to fix an issue in which RemoteFX USB redirected scanner can't open.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3125295
 
 ## Symptoms

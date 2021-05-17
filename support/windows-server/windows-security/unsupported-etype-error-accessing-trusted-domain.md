@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 ---
 # "Unsupported etype" error when accessing a resource in a trusted domain
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4492348
 
 ## Symptoms
@@ -103,13 +103,13 @@ ksetup /setenctypeattr contoso.com RC4-HMAC-MD5 AES128-CTS-HMAC-SHA1-96 AES256-C
 
 After this command finishes, a `contoso.com` DC can build referral tickets for any clients in `contoso.com` that cannot use RC4 encryption but must use resources in `child.contoso.com`.  
 
-For more information about the ksetup tool, see [ksetup](https://docs.microsoft.com/windows-server/administration/windows-commands/ksetup).
+For more information about the ksetup tool, see [ksetup](/windows-server/administration/windows-commands/ksetup).
 
 ### Method 2: Configure the client to support RC4 encryption in addition to AES128 and AES256 encryption
 
 This method involves changing the configuration of the client instead of the trust. You can change the configuration of a single client, or use Group Policy to change the configuration of multiple clients in a domain. However, the main drawback to this configuration change is that if you disabled RC4 encryption in order to improve security, rolling back that change may not be possible.  
 
-For complete instructions to change the encryption types that clients can use, see [Windows Configurations for Kerberos Supported Encryption Type](https://docs.microsoft.com/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type).
+For complete instructions to change the encryption types that clients can use, see [Windows Configurations for Kerberos Supported Encryption Type](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type).
 
 ### Method 3: Configure the trust to support AES128 and AES 256 encryption instead of RC4 encryption
 
@@ -140,13 +140,13 @@ To use this method, follow these steps:
 
 For more information about TDOs, see the following articles:  
 
-- [Primary and Trusted domains](https://docs.microsoft.com/windows/win32/secmgmt/primary-and-trusted-domains)  
-- [Trust Properties - General Tab](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd145414%28v=ws.11%29)  
-- [Essential Attributes of a Trusted Domain Object](https://docs.microsoft.com/openspecs/windows_protocols/ms-adts/c9efe39c-f5f9-43e9-9479-941c20d0e590)  
+- [Primary and Trusted domains](/windows/win32/secmgmt/primary-and-trusted-domains)  
+- [Trust Properties - General Tab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd145414%28v=ws.11%29)  
+- [Essential Attributes of a Trusted Domain Object](/openspecs/windows_protocols/ms-adts/c9efe39c-f5f9-43e9-9479-941c20d0e590)  
 
 For more information about Kerberos encryption types, see the following articles:  
 
-- [Windows Configurations for Kerberos Supported Encryption Type](https://docs.microsoft.com/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type)  
+- [Windows Configurations for Kerberos Supported Encryption Type](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type)  
 - [Kerberos Parameters](https://www.iana.org/assignments/kerberos-parameters/kerberos-parameters.xml)  
-- [Ksetup:setenctypeattr](https://docs.microsoft.com/windows-server/administration/windows-commands/ksetup-setenctypeattr)  
+- [Ksetup:setenctypeattr](/windows-server/administration/windows-commands/ksetup-setenctypeattr)  
 - [The RC4 Removal Files Part 2: In AES We Trust](https://techcommunity.microsoft.com/t5/premier-field-engineering/the-rc4-removal-files-part-2-in-aes-we-trust/ba-p/1029439?search-action-id=202020616032&search-result-uid=1029439)  

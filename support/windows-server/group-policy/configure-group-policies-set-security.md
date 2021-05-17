@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to configure Group Policies to Set Security for System Services.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324802
 
 ## Summary

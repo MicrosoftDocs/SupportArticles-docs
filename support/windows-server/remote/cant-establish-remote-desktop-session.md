@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an error that occurs when you try to connect to the Terminal service running on one of the affected products.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555382
 
 ## Symptoms

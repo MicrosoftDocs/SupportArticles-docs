@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article helps fix an issue where applications crash or become unresponsive if another user logs off a Remote Desktop session.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2536487
 
 ## Symptoms
@@ -59,7 +59,7 @@ To work around this issue, use one of the following methods:
 - Use WebDAV shares instead of mapped folders if remote binary sharing is required.
 - Compile the application by using the **Swap run from network** linker setting:
   - This setting is described here: [https://msdn.microsoft.com/library/chzz5ts6(v=vs.71).aspx](https://msdn.microsoft.com/library/chzz5ts6(v=vs.71).aspx)
-- If the application is a managed app, use the [Shadow Copy feature](https://docs.microsoft.com/windows/win32/vss/shadow-copies-and-shadow-copy-sets).
+- If the application is a managed app, use the [Shadow Copy feature](/windows/win32/vss/shadow-copies-and-shadow-copy-sets).
 
 > [!NOTE]
 > We don't recommend that you run binaries remotely. In situations such as this, we recommend that you use the first workaround.

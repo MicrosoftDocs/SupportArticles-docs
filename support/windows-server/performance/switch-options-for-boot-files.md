@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes the switch options that you can use to modify Windows startup.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 833721
 
 ## Summary

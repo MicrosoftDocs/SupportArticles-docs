@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a workaround to the issue in which F5 doesn't refresh Explorer in Windows PE of Windows 10 Creators Update.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4033241
 
 ## Symptoms

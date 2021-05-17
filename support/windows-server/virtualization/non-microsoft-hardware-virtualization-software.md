@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article lists some vendors that have partnered with Microsoft to provide support for virtualized software.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 944987
 
 ## Summary

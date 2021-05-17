@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article helps fix the error 1783 that occurs when you open Services.msc.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028588
 
 ## Symptoms

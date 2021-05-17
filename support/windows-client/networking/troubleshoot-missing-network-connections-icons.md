@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 825826
 
 ## Introduction

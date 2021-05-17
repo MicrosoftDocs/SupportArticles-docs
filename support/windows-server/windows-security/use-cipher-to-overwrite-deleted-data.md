@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how to use Cipher.exe to overwrite deleted data in Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814599
 
 ## Summary

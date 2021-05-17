@@ -15,7 +15,7 @@ ms.technology: windows-client-networking
 ---
 # Can't access shared folders from File Explorer in Windows 10
 
-_Original product version:_ &nbsp;Windows 10
+_Applies to:_ &nbsp; Windows 10
 
 ## General troubleshooting
 

@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 No matter how good you are about keeping your computer clean and up-to-date, they tend to slow down after time. Fortunately, there are a lot of ways to help speed them up― without upgrading your hardware.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3064207
 
 > [!NOTE]

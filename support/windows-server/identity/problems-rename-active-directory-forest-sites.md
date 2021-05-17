@@ -51,4 +51,4 @@ Because of the different time intervals that are used to update site-related inf
 
     For more information about DFS, visit the following Microsoft Web site:
 
-    [Distributed File System](https://docs.microsoft.com/windows/win32/dfs/distributed-file-system)
+    [Distributed File System](/windows/win32/dfs/distributed-file-system)

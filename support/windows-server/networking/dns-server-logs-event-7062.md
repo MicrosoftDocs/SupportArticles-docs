@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to solve the DNS server logs event 7062.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 218814
 
 ## Symptoms

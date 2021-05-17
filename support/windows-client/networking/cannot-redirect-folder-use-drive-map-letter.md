@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article fixes an issue in which folder redirection fails to apply when redirected to mapped drive letter instead of UNC path.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2859465
 
 ## Symptoms

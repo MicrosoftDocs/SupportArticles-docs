@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides some information about saving and restoring existing Windows shares.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 125996
 
 ## Summary

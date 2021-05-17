@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article helps fix an issue where you can't start a Microsoft Store App if the default registry or file permissions is modified.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2798317
 
 > [!NOTE]

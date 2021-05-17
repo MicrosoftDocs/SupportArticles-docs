@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides a solution to an issue where a computer freezes or user logon is slow when you connect to the computer by using Remote Desktop Protocol (RDP).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4021856
 
 ## Symptoms

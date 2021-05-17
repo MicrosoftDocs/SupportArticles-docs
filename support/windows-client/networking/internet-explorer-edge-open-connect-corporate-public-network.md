@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides some information about the issue where an Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4494446
 
 ## Symptoms

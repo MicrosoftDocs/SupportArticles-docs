@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article addresses an issue in which you receive a WSAHOST_NOT_FOUND error when the `GetAddrInfo` is called after another call for the AF_INET6 family.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4057932
 
 ## Symptoms

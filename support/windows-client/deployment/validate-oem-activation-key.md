@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article introduces how to validate the OEM activation key in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4346763
 
 ## Background

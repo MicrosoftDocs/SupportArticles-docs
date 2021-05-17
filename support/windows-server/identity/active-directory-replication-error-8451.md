@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a resolution for Active Directory Replication Error 8451: "The replication operation encountered a database error".  
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2645996
 
 >[!NOTE]
@@ -225,7 +225,7 @@ The status 8451: "The replication operation encountered a database error" has mu
 
 If the error occurs on only one domain controller and appears to be an isolated problem, the best and quickest resolution is to do offline defragmentation of the database on the affected server. For information about how to do it, see [How to perform offline defragmentation of the Active Directory database](https://support.microsoft.com/help/232122/how-to-perform-offline-defragmentation-of-the-active-directory-databas).  
 
-If offline defragmentation does not correct the issue, demote and then repromote the affected domain controller. For information about how to do it, see [Demoting Domain Controllers and Domains](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-).
+If offline defragmentation does not correct the issue, demote and then repromote the affected domain controller. For information about how to do it, see [Demoting Domain Controllers and Domains](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-).
 
 ### How to resolve a recurring problem
 
@@ -253,7 +253,7 @@ If the problem recurs, collect some diagnostic data.
     |-1018|0xfffffc06|JET_errReadVerifyFailure|Checksum error on a database page|Check hardware, firmware, and drivers. Restore from backup.Demote/promote.|
     |-1047|0xfffffbe9|JET_errInvalidBufferSize|Data buffer doesn't match column size|832851 Inbound Replication Fails on Domain Controllers with Event ID: 1699, Error 8451 or jet error -1601  **Note:** This hotfix is no longer available.|
     |-1075|0xfffffbcd|JET_errOutOfLongValueIDs|Long-value ID counter has reached maximum value. (do offline defragmentation to reclaim free or unused```LongValueIDs```)|Do offline defragmentation.|
-    |-1206|0xfffffb4a|JET_errDatabaseCorrupted|Non-database file or corrupted db|Check hardware, firmware, and drivers.Run the **[Esentutl](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546%28v=ws.11%29)/k** command. Run the [Ntdsutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343%28v=ws.11%29) file integrity and semantic database analysis  (SDA) commands, and then do offline defragmentation.Otherwise restore from backup or demote/promote.|
+    |-1206|0xfffffb4a|JET_errDatabaseCorrupted|Non-database file or corrupted db|Check hardware, firmware, and drivers.Run the **[Esentutl](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546%28v=ws.11%29)/k** command. Run the [Ntdsutil](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343%28v=ws.11%29) file integrity and semantic database analysis  (SDA) commands, and then do offline defragmentation.Otherwise restore from backup or demote/promote.|
     |-1414|0xfffffa7a|JET_errSecondaryIndexCorrupted|Secondary index is corrupt. The database must be defragmented.|Do offline defragmentation.|
     |-1526|0xfffffa0a|JET_errLVCorrupted|Corruption encountered in long-value tree|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise, restore from backup or demote  and promote.|
     |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|

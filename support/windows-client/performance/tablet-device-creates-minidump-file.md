@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a solution to an issue that prevents a complete memory dump from being written during a Stop error on a tablet device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3135462
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article helps fix an error (This app has been blocked by your system administrator) that occurs when you to start Microsoft Store apps.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2750770
 
 ## Symptoms

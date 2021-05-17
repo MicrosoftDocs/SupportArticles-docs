@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 Microsoft .NET Framework version 1.1 is not supported on any version of Windows 7 or Windows Server 2008 R2 and higher Operating Systems.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2489698
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes Active Directory-integrated Domain Name System (DNS) zone serial number behaviors.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 282826
 
 ## Summary

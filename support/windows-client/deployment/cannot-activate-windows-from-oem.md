@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to solve errors that occur when you activate Windows Vista or Windows 7 on a computer that's obtained from an Original Equipment Manufacturer (OEM).
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 942962
 
 ## Symptoms

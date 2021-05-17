@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround for an issue in which Windows 10 causes issues when it calls CreateWindowEx in some 32-bit applications.
 
-_Original product version:_ &nbsp; Windows 10, version 1803, Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1803, Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4054150
 
 ## Symptoms

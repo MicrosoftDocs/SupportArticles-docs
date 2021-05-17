@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article provides a solution to the issue in which print driver default settings are not inherited through "Point and Print" in Windows 10 Version 1709.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4052855
 
 ## Symptoms

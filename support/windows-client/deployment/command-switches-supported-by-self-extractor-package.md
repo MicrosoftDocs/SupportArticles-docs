@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes the command line switches supported by a software installation package, an update package, or a hotfix package that's created by using Microsoft Self-Extractor.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912203
 
 ## Summary

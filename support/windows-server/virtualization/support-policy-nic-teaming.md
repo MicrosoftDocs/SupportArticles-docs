@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article describes the Microsoft Support Policy for Network Adapter Teaming when used in conjunction with Hyper-V.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968703
 
 ## Introduction

@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a workaround for an issue that occurs when you back up a virtual machine that is running on a Hyper-V host operating system.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2981479
 
 ## Symptom

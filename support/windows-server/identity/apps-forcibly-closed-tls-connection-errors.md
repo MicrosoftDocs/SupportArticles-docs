@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps fix an issue that occurs when an application tries to open a connection to a SQL Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4557473
 
 ## Symptoms

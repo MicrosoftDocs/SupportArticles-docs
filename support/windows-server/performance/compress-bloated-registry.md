@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes how to compress large registry hives to avoid performance issues.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2498915
 
 ## Symptoms

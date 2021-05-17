@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides workarounds to an issue in which network provider settings are removed during an in-place upgrade to Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1809, Windows 10, version 1709, Windows 10, version 1703, Windows 10, version 1607  
+_Applies to:_ &nbsp; Windows 10, version 1809, Windows 10, version 1709, Windows 10, version 1703, Windows 10, version 1607  
 _Original KB number:_ &nbsp; 4013822
 
 ## Symptoms

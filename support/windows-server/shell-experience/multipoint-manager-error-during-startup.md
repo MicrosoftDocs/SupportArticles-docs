@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article provides a solution to an error that occurs when you open MultiPoint Manager or MultiPoint Dashboard crashes in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4051516
 
 ## Symptom

@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how to move the CSC folder in Windows. It also describes how to delete the old cache folder after you move the CSC cache folder to a new location.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1709, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 942960
 
 > [!IMPORTANT]

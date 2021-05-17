@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides solutions for the issue that DNS CNAME alias can't access SMB file servers.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3181029
 
 ## Symptoms

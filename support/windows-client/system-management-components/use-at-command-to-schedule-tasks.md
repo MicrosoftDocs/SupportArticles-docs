@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
  This article describes how to use the at command to create and to cancel scheduled tasks.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 313565
 
 > [!NOTE]

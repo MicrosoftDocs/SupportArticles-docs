@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes an issue that triggers event ID 2213 in Windows 2008 or Windows 2012.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2846759
 
 ## Summary

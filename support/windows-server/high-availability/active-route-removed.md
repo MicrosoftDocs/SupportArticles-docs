@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a solution to an issue that the Active route is removed when you add a static persistent route to a network adapter.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2161341
 
 ## Symptoms

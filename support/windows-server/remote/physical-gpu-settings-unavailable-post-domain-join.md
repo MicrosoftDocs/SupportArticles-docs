@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a resolution for the issue that Physical GPU settings are unavailable post domain join.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2878821
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how an administrator can disable automatic machine account password changes.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 154501
 
 ## Summary

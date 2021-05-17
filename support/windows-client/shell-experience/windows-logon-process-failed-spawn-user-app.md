@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides resolutions to an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 970879
 
 ## Symptoms

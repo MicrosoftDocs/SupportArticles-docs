@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides help to fix an error that occurs when you use PXE to boot a client computer from a Windows Deployment Services (WDS) server.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp;2602043
 
 ## Symptoms

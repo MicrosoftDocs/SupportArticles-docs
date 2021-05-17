@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article describes how to print a directory listing of the contents of a folder by using the Print Directory feature.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp;321379
 
 ## Summary  

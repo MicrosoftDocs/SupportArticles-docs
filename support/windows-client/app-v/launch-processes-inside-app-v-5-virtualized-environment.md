@@ -17,7 +17,7 @@ ms.technology: windows-client-application-virtualization-app-v
 
 This article describes how to launch processes inside the Microsoft Application Virtualization 5.0 client (App-V 5.0) virtualized environment.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2848278
 
 ## Summary

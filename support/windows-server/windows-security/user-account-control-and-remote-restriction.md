@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes User Account Control (UAC) and remote restrictions.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 951016
 
 ## Introduction

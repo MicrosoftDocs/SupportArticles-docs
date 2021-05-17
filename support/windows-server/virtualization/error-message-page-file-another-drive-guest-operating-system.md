@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article helps to fix an error occurs after you move the page file to another drive other than drive C in a guest operating system.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 979386
 
 ## Symptoms

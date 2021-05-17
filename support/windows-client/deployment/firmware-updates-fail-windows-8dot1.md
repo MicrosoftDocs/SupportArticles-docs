@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how and why firmware updates occasionally fail in a Windows 8.1 environment.
 
-_Original product version:_ &nbsp;Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp;2909710
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides troubleshooting steps for ADFS service configuration and startup problems.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044973
 
 ## Summary

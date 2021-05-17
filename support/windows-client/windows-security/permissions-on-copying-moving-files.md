@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes how Windows Explorer handles file and folder permissions in different situations.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 310316
 
 ## Summary

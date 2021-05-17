@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides steps to fix an issue in which machines can't boot into the normal mode and keep on restarting into the safe mode.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2543632
 
 ## Symptoms

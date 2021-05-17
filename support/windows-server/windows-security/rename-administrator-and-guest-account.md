@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how to change the administrator account and guest account names by using Group Policy.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816109
 
 ## Summary
