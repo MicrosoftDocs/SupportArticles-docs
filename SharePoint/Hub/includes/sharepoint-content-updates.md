@@ -2,6 +2,18 @@
 
 
 
+## Week of May 10, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/10/2021 | [Authentication errors occur when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7) | modified |
+| 5/11/2021 | [Check OneDrive site eligibility for increased storage](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility) | modified |
+| 5/12/2021 | [Check OneDrive site eligibility for increased storage](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility) | modified |
+| 5/13/2021 | [Error Code 0x8004de40 when signing in to OneDrive](/sharepoint/troubleshoot/administration/error-0x8004de40-in-onedrive) | added |
+| 5/14/2021 | [Error Code 0x8004de40 when signing in to OneDrive](/sharepoint/troubleshoot/administration/error-0x8004de40-in-onedrive) | modified |
+
+
 ## Week of May 03, 2021
 
 
@@ -34,12 +46,3 @@
 | 4/14/2021 | [(This item might not exist or is no longer available) error when using OneDrive](/sharepoint/troubleshoot/sharing-and-permissions/this-item-might-not-exist-error) | modified |
 | 4/16/2021 | [Microsoft SharePoint troubleshooting content updates](/sharepoint/troubleshoot/sharepoint-troubleshoot-content-updates) | added |
 | 4/16/2021 | [SharePoint troubleshooting content updates](/sharepoint/troubleshoot/sharepoint-troubleshooting-content-updates) | added |
-
-
-## Week of April 05, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/9/2021 | [Nintex workflow on SharePoint Online does not start](/sharepoint/troubleshoot/workflows/nintex-workflow-fails-to-start) | added |
-| 4/9/2021 | [How to replace the root site in SharePoint Online](/sharepoint/troubleshoot/sites/url-that-resides-under-root-site-collection-is-broken) | modified |
