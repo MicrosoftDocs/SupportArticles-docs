@@ -46,8 +46,8 @@ To enable Remote PowerShell on the AD FS federation server, follow these steps:
 
 ## More information
 
-For more information about Remote PowerShell requirements, see [About_Remote_Requirements](/previous-versions//dd315349(v=technet.10)?redirectedfrom=MSDN).
+For more information about Remote PowerShell requirements, see [About_Remote_Requirements](/previous-versions/dd315349(v=technet.10)).
 
-For more information about Remote PowerShell functionality, see [Windows PowerShell: Dive Deep into Remoting](/previous-versions/technet-magazine/gg981683(v=msdn.10)?redirectedfrom=MSDN)
+For more information about Remote PowerShell functionality, see [Windows PowerShell: Dive Deep into Remoting](/previous-versions/technet-magazine/gg981683(v=msdn.10)).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
