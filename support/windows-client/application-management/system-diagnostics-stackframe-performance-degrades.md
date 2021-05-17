@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article helps fix an issue where applications that use `System.Diagnostics.StackFrame` run slower than before after you upgrade to Windows 10 or Microsoft .NET Framework 4.7.1.
 
-_Original product version:_ &nbsp; Windows 10, version 1803, Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1803, Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4057154
 
 ## Symptoms

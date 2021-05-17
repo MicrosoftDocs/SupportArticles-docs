@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to an error 2910 (0x80070005) that occurs when a Physical-to-Virtual conversion (P2V) conversion in Microsoft System Center Virtual Machine Manager 2008 fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969965
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes ways to troubleshoot and to resolve SCECLI 1202 events.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324383
 
 ## Summary

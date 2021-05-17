@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article provides a solution to fix the error 0x80041323 that occurs when you run high number of Scheduled tasks.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2696472
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This step-by-step article describes how to configure a secondary DNS server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816518
 
 ## Identify the secondary name server

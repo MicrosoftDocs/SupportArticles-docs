@@ -17,7 +17,7 @@ ms.technology: windows-client-rds
 
 This article describes why specific USB devices aren't available for RemoteFX USB redirection, and how to make them available.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2653326
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to view the Windows registry by using 64-bit versions of Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 305097
 
 ## Summary

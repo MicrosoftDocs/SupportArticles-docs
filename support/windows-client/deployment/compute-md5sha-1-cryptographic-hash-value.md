@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how and why you can use the MD5 or SHA-1 cryptographic hash values to verify which file you installed on your computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 889768
 
 ## Summary

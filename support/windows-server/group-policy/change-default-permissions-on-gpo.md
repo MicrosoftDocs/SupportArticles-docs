@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article discusses how to change the default permissions on Group Policy objects (GPOs).
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;321476
 
 ## Summary

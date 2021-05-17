@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a resolution to an issue where cluster disk cannot be found in explorer or diskmgmt on Failover.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2517921
 
 ## Symptoms

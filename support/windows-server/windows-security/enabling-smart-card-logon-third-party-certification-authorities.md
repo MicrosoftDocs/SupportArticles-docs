@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides some guidelines for enabling smart card logon with third-party certification authorities.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 281245
 
 ## Summary

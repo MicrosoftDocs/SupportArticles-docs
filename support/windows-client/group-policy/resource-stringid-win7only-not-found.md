@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article provides help to solve an issue where you receive an error (Resource $(string id="Win7Only)' referenced in attribute displayName could not be found) when you open gpedit.msc.
 
-_Original product version:_ &nbsp; Windows 10, version 1803  
+_Applies to:_ &nbsp; Windows 10, version 1803  
 _Original KB number:_ &nbsp; 4292332
 
 ## Symptom

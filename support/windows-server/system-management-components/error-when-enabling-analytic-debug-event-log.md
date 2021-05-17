@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article helps to fix an error that occurs when you enable analytic or debug event log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2488055
 
 ## Symptoms

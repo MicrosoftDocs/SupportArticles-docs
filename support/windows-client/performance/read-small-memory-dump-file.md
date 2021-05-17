@@ -18,7 +18,7 @@ adobe-target: true
 
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer crashed.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315263
 
 > [!NOTE]

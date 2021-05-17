@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article provides a solution to an issue where the new printer status is Offline after you delete a print queue and then restart a Windows-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2027593
 
 ## Symptoms

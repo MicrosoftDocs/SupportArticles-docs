@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article provides a solution to an issue where the Point and Print Restrictions policies are ignored when a standard user tries to install a network printer.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2307161
 
 ## Symptoms

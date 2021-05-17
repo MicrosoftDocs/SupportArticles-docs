@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an error that occurs when you access a USB storage device after resuming from suspend.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 323754
 
 ## Symptoms

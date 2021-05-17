@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article fixes an issue where the application can't authenticate users when you shut down a Domain Controller (DC).
 
-_Original product version:_ &nbsp;Window 10 – all editions, Windows Server 2012 R2
+_Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2
 
 _Original KB number:_ &nbsp;2683606
 

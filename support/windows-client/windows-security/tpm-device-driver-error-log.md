@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes an issue in which the TPM device driver is recorded in the system log when it experiences an unrecoverable error.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4562894
 
 ## Symptoms

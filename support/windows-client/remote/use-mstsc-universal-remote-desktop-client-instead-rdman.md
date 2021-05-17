@@ -17,7 +17,7 @@ ms.technology: windows-client-rds
 
 Virtualization and remote desktops are an important part of your infrastructure and work. And, we recommend that you use Windows built-in Remote Desktop Connection (%windir%\\system32\\mstsc.exe) or [universal Remote Desktop client](https://aka.ms/rdwin) instead of Remote Desktop Connection Manager (RDCMan).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4512838
 
 ## More information

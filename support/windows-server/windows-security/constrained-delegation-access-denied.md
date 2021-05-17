@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article helps fix an **access denied** error that occurs when you access a service that uses network shares on a middle-tier server.
 
-_Original product version:_ &nbsp;Window 10 – all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp;2602377
 
 ## Symptoms

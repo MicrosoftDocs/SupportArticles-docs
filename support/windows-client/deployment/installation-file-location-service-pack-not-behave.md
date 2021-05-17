@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to edit the registry to specify the location of the Windows Installation files and the location of the Windows Service Pack Installation files.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 833615
 
 > [!NOTE]

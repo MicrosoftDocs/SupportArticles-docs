@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article helps resolve an issue where you receive an error when you use the **/z** switch together with the **Schtasks.exe** command in Windows Vista.
 
-_Original product version:_ &nbsp;Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp;2004151
 
 ## Symptoms

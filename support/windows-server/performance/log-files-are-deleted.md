@@ -1,7 +1,7 @@
 ---
 title: Log files are deleted when you use Performance Monitor in Windows Server
-description: Discusses that log data is lost when you run Performance Monitor in Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
-ms.date: 09/17/2020
+description: Discusses that log data is lost when you run Performance Monitor in Windows Server.
+ms.date: 05/12/2021
 author: Deland-Han 
 ms.author: delhan
 manager: dscontentpm
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2916994
 
 Consider the following scenario:
 
-- You use Windows Performance Monitor to monitor system activity in Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+- You use Windows Performance Monitor to monitor system activity in Windows Server.
 - You do one of the following:
   - You use a template to create a Data Collector Set.
   - You configure the new Data Collector Set on the **Data Manager** tab by using the default properties or the same properties that are configured in a different Data Collector Set.

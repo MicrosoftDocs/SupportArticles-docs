@@ -15,7 +15,7 @@ ms.technology: windows-server-rds
 ---
 # Error after completing configuration of the RD Connection Broker server for high availability
 
-_Original product version:_ &nbsp; Windows Server 2016
+_Applies to:_ &nbsp; Windows Server 2016
 
 You receive the following error message after completing [the configuration of the Remote Desktop Connection Broker (RD Connection Broker) server for high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-3-configure-the-connection-brokers-for-high-availability).
 

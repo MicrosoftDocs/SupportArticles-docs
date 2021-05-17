@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides guidance on including drivers into WinPE and the operating system to be installed so that the driver is available in the WinPE portion of installation and also ends up in the completed operating system installation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2686316
 
 ## Summary

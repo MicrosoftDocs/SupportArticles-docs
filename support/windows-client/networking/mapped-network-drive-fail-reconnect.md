@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a workaround for the issue that mapped network drive may fail to reconnect in Windows 10, version 1809.
 
-_Original product version:_ &nbsp; Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4471218
 
 ## Symptoms

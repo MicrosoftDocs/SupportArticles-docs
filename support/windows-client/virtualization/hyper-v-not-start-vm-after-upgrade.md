@@ -17,7 +17,7 @@ ms.technology: windows-client-hyper-v
 
 This article helps fix an issue where Windows 10 Hyper-V can't start virtual machines after a Windows 10 upgrade.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4052082
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides workarounds to solve the issue that virtual machines can't start or you can't do a live migration for a Hyper-V virtual machine in Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2779204
 
 ## Symptoms

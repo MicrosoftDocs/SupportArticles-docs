@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article helps fix an error (MMC has detected an error in a snap-in and will unload it) that occurs when you try to launch the Volume Activation Management Tool (VAMT) 3.0 on a Windows 7 or Windows Server 2008 R2-based computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2817142
 
 ## Symptoms

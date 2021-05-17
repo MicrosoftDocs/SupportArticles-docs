@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a resolution for the issue that Windows Connection Manager disconnects WLAN if a VPN connection is established.
 
-_Original product version:_ &nbsp; Windows 8 Pro  
+_Applies to:_ &nbsp; Windows 8 Pro  
 _Original KB number:_ &nbsp; 2919900
 
 ## Symptom

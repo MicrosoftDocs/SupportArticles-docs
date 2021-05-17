@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article discusses an issue where the Distributed File System Replication (DFSR) service fails to replicate files after restoring a virtualized server's snapshot.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2517913
 
 ## Symptoms

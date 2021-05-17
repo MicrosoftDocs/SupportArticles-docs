@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This step-by-step article describes how to connect a Windows Server 2003-based terminal services client to a terminal server by using Remote Desktop Connection.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814585
 
 ## More information

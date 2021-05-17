@@ -17,7 +17,7 @@ ms.technology: windows-server-sdn
 
 This article provides some information about Software Defined Data Center and Software Defined Networking.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4464776
 
 ## Summary

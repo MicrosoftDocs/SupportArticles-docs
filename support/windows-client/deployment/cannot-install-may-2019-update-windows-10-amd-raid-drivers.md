@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an issue where the May 2019 update of Windows 10 cannot be installed on computers that run certain versions of AMD RAID drivers.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4504107
 
 ## Symptoms

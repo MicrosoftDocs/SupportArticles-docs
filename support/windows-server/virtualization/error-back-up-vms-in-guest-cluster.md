@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article helps fix errors that occur when you try to back up Virtual Machines (VMs) that belong to a guest cluster by using shared virtual disk (VHDS).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4230569
 
 ## Symptoms

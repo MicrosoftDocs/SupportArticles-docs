@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a solution to an issue that enterprise APN lost after SIM change or MBN adapter error.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4487376
 
 ## Symptoms

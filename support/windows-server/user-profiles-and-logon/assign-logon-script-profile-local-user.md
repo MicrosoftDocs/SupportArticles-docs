@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article describes how to assign a logon script to a profile for a local user.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324803
 
 ## Summary

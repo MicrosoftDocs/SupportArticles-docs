@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a workaround to an issue in which display configuration reverts to "Second screen only" after you resume from standby.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2890797
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article provides help to solve an issue where DNS server tools are missing after you install the Remote Server Administration Tools for Windows 10 (RSATClient).
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1803, Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1803, Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4055558
 
 ## Symptom

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes an issue in which ADAM general Event ID 1161 is logged on an AD LDS server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3080830
 
 ## Symptoms

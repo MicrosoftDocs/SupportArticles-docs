@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides help to fix an error that you receive when you try to use `Vmconnect.exe` to connect to a virtual machine.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954357
 
 ## Error message description

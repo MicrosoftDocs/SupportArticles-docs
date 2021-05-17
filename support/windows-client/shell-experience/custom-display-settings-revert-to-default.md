@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue where custom display settings revert to default display settings. This issue occurs after you install a Windows Vista Service Pack on a computer that uses multiple monitors.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 949742
 
 ## Symptoms

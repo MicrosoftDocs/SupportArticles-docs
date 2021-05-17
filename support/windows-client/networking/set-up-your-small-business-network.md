@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article walks you through the steps of evaluating, preparing, and setting up your small business network. The article is for IT Pros who help set up your small business network.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2
 _Original KB number:_ &nbsp; 10064
 
 ## Evaluate network types

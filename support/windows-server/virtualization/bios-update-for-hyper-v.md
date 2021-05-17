@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides help to solve issues that occur when you install the Hyper-V Role or start Hyper-V virtual machines.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2762297
 
 ## Symptoms

@@ -17,12 +17,12 @@ ms.technology: windows-client-deployment
 
 This article provides solutions to fix an error that occurs when you try to run the TPM Management console in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4026023
 
 ## Symptoms
 
-Assume that you disable or clear the [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview)  through the BIOS settings on a Windows 10, version 1703-based, or a Windows 10, version 1809-based device. When you try to run the TPM Management console (TPM.msc), you receive the following error message: Cannot load management console.
+Assume that you disable or clear the [Trusted Platform Module (TPM)](/windows/device-security/tpm/trusted-platform-module-overview)  through the BIOS settings on a Windows 10, version 1703-based, or a Windows 10, version 1809-based device. When you try to run the TPM Management console (TPM.msc), you receive the following error message: Cannot load management console.
 
 ## Resolution
 

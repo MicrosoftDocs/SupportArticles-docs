@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article helps to fix a problem that occurs when you try to create a cluster on a set of computers that have the Failover Clustering feature installed.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 973838
 
 ## Symptoms

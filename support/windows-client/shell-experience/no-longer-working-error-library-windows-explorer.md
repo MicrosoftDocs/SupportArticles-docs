@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution for fixing the error that shows it is no longer working when opening a Library in Windows Explorer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2895090
 
 ## Symptoms

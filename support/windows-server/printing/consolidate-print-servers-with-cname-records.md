@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article describes how to consolidate print servers that run in a Microsoft Windows Server 2003 environment.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 870911
 
 ## Introduction
@@ -97,4 +97,4 @@ setspn -A host/ your_ALIAS_name.company.com computername
 ```
 
 > [!NOTE]
-> The Setspn tool is included in Windows Server 2003 Support Tools. You can install Windows Server 2003 Support Tools from the `Support\Tools` folder of the Windows Server 2003 startup disk. To download and install the latest version of the Setspn tool, visit the following Web site: [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))  
+> The Setspn tool is included in Windows Server 2003 Support Tools. You can install Windows Server 2003 Support Tools from the `Support\Tools` folder of the Windows Server 2003 startup disk. To download and install the latest version of the Setspn tool, visit the following Web site: [Setspn](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))  

@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article addresses an issue in which Windows Firewall profile doesn't switch from Public or Private to Domain when you connect to domain network by using a third-party VPN client.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4550028
 
 ## Symptoms

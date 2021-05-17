@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes an issue that prevents DirectAccess clients from connecting by using IP-HTTPS even though they can connect over Teredo.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;2980660
 
 ## Symptoms

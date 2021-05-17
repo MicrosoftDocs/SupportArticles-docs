@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to determine whether your device is certified for Windows 8, and how to change the default policy to show your non-certified devices in the Devices charm in Windows 8.1.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2871501
 
 ## Summary

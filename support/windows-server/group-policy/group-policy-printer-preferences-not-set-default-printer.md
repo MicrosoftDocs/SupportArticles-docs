@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a workaround for an issue where Group Policy Printer Preferences fails to set the default printer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2787598
 
 ## Symptoms

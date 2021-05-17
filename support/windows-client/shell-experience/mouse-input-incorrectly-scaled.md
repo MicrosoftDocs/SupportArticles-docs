@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article describes how to work around an issue in which mouse input in some games is incorrectly scaled on high-DPI devices.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2907016
 
 ## Introduction

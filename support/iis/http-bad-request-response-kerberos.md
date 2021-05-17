@@ -1,13 +1,13 @@
 ---
 title: HTTP 400 error responses to HTTP requests
-description: Works around a problem where you can't receive expected webpage when you send an HTTP request that needs Kerberos authentication. 
-ms.date: 03/23/2020
+description: Works around an HTTP 400 error that the HTTP request header is too long.
+ms.date: 05/14/2021
 ms.prod-support-area-path: WWW administration and management
 ms.reviewer: ivanpash
 ---
 # HTTP 400 Bad Request (Request Header too long) responses to HTTP requests
 
-This article helps you resolve the HTTP 400 error that occurs when a Hypertext Transfer Protocol (HTTP) request that needs Kerberos authentication is sent from a browser to a website that's hosted on Microsoft Internet Information Services (IIS) and is configured to use Kerberos authentication.
+When an HTTP request that needs Kerberos authentication is sent to a website that's hosted on Internet Information Services (IIS) and is configured to use Kerberos authentication, the HTTP request header would be very long. This article helps you work around the HTTP 400 error that occurs when the HTTP request header is too long.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 2020943
@@ -64,7 +64,7 @@ You can also set the registry keys to their maximum values, as shown in the next
 |Name|Value Type|Value Data|
 |---|---|---|
 | MaxFieldLength| DWORD| 65536 (Dec) or 10000 (Hex)|
-| MaxRequestBytes| DWORD| 16777216 (Dec) or 100000 (Hex)|
+| MaxRequestBytes| DWORD| 16777216 (Dec) or 1000000 (Hex)|
 
 > [!IMPORTANT]
 > Changing these registry keys should be considered to be extremely dangerous. These keys allow larger HTTP packets to be sent to IIS. This, in turn, may cause Http.sys to use more memory. Therefore, such changes can increase the computer's vulnerability to malicious attacks.

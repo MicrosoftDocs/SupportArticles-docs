@@ -15,7 +15,7 @@ ms.technology: windows-client-networking
 ---
 # Network gets disconnected for several seconds if the computer isn't used after you sign in to Windows 10
 
-_Original product version:_ &nbsp; Windows 10
+_Applies to:_ &nbsp; Windows 10
 
 ## Symptoms
 

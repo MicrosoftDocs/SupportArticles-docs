@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where you receive an "Access Denied" message when you go to certain Microsoft websites that are hosted by the Akamai content delivery network (CDN).
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2016, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4492050
 
 ## Symptoms
