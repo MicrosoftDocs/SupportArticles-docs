@@ -1,5 +1,5 @@
 ---
-title: Error (The connection to ServerName Active Directory Federation Services 2.0 server failed) when you use the Set-MsolADFSContext command
+title: Error when you use the Set-MsolADFSContext command
 description: Describes an issue in which you receive an error message when you use the Set-MsolADFSContext command.
 ms.date: 05/14/2021
 author: v-six
