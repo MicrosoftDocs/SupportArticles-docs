@@ -2,6 +2,14 @@
 
 
 
+## Week of May 10, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/10/2021 | [Install the latest applicable updates for Outlook](/outlook/troubleshoot/installation/install-outlook-latest-updates) | modified |
+
+
 ## Week of May 03, 2021
 
 
@@ -34,11 +42,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 4/14/2021 | [Receiving email messages not intended for you](/outlook/troubleshoot/email-management/unintentional-emails-received) | added |
-
-
-## Week of April 05, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/9/2021 | [Inbox Repair tool (Scanpst.exe) run multiple passes](/outlook/troubleshoot/data-files/inbox-repair-tool-scanpst-exe-run-multiple-passes) | modified |

@@ -1,5 +1,5 @@
 ---
-title: Determine the Know Folder Move eligibility
+title: Determine the Known Folder Move eligibility
 description: Describes how to check to see if the OneDrive sync client for SharePoint in Windows has the capability to use the Known Folder Move feature.
 author: helenclu
 ms.author: luche
@@ -16,7 +16,7 @@ appliesto:
 - SharePoint Online
 search.appverid: MET150 
 ---
-# Check for Know Folder Move eligibility in OneDrive for SharePoint
+# Check for Known Folder Move eligibility in OneDrive for SharePoint
 
 _Original KB number:_ &nbsp; 4506600
 
@@ -31,7 +31,7 @@ With the [Known Folder Move](/onedrive/redirect-known-folders) (KFM) feature, we
 
 This feature is currently available for Windows 10, Windows 8, Windows 8.1, and Windows 7. For more information on how to set up the folder backup, see [Back up your Documents, Pictures, and Desktop folders with OneDrive](https://support.microsoft.com/office/back-up-your-documents-pictures-and-desktop-folders-with-onedrive-d61a7930-a6fb-4b95-b28a-6552e77c3057).
 
-![Screenshot of the Manage backup option in OneDrive Backup tab.](./media/determine-know-folder-move-eligibility/backup.png)
+![Screenshot of the Manage backup option in OneDrive Backup tab.](./media/determine-known-folder-move-eligibility/backup.png)
 
 ## Confirm OneDrive.exe version
 
@@ -43,7 +43,7 @@ In order to check whether the version of OneDrive Next Generation Sync client is
 4. In the OneDrive settings, locate the **About** tab.
 5. Verify that the sync client build is 18.151.0729.0012 or later.
 
-    ![Check sync client version.](./media/determine-know-folder-move-eligibility/build-version.png)
+    ![Check sync client version.](./media/determine-known-folder-move-eligibility/build-version.png)
 
 > [!NOTE]
 > Another method is to see [Which OneDrive app?](https://support.microsoft.com/office/which-onedrive-app-19246eae-8a51-490a-8d97-a645c151f2ba) to determine which version of the app you have.
@@ -59,7 +59,7 @@ In order to check whether the user has the correct [PersonalSiteCapabilities enu
 5. Right-click the user's account name and select **Edit My Profile**.
 6. In the user's profile, search for **Personal Site Capabilities** and make sure the value is either **4**, **6**, or **8**, depending on the organization's configuration/capabilities provided to the users.
 
-    :::image type="content" source="./media/determine-know-folder-move-eligibility/personal-site-capabilities.png" alt-text="Screenshot of the Personal Site Capabilities number.":::
+    :::image type="content" source="./media/determine-known-folder-move-eligibility/personal-site-capabilities.png" alt-text="Screenshot of the Personal Site Capabilities number.":::
 
 ## Confirm the existence of the PreSignInSettingsConfig.json
 
@@ -69,7 +69,7 @@ The PreSignInSettingsConfig.json is one of the most important files for the OneD
 2. Navigate to `%localappdata%/Microsoft/OneDrive/Settings`.
 3. Verify that the file PreSignInSettingsConfig.json is present.
 
-    :::image type="content" source="./media/determine-know-folder-move-eligibility/json-file.png" alt-text="Screenshot of PreSignInSettingsConfig.json.":::
+    :::image type="content" source="./media/determine-known-folder-move-eligibility/json-file.png" alt-text="Screenshot of PreSignInSettingsConfig.json.":::
 
 If this .json file is missing, make sure there is no proxy or other network configuration blocking one or more of the required [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
