@@ -103,7 +103,7 @@
       href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
-    - name: Error when accessing OneDrive storage
+    - name: Error uploading files to chats
       href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Error when selecting Files tab
       href: ./files/object-specified-not-belong-to-list.md
