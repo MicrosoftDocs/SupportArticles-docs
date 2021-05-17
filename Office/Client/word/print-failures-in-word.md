@@ -22,7 +22,7 @@ appliesto:
 # Troubleshoot why Word does not print
 
 > [!NOTE]
-> If you are using **Microsoft 365** (Microsoft Word for Office 365 with Windows 10), see [Troubleshoot print failures in Word for Office 365 on Windows 10](https://docs.microsoft.com/office/troubleshoot/word/print-failures-word-for-office-365-on-win-10).
+> If you're using **Microsoft 365** (Microsoft Word for Office 365 with Windows 10), see [Troubleshoot print failures in Word for Office 365 on Windows 10](print-failures-word-for-office-365-on-win-10.md).
 
 This article describes how to diagnose print failures in Microsoft Word. It also explains how to isolate the cause of the print failure and how to resolve the issue.
 
@@ -33,7 +33,7 @@ Examples of print failure include the following situations:
 - A file is printed as meaningless symbols.
 
 > [!IMPORTANT]
-> This article does not discuss printer output issues, such as envelope-positioning problems, missing graphics, or inaccurate page numbers.
+> This article doesn't discuss printer output issues, such as envelope-positioning problems, missing graphics, or inaccurate page numbers.
 
 To resolve a print failure in Word, you must determine its cause. Causes typically fit into one of the following categories:
 
@@ -43,7 +43,7 @@ To resolve a print failure in Word, you must determine its cause. Causes typical
 - The Windows operating system
 - Connectivity or hardware
 
-Do not make assumptions about what is causing your printing problem. Instead, rely on systematic troubleshooting to reveal the cause.
+Don't make assumptions about what is causing your printing problem. Instead, rely on systematic troubleshooting to reveal the cause.
 
 Use the following tests to help determine the cause of the printing failure.
 
@@ -87,7 +87,7 @@ The success or failure of these tests shows whether Word can print generally. Th
 
 If you don't receive errors in the test document but still cannot print the original document, the file may be corrupted. This situation might be true even if you can print the same document on another computer because the symptoms of file corruption don’t necessarily appear on all computers.
 
-For more information about how to troubleshoot corrupted Word files, see [How to troubleshoot damaged documents in Word](https://docs.microsoft.com/office/troubleshoot/word/damaged-documents-in-word).
+For more information about how to troubleshoot corrupted Word files, see [How to troubleshoot damaged documents in Word](damaged-documents-in-word.md).
 
 If Word cannot print at all, or if Word cannot print a certain font or a specific type of graphic, go to the next step.
 
@@ -214,7 +214,7 @@ If the printing problem occurs when you use a different printer driver, go to th
 
 After you verify that the printing problem is not limited to a particular document or to a particular printer driver, and that the problem is limited to the Word program, test the Word program by using resetting the user options.
   
-For more information about how to reset the user options, see [How to reset user options and registry settings in Word](https://docs.microsoft.com/office/troubleshoot/word/reset-options-and-settings-in-word).
+For more information about how to reset the user options, see [How to reset user options and registry settings in Word](reset-options-and-settings-in-word.md).
 
 If the printing problem continues to occur, run **Detect and Repair** to reinstall the missing or corrupted program files. To run **Detect and Repair**, follow these steps for your version of Word.
 
