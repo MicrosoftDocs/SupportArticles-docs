@@ -84,6 +84,17 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
    
    Upgrade to a later version of the browser.
    
+## Azure App Service not using latest TLS and/or .NET Version.
+
+   ### Symptom
+   
+   Authentication issues when using Azure App Service.
+
+   ### Resolution
+   
+   Check that the minimum TLS Version for your App Service instance is set to TLS 1.2 and that you are using an updated .NET version.
+   
+   
 ## Windows Server 2012 R2 missing necessary cipher suites
 
    ### Symptom
