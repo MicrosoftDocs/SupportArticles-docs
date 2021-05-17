@@ -231,6 +231,8 @@
       href: ../deployment/macros-in-this-project-disabled-outlook.md
     - name: How to manage multiple VBA projects
       href: ../deployment/manage-distribute-outlook-vba-project.md
+    - name: Unable to publish a form
+      href: ../deployment/cannot-publish-form.md
   - name: Development
     items:
     - name: Advise MAPI function returns 0x8007000E

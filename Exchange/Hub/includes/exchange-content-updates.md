@@ -2,6 +2,23 @@
 
 
 
+## Week of May 10, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/10/2021 | [Error (The seeding operation failed) when running Add-MailboxDatabaseCopy command](/exchange/troubleshoot/administration/add-database-copy-seeding-operation-failed) | modified |
+| 5/10/2021 | [Unable to migrate mailboxes using IMAP](/exchange/troubleshoot/move-or-migrate-mailboxes/imap-mailbox-migration-fails) | added |
+| 5/11/2021 | [Troubleshoot issues using diagnostics](/exchange/troubleshoot/administration/self-help-diagnostics) | added |
+| 5/12/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
+| 5/13/2021 | Outlook or OWA cannot connect to Public Folders | removed |
+| 5/14/2021 | [401 Access denied when running Test-OAuthConnectivity](/exchange/troubleshoot/administration/401-access-denied-error-when-running-test-oauthconnectivity) | modified |
+| 5/14/2021 | [Reduce malware threats via file attachment blocking](/exchange/troubleshoot/antispam-and-protection/how-to-reduce-malware-threats-via-file-attachment-blocking) | modified |
+| 5/14/2021 | [554 5.6.0 Invalid message content in Office 365](/exchange/troubleshoot/email-delivery/invalid-message-ndr) | modified |
+| 5/14/2021 | [Accessing other people's mailboxes](/exchange/troubleshoot/user-and-shared-mailboxes/how-to-access-other-mailboxes) | modified |
+| 5/14/2021 | [REST API is not yet supported error](/exchange/troubleshoot/user-and-shared-mailboxes/rest-api-is-not-yet-supported-for-this-mailbox-error) | modified |
+
+
 ## Week of May 03, 2021
 
 
@@ -43,12 +60,3 @@
 | 4/12/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
 | 4/13/2021 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
 | 4/14/2021 | [Add-ins will stop working in Outlook on the web](/exchange/troubleshoot/client-connectivity/add-ins-will-stop-working-outlook-on-the-web) | added |
-
-
-## Week of April 05, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/5/2021 | [Outlook connection issues with Exchange mailboxes because of the RPC encryption requirement](/exchange/troubleshoot/client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement) | modified |
-| 4/9/2021 | [MSExchangeServicesAppPool crashes](/exchange/troubleshoot/administration/event-id-4999-msexchangeservicesapppool-crash) | modified |
