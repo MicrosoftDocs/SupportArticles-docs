@@ -22,6 +22,6 @@ When deploying a hot plug NVM Express (NVMe) solid-state drive (SSD) that suppor
 
 > This device cannot start. Try upgrading the device drivers for this device. (Code 10)
 
-All NVMe SSD devices which support hot plug/hot swap capability must support the same (or higher) MPS value as the existing NVMe PCIe bus MPS hierarchy in Windows Server. If a new device is hot plugged to the existing NVMe PCIe bus which does not support the MPS value initialized at the boot process, then the detection and enumeration of the device will fail as the PCIe driver cannot dynamically change the existing MPS value of the hierarchy.
+All NVMe SSD devices which support hot plug/hot swap capability must support the same (or higher) MPS value as the existing NVMe PCIe bus MPS hierarchy in Windows Server. The PCIe driver cannot dynamically change the existing MPS value of the hierarchy. If a new device is hot plugged to an existing NVMe PCIe bus that doesn’t support the MPS value initialized at the boot process, then the detection and enumeration of the device will fail.
 
 Restart the server to initialize the NVMe PCIe bus MPS value to that of the SSD device which has the lowest MPS. Otherwise, contact the system or device manufacturer for further assistance.
