@@ -1,6 +1,6 @@
 ---
-title: Excel Does Not Shut Down When Automating from JScript
-description: Describes an issue in which Excel stays in memory after calling the Quit method until you close Internet Explorer or navigate to another page. This issue occurs when you automate Excel from Microsoft JScript.
+title: Excel doesn't shut down when automating from JScript
+description: Excel stays in memory after calling the Quit method until you close Internet Explorer or navigate to another page. This issue occurs when you automate Excel from Microsoft JScript.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,7 +16,7 @@ appliesto:
 - Microsoft Excel
 ---
 
-# BUG: Excel Does Not Shut Down After Calling the Quit Method When Automating from JScript
+# Excel doesn't shut down after calling the Quit method when automating from JScript
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -58,9 +58,9 @@ function Cleanup() {
 </HTML> 
 ```
 
-Notice that the CollectGarbage method is not called directly after Excel's Quit method. You need to give JScript a small amount of time before calling CollectGarbage. A timer is used in this example to show how to wait briefly before forcing garbage collection.
+Notice that the CollectGarbage method isn't called directly after Excel's Quit method. You need to give JScript a small amount of time before calling CollectGarbage. A timer is used in this example to show how to wait briefly before forcing garbage collection.
 
-Another workaround to this problem is to use VBScript for Automation of Microsoft Excel. Unlike JScript, VBScript is not a garbage collecting language and, therefore, references are released when you set the variables to Nothing. Using VBScript, Excel shuts down immediately after calling the Quit method and releasing the variables. Please see the "References" section of this article for more information.
+Another workaround is to use VBScript for Automation of Microsoft Excel. Unlike JScript, VBScript isn't a garbage collecting language. Therefore, references are released when you set the variables to Nothing. Using VBScript, Excel shuts down immediately after calling the Quit method and releasing the variables. For more information, see the [References](##references) section.
 
 > [!NOTE]
 > The undocumented CollectGarbage method isn't part of the ECMA-262 specification, and may not be available in future versions of the scripting engine. When you force the garbage collector to run by calling CollectGarbage, this may also negatively impact performance.
@@ -69,9 +69,7 @@ Another workaround to this problem is to use VBScript for Automation of Microsof
 
 Microsoft has confirmed that this is a bug in the Microsoft products that are listed at the beginning of this article.
 
-## More Information
-
-### Steps to Reproduce Behavior
+## Steps to reproduce
 
 1. Start Notepad and paste the following code in the editor:
 
