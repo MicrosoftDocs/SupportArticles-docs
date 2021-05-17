@@ -281,4 +281,4 @@ To resolve this issue, configure the client and the server to restrict the range
 
 ## References
 
-For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [Maintaining WMI Security](https://docs.microsoft.com/windows/win32/wmisdk/maintaining-wmi-security).
+For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [Maintaining WMI Security](/windows/win32/wmisdk/maintaining-wmi-security).

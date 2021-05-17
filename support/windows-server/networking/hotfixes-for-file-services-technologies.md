@@ -172,4 +172,4 @@ Microsoft Services for NFS provides a file-sharing solution for enterprises that
 
 For more information about currently available hotfixes for the File Services technologies in Windows Server 2008 and Windows Server 2008 R2, see [KB2473205](https://support.microsoft.com/help/2473205).
 
-For more information about performance tuning, see the **Tuning parameters for SMB file servers** section in [Performance Tuning for File Servers](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/file-server/).
+For more information about performance tuning, see the **Tuning parameters for SMB file servers** section in [Performance Tuning for File Servers](/windows-server/administration/performance-tuning/role/file-server/).

@@ -108,7 +108,7 @@ You can use the [klist command](/windows-server/administration/windows-commands/
 
 ### Effects on start-up and sign-in processes
 
-The Group Policy service is optimized to speed up the application of group policy and to reduce adverse effects on client performance. For more information, see [Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj573586(v=ws.11)). This article provides an in-depth explanation of how Group Policy interacts with start-up and sign-in processes. The Group Policy service can run in the foreground (at startup or sign-in) or in the background (during the user session). The service processes Group Policy in the following manner:
+The Group Policy service is optimized to speed up the application of group policy and to reduce adverse effects on client performance. For more information, see [Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj573586(v=ws.11)). This article provides an in-depth explanation of how Group Policy interacts with start-up and sign-in processes. The Group Policy service can run in the foreground (at startup or sign-in) or in the background (during the user session). The service processes Group Policy in the following manner:
 
 - *Asynchronous processing* refers to processes that do not depend on the outcome of other processes.
 - *Synchronous processing* refers to processes that depend on each other’s outcome. Therefore, synchronous processes must wait for the previous process to finish before the next process can start.
@@ -196,4 +196,4 @@ You can mitigate some problems by making configuration changes manually, by maki
 > [!NOTE]  
 > Mapped drive connections and logon scripts do not have the same foreground synchronous processing requirements as folder redirections, but they do require domain controller and resource server connectivity.
 
-For a detailed list of the processing requirements of Group Policy CSEs, see [Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj573586(v=ws.11)).
+For a detailed list of the processing requirements of Group Policy CSEs, see [Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj573586(v=ws.11)).

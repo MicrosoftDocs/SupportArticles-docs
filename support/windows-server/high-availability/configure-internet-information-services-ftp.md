@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 974603
 
 ## Configure high availability for IIS FTP servers using Failover Clustering
 
-1. Install the Web Server role on all cluster nodes. If you're installing on Windows Server 2012, don't include the "FTP Server" role. If you're installing on Windows Server 2012 R2 or a later version, include the in-box "FTP Server" role. For more information about IIS 8 deployment guide, visit the following website: [Open IIS Manager (IIS 8)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635847%28v=ws.11%29)
+1. Install the Web Server role on all cluster nodes. If you're installing on Windows Server 2012, don't include the "FTP Server" role. If you're installing on Windows Server 2012 R2 or a later version, include the in-box "FTP Server" role. For more information about IIS 8 deployment guide, visit the following website: [Open IIS Manager (IIS 8)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635847%28v=ws.11%29)
 
 2. Install the Failover Clustering feature on all cluster nodes and create the cluster. For more information, visit the following website: [Failover Cluster Deployment Guide](https://technet.microsoft.com/library/dd197477%28ws.10%29.aspx)
 
@@ -91,7 +91,7 @@ On each cluster node, enable Offline Files:
     2. In the left pane, select **Features**.
     3. Select **Add Features** in the right pane.
     4. Do one of the following, as appropriate for your Windows version:
-       - For Windows Server 2016, go to the [Install Server with Desktop Experience](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-with-desktop-experience) topic on the Microsoft Docs website.
+       - For Windows Server 2016, go to the [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) topic on the Microsoft Docs website.
        - For Windows Server 2102 and 2012 R2, choose **Desktop Experience** under **User Interfaces and Infrastructures** in the features list
 2. Do the following:  
    For Windows Server 2012, 2012 R2 and 2016, select **Sync Center** in Control Panel, and then select **Manage offline files.**

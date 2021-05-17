@@ -64,4 +64,4 @@ This behavior is by design.
 
 For more information about how to manage trusts in Microsoft Windows Server 2003, see the "How to Manage Trusts" and "Understanding Trusts" topics in the Active Directory section of the Windows Server 2003 product documentation. To view the documentation, visit the following Microsoft Web site:
 
-[Using WUA From a Remote Computer](https://docs.microsoft.com/windows/win32/wua_sdk/using-wua-from-a-remote-computer)
+[Using WUA From a Remote Computer](/windows/win32/wua_sdk/using-wua-from-a-remote-computer)

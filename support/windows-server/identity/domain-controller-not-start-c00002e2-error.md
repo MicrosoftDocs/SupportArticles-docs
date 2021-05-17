@@ -102,5 +102,5 @@ Windows Server 2008 R2 or Windows Server 2008
 Always use Server Manager or the ServerManager Windows PowerShell module to remove the Active Directory Domain Services role binaries. These tools validate whether a server is an active domain controller and do not let you remove critical files.
 
 For more information about how to remove domain controller metadata, go to the following Microsoft TechNet website:  
- [Clean Up Server Metadata](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907%28v=ws.10%29)  
+ [Clean Up Server Metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907%28v=ws.10%29)  
 If it is the only server domain in the domain, do not remove the Active Directory Domain Services from the server. Instead, restore its system state from the most recent backup.

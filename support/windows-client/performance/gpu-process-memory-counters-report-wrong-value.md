@@ -52,4 +52,4 @@ Graphics Processing Unit (GPU) process memory counters appear to show memory lea
 
 This is a known issue in Windows 10. To monitor dedicated GPU memory on affected systems, use the **Performance** pane of Task Manager, WPR, or WPA.
 For more information about the GPU process memory counters, see [GPUs in the Task Manager](https://devblogs.microsoft.com/directx/gpus-in-the-task-manager/).
-For more information about WPR and WPA, see [Windows Performance Toolkit](https://docs.microsoft.com/windows-hardware/test/wpt/).
+For more information about WPR and WPA, see [Windows Performance Toolkit](/windows-hardware/test/wpt/).

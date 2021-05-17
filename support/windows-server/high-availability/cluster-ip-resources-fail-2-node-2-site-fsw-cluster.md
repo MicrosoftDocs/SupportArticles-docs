@@ -55,7 +55,7 @@ If the two cluster nodes were in the same site, a similar network disconnect wou
 
 ## Status
 
-This behavior is by design. We recommend that you use four nodes instead of two nodes for multi-site clusters. [Azure AzS HCI](https://docs.microsoft.com/azure-stack/hci/overview) clusters require four nodes.
+This behavior is by design. We recommend that you use four nodes instead of two nodes for multi-site clusters. [Azure AzS HCI](/azure-stack/hci/overview) clusters require four nodes.
 
 ## Workaround
 

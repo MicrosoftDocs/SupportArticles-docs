@@ -55,7 +55,7 @@ dnscmd /config /enableednsprobes 0
     Command completed successfully.
 
 > [!NOTE]
-> Dnscmd.exe is installed on all Windows-based DNS servers except servers that are running Windows Server 2003 or Windows Server 2003 R2. You can install Dnscmd.exe from the Windows Server 2003 Support Tools. To download the Windows Server 2003 Support Tools, click the following Microsoft Download Center link: [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))
+> Dnscmd.exe is installed on all Windows-based DNS servers except servers that are running Windows Server 2003 or Windows Server 2003 R2. You can install Dnscmd.exe from the Windows Server 2003 Support Tools. To download the Windows Server 2003 Support Tools, click the following Microsoft Download Center link: [Setspn](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))
 
 ## More information
 

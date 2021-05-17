@@ -139,7 +139,7 @@ Before you can delete the replication links to the Active Directory naming conte
 ### Remove domain controller metadata for all other domain controllers in the domain
 
 You can restore or connect a second domain controller to complete initial synchronization. If you cannot add a second domain controller, you must either perform a metadata cleanup on the non-existent domain controllers to remove them from the domain permanently or delete the replication links to the Active Directory naming contexts.
- For more information about how to remove metadata, click the following article number to view the article [Clean up Server Metadata.](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)  
+ For more information about how to remove metadata, click the following article number to view the article [Clean up Server Metadata.](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)  
 
 ### Verify that Active Directory objects that are related to RID allocation are valid
 

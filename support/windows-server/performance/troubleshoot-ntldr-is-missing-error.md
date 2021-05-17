@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows 2000
 _Original KB number:_ &nbsp; 318728
 
 >[!NOTE]
-This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle/).  
+This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).  
 
 ## Summary
 

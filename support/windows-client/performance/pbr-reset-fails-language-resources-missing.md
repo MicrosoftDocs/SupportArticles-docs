@@ -76,6 +76,6 @@ For users who can't access internet:
 
 ## More information
 
-- [Push-button reset](https://docs.microsoft.com/windows-hardware/manufacture/desktop/push-button-reset-overview)
-- [How Push-button reset works](https://docs.microsoft.com/windows-hardware/manufacture/desktop/how-push-button-reset-features-work)
-- [Windows Recovery Environment (Windows RE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+- [Push-button reset](/windows-hardware/manufacture/desktop/push-button-reset-overview)
+- [How Push-button reset works](/windows-hardware/manufacture/desktop/how-push-button-reset-features-work)
+- [Windows Recovery Environment (Windows RE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)

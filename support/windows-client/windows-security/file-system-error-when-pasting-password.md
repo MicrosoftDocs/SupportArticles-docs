@@ -64,7 +64,7 @@ To fix the consent.exe crashing issue, install the Windows 10 cumulative update 
 
 ## Workaround
 
-To work around this issue, display the UAC elevation prompt on the standard user desktop instead of on the Winlogon desktop. The UAC prompt behavior can be configured by using Group Policy. See [User Account Control: Switch to the secure desktop when prompting for elevation](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)  for more information.
+To work around this issue, display the UAC elevation prompt on the standard user desktop instead of on the Winlogon desktop. The UAC prompt behavior can be configured by using Group Policy. See [User Account Control: Switch to the secure desktop when prompting for elevation](/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)  for more information.
 
 ## More information
 

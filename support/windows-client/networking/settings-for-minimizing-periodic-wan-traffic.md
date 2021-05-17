@@ -122,7 +122,7 @@ Recommended value (seconds): 600
 
 #### The maximum password age
 
-Specifies how frequently the system changes the computer account password of the local computer. This entry is used only when the system is configured to change the computer password automatically at set intervals. That is, this entry is used only when the value of the **DisablePasswordChange** entry is **0**. For more information, see [Domain member: Disable machine account password changes](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/domain-member-disable-machine-account-password-changes).
+Specifies how frequently the system changes the computer account password of the local computer. This entry is used only when the system is configured to change the computer password automatically at set intervals. That is, this entry is used only when the value of the **DisablePasswordChange** entry is **0**. For more information, see [Domain member: Disable machine account password changes](/windows/security/threat-protection/security-policy-settings/domain-member-disable-machine-account-password-changes).
   
 Subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
 Entry: MaximumPasswordAge  
@@ -151,7 +151,7 @@ Type: DWORD
 Default value (seconds): 3,600 (1 hour)
 
 Also review the following Microsoft Docs topic on DFS volume settings:
- [Change the amount of time that clients cache referrals](https://docs.microsoft.com/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
+ [Change the amount of time that clients cache referrals](/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
 
 ### The Knowledge Consistency Checker (KCC) replication topology update
 
