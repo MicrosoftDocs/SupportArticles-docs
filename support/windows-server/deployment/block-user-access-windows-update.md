@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to block user access to Windows Update on Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4014345
 
 ## Symptoms

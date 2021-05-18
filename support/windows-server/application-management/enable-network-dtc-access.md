@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes the procedures that you follow to enable network Distributed Transaction Coordinator (DTC) access.  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 817064
 
 ## Summary

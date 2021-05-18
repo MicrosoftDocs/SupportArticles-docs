@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to troubleshoot inter-forest sIDHistory migration with Active Directory Migration Tool version 2 (ADMTv2).
 
-_Original product version:_ &nbsp;  Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 322970
 
 ## More information

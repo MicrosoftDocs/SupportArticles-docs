@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes the logs that you must collect when you troubleshoot RDS issues.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2747656
 
 ## Introduction

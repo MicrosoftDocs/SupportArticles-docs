@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article provides a solution to an issue that repairs or uninstalls for certain products may fail after you install software updates.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 971187
 
 ## Symptoms

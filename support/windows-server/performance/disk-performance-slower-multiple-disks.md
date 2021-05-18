@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes a resolution for an issue in which  disk performance may be slower than expected. This issue may occur when you use a hardware or software-based RAID.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 929491
 
 ## Symptoms

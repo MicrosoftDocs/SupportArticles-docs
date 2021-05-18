@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes an issue where unknown devices appear in Device Manager of a virtual machine.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2925727
 
 ## Symptoms

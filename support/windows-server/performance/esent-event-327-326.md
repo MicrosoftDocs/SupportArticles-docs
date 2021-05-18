@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides a solution to an issue where ESENT Event IDs 327 and 326 are filled up the Application log file.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2900773
 
 ## Symptoms

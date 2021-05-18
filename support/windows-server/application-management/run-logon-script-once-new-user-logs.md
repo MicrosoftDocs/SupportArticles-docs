@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to configure a logon script or program to run one time when a user signs in to a computer for the first time.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325347
 
 ## Summary

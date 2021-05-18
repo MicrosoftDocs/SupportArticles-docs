@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This step-by-step article describes how to configure Active Directory diagnostic event logging in Microsoft Windows Server operating systems.
 
-_Original product version:_ &nbsp; Windows Server 2019, , Windows Server 2016, Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, , Windows Server 2016, Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 314980
 
 ## Summary

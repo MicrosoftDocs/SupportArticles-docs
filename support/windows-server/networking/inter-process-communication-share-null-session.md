@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes the inter-process communication share (IPC$) and null session behavior in Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3034016
 
 ## About IPC$ share

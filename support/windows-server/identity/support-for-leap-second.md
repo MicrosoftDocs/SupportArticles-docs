@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides information about Microsoft support for the leap second.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1803, Windows 10, version 1709, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1803, Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2722715
 
 ## Summary

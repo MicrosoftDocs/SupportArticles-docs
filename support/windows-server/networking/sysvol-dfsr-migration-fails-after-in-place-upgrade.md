@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where SYSVOL DFSR migration fails after you in-place upgrade a domain controller to Windows Server 2019.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4493934
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to an issue that folder redirection settings are being applied from the Group Policy settings that are deployed to the user's computer even though you turn on loopback processing in Group Policy.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 328008
 
 ## Symptoms

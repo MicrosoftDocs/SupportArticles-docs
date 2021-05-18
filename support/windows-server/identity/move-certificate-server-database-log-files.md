@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to move a certificate server's database and log files.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 283193
 
 > [!IMPORTANT]

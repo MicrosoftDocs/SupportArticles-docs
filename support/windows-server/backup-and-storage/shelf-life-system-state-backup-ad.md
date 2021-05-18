@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes the useful shelf life of a system-state backup of Active Directory (AD).
 
-_Original product version:_ &nbsp; Windows Server 2003, Windows 2000, Windows XP  
+_Applies to:_ &nbsp; Windows Server 2003, Windows 2000, Windows XP  
 _Original KB number:_ &nbsp; 216993
 
 ## Summary

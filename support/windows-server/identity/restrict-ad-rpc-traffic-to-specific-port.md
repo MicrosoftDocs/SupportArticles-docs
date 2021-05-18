@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to restrict Active Directory (AD) replication remote procedure calls (RPC) traffic to a specific port in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 224196
 
 ## Summary

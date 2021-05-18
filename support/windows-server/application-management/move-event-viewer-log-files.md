@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to move Microsoft Windows 2000 and Windows Server 2003 Event Viewer log files to another location on the hard disk.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315417
 
 ## Summary

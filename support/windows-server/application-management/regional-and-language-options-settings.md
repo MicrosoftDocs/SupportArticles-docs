@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes the user-specific and computer-wide settings in **Regional and Language Options** in Control Panel, the implications of configuring **Regional and Language Options** during Windows Setup, and the effects on Window Server 2003 Terminal Server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 924852
 
 ## Introduction

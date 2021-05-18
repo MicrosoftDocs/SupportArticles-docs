@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how attributes that contain a date/time value can be converted to standard meaningful date/time formats.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 555936
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This step-by-step article describes how to use the Backup feature to back up and restore data on your Windows Server 2003-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 326216
 
 ## Summary

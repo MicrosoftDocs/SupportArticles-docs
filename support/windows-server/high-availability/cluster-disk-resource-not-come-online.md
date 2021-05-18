@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides help to solve an issue where the disk resource fails to come online when the name of the cluster disk resource has an invalid character.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2590305
 
 ## Symptoms

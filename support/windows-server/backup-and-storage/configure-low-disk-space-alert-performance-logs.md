@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes how to configure a Low Disk Space Alert by using the Performance Logs and Alerts Feature.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324796
 
 ## Summary

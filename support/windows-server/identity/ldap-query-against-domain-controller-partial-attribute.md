@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides workarounds for the issue when you run an LDAP query against a domain controller, you obtain a partial attribute list.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976063
 
 ## Symptoms

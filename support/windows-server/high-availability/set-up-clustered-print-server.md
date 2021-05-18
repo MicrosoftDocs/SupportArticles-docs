@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes the steps to set up a clustered print server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 278455
 
 ## More information

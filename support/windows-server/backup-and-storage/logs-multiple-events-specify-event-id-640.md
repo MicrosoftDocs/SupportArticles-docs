@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides some information about Event ID 640.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4577004
 
 ## Symptoms
