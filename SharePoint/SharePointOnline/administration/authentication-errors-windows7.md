@@ -26,7 +26,7 @@ appliesto:
 
 As previously communicated in the Microsoft 365 Admin Center (for example, communication MC240160 in February 2021), we're moving all online services to Transport Layer Security (TLS) 1.2+. This change started on October 15, 2020. Support for TLS 1.2+ will continue to be added to all Microsoft 365 environments for the next several months. If you haven't taken steps to prepare for this change, your connectivity to Microsoft 365 might be affected.
 
-Make sure that you have carefully reviewed information about [TLS deprecation](https://docs.microsoft.com/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide). That situation might also cause this error.
+Make sure that you carefully review information about [TLS deprecation](https://docs.microsoft.com/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide). That change might also cause this error.
 
  > [!NOTE]
  > Special notice: Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
