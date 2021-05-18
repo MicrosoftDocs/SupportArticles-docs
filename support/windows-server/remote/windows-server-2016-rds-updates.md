@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article introduces the recommended hotfixes and updates for Remote Desktop Services in Windows Server 2016.
 
-_Original product version:_ &nbsp;Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp;4039839
 
 ## Summary  

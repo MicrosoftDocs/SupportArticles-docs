@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where networking performance is reduced after you enable Server Message Block (SMB) Encryption or SMB Signing in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4458042
 
 ## Symptoms

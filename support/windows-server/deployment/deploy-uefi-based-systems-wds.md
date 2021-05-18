@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article discusses the support for deploying to UEFI-based systems from Windows Deployment Services (WDS).
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2938884
 
 ## More information

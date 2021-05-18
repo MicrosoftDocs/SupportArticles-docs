@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes how to enable the Volume Shadow Copy service's debug tracing features in Windows Server 2003 and Windows Server 2008.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887013
 
 > [!IMPORTANT]

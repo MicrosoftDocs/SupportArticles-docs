@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes the changes of the default behavior for Core Parking.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2814791
 
 ## Summary

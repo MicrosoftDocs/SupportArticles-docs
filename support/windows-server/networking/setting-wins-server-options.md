@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an error that occurs when you try to specify the same WINS address in the Secondary WINS address.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 150737
 
 ## Symptoms

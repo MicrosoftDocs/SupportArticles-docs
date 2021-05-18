@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes an issue where Direct-X diagnostics tool (DXDIAG) reports an unexpected value for the display adapters memory.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2026022
 
 ## Symptoms

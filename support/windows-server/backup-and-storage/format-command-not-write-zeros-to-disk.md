@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article discusses a change in the behavior of the format command in Windows Vista and later Windows versions.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Window 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Window 10 – all editions  
 _Original KB number:_ &nbsp;941961
 
 ## Introduction

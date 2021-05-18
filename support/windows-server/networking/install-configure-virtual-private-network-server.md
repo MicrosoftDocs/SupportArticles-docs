@@ -19,7 +19,7 @@ This step-by-step article describes how to install virtual private networking (V
 
 For a Microsoft Windows XP version of this article, see [314076](https://support.microsoft.com/help/314076).  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323441
 
 ## Summary

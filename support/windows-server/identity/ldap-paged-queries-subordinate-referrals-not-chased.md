@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides some approaches to avoid the problem that LDAP Paged Queries with subordinate referrals are not chased properly.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2561166
 
 ## Symptoms

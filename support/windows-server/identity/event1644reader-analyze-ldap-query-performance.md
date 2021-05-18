@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes a script that helps analyze Active Directory event ID 1644 in Windows Server. Review the [steps to use the script](#how-to-use-the-script) and then [analyze your problems](#scenario-analysis).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3060643
 
 ## About the Event1644Reader.ps1 script

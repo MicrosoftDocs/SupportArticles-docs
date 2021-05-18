@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps fix the error 0xC004F074 that occurs when you activate Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974998
 
 ## Symptom

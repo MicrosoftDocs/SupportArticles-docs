@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to an issue where Windows Management Instrumentation (WMI) Group Policy filters that compare Win32_OperatingSystem BuildNumber don't work as expected in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3119213
 
 ## Symptoms

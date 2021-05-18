@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to errors that occur when you use the Adprep tool together with the `/gpprep` argument.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2743345
 
 ## Symptoms

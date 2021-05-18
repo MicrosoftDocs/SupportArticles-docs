@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how the Receive Window Auto-Tuning feature improves data transfer, how to enable/diable this feature for HTTP traffic on Windows Vista-based computers, and issues that may occur after you enable this feature for HTTP traffic.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 947239
 
 ## Introduction

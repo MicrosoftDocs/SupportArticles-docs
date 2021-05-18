@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes the hotfixes that are currently available for Windows Server 2012 R2-based failover clusters and are highly recommended to be installed on each server of a failover cluster.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2920151
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a resolution to solve the Active Directory replication error (8452). This article is only intended for technical support agents and IT professionals. If you're a home user and looking for help with a problem, visit [ask the Microsoft Community](https://answers.microsoft.com).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2023704
 
 ## Symptoms

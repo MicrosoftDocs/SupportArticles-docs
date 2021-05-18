@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This step-by-step article describes how to enable the Plug and Play feature on devices that use a parallel port device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 254664
 
 ## Summary

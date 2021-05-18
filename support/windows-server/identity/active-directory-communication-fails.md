@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes an issue in which Active Directory communication, including replication fails intermittently.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 272294
 
 ## Symptoms

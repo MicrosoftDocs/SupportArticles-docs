@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes steps to manually turn disk write caching on or off.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324805
 
 ## Summary

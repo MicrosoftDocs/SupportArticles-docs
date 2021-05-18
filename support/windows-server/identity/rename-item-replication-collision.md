@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to rename an object after a replication collision has occurred.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 297083
 
 ## Summary

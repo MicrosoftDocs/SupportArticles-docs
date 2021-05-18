@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides some information about Windows Server Update Services 3.0 Service Pack 1 package.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 948014
 
 ## Introduction

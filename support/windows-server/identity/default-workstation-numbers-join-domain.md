@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to the change the AD to allow more or fewer machine accounts in the domain.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;243327
 
 ## Summary

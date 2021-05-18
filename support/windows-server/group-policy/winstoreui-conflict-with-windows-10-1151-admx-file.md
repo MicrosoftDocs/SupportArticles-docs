@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides help to solve a WinStoreUI.admx conflict that occurs when Central Store is updated by using Windows 10 Version 1511 ADMX files.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3190327
 
 ## Symptoms

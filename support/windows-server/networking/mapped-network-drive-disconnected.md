@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where mapped network drive is disconnected after you install or upgrade to Symantec AntiVirus 10.0 or to Symantec Client Security 3.0.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 932463
 
 ## Symptoms
