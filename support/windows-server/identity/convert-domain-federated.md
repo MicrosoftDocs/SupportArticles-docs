@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
 ms.technology: windows-server-active-directory
 ---
-# Error when you run the Convert-MsolDomainToStandard : Failed to connect to Active Directory Federation Services 2.0 on the local machine
+# Error when you run the Convert-MsolDomainToStandard cmdlet: Failed to connect to Active Directory Federation Services 2.0 on the local machine
 
 This article provides a resolution to resolve an issue where you receive "Failed to connect to Active Directory Federation Services 2.0 on the local machine" error when converting a domain from federated to managed using `Convert-MsolDomainToStandard` cmdlet.
 
