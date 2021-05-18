@@ -1,7 +1,7 @@
 ---
 title: +<Country code> is automatically added to all calls
 description: Describes an issue in which Skype for Business for iOS users see +<country code> added to the beginning of phone numbers that they want to dial on an iPhone or iPad. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: rischwen， landerl， mirung， corbinm
 appliesto:
@@ -42,8 +42,8 @@ Enterprise Voice administrators can manipulate dialed numbers by using normaliza
 
 For more information, see the following TechNet resources:
 
-[Plan for outbound voice routing in Skype for Business Server 2015](https://technet.microsoft.com/library/gg413082.aspx)
+[Plan for outbound voice routing in Skype for Business Server 2015](/skypeforbusiness/plan-your-deployment/enterprise-voice-solution/outbound-voice-routing)
 
-[Set-CsTrunkConfiguration](https://technet.microsoft.com/library/gg398238.aspx)
+[Set-CsTrunkConfiguration](/powershell/module/skype/Set-CsTrunkConfiguration)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

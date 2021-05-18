@@ -1,7 +1,7 @@
 ---
 title: Known issues in Rooms 
-ms.author: v-lanac
-author: lanachin
+ms.author: luche
+author: helenclu
 ms.reviewer: sohailta
 manager: serdars
 audience: ITPro
@@ -20,29 +20,27 @@ ms.custom:
 search.appverid: 
 - MET150
 ---
-# Known issues in Rooms 
+# Known issues in Rooms
 
 This article lists the known issues for Microsoft Teams Rooms, by feature area.
 <!-- If we get word that one of these issues no longer applies, contact meerak@microsoft.com or msmets@microsoft.com and let them know to EoL the corresponding KB  -->
 
 <a name="update"> </a>  
-## Update 
+## Update
 
 | Issue title |  Behavior \/ Symptom | Known workaround | KB Article |
 |  ---        |      ---             |   ---            | --- |
-| Application not launching |  After updating to application version 4.4.41.0, the system boots to black screen, or go to the logon screen after few minutes. | Follow the steps in [Microsoft Teams Rooms application does not start after update to version 4.4.41.0](https://docs.microsoft.com/microsoftteams/troubleshoot/teams-administration/teams-rooms-app-wont-start-after-update) to fix this issue.  | None |
-|  App out of date         |    The Microsoft Teams Rooms console shows a "system config out of date" error.                |   [Use the Microsoft Teams Rooms recovery tool](https://docs.microsoft.com/MicrosoftTeams/rooms/recovery-tool)             |  None |
-|  Device updated to unsupported version of Windows 10   |    Windows 10 device updated from version 1803 to version 1809, which is not supported. The supported version is 1903. |   This can happen if the [Group Policy or MDM setting for DeferFeatureUpdatesPeriodinDays](https://docs.microsoft.com/windows/deployment/update/waas-configure-wufb) setting, which lets you defer feature updates for a specified number of days, is set to the maximum of 365 days. <br><br> Windows 10 version 1809 isn't supported with Microsoft Teams Rooms, while version 1903 is supported. However, as of March 27, 2020, version 1809 is over 365 days old. If this setting isn't changed, Windows attempts to install version 1809, which may cause issues with Microsoft Teams Rooms.<br><br>To avoid this situation, **remove** any Group Policy or MDM setting for deferring updates. This allows Windows to update to the latest, supported OS version. <br><br>**IMPORTANT** The Group Policy or MDM setting must be **removed** (left unconfigured) and **not set to 0**. If the policy is set to 0, Windows takes the latest available version which may not be supported. |  None |
+| Application not launching |  After updating to application version 4.4.41.0, the system boots to black screen, or go to the logon screen after few minutes. | Follow the steps in [Microsoft Teams Rooms application does not start after update to version 4.4.41.0](https://support.microsoft.com/topic/microsoft-teams-rooms-application-does-not-start-after-you-update-to-version-4-4-41-0-or-later-387eff45-3905-d768-a5df-a0c716c9b757) to fix this issue.  | None |
+|  App out of date         |    The Microsoft Teams Rooms console shows a "system config out of date" error.                |   [Use the Microsoft Teams Rooms recovery tool](/MicrosoftTeams/rooms/recovery-tool)             |  None |
+|  Device updated to unsupported version of Windows 10   |    Windows 10 device updated from version 1803 to version 1809, which is not supported. The supported version is 1903. |   This can happen if the [Group Policy or MDM setting for DeferFeatureUpdatesPeriodinDays](/windows/deployment/update/waas-configure-wufb) setting, which lets you defer feature updates for a specified number of days, is set to the maximum of 365 days. <br><br> Windows 10 version 1809 isn't supported with Microsoft Teams Rooms, while version 1903 is supported. However, as of March 27, 2020, version 1809 is over 365 days old. If this setting isn't changed, Windows attempts to install version 1809, which may cause issues with Microsoft Teams Rooms.<br><br>To avoid this situation, **remove** any Group Policy or MDM setting for deferring updates. This allows Windows to update to the latest, supported OS version. <br><br>**IMPORTANT** The Group Policy or MDM setting must be **removed** (left unconfigured) and **not set to 0**. If the policy is set to 0, Windows takes the latest available version which may not be supported. |  None |
 |||||
 
-
-
 <a name="OS-conflicts"> </a>  
-## User interface 
+## User interface
 
 | Issue title |  Behavior \/ Symptom | Known workaround | KB Article |
 |  ---        |      ---             |   ---            | --- |
-|Virtual keyboard missing   | The virtual keyboard doesn't appear when you need to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install 2020-04 Cumulative Update for Windows 10, version 1903 for x64-based Systems through Windows Updates.  | None | 
+|Virtual keyboard missing   | The virtual keyboard doesn't appear when you need to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install 2020-04 Cumulative Update for Windows 10, version 1903 for x64-based Systems through Windows Updates.  | None |
 |||||
 
 <a name="Hardware"> </a>  
@@ -66,7 +64,7 @@ If you desire a front of room display to automatically switch to an active video
 
 ***
 
-Always use a wired 1-Gbps network connection to assure you have the needed bandwidth. 
+Always use a wired 1-Gbps network connection to assure you have the needed bandwidth.
 
 ***
 
@@ -79,4 +77,4 @@ Microsoft Teams Rooms is a multi-window application and requires a front of room
 
 [Microsoft Teams Rooms help](https://support.office.com/article/Skype-Room-Systems-version-2-help-e667f40e-5aab-40c1-bd68-611fe0002ba2)
 
-[Manage Microsoft Teams Rooms](https://docs.microsoft.com/MicrosoftTeams/rooms/rooms-manage)
+[Manage Microsoft Teams Rooms](/MicrosoftTeams/rooms/rooms-manage)

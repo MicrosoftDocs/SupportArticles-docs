@@ -1,8 +1,8 @@
 ---
 title: Can't manage a user in Exchange Admin Center
 description: Provides workarounds to resolve a problem in which you receive an error (Can't find the organizational unit that you specified) when you manage a user in Exchange Admin Center (EAC).
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

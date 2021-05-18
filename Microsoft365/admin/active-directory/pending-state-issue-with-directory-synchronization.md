@@ -1,16 +1,16 @@
 ---
 title: Fix pending state issue with Directory synchronization for Office 365, Azure, or Intune
 description: Provides resolution to the pending state issue with directory synchronization for Office 365, Azure, or Intune
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
 ms.service: o365-administration
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 ms.reviewer: ericta, andypunt, v-lanac
 appliesto:
 - Azure Active Directory
@@ -65,7 +65,7 @@ To determine whether directory synchronization is activated or deactivated, foll
 Wait until directory synchronization is activated or deactivated. Note the following:
 
 - If you enabled directory synchronization for the first time, activation may require up to 24 hours.
-- If you **re-enabled** directory synchronization, activation may require up to 72 hours. For more information, see [Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool](https://docs.microsoft.com/troubleshoot/azure/active-directory/cannot-manage-objects).
+- If you **re-enabled** directory synchronization, activation may require up to 72 hours. For more information, see [Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool](/troubleshoot/azure/active-directory/cannot-manage-objects).
 - If you disabled directory synchronization, deactivation may require up to 72 hours.
 
 If directory synchronization isn't activated or deactivated after the expected time, follow these steps, and then contact [Microsoft Support](https://support.microsoft.com/):
@@ -91,6 +91,6 @@ If directory synchronization isn't activated or deactivated after the expected t
 
 ## More information
 
-For more information about how to enable directory synchronization in Office 365, Azure, and Intune, see [Prepare for directory synchronization to Microsoft 365](https://docs.microsoft.com/office365/enterprise/prepare-for-directory-synchronization).
+For more information about how to enable directory synchronization in Office 365, Azure, and Intune, see [Prepare for directory synchronization to Microsoft 365](/office365/enterprise/prepare-for-directory-synchronization).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.

@@ -1,7 +1,7 @@
 ---
 title: New features in the firmware update for Polycom VVX IP phones
 description: Describes the new features in the firmware update for the Polycom VVX IP phone that support Skype for Business Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
@@ -24,7 +24,7 @@ This article describes the features of the firmware update for the Polycom VVX 
 
 ### Firmware upgrade options
 
-Phones that are certified for the Skype for Business Cloud PBX add-on are configured to download and install new firmware automatically when updates are available. For manual control of firmware upgrades, see [Set-CsIPPhonePolicy](https://technet.microsoft.com/library/mt629497.aspx).
+Phones that are certified for the Skype for Business Cloud PBX add-on are configured to download and install new firmware automatically when updates are available. For manual control of firmware upgrades, see [Set-CsIPPhonePolicy](/powershell/module/skype/Set-CsIPPhonePolicy).
 
 To avoid affecting core business hours, the phones receive firmware updates during off hours for specific regions. The updates are also delivered on a staggered schedule to have a minimal effect on traffic bandwidth.
 
@@ -69,7 +69,7 @@ The following table lists the features that are provided in this firmware update
 
 - [Polycom Phones FAQ](https://www.polycom.com/polycom-phones-and-microsoft-teams-faq.html)
 - [OAuth 2.0 and third-party application ID](https://techcommunity.microsoft.com/t5/skype-for-business-blog/oauth-2-0-and-third-party-application-id-timeline-extended-to/ba-p/482876)
-- [IP Phones](https://docs.microsoft.com/skypeforbusiness/certification/devices-ip-phones)
-- [Device update considerations](https://docs.microsoft.com/skypeforbusiness/what-is-phone-system-in-office-365/getting-phones-for-skype-for-business-online/deploying-skype-for-business-online-phones#step-4---device-update-considerations)
+- [IP Phones](/skypeforbusiness/certification/devices-ip-phones)
+- [Device update considerations](/skypeforbusiness/what-is-phone-system-in-office-365/getting-phones-for-skype-for-business-online/deploying-skype-for-business-online-phones#step-4---device-update-considerations)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -231,6 +231,8 @@
       href: ../deployment/macros-in-this-project-disabled-outlook.md
     - name: How to manage multiple VBA projects
       href: ../deployment/manage-distribute-outlook-vba-project.md
+    - name: Unable to publish a form
+      href: ../deployment/cannot-publish-form.md
   - name: Development
     items:
     - name: Advise MAPI function returns 0x8007000E
@@ -241,6 +243,8 @@
     items:
     - name: Create or modify Outlook client-only rule
       href: ../email-management/create-modify-client-only-rule-with-error.md
+    - name: Items that are deleted from a shared mailbox go to the wrong folder in Outlook
+      href: ../email-management/deleted-items-go-to-wrong-folder.md
     - name: Email are not saved to Sent Items
       href: ../email-management/email-sent-are-not-saved-to-sent-items-folder.md
     - name: Email remains in Outbox if using DelegateSentItemsStyle
@@ -261,6 +265,8 @@
       href: ../email-management/some-commands-not-available-when-using-quick-reply.md
     - name: Some rules are disabled and can't be re-enabled
       href: ../email-management/rules-not-be-uploaded-to-exchange-server.md
+    - name: Unintentional email messages received
+      href: ../email-management/unintentional-emails-received.md
   - name: Installation
     items:
     - name: Cached Exchange Mode

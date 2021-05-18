@@ -1,7 +1,7 @@
 ---
 title: Move-CsUser HostedMigration fault Error=(507) when move to Online
 description: To resolve this issue, you must assign the user a license for Skype for Business Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
@@ -27,7 +27,7 @@ In a Lync hybrid deployment, when you try to move a user to Skype for Business O
 
 ## Solution 
 
-Before you try to move the user to Skype for Business Online, the user must be enabled for both Lync Server on-premises and Skype for Business Online. The solution is to sign in to the Microsoft 365 admin center and then assign the user a license for Skype for Business Online. For more information about how to assign a license to a user, go to the following Microsoft website: [Assign or remove a license](https://docs.microsoft.com/skypeforbusiness/skype-for-business-and-microsoft-teams-add-on-licensing/assign-skype-for-business-and-microsoft-teams-licenses)  
+Before you try to move the user to Skype for Business Online, the user must be enabled for both Lync Server on-premises and Skype for Business Online. The solution is to sign in to the Microsoft 365 admin center and then assign the user a license for Skype for Business Online. For more information about how to assign a license to a user, go to the following Microsoft website: [Assign or remove a license](/skypeforbusiness/skype-for-business-and-microsoft-teams-add-on-licensing/assign-skype-for-business-and-microsoft-teams-licenses)  
 
 ## More information
 

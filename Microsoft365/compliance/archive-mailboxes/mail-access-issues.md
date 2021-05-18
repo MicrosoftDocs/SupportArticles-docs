@@ -1,8 +1,8 @@
 ---
 title: Mail access issues in a hybrid Exchange deployment with cloud-based archive
 description: Describes an issue in which users who have a cloud-based archive in a hybrid Exchange deployment can't access their mail in Outlook or Outlook on the web. Also, on-premises users receive an NDR when they try to send mail to users who have a cloud-based archive.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -83,7 +83,7 @@ This issue occurs if the email address policy has a default domain that isn't a 
 
         To do this, use the Exchange admin center or the Exchange Management Console to add the domain name to the existing federation trust.
 
-        For more information about how to do this, go to [Manage a federation trust](https://technet.microsoft.com/library/jj673036%28v=exchg.160%29.aspx).
+        For more information about how to do this, go to [Manage a federation trust](/exchange/manage-a-federation-trust-exchange-2013-help).
 
    - Change the SMTP address of the arbitration mailbox and the transport settings container in Active Directory
 

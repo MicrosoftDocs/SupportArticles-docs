@@ -1,7 +1,7 @@
 ---
 title: Certain Microsoft SharePoint Server 2013 installation scenarios are not supported
 description: Describes SharePoint Server 2013 installation scenarios that are not supported.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
@@ -21,7 +21,7 @@ appliesto:
 
 This article describes Microsoft SharePoint Server 2013 installation scenarios that are not supported.   
 
-For information about best practices for using SharePoint 2013 in a virtual configuration, see [Use best practice configurations for the SharePoint 2013 virtual machines and Hyper-V environment](https://technet.microsoft.com/library/ff621103%28v=office.15%29.aspx?f=255&mspperror=-2147217396).  
+For information about best practices for using SharePoint 2013 in a virtual configuration, see [Use best practice configurations for the SharePoint 2013 virtual machines and Hyper-V environment](/SharePoint/administration/sharepoint-server-2016-in-microsoft-azure?f=255&mspperror=-2147217396).  
 
 ## Symptoms  
 

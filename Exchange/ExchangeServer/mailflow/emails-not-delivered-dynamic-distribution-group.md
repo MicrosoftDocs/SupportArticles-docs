@@ -1,8 +1,8 @@
 ---
 title: Emails aren't delivered to all recipients
 description: Describes an issue in which email messages that are sent to a Dynamic Distribution Group aren't delivered to all recipients. Provides a resolution.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

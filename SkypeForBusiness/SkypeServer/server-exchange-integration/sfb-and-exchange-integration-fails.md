@@ -1,7 +1,7 @@
 ---
 title: Skype for Business and Exchange integration fails
 description: Provide a solution when Skype for Business and Exchange integration fails.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business server 2015
@@ -25,7 +25,7 @@ Consider the following scenario:
 
 - You have a Microsoft Lync 2013 or Skype for Business server, and you have configured integration with Microsoft Exchange 2013 or 2016.   
 - At least some of the users have contoso.com as primary SMTP.   
-- On the Exchange server, you change the AcceptedDomains settings so that instead of contoso.com you have \*.contoso.com, as described in [Procedures for accepted domains in Exchange 2016](https://technet.microsoft.com/library/aa996314%28v=exchg.160%29.aspx).   
+- On the Exchange server, you change the AcceptedDomains settings so that instead of contoso.com you have \*.contoso.com, as described in [Procedures for accepted domains in Exchange 2016](/Exchange/mail-flow/accepted-domains/accepted-domain-procedures).   
 
 After this change, Skype for Business and Exchange integration starts failing. The following error message is reported in the Lync server log:
 

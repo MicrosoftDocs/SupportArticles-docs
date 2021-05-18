@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot "Open with Explorer" issues in SharePoint Online
 description: Discusses how to troubleshoot issues that you may experience when you use the "Open with Explorer" command.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 ms.date: 02/14/2020
 localization_priority: Normal
@@ -10,7 +10,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ms.custom: 
@@ -25,7 +25,7 @@ ms.custom:
 This article discusses how to troubleshoot issues that you may experience when you use the "Open with Explorer" command in SharePoint Online.
 
 > [!NOTE]
-> The Open with Explorer command doesn't work in the Microsoft Edge browser, Google Chrome, Mozilla Firefox, or on the Mac platform. Open with Explorer only works with Internet Explorer. However, beginning August 17th, 2021, [Microsoft 365 apps will no longer support Internet Explorer 11](https://docs.microsoft.com/lifecycle/announcements/m365-ie11-microsoft-edge-legacy). 
+> The Open with Explorer command doesn't work in the Microsoft Edge browser, Google Chrome, Mozilla Firefox, or on the Mac platform. Open with Explorer only works with Internet Explorer. However, beginning August 17th, 2021, [Microsoft 365 apps will no longer support Internet Explorer 11](/lifecycle/announcements/m365-ie11-microsoft-edge-legacy). 
 
 > [!NOTE]
 > The Open with Explorer command is slower and less reliable than [syncing SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88). The OneDrive sync client provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e), which allows you to access all your files in OneDrive without using local storage space. 
@@ -38,7 +38,7 @@ When you browse to a SharePoint Online document library, you may receive intermi
 
 - **Your client does not support opening this list with Windows Explorer.**
 - **We're having a problem opening this location in File Explorer. Add this web site to your Trusted Sites list and try again.**
-- **We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see [https://support.microsoft.com/kb/2629108](/sharepoint/troubleshoot/lists-and-libraries/troubleshoot-issues-using-open-with-explorer).**
+- **We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see [https://support.microsoft.com/kb/2629108]().**
 - **We're having trouble opening this library in File Explorer. Syncing this library will give you a better experience.**
 
   ![We're having trouble opening this library in File Explorer error message](./media/troubleshoot-issues-using-open-with-explorer/error.png)
@@ -76,9 +76,9 @@ After this parameter is enabled, you are prompted by a dialog box when you selec
 > [!NOTE]
 > If you receive an Internet Explorer Security message that says, "A website wants to open web content using this program on your computer," it's likely that SharePoint Online isn't added to the trusted sites zone in Internet Explorer. See the "Add your SharePoint Online sites to trusted sites" section of this article for more information about how to add SharePoint Online to your trusted sites.
 
-For more information about the  **UsePersistentCookiesForExplorerView** parameter and the persistent cookie, go to [Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps&preserve-view=true).
+For more information about the  **UsePersistentCookiesForExplorerView** parameter and the persistent cookie, go to [Set-SPOTenant](/powershell/module/sharepoint-online/Set-SPOTenant?preserve-view=true&view=sharepoint-ps).
 
-For more information about the SharePoint Online Management Shell, go to [What is the SharePoint Online Management Shell?](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps&preserve-view=true)
+For more information about the SharePoint Online Management Shell, go to [What is the SharePoint Online Management Shell?](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?preserve-view=true&view=sharepoint-ps)
 
 ### Add your SharePoint Online sites or Open with Explorer URL to trusted sites
 
@@ -123,7 +123,7 @@ Make sure that the latest Windows updates are applied. If all the latest updates
 
    - For Windows XP, Windows Vista, or Windows 7, click **Start**, click **Run**, enter **services.msc**, and then press Enter.
    - For Windows 8, select **Start**, enter **services.msc**, and then press Enter.
-   - For Windows Server 2008 or Windows Server 2012, select Start, enter services.msc, and then press Enter. If the WebClient service isn't present, you must first install the Desktop Experience. For more information about how to install the Desktop Experience, go to [Install Desktop Experience](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754314(v=ws.11)).
+   - For Windows Server 2008 or Windows Server 2012, select Start, enter services.msc, and then press Enter. If the WebClient service isn't present, you must first install the Desktop Experience. For more information about how to install the Desktop Experience, go to [Install Desktop Experience](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754314(v=ws.11)).
 
 1. In the list of services, locate the **WebClient** service, and then make sure that its status in the **Status** column is set to **Started**. If the status isn't set to **Started**, double-click the WebClient service to open the **WebClientProperties** dialog box, select **Start**, and then select **OK**.
 

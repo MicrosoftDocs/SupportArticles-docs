@@ -5,11 +5,11 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
-author: simonxjx
+author: helenclu
 audience: ITPro
 ms.service: project-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Project Online

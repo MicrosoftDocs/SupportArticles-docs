@@ -1,8 +1,8 @@
 ---
 title: Get-MailboxStatistics doesn't display a value in StorageLimitStatus field in Exchange Server
 description: Describes an issue in which the StorageLimitStatus field is blank when you run the Get-MailboxStatistics cmdlet to query mailbox quotas.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -58,4 +58,4 @@ Get-MailboxStatistics -Database DatabaseName | ft displayname,*quota*,*size -Aut
 
 ## More information
 
-For more information about the Get-MailboxStatistics cmdlet in Exchange Server 2013, see [General information about the Get-MailboxStatistics cmdlet](https://technet.microsoft.com/library/bb124612.aspx).
+For more information about the Get-MailboxStatistics cmdlet in Exchange Server 2013, see [General information about the Get-MailboxStatistics cmdlet](/powershell/module/exchange/get-mailboxstatistics).

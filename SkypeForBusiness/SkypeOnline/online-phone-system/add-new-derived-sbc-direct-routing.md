@@ -1,7 +1,7 @@
 ---
 title: Can't add a new derived SBC for Direct Routing
 description: Provides a resolution to an issue in which you are not able to add a new derived SBC for Direct Routing.
-author: helenclu
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -32,4 +32,4 @@ New domains must have at least one user enabled for Enterprise Voice to create a
 
 ## Resolution
 
-Enable at least one user for Enterprise Voice in the newly verified domain. See the detailed steps [here](https://docs.microsoft.com/microsoftteams/direct-routing-enable-users#configure-the-phone-number-and-enable-enterprise-voice-and-voicemail).
+Enable at least one user for Enterprise Voice in the newly verified domain. See the detailed steps [here](/microsoftteams/direct-routing-enable-users#configure-the-phone-number-and-enable-enterprise-voice-and-voicemail).

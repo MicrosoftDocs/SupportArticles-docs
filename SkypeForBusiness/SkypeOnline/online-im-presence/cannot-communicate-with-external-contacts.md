@@ -1,7 +1,7 @@
 ---
 title: Skype for Business Online users can't communicate with external contacts
 description: Discusses that users can't communicate with external contacts in Microsoft Skype for Business Online in Microsoft Office 365. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
@@ -80,7 +80,7 @@ If your Skype for Business Online users can't communicate with all external cont
  
 If the external contact's organization hasn't been configured for federation with Skype for Business Online, go to the following TechNet website: 
 
-[Configuring Federation Support for a Skype for Business Online Customer](https://technet.microsoft.com/library/hh202193.aspx) 
+[Configuring Federation Support for a Skype for Business Online Customer](/previous-versions/office/lync-server-2013/lync-server-2013-configuring-federation-support-for-a-lync-online-customer) 
  
 After you verify that federation is configured correctly for the external contact's domain, Office 365 for enterprises customers should examine the Lync Control Panel or Lync Admin Center to make sure that the external contact's domain is either on the allowed list of domains or not on the blocked list of domains. For guidance about how to configure external communications with other organizations, view the following Microsoft website: 
 

@@ -1,8 +1,8 @@
 ---
 title: Unable to update the password for Windows in Exchange
 description: Describes an error when users reset their Windows password on a computer that's not domain-joined in an Exchange Server environment. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -60,4 +60,4 @@ This behavior is by design. The user must create a password that meets these com
 
 ## More information
 
-For more information, see the [Exchange ActiveSync policy engine overview](https://technet.microsoft.com/library/dn282287.aspx).
+For more information, see the [Exchange ActiveSync policy engine overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282287(v=ws.11)).

@@ -1,8 +1,8 @@
 ---
 title: Excel macros that protect and unprotect worksheets may run slowly
 description: Describes an issue in which macros in Excel 2013 may run slower than expected.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

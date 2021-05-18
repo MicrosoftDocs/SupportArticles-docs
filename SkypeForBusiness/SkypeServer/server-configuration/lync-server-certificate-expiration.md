@@ -1,7 +1,7 @@
 ---
 title: Prevent Lync Server certificate expiration
 description: Describes how to prevent Lync Server certificate expiration.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -49,24 +49,24 @@ Use the PowerShell cmdlet Get-CsCertificate to locate information about the cert
 
 For more information on Get-CsCertificate cmdlet, please refer the following document:
 
-[Get-CsCertificate](https://technet.microsoft.com/library/gg398227.aspx )
+[Get-CsCertificate](/powershell/module/skype/Get-CsCertificate)
 
 To request a certificate using the Lync Management Shell, use the Request-CsCertificate cmdlet.
 
 For more information on Request-CsCertificate cmdlet, please refer the following document:
 
-[Request-CsCertificate](https://technet.microsoft.com/library/gg425723.aspx)
+[Request-CsCertificate](/powershell/module/skype/Request-CsCertificate)
 
 To import a certificate using Lync Management Shell, use the Import-CsCertificate cmdlet.
 
 For more information on Import-CsCertificate cmdlet, please refer the following document:
 
-[Import-CsCertificate](https://technet.microsoft.com/library/gg398688.aspx)
+[Import-CsCertificate](/powershell/module/skype/Import-CsCertificate)
 
 To assign a certificate using Lync Management Shell, use the Set-CsCertificate cmdlet.
 
 For more information on Set-CsCertificate cmdlet, please refer the following document:
 
-[Set-CsCertificate](https://technet.microsoft.com/library/gg398518.aspx)
+[Set-CsCertificate](/powershell/module/skype/Set-CsCertificate)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,14 +1,14 @@
 ---
 title: Connect-MsolService Exception of type was thrown
 description: Describes an issue in which you can't connect to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune. Occurs when you use the connect-MSOLService cmdlet in the Azure Active Directory Module for Windows PowerShell.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 search.appverid: 
 - MET150
 appliesto:
@@ -47,6 +47,6 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-For more information about Azure Active Directory Module for Windows PowerShell, see [Azure Active Directory Cmdlets](https://aka.ms/aadposh).
+For more information about Azure Active Directory Module for Windows PowerShell, see [Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

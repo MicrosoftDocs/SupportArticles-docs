@@ -1,8 +1,8 @@
 ---
 title: Outlook can't download offline address book in an Exchange coexistence environment
 description: Describes an issue that Outlook is unable to download or update OAB in an Exchange coexistence environment (Exchange 2013 and 2010). A workaround is provided.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -79,6 +79,6 @@ If Outlook Anywhere is enabled for Exchange 2010, the client receives the extern
 
 For more information, see the following resources:
 
-[Get-OfflineAddressBook](https://technet.microsoft.com/library/aa997970%28v=exchg.150%29.aspx)
+[Get-OfflineAddressBook](/powershell/module/exchange/get-offlineaddressbook)
 
-[Set-MailboxDatabase](https://technet.microsoft.com/library/bb123971%28v=exchg.150%29.aspx)
+[Set-MailboxDatabase](/powershell/module/exchange/set-mailboxdatabase)

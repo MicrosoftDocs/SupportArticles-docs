@@ -1,8 +1,8 @@
 ---
 title: Desktop Setup Tool cannot download updates
 description: Describes an issue in which Office Desktop Setup can't download and install updates from Microsoft Update in an Office 365 environment. Provides a resolution.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

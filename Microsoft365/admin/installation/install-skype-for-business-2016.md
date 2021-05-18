@@ -1,7 +1,7 @@
 ---
 title: Install of Skype for Business 2016 installs Microsoft 365 Apps for enterprise
 description: Explains that when you install Skype for Business 2016 from the Office 365 portal, all the Microsoft 365 Apps for enterprise applications are installed, not just Skype. A workaround is provided.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Microsoft 365 Apps for enterprise
 - Skype for Business 2016
@@ -31,9 +31,9 @@ You have a Microsoft Microsoft 365 Apps for enterprise or Office 365 E3 subscrip
 
 To install only Skype for Business 2016, you have to use the 2016 version of the Office Deployment Tool (ODT) for Click-to-Run.
 
-For more information about the Office Deployment Tool, see [Overview of the Office Deployment Tool](https://technet.microsoft.com/library/jj219422%28v=office.15%29.aspx). 
+For more information about the Office Deployment Tool, see [Overview of the Office Deployment Tool](/deployoffice/overview-office-deployment-tool). 
 
-For information about excluding programs from the installation, see [Configuration options for the Office Deployment Tool](https://technet.microsoft.com/library/dn745895.aspx).
+For information about excluding programs from the installation, see [Configuration options for the Office Deployment Tool](/deployoffice/office-deployment-tool-configuration-options).
 
 A sample Configuration.XML file:
 

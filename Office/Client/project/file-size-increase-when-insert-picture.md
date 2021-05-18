@@ -1,8 +1,8 @@
 ---
 title: File size increases greatly
 description: Provides the workaround to resolve the file size increases greatly issue after you insert a picture ino a project plan.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

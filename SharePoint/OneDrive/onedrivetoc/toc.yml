@@ -5,6 +5,8 @@
     items:
     - name: Error when accessing OneDrive or Sharepoint
       href: ../administration/error-accessing-onedrive-sharepoint.md
+    - name: Error Code 0x8004de40 when signing in to OneDrive
+      href: ../administration/error-0x8004de40-in-onedrive.md
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data
@@ -39,6 +41,10 @@
       href: ../sharing-and-permissions/restore-onedrive-share-settings-office365.md
     - name: '"This item might not exist" error'
       href: ../sharing-and-permissions/this-item-might-not-exist-error.md
+  - name: Storage
+    items:
+    - name: Check OneDrive site eligibility for increased storage
+      href: ../storage/check-storage-increase-eligibility.md
   - name: Sites
     items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive

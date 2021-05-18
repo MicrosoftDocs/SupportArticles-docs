@@ -1,7 +1,7 @@
 ---
 title: Error in the Office 365 portal
 description: Describes a problem in which administrators receive an error message in the Office 365 portal that states that the value of msRTCSIP-PrimaryUserAddress or the SIP address isn't unique. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
@@ -87,6 +87,6 @@ For more information about how to detect duplicate or invalid attributes that mi
 
 [2643629 ](https://support.microsoft.com/help/2643629) One or more objects don't sync when using the Azure Active Directory Sync tool 
 
-For more information about ADSI Edit, go to the following Microsoft website: [https://technet.microsoft.com/en-us/library/cc731547(WS.10).aspx](https://technet.microsoft.com/library/cc731547%28ws.10%29.aspx)
+For more information about ADSI Edit, go to the following Microsoft website: [https://technet.microsoft.com/en-us/library/cc731547(WS.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731547(v=ws.10))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

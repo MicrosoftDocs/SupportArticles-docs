@@ -1,7 +1,7 @@
 ---
 title: Audio or video doesn't start in a peer-to-peer or multiparty conference
 description: Describes an issue in which you can't start audio or video in a peer-to-peer or multiparty conference in Skype for Business Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
@@ -39,7 +39,7 @@ To resolve this issue, follow these steps:
 
     [2386655 ](https://support.microsoft.com/help/2386655) You experience poor audio or video quality in Skype for Business Online   
 2. Check the Skype for Business Admin Center to see whether audio/video capabilities are turned off for the whole domain or for the user or users who are experiencing the issue.   
-3. Try using a different audio/video device on the same computer and try using the same audio/video device on a different computer. If the issue can be narrowed down to the specific audio/video device, verify that the [USB Peripheral device](https://technet.microsoft.com/lync/gg278173) is certified for use with Skype for Business Online.   
+3. Try using a different audio/video device on the same computer and try using the same audio/video device on a different computer. If the issue can be narrowed down to the specific audio/video device, verify that the [USB Peripheral device](/SkypeForBusiness/lync-cert/ip-phones) is certified for use with Skype for Business Online.   
 4. Run Windows/Microsoft Updateand install any updates (optional or required) for your audio/video devices.   
 5. Open the Control Paneland bring up the Device Manager. Look under Sound, video and game controllers for any devices that have conflicts.   
 6. Verify network connections for the best experience. To do this, follow these steps:

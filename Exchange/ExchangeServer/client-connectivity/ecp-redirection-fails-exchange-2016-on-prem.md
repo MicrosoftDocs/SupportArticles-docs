@@ -1,8 +1,8 @@
 ---
 title: ECP redirection fails in Exchange 2016 On-prem
 description: Describes an issue that you get error (The length of the query string for this request exceeds the configured maxQueryStringLength value) when accessing ECP from a remote site in Exchange Server 2016.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -37,7 +37,7 @@ The virtual directory in the 302 response that's created by the Microsoft Exchan
 
 ## Workaround
 
-To work around this issue, remove the `ExternalURL` property from the ECP. Then, when a user accesses the ECP from the remote site, the user will be proxied to the ECP in the targeted Active Directory site. For more information, see [Understanding Proxying and Redirection](https://technet.microsoft.com/library/bb310763%28v=exchg.141%29.aspx).
+To work around this issue, remove the `ExternalURL` property from the ECP. Then, when a user accesses the ECP from the remote site, the user will be proxied to the ECP in the targeted Active Directory site. For more information, see [Understanding Proxying and Redirection](/previous-versions/office/exchange-server-2010/bb310763(v=exchg.141)).
 
 ## Status
 

@@ -1,8 +1,8 @@
 ---
 title: Search logic change to "Title" property in the Security and Compliance Centerx
 description: Describes a change to the "Title" property when conducting eDiscovery searches in the Security and Compliance Center. 
-ms.author: luche
-author: helenclu
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -22,7 +22,7 @@ ms.reviewer: markjjo
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-If you use the Security & Compliance Center to create content searches and eDiscovery holds (especially if you use the [Query Based Hold](https://docs.microsoft.com/microsoft-365/compliance/ediscovery-cases?view=o365-worldwide#step-4-place-content-locations-on-hold&preserve-view=true) feature), you should be aware of a change coming to the way that the Title property is handled.
+If you use the Security & Compliance Center to create content searches and eDiscovery holds (especially if you use the [Query Based Hold](/microsoft-365/compliance/ediscovery-cases?preserve-view=true&view=o365-worldwide#step-4-place-content-locations-on-hold) feature), you should be aware of a change coming to the way that the Title property is handled.
 
 When the SharePoint managed property Title is used in a search query or a query-based hold, the results can come from several different places, including the text of a Word or PowerPoint document. Since the primary objective of the Title property is to create a descriptive title, this method doesn't always work and returns incorrect information.
 
@@ -117,7 +117,7 @@ If you discover any query that uses the Title field, update the query as shown i
 
 For more information on managing eDiscovery and creating holds, see the following articles:
 
-- [Manage eDiscovery cases in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/ediscovery-cases?view=o365-worldwide&preserve-view=true)
-- [Overview of retention policies](https://docs.microsoft.com/microsoft-365/compliance/retention-policies?view=o365-worldwide&preserve-view=true)
+- [Manage eDiscovery cases in the Security & Compliance Center](/microsoft-365/compliance/ediscovery-cases?preserve-view=true&view=o365-worldwide)
+- [Overview of retention policies](/microsoft-365/compliance/retention-policies?preserve-view=true&view=o365-worldwide)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

@@ -1,7 +1,7 @@
 ---
 title: Lync users can't communicate with external contacts
 description: Describes an issue in which you can't send messages to or connect to external contacts that you added to a Windows Live EASI domain. A resolution is provided.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -72,7 +72,7 @@ PIC in Skype for Business Online supports connectivity with Microsoft accounts (
 
 If you directly add a PIC contact by using the contact's EASI ID (for example, you use JoeAndreshak.@live-contoso.com), a specific SRV record is required in the DNS for live-contoso.com. This SRV record is required because the Skype for Business Online server uses the domain suffix in the user's EASI ID to determine how to route messages. In this example, the Skype for Business Online server tries to use the live-contoso.com domain suffix. 
 
-For more info about how to troubleshoot Skype for Business Online federated contacts, see [Skype for Business Online users can't communicate with external contacts ](https://docs.microsoft.com/SkypeForBusiness/troubleshoot/online-im-presence/cannot-communicate-with-external-contacts).
+For more info about how to troubleshoot Skype for Business Online federated contacts, see [Skype for Business Online users can't communicate with external contacts ](../online-im-presence/cannot-communicate-with-external-contacts.md).
 
 > [!NOTE]
 > This scenario also applies to contacts that are logging in to Skype by using their Microsoft accounts.

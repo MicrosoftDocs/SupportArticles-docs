@@ -1,7 +1,7 @@
 ---
 title: An error occurred during the Skype Meeting when join a Skype Meeting Broadcast
 description: Describes an issue that triggers an "error occurred during the Skype Meeting" error when you try to join a Skype Meeting Broadcast event as an event team member. A resolution is provided.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 appliesto:
 - Skype for Business Online
 - Skype for Business Server 2015
@@ -35,7 +35,7 @@ Skype Meeting Broadcast uses regional dedicated conferencing pools. In order to 
 To fix this issue, see the following articles to configure your environment for Skype Meeting Broadcast:
 
 - If you have an Office 365 tenant and no on-premises infrastructure, see [Set up Skype for Business Online for Skype Meeting Broadcast](https://support.office.com/article/set-up-skype-for-business-online-for-skype-meeting-broadcast-dfa736b9-4920-4f48-b8c0-b5487ec6086f).   
-- For hybrid customers, follow the appropriate steps in [Configure your on-premises deployment for Skype Meeting Broadcast](https://technet.microsoft.com/library/mt243953.aspx).   
+- For hybrid customers, follow the appropriate steps in [Configure your on-premises deployment for Skype Meeting Broadcast](/skypeforbusiness/deploy/configure-skype-meeting-broadcast).   
 
 ## More information
 

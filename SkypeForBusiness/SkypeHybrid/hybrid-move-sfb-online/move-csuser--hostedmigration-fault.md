@@ -1,7 +1,7 @@
 ---
 title: Move-CsUser HostedMigration fault when you move users to Skype for Business Online
 description: Describes the error message Move-CsUser HostedMigration fault when you move users to Skype for Business Online from an on-premises Lync Server. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -53,6 +53,6 @@ $CSSession = New-CsOnlineSession -Credential $cred
 Import-PSSession $CSSession -AllowClobber 
 ```
 
-For more information about how to connect to Skype for Business Online by using Windows PowerShell, see [Set up your computer for Windows PowerShell](https://technet.microsoft.com/library/dn362795.aspx).
+For more information about how to connect to Skype for Business Online by using Windows PowerShell, see [Set up your computer for Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

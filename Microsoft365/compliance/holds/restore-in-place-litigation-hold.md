@@ -1,8 +1,8 @@
 ---
 title: How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment
 description: Describes how to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -86,7 +86,7 @@ To restore Litigation Hold settings, follow these steps:
 
 To restore the Litigation Hold duration setting, follow these steps:
 
-1. Connect to Exchange Online by using remote PowerShell. For more information, go to [Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. Connect to Exchange Online by using remote PowerShell. For more information, go to [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. To restore a user's Litigation Hold duration setting, run the following command:
 
     ```powershell

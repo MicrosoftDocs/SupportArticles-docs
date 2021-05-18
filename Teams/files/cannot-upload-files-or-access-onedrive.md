@@ -1,5 +1,5 @@
 ---
-title: (File is locked) or (item might not exist) error
+title: File is locked or item might not exist error
 description: Fixes an issue in which you get the "file is locked" error when uploading a file or get the "item might not exist or is no longer available" error when accessing OneDrive in Teams.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -10,6 +10,7 @@ ms.service: msteams
 localization_priority: Normal
 ms.custom: 
 - CI 125872
+- CI 147731
 - CSSTroubleshoot
 ms.reviewer: prbalusu
 appliesto:
@@ -17,44 +18,68 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# Error when uploading a file or accessing OneDrive cloud storage in Teams
+# Error when uploading files to a Teams chat
 
-## Symptoms
+When you try to upload a file in a Microsoft Teams chat, you receive either of the following error messages.
 
-In Microsoft Teams, you receive one of these error messages:
+- **Error Message 1**
 
-### Error 1
+    > The file \<FileName> didn't upload.  
+    > The file \<FileName> is locked.
 
-When uploading a file in a chat, you receive this error message:
+    **Note:** This error occurs while Teams is uploading the file to your OneDrive cloud storage.
 
-> The file <*FileName*> didn't upload.  
-> The file <*FileName*> is locked.
+- **Error Message 2**
 
-**Note:** This error occurs while Teams is uploading the file to the OneDrive cloud storage.
+    > The file \<FileName> didn't upload.  
+    > Your OneDrive isn't available.
 
-### Error 2
+- **Error Message 3**
 
-When accessing the OneDrive cloud storage from the **Files** section, you receive this error message:
+    When you access your OneDrive cloud storage through the **Files** tab, you receive the following error message:
 
-> This item might not exist or is no longer available.  
-> This item might have been deleted, expired, or you might not have permission to view it. Contact the owner of this item for more information.
-
-## Cause
-
-These error messages occur when the document library on your OneDrive site has been changed from its default name "Documents" to another name.
+    > This item might not exist or is no longer available.  
+    > This item might have been deleted, expired, or you might not have permission to view it.  
+    > Contact the owner of this item for more information.
 
 ## Resolution
 
-To resolve this issue, the document library must be renamed to **Documents**.
+Error 1 can have multiple causes. To resolve Error 1, try each of the following resolutions in the order in which they're listed. Check whether the issue is resolved after you try each resolution before you go to the next one.
 
-You must have administrator permissions or contact your administrator to make these changes.
+To resolve Error 2, try Resolution 2.
 
-1. In [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491), open your OneDrive site.
-2. Go to **All Files**.
-3. Right-click the document library, select **Rename**, and rename it to **Documents**.
+To resolve Error 3, try Resolution 1.
 
-**Note:** We don't recommend using SharePoint Designer to perform any customization on OneDrive sites.
+**Resolution 1**
 
-## More information
+Error 1 and Error 3 can occur if the name of the **Documents** folder (the default document library on the OneDrive site) was changed to something else.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+To fix the error, you must revert the folder name to **Documents** by using an administrative account and following these steps:
+
+1. Navigate to the [Microsoft 365 admin center](https://admin.microsoft.com/).
+2. In the left pane, select **Support**, and then select **New Service Request**.
+3. In the **Briefly describe your issue** field, type *OneDrive Document Library Path Modified*.
+4. In the **Run diagnostics** section, type the **User Principal Name (UPN)** of the user who is seeing the error, and then select **Run Tests**.
+5. If the test result indicates that the name of the default document library name is not Documents, select the checkbox to authorize the diagnostic to change it back to Documents, and then select **Update Settings**.
+
+    You'll see a confirmation notice that states that the document library was successfully renamed to **Documents**.
+
+**Note:** Although you can use SharePoint Designer to change the name of the default document library, we don't recommend this option.
+
+**Resolution 2**
+
+Error 1 can occur if your OneDrive site is set as ReadOnly.
+
+Error 2 can occur if your OneDrive site is set as NoAccess.
+
+Both these settings indicate that your OneDrive site is locked. To fix the error, [unlock the site](/sharepoint/manage-lock-status).
+
+**Resolution 3**
+
+Error 1 can occur if a user is deleted and then re-created by using the same User Principal Name (UPN). This situation will cause a user ID mismatch on the OneDrive site.
+
+To resolve this error, [delete the re-created user, and restore the original user](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-sharepoint-error#accessing-a-onedrive-site).
+
+## Contact Support
+
+If none of the resolutions fix the error, create a new service request. Use the following description: "files upload failing to teams chat." Attach the Teams desktop logs and a browser trace to it. For information about how to collect the desktop logs and browser trace, see [Collect logs to troubleshoot Teams issues](/microsoftteams/log-files#desktop-logs).

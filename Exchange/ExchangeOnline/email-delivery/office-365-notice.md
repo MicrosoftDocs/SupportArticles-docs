@@ -1,11 +1,11 @@
 ---
 title: Configure a certificate-based connector to relay email messages through Office 365
 description: Describes scenarios that requires you to take action before February 1, 2017 to prevent interruptions to mail flow.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
@@ -76,7 +76,7 @@ You can set up a certificate-based connector for Office 365 to relay messages 
 
 To create or change a certificate-based connector, follow these steps:
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)), click **Admin**, and then open the Exchange admin center. For more information, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
+1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)), click **Admin**, and then open the Exchange admin center. For more information, see [Exchange admin center in Exchange Online](/exchange/exchange-admin-center).
 
     ![admin sign-in](./media/office-365-notice/admin-sign-in.png)
 2. Click **mail flow**, click **connectors**, and then do one of the following:
@@ -133,6 +133,6 @@ To configure your on-premises environment, follow these steps:
 
 For more information about how to address the connector setting requirement, see [Important connector notice](https://blogs.technet.microsoft.com/exchange/2016/03/29/important-notice-for-office-365-email-customers-who-have-configured-connectors/).
 
-For more information about how to relay messages through Office 365, see the "[Setting up mail flow where some mailboxes are in Office 365 and some mailboxes are on your organization's mail servers](https://docs.microsoft.com/exchange/mail-flow-best-practices/mail-flow-best-practices#bkmk_hybridmailflowbestpractices)" section of [Mail flow best practices for Exchange Online and Office 365](https://docs.microsoft.com/exchange/mail-flow-best-practices/mail-flow-best-practices).
+For more information about how to relay messages through Office 365, see the "[Setting up mail flow where some mailboxes are in Office 365 and some mailboxes are on your organization's mail servers](/exchange/mail-flow-best-practices/mail-flow-best-practices#bkmk_hybridmailflowbestpractices)" section of [Mail flow best practices for Exchange Online and Office 365](/exchange/mail-flow-best-practices/mail-flow-best-practices).
 
 Still need help? Go to[Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

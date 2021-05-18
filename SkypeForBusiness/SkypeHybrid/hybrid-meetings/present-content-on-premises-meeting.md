@@ -1,7 +1,7 @@
 ---
 title: Online users can't present content in on-premises hosted meetings
 description: Describes an issue that blocks online users from presenting content in on-premises hosted meetings in a Skype for Business Hybrid deployment. This is a DNS issue, and a resolution is provided.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Server
@@ -20,9 +20,9 @@ appliesto:
 
 ## Symptoms
 
-Online hosted users report that they receive the following error message when they try to present or view meeting content that's hosted in an on-premises Skype for Business meeting when they're connected to an internal corporate network: 
+Online hosted users report that they receive the following error message when they try to present or view meeting content that's hosted in an on-premises Skype for Business meeting when they're connected to an internal corporate network:
 
-![error](./media/present-content-on-premises-meeting/error.png)
+![error screenshot](./media/present-content-on-premises-meeting/error.png)
 
 > [!NOTE]
 > When users are connected externally, they can share content.
@@ -55,4 +55,4 @@ Additionally, the tracing log will display the following error, together with an
 
 ## More Information
 
-For more information, see [Plan your hybrid deployment for Skype for Business Server 2015](https://technet.microsoft.com/library/jj205403.aspx).
+For more information, see [Plan your hybrid deployment for Skype for Business Server 2015](/skypeforbusiness/hybrid/plan-hybrid-connectivity?bc=%2fSkypeForBusiness%2fbreadcrumb%2ftoc.json&toc=%2fSkypeForBusiness%2ftoc.json).

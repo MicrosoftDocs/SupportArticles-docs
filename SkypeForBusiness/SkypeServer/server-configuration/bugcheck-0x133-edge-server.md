@@ -1,7 +1,7 @@
 ---
 title: Bug Check 0x133 DPC_WATCHDOG_VIOLATION error on Skype for Business Edge server
 description: Describes Bug Check 0x133 DPC_WATCHDOG_VIOLATION error.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
@@ -43,7 +43,7 @@ To avoid this issue, disable the "processor groups" feature in the Edge server's
 
 ## More Information
 
-For more information about this error, see [Bug Check 0x133 DPC_WATCHDOG_VIOLATION](https://msdn.microsoft.com/library/windows/hardware/jj154556%28v=vs.85%29.aspx). 
+For more information about this error, see [Bug Check 0x133 DPC_WATCHDOG_VIOLATION](/windows-hardware/drivers/debugger/bug-check-0x133-dpc-watchdog-violation). 
 
 To disable multiple processor groups, go to the "Numa Configuration" section in the BIOS. By default, Numa Configuration is set to **Clustered** on some modern systems, which creates multiple processor groups. Set this option to **flat**.
 

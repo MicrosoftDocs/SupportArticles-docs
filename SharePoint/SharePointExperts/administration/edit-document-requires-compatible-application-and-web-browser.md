@@ -1,6 +1,6 @@
 ﻿---
 title: You receive an "Edit Document requires a Microsoft SharePoint Foundation compatible application and web browser" error when you open documents from SharePoint
-author: AmandaAZ
+author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

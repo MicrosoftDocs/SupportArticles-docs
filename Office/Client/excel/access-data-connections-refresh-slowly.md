@@ -1,7 +1,7 @@
 ---
 title: Access data connections are slow to refresh in Excel
 description: How to resolve an issue when Access data connections are slow to refresh in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel
 - Access
@@ -30,7 +30,7 @@ When the Office Document Cache is utilized for an Excel file, a specialized Acce
 
 ## Status
 
-Microsoft is researching this problem and will post more information in this article when the information becomes available. 
+This issue has been fixed. Details of versions where this is fixed match that of what's detailed in [Access error: "Query is corrupt"](https://support.microsoft.com/en-us/office/access-error-query-is-corrupt-fad205a5-9fd4-49f1-be83-f21636caedec)   
 
 ## More information
 

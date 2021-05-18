@@ -1,7 +1,7 @@
 ---
 title: Access Denied when you activate or deactivate for Publishing feature
 description: Access Denied when you activate or deactivate the SharePoint Server Publishing feature though you have Full Control permissions.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -34,7 +34,7 @@ Consider the following scenario.
 
 To resolve this issue, have a site collection administrator activate or deactivate the feature on the subsite. Or, an administrator can add the affected user to the **Hierarchy Managers** group for the site collection that contains the subsite.
 
-For more information about how to manage SharePoint groups, see [Customize SharePoint site permissions](https://docs.microsoft.com/sharepoint/customize-sharepoint-site-permissions?redirectSourcePath=%252fen-us%252farticle%252fcreate-and-manage-sharepoint-groups-b1e3cd23-1a78-4264-9284-87fed7282048).
+For more information about how to manage SharePoint groups, see [Customize SharePoint site permissions](/sharepoint/customize-sharepoint-site-permissions).
 
 ## More information
 

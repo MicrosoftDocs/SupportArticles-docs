@@ -1,7 +1,7 @@
 ---
 title: Title bar displays Lync after you install November 2015 update for Lync 2013
 description: Discusses an issue in which Lync is displayed in the title bar of Lync 2013 (Skype for Business 2015) after you install the November 2015 update.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2015
@@ -109,6 +109,6 @@ For more information about how to configure the Skype for Business user interfac
 
 - [Why do I see Skype for Business when I'm using Lync?](https://support.office.com/article/why-do-i-see-skype-for-business-when-i-m-using-lync-50935112-4978-46b8-b2ad-9dd7b81365bf)   
 - [Switching between the Skype for Business and the Lync client user interfaces](https://support.office.com/article/switching-between-the-skype-for-business-and-the-lync-client-user-interfaces-a2394a4c-7522-484c-a047-7b3289742be0)   
-- [Configure the client experience with Skype for Business 2015](https://technet.microsoft.com/library/dn951355.aspx)   
+- [Configure the client experience with Skype for Business 2015](/skypeforbusiness/deploy/deploy-clients/configure-the-client-experience)   
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

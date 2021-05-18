@@ -1,7 +1,7 @@
 ---
 title: We could not verify your account when reset admin password in Office 365
 description: Describes a scenario where you receive an error message when you try to reset your admin password in Office 365, Microsoft Intune, or Azure.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Cloud Services (Web roles/Worker roles) 
@@ -62,6 +62,6 @@ Or, you can use the Set-MsolUser Azure Active Directory Module for Windows Powe
 
 ## More information
 
-For more info about the Set-MsolUser cmdlet, see [Set-MsolUser](https://technet.microsoft.com/library/dn194136.aspx).
+For more info about the Set-MsolUser cmdlet, see [Set-MsolUser](/previous-versions/azure/dn194136(v=azure.100)).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

@@ -1,8 +1,8 @@
 ---
 title: Reconnect inactive or soft-deleted mailboxes to AD
 description: Explains how to reconnect an on-premises AD account with an inactive mailbox when the account is brought back into the scope of Azure AD Connect.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -53,7 +53,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
 2. Run the following command to temporarily associate the inactive mailbox with a cloud account. An account will be synced back to Azure AD:
 
    ```powershell
-   New-Mailbox -InactiveMailbox $InactiveMailbox.DistinguishedName -Name "<name of inactive mailbox>" -DisplayName "<DisplayName of inactive mailbox>" -MicrosoftOnlineServicesID <alias@*.onmicrosoft.com> - Password (ConvertTo-SecureString -String <PasswordString> -AsPlainText -Force) -ResetPasswordOnNextLogon $true
+   New-Mailbox -InactiveMailbox $InactiveMailbox.DistinguishedName -Name "<name of inactive mailbox>" -DisplayName "<DisplayName of inactive mailbox>" -MicrosoftOnlineServicesID <alias@*.onmicrosoft.com> -Password (ConvertTo-SecureString -String <PasswordString> -AsPlainText -Force) -ResetPasswordOnNextLogon $true
    ```
 
 3. Obtain the **ImmutableID** parameter value. By default, this is the on-premises `ObjectGUID` attribute as a base-64 string. You can convert `ObjectGUID` by using the following command in Windows PowerShell:

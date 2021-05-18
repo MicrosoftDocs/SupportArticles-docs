@@ -1,8 +1,8 @@
 ---
 title: The underlying connection was closed error
 description: Describes an issue in which you receive an An error occurred accessing Windows Live error when you run the Hybrid Configuration wizard.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: You are operating in a split-domain (hybrid) topology when set call queue
 description: Discusses that you receive a "You are operating in a split-domain (hybrid) topology" warning message when you configure an Office 365 call queue in the Skype for Business admin center. Provides a workaround.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business
@@ -66,7 +66,7 @@ If the agents are not listed,follow these steps:
 
 For more information, see the following TechNet topics:
 
-- [Plan for your Skype for Business Server 2015 deployment](https://technet.microsoft.com/library/dn951427.aspx)   
-- [New-CsHostingProvider](https://technet.microsoft.com/library/gg398490.aspx)   
-- [Set-CsHostingProvider](https://technet.microsoft.com/library/gg398532.aspx)   
-- [Enable users for Enterprise Voice online and Cloud PBX Voicemail](https://technet.microsoft.com/library/mt455213.aspx)   
+- [Plan for your Skype for Business Server 2015 deployment](/skypeforbusiness/plan-your-deployment/plan-your-deployment)   
+- [New-CsHostingProvider](/powershell/module/skype/New-CsHostingProvider)   
+- [Set-CsHostingProvider](/powershell/module/skype/Set-CsHostingProvider)   
+- [Enable users for Enterprise Voice online and Cloud PBX Voicemail](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-enterprise-voice-online-and-phone-system-voicemail)

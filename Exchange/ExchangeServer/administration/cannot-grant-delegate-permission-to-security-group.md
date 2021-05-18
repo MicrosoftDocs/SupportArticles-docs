@@ -1,8 +1,8 @@
 ---
 title: Sharing invitation couldn't be sent
 description: Error is triggered when a user in an Exchange Server 2013 environment tries to grant Delegate permissions to a security group through their Calendar. Workarounds are provided.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

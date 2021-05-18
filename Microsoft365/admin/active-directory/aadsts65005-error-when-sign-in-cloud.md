@@ -1,8 +1,8 @@
 ---
 title: AADSTS65005 error when you try to sign in to Microsoft Cloud services
 description: Describes an error that occurs when you try to sign in to or authenticate to one of the Microsoft Cloud Services by using a company app such as Office 365, Intune, Dynamics, Power BI, or Azure.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -34,12 +34,12 @@ This issue occurs because the company's app may not be registered with Azure AD,
 
 To fix this issue, use one of the following resources, depending on the services that you are trying to access:
 
-- [Office 365: Manually register your app with Azure AD so that it can access Office 365 APIs](https://msdn.microsoft.com/office/office365/howto/add-common-consent-manually)       
-- [Dynamics CRM: Register application for Dynamics CRM](https://msdn.microsoft.com/dynamics/crm/mt149065.aspx)    
--  [Problems signing in to a gallery application configured for federated single sign-on](https://docs.microsoft.com/azure/active-directory/application-sign-in-problem-federated-sso-gallery?/?WT.mc_id=DMC_AAD_Manage_Apps_Troubleshooting_Nav#no-resource-in-requiredresourceaccess-list)     
+- [Office 365: Manually register your app with Azure AD so that it can access Office 365 APIs](/graph/auth-register-app-v2)       
+- [Dynamics CRM: Register application for Dynamics CRM](/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory)    
+-  [Problems signing in to a gallery application configured for federated single sign-on](/azure/active-directory/application-sign-in-problem-federated-sso-gallery?/?WT.mc_id=DMC_AAD_Manage_Apps_Troubleshooting_Nav#no-resource-in-requiredresourceaccess-list)     
 
 ## More Information
 
 For more information about how to register your app with Azure Active Directory, see the following Microsoft website:
 
-[Integrating applications with Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)
+[Integrating applications with Azure Active Directory](/azure/active-directory/develop/quickstart-register-app)

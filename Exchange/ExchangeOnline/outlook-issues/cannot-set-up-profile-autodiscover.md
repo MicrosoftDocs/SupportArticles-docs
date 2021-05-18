@@ -1,11 +1,11 @@
 ---
 title: Can't set up a new profile by using Exchange Autodiscover for Online mailbox
 description: Describes an issue that blocks Outlook from setting up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365. Resolutions are provided.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 ms.custom: 
 - Exchange Online
@@ -99,13 +99,13 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
    - If the test is successful, Autodiscover is working correctly.
    - If the test fails, verify that the Autodiscover service is set up correctly. For more information, see the following resources:
 
-     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record that points to "autodiscover.outlook.com". For more information, see [Create DNS records for Office 365 at any DNS hosting provider](https://support.office.com/article/create-dns-records-for-office-365-at-any-dns-hosting-provider-7b7b075d-79f9-4e37-8a9e-fb60c1d95166) and [External Domain Name System records for Office 365](https://docs.microsoft.com/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide).
+     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record that points to "autodiscover.outlook.com". For more information, see [Create DNS records for Office 365 at any DNS hosting provider](https://support.office.com/article/create-dns-records-for-office-365-at-any-dns-hosting-provider-7b7b075d-79f9-4e37-8a9e-fb60c1d95166) and [External Domain Name System records for Office 365](/microsoft-365/enterprise/external-domain-name-system-records).
 
      - If you have an Exchange hybrid deployment, set up the Autodiscover public DNS records for your existing SMTP domains to point to an on-premises Exchange server. For more information, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
 
 #### Method 4: Make sure that the user's attributes in Active Directory are set correctly
 
-You can use the [Get-RemoteMailbox](https://technet.microsoft.com/library/ff607426%28v=exchg.160%29.aspx) cmdlet to determine the whether the following attributes are set correctly for the user. Common issues occur when a value is not set for one or more of these attributes. The following is an example of the correct attributes.
+You can use the [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox) cmdlet to determine the whether the following attributes are set correctly for the user. Common issues occur when a value is not set for one or more of these attributes. The following is an example of the correct attributes.
 
 |Attribute| Example |
 |-|-|
@@ -116,9 +116,9 @@ You can use the [Get-RemoteMailbox](https://technet.microsoft.com/library/ff6074
 |remoteRoutingAddress|ted@contoso.mail.onmicrosoft.com |
 |||
 
-To update these attributes, you can use the [Set-RemoteMailbox](https://technet.microsoft.com/library/ff607302%28v=exchg.160%29.aspx) cmdlet.
+To update these attributes, you can use the [Set-RemoteMailbox](/powershell/module/exchange/set-remotemailbox) cmdlet.
 
-After the correct values are set for these attributes, [force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories) to occur, and then try to set up the user's email account in Outlook.
+After the correct values are set for these attributes, [force directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_synchronizedirectories) to occur, and then try to set up the user's email account in Outlook.
 
 ### If you're not using a custom domain
 

@@ -50,6 +50,6 @@ To disable monitoring, you have to browse to the Microsoft Cloud App Security pa
 
 ## More information
 
-For more information, see [Session policies](https://docs.microsoft.com/cloud-app-security/session-policy-aad).
+For more information, see [Session policies](/cloud-app-security/session-policy-aad).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

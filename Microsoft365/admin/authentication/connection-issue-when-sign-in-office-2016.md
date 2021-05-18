@@ -1,7 +1,7 @@
 ---
 title: Connection issues in sign-in after update to Office 2016 build 16.0.7967
 description: Office Web Account Manager (WAM) sign-in issues after you update to Office 2016 build 16.0.7967 or later on Windows 10.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft 365 Apps for enterprise
@@ -33,7 +33,7 @@ By default, Microsoft Microsoft 365 Apps for enterprise (2016 version) uses Azur
 
 If you experience authentication issues in Office application on Windows 10, we recommend to do the following actions:
 
-- Update Office products to the latest build for your channel according to [Update history for Microsoft 365 Apps for enterprise (listed by date)](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date).
+- Update Office products to the latest build for your channel according to [Update history for Microsoft 365 Apps for enterprise (listed by date)](/officeupdates/update-history-office365-proplus-by-date).
 - Make sure that you are running any of the following Windows builds:
   - Any build for Windows 10, version 1809 or a later version
   - 17134.677 or later builds for Windows 10, version 1803
@@ -107,7 +107,7 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
 
     **Description: AADSTS70002: Error validating credentials. AADSTS135011: Device used during the authentication is disabled.**
 
-    To resolve this issue, we recommend that the Enterprise administrator enable the device in Active Directory or Azure Active Directory (Azure AD). For information about how to manage devices in Azure AD, see the [Device management tasks](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#device-management-tasks) section of the "How to manage devices using the Azure portal" topic on the Microsoft Docs website.
+    To resolve this issue, we recommend that the Enterprise administrator enable the device in Active Directory or Azure Active Directory (Azure AD). For information about how to manage devices in Azure AD, see the [Device management tasks](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks) section of the "How to manage devices using the Azure portal" topic on the Microsoft Docs website.
 
 - The Enterprise administrator or a policy deleted a device because of a security reason or by mistake. To verify that you are experiencing this issue, follow these steps:  
   1. Open Event viewer.
@@ -192,7 +192,7 @@ To resolve this issue and secure user credentials, we recommend that you enable 
 
 ### Symptom 4
 
-You have a non-persistent Virtual Desktop Infrastructure (VDI) environment that has a federated Identity Provider (IdP) that is configured as Single-Sign On (SSO). You do not expect to be prompted to activate or sign in because SSO is configured. However, you are prompted to sign in for each new session. [Office ULS logs](https://docs.microsoft.com/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) display the following error message:
+You have a non-persistent Virtual Desktop Infrastructure (VDI) environment that has a federated Identity Provider (IdP) that is configured as Single-Sign On (SSO). You do not expect to be prompted to activate or sign in because SSO is configured. However, you are prompted to sign in for each new session. [Office ULS logs](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) display the following error message:
 
 **{"Action": "BlockedRequest", "HRESULT": "0xc0f10005"**
 
@@ -204,7 +204,7 @@ You have a non-persistent Virtual Desktop Infrastructure (VDI) environment tha
 The following guidelines apply to this article:
 
 - On builds of Windows 7, Windows 8, Windows 8.1, or Windows 10 that are earlier than 15000, ADAL authentication is the only option.
-- The Windows build should be later than 15000 (Windows 10, version 1703, build 15063.138, Generally Available). For more information, see [Windows 10 release information](https://docs.microsoft.com/windows/release-information/).
+- The Windows build should be later than 15000 (Windows 10, version 1703, build 15063.138, Generally Available). For more information, see [Windows 10 release information](/windows/release-information/).
 - This article applies whether you use Microsoft Federation or non-Microsoft Federation solutions.
 
 For more information, see the following Knowledge Base article:

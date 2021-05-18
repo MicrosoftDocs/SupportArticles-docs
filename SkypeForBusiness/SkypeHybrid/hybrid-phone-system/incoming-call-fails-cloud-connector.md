@@ -1,7 +1,7 @@
 ---
 title: Incoming call fails when you use Skype for Business Cloud Connector Edition
 description: Describes an issue that triggers a "We're sorry, we cannot complete your call at this time" error when you use Skype for Business Cloud Connector Edition. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
@@ -55,7 +55,7 @@ For Cloud Connector Edition 1.4.1, the Edge Server is configured to use the inte
 
 For Cloud Connector Edition 1.4.2, the Edge Server is not automatically configured by using the DNS IP that's defined in the Cloud Connector configuration file.For more information, see the following Microsoft websites:
 
-- [Plan for Skype for Business Cloud Connector Edition](https://technet.microsoft.com/library/mt605227.aspx)   
-- [Advanced DNS planning for Skype for Business Server 2015](https://technet.microsoft.com/library/mt346420.aspx)   
+- [Plan for Skype for Business Cloud Connector Edition](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/plan-skype-for-business-cloud-connector-edition)   
+- [Advanced DNS planning for Skype for Business Server 2015](/previous-versions/office/communications/mt346420(v=ocs.16))   
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,8 +1,8 @@
 ---
 title: This doesn't look like a valid user ID error when a user signs in
 description: Resolves an issue that occurs if the user's UPN in the on-premises Active Directory environment and the user's UPN in Microsoft Azure Active Directory don't match.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -38,7 +38,7 @@ This situation can occur if the user's UPN changed but directory synchronization
 
 To resolve this issue, make sure that the on-premises UPN suffix is a verified domain, and then either wait until the next time that directory synchronization runs or force directory synchronization. 
 
-For more information about how to force directory synchronization, go to the following Microsoft website: [Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories)
+For more information about how to force directory synchronization, go to the following Microsoft website: [Force directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_synchronizedirectories)
 
 ## More Information
 

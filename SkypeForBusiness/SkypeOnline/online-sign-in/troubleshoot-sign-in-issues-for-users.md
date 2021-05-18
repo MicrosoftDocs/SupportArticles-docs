@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot sign-in issues
 description: Helps you resolve issues that you can't sign in to Skype for Business.
-author: lucciz01
-ms.author: v-zolu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -157,7 +157,7 @@ Did this solve your problem?
 
 ### Update Skype for Business
 
-Make sure the user has the [most current version of Skype for Business](https://technet.microsoft.com/lync/dn146015.aspx).
+Make sure the user has the [most current version of Skype for Business](/SkypeForBusiness/software-updates).
 
 Did this solve your problem?
 
@@ -166,7 +166,7 @@ Did this solve your problem?
 
 ### Delete Skype for Business sign-in information
 
-For more information, see [How to troubleshoot being unable to sign in to Skype for Business](/skypeforbusiness/troubleshoot/server-sign-in/unable-to-sign-in-to-sfb).
+For more information, see [How to troubleshoot being unable to sign in to Skype for Business](../../SkypeServer/server-sign-in/unable-to-sign-in-to-sfb.md).
 
 Did this solve your problem?
 

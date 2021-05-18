@@ -1,8 +1,8 @@
 ---
 title: Can't view contact organization information
 description: Provides a workaround for an issue in which contact organization information cannot be found and you receive a "We didn't find an organizational chart" error message.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -25,7 +25,7 @@ You can no longer find contact organization information in Microsoft Skype for
 
 > We didn't find an organizational chart.
 
-Additionally, MAPI is displayed as disconnected, or you see a "Your Exchange Server is currently unavailable" status in **MAPI Information** in Skype for Business [Configuration Information](/skypeforbusiness/troubleshoot/server-configuration/how-to-use-configuration-information).  
+Additionally, MAPI is displayed as disconnected, or you see a "Your Exchange Server is currently unavailable" status in **MAPI Information** in Skype for Business [Configuration Information](../server-configuration/how-to-use-configuration-information.md).  
 
 ## Cause
 

@@ -3,8 +3,6 @@
   items:
   - name: Administration
     items:
-    - name:  Update of Client Access Rules
-      href: ../administration/update-of-client-access-rules-for-office-365-customers.md
     - name: 401 Access denied error when you run Test-OAuthConnectivity
       href: ../administration/401-access-denied-error-when-running-test-oauthconnectivity.md
     - name: 554 5.4.14 Hop Count exceeded
@@ -75,6 +73,8 @@
       href: ../administration/how-to-create-organizational-forms-library.md
     - name: How to disable Exchange ActiveSync for users
       href: ../administration/how-to-disable-exchange-activesync-for-users.md
+    - name: How to migrate AD RMS to Azure RMS in Exchange Online
+      href: ../administration/migrate-ad-rms-to-azure.md
     - name: How to use PowerShell to grant admin access to all mailboxes
       href: ../administration/how-to-use-powershell-to-grant-admin-access-to-all-mailboxes.md
     - name: Inactive mailbox isn't automatically reconnected to AD
@@ -105,6 +105,10 @@
       href: ../administration/proxy-address-being-used.md
     - name: Repeated calls against the same folder are slow
       href: ../administration/slow-repeated-calls-against-same-folder.md
+    - name: Self-help diagnostics
+      href: ../administration/self-help-diagnostics.md
+    - name: Site mailbox retirement
+      href: ../administration/site-mailbox-retirement-faq.md
     - name: The length of the property is too long error
       href: ../administration/the-length-of-the-property-is-too-long-error.md
     - name: TooManyBadItemsPermanentException during migration
@@ -117,6 +121,8 @@
       href: ../administration/get-federationinformation-cmdlet-unsecure-redirect-warning.md
     - name: Update contact information
       href: ../administration/update-contact-information.md
+    - name:  Updates to Client Access Rules
+      href: ../administration/update-of-client-access-rules-for-office-365-customers.md      
     - name: UsageLocation validation error about Enable-UMMailbox
       href: ../administration/enable-ummailbox-cannot-be-performed-error.md
     - name: Validation errors for a mailbox archive GUID
@@ -249,6 +255,8 @@
       href: ../email-delivery/wrong-office-365-region-exo.md
     - name: Emails aren't received for a new domain
       href: ../email-delivery/emails-not-received-for-new-domain.md
+    - name: Errors when sending/receiving emails
+      href: ../email-delivery/send-receive-emails-socketerror.md
     - name: External recipients can't get distribution group emails
       href: ../email-delivery/external-recipients-not-receiving-distribution-group-emails.md
     - name: Find and fix email delivery issues
@@ -281,7 +289,7 @@
       href: ../groups-and-distribution-lists/cannot-remove-members-exceeding-limit.md
     - name: Can't upgrade distribution lists to Office 365 groups
       href: ../groups-and-distribution-lists/cannot-upgrade-distribution-lists-to-office-365-groups.md
-    - name: Common tasks to manage O365 groups
+    - name: Common tasks to manage Microsoft 365 groups
       href: ../groups-and-distribution-lists/o365-group-tasks.md
     - name: Mail-enabled groups aren't synced to O365
       href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
@@ -297,6 +305,8 @@
       href: ../mobile-devices/cannot-remove-mobile-device-partnership.md
     - name: Can't create mail profile on iOS device via Autodiscover
       href: ../mobile-devices/cannot-create-mail-profile-on-ios-device-via-autodiscover.md
+    - name: Duplicate Outlook contacts in iOS Contacts app
+      href: ../mobile-devices/duplicate-contacts-in-ios-contacts-app.md
     - name: Issues for mobile devices
       href: ../mobile-devices/issues-for-mobile-devices.md
     - name: Mobile devices aren't quarantined as expected
@@ -311,6 +321,8 @@
       href: ../move-or-migrate-mailboxes/new-migrationendpoint-returns-error.md
     - name: A different type of Active Directory object already exists error
       href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
+    - name: Can't migrate IMAP mailboxes
+      href: ../move-or-migrate-mailboxes/imap-mailbox-migration-fails.md
     - name: Can't see free/busy information
       href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
     - name: Can't view mailbox folders after an IMAP migration
@@ -393,6 +405,8 @@
       href: ../outlook-issues/outlook-connectivity-issues-when-spi-enabled-on-router.md
     - name: Resources to fix connection issues
       href: ../outlook-issues/office-365-troubleshooting-resources.md
+    - name: Self-help diagnostics
+      href: /exchange/troubleshoot/administration/self-help-diagnostics?context=/exchange/troubleshoot/context/online-context
     - name: Sending and receiving email
       href: ../outlook-issues/outlook-connection-issues.md
     - name: Show a Room list option isn't shown in Room Finder
@@ -441,6 +455,8 @@
       href: ../outlook-on-the-web-issues/there-are-multiple-recipients-matching-the-identity-error.md
     - name: This calendar isn't available error when accessing calendar
       href: ../outlook-on-the-web-issues/this-calendar-not-available-error-when-accessing-calendar.md
+    - name: Time zone setting for shared mailboxes
+      href: ../outlook-on-the-web-issues/shared-mailboxes-time-zone-setting.md
     - name: You may have already signed in to Outlook Web App error
       href: ../outlook-on-the-web-issues/you-may-have-already-signed-in-to-outlook-web-app-error.md
   - name: Public Folders
@@ -453,8 +469,6 @@
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
     - name: Can't apply the read and unread setting
       href: ../public-folders/cannot-apply-read-unread-setting.md
-    - name: Can't connect to public folders via Outlook or OWA
-      href: ../public-folders/outlook-or-owa-cannot-connect-to-public-folders.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: MEPF synchronization issues
@@ -484,7 +498,7 @@
     - name: Inline UUEncoded attachments are garbled or unreadable
       href: ../send-emails/inline-uuencoded-attachments-garbled-unreadable.md
     - name: Issues with OOF replies
-      href: ../send-emails/understand-troubleshoot-oof-replies.md
+      href: ../email-delivery/understand-troubleshoot-oof-replies.md
   - name: User and Shared Mailboxes
     items:
     - name: Can't access a shared mailbox using OWA

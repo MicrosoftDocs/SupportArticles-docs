@@ -1,11 +1,11 @@
 ---
 title: Office 365 link in on-premises EAC goes to product comparison
 description: Describes a scenario where the Office 365 link in the on-premises Exchange admin center takes you to a page that compares plans and pricing for Office 365 instead of to the Exchange admin center in Office 365. Provides a solution.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -29,7 +29,7 @@ The on-premises Exchange user account that was used to sign in to the EAC doesn'
 
 ## Solution
 
-Add the user to at least the View-Only Organization Management role group or the Organization Management role group. For more information, see [Manage role group members](https://docs.microsoft.com/Exchange/permissions/role-group-members?view=exchserver-2019).
+Add the user to at least the View-Only Organization Management role group or the Organization Management role group. For more information, see [Manage role group members](/Exchange/permissions/role-group-members).
 
 ## More information
 

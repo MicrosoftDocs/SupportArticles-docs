@@ -1,8 +1,8 @@
 ---
 title: MRM policy doesn't process or delete items in the Sync Issues folder in Outlook 2007 or 2010
 description: Describes an issue in which a Messaging Records Management (MRM) policy doesn't process or delete items in the Sync Issues folder in Outlook 2007 or Outlook 2010.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -58,10 +58,10 @@ The information in this folder may help your organization's support team or Micr
 
 For more information about the Mail Item Expiration Date property, go to the following Microsoft Developer Network (MSDN) website:
 
-[MailItem.RetentionExpirationDate Property](https://msdn.microsoft.com/library/microsoft.office.interop.outlook._mailitem.retentionexpirationdate.aspx)
+[MailItem.RetentionExpirationDate Property](/dotnet/api/microsoft.office.interop.outlook._mailitem.retentionexpirationdate)
 
 Microsoft Outlook calculates the value of this property based on the item retention start date and the retention period, if Outlook is in cached or offline mode. The Exchange Server specifies the value if Outlook is in online mode.
 
 For more information about retention policies and retention tags, go to the following Microsoft Exchange Server website:
 
-[Understanding Retention Tags and Retention Policies](https://technet.microsoft.com/library/dd297955.aspx)
+[Understanding Retention Tags and Retention Policies](/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies)

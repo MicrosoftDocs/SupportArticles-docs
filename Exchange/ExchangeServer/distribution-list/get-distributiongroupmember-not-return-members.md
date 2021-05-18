@@ -1,8 +1,8 @@
 ---
 title: The Get-DistributionGroupMember command does not return all the members of distribution group if there are multiple Active Directory domains in your topology environment
 description: Resolves an issue that the Get-DistributionGroupMember command does not return all the members of distribution group if there are multiple Active Directory domains in your topology environment.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -29,7 +29,7 @@ Consider the following scenario:
 - In a Microsoft Exchange Server topology environment, there is a parent Active Directory Domain (`Contoso.com`) and two child domains (`US.Contoso.com` and `Europe.Contoso.com`).
 - One of the child domains (`US.Contoso.com`) has Exchange Server server roles installed.
 - Another child domain (`Europe.Contoso.com`) has Exchange Server user mailboxes.
-- The parent domain has no Exchange servers. In this scenario, when you run the [Get-DistributionGroupMember](https://technet.microsoft.com/library/aa996367%28exchg.140%29.aspx) command for a distribution group, the command does not return all the members of the distribution group from the other child domain. Instead, you may receive the following error message when you run the Get-DistributionGroupMember command:
+- The parent domain has no Exchange servers. In this scenario, when you run the [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) command for a distribution group, the command does not return all the members of the distribution group from the other child domain. Instead, you may receive the following error message when you run the Get-DistributionGroupMember command:
 
    > The operation could not be performed because object '\<object name>' could not be found on 'Europe.Contoso.com'. + CategoryInfo : InvalidData: (:) [Get-DistributionGroupMember], ManagementObjectNotFoundException + FullyQualifiedErrorId : 6B6149EC,Microsoft.Exchange.Management.RecipientTasks.GetDistributionGroupMember
 

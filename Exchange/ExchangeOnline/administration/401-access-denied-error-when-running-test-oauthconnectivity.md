@@ -60,10 +60,11 @@ To fix this issue, take one of the following actions, as appropriate for your si
 
 4. If the domains names aren't returned, use the `Set-MsolServicePrincipal` cmdlet to add them.
 
-    For example, the following command adds the Mail.contoso.com domain.
+    For example, the following command adds the `mail.contoso.com` domain.
 
     ```powershell
-    Set-MsolServicePrincipal -ServicePrincipalName "00000002-0000-0ff1-ce00-000000000000").Mail.contoso.com
+    $AppId = (Get-MsolServicePrincipal -ServicePrincipalName "00000002-0000-0ff1-ce00-000000000000").AppPrincipalId
+    Set-MsolServicePrincipal -AppPrincipalId $AppId -ServicePrincipalNames @("mail.contoso.com")
     ```
 
 ### Scenario 2 - You're using an account that isn't synchronized between the on-premises environment and Exchange Online

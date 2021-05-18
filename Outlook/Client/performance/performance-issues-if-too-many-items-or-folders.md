@@ -1,8 +1,8 @@
 ---
 title: Performance issues for too many items or folders
 description: Describes a performance issue that occurs when there are too many items or too many folders in a cached mode .ost file or .pst file folders. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,10 +13,11 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: gregmans, gbratton
 appliesto:
+- Outlook for Microsoft 365
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
-- Microsoft Outlook 2010
+- Outlook 2010
 search.appverid: MET150
 ---
 # Outlook performance issues when there are too many items or folders in a cached mode .ost or .pst file

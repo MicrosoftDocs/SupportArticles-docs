@@ -1,7 +1,7 @@
 ---
 title: Private items aren't displayed in a shared mailbox in Outlook
 description: Provides workarounds to an issue in which Private items aren't displayed in a shared mailbox in Outlook.
-author: helenclu
+author: Norman-sun
 ms.author: shmcdani
 manager: dcscontentpm
 audience: ITPro
@@ -50,4 +50,4 @@ To work around this issue, use any of the following methods:
     4. Select **OK**.
 - In Outlook, add the shared mailbox as an [additional account](https://support.microsoft.com/office/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b) by using the email address and password of the user who has permission for that mailbox.
 
-    Make sure that automapping is removed and the mailbox is not added as an additional mailbox. To learn how to remove automapping for a shared mailbox, see [How to remove automapping for a shared mailbox in Outlook for Office 365](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
+    Make sure that automapping is removed and the mailbox is not added as an additional mailbox. To learn how to remove automapping for a shared mailbox, see [How to remove automapping for a shared mailbox in Outlook for Office 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).

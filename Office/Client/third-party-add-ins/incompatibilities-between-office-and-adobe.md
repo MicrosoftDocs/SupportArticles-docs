@@ -1,8 +1,8 @@
 ---
 title: Incompatibilities between Adobe Acrobat PDFMaker Office COM add-in and Office programs
 description: This article describes how to verify that the PDFMaker add-in is installed on your computer.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -156,4 +156,4 @@ Select the Office program that you're having problems with, and then use the app
 
 [I get a "stopped working" error when I start Office applications on my PC](https://support.office.com/article/i-get-a-stopped-working-error-when-i-start-office-applications-on-my-pc-52bd7985-4e99-4a35-84c8-2d9b8301a2fa)
 
-[How to troubleshoot crashing and not responding issues with Excel](https://docs.microsoft.com/office/troubleshoot/excel/crashing-issues-with-excel)
+[Excel not responding, hangs, freezes or stops working](https://support.microsoft.com/office/excel-not-responding-hangs-freezes-or-stops-working-37e7d3c9-9e84-40bf-a805-4ca6853a1ff4)

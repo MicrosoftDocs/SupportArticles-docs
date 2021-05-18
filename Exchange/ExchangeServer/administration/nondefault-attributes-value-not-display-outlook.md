@@ -1,8 +1,8 @@
 ---
 title: Value for nondefault attribute isn't populated in Outlook in Exchange Server 2010
-description: 
-author: simonxjx
-ms.author: v-six
+description: Fixes an issue in which the value for nondefault attribute added to the Outlook Details Template isn't displayed in Exchange Server 2010.
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -69,10 +69,10 @@ However, some frequently used attributes aren't enabled by default for replicati
 
 ## References
 
-For more information about how to install the Active Directory Schema snap-in, see [Install the Active Directory Schema Snap-In](https://technet.microsoft.com/library/cc732110.aspx).
+For more information about how to install the Active Directory Schema snap-in, see [Install the Active Directory Schema Snap-In](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732110(v=ws.11)).
 
-For more information about the `Update-GlobalAddressList` cmdlet, see [Procedures for address lists in Exchange Server](https://technet.microsoft.com/library/bb266966.aspx).
+For more information about the `Update-GlobalAddressList` cmdlet, see [Procedures for address lists in Exchange Server](/Exchange/email-addresses-and-address-books/address-lists/address-list-procedures).
 
-For more information about custom attributes in Exchange Server 2010 and Exchange Server 2007, see [Custom attributes](https://technet.microsoft.com/library/ee423541.aspx).
+For more information about custom attributes in Exchange Server 2010 and Exchange Server 2007, see [Custom attributes](/Exchange/recipients/mailbox-custom-attributes).
 
 For more information about how to administer the offline address book when Outlook clients are running in cached mode, see [KB 841273](https://support.microsoft.com/kb/841273).

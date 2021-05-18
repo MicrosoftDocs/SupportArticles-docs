@@ -1,7 +1,7 @@
 ---
 title: 500 Server Internal error and calls to Subscriber Access or Auto Attendant fail
 description: You receive a 500 Server Internal error message and a fast busy signal, and calls to Subscriber Access or Auto Attendant fail after you migrate contact objects to Skype for Business Server 2019. Provides a workaround.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Server 2019
@@ -51,7 +51,7 @@ To work around this problem, move the Subscriber Access or Auto Attendant contac
 
 ## References
 
-[Move Exchange Unified Messaging Contact objects](https://docs.microsoft.com/lyncserver/move-exchange-unified-messaging-contact-objects)
+[Move Exchange Unified Messaging Contact objects](/lyncserver/move-exchange-unified-messaging-contact-objects)
 
 ## Status
 

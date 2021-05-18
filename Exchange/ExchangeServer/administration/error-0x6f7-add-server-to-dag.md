@@ -1,8 +1,8 @@
 ---
 title: Error 0x6f7 when adding a server to a DAG in Exchange Server
 description: Fixes Error 0x6f7 that occurs when you add the first or an additional server to a database availability group.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -46,7 +46,7 @@ Configure one NIC in the cluster with a default gateway. Then configure static r
 
 > [!NOTE]
 > You should *not* have more than one default gateway on the *server* as per the following:  
-> [Plan for high availability and site resilience](https://technet.microsoft.com/library/dd638104.aspx)
+> [Plan for high availability and site resilience](/Exchange/high-availability/plan-ha)
 
 ## More information
 

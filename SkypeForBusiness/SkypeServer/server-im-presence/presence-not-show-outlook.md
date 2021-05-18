@@ -1,7 +1,7 @@
 ---
 title: Presence information of Lync Server 2010 may not show in Outlook
 description: Describes how to fix an issue that occurs when the presence information for a Lync Server or Office Communications Server user is not displayed, or when this information is displayed intermittently. This issue occurs in Outlook 2010, in Outlook 2007, and in Outlook 2003 SP2.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 appliesto:
 - Lync Server 2010
 - Outlook 2010
@@ -84,7 +84,7 @@ In Outlook 2010, the **QueryServiceForStatus** and **EnableDynamicPresence** reg
 
 For more information about how to administer the Office 2010 group policy templates, visit the following Microsoft website:
 
-[Office 2010 Administrative Template files (ADM, ADMX, ADML) and Office Customization Tool](https://technet.microsoft.com/library/cc178992.aspx)
+[Office 2010 Administrative Template files (ADM, ADMX, ADML) and Office Customization Tool](/previous-versions/office/office-2013-resource-kit/cc178992(v=office.15))
 
 ## Status
 

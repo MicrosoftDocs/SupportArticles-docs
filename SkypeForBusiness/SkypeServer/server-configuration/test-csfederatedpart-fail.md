@@ -1,7 +1,7 @@
 ---
 title: Test-CsFederatedPartner fails
 description: The Test-CsFederatedPartner Lync Server PowerShell cmdlet fails with the use of Office Communicatione Server 2007 R2 Edge Servers
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: shailenv
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -52,7 +52,7 @@ Test-CsFederatedPartner -TargetFqdn ocsedge.contoso.com -Domain fabrikam.com
 
 For more details on the Test-CsFederatedPartner Lync Server PowerShell cmdlet:
 
-[Test-CsFederatedPartner](https://technet.microsoft.com/library/gg398281.aspx)
+[Test-CsFederatedPartner](/powershell/module/skype/Test-CsFederatedPartner)
 
 Using the Test-CsFederatedPartner Lync Server PowerShell cmdlet with the -ProxyFQDN parameter as described in the Cause section of this article will provide the results similar to the information listed below in the Office Communications Server 2007 R2 Edge Server SipStack logging:
 

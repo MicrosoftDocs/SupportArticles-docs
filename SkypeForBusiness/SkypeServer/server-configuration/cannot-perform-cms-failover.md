@@ -1,7 +1,7 @@
 ---
 title: Can't perform a CMS failover in Skype for Business Server 2015
 description: Fixes an issue in which the Invoke-CsManagementServerFailover cmdlet fails in Skype for Business Server 2015.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Server 2015
@@ -19,7 +19,7 @@ appliesto:
 
 ## Symptom
 
-You can't run the [Invoke-CsManagementServerFailover](https://technet.microsoft.com/library/jj204647.aspx) cmdlet to perform a Central Management Store (CMS) failover (failback) after another failover is performed. This issue occurs in one of the following scenarios: 
+You can't run the [Invoke-CsManagementServerFailover](/powershell/module/skype/Invoke-CsManagementServerFailover) cmdlet to perform a Central Management Store (CMS) failover (failback) after another failover is performed. This issue occurs in one of the following scenarios: 
 
 ### Scenario 1
 
@@ -39,7 +39,7 @@ This issue occurs when you perform the second failover immediately after the pre
 
 ### Scenario 3
 
-The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreReplicationStatus –CentralManagementStoreStatus](https://technet.microsoft.com/library/gg399052.aspx)** cmdlet. 
+The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreReplicationStatus –CentralManagementStoreStatus](/powershell/module/skype/Get-CsManagementStoreReplicationStatus)** cmdlet. 
 
 ## Cause
 
@@ -64,7 +64,7 @@ To fix this issue, follow these steps:
   - Skype for Business Master Replicator Agent     
   - Skype for Business Replica Replicator Agent     
   - Skype for Business File Transfer Agent     
-2. In the Skype for Business Server Management Shell, run the **[Get-CsManagementConnection](https://technet.microsoft.com/library/gg412849.aspx)** cmdlet and identify which pool is currently associated to the SQL Server store that's returned by the SQL Server output.     
+2. In the Skype for Business Server Management Shell, run the **[Get-CsManagementConnection](/powershell/module/skype/Get-CsManagementConnection)** cmdlet and identify which pool is currently associated to the SQL Server store that's returned by the SQL Server output.     
 3. On one of the servers that's associated with the identified pool, run the **Invoke-CsManagementServerFailover -Restore** cmdlet in the Skype for Business Server Management Shell.     
 4. On each server of the identified pool, run the following cmdlets in sequence in the Skype for Business Server Management Shell:  
    - **Export-CsConfiguration -FileName c:\temp\configuration.zip**     
@@ -72,7 +72,7 @@ To fix this issue, follow these steps:
  
     > [!NOTE]
     > After the process is complemented, the configuration.zip file can be deleted, although we recommend that you keep a copy of the file for disaster recovery.    
-5. On each server of the previously identified pool, run the **[Invoke-CsManagementStoreReplication](https://technet.microsoft.com/library/gg413060.aspx)** cmdlet in the Skype for Business Server Management Shell.     
+5. On each server of the previously identified pool, run the **[Invoke-CsManagementStoreReplication](/powershell/module/skype/Invoke-CsManagementStoreReplication)** cmdlet in the Skype for Business Server Management Shell.     
 6. Run the Invoke-CsManagementServerFailover cmdlet to perform a CMS failover again.
 
 ## More information

@@ -1,7 +1,7 @@
 ﻿---
 title: Anonymous Users cannot open XLSX files from a SharePoint document library
 description: Anonymous users receive an error opening XLSX documents. Resolution is to break inheritance on the document library OR to give them "OpenItems" permission on the site.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint
@@ -82,6 +82,6 @@ $site.Dispose();
 
 ## More Information  
 
-[Plan security for an external anonymous access environment (Office SharePoint Server)](https://technet.microsoft.com/library/cc263468%28office.12%29.aspx)
+[Plan security for an external anonymous access environment (Office SharePoint Server)](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263468(v=office.12))
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -1,7 +1,7 @@
 ---
 title: SharePoint customizations revert to the original settings
 description: SharePoint customizations to the Office 365 top navigation revert to the default settings.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 - Office 365
@@ -32,7 +32,7 @@ Consider the following scenario.
 
 To work around this issue, use SharePoint themes or Office 365 themes.
 
-For more information about themes in SharePoint Online, go to [SharePoint Site Theme](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview).
+For more information about themes in SharePoint Online, go to [SharePoint Site Theme](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview).
 
 For more information about Office 365 themes, go to [Personalize your Office 365 experience by selecting themes](https://support.office.com/article/customizations-to-the-office-365-top-navigation-bar-in-sharepoint-online-revert-to-the-original-settings-ed6b3aca-d2f7-4350-b152-023000945f9d?ui=en-US&rs=en-US&ad=US).
 

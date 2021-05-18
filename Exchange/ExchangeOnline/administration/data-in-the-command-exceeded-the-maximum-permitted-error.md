@@ -1,8 +1,8 @@
 ---
 title: Data in the command exceeded the maximum permitted error
 description: Describes an issue that triggers an error when you run the Get-Mailbox -ResultSize Unlimited command to retrieve info about Exchange Online mailboxes in your organization.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Mapping and syncing network drives that connect to SharePoint Online
 description: Describes how to troubleshoot mapped network drives that connect to SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 ms.date: 5/14/2020
 localization_priority: Normal
@@ -13,7 +13,7 @@ ms.topic: article
 ms.custom: 
 - CSSTroubleshoot
 - CI 117634
-ms.author: v-six
+ms.author: luche
 ms.reviewer: prbalusu
 appliesto:
 - SharePoint Online
@@ -120,8 +120,10 @@ When you browse to a SharePoint Online document library through a mapped network
 
 - For more info about how to work with the WebClient service, see [Prompt for Credentials When Accessing FQDN Sites From a Windows Vista or Windows 7 Computer](https://support.microsoft.com/help/943280)
 
-- For more info about ways to work with site library files in File Explorer, see [Ways to work with site library files in File Explorer](https://support.office.live.com/article/751148de-f579-42f9-bc8c-fcd80ccf0f53).
+- For more info about how to work with site library files in File Explorer, see [Ways to work with site library files in File Explorer](https://support.office.live.com/article/751148de-f579-42f9-bc8c-fcd80ccf0f53).
 
-- For more information about Office 365 URLs, see [URLs and IP address ranges for Office 365 operated by 21Vianet](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges-21vianet). 
+- For more information about Office 365 URLs, see [URLs and IP address ranges for Office 365 operated by 21Vianet](/office365/enterprise/urls-and-ip-address-ranges-21vianet).
+
+- [Authentication issues or failures occur when you try to use a network drive that's mapped to a SharePoint library](/sharepoint/troubleshoot/administration/authentication-errors-tls12-support#network-drive-mapped-to-a-sharepoint-library)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

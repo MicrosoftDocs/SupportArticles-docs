@@ -1,11 +1,11 @@
 ---
 title: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP when users send mails
 description: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP bounce backs for external emails being relayed out through Office 365.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 ms.custom: 
 - Exchange Online
@@ -37,7 +37,7 @@ To identify the submitting server and authorize relay, there must be a connector
 
 ### Option 1: Rerun the HCW to update the inbound connector (recommended for hybrid customers)
 
-Rerun the Hybrid Configuration Wizard (HCW) to update the inbound connector in Exchange Online. Be aware that any manual customization to a hybrid configuration (which is uncommon) may have to be redone after the Wizard is finished. For information about what the values for the TLS Sender certificate were and changes that are made, see the HCW logs. For more information, see [Hybrid Configuration wizard](https://technet.microsoft.com/library/hh529921.aspx).
+Rerun the Hybrid Configuration Wizard (HCW) to update the inbound connector in Exchange Online. Be aware that any manual customization to a hybrid configuration (which is uncommon) may have to be redone after the Wizard is finished. For information about what the values for the TLS Sender certificate were and changes that are made, see the HCW logs. For more information, see [Hybrid Configuration wizard](/exchange/hybrid-configuration-wizard).
 
 1. Download and run the Hybrid Configuration Wizard from the Exchange Online admin center.
 2. Make sure that the new certificate is selected on the transport certificate page.
@@ -69,7 +69,7 @@ Make sure that the new certificate is sent from on-premises Exchange to Exchange
 2. At this point, you can locate the matching inbound connector in Office 365 and verify that the certificate value matches. In this example, the `TlsSenderCertificateName` value must be set to *.contoso.com.
 
     > [!NOTE]
-    > To relay messages through Office 365, the domain of the sender or the domain of contoso.com must be verified in the Office 365 tenant. Otherwise, you may see an error similar to that described in Symptoms but also an explicit ATT36 error. (For information about the ATT36 error, see [Configure a certificate-based connector to relay email messages through Office 365](/exchange/troubleshoot/email-delivery/office-365-notice).)
+    > To relay messages through Office 365, the domain of the sender or the domain of contoso.com must be verified in the Office 365 tenant. Otherwise, you may see an error similar to that described in Symptoms but also an explicit ATT36 error. (For information about the ATT36 error, see [Configure a certificate-based connector to relay email messages through Office 365](./office-365-notice.md).)
 
 ## More information
 

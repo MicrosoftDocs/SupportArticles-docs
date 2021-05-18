@@ -1,13 +1,13 @@
 ---
 title: Download the latest online Excel Viewer
 description: Describes how to view Excel workbook files by using the Excel Viewer 2007, and explains that you do not have to install Excel. The Excel Viewer 2007 can be used to view workbooks that are created in versions of Excel from Excel 97 to Excel 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: lauraho 
 ms.custom: CSSTroubleshoot
 search.appverid: 

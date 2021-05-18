@@ -1,7 +1,7 @@
 ---
 title: You can't sign in to Lync clients on devices that don't support SNI
 description: Explains that users on devices that don't support Server Name Indication (SNI) can't sign in to Skype for Business or Lync clients, when you use Active Directory Federation Services 3.0 (ADFS). Provides a workaround.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: romanma, dahans
 appliesto:
@@ -48,8 +48,8 @@ To work around this issue as a Skype for Business administrator, associate the S
    
 For more information about these commands, go to the following Microsoft websites:
 
-- [How to publish Lync Server 2013 Web Services with Windows Server 2012 R2 Web application proxy](https://blogs.technet.com/b/dodeitte/archive/2013/10/29/how-to-publish-lync-server-2013-web-services-with-windows-server-2012-r2-web-application-proxy.aspx)   
-- [How to: Configure a port with an SSL certificate](https://msdn.microsoft.com/library/ms733791.aspx)   
+- [How to publish Lync Server 2013 Web Services with Windows Server 2012 R2 Web application proxy](/archive/blogs/dodeitte/how-to-publish-lync-server-2013-web-services-with-windows-server-2012-r2-web-application-proxy)   
+- [How to: Configure a port with an SSL certificate](/dotnet/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate)   
 
 ## More Information
 

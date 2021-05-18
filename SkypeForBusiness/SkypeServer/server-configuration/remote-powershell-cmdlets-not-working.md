@@ -1,7 +1,7 @@
 ---
 title: Remote PowerShell cmdlets don't work
 description: Discusses that Remote PowerShell cmdlets don't work in Skype for Business Server 2015 after update 3061064 is installed. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,9 +9,9 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
-ms.reviewer: v-six, genli, christys, UPKUMAR
+ms.reviewer: v-swei, genli, christys, UPKUMAR
 appliesto:
 - Skype for Business Server 2015
 ---
@@ -43,7 +43,7 @@ Additionally, if you run the Skype for Business Server 2015 Deployment Wizard, y
 - Step 1 (Install or Update Skype for Business Server System) is shown as Partial.   
 - Step 2 (**Setup or Remove Skype for Business Server Components**) is not shown as **Complete**.   
 
-If you run the [Enable-CSReplica](https://technet.microsoft.com/library/gg425965.aspx) command in the Skype for Business Server 2015 Management Shell, you notice the following error entry:
+If you run the [Enable-CSReplica](/powershell/module/skype/Enable-CsReplica) command in the Skype for Business Server 2015 Management Shell, you notice the following error entry:
 
 ```adoc
 Error: An error occurred: "System.MissingMethodException" "Method not found: 'Void System.Runtime.InteropServices.Marshal.StructureToPtr(!!0, IntPtr, Boolean)'."
@@ -71,6 +71,6 @@ Get-ChildItem -Path Registry::"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framewo
 
 In the output, make sure that the **Release** dword value is 379893 or greater.
 
-For more information, see [How to: Determine Which .NET Framework Versions Are Installed](https://msdn.microsoft.com/library/hh925568%28v=vs.110%29.aspx?cs-save-lang=1&cs-lang=csharp#code-snippet-4).
+For more information, see [How to: Determine Which .NET Framework Versions Are Installed](/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed?cs-lang=csharp&cs-save-lang=1#code-snippet-4).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

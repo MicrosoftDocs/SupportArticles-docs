@@ -1,7 +1,7 @@
 ---
 title: Exception has been thrown by the target of an invocation in Azure AD Sync tool
 description: Describes an issue that triggers an 'Exception has been thrown by the target of an invocation" error. Occurs when you run the Azure Active Directory Sync tool Configuration Wizard on a Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials server.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Azure Active Directory
 - Office 365 Identity Management
@@ -53,8 +53,8 @@ If, for any reason, you can't remove the Azure Active Directory Sync tool from t
 
 For more info about Windows Server Essentials and Office 365, see the following resources:
 
-- [Manage Office 365 in Windows Server Essentials](https://technet.microsoft.com/library/jj593240.aspx)   
-- [How to create a service integration add-in for Windows Server Essentials Experience](https://blogs.technet.com/b/sbs/archive/2014/01/01/how-to-create-a-service-integration-add-in-for-windows-server-essentials-experience.aspx)   
-- [Manage online accounts for Windows Server Essentials users](https://technet.microsoft.com/library/dn737016.aspx)   
+- [Manage Office 365 in Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj593240(v=ws.11))   
+- [How to create a service integration add-in for Windows Server Essentials Experience](/archive/blogs/sbs/how-to-create-a-service-integration-add-in-for-windows-server-essentials-experience)   
+- [Manage online accounts for Windows Server Essentials users](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn737016(v=ws.11))   
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

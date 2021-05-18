@@ -1,7 +1,7 @@
 ---
 title: Error message when an external user accepts a SharePoint Online invitation by using another account
 description: Describes an issue in which you receive an error message when an external user accepts a SharePoint Online invitation by using another account.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -179,7 +179,7 @@ The steps below remove the external user's ability to access SharePoint Online. 
 
 Next, you have to remove the account from Azure Active Directory. To do this, follow these steps:
 
-1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](https://technet.microsoft.com/library/jj151815.aspx).
+1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 

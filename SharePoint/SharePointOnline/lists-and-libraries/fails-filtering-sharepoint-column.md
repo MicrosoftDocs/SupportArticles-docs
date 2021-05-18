@@ -1,7 +1,7 @@
 ---
 title: Can't sort or filter a column in SharePoint Online
 description: Unable to sort or filter a column in SharePoint Online because the field may not be filterable, or the number of items returned exceeds the list view threshold enforced.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---
@@ -39,7 +39,7 @@ To resolve this issue, reduce the number of items in the view for the affected l
 
 This issue occurs when your list or library exceeds the list view threshold limit of 5,000 items for a view.
 
-For more information, go to [SharePoint Online limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits
+For more information, go to [SharePoint Online limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits
 ).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

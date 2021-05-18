@@ -1,7 +1,7 @@
 ---
 title: Lync administrator can't connect to Skype for Business Online Remote PowerShell
 description: Describes an issue in which Lync administrators can't connect to Skype for Business Online Remote PowerShell in a Lync hybrid environment. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
@@ -38,6 +38,6 @@ $cssession = New-CsOnlineSession –Credential $cred –OverrideAdminDomain "con
 
 This issue occurs when the DNS records for AutoDiscover are pointed to the on-premises Lync server.
 
-For more information about the **New-CsOnlineSession** cmdlet, or about how to manage Skype for Business Online with Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](https://technet.microsoft.com/library/dn362831.aspx).
+For more information about the **New-CsOnlineSession** cmdlet, or about how to manage Skype for Business Online with Skype for Business Online Remote PowerShell, see [Set up your computer for Windows PowerShell](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,11 +1,11 @@
 ---
 title: The Sent time stamp on email messages is incorrect in Outlook on the web
 description: Describes sent time stamp on email messages is incorrect in Outlook on the web
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: 
 - Exchange Server
 - CSSTroubleshoot
@@ -34,7 +34,7 @@ This issue can occur if all the following conditions are true:
 
 To work around this issue, set the time zone on the Exchange Server to a region that matches the Coordinated Universal Time (UTC) zone of the country where the server is located. Make sure that the UTC zone for that country does not follow DST.
 
-**[Set Regional Settings in Outlook on the web](https://technet.microsoft.com/office/ms.exch.ecp.regionalsettings)**
+**[Set Regional Settings in Outlook on the web](/previous-versions/exchange-server/exchangeserver-149/dd188698(v=exchsrvcs.149))**
 
 You may also have to set the time zone in Microsoft Outlook Web App or in Outlook Web App. To do this, follow these steps, as appropriate for your situation. 
 

@@ -1,7 +1,7 @@
 ---
 title: Windows Fabric, Front-end services won't start on system with 4K native disk
 description: After Skype for Business Server 2015 install on Windows Server 2016 or Server 2012 R2 with 4K native disk, Windows Fabric or Front-end service won't start.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 appliesto:
 - Skype for Business Server 2015
 ---
@@ -135,7 +135,7 @@ If the **Bytes Per Sector** and **Bytes Per Physical Sector** fields are both se
 Skype for Business Server 2015 uses Windows Fabric 3.0, which is not supported on 4K native disks. You must install Skype for Business Server 2015 on non-4K native disks.
 For more information about 4k sector disks, see the following articles:
 
-- [Advanced format (4K) disk compatibility update](https://msdn.microsoft.com/windows/compatibility/advanced-format-disk-compatibility-update) 
+- [Advanced format (4K) disk compatibility update](/windows/compatibility/advanced-format-disk-compatibility-update) 
 - [Microsoft support policy for 4K sector hard drives in Windows](https://support.microsoft.com/help/2510009)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

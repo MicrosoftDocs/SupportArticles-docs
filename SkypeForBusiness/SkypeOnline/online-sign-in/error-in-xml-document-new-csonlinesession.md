@@ -1,7 +1,7 @@
 ---
 title: There is an error in XML document when you run New-CsOnlineSession
 description: Describes an issue that triggers a There is an error in XML document (5,2) error when you try to connect to Skype for Business Online by using a remote Windows PowerShell session. Provides a workaround.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
@@ -38,10 +38,10 @@ $O365Session = New-CsOnlineSession -Credential $credential –OverridePowershell
 ```
 
 > [!NOTE]
-> To determine the Skype for Business Administration center URL, see the "To determine the Hosted Migration Service URL for your Office 365 tenant" section of [Administering users in a hybrid Lync Server 2013 deployment](https://technet.microsoft.com/library/jj204967.aspx).
+> To determine the Skype for Business Administration center URL, see the "To determine the Hosted Migration Service URL for your Office 365 tenant" section of [Administering users in a hybrid Lync Server 2013 deployment](/previous-versions/office/lync-server-2013/lync-server-2013-administering-users-in-a-hybrid-deployment).
 
 ## More Information
 
-For more information, see [Using Windows PowerShell to manage Skype for Business Online](https://technet.microsoft.com/library/dn362831%28v=ocs.15%29.aspx).
+For more information, see [Using Windows PowerShell to manage Skype for Business Online](/SkypeForBusiness/set-up-your-computer-for-windows-powershell/set-up-your-computer-for-windows-powershell).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

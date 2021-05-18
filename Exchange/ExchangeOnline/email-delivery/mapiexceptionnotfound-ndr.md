@@ -1,11 +1,11 @@
 ---
 title: STOREDRV.Deliver.Exception:ObjectNotFoundException.MapiExceptionNotFound
 description: Describes an issue that returns a "554.5.2.0 Cannot get ID from name" nondelivery report when users send mail to a distribution group in Exchange Online. Provides a workaround.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: v-swei
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
@@ -44,14 +44,14 @@ For more information about how to turn Clutter on or off, see [Use Clutter to so
 
 ### Method 2: Use Exchange Online PowerShell
 
-1. Connect to Exchange Online by using PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. Connect to Exchange Online by using PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Run the following command:
 
     ```powershell
     Get-Mailbox user@contoso.com | Set-Clutter -Enable $false
     ```
 
-For more information about how to use the `Set-Clutter` cmdlet to turn Clutter on or off, see [Set-Clutter](https://technet.microsoft.com/library/mt586787%28v=exchg.160%29.aspx).
+For more information about how to use the `Set-Clutter` cmdlet to turn Clutter on or off, see [Set-Clutter](/powershell/module/exchange/set-clutter).
 
 ## More information
 

@@ -1,11 +1,11 @@
 ---
 title: Message store has reached its maximum size when delete an item
 description: Describes an issue that triggers a "maximum size" error message when an Office 365 user tries to delete an item such as a calendar event in Outlook or Outlook on the Web.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: v-swei
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
@@ -53,6 +53,6 @@ An item is considered soft-deleted in the following cases:
 
 Users can use the **Recover Deleted Items** feature in Outlook or Outlook Web App to recover a deleted item.
 
-For more information about deleted item recovery, see [Recoverable Items folder](https://technet.microsoft.com/library/ee364755%28v=exchg.150%29.aspx).
+For more information about deleted item recovery, see [Recoverable Items folder](/exchange/recoverable-items-folder-exchange-2013-help).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

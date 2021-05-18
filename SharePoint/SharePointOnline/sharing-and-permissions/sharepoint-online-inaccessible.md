@@ -25,11 +25,11 @@ There are several reasons why Microsoft SharePoint or Microsoft OneDrive might b
 
 - Check whether users have the appropriate permissions to access the [site](https://support.office.com/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658) or [file](https://support.office.com/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c
 ). If they don't have the necessary permissions, grant the permissions to them.
-- If the users were granted permissions to the site or file but they still receive an error message such as "Access Denied" or "You need permission to access this site," see [this troubleshooting guide](https://docs.microsoft.com/sharepoint/troubleshoot/administration/access-denied-sharepoint-error).
+- If the users were granted permissions to the site or file but they still receive an error message such as "Access Denied" or "You need permission to access this site," see [this troubleshooting guide](/sharepoint/troubleshoot/administration/access-denied-sharepoint-error).
 
 ## Are users receiving "503" or "Server is busy" error messages?
 
-- If users are receiving "503" or "Server is busy" error messages, the error might be caused by throttling within the SharePoint service. SharePoint Online uses throttling to maintain optimal performance and reliability of the SharePoint Online service. Throttling limits the number of user actions or concurrent calls (by script or code) to prevent overuse of resources. For more information about throttling, see [Avoid getting throttled or blocked in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online).
+- If users are receiving "503" or "Server is busy" error messages, the error might be caused by throttling within the SharePoint service. SharePoint Online uses throttling to maintain optimal performance and reliability of the SharePoint Online service. Throttling limits the number of user actions or concurrent calls (by script or code) to prevent overuse of resources. For more information about throttling, see [Avoid getting throttled or blocked in SharePoint Online](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online).
 - If the SharePoint or OneDrive site is slow or delayed for multiple users, a temporary service issue may be occurring. In this case, users may experience intermittent delays or navigation errors when they try to access SharePoint sites or OneDrive content. To determine whether your organization is affected, check the [Service Health Dashboard](https://admin.microsoft.com/AdminPortal/Home#/servicehealth).
 
 ## More information

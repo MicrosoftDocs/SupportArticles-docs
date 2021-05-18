@@ -1,7 +1,7 @@
 ---
 title: Can't schedule meetings, see presence info, or send IMs from Outlook Web App
 description: Describes a problem in which online meeting scheduling, presence, and IM services aren't available in Outlook Web App when you use OWA in Office 365.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -37,7 +37,7 @@ If the DNS record is created correctly but you continue to receive the error mes
 
 1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see the following help topic: 
   
-   [Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx)
+   [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 1. Run the **Get-Mailbox** cmdlet on the affected users, and then save the results. For more info about this cmdlet, see the following help topic:
 
    [Get-Mailbox](http://help.outlook.com/140/dd575549.aspx#mailboxes)

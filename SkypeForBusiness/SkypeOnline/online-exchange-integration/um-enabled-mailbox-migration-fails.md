@@ -1,7 +1,7 @@
 ---
 title: UM-enabled mailbox migration to Exchange Online fails
 description: Resolves an issue in which you cannot migrate a UM-enabled mailbox from on-premises Exchange Server to Exchange Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Exchange Online
@@ -42,7 +42,7 @@ To resolve this issue, follow these steps:
 1. Make sure that the user has an Exchange Online license. 
 
     > [!NOTE]
-    > [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx) indicates that some mailbox plans don't include Voice Message Services (formerly known as UM). To resolve this issue, a license must be applied for a mailbox plan that includes Voice Message Services (Exchange Online Plan 2, Office 365 Enterprise E3 or Office 365 Enterprise E5 license).    
+    > [Exchange Online Service Description](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description) indicates that some mailbox plans don't include Voice Message Services (formerly known as UM). To resolve this issue, a license must be applied for a mailbox plan that includes Voice Message Services (Exchange Online Plan 2, Office 365 Enterprise E3 or Office 365 Enterprise E5 license).    
 2. Verify that the value of the **LicenseReconciliationNeeded** property is **False**. To do this, run the following Microsoft Online Services Module for Windows PowerShell cmdlets in the given order:  
    - Connect-MsolService    
    - Get-MsolUser -UserPrincipalName**UPN** |fl LicenseReconciliationNeeded    

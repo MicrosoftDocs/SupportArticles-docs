@@ -1,7 +1,7 @@
 ---
 title: How to configure the default email client using Group Policy
 description: Explains how to configure the default email client using Group Policy
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Microsoft Outlook
 ---
@@ -45,7 +45,7 @@ Both Windows 10 and Windows 8 protect the part of the registry that stores the d
 3.	Scroll to locate **MAILTO** in the list, and then set Outlook as the default app.
 
     :::image type="content" source="media/configure-email-client-using-policy/configure-email-client-using-policy-1.png" alt-text="Set the MAILTO to Outlook.":::
-4.	After the default is set, use [DISM to export these values to XML](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations#generate-a-default-app-associations-xml-file).
+4.	After the default is set, use [DISM to export these values to XML](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations#generate-a-default-app-associations-xml-file).
 
     > [!NOTE]
     > Make a note of the file name and location of the file that you create.
@@ -140,4 +140,3 @@ To configure the default email client by using Group Policy, create a custom .ad
 
 - In Windows 10 and Windows 8, users can manually set this option in Windows **Settings** > **Choose a default app for each protocol**.
 - In Windows 7, the default email client is typically configured on the **Programs** tab in the **Internet Properties** dialog box. However, if you are not a member of the local administrators group, you may not have the appropriate permission to make this change. This is because the setting is stored in the HKEY_LOCAL_MACHINE subtree in the registry.
-

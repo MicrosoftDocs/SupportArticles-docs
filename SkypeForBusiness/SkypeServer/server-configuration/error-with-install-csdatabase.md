@@ -1,7 +1,7 @@
 ---
 title: Error when you create databases by using the Install-CsDatabase cmdlet
 description: Fixes an issue in which you receive an error message when you run the Install-CsDatabase cmdlet. This issue occurs when you try to create databases in a Lync Server 2013 environment.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -149,6 +149,6 @@ To resolve this issue, follow these steps.
 
 ##  More Information
 
-For more information about the Model database, see [model Database](https://technet.microsoft.com/library/ms186388.aspx).
+For more information about the Model database, see [model Database](/sql/relational-databases/databases/model-database).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

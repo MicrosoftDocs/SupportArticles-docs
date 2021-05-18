@@ -1,7 +1,7 @@
 ﻿---
 title: error when you use the SharePoint Hybrid Picker
 description: Describes an issue when you use the SharePoint Hybrid Picker.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---
@@ -44,6 +44,6 @@ To resolve this issue, grant permissions to the **Everyone except external users
 
 This is a known issue when you use the Hybrid Picker. This issue occurs when users don't have permissions to create sites and the administrator doesn't have a OneDrive for Business site provisioned for their account.
 
-For more information about the Hybrid Picker, see [Hybrid picker in the SharePoint Online admin center](https://docs.microsoft.com/SharePoint/hybrid/hybrid-picker-in-the-sharepoint-online-admin-center).
+For more information about the Hybrid Picker, see [Hybrid picker in the SharePoint Online admin center](/SharePoint/hybrid/hybrid-picker-in-the-sharepoint-online-admin-center).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -1,6 +1,8 @@
 - name: SharePoint Server Troubleshooting
   href: ../sharepoint-server-welcome.md
   items:
+  - name: SharePoint troubleshooting content updates
+    href: ../sharepoint-troubleshooting-content-updates.md
   - name: Administration
     items:
     - name: '"Upgrade Available" status in farms'
@@ -94,7 +96,7 @@
   - name: Installation and Setup
     items:
     - name: Block OneDrive.exe from being advertised with Office 2016
-      href: ../installation-and-setup/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016.md
+      href: ../installation-and-setup/how-to-block-onedrive-from-being-advertised-after-install-office-2016.md
     - name: Certain installation scenarios aren't supported
       href: ../installation-and-setup/certain-installation-scenarios-are-not-supported.md
     - name: Error 2711 when install RBS client for SQL server 2016

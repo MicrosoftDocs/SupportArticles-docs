@@ -1,8 +1,8 @@
 ---
 title: Error when running Windows PowerShell cmdlet in Exchange Server 2013
 description: Describes an issue in which an administrator can't use the Set-Mailbox cmdlet to convert a user mailbox on another server to a Shared type. Provides workarounds.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Prioritize BITS by Office 2016 clients for downloading updates
 description: Describes how to use BITS for Office 2016 clients to download updates.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Microsoft 365 Apps for enterprise
 - Office 365 Business
@@ -69,7 +69,7 @@ Registry subkey:
  
 ### How to set up an internal HTTP site to distribute Office sources
 
-1. Download the latest Office BITS (by using [Office Deployment Tool (ODT)](https://technet.microsoft.com/library/jj219426.aspx)). BITS will resemble the following:
+1. Download the latest Office BITS (by using [Office Deployment Tool (ODT)](/deployoffice/office-deployment-tool-configuration-options)). BITS will resemble the following:
 
     [Drive:\<my-download-directory>\<new-office-download>\office\data\*.cab]
 

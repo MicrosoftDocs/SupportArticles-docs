@@ -1,7 +1,7 @@
 ---
 title: Lync clients cannot upload a presentation
 description: Lync clients cannot complete the upload of Microsoft PowerPoint presentations if the Lync Server conferencing content storage limit is not configured correctly.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: kkodali
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -65,10 +65,10 @@ Set-CsConferencingConfiguration -Identity site:Redmond -MaxContentStorageMb 150
 
 For more details on using the Set-CsConferencingConfiguration PowerShell Command:
 
-[Set-CsConferencingConfiguration](https://technet.microsoft.com/library/gg412969%28v=ocs.14%29.aspx)
+[Set-CsConferencingConfiguration](/previous-versions/office/skype-server-2010/gg412969(v=ocs.14))
 
 For more details on Lync Server 2010 Web Conferencing:
 
-[Features and Functionality of Web Conferencing and A/V Conferencing](https://technet.microsoft.com/library/gg425913%28v=ocs.14%29.aspx)
+[Features and Functionality of Web Conferencing and A/V Conferencing](/previous-versions/office/skype-server-2010/gg425913(v=ocs.14))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

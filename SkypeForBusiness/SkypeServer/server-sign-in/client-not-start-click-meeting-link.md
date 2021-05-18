@@ -1,7 +1,7 @@
 ---
 title: Client does not start when click a meeting link if default browser is Chrome
 description: Discusses that users who try to join Lync or Skype for Business online meetings are directed to Lync Web App, and their local client does not start. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 appliesto:
 - Skype for Business Online
 - Skype for Business Server 2015
@@ -65,7 +65,7 @@ Use the Chrome ADMX template to set GPO settings that apply configurations to do
 
 2. Install the GPO policy templates by using the following directions:
 
-   > [Scenario 2: Editing Domain-Based GPOs Using ADMX Files](https://technet.microsoft.com/library/cc748955%28v=ws.10%29.aspx)
+   > [Scenario 2: Editing Domain-Based GPOs Using ADMX Files](/previous-versions/windows/it-pro/windows-vista/cc748955(v=ws.10))
 
 3. Configure the "Computer Configuration\Administrative Templates\Google\Google Chrome\Content Settings\Allow plugins on these sites" setting by enabling the policy and by configuring the list of meeting join domain URLs that should be trusted.
 

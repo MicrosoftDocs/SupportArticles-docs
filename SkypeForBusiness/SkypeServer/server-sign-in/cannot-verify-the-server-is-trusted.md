@@ -1,7 +1,7 @@
 ---
 title: Lync can't verify that the server is trusted during client sign-in
 description: Works around an issue in which a Trust Model dialog box appears when a user tries to sign in to Lync. This issue occurs in a Lync Server 2013 environment.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync 2013
@@ -71,7 +71,7 @@ To prevent display of the Trust Model dialog box, use the **Trusted Domain List 
 
    This setting specifies the list of domains to be trusted—for example: contoso.com, contoso.co.in.
 
-For more information about the Lync 2013 Trusted Domain List (TrustModelData) Group Policy setting, see [Configuring client bootstrapping policies](https://technet.microsoft.com/library/gg425941.aspx).
+For more information about the Lync 2013 Trusted Domain List (TrustModelData) Group Policy setting, see [Configuring client bootstrapping policies](/skypeforbusiness/deploy/deploy-clients/configure-client-bootstrapping-policies).
 
 For more information about the Lync 2013.admx (ADMX) and .adml (ADML) Administrative Templates, see [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization tool](https://www.microsoft.com/download/details.aspx?id=35554). 
 

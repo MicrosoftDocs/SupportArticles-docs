@@ -1,8 +1,8 @@
 ---
 title: 550 5.7.1 Message rejected due to content restrictions in Exchange Online Protection
 description: Describes the 550 5.7.1 non-delivery report that's returned when you send email to external recipients in Exchange Online Protection. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

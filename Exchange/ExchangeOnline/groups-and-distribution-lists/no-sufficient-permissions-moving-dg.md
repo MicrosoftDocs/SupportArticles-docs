@@ -1,14 +1,14 @@
 ---
 title: You don't have sufficient permissions when remove or change distribution group
 description: Describes an issue that triggers an error when you try to remove a distribution group or make a change to the group in Exchange Online or in on-premises Exchange Server. Provides two methods of resolution.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -36,7 +36,7 @@ This issue occurs if you're not a manager of the group. In this situation, you'r
 > You have to be an Exchange Online admin, an Exchange admin, or a member of the "Security Group Creation and Membership" role in the Exchange admin center to perform this procedure.
 
 1. Take one of the following actions, as appropriate for your situation:
-   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    - On Exchange Server in your on-premises environment, open the Exchange Management Shell.
 
 2. Make the change that you want to the distribution group by using the appropriate Windows PowerShell cmdlet.
@@ -83,7 +83,7 @@ Here are some more examples of other Windows PowerShell cmdlets that you can use
 To add yourself to the `ManagedBy` attribute, follow these steps:
 
 1. Take one of the following actions, as appropriate for your situation:
-   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    - On Exchange Server in your on-premises environment, open the Exchange Management Shell.
 
 2. Run the following command:
@@ -100,10 +100,10 @@ To add yourself to the `ManagedBy` attribute, follow these steps:
 
     After you do this, you'll be able to change the distribution group.
 
-For more information about the `Set-DistributionGroup` cmdlet, see [Set-DistributionGroup](https://technet.microsoft.com/library/bb124955%28v=exchg.160%29.aspx).
+For more information about the `Set-DistributionGroup` cmdlet, see [Set-DistributionGroup](/powershell/module/exchange/set-distributiongroup).
 
 ## References
 
-To learn about managing distribution groups that are synced to Office 365 from the on-premises environment, see [Owners of an on-premises distribution group synced to O365 can't manage the distribution group in Exchange Online](/exchange/troubleshoot/groups-and-distribution-lists/cannot-manage-dg).
+To learn about managing distribution groups that are synced to Office 365 from the on-premises environment, see [Owners of an on-premises distribution group synced to O365 can't manage the distribution group in Exchange Online](../../ExchangeHybrid/groups-and-distribution-lists/cannot-manage-dg.md).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

@@ -1,8 +1,8 @@
 ---
 title: Cannot be opened error when you start Office Starter 2010
 description: Provides steps to fix an issue in which you cannot be opened error you may get with Office Starter 2010.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

@@ -1,7 +1,7 @@
 ---
 title: Incomplete search results for choice type columns with multiple values
 description: Fixes an issue in which incomplete search results for choice type columns with multiple values.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Foundation 2013
 - SharePoint Server 2013
@@ -95,7 +95,7 @@ The following items, which are expected to get returned, will now correctly get 
 
 ## Similar problems and solutions  
 
-You will face the same behavior when using a multi-value enabled choice type of site column but SharePoint 2013 automatically creates a managed property for your site column as described in the TechNet article Automatically created managed properties in SharePoint Server 2013 ([Automatically created managed properties in SharePoint Server](https://technet.microsoft.com/library/jj613136%28v=office.15%29.aspx)).  
+You will face the same behavior when using a multi-value enabled choice type of site column but SharePoint 2013 automatically creates a managed property for your site column as described in the TechNet article Automatically created managed properties in SharePoint Server 2013 ([Automatically created managed properties in SharePoint Server](/SharePoint/technical-reference/automatically-created-managed-properties-in-sharepoint)).  
 
 These are the solution steps for a site column with, e.g.,  the name MyChoiceSiteColumn:   
 

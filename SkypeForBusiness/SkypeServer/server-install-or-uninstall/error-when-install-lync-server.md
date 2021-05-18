@@ -1,7 +1,7 @@
 ---
 title: Cannot find any suitable disks for database files
 description: Resolves an issue in which you receive the Cannot find any suitable disks for database files. You must manually specify database paths error message. This issue occurs when you try to install or update Lync Server 2013 or Lync Server 2013 databases.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: miadkins
 appliesto:
@@ -40,7 +40,7 @@ To resolve this issue, use one of the following methods.
 
 If the issue occurs when you try to install Lync Server 2013, make sure that the computer on which you want to install the Lync Server 2013 databases has at least 72 GB of free space on its local drives.
 
-For more information about Lync Server 2013 disk space requirements, see [Server hardware platforms for Lync Server 2013](https://technet.microsoft.com/library/gg398835%28v=ocs.15%29.aspx).
+For more information about Lync Server 2013 disk space requirements, see [Server hardware platforms for Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-server-hardware-platforms).
 
 **Method 2**
 
@@ -48,8 +48,8 @@ If the issue occurs when you try to update Lync Server 2013, make sure that the 
 
 ## More Information
 
-For more information about Lync Server 2013 Standard Edition database deployment, see [Install Standard Edition server database for Lync Server 2013](https://technet.microsoft.com/library/gg398167.aspx).
+For more information about Lync Server 2013 Standard Edition database deployment, see [Install Standard Edition server database for Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-install-standard-edition-server-database).
 
-For more information about Lync Server 2013 Enterprise Edition database deployment, see [Configure SQL Server for Lync Server 2013](https://technet.microsoft.com/library/gg425848%28v=ocs.15%29).
+For more information about Lync Server 2013 Enterprise Edition database deployment, see [Configure SQL Server for Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-configure-sql-server-for-lync-server).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

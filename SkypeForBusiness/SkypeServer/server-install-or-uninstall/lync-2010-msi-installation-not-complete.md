@@ -1,7 +1,7 @@
 ---
 title: The installation of Lync 2010 will not complete using Windows Installer (MSI)
 description: Lync 2010 IT Managed installations that use the Lync.msi Windows Installer method can fail. This issue can be fixed by implementing the UseMSIForLyncInstallation Lync 2010 Group Policy setting.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-swei
 appliesto:
 - Lync 2010
 ---
@@ -85,6 +85,6 @@ The definition of the UseMSIForLyncInstallation Lync 2010 Group Policy setting i
 
 For detailed information about how to automate the Lync 2010 deployment methods, visit the following Microsoft TechNet website:
 
-[IT-Managed Installation of Lync 2010](https://technet.microsoft.com/library/gg425733.aspx)
+[IT-Managed Installation of Lync 2010](/previous-versions/office/skype-server-2010/gg425733(v=ocs.14))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,7 +1,7 @@
 ---
 title: URL for meetings doesn't use the custom domain
 description: Describes an issue in which the "Meet Now" URL fails to reflect a custom domain that you set up in Skype for Business Online. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -37,7 +37,7 @@ https://meet.lync.com/litwareinc/user1/45GZFH99
 
 To resolve this issue, administrators should run the **Update-CsTenantMeetingUrl** cmdlet. This cmdlet replaces the old meeting URL with a new one that contains the custom URL instead. For example: https://meet.lync.com/onmicrosoft/user1/37JYLP71.
 
-For more information about the **Update-CsTenantMeetingUrl** cmdlet, see [Update-CsTenantMeetingUrl](https://technet.microsoft.com/library/dn424754.aspx).
+For more information about the **Update-CsTenantMeetingUrl** cmdlet, see [Update-CsTenantMeetingUrl](/powershell/module/skype/Update-CsTenantMeetingUrl).
 
 ## More Information
 

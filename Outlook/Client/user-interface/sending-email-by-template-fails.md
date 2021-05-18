@@ -1,8 +1,8 @@
 ---
 title: Using a template file to send emails fails
 description: Describes an issue where email messages aren't received when you use a template file in Outlook 2010. Provides workarounds.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

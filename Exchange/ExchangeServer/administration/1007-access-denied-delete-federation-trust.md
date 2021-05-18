@@ -1,8 +1,8 @@
 ---
 title: Access Denied when you delete federation trust
 description: Describes an issue that occurs when you try to remove the federation trust in an Exchange organization, and provides a workaround.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

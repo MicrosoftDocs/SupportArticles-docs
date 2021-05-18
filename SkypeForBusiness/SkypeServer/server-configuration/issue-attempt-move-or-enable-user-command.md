@@ -1,7 +1,7 @@
 ---
 title: Insufficient access rights to perform the operation when move or enable user
 description: Lync Server Control Panel returns that error "Insufficient access rights move user or enable user command. This issue occurs when the user account t to perform the operation" when attempting a hat needs to be enabled for Lync or moved to a Lync registrar pool is a member of a protected Windows security group.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2010 Enterprise Edition 
@@ -58,20 +58,20 @@ Use the Lync Server Management shell to administer the following Lync Server Pow
 
 For more detailed information on the permissions needed to use the Lync Server Control Panel and how to use the Lync Server Control Panel to add Active Directory, directory service users to the Lync Server pool please review the following information:
 
-[Enable or Disable Users for Lync Server](https://technet.microsoft.com/library/gg429696.aspx)
+[Enable or Disable Users for Lync Server](/previous-versions/office/lync-server-2013/lync-server-2013-disable-or-re-enable-user-account-for-lync-server)
 
 Windows Server Active Directory, directory service security groups that are designated protected groups will block the inheritance of non-default Access Control Entries (ACEs) to their default Access Control List (ACL) as a security measure. Windows Server protected groups consist of the list of default administrative groups that are used to manage the Windows Server enterprise.
 
 The link listed below provides the details of the processes that are used to manage the default level of security for the Windows Server protected security groups:
 
-[AdminSDHolder, Protected Groups and SDPROP for Windows Server](https://technet.microsoft.com/magazine/2009.09.sdadminholder.aspx)
+[AdminSDHolder, Protected Groups and SDPROP for Windows Server](/previous-versions/technet-magazine/ee361593(v=msdn.10))
 
 For more detailed information on using the Enable-CsUser, Move-CsUser, and Move-CsLegacyUser Lync Server PowerShell cmdlets, please review the following Microsoft TechNet information:
 
-- [Enable-CsUser](https://technet.microsoft.com/library/gg398711.aspx)
+- [Enable-CsUser](/powershell/module/skype/Enable-CsUser)
 
-- [Move-CsUser](https://technet.microsoft.com/library/gg398528.aspx)
+- [Move-CsUser](/powershell/module/skype/Move-CsUser)
 
-- [Move-CsLegacyUser](https://technet.microsoft.com/library/gg413025.aspx)
+- [Move-CsLegacyUser](/powershell/module/skype/Move-CsLegacyUser)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

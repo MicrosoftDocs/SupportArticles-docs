@@ -1,7 +1,7 @@
 ---
 title: Unexpected error when creating a calendar overlay
 description: Sorry, something went wrong or An unexpected error has occurred when creating a calendar overlay by using a calendar from a SharePoint Online subsite.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -38,7 +38,7 @@ To fix this issue, remove the ampersand (&) from the site that contains the cale
 1. Create the calendar overlay by using the new URL.
 
 > [!note]
-> - To change the URL while at the root level of a classic or Modern site, you must change the site address. For more information, see [Change a site address](https://docs.microsoft.com/sharepoint/change-site-address). (Note that navigation on a Modern site is not shown by default.)
+> - To change the URL while at the root level of a classic or Modern site, you must change the site address. For more information, see [Change a site address](/sharepoint/change-site-address). (Note that navigation on a Modern site is not shown by default.)
 > - The title, description, and logo settings page can be accessed directly by browsing to `https://contoso.sharepoint.com/web1/_layouts/15/prjsetng.aspx` (where "contoso" is your website).
 
 

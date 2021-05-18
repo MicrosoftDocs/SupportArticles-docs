@@ -1,8 +1,8 @@
 ---
-title: Update of Client Access Rules
-description: Describes a procedural update for Office 365 customers who use Client Access Rules in Office 365.
-author: simonxjx
-ms.author: v-six
+title: Updates to Client Access Rules in Office 365
+description: Describes a procedural update to Client Access Rules in Office 365.
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article
@@ -17,7 +17,7 @@ appliesto:
 - Microsoft Exchange Online Dedicated
 search.appverid: MET150
 ---
-# Update of Client Access Rules for Office 365 customers
+# Updates to Client Access Rules in Office 365
 
 > [!IMPORTANT]
 > This article applies to Office 365 Dedicated, Office 365 D/ITAR, and select Office 365 Enterprise customers.

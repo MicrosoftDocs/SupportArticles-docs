@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot directory synchronization errors with event 6941
 description: Discusses an issue in which an admin receives a  "Directory Synchronization Error Report" email message in Office 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Azure Active Directory
 - Office 365 Identity Management
@@ -175,6 +175,6 @@ After you determine conflicting or invalid attribute values, troubleshoot the is
 
 The Windows PowerShell commands in this article require the Azure Active Directory Module for Windows PowerShell. For more information about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website:
 
-[Azure Active Directory Cmdlets](https://aka.ms/aadposh)
+[Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

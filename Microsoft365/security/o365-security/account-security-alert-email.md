@@ -1,8 +1,8 @@
 ---
 title: You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)
 description: Explains why you might receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext).
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -39,5 +39,5 @@ Start by hovering your mouse over all email addresses, links, and buttons to 
 For more information, see the following:
 
 - [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/)
-- [Anti-spam message headers](https://technet.microsoft.com/library/dn205071%28v=exchg.150%29.aspx)
-- [Spam confidence levels](https://technet.microsoft.com/library/jj200686%28v=exchg.150%29.aspx)
+- [Anti-spam message headers](/microsoft-365/security/office-365-security/anti-spam-message-headers)
+- [Spam confidence levels](/microsoft-365/security/office-365-security/spam-confidence-levels)

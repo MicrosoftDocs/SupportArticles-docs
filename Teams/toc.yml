@@ -17,14 +17,22 @@
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name:  Can't send messages to a group chat
       href: ./teams-administration/unable-send-message-group-chat.md
+    - name: Error switching a tenant to Teams Only mode
+      href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
+    - name: Issues receiving messages and calls
+      href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Organizations can't prevent users from changing profile photos
       href: ./known-issues/cant-prevent-users-from-changing-profile-picture.md
     - name: Public team list doesn't display all teams
       href: ./known-issues/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
+    - name: Troubleshoot connectivity issues
+      href: /microsoftteams/connectivity-issues?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: Troubleshoot installation and update issues
+      href: /microsoftteams/troubleshoot-installation?context=/MicrosoftTeams/troubleshoot/context/context
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
     - name: User information isn't updated
@@ -65,6 +73,8 @@
       href: ./teams-conferencing/no-dial-pad.md
     - name: Give Control doesn't work
       href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
+    - name: Lenovo Yoga L13 might shut down during Teams meetings
+      href: ./teams-conferencing/lenovo-shut-down-during-meeting.md
     - name: Organizer can't start Outlook meeting and stuck in virtual lobby
       href: ./known-issues/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
@@ -87,17 +97,13 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
-  - name: Direct Routing 
-    items: 
-    - name: Issues with SBC connectivity
-      href: ./direct-routing/sip-options-tls-certificate-issues.md
   - name: Exchange integration
     items:
     - name: Teams and Exchange interaction issues
       href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
-    - name: Error when accessing OneDrive storage
+    - name: Error uploading files to chats
       href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Error when selecting Files tab
       href: ./files/object-specified-not-belong-to-list.md
@@ -127,8 +133,8 @@
     items:
     - name: How to join a Microsoft Teams meeting
       href: ./meetings/how-to-join-a-teams-meeting.md
-    - name: Troubleshoot Teams meeting recording issues
-      href: ./meetings/troubleshoot-meeting-recording-issues.md
+    - name: Issues with meeting recordings
+      href: ./meetings/troubleshoot-meeting-recording-issues.md      
   - name: Mobile
     items:
     - name: Can't see auto-favorited channels in mobile app
@@ -147,6 +153,16 @@
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
+  - name: Phone System
+    items: 
+    - name: Dial Plans
+      items: 
+      - name: Errors when trying to manage dial plans
+        href: ./phone-system/dial-plans/errors-managing-dial-plans.md
+    - name: Direct Routing
+      items: 
+      - name: Issues with SBC connectivity
+        href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
   - name: Provisioning
     items:
     - name: Can't create a team 

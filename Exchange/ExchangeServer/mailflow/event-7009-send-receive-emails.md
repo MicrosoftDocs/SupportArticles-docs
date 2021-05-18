@@ -1,8 +1,8 @@
 ---
 title: Event 7009 when users send or receive emails
 description: This article describes an issue that prevents mail delivery in Exchange Server 2013 and Exchange Server 2016. This issue occurs when the Microsoft Exchange Transport service is inactive. A resolution is provided.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

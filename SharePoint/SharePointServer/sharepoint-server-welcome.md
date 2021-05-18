@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for SharePoint Server
 description: This article lists SharePoint Server-related issues.
-author: AmandaAZ
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-weizhu
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -24,7 +24,6 @@ Below is a collection of top issues. If your issue isn't listed there, browse th
 
 ## Top SharePoint Server troubleshooting articles
 
-- ["The language of this installation package is not supported by your system" error when moving a SharePoint 2010 external list offline to Outlook 2010](https://support.microsoft.com/help/983010)
 - [Troubleshooting common SPMT issues and errors](https://docs.microsoft.com/sharepointmigration/troubleshooting-common-spmt-issues)
 - ["Server Error in '/' Application. Access to the path is denied" when you log on to Windows SharePoint Services 2.0](./security/access-to-the-path-is-denied-during-logon.md)
 - [How to uninstall Groove](https://support.microsoft.com/help/907504)
@@ -33,7 +32,7 @@ Below is a collection of top issues. If your issue isn't listed there, browse th
 
 - [SharePoint help & learning](https://support.microsoft.com/sharepoint)
 - [SharePoint end user troubleshooting](https://support.microsoft.com/office/b6c6bab7-55f9-454a-924a-13bea01558ef)
-- [SharePoint administrator documentation](https://docs.microsoft.com/sharepoint/sharepoint-server)
+- [SharePoint administrator documentation](/sharepoint/sharepoint-server)
 
 ## Still need help
 

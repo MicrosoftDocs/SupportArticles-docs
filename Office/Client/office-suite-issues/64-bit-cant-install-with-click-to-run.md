@@ -1,13 +1,13 @@
 ---
 title: This 64-bit product may not be installed with Microsoft Office Click-to-Run
 description: Describes an issue in which you cannot install a 64-bit version of Office 2010 and you receive an error message. A workaround is provided.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: doakm
 appliesto:

@@ -1,7 +1,7 @@
 ---
 title: Cannot sign in to Lync because this sign-in address was not found
 description: Describes an issue that occurs when you try to sign in to Skype for Business Online. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -32,12 +32,12 @@ If you're synchronizing your on-premises Active Directory with Office 365 and th
 2. If you aren't in a Lync hybrid environment, but still have an on-premises Lync Server, delete the user from the Lync Control Panel or Lync Management Shell. Deleting the user and not just disabling them, from Lync will remove the values in** msRTCSIP** attributes for the user. You can also follow the next steps to manually fix the issue.   
 3. If you previously had an Office Communications Server (OCS) or Lync deployment that's no longer being used, you may have to manually edit the user's **msRTCSIP** attributes to fix the issue. Open Active Directory Service Interfaces Edit (ADSIEdit) from the on-premises domain controller. For information about ADSIEdit, go to the following Microsoft website. (This includes information about how to add ADSIEdit to the Microsoft Management Console [MMC].)
 
-    [TechNet: Adding ADSI Edit to MMC](https://technet.microsoft.com/library/cc773354%28v=ws.10%29.aspx#bkmk_addingadsiedit)
-1. Locate the user who can't sign in to Skype for Business Online. To do this, build an LDAP query in ADSIEdit. For help with building the appropriate query and in locating the correct user, see [TechNet: Using ADSI Edit](https://technet.microsoft.com/library/cc773354%28v=ws.10%29.aspx#bkmk_usingadsiedit).   
+    [TechNet: Adding ADSI Edit to MMC](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_addingadsiedit)
+1. Locate the user who can't sign in to Skype for Business Online. To do this, build an LDAP query in ADSIEdit. For help with building the appropriate query and in locating the correct user, see [TechNet: Using ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_usingadsiedit).   
 1. When the correct user is found, change the msRTCSIP-UserEnabledattribute to TRUE.   
 1. Use the Force the Directory Sync Tool to sync with Office 365, and then wait approximately 30 minutes for the change to take effect in Office 365. 
 
-For more information about how to synchronize your directories, see [Synchronize your directories](https://technet.microsoft.com/library/jj151771.aspx).
+For more information about how to synchronize your directories, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 
 ## More Information

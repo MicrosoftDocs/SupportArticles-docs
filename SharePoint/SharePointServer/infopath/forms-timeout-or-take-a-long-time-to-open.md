@@ -1,8 +1,8 @@
 ---
 title: Forms time out or take a long time to open
 description: Fixes an issue in which a form is timeout or takes a long time to open when you try to open it in InfoPath 2010 or InfoPath 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

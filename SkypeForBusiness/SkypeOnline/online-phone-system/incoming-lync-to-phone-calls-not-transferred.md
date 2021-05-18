@@ -1,7 +1,7 @@
 ---
 title: Incoming Lync To Phone calls aren't transferred to Unified Messaging voice mail
 description: Discusses an issue in which incoming Lync To Phone calls aren't transferred to Unified Messaging voice mail in Exchange Online or Exchange Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

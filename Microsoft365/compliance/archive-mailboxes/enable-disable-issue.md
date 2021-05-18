@@ -1,8 +1,8 @@
 ---
 title: Error when you try to enable or disable an archive mailbox for an Exchange Online user or move a mailbox to an on-premises environment
 description: Describes that you receive an error message when you try to enable or disable an archive mailbox for an existing Exchange Online user or move a mailbox from Exchange Online to an on-premises environment.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -47,7 +47,7 @@ Generally, if an internal datacenter move doesn't affect your ability to perform
 
 If management tasks are affected by the move requests, follow these steps:
 
-1. Connect to Exchange Online by using remote Windows PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+1. Connect to Exchange Online by using remote Windows PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Verify that the mailbox is being moved. To do this, run the following command:
 
     ```powershell

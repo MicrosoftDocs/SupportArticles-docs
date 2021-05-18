@@ -1,7 +1,7 @@
 ---
 title: Cannot create a meeting on behalf of delegate in Skype for Business
 description: Resolves a problem in which you cannot create a Skype meeting on behalf of delegate and with error in Skype for Business Online.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: luche
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
@@ -41,7 +41,7 @@ To fix this issue, define the same location for the affected users by setting th
 
 - If users are hosted on an on-premises server, such as a domain controller (DC) that is running Active Directory Domain Service (AD DS), you must manually update the preferred data location value in on-premises AD, and then sync the updates to Azure AD by using Azure AD Connect. To do this, see the following article:
 
-    [Azure Active Directory Connect sync: Configure preferred data location for Office 365 resources](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation)
+    [Azure Active Directory Connect sync: Configure preferred data location for Office 365 resources](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation)
 
     This cmdlet sets the preferred data location property of a user whose user principal name is davidchew@contoso.com to EUR (European Union).
 

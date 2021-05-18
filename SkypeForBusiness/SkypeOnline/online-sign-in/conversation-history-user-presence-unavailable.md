@@ -1,7 +1,7 @@
 ---
 title: Conversation history, contact cards, Free/Busy, and Out of Office unavailable
 description: Describes the scenarios in which Conversation history, contact cards, Free/Busy, and Out of Office information are unavailable when Microsoft Lync fails to connect to Microsoft Exchange. Provides solutions.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
@@ -51,8 +51,8 @@ In the Lync client, you may receive one of the following error messages:
 
 Make sure that you're using the most up-to-date Lync client. For more information, go to the following Microsoft websites:
 
-- [Updates resource center for Lync 2013](https://technet.microsoft.com/lync/dn146014.aspx)   
-- [Updates resource center for Lync 2010](https://technet.microsoft.com/lync/gg131945.aspx)   
+- [Updates resource center for Lync 2013](/SkypeForBusiness/software-updates)   
+- [Updates resource center for Lync 2010](/SkypeForBusiness/software-updates)   
 
 #### Is Outlook running and configured to use the correct profile?
 

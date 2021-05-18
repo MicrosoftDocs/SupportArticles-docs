@@ -1,8 +1,8 @@
 ---
 title: How to copy Calendar items to another folder
 description: This article provides steps about how to copy Outlook Calendar items from one folder to another folder.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

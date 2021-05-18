@@ -1,8 +1,8 @@
 ---
 title: Outlook.exe.log in %Temp% consumes too much disk space
 description: Describes an issue in which a file that's named Outlook.exe.log and that may be larger than 1 GB appears in your %Temp% folder. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 3038305
 In your computer's %Temp% folder, you notice a very large file (for example, more than 1 GB) that's named Outlook.exe.log.
 
 > [!NOTE]
-> The %Temp% folder is typically found at C:\Users\<**user name**>\AppData\Local\Temp.
+> The %Temp% folder is typically found at C:\Users\\<**user name**>\AppData\Local\Temp.
 
 ## Cause
 
@@ -43,7 +43,7 @@ Value: 1
 > [!NOTE]
 > The **x.0** placeholder represents your version of Office (16.0 = Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 = Outlook 2013, 14.0 = Outlook 2010, and 12.0 = Outlook 2007).
 
-TCOTTrace logging should remain enabled only as long as you are working with a support engineer on a specific issue.
+TCOTrace logging should remain enabled only as long as you are working with a support engineer on a specific issue.
 
 ## Resolution
 
@@ -56,7 +56,7 @@ To resolve this issue, follow these steps:
 3. Type *regedit.exe*, and then select **OK**.
 4. Locate and then select the following subkey:
 
-   `HKEY_CURRENT_USER \ Software\Microsoft\Office\x.0\Common\Debug`
+   `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Common\Debug`
 
     > [!NOTE]
     > The **x.0** placeholder represents your version of Office (16.0 = Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).

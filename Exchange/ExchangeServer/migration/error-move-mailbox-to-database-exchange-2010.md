@@ -1,8 +1,8 @@
 ---
 title: Could not find part of the path error when you move a mailbox to a database in Exchange Server 2010
 description: Resolves an issue in which you can't move a mailbox between mailbox databases in Exchange Server 2010. Additionally, you receive a "Could not find a part of the path" error message.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -40,4 +40,4 @@ This issue occurs because the path value of TEMP and TMP environment variables t
 
 To resolve this issue, set the correct path for TEMP and TMP environment variables. The default path for TEMP and TMP environment variables is *%Userprofile%\Temp*.
 
-For more information about how to the set correct path for TEMP and TMP environment variables, go to the following Microsoft TechNet website: [How to Move the TEMP and TMP Directories](https://technet.microsoft.com/library/aa998945%28v=exchg.65%29.aspx)
+For more information about how to the set correct path for TEMP and TMP environment variables, go to the following Microsoft TechNet website: [How to Move the TEMP and TMP Directories](/previous-versions/tn-archive/aa998945(v=exchg.65))

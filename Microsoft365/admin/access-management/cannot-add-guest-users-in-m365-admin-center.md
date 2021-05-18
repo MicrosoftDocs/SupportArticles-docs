@@ -1,7 +1,7 @@
 ---
 title: Unable to add guest users in M365 admin center
-ms.author: luche
-author: helenclu
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 3/25/2020
 audience: Admin
@@ -46,7 +46,7 @@ Non-admins will then be able to add guest users without admin approval.
 
 **Microsoft recommends that admins make this change to alleviate the number of requests they may receive for remote access.**
 
-For more detailed instructions, see [Step 2: Configure Azure AD business-to-business settings](https://docs.microsoft.com/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings) in the article [Microsoft Teams guest access checklist](https://docs.microsoft.com/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings). 
+For more detailed instructions, see [Step 2: Configure Azure AD business-to-business settings](/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings) in the article [Microsoft Teams guest access checklist](/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings). 
 
 ### Admins
 
@@ -56,8 +56,8 @@ For admins to directly add a guest user, go to **All users** in the [Azure Activ
 
 For more information about how to add new users, see the following Microsoft articles:
 
-- [Quickstart: Add guest users to your directory in the Azure portal](https://docs.microsoft.com/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
-- [Microsoft Teams guest access checklist](https://docs.microsoft.com/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings)
+- [Quickstart: Add guest users to your directory in the Azure portal](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
+- [Microsoft Teams guest access checklist](/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings)
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

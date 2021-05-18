@@ -1,7 +1,7 @@
 ---
 title: (Your organization has disabled this device) error when trying to activate Microsoft 365 Apps'
-ms.author: luche
-author: helenclu
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 ms.date: 9/4/2020
 audience: Admin
@@ -53,18 +53,18 @@ To resolve the issue, follow the steps:
     3. Examine the disabled devices list in **Devices**, by searching on the username or device name. 
     4. Select the device, and then select **Enable**.
 
-    For more information, see [Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#device-management-tasks).
+    For more information, see [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks).
 
-- If the device was deleted in Azure AD, you  have to re-register it manually. For detailed steps to do this, see [Re-enable or re-register the device](https://docs.microsoft.com/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
+- If the device was deleted in Azure AD, you  have to re-register it manually. For detailed steps to do this, see [Re-enable or re-register the device](/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
 
 
 ## More information
 
 For more information about how to troubleshoot Microsoft Office client-side sign-in related issues, see the following articles:
 
-- [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](https://docs.microsoft.com/office365/troubleshoot/administration/disabling-adal-wam-not-recommended)
-- [Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](https://docs.microsoft.com/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016)
-- [Reset Microsoft 365 Apps for enterprise activation state](https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state)
-- [Fix authentication issues in Office applications when you try to connect to an Office 365 service](https://docs.microsoft.com/office365/troubleshoot/authentication/automatic-authentication-fails)
+- [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](../administration/disabling-adal-wam-not-recommended.md)
+- [Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](../authentication/connection-issue-when-sign-in-office-2016.md)
+- [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state)
+- [Fix authentication issues in Office applications when you try to connect to an Office 365 service](../authentication/automatic-authentication-fails.md)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

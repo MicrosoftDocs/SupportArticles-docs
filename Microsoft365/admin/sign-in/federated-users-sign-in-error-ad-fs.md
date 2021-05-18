@@ -1,13 +1,13 @@
 ---
 title: There was a problem accessing the site error from AD FS
 description: Describes an issue in which a federated user receives an error message from Active Directory Federation Services (AD FS) when the user tries to sign in to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.reviewer: v-jocomf
 ms.custom: CSSTroubleshoot
 search.appverid: 
@@ -120,11 +120,11 @@ Regardless of whether a self-signed or CA-signed certificate is used, you should
 3. Re-create the AD FS proxy trust configuration. To do this, follow these steps: 
    1. Restart the AD FS Windows Service on the primary AD FS server.    
    2. Wait 10 minutes for the certificate to replicate to all the members of the federation server farm, and then restart the AD FS Windows Service on the rest of the AD FS servers.    
-   3. Rerun the Proxy Configuration Wizard on each AD FS proxy server. For more information, see [Configure a computer for the federation server proxy role](https://technet.microsoft.com/library/dd807067%28ws.10%29.aspx).   
+   3. Rerun the Proxy Configuration Wizard on each AD FS proxy server. For more information, see [Configure a computer for the federation server proxy role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd807067(v=ws.10)).   
 
 ### Scenario 2: You recently updated the client access policy through claims, and now sign-in doesn't work
 
-Check whether the client access policy was applied correctly. For more information, see [Limiting access to Office 365 services based on the location of the client](https://technet.microsoft.com/library/hh526961%28ws.10%29.aspx).
+Check whether the client access policy was applied correctly. For more information, see [Limiting access to Office 365 services based on the location of the client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh526961(v=ws.10)).
 
 ### Scenario 3: The federation metadata endpoint or the relying party trust may be disabled
 
@@ -137,7 +137,7 @@ Enable the federation metadata endpoint and the relying party trust with Azure A
 3. Make sure that the relying party trust with Azure AD is enabled. To do this, follow these steps: 
    1. In the left navigation pane, browse to **AD FS (2.0)**, then **Trust Relationships**, and then **Relying Party Trusts**.    
    2. If **Microsoft Office 365 Identity Platform** is present, right-click this entry, and then click **Enable**.    
-4. Repair the relying party trust with Azure AD by seeing the "Update trust properties" section of [Verify and manage single sign-on with AD FS](https://technet.microsoft.com/library/jj151809.aspx).   
+4. Repair the relying party trust with Azure AD by seeing the "Update trust properties" section of [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100)).   
 
 ### Scenario 4: The relying party trust may be missing or corrupted
 
@@ -147,11 +147,11 @@ Remove and re-add the relying party trust. To do this, follow these steps:
 2. Click **Start**, point to **All Programs**, click **Administrative Tools**, and then click **AD FS (2.0) Management**.    
 3. In the management console, expand **AD FS (2.0)**, expand **Trust Relationships**, and then expand **Relying Party Trusts**.    
 4. If **Microsoft Office 365 Identity Platform** is present, right-click this entry, and then click **Delete**.   
-5. Re-add the relying party trust by seeing the "Update trust properties" section of [Verify and manage single sign-on with AD FS](https://technet.microsoft.com/library/jj151809.aspx).   
+5. Re-add the relying party trust by seeing the "Update trust properties" section of [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100)).   
 
 ### Scenario 5: The AD FS service account doesn't have the "Impersonate a client after authentication" user permission
 
-To grant the "Impersonate a client after authentication" user permission to the AD FS IUSR service account, see [Event ID 128 — Windows NT token-based application configuration](https://technet.microsoft.com/library/dd353726%28v=ws.10%29.aspx).
+To grant the "Impersonate a client after authentication" user permission to the AD FS IUSR service account, see [Event ID 128 — Windows NT token-based application configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd353726(v=ws.10)).
 
 ## References
 

@@ -1,8 +1,8 @@
 ---
 title: Running Test-IRMConfiguration in EMS fails
 description: Provides a resolution to resolve the failure of the Test-IRMConfiguration cmdlet.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

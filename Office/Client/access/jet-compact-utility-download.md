@@ -1,7 +1,7 @@
 ---
 title: Jet compact utility is available in Download Center
 description: Lists the link to download the Jet compact utility JETCOMP.exe. It's a stand-alone utility that compacts databases created with Microsoft Jet database engine 3.x and 4.0. The user interface of JETCOMP.exe is in English only.
-author: AmandaAZ
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: luche
 ms.reviewer: chriswy 
 appliesto:
 - Access 2002

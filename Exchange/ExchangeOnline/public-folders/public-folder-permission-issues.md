@@ -1,7 +1,7 @@
 ---
 title: How to diagnose and fix public folder permission issues
 description: This article helps you diagnose and fix public folder permission-related issues.
-author: helenclu
+author: Norman-sun
 ms.author: batre
 manager: dcscontentpm
 audience: ITPro 

@@ -1,8 +1,8 @@
 ---
 title: Cannot access another user's mailbox folder
 description: Describes an issue in which a user receives an error message when trying to access another user's mailbox folder in Outlook. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

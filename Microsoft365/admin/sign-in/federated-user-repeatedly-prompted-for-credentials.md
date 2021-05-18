@@ -1,7 +1,7 @@
 ---
 title: A federated user is repeatedly prompted for credentials during sign-in
 description: Describes an issue in which a federated user is repeatedly prompted for credentials when the user tries to log on to the AD FS service endpoint during sign-in to Office 365, Azure, or Microsoft Intune. When the user cancels, the user gets an "Access Denied" error message. Provides a resolution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Cloud Services (Web roles/Worker roles) 
@@ -63,9 +63,9 @@ Check that the user name and password are not the cause of the issue.
 - Make sure that the correct user name is used and is in user principal name (UPN) format. For example, johnsmith@contoso.com.
 - Make sure that the correct password is used. To double-check that the correct password is used, you may have to reset the user password. For more information, see the following Microsoft TechNet article:
 
-  [Reset a User Password](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754395(v=ws.11))
+  [Reset a User Password](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754395(v=ws.11))
 - Make sure that the account isn't locked out, expired, or used outside designated logon hours. For more information, see the following Microsoft TechNet article:
-  [Managing Users](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754661(v=ws.11))
+  [Managing Users](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754661(v=ws.11))
 
 ### Verify the cause
 
@@ -120,7 +120,7 @@ The default authentication settings are listed in the following table.
 
 On each AD FS federation server and on each AD FS federation server proxy, use the information in the following Microsoft TechNet article to reset the AD FS IIS virtual applications to the default authentication settings:
 
-[Configuring Authentication in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733010(v=ws.10))
+[Configuring Authentication in IIS 7](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733010(v=ws.10))
 
 ### Resolution 2: Correct the AD FS federation server farm SPN
 
@@ -187,7 +187,7 @@ To disable Extended Protection for Authentication for passive clients, perform t
 
 To do this, follow these steps:
 
-1. Open IIS Manager and navigate to the level that you want to manage. For information about opening IIS Manager, see [Open IIS Manager (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
+1. Open IIS Manager and navigate to the level that you want to manage. For information about opening IIS Manager, see [Open IIS Manager (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 2. In Features View, double-click **Authentication**.
 3. On the Authentication page, select **Windows Authentication**.
 4. In the **Actions** pane, click **Advanced Settings**.
@@ -221,7 +221,7 @@ To re-enable Extended Protection for Authentication for passive clients, perform
 
 To do this, follow these steps:
 
-1. Open IIS Manager and navigate to the level that you want to manage. For information about opening IIS Manager, see [Open IIS Manager (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
+1. Open IIS Manager and navigate to the level that you want to manage. For information about opening IIS Manager, see [Open IIS Manager (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770472(v=ws.10)).
 2. In Features View, double-click **Authentication**.
 3. On the Authentication page, select **Windows Authentication**.
 4. In the **Actions** pane, click **Advanced Settings**.
@@ -247,7 +247,7 @@ To re-enable Extended Protection for Authentication for active clients, perform 
 ### Resolution 4: Replace CNAME records with A records for AD FS
 
 Use DNS management tools to replace each DNS Alias (CNAME) record that's used for the federation service with a DNS address (A) record. Also, check or consider corporate DNS settings when a split-brain DNS configuration is implemented. For more information about how to manage DNS records, see
-[Managing DNS Records](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb727018(v=technet.10)).
+[Managing DNS Records](/previous-versions/windows/it-pro/windows-2000-server/bb727018(v=technet.10)).
 
 ### Resolution 5: Set up Internet Explorer as an AD FS client for single sign-on (SSO)
 
@@ -298,11 +298,11 @@ Windows XP without appropriate updates
 
 For more information about Extended Protection for Authentication, see the following Microsoft resource:
 
-[Configuring Advanced Options for AD FS 2.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh237448(v=ws.10))
+[Configuring Advanced Options for AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh237448(v=ws.10))
 
 For more information about the Set-ADFSProperties cmdlet, go to the following Microsoft website:
 
-[Set-ADFSProperties](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee892317(v=technet.10))
+[Set-ADFSProperties](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee892317(v=technet.10))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
 

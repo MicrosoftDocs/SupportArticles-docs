@@ -1,8 +1,8 @@
 ---
 title: Show fiscal dates on a timescaled view
 description: Describes how Fiscal Dates are shown on a timescaled view.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

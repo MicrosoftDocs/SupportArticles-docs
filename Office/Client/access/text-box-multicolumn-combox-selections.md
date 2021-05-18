@@ -1,7 +1,7 @@
 ---
 title: Populate text boxes with multicolumn Combo Box selections
 description: Provides step-by-step guide to populate several text boxes with the selections made in a multicolumn combo box, and save the contents of the text boxes as one record in a table. Requires basic macro, coding, and interoperability skills
-author: AmandaAZ
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: luche
 ms.reviewer: V-DARMAC
 appliesto:
 - Access 2007

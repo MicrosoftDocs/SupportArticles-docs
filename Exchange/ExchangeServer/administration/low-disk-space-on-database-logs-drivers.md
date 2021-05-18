@@ -1,8 +1,8 @@
 ---
 title: Low disk space on database logs or drives
 description: Check the database log or drive disk space and create warning alert when the disk is free space is < 20 MB or free space is < 10%.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

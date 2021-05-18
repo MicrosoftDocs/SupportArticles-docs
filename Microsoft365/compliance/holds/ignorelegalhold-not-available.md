@@ -1,7 +1,7 @@
 ---
 title: IgnoreLegalHold isn't available or functional for Exchange Online user objects
 description: IgnoreLegalHold isn't available or functional for Disable-Mailbox, Remove-Mailbox, Disable-Mailuser, and Remove-Mailuser commands in Exchange Online
-author: helenclu
+author: MaryQiu1987
 ms.author: lindabr
 manager: dcscontentpm
 audience: ITPro 
@@ -26,4 +26,4 @@ The **IgnoreLegalHold** switch specifies whether to ignore a user's legal hold s
 - Disable-Mailuser
 - Remove-Mailuser
   
-To permanently remove or disable a mailbox on hold, remove the mailbox from the hold. Before you do so, contact your compliance officer, records management team or legal department to understand your organization's policies and requirements regarding holds. For more information on hold identification, see [Identify a hold on an Exchange mailbox](https://docs.microsoft.com/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox?view=o365-worldwide&preserve-view=true).
+To permanently remove or disable a mailbox on hold, remove the mailbox from the hold. Before you do so, contact your compliance officer, records management team or legal department to understand your organization's policies and requirements regarding holds. For more information on hold identification, see [Identify a hold on an Exchange mailbox](/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox?preserve-view=true&view=o365-worldwide).

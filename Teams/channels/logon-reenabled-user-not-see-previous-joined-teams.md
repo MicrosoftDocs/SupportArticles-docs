@@ -27,6 +27,6 @@ Assume that your Microsoft Teams account is disabled for signing in. By design, 
 
 Wait for 24 to 48 hours for your account memberships to be automatically restored. However, your membership won't be restored for private channels in Teams. You must make new requests for membership to each private channel that you want to rejoin.
 
-To learn more, see [Private channels in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/private-channels).
+To learn more, see [Private channels in Microsoft Teams](/MicrosoftTeams/private-channels).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

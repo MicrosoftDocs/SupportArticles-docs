@@ -1,8 +1,8 @@
 ---
 title: Password expiration isn't notified in OWA
 description: Describes an issue that unexpectedly triggers a password expiration notification when a user tries to log in to their mailbox. This issue concerns the fine-grained password policy. A workaround is provided.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

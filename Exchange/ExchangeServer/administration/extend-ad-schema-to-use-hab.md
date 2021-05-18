@@ -1,8 +1,8 @@
 ---
 title: Extend AD schema for Hierarchical Address Book
 description: Describes a way to install the Active Directory schema for the Hierarchical Address Book (HAB) on a server that is running Exchange Server 2010 server.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

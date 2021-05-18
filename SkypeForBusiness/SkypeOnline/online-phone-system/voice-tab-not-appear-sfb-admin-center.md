@@ -1,7 +1,7 @@
 ---
 title: The Voice tab doesn't appear in the Skype for Business Admin Center
 description: Discusses an issue in which the Voice tab is not displayed in the Skype for Business Admin Center. Provides a resolution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: lyotechreview
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -33,7 +33,7 @@ A Cloud PBX or an Office 365 Enterprise E5 license includes the ability to assig
 
 - If you want to use your existing Skype for Business or Lync Server deployment for PSTN connectivity, an administrator must manage the telephone numbers and the associated Skype for Business features through the Skype Online remote PowerShell, the on-premises Skype for Business PowerShell, or the Skype for Business control panel.
 
-    For more information, see [Enable users for Phone System in Office 365 with on-premises PSTN connectivity in Skype for Business Server](https://technet.microsoft.com/library/mt634319.aspx).   
+    For more information, see [Enable users for Phone System in Office 365 with on-premises PSTN connectivity in Skype for Business Server](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-phone-system).   
 
 
 ## More Information

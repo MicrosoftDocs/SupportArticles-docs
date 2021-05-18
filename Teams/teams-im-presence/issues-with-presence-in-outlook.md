@@ -1,7 +1,7 @@
 ---
 title: User presence status issues in Outlook
 description: Fixes an issue in which the status of a user presence is displayed incorrectly.
-author: v-miegge
+author: helenclu
 ms.author: premgan
 manager: dcscontentpm
 audience: ITPro 
@@ -110,6 +110,6 @@ If these steps don’t resolve the issue, an administrator should create a suppo
 
 - The sign-in address of the contact whose presence is shown as **Status unknown** to the user.
 
-- The desktop and web logs from both the user and the contact. For information about how to collect logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
+- The desktop and web logs from both the user and the contact. For information about how to collect logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
 
   - For presence issues that affect contacts who are internal to your organization, provide the output from running Microsoft Support and Recovery Assistant.

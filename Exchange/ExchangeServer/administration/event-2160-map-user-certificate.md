@@ -1,8 +1,8 @@
 ---
 title: Event ID 2160 when you map a user to a certificate in Exchange Server 2010
 description: Fixes an account mapping issue in Exchange Server 2010 that occurs when you use the altSecurityIdentities attribute to map a user to a certificate.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -57,4 +57,4 @@ To resolve this issue, use the following account mapping methods that are suppor
 
 Active Directory 2008 enables alternative account mappings by using the `altSecurityIdentities` attribute. This attribute contains the user's certificate information that's used by the Kerberos Authentication service to identify the associated Active Directory user account.
 
-For more information about how to map a user to a certificate, see [How to map a user to a certificate by using all the methods that are available in the altSecurityIdentities attribute](https://docs.microsoft.com/archive/blogs/spatdsg/howto-map-a-user-to-a-certificate-via-all-the-methods-available-in-the-altsecurityidentities-attribute).
+For more information about how to map a user to a certificate, see [How to map a user to a certificate by using all the methods that are available in the altSecurityIdentities attribute](/archive/blogs/spatdsg/howto-map-a-user-to-a-certificate-via-all-the-methods-available-in-the-altsecurityidentities-attribute).

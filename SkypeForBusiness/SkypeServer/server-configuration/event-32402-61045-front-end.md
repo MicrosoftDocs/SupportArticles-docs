@@ -1,7 +1,7 @@
 ---
 title: Event IDs 32402, 61045 are logged in Lync Server 2013 Front End servers
 description: Discusses that Event IDs 32402, 61045 are logged in Lync Server 2013 Front End servers that are installed in Windows Server 2012 R2. Provides a workaround.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
@@ -109,6 +109,6 @@ For more information about how to back up and restore the registry, click the fo
 
 For more information about how to disable TLS session ticket optimization in Server 2012 R2, see the following Microsoft TechNet topic:
 
-[Release Notes: Important Issues in Windows Server 2012 R2 Preview](https://technet.microsoft.com/library/dn303413.aspx)
+[Release Notes: Important Issues in Windows Server 2012 R2 Preview](/previous-versions/orphan-topics/ws.11/dn303413(v=ws.11))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

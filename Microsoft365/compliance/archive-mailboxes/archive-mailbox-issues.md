@@ -1,8 +1,8 @@
 ---
 title: Archive mailbox issues for a mailbox that's migrated to or from Office 365
 description: Describes archive mailbox issues for a mailbox that's migrated to or from Office 365. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -54,7 +54,7 @@ Get-Mailbox alias |fl Name, Archive*
 ```
 
 > [!NOTE]
-> You can use either the on-premises Exchange Management Shell or Exchange Online PowerShell to run the cmdlet. For more info about how to use Exchange Online PowerShell, go to [Connect Windows PowerShell to the Service](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+> You can use either the on-premises Exchange Management Shell or Exchange Online PowerShell to run the cmdlet. For more info about how to use Exchange Online PowerShell, go to [Connect Windows PowerShell to the Service](/powershell/exchange/connect-to-exchange-online-powershell).
 
 When you run the cmdlet, the result resembles the following:
 

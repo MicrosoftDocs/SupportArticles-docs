@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot sign-in issues for admins
 description: Helps Office 365 administrators troubleshoot and solve sign-in issues with Skype for Business Online.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -41,14 +41,15 @@ If the issue still exists, [contact support](#contact-support).
 
 Check that the affected users have a valid Skype for Business license with the following steps:
 
-1. Go to **Admin** > **Office 365** > **Users and groups**.
-1. Choose the name of the user whose licensing status you want to check, and then click **Edit**![Screenshot of Edit icon](./media/troubleshoot-sign-in-issues-for-admins/edit-icon.png).
-1. Verify that the user is licensed for Skype for Business Online.
+1. Sign in at <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">admin.microsoft.com</a> with your admin account.
+2. Go to **Users** > **Active users**, select the user that you want to check the license status.
+3. In the right pane, select **Licenses and Apps**.
+4. Verify that the user is licensed for Skype for Business Online.
 
     ![Screenshot of licensed users](./media/troubleshoot-sign-in-issues-for-admins/verify-user-licensed.png)
 
     Your user license screen may be different from this example.
-1. Wait 30 minutes, and then ask the user to try signing in again.
+5. Wait 30 minutes, and then ask the user to try signing in again.
 
 If this method doesn't resolve your issue, [sign in on another device](#sign-in-on-another-device).
 

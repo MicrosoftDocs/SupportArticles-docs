@@ -1,7 +1,7 @@
 ---
 title: Document file in Office Document Cache not deleted
 description: Describes an issue on a computer that is running a 64-bit version of Windows in which Office 2010 document files in the Office Document Cache are not deleted when you run the Windows Disk Cleanup utility.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: debbiery, jenl
 appliesto:
 - Office 2010

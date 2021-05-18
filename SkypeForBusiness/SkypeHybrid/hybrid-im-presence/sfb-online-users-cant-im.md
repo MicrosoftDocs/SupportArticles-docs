@@ -1,7 +1,7 @@
 ---
 title: SFB Online users in an Office 365 domain can't IM or detect users
 description: Fixes a problem in which Skype for Business Online users in a domain that's not added to the on-premises Skype for Business Server or Lync Server 2013 hybrid deployment can't see the presence of on-premises users or send them an IM.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -45,7 +45,7 @@ ms-diagnostics: 1017; reason="Cannot route From and To domains in this combinati
 
 To resolve this problem, add the Office 365 domain to the on-premises topology. For more information about how to configure the domains for hybrid deployment, go to the following Microsoft resource:
 
-[Plan hybrid connectivity between Skype for Business Server and Office 365](https://technet.microsoft.com/library/jj205403.aspx)
+[Plan hybrid connectivity between Skype for Business Server and Office 365](/skypeforbusiness/hybrid/plan-hybrid-connectivity?bc=%2fSkypeForBusiness%2fbreadcrumb%2ftoc.json&toc=%2fSkypeForBusiness%2ftoc.json)
 
 ## More Information
 

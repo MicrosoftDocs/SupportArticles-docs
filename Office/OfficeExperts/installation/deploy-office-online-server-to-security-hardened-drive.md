@@ -1,6 +1,6 @@
 ---
 title: Deploy Microsoft Offices Online 2013 or Office Online Server to a security hardened drive
-author: AmandaAZ
+author: helenclu
 ms.author: jhaak
 manager: dcscontentpm
 localization_priority: Normal

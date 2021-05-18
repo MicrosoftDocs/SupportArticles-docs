@@ -1,11 +1,11 @@
 ---
 title: On-premises distribution group owner can't manage the group in Exchange Online
 description: Describes an issue in which the owner of a distribution group that's synced to Office 365 can no longer manage the distribution group. A resolution is provided.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 ms.custom: 
 - Exchange Hybrid
@@ -34,7 +34,7 @@ Distribution groups that are created in Office 365 through directory synchroniza
 
 After changes are made to the group in the on-premises environment, the changes are synced to Office 365 the next time that directory synchronization runs. Or, to see the changes immediately, you can force directory synchronization. For more info about how to force directory synchronization, go to the following Microsoft website:
 
-[Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories)
+[Force directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_synchronizedirectories)
 
 We strongly recommend that you use native Exchange tools to manage distribution groups and mail-enabled security groups in your on-premises environment. For more info, go to the following Microsoft websites:
 
@@ -43,6 +43,6 @@ We strongly recommend that you use native Exchange tools to manage distribution 
 
 ## References
 
-For more info about troubleshooting managing distribution groups in Office 365, see ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group](/exchange/troubleshoot/groups-and-distribution-lists/no-sufficient-permissions-moving-dg).
+For more info about troubleshooting managing distribution groups in Office 365, see ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group](../../ExchangeOnline/groups-and-distribution-lists/no-sufficient-permissions-moving-dg.md).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,7 +1,7 @@
 ---
 title: User contact photos in Lync aren't displayed correctly
 description: Describes scenarios in which a user's contact photos don't display correctly in Microsoft Skype for Business Online in Microsoft Office 365.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -59,11 +59,11 @@ These issues may occur for one of the following reasons:
 
 First, connect to Exchange Online by using remote PowerShell by using the instructions at the following Microsoft website: 
 
-[Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx)
+[Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
 As soon as you are connected, use the Set-UserPhoto cmdlet to upload a photo directly to the user's Exchange mailbox. For more information about the Set-UserPhoto cmdlet and its usages, go to the following Microsoft TechNet website: 
 
-[Set-UserPhoto](https://technet.microsoft.com/library/jj218694.aspx)
+[Set-UserPhoto](/powershell/module/exchange/set-userphoto)
 
 ### How to populate the "thumbnailPhoto" attribute in AD DS
 

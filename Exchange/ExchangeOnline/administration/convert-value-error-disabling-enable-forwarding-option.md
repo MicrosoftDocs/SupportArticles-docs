@@ -1,8 +1,8 @@
 ---
 title: Can't disable the Enable Forwarding option
 description: Provides a workaround for a problem that occurs when you clear the Enable Forwarding check box in the Exchange Admin Center to disable mail forwarding for an Office 365 user's mailbox.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -43,6 +43,6 @@ We're working to address this issue and will post more information in this artic
 
 ## More information
 
-For more information about how to set up mail forwarding, go to [Configure Mail Forwarding for a Mailbox](https://technet.microsoft.com/library/dd351134%28v=exchg.150%29.aspx).
+For more information about how to set up mail forwarding, go to [Configure Mail Forwarding for a Mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

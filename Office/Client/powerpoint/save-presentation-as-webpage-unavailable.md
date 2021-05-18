@@ -1,16 +1,16 @@
 ---
 title: The options to save a presentation as a webpage are not available in the Save As dialog box in PowerPoint 2010
 description: Describes an issue in which the htm and the mht webpage file type is not available as a save option in PowerPoint 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.topic: troubleshoot
+ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - PowerPoint 2010
 ms.reviewer: kemille
@@ -26,34 +26,29 @@ When you try to save a presentation as a webpage in Microsoft PowerPoint 2010, t
 
 ## Workaround
 
-To work around this issue, use the [PowerPoint object model](https://docs.microsoft.com/office/vba/api/overview/powerpoint/object-model). This method provides compatibility with older [add-ins](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins) and macros, and enables you to save the file as *.htm or *.mht
+To work around this issue, use the [PowerPoint object model](/office/vba/api/overview/powerpoint/object-model). This method provides compatibility with older [add-ins](/office/dev/add-ins/overview/office-add-ins) and macros, and enables you to save the file as `*.htm` or `*.mht`.
 
-This method to save a PowerPoint file as a webpage (\*.htm; \*.html) to the desktop uses the **ppSaveAsHTML** argument for the *.htm file format. It does not include the **msoFalse** argument to embed True Type fonts. 
+This method to save a PowerPoint file as a webpage (\*.htm; \*.html) to the desktop uses the **ppSaveAsHTML** argument for the *.htm file format. It does not include the **msoFalse** argument to embed True Type fonts.
 
 To save your file as a webpage, follow these steps:
 
-1.	In PowerPoint 2010, open the presentation that you want to export to HTML.
-2.	Press Alt+F11 to open Microsoft Visual Basic for Applications.
-3.	Press Ctrl+G to open the **Immediate** pane.
-4.	In the **Immediate** pane, type the following command, and then press Enter:
+1. In PowerPoint 2010, open the presentation that you want to export to HTML.
+2. Press Alt+F11 to open Microsoft Visual Basic for Applications.
+3. Press Ctrl+G to open the **Immediate** pane.
+4. In the **Immediate** pane, type the following command, and then press Enter:
 
     `ActivePresentation.SaveAs "<Drive>:\users\<username>\desktop\<filename>.htm", ppSaveAsHTML, msoFalse`
 
     > [!NOTE]
-    > - In this command, replace `<`*Drive*`>:\users\<`*username*`>\desktop\<`*filename*`>.htm` with the location where you want to save your file as a webpage.
-    > - If you want to save the file as a single webpage in the “*.mht or *.mhtml” file format, replace the **htm** extension at the end of the file name with **mht**, and replace **ppSaveAsHTML** with **ppSaveAsWebArchive**. For example:
-    `ActivePresentation.SaveAs “<`*Drive*`>:\users\<username>\desktop\<`*filename*`>.mht", ppSaveAsWebArchive, msoFalse`
+    >
+    > - In this command, replace \<*Drive*>:\users\\<*username*>\desktop\\<*filename*>.htm` with the location where you want to save your file as a webpage.
+    > - If you want to save the file as a single webpage in the `*.mht` or `*.mhtml` file format, replace the **htm** extension at the end of the file name with **mht**, and replace **ppSaveAsHTML** with **ppSaveAsWebArchive**. For example:
+    `ActivePresentation.SaveAs "<Drive>:\users\<username>\desktop\<filename>.mht", ppSaveAsWebArchive, msoFalse`
 
 ## References
 
-For more information about the **Presentation.SaveAs** method in PowerPoint 2010, go to the following Microsoft website:
+For more information about the **Presentation.SaveAs** method in PowerPoint 2010, see [Presentation.SaveAs Method (PowerPoint)](/office/vba/api/PowerPoint.Presentation.SaveAs).
 
-[Presentation.SaveAs Method (PowerPoint)](https://docs.microsoft.com/office/vba/api/PowerPoint.Presentation.SaveAs)
-
-For more information about the files types that can be passed to the  **Presentation.SaveAs** method, go to the following Microsoft website:
-
-[PpSaveAsFileType Enumeration (PowerPoint)](https://docs.microsoft.com/office/vba/api/PowerPoint.PpSaveAsFileType)
-
-## More information
+For more information about the files types that can be passed to the  **Presentation.SaveAs** method, see [PpSaveAsFileType Enumeration (PowerPoint)](/office/vba/api/PowerPoint.PpSaveAsFileType)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

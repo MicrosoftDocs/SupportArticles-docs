@@ -1,8 +1,8 @@
 ---
 title: Can't open mailbox on Exchange Server 2010
 description: Describes an issue in which you can't open your mailbox on an Exchange Server 2010 server by using Outlook. This occurs when the RpcClientAccessServer property of your Exchange 2010 mailbox isn't set to the FQDN of the Exchange 2010 CAS.
-author: AmandaAZ
-ms.author: v-weizhu
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

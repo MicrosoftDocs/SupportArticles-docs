@@ -1,8 +1,8 @@
 ---
 title: Error when you use Outlook for Mac to send a large email through Exchange Server
 description: Describes an issue that triggers an error or an NDR when you try to send an email with a large attachment in Outlook for Mac. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -58,9 +58,9 @@ This issue occurs when you send an email message that's larger than the Exchange
 
 You can increase the message size limit on the Exchange server to allow for larger email messages to be sent from Outlook for Mac clients and other EWS clients. For more information, see the following TechNet articles as appropriate for your version of Exchange Server.
 
-Exchange Server 2016 and 2013: [Configure client-specific message size limits](https://technet.microsoft.com/library/hh529949%28v=exchg.150%29.aspx)
+Exchange Server 2016 and 2013: [Configure client-specific message size limits](/exchange/configure-client-specific-message-size-limits-exchange-2013-help)
 
-Exchange Server 2010: [Set message size limits for Exchange Web Services](https://technet.microsoft.com/library/hh529949%28v=exchg.141%29.aspx)
+Exchange Server 2010: [Set message size limits for Exchange Web Services](/previous-versions/office/exchange-server-2010/hh529949(v=exchg.141))
 
 ## More information
 

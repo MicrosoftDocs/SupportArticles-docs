@@ -1,7 +1,7 @@
 ---
 title: Can't send an IM to external contacts from Outlook Web App
 description: Describes a problem that prevents you from sending an instant message in Outlook Web App to your external contacts. Provides a solution.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: girishg, dahans
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -34,7 +34,7 @@ To resolve this issue, create a Contact object in the Exchange Admin Center, and
 
 For more information about how to add the IM address as a proxy address to the external contact, use the instructions at the following Microsoft website, but make sure that you use the "sip:user2@sip-contoso.com" format for the address.
 
-[Add or remove email addresses for a mailbox](https://technet.microsoft.com/library/bb123794%28v=exchg.150%29.aspx)
+[Add or remove email addresses for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses)
 
 To send an IM to the newly created external contact, type the contact's IM address, and then add **sip:** to the beginning of the IM address. The message should be sent successfully.
 

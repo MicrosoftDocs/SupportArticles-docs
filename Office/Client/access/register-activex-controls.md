@@ -1,7 +1,7 @@
 ---
 title: Register or unregister ActiveX controls
 description: Describes two methods to register or to unregister ActiveX controls in Access 2007.
-author: AmandaAZ
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: luche
 ms.reviewer: acc12b
 appliesto:
 - Access 2007

@@ -1,11 +1,11 @@
 ---
 title: How to set automatic replies on a user's mailbox in Office 365
 description: Describes How to set automatic replies on a user's mailbox in Office 365.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 ms.custom: 
 - Exchange Online
@@ -46,6 +46,6 @@ Run the following cmdlet in Exchange Online PowerShell:
 Set-MailboxAutoReplyConfiguration
 ```
 
-For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxautoreplyconfiguration).
+For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](/powershell/module/exchange/mailboxes/set-mailboxautoreplyconfiguration).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

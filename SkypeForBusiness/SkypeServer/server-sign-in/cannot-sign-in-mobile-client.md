@@ -1,7 +1,7 @@
 ---
 title: Lync Mobile users cannot sign in after they update to client version 5.4
 description: Describes an issue in Lync Mobile  that occurs because of certificate errors.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013

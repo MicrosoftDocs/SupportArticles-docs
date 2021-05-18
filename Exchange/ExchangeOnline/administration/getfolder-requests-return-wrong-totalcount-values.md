@@ -2,8 +2,8 @@
 title: GetFolder requests return wrong TotalCount values
 description: This article describes a limitation that the EWS GetFolder returns an incorrect TotalCount value when it's issued against a Public Folder mailbox hosted in Exchange Online and provides a workaround.
 ms.date: 08/05/2020
-author: simonxjx
-ms.author: v-six
+author: Norman-sun
+ms.author: v-swei
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,11 +1,11 @@
 ---
 title: Cannot create appointment or all day event in the calendar of a shared mailbox
 description: Resolves an issue in which a user cannot create an appointment or all day event in the calendar of a shared mailbox. This issue occurs after the user opens the shared mailbox by using Outlook or Outlook Web App in an Exchange Server 2007 or 2010 environment.
-author: simonxjx
+author: Norman-sun
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -52,7 +52,7 @@ Set-MailboxFolderPermission -Identity "Alias of recipient\Calendar" -User "alias
 
 For more information about the Set-MailboxFolderPermissioncmdlet, go to the following Microsoft website:
 
-[Set-MailboxFolderPermission](https://technet.microsoft.com/library/ff522363%28v=exchg.141%29.aspx)
+[Set-MailboxFolderPermission](/powershell/module/exchange/set-mailboxfolderpermission)
 
 ### Method 2
 

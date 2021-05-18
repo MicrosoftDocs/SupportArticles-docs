@@ -1,8 +1,8 @@
 ---
 title: You can't activate or sign-in after you update to Office 2016 for Mac version 15.33
 description: Describes an issue in which you can't activate or sign in to any of the Microsoft Office 2016 applications after you install the version 15.33 update.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

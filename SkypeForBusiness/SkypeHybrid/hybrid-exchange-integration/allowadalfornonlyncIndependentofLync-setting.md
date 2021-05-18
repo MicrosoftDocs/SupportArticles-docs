@@ -1,7 +1,7 @@
 ---
 title: Info about AllowAdalForNonLyncIndependentOfLync setting
 description: Describes the AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online in Office 365.
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2016
@@ -21,7 +21,7 @@ appliesto:
 
 # Info about AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online
 
-## Introduction 
+## Introduction
 
 This article contains information about the **AllowAdalForNonLyncIndependentOfLync** setting in Skype for Business 2016, Skype for Business 2015, Lync 2013, and Exchange Online. This article also describes which Exchange Online and Skype for Business deployments require this setting.  
 
@@ -45,7 +45,7 @@ After you apply this setting to the client computer, the environment functionali
 - After you sign in, Skype for Business or Lync 2013 connects to Exchange Web Services (EWS). If the EWS service advertises OAuth settings (authorization URI), the client uses MFA. Additionally, if a credentials refresh is necessary, the user will be prompted through the Modern Authentication dialog box.    
  
 > [!NOTE]
-> This setting is not required for cloud-only topologies or if Exchange and Skype for Business are both configured for a hybrid environment that has Modern Authentication enabled. For detailed information about the topologies, see [Skype for Business topologies supported with Modern Authentication](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported).  
+> This setting is not required for cloud-only topologies or if Exchange and Skype for Business are both configured for a hybrid environment that has Modern Authentication enabled. For detailed information about the topologies, see [Skype for Business topologies supported with Modern Authentication](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported).  
 
 In some cases (specifically, Mixed 1, Mixed 3, and Mixed 5 topologies as described in [Skype for Business topologies supported with Modern Authentication](https://apac01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fskypeforbusiness%2Fplan-your-deployment%2Fmodern-authentication%2Ftopologies-supported&data=02%7C01%7Cv-maqiu%40microsoft.com%7C4cf5a5f0b7f64bf7f72a08d67676eda0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636826650522806131&sdata=Cr7cSWF6yx97e2HiCEFxjogtuSB8X8ddn7I1bN2VLcQ%3D&reserved=0)), you have to set the **AllowADALForNonLynIndependentOfLync** registry key correctly for Windows desktop clients.
 
@@ -89,10 +89,10 @@ Set-CsClientPolicy -Identity Global -PolicyEntry @{Add=$a}
 > [!IMPORTANT]
 > To enable Modern Authentication for Office 2013 applications on a Windows-based device, you must set the following additional registry key.
 
-|Registry key |Type Value |
-|-|-|
-|HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|1 |
-|HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\Version|REG_DWORD|1 |
+|Registry key |Type| Value |
+|-|-|-|
+|`HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL`|REG_DWORD|1 |
+|`HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\Version`|REG_DWORD|1 |
 
 For more information about the EnableADAL setting, go to the following Microsoft website: 
 

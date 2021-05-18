@@ -1,8 +1,8 @@
 ---
 title: Event 1098 and can't create new profiles
 description: You can't create an Outlook profile with an error message saying you can't start Outlook or something went wrong.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Lync contact card displays Maximum Followers Reached
 description: The Lync  contact will not display presence and display a Maximum Followers Reached message when the maximum number of subscriptions for category has been reached or exceeded for that Lync user (contact)
-author: simonxjx
+author: Norman-sun
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-swei
 ms.reviewer: seemarah 
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -52,7 +52,7 @@ InformationWhen one Lync user adds another Lync user as a contact, the first Lyn
 
 For detailed information on how the MaxCategorySubscription value of the Lync client presence policy impacts Lync user presence, review the TechNet blog listed below:
 
-[What to do if you are too popular?](https://blogs.technet.com/b/jenstr/archive/2010/11/05/what-to-do-if-you-are-too-popular.aspx?commentposted=true#commentmessage)
+[What to do if you are too popular?](/archive/blogs/jenstr/what-to-do-if-you-are-too-popular?commentposted=true#commentmessage)
 
 ## Resolution
 
@@ -72,15 +72,15 @@ Perform the following steps from a computer that has the Lync Server Administrat
 
 For detailed information on reviewing the MaxCategorySubscription value of a presence policy, review the TechNet article listed below:
 
-[Get-CsPresencePolicy](https://technet.microsoft.com/library/gg398463.aspx)
+[Get-CsPresencePolicy](/powershell/module/skype/Get-CsPresencePolicy)
 
 For detailed information on updating the MaxCategorySubscription value of a presence policy, review the TechNet article listed below:
 
-[Set-CsPresencePolicy](https://technet.microsoft.com/library/gg425782.aspx)
+[Set-CsPresencePolicy](/powershell/module/skype/Set-CsPresencePolicy)
 
 For detailed information on creating a new presence policy, review the TechNet article listed below:
 
-[New-CsPresencePolicy](https://technet.microsoft.com/library/gg412747.aspx)
+[New-CsPresencePolicy](/powershell/module/skype/New-CsPresencePolicy)
 
 > [!NOTE]
 > Updating MaxCategorySubscription to a higher value could impact network bandwidth on the Lync server network.
@@ -96,8 +96,8 @@ Perform the following steps from a computer that has the Lync Server Administrat
 
 For detailed information on Lync Server user models and capacity planning, review the TechNet articles listed below:
 
-- [Lync Server 2010 User Models](https://technet.microsoft.com/library/gg398811%28v=ocs.14%29.aspx)
-- [User models in Skype for Business Server](https://technet.microsoft.com/library/gg398811.aspx)
-- [Capacity Planning Requirements and Recommendations](https://technet.microsoft.com/library/gg425715%28v=ocs.14%29.aspx)
+- [Lync Server 2010 User Models](/previous-versions/office/skype-server-2010/gg398811(v=ocs.14))
+- [User models in Skype for Business Server](/skypeforbusiness/plan-your-deployment/capacity/user-models)
+- [Capacity Planning Requirements and Recommendations](/previous-versions/office/skype-server-2010/gg425715(v=ocs.14))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

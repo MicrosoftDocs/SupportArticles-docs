@@ -2,50 +2,52 @@
 
 
 
-## Week of February 15, 2021
+## Week of May 10, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 2/17/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | modified |
+| 5/12/2021 | [Known issues in Rooms](/microsoftteams/troubleshoot/known-issues/rooms-known-issues) | modified |
+| 5/12/2021 | [Errors when trying to manage dial plans](/microsoftteams/troubleshoot/phone-system/dial-plans/errors-managing-dial-plans) | modified |
+| 5/13/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
 
 
-## Week of February 08, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 2/10/2021 | [User presence status issues in Outlook](/microsoftteams/troubleshoot/teams-im-presence/issues-with-presence-in-outlook) | added |
-| 2/11/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | modified |
-| 2/12/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | modified |
-
-
-## Week of February 01, 2021
+## Week of May 03, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 2/4/2021 | [Teams degraded performance if Teams is remembered as a game by Xbox Game Bar](/microsoftteams/troubleshoot/teams-on-windows/performance-affected-when-teams-remembered-as-game) | renamed |
-| 2/4/2021 | [Can't see previous joined teams after your account is re-enabled for logon](/microsoftteams/troubleshoot/channels/logon-reenabled-user-not-see-previous-joined-teams) | added |
+| 5/4/2021 | [Errors when trying to manage dial plans](/microsoftteams/troubleshoot/phone-system/dial-plans/errors-managing-dial-plans) | added |
+| 5/4/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/phone-system/direct-routing/sip-options-tls-certificate-issues) | renamed |
+| 5/5/2021 | [Errors when trying to manage dial plans](/microsoftteams/troubleshoot/phone-system/dial-plans/errors-managing-dial-plans) | modified |
+| 5/6/2021 | [Virtual camera on MacOS Teams stops working](/microsoftteams/troubleshoot/teams-on-mac/virtual-camera-doesnt-work-macos) | modified |
 
 
-## Week of January 25, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/26/2021 | [Teams degraded performance if Teams is remembered as a game by Xbox Game Bar](/microsoftteams/troubleshoot/teams-administration/performance-affected-when-teams-remembered-as-game) | added |
-| 1/28/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | added |
-| 1/28/2021 | [A contact's presence is unknown in Teams](/microsoftteams/troubleshoot/teams-im-presence/contact-presence-status-unknown) | added |
-| 1/28/2021 | [Your actual presence status isn't displayed in Teams](/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status) | added |
-| 1/30/2021 | [When setting up a Meet Now in Teams, the CVI information does not autopopulate](/microsoftteams/troubleshoot/known-issues/cvi-info-does-not-populate-in-meet-now) | modified |
-| 1/30/2021 | [A contact's presence is unknown in Teams](/microsoftteams/troubleshoot/teams-im-presence/contact-presence-status-unknown) | modified |
-
-
-## Week of January 18, 2021
+## Week of April 26, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/22/2021 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
-| 1/20/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 4/28/2021 | [File is locked or item might not exist error](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
+
+
+## Week of April 19, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/21/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
+| 4/22/2021 | [Automatic update not working in Teams](/microsoftteams/troubleshoot/known-issues/teams-doesnt-automatically-update) | modified |
+| 4/22/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+
+
+## Week of April 12, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/12/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | added |
+| 4/12/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 4/14/2021 | [Unable to switch a tenant to Teams Only mode](/microsoftteams/troubleshoot/teams-administration/cannot-switch-to-teams-only-mode) | modified |
+| 4/14/2021 | [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) | modified |
+| 4/14/2021 | [(File is locked) or (item might not exist) error](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
