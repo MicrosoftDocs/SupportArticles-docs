@@ -1,5 +1,5 @@
 ---
-title: Error when you run the Convert-MsolDomainToStandard
+title: Error when you run the Convert-MsolDomainToStandard cmdlet
 description: Describes an issue where you receive an error message when converting a domain from federated to managed using Convert-MsolDomainToStandard cmdlet. Provides a resolution.
 ms.date: 05/17/2021
 author: willfid
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article provides a resolution to resolve an issue where you receive "Failed to connect to Active Directory Federation Services 2.0 on the local machine" error when converting a domain from federated to managed using `Convert-MsolDomainToStandard` cmdlet.
 
 _Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
-_Original KB number:_ &nbsp; 3018485
+_Original KB number:_ &nbsp;3018485
 
 ## Symptoms
 
