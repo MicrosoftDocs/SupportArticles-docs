@@ -103,4 +103,4 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 
 - [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true)
 
-- [Enable TLS Cipher Suites](https://docs.microsoft.com/en-us/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps)
+- [Enable TLS Cipher Suites](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps)
