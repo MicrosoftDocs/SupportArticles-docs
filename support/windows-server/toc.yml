@@ -122,8 +122,6 @@
       href: ./identity/adfs-2-service-fails-to-start.md
     - name: Availability and description of Active Directory Federation Services 2.0
       href: ./identity/availability-description-afds.md
-    - name: Can't sign in after converting domain
-      href: ./identity/cannot-signin-convert-domain-federated.md
     - name: Change AD FS 2.0 service communications certificate
       href: ./identity/change-ad-fs-2-dot-0-service-communications.md
     - name: Description of the Extranet Smart Lockout feature
@@ -134,6 +132,8 @@
       href: ./identity/workplace-join-fail-error-0x80072ee7.md
     - name: Fail to connect ADFS service
       href: ./identity/connection-adfs-failed-set-msoladfscontex.md
+    - name: Fail to convert domain to Standard
+      href: ./identity/convert-domain-federated.md
     - name: Restore IIS and clean up Active Directory
       href: ./identity/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error

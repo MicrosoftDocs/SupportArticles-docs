@@ -802,7 +802,7 @@
     },
     {
       "source_path": "support/azure/active-directory/convert-domain-federated.md",
-      "redirect_url": "/troubleshoot/windows-server/identity/cannot-signin-convert-domain-federated",
+      "redirect_url": "/troubleshoot/windows-server/identity/convert-domain-federated",
       "redirect_document_id": true
     },
     {
