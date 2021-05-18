@@ -351,7 +351,7 @@
     href: /azure/virtual-machines/managed-disks-overview
   - name: FAQ
     href: /azure/virtual-machines/faq-for-disks
-    name: Cannot extend an encrypted OS volume in Windows
+  - name: Cannot extend an encrypted OS volume in Windows
     href: /azure/virtual-machines/cannot-extend-encrypted-os-volume.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
