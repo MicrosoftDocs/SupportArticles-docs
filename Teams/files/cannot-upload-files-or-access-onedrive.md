@@ -1,6 +1,6 @@
 ---
-title: File is locked or item might not exist error
-description: Fixes an issue in which you get the "file is locked" error when uploading a file or get the "item might not exist or is no longer available" error when accessing OneDrive in Teams.
+title: Error when uploading files to a Teams chat
+description: Troubleshooting steps for when you get the "file is locked" error when uploading a file to a Teams chat.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -27,7 +27,7 @@ When you try to upload a file in a Microsoft Teams chat, you receive either of t
     > The file \<FileName> didn't upload.  
     > The file \<FileName> is locked.
 
-    **Note:** This error occurs while Teams is uploading the file to your OneDrive cloud storage.
+    This error occurs while Teams is uploading the file to your OneDrive cloud storage.
 
 - **Error Message 2**
 
