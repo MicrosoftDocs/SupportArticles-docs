@@ -190,7 +190,7 @@ Because there are four possible causes of this problem, follow these steps to de
 
         ![Screenshot of selecting the PR_RULE_MSG_STATE property](./media/outlook-error-over-junk-emial-list-limit/select-pr-rule-msg-state-property.jpg)
 
-        The default value of the **PR_RULE_MSG_STATE** property is 49 (decimal) as shown in this screenshot. If you do not see a value of 49 for this property, go on to step d.
+        The default value of the **PR_RULE_MSG_STATE** property is 49 (decimal) as shown in this screenshot. If you do not see a value of 49 for this property, go on to step l.
 
     12. Right-click **PR_RULE_MSG_STATE** and then click **Delete property**.
 
