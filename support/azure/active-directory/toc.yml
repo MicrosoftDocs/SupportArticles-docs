@@ -160,6 +160,8 @@
     href: cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
     href: load-file-or-assembly-error.md
+  - name: Can't sign in after converting domain
+    href: cannot-signin-convert-domain-federated.md
   - name: Can't sync system mailbox
     href: unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
