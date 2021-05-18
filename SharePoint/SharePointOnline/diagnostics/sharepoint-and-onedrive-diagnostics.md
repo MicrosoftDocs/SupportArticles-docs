@@ -41,7 +41,7 @@ Diagnostic capabilities first appeared within the M365 Admin Center support port
 
 ### What scenarios are currently covered?
 
-There are currently nine diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed below with a brief description of its function and shortcut command:
+There are currently nine diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed here together with a brief description of its function and also a shortcut command:
 
 | Diagnostic | Description | Shortcut cmd | Support Article |
 | --- | --- | -- | -- |
@@ -64,19 +64,19 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 > [!note]
 > You must be an M365 Administrator to run diagnostics.
 
-Currently, these diagnostics are only available for administrators and can be accessed through the service request section of the M365 Admin Center. To access this area, follow the steps below.
+Currently, these diagnostics are available only for administrators. They can be accessed through the service request section of the M365 Admin Center. To access this area, follow these steps:
 
 1. Go to https://admin.microsoft.com.
-2. On the left navigation pane, select **Support**.
+2. In the left pane, select **Support**.
 3. Select **New service request**.
  
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-2.jpg" alt-text="Select New service request. ":::
  
-4. This will activate the “Need help?” pane on the right-hand side of your screen.
+4. This activates the “Need help?” pane on the right side of the screen.
  
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-3.jpg" alt-text="The Need Help? screen.":::
  
-5.	If you would like to render one of our specific diagnostics, enter one of the queries listed in the table above under "Shortcut cmd" into the “Need help?” text box.
+5.	If you want to render one of our specific diagnostics, enter one of the queries from the scenario table under "Shortcut cmd" into the “Need help?” text box.
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
