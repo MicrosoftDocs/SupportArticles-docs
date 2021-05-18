@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes Terminal Server licensing. Terminal Server's licensing requirements are different from those of Microsoft Windows NT Server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 187629
 
 ## Licenses to connect to Terminal Server

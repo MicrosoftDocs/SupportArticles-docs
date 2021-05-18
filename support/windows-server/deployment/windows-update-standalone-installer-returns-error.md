@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps work around an issue that occurs when you deploy Windows Update .msu files through Windows Remote Management 2.0 and Windows Remote Shell.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2773898
 
 ## Symptoms

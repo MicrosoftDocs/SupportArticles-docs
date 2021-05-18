@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the symptoms, cause, and resolution steps for cases when Active Directory replication fails with error 1256: The remote system is not available.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2200187
 
 ## Symptoms

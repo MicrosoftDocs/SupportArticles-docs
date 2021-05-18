@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to resolve the language ID to the name of the correct language pack to install.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324097
 
 ## Summary

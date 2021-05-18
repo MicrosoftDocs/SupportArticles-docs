@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to diagnose Active Directory replication failures.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2498185
 
 ## Symptoms

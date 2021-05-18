@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
   Event ID 51 may occur when you write information to the physical disk. This article describes how to decode the data section of an Event ID 51 event message.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244780
 
 ## Summary

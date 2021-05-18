@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an error that occurs when you try to run the Active Directory Installation Wizard.
 
-_Original product version:_ &nbsp; Window Server 2003  
+_Applies to:_ &nbsp; Window Server 2003  
 _Original KB number:_ &nbsp; 917385
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes the basic troubleshooting steps you can use to diagnose Cluster service startup issues with Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 266274
 
 ## Summary

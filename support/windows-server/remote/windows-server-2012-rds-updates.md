@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article lists the available updates for Remote Desktop Services in Windows Server 2012.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2821526
 
 ## Summary

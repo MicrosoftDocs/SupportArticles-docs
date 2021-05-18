@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a solution to an issue where the SCSI-3 Persistent Reservation test fails when you run the Failover Cluster Validation report.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2822335
 
 ## Symptoms

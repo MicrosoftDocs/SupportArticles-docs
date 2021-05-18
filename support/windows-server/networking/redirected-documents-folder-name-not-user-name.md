@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides workaround for the issue where the folder name unexpectedly changes back to Documents when you redirect the Documents folder to a network share.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 947222
 
 ## Symptoms

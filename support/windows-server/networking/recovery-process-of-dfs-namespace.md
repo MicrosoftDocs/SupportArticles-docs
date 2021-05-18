@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes the methods by which to recover a Distributed File System Namespace (DFSN) in Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969382
 
 ## Rapid publishing

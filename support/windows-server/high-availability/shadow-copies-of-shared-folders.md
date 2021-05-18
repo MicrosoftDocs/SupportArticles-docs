@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes how to configure a Shadow Copies of Shared Folders target on a server cluster in Microsoft Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 838421
 
 ## Summary

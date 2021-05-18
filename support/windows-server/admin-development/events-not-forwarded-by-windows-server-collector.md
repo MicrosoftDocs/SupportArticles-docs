@@ -17,7 +17,7 @@ ms.technology: windows-server-administration-management-development
 
 This article helps fix an issue that occurs when you use source-initiated event forwarding to send events to a Microsoft Windows Server event collector.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4494462
 
 ## Symptoms

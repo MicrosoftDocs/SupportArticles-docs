@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides solutions to known issues that involve the AppX cleanup maintenance task.
 
-_Original product version:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2928948
 
 ## Introduction

@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to fix event ID 154 that occurs on a computer that's connected to a storage array such as Fibre Channel (FC) storage.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2806730
 
 > [!IMPORTANT]

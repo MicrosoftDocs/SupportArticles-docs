@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps fix an issue where Windows continues to type and display in English when a domain user uses the Chinese (Simplified) input method.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4040941
 
 ## Symptoms

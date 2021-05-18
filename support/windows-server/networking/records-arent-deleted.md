@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where you enable Scavenging on the Windows DNS Server to get rid of some old and stale records on the zone.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2791165
 
 ## Symptoms

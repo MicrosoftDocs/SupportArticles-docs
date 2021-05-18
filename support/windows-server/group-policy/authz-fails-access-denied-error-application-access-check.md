@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to an issue in which AuthZ fails with an Access Denied error when an application does access checks in Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4055652
 
 ## Symptoms

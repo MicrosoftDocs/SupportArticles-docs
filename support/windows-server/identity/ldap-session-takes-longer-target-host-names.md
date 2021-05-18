@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article discusses a problem in which a new session setup for LDAP services takes longer than expected if it targets host names.
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;4559609
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article discusses an issue where converting Windows Server Core to GUI by using a DISM or PowerShell command fails with error 0x800f0906.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3023427
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 Windows 10, version 1709, Windows Server, version 2004 and later versions of Windows no longer support the syskey.exe utility.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4025993
 
 ## Changes detail

@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an error that occurs when you try to add DomainB\RD_USER_GROUP directly to VDI collection in DomainA.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2877933
 
 ## Symptoms

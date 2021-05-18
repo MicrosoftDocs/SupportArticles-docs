@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps fix a 0x80070070 error that occurs when Deployment Toolkit fails to complete sysprep and capture task sequence.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2670374
 
 ## Symptoms

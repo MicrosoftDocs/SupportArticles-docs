@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides some information about how to add a domain controller as a node in a failover cluster environment.  
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2795523
 
 ## Symptoms

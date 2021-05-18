@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes the Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager.
 
-_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp;972493
 
 ## Introduction

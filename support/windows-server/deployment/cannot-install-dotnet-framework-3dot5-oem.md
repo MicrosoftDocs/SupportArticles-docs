@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a workaround for an issue where the Microsoft .NET Framework 3.5 installation fails without a public Internet environment on an OEM Windows installation.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2956772
 
 ## Symptoms

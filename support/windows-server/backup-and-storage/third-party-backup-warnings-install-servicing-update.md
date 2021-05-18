@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to the third-party backup warnings that occurs after you install a servicing update in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4052556
 
 ## Symptom
