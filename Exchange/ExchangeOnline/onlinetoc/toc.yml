@@ -461,6 +461,8 @@
       href: ../outlook-on-the-web-issues/you-may-have-already-signed-in-to-outlook-web-app-error.md
   - name: Public Folders
     items:
+    - name: "\"550 5.7.13\" error when sending emails to MEPF"
+      href: ../public-folders/cannot-send-emails-to-mail-enabled-public-folder.md
     - name: Can't add or expand public folders
       href: ../public-folders/cannot-expand-add-public-folder.md
     - name: Can't add reviewer permission to calendars
