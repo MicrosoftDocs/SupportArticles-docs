@@ -1,6 +1,6 @@
 ---
-title: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 8 or 7
-description: You experience authentication errors when connecting to SharePoint or OneDrive from Windows 8 or Windows 7.
+title: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 7 or 8
+description: You experience authentication errors when connecting to SharePoint or OneDrive from Windows 7 or Windows 8.
 author: v-matham
 manager: dcscontentpm
 localization_priority: Normal
@@ -20,7 +20,7 @@ appliesto:
 - Windows 8
 ---
 
-# Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7
+# Authentication errors when connecting to SharePoint or OneDrive from Windows 7 or 8
 
 ## Summary
 
@@ -44,4 +44,9 @@ Install KB 3140245, and then create the related registry value. For more infor
 
 Windows 8 and Windows 7 SP1 clients must have the latest TLS cipher suites installed. For more information, see [Microsoft Security Advisory 3042058](/security-updates/SecurityAdvisories/2015/3042058). This update is already included in the latest cumulative update for Windows 7 and Windows 8.
 
-For more information, see [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365).
+
+## References 
+
+- [TLS cipher suites supported by Office 365](/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365&preserve-view=true)
+
+- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true)
