@@ -26,7 +26,7 @@ appliesto:
 
 When you sign in to Microsoft OneDrive, you receive the following error message:  
 
-> There was a problem signing you in.
+> OneDrive Can't sign in. Error 0x8004de40
 >
 > Login was either interrupted or unsuccessful. Please try logging in again. (Error Code: 0x8004de40) 
 
