@@ -18,7 +18,7 @@ ms.technology: windows-server-performance
 
 This article provides a workaround for an issue in which a user-defined data collector set that is configured to run on a schedule does not run.
 
-_Original product version:_ &nbsp; Windows Server 2019 - all editions, Windows 10 version 1909 - all editions, Windows 10 version 1903 - all editions, Windows 10 version 1809 - all editions, Windows 10 version 1803 - all editions, Windows 10 version 1709 - all editions, Windows 10 version 1703 - all editions
+_Applies to:_ &nbsp; Windows Server 2019 - all editions, Windows 10 version 1909 - all editions, Windows 10 version 1903 - all editions, Windows 10 version 1809 - all editions, Windows 10 version 1803 - all editions, Windows 10 version 1709 - all editions, Windows 10 version 1703 - all editions
 
 ## Symptoms
 

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides some information about the issue that anonymous LDAP operations to Active Directory are disabled on domain controllers.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 326690
 
 ## Summary

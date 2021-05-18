@@ -17,7 +17,7 @@ ms.technology: windows-client-active-directory
 
 This article provides a solution to an error that occurs when you check domain object properties by using RSAT in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1809  
 _Original KB number:_ &nbsp; 3214525
 
 ## Symptoms

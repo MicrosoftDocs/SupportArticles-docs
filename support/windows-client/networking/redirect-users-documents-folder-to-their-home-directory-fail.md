@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article helps fix an issue where you can't redirect the user's Documents folder to their home directory when "Grant the user exclusive rights to Documents" is selected.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2493506
 
 ## Symptoms

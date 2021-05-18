@@ -17,7 +17,7 @@ ms.technology: windows-client-administration-management-development
 
 This article describes user authentication issues with Active Directory Service Interfaces (ADSI) WinNT provider.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 218497
 
 ## Summary

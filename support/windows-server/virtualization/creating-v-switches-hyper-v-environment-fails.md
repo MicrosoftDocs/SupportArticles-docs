@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides workarounds for an issue where creating V-switches within the hyper-V environment fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2486812
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a solution to an issue where Microsoft: Protected EAP (PEAP) option is missing in some cases.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2699785
 
 ## Symptoms

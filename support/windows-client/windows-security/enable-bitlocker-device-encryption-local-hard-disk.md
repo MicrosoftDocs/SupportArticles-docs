@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This document describes the workflow to enable BitLocker device encryption on the local hard disk of a Windows Surface computer that is running Windows 8 RT.
 
-_Original product version:_ &nbsp;Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp;2855131
 
 ## Summary

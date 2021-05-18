@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article helps solve an issue where the changes aren't applied as expected when you change the password policy.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 269236
 
 ## Symptoms

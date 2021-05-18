@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article helps to resolve an issue in which you cannot link TextService in Eudcedit.exe.  
 
-_Original product version:_ &nbsp; Windows 10, version 2004  
+_Applies to:_ &nbsp; Windows 10, version 2004  
 _Original KB number:_ &nbsp; 4568315
 
 ## Symptoms

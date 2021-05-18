@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides help to fix a problem where the number of clients in a Key Management Server (KMS) computer doesn't increase when you add new Windows Vista-based client computers to the network.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;929829
 
 ## Symptoms

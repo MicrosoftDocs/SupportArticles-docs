@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes the functionality of the Port Scanning Prevention Filter in Windows Server 2008 and later versions of Windows. It also includes a workaround for the by-design behavior that generates lots of disk I/O when there's activity in the wfpdiag.etl log.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;3044882
 
 ## Symptoms

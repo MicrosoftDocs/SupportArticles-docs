@@ -33,4 +33,4 @@ In this scenario, DirectAccess works correctly. However, you expect better netwo
 
 Network performance can be improved by switching to a "Microsoft Always On" virtual private network (VPN).
 
-For a complete feature comparison, see [Always On VPN and DirectAccess Features Comparison](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-map-da).
+For a complete feature comparison, see [Always On VPN and DirectAccess Features Comparison](/windows-server/remote/remote-access/vpn/vpn-map-da).

@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an error 2147944102 that occurs when you start the Background Intelligent Transfer Service (BITS) Service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 326460
 
 ## Symptoms

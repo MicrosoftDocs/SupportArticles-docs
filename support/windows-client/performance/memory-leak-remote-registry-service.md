@@ -20,7 +20,7 @@ This article provides a workaround for a memory leak issue in the remote registr
 > [!NOTE]
 > This issue is fixed in Windows 10.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105719
 
 ## Symptoms

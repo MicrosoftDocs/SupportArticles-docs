@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article provides a resolution for the issue that SMS Agent Host service does not start after you restart a Systems Management Server 2003 client computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 922362
 
 >[!IMPORTANT]

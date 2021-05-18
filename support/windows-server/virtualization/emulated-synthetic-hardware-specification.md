@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article summarizes the specifications for supported emulated and synthetic hardware in a Windows Server 2012 environment.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2844106
 
 ## Summary

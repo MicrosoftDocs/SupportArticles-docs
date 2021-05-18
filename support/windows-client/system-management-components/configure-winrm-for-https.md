@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article provides a solution to configuring WINRM for HTTPS.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2019527
 
 ## Summary

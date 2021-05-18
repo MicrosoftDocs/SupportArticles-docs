@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 The article helps you to resolve the issue that the kerberos client received a KRB_AP_ERR_MODIFIED error from the server.  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 558115
 
 ## Symptoms

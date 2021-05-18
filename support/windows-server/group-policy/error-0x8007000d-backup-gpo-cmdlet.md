@@ -56,4 +56,4 @@ Here are three workarounds:
 
 ## Reference
 
-For more information on wbadmin syntax, see [wbadmin start systemstatebackup](https://docs.microsoft.com/windows-server/administration/windows-commands/wbadmin-start-systemstatebackup).
+For more information on wbadmin syntax, see [wbadmin start systemstatebackup](/windows-server/administration/windows-commands/wbadmin-start-systemstatebackup).

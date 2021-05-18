@@ -17,7 +17,7 @@ ms.technology: windows-client-rds
 
 This article describes the support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4491323
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article describes video resolution limits for H.264 and video stabilization.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2829223
 
 ## Summary

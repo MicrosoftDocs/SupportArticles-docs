@@ -38,12 +38,12 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 - The RD Licensing role is installed and the license server is activated.  
 
    > [!NOTE]  
-   > For more information about this configuration, see [Activate the Remote Desktop Services license server](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-activate-license-server).  
+   > For more information about this configuration, see [Activate the Remote Desktop Services license server](/windows-server/remote/remote-desktop-services/rds-activate-license-server).  
 
 - The license server has a client access license (CAL) for each user and device that can connect to RDS.
   
    > [!NOTE]  
-   > For more information about this configuration, see [Install RDS client access licenses on the Remote Desktop license server](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-install-cals).  
+   > For more information about this configuration, see [Install RDS client access licenses on the Remote Desktop license server](/windows-server/remote/remote-desktop-services/rds-install-cals).  
 
    The configuration of the licenses should resemble the following screenshot. There should be a green check mark beside the license server name, and the numbers in the columns should reflect the numbers of total and available licenses.
 
@@ -121,7 +121,7 @@ The following table shows which RDS CAL and license server versions are compatib
 |**2016 license server** |Yes |Yes |Yes |No |
 |**2019 license server** |Yes |Yes |Yes |Yes |
 
-For more information, see [RDS CAL version compatibility](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
+For more information, see [RDS CAL version compatibility](/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
 
 ### <a id="extra3"></a>Step 3: Make sure that you're using the appropriate type of RDS CAL for your RDS environment
 

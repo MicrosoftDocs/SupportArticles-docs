@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround for an issue where the system experiences CPU spike for 1-2 minutes when a 64-bit application runs in the 64-bit version of Windows.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2723033
 
 ## Symptoms

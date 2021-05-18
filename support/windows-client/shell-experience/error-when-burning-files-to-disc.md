@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a resolution to an error that occurs when burning files to disc.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2748977
 
 ## Symptoms

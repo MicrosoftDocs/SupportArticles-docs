@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to use the new .admx and .adml files to create and to administer registry-based policy settings in Windows Vista, and how the Central Store is used to store and to replicate Windows Vista policy files in a domain environment.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 929841
 
 ## Overview

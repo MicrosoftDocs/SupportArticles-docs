@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a resolution for the issue that you can't modify user environment variables in the System Properties dialog box.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 931715
 
 ## Symptoms

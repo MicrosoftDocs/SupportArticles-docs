@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides some step-by-step instructions to enumerate locked out user accounts using Saved Queries.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555131
 
 This article was written by [Simon Geary](https://social.msdn.microsoft.com/profile/simon%20geary/), Microsoft MVP.

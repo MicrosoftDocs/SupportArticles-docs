@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an issue where a black screen is displayed during Windows 7 setup on systems with embedded DisplayPort from AMD/ATI.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 978226
 
 > [!NOTE]

@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides help to fix Winsock timeout errors that occur on slow, congested, or high latency Internet links with Microsoft Proxy Server or ISA Server.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 191143
 
 ## Symptoms

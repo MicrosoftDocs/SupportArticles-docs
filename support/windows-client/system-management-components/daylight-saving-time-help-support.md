@@ -21,7 +21,7 @@ This article describes the Microsoft policy in response to daylight saving time 
 > [!NOTE]
 > Subscribe to the [Microsoft Daylight Saving Time & Time Zone Blog](https://techcommunity.microsoft.com/t5/Daylight-Saving-Time-Time-Zone/bg-p/DSTBlog) to receive the latest updates on changes around the world.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 22803
 
 ## Microsoft policy in response to daylight saving time and time zone changes

@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a solution to the error (The cluster node already exists) that occurs during cluster setup.
 
-_Original product version:_ &nbsp;  Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555216
 
 ## Symptoms

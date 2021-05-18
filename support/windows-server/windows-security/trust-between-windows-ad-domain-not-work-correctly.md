@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes the trust configuration issues between a Windows NT 4.0-based domain and an Active Directory-based domain.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;889030
 
 ## Symptoms

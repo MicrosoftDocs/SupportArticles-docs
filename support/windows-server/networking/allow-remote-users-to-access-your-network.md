@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to configure a computer that is running Windows Server 2003 to allow remote users to establish an encrypted channel to a corporate network.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323381
 
 ## Summary

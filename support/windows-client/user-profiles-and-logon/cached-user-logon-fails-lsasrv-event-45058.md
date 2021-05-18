@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article fixes a logon failure that occurs when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2555663
 
 ## Symptoms

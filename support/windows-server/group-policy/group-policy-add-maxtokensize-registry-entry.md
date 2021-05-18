@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to use Group Policy to add the MaxTokenSize registry entry to multiple computers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 938118
 
 ## Introduction

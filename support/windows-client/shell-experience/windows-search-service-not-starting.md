@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a resolution to solve the error that occurs when you try to start the Windows Search Service.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2484025
 
 ## Symptoms

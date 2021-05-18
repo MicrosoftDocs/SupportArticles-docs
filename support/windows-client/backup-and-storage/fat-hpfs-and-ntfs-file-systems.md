@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article explains the differences between File Allocation Table (FAT), High Performance File System (HPFS), and NT File System (NTFS) under Windows NT, and their advantages and disadvantages.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 100108
 
 > [!NOTE]

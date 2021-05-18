@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article helps fix an error 0x80071779 that occurs when you uninstall the **Client for Microsoft Networks** or other network components.
 
-_Original product version:_ &nbsp; Window 10 – all editions  
+_Applies to:_ &nbsp; Window 10 – all editions  
 _Original KB number:_ &nbsp; 4340181
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article helps fix an issue that you're unable to start virtual machines because of incorrect DEP setting in BIOS.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2490458
 
 ## Symptoms

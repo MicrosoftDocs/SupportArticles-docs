@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to a problem where an in-place upgrade for Windows 10 on a system that's running Microsoft System Center Configuration Manager hangs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4020149
 
 ## Symptoms

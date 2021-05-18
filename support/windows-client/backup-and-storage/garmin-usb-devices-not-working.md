@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides information on how to fix the problem that Garmin wearable devices aren't recognized on Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1709, Windows 10, version 1607  
+_Applies to:_ &nbsp; Windows 10, version 1709, Windows 10, version 1607  
 _Original KB number:_ &nbsp; 3183365
 
 ## Symptoms

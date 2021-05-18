@@ -17,7 +17,7 @@ ms.technology: networking
 
 The article discusses how to disable DNS updates in Microsoft Windows Server 2003. By default, client computers that are running Windows Server 2003 have DNS updates enabled.
 
-_Original product version:_ &nbsp; Windows 10, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 246804
 
 ## Summary

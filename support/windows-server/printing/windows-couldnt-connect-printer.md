@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article provides a solution to an error that occurs when you try to connect to a printer by using an alias (CNAME) resource record.
 
-_Original product version:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 979602
 
 ## Symptoms

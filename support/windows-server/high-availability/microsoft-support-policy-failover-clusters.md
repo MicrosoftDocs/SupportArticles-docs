@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes Microsoft support policy for Windows Server 2012 or Windows Server 2012 R2 failover clusters implementation.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2775067
 
 ## Introduction

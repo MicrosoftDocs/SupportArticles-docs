@@ -1,7 +1,7 @@
 ---
 title: Can't add a DHCP reservation that is outside of the scope distribution range
 description: Provides a solution to an issue where you can't add a DHCP reservation that is outside of the scope distribution range.
-ms.date: 09/15/2020
+ms.date: 05/12/2021
 author: Deland-Han 
 ms.author: delhan
 manager: dscontentpm
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, btoth, miodon, joelch
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
 ms.technology: networking
 ---
-# You cannot add a DHCP reservation that is outside of the scope distribution range in Windows Server 2008 R2
+# You cannot add a DHCP reservation that is outside of the scope distribution range in Windows Server
 
 This article provides a solution to an issue where you can't add a DHCP reservation that is outside of the scope distribution range.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2005980
 
 ## Symptoms
 
-In Windows Server 2008 R2, you cannot add a reservation using the Dynamic Host Configuration Protocol (DHCP) MMC or netsh commands if the reservation is outside of the distribution range of the DHCP scope, even if it falls in the subnet defined by the subnet mask of  the scope.
+In Windows Server, you cannot add a reservation using the Dynamic Host Configuration Protocol (DHCP) MMC or netsh commands if the reservation is outside of the distribution range of the DHCP scope, even if it falls in the subnet defined by the subnet mask of  the scope.
 
 Example
 

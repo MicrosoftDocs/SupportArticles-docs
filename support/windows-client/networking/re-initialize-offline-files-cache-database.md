@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides two methods to reinitialize the offline files cache and database in Windows XP.
 
-_Original product version:_ &nbsp; Windows XP  
+_Applies to:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 230738
 
 ## Summary

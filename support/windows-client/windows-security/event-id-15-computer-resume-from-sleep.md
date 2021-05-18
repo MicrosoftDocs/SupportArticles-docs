@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes a problem that may occur when a computer that has a Trusted Platform Module (TPM) chip resumes from sleep.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2696920
 
 ## Symptoms

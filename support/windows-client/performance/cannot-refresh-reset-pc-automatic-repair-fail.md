@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article fixes an issue in which you cannot refresh or reset the PC after Automatic Repair fails.
 
-_Original product version:_ &nbsp;Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp;2823223
 
 ## Symptoms

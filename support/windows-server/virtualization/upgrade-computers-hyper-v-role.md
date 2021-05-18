@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article describes the options that are available for upgrading or migrating from a Windows Server 2008 installation with the Hyper-V role enabled to Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 957256
 
 ## Introduction

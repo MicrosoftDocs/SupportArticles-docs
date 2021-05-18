@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article helps fix errors that occur when generating a catalog (.clg) in Windows System Image Manager (WSIM).
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2524737
 
 ## Symptoms

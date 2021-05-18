@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105657
 
 ## Summary

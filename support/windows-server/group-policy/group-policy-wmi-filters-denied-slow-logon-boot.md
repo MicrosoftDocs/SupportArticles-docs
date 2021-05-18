@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a resolution to an issue where Group policy with WMI filters can be denied or cause slow logon/boot.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2663850
 
 ## Symptoms

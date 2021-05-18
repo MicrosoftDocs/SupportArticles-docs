@@ -21,7 +21,7 @@ summary: |
   
   This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support ended on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).
   
-  _Original product version:_ &nbsp; Windows 7 Service Pack 1  
+  _Applies to:_ &nbsp; Windows 7 Service Pack 1  
   _Original KB number:_ &nbsp; 4527878
 
 sections:
@@ -408,9 +408,9 @@ sections:
         answer: |
             Yes, there is an ESU program specifically for embedded devices. This program includes:
           
-            - [Windows 7 for Embedded Systems](https://docs.microsoft.com/lifecycle/products/windows-7)
-            - [Windows Embedded Standard 7](https://docs.microsoft.com/lifecycle/products/windows-embedded-standard-7)
-            - [Windows Embedded POSReady 7](https://docs.microsoft.com/lifecycle/products/windows-embedded-posready-7)
+            - [Windows 7 for Embedded Systems](/lifecycle/products/windows-7)
+            - [Windows Embedded Standard 7](/lifecycle/products/windows-embedded-standard-7)
+            - [Windows Embedded POSReady 7](/lifecycle/products/windows-embedded-posready-7)
           
             The ESU for Windows 7 Embedded also includes Windows Server 2008 R2 for Embedded Systems and Microsoft SQL Server 2008 R2 for Embedded Systems. Direct all embedded ESU requests to the original equipment manufacturer (OEM) of the device.
           

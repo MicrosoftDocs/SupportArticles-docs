@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This step-by-step article describes how to use Windows Server 2003 auditing to track user activities and system-wide events in Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814595
 
 ## Summary

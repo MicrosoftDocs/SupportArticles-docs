@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article helps to fix the stop error 7E on a server running NFS.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4574597
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes troubleshooting steps to use on Windows 2000 domain controllers that are missing netlogon and sysvol shares.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 257338
 
 > [!NOTE]

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where DNS Server becomes an island when a domain controller points to itself for the _msdcs.ForestDnsName domain. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 275278
 
 ## Symptoms

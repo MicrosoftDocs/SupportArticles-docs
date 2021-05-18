@@ -17,7 +17,7 @@ ms.technology: windows-client-hyper-v
 
 This article solves an error message when you try to re-create a Hyper-V virtual switch (vSwitch) for the same physical adapter.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3101106
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article explains the Microsoft-Windows-AppReadiness event ID 215 error that occurs after a user first logs on.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2916750
 
 ## Symptoms

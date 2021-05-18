@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article provides a solution to an error when you try to enable BitLocker if you don't have a separate active partition.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2019926
 
 ## Symptoms

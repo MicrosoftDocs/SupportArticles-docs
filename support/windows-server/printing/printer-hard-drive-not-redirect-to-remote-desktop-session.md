@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article helps fixes the printer redirection failures and hard drive redirection failures because of incorrect registry settings.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2492632
 
 ## Symptoms

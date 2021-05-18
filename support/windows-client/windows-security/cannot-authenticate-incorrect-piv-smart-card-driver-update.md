@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes how to resolve a problem where users can't sign in to Windows until the incorrect driver is removed.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4563240
 
 ## Summary

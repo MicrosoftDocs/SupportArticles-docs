@@ -17,7 +17,7 @@ ms.technology: windows-client-user-experience-virtualization-ue-v
 
 This article helps resolve an issue where you experience an unexpected one-minute delay for Outlook to start if UE-V is enabled in Windows 10, version 1809 or a later version of Windows.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4569308
 
 ## Symptoms

@@ -15,7 +15,7 @@ ms.technology: windows-client-deployment
 ---
 # How to downgrade from Windows 8
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2832566
 
 ## Summary

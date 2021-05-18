@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article describes the changes in policy for the relocation of the Users directory and the `ProgramData` directory to a drive other than the %systemdrive% drive in Windows operating systems.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 949977
 
 > [!CAUTION]

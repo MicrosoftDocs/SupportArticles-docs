@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to download and burn an ISO file from the Microsoft Volume Licensing Service Center (VLSC).
 
-_Original product version:_ &nbsp; General  
+_Applies to:_ &nbsp; General  
 _Original KB number:_ &nbsp; 2472143
 
 ## Summary

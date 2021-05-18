@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article discusses the registry settings that can be used to modify application behavior on a Terminal Server computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186499
 
 ## Controlling Application Execution in Execute Mode

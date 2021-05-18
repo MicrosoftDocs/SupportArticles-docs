@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 After a Windows 8.1-based computer resumes from Sleep mode, the computer stops responding, and the hard disk usage reaches 100 percent. This article provides a solution to this issue.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2922899
 
 ## Symptoms

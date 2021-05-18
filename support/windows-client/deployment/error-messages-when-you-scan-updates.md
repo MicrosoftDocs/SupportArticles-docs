@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to error messages when you scan for updates.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 843499
 
 ## Symptoms

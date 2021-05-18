@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a workaround for the problems that you may experience when you have a large "Folder Redirection" policy file.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;978098
 
 ## Symptoms
