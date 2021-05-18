@@ -6,6 +6,8 @@ ms.reviewer:
 ---
 # Internet Explorer cannot display an HTTPS site when SSL 2.0 and TLS 1.2 are selected
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a solution for Internet Explorer unable to display HTTPS websites.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

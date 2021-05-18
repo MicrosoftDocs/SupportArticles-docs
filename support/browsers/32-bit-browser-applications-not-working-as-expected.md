@@ -9,8 +9,6 @@ ms.reviewer: ramakoni
 
 [!INCLUDE [](../includes/browsers-important.md)]
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
-
 This article provides a workaround to solve the issue that some 32-bit browser applications not working as expected in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10, Windows 8, Windows 8 Enterprise  

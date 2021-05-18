@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Internet Explorer doesn't handle the text-overlow ellipsis attribute correctly
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the information to solve the issue that the `text-overlow: ellipsis` attribute only applies to the first line of an HTML document in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 11  

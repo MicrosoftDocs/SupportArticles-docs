@@ -7,6 +7,8 @@ ms.reviewer: heikom
 ---
 # Optimizing performance with automatic proxy-configuration scripts (PAC)
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This topic explains how to optimize the performance of an automatic proxy-configuration script (PAC file, also known as Wpad.dat). This document focuses on how to resolve issues with the intranet servers directly and external internal traffic through a proxy-server.
 
 For more information about the functions that are used to evaluate an address (URL or hostname), see: [Use proxy autoconfiguration (.pac) files with IEAK 11](https://docs.microsoft.com/internet-explorer/ie11-ieak/proxy-auto-config-examples).

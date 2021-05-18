@@ -7,6 +7,8 @@ ms.reviewer: jeanr
 ---
 # How to hide the Clear button in Internet Explorer 10
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a solution for hiding clear buttons in Internet Explorer 10.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

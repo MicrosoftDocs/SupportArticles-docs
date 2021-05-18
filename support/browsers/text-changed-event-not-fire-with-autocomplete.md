@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # TextChanged event of TextBox control may not fire if AutoComplete is enabled in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the workaround to solve the issue that the TextChanged event of a TextBox control does not fire if the AutoComplete feature is enabled in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer  
