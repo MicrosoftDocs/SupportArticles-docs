@@ -2,12 +2,12 @@
   "redirections": [
     {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
-      "redirect_url": "support/azure/virtual-machines/troubleshoot-deployment-new-vm-linux.md",
+      "redirect_url": "/support/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-windows.md",
-      "redirect_url": "support/azure/virtual-machines/troubleshoot-deployment-new-vm-windows.md",
+      "redirect_url": "/support/azure/virtual-machines/troubleshoot-deployment-new-vm-windows",
       "redirect_document_id": true
     },
     {
