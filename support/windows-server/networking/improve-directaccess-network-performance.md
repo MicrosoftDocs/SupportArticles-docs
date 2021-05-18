@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article discusses a performance issue that affects DirectAccess networking.
 
-_Original product version:_ &nbsp;Windows 10, version 1809, Windows 10, version 1709, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 1809, Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;4056838
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the steps to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;315136
 
 ## Summary

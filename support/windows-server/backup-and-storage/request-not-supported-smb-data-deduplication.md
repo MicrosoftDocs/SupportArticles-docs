@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article helps fix the errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2817216
 
 ## Symptoms
