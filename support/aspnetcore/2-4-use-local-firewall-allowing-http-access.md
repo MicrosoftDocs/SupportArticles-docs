@@ -114,4 +114,4 @@ You are now one step closer to completing the required configuration to debug th
 
 ## Next steps
 
-[Copying files from your development environment to a Linux VM, and then extracting the files in Linux](2-5-copy-file-linux-vm-extract-file.md).
+[Part 2.5 - Copying files from your development environment to a Linux VM, and then extracting the files in Linux](2-5-copy-file-linux-vm-extract-file.md).

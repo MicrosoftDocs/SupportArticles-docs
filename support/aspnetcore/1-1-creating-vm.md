@@ -25,7 +25,7 @@ To make sure that all the labs in this guide work as intended, we recommend that
 
 This part (1.1) contains the following steps:
 
-- Creating a Linux virtual machine in Windows Azure
+- [Creating a Linux virtual machine in Windows Azure](#creating-a-linux-virtual-machine-in-windows-azure)
 - [Connecting to the Linux virtual machine](#connecting-to-the-linux-virtual-machine):
   - [By using PowerShell SSH client](#connecting-by-using-powershell-ssh-terminal)
   - [By using PuTTY](#connecting-by-using-putty)

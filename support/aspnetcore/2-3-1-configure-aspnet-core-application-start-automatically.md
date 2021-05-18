@@ -86,4 +86,4 @@ To quit `htop`, press **F10** or **Q**.
 
 ## Next steps
 
-[Securing Linux by using a local firewall, and allowing remote HTTP access from remote computers](2-4-use-local-firewall-allowing-http-access.md)
+[Part 2.4 - Securing Linux by using a local firewall, and allowing remote HTTP access from remote computers](2-4-use-local-firewall-allowing-http-access.md)

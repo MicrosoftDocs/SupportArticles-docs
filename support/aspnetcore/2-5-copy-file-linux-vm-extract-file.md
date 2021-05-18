@@ -117,4 +117,6 @@ Choose either option, to extract the *buggyamb_v1.1* application files. These sh
 
 ## Next steps
 
+[Part 3.1 - Getting ready for troubleshooting](3-1-get-ready-troubleshooting.md)
+
 Configure and run the buggy ASP.NET Core application behind Nginx. At the end of those steps, you will have two ASP.NET Core applications running behind Nginx.
