@@ -16,9 +16,6 @@
     - name: Troubleshoot deploying Windows virtual machine
       href: troubleshoot-deployment-new-vm-windows.md
 
-- name: Troubleshoot deployment issues
-  items:
-
 - name: Image deployment and Management
   items:
   - name: Upload Hyper-V DC to Azure
@@ -93,7 +90,7 @@
     - name: Reset RDP
       href: reset-rdp.md
     - name: Reset NIC
-    href: reset-network-interface.md
+      href: reset-network-interface.md
     - name: RDP troubleshooting
       href: troubleshoot-rdp-connection.md
     - name: Detailed RDP troubleshooting
