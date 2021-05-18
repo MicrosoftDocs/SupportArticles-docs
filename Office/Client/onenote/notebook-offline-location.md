@@ -63,7 +63,7 @@ To move the notebook, take one of the following actions:
 
 To disable the information bar warning message, set the following registry value:
 
-Registry key: `HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\OneNote\Options`
-Name: `DisableCSCInfobar`
-Value type: REG_DWORD
+Registry key: `HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\OneNote\Options`  
+Name: `DisableCSCInfobar`  
+Value type: REG_DWORD  
 Value data: 1

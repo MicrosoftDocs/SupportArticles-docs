@@ -64,7 +64,7 @@ Do one of the following as appropriate for your operating system and if you have
 
 1. Click **Start**, click **Run**, type path\inf in the **Open** box, and then click **OK**.
 
-   In this example, path is the path of your Windows folder. For example, type C:\Windows\Inf or C:\Winnt. By default, C:\Windows is the folder where Windows XP is installed. By default, C:\Winnt is the folder where Windows XP is installed if you upgraded Windows 2000 to Windows XP.
+   In this example, path is the path of your Windows folder. For example, type C:\Windows\Inf or C:\Winnt. By default, C:\Windows is the folder where Windows XP is installed, C:\Winnt is the folder where Windows XP is installed if you upgraded Windows 2000 to Windows XP.
 2. On the **Tools** menu, click **Folder Options**.
 3. On the **View** tab, in the **Advanced Settings** box, click **Show hidden files and folders**, and then click **OK**.
 4. Right-click **Mdac.inf**, and then click
@@ -72,7 +72,7 @@ Do one of the following as appropriate for your operating system and if you have
 5. If you are prompted for your Windows CD, insert the Windows CD in the CD-ROM drive or DVD-ROM drive.
 6. Click the **I386** folder on your hard disk (typically, C:\I386), and then click **OK**.
 
-    **Note** If the I386 folder is a subfolder of the Windows folder, on some computers, you cannot select it. In this case, type the full path in the
+    If the I386 folder is a subfolder of the Windows folder, on some computers, you can't select it. In this case, type the full path in the
 **Copy files from** box (for example, type C:\Windows\I386 or C:\Winnt\I386), and then click **OK**.
 7. Restart the computer.
 
@@ -89,7 +89,7 @@ Do one of the following as appropriate for your operating system and if you have
 4. In Registry Editor, locate and then click the following key:
 
     `HKEY_Local_Machine\Software\Microsoft\Windows\CurrentVersion\Setup`
-5. Right-click the **Installation Sources**entry, and then click **Modify**.
+5. Right-click the **Installation Sources** entry, and then click **Modify**.
 6. In the **Value data** box, change the value to the path of the I386 folder on your hard disk, and then click **OK**.
 7. Repeat steps 5 and 6 for each of the following entries:
    - SourcePath
@@ -118,7 +118,7 @@ Do one of the following as appropriate for your operating system and if you have
 **Note** When you import the registry keys from another computer, make sure that the source computer and destination computer run the same operating system. For example, if you are using this method on a computer that is running Windows XP, locate a computer that runs Windows XP that you can use to export the registry keys.
 
 > [!IMPORTANT]
-> Essential information required for user successImportant This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 #### Part 1: Export the keys from the registry on the "source" computer
 

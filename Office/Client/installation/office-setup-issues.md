@@ -128,7 +128,7 @@ The following information may be contained in the Setup log:
 If you suspect problems with the command-line properties and switches that you are using, these items are also listed in the Setup log file. For example, if you use the following command line to run Setup:
 
 ```powershell
-f:\Setup.exe companyname=contoso /qb
+f:\Setup.exe companyname="contoso" /qb
 ```
 
 The following text is included in the Setup log:
@@ -136,20 +136,20 @@ The following text is included in the Setup log:
 ```output
 Launch Setup 
 9/22/03 1:49:46 PM 
-companyname=contoso /qb
+companyname="contoso" /qb
 Detected Windows Info:
  PlatformId = 2
  MajorVersion = 4
  MinorVersion = 0
 Setup path: \\server\share\2003_Admin\SETUP.EXE
-Adding property...companyname=contoso
+Adding property...companyname="contoso"
 
-Recognized command line switch: /qb -and-Office-specific properties added: companyname=contoso
+Recognized command line switch: /qb -and-Office-specific properties added: companyname="contoso"
 General properties added: LAUNCHEDFROMSETUP=1 SETUPEXEPATH=\\server\share\2003_Admin\ 
 Writing Task:
 D:\WINNT\System32\msiexec.exe
  /I \\server\share\2003_Admin\PRO11.MSI
- METRICSSOURCE="\\server\share\2003_Admin companyname="contoso" /qb"
+ METRICSSOURCE="\\server\share\2003_Admin companyname=""contoso"" /qb"
  companyname="contoso" LAUNCHEDFROMSETUP=1 
 SETUPEXEPATH=\\server\share\2003_Admin\ /qb 
 ```
@@ -197,7 +197,7 @@ The Windows Installer log files are significantly larger than the Setup log file
      ```output
      MSI (c) (B7:A7): Note: 1: 2737 2: CheckCAServer 3: 
      c:\windows\TEMP\MSI82D6.TMP 4: CheckCAServer
-     Info 2898. An internal error has occurred. (Tahoma8 Tahoma1)
+     Info 2898. An internal error has occurred. (Tahoma8 Tahoma 1)
      Error 2737. An internal error has  occurred. (CheckCAServer c:\windows\TEMP\MSI82D6.TMP CheckCAServer )
      MSI (c) (B7:A7): Product: Microsoft Office Professional 2003 -- Error 2737. An internal error has occurred. (CheckCAServer c:\windows\TEMP\MSI82D6.TMP CheckCAServer )
     
@@ -273,7 +273,7 @@ The Windows Installer log files are significantly larger than the Setup log file
 
 ### Verbose log files
 
-All the techniques that are listed in the "Windows Installer Log Files" section can be used on verbose log files. However, verbose logging increases Setup times. Only use verbose logging if you're having Setup problems that can't be diagnosed with a default log file.
+All the techniques that are listed in the [Windows Installer log files](#windows-installer-log-files) section can be used on verbose log files. However, verbose logging increases Setup times. Only use verbose logging if you're having Setup problems that can't be diagnosed with a default log file.
 
 - Generate a verbose log file
 

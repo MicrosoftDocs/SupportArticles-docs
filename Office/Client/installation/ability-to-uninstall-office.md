@@ -107,7 +107,7 @@ For more information about how to obtain Windows Installer 3.1 (v2), see[Windows
 With Windows Installer 3.1, you can remove an update by typing a command in the **Run** dialog box. For example, to remove an update, click **Start**, click **Run**, type the following command in the **Open** box, and then click
  **OK**:
 
-`msiexec /package {**product_code**} /uninstall "**full_path_to_.msp_file**" /qb`
+`msiexec /package {product_code} /uninstall "full_path_to_.msp_file" /qb`
 
 > [!NOTE]
 >
