@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes how you can use the Distributed Link Tracking services in Windows to track the creation and movement of linked files across NTFS-formatted volumes and servers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312403
 
 ## An overview of Distributed Link Tracking

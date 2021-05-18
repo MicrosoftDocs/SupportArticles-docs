@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a solution to an issue that prevents you from adding features to a Windows Server 2012 R2-based computer that's running the Server Core installation option.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2913316
 
 ## Symptoms

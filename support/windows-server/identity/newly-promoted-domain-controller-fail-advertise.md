@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;967336
 
 ## Symptoms

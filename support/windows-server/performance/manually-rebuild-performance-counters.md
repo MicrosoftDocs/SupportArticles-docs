@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article helps solve an issue where some performance counter libraries become corrupted and need to be rebuilt.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2554336
 
 ## Symptoms

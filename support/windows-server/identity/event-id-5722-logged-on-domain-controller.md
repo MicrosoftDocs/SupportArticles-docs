@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to diagnose and resolve a problem where event 5722 appears in the system log of your domain controller.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 810977
 
 >[!NOTE]

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article discusses the Transmission Control Protocol (TCP) three-way handshake process between a client and server when starting or ending a TCP connection.
 
-_Original product version:_ &nbsp;  Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172983
 
 ## Summary

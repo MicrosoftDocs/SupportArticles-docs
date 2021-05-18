@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an error that occurs when you run the `w32tm /resync` command to synchronize Windows Server 2003 or Windows SBS to an external time source.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 929276
 
 ## Symptoms

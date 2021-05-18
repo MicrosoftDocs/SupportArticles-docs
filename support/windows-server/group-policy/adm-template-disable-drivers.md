@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes an ADM template that allows an Administrator to disable the respective drivers of these devices.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555324
 
 ## Symptoms

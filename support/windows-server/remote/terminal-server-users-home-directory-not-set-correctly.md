@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a resolution to an issue where Terminal Server user's Home Directory is not set correctly.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 230165
 
 ## Symptoms

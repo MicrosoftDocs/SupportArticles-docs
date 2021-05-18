@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article discusses LDAP session security settings and requirements after security advisory ADV190023 is installed.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4563239
 
 ## Summary

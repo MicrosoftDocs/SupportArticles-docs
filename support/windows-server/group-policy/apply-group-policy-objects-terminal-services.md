@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to apply Group Policy objects to Terminal Services servers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 260370
 
 ## Summary

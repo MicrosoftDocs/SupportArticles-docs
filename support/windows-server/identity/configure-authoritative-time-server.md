@@ -18,7 +18,7 @@ adobe-target: true
 
 This article describes how to configure the Windows Time service and troubleshoot when the Windows Time service doesn't work correctly.
 
-_Original product version:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Essentials  
+_Applies to:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Essentials  
 _Original KB number:_ &nbsp; 816042
 
 To configure an internal time server to synchronize with an external time source, use the following method:

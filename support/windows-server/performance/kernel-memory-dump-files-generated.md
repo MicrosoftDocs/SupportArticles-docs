@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides help to solve an issue where Kernel memory dump files are generated on computers when physical memory is larger than the size of the page file.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 949052
 
 > [!NOTE]

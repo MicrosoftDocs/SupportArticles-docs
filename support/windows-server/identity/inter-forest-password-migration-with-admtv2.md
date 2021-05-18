@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article discusses the dependencies and troubleshooting steps for common problems associated with the *inter* -forest password migration operation.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 322981
 
 ## Summary

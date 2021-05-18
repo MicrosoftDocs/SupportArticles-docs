@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2709568
 
 ## Summary

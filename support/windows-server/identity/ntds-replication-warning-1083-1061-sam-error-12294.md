@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides help to fix an issue that occurs if a change that is made on the local domain controller is also made on the domain controller that holds the PDC operations master role.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 306091
 
 ## Summary

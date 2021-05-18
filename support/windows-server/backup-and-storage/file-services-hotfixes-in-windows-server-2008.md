@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2008-based computer or on a Windows Server 2008 R2-based computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2, Windows Server 2008  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2, Windows Server 2008  
 _Original KB number:_ &nbsp; 2473205
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to configure Microsoft Distributed Transaction Coordinator (DTC) to work through firewalls.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250367
 
 ## More information

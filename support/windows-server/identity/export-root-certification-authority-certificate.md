@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to export Root Certification Authority Certificate.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555252
 
 ## Tips

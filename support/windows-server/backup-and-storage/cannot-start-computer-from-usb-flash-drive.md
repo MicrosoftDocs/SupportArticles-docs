@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article works around a startup failure when you use a USB flash drive that's formatted to use the FAT32 file system.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954457
 
 ## Symptoms

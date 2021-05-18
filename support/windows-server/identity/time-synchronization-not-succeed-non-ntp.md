@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a resolution for the issue that time synchronization may not succeed when you try to synchronize with a non-Windows NTP server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 875424
 
 ## Symptoms

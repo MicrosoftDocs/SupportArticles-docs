@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to enable Kerberos event logging.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 1809 and later versions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 1809 and later versions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 262177
 
 ## Summary

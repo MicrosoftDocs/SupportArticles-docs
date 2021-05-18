@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue that TCP traffic stops after you enable both receive-side scaling and Internet Connection Sharing.
 
-_Original product version:_ &nbsp; Windows Vista, Windows Server 2003  
+_Applies to:_ &nbsp; Windows Vista, Windows Server 2003  
 _Original KB number:_ &nbsp; 927168
 
 ## Problem description

@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a workaround for an issue where the File Server Resource Manager (FSRM) quota usage is incorrect.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3034439
 
 ## Symptoms

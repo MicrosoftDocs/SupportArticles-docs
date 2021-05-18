@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to install and configure a new Active Directory installation in a laboratory environment that includes Windows Server 2003 and Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324753
 
 > [!NOTE]

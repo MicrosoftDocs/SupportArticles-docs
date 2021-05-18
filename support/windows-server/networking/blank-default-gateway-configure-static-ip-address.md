@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where blank default gateway may occur after you configure Static IP address following network driver upgrade in Windows 7 Service Pack 1 and Server 2008 R2 Service Pack 1.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2555789
 
 ## Symptoms
