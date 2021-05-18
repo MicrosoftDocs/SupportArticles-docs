@@ -132,6 +132,8 @@
       href: ./identity/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
       href: ./identity/workplace-join-fail-error-0x80072ee7.md
+    - name: Fail to connect ADFS service
+      href: ./identity/connection-adfs-failed-set-msoladfscontex.md
     - name: Restore IIS and clean up Active Directory
       href: ./identity/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
