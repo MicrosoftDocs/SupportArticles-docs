@@ -61,7 +61,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
    ```powershell
    [system.convert]::ToBase64String(([GUID]"<ObjectGUID>").tobytearray())
    ```
-  Obtain the immutable ID.
+  4. Obtain the immutable ID.
   
 4. Connect to Azure AD and  Set the `ImmutableID` parameter in Azure AD :
 
