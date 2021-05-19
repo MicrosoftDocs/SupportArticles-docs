@@ -71,7 +71,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
 
 6. Perform a Delta sync on Azure AD Connect.
 
-6.  This connects original Azure AD account into the scope of Azure AD Connect 
+7.  This connects the original Azure AD account into the scope of Azure AD Connect 
 
 8. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
 
