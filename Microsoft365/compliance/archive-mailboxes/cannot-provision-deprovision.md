@@ -50,7 +50,7 @@ After a migration, managing archives for mailboxes that were migrated from Dedic
 - The management computer must have .NET 4.0 or a later version installed.
 - The management computer must be domain-joined to the on-premises AD forest of the users who will be managed.
 - The operator must have Account Operator permissions or equivalent rights.
-- The [enable-remotearchive.ps1](https://download.microsoft.com/download/4/9/7/497B7DB5-16C6-40D1-A3F6-AF332E797644/Enable-RemoteArchive.ps1.txt) and [disable-remotearchive.ps1](https://download.microsoft.com/download/1/D/F/1DF27D3D-78FF-4B75-BF01-305DDB0742FA/Disable-RemoteArchive.ps1.txt) scripts must be on the management computer.
+- The [enable-remotearchive.ps1](https://download.microsoft.com/download/d/d/6/dd6ca3c4-d212-4d55-9c32-dbff3f1ad611/Enable-RemoteArchive.ps1) and [disable-remotearchive.ps1](https://download.microsoft.com/download/3/d/6/3d61c749-95f9-4ee2-8b8d-834ed7a168f5/Disable-RemoteArchive.ps1) scripts must be on the management computer.
 
 ### Provisioning an archive
 
@@ -61,7 +61,7 @@ After a migration, managing archives for mailboxes that were migrated from Dedic
     `Enable-remotearchive.ps1 -Identity 'John'`
 
 1. Wait for AzureAD (AAD) Connect to synchronize the changes.Optional: The
- **ArchiveName** parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App (OWA). If you don't use this parameter, the default value is **In-Place Archive - \<Mailbox User'sDisplay Name>**.
+ **ArchiveName** parameter specifies the name of the archive mailbox. This is the name displayed to users in Outlook and Outlook Web App (OWA). If you don't use this parameter, the default value is **In-Place Archive - \<Mailbox_User_Display_Name>**.
 
 ### Deprovisioning an archive
 
