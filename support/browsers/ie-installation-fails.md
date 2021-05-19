@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Troubleshooting a failed installation of Internet Explorer 11
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the system requirements before installing Internet Explorer 11 and checks for possible problems that may occur after installation.
 
 _Original product version:_ &nbsp; Internet Explorer 11  

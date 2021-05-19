@@ -7,6 +7,8 @@ ms.reviewer: JAYALLEN
 ---
 # How to raise a File Download dialog box for a known MIME type
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the information about how to raise a **File Download** dialog box for known MIME types in Microsoft Edge and Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10, Internet Explorer 8, Internet Explorer 7, Microsoft Edge  

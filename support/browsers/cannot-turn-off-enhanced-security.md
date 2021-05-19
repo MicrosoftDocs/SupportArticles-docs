@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Standard users can't turn off Internet Explorer Enhanced Security feature
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information on troubleshooting the issues in which you can't turn off Internet Explorer Enhanced Security.
 
 _Original product version:_ &nbsp; Internet Explorer  

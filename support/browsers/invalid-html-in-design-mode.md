@@ -7,6 +7,8 @@ ms.reviewer: apinho
 ---
 # Internet Explorer 9 or a later version may generate invalid HTML in design mode
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a workaround to solve the invalid HTML that's created by Internet Explorer 9 or a later version in design mode.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

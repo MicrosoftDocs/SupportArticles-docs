@@ -7,6 +7,8 @@ ms.reviewer: jeanr
 ---
 # You cannot add favorites with redirected favorites folder and enhanced protected mode in Internet Explorer 10
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving a problem that favorites and enhanced protected mode can't be added in Internet Explorer 10.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10  

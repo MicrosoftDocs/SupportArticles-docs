@@ -7,6 +7,8 @@ ms.reviewer: ajayps, kaushika, ramakoni
 ---
 # How to configure Group Policy Preference settings for Internet Explorer 11 in Windows
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article explains how to configure Internet Explorer 11 Group Policy Preference (GPP) settings to apply on computers running Windows operating system.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Windows 8.1, Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard  
