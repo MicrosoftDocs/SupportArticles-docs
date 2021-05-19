@@ -50,7 +50,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
     $InactiveMailbox = Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox>
     ```
 
-2. Run the following command to temporarily associate the inactive mailbox with a cloud account from Exchange online powershell.
+2. Run the following command to temporarily associate the inactive mailbox with a cloud account from Exchange Online PowerShell:
 
    ```powershell
    New-Mailbox -InactiveMailbox $InactiveMailbox.DistinguishedName -Name "<name of inactive mailbox>" -DisplayName "<DisplayName of inactive mailbox>" -MicrosoftOnlineServicesID <alias@*.onmicrosoft.com> -Password (ConvertTo-SecureString -String <PasswordString> -AsPlainText -Force) -ResetPasswordOnNextLogon $true
