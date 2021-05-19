@@ -63,7 +63,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
    ```
   4. Obtain the immutable ID.
   
-4. Connect to Azure AD and  Set the `ImmutableID` parameter in Azure AD :
+5. Connect to Azure AD and Set the `ImmutableID` parameter in Azure AD :
 
     ```powershell
     Set-MsolUser -userprincipalname  -ImmutableId <ImmutableId>
