@@ -79,7 +79,7 @@ If the ECP error message continues to display, do the following:
 
 1. Navigate to a folder that includes Exchange Server scripts. By default, scripts are located in the following path for Exchange Server 2013:
 
-    >*C:\Program Files\Microsoft\Exchange Server\v15\Bin\directory*<br/>
+    >*C:\Program Files\Microsoft\Exchange Server\v15\Bin*
 
     **Note** For Exchange Server 2010, the scripts will be in the *:::no-loc text="V14":::* folder instead.
 
