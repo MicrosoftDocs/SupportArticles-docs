@@ -537,7 +537,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 ### Basic steps to troubleshoot ThumbnailPhoto
 
-1. Use a tool such as [AD Photo Edit](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html)  or similar to make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
+1. Make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
 
 2. Check the image in the Accounts Portal or use **Get-AzureADUserThumbnailPhoto** because these methods read the **ThumbnailPhoto** directly from Azure AD.
 
