@@ -1,11 +1,11 @@
 ---
-title: Offline Servicing a wim image with LCU may fail
+title: Offline Servicing a wim image with Latest Cumulative Update may fail
 description: Describes how to correct an issue when Offline Servicing may fail after you use Microsoft Endpoint Configuration Manager to perform Offline Servicing on a wim file with the Latest Cumulative Update.
 ms.date: 05/19/2021
 ms.prod-support-area-path:
 ---
 
-# Offline Servicing a wim image with LCU may fail
+# Offline Servicing a wim image with Latest Cumulative Update may fail
 
 ## Symptom
 
@@ -15,7 +15,7 @@ In that scenario, Offline Servicing may fail with an error.
 
 Sample:
 
-1. You imported the following: **W10 20H2 (updated Feb 2021) install.wim | Enterprise edition, EN, x64**
+1. You imported the following LCU: **W10 20H2 (updated Feb 2021) install.wim | Enterprise edition, EN, x64**
 2. You perform Offline Servicing on that wim file with **2021-03 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems** ([KB5000802](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14))
 3. You receive the following error messages in the **OfflineServicingMgr.log** file:
 
@@ -42,7 +42,7 @@ This problem is caused by a change inside the LCU, and occurs if you perform Off
 
 ### Workaround Sample
 
-The following is a sample of the workaround. Be sure to adjust the used paths and the `/index:XY` as per your system needs.
+The following example is a sample of the workaround. Be sure to adjust the used paths and the `/index:XY` as per your system needs.
 
 ```output
 mkdir D:\_Mount
