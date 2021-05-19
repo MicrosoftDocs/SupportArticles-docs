@@ -79,7 +79,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
     > The new mailbox is not enabled for Litigation Hold. Additionally, you receive the following warning message:  
     > WARNING: The inactive mailbox has been recovered. To preserve data until you obtain a valid license, we have enabled Single Item Recovery for 30 days. Additionally we have also enabled Retention Hold for 30 days. Once a valid license has been assigned for this mailbox, you can choose to disable these settings and use Litigation or In-Place Hold instead to preserve data.
 
-8. Apply the Exchange Server license and appropriate hold settings to the new mailbox.
+9. Apply the Exchange Server license and appropriate hold settings to the new mailbox.
 
 ## More information
 
