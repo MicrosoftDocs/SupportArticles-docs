@@ -75,11 +75,11 @@ If the ECP error message continues to display, do the following:
     C:\Program Files\Microsoft\ExchangeServer\V15\bin\CmdletExtensionAgents;<br/>
     C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess\Owa\bin*
 
-    **Note** The paths must point to where Exchange Server is installed. The following examples assume that the program is installed on drive C and that the version is Microsoft Exchange Server 2013 or later. If it is installed on a different drive on your server, or if you’re using a different version such as Microsoft Exchange Server 2010, then use the path and version information that's appropriate for your installation.
+    **Note** The paths must point to where Exchange Server is installed. The following examples assume that the program is installed on drive C and that the version is Microsoft Exchange Server 2013. If it is installed on a different drive on your server, or if you’re using a different version such as Microsoft Exchange Server 2010, then use the path and version information that's appropriate for your installation.
 
-1. Navigate to a folder that includes Exchange Server scripts. By default, scripts are located in the following path for Exchange Server 2013 or later:
+1. Navigate to a folder that includes Exchange Server scripts. By default, scripts are located in the following path for Exchange Server 2013:
 
-    >*C:\Program Files\Microsoft\Exchange Server\v15\Bin\*<br/>
+    >*C:\Program Files\Microsoft\Exchange Server\v15\Bin*
 
     **Note** For Exchange Server 2010, the scripts will be in the *:::no-loc text="V14":::* folder instead.
 
