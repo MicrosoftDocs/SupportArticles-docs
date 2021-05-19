@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4552163
 
 ## Identify the issue
 
-This guide is companion to an in-app tool called the **Command Checker** to inspect the ribbon component definitions to help us determine what might be causing problems.
+This guide is companion to an in-app tool called **Command Checker** to inspect the ribbon component definitions to help us determine what might be causing problems.
 
 When the tool is run, you will be asked to identify or choose one of the items from the list below of the most common types of ribbon command bar problems. Select the link below to know more about troubleshooting each area:
 
@@ -26,3 +26,6 @@ When the tool is run, you will be asked to identify or choose one of the items f
 - [A button in the command bar is visible when it should not be](ribbon-issues-button-visible.md)
 
 - [A button in the command bar is not working correctly](ribbon-issues-button-not-working-correctly.md)
+
+> [!IMPORTANT]
+> Missing or incorrect ribbon metadata is often the cause for the above issues and can typically be resolved by regenerating all ribbon metadata. The in-app tool (**Command Checker**) has a feature to allow you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md).
