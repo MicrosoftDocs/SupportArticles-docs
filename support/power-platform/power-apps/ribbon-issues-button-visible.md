@@ -90,8 +90,8 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** -> **Solutions**.
 1. Click **New** to create a new solution, set Publisher to the value shown in the Command Checker's solution layers listing for the command and the Active solution layer. (In our example, this is **DefaultPublisherCITTest**).
-1. Click Entities.
-1. Click Add Existing.
+1. Click **Entities**.
+1. Click **Add Existing**.
 1. Select the entity your command is defined on (In our example, this is **activitypointer**) and click **OK**.
 1. Make sure you uncheck the **Include entity metadata** and **uncheck Add all assets** options before clicking **Finish**.
 1. Click **Save**.
