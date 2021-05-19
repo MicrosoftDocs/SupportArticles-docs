@@ -69,7 +69,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
     Set-MsolUser -userprincipalname  -ImmutableId <ImmutableId>
     ```
 
-5. Perform a Delta sync on AD Connect.
+6. Perform a Delta sync on Azure AD Connect.
 
 6.  This connects original Azure AD account into the scope of Azure AD Connect 
 
