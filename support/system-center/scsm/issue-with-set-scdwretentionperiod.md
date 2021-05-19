@@ -1,20 +1,20 @@
 ---
 title: Set-SCDWRetentionPeriod doesn't work correctly
-description: Discusses that the Set-SCDWRetentionPeriod doesn't set the data retention period correctly. Provides a workaround.
+description: Discusses that the Set-SCDWRetentionPeriod cmdlet doesn't set the data retention period correctly. Provides a workaround.
 author: helenclu
 ms.author: luche
 ms.reviewer: aakashb
 ms.date: 05/13/2021
-appliesto: 
-- System Center Service Manager
 ---
 # Set-SCDWRetentionPeriod doesn't set the data retention period correctly
+
+*Applies to*: System Center Service Manager
 
 When you run the [Set-SCDWRetentionPeriod](/powershell/module/microsoft.enterprisemanagement.warehouse.cmdlets/set-scdwretentionperiod) cmdlet, the cmdlet doesn't set the data retention period correctly.
 
 ## Workaround
 
-To work around this issue, run a SQL command that resembles the following example:
+To work around this issue, run a SQL command that resembles the following example after you run the cmdlet:
 
 ```sql
 -- This example sets the data retention period to 10 years for all fact tables.
