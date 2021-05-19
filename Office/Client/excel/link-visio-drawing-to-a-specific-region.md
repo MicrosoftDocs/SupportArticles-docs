@@ -54,7 +54,7 @@ To embed and link a named portion of an Excel worksheet into a Visio drawing, fo
 
 10. In the **Tell me what you want to do** box, type and click **Links**.
 11. In the Links dialog box, select the link to the Excel worksheet, click **Automatic** under Update, and then click **Change Source**.
-12. In the Item Name box, type the name defined in step 4, and then click Open.
+12. In the Item Name box, type the name defined in step 4, and then click **Open**.
 13. Click **Update Now**, and then click Close.
 
 Now, only the named area of the Excel worksheet is dynamically linked to the Visio drawing.
