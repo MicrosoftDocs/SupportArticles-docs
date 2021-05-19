@@ -7,6 +7,8 @@ ms.reviewer: joelba
 ---
 # Automatically Detect Settings is unexpectedly enabled at first login in Internet Explorer 9
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving the issue that the **Automatically detect settings** option is enabled unexpectedly when a user signs in to Internet Explorer 9 for the first time.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

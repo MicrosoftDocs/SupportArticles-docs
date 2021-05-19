@@ -7,6 +7,8 @@ ms.reviewer: pphadke, macox
 ---
 # Description of the Cryptography API proxy detection mechanism when downloading a Certificate Revocation List (CRL) from a CRL distribution point
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 The purpose of this article is to explain how the Crypto API tries to find a route by which it can successfully download a HTTP-based CRL distribution point URL, and meant to help in troubleshooting scenarios related to network retrieval of CRLs.
 
 _Original product version:_ &nbsp; Windows Server 2003 Service Pack 2, Windows Vista Enterprise, Windows Server 2008 Enterprise, Windows 7 Enterprise, Windows Server 2008 R2 Enterprise, Windows 10, Windows Server 2016, Windows Server 2019  

@@ -13,6 +13,8 @@ ms.custom:
 
 # Applications try to access web cache content that belongs to the local Administrator account
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes how to resolve an issue in which browsers or applications that use browser modules try to access files that belong to a computer's Administrator profile in addition to files that belong to the current user's profile.
 
 _Original product version:_&nbsp;Internet Explorer, Windows 10; Microsoft Edge, Windows 10  

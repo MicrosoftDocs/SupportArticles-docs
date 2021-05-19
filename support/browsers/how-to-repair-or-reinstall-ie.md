@@ -7,6 +7,8 @@ ms.reviewer: wellsluo, ramakoni
 ---
 # How to reinstall or repair Internet Explorer in Windows
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 If you experience a recurring problem when you use Internet Explorer in Windows, you may try to [repair](#repair-internet-explorer-in-windows) or [reinstall](#reinstall-internet-explorer-in-windows) the program to fix the problem. Although this may sound intimidating, this article offers the most direct, trouble-free methods to perform this task.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10, Internet Explorer 9  

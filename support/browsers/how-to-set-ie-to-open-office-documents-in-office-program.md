@@ -7,6 +7,8 @@ ms.reviewer: davidg, JerryHa, ramakoni
 ---
 # How to configure Internet Explorer to open Office documents in the appropriate Office program
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides methods to set Internet Explorer to open Office documents in the appropriate Office program.
 
 _Original product version:_ &nbsp; Internet Explorer 10, Internet Explorer 9  

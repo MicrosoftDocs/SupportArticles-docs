@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Hardware acceleration (or GPU rendering) in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article introduces the hardware acceleration, or Graphics Processing Unit (GPU) rendering, feature in Internet Explorer. This article also discusses potential problems that might occur when you use this feature, the procedure to enable or disable this feature, and how to check your system's video card compatibility with this feature.
 
 _Original product version:_ &nbsp; Internet Explorer  
