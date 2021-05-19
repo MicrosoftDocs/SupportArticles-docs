@@ -69,6 +69,9 @@ To work around this issue, use one of the following methods:
   3. Clear the **Group similar folders, such as Inboxes, from different accounts** check box.
   4. If you want, select the **Hide On My Computer folders** check box.
 
+> [!NOTE]
+> If you are using Outlook 2019 for mac, the option **Group similar folders, such as Inboxes, from different accounts** is replaced with **Show all mail account folders**
+
 ## More information
 
 - [Open/View Shared Calendars](https://outlook.uservoice.com/forums/924856-the-new-outlook-for-mac/suggestions/38980501-open-view-shared-calendars)
