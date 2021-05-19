@@ -44,7 +44,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
 > [!NOTE]
 > This process also works for soft-deleted mailboxes if they connect to a new on-premises AD account. The `SoftDeletedMailbox` parameter should be used to replace the `InactiveMailboxOnly` parameter.
 
-1. Run the following command to obtain inactive mailbox attributes from Exchange Online powershell:
+1. Run the following command to obtain inactive mailbox attributes from Exchange Online PowerShell:
 
     ```powershell
     $InactiveMailbox = Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox>
