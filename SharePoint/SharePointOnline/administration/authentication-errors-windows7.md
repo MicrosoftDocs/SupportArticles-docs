@@ -38,11 +38,11 @@ Make sure that you carefully review information about [TLS deprecation](/microso
 > - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 > - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 > 
-> To add cipher suites, either deploy a group policy via [Configuring TLS Cipher Suite Order by using Group Policy](https://docs.microsoft.com/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy)
+> To add cipher suites, either deploy a group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true)
 > 
-> To use PowerShell, see [Enable-TlsCipherSuite](https://docs.microsoft.com/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps).
+> or use PowerShell by following the instructions to [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true).
 >
-> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
 
 ## Symptoms
 
