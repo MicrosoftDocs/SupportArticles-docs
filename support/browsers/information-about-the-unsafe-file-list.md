@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Information about the Unsafe File List in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 Internet Explorer versions include an *unsafe* file. The purpose of the unsafe file list is to prevent you from accidentally opening a file type that could potentially cause problems on your computer.
 
 _Original product version:_ &nbsp; Internet Explorer  

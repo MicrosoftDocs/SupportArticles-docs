@@ -7,6 +7,8 @@ ms.prod-support-area-path:
 ---
 # Cursor style does not change when the mouse button gets pressed in Internet Explorer 9 and later versions
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about solving the issue that the cursor style of a hovered DOM element does not change when the mouse button remains pressed in Internet Explorer 9 and later versions.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

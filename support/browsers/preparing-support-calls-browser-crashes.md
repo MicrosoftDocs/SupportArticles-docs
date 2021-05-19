@@ -8,6 +8,8 @@ ms.topic: how-to
 ---
 # Preparing for support calls for browser crashes
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes how to generate and gather crash dumps and event logs that are used by Microsoft Customer Service and Support to troubleshoot browser crashes. Gathering these logs and uploading them during case creation can help diagnose the cause and solve the problem.
 
 _Applies to:_ &nbsp; Browser  

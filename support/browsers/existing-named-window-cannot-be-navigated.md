@@ -7,6 +7,8 @@ ms.reviewer: bachoang
 ---
 # Named window navigation might fail to navigate the existing named window
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem that you make sure that the target URL and the URL in the target window have the same protection mode setting when calling `window.open`.
 
 _Original product version:_ &nbsp; Internet Explorer  

@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # You cannot pin a local webpage in Internet Explorer 11
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about a webpage cannot be pinned sites in Internet Explorer 11 or added to favorites sites, because the webpage contains meta tags that refer to local images.
 
 _Original product version:_ &nbsp; Internet Explorer 11  

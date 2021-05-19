@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # How to troubleshoot script errors in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article solves the problem that the webpage can't be displayed when a script error occurs in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10, Internet Explorer 9  

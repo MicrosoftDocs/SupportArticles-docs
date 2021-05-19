@@ -8,6 +8,8 @@ ms.topic: how-to
 ---
 # Disable Internet Explorer on Windows
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes how to disable any supported version of Internet Explorer on Windows.
 
 _Applies to:_ &nbsp; Windows  

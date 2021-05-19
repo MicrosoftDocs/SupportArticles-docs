@@ -1,13 +1,15 @@
 ---
 title: Cookies for WebOC application lost
-description: This article describes that Internet Explorer selects button of Delete browsing history on exit, then the application’s cookies will not be retained.
+description: This article describes that Internet Explorer selects button of Delete browsing history on exit, then the application's cookies will not be retained.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Permanent cookies for WebOC application lost when user closes Internet Explorer
 
-This article provides a solution for applications that rely on permanent cookies. You can choose to keep the website’s cookies and temporary Internet files in Internet Explorer favorites.
+[!INCLUDE [](../includes/browsers-important.md)]
+
+This article provides a solution for applications that rely on permanent cookies. You can choose to keep the website's cookies and temporary Internet files in Internet Explorer favorites.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 9  
 _Original KB number:_ &nbsp; 2777993
