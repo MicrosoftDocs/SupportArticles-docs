@@ -36,17 +36,19 @@ Error Code 0x8004de40 indicates OneDrive is having trouble connecting to the c
 
 First, verify that you are connected to the internet. If the affected device is not connected, see [Fix Wi-Fi connection issues in Windows](https://go.microsoft.com/fwlink/?linkid=871051).
 
-Make sure that you carefully review information about [TLS deprecation](https://docs.microsoft.com/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide). That change might also cause this error.
+Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide&preserve-view=true). That change might also cause this error.
 
  > [!NOTE]
- > Special notice: Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
+ > Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements, because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
 >
 > For TLS 1.2, the following cipher suites are supported by Azure Front Door:
-> TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-> TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-> TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-> TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-> [What are the current cipher suites supported by Azure Front Door?](https://docs.microsoft.com/en-us/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-)
+>
+> - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+> - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+> - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+> - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+>
+> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
 
 If the device is connected to the internet and TLS has been updated, continue to the following steps based on the version of Windows that the device is running.
 
@@ -85,4 +87,4 @@ If you have completed all the previous steps, consider doing a [Reset of OneDriv
 
 - [TLS cipher suites supported by Office 365](/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365&preserve-view=true)
 - [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true)
-- [Enable TLS Cipher Suites](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps)
+- [Enable TLS Cipher Suites](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true)
