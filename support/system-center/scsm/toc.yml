@@ -20,6 +20,8 @@
       href: configure-antivirus-exclusions.md
     - name: Disable diagnostic and connectivity data
       href: disable-diagnostics-connectivity-data.md
+    - name: Set-SCDWRetentionPeriod doesn't set the data retention period correctly
+      href: issue-with-set-scdwretentionperiod.md 
     - name: The Get-SCDWJob cmdlet is slow or times out
       href: get-scdwjob-cmdlet-slow-times-out.md
     - name: Update rollups and build versions
