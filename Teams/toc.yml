@@ -103,6 +103,8 @@
       href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
+    - name: '"There was a problem reaching this app" error'
+      href: ./files/access-files-tab-error.md
     - name: Error uploading files to chats
       href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Error when selecting Files tab
