@@ -73,7 +73,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
 
 6.  This connects original Azure AD account into the scope of Azure AD Connect 
 
-7. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
+8. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
 
     > [!NOTE]
     > The new mailbox is not enabled for Litigation Hold. Additionally, you receive the following warning message:  
