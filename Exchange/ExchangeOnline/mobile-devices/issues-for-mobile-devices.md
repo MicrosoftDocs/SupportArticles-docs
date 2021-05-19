@@ -24,7 +24,7 @@ This article describes how to collect Exchange ActiveSync device logs to trouble
 
 ## Procedure
 
-To capture ActiveSync device log information, use following methods:
+To capture ActiveSync device log information, use following method:
 
 1. Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Run the following command to enable ActiveSync logging for a specific user:
