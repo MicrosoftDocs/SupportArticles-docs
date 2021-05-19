@@ -36,7 +36,7 @@ Error Code 0x8004de40 indicates OneDrive is having trouble connecting to the c
 
 First, verify that you are connected to the internet. If the affected device is not connected, see [Fix Wi-Fi connection issues in Windows](https://go.microsoft.com/fwlink/?linkid=871051).
 
-Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide). That change might also cause this error.
+Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365). That change might also cause this error.
 
  > [!NOTE]
  > Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements, because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
