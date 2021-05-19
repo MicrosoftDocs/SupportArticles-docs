@@ -1,5 +1,5 @@
 ---
-title: Error When accessing the Files tab
+title: Error when accessing the Files tab
 description: Fixes an issue in which you can't access the Files tab in a Teams channel because the Microsoft 365 group associated with the team doesn't have any owner.
 author: MaryQiu1987
 ms.author: v-maqiu
