@@ -36,6 +36,10 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 > - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 > - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 > 
+> To add cipher suites, either deploy a group policy via [Configuring TLS Cipher Suite Order by using Group Policy](https://docs.microsoft.com/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy)
+> 
+> To use PowerShell, see [Enable-TlsCipherSuite](https://docs.microsoft.com/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps).
+>
 > For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
 
 ## .NET Framework not configured for TLS 1.2
