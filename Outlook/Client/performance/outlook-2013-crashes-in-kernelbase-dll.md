@@ -167,7 +167,7 @@ If you have one or more pst files in your profile, you can use the following ste
     This will create a new OST, which may take some time to synchronize with the mailbox on the server, depending on the size of the mailbox.
 
 > [!NOTE]
-> The information contained herein is provided as-is in response to emerging issues. As a result of the speed in making it available, the materials may include typographical errors and may be revised at any time without notice. See [Terms of Use](https://docs.microsoft.com/legal/termsofuse) for other considerations.
+> The information contained herein is provided as-is in response to emerging issues. As a result of the speed in making it available, the materials may include typographical errors and may be revised at any time without notice. See [Terms of Use](/legal/termsofuse) for other considerations.
 
 ## More information
 
