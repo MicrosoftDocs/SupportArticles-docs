@@ -28,7 +28,7 @@ When you sign in to Microsoft OneDrive, you receive the following error message:
 
 > OneDrive Can't sign in. Error 0x8004de40
 >
-> Login was either interrupted or unsuccessful. Please try logging in again. (Error Code: 0x8004de40) 
+> Login was either interrupted or unsuccessful. Please try logging in again. (Error Code: 0x8004de40)
 
 Error Code 0x8004de40 indicates OneDrive is having trouble connecting to the cloud.  
 
@@ -36,7 +36,7 @@ Error Code 0x8004de40 indicates OneDrive is having trouble connecting to the c
 
 First, verify that you are connected to the internet. If the affected device is not connected, see [Fix Wi-Fi connection issues in Windows](https://go.microsoft.com/fwlink/?linkid=871051).
 
-Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide&preserve-view=true). That change might also cause this error.
+Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365). That change might also cause this error.
 
  > [!NOTE]
  > Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements, because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
@@ -48,7 +48,11 @@ Make sure that you carefully review information about [TLS deprecation](/microso
 > - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 > - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 >
-> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+> To add cipher suites, either deploy a group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true)
+>
+> or use PowerShell to [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true).
+>
+> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
 
 If the device is connected to the internet and TLS has been updated, continue to the following steps based on the version of Windows that the device is running.
 
@@ -77,11 +81,11 @@ Check the TLS protocols on the computer:
 If you are using Windows 8 or Windows 7 Service Pack 1 (SP1), see the following pages:
 
 - [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392)
-- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](/SharePointOnline/administration/authentication-errors-windows7.md)
+- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7)
 
 ## All computers
 
-If you have completed all the previous steps, consider doing a [Reset of OneDrive](https://support.microsoft.com/en-us/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c).
+If you have completed all the previous steps, consider doing a [reset of OneDrive](https://support.microsoft.com/en-us/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c).
 
 ## References
 
