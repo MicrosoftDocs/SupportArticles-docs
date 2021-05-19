@@ -24,7 +24,7 @@ appliesto:
 There are several reasons you might want to exclude or remove a site from a retention policy. You can do so using the steps below.  
 
 > [!NOTE]
->  - You must have the necessary permissions in the Compliance Admin center. See Permissions in the Microsoft 365 compliance center and Microsoft 365 security center.
+> - You must have the necessary permissions in the Compliance Admin center. See Permissions in the Microsoft 365 compliance center and Microsoft 365 security center.
 > - The steps in this article apply to SharePoint sites, OneDrive storage sites, and Microsoft 365 groups locations.  
 > - Changes to the retention policy might take up to 24 hours to complete.  
 
