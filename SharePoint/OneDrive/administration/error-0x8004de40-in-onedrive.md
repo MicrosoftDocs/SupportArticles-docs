@@ -36,7 +36,7 @@ Error Code 0x8004de40 indicates OneDrive is having trouble connecting to the c
 
 First, verify that you are connected to the internet. If the affected device is not connected, see [Fix Wi-Fi connection issues in Windows](https://go.microsoft.com/fwlink/?linkid=871051).
 
-Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide&preserve-view=true). That change might also cause this error.
+Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide). That change might also cause this error.
 
  > [!NOTE]
  > Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements, because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
@@ -48,11 +48,11 @@ Make sure that you carefully review information about [TLS deprecation](/microso
 > - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 > - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 > 
-> To add cipher suites, either deploy a group policy via [Configuring TLS Cipher Suite Order by using Group Policy](https://docs.microsoft.com/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy)
+> To add cipher suites, either deploy a group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true)
 > 
-> To use PowerShell, see [Enable-TlsCipherSuite](https://docs.microsoft.com/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps).
+> or use PowerShell by following the instructions to [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true).
 >
-> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
 
 
 If the device is connected to the internet and TLS has been updated, continue to the following steps based on the version of Windows that the device is running.
