@@ -2,6 +2,16 @@
 
 
 
+## Week of May 10, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/12/2021 | [Known issues in Rooms](/microsoftteams/troubleshoot/known-issues/rooms-known-issues) | modified |
+| 5/12/2021 | [Errors when trying to manage dial plans](/microsoftteams/troubleshoot/phone-system/dial-plans/errors-managing-dial-plans) | modified |
+| 5/13/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
+
+
 ## Week of May 03, 2021
 
 
