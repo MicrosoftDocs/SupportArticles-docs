@@ -5,6 +5,8 @@ ms.date: 05/19/2021
 ms.prod-support-area-path:
 ---
 
+# Offline Servicing a wim image with LCU may fail
+
 ## Symptom
 
 When you use the current branch of *Microsoft Endpoint Configuration Manager* to perform Offline Servicing on a `wim` file with the **Latest Cumulative Update** (LCU). To perform the servicing, you have imported a Windows 10 `install.wim` file, and then use the latest ADK.
