@@ -42,7 +42,7 @@ To embed and link a named portion of an Excel worksheet into a Visio drawing, fo
 1. Open your worksheet in Microsoft Excel.
 2. Select the range of cells that you want to link to.
 3. On the Formulas menu, click **Define Name**.
-4. In the Define Name dialog box, type a unique name and then click OK.
+4. In the Define Name dialog box, type a unique name and then click **OK**.
 5. Save the Microsoft Excel Workbook.
 6. Start Microsoft Visio and open your drawing.
 7. On the Insert menu, click Object.
