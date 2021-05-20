@@ -11,7 +11,7 @@
       href: best-practices-when-updating-a-flow.md
   - name: Others
     items:
-    - name: Lookup doesn't filter records for particula entity
+    - name: Lookup doesn't filter records for particular entity
       href: lookup-does-not-filter-entity-records.md
   - name: Ribbons and commanding
     items:

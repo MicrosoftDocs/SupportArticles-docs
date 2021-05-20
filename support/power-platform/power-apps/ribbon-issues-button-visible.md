@@ -45,7 +45,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
-    The Entity context indicates the object the ribbon customization is on, if all entities are listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
+    The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
     When there are two or more layers, you can select two rows and click **Compare** to view a comparison of the definitions brought in by each solution.
 
@@ -62,7 +62,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 
     :::image type="content" source="media/ribbon-issues-button-visible/comparison.png" alt-text="Comparison.":::
 
-1. The approach needed to fix a button's visibility will depend on the various customizations in your specific scenario. If you determined that a rule is incorrectly evaluating to false, and if the rule definition is incorrectly defined, then you should modify the rule definition and make changes that would permit the rule to evaluate to false under the proper circumstances. If the rule definition is correct, then it is possible that the requirements that would make the rule return false are not met, such as a field value or security privilege is not correctly assigned. Depending on your rule definition, the requirements can vary greatly, please refer to Define ribbon enable rules, and Define ribbon display rules. Considering our example, the command was customized with the removal of a `Mscrm.HideOnModern` display rule. This display rule is intended to hide this particular button from being displayed in Unified Interface applications and only be visible in the legacy Web Client interface. We could modify the custom version of the command and add the missing the `Mscrm.HideOnModern` display rule to the command definition. Since this is a custom override of a Microsoft published definition and there are no other intentional modifications, it is recommended that this custom version of the command be deleted to restore the default functionality.
+1. The approach needed to fix a button's visibility will depend on the various customizations in your specific scenario. If you determined that a rule is incorrectly evaluating to false, and if the rule definition is incorrectly defined, then you should modify the rule definition and make changes that would permit the rule to evaluate to false under the proper circumstances. If the rule definition is correct, then it is possible that the requirements that would make the rule return false are not met, such as a field value or security privilege is not correctly assigned. Depending on your rule definition, the requirements can vary greatly, please refer to [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). Considering our example, the command was customized with the removal of a `Mscrm.HideOnModern` display rule. This display rule is intended to hide this particular button from being displayed in Unified Interface applications and only be visible in the legacy Web Client interface. We could modify the custom version of the command and add the missing the `Mscrm.HideOnModern` display rule to the command definition. Since this is a custom override of a Microsoft published definition and there are no other intentional modifications, it is recommended that this custom version of the command be deleted to restore the default functionality.
 
 Please select one of the following repair options. The first tab is selected by default.
 
@@ -81,7 +81,7 @@ Select one of the following options that matches your particular scenario:
 
 ##### Delete a command from an unmanaged Active solution layer
 
-To delete a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the \<RibbonDiffXml> node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See Export, prepare to edit, and import the ribbon
+To delete a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See Export, prepare to edit, and import the ribbon
 
 ###### The command is entity-specific
 
@@ -98,12 +98,12 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
-1. Locate the \<Entity> node child of the entity node you wish to edit and locate it's child \<RibbonDiffXml> node.
-1. Locate the \<CommandDefinition> node (In our example, ID of the \<CommandDefinition> node is `Mscrm.CreateAppointment`, so we would locate the following node).
+1. Locate the `<Entity>` node child of the entity node you wish to edit and locate it's child `<RibbonDiffXml>` node.
+1. Locate the `<CommandDefinition>` node (In our example, ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`, so we would locate the following node).
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example.png" alt-text="commanddefinition example.":::
 
-1. Edit the \<RibbonDiffXml> node and remove the specific \<CommandDefinition> node that has the ID of the command you wish to delete. Make sure you don't unintentionally delete other \<CommandDefinition> nodes that may be present. (Based on our example, we would delete the CommandDefinition node in which ID is `Mscrm.CreateAppointment`.)
+1. Edit the `<RibbonDiffXml>` node and remove the specific `<CommandDefinition>` node that has the ID of the command you wish to delete. Make sure you don't unintentionally delete other `<CommandDefinition>` nodes that may be present. (Based on our example, we would delete the `<CommandDefinition>` node in which ID is `Mscrm.CreateAppointment`.)
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-2.png" alt-text="Second command definition example.":::
 
@@ -114,7 +114,7 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 
 ###### The command is in the Application Ribbon (applies to "All entities")
 
-If the command is not entity-specific, rather it is applicable to all entities declared in the Application Ribbon, then the steps will be slightly different as follows:
+If the command is not entity-specific, rather it is applicable to "All Entities" declared in the Application Ribbon, then the steps will be slightly different as follows:
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**
@@ -126,9 +126,9 @@ If the command is not entity-specific, rather it is applicable to all entities d
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
-1. Locate the root \<RibbonDiffXml> node.
-1. Locate the \<CommandDefinition>.
-1. Edit the \<RibbonDiffXml> node and remove the \<CommandDefinition> node that has the ID of the command you wish to delete. Make sure you don't unintentionally delete other \<CommandDefinition> nodes that may be present.
+1. Locate the root `<RibbonDiffXml>` node.
+1. Locate the `<CommandDefinition>`.
+1. Edit the `<RibbonDiffXml>` node and remove the `<CommandDefinition>` node that has the ID of the command you wish to delete. Make sure you don't unintentionally delete other `<CommandDefinition>` nodes that may be present.
 1. Save the *customizations.xml* file.
 1. Add the modified *customizations.xml* file back to the compressed solution .zip file.
 1. Import the solution file.
@@ -151,7 +151,7 @@ To delete a command that was installed by a custom-managed solution that you cre
 </details>
 
 <details>
-<summary><b>The command is from a custom-managed solution that my company did not author (For example, from third-party/ISV)</b></summary>
+<summary><b>The command is from a custom-managed solution that my company did not author (from third-party/ISV)</b></summary>
 
 ##### Delete a command from a custom-managed solution from a third-party/ISV
 
@@ -172,7 +172,7 @@ Select one of the following options that matches your particular scenario:
 
 ##### Add missing enable/display rules to a command in the unmanaged Active solution layer
 
-If you determined that enable/display rules are missing from your command definition, then you can modify the \<CommandDefinition> node and add the rules to achieve the desired behavior. To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the \<RibbonDiffXml> node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+If you determined that enable/display rules are missing from your command definition, then you can modify the `<CommandDefinition>` node and add the rules to achieve the desired behavior. To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The command is entity-specific
 
@@ -189,12 +189,12 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
-1. Locate the \<Entity> node child of the entity node you wish to edit and locate it's child \<RibbonDiffXml> node.
-1. Locate the \<CommandDefinition> node. (In our example, ID of the \<CommandDefinition> node is `Mscrm.CreateAppointment`, so we would locate the following node)
+1. Locate the `<Entity>` node child of the entity node you wish to edit and locate it's child `<RibbonDiffXml>` node.
+1. Locate the `<CommandDefinition>` node. (In our example, ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`, so we would locate the following node)
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-3.png" alt-text="Third command definition example.":::
 
-1. Edit the \<RibbonDiffXml> node and make the necessary changes to the \<CommandDefinition> node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands). (Based on our example, we would modify the CommandDefinition by adding the `Mscrm.HideOnModern` display rule that will correctly hide this button.)
+1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the `<CommandDefinition>` node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands). (Based on our example, we would modify the `<CommandDefinition>` node by adding the `Mscrm.HideOnModern` display rule that will correctly hide this button.)
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-4.png" alt-text="Fourth command definition example.":::
 
@@ -216,9 +216,9 @@ If the command is not entity-specific, rather it is applicable to "All entities"
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
-1. Locate the root \<RibbonDiffXml> node.
-1. Locate the \<CommandDefinition>.
-1. Edit \<RibbonDiffXml> and make the necessary changes to the CommandDefinition that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands).
+1. Locate the root `<RibbonDiffXml>` node.
+1. Locate the `<CommandDefinition>`.
+1. Edit `<RibbonDiffXml>` and make the necessary changes to the `<CommandDefinition>` node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands).
 1. Add the modified *customizations.xml* file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
@@ -267,7 +267,7 @@ To fix a command that was installed by a Microsoft published managed solution, y
 
 1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
-    The Entity context indicates the object the ribbon customization is on, if all entities are listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
+    The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
     When there are two or more layers, you can select two rows and click "Compare' to view a comparison of the definitions brought in by each solution.
 
@@ -289,7 +289,7 @@ Select one of the following options that matches your particular scenario:
 
 ##### Fix an enable/display rule from an unmanaged Active solution layer
 
-To fix an enable/display rule in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the \<RibbonDiffXml> node in the *customizations.xml* file, and then import the new version of this solution containing the fixed enable/display rule definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix an enable/display rule in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import the new version of this solution containing the fixed enable/display rule definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The enable/display rule is entity-specific
 
@@ -306,12 +306,12 @@ Based on our example scenario, we identified the entity is **contact** and the e
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
-1. Locate the \<Entity> node child of the entity node you wish to edit and locate its child \<RibbonDiffXml> node.
+1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
 1. Locate the enable/display rule. (In our example, ID of the enable rule is `new.contact.EnableRule.EntityRule`, so we would locate the following node)
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-5.png" alt-text="Fifth example of command definition.":::
 
-1. Edit the \<RibbonDiffXml> node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
+1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
 
 :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-6.png" alt-text="Sixth example of command definition.":::
 
@@ -321,7 +321,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 
 ###### The enable/display rule is in the Application Ribbon (applies to "All entities")
 
-If the enable/display rule is not entity-specific, rather it is applicable to all entities declared in the Application Ribbon, then the steps will be slightly different as follows:
+If the enable/display rule is not entity-specific, rather it is applicable to "All Entities" declared in the Application Ribbon, then the steps will be slightly different as follows:
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
@@ -333,9 +333,9 @@ If the enable/display rule is not entity-specific, rather it is applicable to al
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
-1. Locate the root \<RibbonDiffXml> node.
+1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the enable/display rule.
-1. Edit the \<RibbonDiffXml> node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules).
+1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules).
 1. Add the modified *customizations.xml* file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
@@ -357,7 +357,7 @@ To fix an enable/display rule that was installed by a custom-managed solution th
 </details>
 
 <details>
-<summary><b>The enable/display rule is from a custom-managed solution that I did not author or my organization does not own (For example, from a third-party/ISV)</b></summary>
+<summary><b>The enable/display rule is from a custom-managed solution that I did not author or my organization does not own (from a third-party/ISV)</b></summary>
 
 ##### Fix an enable/display rule from a custom-managed solution from a third-party/ISV
 
