@@ -34,7 +34,7 @@ For more information about how to reset settings in Internet Explorer, see the
 
 ## Disable and enable Internet Explorer
 
-To disable and enable Internet Explorer 11, see [Disable and enable Internet Explorer on Windows](disable-internet-explorer-windows.md)
+To disable and enable Internet Explorer 11, see [Disable and enable Internet Explorer on Windows](disable-internet-explorer-windows.md).
 
 ## Reinstall Internet Explorer in Windows
 
