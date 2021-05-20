@@ -26,15 +26,6 @@ To work around this problem, use one of the following methods:
 
 ## Method 1
 
-Return to an earlier version of Microsoft IntelliPoint software. To do this, follow these steps:
-
-1. If the IntelliPoint software that is installed on your computer is version 4.9 or a later version, remove the IntelliPoint software from your computer.
-2. Install IntelliPoint software version 4.12.
-
-    For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
-  
-## Method 2
-
 Download the VB6 Mouse Wheel.exe file that includes the add-in DLL and the code that is used to create the add-in DLL.
 
 1. Download the VB6 Mouse Wheel.exe file.
@@ -60,6 +51,13 @@ Windows Registry Editor Version 5.00
 
 > [!NOTE]
 > These keys may be ignored if you put them under `HKEY_LOCAL_MACHINE`.
+
+## Method 2
+
+Return to an earlier version of Microsoft IntelliPoint software. To do this, follow these steps:
+
+1. If the IntelliPoint software that is installed on your computer is version 4.9 or a later version, remove the IntelliPoint software from your computer.
+2. Install IntelliPoint software version 4.12.
 
 ## More information
 
