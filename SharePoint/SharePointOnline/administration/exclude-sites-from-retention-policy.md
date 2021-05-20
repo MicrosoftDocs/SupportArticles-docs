@@ -21,12 +21,12 @@ appliesto:
 
 # Exclude or remove sites from a SharePoint Online retention policy
 
-There are several reasons you might want to exclude or remove a site from a retention policy. You can do so using the steps below.  
+This article describes how to exclude or remove a website from a retention policy.
 
 > [!NOTE]
-> - You must have the necessary permissions in the Compliance Admin center. See Permissions in the Microsoft 365 compliance center and Microsoft 365 security center.
+> - You must have the necessary permissions in the Compliance Admin center to do this. See Permissions in the Microsoft 365 compliance center and Microsoft 365 security center.
 > - The steps in this article apply to SharePoint sites, OneDrive storage sites, and Microsoft 365 groups locations.  
-> - Changes to the retention policy might take up to 24 hours to complete.  
+> - Changes to the retention policy might take up to 24 hours to take effect.  
 
 If the retention policy applies to all sites, you can exclude a site from the retention policy, but not remove it. If the retention policy applies to selected sites, you can remove the site, but not exclude it.
 
@@ -34,25 +34,25 @@ If the retention policy applies to all sites, you can exclude a site from the re
 
 1. Go to the Security admin center at https://protection.office.com.
 
-1. In the left navigation bar, find **Information Governance**, and then select **Retention**. You will then be presented with all the retention policies configured in your tenant.  
+1. In the left pane, find **Information Governance**, and then select **Retention**. You will be shown all the retention policies that are configured in your tenant.  
 
-1. Select the policy you want to edit, and then select **Edit Policy**.
+1. Select the policy that you want to edit, and then select **Edit Policy**.
 
-1. On the **Edit Retention Policy** window, navigate to **Locations Applied**, and then select **Let me choose specific locations** if it is not already selected.
+1. In the **Edit Retention Policy** window, navigate to **Locations Applied**, and then select **Let me choose specific locations** if it is not already selected.
 
-1. Next to **SharePoint Sites**, select **Exclude sites**. Continue to **Exclude a site from the retention policy**, below.
+1. Next to **SharePoint Sites**, select **Exclude sites**. Then, go to the next steps (**Exclude a site from the retention policy**).
 
-    **Note:** If Exclude sites is grayed out (not selectable), it means the retention policy applies to a specific site. Skip to the **Remove a SharePoint site from the retention policy** section, below.
+    **Note:** If **Exclude sites** is not available (grayed out), this means that the retention policy applies to a specific site. In this case, go to the **Remove a SharePoint site from the retention policy** section.
 
 ## Exclude a site from the retention policy
 
 1. Select **Exclude Sites**.
 
-1. Enter the URL of the site you wish to exclude and select the plus (+) button.
+1. Enter the URL of the site that you want to exclude, and then select the plus (+) button.
 
-1. Select the site by checking the checkbox. You can add other sites now if you want to.
+1. Select the check box for the site. You can add other sites, if you want.
 
-1. After you have entered all the sites you want to exclude, select **Exclude** at the bottom of the window to confirm the changes.
+1. After you enter all the sites that you want to exclude, select **Exclude** at the bottom of the window to confirm the changes.
 
 1. Select **Save**.
 
@@ -60,6 +60,6 @@ If the retention policy applies to all sites, you can exclude a site from the re
 
 1. Next to **SharePoint Sites**, select **Choose sites**.
 
-1. Select **X** for the site you want to remove from the policy.  
+1. Select **X** for the site that you want to remove from the policy.  
 
-1. Select **Done**, and then **Save**.
+1. Select **Done** > **Save**.
