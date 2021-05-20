@@ -24,7 +24,7 @@ appliesto:
 When you open a Microsoft Office Word 2010 or Word 2007 document that contains a picture or an object, the picture or the object may not appear. This problem may occur in a document that contains a picture, a graphic image, an AutoShape object, or another object.
 
 > [!NOTE]
-> Newer versions of Microsoft Office Word could potentially exhibit the same symptoms.
+> This issue may also occur in later versions of Word.
 
 ## Cause
 
