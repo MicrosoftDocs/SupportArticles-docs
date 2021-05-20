@@ -24,7 +24,7 @@ appliesto:
 This article describes how to exclude or remove a website from a retention policy.
 
 > [!NOTE]
-> - You must have the necessary permissions in the Compliance Admin center to do this. See Permissions in the Microsoft 365 compliance center and Microsoft 365 security center.
+> - You must have the necessary permissions in the Compliance Admin center to do this. See [Permissions in the Microsoft 365 compliance center and Microsoft 365 security center](/microsoft-365/security/office-365-security/permissions-microsoft-365-compliance-security.md).
 > - The steps in this article apply to SharePoint sites, OneDrive storage sites, and Microsoft 365 groups locations.  
 > - Changes to the retention policy might take up to 24 hours to take effect.  
 
@@ -60,6 +60,6 @@ If the retention policy applies to all sites, you can exclude a site from the re
 
 1. Next to **SharePoint Sites**, select **Choose sites**.
 
-1. Select **X** for the site that you want to remove from the policy.  
+1. Select the "X" character for the site URL that you want to remove from the policy.  
 
 1. Select **Done** > **Save**.
