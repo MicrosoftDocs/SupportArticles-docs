@@ -3,18 +3,18 @@
 
 - name: Troubleshoot deployment failures
   items:
-  - name: Fail to create a VM with Ed25519 SSH keys
-    href: ed25519-ssh-keys.md
-  - name: Support for Availability sets
-    href: virtual-machines-availability-set-supportability.md
-  - name: Uploaded VHD is not supported
-    href: uploaded-vhd-not-support.md
   - name: New VM deployments
     items:
     - name: Troubleshoot deploying Linux virtual machine
       href: troubleshoot-deployment-new-vm-linux.md
     - name: Troubleshoot deploying Windows virtual machine
       href: troubleshoot-deployment-new-vm-windows.md
+  - name: Fail to create a VM with Ed25519 SSH keys
+    href: ed25519-ssh-keys.md
+  - name: Support for Availability sets
+    href: virtual-machines-availability-set-supportability.md
+  - name: Uploaded VHD is not supported
+    href: uploaded-vhd-not-support.md
 
 - name: Image deployment and Management
   items:
