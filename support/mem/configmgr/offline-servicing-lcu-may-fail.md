@@ -16,7 +16,7 @@ In this scenario, offline servicing fails and generates an error.
 ### Example
 
 1. You import the install.wim for Windows 10, version 2024 (Enterprise edition, EN, x64) that has the February 2021 cumulative update installed.
-2. You do offline servicing on this .wim file by using ([March 2021 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14)) (OS Builds 19041.867 and 19042.867).
+2. You do offline servicing on this .wim file by using [March 2021 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14) (OS Builds 19041.867 and 19042.867).
 3. The following error entry is logged in the OfflineServicingMgr log:
 
    ```output
