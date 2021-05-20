@@ -7,6 +7,8 @@ ms.reviewer: Joel
 ---
 # Your Internet security settings prevented one or more files from being opened error when opening files
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the methods for you to solve the error message that occurs when you open files by using Internet Explorer in Windows 7.
 
 _Original product version:_ &nbsp; Internet Explorer, Windows 7  

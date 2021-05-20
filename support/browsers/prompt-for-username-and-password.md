@@ -7,6 +7,8 @@ ms.reviewer: clinth
 ---
 # Internet Explorer may prompt you for a password
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information on the situation where several types of Windows authentication cause Internet Explorer to prompt for a username and password.
 
 _Original product version:_ &nbsp; Internet Explorer  

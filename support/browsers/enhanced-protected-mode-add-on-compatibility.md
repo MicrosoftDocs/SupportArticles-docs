@@ -7,6 +7,8 @@ ms.reviewer: fhigman, ramakoni
 ---
 # Enhanced Protected Mode add-on compatibility
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article introduces the Enhanced Protected Mode feature in Internet Explorer 11.
 
 _Original product version:_ &nbsp; Internet Explorer 11  

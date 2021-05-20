@@ -8,6 +8,8 @@ ms.topic: troubleshooting
 ---
 # Microsoft Store app does not open from Internet Explorer print menu on Windows 8.1
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you work around the problem where the Microsoft Store device app does not open.
 
 _Applies to:_ &nbsp; Windows 8.1, Windows 8.1 Enterprise, Windows 8.1 Pro  

@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Only secure content is displayed notification in Internet Explorer 9 or later versions
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving issues with web pages that only display secure content.
 
 _Original product version:_ &nbsp; Internet Explorer 9 or later versions  

@@ -6,6 +6,8 @@ ms.prod-support-area-path: Internet Explorer
 ---
 # How to set Internet Explorer to always start in full-screen mode or to never start in full-screen mode
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 Sometimes, Internet Explorer may not open in full-screen mode. This happens after you close Internet Explorer when it is not in full-screen mode.
 
 This article helps you make Internet Explorer always open in full-screen mode or never open in full-screen mode, regardless of how it was closed previously.

@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # New Internet Explorer windows do not respect reset zoom level when using script
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about solving the issue that new windows that are created by using script do not honor the **Reset zoom level for new windows and tabs** setting in Internet Explorer 9 and later versions.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

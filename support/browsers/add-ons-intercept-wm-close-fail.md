@@ -6,6 +6,8 @@ ms.date: 04/21/2020
 ---
 # Add-ons that intercept the WM_CLOSE message may fail in Internet Explorer 9 later versions
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving the issue that a browser tab or window can't be prevented from closing by the `WM_CLOSE` message intercepted by some add-ons in Internet Explorer 9 or a later version.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

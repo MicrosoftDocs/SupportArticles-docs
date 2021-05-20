@@ -8,6 +8,8 @@ ms.topic: article
 ---
 # How Enterprise Mode works in Windows 10
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes how Internet Explorer Enterprise Mode works in Windows 10.
 
 _Applies to:_ &nbsp; Internet Explorer 11  

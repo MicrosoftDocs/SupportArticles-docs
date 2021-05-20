@@ -249,4 +249,6 @@ The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, a
 
 ## Next steps
 
+Other known issues with the Windows Azure Guest Agent are listed in its [Github repository](https://github.com/Azure/WindowsVMAgent/wiki/Known-Issues).
+
 To further troubleshoot the “Windows Azure Guest Agent is not working” issue, [contact Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).

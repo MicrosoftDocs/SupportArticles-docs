@@ -7,6 +7,8 @@ ms.reviewer: bachoang
 ---
 # Internet Explorer may not return the same DISPID for the same property
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving Internet Explorer may not return the same `DISPID` with the same property.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  
