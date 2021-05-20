@@ -15,7 +15,7 @@ In this scenario, offline servicing fails and generates an error.
 
 For example:
 
-- You import a .wim file that contains “Windows 10 20H2 (updated Feb 2021).”
+- You import the “Windows 10 20H2 (updated Feb 2021)” .wim file.
 - You do offline servicing on this .wim file by using "2021-03 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems" (KB 5000802).
 - The following error entry is logged in the OfflineServicingMgr log:
 
