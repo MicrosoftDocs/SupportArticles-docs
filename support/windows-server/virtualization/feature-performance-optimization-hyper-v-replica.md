@@ -90,7 +90,7 @@ Input Interpretation:
 
 Default value: This name is not created by default under the Replication registry node. Administrators would need to manually create a DWORD under the following registry key and set the corresponding value.
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Virtualization\Replication`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication`
 
 > [!Note]
 > If the value is not present or set to 0, it indicates that the replica server will process 4 VHDs in parallel per VM.

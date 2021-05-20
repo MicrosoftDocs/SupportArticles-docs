@@ -36,7 +36,7 @@ For information about how to edit the registry, view the "Changing Keys And Valu
 
 1. Run Regedt32.exe and go to the following value:
 
-    `HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion
     \Winlogon\Appsetup`
 
 2. After the last entry in the Appsetup value, place a comma and a space and then enter the name and extension of the logon script you placed in the %SystemRoot%\System32 folder. For example, if the value of Appsetup is:  
