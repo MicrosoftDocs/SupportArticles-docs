@@ -1,6 +1,6 @@
 ---
 title: POX Autodiscover not supported with OAuth client credentials grant
-description: Provides a resolution to the error you get when using the Plain Old XML (POX) Autodiscover service with the OAuth 2.0 client credentials grant.
+description: Resolves error 500 when you try to use the Plain Old XML (POX) Autodiscover service together with the OAuth 2.0 client credentials grant.
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -17,11 +17,11 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# POX Autodiscover not supported with OAuth client credentials grant
+# Error 500 and "email address can't be found" when you try to use POX Autodiscover with OAuth client credentials grant
 
 ## Symptoms
 
-When you use the Plain Old XML (POX) Autodiscover service with the [OAuth 2.0 client credentials grant](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow), you may get a response with the error code 500 and the error message "The email address can't be found" that resembles the following example:
+When you use the Plain Old XML (POX) Autodiscover service together with the [OAuth 2.0 client credentials grant](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow), you receive an error message that indicates error code 500 and resembles the following example:
 
 ```xml
 POST : https://outlook.office365.com/autodiscover/autodiscover.xml
@@ -53,10 +53,10 @@ Response : The email address can't be found
 
 ## Cause
 
-This issue occurs because the POX Autodiscover service is not supported with the client credentials grant in this scenario.
+This issue occurs because the POX Autodiscover service is not supported for use together with the client credentials grant in this scenario.
 
-Autodiscover depends on user identity for routing. When you use the POX Autodiscover service with the client credentials grant, the received [app-only token](/azure/active-directory/develop/access-tokens#:~:text=These%20app-only%20tokens%20indicate%20that%20this%20call%20is,been%20granted%20to%20the%20subject%20of%20the%20token.) only indicates that the call is coming from an application and does not have a user backing it. In this case, the POX Autodiscover payload cannot specify the users to impersonate.
+Autodiscover depends on user identity for routing. When you use the POX Autodiscover service together with the client credentials grant, the received [app-only token](/azure/active-directory/develop/access-tokens#:~:text=These%20app-only%20tokens%20indicate%20that%20this%20call%20is,been%20granted%20to%20the%20subject%20of%20the%20token) indicates that the call comes from an application and does not have a user backing it. In this case, the POX Autodiscover payload cannot specify the users to impersonate.
 
 ## Resolution
 
-You should use the [SOAP Autodiscover service](/exchange/client-developer/web-service-reference/soap-autodiscover-web-service-reference-for-exchange) instead.
+To resolve this issue, use the [SOAP Autodiscover service](/exchange/client-developer/web-service-reference/soap-autodiscover-web-service-reference-for-exchange) instead.
