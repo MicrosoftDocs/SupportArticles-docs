@@ -16,7 +16,7 @@ ms.date: 09/09/2016
 ms.author: daberry
 
 ---
-# Troubleshoot Resource Manager deployment issues with creating a new Linux virtual machine in Azure
+# Troubleshoot deployment issues when creating a new Linux VM in Azure
 
 [!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../includes/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
 
