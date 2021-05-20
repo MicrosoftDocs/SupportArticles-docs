@@ -45,7 +45,8 @@ Update Teams: Select your profile picture at the top of the app, and then select
 
 After your desktop resumes from an inactive to an active state, wait three minutes, and then check whether your presence status is updated.
 
-**Note:** It takes up to three minutes for the presence status to update from inactive to active.
+> [!NOTE]
+> For users whose mailbox is hosted on-premises, it's expected to have presence delays with a maximum of an hour.
 
 For more information, see [User presence in Teams](/microsoftteams/presence-admins).
 
