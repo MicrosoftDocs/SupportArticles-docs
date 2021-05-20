@@ -17,11 +17,11 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Error 500 and "email address can't be found" when you try to use POX Autodiscover with OAuth client credentials grant
+# Error 500 when you try to use POX Autodiscover with OAuth client credentials grant
 
 ## Symptoms
 
-When you use the Plain Old XML (POX) Autodiscover service together with the [OAuth 2.0 client credentials grant](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow), you receive an error message that indicates error code 500 and resembles the following example:
+When you use the Plain Old XML (POX) Autodiscover service together with the [OAuth 2.0 client credentials grant](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow), you receive an "email address can't be found" error message that indicates error code 500 and resembles the following example:
 
 ```xml
 POST : https://outlook.office365.com/autodiscover/autodiscover.xml
