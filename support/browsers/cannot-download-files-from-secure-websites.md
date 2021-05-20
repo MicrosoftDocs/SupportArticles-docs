@@ -6,6 +6,8 @@ ms.date: 04/21/2020
 ---
 # Couldn't be downloaded error when downloading files from secure websites in Internet Explorer 9 and later versions
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving the **Couldn't be downloaded** error that occurs when you try to download files by using Internet Explorer 9 or a later version.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  
