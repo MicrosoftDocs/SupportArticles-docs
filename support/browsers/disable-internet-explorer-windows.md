@@ -1,16 +1,16 @@
 ---
-title: Disable Internet Explorer on Windows
-description: This article describes how to disable any supported version of Internet Explorer on Windows.
+title: Disable and enable Internet Explorer on Windows
+description: This article describes how to disable and enable any supported version of Internet Explorer on Windows.
 ms.date: 01/21/2021
 ms.prod-support-area-path: installation
 ms.reviewer: 
 ms.topic: how-to
 ---
-# Disable Internet Explorer on Windows
+# Disable and enable Internet Explorer on Windows
 
 [!INCLUDE [](../includes/browsers-important.md)]
 
-This article describes how to disable any supported version of Internet Explorer on Windows.
+This article describes how to disable and enable any supported version of Internet Explorer on Windows.
 
 _Applies to:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 4013567
