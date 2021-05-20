@@ -85,8 +85,6 @@ This error arises in situations when the new VM request is pinned to a cluster t
 
 [!INCLUDE [support-disclaimer](../../includes/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
 
-For other VM deployment issues and questions, see [Troubleshoot deploying Windows virtual machine issues in Azure](troubleshoot-deploy-vm-windows.md).
-
 ### The cluster cannot support the requested VM size
 
 * Retry the request using a smaller VM size.
@@ -174,6 +172,11 @@ Choose a size that is supported on the availability set's cluster. It is recomme
 
 Yes. You can add an existing classic VM to a new or existing Availability Set. For more information see [Add an existing virtual machine to an availability set](/previous-versions/azure/virtual-machines/windows/classic/configure-availability-classic#addmachine).
 
-## Next steps
+## Additional Information
 
 If you encounter issues when you start a stopped Windows VM or resize an existing Windows VM in Azure, see [Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Windows Virtual Machine in Azure](restart-resize-error-troubleshooting.md).
+
+## Next steps
+
+* [Supportability of adding Azure VMs to an existing availability set](/azure/virtual-machines/virtual-machines-availability-set-supportability)
+* [Redeploy Windows virtual machine to new Azure node](/azure/virtual-machines/redeploy-to-new-node-windows)

@@ -84,8 +84,6 @@ This error arises in situations when the new VM request is pinned to a cluster t
 
 [!INCLUDE [support-disclaimer](../../includes/virtual-machines-linux-troubleshoot-deploy-vm-top.md)]
 
-For other VM deployment issues and questions, see [Troubleshoot deploying Linux virtual machine issues in Azure](troubleshoot-deploy-vm-linux.md).
-
 ### The cluster cannot support the requested VM size
 
 * Retry the request using a smaller VM size.
@@ -147,4 +145,5 @@ Yes. You can add an existing classic VM to a new or existing Availability Set. F
 
 ## Next steps
 
-If you encounter issues when you start a stopped Linux VM or resize an existing Linux VM in Azure, see [Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Linux Virtual Machine in Azure](./troubleshoot-deploy-vm-linux.md?toc=/azure/virtual-machines/linux/toc.json).
+* [Supportability of adding Azure VMs to an existing availability set](/azure/virtual-machines/virtual-machines-availability-set-supportability)
+* [Redeploy Linux virtual machine to new Azure node](/azure/virtual-machines/redeploy-to-new-node-linux)
