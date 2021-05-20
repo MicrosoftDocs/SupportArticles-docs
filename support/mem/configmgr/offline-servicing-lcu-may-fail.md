@@ -7,44 +7,44 @@ ms.prod-support-area-path:
 
 # Offline Servicing a wim image with Latest Cumulative Update may fail
 
-## Symptom
+## Symptoms
 
-When you use the current branch of *Microsoft Endpoint Configuration Manager* to perform Offline Servicing on a `wim` file with the **Latest Cumulative Update** (LCU). To perform the servicing, you have imported a Windows 10 `install.wim` file, and then use the latest ADK.
+You use Microsoft Endpoint Configuration Manager current branch to do offline servicing on a WIM image by using the Latest Cumulative Update (LCU) for Windows 10. To do the offline servicing, you import a Windows 10 install.wim file and the latest ADK.
 
-In that scenario, Offline Servicing may fail with an error.
+In this scenario, offline servicing fails and generates an error.
 
-Sample:
+### Example
 
-1. You imported the following LCU: **W10 20H2 (updated Feb 2021) install.wim | Enterprise edition, EN, x64**
-2. You perform Offline Servicing on that wim file with **2021-03 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems** ([KB5000802](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14))
-3. You receive the following error messages in the **OfflineServicingMgr.log** file:
+1. You import the install.wim for Windows 10, version 2024 (Enterprise edition, EN, x64) that has the February 2021 cumulative update installed.
+2. You do offline servicing on this .wim file by using ([March 2021 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14)) (OS Builds 19041.867 and 19042.867).
+3. The following error entry is logged in the OfflineServicingMgr log:
 
-  ```output
-  GetUpdateApplicability returned code 0x80004001~
-  Applicability State = APPLICABILITY_CHECK_NOT_SUPPORTED, Update Binary = C:\ConfigMgr_OfflineImageServicing\73676b06-20a9-48a6-89c7-7646d20ce44f\Windows10.0-KB5000802-x64.cab.
-  ```
+   ```output
+   GetUpdateApplicability returned code 0x80004001~
+   Applicability State = APPLICABILITY_CHECK_NOT_SUPPORTED, Update Binary = C:\ConfigMgr_OfflineImageServicing\73676b06-20a9-48a6-89c7-7646d20ce44f\Windows10.0-KB5000802-x64.cab.
+   ```
 
 ## Cause
 
-This problem is caused by a change inside the LCU, and occurs if you perform Offline Servicing with one of the following three (3) LCUs:
+This problem is caused by a change in the LCU. It occurs if you do offline servicing by using any of the following LCUs:
 
-* 2021-03 Cumulative Update for Windows 10
-* 2021-04 Cumulative Update for Windows 10
-* 2021-05 Cumulative Update for Windows 10
+- May 2021 Cumulative Update for Windows 10
+- April 2021 Cumulative Update for Windows 10
+- March 2021 Cumulative Update for Windows 10
 
-  > [!Note]
-  > This problem does not occur if you perform Offline Servicing with an LCU before **2021-03** (such as *2021-02 Cumulative Update for Windows 10*)
+> [!Note]
+> This problem does not occur if you do offline servicing by using an earlier version LCU (such as the February 2021 Cumulative Update for Windows 10).
 
-## Resolution/Workaround
+## Workaround
 
-1. Download the LCU you want to apply manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx). In the above sample, the LCU is [KB5000802](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14).
-2. Use **Dism** to manually apply the LCU to the wim image.
+1. Download the LCU that you want to manually apply from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx). In the example that's described in the "Symptoms" section, the LCU is [KB5000802](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14).
+2. Use the `dism` command to manually apply the LCU to the WIM image.
 
-### Workaround Sample
+### Example
 
-The following example is a sample of the workaround. Be sure to adjust the used paths and the `/index:XY` as per your system needs.
+The following example illustrates the recommended workaround. Make sure that you adjust the paths and the “/index:XY” value per your system requirements.
 
-```output
+```console
 mkdir D:\_Mount
 "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\DISM\dism.exe" /mount-wim /wimfile:"D:\temp\W10 20H2 (updated Feb-2021)\w10-20H2-install.wim" /mountdir:D:\_Mount /index:3
 "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\DISM\dism.exe" /image:D:\_Mount /add-package /packagepath:"D:\temp\2021-03 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems (KB5000802)\AMD64-all-windows10.0-kb5000802-x64_f1da84b3bfa1c402d98dfb3815b1f81d7dceb001.msu"
@@ -55,10 +55,18 @@ rmdir /Q /S D:\_Mount
 
 ## Additional information
 
-A *wim* file may contain multiple Windows editions, such as [Windows 10 Education](https://support.microsoft.com/topic/windows-10-editions-for-education-customers-bf2572aa-5555-2b1e-f7ce-81e8ba890444) or [Windows 10 Enterprise](https://support.microsoft.com/windows/windows-10-enterprise-e3-89de5699-3030-eea1-ee49-1ccbcfe9413f).
+A .wim file might contain multiple Windows editions (such as [Windows 10 Education](https://support.microsoft.com/topic/windows-10-editions-for-education-customers-bf2572aa-5555-2b1e-f7ce-81e8ba890444) or [Windows 10 Enterprise](https://support.microsoft.com/windows/windows-10-enterprise-e3-89de5699-3030-eea1-ee49-1ccbcfe9413f)).
 
-You can query your wim file using the `/index` parameter to get the version information.
+You can query the .wim file by using the `/index` parameter to get the version information.
 
-**Sample 1:** `dism /Get-WimInfo /WimFile:"D:\temp\W10 20H2 (updated Feb-2021)\w10-20H2-install.wim" /index:3`
+### Example 1
 
-**Sample 2:** `dism /Get-WimInfo /WimFile:"D:\temp\W10 20H2 (updated Feb-2021)\w10-20H2-install.wim" /index:1`
+```console
+dism /Get-WimInfo /WimFile:"D:\temp\W10 20H2 (updated Feb-2021)\w10-20H2-install.wim" /index:3
+```
+
+### Example 2
+
+```console
+dism /Get-WimInfo /WimFile:"D:\temp\W10 20H2 (updated Feb-2021)\w10-20H2-install.wim" /index:1
+```
