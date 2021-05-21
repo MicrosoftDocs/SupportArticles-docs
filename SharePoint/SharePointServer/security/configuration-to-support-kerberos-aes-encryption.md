@@ -59,8 +59,6 @@ When starting the User Profile Service in Central Administration, the service st
 
 Other components might write error messages indicating that the encryption type requested is not supported by the KDC.
 
-See also [SCCM: "The encryption type requested is not supported by the KDC" Error When Running Reports](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/sccm-quot-the-encryption-type-requested-is-not-supported-by-the/ba-p/570914).
-
 ## Cause
 
 This behavior occurs because of a conflict between the custom local policy or group policy and the service account's properties in Active Directory. When you configure the property setting **Network Security: Configure encryption types allowed for Kerberos** so that the server only supports AES encryption types and future encryption types, the server won't support older Kerberos encryption types in Kerberos tickets. It's also important to note that user account objects created in Active Directory aren't configured to support Kerberos AES encryption by default.
@@ -80,6 +78,8 @@ To resolve this issue, follow these steps:
    - This account supports Kerberos AES 256 bit encryption
 
 6. Perform an `iisreset` on the servers and restart any SharePoint related services that are running in the context of the modified service accounts.
+
+If the issue isn't fixed, try the resolution in [SCCM: "The encryption type requested is not supported by the KDC" Error When Running Reports](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/sccm-quot-the-encryption-type-requested-is-not-supported-by-the/ba-p/570914).
 
 ## More information
 
