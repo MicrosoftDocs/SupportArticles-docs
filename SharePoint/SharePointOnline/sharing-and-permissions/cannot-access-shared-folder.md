@@ -62,6 +62,4 @@ For more information about site collection features that include **Limited-acces
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
 
-See also [Publishing Infrastructure-Turn Off-implications](https://techcommunity.microsoft.com/t5/sharepoint/publishing-infrastructure-turn-off-implications/m-p/59288)
-
-
+Also see [Publishing Infrastructure-Turn Off-implications](https://techcommunity.microsoft.com/t5/sharepoint/publishing-infrastructure-turn-off-implications/m-p/59288).
