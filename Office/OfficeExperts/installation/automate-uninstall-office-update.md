@@ -21,9 +21,7 @@ This article was written by [Eric Ashton](https://social.technet.microsoft.com/p
 
 This article describes how to uninstall Office updates automatically by using a command line that resembles the following:
 
-```powershell
-%windir%\System32\msiexec.exe /package {Office GUID} /uninstall {Update GUID} /QN
-```
+`%windir%\System32\msiexec.exe /package {Office GUID} /uninstall {Update GUID} /QN`
 
 ## Determine the GUID of the installed Office version
 
@@ -33,17 +31,17 @@ To determine the GUID of the installed Office version, follow these steps:
 
    **For 32-bit OS**
 
-   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`
 
    **For 64-bit OS**
-   
-   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall`
 
 1. Refer to the following articles to find the GUID in the Office version, as appropriate for your situation:
- 
-   - [Description of the numbering scheme for product code GUIDs in Office 2016](https://docs.microsoft.com/office/troubleshoot/miscellaneous/numbering-scheme-for-product-guid)
-   - [Description of the numbering scheme for product code GUIDs in Office 2013](https://docs.microsoft.com/office/troubleshoot/miscellaneous/numbering-scheme-product-code-guids)
-   - [Description of the numbering scheme for product code GUIDs in Office 2010](https://support.microsoft.com/help/2186281/description-of-the-numbering-scheme-for-product-code-guids-in-office-2)
+
+   - [Description of the numbering scheme for product code GUIDs in Office 2016](../../Client/office-suite-issues/numbering-scheme-for-product-guid.md)
+   - [Description of the numbering scheme for product code GUIDs in Office 2013](../../Client/office-suite-issues/numbering-scheme-product-code-guids.md)
+   - [Description of the numbering scheme for product code GUIDs in Office 2010](https://support.microsoft.com/help/2186281)
 
    > [!NOTE]
    > Verify that you find the correct GUID by verifying the product in the **DisplayName** field of the key listed in the GUID.
@@ -54,15 +52,11 @@ To determine the GUID of the update, you have to check the properties of the MSP
 
 First, you have to extract the MSP file from the update executable. To do this run the following command to extract the file to the c:\temp directory:
 
-```powershell
-MSP file name /extract:c:\temp
-```
+`<MSP file name> /extract:c:\temp`
 
 For example, to extract content from the Office 2013 update [4462201](https://www.microsoft.com/download/details.aspx?id=57979) (mso2013-kb4462201-fullfile-x64-glb.exe), run the following command:
 
-```powershell
-mso2013-kb4462201-fullfile-x64-glb.exe /extract:c:\temp
-```
+`mso2013-kb4462201-fullfile-x64-glb.exe /extract:c:\temp`
 
 When you have the MSP from the update executable, you have to find the GUID of the update. To find the GUID, right-click the MSP file, locate **Properties**, and then look for the **Revision number**.
 
@@ -70,9 +64,7 @@ Sometimes there are many numbers in the **Revision number** section. Copy and pa
 
 Now, you know the GUID in the Office version and the GUID of the Office update. You can run the following command to remove the update programmatically.
 
-```powershell
-%windir%\System32\msiexec.exe /package {Office GUID} /uninstall {Update GUID} /qn
-```
+`%windir%\System32\msiexec.exe /package {Office GUID} /uninstall {Update GUID} /qn`
 
 > [!NOTE]
 > Use **/qb** for an automated uninstallation with a progress bar, or use **/qn** for a completely silent uninstallation.
@@ -94,7 +86,7 @@ You can do this as soon as you convert the update GUID to the compressed GUID. H
 
 Then query the compressed GUID at the following registry location:
 
-HKEY_CLASSES_ROOT\Installer\Patches
+`HKEY_CLASSES_ROOT\Installer\Patches`
 
 If the GUID exists, it means the update is installed.
 
@@ -104,12 +96,12 @@ Although it's neither recommended nor supported by Microsoft, you can uninstall 
 
 You can determine whether the update is uninstallable by using the following registry key:
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\Office GUID\Patches\Compressed GUID
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\Office GUID\Patches\Compressed GUID`
 
 "**Uninstallable**"=dword:00000001
 
 > [!NOTE]
-> If the update is not uninstallable natively, it would be possible to change the **Uninstallable** value at this registry location to **1**, and then the update would be available to uninstall.
+> If the update isn't uninstallable natively, it would be possible to change the **Uninstallable** value at this registry location to **1**, and then the update would be available to uninstall.
 
 **We have an update that has multiple MSP files inside it. Is this normal? Would we have to uninstall them all?**
 

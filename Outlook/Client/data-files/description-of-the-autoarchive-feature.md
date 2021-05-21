@@ -41,11 +41,11 @@ At the folder level, you can determine the items that are to be archived and how
 
 By default, several Outlook folders are set up with the AutoArchive feature turned on. The following list is the folders that have the AutoArchive feature turned on and of each folder's default aging period:
 
-The Calendar folder (six months)  
-The Tasks folder (six months)  
-The Journal folder (six months)  
-The Sent Items folder (two months)  
-The Deleted Items folder (two months)
+- The Calendar folder (six months)  
+- The Tasks folder (six months)  
+- The Journal folder (six months)  
+- The Sent Items folder (two months)  
+- The Deleted Items folder (two months)
 
 The Inbox, Notes, Contacts, and Drafts folders don't have the AutoArchive feature turned on automatically. You can't use the AutoArchive feature with the Contacts folder, as the Contacts folder doesn't have an archive property.
 
@@ -83,7 +83,7 @@ For Outlook 2007 and Outlook 2003:
 Now that you've turned on the AutoArchive feature, you must set the AutoArchive properties for each folder.
 
 > [!IMPORTANT]
-> The Outlook Data (.pst) file that you choose as the default archive file must be located on the local computer. The use of networked .pst files is only supported with Outlook 2010 and under very specific conditions. For more information about the limits to using .pst files over the network, see [Limits to using personal folders (.pst) files over LAN and WAN links](https://docs.microsoft.com/outlook/troubleshoot/data-files/limits-using-pst-files-over-lan-wan).
+> The Outlook Data (.pst) file that you choose as the default archive file must be located on the local computer. The use of networked .pst files is only supported with Outlook 2010 and under very specific conditions. For more information about the limits to using .pst files over the network, see [Limits to using personal folders (.pst) files over LAN and WAN links](limits-using-pst-files-over-lan-wan.md).
 
 ### How to Set the AutoArchive Properties for a Folder
 

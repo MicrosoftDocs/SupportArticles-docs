@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
+- Office Professional Plus 2019
 - Office Standard 2016
 - Office Professional Plus 2016
 - Office Standard 2013

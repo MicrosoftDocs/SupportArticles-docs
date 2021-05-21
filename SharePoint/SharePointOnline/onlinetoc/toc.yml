@@ -25,6 +25,8 @@
       href: ../administration/deleting-content-type-from-hub.md
     - name: Error when accessing SharePoint or OneDrive
       href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Exclude or remove sites from a SharePoint Online retention policy
+      href: ../administration/exclude-sites-from-retention-policy.md
     - name: Invalid URL error when clicking an online prompted link
       href: ../administration/promoted-link-invalid-url.md
     - name: Issue when browsing to a SharePoint site

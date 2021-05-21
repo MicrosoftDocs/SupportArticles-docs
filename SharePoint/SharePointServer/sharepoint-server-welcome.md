@@ -24,7 +24,7 @@ Below is a collection of top issues. If your issue isn't listed there, browse th
 
 ## Top SharePoint Server troubleshooting articles
 
-- [Troubleshooting common SPMT issues and errors](https://docs.microsoft.com/sharepointmigration/troubleshooting-common-spmt-issues)
+- [Troubleshooting common SPMT issues and errors](/sharepointmigration/troubleshooting-common-spmt-issues)
 - ["Server Error in '/' Application. Access to the path is denied" when you log on to Windows SharePoint Services 2.0](./security/access-to-the-path-is-denied-during-logon.md)
 - [How to uninstall Groove](https://support.microsoft.com/help/907504)
 

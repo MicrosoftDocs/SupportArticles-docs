@@ -28,13 +28,8 @@ appliesto:
 
 In Microsoft Outlook, you either create a new client-only message rule or change an existing rule. When you save the rule or open the **Manage Rules & Alerts** window to view the rules, you receive one or both of the following error messages:
 
-```
-The rules on this computer do not match the rules on Microsoft Exchange. Only one set of rules can be kept. You will usually want to keep the rules on the server. Which rules do you want to keep?
-```
-
-```
-One or more rules cannot be uploaded to Microsoft Exchange and have been deactivated. This could be because some of the parameters are not supported, or there is insufficient space to store all of your rules.
-```
+- > The rules on this computer do not match the rules on Microsoft Exchange. Only one set of rules can be kept. You will usually want to keep the rules on the server. Which rules do you want to keep?
+- > One or more rules cannot be uploaded to Microsoft Exchange and have been deactivated. This could be because some of the parameters are not supported, or there is insufficient space to store all of your rules.
 
 ## Cause
 
@@ -61,4 +56,4 @@ Note: This issue occurs if the rule's action causes the rule to become a client-
 To work around this issue, use one of the following methods:
 
 - Create multiple identical rules, and add 19 or fewer people per rule
-- Create a [Distribution Group](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups) that includes the people who you want to include in the client-only rule. Then, add that distribution group to the rule
+- Create a [Distribution Group](/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups) that includes the people who you want to include in the client-only rule. Then, add that distribution group to the rule

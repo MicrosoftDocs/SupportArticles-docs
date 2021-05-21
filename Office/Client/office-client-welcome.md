@@ -1,6 +1,6 @@
 ---
 title: Listing some issues for Office products
-description: This article lists Office related issues.
+description: Lists Office client related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
@@ -41,4 +41,4 @@ Check the list below for the top issues. You can also browse the table of conten
 
 ## Still need help
 
-Go to [Office on Q&A](https://docs.microsoft.com/answers/products/office) or [Microsoft Community](https://answers.microsoft.com).
+Go to [Microsoft 365 on Q&A](/answers/products/m365) or [Microsoft Community](https://answers.microsoft.com).
