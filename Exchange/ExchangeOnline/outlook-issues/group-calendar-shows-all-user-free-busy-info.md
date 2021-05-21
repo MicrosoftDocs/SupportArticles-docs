@@ -38,9 +38,10 @@ When you do this, the Office 365 modern group is treated as a distribution list,
 
 ## Resolution
 
-To resolve this issue, follow these steps to open the Office 365 modern group calendar:
+To resolve this issue, open the Office 365 modern group calendar in the following way:
 
-1. Open your **Outlook** , expand **All Group Calendars** , and then select the modern group.
-2. The issue will not occur when you view the calendar.
+Open the **Calendar** view in Outlook, expand **All Group Calendars**, and then select the modern group.
+
+The issue won't occur when you view the calendar.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
