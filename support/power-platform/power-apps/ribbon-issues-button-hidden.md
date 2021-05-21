@@ -53,6 +53,8 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     - If this rule was added to the command unintentionally, you could modify the `Mscrm.NewRecordFromGrid` command and remove the `new.contact.EnableRule.EntityRule` enable rule from the command definition. 
     - If the command is an override of a Microsoft published definition, then this custom version of the command could be deleted to restore the default functionality.
 
+## Repair Options
+
 Select a repair option from one of the tabs below. The first tab is selected by default.
 
 ### [Delete the command](#tab/delete)
