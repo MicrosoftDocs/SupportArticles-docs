@@ -33,10 +33,10 @@ Customers, however, may create VMs based on custom images that assign the Window
 
 To fix this problem, you need to perform the following steps:
 
-1.	[Assign a larger disk SKU to the OS disk in the Azure portal](#Assign-a-larger-disk-SKU-to-the-OS-disk-in-the-Azure-portal)
-2.	[Extend the System Reserved volume into the unallocated space](#Extend-the-System-Reserved-volume-into-the-unallocated-space)
-3.	[Create a new boot volume in the remaining unallocated space](#Create-a-new-boot-volume-in-the-remaining-unallocated-space)
-4.	[Delete the System Reserved volume and extend the Windows volume](#Delete-the-System-Reserved-volume-and-extend-the-Windows-volume)
+1.	[Assign a larger disk SKU to the OS disk in the Azure portal](#assign-a-larger-disk-sku-to-the-os-disk-in-the-azure-portal)
+2.	[Extend the System Reserved volume into the unallocated space](#extend-the-system-reserved-volume-into-the-unallocated-space)
+3.	[Create a new boot volume in the remaining unallocated space](#create-a-new-boot-volume-in-the-remaining-unallocated-space)
+4.	[Delete the System Reserved volume and extend the Windows volume](#delete-the-system-reserved-volume-and-extend-the-windows-volume)
 
 ### Assign a larger disk SKU to the OS disk in the Azure portal
 
