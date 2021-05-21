@@ -37,7 +37,7 @@ This issue occurs if you're in a hybrid Exchange environment with a mailbox on E
 You can fix the issue by using one of the following options:  
 
 - Update the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to the values for the new geographical location of OneDrive.
-- Set the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to Null.
+- Set the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to **Null**.
 
 ### Option 1: Update My Site Host URLs
 
