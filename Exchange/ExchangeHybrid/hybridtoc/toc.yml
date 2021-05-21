@@ -263,6 +263,8 @@
       href: ../send-emails/overview-delegation-office-365-hybrid.md
     - name: The From field shows addresses not display names
       href: ../send-emails/emails-show-addresses-not-display-names-in-from.md
+    - name: Two OneDrive accounts when uploading attachments
+      href: ../send-emails/two-onedrive-accounts-when-uploading-attachments.md
   - name: User and Shared Mailboxes
     items:
     - name: Can't access a shared mailbox
