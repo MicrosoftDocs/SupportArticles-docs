@@ -21,7 +21,7 @@ If a command is not properly declared, clicking on a button may either do nothin
 
 Please select one of the following options that best matches your situation to help us provide the best resolution. The first tab is selected by default.
 
-### [The button does nothing when clicked](#tab/nothing)
+### [Button does nothing when clicked](#tab/nothing)
 
 #### Fix a button that does nothing when clicked
 
@@ -40,7 +40,7 @@ If the above configurations are correct, it is possible that there is JavaScript
 
 Let's identify what the button's command is and what solution installed the definition.
 
-We will use an in-app tool called the **Command Checker** to inspect the ribbon component definitions to help us determine why click the button results in an error.
+The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine why click the button results in an error.
 
 To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
@@ -62,7 +62,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers.png" alt-text="View command definition solution layers.":::
 
-1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
+1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
     The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
@@ -71,7 +71,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     Clicking **Back** will return to the previous Command Checker window.
 
     > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged Active solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged Active solution layer and above Microsoft solution layers, or if there is no unmanaged Active solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged Active solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged Active solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
+    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     If there is only one solution layer, skip to step 8, otherwise, select the top two solution layers (If you have a layer in the Active solution, but it is not listed at the top, select the Active solution layer and then the top row) and click **Compare**.
 
@@ -90,13 +90,13 @@ Please select one of the following repair options:
 <details>
 <summary><b>The command is in the unmanaged Active solution</b></summary>
 
-###### Delete the command with the invalid JavaScriptFunction declaration in the unmanaged Active solution
+<!-- ###### Delete the command with the invalid JavaScriptFunction declaration in the unmanaged Active solution -->
 
-To delete a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To delete a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The command is entity-specific
 
-Based on our example scenario, we identified the entity is **account** and the command that needs to be deleted is `Mscrm.DeletePrimaryRecord` and it is declared in the"Active unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
+Based on our example scenario, we identified the entity is **account** and the command that needs to be deleted is `Mscrm.DeletePrimaryRecord` and it is declared in the **Active** unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** -> **Solutions**.
@@ -150,11 +150,10 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 <details>
 <summary><b>The command is from a custom-managed solution that my company authored</b></summary>
 
-###### Delete a command from a custom-managed solution
+<!-- ###### Delete a command from a custom-managed solution -->
 
-To delete a command that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The command is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
-
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The command is in the unmanaged Active solution" option.
+To delete a command that was installed by a custom-managed solution that you created, follow these steps:
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
 1. In your separate affected organization, Import this new version of your custom-managed solution.
@@ -164,7 +163,7 @@ To delete a command that was installed by a custom-managed solution that you cre
 <details>
 <summary><b>The command is from a custom-managed solution that my company did not author (from third-party/ISV)</b></summary>
 
-###### Delete a command from a custom-managed solution from a third-party/ISV
+<!-- ###### Delete a command from a custom-managed solution from a third-party/ISV -->
 
 To delete a command that was installed by a custom-managed solution that was created by a third-party/ISV, you will need to contact the author of the solution and request a new version of the solution that has removed the specific command definition and then install this new solution into your affected organization.
 
@@ -175,16 +174,16 @@ To delete a command that was installed by a custom-managed solution that was cre
 <details>
 <summary><b>The command is in the unmanaged Active solution</b></summary>
 
-###### Fix the command JavaScriptFunction declaration in the unmanaged Active solution
+<!-- ###### Fix the command JavaScriptFunction declaration in the unmanaged Active solution -->
 
-To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 > [!WARNING]
 > Do not remove `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
 ###### The command is entity-specific
 
-Based on our example scenario, we identified the entity is account and the command that needs to be fixed is `Mscrm.DeletePrimaryRecord` and it is declared in the Active unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
+Based on our example scenario, we identified the entity is account and the command that needs to be fixed is `Mscrm.DeletePrimaryRecord` and it is declared in the **Active** unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
@@ -237,11 +236,11 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 <details>
 <summary><b>The command is from a custom-managed solution that I authored</b></summary>
 
-###### Fix a command from a custom-managed solution
+<!-- ###### Fix a command from a custom-managed solution -->
 
-To fix a command that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The command is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
+To fix a command that was installed by a custom-managed solution that you created, follow these steps:
 
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The command is in the unmanaged Active solution" option.
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
 1. In your separate affected organization, Import this new version of your custom-managed solution.
@@ -251,13 +250,13 @@ To fix a command that was installed by a custom-managed solution that you create
 <details>
 <summary><b>The command is from a custom-managed solution that I did not author or my organization does not own (from a third-party/ISV)</b></summary>
 
-###### Fix a command from a custom-managed solution from a third-party/ISV
+<!-- ###### Fix a command from a custom-managed solution from a third-party/ISV -->
 
 To fix a command that was installed by a custom-managed solution that was created by a third-party/ISV, you will need to contact the author of the solution and request a new version of the solution that contains the fixed command definition and install this new solution into your affected organization.
 
 </details>
 
-### [I get a Script Error "Invalid JavaScript Action Library"](#tab/error)
+### [Get Script Error "Invalid JavaScript Action Library"](#tab/error)
 
 #### Fix a button that displays an error when clicked
 
@@ -273,7 +272,7 @@ If you are getting a Script Error that is similar to the following:
 
 This is caused by an invalid ribbon command customization that has declared an incorrect Library on the command's `JavaScriptFunction`.
 
-We will use an in-app tool called the **Command Checker** tool to inspect the ribbon component definitions to help us determine how to fix this issue.
+The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine how to fix this issue.
 
 To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
@@ -301,7 +300,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers-2.png" alt-text="View command definition solution layers.":::
 
-1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
+1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
     The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
@@ -310,7 +309,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     Clicking **Back** will return to the previous Command Checker window.
 
     > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged Active solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged Active solution layer and above Microsoft solution layers, or if there is no unmanaged Active solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged Active solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged Active solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
+    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     The following image shows the solution layers for the command in our example, and indicates that there is two solution layers, and one is an unmanaged customization as denoted by the solution titled Active and the other is from the System solution published by Microsoft. Your actual scenario may differ, you may not have an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 
@@ -336,13 +335,13 @@ Please select the option that reflects your scenario:
 - <details>
   <summary><b>The command does not have any intentional modifications and I would like to remove this custom layer</b></summary>
 
-  **Fix Script Error Invalid JavaScript Action Library from the unmanaged Active solution - Delete Layer**
+  <!-- **Fix Script Error Invalid JavaScript Action Library from the unmanaged Active solution - Delete Layer** -->
 
-    To delete a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+    To delete a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
     **The command is entity-specific**
 
-    Based on our example scenario, we identified the entity is **account** and the command that needs to be deleted is `Mscrm.NewRecordFromForm` and it is declared in the Active unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
+    Based on our example scenario, we identified the entity is **account** and the command that needs to be deleted is `Mscrm.NewRecordFromForm` and it is declared in the **Active** unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
 
     1. Open **Advanced Settings**.
     1. Navigate to **Settings** > **Solutions**.
@@ -396,16 +395,16 @@ Please select the option that reflects your scenario:
 - <details>
   <summary><b>The command has additional modifications that I would like to retain and want to fix this solution layer</b></summary>
 
-  **Fix Script Error "Invalid JavaScript Action Library" from the unmanaged Active solution**
+  <!-- **Fix Script Error "Invalid JavaScript Action Library" from the unmanaged Active solution** -->
 
-    To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See Export, prepare to edit, and import the ribbon
+    To fix a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See Export, prepare to edit, and import the ribbon
 
     > [!WARNING]
     > Do not remove `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
     **The command is entity-specific**
 
-    Based on our example scenario, we identified the entity is **account** and the command that needs to be fixed is `Mscrm.NewRecordFromForm` and it is declared in the Active unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
+    Based on our example scenario, we identified the entity is **account** and the command that needs to be fixed is `Mscrm.NewRecordFromForm` and it is declared in the **Active** unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
 
     1. Open **Advanced Settings**.
     1. Navigate to **Settings** > **Solutions**.
@@ -461,11 +460,11 @@ Please select the option that reflects your scenario:
 <details>
 <summary><b>The command is from a custom-managed solution that I authored</b></summary>
 
-###### Fix a command from a custom-managed solution
+<!-- ###### Fix a command from a custom-managed solution -->
 
-To fix a command that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The command is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
+To fix a command that was installed by a custom-managed solution that you created, follow these steps:
 
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The command is in the unmanaged Active solution" option.
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
 1. In your separate affected organization, Import this new version of your custom-managed solution.
@@ -475,7 +474,7 @@ To fix a command that was installed by a custom-managed solution that you create
 <details>
 <summary><b>The command is from a custom-managed solution that I did not author or my organization does not own (from a third-party/ISV)</b></summary>
 
-###### Fix a command from a custom-managed solution from a third-party/ISV
+<!-- ###### Fix a command from a custom-managed solution from a third-party/ISV -->
 
 To fix a command that was installed by a custom-managed solution that was created by a third-party/ISV, you will need to contact the author of the solution and request a new version of the solution that contains the fixed command definition and install this new solution into your affected organization.
 
@@ -484,13 +483,13 @@ To fix a command that was installed by a custom-managed solution that was create
 <details>
 <summary><b>The command is in a Microsoft published managed solution</b></summary>
 
-###### Fix a command from a Microsoft published managed solution
+<!-- ###### Fix a command from a Microsoft published managed solution -->
 
 To fix a command that was installed by a Microsoft published managed solution, you may need a newer version of the solution to be installed, which would typically be done during a release update. It is possible that you have identified a bug that still needs to be fixed. Contact customer support for assistance.
 
 </details>
 
-### [I get a different error](#tab/different-error)
+### [Get a different error](#tab/different-error)
 
 #### Fix a button that displays an error when clicked
 
@@ -502,7 +501,7 @@ When a button is clicked and an error occurs, it may be caused by an incorrect c
 
 Let's identify what the button's command is and what solution installed the definition.
 
-We will use an in-app tool called the **Command Checker** tool to inspect the ribbon component definitions to help us determine why clicking the button results in an error.
+The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine why clicking the button results in an error.
 
 :::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
@@ -522,7 +521,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/view-command-definition-solution-layers.png" alt-text="View command definition solution layers.":::
 
-1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
+1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
     The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
@@ -531,7 +530,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     Clicking **Back** will return to the previous Command Checker window.
 
     > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged Active solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged Active solution layer and above Microsoft solution layers, or if there is no unmanaged Active solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged Active solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged Active solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
+    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     If there is only one solution layer, skip to step 9, otherwise, select the top two solution layers (If you have a layer in the Active solution, but it is not listed at the top, select the Active solution layer and then the top row.) and click **Compare**.
 
@@ -550,13 +549,13 @@ Please select one of the following repair options:
 <details>
 <summary><b>The command is in the unmanaged Active solution</b></summary>
 
-**Delete the command with the invalid JavaScriptFunction declaration in the unmanaged Active solution**
+<!-- **Delete the command with the invalid JavaScriptFunction declaration in the unmanaged Active solution** -->
 
-To delete a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To delete a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 **The command is entity-specific**
 
-Based on our example scenario, we identified the entity is **account** and the command that needs to be deleted is `Mscrm.DeletePrimaryRecord` and it is declared in the"Active unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
+Based on our example scenario, we identified the entity is **account** and the command that needs to be deleted is `Mscrm.DeletePrimaryRecord` and it is declared in the **Active** unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** -> **Solutions**.
@@ -610,11 +609,11 @@ If the command is not entity-specific, rather it is applicable to "All entities"
 <details>
 <summary><b>The command is from a custom-managed solution that my company authored</b></summary>
 
-**Delete a command from a custom-managed solution**
+<!-- **Delete a command from a custom-managed solution** -->
 
-To delete a command that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The command is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
+To delete a command that was installed by a custom-managed solution that you created, follow these steps:
 
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The command is in the unmanaged Active solution" option.
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
 1. In your separate affected organization, Import this new version of your custom-managed solution.
@@ -635,16 +634,16 @@ To delete a command that was installed by a custom-managed solution that was cre
 <details>
 <summary><b>The command is in the unmanaged Active solution</b></summary>
 
-**Fix the command JavaScriptFunction declaration in the unmanaged Active solution**
+<!-- **Fix the command JavaScriptFunction declaration in the unmanaged Active solution** -->
 
-To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 > [!WARNING]
 > Do not remove `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
 **The command is entity-specific**
 
-Based on our example scenario, we identified the entity is account and the command that needs to be fixed is `Mscrm.DeletePrimaryRecord` and it is declared in the Active unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
+Based on our example scenario, we identified the entity is account and the command that needs to be fixed is `Mscrm.DeletePrimaryRecord` and it is declared in the **Active** unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
@@ -697,11 +696,11 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 <details>
 <summary><b>The command is from a custom-managed solution that I authored</b></summary>
 
-**Fix a command from a custom-managed solution**
+<!-- **Fix a command from a custom-managed solution** -->
 
-To fix a command that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The command is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
+To fix a command that was installed by a custom-managed solution that you created, follow these steps:
 
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The command is in the unmanaged Active solution" option.
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
 1. In your separate affected organization, Import this new version of your custom-managed solution.
@@ -711,7 +710,7 @@ To fix a command that was installed by a custom-managed solution that you create
 <details>
 <summary><b>The command is from a custom-managed solution that I did not author or my organization does not own (from a third-party/ISV)</b></summary>
 
-**Fix a command from a custom-managed solution from a third-party/ISV**
+<!-- **Fix a command from a custom-managed solution from a third-party/ISV** -->
 
 To fix a command that was installed by a custom-managed solution that was created by a third-party/ISV, you will need to contact the author of the solution and request a new version of the solution that contains the fixed command definition and install this new solution into your affected organization.
 
@@ -720,7 +719,7 @@ To fix a command that was installed by a custom-managed solution that was create
 <details>
 <summary><b>The command is in a Microsoft published managed solution</b></summary>
 
-**Fix a command from a Microsoft published managed solution**
+<!-- **Fix a command from a Microsoft published managed solution** -->
 
 To fix a command that was installed by a Microsoft published managed solution, you may need a newer version of the solution to be installed, which would typically be done during a release update. It is possible that you have identified a bug that still needs to be fixed. Contact customer support for assistance.
 
