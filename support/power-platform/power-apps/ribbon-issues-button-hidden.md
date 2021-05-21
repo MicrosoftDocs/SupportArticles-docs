@@ -90,8 +90,8 @@ Select one of the following options that matches your particular scenario:
 
 <details>
 <summary><b>The command is in the unmanaged Active solution</b></summary>
-
-##### Delete a command from an unmanaged Active solution layer
+<br>
+<!-- ##### Delete a command from an unmanaged Active solution layer -->
 
 To delete a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
@@ -150,8 +150,8 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 
 <details>
 <summary><b>The command is from a custom-managed solution that my company authored</b></summary>
-
-##### Delete a command from a custom-managed solution
+<br>
+<!-- ##### Delete a command from a custom-managed solution -->
 
 To delete a command that was installed by a custom-managed solution that you created, follow these steps:
 
@@ -164,8 +164,8 @@ To delete a command that was installed by a custom-managed solution that you cre
 
 <details>
 <summary><b>The command is from a custom-managed solution that my company did not author (from third-party/ISV)</b></summary>
-
-##### Delete a command from a custom-managed solution from a third-party/ISV
+<br>
+<!-- ##### Delete a command from a custom-managed solution from a third-party/ISV -->
 
 To delete a command that was installed by a custom-managed solution that was created by a third-party/ISV, you will need to contact the author of the solution and request a new version of the solution that has removed the specific command definition and then install this new solution into your affected organization.
 
@@ -200,8 +200,8 @@ Select one of the following options that matches your particular scenario:
 
 <details>
 <summary><b>The enable/display rule is in the unmanaged Active solution</b></summary>
-
-##### Fix an enable/display rule from an unmanaged Active solution layer
+<br>
+<!-- ##### Fix an enable/display rule from an unmanaged Active solution layer -->
 
 To fix an enable/display rule in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import the new version of this solution containing the fixed enable/display rule definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
@@ -258,8 +258,8 @@ If the enable/display rule is not entity-specific, rather it is applicable to "A
 
 <details>
 <summary><b>The enable/display rule is from a custom-managed solution that I authored</b></summary>
-
-##### Fix an enable/display rule from a custom-managed solution
+<br>
+<!-- ##### Fix an enable/display rule from a custom-managed solution -->
 
 To fix an enable/display rule that was installed by a custom-managed solution that you created, follow these steps:
 
@@ -272,8 +272,8 @@ To fix an enable/display rule that was installed by a custom-managed solution th
 
 <details>
 <summary><b>The enable/display rule is from a custom-managed solution that I did not author or my organization does not own (from a third-party/ISV)</b></summary>
-
-##### Fix an enable/display rule from a custom-managed solution from a third-party/ISV
+<br>
+<!-- ##### Fix an enable/display rule from a custom-managed solution from a third-party/ISV -->
 
 To fix an enable/display rule that was installed by a custom-managed solution that was created by a third-party/ISV, you will need to contact the author of the solution and request a new version of the solution that contains the fixed enable/display rule definition and install this new solution into your affected organization.
 
@@ -281,8 +281,8 @@ To fix an enable/display rule that was installed by a custom-managed solution th
 
 <details>
 <summary><b>The enable/display rule is in a Microsoft published managed solution</b></summary>
-
-##### Fix an enable/display rule from a Microsoft published managed solution
+<br>
+<!-- ##### Fix an enable/display rule from a Microsoft published managed solution -->
 
 To fix an enable/display rule that was installed by a Microsoft published managed solution, you may need a newer version of the solution to be installed, which would typically be done during a release update. It is possible that you have identified a bug that still needs to be fixed. Contact customer support for assistance.
 
@@ -319,8 +319,8 @@ Select one of the following options that matches your particular scenario:
 
 <details>
 <summary><b>The command is in the unmanaged Active solution</b></summary>
-
-##### Fix a command from an unmanaged Active solution layer
+<br>
+<!-- ##### Fix a command from an unmanaged Active solution layer -->
 
 To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
@@ -380,8 +380,8 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 
 <details>
 <summary><b>The command is from a custom-managed solution that I authored</b></summary>
-
-##### Fix a command from a custom-managed solution
+<br>
+<!-- ##### Fix a command from a custom-managed solution -->
 
 To fix a command that was installed by a custom-managed solution that you created, follow these steps:
 
@@ -394,8 +394,8 @@ To fix a command that was installed by a custom-managed solution that you create
 
 <details>
 <summary><b>The command is from a custom-managed solution that I did not author or my organization does not own (from a third-party/ISV)</b></summary>
-
-##### Fix a command from a custom-managed solution from a third-party/ISV
+<br>
+<!-- ##### Fix a command from a custom-managed solution from a third-party/ISV -->
 
 To fix a command that was installed by a custom-managed solution that was created by a third-party/ISV, you will need to contact the author of the solution and request a new version of the solution that contains the fixed command definition and install this new solution into your affected organization.
 
@@ -403,8 +403,8 @@ To fix a command that was installed by a custom-managed solution that was create
 
 <details>
 <summary><b>The command is in a Microsoft published managed solution</b></summary>
-
-##### Fix a command from a Microsoft published managed solution
+<br>
+<!-- ##### Fix a command from a Microsoft published managed solution -->
 
 To fix a command that was installed by a Microsoft published managed solution, you may need a newer version of the solution to be installed, which would typically be done during a release update. It is possible that you have identified a bug that still needs to be fixed. Contact customer support for assistance.
 
