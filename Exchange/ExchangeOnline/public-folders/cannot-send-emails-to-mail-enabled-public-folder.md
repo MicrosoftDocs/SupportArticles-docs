@@ -17,7 +17,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# "550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder" error when users send emails to a mail-enabled public folder
+# "550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder" error when users send messages to a mail-enabled public folder
 
 ## Symptoms
 
@@ -25,19 +25,25 @@ When users send email messages to a mail-enabled public folder, they receive the
 
 > 550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder
 
-For example, the detailed error message shows as in the following screenshot:
+The message resembles the following detailed example.
 
 :::image type="content" source="media/cannot-send-emails-to-mail-enabled-public-folder/ndr-error.png" alt-text="Screenshot of the NDR error message.":::
 
-This issue occurs in either of the following scenarios:
+This issue occurs in either of the following scenarios.
 
-## Scenario 1: Users send email messages from a shared mailbox in the same organization
+### Scenario 1: Users send email messages from a shared mailbox in the same organization
 
-In this scenario, users have the **Send As** or **Send on Behalf** access rights on the shared mailbox. This issue occurs because the **Default** user permission on the mail-enabled public folder isn't sufficient to write the messages to the public folder store.
+In this scenario, users have the **Send As** or **Send on Behalf** access rights on the shared mailbox. This issue occurs because the **Default** user permission on the mail-enabled public folder isn't sufficient to write messages to the public folder store. (See [Resolution 1](#resolution-1).)
 
-### Resolution
+### Scenario 2: Users send email messages from outside the organization
 
-**Note:** You must have administrator permission to make the following changes.
+In this scenario, this issue occurs because the **Anonymous** user permission on the mail-enabled public folder isn't sufficient to write messages to the public folder store. (See [Resolution 2](#resolution-2).)
+
+## Resolution
+
+**Note:** You must have administrator permissions to make the following changes.
+
+### Resolution 1
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Check the **Default** user permission on the mail-enabled public folder by running the [Get-PublicFolderClientPermission](/powershell/module/exchange/get-publicfolderclientpermission) command. Here's an example of the command and output.
@@ -50,15 +56,9 @@ In this scenario, users have the **Send As** or **Send on Behalf** access rights
    Add-PublicFolderClientPermission -Identity "\<My Public Folder>" -User Default -AccessRights CreateItems
    ```
 
-   **Note:** Replace \<My Public Folder> with the actual name of the public folder. For more information about the command, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission).
+   **Note:** Replace \<My Public Folder> with the actual name of the public folder. For more information about this command, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission).
 
-## Scenario 2: Users send email messages from outside the organization
-
-In this scenario, this issue occurs because the **Anonymous** user permission on the mail-enabled public folder isn't sufficient to write the messages to the public folder store.
-
-### Resolution
-
-**Note:** You must have administrator permission to make the following changes.
+### Resolution 2
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Check the **Anonymous** user permission on the mail-enabled public folder by running the [Get-PublicFolderClientPermission](/powershell/module/exchange/get-publicfolderclientpermission) command. Here's an example of the command and output.
@@ -71,4 +71,4 @@ In this scenario, this issue occurs because the **Anonymous** user permission on
    Add-PublicFolderClientPermission -Identity "\My Public Folder" -User Anonymous  -AccessRights CreateItems
    ```
 
-   **Note:** Replace \<My Public Folder> with the actual name of the public folder. For more information about the command, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission).
+   **Note:** Replace \<My Public Folder> with the actual name of the public folder. For more information about this command, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission).
