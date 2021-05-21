@@ -46,7 +46,7 @@ In the **Ribbon Metadata Generation Operations** view, a **RibbonMetadataGenerat
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbonmetadatageneration.png" alt-text="Screenshot of the RibbonMetadataGeneration operation.":::
 
 > [!NOTE]
-> The operation will take several minutes to complete. The result will be marked as **Completed** or **Failure**.
+> The operation will take several minutes to complete. When it is finished, the **Status** will be marked as **Completed**, with the Result marked as **Success** or **Failure**.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbonmetadatageneration-status.png" alt-text="Screenshot of the RibbonMetadataGeneration operation status.":::
 
