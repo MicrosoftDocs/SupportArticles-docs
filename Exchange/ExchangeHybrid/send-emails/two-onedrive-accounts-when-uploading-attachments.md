@@ -30,33 +30,34 @@ When you try to upload attachments from Outlook on the web, the **Upload** menu 
 
 ## Cause
 
-This issue occurs if you're in a hybrid Exchange environment with a mailbox on Exchange Server on-premises and a OneDrive for Business account in Microsoft 365 that has moved to a different geographical location. After the OneDrive move, the internal and external My Site Host URLs have not been updated in the `OwaMailboxPolicy` setting.
+This issue occurs if you're in a hybrid Exchange environment that has a mailbox on Microsoft Exchange Server on-premises and a OneDrive for Business account in Microsoft 365, and if the OneDrive account was moved to a different geographical location. After the OneDrive move, the internal and external My Site Host URLs are not updated in the `OwaMailboxPolicy` setting.
 
 ## Resolution
 
-You can fix the issue by using one of the following options:  
+To fix this issue, follow these steps.
 
-- Update the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to the values for the new geographical location of OneDrive.
-- Set the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to **Null**.
+### Step 1
 
-### Option 1: Update My Site Host URLs
+Use either of the following methods.
 
-1. Run the following cmdlet:
+#### Method 1: Update My Site Host URLs
+
+Update the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to the values for the new geographical location of OneDrive. To do this, run the following cmdlet:
 
     ```powershell
     Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL <new_OneDrive_URL> -ExternalSPMySiteHostURL <new_OneDrive_URL>
     ```
 
-1. Create a new Outlook profile to use the updated values set for `OwaMailboxPolicy`. This is because the previous `OwaMailboxPolicy` settings are cached in your current Outlook profile and they can't be updated.
+#### Method 2: Set values to Null
 
-### Option 2: Set values to Null
-
-1. Run the following cmdlet:
+Set the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to **Null**. To do this, run the following cmdlet:
 
    ```powershell
    Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL $Null -ExternalSPMySiteHostURL $Null
    ```
 
-1. Create a new Outlook profile to use the updated values set for `OwaMailboxPolicy`. This is because the previous `OwaMailboxPolicy` settings are cached in your current Outlook profile and they can't be updated.
+### Step 2
+
+Create a new Outlook profile to use the updated values that are set for `OwaMailboxPolicy`. This is necessary because the previous `OwaMailboxPolicy` settings are cached in your current Outlook profile, and they can't be updated.
 
 For more information about the `OwaMailboxPolicy` setting, see [Configure document collaboration with OneDrive for Business and Exchange 2016 on-premises](/exchange/hybrid-deployment/set-up-document-collaboration).
