@@ -41,4 +41,6 @@ To force Microsoft Teams to check and install updates, select your avatar in the
 
 ## More information
 
+For more information about Teams update process, see [Teams update process](/microsoftteams/teams-client-update).
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
