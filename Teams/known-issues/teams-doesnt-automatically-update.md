@@ -28,6 +28,7 @@ More than one reason can prevent Microsoft Teams from automatically updating:
 
 - When Microsoft Teams is installed to the Program Files folder (such as by using installation scripts) rather than to the default location, the client won't automatically update when new versions are available.
 - Microsoft Teams will update only when Teams is idle. If a user powers off the computer when finished using Teams, Teams will have no way to run the update process.
+- Users need to be signed in for updates to be downloaded.
 
 > [!NOTE]
 > If you find some features are missing, it's because Teams isn't updated.
@@ -39,5 +40,7 @@ To make sure Teams automatically updates, install the application in the default
 To force Microsoft Teams to check and install updates, select your avatar in the upper-right corner of Teams, and then select **Check for updates**. This will cause Microsoft Teams to check for updates.
 
 ## More information
+
+For more information about Teams update process, see [Teams update process](/microsoftteams/teams-client-update).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
