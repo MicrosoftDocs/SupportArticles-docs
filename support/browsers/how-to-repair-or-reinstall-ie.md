@@ -32,38 +32,9 @@ For more information about how to reset settings in Internet Explorer, see the
 
 > [!VIDEO <https://www.microsoft.com/videoplayer/embed/c989d6d8-f8f9-4cb5-a2f1-da6a7e89f18b>]
 
-## Enable and Disable Internet Explorer in Windows 10 and Windows 8.1
+## Disable and enable Internet Explorer
 
-### Windows 10
-
-To disable Internet Explorer 11, use the following procedure:
-
-1. Select **Start** > **Search**, and enter Windows features. Select Turn Windows features on or off from the results.
-2. Uncheck Internet Explorer 11.
-
-3. Select **Yes** on the following informational dialog that pops up:
-
-   > Turning off Internet Explorer 11 might affect other Windows Features and Programs Installed on your computer including default settings. Do you want to continue?
-
-4. Select **OK**.
-5. When Windows finishes applying changes, restart your device for the settings to take effect.
-
-To re-enable Internet Explorer 11:
-
-1. Select **Start** > **Search**, and enter Windows features. Select Turn Windows features on or off from the results.
-
-2. Select Internet Explorer 11 and select **OK**.
-
-3. When Windows finishes applying changes, restart your device for the settings to take effect.
-
-> [!NOTE]
-> You don't need to download and install Internet Explorer 11 in Windows 10 because it's already installed.
-
-### Windows 8.1 and Windows 8
-
-1. Turn off the Internet Explorer features.
-2. Restart your computer after you turn off Internet Explorer. Then, Internet Explorer will be removed from your computer.
-3. You can turn the Internet Explorer Windows feature back on to reinstall it on your computer.
+To disable and enable Internet Explorer 11, see [Disable and enable Internet Explorer on Windows](disable-internet-explorer-windows.md).
 
 ## Reinstall Internet Explorer in Windows
 
