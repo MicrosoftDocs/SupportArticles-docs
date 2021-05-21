@@ -38,27 +38,41 @@ First, verify that you are connected to the internet. If the affected device is 
 
 Make sure that you carefully review information about [TLS deprecation](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365). That change might also cause this error.
 
- > [!NOTE]
- > Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements, because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
->
-> For TLS 1.2, the following cipher suites are supported by Azure Front Door:
->
-> - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-> - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-> - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-> - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
->
-> To add cipher suites, either deploy a group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true)
->
-> or use PowerShell to [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true).
->
-> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
+
+
 
 If the device is connected to the internet and TLS has been updated, continue to the following steps based on the version of Windows that the device is running.
 
 ### Windows 10
 
-If you're using Windows 10, restart the device while it’s connected to your Azure Active Directory (Azure AD) domain. If that doesn’t fix the problem, unjoin your device from Azure AD and rejoin it, by using the following steps.
+**Solution 1**
+
+ Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements, because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
+
+For TLS 1.2, the following cipher suites are supported by Azure Front Door:
+
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+
+To add cipher suites, either deploy a group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true) or use PowerShell to [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true).
+
+For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
+
+
+**Solution 2**
+
+Check the TLS protocols on the computer:
+
+1. Press Windows logo key+R to open the **Run** window.
+2. Enter inetcpl.cpl, and press Enter.
+3. Go to the **Advanced** tab, and enable all three TLS protocols by selecting the check boxes for the TLS 1.0, TLS 1.1, and TLS 1.2 options.
+4. Select **Apply** > **OK** to save the changes.
+
+**Solution 3
+
+Restart the device while it’s connected to your Azure Active Directory (Azure AD) domain. If that doesn’t fix the problem, unjoin your device from Azure AD and rejoin it, by using the following steps.
 
 > [!IMPORTANT]
 > You must be connected to your organization’s network when you do these steps. Don’t do these steps if you aren’t connected to your organization’s infrastructure (for example, while traveling).
@@ -69,18 +83,14 @@ If you're using Windows 10, restart the device while it’s connected to your Az
 1. After the command runs, close the Command Prompt window.
 1. Restart the computer, and log in to OneDrive.
 
-Check the TLS protocols on the computer:
 
-1. Press Windows logo key+R to open the **Run** window.
-2. Enter inetcpl.cpl, and press Enter.
-3. Go to the **Advanced** tab, and enable all three TLS protocols by selecting the check boxes for the TLS 1.0, TLS 1.1, and TLS 1.2 options.
-4. Select **Apply** > **OK** to save the changes.
 
-### Windows 8 or Windows 7
+### Windows 8 , Windows 7 or Windows Server 2012/2008 R2(SP1)
 
-If you are using Windows 8 or Windows 7 Service Pack 1 (SP1), see the following pages:
+If you are using Windows 8 ,Windows 7 Service Pack 1 (SP1), Windows Server 2012 or Windows Server 2008 R2 SPI see the following solutions.
 
-- [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392)
+- You may opt to add TLS 1.2/1.2 Secure Protocol registry keys automatically by running the [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi). For more information please visit, [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392)
+
 - [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7)
 
 ## All computers
