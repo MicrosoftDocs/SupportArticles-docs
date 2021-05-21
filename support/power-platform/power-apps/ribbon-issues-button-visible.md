@@ -161,7 +161,7 @@ To delete a command that was installed by a custom-managed solution that was cre
 
 </details>
 
-### [Add missing enable/display rules to the command/display rule](#tab/add)
+### [Add missing enable/display rules to the command](#tab/add)
 
 #### How to add missing enable/display rules to the command
 
