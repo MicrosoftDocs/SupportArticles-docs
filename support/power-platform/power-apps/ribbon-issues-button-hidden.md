@@ -19,7 +19,7 @@ A button can be hidden due to an [enable rule](/powerapps/developer/model-driven
 > - Any display rule of the **EntityPrivilegeRule** type with a **PrivilegeType** value of one of the following (**Create**, **Write**, **Delete**, **Assign**, **Share**) will evaluate to false if the entity has the **Read-Only in Mobile** option enabled, which will force the entity to only permit **Read** privilege. Examples of some of the most common default system rules that will evaluate to false when the **Read-Only in Mobile** flag is enabled on the entity, are as follows, but not limited only to this list (`Mscrm.CreateSelectedEntityPermission`, `Mscrm.CanSavePrimary`, `Mscrm.CanWritePrimary`, `Mscrm.CanWriteSelected`, `Mscrm.WritePrimaryEntityPermission`, `Mscrm.WriteSelectedEntityPermission`, `Mscrm.CanDeletePrimary`, `Mscrm.DeletePrimaryEntityPermission`, `Mscrm.DeleteSelectedEntityPermission`, `Mscrm.AssignSelectedEntityPermission`, `Mscrm.SharePrimaryPermission`, `Mscrm.ShareSelectedEntityPermission`). You can edit the entity and uncheck the **Read-Only in Mobile** option to permit these rules to evaluate to true, provided the privilege being tested by the rule is also granted to the user.
 > - Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
-We will use an in-app tool called **Command Checker** to inspect the ribbon component definitions to help us determine why the button is hidden.
+The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine why the button is hidden.
 
 To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
@@ -36,7 +36,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 1. Find and click your button in the list of buttons displayed in the left-most pane of the **Command Checker** tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. The following example shows the **New** button on the contact entity's grid page is not visible and is represented by an item labeled **New (hidden)**.
 
     > [!NOTE]
-    > If your button is not listed, it could be due to a `HideCustomAction` customization that may have been installed, or the associated command has a `Mscrm.HideOnModern` display rule. At the time of writing this guide, the **Command Checker** tool does not list buttons that have been hidden by a `HideCustomAction` or the `Mscrm.HideOnModern` display rule. We are currently working to augment this listing to include this information in a future update.
+    > If your button is not listed, it could be due to a [HideCustomAction]((/powerapps/developer/model-driven-apps/https://docs.microsoft.com/powerapps/developer/model-driven-apps/define-custom-actions-modify-ribbon#hide-custom-actions) customization that may have been installed, or the associated command has a `Mscrm.HideOnModern` display rule. At the time of writing this guide, the **Command Checker** tool does not list buttons that have been hidden by a `HideCustomAction` or the `Mscrm.HideOnModern` display rule. We are currently working to augment this listing to include this information in a future update.
 
     :::image type="content" source="media/ribbon-issues-button-hidden/new-hidden.png" alt-text="Screenshot of new hidden.":::
 
@@ -44,11 +44,14 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 
     :::image type="content" source="media/ribbon-issues-button-hidden/command-properties-new-hidden.png" alt-text="Screenshot of the command properties of new hidden.":::
 
-1. Expand the `new.contact.EnableRule.EntityRule` enable rule, by clicking on the chevron :::image type="icon" source="media/ribbon-issues-button-hidden/chevron-icon.png" border="false"::: icon to view the details of the rule. To understand why a rule evaluates to True or False requires a little understanding of the type of rule. For details of each type of rule, please refer to [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). The following example shows that the rule type is **Entity** and the entity logical name is **account**, since the current entity is **contact**, which is not equal to **account**, this rule returns False.
+1. Expand the `new.contact.EnableRule.EntityRule` enable rule, by clicking on the chevron :::image type="icon" source="media/ribbon-issues-button-hidden/chevron-icon.png" border="false"::: icon to view the details of the rule. To understand why a rule evaluates to True or False requires a little understanding of the type of rule. For details of each type of rule, please refer to [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). The following example shows that the rule type is **Entity** and the entity logical name is **account**. Since the current entity is **contact**, which is not equal to **account**, this rule returns False.
 
     :::image type="content" source="media/ribbon-issues-button-hidden/command-properties-example.png" alt-text="Example of the command properties of new hidden.":::
 
-1. The approach needed to fix a button's visibility will depend on the various customizations in your specific scenario. Considering our example, suppose this rule was created erroneously, such that the entity declared in the rule was intended to be **contact** but was set to **account**. We could edit the `new.contact.EnableRule.EntityRule` enable rule and make changes that would permit the rule to evaluate to true. Or perhaps, this rule was added to the command unintentionally. We could modify the `Mscrm.NewRecordFromGrid` command and remove the `new.contact.EnableRule.EntityRule` enable rule from the command definition. Or if the command is an override of a Microsoft published definition, then this custom version of the command could be deleted to restore the default functionality.
+1. The approach needed to fix a button's visibility will depend on the various customizations in your specific scenario. Considering our example:
+    - If this rule was created erroneously, such that the entity declared in the rule was intended to be **contact** but was set to **account**, you could edit the `new.contact.EnableRule.EntityRule` enable rule and make changes that would permit the rule to evaluate to true. 
+    - If this rule was added to the command unintentionally, you could modify the `Mscrm.NewRecordFromGrid` command and remove the `new.contact.EnableRule.EntityRule` enable rule from the command definition. 
+    - If the command is an override of a Microsoft published definition, then this custom version of the command could be deleted to restore the default functionality.
 
 Select a repair option from one of the tabs below. The first tab is selected by default.
 
@@ -66,7 +69,7 @@ In order to delete a command, we need to determine which solution installed the 
 
     :::image type="content" source="media/ribbon-issues-button-hidden/view-command-definition-solution-layers.png" alt-text="Link of view command definition solution layers.":::
 
-1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
+1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
     The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
@@ -75,9 +78,9 @@ In order to delete a command, we need to determine which solution installed the 
     Clicking **Back** will return to the previous Command Checker window.
 
     > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged Active solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged Active solution layer and above Microsoft solution layers, or if there is no unmanaged Active solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged Active solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged Active solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
+    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
-    The following image shows the solution layers for the command in our example, and indicates that there is a solution layer for the contact entity that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not have an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
+    The following image shows the solution layers for the command in our example, and indicates that there is a solution layer for the contact entity that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not have an **Active** solution layer, you may have a managed solution and the name of that solution will be listed here.
 
     :::image type="content" source="media/ribbon-issues-button-hidden/solution-layer-example.png" alt-text="Example of solution layer.":::
 
@@ -90,7 +93,7 @@ Select one of the following options that matches your particular scenario:
 
 ##### Delete a command from an unmanaged Active solution layer
 
-To delete a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To delete a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The command is entity-specific
 
@@ -150,12 +153,12 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 
 ##### Delete a command from a custom-managed solution
 
-To delete a command that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The command is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
+To delete a command that was installed by a custom-managed solution that you created, follow these steps:
 
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The command is in the unmanaged Active solution" option.
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
-1. In your separate affected organization, Import this new version of your custom-managed solution.
+1. In your separate affected organization, import this new version of your custom-managed solution.
 
 </details>
 
@@ -176,7 +179,7 @@ To delete a command that was installed by a custom-managed solution that was cre
 
     :::image type="content" source="media/ribbon-issues-button-hidden/view-rule-definition-solution-layers.png" alt-text="Link of view rule definition solution layers.":::
 
-1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
+1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
     The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
@@ -185,7 +188,7 @@ To delete a command that was installed by a custom-managed solution that was cre
     Clicking **Back** will return to the previous Command Checker window.
 
     > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged Active solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged Active solution layer and above Microsoft solution layers, or if there is no unmanaged Active solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged Active solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged Active solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
+    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     The following image shows the solution layers for the enable rule in our example, and indicates that there is one solution layer in this case, and that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 
@@ -200,11 +203,11 @@ Select one of the following options that matches your particular scenario:
 
 ##### Fix an enable/display rule from an unmanaged Active solution layer
 
-To fix an enable/display rule in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import the new version of this solution containing the fixed enable/display rule definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix an enable/display rule in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import the new version of this solution containing the fixed enable/display rule definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The enable/display rule is entity-specific
 
-Based on our example scenario, we identified the entity is **contact** and the enable rule that needs to be fixed is `new.contact.EnableRule.EntityRule` and it is declared in the Active unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
+Based on our example scenario, we identified the entity is **contact** and the enable rule that needs to be fixed is `new.contact.EnableRule.EntityRule` and it is declared in the **Active** unmanaged solution layer from a publisher named **DefaultPublisherCITTest**.
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
@@ -224,7 +227,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 
 1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
 
-:::image type="content" source="media/ribbon-issues-button-hidden/commanddefinition-example-4.png" alt-text="Fourth example of command definition.":::
+    :::image type="content" source="media/ribbon-issues-button-hidden/commanddefinition-example-4.png" alt-text="Fourth example of command definition.":::
 
 1. Add the modified *customizations.xml* file back to the solution .zip file.
 1. Import the solution file.
@@ -258,9 +261,9 @@ If the enable/display rule is not entity-specific, rather it is applicable to "A
 
 ##### Fix an enable/display rule from a custom-managed solution
 
-To fix an enable/display rule that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The enable/display rule is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
+To fix an enable/display rule that was installed by a custom-managed solution that you created, follow these steps:
 
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The enable/display rule is in the unmanaged Active solution" option.
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The enable/display rule is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
 1. In your separate affected organization, Import this new version of your custom-managed solution.
@@ -295,7 +298,7 @@ In order to fix a command, we need to determine which solution installed the cus
 
     :::image type="content" source="media/ribbon-issues-button-hidden/view-command-definition-solution-layers.png" alt-text="Link of view command definition solution layers.":::
 
-1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged Active solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
+1. The Solution Layers pane will display the layering of each ribbon component definition a particular solution has installed. The layer at the top of the list is the current definition that is used by the application, the other layers are inactive and are not used by the application at the moment. If the top solution is uninstalled or an updated version is installed that removes the definition, then the next layer will become the current active definition used by the application. When an unmanaged **Active** solution layer is present, it will always be the definition the application uses. If there is no Active solution listed, then the solution listed at the top of the list will be the definition used by the application. Any custom-managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers.
 
     The Entity context indicates the object the ribbon customization is on, if "All Entities" is listed, then the layer is from the Application Ribbon client extensions and not entity specific, otherwise the logical name of the entity will be listed.
 
@@ -304,7 +307,7 @@ In order to fix a command, we need to determine which solution installed the cus
     Clicking **Back** will return to the previous Command Checker window.
 
     > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged Active solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged Active solution layer and above Microsoft solution layers, or if there is no unmanaged Active solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged Active solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged Active solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
+    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     The following image shows the solution layers for the command in our example, and indicates that there is one solution layer in this contact, and that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not have an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 
@@ -344,9 +347,7 @@ Based on our example scenario, we identified the entity is **contact** and the c
 
     :::image type="content" source="media/ribbon-issues-button-hidden/commanddefinition-example-5.png" alt-text="Fifth example of command definition.":::
 
-1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the `<CommandDefinition>` node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands).
-
-    (Based on our example, we would modify the `<CommandDefinition>` node by removing the `new.contact.EnableRule.EntityRule` enable rule that is causing the button to be hidden.)
+1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the `<CommandDefinition>` node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands). (Based on our example, we would modify the `<CommandDefinition>` node by removing the `new.contact.EnableRule.EntityRule` enable rule that is causing the button to be hidden.)
 
     :::image type="content" source="media/ribbon-issues-button-hidden/commanddefinition-example-6.png" alt-text="Sixth example of command definition.":::
 
@@ -360,7 +361,7 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
-1. Click **New** to create a new solution, set Publisher to the value shown in the Command Checker's solution layers listing for the command and the Active solution layer.
+1. Click **New** to create a new solution, set Publisher to the value shown in the Command Checker's solution layers listing for the command and the **Active** solution layer.
 1. Click **Client Extensions**.
 1. Click **Add Existing**.
 1. Click **Application Ribbons**.
@@ -382,9 +383,9 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 
 ##### Fix a command from a custom-managed solution
 
-To fix a command that was installed by a custom-managed solution that you created, you must complete the steps listed above for the "The command is in the unmanaged Active solution" option in your separate development organization that has the unmanaged source version of your custom solution used to create your custom-managed solution. Once you have completed those steps, then you will export a new managed version of your solution that can be imported into your target affected organization to fix the customizations.
+To fix a command that was installed by a custom-managed solution that you created, follow these steps:
 
-1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the "The command is in the unmanaged Active solution" option.
+1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
 1. In your separate affected organization, Import this new version of your custom-managed solution.
