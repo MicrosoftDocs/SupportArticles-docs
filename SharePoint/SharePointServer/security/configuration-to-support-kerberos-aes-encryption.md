@@ -79,6 +79,8 @@ To resolve this issue, follow these steps:
 
 6. Perform an `iisreset` on the servers and restart any SharePoint related services that are running in the context of the modified service accounts.
 
+If the issue isn't fixed, try the resolution in [SCCM: "The encryption type requested is not supported by the KDC" Error When Running Reports](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/sccm-quot-the-encryption-type-requested-is-not-supported-by-the/ba-p/570914).
+
 ## More information
 
 To check whether your SharePoint server is configured to only support AES encryption types or newer types:
