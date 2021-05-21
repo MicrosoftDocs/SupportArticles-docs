@@ -7,7 +7,7 @@ ms.date: 05/15/2021
 ---
 # Troubleshooting ribbon issues in Power Apps
 
-This section provides help and resolution if you are experiencing an issue in a Power Apps model-driven app or a customer engagement app (Dynamics 365 Sales, Customer Service, Field Service, or Marketing) with a ribbon command bar button.
+This guide provides help and resolution if you are experiencing an issue in a Power Apps model-driven app or a customer engagement app (Dynamics 365 Sales, Customer Service, Field Service, or Marketing) with a ribbon command bar button.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4552163
