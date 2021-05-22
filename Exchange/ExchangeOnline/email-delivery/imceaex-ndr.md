@@ -54,7 +54,7 @@ X500:/O=MMS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=
 > - Replace "+2C" with a comma (,) character.
 > - Replace "+2E" with a period (.) character.
 > - Replace "+3F" with a question mark (?) character.
-> - Replace "+40" with an at symbol (@)
-> - Replace "+5F" with an underscore (_) character
+> - Replace "+40" with an at symbol (@).
+> - Replace "+5F" with an underscore (_) character.
 
 If you are unfamiliar with the ASCII code in question, see [ASCII Character Codes Chart 1](https://msdn.microsoft.com/library/60ecse8t%28v=vs.80%29.aspx).
