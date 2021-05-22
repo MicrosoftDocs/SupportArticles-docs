@@ -502,6 +502,8 @@ When a button is clicked and an error occurs, it may be caused by an incorrect c
 Let's identify what the button's command is and what solution installed the definition.
 
 The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine why clicking the button results in an error.
+    
+To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
 :::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
