@@ -36,7 +36,7 @@ You can quickly complete the same process in Outlook 2003 and later versions. Yo
 The AutoArchive feature has a two-step process. First, you turn on the AutoArchive feature. Second, you set the properties for the AutoArchive feature for each folder that you want archived.
 
 > [!NOTE]
-> If you have several mailbox accounts in the Outlook profile, the default AutoArchive setting will apply to all of them. If it need to be avoided, settings must be applied on a folder level.
+> If you have multiple Exchange accounts in the same Outlook profile, the default AutoArchive setting will apply to all of the accounts. To avoid this, apply the AutoArchive setting on the folder level.
 
 At the folder level, you can determine the items that are to be archived and how frequently they're archived. You can automatically archive individual folders, or you can configure a default AutoArchive setting for all folders. And then configure AutoArchive settings for individual folders that you don't want to use the default AutoArchive settings. The AutoArchive feature runs automatically whenever you start Outlook. Outlook checks the AutoArchive properties of each folder by date and moves old items to your archive file. Items that are moved to the Deleted Items folder are deleted.
 
