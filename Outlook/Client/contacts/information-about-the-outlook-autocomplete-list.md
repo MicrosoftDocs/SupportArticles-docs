@@ -79,7 +79,7 @@ To access the AutoComplete settings, follow the steps:
 
     :::image type="content" source="media/information-about-the-outlook-autocomplete-list/enable-the-autocomplete-feature-for-outlook-2003-and-2007.jpg" alt-text="Advanced E-mail Options window, Suggest names while completing To, Cc, and Bcc fields checked" border="false":::
 
-### How to import .nk2 files into Outlook 2010, Outlook 2013, Outlook 2016 and Outlook 2019
+### How to import .nk2 files into Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 
 Microsoft Office Outlook 2007 and earlier versions store the AutoComplete list in a nickname (.nk2) file on the disk. Outlook 2010, Outlook 2013, and Outlook 2016 store the AutoComplete list as a hidden message in your primary message store. Outlook 2010, Outlook 2013, Outlook 2016  and outlook 2019 let you import the older .nk2 files.
 
