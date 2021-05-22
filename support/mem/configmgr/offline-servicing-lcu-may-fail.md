@@ -46,7 +46,7 @@ Used together with the following LCUs:
 ## Workaround
 
 1. Download the LCU that you want to manually apply from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx). In the example that's described in the "Symptoms" section, the LCU is [KB 5000802](https://support.microsoft.com/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14).
-2. Use the **Dism** command to manually apply the LCU to the WIM image.
+2. Use the `Dism` command to manually apply the LCU to the WIM image.
 
 ### Workaround example
 
