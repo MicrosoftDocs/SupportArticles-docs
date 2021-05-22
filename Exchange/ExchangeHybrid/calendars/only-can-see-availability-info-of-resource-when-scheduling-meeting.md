@@ -52,7 +52,8 @@ To do this, follow these steps:
    3. Examine the output, and note the values that are returned for the `ResourceCapacity` and `ResourceCustom` properties.
 2. Use the values that you obtained in step 1 to update the `msExchResourceCapacity` and `msExchResourceDisplay` attributes of the objects in the on-premises Active Directory.
 
-Note: You may run into warning while you access such room or equipment mailboxes if they are attempted to be accessed using EAC or Exchange Management Shell in OnPremise server. In case this needs to be modified some properties at the OnPremise server, clear these attributes and perform the intended task using Exchange Management Shell or EAC. Upon completion you can update `msExchResourceCapacity` and  `msExchResourceDisplay` back to original values.
+> [!NOTE]
+> You may receive warnings when you access such room or equipment mailboxes if they're attempted to be accessed by using EAC or Exchange Management Shell in the on-premises Exchange server. If you need to modify some properties on the on-premises Exchange server, clear these attributes, and perform the intended task by using Exchange Management Shell or EAC. Upon completion you can update `msExchResourceCapacity` and `msExchResourceDisplay` back to the original values.
 
 ## More information
 
