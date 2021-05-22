@@ -229,13 +229,13 @@ Because this configuration is untested, we don't recommend it. If you have a lar
 
     > [!NOTE]
     > The placeholder <x.0> in this registry subkey represents your version of Microsoft Office. Use the appropriate value from the following list.
-    
-    Outlook 2019 = 16.0
-    Outlook 2016 = 16.0  
-    Outlook 2013 = 15.0  
-    Outlook 2010 = 14.0  
-    Outlook 2007 = 12.0  
-    Outlook 2003 = 11.0
+    >
+    > - Outlook 2019 = 16.0
+    > - Outlook 2016 = 16.0  
+    > - Outlook 2013 = 15.0  
+    > - Outlook 2010 = 14.0  
+    > - Outlook 2007 = 12.0  
+    > - Outlook 2003 = 11.0
 
 4. On the **Edit** menu, point to **New**, and then select **DWORD value**.
 5. Type *MaxNickNames*, and then press **Enter**.
