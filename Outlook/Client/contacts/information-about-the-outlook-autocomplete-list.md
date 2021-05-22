@@ -58,7 +58,7 @@ The limits are as follows:
 
 This section details how to enable or disable the AutoComplete feature.
 
-#### Outlook 2010, Outlook 2013, Outlook 2016 and Outlook 2019
+#### Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 
 To access the AutoComplete setting, follow these steps:
 
