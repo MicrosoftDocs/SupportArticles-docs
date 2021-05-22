@@ -41,20 +41,20 @@ To embed and link a named portion of an Excel worksheet into a Visio drawing, fo
 
 1. Open your worksheet in Microsoft Excel.
 2. Select the range of cells that you want to link to.
-3. On the Formulas menu, click **Define Name**.
-4. In the Define Name dialog box, type a unique name and then click **OK**.
+3. On the **Formulas** menu, click **Define Name**.
+4. In the **Define Name** dialog box, type a unique name, and then click **OK**.
 5. Save the Microsoft Excel Workbook.
-6. Start Microsoft Visio and open your drawing.
-7. On the Insert menu, click **Object**.
-8. In the Insert Object dialog box, click **Create from file** and then click Browse. Navigate to your Excel workbook, select it, and click Open.
-9. Click to select the **Link to file** check box, and then click OK.
+6. Start Microsoft Visio, and open your drawing.
+7. On the **Insert** menu, click **Object**.
+8. In the **Insert Object** dialog box, click **Create from file**, and then click **Browse**. Navigate to your Excel workbook, select it, and click **Open**.
+9. Select the **Link to file** check box, and then click **OK**.
 
    > [!NOTE]
    > Selecting the **Link to file** check box establishes a dynamic connection between the Visio drawing and another program's file. When changes occur in the original file, you can update the linked file so that the most current version of the object appears in the linked file.
 
 10. In the **Tell me what you want to do** box, type and click **Links**.
-11. In the Links dialog box, select the link to the Excel worksheet, click **Automatic** under Update, and then click **Change Source**.
-12. In the Item Name box, type the name defined in step 4, and then click **Open**.
+11. In the **Links** dialog box, select the link to the Excel worksheet, click **Automatic** under **Update**, and then click **Change Source**.
+12. In the **Item Name** box, type the name defined in step 4, and then click **Open**.
 13. Click **Update Now**, and then click **Close**.
 
 Now, only the named area of the Excel worksheet is dynamically linked to the Visio drawing.
