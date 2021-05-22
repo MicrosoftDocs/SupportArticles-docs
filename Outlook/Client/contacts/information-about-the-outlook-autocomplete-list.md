@@ -81,7 +81,7 @@ To access the AutoComplete settings, follow the steps:
 
 ### How to import .nk2 files into Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 
-Microsoft Office Outlook 2007 and earlier versions store the AutoComplete list in a nickname (.nk2) file on the disk. Outlook 2010, Outlook 2013, and Outlook 2016 store the AutoComplete list as a hidden message in your primary message store. Outlook 2010, Outlook 2013, Outlook 2016  and outlook 2019 let you import the older .nk2 files.
+Microsoft Office Outlook 2007 and earlier versions store the AutoComplete list in a nickname (.nk2) file on the disk. Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019 store the AutoComplete list as a hidden message in your primary message store. Outlook 2010, Outlook 2013, Outlook 2016, and outlook 2019 let you import the older .nk2 files.
 
 For more information about how to import .nk2 files in Outlook 2010, see [Import Auto-Complete List from another computer](https://support.microsoft.com/office/import-or-copy-the-auto-complete-list-to-another-computer-83558574-20dc-4c94-a531-25a42ec8e8f0).
 
@@ -89,9 +89,9 @@ For more information about how to import .nk2 files in Outlook 2010, see [Impor
 
 The steps to export and import the AutoComplete list are different, depending on the version of Outlook that you're using.
 
-##### Outlook 2010, Outlook 2013, Outlook 2016 and Outlook 2019
+##### Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 
-To copy the AutoComplete list in Outlook 2010, Outlook 2013, Outlook 2016 and Outlook 2019 follow these steps:
+To copy the AutoComplete list, follow these steps:
 
 **Step 1**
 
@@ -162,9 +162,9 @@ Selecting **X** will prevent that entry (name) from appearing in the AutoComplet
 
 This section explains how to delete the AutoComplete list.
 
-##### Outlook 2010, Outlook 2013, Outlook 2016 and Outlook 2019
+##### Outlook 2010, Outlook 2013, Outlook 2016, and Outlook 2019
 
-Use one of the following two methods to delete the AutoComplete list in Outlook 2010, Outlook 2013, and Outlook 2016.
+Use one of the following two methods to delete the AutoComplete list.
 
 **Method 1**
 
