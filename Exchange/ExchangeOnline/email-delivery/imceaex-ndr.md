@@ -40,11 +40,6 @@ To create an X500 proxy address for the old `LegacyExchangeDN` attribute for the
 - Replace "+20" with a blank space.
 - Replace "+28" with an opening parenthesis character.
 - Replace "+29" with a closing parenthesis character.
-- Replace "+2C" with a comma character.
-- Replace "+3F" with a question mark character.
-- Replace "+5F" with an underscore character
-- Replace "+40" with an @ character
-- Replace "+2E" with a period character.
 - Delete the "IMCEAEX-" string.
 - Delete the "@mgd.domain.com" string.
 - Add "X500:" at the beginning.
@@ -54,6 +49,12 @@ After you make these changes, the proxy address for the example in the "Symptoms
 X500:/O=MMS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=User-addd-4b03-95f5-b9c9a421957358d
 
 > [!NOTE]
-> The most common items will be replaced. However, there may be other symbols in the `LegacyExchangeDN` attribute that will also be changed from the way that they appear in the NDR. Generally, any character pattern of "+##" must be replaced with the corresponding ASCII symbol.
+> The most common items will be replaced. However, there may be other symbols in the `LegacyExchangeDN` attribute that will also be changed from the way that they appear in the NDR. Generally, any character pattern of "+##" must be replaced with the corresponding ASCII symbol. For example:
+>
+> - Replace "+2C" with a comma (,) character.
+> - Replace "+2E" with a period (.) character.
+> - Replace "+3F" with a question mark (?) character.
+> - Replace "+40" with an at symbol (@)
+> - Replace "+5F" with an underscore (_) character
 
 If you are unfamiliar with the ASCII code in question, see [ASCII Character Codes Chart 1](https://msdn.microsoft.com/library/60ecse8t%28v=vs.80%29.aspx).
