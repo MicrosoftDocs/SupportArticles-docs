@@ -56,12 +56,17 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
    New-Mailbox -InactiveMailbox $InactiveMailbox.DistinguishedName -Name "<name of inactive mailbox>" -DisplayName "<DisplayName of inactive mailbox>" -MicrosoftOnlineServicesID <alias@*.onmicrosoft.com> -Password (ConvertTo-SecureString -String <PasswordString> -AsPlainText -Force) -ResetPasswordOnNextLogon $true
    ```
 
-3. Connect to the exchange management shell on your on-premises server and collect the `ObjectGUID` attribute.   You can convert `ObjectGUID` to `ImmutableID` by using the following command in Windows PowerShell:
+3. Connect to the Active Directory Powershell Module and collect the `ObjectGUID` attribute.  
+
+    ```powershell
+     Get-ADUser -Identity <identity of ADuser account> -Properties "ObjectGUID"
+     ```
+4.    You can convert `ObjectGUID` to `ImmutableID` by using the following command in Windows PowerShell:
 
    ```powershell
    [system.convert]::ToBase64String(([GUID]"<ObjectGUID>").tobytearray())
    ```
-  4. Obtain the immutable ID.
+      Obtain the immutable ID.
   
 5. Connect to Azure AD and Set the `ImmutableID` parameter in Azure AD :
 
