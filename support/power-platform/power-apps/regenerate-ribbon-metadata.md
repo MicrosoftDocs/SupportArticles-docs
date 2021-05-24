@@ -9,7 +9,7 @@ ms.date: 05/19/2021
 
 _Applies to:_ &nbsp; Power Apps  
 
-Missing or incorrect ribbon metadata is often the cause of the following ribbon issues:
+The following ribbon command bar issues are often caused by missing or incorrect ribbon metadata: 
 
 - A button in the command bar is hidden when it should not be
 - A button in the command bar is visible when it should not be
