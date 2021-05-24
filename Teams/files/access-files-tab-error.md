@@ -19,6 +19,16 @@ search.appverid:
 ---
 # "There was a problem reaching this app" error when selecting the Files tab in a Teams channel
 
+## Symptoms
+
+When you select the **Files** tab in a team channel in Microsoft Teams, you receive the following error message:
+
+> There was a problem reaching this app
+
+:::image type="content" source="media/access-files-tab-error/access-file-error.png" alt-text="Screenshot of the error when selecting the Files tab.":::
+
+## Cause
+
 This error occurs if the Microsoft 365 group associated with the team doesn't have any owner.
 
 ## Resolution
