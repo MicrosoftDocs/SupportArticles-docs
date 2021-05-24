@@ -74,7 +74,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
     Set-MsolUser -UserPrincipalName <UPN> -ImmutableId <ImmutableId>
     ```
 
-6. Run a Azure AD Connect delta sync. This brings the original Azure AD account into the scope of Azure AD Connect.
+6. Run an Azure AD Connect delta sync. This brings the original Azure AD account into the scope of Azure AD Connect.
 
 8. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
 
