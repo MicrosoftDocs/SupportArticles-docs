@@ -22,12 +22,6 @@ ms.author: danis
 
 [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 
-## Top issues
-
-[!INCLUDE [support-disclaimer](../../includes/virtual-machines-linux-troubleshoot-deploy-vm-top.md)]
-
-For other VM deployment issues and questions, see [Troubleshoot deploying Linux virtual machine issues in Azure](troubleshoot-deploy-vm-linux.md).
-
 ## Provisioning Troubleshooting
 
 A typical provisioning failure scenario occurs after you create a custom image, then deploy a VM from it, you then experience unto 40mins where the VM status is showing `creating`, and you see this error message:
@@ -69,17 +63,17 @@ Commonly, provisioning failures can happen for multiple reasons, such as:
 
 - Missing provisioning /incorrectly configured agent
 
-  - You will need to ensure an agent is present and is working correctly, you should be using [cloud-init](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init) or if your image will not support this, you can review these [steps](https://docs.microsoft.com/azure/virtual-machines/linux/no-agent).
+  - You will need to ensure an agent is present and is working correctly, you should be using [cloud-init](/azure/virtual-machines/linux/using-cloud-init) or if your image will not support this, you can review these [steps](/azure/virtual-machines/linux/no-agent).
 
 - Incorrect image configuration
 
-  - We have guidance on how images should be setup with cloud-init and other [Azure image requirements](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic), please check this.
+  - We have guidance on how images should be setup with cloud-init and other [Azure image requirements](/azure/virtual-machines/linux/create-upload-generic), please check this.
 
 ### Troubleshoot provisioning failures
 
 To identify the reason for failed provisioning you will need to start with the serial log, this is available to you by deploying the VM with Azure Boot diagnostics.
 
-You will need to deploy a new VM with [boot diagnostics enabled](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-monitor#enable-boot-diagnostics) for the VM with the failing image to access provisioning events in the serial log.
+You will need to deploy a new VM with [boot diagnostics enabled](/azure/virtual-machines/linux/tutorial-monitor#enable-boot-diagnostics) for the VM with the failing image to access provisioning events in the serial log.
 
 ```bash
 # create resource group
@@ -165,15 +159,15 @@ In waagent.log:
 "UDF driver Blacklisted 2020/09/11 19:16:40.240016 ERROR Daemon Provisioning failed: [ProtocolError] [CopyOvfEnv] Error mounting dvd: [OSUtilError] Failed to mount dvd deviceInner error: [mount -o ro -t udf,iso9660 /dev/sr0 /mnt/cdrom/secure] returned 32: mount: /mnt/cdrom/secure: wrong fs type, bad option, bad superblock on /dev/sr0, missing codepage or helper program, or other error."
 ```
 
-**Cause**: The UDF driver is not loaded in the kernel, this is required for the VM to provision, see [image requirements](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic).
+**Cause**: The UDF driver is not loaded in the kernel, this is required for the VM to provision, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
 When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is usually presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest which contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly
 
-Since the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel in order to successfully mount this disk. This is referenced in Microsoft documentation on Linux images: https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic. For this VM, logs indicate that the provisioning disk failed to mount, which caused VM provisioning to fail. The most likely reason is due to missing or blocked UDF drivers. 
+Since the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel in order to successfully mount this disk. This is referenced in Microsoft [documentation on Linux images](/azure/virtual-machines/linux/create-upload-generic). For this VM, logs indicate that the provisioning disk failed to mount, which caused VM provisioning to fail. The most likely reason is due to missing or blocked UDF drivers.
 
 **Solution**: Ensure the UDF driver is configured to be loaded in the kernel.
 
-A common way for UDF drivers to be blocked is through configs within `/etc/modprobe.d/`. Please work with the customer/image owner to ensure that Linux UDF drivers are present and not blocked. Please consult this article on blocking/unblocking kernel drivers: https://linux.die.net/man/5/modprobe.d.
+A common way for UDF drivers to be blocked is through configs within `/etc/modprobe.d/`. Please work with the customer/image owner to ensure that Linux UDF drivers are present and not blocked. Please consult [this article on blocking/unblocking kernel drivers](https://linux.die.net/man/5/modprobe.d).
 
 #### unicode characters in VM tags issue
 
@@ -223,7 +217,7 @@ Cloud-init versions >= 20.3 contain a fix which falls back and executes `dhclien
 
 ### Getting more logs
 
-If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](https://docs.microsoft.com/cli/azure/ext/vm-repair/vm/repair?view=azure-cli-latest#ext_vm_repair_az_vm_repair_create) which will mount the OS disk of the VM that failed to provision, to another VM.
+If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](https://docs.microsoft.com/cli/azure/ext/vm-repair/vm/repair?view=azure-cli-latest#ext_vm_repair_az_vm_repair_create) which will mount the OS disk of the VM that failed to provision, to another VM.
 
 ```bash
 az vm repair create  \
@@ -237,7 +231,7 @@ az vm repair create  \
 
 ### Understanding the cloud-init.log
 
-When you have access to the cloud-init logs, review the [cloud-init troubleshooting documentation](https://docs.microsoft.com/azure/virtual-machines/linux/cloud-init-troubleshooting).
+When you have access to the cloud-init logs, review the [cloud-init troubleshooting documentation](/azure/virtual-machines/linux/cloud-init-troubleshooting).
 
 ### Getting Support
 
@@ -322,18 +316,18 @@ The cluster does not have free resources.
 
 ### The cluster cannot support the requested VM size
 
-* Retry the request using a smaller VM size.
-* If the size of the requested VM cannot be changed:
-  * Stop all the VMs in the availability set. Click **Resource groups** > your resource group > **Resources** > your availability set > **Virtual Machines** > your virtual machine > **Stop**.
-  * After all the VMs stop, create the VM in the desired size.
-  * Start the new VM first, and then select each of the stopped VMs and click Start.
+- Retry the request using a smaller VM size.
+- If the size of the requested VM cannot be changed:
+  - Stop all the VMs in the availability set. Click **Resource groups** > your resource group > **Resources** > your availability set > **Virtual Machines** > your virtual machine > **Stop**.
+  - After all the VMs stop, create the VM in the desired size.
+  - Start the new VM first, and then select each of the stopped VMs and click Start.
 
 ### The cluster does not have free resources
 
-* Retry the request later.
-* If the new VM can be part of a different availability set
-  * Create a VM in a different availability set (in the same region).
-  * Add the new VM to the same virtual network.
+- Retry the request later.
+- If the new VM can be part of a different availability set
+  - Create a VM in a different availability set (in the same region).
+  - Add the new VM to the same virtual network.
 
 ## FAQ
 
@@ -361,9 +355,9 @@ You can check the availability from the [Products available by region table](htt
 
 When a VM is running, it is deployed to a physical server. The physical servers in Azure regions are grouped in clusters of common physical hardware. Resizing a VM that requires the VM to be moved to different hardware clusters is different depending on which deployment model was used to deploy the VM.
 
-* VMs deployed in Classic deployment model, the cloud service deployment must be removed and redeployed to change the VMs to a size in another size family.
+- VMs deployed in Classic deployment model, the cloud service deployment must be removed and redeployed to change the VMs to a size in another size family.
 
-* VMs deployed in Resource Manager deployment model, you must stop all VMs in the availability set before changing the size of any VM in the availability set.
+- VMs deployed in Resource Manager deployment model, you must stop all VMs in the availability set before changing the size of any VM in the availability set.
 
 ### The listed VM size is not supported while deploying in Availability Set
 
@@ -383,5 +377,5 @@ Yes. You can add an existing classic VM to a new or existing Availability Set. F
 
 If you encounter issues when you start a stopped Linux VM or resize an existing Linux VM in Azure, see [Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Linux Virtual Machine in Azure](./troubleshoot-deploy-vm-linux.md?toc=/azure/virtual-machines/linux/toc.json).
 
-* [Supportability of adding Azure VMs to an existing availability set](/azure/virtual-machines/virtual-machines-availability-set-supportability)
-* [Redeploy Linux virtual machine to new Azure node](/azure/virtual-machines/redeploy-to-new-node-linux)
+- [Supportability of adding Azure VMs to an existing availability set](/azure/virtual-machines/virtual-machines-availability-set-supportability)
+- [Redeploy Linux virtual machine to new Azure node](/azure/virtual-machines/redeploy-to-new-node-linux)
