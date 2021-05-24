@@ -19,7 +19,7 @@ If Windows Search is unresponsive or the search results don't appear as expected
 
 If you're running Windows 10 May 2019 Update (version 1903) or later versions and Windows can detect a problem, we'll run the Search troubleshooter automatically. This troubleshooter will reset Windows Search back to the default experience. View your troubleshooter history under **Settings** > **Update & Security** > **Troubleshoot** > **View History**. Follow the steps below if your issue is still not resolved.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4520146
 
 ## Check for updates

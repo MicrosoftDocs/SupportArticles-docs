@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes an issue in which shadow copies are deleted on Windows Server when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;977521
 
 ## Symptoms

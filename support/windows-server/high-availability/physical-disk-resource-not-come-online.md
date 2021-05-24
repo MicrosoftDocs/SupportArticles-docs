@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article helps solve an issue where a physical disk resource doesn't come online on a cluster node.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 981475
 
 ## Symptoms

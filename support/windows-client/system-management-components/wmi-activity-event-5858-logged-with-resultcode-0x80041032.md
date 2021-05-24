@@ -17,19 +17,21 @@ ms.technology: windows-client-system-management-components
 
 This article provides a resolution to solve the WMI-Activity event ID 5858 that's logged with ResultCode = 0x80041032 in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3124914
 
 ## Symptoms
 
 When using Windows Server 2012 R2 with applications that issue WMI queries using `IWbemServices:ExecQuery`, the administrator may observe the following event in Event Viewer:
 
-> Log Name:  Microsoft-Windows-WMI-Activity/Operational  
-Source:    WMI-Activity  
-Event ID:  5858  
-Level:     Error  
-Id = {guid}; ClientMachine = \<computer>; User = \<user>; ClientProcessId = \<process ID>; Component = Unknown; Operation = Start IWbemServices::ExecQuery - \<WMI namespace>: \<Select Query Statement>; ResultCode = 0x80041032; PossibleCause = Unknown  
+```output
+Log Name:  Microsoft-Windows-WMI-Activity/Operational
+Source:    WMI-Activity
+Event ID:  5858
+Level:     Error
+Id = {guid}; ClientMachine = <computer>; User = <user>; ClientProcessId = <process ID>; Component = Unknown; Operation = Start IWbemServices::ExecQuery - <WMI namespace>: <Select Query Statement>; ResultCode = 0x80041032; PossibleCause = Unknown
 where 0x80041032 indicates WBEM_E_CALL_CANCELLED.
+```
 
 > [!NOTE]
 > This event can occur with many different ResultCode values. The problem described in this article only applies when `ResultCode = 0x80041032 (WBEM_E_CALL_CANCELLED)`.

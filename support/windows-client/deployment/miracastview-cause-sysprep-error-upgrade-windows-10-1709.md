@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides workarounds to an issue in which sysprep fails with an error after you upgrade a computer to Windows 10 Version 1709.
 
-_Original product version:_ &nbsp; Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4057974
 
 ## Symptoms

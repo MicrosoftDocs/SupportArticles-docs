@@ -17,19 +17,21 @@ ms.technology: windows-server-administration-management-development
 
 This article helps fix an issue that occurs when you use source-initiated event forwarding to send events to a Microsoft Windows Server event collector.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4494462
 
 ## Symptoms
 
 You configure a Windows Server 2019 or Windows Server 2016 computer as an event collector. You also configure a source-initiated subscription (and related Group Policy Objects) for event forwarding. However, the events are not forwarded and the event source computers log event messages that resemble the following:
 
-> Log Name: Microsoft-Windows-Forwarding/Operational  
-> Event ID: 105  
-> Task Category: None  
-> User: NETWORK SERVICE  
-> Description:  
-> The forwarder is having a problem communicating with subscription manager at address `http://W19SRV.contoso.com:5985/wsman/SubscriptionManager/WEC`. Error code is 2150859027 and Error Message is The WinRM client sent a request to an HTTP server and got a response saying the requested HTTP URL was not available. This is usually returned by a HTTP server that does not support the WS-Management protocol. </f:Message></f:WSManFault>.
+```output
+Log Name: Microsoft-Windows-Forwarding/Operational
+Event ID: 105
+Task Category: None
+User: NETWORK SERVICE
+Description:
+The forwarder is having a problem communicating with subscription manager at address http://W19SRV.contoso.com:5985/wsman/SubscriptionManager/WEC. Error code is 2150859027 and Error Message is The WinRM client sent a request to an HTTP server and got a response saying the requested HTTP URL was not available. This is usually returned by a HTTP server that does not support the WS-Management protocol. </f:Message></f:WSManFault>.
+```
 
 ## Cause
 

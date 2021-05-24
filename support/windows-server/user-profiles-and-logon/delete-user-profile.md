@@ -15,7 +15,7 @@ ms.technology: windows-server-user-profiles
 ---
 # Delete a user profile in Windows Server 2008 and later
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2462308
 
 ## Steps to delete a user profile

@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a step-by-step description of how to configure the external connector for a Windows Server terminal server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887432
 
 ## Introduction

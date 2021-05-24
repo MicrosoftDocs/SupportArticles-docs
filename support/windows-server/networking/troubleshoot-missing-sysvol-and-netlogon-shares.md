@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides the steps to troubleshoot the missing `SYSVOL` and `Netlogon` shares in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2958414
 
 ## Symptoms

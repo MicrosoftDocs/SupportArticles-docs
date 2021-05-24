@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides the steps to change the Active Directory Federation Services 2.0 service communications certificate.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2921805
 
 ## Symptoms  

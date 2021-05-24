@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article describes an issue that blocks you from deleting a broken recovery checkpoint for a virtual machine in System Center 2012 Data Protection Manager.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3059372
 
 ## Symptoms

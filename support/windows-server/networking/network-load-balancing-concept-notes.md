@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides the information about the Network Load Balancing.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 556067
 
 ## Summary

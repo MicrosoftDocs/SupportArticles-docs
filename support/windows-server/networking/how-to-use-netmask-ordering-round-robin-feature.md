@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes the netmask ordering feature and the round robin feature and how to use these features together.
 
-_Original product version:_ &nbsp;Window Server 2003  
+_Applies to:_ &nbsp; Window Server 2003  
 _Original KB number:_ &nbsp;842197
 
 ## Summary

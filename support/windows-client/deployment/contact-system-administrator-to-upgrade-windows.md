@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides help to fix an error that occurs during Windows 10 upgrade: Contact your system administrator to upgrade Windows Server or Enterprise Editions.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3188105
 
 ## Symptoms

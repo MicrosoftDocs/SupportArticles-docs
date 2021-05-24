@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article provides a workaround to an error "0x0000052e" that occurs when you try to install a network printer in Windows 7.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2269296
 
 ## Symptoms

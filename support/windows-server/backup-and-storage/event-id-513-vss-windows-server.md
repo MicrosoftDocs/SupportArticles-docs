@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a workaround to Event ID 513 when running VSS in Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 3209092
 
 ## Symptoms

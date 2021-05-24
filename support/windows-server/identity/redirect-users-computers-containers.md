@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 You can use redirusr and redircmp to redirect user, computer, and group accounts that are created by earlier-version APIs. So they are put in admin-specified organizational unit (OU) containers.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324949
 
 ## Summary
@@ -201,7 +201,7 @@ If Exchange Server 2000 and Exchange Server 2003 `setup /domainprep` is unsucces
 
 The following data appears in the Exchange Server 2000 Setup log that is parsed with log parser. Exchange Server 2003 should be similar.
 
-```console
+```output
 [HH:MM:SS] Completed DomainPrep of Microsoft Exchange 2000 component
 [HH:MM:SS] ScGetExchangeServerGroups (K:\admin\src\libs\exsetup\dsmisc.cxx:301) Error code 0X80072030 (8240): There is no such object on the server.
 [HH:MM:SS] ScCreateExchangeServerGroups (K:\admin\src\libs\exsetup\dsmisc.cxx:373) Error code 0X80072030 (8240): There is no such object on the server.

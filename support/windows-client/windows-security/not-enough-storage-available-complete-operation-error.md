@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article provides a resolution for the error "Not enough storage is available to complete this operation", when you use a domain controller to join a computer to a domain.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 935744
 
 ## Symptoms

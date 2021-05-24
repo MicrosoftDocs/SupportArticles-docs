@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an error 0x000006D9 when you try to share a printer on a computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2123653
 
 ## Symptoms

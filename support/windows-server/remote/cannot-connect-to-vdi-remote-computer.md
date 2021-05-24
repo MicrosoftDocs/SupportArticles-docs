@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an issue where Remote Desktop can't connect to a Virtual Desktop Infrastructure (VDI)-based remote computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2820155
 
 ## Symptoms

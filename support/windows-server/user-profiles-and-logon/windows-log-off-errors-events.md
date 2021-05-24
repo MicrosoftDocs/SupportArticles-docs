@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article contains a step-by-step method to help you resolve the log-off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10  
 _Original KB number:_ &nbsp; 837115
 
 ## Introduction
@@ -87,10 +87,6 @@ To use the Microsoft User Profile Hive Cleanup Service (UPHClean), follow these 
 >
 > - Download UPHClean to your computer again. If you are trying to install UPHClean from a computer on your company's network, copy the UPHClean installer (UPHClean-Setup.msi) to your computer first. Then follow the steps in this section again to install UPHClean.
 > - Install the latest run-time components for Visual C++ applications. Then follow the steps in this section again to install UPHClean. If you are using Windows NT 4.0, restart your computer after you install the latest run-time components for Visual C++ applications.
-
-For more information about how to install the latest run-time components for Visual C++ applications, click the following article number to view the article in the Microsoft Knowledge Base:
-
- [259403](https://support.microsoft.com/help/259403) How to obtain the Visual C++ 6.0 run-time components
 
 ### Verification
 

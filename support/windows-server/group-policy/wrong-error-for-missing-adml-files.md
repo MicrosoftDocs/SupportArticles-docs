@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to an issue where wrong error messages are returned when .adml files are missing.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2688272
 
 ## Symptoms

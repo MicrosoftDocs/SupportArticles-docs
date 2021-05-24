@@ -15,17 +15,19 @@ _Original KB number:_ &nbsp; 2634635
 
 On a computer that's running IIS 7.0 or 7.5, the message will look similar to the following example:
 
-> Log Name: System  
-> Source: Microsoft-Windows-WAS  
-> Date: 1/1/2011 12:00:00 AM  
-> Event ID: 5013  
-> Task Category: None  
-> Level: Warning  
-> Keywords: Classic  
-> User: N/A  
-> Computer: SERVER  
-> Description:  
-> A process serving application pool DefaultAppPool exceeded time limits during shut down. The process id was 1111.
+```output
+Log Name: System
+Source: Microsoft-Windows-WAS
+Date: 1/1/2011 12:00:00 AM
+Event ID: 5013
+Task Category: None
+Level: Warning
+Keywords: Classic
+User: N/A
+Computer: SERVER
+Description:
+A process serving application pool DefaultAppPool exceeded time limits during shut down. The process id was 1111.
+```
 
 ## Cause
 

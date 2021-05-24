@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a workaround for an issue where IP address and default gateway settings are assigned incorrectly.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2473489
 
 ## Symptoms

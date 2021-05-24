@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround for an issue where Windows Task Manager shows incorrect CPU speed when Hyper-V is enabled.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Window Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Window Server 2012 R2  
 _Original KB number:_ &nbsp; 3003081
 
 ## Symptoms

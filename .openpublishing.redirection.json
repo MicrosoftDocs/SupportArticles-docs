@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-windows.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-windows",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/windows-server/identity/gpo-processing-failures-across-foreast.md",
       "redirect_url": "/troubleshoot/windows-server/identity/rsop-not-supported-across-multiple-forests",
       "redirect_document_id": true
@@ -793,6 +803,16 @@
     {
       "source_path": "support/sql/connect/solving-connectivity-errors.md",
       "redirect_url": "/troubleshoot/sql/connect/resolving-connectivity-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/active-directory/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/connection-adfs-failed-set-msoladfscontex",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/active-directory/convert-domain-federated.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/convert-domain-federated",
       "redirect_document_id": true
     },
     {

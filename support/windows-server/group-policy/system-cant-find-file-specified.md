@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to errors that occur when you use the Adprep tool together with the `/gpprep` argument.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2743345
 
 ## Symptoms
@@ -84,21 +84,21 @@ The infrastructure operations master role holder in this domain implements a dis
 
 1. Locate the infrastructure master role holder in the domain. To do this, run the command: `netdom.exe query fsmo`.
 
-2. Disable incoming and outgoing (also known as *inbound and outbound*) replication on the infrastructure master server. To do this, run the following command:
+2. Disable incoming and outgoing (also known as *inbound and outbound*) replication on server with the Infrastructure Master role. To do this, run the following command:
 
     ```console
     repadmin.exe /options <infrastructure_master_name> +DISABLE_OUTBOUND_REPL +DISABLE_INBOUND_REPL
     ```
 
-3. Log on to the infrastructure master server, and modify its Domain Name System (DNS) suffix. To do this, follow these steps:
+3. Log on to server with the Infrastructure Master role, and modify its Domain Name System (DNS) suffix. To do this, follow these steps:
     1. Start SYSDM.CPL, select **OK**, select **Change**, and then select **More**  
     2. Set the suffix in the **Primary DNS suffix of this computer** box to match the Active Directory Domain Services (AD DS) domain name instead of the current disjointed name.
 
-4. Restart and log on to the infrastructure master server, and then run the command: `adprep.exe /domainprep /gpprep`.
+4. Restart and log on to server with the Infrastructure Master role, and then run the command: `adprep.exe /domainprep /gpprep`.
 
-5. Use SYSDM.CPL, and then follow the steps in step 3, except this time in step 3B, you must set the suffix in the **Primary DNS suffix of this computer** box to match the original disjoint name on the infrastructure master server.
+5. Use SYSDM.CPL, and then follow the steps in step 3, except this time in step 3B, you must set the suffix in the **Primary DNS suffix of this computer** box to match the original disjoint name on server with the Infrastructure Master role.
 
-6. Restart and then log on to the infrastructure master server, and enable inbound and outbound replication. To do this, use the following command:
+6. Restart and then log on to server with the Infrastructure Master role, and enable inbound and outbound replication. To do this, use the following command:
 
     ```console  
     repadmin.exe /options <infrastructure_master_name> -DISABLE_OUTBOUND_REPL -DISABLE_INBOUND_REPL

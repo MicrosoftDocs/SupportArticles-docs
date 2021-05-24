@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a resolution for the issue that devices can't connect to mobile broadband after over-the-air update from mobile operator.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3160433
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article provides a resolution for the issue that you are unable to view Roles and Features and receive error code 0x800706BE in Server Manager.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2461206
 
 ## Symptoms

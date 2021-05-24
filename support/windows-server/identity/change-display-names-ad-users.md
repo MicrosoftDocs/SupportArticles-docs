@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to change display names of Active Directory (AD) users.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250455
 
 ## Summary

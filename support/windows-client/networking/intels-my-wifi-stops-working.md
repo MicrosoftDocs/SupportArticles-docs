@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides help to fix an issue where Intel's My WiFi Technology stops working after your computer resumes from sleep or hibernate.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2560995
 
 ## Symptoms

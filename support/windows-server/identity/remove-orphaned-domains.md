@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # How to remove orphaned domains from Active Directory  
 
-_Original product version:_ &nbsp;Windows 10, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;230306
 
 ## Summary

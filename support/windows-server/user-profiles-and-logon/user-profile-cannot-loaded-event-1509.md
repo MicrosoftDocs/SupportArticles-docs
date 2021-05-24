@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article provides resolutions to fix the error "User Profile Service failed the logon. User profile cannot be loaded".
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2536571
 
 ## Symptoms

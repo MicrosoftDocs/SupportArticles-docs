@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article provides a workaround for an issue where renaming a user account doesn't automatically change the profile path.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2454362
 
 ## Summary

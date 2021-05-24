@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2012-based computer or a Windows Server 2012 R2-based computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2899011
 
 ## Summary
@@ -172,4 +172,4 @@ Microsoft Services for NFS provides a file-sharing solution for enterprises that
 
 For more information about currently available hotfixes for the File Services technologies in Windows Server 2008 and Windows Server 2008 R2, see [KB2473205](https://support.microsoft.com/help/2473205).
 
-For more information about performance tuning, see the **Tuning parameters for SMB file servers** section in [Performance Tuning for File Servers](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/file-server/).
+For more information about performance tuning, see the **Tuning parameters for SMB file servers** section in [Performance Tuning for File Servers](/windows-server/administration/performance-tuning/role/file-server/).

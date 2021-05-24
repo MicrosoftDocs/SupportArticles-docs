@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a resolution for troubleshooting AD Replication error 1908: Could not find the domain controller for this domain.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2712026
 
 >[!NOTE]

@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides a resolution to solve the event ID 158 that's logged for identical disk GUIDs in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2983588
 
 ## Symptoms

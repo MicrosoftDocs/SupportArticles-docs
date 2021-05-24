@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a resolution for the issue that simple volumes may become inaccessible if a power loss occurs shortly after creation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2001877
 
 ## Symptoms

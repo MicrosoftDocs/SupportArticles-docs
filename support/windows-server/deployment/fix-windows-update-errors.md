@@ -16,7 +16,7 @@ adobe-target: true
 ---
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
-_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 947821
 
 ## Symptom

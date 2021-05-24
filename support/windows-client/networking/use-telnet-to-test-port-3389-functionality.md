@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how to use Telnet to test port 3389 functionality.
 
-_Original product version:_ &nbsp; Windows 10 - all editions
+_Applies to:_ &nbsp; Windows 10 - all editions
 _Original KB number:_ &nbsp; 187628
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a workaround for an issue where the `NBTSTAT -A` command doesn't resolve computer name with Domain Name System (DNS).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 249874
 
 ## Symptoms

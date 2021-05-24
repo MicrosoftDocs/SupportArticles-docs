@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround to an issue in which applications freeze when they try to access the same file on a network drive in Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4039810
 
 ## Symptoms

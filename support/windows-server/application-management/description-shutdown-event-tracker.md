@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes the Shutdown Event Tracker.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 293814
 
 ## Summary

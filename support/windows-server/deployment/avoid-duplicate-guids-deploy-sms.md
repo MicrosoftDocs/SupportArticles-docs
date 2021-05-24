@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to avoid duplicate globally unique identifiers (GUIDs) when you use disk imaging or cloning to deploy the Microsoft Systems Management Server (SMS) 2003 clients.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;828367
 
 > [!IMPORTANT]

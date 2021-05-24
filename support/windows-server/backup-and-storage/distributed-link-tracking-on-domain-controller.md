@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes how you can use the Distributed Link Tracking services in Windows to track the creation and movement of linked files across NTFS-formatted volumes and servers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312403
 
 ## An overview of Distributed Link Tracking
@@ -167,7 +167,7 @@ In the case of the link-tracking objects, marking the object for deletion only a
 To use this script:
 1. Copy all of the text between the <Start Copy Here> tag and the <End Copy Here> tag in this article, and then paste the text to a ASCII text editor file (for example, a Microsoft Notepad file).
 2. Save the file as "Dltpurge.vbs".
-3 Complete the procedure that is described in [How to delete Distributed Link Tracking objects](https://docs.microsoft.com/troubleshoot/windows-server/backup-and-storage/distributed-link-tracking-on-domain-controller#how-to-delete-distributed-link-tracking-objects)
+3 Complete the procedure that is described in [How to delete Distributed Link Tracking objects](/troubleshoot/windows-server/backup-and-storage/distributed-link-tracking-on-domain-controller#how-to-delete-distributed-link-tracking-objects)
 
 
 ```vbscript

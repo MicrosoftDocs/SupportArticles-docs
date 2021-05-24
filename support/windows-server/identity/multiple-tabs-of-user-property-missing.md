@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where multiple tabs are missing when you view user properties in Active Directory Users and Computers.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2028835
 
 ## Symptoms

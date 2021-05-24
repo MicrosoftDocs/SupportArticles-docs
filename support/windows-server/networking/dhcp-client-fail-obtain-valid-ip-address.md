@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps fix an issue where a DHCP client can't get a DHCP-assigned IP address.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 167014
 
 ## Symptoms

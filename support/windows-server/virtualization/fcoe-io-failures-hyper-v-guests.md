@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to an issue where FCoE IO failures on Hyper-V guests for Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4557869
 
 ## Symptoms

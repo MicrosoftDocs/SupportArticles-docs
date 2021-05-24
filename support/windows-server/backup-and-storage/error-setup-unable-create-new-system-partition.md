@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides workarounds for an issue where you can't install Windows in the boot LUN from SAN configuration when there are multiple physical paths to the boot LUN.
 
-_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp;2826787
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to resolve a problem that occurs when SMB signing is disabled for the Workstation or Server service on a domain controller.
 
-_Original product version:_ &nbsp;Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp;839499
 
 ## Summary

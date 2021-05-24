@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes the best practices for using dynamic disks on Windows Server 2003-based computers.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816307
 
 ## Summary

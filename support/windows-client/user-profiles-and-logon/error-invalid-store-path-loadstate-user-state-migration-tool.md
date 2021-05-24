@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article helps to fix the error "Invalid store path" during the LoadState process when you use the User State Migration Tool.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2892374
 
 ## Symptoms

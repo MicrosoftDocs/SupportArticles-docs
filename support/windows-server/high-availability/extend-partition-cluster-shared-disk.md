@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes how to add additional storage capacity to a cluster if the underlying hardware RAID supports capacity extension technology.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 304736
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This step-by-step article describes how to configure a computer running Windows Server 2003 with TCP/IP networking while NetBIOS is turned off.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323357
 
 ## Summary

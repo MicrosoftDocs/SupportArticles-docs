@@ -7,6 +7,8 @@ ms.reviewer: apinho
 ---
 # SmartCard PIN prompt appears behind modal dialog box in Internet Explorer 9 and later versions
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a solution to fix the problem that the password can't be typed when the smart card pin is prompted by changing the registry.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

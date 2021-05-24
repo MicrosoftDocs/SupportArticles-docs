@@ -2,7 +2,7 @@
 title: Access checks using APIs return incorrect results
 description: Provides resolutions for an issue where access checks using Windows APIs return incorrect results.
 ms.date: 2/7/2021
-author: xl989
+author: v-lianna
 ms.author: v-lianna
 manager: dscontentpm
 audience: itpro
@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 ---
 # Access checks using Windows APIs return incorrect results
 
-_Original product version:_ &nbsp;Windows Server 2019, all editions  
+_Applies to:_ &nbsp; Windows Server 2019, all editions  
 _Original KB number:_ &nbsp;933071
 
 > [!NOTE]

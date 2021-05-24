@@ -130,6 +130,10 @@
       href: ./identity/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
       href: ./identity/workplace-join-fail-error-0x80072ee7.md
+    - name: Fail to connect ADFS service
+      href: ./identity/connection-adfs-failed-set-msoladfscontex.md
+    - name: Fail to convert domain to Standard
+      href: ./identity/convert-domain-federated.md
     - name: Restore IIS and clean up Active Directory
       href: ./identity/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
@@ -793,7 +797,7 @@
     - name: Extend a data volume
       href: ./backup-and-storage/extend-data-volume.md
     - name: FAQs about GUID Partitioning Table disk architecture
-      href: ./backup-and-storage/guid-partitioning-table-disk-faq.md
+      href: ./backup-and-storage/guid-partitioning-table-disk-faq.yml
     - name: Fix heavy memory usage in ReFS
       href: ./backup-and-storage/fix-heavy-memory-usage-refs.md
     - name: Hot-swap disks are not recognized
@@ -1890,6 +1894,8 @@
       href: ./performance/enable-verbose-startup-shutdown-logon-logoff-status-messages.md
     - name: How to obtain a Console Window Handle
       href: ./performance/obtain-console-window-handle.md
+    - name: Known UI limitation of the CPU information in Windows Server 2016
+      href: ./performance/known-ui-limitation-cpu-information.md
     - name: Log files are deleted when you use Performance Monitor
       href: ./performance/log-files-are-deleted.md
     - name: Manually rebuild performance counters
@@ -2232,6 +2238,8 @@
       href: ./remote/client-disconnected-group-policy-updates.md
     - name: Connection Broker can't be mixed
       href: ./remote/connection-broker-cant-be-mixed.md
+    - name: How to disable warning message for idle remote desktop sessions
+      href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
@@ -2276,10 +2284,6 @@
   items:
   - name: Security and Malware
     href: ./security-and-malware/security-and-malware-overview.md
-  - name: Malware-related account lockouts
-    items:
-    - name: User accounts are unexpectedly locked
-      href: ./security-and-malware/user-accounts-locked-event-id-12294.md
   - name: Suspicion that an unknown process or service is malicious
     items:
     - name: Virus alert about Blaster worm and its variants
@@ -2867,4 +2871,4 @@
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
-    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
+    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml

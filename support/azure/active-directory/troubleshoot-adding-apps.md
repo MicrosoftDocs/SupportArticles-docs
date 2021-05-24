@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot common problem adding or removing an application to Azure Active Directory
-description: Troubleshoot the common problems people face when adding or removing an app to Azure Active Directory.
+title: Troubleshoot common problems adding or removing an application to Azure Active Directory
+description: Troubleshoot the common problems people face when adding or removing an app in Azure Active Directory.
 ms.date: 03/22/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
 ---
 
-# Troubleshoot common problem adding or removing an application to Azure Active Directory
-This article helps you understand the common problems people face when adding or removing an app to Azure Active Directory.
+# Troubleshoot common problems adding or removing an application to Azure Active Directory
+This article helps you understand the common problems people face when adding or removing an app in Azure Active Directory.
 
 ## I clicked the “add” button and my application took a long time to appear
 Under some circumstances, it can take 1-2 minutes (and sometimes longer) for an application to appear after adding it to your directory. While this is not the normal expected performance, you can see the application addition is in progress by clicking on the **Notifications** icon (the bell) in the upper right of the [Azure portal](https://portal.azure.com/) and looking for an **In Progress** or **Completed** notification labeled **Adding application.**
@@ -24,7 +24,7 @@ If you need help with learning about applications, the [List of Tutorials on How
 
 In addition to this, the [Azure AD Applications Document Library](/azure/active-directory/manage-apps/what-is-application-management) helps you to learn more about single sign-on with Azure AD and how it works.
 
-## I want to delete an application but the delete button is disabled
+## I want to delete an application but the Delete button is disabled
 
 The delete button will be disabled in the following scenarios:
 

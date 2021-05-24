@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article provides a resolution for the issue that Event ID 10 is logged in the Application log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 950375
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to set an enterprise subordinate certification authority (CA) to have a different certificate validity period than that of the parent CA.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 281557
 
 ## Summary

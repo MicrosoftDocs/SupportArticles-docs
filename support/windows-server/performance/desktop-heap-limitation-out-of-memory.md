@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article helps fix an "Out of Memory" error that occurs when you open many application windows in Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947246
 
 ## Symptoms

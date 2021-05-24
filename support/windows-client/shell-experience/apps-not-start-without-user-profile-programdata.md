@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue where Microsoft Store Apps can't start after the Users directory, a user profile, or the ProgramData directory is moved from their default locations.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2787623
 
 ## Symptoms

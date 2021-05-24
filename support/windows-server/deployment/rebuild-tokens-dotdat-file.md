@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 When you troubleshoot Windows activation issues, you may have to rebuild the Tokens.dat file.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2736303
 
 ## Rebuild the Tokens.dat file

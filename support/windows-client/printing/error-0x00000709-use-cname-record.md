@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article helps fix the error 0x00000709 (Operation could not be completed). The error occurs when you use a CNAME record for a print server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2546625
 
 ## Symptoms

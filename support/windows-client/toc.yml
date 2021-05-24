@@ -1024,6 +1024,8 @@
       href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
   - name: Smart card logon
     items:
+    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
+      href: ./user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
     - name: Registry keys for smart card PIN caching options not available
       href: ./user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md
   - name: User Logon fails
@@ -1081,7 +1083,7 @@
 - name: Windows 7 End of Support (EoS) FAQ
   items:
   - name: Windows 7 EoS FAQ
-    href: ./windows-7-eos-faq/windows-7-end-support-faq.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq.yml
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.yml
   - name: Windows 7 Extended Security Updates (ESU)
@@ -1089,7 +1091,7 @@
   - name: Windows 7 ESU offers for E5 customers
     href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.yml
   - name: Troubleshoot issues in ESU
-    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
+    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.yml
 - name: Windows Security
   items:
   - name: Windows Security

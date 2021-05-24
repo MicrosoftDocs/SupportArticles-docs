@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a resolution to the error 0x2AFC or 0x274D that occurs when DirectAccess clients try to connect over IP-HTTPS.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3056560
 
 ## Symptoms

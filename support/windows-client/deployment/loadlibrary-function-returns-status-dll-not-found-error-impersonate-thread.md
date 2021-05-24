@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a workaround for an issue where LoadLibrary function returns STATUS_DLL_NOT_FOUND error on impersonate thread in Windows.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4015510
 
 ## Symptoms

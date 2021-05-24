@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the Microsoft BitLocker Administration and Monitoring (MBAM) servers and force the use of TLS 1.2.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4558055
 
 ## Symptoms

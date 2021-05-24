@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article helps fix an issue where various errors messages may be logged when you bring a physical disk resource online.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977516
 
 ## Symptoms

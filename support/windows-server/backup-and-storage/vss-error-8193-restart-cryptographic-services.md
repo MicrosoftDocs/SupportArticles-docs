@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes an issue where you receive event ID 8193 when you restart the Cryptographic Services service if the DHCP role has installed.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2298620
 
 ## Symptoms

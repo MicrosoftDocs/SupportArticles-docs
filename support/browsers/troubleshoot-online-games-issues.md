@@ -6,6 +6,8 @@ ms.reviewer:
 ---
 # Troubleshoot problems playing online games using Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving various errors reported by online games in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

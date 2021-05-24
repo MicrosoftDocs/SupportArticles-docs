@@ -19,7 +19,7 @@ This step-by-step article discusses how to determine which program uses or block
 
 For a Microsoft Windows XP version of this article, see [281336](https://support.microsoft.com/help/281336).  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323352
 
 ## Summary

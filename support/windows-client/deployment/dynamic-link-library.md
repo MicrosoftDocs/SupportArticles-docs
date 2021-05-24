@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes what a dynamic link library (DLL) is and the various issues that may occur when you use DLLs. It also describes some advanced issues that you should consider when developing your own DLLs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 815065
 
 ## Summary
@@ -182,7 +182,8 @@ LPVOID lpReserved ) // Reserved
         case DLL_THREAD_ATTACHED: // A process is creating a new thread.
         break;
         case DLL_THREAD_DETACH: // A thread exits normally.
-        break; case DLL_PROCESS_DETACH: // A process unloads the DLL.
+        break;
+        case DLL_PROCESS_DETACH: // A process unloads the DLL.
         break;
     }
     return TRUE;

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where virtual machines lose network connectivity when you use Broadcom NetXtreme 1-gigabit network adapters.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2986895
 
 ## Symptoms

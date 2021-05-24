@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 Windows clustering provides high availability of server resources. This article describes how to move a Windows Server Cluster from one domain to another.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 269196
 
 > [!NOTE]

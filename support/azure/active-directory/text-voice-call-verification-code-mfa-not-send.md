@@ -24,15 +24,18 @@ In this scenario, you can't sign in to your work or school account, such as Offi
 To fix this problem, follow these steps:
 
 1. If you have set up other options for security verification, select **Other verification options**, and then try again by selecting a different option. Also, make sure that your phone numbers are correct in your user account settings.
-2. Ask another global admin to confirm whether your phone numbers are set correctly in your user settings. If steps 1 and 2 don't resolve the problem, your user account may be blocked from using Azure AD MFA. To check whether your user account is blocked, ask a global admin for your Microsoft cloud service to perform the following steps:
+2. Ask another global admin to confirm whether your phone numbers are set correctly in your user settings. 
 
-    1. If you have an Azure AD MFA or Azure Active Directory Premium subscription
+If steps 1 and 2 don't resolve the problem, your user account may be blocked from using Azure AD MFA. To check whether your user account is blocked, ask a global admin for your Microsoft cloud service to perform the following steps:
 
-        1. Go to Azure Active Directory portal.
-        2. Under **User Administration**, locate **Block/Unblock Users**.
-        3. Check whether the user is blocked.
+If you have an Azure AD MFA or Azure Active Directory Premium subscription
 
-    2. If you have Office 365 and don't have an Azure AD MFA or Azure Active Directory Premium subscription, contact Office 365 Support.
+1. Go to the [Azure portal](https://portal.azure.com), and then open **Azure Active Directory**.
+2. If you want to change the default active directory, click **Manage tenants**, choose the active directory, and then click **Switch**.
+3. Choose **Users**, open the profile of the user that has the problem.
+4. Check whether the **Block sign in** is enabled. If yes, disable the option.
+
+If you have Office 365 and don't have an Azure AD MFA or Azure Active Directory Premium subscription, contact Office 365 Support.
 
 ## More information
 

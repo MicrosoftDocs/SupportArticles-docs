@@ -51,6 +51,6 @@ CREATE NONCLUSTERED INDEX New_i_action_filt_action_date_type ON dbo.filter_test 
 
 ## More information
 
-- [Create Filtered Indexes](/sql/relational-databases/blob/filetables-sql-server)
+- [Create Filtered Indexes](/sql/relational-databases/indexes/create-filtered-indexes)
 
 - [Clustered and Nonclustered Indexes Described](/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described)

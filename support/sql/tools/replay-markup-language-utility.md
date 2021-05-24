@@ -3,7 +3,7 @@ title: Replay Markup Language Utilities
 description: This article describes a group of utilities that support professionals use to troubleshoot SQL Server.
 ms.date: 09/03/2020
 ms.prod-support-area-path: Tools
-ms.reviewer: keithelm, jackli, rdorr
+ms.reviewer: sureshka, jopilov, toddhayn, troymoen
 ms.topic: article
 ms.prod: sql
 ---
@@ -37,19 +37,25 @@ After you capture a trace for an instance of SQL Server, you can use the RML Uti
 
 |Version number|Description|
 |---|---|
-|9.04.0004|The current Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
+|9.04.0100|The current Web release available from Microsoft download center that supports all released versions of SQL Server|
+|9.04.0098|The current release packaged with Database Experimentation Assistant utility that supports all released versions of SQL Server|
+|9.04.0097|The current release available from the SQL Nexus site that supports all released versions of SQL Server|
+|9.04.0051|The previous Web release available from Microsoft download center that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
+|9.04.0004|The previous Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014|
 |9.01.0109|The previous Web release that supports SQL Server 2000, SQL Server 2005, SQL Server 2008 and SQL Server 2008 R2.|
 |9.00.0023|The previous Web release that supports SQL Server 2000 and SQL Server 2005|
 |8.10.0010|The initial Web release that supports SQL Server 7.0 and SQL Server 2000|
 |||
 
-This current version of the RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of the RML Utilities for SQL Server before you install the current version. The current version of the RML Utilities for SQL Server provides support for SQL Server 2000, SQL Server 2005, SQL Server 2008, SQL Server 2008 R2, SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014 CTP2. Additionally, the current version of the RML Utilities for SQL Server contains important software updates, improved features and reports, and performance and scalability improvements.
+This current version of the RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of the RML Utilities for SQL Server before you install the current version. The current version of the RML Utilities for SQL Server provides support for SQL Server 2000, SQL Server 2005, SQL Server 2008, SQL Server 2008 R2, SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, SQL Server 2019. Additionally, the current version of the RML Utilities for SQL Server contains important software updates, improved features (process .trc and .xel files) and reports, and performance and scalability improvements.
 
 ## Obtain the RML Utilities for SQL Server
 
-The following file is available for download from the Download Center:  
+When you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090) you can get the RML utilities (ReadTrace and ostress) from the folder: C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\
 
-The RML Utilities for SQL Server, x64 version [Download the RMLSetup_AMD64.msi package now.](https://www.microsoft.com/download/details.aspx?id=4511)
+If you are using RML utilities along with [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) utility, you can obtain ReadTrace and ostress from the location: https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097
+
+The RML Utilities for SQL Server is available for download from the [Download Center](https://download.microsoft.com/download/7/A/D/7ADE5D8B-47AB-4E94-BAD0-5416D6B6D383/RMLSetup.msi)
 
 > [!NOTE]
 > Microsoft provides the RML Utilities for SQL Server as-is. Microsoft Customer Support Services (CSS) does not provide support or updates for the RML Utilities for SQL Server. If you have a suggestion or if you want to report a bug, you can use the e-mail address in the Problems and Assistance topic in the Help file (*RML Help.pdf*). The Help file is included with the RML Utilities for SQL Server.
@@ -70,3 +76,45 @@ The RML Utilities for SQL Server contain the following utilities:
 - OStress Replay Control Agent (ORCA)
 
 For a complete description of each utility and sample usage, see the RML Help that is included with the RML Utilities for SQL Server.
+
+## Dependencies for RML Utilities for SQL Server
+> [!IMPORTANT]
+> The applications provided as part of the RML Utility suite requires several additional dependencies to be available. 
+> 
+### Dependencies for Reporter
+You need to make sure the Report Viewer controls are available either in the same folder as Reporter.exe or in the GAC. The dll's that Reporter.exe needs are
+Microsoft.ReportViewer.Common.dll
+Microsoft.ReportViewer.DataVisualization.dll
+Microsoft.ReportViewer.ProcessingObjectModel.dll
+Microsoft.ReportViewer.WinForms.dll
+
+You can get these dll's using the following powershell script:
+```powershell
+Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
+Get-PackageSource
+
+Find-Package Microsoft.ReportViewer.Common -AllVersions
+Install-Package Microsoft.ReportViewer.Common -RequiredVersion 10.0.40219.1
+
+Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+
+Find-Package Microsoft.ReportViewer.WinForms -AllVersions
+Install-Package Microsoft.ReportViewer.WinForms -RequiredVersion 10.0.40219.1
+
+Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+```
+
+### Dependencies for Expander
+You need to make sure the compression/uncompression controls are available either in the same folder as Expander.exe or in the GAC. The dll's that Expander.exe needs are
+BRICOLSOFTZipx64.dll
+UnRar64.dll
+XceedZipX64.dll
+
+You can obtain these dll's from the respective software packages of the vendors.
+https://www.rarlab.com/rar/UnRARDLL.exe
+
+https://www.7-zip.org/a/7z1900-x64.exe
+
+https://www.nuget.org/packages/Xceed.Products.Zip.Full/

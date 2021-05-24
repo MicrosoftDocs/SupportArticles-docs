@@ -17,7 +17,7 @@ ms.technology: windows-client-active-directory
 
 This article describes new UAC behavior in Windows 10 that will disallow elevation of executable applications that are signed with revoked certificates.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3082125
 
 ## Summary

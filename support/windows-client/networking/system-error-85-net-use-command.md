@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article helps fix the system error 85 that occurs when a non-administrative user attempts to reconnect to a shared network drive that the user has already used by using the `net use` command.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 253821
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an error 403 that occurs when you access Windows Update.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 245142
 
 ## Symptoms

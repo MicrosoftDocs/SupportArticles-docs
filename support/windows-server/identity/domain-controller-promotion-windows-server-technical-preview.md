@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a resolution to an issue where Domain controller promotion process shows "Windows Server Technical Preview" in the Domain and Forest functional level list.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 3202325
 
 ## Symptoms

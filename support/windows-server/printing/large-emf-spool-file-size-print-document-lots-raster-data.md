@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article provides a resolution for an issue where the size of the Enhanced Metafile (EMF) spool file grows very big when you print a document that contains many groups of raster data.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 919543
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article describes a by-design behavior that computer monitor turns off after 1 minute when the computer is locked and provides a solution to solve this issue.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2835052
 
 ## Symptoms

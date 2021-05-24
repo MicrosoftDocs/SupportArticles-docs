@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article discusses the **Impersonate a client after authentication** and **Create global objects** user rights.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 821546
 
 ## Summary

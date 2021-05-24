@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article helps fix an error (our account has been disabled) that occurs after you turn off a Windows 10-based computer from Audit mode.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3141410
 
 ## Symptoms

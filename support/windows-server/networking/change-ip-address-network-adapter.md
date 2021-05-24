@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides some information about how to change the IP address of a network adapter.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 323444
 
 ## Summary
@@ -47,12 +47,14 @@ Follow these steps to configure the computer to obtain an IP address from a DHCP
 
    The network adapter is assigned an IP address by the DHCP server, and a message similar to the following appears:  
   
-   > Windows Server IP Configuration  
-     Ethernet adapter Local Area Connection:  
-     Connection-specific DNS Suffix. :dns.microsoft.com  
-     IP Address. . . . . . . . . . . . :192.168.0.201  
-     Subnet Mask . . . . . . . . . . . :255.255.255.0  
-     Default Gateway . . . . . . . . . :192.168.0.1  
+   ```output
+   Windows Server IP Configuration  
+   Ethernet adapter Local Area Connection:  
+   Connection-specific DNS Suffix. :dns.microsoft.com  
+   IP Address. . . . . . . . . . . . :192.168.0.201  
+   Subnet Mask . . . . . . . . . . . :255.255.255.0  
+   Default Gateway . . . . . . . . . :192.168.0.1
+   ```
 
 9. Type exit, and then press ENTER to quit the command prompt.
 
@@ -73,7 +75,7 @@ To assign an IP address to the network adapter, follow these steps:
 
 - There is an IP address conflict: If you try to assign an IP address that is already in use, you receive the following error message:  
   
-  >The static IP address that was just configured is already in use on the network. Please reconfigure a different IP address.  
+  > The static IP address that was just configured is already in use on the network. Please reconfigure a different IP address.  
 
   In this case, assign an unused IP address to the network adapter.
 - Your computer cannot connect to other computers on the network: If you assign an incorrect subnet mask address to the network adapter, the computer is effectively located on a different network. You cannot connect to other computers on the network.

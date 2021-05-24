@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article describes how to schedule a server process in Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324283
 
 ## Summary

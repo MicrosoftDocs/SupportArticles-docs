@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article fixes an issue in which a registry subkey labeled Wow6432Node is listed in system registry on x86 machines.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2582176
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article resolves the event ID 4013 logged in the DNS event log of domain controllers that are hosting the DNS server role after Windows starts.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2001093
 
 ## Symptoms
@@ -25,25 +25,22 @@ _Original KB number:_ &nbsp; 2001093
 - On a Windows-based computer that's hosting Active Directory domain controllers, the DNS server roles stop responding for 15 to 25 minutes. This issue occurs after the **Preparing network connections** message is displayed, and before the Windows logon prompt (Ctrl+Alt+Del) is displayed.
 - The following DNS Event ID 4013 is logged in the DNS event log of domain controllers that are hosting the DNS server role after Windows starts:
 
-    > Event Type: Warning  
-    Event Source: DNS  
-    Event Category: None  
-    Event ID: 4013  
-    Date: *Date*  
-    Time: *Time*  
-    User: N/A  
-    Computer: *ComputerName*  
-    Description:  
-    The DNS server was unable to open the Active Directory. This DNS server is
-    configured to use directory service information and can not operate without access
-    to the directory. The DNS server will wait for the directory to start. If the DNS
-    server is started but the appropriate event has not been logged, then the DNS
-    server is still waiting for the directory to start.
-    >
-    > For more information, see Help and Support Center at
-    https://go.microsoft.com/fwlink/events.asp.  
-    Data:  
-    0000: <%status code%>
+  ```output
+  Event Type: Warning  
+  Event Source: DNS  
+  Event Category: None  
+  Event ID: 4013  
+  Date: Date  
+  Time: Time  
+  User: N/A  
+  Computer: ComputerName  
+  Description:  
+  The DNS server was unable to open the Active Directory. This DNS server is configured to use directory service information and can not operate without access to the directory. The DNS server will wait for the directory to start. If the DNS server is started but the appropriate event has not been logged, then the DNS server is still waiting for the directory to start.
+  
+  For more information, see Help and Support Center at https://go.microsoft.com/fwlink/events.asp.  
+  Data:  
+  0000: <%status code%>
+  ```
 
   In this log entry, values of <%Status code%> may not be logged. Or, they include but aren't limited to the following values:
 
@@ -258,7 +255,8 @@ Several tests were done to validate the above behavior.
 
 - Reboot domain controller when DNS server is a third domain controller that is online. For each naming context each source, we have two DNS queries and they finished almost instantaneously:
 
-    > in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com
+    ```output
+    in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com
     in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.com  
     in resolveDnsAddressWithFallback  
     GUID based DNS name  
@@ -269,10 +267,12 @@ Several tests were done to validate the above behavior.
     in GetIpAddrByDnsNameHelper  
     start GetAddrInfoW: 22:31:40.534  
     end   GetAddrInfoW: 22:31:40.534
+    ```
 
 - Reboot DC1 and DC2 simultaneously. DC1 is using DC2 for DNS DC2 is using DC1 for DNS. For each naming context each source, we have 10 DNS queries and each query takes about 12 seconds:
 
-    > in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com  
+    ```output
+    in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com  
     in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.microsoft.com  
     in resolveDnsAddressWithFallback  
     GUID based DNS name  
@@ -311,10 +311,12 @@ Several tests were done to validate the above behavior.
     in GetIpAddrByDnsNameHelper  
     start GetAddrInfoW: 22:39:31.308  
     end   GetAddrInfoW: 22:39:43.324
+    ```
 
 - To further study the relationship between DNSQueryTimeouts and the slow startup, DNSQueryTimeouts were set to **1 1 2 4 4** to make DNS client wait for 31 (1 + 1 + 2 + 4 + 4) seconds. In this test, 31 seconds were spent waiting:
 
-    > in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com  
+    ```output
+    in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com  
     in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.com  
     in resolveDnsAddressWithFallback  
     GUID based DNS name  
@@ -353,3 +355,4 @@ Several tests were done to validate the above behavior.
     in GetIpAddrByDnsNameHelper  
     start GetAddrInfoW: 18:11:27.244  
     end   GetAddrInfoW: 18:11:58.265
+    ```

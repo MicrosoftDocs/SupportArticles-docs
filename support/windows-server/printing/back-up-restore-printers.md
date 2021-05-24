@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article describes how to back up the printers before you upgrade to Windows Server 2008. It also describes how to restore the printers after you upgrade.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 938923
 
 ## Introduction

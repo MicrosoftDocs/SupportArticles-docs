@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article describes how to use the System Configuration utility to troubleshoot configuration errors.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 950093
 
 ## Introduction  
