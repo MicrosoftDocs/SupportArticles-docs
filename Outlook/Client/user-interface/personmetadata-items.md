@@ -74,7 +74,7 @@ Notice that MFCMAPI may seem to stop responding for an extended time while it pe
 
 ### Method 2: Run the EWS script as an administrator
 
-This method requires you to configure a service account to [impersonate the user](https://docs.microsoft.com/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange). See this [article](https://docs.microsoft.com/exchange/client-developer/exchange-web-services/how-to-configure-impersonation) to learn how to configure impersonation.
+This method requires you to configure a service account to [impersonate the user](/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange). See this [article](/exchange/client-developer/exchange-web-services/how-to-configure-impersonation) to learn how to configure impersonation.
 
 1. [Download and install the EWS Managed API](https://www.microsoft.com/download/details.aspx?id=42951) on the computer where you will run the EWS script.
 2. Download the [EWS script](https://github.com/guruxp/CleanPersonMetadata/raw/main/CleanPersonMetadata.zip).
