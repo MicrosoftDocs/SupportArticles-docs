@@ -49,7 +49,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     :::image type="content" source="media/ribbon-issues-button-hidden/command-properties-example.png" alt-text="Example of the command properties of new hidden.":::
 
 1. The approach needed to fix a button's visibility will depend on the various customizations in your specific scenario. Considering our example:
-    - If this rule was created erroneously, such that the entity declared in the rule was intended to be **contact** but was set to **account**, you could edit the `new.contact.EnableRule.EntityRule` enable rule and make changes that would permit the rule to evaluate to true. 
+    - If this rule was created erroneously, such that the entity declared in the rule was intended to be **contact** but was set to **account**, you could edit the `new.contact.EnableRule.EntityRule` enable rule and make changes that would permit the rule to evaluate to true.
     - If this rule was added to the command unintentionally, you could modify the `Mscrm.NewRecordFromGrid` command and remove the `new.contact.EnableRule.EntityRule` enable rule from the command definition. 
     - If the command is an override of a Microsoft published definition, then this custom version of the command could be deleted to restore the default functionality.
 
