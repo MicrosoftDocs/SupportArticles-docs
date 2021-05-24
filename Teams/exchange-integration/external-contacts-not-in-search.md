@@ -22,22 +22,22 @@ search.appverid:
 
 # External federated contacts don’t appear in Teams search
 
-If you have imported contacts from a federated partner tenant into Azure Active Directory (AAD) or Exchange Online, the contacts might not appear in Microsoft Teams contact searches.
+If you have imported contacts from a federated partner tenant into Azure Active Directory (Azure AD) or Exchange Online, the contacts might not appear in Microsoft Teams contact searches.
 
-This is because Teams uses contacts in your organization’s Active Directory (AD) and contacts added to your Outlook default folder.
+This problem occurs because Teams uses contacts in your organization’s Active Directory and contacts that are added to your Outlook default folder.
 
-Searching in Teams for external federated contacts is only supported under the following conditions:
+Searching in Teams for external federated contacts is supported only under the following conditions:
 
-- Your mailbox is hosted through Exchange Online, not on-premises.
+- Your mailbox is hosted through Exchange Online, not Microsoft Exchange Server on-premises.
 
-- The external contact’s phone number is included in the contact information.
+- The external contact phone number is included in the contact information.
 
-- You search for the external contact by email address, not the contact’s name.
+- You search for the external contact by email address, not the contact name.
 
-    **Note** Although it is not supported, searching for an external federated contact might work if the contact is currently cached on the client machine.
+    **Note** Although it is not supported, searching for an external federated contact might work if the contact is currently cached on the client computer.
 
-If those three conditions are met, external federated contacts will appear in search.
+If these three conditions are met, external federated contacts will appear in searches.
 
-In Teams, you can communicate with anyone in your organization’s AD. You can add anyone as a contact in Teams by selecting **Calls**, selecting the **Contacts** tab, and then selecting **Add contact**.
+In Teams, you can communicate with anyone in your organization’s Active Directory. You can add anyone as a contact in Teams by selecting **Calls**, selecting the **Contacts** tab, and then selecting **Add contact**.
 
-For more information about the way Teams and Exchange work together, see [How Exchange and Microsoft Teams interact](/microsoftteams/exchange-teams-interact).
+For more information about how Teams and Exchange work together, see [How Exchange and Microsoft Teams interact](/microsoftteams/exchange-teams-interact).
