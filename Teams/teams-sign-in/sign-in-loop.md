@@ -65,7 +65,7 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
     - `https://*.skypeforbusiness.com`
 
 > [!NOTE]
-> It's always good to validate and enable all trusted URLs for Teams and review the requirements in this article: [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams).
+> It's always good to validate and enable all trusted URLs for Teams and review the requirements in this article: [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams) and in this article [Office 365 U.S. Government GCC High endpoints](https://docs.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-u-s-government-gcc-high-endpoints?view=o365-worldwide).
 
 ### Google Chrome
 
