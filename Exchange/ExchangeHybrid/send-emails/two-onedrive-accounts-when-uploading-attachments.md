@@ -30,7 +30,7 @@ When you try to upload attachments from Outlook on the web, the **Upload** menu 
 
 ## Cause
 
-This issue occurs if you're in a hybrid Exchange environment that has a mailbox on Microsoft Exchange Server on-premises and a OneDrive for Business account in Microsoft 365, and if the OneDrive account was moved to a different physical location. After the OneDrive move, the internal and external My Site Host URLs are not updated in the `OwaMailboxPolicy` setting.
+This issue occurs if you're in a hybrid Exchange environment that has a mailbox on Microsoft Exchange Server on-premises and a OneDrive for Business account in Microsoft 365, and if the OneDrive account was moved to a different geographical location. After the OneDrive move, the internal and external My Site Host URLs are not updated in the `OwaMailboxPolicy` setting.
 
 ## Resolution
 
@@ -42,19 +42,19 @@ Use either of the following methods.
 
 #### Method 1: Update My Site Host URLs
 
-Update the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to the values for the new physical location of OneDrive. To do this, run the following cmdlet:
+Update the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to the values for the new geographical location of OneDrive. To do this, run the following cmdlet:
 
-    ```powershell
-    Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL <new_OneDrive_URL> -ExternalSPMySiteHostURL <new_OneDrive_URL>
-    ```
+```powershell
+Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL <new_OneDrive_URL> -ExternalSPMySiteHostURL <new_OneDrive_URL>
+```
 
 #### Method 2: Set values to Null
 
 Set the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to **Null**. To do this, run the following cmdlet:
 
-   ```powershell
-   Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL $Null -ExternalSPMySiteHostURL $Null
-   ```
+```powershell
+Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL $Null -ExternalSPMySiteHostURL $Null
+```
 
 ### Step 2
 
