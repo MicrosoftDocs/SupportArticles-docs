@@ -50,4 +50,4 @@ In the **Ribbon Metadata Generation Operations** view, a **RibbonMetadataGenerat
 
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbonmetadatageneration-status.png" alt-text="Screenshot of the RibbonMetadataGeneration operation status.":::
 
-After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache and reopen your application to verify the issue again. If issue isn't resolved, you can follow the [ribbon troubleshoot guidelines](ribbon-issues#identify-the-issue) for other mitigation.
+After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache and reopen your application to verify the issue again. If issue isn't resolved, you can follow the [ribbon troubleshoot guidelines](ribbon-issues.md#identify-the-issue) for other mitigation.
