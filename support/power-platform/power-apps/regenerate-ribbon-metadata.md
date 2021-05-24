@@ -15,11 +15,11 @@ Missing or incorrect ribbon metadata is often the cause of the following ribbon 
 - A button in the command bar is visible when it should not be
 - A button in the command bar is not working correctly
 
-You can use the in-app tool (**Command Checker**) to regenerate all ribbon metadata.
+You can use an in-app tool (**Command Checker**) to regenerate all ribbon metadata.
 
 ## How to start the regeneration operation
 
-An in-app tool called **Command Checker** can be used to start the regeneration of ribbon metadata. To enable the **Command Checker** tool, you must append a parameter `&ribbondebug=true` to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
+The **Command Checker** tool can be used to start the regeneration of ribbon metadata. To enable the **Command Checker** tool, you must append a parameter `&ribbondebug=true` to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
 :::image type="content" source="media/regenerate-ribbon-metadata/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
@@ -50,4 +50,4 @@ In the **Ribbon Metadata Generation Operations** view, a **RibbonMetadataGenerat
 
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbonmetadatageneration-status.png" alt-text="Screenshot of the RibbonMetadataGeneration operation status.":::
 
-After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache and reopen your application to verify the issue again. If issue isn't resolved, you can follow the ribbon troubleshoot guidelines for other mitigation.
+After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache and reopen your application to verify the issue again. If issue isn't resolved, you can follow the [ribbon troubleshoot guidelines](ribbon-issues#identify-the-issue) for other mitigation.
