@@ -50,33 +50,31 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
     $InactiveMailbox = Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox>
     ```
 
-2. Run the following command to temporarily associate the inactive mailbox with a cloud account from Exchange Online PowerShell:
+2. Run the following command to temporarily associate the inactive mailbox with a cloud account:
 
    ```powershell
    New-Mailbox -InactiveMailbox $InactiveMailbox.DistinguishedName -Name "<name of inactive mailbox>" -DisplayName "<DisplayName of inactive mailbox>" -MicrosoftOnlineServicesID <alias@*.onmicrosoft.com> -Password (ConvertTo-SecureString -String <PasswordString> -AsPlainText -Force) -ResetPasswordOnNextLogon $true
    ```
 
-3. Connect to the Active Directory Powershell Module and collect the `ObjectGUID` attribute.  
+3. Connect with the Azure Active Directory PowerShell Module, and then run the following command to get the `ObjectGUID` attribute:
 
     ```powershell
-     Get-ADUser -Identity <identity of ADuser account> -Properties "ObjectGUID"
+     Get-ADUser -Identity <ADUser> -Properties "ObjectGUID"
      ```
-4.    You can convert `ObjectGUID` to `ImmutableID` by using the following command in Windows PowerShell:
+
+4. Obtain the **`ImmutableID`** parameter value, which is the on-premises `ObjectGUID` attribute by default. You can convert `ObjectGUID` to `ImmutableID` by using the following command in Windows PowerShell:
 
    ```powershell
    [system.convert]::ToBase64String(([GUID]"<ObjectGUID>").tobytearray())
    ```
-      Obtain the immutable ID.
-  
-5. Connect to Azure AD and Set the `ImmutableID` parameter in Azure AD :
+
+5. Set the `ImmutableID` parameter in Azure AD :
 
     ```powershell
-    Set-MsolUser -userprincipalname  -ImmutableId <ImmutableId>
+    Set-MsolUser -UserPrincipalName <UPN> -ImmutableId <ImmutableId>
     ```
 
-6. Perform a Delta sync on Azure AD Connect.
-
-7.  This connects the original Azure AD account into the scope of Azure AD Connect 
+6. Run a Azure AD Connect delta sync. This brings the original Azure AD account into the scope of Azure AD Connect.
 
 8. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
 
