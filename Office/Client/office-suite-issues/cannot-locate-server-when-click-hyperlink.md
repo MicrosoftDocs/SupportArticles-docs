@@ -67,16 +67,26 @@ This problem occurs when the following conditions are true:
 
 - Internet Explorer is not your default browser.
 
-- The ForceShellExecute registry key is not present in the following location or is not set to 1:
+- The **ForceShellExecute** registry key is not present in the following location or is not set to **1**:
 
     - For 32-bit versions of office installed on 64-bit operating systems:
     
-      **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet**
+      **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\12.0\Common\Internet**
     
     - For 32-bit versions of Office installed on 32-bit operating systems or 64-bit versions of Office installed on 64-bit operating systems:
     
-      **HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet** 
+      **HKEY_LOCAL_MACHINE \Software\Microsoft\Office\12.0\Common\Internet** 
+      
+> [!NOTE]
 
+> The Office codeversion is different for different office suites editions, so you must replace the following versions.For example:
+
+> - Replace **12.0**  to  **14.0** for Office 2010
+> - Replace **12.0**  to  **15.0** for Office 2013
+> - Replace **12.0**  to  **16.0** for Office 2016
+> - Replace **12.0**  to  **16.0** for Office 2019
+> - Replace **12.0**  to  **16.0** for Office 365
+     
 ## Workaround
 
 > [!IMPORTANT]
@@ -94,17 +104,17 @@ To work around this issue, either add the ForceShellExecute subkey, if it is not
 
     - For a 32-bit version of Office on a 64-bit version of Windows:
     
-      **HKLM\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet\**
+      **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\12.0\Common\Internet**
     
     - For a 32-bit version of Office on a 32-bit version of Windows:
     
-      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet**
+      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Common\Internet**
     
     - For a 64-bit version of Office on a 64-bit version of Windows:
     
-      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet**
+      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Common\Internet**
 
-4. Make sure the Internet subkey is selected. On the **Edit** menu, point to **New**, and then select DWORD Value. Add the following registry value:
+4. Make sure the Internet subkey is selected. On the **Edit** menu, point to **New**, and then select **DWORD** Value. Add the following registry value:
 
     **Value Name: ForceShellExecute**
 
