@@ -59,7 +59,7 @@ Reproduce the issue and collect the logs for review. The logs are stored under %
 
 Serviceability Manager is part of [Office Inventory](https://docs.microsoft.com/en-us/deployoffice/admincenter/inventory) which is used as part of [Serviceing Profiles](https://docs.microsoft.com/en-us/deployoffice/admincenter/servicing-profile). This type of logging would be used if you are having an issue with Inventory (ie Devices are not showing up in Inventory from the Office 365 Admin center). 
 
-The Inventory feature is only available from **Version 2008 (16.0.13127.21064) or higher**. The logs are stored under %windir%\temp and %temp% for installation or patching issues in the format MachineName-Date-time.log.
+The Inventory feature is only available from **Version 2008 (16.0.13127.21064) or higher**. The logs are stored under %windir%\temp and %temp% for Serviceability Manager issues in the format MachineName-Date-time.log.
 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
