@@ -11,43 +11,43 @@ _Applies to:_ &nbsp; Power Apps
 
 The following ribbon command bar issues are often caused by missing or incorrect ribbon metadata: 
 
-- A button in the command bar is hidden when it should not be
-- A button in the command bar is visible when it should not be
-- A button in the command bar is not working correctly
+- A button on the command bar is hidden when it should visible.
+- A button on the command bar is visible when it should hidden.
+- A button on the command bar is not working correctly.
 
-You can use an in-app tool (**Command Checker**) to regenerate all ribbon metadata.
+An in-app tool, Command Checker, is available to help you regenerate all ribbon metadata.
 
 ## How to start the regeneration operation
 
-The **Command Checker** tool can be used to start the regeneration of ribbon metadata. To enable the **Command Checker** tool, you must append a parameter `&ribbondebug=true` to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
+You can use the Command Checker tool to start the regeneration of ribbon metadata. To enable Command Checker, append the `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
-After the **Command Checker** tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command Checker" :::image type="icon" source="media/regenerate-ribbon-metadata/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu). To open the **Command Checker** tool, click the button from any command bar.
+After Command Checker is enabled, a new special "Command Checker" :::image type="icon" source="media/regenerate-ribbon-metadata/command-checker-button-icon.png" border="false"::: program button is available within the application on each of the various command bars (global, form, grid, and subgrid). (The button might be included on the **More**" overflow flyout menu). To open Command Checker, select the button on any command bar.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/open-command-checker.png" alt-text="Open command checker.":::
 
-After the **Command Checker** dialog has been displayed, click the **Regenerate ribbon metadata** button to start the regeneration of the entire ribbon metadata.
+After the **Command Checker** dialog box opens, select the **Regenerate ribbon metadata** button to start regenerating all the ribbon metadata.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/regenerate-ribbon-metadata.png" alt-text="Regenerate ribbon metadata.":::
 
-On the confirmation prompt with instructions, click **OK** to start the regeneration.
+On the confirmation prompt with instructions, select **OK** to start the regeneration.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/confirmation-prompt.png" alt-text="Confirmation prompt.":::
 
 ## How to check the operation status
 
-After the ribbon metadata regeneration is triggered, a background operation is started. You can check the status of the operation on the **Solutions History** page. (Open **Advanced Settings**, navigate to **Settings** > **Solutions** > **Solutions History**)
+After the ribbon metadata regeneration is triggered, a background operation begins. You can check the status of the operation on the **Solutions History** page. (Open **Advanced Settings**, and then navigate to **Settings** > **Solutions** > **Solutions History**.)
 
 :::image type="content" source="media/regenerate-ribbon-metadata/advanced-settings.png" alt-text="Advanced settings.":::
 
-In the **Ribbon Metadata Generation Operations** view, a **RibbonMetadataGeneration** operation with the **Started** status is added as follows:
+In **Ribbon Metadata Generation Operations** view, a **RibbonMetadataGeneration** operation with the **Started** status is added, as follows.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbonmetadatageneration.png" alt-text="Screenshot of the RibbonMetadataGeneration operation.":::
 
 > [!NOTE]
-> The operation will take several minutes to complete. When it is finished, the **Status** will be marked as **Completed**, with the Result marked as **Success** or **Failure**.
+> The operation will take several minutes to finish. After it finishes, the **Status** value will change to **Completed**, and the **Result** value will be set to **Success** or **Failure**, as appropriate.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbonmetadatageneration-status.png" alt-text="Screenshot of the RibbonMetadataGeneration operation status.":::
 
-After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache and reopen your application to verify the issue again. If issue isn't resolved, you can follow the [ribbon troubleshoot guidelines](ribbon-issues.md#identify-the-issue) for other mitigation.
+After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache, and then reopen your application to check for the issue again. If the issue isn't resolved, you can follow the steps that are provided in [ribbon troubleshoot guidelines](ribbon-issues.md#identify-the-issue) for additional mitigation information.
