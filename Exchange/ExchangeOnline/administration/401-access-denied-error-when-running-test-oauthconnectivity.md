@@ -1,8 +1,8 @@
 ---
 title: 401 Access denied when running Test-OAuthConnectivity
 description: Describes an issue that occurs when you run the Test-OAuthConnectivity cmdlet to test OAuth authentication for a user.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -60,10 +60,11 @@ To fix this issue, take one of the following actions, as appropriate for your si
 
 4. If the domains names aren't returned, use the `Set-MsolServicePrincipal` cmdlet to add them.
 
-    For example, the following command adds the Mail.contoso.com domain.
+    For example, the following command adds the `mail.contoso.com` domain.
 
     ```powershell
-    Set-MsolServicePrincipal -ServicePrincipalName "00000002-0000-0ff1-ce00-000000000000").Mail.contoso.com
+    $AppId = (Get-MsolServicePrincipal -ServicePrincipalName "00000002-0000-0ff1-ce00-000000000000").AppPrincipalId
+    Set-MsolServicePrincipal -AppPrincipalId $AppId -ServicePrincipalNames @("mail.contoso.com")
     ```
 
 ### Scenario 2 - You're using an account that isn't synchronized between the on-premises environment and Exchange Online

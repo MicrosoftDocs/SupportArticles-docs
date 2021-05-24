@@ -35,17 +35,20 @@ You can quickly complete the same process in Outlook 2003 and later versions. Yo
 
 The AutoArchive feature has a two-step process. First, you turn on the AutoArchive feature. Second, you set the properties for the AutoArchive feature for each folder that you want archived.
 
+> [!NOTE]
+> If you have multiple Exchange accounts in the same Outlook profile, the default AutoArchive setting will apply to all of the accounts. To avoid this, apply the AutoArchive setting on the folder level.
+
 At the folder level, you can determine the items that are to be archived and how frequently they're archived. You can automatically archive individual folders, or you can configure a default AutoArchive setting for all folders. And then configure AutoArchive settings for individual folders that you don't want to use the default AutoArchive settings. The AutoArchive feature runs automatically whenever you start Outlook. Outlook checks the AutoArchive properties of each folder by date and moves old items to your archive file. Items that are moved to the Deleted Items folder are deleted.
 
 ### Outlook 2003 and Outlook 2007
 
 By default, several Outlook folders are set up with the AutoArchive feature turned on. The following list is the folders that have the AutoArchive feature turned on and of each folder's default aging period:
 
-The Calendar folder (six months)  
-The Tasks folder (six months)  
-The Journal folder (six months)  
-The Sent Items folder (two months)  
-The Deleted Items folder (two months)
+- The Calendar folder (six months)  
+- The Tasks folder (six months)  
+- The Journal folder (six months)  
+- The Sent Items folder (two months)  
+- The Deleted Items folder (two months)
 
 The Inbox, Notes, Contacts, and Drafts folders don't have the AutoArchive feature turned on automatically. You can't use the AutoArchive feature with the Contacts folder, as the Contacts folder doesn't have an archive property.
 
@@ -83,7 +86,7 @@ For Outlook 2007 and Outlook 2003:
 Now that you've turned on the AutoArchive feature, you must set the AutoArchive properties for each folder.
 
 > [!IMPORTANT]
-> The Outlook Data (.pst) file that you choose as the default archive file must be located on the local computer. The use of networked .pst files is only supported with Outlook 2010 and under very specific conditions. For more information about the limits to using .pst files over the network, see [Limits to using personal folders (.pst) files over LAN and WAN links](https://docs.microsoft.com/outlook/troubleshoot/data-files/limits-using-pst-files-over-lan-wan).
+> The Outlook Data (.pst) file that you choose as the default archive file must be located on the local computer. The use of networked .pst files is only supported with Outlook 2010 and under very specific conditions. For more information about the limits to using .pst files over the network, see [Limits to using personal folders (.pst) files over LAN and WAN links](limits-using-pst-files-over-lan-wan.md).
 
 ### How to Set the AutoArchive Properties for a Folder
 

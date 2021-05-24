@@ -25,6 +25,8 @@
       href: ../administration/deleting-content-type-from-hub.md
     - name: Error when accessing SharePoint or OneDrive
       href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Exclude or remove sites from a SharePoint Online retention policy
+      href: ../administration/exclude-sites-from-retention-policy.md
     - name: Invalid URL error when clicking an online prompted link
       href: ../administration/promoted-link-invalid-url.md
     - name: Issue when browsing to a SharePoint site
@@ -109,8 +111,8 @@
       href: ../lists-and-libraries/change-to-how-lists-are-named.md
     - name: Changes to default versioning setting for document libraries
       href: ../lists-and-libraries/library-versioning-setting-changes.md
-    - name: Check for Know Folder Move eligibility
-      href: ../lists-and-libraries/determine-know-folder-move-eligibility.md
+    - name: Check for Known Folder Move eligibility
+      href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
     - name: Document IDs aren't assigned to items

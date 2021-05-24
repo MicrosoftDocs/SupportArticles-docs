@@ -33,10 +33,8 @@ When you save a hyperlink that contains two or more consecutive forward slashes 
 2. On the **Start** menu, select **Run**, enter **regedit**, and then select **OK**.
 3. Locate and select the following registry subkey:
 
-   **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\x.0\Common**
+   **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\Common**
 
-   > [!NOTE]
-   > In this subkey, *x.0* is the Office version (16.0 = Office 2019 or Office 2016, 15.0 = Office 2013, 14.0 = Office 2010).
 4. After you select the subkey that's specified in step 3, point to **New** on the **Edit** menu, and then select **DWORD**.
 5. Enter **AllowConsecutiveSlashesInUrlPathComponent**, and then press Enter.
 6. Right-click **AllowConsecutiveSlashesInUrlPathComponent**, and then select **Modify**.

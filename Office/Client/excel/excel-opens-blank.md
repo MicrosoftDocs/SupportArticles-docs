@@ -38,11 +38,7 @@ When you double-click an icon or file name for a Microsoft Excel workbook, Excel
 
 To resolve this problem, try the following options, as appropriate, in the given order.
 
-<a id="option1">
-
 ## Option 1: Check for hidden sheets
-
-</a>
 
 An Excel sheet may inadvertently have been saved as a hidden document. To check this, follow these steps:
 
@@ -51,11 +47,7 @@ An Excel sheet may inadvertently have been saved as a hidden document. To check 
 1. Select a workbook from the list.
 1. Select **OK**.
 
-<a id="option2">
-
 ## Option 2: Minimizing and maximizing the window
-
-</a>
 
 Minimizing and then maximizing the window can sometimes refresh the Excel page and cause any hidden data to appear.
 
@@ -64,11 +56,7 @@ Minimizing and then maximizing the window can sometimes refresh the Excel page a
 
 After your sheet is maximized, your data may appear.
 
-<a id="option3">
-
 ## Option 3: Disable hardware acceleration
-
-</a>
 
 To work around this problem, disable hardware acceleration until a fix is released by your video adapter manufacturer. Make sure to check regularly for updates to your video adapter driver.
 
@@ -86,15 +74,9 @@ To disable hardware acceleration, follow these steps:
 1. Select the **OK** button.
 
 > [!NOTE]
-> For more information about hardware acceleration, see the following Knowledge Base article:
->
->[2768648](https://support.microsoft.com/help/2768648) Display issues in Office 2013 client applications
-
-<a id="option4">
+> For more information about hardware acceleration, see [Display issues in Office 2013 client applications](https://support.microsoft.com/help/2768648).
 
 ## Option 4: Ignore DDE
-
-</a>
 
 This problem may occur if the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box in Excel options is selected.
 
@@ -113,17 +95,13 @@ To correct this setting, follow these steps.
 1. Clear the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box, and then select the **OK** button at the bottom of the window.
 
 > [!NOTE]
-> For more information about how to turn off DDE, see ["An error occurred when sending commands to the program" in Excel](https://docs.microsoft.com/office/troubleshoot/excel/error-when-send-commands-in-excel).
-
-<a id="option5">
+> For more information about how to turn off DDE, see ["An error occurred when sending commands to the program" in Excel](error-when-send-commands-in-excel.md).
 
 ## Option 5: Reset file associations
 
-</a>
-
 To check whether the file associations in the system are performing correctly, reset the Excel file associations to their default settings. To do this, follow the steps for your operating system.
 
-#### Windows 10 and Windows 8.1
+### For Windows 10 and Windows 8.1
 
 1. Locate the file that is opening incorrectly, and copy it to your desktop.
 1. Right-click the file, and select **Properties**.
@@ -138,7 +116,7 @@ To open this type of file in a different app:
 1. Select the desired app, then select the **Always use this app** checkbox.
 1. Select the **OK** button.
 
-#### Windows 8
+### For Windows 8
 
 1. On the Start screen, type **Control Panel**.
 1. Select or tap **Control Panel**.
@@ -146,7 +124,7 @@ To open this type of file in a different app:
 1. Select **Excel**, then select **Choose default for this program**.
 1. On the **Set Program Associations** screen, select **Select All**, and then select **Save**.
 
-#### Windows 7
+### For Windows 7
 
 1. Select **Start**, then select **Control Panel**.
 1. Select **Default Programs**.
@@ -155,29 +133,19 @@ To open this type of file in a different app:
 1. Under **Recommended Programs**, select **Microsoft Excel**.
 1. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe**, then select **Excel**.
 
-<a id="option6">
-
 ## Option 6: Repair User Experience Virtualization (UE-V)
 
-</a>
+If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do so, see [Hotfix Package 1 for Microsoft User Experience Virtualization 2.0](https://support.microsoft.com/help/2927019).
 
-If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
-
-[2927019](https://support.microsoft.com/help/2927019) Hotfix Package 1 for Microsoft User Experience Virtualization 2.0
-
-If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
-
-<a id="option7">
+If you aren't sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
 
 ## Option 7: Repair Office
 
-</a>
-
 Try to repair your Office programs. To do this, follow the steps for your installation type and operating system.
 
-#### For an Office 365 or Office 2019 Click-to-Run installation
+### For an Office 365 or Office 2019 Click-to-Run installation
 
-##### Windows 10
+#### Windows 10
 
 1. On the **Start** screen, type **Settings**.
 1. Select or tap **Settings**.
@@ -186,7 +154,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 1. Select or tap the **Modify** button.
 1. In the **How would you like to repair your Office programs** window, select or tap the **Online Repair** radio button, then select or tap the **Repair** button.
 
-##### Windows 8
+#### Windows 8
 
 1. On the Start screen, type **Control Panel**.
 1. Select or tap **Control Panel**.
@@ -194,7 +162,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 1. Select or tap **Microsoft Office 365**, then select or tap **Change**.
 1. Select or tap **Online Repair**, then select or tap **Repair**. You may have to restart your computer after the repair process is finished.
 
-##### Windows 7
+#### Windows 7
 
 1. Select **Start**, then select **Control Panel**.
 1. double-click **Programs and Features**.
@@ -206,17 +174,13 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.
 
-#### For an Office 2013, Office 2010, or Office 2007 installation
+### For an Office 2013, Office 2010, or Office 2007 installation
 
 To repair Office 2013, Office 2010, or Office 2007, follow the steps in the following Office website topic:
 
 [Repair an Office application](https://office.microsoft.com/outlook-help/repair-office-programs-ha010357402.aspx)
 
-<a id="option8">
-
 ## Option 8: Turn off add-ins
-
-</a>
 
 Excel and COM add-in programs can also cause this problem. These two kinds of add-ins are located in different folders. For testing, disable and isolate the conflict by turning off each add-in one at a time. To do this, follow these steps:
 

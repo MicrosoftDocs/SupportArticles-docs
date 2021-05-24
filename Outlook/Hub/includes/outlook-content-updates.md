@@ -2,6 +2,23 @@
 
 
 
+## Week of May 10, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/10/2021 | [Install the latest applicable updates for Outlook](/outlook/troubleshoot/installation/install-outlook-latest-updates) | modified |
+
+
+## Week of May 03, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/6/2021 | [Delegate gets multiple or duplicate meeting requests](/outlook/troubleshoot/calendaring/delegate-receives-multiple-or-duplicate-meeting-requests) | modified |
+| 5/8/2021 | [Items that are deleted from a shared mailbox go to the wrong folder in Outlook](/outlook/troubleshoot/email-management/deleted-items-go-to-wrong-folder) | added |
+
+
 ## Week of April 26, 2021
 
 
@@ -25,19 +42,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 4/14/2021 | [Receiving email messages not intended for you](/outlook/troubleshoot/email-management/unintentional-emails-received) | added |
-
-
-## Week of April 05, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/9/2021 | [Inbox Repair tool (Scanpst.exe) run multiple passes](/outlook/troubleshoot/data-files/inbox-repair-tool-scanpst-exe-run-multiple-passes) | modified |
-
-
-## Week of March 29, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/29/2021 | [Outlook.exe.log in %Temp% consumes too much disk space](/outlook/troubleshoot/performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space) | modified |

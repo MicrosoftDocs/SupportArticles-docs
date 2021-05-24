@@ -113,7 +113,7 @@ Another way to completely disable (hide) the Room Finder on the **Scheduling As
 Loading the Microsoft Exchange Add-in is controlled by the following registry entry:
 
 ```
-Subkey: HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Outlook\Addins\UmOutlookAddin.FormRegionAddin  
+Subkey: HKEY_LOCAL_MACHINE\Software\Microsoft\Office\x.0\Outlook\Addins\UmOutlookAddin.FormRegionAddin  
 DWORD: LoadBehavior  
 Values: 3 = add-in is loaded when Outlook starts, 2 = add-in is not loaded on startup (and may never load), 0 = add-in is disabled
 ```

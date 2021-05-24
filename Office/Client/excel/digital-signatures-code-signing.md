@@ -60,7 +60,7 @@ A certification authority can issue you a digital certificate or code signing ID
 
 For more information about how to obtain a digital signature or code signing ID, visit the following Microsoft Web site:
 
-[Microsoft Root Certificate Program Members](https://docs.microsoft.com/previous-versions/ms995347(v=msdn.10))
+[Microsoft Trusted Root Certificate Programs](/security/trusted-root/release-notes)
 
 You can create your own digital certificate for personal use or testing purposes with the SelfCert.exe tool that is provided in Microsoft Office. However, this certificate is not authenticated by a Certificate Authority (CA).
 
@@ -70,47 +70,47 @@ To add a digital signature to your workbook, follow these steps, as appropriate 
 
 #### Microsoft Office Excel 2007
 
-1. Click the **Microsoft Office Button**, point to **Prepare**, and then click **Add a Digital Signature**.   
+1. Click the **Microsoft Office Button**, point to **Prepare**, and then click **Add a Digital Signature**.
 2. Click **OK**.
 
     If the workbook has changed and is not yet saved, or if it is not saved in the Excel 2007 workbook format, you receive the following message:
-    
-    Before you can add signatures, you must save the workbook in a format that supports digital signatures. 
 
-    Do you want to save the workbook as a Microsoft Office Excel Workbook?
+    > Before you can add signatures, you must save the workbook in a format that supports digital signatures.  
+    > Do you want to save the workbook as a Microsoft Office Excel Workbook?
 
-3. Click **Yes** to display the **Save As** dialog box. You must save the file in the **Excel Workbook (*.xlsx)** format to add the digital signature.   
-4. After you save the workbook, the **Get a Digital ID** dialog box is displayed. Select the type of digital ID that you want to use, and then click **OK**.   
+3. Click **Yes** to display the **Save As** dialog box. You must save the file in the **Excel Workbook (*.xlsx)** format to add the digital signature.
+4. After you save the workbook, the **Get a Digital ID** dialog box is displayed. Select the type of digital ID that you want to use, and then click **OK**.
 
 After you complete the necessary steps for the type of digital ID that you selected, your Excel workbook is now signed.
 
 > [!NOTE]
-> - If you save your workbook after you add the digital ID, the digital ID will be removed. For example, when you click the **Microsoft Office Button** and then click **Save As** after you digitally sign your workbook, you receive the following message: 
+>
+> - If you save your workbook after you add the digital ID, the digital ID will be removed. For example, when you click the **Microsoft Office Button** and then click **Save As** after you digitally sign your workbook, you receive the following message:
 >
 >   Saving a copy of this workbook will invalidate all of the signatures in the copy.
 >
->   Do you want to continue? If you click **Yes**, the digital ID will be removed from the copy of the workbook.   
-> - When you close and then reopen the signed workbook, the Excel title bar will display the words **[Read-Only]** (in brackets) after the workbook name. Additionally, the digital ID icon appears in the status bar, and the Signatures task pane appears to indicate that a digital signature has been added to the workbook. 
+>   Do you want to continue? If you click **Yes**, the digital ID will be removed from the copy of the workbook.
+> - When you close and then reopen the signed workbook, the Excel title bar will display the words **[Read-Only]** (in brackets) after the workbook name. Additionally, the digital ID icon appears in the status bar, and the Signatures task pane appears to indicate that a digital signature has been added to the workbook.
 >
 >   To verify that changes have not occurred in the signed workbook, verify that a signer appears in the Signature task pane.
 
 #### Excel 2003
 
-1. On the **Tools** menu, click
-**Options**.   
-2. On the **Security** tab, click **Digital Signatures**.   
+1. On the **Tools** menu, click **Options**.
+2. On the **Security** tab, click **Digital Signatures**.
 3. Click **Add**.
 
     If the workbook has changed and is not yet saved, or if it is not saved in the Excel 2003 workbook format, you receive the following message:
 
-    This workbook must be saved as a Microsoft Excel workbook before it can be digitally signed. Do you want to save the workbook?
-4. Click **Yes** to display the **Save As** dialog box. You must save the file in the Microsoft Excel Workbook format to add the digital signature.   
-5. After you save the workbook, the **Select Certificate** dialog box is displayed. Select the certificate that you want to use, and then click **OK**.   
-6. Click **OK** to close the **Digital Signatures** dialog box.   
+    > This workbook must be saved as a Microsoft Excel workbook before it can be digitally signed. Do you want to save the workbook?
+4. Click **Yes** to display the **Save As** dialog box. You must save the file in the Microsoft Excel Workbook format to add the digital signature.
+5. After you save the workbook, the **Select Certificate** dialog box is displayed. Select the certificate that you want to use, and then click **OK**.
+6. Click **OK** to close the **Digital Signatures** dialog box.
 
 Your Excel workbook is now signed.
 
 > [!NOTE]
+>
 > - If you save your workbook after you add the digital signature, the digital signature will be removed. For example, when you click
 **Save** on the **File** menu after you digitally sign your workbook, you receive the following message:
 >
@@ -121,21 +121,19 @@ Your Excel workbook is now signed.
 
 To verify that changes have not occurred in the signed workbook, follow these steps:
 
-1. On the **Tools** menu, click
- **Options**.   
-  2. On the **Security** tab, click
- **Digital Signatures**.   
-  3. On the **Signatures** tab, if a signer is listed in the **The following have digitally signed this document** list, you can be assured that the file has not been changed since the digital signature was added to the file.   
+1. On the **Tools** menu, click **Options**.
+2. On the **Security** tab, click **Digital Signatures**.
+3. On the **Signatures** tab, if a signer is listed in the **The following have digitally signed this document** list, you can be assured that the file has not been changed since the digital signature was added to the file.
 
 ### How do I code sign a macro project?
 
 To code sign your Visual Basic for Applications macro project, follow these steps:
 
-1. Open the workbook that contains the macro project that you want to sign.   
-2. Press ALT+F11 to open the Visual Basic Editor.   
-3. In the Project Explorer, select the project that you want to sign.   
-4. On the **Tools** menu, click **Digital Signature**.   
+1. Open the workbook that contains the macro project that you want to sign.
+2. Press ALT+F11 to open the Visual Basic Editor.
+3. In the Project Explorer, select the project that you want to sign.
+4. On the **Tools** menu, click **Digital Signature**.
 5. Do one of the following:
 
     - If you have not previously selected a digital certificate, or if you want to use another one, click **Choose**, select the certificate, and then click **OK** two times.
-     - To use the current certificate, click **OK**.
+    - To use the current certificate, click **OK**.

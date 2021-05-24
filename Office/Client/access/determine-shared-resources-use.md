@@ -66,4 +66,4 @@ For more information about using the Server Manager utility to monitor the concu
 
 For additional information about .ldb files, see the following article
 
-[Introduction to lock files (.laccdb and .ldb) in Access](https://docs.microsoft.com/office/troubleshoot/access/lock-files-introduction)
+[Introduction to lock files (.laccdb and .ldb) in Access](lock-files-introduction.md)

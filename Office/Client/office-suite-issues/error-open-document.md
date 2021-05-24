@@ -46,7 +46,6 @@ This issue occurs because of a character limit on creating and saving files in O
 
 - **Microsoft Excel**: The total length of the path and the file name, including file name extension, exceeds 218 characters.
 
-
 > [!NOTE]
 > This limit includes the three characters that represent the drive, the characters in folder names, backslash characters between folder names, and the characters in the file name itself.
 
@@ -60,12 +59,10 @@ To work around this issue, try any of the following workarounds.
 - Rename one or more folders that contain the file so that they have shorter names.
 - Move the file to a folder that has a shorter path name.
 
-
 ### Workaround 2: Manually access, open, and repair
 
 1. Start Word, Excel, or PowerPoint.
 2. On the **File** tab, select **Open** > **Browse** to locate the damaged file.
-
 
     :::image type="content" source="./media/error-open-document/open.jpg" alt-text="Open dialog box":::
 
@@ -77,48 +74,46 @@ This option repairs the damage to the file, and then opens the file. After you r
 
 ### Workaround 3: Change file format and resave
 
-You might be able to rescue a damaged file by resaving it in a different file format, and then reverting it to the original format. This example uses Word. 
+You might be able to rescue a damaged file by resaving it in a different file format, and then reverting it to the original format. This example uses Word.
 
 #### Step 1: Save the file to another format
 
-1.	Start Word.
-2.	On the **File** menu, select **Open**, and then locate and open the damaged file.
-3.	On the **File** menu, select **Save as** > **Browse**.
-4.	Navigate to the file location that you want to save in.
-5.	On the **Save as type** list, select the desired file format. For example, select **Rich Text Format (*rtf)**. 
+1. Start Word.
+2. On the **File** menu, select **Open**, and then locate and open the damaged file.
+3. On the **File** menu, select **Save as** > **Browse**.
+4. Navigate to the file location that you want to save in.
+5. On the **Save as type** list, select the desired file format. For example, select **Rich Text Format (*rtf)**.
 
     :::image type="content" source="./media/error-open-document/save-as.jpg" alt-text="Save as":::
 
-6.	Select **Save**, and then select **File** > **Close**.
+6. Select **Save**, and then select **File** > **Close**.
 
 #### Step 2: Resave the file as a Word document
 
-1.	Select **File** > **Open**.
-2.	Select the new file that’s saved as a **Rich Text File**, and then select **Open**.
-3.	Select **File** > **Save as**. 
-4.	On the **Save as** type list, select **Word Document**.
-5.	Rename the file, and then select **Save**.
+1. Select **File** > **Open**.
+2. Select the new file that’s saved as a **Rich Text File**, and then select **Open**.
+3. Select **File** > **Save as**.
+4. On the **Save as** type list, select **Word Document**.
+5. Rename the file, and then select **Save**.
 
-
-       :::image type="content" source="./media/error-open-document/save-a-copy.jpg" alt-text="Save a copy":::
+     :::image type="content" source="./media/error-open-document/save-a-copy.jpg" alt-text="Save a copy":::
 
 You have to do this only one time to make sure that the document will now function correctly on your device. However, keep in mind that by saving the file as a new document, you are creating a different file. To avoid confusion, name the new file something distinctive, and archive or delete the damaged version. By doing this, you won’t accidentally re-open the original file that hasn’t been reformatted.
- 
+
 ### Workaround 4: Open unrecognized file format
 
-If you can rule out file corruption as the culprit, check for file associations and unrecognized file formats. Sometimes, a file won’t open on your device because the device that the file was created on used software that your device doesn’t have. 
+If you can rule out file corruption as the culprit, check for file associations and unrecognized file formats. Sometimes, a file won’t open on your device because the device that the file was created on used software that your device doesn’t have.
 
 For example, in Word, you want to view a PDF file that’s attached to an email message. However, you don't have a PDF viewer installed. Therefore, your device doesn’t know what program to open to view the file. In this case, you can change the format of the file to match a program that you do have installed.
 
-1.	Save the attachment to your computer. To do this, select the down arrow next to the attachment in the message, select **Save as**, navigate to the desired location, and then select **Save**.
-2.	On the **File** menu, select **Open** > **Browse** to locate the file.
-3.	Right-click the file, point to **Open with**, and then select a different program to open the file. 
-4.	If the desired program is not on the list, select “Choose another app” to locate a different program. 
+1. Save the attachment to your computer. To do this, select the down arrow next to the attachment in the message, select **Save as**, navigate to the desired location, and then select **Save**.
+2. On the **File** menu, select **Open** > **Browse** to locate the file.
+3. Right-click the file, point to **Open with**, and then select a different program to open the file.
+4. If the desired program is not on the list, select “Choose another app” to locate a different program.
 
     > [!NOTE]
     > If this works, and you would like the selected program to always open this type of file, select the **Always use this app to open .docx files** (for example) check box.
     :::image type="content" source="./media/error-open-document/always-use-this-app.jpg" alt-text="Always use this app":::
-
 
 For more information about file formats and how to manage them, see  [Learn about file formats](https://support.office.com/article/Learn-about-file-formats-56DC3B55-7681-402E-A727-C59FA0884B30).
 
@@ -126,17 +121,16 @@ For more information about file formats and how to manage them, see  [Learn abou
 
 You might not be able to open a new file or save a file to your device if you’re running out of space on the hard disk. On a full disk, much of the space is being used up by temporary, duplicate, and unnecessary items. The fastest and easiest method to free up space on a hard disk is to use the [Disk Cleanup](https://community.windows.com/stories/device-health) app that’s included in Windows.
 
-1.	Select **Search**, and type **Disk Cleanup**.
-2.	In the results list, select **Disk Cleanup**.
-
+1. Select **Search**, and type **Disk Cleanup**.
+2. In the results list, select **Disk Cleanup**.
 
     :::image type="content" source="./media/error-open-document/disk-cleanup.jpg" alt-text="Disk Cleanup":::
 
-3.	A dialog box opens and provides options to delete unnecessary files. Select the check box next to each category of items that you want to delete from your device, and then select **OK**. Everything in this list can be deleted safely.
+3. A dialog box opens and provides options to delete unnecessary files. Select the check box next to each category of items that you want to delete from your device, and then select **OK**. Everything in this list can be deleted safely.
 
     :::image type="content" source="./media/error-open-document/disk-cleanup-c.jpg" alt-text="Disk Cleanup for C disk":::
 
-4.	When you are prompted, confirm that you want to permanently delete the unnecessary files.
+4. When you are prompted, confirm that you want to permanently delete the unnecessary files.
 
     :::image type="content" source="./media/error-open-document/delete-files.jpg" alt-text="Delete files":::
 

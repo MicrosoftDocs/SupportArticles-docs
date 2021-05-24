@@ -14,7 +14,6 @@ search.appverid:
 - MET150
 ms.assetid: 
 appliesto:
-- CI 116765
 - SharePoint Online
 description: Describes a resolution to an issue where sharing options are not available or grayed out when using SharePointOnline or OneDrive for Business.
 ---

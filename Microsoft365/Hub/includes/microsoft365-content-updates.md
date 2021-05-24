@@ -2,6 +2,17 @@
 
 
 
+## Week of May 03, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/7/2021 | [Listing some issues for Microsoft 365 Administration](/office365/troubleshoot/o365-admin-welcome) | modified |
+| 5/7/2021 | [Listing some issues for Microsoft 365 Compliance](/office365/troubleshoot/microsoft-365-compliance-welcome) | modified |
+| 5/7/2021 | [Listing some issues for Office 365 Enterprise](/office365/troubleshoot/o365-enterprise-welcome) | modified |
+| 5/7/2021 | [Listing some issues for Microsoft 365 Security](/office365/troubleshoot/microsoft-365-security-welcome) | modified |
+
+
 ## Week of April 26, 2021
 
 
