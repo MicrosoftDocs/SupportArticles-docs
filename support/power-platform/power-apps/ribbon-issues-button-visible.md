@@ -12,7 +12,7 @@ _Original KB number:_ &nbsp; 4552163
 
 ## Determine why a button is visible
 
-A button will be made visible if all the [enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules) and [display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules) on the [command](/powerapps/developer/model-driven-apps/define-ribbon-commands) associated with the button evaluate to true. If this is unexpected, it is possible that the command definition has been overridden and is missing enable rules or display rules or the rule definitions themselves are overridden and causing the button to be visible when you expect it to be hidden.
+A button will be made visible if all the [enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules) and [display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules) on the [command](/powerapps/developer/model-driven-apps/define-ribbon-commands) associated with the button evaluate to true. If this is unexpected, it is possible that the command definition has been overridden and is missing enable rules or display rules, or the rule definitions themselves are overridden and causing the button to be visible when you expect it to be hidden.
 
 > [!WARNING]
 > Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
