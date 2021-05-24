@@ -27,9 +27,9 @@ appliesto:
 
 You notice that synchronization of objects from your local Active Directory Domain Services to Microsoft cloud services has stopped. (These services may include Office 365, Microsoft Azure, and Microsoft Intune.)
 
-Additionally, the following event is logged in Event Viewer:
+Additionally, Event ID 0, or Event ID 109 is logged in Event Viewer:
 
-```
+```output
 Event ID: 0 or Event ID: 109
 
 Source: Directory Synchronization
@@ -43,14 +43,14 @@ This issue occurs if you're using a deprecated version of the Microsoft Online 
 
 ## Solution
 
-Upgrade to the latest version of the synchronization tool. This is now called the Azure AD Connect tool and it must be installed on a 64-bit edition of Windows Server. To find the ways you can upgrade from DirSync, go to [Azure AD Connect: Upgrade from DirSync](/azure/active-directory/hybrid/how-to-dirsync-upgrade-get-started).
+Upgrade to Azure AD Connect. This tool must be installed on a 64-bit version of Windows Server. For more information about how to upgrade from DirSync, see [Azure AD Connect: Upgrade from DirSync](/azure/active-directory/hybrid/how-to-dirsync-upgrade-get-started).
 
 ## More information
 
-To learn about hybrid identity with Azure Active Directory, see [Prepare for directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity).
+For more information about hybrid identity with Azure Active Directory, see [Prepare for directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
-To understand what are the system and software requirements for Azure AD Connect, visit [Prerequisites for Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-prerequisites).
+For more information about the system and software requirements for Azure AD Connect, see [Prerequisites for Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-prerequisites).
 
-For a list of attributes that are synchronized by Azure AD Connect, see the following article: [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized)
+For more information about the attributes that are synchronized by Azure AD Connect, see [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/), or [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread).
