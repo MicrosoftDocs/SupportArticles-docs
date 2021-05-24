@@ -1,6 +1,6 @@
 ---
 title: Directory Synchronization tool stops syncing objects
-description: Describes an issue in which the 32-bit version of the Microsoft Online Services Directory Synchronization tool no longer syncs objects from your local Active Directory to Office 365, Azure, or Microsoft Intune. Also, event ID 0 is logged.
+description: Describes an issue in which the Microsoft Online Services Directory Synchronization tool no longer syncs objects from your local Active Directory to Office 365, Azure, or Microsoft Intune.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -19,7 +19,7 @@ appliesto:
 - Office 365 Identity Management
 ---
 
-# Microsoft Online Services Directory Synchronization tool stops syncing objects and triggers event ID 0
+# Microsoft Online Services Directory Synchronization tool stops syncing objects and triggers a Directory Synchronization error
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -27,10 +27,10 @@ appliesto:
 
 You notice that synchronization of objects from your local Active Directory Domain Services to Microsoft cloud services has stopped. (These services may include Office 365, Microsoft Azure, and Microsoft Intune.)
 
-Additionally, the following event is logged in Event Viewer:
+Additionally, Event ID 0, or Event ID 109 is logged in Event Viewer:
 
-```adoc
-Event ID: 0
+```output
+Event ID: 0 or Event ID: 109
 
 Source: Directory Synchronization
 
@@ -39,18 +39,18 @@ Description: This version of the Microsoft Online Services Directory Sync tool i
 
 ## Cause
 
-This issue occurs if you're using the 32-bit version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Azure Active Directory (Azure AD) if you're using a 32-bit version of the Microsoft Online Services Directory Synchronization tool. 
+This issue occurs if you're using a deprecated version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Azure Active Directory (Azure AD) if you're using a deprecated version of the Microsoft Online Services Directory Synchronization tool.
 
 ## Solution
 
-Upgrade to the latest version of the Directory Sync tool. This is now called the Azure Active Directory Synchronization tool, and it must be installed on a 64-bit edition of Windows Server. To download the latest version of the Directory Sync tool, go to [What is hybrid identity with Azure Active Directory?](/azure/active-directory/hybrid/whatis-hybrid-identity).
+Upgrade to Azure AD Connect. This tool must be installed on a 64-bit version of Windows Server. For more information about how to upgrade from DirSync, see [Azure AD Connect: Upgrade from DirSync](/azure/active-directory/hybrid/how-to-dirsync-upgrade-get-started).
 
 ## More information
 
-To learn about the system and software requirements for the Directory Sync tool, see [Prepare for directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity).
+For more information about hybrid identity with Azure Active Directory, see [Prepare for directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
-For a list of attributes that are synchronized by the Azure Active Directory Sync tool, see the following wiki article:
+For more information about the system and software requirements for Azure AD Connect, see [Prerequisites for Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-prerequisites).
 
-[Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized)
+For more information about the attributes that are synchronized by Azure AD Connect, see [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/), or [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread).
