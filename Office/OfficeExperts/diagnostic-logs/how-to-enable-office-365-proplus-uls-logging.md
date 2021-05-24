@@ -1,5 +1,5 @@
 ---
-title: How to enable Microsoft 365 Apps for enterprise ULS logging
+title: How to enable Microsoft 365 Apps for enterprise logging
 description: There are times during troubleshooting an Office issue when the traditional log settings are not gathering enough information. This article describes how to collect more verbose logging details. 
 author: helenclu
 manager: dcscontentpm
@@ -37,7 +37,7 @@ To enable and disable the above key automatically, download and run the followin
 - [Enable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Enable-Local-Logging2016.zip)
 - [Disable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Disable-Local-Logging2016.zip)
 
-Reproduce the issue and collect the logs for review. The logs (the <MachineName>-<Date>-<Time>.log format) are stored under %temp% for sign-in or activation issues.
+Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues in the format MachineName-Date-time.log.
 
 **For installation or patching issues, run the following commands to add the registry keys:**
 
@@ -50,9 +50,18 @@ reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DW
 ```
 Restart the Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
-Reproduce the issue and collect the logs for review. The logs (the <MachineName>-<Date>-<Time>.log format) are stored under %windir%\temp and %temp% for installation or patching issues.
+Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues in the format MachineName-Date-time.log.
+
+**For issues with Serviceability Manager:**
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\C2RSvcMgr]
+"EnableLocalLogging"=dword:00000001
+
+Serviceability Manager is part of [Office Inventory](https://docs.microsoft.com/en-us/deployoffice/admincenter/inventory) which is used as part of [Serviceing Profiles](https://docs.microsoft.com/en-us/deployoffice/admincenter/servicing-profile). This type of logging would be used if you are having an issue with Inventory (ie Devices are not showing up in Inventory from the Office 365 Admin center). 
+
+The Inventory feature is only available from **Version 2008 (16.0.13127.21064) or higher**. The logs are stored under %windir%\temp and %temp% for installation or patching issues in the format MachineName-Date-time.log.
 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
 
-After you collect the logs, turn off the Office ULS verbose logging settings. Otherwise, this continues to collect verbose data and use more drive space.
+After you collect the logs, turn off the Office verbose logging settings. Otherwise, this continues to collect verbose data and use more drive space.
