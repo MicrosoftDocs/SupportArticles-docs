@@ -17,7 +17,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Error 500 when you try to use POX Autodiscover with OAuth client credentials grant
+# POX Autodiscover not supported with OAuth client credentials grant
 
 ## Symptoms
 
