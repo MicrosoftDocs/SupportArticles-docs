@@ -7,15 +7,15 @@ ms.reviewer: dahans
 ---
 # Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
 
-To improve the security posture of your tenant, and in compliance with industry standards, Microsoft Azure Active directory (Azure AD) will soon stop supporting the following protocols and ciphers:
+To improve the security posture of your tenant, and in compliance with industry standards, Microsoft Azure Active directory (Azure AD) will soon stop supporting the following Transport Layer Security (TLS) protocols and ciphers:
 
 - TLS 1.1
 - TLS 1.0
 - 3DES cipher suite **(TLS_RSA_WITH_3DES_EDE_CBC_SHA)**
 
-## How will this affect your organization
+## How will this change affect your organization
 
-Applications that are communicating with or authenticating against Azure Active Directory may not work as expected if they are NOT able to use TLS 1.2 to communicate. This includes Azure AD Connect, Azure AD PowerShell, Azure AD Application Proxy connectors, PTA agents, legacy browsers, and applications integrated with Azure AD.
+Applications that are communicating with or authenticating against Azure Active Directory may not work as expected if they are NOT able to use TLS 1.2 to communicate. This situation includes Azure AD Connect, Azure AD PowerShell, Azure AD Application Proxy connectors, PTA agents, legacy browsers, and applications integrated with Azure AD.
 
 ## Why is this happening
 
@@ -35,7 +35,7 @@ To maintain a secure connection to Azure Active Directory (Azure AD) and Microso
 
 ### Guidelines for enabling TLS 1.2 on clients
 
-- Update Windows and the default TLS that you use for "WinHTTP."
+- Update Windows and the default TLS that you use for "WinHTTP".
 - Identify and reduce you dependency on the client apps and operating systems that don’t support TLS 1.2.
 - Enable TLS 1.2 applications and services that communicate with Azure AD.
 - Update and configure your .NET Framework installation to support TLS 1.2.
@@ -133,7 +133,7 @@ Install the .NET updates so you can enable strong cryptography. Some versions of
 
 Use these guidelines:
 
-- NET Framework 4.6.2 and later versions support TLS 1.2 and TLS 1.1. You should verify the registry settings. However, no additional changes are required.
+- NET Framework 4.6.2 and later versions support TLS 1.2 and TLS 1.1. Verify the registry settings. However, no other changes are required.
 
 - Update NET Framework 4.6 and earlier versions to support TLS 1.2 and TLS 1.1.
 
