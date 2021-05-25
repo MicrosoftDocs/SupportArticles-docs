@@ -56,7 +56,7 @@ For TLS 1.2, the following cipher suites are supported by Azure Front Door:
 To add cipher suites, either deploy a group policy or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true). 
 
 > [!IMPORTANT]
-> When editing the Cipher Suite order , ensure that you add the 4 mentioned above to the TOP of the list. 
+> Edit the order of the cipher suites to ensure that these four suites are at the top of the list. 
 
 For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
 
