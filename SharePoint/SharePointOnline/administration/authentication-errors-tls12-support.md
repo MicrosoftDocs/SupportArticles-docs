@@ -53,6 +53,8 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
    >System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
 
    >System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+   
+   >The Business Data Connectivity Metadata Store is currently unavailable.
 
 ### Resolution
 
