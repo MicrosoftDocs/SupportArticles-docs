@@ -29,7 +29,7 @@ To collect more verbose logging details, registry keys must be added:
 
 **For sign-in or activation issues, add the following registry key:**
 
-[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Logging]
+`HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Logging`  
 "EnableLogging"=dword:00000001
 
 To enable and disable the above key automatically, download and run the following .reg files:
@@ -37,7 +37,7 @@ To enable and disable the above key automatically, download and run the followin
 - [Enable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Enable-Local-Logging2016.zip)
 - [Disable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Disable-Local-Logging2016.zip)
 
-Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues in the format MachineName-Date-time.log.
+Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues, in the format of *MachineName-Date-time.log*.
 
 **For installation or patching issues, run the following commands to add the registry keys:**
 
@@ -50,18 +50,18 @@ reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DW
 ```
 Restart the Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
-Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues in the format MachineName-Date-time.log.
+Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues, in the format of *MachineName-Date-time.log*.
 
-**For issues with Serviceability Manager:**
+**For issues with the Serviceability Manager, add the following registry key:**
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\C2RSvcMgr]
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\C2RSvcMgr`  
 "EnableLocalLogging"=dword:00000001
 
-Serviceability Manager is part of [Office Inventory](https://docs.microsoft.com/en-us/deployoffice/admincenter/inventory) which is used as part of [Serviceing Profiles](https://docs.microsoft.com/en-us/deployoffice/admincenter/servicing-profile). This type of logging would be used if you are having an issue with Inventory (ie Devices are not showing up in Inventory from the Office 365 Admin center). 
+Serviceability Manager is part of [Office Inventory](/deployoffice/admincenter/inventory), which is used as part of [servicing profile](/deployoffice/admincenter/servicing-profile). This type of logging can be used if you experience an issue with Inventory. For example, devices aren't displayed on the inventory page in the Microsoft 365 Apps admin center. 
 
-The Inventory feature is only available from **Version 2008 (16.0.13127.21064) or higher**. The logs are stored under %windir%\temp and %temp% for Serviceability Manager issues in the format MachineName-Date-time.log.
+The Inventory feature is available in version 2008 (16.0.13127.21064) or later. The logs are stored under %windir%\temp and %temp% for Serviceability Manager issues, in the format of MachineName-Date-time.log.
 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
 
-After you collect the logs, turn off the Office verbose logging settings. Otherwise, this continues to collect verbose data and use more drive space.
+After you collect the logs, turn off the Office verbose logging settings. Otherwise, it continues to collect verbose data and use more drive space.
