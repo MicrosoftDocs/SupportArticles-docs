@@ -19,7 +19,7 @@ appliesto:
 ms.reviewer: ericspli
 ---
 
-# How to enable Microsoft 365 Apps for enterprise ULS logging
+# How to enable Microsoft 365 Apps for enterprise logging
 
 *This article was written by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Support Escalation Engineer.*
 
