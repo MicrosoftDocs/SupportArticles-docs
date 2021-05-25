@@ -21,7 +21,7 @@ search.appverid:
 
 ## Symptoms
 
-When you select the **Files** tab on a channel in Microsoft Teams, you receive the following error message:
+When you select the **Files** tab on a team's channel in Microsoft Teams, you receive the following error message:
 
 > There was a problem reaching this app
 
@@ -29,7 +29,7 @@ When you select the **Files** tab on a channel in Microsoft Teams, you receive t
 
 ## Cause
 
-This error occurs if the Microsoft 365 group that's associated with the team doesn't have an owner.
+This error occurs if the ownership information for the Microsoft 365 group that's associated with the team is missing from Teams. If an assigned owner leaves the company, the group becomes orphaned.
 
 ## Resolution
 
