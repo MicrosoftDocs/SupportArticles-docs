@@ -84,7 +84,7 @@ For more information about this hotfix package, see the following Microsoft Know
     `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\Preferences`
 
     > [!NOTE]
-    > The **x.0** placeholder represents your version of Office (16.0 = Office 2016 or later, 15.0 = Office 2013, 14.0 = Office 2010).
+    > The **x.0** placeholder represents your version of Office (16.0 = Office 2016 and Office 2019, 15.0 = Office 2013, 14.0 = Office 2010).
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
 4. Type DelegateSentItemsStyle, and then press Enter.
 5. Right-click **DelegateSentItemsStyle**, and then click **Modify**.
