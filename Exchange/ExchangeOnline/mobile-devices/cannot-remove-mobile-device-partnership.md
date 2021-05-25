@@ -1,8 +1,8 @@
 ---
 title: Can't remove a mobile device partnership
 description: Provides a workaround for an issue in which you receive an error message when you try to remove a mobile device partnership from a user's mailbox by using the Exchange admin center in Exchange Online.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

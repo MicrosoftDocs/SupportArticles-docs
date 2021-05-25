@@ -1,8 +1,8 @@
 ---
 title: Cannot browse groups in OWA
 description: Describes an issue in which Exchange Online users cannot browse groups in Outlook Web App because the Browse groups option is missing.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

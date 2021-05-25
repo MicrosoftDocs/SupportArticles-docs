@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot sign-in issues
 description: Helps you resolve issues that you can't sign in to Skype for Business.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

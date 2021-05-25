@@ -1,8 +1,8 @@
 ---
 title: Description of multipart/mixed Internet message format
 description: This article introduces the multipart/mixed Internet message format.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

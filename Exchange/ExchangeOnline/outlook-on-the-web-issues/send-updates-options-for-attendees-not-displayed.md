@@ -1,8 +1,8 @@
 ---
 title: Send updates options for attendees not shown
 description: This article talks about a behavior change in Outlook on the web when a meeting organizer adds users to or removes users from an existing meeting request.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

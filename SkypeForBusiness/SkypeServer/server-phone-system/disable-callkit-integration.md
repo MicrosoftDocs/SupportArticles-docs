@@ -1,7 +1,7 @@
 ---
 title: Disable CallKit integration for Skype for Business iOS
 description: Describes how to disable CallKit integration for Skype for Business iOS.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business iOS

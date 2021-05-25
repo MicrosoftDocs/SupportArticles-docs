@@ -39,84 +39,82 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## Resolution
-
 If you see "Error 1935. An error occurred during the installation of assembly component" when you install Office 2010 or 2007 or one of the Office stand-alone products like Excel, restart the computer and try to run setup again as a quick first step.
 
-If the error still appears after restarting the computer, try these other methods to fix the problem:
+If the error still appears after restarting the computer, try these other methods to fix the problem.
 
-### Delete the APPMODEL registry subkey
+## Delete the APPMODEL registry subkey
 
 Deleting the `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\APPMODEL` subkey should allow you to install Office.
 
-> **Warning:** Serious problems might occur if you modify the registry incorrectly. These problems could cause you to have to reinstall the operating system or even prevent your computer from starting. Microsoft can't guarantee that these problems can be solved. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) in case problems occur. Modify the registry at your own risk.
+> [!WARNING]
+> Serious problems might occur if you modify the registry incorrectly. These problems could cause you to have to reinstall the operating system or even prevent your computer from starting. Microsoft can't guarantee that these problems can be solved. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) in case problems occur. Modify the registry at your own risk.
 
-1. Select Start, type *regedit* and press Enter, then select Registry Editor from the search results.
+1. Select Start, type *`regedit`* and press Enter, then select Registry Editor from the search results.
 1. Navigate to the `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\APPMODEL` subkey.
-1. Right-click the subkey and select **Delete**.
+1. Right-click the subkey, and then select **Delete**.
 1. Select **Yes** to confirm the deletion.
 
-Restart the device and then try installing Office again. If you still get the error, try the next method, below.
+Restart the device and then try installing Office again. If you still get the error, try the next method.
 
-### Run the System Update Readiness tool
+## Run the System Update Readiness tool
 
 > [!IMPORTANT]
-> The System Update Readiness tool can only be used on Windows 7 or Windows Vista operating systems. If you are using a different version of Windows, try one of the other methods in this article.
+> The System Update Readiness tool can only be used on Windows 7 or Windows Vista operating systems. If you're using a different version of Windows, try one of the other methods in this article.
 
 Select and download the System Update Readiness tool for your version of Windows:
 
-- [Download for the 32-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181491)    
-- [Download for the 64-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181492)    
-- [Download for the 32-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181487)    
-- [Download for the 64-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181490)    
+- [Download for the 32-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181491)
+- [Download for the 64-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181492)
+- [Download for the 32-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181487)
+- [Download for the 64-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181490)
 
-### Repair or update Microsoft .NET Framework components
+## Repair or update Microsoft .NET Framework components
 
-First, check installed programs to see if the latest version of .NET Framework is installed. To do this, follow these steps:
+First, check installed programs to see if the latest version of .NET Framework is installed:
 
-1. Click Start (or Start > Run in Windows XP).
-2. Type *appwiz.cpl*, and then press Enter.
-3. Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs. See image.
+1. Click **Start**.
+2. Type *`appwiz.cpl`*, and then press Enter.
+3. Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs.
 
     ![Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs](./media/error-1935-when-install-office-2010/list-of-installed-programs.png)
 
 If you find Microsoft .NET Framework 4 Client Profile, follow these steps to repair it:
 
 1. Close all applications.
-2. Click Start (or Start > Run in Windows XP).
-3. Type appwiz.cpl, and then press Enter.
-4. Click Microsoft .NET Framework 4 Client Profile and click Uninstall/Change (or Change/Remove in Windows XP). See image.
+2. Click **Start**.
+3. Type `appwiz.cpl`, and then press Enter.
+4. Click Microsoft .NET Framework 4 Client Profile, and then select Uninstall/Change.
 
     ![Click Microsoft .NET Framework 4 Client Profile and click Uninstall/Change (or Change/Remove in Windows XP).](./media/error-1935-when-install-office-2010/uninstall-change.png)
-1. Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next. See image.
+5. Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then select **Next**.
 
     ![Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next.](./media/error-1935-when-install-office-2010/repair.png)
-1. When the repair is complete, click Finish, and then click Restart Now to restart the computer.
+6. When the repair is complete, select **Finish**, and then select **Restart Now** to restart the computer.
 
-If you can't find Microsoft .NET Framework 4 Client Profile, download and install it to update the computer. You can download the file from:
-
-[Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/en/details.aspx?id=17851)
+If you can't find Microsoft .NET Framework 4 Client Profile, download and install [Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/en/details.aspx?id=17851) to update the computer.
 
 Try to install Microsoft Office again. If error 1935 continues to occur, follow the steps to uninstall and reinstall .NET Framework from the computer.
 
-### Uninstall and reinstall Microsoft .NET Framework components
+## Uninstall and reinstall Microsoft .NET Framework components
 
-Uninstall and reinstall Microsoft .NET Framework components IMPORTANT The .NET Framework Setup Cleanup Utility provided here should only be used only after you've tried the previous options.
+> [!IMPORTANT]
+> The .NET Framework Setup Cleanup Utility provided here should be used only after you've tried the previous options.
 
-To uninstall .NET Framework components from the computer follow these steps:
+To uninstall .NET Framework components from the computer, follow these steps:
 
 1. Create a temporary folder on your desktop.
-2. Visit the [.NET Framework Cleanup Tool User's Guide](https://docs.microsoft.com/archive/blogs/astebner/net-framework-cleanup-tool-users-guide) blog and download the [dotnetfx_cleanup_tool.zip](https://msdnshared.blob.core.windows.net/media/2018/05/dotnetfx_cleanup_tool.zip) file.
+2. Visit the [.NET Framework Cleanup Tool User's Guide](/archive/blogs/astebner/net-framework-cleanup-tool-users-guide) blog and download the [dotnetfx_cleanup_tool.zip](https://msdnshared.blob.core.windows.net/media/2018/05/dotnetfx_cleanup_tool.zip) file.
 3. When prompted, click **Open**, and then click **Extract Now**. Extract the files to the folder you created.
 4. Find **cleanup_tool.exe** in the folder you created and double-click it.
-5. In the **Do you want to run the .NET Framework Setup Cleanup Utility?** message, click Yes.
+5. In the **Do you want to run the .NET Framework Setup Cleanup Utility?** message, click **Yes**.
 6. Click **Yes** to accept the license agreement.
 7. In the **Product to cleanup** window, choose a .NET Framework version that you want to remove.
 
     > [!NOTE]
     > You can't remove .NET Framework versions that are part of the Windows operating system. If you have Windows 7, you can't remove .NET Framework versions 3.5 or lower. If you have Windows Vista, you can't remove .NET Framework versions 3.0 or lower. If you have Windows XP, you can't remove .NET Framework versions 2.0 or lower.
-8. Click Cleanup Now.
-9. Restart the computer once the .NET Framework component is removed.
+8. Click **Cleanup Now**.
+9. Restart the computer after the .NET Framework component is removed.
 10. Download and install the following components, one at a time, based on your operating system:  
   
     - [.NET Framework 1.1](https://www.microsoft.com/downloads/details.aspx?familyid=262d25e3-f589-4842-8157-034d1e7cf3a3) - For Windows XP only.
@@ -132,18 +130,18 @@ Get help from the [Microsoft Community](https://answers.microsoft.com/) online 
 
 ## More Information
 
-If error 1935 happens when you install Office 2010 Service Pack 1 (SP1), follow the steps in the [Description of Office 2010 update: September 13, 2011](https://support.microsoft.com/help/2553092) knowledge base article.
+If error 1935 happens when you install Office 2010 Service Pack 1 (SP1), follow the steps in [Description of Office 2010 update: September 13, 2011](https://support.microsoft.com/help/2553092).
 
-You may experience error 1935 when you install Office 2010 Service Pack 2 (SP2). As Office 2010 includes .NET Programmability Support, this issue may be caused by the interference between Windows Installer (msiexec.exe) and Windows Search (SearchIndexer.exe) or another module in the assembly file copy process. This issue may also occur when you apply other updates, for example, a hotfix for Microsoft .NET Framework components. To work around this issue, use one of the following steps:
+You may experience error 1935 when you install Office 2010 Service Pack 2 (SP2). As Office 2010 includes .NET Programmability Support, this issue may be caused by the interference between Windows Installer (msiexec.exe) and Windows Search (SearchIndexer.exe) or another module in the assembly file copy process. This issue may also occur when you apply other updates, for example, a hotfix for Microsoft .NET Framework components. To work around this issue, use one of the following methods:
 
 - Method 1: Retry installation of Office 2010 SP2
 - Method 2: Stop Windows Search Service, and apply Office 2010 SP2
 
   To stop Windows Search Service, follow these steps:
 
-     1. Click Start, type services.msc in the Search programs and filestext box, and then click services.msc in the search results.
+     1. Click **Start**, type `services.msc` in the Search programs and files text box, and then click services.msc in the search results.
 
-     1. In the list of services, right-click Windows Search, and then click Stop.
+     1. In the list of services, right-click **Windows Search**, and then click **Stop**.
 
 - Method 3: Perform a clean startup, and apply Office 2010 SP2
 - Method 4: Install all available updates by using Microsoft Update and apply Office 2010 SP2

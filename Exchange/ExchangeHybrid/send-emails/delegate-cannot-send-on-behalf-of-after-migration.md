@@ -1,8 +1,8 @@
 ---
 title: Delegate can't send on behalf of after migration
 description: Describes an issue in which a newly added delegate can't send on behalf of a user when the user is moved to Microsoft 365 hybrid environment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

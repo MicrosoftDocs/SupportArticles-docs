@@ -1,8 +1,8 @@
 ---
 title: Updates to Client Access Rules in Office 365
 description: Describes a procedural update to Client Access Rules in Office 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

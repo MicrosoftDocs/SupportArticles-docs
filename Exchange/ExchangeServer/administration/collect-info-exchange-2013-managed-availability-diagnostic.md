@@ -1,8 +1,8 @@
 ---
 title: Microsoft Exchange Server 2013 Managed Availability Diagnostic collects information
 description: Describes information that Microsoft Exchange Server 2013 Managed Availability Diagnostic may collect from your computer and the names of the output files.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

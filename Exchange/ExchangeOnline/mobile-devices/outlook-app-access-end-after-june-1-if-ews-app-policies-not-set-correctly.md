@@ -1,8 +1,8 @@
 ---
 title: Outlook app access end after June 1
 description: Discusses that your Exchange Web Services access may end after June 1, 2017, if application policies are not set up correctly.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

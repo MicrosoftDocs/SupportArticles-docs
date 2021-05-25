@@ -1,8 +1,8 @@
 ---
 title: Some Android devices do not redirect to Exchange Online
 description: Resolves an issue that prevents Android devices from setting up an Exchange account after you've installed Exchange Server 2010 SP3 RU9, Exchange Server 2013 CU8, or Exchange Server 2016 on the server.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

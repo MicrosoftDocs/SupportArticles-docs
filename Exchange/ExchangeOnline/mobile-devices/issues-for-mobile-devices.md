@@ -1,11 +1,11 @@
 ---
 title: Collect ActiveSync device logs to troubleshoot sync issues for mobile devices
 description: Describes how to collect ActiveSync device logs to troubleshoot sync issues between mobile devices and Exchange Online.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
@@ -24,20 +24,7 @@ This article describes how to collect Exchange ActiveSync device logs to trouble
 
 ## Procedure
 
-To capture ActiveSync device log information, use one of the following methods.
-
-### Method 1: Use Outlook on the web
-
-1. Sign in to the [Office 365 portal](https://outlook.office.com).
-In the upper-right area of the page, click **Settings**, and then click **View all outlook settings**.
-1. In the navigation pane on the left, expand **General**, and then click **Mobile Devices**.
-1. In the list of devices, select the device that you want to track, and then click **Start Logging**.
-1. In the **Information** dialog box, click **Save**.
-1. Reproduce the behavior that you want to capture.
-
-    An email message that contains the log file (EASMailboxLog.txt) as an attachment is sent to your mailbox.
-
-### Method 2: Use Exchange Online PowerShell
+To capture ActiveSync device log information, follow these steps:
 
 1. Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Run the following command to enable ActiveSync logging for a specific user:

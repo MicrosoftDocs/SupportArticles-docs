@@ -1,8 +1,8 @@
 ---
 title: HCW8091 error when running Hybrid Configuration Wizard
 description: Describes an issue in which you receive an HCW8091 error message when you run the Hybrid Configuration Wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

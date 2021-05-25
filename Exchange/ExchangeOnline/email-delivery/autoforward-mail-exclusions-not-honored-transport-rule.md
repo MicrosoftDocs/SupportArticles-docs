@@ -1,7 +1,7 @@
 ---
 title: A transport rule doesn't match if user mailbox rules automatically forward messages
 description: The transport rule doesn't honor the exclusions, and it rejects the messages. This article provides a resolution.
-author: Norman-sun
+author: simonxjx
 ms.author: arindamt
 manager: dcscontentpm
 audience: ITPro 
@@ -41,7 +41,7 @@ To maintain the behavior of transport rules, change the **Match sender address i
     ![Screenshot of selecting Header or envelope.](./media/autoforward-mail-exclusions-not-honored-transport-rule/transport-rule-error.png)
 
 > [!NOTE]
-> This change also affects the mailbox redirect rule. To maintain the behavior of this rule, set the exception in the transport rule based on the recipient instead of the sender. Alternatively, change this rule to an automatic forwarding rule.
+> This change also affects the mailbox redirect rule, because the sender that's evaluated by the transport rule is now the original sender, and not the mailbox on which the rule is set. To maintain the behavior of this rule, set the exception in the transport rule based on the recipient instead of the sender. Alternatively, change this rule to an automatic forwarding rule.
 
 ## More information
 

@@ -1,8 +1,8 @@
 ---
 title: Exchange restarts with Stop Error
 description: Exchange Server restarts frequently and you receive a Stop error. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

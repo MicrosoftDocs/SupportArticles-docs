@@ -1,8 +1,8 @@
 ---
 title: Cannot view Outlook Delegates page
 description: Fixes an issue in which users can't view delegate permissions in Outlook in Microsoft 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

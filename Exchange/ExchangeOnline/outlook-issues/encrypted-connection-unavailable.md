@@ -1,8 +1,8 @@
 ---
 title: Error when Office 365 F plan users try to set up an Outlook profile for Exchange Online in Office 365.
 description: Encrypted connection to your mail server is not available when you try to set up an Outlook profile for Exchange Online in Office 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

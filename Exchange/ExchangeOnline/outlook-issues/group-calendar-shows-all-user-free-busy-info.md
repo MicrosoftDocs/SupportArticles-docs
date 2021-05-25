@@ -1,8 +1,8 @@
 ---
 title: All members' free/busy data of a group is displayed
 description: Fixes an issue in which free/busy information for all users of an Office 365 modern group is displayed when you try to view the modern group calendar in Outlook.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -38,12 +38,10 @@ When you do this, the Office 365 modern group is treated as a distribution list,
 
 ## Resolution
 
-To resolve this issue, follow these steps to open the Office 365 modern group calendar:
+To resolve this issue, open the Office 365 modern group calendar in the following way:
 
-1. Open your Inbox folder, expand **Groups** in the folder list, and then select the modern group.
-2. Select **Calendar** on the ribbon.
-3. Right-click the calendar name in the navigation pane, and then select **Add to Favorites**.
-4. Close the modern group calendar window.
-5. Open the **Calendar** view in Outlook. You will find the modern group calendar listed under **My Calendars**, and the issue will not occur when you view the calendar.
+Open the **Calendar** view in Outlook, expand **All Group Calendars**, and then select the modern group.
+
+The issue won't occur when you view the calendar.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

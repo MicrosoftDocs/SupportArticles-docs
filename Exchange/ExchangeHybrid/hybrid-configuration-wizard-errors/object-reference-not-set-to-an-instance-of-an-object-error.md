@@ -1,8 +1,8 @@
 ---
 title: Object reference not set to an instance of an object error
 description: Describes that you receive an Object reference not set to an instance of an object error when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

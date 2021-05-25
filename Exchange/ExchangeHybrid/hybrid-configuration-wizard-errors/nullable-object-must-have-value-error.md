@@ -1,8 +1,8 @@
 ---
 title: Nullable object must have a value
 description: Provides a workaround for an issue in which you receive a "Nullable object must have a value" error message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

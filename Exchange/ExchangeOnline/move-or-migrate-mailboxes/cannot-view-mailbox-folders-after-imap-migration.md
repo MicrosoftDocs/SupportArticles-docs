@@ -1,8 +1,8 @@
 ---
 title: Cannot view mailbox folders after IMAP migration
 description: Describes an issue in which folders are missing from a user's mailbox on an Exchange ActiveSync or Outlook client after the mailbox is migrated from an IMAP messaging system to Office 365 or on-premises Exchange Server. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

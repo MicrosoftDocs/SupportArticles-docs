@@ -1,8 +1,8 @@
 ---
 title: Content index state is stuck in crawling in an Exchange Server 2010 database
 description: Describes an issue in which the Content index state counter in an Exchange Server 2010 database never progresses beyond crawling. And, event IDs 102 and 5617 are logged in the Application log.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

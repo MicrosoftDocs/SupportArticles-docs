@@ -1,8 +1,8 @@
 ---
 title: Object doesn't match target type
 description: Provides a workaround for an issue that triggers an error when you use the Exchange Management Console in Exchange Server 2010 to view the properties of an Exchange Online mailbox.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

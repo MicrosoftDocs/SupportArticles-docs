@@ -1,8 +1,8 @@
 ---
 title: Can't migrate public folders to Exchange Online
 description: Fixes an issue in which you receive an error message when you try to migrate public folders to Exchange Online.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
