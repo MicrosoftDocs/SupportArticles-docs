@@ -1,11 +1,11 @@
 ---
 title: A button in the command bar is hidden
-description: Fixes an issue in which a button in the command bar is hidden when it should not be.
+description: Fixes an issue in which a button in the command bar is hidden when it should be visible.
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/18/2021
 ---
-# A button in the command bar is hidden when it should not be
+# A button on the command bar is hidden when it should be visible
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4552163
@@ -19,24 +19,24 @@ A button can be hidden due to an [enable rule](/powerapps/developer/model-driven
 > - Any display rule of the **EntityPrivilegeRule** type with a **PrivilegeType** value of one of the following (**Create**, **Write**, **Delete**, **Assign**, **Share**) will evaluate to false if the entity has the **Read-Only in Mobile** option enabled, which will force the entity to only permit **Read** privilege. Examples of some of the most common default system rules that will evaluate to false when the **Read-Only in Mobile** flag is enabled on the entity, are as follows, but not limited only to this list (`Mscrm.CreateSelectedEntityPermission`, `Mscrm.CanSavePrimary`, `Mscrm.CanWritePrimary`, `Mscrm.CanWriteSelected`, `Mscrm.WritePrimaryEntityPermission`, `Mscrm.WriteSelectedEntityPermission`, `Mscrm.CanDeletePrimary`, `Mscrm.DeletePrimaryEntityPermission`, `Mscrm.DeleteSelectedEntityPermission`, `Mscrm.AssignSelectedEntityPermission`, `Mscrm.SharePrimaryPermission`, `Mscrm.ShareSelectedEntityPermission`). You can edit the entity and uncheck the **Read-Only in Mobile** option to permit these rules to evaluate to true, provided the privilege being tested by the rule is also granted to the user.
 > - Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
 
-The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine why the button is hidden.
+The in-app tool, Command Checker, will be used to inspect the ribbon component definitions to help us determine why the button is hidden.
 
-To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
+To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
 
 :::image type="content" source="media/ribbon-issues-button-hidden/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
 > [!NOTE]
-> Currently, the **Command Checker** tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
+> Currently, the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the **Command Checker** tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special Command Checker :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command Checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
 
 1. Navigate to the page in the application where the button should be displayed.
 1. Locate the command bar that the button is expected to be shown in.
 1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
-1. Find and click your button in the list of buttons displayed in the left-most pane of the **Command Checker** tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. The following example shows the **New** button on the contact entity's grid page is not visible and is represented by an item labeled **New (hidden)**.
+1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. The following example shows the **New** button on the contact entity's grid page is not visible and is represented by an item labeled **New (hidden)**.
 
     > [!NOTE]
-    > If your button is not listed, it could be due to a [HideCustomAction](/powerapps/developer/model-driven-apps/define-custom-actions-modify-ribbon#hide-custom-actions) customization that may have been installed, or the associated command has a `Mscrm.HideOnModern` display rule. At the time of writing this guide, the **Command Checker** tool does not list buttons that have been hidden by a `HideCustomAction` or `Mscrm.HideOnModern` display rule. We are currently working to augment this listing to include this information in a future update.
+    > If your button is not listed, it could be due to a [HideCustomAction](/powerapps/developer/model-driven-apps/define-custom-actions-modify-ribbon#hide-custom-actions) customization that may have been installed, or the associated command has a `Mscrm.HideOnModern` display rule. At the time of writing this guide, the Command Checker tool does not list buttons that have been hidden by a `HideCustomAction` or `Mscrm.HideOnModern` display rule. We are currently working to augment this listing to include this information in a future update.
 
     :::image type="content" source="media/ribbon-issues-button-hidden/new-hidden.png" alt-text="Screenshot of new hidden.":::
 
@@ -50,7 +50,7 @@ Once the **Command Checker** tool has been enabled, within the application in ea
 
 1. The approach needed to fix a button's visibility will depend on the various customizations in your specific scenario. Considering our example:
     - If this rule was created erroneously, such that the entity declared in the rule was intended to be **contact** but was set to **account**, you could edit the `new.contact.EnableRule.EntityRule` enable rule and make changes that would permit the rule to evaluate to true.
-    - If this rule was added to the command unintentionally, you could modify the `Mscrm.NewRecordFromGrid` command and remove the `new.contact.EnableRule.EntityRule` enable rule from the command definition. 
+    - If this rule was added to the command unintentionally, you could modify the `Mscrm.NewRecordFromGrid` command and remove the `new.contact.EnableRule.EntityRule` enable rule from the command definition.
     - If the command is an override of a Microsoft published definition, then this custom version of the command could be deleted to restore the default functionality.
 
 ## Repair Options
@@ -78,9 +78,6 @@ In order to delete a command, we need to determine which solution installed the 
     When there are two or more layers, you can select two rows and click **Compare** to view a comparison of the definitions brought in by each solution.
 
     Clicking **Back** will return to the previous Command Checker window.
-
-    > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     The following image shows the solution layers for the command in our example, and indicates that there is a solution layer for the contact entity that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not have an **Active** solution layer, you may have a managed solution and the name of that solution will be listed here.
 
@@ -188,9 +185,6 @@ To delete a command that was installed by a custom-managed solution that was cre
     When there are two or more layers, you can select two rows and click "Compare' to view a comparison of the definitions brought in by each solution.
 
     Clicking **Back** will return to the previous Command Checker window.
-
-    > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     The following image shows the solution layers for the enable rule in our example, and indicates that there is one solution layer in this case, and that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 
@@ -307,9 +301,6 @@ In order to fix a command, we need to determine which solution installed the cus
     When there are two or more layers, you can select two rows and click "Compare' to view a comparison of the definitions brought in by each solution.
 
     Clicking **Back** will return to the previous Command Checker window.
-
-    > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     The following image shows the solution layers for the command in our example, and indicates that there is one solution layer in this contact, and that it is an unmanaged customization as denoted by the solution titled **Active**. Your actual scenario may differ, you may not have an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 

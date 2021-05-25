@@ -40,21 +40,21 @@ If the above configurations are correct, it is possible that there is JavaScript
 
 Let's identify what the button's command is and what solution installed the definition.
 
-The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine why click the button results in an error.
+The in-app tool, Command Checker, will be used to inspect the ribbon component definitions to help us determine why click the button results in an error.
 
-To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
+To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
 :::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
 > [!NOTE]
-> Currently the **Command Checker** tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
+> Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the **Command Checker** tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
 
 1. Navigate to the page in the application where the button is displayed.
 1. Locate the command bar that the button visible in.
 1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
-1. Find and click your button in the list of buttons displayed in the left-most pane of the **Command Checker** tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Click the **Command Properties** tab to display the details of the command for this button.
+1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Click the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Command properties.":::
 
@@ -69,9 +69,6 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     When there are two or more layers, you can select two rows and click **Compare** to view a comparison of the definitions brought in by each solution.
 
     Clicking **Back** will return to the previous Command Checker window.
-
-    > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     If there is only one solution layer, skip to step 8, otherwise, select the top two solution layers (If you have a layer in the Active solution, but it is not listed at the top, select the Active solution layer and then the top row) and click **Compare**.
 
@@ -272,21 +269,21 @@ If you are getting a Script Error that is similar to the following:
 
 This is caused by an invalid ribbon command customization that has declared an incorrect Library on the command's `JavaScriptFunction`.
 
-The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine how to fix this issue.
+The in-app tool, Command Checker, will be used to inspect the ribbon component definitions to help us determine how to fix this issue.
 
-To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
+To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
 :::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
 > [!NOTE]
-> Currently the **Command Checker** tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
+> Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the **Command Checker** tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
 
 1. Navigate to the page in the application where the button is displayed.
 1. Locate the command bar that the button visible in.
 1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
-1. Find and click your button in the list of buttons displayed in the left-most pane of the **Command Checker** tool to show the button and command properties. The following example shows the **New** button on the account entity's form page is visible and is represented by an item labeled **New**.
+1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool to show the button and command properties. The following example shows the **New** button on the account entity's form page is visible and is represented by an item labeled **New**.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/new-button.png" alt-text="New button.":::
 
@@ -307,9 +304,6 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     When there are two or more layers, you can select two rows and click **Compare** to view a comparison of the definitions brought in by each solution.
 
     Clicking **Back** will return to the previous Command Checker window.
-
-    > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     The following image shows the solution layers for the command in our example, and indicates that there is two solution layers, and one is an unmanaged customization as denoted by the solution titled Active and the other is from the System solution published by Microsoft. Your actual scenario may differ, you may not have an Active solution layer, you may have a managed solution and the name of that solution will be listed here.
 
@@ -501,21 +495,21 @@ When a button is clicked and an error occurs, it may be caused by an incorrect c
 
 Let's identify what the button's command is and what solution installed the definition.
 
-The in-app tool called **Command Checker** will be used to inspect the ribbon component definitions to help us determine why clicking the button results in an error.
-    
-To enable the **Command Checker** tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
+The in-app tool, Command Checker will be used to inspect the ribbon component definitions to help us determine why clicking the button results in an error.
+
+To enable the Command Checker tool, you must append a `&ribbondebug=true` parameter to your Dynamics 365 application URL. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
 :::image type="content" source="media/ribbon-issues-button-not-working-correctly/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
 > [!NOTE]
-> Currently the **Command Checker** tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
+> Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the **Command Checker** tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
 
 1. Navigate to the page in the application where the button is displayed.
 1. Locate the command bar that the button visible in.
 1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
-1. Find and click your button in the list of buttons displayed in the left-most pane of the **Command Checker** tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Click the **Command Properties** tab to display the details of the command for this button.
+1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Click the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Command properties.":::
 
@@ -530,9 +524,6 @@ Once the **Command Checker** tool has been enabled, within the application in ea
     When there are two or more layers, you can select two rows and click **Compare** to view a comparison of the definitions brought in by each solution.
 
     Clicking **Back** will return to the previous Command Checker window.
-
-    > [!NOTE]
-    > At the time of writing this guide, the Command Checker's Solution Layers pane has a bug that may list an unmanaged **Active** solution layer below other layers even though it is expected to always be on top. This same bug may also list custom managed solutions not published by Microsoft below other Microsoft published solution layers even though they are expected to be just below the unmanaged **Active** solution layer and above Microsoft solution layers, or if there is no unmanaged **Active** solution layer, then it would be expected to be the top layer. Regardless of the order placement in this list, when an unmanaged **Active** solution layer is present, it will always be the definition the application uses. Regardless of the order placement in this list, any custom managed solutions that are not published by Microsoft will also take precedence over Microsoft published solution layers, if there is no unmanaged **Active** solution layer. This bug has been fixed and is expected to be deployed with release train 4.1 to online regions starting in April 2020.
 
     If there is only one solution layer, skip to step 9, otherwise, select the top two solution layers (If you have a layer in the Active solution, but it is not listed at the top, select the Active solution layer and then the top row.) and click **Compare**.
 
