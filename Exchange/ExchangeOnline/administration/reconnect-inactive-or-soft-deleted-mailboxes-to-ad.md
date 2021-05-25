@@ -68,7 +68,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
    [system.convert]::ToBase64String(([GUID]"<ObjectGUID>").tobytearray())
    ```
 
-5. Set the `ImmutableID` parameter in Azure AD :
+5. Set the `ImmutableID` parameter in Azure AD:
 
     ```powershell
     Set-MsolUser -UserPrincipalName <UPN> -ImmutableId <ImmutableId>
