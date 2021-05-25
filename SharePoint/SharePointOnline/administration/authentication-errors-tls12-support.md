@@ -38,8 +38,21 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 >
 > To add cipher suites, either deploy a group policy or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true). 
 > 
-> Edit the order of the cipher suites to ensure that these four suites are at the top of the list. 
+> Edit the order of the cipher suites to ensure that these four suites are at the top of the list (highest priority)
+> 
+>Alternativley , you may consider using Powershell via [Enable-TlsCipherSuite](https://docs.microsoft.com/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps).
 >
+>Example : Enable a cipher suite as the highest priority
+```
+PS C:\>Enable-TlsCipherSuite -Name "TLS_DHE_DSS_WITH_AES_256_CBC_SHA" -Position 0
+```
+>
+>This command enables cipher suite named TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384.
+>This command adds the cipher suite the TLS cipher suite list at position 0, which is the highest priority.
+>
+> [!IMPORTANT]
+> If Enable-TlsCipherSuite doesn't seem to be working then it's most likely that the group policy is in place controlling the Cipher suite order. The typical symptom is that Enable-TlsCipherSuite runs without error but Get-TlsCipherSuite doesn't reflect the changes. If you are currently expericing this issue, please update the Cipher Suite order via group policy instead. 
+> 
 > For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
 
 ## .NET Framework not configured for TLS 1.2
