@@ -59,18 +59,10 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
 
 1. Download the System Update Readiness tool.
 
-    select the download link in the following table that corresponds to the version of Windows that is running on your computer. For more information about how to find the version of Windows that you installed, see [Find out if your computer is running the 32-bit or 64-bit version of Windows](https://support.microsoft.com/help/15056).
+    Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) and download the tool that corresponds to the version of Windows that is running on your computer. For more information about how to find the version of Windows that you installed, see [Find out if your computer is running the 32-bit or 64-bit version of Windows](https://support.microsoft.com/help/15056).
 
     > [!NOTE]
     > This tool is updated regularly, we recommend that you always download the latest version. This tool is not available in every supported language. Check the link below to see if it is available in your language.
-
-    |Operating system|Download link|
-    |---|---|
-    |x86-based (32-bit) versions of Windows 7| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
-    |x64-based (64-bit) versions of Windows 7| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
-    |x64-based (64-bit) versions of Windows Server 2008 R2| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
-    |Itanium-based versions of Windows Server 2008 R2| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
-    |||
 
 2. Install and run the tool.
    1. Select **Download** on the Download Center webpage, then do one of the following:
