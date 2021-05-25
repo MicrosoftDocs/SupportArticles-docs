@@ -34,7 +34,10 @@ To meet right away by using working CVI coordinates, select **Meet Now** in the 
 
 ## Supported scenarios
 
-Scheduled Meetings created from Outlook Calendar: Supported
-Scheduled Meetings created from Teams Calendar: Supported
-**Meet Now** meeting created from the teams calendar view: Supported
-**Meet Now** meeting created from within the Teams channels view: Not-Supported
+- Scheduled meetings created from the Outlook calendar
+- Scheduled meetings created from the Teams calendar
+- **Meet Now** meetings created from the Teams calendar
+
+## Unsupported scenarios
+
+- **Meet Now** meetings created from the Teams channels
