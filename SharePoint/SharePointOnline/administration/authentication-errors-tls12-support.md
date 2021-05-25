@@ -29,7 +29,7 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
  > [!NOTE]
  > Even after upgrading to TLS 1.2 on Windows 10 machines, it's important to make sure that cipher suites match Azure Front Door (AFD) support, because Microsoft 365 and AFD have a slight difference in cipher suite support.
 >
-> For TLS 1.2 the following cipher suites are supported by AFD:
+> For TLS 1.2, the following cipher suites are supported by AFD:
 > 
 > - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 > - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
