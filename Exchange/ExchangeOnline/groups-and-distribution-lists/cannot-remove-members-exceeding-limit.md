@@ -1,8 +1,8 @@
 ---
 title: Can't remove members that exceed the limit
 description: Describes a problem that prevents you from using the Exchange admin center to remove members from a distribution group. Occurs because some members of that distribution group aren't listed when the group has more than 3000 members.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

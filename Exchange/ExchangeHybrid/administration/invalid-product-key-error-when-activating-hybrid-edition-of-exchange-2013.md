@@ -1,8 +1,8 @@
 ---
 title: Invalid Product Key error when activating Hybrid Edition
 description: Describes an issue that triggers an error when you try to activate the Hybrid Edition of a server that's running Exchange 2013 and Cumulative Update 3 for Exchange 2013.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

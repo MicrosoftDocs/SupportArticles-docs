@@ -1,8 +1,8 @@
 ---
 title: Warning occurs when running Hybrid Configuration
 description: Describes an issue in which you receive a message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

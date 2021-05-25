@@ -1,8 +1,8 @@
 ---
 title: Large mailbox migrations are slow due to network latency
 description: Describes a scenario where hybrid mailbox migration for one or more large mailboxes is slow because of network latency. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

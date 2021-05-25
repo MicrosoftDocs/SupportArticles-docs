@@ -1,8 +1,8 @@
 ---
 title: Email shows addresses instead of names in From
 description: Describes an issue in which email messages that are sent from the on-premises environment to Microsoft 365 show email addresses instead of display names in the From field after you migrate mailboxes to Microsoft 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

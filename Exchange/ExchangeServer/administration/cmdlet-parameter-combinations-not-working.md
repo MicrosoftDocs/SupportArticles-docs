@@ -1,8 +1,8 @@
 ---
 title: Cmdlet or parameter combinations not working
 description: Some PowerShell cmdlet or parameter combinations do not work as expected. Provides a workaround.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

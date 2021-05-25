@@ -1,8 +1,8 @@
 ---
 title: Meeting requests are added to resource delegate's calendar
 description: Describes a scenario in which meeting requests sent to a resource mailbox in on-premises are added to a resource delegate's calendar migrated to cloud.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

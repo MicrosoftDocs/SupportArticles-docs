@@ -1,8 +1,8 @@
 ---
 title: Mail flow to EXO stops and event 2004 is logged
 description: Fixes an issue in which mail flow to Exchange Online stops and a "Failed to establish appropriate TLS channel UntrustedRoot Access Denied" error message is logged in Event Viewer.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

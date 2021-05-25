@@ -1,8 +1,8 @@
 ---
 title: Event ID 1325 and 1026 after you convert OAB
 description: Resolves an issue in which you can't download the OAB in an Exchange Server 2010 environment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

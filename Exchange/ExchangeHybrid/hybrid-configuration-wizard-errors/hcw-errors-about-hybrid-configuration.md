@@ -1,8 +1,8 @@
 ---
 title: HCW8019, HCW8021, HCW8022, or HCW8023 error
 description: Fixes an issue in which you receive an HCW8019, HCW8021, HCW8022, or HCW8023 error message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

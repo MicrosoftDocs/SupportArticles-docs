@@ -1,8 +1,8 @@
 ---
 title: MRSProxyConfiguration settings aren't honored when they're configured
 description: Describes a situation in which the settings in the MRSProxyConfiguration section of the MSExchangeMailboxReplication.exe.config file aren't honored in Exchange Server 2013.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: HCW errors about accepted domain
 description: Fixes an issue in which you receive an HCW8004, HCW8009, HCW8016, HCW8017, HCW8029, or HCW8030 error message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

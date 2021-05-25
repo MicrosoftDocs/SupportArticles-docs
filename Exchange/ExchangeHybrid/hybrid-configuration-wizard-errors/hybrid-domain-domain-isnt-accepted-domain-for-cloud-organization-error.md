@@ -1,8 +1,8 @@
 ---
 title: Hybrid domain isn't accepted domain for cloud organization
 description: Describes an issue in which you receive an error message when you run the Hybrid Configuration wizard. Provides a solution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

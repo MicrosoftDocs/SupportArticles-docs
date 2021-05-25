@@ -1,7 +1,7 @@
 ---
 title: Private items aren't displayed in a shared mailbox in Outlook
 description: Provides workarounds to an issue in which Private items aren't displayed in a shared mailbox in Outlook.
-author: Norman-sun
+author: simonxjx
 ms.author: shmcdani
 manager: dcscontentpm
 audience: ITPro
