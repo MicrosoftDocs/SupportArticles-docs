@@ -1,7 +1,7 @@
 ---
 title: You can't sign in with this version of Lync
 description: Fixes an issue that triggers You can't sign in with this version of Lync error in iOS 9 when you try to sign in to Lync for iPad or Lync for iPhone. Occurs if the device's Language and Region settings don't match.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: corbinm， mirung， daveh， msp， jasco， rischwen， amitpeer， landerl 
 appliesto:
 - Lync 2013 for iPhone

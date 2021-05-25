@@ -1,7 +1,7 @@
 ---
 title: Lync Server 2013 Access Edge service not start or stops responding
 description: Discusses that Lync Server 2013 Access Eedge service fails to start or stops responding after it starts. This problem occurs when the EnableUserReplicator setting is enabled on the Lync Server 2013 Access Edge configuration. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013

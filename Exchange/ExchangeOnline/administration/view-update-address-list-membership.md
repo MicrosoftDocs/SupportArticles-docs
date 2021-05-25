@@ -1,8 +1,8 @@
 ---
 title: View and update address list membership
 description: Describes the commands to view and update address list membership in Exchange Online although there is no update-addresslist command.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

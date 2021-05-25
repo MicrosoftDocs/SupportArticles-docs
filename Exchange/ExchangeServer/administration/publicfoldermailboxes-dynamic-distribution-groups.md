@@ -1,8 +1,8 @@
 ---
 title: Unexpected PublicFolderMailBoxes groups are created
 description: After you install cumulative update 6, unexpected PublicFolderMailBoxes distribution groups exist in Exchange Server 2016.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

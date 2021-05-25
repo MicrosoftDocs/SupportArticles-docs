@@ -1,7 +1,7 @@
 ---
 title: Lync users can't communicate with external contacts
 description: Describes an issue in which you can't send messages to or connect to external contacts that you added to a Windows Live EASI domain. A resolution is provided.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

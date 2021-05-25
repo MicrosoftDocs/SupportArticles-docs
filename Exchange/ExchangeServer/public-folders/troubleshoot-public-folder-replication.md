@@ -2,8 +2,8 @@
 title: Troubleshoot public folder replication
 description: Troubleshoots issues with public folder replication for Exchange Server 2010, 2007, and 2003.
 ms.date: 08/13/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

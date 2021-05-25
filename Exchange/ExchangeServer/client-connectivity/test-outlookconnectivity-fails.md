@@ -2,8 +2,8 @@
 title: Cannot run Test-OutlookConnectivity 
 description: Describes an issue that causes the Test-OutlookConnectivity cmdlet to fail in Exchange 2016 or Exchange 2013. This issue is caused by a case-sensitive parameter. A resolution is provided.
 ms.date: 08/10/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

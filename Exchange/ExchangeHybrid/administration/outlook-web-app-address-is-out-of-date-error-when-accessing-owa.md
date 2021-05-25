@@ -1,8 +1,8 @@
 ---
 title: Outlook Web App address is out of date error
 description: Describes an issue that returns an error message when a user tries to access Outlook Web App by using the on-premises URL in an Exchange hybrid deployment. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

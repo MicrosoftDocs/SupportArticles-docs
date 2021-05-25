@@ -1,11 +1,11 @@
 ---
 title: Can't set up a new profile by using Exchange Autodiscover for Online mailbox
 description: Describes an issue that blocks Outlook from setting up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365. Resolutions are provided.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-swei
+ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
 - Exchange Online

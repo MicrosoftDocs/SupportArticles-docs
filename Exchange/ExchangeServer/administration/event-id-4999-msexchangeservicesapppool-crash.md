@@ -1,8 +1,8 @@
 ---
 title: MSExchangeServicesAppPool crashes
 description: Describes an issue that triggers a crash in the MSExchangeServicesAppPool process in an Exchange Server 2013 environment. This issue concerns the size of history conversation files in Lync and Skype for Business. A resolution is provided.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
