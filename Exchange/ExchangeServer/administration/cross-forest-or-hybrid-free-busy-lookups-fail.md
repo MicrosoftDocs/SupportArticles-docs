@@ -1,8 +1,8 @@
 ---
 title: Cross-forest or Hybrid free/busy lookups fail
 description: Cross-forest or hybrid free/busy information lookups fail in Microsoft Exchange Server. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

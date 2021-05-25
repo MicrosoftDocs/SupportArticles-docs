@@ -1,7 +1,7 @@
 ---
 title: UM-enabled mailbox migration to Exchange Online fails
 description: Resolves an issue in which you cannot migrate a UM-enabled mailbox from on-premises Exchange Server to Exchange Online.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Exchange Online

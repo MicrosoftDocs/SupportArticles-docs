@@ -1,7 +1,7 @@
 ---
 title: Users can't modify contact lists in Lync 2010 and Lync for Mac 2011
 description: Describes the condition where you cannot add, remove, or change contacts in Microsoft Lync 2010 and Lync for Mac 2011 after you upgrade to Microsoft Lync Server 2013. Provides a resolution and a workaround.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

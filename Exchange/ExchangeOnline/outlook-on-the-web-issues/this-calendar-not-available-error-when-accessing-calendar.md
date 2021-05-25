@@ -1,8 +1,8 @@
 ---
 title: This calendar isn't available error
 description: Describes an issue in which a user receives a This calendar isn't available error when trying to access the Calendar in Outlook on the web.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

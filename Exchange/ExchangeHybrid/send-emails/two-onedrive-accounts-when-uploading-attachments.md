@@ -12,7 +12,7 @@ ms.custom:
 - CI 147728
 - Exchange Hybrid
 - CSSTroubleshoot
-ms.reviewer: mmason
+ms.reviewer: mmason, salarson
 appliesto: 
 - OneDrive for Business
 - Outlook on the web

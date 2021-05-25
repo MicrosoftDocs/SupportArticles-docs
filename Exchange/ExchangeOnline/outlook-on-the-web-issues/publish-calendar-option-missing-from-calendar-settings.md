@@ -1,8 +1,8 @@
 ---
 title: Publish Calendar option is missing from Calendar
 description: Describes an issue in which Office 365 users can't publish their calendar in Outlook on the web because the Publish Calendar option is missing from Calendar settings.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

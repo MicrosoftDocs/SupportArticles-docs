@@ -1,8 +1,8 @@
 ---
 title: Delay in delivering emails with image attachments in Exchange Server 2016
 description: Provides a workaround for an issue that delays delivery of emails that have picture attachments in Exchange Server 2016.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

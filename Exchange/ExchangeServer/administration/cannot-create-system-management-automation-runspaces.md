@@ -2,8 +2,8 @@
 title: Can't create System.Management.Automation runspaces
 description: Describes a by-design behavior that prevents users from creating System.Management.Automation runspaces in a web app. Occurs when implicit credentials are being used. A workaround is provided.
 ms.date: 08/05/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Skype for Business Online admins can't use Set-CsUser cmdlet
 description: Describes the issue in which Microsoft Skype for Business Online admins can't use the Set-CsUser cmdlet in Skype for Business Online Remote PowerShell. Provides a solution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 appliesto:
 - Skype for Business Online

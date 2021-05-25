@@ -1,8 +1,8 @@
 ---
 title: Don't have permissions to update options specified error
 description: Describes an error message that Office 365 kiosk users receive when they try to create inbox rules.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,13 +1,13 @@
 ---
 title: Can't manage Send on Behalf permissions for shared mailboxes in the EAC
 description: Explains that the "Send As" and "Send on Behalf" permissions are not available for shared mailboxes in Exchange Online. Provides a workaround.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: troubleshooting
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: kellybos, ninob
 ms.custom: 
 - Exchange Online

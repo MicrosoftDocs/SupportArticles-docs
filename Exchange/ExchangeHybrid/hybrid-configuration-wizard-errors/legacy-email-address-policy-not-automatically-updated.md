@@ -1,8 +1,8 @@
 ---
 title: Upgrade the legacy email address policy
 description: Describes an issue that occurs if you don't upgrade the legacy email address policy before you try to run the Hybrid Configuration wizard. Provides a resolution. [HCW8055].
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

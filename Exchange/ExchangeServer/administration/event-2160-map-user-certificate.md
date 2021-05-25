@@ -1,8 +1,8 @@
 ---
 title: Event ID 2160 when you map a user to a certificate in Exchange Server 2010
 description: Fixes an account mapping issue in Exchange Server 2010 that occurs when you use the altSecurityIdentities attribute to map a user to a certificate.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

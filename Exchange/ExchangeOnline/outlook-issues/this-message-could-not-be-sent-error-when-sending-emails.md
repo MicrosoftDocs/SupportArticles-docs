@@ -1,8 +1,8 @@
 ---
 title: This message could not be sent error
 description: Describes an issue in Office 365 in which users who have Send As permission to a distribution group receive a non-delivery report when they try to send an email message to other users in Outlook.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

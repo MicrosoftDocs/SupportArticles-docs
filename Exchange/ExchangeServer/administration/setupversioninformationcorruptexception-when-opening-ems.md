@@ -2,8 +2,8 @@
 title: SetupVersionInformationCorruptException if opening EMS
 description: The SetupVersionInformationCorruptException error occurs when you open Exchange Management Shell (EMS) in Exchange Server 2016. Provides workarounds to solve this issue.
 ms.date: 08/05/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

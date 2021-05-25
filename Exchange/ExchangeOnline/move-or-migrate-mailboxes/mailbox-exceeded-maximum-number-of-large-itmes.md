@@ -1,8 +1,8 @@
 ---
 title: Can't migrate a user's mailbox data from the on-premises to Office 365
 description: Fixes an issue in which you receive an error message when you try to migrate a user's mailbox data from the on-premises messaging environment to Office 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

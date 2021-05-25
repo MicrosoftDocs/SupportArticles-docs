@@ -1,7 +1,7 @@
 ---
 title: Remote PowerShell cmdlets don't work
 description: Discusses that Remote PowerShell cmdlets don't work in Skype for Business Server 2015 after update 3061064 is installed. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,9 +9,9 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
-ms.reviewer: v-swei, genli, christys, UPKUMAR
+ms.reviewer: v-six, genli, christys, UPKUMAR
 appliesto:
 - Skype for Business Server 2015
 ---
