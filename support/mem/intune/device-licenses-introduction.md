@@ -1,7 +1,7 @@
 ---
 title: Purchase device licenses in Microsoft Intune
 description: Introduces a new device-only subscription service that helps organizations manage devices that are not affiliated with specific users.
-ms.date: 05/19/2021
+ms.date: 05/25/2021
 ms.prod-support-area-path: Microsoft Intune
 ---
 # Introduction to device licenses in Microsoft Intune
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4514392
 
 ## How to purchase the device-only subscription
 
-You can purchase device licenses based on your estimated usage. If the actual usage exceeds your current license limit, you don't have to purchase device licenses separately. Microsoft Intune device licenses are applicable when a devices is enrolled through any of the following methods:
+You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a devices is enrolled through any of the following methods:
 
 - [Windows Autopilot Self-Deploying mode](/windows/deployment/windows-autopilot/self-deploying)
 - [Apple Device Enrollment Program without user affinity](/mem/intune/enrollment/device-enrollment-program-enroll-ios)
@@ -25,6 +25,9 @@ You can purchase device licenses based on your estimated usage. If the actual us
 - [Android Enterprise dedicated](/mem/intune/enrollment/android-kiosk-enroll)
 - [Using a device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll)
 
+> [!NOTE]
+> Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default)page or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases
+>
 
 ## Limitations
 
