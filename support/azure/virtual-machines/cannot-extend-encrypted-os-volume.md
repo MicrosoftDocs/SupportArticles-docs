@@ -17,14 +17,15 @@ This article describes a problem that prevents you from easily extending the OS 
 
 You see the **Extend Volume…** option grayed for the **Windows (C:)** partition in an Azure VM. A System Reserved partition also appears immediately to the right of the Windows partition. The placement of the System Reserved partition appears to block the C drive from being extended into any unallocated space on the disk.
 
-![Screenshot that shows Disk Management with the Extend Volume option grayed out on the shortcut menu for the Windows volume.](./media/cannot-extend-encrypted-os-volume/01-cannot-extend.png)
+:::image type="content" source="./media/cannot-extend-encrypted-os-volume/01-cannot-extend.png" alt-text="Screenshot that shows Disk Management with the Extend Volume option grayed out on the shortcut menu for the Windows volume..":::
 
 
 ## Cause
 
 During a default Windows installation, a System Reserved partition is created on Disk 0. This partition holds the Boot Manager code and the Boot Configuration Database, and it reserves space for the startup files required for BitLocker. Normally, the System Reserved partition is assigned to partition 1, and the Windows volume is assigned to partition 2. This default arrangement, shown below, allows the C: drive to be extended into adjacent unallocated space as needed.
 
-![Screenshot of Disk 0 in Disk Management with the Windows partition in the middle, next to unallocated space on the right.](./media/cannot-extend-encrypted-os-volume/02-normal.png)
+:::image type="content" source="./media/cannot-extend-encrypted-os-volume/02-normal.png" alt-text="Screenshot of Disk 0 in Disk Management with the Windows partition in the middle, next to unallocated space on the right.":::
+
 
 Customers, however, may create VMs based on custom images that assign the Windows (C:) volume to partition 1 and that do not define a System Reserved partition. If Azure Disk Encryption is later applied to the OS disk, a new System Reserved partition must then be added to the disk to support BitLocker. The newly created System Reserved partition in this case is assigned to partition 2, whose placement will appear to block partition 1, the OS volume, from being extended into unallocated disk space.
 
@@ -32,10 +33,10 @@ Customers, however, may create VMs based on custom images that assign the Window
 
 To fix this problem, you need to perform the following steps:
 
-1.	Assign a larger disk SKU to the OS disk in the Azure portal
-2.	Extend the System Reserved volume into the unallocated space
-3.	Create a new boot volume in the remaining unallocated space
-4.	Delete the System Reserved volume and extend the Windows volume
+1.	[Assign a larger disk SKU to the OS disk in the Azure portal](#assign-a-larger-disk-sku-to-the-os-disk-in-the-azure-portal)
+2.	[Extend the System Reserved volume into the unallocated space](#extend-the-system-reserved-volume-into-the-unallocated-space)
+3.	[Create a new boot volume in the remaining unallocated space](#create-a-new-boot-volume-in-the-remaining-unallocated-space)
+4.	[Delete the System Reserved volume and extend the Windows volume](#delete-the-system-reserved-volume-and-extend-the-windows-volume)
 
 ### Assign a larger disk SKU to the OS disk in the Azure portal
 
@@ -53,11 +54,11 @@ To fix this problem, you need to perform the following steps:
 
    :::image type="content" source="./media/cannot-extend-encrypted-os-volume/04-add-drive.png" alt-text="Screenshot of the Add Drive Letter or Path dialog box, assigning the letter E to the System Reserved volume.":::
 
-2. Right-click the System Reserved partition, and then select **Extend Volume…**. When selecting an amount of space to extend, *specify a value at least 200 MB less than the maximum allowed* (to leave room for a boot volume you will create later).
+2. Right-click the **System Reserved** partition, and then select **Extend Volume…**. When selecting an amount of space to extend, *specify a value at least 200 MB less than the maximum allowed* (to leave room for a boot volume you will create later).
 
-   :::image type="content" source="./media/cannot-extend-encrypted-os-volume/05-extend.png" alt-text="Screenshot of the Extend Volume option being extended for the System Reserved volume.":::
+:::image type="content" source="./media/cannot-extend-encrypted-os-volume/05-extend.png" alt-text="Screenshot of the Extend Volume option being extended for the System Reserved volume.":::
 
-   :::image type="content" source="./media/cannot-extend-encrypted-os-volume/06-extend-wizard.png" alt-text="Screenshot of the Select Disks page in the Extend Volume Wizard.":::
+:::image type="content" source="./media/cannot-extend-encrypted-os-volume/06-extend-wizard.png" alt-text="Screenshot of the Select Disks page in the Extend Volume Wizard.":::
 
 The disk partition layout will resemble the following example after this last step:
 
@@ -81,11 +82,11 @@ For example, if the last volume you created (the rightmost volume in Disk Manage
 bcdboot C:\Windows /s F:
 ```
 
-3. Open Regedit, select HKEY_LOCAL_MACHINE\BCD00000000, and then select Unload Hive from the File menu.
+3. Open Regedit, select **HKEY_LOCAL_MACHINE\BCD00000000**, and then select **Unload Hive** from the **File** menu.
 
-   :::image type="content" source="./media/cannot-extend-encrypted-os-volume/09-regedit.png" alt-text="Screenshot of a folder selected in the registry editor and of the Unload Hive option selected from the File menu.":::
+:::image type="content" source="./media/cannot-extend-encrypted-os-volume/09-regedit.png" alt-text="Screenshot of a folder selected in the registry editor and of the Unload Hive option selected from the File menu.":::
 
-4.	Use the following command to replace the \boot\bcd file located in the last volume you have created (that is, the rightmost drive in Disk Management, created from last unallocated space) with the current BCD file found in the \boot folder of the System Reserved volume. 
+4.	Use the following command to replace the *\boot\bcd* file located in the last volume you have created (that is, the rightmost drive in Disk Management, created from last unallocated space) with the current BCD file found in the *\boot* folder of the System Reserved volume. 
 
 ```console
 Copy [Drive letter of System Reserved volume]:\boot\bcd [Drive letter of newest volume]:\boot\bcd
@@ -113,7 +114,7 @@ bcdedit /store F:\boot\bcd /enum /v
 
 You will see output that looks like the following example:
 
-```console
+```output
 Windows Boot Manager
 --------------------
 identifier              {9dea862c-5cdd-4e70-acc1-f32b344d4795}  <<<<<
@@ -135,7 +136,7 @@ bcdedit /store [Newest drive letter]:\boot\bcd /set [Identifier] device partitio
 
 For example, if the newest drive letter is F and the identifier is the same as in the output above, you would type the following:
 
-```output
+```console
 bcdedit /store F:\boot\bcd /set {9dea862c-5cdd-4e70-acc1-f32b344d4795} device partition=F:
 ```
 
@@ -146,11 +147,11 @@ bcdedit /store F:\boot\bcd /set {9dea862c-5cdd-4e70-acc1-f32b344d4795} device pa
 
 1. Log in to the VM again. In Disk Management, delete the old System Reserved partition, and click Yes to confirm.
 
-   :::image type="content" source="./media/cannot-extend-encrypted-os-volume/10-delete.png" alt-text="Screenshot of the Delete Volume option being selected for the old System Reserved partition in Disk Management.":::
+:::image type="content" source="./media/cannot-extend-encrypted-os-volume/10-delete.png" alt-text="Screenshot of the Delete Volume option being selected for the old System Reserved partition in Disk Management.":::
 
 2.	Finally, extend the C drive as needed with the unallocated space that is now adjacent.
 
-:::image type="content" source="./media/cannot-extend-encrypted-os-volume/11-extend.png" alt-text="Screenshot of of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
+   :::image type="content" source="./media/cannot-extend-encrypted-os-volume/11-extend.png" alt-text="Screenshot of of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
 
 ## More information
 

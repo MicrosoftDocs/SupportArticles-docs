@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Prerequisite updates for Internet Explorer 11
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a list of prerequisite updates and optional updates for Internet Explorer 11.
 
 _Original product version:_ &nbsp; Internet Explorer 11  

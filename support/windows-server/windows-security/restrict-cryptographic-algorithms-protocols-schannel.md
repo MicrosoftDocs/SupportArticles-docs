@@ -179,7 +179,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
 **DES 56**
 
-  Ciphers subkey: `SCHANNEL\Ciphers\RC2 56/56`
+  Ciphers subkey: `SCHANNEL\Ciphers\DES 56/56`
 
   This registry key refers to 56-bit DES as specified in FIPS 46-2. Its implementation in the Rsabase.dll and Rsaenh.dll files is validated under the FIPS 140-1 Cryptographic Module Validation Program.
 

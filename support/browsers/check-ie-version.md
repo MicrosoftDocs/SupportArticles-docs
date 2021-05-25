@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # How to check Internet Explorer version on local and remote computer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article explains the methods you can use to check the Internet Explorer version on local and remote computers.
 
 _Original product version:_ &nbsp; Internet Explorer  
