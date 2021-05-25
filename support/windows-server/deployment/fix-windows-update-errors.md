@@ -16,7 +16,7 @@ adobe-target: true
 ---
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
-_Applies to:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7, Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 947821
 
 ## Symptom
@@ -53,7 +53,7 @@ To resolve this problem, use the inbox Deployment Image Servicing and Management
 
 DISM creates a log file (%windir%/Logs/CBS/CBS.log) that captures any issues that the tool found or fixed. %windir% is the folder in which Windows is installed. For example, the %windir% folder is C:\Windows.
 
-## Resolution for Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1
+## Resolution for Windows 7 and Windows Server 2008 R2
 
 To resolve this problem, use the System Update Readiness tool. Then, install the Windows update or service pack again.
 
@@ -66,10 +66,10 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
 
     |Operating system|Download link|
     |---|---|
-    |x86-based (32-bit) versions of Windows 7 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=3132) |
-    |x64-based (64-bit) versions of Windows 7 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=20858) |
-    |x64-based (64-bit) versions of Windows Server 2008 R2 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=14668) |
-    |Itanium-based versions of Windows Server 2008 R2 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=13833) |
+    |x86-based (32-bit) versions of Windows 7| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
+    |x64-based (64-bit) versions of Windows 7| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
+    |x64-based (64-bit) versions of Windows Server 2008 R2| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
+    |Itanium-based versions of Windows Server 2008 R2| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) |
     |||
 
 2. Install and run the tool.
