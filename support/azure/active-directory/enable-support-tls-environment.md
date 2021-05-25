@@ -52,7 +52,7 @@ For more information, see the following articles:
 
 Windows 8.1, Windows Server 2012 R2, Windows 10, Windows Server 2016, and later versions of Windows natively support TLS 1.2 for client-server communications over WinHTTP. Verify that you have not explicitly disabled TLS 1.2 on these platforms.
 
-By default, earlier versions of Windows, such as Windows 7 and Windows Server 2012, don't enable TLS 1.2 or TLS 1.1 for secure communications by using WinHTTP. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) and enable the registry values from the [Enable TLS 1.2](#enable-tls-12) section. You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure protocols list for WinHTTP.
+By default, earlier versions of Windows, such as Windows 7 and Windows Server 2012, don't enable TLS 1.2 or TLS 1.1 for secure communications by using WinHTTP. For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) and enable the registry values from the [Enable TLS 1.2](#enable-tls-12-on-client-or-server-operating-systems) section. You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure protocols list for WinHTTP.
 
 For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
 
@@ -86,7 +86,6 @@ For more information, see [Handshake Simulation for various clients connecting t
 
    To be sure that TLS 1.2 is enabled, we recommend explicitly adding the registry values from the [Enable TLS 1.2](/azure/active-directory/enable-support-tls-environment#enable-tls-12) section, on Windows Servers that communicate with Azure AD.
 3. Most of the previously listed services are dependent on .Net Framework. Ensure that it's updated as the following section, "Update and configure .NET Framework to support TLS 1.2".
-
 
 For more information, see the following articles:
 
