@@ -33,6 +33,6 @@ This error occurs if the ownership information for the Microsoft 365 group that'
 
 ## Resolution
 
-**Note:** The following change must be done by a Microsoft 365 administrator in your organization.
-
 Assign an owner to the Microsoft 365 group that's associated with the team. For more information, see [Assign a new owner to an orphaned group](https://support.microsoft.com/topic/assign-a-new-owner-to-an-orphaned-group-86bb3db6-8857-45d1-95c8-f6d540e45732).
+
+**Note:** Only a Microsoft 365 administrator in your organization can make this change.
