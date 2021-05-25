@@ -1,8 +1,8 @@
 ---
 title: Delivery receipts aren't created
 description: You receive the error when sending mail to external recipients, which states delivery to these recipients or groups is complete, but no delivery notification was sent by the destination server. 
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

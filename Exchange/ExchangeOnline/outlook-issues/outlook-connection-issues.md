@@ -1,7 +1,7 @@
 ---
 ms.topic: troubleshooting
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 ms.assetid: b3e740b9-171d-4179-bcd1-e279a363fa75
 ms.reviewer: 
 description: When you can't send or receive Office 365 email, use these steps to find and fix problems with Outlook.

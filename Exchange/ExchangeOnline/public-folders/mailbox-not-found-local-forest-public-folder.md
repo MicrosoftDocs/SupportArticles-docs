@@ -1,7 +1,7 @@
 ---
 title: The mailbox is not found in the local forest error when you access public folders
 description: When you try to access public folders by using EAC or Exchange Online PowerShell, you receive an error The mailbox is not found in the local forest.
-author: Norman-sun
+author: simonxjx
 ms.author: batre
 manager: dcscontentpm
 audience: ITPro 

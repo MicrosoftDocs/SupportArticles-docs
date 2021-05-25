@@ -1,8 +1,8 @@
 ---
 title: Avoid unsupported methods to integrate with Exchange
 description: Discusses how third-party applications that use unsupported methods to integrate with Exchange Server can cause crashes, data loss, and other problems.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

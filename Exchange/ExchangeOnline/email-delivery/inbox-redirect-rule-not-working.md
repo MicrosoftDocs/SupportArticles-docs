@@ -1,8 +1,8 @@
 ---
 title: Inbox rule to redirect messages not working
 description: Describes a scenario in which messages are delivered to the user and to a forwarding address but not to the redirecting address that's specified in an inbox rule.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

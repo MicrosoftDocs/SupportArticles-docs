@@ -1,11 +1,11 @@
 ---
 title: IMCEAEX non-delivery report when you send email messages to an internal user
 description: Describes an issue in which you receive an NDR when you send email messages to an internal user in Office 365. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-swei
+ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -49,6 +49,12 @@ After you make these changes, the proxy address for the example in the "Symptoms
 X500:/O=MMS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=User-addd-4b03-95f5-b9c9a421957358d
 
 > [!NOTE]
-> The most common items will be replaced. However, there may be other symbols in the `LegacyExchangeDN` attribute that will also be changed from the way that they appear in the NDR. Generally, any character pattern of "+##" must be replaced with the corresponding ASCII symbol.
+> The most common items will be replaced. However, there may be other symbols in the `LegacyExchangeDN` attribute that will also be changed from the way that they appear in the NDR. Generally, any character pattern of "+##" must be replaced with the corresponding ASCII symbol. For example:
+>
+> - Replace "+2C" with a comma (,) character.
+> - Replace "+2E" with a period (.) character.
+> - Replace "+3F" with a question mark (?) character.
+> - Replace "+40" with an at symbol (@).
+> - Replace "+5F" with an underscore (_) character.
 
-If you are unfamiliar with the ASCII code in question, see [ASCII Character Codes Chart 1](https://msdn.microsoft.com/library/60ecse8t%28v=vs.80%29.aspx).
+If you are unfamiliar with the ASCII code in question, see [ASCII Character Codes Chart 1](https://software.intel.com/content/www/us/en/develop/documentation/fortran-compiler-oneapi-dev-guide-and-reference/top/language-reference/additional-character-sets/character-and-key-code-charts-for-windows/ascii-character-codes-for-windows/ascii-character-codes-chart-1-w-s.html).

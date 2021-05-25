@@ -1,8 +1,8 @@
 ---
 title: Emails aren't received for a new domain
 description: Discusses an issue in which email messages aren't received for a new domain that you add in the Office 365 portal.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -2,8 +2,8 @@
 title: Troubleshoot migration issues in Exchange hybrid
 description: Troubleshoots issues with mailbox move in hybrid environment.
 ms.date: 08/19/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

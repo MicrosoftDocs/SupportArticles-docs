@@ -1,7 +1,7 @@
 ---
 title: We couldn't sign you in when you click the Skype button in Office Online
 description: Describes an issue that triggers a "We couldn't sign you in" error when you click the Skype button in Office Online on SharePoint Online. Provides a solution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, dahans, kristinw, chanh, corbinm, rorylen
 appliesto:

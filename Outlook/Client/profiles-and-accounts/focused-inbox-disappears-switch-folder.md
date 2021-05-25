@@ -51,12 +51,12 @@ To work around this issue, exclude the Last Known Good URL by setting the **Excl
 
 |Type|Value|
 |---------|---------|
-|Registry subkey    |HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\AutoDiscover         |
-|Value Name      |ExcludeLastKnownGoodURL         |
+|Registry subkey    |`HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\AutoDiscover`         |
+|Value Name      |`ExcludeLastKnownGoodURL`         |
 |Value Type      |REG_DWORD         |
 |Value Data     |1         |
 
-For more information about how to set this registry key, see [Unexpected Autodiscover behavior](https://docs.microsoft.com/outlook/troubleshoot/domain-management/unexpected-autodiscover-behavior).
+For more information about how to set this registry key, see [Unexpected Autodiscover behavior](unexpected-autodiscover-behavior.md).
 
 > [!IMPORTANT]
 > Because excluding the Last Known Good URL isn't a long-term solution for this issue, Microsoft don't recommend it. This workaround is provided as immediate relief for the issue. As soon as the web service provider or web hosting provider fixes the issue, this Outlook registry key must be removed.

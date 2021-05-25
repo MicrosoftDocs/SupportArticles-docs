@@ -48,6 +48,9 @@ Teams Calendar App requires access to the Exchange mailbox through Exchange Web 
 
 A user whose mailbox is hosted on an on-premises Exchange server turned off the Outlook client automatic replies but the Teams presence status displays 'Out of Office' to all Teams clients from the same organization. This may last a few days.
 
+> [!NOTE]
+> For users whose mailbox is hosted on-premises, it's expected to have presence delays with a maximum of an hour.
+
 A user is attending an Outlook calendar meeting but the Teams presence status doesn't update to 'In a meeting'.
 
 ## Prerequisites

@@ -1,8 +1,8 @@
 ---
 title: ObjectClass returns Unknown when running cmdlet
 description: Discusses an issue in which the ObjectClass property returns a value of Unknown when you run the Get-MailboxStatistics cmdlet in Exchange Server or Exchange Online in Office 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

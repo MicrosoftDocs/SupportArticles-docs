@@ -1,7 +1,7 @@
 ---
 title: Incoming call fails when you use Skype for Business Cloud Connector Edition
 description: Describes an issue that triggers a "We're sorry, we cannot complete your call at this time" error when you use Skype for Business Cloud Connector Edition. Provides a solution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

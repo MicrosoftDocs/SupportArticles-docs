@@ -195,6 +195,10 @@
       href: ../calendars/room-mailbox-not-process-meeting-request.md
     - name: Still can reserve a meeting room even if it's reserved
       href: ../calendars/you-still-can-reserve-a-meeting-room-even-if-it-is-reserved.md
+  - name: Development
+    items:
+    - name: POX Autodiscover not supported with OAuth client credentials grant
+      href: ../development/pox-autodiscover-not-supported-oauth-client-credentials-grant.md
   - name: Email Alias
     items:
     - name: Remove an alias from a contact

@@ -1,8 +1,8 @@
 ---
 title: The number of bad items exceeds the set limit
 description: Describes how to resolve a TooManyBadItemsPermanentException error during migration in Office 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

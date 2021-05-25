@@ -1,7 +1,7 @@
 ---
 title: Lync 2010 requires additional software to sign into Skype for Business Online
 description: The Skype for Business Online sign in page prompts with the message To sign in, additional software is required. When you click Download and and install now, you are taken to www.msn.com. This occurs if you are using Skype for Business Online on an operating system that doesn't have the Microsoft Online Services Sign-In Assistant.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
