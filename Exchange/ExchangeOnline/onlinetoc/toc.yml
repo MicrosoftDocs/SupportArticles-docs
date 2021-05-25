@@ -331,8 +331,6 @@
       href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
     - name: Can't view mailbox folders after an IMAP migration
       href: ../move-or-migrate-mailboxes/cannot-view-mailbox-folders-after-imap-migration.md
-    - name: Duplicate PF mailbox migration requests
-      href: ../move-or-migrate-mailboxes/duplicate-public-folder-mailbox-migration-request.md
     - name: How to manage the maximum concurrent migration batches
       href: ../move-or-migrate-mailboxes/how-to-manage-maximum-concurrent-migration-batches.md
     - name: Issue with Add-RecipientPermission
@@ -477,6 +475,8 @@
       href: ../public-folders/cannot-apply-read-unread-setting.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
+    - name: Duplicate PF mailbox migration requests
+      href: ../public-folders/duplicate-public-folder-mailbox-migration-request.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
     - name: Public folder couldn't be mail-enabled
