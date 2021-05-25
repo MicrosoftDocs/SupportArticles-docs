@@ -17,11 +17,11 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# "There was a problem reaching this app" error when selecting the Files tab in a Teams channel
+# Error when selecting the Files tab on a channel in Teams
 
 ## Symptoms
 
-When you select the **Files** tab in a team channel in Microsoft Teams, you receive the following error message:
+When you select the **Files** tab in a team's channel in Microsoft Teams, you receive the following error message:
 
 > There was a problem reaching this app
 
@@ -29,10 +29,10 @@ When you select the **Files** tab in a team channel in Microsoft Teams, you rece
 
 ## Cause
 
-This error occurs if the Microsoft 365 group associated with the team doesn't have any owner.
+This error occurs if the Microsoft 365 group associated with the team doesn't have an owner.
 
 ## Resolution
 
 **Note:** The following change must be performed by a Microsoft 365 administrator in your organization.
 
-To resolve this error, assign an owner to the Microsoft 365 group that's associated with the team. For more information, see [Assign a new owner to an orphaned group](https://support.microsoft.com/topic/assign-a-new-owner-to-an-orphaned-group-86bb3db6-8857-45d1-95c8-f6d540e45732).
+Assign an owner to the Microsoft 365 group that's associated with the team. For more information, see [Assign a new owner to an orphaned group](https://support.microsoft.com/topic/assign-a-new-owner-to-an-orphaned-group-86bb3db6-8857-45d1-95c8-f6d540e45732).
