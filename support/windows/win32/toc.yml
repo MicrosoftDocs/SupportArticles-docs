@@ -22,6 +22,8 @@
     items:
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
+    - name: Desktop Bridge app fails to start when running as adminitrator
+      href: desktop-bridge-app-fail-start-run-as-administrator.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
     - name: GetMessage ignores messages
