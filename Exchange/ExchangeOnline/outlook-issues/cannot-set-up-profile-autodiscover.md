@@ -105,7 +105,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
 
 #### Method 4: Make sure that the user's attributes in Active Directory are set correctly
 
-You can use the [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox) cmdlet to determine the whether the following attributes are set correctly for the user. Common issues occur when a value is not set for one or more of these attributes. The following is an example of the correct attributes.
+If you have an Exchange hybrid deployment, you can use the [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox) cmdlet to determine whether the following attributes are set correctly for the user. Common issues occur when a value isn't set for one or more of these attributes. The following is an example of the correct attributes.
 
 |Attribute| Example |
 |-|-|
