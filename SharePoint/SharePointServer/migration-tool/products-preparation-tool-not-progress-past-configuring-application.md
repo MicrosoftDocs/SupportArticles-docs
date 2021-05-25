@@ -126,7 +126,7 @@ Software prerequisites that are required for the installation of SharePoint Serv
 - Application Server Role and Web Server (IIS) Role: Enable the Web Server (IIS) role and the Application Server role in Server Manager   
 - Microsoft SQL Server 2008 R2 SP1 Native Client   
 - [Description of Windows Identity Foundation](/troubleshoot/windows-server/user-profiles-and-logon/windows-identity-foundation)   
-- [Microsoft Sync Framework Runtime v1.0 SP1 (x64)](https://go.microsoft.com/fwlink/p/?linkid=224449)   
+- [Microsoft Sync Framework Runtime v1.0 SP1 (x64)](https://www.microsoft.com/download/details.aspx?id=17616)   
 - [Microsoft AppFabric 1.1 for Windows Server](https://www.microsoft.com/download/details.aspx?id=27115)   
 - [Windows Identity Extensions](https://go.microsoft.com/fwlink/p/?linkid=252368)   
 - [Microsoft Information Protection and Control Client (MSIPC)](https://www.microsoft.com/download/details.aspx?id=38396) MSIPC.dll - Microsoft Active Directory Rights Management Services Client. See [AD RMS Client 2.0 Deployment Notes](/azure/information-protection/rms-client/client-deployment-notes) for more information.  
