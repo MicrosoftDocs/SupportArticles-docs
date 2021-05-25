@@ -1,8 +1,8 @@
 ---
 title: On-premises security groups not synced to Exchange Online
 description: Describes a scenario that prevents on-premises security groups that are not mail-enabled from syncing to Exchange Online in an Exchange hybrid deployment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Can't set location in Lync from virtual machine or remote desktop connection
 description: The Set Your Location feature is unavailable when you use a virtual machine or a remote desktop connection to a virtual machine to install or log on to Lync 2010.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

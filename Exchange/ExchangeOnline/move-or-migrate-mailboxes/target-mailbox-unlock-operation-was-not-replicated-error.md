@@ -1,8 +1,8 @@
 ---
 title: Target mailbox unlock operation was not replicated error
 description: Describes an issue in which you receive a warning after you migrate a mailbox from the on-premises Exchange Server environment to Exchange Online in an Exchange hybrid deployment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

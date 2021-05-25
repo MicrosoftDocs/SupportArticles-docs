@@ -1,8 +1,8 @@
 ---
 title: On-premises users can't see MailTips of Exchange Online users
 description: Describes a scenario where on-premises users in an Exchange hybrid deployment are unable to view MailTips of Exchange Online users by using Outlook 2010.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

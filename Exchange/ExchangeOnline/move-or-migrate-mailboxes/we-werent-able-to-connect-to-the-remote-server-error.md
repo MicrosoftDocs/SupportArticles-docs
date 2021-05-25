@@ -1,8 +1,8 @@
 ---
 title: We weren't able to connect to the remote server error
 description: Describes an issue in which you can't create a migration endpoint when you try to perform a cutover migration from an on-premises Exchange organization that uses Outlook Anywhere to Exchange Online. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

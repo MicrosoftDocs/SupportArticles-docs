@@ -1,7 +1,7 @@
 ---
 title: Lync 2013 or Lync 2010 can't connect to Skype for Business Online Service
 description: You can't connect to the Microsoft Skype for Business Online service when you're using Microsoft Lync 2013 or Microsoft Lync 2010. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

@@ -1,8 +1,8 @@
 ---
 title: Object reference not set to instance of object
 description: Describes that Exchange Server does not support tracing a message that is sent from on-premises to the cloud in a hybrid environment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

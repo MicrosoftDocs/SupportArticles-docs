@@ -1,8 +1,8 @@
 ---
 title: Error when you use Outlook for Mac to send a large email through Exchange Server
 description: Describes an issue that triggers an error or an NDR when you try to send an email with a large attachment in Outlook for Mac. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Understanding and troubleshooting Out of Office (OOF) replies
 description: Discusses how the Out of Office works and some of the main reasons why an Out of Office reply might not get delivered to users. 
-author: Norman-sun
+author: simonxjx
 ms.author: damande
 manager: dcscontentpm
 audience: ITPro 

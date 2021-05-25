@@ -1,8 +1,8 @@
 ---
 title: OAuth authentication configuration fails
 description: Describes an error that occurs when you run the Hybrid Configuration wizard. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
