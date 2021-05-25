@@ -12,6 +12,8 @@ ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto:
+- Office Powerpoint 365
+- PowerPoint 2019
 - PowerPoint 2016
 - PowerPoint 2013
 - PowerPoint 2010
