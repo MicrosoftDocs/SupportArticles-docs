@@ -1,6 +1,6 @@
 ---
 title: SaRA command-line version
-description: Describes the command-line version of Microsoft Support and Recovery Assistant (SaRA).
+description: Describes the command-line version of Microsoft Support and Recovery Assistant.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -16,11 +16,9 @@ appliesto:
 - Office 365
 search.appverid: MET150
 ---
-# Command-line version of Microsoft Support and Recovery Assistant (SaRA)
+# Command-line version of Microsoft Support and Recovery Assistant
 
-The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained and scriptable (run at a command line or in a PowerShell script). This version is an enterprise-ready diagnostic tool for specific client issues.
-
-It is useful in situations in which administrators have to remotely run a diagnostic tool on computers in their organization.
+The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained and scriptable (run at a command line or in a PowerShell script). This version is an enterprise-ready diagnostic tool for specific client issues. It is useful in situations in which administrators have to remotely run a diagnostic tool on computers in their organization.
 
 ## Download and run the command-line version of SaRA
 
@@ -90,7 +88,7 @@ The following switches are available to control SaRAcmd.exe.
 
 ## Conditions addressed by the command-line scenarios
 
-When you run a scenario by using the command-line version of SaRA, you receive no prompts. This is a different experience from the full version of SaRA. The following table describes the actions that SaRA takes, and the output that the tool displays for each condition within a scenario.
+When you run a scenario by using the command-line version of SaRA, you receive no prompts. This is a different experience from the full version of SaRA. The following table describes the actions that the command-line version of SaRA takes, and the output that the tool displays for each condition within a scenario.
 
 - `ExpertExperienceAdminTask`
 
@@ -101,14 +99,14 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |More than one Outlook version is detected|Run a scan of the latest version of Outlook|(Depending on the situation, this output could be *01*, *02*, *04*, or *05*)|
   |Outlook and the Command Prompt window are both elevated|Run a full scan of Outlook|*02:* A Full scan was performed. See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
   |Outlook is running as elevated; the SaRA Command Prompt window isn't elevated|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
-  |Outlook isn't running as elevated; the SaRA Command Prompt window is elevated|No scan is run|*04:* Outlook isn't running elevated. Don't use an elevated command-prompt.|
-  |Failure to run a scan (for any reason); for example:<ol><li>Outlook isn't installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|No scan is run|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and rerun this scenario. You can also try using the full SaRA version.|
+  |Outlook isn't running as elevated; the SaRA Command Prompt window is elevated|None|*04:* Outlook isn't running elevated. Don't use an elevated command-prompt.|
+  |Failure to run a scan (for any reason); for example:<ol><li>Outlook isn't installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|Scan initiated but not completed|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and rerun this scenario. You can also try using the full SaRA version.|
   |||
 - `OfficeScrubScenario`
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
   |---|---|---|
-  |Successfully completed|Not applicable|*00:* Successfully completed this scenario.<br/><br/>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
+  |Office removed successfully|None|*00:* Successfully completed this scenario.<br/><br/>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
   |Office program found .exe files running:<br/><br/>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
   |No Office products found|Exit the scenario|*07:* No installed Office versions were found. Please use the full SaRA version.|
   |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
