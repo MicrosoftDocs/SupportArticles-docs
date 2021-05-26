@@ -25,7 +25,6 @@ You can purchase device licenses based on your estimated usage. If the actual us
 - [Android Enterprise dedicated](/mem/intune/enrollment/android-kiosk-enroll)
 - [Using a device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll)
 
-All devices that are enrolled without user affinity will be assigned device licenses.
 
 ## Limitations
 

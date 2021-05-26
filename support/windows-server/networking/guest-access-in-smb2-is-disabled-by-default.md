@@ -17,12 +17,12 @@ ms.technology: networking
 
 This article describes information about Windows disabling guest access in SMB2 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
 _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
 
-Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2 client no longer allows the following actions: 
+Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2 client no longer allows the following actions:
 
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
