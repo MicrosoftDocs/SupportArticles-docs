@@ -19,7 +19,7 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10
 
-## Windows Update troubleshooter
+## Windows Update troubleshooter for devices experiencing recurring issues installing monthly security updates
 
 Text displayed in Settings:  
 Automatically targets the device for an In-Place Upgrade due to recurring installation issues
@@ -38,7 +38,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 |---|---|---|
 |4/19/2021||[aka.ms/IPUTroubleshooter](https://aka.ms/IPUTroubleshooter)|
 
-## Windows Update troubleshooter
+## Windows Update troubleshooter for repairing system files and settings to improve device security
 
 Text displayed in Settings:  
 Automatically repair system files and settings to improve device security
@@ -68,7 +68,7 @@ Devices that successfully ran the "Hardware and Devices" troubleshooter will be 
 |---|---|---|
 |6/30/2020|9/30/2020|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
 
-## Hardware and Devices troubleshooter
+## Hardware and Devices troubleshooter for using OneDrive Files On-Demand on some devices
 
 Text displayed in Settings:  
 Automatically repair system files and settings to fix a problem on your device.
