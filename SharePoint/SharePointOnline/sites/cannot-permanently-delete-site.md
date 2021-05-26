@@ -1,6 +1,6 @@
 ---
 title: Can't permanently delete a site when it's connected to a Microsoft 365 group 
-description: Describes the error: This site can't be permanently deleted because it's connected to a Microsoft 365 group. 
+description: Describes the error "This site can't be permanently deleted because it's connected to a Microsoft 365 group."
 author: salarson
 manager: dcscontentpm
 localization_priority: Normal
