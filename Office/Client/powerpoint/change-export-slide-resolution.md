@@ -12,7 +12,7 @@ ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto:
-- Office Powerpoint 365
+- PowerPoint for Microsoft 365
 - PowerPoint 2019
 - PowerPoint 2016
 - PowerPoint 2013
@@ -39,7 +39,7 @@ By default, the export resolution of a PowerPoint slide that you want to save as
 3. In the **Open** box, type **regedit**, and then select **OK**.
 4. Locate one of the following registry subkeys, depending on the version of PowerPoint that you're using:
 
-   PowerPoint 2016, 2019, PowerPoint for Office 365
+   PowerPoint 2016, 2019, PowerPoint for Microsoft 365
 
    **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Options**
 
