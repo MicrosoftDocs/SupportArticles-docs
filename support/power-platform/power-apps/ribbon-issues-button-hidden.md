@@ -28,11 +28,11 @@ To enable the Command Checker tool, you must append a `&ribbondebug=true` parame
 > [!NOTE]
 > Currently, the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command Checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command Checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the **More** overflow flyout menu).
 
 1. Navigate to the page in the application where the button should be displayed.
 1. Locate the command bar that the button is expected to be shown in.
-1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
+1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-hidden/command-checker-button-icon.png" border="false"::: button (it may be listed in the **More** overflow flyout menu).
 1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. The following example shows the **New** button on the contact entity's grid page is not visible and is represented by an item labeled **New (hidden)**.
 
     > [!NOTE]

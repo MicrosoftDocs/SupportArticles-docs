@@ -30,7 +30,7 @@ When a button is clicked and nothing happens, this is typically caused by an inc
 The following command configuration mistakes when declaring the [action's](/powerapps/developer/model-driven-apps/define-ribbon-actions) `JavaScriptFunction` can result in a button to seem as though it does nothing when clicked:
 
 - **Invalid FunctionName** - If the name of the JavaScript function does not match a valid function name in the JavaScript web resource that is assigned to the Library property, then the button will do nothing.
-- **Invalid Library** - If this path is not referring to a valid JavaScript web resource or is not prefixed with "$webresource:", then the button will not work.
+- **Invalid Library** - If this path is not referring to a valid JavaScript web resource or is not prefixed with `$webresource:`, then the button will not work.
 - **Missing parameters** - If the JavaScript function is expecting specific parameters and the command definition does not declare them, then the button won't function properly.
 - **Incorrect parameter type or order** - If the parameters are declared with an incorrect type or are in a different order than how they are listed in the JavaScript function declaration, then the button may not work as expected.
 
@@ -49,11 +49,11 @@ To enable the Command Checker tool, you must append a `&ribbondebug=true` parame
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the **More** overflow flyout menu).
 
 1. Navigate to the page in the application where the button is displayed.
 1. Locate the command bar that the button visible in.
-1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
+1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the **More** overflow flyout menu).
 1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Click the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Command properties.":::
@@ -278,11 +278,11 @@ To enable the Command Checker tool, you must append a `&ribbondebug=true` parame
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the **More** overflow flyout menu).
 
 1. Navigate to the page in the application where the button is displayed.
 1. Locate the command bar that the button visible in.
-1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
+1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the **More** overflow flyout menu).
 1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool to show the button and command properties. The following example shows the **New** button on the account entity's form page is visible and is represented by an item labeled **New**.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/new-button.png" alt-text="New button.":::
@@ -504,11 +504,11 @@ To enable the Command Checker tool, you must append a `&ribbondebug=true` parame
 > [!NOTE]
 > Currently the Command Checker tool only works in a web browser and does not work in Android and iOS apps. A future update is planned to make this work in these mobile apps.
 
-Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the "More" overflow flyout menu).
+Once the Command Checker tool has been enabled, within the application in each of the various command bars (global, form, grid, subgrid), there will be a new special "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button to open the tool (it may be listed in the **More** overflow flyout menu).
 
 1. Navigate to the page in the application where the button is displayed.
 1. Locate the command bar that the button visible in.
-1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the "More" overflow flyout menu).
+1. Click the "Command checker" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/command-checker-button-icon.png" border="false"::: button (it may be listed in the **More** overflow flyout menu).
 1. Find and click your button in the list of buttons displayed in the left-most pane of the Command Checker tool. Buttons that are not visible will be denoted by de-emphasized and italicized font along with the **(hidden)** term. Buttons that are visible will be displayed with the label in the normal font. Click the **Command Properties** tab to display the details of the command for this button.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/command-properties.png" alt-text="Command properties.":::

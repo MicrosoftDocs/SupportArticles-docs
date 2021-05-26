@@ -23,7 +23,7 @@ You can use the Command Checker tool to start the regeneration of ribbon metadat
 
 :::image type="content" source="media/regenerate-ribbon-metadata/enable-command-checker.png" alt-text="Screenshot of the parameter.":::
 
-After Command Checker is enabled, a new special "Command Checker" :::image type="icon" source="media/regenerate-ribbon-metadata/command-checker-button-icon.png" border="false"::: program button is available within the application on each of the various command bars (global, form, grid, and subgrid). (The button might be included on the **More**" overflow flyout menu). To open Command Checker, select the button on any command bar.
+After Command Checker is enabled, a new special "Command Checker" :::image type="icon" source="media/regenerate-ribbon-metadata/command-checker-button-icon.png" border="false"::: program button is available within the application on each of the various command bars (global, form, grid, and subgrid). (The button might be included on the **More** overflow flyout menu). To open Command Checker, select the button on any command bar.
 
 :::image type="content" source="media/regenerate-ribbon-metadata/open-command-checker.png" alt-text="Open command checker.":::
 
