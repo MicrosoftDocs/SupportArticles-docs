@@ -1,7 +1,7 @@
 ---
 title: Speaker and mute buttons stop working in a Skype Room Systems meeting
 description: Explains that if you have over 30 participants in a Skype Room Systems meeting, the speaker and mute buttons don't work.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

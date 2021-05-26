@@ -1,7 +1,7 @@
 ---
 title: Telephone number still rings old telephone number
 description: Describes an issue in which the time and date for a local number port order request have passed but the telephone number continues to ring the old telephone. Provides a solution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: Landerl, corbinm, jasco, cbland
 appliesto:

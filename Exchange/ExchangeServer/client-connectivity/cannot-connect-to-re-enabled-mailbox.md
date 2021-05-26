@@ -1,8 +1,8 @@
 ---
 title: Can't connect to a mailbox after it's re-enabled
 description: Describes an issue that prevents users from accessing their mailboxes after they've been disabled and then re-enabled. Affects Exchange Server 2016 and 2013 environments. A resolution is provided.
-ms.author: v-swei
-author: Norman-sun
+ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

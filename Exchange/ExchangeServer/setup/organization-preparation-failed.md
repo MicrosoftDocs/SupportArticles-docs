@@ -1,8 +1,8 @@
 ---
 title: Organization Preparation FAILED error
 description: Resolves an error that occurs when you try to install Exchange Server.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -99,8 +99,10 @@
       href: ./known-issues/exchange-users-cant-access-meetings.md
   - name: Exchange integration
     items:
+    - name: External federated contacts don’t appear in Teams search
+      href: ./exchange-integration/external-contacts-not-in-search.md
     - name: Teams and Exchange interaction issues
-      href: ./known-issues/teams-exchange-interaction-issue.md
+      href: ./exchange-integration/teams-exchange-interaction-issue.md
   - name: Files
     items:
     - name: '"There was a problem reaching this app" error'

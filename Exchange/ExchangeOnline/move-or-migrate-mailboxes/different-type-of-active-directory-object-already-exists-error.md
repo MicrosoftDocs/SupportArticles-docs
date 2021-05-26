@@ -1,8 +1,8 @@
 ---
 title: Different type of Active Directory object exists error
 description: Describes an issue in which one or more users aren't migrated when you try to migrate mailboxes from your on-premises Exchange organization to Exchange Online in a cutover migration. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

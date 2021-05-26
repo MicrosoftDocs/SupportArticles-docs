@@ -1,7 +1,7 @@
 ---
 title: This release of Lync cannot be used when join a Skype Meeting Broadcast
 description: Describes an issue that triggers a "This release of Lync cannot be used in a Skype Meeting Broadcast" error when you try to join a Skype Meeting Broadcast as an "Event team" member. Provides a solution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 appliesto:
 - Skype for Business Online
 ---

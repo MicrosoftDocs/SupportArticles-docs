@@ -1,8 +1,8 @@
 ---
 title: Front-end Microsoft Exchange Transport service stops and doesn't start in Exchange
 description: Describes an issue that occurs when an Exchange server has both back-end and front-end roles.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Messages aren't evenly distributed if BasicAuth or BasicAuthRequireTLS is used in Exchange Server 2013 or later
 description: Describes an issue that blocks mail flow on the SMTP server when messages are sent to Exchange Server 2013 or later. Provides a workaround.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

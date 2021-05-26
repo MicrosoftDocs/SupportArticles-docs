@@ -1,8 +1,8 @@
 ---
 title: Primary SMTP address is overwritten by targetAddress
 description: The primary SMTP address of a mailbox is changed when the targetAddress is in the form SMTP usernam@domain.com.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -64,9 +64,6 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
     - `https://*.sfbassets.com`
     - `https://*.skypeforbusiness.com`
 
-> [!NOTE]
-> It's always good to validate and enable all trusted URLs for Teams and review the requirements in this article: [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams).
-
 ### Google Chrome
 
 1. In the Chrome **Settings** window, on the **Privacy and security** tab, select **Cookies and other site data**.
@@ -79,6 +76,12 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
     - [*.]teams.microsoft.com
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
+
+> [!NOTE]
+> It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:
+>
+> - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams)
+> - [Office 365 U.S. Government GCC High endpoints](/microsoft-365/enterprise/microsoft-365-u-s-government-gcc-high-endpoints?view=o365-worldwide&preserve-view=true)
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 

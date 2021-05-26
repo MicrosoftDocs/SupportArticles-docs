@@ -1,8 +1,8 @@
 ---
 title: UsageLocation validation error about Enable-UMMailbox
 description: Discusses an issue in which you receive an Enable-UMMailbox... cannot be performed error in Exchange Online.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

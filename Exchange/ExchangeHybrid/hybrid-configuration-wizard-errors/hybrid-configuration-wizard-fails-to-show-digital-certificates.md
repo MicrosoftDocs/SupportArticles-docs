@@ -1,8 +1,8 @@
 ---
 title: Hybrid Configuration Wizard cannot show digital certificate
 description: Describes an issue in which digital certificates are missing from the Hybrid Configuration Wizard. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

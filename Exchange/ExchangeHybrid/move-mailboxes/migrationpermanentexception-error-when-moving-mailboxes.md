@@ -1,8 +1,8 @@
 ---
 title: MigrationPermanentException error when moving mailboxes
 description: Describes a problem that triggers a MigrationPermanentException error when you try to move a mailbox from Exchange Online to an on-premises Exchange 2010 server in an Exchange hybrid deployment. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

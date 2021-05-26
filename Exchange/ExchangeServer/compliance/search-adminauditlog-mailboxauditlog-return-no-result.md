@@ -1,8 +1,8 @@
 ---
 title:  Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
 description: Workaround for an issue that returns empty results when you run Search-AdminAuditLog and Search-MailboxAuditLog cmdlets with parameters. 
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
