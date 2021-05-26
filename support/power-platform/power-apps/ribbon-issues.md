@@ -28,4 +28,4 @@ When you run the tool, you're asked to identify or choose one of the items in th
 - [A button on the command bar is not working correctly](ribbon-issues-button-not-working-correctly.md)
 
 > [!IMPORTANT]
-> These issues are often caused by missing or incorrect ribbon metadata. Typically, this situation can be resolved by regenerating all ribbon metadata. Command Checker has a feature that enables you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md). Only system administrators and system customizers have the permissions to regenerate metadata.
+> These issues are often caused by missing or incorrect ribbon metadata. Typically, this situation can be resolved by regenerating all ribbon metadata. Command Checker has a feature that enables you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md). Only system administrators, system customizers, and makers have the permissions to regenerate metadata.
