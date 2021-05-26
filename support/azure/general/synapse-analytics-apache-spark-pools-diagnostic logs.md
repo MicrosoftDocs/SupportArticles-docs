@@ -1,6 +1,6 @@
 ---
 title: Azure Synapse Analytics Apache Spark pools diagnostic logs
-description: Lists the Apache Spark pools diagnostic logs and diagnostic information that's collected during troubleshooting by Microsoft Support.
+description: Lists the Apache Spark diagnostic logs that's collected during troubleshooting by Microsoft Support.
 ms.date: 05/26/2021
 author: genlin
 ms.author: genli
@@ -8,7 +8,7 @@ ms.service: synapse-analytics
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
-# Apache Spark pools diagnostic logs in Azure Synapse Analytics
+# Apache Spark diagnostic logs in Azure Synapse Analytics
 
 To troubleshoot issues that are related to Apache Spark pools in Azure Synapse Analytics workspace, Microsoft Support and the Azure Synapse Analytics engineering team can view and download diagnostic logs that are associated with your Apache Spark pools. Microsoft may access or make temporary copies of the data to help resolve your support incident.
 
