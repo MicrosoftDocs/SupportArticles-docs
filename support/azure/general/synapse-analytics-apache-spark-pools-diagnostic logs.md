@@ -4,7 +4,7 @@ description: Lists the Apache Spark pools diagnostic logs and diagnostic informa
 ms.date: 05/26/2021
 author: genlin
 ms.author: genli
-ms.service: storage
+ms.service: synapse-analytics
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
@@ -18,6 +18,6 @@ The following tables list what data will be collected and available to Microsoft
 
 |  Type |  Description |
 |---|---|
-| Apache Spark Driver Logs  |Spark driver program is critical process used for negotiation resources with cluster manager and scheduling the job execution. Driver logs would contain details on how the job got executed and resource utilized, that are critical for troubleshooting Spark application.   |
-|  Apache Spark Executor Logs |Spark Executors are worker nodes’ processes in charge of running individual tasks in a given Spark job. They are launched at the beginning of a Spark application and typically run for the entire lifetime of an application. Once they have run the task, they send the results to the driver application. Executor logs would contain details on how the individual tasks of your application performed and whether any of them failed.   |
+| Apache Spark Driver Logs  |Spark driver program is critical process used for negotiation resources with cluster manager and scheduling the job execution. Driver logs would contain details on how the job got executed and resource used, that are critical for troubleshooting Spark application.   |
+|  Apache Spark Executor Logs |Spark Executors are worker nodes’ processes in charge of running individual tasks in a given Spark job. They're launched at the beginning of a Spark application and typically run for the entire lifetime of an application. Once they have run the task, they send the results to the driver application. Executor logs would contain details on how the individual tasks of your application performed and whether any of them failed.   |
 |  Apache Spark Event Logs | Spark Event logs would contain execution and performance related metrics of all the executors, the list of scheduler stages/tasks and the execution environment information. |
