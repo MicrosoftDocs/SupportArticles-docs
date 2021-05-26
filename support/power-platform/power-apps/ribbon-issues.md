@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting ribbon issues in Power Apps
-description: Provides workarounds to ribbon issues in Power Apps.
+description: Provides a resolution for ribbon issues in Power Apps.
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/15/2021
@@ -28,4 +28,4 @@ When you run the tool, you're asked to identify or choose one of the items in th
 - [A button on the command bar is not working correctly](ribbon-issues-button-not-working-correctly.md)
 
 > [!IMPORTANT]
-> Missing or incorrect ribbon metadata is often the cause for the these issues. Typically, this can be resolved by regenerating all ribbon metadata. Command Checker has a feature that enables you [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md).
+> These issues are often caused by missing or incorrect ribbon metadata. Typically, this situation can be resolved by regenerating all ribbon metadata. Command Checker has a feature that enables you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md). Only system administrators and system customizers have the permissions to regenerate metadata.
