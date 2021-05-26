@@ -1,6 +1,6 @@
 ---
 title: Can't permanently delete a site when it's connected to a Microsoft 365 group 
-description: Describes the error - This site can't be permanently deleted because it's connected to a Microsoft 365 group. 
+description: Describes the error: This site can't be permanently deleted because it's connected to a Microsoft 365 group. 
 author: salarson
 manager: dcscontentpm
 localization_priority: Normal
@@ -19,32 +19,32 @@ appliesto:
 
 # Can't permanently delete a site when it's connected to a Microsoft 365 group
 
-## Symptom
+## Symptoms
 
-When you try to permanently delete a Microsoft 365 group site from the SharePoint Admin center, you get the following error:
+When you try to permanently delete a Microsoft 365 group site from the SharePoint Admin center, you receive the following error message:
 
 > This site can't be permanently deleted because it's connected to a Microsoft 365 group.
 
 ## Cause
 
-To delete a Microsoft 365 group-connected team site, you need to delete the site and all of the group’s resources.
+To delete a team site that's connected to a Microsoft 365 group, you have to also delete all the group’s resources.
 
 ## Resolution
 
-To permanently delete a Microsoft 365 group-connected team site, use the following steps:
+To permanently delete a Microsoft 365 group-connected team site, follow these steps:
 
-1. Install the latest SharePoint Online Management Shell, or if it is already installed, make sure it is up to date. For instructions to do this, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md).
+1. Install the latest SharePoint Online Management Shell. If the shell is already installed, make sure that it's up-to-date. For the steps to do this, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md).
 
 1. Connect to SharePoint as a global admin or SharePoint admin in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md).
 
 1. Run the following command:
 
-    ```Remove-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/sitetoremove```
+    ```Remove-SPODeletedSite -Identity https://<contoso>.sharepoint.com/sites/sitetoremove```
 
-    (Where https://contoso.sharepoint.com/sites/sitetoremove is the URL of the site you want to permanently delete)
+    **Note:** In this command, replace \<contoso> with the domain name of the site that you want to permanently delete.
 
-For more information about using this command, see [Remove-SPODeletedSite](/powershell/module/sharepoint-online/remove-spodeletedsite.md).
+For more information about how to use this command, see [Remove-SPODeletedSite](/powershell/module/sharepoint-online/remove-spodeletedsite.md).
 
 ## More information
 
-For more information about permanently deleting sites, see [Permanently delete a site](/sharepoint/delete-site-collection#permanently-delete-a-site.md).
+For more information about how to permanently delete sites, see [Permanently delete a site](/sharepoint/delete-site-collection#permanently-delete-a-site.md).
