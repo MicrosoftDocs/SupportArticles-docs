@@ -188,16 +188,16 @@ Based on our example scenario, we identified the entity is **activitypointer** a
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
-1. Locate the `<Entity>` node child of the entity node you wish to edit and locate it's child `<RibbonDiffXml>` node.
-1. Locate the `<CommandDefinition>` node. (In our example, ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`, so we would locate the following node)
+1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
+1. Locate the `<CommandDefinition>` node. In the example, the ID of the `<CommandDefinition>` node is `Mscrm.CreateAppointment`. Therefore, you would locate the following node:
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-3.png" alt-text="Third command definition example.":::
 
-1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the `<CommandDefinition>` node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands). (Based on our example, we would modify the `<CommandDefinition>` node by adding the `Mscrm.HideOnModern` display rule that will correctly hide this button.)
+1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more informatioin about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands). (Based on our example, we would modify the `<CommandDefinition>` node by adding the `Mscrm.HideOnModern` display rule that will correctly hide this button.)
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-4.png" alt-text="Fourth command definition example.":::
 
-1. Add the modified *customizations.xml* file back to the solution .zip file.
+1. Restore the modified *customizations.xml* file to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
 
@@ -217,7 +217,7 @@ If the command is not entity-specific, rather it is applicable to "All entities"
 1. Open the *customizations.xml* file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>`.
-1. Edit `<RibbonDiffXml>` and make the necessary changes to the `<CommandDefinition>` node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands).
+1. Edit `<RibbonDiffXml>` and make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands).
 1. Add the modified *customizations.xml* file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
@@ -293,7 +293,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
-1. Click **New** to create a new solution, set Publisher to the value shown in the Command Checker's solution layers listing for the enable rule and the Active solution layer. (In our example, this is **DefaultPublisherCITTest**)
+1. Click **New** to create a new solution, set Publisher to the value shown in the Command Checker solution layers listing for the enable rule and the Active solution layer. (In our example, this is **DefaultPublisherCITTest**)
 1. Click **Entities**.
 1. Click **Add Existing**.
 1. Select the entity your enable/display rule is defined on (In our example, this is **contact**) and click **OK**.
@@ -303,11 +303,11 @@ Based on our example scenario, we identified the entity is **contact** and the e
 1. Extract the .zip file.
 1. Open the *customizations.xml* file.
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
-1. Locate the enable/display rule. (In our example, ID of the enable rule is `new.contact.EnableRule.EntityRule`, so we would locate the following node)
+1. Locate the enable/display rule. In the example, the ID of the enable rule is `new.contact.EnableRule.EntityRule`. Therefore, you would locate the following node:
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-5.png" alt-text="Fifth example of command definition.":::
 
-1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
+1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the enable/display rule that will enable the rule to evaluate to True under the correct circumstances to fix the rule. For more information about how to declare rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
 
     :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-6.png" alt-text="Sixth example of command definition.":::
 
@@ -331,7 +331,7 @@ If the enable/display rule is not entity-specific, rather it is applicable to "A
 1. Open the *customizations.xml* file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the enable/display rule.
-1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules).
+1. Edit the `<RibbonDiffXml>` node, and make the necessary changes to the enable/display rule that will enable the rule to evaluate to True under the correct circumstances to fix the rule. For more information about how to declare rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules).
 1. Add the modified *customizations.xml* file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
