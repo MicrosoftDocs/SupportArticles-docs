@@ -1,7 +1,7 @@
 ---
 title: Enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation
 description: Describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 04/30/2021
+ms.date: 05/26/2021
 ms.prod-support-area-path: 
 ms.reviewer: dahans
 ---
@@ -37,9 +37,9 @@ To maintain a secure connection to Azure Active Directory (Azure AD) and Microso
 
 - Update Windows and the default TLS that you use for "WinHTTP".
 - Identify and reduce you dependency on the client apps and operating systems that don’t support TLS 1.2.
-- Enable TLS 1.2 applications and services that communicate with Azure AD.
+- Enable TLS 1.2 for applications and services that communicate with Azure AD.
 - Update and configure your .NET Framework installation to support TLS 1.2.
-- Ensure applications and Powershell, using [Azure AD Graph](https://graph.windows.net) and [Microsoft Graph](https://graph.microsoft.com), are hosted and run on a platform that supports TLS 1.2.
+- Ensure applications and Powershell (using [Azure AD Graph](https://graph.windows.net) and [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
 - Make sure that your web browser has the latest updates. We recommend that you use the new Microsoft Edge browser (based on Chromium). For more information, see the [Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel).
 - Make sure that your web proxy supports TLS 1.2. For more information about how to update a web proxy, check with the vendor of your web proxy solution.
 
@@ -76,22 +76,23 @@ For more information, see [Handshake Simulation for various clients connecting t
 - Azure Application Proxy (version 1.5.1526.0 and later enforce TLS 1.2)
 - Active Directory Federation Services (AD FS) for servers that are configured to use Azure Multi-Factor Authentication (Azure MFA)
 - NPS servers that are configured to use the NPS extension for Azure AD MFA
-- MFA Server version 8.x or higher
+- MFA Server version 8.0.x or higher
 - Azure AD Password Protection proxy service
 
-### Action required
+  Action required
 
-1. We highly recommend that you run the latest version of the agent, service, or connector.
-2. TLS 1.2 is enabled on Windows Server 2012 R2 and later, by default. In rare instances, the default OS configuration may have been modified to disable TLS 1.2.
+  1. We highly recommend that you run the latest version of the agent, service, or connector.
+  2. TLS 1.2 is enabled on Windows Server 2012 R2 and later, by default. In rare instances, the default OS configuration may have been modified to disable TLS 1.
 
-   To be sure that TLS 1.2 is enabled, we recommend explicitly adding the registry values from the section [Enable TLS 1.2 on client or server operating systems](/azure/active-directory/enable-support-tls-environment#enable-tls-12-on-client-or-server-operating-systems) section, on Windows Servers that communicate with Azure AD.
-3. Most of the previously listed services are dependent on .Net Framework. Ensure that it's updated as the following section, "Update and configure .NET Framework to support TLS 1.2".
+      To be sure that TLS 1.2 is enabled, we recommend explicitly adding the registry values from the section [Enable TLS 1.2 on client or server operating systems](/azure/active-directory/enable-support-tls-environment#enable-tls-12-on-client-or-server-operating-systems) section, on Windows Servers that communicate with Azure AD.
 
-For more information, see the following articles:
+  3. Most of the previously listed services are dependent on .Net Framework. Ensure that it's updated as the following section, [Update and configure .NET Framework to support TLS 1.2](/azure/active-directory/enable-support-tls-environment#update-and-configure-net-framework-to-support-tls-12)
 
-- [TLS 1.2 enforcement - Enforce TLS 1.2 for the Azure AD Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
-- [Azure AD Connect: TLS 1.2 enforcement for Azure Active Directory Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement)
-- [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors#requirements-and-deployment)
+  For more information, see the following articles:
+
+  - [TLS 1.2 enforcement - Enforce TLS 1.2 for the Azure AD Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
+  - [Azure AD Connect: TLS 1.2 enforcement for Azure Active Directory Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement)
+  - [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors#requirements-and-deployment)
 
 ## Enable TLS 1.2 on client or server operating systems
 
@@ -114,7 +115,7 @@ Make sure that the following registry DWORD values are configured for these subk
 
 To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
 
-### Update and configure .NET Framework to support TLS 1.2
+## Update and configure .NET Framework to support TLS 1.2
 
 Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Azure AD Graph](https://graph.windows.net/), or [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
 
