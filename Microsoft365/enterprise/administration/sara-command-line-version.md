@@ -23,7 +23,7 @@ The command-line version of Microsoft Support and Recovery Assistant (SaRA) is s
 ## Download SaRA
 
 1. To download the command-line version of SaRA, use the following link: [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles).
-1. In the downloaded file, extract the files in the *DONE* folder to a location that you can access from the computer on which you will run the application.
+1. In the downloaded file, extract the files in the *DONE* folder to a location that you can access from the computer on which you'll run the application.
 
 ## Running the command-line version of SaRA
 
@@ -41,7 +41,7 @@ The command-line version of Microsoft Support and Recovery Assistant (SaRA) is s
 
 The following switches are available to control SaRAcmd.exe.
 
-**Note:** The switches are not case-sensitive.
+**Note:** The switches aren't case-sensitive.
 
 1. `-S <scenarioname>`
 
@@ -59,7 +59,7 @@ The following switches are available to control SaRAcmd.exe.
 
 2. `-AcceptEula`
 
-   The End User License Agreement (EULA) must be accepted before a scenario can be run. If you are using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify the scenario that you want to run. For example, to uninstall Office, run the following command:
+   The End User License Agreement (EULA) must be accepted before a scenario can be run. If you're using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify the scenario that you want to run. For example, to uninstall Office, run the following command:
 
    ```console
    SaRAcmd.exe -S OfficeScrubScenario -AcceptEula
@@ -89,7 +89,7 @@ The following switches are available to control SaRAcmd.exe.
 
    :::image type="content" source="media/sara-command-line-version/sara-command-line-version.png" alt-text="Screenshot of the output of the switch.":::
 
-## Conditions of the command line scenarios
+## Conditions of the command-line scenarios
 
 When you run a scenario by using the command-line version of SaRA, you receive no prompts. This is a different experience from the UI version of SaRA. The following table describes the actions that SaRA takes, and the output that the tool displays for each condition within a scenario.
 
@@ -101,20 +101,20 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Outlook is running|Run a full scan of Outlook|*02:* A Full scan was performed. See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
   |More than one Outlook version is detected|Run a scan of the latest version of Outlook|(Depending on the situation, this output could be *01*, *02*, *04*, or *05*)|
   |Outlook and the Command Prompt window are both elevated|Run a full scan of Outlook|*02:* A Full scan was performed. See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
-  |Outlook is running as elevated; the SaRA Command Prompt window is not elevated|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
-  |Outlook is not running as elevated; the SaRA Command Prompt window is elevated|No scan is run|*04:* Outlook is not running elevated. Do not use an elevated command-prompt.|
-  |Failure to run a scan (for any reason); for example:<ol><li>Outlook is not installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|No scan is run|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and re-run this scenario. You can also try using the full SaRA version.|
+  |Outlook is running as elevated; the SaRA Command Prompt window isn't elevated|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
+  |Outlook isn't running as elevated; the SaRA Command Prompt window is elevated|No scan is run|*04:* Outlook isn't running elevated. Don't use an elevated command-prompt.|
+  |Failure to run a scan (for any reason); for example:<ol><li>Outlook isn't installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|No scan is run|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and rerun this scenario. You can also try using the full SaRA version.|
   |||
 - `OfficeScrubScenario`
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
   |---|---|---|
   |Successfully completed|Not applicable|*00:* Successfully completed this scenario.<br/><br/>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
-  |Office program found .exe files running:<br/><br/>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then re-run this scenario.|
+  |Office program found .exe files running:<br/><br/>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
   |No Office products found|Exit the scenario|*07:* No installed Office versions were found. Please use the full SaRA version.|
-  |Multiple Office products found|Exit the scenario|*08:* Multiple Office version were found. Please use the full SaRA version.|
+  |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
   |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
-  |SaRA is not elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
+  |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
   |||
 
 For more information about the UI version of SaRA, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/sara_home).
