@@ -1,6 +1,6 @@
 ---
-title: Can't access the Files tab in a Teams channel
-description: Fixes an issue in which you can't access the Files tab in a Teams channel. This issue occurs when the default document library name on your SharePoint site has been changed.
+title: Can't access the Files tab on a Teams channel
+description: Fixes error messages that you receive when you access the Files tab in a Teams channel.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.service: msteams
 localization_priority: Normal
 ms.custom: 
+- CI 149476
 - CI 143097
 - CSSTroubleshoot
 ms.reviewer: prbalusu
@@ -17,20 +18,15 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# "The object specified does not belong to a list" error when selecting the Files tab in a Teams channel
+# Errors when selecting the Files tab on a Teams channel
 
-## Symptoms
+When you select the Files tab on a team's channel in Microsoft Teams, you receive some error messages. This article lists some common error messages and provides resolutions that you can try.
 
-When you select the **Files** tab in a channel in Microsoft Teams, you receive the following error message:
-
-> Something went wrong  
-> The object specified does not belong to a list.
-
-## Cause
+## Error: The object specified does not belong to a list
 
 This error occurs if the name of the document library on your SharePoint site was changed from its default, "Shared Documents," to another name.
 
-## Resolution
+### Resolution
 
 To resolve this issue, revert the name the document library to "Shared Documents." You must have administrator permissions to make this change.
 
@@ -41,3 +37,13 @@ To resolve this issue, revert the name the document library to "Shared Documents
    :::image type="content" source="media/object-specified-not-belong-to-list/renamed-documents.png" alt-text="Screenshot of the renamed document library in All Files.":::
 
 4. Right-click the folder, select **Rename**, and then change the name to **Shared Documents**.
+
+## Error: There was a problem reaching this app
+
+This error occurs if the ownership information for the Microsoft 365 group that's associated with the team is missing from Teams. If an assigned owner leaves the company, the group becomes orphaned.
+
+### Resolution
+
+Assign an owner to the Microsoft 365 group that's associated with the team. For more information, see [Assign a new owner to an orphaned group](https://support.microsoft.com/topic/assign-a-new-owner-to-an-orphaned-group-86bb3db6-8857-45d1-95c8-f6d540e45732).
+
+**Note:** Only a Microsoft 365 administrator in your organization can make this change.
