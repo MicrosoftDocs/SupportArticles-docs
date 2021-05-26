@@ -87,6 +87,8 @@ The following switches are available to control SaRAcmd.exe.
 
    Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches. The following screenshot shows example output if the `-?` switch is used.
 
+   :::image type="content" source="media/sara-command-line-version/sara-command-line-version.png" alt-text="Screenshot of the output of the switch.":::
+
 ## Conditions of the command line scenarios
 
 When you run a scenario by using the command-line version of SaRA, you receive no prompts. This is a different experience from the UI version of SaRA. The following table describes the actions that SaRA takes, and the output that the tool displays for each condition within a scenario.
