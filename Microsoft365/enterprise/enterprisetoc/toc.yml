@@ -13,8 +13,6 @@
       href: ../administration/issues-on-devices-with-app-v-enabled.md
     - name: Office applications crash or can't start
       href: ../administration/office-crash-or-cannot-start.md
-    - name: SaRA command-line version
-      href: ../administration/sara-command-line-version.md
   - name: Authentication
     items:
     - name: '"Invalid provider specified" with using Office 2016'
