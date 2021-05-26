@@ -26,8 +26,7 @@ You can purchase device licenses based on your estimated usage. Microsoft Intune
 - [Using a device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll)
 
 > [!NOTE]
-> Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.
->
+> Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page, or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.
 
 ## Limitations
 
