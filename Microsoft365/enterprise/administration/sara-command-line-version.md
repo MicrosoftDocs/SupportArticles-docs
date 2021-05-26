@@ -87,7 +87,7 @@ The following switches are available to control SaRAcmd.exe.
 
    Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches. The following screenshot shows example output if the `-?` switch is used.
 
-   :::image type="content" source="media/sara-command-line-version/sara-command-line-version.png" alt-text="Screenshot of the output of the switch.":::
+   :::image type="content" source="media/sara-command-line-version/switch-usage.png" alt-text="Screenshot of the output of the switch.":::
 
 ## Conditions of the command-line scenarios
 
