@@ -1,5 +1,5 @@
 ---
-title: How to speed up a Windows 7 computer
+title: How to speed up a Windows 8.1 computer
 description: Describes ways to help speed up your computers when it tend to slow down after time, without upgrading your hardware.
 ms.date: 05/25/2021
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, meerak
 ms.prod-support-area-path: Slow Performance
 ms.technology: windows-client-performance
 ---
-# Speed up a Windows 7 computer
+# Speed up a Windows 8.1 computer
 
 No matter how good you are about keeping your computer clean and up-to-date, they tend to slow down after time. Fortunately, there are a lot of ways to help speed them up― without upgrading your hardware.
 
