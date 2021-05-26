@@ -120,7 +120,7 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter.
 |---|---|---|
 |7/2/2020|10/2/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
-## Hardware and Devices troubleshooter
+## Hardware and Devices troubleshooter for issue with some Parity Storage Spaces
 
 Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
