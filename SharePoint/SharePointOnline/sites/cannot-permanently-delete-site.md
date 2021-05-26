@@ -33,9 +33,9 @@ To delete a Microsoft 365 group-connected team site, you need to delete the site
 
 To permanently delete a Microsoft 365 group-connected team site, use the following steps:
 
-1. Install the latest SharePoint Online Management Shell, or if it is already installed, make sure it is up to date. For instructions to do this, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps.md).
+1. Install the latest SharePoint Online Management Shell, or if it is already installed, make sure it is up to date. For instructions to do this, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md).
 
-1. Connect to SharePoint as a global admin or SharePoint admin in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps.md).
+1. Connect to SharePoint as a global admin or SharePoint admin in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md).
 
 1. Run the following command:
 
