@@ -18,7 +18,7 @@ The following items are considered as the version property of the app:
 
 ## Places where you can view the app version
 
-In the [Microsoft Endpoint Manager admin center]https://go.microsoft.com/fwlink/?linkid=2109431), you can view the app version in the following places:
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the app version in the following places:
 
 - When you add the app to Intune, the version is displayed in the **App package file** pane. The version value will be used for the identityVersion property.
 
@@ -91,3 +91,5 @@ To manually extract the attributes of an .apk file in Windows, follow these step
     ...
    </manifest>
    ```
+
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
