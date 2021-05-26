@@ -309,7 +309,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 
 1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules). (Based on our example, we would change the rule definition to the following)
 
-:::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-6.png" alt-text="Sixth example of command definition.":::
+    :::image type="content" source="media/ribbon-issues-button-visible/commanddefinition-example-6.png" alt-text="Sixth example of command definition.":::
 
 1. Add the modified *customizations.xml* file back to the solution .zip file.
 1. Import the solution file.
