@@ -35,7 +35,7 @@ To start troubleshooting, collect the activity logs to identify the error associ
 
 [!INCLUDE [virtual-machines-windows-troubleshoot-deployment-new-vm-table](../../includes/virtual-machines-windows-troubleshoot-deployment-new-vm-table.md)]
 
-**Y:** If the OS is Windows generalized, and it is uploaded and/or captured with the generalized setting, then there won’t be any errors. Similarly, if the OS is Windows specialized, and it is uploaded and/or captured with the specialized setting, then there won’t be any errors.
+**Y:** If the OS is Windows generalized, and it is uploaded and/or captured with the generalized setting, then there won't be any errors. Similarly, if the OS is Windows specialized, and it is uploaded and/or captured with the specialized setting, then there won't be any errors.
 
 **Upload Errors:**
 
@@ -137,7 +137,7 @@ The ability to create subscriptions based on the Enterprise Dev/Test offer is re
 
 Instructions to install drivers for Windows-based VMs are located [here](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
 
-### I can’t find a GPU instance within my N-Series VM
+### I can't find a GPU instance within my N-Series VM
 
 To take advantage of the GPU capabilities of Azure N-series VMs, you must install graphics drivers on each VM after deployment. Driver setup information is available [here](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
 
@@ -178,5 +178,5 @@ If you encounter issues when you start a stopped Windows VM or resize an existin
 
 ## Next steps
 
-* [Supportability of adding Azure VMs to an existing availability set](/azure/virtual-machines/virtual-machines-availability-set-supportability)
-* [Redeploy Windows virtual machine to new Azure node](/azure/virtual-machines/redeploy-to-new-node-windows)
+* [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
+* [Redeploy Windows virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-windows)
