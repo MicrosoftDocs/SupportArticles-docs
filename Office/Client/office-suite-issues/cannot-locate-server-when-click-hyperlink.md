@@ -71,20 +71,15 @@ This problem occurs when the following conditions are true:
 
     - For 32-bit versions of office installed on 64-bit operating systems:
     
-      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\x.0\Common\Internet`
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet`
     
     - For 32-bit versions of Office installed on 32-bit operating systems, or 64-bit versions of Office installed on 64-bit operating systems:
     
-      `HKEY_LOCAL_MACHINE\Software\Microsoft\Office\x.0\Common\Internet` 
+      `HKEY_LOCAL_MACHINE\Software\Microsoft\Office\9.0\Common\Internet` 
       
     > [!NOTE]
-    > The *x.0* placeholder in the registry path corresponds to the Office version:
-    > 
-    > - 16.0: Office 365, Office 2019, and Office 2016
-    > - 15.0: Office 2013
-    > - 14.0: Office 2010
-    > - 12.0: Office 2007
-     
+    > The registry path doesn't depend on your Office version.
+         
 ## Workaround
 
 > [!IMPORTANT]
@@ -102,24 +97,16 @@ To work around this issue, either add the ForceShellExecute subkey, if it is not
 
     - For a 32-bit version of Office on a 64-bit version of Windows:
     
-      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\x.0\Common\Internet`
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet`
     
     - For a 32-bit version of Office on a 32-bit version of Windows:
     
-      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\x.0\Common\Internet`
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet`
     
     - For a 64-bit version of Office on a 64-bit version of Windows:
     
-      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\x.0\Common\Internet`
-      
-    > [!NOTE]
-    > The *x.0* placeholder in the registry path corresponds to the Office version:
-    > 
-    > - 16.0: Office 365, Office 2019, and Office 2016
-    > - 15.0: Office 2013
-    > - 14.0: Office 2010
-    > - 12.0: Office 2007  
-
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet`      
+    
 4. Make sure the Internet subkey is selected. On the **Edit** menu, point to **New**, and then select **DWORD** Value. Add the following registry value:
 
     **Value Name: ForceShellExecute**
