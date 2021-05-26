@@ -930,6 +930,8 @@
     items:
     - name: '"Stop 0x0000007B" error'
       href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
+    - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
+      href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
     - name: Can't find the Microsoft Loopback Adapter
       href: ./deployment/microsoft-loopback-adapter-rename.md
     - name: Can't install a VMWare driver on Windows Server 2008 R2
