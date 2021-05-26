@@ -15,7 +15,7 @@ The following ribbon command bar issues are often caused by missing or incorrect
 - A button on the command bar is visible when it should be hidden.
 - A button on the command bar is not working correctly.
 
-An in-app tool, Command Checker, is available to help you regenerate all ribbon metadata.
+An in-app tool, Command Checker, is available to help you regenerate all ribbon metadata. Only system administrators, system customizers, and makers have the permissions to regenerate metadata.
 
 ## How to start the regeneration operation
 
