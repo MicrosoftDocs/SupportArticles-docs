@@ -20,7 +20,7 @@ search.appverid:
 ---
 # Errors when selecting the Files tab on a Teams channel
 
-When you select the Files tab on a team's channel in Microsoft Teams, you receive some error messages. This article lists some common error messages and provides resolutions that you can try.
+This article lists some common error messages that you receive when you select the **Files** tab on a team's channel in Microsoft Teams, and it provides resolutions that you can try.
 
 ## Error: The object specified does not belong to a list
 
