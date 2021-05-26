@@ -1870,6 +1870,8 @@
       href: ./performance/not-boot-in-normal-mode-driver-issue.md
     - name: Registry troubleshooting for advanced users
       href: ./performance/registry-troubleshooting-advanced-users.md
+    - name: Startup failure when Firmware protection is turned on
+      href: ./performance/startup-failure-firmware-protection-turned-on.md
     - name: STOP 0X0000007B error when booting from an alternate iSCSI adapter
       href: ./performance/0x0000007b-stop-error-switch-alternate-iscsi-adapter.md
     - name: Support for booting from SAN
