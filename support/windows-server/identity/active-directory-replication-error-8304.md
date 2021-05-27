@@ -79,7 +79,7 @@ Description:
 Internal event: Active Directory Domain Services could not update the following object with changes received from the following source directory service. This is because an error occurred during the application of the changes to Active Directory Domain Services on the directory service.  
 
 Object:  
-CN=john\0ADEL:\<GUID>,CN=Deleted Objects,<directory partition DN path>  
+CN=john\0ADEL:<GUID>,CN=Deleted Objects,<directory partition DN path>  
 Object GUID:  
 <GUID>  
 Source directory service:  
