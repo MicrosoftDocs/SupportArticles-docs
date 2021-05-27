@@ -53,7 +53,20 @@ For TLS 1.2, the following cipher suites are supported by Azure Front Door:
 - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 
-To add cipher suites, either deploy a group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true) or use PowerShell to [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true).
+To add cipher suites, either deploy a group policy or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy). 
+
+> [!IMPORTANT]
+> Edit the order of the cipher suites to ensure that these four suites are at the top of the list (the highest priority).
+
+Alternativley, you can use the [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true) cmdlet to enable the TLS cipher suites. For example, run the following command to enable a cipher suite as the highest priority:
+
+```powershell
+Enable-TlsCipherSuite -Name "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384" -Position 0
+```
+This command adds the TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 cipher suite to the TLS cipher suite list at position 0, which is the highest priority.
+
+> [!IMPORTANT]
+> After you run Enable-TlsCipherSuite, you can verify the order of the cipher suites by running Get-TlsCipherSuite. If the order doesn't reflect the change, check if the [SSL Cipher Suite Order](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy) Group Policy setting configures the default TLS cipher suite order.
 
 For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
 
@@ -79,13 +92,13 @@ Restart the device while it is connected to your Azure Active Directory (Azure A
 1. After the command runs, close the Command Prompt window.
 1. Restart the computer, and log in to OneDrive.
 
-### Windows 8 , Windows 7 or Windows Server 2012/2008 R2(SP1)
+### Windows 8, Windows 7 or Windows Server 2012/2008 R2(SP1)
 
 If you're using Windows 8, Windows 7 Service Pack 1 (SP1), Windows Server 2012 or Windows Server 2008 R2 SP1, see the following solutions.
 
 - The [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. For more information, see [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392). 
-
-- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7)
+- For Windows 8, install [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245), and create a corresponding registry value.
+- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7).
 
 ## All computers
 
@@ -95,4 +108,4 @@ If you have completed all the previous steps, consider doing a [reset of OneDriv
 
 - [TLS cipher suites supported by Office 365](/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365&preserve-view=true)
 - [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true)
-- [Enable TLS Cipher Suites](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true)
+
