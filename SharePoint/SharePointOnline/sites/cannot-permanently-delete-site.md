@@ -12,6 +12,7 @@ ms.topic: article
 ms.custom: 
 - CSSTroubleshoot
 - CI 149203
+- CI 150314
 ms.author: v-matham
 appliesto:
 - SharePoint Online
@@ -33,9 +34,9 @@ To delete a team site that's connected to a Microsoft 365 group, you have to als
 
 To permanently delete a Microsoft 365 group-connected team site, follow these steps:
 
-1. Install the latest SharePoint Online Management Shell. If the shell is already installed, make sure that it's up-to-date. For the steps to do this, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md).
+1. Install the latest SharePoint Online Management Shell. If the shell is already installed, make sure that it's up-to-date. For the steps to do this, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
-1. Connect to SharePoint as a global admin or SharePoint admin in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md).
+1. Connect to SharePoint as a global admin or SharePoint admin in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
 1. Run the following command:
 
@@ -43,8 +44,8 @@ To permanently delete a Microsoft 365 group-connected team site, follow these st
 
     **Note:** In this command, replace \<contoso> with the domain name of the site that you want to permanently delete.
 
-For more information about how to use this command, see [Remove-SPODeletedSite](/powershell/module/sharepoint-online/remove-spodeletedsite.md).
+For more information about how to use this command, see [Remove-SPODeletedSite](/powershell/module/sharepoint-online/remove-spodeletedsite).
 
 ## More information
 
-For more information about how to permanently delete sites, see [Permanently delete a site](/sharepoint/delete-site-collection#permanently-delete-a-site.md).
+For more information about how to permanently delete sites, see [Permanently delete a site](/sharepoint/delete-site-collection#permanently-delete-a-site).
