@@ -91,7 +91,7 @@ Authentication issues or failures occur when you try to use a network drive that
    
 The issue might occur because of the operating system in use and whether the web client supports TLS 1.2. Support for TLS 1.2 is as follows:
 
-- Windows 8 and Windows 7 will support TLS 1.2 after you install [KB 3140245](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392) and create a corresponding registry value. For more information, see [Update to enable TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/en-us/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
+- Windows 8 and Windows 7 will support TLS 1.2 after you install [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245) and create a corresponding registry value. For more information, see [Update to enable TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/en-us/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
 - Windows 8.1 will support TLS 1.2 after an update that's scheduled for the third quarter of 2021.
 - Windows 10 already supports TLS 1.2.
 
