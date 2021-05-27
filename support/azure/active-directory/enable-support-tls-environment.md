@@ -17,7 +17,9 @@ These protocols and ciphers are being deprecated for the following reasons:
 
 - To comply with the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
 - To improve security when users interact with our cloud services.
+
 The services will be deprecated on the following dates:
+
 - **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
 - **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **June 30, 2021**.
 
@@ -49,12 +51,15 @@ By default, earlier versions of Windows, such as Windows 7 and Windows Server 20
 For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
 
 ### Identify and reduce dependency on clients that don't support TLS 1.2
+
 Update the following clients to provide uninterrupted access:
+
 - Android version 4.3 and earlier
 - Firefox version 5.0 and earlier
 - Internet Explorer versions 8-10 on Windows 7 and earlier
 - Internet Explorer 10 on Windows Phone 8.0
 - Safari 6.0.4 on OS X 10.8.4 and earlier
+
 For more information, see [Handshake Simulation for various clients connecting to www.microsoft.com, courtesy SSLLabs.com](/security/engineering/solving-tls1-problem#appendix-a-handshake-simulation).
 
 ### Enable TLS 1.2 common server roles that communicate with Azure AD
@@ -84,6 +89,7 @@ For more information, see the following articles:
 ### Registry strings
 
 Make sure that the following registry DWORD values are configured for these subkeys:
+
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
 
   - "DisabledByDefault": **00000000**
@@ -112,15 +118,22 @@ Use these guidelines:
 - Update NET Framework 4.6 and earlier versions to support TLS 1.2 and TLS 1.1.
 
   For more information, see [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies).
+
 - If you're using .NET Framework 4.5.2 or 4.5.1 on Windows 8.1 or Windows Server 2012, the relevant updates and details are also available from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=42883).
+
   - Also see [Microsoft Security Advisory 2960358](/security-updates/SecurityAdvisories/2015/2960358)
+
 Set the following registry DWORD values  on any computer that communicates across the network and runs a TLS 1.2-enabled system. For example, set these values on Configuration Manager clients, remote site system roles that are not installed on the site server, and the site server itself.
+
 - For 32-bit applications that are running on a 32-bit OS and 64-bit applications that are running on a 64-bit OS, update the following subkey values:
+
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727**
+
     - "SystemDefaultTlsVersions": **00000001**
     - "SchUseStrongCrypto": **00000001**
   
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319**
+
     - "SystemDefaultTlsVersions": **00000001**
     - "SchUseStrongCrypto": **00000001**
 
