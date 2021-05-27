@@ -71,13 +71,21 @@ If you want to specify a list of DNS servers that can add NS records correspondi
 
 - To set a list of TCP/IP addresses of DNS servers that have permission to automatically create NS records for a zone, use the `dnscmd servername /config zonename /AllowNSRecordsAutoCreation IPList` command. For example:
 
-    `Dnscmd NS1 /config zonename.com /AllowNSRecordsAutoCreation 10.1.1.1 10.5.4.2`
+    ```console
+    Dnscmd NS1 /config zonename.com /AllowNSRecordsAutoCreation 10.1.1.1 10.5.4.2
+    ```
+
 - To clear the list of TCP/IP addresses of DNS servers that have permission to automatically create NS records for a zone and return the zone to the default state when every primary DNS server automatically adds to a zone an NS record corresponding to it, use the `dnscmd servername /config zonename /AllowNSRecordsAutoCreation` command. For example:
 
-    `Dnscmd NS1 /config zonename.com /AllowNSRecordsAutoCreation`
+    ```console
+    Dnscmd NS1 /config zonename.com /AllowNSRecordsAutoCreation
+    ```
+
 - To query the list of TCP/IP addresses of DNS servers that have permission to automatically create NS records for a zone, use the `dnscmd servername /zoneinfo zonename /AllowNSRecordsAutoCreation` command. For example:
 
-    `Dnscmd NS1 /zoneinfo zonename.com /AllowNSRecordsAutoCreation`
+    ```console
+    Dnscmd NS1 /zoneinfo zonename.com /AllowNSRecordsAutoCreation
+    ```
 
 > [!NOTE]
 > Run this command on only one DNS server. Active Directory replication propagates the changes to all DNS servers that are running on DCs in the same domain.
@@ -122,7 +130,7 @@ The Netlogon portion of this hotfix gives administrators greater control as desc
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`
 
-Registry value: DnsAvoidRegisterRecords
+Registry value: DnsAvoidRegisterRecords  
 Data type: REG_MULTI_SZ
 
 In this value, specify the list of mnemonics corresponding to the DNS records that should not be registered by this DC.
