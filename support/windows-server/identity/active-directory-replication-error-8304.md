@@ -140,7 +140,7 @@ The most commonly cause is having a non-linked attribute with a big number of va
 On the source server, when you use a tool like LDP or run the "repadmin /showattr /allvalues /extended" command on the object, the output resembles the following:
 
 ```output
-1> distinguishedName:<GUID=<GUID>>;CN=Allowedclients\0ADEL:0204b299-b278-4025-8197-9b3228f7408b,CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com
+1> distinguishedName:<GUID=<GUID>>;CN=Allowedclients\0ADEL:<GUID>,CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com
 
 1> instanceType: 0x4 = ( WRITE )
 
