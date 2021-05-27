@@ -198,7 +198,7 @@
       href: ./identity/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
       href: ./identity/active-directory-replication-error-1256.md
-    - name: Active Directory Replication Error 8304
+    - name: Active Directory replication error 8304
       href: ./identity/active-directory-replication-error-8304.md
     - name: Active Directory Replication Error 8451
       href: ./identity/active-directory-replication-error-8451.md
