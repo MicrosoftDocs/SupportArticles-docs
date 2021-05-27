@@ -139,7 +139,7 @@ Error 8304 is logged when the domain controller tries to replicate an object tha
 
 The most commonly cause is having a non-linked attribute with a big number of values. Because of the internal structure of the Active Directory database together with the Active Directory database record size of 8 KB, this limit of the values is about 1200-1300 values, depending on the population of other non-linked attributes.
 
-On the source server, when you use a tool like LDP or run the "repadmin /showattr /allvalues /extended" command on the object, the output resembles the following:
+On the source server, when you use a tool like LDP or run the `repadmin /showattr /allvalues /extended` command on the object, the output resembles the following:
 
 ```output
 1> distinguishedName:<GUID=<GUID>>;CN=Allowedclients\0ADEL:<GUID>,CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com
