@@ -67,65 +67,68 @@ Various repadmin.exe commands fail and generate error 8304. These commands inclu
 
 Event ID 1084 is logged in the Directory Service event log of DCs that are trying to replicate Active Directory objects inbound.
 
-> Log Name:      Directory Service  
+```output
+Log Name:      Directory Service  
 Source:        Microsoft-Windows-ActiveDirectory_DomainService  
 Event ID:      1084  
 Task Category: Replication  
 Level:         Error  
 User:          ANONYMOUS LOGON  
-Computer:      \<Destination DC>  
+Computer:      <Destination DC>  
 Description:  
 Internal event: Active Directory Domain Services could not update the following object with changes received from the following source directory service. This is because an error occurred during the application of the changes to Active Directory Domain Services on the directory service.  
->
-> Object:  
-CN=john\0ADEL:2549ea14-27f7-4891-abaf-d0098c117e79,CN=Deleted Objects,\<directory partition DN path>  
+
+Object:  
+CN=john\0ADEL:\<GUID>,CN=Deleted Objects,<directory partition DN path>  
 Object GUID:  
-2549ea14-27f7-4891-abaf-d0098c117e79  
+<GUID>  
 Source directory service:  
 92a193be-3419-41f7-9cc5-c072acc81098._msdcs.contoso.com  
->
-> Synchronization of the directory service with the source directory service is blocked until this update problem is corrected.  
->
-> This operation will be tried again at the next scheduled replication.
->
-> User Action  
+
+Synchronization of the directory service with the source directory service is blocked until this update problem is corrected.  
+
+This operation will be tried again at the next scheduled replication.
+
+User Action  
 Restart the local computer if this condition appears to be related to low system resources (for example, low physical or virtual memory).  
->
-> Additional Data  
+
+Additional Data  
 Error value:  
 8304 The maximum size of an object has been exceeded.
 
 You may also see an event 1093:
 
-> Log Name:      Directory Service  
+```output
+Log Name:      Directory Service  
 Source:        Microsoft-Windows-ActiveDirectory_DomainService  
 Event ID:      1093  
 Task Category: Replication  
 Level:         Warning  
-Computer:      \<Destination DC>  
+Computer:      <Destination DC>  
 Description:  
 Active Directory Domain Services could not update the following object with attribute changes because the incoming change caused the object to exceed the maximum object record size. The incoming change to the following attribute will be reversed in an attempt to complete the update.  
->
-> Object:
-> CN=\<MachineName>\0ADEL:afed8cd5-06be-42c1-80bc-ca2b2bbd5498,CN=Deleted  
+
+Object:
+CN=<MachineName>\0ADEL:<GUID>,CN=Deleted  
 Objects,DC=xxxx,DC=domainname,DC=com  
->
-> Object GUID:  
-afed8cd5-06be-42c1-80bc-ca2b2bbd5498  
->
-> Attribute:  
-> 9030d (lastKnownParent)
-> The current value (without changes) of the attribute on the local directory partition will replicate to all other directory services. This will counteract the change to the rest of the directory services. The reversal values may be recognized as follows:  
->
-> Version:  
+
+Object GUID:  
+<GUID>  
+
+Attribute:  
+9030d (lastKnownParent)
+The current value (without changes) of the attribute on the local directory partition will replicate to all other directory services. This will counteract the change to the rest of the directory services. The reversal values may be recognized as follows:  
+
+Version:  
 2  
->
-> Time of change:  
-2010-12-15 09:20:11
->
-> Update sequence number:  
+
+Time of change:  
+<DateTime>
+
+Update sequence number:  
 65064475  
 Note this event may not quote the attribute that has the most data or values. It quotes the update for the attribute that made the object size overflow.
+```
 
 ## Cause
 
@@ -136,7 +139,7 @@ The most commonly cause is having a non-linked attribute with a big number of va
 On the source server, when you use a tool like LDP or run the "repadmin /showattr /allvalues /extended" command on the object, the output resembles the following:
 
 ```output
-1> distinguishedName:<GUID=99b2040278b2254081979b3228f7408b>;CN=Allowedclients\0ADEL:0204b299-b278-4025-8197-9b3228f7408b,CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com
+1> distinguishedName:<GUID=<GUID>>;CN=Allowedclients\0ADEL:0204b299-b278-4025-8197-9b3228f7408b,CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com
 
 1> instanceType: 0x4 = ( WRITE )
 
@@ -186,7 +189,7 @@ Get-ADObject <dn of object> -IncludeDeletedObjects | Remove-ADObject
 For example:
 
 ```powershell
-Get-ADObject "CN=john\0ADEL:2549ea14-27f7-4891-abaf-d0098c117e79,CN=Deleted Objects,dc=contoso,dc=com" | Remove-ADObject
+Get-ADObject "CN=john\0ADEL:<GUID>,CN=Deleted Objects,dc=contoso,dc=com" | Remove-ADObject
 ```
 
 After the object is recycled, use Active Directory Sites and Services to try to force replication.
