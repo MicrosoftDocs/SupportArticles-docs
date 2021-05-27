@@ -27,6 +27,8 @@ This article discusses the causes and solutions for the Active Directory replica
 
 ## Symptoms
 
+You may experience one of the following symptoms.
+
 ### Symptom 1
 
 The `dcdiag` command reports that the Active Directory replication test failed and generated error 8304: "The maximum size of an object has been exceeded."
@@ -195,7 +197,9 @@ Get-ADObject "CN=john\0ADEL:<GUID>,CN=Deleted Objects,dc=contoso,dc=com" | Remov
 
 After the object is recycled, use Active Directory Sites and Services to try to force replication.
 
-## Suggestions to avoid the limit from past Microsoft issues
+## More information
+
+Here're some suggestions to avoid the limit from past Microsoft issues.
 
 ### dnsRecord
 
