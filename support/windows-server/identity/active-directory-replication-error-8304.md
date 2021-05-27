@@ -139,7 +139,7 @@ Note this event may not quote the attribute that has the most data or values. It
 
 Error 8304 is logged when the domain controller tries to replicate an object that exceeds the maximum size.
 
-The most commonly cause is having a non-linked attribute with a big number of values. Because of the internal structure of the Active Directory database together with the Active Directory database record size of 8 KB, this limit of the values is about 1200-1300 values, depending on the population of other non-linked attributes.
+The most common cause is having a non-linked attribute with a big number of values. Because of the internal structure of the Active Directory database together with the Active Directory database record size of 8 KB, this limit of the values is about 1200-1300 values, depending on the population of other non-linked attributes.
 
 On the source server, when you use a tool like LDP or run the `repadmin /showattr /allvalues /extended` command on the object, the output resembles the following:
 
@@ -162,6 +162,7 @@ On the source server, when you use a tool like LDP or run the `repadmin /showatt
 The following are the attributes that you may encounter issue:
 
 - proxyAddresses
+- servicePrincipalName
 - userCertificate
 - msExchSmtpReceiveRemoteIPRanges
 - dnsRecord
@@ -173,6 +174,8 @@ The following are the attributes that you may encounter issue:
 > This issue may happen for any multi-valued non-linked attribute. Attribute with syntax linked or linked with data are not affected by this problem.
 
 Depending on the available resources and actual local database page population, the limit may be hit at different number of values. This is why a certain change can be taken by some Domain Controller or LDS instances, but not on others.
+
+Another instance of this problem is when a single attribute value exceeds about 5MB. When the attribute value is updated, the AD database transaction needs to hold both previous and new value.
 
 ## Resolution
 
@@ -203,14 +206,16 @@ After the object is recycled, use Active Directory Sites and Services to try to 
 
 Here're some suggestions to avoid the limit from past Microsoft issues.
 
-### dnsRecord
+### Use of dnsRecord attribute by Microsoft DNS Server
 
-Each IP address or SRV name target is an additional value of the dnsRecord attribute. By default, each domain controller in Active Directory registers a series of names with DNS, some are based on the sites the domain controller covers, some are site-less.
+Each IP address or SRV name target is an additional value of the dnsRecord attribute. By default, each domain controller in Active Directory registers a series of names with DNS, some are based on the sites the domain controller covers, some are site-less. You may run into this limit for site-less names.
 
 When you approach a lot of domain controllers in a domain, like 1200 domain controllers, there may be issues updating the DNS objects for the names with the additional values. In such a domain, it is also often not desired to have this many entries for site-less names. To avoid this limit, you can create a registry value "DnsAvoidRegisterRecords" on the domain controllers that should not be present in site-less names.
 
-### Dynamic Host Configuration Protocol (DHCP) Server activation
+### DFS Volume management in version 1 namespaces attribute PKT
 
-In order to avoid rogue DHCP servers, Windows DHCP servers that are members of a domain must find their IP address on an Active Directory object before they return IP addresses from its scopes to clients. This IP address was stored as a value on an Active Directory object, this time forest-wide in the configuration Naming Context (NC).
+DFS version 1 namespaces use a single AD object per namespace, and all the DFS link information is kept in a single attribute "PKT". There are problems with managing the namespace when this blob exceeds 5MB (roughly 5000 links).
 
-Similar to the dnsRecord issue, in a forest that has many DHCP servers deployed, the limit may be hit and no more DHCP servers could be authorized. The solution was to have a separate Active Directory object per DHCP Server, with one IP address per object.
+For more information, see [How DFS Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782417(v=ws.10))
+
+In Windows Server 2008, DFS introduces version 2 namespaces where each DFS link is a separate AD object.
