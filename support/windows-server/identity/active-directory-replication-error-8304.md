@@ -95,6 +95,7 @@ Restart the local computer if this condition appears to be related to low system
 Additional Data  
 Error value:  
 8304 The maximum size of an object has been exceeded.
+```
 
 You may also see an event 1093:
 
