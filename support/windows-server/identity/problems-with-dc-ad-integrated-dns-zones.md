@@ -167,7 +167,7 @@ The list of mnemonics includes:
 > It is not necessary to restart the Netlogon service. If the DnsAvoidRegisterRecords registry value is created or modified while the Netlogon service is stopped or within the first 15 minutes after Netlogon is started, appropriate DNS updates take place with a short delay (however, the delay is no later than 15 minutes after Netlogon starts).
 
 DNS registrations of A records performed by Netlogon can be also be modified by using the RegisterDnsARecords registry value.
-For more information, see [How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003](/troubleshoot/windows-server/networking/enable-disable-dns-dynamic-registration)
+For more information, see [How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003](/troubleshoot/windows-server/networking/enable-disable-dns-dynamic-registration).
 
 Be aware that the DnsAvoidRegisterRecords registry value settings take precedence over the RegisterDnsARecords registry value settings with regard to not registering the host (A) record:
 
