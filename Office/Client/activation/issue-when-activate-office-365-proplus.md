@@ -28,15 +28,31 @@ When you set up your network to block Internet Explorer 6, users discover that t
 
 ## Cause
 
-This issue occurs because the client computer cannot connect to *.microsoftonline-p.net.
+1) This issue occurs because the client computer cannot connect to *.microsoftonline-p.net. 
+
+2) This issue can also occur if Windows NCSI settings are disabled.
 
 ## Workaround
 
-To work around this issue, add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. 
+1) To work around this issue, add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. 
 
 For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6.
 
 For more info about how to configure firewall rules, see your firewall documentation. 
+
+2) If the NCSI probes are disabled, You can **Enable** the NCSI active or passive probes by using the registry .
+
+To use the registry to Enable NCSI active probes, configure one of the following registry keys.
+
+> [!Important]
+Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+
+- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\EnableActiveProbing`
+  - Key Type: DWORD
+  - Value: Decimal 1 
+- `HKLM\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator\NoActiveProbe`
+  - Key Type: DWORD
+  - Value: Decimal 0
 
 ## More information
 
