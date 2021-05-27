@@ -10,6 +10,8 @@ ms.prod: sql
 ---
 # Pull subscriptions don't show up in Windows Synchronization Manager
 
+_Applies to:_ &nbsp; SQL Server  
+
 ## Symptoms
 
 Assume that you [create a pull subscription to a merge publication](/sql/relational-databases/replication/create-a-pull-subscription#to-create-a-pull-subscription-to-a-merge-publication). After enabling the [synchronization with Windows Synchronization Manager](/sql/relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager), there's no subscription listed in the Sync Center (mobsync.exe) of the subscriber.
