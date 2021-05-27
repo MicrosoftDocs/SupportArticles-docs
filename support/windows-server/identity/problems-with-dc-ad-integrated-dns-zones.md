@@ -65,6 +65,8 @@ This problem occurs because Active Directory has a limitation of approximately 1
 
 ## Resolution
 
+You can use one of the following methods to resolve this issue.
+
 ### Method 1
 
 If you want to specify a list of DNS servers that can add NS records corresponding to themselves to a specified zone, choose one DNS server and then run Dnscmd.exe with the /AllowNSRecordsAutoCreation switch:
