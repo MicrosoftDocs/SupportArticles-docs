@@ -140,7 +140,7 @@ The first time, the troubleshooter runs automatically. The second time, it notif
 |---|---|---|
 |6/26/2020|9/26/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
-## Windows Update troubleshooter Disk Cleanup
+## Windows Update troubleshooter for Disk Cleanup
 
 Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
