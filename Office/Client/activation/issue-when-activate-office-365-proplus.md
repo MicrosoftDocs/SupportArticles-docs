@@ -40,7 +40,7 @@ For example, set up the rules to first allow MSOIDCRL and to then deny Internet 
 
 For more info about how to configure firewall rules, see your firewall documentation. 
 
-2) If the NCSI probes are disabled, You can **Enable** the NCSI active or passive probes by using the registry .
+2) If the NCSI probes are disabled, You can **Enable** the NCSI active or passive probes by using the registry or Group Policy Objects (GPOs).
 
 To use the registry to Enable NCSI active probes, configure one of the following registry keys.
 
@@ -53,6 +53,11 @@ Follow the steps in this section carefully. Serious problems might occur if you 
 - `HKLM\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator\NoActiveProbe`
   - Key Type: DWORD
   - Value: Decimal 0
+
+To use Group Policy to Enable NCSI active probes, configure the following GPO:
+
+- **Computer Configuration**\\**Administrative Templates**\\**System**\\**Internet Communication Management**\\**Internet Communication settings**\\**Turn off Windows Network Connectivity Status Indicator active tests**  
+  - Value: Disabled 
 
 ## More information
 
