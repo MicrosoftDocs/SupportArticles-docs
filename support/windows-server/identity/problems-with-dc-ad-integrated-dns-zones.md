@@ -47,7 +47,7 @@ Event Type: Warning
 Event Source: NTDS Replication  
 Event Category: Replication  
 Event ID: 1093  
-Description: The directory replication agent (DRA) could not apply changes to object DC=@,DC=xyz.example.com,CN=MicrosoftDNS,CN=System,DC=xyz,DC=example, DC=com (GUID 77d76064-f49e-4762-ba8c-324b6c518f11) because the incoming changes cause the object to exceed the database's record size limit. The incoming change to attribute 9017e (dnsRecord) will be backed out in an attempt to make the update fit. In addition to the change to the attribute not being applied locally, the current value of the attribute on this system will be sent out to all other systems to make that the definitive version. This has the effect of nullifying the change to the rest of the enterprise.
+Description: The directory replication agent (DRA) could not apply changes to object DC=@,DC=xyz.example.com,CN=MicrosoftDNS,CN=System,DC=xyz,DC=example, DC=com (GUID <GUID>) because the incoming changes cause the object to exceed the database's record size limit. The incoming change to attribute 9017e (dnsRecord) will be backed out in an attempt to make the update fit. In addition to the change to the attribute not being applied locally, the current value of the attribute on this system will be sent out to all other systems to make that the definitive version. This has the effect of nullifying the change to the rest of the enterprise.
 The reversal may be recognized as follows: version 5474, time of change 2000-06-28 19:33.24 and USN of 2873104.
 ```
 
@@ -56,7 +56,7 @@ Event Type: Information
 Event Source: NTDS Replication  
 Event Category: Replication  
 Event ID: 1101  
-Description: The directory replication agent (DRA) was able to successfully apply the changes to object DC=@,DC=xyz.example.com,CN=MicrosoftDNS,CN=System, DC=xyz,DC=example,DC=com (GUID 77d76064-f49e-4762-ba8c-324b6c518f11) after backing out one or more of the attribute changes. Preceding messages will indicate which attributes were reversed. Please note that this will have the effect of nullifying the change where it was made, causing the original update not to take effect. The originator should be notified that their change was not accepted by the system.
+Description: The directory replication agent (DRA) was able to successfully apply the changes to object DC=@,DC=xyz.example.com,CN=MicrosoftDNS,CN=System, DC=xyz,DC=example,DC=com (GUID <GUID>) after backing out one or more of the attribute changes. Preceding messages will indicate which attributes were reversed. Please note that this will have the effect of nullifying the change where it was made, causing the original update not to take effect. The originator should be notified that their change was not accepted by the system.
 ```
 
 ## Cause
