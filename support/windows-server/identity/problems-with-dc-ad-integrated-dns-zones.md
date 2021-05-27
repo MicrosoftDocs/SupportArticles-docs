@@ -28,7 +28,7 @@ Event Source: DNS
 Event Category: None  
 Event ID: 4011  
 Description: The DNS server was unable to add or write an update of domain name xyz in zone xyz.example.com to the Active Directory. Check that the Active Directory is functioning properly and add or update this domain name using the DNS console. The event data contains the error.  
-Data: 0000: 2a 23 00 00 \*#..
+Data: 0000: 2a 23 00 00 *#..
 ```
 
 ```output
