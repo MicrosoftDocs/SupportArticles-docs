@@ -85,7 +85,7 @@ CN=john\0ADEL:<GUID>,CN=Deleted Objects,<directory partition DN path>
 Object GUID:  
 <GUID>  
 Source directory service:  
-92a193be-3419-41f7-9cc5-c072acc81098._msdcs.contoso.com  
+<GUID>._msdcs.contoso.com  
 
 Synchronization of the directory service with the source directory service is blocked until this update problem is corrected.  
 
