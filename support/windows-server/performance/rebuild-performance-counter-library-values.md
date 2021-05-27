@@ -34,7 +34,7 @@ This behavior may occur in the following situations:
 
 Extensible counter information is stored in both of the following locations:
 
-- The registry subkey: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current Version\Perflib\009`.
+- The registry subkey: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Perflib\009`.
 
 - The `%Systemroot%\System32\Perfc009.dat` file and the `%Systemroot%\System32\Perfh009.dat` file.
 

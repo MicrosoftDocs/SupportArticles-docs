@@ -84,6 +84,13 @@ These steps create a repair task. In the next step, you will use the `initrd` sc
    > - ‘fstab’
    > - ‘fstab,initrd’
 
+## Supported Operating Systems
+- CentOS/Redhat 6.8 - 8.2
+- Ubuntu 16.4 LTS and Ubuntu 18.4 LTS
+- Suse 12 and 15"
+- Debain 9 and 10"
+       
+
 ## Limitations
 - Encrypted images aren't supported.
 - Classic VMs aren't supported.

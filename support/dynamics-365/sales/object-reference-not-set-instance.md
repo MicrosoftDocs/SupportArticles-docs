@@ -54,5 +54,5 @@ To resolve this issue, follow the steps:
 
 1. Select **Start**, type **appwiz.cpl**, and then press **Enter** to open the **Programs and Features** item in **Control Panel**.
 2. Uninstall the Microsoft Online Services Sign-in Assistant if its version doesn't match 7.250.4259.0, 7.250.4287.0, or 7.250.4303.0.
-3. [Download](https://www.microsoft.com/download/details.aspx?id=28177) and reinstall version 7.250.4303.0 of the Microsoft Online Services Sign-in Assistant.
+3. [Download](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi) and reinstall version 7.250.4303.0 of the Microsoft Online Services Sign-in Assistant.
 4. Restart your workstation and configure the Microsoft Dynamics CRM for Outlook client to verify the issue is resolved.

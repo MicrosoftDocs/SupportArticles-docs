@@ -120,7 +120,6 @@ To work around these issues and successfully install Web Deploy 3.0, you can try
 
 - Obtain an updated installer that has been published at the distribution channel of your choice (such as [MSDN](https://msdn.microsoft.com/subscriptions/securedownloads)).
 - Install the [latest Visual Studio Update](https://visualstudio.microsoft.com/).
-- Explicitly [install Web Deploy 3.0](https://www.microsoft.com/download/details.aspx?id=30436). You can install it before or after you install Visual Studio 2012.
 
 ## More information
 
