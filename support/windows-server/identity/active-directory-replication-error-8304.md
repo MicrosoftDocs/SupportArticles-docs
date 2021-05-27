@@ -13,7 +13,7 @@ ms.reviewer: kaushika, arrenc, johnbay, herbertm, joflore
 ms.prod-support-area-path: Active Directory replication
 ms.technology: windows-server-active-directory
 ---
-# Active Directory Replication error 8304: "The maximum size on an object has been exceeded"
+# Active Directory replication error 8304: "The maximum size on an object has been exceeded"
 
 _Applies to:_ &nbsp; Windows Server 2019, all editions, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 4533837
@@ -27,19 +27,23 @@ This article discusses the causes and solutions for the Active Directory replica
 
 ## Symptoms
 
+You may experience one of the following symptoms.
+
 ### Symptom 1
 
 The `dcdiag` command reports that the Active Directory replication test failed and generated error 8304: "The maximum size of an object has been exceeded."
 
-> Starting test: Replications  
-    [Replications Check, \<DESTINATION DC>] A recent replication attempt failed:  
-        From \<SOURCE DC>to \<DESTINATION DC>  
-        Naming Context: \<directory partition DN path>  
+```output
+Starting test: Replications  
+    [Replications Check, <DESTINATION DC>] A recent replication attempt failed:  
+        From <SOURCE DC>to <DESTINATION DC>  
+        Naming Context: <directory partition DN path>  
         The replication generated an error (8304):  
         The maximum size of an object has been exceeded.  
-        The failure occurred at \<date>\<time>.  
-        The last success occurred at \<date>\<time>.  
-    \......................... \<DESTINATION DC> failed test Replications
+        The failure occurred at <date><time>.  
+        The last success occurred at <date><time>.  
+    ......................... <DESTINATION DC> failed test Replications
+```
 
 ### Symptom 2
 
@@ -83,7 +87,7 @@ CN=john\0ADEL:<GUID>,CN=Deleted Objects,<directory partition DN path>
 Object GUID:  
 <GUID>  
 Source directory service:  
-92a193be-3419-41f7-9cc5-c072acc81098._msdcs.contoso.com  
+<GUID>._msdcs.contoso.com  
 
 Synchronization of the directory service with the source directory service is blocked until this update problem is corrected.  
 
@@ -137,7 +141,7 @@ Error 8304 is logged when the domain controller tries to replicate an object tha
 
 The most commonly cause is having a non-linked attribute with a big number of values. Because of the internal structure of the Active Directory database together with the Active Directory database record size of 8 KB, this limit of the values is about 1200-1300 values, depending on the population of other non-linked attributes.
 
-On the source server, when you use a tool like LDP or run the "repadmin /showattr /allvalues /extended" command on the object, the output resembles the following:
+On the source server, when you use a tool like LDP or run the `repadmin /showattr /allvalues /extended` command on the object, the output resembles the following:
 
 ```output
 1> distinguishedName:<GUID=<GUID>>;CN=Allowedclients\0ADEL:<GUID>,CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com
@@ -195,7 +199,9 @@ Get-ADObject "CN=john\0ADEL:<GUID>,CN=Deleted Objects,dc=contoso,dc=com" | Remov
 
 After the object is recycled, use Active Directory Sites and Services to try to force replication.
 
-## Suggestions to avoid the limit from past Microsoft issues
+## More information
+
+Here're some suggestions to avoid the limit from past Microsoft issues.
 
 ### dnsRecord
 
