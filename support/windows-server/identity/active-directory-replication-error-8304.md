@@ -33,15 +33,17 @@ You may experience one of the following symptoms.
 
 The `dcdiag` command reports that the Active Directory replication test failed and generated error 8304: "The maximum size of an object has been exceeded."
 
-> Starting test: Replications  
-    [Replications Check, \<DESTINATION DC>] A recent replication attempt failed:  
-        From \<SOURCE DC>to \<DESTINATION DC>  
-        Naming Context: \<directory partition DN path>  
+```output
+Starting test: Replications  
+    [Replications Check, <DESTINATION DC>] A recent replication attempt failed:  
+        From <SOURCE DC>to <DESTINATION DC>  
+        Naming Context: <directory partition DN path>  
         The replication generated an error (8304):  
         The maximum size of an object has been exceeded.  
-        The failure occurred at \<date>\<time>.  
-        The last success occurred at \<date>\<time>.  
-    \......................... \<DESTINATION DC> failed test Replications
+        The failure occurred at <date><time>.  
+        The last success occurred at <date><time>.  
+    ......................... <DESTINATION DC> failed test Replications
+```
 
 ### Symptom 2
 
