@@ -29,7 +29,7 @@ This article discusses the causes and solutions for the Active Directory replica
 
 ### Symptom 1
 
-The dcdiag command reports that the Active Directory replication test failed and generated error 8304: "The maximum size of an object has been exceeded."
+The `dcdiag` command reports that the Active Directory replication test failed and generated error 8304: "The maximum size of an object has been exceeded."
 
 > Starting test: Replications  
     [Replications Check, \<DESTINATION DC>] A recent replication attempt failed:  
