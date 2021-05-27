@@ -297,6 +297,8 @@
       href: ../Sites/change-default-language-site-collection.md
     - name: Can't find specified web in the given URL
       href: ../Sites/cannot-find-specified-web-given-url.md
+    - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
+      href: ../Sites/cannot-permanently-delete-site.md
     - name: Classic popularity reports is discontinued
       href: ../Sites/classic-usage-popularity-reports-discontinued.md
     - name: Customizations of the top navigation bar is reverted
