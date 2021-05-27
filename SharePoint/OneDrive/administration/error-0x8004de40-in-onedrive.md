@@ -92,15 +92,13 @@ Restart the device while it is connected to your Azure Active Directory (Azure A
 1. After the command runs, close the Command Prompt window.
 1. Restart the computer, and log in to OneDrive.
 
-### Windows 8 , Windows 7 or Windows Server 2012/2008 R2(SP1)
+### Windows 8, Windows 7 or Windows Server 2012/2008 R2(SP1)
 
 If you're using Windows 8, Windows 7 Service Pack 1 (SP1), Windows Server 2012 or Windows Server 2008 R2 SP1, see the following solutions.
 
 - The [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. For more information, see [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392). 
-
-- For Windows 8 , please install  [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245) and create a corresponding registry value. 
-
-- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7)
+- For Windows 8, install [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245), and create a corresponding registry value.
+- [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](/sharepoint/troubleshoot/administration/authentication-errors-windows7).
 
 ## All computers
 
