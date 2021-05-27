@@ -19,7 +19,7 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10
 
-## Windows Update troubleshooter
+## Windows Update troubleshooter for file or metadata corruption
 
 Text displayed in Settings:  
 Automatically targets the device for an In-Place Upgrade due to recurring installation issues
@@ -38,7 +38,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 |---|---|---|
 |4/19/2021||[aka.ms/IPUTroubleshooter](https://aka.ms/IPUTroubleshooter)|
 
-## Windows Update troubleshooter
+## Windows Update troubleshooter for repairing system files
 
 Text displayed in Settings:  
 Automatically repair system files and settings to improve device security
@@ -68,7 +68,7 @@ Devices that successfully ran the "Hardware and Devices" troubleshooter will be 
 |---|---|---|
 |6/30/2020|9/30/2020|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
 
-## Hardware and Devices troubleshooter
+## Hardware and Devices troubleshooter for OneDrive
 
 Text displayed in Settings:  
 Automatically repair system files and settings to fix a problem on your device.
@@ -120,7 +120,7 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter.
 |---|---|---|
 |7/2/2020|10/2/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
-## Hardware and Devices troubleshooter
+## Hardware and Devices troubleshooter for Parity Storage Spaces
 
 Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
@@ -140,7 +140,7 @@ The first time, the troubleshooter runs automatically. The second time, it notif
 |---|---|---|
 |6/26/2020|9/26/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
-## Windows Update troubleshooter
+## Windows Update troubleshooter for Disk Cleanup
 
 Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
