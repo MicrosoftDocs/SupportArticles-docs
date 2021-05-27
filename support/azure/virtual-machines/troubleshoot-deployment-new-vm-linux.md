@@ -258,7 +258,7 @@ To start troubleshooting, collect the activity logs to identify the error associ
 
 [!INCLUDE [virtual-machines-linux-troubleshoot-deployment-new-vm-table](../../includes/virtual-machines-linux-troubleshoot-deployment-new-vm-table.md)]
 
-**Y:** If the OS is Linux generalized, and it is uploaded and/or captured with the generalized setting, then there won’t be any errors. Similarly, if the OS is Linux specialized, and it is uploaded and/or captured with the specialized setting, then there won’t be any errors.
+**Y:** If the OS is Linux generalized, and it is uploaded and/or captured with the generalized setting, then there won't be any errors. Similarly, if the OS is Linux specialized, and it is uploaded and/or captured with the specialized setting, then there won't be any errors.
 
 ### Upload Errors
 
@@ -343,7 +343,7 @@ Currently, Linux GPU support is only available on Azure NC VMs running Ubuntu Se
 
 Instructions to install drivers for Linux-based VMs are located [here](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
 
-### I can’t find a GPU instance within my N-Series VM
+### I can't find a GPU instance within my N-Series VM
 
 To take advantage of the GPU capabilities of Azure N-series VMs, you must install graphics drivers on each VM after deployment. Driver setup information is available [here](/azure/virtual-machines/sizes-gpu#supported-operating-systems-and-drivers).
 
@@ -375,7 +375,5 @@ Yes. You can add an existing classic VM to a new or existing Availability Set. F
 
 ## Next steps
 
-If you encounter issues when you start a stopped Linux VM or resize an existing Linux VM in Azure, see [Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Linux Virtual Machine in Azure](./troubleshoot-deploy-vm-linux.md?toc=/azure/virtual-machines/linux/toc.json).
-
-- [Supportability of adding Azure VMs to an existing availability set](/azure/virtual-machines/virtual-machines-availability-set-supportability)
-- [Redeploy Linux virtual machine to new Azure node](/azure/virtual-machines/redeploy-to-new-node-linux)
+* [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
+* [Redeploy Linux virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-linux)
