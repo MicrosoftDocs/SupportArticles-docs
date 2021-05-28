@@ -2,6 +2,7 @@
   href: welcome-virtual-machines.yml
 
 - name: Troubleshoot deployment failures
+  href: welcome-deployment-troubleshooting.yml
   items:
   - name: New VM deployments
     items:
