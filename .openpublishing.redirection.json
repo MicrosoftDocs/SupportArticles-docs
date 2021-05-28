@@ -832,7 +832,12 @@
     },
     {
       "source_path": "support/power-platform/power-apps/troubleshoot-startup-issues-in-power-apps-web-authoring.md",
-      "redirect_url": "powerapps/troubleshooting-startup-issues",
+      "redirect_url": "/powerapps/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "SupportArticles-docs/support/windows-client/deployment/compute-md5sha-1-cryptographic-hash-value.md",
+      "redirect_url": "https://support.microsoft.com/topic/d92a713f-d793-7bd8-b0a4-4db811e29559",
       "redirect_document_id": false
     }
   ]
