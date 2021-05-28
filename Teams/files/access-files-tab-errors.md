@@ -26,7 +26,7 @@ This article lists some common error messages that you receive when you select t
 
 This error occurs if the name of the document library on your SharePoint site was changed from its default, "Shared Documents," to another name.
 
-To resolve this issue, use one of the following methods to revert the name of the document library to "Shared Documents". You must have site owner permissions to make this change.
+To resolve this issue, use one of the following methods to revert the name of the document library to "Shared Documents." You must have site owner permissions to make this change.
 
 ### Method 1
 
@@ -37,7 +37,7 @@ To resolve this issue, use one of the following methods to revert the name of th
     Connect-PnPOnline -Url "https://contoso.sharepoint.com/sites/team" -Interactive
     ```
 
-3. Run [Get-PnPList](/powershell/module/sharepoint-pnp/get-pnplist), place the renamed document library into a variable by using the library name. In the following example, the library name is "Renamed Documents".
+3. Run [Get-PnPList](/powershell/module/sharepoint-pnp/get-pnplist), and place the renamed document library into a variable by using the library name. In the following example, the library name is "Renamed Documents."
 
     ```powershell
     $list = Get-PnPList 'Renamed Documents'
