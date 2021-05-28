@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot performance and isolate bottlenecks in Windows and Linux
-description: Troubleshoot performance and isolate bottlenecks in Windows and Linux
+title: Troubleshoot performance and isolate bottlenecks in Linux
+description: Troubleshoot performance and isolate bottlenecks in Linux
 ms.date: 05/27/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ---
-# Troubleshoot performance and isolate bottlenecks in Windows and Linux
+# Troubleshoot performance and isolate bottlenecks in Linux
 
 ## Performance issues and bottlenecks
 
@@ -394,13 +394,13 @@ When PerfInsights is [installed through the Azure portal](/azure/virtual-machine
 
 Browse the VM blade and select the *Performance diagnostics* option. You'll be asked to install the option (uses extensions) on the VM that you selected it for.
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-windows-linux/perf-diagnostics-reports-screen-install.png" alt-text="This image shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics.":::
+:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png" alt-text="This image shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics.":::
 
 #### Azure portal Option 2
 
 Browse to the *Diagnose and Solve Problems* tab in the VM blade, and look for look for the Troubleshoot link under *VM Performance Issues*.
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-windows-linux/look-for-troublshoot-link-vm-perfissues.png" alt-text="This image asks the user to browse to the Diagnose and Solve Problems tab in the VM blade, and look for the Troubleshoot link under VM Performance Issues":::
+:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/look-for-troublshoot-link-vm-perfissues.png" alt-text="This image asks the user to browse to the Diagnose and Solve Problems tab in the VM blade, and look for the Troubleshoot link under VM Performance Issues":::
 
 #### What to look for in the PerfInsights report
 
@@ -408,14 +408,14 @@ After you run the PerfInsights report, the location of the contents depends on w
 
 ### Run through the Azure portal
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-windows-linux/perf-diagnostics-reports-screen-highlighted-report.png" alt-text="This image shows the Performance Diagnostics reports screen, and highlights the generated Diagnostics report.":::
+:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-highlighted-report.png" alt-text="This image shows the Performance Diagnostics reports screen, and highlights the generated Diagnostics report.":::
 
 Where to start
 Open the PerfInsights report. The **Findings** tab logs any outliers in terms of resource consumption. If there are instances of slow performance due to specific resource usage, the **Findings** tab will categorize it as either High Impact or Medium Impact.
 
 For example, in the following report, we are seeing Medium impact findings related to Storage that have been detected and we have the corresponding recommendations. If you expand the **Findings** event, you'll see several key details.
 
-:::image type="content" source="./media/troubleshoot-performance-bottlenecks-windows-linux/perfinsights-report-impact-finding-resources-recommendations.png" alt-text="This image shows the PerfInsights Report and details the results of the report, including Impact Level, Finding, Impacted Resources, and Recommendations.":::
+:::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perfinsights-report-impact-finding-resources-recommendations.png" alt-text="This image shows the PerfInsights Report and details the results of the report, including Impact Level, Finding, Impacted Resources, and Recommendations.":::
 
 For more information on PerfInsights in the Linux OS, review [How to use PerfInsights Linux in Microsoft Azure - Virtual Machines](/azure/virtual-machines/how-to-use-perfinsights-linux).
 
