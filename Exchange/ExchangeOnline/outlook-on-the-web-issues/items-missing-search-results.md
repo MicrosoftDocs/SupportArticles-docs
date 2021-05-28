@@ -28,7 +28,7 @@ When Microsoft Office 365 users search their mailbox in Outlook on the web (form
 
 ## Cause
 
-This problem occurs if the search returns more than 250 items.
+This problem occurs if the search returns more than 1028 items.
 
 ## Solution
 
@@ -42,8 +42,6 @@ Take any of the following actions:
     > If you use Outlook to search the Online Archive folder, you will receive the same limited search results as Outlook on the web. This is because Outlook accesses the Online Archive folder in Online Mode.
 
 ## More information
-
-Outlook on the web displays up to 250 items in the search results. Be aware that, to reduce the time to show search results, users may receive only a subset of the results. In this scenario, click **Get more results** at the bottom of the search results to view additional results up to the limit of 250 items.
 
 For more information, see [Search Mail and People in Outlook Web App](https://support.office.com/article/88108edf-028e-4306-b87e-7400bbb40aa7).
 
