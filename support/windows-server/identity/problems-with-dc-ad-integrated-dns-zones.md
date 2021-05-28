@@ -171,40 +171,12 @@ The list of mnemonics includes:
 DNS registrations of A records performed by Netlogon can be also be modified by using the RegisterDnsARecords registry value.
 For more information, see [How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003](/troubleshoot/windows-server/networking/enable-disable-dns-dynamic-registration).
 
-Be aware that the DnsAvoidRegisterRecords registry value settings take precedence over the RegisterDnsARecords registry value settings with regard to not registering the host (A) record:
+Be aware that both the DnsAvoidRegisterRecords and the RegisterDnsARecords registry values need to allow registering the host (A) record:
 
-- DnsAvoidRegisterRecords contains LdapIpAddress GcIpAddress
-
-    RegisterDnsARecords = 0x1  
-    In this case, both are not registered.
-- DnsAvoidRegisterRecords contains GcIpAddress
-
-    RegisterDnsARecords = 0x1  
-    In this case, LdapIpAddress is registered, and GcIpAddress is not registered.
-- DnsAvoidRegisterRecords contains LdapIpAddress
-
-    RegisterDnsARecords = 0x1  
-    In this case, LdapIpAddress is not registered, and GcIpAddress is registered.
-- DnsAvoidRegisterRecords does not contain LdapIpAddress GcIpAddress
-
-    RegisterDnsARecords = 0x1  
-    In this case, both are registered.
-- DnsAvoidRegisterRecords contains LdapIpAddress GcIpAddress
-
-    RegisterDnsARecords = 0x0  
-    In this case, both are not registered.
-- DnsAvoidRegisterRecords contains GcIpAddress
-
-    RegisterDnsARecords = 0x0  
-    In this case, both are not registered.
-- DnsAvoidRegisterRecords contains LdapIpAddress
-
-    RegisterDnsARecords = 0x0  
-    In this case, both are not registered.
-- DnsAvoidRegisterRecords does not contain LdapIpAddress GcIpAddress
-
-    RegisterDnsARecords = 0x0  
-    In this case, both are not registered.
+- RegisterDnsARecords = 0x1<br>
+    If you list LdapIpAddress and GcIpAddress in the DnsAvoidRegisterRecords registry value settings, A records are not registered.
+- RegisterDnsARecords = 0x0<br>
+    No matter whether you list LdapIpAddress and GcIpAddress in the DnsAvoidRegisterRecords registry value settings, A records are not registered.
 
 To prevent the problem described earlier in this article from occurring in an environment in which a set of DCs and/or global catalog (GC) servers are located in a central location and a large number of the DCs and/or GC servers are located in branch offices, the administrator can disable registration of some of the DNS records by Netlogon on the DCs/GCs in the branch offices. In this situation, the list of mnemonics that should not be registered includes:
 
