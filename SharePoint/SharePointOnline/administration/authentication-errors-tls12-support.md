@@ -28,19 +28,30 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 
  > [!NOTE]
  > Even after upgrading to TLS 1.2 on Windows 10 machines, it's important to make sure that cipher suites match Azure Front Door (AFD) support, because Microsoft 365 and AFD have a slight difference in cipher suite support.
->
-> For TLS 1.2, the following cipher suites are supported by AFD:
-> 
-> - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-> - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-> - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-> - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
->
-> To add cipher suites, either deploy a group policy or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy&preserve-view=true). 
-> 
-> Edit the order of the cipher suites to ensure that these four suites are at the top of the list. 
->
-> For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
+
+For TLS 1.2, the following cipher suites are supported by AFD:
+ 
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+
+For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
+
+To add cipher suites, either deploy a group policy or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
+
+> [!IMPORTANT]
+> Edit the order of the cipher suites to ensure that these four suites are at the top of the list (the highest priority).
+
+Alternativley, you can use the [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true) cmdlet to enable the TLS cipher suites. For example, run the following command to enable a cipher suite as the highest priority:
+
+```powershell
+Enable-TlsCipherSuite -Name "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384" -Position 0
+```
+This command adds the TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 cipher suite to the TLS cipher suite list at position 0, which is the highest priority.
+
+> [!IMPORTANT]
+> After you run Enable-TlsCipherSuite, you can verify the order of the cipher suites by running Get-TlsCipherSuite. If the order doesn't reflect the change, check if the [SSL Cipher Suite Order](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy) Group Policy setting configures the default TLS cipher suite order.
 
 ## .NET Framework not configured for TLS 1.2
 
@@ -80,7 +91,7 @@ Authentication issues or failures occur when you try to use a network drive that
    
 The issue might occur because of the operating system in use and whether the web client supports TLS 1.2. Support for TLS 1.2 is as follows:
 
-- Windows 8 and Windows 7 will support TLS 1.2 after you install [KB 3140245](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392) and create a corresponding registry value. For more information, see [Update to enable TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/en-us/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
+- Windows 8 and Windows 7 will support TLS 1.2 after you install [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245) and create a corresponding registry value. For more information, see [Update to enable TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/en-us/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
 - Windows 8.1 will support TLS 1.2 after an update that's scheduled for the third quarter of 2021.
 - Windows 10 already supports TLS 1.2.
 

@@ -28,7 +28,34 @@ This error occurs if the name of the document library on your SharePoint site wa
 
 ### Resolution
 
-To resolve this issue, revert the name the document library to "Shared Documents." You must have administrator permissions to make this change.
+To resolve this issue, use one of the following methods to revert the name of the document library to "Shared Documents". You must have site owner permissions to make this change.
+
+### Method 1
+
+1. Install the [PnP PowerShell module](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps&preserve-view=true).
+2. Run [Connect-PnPOnline](/powershell/module/sharepoint-pnp/connect-pnponline?view=sharepoint-ps&preserve-view=true) to connect to the SharePoint site. For example:
+
+    ```powershell
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com/sites/team" -Interactive
+    ```
+
+3. Run [Get-PnPList](/powershell/module/sharepoint-pnp/get-pnplist?view=sharepoint-ps&preserve-view=true), place the renamed document library into a variable by using the library name. In the following example, the library name is "Renamed Documents".
+
+    ```powershell
+    $list = Get-PnPList 'Renamed Documents'
+    ```
+
+    > [!NOTE]
+    > To see all document libraries on the site, run `Get-PnPList` without any parameters.
+
+4. Change the document library name to **Shared Documents**.
+
+    ```powershell
+    $list.RootFolder.MoveTo('Shared Documents')
+    $list.Update()
+    ```
+
+### Method 2
 
 1. Open the SharePoint site in [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491).
 2. Go to **All Files**.
