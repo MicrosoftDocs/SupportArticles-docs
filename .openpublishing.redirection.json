@@ -829,6 +829,11 @@
       "source_path": "support/windows-client/deployment/unattended-setup-parameters-for-unattend-dot-txt.md",
       "redirect_url": "/windows-hardware/manufacture/desktop/update-windows-settings-and-scripts-create-your-own-answer-file-sxs",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/troubleshoot-startup-issues-in-power-apps-web-authoring.md",
+      "redirect_url": "powerapps/troubleshooting-startup-issues",
+      "redirect_document_id": false
     }
   ]
 }

@@ -95,28 +95,3 @@ You may have problems if you implement a central merge subscriber model. Example
 
     > [!NOTE]
     > Refer to the **Publishing Tables in More Than One Publication** topic in this article. [Publishing Data and Database Objects](/previous-versions/sql/sql-server-2005/ms152559(v=sql.90))
-
-## Applies to
-
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Standard
-- SQL Server 2012 Web
-- SQL Server 2012 Enterprise Core
-- SQL Server 2008 R2 Developer
-- SQL Server 2008 R2 Enterprise
-- SQL Server 2008 R2 Standard
-- SQL Server 2008 R2 Web
-- SQL Server 2008 R2 Workgroup
-- SQL Server 2008 Developer
-- SQL Server 2008 Enterprise
-- SQL Server 2008 R2 Datacenter
-- SQL Server 2008 Standard
-- SQL Server 2008 Standard Edition for Small Business
-- SQL Server 2008 Web
-- SQL Server 2008 Workgroup
-- SQL Server 2005 Developer Edition
-- SQL Server 2005 Enterprise Edition
-- SQL Server 2005 Enterprise X64 Edition
-- SQL Server 2005 Standard Edition
-- SQL Server 2005 Workgroup Edition

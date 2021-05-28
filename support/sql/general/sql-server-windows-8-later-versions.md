@@ -314,8 +314,6 @@ For information about the Express editions of SQL Server, go to the following Mi
 
 - [SQL Server 2008 R2 Service Pack 3 (SP3) Express Edition](https://www.microsoft.com/download/details.aspx?id=44271)
 
-- [SQL Server 2008 Express Edition](https://www.microsoft.com/download/details.aspx?id=1695) (You must manually install [Service Pack 4](https://www.microsoft.com/download/details.aspx?id=44278) after you install SQL Server 2008 Express Edition.)
-
 For more information about how to uninstall an existing instance of SQL Server 2005, see [How to manually uninstall an instance of SQL Server 2005](/sql/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup) or [How to: Uninstall an Existing Instance of SQL Server 2005 (Setup)](/previous-versions/sql/sql-server-2005/ms143412(v=sql.90)).
 
 ## Applies to
