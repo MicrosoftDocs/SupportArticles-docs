@@ -55,6 +55,10 @@ To determine which objects share the proxy address of a specified user, follow t
 
 Only one proxy address at a time can be assigned to an object. After you determine which object is in conflict, you can remove or change the proxy address that's associated with that object.
 
+## Error when creating shared mailboxes
+
+If you see the error message, **The proxy address "smtp:<shared mailbox name\>" is already being used by the proxy addresses or LegacyExchangeDN of "\<name>". Please choose another proxy address**, it means you're trying to give the shared mailbox a name that's already in use. For example, let's say you want shared mailboxes named info@domain1 and info@domain2. In such cases name the second shared mailbox something different from the start to get around the error. Then in the admin center, rename the shared mailbox to what you want it to be.
+
 ## More information
 
 For more information about primary addresses and proxy addresses, see [Add or remove email addresses for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
