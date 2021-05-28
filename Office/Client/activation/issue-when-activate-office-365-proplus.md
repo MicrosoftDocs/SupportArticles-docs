@@ -35,11 +35,11 @@ This issue occurs under one of the following situations:
 
 ## Workaround
 
-To work around this issue, first heck your firewall or proxy setting. Add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6. For more info about how to configure firewall rules, see your firewall documentation. 
+To work around this issue, first check your firewall or proxy setting. Add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6. For more information about how to configure firewall rules, see your firewall documentation. 
 
 If the issue persists, check if NCSI active probe is disabled. In this case, enable NCSI active probe by using the registry or Group Policy Objects (GPOs).
 
-To use the registry to enable NCSI active probe, configure one of the following registry keys.
+To use the registry to enable NCSI active probe, configure one of the following registry keys:
 
 > [!IMPORTANT]
 > Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
@@ -47,7 +47,7 @@ To use the registry to enable NCSI active probe, configure one of the following 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\EnableActiveProbing`
   - Type: DWORD
   - Value: Decimal 1 
-- `HKLM\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator\NoActiveProbe`
+- `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator\NoActiveProbe`
   - Type: DWORD
   - Value: Decimal 0
 
