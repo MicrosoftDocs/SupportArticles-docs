@@ -48,4 +48,10 @@ Set-MailboxAutoReplyConfiguration
 
 For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](/powershell/module/exchange/mailboxes/set-mailboxautoreplyconfiguration).
 
+### Related Articles
+
+ [Use rules to create an out of office message](https://support.microsoft.com/en-us/office/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403?ui=en-us&rs=en-us&ad=us)
+
+ [Understanding and troubleshooting Out of Office (OOF) replies](/exchange/troubleshoot/email-delivery/understand-troubleshoot-oof-replies)
+ 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
