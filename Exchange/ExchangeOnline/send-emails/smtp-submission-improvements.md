@@ -50,7 +50,7 @@ Additional throttling limits for the SMTP Authentication protocol are:
 - 30 messages per minute
 - Recipient rate limit of 10,000 recipients per day
 
-Exceeding these limits causes the following error:  
+Exceeding per minute limit may cause some delivery delay, exceeding recipients per day limit causes the following error:  
 
 > 554 5.2.0 STOREDRV.Submission.Exception:SubmissionQuotaExceededException
 
