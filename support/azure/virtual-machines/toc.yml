@@ -313,6 +313,8 @@
         href: how-to-use-perfinsights-linux.md
   - name: Troubleshoot VM Performance issues
     items:
+    - name: Isolate bottlenecks in Linux
+      href: troubleshoot-performance-bottlenecks-linux.md
     - name: Troubleshoot performance issues through Monitoring
       href: troubleshoot-performance-virtual-machine-linux-windows.md
     - name: Troubleshoot high CPU issues for Azure Windows virtual machines
