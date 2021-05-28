@@ -108,7 +108,7 @@
     - name: Error uploading files to chats
       href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Error when selecting Files tab
-      href: ./files/object-specified-not-belong-to-list.md
+      href: ./files/access-files-tab-errors.md
     - name: Can't open files in a chat window
       href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
