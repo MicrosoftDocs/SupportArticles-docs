@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 267855
 
 ## Symptoms
 
-Domain Name System (DNS) registrations of SRV and domain controller (DC) locator A records (registered by Netlogon) and NS records (added by the authoritative DNS servers) in an Active Directory-integrated DNS zone for some DCs may not work in a domain that contains a large number of DCs (usually over 1200). If the Active Directory-integrated DNS zone has the same name as the Active Directory domain name, problems with the registration of A records and NS records at the zone root seem to occur in a domain with more than 6400 DCs. Also, one or more of the following error messages may be logged in the Event log:
+Domain Name System (DNS) registrations of SRV and domain controller (DC) locator A records (registered by Netlogon) and NS records (added by the authoritative DNS servers) in an Active Directory-integrated DNS zone for some DCs may not work in a domain that contains a large number of DCs (usually over 1200). If the Active Directory-integrated DNS zone has the same name as the Active Directory domain name, problems with the registration of A records and NS records at the zone root seem to occur in a domain with more than 400 DCs. Also, one or more of the following error messages may be logged in the Event log:
 
 ```output
 Event Type: Error  
