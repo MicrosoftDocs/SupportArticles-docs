@@ -5,6 +5,8 @@ ms.date: 05/27/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+author: v-miegge
+ms.author: Esteban.Flores
 ---
 # Troubleshoot performance and isolate bottlenecks in Linux
 
