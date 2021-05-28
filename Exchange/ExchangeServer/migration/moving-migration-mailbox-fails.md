@@ -49,7 +49,7 @@ To resolve this issue, follow these steps:
 3. Run the following cmdlet:
 
     ```console
-    setup /preparead/IAcceptExchangeServerLicenseTerms
+    Setup /Preparead /IAcceptExchangeServerLicenseTerms
     ```
 
 4. Run the following cmdlets:
