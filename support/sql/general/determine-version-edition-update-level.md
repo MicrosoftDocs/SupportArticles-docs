@@ -1,7 +1,7 @@
 ---
 title: Determine the version, edition, and update level
 description: This article lists various builds or updates that are available for different versions of  SQL Server and describe the procedures to determine the version of SQL Server that is running on a given system.
-ms.date: 03/05/2021
+ms.date: 05/27/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -305,7 +305,7 @@ To find the version of your instance of SQL Server CE and related information, s
 
 ## PolyBase
 
-### Windows
+### PolyBase for SQL Server on Windows
 
 To find the version of PolyBase and its related features in Windows, try the following methods:
 
@@ -322,11 +322,28 @@ cd 'C:\Program Files\Microsoft SQL Server'
 ls mpdwsvc.exe -r -ea silentlycontinue | % versioninfo | Format-Table -AutoSize
 ```  
 
-Alternatively, try the SQL Server Setup steps in the next section.
+### PolyBase for SQL Server on Linux
+
+To find the version of PolyBase installed and its related features in Ubuntu, try the following methods:
+
+```console
+apt list mssql-server-polybase
+apt list mssql-server-polybase-hadoop
+```
+
+To find the version of PolyBase installed and its related features in RHEL, try the following methods:
+
+```console
+yum info mssql-server-polybase
+yum info mssql-server-polybase-hadoop
+```
+```console
+yum list installed *polybase*
+```
 
 ### Windows or Linux
 
-To find the version of PolyBase and its related features, refer to a fresh discovery report that runs within the SQL Server Setup tools.
+Alternatively, try the SQL Server Setup steps in this next section. To find the version of PolyBase and its related features, refer to a fresh discovery report that runs within the SQL Server Setup tools.
 
 In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the Summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added.
 
