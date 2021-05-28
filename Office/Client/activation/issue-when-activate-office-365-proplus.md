@@ -28,41 +28,36 @@ When you set up your network to block Internet Explorer 6, users discover that t
 
 ## Cause
 
-1) This issue occurs because the client computer cannot connect to *.microsoftonline-p.net. 
+This issue occurs under one of the following situations:
 
-2) This issue can also occur if Windows NCSI settings are disabled.
+- The client computer can't connect to *.microsoftonline-p.net.
+- Network Connectivity Status Indicator (NCSI) active probe is disabled.
 
 ## Workaround
 
-1) To work around this issue, add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. 
+To work around this issue, first heck your firewall or proxy setting. Add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6. For more info about how to configure firewall rules, see your firewall documentation. 
 
-For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6.
+If the issue persists, check if NCSI active probe is disabled. In this case, enable NCSI active probe by using the registry or Group Policy Objects (GPOs).
 
-For more info about how to configure firewall rules, see your firewall documentation. 
+To use the registry to enable NCSI active probe, configure one of the following registry keys.
 
-2) If the NCSI probes are disabled, You can **Enable** the NCSI active or passive probes by using the registry or Group Policy Objects (GPOs).
-
-To use the registry to Enable NCSI active probes, configure one of the following registry keys.
-
-> [!Important]
-Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> [!IMPORTANT]
+> Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\EnableActiveProbing`
-  - Key Type: DWORD
+  - Type: DWORD
   - Value: Decimal 1 
 - `HKLM\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator\NoActiveProbe`
-  - Key Type: DWORD
+  - Type: DWORD
   - Value: Decimal 0
 
-To use Group Policy to Enable NCSI active probes, configure the following GPO:
+To use Group Policy to enable NCSI active probe, configure the following GPO:
 
-- **Computer Configuration**\\**Administrative Templates**\\**System**\\**Internet Communication Management**\\**Internet Communication settings**\\**Turn off Windows Network Connectivity Status Indicator active tests**  
-  - Value: Disabled 
+**Computer Configuration**\\**Administrative Templates**\\**System**\\**Internet Communication Management**\\**Internet Communication settings**\\**Turn off Windows Network Connectivity Status Indicator active tests**  
+Value: Disabled 
 
 ## More information
 
-For more information about Office 365 activation issues, see the following Microsoft Knowledge Base article: 
-
-[Office 365: Use the Support and Recovery Assistant for Office 365](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380)
+For more information about Office 365 activation issues, see [Office 365: Use the Support and Recovery Assistant for Office 365](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380).
 
 Still need assistance? Ask for help in the [Microsoft Community](https://answers.microsoft.com/).
