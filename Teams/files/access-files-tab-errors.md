@@ -26,27 +26,24 @@ This article lists some common error messages that you receive when you select t
 
 This error occurs if the name of the document library on your SharePoint site was changed from its default, "Shared Documents," to another name.
 
-### Resolution
-
 To resolve this issue, use one of the following methods to revert the name of the document library to "Shared Documents". You must have site owner permissions to make this change.
 
 ### Method 1
 
-1. Install the [PnP PowerShell module](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps&preserve-view=true).
-2. Run [Connect-PnPOnline](/powershell/module/sharepoint-pnp/connect-pnponline?view=sharepoint-ps&preserve-view=true) to connect to the SharePoint site. For example:
+1. Install the [PnP PowerShell module](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets).
+2. Run [Connect-PnPOnline](/powershell/module/sharepoint-pnp/connect-pnponline) to connect to the SharePoint site. For example:
 
     ```powershell
     Connect-PnPOnline -Url "https://contoso.sharepoint.com/sites/team" -Interactive
     ```
 
-3. Run [Get-PnPList](/powershell/module/sharepoint-pnp/get-pnplist?view=sharepoint-ps&preserve-view=true), place the renamed document library into a variable by using the library name. In the following example, the library name is "Renamed Documents".
+3. Run [Get-PnPList](/powershell/module/sharepoint-pnp/get-pnplist), place the renamed document library into a variable by using the library name. In the following example, the library name is "Renamed Documents".
 
     ```powershell
     $list = Get-PnPList 'Renamed Documents'
     ```
 
-    > [!NOTE]
-    > To see all document libraries on the site, run `Get-PnPList` without any parameters.
+    **Note:** To see all document libraries on the site, run `Get-PnPList` without any parameters.
 
 4. Change the document library name to **Shared Documents**.
 
@@ -61,7 +58,7 @@ To resolve this issue, use one of the following methods to revert the name of th
 2. Go to **All Files**.
 3. Locate the document library folder by its new name. For example, in the following screenshot, the default name was changed to "Renamed Documents."
 
-   :::image type="content" source="media/object-specified-not-belong-to-list/renamed-documents.png" alt-text="Screenshot of the renamed document library in All Files.":::
+   :::image type="content" source="media/access-files-tab-errors/renamed-documents.png" alt-text="Screenshot of the renamed document library in All Files.":::
 
 4. Right-click the folder, select **Rename**, and then change the name to **Shared Documents**.
 
