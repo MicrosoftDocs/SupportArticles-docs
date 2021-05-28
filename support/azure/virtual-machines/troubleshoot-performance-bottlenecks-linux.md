@@ -12,9 +12,9 @@ ms.service: virtual-machines
 
 Performance issues occur in different operating systems or applications, and every issue requires a unique approach to troubleshoot. Most issues are related to CPU, memory, networking, and input/output (I/O) as key areas where the issue occurs. Each of these areas generates different symptoms (sometimes simultaneously) and requires a different diagnosis and solution.
 
-There are instances where performance problems could be caused by a misconfiguration of the application/setup. An example of this would be a web application with a caching layer is not correctly configured. This leads to more requests flowing back to the origin server, instead of being served by cache.
+There are instances where performance problems could be caused by a misconfiguration of the application/setup. An example would be a web application with a caching layer is not correctly configured. This situation leads to more requests flowing back to the origin server, instead of being served by cache.
 
-Another example would be when the redo log of a MySQL/MariaDB is located on the operating system (OS) disk, or a disk which is not up to the database requirements. leading to lower transactions per second (TPS) due to competition for resources.
+Another example would be when the redo log of a MySQL/MariaDB is located on the operating system (OS) disk or on a disk that is not up to the database requirements. leading to lower transactions per second (TPS) due to competition for resources.
 
 Being able to fully understand the problem helps identifying where on the stack a misconfiguration could be leading to reduced performance. Troubleshooting performance issues requires the establishment of a *baseline*, which will serve to compare to the changes made after it, and evaluate if the overall performance improved or not.
 
@@ -37,7 +37,7 @@ Examples are:
 |Network|vnstat, iptraf-ng|
 |Memory|free|
 
-To further expand, these are some of the pointers and tools to look for the 4 main resources.
+To further expand, here are some pointers and tools to look for the four main resources.
 
 ## CPU
 
@@ -85,9 +85,9 @@ If we look at the **dd process** line from above:
 
 We can see that it’s consuming 100% of the CPU (note that `top` will show usage higher than 100% if the process is multithreaded and spans more than one CPU).
 
-Another useful reference is load average (load avg). The *loadavg* shows system load average in 1 minute, 5 minutes and 15 minutes intervals. The number indicates the level of load of the system and interpreting the number depends on the number of CPUs available. For example, a load average of 2 on a 1 CPU system, means the system is so loaded that the processes started queuing up. If there is a load average of 2 on a 4 CPU system, then there’s about 50% overall CPU utilization.
+Another useful reference is load average (load avg). The *loadavg* shows system load average in 1-minute, 5-minute, and 15-minute intervals. The number indicates the level of load of the system and interpreting the number depends on the number of CPUs available. For example, a load average of 2 on a one-CPU system, means the system is so loaded that the processes started queuing up. If there is a load average of 2 on a four-CPU system, then there’s about 50% overall CPU utilization.
 
-In the example above, the load average is at 1.04. This is a 2 CPU system, meaning there’s about 50% CPU usage. This can be confirmed by the 48% Idle CPU.
+In the example above, the load average is at 1.04. This is a two-CPU system, meaning there’s about 50% CPU usage. This result can be confirmed by the 48% Idle CPU.
 
 Use load average as a quick overview of how the system is performing.
 
@@ -95,51 +95,51 @@ Use load average as a quick overview of how the system is performing.
 
 There are several terms that are important to define to better understand I/O constraints.
 
-When dealing with I/O performance issues the following terms help understanding where the problem resides.
+When dealing with I/O performance issues, the following terms help understanding where the problem resides.
 
 - **IO Size**: The amount of data that is processed per transaction, normally defined in bytes.
 - **IO Threads**: The number of processes that are interacting with the storage device, depends on the application.
 - **Block Size**: Defined at the filesystem, is the amount of data that will be written to the storage device.
-- **Sector Size**: The size of each of the sectors at the disk, typically 512-Byte.
+- **Sector Size**: The size of each of the sectors at the disk, typically 512 bytes.
 - **IOPS**: Input Output Operations Per second.
 - **Latency**: The amount of time an I/O Operation takes to complete.
 - **Throughput**: A function of the amount of data transferred over a specific amount of time, typically defined as MB/s or megabytes per second.
 
 ### IOPS
 
-*Input Output Operations Per Second* (IOPS) is a function of the number of input and output (I/O) operations measured over a certain amount of time, in this case seconds. I/O Operations can be either reads or writes, deletes can also be counted as an operation against the storage system. Each operation will have an allocation unit, this is the I/O Size.
+*Input Output Operations Per Second* (IOPS) is a function of the number of input and output (I/O) operations measured over a certain amount of time, in this case seconds. I/O Operations can be either reads or writes, deletes can also be counted as an operation against the storage system. Each operation will have an allocation unit that corresponds equally to the I/O Size.
 
-Typically defined at the application level, this is the amount of data that will be written or read per transaction. A commonly seen I/O size is 4k. Smaller IO with more threads will yield higher IOPS, because each transaction can be completed relatively quick (due to its small size), allowing for more to be completed in the same amount of time.
+Typically defined at the application level, I/O size is the amount of data that will be written or read per transaction. A commonly seen I/O size is 4k. Smaller IO with more threads will yield higher IOPS, because each transaction can be completed relatively quick (due to its small size), allowing for more to be completed in the same amount of time.
 
 On the contrary, with the same number of threads but with a bigger I/O size, IOPS will go down as each transaction takes longer to complete.
 
 Consider the following example:
 
-1000 IOPS means that each second, a thousand operations will complete, so each operation will take roughly 1 millisecond (there's a 1000ms in a second). In theory, each transaction will have roughly 1 millisecond to complete, or about 1ms latency.
+1000 IOPS means that each second, a thousand operations will complete, so each operation will take roughly one millisecond (there are 1000 ms in one second). In theory, each transaction will have roughly one millisecond to complete, or about 1ms latency.
 
 Knowing the IOSize and the IOPS, we can calculate the throughput by multiplying the IOSize by the IOPS.
 
 For example:
 
-1000IOPS at 4K IOSize = 4000KB/s, or 4MB/s (3.9MB/s to be precise), or 1000IOPS at 1M = 1000MB/s, or 1GB/s (976MB/s being technically correct).
+1000 IOPS at 4K IOSize = 4000 KB/s, or 4 MB/s (3.9 MB/s to be precise), or 1000 IOPS at 1M = 1000 MB/s, or 1 GB/s (976 MB/s being technically correct).
 
 A more equation-friendly version would be listed as: *IOPS `*` IOSize = IOSize/s (Throughput)*
 
 ### Throughput
 
-Contrary to IOPS, throughput is a function of amount of data over time. This means that each second a certain amount of data will be either written or read, this is measured in *AMOUNTOFDATA/time* or MB/s (megabytes per second).
+Contrary to IOPS, throughput is a function of amount of data over time. This means that each second a certain amount of data will be either written or read, this speed is measured in *AMOUNTOFDATA/time* or MB/s (megabytes per second).
 
-With the throughput and IOSize we can calculate the IOPS by dividing the throughput by the IOSize, units should be normalized to the smallest connotation, for example if IOSize is defined as KB or Kilobytes the throughput should be converted.
+With the throughput and IOSize, we can calculate the IOPS by dividing the throughput by the IOSize, units should be normalized to the smallest connotation, for example if IOSize is defined as KB or Kilobytes the throughput should be converted.
 
-This in equation format looks like: *THROUGHPUT / IOSize = IOPS*
+The equation format looks like: *THROUGHPUT / IOSize = IOPS*
 
-To put this into context consider a throughput of 10MB/s at an IOSize of 4K, punching the numbers into the equation: *10240/4=2560 IOPS*
+To put this equation into context, consider a throughput of 10 MB/s at an IOSize of 4K, adding the numbers into the equation looks like: *10240/4=2560 IOPS*
 
-(10MB is equal to 10240 Kilobytes)
+(10 MB is equal to 10240 Kilobytes)
 
 ### Latency
 
-Latency is the measurement of the average amount of time each operation takes to complete, IOPS and latency are connected as both are a function of time. For example, at a 100IOPS, each operation will take roughly 10ms to complete. But the same amount of data could be fetched quicker even at lower IOPS. Latency is also known as the seek time.
+Latency is the measurement of the average amount of time each operation takes to complete, IOPS and latency are connected as both are a function of time. For example, at a 100 IOPS, each operation will take roughly 10ms to complete. But the same amount of data could be fetched quicker even at lower IOPS. Latency is also known as the seek time.
 
 ### Understanding iostat output
 
@@ -164,7 +164,7 @@ sdc               2.56        46.16        22.98       2057       1024
 md0               2.67        73.60        45.95       3280       2048
 ```
 
-By default, `iostat` displays data for all block devices present. Additionally, little data is provided for each device. There are options available that help identify problems by providing extended data such as throughput, IOPS, queue size and latency.
+By default, `iostat` displays data for all block devices present. Additionally, little data is provided for each device. There are options available that help identify problems by providing extended data such as throughput, IOPS, queue size, and latency.
 
 Run `iostat` with triggers:
 
@@ -173,7 +173,7 @@ Run `iostat` with triggers:
 To further expand the `iostat` results, use these variables:
 
 - `-d`: Display the device utilization report.
-- `-x`: Display extended statistics. This is important as it provides IOPS, Latency and Queue Sizes.
+- `-x`: Display extended statistics. This variable is important as it provides IOPS, Latency, and Queue Sizes.
 - `-c`: Display the CPU utilization report.
 - `-t`: Print the time for each report displayed. Useful for long runs.
 - `-m`: Display statistics in megabytes per second. A more human readable form.
@@ -247,11 +247,11 @@ Mem:           7802         435        5250           9        2117        7051
 Swap:             0           0           0
 ```
 
-In Linux systems, it's common to see 99% memory usage. In the `free` output there’s a column called *buff/cache*. The Linux kernel will use free (unused) memory to cache I/O requests for better response times. This is called a page cache. During memory pressure (scenarios where memory is running low)the kernel will return memory used for page cache, so that it can be used by applications.
+In Linux systems, it's common to see 99% memory usage. In the `free` output, there’s a column called *buff/cache*. The Linux kernel will use free (unused) memory to cache I/O requests for better response times, which is called a page cache. During memory pressure (scenarios where memory is running low)the kernel will return memory used for page cache, so that it can be used by applications.
 
 In the `free` output, the *available* column indicates how much memory is available for processes to consume. This amount is calculated by adding buff/cache and free memory.
 
-The `top` command can be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%) select **Shift + M** when running `top`.
+The `top` command can be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select **Shift + M** when running `top`.
 
 ```output
 [root@rhel78 ~]# top
@@ -281,7 +281,7 @@ The RES column is the *resident memory*, which represents actual process usage. 
 
 Memory usage can increase more than expected in scenarios where the application experiences *memory leaks*. Memory leaks refer to a problem where applications are unable to free up memory pages that are no longer used.
 
-Here is another command which you can use to view the top memory consuming processes:
+Here is another command used to view the top memory consuming processes:
 
 ``ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head``
 
@@ -318,7 +318,7 @@ Here is an example of a disk constraint: *"A D2s_v3 VM is capable of 48MB/s of u
 
 In the example above, the limiting resource is the throughput of the overall VM. The requirement of the application, versus what the disk or VM configuration can provide, shows you what is the constraining resource.
 
-If the application requires **< insert a measurement > < insert resource >** and the current configuration for **< insert resource >** is only capable of delivering **< insert measurement >**, then this could be a limiting factor.
+If the application requires **< insert a measurement > < insert resource >** and the current configuration for **< insert resource >** is only capable of delivering **< insert measurement >**, then this requirement could be a limiting factor.
 
 ## Defining the limiting resource
 
@@ -326,23 +326,23 @@ Once a resource is determined to be the limiting factor in the current configura
 
 For example:
 
-"If the application requires **< 128GB (measurement) >** of **< RAM (resource) >** and the current configuration for **< RAM (resource) >** is only capable of delivering **< 64GB (measurement) >**, then this could be a limiting factor."
+"If the application requires **< 128GB (measurement) >** of **< RAM (resource) >** and the current configuration for **< RAM (resource) >** is only capable of delivering **< 64GB (measurement) >**, then this requirement  could be a limiting factor."
 
 Now you can define the limiting resource and take actions based on that resource. The same concept applies to other resources.
 
-If these limiting resources are expected as a cost saving measure, the workload should work around the bottlenecks. However, if the same cost saving measures exist, and the workload is unable to easily handle the lack of resources, then this is a problem that needs to be addressed.
+If these limiting resources are expected as a cost saving measure, the workload should work around the bottlenecks. However, if the same cost saving measures exist, and the workload is unable to easily handle the lack of resources, you must address this problem.
 
 ## Perform changes based on obtained data
 
 Designing for performance is not about solving problems. Performance problems can’t be completely solved, as there will always be a limiting resource. Bottlenecks will always exist  and can only be moved to a different location of the design.
 
-As an example, if the application is being limited by disk performance, you can increase the disk size to allow more throughput. However, the network then becomes the next bottleneck. Because resources are limited, there is no ideal configuration, and issues must be addressed on a regular basis.
+As an example, if the application is being limited by disk performance, you can increase the disk size to allow more throughput. However, the network then becomes the next bottleneck. Because resources are limited, there is no ideal configuration, and issues must be addressed regularly.
 
 With the data obtained in the previous steps, changes can now be made based on actual, measurable data. These changes can also be compared against the baseline measured before to confirm there’s a tangible difference.
 
 Examine the following example:
 
-“When obtaining a baseline while the application was running, it was determined that the system had a constant 100% CPU usage with a config of 2CPUs. A load average of 4 was observed which meant the system was queuing requests. A change to an 8CPU system reduced CPU usage to 25%, and load average was reduced to 2 with the exact same load.”
+“When obtaining a baseline while the application was running, it was determined that the system had a constant 100% CPU usage with a configuration of two CPUs. A load average of 4 was observed which meant the system was queuing requests. A change to an 8CPU system reduced CPU usage to 25%, and load average was reduced to 2 with the exact same load.”
 
 In the example above, there’s a measurable difference when comparing the obtained results against the changed resources. Before the change, there was a clear resource constraint. But after the change, there are enough resources to increase the load
 
@@ -356,7 +356,7 @@ There are several performance differences between on-premises computing and clou
 
 For example:
 
-"A system running on-premises with 4CPUs @3.7GHz have a total of 14.8GHz available for processing. If the equivalent in CPU count is created using a D4s_v3 which is backed by 2.1GHz CPUs, the migrated VM will have 8.1GHz available for processing, or around a 44 percent decrease in performance."
+"A system running on-premises with four CPUs at 3.7 GHz have a total of 14.8 GHz available for processing. If the equivalent in CPU count is created using a D4s_v3 which is backed by 2.1 GHz CPUs, the migrated VM will have 8.1 GHz available for processing, or around a 44 percent decrease in performance."
 
 **Disk**: Disk performance in Azure is defined by the type and size of disk (except for UltraSSD, which provides flexibility on size, IOPS, and throughput), and disk size defines IOPS and throughput limits.
 
@@ -364,17 +364,17 @@ Latency is a metric that is dependent on disk type rather than disk size. Most o
 
 Average Azure latencies are:
 
-- **UltraSSD**: 300 to 600us (microseconds)
-- **PremiumSSD/StandardSSD**: 3 to 10ms (milliseconds)
-- **StandardHDD**: 50 to 100ms (milliseconds)
+- **UltraSSD**: 300 us to 600 us (microseconds)
+- **PremiumSSD/StandardSSD**: 3 ms to 10 ms (milliseconds)
+- **StandardHDD**: 50 ms to 100 ms (milliseconds)
 
   > [!NOTE]
   > Without the throttling feature being active, latencies can increase to 800~1000ms when throttling a disk.
 
-The latency difference between on-premises (200us) and PremiumSSD (3000us or 3ms) is prohibitive, with PremiumSSD being 94% slower (in terms of latency) than on-premises.
+The latency difference between on-premises (200 us) and PremiumSSD (3000 us or 3 ms) is prohibitive, with PremiumSSD being 94% slower (in terms of latency) than on-premises.
 
 **Network**:
-Most on-premises network setups will use 10Gbps links. In Azure, network performance is directly defined by the size of the virtual machines (VMs) and some can exceed 40Gpbs. Be sure that you select a size that has enough bandwidth for your application needs. In most cases, the limiting factor will be the throughput limits of the VM or disk rather than the network.
+Most on-premises network setups will use 10 Gbps links. In Azure, network performance is directly defined by the size of the virtual machines (VMs) and some can exceed 40 Gpbs. Be sure that you select a size that has enough bandwidth for your application needs. In most cases, the limiting factor will be the throughput limits of the VM or disk rather than the network.
 
 **Memory**: Select a VM size with enough RAM for what is currently configured.
 
