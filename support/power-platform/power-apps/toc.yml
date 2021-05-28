@@ -7,5 +7,17 @@
       href: best-practices-when-updating-a-flow.md
   - name: Others
     items:
-    - name: Lookup doesn't filter records for particula entity
+    - name: Lookup doesn't filter records for particular entity
       href: lookup-does-not-filter-entity-records.md
+  - name: Ribbons and commanding
+    items:
+    - name: Ribbon issues
+      href: ribbon-issues.md
+    - name: Button is hidden
+      href: ribbon-issues-button-hidden.md
+    - name: Button is visible
+      href: ribbon-issues-button-visible.md
+    - name: Button isn't working correctly
+      href: ribbon-issues-button-not-working-correctly.md
+    - name: Regenerate ribbon metadata
+      href: regenerate-ribbon-metadata.md
