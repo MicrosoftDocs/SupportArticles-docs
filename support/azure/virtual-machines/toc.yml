@@ -3,6 +3,7 @@
   
 - name: Azure Virtual Machine Deployment Troubleshooting
   href: welcome-deployment-troubleshooting.yml
+  items:
   - name: Troubleshoot deployment failures
     items:
     - name: New VM deployments
