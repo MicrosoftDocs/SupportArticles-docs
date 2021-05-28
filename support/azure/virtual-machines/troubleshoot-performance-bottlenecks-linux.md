@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ms.reviewer: 
 ms.service: virtual-machines
 author: v-miegge
-ms.author: Esteban.Flores
+ms.author: esflores
 ---
 # Troubleshoot performance and isolate bottlenecks in Linux
 
