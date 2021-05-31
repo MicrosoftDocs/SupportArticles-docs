@@ -469,10 +469,8 @@
       href: ../public-folders/cannot-expand-add-public-folder.md
     - name: Can't add reviewer permission to calendars
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
-    - name: Can't apply permissions to subfolders
-      href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
-    - name: Can't apply the read and unread setting
-      href: ../public-folders/cannot-apply-read-unread-setting.md
+    - name: Can't apply permissions or other settings to subfolders
+      href: ../public-folders/can't-apply-permissions-settings-to-subfolders.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: MEPF synchronization issues
