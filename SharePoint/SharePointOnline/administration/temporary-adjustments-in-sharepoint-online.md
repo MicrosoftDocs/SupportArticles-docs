@@ -3,7 +3,7 @@ title: SharePoint Online service process schedule temporary change
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 3/25/2020
+ms.date: 03/25/2020
 audience: Admin
 ms.topic: article
 ms.prod: sharepoint-server-itpro
