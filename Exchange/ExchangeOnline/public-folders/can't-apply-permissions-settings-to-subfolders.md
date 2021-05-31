@@ -120,11 +120,14 @@ When you apply age limit settings to a public folder and its subfolders by selec
 To work around this issue, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Run the following cmdlet to set age limit settings to subfolders:
+2. Run the following cmdlet to apply age limit settings to subfolders:
 
    ```powershell
    Get-PublicFolder "<\ParentPF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "<newagelimit>"}
    ```
+  
+   > [!NOTE]
+   > Replace \<\ParentPF> with your parent public folder identity.
 
    For example, the following command applies an age limit of 10 days to all subfolders under Root1:
 
