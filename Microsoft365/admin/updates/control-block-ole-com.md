@@ -48,10 +48,10 @@ To override and allow a specific component, follow these steps:
  
     - For 64-bit Office installations and for 32-bit Office installations on 32-bit OS:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID} DWORD ActivationFilterOverride = 1
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID} DWORD ActivationFilterOverride = 0
     - For 32-bit Office installations on 64-bit OS:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID} DWORD ActivationFilterOverride = 1
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID} DWORD ActivationFilterOverride = 0
 1. Make sure that the value is set to 0 (zero). If the value is set to 0 or the value name is missing, we will block that component.
 
 To disable filtering per individual Office application, follow these steps:
@@ -60,10 +60,10 @@ To disable filtering per individual Office application, follow these steps:
 
     - For 64-bit Office installations and 32-bit Office installations on 32-bit OS:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security DWORD ActivationFilter = 0
-    - For 64-bit Office installations and 32-bit Office installations on 32-bit OS:
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security DWORD ActivationFilter = 1
+    - For 64-bit Office installations and 32-bit Office installations on 64-bit OS:
     
-      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security DWORD ActivationFilter = 0
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security DWORD ActivationFilter = 1
 1. Make sure that the value is set to 1 (one). If the value is set to 1 or the value name is missing, filtering is enabled.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
