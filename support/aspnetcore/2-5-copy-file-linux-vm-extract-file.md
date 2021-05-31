@@ -40,7 +40,7 @@ In this part, you will use pscp to transfer files from Windows to Linux.
 
 ## Basic pscp parameters
 
-`Pscp` makes it easy to do basic tasks, such as copying a file to Linux. This tool is included with [PuTTY](https://www.putty.org/), so it should be installed on your Windows-based computer together with PuTTY. If it is not, please install it now.
+`Pscp` makes it easy to do basic tasks, such as copying a file to Linux. This tool is included with [PuTTY](https://www.putty.org/), so it should be installed on your Windows-based computer together with PuTTY. If it is not, install it now.
 
 Here is a sample command:
 
@@ -54,7 +54,7 @@ For example, to copy the *c:\web\publish.zip* file to your user's home directory
 pscp -i d:\secure\myprivatekey.ppk c:\web\publish.zip <UserName>@buggyamb:<Linux path to save>
 ```
 
-The private key is the same *.ppk* key that was converted from a *.pem* file when you tried to connect to your VM by using PuTTY. If you did this successfully, you should already have this file. If you do not have the *.ppk* file, please follow the instructions from the "Connecting with PuTTY" section, and convert your *.pem* file to *.ppk*.
+The private key is the same *.ppk* key that was converted from a *.pem* file when you tried to connect to your VM by using PuTTY. If you did this successfully, you should already have this file. If you do not have the *.ppk* file, follow the instructions from the "Connecting with PuTTY" section, and convert your *.pem* file to *.ppk*.
 
 ## Copying a file to Linux and extracting it to another folder
 
@@ -85,7 +85,7 @@ Connect to your Linux VM, and check whether the file is there. You can do this b
 
 :::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/ls.png" alt-text="BuggyAmb ls" border="true":::
 
-Of course, there are other methods to copy files between Linux and Windows. But this method is sufficient for this tutorial.
+There are other methods to copy files between Linux and Windows. But this method is sufficient for this tutorial.
 
 Use the *buggyamb_v1.1.tar.gz* file to create a second ASP.NET Core application that runs behind Nginx. This time, this application will be configured to use a hostname to browse it. The same application will be used in the troubleshooting labs that comprise this tutorial.
 

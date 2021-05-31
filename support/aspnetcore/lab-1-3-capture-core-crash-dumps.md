@@ -43,7 +43,7 @@ Createdump is installed automatically together with every .NET Core runtime.
 As explained in the [createdump configuration policy](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) documentation, you can set configuration options that have environment variables. These are passed to the createdump command as parameters. Here are the environment variables that are supported:
 
 - `COMPlus_DbgEnableMiniDump`: If set to **1**, enables automatic core dump generation upon termination. Default is **0**.
-- `COMPlus_DbgMiniDumpType`: Default is **2**.`MiniDumpWithPrivateReadWriteMemory`.
+- `COMPlus_DbgMiniDumpType`: This is the type of the mini dump that will be created. The default value for this is **2** (or enum type of `MiniDumpWithPrivateReadWriteMemory`) which means that the dump generated will include the GC heaps and information necessary to capture stack traces for all existing threads in a process.
 - `COMPlus_DbgMiniDumpName`: If set, use as the template to create the dump file path and file name. The PID can be put into the name by using the `%d` parameter. The default template is *:::no-loc text="/tmp/coredump.%d":::*. By using this environment variable, you can configure the output directory.
 - `COMPlus_CreateDumpDiagnostics`: If set to **1**, enables the createdump tool diagnostic messages (TRACE macro). This setting might be useful if createdump does not work as expected and does not generate a memory dump file.
 
@@ -52,7 +52,7 @@ You can find details about these variables in [createdump configuration policy](
 The important variable here is `COMPlus_DbgEnableMiniDump`. You have to set this environment variable to **1**. There are several methods to set this environment:
 
 - Set it in your application's configuration file.
-- Use the export `COMPlus_DbgEnableMiniDump=1` command to set it. This setting will not persist after an operating system restart. Therefore, you have to set it as persistent if you want to keep the setting enabled after a restart.
+- Use the `export COMPlus_DbgEnableMiniDump=1` command to set it. This setting will not persist after an operating system restart. Therefore, you have to set it as persistent if you want to keep the setting enabled after a restart.
 - Set it in the ASP.NET Core service unit file.
 
 Setting this variable in ASP.NET Core service unit file is the easiest method. The drawback is that the service should be restarted. In this troubleshooting section, this will be the option that is demonstrated.
@@ -89,7 +89,12 @@ Run the SOS `clrstack` command to display the managed call stack. Remember that 
 
 :::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/lldb.png" alt-text="BuggyAmb lldb" border="true":::
 
-This is good start. However, the listed thread is not the thread that's causing the crash. This is the main thread of the process that's being debugged. Unlike in WinDbg, which directly displays the thread that has encountered the exception, a crash dump that's opened in lldb doesn't automatically select the thread that triggered the debugger to generate the memory dump. The WinDbg behavior is useful, but it doesn't obstruct the troubleshooting that you have to do.
+This is a good start. However, the call stack displayed belongs to the main thread of our process debugged and it is not the thread where the exception is thrown.
+
+> [!NOTE]
+> If we opened a crash dump in WinDbg on Windows, the WinDbg would directly select the thread that caused the crash but this is not the case in lldb, it does not automatically select the thread that triggered the debugger to generate the memory dump.
+
+Although this behavior of WinDbg is quite useful when debugging, lack of this feature in lldb is not the end of the world. We will just need to look at all of the threads to try finding out where the exception could be thrown. First of all let's look at the native threads with thread list command.
 
 It's always a good idea to start by running a quick inspection of all the thread calls stacks so that you can understand what was running at the time that the dump file was generated. Look first at the native thread list that has the `thread list` command.
 
@@ -131,16 +136,16 @@ You can use one more tactic to narrow down the statistics by running the command
 
 :::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/request.png" alt-text="BuggyAmb request" border="true":::
 
-In the sample application, there is only one `System.Net.HttpWebRequest` object on the managed heap. In the previous listing, the address that's seen next to the `HttpWebRequest` entry is not that object's address in memory. Instead, it's the address that corresponds to the "method table" of objects of the `System.Net .HttpWebRequest` type. To get the actual list of the objects, you can pass that method table (MT) address to the `dumpheap` command in this manner: `dumpheap -mt <address>`. For example, run `dumpheap -mt 00007f53623cb640` to dl find the object's address.
+In the sample application, there is only one `System.Net.HttpWebRequest` object on the managed heap. In the previous listing, the address that's seen next to the `HttpWebRequest` entry is NOT that object's address in memory. Rather, it's the address that corresponds to the "method table" of objects of type `System.Net.HttpWebRequest`. To get the actual list of the objects, you can pass that method table (MT) address to the `dumpheap` command in the following manner: `dumpheap -mt <address>`. For example, run `dumpheap -mt 00007f53623cb640` to find the object's address.
 
 :::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dumpheap.png" alt-text="BuggyAmb dumpheap" border="true":::
 
-Now, you're able to identify the address of the problematic object. You can investigate that object's properties by using the SOS `dumpobj` command. Simply pass the address of the object to the command, and you will get a list that contains the properties of this object.
-
-> [!NOTE]
-> The `_requestUri`, its type is `System.Uri`. The value of this variable will prove useful for the investigation.
+Now, you're able to identify the address of the problematic object and it is `00007f51300c0868` in this sample. You can investigate that object's properties by passing that address to the `dumpobj` command. This will list the properties of that object. In this sample, we run `dumpobj 00007f51300c0868` to look at our object's properties:
 
 :::image type="content" source="./media/lab-1-3-capture-core-crash-dumps/dumpobj.png" alt-text="BuggyAmb dumpobj" border="true":::
+
+> [!NOTE]
+> One of `System.Net.HttpWebRequest` object's properties is called `_requestUri`, which is an object of type `System.Uri`. To find what the URI is, pass the address of the `_requestUri` property to the `dumpobj` command.
 
 Copy the address of the `System.Uri` object, and investigate it by using `dumpobj` again. Run `dumpobj 00007f51300bfbb8`. The address of the object in the memory dump file that you generated will most certainly be different. The listing will display the `_string` property of `System.Uri`.
 

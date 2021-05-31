@@ -21,7 +21,7 @@ You also have to configure the Nginx web server as a reverse proxy to route the 
 
 The previous parts in this series showed how to configure Nginx as a reverse proxy and how to troubleshoot an HTTP 502 proxy error. The cause of the HTTP 502 response code is that the back-end ASP.NET Core application was not running when Nginx tried to forward traffic to it.
 
-The issue was resolved temporarily by running your ASP.NET Core application manually. But what if the application crashes? Or the server has to be restarted? Manually restarting the ASP.net Core application every time is not a practical solution. Therefore, in this section, you will configure Linux to start your application after it crashes.
+The issue was resolved temporarily by running your ASP.NET Core application manually. But what if the application crashes? Or the server has to be restarted? Manually restarting the ASP.NET Core application every time is not a practical solution. Therefore, in this section, you will configure Linux to start your application after it crashes.
 
 So far, you have configured Nginx and ASP.NET Core to work together. Nginx listens on port 80 and routes requests to the ASP.NET Core application that listens on port 5000. Although Nginx starts automatically, the ASP.NET Core application must be started manually every time that the server is restarted. Otherwise, the ASP.NET Core application exits gracefully or crashes.
 

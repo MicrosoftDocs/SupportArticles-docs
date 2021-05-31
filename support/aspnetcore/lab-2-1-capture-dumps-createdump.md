@@ -53,9 +53,9 @@ Remember that a good troubleshooting session starts by defining the problem and 
 
 Before you try to reproduce the problem, start by setting a baseline for how the application should perform. Select **Expected Results** or send multiple requests to the **Expected Results** scenario by using the **Load Generator** feature. First check what the CPU and memory usage looks like when the problem is not manifesting.
 
-Run `htop`, and filter it to show only the processes that belong to the user under whom the buggy application is run. The user of the target ASP.net Core application in this case is www-data. Press the U key to select that www-data user from list. Also press the Shift+H to hide the threads. As you can see, there are four processes running in the context of www-data, and two of them are the Nginx processes. The others are for the buggy application and the demo application that you created when you set up the environment.
+Run `htop`, and filter it to show only the processes that belong to the user under whom the buggy application is run. The user of the target ASP.NET Core application in this case is www-data. Press the U key to select that www-data user from list. Also press the Shift+H to hide the threads. As you can see, there are four processes running in the context of www-data, and two of them are the Nginx processes. The others are for the buggy application and the demo application that you created when you set up the environment.
 
-Becausee you haven't reproduced the performance problem yet, notice that all the CPU and memory usage statistics are currently very low.
+Because you haven't reproduced the performance problem yet, notice that all the CPU and memory usage statistics are currently low.
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/low.png" alt-text="BuggyAmb low" border="true":::
 
@@ -119,7 +119,7 @@ Start by examining the thread in Cooperative mode. The debugger's thread ID for 
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/clrstack.png" alt-text="BuggyAmb clrstack" border="true":::
 
-This ought to make you suspicious because you should know that string concat operations are very costly. This is because string objects in .NET are immutable, meaning  that their values cannot be changed after they're assigned. Consider this pseudo code snippet:
+This ought to make you suspicious because you should know that string concat operations are costly. This is because string objects in .NET are immutable, meaning  that their values cannot be changed after they're assigned. Consider this pseudo code snippet:
 
 ```csharp
 string myText = "Debugging";
@@ -133,7 +133,7 @@ This theory sounds promising. However, you should try to verify that it's correc
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/dso.png" alt-text="BuggyAmb dso" border="true":::
 
-Try inspecting the string array. Run `dumpobj` by using the address of the object. However, be aware that this demonstrates only that the object in question is an array. SOS provides a `dumparray` command to investigate the arrays. Run `dumparray 00007faf309528c8` to get the list of the items in the array. (Rremember that the address of the array object will be different in the dump file that you're examining.)
+Try inspecting the string array. Run `dumpobj` by using the address of the object. However, be aware that this demonstrates only that the object in question is an array. SOS provides a `dumparray` command to investigate the arrays. Run `dumparray 00007faf309528c8` to get the list of the items in the array. (Remember that the address of the array object will be different in the dump file that you're examining.)
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/dumpobj.png" alt-text="BuggyAmb dumpobj" border="true":::
 
@@ -157,7 +157,7 @@ Run the `dumpheap -stat` command in each dump file. The following is from the fi
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/dumpheap.png" alt-text="BuggyAmb dumpheap" border="true":::
 
-Continue by running the same `dumpheap -stat` command in the second dump file. You should see a change in the fragmentation stats, but that's not very important within the context of this investigation. The important part is the number of string objects and the significant increase in size of these objects.
+Continue by running the same `dumpheap -stat` command in the second dump file. You should see a change in the fragmentation stats, but that's not important within the context of this investigation. The important part is the number of string objects and the significant increase in size of these objects.
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/stat.png" alt-text="BuggyAmb stat" border="true":::
 
@@ -204,7 +204,7 @@ And if you examine at the native call stack by using the `bt` command, you might
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/b6c.png" alt-text="BuggyAmb b6c" border="true":::
 
-This evidence confirms the theory that the problem is related to a large number of string concatenation operations that create ever-larger strings. This process is triggered during the processing of a "slow" page.
+This evidence confirms the theory that the problem is related to a large number of string concatenation operations that create ever-larger strings that are triggered during the processing of a "slow" page
 
 The solution for such a problem is not within the scope of this series. However, be aware that the solution is easy to implement by using a `StringBuilder` class instance instead of string concat operations.
 

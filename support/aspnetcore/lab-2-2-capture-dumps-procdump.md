@@ -66,13 +66,15 @@ Capture a memory dump file of the same process. Notice that you will have to run
 
 ## Where does ProcDump create the core dump files?
 
-This is information that you will certainly have to know, and you can spend some time trying to understand the location.
+This is the information that you will certainly have to know, and you could spend a lot of time trying to find out where the dumps are created in when the ProcDump is used to capture core dumps.
 
-The ProcDump output is clear enough about the location where the core dump files are generated. The files will not be created in the */tmp/* or *:::no-loc text="/var/lib/systemd/coredump/":::* directory. Instead, they will be stored in the ASP.NET Core application "working directory." This is because the core dump files are created for a process that's hosting this application. The working directory for the application is defined in the service control unit file.
+The ProcDump output is not clear enough about the location where the core dump files are created in. If you look at the previous screenshot, it just writes the name of the file but not the actual path.
+
+Since the other tools usually use the */tmp/* or *:::no-loc text="/var/lib/systemd/coredump/":::* directories, you may think that the ProcDump also uses one of those folders but it is not the case. Instead, the dumps captured by ProcDump will be created in the ASP.NET Core application's "working directory."
+
+The working directory for the application is defined in the service control unit file. As you can see in the screenshot below, my sample application's working directory is */var/BuggyAmb_v1.1*, so any dump that ProcDump will create for my application will be in */var/BuggyAmb_v1.1* directory:
 
 :::image type="content" source="./media/lab-2-2-capture-dumps-procdump/cat.png" alt-text="BuggyAmb cat" border="true":::
-
-The core dump files that are collected by using ProcDump can be found in the *:::no-loc text="/var/BuggyAmb/publish/":::* directory of the setup that's used to create these listings.
 
 ## Sample scenario: Capturing dump files based on memory usage
 

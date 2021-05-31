@@ -82,7 +82,7 @@ After a few seconds, you will see that the process for PID 122632 is missing fro
 
 The `htop` tool is pre-installed in the distribution of Ubuntu Linux that is used to install the virtual server for this course. If `htop` is not installed in your Linux distro, you can use the package managers in Linux to install it. (See Part 1.3 for details.)
 
-To start the tool, simply run the `htop` command. You will see a colorful output that resembles the following.
+To start the tool, run the `htop` command. You will see a colorful output that resembles the following.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/htop.png" alt-text="BuggyAmb htop" border="true":::
 
