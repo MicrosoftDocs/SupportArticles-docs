@@ -52,6 +52,6 @@ For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](
 
 ## More information
 
-[Understanding and troubleshooting Out of Office (OOF) replies](/exchange/troubleshoot/email-delivery/understand-troubleshoot-oof-replies).
+[Understanding and troubleshooting Out of Office (OOF) replies](../email-delivery/understand-troubleshoot-oof-replies.md).
  
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
