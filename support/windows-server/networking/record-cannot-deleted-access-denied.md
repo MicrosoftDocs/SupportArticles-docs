@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a workaround for an issue where you receive an error message when you try to delete a record from a DNS zone.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837335
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes limitations to the resultant set of policy (RSoP) planning mode when you try to use it across multiple forests.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 910206
 
 ## Symptoms

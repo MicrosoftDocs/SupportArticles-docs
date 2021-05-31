@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides information about well-known SIDs in all versions of Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 243330
 
 ## Summary

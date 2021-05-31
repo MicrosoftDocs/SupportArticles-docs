@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps fix the error 1722 of Active Directory replication.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes the steps to add Original Equipment Manufacturer (OEM)-supplied drivers to Windows installations.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 254078
 
 ## Summary

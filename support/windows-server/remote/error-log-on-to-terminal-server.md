@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an issue that occurs when you log on to a Windows Server 2003-based terminal server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 935649
 
 ## Symptoms

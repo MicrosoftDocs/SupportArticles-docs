@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # How to transfer bookmarks from Mozilla Firefox to Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you solve the problem of importing bookmarks from third-party browsers to Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer  

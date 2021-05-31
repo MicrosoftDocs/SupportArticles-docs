@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a resolution for the event ID 307 and 304 that are logged when you deploy Windows on a device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
 _Original KB number:_ &nbsp; 4480781
 
 ## Symptom

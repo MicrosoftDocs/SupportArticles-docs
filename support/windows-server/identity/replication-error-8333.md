@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes an issue where Active Directory Replications fail with error 8333: Directory object not found (ERROR_DS_OBJ_NOT_FOUND).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2703708
 
 > [!NOTE]

@@ -7,6 +7,8 @@ ms.reviewer: lip, ramakoni
 ---
 # Internet Explorer opens, flashes, and then closes immediately when you start it
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a resolution for the issue that Internet Explorer opens, flashes, and then closes immediately when you start it.
 
 _Original product version:_ &nbsp; Internet Explorer 10, Internet Explorer 11  
@@ -58,7 +60,7 @@ If you still can't access some websites, get help from the [Microsoft Community 
 
 For more information about How to reset settings in Internet Explorer, see the following video.
 
-> [!VIDEO <https://www.microsoft.com/videoplayer/embed/c989d6d8-f8f9-4cb5-a2f1-da6a7e89f18b>]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/c989d6d8-f8f9-4cb5-a2f1-da6a7e89f18b]
 
 ## Applies to
 

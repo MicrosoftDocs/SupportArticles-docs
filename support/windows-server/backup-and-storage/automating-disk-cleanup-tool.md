@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes how to run the Disk Cleanup tool (Cleanmgr.exe) by using command-line switches. Cleanmgr.exe is designed to clear unnecessary files from your computer's hard disk. You can configure Cleanmgr.exe with command-line switches to clean up the files you want. You can then schedule the task to run at a specific time by using the Scheduled Tasks tool.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 253597
 
 ## More information

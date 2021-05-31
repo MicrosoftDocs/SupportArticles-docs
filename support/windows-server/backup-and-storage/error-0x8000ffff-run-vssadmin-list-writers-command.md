@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article resolves a problem that occurs when you use the `vssadmin list writers` command on a Windows Server 2003-based computer. when the issue occurs, you may receive an error message, an event, or the list may be blank.
 
-_Original product version:_ &nbsp;Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp;940184
 
 ## Symptoms  

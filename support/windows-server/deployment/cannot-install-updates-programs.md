@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article offers you some advanced manual methods that can be used to fix some problems that prevent you from installing some updates or programs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 822798
 
 ## Symptoms

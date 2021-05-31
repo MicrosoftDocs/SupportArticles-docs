@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes when and how to transfer or seize Flexible Single Master Operations (FSMO) roles.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
 _Original KB number:_ &nbsp; 255504
 
 ## More information

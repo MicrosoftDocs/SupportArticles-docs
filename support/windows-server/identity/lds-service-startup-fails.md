@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an error that LDS service startup fails after you manually change msDS-Behavior-Version.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4550446
 
 ## Symptom

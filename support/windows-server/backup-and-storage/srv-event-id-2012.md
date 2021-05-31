@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article discusses the system event log srv event ID 2012.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2885205
 
 ## Summary

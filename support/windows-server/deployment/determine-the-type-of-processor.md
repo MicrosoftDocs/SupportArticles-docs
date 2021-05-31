@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to determine the type of processor that is used on a computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 888731
 
 ## Introduction

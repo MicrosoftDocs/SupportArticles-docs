@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Using Proxy Servers together with Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article discusses how to use Microsoft Internet Explorer in proxy environments.
 
 _Original product version:_ &nbsp; Internet Explorer  

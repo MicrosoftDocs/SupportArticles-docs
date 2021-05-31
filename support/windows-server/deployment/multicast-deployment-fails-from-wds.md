@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a solution to an issue where deploying an image from a Windows Deployment Services (WDS) server by using multicast fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2582106
 
 ## Symptoms

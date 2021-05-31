@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where clients cannot join or log on to the domain.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 912023
 
 ## Symptoms

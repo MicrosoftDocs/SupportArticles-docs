@@ -2,7 +2,7 @@
 title: Error when you use the Set-MsolADFSContext command
 description: Describes an issue in which you receive an error message when you use the Set-MsolADFSContext command.
 ms.date: 05/14/2021
-author: v-six
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # Error when you use the Set-MsolADFSContext command: The connection to \<ServerName> Active Directory Federation Services 2.0 server failed
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp;2587730
 
 ## Symptoms

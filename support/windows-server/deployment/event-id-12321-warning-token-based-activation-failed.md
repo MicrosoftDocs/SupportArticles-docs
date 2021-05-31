@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a resolution for Event ID 12321 Warning Token Based Activation failed.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2020644
 
 ## Symptoms

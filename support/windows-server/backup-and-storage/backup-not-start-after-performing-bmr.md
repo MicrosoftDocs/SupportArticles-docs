@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to a problem that prevents Windows Server Backup from starting after you perform a bare metal recovery (BMR).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2961238
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes why can't delete a file or a folder on an NTFS file system volume. It also provides help to solve this issue.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 320081
 
 > [!NOTE]

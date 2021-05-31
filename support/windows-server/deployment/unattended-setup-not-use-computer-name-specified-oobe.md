@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a resolution for the issue that unattended setup does not use Computer Name Specified by User during OOBE to Join the Domain.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 944353
 
 ## Rapid Publishing

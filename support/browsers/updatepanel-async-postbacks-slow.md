@@ -7,6 +7,8 @@ ms.reviewer: jamesche
 ---
 # UpdatePanel async postbacks slow in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article introduces a workaround to solve the issue that you experience a delay when you visit a page and select a page element.
 
 _Original product version:_ &nbsp; Internet Explorer  

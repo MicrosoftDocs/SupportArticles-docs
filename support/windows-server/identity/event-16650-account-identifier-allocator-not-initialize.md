@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to solve errors that occurs when you add objects to Active Directory or restore a domain controller from a system state backup.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 839879
 
 ## Symptoms

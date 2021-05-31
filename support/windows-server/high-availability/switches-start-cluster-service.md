@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article lists all the available switches that can be used as startup parameters to start the Cluster service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 258078
 
 ## Summary

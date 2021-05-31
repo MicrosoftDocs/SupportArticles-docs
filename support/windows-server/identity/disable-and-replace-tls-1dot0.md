@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides guidance and considerations for disabling and replacing TLS 1.0 in Active Directory Federation Services (AD FS).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3194197
 
 ## Summary

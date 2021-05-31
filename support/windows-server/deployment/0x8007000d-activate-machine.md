@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps fix the error 0x8007000D that occurs when you activate a Windows 7 machine by using any type of product key.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2230957
 
 ## Symptoms

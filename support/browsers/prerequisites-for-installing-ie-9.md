@@ -7,6 +7,8 @@ ms.reviewer: jmann
 ---
 # Prerequisites for installing Internet Explorer 9
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem that some prerequisites of Internet Explorer 9 can't be installed automatically.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

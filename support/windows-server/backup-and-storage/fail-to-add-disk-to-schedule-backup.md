@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article helps fix an error (The filename, directory name, or volume label syntax is incorrect) that occurs when you add an additional disk to a scheduled backup.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009365
 
 ## Symptoms

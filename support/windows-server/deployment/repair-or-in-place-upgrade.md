@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair or in-place upgrade of the existing installation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2255099
 
 ## More information

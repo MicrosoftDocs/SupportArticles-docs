@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where Certificate Services (certsvc) doesn't start after upgrade to Microsoft Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 3205641
 
 ## Symptoms

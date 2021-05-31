@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a resolution for the problems that may occur when administrative shares are missing.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 842715
 
 ## Summary

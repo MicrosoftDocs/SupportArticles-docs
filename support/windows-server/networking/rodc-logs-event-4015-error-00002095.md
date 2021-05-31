@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes event ID 4015 that occurs when you run the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969488
 
 ## Symptoms

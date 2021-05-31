@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a workaround for a problem where you fail to modify the Hosts file or the Lmhosts file in Windows 7.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 923947
 
 ## Symptoms

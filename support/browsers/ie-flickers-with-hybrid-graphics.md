@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Internet Explorer may flicker on computers with hybrid graphics
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides steps to solve the flickering issue that occurs on certain computers with *hybrid graphics*.
 
 _Original product version:_ &nbsp; Internet Explorer  

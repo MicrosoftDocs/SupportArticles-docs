@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to use the Recovery Console on a computer that does not start.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 326215
 
 ## Summary

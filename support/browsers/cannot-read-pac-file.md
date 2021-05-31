@@ -7,6 +7,8 @@ ms.reviewer: Aloot, pierrelc
 ---
 # Windows 10 does not read a PAC file referenced by a file protocol
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the resolution to solve the issue that a PAC file referenced by a file protocol cannot be read by Internet Explorer or Microsoft Edge.
 
 _Original product version:_ &nbsp; Windows 10, Microsoft Edge, Internet Explorer 11  

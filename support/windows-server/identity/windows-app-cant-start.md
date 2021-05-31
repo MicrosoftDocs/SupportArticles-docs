@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an error that occurs when Windows App cannot start after ADMT 3.2 security translation runs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3145204
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to system error 51 or 53 that occurs when you access shared resources.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 259878
 
 ## Symptoms

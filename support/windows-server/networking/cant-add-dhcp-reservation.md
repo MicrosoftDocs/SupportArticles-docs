@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where you can't add a DHCP reservation that is outside of the scope distribution range.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2005980
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides workarounds for an issue where Domain Name System (DNS) dynamic updates of Pointer (PTR) records can't be performed on a classless reverse lookup zone.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 253575
 
 ## Symptoms

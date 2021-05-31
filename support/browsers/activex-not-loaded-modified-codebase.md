@@ -7,6 +7,8 @@ ms.reviewer: mmcgough
 ---
 # ActiveX control is not loaded with modified CODEBASE value in the registry
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving how to modify the registry value to load ActiveX controls.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10  
