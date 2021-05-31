@@ -31,7 +31,7 @@ The *SFC.exe* program performs the following operations:
 
 ## View the log file
 
-The *SFC.exe* program writes the details of each verification operation and of each repair operation to the *CBS.log* file. Each *SFC.exe* program entry in this file has an **\[SR\]** tag. The *CBS.log* file is located in the `%windir%\Logs\CBS` folder.
+The *SFC.exe* program writes the details of each verification operation and of each repair operation to the *CBS.log* file. Each *SFC.exe* program entry in this file has an **\[SR\]** tag. The *CBS.log* file is located in the *%windir%\Logs\CBS* folder.
 
 > [!NOTE]
 > The Windows Modules Installer service also writes to this log file. (The Windows Modules Installer service installs optional features, updates, and service packs.)
