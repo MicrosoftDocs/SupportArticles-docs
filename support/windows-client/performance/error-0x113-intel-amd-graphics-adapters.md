@@ -1,7 +1,7 @@
 ---
 title: Computer crashes with error code 0x113
 description: Resolves an issue in which the computer crashes with error code 0x113. This issue occurs if the computer has hybrid graphic cards installed.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround for an issue where a computer crashes with error code 0x113.
 
-_Original product version:_ &nbsp;Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp;2990029
 
 ## Symptoms  

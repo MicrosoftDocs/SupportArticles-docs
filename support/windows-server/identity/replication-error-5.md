@@ -17,24 +17,26 @@ ms.technology: windows-server-active-directory
 
 This article describes the symptoms, cause, and resolution steps for situations where AD operations fail with error 5: Access is denied.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002013
 
 ## Symptoms
 
 1. DCDIAG reports that Active Directory Replications test has failed with error status code (5): **access is denied**.
 
-    > Testing server: \<site name>\<destination dc name>  
+    ```output
+    Testing server: <site name><destination dc name>  
     Starting test: Replications  
     Replications Check  
-    [Replications Check,\<destination DC name] A recent replication attempt failed:  
-    From \<source DC> to \<destination DC>  
-    Naming Context: \<directory partition DN path>  
+    [Replications Check,<destination DC name] A recent replication attempt failed:  
+    From <source DC> to <destination DC>  
+    Naming Context: <directory partition DN path>  
     The replication generated an error (5):  
     Access is denied.  
-    The failure occurred at \<date> \<time>.  
-    The last success occurred at \<date> \<time>.
+    The failure occurred at <date> <time>.  
+    The last success occurred at <date> <time>.
     3 failures have occurred since the last success.
+    ```
 
 2. DCDIAG reports that DsBindWithSpnEx() failed with error 5.
 
@@ -51,21 +53,23 @@ _Original KB number:_ &nbsp; 2002013
 
     Sample output from `REPADMIN /SHOWREPS` showing inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the **replication access was denied** error is shown below:
 
-    > Default-First-Site-Name\CONTOSO-DC1  
+    ```output
+    Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
     Site Options: (none)  
     DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
     DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
-    >
-    > ==== INBOUND NEIGHBORS ======================================  
-    >
-    > DC=contoso, DC=com  
+
+    ==== INBOUND NEIGHBORS ======================================  
+
+    DC=contoso, DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
-    Last attempt @ \<date> \<time> failed, result 5 (0x5):  
+    Last attempt @ <date> <time> failed, result 5 (0x5):  
     Access is denied.  
     <#> consecutive failure(s).  
-    Last success @ \<date> \<time>.
+    Last success @ <date> <time>.
+    ```
 
 4. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the status 5 are logged in the directory service event log.
 

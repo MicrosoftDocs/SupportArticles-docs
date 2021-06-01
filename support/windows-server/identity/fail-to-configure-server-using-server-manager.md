@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps fix an error (The server is not operational) that occurs when you configure a server from a workgroup as a domain controller by using Server Manager.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2738697
 
 ## Symptoms

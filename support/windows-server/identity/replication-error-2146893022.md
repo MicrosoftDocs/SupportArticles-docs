@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022: The target principal name is incorrect).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2090913
 
 > [!NOTE]
@@ -44,13 +44,13 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     Using `repadmin`:
 
     ```console
-    Repadmin replicate destinationDC sourceDC DN_of_Domain_NC
+    Repadmin /replicate destinationDC sourceDC DN_of_Domain_NC
     ```
 
     For example, if replication is failing on `ContosoDC2.contoso.com`, run the following command on `ContosoDC1.contoso.com`:
 
     ```console
-    Repadmin replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
+    Repadmin /replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
     ```
 
 3. Start the Kerberos KDC service on the destination domain controller by running the following command:

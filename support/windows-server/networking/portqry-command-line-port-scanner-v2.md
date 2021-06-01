@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article discusses the new features and functionality that are available in PortQry Command Line Port Scanner version 2.0.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;832919
 
 ## Summary
@@ -92,12 +92,13 @@ PortQry then performs the following actions:
 
 #### Sample output
 
-> UDP port 389 (unknown service): LISTENING or FILTERED  
+```output
+UDP port 389 (unknown service): LISTENING or FILTERED  
 Sending LDAP query to UDP port 389...  
->
-> LDAP query response:  
->
-> currentdate: *\<DateTime>* (unadjusted GMT)  
+
+LDAP query response:  
+
+currentdate: <DateTime> (unadjusted GMT)  
 subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=domain,DC=example,DC=com  
 dsServiceName: CN=NTDS Settings,CN=myserver,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=domain,DC=example,DC=com  
 namingContexts: DC=domain,DC=example,DC=com  
@@ -119,10 +120,11 @@ isGlobalCatalogReady: TRUE
 domainFunctionality: 0  
 forestFunctionality: 0  
 domainControllerFunctionality: 2  
->
-> ======== End of LDAP query response ========
->
-> UDP port 389 is LISTENING
+
+======== End of LDAP query response ========
+
+UDP port 389 is LISTENING
+```
 
 In this example, you determine that port 389 is listening. Additionally, you can determine which LDAP service is listening on port 389 and certain details about that service.
 
@@ -145,33 +147,35 @@ PortQry then performs the following actions:
 
 #### Sample output
 
-> UDP port 135 (epmap service): LISTENING or FILTERED  
+```output
+UDP port 135 (epmap service): LISTENING or FILTERED  
 Querying Endpoint Mapper Database...  
 Server's response:  
->
-> UUID: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
-> ncacn_ip_tcp:169.254.12.191[4144]
->
-> UUID: ecec0d70-a603-11d0-96b1-00a0c91ece30 NTDS Backup Interface
-> ncacn_np:\\\\MYSERVER[\\PIPE\\lsass]
->
-> UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-> ncacn_ip_tcp:169.254.12.191[1030]
->
-> UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-> ncadg_ip_udp:169.254.12.191[1032]
->
-> UUID: 12345678-1234-abcd-ef00-01234567cffb
-> ncacn_np:\\\\MYSERVER[\\PIPE\\lsass]
->
-> UUID: 12345678-1234-abcd-ef00-01234567cffb
-> ncacn_np:\\\\MYSERVER[\\PIPE\\POLICYAGENT]
->
-> Total endpoints found: 6
->
-> ==== End of RPC Endpoint Mapper query response ====
->
-> UDP port 135 is LISTENING
+
+UUID: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
+ncacn_ip_tcp:169.254.12.191[4144]
+
+UUID: ecec0d70-a603-11d0-96b1-00a0c91ece30 NTDS Backup Interface
+ncacn_np:\\MYSERVER[\PIPE\lsass]
+
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+ncacn_ip_tcp:169.254.12.191[1030]
+
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+ncadg_ip_udp:169.254.12.191[1032]
+
+UUID: 12345678-1234-abcd-ef00-01234567cffb
+ncacn_np:\\MYSERVER[\PIPE\lsass]
+
+UUID: 12345678-1234-abcd-ef00-01234567cffb
+ncacn_np:\\MYSERVER[\PIPE\POLICYAGENT]
+
+Total endpoints found: 6
+
+==== End of RPC Endpoint Mapper query response ====
+
+UDP port 135 is LISTENING
+```
 
 In this example, you determine that port 135 is listening. Additionally, you can determine which services or programs are registered with the RPC endpoint mapper database on the destination computer. The output includes the universal unique identifier (UUID) for each program, the annotated name (if one exists), the protocol that each program uses, the network address that the program is bound to, and the program's endpoint in square brackets.
 
@@ -204,21 +208,23 @@ SNMP support is a new feature in PortQry version 2.0. By default, the SNMP servi
 
 #### Sample output
 
-> Querying target system called:
->
-> 127.0.0.1
->
-> querying...
->
-> UDP port 161 (snmp service): LISTENING or FILTERED
->
-> community name for query:
->
-> secure123
->
-> Sending SNMP query to UDP port 161...
->
-> UDP port 161 is LISTENING
+```output
+Querying target system called:
+
+127.0.0.1
+
+querying...
+
+UDP port 161 (snmp service): LISTENING or FILTERED
+
+community name for query:
+
+secure123
+
+Sending SNMP query to UDP port 161...
+
+UDP port 161 is LISTENING
+```
 
 ### ISA Server support
 
@@ -230,58 +236,62 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-> Querying target system called:
->
-> myproxy-server
->
-> Attempting to resolve name to IP address...
->
-> Name resolved to 169.254.24.86
->
-> querying...
->
-> UDP port 1745 (unknown service): LISTENING or FILTERED
->
-> Sending ISA query to UDP port 1745...
->
-> UDP port 1745 is LISTENING
+```output
+Querying target system called:
+
+myproxy-server
+
+Attempting to resolve name to IP address...
+
+Name resolved to 169.254.24.86
+
+querying...
+
+UDP port 1745 (unknown service): LISTENING or FILTERED
+
+Sending ISA query to UDP port 1745...
+
+UDP port 1745 is LISTENING
+```
 
 When PortQry queries TCP port 1745, PortQry downloads the Mspclnt.ini file from the ISA Server if the Mspclnt.ini file is available on that port. The Mspclnt.ini file contains configuration information that Winsock proxy clients and Firewall clients use.
 
 #### Sample output
 
-> TCP port 1745 (unknown service): LISTENING
->
-> Sending ISA query to TCP port 1745...
->
-> ISA query response:
->
-> 10.0.0.0 10.255.255.255  
-> 127.0.0.1 127.0.0.1  
-> 169.254.0.0 169.254.255.255  
-> 192.168.0.0 192.168.255.255  
-> 127.0.0.0 127.255.255.255  
->
-> ;  
-> ; This file should not be edited.  
-> ; Changes to the client configuration should only be made using ISA Management.  
-> ;  
-> [Common]  
-> myproxy-server.example.com  
-> Set Browsers to use Auto Detect=1  
-> AutoDetect ISA Servers=1  
-> WebProxyPort=8080  
-> Port=1745  
-> Configuration Refresh Time (Hours)=2  
-> Re-check Inaccessible Server Time (Minutes)=10  
-> Refresh Give Up Time (Minutes)=15  
-> Inaccessible Servers Give Up Time (Minutes)=2  
-> [Servers Ip Addresses]  
-> Name=myproxy-server  
-> [My Config]  
-> Path1=\\myproxy-server\mspclnt\  
->
-> ======== End of ISA query response ========
+```output
+TCP port 1745 (unknown service): LISTENING
+
+Sending ISA query to TCP port 1745...
+
+ISA query response:
+
+10.0.0.0 10.255.255.255  
+127.0.0.1 127.0.0.1  
+169.254.0.0 169.254.255.255  
+192.168.0.0 192.168.255.255  
+127.0.0.0 127.255.255.255  
+
+;  
+; This file should not be edited.  
+; Changes to the client configuration should only be made using ISA Management.  
+;  
+[Common]  
+myproxy-server.example.com  
+Set Browsers to use Auto Detect=1  
+AutoDetect ISA Servers=1  
+WebProxyPort=8080  
+Port=1745  
+Configuration Refresh Time (Hours)=2  
+Re-check Inaccessible Server Time (Minutes)=10  
+Refresh Give Up Time (Minutes)=15  
+Inaccessible Servers Give Up Time (Minutes)=2  
+[Servers Ip Addresses]  
+Name=myproxy-server  
+[My Config]  
+Path1=\\myproxy-server\mspclnt\  
+
+======== End of ISA query response ========
+```
 
 ### SQL Server 2000 support
 
@@ -293,28 +303,30 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-> Querying target system called:
->
-> 192.168.1.20
->
-> querying...
->
-> UDP port 1434 (ms-sql-m service): LISTENING or FILTERED
->
-> Sending SQL Server query to UDP port 1434...
->
-> Server's response:
->
-> ServerName SQL-Server1  
-> InstanceName MSSQLSERVER  
-> IsClustered No  
-> Version 8.00.194  
-> tcp 1433  
-> np \\SQL-Server1\pipe\sql\query
->
-> ==== End of SQL Server query response ====
->
-> UDP port 1434 is LISTENING
+```output
+Querying target system called:
+
+192.168.1.20
+
+querying...
+
+UDP port 1434 (ms-sql-m service): LISTENING or FILTERED
+
+Sending SQL Server query to UDP port 1434...
+
+Server's response:
+
+ServerName SQL-Server1  
+InstanceName MSSQLSERVER  
+IsClustered No  
+Version 8.00.194  
+tcp 1433  
+np \SQL-Server1\pipe\sql\query
+
+==== End of SQL Server query response ====
+
+UDP port 1434 is LISTENING
+```
 
 ### TFTP support
 
@@ -326,21 +338,23 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-> Querying target system called:
->
-> myserver.example.com
->
-> Attempting to resolve name to IP address...
->
-> Name resolved to 169.254.23.4
->
-> querying...
->
-> UDP port 69 (tftp service): LISTENING or FILTERED
->
-> Sending TFTP query to UDP port 69...
->
-> UDP port 69 is LISTENING
+```output
+Querying target system called:
+
+myserver.example.com
+
+Attempting to resolve name to IP address...
+
+Name resolved to 169.254.23.4
+
+querying...
+
+UDP port 69 (tftp service): LISTENING or FILTERED
+
+Sending TFTP query to UDP port 69...
+
+UDP port 69 is LISTENING
+```
 
 ### L2TP support
 
@@ -352,31 +366,37 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-> Querying target system called:
->
-> vpnserver
->
-> Attempting to resolve name to IP address...
->
-> Name resolved to 169.254.12.225
->
-> querying...
->
-> UDP port 1701 (l2tp service): LISTENING or FILTERED
->
-> Sending L2TP query to UDP port 1701...
->
-> UDP port 1701 is LISTENING
+```output
+Querying target system called:
+
+vpnserver
+
+Attempting to resolve name to IP address...
+
+Name resolved to 169.254.12.225
+
+querying...
+
+UDP port 1701 (l2tp service): LISTENING or FILTERED
+
+Sending L2TP query to UDP port 1701...
+
+UDP port 1701 is LISTENING
+```
 
 ### Customize ports that queries use
 
 By default, every Windows Server 2003, Windows XP, and Windows 2000-based computer has a Services file that's located in the %SYSTEMROOT%\System32\Drivers\Etc folder. PortQry uses this file to resolve port numbers to their corresponding service names. The content of this file dictates the ports where PortQry sends formatted messages when you use the `PortQry.exe` command. You can edit this file to direct PortQry to send formatted messages to an alternative port. For example, the following entry appears in a typical Services file:
 
-> ldap              389/tcp                           #Lightweight Directory Access Protocol
+```output
+ldap              389/tcp                           #Lightweight Directory Access Protocol
+```
 
 You can edit this port entry or add an additional entry. To cause PortQry to send LDAP queries to port 1025, modify the entry to the following entry:
 
-> ldap              1025/tcp                           #Lightweight Directory Access Protocol
+```output
+ldap              1025/tcp                           #Lightweight Directory Access Protocol
+```
 
 ### Additional service information returned
 
@@ -399,12 +419,14 @@ In this scenario, PortQry tries to use the Anonymous user account to log on to t
 
 You receive a response that's similar to the following response:
 
-> TCP port 21 (ftp service): LISTENING
->
-> Data returned from port:  
-> 220 Microsoft FTP Service
->
-> 331 Anonymous access allowed, send identity (e-mail name) as password.
+```output
+TCP port 21 (ftp service): LISTENING
+
+Data returned from port:  
+220 Microsoft FTP Service
+
+331 Anonymous access allowed, send identity (e-mail name) as password.
+```
 
 In Example 1, you can determine the type of FTP server that's listening on the target port and whether the FTP server is configured to permit anonymous user logons.
 
@@ -412,10 +434,12 @@ In Example 1, you can determine the type of FTP server that's listening on the t
 
 You receive a response that's similar to the following response:
 
-> TCP port 25 (smtp service): LISTENING
->
-> Data returned from port:  
-> 220 MyMailServer.domain.example.com Microsoft ESMTP MAIL Service, Version: 6.0.3790.0 ready at Mon, 15 Dec 2003 10:24:50 -0800
+```output
+TCP port 25 (smtp service): LISTENING
+
+Data returned from port:  
+220 MyMailServer.domain.example.com Microsoft ESMTP MAIL Service, Version: 6.0.3790.0 ready at Mon, 15 Dec 2003 10:24:50 -0800
+```
 
 In Example 2, you can determine the type of SMTP server that's listening on the target port.
 
@@ -612,32 +636,35 @@ With PortQry version 1.22, users can query ports from the command line in a comm
 
 To start PortQry in interactive mode, use the **-i** option. For example, type portqry **-i**. When you do so, you receive the following output:
 
-> Portqry Interactive Mode
->
-> Type 'help' for a list of commands
->
-> Default Node: 127.0.0.1
->
-> Current option values:  
-> end port= 80  
-> protocol= TCP  
-> source port= 0 (ephemeral)
->
+```output
+Portqry Interactive Mode
+
+Type 'help' for a list of commands
+
+Default Node: 127.0.0.1
+
+Current option values:  
+end port= 80  
+protocol= TCP  
+source port= 0 (ephemeral)
+```
 
 You can use other parameters together with the **-i** parameter to change the settings that PortQry uses. For example, you type a command that's similar to the following command, and then press Enter: `portqry -i -e 53 -n 192.168.1.20 -p both -sp 2030`.
 
 You receive the following output:
 
-> Portqry Interactive Mode
->
-> Type 'help' for a list of commands
->
-> Default Node: 192.168.1.20
->
-> Current option values:
-> end port= 53
-> protocol= BOTH
-> source port= 2300
+```output
+Portqry Interactive Mode
+
+Type 'help' for a list of commands
+
+Default Node: 192.168.1.20
+
+Current option values:
+end port= 53
+protocol= BOTH
+source port= 2300
+```
 
 ## PortQry local mode
 
@@ -647,41 +674,42 @@ The PortQry local mode of operation is designed to give you detailed information
 
     Sample output
 
-    > TCP/UDP Port Usage
-    >
-    > 96 active ports found
-    >
-    > Port Local IPState Remote IP:Port  
+    ```output
+    TCP/UDP Port Usage
+    
+    96 active ports found
+    
+    Port Local IPState Remote IP:Port  
     TCP 80 0.0.0.0 LISTENING 0.0.0.0:18510  
     TCP 80 169.254.149.9 TIME WAIT 169.254.74.55:3716  
     TCP 80 169.254.149.9 TIME WAIT 169.254.200.222:3885  
     TCP 135 0.0.0.0 LISTENING 0.0.0.0:10280  
-    UDP 135 0.0.0.0 *:*  
-    UDP 137 169.254.149.9 *:*  
-    UDP 138 169.254.149.9 *:*  
+    UDP 135 0.0.0.0 :  
+    UDP 137 169.254.149.9 :  
+    UDP 138 169.254.149.9 :  
     TCP 139 169.254.149.9 LISTENING 0.0.0.0:43065  
     TCP 139 169.254.149.9 ESTABLISHED 169.254.4.253:4310  
     TCP 139 169.254.149.9 ESTABLISHED 169.254.74.55:3714  
-    UDP 161 0.0.0.0 *:*  
+    UDP 161 0.0.0.0 :  
     TCP 445 0.0.0.0 LISTENING 0.0.0.0:34836  
     TCP 445 169.254.149.9 ESTABLISHED 169.254.53.54:4443  
     TCP 445 169.254.149.9 ESTABLISHED 169.254.112.122:2111  
     TCP 445 169.254.149.9 ESTABLISHED 169.254.112.199:1188  
     TCP 445 169.254.149.9 ESTABLISHED 169.254.113.96:1221  
     TCP 445 169.254.149.9 ESTABLISHED 169.254.200.222:3762  
-    UDP 445 0.0.0.0 *:*  
-    UDP 500 169.254.149.9 *:*  
+    UDP 445 0.0.0.0 :  
+    UDP 500 169.254.149.9 :  
     TCP 593 0.0.0.0 LISTENING 0.0.0.0:59532  
-    UDP 1029 0.0.0.0 *:*  
+    UDP 1029 0.0.0.0 :  
     TCP 1040 127.0.0.1 LISTENING 0.0.0.0:18638  
-    UDP 1045 0.0.0.0 *:*  
+    UDP 1045 0.0.0.0 :  
     TCP 1048 127.0.0.1 LISTENING 0.0.0.0:2240  
     TCP 1053 127.0.0.1 LISTENING 0.0.0.0:26649  
     TCP 1061 127.0.0.1 LISTENING 0.0.0.0:26874  
     TCP 1067 127.0.0.1 LISTENING 0.0.0.0:2288  
     TCP 1068 0.0.0.0 LISTENING 0.0.0.0:2048  
     TCP 1088 127.0.0.1 LISTENING 0.0.0.0:35004  
-    UDP 1089 0.0.0.0 *:*  
+    UDP 1089 0.0.0.0 :  
     TCP 1091 127.0.0.1 LISTENING 0.0.0.0:43085  
     TCP 1092 0.0.0.0 LISTENING 0.0.0.0:2096  
     TCP 1094 127.0.0.1 LISTENING 0.0.0.0:51268  
@@ -693,28 +721,28 @@ The PortQry local mode of operation is designed to give you detailed information
     TCP 1118 0.0.0.0 LISTENING 0.0.0.0:43121  
     TCP 1119 0.0.0.0 LISTENING 0.0.0.0:26795  
     TCP 1121 0.0.0.0 LISTENING 0.0.0.0:26646  
-    UDP 1122 0.0.0.0 *:*  
+    UDP 1122 0.0.0.0 :  
     TCP 1123 0.0.0.0 LISTENING 0.0.0.0:35013  
-    UDP 1126 0.0.0.0 *:*  
+    UDP 1126 0.0.0.0 :  
     TCP 1137 127.0.0.1 LISTENING 0.0.0.0:34820  
     TCP 1138 0.0.0.0 LISTENING 0.0.0.0:26696  
     TCP 1138 169.254.149.9 CLOSE WAIT 169.254.5.103:80  
     TCP 1170 127.0.0.1 LISTENING 0.0.0.0:34934  
     TCP 1179 127.0.0.1 LISTENING 0.0.0.0:59463  
     TCP 1228 127.0.0.1 LISTENING 0.0.0.0:2128  
-    UDP 1352 0.0.0.0 *:*  
+    UDP 1352 0.0.0.0 :  
     TCP 1433 0.0.0.0 LISTENING 0.0.0.0:2064  
-    UDP 1434 0.0.0.0 *:*  
+    UDP 1434 0.0.0.0 :  
     TCP 1670 0.0.0.0 LISTENING 0.0.0.0:2288  
     TCP 1670 169.254.149.9 ESTABLISHED 169.254.233.87:445  
     TCP 1686 127.0.0.1 LISTENING 0.0.0.0:51309  
-    UDP 1687 127.0.0.1 *:*  
+    UDP 1687 127.0.0.1 :  
     TCP 1688 0.0.0.0 LISTENING 0.0.0.0:2135  
     TCP 1688 169.254.149.9 CLOSE WAIT 169.254.113.87:80  
     TCP 1689 0.0.0.0 LISTENING 0.0.0.0:51368  
     TCP 1689 169.254.149.9 CLOSE WAIT 169.254.113.87:80  
     TCP 1693 169.254.149.9 TIME WAIT 169.254.121.106:445  
-    UDP 1698 0.0.0.0 *:*  
+    UDP 1698 0.0.0.0 :  
     TCP 1728 127.0.0.1 LISTENING 0.0.0.0:2077  
     TCP 1766 127.0.0.1 LISTENING 0.0.0.0:35061  
     TCP 2605 127.0.0.1 LISTENING 0.0.0.0:2069  
@@ -724,89 +752,91 @@ The PortQry local mode of operation is designed to give you detailed information
     TCP 3389 169.254.149.9 ESTABLISHED 169.254.112.67:2796  
     TCP 3389 169.254.149.9 ESTABLISHED 169.254.113.96:4603  
     TCP 3389 169.254.149.9 ESTABLISHED 169.254.201.100:3917  
-    UDP 3456 0.0.0.0 *:*  
+    UDP 3456 0.0.0.0 :  
     TCP 3970 0.0.0.0 LISTENING 0.0.0.0:35012  
     TCP 3970 169.254.149.9 CLOSE WAIT 169.254.5.138:80  
     TCP 3972 0.0.0.0 LISTENING 0.0.0.0:51245  
     TCP 3972 169.254.149.9 CLOSE WAIT 169.254.5.138:80  
     TCP 4166 127.0.0.1 LISTENING 0.0.0.0:2208  
-    UDP 4447 0.0.0.0 *:*  
+    UDP 4447 0.0.0.0 :  
     TCP 4488 127.0.0.1 LISTENING 0.0.0.0:10358  
-    UDP 4500 169.254.149.9 *:*  
+    UDP 4500 169.254.149.9 :  
     TCP 4541 127.0.0.1 LISTENING 0.0.0.0:10442  
     TCP 4562 0.0.0.0 LISTENING 0.0.0.0:2192  
     TCP 4562 169.254.149.9 ESTABLISHED 169.254.0.40:1025  
-    UDP 4563 0.0.0.0 *:*  
-    UDP 4564 0.0.0.0 *:*  
+    UDP 4563 0.0.0.0 :  
+    UDP 4564 0.0.0.0 :  
     TCP 4566 0.0.0.0 LISTENING 0.0.0.0:51257  
     TCP 4566 169.254.149.9 ESTABLISHED 169.254.12.18:1492  
     TCP 4568 127.0.0.1 LISTENING 0.0.0.0:26665  
     TCP 4569 0.0.0.0 LISTENING 0.0.0.0:43186  
     TCP 4569 169.254.149.9 CLOSE WAIT 169.254.4.38:80  
     TCP 4756 0.0.0.0 LISTENING 0.0.0.0:51268  
-    UDP 4758 0.0.0.0 *:*  
+    UDP 4758 0.0.0.0 :  
     TCP 8953 0.0.0.0 LISTENING 0.0.0.0:26667  
     TCP 42510 0.0.0.0 LISTENING 0.0.0.0:51323  
-    UDP 43508 169.254.149.9 *:*  
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 74  
+    UDP 43508 169.254.149.9 :  
+    
+    Port Statistics
+    
+    TCP mappings: 74  
     UDP mappings: 22
-    >
-    > TCP ports in a LISTENING state: 51 = 68.92%  
+    
+    TCP ports in a LISTENING state: 51 = 68.92%  
     TCP ports in a ESTABLISHED state: 14 = 18.92%  
     TCP ports in a CLOSE WAIT state: 6 = 8.11%  
-    TCP ports in a TIME WAIT state: 3 = 4.05%  
+    TCP ports in a TIME WAIT state: 3 = 4.05%
+    ```  
 
     On computers that support Process ID (PID) to port mappings, the output includes the process ID of the process that's using the port on the local computer. If the verbose option is used (**-v**), the output also includes the names of the services that the process ID belongs to and lists all the modules that the process has loaded. Access to some information is restricted. For example, access to module information for the Idle and CSRSS processes is prohibited because their access restrictions prevent user-level code from opening them. PortQry reports as much information as it can access for each process. For best results, run the `Portqry -local` command in the context of the local Administrator or an account that has similar credentials. The following example log file excerpt illustrates the level of reporting that you may receive when you run the `Portqry -local` command:
 
-    > TCP/UDP Port to Process Mappings
-    >
-    > 55 mappings found
-    >
-    > PID:ProcessPortLocal IPState Remote IP:Port  
+    ```output
+    TCP/UDP Port to Process Mappings
+    
+    55 mappings found
+    
+    PID:ProcessPortLocal IPState Remote IP:Port  
     0:System IdleTCP 4442 169.254.113.96 TIME WAIT 169.254.5.136:80  
     0:System IdleTCP 4456 169.254.113.96 TIME WAIT 169.254.5.44:445  
     4:SystemTCP 445 0.0.0.0 LISTENING 0.0.0.0:2160  
     4:SystemTCP 139 169.254.113.96 LISTENING 0.0.0.0:24793  
     4:SystemTCP 1475 169.254.113.96 ESTABLISHED 169.254.8.176:445  
-    4:SystemUDP 445 0.0.0.0 *:*  
-    4:SystemUDP 137 169.254.113.96 *:*  
-    4:SystemUDP 138 169.254.113.96 *:*  
+    4:SystemUDP 445 0.0.0.0 :  
+    4:SystemUDP 137 169.254.113.96 :  
+    4:SystemUDP 138 169.254.113.96 :  
     424:winlogon.exeTCP 1200 169.254.113.96 CLOSE WAIT 169.254.5.44:389  
-    424:winlogon.exeUDP 1100 0.0.0.0 *:*  
+    424:winlogon.exeUDP 1100 0.0.0.0 :  
     484:lsass.exeTCP 1064 0.0.0.0 LISTENING 0.0.0.0:2064  
-    484:lsass.exeUDP 500 0.0.0.0 *:*  
-    484:lsass.exeUDP 1031 0.0.0.0 *:*  
-    484:lsass.exeUDP 4500 0.0.0.0 *:*  
+    484:lsass.exeUDP 500 0.0.0.0 :  
+    484:lsass.exeUDP 1031 0.0.0.0 :  
+    484:lsass.exeUDP 4500 0.0.0.0 :  
     668:svchost.exeTCP 135 0.0.0.0 LISTENING 0.0.0.0:16532  
     728:svchost.exeTCP 3389 0.0.0.0 LISTENING 0.0.0.0:45088  
-    800UDP 1026 0.0.0.0 *:*  
-    800UDP 1027 0.0.0.0 *:*  
+    800UDP 1026 0.0.0.0 :  
+    800UDP 1027 0.0.0.0 :  
     836:svchost.exeTCP 1025 0.0.0.0 LISTENING 0.0.0.0:43214  
     836:svchost.exeTCP 1559 169.254.113.96 CLOSE WAIT 169.254.5.44:389  
-    836:svchost.exeUDP 1558 0.0.0.0 *:*  
-    836:svchost.exeUDP 123 127.0.0.1 *:*  
-    836:svchost.exeUDP 3373 127.0.0.1 *:*  
-    836:svchost.exeUDP 123 169.254.113.96 *:*  
+    836:svchost.exeUDP 1558 0.0.0.0 :  
+    836:svchost.exeUDP 123 127.0.0.1 :  
+    836:svchost.exeUDP 3373 127.0.0.1 :  
+    836:svchost.exeUDP 123 169.254.113.96 :  
     1136:mstsc.exeTCP 2347 169.254.113.96 ESTABLISHED 172.30.137.221:3389  
-    1136:mstsc.exeUDP 2348 0.0.0.0 *:*  
+    1136:mstsc.exeUDP 2348 0.0.0.0 :  
     1276:dns.exeTCP 53 0.0.0.0 LISTENING 0.0.0.0:2160  
     1276:dns.exeTCP 1087 0.0.0.0 LISTENING 0.0.0.0:37074  
-    1276:dns.exeUDP 1086 0.0.0.0 *:*  
-    1276:dns.exeUDP 2126 0.0.0.0 *:*  
-    1276:dns.exeUDP 53 127.0.0.1 *:*  
-    1276:dns.exeUDP 1085 127.0.0.1 *:*  
-    1276:dns.exeUDP 53 169.254.113.96 *:*  
+    1276:dns.exeUDP 1086 0.0.0.0 :  
+    1276:dns.exeUDP 2126 0.0.0.0 :  
+    1276:dns.exeUDP 53 127.0.0.1 :  
+    1276:dns.exeUDP 1085 127.0.0.1 :  
+    1276:dns.exeUDP 53 169.254.113.96 :  
     1328:InoRpc.exeTCP 42510 0.0.0.0 LISTENING 0.0.0.0:220  
-    1328:InoRpc.exeUDP 43508 169.254.113.96 *:*  
-    1552:CcmExec.exeUDP 1114 0.0.0.0 *:*  
+    1328:InoRpc.exeUDP 43508 169.254.113.96 :  
+    1552:CcmExec.exeUDP 1114 0.0.0.0 :  
     1896:WINWORD.EXETCP 3807 169.254.113.96 CLOSE WAIT 169.254.237.37:3268  
-    1896:WINWORD.EXEUDP 3806 0.0.0.0 *:*  
-    1896:WINWORD.EXEUDP 1510 127.0.0.1 *:*  
+    1896:WINWORD.EXEUDP 3806 0.0.0.0 :  
+    1896:WINWORD.EXEUDP 1510 127.0.0.1 :  
     2148:IEXPLORE.EXETCP 4446 169.254.113.96 ESTABLISHED 169.254.113.92:80  
-    2148:IEXPLORE.EXEUDP 4138 127.0.0.1 *:*  
+    2148:IEXPLORE.EXEUDP 4138 127.0.0.1 :  
     3200:program.exeTCP 1906 169.254.113.96 ESTABLISHED 169.254.0.40:1025  
     3200:program.exeTCP 4398 169.254.113.96 ESTABLISHED 169.254.209.96:1433  
     3200:program.exeTCP 4438 169.254.113.96 ESTABLISHED 169.254.209.96:1433  
@@ -814,119 +844,119 @@ The PortQry local mode of operation is designed to give you detailed information
     3592:OUTLOOK.EXETCP 2214 169.254.113.96 CLOSE WAIT 169.254.237.37:3268  
     3592:OUTLOOK.EXETCP 2971 169.254.113.96 ESTABLISHED 169.254.5.216:1434  
     3592:OUTLOOK.EXETCP 4439 169.254.113.96 ESTABLISHED 169.254.47.242:1788  
-    3592:OUTLOOK.EXEUDP 1307 0.0.0.0 *:*  
-    3592:OUTLOOK.EXEUDP 1553 0.0.0.0 *:*  
+    3592:OUTLOOK.EXEUDP 1307 0.0.0.0 :  
+    3592:OUTLOOK.EXEUDP 1553 0.0.0.0 :  
     3660:IEXPLORE.EXETCP 4452 169.254.113.96 ESTABLISHED 169.254.9.74:80  
     3660:IEXPLORE.EXETCP 4453 169.254.113.96 ESTABLISHED 169.254.9.74:80  
     3660:IEXPLORE.EXETCP 4454 169.254.113.96 ESTABLISHED 169.254.230.88:80  
-    3660:IEXPLORE.EXEUDP 4451 127.0.0.1 *:*  
-    4048:program2.exeUDP 3689 127.0.0.1 *:*  
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 27
-    > UDP mappings: 28
-    >
-    > TCP ports in a LISTENING state: 9 = 33.33%  
+    3660:IEXPLORE.EXEUDP 4451 127.0.0.1 :  
+    4048:program2.exeUDP 3689 127.0.0.1 :  
+    
+    Port Statistics
+    
+    TCP mappings: 27
+    UDP mappings: 28
+    
+    TCP ports in a LISTENING state: 9 = 33.33%  
     TCP ports in a ESTABLISHED state: 12 = 44.44%  
     TCP ports in a CLOSE WAIT state: 4 = 14.81%  
     TCP ports in a TIME WAIT state: 2 = 7.41%  
-    >
-    > Port and Module Information by Process
-    >
-    > Note: restrictions applied to some processes may
-    > prevent Portqry from accessing more information
-    >
-    > For best results run Portqry in the context of
-    > the local administrator
-    >
-    > ======================================================  
+    
+    Port and Module Information by Process
+    
+    Note: restrictions applied to some processes may
+    prevent Portqry from accessing more information
+    
+    For best results run Portqry in the context of
+    the local administrator
+    
+    ======================================================  
     Process ID: 0 (System Idle Process)
-    >
-    > PIDPortLocal IPState Remote IP:Port  
+    
+    PIDPortLocal IPState Remote IP:Port  
     0TCP 4442 169.254.113.96 TIME WAIT 169.254.5.136:80  
     0TCP 4456 169.254.113.96 TIME WAIT 169.254.5.44:445  
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 2  
+    
+    Port Statistics
+    
+    TCP mappings: 2  
     UDP mappings: 0
-    >
-    > TCP ports in a TIME WAIT state: 2 = 100.00%
-    >
-    > Could not access module information for this process
-    >
-    > ======================================================
-    >
-    > Process ID: 4 (System Process)
-    >
-    > PIDPortLocal IPState Remote IP:Port  
+    
+    TCP ports in a TIME WAIT state: 2 = 100.00%
+    
+    Could not access module information for this process
+    
+    ======================================================
+    
+    Process ID: 4 (System Process)
+    
+    PIDPortLocal IPState Remote IP:Port  
     4TCP 445 0.0.0.0 LISTENING 0.0.0.0:2160  
     4TCP 139 169.254.113.96 LISTENING 0.0.0.0:24793  
     4TCP 1475 169.254.113.96 ESTABLISHED 169.254.8.176:445  
-    4UDP 445 0.0.0.0 *:*  
-    4UDP 137 169.254.113.96 *:*  
-    4UDP 138 169.254.113.96 *:*  
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 3  
+    4UDP 445 0.0.0.0 :  
+    4UDP 137 169.254.113.96 :  
+    4UDP 138 169.254.113.96 :  
+    
+    Port Statistics
+    
+    TCP mappings: 3  
     UDP mappings: 3
-    >
-    > TCP ports in a LISTENING state: 2 = 66.67%  
+    
+    TCP ports in a LISTENING state: 2 = 66.67%  
     TCP ports in a ESTABLISHED state: 1 = 33.33%
-    >
-    > Could not access module information for this process
-    >
-    > ======================================================
-    >
-    > Process ID: 352 (smss.exe)
-    >
-    > Process doesn't appear to be a service
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 0  
+    
+    Could not access module information for this process
+    
+    ======================================================
+    
+    Process ID: 352 (smss.exe)
+    
+    Process doesn't appear to be a service
+    
+    Port Statistics
+    
+    TCP mappings: 0  
     UDP mappings: 0
-    >
-    > Loaded modules:  
+    
+    Loaded modules:  
     \SystemRoot\System32\smss.exe (0x48580000)
-    >
-    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
-    >
-    > ======================================================
-    >
-    > Process ID: 484 (lsass.exe)
-    >
-    > Service Name: Netlogon  
+    
+    C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
+    
+    ======================================================
+    
+    Process ID: 484 (lsass.exe)
+    
+    Service Name: Netlogon  
     Display Name: Net Logon  
     Service Type: shares a process with other services
-    >
-    > Service Name: PolicyAgent  
+    
+    Service Name: PolicyAgent  
     Display Name: IPSEC Services  
     Service Type: shares a process with other services
-    >
-    > Service Name: ProtectedStorage  
+    
+    Service Name: ProtectedStorage  
     Display Name: Protected Storage
-    >
-    > Service Name: SamSs  
+    
+    Service Name: SamSs  
     Display Name: Security Accounts Manager  
     Service Type: shares a process with other services
-    >
-    > PIDPortLocal IPState Remote IP:Port  
+    
+    PIDPortLocal IPState Remote IP:Port  
     484TCP 1064 0.0.0.0 LISTENING 0.0.0.0:2064  
-    484UDP 500 0.0.0.0 *:*  
-    484UDP 1031 0.0.0.0 *:*  
-    484UDP 4500 0.0.0.0 *:*
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 1  
+    484UDP 500 0.0.0.0 :  
+    484UDP 1031 0.0.0.0 :  
+    484UDP 4500 0.0.0.0 :
+    
+    Port Statistics
+    
+    TCP mappings: 1  
     UDP mappings: 3
-    >
-    > TCP ports in a LISTENING state: 1 = 100.00%
-    >
-    > Loaded modules:  
+    
+    TCP ports in a LISTENING state: 1 = 100.00%
+    
+    Loaded modules:  
     C:\WINDOWS\system32\lsass.exe (0x01000000)  
     C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
     C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
@@ -950,26 +980,26 @@ The PortQry local mode of operation is designed to give you detailed information
     C:\WINDOWS\system32\WLDAP32.dll (0x76F10000)  
     C:\WINDOWS\system32\IMM32.DLL (0x76290000)  
     C:\WINDOWS\system32\LPK.DLL (0x62D80000)  
-    >
-    > ======================================================
-    >
-    > Process ID: 668 (svchost.exe)
-    >
-    > Service Name: RpcSs  
+    
+    ======================================================
+    
+    Process ID: 668 (svchost.exe)
+    
+    Service Name: RpcSs  
     Display Name: Remote Procedure Call (RPC)  
     Service Type: shares a process with other services
-    >
-    > PIDPortLocal IPState Remote IP:Port  
+    
+    PIDPortLocal IPState Remote IP:Port  
     668TCP 135 0.0.0.0 LISTENING 0.0.0.0:16532
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 1  
+    
+    Port Statistics
+    
+    TCP mappings: 1  
     UDP mappings: 0
-    >
-    > TCP ports in a LISTENING state: 1 = 100.00%
-    >
-    > Loaded modules:  
+    
+    TCP ports in a LISTENING state: 1 = 100.00%
+    
+    Loaded modules:  
     C:\WINDOWS\system32\svchost.exe (0x01000000)  
     C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
     C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
@@ -1000,8 +1030,9 @@ The PortQry local mode of operation is designed to give you detailed information
     C:\WINDOWS\system32\WINSTA.dll (0x76260000)  
     C:\WINDOWS\system32\NETAPI32.dll (0x71C40000)  
     C:\WINDOWS\system32\USERENV.dll (0x75970000)  
-    >
-    > ========= end of log file =========
+    
+    ========= end of log file =========
+    ```
 
     You can use this information to determine which ports are associated with a particular program or service that's running on the computer. In some cases, Portqry may report that the System Idle process (PID 0) is using some TCP ports. This behavior may occur if a local program connects to a TCP port, and then stops. The program's TCP connection to the port may be left in a "Timed Wait" state even though the program is no longer running. In this case, Portqry may detect that the port is in use. However, Portqry can't identify the program that's using the port because the program has stopped. The PID was released. The port may be in a "Timed Wait" state for several minutes even though the process that was using the port has stopped. By default, the port remains in a "Timed Wait" state for twice as long as the maximum segment lifetime.
 
@@ -1039,49 +1070,50 @@ The PortQry local mode of operation is designed to give you detailed information
 
         As a result, a log file that's similar to the following log file is generated:
 
-        > Portqry Version 2.0 Log File
-        >
-        > System Date: *\<DateTime>*
-        >
-        > Command run:  
-         portqry -wport 135 -v -l test.txt
-        >
-        > Local computer name:
-        >
-        > host123
-        >
-        > Watching port: 135
-        >
-        > Checking for changes every 60 seconds
-        >
-        > verbose output requested
-        >
-        > ============  
-        System Date: *\<DateTime>*
-        >
-        > ======================================================
-        >
-        > Process ID: 952 (svchost.exe)
-        >
-        > Service Name: RpcSs  
+        ```output
+        Portqry Version 2.0 Log File
+        
+        System Date: <DateTime>
+        
+        Command run:  
+        portqry -wport 135 -v -l test.txt
+        
+        Local computer name:
+        
+        host123
+        
+        Watching port: 135
+        
+        Checking for changes every 60 seconds
+        
+        verbose output requested
+        
+        ============  
+        System Date: <DateTime>
+        
+        ======================================================
+        
+        Process ID: 952 (svchost.exe)
+        
+        Service Name: RpcSs  
         Display Name: Remote Procedure Call (RPC)  
         Service Type: shares a process with other services
-        >
-        > PIDPortLocal IPState Remote IP:Port  
+        
+        PIDPortLocal IPState Remote IP:Port  
         952TCP 135 0.0.0.0 LISTENING 0.0.0.0:45198  
-        952UDP 135 0.0.0.0 *:*
-        >
-        > Port Statistics
-        >
-        > TCP mappings: 1  
+        952UDP 135 0.0.0.0 :
+        
+        Port Statistics
+        
+        TCP mappings: 1  
         UDP mappings: 1
-        >
-        > TCP ports in a LISTENING state: 1 = 100.00%
-        >
-        > Loaded modules:  
+        
+        TCP ports in a LISTENING state: 1 = 100.00%
+    
+        Loaded modules:  
         D:\WINDOWS\system32\svchost.exe (0x01000000)
-        >
-        > D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
+        
+        D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
         D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
         D:\WINDOWS\system32\ADVAPI32.dll (0x77DD0000)  
         D:\WINDOWS\system32\RPCRT4.dll (0x78000000)  
@@ -1105,27 +1137,27 @@ The PortQry local mode of operation is designed to give you detailed information
         D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)  
         D:\WINDOWS\system32\COMRes.dll (0x77050000)  
         D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
-        System Date: *\<DateTime>*
-        >
-        > ======================================================
-        >
-        > Process ID: 952 (svchost.exe)
-        >
-        > Service Name: RpcSs  
+        System Date: <DateTime>
+        
+        ======================================================
+        
+        Process ID: 952 (svchost.exe)
+        
+        Service Name: RpcSs  
         Display Name: Remote Procedure Call (RPC)  
         Service Type: shares a process with other services
-        >
-        > PIDPortLocal IPState Remote IP:Port  
+        
+        PIDPortLocal IPState Remote IP:Port  
         952TCP 135 0.0.0.0 LISTENING 0.0.0.0:45198  
-        952UDP 135 0.0.0.0 *:*  
-        952UDP 135 0.0.0.0 *:*
-        >
-        > Port Statistics
-        >
-        > TCP mappings: 1  
+        952UDP 135 0.0.0.0 :  
+        952UDP 135 0.0.0.0 :
+        
+        Port Statistics
+        
+        TCP mappings: 1  
         UDP mappings: 2
-        >
-        > TCP ports in a LISTENING state: 1 = 100.00%  
+        
+        TCP ports in a LISTENING state: 1 = 100.00%  
         Loaded modules:  
         D:\WINDOWS\system32\svchost.exe (0x01000000)  
         D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
@@ -1152,65 +1184,67 @@ The PortQry local mode of operation is designed to give you detailed information
         D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)  
         D:\WINDOWS\system32\COMRes.dll (0x77050000)  
         D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
-        >
-        > escape key pressed: stopped watching port 135  
-        System Date: *\<DateTime>*
-        >
-        > ========= end of log file =========
+        
+        escape key pressed: stopped watching port 135  
+        System Date: <DateTime>
+        
+        ========= end of log file =========
+        ```
 
 - **portqry.exe -wpid process_number** (watch PID): With the watch PID command, PortQry watches the specified process ID (PID) for changes. These changes may include an increase or a decrease in the number of connections to the port or a change in the connection state of any one of the existing connections. This command supports the same optional parameters as the watch port command. For example, you type the following command, and then press Enter: `portqry.exe -wpid 1276 -wt 2 -v -l pid.txt`.  
 
     As a result, a log file that's similar to the following log file is generated:
 
-    > PortQry Version 2.0 Log File
-    >
-    > System Date: *\<DateTime>*
-    >
-    > Command run:  
-     portqry -wpid 1276 -wt 2 -v -l pid.txt
-    >
-    > Local computer name:
-    >
-    > host123
-    >
-    > Watching PID: 1276
-    >
-    > Checking for changes every 2 seconds
-    >
-    > verbose output requested
-    >
-    > Service Name: DNS  
+    ```output
+    PortQry Version 2.0 Log File
+    
+    System Date: <DateTime>
+    
+    Command run:  
+    portqry -wpid 1276 -wt 2 -v -l pid.txt
+    
+    Local computer name:
+    
+    host123
+    
+    Watching PID: 1276
+    
+    Checking for changes every 2 seconds
+    
+    verbose output requested
+    
+    Service Name: DNS  
     Display Name: DNS Server  
     Service Type: runs in its own process
-    >
-    > ============  
-    System Date: *\<DateTime>*
-    >
-    > ======================================================
-    >
-    > Process ID: 1276 (dns.exe)
-    >
-    > Service Name: DNS  
+    
+    ============  
+    System Date: <DateTime>
+    
+    ======================================================
+    
+    Process ID: 1276 (dns.exe)
+    
+    Service Name: DNS  
     Display Name: DNS Server  
     Service Type: runs in its own process
-    >
-    > PIDPortLocal IPState Remote IP:Port  
+    
+    PIDPortLocal IPState Remote IP:Port  
     1276TCP 53 0.0.0.0 LISTENING 0.0.0.0:2160  
     1276TCP 1087 0.0.0.0 LISTENING 0.0.0.0:37074  
-    1276UDP 1086 0.0.0.0 *:*  
-    1276UDP 2126 0.0.0.0 *:*  
-    1276UDP 53 127.0.0.1 *:*  
-    1276UDP 1085 127.0.0.1 *:*  
-    1276UDP 53 169.254.11.96 *:*
-    >
-    > Port Statistics
-    >
-    > TCP mappings: 2  
+    1276UDP 1086 0.0.0.0 :  
+    1276UDP 2126 0.0.0.0 :  
+    1276UDP 53 127.0.0.1 :  
+    1276UDP 1085 127.0.0.1 :  
+    1276UDP 53 169.254.11.96 :
+    
+    Port Statistics
+    
+    TCP mappings: 2  
     UDP mappings: 5
-    >
-    > TCP ports in a LISTENING state: 2 = 100.00%
-    >
-    > Loaded modules:  
+    
+    TCP ports in a LISTENING state: 2 = 100.00%
+    
+    Loaded modules:  
     C:\WINDOWS\System32\dns.exe (0x01000000)  
     C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
     C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
@@ -1264,11 +1298,12 @@ The PortQry local mode of operation is designed to give you detailed information
     C:\WINDOWS\System32\cryptdll.dll (0x766E0000)  
     C:\WINDOWS\system32\msv1_0.dll (0x76C90000)  
     C:\WINDOWS\System32\security.dll (0x71F60000)
-    >
-    > escape key pressed: stopped watching PID 1276  
-    System Date: *\<DateTime>*
-    >
-    > ========= end of log file =========
+    
+    escape key pressed: stopped watching PID 1276  
+    System Date: <DateTime>
+    
+    ========= end of log file =========
+    ```
 
     With the `-wport` command, you can watch a single port for changes, but with the `-wpid` command, you can watch all the ports that the specified PID is using for changes. A process may be using many ports, and PortQry watches all of them for changes.
 

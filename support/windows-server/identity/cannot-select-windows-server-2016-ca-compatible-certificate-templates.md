@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a workaround for the issue Windows Server 2016 CA-compatible certificate templates cannot be selected from Windows Server 2016 or later-based CAs or CEP servers.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4508802
 
 ## Symptoms

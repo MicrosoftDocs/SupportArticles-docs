@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how the different Network Load Balancing (NLB) operation modes affect network infrastructure, and the best ways in which the network can support each mode.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494444
 
 ## Summary

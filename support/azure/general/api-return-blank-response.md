@@ -5,7 +5,7 @@ ms.date: 03/04/2021
 ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Azure API is returning blank response

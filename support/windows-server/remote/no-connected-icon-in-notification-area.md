@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a workaround for an issue where the Connected icon doesn't appear in the notification area when you connect to a remote application by using Remote Desktop Web Access.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977507
 
 ## Symptoms

@@ -1,14 +1,13 @@
 ---
 title: Remote Desktop Services isn't starting on an Azure VM | Microsoft Docs
 description: Learn how to troubleshoot issues with Remote Desktop Services when you connect to a virtual machine | Microsoft Docs
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
@@ -220,7 +219,7 @@ To troubleshoot this issue, use the Serial Console. Or else [repair the VM offli
 3. Open an elevated command prompt instance (**Run as administrator**). Then run the following script. We assume that the drive letter that's assigned to the attached OS disk is **F**. Replace it with the appropriate value in your VM. 
 
    ```
-   reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM.hiv
+   reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
         
    REM Set default values back on the broken service 
    reg add "HKLM\BROKENSYSTEM\ControlSet001\services\TermService" /v start /t REG_DWORD /d 3 /f

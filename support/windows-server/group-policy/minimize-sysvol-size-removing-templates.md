@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to minimize SYSVOL size by removing administrative templates (.adm files).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 813338
 
 ## Summary

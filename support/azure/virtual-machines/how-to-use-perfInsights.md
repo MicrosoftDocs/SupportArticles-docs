@@ -1,17 +1,16 @@
 ---
 title: How to use PerfInsights in Microsoft Azure| Microsoft Docs
 description: Learns how to use PerfInsights to troubleshoot Windows VM performance problems.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
 editor: na
 tags: ''
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: troubleshooting
 ms.date: 10/31/2018
 ms.author: genli
@@ -172,6 +171,10 @@ Diskspd I/O workload tests (OS Disk [write] and pool drives [read/write])
    * Windows 10
    * Windows 8.1
    * Windows 8
+
+#### Accessing SQL Server
+
+If the VM has SQL Server instance(s) installed on it, PerfInsights will use the account NT AUTHORITY\SYSTEM to access the SQL Server instance(s) for collecting configuration information and running rules. The account NT AUTHORITY\SYSTEM must be granted View Server State permission and Connect SQL permission for each instance, otherwise PerfInsights will not be able to connect to the SQL Server and the PerfInsights report will not show any SQL Server related information. 
 
 #### Possible problems when you run the tool on production VMs
 

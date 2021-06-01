@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a workaround for an issue where the IsmServ service doesn't start correctly when a domain controller starts.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4530043
 
 ## Symptoms
@@ -32,13 +32,13 @@ Description:​
 The IsmServ service terminated with the following error:  
 The specified server cannot perform the requested operation.​  
 Event Xml:​  
-\<Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`">  
+\<Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`"\>  
 \...​  
-  \<EventData>​  
-    \<Data Name="param1">IsmServ</Data>​  
-    \<Data Name="param2">%%58</Data>​  
-  \</EventData>​  
-\</Event>​
+  \<EventData\>​  
+    \<Data Name="param1"\>IsmServ\</Data\>​  
+    \<Data Name="param2"\>%%58\</Data\>​  
+  \</EventData\>​  
+\</Event\>​
 
 This event includes the following data parameters:
 

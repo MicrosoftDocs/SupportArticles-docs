@@ -537,7 +537,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 ### Basic steps to troubleshoot ThumbnailPhoto
 
-1. Use a tool such as [AD Photo Edit](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html)  or similar to make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
+1. Make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
 
 2. Check the image in the Accounts Portal or use **Get-AzureADUserThumbnailPhoto** because these methods read the **ThumbnailPhoto** directly from Azure AD.
 
@@ -571,11 +571,3 @@ Fortunately, the issues that affect these components usually generate an error i
 
       :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/userprinciplename.png" alt-text="Troubleshoot UserPrincipalName or ProxyAddress.":::
 
-### Resources
-
-- Get-AzureADUser `-ObjectId <UserPrincipalName>` | Out-File
-- [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html)
-- [Get-AzureADUserThumbnailPhoto](/powershell/module/azuread/get-azureaduserthumbnailphoto)
-- LDIFDE
-- Get-ADUser `-Identity <username>` | Out-File
-- AADConnector PowerShell Module (Decode AAD DN)

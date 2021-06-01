@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual machine creation
 ms.technology: hyper-v
 ---
-# Error when you manage a VHD file in Windows Server 2008 or Windows Server 2008 R2: "A Virtual Disk Provider for the specified file was not found"
+# Error when you manage a VHD file in Windows Server: "A Virtual Disk Provider for the specified file was not found"
 
 This article provides a solution to an error that occurs when you create a virtual machine in Hyper-V Manager.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2013544
 
 ## Symptoms
 
-You receive the following error message when you try to create a virtual machine in Hyper-V Manager in Windows Server 2008 R2:
+You receive the following error message when you try to create a virtual machine in Hyper-V Manager in Windows Server:
 
 > Log Name: Microsoft-Windows-Hyper-V-VMMS-Admin  
 Source: Microsoft-Windows-Hyper-V-VMMS  
@@ -68,7 +68,7 @@ When you try to start a virtual machine by using Hyper-V Manager, you receive th
 
 ## Cause
 
-There is a timing issue with FSDepends.sys and with VHDMP.sys. This timing issue occurs when certain backup programs are installed on computers that are running Windows Server 2008. By default, the FSDepends.sys start value in the registry is set to **Manual**. When any third-party backup software loads its tape device driver, the software can sometimes result in FSDepends.sys and VHDMP.sys not initializing correctly.  
+There is a timing issue with FSDepends.sys and with VHDMP.sys. This timing issue occurs when certain backup programs are installed on Windows Server computers. By default, the FSDepends.sys start value in the registry is set to **Manual**. When any third-party backup software loads its tape device driver, the software can sometimes result in FSDepends.sys and VHDMP.sys not initializing correctly.  
 
 ## Resolution  
 

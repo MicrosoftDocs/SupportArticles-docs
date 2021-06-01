@@ -46,7 +46,7 @@
     items:
     - name: 64-bit versions of Windows don't support 16-bit applications
       href: ./application-management/x64-windows-not-support-16-bit-programs.md
-    - name: Availability and description of FCIV
+    - name: Third-party virtualization applications don't work with Hyper-V
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
     - name: Registering OCX and DLL files as System Globals
       href: ./application-management/registering-ocx-dll-files-system-globals.md
@@ -272,8 +272,6 @@
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
       href: ./deployment/command-switches-supported-by-self-extractor-package.md
-    - name: Compute MD5 or SHA-1 cryptographic hash values
-      href: ./deployment/compute-md5sha-1-cryptographic-hash-value.md
     - name: DISM /Apply-Image command fails with error code 5
       href: ./deployment/dism-apply-image-command-fails-error-code-5.md
     - name: Download updates from Windows Update Catalog
@@ -436,6 +434,8 @@
       href: ./group-policy/fail-to-apply-group-policy-at-startup.md
     - name: Disable screen saver passwords by using policies
       href: ./group-policy/disable-screen-saver-passwords.md
+    - name: Group membership changes do not update over some VPN connections
+      href: ./group-policy/group-membership-changes-not-updating-over-some-vpn-connections.md
     - name: Group Policy is not applied to a user account
       href: ./group-policy/group-policy-not-applied-user-account-runas.md
     - name: Group Policy Screensaver setting isn't working
@@ -444,6 +444,8 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: Use Group Policy to deploy a Known Issue Rollback
+      href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
   items:
   - name: High Availability
@@ -464,6 +466,8 @@
       href: ./networking/access-denied-access-smb-file-share.md
     - name: Can access offline files even if the file server is removed
       href: ./networking/access-offline-files-file-server-removed-from-network.md
+    - name: Can't access shared folders from File Explorer
+      href: ./networking/cannot-access-shared-folder-file-explorer.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
     - name: Mapped drive connection to network share is lost
@@ -843,9 +847,7 @@
   - name: DPI and Display Issues
     items:
     - name: Can't open high resolution file in Photo Gallery
-      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
-    - name: Custom display settings revert to the default
-      href: ./shell-experience/custom-display-settings-revert-to-default.md
+      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md    
     - name: 'Display configuration reverts to "Second screen only"'
       href: ./shell-experience/display-configuration-reverts-second-screen-only-resume-standby.md
     - name: Display issue when you use USB-attached monitor
@@ -1018,6 +1020,8 @@
       href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
   - name: Smart card logon
     items:
+    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
+      href: ./user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
     - name: Registry keys for smart card PIN caching options not available
       href: ./user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md
   - name: User Logon fails
@@ -1075,15 +1079,15 @@
 - name: Windows 7 End of Support (EoS) FAQ
   items:
   - name: Windows 7 EoS FAQ
-    href: ./windows-7-eos-faq/windows-7-end-support-faq.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq.yml
   - name: Windows 7 end of support
-    href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq-general.yml
   - name: Windows 7 Extended Security Updates (ESU)
-    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
+    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.yml
   - name: Windows 7 ESU offers for E5 customers
-    href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
+    href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.yml
   - name: Troubleshoot issues in ESU
-    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
+    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.yml
 - name: Windows Security
   items:
   - name: Windows Security

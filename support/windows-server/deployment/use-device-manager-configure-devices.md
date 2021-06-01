@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to use Device Manager to configure the hardware devices that are installed on your Windows Server 2003-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323423
 
 ## Summary

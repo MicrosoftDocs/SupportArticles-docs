@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to use the online dbdump feature of Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315098
 
 ## Summary

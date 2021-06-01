@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides help to solve problems with Cluster Services that be caused by antivirus software that isn't cluster-aware.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250355
 
 ## Summary

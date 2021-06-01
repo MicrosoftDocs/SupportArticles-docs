@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides guidelines to install and configure the Remote Desktop Session Host role service on a computer that is running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 without the Remote Desktop Connection Broker role service installed.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2833839
 
 ## Summary
@@ -41,7 +41,7 @@ The process of deploying RDS service roles on a single workgroup server or DC di
 Unless otherwise noted, these steps apply to both workgroup computer and DC cases.
 
 > [!IMPORTANT]
-> If you are using a single computer as both the RDS server and as a DC, configure the computer as a DC before you begin installing the RDS roles. For more information about how to install Active Directory Domain Services (AD DS) and configure the computer as a DC in Windows Server 2016 or Windows Server 2012, see [Install Active Directory Domain Services (Level 100)](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
+> If you are using a single computer as both the RDS server and as a DC, configure the computer as a DC before you begin installing the RDS roles. For more information about how to install Active Directory Domain Services (AD DS) and configure the computer as a DC in Windows Server 2016 or Windows Server 2012, see [Install Active Directory Domain Services (Level 100)](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
 
 1. On the workgroup computer or DC, install the Remote Desktop Licensing role service and the Remote Desktop Session Host role service. To do this, follow these steps:
 

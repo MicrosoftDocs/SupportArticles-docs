@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article lists the available hotfixes and updates for issues that occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2601888
 
 ## Summary
@@ -37,15 +37,15 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 ## Authentication
 
-[2752618](https://support.microsoft.com/help/2752618)  RDS client computer cannot connect to the RDS server by using a remote desktop connection in Windows 7 or in Windows Server 2008 R2
+- [2752618](https://support.microsoft.com/help/2752618)  RDS client computer cannot connect to the RDS server by using a remote desktop connection in Windows 7 or in Windows Server 2008 R2
 
-[2548538](https://support.microsoft.com/help/2548538)  Smart card authentication does not work when you use VDI and RD Gateway for RDC client in Windows 7 or in Windows Server 2008 R2
+- [2548538](https://support.microsoft.com/help/2548538)  Smart card authentication does not work when you use VDI and RD Gateway for RDC client in Windows 7 or in Windows Server 2008 R2
 
-[2524668](https://support.microsoft.com/help/2524668)  The single sign-on feature does not work in Windows 7 or in Windows Server 2008 R2 when you try to start a full remote desktop connection through RD Web Access
+- [2524668](https://support.microsoft.com/help/2524668)  The single sign-on feature does not work in Windows 7 or in Windows Server 2008 R2 when you try to start a full remote desktop connection through RD Web Access
 
-[2521923](https://support.microsoft.com/help/2521923)  A program that requires you to use a smart card stops responding in a remote desktop connection in Windows Server 2008, in Windows Vista, in Windows 7 or in Windows Server 2008 R2
+- [2521923](https://support.microsoft.com/help/2521923)  A program that requires you to use a smart card stops responding in a remote desktop connection in Windows Server 2008, in Windows Vista, in Windows 7 or in Windows Server 2008 R2
 
-[2301288](https://support.microsoft.com/help/2301288)  A Remote Desktop Services session is disconnected automatically if you apply the "Interactive logon: smart card removal behavior" Group Policy setting in Windows Server 2008 R2 or in Windows 7
+- [2301288](https://support.microsoft.com/help/2301288)  A Remote Desktop Services session is disconnected automatically if you apply the "Interactive logon: smart card removal behavior" Group Policy setting in Windows Server 2008 R2 or in Windows 7
 
 ## General OS updates
 
@@ -144,7 +144,7 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 - [2620656](https://support.microsoft.com/help/2620656)  Invalid redirected printers may be available in a Remote Desktop Services session that connects to a RD Session Host server that is running Windows Server 2008 or Windows Server 2008 R2
 
-[2538047](https://support.microsoft.com/help/2538047)  Audio capture redirection feature does not work after a second remote desktop connection is created in Windows Server 2008 R2
+- [2538047](https://support.microsoft.com/help/2538047)  Audio capture redirection feature does not work after a second remote desktop connection is created in Windows Server 2008 R2
 
 ## RemoteApp
 
@@ -174,13 +174,11 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 ## RemoteFX
 
-- [2519946](https://support.microsoft.com/help/2519946)  Timeout Detection and Recovery (TDR) randomly occurs in a virtual machine that uses the RemoteFX feature in Windows Server 2008 R2
+[2519946](https://support.microsoft.com/help/2519946)  Timeout Detection and Recovery (TDR) randomly occurs in a virtual machine that uses the RemoteFX feature in Windows Server 2008 R2
 
 ## Remote Desktop Connection Broker
 
-- [2536840](https://support.microsoft.com/help/2536840)  IP addresses that are used for reconnection are not listed completely in the RD Connection Broker setting in Windows Server 2008 R2 or in Windows 7
-
-- [2525608](https://support.microsoft.com/help/2525608)  The RemoteApp and Desktop Connection Management service cannot start on a computer that is in a disjointed namespace and that is running Windows Server 2008 R2
+[2536840](https://support.microsoft.com/help/2536840)  IP addresses that are used for reconnection are not listed completely in the RD Connection Broker setting in Windows Server 2008 R2 or in Windows 7
 
 ## Remote Desktop Gateway
 

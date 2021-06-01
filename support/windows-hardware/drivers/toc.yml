@@ -21,6 +21,8 @@
     href: commands-under-guirunonce-not-run.md
   - name: Disabling File Based Write Filter causes a crash
     href: disabling-fbwf-causes-crash.md
+  - name: Failed to redirect connected UDP traffic
+    href: redirection-connected-udp-traffic-local-proxy-fail.md
   - name: IVssBackupComponents returns a value of 0x1 or S_FALSE
     href: ivssbackupcomponents-returns-value-0x1.md
   - name: Making VSS shadow copy fails with error
@@ -33,7 +35,7 @@
     href: sha2-not-supported.md
   - name: System Restore is unable to complete Restoration
     href: system-restore-not-complete-restoration.md
-  - name: Target server that has AMD processor and CISCO VIC cannot start if KDNET debugging is enabled
+  - name: Target server cannot start if KDNET debugging is enabled
     href: target-server-amd-proc-cisco-vic-cannot-start-during-kdnet.md
   - name: Volume Copy Service Provider is absent
     href: volume-copy-service-provider-absent.md

@@ -15,16 +15,17 @@ ms.technology: windows-server-backup-and-storage
 ---
 # Information about Event ID 51
 
-This article describes the information about Event ID 51 that occurs when you write information to the physical disk, and how to decode the data section of an Event ID 51 event message.
+  Event ID 51 may occur when you write information to the physical disk. This article describes how to decode the data section of an Event ID 51 event message.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244780
 
 ## Summary
 
 When you write information to the physical disk, the following event message may be logged in the System log:
 
-> Event ID: 51  
+```output
+Event ID: 51  
 Event Type: Warning  
 Event Source: Disk  
 Description: An error was detected on device \Device\Harddisk3\DR3 during a paging operation.  
@@ -39,36 +40,39 @@ Data:
 0038: 02 84 00 00 00 29 06 00  
 0040: 2a 60 0a 82 75 29 00 00  
 0048: 80 00
+```
 
 > [!NOTE]
 > The device in the description and the specific hexadecimal data may vary.
 
 ## More information
 
-If a generic error occurs when your computer pages information to or from the disk, an Event ID 51 event message is logged. In a paging operation, the operating system either swaps a page of memory from memory to disk or retrieves a page of memory from disk to memory. It is part of the memory management of Windows.
+If a generic error occurs when your computer pages information to or from the disk, an Event ID 51 event message is logged. In a paging operation, the operating system either swaps a page of memory from memory to disk, or retrieves a page of memory from disk to memory. It's part of the memory management of Windows.
 
-However, the computer may log this event message when it loads images from a storage device, reads, and writes to locally mapped files or to any file (as long as it is buffered I/O). The computer does not log this event message when it performs nonbuffered I/O. You can troubleshoot an Event ID 51 event message exactly like you troubleshoot Event ID 9 or Event ID 11 event messages.
+However, the computer may log this event message when it loads images from a storage device, reads, and writes to locally mapped files or to any file (as long as it's buffered I/O). The computer doesn't log this event message when it performs nonbuffered I/O. You can troubleshoot an Event ID 51 event message exactly like you troubleshoot Event ID 9 or Event ID 11 event messages.
 
 Under certain circumstances, the system logs the following Event ID 51 event message:
 
-> An error was detected on device \Device\DeviceName during a paging operation
+```output
+An error was detected on device \Device\DeviceName during a paging operation
+```
 
-In this case, no harmful effects are experienced. For example, Event ID 51 is logged when blank media such as CDR, CDRW, DVDR, and so on, is inserted into a writable drive while a USB device is plugged in. The system logs the event even though the disc is writable, and the USB device is still usable. In these particular cases, you can safely ignore the log entries, and no additional action is required.
+In this case, no harmful effects are experienced. For example, Event ID 51 is logged when blank media such as CDR, CDRW, DVDR, is inserted into a writable drive while a USB device is plugged in. The system logs the event even though the disc is writable, and the USB device is still usable. In these particular cases, you can safely ignore the log entries. No action is required.
 
 > [!NOTE]
-> On Windows XP and Windows Server 2003, the DeviceName may be truncated because of the size limitation of the event log entry. As a result, the displayed hard disk number, or the device object name itself may be incorrect. This is because a large amount of information is stored in the data section, which reduces the space that is available for the DeviceName. In this case, you can find the appropriate device by looking at the destination disk data that is stored in the data section. For more information, see the [Decode the data section of an Event ID 51 event message](#decode-the-data-section-of-an-event-id-51-event-message) section.
+> On Windows XP and Windows Server 2003, the DeviceName may be truncated because of the size limitation of the event log entry. As a result, the displayed hard disk number, or the device object name itself may be incorrect. Because a large amount of information is stored in the data section, the space that's available for the DeviceName is reduced. In this case, you can find the appropriate device by looking at the destination disk data that's stored in the data section. For more information, see [Decode the data section of an Event ID 51 event message](#decode-the-data-section-of-an-event-id-51-event-message).
 
-On Windows Vista and later Windows operating systems, the event log entry size has been increased, and DeviceName is not truncated.
+On Windows Vista and later versions, the event log entry size has been increased, and DeviceName isn't truncated.
 
-You can use the binary data that is associated with any DISK error (Event ID 7, 9, 11, 51, and other Event IDs) to help you identify the problem by decoding the data section.
+You can use the binary data associated with any DISK error (Event ID 7, 9, 11, 51, and other Event IDs) to help you identify the problem by decoding the data section.
 
-Because an Event ID 51 has an additional command descriptor block (CDB) box, you must consider the following information when you are reviewing the data section of an Event ID 51 event message.
+An Event ID 51 has an extra Command Descriptor Block (CDB) box. Consider the following information when you review the data section of an Event ID 51 event message.
 
 ## Decode the data section of an Event ID 51 event message
 
-When you decode the data section in the example that is in the [Summary](#summary) section, you can see that an attempt to perform a write operation to LUN 3 starting at sector 0x2975820a for 0x0080 sectors fails because the bus was reset but the request will be retried. Later, this article lists the specific steps to decode this example.
+When you decode the data section of the example in the [Summary](#summary) section, you can see that an attempt to perform a write operation to LUN 3 starting at sector 0x2975820a for 0x0080 sectors fails because the bus was reset but the request will be retried. Later, this article lists the specific steps to decode this example.
 
-The following tables describe what each offset represents.
+The following tables describe what each offset represents:
 
 |Offset|Length|Values|
 |---|---|---|
@@ -83,7 +87,7 @@ The following tables describe what each offset represents.
 |0x10|4|Unique Error Value|
 |0x14|4|NTSTATUS Final Status 0x00000000 = the request will be retried|
 |0x18|4|Sequence Number - Unused|
-|0x1c|4|Io Control Code (does not apply to this event)|
+|0x1c|4|Io Control Code (doesn't apply to this event)|
 |0x20|8|Byte offset to bad sector, if any|
 |0x28|8|Tick count when the error occurred|
 |0x30|4|Port number - Unused|
@@ -99,13 +103,13 @@ Here are key sections to decode.
 
 ### The error code
 
-In the example that is in the [Summary](#summary) section, the error code is listed in the second line. That line starts with **0008:** and includes the last four bytes in the line.
+In the example that is in the [Summary](#summary) section, the error code is listed in the second line. That line starts with **0008:** and includes the last 4 bytes in the line.
 
 > 0008: 00 00 00 00 33 00 04 80
 
 ErrorCode = 0x80040033
 
-This is the code for error 51. This code is the same for all Event ID 51 event messages:
+This code is the code for error 51. This code is the same for all Event ID 51 event messages:
 
 > IO_WARNING_PAGING_FAILURE
 
@@ -120,7 +124,7 @@ In the example in the [Summary](#summary) section, the final status code is list
 
 FinalStatus = 0x00000000
 
-This maps to `STATUS_SUCCESS` and implies that the request will be retried.
+It maps to `STATUS_SUCCESS` and implies that the request will be retried.
 
 > [!NOTE]
 > When you interpret the hexadecimal data in the Event ID to the status code, remember that the values are represented in the little endian format.
@@ -144,7 +148,7 @@ It may be easier to identify the volume by using the symbolic link listed to the
 
 ### The SCSI Request Block (SRB) parameters
 
-In the example in the [Summary](#summary) section, the ScsiStatus is **0x02** (first byte in line **0038**), and SrbStatus is **0x84** (second byte in line **0038**). This provides the following information:
+In the example in the [Summary](#summary) section, the ScsiStatus is **0x02** (first byte in line **0038**), and SrbStatus is **0x84** (second byte in line **0038**). It provides the following information:
 
 > 0038: 02 84 00 00 00 29 06 00
 
@@ -210,17 +214,17 @@ SRB status masks:
 
 You must break down SRB status masks because they are a substatus. They are combined with the SRB status codes.
 
-In the earlier **0x84** example, **0x8_** is a status mask. Therefore, `SRB_STATUS_AUTOSENSE_VALID` and **0x04** is the SRB status code. This means `SRB_STATUS_ERROR`.
+In the earlier **0x84** example, **0x8_** is a status mask. Therefore, `SRB_STATUS_AUTOSENSE_VALID` and **0x04** is the SRB status code. It means `SRB_STATUS_ERROR`.
 
 ### The sense code
 
-If the SRB status is that the autosense is valid, the sense codes provide additional information. In the example in the [Summary](#summary) section, the sense code is **0x06** (seventh byte in line **0038**), and the additional sense code is **0x29** (sixth octet in line **0038**). This provides the following information:
+If the SRB status is that the autosense is valid, the sense codes provide more information. In the example in the [Summary](#summary) section, the sense code is **0x06** (seventh byte in line **0038**), and the additional sense code is **0x29** (sixth octet in line **0038**). It provides the following information:
 
 > 0038: 02 84 00 00 00 29 06 00
 
 The sense key of **0x06**:
 
-The byte at offset 003e is the sense key. This maps to the following:
+The byte at offset 003e is the sense key. It maps to:
 
 ```cpp
 0x06 = SCSI_SENSE_UNIT_ATTENTION
@@ -249,7 +253,7 @@ Sense codes: (from SCSI.H)
 
 Additional sense code (ASC) of 0x29:
 
-The additional sense code is located in the sixth byte in line 0038 at offset 003d and has a value of 29. For the specified sense key, this maps to the following:
+The ASC is located in the sixth byte in line 0038 at offset 003d, and has a value of 29. For the specified sense key, it maps to:
 
 ```cpp
 0x29 = SCSI_ADSENSE_BUS_RESET
@@ -290,7 +294,7 @@ Additional sense codes: (from SCSI.H)
 
 Additional sense code qualifier (ASCQ) of 0x00:
 
-The additional sense code qualifier is located in the fifth byte in line **0038** at offset 003C and has a value of **00**. It is **00** in this example, so it does not apply for the specified ASC. This list of additional sense code qualifiers for each sense code is too large to include in this article. View SCSI.H in the DDK for more information.
+The ASCQ is located in the fifth byte in line **0038** at offset 003C, and has a value of **00**. It's **00** in this example, so it doesn't apply for the specified ASC. This list of ASCQ for each sense code is too large to include in this article. View SCSI.H in the DDK for more information.
 
 > [!NOTE]
 > All ASC and ASCQ values above **0x80** are vendor specific and are not documented in the SCSI specification or Microsoft DDK. Refer to the hardware vendor.
@@ -302,10 +306,10 @@ The CDB starts at the line with an offset of **0040**:
 > 0040: 2a 60 0a 82 75 29 00 00  
 > 0048: 80 00
 
-The bytes at offset 0x40 represent the CDB code, the bytes from offset 0x43 to 0x46 represent the starting sector, and offset 0x47 to 0x49 represent the number of sectors involved in the operation.
+The bytes at offset 0x40 represent the CDB code. The bytes from offset 0x43 to 0x46 represent the starting sector, and offset 0x47 to 0x49 represent the number of sectors involved in the operation.
 
 > [!NOTE]
-> The CDB data section is not in the little-endian format, therefore the bytes should not be flipped. Be careful when you decode this section because the format is different than earlier sections.
+> The CDB data section isn't in the little-endian format. So the bytes shouldn't be flipped. Be careful when you decode this section, because the format is different from earlier sections.
 
 ```cpp
 0x2a = Write request

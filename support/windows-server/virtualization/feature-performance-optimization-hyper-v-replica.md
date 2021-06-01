@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article describes the registry keys that apply to Hyper-V Replica feature.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2767928
 
 ## Summary
@@ -90,7 +90,7 @@ Input Interpretation:
 
 Default value: This name is not created by default under the Replication registry node. Administrators would need to manually create a DWORD under the following registry key and set the corresponding value.
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Virtualization\Replication`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication`
 
 > [!Note]
 > If the value is not present or set to 0, it indicates that the replica server will process 4 VHDs in parallel per VM.

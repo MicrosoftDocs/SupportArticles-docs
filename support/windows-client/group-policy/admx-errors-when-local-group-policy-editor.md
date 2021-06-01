@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article provides a workaround for .admx errors when running Local Group Policy Editor (gpedit.msc).  
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3049255
 
 ## Symptoms  

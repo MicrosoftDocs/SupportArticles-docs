@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Internet Explorer 10 does not install on some hybrid graphics systems
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about Internet Explorer 10 can't be installed on Windows 7, because a hybrid video card isn't compatible with it.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10  

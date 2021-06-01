@@ -1,6 +1,6 @@
 ---
-title: Error log of TPM device driver
-description: Describes an issue where the TPM device driver is recorded in the system log when it encounters an unrecoverable error.
+title: Error log of Trusted Platform Module (TPM) device driver
+description: The TPM device driver is recorded in the system log when it encounters an unrecoverable error.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: windows-client-security
 ---
 # Event ID 14, 17 log for TPM command failure or non-recoverable error
 
-This article describes an issue where the TPM device driver is recorded in the system log when it encounters an unrecoverable error.
+This article describes an issue in which the TPM device driver is recorded in the system log when it experiences an unrecoverable error.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4562894
 
 ## Symptoms
 
-On a Trusted Platform Module (TPM) device, you experience issues with BitLocker, logging to applications using Modern Authentication or Next Generation Credentials. These messages are logged in the event logs:  
+On a TPM device, you experience issues with BitLocker, logging to applications using Modern Authentication or Next Generation Credentials. These messages are logged in the event logs:  
 
 - The Trusted Platform Module (TPM) hardware failed to execute a TPM command.
 - The device driver for the Trusted Platform Module (TPM) encountered a non-recoverable error in the TPM hardware, which prevents TPM services (such as data encryption) from being used.
@@ -104,7 +104,11 @@ Event Xml:
 
 ## Cause
 
-This issue occurs because of an issue with the TPM device preventing Windows from communicating and using the TPM device for the functionalities that reply on TPM such as BitLocker, Modern Authentication, and Next Generation Credentials.  
+This problem occurs because of an issue with the TPM device. It prevents Windows from communicating and using the TPM device for the functionalities that reply on TPM, such as:
+
+- BitLocker
+- Modern Authentication
+- Next Generation Credentials
 
 ## Workaround
 

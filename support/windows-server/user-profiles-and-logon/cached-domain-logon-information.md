@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article describes how cached domain logon information works and how to control cached logon information.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172931
 
 ## Summary
@@ -45,7 +45,7 @@ For information about how to edit the registry, view the **Changing Keys And Val
 
 Cached logon information is controlled by the following key:
 
-- Location: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current Version\Winlogon\`
+- Location: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`
 - Value name: CachedLogonsCount
 - Data type: REG_SZ
 - Values: 0 - 50

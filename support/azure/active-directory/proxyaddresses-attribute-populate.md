@@ -39,14 +39,14 @@ Next, it's synchronized to Office 365 and assigned an Exchange Online license. I
 
 - Populate the mailNickName attribute by using the user part of the UPN.
 - Populate the MOERA by using the format mailNickName@initial domain.
-- Populate the mail attribute by using the same value as the MOERA.
+- Populate the mail attribute by using the same value as the UPN.
 - Add the UPN as **the primary** SMTP address in the proxyAddresses attribute.
 - Add the MOERA as **a secondary** SMTP address in the proxyAddresses attribute.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
 > UPN: `onprema@contoso.com`  
-> mail: `[onprema@contoso.com](mailto:onprema@contoso.com)`  
+> mail: `onprema@contoso.com`  
 > mailNickName: onprema  
 > proxyAddresses: {smtp:`onprema@contoso.onmicrosoft.com`,SMTP:`onprema@contoso.com`}
 
@@ -136,16 +136,16 @@ Next, it's synchronized to Office 365 and assigned an Exchange Online license. I
 
 - Populate the mailNickName attribute by using the user part of the UPN.
 - Populate the MOERA  by using the format mailNickName@initial domain.
-- Populate the mail attribute by using the same value as the MOERA.
-- Add the UPN as a secondary SMTP address in the proxyAddresses attribute.
-- Add the MOERA as the primary SMTP address in the proxyAddresses attribute.
+- Populate the mail attribute by using the same value as the UPN.
+- Add the UPN as a primary SMTP address in the proxyAddresses attribute.
+- Add the MOERA as the secondary SMTP address in the proxyAddresses attribute.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
 > UPN: `us2@contoso.com`  
-> mail: `us2@contoso.onmicrosoft.com`  
+> mail: `us2@contoso.com`  
 > mailNickName: us2  
-> proxyAddresses: {smtp:`us2@contoso.com`,SMTP:`us2@contoso.onmicrosoft.com`}
+> proxyAddresses: {smtp:`us2@contoso.onmicrosoft.com`,SMTP:`us2@contoso.com`}
 
 Then, you remove the Exchange Online license. Nothing changes in Azure AD. All attributes remain the same.
 

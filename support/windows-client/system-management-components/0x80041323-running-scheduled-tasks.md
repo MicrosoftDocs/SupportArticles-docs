@@ -1,7 +1,7 @@
 ---
 title: Error 0x80041323 when you run Scheduled tasks
 description: Provides a solution to fix the error 0x80041323 that occurs when you run high number of Scheduled tasks.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,14 +17,14 @@ ms.technology: windows-client-system-management-components
 
 This article provides a solution to fix the error 0x80041323 that occurs when you run high number of Scheduled tasks.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2696472
 
 ## Symptoms
 
 Consider the scenario:  
 
-- You have a Windows-based computer that runs high number of Scheduled tasks under one user account.
+- You have a Windows computer that runs high number of Scheduled tasks under one user account.
 
 - The tasks are failing intermittently and under the LastRun option, you may see following error message
 
@@ -83,20 +83,20 @@ To resolve this particular issue, increase the value for the quota keys to maxim
 
 1. Click **Start**, type *regedit*, and then press ENTER.
 2. Locate and then click the following registry key:
-`HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Schedule\Configuration`
+   `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\Configuration`
 3. Right-click **TasksInMemoryQueue**, click **Edit**, and then click **Modify**.
-4. In the **Value data** box, type *1000*.
+4. In the **Value data** box, type *1000* \(Decimal\).
 5. Right-click **TasksPerHighestPrivEngine**, click **Edit**, and then click **Modify**.
-6. In the **Value data** box, type *1000*.
+6. In the **Value data** box, type *1000* \(Decimal\).
 7. Right-click **TasksPerLeastPrivEngine**, click **Edit**, and then click **Modify**.
-8. In the **Value data** box, type *1000*.
+8. In the **Value data** box, type *1000* \(Decimal\).
 9. Exit **Registry Editor** and reboot the machine.
 
 ## More information
 
 The Job queue quota is controlled through 'TasksInMemoryQueue' value while the Engine quota is controlled through "TasksPerHighestPrivEngine" and "TasksPerLeastPrivEngine" registry values located under following registry key:  
 
-`HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Schedule\Configuration`
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\Configuration`
 
 - TasksInMemoryQueue [Default = 75, Max = 1000]
   - Determines the maximum tasks allowed to be queued in the session manager. Once this limit is exceeded, any new task instance scheduled to be executed will be discarded and you'll get the Event ID 131.

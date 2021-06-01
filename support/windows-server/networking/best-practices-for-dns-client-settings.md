@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes best practices for the configuration of Domain Name System (DNS) client settings. The recommendations in this article are for the installation of Windows 2000 Server or Windows Server 2003 environments where there is no previously defined DNS infrastructure.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 825036
 
 ## Domain controller with DNS installed
@@ -101,10 +101,4 @@ On Windows 2000 Server and Windows Server 2003 member servers, Microsoft recomme
 
 - If you have servers that aren't configured to be part of the domain, you can still configure them to use Active Directory-integrated DNS servers as their primary and secondary DNS servers. If you have non-member servers in your environment that use Active Directory-integrated DNS, they don't dynamically register their DNS records to a zone that's configured to accept only secure updates.
 - If you don't use Active Directory-integrated DNS, and you want to configure the non-member servers for both internal and external DNS resolution, configure the DNS client settings to point to an internal DNS server that forwards to the Internet.
-- If only Internet DNS name resolution is required, you can configure the DNS client settings on the non-member servers to point to the ISP's DNS servers.
-
-## More information
-
-For more information about Windows 2000 DNS and Windows Server 2003 DNS, see the following article:
-
-[291382](https://support.microsoft.com/help/291382) Frequently asked questions about Windows 2000 DNS and Windows Server 2003 DNS  
+- If only Internet DNS name resolution is required, you can configure the DNS client settings on the non-member servers to point to the ISP's DNS servers.  

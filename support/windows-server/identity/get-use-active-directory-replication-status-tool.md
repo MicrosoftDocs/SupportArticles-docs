@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article introduces the Active Directory Replication Status Tool ([ADREPLSTATUS](https://www.microsoft.com/download/details.aspx?id=30005)). This tool helps administrators identify, prioritize, and fix Active Directory replication errors on a single domain controller (DC) or an all DCs that are in an Active Directory domain or forest.
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;4469274
 
 You can find [ADREPLSTATUS](https://www.microsoft.com/download/details.aspx?id=30005) on the Microsoft Download Center. You can also find it in Microsoft Operations Management Suite (OMS), Microsoft’s all-in-one cloud IT management solution.

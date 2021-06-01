@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides workarounds for an issue where you receive a Stop error 00000019 when NTFS generates a 8.3-formatted name for a file that has a long file name.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 948289
 
 ## Symptoms

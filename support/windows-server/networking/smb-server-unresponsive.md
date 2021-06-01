@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article explains why a Windows Server Message Block (SMB) server becomes unresponsive and how to troubleshoot the problem.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3061415
 
 ## Symptoms
@@ -39,5 +39,3 @@ By examining the memory dump file through the Debugging Tools for Windows (WinDb
 ## More information
 
 For detailed information about how to dump a kernel, see [How to generate a kernel or a complete memory dump file in Windows Server 2008 and Windows Server 2008 R2](https://support.microsoft.com/help/969028).
-
-To test our automated memory.dmp analysis site, which can identify most Microsoft hotfixes for crashes and Stop errors, go to [Support Diagnostics](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760).

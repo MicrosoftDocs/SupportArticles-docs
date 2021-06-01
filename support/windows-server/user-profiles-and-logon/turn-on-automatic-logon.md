@@ -18,7 +18,7 @@ ms.technology: windows-server-user-profiles
 
 This article describes how to configure Windows to automate the logon process by storing your password and other pertinent information in the registry database. By using this feature, other users can start your computer and use the account that you establish to automatically log on.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324737
 
 > [!IMPORTANT]
@@ -32,7 +32,7 @@ _Original KB number:_ &nbsp; 324737
 To use Registry Editor to turn on automatic logon, follow these steps:
 
 1. Click **Start**, and then click **Run**.
-2. In the **Open** box, type *Regedt32.exe*, and then press Enter.
+2. In the **Open** box, type *Regedit.exe*, and then press Enter.
 3. Locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon` subkey in the registry.
 4. Double-click the **DefaultUserName** entry, type your user name, and then click **OK**.
 5. Double-click the **DefaultPassword** entry, type your password, and then click **OK**.
@@ -51,7 +51,7 @@ To use Registry Editor to turn on automatic logon, follow these steps:
 7. Type *AutoAdminLogon*, and then press Enter.
 8. Double-click **AutoAdminLogon**.
 9. In the **Edit String** dialog box, type **1** and then click **OK**.
-10. If you have joined the computer to a domain, you should add the **DefaultDomain** value, and the data for the value should be set as the fully qualified domain name (FQDN) of the domain.
+10. If you have joined the computer to a domain, you should add the **DefaultDomainName** value, and the data for the value should be set as the fully qualified domain name (FQDN) of the domain, for example `contoso.com.`.
 11. Exit Registry Editor.
 12. Click **Start**, click **Shutdown**, and then type a reason in the **Comment** text box.
 13. Click **OK** to turn off your computer.

@@ -1,7 +1,7 @@
 ---
 title: The LsaLookupSids function may return the old user name instead of the new user name if the user name has changed
 description: Describes a cache update delay in Windows.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-active-directory
 
 This article describes a cache update delay in Windows.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;946358
 
 ## Symptoms

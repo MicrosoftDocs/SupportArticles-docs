@@ -16,7 +16,7 @@ ms.technology: windows-server-active-directory
 
 This article provides availability and description of Active Directory Federation Services 2.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974408
 
 ## Introduction

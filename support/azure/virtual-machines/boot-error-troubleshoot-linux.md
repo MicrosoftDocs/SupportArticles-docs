@@ -1,13 +1,14 @@
 ---
 title: 'Troubleshoot boot errors in Azure Linux Virtual Machines | Microsoft Docs'
 description: This article helps link you to articles to troubleshoot boot errors in Azure Linux Virtual Machines.
-services: virtual-machines-linux
+services: virtual-machines
 documentationCenter: ''
 author: vilibert
 manager: dcscontentpm
 editor: ''
 
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
@@ -46,4 +47,4 @@ If you do not have access to GRUB watch [this](https://youtu.be/m5t0GZ5oGAc) vid
 
 ## Unofficial solution
 
-Recovery of a VM can also be attempted with the unsupported BETA script [ALAR](https://github.com/malachma/azure-auto-recover)
+Recovery of a VM can also be attempted with the unsupported BETA script [ALAR](repair-linux-vm-using-ALAR.md).

@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article solves the Netlogon event ID 5719 or Group Policy event 1129 that's logged when you start a domain member.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 938449
 
 ## Symptoms
@@ -35,35 +35,41 @@ Consider this scenario:
   
 In this scenario, the following event is logged in the System log when you start the computer in Windows 8.1 and earlier versions. In Windows 10 and later versions, event 5719 is no longer logged in this situation. The following lines are recorded in Netlogon.log instead:
 
-> [CRITICAL] [960] CONTOSO: NlSessionSetup: Session setup: cannot pick trusted DC  
-> [SESSION] [960] No IP addresses present, skipping No DC event log
+```output
+[CRITICAL] [960] CONTOSO: NlSessionSetup: Session setup: cannot pick trusted DC  
+[SESSION] [960] No IP addresses present, skipping No DC event log
+```
 
 After this issue occurs, the computer is assigned an IP address:
 
-> [SESSION] [960] V6 Winsock Addrs: fe80::5faf:632a:f22c:644a%2 (1) V6WinsockPnpAddresses List used to be empty.  
-> [SESSION] [960] Winsock Addrs: 10.1.1.80 (1) List used to be empty.
+```output
+[SESSION] [960] V6 Winsock Addrs: fe80::5faf:632a:f22c:644a%2 (1) V6WinsockPnpAddresses List used to be empty.  
+[SESSION] [960] Winsock Addrs: 10.1.1.80 (1) List used to be empty.
+```
 
 On Windows 10 and later versions, you'll see only events by components, depending on the Domain Controller connectivity (such as Group Policy). The following entries are recorded in the group policy debug log:
 
-> CGPApplicationService::MachinePolicyStartedWaitingOnNetwork.  
-> CGPMachineStartupConnectivity::CalculateWaitTimeoutFromHistory: Average is 388.
-> CGPMachineStartupConnectivity::CalculateWaitTimeoutFromHistory: Current is -1.
-> CGPMachineStartupConnectivity::CalculateWaitTimeoutFromHistory: Taking min of 776 and 30000.  
-> Waiting for SamSs with timeout 776
->
-> NlaQueryNetSignatures returned 1 networks  
-> NSI Information (Network GUID) : {395DB3C8-CE45-11E5-9739-806E6F6E6963}  
-> NSI Information (CompartmentId) : 1  
-> NSI Information (SiteId) : 134217728  
-> NSI Information (Network Name) :  
-> NlaGetIntranetCapability failed with 0x15  
-> There is no domain compartment  
-> ProcessGPOs(Machine): MyGetUserName failed with 1355.  
-> Opened query for NLA successfully  
-> NlaGetIntranetCapability returned Not Ready error. Consider it as NOT intranet capable.  
->
-> GPSVC(530.ae0) *\<DateTime>* There is no connectivity  
-> GPSVC(530.8e0) *\<DateTime>* ApplyGroupPolicy: Getting ready to create background thread GPOThread.
+```output
+CGPApplicationService::MachinePolicyStartedWaitingOnNetwork.  
+CGPMachineStartupConnectivity::CalculateWaitTimeoutFromHistory: Average is 388.
+CGPMachineStartupConnectivity::CalculateWaitTimeoutFromHistory: Current is -1.
+CGPMachineStartupConnectivity::CalculateWaitTimeoutFromHistory: Taking min of 776 and 30000.  
+Waiting for SamSs with timeout 776
+
+NlaQueryNetSignatures returned 1 networks  
+NSI Information (Network GUID) : {395DB3C8-CE45-11E5-9739-806E6F6E6963}  
+NSI Information (CompartmentId) : 1  
+NSI Information (SiteId) : 134217728  
+NSI Information (Network Name) :  
+NlaGetIntranetCapability failed with 0x15  
+There is no domain compartment  
+ProcessGPOs(Machine): MyGetUserName failed with 1355.  
+Opened query for NLA successfully  
+NlaGetIntranetCapability returned Not Ready error. Consider it as NOT intranet capable.  
+
+GPSVC(530.ae0) <DateTime> There is no connectivity  
+GPSVC(530.8e0) <DateTime> ApplyGroupPolicy: Getting ready to create background thread GPOThread.
+```
 
 The first section shows the calculation for the time-out to use to bring up the network. It can be based on previous fast startups.
 
@@ -214,6 +220,8 @@ If you can log on to the domain without a problem, you can safely ignore event I
 
 In a Netogon.log, entries that resemble the following example may be logged:
 
-> *DateTime* [CRITICAL] \<domain>: NlDiscoverDc: Cannot find DC. *DateTime* [CRITICAL] \<domain>: NlSessionSetup: Session setup: cannot pick trusted DC *DateTime* [MISC] Eventlog: 5719 (1)"\<domain>" 0xc000005e ... *DateTime* [SESSION] WPNG: NlSetStatusClientSession: Set connection status to c000005e ... *DateTime* [SESSION] \Device\NetBT_Tcpip_{4A47AF53-40D3-4F92-ACDF-9B5E82A50E32}: Transport Added (10.0.64.232) -> Getting a proper IP address takes >15 seconds.
+```output
+DateTime [CRITICAL] <domain>: NlDiscoverDc: Cannot find DC. DateTime [CRITICAL] <domain>: NlSessionSetup: Session setup: cannot pick trusted DC DateTime [MISC] Eventlog: 5719 (1)"<domain>" 0xc000005e ... DateTime [SESSION] WPNG: NlSetStatusClientSession: Set connection status to c000005e ... DateTime [SESSION] \Device\NetBT_Tcpip_{4A47AF53-40D3-4F92-ACDF-9B5E82A50E32}: Transport Added (10.0.64.232) -> Getting a proper IP address takes >15 seconds.
+```
 
 Similar errors might be reported by other components that require Domain Controller connectivity to function correctly. For example, the Group Policy may not be applied at system startup. In this case, startup scripts don't run. The Group Policy failures may be related to the failure of Netlogon to locate a domain controller. You can set Group Policy to be more responsive to late network connectivity arrival.

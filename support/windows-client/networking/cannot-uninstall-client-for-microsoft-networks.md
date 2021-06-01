@@ -1,7 +1,7 @@
 ---
 title: Error 0x80071779 when removing network components
 description: Address an issue in which you receive error 0x80071779 when removing Client for Microsoft Networks.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article helps fix an error 0x80071779 that occurs when you uninstall the **Client for Microsoft Networks** or other network components.
 
-_Original product version:_ &nbsp; Window 10 – all editions  
+_Applies to:_ &nbsp; Window 10 – all editions  
 _Original KB number:_ &nbsp; 4340181
 
 ## Symptoms

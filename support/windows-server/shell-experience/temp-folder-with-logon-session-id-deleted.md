@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article provides workarounds for an issue where the `%TEMP%` folder that includes the logon session ID is deleted in Windows Server 2019 Desktop Experience.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4506040
 
 ## Symptoms
@@ -31,7 +31,7 @@ C:\Users\Administrator>set TEMP
 TEMP=C:\Users\ADMINI~1\AppData\Local\Temp\1
 ```
 
-```console
+```output
 C:\Users\Administrator>dir %TEMP%
 Volume in drive C has no label.
 

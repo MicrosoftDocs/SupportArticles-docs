@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article describes an issue where you can't install a shared network printer locally on a Windows Server or Windows-based computer.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888046
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides help to fix an issue in which event ID 84 is logged in Active Directory Rights Management Services (AD RMS) in Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4038927
 
 ## Symptoms
@@ -74,16 +74,16 @@ SqlError-0.Class: 16
         SqlError-1.State: 0  
         SqlError-0.Server: `sql01.treyresearch.net`,1441  
         SqlError-0.Class: 16  
-  + System.Data.SqlClient.SqlException  
-  +         Message: Arithmetic overflow error converting IDENTITY to data type smallint.
+  \+ System.Data.SqlClient.SqlException  
+  \+         Message: Arithmetic overflow error converting IDENTITY to data type smallint.
 Arithmetic overflow occurred.  
-  +         HelpLink.ProdName: Microsoft SQL Server  
-  +         HelpLink.ProdVer: 10.50.4000  
-  +         HelpLink.EvtSrc: MSSQLServer  
-  +         HelpLink.EvtID: 8115  
-  +         HelpLink.BaseHelpUrl: `https://go.microsoft.com/fwlink`  
-  +         HelpLink.LinkId: 20476  
-  +         Context: ComponentBase.LogResults  
+  \+         HelpLink.ProdName: Microsoft SQL Server  
+  \+         HelpLink.ProdVer: 10.50.4000  
+  \+         HelpLink.EvtSrc: MSSQLServer  
+  \+         HelpLink.EvtID: 8115  
+  \+         HelpLink.BaseHelpUrl: `https://go.microsoft.com/fwlink`  
+  \+         HelpLink.LinkId: 20476  
+  \+         Context: ComponentBase.LogResults  
 
 ## Cause
 

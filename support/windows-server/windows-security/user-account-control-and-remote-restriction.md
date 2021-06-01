@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes User Account Control (UAC) and remote restrictions.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 951016
 
 ## Introduction
@@ -30,7 +30,7 @@ To better protect those users who are members of the local Administrators group,
 
 ### Local user accounts (Security Account Manager user account)
 
-When a user who is a member of the local administrators group on the target remote computer establishes a remote administrative connection by using the net use `*\\remotecomputer\Share$` command, for example, they will not connect as a full administrator. The user has no elevation potential on the remote computer, and the user cannot perform administrative tasks. If the user wants to administer the workstation with a Security Account Manager (SAM) account, the user must interactively log on to the computer that is to be administered with Remote Assistance or Remote Desktop, if these services are available.
+When a user who is a member of the local Administrators group on the target remote computer establishes a remote administrative connection by using the net use `*\\remotecomputer\Share$` command, for example, they won't connect as a full administrator. The user has no elevation potential on the remote computer, and the user cannot perform administrative tasks. If the user wants to administer the workstation with a Security Account Manager (SAM) account, the user must interactively log on to the computer that is to be administered with Remote Assistance or Remote Desktop, if these services are available.
 
 ### Domain user accounts (Active Directory user account)
 
@@ -52,25 +52,25 @@ To disable UAC remote restrictions, follow these steps:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
 
-3. If the **LocalAccountTokenFilterPolicy** registry entry doesn't exist, follow these steps:
+3. If the **`LocalAccountTokenFilterPolicy`** registry entry doesn't exist, follow these steps:
 
-    1. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
+    1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
     2. Type *LocalAccountTokenFilterPolicy*, and then press ENTER.
 
-4. Right-click **LocalAccountTokenFilterPolicy**, and then click **Modify**.
-5. In the **Value data** box, type *1*, and then click **OK**.
+4. Right-click **LocalAccountTokenFilterPolicy**, and then select **Modify**.
+5. In the **Value data** box, type *1*, and then select **OK**.
 6. Exit Registry Editor.
 
 ### Did this fix the problem
 
-Check whether the problem is fixed. If the problem is fixed, you are finished with this article. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check whether the problem is fixed. If the problem isn't fixed, [contact support](https://support.microsoft.com/contactus/).
 
 ## UAC remote settings
 
-The **LocalAccountTokenFilterPolicy** registry entry in the registry can have a value of 0 or of 1. These values change the behavior of the registry entry to the behavior that is described in the following table.
+The **LocalAccountTokenFilterPolicy** registry entry can have a value of 0 or 1. These values change the behavior of the registry entry to the one described in the following table.
 
 |Value|Description|
 |---|---|
-|0|This value builds a filtered token. This is the default value. The administrator credentials are removed.|
+|0|This value builds a filtered token. It's the default value. The administrator credentials are removed.|
 |1|This value builds an elevated token.|
 |||

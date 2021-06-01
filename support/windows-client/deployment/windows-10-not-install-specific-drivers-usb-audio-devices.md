@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article helps to fix an issue in which Windows 10 doesn't install specific drivers for USB audio devices on the first connection.
 
-_Original product version:_ &nbsp; Windows 10, version 1703  
+_Applies to:_ &nbsp; Windows 10, version 1703  
 _Original KB number:_ &nbsp; 4021854
 
 ## Symptom
@@ -40,7 +40,7 @@ To resolve this issue, install update [4022716](https://support.microsoft.com/he
 
 ### Method 2
 
-If the device-specific driver is distributed through Windows Update, you can manually update the driver by using Device Manager. For more information about how to do this, see [update drivers in Windows 10](https://support.microsoft.com/instantanswers/ad5a063e-5f57-c715-2566-b983195752c1/update-drivers-in-windows-10).
+If the device-specific driver is distributed through Windows Update, you can manually update the driver by using Device Manager. For more information about how to do this, see [update drivers in Windows 10](https://support.microsoft.com/windows/update-drivers-in-windows-10-ec62f46c-ff14-c91d-eead-d7126dc1f7b6).
 
 ### Method 3
 

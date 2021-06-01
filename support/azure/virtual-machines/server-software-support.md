@@ -4,6 +4,8 @@ description: Discusses the support policy for Microsoft server software in a Mic
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: drewm, coreysa
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Microsoft server software support for Azure virtual machines
 
@@ -143,11 +145,11 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
     > [!NOTE]
     > Third-party clustered roles are supported by the vendor
 
-    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](http://www.windowsazure.com/pricing/licensing-faq/#header-3). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
+    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
 
 The following roles are not supported on Microsoft Azure Virtual Machines:
 
-- Dynamic Host Configuration Protocol Server
+- Dynamic Host Configuration Protocol Server (not supported for use on a NIC directly connected to an Azure VNet, but it is supported on internal networks used in nested virtualization scenarios)
 - Hyper-V (Hyper-V role is supported in Azure Ev3, and Dv3 series VMs only)
 - Rights Management Services
 - Windows Deployment Services

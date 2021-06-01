@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps resolve an issue in which event ID 30818 is logged when the RDMA connections fail back to TCP. This issue occurs in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;3052127
 
 ## Symptoms

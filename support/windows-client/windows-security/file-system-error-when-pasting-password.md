@@ -1,7 +1,7 @@
 ---
 title: Fail to paste password into credential dialog box
 description: Provides help to fix a File system error that occurs when you paste password into a credential dialog box.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article provides help to fix a File system error that occurs when you paste password into a credential dialog box.
 
-_Original product version:_ &nbsp;Windows 10  
+_Applies to:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp;4092998
 
 ## Symptoms
@@ -36,10 +36,9 @@ In this scenario, you receive the following error messages:
 
 During investigation, you notice that Consent.exe crashes when the issue occurs. The error maps to the following information:
 
-| **Code**| **Symbolic Name**| **Error Description**| **Header** |
+| Code| Symbolic Name| Error Description| Header |
 |---|---|---|---|
-| **Hex**| **Dec** |
-|0xc000027b|-1073741189|STATUS_STOWED_EXCEPTION|An application-internal exception has occurred.|ntstatus.h|
+|Hex: 0xc000027b<br />Dec: -1073741189|STATUS_STOWED_EXCEPTION|An application-internal exception has occurred.|ntstatus.h|
 |||||
 
 > [!Note]
@@ -65,7 +64,7 @@ To fix the consent.exe crashing issue, install the Windows 10 cumulative update 
 
 ## Workaround
 
-To work around this issue, display the UAC elevation prompt on the standard user desktop instead of on the Winlogon desktop. The UAC prompt behavior can be configured by using Group Policy. See [User Account Control: Switch to the secure desktop when prompting for elevation](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)  for more information.
+To work around this issue, display the UAC elevation prompt on the standard user desktop instead of on the Winlogon desktop. The UAC prompt behavior can be configured by using Group Policy. See [User Account Control: Switch to the secure desktop when prompting for elevation](/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)  for more information.
 
 ## More information
 

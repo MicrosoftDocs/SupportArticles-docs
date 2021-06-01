@@ -16,14 +16,12 @@ adobe-target: true
 ---
 # Remote Server Administration Tools (RSAT) for Windows
 
-This article describes the tools that are available in Remote Server Administration Tools (RSAT) for Windows.
+RSAT enables IT administrators to remotely manage roles and features in Windows Server from a computer that is running Windows 10 and Windows 7 Service Pack 1.
 
-_Original product version:_ &nbsp; Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809. Windows 7 Service Pack 1. Windows Server 2019. Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2693643
 
 ## Introduction
-
-RSAT enables IT administrators to remotely manage roles and features in Windows Server from a computer that is running Windows 10 and Windows 7 Service Pack 1.
 
 You can't install RSAT on computers that are running Home or Standard editions of Windows. You can install RSAT only on Professional or Enterprise editions of the Windows client operating system. Unless the download page specifically states that RSAT applies to a beta, preview, or other prerelease version of Windows, you must be running a full (RTM) release of the Windows operating system to install and use RSAT. Some users have found ways of manually cracking or hacking the RSAT MSU to install RSAT on unsupported releases or editions of Windows. This behavior is a violation of the Windows end-user license agreement.
 
@@ -77,6 +75,15 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 |**Windows System Resource Manager tools**|Windows System Resource Manager tools include the Windows System Resource Manager snap-in and the **Wsrmc.exe** command-line tool.| **√**<br/><br/> WSRM has been deprecated in Windows Server 2012 R2. Tools for managing WSRM aren't available in RSAT for Windows 8.1 and later releases of RSAT.| |
 | **Windows Server Update Services tools**| Windows Server Update Services tools include the Windows Server Update Services snap-in, WSUS.msc, and PowerShell cmdlets.| **√**| **√** |
 |||||
+
+## RSAT for Windows 10, version 1809 or later versions
+
+> [!NOTE]
+> You can't use the Turn Windows features on and off dialog from the Control Panel
+
+Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System an can be installed via **Optional Features**.
+
+To enable the tools, click **Start**, click **Settings**, click **Apps**, and then click **Optional features**, after that click on the panel **Add a feature** and enter Remote in the search bar.
 
 ## References
 

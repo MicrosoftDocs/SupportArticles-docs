@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps fix an issue that occurs when an application tries to open a connection to a SQL Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4557473
 
 ## Symptoms
@@ -101,27 +101,30 @@ foreach ($CipherSuite in $(Get-TlsCipherSuite).Name)
 
 You can confirm that you're encountering this issue during the connection establishment. When the issue occurs, you can see the following sequence in the network trace on the server.
 
-> 1103479 *\<DateTime>* 382.4104867 \<Application IP> **\<Server IP>** TCP:Flags=CE....S., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174047, Ack=0, Win=8192 ( Negotiating scale factor 0x8 ) = 8192  
-1103486 *\<DateTime>* 382.4105589 \<Server IP> \<Application IP> TCP: [Bad CheckSum]Flags=...A..S., SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267349053, Ack=829174048, Win=65535 ( Negotiated scale factor 0x8 ) = 16776960  
-1103493 *\<DateTime>* 382.4113628 \<Application IP> \<Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174048, Ack=267349054, Win=513 (scale factor 0x8) = 131328  
-1103515 *\<DateTime>* 382.4117349 \<Application IP> \<Server IP> TDS:Prelogin, Version = 7.300000(No version information available, using the default version), SPID = 0, PacketID = 1, Flags=...AP..., SrcPort=62702, DstPort=1433, PayloadLen=88, Seq=829174048 - 829174136, Ack=267349054, Win=131328  
-1103525 *\<DateTime>* 382.4118186 \<Server IP> \<Application IP> TDS:Response, Version = 7.300000(No version information available, using the default version), SPID = 0, PacketID = 1, Flags=...AP..., SrcPort=1433, DstPort=62702, PayloadLen=48, Seq=267349054 - 267349102, Ack=829174136, Win=2102272  
-1103547 *\<DateTime>* 382.4128101 \<Application IP> \<Server IP> TLS:TLS Rec Layer-1 HandShake: Client Hello.  
-1103584 *\<DateTime>* 382.4151314 \<Server IP> \<Application IP> TLS:TLS Rec Layer-1 HandShake: Server Hello. Certificate. Server Key Exchange. Server Hello Done.  
-1103595 *\<DateTime>* 382.4161185 \<Application IP> \<Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174322, Ack=267351024, Win=513 (scale factor 0x8) = 131328  
- **1103676 *\<DateTime>* 382.4782629 \<Application IP> \<Server IP> TLS:TLS Rec Layer-1 HandShake: Client Key Exchange.; TLS Rec Layer-2 Cipher Change Spec; TLS Rec Layer-3 HandShake: Encrypted Handshake Message.  
-1103692 *\<DateTime>* 382.4901904 \<Server IP> \<Application IP> TCP:[Segment Lost] [Bad CheckSum]Flags=...A...F, SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267351024, Ack=829174648, Win=8210 (scale factor 0x8) = 2101760**  
-1103696 *\<DateTime>* 382.4918048 \<Application IP> \<Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174648, Ack=267351025, Win=513 (scale factor 0x8) = 131328  
-1103718 *\<DateTime>* 382.4931068 \<Application IP> \<Server IP> TCP:Flags=...A...F, SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174648, Ack=267351025, Win=513 (scale factor 0x8) = 131328  
-1103723 *\<DateTime>* 382.4931475 \<Server IP> \<Application IP> TCP: [Bad CheckSum]Flags=...A...., SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267351025, Ack=829174649, Win=8210 (scale factor 0x8) = 2101760  
+```output
+1103479 <DateTime> 382.4104867 <Application IP> <Server IP> TCP:Flags=CE....S., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174047, Ack=0, Win=8192 ( Negotiating scale factor 0x8 ) = 8192  
+1103486 <DateTime> 382.4105589 <Server IP> <Application IP> TCP: [Bad CheckSum]Flags=...A..S., SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267349053, Ack=829174048, Win=65535 ( Negotiated scale factor 0x8 ) = 16776960  
+1103493 <DateTime> 382.4113628 <Application IP> <Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174048, Ack=267349054, Win=513 (scale factor 0x8) = 131328  
+1103515 <DateTime> 382.4117349 <Application IP> <Server IP> TDS:Prelogin, Version = 7.300000(No version information available, using the default version), SPID = 0, PacketID = 1, Flags=...AP..., SrcPort=62702, DstPort=1433, PayloadLen=88, Seq=829174048 - 829174136, Ack=267349054, Win=131328  
+1103525 <DateTime> 382.4118186 <Server IP> <Application IP> TDS:Response, Version = 7.300000(No version information available, using the default version), SPID = 0, PacketID = 1, Flags=...AP..., SrcPort=1433, DstPort=62702, PayloadLen=48, Seq=267349054 - 267349102, Ack=829174136, Win=2102272  
+1103547 <DateTime> 382.4128101 <Application IP> <Server IP> TLS:TLS Rec Layer-1 HandShake: Client Hello.  
+1103584 <DateTime> 382.4151314 <Server IP> <Application IP> TLS:TLS Rec Layer-1 HandShake: Server Hello. Certificate. Server Key Exchange. Server Hello Done.  
+1103595 <DateTime> 382.4161185 <Application IP> <Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174322, Ack=267351024, Win=513 (scale factor 0x8) = 131328  
+1103676 <DateTime> 382.4782629 <Application IP> <Server IP> TLS:TLS Rec Layer-1 HandShake: Client Key Exchange.; TLS Rec Layer-2 Cipher Change Spec; TLS Rec Layer-3 HandShake: Encrypted Handshake Message.  
+1103692 <DateTime> 382.4901904 <Server IP> <Application IP> TCP:[Segment Lost] [Bad CheckSum]Flags=...A...F, SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267351024, Ack=829174648, Win=8210 (scale factor 0x8) = 2101760  
+1103696 <DateTime> 382.4918048 <Application IP> <Server IP> TCP:Flags=...A...., SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174648, Ack=267351025, Win=513 (scale factor 0x8) = 131328  
+1103718 <DateTime> 382.4931068 <Application IP> <Server IP> TCP:Flags=...A...F, SrcPort=62702, DstPort=1433, PayloadLen=0, Seq=829174648, Ack=267351025, Win=513 (scale factor 0x8) = 131328  
+1103723 <DateTime> 382.4931475 <Server IP> <Application IP> TCP: [Bad CheckSum]Flags=...A...., SrcPort=1433, DstPort=62702, PayloadLen=0, Seq=267351025, Ack=829174649, Win=8210 (scale factor 0x8) = 2101760  
+```
 
 Examining the Server Hello packet to see the cipher suite being used:
 
-> Frame: Number = 1103584, Captured Frame Length = 2093, MediaType = NetEvent  
+```output
+Frame: Number = 1103584, Captured Frame Length = 2093, MediaType = NetEvent  
 +NetEvent:  
 +MicrosoftWindowsNDISPacketCapture: Packet Fragment (1976 (0x7B8) bytes)  
 +Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[00-00-0C-9F-F4-5C],SourceAddress:[00-1D-D8-B8-3A-7B]  
-+Ipv4: Src = \<Server IP>, Dest = \<Application IP>, Next Protocol = TCP, Packet ID = 16076, Total IP Length = 0  
++Ipv4: Src = <Server IP>, Dest = <Application IP>, Next Protocol = TCP, Packet ID = 16076, Total IP Length = 0  
 +Tcp: [Bad CheckSum]Flags=...AP..., SrcPort=1433, DstPort=62702, PayloadLen=1938, Seq=267349102 - 267351040, Ack=829174322, Win=8211 (scale factor 0x8) = 2102016  
 +Tds: Prelogin, Version = 7.300000(No version information available, using the default version), SPID = 0, PacketID = 0, Flags=...AP..., SrcPort=1433, DstPort=62702, PayloadLen=1938, Seq=267349102 - 267351040, Ack=829174322, Win=2102016  
 TLSSSLData: Transport Layer Security (TLS) Payload Data  
@@ -152,6 +155,7 @@ ServerKeyExchange: Binary Large Object (1034 Bytes)
 HandShakeType: Server Hello Done(0x0E)  
 Length: 0 (0x0)  
 +Tds: Prelogin, Version = 7.300000(No version information available, using the default version), Reassembled Packet
+```
 
 ## Reference
 

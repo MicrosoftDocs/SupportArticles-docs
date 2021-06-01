@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes the basic troubleshooting steps you can use to diagnose Cluster service startup issues with Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 266274
 
 ## Summary
@@ -50,6 +50,4 @@ These are the steps in the startup process in order:
 4. If it can't contact any other node, the service continues with the form phase. It attempts to locate information about the quorum in the local cluster database, and then tries to mount the disk. If the quorum disk can't be mounted, the service doesn't start. If another node has successfully started and has ownership of the quorum, the service doesn't start. This is usually caused by connectivity or authentication issues. If this isn't the case, you can check the status of the quorum device by starting the service with the -fixquorum switch, and attempt to bring the quorum disk online, or change the quorum location for the service. Also, check the System event log for disk errors. If the quorum disk successfully comes online, it's likely that the quorum is corrupted.  
 5. Check the attributes of the Cluster.log file to make sure that it's not *read-only*, and make sure that no policy is in effect that prevents modification of the Cluster.log file. If either of these conditions exist, the Cluster service can't start.
 
-If these steps don't resolve the problem, you should take additional troubleshooting steps. The cluster log file can be valuable in additional troubleshooting. By default, cluster logging is enabled on Windows 2000-based computers that are running the Cluster service. To enable cluster logging on Windows NT 4.0-based computers, see the following Microsoft Knowledge Base article:
-
- [168801](https://support.microsoft.com/help/168801) How to Enable Cluster Logging in Microsoft Cluster Server
+If these steps don't resolve the problem, you should take additional troubleshooting steps. The cluster log file can be valuable in additional troubleshooting. By default, cluster logging is enabled on Windows 2000-based computers that are running the Cluster service.

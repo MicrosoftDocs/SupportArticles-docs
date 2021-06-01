@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article helps to resolve the event ID 106 when a Hyper-V virtual switch is bound to an LBFO team.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2974384
 
 ## Symptoms

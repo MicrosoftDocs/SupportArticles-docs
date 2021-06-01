@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to move a certification authority (CA) to a different server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 298138
 
 > [!NOTE]

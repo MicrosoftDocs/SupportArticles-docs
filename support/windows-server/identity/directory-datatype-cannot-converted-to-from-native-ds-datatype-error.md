@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps to fix the error "The directory datatype cannot be converted to or from a native DS datatype".
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 907462
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article provides a solution to an issue where the Welcome screen may be displayed for 30 seconds when you log on.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;940452
 
 ## Problem description

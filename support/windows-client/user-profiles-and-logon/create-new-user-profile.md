@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article describes how to determine whether a user profile is damaged and how to create a new profile if the profile is damaged.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816593
 
 ## Summary

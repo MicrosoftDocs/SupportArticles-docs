@@ -1,7 +1,7 @@
 ---
 title: Manage lock screen image
 description: Describes how an administrator can manage the lock screen image.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article describes how an administrator can manage the lock screen image.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2787100
 
 ## Symptoms

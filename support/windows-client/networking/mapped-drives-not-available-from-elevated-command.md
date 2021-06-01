@@ -1,7 +1,7 @@
 ---
 title: Mapped drives are not available
 description: Describes an issue in which mapped drives are unavailable from an elevated command prompt.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides methods to solve the issue that mapped drives are unavailable in an elevated command prompt.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3035277
 
 ## Symptoms

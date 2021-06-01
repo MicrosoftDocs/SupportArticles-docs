@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to directly modify the permissions on the configuration objects for each replication group.
 
-_Original product version:_ &nbsp; Windows Server 2003 R2  
+_Applies to:_ &nbsp; Windows Server 2003 R2  
 _Original KB number:_ &nbsp; 911604
 
 ## Introduction

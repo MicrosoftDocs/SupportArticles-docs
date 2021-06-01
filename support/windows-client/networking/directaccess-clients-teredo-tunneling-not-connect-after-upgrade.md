@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a solution to an issue where DirectAccess clients that use Teredo tunneling cannot connect after upgrade to Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1809, and later versions, Windows 10, version 1803  
+_Applies to:_ &nbsp; Windows 10, version 1809, and later versions, Windows 10, version 1803  
 _Original KB number:_ &nbsp; 4510763
 
 ## Symptoms

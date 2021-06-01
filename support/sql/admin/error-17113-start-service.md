@@ -2,7 +2,7 @@
 title: Error 17113 when you start SQL Server service
 description: This article provides resolutions for the Error 17113 problem that occurs when you start SQL Server service.
 ms.date: 1/28/2020
-author: xl989
+author: v-lianna
 ms.author: v-lianna
 ms.reviewer: ramakoni
 ---
@@ -15,26 +15,30 @@ _Applies to:_ &nbsp; SQL Server
 
 In Microsoft SQL Server, the master database records all the system-level information. The master database also records the existence of all other databases, the location of those database files, and the initialization information for SQL Server. Therefore, SQL Server cannot start if the master database is unavailable.
 
-When you try to start SQL Server in this scenario, the SQL Server service doesn’t start, and you receive the following error message, depending on how you try to start the service:
+When you try to start SQL Server in this scenario, the SQL Server service doesn't start, and you receive the following error message, depending on how you try to start the service:
 
 - By using the Services applet:
 
-    > `Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log. If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 17113.`
+    > Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log. If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 17113.
 
 - By using a command prompt:
 
     > C:\\>NET START MSSQLSERVER  
     The SQL Server (MSSQLSERVER) service is starting.  
     The SQL Server (MSSQLSERVER) service could not be started.  
-    `A service specific error occurred: 17113.`  
-    `More help is available by typing NET HELPMSG 3547.`
+    A service specific error occurred: 17113.  
+    More help is available by typing NET HELPMSG 3547.
 
 ## Resolution
 
 1. Check [SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) and verify that the cause is the inaccessibility of the master database. For example, you might see a log entry that resembles the following:
 
-    > `<Datetime> Server      Error: 17113, Severity: 16, State: 1.`  
-    `<Datetime> Server      Error 2(The system cannot find the file specified.) occurred while opening file 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf' to obtain configuration information at startup. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.`
+    ```output
+    <Datetime> Server      Error: 17113, Severity: 16, State: 1.  
+    <Datetime> Server      Error 2(The system cannot find the file specified.) occurred while opening file
+                           'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf' to obtain configuration information at startup.
+                           An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.
+    ```
 
 2. Verify the location of the master.mdf file. If the path is incorrect, fix the path by using SQL Server Configuration Manager or Registry Editor.
 

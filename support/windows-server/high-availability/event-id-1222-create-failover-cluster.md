@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a solution to solve an issue where the event ID 1222 is logged when you create a Windows Server 2012 failover cluster.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2770582
 
 ## Symptoms
@@ -49,10 +49,6 @@ To improve the level of protection and ability to recover from the accidental de
 - [Step-by-step guide to the Active Directory Recycle Bin feature](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10))
 
 - [How to configure accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10))
-
-For more information about the failover cluster security model, click the following article number to view the article in Microsoft Knowledge Base:
-
-[947049](https://support.microsoft.com/help/947049) Description of the failover cluster security model in Windows Server 2008
 
 For more information about Cluster Computer Objects, go to the following MSDN website:
 

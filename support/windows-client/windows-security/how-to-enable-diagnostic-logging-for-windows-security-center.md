@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes how to enable diagnostic logging for Windows Security Center.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows Server 2016, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 3155606
 
 ## Summary

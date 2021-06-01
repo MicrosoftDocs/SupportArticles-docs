@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article describes how to make screen saver password locks unavailable on systems in a site, domain, or organizational unit, by using the policies available.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 272304
 
 ## Disable screen saver passwords

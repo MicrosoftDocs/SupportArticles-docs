@@ -16,7 +16,7 @@ adobe-target: true
 ---
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
-_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7, Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 947821
 
 ## Symptom
@@ -25,11 +25,11 @@ Windows updates and service packs may fail to install if there are [corruption e
 
 This article is intended for Support agents and IT professionals. If you are home users and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
 
-## Resolution for Windows 10 and Windows Server 2012 R2
+## Resolution for Windows 8.1, Windows 10 and Windows Server 2012 R2
 
 To resolve this problem, use the inbox Deployment Image Servicing and Management (DISM) tool. Then, install the Windows update or service pack again.
 
-1. Open an elevated command prompt. To do this, swipe in from the right edge of the screen, and then tap Search. Or, if you are using a mouse, point to the lower-right corner of the screen, and then select **Search**. Type *Command Prompt* in the **Search** box, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
+1. Open an elevated command prompt. To do this, open **Start** menu or **Start** screen, type *Command Prompt*, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
 
 2. Type the following command, and then press Enter. It may take several minutes for the command operation to be completed.
 
@@ -53,24 +53,16 @@ To resolve this problem, use the inbox Deployment Image Servicing and Management
 
 DISM creates a log file (%windir%/Logs/CBS/CBS.log) that captures any issues that the tool found or fixed. %windir% is the folder in which Windows is installed. For example, the %windir% folder is C:\Windows.
 
-## Resolution for Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1
+## Resolution for Windows 7 and Windows Server 2008 R2
 
 To resolve this problem, use the System Update Readiness tool. Then, install the Windows update or service pack again.
 
 1. Download the System Update Readiness tool.
 
-    select the download link in the following table that corresponds to the version of Windows that is running on your computer. For more information about how to find the version of Windows that you installed, see [Find out if your computer is running the 32-bit or 64-bit version of Windows](https://support.microsoft.com/help/15056).
+    Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=947821) and download the tool that corresponds to the version of Windows that is running on your computer. For more information about how to find the version of Windows that you installed, see [Find out if your computer is running the 32-bit or 64-bit version of Windows](https://support.microsoft.com/help/15056).
 
     > [!NOTE]
     > This tool is updated regularly, we recommend that you always download the latest version. This tool is not available in every supported language. Check the link below to see if it is available in your language.
-
-    |Operating system|Download link|
-    |---|---|
-    |x86-based (32-bit) versions of Windows 7 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=3132) |
-    |x64-based (64-bit) versions of Windows 7 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=20858) |
-    |x64-based (64-bit) versions of Windows Server 2008 R2 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=14668) |
-    |Itanium-based versions of Windows Server 2008 R2 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=13833) |
-    |||
 
 2. Install and run the tool.
    1. Select **Download** on the Download Center webpage, then do one of the following:
@@ -190,15 +182,17 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 
 2. Identify the packages that the tool can't fix. For example, you may find the following in the log file:
 
-    > Summary:
-    >
-    > Seconds executed: 264  
-    > Found 3 errors  
-    > CBS MUM Missing Total Count: 3  
-    > Unavailable repair files:  
-    >
-    > servicing\packages\Package_for_KB958690_sc_0~31bf3856ad364e35~amd64~~6.0.1.6.mum  
-    > ...
+    ```output
+    Summary:
+    
+    Seconds executed: 264  
+    Found 3 errors  
+    CBS MUM Missing Total Count: 3  
+    Unavailable repair files:  
+    
+    servicing\packages\Package_for_KB958690_sc_0~31bf3856ad364e35~amd64~~6.0.1.6.mum  
+    ...
+    ```
 
     In this case, the package that is corrupted is KB958690.
 

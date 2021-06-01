@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021074
 
 ## Symptoms

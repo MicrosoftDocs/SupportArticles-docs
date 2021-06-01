@@ -1,7 +1,7 @@
 ---
 title: Disable Devices in Devices and Printers
 description: Describes how to hide or disable **Devices** in **Devices and Printers**.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to hide or disable **Devices** in **Devices and Printers**.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2018577
 
 ## Symptoms

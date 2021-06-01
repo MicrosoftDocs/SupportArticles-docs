@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article helps to fix the error "An item with the same key has already been added".
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002405
 
 ## Symptoms

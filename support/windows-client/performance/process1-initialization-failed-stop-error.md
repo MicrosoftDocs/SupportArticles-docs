@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround to an issue that triggers a stop error on a blue screen after you upgrade your system to Windows 10 Version 1607.
 
-_Original product version:_ &nbsp; Windows 10, version 1607  
+_Applies to:_ &nbsp; Windows 10, version 1607  
 _Original KB number:_ &nbsp; 3083796
 
 ## Symptoms  

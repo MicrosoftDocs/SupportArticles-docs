@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article discusses a problem in which a new session setup for LDAP services takes longer than expected if it targets host names.
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;4559609
 
 ## Symptoms
@@ -142,14 +142,14 @@ As an additional approach, you can turn off name resolution by using broadcastin
 
 For more information, see the following articles:  
 
-[Ldap_init function](https://docs.microsoft.com/windows/win32/api/winldap/nf-winldap-ldap_init)  
+[Ldap_init function](/windows/win32/api/winldap/nf-winldap-ldap_init)  
 
-LDAP [session options](https://docs.microsoft.com/previous-versions/windows/desktop/ldap/session-options) (see LDAP_OPT_AREC_EXCLUSIVE, 0x98)  
+LDAP [session options](/previous-versions/windows/desktop/ldap/session-options) (see LDAP_OPT_AREC_EXCLUSIVE, 0x98)  
 
-ADSI function [AdsopenObject](https://docs.microsoft.com/windows/win32/api/winldap/nf-winldap-ldap_init)  
+ADSI function [AdsopenObject](/windows/win32/api/winldap/nf-winldap-ldap_init)  
 
-ADSI [AuthenticationEnum](https://docs.microsoft.com/windows/win32/api/iads/ne-iads-ads_authentication_enum) with the ADS_SERVER_BIND value  
+ADSI [AuthenticationEnum](/windows/win32/api/iads/ne-iads-ads_authentication_enum) with the ADS_SERVER_BIND value  
 
-S.DS [AuthenticationTypes](https://docs.microsoft.com/dotnet/api/system.directoryservices.authenticationtypes) Enum with the ServerBind value
+S.DS [AuthenticationTypes](/dotnet/api/system.directoryservices.authenticationtypes) Enum with the ServerBind value
 
-S.DS.P [LdapDirectoryIdentifier](https://docs.microsoft.com/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor) constructor with the fullyQualifiedDnsHostName flag
+S.DS.P [LdapDirectoryIdentifier](/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor) constructor with the fullyQualifiedDnsHostName flag

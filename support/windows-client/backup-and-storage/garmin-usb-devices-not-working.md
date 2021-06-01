@@ -1,7 +1,7 @@
 ---
 title: Garmin isn't compatible with Windows 10
 description: Fixes an issue that prevents Garmin wearable devices from working after you've upgraded your computer or device to Windows 10.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides information on how to fix the problem that Garmin wearable devices aren't recognized on Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1709, Windows 10, version 1607  
+_Applies to:_ &nbsp; Windows 10, version 1709, Windows 10, version 1607  
 _Original KB number:_ &nbsp; 3183365
 
 ## Symptoms

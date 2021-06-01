@@ -17,14 +17,14 @@ ms.technology: windows-client-user-profiles
 
 This article helps resolve an issue where you can't disable automatic logon by holding the Shift key while shutting down or logging off from a computer.
 
-_Original product version:_ &nbsp;Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp;2840544
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You connect a USB keyboard to a computer that is running Windows 7 or Windows 8.
+- You connect a USB keyboard to a computer that is running Windows.
 - Automatic logon is enabled.
     > [!Note]
     > To enable automatic logon, set the AutoAdminLogon registry value to 1 by using Registry Editor. For more information, see the More information section at the end of this KB article.

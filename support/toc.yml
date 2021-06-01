@@ -26,3 +26,7 @@
   href: azure/index.yml
 - name: Welcome
   href: sql/welcome-sql-server.md
+- name: Welcome
+  href: dynamics-365/index.yml
+- name: Welcome
+  href: power-platform/index.yml

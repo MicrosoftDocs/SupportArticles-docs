@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a resolution to an issue where only critical volumes are backed up when you use Windows Server Backup on your virtual machine (VM) data and bare metal recovery (BMR).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3171712
 
 ## Symptoms

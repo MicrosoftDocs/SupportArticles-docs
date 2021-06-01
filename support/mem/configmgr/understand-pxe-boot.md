@@ -27,10 +27,12 @@ We will first look at the processes involved in the installation of the SMSPXE p
 
 Installation is initiated by selecting the **Enable PXE support for clients** option on the **PXE** tab in **Distribution point properties**. When PXE support is enabled, an instance of `SMS_SCI_SysResUse` class is created.
 
-> SMSProv.log  
-> PutInstanceAsync SMS_SCI_SysResUseSMS Provider04/09/2014 11:30:131552 (0x0610)  
-> CExtProviderClassObject::DoPutInstanceInstanceSMS Provider04/09/2014 11:30:131552 (0x0610)  
-> INFO: 'RemoteDp.contoso.com' is a valid FQDN.SMS Provider04/09/2014 11:30:131552 (0x0610)
+```output
+SMSProv.log  
+PutInstanceAsync SMS_SCI_SysResUseSMS Provider04/09/2014 11:30:131552 (0x0610)  
+CExtProviderClassObject::DoPutInstanceInstanceSMS Provider04/09/2014 11:30:131552 (0x0610)  
+INFO: 'RemoteDp.contoso.com' is a valid FQDN.SMS Provider04/09/2014 11:30:131552 (0x0610)
+```
 
 In the WMI namespace `Root\SMS\Site_RR2` (where RR2 is the site code of the site), the `SMS_SCI_SYSResUse` class contains all the site systems roles on the primary site server. You can run the following query in **WBEMTEST** to identify all the DPs on that site server:
 
@@ -42,103 +44,117 @@ Changing the properties of these roles via the SDK will alter the site control f
 
 The SMS Database Monitor component detects the change to the `DPNotificaiton` and `DistributionPoints` tables and drops files in distmgr.box:
 
-> Smsdbmon.log  
-> RCV:UPDATE on SiteControl for SiteControl_AddUpd_HMAN [RR2 ][19604]  
-> RCV: UPDATE on SiteControl for SiteControl_AddUpd_SiteCtrl [RR2 ][19605]  
-> SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\RR2.SCU [19604]  
-> SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\sitectrl.box\RR2.CT0 [19605]  
-> RCV: UPDATE on Sites for Sites_Interop_Update_HMAN [RR2 ][19606]  
-> SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\RR2.ITC [19606]  
-> RCV: UPDATE on DistributionPoints for DP_Properties_Upd [15 ][19607]  
-> RCV: INSERT on PkgNotification for PkgNotify_Add [RR200002 ][19608]  
-> RCV: INSERT on PkgNotification for PkgNotify_Add [RR200003 ][19609]  
-> RCV: INSERT on DPNotification for DPNotify_ADD [15 ][19610]  
-> RCV: UPDATE on SiteControlNotification for SiteCtrlNot_Add_DDM [RR2 ][19611]  
-> SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\15.NOT [19607]  
-> SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\RR200002.PKN [19608]  
-> SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\RR200003.PKN [19609]  
-> SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\15.DPN [19610]  
-> Site Control Notification.
+```output
+Smsdbmon.log  
+RCV:UPDATE on SiteControl for SiteControl_AddUpd_HMAN [RR2 ][19604]  
+RCV: UPDATE on SiteControl for SiteControl_AddUpd_SiteCtrl [RR2 ][19605]  
+SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\RR2.SCU [19604]  
+SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\sitectrl.box\RR2.CT0 [19605]  
+RCV: UPDATE on Sites for Sites_Interop_Update_HMAN [RR2 ][19606]  
+SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\RR2.ITC [19606]  
+RCV: UPDATE on DistributionPoints for DP_Properties_Upd [15 ][19607]  
+RCV: INSERT on PkgNotification for PkgNotify_Add [RR200002 ][19608]  
+RCV: INSERT on PkgNotification for PkgNotify_Add [RR200003 ][19609]  
+RCV: INSERT on DPNotification for DPNotify_ADD [15 ][19610]  
+RCV: UPDATE on SiteControlNotification for SiteCtrlNot_Add_DDM [RR2 ][19611]  
+SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\15.NOT [19607]  
+SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\RR200002.PKN [19608]  
+SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\RR200003.PKN [19609]  
+SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\distmgr.box\15.DPN [19610]  
+Site Control Notification.
+```
 
 The Distribution Manager component on the primary site server then initiates the configuration of the remote DP:
 
-> ConfigureDPSMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> IISPortsList in the SCF is "80".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> ISSSLPortsList in the SCF is "443".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> IISWebSiteName in the SCF is "".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> IISSSLState in the SCF is 448.SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> DP registry settings have been successfully updated on RemoteDp.contoso.com  
-> SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> ConfigurePXESMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+```output
+ConfigureDPSMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+IISPortsList in the SCF is "80".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+ISSSLPortsList in the SCF is "443".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+IISWebSiteName in the SCF is "".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+IISSSLState in the SCF is 448.SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+DP registry settings have been successfully updated on RemoteDp.contoso.com  
+SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+ConfigurePXESMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)
+```
 
 In the SMS DP Provider log on the remote DP, we can see the following information about the PXE installation, where initially the `PxeInstalled` registry key isn't found:
 
-> Smsdpprov.log  
-> [66C][Thu 09/04/2014 11:30:28]:CcmInstallPXE  
-> [66C][Thu 09/04/2014 11:30:28]:RegQueryValueExW failed for Software\Microsoft\SMS\DP, PxeInstalled  
-> [66C][Thu 09/04/2014 11:30:28]:RegReadDWord failed; 0x80070002
+```output
+Smsdpprov.log  
+[66C][Thu 09/04/2014 11:30:28]:CcmInstallPXE  
+[66C][Thu 09/04/2014 11:30:28]:RegQueryValueExW failed for Software\Microsoft\SMS\DP, PxeInstalled  
+[66C][Thu 09/04/2014 11:30:28]:RegReadDWord failed; 0x80070002
+```
 
 The Visual C++ Redistributable is installed:
 
-> Smsdpprov.log  
-> [66C][Thu 09/04/2014 11:30:28]:Running: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"  
-> [66C][Thu 09/04/2014 11:30:28]:Waiting for the completion of: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"  
-> [66C][Thu 09/04/2014 11:30:39]:Run completed for: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"
+```output
+Smsdpprov.log  
+[66C][Thu 09/04/2014 11:30:28]:Running: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"  
+[66C][Thu 09/04/2014 11:30:28]:Waiting for the completion of: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"  
+[66C][Thu 09/04/2014 11:30:39]:Run completed for: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"
+```
 
 WDS is installed:
 
-> Smsdpprov.log  
-> [66C][Thu 09/04/2014 11:30:39]:Created the DP mutex key for WDS.  
-> [66C][Thu 09/04/2014 11:30:39]:Failed to open WDS service.  
-> [66C][Thu 09/04/2014 11:30:39]:WDS is NOT INSTALLED  
-> [66C][Thu 09/04/2014 11:30:39]:Installing WDS.  
-> [66C][Thu 09/04/2014 11:30:39]:Running: ServerManagerCmd.exe -i WDS -a  
-> [66C][Thu 09/04/2014 11:30:39]:Failed (2) to run: ServerManagerCmd.exe -i WDS -a  
-> [66C][Thu 09/04/2014 11:30:39]:Running: PowerShell.exe -Command Import-Module ServerManager; Get-WindowsFeature WDS; Add-WindowsFeature WDS  
-> [66C][Thu 09/04/2014 11:30:39]:Waiting for the completion of: PowerShell.exe -Command Import-Module ServerManager; Get-WindowsFeature WDS; Add-WindowsFeature WDS  
-> [66C][Thu 09/04/2014 11:31:35]:Run completed for: PowerShell.exe -Command Import-Module ServerManager; Get-WindowsFeature WDS; Add-WindowsFeature WDS  
-> [66C][Thu 09/04/2014 11:31:35]:Successfully installed WDS.
+```output
+Smsdpprov.log  
+[66C][Thu 09/04/2014 11:30:39]:Created the DP mutex key for WDS.  
+[66C][Thu 09/04/2014 11:30:39]:Failed to open WDS service.  
+[66C][Thu 09/04/2014 11:30:39]:WDS is NOT INSTALLED  
+[66C][Thu 09/04/2014 11:30:39]:Installing WDS.  
+[66C][Thu 09/04/2014 11:30:39]:Running: ServerManagerCmd.exe -i WDS -a  
+[66C][Thu 09/04/2014 11:30:39]:Failed (2) to run: ServerManagerCmd.exe -i WDS -a  
+[66C][Thu 09/04/2014 11:30:39]:Running: PowerShell.exe -Command Import-Module ServerManager; Get-WindowsFeature WDS; Add-WindowsFeature WDS  
+[66C][Thu 09/04/2014 11:30:39]:Waiting for the completion of: PowerShell.exe -Command Import-Module ServerManager; Get-WindowsFeature WDS; Add-WindowsFeature WDS  
+[66C][Thu 09/04/2014 11:31:35]:Run completed for: PowerShell.exe -Command Import-Module ServerManager; Get-WindowsFeature WDS; Add-WindowsFeature WDS  
+[66C][Thu 09/04/2014 11:31:35]:Successfully installed WDS.
+```
 
 TFTP read filters are configured:
 
-> Smsdpprov.log  
-> [66C][Thu 09/04/2014 11:31:35]:Setting TFTP config key as: System\CurrentControlSet\Services\WDSSERVER\Providers\WDSTFTP  
-> [66C][Thu 09/04/2014 11:31:35]:Configuring TFTP read filters  
-> [66C][Thu 09/04/2014 11:31:35]:SetupComplete is set to 0
+```output
+Smsdpprov.log  
+[66C][Thu 09/04/2014 11:31:35]:Setting TFTP config key as: System\CurrentControlSet\Services\WDSSERVER\Providers\WDSTFTP  
+[66C][Thu 09/04/2014 11:31:35]:Configuring TFTP read filters  
+[66C][Thu 09/04/2014 11:31:35]:SetupComplete is set to 0
+```
 
 The `REMINST` share is created and WDS is configured:
 
-> Smsdpprov.log  
-> [66C][Thu 09/04/2014 11:31:35]:RegQueryValueExW failed for Software\Microsoft\Windows\CurrentVersion\Setup, REMINST  
-> [66C][Thu 09/04/2014 11:31:35]:RegReadDWord failed; 0x80070002  
-> [66C][Thu 09/04/2014 11:31:35]:REMINST not set in WDS  
-> [66C][Thu 09/04/2014 11:31:35]:WDS is NOT Configured  
-> [66C][Thu 09/04/2014 11:31:35]:Share (REMINST) does not exist. (NetNameNotFound) (0x00000906)  
-> [66C][Thu 09/04/2014 11:31:35]:GetFileSharePath failed; 0x80070906  
-> [66C][Thu 09/04/2014 11:31:35]:REMINST share does not exist. Need to create it.  
-> [66C][Thu 09/04/2014 11:31:35]:Enumerating drives A through Z for the NTFS drive with the most free space.  
-> [66C][Thu 09/04/2014 11:31:37]:Drive 'C:\' is the best drive for the SMS installation directory.  
-> [66C][Thu 09/04/2014 11:31:37]:Creating REMINST share to point to: C:\RemoteInstall  
-> [66C][Thu 09/04/2014 11:31:37]:Succesfully created share REMINST  
-> [66C][Thu 09/04/2014 11:31:37]:Removing existing PXE related directories  
-> [66C][Thu 09/04/2014 11:31:37]:Registering WDS provider: SourceDir: C:\SMS_DP$\sms\bin  
-> [66C][Thu 09/04/2014 11:31:37]:Registering WDS provider: ProviderPath: C:\SMS_DP$\sms\bin\smspxe.dll  
-> [66C][Thu 09/04/2014 11:31:37]:DoPxeProviderRegister  
-> [66C][Thu 09/04/2014 11:31:37]:PxeLoadWdsPxe  
-> [66C][Thu 09/04/2014 11:31:37]:Loading wdspxe.dll from C:\Windows\system32\wdspxe.dll  
-> [66C][Thu 09/04/2014 11:31:37]:wdspxe.dll is loaded  
-> [66C][Thu 09/04/2014 11:31:37]:PxeProviderRegister has suceeded (0x00000000)  
-> [66C][Thu 09/04/2014 11:31:37]:Disabling WDS/RIS functionality  
-> [66C][Thu 09/04/2014 11:31:39]:WDSServer status is 1  
-> [66C][Thu 09/04/2014 11:31:39]:WDSServer is NOT STARTED  
-> [66C][Thu 09/04/2014 11:31:39]:Running: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
-> [66C][Thu 09/04/2014 11:31:39]:Waiting for the completion of: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
-> [66C][Thu 09/04/2014 11:31:50]:Run completed for: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
-> [66C][Thu 09/04/2014 11:31:50]:CcmInstallPXE: Deleting the DP mutex key for WDS.  
-> [66C][Thu 09/04/2014 11:31:50]:Installed PXE  
-> [66C][Thu 09/04/2014 11:32:03]:CcmInstallPXE  
-> [66C][Thu 09/04/2014 11:32:03]:PXE provider is already installed.  
-> [66C][Thu 09/04/2014 11:32:03]:Installed PXE
+```output
+Smsdpprov.log  
+[66C][Thu 09/04/2014 11:31:35]:RegQueryValueExW failed for Software\Microsoft\Windows\CurrentVersion\Setup, REMINST  
+[66C][Thu 09/04/2014 11:31:35]:RegReadDWord failed; 0x80070002  
+[66C][Thu 09/04/2014 11:31:35]:REMINST not set in WDS  
+[66C][Thu 09/04/2014 11:31:35]:WDS is NOT Configured  
+[66C][Thu 09/04/2014 11:31:35]:Share (REMINST) does not exist. (NetNameNotFound) (0x00000906)  
+[66C][Thu 09/04/2014 11:31:35]:GetFileSharePath failed; 0x80070906  
+[66C][Thu 09/04/2014 11:31:35]:REMINST share does not exist. Need to create it.  
+[66C][Thu 09/04/2014 11:31:35]:Enumerating drives A through Z for the NTFS drive with the most free space.  
+[66C][Thu 09/04/2014 11:31:37]:Drive 'C:\' is the best drive for the SMS installation directory.  
+[66C][Thu 09/04/2014 11:31:37]:Creating REMINST share to point to: C:\RemoteInstall  
+[66C][Thu 09/04/2014 11:31:37]:Succesfully created share REMINST  
+[66C][Thu 09/04/2014 11:31:37]:Removing existing PXE related directories  
+[66C][Thu 09/04/2014 11:31:37]:Registering WDS provider: SourceDir: C:\SMS_DP$\sms\bin  
+[66C][Thu 09/04/2014 11:31:37]:Registering WDS provider: ProviderPath: C:\SMS_DP$\sms\bin\smspxe.dll  
+[66C][Thu 09/04/2014 11:31:37]:DoPxeProviderRegister  
+[66C][Thu 09/04/2014 11:31:37]:PxeLoadWdsPxe  
+[66C][Thu 09/04/2014 11:31:37]:Loading wdspxe.dll from C:\Windows\system32\wdspxe.dll  
+[66C][Thu 09/04/2014 11:31:37]:wdspxe.dll is loaded  
+[66C][Thu 09/04/2014 11:31:37]:PxeProviderRegister has suceeded (0x00000000)  
+[66C][Thu 09/04/2014 11:31:37]:Disabling WDS/RIS functionality  
+[66C][Thu 09/04/2014 11:31:39]:WDSServer status is 1  
+[66C][Thu 09/04/2014 11:31:39]:WDSServer is NOT STARTED  
+[66C][Thu 09/04/2014 11:31:39]:Running: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
+[66C][Thu 09/04/2014 11:31:39]:Waiting for the completion of: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
+[66C][Thu 09/04/2014 11:31:50]:Run completed for: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
+[66C][Thu 09/04/2014 11:31:50]:CcmInstallPXE: Deleting the DP mutex key for WDS.  
+[66C][Thu 09/04/2014 11:31:50]:Installed PXE  
+[66C][Thu 09/04/2014 11:32:03]:CcmInstallPXE  
+[66C][Thu 09/04/2014 11:32:03]:PXE provider is already installed.  
+[66C][Thu 09/04/2014 11:32:03]:Installed PXE
+```
 
 On the remote DP, we can now see the following values added in `HKEY_LOCAL_MACHINE\Software\Microsoft\SMS\DP`:
 
@@ -149,12 +165,14 @@ On the remote DP, we can now see the following values added in `HKEY_LOCAL_MACHI
 
 If we look at the remote DP's file system, there is a new login `C:\SMS_DP$\sms\logs`:
 
-> SMSPXE.log  
-> Machine is running Windows Longhorn. (NTVersion=0X602, ServicePack=0)  
-> Cannot read the registry value of MACIgnoreListFile (00000000)  
-> MAC Ignore List Filename in registry is empty  
-> Begin validation of Certificate [Thumbprint B64B9DAF9BFB76A99DC050C21E33B3489643D111] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'  
-> Completed validation of Certificate [Thumbprint B64B9DAF9BFB76A99DC050C21E33B3489643D111] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'
+```output
+SMSPXE.log  
+Machine is running Windows Longhorn. (NTVersion=0X602, ServicePack=0)  
+Cannot read the registry value of MACIgnoreListFile (00000000)  
+MAC Ignore List Filename in registry is empty  
+Begin validation of Certificate [Thumbprint B64B9DAF9BFB76A99DC050C21E33B3489643D111] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'  
+Completed validation of Certificate [Thumbprint B64B9DAF9BFB76A99DC050C21E33B3489643D111] issued to 'e728f6ce-29a6-4ac3-974e-ba3dc855d9a4'
+```
 
 The Distribution Point should now be PXE-enabled and ready to accept incoming requests.
 
@@ -166,64 +184,72 @@ To do this, navigate to **Software Library** > **Operating Systems** > **Boot Im
 
 Once this is done, Distribution Manager will start processing the request and initiate the distribution to the remote DP:
 
-> DistMgr.log  
-> Found notification for package 'RR200004'Used 0 out of 30 allowed processing threads.  
-> Starting package processing thread, thread ID = 0x152C (5420)  
-> Start adding package to server ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\...  
-> Attempting to add or update a package on a distribution point.  
-> Successfully made a network connection to \\\RemoteDp.contoso.com\ADMIN$.  
-> CreateSignatureShare, connecting to DP  
-> Signature share exists on distribution point path \\\RemoteDp.contoso.com\SMSSIG$  
-> Share SMSPKGC$ exists on distribution point \\\RemoteDp.contoso.com\SMSPKGC$  
-> Checking configuration of IIS virtual directories on DP ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\  
-> Creating, reading or updating IIS registry key for a distribution point.  
-> Virtual Directory SMS_DP_SMSSIG$ for the physical path C:\SMSSIG$ already exists.  
-> Created package transfer job to send package RR200004 to distribution point ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\.  
-> StoredPkgVersion (9) of package RR200004. StoredPkgVersion in database is 9.  
-> SourceVersion (9) of package RR200004. SourceVersion in database is 9.
+```output
+DistMgr.log  
+Found notification for package 'RR200004'Used 0 out of 30 allowed processing threads.  
+Starting package processing thread, thread ID = 0x152C (5420)  
+Start adding package to server ["Display=\\RemoteDp.contoso.com\"]MSWNET:["SMS_SITE=RR2"]\\RemoteDp.contoso.com\...  
+Attempting to add or update a package on a distribution point.  
+Successfully made a network connection to \\RemoteDp.contoso.com\ADMIN$.  
+CreateSignatureShare, connecting to DP  
+Signature share exists on distribution point path \\RemoteDp.contoso.com\SMSSIG$  
+Share SMSPKGC$ exists on distribution point \\RemoteDp.contoso.com\SMSPKGC$  
+Checking configuration of IIS virtual directories on DP ["Display=\\RemoteDp.contoso.com\"]MSWNET:["SMS_SITE=RR2"]\\RemoteDp.contoso.com\  
+Creating, reading or updating IIS registry key for a distribution point.  
+Virtual Directory SMS_DP_SMSSIG$ for the physical path C:\SMSSIG$ already exists.  
+Created package transfer job to send package RR200004 to distribution point ["Display=\\RemoteDp.contoso.com\"]MSWNET:["SMS_SITE=RR2"]\\RemoteDp.contoso.com\.  
+StoredPkgVersion (9) of package RR200004. StoredPkgVersion in database is 9.  
+SourceVersion (9) of package RR200004. SourceVersion in database is 9.
+```
 
 Package Transfer Manager (the DP is remote) then initiates sending of the content:
 
-> PkgXferMgr.log  
-> DeleteJobNotificationFiles deleted 1 *.PKN file(s) this cycle.  
-> Found send request with ID: 105, Package: RR200004, Version:9, Priority: 2, Destination: REMOTEDP.CONTOSO.COM, DPPriority: 200  
-> Created sending thread (Thread ID = 0x1140)  
-> Sending thread starting for Job: 105, package: RR200004, Version: 9, Priority: 2, server: REMOTEDP.CONTOSO.COM, DPPriority: 200  
-> Sending legacy content RR200004.9 for package RR200004  
-> Finished sending SWD package RR200004 version 9 to distribution point REMOTEDP.CONTOSO.COM  
-> Sent status to the distribution manager for pkg RR200004, version 9, status 3 and distribution point ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\  
+```output
+PkgXferMgr.log  
+DeleteJobNotificationFiles deleted 1 *.PKN file(s) this cycle.  
+Found send request with ID: 105, Package: RR200004, Version:9, Priority: 2, Destination: REMOTEDP.CONTOSO.COM, DPPriority: 200  
+Created sending thread (Thread ID = 0x1140)  
+Sending thread starting for Job: 105, package: RR200004, Version: 9, Priority: 2, server: REMOTEDP.CONTOSO.COM, DPPriority: 200  
+Sending legacy content RR200004.9 for package RR200004  
+Finished sending SWD package RR200004 version 9 to distribution point REMOTEDP.CONTOSO.COM  
+Sent status to the distribution manager for pkg RR200004, version 9, status 3 and distribution point ["Display=\\RemoteDp.contoso.com\"]MSWNET:["SMS_SITE=RR2"]\\RemoteDp.contoso.com\  
 StateTable::CState::Handle - (8210:1 2014-09-10 13:19:12.087+00:00) >> (8203:3 2013-11-26 15:43:48.108+00:00)  
-> Successfully send state change notification 7F6041B0-3EE2-427F-AB72-B89610A6331C  
-> Sending thread complete
+Successfully send state change notification 7F6041B0-3EE2-427F-AB72-B89610A6331C  
+Sending thread complete
+```
 
 SMS Distribution Point Provider then deploys the WIM to the remote install directory:
 
-> Smsdpprov.log  
-> [468][Wed 09/10/2014 14:09:59]:A DP usage gathering task has been registered successfully  
-> [99C][Wed 09/10/2014 14:19:07]:Content 'RR200004.9' for package 'RR200004' has been added to content library successfully  
-> [99C][Wed 09/10/2014 14:19:07]:Expanding C:\SCCMContentLib\FileLib\E8A1\E8A136A1348B4CFE97334D0F65934845F2B4675D0B7D925AB830378F4ECF39B9 from package RR200004  
-> [99C][Wed 09/10/2014 14:19:07]:Finding Wimgapi.Dll  
-> [99C][Wed 09/10/2014 14:19:07]:Found C:\Windows\system32\wimgapi.dll  
-> [99C][Wed 09/10/2014 14:19:07]:Expanding RR200004 to C:\RemoteInstall\SMSImages
+```output
+Smsdpprov.log  
+[468][Wed 09/10/2014 14:09:59]:A DP usage gathering task has been registered successfully  
+[99C][Wed 09/10/2014 14:19:07]:Content 'RR200004.9' for package 'RR200004' has been added to content library successfully  
+[99C][Wed 09/10/2014 14:19:07]:Expanding C:\SCCMContentLib\FileLib\E8A1\E8A136A1348B4CFE97334D0F65934845F2B4675D0B7D925AB830378F4ECF39B9 from package RR200004  
+[99C][Wed 09/10/2014 14:19:07]:Finding Wimgapi.Dll  
+[99C][Wed 09/10/2014 14:19:07]:Found C:\Windows\system32\wimgapi.dll  
+[99C][Wed 09/10/2014 14:19:07]:Expanding RR200004 to C:\RemoteInstall\SMSImages
+```
 
 SMSPXE discovers the new image:
 
-> SMSPXE.log  
-> Found new image RR200004  
-> PXE::CBootImageManager::QueryWIMInfo  
-> Loaded C:\Windows\system32\wimgapi.dll  
-> Opening image file C:\RemoteInstall\SMSImages\RR200004\boot.RR200004.wim  
-> Found Image file: C:\RemoteInstall\SMSImages\RR200004\boot.RR200004.wim  
-> PackageID: RR200004  
-> ProductName: Microsoft&reg; Windows&reg; Operating System  
-> Architecture: 0  
-> Description: Microsoft Windows PE (x86)  
-> Version:  
-> Creator:  
-> SystemDir: WINDOWS  
-> Closing image file C:\RemoteInstall\SMSImages\RR200004\boot.RR200004.wim  
-> PXE::CBootImageManager::InstallBootFilesForImage  
-> Temporary path to copy extract files from: C:\RemoteInstall\SMSTempBootFiles\RR200004.
+```output
+SMSPXE.log  
+Found new image RR200004  
+PXE::CBootImageManager::QueryWIMInfo  
+Loaded C:\Windows\system32\wimgapi.dll  
+Opening image file C:\RemoteInstall\SMSImages\RR200004\boot.RR200004.wim  
+Found Image file: C:\RemoteInstall\SMSImages\RR200004\boot.RR200004.wim  
+PackageID: RR200004  
+ProductName: Microsoft&reg; Windows&reg; Operating System  
+Architecture: 0  
+Description: Microsoft Windows PE (x86)  
+Version:  
+Creator:  
+SystemDir: WINDOWS  
+Closing image file C:\RemoteInstall\SMSImages\RR200004\boot.RR200004.wim  
+PXE::CBootImageManager::InstallBootFilesForImage  
+Temporary path to copy extract files from: C:\RemoteInstall\SMSTempBootFiles\RR200004.
+```
 
 Make sure that these boot images are configured to deploy from the PXE-enabled DP. Right-click the boot image and select **Properties** > **Data Source**, and then select **Deploy this boot image from the PXE-enabled distribution point**.
 
@@ -319,109 +345,119 @@ Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's
 
 Here is the initial TS boot shell process:
 
-> SMSTS.log  
-> ========================[ TSBootShell.exe ]========================  
-> Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
-> Debug shell is enabled  
-> Waiting for PNP initialization...  
-> RAM Disk Boot Path: NET(0)\SMSIMAGES\RR200004\BOOT.RR200004.WIM  
-> Booted from network (PXE)  
-> Network(PXE) path: X:\sms\data\  
-> Found config path X:\sms\data\  
-> This is not a fixed non usb disk  
-> Booting from removable media, not restoring bootloaders on hard drive  
-> X:\sms\data\WinPE does not exist.  
-> X:\\_SmsTsWinPE\WinPE does not exist.  
-> Executing command line: wpeinit.exe -winpe  
-> The command completed successfully.  
-> Starting DNS client service.  
-> Executing command line: X:\sms\bin\i386\TsmBootstrap.exe /env:WinPE /configpath:X:\sms\data\\  
-> The command completed successfully.
+```output
+SMSTS.log  
+========================[ TSBootShell.exe ]========================  
+Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
+Debug shell is enabled  
+Waiting for PNP initialization...  
+RAM Disk Boot Path: NET(0)\SMSIMAGES\RR200004\BOOT.RR200004.WIM  
+Booted from network (PXE)  
+Network(PXE) path: X:\sms\data\  
+Found config path X:\sms\data\  
+This is not a fixed non usb disk  
+Booting from removable media, not restoring bootloaders on hard drive  
+X:\sms\data\WinPE does not exist.  
+X:\_SmsTsWinPE\WinPE does not exist.  
+Executing command line: wpeinit.exe -winpe  
+The command completed successfully.  
+Starting DNS client service.  
+Executing command line: X:\sms\bin\i386\TsmBootstrap.exe /env:WinPE /configpath:X:\sms\data\  
+The command completed successfully.
+```
 
 Followed by the Task Sequence Manager boot strap:
 
-> SMSTS.log  
-> ========================[ TSMBootStrap.exe ]========================  
-> Command line: X:\sms\bin\i386\TsmBootstrap.exe /env:WinPE /configpath:X:\sms\data\  
-> Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
-> Succeeded loading resource DLL 'X:\sms\bin\i386\TSRESNLC.DLL'  
-> Current OS version is 6.2.9200.0  
-> Adding SMS bin folder "X:\sms\bin\i386" to the system environment PATH  
-> PXE Boot with Root = X:\\  
-> Executing from PXE in WinPE  
-> Loading TsPxe.dll from X:\sms\bin\i386\TsPxe.dll
+```output
+SMSTS.log  
+========================[ TSMBootStrap.exe ]========================  
+Command line: X:\sms\bin\i386\TsmBootstrap.exe /env:WinPE /configpath:X:\sms\data\  
+Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
+Succeeded loading resource DLL 'X:\sms\bin\i386\TSRESNLC.DLL'  
+Current OS version is 6.2.9200.0  
+Adding SMS bin folder "X:\sms\bin\i386" to the system environment PATH  
+PXE Boot with Root = X:\  
+Executing from PXE in WinPE  
+Loading TsPxe.dll from X:\sms\bin\i386\TsPxe.dll
+```
 
 Once TSPXE is loaded, it downloads the TS variables using TFTP:
 
-> SMSTS.log  
-> TsPxe.dll loaded  
-> Device has PXE booted  
-> Variable Path: \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var  
-> Succesfully added firewall rule for Tftp  
-> Executing: X:\sms\bin\i386\smstftp.exe -i 10.238.0.2 get \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var X:\sms\data\variables.dat  
-> Executing command line: "X:\sms\bin\i386\smstftp.exe" -i 10.238.0.2 get \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var X:\sms\data\variables.dat  
-> Process completed with exit code 0  
-> Succesfully removed firewall rule for Tftp  
-> Successfully downloaded pxe variable file.  
->
-> Loading Media Variables from "X:\sms\data\variables.dat"  
-> Loading Media Variables from "X:\sms\data\variables.dat"  
-> Found network adapter "Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)" with IP Address 10.238.0.3.  
-> Loading Media Variables from "X:\sms\data\variables.dat"  
-> Loading variables from the Task Sequencing Removable Media.  
-> Loading Media Variables from "X:\sms\data\variables.dat"  
-> Succeeded loading resource DLL "X:\sms\bin\i386\1033\TSRES.DLL"  
->
-> Setting SMSTSMP TS environment variable  
-> Setting _SMSMediaGuid TS environment variable  
-> Setting _SMSTSBootMediaPackageID TS environment variable  
-> Setting _SMSTSHTTPPort TS environment variable  
-> Setting _SMSTSHTTPSPort TS environment variable  
-> Setting _SMSTSIISSSLState TS environment variable  
-> Setting _SMSTSLaunchMode TS environment variable  
-> Setting _SMSTSMediaPFX TS environment variable  
-> Setting _SMSTSPublicRootKey TS environment variable  
-> Setting _SMSTSRootCACerts TS environment variable  
-> Setting _SMSTSSiteCode TS environment variable  
-> Setting _SMSTSSiteSigningCertificate TS environment variable  
-> Setting _SMSTSUseFirstCert TS environment variable  
-> Setting _SMSTSx64UnknownMachineGUID TS environment variable  
-> Setting _SMSTSx86UnknownMachineGUID TS environment variable
+```output
+SMSTS.log  
+TsPxe.dll loaded  
+Device has PXE booted  
+Variable Path: \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var  
+Succesfully added firewall rule for Tftp  
+Executing: X:\sms\bin\i386\smstftp.exe -i 10.238.0.2 get \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var X:\sms\data\variables.dat  
+Executing command line: "X:\sms\bin\i386\smstftp.exe" -i 10.238.0.2 get \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var X:\sms\data\variables.dat  
+Process completed with exit code 0  
+Succesfully removed firewall rule for Tftp  
+Successfully downloaded pxe variable file.  
+
+Loading Media Variables from "X:\sms\data\variables.dat"  
+Loading Media Variables from "X:\sms\data\variables.dat"  
+Found network adapter "Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)" with IP Address 10.238.0.3.  
+Loading Media Variables from "X:\sms\data\variables.dat"  
+Loading variables from the Task Sequencing Removable Media.  
+Loading Media Variables from "X:\sms\data\variables.dat"  
+Succeeded loading resource DLL "X:\sms\bin\i386\1033\TSRES.DLL"  
+
+Setting SMSTSMP TS environment variable  
+Setting _SMSMediaGuid TS environment variable  
+Setting _SMSTSBootMediaPackageID TS environment variable  
+Setting _SMSTSHTTPPort TS environment variable  
+Setting _SMSTSHTTPSPort TS environment variable  
+Setting _SMSTSIISSSLState TS environment variable  
+Setting _SMSTSLaunchMode TS environment variable  
+Setting _SMSTSMediaPFX TS environment variable  
+Setting _SMSTSPublicRootKey TS environment variable  
+Setting _SMSTSRootCACerts TS environment variable  
+Setting _SMSTSSiteCode TS environment variable  
+Setting _SMSTSSiteSigningCertificate TS environment variable  
+Setting _SMSTSUseFirstCert TS environment variable  
+Setting _SMSTSx64UnknownMachineGUID TS environment variable  
+Setting _SMSTSx86UnknownMachineGUID TS environment variable
+```
 
 At this point, TSPXE locates the Management Point (MP) and downloads policy before presenting the user interface for the user to select the optional Task Sequence:
 
-> SMSTS.log  
-> site=RR2, MP=<`http://ConfigMgrR2.CONTOSO.COM`>, ports: http=80,https=443  
-> certificates are received from MP.  
-> CLibSMSMessageWinHttpTransport::Send: URL: ConfigMgrR2.CONTOSO.COM:80 CCM_POST /ccm_system/request  
-> Request was successful.  
-> Downloading policy from <`http://ConfigMgrR2.CONTOSO.COM`>.  
-> Retrieving Policy Assignments:  
-> Processing Policy Assignment {7898f153-a6de-43e9-98c3-ca5cc61483b0}.  
-> Processing Policy Assignment {fba19677-0e9b-490d-b601-07e247979bd4}.  
-> Processing Policy Assignment {6306ca4c-e7ed-4cf5-8419-af9b1695a909}.  
-> Processing Policy Assignment {05a027ff-e9cf-4fa1-8bd8-4565481061e2}.  
-> Processing Policy Assignment {b3c991f6-9f83-43c3-875c-f60c4492d278}.  
-> ...  
-> Successfully read 152 policy assignments.
+```output
+SMSTS.log  
+site=RR2, MP=<http://ConfigMgrR2.CONTOSO.COM>, ports: http=80,https=443  
+certificates are received from MP.  
+CLibSMSMessageWinHttpTransport::Send: URL: ConfigMgrR2.CONTOSO.COM:80 CCM_POST /ccm_system/request  
+Request was successful.  
+Downloading policy from <http://ConfigMgrR2.CONTOSO.COM>.  
+Retrieving Policy Assignments:  
+Processing Policy Assignment {7898f153-a6de-43e9-98c3-ca5cc61483b0}.  
+Processing Policy Assignment {fba19677-0e9b-490d-b601-07e247979bd4}.  
+Processing Policy Assignment {6306ca4c-e7ed-4cf5-8419-af9b1695a909}.  
+Processing Policy Assignment {05a027ff-e9cf-4fa1-8bd8-4565481061e2}.  
+Processing Policy Assignment {b3c991f6-9f83-43c3-875c-f60c4492d278}.  
+...  
+Successfully read 152 policy assignments.
+```
 
 Lastly, the collection and machine variables are downloaded and the Welcome Page is activated:
 
-> SMSTS.log  
-> Retrieving collection variable policy.  
-> Found 0 collection variables.  
-> Retrieving machine variable policy.  
-> Downloading policy body {01000053}-{RR2}.  
-> Response ID: {01000053}-{RR2}  
-> Reading Policy Body.  
-> Parsing Policy Body.  
-> Found 0 machine variables.  
-> Setting collection variables in the task sequencing environment.  
-> Setting machine variables in the task sequencing environment.  
-> Running Wizard in Interactive mode  
-> Loading Media Variables from "X:\sms\data\variables.dat"  
-> Activating Welcome Page.  
-> Loading bitmap
+```output
+SMSTS.log  
+Retrieving collection variable policy.  
+Found 0 collection variables.  
+Retrieving machine variable policy.  
+Downloading policy body {01000053}-{RR2}.  
+Response ID: {01000053}-{RR2}  
+Reading Policy Body.  
+Parsing Policy Body.  
+Found 0 machine variables.  
+Setting collection variables in the task sequencing environment.  
+Setting machine variables in the task sequencing environment.  
+Running Wizard in Interactive mode  
+Loading Media Variables from "X:\sms\data\variables.dat"  
+Activating Welcome Page.  
+Loading bitmap
+```
 
 ## More Information
 

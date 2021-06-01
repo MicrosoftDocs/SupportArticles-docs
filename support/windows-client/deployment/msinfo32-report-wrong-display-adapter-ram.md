@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses an issue where Microsoft System Information (Msinfo32.exe) tool reports incorrect Adapter RAM values under **Components** > **Display**.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2495801
 
 ## Symptoms

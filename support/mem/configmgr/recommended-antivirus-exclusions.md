@@ -1,7 +1,7 @@
 ---
 title: Recommended antivirus exclusions for Configuration Manager
 description: Lists the recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients.
-ms.date: 01/12/2021
+ms.date: 04/28/2021
 ms.prod-support-area-path:
 ms.reviewer: jarrettr, jrosse, keiththo
 ---
@@ -30,7 +30,9 @@ Possible symptoms include:
 - Backlogs occur in the *Install_Directory*\MP\Outboxes subfolders on management points (MP).
 - Software Center isn't populated by deployed software on client systems, or doesn't start. Also, the CCMRepair.log file may contain an error similar to the following example:
 
-  > Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
+  ```output
+  Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
+  ```
 
 - Software that is deployed to clients cannot be installed.
 - Compliance data for software deployments is inaccurate.
@@ -77,6 +79,8 @@ We recommend that you add the following real-time protection exclusions to preve
 - C:\Windows\CCMCache
 - C:\Windows\CCMSetup
 - *Client installation folder*\Logs
+- C:\Windows\Setup\Scripts
+- C:\Windows\SMSTSPostUpgrade
 
 ### File exclusions for MPs
 
@@ -100,10 +104,14 @@ Process exclusions are necessary only if aggressive antivirus programs consider 
 - *Client installation folder*\RemCtrl\CmRcService.exe (client-side)
 - *ConfigMgr installation folder*\bin\x64\Sitecomp.exe
 - *ConfigMgr installation folder*\bin\x64\Smswriter.exe
-- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\ Smssqlbkup.exe
+- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\Smssqlbkup.exe
 - *ConfigMgr installation folder*\bin\x64\Cmupdate.exe
 - *Client installation folder*\Ccmrepair.exe (client-side)
 - *%windir%*\CCMSetup\Ccmsetup.exe (client-side)
+- *%windir%*\CCMSetup\autoupgrade\Ccmsetup*.exe (client-side)
+
+   > [!NOTE]
+   > Starting in Configuration Manager current branch version 1910, this file name has been changed to *Ccmsetup.\<Packageid>.\<PackageVersion>.exe*.
 
 ## References
 

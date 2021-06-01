@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where the Netlogon service doesn't start when you start a Windows-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 269375
 
 ## Symptoms
@@ -28,19 +28,23 @@ Event Viewer logs the following errors:
 
 - Message 1
 
-    > Event Type: Error  
-    Event Source: NETLOGON  
-    Event Category: None  
-    Event ID: 2114  
-    Description: The Server service is not started.  
+    ```output
+    Event Type: Error
+    Event Source: NETLOGON
+    Event Category: None
+    Event ID: 2114
+    Description: The Server service is not started.
+    ```
 
 - Message 2
 
-    > Event Type: Error  
-    Event Source: Service Control Manager  
-    Event Category:None  
-    Event ID: 7024  
+    ```output
+    Event Type: Error
+    Event Source: Service Control Manager
+    Event Category:None
+    Event ID: 7024
     Description: The Netlogon service terminated with service-specific error 2114.
+    ```
 
 After your computer starts, you can manually start the Netlogon service.
 

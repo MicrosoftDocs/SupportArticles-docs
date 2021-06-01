@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes Server Message Block (SMB) signing, and how to determine whether SMB signing is enabled.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 887429
 
 ## Introduction
@@ -235,11 +235,13 @@ Add the following two registry values to this registry subkey:
 
 To determine whether SMB signing is enabled, required at the server, or both, view the Negotiate Dialect Response from the server:
 
-> SMB: R negotiate, Dialect # = 5  
-    SMB: Command = R negotiate  
-        SMB: Security Mode Summary (NT) = [a value of 3, 7 or 15]  
-          SMB: .......1 = User level security  
-            SMB: ......1. = Encrypt passwords  
+```output
+SMB: R negotiate, Dialect # = 5  
+SMB: Command = R negotiate  
+SMB: Security Mode Summary (NT) = [a value of 3, 7 or 15]  
+SMB: .......1 = User level security  
+SMB: ......1. = Encrypt passwords
+```
 
 In this Response, the "Security Mode Summary (NT) =" field represents the configured options on the Server. This value will be either 3, 7 or 15.
 

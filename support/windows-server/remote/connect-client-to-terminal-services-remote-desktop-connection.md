@@ -17,14 +17,14 @@ ms.technology: windows-server-rds
 
 This step-by-step article describes how to connect a Windows Server 2003-based terminal services client to a terminal server by using Remote Desktop Connection.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814585
 
 ## More information
 
 ### Open Remote Desktop Connection
 
-To open Remote Desktop Connection, click **Start**, point to **All Programs**, point to **Accessories**, point to **Communications**, and then click **Remote Desktop Connection**.
+To open Remote Desktop Connection, select **Start** > **All Programs** > **Accessories** > **Communications**, and then select **Remote Desktop Connection**.
 
 [back to the top](#more-information)  
 
@@ -36,8 +36,8 @@ To create a Terminal Services connection, follow these steps:
 2. In the **Computer** box, type the computer name or the IP address of a terminal server or a computer that has Remote Desktop enabled.
     > [!NOTE]
     > To connect to the console session of the remote computer, type **computername or IP address**/console.
-3. Click **Connect**.
-4. In the **Log On to Windows** dialog box, type your user name, password, and domain (if necessary), and then click **OK**.  
+3. Select **Connect**.
+4. In the logon dialog box, type your user name, password, and domain (if necessary), and then select **OK**.  
 
     [back to the top](#more-information)  
 
@@ -47,13 +47,13 @@ You can save a connection as a Remote Desktop protocol (.rdp) file. An `.rdp` fi
 
 To save your connection settings, follow these steps:
 
-1. Open Remote Desktop Connection, and then click **Options**.
+1. Open Remote Desktop Connection, and then select **Options**.
 2. Specify the connection settings that you want for this connection.
-3. On the **General** tab, click **Save As**.
-4. In the **File name** box, type a file name for the saved connection file, and then click **Save**.
+3. On the **General** tab, select **Save As**.
+4. In the **File name** box, type a file name for the saved connection file, and then select **Save**.
 
 > [!NOTE]
-> To edit an .rdp file to change the connections settings it contains, click **Start**, click **My Documents**, right-click the file and then click **Edit**.
+> To edit an .rdp file to change the connections settings it contains, select **Start** > **My Documents**, right-click the file, and then select **Edit**.
 
 [back to the top](#more-information)  
 
@@ -61,7 +61,7 @@ To save your connection settings, follow these steps:
 
 To open a saved connection, follow these steps:
 
-1. Open Remote Desktop Connection, and then click **Open**.
+1. Open Remote Desktop Connection, and then select **Open**.
 2. Double-click the `.rdp` file for the connection that you want to open.  
 
     [back to the top](#more-information)  
@@ -70,13 +70,13 @@ To open a saved connection, follow these steps:
 
 1. Open Remote Desktop Connection.
 2. Type the computer name or the IP address of a terminal server or a computer that has Remote Desktop enabled.
-3. Click the **Local Resources** tab, select the **Disk Drives** check box, and then click **Connect**.
-4. Click **Start** on the task bar of the remote computer, and then click **My Computer**, or double-click the **My Computer** icon on the desktop of the remote computer.
+3. Select the **Local Resources** tab, select the **Disk Drives** check box, and then select **Connect**.
+4. Select **Start** on the task bar of the remote computer, and then select **My Computer**. Or double-click the **My Computer** icon on the desktop of the remote computer.
 
     > [!NOTE]
     > The drives on the remote server appear with the drives on your local computer. Your local drives appear as *driveletter* on *tsclient*, where *tsclient* is the name assigned to your (local) computer.
-5. Locate the file that you want to copy, right-click the file, and then click **Copy**.
-6. Locate the folder where you want to paste the file, and then click **Paste**.
+5. Locate the file that you want to copy, right-click the file, and then select **Copy**.
+6. Locate the folder where you want to paste the file, and then select **Paste**.
 
     [back to the top](#more-information)  
 
@@ -84,7 +84,7 @@ To open a saved connection, follow these steps:
 
 To log off and end a session, follow these steps:
 
-1. In the Remote Desktop Connection window, click **Start**, and then click **Shut Down**.
-2. In the **Shut Down Windows** dialog box, click **Log Off *username***, and then click **OK**.
+1. In the Remote Desktop Connection window, select **Start**, and then select **Shut Down**.
+2. In the **Shut Down Windows** dialog box, select **log off \<username>**, and then select **OK**.
 
     [back to the top](#more-information)  

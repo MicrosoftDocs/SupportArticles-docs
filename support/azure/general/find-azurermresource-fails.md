@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Find-AzureRmResource fails or cannot be found after you update Azure modules

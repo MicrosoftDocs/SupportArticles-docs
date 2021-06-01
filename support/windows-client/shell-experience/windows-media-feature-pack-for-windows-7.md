@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article describes the Windows Media Feature Pack for Windows 7 N and for Windows 7 KN.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 968211
 
 ## Summary

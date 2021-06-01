@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides workarounds for an issue where security certificate that's presented by a website isn't issued when it has multiple trusted certification paths to root CAs.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2831004
 
 ## Symptoms

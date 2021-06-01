@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to deactivate the kernel mode filter driver without removing the corresponding software.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 816071
 
 > [!IMPORTANT]

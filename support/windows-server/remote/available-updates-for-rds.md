@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services for Microsoft Windows Server 2012 R2 environments.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2933664
 
 ## Summary
@@ -141,8 +141,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 - [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](/troubleshoot/windows-server/remote/communication-issues)
 
 ## Remote Desktop Gateway
-
-- [3162871](https://support.microsoft.com/help/3162871) RD Gateway Manager console crashes with the latest .NET Framework 4.6.1 update on Windows Server 2012 R2
 
 - [3123913](https://support.microsoft.com/help/3123913) Remote Desktop Gateway server crashes during certain user disconnect scenarios in Windows Server 2012 R2
 

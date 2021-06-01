@@ -1,7 +1,7 @@
 ---
 title: Set up your small business network
 description: Explains how to set up the network for your small business.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article walks you through the steps of evaluating, preparing, and setting up your small business network. The article is for IT Pros who help set up your small business network.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2
 _Original KB number:_ &nbsp; 10064
 
 ## Evaluate network types

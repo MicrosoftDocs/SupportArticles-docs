@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article helps you enable Windows Remote Shell.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555966
 
 This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-us/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
@@ -36,7 +36,7 @@ To enable Windows Remote Shell, you need to deploy the server-side and client-si
 3. Write the command prompt `WinRM quickconfig` and press the **Enter** button.
 4. The following output should appear:
 
-    ```console
+    ```output
     WinRM is not set up to allow remote access to this machine for management.
     The following changes must be made:
 
@@ -50,7 +50,7 @@ To enable Windows Remote Shell, you need to deploy the server-side and client-si
 
 5. After pressing the **y** button, the following output should appear:
 
-    ```console
+    ```output
     WinRM has been updated for remote management.
 
     WinRM service type changed successfully.

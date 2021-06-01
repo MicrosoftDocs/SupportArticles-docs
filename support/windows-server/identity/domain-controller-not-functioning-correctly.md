@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides common resolutions to the issue where domain controller is not functioning correctly.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837513
 
 ## Symptoms
@@ -57,6 +57,13 @@ LDAP test. . . . . . . . . . . . . : Passed
 [WARNING] Failed to query SPN registration on DC \<hostname>\<fqdn>
 
 The following event may be logged in the system event log of the affected domain controller:
+
+```output
+Event Type: Error
+Event Source: Service Control Manager
+Event ID: 7023
+Description: The Kerberos Key Distribution Center service terminated with the following error: The security account manager (SAM) or local security authority (LSA) server was in the wrong state to perform the security operation.
+```
 
 ## Resolution
 

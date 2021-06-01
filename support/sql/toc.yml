@@ -141,6 +141,8 @@
       href: admin/defragmenting-database-disk-drives.md
     - name: Error 0x80040e97 when using full-text search
       href: admin/error-0x80040e97-using-full-text-search.md
+    - name: Error 3156 when you restore a database
+      href: admin/error-3156-restore-database.md           
     - name: Error after you perform TDE certificate or key rotation
       href: admin/error-after-perform-tde-certificate-key-rotation.md
     - name: Error when backing up in-memory database
@@ -369,9 +371,9 @@
       href: performance/troubleshoot-slow-running-queries.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
-    - name: Updates and configuration options for high-performance workloads (SQL 2016 and SQL 2014)
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
       href: performance/recommended-updates-configuration-options.md
-    - name: Updates and configuration options for high-performance workloads (SQL 2017 and SQL 2016)
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
       href: performance/recommended-updates-configuration-workloads.md
     - name: Upgrading compatibility level degrades performance for spatial queries
       href: performance/upgrade-compatibility-level-degrades-performance.md
@@ -403,6 +405,8 @@
       href: replication/sql-transaction-log-grows.md
     - name: Duplicate key rows from sys.syscommittab table
       href: replication/duplicate-keys-sys-syscommittab-table.md
+    - name: Error message when you run the Distribution Agent
+      href: replication/error-run-distribution-agent.md
     - name: Fail to enumerate subscription properties
       href: replication/enumerate-subscription-properties.md
     - name: Install service packs and hotfixes
@@ -421,6 +425,8 @@
       href: replication/oracle-publication-triggers-sends-data.md
     - name: Performance statistics for Log Reader and Distribution Agents
       href: replication/performance-statistics-log-reader-distribution-agents.md
+    - name: Pull subscriptions do not show up in Windows Synchronization Manager
+      href: replication/subscriptions-do-not-show-up-windows-sync-manager.md
     - name: Replication agents can't run
       href: replication/sql-replication-agents-not-run.md
     - name: Script failed error when creating merge publication snapshot
@@ -515,6 +521,13 @@
     href: integration-services/ssis-package-fails-use-dqs-cleansing-component.md
   - name: Use encryption and network packet size
     href: integration-services/use-encryption-network-packet-size.md
+
+- name: Master Data Services
+  items:
+  - name: MDS entity-based staging may fail
+    href: master-data-services/mds-entity-based-staging-fail.md
+  - name: MDS Validate Version command fails
+    href: master-data-services/mds-validate-version-command-fails.md
 
 - name: MDAC and ADO
   items:

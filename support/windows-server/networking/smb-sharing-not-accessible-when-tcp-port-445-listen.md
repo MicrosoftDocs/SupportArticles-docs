@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where you can't access a Server Message Block (SMB) shared resource even when the shared resource is enabled in the target Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 4471134
 
 ## Symptoms
@@ -61,35 +61,39 @@ To fix this issue, follow these steps:
     netsh ipsec static show policy all
     ```
 
-    > Policy Name: netbc  
+    ```output
+    Policy Name: netbc  
     Description: NONE  
-    Last Modified: *\<DateTime>*  
+    Last Modified: <DateTime>  
     Assigned: YES  
     Master PFS: NO  
     Polling Interval: 180 minutes
+    ```
 
     ```console
     netsh ipsec static show filterlist all level=verbose
     ```
 
-    > FilterList Name: block  
+    ```output
+    FilterList Name: block  
     Description: NONE  
-    Store: Local Store \<WIN>  
-    Last Modified: *\<DateTime>*  
+    Store: Local Store <WIN>  
+    Last Modified: <DateTime>  
     GUID: {ID}  
     No. of Filters: 1  
     Filter(s)  
-    \---------  
+    ---------  
     Description: 445  
     Mirrored: YES  
-    Source IP Address: \<IP Address>  
+    Source IP Address: <IP Address>  
     Source Mask: 0.0.0.0  
-    Source DNS Name: \<IP Address>  
-    Destination IP Address: \<IP Address>  
-    Destination DNS Name: \<IP Address>  
+    Source DNS Name: <IP Address>  
+    Destination IP Address: <IP Address>  
+    Destination DNS Name: <IP Address>  
     Protocol: TCP  
     Source Port: ANY  
     Destination Port : 445  
+    ```
 
     > [!NOTE]
     > When you run the commands on an uninfected server, there is no policy.

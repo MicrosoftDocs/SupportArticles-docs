@@ -1,13 +1,13 @@
 ---
 title: HTTP error 401.1 with pre-authentication headers
-description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS.
+description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and Internet Information Services (IIS).
 ms.date: 04/03/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: bretb, mlaing
 ---
 # An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS
 
-This article helps you resolve the problem where an unexpected 401.1 status is returned with Pre-Authentication headers when you use Internet Explorer to browser to a web application hosted on Microsoft Internet Information Services (IIS).
+This article resolves the problem where an unexpected 401.1 status is returned with Pre-Authentication headers. It occurs when you use Internet Explorer to browser to a web application hosted on Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, Internet Explorer 10, 9  
 _Original KB number:_ &nbsp; 2749007
@@ -20,21 +20,24 @@ Consider the following scenario:
 - The Internet Explorer browser is configured to use Pre-Authentication, and Kernel Mode Authentication is enabled in IIS.
 - Additionally, this web request being sent by Internet Explorer is the first request to be sent to the IIS application.
 
-In this scenario, IIS may return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer in response to the browser's request. The web browser may prompt you to enter your username and password, or the HTTP 401.1 error message may be displayed in the browser window.
+In this scenario, IIS may return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer in response to the browser's request. The web browser may prompt you to enter your username and password. Or, the HTTP 401.1 error message may be displayed in the browser window.
 
 ## Cause
 
-This behavior is by design. The 401.1 response will occur if the web browser's first request sent to the IIS application contains a Windows Challenge/Response (NTLM) or Negotiate WWW-Authorization header (known as Pre-Authentication).
+This behavior is by design. The 401.1 response will occur if the web browser's first request that's sent to the IIS application contains one of the following headers:
+
+- a Windows Challenge/Response (NTLM) header
+- a Negotiate WWW-Authorization header (known as Pre-Authentication)
 
 > [!NOTE]
-> There are many reasons a user may be prompted for credentials in Internet Explorer which are outside the scope of this article. Please see the [More information](#more-information) section below to learn how to determine if the cause of the prompt is from the issue described here.
+> There are many reasons a user may be prompted for credentials in Internet Explorer that are outside the scope of this article. See the [More information](#more-information) section below to learn how to determine if the cause of the prompt is from the issue described here.
 
 ## Workaround
 
 To work around this behavior, disable Pre-Authentication in Internet Explorer, or turn off Kernel Mode Authentication for the IIS Web application.
 
 > [!WARNING]
-> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
+> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft can't guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
 
 To modify this behavior in Internet Explorer, use Registry Editor (`Regedt32.exe`) to add a value to the following registry key:  
 `HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Internet Settings/`
@@ -73,11 +76,11 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
 
 ## More information
 
-To determine if the prompt is caused by the issue described in this article, use the Fiddler tool to look at the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer. You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The below example uses Internet Explorer 9 to illustrate this behavior:
+To determine if the prompt is caused by the issue described in this article, use the Fiddler tool. Use the tool to view the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer. You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The following example uses Internet Explorer 9 to illustrate this behavior:
 
 1. Start the Fiddler Tool and enable traffic capture.
 2. Browse to the IIS web application such that it will result in the prompt for credentials.
-3. In Fiddler, look for the request that resulted in the 401. Looking at the raw request and response views you'll see entries similar to the following ones:
+3. In Fiddler, look for the request that resulted in the 401. Looking at the raw request and response views, you'll see entries similar to the following ones:
 
     Request Headers:  
 
@@ -107,9 +110,9 @@ To determine if the prompt is caused by the issue described in this article, use
     ```
 
 > [!NOTE]
-> The initial request to the web application already contains the `Authorization` header, which then results in the 401 response. The corresponding IIS log should show an entry similar to the following:
+> The initial request to the web application already contains the `Authorization` header, which then results in the 401 response. The corresponding IIS log should show an entry similar to the following one:
 
-```console
+```output
 2012-08-22 17:41:09 2001:4898:0:fff:200:5efe:157.59.113.72 GET /App1/default.aspx - 80 - 2001:4898:0:fff:0:
 5efe:172.18.100.183 Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+WOW64;+Trident/5.0;+SLCC2;+.NET+CLR+
 2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+.NET4.0C;+.NET4.0E;+InfoPath.3;+MS-
@@ -118,7 +121,7 @@ RTC+EA+2;+BRI/1;+Zune+4.7;+MS-RTC+LM+8;+BRI/2;+Creative+AutoUpdate+v1.41.02) 401
 
 The HTTP status and sub status are 401.1, which maps to *Access Denied due to Invalid credentials*.
 
-For more information, please see the following documentation:
+For more information, see the following documentation:
 
 - [Windows Authentication \<windowsAuthentication>](/iis/configuration/system.webServer/security/authentication/windowsAuthentication/)
 

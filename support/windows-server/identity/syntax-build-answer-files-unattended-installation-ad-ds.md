@@ -1,5 +1,5 @@
 ---
-title: DCPROMO answer file syntax for unattended promotion and demotion of domain controllers, Windows Server 2003 version
+title: DCPROMO answer file syntax for unattended promotion and demotion of domain controllers
 description: Describes the parameters and options that are used in the answer file to install and remove AD DS on domain controllers.
 ms.date: 02/09/2021
 author: Deland-Han
@@ -14,16 +14,16 @@ ms.prod-support-area-path: DCPromo and the installation of domain controllers
 ms.technology: windows-server-active-directory
 ---
 
-# DCPROMO answer file syntax for unattended promotion and demotion of domain controllers, Windows Server 2003 version
+# DCPROMO answer file syntax for unattended promotion and demotion of domain controllers
 
 This article describes the parameters and options that are used in the DCPROMO answer file to install and remove Active Directory Domain Services (AD DS) on domain controllers.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947034
 
 ## Summary
 
-This article describes the syntax that you use to build answer files to perform unattended installations of AD DS on Windows Server 2008-based domain controllers. You can also use the answer files to remove AD DS in unattended mode.
+This article describes the syntax that you use to build answer files to perform unattended installations of AD DS on domain controllers. You can also use the answer files to remove AD DS in unattended mode.
 
 ## Introduction
 

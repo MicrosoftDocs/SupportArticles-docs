@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a workaround for an issue in which UPX is displayed in the user interface (UI) on a managed Windows 10 device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4016551
 
 > [!NOTE]

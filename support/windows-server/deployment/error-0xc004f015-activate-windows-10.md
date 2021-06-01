@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a solution to a 0xC004F015 error that occurs when you activate Windows 10 Enterprise on a Microsoft Windows Server 2012 R2 and Windows Server 2008 R2 KMS host.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3086418
 
 ## Symptoms

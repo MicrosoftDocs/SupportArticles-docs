@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes how to use Microsoft Windows Server 2003 Terminal Services to connect to and shadow a console session.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 278845
 
 ## Summary

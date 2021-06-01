@@ -1,7 +1,7 @@
 ---
 title: Event ID 7000 or 7026 in System log
 description: Describes a problem in which event ID 7000 or event ID 7026 may be logged after you start a computer that's running Windows.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes a problem in which event ID 7000 or event ID 7026 is logged after you start a computer that's running Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 933757
 
 ## Symptoms

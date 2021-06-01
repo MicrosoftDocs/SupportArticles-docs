@@ -17,7 +17,7 @@ ms.technology: windows-client-user-experience-virtualization-ue-v
 
 This article helps resolve an issue where you experience an unexpected one-minute delay for Outlook to start if UE-V is enabled in Windows 10, version 1809 or a later version of Windows.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4569308
 
 ## Symptoms
@@ -53,6 +53,5 @@ Download and replace the version 3 of the Outlook custom action UEV template fro
 
 For more information, see the following articles:  
 
-- [Understanding the limitations of roaming Outlook signatures in Microsoft UE-V](https://support.microsoft.com/help/2930271)  
 - [Unregister and register UE-V template](/powershell/module/uev/?view=win10-ps&preserve-view=true )  
 - [Sync Methods for UE-V 2.x](/microsoft-desktop-optimization-pack/uev-v2/sync-methods-for-ue-v-2x-both-uevv2)  

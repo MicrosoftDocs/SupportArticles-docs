@@ -1,7 +1,7 @@
 ---
 title: Whitespace characters in file and folder names
 description: Describes support for whitespace characters in file and folder names.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article describes support for whitespace characters in file and folder names.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2829981
 
 ## Summary

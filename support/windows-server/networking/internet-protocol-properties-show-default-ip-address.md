@@ -1,6 +1,6 @@
 ---
 title: TCP/IP Properties dialog box displays the default IP address 
-description: Describes a problem in which the TCP/IP properties revert to the default settings after you manually configure a static IP address. This problem occurs in Windows 2000 Server with SP4 and in Windows Server 2003 with SP1.
+description: Describes a problem in which the TCP/IP properties revert to the default settings after you manually configure a static IP address in Windows Server.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,11 +13,11 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
 ms.technology: networking
 ---
-# The Internet Protocol (TCP/IP) Properties dialog box displays the default IP address settings after you manually configure a static IP address in Windows 2000 Server or in Windows Server 2003
+# The Internet Protocol (TCP/IP) Properties dialog box displays the default IP address settings after you manually configure a static IP address in Windows Server
 
 This article describes a problem in which the TCP/IP properties revert to the default settings after you manually configure a static IP address.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 937056
 
 > [!IMPORTANT]
@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 937056
 
 ## Symptoms
 
-In Microsoft Windows 2000 Server with Service Pack 4 (SP4) or in Microsoft Windows Server 2003 with Service Pack 1 (SP1), you manually configure the TCP/IP properties to add a static IP address. After you do this, the **Internet Protocol (TCP/IP) Properties** dialog box still displays the default settings. Additionally, the **Obtain IP address automatically** option is selected.
+In Windows Server, you manually configure the TCP/IP properties to add a static IP address. After you do this, the **Internet Protocol (TCP/IP) Properties** dialog box still displays the default settings. Additionally, the **Obtain IP address automatically** option is selected.
 
 However, when you type `ipconfig /all` at a command prompt, the static IP address information that you entered manually is displayed.
 

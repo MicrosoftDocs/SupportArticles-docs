@@ -7,7 +7,6 @@ author: Deland-Han
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue
-
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.date: 06/15/2018
@@ -55,6 +54,17 @@ The request to resize the VM has to be attempted at the original cluster that ho
      * Click **Resource groups** > *your resource group* > **Resources** > *your availability set* > **Virtual Machines** > *your virtual machine* > **Stop**.
   2. After all the VMs stop, resize the desired VM to a larger size.
   3. Select the resized VM and click **Start**, and then start each of the stopped VMs.
+  
+## Issue: Error when Stop/Stop/Redeploy/Restart an existing VM
+You try to stop, start, redeploy, restart the VM but failed with “An unexpected error occurred while processing the network profile of the VM. Please retry later” and turns your VM in failed state.
+
+### Cause  
+This will occur if there is an issue in allocating Network resource or failed to update the Network resource.
+
+### Resolution
+* Try reapplying your virtual machine’s state. This operation will rerun VM provisioning and help solve the VM failed state, in case when VM provisioning failed while executing a previous VM action.
+     
+     * Click **Virtual Machines** > *your Virtual Machine* > **Redeploy+Reapply** > *Reapply* 
 
 ## Next steps
 If you encounter issues when you create a new Windows VM in Azure, see [Troubleshoot deployment issues with creating a new Windows virtual machine in Azure](./troubleshoot-deployment-new-vm-windows.md).

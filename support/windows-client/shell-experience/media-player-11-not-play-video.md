@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue where the video doesn't play when you play it in Windows Media Player 11.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Media Player 11  
 _Original KB number:_ &nbsp; 926373
 
 ## Symptoms
@@ -46,7 +46,7 @@ To resolve this problem, configure Windows Media Player to download codecs autom
 2. Select the **Player** tab, select the **Download codecs automatically** check box, and then select **OK**.
 3. Try to play the file.
 
-If you're prompted to install the codec, select **Install**. If you still can't play the file correctly, try the steps in the **Advanced troubleshooting** section. If you aren't comfortable with advanced troubleshooting, ask someone for help, or contact [Microsoft Support][https://support.microsoft.com/contactus/].
+If you're prompted to install the codec, select **Install**. If you still can't play the file correctly, try the steps in the **Advanced troubleshooting** section. If you aren't comfortable with advanced troubleshooting, ask someone for help, or contact [Microsoft Support](https://support.microsoft.com/contactus/).
 
 ### Advanced troubleshooting
 

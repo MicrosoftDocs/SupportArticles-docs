@@ -1,7 +1,7 @@
 ---
-title: How to get updates via Windows Update
-description: Describes how to obtain an update from Windows Update.
-ms.data: 09/08/2020
+title: How to get Windows updates in Windows 7, Windows 8.1 and Windows Server 2012 R2
+description: Describes how to obtain updates in Windows 7, Windows 8.1 and Windows Server 2012 R2.
+ms.date: 05/25/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -16,12 +16,12 @@ adobe-target: true
 ---
 # How to get an update through Windows Update
 
-This article describes how to obtain updates from Windows Update in Windows Server 2012 R2.
+This article describes how to obtain updates from Windows Update in Windows 7, Windows 8.1 and Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 8.1, Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3067639
 
-## Detailed steps for Windows Server 2012 R2
+## Detailed steps for Windows 8.1 and Windows Server 2012 R2
 
 1. Swipe in from the right edge of the screen, and then tap **Search**. Or, if you are using a mouse, point to the lower-right corner of the screen, and then select **Search**.
 
@@ -43,4 +43,6 @@ _Original KB number:_ &nbsp; 3067639
 
 1. In the list, select the check box for the updates that you want to install, click **OK**, and then click **Install updates**.
 
-See the [frequently asked questions for Windows Update](https://windows.microsoft.com/windows/updates-faq#1tc=windows-7) in Windows 7.
+## Reference
+
+See the [frequently asked questions for Windows Update](https://support.microsoft.com/windows/windows-update-faq-8a903416-6f45-0718-f5c7-375e92dddeb2).

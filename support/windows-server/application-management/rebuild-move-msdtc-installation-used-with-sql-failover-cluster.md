@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to rebuild a broken Microsoft Distributed Transaction Coordinator (MSDTC) installation for use with a failover clustered SQL Server installation.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 294209
 
 ## Summary
@@ -78,12 +78,12 @@ If your SQL Server Failover Clustered Instance does require MSDTC and does requi
 3. Set the MSDTC network authentication by using the following script:
 
     ```powershell
-    Set-DtcNetworkSetting -AuthenticationLevel Mutual;
-    -DtcName "Local" -InboundTransactionsEnabled $True;
-    -LUTransactionsEnabled $True;
-    -OutboundTransactionsEnabled $True;
-    -RemoteAdministrationAccessEnabled $False;
-    -RemoteClientAccessEnabled $False;
+    Set-DtcNetworkSetting -AuthenticationLevel Mutual `
+    -DtcName "Local" -InboundTransactionsEnabled $True `
+    -LUTransactionsEnabled $True `
+    -OutboundTransactionsEnabled $True `
+    -RemoteAdministrationAccessEnabled $False `
+    -RemoteClientAccessEnabled $False `
     -XATransactionsEnabled $True -verbose
     ```
 

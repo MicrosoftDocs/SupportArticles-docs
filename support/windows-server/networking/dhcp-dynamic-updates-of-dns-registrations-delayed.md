@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article discusses that a change in the DHCP Domain Name System (DNS) update behavior may delay DNS registrations and provides help to solve this issue.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3069564
 
 ## Symptoms
@@ -48,7 +48,7 @@ To prevent failing updates and delayed pending updates, specify DNS servers that
 
 ## Workaround
 
-Use the following registry value to override the default behavior in Windows Server 2008 and Windows Server 2008 R2.
+Use the following registry value to override the default behavior in Windows Server.
 
 > [!NOTE]
 > This method works for IPv4 scopes only. This value lets you specify the DNS server that should be used for dynamic updates. This overrides the default functionality for all scopes and causes DHCP to use only the specified DNS server for all IPv4 dynamic updates.

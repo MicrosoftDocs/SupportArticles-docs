@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides help to fix the error 787 that occurs when a L2TP VPN connection to a Remote Access server fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2855053
 
 ## Symptoms

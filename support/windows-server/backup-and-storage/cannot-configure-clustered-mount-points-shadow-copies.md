@@ -1,7 +1,7 @@
 ---
-title: 0x80042306 error occurs when configuring shadow copies for clustered mount points on another drive in Windows Server 2012
-description: Fixes the error 0x80042306 that occurs when you configure Previous Versions in Windows Server 2012 for the clustered disks that are mounted as folders on a different volume.
-ms.date: 09/14/2020
+title: 0x80042306 error occurs when configuring shadow copies for clustered mount points on another drive in Windows Server
+description: Fixes the error 0x80042306 that occurs when you configure Previous Versions in Windows Server for the clustered disks that are mounted as folders on a different volume.
+ms.date: 04/14/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -13,16 +13,16 @@ ms.reviewer: eldenc, kaushika
 ms.prod-support-area-path: Configuring and using Backup software
 ms.technology: windows-server-backup-and-storage
 ---
-# 0x80042306 error occurs when configuring shadow copies for clustered mount points on another drive in Windows Server 2012
+# 0x80042306 error occurs when configuring shadow copies for clustered mount points on another drive in Windows Server
 
-This article helps fix the error 0x80042306 that occurs when you configure Previous Versions in Windows Server 2012 for the clustered disks that are mounted as folders on a different volume.
+This article helps fix the error 0x80042306 that occurs when you configure Previous Versions in Windows Server for the clustered disks that are mounted as folders on a different volume.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2828270
 
 ## Symptoms
 
-When trying to configure Previous Versions in Windows Server 2012 for the clustered disks that are mounted as folders on a different volume, it may fail. Additionally, you may receive the following error message:
+When trying to configure Previous Versions in Windows Server for the clustered disks that are mounted as folders on a different volume, it may fail. Additionally, you may receive the following error message:
 
 > Failed to create the storage area association.  
 Error 0x80042306: The shadow copy provider had an error.  

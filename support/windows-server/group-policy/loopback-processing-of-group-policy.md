@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article helps you resolve the problem of applying the Group Policy loopback function when a user signs in to a computer in a specific organizational unit.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 231287
 
 ## Summary

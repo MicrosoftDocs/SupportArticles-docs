@@ -19,15 +19,17 @@ This step-by-step article discusses how to determine which program uses or block
 
 For a Microsoft Windows XP version of this article, see [281336](https://support.microsoft.com/help/281336).  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323352
 
 ## Summary
 
 The Netstat.exe utility has a new switch, the **-o** switch, that can display the process identifier (ID) that is associated with each connection. This information can be used to determine which process (program) listens on a particular port. For example, the `netstat -ano` command can produce the following output:
 
-> Proto Local Address Foreign Address State PID  
+```output
+Proto Local Address Foreign Address State PID  
 TCP 0.0.0.0:80 0.0.0.0:0 Listening 888
+```
 
 If you use Task Manager, you can match the process ID that is listed to a process name (program). With this feature, you can find the specific port that a program currently uses. Because a program already uses this specific port, another program is prevented from using that same port.
 

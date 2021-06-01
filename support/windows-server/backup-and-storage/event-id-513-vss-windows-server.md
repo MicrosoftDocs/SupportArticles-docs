@@ -17,26 +17,29 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a workaround to Event ID 513 when running VSS in Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 3209092
 
 ## Symptoms
 
 In Windows Server, when an application calls the Volume Shadow Copy Service (VSS) to run a backup, Event 513 may be generated:
-> Log Name: Application  
+
+```output
+Log Name: Application  
 Source: Microsoft-Windows-CAPI2  
 Event ID: 513  
 Task Category: none  
 Level: Error  
->
-> Description:  
+
+Description:  
 An error occurred in Cryptographic Services while processing the OnIdentity() call in System Writer Object.
->
-> Details:  
+
+Details:  
 AddLegacyDriverFiles: Unable to back up image of binary Microsoft Link-Layer Discovery Protocol.
->
-> System Error:  
+
+System Error:  
 Access is denied.
+```
 
 ## Cause
 

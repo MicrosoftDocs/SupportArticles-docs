@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes how to temporarily disable Terminal Server Client Logons.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186627
 
 ## Summary

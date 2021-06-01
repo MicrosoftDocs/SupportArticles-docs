@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 You can customize security access rights to their event logs in Windows Server 2012. These settings can be configured locally or through Group Policy. This article describes how to use both of these methods.
 
-_Original product version:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Datacenter  
+_Applies to:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Datacenter  
 _Original KB number:_ &nbsp; 323076
 
 ## Summary

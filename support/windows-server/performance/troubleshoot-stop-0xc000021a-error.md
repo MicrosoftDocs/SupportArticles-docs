@@ -19,12 +19,12 @@ This article presents advanced troubleshooting steps for the STOP 0xC000021A err
 
 **Home users**: This article is intended for use by support agents and IT professionals. If you're looking for more information about a blue-screen error code while using your computer, see [Troubleshoot blue-screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
 
-_Original product version:_ &nbsp;Windows 10 - all editions,  Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
 _Original KB number:_ &nbsp;156669
 
-This article is intended for advanced computer users. If you're not comfortable with advanced troubleshooting, you might want to ask someone for help or contact Technical Support.
+This article is intended for advanced computer users. If you aren't comfortable with advanced troubleshooting, ask someone for help or contact Technical Support.
 
-When you use a server or a workstation that's running one of the operating systems that's listed in the "Applies to" section, you may receive the following error message:
+When you use a server or workstation that's running one of the operating systems listed in the "Applies to" section, you may receive the following error message:
 
 > STOP: c000021a {Fatal System Error}  
 The Windows Logon Process system process terminated unexpectedly with a status of 0xc0000034 (0x00000000 0x0000000)  
@@ -35,7 +35,7 @@ The Windows Logon Process system process terminated unexpectedly with a status o
 
 ## Cause
 
-The STOP 0xC000021A error occurs when either Winlogon.exe or Csrss.exe fails. When the Windows NT kernel detects that either of these processes has stopped, it stops the system and raises the STOP 0xC000021A error. This error may have several causes. Among them are the following:
+The STOP 0xC000021A error occurs when either Winlogon.exe or Csrss.exe fails. When the Windows NT kernel detects that either of these processes has stopped, it stops the system and raises the STOP 0xC000021A error. This error may have several causes, including:
 
 - Mismatched system files have been installed.
 - A Service Pack installation has failed.
@@ -46,7 +46,7 @@ The STOP 0xC000021A error occurs when either Winlogon.exe or Csrss.exe fails. Wh
 
 To troubleshoot this problem, you must determine which of these processes failed and why.
 
-To determine which process failed, register Dr. Watson as the default system debugger (if it isn't already the default debugger). Dr. Watson for Windows NT logs diagnostic information about process failures to a log file (Drwtsn32.log). Also, you can configure this program to produce memory dump files of failed processes that you can analyze in a debugger to determine why a process fails.
+To determine which process failed, register Dr. Watson as the default system debugger if it isn't already the default debugger. Dr. Watson for Windows NT logs diagnostic information about process failures to a log file Drwtsn32.log. Also, you can configure this program to produce memory dump files of failed processes. Then you can analyze the files in a debugger to determine why a process fails.
 
 To set up Dr. Watson to trap user-mode program errors, follow these steps:
 
@@ -62,7 +62,7 @@ To set up Dr. Watson to trap user-mode program errors, follow these steps:
 4. View the Dr. Watson log to determine what user mode process may be causing the problem.
 5. If the Dr. Watson log doesn't contain sufficient information to determine the cause of the problem, analyze the User.dmp file to determine the cause of the STOP 0xC000021A error.
 
-    If Dr. Watson didn't create a User.dmp file for either Winlogon.exe or Csrss.exe, you may have to use a different tool to generate a memory dump file of the process that fails. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
+    If Dr. Watson didn't create a User.dmp file for either Winlogon.exe or Csrss.exe, you may have to use a different tool to generate a memory dump file of the process that fails. For more information, see the following article:
 
     [241215](https://support.microsoft.com/help/241215) How to use the Userdump.exe tool to create a dump file
 
@@ -74,12 +74,12 @@ To set up Dr. Watson to trap user-mode program errors, follow these steps:
     >
     > Most STOP 0xC000021A errors occur because Winlogon.exe fails. This typically occurs because of a faulty third-party Graphical Identification and Authentication (GINA) DLL. The GINA is a replaceable DLL component that Winlogon.exe loads. The GINA implements the authentication policy of the interactive logon model. The GINA performs all identification and authentication user interactions.
 
-It's very common for certain types of remote control software to replace the default Windows GINA DLL (Msgina.dll). Therefore, a good first step is to examine the system to see if it has a third-party GINA DLL. To do this, locate the following registry key:
+It's very common for certain types of remote control software to replace the default Windows GINA DLL (Msgina.dll). A good first step is to examine the system to see if it has a third-party GINA DLL. To do so, locate the following registry key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WinlogonValue = GinaDLL REG_SZ`
 
-- If the Gina DLL value is present and if it's anything other than Msgina.dll, it probably means that a third-party product has changed this value.
-- If this value isn't present, the system uses Msgina.dll as the default GINA DLL. If this error first occurred after the installation of a new or updated device driver, system service, or third-party program, the new software should be removed or disabled. Contact the manufacturer of the software to see if an update is available. 
+- If the Gina DLL value is present, and if it's anything other than Msgina.dll, it probably means that a third-party product has changed this value.
+- If this value isn't present, the system uses Msgina.dll as the default GINA DLL. If this error first occurred after the installation of a new or updated device driver, system service, or third-party program, the new software should be removed or disabled. Contact the manufacturer of the software to see if an update is available.
 
 ### Last known good configuration
 
@@ -88,8 +88,8 @@ If the previous steps in this article don't resolve the problem, start the compu
 > [!NOTE]
 > Because there are several versions of Microsoft Windows, the following steps may be different on your computer. If they are, see your product documentation to complete these steps.
 
-1. Click **Start** > **Shut Down**.
-2. Click **Restart** > **OK**.
+1. Select **Start** > **Shut Down**.
+2. Select **Restart** > **OK**.
 3. Press F8 at the indicated time:
    - For an x86-based computer: When a screen of text appears and then disappears, press F8. (The screen of text may include a memory test, lines about the BIOS, and other lines.) There may also be a prompt that tells you when to press F8.
    - For an Itanium architecture-based computer: After you make your selection from the boot menu, press F8. There may be a prompt that tells you when to press F8.
@@ -105,7 +105,7 @@ If the previous steps in this article don't resolve the problem, start the compu
 
 ### Remove incompatible software by using the Recovery Console
 
-If the previous steps in this article don't resolve the problem, remove incompatible software by using the Recovery Console. Complete steps that describe how to do this are beyond the scope of this article. However, you may be able to use the following articles as guidelines for performing this procedure.
+If the previous steps in this article don't resolve the problem, remove incompatible software by using the Recovery Console. Complete steps that describe how to do so are beyond the scope of this article. However, you may use the following articles as guidelines:
 
 [816104](https://support.microsoft.com/help/816104) How to replace a driver by using Recovery Console in Windows Server 2003  
 [326215](https://support.microsoft.com/help/326215) How to use the Recovery Console on a Windows Server 2003-based computer that does not start  

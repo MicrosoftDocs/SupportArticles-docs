@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article discusses an issue in which you can't open Microsoft Store after a domain-joined computer connects to a VPN connection that has force tunneling enabled.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4537233
 
 ## Symptoms
@@ -40,7 +40,7 @@ When the Windows Firewall profile isn't **Public**, there's a default block rule
 
 To fix this issue, follow these steps to create a Group Policy object (GPO):
 
-1. Open the Group Policy Management snap-in (gpmc.msc), and open the **Default Domain Policy**  for editing.
+1. Open the Group Policy Management snap-in (gpmc.msc), and create, or open a Group Policy for editing.
 2. From the Group Policy Management Editor, expand **Computer Configuration** > **Policies** > **Administrative Templates** > **Network**, and then select **Network Isolation**.
 3. In the right pane, double-click **Private network ranges for apps**.
 4. In the **Private network ranges for apps** dialog box, select **Enabled**.

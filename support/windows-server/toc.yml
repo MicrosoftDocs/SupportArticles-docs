@@ -108,6 +108,10 @@
       href: ./identity/raise-active-directory-domain-forest-functional-levels.md
   - name: Active Directory Federation Services (AD FS)
     items:
+    - name: Troubleshoot ADFS SSO issues
+      href: ./identity/troubleshoot-ad-fs-sso-issue.md
+    - name: ADFS error 180 and endpoints missing
+      href: ./identity/adfs-error-180-endpoints-missing.md      
     - name: ADFS 2.0 certificate error
       href: ./identity/adfs-2-certificate-error-build-chain.md
     - name: ADFS 2.0 error 401
@@ -126,6 +130,10 @@
       href: ./identity/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
       href: ./identity/workplace-join-fail-error-0x80072ee7.md
+    - name: Fail to connect ADFS service
+      href: ./identity/connection-adfs-failed-set-msoladfscontex.md
+    - name: Fail to convert domain to Standard
+      href: ./identity/convert-domain-federated.md
     - name: Restore IIS and clean up Active Directory
       href: ./identity/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
@@ -302,8 +310,6 @@
       href: ./identity/event-id-84-occurs-ad-rms-windows-server.md
   - name: Active Directory topology (sites, subnets, and connection objects)
     items:
-    - name: Active Directory services and domains (Part 1)
-      href: ./identity/active-directory-services-domains-part-one.md
     - name: Can't promote a DC to global catalog server
       href: ./identity/cannot-promote-dc-to-global-catalog-server.md
     - name: Fail to create a DFS namespace
@@ -484,8 +490,8 @@
       href: ./identity/dsa-object-cannot-be-deleted.md
     - name: Fail to run Get-ADGroupMember for domain local group
       href: ./identity/get-adgroupmember-error-remote-forest-members.md
-    - name: GPO processing failures across multiple forests
-      href: ./identity/gpo-processing-failures-across-foreast.md
+    - name: RSoP Planning mode is not supported in a cross-forest scenario
+      href: ./identity/rsop-not-supported-across-multiple-forests.md
     - name: How to change display names of Active Directory users
       href: ./identity/change-display-names-ad-users.md
     - name: How to enable Kerberos event logging
@@ -528,8 +534,6 @@
       href: ./identity/lingering-object-liquidator-tool.md
     - name: Troubleshoot AD replication error 8589
       href: ./identity/replication-error-8589.md
-    - name: Troubleshoot Directory Services issues
-      href: ./identity/troubleshoot-directory-services-issues.md
     - name: Use Adminpak to remotely administer computers
       href: ./identity/use-adminpak-remotely-administer-computers.md
     - name: Use Directory Service to manage AD objects
@@ -793,7 +797,7 @@
     - name: Extend a data volume
       href: ./backup-and-storage/extend-data-volume.md
     - name: FAQs about GUID Partitioning Table disk architecture
-      href: ./backup-and-storage/guid-partitioning-table-disk-faq.md
+      href: ./backup-and-storage/guid-partitioning-table-disk-faq.yml
     - name: Fix heavy memory usage in ReFS
       href: ./backup-and-storage/fix-heavy-memory-usage-refs.md
     - name: Hot-swap disks are not recognized
@@ -926,6 +930,8 @@
     items:
     - name: '"Stop 0x0000007B" error'
       href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
+    - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
+      href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
     - name: Can't find the Microsoft Loopback Adapter
       href: ./deployment/microsoft-loopback-adapter-rename.md
     - name: Can't install a VMWare driver on Windows Server 2008 R2
@@ -1084,10 +1090,14 @@
       href: ./group-policy/troubleshoot-software-installations-debug-logging.md
     - name: Use Group Policy to configure automatic logon in Terminal Services
       href: ./group-policy/use-group-policy-configure-automatic-logon.md
+    - name: Use Group Policy to deploy a Known Issue Rollback
+      href: ../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md
     - name: Use Group Policy to remotely install softwares
       href: ./group-policy/use-group-policy-to-install-software.md
   - name: Group Policy management - GPMC or AGPM
     items:
+    - name: Error 0x8007000D when runing Backup-GPO in Server Core
+      href: ./group-policy/error-0x8007000d-backup-gpo-cmdlet.md
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
     - name: Changes to GPO permissions aren't saved
@@ -1886,6 +1896,8 @@
       href: ./performance/enable-verbose-startup-shutdown-logon-logoff-status-messages.md
     - name: How to obtain a Console Window Handle
       href: ./performance/obtain-console-window-handle.md
+    - name: Known UI limitation of the CPU information in Windows Server 2016
+      href: ./performance/known-ui-limitation-cpu-information.md
     - name: Log files are deleted when you use Performance Monitor
       href: ./performance/log-files-are-deleted.md
     - name: Manually rebuild performance counters
@@ -2180,12 +2192,16 @@
       href: ./remote/remotefx-usb-redirected-scanner-not-start.md
   - name: Remote Desktop Services (Terminal Services) licensing
     items:
+    - name: Cannot connect to RDS because no RD Licensing servers are available
+      href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
     - name: Configure RDP listener certificates
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Deactivate or reactivate a license server
       href: ./remote/deactivate-reactivate-license-server.md
+    - name: Error after configuration of RD Connection Broker servers for high availability
+      href: ./remote/error-configuration-rd-connection-brokers-high-availability.md
     - name: Event ID 4105 when RD Licensing runs
       href: ./remote/terminalservices-licensing-event-4105.md
     - name: Event ID 44 on an RDS licensing server
@@ -2224,6 +2240,8 @@
       href: ./remote/client-disconnected-group-policy-updates.md
     - name: Connection Broker can't be mixed
       href: ./remote/connection-broker-cant-be-mixed.md
+    - name: How to disable warning message for idle remote desktop sessions
+      href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
@@ -2268,10 +2286,6 @@
   items:
   - name: Security and Malware
     href: ./security-and-malware/security-and-malware-overview.md
-  - name: Malware-related account lockouts
-    items:
-    - name: User accounts are unexpectedly locked
-      href: ./security-and-malware/user-accounts-locked-event-id-12294.md
   - name: Suspicion that an unknown process or service is malicious
     items:
     - name: Virus alert about Blaster worm and its variants
@@ -2406,6 +2420,8 @@
       href: ./system-management-components/winrm-service-not-start-uninstall-winrm-2.md
   - name: WMI
     items:
+    - name: High CPU usage by WmiPrvSE.exe process
+      href: ./system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
     - name: Event 5605 when querying MSCluster namespace by WMI
@@ -2456,6 +2472,8 @@
       href: ./user-profiles-and-logon/create-security-enhanced-redirected-folder.md
     - name: How to delete a user profile
       href: ./user-profiles-and-logon/delete-user-profile.md
+    - name: Managing User Profile Service slow link detection
+      href: ./user-profiles-and-logon/manage-profile-service-slow-link-detection.md
     - name: Logon issues when you enable "Run logon scripts synchronously"
       href: ./user-profiles-and-logon/welcome-screen-displayed-for-30-seconds.md
     - name: Profile loading fails
@@ -2606,6 +2624,8 @@
       href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
   - name: Virtual machine state
     items:
+    - name: Get-VMNetworkAdapter command doesn't report IP addresses
+      href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: virtual machine shutdown actions don't run
       href: ./virtualization/vm-shutdown-actions-not-run.md
     - name: Virtual Machines enter the paused state
@@ -2853,4 +2873,4 @@
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
-    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
+    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
