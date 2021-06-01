@@ -1,12 +1,62 @@
 {
   "build": {
-"fileMetadata": { 
-  "recommendations": { 
-    "*/**.md": true
-  },
-  "ms.author": {
-    "**/*.md": "genlin"
- }
-}
+
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md"
+        ]
+      }
+    ],
+
+    "resource": [
+      {
+        "files": [
+          "**/*.svg",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.jpeg",
+          "**/*.gif"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+
+    "overwrite": [],
+    "externalReference": [],
+
+    "fileMetadata": {
+      "recommendations": { 
+        "*/**.md": true
+      },
+      "ms.author": {
+        "**/*.md": "genlin"
+     }
+    },
+
+    "template": [],
+    "dest": "support1-docset",
+    "markdownEngineName": "markdig"
+
   }
 }
