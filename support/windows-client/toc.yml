@@ -272,8 +272,6 @@
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
       href: ./deployment/command-switches-supported-by-self-extractor-package.md
-    - name: Compute MD5 or SHA-1 cryptographic hash values
-      href: ./deployment/compute-md5sha-1-cryptographic-hash-value.md
     - name: DISM /Apply-Image command fails with error code 5
       href: ./deployment/dism-apply-image-command-fails-error-code-5.md
     - name: Download updates from Windows Update Catalog
