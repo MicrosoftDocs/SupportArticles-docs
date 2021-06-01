@@ -34,30 +34,24 @@ This issue occurs if you're in a hybrid Exchange environment that has a mailbox 
 
 ## Resolution
 
-To fix this issue, follow these steps.
+To fix this issue, use either of the following methods.
 
-### Step 1
+### Method 1: Update My Site Host URLs
 
-Use either of the following methods.
-
-#### Method 1: Update My Site Host URLs
-
-Update the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to the values for the new geographical location of OneDrive. To do this, run the following cmdlet:
+Run the following cmdlet to update the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to the values for the new geographical location of OneDrive:
 
 ```powershell
 Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL <new_OneDrive_URL> -ExternalSPMySiteHostURL <new_OneDrive_URL>
 ```
 
-#### Method 2: Set values to Null
+### Method 2: Set values to Null
 
-Set the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to **Null**. To do this, run the following cmdlet:
+Run the following cmdlet to set the internal and external My Site Host URLs in the `OwaMailboxPolicy` setting to **Null**:
 
 ```powershell
 Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL $Null -ExternalSPMySiteHostURL $Null
 ```
 
-### Step 2
-
-Create a new Outlook profile to use the updated values that are set for `OwaMailboxPolicy`. This is necessary because the previous `OwaMailboxPolicy` settings are cached in your current Outlook profile, and they can't be updated.
+After you update the `OwaMailboxPolicy` setting, create a new Outlook profile to use the updated values. This is necessary because the previous `OwaMailboxPolicy` settings are cached in your current Outlook profile, and they can't be updated.
 
 For more information about the `OwaMailboxPolicy` setting, see [Configure document collaboration with OneDrive for Business and Exchange 2016 on-premises](/exchange/hybrid-deployment/set-up-document-collaboration).
