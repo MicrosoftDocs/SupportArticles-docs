@@ -33,7 +33,7 @@ To fix this issue, follow these steps:
 
 1. [Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories).
 2. Check that directory synchronization occurred correctly. For more information, see [Verify directory synchronization](https://technet.microsoft.com/library/jj151797.aspx).
-3. If sync is working correctly but the Active Directory object deletion is still not propagated to Azure AD, you can manually remove the orphaned object by using one of the following cmdlets in Azure Active Directory Module for Windows PowerShell:
+3. If sync is working correctly but the Active Directory object deletion is still not propagated to Azure AD, manually remove the orphaned object. To do so, use one of the following cmdlets in Azure Active Directory Module for Windows PowerShell:
 
     ```powershell
     Remove-MsolContact

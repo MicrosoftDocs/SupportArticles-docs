@@ -1,6 +1,6 @@
 ---
 title: Microsoft Store doesn't open after a domain-joined computer makes a VPN connection
-description: Discusses an issue in which Microsoft Store doesn't open after a domain-joined computer connects to a VPN connection that has force tunneling enabled.
+description: Discusses an issue in which Microsoft Store doesn't open after a domain-joined computer connects to a VPN connection. The VPN connection has force tunneling enabled.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -34,7 +34,10 @@ If you do one of the following operations, Microsoft Store opens as expected:
 
 The Microsoft Store app uses a security model that depends on network isolation. Specific network capabilities and boundaries must be enabled for the store app, and network access must be allowed for the app.
 
-When the Windows Firewall profile isn't **Public**, a default block rule blocks all outgoing traffic that has the remote IP set as **0.0.0.0**. While the computer is connected to a VPN connection that has force tunneling enabled, the default gateway IP is set as **0.0.0.0**. If the network access boundaries aren't set appropriately, the default block firewall rule is applied, and Microsoft Store app traffic is blocked.
+When the Windows Firewall profile isn't **Public**, a default block rule blocks all outgoing traffic that has the remote IP set as **0.0.0.0**. While the computer is connected to a VPN connection that has force tunneling enabled, the default gateway IP is set as **0.0.0.0**. If the network access boundaries aren't set appropriately, the following behaviors occur:
+
+- The default block firewall rule is applied.
+- Microsoft Store app traffic is blocked.
 
 ## Resolution
 
