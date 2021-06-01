@@ -51,7 +51,10 @@
       "feedback_system": "None", 
       "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
       "searchScope": ["Troubleshoot"],
-      "recommendations": true
+      "recommendations": { 
+        "SQL/**.md": true,
+        "Azure/**.md": false
+      }
     },
 
     "fileMetadata": {
