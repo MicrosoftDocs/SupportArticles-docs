@@ -91,7 +91,7 @@ To work around this issue, follow these steps:
 3. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
-   Get-PublicFolder "<\PF>" -GetChildren | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
+   Get-PublicFolder "<\PF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
    ```
 
    > [!NOTE]
@@ -100,7 +100,7 @@ To work around this issue, follow these steps:
    Here's an example:
 
    ```powershell
-   Get-PublicFolder \Marketing -GetChildren | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
+   Get-PublicFolder \Marketing -Recurse | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
    ```
 
 ### Status
