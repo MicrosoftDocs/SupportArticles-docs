@@ -504,6 +504,8 @@
       href: ./identity/info-devices-configured-rodcs.md
     - name: Let non-administrators view deleted objects container
       href: ./identity/non-administrators-view-deleted-object-container.md
+    - name: Linux accounts can't get AES encrypted tickes in AD DS
+      href: ./identity/linux-accounts-cannot-get-aes-tickets.md
     - name: Modify filtered properties of an object
       href: ./identity/modify-filtered-properties-of-object.md
     - name: Multiple tabs of user properties are missing
