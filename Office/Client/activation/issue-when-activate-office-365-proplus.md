@@ -28,20 +28,36 @@ When you set up your network to block Internet Explorer 6, users discover that t
 
 ## Cause
 
-This issue occurs because the client computer cannot connect to *.microsoftonline-p.net.
+This issue occurs under one of the following situations:
+
+- The client computer can't connect to *.microsoftonline-p.net.
+- Network Connectivity Status Indicator (NCSI) active probe is disabled.
 
 ## Workaround
 
-To work around this issue, add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. 
+To work around this issue, first check your firewall or proxy setting. Add an explicit "allow" rule that contains "MSOIDCRL"in your firewall or proxy for agents. For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6. For more information about how to configure firewall rules, see your firewall documentation. 
 
-For example, set up the rules to first allow MSOIDCRL and to then deny Internet Explorer 6.
+If the issue persists, check if NCSI active probe is disabled. In this case, enable NCSI active probe by using the registry or Group Policy Objects (GPOs).
 
-For more info about how to configure firewall rules, see your firewall documentation. 
+To use the registry to enable NCSI active probe, configure one of the following registry keys:
+
+> [!IMPORTANT]
+> Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+
+- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\EnableActiveProbing`
+  - Type: DWORD
+  - Value: Decimal 1 
+- `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator\NoActiveProbe`
+  - Type: DWORD
+  - Value: Decimal 0
+
+To use Group Policy to enable NCSI active probe, configure the following GPO:
+
+**Computer Configuration**\\**Administrative Templates**\\**System**\\**Internet Communication Management**\\**Internet Communication settings**\\**Turn off Windows Network Connectivity Status Indicator active tests**  
+Value: Disabled 
 
 ## More information
 
-For more information about Office 365 activation issues, see the following Microsoft Knowledge Base article: 
-
-[Office 365: Use the Support and Recovery Assistant for Office 365](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380)
+For more information about Office 365 activation issues, see [Office 365: Use the Support and Recovery Assistant for Office 365](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380).
 
 Still need assistance? Ask for help in the [Microsoft Community](https://answers.microsoft.com/).
