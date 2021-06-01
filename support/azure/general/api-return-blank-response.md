@@ -40,7 +40,7 @@ Expected output of **GetHeaders**  API should be something like below:
 
 ## Troubleshooting steps
 
-To debug this kind of issues, the best approach is collect [APIM inspector trace](azure/api-management/api-management-howto-api-inspector) to inspect request processing inside APIM pipeline.
+To debug this kind of issues, the best approach is collect [APIM inspector trace](/azure/api-management/api-management-howto-api-inspector) to inspect request processing inside APIM pipeline.
 
 - If you look into the trace, you would notice that forward-request policy is missing.
 - The forward-request policy forwards the incoming request to the backend service specified in the request [context](/azure/api-management/api-management-policy-expressions#ContextVariables).
@@ -48,5 +48,5 @@ To debug this kind of issues, the best approach is collect [APIM inspector trace
 - Hence if you check the \<backend> section of the **GetHeaders** operation under **Blank-API** you would notice that forward-request policy is removed.
 - Add the forward-request policy in the backend section or add **\<base />** element so that it inherits forward-request policy from the parent level (i.e. from the API level), which should resolve the problem.
 
-Read about the [forward-request](azure/api-management/api-management-advanced-policies#ForwardRequest) policy to know more about it.
+Read about the [forward-request](/azure/api-management/api-management-advanced-policies#ForwardRequest) policy to know more about it.
 
