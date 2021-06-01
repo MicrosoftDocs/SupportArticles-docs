@@ -175,7 +175,7 @@ The following are the attributes that you may encounter issue:
 
 Depending on the available resources and actual local database page population, the limit may be hit at different number of values. This is why a certain change can be taken by some Domain Controller or LDS instances, but not on others.
 
-Another instance of this problem is when a single attribute value exceeds about 5MB. When the attribute value is updated, the AD database transaction needs to hold both previous and new value.
+This problem might also occur when a single attribute value exceeds approximately 5 MB. The AD database transaction must hold both the previous and the new value when the attribute value is updated.
 
 ## Resolution
 
@@ -204,17 +204,17 @@ After the object is recycled, use Active Directory Sites and Services to try to 
 
 ## More information
 
-Here're some suggestions to avoid the limit from past Microsoft issues.
+Here are some suggestions to avoid the limit from past Microsoft issues.
 
 ### Use of dnsRecord attribute by Microsoft DNS Server
 
-Each IP address or SRV name target is an additional value of the dnsRecord attribute. By default, each domain controller in Active Directory registers a series of names with DNS, some are based on the sites the domain controller covers, some are site-less. You may run into this limit for site-less names.
+Each IP address or SRV name target is an additional value of the dnsRecord attribute. By default, each domain controller in Active Directory registers a series of names with DNS, some are based on the sites the domain controller covers, some are site-less. The limit is usually reached for site-less names.
 
 When you approach a lot of domain controllers in a domain, like 1200 domain controllers, there may be issues updating the DNS objects for the names with the additional values. In such a domain, it is also often not desired to have this many entries for site-less names. To avoid this limit, you can create a registry value "DnsAvoidRegisterRecords" on the domain controllers that should not be present in site-less names.
 
 ### DFS Volume management in version 1 namespaces attribute PKT
 
-DFS version 1 namespaces use a single AD object per namespace, and all the DFS link information is kept in a single attribute "PKT". There are problems with managing the namespace when this blob exceeds 5MB (roughly 5000 links).
+DFS version 1 namespaces use a single AD object per namespace, and all the DFS link information is kept in a single attribute "PKT". There are problems with managing the namespace when this blob exceeds 5 MB (roughly 5000 links).
 
 For more information, see [How DFS Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782417(v=ws.10))
 
