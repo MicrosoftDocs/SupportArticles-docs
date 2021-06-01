@@ -38,7 +38,7 @@ Expected output of **GetHeaders**  API should be something like below:
 }
 ```
 
-## Troubleshooting steps
+## Troubleshooting Steps
 
 To debug this kind of issues, the best approach is collect [APIM inspector trace](/azure/api-management/api-management-howto-api-inspector) to inspect request processing inside APIM pipeline.
 
