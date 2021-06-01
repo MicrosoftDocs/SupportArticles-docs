@@ -12,6 +12,10 @@ If you use Microsoft System Center 2012 R2 Data Protection Manager (DPM) to prot
 _Original product version:_ &nbsp; System Center 2012 R2 Data Protection Manager  
 _Original KB number:_ &nbsp; 4039285
 
+If the upgrade fails, the following error (ID:34517) message is displayed:
+
+![Select start job at step](./media/upgrade-dpm-vmware-vm-protection/dpm-protection-manager-setup.png)
+
 ## Upgrade to DPM 2016
 
 1. Open the System Center 2012 R2 DPM Administrator Console.
