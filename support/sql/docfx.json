@@ -1,4 +1,5 @@
 {
+  "build": {
 "fileMetadata": { 
   "recommendations": { 
     "*/**.md": true
@@ -7,4 +8,5 @@
     "**/*.md": "genlin"
  }
 }
+  }
 }
