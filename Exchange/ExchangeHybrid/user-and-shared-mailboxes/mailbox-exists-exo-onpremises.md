@@ -37,7 +37,7 @@ This scenario would be most applicable if the user mailbox was previously migrat
 
 To use this method, follow these steps:
 
-1. Save the on-premises mailbox information to a file, such as "SMTP addresses", "Exchange attributes", and so on.
+1. Start the Microsoft Exchange Management shell and save the on-premises mailbox information to a file, such as "SMTP addresses", "Exchange attributes", and so on.
 
 2. Set the PowerShell Format enumeration limit to "unlimited" to make sure that no attribute values are truncated. For example:
 
@@ -66,7 +66,7 @@ To use this method, follow these steps:
     Set-RemoteMailbox "user identity" -ExchangeGuid "Exchange guid value of Exchange Online mailbox"
     ```
 
-7. Restore the contents of the disconnected mailbox to Exchange Online. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
+7. Restore the contents of the disconnected mailbox to Exchange Online using Exchange Online PowerShell. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
 
    - A member of the Domain Admins group in Active Directory Domain Services (AD DS) in the on-premises organization.
    - A member of the Exchange Recipients Administrators group in Active Directory in the on-premises organization.
