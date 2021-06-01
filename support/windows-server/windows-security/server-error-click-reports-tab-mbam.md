@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article fixes an error when you click the Reports tab in MBAM.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;2620287
 
 ## Symptoms

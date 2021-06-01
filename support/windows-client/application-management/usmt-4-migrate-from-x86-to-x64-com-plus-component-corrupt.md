@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article helps solve an issue where COM+ component settings will be corrupt when you migrate from an x86 platform to an x64 platform.
 
-_Original product version:_ &nbsp;Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp;2481190
 
 ## Symptoms

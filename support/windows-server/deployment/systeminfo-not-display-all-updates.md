@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a workaround for an issue where SystemInfo.exe can't display all installed updates.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 2644427
 
 ## Symptoms

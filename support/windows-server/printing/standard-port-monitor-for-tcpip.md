@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article describes how the standard port monitor works in Microsoft Windows Server 2003 and compares it with the LPR port monitor.
 
-_Original product version:_ &nbsp;Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp;814586
 
 ## Summary

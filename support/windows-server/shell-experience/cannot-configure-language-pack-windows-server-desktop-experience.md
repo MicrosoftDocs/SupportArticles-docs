@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article provides solutions to an issue where you cannot configure a language pack for Windows Server 2019 Desktop Experience.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4466511
 
 ## Symptoms

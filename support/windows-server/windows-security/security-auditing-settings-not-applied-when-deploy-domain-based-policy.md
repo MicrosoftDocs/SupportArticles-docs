@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides help to solve an issue where security auditing settings are not applied to client computers in an Active Directory domain when you deploy a domain-based policy.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 921468
 
 ## Symptoms

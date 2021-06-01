@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article provides a solution to an issue that operating system performance may degrade when one or more processes access multiple large files using the `CreateFile()` API and the `FILE_FLAG_RANDOM_ACCESS` flag.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2549369
 
 ## Symptoms

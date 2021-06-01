@@ -19,7 +19,7 @@ keywords: ProfSvc
 
 This article describes how to optimize slow link detection to effectively balance the quality of the bandwidth estimate against the amount of time spent calculating the estimate.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8
 
 ## Summary
 
@@ -85,7 +85,7 @@ This algorithm produces more accurate delay and throughput measurements. The new
 
 #### Settings that control slow link detection
 
-Windows provides several Group Policy settings that control slow link detection. The following table describes some of the most important of these policies. For more information about how to use these policies, see [Policy CSP - ADMX_UserProfiles: ADMX_UserProfiles/SlowLinkTimeOut](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-slowlinktimeout).
+Windows provides several Group Policy settings that control slow link detection. The following table describes some of the most important of these policies. For more information about how to use these policies, see [Policy CSP - ADMX_UserProfiles: ADMX_UserProfiles/SlowLinkTimeOut](/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-slowlinktimeout).
 
 > [!IMPORTANT]  
 > If it's enabled, the [**Disable detection of slow network connections**](https://gpsearch.azurewebsites.net/#2571) policy turns off slow link detection. In that case, the policies that are described in this article are ignored.
@@ -141,7 +141,7 @@ For testing, consider the time that's required to download the entire user profi
 You can improve the sign-in experience over slow links by configuring the user profiles as follows:
 
 - Use the [Limit profile size](https://gpsearch.azurewebsites.net/#2575) policy to restrict the size of the profile.
-- Redirect user folders to locations outside the profile (for example, save user files in a [OneDrive for Business](https://docs.microsoft.com/onedrive/redirect-known-folders) folder).
+- Redirect user folders to locations outside the profile (for example, save user files in a [OneDrive for Business](/onedrive/redirect-known-folders) folder).
 - Use the [Exclude directories in roaming profile](https://gpsearch.azurewebsites.net/#2573) to selectively exclude folders.
 
 ## See also
@@ -155,5 +155,5 @@ You can improve the sign-in experience over slow links by configuring the user p
 - [KB 4601383, February 16, 2021-KB4601383 (OS Build 17763.1790) Preview](https://support.microsoft.com/help/4601383)
 - [KB 4601380, February 16, 2021—KB4601380 (OS Build 18363.1411) Preview](https://support.microsoft.com/help/4601380)
 - [KB 4601382, February 24, 2021—KB4601382 (OS Builds 19041.844 and 19042.844) Preview](https://support.microsoft.com/help/4601382)
-- [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders)
-- [Policy CSP - ADMX_UserProfiles: ADMX_UserProfiles/SlowLinkTimeOut](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-slowlinktimeout)
+- [Redirect and move Windows known folders to OneDrive](/onedrive/redirect-known-folders)
+- [Policy CSP - ADMX_UserProfiles: ADMX_UserProfiles/SlowLinkTimeOut](/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-slowlinktimeout)

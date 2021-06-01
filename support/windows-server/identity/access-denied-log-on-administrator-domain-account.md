@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps solve access denied errors that occur after you log on to a local administrator domain account.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2738746
 
 ## Symptoms

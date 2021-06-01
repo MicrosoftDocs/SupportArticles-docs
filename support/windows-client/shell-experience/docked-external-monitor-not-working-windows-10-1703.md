@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a workaround for an issue where an external monitor connected to a docking station doesn't work when a Windows 10 version 1703-based portable computer is connected.
 
-_Original product version:_ &nbsp; Windows 10  
+_Applies to:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 4051625
 
 ## Symptoms

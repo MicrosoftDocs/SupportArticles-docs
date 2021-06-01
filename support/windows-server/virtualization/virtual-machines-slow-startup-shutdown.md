@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides help to fix slow virtual machines (VMs) startup or shutdown performance issues.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2532917
 
 ## Symptoms

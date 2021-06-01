@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes a change in Windows Server 2019, in which MPIO option is no longer available in Disk Management.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4477064
 
 ## Symptom  

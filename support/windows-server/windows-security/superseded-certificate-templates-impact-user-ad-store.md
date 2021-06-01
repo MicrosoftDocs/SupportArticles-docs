@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a resolution for the issue superseded Certificate Templates and impact on user's AD store.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2884551
 
 ## Symptoms

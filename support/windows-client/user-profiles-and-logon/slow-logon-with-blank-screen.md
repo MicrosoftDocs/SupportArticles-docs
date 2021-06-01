@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article provides a workaround for an issue that makes Windows logon slow, with a blank screen displayed during the delay.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3161390
 
 ## Summary

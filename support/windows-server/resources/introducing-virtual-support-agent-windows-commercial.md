@@ -17,7 +17,7 @@ ms.technology: windows-server-resources
 
 This article provides some information about Virtual Support Agent for Windows Commercial.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4555297
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article discusses a problem with promoting a domain controller to a global catalog server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 910204
 
 ## Summary

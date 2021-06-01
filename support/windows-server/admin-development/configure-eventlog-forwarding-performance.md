@@ -17,7 +17,7 @@ ms.technology: windows-server-administration-management-development
 
 This article introduces the best practice for configuring EventLog forwarding in a large environment  in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494356
 
 ## Summary

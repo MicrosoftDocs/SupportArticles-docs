@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a solution to an issue where some Windows procedures don't work when the Remote Procedure Call (RPC) service is disabled.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 830071
 
 > [!IMPORTANT]

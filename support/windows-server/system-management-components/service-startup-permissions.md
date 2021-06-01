@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article describes how to troubleshoot Service Startup permissions in a Microsoft Windows Server 2003 environment.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 327545
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes memory dump file options for Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 254649
 
 ## Summary

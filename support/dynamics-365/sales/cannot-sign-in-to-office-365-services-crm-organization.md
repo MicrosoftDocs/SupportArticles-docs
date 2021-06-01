@@ -32,4 +32,4 @@ If the organization has been moved from a Microsoft Dynamics CRM Online organiza
 
 Manually download and install Microsoft Online Services Sign-in Assistant from the following link after installing the Update Rollup 6 patch.
 
-[Microsoft Online Services Sign-In Assistant for IT Professionals RTW](https://www.microsoft.com/download/details.aspx?id=28177)
+[Microsoft Online Services Sign-In Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi)

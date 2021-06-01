@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article helps you enable Windows Remote Shell.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555966
 
 This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-us/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.

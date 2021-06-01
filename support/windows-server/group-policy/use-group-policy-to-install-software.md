@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to use Group Policy to automatically distribute programs to client computers or users.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816102
 
 ## Summary

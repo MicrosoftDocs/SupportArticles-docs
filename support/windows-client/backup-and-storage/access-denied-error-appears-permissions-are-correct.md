@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides a solution for "access is denied" error message when permissions are correct.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 250494
 
 ## Symptoms

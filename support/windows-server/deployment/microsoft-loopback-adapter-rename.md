@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps fix an issue where you can't find the Microsoft Loopback Adapter.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2777200
 
 ## Symptoms

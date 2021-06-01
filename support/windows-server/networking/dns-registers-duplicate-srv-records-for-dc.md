@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps fix an issue where Windows DNS registers duplicate server location (SRV) records for a domain controller if its computer name has uppercase letters.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4496901
 
 ## Symptoms
@@ -145,7 +145,7 @@ By the time all the DCs are back online, the duplicate (mixed-case) SRV records 
 
 If Method 1 and Method 2 do not provide satisfactory results, follow these steps for each affected DC:
 
-1. Demote the DC, and clean up the related metadata. For more information, see [Demoting Domain Controllers and Domains](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-)  and [AD Forest Recovery - Cleaning metadata of removed writable domain controllers](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/ad-forest-recovery-cleaning-metadata).
+1. Demote the DC, and clean up the related metadata. For more information, see [Demoting Domain Controllers and Domains](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-)  and [AD Forest Recovery - Cleaning metadata of removed writable domain controllers](/windows-server/identity/ad-ds/manage/ad-forest-recovery-cleaning-metadata).
 
 2. On the demoted computer, follow these steps:
 

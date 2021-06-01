@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a solution to an error that occurs when you try to add a node to a Windows Server 2008-based Failover Cluster.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2854337
 
 ## Symptoms

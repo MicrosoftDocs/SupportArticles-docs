@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes how to manually rebuild the performance counter library values.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 300956
 
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ This behavior may occur in the following situations:
 
 Extensible counter information is stored in both of the following locations:
 
-- The registry subkey: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current Version\Perflib\009`.
+- The registry subkey: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Perflib\009`.
 
 - The `%Systemroot%\System32\Perfc009.dat` file and the `%Systemroot%\System32\Perfh009.dat` file.
 

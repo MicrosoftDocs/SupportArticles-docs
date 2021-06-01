@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how to mark an attribute as confidential in Windows Server 2003 Service Pack 1.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 922836
 
 ## Summary
@@ -281,4 +281,4 @@ The attributeSyntax attribute is also required to add new objects to the schema.
 For more information about the attributeSyntax attribute, visit the following Microsoft Web site:  
 [Attribute-Syntax attribute](https://msdn.microsoft.com/library/ms675236%28vs.85%29.aspx)
 
-See the [Search-Flags attribute](https://docs.microsoft.com/windows/win32/adschema/a-searchflags) for more information.
+See the [Search-Flags attribute](/windows/win32/adschema/a-searchflags) for more information.

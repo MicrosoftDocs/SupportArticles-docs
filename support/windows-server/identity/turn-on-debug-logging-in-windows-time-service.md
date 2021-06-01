@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to turn on debug logging for the Windows Time service (also known as W32time). If you are an administrator, you can use the debug logging feature of the Windows Time service to help troubleshoot issues.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 – all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 – all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 816043
 
 > [!NOTE]

@@ -24,7 +24,7 @@ When you try to access data on an external USB hard drive, you may receive the f
 
 > USB Device not recognized: One of the devices attached to this computer has malfunctioned and windows does not recognize it.
 
-_Original product version:_ &nbsp; Windows 10, version 1709, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2654149
 
 ## Cause

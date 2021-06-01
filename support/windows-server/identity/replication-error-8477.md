@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes an issue where Active Directory Replications fail with error 8477: "The replication request has been posted; waiting for reply".
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2758780
 
 > [!NOTE]

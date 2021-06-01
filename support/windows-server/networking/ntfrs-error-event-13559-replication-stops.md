@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes a problem where NTFRS runs into a fatal error communicating with the file system sporadically.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2768745
 
 ## Symptom

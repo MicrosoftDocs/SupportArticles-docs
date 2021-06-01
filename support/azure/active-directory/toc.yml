@@ -5,10 +5,6 @@
   items:
   - name: Can't verify account when resetting password
     href: could-not-verify-account-reset-pwd.md
-  - name: Fail to connect ADFS service
-    href: connection-adfs-failed-set-msoladfscontex.md
-  - name: Fail to convert domain to Standard
-    href: convert-domain-federated.md
   - name: Maximum number of devices is reached
     href: maximum-number-of-devices-joined-workplace.md
   - name: Unable to register a device

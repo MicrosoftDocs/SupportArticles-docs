@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Steps to help identify and protect yourself from deceptive (spoofed) Web sites and malicious hyperlinks
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 When you point to a hyperlink in Internet Explorer, Outlook, the address of the Web site typically appears in the Status bar at the bottom of the window. After you select a link that opens in Internet Explorer, the address of the Web site typically appears in the Internet Explorer Address bar, and the title of the Web page typically appears in the Title bar of the window.
 
 However, a malicious user could create a link to a deceptive (spoofed) Web site that displays the address, or URL, to a legitimate Web site in the Status bar, Address bar, and Title bar. This article describes steps that you can take to help mitigate this issue and to help you to identify a deceptive (spoofed) Web site or URL.

@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article solves the issue that you can't run the System Preparation Tool (Sysprep) in Windows 7 by using the `/generalize` option.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 929828
 
 ## Symptoms

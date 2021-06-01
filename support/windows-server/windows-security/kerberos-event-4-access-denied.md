@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides help to solve an issue where users fail to access a resource and a System event log shows Kerberos event 4.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2706695
 
 ## Symptoms

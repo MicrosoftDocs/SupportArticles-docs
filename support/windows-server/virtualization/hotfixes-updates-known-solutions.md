@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments. The updates are listed by the operating system to which they apply.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2974503
 
 ## Windows Server 2012 R2

@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to an error that occurs when you start an imported virtual machine under Hyper-V.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2927313
 
 ## Symptoms

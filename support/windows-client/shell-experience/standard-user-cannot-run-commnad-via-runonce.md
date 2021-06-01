@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides help to fix an issue where standard users can't execute a command set via RunOnce or RunOnceEx.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp;2021405
 
 ## Symptoms

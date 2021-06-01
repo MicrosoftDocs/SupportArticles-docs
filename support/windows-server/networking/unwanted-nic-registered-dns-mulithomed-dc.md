@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where unwanted network interface controllers (NICs) are registered in Domain Name System (DNS) on a multihomed domain controller (DC).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2023004
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes the fallback and timeout behavior that exist when one or more DNS Servers IPs are configured as forwarders or conditional forwarders on a DNS server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2834250
 
 ## Summary
@@ -123,7 +123,7 @@ Similar to forwarders, there are two key variables for Conditional Forwarders. W
 
     Since Conditional Forwarders are configured for specific zones, the **ForwarderTimeout** is zone-dependent as well.
 
-    It's saved in the registry under `HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\DNS Server\Zones\ <zone_name>\ForwarderTimeout`.
+    It's saved in the registry under `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DNS Server\Zones\ <zone_name>\ForwarderTimeout`.
 
     The default value is 5 seconds on Windows Server 2003, 2008, 2008R2 and 2012.
 

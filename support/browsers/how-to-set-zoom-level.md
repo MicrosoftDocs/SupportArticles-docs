@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # How to set the zoom level in Internet Explorer 9 and later versions
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 Internet Explorer Zoom lets you make the screen display larger or smaller so that a webpage is easier to read. Unlike changing the font size, zoom enlarges or reduces everything on the page, including text and images. You can zoom from 10% to 1,000%. This article describes how to set the default zoom in Internet Explorer 9 and later versions to a custom level.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

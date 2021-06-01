@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an error that occurs when you try to log on to your domain in Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2914474
 
 ## Symptoms

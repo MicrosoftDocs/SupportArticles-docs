@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article provides a resolution for the issue that scanning using a scanner may cause a TWAIN aware application to hang.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 982436
 
 Source: Microsoft Support

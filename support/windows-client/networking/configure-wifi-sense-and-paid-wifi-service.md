@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article discusses the methods to configure Wi-Fi Sense and Paid Wi-Fi Services in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions
+_Applies to:_ &nbsp; Windows 10 - all editions
 _Original KB number:_ &nbsp; 3085719
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a resolution to fix the event ID 12293 that occurs when setting up a KMS host.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2553863
 
 ## Symptoms

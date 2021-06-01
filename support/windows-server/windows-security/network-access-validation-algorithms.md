@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article explains how Windows account validation is observed to function during network access using the NTLM protocol.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 103390
 
 ## Summary

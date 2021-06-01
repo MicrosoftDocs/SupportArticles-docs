@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides the steps to optimize the location of a domain controller or global catalog that resides outside of a client's site.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 306602
 
 ## Summary

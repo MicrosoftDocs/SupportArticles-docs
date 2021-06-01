@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to enable Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL) with a third-party certification authority.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 321051
 
 ## Summary

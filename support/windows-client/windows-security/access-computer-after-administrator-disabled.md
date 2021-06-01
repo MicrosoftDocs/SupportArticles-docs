@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes how to access your Microsoft Windows Server 2003-based computer by using the Administrator account after you disable the local Administrator account.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814777
 
 ## Summary

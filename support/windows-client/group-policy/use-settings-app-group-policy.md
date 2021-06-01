@@ -15,7 +15,7 @@ ms.technology: windows-client-group-policy
 ---
 # Use the Settings app Group Policy in Windows 10
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4019502
 
 ## Overview
@@ -24,7 +24,7 @@ Windows 10, version 1703, and later versions introduce Group Policies to manage 
 
 ## Settings app
 
-Each Settings app page has a URI that can be used to identify the page programmatically. It's how the Settings app Group Policy knows which page to enable or block access to. An administrator will use the URI of the page to tell the Group Policy what page or pages they want to control. For a full list of ms-settings URIs, see [MS-Settings URI Scheme Reference](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
+Each Settings app page has a URI that can be used to identify the page programmatically. It's how the Settings app Group Policy knows which page to enable or block access to. An administrator will use the URI of the page to tell the Group Policy what page or pages they want to control. For a full list of ms-settings URIs, see [MS-Settings URI Scheme Reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
 
 ## Settings app Group Policy
 

@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an event ID 4105 that occurs on a computer that's running Remote Desktop Licensing (RD Licensing).
 
-_Original product version:_ &nbsp; Windows Server 2008 R2  
+_Applies to:_ &nbsp; Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 2030310
 
 ## Symptoms

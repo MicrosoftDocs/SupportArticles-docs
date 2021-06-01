@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides help to fix an error that occurs when you seize the relative ID (RID) Master role with the Ntdsutil tool to a different domain controller.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2001165
 
 ## Symptoms

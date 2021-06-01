@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses an issue where you can't restore the system to an earlier restore point after an upgrade to Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3209726
 
 ## Symptoms

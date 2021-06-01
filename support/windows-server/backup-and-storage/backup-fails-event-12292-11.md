@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article discusses an issue where backup operation using Windows Server Backup or a third-party backup application fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009513
 
 ## Symptoms

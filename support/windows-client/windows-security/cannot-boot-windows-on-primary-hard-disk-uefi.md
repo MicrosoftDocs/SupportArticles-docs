@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article helps work around an issue where you can't boot Windows that was on the primary hard disk and may only have the option to boot to the new installation of Windows on the second hard disk.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2879602
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article describes an issue where a failed logon event is generated when you run remote WMI command.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2816192
 
 ## Symptoms

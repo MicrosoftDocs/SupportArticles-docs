@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to configure the remote access client account lockout feature.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 816118
 
 > [!IMPORTANT]

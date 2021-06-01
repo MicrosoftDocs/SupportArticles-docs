@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the problems that you may experience when you rename sites in the Active Directory forest.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 920718
 
 ## More information
@@ -51,4 +51,4 @@ Because of the different time intervals that are used to update site-related inf
 
     For more information about DFS, visit the following Microsoft Web site:
 
-    [Distributed File System](https://docs.microsoft.com/windows/win32/dfs/distributed-file-system)
+    [Distributed File System](/windows/win32/dfs/distributed-file-system)

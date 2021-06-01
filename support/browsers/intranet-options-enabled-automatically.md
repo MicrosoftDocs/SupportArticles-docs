@@ -7,6 +7,8 @@ ms.reviewer: wuth
 ---
 # Automatically Detect Intranet Network enables all Intranet options on a domain member computer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 Enabling **Automatically Detect Intranet Network** on a domain member computer will enable all the three Intranet options automatically in Internet Explorer. This article introduces the steps to disable the **Automatically Detect Intranet Network** settings on a computer that is a member of a domain.
 
 _Original product version:_ &nbsp; Internet Explorer

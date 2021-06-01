@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article describes an issue in which you can't create an AppLocker hash rule for a file in Windows.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2749690
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes issues in which Windows OOBE fails when you start a new Windows-based computer for the first time.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4020048
 
 ## Symptoms

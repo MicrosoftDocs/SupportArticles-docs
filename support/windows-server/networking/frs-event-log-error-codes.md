@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article introduces the event log entries that the File Replication Service (FRS) generates.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;308406
 
 ## Event ID 13500, 13501, 13502, 13503, 13504, 13505, and 13506

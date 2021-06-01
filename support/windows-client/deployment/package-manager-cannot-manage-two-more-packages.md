@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes a problem that occurs because Package Manager can't manage two or more packages in the same sandbox.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;932224
 
 ## Symptoms

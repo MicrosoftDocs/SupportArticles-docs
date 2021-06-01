@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324800
 
 ## Summary

@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides some information about Event IDs for Volsnap.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3081408
 
 ## Summary

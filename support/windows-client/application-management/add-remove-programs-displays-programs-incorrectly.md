@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article provides a solution to an issue where the **Add/Remove Programs** tool in Control Panel displays installed programs incorrectly.
 
-_Original product version:_ &nbsp; Windows XP  
+_Applies to:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 266668
 
 ## Symptoms
@@ -193,7 +193,7 @@ The following list includes all the registry keys that are used by Add/Remove Pr
 
     "{352EC2B7-8B9A-11D1-B8AE-006008059382}"="Shell Application Manager"
 
-- [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Current Version\App Management\Publishers\Darwin App Publisher]
+- [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Management\Publishers\Darwin App Publisher]
 @="{CFCCC7A0-A282-11D1-9082-006008059382}"
 - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved]
 "{CFCCC7A0-A282-11D1-9082-006008059382}"="Darwin App Publisher"

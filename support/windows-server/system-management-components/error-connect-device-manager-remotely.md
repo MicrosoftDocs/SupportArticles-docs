@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article helps fix an issue where you can't connect remotely to Device Manager from a Windows-based computer.  
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Window 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Window 10 – all editions  
 _Original KB number:_ &nbsp; 2781106
 
 ## Symptoms

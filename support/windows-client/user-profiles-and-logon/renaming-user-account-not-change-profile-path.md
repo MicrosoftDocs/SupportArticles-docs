@@ -17,12 +17,12 @@ ms.technology: windows-client-user-profiles
 
 This article provides a workaround for an issue where renaming a user account doesn't automatically change the profile path.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2454362
 
 ## Summary
 
-When you rename a user account in on a computer that is running Windows 7 or Windows Server 2008 R2, the user profile path isn't changed automatically. It may cause some confusion when the `%SystemDrive%\users` folder is viewed
+When you rename a user account on a computer that is running Windows 7 or Windows Server 2008 R2, the user profile path isn't changed automatically. It may cause some confusion when the `%SystemDrive%\users` folder is viewed
 
 ## Status
 
@@ -41,9 +41,12 @@ To work around this issue, use the steps below to manually rename the profile pa
 
 3. Go to registry and modify the registry value **ProfileImagePath** to the new path name.
 
-    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\<User SID>\`
+   > [!IMPORTANT]
+   > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-    > [!WARNING]
-    > If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\<User SID>\`
+
+   > [!NOTE]
+   > Replace \<User SID\> with the SID of your user account.
 
 4. Log out and log in again by using the user whose name is changed, and the user should use the pervious profile with new path name.

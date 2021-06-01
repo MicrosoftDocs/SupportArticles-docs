@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes group policy application rules for domain controllers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 259576
 
 ## Summary

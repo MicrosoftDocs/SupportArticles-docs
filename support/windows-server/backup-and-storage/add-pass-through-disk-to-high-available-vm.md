@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides the steps to add a pass-through disk to a highly available virtual machine (VM) in a Windows Server 2008 R2 Service Pack 1 (SP1)-based failover cluster, and helps solve the issue where the added pass-through disk status is displayed as read-only.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2501763
 
 ## Add a pass-through disk to a highly available VM

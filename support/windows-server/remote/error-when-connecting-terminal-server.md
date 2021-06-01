@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to various certificate-related error messages when you connect to a Terminal server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000960
 
 ## Symptoms

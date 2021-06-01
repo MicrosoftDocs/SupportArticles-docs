@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides methods to fix an issue where the IP address registers an A record for the host name in its primary DNS suffix zone. This issue occurs after you clear the **Register this connection's address in DNS** check box.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 275554
 
 > [!NOTE]

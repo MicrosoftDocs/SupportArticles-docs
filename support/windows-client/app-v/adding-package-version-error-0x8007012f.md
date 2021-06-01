@@ -17,7 +17,7 @@ ms.technology: windows-client-application-virtualization-app-v
 
 This article provides help to work around an issue where you receive error 0x8007012F when you remove and then add the same package version in the Microsoft Application Virtualization console.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2780304
 
 ## Symptoms

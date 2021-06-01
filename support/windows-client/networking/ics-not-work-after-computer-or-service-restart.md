@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a solution to issues where the Internet Connection Sharing (ICS) settings are lost and the ICS connection doesn't work after you restart the ICS service or the computer that runs Windows 10, version 1709.
 
-_Original product version:_ &nbsp; Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4055559
 
 ## Symptoms

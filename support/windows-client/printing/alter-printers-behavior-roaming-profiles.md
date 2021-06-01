@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article describes how to alter a behavior of printers that roams with roaming profiles.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 304767
 
 > [!IMPORTANT]

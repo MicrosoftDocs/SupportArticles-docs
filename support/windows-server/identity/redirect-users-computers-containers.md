@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 You can use redirusr and redircmp to redirect user, computer, and group accounts that are created by earlier-version APIs. So they are put in admin-specified organizational unit (OU) containers.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324949
 
 ## Summary

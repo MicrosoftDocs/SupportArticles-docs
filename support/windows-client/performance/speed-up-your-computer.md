@@ -1,7 +1,7 @@
 ---
-title: How to speed up your computer
+title: How to speed up a Windows 8.1 computer
 description: Describes ways to help speed up your computers when it tend to slow down after time, without upgrading your hardware.
-ms.date: 09/08/2020
+ms.date: 05/25/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -13,11 +13,11 @@ ms.reviewer: kaushika, meerak
 ms.prod-support-area-path: Slow Performance
 ms.technology: windows-client-performance
 ---
-# Speed up your computer
+# Speed up a Windows 8.1 computer
 
 No matter how good you are about keeping your computer clean and up-to-date, they tend to slow down after time. Fortunately, there are a lot of ways to help speed them up― without upgrading your hardware.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 3064207
 
 > [!NOTE]
@@ -38,8 +38,8 @@ To remove an antivirus or antispyware program, follow these instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or select **Search**.
-3. Type appwiz.cpl in the Search box.
-4. Tap or select **Appwiz.cpl** on the left side of your screen.
+3. Type *appwiz.cpl* in the **Search** box.
+4. Tap or select **Appwiz.cpl** below the **Search** box.
 5. In the list of installed programs, uninstall the Internet security programs you don't need.
 6. Restart your device.
 
@@ -51,10 +51,11 @@ Some of these programs add an icon to the notification area on the taskbar to sh
 
 To stop a program that has one of these icons from automatically running on startup, follow these instructions:
 
-1. On the **Start** screen, tap or select **Desktop image** to see the icon tray.
-2. Point to each icon to see the program name.
-3. To ensure that you can see icons for all running programs, tap or select **Show hidden icons**.
-4. Open a program that you do not want to run on startup. In the options for that program, find a setting similar to Run at startup. Set the option to **Off** or **No**.
+1. Point to each icon in the icon tray to see the program name.
+2. To ensure that you can see icons for all running programs, swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down), and tap or select **Search**.
+3. Type *show hidden icons* in the **Search** box.
+4. Tap or select **Show or hide inactive icons on the taskbar**.
+5. Check **Always show all icons and notifications on the taskbar**.
 
 > [!NOTE]
 > You must open any program that you do not want to run on startup and change the setting.
@@ -81,10 +82,9 @@ To change the configuration of a program, follow these instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or select **Search**.
-3. Type appwiz.cpl in the **Search** box.
-4. Tap or select **Apps**.
-5. Tap or select **Appwiz.cpl** on the left side of your screen.
-6. Tap or select a program, and then tap or select **Uninstall**, **Change**, or **Repair**.
+3. Type *appwiz.cpl* in the **Search** box.
+4. Tap or select **Appwiz.cpl** below the **Search** box.
+5. Tap or select a program, and then tap or select **Uninstall**, **Change**, or **Repair**.
 
 If prompted, type an administrator password or confirmation.
 
@@ -96,15 +96,14 @@ To run Check Disk, follow these instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or select **Search**.
-3. Type computer in the **Search** box.
-4. Tap or select **Apps**.
-5. Tap or select **Computer** on the left side of your screen.
-6. Press and hold or right-click the drive you want to repair, and then tap or select **Properties**.
-7. Tap or select the **Tools** tab.
+3. Type *computer* in the **Search** box.
+4. Tap or select **This PC** below the **Search** box.
+5. Press and hold or right-click the drive you want to repair, and then tap or select **Properties**.
+6. Tap or select the **Tools** tab.
 
-8. Under **Error checking**, tap or select **Check**. Depending upon the size of your hard disk, this may take several minutes. For best results, don't use your device for any other tasks while it's checking for errors. If prompted, type an administrator password or confirmation.
+7. Under **Error checking**, tap or select **Check**. Depending upon the size of your hard disk, this may take several minutes. For best results, don't use your device for any other tasks while it's checking for errors. If prompted, type an administrator password or confirmation.
 
-9. You may need to restart your device after error checking is complete.
+8. You may need to restart your device after error checking is complete.
 
 ## Defragment your hard disk
 
@@ -114,19 +113,17 @@ To run Optimize Drives manually, follow these instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or select **Search**.
-3. Type computer in the **Search** box.
-4. Tap or select **Apps**.
-5. Tap or select **Computer** on the left side of your screen.
-6. Press and hold or right-click the drive you want to repair, and then tap or select **Properties**.
-7. Tap or select the **Tools** tab.
-8. Tap or select **Optimize** under **Optimize and defragment drive**.
-9. Under **Status**, tap or select the drive you want to optimize. (The **Media type** column tells you what type of drive you're optimizing.)
-
-10. To determine if the drive needs to be optimized, tap or select **Analyze**. **Note:** If prompted, type an administrator password or confirmation.
-
-11. After Windows finishes analyzing the drive, check the **Current status** column to see whether you need to optimize the drive. If the drive is more than 10 percent fragmented, you should optimize it.
-
-12. Tap or select **Optimize**.
+3. Type *computer* in the **Search** box.
+4. Tap or select **This PC** below the **Search** box.
+5. Press and hold or right-click the drive you want to repair, and then tap or select **Properties**.
+6. Tap or select the **Tools** tab.
+7. Tap or select **Optimize** under **Optimize and defragment drive**.
+8. Under **Status**, tap or select the drive you want to optimize. (The **Media type** column tells you what type of drive you're optimizing.)
+9. To determine if the drive needs to be optimized, tap or select **Analyze**.
+    > [!Note]
+    > If prompted, type an administrator password or confirmation.
+10. After Windows finishes analyzing the drive, check the **Current status** column to see whether you need to optimize the drive. If the drive is more than 10 percent fragmented, you should optimize it.
+11. Tap or select **Optimize**.
 
 > [!NOTE]
 >
@@ -139,21 +136,19 @@ To change the optimization schedule, follow these instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or select **Search**.
-3. Type computer in the **Search** box.
-4. Tap or select **Apps**.
-5. Tap or select **Computer** on the left side of your screen.
-6. Press and hold or right-click the drive you want to repair, and then tap or select **Properties**.
-7. Tap or select the **Tools** tab.
-8. Tap or select **Optimize** under **Optimize and defragment drive**.
-9. Tap or select **Change settings**. If prompted, type an administrator password or confirmation.
-
-10. Select one of the following:
+3. Type *computer* in the **Search** box.
+4. Tap or select **This PC** below the **Search** box.
+5. Press and hold or right-click the drive you want to repair, and then tap or select **Properties**.
+6. Tap or select the **Tools** tab.
+7. Tap or select **Optimize** under **Optimize and defragment drive**.
+8. Tap or select **Change settings**. If prompted, type an administrator password or confirmation.
+9. Select one of the following:
 
     - To turn off scheduled optimization, clear the **Run on a schedule** check box.
     - To change the frequency of scheduled optimization, tap or select the drop-down list next to **Frequency**, and then tap or select **Daily**, **Weekly**, or **Monthly**. The default schedule for optimization is weekly and runs during Automatic Maintenance.
     - To select the drives you want to include or exclude in scheduled optimization, tap or select **Choose** next to Drives. Select or clear the check boxes next to the drives and then tap or select OK. You can also clear the **Automatically optimize new drives** check box if you don't want new drives added to scheduled optimization. If Windows can't optimize a drive, it won't offer the drive as an option for Automatic Maintenance.
 
-11. Tap or select **OK**.
+10. Tap or select **OK**.
 
 ## Clean your hard disk
 
@@ -163,18 +158,18 @@ To clean your hard disk, follow these instructions:
 
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or select **Search**.
-3. Type free up disk space in the **Search** box.
-4. Tap or select **Settings**.
-5. Tap or select **Free up disk space by deleting unnecessary files** on the left side of your screen.
-6. In the **Drives** list, tap or select the drive that you want to clean up.
-7. Tap or select **OK**.
-8. In the message that appears, tap or select **Delete files**.
+3. Type *free up disk space* in the **Search** box.
+4. Tap or select **Free up disk space by deleting unnecessary files** below the **Search** box.
+5. In the **Drives** list, tap or select the drive that you want to clean up.
+6. Tap or select **OK**.
+7. In the message that appears, tap or select **Delete files**.
 
 To clean up system files associated with your account, follow these instructions:
 
 1. In the **Drives** list, tap or select the drive that you want to clean up and then tap or select **OK**.
-2. In the Disk Cleanup dialog box, tap or select **Clean up system files**. **Note:** If prompted, type an administrator password or confirmation.
-
+2. In the Disk Cleanup dialog box, tap or select **Clean up system files**.
+    > [!NOTE]
+    > If prompted, type an administrator password or confirmation.
 3. The **More Options** tab is available when you opt to clean up system files from your device. This tab includes two additional options for freeing up space:
    - **Programs and Features**. This option opens **Programs and Features** in **Control Panel**, where you can uninstall programs that you no longer use. The **Size** column in **Programs and Features** shows how much space each program uses.
    - **System Restore and Shadow Copies**. System Restore uses restore points to return your system files to an earlier point in time. If your device is running normally, you can save space by deleting earlier restore points.
@@ -188,10 +183,8 @@ To turn off visual effects, follow these instructions:
 1. Swipe in from the right edge of the screen (if using a mouse, point to the upper-right corner of the screen and move the mouse pointer down).
 2. Tap or select **Search**.
 3. Type *Performance Information and Tools* in the **Search** box.
-4. Tap or select **Settings**.
-5. Tap or select **Performance Information and Tools** on the left side of your screen.
-6. Tap or select **Adjust visual effects**. If prompted, type an administrator password or confirmation.
-7. Under **Visual Effects** tab, check on **Adjust for best performance**, and then tap or select **OK**. (For a less drastic option, select **Let Windows choose what's best for my computer**.
+4. Tap or select **Adjust the appearance and performance of Windows** below the **Search** box.
+5. Under **Visual Effects** tab, check on **Adjust for best performance**, and then tap or select **OK**. (For a less drastic option, select **Let Windows choose what's best for my computer**.
 
 ## Run fewer programs at the same time
 

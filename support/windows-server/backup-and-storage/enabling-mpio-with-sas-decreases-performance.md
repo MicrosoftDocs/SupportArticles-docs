@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides help to solve an issue where sequential write performance of disks decreases by approximately 50% after you enable the Multipath I/O (MPIO) feature on a system using Serial Attached Storage (SAS) disks.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2744261
 
 ## Symptoms

@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # We were unable to return you to your webpage error occurs in Internet Explorer 9
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a resolution for the issue that you receive the **We were unable to return you to \<your webpage>** error when you try to visit a website by using Internet Explorer 9.
 
 _Original product version:_ &nbsp; Internet Explorer 9  
@@ -42,7 +44,7 @@ To add a website to Compatibility View when you are unable to visit that website
 
     For more information, see the following video about how to add a website to Compatibility View when you are unable to visit that website.
 
-    > [!VIDEO <https://www.microsoft.com/videoplayer/embed/304d70d1-b64e-4e64-8607-dc700486204d?csid=ux-cms-en-us-msoffice&iframe=true&uuid=304d70d1-b64e-4e64-8607-dc700486204d&PlaybackMode=inline&Quality=HQ&AutoPlayVideo=false&width=640&height=360>]
+    > [!VIDEO https://www.microsoft.com/videoplayer/embed/304d70d1-b64e-4e64-8607-dc700486204d?csid=ux-cms-en-us-msoffice&iframe=true&uuid=304d70d1-b64e-4e64-8607-dc700486204d&PlaybackMode=inline&Quality=HQ&AutoPlayVideo=false&width=640&height=360]
 
 To remove a website from Compatibility view, follow these steps:
 

@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes an issue in which you cannot create a database by using VAMT 3.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2755159
 
 ## Symptoms

@@ -17,25 +17,26 @@ ms.technology: windows-client-group-policy
 
 This article describes how to use the new .admx and .adml files to create and administer registry-based policy settings in Windows. This article also explains how the Central Store is used to store and to replicate Windows-based policy files in a domain environment.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
 
+- [Administrative Templates (.admx) for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/103124)
 - [Administrative Templates (.admx) for Windows 10 October 2020 Update (20H2)](https://www.microsoft.com/download/102157)
 - [Administrative Templates (.admx) for Windows 10 May 2020 Update (2004)](https://www.microsoft.com/download/101445)
 - [Administrative Templates (.admx) for Windows 10 November 2019 Update (1909)](https://www.microsoft.com/download/100591)
-- [Administrative Templates (.admx) for Windows 10 May 2019 Update (1903)](https://www.microsoft.com/download/details.aspx?id=58495)
-- [Administrative Templates (.admx) for Windows 10 October 2018 Update (1809)](https://www.microsoft.com/download/details.aspx?id=57576)
-- [Administrative Templates (.admx) for Windows 10, version 1803 (April 2018 Update)](https://www.microsoft.com/download/details.aspx?id=56880)
-- [Administrative Templates (.admx) for Windows 10, version 1709 (Fall Creators Update)](https://www.microsoft.com/download/details.aspx?id=56121)  
-- [Administrative Templates (.admx) for Windows 10, version 1703 (Creators Update)](https://www.microsoft.com/download/details.aspx?id=55080)
-- [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/details.aspx?id=53430)
-- [Administrative Templates (.admx) for Windows 10 and Windows 10, version 1511](https://www.microsoft.com/download/details.aspx?id=48257)
-- [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/details.aspx?id=43413)
-- [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=41193)
+- [Administrative Templates (.admx) for Windows 10 May 2019 Update (1903)](https://www.microsoft.com/download/58495)
+- [Administrative Templates (.admx) for Windows 10 October 2018 Update (1809)](https://www.microsoft.com/download/57576)
+- [Administrative Templates (.admx) for Windows 10, version 1803 (April 2018 Update)](https://www.microsoft.com/download/56880)
+- [Administrative Templates (.admx) for Windows 10, version 1709 (Fall Creators Update)](https://www.microsoft.com/download/56121)  
+- [Administrative Templates (.admx) for Windows 10, version 1703 (Creators Update)](https://www.microsoft.com/download/55080)
+- [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/53430)
+- [Administrative Templates (.admx) for Windows 10 and Windows 10, version 1511](https://www.microsoft.com/download/48257)
+- [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/43413)
+- [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/41193)
 
-To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet Windows 1809](https://www.microsoft.com/download/details.aspx?id=57464)
+To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/103125)
 
 ## Overview
 

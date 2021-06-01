@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article explains how to troubleshoot event ID 1020 warnings on a file server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4562940
 
 ## Symptoms

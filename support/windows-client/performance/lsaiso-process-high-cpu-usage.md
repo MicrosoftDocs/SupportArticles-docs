@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides resolutions of a problem in which the LSAISO process experiences high CPU usage on a computer that's running Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 4032786
 
 ## Symptoms

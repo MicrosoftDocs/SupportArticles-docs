@@ -3,57 +3,43 @@
 
 - name: Troubleshoot deployment failures
   items:
-  - name: Windows
-    href: troubleshoot-deploy-vm-windows.md
-  - name: Linux
-    href: troubleshoot-deploy-vm-linux.md
-  - name: Availability sets
-    href: virtual-machines-availability-set-supportability.md
-- name: Troubleshoot deployment issues
-  items:
-  - name: GPU is disabled
-    href: gpu-disabled-upgrade-ubuntu.md
+  - name: New VM deployments
+    items:
+    - name: Troubleshoot deploying Linux virtual machine
+      href: troubleshoot-deployment-new-vm-linux.md
+    - name: Troubleshoot deploying Windows virtual machine
+      href: troubleshoot-deployment-new-vm-windows.md
   - name: Fail to create a VM with Ed25519 SSH keys
     href: ed25519-ssh-keys.md
-  - name: In-place system upgrade for Windows-based Azure VMs
-    href: in-place-system-upgrade.md
-  - name: Upgrade VM to contain more than 64 vCPUs
-    href: vm-cannot-upgrade-64-vcpu.md
-  - name: Upload Hyper-V DC to Azure
-    href: upload-existing-hyperv-dc-azure-ps.md
+  - name: Support for Availability sets
+    href: virtual-machines-availability-set-supportability.md
   - name: Uploaded VHD is not supported
     href: uploaded-vhd-not-support.md
 
-- name: VM deployment guidance
+- name: Image deployment and Management
+  items:
+  - name: Upload Hyper-V DC to Azure
+    href: upload-existing-hyperv-dc-azure-ps.md
+
+- name: VM upgrade issues
   items:
   - name: Upgrade to SLES 15 SP1
     href: linux-upgrade-suse-15sp1.md
-  - name: New VM deployments
-    items:
-    - name: Linux
-      href: troubleshoot-deployment-new-vm-linux.md
-    - name: Windows
-      href: troubleshoot-deployment-new-vm-windows.md
-  - name: Redeploy a VM
-    items:
-    - name: Linux
-      href: redeploy-to-new-node-linux.md
-    - name: Windows
-      href: redeploy-to-new-node-windows.md
-  - name: Reset NIC
-    href: reset-network-interface.md
+
 - name: Troubleshoot allocation failures
   items:
   - name: Allocation failures
     href: allocation-failure.md
   - name: Classic deployment model
     href: allocation-failure-classic.md
+
 - name: Unexpected restart
   items:
   - name: Unexpected reboots of VMs with attached VHDs
     href: unexpected-reboots-attached-vhds.md
   - name: Understand a system reboot
     href: understand-vm-reboot.md
+
 - name: Cannot start or stop VM
   items:
   - name: Start/Stop VMs using Azure Automation
@@ -66,6 +52,7 @@
     href: troubleshoot-vm-boot-configure-update.md
   - name: VM lifecycle and states
     href: /azure/virtual-machines/states-billing
+
 - name: Cannot connect to my VM
   items:
   - name: Linux
@@ -102,6 +89,8 @@
       href: cannot-rdp-azure-vm-brute-force.md
     - name: Reset RDP
       href: reset-rdp.md
+    - name: Reset NIC
+      href: reset-network-interface.md
     - name: RDP troubleshooting
       href: troubleshoot-rdp-connection.md
     - name: Detailed RDP troubleshooting
@@ -142,6 +131,7 @@
       href: troubleshoot-rdp-driver-netvsc.md
   - name: Application access issues
     href: troubleshoot-app-connection.md
+
 - name: VM is not booting
   items:
   - name: Linux
@@ -252,6 +242,7 @@
     href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
   - name: Azure VM cannot RDP - working on features
     href: azure-vm-cannot-rdp-working-features.md
+
 - name: VM restart issues
   items:
   - name: Can't restart after applying kernel changes
@@ -322,6 +313,8 @@
         href: how-to-use-perfinsights-linux.md
   - name: Troubleshoot VM Performance issues
     items:
+    - name: Isolate bottlenecks in Linux
+      href: troubleshoot-performance-bottlenecks-linux.md
     - name: Troubleshoot performance issues through Monitoring
       href: troubleshoot-performance-virtual-machine-linux-windows.md
     - name: Troubleshoot high CPU issues for Azure Windows virtual machines
@@ -353,14 +346,15 @@
         href: troubleshoot-recovery-disks-portal-linux.md
     - name: Device names are changed
       href: troubleshoot-device-names-problems.md
+
 - name: Virtual Disk Management issues
   items:
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview
   - name: FAQ
     href: /azure/virtual-machines/faq-for-disks
-    name: Cannot extend an encrypted OS volume in Windows
-    href: /azure/virtual-machines/cannot-extend-encrypted-os-volume.md
+  - name: Cannot extend an encrypted OS volume in Windows
+    href: cannot-extend-encrypted-os-volume.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
   - name: Errors when deleting classic storage resources
@@ -369,16 +363,19 @@
     href: vhd-not-supported-vm-azure.md
   - name: Use nested virtualization
     href: troubleshoot-vm-by-use-nested-virtualization.md
+
 - name: Troubleshoot Shared Image Galleries
   items:
   - name: Troubleshoot Shared Image Gallery - Windows
     href: /azure/virtual-machines/troubleshooting-shared-images
   - name: Troubleshoot Shared Image Gallery - Linux
     href: /azure/virtual-machines/troubleshooting-shared-images
+
 - name: Backup and restore
   items:
   - name: Troubleshoot backup failures on Azure VM
     href: /azure/backup/backup-azure-vms-troubleshoot
+
 - name: Repair a VM using commands
   items:
   - name: Windows
@@ -387,12 +384,14 @@
     href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
   - name: Linux - Repair a VM with the help of ALAR
     href: repair-linux-vm-using-ALAR.md
+
 - name: Windows Activation issues
   items:
   - name: Windows activation problems
     href: troubleshoot-activation-problems.md
   - name: Activation problem with forced tunneling
     href: custom-routes-enable-kms-activation.md
+
 - name: Remote troubleshooting tools
   href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
@@ -420,6 +419,7 @@
       href: serial-console-power-options.md
     - name: Common Serial Console errors
       href: serial-console-errors.md
+
 - name: Azure Disk Encryption issues
   items:
   - name: Windows
@@ -438,6 +438,7 @@
       href: /azure/virtual-machines/linux/disk-encryption-troubleshooting
     - name: FAQ
       href: /azure/virtual-machines/linux/disk-encryption-faq
+
 - name: Quota increases
   items:
   - name: Increase compute vCPU limits
@@ -454,14 +455,17 @@
       href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests
   - name: Increase networking limits
     href: /azure/azure-portal/supportability/networking-quota-requests
+
 - name: Migration and Move issues
   items:
   - name: Azure Resource Manager migration (ASM to ARM) FAQ
     href: /azure/virtual-machines/migration-classic-resource-manager-overview
+
 - name: Planned Maintenance
   items:
   - name: Overview
     href: /azure/virtual-machines/maintenance-notifications
+
 - name: Common error messages
   href: error-messages.md
   items:
@@ -476,8 +480,20 @@
     href: ping-clustered-name-fail.md
   - name: Failed to get log in Boot Diagnostics
     href: failed-get-contents-log-error.md
+  - name: GPU is disabled
+    href: gpu-disabled-upgrade-ubuntu.md
+  - name: In-place system upgrade for Windows-based Azure VMs
+    href: in-place-system-upgrade.md
   - name: Out of memory error in Linux VM
     href: oom-swap-file-linux-vm.md
+  - name: Upgrade VM to contain more than 64 vCPUs
+    href: vm-cannot-upgrade-64-vcpu.md
+  - name: Redeploy a VM
+    items:
+    - name: Linux
+      href: redeploy-to-new-node-linux.md
+    - name: Windows
+      href: redeploy-to-new-node-windows.md
 
 - name: Windows Server 2008 R2 Support
   items:
@@ -512,4 +528,5 @@
     href: how-to-videos-windows-virtual-desktop.md
   - name: Support for 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
+
 

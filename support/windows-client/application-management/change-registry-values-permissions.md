@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article describes how to change registry values or permissions from a command line or a script.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 264584
 
 ## Summary

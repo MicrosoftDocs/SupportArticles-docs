@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to configure a firewall for Active Directory domains and trusts.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 Standard, Windows Server 2012 Standard  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 Standard, Windows Server 2012 Standard  
 _Original KB number:_ &nbsp; 179442
 
 > [!NOTE]

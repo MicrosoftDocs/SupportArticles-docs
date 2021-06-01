@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article provides a workaround for an issue where the Windows Trace Session Manager service doesn't start in the specified time.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 839803
 
 > [!IMPORTANT]

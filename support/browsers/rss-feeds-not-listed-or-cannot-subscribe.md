@@ -7,6 +7,8 @@ ms.reviewer: bchee
 ---
 # RSS feeds are not listed or you cannot subscribe to RSS feeds in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides you the steps to solve the issue that the Really Simple Syndication (RSS) feeds are not listed or you cannot subscribe the RSS feeds in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer  

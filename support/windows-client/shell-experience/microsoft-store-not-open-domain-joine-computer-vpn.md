@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article discusses an issue in which you can't open Microsoft Store after a domain-joined computer connects to a VPN connection that has force tunneling enabled.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4537233
 
 ## Symptoms

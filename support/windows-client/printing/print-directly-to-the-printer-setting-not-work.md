@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article provides a solution to an issue where the **Print directly to the printer** option doesn't work with XPS-based print drivers.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3017432
 
 ## Symptoms

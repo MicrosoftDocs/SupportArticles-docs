@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an error that occurs when client computers encrypt a file in a Microsoft Windows Server 2003 domain.
 
-_Original product version:_ &nbsp;  Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 937536
 
 ## Symptoms

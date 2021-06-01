@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article describes an issue where you can't sign in to the system and you're prompted for user name and password repeatedly.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555648
 
 ## Symptoms

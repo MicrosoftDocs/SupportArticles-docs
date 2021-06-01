@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an issue in which Remote Desktop Connection Broker does not work correctly in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3020474
 
 ## Symptoms
