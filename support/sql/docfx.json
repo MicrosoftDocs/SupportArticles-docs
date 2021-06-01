@@ -2,6 +2,9 @@
 "fileMetadata": { 
   "recommendations": { 
     "*/**.md": true
-  }
+  },
+  "ms.author": {
+    "**/*.md": "genlin"
  }
+}
 }
