@@ -42,6 +42,34 @@ In this scenario, users are repeatedly prompted for credentials when they open O
 
 To work around the problem, move the shared mailbox to the on-premises environment.
 
+## Solution
+
+By default, Outlook tries to connect to the legacy public folders for the shared mailbox account. If public folders were created within the organization or if an Exchange Online organization is configured to access on-premises public folders, all clients would make a connection to and show the “Public folders” object in Outlook.
+
+We can modify  to show the public folder object in Outlook to only a set of users who might need them. To get started, this will be available for Outlook for Windows users only. To do this, administrators can use two parameters:
+
+1. In a PowerShell window, load the EXO V2 module by running the following command:
+
+   ```powershell
+   Import-Module ExchangeOnlineManagement
+   ```
+   
+2. The command that you need to run uses the following syntax:
+
+   ```powershell
+   Connect-ExchangeOnline -UserPrincipalName <UPN>
+   ```
+3. Enable  **PublicFolderClientAccess** on the user object. By default, its value is set to ‘false’. Setting this to ‘true’ on a specific user designates this user as one of users who will see public folders in Outlook. In this example. We are enabling access to only the sharedmailbox "Accounts".
+
+   ```powershell
+   Set-CASMailbox accounts@contoso.com -PublicFolderClientAccess $true
+   ```
+   
+4. Enable **PublicFolderShowClientControl** parameter on the organization config. By default, the value of this parameter is also ‘false’ and once it is set to ‘true’, the controlled access of public folders is enabled.
+
+   ```powershell
+   Set-OrganizationConfig -PublicFolderShowClientControl $true
+   ``` 
 ## More information
 
 Outlook tries to connect to the legacy public folders for the shared mailbox account. An error message that resembles the following is found in the RPC Client Access service log for this connection attempt:
