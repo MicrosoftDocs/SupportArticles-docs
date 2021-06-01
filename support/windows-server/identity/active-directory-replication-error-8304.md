@@ -216,6 +216,6 @@ When you approach a lot of domain controllers in a domain, like 1200 domain cont
 
 DFS version 1 namespaces use a single AD object per namespace, and all the DFS link information is kept in a single attribute "PKT". There are problems with managing the namespace when this blob exceeds 5 MB (roughly 5000 links).
 
-For more information, see [How DFS Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782417(v=ws.10))
+For more information, see [How DFS Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782417(v=ws.10)).
 
 In Windows Server 2008, DFS introduces version 2 namespaces where each DFS link is a separate AD object.
