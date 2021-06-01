@@ -63,4 +63,8 @@ For example, type **'1234567890123456789** and the quotation mark will not be di
 
 ![Example](./media/long-numbers-incorrectly-in-excel/example-2.png)
 
+### Related Articles
+
+[Format numbers as text in Excel for Mac](https://support.microsoft.com/office/format-numbers-as-text-in-excel-for-mac-dfbe20dc-e7b1-44b2-80fe-2072d074e2a3)
+
 Your opinion is important to us!Do not hesitate to tell us what you think of this article using the comment field located at the bottom of the document. This will allow us to improve the content. Thank you in advance!
