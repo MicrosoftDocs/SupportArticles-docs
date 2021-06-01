@@ -1,10 +1,9 @@
 {
-  "globalMetadata": {
-    "breadcrumb_path": "/support/breadcrumb/toc.json",
-    "extendBreadcrumb": true,
-    "feedback_system": "None", 
-    "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
-    "searchScope": ["Troubleshoot"],
-    "recommendations": true
+"fileMetadata": { 
+  "recommendations": { 
+    "*/**.md": true,
+    "admin/**.md": true,
+    "analysis-services/**.md": false  
   }
+ }
 }
