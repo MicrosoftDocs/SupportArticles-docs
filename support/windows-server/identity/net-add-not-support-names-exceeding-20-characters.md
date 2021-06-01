@@ -111,3 +111,5 @@ End If
 
 To work around this issue in Windows Server 2008 and later, use the **Add-ADGroupMember** PowerShell command, as described in the following TechNet article:  
 [Add-ADGroupMember](https://technet.microsoft.com/library/ee617210.aspx)
+
+If you are using PowerShell 5.1, use the **Add-LocalGroupMember -Group** PowerShell command, as described in the following article: [Add-LocalGroupMember] (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember?view=powershell-5.1)
