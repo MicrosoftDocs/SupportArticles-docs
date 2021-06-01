@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2454362
 
 ## Summary
 
-When you rename a user account in on a computer that is running Windows 7 or Windows Server 2008 R2, the user profile path isn't changed automatically. It may cause some confusion when the `%SystemDrive%\users` folder is viewed
+When you rename a user account on a computer that is running Windows 7 or Windows Server 2008 R2, the user profile path isn't changed automatically. It may cause some confusion when the `%SystemDrive%\users` folder is viewed
 
 ## Status
 
