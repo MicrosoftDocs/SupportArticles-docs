@@ -50,11 +50,7 @@
       "extendBreadcrumb": true,
       "feedback_system": "None", 
       "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
-      "searchScope": ["Troubleshoot"],
-      "recommendations": { 
-        "SQL/**.md": true,
-        "Azure/**.md": false
-      }
+      "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
