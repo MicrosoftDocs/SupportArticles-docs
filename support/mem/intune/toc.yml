@@ -34,6 +34,8 @@
     href: error-0x87d13ba2-deploy-macos-lob-app.md  
   - name: Fingerprint authentication not prompted for policy-managed apps
     href: no-prompt-for-fingerprint-identity.md
+  - name: LOB app versioning
+    href: lob-app-versioning.md  
   - name: macOS LOB apps aren't deployed
     href: macos-lob-apps-not-deployed.md
   - name: Managed Browser policy triggers error 0x87D1FDE8
