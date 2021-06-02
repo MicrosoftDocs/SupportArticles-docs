@@ -42,11 +42,11 @@ The authentication issue occurs because of missing package information about eit
 > [!TIP]
 > To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
-To fix this issue, use PowerShell to reinstall the packages for ADAL (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
+To fix this issue, use PowerShell to reinstall the packages for Azure AD WAM plugin (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
 
 1. Right-click the Windows icon in your task bar, and then select **Windows PowerShell (Admin)**.
 2. If you're prompted by a User Account Control ([UAC](/windows/security/identity-protection/user-account-control/user-account-control-overview)) window, select **Yes** to start PowerShell.
-3. If your issue is about a work account, you have to fix the ADAL package. Run the following command in the command console:
+3. If your issue is about a work account, you have to fix the Azure AD WAM plugin package. Run the following command in the command console:
 
    ```powershell
    if (-not (Get-AppxPackage Microsoft.AAD.BrokerPlugin)) { Add-AppxPackage -Register "$env:windir\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -ForceApplicationShutdown } Get-AppxPackage Microsoft.AAD.BrokerPlugin
