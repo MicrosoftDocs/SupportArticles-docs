@@ -64,8 +64,8 @@ Restart the device and then try installing Office again. If you still get the er
 
 Select and download the System Update Readiness tool for your version of Windows:
 
-- [Download for the 32-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181491)
-- [Download for the 64-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181492)
+- [Download for the 32-bit version of Windows 7](https://www.microsoft.com/download/details.aspx?id=43524)
+- [Download for the 64-bit version of Windows 7](https://www.microsoft.com/download/details.aspx?id=43484)
 - [Download for the 32-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181487)
 - [Download for the 64-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181490)
 
