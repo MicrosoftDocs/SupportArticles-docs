@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot performance and isolate bottlenecks in Linux
-description: Troubleshoot performance and isolate bottlenecks in Linux
+description: Troubleshoot CPU, memory, and disk input and output performance, and isolate bottlenecks in Linux virtual machines
 ms.date: 05/27/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -149,7 +149,7 @@ Latency is the measurement of the average amount of time each operation takes to
 
 `iostat` is a simple command to run, as the basic syntax is:
 
-``iostat <parameters> <time to refresh in seconds> <times to iterate> <block devices>``
+`iostat <parameters> <time to refresh in seconds> <times to iterate> <block devices>`
 
 The options dictate what information `iostat` provides. Without any parameter, `iostat` displays some data which might be helpful:
 
@@ -170,7 +170,7 @@ By default, `iostat` displays data for all block devices present. Additionally, 
 
 Run `iostat` with triggers:
 
-``sudo iostat -dxctm 1``
+`sudo iostat -dxctm 1`
 
 To further expand the `iostat` results, use these variables:
 
@@ -180,7 +180,7 @@ To further expand the `iostat` results, use these variables:
 - `-t`: Print the time for each report displayed. Useful for long runs.
 - `-m`: Display statistics in megabytes per second. A more human readable form.
 
-The number **1** in the command tells `iostat` to refresh every second. Select **Ctrl + C** to stop the refresh.
+The number **1** in the command tells `iostat` to refresh every second. Select Ctrl+C to stop the refresh.
 
 With the extra parameters, the output looks like this:
 
@@ -236,7 +236,7 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
 rtt min/avg/max/mdev = 5.240/5.291/5.339/0.035 ms
 ```
 
-To stop the ping, select **Ctrl + C**.
+To stop the ping, select Ctrl+C.
 
 ## Memory
 
@@ -253,7 +253,7 @@ In Linux systems, it's common to see 99% memory usage. In the `free` output, the
 
 In the `free` output, the *available* column indicates how much memory is available for processes to consume. This amount is calculated by adding buff/cache and free memory.
 
-The `top` command can be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select **Shift + M** when running `top`.
+The `top` command can be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select Shift+M when running `top`.
 
 ```output
 [root@rhel78 ~]# top
@@ -285,7 +285,7 @@ Memory usage can increase more than expected in scenarios where the application 
 
 Here is another command used to view the top memory consuming processes:
 
-``ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head``
+`ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head`
 
 The following is an output example:
 
@@ -394,13 +394,13 @@ When PerfInsights is [installed through the Azure portal](/azure/virtual-machine
 
 ##### Azure portal Option 1
 
-Browse the VM blade and select the *Performance diagnostics* option. You'll be asked to install the option (uses extensions) on the VM that you selected it for.
+Browse the VM blade and select the **Performance diagnostics** option. You'll be asked to install the option (uses extensions) on the VM that you selected it for.
 
 :::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png" alt-text="This image shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics.":::
 
 #### Azure portal Option 2
 
-Browse to the *Diagnose and Solve Problems* tab in the VM blade, and look for look for the Troubleshoot link under *VM Performance Issues*.
+Browse to the **Diagnose and Solve Problems** tab in the VM blade, and look for look for the **Troubleshoot** link under **VM Performance Issues**.
 
 :::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/look-for-troublshoot-link-vm-perfissues.png" alt-text="This image asks the user to browse to the Diagnose and Solve Problems tab in the VM blade, and look for the Troubleshoot link under VM Performance Issues":::
 
