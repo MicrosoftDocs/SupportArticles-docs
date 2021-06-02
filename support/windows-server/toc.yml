@@ -172,6 +172,8 @@
       href: ./identity/lds-service-startup-fails.md
     - name: Numerous "Event ID 1216" Events
       href: ./identity/event-id-1216-directory-services-event-log.md
+    - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
+      href: ./identity/problems-with-dc-ad-integrated-dns-zones.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
       href: ./identity/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
