@@ -15,8 +15,8 @@ ms.technology: windows-server-active-directory
 ---
 # Problems that can occur with many Domain Controllers in Active Directory integrated DNS zones
 
-_Original KB number:_ &nbsp;267855  
-_Applies to:_ &nbsp;Supported versions of Windows Server
+_Original KB number:_ &nbsp; 267855  
+_Applies to:_ &nbsp; Supported versions of Windows Server
 
 ## Symptoms
 
