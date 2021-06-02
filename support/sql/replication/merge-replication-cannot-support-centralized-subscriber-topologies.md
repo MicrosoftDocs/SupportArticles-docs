@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2750005
 Merge replication does not support centralized subscriber topologies. A single merge subscriber database can subscribe to only a single merge publication. Therefore, any kind of centralized subscriber topology is not supported in merge replication.
 
 > [!NOTE]
-> This limitation does not apply to Microsoft SQL Server Compact subscribers.
+> This limitation applies to all the currently supported versions of SQL server but does not apply to Microsoft SQL Server Compact subscribers.
 
 ## Workaround
 
