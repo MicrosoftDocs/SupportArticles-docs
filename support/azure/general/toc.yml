@@ -138,6 +138,8 @@
 
 - name:  Support Diagnostic Packages
   items:
+  - name: Diagnostic logs for Apache Spark pools
+    href: synapse-analytics-apache-spark-pools-diagnostic-logs.md
   - name: Diagnostic logs for SQL Server 
     href: sql-vm-logs.md
   - name: SQL database data collector
