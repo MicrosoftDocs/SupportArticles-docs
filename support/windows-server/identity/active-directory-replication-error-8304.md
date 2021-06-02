@@ -15,8 +15,8 @@ ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 8304: "The maximum size on an object has been exceeded"
 
-_Applies to:_ &nbsp; Windows Server 2019, all editions, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
-_Original KB number:_ &nbsp; 4533837
+_Original KB number:_ &nbsp; 4533837  
+_Applies to:_ &nbsp;Supported versions of Windows Server
 
 ## Summary
 
