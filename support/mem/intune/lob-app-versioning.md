@@ -53,7 +53,7 @@ Currently, Intune uses the **CFBundleVersion** value for the **identityVersion**
 To manually extract the version number and build number of an .ipa file in Windows, follow these steps:
 
 1. Rename the *\<AppName>.ipa* file to *\<AppName>.zip*.
-1. Expand the *\<AppName>.zip* file to a folder.
+1. Extract the *\<AppName>.zip* file to a folder.
 1. Go to the folder that contains the extracted files, open the `Payload\<AppName>.app` folder, and locate the Info.plist file.
 1. Open the Info.plist file in a supported editor.
 1. Check the values of the CFBundleShortVersionString and CFBundleVersion keys.
@@ -74,7 +74,7 @@ Currently, Intune uses the **versionCode** value for the **identityVersion** pro
 To manually extract the attributes of an .apk file in Windows, follow these steps:
 
 1. [Install the Apktool](https://ibotpeaches.github.io/Apktool/install/).
-1. Run the Apktool to decode the .apk file and send it to a folder. For example, run the following command:
+1. Run the Apktool to decode the .apk file to a folder. For example, run the following command:
 
    ```console
    apktool d <AppName>.apk -o <OutputFolder>
