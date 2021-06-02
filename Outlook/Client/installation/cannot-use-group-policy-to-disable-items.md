@@ -60,9 +60,8 @@ Outlook 2013:
 
 Outlook 2010 and 2013:  
 String: TCID*x* (where *x* is an integer)
-Value: Command bar value from the workbook that's available in the following Microsoft Download links:
-
-- [Office 2010 Help Files: Office Fluent User Interface Control Identifiers](https://www.microsoft.com/download/details.aspx?id=6627)  
+Value: Command bar value from the workbook that's available in the following Microsoft Download link:
+  
 - [Office 2013 Help Files: Office Fluent User Interface Control Identifiers](https://www.microsoft.com/download/details.aspx?id=36798)
 
 However, this method doesn't disable the items that are mentioned in the [Symptoms](#symptoms) and [Cause](#cause) sections, except for those that have been made available, per the [Resolution](#resolution) section.

@@ -52,6 +52,6 @@ Run the following cmdlet to set the internal and external My Site Host URLs in t
 Set-OwaMailboxPolicy Default -InternalSPMySiteHostURL $Null -ExternalSPMySiteHostURL $Null
 ```
 
-After you update the `OwaMailboxPolicy` setting, create a new Outlook profile to use the updated values. This is necessary because the previous `OwaMailboxPolicy` settings are cached in your current Outlook profile, and they can't be updated.
+After you update the `OwaMailboxPolicy` setting by using one of the methods, create a new Outlook profile to use the updated values. This is necessary because the previous `OwaMailboxPolicy` settings are cached in your current Outlook profile, and they can't be updated.
 
 For more information about the `OwaMailboxPolicy` setting, see [Configure document collaboration with OneDrive for Business and Exchange 2016 on-premises](/exchange/hybrid-deployment/set-up-document-collaboration).
