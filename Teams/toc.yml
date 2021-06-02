@@ -198,7 +198,7 @@
     - name: Websites aren't viewable
       href: ./known-issues/cannot-view-website-teams-web-client.md
     - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
-      href: /SharePoint/SharePointOnline/Sites/err-invalid-response-accessing-sharepoint-site.md
+      href: /sharepoint/troubleshoot/sites/err-invalid-response-accessing-sharepoint-site?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Tabs
     items:
     - name: Can't rename legacy OneNote tabs
