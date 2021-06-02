@@ -50,6 +50,7 @@ This issue occurs for one of the following reasons:
 
 - You enter an incorrect user name or password.
 - You try to sign in to the service by using an account that doesn't have access to Exchange Online.
+- You have [security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) enabled in your tenant.
 
 ## Solution
 
@@ -61,6 +62,8 @@ To resolve this issue, use the Exchange admin center in Office 365 to add the us
 4. Double-click the role group to which you want to add the user. For example, if you want the user to have full access that includes Windows PowerShell, double-click **Organization Management**.
 5. To add the user to the list, click **Add** (![Add icon](./media/access-denied-connect-powershell/add.png)) under **Members**.
 6. Click **Save**.
+
+If you have security defaults enabled, see [Connect to Exchange Online PowerShell using modern authentication with or without MFA](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true).
 
 ## More information
 
