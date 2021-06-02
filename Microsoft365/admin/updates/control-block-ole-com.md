@@ -46,10 +46,10 @@ To override and allow a specific component, follow these steps:
 
 1. Locate the **ActivationFilterOverride** value under the following registry subkey:
  
-    - For 64-bit Office installations and for 32-bit Office installations on 32-bit OS:
+    - For 64-bit Office installations, and for 32-bit Office installations on 32-bit Windows:
 
       `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID}`
-    - For 32-bit Office installations on 64-bit OS:
+    - For 32-bit Office installations on 64-bit Windows:
 
       `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID}`
 1. Make sure that the value is set to **1** (one). If the value is set to 0, or the value is missing, we will block that component.
@@ -58,10 +58,10 @@ To disable filtering per individual Office application, follow these steps:
 
 1. Locate the **ActivationFilter** value under the following registry subkey:
 
-    - For 64-bit Office installations and 32-bit Office installations on 32-bit OS:
+    - For 64-bit Office installations, and 32-bit Office installations on 32-bit Windows:
 
       `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security`
-    - For 64-bit Office installations and 32-bit Office installations on 64-bit OS:
+    - For 32-bit Office installations on 64-bit Windows:
     
       `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security`
 1. Make sure that the value is set to **0** (zero). If the value is set to 1, or the value is missing, filtering is enabled.
