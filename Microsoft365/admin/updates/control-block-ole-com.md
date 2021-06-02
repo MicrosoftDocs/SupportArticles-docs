@@ -23,7 +23,7 @@ appliesto:
 
 After you install the March 2017 updates for Office 365 Subscription Version 1703 (Build 7967.2139), you gain the ability to block activation of OLE/COM components. In this update, we are blocking activation of components that are listed under the following registry key:
 
-**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility**
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility`
 
 In this update, we have added the following components to the blocked list:
 
@@ -44,26 +44,26 @@ In this update, we are allowing the following components to be activated:
 
 To override and allow a specific component, follow these steps:
 
-1. Locate the following registry subkey:
+1. Locate the **ActivationFilterOverride** value under the following registry subkey:
  
-    - For 64-bit Office installations and for 32-bit Office installations on 32-bit OS:
+    - For 64-bit Office installations, and for 32-bit Office installations on 32-bit Windows:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID} DWORD ActivationFilterOverride = 1
-    - For 32-bit Office installations on 64-bit OS:
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID}`
+    - For 32-bit Office installations on 64-bit Windows:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID} DWORD ActivationFilterOverride = 1
-1. Make sure that the value is set to 0 (zero). If the value is set to 0 or the value name is missing, we will block that component.
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility\{CLSID}`
+1. Make sure that the value is set to **1** (one). If the value is set to 0, or the value is missing, we will block that component.
 
 To disable filtering per individual Office application, follow these steps:
 
-1. Locate the following registry subkey:
+1. Locate the **ActivationFilter** value under the following registry subkey:
 
-    - For 64-bit Office installations and 32-bit Office installations on 32-bit OS:
+    - For 64-bit Office installations, and 32-bit Office installations on 32-bit Windows:
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security DWORD ActivationFilter = 0
-    - For 64-bit Office installations and 32-bit Office installations on 32-bit OS:
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security`
+    - For 32-bit Office installations on 64-bit Windows:
     
-      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security DWORD ActivationFilter = 0
-1. Make sure that the value is set to 1 (one). If the value is set to 1 or the value name is missing, filtering is enabled.
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\{APP}\Security`
+1. Make sure that the value is set to **0** (zero). If the value is set to 1, or the value is missing, filtering is enabled.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
