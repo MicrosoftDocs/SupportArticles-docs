@@ -15,8 +15,8 @@ ms.technology: windows-server-active-directory
 ---
 # Problems that can occur with many Domain Controllers in Active Directory integrated DNS zones
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016 RTM, Windows Server 2012 R2, Windows Server 2012  
-_Original KB number:_ &nbsp; 267855
+_Original KB number:_ &nbsp;267855  
+_Applies to:_ &nbsp;Supported versions of Windows Server
 
 ## Symptoms
 
