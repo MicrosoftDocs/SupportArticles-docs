@@ -870,6 +870,8 @@
       href: ./shell-experience/video-stabilization-resolution-limits-h-264.md
   - name: DST and Timezones
     items:
+    - name: Can't set time zone automatically in Windows 10
+      href: ./shell-experience/cannot-set-timezone-automatically.md
     - name: Changes to calendar date in BIOS are not reflected in Windows
       href: ./shell-experience/changes-calendar-date-in-bios-not-reflected.md
   - name: File Associations
