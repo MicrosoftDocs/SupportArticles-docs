@@ -59,13 +59,13 @@ However, this can be modified to show the public folders object in Outlook to on
    ```powershell
    Connect-ExchangeOnline -UserPrincipalName <UPN>
    ```
-3. Enable  **PublicFolderClientAccess** on the user object. By default, its value is set to ‘false’. Setting this to ‘true’ on a specific user designates this user as one of users who will see public folders in Outlook. In this example. We are enabling access to only the sharedmailbox "Accounts".
+3. Enable  **PublicFolderClientAccess** on the user object. By default, its value is set to ‘false’. Setting this to ‘true’ on a specific user designates this user as one of users who will see public folders in Outlook. In this example. We are enabling access to only the **Accounts** shared mailbox..
 
    ```powershell
    Set-CASMailbox accounts@contoso.com -PublicFolderClientAccess $true
    ```
    
-4. Enable **PublicFolderShowClientControl** parameter on the organization config. By default, the value of this parameter is also ‘false’ and once it is set to ‘true’, the controlled access of public folders is enabled.
+4. Enable **PublicFolderShowClientControl** parameter on the organization configuration. By default, the value of this parameter is also ‘false’ and once it is set to ‘true’, the controlled access of public folders is enabled.
 
    ```powershell
    Set-OrganizationConfig -PublicFolderShowClientControl $true
