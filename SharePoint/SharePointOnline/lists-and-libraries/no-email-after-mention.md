@@ -1,7 +1,7 @@
 ---
 title: Mentions in SharePoint documents don’t send email to participant
 description: When you @mention someone in a SharePoint document so they can participate in collaboration on the document, they might not get an email as intended.
-author: sallarson
+author: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
