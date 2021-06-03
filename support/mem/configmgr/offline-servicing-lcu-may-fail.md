@@ -30,9 +30,12 @@ This problem occurs only if you do offline servicing for one of the affected Win
 
 Affected Windows versions:
 
-- Windows 10 20H2
-- Windows 10 20H1
+- Windows 10 1809
+- Windows 10 1903
+- Windows 10 1909
 - Windows 10 2004
+- Windows 10 20H2
+- Windows 10 21H2
 
 Used together with the following LCUs:
 
