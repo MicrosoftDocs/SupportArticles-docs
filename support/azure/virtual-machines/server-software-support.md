@@ -127,7 +127,7 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
 
 ### Requirements for Windows Server Failover Cluster
 
-- Must Run Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+- Must Run Windows Server 2008 R2 or the later version of Windows Server
   - For Windows Server 2012 and Windows Server 2008 R2, must have [hotfix 2854082](https://support.microsoft.com/help/2854082) installed on all nodes
   - Must use a single-cluster IP address resource
   - Must use Azure-hosted storage by using one of the following options:
