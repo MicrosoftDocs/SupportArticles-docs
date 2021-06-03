@@ -93,7 +93,7 @@ For more information, see [Handshake Simulation for various clients connecting t
   - [Azure AD Connect: TLS 1.2 enforcement for Azure Active Directory Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement)
   - [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors#requirements-and-deployment)
 
-## <a name="enable-tls-12"></a>Enable TLS 1.2 on client or server operating systems
+## Enable TLS 1.2 on client or server operating systems <a name="enable-tls-12"></a>
 
 ### Registry strings
 
@@ -110,7 +110,7 @@ Make sure that the following registry DWORD values are configured for these subk
 
 To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
 
-## <a name="update-configure-tls-12"></a>Update and configure .NET Framework to support TLS 1.2
+## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
 Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Azure AD Graph](https://graph.windows.net/), or [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
 
