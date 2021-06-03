@@ -48,6 +48,8 @@ To resolve this issue, try the following method, depending on your level of perm
 If you receive this error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true). 
 
 ### Administrators
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy, follow these steps to unlock the tenant:
 1.	Go to [https://admin.microsoft.com](https://admin.microsoft.com/).
