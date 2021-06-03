@@ -153,6 +153,8 @@
       href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
       href: ../lists-and-libraries/modified-time-shows-incorrectly.md
+    - name: Mentions in SharePoint documents don’t send email to participant
+      href: ../lists-and-libraries/no-email-after-mention.md
     - name: Number of items in this list exceeds the list view threshold
       href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
     - name: Per-location view settings don't work at the folder level
