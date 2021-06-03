@@ -68,6 +68,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Bing|9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7|
 |Common Data Service|00000007-0000-0000-c000-000000000000|
 |CRM Power BI Integration|e64aa8bc-8eb4-40e2-898b-cf261a25954f|
+|Media Analysis and Transformation Service|944f0bd1-117b-4b1c-af26-804ed95e767e<br>0cd196ee-71bf-4fd6-a57c-b491ffd4fb1e|
 |Microsoft App Access Panel|0000000c-0000-0000-c000-000000000000|
 |Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
