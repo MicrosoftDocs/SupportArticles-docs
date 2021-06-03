@@ -93,7 +93,7 @@ If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have be
 After you complete this procedure, the person's mailbox for which you have been provided access to will display in your Outlook Web App folder list every time you open Outlook Web App.
 
 1. Sign in to your mailbox using Outlook Web App.
-2. Right-click your name in the folder list, and select **Add shared folder**.
+2. Right-click in the **Folders** title in the Left pane, and select **Add shared folder**.
 
    :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
 
@@ -154,7 +154,7 @@ If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have be
 After you complete this procedure, the person's mailbox for which you have been provided access to will display in your Outlook Web App folder list every time you open Outlook Web App.
 
 1. Log in to your mailbox using Outlook Web App.
-2. Right-click your name in the folder list, and select **Add shared folder**.
+2. Right-click in the **Folders** title in the Left pane, and select **Add shared folder**.
 
     :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
 
