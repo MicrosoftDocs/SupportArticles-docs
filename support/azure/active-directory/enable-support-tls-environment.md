@@ -105,7 +105,7 @@ Make sure that the following registry DWORD values are configured for these subk
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server**
   - "DisabledByDefault": **00000000**
   - "Enabled": **00000001**
-- **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\v4.0.30319**
+- **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v4.0.30319**
   - "SchUseStrongCrypto": **00000001**
 
 To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
@@ -141,18 +141,18 @@ Set the following registry DWORD values on any computer that communicates across
 
 - For 32-bit applications that are running on a 32-bit OS and 64-bit applications that are running on a 64-bit OS, update the following subkey values:
 
-  - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727**
+  - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v2.0.50727**
     - "SystemDefaultTlsVersions": **00000001**
     - "SchUseStrongCrypto": **00000001**
   
-  - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319**
+  - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v4.0.30319**
     - "SystemDefaultTlsVersions": **00000001**
     - "SchUseStrongCrypto": **00000001**
 - For 32-bit applications that are running on 64-bit OSs, update the following subkey values:
-  - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727**
+  - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft&#92;.NETFramework\v2.0.50727**
     - "SystemDefaultTlsVersions": **dword:00000001**
     - "SchUseStrongCrypto": **dword:00000001**
-  - **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319**
+  - **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft&#92;.NETFramework\v4.0.30319**
     - "SystemDefaultTlsVersions": **dword:00000001**
     - "SchUseStrongCrypto": **dword:00000001**
 
