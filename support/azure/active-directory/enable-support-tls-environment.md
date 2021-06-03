@@ -84,16 +84,16 @@ For more information, see [Handshake Simulation for various clients connecting t
   1. We highly recommend that you run the latest version of the agent, service, or connector.
   2. By default, TLS 1.2 is enabled on Windows Server 2012 R2 and later versions. In rare instances, the default OS configuration might have been modified to disable TLS 1.
 
-      In order to make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the "[Enable TLS 1.2 on client or server operating systems](/azure/active-directory/enable-support-tls-environment#enable-tls-12-on-client-or-server-operating-systems)" section on servers that are running Windows Server and that communicate with Azure AD.
+      In order to make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the "[Enable TLS 1.2 on client or server operating systems](#enable-tls-12)" section on servers that are running Windows Server and that communicate with Azure AD.
 
-  3. Most of the previously listed services are dependent on .Net Framework. Ensure that it's updated as the following section, [Update and configure .NET Framework to support TLS 1.2](/azure/active-directory/enable-support-tls-environment#update-and-configure-net-framework-to-support-tls-12)
+  3. Most of the previously listed services are dependent on .Net Framework. Ensure that it's updated as the following section, [Update and configure .NET Framework to support TLS 1.2](#update-configure-tls-12)
 
   For more information, see the following articles:
   - [TLS 1.2 enforcement - Enforce TLS 1.2 for the Azure AD Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
   - [Azure AD Connect: TLS 1.2 enforcement for Azure Active Directory Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement)
   - [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors#requirements-and-deployment)
 
-## Enable TLS 1.2 on client or server operating systems
+## <a name="enable-tls-12" />Enable TLS 1.2 on client or server operating systems
 
 ### Registry strings
 
@@ -110,7 +110,7 @@ Make sure that the following registry DWORD values are configured for these subk
 
 To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
 
-## Update and configure .NET Framework to support TLS 1.2
+## <a name="update-configure-tls-12" />Update and configure .NET Framework to support TLS 1.2
 
 Managed Azure AD integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Azure AD Graph](https://graph.windows.net/), or [Microsoft graph](https://graph.microsoft.com)) may use .NET Framework.
 
