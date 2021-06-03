@@ -40,13 +40,13 @@ To resolve this problem, check the quota configuration. Then, check the number o
      1. Sign in to Azure portal or start the Azure AD console from the Microsoft 365 admin center as Company Administrator.
      2. Move to the directory that the user is trying the join.
      3. Locate **Users**, and then locate the user who cannot perform the Workplace Join operation.
-     4. Locate Devices.
+     4. Locate **Devices**.
      5. Review the list to determine which devices can be deleted. Then, click **Delete Device**.
   2. Increase the Registered Device Quota.
      1. Sign in to the Azure portal or start the Azure AD console from the Microsoft 365 admin center as Company Administrator.
      2. Move to the directory that the user is trying the join.
-     3. Locate **Configure**, and then scroll down until you are at the **Device Registration** section.
-     4. Change the **Maximum Number of Joined Devices Per User**  setting to a larger value.
+     3. Locate **Devices**, and then locate **Device Settings**.
+     4. Change the **Maximum Number of devices per user** setting to a larger value.
 - If the user is trying to perform Workplace Join to your local Active Directory site
   1. Delete devices for the user.
      - Use Windows PowerShell scripts to identify devices and to delete devices that are associated with a user.
