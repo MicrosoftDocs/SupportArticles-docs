@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Azure Virtual Machine Deployment Troubleshooting
-summary: Welcome to Azure Virtual Machine Deployment Troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you deploy an Azure Virtual Machine. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: VM deployment issues
+summary: Welcome to VM deployment issues. These articles explain how to determine, diagnose, and fix issues that you might encounter when you deploy an Azure Virtual Machine. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 metadata:
-  title: Azure Virtual Machine Deployment Troubleshooting
+  title: VM deployment issues
   description: Documentation for troubleshooting common issues with deploying an Azure Virtual Machine.
   services: virtual-machine
   ms.service: virtual-machine #Required; service per approved list. service slug assigned to your service by ACOM.
