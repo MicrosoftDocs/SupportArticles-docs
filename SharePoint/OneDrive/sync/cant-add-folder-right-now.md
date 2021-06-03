@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-When trying to sync a OneDrive or SharePoint team site, you get the following error:
+When you try to sync a OneDrive or SharePoint team site, you get the following error:
 
 > Sorry, OneDrive can't add your folder right now.
 
@@ -29,21 +29,21 @@ When trying to sync a OneDrive or SharePoint team site, you get the following er
 
 The following are some possible causes for this error:
 
-- **Require Check Out** was enabled on the library.
+- The **Require Check Out** option is enabled on the library.
 
-- There are **Required columns** for the library.
+- There are **Required columns** entries for the library.
 
-- The **Draft Item Security** is set to **Only users who can edit items**.
+- The **Draft Item Security** option is set to **Only users who can edit items**.
 
-- You are syncing using an external or guest account for OneDrive.
+- You're syncing by using an external or guest account for OneDrive.
 
 ## Resolution
 
-The following are the resolutions for each of the causes.
+To fix this problem, use the resolution for the appropriate cause.
 
 ### Change “Require Check Out” to “No”
 
-1. In the Classic View of the library, select Settings (gear icon) and turn the Ribbon on (if it is not already).
+1. In the Classic view of the library, select the Settings (gear) icon, and turn on the Ribbon (if it is not already on).
 
 1. Select the **Library** tab.
 
@@ -57,7 +57,7 @@ The following are the resolutions for each of the causes.
 
 1. Check each column for a check mark under **Required**.
 
-1. Edit any columns that have the check mark, and change **Require this column to contain information** to **No**.
+1. For any columns that have the check mark, change the **Require this column to contain information** value to **No**.
 
 ### Make sure “Draft Item Security” is set to “Any user who can read items”
 
@@ -69,6 +69,6 @@ The following are the resolutions for each of the causes.
 
 ### Use an internal account to sync content
 
-Syncing content using a guest or external account is not supported. Use an account that is internal to your organization.
+Syncing content by using a guest or external account is not supported. Instead, use an account that's internal to your organization.
 
-For more information, see "Libraries with specific columns or metadata" section under [Restrictions and limitations in OneDrive and SharePoint](https://support.microsoft.com/office/64883a5d-228e-48f5-b3d2-eb39e07630fa).
+For more information, see the "Libraries with specific columns or metadata" section under [Restrictions and limitations in OneDrive and SharePoint](https://support.microsoft.com/office/64883a5d-228e-48f5-b3d2-eb39e07630fa).
