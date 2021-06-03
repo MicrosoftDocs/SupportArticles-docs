@@ -61,6 +61,8 @@
       href: ../diagnostics/sharepoint-and-onedrive-diagnostics.md
   - name: Apps
     items:
+    - name: Can’t view embedded Stream video in Teams app
+      href: ../Apps/cant-view-embedded-video.md
     - name: Issue when clicking .mov or .mp4 files
       href: ../Apps/windows-media-player-cannot-connect-to-server.md
     - name: Issue when clicking a guest link to an online item
