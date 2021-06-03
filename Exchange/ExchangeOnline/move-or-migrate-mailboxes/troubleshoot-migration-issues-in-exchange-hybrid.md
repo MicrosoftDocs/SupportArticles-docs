@@ -289,7 +289,10 @@ If your issues aren't resolved, see [My move request is still not complete or th
 
 ### Network Performance factors to consider
 
-This section describes best practices for improving network performance during migrations. The discussion is generally because the biggest impact on network performance during migration is related to third-party hardware and Internet service providers (ISPs). The [Microsoft 365 network connectivity test](https://docs.microsoft.com/microsoft-365/enterprise/office-365-network-mac-perf-onboarding-tool) is deployed to help analyze network-related issues prior to deploying Microsoft 365 services.
+This section describes best practices for improving network performance during migrations. The discussion is generally because the biggest impact on network performance during migration is related to third-party hardware and Internet service providers (ISPs). The [Microsoft 365 network connectivity test](https://docs.microsoft.com/microsoft-365/enterprise/office-365-network-mac-perf-onboarding-tool) is deployed to help analyze network-related issues prior to deploying Microsoft 365 services:
+
+- [Microsoft 365 network connectivity test tool](https://docs.microsoft.com/microsoft-365/enterprise/office-365-network-mac-perf-onboarding-tool)
+- [Network connectivity in the Microsoft 365 Admin Center](https://docs.microsoft.com/microsoft-365/enterprise/office-365-network-mac-perf-overview)
 
 #### Reboot
 
