@@ -46,7 +46,7 @@ To work around the problem, move the shared mailbox to the on-premises environme
 
 By default, Outlook tries to connect to the legacy public folders for the shared mailbox account. If public folders were created within the organization or if an Exchange Online organization is configured to access on-premises public folders, all clients would make a connection to and show the public folders object in Outlook.
 
-We can modify  to show the public folder object in Outlook to only a set of users who might need them. To get started, this will be available for Outlook for Windows users only. To do this, administrators can use two parameters:
+However, this can be modified to show the public folders object in Outlook to only a set of users who might need them. Initially, this will be available for Outlook for Windows users only. To modify this default, administrators can use two parameters:
 
 1. In a PowerShell window, load the EXO V2 module by running the following command:
 
