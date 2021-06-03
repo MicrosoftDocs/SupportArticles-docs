@@ -1,7 +1,7 @@
 ---
 title: Startup fails when Firmware protection is turned on
 description: Provides a solution to an issue where startup fails when Firmware protection is turned off.
-ms.date: 05/26/2021
+ms.date: 06/03/2021
 author: v-lianna
 ms.author: delhan
 manager: dscontentpm
@@ -24,3 +24,5 @@ The Secured-core functionality isn't supported in Windows Server 2019 and earlie
 To recover from the startup failure, go to the Unified Extensible Firmware Interface (UEFI) settings and disable Dynamic Root of Trust for Measurement (DRTM).
 
 Contact your hardware manufacturer for instructions on how to disable DRTM. The relevant settings are labeled differently for different silicon platforms.
+
+Use Windows Server 2022 to activate the unparalleled security of Secured-core Server capable hosts.
