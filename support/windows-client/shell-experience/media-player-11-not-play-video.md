@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue where the video doesn't play when you play it in Windows Media Player 11.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Media Player 11  
 _Original KB number:_ &nbsp; 926373
 
 ## Symptoms
