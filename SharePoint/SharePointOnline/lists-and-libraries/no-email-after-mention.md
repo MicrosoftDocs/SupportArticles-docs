@@ -1,6 +1,6 @@
 ---
-title: Mentions in SharePoint documents don’t send email to participant
-description: When you @mention someone in a SharePoint document so they can participate in collaboration on the document, they might not get an email as intended.
+title: @Mentions in SharePoint files don’t send email notifications to participant
+description: When you @mention someone in a SharePoint file for their collaboration, they don't receive the intended notifications.
 author: salarson
 manager: dcscontentpm
 localization_priority: Normal
@@ -17,11 +17,11 @@ appliesto:
 - SharePoint Online
 ---
 
-# Mentions in SharePoint documents don’t send email to participant
+# @Mentions in SharePoint documents don’t send email notifications to participants
 
-## Symptom
+## Symptoms
 
-When you [@mention someone](https://support.microsoft.com/office/use-mention-in-comments-to-tag-someone-for-feedback-644bf689-31a0-4977-a4fb-afe01820c1fd#ID0EAADAAA=Windows) in a SharePoint document so they can participate in collaboration on the document, they might not get an email as intended.
+When you [@mention someone](https://support.microsoft.com/office/use-mention-in-comments-to-tag-someone-for-feedback-644bf689-31a0-4977-a4fb-afe01820c1fd#ID0EAADAAA=Windows) in a SharePoint file so that they can collaborate on the file, that person doesn't receive the intended email notifications.
 
 ## Cause
 
@@ -33,20 +33,24 @@ This problem can occur if one of the following conditions is true:
 
 ## Resolution
 
-Try checking the document in using the following steps:
+Try checking in the file by following these steps:
 
-1. In the Document Library where the file is stored, highlight the file, and select the three vertical dots in its row.
+1. In the Document Library where the file is stored, highlight the file, and then select the three vertical dots in that row.
 
 1. Select **More** > **Check in**.
 
-Checking in the file might fix the problem. If not, or if the file was already checked in, you can remove it from draft state by using the below steps. If you want to leave it in the draft state, skip the following two steps, and see the instructions for changing the Library settings.
+To fix this problem, try checking in the file. If this doesn't work, or if the file is already checked in, you can move the file from the draft state by using the following steps. If you want to leave the file in the draft state, skip the first three steps, and go to the steps to change the Library settings.
 
-1. In the Document Library where the file is stored, highlight the file, and select the three vertical dots in its row.
+1. Open the Document Library where the file is stored (**File** > **Open** > **View more files**).
 
-1. Select **More** > **Approve**.
+1. Highlight the file that you want, and select the three vertical dots in its row.
 
-If you want to leave the file in the draft state, change the Library settings using the following steps:
+1. In the menu that opens, select **More** > **Approve**.
+
+If you want to leave the file in the draft state, change the Library settings by following these steps:
 
 1. In the Document Library where the file is stored, select Settings (the gear icon at the top of the page).
 
-1. Select **Versioning settings**. Under **Draft Item Security** > **Who should see draft items in this document library?** select **Any user who can read items**.
+1. Select **Versioning settings**. 
+
+1. Under **Draft Item Security** > **Who should see draft items in this document library?**, select **Any user who can read items**.
