@@ -2766,6 +2766,8 @@
       href: ./windows-security/constrained-delegation-access-denied.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
+    - name: How to disable the Subject Alternative Name for UPN mapping
+      href: ./windows-security/disable-subject-alternative-name-upn-mapping.md
     - name: How to force Kerberos to use TCP instead of UDP
       href: ./windows-security/force-kerberos-use-tcp-instead-udp.md
     - name: KDC event  16 or 27 if DES for Kerberos is disabled
