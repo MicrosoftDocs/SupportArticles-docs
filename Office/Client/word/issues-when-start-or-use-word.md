@@ -279,7 +279,8 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Select the **Start** button and then **Settings**.</li>
+<li>Go to **Devices**, and then select **Printers & scanners**.</li>
 <li>Right-click **Microsoft XPS Document Writer**, and then select **Set as default printer**.</li>
 <li>Start Word.</li>
 </ol>
