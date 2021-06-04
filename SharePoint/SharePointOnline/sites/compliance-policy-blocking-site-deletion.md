@@ -46,6 +46,7 @@ To remove the **Invalid retention hold**, try one of the following methods, depe
 If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles).
 
 ### Administrators
+
 > [!NOTE]
 > This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
@@ -53,10 +54,7 @@ If you're an administrator, and you're unable to delete the site:
 
 1. Go to the [Microsoft Admin site](https://admin.microsoft.com).
 
-2. In the navigation pane, select **Support**, and then select **New Service Request**.
-
-   > [!Note]
-   > This selection activates the **Need Help?** pane on the right side of the screen.
+2. In the navigation pane, select **Support**, and then select **New Service Request**. This selection activates the **Need Help?** pane on the right side of the screen.
 
 3. In the **Briefly describe your issue** area, enter **invalid retention policy**, and then select **Enter**.
 
