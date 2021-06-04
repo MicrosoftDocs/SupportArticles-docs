@@ -1,30 +1,31 @@
 - name: Welcome
   href: welcome-virtual-machines.yml
-
-- name: Troubleshoot deployment failures
+  
+- name: VM deployment issues
+  href: welcome-deployment-troubleshooting.yml
   items:
-  - name: New VM deployments
+  - name: Troubleshoot deployment failures
     items:
-    - name: Troubleshoot deploying Linux virtual machine
-      href: troubleshoot-deployment-new-vm-linux.md
-    - name: Troubleshoot deploying Windows virtual machine
-      href: troubleshoot-deployment-new-vm-windows.md
-  - name: Fail to create a VM with Ed25519 SSH keys
-    href: ed25519-ssh-keys.md
-  - name: Support for Availability sets
-    href: virtual-machines-availability-set-supportability.md
-  - name: Uploaded VHD is not supported
-    href: uploaded-vhd-not-support.md
-
-- name: Image deployment and Management
-  items:
-  - name: Upload Hyper-V DC to Azure
-    href: upload-existing-hyperv-dc-azure-ps.md
-
-- name: VM upgrade issues
-  items:
-  - name: Upgrade to SLES 15 SP1
-    href: linux-upgrade-suse-15sp1.md
+    - name: New VM deployments
+      items:
+      - name: Troubleshoot deploying Linux virtual machine
+        href: troubleshoot-deployment-new-vm-linux.md
+      - name: Troubleshoot deploying Windows virtual machine
+        href: troubleshoot-deployment-new-vm-windows.md
+    - name: Fail to create a VM with Ed25519 SSH keys
+      href: ed25519-ssh-keys.md
+    - name: Support for Availability sets
+      href: virtual-machines-availability-set-supportability.md
+    - name: Uploaded VHD is not supported
+      href: uploaded-vhd-not-support.md
+  - name: Image deployment and Management
+    items:
+    - name: Upload Hyper-V DC to Azure
+      href: upload-existing-hyperv-dc-azure-ps.md
+  - name: VM upgrade issues
+    items:
+    - name: Upgrade to SLES 15 SP1
+      href: linux-upgrade-suse-15sp1.md
 
 - name: Troubleshoot allocation failures
   items:
@@ -528,5 +529,3 @@
     href: how-to-videos-windows-virtual-desktop.md
   - name: Support for 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
-
-
