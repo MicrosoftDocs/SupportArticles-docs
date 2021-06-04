@@ -57,6 +57,8 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+    - name: OneDrive sync error “Sorry, OneDrive can’t add your folder right now” 
+      href: ../sync/cant-add-folder-right-now.md
     - name: Troubleshoot sync issues
       href: ../sync/troubleshoot-sync-issues.md
     - name: Upload blocked error in OneDrive

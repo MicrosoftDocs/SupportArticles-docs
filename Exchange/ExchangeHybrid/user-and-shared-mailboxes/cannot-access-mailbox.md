@@ -114,7 +114,7 @@ Create an on-premises object for the cloud mailbox by using the `New-RemoteMailb
 For example, run the following command:  
 
 ```powershell
-New-Remotemailbox sharedmailbox@contoso.com -Remoteroutingaddress sharedmailbox@contoso.mail.onmicrosoft.com -Shared
+New-Remotemailbox -Name "Shared mailbox" -Alias sharedmailbox -UserPrincipleName sharedmailbox@contoso.com -Remoteroutingaddress sharedmailbox@contoso.mail.onmicrosoft.com -Shared
 ```
 
 ## More information
