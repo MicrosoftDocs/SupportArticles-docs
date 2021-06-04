@@ -45,6 +45,7 @@ To resolve this issue, you must rename the document library to “Documents” b
 > You must have administrative permissions to make these changes, or contact your administrator to make these changes.
 
 ### Method 1: Use the Microsoft Admin site
+
 > [!NOTE]
 > This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
