@@ -504,6 +504,8 @@
     href: /windows-server/get-started/uploading-specialized-ws08-image-to-azure?context=/troubleshoot/azure/virtual-machines/context
   - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
     href: /windows-server/get-started/modernize-windows-server-2008?context=/troubleshoot/azure/virtual-machines/context
+  - name: Test
+    href: /troubleshoot/windows-server/backup-and-storage/cannot-configure-clustered-mount-points-shadow-copies?context=/troubleshoot/azure/virtual-machines/context
 
 - name: Support statements
   items:
