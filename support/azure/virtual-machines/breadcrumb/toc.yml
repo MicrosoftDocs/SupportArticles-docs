@@ -5,11 +5,3 @@
   - name: Troubleshoot
     tocHref: /troubleshoot/
     topicHref: /troubleshoot/index
-    items:
-    - name: Azure
-      tocHref: /troubleshoot/azure/
-      topicHref: /troubleshoot/azure/index
-      items:
-      - name: Virtual Machines
-        tocHref: /troubleshoot/azure/virtual-machines/
-        topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
