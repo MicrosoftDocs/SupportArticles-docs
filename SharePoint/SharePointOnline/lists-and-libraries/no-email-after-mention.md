@@ -1,5 +1,5 @@
 ---
-title: @Mentions in SharePoint files don’t send email notifications to participant
+title: Mentions in SharePoint files don’t send email notifications to participant
 description: When you @mention someone in a SharePoint file for their collaboration, they don't receive the intended notifications.
 author: salarson
 manager: dcscontentpm
@@ -17,7 +17,7 @@ appliesto:
 - SharePoint Online
 ---
 
-# @Mentions in SharePoint documents don’t send email notifications to participants
+# @Mentions in SharePoint files don’t send email notifications to participants
 
 ## Symptoms
 
