@@ -21,17 +21,15 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# Can't apply public folder permissions or other settings to subfolders in EAC
+# Can't propagate public folder permissions and settings in EAC
 
-When you apply permissions or other settings to a public folder and its subfolders in the Exchange admin center (EAC), you experience the following issues.
+When you try to apply permissions or settings to a public folder and its subfolders in the Exchange admin center (EAC), you experience the following issues.
 
 ## Permissions aren't applied to all or some subfolders
 
 When you apply permissions to a public folder and its subfolders by selecting the **Apply changes to this public folder and all its subfolders** check box in the EAC, the permissions aren't applied to all or some subfolders.
 
 ![Screenshot of applying permissions](./media/can't-apply-permissions-settings-to-subfolders/public-folder-permission.png)
-
-### Cause
 
 The issue occurs if the parent folder and its subfolders are in different public folder mailboxes.
 
@@ -60,7 +58,7 @@ The script has detailed help documentation. To view the documentation for the sc
 Get-Help .\Update-PublicFolderPermissions.ps1 -Full
 ```
 
-## Can't apply read setting to public folders in Exchange Online
+## Can't apply the read and unread setting
 
 When you select the **Apply the read and unread setting to this folder and all its subfolders** check box on a parent public folder in the EAC, you receive the following error message:
 
@@ -103,11 +101,7 @@ To work around this issue, follow these steps:
    Get-PublicFolder \Marketing -Recurse | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
    ```
 
-### Status
-
-This issue is under investigation. We'll update the information when the issue is fixed.
-
-## Can't apply age limit settings to subfolders
+## Can't propagate age limit settings
 
 When you apply age limit settings to a public folder and its subfolders by selecting the **Apply setting to this folder and all its subfolders** check box in the EAC, you receive the following error message:
 
