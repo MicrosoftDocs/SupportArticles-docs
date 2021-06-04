@@ -106,7 +106,6 @@ If you're using the desktop version of Skype for Business, find out if it's Skyp
 
 Choose your version of Skype for Business:
 
-- [Lync 2010](#update-lync-2010)
 - [Skype for Business 2015](#update-skype-for-business-2015)
 - [Skype for Business Windows Store app](#update-skype-for-business-windows-store-app)
 
