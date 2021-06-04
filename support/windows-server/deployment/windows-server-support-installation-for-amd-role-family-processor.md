@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article introduces the Windows Server operating system (OS) installation instructions and support statements for AMD EPYC series server processors. Additionally, this article describes several known limitations to the support for these processors.
 
-_Original KB number:_ &nbsp; 267855  
+_Original KB number:_ &nbsp; 4514607  
 _Applies to:_ &nbsp; Supported versions of Windows Server
 
 ## Windows Server support
@@ -71,8 +71,8 @@ For example, see the following figure.
 
 ### Task Manager displays an incorrect number of sockets with more than 64 logical processors enabled
 
-For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
+For example, for a single-CPU one-socket system, **Task Manager** displays two sockets. For a two-socket system, **Task Manager** displays four sockets.
 
 ### Task Manager displays an incorrect number of NUMA nodes with more than 64 logical processors enabled
 
-For example, for a one-socket system, Task Manager displays two NUMA nodes. For a two-socket system, Task Manager displays four NUMA nodes.
+For example, for a one-socket system, **Task Manager** displays two NUMA nodes. For a two-socket system, **Task Manager** displays four NUMA nodes.
