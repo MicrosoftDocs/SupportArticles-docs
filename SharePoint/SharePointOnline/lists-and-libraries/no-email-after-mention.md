@@ -33,13 +33,13 @@ This problem can occur if one of the following conditions is true:
 
 ## Resolution
 
-Try checking in the file by following these steps:
+To fix this problem, try to check in the file by following these steps:
 
 1. In the Document Library where the file is stored, highlight the file, and then select the three vertical dots in that row.
 
 1. Select **More** > **Check in**.
 
-To fix this problem, try checking in the file. If this doesn't work, or if the file is already checked in, you can move the file from the draft state by using the following steps. If you want to leave the file in the draft state, skip the first three steps, and go to the steps to change the Library settings.
+If checking in the file doesn't work, or if the file is already checked in, you can move the file from the draft state by using the following steps. If you want to leave the file in the draft state, skip the first three steps, and go to the steps to change the Library settings.
 
 1. Open the Document Library where the file is stored (**File** > **Open** > **View more files**).
 
@@ -49,7 +49,7 @@ To fix this problem, try checking in the file. If this doesn't work, or if the f
 
 If you want to leave the file in the draft state, change the Library settings by following these steps:
 
-1. In the Document Library where the file is stored, select Settings (the gear icon at the top of the page).
+1. In the Document Library where the file is stored, select the Settings button (the gear icon at the top of the page).
 
 1. Select **Versioning settings**. 
 
