@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.prod: skype-for-business
 localization_priority: Normal
 ms.custom:
+- CI 150322
 - CSSTroubleshoot
 search.appverid: 
 - MET150
@@ -105,19 +106,17 @@ If you're using the desktop version of Skype for Business, find out if it's Skyp
 
 Choose your version of Skype for Business:
 
-- [Lync 2010](#update-lync-2010)
 - [Skype for Business 2015](#update-skype-for-business-2015)
 - [Skype for Business Windows Store app](#update-skype-for-business-windows-store-app)
 
-###### Update Lync 2010
-
-Make sure that you have the most current version of the [Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177).
-
-If the issue still exists, go to the [Office 365 Desktop Setup (Lync 2010)](#office-365-desktop-setup-lync-2010) section.
-
 ###### Office 365 Desktop Setup (Lync 2010)
 
-Make sure that you have the most current version of the [Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177).
+Make sure that **Microsoft Online Services Sign-in Assistant** is running on Windows Services by following these steps:  
+(These steps are for Windows 10)
+
+1. Right-click the **Start** button and select **Run**.
+2. Type `services.msc` and select **OK**.
+3. In the **Services** window, check whether the **Status** of **Microsoft Online Services Sign-in Assistant** is listed as **Running**.
 
 ###### Delete Lync 2010 sign-in information
 

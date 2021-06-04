@@ -13,10 +13,9 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: cjiang, todla
 appliesto:
-- Microsoft Outlook 2010
+- Outlook 2010
 - Outlook 2016
-- Outlook for Office 365
-- Outlook 2019
+
 search.appverid: MET150
 ---
 # Outlook repeatedly prompts for credentials when using MAPI over HTTP to connect to Exchange
