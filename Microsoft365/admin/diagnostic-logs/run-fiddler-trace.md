@@ -83,6 +83,7 @@ To install and run the Fiddler Trace scenario in the Microsoft Support and Recov
     >
     > - Selecting the "Microsoft Support Site" link opens the file transfer workspace.
     > - Selecting the "here" link opens the folder that holds the recorded log files.
+    > - The log files on Windows are available in the following folder: %APPDATA%\Fiddler Everywhere\Logs
 
 13. On the Microsoft Support Secure File Exchange website, select **Add files** to upload the log files.
 
