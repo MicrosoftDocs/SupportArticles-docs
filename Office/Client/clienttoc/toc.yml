@@ -783,7 +783,7 @@
           href: ../office-suite-issues/office-suite-setup-not-restart.md
         - name: Office End User License Agreement always appears
           href: ../office-suite-issues/office-end-user-license-agreement.md
-        - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+        - name: Office error “could not create the work file”
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
         - name: Office files with RMS protection crash
           href: ../office-suite-issues/rms-protected-files-crash.md
