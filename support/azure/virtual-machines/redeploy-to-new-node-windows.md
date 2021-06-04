@@ -22,6 +22,15 @@ If you have been facing difficulties troubleshooting Remote Desktop (RDP) connec
 > After you redeploy a VM, the temporary disk is lost and dynamic IP addresses associated with virtual network interface are updated. 
 
 
+## Use the Azure CLI
+Install the latest [Azure CLI](/cli/azure/install-az-cli2) and log in to your Azure account using [az login](/cli/azure/reference-index).
+
+Redeploy your VM with [az vm redeploy](/cli/azure/vm). The following example redeploys the VM named *myVM* in the resource group named *myResourceGroup*:
+
+```azurecli
+az vm redeploy --resource-group myResourceGroup --name myVM 
+```
+
 ## Using Azure PowerShell
 Make sure you have the latest Azure PowerShell 1.x installed on your machine. For more information, see [How to install and configure Azure PowerShell](/powershell/azure/).
 
