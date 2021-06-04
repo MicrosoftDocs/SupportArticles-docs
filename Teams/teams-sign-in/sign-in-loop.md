@@ -45,7 +45,15 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
 
     :::image type="content" source="media/sign-in-loop/edge.png" alt-text="Screenshot of edge.":::
 
+To change the settings using Group Policy object (GPO):
+
+1. [Download and install the Microsoft Edge administrative template](deployedge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
+2. Add the sites listed in step 3 above to the **Content settings** > **CookiesAllowedForUrls** setting, either with a mandatory or recommended policy. For more information, see [Set mandatory or recommended policies](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) and [CookiesAllowedForUrls setting](/deployedge/microsoft-edge-policies#cookiesallowedforurls).
+
 ### Internet Explorer
+
+> [!Note]
+> Microsoft 365 apps and services will not support Internet Explorer 11 starting August 17, 2021 (Microsoft Teams will not support Internet Explorer 11 earlier, starting  November 30, 2020). [Learn more](https://aka.ms/AA97tsw). Please note that Internet Explorer 11 will remain a supported browser. Internet Explorer 11 is a component of the Windows operating system and [follows the Lifecycle Policy](/lifecycle/faq/internet-explorer-microsoft-edge) for the product on which it is  installed.
 
 1. In Windows Control Panel, open **Internet Options**.
 2. In the Internet Options window, select **Privacy** and **Advanced**.
@@ -76,6 +84,11 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
     - [*.]teams.microsoft.com
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
+
+To change the settings using Group Policy object (GPO):
+
+1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
+2. Add the sites listed in step 3 above to the **Content settings** > **CookiesAllowedForUrls** setting.
 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:
