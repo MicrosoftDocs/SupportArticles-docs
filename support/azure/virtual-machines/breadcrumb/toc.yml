@@ -1,11 +1,7 @@
-- name: Docs
-  tocHref: /
-  topicHref: /index
+- name: Azure
+  tocHref: /troubleshoot/azure/
+  topicHref: /troubleshoot/azure/
   items:
-  - name: Azure
-    tocHref: /troubleshoot/azure/
-    topicHref: /troubleshoot/azure/
-    items:
-    - name: Virtual Machines
-      tocHref: /troubleshoot/azure/virtual-machines/
-      topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+  - name: Virtual Machines
+    tocHref: /troubleshoot/azure/virtual-machines/
+    topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
