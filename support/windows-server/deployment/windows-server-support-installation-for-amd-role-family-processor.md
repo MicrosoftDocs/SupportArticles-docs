@@ -17,8 +17,8 @@ ms.technology: windows-server-deployment
 
 This article introduces the Windows Server operating system (OS) installation instructions and support statements for AMD EPYC series server processors. Additionally, this article describes several known limitations to the support for these processors.
 
-_Original KB number:_ &nbsp; 4514607  
-_Applies to:_ &nbsp; Supported versions of Windows Server
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 4514607
 
 ## Windows Server support
 
