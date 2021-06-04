@@ -30,6 +30,9 @@ If you need more Microsoft OneDrive storage than the default 5 TB, the Microsoft
 
 Admins can request Microsoft to increase the default storage space up to 25 TB per user, although a lower per-user quota can be set at their discretion. Microsoft 365 administrators can verify a user's eligibility and then request the increase by using the following steps:
 
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 1. In the left pane, select **Support**, and then select **New Service Request**.
