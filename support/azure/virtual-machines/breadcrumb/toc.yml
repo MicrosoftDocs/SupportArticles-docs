@@ -1,7 +1,7 @@
 - name: Azure
-  tocHref: /troubleshoot/azure/
-  topicHref: /troubleshoot/azure/
+  tocHref: /support/azure/
+  topicHref: /support/azure/index
   items:
   - name: Virtual Machines
-    tocHref: /troubleshoot/azure/virtual-machines/
-    topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+    tocHref: /support/azure/virtual-machines/
+    topicHref: /support/azure/virtual-machines/welcome-virtual-machines
