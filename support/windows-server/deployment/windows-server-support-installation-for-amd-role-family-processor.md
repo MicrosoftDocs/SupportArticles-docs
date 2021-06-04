@@ -66,6 +66,7 @@ For servers configured to enable 256 processor threads and that are running eith
 ### Task Manager does not display L2 and L3 cache sizes, or displays incorrect L2 and L3 cache sizes
 
 For example, see the following figure.
+
 :::image type="content" source="./media/windows-server-support-installation-for-amd-role-family-processor/screenshot-of-l2-l3-cache-size.jpg" alt-text="L2 and L3 cache display issue.":::
 
 ### Task Manager displays an incorrect number of sockets with more than 64 logical processors enabled
