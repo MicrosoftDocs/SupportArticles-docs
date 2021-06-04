@@ -43,13 +43,14 @@ By default, user templates files are stored in the following location:
 - In Windows XPC:\Documents and Settings\ **user name** \Application Data\Microsoft\Templates   
 - In Windows Vista or in Windows 7C:\Users\ **user name** \AppData\Roaming\Microsoft\Templates   
 
-**Note** You can change the location of user templates files. 
+> [!NOTE]
+> You can change the location of user templates files. 
 
 ### How to change the location in which templates are saved
 
 You can use Microsoft Office Word to change the location in which your new templates are saved. To do this, follow these steps.
-
-**Note** If you use Word 2007 or Word 2010 to change the location in which your new templates are saved, you also change the location in which all 2007 Office program templates or all 2010 Office program templates are saved. 
+ > [!NOTE]
+ > If you use Word 2007 or Word 2010 to change the location in which your new templates are saved, you also change the location in which all 2007 Office program templates or all 2010 Office program templates are saved.It is also applicable for all 2016 Office, and 2019 Office programs as well. 
 
 1. Start Word.   
 2. If you are using Word 2007, click the **Microsoft Office Button**, and then click **Word Options**.
@@ -64,15 +65,18 @@ You can use Microsoft Office Word to change the location in which your new templ
 
 The changed path is noted in the Windows registry. The path is used the next time that you want to save a new template. For more information, see the "Changes in the Windows registry settings for the user templates file location and for the workgroup templates file location" section.
 
-**Note** Your network administrator can change the location in which your new templates are saved by using the policy templates that are included with the 2007 Microsoft Office Resource Kit. For more information, contact your network administrator.
+> [!NOTE]
+>  Your network administrator can change the location in which your new templates are saved by using the policy templates that are included with the 2007 Microsoft Office Resource Kit. For more information, contact your network administrator.
 
 You can also create custom tabs that appear in the **Templates** dialog box by creating a new folder in the Templates folder in your profile. Tabs that have the same name as a new folder appear in the **Templates** dialog box. These tabs let you categorize your new templates even more.
 
 The template options are available when you click the **Microsoft Office Button**, and then click **New** in Office 2007 or from **New** under the **File** menu in Office 2010.
 
-**Note** There are more templates available in the **Microsoft Office Online** area. 
+> [!NOTE]
+>  There are more templates available in the **Microsoft Office Online** area. 
 
-**Note** Microsoft Office Publisher 2007 and Microsoft Office SharePoint Designer 2007 do not use the same user interface as the previously listed 2007 Office programs.
+> ![NOTE]
+>  Microsoft Office Publisher 2007 and Microsoft Office SharePoint Designer 2007 do not use the same user interface as the previously listed 2007 Office programs.
 
 #### In Publisher 2007 or Publisher 2010
 
@@ -86,7 +90,8 @@ The template options are available when you click the **Microsoft Office Button*
 
 The templates that are saved in this location are basically the same as the templates that are saved in your user templates file location. However, the location is typically a shared folder on a network drive.
 
-**Note** Your network administrator may set a shared location as a source from which to provide templates that are used throughout your workgroup or company. The workgroup template file location typically is a read-only shared folder.
+> [!NOTE]
+>  Your network administrator may set a shared location as a source from which to provide templates that are used throughout your workgroup or company. The workgroup template file location typically is a read-only shared folder.
 
 In addition to looking in your default user templates file location for existing templates, 2007 and 2010 Office programs look in the workgroup templates file location for more templates.
 
@@ -104,7 +109,8 @@ By default, all templates that are installed with Microsoft Office are installed
 
 C:\Program Files\Microsoft Office\Templates\ **Language ID Number**
 
-**Note** The **Language ID Number** is a four-digit code that represents the language types that are currently installed. For example, the English (US) version of Office installs a 1033 folder. The Arabic version installs a 1025 folder. The German version installs a 1031 folder. 2007 Office programs support many other languages. Additionally, you can have multiple languages installed at the same time. Therefore, you may have a Templates folder that contains several language ID folders. 
+> [!NOTE]
+>  The **Language ID Number** is a four-digit code that represents the language types that are currently installed. For example, the English (US) version of Office installs a 1033 folder. The Arabic version installs a 1025 folder. The German version installs a 1031 folder. 2007 Office programs support many other languages. Additionally, you can have multiple languages installed at the same time. Therefore, you may have a Templates folder that contains several language ID folders. 
 
 ### Non-file-based templates file location
 
