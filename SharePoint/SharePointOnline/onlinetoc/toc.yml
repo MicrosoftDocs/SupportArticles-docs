@@ -339,6 +339,10 @@
       href: ../Sync/synced-file-moved-to-recycle-bin.md
     - name: SharePoint Workspace doesn't always sync automatically
       href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+  - name: Video
+    items:
+    - name: Can’t view embedded Stream video in Teams app
+      href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
     - name: A list view Web Part for a tasks list doesn't filter values
