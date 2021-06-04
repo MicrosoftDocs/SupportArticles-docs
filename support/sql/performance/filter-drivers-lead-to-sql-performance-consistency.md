@@ -81,32 +81,3 @@ The information and the solution in this document represents the current view of
 
 Microsoft makes no warranties and excludes all representations, warranties, and conditions whether express, implied, or statutory. These include but are not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition, merchantability, and fitness for a particular purpose, with regard to any service, solution, product, or any other materials or information. In no event will Microsoft be liable for any third-party solution that this article mentions.
 
-## Applies to
-
-- SQL Server 2005 Developer Edition
-- SQL Server 2005 Enterprise Edition
-- SQL Server 2005 Enterprise X64 Edition
-- SQL Server 2005 Evaluation Edition
-- SQL Server 2005 Express Edition
-- SQL Server 2005 Express Edition with Advanced Services
-- SQL Server 2005 Standard Edition
-- SQL Server 2005 Standard X64 Edition
-- SQL Server 2005 Workgroup Edition
-- SQL Server 2008 R2 Parallel Data Warehouse
-- SQL Server 2008 Developer
-- SQL Server 2008 Enterprise
-- SQL Server 2008 Express
-- SQL Server 2008 Express with Advanced Services
-- SQL Server 2008 R2 Datacenter
-- SQL Server 2008 R2 Developer
-- SQL Server 2008 R2 Enterprise
-- SQL Server 2008 R2 Express
-- SQL Server 2008 R2 Express with Advanced Services
-- SQL Server 2008 R2 Standard
-- SQL Server 2008 R2 Standard Edition for Small Business
-- SQL Server 2008 R2 Web
-- SQL Server 2008 R2 Workgroup
-- SQL Server 2008 Standard
-- SQL Server 2008 Standard Edition for Small Business
-- SQL Server 2008 Web
-- SQL Server 2008 Workgroup  
