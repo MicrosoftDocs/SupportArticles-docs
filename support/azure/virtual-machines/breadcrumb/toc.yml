@@ -1,17 +1,11 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Troubleshoot
+  tocHref: /troubleshoot/
+  topicHref: /troubleshoot/index
   items:
-
-  - name: Troubleshoot
-    tocHref: /troubleshoot/
-    topicHref: /troubleshoot/index
+  - name: Azure
+    tocHref: /troubleshoot/azure/
+    topicHref: /troubleshoot/azure/index
     items:
-    
-    - name: Azure
-      tocHref: /troubleshoot/azure/
-      topicHref: /troubleshoot/azure/
-      items:
-      - name: Virtual Machines
-        tocHref: /troubleshoot/azure/virtual-machines/
-        topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+    - name: Virtual Machines
+      tocHref: /troubleshoot/azure/virtual-machines/
+      topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
