@@ -8,7 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: skype-for-business
 localization_priority: Normal
-ms.custom: 
+ms.custom:
+  - CI 150322
   - CSSTroubleshoot
 appliesto:
 - Skype for Business
@@ -148,30 +149,16 @@ Did this solve your problem?
 
 ### Desktop Setup
 
-Make sure you have the most current version of the [Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177).
+Make sure that **Microsoft Online Services Sign-in Assistant** is running on Windows Services by following these steps:  
+(These steps are for Windows 10)
 
-Did this solve your problem?
+1. Right-click the **Start** button and select **Run**.
+2. Type `services.msc` and select **OK**.
+3. In the **Services** window, check whether the **Status** of **Microsoft Online Services Sign-in Assistant** is listed as **Running**.
 
-- If yes, congratulations, you've resolved your sign-in issue!
-- If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
+Also make sure you have the [most current version of Skype for Business](/SkypeForBusiness/software-updates).
 
-### Update Skype for Business
-
-Make sure the user has the [most current version of Skype for Business](/SkypeForBusiness/software-updates).
-
-Did this solve your problem?
-
-- If yes, congratulations, you've resolved your sign-in issue!
-- If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
-
-### Delete Skype for Business sign-in information
-
-For more information, see [How to troubleshoot being unable to sign in to Skype for Business](../../SkypeServer/server-sign-in/unable-to-sign-in-to-sfb.md).
-
-Did this solve your problem?
-
-- If yes, congratulations, you've resolved your sign-in issue!
-- If no, see [Configure connection settings manually](#configure-skype-for-business-connection-settings-manually).
+If you sign-in issue persists, see [How to troubleshoot being unable to sign in to Skype for Business](../../SkypeServer/server-sign-in/unable-to-sign-in-to-sfb.md) or [Configure connection settings manually](#configure-skype-for-business-connection-settings-manually).
 
 ### Synchronize your system clock with the network (Mac computer or laptop)
 
@@ -190,16 +177,7 @@ Follow these steps:
 Did this solve your problem?
 
 - If yes, congratulations, you've resolved your sign-in issue!
-- If no, see [Update Skype for Business](#update-skype-for-business).
-
-### Update Skype for Business
-
-Make sure your computer has the [most recent version](https://www.microsoft.com/download/details.aspx?id=36517) of Skype for Business.
-
-Did this solve your problem?
-
-- If yes, congratulations, you've resolved your sign-in issue!
-- If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
+- If no, make sure you have the [most current version of Skype for Business](/SkypeForBusiness/software-updates).
 
 ### Delete Skype for Business for Mac sign-in information
 
