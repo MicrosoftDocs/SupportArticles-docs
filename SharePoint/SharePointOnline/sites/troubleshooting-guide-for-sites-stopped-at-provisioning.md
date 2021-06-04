@@ -73,7 +73,8 @@ For more information about this, see [Disable OneDrive creation for some users](
 
 A profile **must** exist in the SharePoint Online profile database to provision a OneDrive site. A profile is created when a user account is created and synched to the Office 365 portal, or during ODB provisioning if one does not exist. 
 
-It is a rare scenario that a profile does not exist. For any reason, a profile is taking longer than expected to create, wait at least two hours and then validate again.
+It's a rare scenario that a profile doesn't exist. For any reason, a profile is taking longer than expected to create, wait at least two hours and then validate again. If the profile still doesn't exist after two hours, contact [Microsoft Support](https://support.microsoft.com/topic/contact-microsoft-office-support-fd6bb40e-75b7-6f43-d6f9-c13d10850e77).
+
    > [!NOTE]
    > For tenants with an EDU subscription, user profiles are not created until the user logs into SharePoint Online or an admin has processed the user account for [OneDrive pre-provisioning](/onedrive/pre-provision-accounts).
 
