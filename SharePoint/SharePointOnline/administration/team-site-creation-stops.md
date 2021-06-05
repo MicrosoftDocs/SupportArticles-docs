@@ -1,6 +1,6 @@
 ---
-title: Creation of team site from SharePoint Home doesn’t complete 
-description: When you try to create a team site from SharePoint Home, the site creation might stop or never complete. 
+title: Creating a team site from SharePoint Home doesn’t finish
+description: When you try to create a team site from SharePoint Home, the site creation process never finishes.
 author: salarson
 manager: dcscontentpm
 localization_priority: Normal
@@ -19,24 +19,24 @@ appliesto:
 - SharePoint Online
 ---
 
-# Creation of team site from SharePoint Home doesn’t complete
+# Creating a team site from SharePoint Home doesn’t finish
 
 ## Symptoms
 
-When you try to [create a team site](/sharepoint/create-site-collection) from SharePoint Home, the site creation might stop or never complete. This might happen if the Limited-access user permission lockdown mode for the SharePoint [root site](/sharepoint/modern-root-site) is Activated.
+When you try to [create a team site](/sharepoint/create-site-collection) from SharePoint Home, the site creation process stops or never finishes. This might occur if the Limited-access user permission lockdown mode for the SharePoint [root site](/sharepoint/modern-root-site) is activated.
 
 ## Cause
 
-Group-Connected Team sites require the ability to perform REST requests to SharePoint, which uses the UseRemoteAPI [permission level](/sharepoint/understanding-permission-levels#site-permissions-and-permission-levels).
+Group-Connected Team sites require the ability to mae REST requests to SharePoint. SharePoint uses the UseRemoteAPI [permission level](/sharepoint/understanding-permission-levels#site-permissions-and-permission-levels).
 
 ## Resolution
 
 Ask your organization’s SharePoint administrator to create the site for you.
 
-If you are a SharePoint administrator, and don’t need the Limited-access user permission lockdown mode on your SharePoint root site, you can turn it off using these steps:
+If you are a SharePoint administrator, and you don’t need the Limited-access user permission lockdown mode on your SharePoint root site, you can turn off the mode by following these steps:
 
-1. Select Settings (the gear icon).
+1. Select the Settings (gear) icon.
 
-1. Select **Site Settings**.
+1. Open **Site Settings** > **Site Collection Administrator** > **Site Collection Features**.
 
-1. Under **Site Collection Administrator** > **Site Collection Features**, select **Limited-access user permission lockdown mode**, and then select **Deactivate**.
+1. Select **Limited-access user permission lockdown mode**, and then select **Deactivate**.
