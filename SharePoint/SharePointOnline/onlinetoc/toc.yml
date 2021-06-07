@@ -21,6 +21,8 @@
       href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Create a default Site collection Term Set if none is present
       href: ../administration/create-default-site-term-set.md
+    - name: Creation of team site from SharePoint Home doesn’t complete
+      href: ../administration/team-site-creation-stops.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
     - name: Error when accessing SharePoint or OneDrive
