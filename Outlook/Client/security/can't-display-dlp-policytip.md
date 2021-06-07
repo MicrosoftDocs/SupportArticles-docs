@@ -39,6 +39,9 @@ To make sure that Outlook applies all expected DLP policies, the administrator m
 - C:\Program Files (x86)\Microsoft Office\root\vfs\ProgramFilesCommonX86\Microsoft Shared\OFFICE16
 - C:\Program Files (x86)\Common Files\Microsoft Shared\Office16
 
+> [!NOTE]
+> Outlook DLP policy tips can also stop working if sensitive information types (SIT) are added to the policies. More details [here](https://support.microsoft.com/en-us/office/outlook-dlp-policy-tips-not-working-for-certain-conditions-in-email-body-and-attachments-8a32496a-3478-403c-b2eb-04a218f7443c?ui=en-us&rs=en-us&ad=us).
+
 ## More information
 
 In similar cases, the Outlook client can be forced to update the local policies and definition files. To do this, delete the following registry value from the "Policy Nudges" section of the indicated registry subkey:
