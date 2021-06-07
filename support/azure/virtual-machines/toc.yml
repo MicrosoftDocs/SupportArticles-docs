@@ -44,7 +44,7 @@
 - name: Cannot start or stop VM
   items:
   - name: Start/Stop VMs using Azure Automation
-    href: /azure/automation/troubleshoot/start-stop-vm
+    href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Restarting or resizing a VM
     href: restart-resize-error-troubleshooting.md
   - name: Allocation failures for classic deployments
@@ -52,7 +52,7 @@
   - name: VM startup is stuck
     href: troubleshoot-vm-boot-configure-update.md
   - name: VM lifecycle and states
-    href: /azure/virtual-machines/states-billing
+    href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Cannot connect to my VM
   items:
@@ -286,9 +286,9 @@
   - name: Update awareness for Linux Image Provisioning Agent 
     href: linux-image-provisioning-agent-update-awareness.md
   - name: Azure extension overview
-    href: /azure/virtual-machines/extensions/overview
+    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Troubleshoot extension issues
-    href: /azure/virtual-machines/extensions/troubleshoot
+    href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Install Windows VM agent offline
     href: install-vm-agent-offline.md
   - name: Troubleshoot Windows VM agent
@@ -351,9 +351,9 @@
 - name: Virtual Disk Management issues
   items:
   - name: Overview
-    href: /azure/virtual-machines/managed-disks-overview
+    href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: FAQ
-    href: /azure/virtual-machines/faq-for-disks
+    href: /azure/virtual-machines/faq-for-disks?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Cannot extend an encrypted OS volume in Windows
     href: cannot-extend-encrypted-os-volume.md
   - name: Errors when deleting storage resources
@@ -368,14 +368,14 @@
 - name: Troubleshoot Shared Image Galleries
   items:
   - name: Troubleshoot Shared Image Gallery - Windows
-    href: /azure/virtual-machines/troubleshooting-shared-images
+    href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Troubleshoot Shared Image Gallery - Linux
-    href: /azure/virtual-machines/troubleshooting-shared-images
+    href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Backup and restore
   items:
   - name: Troubleshoot backup failures on Azure VM
-    href: /azure/backup/backup-azure-vms-troubleshoot
+    href: /azure/backup/backup-azure-vms-troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Repair a VM using commands
   items:
@@ -426,19 +426,19 @@
   - name: Windows
     items:
     - name: Overview
-      href: /azure/virtual-machines/windows/disk-encryption-overview
+      href: /azure/virtual-machines/windows/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Troubleshoot
-      href: /azure/virtual-machines/windows/disk-encryption-troubleshooting
+      href: /azure/virtual-machines/windows/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
     - name: FAQ
-      href: /azure/virtual-machines/windows/disk-encryption-faq
+      href: /azure/virtual-machines/windows/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Linux
     items:
     - name: Overview
-      href: /azure/virtual-machines/linux/disk-encryption-overview
+      href: /azure/virtual-machines/linux/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Troubleshoot
-      href: /azure/virtual-machines/linux/disk-encryption-troubleshooting
+      href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
     - name: FAQ
-      href: /azure/virtual-machines/linux/disk-encryption-faq
+      href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Quota increases
   items:
@@ -447,25 +447,25 @@
     - name: Resource Manager deployment model
       items:
       - name: Increase VM series vCPU limit
-        href: /azure/azure-portal/supportability/per-vm-quota-requests
+        href: /azure/azure-portal/supportability/per-vm-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
       - name: Increase total regional vCPU limit
-        href: /azure/azure-portal/supportability/regional-quota-requests
+        href: /azure/azure-portal/supportability/regional-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
       - name: Increase spot quota limit
-        href: /azure/azure-portal/supportability/low-priority-quota
+        href: /azure/azure-portal/supportability/low-priority-quota?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Classic deployment model
-      href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests
+      href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Increase networking limits
-    href: /azure/azure-portal/supportability/networking-quota-requests
+    href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Migration and Move issues
   items:
   - name: Azure Resource Manager migration (ASM to ARM) FAQ
-    href: /azure/virtual-machines/migration-classic-resource-manager-overview
+    href: /azure/virtual-machines/migration-classic-resource-manager-overview?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Planned Maintenance
   items:
   - name: Overview
-    href: /azure/virtual-machines/maintenance-notifications
+    href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Common error messages
   href: error-messages.md
