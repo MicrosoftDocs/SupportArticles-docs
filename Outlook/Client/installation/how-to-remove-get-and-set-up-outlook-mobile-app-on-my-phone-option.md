@@ -24,7 +24,13 @@ _Original KB number:_ &nbsp; 4010175
 
 ## About the Get and set up the Outlook Mobile app on my phone option
 
-Microsoft Outlook 2016, Outlook 2019, and Outlook for Office 365 offer an option to set up the Outlook Mobile app for your phone. The option appears in three places in Outlook:
+Microsoft Outlook 2016, Outlook 2019, and Outlook for Office 365 offer an option to set up the Outlook Mobile app for your phone. The option appears in four places in Outlook:
+
+- When you open outlook and select the **inbox** folder in Outlook 2016, Outlook 2019, or Outlook for Office 365, the following option appears on top of the navigation pane:
+
+    **IOS OR ANDROID? Take your Outlook on the go.**
+    
+    :::image type="content" source="media/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option/takeoutlookonthego.png" alt-text="IOS OR ANDROID? Take your Outlook on the go.":::
 
 - When you select the **Drafts** folder in Outlook 2016, Outlook 2019, or Outlook for Office 365, the following link appears in the right side panel:
 
