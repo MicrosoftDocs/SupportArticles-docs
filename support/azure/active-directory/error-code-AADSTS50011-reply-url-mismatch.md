@@ -29,7 +29,7 @@ For detailed steps about how to configure the values in Azure AD, refer to follo
 - [Tutorial: Azure AD SSO integration with Salesforce](/azure/active-directory/saas-apps/salesforce-tutorial)
 
 >[!Note]
->These values depend on what application being used. So you should get the values from the application vendor.
+>These values depend on what application being used. You should get the values from the application vendor.
 
 After you've updated the Reply URL value in Azure AD, and it matches the value sent by the application in the SAML request, you should be able to sign in to the application. 
 
