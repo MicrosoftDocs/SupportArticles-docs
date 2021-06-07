@@ -51,7 +51,7 @@ For Windows Server OS releases prior to Windows Server 2019 and on server config
 ## Install Windows Server on a computer that uses AMD EPYC 7002 and 7003 Series processors
 
 > [!NOTE]
-> When installing any version of Windows Server, use the latest installation media image from an appropriate licensing channel.  After the initial Windows installation is completed, update the system to the most recent Windows Update release.
+> When installing any version of Windows Server, use the latest installation media image from an appropriate licensing channel. After the initial Windows installation is completed, update the system to the most recent Windows Update release.
 
 For servers configured to enable 256 processor threads and that are running either Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019 (prior to October 2019), follow these steps:
 
