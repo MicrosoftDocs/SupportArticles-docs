@@ -43,6 +43,8 @@ This issue occurs if the size of the mailbox in Exchange Online is less than 10 
 
 For mailboxes that are smaller than 10 MB, manually run the Start-ManagedFolderAssistant –Identity \<mailbox> cmdlet every time that you want to move messages to the archive.
 
+For more information about Managed Folder Assistant see [Configure and run the Managed Folder Assistant in Exchange Server](https://docs.microsoft.com/en-us/Exchange/policy-and-compliance/mrm/configure-managed-folder-assistant?view=exchserver-2019&viewFallbackFrom=exchonline-ww)
+
 ## More information 
 
 For more information about how to set up and manage retention policies in Exchange Online, see [Set Up and Manage Retention Policies in Exchange Online with Windows PowerShell](/previous-versions/exchange-server/exchangeserver-149/gg271153(v=exchsrvcs.149)#defaulttags).
