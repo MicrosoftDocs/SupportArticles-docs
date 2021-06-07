@@ -33,7 +33,7 @@ As an example, refer to the following article for detailed steps about how to co
 
 After you've updated the Reply URL value in Azure AD, and it matches the value sent by the application in the SAML request, you should be able to sign in to the application.
 
-The following video shows how to fix the reply URL mismatch error in Azure AD.
+The following video shows how to fix the reply URL mismatch error in Azure AD:
 
 > [!VIDEO https://www.youtube.com/embed/a_abaB7494s]
 
