@@ -24,16 +24,19 @@ To fix the issue, follow these steps:
 1. Ensure that the `AssertionConsumerServiceURL` value in the SAML request matches the Reply URL value configured in Azure AD.
 2. Verify or update the value in the Reply URL textbox to match the `AssertionConsumerServiceURL` value in the SAML request.
 
-For detailed steps about how to configure the values in Azure AD, refer to following article:
+As an example, refer to the following article for detailed steps about how to configure the values in Azure AD ::
 
 - [Tutorial: Azure AD SSO integration with Salesforce](/azure/active-directory/saas-apps/salesforce-tutorial)
 
 >[!Note]
->These values depend on what application being used. You should get the values from the application vendor.
+>These values depend on what application is being used. You should get the values from the application vendor.
 
 After you've updated the Reply URL value in Azure AD, and it matches the value sent by the application in the SAML request, you should be able to sign in to the application. 
 
+The following video shows how to fix the reply URL mismatch error in Azure AD.
+
+> [!VIDEO https://www.youtube.com/watch?v=a_abaB7494s]
+
 ## More Information
 
-- [Video: How to fix the reply URL mismatch error in Azure AD](https://www.youtube.com/watch?v=a_abaB7494s)
-- For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory Authentication and authorization error codes, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
