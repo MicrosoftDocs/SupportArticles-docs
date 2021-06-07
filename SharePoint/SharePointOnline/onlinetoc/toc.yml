@@ -153,6 +153,8 @@
       href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
       href: ../lists-and-libraries/modified-time-shows-incorrectly.md
+    - name: Mentions in SharePoint documents don’t send email to participant
+      href: ../lists-and-libraries/no-email-after-mention.md
     - name: Number of items in this list exceeds the list view threshold
       href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
     - name: Per-location view settings don't work at the folder level
@@ -339,6 +341,10 @@
       href: ../Sync/synced-file-moved-to-recycle-bin.md
     - name: SharePoint Workspace doesn't always sync automatically
       href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+  - name: Video
+    items:
+    - name: Can’t view embedded Stream video in Teams app
+      href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
     - name: A list view Web Part for a tasks list doesn't filter values
