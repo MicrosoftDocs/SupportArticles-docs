@@ -26,7 +26,7 @@ To fix the issue, follow these steps:
 
 For detailed steps about how to configure the values in Azure AD, refer to following article:
 
-- [Tutorial: Azure AD SSO integration with Salesforce](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/salesforce-tutorial)
+- [Tutorial: Azure AD SSO integration with Salesforce](/azure/active-directory/saas-apps/salesforce-tutorial)
 
 >[!Note]
 >These values depend on what application being used. So you should get the values from the application vendor.
