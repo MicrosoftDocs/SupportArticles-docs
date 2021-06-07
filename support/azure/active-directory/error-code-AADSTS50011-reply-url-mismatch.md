@@ -35,7 +35,7 @@ After you've updated the Reply URL value in Azure AD, and it matches the value s
 
 The following video shows how to fix the reply URL mismatch error in Azure AD.
 
-> [!VIDEO https://www.youtube.com/watch?v=a_abaB7494s]
+> [!VIDEO https://youtu.be/a_abaB7494s]
 
 ## More Information
 
