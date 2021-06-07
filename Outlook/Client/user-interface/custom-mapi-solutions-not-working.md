@@ -51,6 +51,8 @@ If Outlook.exe is properly registered, you will find an \Outlook.exe subkey unde
 
 To resolve this problem, repair your installation of Office using the following steps:
 
+- Windows 10
+Follow the steps described in [this article](https://support.microsoft.com/en-us/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
 - Windows 7 or Windows Vista
   1. Exit Outlook.
   2. Select **Start**, and then select **Control Panel**.
