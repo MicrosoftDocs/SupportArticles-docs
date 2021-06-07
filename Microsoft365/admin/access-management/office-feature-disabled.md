@@ -92,7 +92,7 @@ To resolve this issue, follow these steps to modify the registry:
 1. Exit Microsoft Outlook.
 1. Start Registry Editor. To do this, use one of the following procedures, as appropriate for your version of Windows:
 
-   - Windows 8: Press Windows Key+R to open a **Run** dialog box. Then, type **regedit.exe**,and then press **OK**.
+   - Windows 8 and Windows 10: Press Windows Key+R to open a **Run** dialog box. Then, type **regedit.exe**,and then press **OK**.
    - Windows 7: Click **Start**, type **regedit.exe** in the search box, and then press Enter.
 
 1. In Registry Editor, locate and then click the following subkey:
