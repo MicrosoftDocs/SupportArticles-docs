@@ -37,7 +37,7 @@ The primary factors that affect indexing performance are the number of items ind
 
 #### Number of items indexed
 
-On a typical user's computer, the Indexer indexes fewer than 30,000 items. On a power user's computer, the Indexer might index up to 300,000 items. If the Indexer indexes more than 400,000 items, you may begin to see performance issues. For more information, go to "[Size of the index database](#size-of-the index-database)."
+On a typical user's computer, the Indexer indexes fewer than 30,000 items. On a power user's computer, the Indexer might index up to 300,000 items. If the Indexer indexes more than 400,000 items, you may begin to see performance issues. For more information, go to [Size of the index database](#size-of-the-index-database).
 
 The Indexer can index up to 1 million items. If the Indexer tries to index beyond that limit, it may fail or cause resource problems on the computer (such as high usage of CPU, memory, or disk space).
 
