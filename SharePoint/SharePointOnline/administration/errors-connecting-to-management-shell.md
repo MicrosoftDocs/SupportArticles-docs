@@ -65,7 +65,7 @@ When you try to connect to SharePoint Online Management Shell, you receive one o
     ```powershell
     Connect-SPOService -Url https://contoso-admin.sharepoint.com  
     ```
-    **Note:** In this command, replace `https://contoso-admin.sharepoint.com` with the URL of the SharePoint site that you're administrating. 
+    **Note:** In this command, replace `https://contoso-admin.sharepoint.com` with the URL of the SharePoint site that you're administrating.
 
 ## References
 
