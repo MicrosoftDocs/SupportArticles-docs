@@ -24,7 +24,7 @@ To fix the issue, follow these steps:
 1. Ensure that the `AssertionConsumerServiceURL` value in the SAML request matches the Reply URL value configured in Azure AD.
 2. Verify or update the value in the Reply URL textbox to match the `AssertionConsumerServiceURL` value in the SAML request.
 
-As an example, refer to the following article for detailed steps about how to configure the values in Azure AD ::
+As an example, refer to the following article for detailed steps about how to configure the values in Azure AD:
 
 - [Tutorial: Azure AD SSO integration with Salesforce](/azure/active-directory/saas-apps/salesforce-tutorial)
 
