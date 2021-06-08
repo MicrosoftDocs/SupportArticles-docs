@@ -17,7 +17,7 @@ appliesto:
 - OneDrive for Business
 search.appverid: MET150
 ---
-# "You can't share this folder because there are too many items in the folder." or "You can't share this item because too many items have already been shared in this library." error when trying to share or break inheritance
+# "You can't share this folder because there are too many items in the folder" error when trying to share or break inheritance
 
 ## Symptoms
 
@@ -37,13 +37,11 @@ This issue occurs for one of the following reasons:
 
 To fix this issue, use the following methods:
 
-- Reduce the number of items in the foder, library or list that you want to break permission inheritance or reinherit permissions on. You can move some items out first, break or reinherit permissions and then move them back.
+- Reduce the number of items in the foder, library or list that you want to break permission inheritance or reinherit permissions on. You can move some items out first, break or reinherit permissions, and then move them back.
 - Reduce the number of uniquely permitted items in a list or library.
 
 ## More information
 
-For more information about lists and libraries, see the following articles:
-
-- [Items in lists and libraries](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries)
+For more information about lists and libraries, see [Items in lists and libraries](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
