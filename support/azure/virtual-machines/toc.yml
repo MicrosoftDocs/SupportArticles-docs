@@ -367,9 +367,7 @@
 
 - name: Troubleshoot Shared Image Galleries
   items:
-  - name: Troubleshoot Shared Image Gallery - Windows
-    href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
-  - name: Troubleshoot Shared Image Gallery - Linux
+  - name: Troubleshoot Shared Image Gallery - Windows/Linux
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Backup and restore
