@@ -52,7 +52,7 @@ To assign a license:
 1. Sign in to https://admin.microsoft.com.
 2. Navigate to **Users** > **Active Users**.
 3. Select the admin account you want to assign a license to and then select **Manage product licenses**.
-4. In the apps list, enable **Skype for Business Online** or **Microsoft Teams** checkboxes and press **Save Changes**.
+4. In the apps list, check either the **Skype for Business Online** or **Microsoft Teams** checkboxes and select **Save Changes**.
 
 This fix can take 24 hours for synchronization to take effect.
 
