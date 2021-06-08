@@ -56,16 +56,17 @@ Contact numbers:
 
 ### How to update contact information
 
-> [!NOTE]
-> The following instructions are only applicable to the classic [Outlook on the Web](https://outlook.office365.com/owa/?path=/classic). It will be deprecated in future, and you may need to use alternative ways to update your profile information, like using [Microsoft 365 Delve](https://support.microsoft.com/office/view-and-update-your-profile-in-delve-4e84343b-eedf-45a1-aeb9-8627ccca14ba).
+To update contact information in Outlook Web App, follow these steps:
 
 1. Sign in to Outlook Web App.
-2. Click **Settings**, and then click **Options**.
-3. In the left navigation pane, click **My account**.
-4. Make the changes that you want, and then click **Save**.
+2. Select **Settings**, and then select **Options**.
+3. In the left navigation pane, select **General** > **My account**.
+4. Make the changes that you want, and then select **Save**.
 
 > [!NOTE]
 > The offline address book (OAB) will not be updated for at least 24 hours.
+
+To update contact information in Outlook on the web, see [View and update your profile in Delve](https://support.microsoft.com/office/view-and-update-your-profile-in-delve-4e84343b-eedf-45a1-aeb9-8627ccca14ba). For more information about Delve, see [What is Delve](https://support.microsoft.com/office/what-is-delve-1315665a-c6af-4409-a28d-49f8916878ca).
 
 ### How administrators can update users' contact information
 
