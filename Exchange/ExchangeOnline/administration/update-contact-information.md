@@ -57,7 +57,7 @@ Contact numbers:
 ### How to update contact information
 
 > [!NOTE]
-> The below instruction is only applicable to the classic OWA, available at [this URL](https://outlook.office365.com/owa/?path=/classic). It will be deprecated in future, and you may need to use alternative ways to update your profile information, like [Microsoft 365 Delve](https://support.microsoft.com/en-us/office/view-and-update-your-profile-in-delve-4e84343b-eedf-45a1-aeb9-8627ccca14ba).
+> The following instructions are only applicable to the classic [Outlook on the Web](https://outlook.office365.com/owa/?path=/classic). It will be deprecated in future, and you may need to use alternative ways to update your profile information, like using [Microsoft 365 Delve](https://support.microsoft.com/office/view-and-update-your-profile-in-delve-4e84343b-eedf-45a1-aeb9-8627ccca14ba).
 
 1. Sign in to Outlook Web App.
 2. Click **Settings**, and then click **Options**.
