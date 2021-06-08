@@ -103,7 +103,7 @@ To fix this issue, identify the client's public IP address that's used by Teams,
 
    After the restart, Teams will find a match for the client's IP address in the list of trusted IP addresses, as shown in the following example:
 
-   :::image type="content" source="media/issues-with-lmo/match-address.png" alt-text="Screenshot of adding missing IP address.":::
+   :::image type="content" source="media/issues-with-lmo/match-address.png" alt-text="Screenshot of matched IP address.":::
 
 ## Incoming calls fail or go to voicemail if both LMO and LBR are enabled
 
