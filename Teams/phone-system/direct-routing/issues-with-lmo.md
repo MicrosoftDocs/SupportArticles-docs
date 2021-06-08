@@ -33,7 +33,7 @@ To check the gateway configuration, run the following [Get-CsOnlinePSTNGateway
 Get-CSOnlinePSTNGateway | Select Identity, Fqdn, Enabled, MediaBypass, GatewaySiteId, ProxySbc, BypassMode
 ```
 
-For LMO to be enabled, make sure that all the properties that are selected in this cmdlet are set. This is especially important for BypassMode. Here's an example of the output from this cmdlet:
+For LMO to be enabled, make sure that all the properties that are selected in this cmdlet are set. This is especially important for `BypassMode`. Here's an example of the output from this cmdlet:
 
 ```output
 Identity        : VNsbc.contoso.com 
@@ -57,7 +57,7 @@ BypassMode      : Always
 
 ## Wrong location sent in X-Ms-UserLocation header
 
-If the network location information in the `X-Ms-UserLocation` header is specified as **external**, but you expect to see a value of internal, this means that the public IP address of the Teams client doesn't match any entry in the list of trusted IP addresses.  
+If the network location information in the `X-Ms-UserLocation` header is specified as **external**, but you expect to see a value of **internal**, this means that the public IP address of the Teams client doesn't match any entry in the list of trusted IP addresses.  
 
 To fix this issue, identify the client's public IP address that's used by Teams, and then add it to the list.
 
