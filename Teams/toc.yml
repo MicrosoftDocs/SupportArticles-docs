@@ -23,8 +23,6 @@
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
-    - name: Organizations can't prevent users from changing profile photos
-      href: ./known-issues/cant-prevent-users-from-changing-profile-picture.md
     - name: Public team list doesn't display all teams
       href: ./known-issues/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
