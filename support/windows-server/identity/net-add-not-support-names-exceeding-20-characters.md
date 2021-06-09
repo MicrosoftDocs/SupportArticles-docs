@@ -107,7 +107,11 @@ End If
 ##### script end #####
 ```
 
-### Workaround
+## Workaround
 
 To work around this issue in Windows Server 2008 and later, use the **Add-ADGroupMember** PowerShell command, as described in the following TechNet article:  
-[Add-ADGroupMember](https://technet.microsoft.com/library/ee617210.aspx)
+[Add-ADGroupMember](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617210(v=technet.10))
+
+If you are using PowerShell 5.1, use the **Add-LocalGroupMember -Group** PowerShell command, as described in the following article:  
+[Add-LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember?view=powershell-5.1)
+
