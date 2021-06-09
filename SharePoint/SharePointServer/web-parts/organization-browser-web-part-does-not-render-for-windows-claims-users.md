@@ -69,7 +69,58 @@ The Organization Browser Web Part control is rendered on the page by the CreateH
   }  
 </script>  
 ```  
+### For SharePoint Server 2016
+```
+  <script type="text/javascript">
+            function CreateHierarchyChartControl(parentId, profileId, type, persistControlId, flowDirection, silverLightControlId){
+            var i = profileId.indexOf("|");
+            var claimsmode = profileId.substr(i - 1, 1);
+            if ((i >= 0) & (claimsmode == "w")) {
+                profileId = profileId.substr(i + 1, profileId.length - i - 1);
+                var initParam = profileId + ',' + type + ',' + persistControlId + ',' + flowDirection + ',' + silverLightControlId;
+                var host = document.getElementById(parentId);
+                host.setAttribute('width', '100%');
+                host.setAttribute('height', '100%');
+                Silverlight.createObject('/_layouts/ClientBin/hierarchychart.xap',
+                 host,
+                 'ProfileBrowserSilverlightControl',
+                 {
+                     top: '30',
+                     width: '100%',
+                     height: '100%',
+                     version: '2.0',
+                     isWindowless: 'true',
+                     enableHtmlAccess: 'true'
+                 },
+                 {
+                     onLoad: OnHierarchyChartLoaded
+                 },
+                  initParam,
+                  null);
+            }
+            }            
 
+        //For html view
+            SP.UI.Portal.SimpleProfileBrowser.prototype.$35_0 = function(b, c, d) {
+            var i = b.indexOf("|");
+            b = b.substr(i + 1, b.length - i - 1);
+            var a = $get(c);
+            if (a) {
+                a.innerHTML = "<DIV></DIV><DIV></DIV><DIV></DIV>";
+                this.$m_0 = a.firstChild;
+                this.$1C_0 = this.$m_0.nextSibling;
+                this.$1a_0 = this.$1C_0.nextSibling
+            }
+            if (d) {
+                this.$m_0.innerHTML = String.format(SpsClient.ScriptResources.silverlight_Install_Message, "<a href='javascript:Silverlight.getSilverlight(\"2.0\");'>Silverlight</a>");
+                Sys.UI.DomElement.addCssClass(this.$m_0, "ms-profileBrowserHeaderText");
+                Sys.UI.DomElement.addCssClass(this.$m_0.firstChild.nextSibling, "ms-profileBrowserSilverlightLink")
+            }
+            this.$38_0(b)
+        }
+       
+</script>
+```
 ### Method 1: Add a Content Editor Web Part to the page  
 
 1. Edit the page that contains the Organization Browser web part.   
