@@ -101,7 +101,7 @@ To fix this issue, you have two options:
 2. In the search results, select **Default apps**.
 3. Under **Web browser**, select the browser currently listed, and then select **Microsoft Edge**.
 
-**Paste the meeting link into Internet Explorer**
+**Paste the meeting link into Microsoft Edge**
 
 1. Go to **Outlook** > **Calendar**, and open the meeting request.
 2. Right-click the meeting link, and choose **Copy Hyperlink**.
