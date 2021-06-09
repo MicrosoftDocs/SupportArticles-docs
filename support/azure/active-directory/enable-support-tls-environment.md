@@ -36,7 +36,7 @@ To maintain a secure connection to Azure Active Directory (Azure AD) and Microso
 ### Guidelines for enabling TLS 1.2 on clients
 
 - Update Windows and the default TLS that you use for "WinHTTP".
-- Identify and reduce you dependency on the client apps and operating systems that don’t support TLS 1.2.
+- Identify and reduce you dependency on the client apps and operating systems that don't support TLS 1.2.
 - Enable TLS 1.2 for applications and services that communicate with Azure AD.
 - Update and configure your .NET Framework installation to support TLS 1.2.
 - Make sure that applications and PowerShell (that use [Azure AD Graph](https://graph.windows.net) and [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
@@ -120,7 +120,7 @@ Managed Azure AD integrated applications and Windows PowerShell scripts (using A
 
 First, determine the installed .NET versions.
 
-- For more information, see [Determine which versions and service pack levels of .NET Framework are installed](/dotnet/framework/determine-dotnet-versions-service-pack-levels).
+- For more information, see [Determine which versions and service pack levels of .NET Framework are installed](../../dotnet/framework/determine-dotnet-versions-service-pack-levels.md).
 
 #### Install .NET updates
 
