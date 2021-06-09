@@ -69,7 +69,7 @@ The Organization Browser Web Part control is rendered on the page by the CreateH
   }  
 </script>  
 ```  
-### For SP 2016 OnPrem ###
+### For SharePoint Server 2016
 ```
   <script type="text/javascript">
             function CreateHierarchyChartControl(parentId, profileId, type, persistControlId, flowDirection, silverLightControlId){
