@@ -53,4 +53,4 @@ Value: **LastDownloadTimesPerAccount**
 
 ## Related article
 
-[Outlook DLP policy tips not working for certain conditions in email body and attachments](https://support.microsoft.com/en-us/office/outlook-dlp-policy-tips-not-working-for-certain-conditions-in-email-body-and-attachments-8a32496a-3478-403c-b2eb-04a218f7443c)
+[Outlook DLP policy tips not working for certain conditions in email body and attachments](https://support.microsoft.com/office/outlook-dlp-policy-tips-not-working-for-certain-conditions-in-email-body-and-attachments-8a32496a-3478-403c-b2eb-04a218f7443c)
