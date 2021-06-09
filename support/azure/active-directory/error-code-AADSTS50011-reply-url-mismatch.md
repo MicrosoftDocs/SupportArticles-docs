@@ -29,7 +29,7 @@ As an example, refer to the following article for detailed steps about how to co
 - [Tutorial: Azure AD SSO integration with Salesforce](/azure/active-directory/saas-apps/salesforce-tutorial)
 
 >[!Note]
->These values depend on what application is being used. You should get the values from the application vendor.
+>The reply URL is also known as Redirect URI. These values depend on what application is being used. You should get the values from the application vendor.
 
 After you've updated the Reply URL value in Azure AD, and it matches the value sent by the application in the SAML request, you should be able to sign in to the application.
 
