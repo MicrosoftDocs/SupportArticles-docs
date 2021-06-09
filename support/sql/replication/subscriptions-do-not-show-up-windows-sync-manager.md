@@ -10,7 +10,7 @@ ms.prod: sql
 ---
 # Pull subscriptions don't show up in Windows Synchronization Manager
 
-_Applies to:_ &nbsp; SQL Server  
+_Applies to:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014
 
 ## Symptoms
 
