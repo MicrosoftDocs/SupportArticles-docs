@@ -73,7 +73,7 @@ You don't have to download anything, just follow these steps:
    - If the meeting request is from somebody in your own organization, select **Sign in if you are from the organizer's company** or **Sign in if you are an Office 365 user**.
 
 > [!TIP]
-> If you're having trouble joining the meeting, open an **InPrivate Browsing** session in Internet Explorer, and try joining the meeting again.
+> If you're having trouble joining the meeting, open an **InPrivate** session in Microsoft Edge, and try joining the meeting again.
 
 Are you able to join the meeting?
 
@@ -83,29 +83,29 @@ Are you able to join the meeting?
 
 ### Check your default browser
 
-If Teams is installed on your computer but the meeting opens in Teams Web App, it usually means that Internet Explorer is not your default browser.
+If Teams is installed on your computer but the meeting opens in Teams Web App, it usually means that Microsoft Edge is not your default browser.
 
 To fix this issue, you have two options:
 
-- Make Internet Explorer your default browser, and then try joining the meeting again.
+- Make Microsoft Edge your default browser, and then try joining the meeting again.
 
   OR
 
-- Copy the meeting link, and paste it into Internet Explorer.
+- Copy the meeting link, and paste it into Microsoft Edge.
 
 #### Details
 
-**Make Internet Explorer your default browser**
+**Make Microsoft Edge your default browser in Windows 10**
 
-1. On the Windows desktop, start Internet Explorer.
-2. Go to **Tools** > **Internet Options** > **Programs**.
-3. Select **Make default**, and select **OK**.
+1. Select the **Start** button, and then type **Default apps**.
+2. In the search results, select **Default apps**.
+3. Under **Web browser**, select the browser currently listed, and then select **Microsoft Edge**.
 
-**Paste the meeting link into Internet Explorer**
+**Paste the meeting link into Microsoft Edge**
 
 1. Go to **Outlook** > **Calendar**, and open the meeting request.
 2. Right-click the meeting link, and choose **Copy Hyperlink**.
-3. Open Internet Explorer, and paste the meeting link into the address box.
+3. Open Microsoft Edge, and paste the meeting link into the address box.
 
 If your problem is not solved, see [Not able to join a Teams meeting](#not-able-to-join-a-teams-meeting).
 
@@ -128,7 +128,7 @@ If your problem is not solved, see [Not able to join a Teams meeting](#not-able-
 
 If you've already joined the meeting, close all your browser windows, and follow these steps:
 
-1. Make sure you're using a supported [platform and browser](https://support.microsoft.com/office/supported-platforms-for-skype-meetings-app-skype-for-business-web-app-0269b0a0-d8da-4820-91d8-a868a439c0f7).
+1. Make sure you're using a supported [platform and browser](/microsoftteams/get-clients#web-client).
 1. Find the Teams web app at [https://teams.microsoft.com](https://teams.microsoft.com).
 1. Do one of the following:
 
