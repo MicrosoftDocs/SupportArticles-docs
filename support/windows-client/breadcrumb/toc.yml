@@ -4,7 +4,7 @@
   items:
 
   - name: Troubleshoot
-    tocHref: /windows-server/
+    tocHref: /windows-client/
     topicHref: /troubleshoot/index
     items:
     - name: Windows
