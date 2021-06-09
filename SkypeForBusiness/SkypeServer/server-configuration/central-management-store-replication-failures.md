@@ -164,7 +164,7 @@ To troubleshoot the TCP port 4443 routing issue that is described in the Symptom
 
    > [!NOTE]
    > Microsoft Windows Vista, Windows Server 2008 and later versions of the Windows Server operating systems require the installation of the Telnet client. For more information about how to install Telnet client, see [Install Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771275(v=ws.10)).
-1. Perform steps 1 to step 6 that are listed at the beginning of the [Resolution](#resolution) section.   
+1. Perform step 1 to step 6 that are listed at the beginning of the [Resolution](#resolution) section.   
 
 > [!NOTE]
 > Some hardware load balancer vendors have specific configurations for TCP port 4443 for the Lync Server Replicator Agent service on the Lync Edge pool internal interface. For more information, see [Infrastructure qualified for Microsoft Lync](/SkypeForBusiness/lync-cert/qualified-ip-pbx-gateway).
@@ -180,13 +180,13 @@ Use the following steps to ensure that each of the Lync Server Edge server(s) th
 1. Add the Certificate Snap-in.   
 2. To view the General information for the Server certificate that's used to authenticate the Lync Server Edge server(s) internal interfaces that belong to the Lync Server Edge server pool, select the [General Tab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753240(v=ws.11)).
 3. The Certificate Information on the General tab of the Certificate dialog box should say "You have a private key assigned to this certificate". If this line is missing from the Certificate Information, read the **To export the certificate with the private key for Edge Servers in a pool** section of the [Details Tab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771722(v=ws.11)).
-4. Perform steps 1 to step 6 that are listed at the beginning of the [Resolution](#resolution) section.   
+4. Perform step 1 to step 6 that are listed at the beginning of the [Resolution](#resolution) section.   
 
 ### Scenario 3
 
 To troubleshoot why the Lync Server File Transfer Agent Service cannot access the folder(s) listed under the RTCReplicaRoot folder on the remote Lync Server role server that is mentioned in the Symptoms section:
 
-1. On a Windows Server-based computer that hosts the Lync Server front end services, click Start, click Run and type explore.exe, and then click OK.
+1. On a Windows Server-based computer that hosts the Lync Server front end services, select **Start** > **Run**, type *explore.exe*, and then click **OK**.
 2. Use Windows Explorer to locate the \<local drive>:\RTCReplicaRoot\xds-replica share on the Lync Server role server that is described as Access Denied in the LS File Transfer Agent Service Event ID 1034 that is displayed as Scenario 3 of the Symptoms section.   
 3. Initial access to the xds-replica shared folder requires local administrator ownership NTFS permissions. 
 4. Right-click the xds-replica folder, and then select **Properties**.   
@@ -196,13 +196,13 @@ To troubleshoot why the Lync Server File Transfer Agent Service cannot access th
 8. Select **OK** after the xds-replica Properties dialog box is closed.   
 9. Right-click the xds-replica folder, and then select **Share**.   
 10. Select the **Change sharing permissions** option on the **File sharing** dialog box.   
-11. Make sure that the RTC Local Config Replicator local security account is added to the File sharing dialog's ACL with co-owner or read/write permissions. Click **Share**, click **Done**.   
-12. Use the **Active Directory Users and Computers** snap-in to make sure that the Windows Active directory computer account for the Lync front end server that hosts the CMS role is a member of the RTCUniversalConfigReplicator Windows security group.   
-13. From the console of a Windows Server based computer that hosts the Active Directory Domain Services role, open the **Active Directory Users and Computers** tool   
-14. Locate the**RTCUniversalConfigReplicator** Windows security group and right-click it, and then click Properties.   
-15. Select the **Member** tab.   
+11. Make sure that the RTC Local Config Replicator local security account is added to the File sharing dialog's ACL with co-owner or read/write permissions. Select **Share**, and then select **Done**.   
+12. Use the **Active Directory Users and Computers** snap-in to make sure that the Windows Active directory computer account for the Lync front end server that hosts the CMS role is a member of the **RTCUniversalConfigReplicator** Windows security group.   
+13. From the console of a Windows Server based computer that hosts the Active Directory Domain Services role, open the **Active Directory Users and Computers** tool.  
+14. Locate the**RTCUniversalConfigReplicator** Windows security group, right-click it, and then select **Properties**.
+15. Select the **Member** tab.
 16. Make sure that the Windows Active Directory computer account for the Lync Server front end server that hosts the CMS role is added to the members list. Click **OK**.   
-17. Perform steps 1 to step 6 that are listed at the beginning of the [Resolution](#resolution) section.   
+17. Perform step 1 to step 6 that are listed at the beginning of the [Resolution](#resolution) section.   
 
 ## More Information
 
