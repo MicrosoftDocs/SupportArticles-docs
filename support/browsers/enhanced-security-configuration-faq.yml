@@ -76,9 +76,9 @@ sections:
       - question: |
           How to disable Internet Explorer ESC by using a script
         answer: |
-          1. Download and save IEHArden_V5.zip, or you can create an IEHArden_V5.bat file with the following batch file content.
+          1. Create an IEHArden_V5.bat file with the following batch file content.
           
-          2. Extract IEHArden_V5.bat from the compressed (.zip) file, and then run it either at an administrative command prompt or as part of log-in script by using the procedure that is documented at [How to assign user logon scripts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789190(v=ws.11)#how-to-assign-user-logon-scripts).
+          2. Run the bat file either at an administrative command prompt or as part of log-in script by using the procedure that is documented at [How to assign user logon scripts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789190(v=ws.11)#how-to-assign-user-logon-scripts).
           
           ### Contents of the batch file
 
