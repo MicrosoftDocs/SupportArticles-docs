@@ -9,4 +9,4 @@ ms.reviewer:
 ---
 # How to troubleshoot temporary storage on Azure App Service
 
-> [!VIDEO https://www.youtube.com/embed/watch?v=bk8h-VYaIXs]
+> [!VIDEO https://www.youtube.com/embed/bk8h-VYaIXs]
