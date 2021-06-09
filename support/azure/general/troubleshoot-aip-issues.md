@@ -47,13 +47,13 @@ _Original KB number:_ &nbsp; 4516523
 
 To export Azure Information Protection logs, follow these steps:
 
-1. Open an Office document or create an email message in Outlook. 
+1. Open an Office document or create an email message in Outlook.
 2. Select **Protect**  > **Help and feedback**.
 3. Select **Export Logs**.
 4. Save the logs to the location of your choice in case you have to attach them to any service request.
 
-- [Review Azure Information Protection documentation](https://docs.microsoft.com/azure/information-protection/what-is-information-protection) 
-- [Review Azure Information Protection subscriptions and features](https://azure.microsoft.com/pricing/details/information-protection) 
-- [Requirements for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/get-started/requirements) 
-- [Quick start tutorial for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/get-started/infoprotect-quick-start-tutorial) 
-- [Download Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018) 
+- [Review Azure Information Protection documentation](https://docs.microsoft.com/azure/information-protection/what-is-information-protection)
+- [Review Azure Information Protection subscriptions and features](https://azure.microsoft.com/services/information-protection/)
+- [Requirements for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/get-started/requirements)
+- [Quick start tutorial for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/get-started/infoprotect-quick-start-tutorial)
+- [Download Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018)
