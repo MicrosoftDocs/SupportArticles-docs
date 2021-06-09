@@ -63,9 +63,9 @@ To work around this issue, use one of the following methods:
 - Replace the ActiveX controls with Form Controls in affected workbooks.    
 - Temporarily make the ActiveX controls visible when the code runs.  
 
+> [!NOTE]
+> If there are many Shape objects in the worksheet, the VBA code may still run slowly after you use the workarounds. In this situation, remove the Shape objects.
+ 
 ## Status
 
 Microsoft has confirmed that this is an issue in the products that are listed in the "Applies to" section.
-
-> [!NOTE]
-> If the VBA code still writes to cells slowly after the above changes, you can try and delete the shape objects (i.e. Textboxs, Charts, etc.) 
