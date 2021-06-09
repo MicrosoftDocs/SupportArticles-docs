@@ -9,7 +9,7 @@
     items:
     - name: Windows
       tocHref: /troubleshoot/windows/
-      topicHref: /troubleshoot/windows/
+      topicHref: /troubleshoot/windows/index
       items:
       - name: Windows Server
         tocHref: /troubleshoot/windows-client/
