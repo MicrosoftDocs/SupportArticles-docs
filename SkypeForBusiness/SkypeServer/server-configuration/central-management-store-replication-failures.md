@@ -199,7 +199,7 @@ To troubleshoot why the Lync Server File Transfer Agent Service cannot access th
 11. Make sure that the RTC Local Config Replicator local security account is added to the File sharing dialog's ACL with co-owner or read/write permissions. Select **Share**, and then select **Done**.   
 12. Use the **Active Directory Users and Computers** snap-in to make sure that the Windows Active directory computer account for the Lync front end server that hosts the CMS role is a member of the **RTCUniversalConfigReplicator** Windows security group.   
 13. From the console of a Windows Server based computer that hosts the Active Directory Domain Services role, open the **Active Directory Users and Computers** tool.  
-14. Locate the**RTCUniversalConfigReplicator** Windows security group, right-click it, and then select **Properties**.
+14. Locate the **RTCUniversalConfigReplicator** Windows security group, right-click it, and then select **Properties**.
 15. Select the **Member** tab.
 16. Make sure that the Windows Active Directory computer account for the Lync Server front end server that hosts the CMS role is added to the members list. Click **OK**.   
 17. Perform step 1 to step 6 that are listed at the beginning of the [Resolution](#resolution) section.   
