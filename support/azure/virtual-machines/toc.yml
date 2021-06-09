@@ -144,6 +144,8 @@
       href: linux-kernel-panics-upgrade.md
     - name: Linux VM does not start after an LIS upgrade
       href: linux-vm-not-start-kernel-lis.md
+    - name: Device names are changed
+      href: troubleshoot-device-names-problems.md
   - name: Windows
     href: boot-error-troubleshoot.md
     items:
@@ -229,20 +231,20 @@
       href: error-code-0xc0000605.md
     - name: Can't boot with 0xc0000221
       href: boot-error-0xc0000221.md
-  - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
-    href: windows-boot-failure.md
-  - name: Troubleshoot Windows VM OS with missing boot manager
-    href: os-bootmgr-missing.md
-  - name: OS isn't found
-    href: os-not-found.md
-  - name: Troubleshoot Windows VM OS boot failure
-    href: os-bucket-boot-failure.md
-  - name: 'VM stops at "Please wait for the Group Policy Client" screen'
-    href: vm-stops-at-please-wait-for-group-policy-client.md
-  - name: Azure VM cannot RDP - driver IRQL not less or equal
-    href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
-  - name: Azure VM cannot RDP - working on features
-    href: azure-vm-cannot-rdp-working-features.md
+    - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
+      href: windows-boot-failure.md
+    - name: Troubleshoot Windows VM OS with missing boot manager
+      href: os-bootmgr-missing.md
+    - name: OS isn't found
+      href: os-not-found.md
+    - name: Troubleshoot Windows VM OS boot failure
+      href: os-bucket-boot-failure.md
+    - name: VM stops at "Please wait for the Group Policy Client" screen
+      href: vm-stops-at-please-wait-for-group-policy-client.md
+    - name: Azure VM cannot RDP - driver IRQL not less or equal
+      href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
+    - name: Azure VM cannot RDP - working on features
+      href: azure-vm-cannot-rdp-working-features.md
 
 - name: VM restart issues
   items:
@@ -331,22 +333,6 @@
     href: reset-local-password-without-agent.md
   - name: Linux
     href: reset-password.md
-  - name: VM recovery access
-    items:
-    - name: Windows
-      items:
-      - name: PowerShell
-        href: troubleshoot-recovery-disks-windows.md
-      - name: Azure portal
-        href: troubleshoot-recovery-disks-portal-windows.md
-    - name: Linux
-      items:
-      - name: CLI
-        href: troubleshoot-recovery-disks-linux.md
-      - name: Azure portal
-        href: troubleshoot-recovery-disks-portal-linux.md
-    - name: Device names are changed
-      href: troubleshoot-device-names-problems.md
 
 - name: Virtual Disk Management issues
   items:
@@ -362,8 +348,6 @@
     href: storage-classic-cannot-delete-storage-account-container-vhd.md
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
-  - name: Use nested virtualization
-    href: troubleshoot-vm-by-use-nested-virtualization.md
 
 - name: Troubleshoot Shared Image Galleries
   items:
@@ -374,15 +358,6 @@
   items:
   - name: Troubleshoot backup failures on Azure VM
     href: /azure/backup/backup-azure-vms-troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
-
-- name: Repair a VM using commands
-  items:
-  - name: Windows
-    href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
-  - name: Linux
-    href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
-  - name: Linux - Repair a VM with the help of ALAR
-    href: repair-linux-vm-using-ALAR.md
 
 - name: Windows Activation issues
   items:
@@ -418,6 +393,31 @@
       href: serial-console-power-options.md
     - name: Common Serial Console errors
       href: serial-console-errors.md
+
+- name: VM recovery access
+  items:
+  - name: Repair VM Creation
+    items:
+    - name: Windows
+      items:
+      - name: Portal
+        href: troubleshoot-recovery-disks-portal-windows.md
+      - name: PowerShell
+        href: troubleshoot-recovery-disks-windows.md
+      - name: Azure Virtual Machine repair
+        href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+    - name: Linux
+      items:
+      - name: Portal
+        href: troubleshoot-recovery-disks-portal-linux.md
+      - name: CLI
+        href: troubleshoot-recovery-disks-linux.md
+      - name: Azure Virtual Machine repair
+        href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
+      - name: Azure Linux Auto Repair
+        href: repair-linux-vm-using-ALAR.md
+    - name: Repair VM with Nested Hyper-V
+      href: troubleshoot-vm-by-use-nested-virtualization.md
 
 - name: Azure Disk Encryption issues
   items:
