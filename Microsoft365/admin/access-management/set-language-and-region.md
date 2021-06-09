@@ -47,7 +47,7 @@ Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocatio
 
 Synchronized identity model
 
-To sync the settings by using an on-premises instance of Azure AD, run the following example cmdlets after you substitute the actual values:
+To sync the settings by using an on-premises instance of Active Directory, run the following example cmdlets after you substitute the actual values:
 
 ```powershell
 Get-ADUser -SearchBase "OU=Italy,OU=Countries,DC=contoso,DC=com" -Filter * | Set-ADUser –replace @{PreferredLanguage="it-it"}
