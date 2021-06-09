@@ -26,25 +26,25 @@ _Original KB number:_ &nbsp; 4010175
 
 Microsoft Outlook 2016, Outlook 2019, and Outlook for Office 365 offer an option to set up the Outlook Mobile app for your phone. The option appears in four places in Outlook:
 
-- When you open outlook and select the **inbox** folder in Outlook 2016, Outlook 2019, or Outlook for Office 365, the following option appears on top of the navigation pane:
+- When you select the **Inbox** folder, the following option appears on top of the navigation pane:
 
     **IOS OR ANDROID? Take your Outlook on the go.**
     
     :::image type="content" source="media/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option/takeoutlookonthego.png" alt-text="IOS OR ANDROID? Take your Outlook on the go.":::
 
-- When you select the **Drafts** folder in Outlook 2016, Outlook 2019, or Outlook for Office 365, the following link appears in the right side panel:
+- When you select the **Drafts** folder, the following link appears in the right side panel:
 
    **Get to your drafts on the go with the Outlook mobile app**
 
    :::image type="content" source="media/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option/get-to-your-drafts-on-the-go-with-the-outlook-mobile-app.png" alt-text="the Get to your drafts on the go with the Outlook mobile app link":::
 
-- When you select the **File** tab in Outlook 2016, Outlook 2019, or Outlook for Office 365, the following link appears under **Account Settings**:
+- When you select the **File** tab, the following link appears under **Account Settings**:
 
    **Get the Outlook app for iPhone, iPad, Android, or Windows 10 Mobile.**
 
    :::image type="content" source="media/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option/get-the-outlook-app-for-iphone-ipad-android,-or-windows-10-mobile.png" alt-text="Outlook 2016 - Get the Outlook app for iPhone, iPad, Android, or Windows 10 Mobile" border="false":::
 
-- The final page of the **Add Account** wizard in Outlook 2016, Outlook 2019, or Outlook for Office 365 contains a check box that has the following label:
+- The final page of the **Add Account** wizard contains a check box that has the following label:
 
   **Set up Outlook Mobile on my phone, too.**
 
