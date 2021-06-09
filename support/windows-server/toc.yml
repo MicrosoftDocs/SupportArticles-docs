@@ -172,6 +172,8 @@
       href: ./identity/lds-service-startup-fails.md
     - name: Numerous "Event ID 1216" Events
       href: ./identity/event-id-1216-directory-services-event-log.md
+    - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
+      href: ./identity/problems-with-dc-ad-integrated-dns-zones.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
       href: ./identity/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
@@ -198,6 +200,8 @@
       href: ./identity/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
       href: ./identity/active-directory-replication-error-1256.md
+    - name: Active Directory replication error 8304
+      href: ./identity/active-directory-replication-error-8304.md
     - name: Active Directory Replication Error 8451
       href: ./identity/active-directory-replication-error-8451.md
     - name: Active Directory replication Event ID 1388 or 1988
@@ -2764,6 +2768,8 @@
       href: ./windows-security/constrained-delegation-access-denied.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
+    - name: How to disable the Subject Alternative Name for UPN mapping
+      href: ./windows-security/disable-subject-alternative-name-upn-mapping.md
     - name: How to force Kerberos to use TCP instead of UDP
       href: ./windows-security/force-kerberos-use-tcp-instead-udp.md
     - name: KDC event  16 or 27 if DES for Kerberos is disabled
