@@ -57,6 +57,7 @@ Note 3 To invoke AutoComplete tips for AutoText, at least four characters of the
 |(Range Permission) maximum number allowed| 2,147,483,647 |
 |Size of file Word can open|512 MB|
 |Maximum number of records to display in recipients list dialog|10000|
+|Maximum paper size|22" x 22"|
 
 > [!NOTE]
 > The 10000 maximum is for the recipients' list dialog. If you search in that dialog, you are limited to the displayed records even if your data source has more records. The workaround is to filter the records so that those that you are looking for will fit in the dialog or to use the Find operation in the wizard task pane.
@@ -75,11 +76,10 @@ Note 3 To invoke AutoComplete tips for AutoText, at least four characters of the
 |(Range Permission) maximum number allowed| 32,752
 |Size of file Word can open|512 MB|
 |Maximum number of records to display in recipients list dialog|10000|
+|Maximum paper size|22" x 22"|
 
 Note 4 The 32,767 limit is for versions earlier than Word 2007.
 
 Note 5 Number of records to display in recipients list dialog
 
 You are limited to 10000 displayed records even if your data source has more records. To work around this limitation filter the records so that they fit in the dialog or use the Find operation from the wizard task pane.
-
-Note 6 The maximum dimension for paper height and width is 22".
