@@ -73,7 +73,6 @@ When you select the **Apply the read and unread setting to this folder and all i
 To work around this issue, follow these steps:
 
 1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-1. /powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps
 1. Apply read and unread information tracking on the parent public folder by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
@@ -82,7 +81,7 @@ To work around this issue, follow these steps:
 
    > [!NOTE]
    > Replace \<\PF> with your parent public folder identity.
-3. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
+1. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
    Get-PublicFolder "<\PF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
@@ -103,7 +102,7 @@ When you apply age limit settings to a public folder and its subfolders by selec
 
 To work around this issue, follow these steps:
 
-1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true). 
+1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Run the following cmdlet to apply age limit settings to subfolders:
 
    ```powershell
