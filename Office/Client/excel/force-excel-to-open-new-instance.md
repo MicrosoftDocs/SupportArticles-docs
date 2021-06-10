@@ -23,14 +23,16 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Excel 2013 and later versions, when you open multiple spreadsheets, they all open in the same instance of Excel. However, in some situations, such as when you're working with large Excel spreadsheets, you may want to open each one in a new instance. This article explains how to do that by configuring a registry key. 
+In Microsoft Excel 2013 and later versions, when you open multiple spreadsheets, they all open in the same instance of Excel. However, in some situations, you may want to open each file in a new instance. For example, if you're working with large Excel spreadsheets or if spreadsheet files are unrelated and you want "undo" and "Find/Replace" to work for each file independently. This article explains how to do that by configuring a registry key
 
 > [!NOTE]
-> This method works only when you use the Excel icon to open the application. If you use File Open within the Excel application or double-click a file in Windows Explorer, the files will still open in the same instance as designed. 
+> This method works only when you do not select a file when opening Excel. If you use File Open within the Excel application, select a file from the Excel Taskbar icon, or double-click a file in Windows Explorer, the files will still open in the same instance as designed.
 
 ## Cause
 
 By opening each spreadsheet in its own instance, the spreadsheet has a dedicated 2 gigabytes (GB) of memory to use. This is important if you are experiencing out-of-memory issues in a 32-bit version of Excel. 
+
+As Excel opens each spreadsheet file in one instance, only one set of Undo items is created for all such files. Hence, if you want to undo several items, undo may remove the changes across multiple files. If the files are unrelated, this may be an unexpected result. In addition, Excel has only one shared Find/Replace box. If your files are independent and you want to find items in each file with different Find strings, you will have to reenter the strings as you work between files. By opening each spreadsheet file as a separate instance, independent Undo lists and Find/Replace strings are created.
 
 > [!NOTE]
 > If you are using the Large Address Aware option (see the "More Information" section), this limit may be increased.
