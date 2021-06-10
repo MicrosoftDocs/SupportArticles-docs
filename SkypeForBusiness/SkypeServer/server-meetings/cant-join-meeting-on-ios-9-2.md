@@ -38,24 +38,6 @@ To fix this issue if you have a Lync Server 2013 environment, install [January 2
 
 To fix this issue if you have a Skype for Business Server 2015 environment, install [March 2016 cumulative update 6.0.9319.235 for Skype for Business Server 2015, Web Components Server](https://support.microsoft.com/help/3134262/march-2016-cumulative-update-6-0-9319-235-for-skype-for-business-serve).
 
-## Workaround
-
-To work around this issue if you have Lync 2013 for iPhone, Lync 2013 for iPad, or Skype for Business for iOS installed, follow these steps:
-
-1. Tap **Meetings**.   
-2. Tap the title of the meeting that you want to join.   
-3. Tap **Join Meeting**.   
-
-> [!NOTE]
-> This workaround applies only to organizers and attendees who have Lync 2013 for iPhone, Lync 2013 for iPad, or Skype for Business for iOS installed. If you don't have any of these apps installed, if you're on a Lync Server 2010 environment, or if you're a federated or anonymous attendee who is external to the organization, follow these steps to join the meeting:
-> 1. Copy the meeting URL from the meeting invitation.    
-> 2. Go to https://aka.ms/skypemeetingjoin-ios, and then paste the URL that you copied in step 1 into the text box on that webpage.
->3. Tap **Join Meeting**.   
-
-## Status
-
-Microsoft is researching this issue and will update this article when more information becomes available.
-
 ## References
 
 - [3097592 You can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 9 or 9.1 ](https://support.microsoft.com/help/3097592)
