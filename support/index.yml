@@ -81,12 +81,12 @@ productDirectory:
     url: /office/troubleshoot
       
   - title: Microsoft Dynamics 365
-    imageSrc: "https://docs.microsoft.com/media/hubs/dynamics365/dynamics-dynamics-logo.svg"
+    imageSrc: "media/hub-landing/dynamics-365.svg"
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
       
   - title: Microsoft Power Platform
-    imageSrc: "media/hub-landing/power-platform.png"
+    imageSrc: "media/hub-landing/dataverse.svg"
     summary: Troubleshooting articles for Microsoft Power Platform
     url: power-platform/index.yml
 
