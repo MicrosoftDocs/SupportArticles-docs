@@ -34,6 +34,7 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 
 > [!NOTE]
 > Serial Console is currently incompatible with a managed boot diagnostics storage account. To use Serial Console, ensure that you are using a custom storage account.
+> Storage Account must be public and accessible from all networks.
 
 ## Get started with the Serial Console
 The Serial Console for VMs and virtual machine scale set is accessible only through the Azure portal:
