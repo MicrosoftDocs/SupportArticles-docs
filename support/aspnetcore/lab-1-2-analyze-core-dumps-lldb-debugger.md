@@ -76,7 +76,7 @@ You should have already installed the dotnet-symbol tool together with dotnet-du
 
 ## Downloading symbols for the dump file
 
-In [part 1](lab-1-1-reproduce-troubleshoot.md), you were instructed how to unpack the core dump file from the apport report. Now it's time to download the symbol files. As explained in [this article](/dotnet/core/diagnostics/symbols), at a very high level symbols are mappings between the source code and the binaries. These mappings are used by debuggers to resolve the function or method names, source line information or local variable names when looking at a call stack.
+In [part 1](lab-1-1-reproduce-troubleshoot.md), you were instructed how to unpack the core dump file from the apport report. Now it's time to download the symbol files. As explained in this [article](/dotnet/core/diagnostics/symbols), symbols operate at a very high level. They serve as mappings between the source code and the binaries. These mappings are used by debuggers to resolve the function or method names, source line information, or local variable names when they read a call stack.
 
 You will use the `dotnet-symbol ~/dumps/dotnet/CoreDump -o ~/dumps/symbols --host-only` command to download the symbols for the memory dump file to the *:::no-loc text="~/dumps/symbols":::* directory.
 
@@ -88,7 +88,7 @@ The next step is to install the SOS-managed debugging extension. This will expos
 
 ## Installing SOS
 
-What is SOS? According to the [official documentation](https://github.com/dotnet/diagnostics/blob/main/documentation/sos.md), SOS is a debugger extension that allows a developer to inspect the managed state of a .NET application, including the ASP.NET Core and other .NET based applications such as .NET WPF and .NET Windows Forms. It is a cross-platform extension and can be loaded by WinDbg or cdb debugger on Windows and lldb on Linux and MacOS.
+What is SOS? According to the [official documentation](https://github.com/dotnet/diagnostics/blob/main/documentation/sos.md), SOS is a debugger extension that enables a developer to inspect the managed state of a .NET application, including the ASP.NET Core and other .NET-based applications such as .NET WPF and .NET Windows Forms. SOS is a cross-platform extension that can be loaded by WinDbg or a cdb debugger on Windows and by lldb on Linux and MacOS.
 
 To install SOS, you must first install the following dotnet-sos tool:
 
@@ -153,11 +153,14 @@ Also recall that an exception occurred, and this caused the process to crash. Ta
 
 :::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/pe.png" alt-text="BuggyAmb pe" border="true":::
 
-As you can see from the output, the `pe` command displays the information about the last exception thrown in the current thread, if there is any.
+As you can see in the output, the `pe` command displays the information about the last exception, if any, that was thrown in the current thread.
 
-In our case, we can see the exception message, which is **resource temporarily unavailable** in our case, but the type of the exception and the function names are not resolved. Instead their values are indicated as **unknown**.
+The exception message in this case is **resource temporarily unavailable**. However, the type of exception and the function names are not resolved. Instead, their values are indicated as **unknown**.
 
-The address of the exception is also displayed, and you can try passing this address as a parameter in the pe command to see if you can get more details. Now, run `pe 00007F8244048538` (replacing this address with the address that's displayed in the dump file). Notice, however, that this won't help your investigation much because the function names are still listed as **unknown**.
+The address of the exception is also displayed. You can try to pass this address as a parameter in the `pe` command to see whether more details are available. Then, run `pe 00007F8244048538`.
+
+> [!NOTE]
+> In this command, replace the address with the address that's displayed in the dump file.
 
 :::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/unknow.png" alt-text="BuggyAmb unknow" border="true":::
 

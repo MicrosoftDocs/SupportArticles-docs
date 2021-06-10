@@ -66,13 +66,13 @@ Capture a memory dump file of the same process. Notice that you will have to run
 
 ## Where does ProcDump create the core dump files?
 
-This is the information that you will certainly have to know, and you could spend a lot of time trying to find out where the dumps are created in when the ProcDump is used to capture core dumps.
+This is the information that you will certainly have to know. You could spend a lot of time trying to learn where the dump files are created when ProcDump is used to capture core dump files.
 
-The ProcDump output is not clear enough about the location where the core dump files are created in. If you look at the previous screenshot, it just writes the name of the file but not the actual path.
+The ProcDump output is not clear about where the core dump files are created. As shown in the previous screenshot, the output simply writes the name of the file, but not the actual path.
 
-Since the other tools usually use the */tmp/* or *:::no-loc text="/var/lib/systemd/coredump/":::* directories, you may think that the ProcDump also uses one of those folders but it is not the case. Instead, the dumps captured by ProcDump will be created in the ASP.NET Core application's "working directory."
+Because the other tools usually use the */tmp/* or *:::no-loc text="/var/lib/systemd/coredump/":::* directories, you may think that the ProcDump also uses one of these directories. However, this is not the case. Instead, the dump files that are captured by ProcDump are created in the ASP.NET Core application working directory.
 
-The working directory for the application is defined in the service control unit file. As you can see in the screenshot below, my sample application's working directory is */var/BuggyAmb_v1.1*, so any dump that ProcDump will create for my application will be in */var/BuggyAmb_v1.1* directory:
+The working directory for the application is defined in the service control unit file. As you can see in the next screenshot, the sample application's working directory is */var/BuggyAmb_v1.1*. Therefore, any dump file that ProcDump creates for this application will be put into the */var/BuggyAmb_v1.1* directory.
 
 :::image type="content" source="./media/lab-2-2-capture-dumps-procdump/cat.png" alt-text="BuggyAmb cat" border="true":::
 
