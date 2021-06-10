@@ -15,11 +15,11 @@ appliesto:
 - Microsoft SharePoint
 ---
 
-# Organization Browser web part does not render for Windows Claims users  
+# Organization Browser web part does not render for Windows Claims users
 
 ## Symptoms  
 
-When using the Organization Browser Web Part on Windows Claims enabled sites, the web part does not render any information. The same web part renders users with different Claims Authentication types correctly.   
+When using the Organization Browser Web Part on Windows Claims enabled sites, the web part does not render any information. The same web part renders users with different Claims Authentication types correctly.
 
 ## Cause  
 
@@ -37,7 +37,7 @@ The issue does not happen with any other Claims Authentication type as the Profi
 
 The Organization Browser Web Part control is rendered on the page by the CreateHierarchyChartControl  javascript function. This function is not aware of the fact that the UPSA Profile Database stores the Windows Claims users with a different naming format. To work around this, the below code snippet must be entered in to the site source right after the Organization Browser web part.  
 
-```  
+```javascript
 <script type="text/javascript">  
  function CreateHierarchyChartControl(parentId, profileId, type, persistControlId) {  
   var i = profileId.indexOf("|");  
@@ -68,9 +68,11 @@ The Organization Browser Web Part control is rendered on the page by the CreateH
     }  
   }  
 </script>  
-```  
-### For SharePoint Server 2016
 ```
+
+### For SharePoint Server 2016
+
+```javascript
   <script type="text/javascript">
             function CreateHierarchyChartControl(parentId, profileId, type, persistControlId, flowDirection, silverLightControlId){
             var i = profileId.indexOf("|");
@@ -121,26 +123,27 @@ The Organization Browser Web Part control is rendered on the page by the CreateH
        
 </script>
 ```
+
 ### Method 1: Add a Content Editor Web Part to the page  
 
-1. Edit the page that contains the Organization Browser web part.   
-2. Add a Content Editor Web Part right after the Organization Browser Web Part.   
-3. Edit the content.   
-4. In the Ribbon, click on HTML/Edit HTML Source under the Format Text tab.   
-5. Copy-paste the code above.   
-6. Hide the Chrome and the content of the web part so that it would not appear on the page.     
+1. Edit the page that contains the Organization Browser web part.
+2. Add a Content Editor Web Part right after the Organization Browser Web Part.
+3. Edit the content.
+4. In the Ribbon, click on HTML/Edit HTML Source under the Format Text tab.
+5. Copy-paste the code above.
+6. Hide the Chrome and the content of the web part so that it would not appear on the page.
 
 ### Method 2: Edit the page in SharePoint Designer  
 
 Please note that this method will detach the page from the site definition, and as such must be used with caution.  
 
-1. Open the page in SharePoint Designer for editing.   
-2. Change to code view.   
-3. In the Ribbon, click Advanced Mode    
-4. Locate the </ SharePoint:EmbeddedFormField> tag.   
-5. Paste the above code right after the tag.   
-6. Save your changes.    
-7. Click Yes in the Site Definition Page Warning window.     
+1. Open the page in SharePoint Designer for editing.
+2. Change to code view.
+3. In the Ribbon, click Advanced Mode
+4. Locate the </ SharePoint:EmbeddedFormField> tag.
+5. Paste the above code right after the tag.
+6. Save your changes.
+7. Click Yes in the Site Definition Page Warning window.
 
 ## More Information  
 
