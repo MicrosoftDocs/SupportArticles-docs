@@ -472,7 +472,7 @@
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
     - name: Permissions and settings don't propagate in EAC
-      href: ../public-folders/can't-apply-permissions-settings-to-subfolders.md
+      href: ../public-folders/permissions-settings-not-propagate-eac.md
     - name: Public folder couldn't be mail-enabled
       href: ../public-folders/public-folder-not-be-mail-enabled.md
     - name: Restored folders cause a migration batch failure
