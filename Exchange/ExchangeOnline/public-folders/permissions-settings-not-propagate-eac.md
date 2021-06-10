@@ -26,7 +26,7 @@ search.appverid:
 When you use the Exchange admin center (EAC) to apply permissions or settings to a public folder and its subfolders, either the actions don't finish, or you experience errors. This article describes the following issues with common tasks, and provides workarounds to complete them by using PowerShell.
 
 - [Permissions not applied to some or all subfolders](#permissions-not-applied-to-some-or-all-subfolders)
-- [The read and unread settings not applied](#the-read-and-unread-settings-not-applied)
+- [The read and unread setting not applied](#the-read-and-unread-setting-not-applied)
 - [Age limit settings not applied to subfolders](#age-limit-settings-not-applied-to-subfolders)
 
 ## Permissions not applied to some or all subfolders
@@ -60,13 +60,13 @@ To work around this issue, follow these steps:
    Get-Help .\Update-PublicFolderPermissions.ps1 -Full
    ```
 
-## The read and unread settings not applied
+## The read and unread setting not applied
 
 When you select the **Apply the read and unread setting to this folder and all its subfolders** check box on a parent public folder in the EAC, you receive the following error message:
 
 > The operation couldn't be performed because '\public folder identity' couldn't be found.
 
-:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-error.png" alt-text="Error when applying read and unread settings":::
+:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-error.png" alt-text="Error when applying read and unread setting":::
 
 ### Workaround
 
