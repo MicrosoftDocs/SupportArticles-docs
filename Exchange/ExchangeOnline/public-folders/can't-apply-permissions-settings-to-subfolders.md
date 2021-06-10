@@ -1,6 +1,6 @@
 ---
-title: Can't apply permissions or other settings to subfolders of a public folder in the Exchange admin center (EAC)
-description: When you apply permissions to a public folder and its subfolders in the EAC, the permissions aren't applied to all or some subfolders. When you apply other settings, you receive errors.
+title: Public folder permissions and settings don't propagate to subfolders in the Exchange admin center (EAC)
+description: When you apply permissions to a public folder and its subfolders in the EAC, the permissions aren't applied to some or all subfolders. When you apply other settings, you receive errors.
 author: helenclu
 ms.author: batre
 manager: dcscontentpm
@@ -21,13 +21,17 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# Can't propagate public folder permissions and settings in EAC
+# Public folder permissions and settings don't propagate in EAC
 
-When you try to apply permissions or settings to a public folder and its subfolders in the Exchange admin center (EAC), you experience the following issues.
+When you use the Exchange admin center (EAC) to apply permissions or settings to a public folder and its subfolders, either the actions don't finish, or you experience errors. This article describes the following issues with common tasks, and provides workarounds to complete them by using PowerShell.
 
-## Permissions aren't applied to all or some subfolders
+- [Permissions not applied to some or all subfolders](#permissions-not-applied-to-some-or-all-subfolders)
+- [The read and unread settings not applied](#the-read-and-unread-settings-not-applied)
+- [Age limit settings not applied to subfolders](#age-limit-settings-not-applied-to-subfolders)
 
-When you apply permissions to a public folder and its subfolders by selecting the **Apply changes to this public folder and all its subfolders** check box in the EAC, the permissions aren't applied to all or some subfolders.
+## Permissions not applied to some or all subfolders
+
+When you apply permissions to a public folder and its subfolders by selecting the **Apply changes to this public folder and all its subfolders** check box in the EAC, the permissions aren't applied to some or all subfolders.
 
 ![Screenshot of applying permissions](./media/can't-apply-permissions-settings-to-subfolders/public-folder-permission.png)
 
@@ -35,30 +39,28 @@ The issue occurs if the parent folder and its subfolders are in different public
 
 ### Workaround
 
-To work around this issue, use the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script.
+To work around this issue, follow these steps:
 
-#### Example
+1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+1. Run the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script with the parameters shown in the following example:
 
-```powershell
-.\Update-PublicFolderPermissions.ps1 -IncludeFolders "\MyFolder" -AccessRights "Owner" -Users "John", "Administrator" -Recurse -Confirm:$false
-```
+   ```powershell
+   .\Update-PublicFolderPermissions.ps1 -IncludeFolders "\MyFolder" -AccessRights "Owner" -Users "John", "Administrator" -Recurse -Confirm:$false
+   ```
 
-This example script does the following:
+   This example script does the following:
 
-- Replaces the current client permissions on the "\MyFolder" public folder and all its child folders for users "John" and "Administrator".
-- Grants "Owner" access rights to the users.
-- Don't request confirmation from the user.
+   - Replaces the current client permissions on the "\MyFolder" public folder and all its child folders for users "John" and "Administrator".
+   - Grants "Owner" access rights to the users.
+   - Don't request confirmation from the user.
 
-> [!NOTE]
-> If the public folders are active in Exchange Online, run the script from Exchange Online PowerShell. If they are active on-premises, run the script from Exchange Management Shell on the on-premises server.
+   The script has detailed help documentation. To view the documentation for the script, run the following command:
 
-The script has detailed help documentation. To view the documentation for the script, run the following command:
+   ```powershell
+   Get-Help .\Update-PublicFolderPermissions.ps1 -Full
+   ```
 
-```powershell
-Get-Help .\Update-PublicFolderPermissions.ps1 -Full
-```
-
-## Can't apply the read and unread setting
+## The read and unread settings not applied
 
 When you select the **Apply the read and unread setting to this folder and all its subfolders** check box on a parent public folder in the EAC, you receive the following error message:
 
@@ -70,8 +72,9 @@ When you select the **Apply the read and unread setting to this folder and all i
 
 To work around this issue, follow these steps:
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Apply read and unread information tracking on the parent public folder by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
+1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+1. /powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps
+1. Apply read and unread information tracking on the parent public folder by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
    Set-PublicFolder -Identity "<\PF>" -PerUserReadStateEnabled $True
@@ -79,13 +82,6 @@ To work around this issue, follow these steps:
 
    > [!NOTE]
    > Replace \<\PF> with your parent public folder identity.
-
-   Here's an example:
-
-   ```powershell
-   Set-PublicFolder -Identity \Marketing -PerUserReadStateEnabled $true
-   ```
-
 3. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
@@ -95,13 +91,7 @@ To work around this issue, follow these steps:
    > [!NOTE]
    > Replace \<\PF> with your parent public folder identity.
 
-   Here's an example:
-
-   ```powershell
-   Get-PublicFolder \Marketing -Recurse | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
-   ```
-
-## Can't propagate age limit settings
+## Age limit settings not applied to subfolders
 
 When you apply age limit settings to a public folder and its subfolders by selecting the **Apply setting to this folder and all its subfolders** check box in the EAC, you receive the following error message:
 
@@ -113,7 +103,7 @@ When you apply age limit settings to a public folder and its subfolders by selec
 
 To work around this issue, follow these steps:
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true). 
 2. Run the following cmdlet to apply age limit settings to subfolders:
 
    ```powershell
@@ -128,3 +118,7 @@ To work around this issue, follow these steps:
    ```powershell
    Get-PublicFolder \Root1 -Recurse | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "10.00:00:00"}
    ```
+
+## Status
+
+Microsoft is aware of these issues and will post more information in this article when a fix becomes available.
