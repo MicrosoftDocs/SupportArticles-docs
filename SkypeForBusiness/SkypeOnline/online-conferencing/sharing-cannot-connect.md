@@ -51,6 +51,7 @@ This issue usually occurs because one or more of the following conditions are tr
 
 If the error message in the "Symptoms" section is present in the UCCP client logs for Lync, there's likely a communication error between two Lync edge servers. This means that two users who try to connect are connected through different edge servers that can't communicate with one another.
 
-For information on where to find UCCP client logs, read [Collecting logs from a Skype for Business desktop client](/skype-sdk/websdk/docs/troubleshooting/gatheringlogs/logs-desktopclient#collecting-logs-from-a-skype-for-business-desktop-client).
+For information about logs for the Skype for Business desktop client, see [Gathering Logs from a Skype for Business Desktop Client](/skype-sdk/websdk/docs/troubleshooting/gatheringlogs/logs-desktopclient).
+
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
