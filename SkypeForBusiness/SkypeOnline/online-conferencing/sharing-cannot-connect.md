@@ -53,5 +53,4 @@ If the error message in the "Symptoms" section is present in the UCCP client log
 
 For more information about logs for the Skype for Business desktop client, see [Gathering Logs from a Skype for Business Desktop Client](/skype-sdk/websdk/docs/troubleshooting/gatheringlogs/logs-desktopclient).
 
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
