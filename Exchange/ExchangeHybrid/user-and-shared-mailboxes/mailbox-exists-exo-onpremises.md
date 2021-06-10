@@ -66,11 +66,19 @@ To use this method, follow these steps:
     Set-RemoteMailbox "user identity" -ExchangeGuid "Exchange guid value of Exchange Online mailbox"
     ```
 
-7. Restore the contents of the disconnected mailbox to Exchange Online by using Exchange Online PowerShell. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
+7. Collect information about GUID of mailboxes and database:
+    - to get GUID of disconnected mailbox, take the value of ExchangeGUID parameter from file saved in Step 2
+    - to get GUID of on-premises database, take the value of Darun the following command
+  
+    ```powershell
+    Get-MailboxDatabase "database identity" | fl 
+    ```  
+
+8. Restore the contents of the disconnected mailbox to Exchange Online by using Exchange Online PowerShell. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
 
    - A member of the Domain Admins group in Active Directory Domain Services (AD DS) in the on-premises organization.
    - A member of the Exchange Recipients Administrators group in Active Directory in the on-premises organization.
-   - A member of the Organization Management or Recipient Management group in Exchange 2010 or above.
+   - A member of the Organization Management or Recipient Management group in Exchange 2013 or above.
 
     ```powershell
     $cred = Get-Credential
