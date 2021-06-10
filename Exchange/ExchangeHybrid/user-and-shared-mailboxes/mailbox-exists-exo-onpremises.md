@@ -33,7 +33,7 @@ To correct this mail flow issue, we recommend that you refer to the methods that
 
 ### Scenario 1: Keep Exchange Online mailbox
 
-This scenario would be most applicable if the user mailbox was previously migrated to Exchange Online, and somehow the old mailbox was reconnected or a new mailbox was provisioned on-premises. Another possible scenario is when an Exchange Online license is assigned prematurely, and a new cloud-only mailbox is created while the user already has an existing mailbox in Exchange on-premises. Be sure to read the important note at the end of step 7.
+This scenario would be most applicable if the user mailbox was previously migrated to Exchange Online, and somehow the old mailbox was reconnected or a new mailbox was provisioned on-premises. Another possible scenario is when an Exchange Online license is assigned prematurely, and a new cloud-only mailbox is created while the user already has an existing mailbox in Exchange on-premises. Be sure to read the important note at the end of step 8.
 
 To use this method, follow these steps:
 
@@ -60,20 +60,25 @@ To use this method, follow these steps:
 
 5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` command from step 1).
 
-6. (Optional) Stamp the Exchange Online GUID on the remote mailbox (required if you ever want to off board the mailbox back to on-premises).
+6. Collect information about GUID of mailboxes and database:
+    - to get GUID of disconnected mailbox, take the value of ExchangeGUID parameter from file saved in Step 2
+    - to get GUID of on-premises database, take the value of Database parameter from file saved in Step 2, then run the following command:
+  
+    ```powershell
+    Get-MailboxDatabase "database identity" | fl *GUID*
+    ```  
+    - to get GUID of cloud mailbox, run following command by using Exchange Online PowerShell:
+  
+    ```powershell
+    Get-Mailbox "user identity" | fl *ExchangeGUID*
+    ```  
+    
+7. (Optional) Stamp the Exchange Online GUID on the remote mailbox using Exchange Management Shell (required if you ever want to off board the mailbox back to on-premises).
 
     ```powershell
     Set-RemoteMailbox "user identity" -ExchangeGuid "Exchange guid value of Exchange Online mailbox"
     ```
-
-7. Collect information about GUID of mailboxes and database:
-    - to get GUID of disconnected mailbox, take the value of ExchangeGUID parameter from file saved in Step 2
-    - to get GUID of on-premises database, take the value of Darun the following command
-  
-    ```powershell
-    Get-MailboxDatabase "database identity" | fl 
-    ```  
-
+    
 8. Restore the contents of the disconnected mailbox to Exchange Online by using Exchange Online PowerShell. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
 
    - A member of the Domain Admins group in Active Directory Domain Services (AD DS) in the on-premises organization.
