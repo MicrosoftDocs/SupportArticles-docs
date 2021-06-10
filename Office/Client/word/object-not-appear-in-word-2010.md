@@ -110,6 +110,9 @@ When you turn on the **Print drawings created in Word** option, you can view the
 3. Under **Printing options**, click to select the **Print drawings created in Word ** check box.   
 4. Click **OK**.   
 
+
+Another workaround, find the images that are no printing, **Select**. **Copy** and **Paste** them in a new word document. Now, **Select**, **Copy** and **Paste** them back in the oringal document after manually deleting the original ones. 
+
 #### Turn off the "Use draft quality" option
 
 When you turn off the **Use draft quality** option, you can view the picture or the object in Print Preview. And, you can print the picture or the object. To turn off the **Use draft quality** option, follow these steps, as appropriate for your version of Word.
