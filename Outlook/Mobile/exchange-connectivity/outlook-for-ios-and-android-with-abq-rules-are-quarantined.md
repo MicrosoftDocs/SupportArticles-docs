@@ -58,4 +58,6 @@ Or, use one of the following methods to unblock the device:
 
 ## More information
 
+Users with modern authentication-enabled accounts need to follow the steps in [Account setup with modern authentication in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/setup-with-modern-authentication) to set up their Outlook for iOS and Android accounts.
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

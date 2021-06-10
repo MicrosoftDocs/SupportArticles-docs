@@ -92,6 +92,7 @@ To resolve this issue, follow these steps to modify the registry:
 1. Exit Microsoft Outlook.
 1. Start Registry Editor. To do this, use one of the following procedures, as appropriate for your version of Windows:
 
+   - Windows 10: In the search box on the taskbar, type **regedit**, then select **Registry Editor** (Desktop app) from the results.
    - Windows 8: Press Windows Key+R to open a **Run** dialog box. Then, type **regedit.exe**,and then press **OK**.
    - Windows 7: Click **Start**, type **regedit.exe** in the search box, and then press Enter.
 
@@ -100,7 +101,7 @@ To resolve this issue, follow these steps to modify the registry:
    `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Common\Internet`
 
    > [!NOTE]
-   > The *xx* placeholder is **15** for Office 2013 and **16** for Office 2016, Office 2019, and Office 365 ProPlus.
+   > The *xx* placeholder is **15** for Office 2013, and **16** for Office 2016, Office 2019, and Office 365 ProPlus.
 
 1. Locate and then double-click the following value: `UseOnlineContent`.
 1. In the **Value Data** box, type **2**, and then click **OK**.
