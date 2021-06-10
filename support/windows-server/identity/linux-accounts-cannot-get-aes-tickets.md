@@ -19,29 +19,51 @@ _Applies to:_ &nbsp; Windows Server 2019, all editions, Windows Server 2016
 
 ## Symptoms
 
-In an Active Directory Domain Services (AD DS) environment, Linux integrated accounts cannot get Advanced Encryption Standard (AES) encrypted tickets through the Kerberos authentication. Instead, the RC4 tickets are received, and you can verify this issue in the Key Distribution Center (KDC). In the log of Event ID 4769, the value of **Ticket Encryption Type** is **0x17** for the affected computer, which means the encryption type is RC4.
+In an Active Directory Domain Services (AD DS) environment, Linux integrated accounts cannot get Advanced Encryption Standard (AES) encrypted tickets through the Kerberos authentication. Instead, the RC4 tickets are received, and you can verify this issue in the Key Distribution Center (KDC).
 
-```output
-Source: Microsoft-Windows-Security-Auditing 
-Event ID: 4769 
-Task Category: Kerberos Service Ticket Operations 
-Level: Information 
-Computer: MyDC.contoso.com 
-Description: 
-A Kerberos service ticket was requested. 
-… 
-Service Information: 
-Service Name: MYLINUX 
-Service ID: CONTOSO\MYLINUX 
-Network Information: 
-Client Address: ::ffff:10.20.30.40 
-Client Port: 57499 
-Additional Information: 
-Ticket Options: 0x40810000 
-Ticket Encryption Type: 0x17 
-Failure Code: 0x0 
-Transited Services: -
-```
+- In the log of Event ID 4769, the value of **Ticket Encryption Type** is **0x17** for the affected computer, which means the encryption type is RC4.
+
+    ```output
+    Source: Microsoft-Windows-Security-Auditing 
+    Event ID: 4769 
+    Task Category: Kerberos Service Ticket Operations 
+    Level: Information 
+    Computer: MyDC.contoso.com 
+    Description: 
+    A Kerberos service ticket was requested. 
+    … 
+    Service Information: 
+    Service Name: MYLINUX 
+    Service ID: CONTOSO\MYLINUX 
+    Network Information: 
+    Client Address: ::ffff:10.20.30.40 
+    Client Port: 57499 
+    Additional Information: 
+    Ticket Options: 0x40810000 
+    Ticket Encryption Type: 0x17 
+    Failure Code: 0x0 
+    Transited Services: -
+    ```
+
+- After you run the [`klist`](/windows-server/administration/windows-commands/klist) command, the value of **KerbTicket Encryption Type** is **RSADSI RC4-HMAC(NT)**, which means the encryption type is RC4.
+
+    ```output
+    C:\> Klist get MYLINUX@CONTOSO.COM  
+    Current LogonId is 0:0xb532bccf  
+    A ticket to MYLINUX@CONTOSO.COM has been retrieved successfully.  
+    Cached Tickets: (2)  
+    …  
+    #1> Client: MyUser@CONTOSO.COM  
+    Server: MYLINUX@CONTOSO.COM  
+    KerbTicket Encryption Type: RSADSI RC4-HMAC(NT)  
+    Ticket Flags 0x40a50000 -> forwardable renewable pre_authent ok_as_delegate name_canonicalize  
+    Start Time: <DateTime> (local)  
+    End Time: <DateTime> (local)  
+    Renew Time: <DateTime> (local)  
+    Session Key Type: AES-256-CTS-HMAC-SHA1-96  
+    Cache Flags: 0  
+    Kdc Called: MyDC.Contoso.com  
+    ```
 
 > [!NOTE]
 > This issue persists when you set the **msDS-SupportedEncryptionTypes** attribute value to *24 (0x18)* to force AES256/AES128 encryption, or use the **Network security: Configure encryption types allowed for Kerberos** GPO to disable the RC4 encryption and enable the AES encryption type.
