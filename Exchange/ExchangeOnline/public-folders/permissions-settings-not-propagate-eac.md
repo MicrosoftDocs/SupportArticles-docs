@@ -23,7 +23,7 @@ search.appverid:
 ---
 # Public folder permissions and settings don't propagate in EAC
 
-When you use the Exchange admin center (EAC) to apply permissions or settings to a public folder and its subfolders, either the actions don't finish, or you experience errors. This article describes the following issues with common tasks, and provides workarounds to complete them by using PowerShell.
+When you use the Exchange admin center (EAC) to apply permissions or settings to a public folder and its subfolders, the actions don't finish, or you experience errors. This article describes the following issues that affect common tasks, and provides workarounds to complete the tasks by using PowerShell.
 
 - [Permissions not applied to some or all subfolders](#permissions-not-applied-to-some-or-all-subfolders)
 - [The read and unread setting not applied](#the-read-and-unread-setting-not-applied)
@@ -41,8 +41,8 @@ The issue occurs if the parent folder and its subfolders are in different public
 
 To work around this issue, follow these steps:
 
-1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-1. Run the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script with the parameters shown in the following example:
+1. Open PowerShell in the Exchange environment where the public folder is active. You can do this in either [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+1. Run the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script by specifying the parameters that are shown in the following example:
 
    ```powershell
    .\Update-PublicFolderPermissions.ps1 -IncludeFolders "\MyFolder" -AccessRights "Owner" -Users "John", "Administrator" -Recurse -Confirm:$false
@@ -50,9 +50,9 @@ To work around this issue, follow these steps:
 
    This example script does the following:
 
-   - Replaces the current client permissions on the "\MyFolder" public folder and all its child folders for users "John" and "Administrator".
+   - Replaces the current client permissions on the "_\MyFolder_" public folder and all its child folders for users "John" and "Administrator".
    - Grants "Owner" access rights to the users.
-   - Don't request confirmation from the user.
+   - Doesn't request confirmation from the user.
 
    The script has detailed help documentation. To view the documentation for the script, run the following command:
 
