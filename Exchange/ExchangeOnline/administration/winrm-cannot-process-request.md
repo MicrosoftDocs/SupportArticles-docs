@@ -62,19 +62,22 @@ This issue occurs in one of the following situations:
       netsh winhttp show proxy
       ```
 
-   1. To reset the WinHTTP proxy, run the following command:
+   1. Take one of the following actions:
 
-      ```console
-      netsh winhttp reset proxy
-      ```
+      - To reset the WinHTTP proxy, run the following command:
 
-      To configure a new proxy server, run the following command:
+        ```console
+        netsh winhttp reset proxy
+        ```
 
-      ```console
-      netsh winhttp set proxy <proxy>:<port>
-      ```
+      - To configure a new proxy server, run the following command:
 
-      You can also [import the settings](/troubleshoot/windows-client/networking/use-group-policy-apply-winhttp-proxy-settings#import-the-settings-through-control-panel).
+        ```console
+        netsh winhttp set proxy <proxy>:<port>
+        ```
+
+        For example, run `netsh winhttp set proxy 10.0.0.6:8080`.
+      - You can also [import the settings](/troubleshoot/windows-client/networking/use-group-policy-apply-winhttp-proxy-settings#import-the-settings-through-control-panel).
 
 ## More information
 
