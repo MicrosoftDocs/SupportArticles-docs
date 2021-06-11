@@ -118,7 +118,7 @@ To run the script, follow these steps:
     >   - Mailbox
     >   - StartDate
     >   - EndDate
-    > - To search for entries from the current day, add one day to the end-date value in the prompt window. For example, if the current date is **3/14/2017**, and you want to include the current day in your search, enter **4/15/2017**  as the end date.
+    > - To search for entries from the current day, add one day to the end-date value in the prompt window. For example, if the current date is **3/14/2017**, and you want to include the current day in your search, enter **3/15/2017**  as the end date.
 
 ### Step 2: Customize a mailbox audit log search
 
