@@ -25,10 +25,11 @@ When a delegated partner administrator tries to access the SharePoint Online Adm
 
 ## Solution
 
-To resolve this issue, use the SharePoint Online management shell to delete the guest account from the client's organization. To do this, run the following cmdlet:
+To resolve this issue, use the SharePoint Online management shell to delete the guest account from the client's organization. To do this, run the following cmdlet (you can't run this step using the same delegated partner administrator account, it must be run using a SharePoint Online administrator or Global Administrator account of the partner's client):
 
 ```powershell
-Remove-SPOExternalUser
+$user = Get-SPOExternalUser -Filter someone@example.com
+Remove-SPOExternalUser -UniqueIDs @($user.UniqueId)
 ```
 
 For more information about this cmdlet, go to the following Microsoft websites:
