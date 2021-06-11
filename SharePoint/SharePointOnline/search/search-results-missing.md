@@ -72,6 +72,7 @@ There are various reasons why expected results maybe be missing that are related
          > From the same location, admins can also select **Reindex Document Library** to make sure that all content in the document library is indexed during the next scheduled crawl.
 
 1. Verify that the version of the document that's missing from search results is a major version of the document. If the version is a minor version, it will not be displayed in the search results until it's checked in and published as a major version.
+[unless it si modified as per https://support.microsoft.com/en-us/office/draft-items-are-not-crawled-in-sharepoint-9198c307-13d6-425c-a174-542a60e410e4  ?
 
     1. As an admin, locate the document that's missing from search results.
     
