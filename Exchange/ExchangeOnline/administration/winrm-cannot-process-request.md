@@ -1,6 +1,6 @@
 ---
 title: WinRM client cannot process the request when connect to Exchange Online
-description: Resolves an issue in which you receive a "WinRM client cannot process the request because the server name cannot be resolved" error when you try to connect Exchange Online through remote Windows PowerShell.
+description: The "WinRM client cannot process the request because the server name cannot be resolved" error occurs when you connect Exchange Online through remote Windows PowerShell.
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
@@ -20,41 +20,68 @@ appliesto:
 
 ## Problem
 
-When you try to use remote Windows PowerShell to connect to Microsoft Exchange Online in Microsoft Office 365, you receive the following error message:
+When you use remote Windows PowerShell to connect to Exchange Online in Microsoft Office 365, you receive the following error message:
 
-```asciidoc
-[outlook.office365.com] Connecting to remote server failed with the following error message:
-The "WinRM client cannot process the request because the server name cannot be resolved. For more information, see the about_Remote_Troubleshooting Help topic.
-
-+ CategoryInfo : OpenError:
-(System.Manageme....RemoteRunspace:RemoteRunspace) [].
-PSRemotingTransportException
-
-+ FullyQualifiedErrorId : PSSessionOpenedFailed
-```
+> [outlook.office365.com] Connecting to remote server failed with the following error message:  
+> The WinRM client cannot process the request because the server name cannot be resolved. For more information, see the about_Remote_Troubleshooting Help topic.
+>
+> \+ CategoryInfo : OpenError:  
+> (System.Manageme....RemoteRunspace:RemoteRunspace) [].  
+> PSRemotingTransportException
+>  
+> \+ FullyQualifiedErrorId : PSSessionOpenedFailed
 
 ## Cause
 
-This issue occurs if either an internal firewall or the Windows Remote Management service has not been started.
+This issue occurs in one of the following situations:
 
-## Solution
+- A firewall blocks necessary traffic.
+- The Windows Remote Management service isn't started.
+- The proxy server doesn't work correctly.
 
-To resolve this issue, check whether the Windows Remote Management service is installed and has started. To do this, follow these steps:
+## Resolution
 
-1. Do one of the following:
-   - In Windows 8, press the Windows logo key+R to open the **Run** dialog box, type services.msc, and then press Enter.
-   - In Windows 7 or Windows Vista, click **Start**, type `services.msc` in the **Start search** field, and then press Enter.
-   - In Windows XP, click **Start**, click **Run**, type `services.msc`, and then press Enter.
-2. In the Services window, double-click **Windows Remote Management**.
-3. Set the startup type to **Manual**, and then click **OK**.
-4. Right-click the service, and then click **Start**.
-5. Let the service start.
+- Make sure that the firewall doesn't block necessary traffic.
+- Check whether the Windows Remote Management service is installed and has started:
 
-    > [!NOTE]
-    > If the service was already started but it's not responding, you may have to click **Restart**.
-6. Try to connect to Exchange Online again.
+   1. Type *services.msc* in the **Run** dialog box, and then press Enter.
+   1. In the Services MMC, double-click **Windows Remote Management**.
+   1. Set the startup type to **Manual**, and then click **OK**.
+   1. Right-click the service, and then select **Start**.
+   1. Let the service start.
+
+      > [!NOTE]
+      > If the service was already started but it's not responding, you may have to click **Restart**.
+   1. Try to connect to Exchange Online again.
+- Check the proxy server setting
+
+   1. Open an elevated Command Prompt.
+   1. Run the following command to verify the current proxy configuration:
+
+      ```console
+      netsh winhttp show proxy
+      ```
+
+   1. Take one of the following actions:
+
+      - To reset the WinHTTP proxy, run the following command:
+
+        ```console
+        netsh winhttp reset proxy
+        ```
+
+      - To configure a new proxy server, run the following command:
+
+        ```console
+        netsh winhttp set proxy <proxy>:<port>
+        ```
+
+        For example, run `netsh winhttp set proxy 10.0.0.6:8080`.
+      - You can also [import the settings](/troubleshoot/windows-client/networking/use-group-policy-apply-winhttp-proxy-settings#import-the-settings-through-control-panel).
 
 ## More information
+
+For more information about Microsoft 365 endpoints, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 For more information about how to connect to Exchange Online by using remote PowerShell, go to [Connect to Exchange Online using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
