@@ -79,16 +79,14 @@ To work around this issue, follow these steps:
    Set-PublicFolder -Identity "<\PF>" -PerUserReadStateEnabled $True
    ```
 
-   > [!NOTE]
-   > Replace \<\PF> with your parent public folder identity.
+   **Note**: Replace \<\PF> with your parent public folder identity.
 1. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
    Get-PublicFolder "<\PF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
    ```
 
-   > [!NOTE]
-   > Replace \<\PF> with your parent public folder identity.
+   **Note**: Replace \<\PF> with your parent public folder identity.
 
 ## Age limit settings not applied to subfolders
 
@@ -109,8 +107,7 @@ To work around this issue, follow these steps:
    Get-PublicFolder "<\ParentPF>" -Recurse | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "<newagelimit>"}
    ```
   
-   > [!NOTE]
-   > Replace \<\ParentPF> with your parent public folder identity.
+   **Note**: Replace \<\ParentPF> with your parent public folder identity.
 
    For example, the following command applies an age limit of 10 days to all subfolders under Root1:
 
