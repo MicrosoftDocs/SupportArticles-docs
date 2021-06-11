@@ -89,7 +89,7 @@ There are various reasons why expected results maybe be missing that are related
 
      **<site_name>/_layouts/srchvis.aspx**
 
-     Make sure that the Allow this web to appear in search results option is selected.
+     Make sure that the Allow this site to appear in search results option is selected.
 
 ### Parent site and sub site-specific search issues
 
