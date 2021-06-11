@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 3087759
 ## Links to download the Administrative Templates files based on the operating system version
 
 - [Administrative Templates (.admx) for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/103124)
-- [Administrative Templates (.admx) for Windows 10 October 2020 Update (20H2)](https://www.microsoft.com/download/102157)
+- [Administrative Templates (.admx) for Windows 10 October 2020 Update (20H2) - v2.0](https://www.microsoft.com/download/103060)
 - [Administrative Templates (.admx) for Windows 10 May 2020 Update (2004)](https://www.microsoft.com/download/101445)
 - [Administrative Templates (.admx) for Windows 10 November 2019 Update (1909)](https://www.microsoft.com/download/100591)
 - [Administrative Templates (.admx) for Windows 10 May 2019 Update (1903)](https://www.microsoft.com/download/58495)
@@ -36,7 +36,7 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/43413)
 - [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/41193)
 
-To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/103125)
+To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/103125).
 
 ## Overview
 
@@ -92,11 +92,11 @@ To ensure that any local updates are reflected in sysvol folder, you must manual
 
 The following update enables you to configure the Local Group Policy editor to use Local .admx files instead of the Central Store:
 
-[An update is available to enable the use of Local ADMX files for Group Policy Editor](https://support.microsoft.com/help/2917033)
+[An update is available to enable the use of Local ADMX files for Group Policy Editor](https://support.microsoft.com/help/2917033).
 
 You can also use this setting to:
 
-- Test a newly built folder as `c:\windows\policydefinitions` on an Administrative Workstation against your Domain Policies, before you copy it to the Central Store on sysvol folder.
+- Test a newly built folder as `C:\Windows\PolicyDefinitions` on an Administrative Workstation against your Domain Policies, before you copy it to the Central Store on sysvol folder.
 - Use older PolicyDefinitions folder to edit policy settings that don't have an ADMX file in the latest build of your Central Store. One common example would be policies that have settings for older versions of Microsoft Office that are still in the Group Policies. Microsoft Office has a separate set of ADMX/L files for each release.
 
 ### Known Issues
@@ -112,7 +112,7 @@ You can also use this setting to:
   > [!NOTE]
   > In the path in this message, **<forest.root>** represents the domain name.
 
-  To resolve this problem, see ["'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined" error when you edit a policy in Windows](https://support.microsoft.com/help/3077013)
+  To resolve this problem, see ["'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined" error when you edit a policy in Windows](https://support.microsoft.com/help/3077013).
 
 - Issue 2
 
