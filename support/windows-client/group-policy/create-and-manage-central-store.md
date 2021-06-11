@@ -13,7 +13,6 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
 ms.technology: windows-client-group-policy
 ---
-
 # How to create and manage the Central Store for Group Policy Administrative Templates in Windows
 
 This article describes how to use the new .admx and .adml files to create and administer registry-based policy settings in Windows. This article also explains how the Central Store is used to store and to replicate Windows-based policy files in a domain environment.
