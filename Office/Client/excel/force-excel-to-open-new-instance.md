@@ -37,7 +37,7 @@ This article explains how to do so by configuring a registry key.
 > - You select a file when you use the Excel taskbar icon to open the application.
 > - You double-click an Excel workbook in Windows Explorer.
 
-For more information about Excel instances, and how to start a new instance in other ways, see [What are Excel instances](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-mso_win10-mso_2016/what-are-excel-instances-and-why-is-this-important/20c39a6f-0857-4033-b713-18bf72e91d8bhttps://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-mso_win10-mso_2016/what-are-excel-instances-and-why-is-this-important/20c39a6f-0857-4033-b713-18bf72e91d8b).
+For more information about Excel instances, and how to start a new instance in other ways, see [What are Excel instances](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-mso_win10-mso_2016/what-are-excel-instances-and-why-is-this-important/20c39a6f-0857-4033-b713-18bf72e91d8b).
 
 ## Cause
 
