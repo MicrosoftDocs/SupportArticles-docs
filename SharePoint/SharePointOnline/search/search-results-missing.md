@@ -98,7 +98,7 @@ The default setting for search visibility is one of the following:
 - **Do not index ASPX pages if this site contains fine-grained permissions.**
 - **This site contains fine-grained permissions. Specify the site's ASPX page indexing behavior.**
 
-If a subsite on the site collection doesn't inherit permissions, .aspx pages won't appear in the search results. To resolve this issue, set the search visibility option in Srchvis.aspx to **Always index all ASPX pages on this site** or **Always index all Web Parts on this site**, depending on which option is available. Additionally, you may set the subsite to inherit permissions from the parent site.
+If a subsite on the site collection doesn't inherit permissions, .aspx pages won't appear in the search results. To resolve this issue, set the search visibility option in Srchvis.aspx to **Always index all Web Parts on this site**. Additionally, you may set the subsite to inherit permissions from the parent site.
 
 ## More information
 
