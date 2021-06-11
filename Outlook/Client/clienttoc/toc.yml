@@ -321,8 +321,6 @@
       href: ../message-body/attachment-size-exceeds-the-allowable-limit-error.md
     - name: Document is inserted as icon with hyperlink into a message
       href: ../message-body/document-inserted-as-icon-with-hyperlink.md
-    - name: Email message body is blank in Outlook
-      href: ../message-body/email-message-body-is-blank-in-outlook.md
     - name: HTTPS linked images in HTML emails display the red X
       href: ../message-body/https-linked-images-in-html-emails-show-red-x.md
     - name: Hyperlinks are not working
