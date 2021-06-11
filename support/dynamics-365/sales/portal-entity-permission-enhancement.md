@@ -7,7 +7,7 @@ ms.date: 3/31/2021
 ---
 # Portal Entity Permission Enhancement requires record modifications
 
-This article provides a solution to an error that occurs when the necessary changes aren't made to the respective Entity Permission records.
+This article provides a solution to an error that occurs when the necessary changes aren't granted on the respective Entity Permission records.
 
 _Applies to:_ &nbsp; Microsoft Dynamics CRM  
 _Original KB number:_ &nbsp; 4020181
