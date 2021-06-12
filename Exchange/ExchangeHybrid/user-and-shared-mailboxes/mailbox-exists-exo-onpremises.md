@@ -67,7 +67,7 @@ To use this method, follow these steps:
     ```powershell
     Get-MailboxDatabase "database identity" | fl *GUID*
     ```  
-    - to get GUID of cloud mailbox, run following command by using Exchange Online PowerShell:
+    - To get the GUID of cloud mailbox, run the following command by using Exchange Online PowerShell:
   
     ```powershell
     Get-Mailbox "user identity" | fl *ExchangeGUID*
