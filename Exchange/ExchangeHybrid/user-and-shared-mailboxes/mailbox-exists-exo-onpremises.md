@@ -62,7 +62,7 @@ To use this method, follow these steps:
 
 6. Collect information about GUID of mailboxes and database:
     - To get the GUID of the disconnected mailbox, use the value of the ExchangeGUID parameter from the file saved in Step 1.
-    - to get GUID of on-premises database, take the value of Database parameter from file saved in Step 2, then run the following command:
+    - To get the GUID of the on-premises database, use the value of the Database parameter from the file saved in Step 1, then run the following command:
   
     ```powershell
     Get-MailboxDatabase "database identity" | fl *GUID*
