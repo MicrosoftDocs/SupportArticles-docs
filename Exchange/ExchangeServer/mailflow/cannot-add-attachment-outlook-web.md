@@ -62,7 +62,22 @@ To resolve this issue, follow these steps:
 
 - The Mailbox server on which the Web.config files are located in the following path:
 
-  *%ExchangeInstallPath%\ClientAccess*
+8. When you're finished, save and close the web.config files.
+
+9. Restart IIS on the Exchange server by using either of the following methods:
+
+   - Open IIS Manager, select the server, and in the **Actions** pane, click **Restart**.
+
+   - Run the following commands from an elevated command prompt (a Command Prompt window you open by selecting **Run as administrator**):
+
+     ```console
+     net stop w3svc /y
+     ```
+
+     ```console
+     net start w3svc
+     ```
+
 
 ## More information
 
