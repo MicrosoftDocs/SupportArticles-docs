@@ -83,3 +83,5 @@ Note 4 The 32,767 limit is for versions earlier than Word 2007.
 Note 5 Number of records to display in recipients list dialog
 
 You are limited to 10000 displayed records even if your data source has more records. To work around this limitation filter the records so that they fit in the dialog or use the Find operation from the wizard task pane.
+
+See also [What is the maximum number of Merge Fields in Word 2016](https://answers.microsoft.com/en-us/msoffice/forum/msoffice_word-msoffice_custom-mso_2016/what-is-the-maximum-number-of-merge-fields-in-word/254cc398-2934-4745-8a4e-3216efadd67c)
