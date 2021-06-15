@@ -60,7 +60,7 @@ To use this method, follow these steps:
 
 5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` command from step 1).
 
-6. Collect information about GUID of mailboxes and database:
+6. Collect information about the GUIDs of the mailboxes and database:
     - To get the GUID of the disconnected mailbox, use the value of the ExchangeGUID parameter from the file saved in Step 1.
     - To get the GUID of the on-premises database, use the value of the Database parameter from the file saved in Step 1, then run the following command:
   
