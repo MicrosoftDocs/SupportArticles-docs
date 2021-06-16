@@ -4,7 +4,7 @@ description: Discusses that Hyper-V VMM service fails and Event ID 14050 is logg
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

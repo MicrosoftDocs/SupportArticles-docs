@@ -4,7 +4,7 @@ description: Describes an issue in which an Error [0x80070005] Access is denied 
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

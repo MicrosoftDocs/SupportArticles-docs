@@ -4,7 +4,7 @@ description: Describes how to rebuild the Tokens.dat file when you troubleshoot 
 ms.date: 10/16/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

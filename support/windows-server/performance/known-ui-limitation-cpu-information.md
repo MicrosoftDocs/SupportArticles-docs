@@ -4,7 +4,7 @@ description: Describes the known UI limitations in Windows Server 2016. The Syst
 ms.date: 04/19/2021
 author: v-lianna 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

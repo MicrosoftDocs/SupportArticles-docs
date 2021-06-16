@@ -4,7 +4,7 @@ description: Describes how to resolve the error messages when you try to bring a
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

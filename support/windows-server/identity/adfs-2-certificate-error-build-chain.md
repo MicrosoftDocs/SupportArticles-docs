@@ -4,7 +4,7 @@ description: Discusses that a certificate-related change in AD FS 2.0 causes cer
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

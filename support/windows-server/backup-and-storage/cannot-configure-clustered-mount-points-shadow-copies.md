@@ -4,7 +4,7 @@ description: Fixes the error 0x80042306 that occurs when you configure Previous 
 ms.date: 04/14/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

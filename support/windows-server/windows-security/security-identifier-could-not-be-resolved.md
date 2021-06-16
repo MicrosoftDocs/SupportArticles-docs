@@ -4,7 +4,7 @@ description: Fixes an error (Security identifier could not be resolved) that occ
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

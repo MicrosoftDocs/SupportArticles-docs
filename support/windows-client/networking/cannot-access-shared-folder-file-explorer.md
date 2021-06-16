@@ -4,7 +4,7 @@ description: Provides troubleshooting for the issue that shared folders can't be
 ms.date: 3/4/2021
 author: v-lianna
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

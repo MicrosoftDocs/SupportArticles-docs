@@ -4,7 +4,7 @@ description: Troubleshoot when Windows Virtual Desktop sign-in screen is blank
 author: v-miegge
 ms.author: jerrycif
 ms.service: virtual-desktop
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium

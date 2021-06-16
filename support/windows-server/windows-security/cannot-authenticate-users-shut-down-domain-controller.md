@@ -4,7 +4,7 @@ description: This article fixes an issue where the application can't authenticat
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

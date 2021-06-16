@@ -4,7 +4,7 @@ description: Works around an issue that occurs when you deploy Windows Update .m
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

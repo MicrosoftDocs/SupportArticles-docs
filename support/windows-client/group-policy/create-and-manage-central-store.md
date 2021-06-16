@@ -4,7 +4,7 @@ description: Describes how to create a Central Store on a domain controller to s
 ms.date: 12/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

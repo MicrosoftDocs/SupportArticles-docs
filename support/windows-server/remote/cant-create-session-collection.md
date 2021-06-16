@@ -4,7 +4,7 @@ description: Describes an issue in which you can't create a session collection c
 ms.date: 09/30/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

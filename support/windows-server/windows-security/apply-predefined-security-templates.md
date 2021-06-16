@@ -4,7 +4,7 @@ description: Describes how to apply predefined security templates.
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

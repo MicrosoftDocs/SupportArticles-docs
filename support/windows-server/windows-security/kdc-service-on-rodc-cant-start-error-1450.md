@@ -4,7 +4,7 @@ description: This article resolves an issue in which the KDC service on a read-o
 ms.date: 10/26/2020
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 keywords: ad, security,KDC service, RODC, error 1450, handle invalid
 ms.topic: troubleshooting

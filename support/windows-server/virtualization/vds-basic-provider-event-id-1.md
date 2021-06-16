@@ -4,7 +4,7 @@ description: Describes an issue in a Hyper-V guest operating system of Windows S
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

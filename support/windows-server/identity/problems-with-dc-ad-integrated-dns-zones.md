@@ -4,7 +4,7 @@ description: Describes problems that can occur with many Domain Controllers in A
 ms.date: 05/27/2021
 author: v-lianna
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

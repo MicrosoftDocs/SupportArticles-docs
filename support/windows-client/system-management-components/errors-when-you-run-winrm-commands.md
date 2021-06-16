@@ -4,7 +4,7 @@ description: Describes the errors that are triggered when you run various WinRM 
 ms.date: 09/30/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

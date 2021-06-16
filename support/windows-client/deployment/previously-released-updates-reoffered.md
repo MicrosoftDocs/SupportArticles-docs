@@ -4,7 +4,7 @@ description: Lists the previously released updates that will be reoffered for sy
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

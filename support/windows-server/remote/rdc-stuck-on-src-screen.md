@@ -4,7 +4,7 @@ description: Fixes an issue when remote desktop may stick on the Securing remote
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Introduce active and retired troubleshooters for Windows 10.
 ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

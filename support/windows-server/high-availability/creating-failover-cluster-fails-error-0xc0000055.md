@@ -4,7 +4,7 @@ description: Fixes the error 0xc000005e that occurs when you create a failover c
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

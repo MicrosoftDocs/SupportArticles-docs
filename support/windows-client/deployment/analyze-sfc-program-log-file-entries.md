@@ -4,7 +4,7 @@ description: Describes how to use the SFC.exe program to help diagnose problems 
 ms.date: 05/31/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

@@ -4,7 +4,7 @@ description: Describes how to use Windows Server 2003 Terminal Services to conne
 ms.date: 10/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

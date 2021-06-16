@@ -4,7 +4,7 @@ description: Describes the issue in which you cannot run an application that rel
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

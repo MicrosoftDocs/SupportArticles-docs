@@ -4,7 +4,7 @@ description: Provides a solution to an issue when you start a Dynamic Host Confi
 ms.date: 10/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

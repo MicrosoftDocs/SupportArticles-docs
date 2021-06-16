@@ -4,7 +4,7 @@ description: Provides a resolution for code 31 in Device Manager when Microsoft 
 ms.date: 11/27/2020
 author: v-lianna
 ms.author: v-lianna
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
