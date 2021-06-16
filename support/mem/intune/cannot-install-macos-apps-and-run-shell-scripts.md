@@ -1,34 +1,38 @@
 ---
-title: Fails to install applications and run shell scripts in macOS 11.2
+title: App installation and shell script execution fail in macOS 11.2
 description: Fixes an issue in which macOS applications cannot be installed in the Intune portal and you cannot run shell scripts on a macOS 11.2 based device.
 ms.date: 06/16/2021
 ms.prod-support-area-path: App management
 ms.reviewer: markstan
 ---
-# Can't install apps and run shell scripts in macOS 11.2
+# Apps fail to install and shell scripts fail to run in macOS 11.2
 
 ## Symptoms
 
-On a macOS 11.2 (Big Sur) based device, you cannot install an application and the application is displayed as the **Install Pending** status in the Intune portal. In addition, you also cannot run shell scripts that rely on the installation of the Intune Management Extension (also known as Sidecar) app.
+You may experience the following issues on a macOS Big Sur 11.2.x based device:
 
-When this issue occurs, entries that resemble the following are displayed in a log report in Console:
+- Apps can't be downloaded and installed.
+- The app installation status shows **Install Pending** in the Microsoft Endpoint Manager admin center indefinitely.
+- Shell scripts fail to run because the Microsoft Intune management agent can't be installed successfully.
 
 > [!NOTE]
-> The presence of the error code **506** and the **Install request is a duplicate** string is the diagnostic of this issue.
+> These issues may be sporadic. And not all macOS 11.2.x clients in a tenant may experience these issues.
+
+When these issue occur, entries that resemble the following example are logged in the device console:
 
 ```output
-<Date> <Time>.202335-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] StartInstall using UUID: <ID> for MDM 'Microsoft.Profiles.MDM'
-<Date> <Time>.202391-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] Installing with MDM options: {
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] StartInstall using UUID: <ID> for MDM 'Microsoft.Profiles.MDM'
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] Installing with MDM options: {
     ManagementFlags = 0;
     ManifestURL = "https://euprodimedatapri.blob.core.windows.net/macsidecaragent-<ID>/sidecar_2103.013.plist";
     RequestType = InstallApplication;
 }
-<Date> <Time>.203299-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:InstallApplication] InstallApplication (UUID:<ID>) (iOS: no) manifest: no
-<Date> <Time>.203333-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:AppStore] Calling AppStore -submitManifestRequest.  ID: <ID>  Platform: <macos>  Manifest: no  URL: YES  Certs: no  Pinning: no
-<Date> <Time>.453918-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:MDMDaemon] [ERROR] submitManifestRequest completed.  ID: <ID> Error: Error Domain=ASDErrorDomain Code=506 "Install request is a duplicate" UserInfo={NSLocalizedDescription=Install request is a duplicate}
-<Date> <Time>.453928-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:MDMDaemon] [ERROR] Assertion Failed.  File: /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/MCXTools/MCXTools-1430/ConfigProfiles/mdmclient/AppStoreUtil.mm  Line: 578
-<Date> <Time>.454009-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:MDMDaemon] Logging Manifest request failure.  InstallUUID: <ID>  Error: Error Domain=ASDErrorDomain Code=506 "Install request is a duplicate" UserInfo={NSLocalizedDescription=Install request is a duplicate}
-<Date> <Time>.457373-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] Processing install phase 97 for <ID> ==> {
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:InstallApplication] InstallApplication (UUID:<ID>) (iOS: no) manifest: no
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:AppStore] Calling AppStore -submitManifestRequest.  ID: <ID>  Platform: <macos>  Manifest: no  URL: YES  Certs: no  Pinning: no
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:MDMDaemon] [ERROR] submitManifestRequest completed.  ID: <ID> Error: Error Domain=ASDErrorDomain Code=506 "Install request is a duplicate" UserInfo={NSLocalizedDescription=Install request is a duplicate}
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:MDMDaemon] [ERROR] Assertion Failed.  File: /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/MCXTools/MCXTools-1430/ConfigProfiles/mdmclient/AppStoreUtil.mm  Line: 578
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:MDMDaemon] Logging Manifest request failure.  InstallUUID: <ID>  Error: Error Domain=ASDErrorDomain Code=506 "Install request is a duplicate" UserInfo={NSLocalizedDescription=Install request is a duplicate}
+<Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] Processing install phase 97 for <ID> ==> {
     "__Error__" =     {
         code = 506;
         domain = ASDErrorDomain;
@@ -40,10 +44,13 @@ When this issue occurs, entries that resemble the following are displayed in a l
 }
 ```
 
+> [!NOTE]
+> The presence of error code **506** and **Install request is a duplicate** in the log is the diagnostic for this issue.
+
 ## Cause
 
-This is a known issue in macOS 11.2.
+It's a known issue in macOS 11.2.x.
 
 ## Resolution
 
-To resolve this issue, upgrade the device to macOS 11.3 or a later version.
+To fix this issue, upgrade the device to macOS 11.3 or a later version.
