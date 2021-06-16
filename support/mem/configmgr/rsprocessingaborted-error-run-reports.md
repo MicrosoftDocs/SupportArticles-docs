@@ -1,6 +1,6 @@
 ---
 title: Fails to run reports in Configuration Manager version 2103
-description: Describes an issue in which you cannot run reports in Microsoft Endpoint Configuration Manager version 2103 when SQL Server 2019 is used. Provides a resolution.
+description: Describes an issue in which reports may fail to run in Microsoft Endpoint Configuration Manager version 2103 when SQL Server 2019 is used. Provides a resolution.
 ms.date: 06/16/2021
 ms.prod-support-area-path: 
 ms.reviewer: maosesro
