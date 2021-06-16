@@ -1,6 +1,6 @@
 ---
-title: Fails to install applications or run shell scripts in macOS 11.2
-description: Fixes an issue in which you cannot install application or run shell scripts on a macOS 11.2 based device.
+title: Fails to install applications and run shell scripts in macOS 11.2
+description: Fixes an issue in which macOS applications cannot be installed in the Intune portal and you cannot run shell scripts on a macOS 11.2 based device.
 ms.date: 06/16/2021
 ms.prod-support-area-path: App management
 ms.reviewer: markstan
