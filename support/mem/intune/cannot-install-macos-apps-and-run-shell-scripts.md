@@ -1,5 +1,5 @@
 ---
-title: Cannot install applications or run shell scripts in macOS 11.2
+title: Fails to install applications or run shell scripts in macOS 11.2
 description: Fixes an issue in which you cannot install application or run shell scripts on a macOS 11.2 based device.
 ms.date: 06/16/2021
 ms.prod-support-area-path: App management
@@ -9,7 +9,7 @@ ms.reviewer: markstan
 
 ## Symptoms
 
-On a macOS 11.2 (Big Sur) based device, you cannot install an application and the application is displayed as the **Install Pending** status in the Intune portal. In addition, you also cannot run a shell script that replies on the installation of the Intune Management Extension (also known as Sidecar) app.
+On a macOS 11.2 (Big Sur) based device, you cannot install an application and the application is displayed as the **Install Pending** status in the Intune portal. In addition, you also cannot run shell scripts that relay on the installation of the Intune Management Extension (also known as Sidecar) app.
 
 When this issue occurs, entries that resemble the following are displayed in a log report in Console:
 
