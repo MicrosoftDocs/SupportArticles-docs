@@ -1,6 +1,6 @@
 ---
 title: App installation and shell script execution fail in macOS 11.2
-description: Fixes an issue in which macOS applications cannot be installed in the Intune portal and you cannot run shell scripts on a macOS 11.2 based device.
+description: Describes a known issue in which applications may not be installed, and shell scripts may fail to run on devices that run macOS 11.2.x. Provides a resolution.
 ms.date: 06/16/2021
 ms.prod-support-area-path: App management
 ms.reviewer: markstan
@@ -18,7 +18,7 @@ You may experience the following issues on a macOS Big Sur 11.2.x based device:
 > [!NOTE]
 > These issues may be sporadic. And not all macOS 11.2.x clients in a tenant may experience these issues.
 
-When these issue occur, entries that resemble the following example are logged in the device console:
+When these issues occur, entries that resemble the following example are logged in the device console:
 
 ```output
 <Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] StartInstall using UUID: <ID> for MDM 'Microsoft.Profiles.MDM'
