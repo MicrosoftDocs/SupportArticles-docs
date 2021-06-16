@@ -14,7 +14,7 @@ On a macOS 11.2 (Big Sur) based device, you cannot install an application and th
 When this issue occurs, entries that resemble the following are displayed in a log report in Console:
 
 > [!NOTE]
-> The presence of the error code 506 and the Install request is a duplicate string is the diagnostic of this issue.
+> The presence of the error code **506** and the **Install request is a duplicate** string is the diagnostic of this issue.
 
 ```output
 <Date> <Time>.202335-0500  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] StartInstall using UUID: <ID> for MDM 'Microsoft.Profiles.MDM'
