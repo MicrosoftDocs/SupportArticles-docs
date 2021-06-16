@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 4516523
 - [The default Azure Information Protection policy](/azure/information-protection/deploy-use/configure-policy-default)
 - [How to create a new label for Azure Information Protection](/azure/information-protection/deploy-use/configure-policy-new-label)
 - [How to configure a label for Rights Management protection](/azure/information-protection/deploy-use/configure-policy-protection)
-- [Review Azure Information Protection subscriptions and features](https://azure.microsoft.com/pricing/details/information-protection)
+- [Review Azure Information Protection subscriptions and features](https://azure.microsoft.com/services/information-protection/)
 - [Requirements for Azure Information Protection](/azure/information-protection/get-started/requirements)
 - [Quick start tutorial for Azure Information Protection](/azure/information-protection/get-started/infoprotect-quick-start-tutorial)
 
