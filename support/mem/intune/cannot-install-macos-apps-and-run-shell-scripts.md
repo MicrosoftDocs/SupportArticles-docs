@@ -4,6 +4,8 @@ description: Describes a known issue in which applications may not be installed,
 ms.date: 06/16/2021
 ms.prod-support-area-path: App management
 ms.reviewer: markstan
+author: simonxjx
+ms.author: v-six
 ---
 # Apps fail to install and shell scripts fail to run in macOS 11.2
 
