@@ -33,10 +33,8 @@ There are various reasons why expected results maybe be missing that are related
 
 ## Solution
 
-1. To resolve this issue, check the following settings.
-
-     1. Verify that **Allow this site to appear in search results?** is set to **Yes**.
-    
+1. Make sure that **Allow this site to appear in Search results** is set to **Yes**.
+        
      1. As an admin, locate the site that's missing results.
     
      1. Click the gear icon in the upper-right corner.
@@ -45,16 +43,16 @@ There are various reasons why expected results maybe be missing that are related
     
      1. Under **Search**, select **Search and offline availability**.
     
-     1. Make sure that Allow this site to appear in search results? is set to ***Yes***. 
+     1. Make sure that **Allow this site to appear in Search results** is set to **Yes**. 
     
-         After the setting is set to ***Yes***, the site should be indexed during the next scheduled crawl.
+         After the setting is set to **Yes**, the site should be indexed during the next scheduled crawl.
     
          > [!NOTE]
          > From the same location, admins can also select **Reindex Site** to enable the site to be picked up during the next scheduled search crawl.
     
-         See the "More Information" section for a detailed explanation and walk-through of site-level search configuration settings.
+         See the [More Information](#more-information) section for a detailed explanation and walk-through of site-level search configuration settings.
 
-1. Make sure that **Allow items from this document library to appear in search results?** is set to ***Yes***.
+1. Make sure that **Allow items from this document library to appear in search results?** is set to **Yes**.
 
     1. As an admin, locate the library that's missing from search results.
     
@@ -64,9 +62,9 @@ There are various reasons why expected results maybe be missing that are related
     
     1. Select **Advanced Settings**.
     
-    1. Make sure that **Allow items from this document library to appear in search results?** is set to ***Yes***.
+    1. Make sure that **Allow items from this document library to appear in search results?** is set to **Yes**.
     
-         After the setting is set to ***Yes***, the library should be indexed during the next scheduled crawl.
+         After the setting is set to **Yes**, the library should be indexed during the next scheduled crawl.
     
          > [!NOTE]
          > From the same location, admins can also select **Reindex Document Library** to make sure that all content in the document library is indexed during the next scheduled crawl.
@@ -89,7 +87,7 @@ There are various reasons why expected results maybe be missing that are related
 
      **<site_name>/_layouts/srchvis.aspx**
 
-     Make sure that the Allow this site to appear in search results option is selected.
+     Make sure that the **Allow this site to appear in Search results** option is selected.
 
 ### Parent site and sub site-specific search issues
 
