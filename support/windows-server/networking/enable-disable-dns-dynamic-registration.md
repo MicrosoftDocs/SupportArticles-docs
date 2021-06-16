@@ -15,18 +15,18 @@ ms.technology: networking
 ---
 # How to enable or disable DNS updates in Windows
 
-The article discusses how to disable DNS updates in Microsoft Windows. By default, client computers have DNS updates enabled.
+The article discusses how to disable DNS updates in Windows. By default, client computers have DNS updates enabled.
 
 _Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 246804
 
 ## Summary
 
-Microsoft Windows supports Domain Name System (DNS) updates per RFC 2136. By default, this behavior is enabled for Windows DNS clients.
+Windows supports Domain Name System (DNS) updates per RFC 2136. By default, this behavior is enabled for Windows DNS clients.
 
 Depending on the configuration and services that are running on a particular computer, different components perform DNS updates. There's no centralized way, such as a tool or registry keys, to manage the DNS update behavior of all components. This article describes each component and how to modify that particular component's behavior.
 
-The article also discusses how to disable DNS updates in Microsoft Windows. By default, computers that are running Windows Server have DNS updates enabled.
+The article also discusses how to disable DNS updates in Windows. By default, computers that are running Windows Server have DNS updates enabled.
 
 ## Introduction
 
