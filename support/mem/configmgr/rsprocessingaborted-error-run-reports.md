@@ -11,7 +11,7 @@ ms.author: v-six
 
 ## Symptoms
 
-In version 2103 of Microsoft Endpoint Configuration Manager current branch, you receive the following error message when you run a report that is based on a collection:
+In version 2103 of Microsoft Endpoint Configuration Manager current branch, you receive the following error message when you run a report that depends on a collection:
 
 > An error has occurred during report processing. (rsProcessingAborted)
 
