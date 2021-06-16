@@ -93,10 +93,11 @@ There are various reasons why expected results maybe be missing that are related
 
 ### Parent site and sub site-specific search issues
 
-The default setting for search visibility is one of the following: 
+The default setting for search visibility is one of the following options:
 
-- **Do not index ASPX pages if this site contains fine-grained permissions.**
-- **This site contains fine-grained permissions. Specify the site's ASPX page indexing behavior.**
+- **Do not index Web Parts if this site contains fine-grained permissions**
+- **Always index all Web Parts on this site**
+- **Never index any Web Parts on this site**
 
 If a subsite on the site collection doesn't inherit permissions, .aspx pages won't appear in the search results. To resolve this issue, set the search visibility option in Srchvis.aspx to **Always index all Web Parts on this site**. Additionally, you may set the subsite to inherit permissions from the parent site.
 
@@ -104,6 +105,7 @@ If a subsite on the site collection doesn't inherit permissions, .aspx pages won
 
 For more information about search, see the following Microsoft webpages: 
 
+- [Enable content on a site to be searchable](/sharepoint/make-site-content-searchable)
 - [Not getting the search results you're looking for in SharePoint?](https://support.office.com/article/not-getting-the-search-results-you-re-looking-for-in-sharepoint-d80687f7-1010-4e6d-add9-584b423289d9)
 - [Specify search settings for a site collection or a site](/sharepoint/override-default-search-center)
 
