@@ -4,7 +4,7 @@ description: Fixes an issue in which Push-button reset fails because language re
 ms.date: 09/21/2020
 author: v-miegge
 ms.author: alexmuk
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

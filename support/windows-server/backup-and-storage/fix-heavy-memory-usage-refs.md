@@ -4,7 +4,7 @@ description: Discusses memory pressure and performance issues that occur in the 
 ms.date: 09/30/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

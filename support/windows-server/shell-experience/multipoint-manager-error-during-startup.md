@@ -4,7 +4,7 @@ description: Address an issue in which an error occurs when opening MultiPoint M
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

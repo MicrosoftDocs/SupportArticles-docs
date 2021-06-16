@@ -4,7 +4,7 @@ description: Describes an issue that blocks you from deleting a recovery checkpo
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

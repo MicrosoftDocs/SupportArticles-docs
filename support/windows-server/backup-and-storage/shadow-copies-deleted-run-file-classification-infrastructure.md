@@ -4,7 +4,7 @@ description: Describes an issue in which shadow copies are deleted on Windows Se
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

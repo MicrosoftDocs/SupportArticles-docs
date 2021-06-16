@@ -4,7 +4,7 @@ description: Fixes a problem in which security event logs can't be forwarded in 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

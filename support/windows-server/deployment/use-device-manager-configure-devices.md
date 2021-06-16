@@ -4,7 +4,7 @@ description: Describes how to use Device Manager to configure the hardware devic
 ms.date: 09/28/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

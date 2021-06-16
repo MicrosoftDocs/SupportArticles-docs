@@ -4,7 +4,7 @@ description: This article describes the behavior that occurs when one node of a 
 ms.date: 12/30/2020
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

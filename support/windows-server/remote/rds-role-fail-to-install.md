@@ -4,7 +4,7 @@ description: Provides a solution to an issue where Remote Desktop Services fails
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

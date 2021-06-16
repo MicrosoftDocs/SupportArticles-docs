@@ -4,7 +4,7 @@ description: Fixes error 1079 that occurs when some services fail to start on a 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

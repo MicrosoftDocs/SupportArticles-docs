@@ -4,7 +4,7 @@ description: This article discusses a workaround for an issue that affects netwo
 ms.date: 10/27/2020
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-hardware

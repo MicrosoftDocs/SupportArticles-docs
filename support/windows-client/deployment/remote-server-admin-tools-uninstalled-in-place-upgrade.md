@@ -4,7 +4,7 @@ description: Describes an issue in which Windows 10 Remote Server Admin Tools (R
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

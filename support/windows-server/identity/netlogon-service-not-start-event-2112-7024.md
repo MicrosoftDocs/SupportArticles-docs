@@ -4,7 +4,7 @@ description: Describes an issue where the Netlogon service doesn't start and eve
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

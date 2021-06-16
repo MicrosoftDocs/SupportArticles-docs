@@ -4,7 +4,7 @@ description: Describes how to add a subject alternative name to a secure LDAP ce
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

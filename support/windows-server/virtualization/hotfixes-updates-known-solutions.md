@@ -4,7 +4,7 @@ description: Documents recommended hotfixes, product updates, and known solution
 ms.date: 10/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Describes how and why firmware updates occasionally fail in a Windo
 ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

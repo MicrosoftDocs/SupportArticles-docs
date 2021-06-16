@@ -4,7 +4,7 @@ description: Describes an issue that makes a folder that contains shortcuts on t
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

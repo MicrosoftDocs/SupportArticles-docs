@@ -4,7 +4,7 @@ description: Describes an issue where the upgrade hangs when you try to run an i
 ms.date: 10/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

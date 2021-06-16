@@ -4,7 +4,7 @@ description: Provides a solution to an error 0x000006D9 when you try to share a 
 ms.date: 10/12/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

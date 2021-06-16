@@ -4,7 +4,7 @@ description: WMI-Activity Event ID 5858 is logged with ResultCode 0x80041032 whe
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

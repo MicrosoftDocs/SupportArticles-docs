@@ -4,7 +4,7 @@ description: Provides resolutions for the error that occur after completing conf
 ms.date: 3/1/2021
 author: v-lianna
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

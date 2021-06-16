@@ -4,7 +4,7 @@ description: Discusses that Intel SSD D3-S4510 and Intel SSD D3-S4610 series 1.9
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

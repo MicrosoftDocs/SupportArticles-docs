@@ -4,7 +4,7 @@ description: Provides some methods to an issue that Linux integrated accounts ca
 ms.date: 06/11/2021
 author: v-lianna
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

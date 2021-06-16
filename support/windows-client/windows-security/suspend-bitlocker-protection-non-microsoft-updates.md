@@ -4,7 +4,7 @@ description: Describes how to suspend and resume BitLocker protection for non-Mi
 ms.date: 12/18/2020
 author: v-lianna
 ms.author: v-lianna
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

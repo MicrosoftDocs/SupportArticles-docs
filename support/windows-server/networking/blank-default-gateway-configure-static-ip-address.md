@@ -4,7 +4,7 @@ description: If a Windows 7 Service Pack 1 or Windows Server 2008 R2 Service Pac
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

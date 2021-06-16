@@ -4,7 +4,7 @@ description: Resolves the Microsoft-Windows-RPC-Events event 11 that occurs when
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
