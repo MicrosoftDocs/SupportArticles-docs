@@ -9,7 +9,7 @@ ms.reviewer: markstan
 
 ## Symptoms
 
-On a macOS 11.2 (Big Sur) based device, you cannot install an application and the application is displayed as the **Install Pending** status in the Intune portal. In addition, you also cannot run shell scripts that relay on the installation of the Intune Management Extension (also known as Sidecar) app.
+On a macOS 11.2 (Big Sur) based device, you cannot install an application and the application is displayed as the **Install Pending** status in the Intune portal. In addition, you also cannot run shell scripts that rely on the installation of the Intune Management Extension (also known as Sidecar) app.
 
 When this issue occurs, entries that resemble the following are displayed in a log report in Console:
 
