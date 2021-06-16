@@ -873,14 +873,14 @@
           href: ../powerpoint/fails-starting-powerpoint-mac.md
         - name: PowerPoint stops responding (spinning wheel)
           href: ../powerpoint/powerpoint-stops-responding.md
-        - name: User info in @mentions doesn't resolve
-          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
         - name: Save presentation as webpage is unavailable
           href: ../powerpoint/save-presentation-as-webpage-unavailable.md
         - name: Slide transition sounds are missing
           href: ../powerpoint/slide-transition-sounds-missing.md
         - name: Troubleshoot a damaged presentation
           href: ../powerpoint/damaged-presentation.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
     - name: Project
       items:
         - name: Calculate work and duration with resource assignment changes
