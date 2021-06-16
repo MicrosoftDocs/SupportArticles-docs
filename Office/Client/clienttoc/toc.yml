@@ -601,6 +601,8 @@
           href: ../excel/use-shared-workbook.md
         - name: Use startup folders
           href: ../excel/use-startup-folders.md
+        - name: User info in @mentions doesn't resolve
+          href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
         - name: Workbook isn't activated when you run a macro
