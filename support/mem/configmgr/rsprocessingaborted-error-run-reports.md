@@ -15,7 +15,7 @@ When you run a report that relies on a collection in Microsoft Endpoint Configur
 - > The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'
 - > The EXECUTE permission was denied on the object 'fnIsPrimary', database 'CM_IDR', schema 'dbo'
 
-:::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="An error example.":::
+:::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="Screenshot of the rsProcessingAborted error.":::
 
 ## Cause
 
