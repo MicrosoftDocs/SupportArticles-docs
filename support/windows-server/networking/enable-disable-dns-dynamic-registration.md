@@ -49,7 +49,7 @@ The following components perform DNS updates:
 ### DHCP Client service
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [how to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).  
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).  
 
 The DHCP Client service performs DNS updates for network adapters regardless of whether the adapter is configured by using DHCP or by using manual or static methods. This section describes how to enable and disable the following lookup registrations:
 
@@ -403,4 +403,4 @@ By default, client computers that are running Windows have DNS updates enabled. 
 4. Right-click **RegistrationEnabled**, click **Modify**, type *0* in the **Value data** box, and then click **OK**.
 5. Exit **Registry Editor**.
 
-For additional information, see [How to configure DNS dynamic update in Windows Server](configure-dns-dynamic-updates-windows-server-2003.md)
+For additional information, see [How to configure DNS dynamic update in Windows Server](configure-dns-dynamic-updates-windows-server-2003.md).
