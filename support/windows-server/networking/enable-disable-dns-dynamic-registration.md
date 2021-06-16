@@ -383,7 +383,7 @@ By default, client computers that are running Windows have DNS updates enabled. 
 
 1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
 2. Locate and then click the following registry subkey:  
- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ Tcpip\Parameters`
+ `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
 4. Type *DisableDynamicUpdate*, and then press ENTER two times.
