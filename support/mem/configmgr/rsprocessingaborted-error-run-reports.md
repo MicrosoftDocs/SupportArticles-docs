@@ -19,6 +19,7 @@ Meanwhile, you may also receive one of the following error messages:
 
 - > The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'
 - > The EXECUTE permission was denied on the object 'fnIsPrimary', database 'CM_IDR', schema 'dbo'
+- > Query execution failed for dataset 'DeploymentSummary'. (rsErrorExecutingCommand)
 
 See the following screenshot for an example of the error:
 
