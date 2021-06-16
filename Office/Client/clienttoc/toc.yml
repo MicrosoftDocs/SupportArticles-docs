@@ -873,6 +873,8 @@
           href: ../powerpoint/fails-starting-powerpoint-mac.md
         - name: PowerPoint stops responding (spinning wheel)
           href: ../powerpoint/powerpoint-stops-responding.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
         - name: Save presentation as webpage is unavailable
           href: ../powerpoint/save-presentation-as-webpage-unavailable.md
         - name: Slide transition sounds are missing
@@ -1061,6 +1063,8 @@
           href: ../word/track-changes-disabled.md
         - name: Troubleshoot print failures in Word for Office 365 on Windows 10
           href: ../word/print-failures-word-for-office-365-on-win-10.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
         - name: Word slows or stops responding

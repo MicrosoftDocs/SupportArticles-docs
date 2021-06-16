@@ -32,7 +32,7 @@ search.appverid:
 
 ## Symptoms
 
-In Microsoft Word, Excel, PowerPoint and Outlook, when you mention a user by using the @ symbol followed by the user's name or email alias, the user information doesn't resolve.
+In Microsoft Word, Excel, PowerPoint, and Outlook, when you mention a user by using the @ symbol followed by the user's name or email alias, the user information doesn't resolve.
 
 ## Cause
 
