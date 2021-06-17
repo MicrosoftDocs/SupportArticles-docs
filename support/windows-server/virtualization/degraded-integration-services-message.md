@@ -4,7 +4,7 @@ description: While running a non-Windows guest such as Linux on Hyper-V, the Hyp
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

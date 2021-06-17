@@ -4,7 +4,7 @@ description: Provides a solution to an error message when non-administrator user
 ms.date: 10/15/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

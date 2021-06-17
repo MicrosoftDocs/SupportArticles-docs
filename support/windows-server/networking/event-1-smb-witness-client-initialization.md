@@ -4,7 +4,7 @@ description: This article describes Event 1 that is logged about SMB witness cli
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

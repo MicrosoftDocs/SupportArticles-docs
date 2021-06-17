@@ -4,7 +4,7 @@ description: Describes an issue where you receive a STOP 0X0000007B error when y
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

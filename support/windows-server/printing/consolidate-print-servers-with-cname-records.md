@@ -4,7 +4,7 @@ description: Describes how to consolidate print servers in Windows Server 2003 w
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

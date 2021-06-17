@@ -4,7 +4,7 @@ description: Lists the AMD EPYC 7000 Series server processors that are supported
 ms.date: 06/04/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

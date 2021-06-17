@@ -4,7 +4,7 @@ description: Helps to fix the error message "System error 67 has occurred. The n
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

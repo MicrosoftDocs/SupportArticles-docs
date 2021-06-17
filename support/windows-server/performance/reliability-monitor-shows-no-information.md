@@ -4,7 +4,7 @@ description: Describes a behavior that is by design in Windows Server 2008 and i
 ms.date: 09/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Helps to fix the error c00002e2 or "Choose an option" when Domain c
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

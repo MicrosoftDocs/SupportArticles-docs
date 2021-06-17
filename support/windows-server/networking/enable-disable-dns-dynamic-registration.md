@@ -4,7 +4,7 @@ description: Describes how to disable and enable dynamic registration with DNS s
 ms.date: 06/16/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

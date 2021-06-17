@@ -4,7 +4,7 @@ description: Describes scenarios in which AGPM and GPRESULT do not work on a Win
 ms.date: 09/18/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

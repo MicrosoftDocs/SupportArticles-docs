@@ -4,7 +4,7 @@ description: Discusses the BitLocker Recovery auto-shutdown process in UEFI mode
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

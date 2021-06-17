@@ -4,7 +4,7 @@ description: Provides resolutions for an issue where access checks using Windows
 ms.date: 2/7/2021
 author: v-lianna
 ms.author: v-lianna
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

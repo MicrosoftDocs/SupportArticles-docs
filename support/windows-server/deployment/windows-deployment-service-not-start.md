@@ -4,7 +4,7 @@ description: Provides a solution to the error 0x5 that occurs when you start the
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Event ID 4105 occurs on a computer running Remote Desktop Licensing
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Event ID 5961 and event ID 1000 are logged when trying to start a M
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

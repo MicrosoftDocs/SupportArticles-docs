@@ -4,7 +4,7 @@ description: Address an issue in which Windows 10 Hyper-V cannot start virtual m
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

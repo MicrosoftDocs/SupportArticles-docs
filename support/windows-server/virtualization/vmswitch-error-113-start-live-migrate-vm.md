@@ -4,7 +4,7 @@ description: Discusses that VmSwitch Error 113 event is logged when you start or
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

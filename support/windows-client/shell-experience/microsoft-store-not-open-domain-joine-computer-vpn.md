@@ -4,7 +4,7 @@ description: Discusses an issue in which Microsoft Store doesn't open after a do
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

@@ -4,7 +4,7 @@ description: Fixes an issue in which API calls of performance counters are delay
 ms.date: 10/29/2020
 author: v-lianna
 ms.author: v-lianna
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: This article helps fix the error 0x8007000D that occurs when you ac
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

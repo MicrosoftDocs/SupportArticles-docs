@@ -4,7 +4,7 @@ description: Address an issue in which Windows 10 Apps won't open after update. 
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

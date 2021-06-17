@@ -4,7 +4,7 @@ description: Resolve an error (The kerberos client received a KRB_AP_ERR_MODIFIE
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

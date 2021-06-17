@@ -4,7 +4,7 @@ description: Discusses a problem in which a new session setup for LDAP services 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

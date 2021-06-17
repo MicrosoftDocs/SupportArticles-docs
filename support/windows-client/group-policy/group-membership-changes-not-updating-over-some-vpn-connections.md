@@ -4,7 +4,7 @@ description: Describes a situation in which VPN users might experience resource 
 ms.date: 03/31/2021
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
