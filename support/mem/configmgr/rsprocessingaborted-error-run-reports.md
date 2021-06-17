@@ -9,11 +9,11 @@ ms.author: v-six
 ---
 # rsProcessingAborted error when running reports in Configuration Manager version 2103
 
-*Applies to:* Microsoft Endpoint Configuration Manager (current branch – version 2103), SQL Server 2019, SQL Server 2019 Reporting Services, SQL Server 2017 Reporting Services
+_Applies to:_ &nbsp; Microsoft Endpoint Configuration Manager (current branch – version 2103), SQL Server 2019, SQL Server 2019 Reporting Services, SQL Server 2017 Reporting Services
 
 ## Symptoms
 
-You're running SQL Server 2019 with SQL Server Reporting Services (SSRS) 2017 or 2019 in your Microsoft Endpoint Configuration Manager environment. After you update to Configuration Manager current branch version 2103, you receive the following error when you run reports for collections:
+You're running SQL Server 2019 with SQL Server Reporting Services (SSRS) 2017 or 2019 in your Microsoft Endpoint Configuration Manager environment. After you upgrade the environment to version 2103 of Configuration Manager current branch, you receive the following error when you run reports for collections:
 
 > An error has occurred during report processing. (rsProcessingAborted)
 
@@ -22,6 +22,7 @@ You may also receive one of the following error messages:
 - > The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'
 
   :::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="A screenshot of the rsProcessingAborted error.":::
+
 - > The EXECUTE permission was denied on the object 'fnIsPrimary', database 'CM_IDR', schema 'dbo'
 
 ## Cause
