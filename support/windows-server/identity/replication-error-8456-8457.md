@@ -4,7 +4,7 @@ description: Describes how to troubleshoot replication error 8456 or 8457.
 ms.date: 10/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

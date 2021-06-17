@@ -4,7 +4,7 @@ description: Describes the fallback and timeout behavior that exist when one or 
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

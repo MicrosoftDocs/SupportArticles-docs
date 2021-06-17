@@ -4,7 +4,7 @@ description: Describes symptoms, cause, and resolution for AD operations that fa
 ms.date: 09/07/2020
 mauthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

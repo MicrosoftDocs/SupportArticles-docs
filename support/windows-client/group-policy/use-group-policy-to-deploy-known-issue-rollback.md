@@ -4,7 +4,7 @@ description: describes how to configure Group Policy to use a Known Issue Rollba
 ms.date: 04/26/2021
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

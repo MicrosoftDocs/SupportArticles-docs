@@ -4,7 +4,7 @@ description: Fixes an issue where the Screensaver doesn't start after a Group Po
 ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

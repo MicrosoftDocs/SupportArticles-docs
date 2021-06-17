@@ -4,7 +4,7 @@ description: Describes how to use Recovery Console to replace a driver on a Wind
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

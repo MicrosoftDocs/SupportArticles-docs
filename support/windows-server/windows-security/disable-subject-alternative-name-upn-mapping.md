@@ -4,7 +4,7 @@ description: Describes how to disable the Subject Alternative Name for UPN mappi
 ms.date: 06/04/2021
 author: v-lianna
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

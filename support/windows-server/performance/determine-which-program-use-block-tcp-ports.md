@@ -4,7 +4,7 @@ description: Discusses how to determine which program uses or blocks specific Tr
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

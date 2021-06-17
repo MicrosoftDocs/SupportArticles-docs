@@ -4,7 +4,7 @@ description: Works around an issue in which you cannot install the .NET Framewor
 ms.date: 9/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

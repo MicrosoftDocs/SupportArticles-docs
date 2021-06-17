@@ -4,7 +4,7 @@ description: Provides a solution to an error 403 that occurs when you access Win
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

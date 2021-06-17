@@ -4,7 +4,7 @@ description: Address an issue in which CMAK-based VPN client does not work after
 ms.date: 09/11/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

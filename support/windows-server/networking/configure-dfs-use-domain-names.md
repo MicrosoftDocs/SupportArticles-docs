@@ -4,7 +4,7 @@ description: Describes how to configure a DFSN server to operate in a DNS-only e
 ms.date: 10/09/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

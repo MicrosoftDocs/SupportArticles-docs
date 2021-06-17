@@ -4,7 +4,7 @@ description: Describes the Microsoft .NET Framework 4.5.1 (web installer) for Wi
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

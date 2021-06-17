@@ -4,7 +4,7 @@ description: Discusses that Event ID 158 is logged if identical disk GUIDs are f
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

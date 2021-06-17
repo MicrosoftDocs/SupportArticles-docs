@@ -4,7 +4,7 @@ description: Describes how to reduce the sizes of the ConflictAndDeleted folder 
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Provides resolutions for the issue where network gets disconnected 
 ms.date: 12/28/2020
 author: v-lianna
 ms.author: v-lianna
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
