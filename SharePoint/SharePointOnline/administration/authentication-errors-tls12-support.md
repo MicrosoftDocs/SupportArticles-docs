@@ -122,18 +122,6 @@ Authentication issues when you use Azure App Service.
 1. Set the minimum TLS version for your App Service instance to TLS 1.2. For more information, see [Enforce TLS versions](/azure/app-service/configure-ssl-bindings#enforce-tls-versions).
 2. Make sure that you're using the latest version of .NET Framework.
    
-## Windows Server 2012 R2 missing necessary cipher suites
-
-### Symptom
-   
-Authentication issues with Windows Server 2012 R2 due to missing two cipher suites that are needed for Azure Front Door:
-   
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-
- ### Resolution
-   
- Configuration to add the missing cipher suites must be completed on Windows 2012 R2. If Windows 2012 R2 is still experiencing the issue, ensure there are no Windows Group Policy (GOP) exceptions that would prevent the cipher suites on Windows 2012 R2 servers.
 
 ## References
 
