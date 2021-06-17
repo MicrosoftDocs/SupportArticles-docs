@@ -37,7 +37,7 @@ If you don’t have access to such a device, you can edit the cells in Excel for
 1. Select **Unprotect Sheet** or **Unprotect Workbook**.
 1. Enter the password.
 
-# References
+## References
 
 - Lock cells to protect them in Excel for Mac
 - Lock or unlock specific areas of a protected worksheet
