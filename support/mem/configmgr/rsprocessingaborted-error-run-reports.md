@@ -9,21 +9,37 @@ ms.author: v-six
 ---
 # rsProcessingAborted error when running reports in Configuration Manager version 2103
 
-_Applies to:_ &nbsp; Microsoft Endpoint Configuration Manager (current branch – version 2103), SQL Server 2019, SQL Server 2019 Reporting Services, SQL Server 2017 Reporting Services
+This article helps you fix an issue in which running reports for collections doesn't work with SQL Server 2019 after you upgrade Microsoft Endpoint Configuration Manager to version 2103.
+
+_Applies to:_ &nbsp; Microsoft Endpoint Configuration Manager (current branch – version 2103), SQL Server 2019
 
 ## Symptoms
 
-You're running SQL Server 2019 with SQL Server Reporting Services (SSRS) 2017 or 2019 in your Microsoft Endpoint Configuration Manager environment. After you upgrade the environment to version 2103 of Configuration Manager current branch, you receive the following error when you run reports for collections:
+After you upgrade the Configuration Manager environment to version 2103 of Configuration Manager current branch, you receive the following errors when you run reports for collections:
 
-> An error has occurred during report processing. (rsProcessingAborted)
-
-You may also receive one of the following error messages:
-
+- > An error has occurred during report processing. (rsProcessingAborted)
 - > The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'
-
-  :::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="A screenshot of the rsProcessingAborted error.":::
-
 - > The EXECUTE permission was denied on the object 'fnIsPrimary', database 'CM_IDR', schema 'dbo'
+
+See the following screenshot for an example of the error:
+
+:::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="A screenshot of the rsProcessingAborted error.":::
+
+When this issue occurs, the following error messages are logged in the *ReportingServicesService.log* file on the reporting services point:
+
+```output
+processing!ReportServer_0-2!18fc!<Date>-<Time>:: e ERROR: Throwing Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: , Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: Query execution failed for dataset 'DeploymentSummary'.
+
+   ---> System.Data.SqlClient.SqlException: The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'.
+
+processing!ReportServer_0-2!18fc!<Date>-<Time>:: e ERROR: An exception has occurred in data set 'DeploymentSummary'. Details: Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: Query execution failed for dataset 'DeploymentSummary'.
+
+   ---> System.Data.SqlClient.SqlException: The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'.
+
+processing!ReportServer_0-2!18fc!<Date>-<Time>:: v VERBOSE: An exception has occurred. Trying to abort processing. Details: Microsoft.ReportingServices.ReportProcessing.ReportProcessingException: Query execution failed for dataset 'DeploymentSummary'.
+
+   ---> System.Data.SqlClient.SqlException: The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'.
+```
 
 ## Cause
 
