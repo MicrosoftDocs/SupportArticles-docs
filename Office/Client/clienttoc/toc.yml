@@ -343,6 +343,8 @@
           href: ../excel/cant-add-refedit-control-to-vba-userform..md
         - name: Can't create a PivotTable in Excel 2013
           href: ../excel/cannot-create-pivottable.md
+        - name: Can't edit certain cells in a protected worksheet using Excel for Mac
+          href: ../excel/unable-to-edit-protected-ranges-on-mac.md
         - name: Can't export to Excel from SharePoint Online
           href: ../excel/cannot-export-to-excel.md
         - name: Can't modify oData connection in PowerPivot
