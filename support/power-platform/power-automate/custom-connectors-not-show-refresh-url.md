@@ -17,7 +17,7 @@ When you try to verify the configuration of custom connectors that using **Gener
 
     :::image type="content" source="./media/custom-connectors-not-show-refresh-url/refresh-url-security.png" alt-text="A screenshot of the Security page.":::
 
-- In the Swagger Editor, the **Refresh URL** value isn't displayed and it isn't supported to add the value.
+- In the Swagger Editor, the **Refresh URL** value isn't listed and displayed as a security definition.
 
     :::image type="content" source="./media/custom-connectors-not-show-refresh-url/swagger-security-definitions.png" alt-text="A screenshot of the Swagger Editor.":::
 
