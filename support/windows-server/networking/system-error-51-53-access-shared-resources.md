@@ -4,7 +4,7 @@ description: Provides a solution to system error 51 or 53 that occurs when you a
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

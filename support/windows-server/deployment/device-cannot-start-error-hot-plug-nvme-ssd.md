@@ -4,7 +4,7 @@ description: Describes an error "This device cannot start" that occurs when you 
 ms.date: 05/14/2021
 author: v-lianna
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

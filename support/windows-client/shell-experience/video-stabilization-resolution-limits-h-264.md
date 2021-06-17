@@ -4,7 +4,7 @@ description: H.264 support in Windows 8 and Windows RT is limited to 2048x2048 p
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

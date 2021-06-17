@@ -4,7 +4,7 @@ description: Fixes an issue in which new and existing RemoteFX-enabled virtual m
 ms.date: 09/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

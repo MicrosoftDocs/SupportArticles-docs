@@ -4,7 +4,7 @@ description: Describes why you receive an error when you try to do a system stat
 ms.date: 10/21/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

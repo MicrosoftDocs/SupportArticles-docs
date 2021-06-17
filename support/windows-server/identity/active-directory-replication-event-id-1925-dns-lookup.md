@@ -4,7 +4,7 @@ description: Helps to resolve the issue where you get Event ID 1925 with the err
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

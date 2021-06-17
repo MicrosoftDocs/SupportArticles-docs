@@ -4,7 +4,7 @@ description: Resolves the Windows Server problem in which selecting Roles in Ser
 ms.date: 04/14/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

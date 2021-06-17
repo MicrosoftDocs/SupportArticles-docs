@@ -4,7 +4,7 @@ description: Describes an issue where converting Windows Server 2012 R2 Core to 
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

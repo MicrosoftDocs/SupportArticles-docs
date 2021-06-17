@@ -4,7 +4,7 @@ description: Discusses a by-design behavior where the Power Management tab is no
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

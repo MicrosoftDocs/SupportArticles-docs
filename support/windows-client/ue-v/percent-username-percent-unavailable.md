@@ -4,7 +4,7 @@ description: Resolves an issue in which username is unavailable in Windows that 
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

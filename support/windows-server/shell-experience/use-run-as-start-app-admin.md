@@ -4,7 +4,7 @@ description: Describes how to use the Run as command to start an application as 
 ms.date: 09/28/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Describes an issue that occurs in a Windows Server 2003 environment
 ms.date: 09/22/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

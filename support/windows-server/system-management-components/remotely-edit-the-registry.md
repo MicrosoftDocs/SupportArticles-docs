@@ -4,7 +4,7 @@ description: Describes how to remotely edit the registry of a client computer fr
 ms.date: 10/20/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Describes known issues that occur when you manage a Windows 10 Grou
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

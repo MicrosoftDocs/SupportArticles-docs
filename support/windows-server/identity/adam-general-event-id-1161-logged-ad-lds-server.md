@@ -4,7 +4,7 @@ description: Describes an issue in which ADAM General Event ID 1161 is logged on
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
