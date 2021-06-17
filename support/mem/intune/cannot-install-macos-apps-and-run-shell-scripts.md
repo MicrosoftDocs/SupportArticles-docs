@@ -47,7 +47,7 @@ When these issues occur, entries that resemble the following example are logged 
 ```
 
 > [!NOTE]
-> The presence of error code **506** and **Install request is a duplicate** in the log is the diagnostic for this issue.
+> The presence of error code **506** and **Install request is a duplicate** in the log is diagnostic for this issue.
 
 ## Cause
 
