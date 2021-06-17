@@ -403,4 +403,4 @@ By default, client computers that are running Windows have DNS updates enabled. 
 4. Right-click **RegistrationEnabled**, click **Modify**, type *0* in the **Value data** box, and then click **OK**.
 5. Exit **Registry Editor**.
 
-For additional information, see [How to configure DNS dynamic update in Windows Server](configure-dns-dynamic-updates-windows-server-2003.md).
+For more information about how to configure DNS dynamic updates and how to integrate DNS updates with DHCP, see [How to configure DNS dynamic update in Windows Server](configure-dns-dynamic-updates-windows-server-2003.md).
