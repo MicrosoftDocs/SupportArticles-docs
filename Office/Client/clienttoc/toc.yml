@@ -727,7 +727,7 @@
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Error when installing Office 2013
           href: ../office-suite-issues/office-2013-installation-error.md
-        - name: Error when installing VS2010 Toos for Office Runtime
+        - name: Error when installing VS2010 Tools for Office Runtime
           href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
