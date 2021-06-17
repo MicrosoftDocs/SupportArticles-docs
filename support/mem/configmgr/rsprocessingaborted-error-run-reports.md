@@ -9,26 +9,25 @@ ms.author: v-six
 ---
 # rsProcessingAborted error when running reports in Configuration Manager version 2103
 
+*Applies to:* Microsoft Endpoint Configuration Manager (current branch – version 2103), SQL Server 2019, SQL Server 2019 Reporting Services, SQL Server 2017 Reporting Services
+
 ## Symptoms
 
-In version 2103 of Microsoft Endpoint Configuration Manager current branch, you receive the following error message when you run a report that depends on a collection:
+You're running SQL Server 2019 with SQL Server Reporting Services (SSRS) 2017 or 2019 in your Microsoft Endpoint Configuration Manager environment. After you update to Configuration Manager current branch version 2103, you receive the following error when you run reports for collections:
 
 > An error has occurred during report processing. (rsProcessingAborted)
 
-Meanwhile, you may also receive one of the following error messages:
+You may also receive one of the following error messages:
 
 - > The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'
+
+  :::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="A screenshot of the rsProcessingAborted error.":::
 - > The EXECUTE permission was denied on the object 'fnIsPrimary', database 'CM_IDR', schema 'dbo'
-- > Query execution failed for dataset 'DeploymentSummary'. (rsErrorExecutingCommand)
-
-See the following screenshot for an example of the error:
-
-:::image type="content" source="./media/rsprocessingaborted-error-run-reports/error-example.png" alt-text="A screenshot of the rsProcessingAborted error.":::
 
 ## Cause
 
-This issue occurs because of the [Scalar UDF Inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL Server 2019. For more information, see [Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581).
+This issue occurs because of the [Scalar UDF Inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL Server 2019. A query that uses Scalar UDF Inlining may return an error or unexpected results. For more information, see [Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581).
 
 ## Resolution
 
-To resolve this issue, install the cumulative update 11 ([KB5003249](https://support.microsoft.com/help/5003249)) or a later cumulative update for SQL Server 2019.
+To fix this issue, install [KB5003249 - cumulative update 11](https://support.microsoft.com/help/5003249), or a later cumulative update for SQL Server 2019.
