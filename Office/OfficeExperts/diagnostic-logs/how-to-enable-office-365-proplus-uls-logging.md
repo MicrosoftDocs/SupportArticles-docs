@@ -27,20 +27,23 @@ When you troubleshoot Microsoft Office issues, traditional log settings sometime
 
 To collect more verbose logging details, registry keys must be added:
 
-**For sign-in or activation issues, add the following registry key:**
+**For sign-in or activation issues, run the following commands to add the registry key:**
 
-`HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Logging`  
-"EnableLogging"=dword:00000001
+To Enable:
+```powershell
+reg add HKCU\Software\Microsoft\Office\16.0\Common\Logging /v EnableLogging /t REG_DWORD /d 1
+```
 
-To enable and disable the above key automatically, download and run the following .reg files:
-
-- [Enable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Enable-Local-Logging2016.zip)
-- [Disable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Disable-Local-Logging2016.zip)
+To Disable:
+```powershell
+reg delete HKCU\Software\Microsoft\Office\16.0\Common\Logging /v EnableLogging 
+```
 
 Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues, in the format of *MachineName-Date-time.log*.
 
 **For installation or patching issues, run the following commands to add the registry keys:**
 
+To Enable:
 ```powershell
 reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3
 ```
@@ -48,14 +51,30 @@ reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 
 ```powershell
 reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DWORD /d 1
 ```
+
+To Disable:
+```powershell
+reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging 
+```
+
+```powershell
+reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel 
+```
 Restart the Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
 Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues, in the format of *MachineName-Date-time.log*.
 
 **For issues with the Serviceability Manager, add the following registry key:**
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\C2RSvcMgr`  
-"EnableLocalLogging"=dword:00000001
+To Enable:
+```powershell
+reg add HKLM\SOFTWARE\Microsoft\Office\C2RSvcMgr /v EnableLocalLogging /t REG_DWORD /d 1
+```
+
+To Disable:
+```powershell
+reg delete HKLM\SOFTWARE\Microsoft\Office\C2RSvcMgr /v EnableLocalLogging
+```
 
 Serviceability Manager is part of [Office Inventory](/deployoffice/admincenter/inventory), which is used as part of [servicing profile](/deployoffice/admincenter/servicing-profile). This type of logging can be used if you experience an issue with Inventory. For example, devices aren't displayed on the inventory page in the Microsoft 365 Apps admin center. 
 
@@ -64,4 +83,4 @@ The Inventory feature is available in version 2008 (16.0.13127.21064) or later. 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
 
-After you collect the logs, turn off the Office verbose logging settings. Otherwise, it continues to collect verbose data and use more drive space.
+After you collect the logs, **disable Office verbose logging**, otherwise the logs can become very large. 
