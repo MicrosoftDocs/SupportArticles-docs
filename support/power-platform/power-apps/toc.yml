@@ -5,6 +5,8 @@
     items:
     - name: Best practices when updating a flow
       href: best-practices-when-updating-a-flow.md
+    - name: Refresh URL isn't displayed for custom connectors
+      href: custom-connectors-not-show-refresh-url.md
   - name: Others
     items:
     - name: Lookup doesn't filter records for particular entity
