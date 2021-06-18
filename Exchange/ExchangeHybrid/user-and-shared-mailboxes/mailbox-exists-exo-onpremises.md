@@ -29,7 +29,7 @@ In a Microsoft Exchange Server hybrid deployment, a user may have a mailbox in b
 
 ## How to improve the situation
 
-To correct this mail flow issue, we recommend that you refer to the methods that are provided in this article. Other possible options use recovery methods that are not guaranteed to work. As Office 365 continues to evolve and new features are added, additional options may be possible. This article will be updated to reflect additional corrective methods as they become available.
+To correct this mail flow issue, we recommend that you refer to the methods that are provided in this article. Other possible options use recovery methods that are not guaranteed to work. As Microsoft 365 continues to evolve and new features are added, additional options may be possible. This article will be updated to reflect additional corrective methods as they become available.
 
 ### Scenario 1: Keep Exchange Online mailbox
 
@@ -60,18 +60,20 @@ To use this method, follow these steps:
 
 5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` command from step 1).
 
-6. Collect information about the GUIDs of the mailboxes and database:
-    - To get the GUID of the disconnected mailbox, use the value of the ExchangeGUID parameter from the file saved in Step 1.
-    - To get the GUID of the on-premises database, use the value of the Database parameter from the file saved in Step 1, then run the following command:
+6. Collect the GUIDs of the mailboxes and database:
+
+   - To get the GUID of the disconnected mailbox, use the value of the ExchangeGUID parameter from the file that's saved in step 1.
+   - To get the GUID of the on-premises database, use the value of the Database parameter from the file that's saved in step 1, then run the following command:
   
-    ```powershell
-    Get-MailboxDatabase "database identity" | fl *GUID*
-    ```  
-    - To get the GUID of cloud mailbox, run the following command by using Exchange Online PowerShell:
+     ```powershell
+     Get-MailboxDatabase "database identity" | fl *GUID*
+     ```  
+   
+   - To get the GUID of the cloud mailbox, run the following command by using Exchange Online PowerShell:
   
-    ```powershell
-    Get-Mailbox "user identity" | fl *ExchangeGUID*
-    ```  
+     ```powershell
+     Get-Mailbox "user identity" | fl *ExchangeGUID*
+     ```  
     
 7. (Optional) Stamp the Exchange Online GUID on the remote mailbox using Exchange Management Shell (required if you ever want to off board the mailbox back to on-premises).
 
@@ -83,7 +85,7 @@ To use this method, follow these steps:
 
    - A member of the Domain Admins group in Active Directory Domain Services (AD DS) in the on-premises organization.
    - A member of the Exchange Recipients Administrators group in Active Directory in the on-premises organization.
-   - A member of the Organization Management or Recipient Management group in Exchange 2013 or above.
+   - A member of the Organization Management or Recipient Management group in Exchange Server 2013 or above.
 
     ```powershell
     $cred = Get-Credential
@@ -91,7 +93,7 @@ To use this method, follow these steps:
     ```
 
     > [!NOTE]
-    > The remote restore isn't supported for Exchange 2010. The minimum supported version is Exchange 2013.
+    > The remote restore isn't supported for Exchange Server 2010. The minimum supported version is Exchange Server 2013.
 
 > [!IMPORTANT]
 > Because `New-MailboxRestoreRequest` was designed to work in a single Exchange organization, the cross-premises restore jobs will fail due to an unavoidable mismatch between the source and target mailbox ExchangeGuid's.  The mailbox restore request will end in status "FailedOther", and the report (from `Get-MailboxRestoreRequestStatistics -IncludeReport`) will show the following error message in the final report Entry:
@@ -179,4 +181,4 @@ Any items reported in the BadItemsEncountered, LargeItemsEncountered, or Missing
 
 ### Scenario 2: Remove Exchange Online mailbox data
 
-The mailbox information in Office 365 may no longer be needed. In this case, see [this Exchange Team Blog article](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Permanently-Clear-Previous-Mailbox-Info/ba-p/607619) for more information about how to remove the Exchange Online mailbox information completely.
+The mailbox information in Microsoft 365 may no longer be needed. In this case, see [this Exchange Team Blog article](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Permanently-Clear-Previous-Mailbox-Info/ba-p/607619) for more information about how to remove the Exchange Online mailbox information completely.
