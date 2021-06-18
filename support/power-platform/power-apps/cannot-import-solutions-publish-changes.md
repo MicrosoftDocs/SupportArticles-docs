@@ -24,4 +24,4 @@ This issue occurs because another solution is being imported at the same time.
 To work around this issue, use one of the following methods according to the development environment:
 
 - **Single-user**: Import solutions one by one and make sure that the previous solution is imported.
-- **Multi-user**: Create a central repository, and use automated deploy solutions such as [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines) or [GitHub Actions](https://docs.github.com/actions) to import solutions in queues.
+- **Multi-user**: Create a central repository, and use automated deployment such as [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines) or [GitHub Actions](https://docs.github.com/actions) to import solutions in queues.
