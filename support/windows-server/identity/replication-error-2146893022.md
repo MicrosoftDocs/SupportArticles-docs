@@ -270,7 +270,7 @@ Kerberos tickets for the system account that are used by Active Directory replic
 
 Domain controllers can be made to use other domain controllers by stopping the KDC service on a local or remote domain controller.
 
-Use `REPADIN /SHOWOBJMETA` to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source domain controller in the source domain controller's  and destination domain controller's copy of the Active Directory directory.
+Use `REPADMIN /SHOWOBJMETA` to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source domain controller in the source domain controller's  and destination domain controller's copy of the Active Directory directory.
 
 ```console
 C:\>repadmin /showobjmeta <source DC> <DN path of source DC computer account>
