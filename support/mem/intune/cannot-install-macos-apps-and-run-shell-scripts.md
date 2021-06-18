@@ -1,26 +1,26 @@
 ---
 title: App installation and shell script execution fail in macOS 11.2
-description: Describes a known issue in which applications may not be installed, and shell scripts may fail to run on devices that run macOS 11.2.x. Provides a resolution.
+description: Resolves a known issue in which applications don't install and shell scripts don't run on devices that run macOS 11.2.x.
 ms.date: 06/16/2021
 ms.prod-support-area-path: App management
 ms.reviewer: markstan
 author: simonxjx
 ms.author: v-six
 ---
-# Apps fail to install and shell scripts fail to run in macOS 11.2
+# Apps don't install and shell scripts don't run in macOS 11.2
 
 ## Symptoms
 
-You may experience the following issues on a macOS Big Sur 11.2.x based device:
+You experience the following issues on a macOS Big Sur 11.2._x_-based device:
 
 - Apps can't be downloaded and installed.
 - The app installation status shows **Install Pending** in the Microsoft Endpoint Manager admin center indefinitely.
-- Shell scripts fail to run because the Microsoft Intune management agent can't be installed successfully.
+- Shell scripts don't run because the Microsoft Intune management agent can't be installed successfully.
 
 > [!NOTE]
-> These issues may be sporadic. And not all macOS 11.2.x clients in a tenant may experience these issues.
+> These issues might occur sporadically. Not all macOS 11.2._x_ clients in a tenant experience the issues.
 
-When these issues occur, entries that resemble the following example are logged in the device console:
+When these issues occur, entries that resemble the following example are logged on the device console:
 
 ```output
 <Time>  localhost mdmclient[2611]: [com.apple.ManagedClient:ManagedApps] StartInstall using UUID: <ID> for MDM 'Microsoft.Profiles.MDM'
@@ -47,11 +47,11 @@ When these issues occur, entries that resemble the following example are logged 
 ```
 
 > [!NOTE]
-> The presence of error code **506** and **Install request is a duplicate** in the log is diagnostic for this issue.
+> The presence of error code **506** and an **Install request is a duplicate** entry in the log are evidence of this issue.
 
 ## Cause
 
-It's a known issue in macOS 11.2.x.
+This is a known issue in macOS 11.2._x_.
 
 ## Resolution
 
