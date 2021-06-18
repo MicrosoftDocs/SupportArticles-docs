@@ -1,6 +1,6 @@
 ---
 title: How to troubleshoot problems that occur when you start or use Word
-description: Provides a guide to identify and resolve problems that you experience when you start Word 2010, Word 2007, or Word 2003 by using different troubleshooting steps.
+description: Provides a guide to identify and resolve problems that you experience when you start Word.
 author: helenclu
 manager: dcscontentpm
 ms.date: 5/5/2020
@@ -444,7 +444,7 @@ To rename the global template file, follow these steps:
 2. Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
 3. At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press **Enter**:
 
-   **Word 2016, Word 2013, Word 2010, or Word 2007**
+   **Word 2007 or later**
   
    ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dotm OldNormal.dotm  
@@ -568,7 +568,7 @@ To determine the problematic COM add-in program, follow these steps:
 3. Select **Yes**, and then select **OK**.    
 4. Use one of the following procedures, as appropriate for the version of Word that you are running.
 
-   **Word 2016**, **Word 2013**, or **Word 2010**
+   **Word 2010 or later**
 
    1. On the **File** menu, select **Options**.    
    2. Select **Add-Ins**.    
