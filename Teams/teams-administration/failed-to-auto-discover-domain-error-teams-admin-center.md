@@ -45,16 +45,15 @@ This fix can take from 15 minutes to an hour to take effect.
 
 ### No user is licensed for Skype for Business or Teams 
 
-The domain should have at least one user licensed for Skype for Business or Teams. A global admin or company tenant has to assign a Skype for Business license to a user account that has either a Teams Admin role or a Global Admin role.​​
+The domain should have at least one user licensed for Skype for Business or Teams. A global admin or company tenant has to assign a Skype for Business license or a Teams license to a user account that has either a Teams Admin role or a Global Admin role.
 
 To assign a license:
 
-1. Sign in to https://portal.office.com.
-2. Navigate to **Admin** > **Users**.
-3. Select **Active users** > **Product license**.
-4. Select **Edit**, and then select **Turn on Skype for Business license**.
-
-If there is an Office 365 E5 plan, expand the available products list, and then select **Skype for Business license**. The license must be active together with Microsoft Teams.​​
+1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) with your admin account.
+2. Go to the **Users** > **Active Users** page.
+3. Select the user that you want to assign a license to.
+4. In the right pane, select **Licenses and Apps**.
+5. Expand the **Licenses** section, select the **Skype for Business Online** or **Microsoft Teams** checkbox, and then select **Save changes**.
 
 This fix can take 24 hours for synchronization to take effect.
 

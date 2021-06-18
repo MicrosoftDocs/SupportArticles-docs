@@ -56,10 +56,7 @@ Contact numbers:
 
 ### How to update contact information
 
-1. Sign in to Outlook Web App.
-2. Click **Settings**, and then click **Options**.
-3. In the left navigation pane, click **Account**, and then click **Edit Information**.
-4. Make the changes that you want, and then click **Save**.
+To update contact information, see [View and update your profile in Delve](https://support.microsoft.com/office/view-and-update-your-profile-in-delve-4e84343b-eedf-45a1-aeb9-8627ccca14ba). For more information about Delve, see [What is Delve](https://support.microsoft.com/office/what-is-delve-1315665a-c6af-4409-a28d-49f8916878ca).
 
 > [!NOTE]
 > The offline address book (OAB) will not be updated for at least 24 hours.

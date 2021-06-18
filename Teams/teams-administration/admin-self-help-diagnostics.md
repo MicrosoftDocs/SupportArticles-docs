@@ -71,13 +71,14 @@ The following diagnostics are currently available with brief scenario descriptio
 | We Can't Get Your Files | Validates that a Team is provisioned and accessible by the specified user.	 | Diag: Teams Files Error|
 | Teams presence | Validates that a user's Teams presence can be correctly displayed. | Diag: Teams presence |
 | Teams Live Events | Validates that a user is able to schedule Teams live events. | Diag: Teams Live Events |
-| Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | Diag: Meeting Recording
+| Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams. | Diag: Meeting Recording |
 | Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams. | Diag: Voicemail |
 | Teams Call Forwarding | Validates that a user is properly configured to forward calls to a specified number. | Diag: Teams Call Forwarding |
 | Unable to upload files to Teams chat | Validates if the specified user can upload files in Teams chat. | Diag: Unable to upload files to Teams chat |
 | Unable to access files shared in Teams chat | Validated that a specified user being unable to access files shared by another user in chats. | Diag: Unable to access files shared in Teams chat |
 | Unable to access files in a team | Validates that a specified user has access to files in the Team. | Diag: Unable to access files in a team |
 | Meeting Recording Missing | Attempts to locate a missing Teams Meeting Recording | Diag: Missing Recording |
+| 1:1 Call Recording | Checks a user's policy for 1:1 Call Recording capability | Diag: Teams 1:1 Call Recording |
 
 More diagnostics will be added at a future date.
 

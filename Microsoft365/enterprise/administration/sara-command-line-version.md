@@ -42,7 +42,7 @@ The following switches are available to control SaRAcmd.exe.
 
 1. `-S <scenarioname>`
 
-   Use the `-S` switch to specify the scenario that you want to run. The switch cannot be run on its own. It must be followed by `-AcceptEula`. For example, to run the scenario that removes the currently installed version of Office, enter `–S OfficeScrubScenario -AcceptEula`, and then press Enter.
+   Use the `-S` switch to specify the scenario that you want to run. The switch cannot be run on its own. It must be followed by `-AcceptEula`. For example, to run the scenario that removes the currently installed version of Office, enter `-S OfficeScrubScenario -AcceptEula`, and then press Enter.
 
    Currently, the following scenarios are supported through the command line.
 
