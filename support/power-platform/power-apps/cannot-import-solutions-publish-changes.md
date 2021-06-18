@@ -13,9 +13,7 @@ _Applies to:_ &nbsp; Power Platform, Solutions
 
 When you try to [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) or publish unmanaged changes by using the [**Publish all customizations**](/powerapps/maker/data-platform/create-solution#publish-changes) function in Power Platform, you receive the following error message:
 
-> [error]Cannot start the requested operation [PublishAll] because there is another [Import] running at this moment.
-Use Solution History for more details. -- The solution installation or removal failed due to the installation or
-removal of another solution at the same time. Please try again later.
+> Error: Cannot start the requested operation [PublishAll] because there is another [Import] running at this moment. Use Solution History for more details. -- The solution installation or removal failed due to the installation or removal of another solution at the same time. Please try again later.
 
 ## Cause
 
