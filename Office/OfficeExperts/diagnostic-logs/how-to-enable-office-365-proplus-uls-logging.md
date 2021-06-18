@@ -25,54 +25,55 @@ ms.reviewer: ericspli
 
 When you troubleshoot Microsoft Office issues, traditional log settings sometimes don't collect enough information. These might include sign-in issues, installation and patching issues, or even app issues.
 
-To collect more verbose logging details, registry keys must be added:
+To collect more verbose logging details, registry keys must be added.
 
-**For sign-in or activation issues, run the following commands to add the registry key:**
+**For sign-in or activation issues, run the following commands to add or delete the registry key:**
 
-To Enable:
-```powershell
+To enable logging:
+
+```console
 reg add HKCU\Software\Microsoft\Office\16.0\Common\Logging /v EnableLogging /t REG_DWORD /d 1
 ```
 
-To Disable:
-```powershell
+To disable logging:
+
+```console
 reg delete HKCU\Software\Microsoft\Office\16.0\Common\Logging /v EnableLogging 
 ```
 
 Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues, in the format of *MachineName-Date-time.log*.
 
-**For installation or patching issues, run the following commands to add the registry keys:**
+**For installation or patching issues, run the following commands to add or delete the registry keys:**
 
-To Enable:
-```powershell
+To enable logging:
+
+```console
 reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3
-```
-
-```powershell
 reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DWORD /d 1
 ```
 
-To Disable:
-```powershell
-reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging 
-```
+To disable logging:
 
-```powershell
+```console
+reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging
 reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel 
 ```
+
 Restart the Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
 Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues, in the format of *MachineName-Date-time.log*.
 
-**For issues with the Serviceability Manager, add the following registry key:**
+**For issues with the Serviceability Manager, run the following commands to add or delete the registry key:**
 
-To Enable:
-```powershell
+To enable logging:
+
+```console
 reg add HKLM\SOFTWARE\Microsoft\Office\C2RSvcMgr /v EnableLocalLogging /t REG_DWORD /d 1
 ```
 
-To Disable:
-```powershell
+To disable logging:
+
+```console
 reg delete HKLM\SOFTWARE\Microsoft\Office\C2RSvcMgr /v EnableLocalLogging
 ```
 
@@ -83,4 +84,4 @@ The Inventory feature is available in version 2008 (16.0.13127.21064) or later. 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
 
-After you collect the logs, **disable Office verbose logging**, otherwise the logs can become very large. 
+After you collect the logs, **disable Office verbose logging**. Otherwise, the logs will become very large. 
