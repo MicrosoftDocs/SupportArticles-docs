@@ -9,7 +9,7 @@ ms.author: v-six
 ---
 # Dataverse records are created without required fields
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Field Service, Dataverse
+_Applies to:_ &nbsp; Dynamics 365 Field Service, Dataverse
 
 ## Symptoms
 
