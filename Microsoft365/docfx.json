@@ -104,6 +104,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/office365/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+      "recommendations": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-support",
       "feedback_product_url": "https://office365.uservoice.com/",
