@@ -5,7 +5,7 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: Microsoft 365
+ms.prod: microsoft-365
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
