@@ -11,7 +11,7 @@ _Applies to:_ &nbsp; Power Automate, Custom Connectors
 
 ## Symptoms
 
-When you try to verify the configuration of custom connectors that using **Generic Oauth 2** as the identity provider, you experience the following issues:
+When you try to verify the configuration of custom connectors that use **Generic Oauth 2** as the identity provider, you experience the following issues:
 
 - The **Security** page shows the placeholder text instead of the configured value in the **Refresh URL** field.
 
