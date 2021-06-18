@@ -19,7 +19,7 @@ When you open the case, you're required to fill a value for the **Name** field.
 
 ## Cause
 
-This issue occurs if the records are created from a third-party tool such as Postman, which doesn't validate the required fields but send the data as is.
+This issue occurs if the records are created from a third-party tool such as Postman, which doesn't validate the required fields but sends the data as is.
 
 ## Workaround
 
