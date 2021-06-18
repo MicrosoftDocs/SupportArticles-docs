@@ -25,9 +25,9 @@ If a Microsoft Excel worksheet or workbook is protected, and the option to restr
 
 ## Cause
 
-The option to let only certain users edit a cell range uses Active Directory permissions. This isn’t available in Excel for Mac.
+The option to let only certain users edit a cell range uses Active Directory permissions. Excel for Mac doesn't support using Active Directory permissions to unlock ranges of cells.
 
-## Resolution
+## Workaround
 
 You can edit the cells if you use Excel on a domain-joined Windows device.
 
@@ -39,5 +39,5 @@ If you don’t have access to such a device, you can edit the cells in Excel for
 
 ## References
 
-- Lock cells to protect them in Excel for Mac
-- Lock or unlock specific areas of a protected worksheet
+- [Lock cells to protect them in Excel for Mac](https://support.microsoft.com/office/lock-cells-to-protect-them-in-excel-for-mac-59bb04cf-1a79-4a69-9828-568c98bdb310)
+- [Lock or unlock specific areas of a protected worksheet](https://support.microsoft.com/office/lock-or-unlock-specific-areas-of-a-protected-worksheet-75481b72-db8a-4267-8c43-042a5f2cd93a)
