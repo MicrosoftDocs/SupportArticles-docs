@@ -34,7 +34,7 @@ In Distrmg.log:
 
 ## Resolution
 
-To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/servers/manage/checklist-for-installing-update-1906).
+To fix this issue, update to [Configuration Manager current branch version 2010](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2010).
 
 ## Workaround
 
