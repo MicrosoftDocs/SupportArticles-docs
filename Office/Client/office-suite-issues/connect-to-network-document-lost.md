@@ -1,7 +1,7 @@
 ---
 title: Connection to a network document is lost
 description: Fixes a problem in Office 2010 in which you lose connection to a network document after the computer resumes from standby.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: antoa, alexze
 appliesto:
 - Office 2010

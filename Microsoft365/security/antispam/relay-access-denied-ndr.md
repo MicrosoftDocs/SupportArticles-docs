@@ -1,8 +1,8 @@
 ---
 title: 550 5.4.1 Relay Access Denied NDR when sending mail.
 description: Describes an issue in which you receive a non-delivery report when you try to send an email message from an on-premises Exchange mailbox to an external recipient through EOP. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

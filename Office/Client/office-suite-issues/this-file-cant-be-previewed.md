@@ -1,14 +1,14 @@
 ---
 title: This file can't be previewed
 description: Describes an issue in which you cannot preview a document in the Preview pane in Word, Excel, or PowerPoint. To work around this issue, preview the document in Windows Explorer or in a different Office program.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: zeyadr, brandes
 search.appverid: 
 - MET150

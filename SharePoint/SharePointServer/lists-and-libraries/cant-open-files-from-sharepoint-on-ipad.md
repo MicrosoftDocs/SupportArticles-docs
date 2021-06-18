@@ -1,7 +1,7 @@
 ---
 title: Can't open Office files from SharePoint on an iPad
 description: Describes an issue in which you are unable to open Office files from SharePoint 2010 on an iPad. Provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Word for iPad, iPhone and iPod touch

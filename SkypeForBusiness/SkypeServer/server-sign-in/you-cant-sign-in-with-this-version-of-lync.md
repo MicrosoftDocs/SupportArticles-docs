@@ -37,9 +37,7 @@ This problem occurs because the **Language** and **Region** settings on your dev
 
 To resolve this issue, install the Skype for Business for iOS client (version 6.0). 
 
-**Third-party information disclaimer**
-
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## Workaround
 
@@ -70,9 +68,7 @@ To work around this problem in for Lync 2013 for iPhone and Lync 2013 for iPad, 
      2. Select a region that matches the **Language** setting. For example, if the language setting is **English**, select **United States** or **United Kingdom**.   
      3. Tap **Back**.      
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## References
 

@@ -1,8 +1,8 @@
 ---
 title: Can't import an XLS or CSV file into the Outlook Hebrew version
 description: Describes a problem in which you cannot import contact information from an XLS or CSV file into the Hebrew language version of Outlook 2010 using the import wizard.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,6 +1,6 @@
 ---
 title: Test viewing Office documents by using Microsoft Offices Online or Office Online Server viewer
-author: AmandaAZ
+author: helenclu
 ms.author: jhaak
 manager: dcscontentpm
 localization_priority: Normal

@@ -1,7 +1,7 @@
 ---
 title: SharePoint workflow timer job is stuck at "Pausing"
 description: Describes an issue in which the SharePoint workflow timer job is stuck in "Pausing" status because of a bad workflow instance.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Server 2016
 - SharePoint Server 2013
@@ -23,37 +23,39 @@ appliesto:
 
 In SharePoint Central Administration, a workflow timer job shows the status as "Pausing." As a result, you experience the following issues:   
 
-- Approvals of tasks don't complete.    
-- Workflows can't run after a pause.    
-- Random processing of workflows occurs.    
-- Workflows don't function over extended periods of time.      
+- Approvals of tasks don't complete.
+- Workflows can't run after a pause.
+- Random processing of workflows occurs.
+- Workflows don't function over extended periods of time.
 
 ## Cause  
 
-The most likely cause is a bad workflow instance.   
+The most likely cause is a bad workflow instance.
 
 ## Resolution  
 
-To fix the issue, first determine whether it's caused by a workflow definition that was introduced in the system or by a bad workflow instance. After you verify that, work with the workflow owner to decide whether the workflow can be terminated or deleted.   
+To fix the issue, first determine whether it's caused by a workflow definition that was introduced in the system or by a bad workflow instance. After you verify that, work with the workflow owner to decide whether the workflow can be terminated or deleted.
+
 ### Step 1: Restrict servers that run the workflow timer job (optional but highly recommended)  
 
-To diagnose the issue quickly, consider stopping the Microsoft SharePoint Foundation Workflow Timer Service on all servers except one.   
+To diagnose the issue quickly, consider stopping the Microsoft SharePoint Foundation Workflow Timer Service on all servers except one.
+
 ### Step 2: Set ULS logging level to VerboseEx  
 
-In the SharePoint Management shell, run the following command:   
+In the SharePoint Management shell, run the following command:
 
+```powershell
+Set-SPLogLevel -TraceSeverity VerboseEx  
 ```  
- Set-SPLogLevel -TraceSeverity VerboseEx  
-```  
 
-**Note** This may cause performance issues on the farm. We recommend that you restrict the duration to the minimum and reset the ULS logging level to the default value after the behavior has been reproduced by using [Clear-SPLogLevel](https://docs.microsoft.com/powershell/module/sharepoint-server/clear-sploglevel?view=sharepoint-ps).
+**Note** This may cause performance issues on the farm. We recommend that you restrict the duration to the minimum and reset the ULS logging level to the default value after the behavior has been reproduced by using [Clear-SPLogLevel](/powershell/module/sharepoint-server/clear-sploglevel).
 
-If the performance impact prevents full VerboseEx tracing, set the logging level for all categories to **Verbose** and the logging level for "Legacy Workflow Infrastructure" (or "Workflow Infrastructure" in SharePoint 2010) and "Timer" categories to **VerboseEx**. To do this, run the following commands in the SharePoint Management shell:   
+If the performance impact prevents full VerboseEx tracing, set the logging level for all categories to **Verbose** and the logging level for "Legacy Workflow Infrastructure" (or "Workflow Infrastructure" in SharePoint 2010) and "Timer" categories to **VerboseEx**. To do this, run the following commands in the SharePoint Management shell:
 
-```  
- Set-SPLogLevel -TraceSeverity Verbose   
- Set-SPLogLevel -TraceSeverity VerboseEx -Identity "Legacy Workflow Infrastructure"  
- Set-SPLogLevel -TraceSeverity VerboseEx -Identity "Timer"  
+```powershell
+Set-SPLogLevel -TraceSeverity Verbose   
+Set-SPLogLevel -TraceSeverity VerboseEx -Identity "Legacy Workflow Infrastructure"  
+Set-SPLogLevel -TraceSeverity VerboseEx -Identity "Timer"  
 ```  
 
 ### Step 3: Clear configuration cache  

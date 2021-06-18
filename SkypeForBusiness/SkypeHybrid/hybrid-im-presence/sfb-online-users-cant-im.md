@@ -45,7 +45,7 @@ ms-diagnostics: 1017; reason="Cannot route From and To domains in this combinati
 
 To resolve this problem, add the Office 365 domain to the on-premises topology. For more information about how to configure the domains for hybrid deployment, go to the following Microsoft resource:
 
-[Plan hybrid connectivity between Skype for Business Server and Office 365](https://technet.microsoft.com/library/jj205403.aspx)
+[Plan hybrid connectivity between Skype for Business Server and Office 365](/skypeforbusiness/hybrid/plan-hybrid-connectivity?bc=%2fSkypeForBusiness%2fbreadcrumb%2ftoc.json&toc=%2fSkypeForBusiness%2ftoc.json)
 
 ## More Information
 

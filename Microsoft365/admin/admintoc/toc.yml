@@ -201,7 +201,7 @@
       href: ../installation/cannot-install-office-add-in.md
     - name: Deploy SaRA using Intune
       href: ../installation/install-sara-from-intune.md
-    - name: Desktop Setup Tool logging errors description
+    - name: Desktop Setup Tool logging errors description
       href: ../installation/desktop-setup-tool-logging-errors.md
     - name: Error 12 when installing Office Click-to-Run
       href: ../installation/click-to-run-installation-error-12.md

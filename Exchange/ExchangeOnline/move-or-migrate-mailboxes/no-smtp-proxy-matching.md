@@ -69,7 +69,7 @@ In this case, add \<domain>.mail.onmicrosoft.com to the email address policy. To
     Get-Mailbox <AffectedUser> | FL EmailAddresses, EmailAddressPolicyEnabled
     ```
 
-6. Wait for directory synchronization to run. Or, force a delta directory synchronization. For more information about how to do this, see [Start the Scheduler](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler).
+6. Wait for directory synchronization to run. Or, force a delta directory synchronization. For more information about how to do this, see [Start the Scheduler](/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler).
 
 If the on-premises mailbox doesn't have an email address policy applied (that is, the **EmailAddressPolicyEnabled** parameter value is **False** or the **Automatically update email addresses based on the email address policy applied to this recipient** checkbox isn't selected for the user in Exchange Admin Center or Exchange Management Console), or if, for whatever reason, the email address policy doesn't stamp or apply the user@domain.mail.onmicrosoft.com smtp address on the recipient, you have to manually add the \<domain>.mail.onmicrosoft.com email address on the user, and then synchronize the change to Azure AD. To do this, follow these steps:
 
@@ -84,15 +84,15 @@ If the on-premises mailbox doesn't have an email address policy applied (that is
     Get-Mailbox <AffectedUser> | FL EmailAddresses
     ```
 
-7. Wait for directory synchronization to run. Or, force a delta directory synchronization. For more information about how to do this, see [Start the Scheduler](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler).
+7. Wait for directory synchronization to run. Or, force a delta directory synchronization. For more information about how to do this, see [Start the Scheduler](/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler).
 
 ### Scenario 2: \<domain>.mail.onmicrosoft.com email address is stamped on the on-premises source mailbox but is missing from the cloud mail-user object (Exchange Online PowerShell)
 
-In this case, you probably have a synchronization issue. Determine whether the directory synchronization works and whether you have any synchronization errors that are reported in the Azure Active Directory (Azure AD) Connect tool or Office 365 admin center. For more information about how to do this, see [View directory synchronization errors in Office 365](https://docs.microsoft.com/office365/enterprise/identify-directory-synchronization-errors).  
+In this case, you probably have a synchronization issue. Determine whether the directory synchronization works and whether you have any synchronization errors that are reported in the Azure Active Directory (Azure AD) Connect tool or Office 365 admin center. For more information about how to do this, see [View directory synchronization errors in Office 365](/office365/enterprise/identify-directory-synchronization-errors).  
 
 You may also have a user validation error, if you already have a cloud user object on which the user@domain.mail.onmicrosoft.com email address is stamped.
 
-To see this error, you have to connect to [Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:
+To see this error, you have to connect to [Office 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:
 
 ```powershell
 (Get-MsolUser -UserPrincipalName <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
@@ -110,7 +110,7 @@ Then, in Office 365 PowerShell, check whether the proxy addresses in Azure AD co
 
 If you find the user@domain.mail.onmicrosoft.com smtp address for the user in the command result, but you still don't have this email address in Exchange Online PowerShell by using the `Get-MailUser` command, this means that the Directory Synchronization tool brought the address successfully into Azure AD, and you probably have a synchronization issue between Azure AD and Exchange Online.
 
-Another cause may be if the domain.mail.onmicrosoft.com smtp domain  that is stamped on the on-premises user is incorrect. For example, the domain doesn't exist in your Office 365 tenant or Exchange Online accepted domains. For more information about accepted domains, see [View accepted domains](https://docs.microsoft.com/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains#view-accepted-domains).  
+Another cause may be if the domain.mail.onmicrosoft.com smtp domain  that is stamped on the on-premises user is incorrect. For example, the domain doesn't exist in your Office 365 tenant or Exchange Online accepted domains. For more information about accepted domains, see [View accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains#view-accepted-domains).  
 
 If you cannot determine the cause of the issue, open a support case with Microsoft Support team to investigate further.  
 

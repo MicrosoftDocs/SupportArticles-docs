@@ -61,11 +61,11 @@ productDirectory:
     - title: Exchange
       imageSrc: https://docs.microsoft.com/media/logos/logo_Exchange.svg
       links:
-        - url: /exchange/troubleshoot/exchange-server-welcome
+        - url: ../ExchangeServer/exchange-server-welcome.md
           text: Exchange Server
-        - url: /exchange/troubleshoot/exchange-online-welcome
+        - url: ../ExchangeOnline/exchange-online-welcome.md
           text: Exchange Online
-        - url: /exchange/troubleshoot/exchange-hybrid-welcome
+        - url: ../ExchangeHybrid/exchange-hybrid-welcome.md
           text: Exchange Hybrid
     # Card
     - title: Skype for Business

@@ -1,8 +1,8 @@
 ---
 title: Office 365 DLP policy tips are not showing in Outlook or OWA
 description: Policy tips for unified DLP policies created in Office 365 Security and Compliance Center don't work in Microsoft Outlook or Outlook Web App.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -37,7 +37,7 @@ This issue occurs because a policy tip can be enabled only in one of the follow
 
 To view unified DLP policy tips, use one of the following options in Exchange Online:
 
-- Disable all Transport rules that include the **Notify the sender with a Policy Ti** action.
-- Remove the action **Notify the sender with a Policy Ti**  from all Transport rules.
+- Disable all Transport rules that include the **Notify the sender with a Policy Tip** action.
+- Remove the action **Notify the sender with a Policy Tip**  from all Transport rules.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/site/createprofile).

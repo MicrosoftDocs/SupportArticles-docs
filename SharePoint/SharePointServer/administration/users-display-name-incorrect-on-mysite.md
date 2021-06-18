@@ -1,7 +1,7 @@
 ---
 title: User Display name is incorrect on MySite page
 description: This article describes how a SharePoint MySite administrator can fix a user's incorrect MySite display name.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2010

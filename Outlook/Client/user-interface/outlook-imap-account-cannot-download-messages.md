@@ -1,8 +1,8 @@
 ---
 title: IMAP account cannot download messages
 description: Describes an issue that blocks an Outlook 2013 or Outlook 2016 IMAP account from downloading messages. Occurs if the UID SEARCH command is sent.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

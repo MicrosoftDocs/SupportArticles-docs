@@ -1,8 +1,8 @@
 ---
 title: Slow performance if many shared folders or mailboxes open
 description: Describes an issue in Outlook where performance is slow or an error appears when making changes in the calendar when you have many shared folders or mailboxes open.  Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

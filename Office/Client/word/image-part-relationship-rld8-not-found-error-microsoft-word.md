@@ -1,8 +1,8 @@
 ---
 title: The image part with relationship rID8 was not found in Microsoft Word
 description: Fixes an issue in which you cannot save and open a Word document into which you imported an image.
-author: McCoyBot
-ms.author: v-todmc
+author: helenclu
+ms.author: luche
 ms.reviewer: shraycha
 manager: dcscontentpm
 localization_priority: Normal

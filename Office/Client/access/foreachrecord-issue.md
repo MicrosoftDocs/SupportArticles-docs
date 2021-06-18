@@ -1,8 +1,8 @@
 ---
 title: Error (Within a ForEachRecord only the records of the outermost ForEachRecord may be edited or deleted) when you run ForEachRecord data macro in Access
 description: Describes an issue in which you receive a (Within a ForEachRecord only the records of the outermost ForEachRecord may be edited or deleted.) message when you run the ForEachRecord data macro.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm 
 audience: ITPro 
 ms.topic: article

@@ -1,8 +1,8 @@
 ---
 title: Exchange dialog doesn't include a Connection tab
 description: Microsoft Exchange dialog does not include a Connection tab when the Exchange account is configured for MapiHttp in Outlook 2013.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

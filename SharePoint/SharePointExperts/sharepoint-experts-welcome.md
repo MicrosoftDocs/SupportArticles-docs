@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for SharePoint experts
 description: This article lists SharePoint related issues.
-author: AmandaAZ
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150

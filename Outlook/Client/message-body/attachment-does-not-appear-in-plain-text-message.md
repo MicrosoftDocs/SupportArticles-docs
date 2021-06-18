@@ -1,8 +1,8 @@
 ---
 title: Attachment not appearing in Plain Text message
 description: Discusses a problem in which an attachment does not appear in the message header in a Plain Text message in Outlook 2016. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

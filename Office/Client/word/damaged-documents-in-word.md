@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot damaged documents in Word
 description: Describes how to identify a damaged Word document in Microsoft Office Word. Provides steps for how to recover the text and data that is contained in a document.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Word for Office 365
@@ -88,9 +88,6 @@ If you can open the document, close the document and then reopen it by using met
 1. Select the **File Menu**, and then select **New**.    
 2. Select **Blank document**, and then select **Create**.    
 
-   > [!NOTE]
-   > You might have to reapply some formatting to the last section of the new document.  
-   
 #### Step 2: Insert the damaged document into the new document
 
 1. On the **Insert** tab, select **Insert Object**, and then select **Text From File**.    

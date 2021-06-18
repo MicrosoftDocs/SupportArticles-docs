@@ -39,12 +39,12 @@ If you meet problems when you use a third-party API or an open standard, contact
 
 For Microsoft documentation for the algorithms that are used to convert iCalendar and vCard to MAPI objects, go to the following websites:
 
-[vCard [MS-OXVCARD]](https://msdn.microsoft.com/library/dd633489.aspx)
+[vCard [MS-OXVCARD]](/openspecs/exchange_server_protocols/ms-oxvcard/bf4ebd4e-d240-44f3-bf8c-eedf4f0b09e3)
 
-[iCalendar [MS-OXCICAL]](https://msdn.microsoft.com/library/cc463911.aspx)
+[iCalendar [MS-OXCICAL]](/openspecs/exchange_server_protocols/ms-oxcical/a685a040-5b69-4c84-b084-795113fb4012)
 
 For information about support for Microsoft Open Protocol specifications, go to the following websites:
 
-[Microsoft Exchange Server and Outlook Standards](https://msdn.microsoft.com/library/cc973105%28exchg.80%29.aspx)
+[Microsoft Exchange Server and Outlook Standards](/openspecs/exchange_standards/ms-oxstandlp/3c8dd289-b401-430c-a3a0-dec8028b5918)
 
-[User forums and blogs](https://msdn.microsoft.com/library/cc320426%28prot.10%29.aspx)
+[User forums and blogs](/openspecs/main/ms-openspeclp/3589baea-5b22-48f2-9d43-f5bea4960ddb)

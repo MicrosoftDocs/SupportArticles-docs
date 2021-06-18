@@ -1,8 +1,8 @@
 ---
 title: Document inserted as icon with hyperlink in message
 description: This article provides a workaround for the issue that attachment may be added as an icon with a hyperlink to the body of an email message.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

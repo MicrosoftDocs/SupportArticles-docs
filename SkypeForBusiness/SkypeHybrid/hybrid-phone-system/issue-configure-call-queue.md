@@ -66,7 +66,7 @@ If the agents are not listed,follow these steps:
 
 For more information, see the following TechNet topics:
 
-- [Plan for your Skype for Business Server 2015 deployment](https://technet.microsoft.com/library/dn951427.aspx)   
-- [New-CsHostingProvider](https://technet.microsoft.com/library/gg398490.aspx)   
-- [Set-CsHostingProvider](https://technet.microsoft.com/library/gg398532.aspx)   
-- [Enable users for Enterprise Voice online and Cloud PBX Voicemail](https://technet.microsoft.com/library/mt455213.aspx)   
+- [Plan for your Skype for Business Server 2015 deployment](/skypeforbusiness/plan-your-deployment/plan-your-deployment)   
+- [New-CsHostingProvider](/powershell/module/skype/New-CsHostingProvider)   
+- [Set-CsHostingProvider](/powershell/module/skype/Set-CsHostingProvider)   
+- [Enable users for Enterprise Voice online and Cloud PBX Voicemail](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-enterprise-voice-online-and-phone-system-voicemail)

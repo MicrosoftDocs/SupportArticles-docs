@@ -47,34 +47,6 @@ This problem occurs because, by default, the updated version of Google Chrome de
 
 > [Cumulative update for Lync Server 2013 that provide full Lync Web App experience](https://support.microsoft.com/help/3038437)
 
-## Workaround
-
-To work around this problem, use one of the following methods.
-
-### Option 1: Change the default browser
-
-Set the [Microsoft Edge browser](https://www.microsoft.com/edge) or another supported browser as the user's default browser.
-
-### Option 2: Set GPO settings
-
-Use the Chrome ADMX template to set GPO settings that apply configurations to domain-joined computers. To do this, follow these steps:
-
-1. Download the following Google Chrome GPO policy templates:
-
-   > [Policy_templates.zip](https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip)
-
-2. Install the GPO policy templates by using the following directions:
-
-   > [Scenario 2: Editing Domain-Based GPOs Using ADMX Files](https://technet.microsoft.com/library/cc748955%28v=ws.10%29.aspx)
-
-3. Configure the "Computer Configuration\Administrative Templates\Google\Google Chrome\Content Settings\Allow plugins on these sites" setting by enabling the policy and by configuring the list of meeting join domain URLs that should be trusted.
-
-    > [!NOTE]
-    > This list should contain the following items:
-    > - The meeting join URL of the user's organization.
-    > - The URLs of any business partners that members of the user's organization frequently join in meetings.
-    > - The default Lync and Skype for Business [online meeting URL](https://meet.lync.com).
-
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

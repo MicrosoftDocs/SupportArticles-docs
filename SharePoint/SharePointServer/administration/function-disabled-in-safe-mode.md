@@ -1,7 +1,7 @@
 ---
 title: Disabled Functions in safe mode in SharePoint
 description: Lists the functions that are disabled when you start Microsoft SharePoint Workspace 2010 in safe mode. Also describes how to start in safe mode and provides an example of a problem that can be resolved in safe mode.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: patrigan
 ms.custom: CSSTroubleshoot
 appliesto:

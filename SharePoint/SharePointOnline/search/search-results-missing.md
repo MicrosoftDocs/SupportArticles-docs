@@ -1,7 +1,7 @@
 ---
 title: Search results missing in SharePoint Online
 description: This article describes how to resolve an issue where search results are missing in SharePoint Online
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -33,10 +33,8 @@ There are various reasons why expected results maybe be missing that are related
 
 ## Solution
 
-1. To resolve this issue, check the following settings.
-
-     1. Verify that **Allow this site to appear in search results?** is set to **Yes**.
-    
+1. Make sure that **Allow this site to appear in Search results** is set to **Yes**.
+        
      1. As an admin, locate the site that's missing results.
     
      1. Click the gear icon in the upper-right corner.
@@ -45,16 +43,16 @@ There are various reasons why expected results maybe be missing that are related
     
      1. Under **Search**, select **Search and offline availability**.
     
-     1. Make sure that Allow this site to appear in search results? is set to ***Yes***. 
+     1. Make sure that **Allow this site to appear in Search results** is set to **Yes**. 
     
-         After the setting is set to ***Yes***, the site should be indexed during the next scheduled crawl.
+         After the setting is set to **Yes**, the site should be indexed during the next scheduled crawl.
     
          > [!NOTE]
          > From the same location, admins can also select **Reindex Site** to enable the site to be picked up during the next scheduled search crawl.
     
-         See the "More Information" section for a detailed explanation and walk-through of site-level search configuration settings.
+         See the [More Information](#more-information) section for a detailed explanation and walk-through of site-level search configuration settings.
 
-1. Make sure that **Allow items from this document library to appear in search results?** is set to ***Yes***.
+1. Make sure that **Allow items from this document library to appear in search results?** is set to **Yes**.
 
     1. As an admin, locate the library that's missing from search results.
     
@@ -64,9 +62,9 @@ There are various reasons why expected results maybe be missing that are related
     
     1. Select **Advanced Settings**.
     
-    1. Make sure that **Allow items from this document library to appear in search results?** is set to ***Yes***.
+    1. Make sure that **Allow items from this document library to appear in search results?** is set to **Yes**.
     
-         After the setting is set to ***Yes***, the library should be indexed during the next scheduled crawl.
+         After the setting is set to **Yes**, the library should be indexed during the next scheduled crawl.
     
          > [!NOTE]
          > From the same location, admins can also select **Reindex Document Library** to make sure that all content in the document library is indexed during the next scheduled crawl.
@@ -89,22 +87,24 @@ There are various reasons why expected results maybe be missing that are related
 
      **<site_name>/_layouts/srchvis.aspx**
 
-     Make sure that the Allow this web to appear in search results option is selected.
+     Make sure that the **Allow this site to appear in Search results** option is selected.
 
 ### Parent site and sub site-specific search issues
 
-The default setting for search visibility is one of the following: 
+The default setting for search visibility is one of the following options:
 
-- **Do not index ASPX pages if this site contains fine-grained permissions.**
-- **This site contains fine-grained permissions. Specify the site's ASPX page indexing behavior.**
+- **Do not index Web Parts if this site contains fine-grained permissions**
+- **Always index all Web Parts on this site**
+- **Never index any Web Parts on this site**
 
-If a subsite on the site collection doesn't inherit permissions, .aspx pages won't appear in the search results. To resolve this issue, set the search visibility option in Srchvis.aspx to **Always index all ASPX pages on this site** or **Always index all Web Parts on this site**, depending on which option is available. Additionally, you may set the subsite to inherit permissions from the parent site.
+If a subsite on the site collection doesn't inherit permissions, .aspx pages won't appear in the search results. To resolve this issue, set the search visibility option in Srchvis.aspx to **Always index all Web Parts on this site**. Additionally, you may set the subsite to inherit permissions from the parent site.
 
 ## More information
 
 For more information about search, see the following Microsoft webpages: 
 
+- [Enable content on a site to be searchable](/sharepoint/make-site-content-searchable)
 - [Not getting the search results you're looking for in SharePoint?](https://support.office.com/article/not-getting-the-search-results-you-re-looking-for-in-sharepoint-d80687f7-1010-4e6d-add9-584b423289d9)
-- [Specify search settings for a site collection or a site](https://docs.microsoft.com/sharepoint/override-default-search-center)
+- [Specify search settings for a site collection or a site](/sharepoint/override-default-search-center)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -39,12 +39,12 @@ To view the status of a mailbox move request that you created by using the `New-
 
 For more information about the `MigrationBatch` cmdlet, go to the following Microsoft websites:
 
-[Get-MigrationBatch](https://technet.microsoft.com/library/jj219164%28v=exchg.150%29.aspx)
+[Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch)
 
-[New-MigrationBatch](https://technet.microsoft.com/library/jj219166%28v=exchg.150%29.aspx)
+[New-MigrationBatch](/powershell/module/exchange/new-migrationbatch)
 
-[Start-MigrationBatch](https://technet.microsoft.com/library/jj219165%28v=exchg.150%29.aspx)
+[Start-MigrationBatch](/powershell/module/exchange/start-migrationbatch)
 
-[Stop-MigrationBatch](https://technet.microsoft.com/library/jj219168%28v=exchg.150%29.aspx)
+[Stop-MigrationBatch](/powershell/module/exchange/stop-migrationbatch)
 
-[Remove-MigrationBatch](https://technet.microsoft.com/library/jj219167%28v=exchg.150%29.aspx)
+[Remove-MigrationBatch](/powershell/module/exchange/remove-migrationbatch)

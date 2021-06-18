@@ -1,8 +1,8 @@
 ---
 title: Meeting status shows as failed
 description: Describes a behavior in which specific users can't receive meeting requests in Outlook because of Delegate Access is enabled.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

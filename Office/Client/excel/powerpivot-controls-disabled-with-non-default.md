@@ -1,8 +1,8 @@
 ---
 title: PowerPivot controls disabled with non-default Excel file format
 description: Documenting Excel issue exposed by an OffCAT rule
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

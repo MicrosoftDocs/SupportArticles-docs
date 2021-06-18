@@ -1,8 +1,8 @@
 ---
 title: Program is trying to send an e-mail message on your behalf
 description: Discusses an issue in which you receive an error when you send an email message from another program such as Microsoft Excel. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

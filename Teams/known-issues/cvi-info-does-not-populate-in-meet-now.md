@@ -1,7 +1,7 @@
 ---
 title: When setting up a Meet Now in Teams, the CVI information does not autopopulate
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -17,17 +17,27 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes why some Meet Now instances to not autopopulate with CVI information.
+description: Describes why some Meet Now CVI coordinates do not work.
 ---
 
-# CVI information does not autopopulate in a Teams Meet Now instance 
+# CVI information autopopulated in a Teams Meet Now instance does not work
 
 ## Summary
 
-Cloud Video Interop (CVI) information does not automatically populate in a Meet Now instance of a meeting in Microsoft Teams with an existing CVI license.
+If the Cloud Video Interop (CVI) information that you populated into a **Meet Now** meeting in Microsoft Teams does not work, the cause might be the status of your CVI license. To verify the license status, check with your CVI partner.
 
-## More information
+To meet right away by using working CVI coordinates, select **Meet Now** in the Teams calendar or the Outlook calendar, per the following screenshot.
 
-We recommend that you schedule the meeting to populate this information.
+|Teams calendar|Outlook calendar|
+|-|-|
+|:::image type="content" source="media/cvi-info-does-not-populate-in-meet-now/teams-calendar.png" alt-text="Teams calendar":::|:::image type="content" source="media/cvi-info-does-not-populate-in-meet-now/outlook-calendar.png" alt-text="Outlook calendar":::|
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+## Supported scenarios
+
+- Scheduled meetings created from the Outlook calendar
+- Scheduled meetings created from the Teams calendar
+- **Meet Now** meetings created from the Teams calendar
+
+## Unsupported scenarios
+
+- **Meet Now** meetings created from the Teams channels

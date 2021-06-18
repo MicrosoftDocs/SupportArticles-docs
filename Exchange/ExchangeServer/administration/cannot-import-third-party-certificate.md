@@ -65,5 +65,3 @@ For more information about WinHTTP and about how to set the proxy on the Exchang
 - [Netsh Commands for Windows Hypertext Transfer Protocol (WINHTTP)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))
 - [Configure Proxy Settings for WinHTTP](/previous-versions/office/exchange-server-2010/bb430772(v=exchg.141))
 - [WinHttpDetectAutoProxyConfigUrl function](/windows/win32/api/winhttp/nf-winhttp-winhttpdetectautoproxyconfigurl)
-
-For more information about the WinSock Proxy Auto Detect, see [Description of WinSock Proxy Auto Detect support](https://support.microsoft.com/help/260210).

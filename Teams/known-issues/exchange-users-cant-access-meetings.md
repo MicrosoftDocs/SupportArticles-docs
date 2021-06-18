@@ -1,7 +1,7 @@
 ---
 title: Can't access meetings or connectors with blocked EWS
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -47,6 +47,6 @@ Set-organizationconfig -EwsAllowList @{Add="MicrosoftNinja/*","SkypeSpaces/*"}
 
 ## More information
 
-For more information, see the Microsoft article on [Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/organization/Set-OrganizationConfig).
+For more information, see the Microsoft article on [Set-OrganizationConfig](/powershell/module/exchange/organization/Set-OrganizationConfig).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

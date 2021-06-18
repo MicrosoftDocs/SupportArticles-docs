@@ -172,8 +172,8 @@ To export and remove any mismatched Intermediate Certification Authorities certi
 
 For more information about Lync Server certificate requirements, see the following Microsoft TechNet resources:
 
-[Certificate requirements for internal servers in Lync Server 2013](https://docs.microsoft.com/lyncserver/lync-server-2013-certificate-requirements-for-internal-servers)
+[Certificate requirements for internal servers in Lync Server 2013](/lyncserver/lync-server-2013-certificate-requirements-for-internal-servers)
 
-[Certificate requirements for external user access in Lync Server 2013](https://docs.microsoft.com/lyncserver/lync-server-2013-certificate-requirements-for-external-user-access)
+[Certificate requirements for external user access in Lync Server 2013](/lyncserver/lync-server-2013-certificate-requirements-for-external-user-access)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -33,7 +33,7 @@ To fix this issue, install the April 2, 2019 update for Skype for Business for a
  
 ![The screenshot for Update Options](./media/not-responding-receive-toast-notification/update-options.png) 
 
-Don't see your Skype for Business client in the list? Click [here](https://technet.microsoft.com/office/dn788954) for a complete list of clients. You can download the Click-to-Run client from the [Office365 Portal](https://portal.office.com/ols/mysoftware.aspx).  
+Don't see your Skype for Business client in the list? Click [here](/SkypeForBusiness/software-updates) for a complete list of clients. You can download the Click-to-Run client from the [Office365 Portal](https://portal.office.com/ols/mysoftware.aspx).  
 
 After you apply the update, create a Group Policy to set the following registry key on clients:
 
@@ -56,10 +56,6 @@ Set-CsClientPolicy -Identity "<ClientPolicyName>" -PolicyEntry @{Add=$x}
 
 Lync 2013 was upgraded to Skype for Business in April 2015. 
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-## More information
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

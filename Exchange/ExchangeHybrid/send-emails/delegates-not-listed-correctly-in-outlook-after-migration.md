@@ -24,18 +24,18 @@ _Original KB number:_ &nbsp; 4023846
 
 After a migration to Office 365 hybrid environment, delegates or managers are moved to Exchange Online. However, the delegates are listed two times in the **Delegates** dialog box in Outlook.
 
-:::image type="content" source="media/delegates-not-listed-correctly-in-outlook-after-migration.md/delegates-are-listed-two-times.png" alt-text="screenshot of the Delegates dialog box that shows delegates are listed two times":::
+:::image type="content" source="media/delegates-not-listed-correctly-in-outlook-after-migration/delegates-are-listed-two-times.png" alt-text="screenshot of the Delegates dialog box that shows delegates are listed two times":::
 
 When you view the permissions, a value of **None** is listed in the **Delegate Permissions** dialog box.
 
-:::image type="content" source="media/delegates-not-listed-correctly-in-outlook-after-migration.md/delegate-permissions-shows-none.png" alt-text="screenshot of the Delegate Permissions dialog box showing None":::
+:::image type="content" source="media/delegates-not-listed-correctly-in-outlook-after-migration/delegate-permissions-shows-none.png" alt-text="screenshot of the Delegate Permissions dialog box showing None":::
 
 > [!NOTE]
 > In some cases, the delegate is listed only one time, but the permissions are still listed as **None**.
 
 However, when you view the calendar or other folder properties in Outlook, the appropriate permissions are listed.
 
-:::image type="content" source="media/delegates-not-listed-correctly-in-outlook-after-migration.md/calendar-properties-page.png" alt-text="screenshot of the calendar properties page":::
+:::image type="content" source="media/delegates-not-listed-correctly-in-outlook-after-migration/calendar-properties-page.png" alt-text="screenshot of the calendar properties page":::
 
 Also, an administrator can view permissions in Exchange Remote PowerShell by using one of the following commands:
 

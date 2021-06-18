@@ -60,11 +60,11 @@ The Office Communications Server LcsCmd.exe command listed above will provide a 
 
 For more details on using the Lync Server Enable-CsAdForest PowerShell cmdlet:
 
-[Enable-CsAdForest](https://technet.microsoft.com/library/gg425713.aspx)
+[Enable-CsAdForest](/powershell/module/skype/Enable-CsAdForest)
 
 For more details on using the Office Communications Server LcsCmd.exe CheckForestPrepState command:
 
 Microsoft Office Communications Server 2007 R2
-[Forest Preparation Commands](https://technet.microsoft.com/library/dd573032(office.13).aspx)
+[Forest Preparation Commands](/previous-versions/office/communications-server/dd573032(v=office.13))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

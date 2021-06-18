@@ -152,6 +152,6 @@ If this process takes more than 10 minutes, follow these steps to make sure that
 > [!NOTE]
 > Lync Basic does not include any Delegate functionality, and problems may occur for Lync Basic client users who have delegates.
 
-For more information, see [Client comparison tables for Lync Server 2013](https://technet.microsoft.com/library/gg425836%28v=ocs.15%29.aspx).
+For more information, see [Client comparison tables for Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-desktop-client-comparison-tables).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

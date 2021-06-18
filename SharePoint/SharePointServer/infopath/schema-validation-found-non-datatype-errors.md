@@ -1,7 +1,7 @@
 ---
 title: (Schema validation found non-datatype errors) error when opening an InfoPath Form Web Part
 description: Describes the issue in which you receive the (Schema validation found non-datatype errors) error when you open an InfoPath Form Web Part on an external list.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2010

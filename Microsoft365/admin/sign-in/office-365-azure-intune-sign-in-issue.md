@@ -1,14 +1,14 @@
 ---
 title: Sorry, but we're having trouble signing you in
 description: Discusses an error message that users receive when they try to sign in to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com/login.srf.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 search.appverid: 
 - MET150
 appliesto:
@@ -60,7 +60,6 @@ The following table lists known error codes for the "Sorry, but we're having tro
 |80041034|This issue may occur when the UPN has been changed from its original value.||
 |80041317 or 80043431|This issue may occur if the configuration settings of the Office 365 federated domain for the on-premises Active Directory Federation Services (AD FS) 2.0 service and for the Azure AD authentication system are mismatched.|[2647020](https://support.microsoft.com/help/2647020) "80041317" or "80043431" error when federated users sign in to Office 365, Azure, or Intune|
 |80048163|This issue occurs if unsupported characters are used in the user's sign-in name.||
-|80045C06|This issue may occur if the time setting in the on-premises environment doesn't match the time setting of the Office 365 service.|[2578667 ](https://support.microsoft.com/help/2578667) "Sorry, but we're having trouble signing you in" and "80045C06" error when a federated user tries to sign in to Office 365, Azure, or Intune|
 |8004789A||[2635357 ](https://support.microsoft.com/help/2635357) "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user tries to sign in to Office 365, Azure, or Intune|
 
 ## More information

@@ -1,7 +1,7 @@
 ---
 title: Teams website tab does not display portals with Conditional Access restrictions
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -32,6 +32,6 @@ We recommend that you use Teams in a browser instead of the desktop app.
 
 ## More information
 
-[What is Conditional Access?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+[What is Conditional Access?](/azure/active-directory/conditional-access/overview)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

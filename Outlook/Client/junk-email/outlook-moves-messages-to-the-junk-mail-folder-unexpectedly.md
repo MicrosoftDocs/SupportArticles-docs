@@ -1,8 +1,8 @@
 ---
 title: Spam Confidence Level (SCL) -1 not working
 description: Discusses an issue in which Outlook unexpectedly marks messages as junk if the Exchange Server connection becomes disconnected. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

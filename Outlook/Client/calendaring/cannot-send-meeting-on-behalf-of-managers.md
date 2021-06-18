@@ -1,8 +1,8 @@
 ---
 title: Cannot send meeting on behalf of managers
 description: When you view a manager's calendar and use that view to create a new meeting, you are unexpectedly shown as the organizer of the new meeting. This occurs even though you expected to send a meeting on behalf of the manager. This article describes a scenario that can cause this issue in Outlook 2010 and Outlook 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

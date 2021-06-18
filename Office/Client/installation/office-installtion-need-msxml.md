@@ -1,7 +1,7 @@
 ---
 title: Office 2010 installation requires MSXML
 description: Describes that you receive an error message when you try to install Office 2010 on a Windows 7-base computer.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office 2010
 ---

@@ -33,8 +33,8 @@ There was a problem connecting to Microsoft Office Outlook. The email address us
 
 Make sure that you're using the most up-to-date Lync client. For more information, go to the following Microsoft websites:
 
-- [Updates resource center for Lync 2013](https://technet.microsoft.com/lync/dn146014.aspx)   
-- [Updates resource center for Lync 2010](https://technet.microsoft.com/lync/gg131945.aspx)   
+- [Updates resource center for Lync 2013](/SkypeForBusiness/software-updates)   
+- [Updates resource center for Lync 2010](/SkypeForBusiness/software-updates)   
 
 #### Is the Personal Information Manager in Lync configured correctly?
 
@@ -71,8 +71,8 @@ To resolve this issue, make sure that the Exchange account in Outlook matches th
 
 You can use the Set-MsolUserPrincipalName cmdlet from Microsoft Azure Active Directory Module for Windows PowerShell to set the UPN, SMTP, and Session Initiation Protocol (SIP) addresses to the same value. For more information, go to the following Microsoft websites:  
 
-- [Manage Azure AD using Windows PowerShell](https://aka.ms/aadposh)
-- [Set-MsolUserPrincipalName](https://technet.microsoft.com/library/dn194135.aspx)
+- [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100))
+- [Set-MsolUserPrincipalName](/previous-versions/azure/dn194135(v=azure.100))
 
 The issues that are described in the "Problem" section typically occur when the Exchange mailbox and the Lync account are hosted in different environments or use different domain namespaces. If the Exchange mailbox is hosted elsewhere (for example, if the mailbox is hosted on an on-premises Exchange server), see the following Microsoft Knowledge base articles:
 

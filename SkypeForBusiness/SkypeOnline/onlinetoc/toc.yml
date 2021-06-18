@@ -89,6 +89,8 @@
       href: ../online-im-presence/lastactive-attribute-gives-wrong-user-status-info-.md
     - name: Lync presence unavailable in SharePoint sites
       href: ../online-im-presence/lync-presence-unavailable-in-sharepoint.md
+    - name: Only the first IM received in Skype for Business 2015 when Mac hibernating 
+      href: ../online-im-presence/only-first-im-received-when-locked.md
     - name: Presence is unavailable in Office 365
       href: ../online-im-presence/sfb-presence-unavailable.md
   - name: Install/Uninstall

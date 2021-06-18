@@ -1,7 +1,7 @@
 ---
 title: You can't add external users to a SharePoint Online External Content Type in the SharePoint admin center
 description: Describes an issue in which you can't add external users to a SharePoint Online External Content Type in the SharePoint admin center.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---

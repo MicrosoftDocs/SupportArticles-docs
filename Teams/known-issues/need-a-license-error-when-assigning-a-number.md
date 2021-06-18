@@ -1,7 +1,7 @@
 ---
 title: You need a phone system license error when you assign a toll service number
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -32,6 +32,6 @@ Use PowerShell cmdlets to assign a toll service number instead.
 
 ## More information
 
-For more information about assigning phone numbers to resource account, see [Manage resource accounts in Microsoft Teams](https://docs.microsoft.com/microsoftteams/manage-resource-accounts).
+For more information about assigning phone numbers to resource account, see [Manage resource accounts in Microsoft Teams](/microsoftteams/manage-resource-accounts).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

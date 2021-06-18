@@ -1,8 +1,8 @@
 ---
 title: Instant messaging client features not available
 description: Describes a problem in which some instant messaging client features are not available in Outlook. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -48,6 +48,7 @@ To resolve the problem, make sure that the `DefaultIMApp` string value is set to
 |Microsoft Lync 2010| Communicator |
 |Microsoft Lync 2013 (Skype for Business)| Lync |
 |Skype for Business 2016<br/>Skype (Consumer)| Lync<br/>Skype |
+|Microsoft Teams| Teams |
 |||
 
 To do this, follow these steps:

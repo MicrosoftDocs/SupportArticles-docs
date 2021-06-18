@@ -1,8 +1,8 @@
 ---
 title: Shrink to Fit not available for email print
 description: This article provides workarounds for the issue that Outlook 2007 and Outlook 2010 do not have the Shrink to Fit functionality that is available in earlier Outlook versions.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

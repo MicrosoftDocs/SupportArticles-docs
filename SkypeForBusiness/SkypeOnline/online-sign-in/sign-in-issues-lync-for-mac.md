@@ -166,8 +166,6 @@ If the steps in this article don't resolve the issue, try to do a clean uninstal
 
 If you're using third-party virtualization software for the Mac, it can coincide with various performance-related issues including but not limited to slow desktop sharing, unexpected poor media quality, possible sign-in and Exchange integration issues. In order to continue, Microsoft technical support may have to confirm that the issue occurs on a computer where the third-party virtualization software isn't present.
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

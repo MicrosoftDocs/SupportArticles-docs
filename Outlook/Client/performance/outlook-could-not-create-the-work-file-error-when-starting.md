@@ -1,8 +1,8 @@
 ---
 title: Outlook could not create the work file error
 description: Describes an issue that triggers an error during Outlook startup. Occurs when the Cache string value in the registry doesn't point to a valid directory. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

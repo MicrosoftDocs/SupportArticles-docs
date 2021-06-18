@@ -1,8 +1,8 @@
 ---
 title: Cannot open this item error
 description: Describes an issue that triggers an error when you try to open an email message in Outlook 2007 and later versions. To fix this issue, you must install update 3008627.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

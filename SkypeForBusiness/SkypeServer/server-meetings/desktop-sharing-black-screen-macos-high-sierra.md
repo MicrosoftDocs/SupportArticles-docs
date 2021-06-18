@@ -36,7 +36,7 @@ This problem occurs when the meeting is hosted in Skype for Business Server 2015
 To work around this issue for Skype for Business Web App, use the Skype Meetings App instead. To do this, the system administrator must follow these steps: 
  
 1. Install [the May 2017 update for Skype for Business Server 2015](https://support.microsoft.com/help/3061064/updates-for-skype-for-business-server-2015).    
-2. Enable the Skype Meetings App by following the instructions in the "Enable Skype Meetings App" section of [Deploy Web downloadable clients in Skype for Business Server 2015](https://technet.microsoft.com/library/jj205190.aspx).    
+2. Enable the Skype Meetings App by following the instructions in the "Enable Skype Meetings App" section of [Deploy Web downloadable clients in Skype for Business Server 2015](/skypeforbusiness/deploy/deploy-clients/deploy-web-downloadable-clients).    
  
 After these steps are done, web app users will automatically use the Skype Meetings App when they join a meeting.
 

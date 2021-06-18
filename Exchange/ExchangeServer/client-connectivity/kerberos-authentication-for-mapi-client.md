@@ -48,7 +48,7 @@ All computers in the Client Access server array must share the same service acco
 
 Create a computer account instead of a user account for the alternate service account (ASA), because a computer account doesn't allow interactive logon. Therefore, a computer account may have simpler security policies than a user account and is the preferred solution for the ASA credential. 
 
-For more information about how to create a computer account, see [Create a new computer account](https://technet.microsoft.com/library/cc781364%28v=ws.10%29.aspx). 
+For more information about how to create a computer account, see [Create a new computer account](/previous-versions/windows/it-pro/windows-server-2003/cc781364(v=ws.10)). 
 
 > [!NOTE]
 > When you create a computer account, the password doesn't expire. However, we recommend that you update the password periodically. The local Group Policy can specify a maximum account age for computer accounts, and network administrators may schedule scripts to periodically delete computer accounts that don't meet current policies. To make sure that your computer accounts aren't deleted if they don't meet local policy, update the password for computer accounts periodically. Your local security policy will determine when you must change the password. 
@@ -82,7 +82,7 @@ To determine the SPNs that you would use in this example, we must look at the f
 > [!NOTE]
 > External or Internet-based clients that use Outlook Anywhere won't use Kerberos authentication. Therefore, you don't have to add the FQDNs that these clients use as SPNs to the ASA credential. 
 
-If your site is larger than a single Active Directory site, you can see more examples in the topic[ Configuring Kerberos Authentication for Load-Balanced Client Access Servers](https://technet.microsoft.com/library/ff808312.aspx) .
+If your site is larger than a single Active Directory site, you can see more examples in the topic[ Configuring Kerberos Authentication for Load-Balanced Client Access Servers](/Exchange/architecture/client-access/kerberos-auth-for-load-balanced-client-access) .
 
 ### Convert the OAB virtual directory to an application
 
@@ -108,7 +108,7 @@ To use the script to push the credential to all Client Access servers in the for
     .\RollAlternateServiceAccountPassword.ps1 -CreateScheduledTask "Exchange-RollAsa" -ToEntireForest -GenerateNewPasswordFor "Your_Domain_Name\Computer_Account_Name$"
     ```
 
-For more information about how to use the RollAlternateserviceAccountPassword.ps1 script, see [ Using the RollAlternateserviceAccountPassword.ps1 Script in the Shell](https://technet.microsoft.com/library/ff808311.aspx) .
+For more information about how to use the RollAlternateserviceAccountPassword.ps1 script, see [ Using the RollAlternateserviceAccountPassword.ps1 Script in the Shell](/exchange/using-the-rollalternateserviceaccountcredential-ps1-script-in-the-shell-exchange-2013-help) .
 
 ### Verify the deployment of the ASA credential
 
@@ -169,8 +169,8 @@ NoteYou could configure the client to use Kerberos Password Authentication, but 
 
 For detailed information about this issue and its work around, see the following TechNet article:
 
-[Using Kerberos with a Client Access Server Array or a Load-Balancing Solution](https://technet.microsoft.com/library/ff808313.aspx) 
+[Using Kerberos with a Client Access Server Array or a Load-Balancing Solution](/previous-versions/office/exchange-server-2010/ff808313(v=exchg.141)) 
 
 For more information about how to use Kerberos authentication on load-balanced client access servers, see the following TechNet article:
 
-[Configuring Kerberos Authentication for Load-Balanced Client Access Servers](https://technet.microsoft.com/library/ff808312.aspx)
+[Configuring Kerberos Authentication for Load-Balanced Client Access Servers](/Exchange/architecture/client-access/kerberos-auth-for-load-balanced-client-access)

@@ -35,7 +35,7 @@ We'll begin by asking you the issue that you are facing. Then we'll take you thr
 
 ## Welcome to the IMAP migration troubleshooter
 
-If you are having issues determining what the best Migration approach is for your environment, see [Exchange Deployment Assistant](https://docs.microsoft.com/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true).
+If you are having issues determining what the best Migration approach is for your environment, see [Exchange Deployment Assistant](/exchange/exchange-deployment-assistant?preserve-view=true&view=exchserver-2019).
 
 > [!NOTE]
 > This troubleshooter will not help you with troubleshooting Staged, Cutover, or Hybrid migrations.
@@ -438,7 +438,7 @@ To see if this applies to you, you can use a tool such as Telnet to verify wheth
 
     where,<port#> will either be 993 (SSL) or 143. If you see a blank command prompt box, then you were able to successfully connect to the port on the IMAP server/service.
 
-However, if you get the below error, when trying to perform the telnet test, you will need to publish the appropriate port (993 or 143) through your on-premises firewall or the provider that hosts the IMAP service you are migrating from. For a list of IP addresses used by Microsoft datacenters, see [Exchange Online URLs and IP Address Ranges](https://docs.microsoft.com/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
+However, if you get the below error, when trying to perform the telnet test, you will need to publish the appropriate port (993 or 143) through your on-premises firewall or the provider that hosts the IMAP service you are migrating from. For a list of IP addresses used by Microsoft datacenters, see [Exchange Online URLs and IP Address Ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?preserve-view=true&view=o365-worldwide).
 
 > C:\>telnet `server.contoso.com` 993
 >
@@ -590,7 +590,7 @@ You will see the below error if one or more of the required columns (EmailAddres
 
 > Column "Column name" is missing from the CSV file. The import process can't continue because this column is required. Please edit the CSV file and re-submit it.
 
-Make sure that the required columns are located on the first row of the CSV file and resubmit the file. See [this article](https://technet.microsoft.com/library/jj200730%28v=exchg.150%29.aspx) for more information on the appropriate format of the CSV file.
+Make sure that the required columns are located on the first row of the CSV file and resubmit the file. See [this article](/previous-versions/exchange-server/exchange-150/jj200730(v=exchg.150)) for more information on the appropriate format of the CSV file.
 
 **Did this solve your problem?**
 
@@ -714,7 +714,7 @@ IMAP Migrations can sometimes be treated like a denial of service attack by cert
 2. Select the **Behavioral Intrusion Detection** tab, and then select **Configure Flood Mitigation Settings**.
 3. In the Flood Mitigation dialog box, follow these steps:
 
-   - Select the **IP Exceptions** tab, and then type the IP addresses that the Office 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Office 365, see [Office 365 URLs and IP address ranges](https://docs.microsoft.com/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
+   - Select the **IP Exceptions** tab, and then type the IP addresses that the Office 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Office 365, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?preserve-view=true&view=o365-worldwide).
 
    - Select the **Flood Mitigation** tab, and then, next to **Maximum TCP Requests per minute per IP address**, select **Edit**. In the **Custom limit** box, type a number to increase the limit.
 

@@ -39,7 +39,7 @@ This issue can occur using Microsoft Lync 2013 or Microsoft Lync 2010.
 
 2. Click on the notification listed above and the following error information will be displayed in a Microsoft Lync dialog:
 
-    **When contacting your support team, reference error ID 16389 (source ID 0)**   
+    **When contacting your support team, reference error ID 16389 (source ID 0)**
 
 ### Scenario 2
 
@@ -47,8 +47,8 @@ This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010o
 
 #### Microsoft Outlook 2013 or Microsoft Outlook 2010
 
-1. Open Microsoft Outlook on the Windows client-based computer.   
-2. Choose Calendar from the Outlook Navigation menu   
+1. Open Microsoft Outlook on the Windows client-based computer.
+2. Choose Calendar from the Outlook Navigation menu.
 3. On the Outlook Calendar toolbar click on the New Lync Meeting or Lync Online Meeting button.
 
     The following error information will be displayed in a Microsoft Lync 2013 dialog:
@@ -61,7 +61,7 @@ This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010o
 
 #### Microsoft Outlook 2007
 
-1. Open Microsoft Outlook 2007 on the Windows client-based computer.   
+1. Open Microsoft Outlook 2007 on the Windows client-based computer.
 2. Choose the Lync Online Meeting button from the Outlook 2007 Online meeting toolbar.
 
     The following error information will be displayed in a Microsoft Lync 2013 Dialog:
@@ -70,8 +70,7 @@ This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010o
 
     The following error information will be displayed in a Microsoft Lync 2010 Dialog:
 
-    **Create online meeting failed. Make sure that Lync is running and signed-in and try again**   
-
+    **Create online meeting failed. Make sure that Lync is running and signed-in and try again**
 
 ## Cause
 
@@ -90,6 +89,6 @@ For detailed information on using Mandatory profiles with Windows server and cli
 For more detailed information on Crypto API functionality with Mandatory profiles:
 
 [RSACryptoServiceProvider fails when used with mandatory profiles](
-https://docs.microsoft.com/archive/blogs/alejacma/rsacryptoserviceprovider-fails-when-used-with-mandatory-profiles)
+/archive/blogs/alejacma/rsacryptoserviceprovider-fails-when-used-with-mandatory-profiles)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

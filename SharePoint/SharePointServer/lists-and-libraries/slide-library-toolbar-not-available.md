@@ -1,7 +1,7 @@
 ---
 title: Slide Library toolbar is unavailable
 description: Describes and provides a workaround an issue in which the Slide Library toolbar is unavailable on a SharePoint Slide Library site when you install a version of Office 2013 other than the MSI-based version.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: adrianp, v-yilia
 ms.custom: CSSTroubleshoot
 appliesto:

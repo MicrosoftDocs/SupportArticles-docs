@@ -1,7 +1,7 @@
 ---
 title: Windows Installer service could not be accessed
 description: Describes the error message that you receive when you try to install Office 2007 and Office 2003. You can re-register Windows Installer or reinstall Windows Installer to resolve this problem.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: V-BARRYB
 appliesto:
 - Office 2007

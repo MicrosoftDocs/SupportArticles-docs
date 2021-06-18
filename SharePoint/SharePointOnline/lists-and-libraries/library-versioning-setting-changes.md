@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online document libraries versioning setting changes
 description: Describes previous changes to the default versioning setting for SharePoint Online document libraries.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -28,7 +28,7 @@ Changes were made previously to SharePoint Online that enable the **Create major
 For most users, there should be no additional action required. In the unlikely event that your storage quota runs low, users and administrators can resolve these issues by performing one of the following actions:
 
 - Delete earlier versions that are no longer needed from the **Version History list**.
-- Add to the storage quota for the affected site. For more information, see [Manage site collection storage limits](https://docs.microsoft.com/sharepoint/manage-site-collection-storage-limits).
+- Add to the storage quota for the affected site. For more information, see [Manage site collection storage limits](/sharepoint/manage-site-collection-storage-limits).
 
 For more information about versioning configuration in SharePoint Online, see [How does versioning work in a list or library](https://support.office.com/article/how-does-versioning-work-in-a-sharepoint-list-or-library-0f6cd105-974f-44a4-aadb-43ac5bdfd247)
 

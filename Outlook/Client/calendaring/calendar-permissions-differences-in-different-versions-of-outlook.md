@@ -1,8 +1,8 @@
 ---
 title: Calendar permissions differences
 description: This article provides a resolution to solve the calendar permissions differences issue between different versions of Microsoft Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

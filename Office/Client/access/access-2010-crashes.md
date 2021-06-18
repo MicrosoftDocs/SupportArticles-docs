@@ -1,7 +1,7 @@
 ---
 title: Access crashes after you install Office 2010 SP1
 description: Resolves a problem that Access 2010 databases randomly crash after you install Office 2010 SP1.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
@@ -10,7 +10,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Access 2010
 ---

@@ -1,7 +1,7 @@
 ---
 title: Another account is already signed in computer when signing in to Office 2013
 description: Discusses an error message that a user receives when he or she tries to sign in to an Office 2013 app by using Office 365 credentials.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office 365
 - Office 2013
@@ -62,7 +62,7 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
 1. In the upper-right corner of an Office 2013 app (Word, Excel, PowerPoint), select your name, and then select **Switch Account**.
 1. On the **Accounts** screen, select **Sign out**.
 
-   ![Sign out on the Accounts page](./media/another-account-already-signed-in/2750229-4.png)
+   :::image type="content" source="./media/another-account-already-signed-in/accounts.png" alt-text="Sign out on the Accounts page.":::
 
 1. Locate the account that you want to remove, and then select **Sign out**.
 
@@ -71,7 +71,7 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
 1. Go to **File**, and then select **Account**.
 1. Under **Connected Services**, remove all the services for the existing account.
 
-   ![Under Connected Services, remove all the services for the existing account.](./media/another-account-already-signed-in/2750229-5.png)
+   :::image type="content" source="./media/another-account-already-signed-in/connected-services.png" alt-text="Screenshot of removing all the services for the existing account under Connected Services.":::
 
 ### Step 4: Clear cached credentials on the computer
 
@@ -98,13 +98,13 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
       > [!NOTE]
       > In Windows 7, this is listed as **Generic Credentials**.
 
-      ![Remove Windows Credentials](./media/another-account-already-signed-in/2750229-6.png)
+       :::image type="content" source="./media/another-account-already-signed-in/windows-credentials.png" alt-text="Remove Windows Credentials":::
 
 1. Log off, and then log back in to the computer.
 
 ## More information
 
-For more information, see [Recommendations on resolving common sign-in issues](https://docs.microsoft.com/office365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
+For more information, see [Recommendations on resolving common sign-in issues](/office365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
 
 In Office 2013 apps, you can access Office 365 content in SharePoint Online by providing your Office 365 user ID and password. If you have multiple Office 365 user IDs from different organizations, you can access content from the SharePoint Online deployments of each organization.
 

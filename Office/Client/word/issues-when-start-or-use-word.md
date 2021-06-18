@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot problems that occur when you start or use Word
-description: Provides a guide to identify and resolve problems that you experience when you start Word 2010, Word 2007, or Word 2003 by using different troubleshooting steps.
-author: simonxjx
+description: Provides a guide to identify and resolve problems that you experience when you start Word.
+author: helenclu
 manager: dcscontentpm
 ms.date: 5/5/2020
 localization_priority: Normal
@@ -13,8 +13,10 @@ ms.topic: article
 ms.custom: 
 - CI 117479
 - CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
+- Word for Microsoft 365
+- Word 2019
 - Word 2016
 - Word 2013
 - Word 2010
@@ -86,7 +88,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 |Word version|Registry|
 |---|---|
-| **Word 2016** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Data |
+| **Word 2016 or later** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Data |
 | **Word 2013** | HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word\Data |
 | **Word 2010** | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Data |
 | **Word 2007** | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Data |
@@ -121,7 +123,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 |Word version|Registry|
 |---|---|
-| **Word 2016** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Options |
+| **Word 2016 or later** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Options |
 | **Word 2013** | HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word\Options |
 | **Word 2010** | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Options |
 | **Word 2007** | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Options |
@@ -153,7 +155,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <li>Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
 <li>At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press Enter:
 
-   **Word 2016, Word 2013, Word 2010, or Word 2007**
+   **Word 2007 or later**
   
    ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dotm OldNormal.dotm  
@@ -190,7 +192,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 | Word version|Installation type| Path|
 |---|---|---|
-|**Word 2016**|64-bit C2R installation:|%programfiles%\Microsoft Office\root\office16\Startup\ |
+|**Word 2016 or later**|64-bit C2R installation:|%programfiles%\Microsoft Office\root\office16\Startup\ |
 ||32-bit C2R installation:|%programfiles% (x86)\Microsoft Office\root\office16\Startup\ |
 ||64-bit MSI installation:|%programfiles%\Microsoft Office\office16\Startup\|
 ||32-bit MSI installation:|%programfiles% (x86)\Microsoft Office\office16\Startup\ |
@@ -279,7 +281,8 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Select the **Start** button and then **Settings**.</li>
+<li>Go to **Devices**, and then select **Printers & scanners**.</li>
 <li>Right-click **Microsoft XPS Document Writer**, and then select **Set as default printer**.</li>
 <li>Start Word.</li>
 </ol>
@@ -355,7 +358,7 @@ To delete the Word Data registry subkey, follow these steps:
 
    |Word version|Registry|
    |---|---|
-   | **Word 2016** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Data |
+   | **Word 2016 or later** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Data |
    | **Word 2013** | HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word\Data |
    | **Word 2010** | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Data |
    | **Word 2007** | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Data |
@@ -399,7 +402,7 @@ To delete the Word Options registry key, follow these steps:
 
    |Word version|Registry|
    |---|---|
-   | **Word 2016** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Options |
+   | **Word 2016 or later** | HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Options |
    | **Word 2013** | HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word\Options |
    | **Word 2010** | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Options |
    | **Word 2007** | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Options |
@@ -442,7 +445,7 @@ To rename the global template file, follow these steps:
 2. Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
 3. At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press **Enter**:
 
-   **Word 2016, Word 2013, Word 2010, or Word 2007**
+   **Word 2007 or later**
   
    ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dotm OldNormal.dotm  
@@ -469,7 +472,7 @@ To restore the original global template file, follow these steps:
 2. Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.    
 3. At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press **Enter**:
 
-   **Word 2016, Word 2013, Word 2010 and Word 2007**
+   **Word 2007 or later**
    ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\OldNormal.dotm Normal.dotm  
    ``` 
@@ -497,7 +500,7 @@ To do this, follow these steps:
 
    |Word version| Installation type|Path |
    |---|---|---|
-   |**Word 2016**|64-bit C2R installation:|%programfiles%\Microsoft Office\root\office16\Startup\ |
+   |**Word 2016 or later**|64-bit C2R installation:|%programfiles%\Microsoft Office\root\office16\Startup\ |
    ||32-bit C2R installation:|%programfiles% (x86)\Microsoft Office\root\office16\Startup\ |
    ||64-bit MSI installation:|%programfiles%\Microsoft Office\office16\Startup\|
    ||32-bit MSI installation:|%programfiles% (x86)\Microsoft Office\office16\Startup\ |
@@ -566,7 +569,7 @@ To determine the problematic COM add-in program, follow these steps:
 3. Select **Yes**, and then select **OK**.    
 4. Use one of the following procedures, as appropriate for the version of Word that you are running.
 
-   **Word 2016**, **Word 2013**, or **Word 2010**
+   **Word 2010 or later**
 
    1. On the **File** menu, select **Options**.    
    2. Select **Add-Ins**.    

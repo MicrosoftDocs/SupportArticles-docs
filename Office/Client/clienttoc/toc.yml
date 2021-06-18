@@ -22,7 +22,7 @@
         - name: Ambiguous name detected
           href: ../access/ambiguous-name-detected.md
         - name: Automate the process of selecting printer for a report
-          href: ../access/automate-selecte-printer-for-report.md
+          href: ../access/automate-selected-printer-for-report.md
         - name: Build a dynamic query with values from a search form
           href: ../access/build-dynamic-query-from-search-form.md
         - name: Can't add new records programmatically
@@ -361,6 +361,8 @@
           href: ../excel/inaccurate-chart-trendline-formula.md
         - name: CHIINV statistical functions
           href: ../excel/statistical-functions-chiinv.md
+        - name: '"Class not registered" error when updating PowerPivot data'
+          href: ../excel/class-not-registered-error-pivotpoint.md
         - name: Clean up workbooks with less memory
           href: ../excel/clean-workbook-less-memory.md
         - name: Columns and rows are labeled numerically
@@ -625,7 +627,7 @@
           href: ../installation/error-run-office-setup-program.md
         - name: How to download and run Office 2019 installation files not in VLSC
           href: ../installation/how-to-download-office-install-not-in-vlsc.md
-        - name: Information about the deprecated ODT attributes ForceUpgrade and ForceDowngrade
+        - name: ForceUpgrade and ForceDowngrade attributes
           href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
         - name: Install Office Pro 2013 on a Terminal Server
           href: ../installation/install-and-activate-office-2013.md
@@ -635,6 +637,8 @@
           href: ../installation/office-installtion-need-msxml.md
         - name: Office setup issues
           href: ../installation/office-setup-issues.md
+        - name: Use SaRA to collect data about Microsoft 365 Apps installations
+          href: ../installation/use-sara-to-collect-install-info.md
         - name: The ability to uninstall Office updates
           href: ../installation/ability-to-uninstall-office.md
         - name: Windows Installer service could not be accessed
@@ -707,14 +711,12 @@
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
         - name: Connection to a network document is lost
           href: ../office-suite-issues/connect-to-network-document-lost.md
-        - name: Do you want to download the converter
+        - name: '"Do you want to download the converter?" error message'
           href: ../office-suite-issues/error-do-you-want-download-converter.md
         - name: Document files in Office Document Cache not deleted
           href: ../office-suite-issues/office-temporary-files-not-delete.md
         - name: Document Information Panel is deprecated
           href: ../office-suite-issues/document-information-panel-deprecate.md
-        - name: Edit OLE document property with Dsofile.dll
-          href: ../office-suite-issues/dsofile.dll-allow-edit-document-property.md
         - name: Enable Office 2010 to run on a terminal server
           href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
         - name: Error 25090 with an Office application
@@ -759,6 +761,8 @@
           href: ../office-suite-issues/office-docuemnt-image-quality-loss.md
         - name: Manage templates in Office program
           href: ../office-suite-issues/manage-office-program-templates.md
+        - name: Microsoft 365 apps open files from SharePoint On-Premises that aren’t the current version
+          href: ../office-suite-issues/office-opens-outdated-files.md
         - name: Missing file error with a web page file
           href: ../office-suite-issues/web-page-missing-file-error.md
         - name: Missing fonts issue in documents
@@ -779,7 +783,7 @@
           href: ../office-suite-issues/office-suite-setup-not-restart.md
         - name: Office End User License Agreement always appears
           href: ../office-suite-issues/office-end-user-license-agreement.md
-        - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+        - name: Office error “could not create the work file”
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
         - name: Office files with RMS protection crash
           href: ../office-suite-issues/rms-protected-files-crash.md
@@ -841,6 +845,10 @@
           href: ../performance/office-applications-not-responding.md
         - name: Open network file slow or stop responding
           href: ../performance/office-slow-or-stop-responding.md
+    - name: Planner
+      items:
+        - name: Guest users have no access to assigned tasks
+          href: ../planner/guests-cannot-comment-assigned-tasks.md
     - name: PowerPoint
       items:
         - name: Can't edit video or audio in a presentation
@@ -947,6 +955,8 @@
           href: ../settings/office-display-issues.md
         - name: Error in Office when file is blocked
           href: ../settings/file-blocked-in-office.md
+        - name: How to use Problem Steps Recorder
+          href: ../settings/how-to-use-problem-steps-recorder.md
         - name: Task panes in Office
           href: ../settings/office-program-task-panes.md
         - name: Use registry to clear the most recently used files list
@@ -1029,8 +1039,6 @@
           href: ../word/merge-word-documents.md
         - name: Object may not appear in Word 2010
           href: ../word/object-not-appear-in-word-2010.md
-        - name: Opening file is blocked by registry policy
-          href: ../word/opening-file-blocked-by-registry-policy.md
         - name: Operating parameter limitations and specifications
           href: ../word/operating-parameter-limitation.md
         - name: Performance issues with AutoRecover location
@@ -1053,8 +1061,6 @@
           href: ../word/print-failures-word-for-office-365-on-win-10.md
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
-        - name: Word could not create the work file
-          href: ../word/word-could-not-create-the-work-file.md
         - name: Word slows or stops responding
           href: ../word/word-stops-responding.md
         - name: You're prompted to save changes to global template

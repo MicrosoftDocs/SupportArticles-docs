@@ -1,7 +1,7 @@
 ---
 title: Prevent Office 2010 from disabling printers
 description: Provides a method to prevent Office 2010 from disabling printers when Office 2010 detects the problems with printers.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: jgordner, sfrancis, sloanc, andyfel, djess, arykhus, mosesma, ryanwei, tomol
 appliesto:
 - Office 2010
@@ -53,7 +53,3 @@ Administrator can deploy the Print ticket safe mode Group Policy setting to pre
 For more information about new printing functionalities in Microsoft Office, visit the following Microsoft website:
 
 [Improved End-User Experience](https://msdn.microsoft.com/library/ff551567%28vs.85%29.aspx)
-
-For more information about resolving this problem without using group policy, visit the following Microsoft website:
-
-[My Print button and some printer settings aren't available](https://office.microsoft.com/help/my-print-button-and-some-printer-settings-are-unavailable-ha010378053.aspx)

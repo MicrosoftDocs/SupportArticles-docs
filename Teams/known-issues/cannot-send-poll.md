@@ -1,7 +1,7 @@
 ---
 title: Can't send a poll to external or guest user in Microsoft Teams private chat
 description: Discusses an issue that user can't send a poll to external or guest user in Microsoft Teams private chat.
-author: TobyTu
+author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
 audience: ITPro 

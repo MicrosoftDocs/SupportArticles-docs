@@ -69,7 +69,7 @@ The resolution for this issue corresponds to the scenario listed above in the "C
 1. Click **OK** two times to apply the change.
 1. Wait for Active Directory replication to propagate the changes, or force Active Directory replication if it's necessary.
 
-If the Allow inheritable permissions option is re-disabled automatically within 60 minutes, check whether the user account is in the [AD protected group](https://technet.microsoft.com/magazine/2009.09.sdadminholder.aspx) such as the AdminSDHolder. If yes, remove the account from the AD protected group.
+If the Allow inheritable permissions option is re-disabled automatically within 60 minutes, check whether the user account is in the [AD protected group](/previous-versions/technet-magazine/ee361593(v=msdn.10)) such as the AdminSDHolder. If yes, remove the account from the AD protected group.
 
 ## Workaround
 
@@ -77,4 +77,4 @@ To work around this issue, you can access the EAC by adding the Exchange version
 
 If you want to access the Exchange 2010 ECP and your mailbox resides on an Exchange 2013 Mailbox server, use the URL: `https:///ecp?ExchClientVer=14`.
 
-For more information about Exchange Admin Center, see [Exchange Admin Center in Exchange 2013](https://technet.microsoft.com/library/jj150562%28v=exchg.150%29.aspx).
+For more information about Exchange Admin Center, see [Exchange Admin Center in Exchange 2013](/exchange/exchange-admin-center-in-exchange-2013-exchange-2013-help).

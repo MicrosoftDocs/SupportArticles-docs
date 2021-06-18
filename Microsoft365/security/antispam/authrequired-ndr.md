@@ -1,8 +1,8 @@
 ---
 title: 5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired NDR in Office 365
 description: Describes an issue that triggers a "5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired" nondelivery report when external users try to send mail to mail-enabled public folders in Office 365.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -35,7 +35,7 @@ By default, mail-enabled public folders are prevented from accepting mail from e
 
 To change the behavior so that mail-enabled public folders can accept mail from external senders, follow these steps:
 
-1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Add permission for the Anonymous account to public folders. To do this, run the following command:
 
     ```powershell
@@ -50,6 +50,6 @@ To change the behavior so that mail-enabled public folders can accept mail from 
 
 ## More information
 
-For more information about mail-enabled public folders and Office 365, see [Mail-enable or mail-disable a public folder](https://technet.microsoft.com/library/aa997560%28v=exchg.150%29.aspx).
+For more information about mail-enabled public folders and Office 365, see [Mail-enable or mail-disable a public folder](/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -58,7 +58,7 @@ Here's how to remove the Office 365 license:
 
    The `ospp.vbs` command generates a report of the licenses currently in use. The output is in this format:
 
-   ![Running the dstatus cscript command](./media/reset-office-365-proplus-activation-state/command.png)
+   ![Screenshot of running the dstatus cscript command.](./media/reset-office-365-proplus-activation-state/command.png)
 
    > [!NOTE]
    > The report could include multiple licenses. If the output contains a "No installed Product Keys" message after you run `ospp.vbs /dstatus`, skip the section below and go to "[Step 2: Remove cached identities in HKCU registry](#step-2-remove-cached-identities-in-hkcu-registry)".
@@ -79,7 +79,7 @@ Here's how to remove the Office 365 license:
 
    Repeat the command until all keys are removed.
 
-   ![Product key uninstall successful in the command result](./media/reset-office-365-proplus-activation-state/uninstall-successful.png)
+   ![Screenshot of product key uninstalled successful in the command result.](./media/reset-office-365-proplus-activation-state/uninstall-successful.png)
 
    If the output contains the message "product key uninstall successful", close the Command Prompt window and go to Step 2.
 
@@ -106,7 +106,7 @@ Remove all identities under the `Identities` registry entry.
 1. Open **Control Panel** > **Credential Manager**.
 1. Remove all Windows credentials listed for Office16 by selecting the drop-down arrow and Remove.
 
-   ![Remove stored credentials in the Credential Manager](./media/reset-office-365-proplus-activation-state/remove-credentials.png)
+   :::image type="content" source="./media/reset-office-365-proplus-activation-state/remove-credentials.png" alt-text="Screenshot of removing stored credentials in the Credential Manager.":::
 
 ## Step 4: Clear persisted locations
 
@@ -171,11 +171,11 @@ To clear all WAM accounts associated with Office on the device, download and run
 
 To manually clear Workplace Joined accounts, go to **Access Work or School** on the device and select **Disconnect** to remove the device from WPJ.
 
-![Select Disconnect in Access Work or School](./media/reset-office-365-proplus-activation-state/disconnect.png)
+:::image type="content" source="./media/reset-office-365-proplus-activation-state/disconnect.png" alt-text="Select Disconnect in Access Work or School.":::
 
 To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip), extract the folder, and run WPJCleanUp.cmd.
 
 > [!NOTE]
-> This tool removes all SSO accounts on the device. After this operation, all applications will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
+> This tool removes all SSO accounts in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
 
 Additional Information: [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)

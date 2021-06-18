@@ -72,7 +72,7 @@ For upgrades of Front-End servers, we recommend that you upgrade one server at a
 
 For a Front-End pool to be functional, a certain number of Front-End servers in the pool have to be up and running. For detailed information on how many Lync Server 2013 Front-End servers are required to remain running during maintenance operations review the following Microsoft TechNet documentation:
 
-[Topologies and Components for Front End Servers, Instant Messaging, and Presence](https://technet.microsoft.com/library/gg412996.aspx)
+[Topologies and Components for Front End Servers, Instant Messaging, and Presence](/previous-versions/office/lync-server-2013/lync-server-2013-topologies-and-components-for-front-end-servers-instant-messaging-and-presence)
 
 ### Single point of failure
 
@@ -101,12 +101,12 @@ Reset-CsPoolRegistrarState -PoolFqdn "atl-cs-001.litwareinc.com" -ResetType Quor
 
 For more information about how to use the **Reset-CsPoolRegistrarState** Lync Server 2013 PowerShell cmdlet review the Microsoft TechNet documentation listed here:
 
-[Reset-CsPoolRegistrarState](https://technet.microsoft.com/library/jj619172.aspx)
+[Reset-CsPoolRegistrarState](/powershell/module/skype/Reset-CsPoolRegistrarState)
 
 ## More Information
 
 Microsoft does not recommend deploying a Lync Server 2013 Front-End pool that contains only two Front-End servers. For more information about this topic review the following Microsoft TechNet deployment documentation:
 
-[Topologies and Components for Front End Servers, Instant Messaging, and Presence](https://technet.microsoft.com/library/gg412996.aspx)
+[Topologies and Components for Front End Servers, Instant Messaging, and Presence](/previous-versions/office/lync-server-2013/lync-server-2013-topologies-and-components-for-front-end-servers-instant-messaging-and-presence)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

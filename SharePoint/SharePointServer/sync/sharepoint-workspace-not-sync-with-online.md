@@ -1,7 +1,7 @@
 ---
 title: SharePoint Workspace does not sync automatically
 description: Describes conditions under which a SharePoint workspace or the SharePoint Files tool does not sync automatically.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Workspace 2010
@@ -38,9 +38,7 @@ A SharePoint workspace in SharePoint Workspace 2010 also tries to use the active
 
 ## Resolution
 
-To synchronize a SharePoint workspace, either log on to the SharePoint Online site in your web browser, or open the workspace and provide your credentials when you receive a notification that credentials are required. For more information about this behavior, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[2231936 ](https://support.microsoft.com/help/2231936) SharePoint Workspace syncs only one of your Office 365 team sites
+To synchronize a SharePoint workspace, either log on to the SharePoint Online site in your web browser, or open the workspace and provide your credentials when you receive a notification that credentials are required.
 
 To synchronize the SharePoint Files tool, use the following workaround:
 

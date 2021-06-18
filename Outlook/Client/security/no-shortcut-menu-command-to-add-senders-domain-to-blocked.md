@@ -1,8 +1,8 @@
 ---
 title: Cannot add sender's domain to Blocked Senders list
 description: Describes an Outlook 2007, Outlook 2010 and Outlook 2013 behavior in which a shortcut menu command is not available to add a sender's domain to the Blocked Senders list. A workaround is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

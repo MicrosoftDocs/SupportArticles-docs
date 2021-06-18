@@ -1,7 +1,7 @@
 ---
-title: How to merge multiple Word documents into one
+title: How to merge Word documents
 description: Describes how to merge multiple Word documents into one.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,36 +10,33 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Word
 ---
 
-# How to merge multiple Word documents into one
+# How to merge Word documents
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-If you need to cope with Word documents quite often during work, merger of multiple Word documents into one might be required sometimes. You can copy and paste the content directly when the info quantity is not large. But what if it is not that case?
-
-**Insert** tab allows you to subtly merge documents.
-
-![Screenshot of the Insert tab](./media/merge-word-documents/insert-tab.png)
-
-Locate **Object**, press a small triangle next to it, and click **Text from File** from the dropdown menu.
-
-![Screenshot of the Text from File option](./media/merge-word-documents/text-from-file.png)
-
-After that, you can select files to be merged into the current document. By pressing and holding **Ctrl** to select more than one document.
+If you have to combine separate Microsoft Word documents, you can copy and paste them together if they're short, or merge them if they're long.
 
 > [!NOTE]
-> Documents placed at the top will be merged in the first place. Therefore, please sort and number each target document in case that you want to keep a certain sequence for your documents.
+> The following method applies to both Word 2010 and Word 2007. The format might not stay the same when you merge documents.
 
-![Screenshot of insert file](./media/merge-word-documents/insert-file.png)
+1. Select the **Insert** tab.
 
-This method applies both to Word 2010 and Word 2007. Attention required: Formats will not be necessarily remained when you merging the documents. Please be careful of that.
+   ![Screenshot of the Insert tab](./media/merge-word-documents/insert-tab.png)
 
-If it does not work all the same, you are suggested to dig the [Forum](https://answers.microsoft.com/default.aspx) to see if any solution can be best for you.
+2. Select **Object**, and then select **Text from File** from the drop-down menu.
 
-## We welcome all of your comments and suggestions
+   :::image type="content" source="./media/merge-word-documents/text-from-file.png" alt-text="Screenshot of the Text from File option.":::
 
-After your experience of EeeKB, if time allows, pls score this article in the feedback table at the page bottom. We will appreciate your help for our improvement. Any recommendation or good thoughts will be welcomed in "Additional Comments". (For faster solution to your problem, technical queries could be put into discussion in appropriate posts at the Microsoft Community)
+3. Select the files to be merged into the current document. Press and hold **Ctrl** to select more than one document.
+
+    > [!NOTE]
+    > Documents will be merged in the order in which they appear in the file list. To use a different order, select and insert each file individually in the desired order.
+
+   ![Screenshot of inserting file](./media/merge-word-documents/insert-file.png)
+
+For more information, see the [Forum](https://answers.microsoft.com/default.aspx).

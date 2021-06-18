@@ -1,8 +1,8 @@
 ---
 title: Messages move from Inbox to a renamed folder
 description: Discusses that messages move from the Inbox to a renamed folder and the old folder name is applied to a new folder in Outlook. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

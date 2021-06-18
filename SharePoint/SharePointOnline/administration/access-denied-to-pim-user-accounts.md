@@ -1,7 +1,7 @@
 ---
 title: Access denied error for PIM-managed accounts in SharePoint or OneDrive admin center
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 6/10/2020
 audience: Admin
@@ -24,7 +24,7 @@ description: Describes a resolution to an access denied error received when tryi
 
 ## Symptoms
 
-You receive an "Access denied" error message or have an inconsistent experience when you try to access a user account that's managed by Privileged Identity Management ([PIM](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)) in a SharePoint Online (SPO) or the OneDrive admin center.
+You receive an "Access denied" error message or have an inconsistent experience when you try to access a user account that's managed by Privileged Identity Management ([PIM](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)) in a SharePoint Online (SPO) or the OneDrive admin center.
 
 ## Cause
 
@@ -49,7 +49,7 @@ Therefore, this problem is expected to occur if you try to access the SPO admin 
 
 For more information, see the following Knowledge Base articles:
 
-- [Roles you can't manage in Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-roles)
-- [Assign Azure AD roles in Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)
+- [Roles you can't manage in Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-roles)
+- [Assign Azure AD roles in Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,7 +1,7 @@
 ---
 title: Run-Time Error 13 Type Mismatch when setting FW company as default
-description: You cannot set the FW company as default because there are multiple FRx versions on a workstation or server.
-author: simonxjx
+description: You cannot set the FW company as default because there are multiple Microsoft FRx versions on a workstation or server.
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft FRx
 ---
@@ -21,7 +21,9 @@ appliesto:
 
 ## Symptoms
 
-"Run-time Error 13: Type Mismatch" This error occurs when setting the FW company as default.
+This error occurs when setting the FW company as default.
+
+"Run-time Error 13: Type Mismatch"
 
 ## Cause
 
@@ -29,4 +31,4 @@ There are multiple FRx versions on a workstation or server. Either a .dll file i
 
 ## Resolution
 
-ResolutionRun the FRxReg.exe located in the FRx directory. For additional information, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).
+Run the FRxReg.exe located in the FRx directory. For more information, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).

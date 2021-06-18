@@ -52,7 +52,7 @@ You can change this value programmatically, or you can use one of the tools that
 > [!NOTE]
 > Changing the value of the **PR_RESOLVE_METHOD** property does not resolve existing conflicts.
 
-For more information about how to programmatically change the value of the [PR_RESOLVE_METHOD](https://docs.microsoft.com/office/client-developer/outlook/mapi/pidtagresolvemethod-canonical-property) property, go to the MSDN website to search for the [PR_RESOLVE_METHOD](https://social.msdn.microsoft.com/search/?query=pr_resolve_method%20&ac=8) property.
+For more information about how to programmatically change the value of the [PR_RESOLVE_METHOD](/office/client-developer/outlook/mapi/pidtagresolvemethod-canonical-property) property, go to the MSDN website to search for the [PR_RESOLVE_METHOD](https://social.msdn.microsoft.com/search/?query=pr_resolve_method%20&ac=8) property.
 
 ### How to use ExFolders to change the value of PR_RESOLVE_METHOD
 
@@ -85,7 +85,7 @@ To do this, follow these steps:
 
 ### How to remove conflict messages from a user's mailbox
 
-Conflict messages are assigned to the **IPM.Conflict.Message** message class. You can use the [Search-Mailbox](https://docs.microsoft.com/powershell/module/exchange/search-mailbox?view=exchange-ps&preserve-view=true) command to delete conflict messages from a user's mailbox. However, **Search-Mailbox** cannot be configured to filter messages according to the message class. When **Search-Mailbox** is used together with subject keyword filtering and sender keyword filtering, only messages from a specific public folder that contain the subject "Conflict Message" are deleted. But if users can send messages from this public folder, and have sent messages that use the same subject line to user mailboxes, those messages will also be deleted.
+Conflict messages are assigned to the **IPM.Conflict.Message** message class. You can use the [Search-Mailbox](/powershell/module/exchange/search-mailbox?preserve-view=true&view=exchange-ps) command to delete conflict messages from a user's mailbox. However, **Search-Mailbox** cannot be configured to filter messages according to the message class. When **Search-Mailbox** is used together with subject keyword filtering and sender keyword filtering, only messages from a specific public folder that contain the subject "Conflict Message" are deleted. But if users can send messages from this public folder, and have sent messages that use the same subject line to user mailboxes, those messages will also be deleted.
 
 The following example command shows how to use **Search-Mailbox** to delete conflict messages:
 

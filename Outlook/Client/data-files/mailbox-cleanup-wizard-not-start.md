@@ -1,8 +1,8 @@
 ---
 title: The Mailbox Cleanup Wizard doesn't start
 description: Describes an issue in which the Mailbox Cleanup Wizard doesn't start when you reach the mailbox size limit.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

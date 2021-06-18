@@ -1,7 +1,7 @@
 ---
 title: Excel does not recognize data as Date type data
 description: Describes and provides a workaround for an issue in which data that is imported from a SQL Server data source is not recognized as the Date data type in an Excel 2013 workbook. This issue occurs when you use the SQL OLE DB Provider to import the data.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: jenl
 appliesto:

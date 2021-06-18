@@ -1,8 +1,8 @@
 ---
 title: Automatically declaring items as records causes duplicates
 description: Describes a fix and explains preventive steps for a situation where the record library ends up with duplicates in a given scenario. Declaring items as records automatically inside a drop off library causes duplications when content organizer rules run.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: A workflow configured to send an email message to users at a time doesn't work
 description: A SharePoint workflow that's set to send a custom email message to more than 200 users at a time, more than 10,000 recipients per day, or more than 30 messages per minute cannot run.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

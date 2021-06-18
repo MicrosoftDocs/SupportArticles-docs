@@ -66,7 +66,7 @@ Use the `Set-WebServicesVirtualDirectory` cmdlet to re-enable MRSProxy on every 
 
 After you enable MRSProxy on the servers, you may have to correctly publish the endpoint through your firewall. For more information about how to do this, see [Configure Forefront TMG for a hybrid environment](/SharePoint/hybrid/configure-forefront-tmg-for-a-hybrid-environment#configure-tmg-2010).
 
-For more information about how to troubleshoot the error message that's mentioned in the Symptoms section, see [Exception has been thrown by the target error in a hybrid deployment](/exchange/troubleshoot/move-mailboxes/hybrid-deployment-errors).
+For more information about how to troubleshoot the error message that's mentioned in the Symptoms section, see [Exception has been thrown by the target error in a hybrid deployment](./hybrid-deployment-errors.md).
 
 If you experience issues when you move mailboxes to Exchange Online in Office 365, you can run the Troubleshoot Office 365 Mailbox Migration tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
 

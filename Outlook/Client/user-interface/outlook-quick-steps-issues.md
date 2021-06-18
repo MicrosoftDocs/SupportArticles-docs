@@ -1,7 +1,7 @@
 ---
 title: The Calendar folder cannot be found or The Tasks folder cannot be found error when you use Quick Steps in Outlook
 description: When you use an IMAP or POP account that's added as a secondary account to the Outlook profile and try to use Quick Steps, you would receive error messages.
-author: TobyTu
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

@@ -1,7 +1,7 @@
 ---
 title: SharePoint 2013 or Project Server 2013 Setup error if the .NET Framework 4.6 is installed
 description: Describes an issue that triggers an error during SharePoint 2013 or Project Server 2013 Setup if the .NET Framework 4.6 is installed. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
@@ -76,7 +76,7 @@ If the Microsoft .NET Framework 4.6, 4.6.1, or 4.6.2 is already installed, follo
    - [3102436](https://support.microsoft.com/help/3102436) The .NET Framework 4.6.1 offline installer for Windows  
    - [3045557](https://support.microsoft.com/help/3045557) Microsoft .NET Framework 4.6 (Offline Installer) for Windows
 
-   **Note** In Windows Server 2012 or Windows Server 2012 R2, the .NET Framework is an operating system component and cannot be independently uninstalled. Updates to the .NET Framework appear in the Installed Updates  tab of the Control Panel Programs and Features  app. For operating systems on which the .NET Framework is not preinstalled, the .NET Framework appears in the Uninstall or change a program  tab (or the Add/Remove programs  tab) of the Program and Features  app in Control Panel. See [Troubleshooting Blocked .NET Framework Installations and Uninstallations](https://msdn.microsoft.com/library/hh925569%28v=vs.110%29.aspx) and the Microsoft Knowledge Base articles listed earlier for more information.  
+   **Note** In Windows Server 2012 or Windows Server 2012 R2, the .NET Framework is an operating system component and cannot be independently uninstalled. Updates to the .NET Framework appear in the Installed Updates  tab of the Control Panel Programs and Features  app. For operating systems on which the .NET Framework is not preinstalled, the .NET Framework appears in the Uninstall or change a program  tab (or the Add/Remove programs  tab) of the Program and Features  app in Control Panel. See [Troubleshooting Blocked .NET Framework Installations and Uninstallations](/dotnet/framework/install/troubleshoot-blocked-installations-and-uninstallations) and the Microsoft Knowledge Base articles listed earlier for more information.  
    
 2. Restart the computer.   
 3. Install the [web installer](https://www.microsoft.com/download/details.aspx?id=42643) for the .NET Framework 4.5.2.   

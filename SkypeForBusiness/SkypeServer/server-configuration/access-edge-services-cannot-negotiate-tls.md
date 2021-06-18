@@ -33,7 +33,7 @@ The Windows Server 2008 operating system (OS) provides an enhanced list of Advan
 
 For more information about Windows Server 2008 and its implementation of AES, review the following Microsoft TechNet documentation:
 
-[TLS/SSL Cryptographic Enhancements](https://technet.microsoft.com/library/cc766285%28v=ws.10%29.aspx)
+[TLS/SSL Cryptographic Enhancements](/previous-versions/windows/it-pro/windows-vista/cc766285(v=ws.10))
 
 ## Workaround
 
@@ -75,11 +75,11 @@ From the console of the Windows Server 2008 server that is hosting the Lync Serv
 
 For more information about the certificate configuration that is required for the AOL PIC, review documentations listed here:
 
-[Set up certificates for the external edge interface for Lync Server 2013](https://technet.microsoft.com/library/gg398409.aspx)
+[Set up certificates for the external edge interface for Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-set-up-certificates-for-the-external-edge-interface)
 
 For more information about how Windows Server 2012 manages SSL and TLS cypher suite negotiation, review the Microsoft TechNet documentation listed here:
 
-[What's New in TLS/SSL (Schannel SSP) in Windows Server and Windows](https://technet.microsoft.com/library/hh831771.aspx)
+[What's New in TLS/SSL (Schannel SSP) in Windows Server and Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831771(v=ws.11))
 
 For more information about how Windows Server computers and Windows client computers manage SSL and TLS cypher suites, review the Microsoft TechNet documentation listed here:
 

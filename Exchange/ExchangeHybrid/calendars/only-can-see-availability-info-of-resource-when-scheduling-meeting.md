@@ -25,7 +25,7 @@ search.appverid: MET150
 _Original KB number:_ &nbsp; 3065364
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [http://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Symptoms
 
@@ -51,6 +51,9 @@ To do this, follow these steps:
    2. Run the [Get-Mailbox](/powershell/module/exchange/get-mailbox?view=exchange-ps&preserve-view=true) cmdlet to retrieve the values for these attributes from Exchange Online.
    3. Examine the output, and note the values that are returned for the `ResourceCapacity` and `ResourceCustom` properties.
 2. Use the values that you obtained in step 1 to update the `msExchResourceCapacity` and `msExchResourceDisplay` attributes of the objects in the on-premises Active Directory.
+
+> [!NOTE]
+> You may receive warnings when you access such room or equipment mailboxes if they're attempted to be accessed by using EAC or Exchange Management Shell in the on-premises Exchange server. If you need to modify some properties on the on-premises Exchange server, clear these attributes, and perform the intended task by using Exchange Management Shell or EAC. Upon completion you can update `msExchResourceCapacity` and `msExchResourceDisplay` back to the original values.
 
 ## More information
 

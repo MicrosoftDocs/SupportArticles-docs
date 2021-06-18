@@ -1,7 +1,7 @@
 ---
 title: SAP add-ins don't display controls after update to Office 1806 or higher
 description: SAP EPM Context Pane doesn't display any control in Excel after updating Office to version 1806 or 1807.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Excel for Office 365
@@ -34,9 +34,7 @@ In this scenario, the SAP add-in can no longer display some controls in dialog b
 
 To resolve the issue, update Office to version 1808, or a later version, and update Windows to version 1809 or a later version.
 
-**Third-party disclaimer information** 
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.    
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## Workaround
 

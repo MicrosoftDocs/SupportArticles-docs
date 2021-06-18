@@ -1,7 +1,7 @@
 ---
 title: Search box removed for customers with search control in Suite Nav turned off
-ms.author: v-todmc
-author: mccoybot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 9/11/2020
 audience: Admin

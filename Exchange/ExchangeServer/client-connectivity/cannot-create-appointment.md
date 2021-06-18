@@ -52,7 +52,7 @@ Set-MailboxFolderPermission -Identity "Alias of recipient\Calendar" -User "alias
 
 For more information about the Set-MailboxFolderPermissioncmdlet, go to the following Microsoft website:
 
-[Set-MailboxFolderPermission](https://technet.microsoft.com/library/ff522363%28v=exchg.141%29.aspx)
+[Set-MailboxFolderPermission](/powershell/module/exchange/set-mailboxfolderpermission)
 
 ### Method 2
 

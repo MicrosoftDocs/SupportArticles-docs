@@ -1,6 +1,6 @@
 ---
 title: You'll need a new app to open this ms-visio when you open Visio files in SharePoint
-author: AmandaAZ
+author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

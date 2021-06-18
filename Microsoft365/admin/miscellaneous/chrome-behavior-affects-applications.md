@@ -43,7 +43,7 @@ You should thoroughly test all applications by using Chrome Beta version 80 to v
 
 Chrome versions 78 and 79 betas have an improvement that delays the **SameSite:Lax** attribute enforcement for two minutes. However, using these versions for testing may mask other problems. Therefore, we recommend that you test by using Chrome version 80 by having specific flags enabled. Doing this can, at least, help you discover the effect so that you can determine your best plan. For more information, see the "[Testing guidelines](#testing-guidelines)" section.
 
-Microsoft Edge browser on Chromium (version 80) will not be affected by these SameSite changes. You can [read the Edge documentation](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes) to see the current plan for adapting this change. 
+Microsoft Edge browser on Chromium (version 80) will not be affected by these SameSite changes. You can [read the Edge documentation](/microsoft-edge/web-platform/site-impacting-changes) to see the current plan for adapting this change. 
 
 ## Recommendations
 
@@ -127,8 +127,6 @@ If you suspect that your users are using a Chrome version 76 or a later version 
 
 For the 77–79 versions of Chrome, check the `Chrome://flags` in the browser to see whether they have the flags enabled. The setting default will begin to change in Chrome version 80 on a graduated release.
 
-**Third-party information disclaimer**
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

@@ -1,7 +1,7 @@
 ---
 title: Users cannot access a shared folder in SharePoint Online
 description: This article fixes a problem in which users can't access a shared folder in SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 editor: v-jesits
 ms.custom: CSSTroubleshoot
 ms.date: 8/17/2020
@@ -62,3 +62,4 @@ For more information about site collection features that include **Limited-acces
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
 
+Also see [Publishing Infrastructure-Turn Off-implications](https://techcommunity.microsoft.com/t5/sharepoint/publishing-infrastructure-turn-off-implications/m-p/59288).

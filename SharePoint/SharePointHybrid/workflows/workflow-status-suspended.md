@@ -1,7 +1,7 @@
 ---
 title: Status of SharePoint 2013 workflow returns an internal status of Suspended
 description: Fixes an issue in which the status of a SharePoint 2013 workflow returns an internal status of Suspended or the workflow doesn't complete when the list workflow is run at the Style Library.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 - SharePoint Server 2013

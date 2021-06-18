@@ -102,7 +102,7 @@ To help identify the issue in Microsoft 365, follow these steps:
 2. Compare the SMTP address of the user with the organization relationship. To do this, run the following command:
 
     ```console
-    if ( (Get-OrganizationRelationship).DomainNames -contains (Get-Mailbox user).PrimarySmtpAddress.Domain) { write-host "The domain was found" -ForegroundColor Green } else { write-host (Get-Mailbox user).PrimarySmtpAddress.Domain "was not found" -ForegroundColor Yellow}
+    if ( (Get-OrganizationRelationship).DomainNames -contains (Get-Mailbox user).PrimarySmtpAddress.Split("@")[1]) { write-host "The domain was found" -ForegroundColor Green } else { write-host (Get-Mailbox user).PrimarySmtpAddress.Split("@")[1] "was not found" -ForegroundColor Yellow}
     ```
 
     > [!NOTE]

@@ -1,7 +1,7 @@
 ---
 title: Teams call attempts to use static conference ID
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -30,9 +30,9 @@ If the admin overrides the default setting from dynamic conference ID to static 
 
 Microsoft is researching this problem and will post more information in this article when the information becomes available.
 
-For more information about dynamic IDs, see [Using Audio Conferencing dynamic IDs in your organization](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/using-audio-conferencing-dynamic-ids-in-your-organization).
+For more information about dynamic IDs, see [Using Audio Conferencing dynamic IDs in your organization](/skypeforbusiness/audio-conferencing-in-office-365/using-audio-conferencing-dynamic-ids-in-your-organization).
 
-Also see [Reset a conference ID for a user in Microsoft Teams](https://docs.microsoft.com/microsoftteams/reset-a-conference-id-for-a-user-in-teams). 
+Also see [Reset a conference ID for a user in Microsoft Teams](/microsoftteams/reset-a-conference-id-for-a-user-in-teams). 
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

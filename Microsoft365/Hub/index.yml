@@ -23,13 +23,13 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: https://docs.microsoft.com/media/logos/logo_office.svg
       links:
-        - url: /office365/troubleshoot/o365-enterprise-welcome
+        - url: ../enterprise/o365-enterprise-welcome.md
           text: Office 365 Enterprise
-        - url: /office365/troubleshoot/o365-admin-welcome
+        - url: ../admin/o365-admin-welcome.md
           text: Office 365 Admin Center
-        - url: /office365/troubleshoot/microsoft-365-compliance-welcome
+        - url: ../compliance/microsoft-365-compliance-welcome.md
           text: Microsoft 365 Compliance
-        - url: /office365/troubleshoot/microsoft-365-security-welcome
+        - url: ../security/microsoft-365-security-welcome.md
           text: Microsoft 365 Security
     # Card
     - title: Microsoft Teams

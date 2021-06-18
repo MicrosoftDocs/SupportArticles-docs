@@ -51,7 +51,7 @@ To work around this problem, move the Subscriber Access or Auto Attendant contac
 
 ## References
 
-[Move Exchange Unified Messaging Contact objects](https://docs.microsoft.com/lyncserver/move-exchange-unified-messaging-contact-objects)
+[Move Exchange Unified Messaging Contact objects](/lyncserver/move-exchange-unified-messaging-contact-objects)
 
 ## Status
 

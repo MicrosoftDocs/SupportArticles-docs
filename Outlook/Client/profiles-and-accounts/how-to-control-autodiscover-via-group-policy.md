@@ -1,8 +1,8 @@
 ---
 title: How to control AutoDiscover via Group Policy
 description: The Group Policy .adm templates for Outlook 2007 and Outlook 2010 do not include a setting to disable the Outlook AutoDiscover feature or its discovery methods. Article details how to configure the AutoDiscover feature by using custom Group Policy template files.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

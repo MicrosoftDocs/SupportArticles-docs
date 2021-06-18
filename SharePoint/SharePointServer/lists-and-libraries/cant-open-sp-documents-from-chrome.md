@@ -1,7 +1,7 @@
 ---
 title: Can't open documents in a local client from Chrome
-description: Describes an issue that occurs when you open SharePoint Server hosted files in the Chrome browser. Because Chrome has deprecated NPAPI support, SharePoint integration with Chrome has been disrupted. A workaround is provided.
-author: simonxjx
+description: Describes an issue that occurs when you open SharePoint-based files in the Chrome browser. Because Chrome has deprecated NPAPI support, SharePoint integration with Chrome has been disrupted. A workaround is provided.
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
@@ -47,9 +47,7 @@ This problem occurs when Netscape Plugin API (NPAPI) support is disabled. In Sep
 - You can open the file in the browser by using Office Web Apps, and then click the **Edit in Word** button from the web editor to open in a rich client application. 
 - You can also open the file in the rich Office client application from the Document library directly in Chrome or Microsoft Edge with the **Edit** button from the document library's file ellipsis menu, in the preview pane.
 
-**Third-party information disclaimer**
-
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 ## More Information
 
@@ -61,8 +59,6 @@ Microsoft recommends that customers migrate to current product versions before t
 
 We encourage customers to evaluate transitioning to Office 365 with the help of their Microsoft representatives or technology partner.
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
