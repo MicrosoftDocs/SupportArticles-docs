@@ -60,16 +60,16 @@ Value: 0 (If you subsequently display the Room Finder, this value is changed to 
 
 If you hide the Room Finder on the **Scheduling Assistant** screen of a meeting form, this registry data is never used.
 
-## Administering the Room Finder through Group Policy
+## Administering the Room Finder through registry editor
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry](https://support.microsoft.com/help/322756) for restoration in case problems occur.
 
-There are two different policy values that affect the Room Finder. Which one you use depends on the level of control that you want to have over the Room Finder and the version of "Microsoft Exchange Add-In" that you have installed.
+There are two different registry entries that affect the Room Finder. Which one you use depends on the level of control that you want to have over the Room Finder and the version of "Microsoft Exchange Add-In" that you have installed.
 
 - RoomFinderShow
 
-    The **RoomFinderShow** policy value is a DWORD value under the following registry paths (by Outlook version):
+    The **RoomFinderShow** is a DWORD value under the following registry paths (by Outlook version):
 
     `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\x.0\Outlook\Preferences`
 
@@ -84,7 +84,7 @@ There are two different policy values that affect the Room Finder. Which one you
 
 - RoomFinderForceDisabled
 
-    The **RoomFinderForceDisabled** policy value was introduced in an update to the "Microsoft Exchange Add-in". It is used by Outlook only after you install the update for your version of Outlook.
+    The **RoomFinderForceDisabled** value was introduced in an update to the "Microsoft Exchange Add-in". It is used by Outlook only after you install the update for your version of Outlook.
 
     [<span class="underline">Hotfix KB2880477 for Office 2013 July 8, 2014 (Outexum-x-none.msp)</span>](https://support.microsoft.com/help/2880477)  
 
