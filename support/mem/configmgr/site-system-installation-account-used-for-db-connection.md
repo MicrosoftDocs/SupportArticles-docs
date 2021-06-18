@@ -32,6 +32,10 @@ In Distrmg.log:
 > [28000][18452][Microsoft][ODBC SQL Server Driver][SQL Server]Login failed. The login is from an untrusted domain and cannot be used with Windows authentication.  
 > Failed to connect to the SQL Server. Cannot save the package status to the data source...
 
+## Resolution
+
+To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/servers/manage/checklist-for-installing-update-1906).
+
 ## Workaround
 
-On the SQL Server, create a local account that has the same name as the site system installation account that is configured for the remote site server, and grant the account access to the Configuration Managers database. Then, pass through authentication works around Configuration Manager's use of the site system installation account.
+To work around this issue without updating, on the SQL Server, create a local account that has the same name as the site system installation account that is configured for the remote site server, and grant the account access to the Configuration Managers database. Then, pass through authentication works around Configuration Manager's use of the site system installation account.
