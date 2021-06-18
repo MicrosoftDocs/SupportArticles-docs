@@ -42,9 +42,9 @@ To open this document, your computer must be running a supported version of Micr
 
 This issue occurs because Visio Web Access invokes the client application by using the **ms-visio:ofv|u|documenturl** protocol, but Visio Viewer doesn't support or process this protocol.
 
-## Resolution
+## Workaround
 
-To resolve this issue, install [Microsoft Office Visio](https://products.office.com/en-US/Visio). 
+To be able to open Microsoft Office Visio files, install [Microsoft Office Visio](https://products.office.com/en-US/Visio). 
 
 ## Status
 
