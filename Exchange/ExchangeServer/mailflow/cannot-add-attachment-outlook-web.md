@@ -51,20 +51,8 @@ To resolve this issue, follow these steps:
    - **maxAllowedContentLength** (value in bytes)
    - **maxReceivedMessageSize** (value in bytes)
 6. Stop and then restart the **MSExchangeOWAAppPool** application pool.
-7. Stop and then restart the**MSExchangeServicesAppPool** application pool.
-
-> [!NOTE]
-> Steps 3-6 must be performed in both of the following locations:
-
-- The Client Access server on which the Web.config files are located in the following path:
-
-   *%ExchangeInstallPath%\FrontEnd\HttpProxy*
-
-- The Mailbox server on which the Web.config files are located in the following path:
-
-8. When you're finished, save and close the web.config files.
-
-9. Restart IIS on the Exchange server by using either of the following methods:
+7. Stop and then restart the **MSExchangeServicesAppPool** application pool.
+8. Restart IIS on the Exchange server by using either of the following methods:
 
    - Open IIS Manager, select the server, and in the **Actions** pane, click **Restart**.
 
@@ -78,9 +66,16 @@ To resolve this issue, follow these steps:
      net start w3svc
      ```
 
+> [!NOTE]
+> Steps 3-6 must be performed in both of the following locations:
+>
+> - The Client Access server on which the Web.config files are located under *%ExchangeInstallPath%\FrontEnd\HttpProxy*.
+> - The Mailbox server on which the Web.config files are located under *%ExchangeInstallPath%\ClientAccess*.
 
 ## More information
 
-For more information about client-specific message size limits, see the following Microsoft Exchange website:
+For more information about client-specific message size limits, see the following articles:
 
-[Configure Client-Specific Message Size Limits on Client Access Servers](/exchange/configure-client-specific-message-size-limits-exchange-2013-help)
+- [Configure Client-Specific Message Size Limits on Client Access Servers](/exchange/configure-client-specific-message-size-limits-exchange-2013-help)
+- [Configure client-specific message size limits](/exchange/architecture/client-access/client-message-size-limits)
+
