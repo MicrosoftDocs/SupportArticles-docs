@@ -24,6 +24,16 @@ landingContent:
             url: best-practices-when-updating-a-flow.md
 
  # Card
+  - title: Ribbons and commanding
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Ribbon issues
+            url: ribbon-issues.md
+          - text: Regenerate ribbon metadata 
+            url: regenerate-ribbon-metadata.md
+
+ # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
