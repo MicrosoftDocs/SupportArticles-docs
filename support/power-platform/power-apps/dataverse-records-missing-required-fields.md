@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Dynamics 365 Field Service, Dataverse
 
 ## Symptoms
 
-When users input data through the [Microsoft Dataverse Web API](/powerapps/developer/data-platform/webapi/overview), some required fields are missing in the created records. For example, the required **Name** field is blank in a created case as follows:
+When users input data through the [Microsoft Dataverse Web API](/powerapps/developer/data-platform/webapi/overview), some required fields are missing and not filled in the created records. For example, the required **Name** field is blank in a created case as follows:
 
 :::image type="content" source="./media/dataverse-records-missing-required-fields/dataverse-error.jpg" alt-text="Screenshot of an example about missing required fields.":::
 
