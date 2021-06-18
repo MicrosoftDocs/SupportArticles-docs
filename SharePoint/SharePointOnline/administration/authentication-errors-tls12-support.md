@@ -26,32 +26,6 @@ appliesto:
 
 As previously communicated in the Microsoft 365 Admin Center (for example, communication MC240160 in February 2021), we're moving all online services to Transport Layer Security (TLS) 1.2+. This change started on October 15, 2020. Support for TLS 1.2+ will continue to be added to all Microsoft 365 environments for the next several months. If you haven't taken steps to prepare for this change, your connectivity to Microsoft 365 might be affected.
 
- > [!NOTE]
- > Even after upgrading to TLS 1.2 on Windows 10 machines, it's important to make sure that cipher suites match Azure Front Door (AFD) support, because Microsoft 365 and AFD have a slight difference in cipher suite support.
-
-For TLS 1.2, the following cipher suites are supported by AFD:
- 
-- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
-- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
-
-For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
-
-To add cipher suites, either deploy a group policy or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
-
-> [!IMPORTANT]
-> Edit the order of the cipher suites to ensure that these four suites are at the top of the list (the highest priority).
-
-Alternativley, you can use the [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true) cmdlet to enable the TLS cipher suites. For example, run the following command to enable a cipher suite as the highest priority:
-
-```powershell
-Enable-TlsCipherSuite -Name "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384" -Position 0
-```
-This command adds the TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 cipher suite to the TLS cipher suite list at position 0, which is the highest priority.
-
-> [!IMPORTANT]
-> After you run Enable-TlsCipherSuite, you can verify the order of the cipher suites by running Get-TlsCipherSuite. If the order doesn't reflect the change, check if the [SSL Cipher Suite Order](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy) Group Policy setting configures the default TLS cipher suite order.
 
 ## .NET Framework not configured for TLS 1.2
 
@@ -79,7 +53,43 @@ Authentication issues occur in older operating systems and browsers that don’t
 
 ### Resolution
 
-For more information, see [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true).
+### Windows 10
+
+**Solution 1: Check cipher suites settings**
+
+Even after you upgrade to TLS 1.2, it's important to make sure that the cipher suites settings match Azure Front Door requirements, because Microsoft 365 and Azure Front Door provide slightly different support for cipher suites.
+
+For TLS 1.2, the following cipher suites are supported by Azure Front Door:
+
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+
+To add cipher suites, either deploy a group policy or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy). 
+
+> [!IMPORTANT]
+> Edit the order of the cipher suites to ensure that these four suites are at the top of the list (the highest priority).
+
+Alternativley, you can use the [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true) cmdlet to enable the TLS cipher suites. For example, run the following command to enable a cipher suite as the highest priority:
+
+```powershell
+Enable-TlsCipherSuite -Name "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384" -Position 0
+```
+This command adds the TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 cipher suite to the TLS cipher suite list at position 0, which is the highest priority.
+
+> [!IMPORTANT]
+> After you run Enable-TlsCipherSuite, you can verify the order of the cipher suites by running Get-TlsCipherSuite. If the order doesn't reflect the change, check if the [SSL Cipher Suite Order](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy) Group Policy setting configures the default TLS cipher suite order.
+
+For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
+
+### Windows 8, Windows 7 or Windows Server 2012/2008 R2(SP1)
+
+If you're using Windows 8, Windows 7 Service Pack 1 (SP1), Windows Server 2012 or Windows Server 2008 R2 SP1, see the following solutions.
+
+- The [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. For more information, see [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392). 
+- For Windows 8, install [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245), and create a corresponding registry value.
+- For Windows Server 2012, the [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. If you're still receiving intermittent connectivity errors after you run the Easy Fix Tool, consider [disabling DHE cipher suites](/security-updates/securitybulletins/2015/ms15-055#workarounds). For more information, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).
 
 ## Network drive mapped to a SharePoint library
 
