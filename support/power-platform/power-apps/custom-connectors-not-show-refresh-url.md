@@ -9,7 +9,7 @@ ms.author: v-six
 ---
 # Refresh URL isn't displayed for custom connectors when using Generic Oauth 2
 
-_Applies to:_ &nbsp; Power Automate, Custom Connectors
+_Applies to:_ &nbsp; Power Platform, Custom Connectors
 
 ## Symptoms
 
