@@ -4,6 +4,8 @@ description: Describes an issue in which required fields are missing in Datavers
 ms.reviewer: squassina
 ms.topic: troubleshooting
 ms.date: 6/18/2021
+author: simonxjx
+ms.author: v-six
 ---
 # Dataverse records are created without required fields
 
