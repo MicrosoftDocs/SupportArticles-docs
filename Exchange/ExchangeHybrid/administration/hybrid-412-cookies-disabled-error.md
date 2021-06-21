@@ -1,8 +1,8 @@
 ---
 title: Hybrid pane isn't redirected to Office 365 portal
 description: Fixes a disabled cookies error that's triggered when you click hybrid in the Exchange Admin Center on an on-premises server in an Exchange hybrid deployment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Same URI cannot be attached to different AppId on a single day
 description: Describes an issue that triggers a "Same URI cannot be attached to different AppId on a single day" error when you run the Hybrid Configuration Wizard in Exchange Online.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

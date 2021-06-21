@@ -1,8 +1,8 @@
 ---
 title: Microsoft Exchange Migration Workflow service doesn't start in Exchange Server 2013 Cumulative Update 3
 description: Describes an issue in which Microsoft Exchange Migration Workflow Service doesn't start in Exchange Server 2013 Cumulative Update 3.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Cannot accept external sharing invitation
 description: Users in a hybrid environment cannot accept cross-organization sharing and cross-premises sharing.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

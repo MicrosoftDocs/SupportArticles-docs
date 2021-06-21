@@ -1,8 +1,8 @@
 ---
 title: Manage a mailbox in the on-premises environment
 description: Describes how to manage a mailbox in the on-premises environment in a scenario in which an Office 365 mailbox exists and directory synchronization is enabled but an on-premises mail-enabled user doesn't exist for the mailbox.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

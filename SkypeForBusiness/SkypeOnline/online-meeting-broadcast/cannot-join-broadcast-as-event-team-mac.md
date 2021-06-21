@@ -1,7 +1,7 @@
 ---
 title: You can't join a Skype Meeting Broadcast as an "Event team" member on Mac
 description: Describes an issue that blocks you from joining a Skype Meeting Broadcast as an "Event team" member on Mac
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

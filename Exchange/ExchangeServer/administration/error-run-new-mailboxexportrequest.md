@@ -1,8 +1,8 @@
 ---
 title: Error when you run New-MailboxExportRequest
 description: Describes an issue that can occur when you try to run the New-MailboxExportRequest cmdlet in Exchange Server 2010 SP1 or Exchange Server 2010 SP2, and provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Skype for Business Online DNS configuration issues in Office 365
 description: Contains information about how to troubleshoot Microsoft Skype for Business Online DNS configuration issues in Microsoft Office 365.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

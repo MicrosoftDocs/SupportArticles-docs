@@ -1,7 +1,7 @@
 ---
 title: Unsupported video type or invalid file path for Meeting Broadcast attendee
 description: Describes an issue in which you receive an "unsupported video type or invalid file path" error message when you try to view an embedded video from a PowerPoint presentation in a Skype Meeting Broadcast meeting.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: landerl, jasco
 ms.custom: CSSTroubleshoot
 appliesto:

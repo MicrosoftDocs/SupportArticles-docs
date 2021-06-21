@@ -1,7 +1,7 @@
 ---
 title: MAPI unavailable in Skype for Business 2016 client
 description: Fixes an issue that triggers a "MAPI unavailable" error in a Skype for Business 2016 client.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2016
@@ -135,9 +135,9 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 ### Workaround (supported)
 
-1. Obtain the MFCMapi tool from the following CodePlex website:
+1. Obtain the MFCMapi tool from the following website:
 
-    [https://mfcmapi.codeplex.com/](https://mfcmapi.codeplex.com/)
+    [MFCMapi](https://github.com/stephenegriffin/mfcmapi)
 2. Start the tool on the affected user's computer.
 
     ![MFCMapi screenshot](./media/mapi-unavailable/mfcmapi.png)

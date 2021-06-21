@@ -1,8 +1,8 @@
 ---
 title: Event ID 106 Performance counter updating error after installing an Exchange Server 2013 CU
 description: Resolve an issue that returns event ID 106 errors in the Application log after you install the Exchange Server 2013 Client Access server role.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

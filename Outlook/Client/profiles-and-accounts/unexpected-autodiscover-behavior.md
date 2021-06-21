@@ -44,11 +44,11 @@ By default, Outlook will try one or more of these methods if it is unable to rea
 
 Please see the Exchange Autodiscover Service White Paper appropriate for your version of Exchange for details on all of the different Autodiscover connection methods used by Outlook.
 
-- [Exchange 2013 Autodiscover service](https://docs.microsoft.com/exchange/autodiscover-service-for-exchange-2013)
+- [Exchange 2013 Autodiscover service](/exchange/autodiscover-service-for-exchange-2013)
 
-- [White Paper: Understanding the Exchange 2010 Autodiscover Service](https://docs.microsoft.com/previous-versions/office/exchange-server-2010-technical-article/jj591328(v=exchg.141))
+- [White Paper: Understanding the Exchange 2010 Autodiscover Service](/previous-versions/office/exchange-server-2010-technical-article/jj591328(v=exchg.141))
 
-- [White Paper: Exchange 2007 Autodiscover Service](https://docs.microsoft.com/previous-versions/office/exchange-server-2007-technical-articles/bb332063(v=exchg.80))
+- [White Paper: Exchange 2007 Autodiscover Service](/previous-versions/office/exchange-server-2007-technical-articles/bb332063(v=exchg.80))
 
 In some scenarios, however, you may want to use Autodiscover-related registry/policy values to control the method(s) used by Outlook to reach Autodiscover. However, if you configure the Autodiscover registry/policy values incorrectly, you may prevent Outlook from obtaining Autodiscover information.
 

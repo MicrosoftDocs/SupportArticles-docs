@@ -2,8 +2,8 @@
 title: Cannot set user culture when CAS proxies to older version
 description: When Client Access Server (CAS) proxies to an older server version, you cannot set user culture. Provides methods to solve this issue.
 ms.date: 08/10/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

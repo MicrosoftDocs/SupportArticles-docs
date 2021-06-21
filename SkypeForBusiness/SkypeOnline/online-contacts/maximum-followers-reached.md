@@ -1,7 +1,7 @@
 ---
 title: Maximum Followers Reached message in contact card or presence is not displayed
 description: Discusses that you receive a Maximum Followers Reached message in the Microsoft Lync contact card or the Lync presence isn't displayed. Provides a link to a Microsoft Office Help topic.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: romanma, dahans
 ms.custom: CSSTroubleshoot
 appliesto:

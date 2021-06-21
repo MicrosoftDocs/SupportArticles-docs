@@ -1,8 +1,8 @@
 ---
 title: Installation of Edge Transport role fails
 description: This article fixes an issue that causes the installation of the Exchange Edge Transport role to fail.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

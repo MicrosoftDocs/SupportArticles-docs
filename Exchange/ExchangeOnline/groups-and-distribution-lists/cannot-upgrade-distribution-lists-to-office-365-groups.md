@@ -1,8 +1,8 @@
 ---
 title: Cannot upgrade distribution lists to Office 365 groups
 description: If a custom email address policy is applied to the tenant for your distribution lists, the distribution lists can't be upgraded to Office 365 groups.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

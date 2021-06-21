@@ -1,7 +1,7 @@
 ---
 title: New features in the firmware update for Polycom VVX IP phones
 description: Describes the new features in the firmware update for the Polycom VVX IP phone that support Skype for Business Online.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

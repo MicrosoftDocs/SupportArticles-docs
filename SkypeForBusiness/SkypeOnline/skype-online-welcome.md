@@ -1,12 +1,12 @@
 ---
 title: Listing some issues for Skype for Business Online
 description: This article lists Skype for Business Online related issues.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 localization_priority: Normal
 search.appverid: 
 - MET150

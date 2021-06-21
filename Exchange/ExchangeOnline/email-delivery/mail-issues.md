@@ -1,7 +1,7 @@
 ---
 title: Mail delivery issues
-ms.author: v-swei
-author: Norman-sun
+ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

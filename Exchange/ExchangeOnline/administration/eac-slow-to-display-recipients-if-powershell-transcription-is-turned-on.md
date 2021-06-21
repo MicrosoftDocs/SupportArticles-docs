@@ -1,8 +1,8 @@
 ---
 title: EAC slowly shows recipient if PowerShell Transcription is on
 description: Describes an issue in which Exchange admin center is slow to display recipients if PowerShell Transcription is turned on. Provides one possible resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

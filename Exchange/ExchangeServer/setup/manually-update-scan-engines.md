@@ -1,8 +1,8 @@
 ---
 title: Manually update scan engines
 description: Describes how to manually update the scan engines in Microsoft Exchange Server.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

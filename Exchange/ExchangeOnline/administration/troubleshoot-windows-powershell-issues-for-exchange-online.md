@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Windows PowerShell issues for Exchange Online
 description: Describes how to troubleshoot issues that may occur when you try to use Windows PowerShell cmdlets for Exchange Online in Office 365.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

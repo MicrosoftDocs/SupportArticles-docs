@@ -30,7 +30,7 @@ This article describes how to use personal storage folders, also known as .pst f
 >
 > - If you use a different email program, such as Microsoft Outlook Express or Outlook.com, or if you have problems with the functionality of your email program, this article is not intended for you. See the "References" section for links to other articles and suggestions for solutions.
 > - For versions of Outlook newer than Outlook 2010, see [Find and transfer Outlook data files from one computer to another](https://support.microsoft.com/office/find-and-transfer-outlook-data-files-from-one-computer-to-another-0996ece3-57c6-49bc-977b-0d1892e2aacc).
-> - Moving a .pst file to a network share is not supported. For more information, see [Limits to using personal folders files over LAN and WAN links](https://docs.microsoft.com/outlook/troubleshoot/data-files/limits-using-pst-files-over-lan-wan).
+> - Moving a .pst file to a network share is not supported. For more information, see [Limits to using personal folders files over LAN and WAN links](limits-using-pst-files-over-lan-wan.md).
 
 Microsoft Outlook automatically stores messages, contacts, appointments, tasks, notes, and journal entries in one of the following two locations:
 
@@ -223,7 +223,7 @@ You cannot share or synchronize .pst files between one computer and another comp
 Use the instructions in the "How to make a backup copy of a .pst file" section to copy the .pst file to a CD or DVD-ROM or other portable media, or copy the file to another computer over a LAN/WAN link.
 
 > [!NOTE]
-> Connecting to .pst files over LAN/WAN links is not supported, and problems connecting to .pst files over such links can occur. See [Limits to using personal folders files over LAN and WAN links](https://docs.microsoft.com/outlook/troubleshoot/data-files/limits-using-pst-files-over-lan-wan).
+> Connecting to .pst files over LAN/WAN links is not supported, and problems connecting to .pst files over such links can occur. See [Limits to using personal folders files over LAN and WAN links](limits-using-pst-files-over-lan-wan.md).
 
 You might also want to create a new, secondary .pst file that is intended for transferring data only. Save the data that you want to transfer in this new .pst file and omit any data that you do not want to transfer. If you have to make a secondary .pst file to store data for transfer between two computers, or for backup purposes, use the following steps.
 

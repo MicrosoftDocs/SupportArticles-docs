@@ -1,8 +1,8 @@
 ---
 title: Subtask Configure execution failed
 description: Describes a problem that triggers an error when you run the Hybrid Configuration wizard in Exchange Server. [HCW8006] [HCW8012].
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

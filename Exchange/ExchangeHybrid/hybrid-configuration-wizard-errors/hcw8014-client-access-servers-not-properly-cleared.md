@@ -1,8 +1,8 @@
 ---
 title: Client Access servers were not properly cleared
 description: Fixes an issue in which you get the "HCW8014 Client Access servers specified by the Hybrid Configuration Active Directory object were not properly cleared" error message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

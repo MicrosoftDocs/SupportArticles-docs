@@ -1,8 +1,8 @@
 ---
 title: Error occurs when opening room calendar
 description: Describes an error that users in an Exchange hybrid deployment experience when they try to view a calendar for a room mailbox in Outlook. Provides a solution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

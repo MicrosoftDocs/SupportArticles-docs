@@ -1,7 +1,7 @@
 ---
 title: Call to Response Group Agent fails
 description: Provides a solution for call failure to Response Group Agent.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto:

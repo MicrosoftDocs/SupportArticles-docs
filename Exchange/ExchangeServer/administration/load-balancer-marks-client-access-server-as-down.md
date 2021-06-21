@@ -2,8 +2,8 @@
 title: Load balancer marks Exchange server as down
 description: Resolves an issue in which a Client Access server is down after you install Cumulative Update 6 in an Exchange Server 2013 environment.
 ms.date: 08/05/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -17,7 +17,7 @@ appliesto:
 - Outlook for Mac for Office 365
 search.appverid: MET150
 ---
-# You cannot open a shared calendar in Outlook 2016 for Mac
+# You can't open a shared calendar in Outlook 2016 for Mac
 
 _Original KB number:_ &nbsp; 3007307
 
@@ -67,7 +67,10 @@ To work around this issue, use one of the following methods:
   1. On the **Outlook** menu, select **Preferences**.
   2. Select **General**.
   3. Clear the **Group similar folders, such as Inboxes, from different accounts** check box.
-  4. If you want, select the **Hide On My Computer folders** check box.
+  
+     > [!NOTE]
+     > If you're using Outlook 2019 for Mac, clear the **Show all mail account folders** check box.
+  5. If you want, select the **Hide On My Computer folders** check box.
 
 ## More information
 

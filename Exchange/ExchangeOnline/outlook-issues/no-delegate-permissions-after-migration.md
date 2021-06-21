@@ -1,11 +1,11 @@
 ---
 title: No delegate permissions after a move from on-premises to Exchange Online
 description: You can't viewing delegates or add or remove a delegate in Outlook after a migration from on-premises to Exchange Online.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-swei
+ms.author: v-six
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot

@@ -1,8 +1,8 @@
 ---
 title: RequiredTls flag should be set to true error
 description: Describes an issue in which you receive a RequiredTls flag should be set to true if TlsCertificateName is specified error message when you run the Hybrid Configuration wizard. Provides a solution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

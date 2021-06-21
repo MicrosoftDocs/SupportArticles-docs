@@ -1,8 +1,8 @@
 ---
 title: Shared mailboxes unexpectedly convert to user mailboxes
 description: Describes that mailboxes that were moved from the on-premises environment to Office 365 and converted to shared mailboxes are unexpectedly converted to regular mailboxes after directory synchronization runs. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -68,7 +68,16 @@ To resolve this issue, make sure that a remote mailbox is provisioned for the ac
 
 This behavior is by design when directory synchronization is configured and the `RemoteRecipientType` attribute is set incorrectly.
 
-You can't use the `New-RemoteMailbox` or `Set-RemoteMailbox` cmdlet to set the `Type` parameter of the mailbox to **Shared**. Therefore, in order to set the attribute values correctly, the `Set-ADUser` cmdlet is required.
+> [!NOTE]
+> In the following versions of Exchange Server, you can use the `New-RemoteMailbox` or `Set-RemoteMailbox` cmdlet to set the `Type` parameter of the mailbox to **Shared**:
+>
+>- Exchange Server 2013 CU21 or later
+>- Exchange Server 2016 CU10 or later
+>- Exchange Server 2019
+>
+> For more information, see [Cmdlets to create or modify a remote shared mailbox in an on-premises Exchange environment](https://support.microsoft.com/topic/cmdlets-to-create-or-modify-a-remote-shared-mailbox-in-an-on-premises-exchange-environment-9e83fb59-c001-729c-a4c0-b2964c154b49).
+>
+> If you aren't running these versions of Exchange Server, or you continue to receive the **remoteMailbox.RemoteRecipientType must include ProvisionMailbox** error when you use the value **Shared**, use the `Set-ADUser` cmdlet. 
 
 > [!NOTE]
 > Under most circumstances, Microsoft does not support the use of non-Exchange tools to manually change Exchange attributes. Because of the limitation in these cmdlets, this behavior is identified as an exception to this support stance.

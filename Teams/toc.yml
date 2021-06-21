@@ -23,8 +23,6 @@
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
-    - name: Organizations can't prevent users from changing profile photos
-      href: ./known-issues/cant-prevent-users-from-changing-profile-picture.md
     - name: Public team list doesn't display all teams
       href: ./known-issues/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
@@ -99,14 +97,16 @@
       href: ./known-issues/exchange-users-cant-access-meetings.md
   - name: Exchange integration
     items:
+    - name: External federated contacts don’t appear in Teams search
+      href: ./exchange-integration/external-contacts-not-in-search.md
     - name: Teams and Exchange interaction issues
-      href: ./known-issues/teams-exchange-interaction-issue.md
+      href: ./exchange-integration/teams-exchange-interaction-issue.md
   - name: Files
     items:
     - name: Error uploading files to chats
       href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Error when selecting Files tab
-      href: ./files/object-specified-not-belong-to-list.md
+      href: ./files/access-files-tab-errors.md
     - name: Can't open files in a chat window
       href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
@@ -160,7 +160,9 @@
       - name: Errors when trying to manage dial plans
         href: ./phone-system/dial-plans/errors-managing-dial-plans.md
     - name: Direct Routing
-      items: 
+      items:
+      - name: Issues with LMO
+        href: ./phone-system/direct-routing/issues-with-lmo.md
       - name: Issues with SBC connectivity
         href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
   - name: Provisioning
@@ -196,7 +198,7 @@
     - name: Websites aren't viewable
       href: ./known-issues/cannot-view-website-teams-web-client.md
     - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
-      href: /SharePoint/SharePointOnline/Sites/err-invalid-response-accessing-sharepoint-site.md
+      href: /sharepoint/troubleshoot/sites/err-invalid-response-accessing-sharepoint-site?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Tabs
     items:
     - name: Can't rename legacy OneNote tabs

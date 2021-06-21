@@ -1,8 +1,8 @@
 ---
 title: Error in EMS, EAC, ECP, OWA, or Outlook on the web in Exchange Server
 description: Describes issues where you can't start EMS or sign in to EAC or ECP and where users can't sign in to OWA or Outlook on the Web. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

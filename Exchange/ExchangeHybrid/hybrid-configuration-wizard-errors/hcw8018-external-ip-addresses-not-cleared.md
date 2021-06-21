@@ -1,8 +1,8 @@
 ---
 title: External IP addresses were not properly cleared
 description: Fixes an issue in which you receive an HCW8018 error message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

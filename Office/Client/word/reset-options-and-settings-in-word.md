@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 147051
 ms.author: luche
 appliesto:
 - Microsoft Word
@@ -44,22 +46,20 @@ To manually reset a registry key, you must first delete it. To do this, follow t
 
 Important Always export a registry key before you delete it. This step is important because you may have to restore the functionality that is provided by the key.
 
-1. Exit all Microsoft Office programs.   
-2. Click **Start**, click **Run**, type regedit, and then click **OK**.   
-3. Expand the appropriate folders to locate the registry key that you want to delete. (Refer to the "Main locations of Word settings in the Windows Registry" section.)   
-4. Click to select the key that you want to delete.   
+1. Exit all Microsoft Office programs.
+2. Click **Start**, click **Run**, type regedit, and then click **OK**.
+3. Expand the appropriate folders to locate the registry key that you want to delete. (Refer to the "Main locations of Word settings in the Windows Registry" section.)
+4. Click to select the key that you want to delete.
 5. Use one of the following methods, as appropriate for your operating system:
-   - In Microsoft Windows 2000, click **Export Registry File** on the **Registry** menu, type a file name for the backup copy of the key, and then click **Save**.   
-   - In Windows XP and later versions or in Microsoft Windows Server 2003 and later versions, click **Export** on the **File** menu, type a file name for the backup copy of the key, and then click **Save**.   
-   
-6. Make sure that the key that you just exported is selected, and then click **Delete** on the **Edit** menu.   
+   - In Microsoft Windows 2000, click **Export Registry File** on the **Registry** menu, type a file name for the backup copy of the key, and then click **Save**.
+   - In Windows XP and later versions or in Microsoft Windows Server 2003 and later versions, click **Export** on the **File** menu, type a file name for the backup copy of the key, and then click **Save**.
+6. Make sure that the key that you just exported is selected, and then click **Delete** on the **Edit** menu.
 7. When you are prompted to respond to one of the following messages, click **Yes**:
-   - Are you sure you want to delete this key?   
-   - Are you sure you want to delete this key and all of its subkeys?   
-   
-8. Exit Registry Editor.   
+   - Are you sure you want to delete this key?
+   - Are you sure you want to delete this key and all of its subkeys?
+8. Exit Registry Editor.
 
-After you delete a registry key, and then you restart the program, Word runs the Setup program to correctly rebuild the registry key. If you want to rebuild the registry key before you run the program, repair your installation by following the steps in the "Repair Word (Office)" section. 
+After you delete a registry key, and then you restart the program, Word runs the Setup program to correctly rebuild the registry key. If you want to rebuild the registry key before you run the program, repair your installation by following the steps in the "Repair Word (Office)" section.
 
 ## More Information
 
@@ -69,7 +69,7 @@ You can reset some Word settings, such as the Word Data and Options keys in the 
 
 #### Word key
 
-Word 2016
+Word 2016 or later
 
 **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word**
 
@@ -236,7 +236,7 @@ This key is used by other Microsoft programs, such as the Office programs. These
 
 #### Shared Tools key
 
-Word 2016, 2013, 2010, 2007, 2003, 2002 and 2000: 
+Word 2016, 2013, 2010, 2007, 2003, 2002 and 2000:
 
 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools**
 
@@ -248,9 +248,9 @@ Word can detect and repair problems associated with Setup. This feature uses the
 
 You can use the following methods to repair or reset Word files and values:
 
-- Method 1: Use the "Detect and Repair" feature   
-- Method 2: Repair Word in Maintenance Mode Setup   
-- Method 3: Reinstall Word (Office)   
+- Method 1: Use the "Detect and Repair" feature
+- Method 2: Repair Word in Maintenance Mode Setup
+- Method 3: Reinstall Word (Office)
 
 #### Method 1: Use the "Detect and Repair" or "Microsoft Office Diagnostics" feature
 
@@ -281,33 +281,31 @@ The Maintenance Mode Setup process is similar to the process found in earlier ve
 
 To perform a Maintenance Mode repair, follow these steps:
 
-1. Exit all Office programs.   
+1. Exit all Office programs.
 2. Use one of the following methods, depending upon your operating system:
-   - In Windows 7 or Windows Vista, click **Start**, and then type add remove.   
-   - In Windows XP or Windows Server 2003, click **Start**, and then click **Control Panel**.   
-   - In Windows 2000, click **Start**, point to **Settings**, and then click **Control Panel**.   
-   
-3. Open **Add or Remove Programs**.   
-4. Click **Change or Remove Programs**, click **Microsoft Office **(**Microsoft Office Word**) or the version of Office or Word that you have in the **Currently installed programs** list, and then click **Change**.   
-5. Click **Repair** or **Repair Word** (**Repair Office**), and then click **Continue** or **Next**.   
-6. In Word 2003 and in earlier versions of Word, click **Detect and Repair errors in my Word installation** or click **Detect and Repair errors in my Office installation**, click to select the **Restore my Start Menu Shortcuts** check box, and then click **Install**.   
+   - In Windows 7 or Windows Vista, click **Start**, and then type add remove.
+   - In Windows XP or Windows Server 2003, click **Start**, and then click **Control Panel**.
+   - In Windows 2000, click **Start**, point to **Settings**, and then click **Control Panel**.
+3. Open **Add or Remove Programs**.
+4. Click **Change or Remove Programs**, click **Microsoft Office **(**Microsoft Office Word**) or the version of Office or Word that you have in the **Currently installed programs** list, and then click **Change**.
+5. Click **Repair** or **Repair Word** (**Repair Office**), and then click **Continue** or **Next**.
+6. In Word 2003 and in earlier versions of Word, click **Detect and Repair errors in my Word installation** or click **Detect and Repair errors in my Office installation**, click to select the **Restore my Start Menu Shortcuts** check box, and then click **Install**.
 
 #### Method 3: Reinstall Word (Office)
 
 > [!NOTE]
 > This method is the most aggressive mode of repair. This mode resets Word to its default settings, except for settings that are stored in your global template (Normal.dot or Normal.dotm). To do this in Word 2003 and in earlier versions of Word, follow these steps:
 
-1. Exit all Office programs.   
+1. Exit all Office programs.
 2. Use one of the following methods, depending upon your operating system:
-   - In Windows 7 or Windows Vista, click **Start**, and then type add remove.   
-   - In Windows XP or Windows Server 2003, click **Start**, and then click **Control Panel**.   
-   - In Windows 2000, click **Start**, point to **Settings**, and then click **Control Panel**.   
-   
-3. Open **Add or Remove Programs**.   
-4. Click **Change or Remove Programs**, click **Microsoft Office 2003** (**Microsoft Office Word 2003**) or the version of Office or Word that you have in the **Currently installed programs** list, and then click **Change**.   
-5. Click **Repair Word** (**Repair Office**), and then click **Next**.   
-6. Click **Reinstall Word** (**Reinstall Office**), and then click **Install**.   
- 
+   - In Windows 7 or Windows Vista, click **Start**, and then type add remove.
+   - In Windows XP or Windows Server 2003, click **Start**, and then click **Control Panel**.
+   - In Windows 2000, click **Start**, point to **Settings**, and then click **Control Panel**.
+3. Open **Add or Remove Programs**.
+4. Click **Change or Remove Programs**, click **Microsoft Office 2003** (**Microsoft Office Word 2003**) or the version of Office or Word that you have in the **Currently installed programs** list, and then click **Change**.
+5. Click **Repair Word** (**Repair Office**), and then click **Next**.
+6. Click **Reinstall Word** (**Reinstall Office**), and then click **Install**.
+
 ### Templates and add-ins
 
 #### Global Template (Normal.dotm or Normal.dot)
@@ -318,16 +316,16 @@ When you rename the Normal.dotm template in Word 2007 or later or the Normal.dot
 
 Certain types of configurations may create more than one Normal.dotm template or Normal.dot template. These situations include cases where multiple versions of Word are running on the same computer or cases where several workstation installations exist on the same computer. In these situations, make sure that you rename the correct copy of the template. 
 
-To rename the global template file, follow these steps: 
+To rename the global template file, follow these steps:
 
-1. Exit all Office programs.   
+1. Exit all Office programs.
 2. Click **Start**, click **Run**, type cmd, and then click **OK**.
 3. Type the following command, as appropriate for the version of Word that you are running, and then press Enter:
-   - Word 2002 and Word 2003: 
-ren %userprofile%\Application Data\Microsoft\Templates\Normal.dot OldNormal.dot   
-   - Word 2007 and Word 2010: 
+   - Word 2002 and Word 2003:
+ren %userprofile%\Application Data\Microsoft\Templates\Normal.dot OldNormal.dot
+   - Word 2007 and Word 2010:
 ren %userprofile%\Application Data\Microsoft\Templates\Normal.dotm OldNormal.dotm
-4. Type exit, and then press Enter.   
+4. Type exit, and then press Enter.
 When you restart Word, a new global template (Normal.dot) is created that contains the Word default settings.
 
 #### Add-ins (WLLs) and templates in the Word and Office Startup folders
@@ -338,37 +336,36 @@ To determine whether an item in a Startup folder is causing the problem, you can
 
 To remove items from the Startup folders, follow these steps:
 
-1. Exit all instances of Word, including Microsoft Outlook if Word is set as your email editor.   
-2. Use one of the following methods, as appropriate for the version of Word that you are running: 
-   - Word 2002: 
+1. Exit all instances of Word, including Microsoft Outlook if Word is set as your email editor.
+2. Use one of the following methods, as appropriate for the version of Word that you are running:
+   - Word 2002:
 
-     Click **Start**, click **Run**, type %programfiles%\Microsoft\Office\Office10\Startup\, and then click **OK**.   
-   - Word 2003: 
+     Click **Start**, click **Run**, type %programfiles%\Microsoft\Office\Office10\Startup\, and then click **OK**.
+   - Word 2003:
 
-     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office11\Startup\, and then click **OK**.   
-   - Word 2007: 
+     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office11\Startup\, and then click **OK**.
+   - Word 2007:
 
-     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office12\Startup\, and then click **OK**.   
+     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office12\Startup\, and then click **OK**.
    - Word 2010: 
 
-     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office14\Startup\, and then click **OK**.   
+     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office14\Startup\, and then click **OK**.
    - Word 2013:
 
-     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office15\Startup\, and then click **OK**.   
-   
-3. Right-click one of the files that is contained in the folder, and then click **Rename**.   
+     Click ****Start****, click ****Run****, type %programfiles%\Microsoft\Office\Office15\Startup\, and then click **OK**.
+3. Right-click one of the files that is contained in the folder, and then click **Rename**.
 4. After the file name, type .old, and then press Enter. 
-ImportantNote the original name of the file. You may have to rename the file by using its original name.   
-5. Start Word.   
-6. If you can no longer reproduce the problem, you have found the specific add-in that causes the problem. If you must have the features that the add-in provides, contact the vendor of the add-in for an update. 
+ImportantNote the original name of the file. You may have to rename the file by using its original name.
+5. Start Word.
+6. If you can no longer reproduce the problem, you have found the specific add-in that causes the problem. If you must have the features that the add-in provides, contact the vendor of the add-in for an update.
 
-    If the problem is not resolved, rename the add-in by using its original name, and then repeat steps 3 through 5 for each file in the Startup folder.   
-7. If you can still reproduce the problem, click **Start**, click **Run**, type %userprofile%\Application Data\Microsoft\Word\Startup, and then click **OK**.    
-8. Repeat steps 3 through 5 for each file in this Startup folder.   
+    If the problem is not resolved, rename the add-in by using its original name, and then repeat steps 3 through 5 for each file in the Startup folder.
+7. If you can still reproduce the problem, click **Start**, click **Run**, type %userprofile%\Application Data\Microsoft\Word\Startup, and then click **OK**.
+8. Repeat steps 3 through 5 for each file in this Startup folder.
 
 #### COM add-ins
 
-COM add-ins can be installed in any location, and they are installed by programs that interact with Word. 
+COM add-ins can be installed in any location, and they are installed by programs that interact with Word.
 
 To view the list of COM add-ins in Word 2010, click the Microsoft Office Button, click **Options**, and then click **Add-Ins**.
 
@@ -376,12 +373,12 @@ To view the list of COM add-ins in Word 2007, click the Microsoft Office Button,
 
 To view the list of installed COM add-ins in Word 2003 and in earlier versions of Word, follow these steps: 
 
-1. On the **Tools** menu, click **Customize**.    
-2. Click the **Commands** tab.   
-3. In the **Category** list, click **Tools**.   
-4. Drag the **COM Add-Ins** command to a toolbar.    
-5. Click **Close**.    
-6. Click the new **COM Add-Ins** button to view the COM add-ins that are loaded together with Word.    
+1. On the **Tools** menu, click **Customize**.
+2. Click the **Commands** tab.
+3. In the **Category** list, click **Tools**.
+4. Drag the **COM Add-Ins** command to a toolbar.
+5. Click **Close**.
+6. Click the new **COM Add-Ins** button to view the COM add-ins that are loaded together with Word.
 
 If add-ins are listed in the **COM Add-Ins** dialog box, temporarily turn off each add-in. To do this, clear the check box for each listed COM add-in, and then click **OK**. When you restart Word, Word does not load the COM add-ins.
 

@@ -1,7 +1,7 @@
 ---
 title: Conversations and calls are not synced with Exchange mailbox
 description: Describes an issue in which calls and conversations in Lync Mobile aren't in saved to the Conversation History folder in Microsoft Outlook.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

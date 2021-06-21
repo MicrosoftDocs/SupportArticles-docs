@@ -1,11 +1,11 @@
 ---
 title: Enable or disable POP3, IMAP, MAPI, Outlook Web App or ActiveSync in Office 365
 description: Describes how to enable or disable POP3, IMAP, MAPI, Outlook Web App or ActiveSync in Office 365.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
 - Exchange Online

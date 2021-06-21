@@ -1,11 +1,11 @@
 ---
 title: 554 5.4.14 Hop count exceeded - possible mail loop NDR for outgoing email
 description: Provides a fix for the "554 5.4.14 Hop count exceeded - possible mail loop" issue in Exchange Server.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 

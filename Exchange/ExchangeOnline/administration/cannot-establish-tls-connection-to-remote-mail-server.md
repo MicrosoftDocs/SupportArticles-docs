@@ -1,8 +1,8 @@
 ---
 title: Cannot establish TLS connection to remote mail server
 description: Describes an issue in which TLS negotiation fails because the signature algorithm in the remote mail server's certificate chain is not secure. Provides a solution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

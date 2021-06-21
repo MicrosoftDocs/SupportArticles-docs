@@ -1,8 +1,8 @@
 ---
 title: Can't open a mailbox with Receive-As permission on a mailbox database
 description: Provides solutions for an issue where you can't open another user's mailbox on a database with Receive-As permissions.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

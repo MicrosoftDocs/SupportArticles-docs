@@ -2,8 +2,8 @@
 title: Full hierarchy sync fails with error 
 description: Describes an issue that occurs when the sync state of the public folder hierarchy exceeds the maximum message size.
 ms.date: 08/05/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

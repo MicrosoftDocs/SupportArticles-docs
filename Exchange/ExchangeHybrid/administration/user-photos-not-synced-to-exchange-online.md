@@ -1,8 +1,8 @@
 ---
 title: User photos aren't synced to Exchange Online
 description: Describes an issue in which a user continues to see the previous Exchange Online profile photo even though you updated the user's photo by using that user's on-premises information.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

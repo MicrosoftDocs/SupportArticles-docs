@@ -1,8 +1,8 @@
 ---
 title: 550 5.7.64 Relay Access Denied ATTR36
 description: Fixes an issue in which an on-premises environment cannot send messages on behalf of any domain when you run the Hybrid Configuration Wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

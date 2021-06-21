@@ -1,8 +1,8 @@
 ---
 title: Users prompted for credentials after adding a shared mailbox
 description: Describes a scenario in which users are prompted for credentials in Outlook after they add a shared mailbox as a second Exchange email account in their existing Outlook profile.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

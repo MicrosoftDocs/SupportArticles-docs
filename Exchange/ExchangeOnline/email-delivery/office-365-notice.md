@@ -1,11 +1,11 @@
 ---
 title: Configure a certificate-based connector to relay email messages through Office 365
 description: Describes scenarios that requires you to take action before February 1, 2017 to prevent interruptions to mail flow.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot

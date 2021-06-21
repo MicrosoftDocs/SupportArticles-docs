@@ -73,6 +73,8 @@
       href: ../administration/cannot-process-argument-transformation-error.md
     - name: Can't restore a LUN drive
       href: ../administration/cannot-restore-lun-drive.md
+    - name: Can't use EAC to add remote shared mailbox
+      href: ../administration/cannot-eac-add-remote-shared-mailbox-distribution-group.md
     - name: Certificate status couldn't be determined error
       href: ../administration/cannot-import-third-party-certificate.md
     - name: Cmdlet/parameter combinations not working

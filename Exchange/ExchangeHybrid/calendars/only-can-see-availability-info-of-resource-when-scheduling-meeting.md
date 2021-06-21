@@ -1,8 +1,8 @@
 ---
 title: Only see availability info of resource when scheduling
 description: Describes a scenario in which on-premises users can't view capacity and description information when they try to create a meeting that uses a resource such as a meeting room or company equipment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -51,6 +51,9 @@ To do this, follow these steps:
    2. Run the [Get-Mailbox](/powershell/module/exchange/get-mailbox?view=exchange-ps&preserve-view=true) cmdlet to retrieve the values for these attributes from Exchange Online.
    3. Examine the output, and note the values that are returned for the `ResourceCapacity` and `ResourceCustom` properties.
 2. Use the values that you obtained in step 1 to update the `msExchResourceCapacity` and `msExchResourceDisplay` attributes of the objects in the on-premises Active Directory.
+
+> [!NOTE]
+> You may receive warnings when you access such room or equipment mailboxes if they're attempted to be accessed by using EAC or Exchange Management Shell in the on-premises Exchange server. If you need to modify some properties on the on-premises Exchange server, clear these attributes, and perform the intended task by using Exchange Management Shell or EAC. Upon completion you can update `msExchResourceCapacity` and `msExchResourceDisplay` back to the original values.
 
 ## More information
 

@@ -1,8 +1,8 @@
 ---
 title: Outlook can't connect via a proxy set by PAC
 description: Describes a problem that prevents you from using Outlook Anywhere to connect to Exchange Server or Exchange Online through a proxy that's configured by using a PAC file that has a file:// prefix.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

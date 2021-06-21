@@ -1,7 +1,7 @@
 ---
 title: Can't join a meeting on iOS 9.2 and later
 description: Describes an issue in which you can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 9.2. Provides a workaround.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: jaredgo, pmaloo, jasco, rischwen, amitpeer, mirung, corbinm, landerl 
 appliesto:
 - Lync 2013 for iPhone
@@ -37,24 +37,6 @@ To fix this issue if you have a Lync Server 2010 environment, install [April 201
 To fix this issue if you have a Lync Server 2013 environment, install [January 2016 cumulative update 5.0.8308.945 for Lync Server 2013 web components server](https://support.microsoft.com/help/3126638/january-2016-cumulative-update-5-0-8308-945-for-lync-server-2013-web-c).
 
 To fix this issue if you have a Skype for Business Server 2015 environment, install [March 2016 cumulative update 6.0.9319.235 for Skype for Business Server 2015, Web Components Server](https://support.microsoft.com/help/3134262/march-2016-cumulative-update-6-0-9319-235-for-skype-for-business-serve).
-
-## Workaround
-
-To work around this issue if you have Lync 2013 for iPhone, Lync 2013 for iPad, or Skype for Business for iOS installed, follow these steps:
-
-1. Tap **Meetings**.   
-2. Tap the title of the meeting that you want to join.   
-3. Tap **Join Meeting**.   
-
-> [!NOTE]
-> This workaround applies only to organizers and attendees who have Lync 2013 for iPhone, Lync 2013 for iPad, or Skype for Business for iOS installed. If you don't have any of these apps installed, if you're on a Lync Server 2010 environment, or if you're a federated or anonymous attendee who is external to the organization, follow these steps to join the meeting:
-> 1. Copy the meeting URL from the meeting invitation.    
-> 2. Go to https://aka.ms/skypemeetingjoin-ios, and then paste the URL that you copied in step 1 into the text box on that webpage.
->3. Tap **Join Meeting**.   
-
-## Status
-
-Microsoft is researching this issue and will update this article when more information becomes available.
 
 ## References
 

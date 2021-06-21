@@ -2,8 +2,8 @@
 title: Installing Mailbox role fails with error
 description: You cannot install the Mailbox role on an Exchange server. Provides options to solve this issue.
 ms.date: 08/11/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Domains can only exist in one organization relationship
 description: Describes an issue in which you receive a Domains can only exist in one organization relationship error message when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Telephone contact number isn't updated for users who migrate to Online
 description: Describes an issue in which the telephone contact number isn't updated for users who migrate from Skype for Business to Skype for Business Online for PSTN calling. Provides a solution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-swei
+ms.author: v-six
 appliesto:
 - Skype for Business Online
 ---

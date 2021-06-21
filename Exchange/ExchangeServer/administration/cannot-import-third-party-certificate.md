@@ -1,8 +1,8 @@
 ---
 title: Certificate status could not be determined error
 description: This article provides the resolution to solve the certificate status could not be determined because the revocation check failed error that occurs when you try to import a third-party certificate in Exchange Server 2010.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

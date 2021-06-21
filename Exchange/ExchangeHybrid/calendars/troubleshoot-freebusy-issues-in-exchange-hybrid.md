@@ -2,8 +2,8 @@
 title: Troubleshoot free/busy issues in Exchange hybrid
 description: Resolves free/busy issues in an Exchange hybrid deployment.
 ms.date: 08/19/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

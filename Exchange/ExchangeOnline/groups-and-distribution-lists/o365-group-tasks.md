@@ -39,7 +39,8 @@ Tenant administrators perform many common tasks to manage Microsoft 365 groups. 
 - Microsoft 365 Groups mail flow
   - [Control delivery of group email messages to new members](#control-delivery-of-group-email-messages-to-new-members)
   - [Get a copy of group email messages you send](#get-a-copy-of-group-email-messages-you-send)
-  - [Email issues in Microsoft 365 Groups](#email-issues-in-microsoft-365-groups)
+  - [Configure automatic replies](#configure-automatic-replies)
+  - [Email issues in Microsoft 365 groups](#email-issues-in-microsoft-365-groups)
 - Other tasks
   - [Restore a Microsoft 365 Group](#restore-a-microsoft-365-group)
   - [Convert to a Microsoft 365 group](#convert-to-a-microsoft-365-group)
@@ -47,6 +48,7 @@ Tenant administrators perform many common tasks to manage Microsoft 365 groups. 
   - [Microsoft 365 group migration](#microsoft-365-group-migration-between-tenants)
   - [Microsoft 365 group deletion](#microsoft-365-group-deletion)
   - [Export Microsoft 365 Groups information](#export-microsoft-365-groups-information)
+  - [Microsoft 365 group mailbox size](#microsoft-365-group-mailbox-size)]
 - Useful scripts for Microsoft 365 Groups management
   - [Sample 1: See all the groups together with created date, owner, and membership count](#sample-1-see-all-the-groups-together-with-created-date-owner-and-membership-count)
   - [Sample 2: Create a report for users in a group](#sample-2-create-a-report-for-users-in-a-group)
@@ -62,7 +64,7 @@ You can also use the following tools to control Microsoft 365 group creation:
 
 - Microsoft 365 Groups expiration policy
 
-  This feature makes life easier for users, including admins, group owners, and members by automating the expiration and renewal process. It does so by tracking groups for user activity across different apps, such as Teams, SharePoint, and Outlook, that are associated with the group.
+  This feature makes life easier for users, including admins, group owners, and members by automating the expiration and renewal process. It does so by tracking groups for user activity across different apps that are associated with the group, such as Teams, SharePoint, and Outlook.
 
   To learn more, see:
 
@@ -292,7 +294,17 @@ Get-Mailbox -ResultSize Unlimited | ForEach {Set-MailboxMessageConfiguration -Id
 
 [Back to top](#summary)
 
-### Email issues in Microsoft 365 Groups
+### Configure automatic replies
+
+To configure automatic reply messages for a specific Microsoft 365 group mailbox, run the following Exchange Online PowerShell command:
+
+```powershell
+Set-MailboxAutoReplyConfiguration -Identity <groupmailbox> -AutoReplyState Enabled -InternalMessage "<Internal auto-reply message>" -ExternalMessage "<External auto-reply message>"
+```
+
+[Back to top](#summary)
+
+### Email issues in Microsoft 365 groups
 
 #### Issue 1: Messages sent from external users to a Microsoft 365 group are not received
 
@@ -453,6 +465,44 @@ Get-UnifiedGroup -IncludeSoftDeletedGroups |?{$_.ManagedBy -eq $null}
 To list all Microsoft 365 groups together with tracking information about the group creator, you have to use the [auditing](https://protection.office.com/unifiedauditlog) information. [Search](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true) the unified audit log for the "added group" activity.
 
 ![Search for added group](./media/o365-group-tasks/search.png)
+
+[Back to top](#summary)
+
+### Microsoft 365 Group mailbox size
+
+The size limit of Microsoft 365 group mailboxes is 50 GB by default. The following information explains how to view the current size of a Microsoft 365 group mailbox, and how to increase the mailbox quota.
+
+#### View the group mailbox size
+
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+2. Run the following command to view the current size of a Microsoft 365 group mailbox:
+
+   To view the size of a specific group mailbox:
+
+   ```powershell
+   Get-Mailbox -GroupMailbox <name of the group> | Get-MailboxStatistics | fl TotalDeletedItemSize,TotalItemSize
+   ```
+
+   To view the current size of group mailboxes:
+
+   ```powershell
+   Get-Mailbox -GroupMailbox -ResultSize unlimited | Get-MailboxStatistics | ft DisplayName,TotalDeletedItemSize,TotalItemSize
+   ```
+
+#### Increase group mailbox quota
+
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+2. Run the following command to change quota of a Microsoft 365 group mailbox to 100 GB:
+
+   ```powershell
+   Set-Mailbox <group mailbox name> -GroupMailbox -ProhibitSendReceiveQuota 100GB -ProhibitSendQuota 95GB
+   ````
+
+   Example:
+
+   ```powershell
+   Set-Mailbox Marketing -GroupMailbox -ProhibitSendReceiveQuota 100GB -ProhibitSendQuota 95GB
+   ````
 
 [Back to top](#summary)
 

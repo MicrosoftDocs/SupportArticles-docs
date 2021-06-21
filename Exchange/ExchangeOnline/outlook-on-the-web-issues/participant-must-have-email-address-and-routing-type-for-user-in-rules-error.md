@@ -1,8 +1,8 @@
 ---
 title: Error occurs when creating rule in OWA
 description: Describes an issue that triggers an error message when a user tries to create a new rule in Outlook Web App in Exchange Online. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

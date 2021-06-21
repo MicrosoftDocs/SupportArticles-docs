@@ -2,8 +2,8 @@
 title: Meetings are off by one hour in some time zones
 description: Meeting request sent from Exchange to the attendees has an incorrect start time and time zone information. Provides a workaround.
 ms.date: 08/10/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Cannot save templates in My Templates
 description: Describes an issue in which Microsoft 365 users are unable to save templates in the My Templates App in Outlook Web App.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

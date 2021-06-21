@@ -1,7 +1,7 @@
 ---
 title: LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019 server
-ms.author: v-swei
-author: Norman-sun
+ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
 ms.date: 10/4/2019
 audience: Admin

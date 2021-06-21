@@ -28,7 +28,7 @@ This issue occurs because the device that you are using doesn't have a graphics 
 
 ## Resolution
 
-To prevent this behavior, make sure that your system supports hardware acceleration. To verify the same, you can browse `chrome://gpu/` in Google Chrome. If you can see any value in it stating "Software only" or "hardware acceleration unavailable", that means the system does not support it. For more help, we recommend that you contact your hardware provider.
+To prevent this behavior, make sure that your system supports hardware acceleration. To verify the same, you can browse `edge://gpu/` in Microsoft Edge or `chrome://gpu/` in Google Chrome. If you can see any value in it stating "Software only" or "hardware acceleration unavailable", that means the system does not support it. For more help, we recommend that you contact your hardware provider.
 
 ## More information
 

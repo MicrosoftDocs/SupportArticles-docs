@@ -343,6 +343,8 @@
           href: ../excel/cant-add-refedit-control-to-vba-userform..md
         - name: Can't create a PivotTable in Excel 2013
           href: ../excel/cannot-create-pivottable.md
+        - name: Can't edit certain cells in a protected worksheet using Excel for Mac
+          href: ../excel/unable-to-edit-protected-ranges-on-mac.md
         - name: Can't export to Excel from SharePoint Online
           href: ../excel/cannot-export-to-excel.md
         - name: Can't modify oData connection in PowerPivot
@@ -725,7 +727,7 @@
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Error when installing Office 2013
           href: ../office-suite-issues/office-2013-installation-error.md
-        - name: Error when installing VS2010 Toos for Office Runtime
+        - name: Error when installing VS2010 Tools for Office Runtime
           href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
@@ -783,7 +785,7 @@
           href: ../office-suite-issues/office-suite-setup-not-restart.md
         - name: Office End User License Agreement always appears
           href: ../office-suite-issues/office-end-user-license-agreement.md
-        - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+        - name: Office error “could not create the work file”
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
         - name: Office files with RMS protection crash
           href: ../office-suite-issues/rms-protected-files-crash.md

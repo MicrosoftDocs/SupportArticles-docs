@@ -1,7 +1,7 @@
 ---
 title: Cannot create a meeting on behalf of delegate in Skype for Business
 description: Resolves a problem in which you cannot create a Skype meeting on behalf of delegate and with error in Skype for Business Online.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

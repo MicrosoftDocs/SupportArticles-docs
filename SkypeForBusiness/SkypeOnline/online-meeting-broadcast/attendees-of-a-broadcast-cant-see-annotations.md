@@ -1,7 +1,7 @@
 ---
 title: Attendees of a broadcast can't see annotations
 description: Describes an issue in which attendees of a broadcast can't see annotations that event team members make during a Skype Meeting Broadcast.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, dougl, lynnroe, cbland, rischwen, leonarwo, msp, romanma, tonyq
 appliesto:
