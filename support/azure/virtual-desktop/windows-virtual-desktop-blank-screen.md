@@ -50,4 +50,4 @@ If the black screen is tied with **AppReadiness** issues, set the following regi
 
 If you continue to see black screens after you confirm that you have the latest updates, perform a **full memory dump** and include it in a support case.
 
-Find the steps to enable and collect a **dump file** at [Collect an OS memory dump](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/boot-error-troubleshoot-windows#collect-an-os-memory-dump)
+Find the steps to enable and collect a **dump file** at [Collect an OS memory dump](/azure/virtual-machines/troubleshooting/boot-error-troubleshoot-windows#collect-an-os-memory-dump)
