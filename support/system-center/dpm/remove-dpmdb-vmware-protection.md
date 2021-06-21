@@ -1,18 +1,16 @@
 ---
-title: Remove VMware protection from DPMDB
-description: Provides the script about removing VMware protection references from a DPM SQL database.
+title: Remove VMware virtual machine (VM) protection references from DPMDB
+description: Provides a SQL script to remove VMware VM protection references from the DPM database.
 ms.date: 06/21/2021
 ms.prod-support-area-path:
 ms.reviewer: v-jysur; jarrettr; sudesai
 author: simonxjx
 ms.author: v-six
 ---
-# How to remove VMware protection references from DPMDB
+# Use SQL script to remove VMware VM protection references from DPMDB
 
-> [!NOTE]
-> This script is only used for the steps about [upgrading from Microsoft System Center 2012 R2 Data Protection Manager (DPM) to DPM 2016 if DPM 2012 R2 is used to protect VMware VMs](upgrade-dpm-vmware-vm-protection.md).
-
-You can use the following script to remove VMware protection references from a DPM SQL database (DPMDB):
+> [!IMPORTANT]
+> Only use this SQL script to resolve the issue when you [upgrade from DPM 2012 R2 to DPM 2016 with VMware VM protection](upgrade-dpm-vmware-vm-protection.md).
 
 ```sql
 SET XACT_ABORT ON
