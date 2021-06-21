@@ -1,6 +1,6 @@
 ---
 title: User isn't found when using @mentions
-description: Fixes an issue in which user information doesn't resolve when you mention a user by using the @ symbol followed by the user's name or email alias.
+description: Fixes an issue in which user information doesn't resolve when you @mention a user.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -32,19 +32,19 @@ search.appverid:
 
 ## Symptoms
 
-In Microsoft Word, Excel, PowerPoint, and Outlook, when you mention a user by using the @ symbol followed by the user's name or email alias, the user information doesn't resolve.
+In Microsoft Word, Excel, PowerPoint, and Outlook, if you mention a user by using the @ sign followed by the user's name or email alias, the user information doesn't resolve.
 
 ## Cause
 
-This issue occurs if the user is hidden from the global address list (GAL) in Exchange.
+This issue occurs if the user is hidden from the global address list (GAL) in Microsoft Exchange Server.
 
 ## Resolution
 
-To resolve this issue, use one of the options, appropriate for your situation.
+To resolve this issue, use one of the methods, as appropriate for your situation.
 
-**Note:** The following steps must be performed by an administrator.
+**Note:** The following steps must be done by an administrator.
 
-### Option 1: Mailboxes are in Exchange Online in a non-hybrid configuration
+### Method 1: Mailboxes are in Exchange Online in a non-hybrid configuration
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Check the `HiddenFromAddressListsEnabled` property by running the following cmdlet:
@@ -60,7 +60,7 @@ To resolve this issue, use one of the options, appropriate for your situation.
     Set-Mailbox -Identity john@contoso.com -HiddenFromAddressListsEnabled $false
     ```
 
-### Option 2: Mailboxes are in Exchange Online in a hybrid configuration
+### Method 2: Mailboxes are in Exchange Online in a hybrid configuration
 
 1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
 2. Check the `HiddenFromAddressListsEnabled` property by running the following cmdlet:
@@ -76,7 +76,7 @@ To resolve this issue, use one of the options, appropriate for your situation.
     Set-RemoteMailbox -Identity john@contoso.com -HiddenFromAddressListsEnabled $false
     ```
 
-### Option 3: Mailboxes are in Exchange Server in a hybrid configuration
+### Method 3: Mailboxes are in Exchange Server in a hybrid configuration
 
 1. [Open the Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
 2. Check the `HiddenFromAddressListsEnabled` property by running the following cmdlet:
