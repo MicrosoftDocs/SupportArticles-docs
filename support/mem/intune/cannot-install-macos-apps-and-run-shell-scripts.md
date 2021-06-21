@@ -51,7 +51,7 @@ When these issues occur, entries that resemble the following example are logged 
 
 ## Cause
 
-It is a known issue in macOS 11.2._x_.
+It's a known issue in macOS 11.2._x_.
 
 ## Resolution
 
