@@ -16,6 +16,8 @@
     href: android-enterprise-enrolled-devices-fails-attaching-photo.md
   - name: Can't create messages in Outlook for Android
     href: creating-message-action-not-allowed.md
+  - name: Can't install apps and run shell scripts in macOS
+    href: cannot-install-macos-apps-and-run-shell-scripts.md
   - name: Can't save corporate data in WIP-allowed apps
     href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: Can't sync apps to Intune
