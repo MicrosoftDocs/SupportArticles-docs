@@ -21,54 +21,59 @@ search.appverid: MET150
 
 ## Symptoms
 
-When users send email messages to a mail-enabled public folder, they receive the following error message:
+When users send email messages to a mail-enabled public folder, they receive a non-delivery report (NDR) with the following code and description:
 
 > 550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder
 
-The message resembles the following detailed example.
+The part of the NDR message with details about the error resembles the following detailed example.
 
 :::image type="content" source="media/cannot-send-emails-to-mail-enabled-public-folder/ndr-error.png" alt-text="Screenshot of the NDR error message.":::
 
-This issue occurs in either of the following scenarios.
+## Cause
 
-### Scenario 1: Users send email messages from a shared mailbox in the same organization
+This error occurs in the following scenarios:
 
-In this scenario, users have the **Send As** or **Send on Behalf** access rights on the shared mailbox. This issue occurs because the **Default** user permission on the mail-enabled public folder isn't sufficient to write messages to the public folder store. (See [Resolution 1](#resolution-1).)
+- When the mail-enabled public folder gets email messages from an internal user:
 
-### Scenario 2: Users send email messages from outside the organization
+    In this scenario, the mail-enabled public folder and the users sending email messages to it are in the same organization. Users send messages from a shared mailbox on which they have **Send As** or **Send on Behalf** access rights. The permissions set on the mail-enabled public folder identify these users with the **Default** user permission.
 
-In this scenario, this issue occurs because the **Anonymous** user permission on the mail-enabled public folder isn't sufficient to write messages to the public folder store. (See [Resolution 2](#resolution-2).)
+- When the mail-enabled public folder gets email messages from an external user:
+
+    In this scenario, the permissions set on the mail-enabled public folder identify these users with the **Anonymous** user permission.
+
+In these scenarios, both the **Default** and **Anonymous** user permissions are not enabled for creating items and therefore not sufficient to write the messages to the public folder store.
+
+To check all the user permissions set on a mail-enabled public folder, run the [Get-PublicFolderClientPermission](/powershell/module/exchange/get-publicfolderclientpermission) cmdlet as follows:
+
+```powershell
+Get-PublicFolderClientPermission \<name_of_public_folder>
+```
+
+**Note:** Replace \<name_of_public_folder> with the name of your mail-enabled public folder.
+
+Here's an example of the output for the public folder named PF2:
+
+   :::image type="content" source="media/cannot-send-emails-to-mail-enabled-public-folder/pf-permissions.png" alt-text="Screenshot of the Default and Anonymous user permissions.":::
 
 ## Resolution
 
 **Note:** You must have administrator permissions to make the following changes.
 
-### Resolution 1
+To fix the error, use these steps to enable the Default or the Anonymous user permissions, as appropriate for your scenario, to create items in the mail-enabled public folder.
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-1. Check the **Default** user permission on the mail-enabled public folder by running the [Get-PublicFolderClientPermission](/powershell/module/exchange/get-publicfolderclientpermission) command. Here's an example of the command and output.
+2. Run the [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission) cmdlet as follows:
 
-   :::image type="content" source="media/cannot-send-emails-to-mail-enabled-public-folder/default-permission.png" alt-text="Screenshot of the Default user permission.":::
+    For the Default user permission:
 
-1. Grant the **Default** user sufficient permission on the mail-enabled public folder by running the following command:
+    ```powershell
+    Add-PublicFolderClientPermission -Identity "\<name_of_public_folder>" -User Default -AccessRights CreateItems
+    ```
 
-   ```powershell
-   Add-PublicFolderClientPermission -Identity "\<My Public Folder>" -User Default -AccessRights CreateItems
-   ```
+    For the Anonymous user permission:
 
-   **Note:** Replace \<My Public Folder> with the actual name of the public folder. For more information about this command, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission).
+    ```powershell
+    Add-PublicFolderClientPermission -Identity "\<name_of_public_folder>" -User Anonymous -AccessRights CreateItems
+    ```
 
-### Resolution 2
-
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-1. Check the **Anonymous** user permission on the mail-enabled public folder by running the [Get-PublicFolderClientPermission](/powershell/module/exchange/get-publicfolderclientpermission) command. Here's an example of the command and output.
-
-      :::image type="content" source="media/cannot-send-emails-to-mail-enabled-public-folder/anonymous-permission.png" alt-text="Screenshot of the Anonymous user permission.":::
-
-1. Grant the **Anonymous** user sufficient permission on the mail-enabled public folder by running the following command:
-
-   ```powershell
-   Add-PublicFolderClientPermission -Identity "\My Public Folder" -User Anonymous  -AccessRights CreateItems
-   ```
-
-   **Note:** Replace \<My Public Folder> with the actual name of the public folder. For more information about this command, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission).
+    **Note:** Replace \<name_of_public_folder> with the name of your mail-enabled public folder.
