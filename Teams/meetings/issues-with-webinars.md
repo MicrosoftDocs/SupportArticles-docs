@@ -23,7 +23,7 @@ The webinars feature has recently been released in Microsoft Teams. To manage we
 
 ## "For Everyone" option is greyed out or missing
 
-When you create a new webinar, on the **Require registration** drop down, the **For everyone** option is greyed out or missing even though the `WhoCanRegister` parameter value is set to **Everyone** by default.
+When you create a new webinar, on the **Require registration** drop-down, the **For everyone** option is greyed out or missing even though the `WhoCanRegister` parameter value is set to **Everyone** by default.
 
 This issue occurs if there is a change in the meeting policy.  
 
@@ -50,6 +50,6 @@ If you want to have the **Webinar** option in the **New meeting** drop-down, go 
 - You must have administrator permissions to make the change.  
 - This change also allows the **Live event** option to appear in the **New meeting** drop-down as in the following screenshot.
 
-    :::image type="content" source="media/issues-with-webinars/live-event.png" alt-text="Screenshot of the the **Live event** option showing in the drop-down." border="false":::
+    :::image type="content" source="media/issues-with-webinars/live-event.png" alt-text="Screenshot of the **Live event** option showing in the drop-down." border="false":::
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
