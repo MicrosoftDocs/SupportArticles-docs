@@ -808,7 +808,7 @@
       href: ./remote/terminal-server-client-connection-failures.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
-    - name: Support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session
+    - name: Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-session
       href: ./remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md
 - name: Shell Experience
   items:
