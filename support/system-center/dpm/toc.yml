@@ -80,8 +80,6 @@
       href: error-4323-install-dpm-2012-r2.md
     - name: Error 832 installing DPM 2016
       href: installation-error-832.md
-    - name: Remove VMware protection from DPMDB
-      href: remove-dpmdb-vmware-protection.md
     - name: Upgrade to DPM 2016 with VMware protection
       href: upgrade-dpm-vmware-vm-protection.md
 - name: SharePoint farm protection
@@ -118,3 +116,5 @@
   items:
     - name: Option isn't available to reprotect VMware VMs
       href: option-unavailable-to-reprotect-vm.md
+    - name: Remove VMware protection from DPMDB
+      href: remove-dpmdb-vmware-protection.md
