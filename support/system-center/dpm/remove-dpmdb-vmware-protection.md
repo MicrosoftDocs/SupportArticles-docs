@@ -7,7 +7,7 @@ ms.reviewer: v-jysur; jarrettr; sudesai
 author: simonxjx
 ms.author: v-six
 ---
-# Use SQL script to remove VMware VM protection references from DPMDB
+# SQL script to remove VMware VM protection references from DPMDB
 
 > [!IMPORTANT]
 > Only use this SQL script to resolve the issue when you [upgrade from DPM 2012 R2 to DPM 2016 with VMware VM protection](upgrade-dpm-vmware-vm-protection.md).
