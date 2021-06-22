@@ -27,7 +27,7 @@ When you create a new webinar, on the **Require registration** drop-down, the **
 
 This issue occurs if there is a change in the meeting policy.  
 
-To resolve this issue, reset the `WhoCanRegister` parameter value to **Everyone** and wait 24 hours. To reset the WhoCanRegister parameter, run the following PowerShell command:
+To resolve this issue, reset the `WhoCanRegister` parameter value to **Everyone** and wait 24 hours. To reset the `WhoCanRegister` parameter, run the following PowerShell command:
 
 ```powershell
 Set-CsTeamsMeetingPolicy -WhoCanRegister Everyone
