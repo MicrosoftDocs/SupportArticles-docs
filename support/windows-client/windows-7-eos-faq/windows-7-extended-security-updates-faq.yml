@@ -133,7 +133,7 @@ sections:
       - question: |
          How will licensing work for Windows 7 ESU in virtual machine environments?
         answer: |
-         ESU is licensed per device. For traditional on-premises or dedicated Virtual Desktop Infrastructure (VDI), each endpoint that accesses a VM that runs Windows 7 ESU must have an ESU license. In other words, it's not the VMs that must be counted, but the terminals. If the customer moves to Windows Virtual Desktop (WVD), ESU is covered for no extra cost for the full three-year coverage period.  
+         ESU is licensed per device. For traditional on-premises or dedicated Virtual Desktop Infrastructure (VDI), each endpoint that accesses a VM that runs Windows 7 ESU must have an ESU license. In other words, it's not the VMs that must be counted, but the terminals. If the customer moves to Azure Virtual Desktop (AVD), ESU is covered for no extra cost for the full three-year coverage period.  
 
       - question: |
          Will ESU be available through Unified Support?
