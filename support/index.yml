@@ -85,10 +85,15 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
       
-  - title: Microsoft Power Platform
-    imageSrc: "media/hub-landing/dataverse.svg"
-    summary: Troubleshooting articles for Microsoft Power Platform
-    url: power-platform/index.yml
+  - title: Power Apps
+    imageSrc: "media/hub-landing/power-apps.svg"
+    summary: Troubleshooting articles for Power Apps
+    url: power-platform/power-apps/welcome-power-apps.yml
+
+  - title: Power Automate
+    imageSrc: "media/hub-landing/power-automate.svg"
+    summary: Troubleshooting articles for Power Automate
+    url: power-platform/power-automate/welcome-power-automate.yml
 
   - title: Previous Versions
     imageSrc: "media/hub-landing/MEM.jpg"

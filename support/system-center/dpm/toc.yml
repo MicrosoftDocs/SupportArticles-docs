@@ -116,3 +116,5 @@
   items:
     - name: Option isn't available to reprotect VMware VMs
       href: option-unavailable-to-reprotect-vm.md
+    - name: Remove VMware protection from DPMDB
+      href: remove-dpmdb-vmware-protection.md

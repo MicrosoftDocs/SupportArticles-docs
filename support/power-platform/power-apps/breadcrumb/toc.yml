@@ -1,0 +1,13 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /troubleshoot/
+    topicHref: /troubleshoot/index
+    items:
+
+    - name: Power Apps
+      tocHref: /troubleshoot/power-platform/power-automate/
+      topicHref: /troubleshoot/power-platform/power-apps/welcome-power-apps
