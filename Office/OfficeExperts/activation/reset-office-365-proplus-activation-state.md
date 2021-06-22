@@ -59,6 +59,12 @@ Here's how to remove the Office 365 license:
    The `ospp.vbs` command generates a report of the licenses currently in use. The output is in this format:
 
    ![Screenshot of running the dstatus cscript command.](./media/reset-office-365-proplus-activation-state/command.png)
+   
+   > [!IMPORTANT]
+   >  Before you run the ospp.vbs, ensure that:
+   > - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer. 
+   > - The user account you will use is a member of the Administrators group on the computer on which you run the script. 
+   > - You run ospp.vbs script from an elevated command prompt. 
 
    > [!NOTE]
    > The report could include multiple licenses. If the output contains a "No installed Product Keys" message after you run `ospp.vbs /dstatus`, skip the section below and go to "[Step 2: Remove cached identities in HKCU registry](#step-2-remove-cached-identities-in-hkcu-registry)".
