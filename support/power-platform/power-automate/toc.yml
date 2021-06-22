@@ -111,3 +111,7 @@
       href: ui-flows-fails-uiaelementmismatch.md
     - name: UI flows UIAElementNotFound
       href: issue-with-ui-flows-error-uiaelementnotfound.md
+  - name: Solutions
+    items:
+    - name: Can't import solutions or publish changes
+      href: ../power-apps/cannot-import-solutions-publish-changes.md?context=/troubleshoot/power-platform/power-automate/context/context
