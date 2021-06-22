@@ -27,7 +27,7 @@ These protocols and ciphers are being deprecated for the following reasons:
 The services are being deprecated on the following dates:
 
 - **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **June 30, 2021**.
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**.
 
 ## Enable support for TLS 1.2 in your environment
 
