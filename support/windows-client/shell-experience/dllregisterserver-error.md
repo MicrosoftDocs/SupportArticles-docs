@@ -4,7 +4,7 @@ description: Provides a solution to a 0x80070005 error that occurs when you regi
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

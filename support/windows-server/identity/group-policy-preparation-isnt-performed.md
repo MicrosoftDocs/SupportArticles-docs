@@ -4,7 +4,7 @@ description: Describes an issue that occurs when you automatically prepare an ex
 ms.date: 09/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

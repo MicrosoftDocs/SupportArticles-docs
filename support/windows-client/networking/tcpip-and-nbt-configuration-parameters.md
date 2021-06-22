@@ -4,7 +4,7 @@ description: Describes how to use Registry Editor to change TCP/IP and NBT confi
 ms.date: 12/03/2020
 uthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

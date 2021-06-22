@@ -4,7 +4,7 @@ description: This article describes Event 7000 that is logged by the VMSP servic
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

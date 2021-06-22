@@ -4,7 +4,7 @@ description: Provides some information about saving and restoring existing Windo
 ms.date: 12/31/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

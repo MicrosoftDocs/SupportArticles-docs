@@ -30,7 +30,7 @@ You can reset the program settings to repair your Internet Explorer. To do this,
 
 For more information about how to reset settings in Internet Explorer, see the following video.
 
-> [!VIDEO <https://www.microsoft.com/videoplayer/embed/c989d6d8-f8f9-4cb5-a2f1-da6a7e89f18b>]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/c989d6d8-f8f9-4cb5-a2f1-da6a7e89f18b]
 
 ## Disable and enable Internet Explorer
 

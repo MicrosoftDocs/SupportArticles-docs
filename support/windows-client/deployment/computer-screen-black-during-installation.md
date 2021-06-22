@@ -4,7 +4,7 @@ description: Fixes an issue where a black screen is displayed during Windows 7 s
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

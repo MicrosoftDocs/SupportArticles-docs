@@ -4,7 +4,7 @@ description: Describes how to reserve a range of ephemeral ports on a computer.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

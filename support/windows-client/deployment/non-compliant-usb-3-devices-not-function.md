@@ -4,7 +4,7 @@ description: Resolves an issue where some non-compliant USB 3.0 devices don't fu
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

@@ -4,7 +4,7 @@ description: Helps to fix the error where we are unable to Access the security l
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

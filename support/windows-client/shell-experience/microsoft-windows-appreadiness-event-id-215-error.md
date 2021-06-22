@@ -4,7 +4,7 @@ description: Describes a Microsoft-Windows-AppReadiness event ID 215 error that 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

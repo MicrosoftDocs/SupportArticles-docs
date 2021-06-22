@@ -4,7 +4,7 @@ description: Describes the parameters and options that are used in the answer fi
 ms.date: 02/09/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

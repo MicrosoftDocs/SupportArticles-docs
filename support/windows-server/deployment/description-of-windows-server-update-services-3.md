@@ -4,7 +4,7 @@ description: Describes the Windows Server Update Services 3.0 Service Pack 1 pac
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Contains the steps to change the Active Directory Federation Servic
 ms.date: 10/13/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

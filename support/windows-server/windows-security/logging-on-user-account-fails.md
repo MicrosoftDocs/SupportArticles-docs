@@ -4,7 +4,7 @@ description: Describes a problem when a user who is a member of more than 1,010 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Fixes an issue where Intel's My WiFi Technology stops working after
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

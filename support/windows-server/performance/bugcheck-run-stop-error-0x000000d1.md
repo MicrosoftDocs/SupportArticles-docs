@@ -4,7 +4,7 @@ description: Discusses that Windows Server 2012 R2 runs a bugcheck and you recei
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Describes how to Hide or Display the InetOrgPerson object class in 
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: This article describes how cached domain logon information works an
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -45,7 +45,7 @@ For information about how to edit the registry, view the **Changing Keys And Val
 
 Cached logon information is controlled by the following key:
 
-- Location: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current Version\Winlogon\`
+- Location: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`
 - Value name: CachedLogonsCount
 - Data type: REG_SZ
 - Values: 0 - 50

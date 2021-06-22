@@ -4,7 +4,7 @@ description: Provides a solution to detected secure channel problems.
 ms.date: 09/16/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

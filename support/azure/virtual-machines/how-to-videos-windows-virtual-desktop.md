@@ -1,6 +1,6 @@
 ---
-title: How-to videos about Windows Virtual Desktop
-description: Watch these short videos to get up and running with Azure Windows Virtual Desktop.
+title: How-to videos about Azure Virtual Desktop
+description: Watch these short videos to get up and running with Azure Virtual Desktop.
 ms.date: 11/26/2020
 ms.prod-support-area-path: 
 ms.service: virtual-desktop
@@ -8,12 +8,12 @@ ms.author: genli
 author: genli
 ms.reviewer: 
 ---
-# How-to videos about Windows Virtual Desktop
+# How-to videos about Azure Virtual Desktop
 
 _Original product version:_ &nbsp; Virtual Desktop  
 _Original KB number:_ &nbsp; 4563049
 
-Watch these short videos to get up and running with Windows Virtual Desktop:
+Watch these short videos to get up and running with Azure Virtual Desktop:
 
 **How to Create Managed Image**
 
@@ -27,7 +27,7 @@ Watch these short videos to get up and running with Windows Virtual Desktop:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vtn5]
 
-**Preliminary checks to deploy Windows Virtual Desktop with Gallery Image**
+**Preliminary checks to deploy Azure Virtual Desktop with Gallery Image**
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4wkv7]
 

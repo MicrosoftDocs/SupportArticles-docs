@@ -4,7 +4,7 @@ description: Discusses a limitation to RSoP planning mode in a multiple-forest s
 ms.date: 02/16/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

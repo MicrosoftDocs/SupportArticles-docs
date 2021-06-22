@@ -4,7 +4,7 @@ description: Provides solutions to an issue where a volume shows as raw in disk 
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

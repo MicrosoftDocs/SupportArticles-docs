@@ -4,7 +4,7 @@ description: Describes how to use the Disk Management Snap-in to manage Basic an
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: This article provides a workaround for an issue in which a user-def
 ms.date: 12/4/2020
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -14,10 +14,10 @@ productDirectory:
     summary: Troubleshooting articles for Dynamics 365 Fraud Protection
     url: fraud-protection/welcome-fraud-protection.yml
   - title: Dynamics 365 Marketing
-    imageSrc: "../media/hub-landing/dynamics-365-for-marketing.svg"
+    imageSrc: "../media/hub-landing/marketing.svg"
     summary: Troubleshooting articles for Dynamics 365 Marketing
     url: marketing/welcome-marketing.yml
   - title: Dynamics 365 Sales
-    imageSrc: "../media/hub-landing/dynamics-365-for-sales.svg"
+    imageSrc: "../media/hub-landing/sales.svg"
     summary: Troubleshooting articles for Dynamics 365 Sales
     url: sales/welcome-sales.yml

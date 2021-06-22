@@ -172,6 +172,10 @@ Diskspd I/O workload tests (OS Disk [write] and pool drives [read/write])
    * Windows 8.1
    * Windows 8
 
+#### Accessing SQL Server
+
+If the VM has SQL Server instance(s) installed on it, PerfInsights will use the account NT AUTHORITY\SYSTEM to access the SQL Server instance(s) for collecting configuration information and running rules. The account NT AUTHORITY\SYSTEM must be granted View Server State permission and Connect SQL permission for each instance, otherwise PerfInsights will not be able to connect to the SQL Server and the PerfInsights report will not show any SQL Server related information. 
+
 #### Possible problems when you run the tool on production VMs
 
 -  For the benchmarking scenario or the "Advanced performance analysis" scenario that is configured to use Xperf or Diskspd, the tool might adversely affect the performance of the VM. These scenarios should not be run in a live production environment.

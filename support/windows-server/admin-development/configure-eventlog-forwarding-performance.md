@@ -4,7 +4,7 @@ description: This article introduces the best practice of configuration of Event
 ms.date: 12/04/2020
 uthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

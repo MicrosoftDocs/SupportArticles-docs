@@ -4,7 +4,7 @@ description: The TPM device driver is recorded in the system log when it encount
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

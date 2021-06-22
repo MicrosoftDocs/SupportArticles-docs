@@ -1,7 +1,7 @@
 ---
 title: Determine the version, edition, and update level
 description: This article lists various builds or updates that are available for different versions of  SQL Server and describe the procedures to determine the version of SQL Server that is running on a given system.
-ms.date: 03/05/2021
+ms.date: 05/28/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -24,8 +24,6 @@ _Original KB number:_ &nbsp; 321185
   > [!NOTE]
   > The version information and edition information are in the same output string.
 
-  Latest updates available for currently supported versions of SQL Server
-
   > [!NOTE]
   > For information about SQL Server Support lifecycle, check the [Microsoft SQL Server support lifecycle page](https://support.microsoft.com/lifecycle?c2=1044).
 
@@ -35,7 +33,7 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest Service Pack|Latest GDR|Latest cumulative update|Complete version information|General Guidance|
   |---|---|---|---|---|---|
-  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU10 for 2019](https://support.microsoft.com/help/5001090) (15.0.4123.1 - April 2021)</br>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU11 for 2019](https://support.microsoft.com/help/5003249) (15.0.4138.2 - June 2021)</br>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/4583456) (14.0.2037.2 - January, 2021)|[CU24](https://support.microsoft.com/help/5001228) (14.0.3391.2 - May 2021)</br>[CU22 + GDR](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2016|[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)</br>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for SP2](https://support.microsoft.com/help/4583460) (13.0.5103.6 - January, 2021)</br>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July, 2019)</br>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January, 2018)|[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)</br>[CU15 + GDR for SP2](https://support.microsoft.com/help/4583461) (13.0.5865.1 - January 2021)</br>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)</br>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)</br>[CU14 for SP2](https://support.microsoft.com/help/4564903) (13.0.5830.85- August 2020)</br>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|[SQL Server 2016 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2014|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)</br>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)</br>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/4583463) (12.0.6164.21 - January, 2021)</br>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - January, 2019)</br>[GDR for SP1](https://support.microsoft.com/help/4032542) (August, 2017)</br>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/4583462) (12.0.6433.1 - January 2021)</br>[CU4 for SP3](https://support.microsoft.com/help/4500181) (12.0.6329.1 - July 2019)</br>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)</br>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|[SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sql-server-2014)|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
@@ -45,8 +43,6 @@ Each of the following links provides information for all of the applicable produ
 
   > [!NOTE]
   > "Latest" = During the past 12 months
-
-Learn how to test updates: [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ## Determine which version and edition of SQL Server Database Engine is running
 
@@ -305,7 +301,7 @@ To find the version of your instance of SQL Server CE and related information, s
 
 ## PolyBase
 
-### Windows
+### PolyBase for SQL Server on Windows
 
 To find the version of PolyBase and its related features in Windows, try the following methods:
 
@@ -322,11 +318,28 @@ cd 'C:\Program Files\Microsoft SQL Server'
 ls mpdwsvc.exe -r -ea silentlycontinue | % versioninfo | Format-Table -AutoSize
 ```  
 
-Alternatively, try the SQL Server Setup steps in the next section.
+### PolyBase for SQL Server on Linux
+
+To find the version of PolyBase installed and its related features in Ubuntu, try the following methods:
+
+```bash
+apt list mssql-server-polybase
+apt list mssql-server-polybase-hadoop
+```
+
+To find the version of PolyBase installed and its related features in RHEL, try the following methods:
+
+```bash
+yum info mssql-server-polybase
+yum info mssql-server-polybase-hadoop
+```
+```bash
+yum list installed *polybase*
+```
 
 ### Windows or Linux
 
-To find the version of PolyBase and its related features, refer to a fresh discovery report that runs within the SQL Server Setup tools.
+Alternatively, try the SQL Server Setup steps in this next section. To find the version of PolyBase and its related features, refer to a fresh discovery report that runs within the SQL Server Setup tools.
 
 In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the Summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added.
 

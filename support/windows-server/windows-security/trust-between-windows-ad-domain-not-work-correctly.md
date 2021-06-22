@@ -4,7 +4,7 @@ description: Describes trust configuration issues between a Windows NT 4.0-based
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

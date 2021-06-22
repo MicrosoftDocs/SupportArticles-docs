@@ -4,7 +4,7 @@ description: Describes how to create desktop shortcuts by using the Windows Scri
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

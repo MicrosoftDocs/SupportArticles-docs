@@ -4,7 +4,7 @@ description: Describes how to edit the registry to specify the location of the I
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client 

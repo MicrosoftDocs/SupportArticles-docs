@@ -4,7 +4,7 @@ description: Fixes an issue in which Flight Simulator X hangs on the loading scr
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

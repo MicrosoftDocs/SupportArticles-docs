@@ -4,7 +4,7 @@ description: This article describes how to manually rebuild performance counter 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -34,7 +34,7 @@ This behavior may occur in the following situations:
 
 Extensible counter information is stored in both of the following locations:
 
-- The registry subkey: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current Version\Perflib\009`.
+- The registry subkey: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Perflib\009`.
 
 - The `%Systemroot%\System32\Perfc009.dat` file and the `%Systemroot%\System32\Perfh009.dat` file.
 

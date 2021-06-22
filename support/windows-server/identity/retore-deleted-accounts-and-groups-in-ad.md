@@ -4,7 +4,7 @@ description: Discusses how to recover from the accidental deletion of users and 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server

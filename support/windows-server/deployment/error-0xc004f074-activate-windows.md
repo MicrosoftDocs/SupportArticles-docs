@@ -4,7 +4,7 @@ description: Helps fix the error 0xC004F074 that occurs when you activate Window
 ms.date: 10/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
