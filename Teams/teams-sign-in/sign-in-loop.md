@@ -28,7 +28,7 @@ This issue occurs if your organization uses **Trusted Sites** in Internet Explor
 
 ## Resolution
 
-Change Microsoft Edge, Internet Explorer or Google Chrome settings using administrator rights or a Group Policy object (GPO).
+Change Microsoft Edge, Internet Explorer, Mozilla Firefox or Google Chrome settings using administrator rights or a Group Policy object (GPO).
 
 ### Microsoft Edge
 
@@ -89,6 +89,29 @@ To change the settings by using GPO:
 
 1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
 2. Add the sites listed in step 3 above to the **Content settings** > **CookiesAllowedForUrls** setting.
+
+### Mozilla Firefox
+
+1. Click the **Menu** button , then select **Preferences**.
+2. Select **Privacy**.
+3. Check the box to the left of **Accept cookies from sites**.
+4. Next to **Accept third party cookies** select **Always** from the menu.
+5. On the bottom right of the window, **click Exceptions**
+6. In the **Address of website:** text box, type the websites listed below, clicking the **Allow** button after each one.
+    - `https://*.microsoft.com`
+    - `https://*.microsoftonline.com`
+    - `https://*.teams.skype.com`
+    - `https://*.teams.microsoft.com`
+    - `https://*.sfbassets.com`
+    - `https://*.skypeforbusiness.com`
+
+7. Click **Save Changes**.
+
+To change the settings by using GPO:
+
+1. [Download and install the Firefox administrative template](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
+2. Add the sites listed in step 6 above to the **Content settings** > **CookiesAllowedForUrls** setting.
+
 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:
