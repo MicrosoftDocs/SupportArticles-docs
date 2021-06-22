@@ -13,6 +13,8 @@
       href: client-request-aborted-failed-fetch.md
     - name: Converting time zone
       href: converting-time-zone-power-automate.md
+    - name: Refresh URL isn't displayed for custom connectors
+      href: ../power-apps/custom-connectors-not-show-refresh-url.md?context=/troubleshoot/power-platform/power-automate/context/context
     - name: User doesn't have service plan adequate for non-Standard connection
       href: user-does-not-have-a-service-plan-error.md
   - name: Flows
