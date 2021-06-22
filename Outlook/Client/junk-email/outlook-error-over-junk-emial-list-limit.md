@@ -65,7 +65,7 @@ Considering this limit, there are four known causes of these errors:
     This error may occur when you unintentionally specify a value lower than the default limit. For example, you might enter a value of 1024 under the assumption that this is double the default limit of 510 KB. However, because the value is interpreted as the number of *bytes*, you have configured a limit of 1024 bytes, and this is substantially lower than the default limit of 510 KB.
 
     > [!NOTE]
-    > The `Max Extended Rule Size` registry value does not apply to Exchange Server 2013.
+    > The `Max Extended Rule Size` registry value does not apply to Exchange Server 2013 or later.
 
 - The **PR_RULE_MSG_STATE** property of the Junk E-mail Rule message is incorrectly configured.
 
@@ -80,7 +80,7 @@ Considering this limit, there are four known causes of these errors:
 Because there are four possible causes of this problem, follow these steps to determine the cause of the problem.
 
 > [!NOTE]
-> Skip steps 1 and 2 if you are using Exchange Server 2013. The `Max Extended Rule Size` registry value applies only to earlier versions of Exchange Server.
+> Skip steps 1 and 2 if you are using Exchange Server 2013 or later. The `Max Extended Rule Size` registry value applies only to earlier versions of Exchange Server.
 
 1. Check the registry on your Exchange server to see whether an incorrect value is used for `Max Extended Rule Size`.
 
