@@ -530,7 +530,7 @@
 
 - name: Additional Support
   items:
-  - name: Create an Azure support request
+  - name: How to get additional support for VM specific issues
+    href: /azure/virtual-machines/vm-support-help
+  - name: How to create an Azure support request
     href: /azure/azure-portal/supportability/how-to-create-azure-support-request
-  - name: Post a question on Microsoft Q&A
-    href: /azure/virtual-machines/vm-support-help#post-a-question-on-microsoft-qa
