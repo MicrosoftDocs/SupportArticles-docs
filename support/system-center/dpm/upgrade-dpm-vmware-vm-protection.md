@@ -45,7 +45,7 @@ _Original KB number:_ &nbsp; 4039285
 
 10. Restart the DPM server to avoid a restart during the upgrade. Make sure that all DPM services listed in step 7 are in **Stopped** state.
 11. Open SQL Server Management Studio, [back up the DPM database](/system-center/dpm/back-up-the-dpm-server#back-up-with-native-sql-server-backup-to-a-local-disk).
-12. Download the [SQL script](https://gallery.technet.microsoft.com/Upgrading-DPM-2012-with-e95303be), and then run the script in SQL Server Management Studio.
+12. Download the [SQL script](remove-dpmdb-vmware-protection.md), and then run the script in SQL Server Management Studio.
 
     > [!NOTE]
     > If the script fails, the DPMDB database will continue to be in a good state. Save the output log from the SQL script for further debugging.
