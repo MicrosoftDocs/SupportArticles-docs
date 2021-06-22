@@ -29,4 +29,6 @@
 - name: Welcome
   href: dynamics-365/index.yml
 - name: Welcome
-  href: power-platform/index.yml
+  href: power-platform/power-apps/welcome-power-apps.yml
+- name: Welcome
+  href: power-platform/power-automate/welcome-power-automate.yml
