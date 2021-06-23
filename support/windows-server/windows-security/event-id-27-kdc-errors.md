@@ -4,7 +4,7 @@ description: Fixes the Event ID 27 KDC error that occurs on Windows Server 2003 
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

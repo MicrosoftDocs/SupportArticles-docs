@@ -4,7 +4,7 @@ description: Provides a solution to an issue where you get the error 1783 when y
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

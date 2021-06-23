@@ -4,7 +4,7 @@ description: Describes a problem that occurs when the system path variable is in
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

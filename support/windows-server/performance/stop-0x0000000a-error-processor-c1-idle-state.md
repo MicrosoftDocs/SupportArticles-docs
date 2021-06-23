@@ -4,7 +4,7 @@ description: Provides a workaround for the error message "Stop 0x0000000A" when 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

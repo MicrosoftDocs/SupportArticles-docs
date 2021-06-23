@@ -3,7 +3,7 @@ title: Error (This update is not applicable to your computer) when installing RS
 description: Provides a solution to an error that occurs when you install the Remote Server Administration Tools.
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

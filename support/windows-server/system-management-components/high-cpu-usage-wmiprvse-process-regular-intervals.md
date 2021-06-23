@@ -4,7 +4,7 @@ description: Provides a workaround for the issue of high CPU usage by the WMI Pr
 ms.date: 11/16/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

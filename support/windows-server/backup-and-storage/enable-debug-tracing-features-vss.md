@@ -4,7 +4,7 @@ description: Provides steps for modifying the registry in Windows Server 2003 to
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

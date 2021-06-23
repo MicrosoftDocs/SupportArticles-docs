@@ -4,7 +4,7 @@ description: Describe how to solve the problem of overlapping Forest Names cause
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

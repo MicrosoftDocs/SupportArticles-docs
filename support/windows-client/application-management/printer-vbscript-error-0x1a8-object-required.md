@@ -4,7 +4,7 @@ description: Fixes a 0x1A8 error that occurs when you use the print-related Visu
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

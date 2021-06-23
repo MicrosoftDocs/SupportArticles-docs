@@ -4,7 +4,7 @@ description: Describes an issue in which a backlog is reported for a Read-Only m
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

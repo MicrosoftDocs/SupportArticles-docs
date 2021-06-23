@@ -4,7 +4,7 @@ description: Event ID 5719 or Group Policy event 1129 is logged if you have a Gi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

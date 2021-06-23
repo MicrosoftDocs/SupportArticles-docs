@@ -4,7 +4,7 @@ description: Provides a solution to an error 0xC004E002 when you try to activate
 ms.date: 10/12/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Describes a situation in which Kerberos Forest Search Order may not
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

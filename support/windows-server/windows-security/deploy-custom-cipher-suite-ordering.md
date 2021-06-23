@@ -4,7 +4,7 @@ description: Describes how to deploy custom cipher suite ordering in Windows Ser
 ms.date: 12/03/2020
 uthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

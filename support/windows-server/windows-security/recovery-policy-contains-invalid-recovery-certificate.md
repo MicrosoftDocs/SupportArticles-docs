@@ -4,7 +4,7 @@ description: Describes a problem in which client computers receive an error mess
 ms.date: 10/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

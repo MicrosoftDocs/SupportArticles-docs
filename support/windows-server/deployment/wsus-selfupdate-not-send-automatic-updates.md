@@ -4,7 +4,7 @@ description: Provides a resolution to a problem that occurs when a WSUS SelfUpda
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

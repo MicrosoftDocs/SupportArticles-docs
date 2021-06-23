@@ -4,7 +4,7 @@ description: Provides a resolution for the issue that backup program is unsucces
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server 

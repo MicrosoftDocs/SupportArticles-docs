@@ -4,7 +4,7 @@ description: Describes available hotfixes and updates for issues that can occur 
 ms.date: 10/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

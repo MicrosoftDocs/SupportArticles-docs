@@ -4,7 +4,7 @@ description: Event ID 10 is logged after you install Service Pack 1 for Windows 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

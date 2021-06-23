@@ -4,7 +4,7 @@ description: Discusses an issue in which virtualization applications don't work 
 ms.date: 03/18/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

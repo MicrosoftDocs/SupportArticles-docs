@@ -4,7 +4,7 @@ description: Provides a solution to an issue that occurs when you reboot an AD L
 ms.date: 05/12/2021
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

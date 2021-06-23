@@ -4,7 +4,7 @@ description: Describes an issue in which an upgrade to Windows Storage Server 20
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

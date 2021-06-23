@@ -4,7 +4,7 @@ description: AD replication fails with error 8409 after you restore or undelete 
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

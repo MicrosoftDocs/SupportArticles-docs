@@ -4,7 +4,7 @@ description: Describes an issue that triggers an error on a Windows-based comput
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

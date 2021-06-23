@@ -4,7 +4,7 @@ description: Describes problems that you may encounter when you use apps that co
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

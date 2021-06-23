@@ -4,7 +4,7 @@ description: Describes the command line switches supported by a software install
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

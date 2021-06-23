@@ -4,7 +4,7 @@ description: Discusses how to implement S4U2Proxy and Constrained Delegation on 
 ms.date: 12/3/2020
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

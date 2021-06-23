@@ -4,7 +4,7 @@ description: Works around an error that occurs when trying to get the NDES enrol
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

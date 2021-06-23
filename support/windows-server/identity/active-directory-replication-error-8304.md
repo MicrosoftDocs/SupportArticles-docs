@@ -4,7 +4,7 @@ description: Provides a resolution for troubleshooting AD Replication error 8304
 ms.date: 05/26/2021
 author: v-lianna
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

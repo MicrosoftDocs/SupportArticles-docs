@@ -4,7 +4,7 @@ description: Describes ways to help speed up your computers when it tend to slow
 ms.date: 05/25/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

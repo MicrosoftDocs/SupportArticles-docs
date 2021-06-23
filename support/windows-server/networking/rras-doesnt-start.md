@@ -4,7 +4,7 @@ description: Describes that the Routing and Remote Access service doesn't start 
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

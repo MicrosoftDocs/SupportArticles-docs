@@ -4,7 +4,7 @@ description: Fixes an issue that causes SFC to detect Opencl.dll as corrupted in
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

@@ -4,7 +4,7 @@ description: Event1644Reader.ps1 is a PowerShell script that extracts 1644 event
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Describes how to resolve a problem that is caused by an incorrect d
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

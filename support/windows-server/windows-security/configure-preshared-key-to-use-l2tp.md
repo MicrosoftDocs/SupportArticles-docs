@@ -4,7 +4,7 @@ description: Discusses how to configure a preshared key for use with Layer 2 Tun
 ms.date: 10/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
