@@ -46,6 +46,9 @@ To work around this issue, do one of the following;
 - For customers who have an Microsoft 365 Apps for enterprise license, install Office with shared computer activation. For more information about installing Microsoft 365 Apps for enterprise with shared computer activation, see [Deploy Microsoft 365 Apps for enterprise by using Remote Desktop Services](https://technet.microsoft.com/library/dn782858.aspx).
 - For all other versions of Office Click-to-Run, install an edition of the Office program or suite that uses a volume license key.
 
+> [!NOTE]
+> - The Microsoft 365 Business Premium plan is the only business plan that includes support for shared computer activation. There are other business plans, such as Microsoft 365 Business Standard, that include Microsoft 365 Apps for business, but, those business plans don't include support for shared computer activation.
+
 ## Status
 
 This behavior is by design.
