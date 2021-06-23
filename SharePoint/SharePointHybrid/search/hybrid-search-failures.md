@@ -1,0 +1,75 @@
+---
+title: Hybrid search fails to crawl or return results
+description: Describes issues when you use SharePoint hybrid search. For example, crawling fails, or no result is returned. Provides resolutions.
+author: helenclu
+ms.author: luche
+manager: dcscontentpm
+localization_priority: Normal
+search.appverid: 
+- MET150
+audience: ITPro
+ms.service: sharepoint-powershell
+ms.topic: troubleshooting
+ms.reviewer: salarson
+ms.custom:
+- CSSTroubleshoot
+- CI 151765
+appliesto:
+- SharePoint Server 2019
+- SharePoint Server 2016
+- SharePoint Server 2013
+- SharePoint in Microsoft 365
+---
+
+# Hybrid search fails to crawl or return results
+
+## Symptoms
+
+You experience one or more of the following issues when using [hybrid search in SharePoint in Microsoft 365](/sharepoint/hybrid/hybrid-search-in-sharepoint):
+
+- Crawling fails.
+- No result is returned.
+- You receive an error, such as "An existing connection was forcibly closed".
+
+## Cause
+
+We have begun deprecation of TLS 1.0 and 1.1 in Microsoft 365. Starting from June 30, 2021, the Search service will no longer accept connections using TLS 1.0 or 1.1. If you're using the cloud Search service application (SSA) on older versions of Windows, you need to manually enable TLS 1.2 to have on-premises content indexed in SharePoint in Microsoft 365.
+
+## Resolution
+
+To fix the issue, enable TLS 1.2 by following instructions in these articles:
+
+- [Enable TLS and SSL support in SharePoint 2013](/sharepoint/security-for-sharepoint-server/enable-tls-and-ssl-support-in-sharepoint-2013)
+- [Enable TLS 1.1 and TLS 1.2 support in SharePoint Server 2016](/sharepoint/security-for-sharepoint-server/enable-tls-1-1-and-tls-1-2-support-in-sharepoint-server-2016)
+- [Enable TLS 1.1 and TLS 1.2 support in SharePoint Server 2019](/sharepoint/security-for-sharepoint-server/enable-tls-1-1-and-tls-1-2-support-in-sharepoint-server-2019)
+
+If you still have issues, try the following solutions, depending on your Windows version:
+
+- For Windows Server 2012 or Windows Server 2008 R2 SP1
+
+   The [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. For more information, see [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
+- For Windows 8, install [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245), and create a corresponding registry value.
+- For Windows Server 2012, the [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. If you're still receiving intermittent connectivity errors after you run the Easy Fix Tool, consider [disabling DHE cipher suites](/security-updates/securitybulletins/2015/ms15-055#workarounds). For more information, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).
+
+Also check the supported cipher suites and cipher suite order.
+
+For TLS 1.2, the following cipher suites are supported by Azure Front Door:
+
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+
+To add cipher suites, either deploy a group policy, or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
+
+> [!IMPORTANT]
+> Edit the order of the cipher suites to ensure that these four suites are at the top of the list (the highest priority).
+
+For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
+
+## References
+
+- [Preparing for TLS 1.2 in Microsoft 365 and Microsoft 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true)
+- [Authentication errors occur when client doesn't have TLS 1.2 support](../../SharePointOnline/administration/authentication-errors-tls12-support.md)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
