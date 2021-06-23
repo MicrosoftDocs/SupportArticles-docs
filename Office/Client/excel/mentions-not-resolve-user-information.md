@@ -32,11 +32,11 @@ search.appverid:
 
 ## Symptoms
 
-In Microsoft Word, Excel, PowerPoint, and Outlook, if you mention a user by using the @ sign followed by the user's name or email alias, the user information doesn't resolve.
+In Microsoft Word, Excel, PowerPoint, and Outlook, if you mention a user by using the @ sign followed by the user's name or email alias, the user doesn't resolve.
 
 ## Cause
 
-This issue occurs if the user is hidden from the global address list (GAL) in Microsoft Exchange Server.
+This issue occurs if the user is hidden from the global address list (GAL) in Exchange.
 
 ## Resolution
 
