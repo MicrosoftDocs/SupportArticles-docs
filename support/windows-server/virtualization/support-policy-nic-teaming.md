@@ -4,7 +4,7 @@ description: Describes the Microsoft Support Policy for Network Adapter Teaming 
 ms.date: 09/22/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

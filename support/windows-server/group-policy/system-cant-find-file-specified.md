@@ -4,7 +4,7 @@ description: Discusses errors that occur when you use the Adprep tool together w
 ms.date: 09/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

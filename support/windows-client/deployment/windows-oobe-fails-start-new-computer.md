@@ -4,7 +4,7 @@ description: Describes issues in which Windows OOBE fails when you start a new W
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

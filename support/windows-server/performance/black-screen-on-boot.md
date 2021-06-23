@@ -4,7 +4,7 @@ description: Provides a solution to an issue where restarting a Windows x86-base
 ms.date: 10/12/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Describes a by-design behavior that computer monitor turns off afte
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

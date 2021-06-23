@@ -508,6 +508,8 @@
       href: ./identity/info-devices-configured-rodcs.md
     - name: Let non-administrators view deleted objects container
       href: ./identity/non-administrators-view-deleted-object-container.md
+    - name: Linux accounts can't get AES encrypted tickes in AD DS
+      href: ./identity/linux-accounts-cannot-get-aes-tickets.md
     - name: Modify filtered properties of an object
       href: ./identity/modify-filtered-properties-of-object.md
     - name: Multiple tabs of user properties are missing
@@ -1095,7 +1097,7 @@
     - name: Use Group Policy to configure automatic logon in Terminal Services
       href: ./group-policy/use-group-policy-configure-automatic-logon.md
     - name: Use Group Policy to deploy a Known Issue Rollback
-      href: ../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md
+      href: ../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md?context=/troubleshoot/windows-server/context/context
     - name: Use Group Policy to remotely install softwares
       href: ./group-policy/use-group-policy-to-install-software.md
   - name: Group Policy management - GPMC or AGPM
@@ -2768,6 +2770,8 @@
       href: ./windows-security/constrained-delegation-access-denied.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
+    - name: How to disable the Subject Alternative Name for UPN mapping
+      href: ./windows-security/disable-subject-alternative-name-upn-mapping.md
     - name: How to force Kerberos to use TCP instead of UDP
       href: ./windows-security/force-kerberos-use-tcp-instead-udp.md
     - name: KDC event  16 or 27 if DES for Kerberos is disabled

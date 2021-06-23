@@ -4,7 +4,7 @@ description: When you upgrade from Windows 7 to Windows 8, Windows XP Mode is in
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

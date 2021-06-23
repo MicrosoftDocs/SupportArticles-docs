@@ -4,7 +4,7 @@ description: Provides a solution to an issue where you can't add a DHCP reservat
 ms.date: 05/12/2021
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

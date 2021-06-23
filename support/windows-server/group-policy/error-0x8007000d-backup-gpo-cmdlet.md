@@ -4,7 +4,7 @@ description: Describes an issue in which you receive error 0x8007000D when you r
 ms.date: 03/11/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

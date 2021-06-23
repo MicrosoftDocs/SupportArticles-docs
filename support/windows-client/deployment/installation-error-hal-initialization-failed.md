@@ -4,7 +4,7 @@ description: Provides a solution to fix a HAL_INITIALIZATION_FAILED error that o
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

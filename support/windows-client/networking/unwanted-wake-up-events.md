@@ -4,7 +4,7 @@ description: Explains why unwanted wake-up events may occur when you enable WOL 
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

@@ -4,7 +4,7 @@ description: Describes how to get and use the Active Directory Replication Statu
 ms.date: 2/10/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

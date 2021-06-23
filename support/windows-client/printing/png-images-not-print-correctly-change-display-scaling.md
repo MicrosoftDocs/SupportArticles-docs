@@ -4,7 +4,7 @@ description: Discusses an issue in which PNG images don't print correctly in Wor
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

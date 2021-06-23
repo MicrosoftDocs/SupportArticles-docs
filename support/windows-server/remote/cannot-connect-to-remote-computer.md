@@ -4,7 +4,7 @@ description: Describes a workaround for an issue in which you cannot connect to 
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

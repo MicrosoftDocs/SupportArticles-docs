@@ -4,7 +4,7 @@ description: Describes how to resolve a configuration problem that prevents clie
 ms.date: 11/10/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

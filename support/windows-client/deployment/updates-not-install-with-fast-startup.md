@@ -4,7 +4,7 @@ description: Describes that the Fast Startup feature may impede the installation
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -30,4 +30,4 @@ The Fast Startup feature in Windows 10 allows your computer start up faster afte
 
 Installation of some Windows updates can be completed only when starting your computer after a full shutdown. Since Fast Startup uses hibernation instead of a full shutdown, installation of those updates will not be completed before a full shutdown. In order to make sure pending updates are completed, you have to choose **Restart** from the **Power** menu.
 
-In environments managed with Microsoft Endpoint Manager Configuration Manager (MEMCM), Fast Startup may delay the completion of updates as well. There are plans to address this in a future version of Windows.
+In environments managed with Microsoft Endpoint Manager Configuration Manager (MEMCM), Fast Startup may delay the completion of updates as well. This has been addressed in MEMCM 2002 and Windows 10 21H1.

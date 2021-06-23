@@ -4,7 +4,7 @@ description: Describes how to use Telnet to test port 3389 functionality.
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

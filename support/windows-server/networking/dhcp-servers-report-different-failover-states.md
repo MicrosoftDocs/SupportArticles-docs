@@ -4,7 +4,7 @@ description: Resolves two issues that occur when you use DHCP failover in Window
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

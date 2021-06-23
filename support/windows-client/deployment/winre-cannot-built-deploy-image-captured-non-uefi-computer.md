@@ -4,7 +4,7 @@ description: Describes an issue in which you can't deploy a Windows 8.1-based im
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

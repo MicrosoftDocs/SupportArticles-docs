@@ -4,7 +4,7 @@ description: Describes how to resolve a problem that returns an error when you t
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

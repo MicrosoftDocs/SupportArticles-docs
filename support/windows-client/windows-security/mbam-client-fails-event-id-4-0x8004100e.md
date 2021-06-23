@@ -4,7 +4,7 @@ description: Fixes the error 0x8004100E that occurs when Microsoft BitLocker Adm
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
