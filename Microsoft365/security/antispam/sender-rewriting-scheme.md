@@ -21,6 +21,9 @@ search.appverid: MET150
 
 _Original KB number:_&nbsp;4490129
 
+> [!NOTE]
+> Starting in July 2021, the roll out of a new relay IP pool will be started, which may affect current SRS rewriting behaviour. For messages that qualify for this relay pool, they will not be rewritten by SRS and instead be sent out of IPs that will not be part of the Office 365 SPF record. Please check for a Message Center post about the relay pool change for more information.
+
 ## Summary
 
 Sender Rewriting Scheme (SRS) functionality was added to Office 365 to resolve a problem in which autoforwarding is incompatible with SPF. The SRS feature rewrites the **P1 From** address (also known as the Envelope From address) for all applicable messages that are sent externally from Office 365. It is important to note that the **From** header (also known as the Display From address or P2 From address) that is displayed by email clients remains unchanged.
