@@ -92,11 +92,11 @@ To change the settings by using GPO:
 
 ### Mozilla Firefox
 
-1. Click the **Menu** button , then select **Preferences**.
+1. Click the **Menu** button, then select **Preferences**.
 2. Select **Privacy**.
 3. Check the box to the left of **Accept cookies from sites**.
-4. Next to **Accept third party cookies** select **Always** from the menu.
-5. On the bottom right of the window, **click Exceptions**
+4. Next to **Accept third party cookies**, select **Always** from the menu.
+5. On the bottom right of the window, **select Exceptions**.
 6. In the **Address of website:** text box, type the websites listed below, clicking the **Allow** button after each one.
     - `https://*.microsoft.com`
     - `https://*.microsoftonline.com`
@@ -105,7 +105,7 @@ To change the settings by using GPO:
     - `https://*.sfbassets.com`
     - `https://*.skypeforbusiness.com`
 
-7. Click **Save Changes**.
+7. Select **Save Changes**.
 
 To change the settings by using GPO:
 
