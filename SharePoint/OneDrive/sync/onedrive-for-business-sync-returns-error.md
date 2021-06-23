@@ -27,16 +27,19 @@ When you click **Sync Now** in Microsoft SharePoint or in OneDrive for Business,
 
 ## Cause
 
+> [!NOTE]
+> The xx placeholder in the following registry entry is 15 for Office 2013 and 16 for Office 2016, Office 2019, and Office 365 ProPlus.
+
 This issue occurs if one of the following registry values is configured as follows:
 
-- HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\SignIn
+- HKEY_CURRENT_USER\Software\Microsoft\Office\xx\Common\SignIn
   
   Name: SignInOptions
 
   Type: DWORD
 
   Value: 3   
-- HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\15.0\Common\SignIn
+- HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\xx\Common\SignIn
 
   Name: SignInOptions
 
@@ -61,7 +64,7 @@ To resolve this issue, follow these steps:
 
 3. In Registry Editor, locate and then click the following subkey:
 
-   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\SignIn   
+   HKEY_CURRENT_USER\Software\Microsoft\Office\xx\Common\SignIn   
 4. Locate and then double-click the following value:
 
    **SignInOptions**   
