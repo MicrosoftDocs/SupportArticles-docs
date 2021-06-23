@@ -63,4 +63,4 @@ Change the sign-in status of the user from Allowed to Blocked, and then change i
 4. In the **Block sign-in** screen, select **Block this user from signing in** and click **Save changes**. 
 5. In the **Unblock sign-in** screen, de-select **Block this user from signing in** and click **Save changes**. 
 
-If you are the only Administrator in the tenant and your account is locked. Please contact [M365 support](https://support.microsoft.com/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2)Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+If you are the only administrator in your organization and your account is locked, contact [Microsoft 365 support](https://support.microsoft.com/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2). Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
