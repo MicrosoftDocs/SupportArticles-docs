@@ -19,7 +19,7 @@ search.appverid:
 ---
 # Known issues that affect Teams webinars
 
-Microsoft Teams recently unveiled a webinars feature as an alternative to standard meetings. To learn how to manage webinars, see [Set up for webinars in Microsoft Teams](/microsoftteams/set-up-webinars). To learn how to use webinars, see [Get started with Teams webinars](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3) and [Schedule a webinar](https://support.microsoft.com/office/schedule-a-webinar-0719a9bd-07a0-47fd-8415-6c576860f36a). This article discusses known issues that might occur when you use webinars, and provides resolutions and workarounds that you can try.
+Microsoft Teams recently unveiled the webinar feature as an alternative to standard meetings. To learn how to manage webinars, see [Set up for webinars in Microsoft Teams](/microsoftteams/set-up-webinars). To learn how to use webinars, see [Get started with Teams webinars](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3) and [Schedule a webinar](https://support.microsoft.com/office/schedule-a-webinar-0719a9bd-07a0-47fd-8415-6c576860f36a). This article discusses known issues that might occur when you use webinars, and provides resolutions and workarounds that you can try.
 
 ## "For Everyone" option is greyed out or missing
 
@@ -35,7 +35,7 @@ Set-CsTeamsMeetingPolicy -WhoCanRegister Everyone
 
 **Note:** If the "anonymous join" functionality is turned off in the meeting settings, anonymous users can't join the webinars. To enable this setting, see [Manage meeting settings in Microsoft Teams](/microsoftteams/meeting-settings-in-teams).
 
-## Webinar option is missing on the New meeting menu 
+## Webinar option is missing on the New meeting menu
 
 When you create a meeting, the **Webinar** option is missing on the **New meeting** menu.
 
@@ -43,7 +43,7 @@ This issue occurs if a user doesn't have permissions to schedule a live event. A
 
 To work around this issue, select the **Schedule meeting** option, and set it to **Require registration** to enable this functionality.
 
-If you want to have the **Webinar** option appear on the **New meeting** menu, go to [https://admin.teams.microsoft.com/policies/broadcasts](https://admin.teams.microsoft.com/policies/broadcasts) to reset the **Live Events** policies to **Allow scheduling**.
+If you want to have the **Webinar** option appeared on the **New meeting** menu, go to [https://admin.teams.microsoft.com/policies/broadcasts](https://admin.teams.microsoft.com/policies/broadcasts) to reset the **Live Events** policies to **Allow scheduling**.
 
 **Notes:**
 
