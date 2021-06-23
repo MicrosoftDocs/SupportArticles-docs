@@ -59,16 +59,16 @@ Also check the supported cipher suites and cipher suite order. For TLS 1.2, the 
 - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 
-To add cipher suites, either deploy a group policy, or use local group policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
+To add cipher suites, either deploy a Group Policy setting or use local Group Policy as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
 
 > [!IMPORTANT]
 > Edit the order of the cipher suites to ensure that these four suites are at the top of the list (the highest priority).
 
-For more information, see [What are the current cipher suites supported by Azure Front Door?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-&preserve-view=true).
+For more information, see [What are the current cipher suites supported by Azure Front Door](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
 
 ## References
 
 - [Preparing for TLS 1.2 in Microsoft 365 and Microsoft 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true)
 - [Authentication errors occur when client doesn't have TLS 1.2 support](../../SharePointOnline/administration/authentication-errors-tls12-support.md)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
