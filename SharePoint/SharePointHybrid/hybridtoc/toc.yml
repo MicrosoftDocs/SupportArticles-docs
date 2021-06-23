@@ -15,7 +15,7 @@
       href: ../search/on-premises-content-not-displayed-in-online-search.md
   - name: Workflows
     items:
-    - name: 'Can not set "Hyperlink with formatting and constraints for publishing"'
+    - name: Can't set "Hyperlink with formatting and constraints for publishing"
       href: ../Workflows/fails-setting-workflow-column-value.md
     - name: Completed tasks aren't deleted for workflows
       href: ../Workflows/fails-deleting-completed-workflow-tasks.md
