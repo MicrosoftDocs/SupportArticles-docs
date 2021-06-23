@@ -48,12 +48,11 @@ If you still have issues, try the following solutions, depending on your Windows
 - For Windows Server 2012 or Windows Server 2008 R2 SP1
 
    The [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. For more information, see [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
+
+   For Windows Server 2012, if you still receive intermittent connectivity errors after you run the Easy Fix Tool, consider [disabling DHE cipher suites](/security-updates/securitybulletins/2015/ms15-055#workarounds). For more information, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).
 - For Windows 8, install [KB 3140245](https://www.catalog.update.microsoft.com/search.aspx?q=kb3140245), and create a corresponding registry value.
-- For Windows Server 2012, the [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.1 and TLS 1.2 Secure Protocol registry keys automatically. If you're still receiving intermittent connectivity errors after you run the Easy Fix Tool, consider [disabling DHE cipher suites](/security-updates/securitybulletins/2015/ms15-055#workarounds). For more information, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).
 
-Also check the supported cipher suites and cipher suite order.
-
-For TLS 1.2, the following cipher suites are supported by Azure Front Door:
+Also check the supported cipher suites and cipher suite order. For TLS 1.2, the following cipher suites are supported by Azure Front Door:
 
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
