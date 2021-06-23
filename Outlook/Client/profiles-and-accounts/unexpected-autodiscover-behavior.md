@@ -74,6 +74,7 @@ To resolve this problem, please review the Autodiscover-related registry data yo
 3. Review the following possible DWORD values that may be located under the \Autodiscover subkey.
 
    - PreferLocalXML
+   - PreferProvidedEmailInAutoDiscoverAuthPrompts
    - ExcludeHttpRedirect
    - ExcludeHttpsAutoDiscoverDomain
    - ExcludeHttpsRootDomain
@@ -81,6 +82,9 @@ To resolve this problem, please review the Autodiscover-related registry data yo
    - ExcludeSrvRecord
    - ExcludeLastKnownGoodURL (only applies to Outlook 2010 version 14.0.7140.5001 and later versions)
    - ExcludeExplicitO365Endpoint (only applies to Outlook 2016 version 16.0.6741.2017 and later versions)
+
+   > [!NOTE]
+   > Add the registry PreferProvidedEmailInAutoDiscoverAuthPrompts that enables users to be authenticated using the configured account email or the user principal name (UPN) during AutoDiscover scenarios. Value 0 is the default value and outlook will use the UPN when it's available, If the value is set to 1, Outlook will ignore the UPN and just use the provided account email.
 
    > [!NOTE]
    > Some documentation states that the ExcludeSrvLookupvalue is used by Outlook in this scenario. Unfortunately, this documentation is incorrect as the ExcludeSrvLookup value does not exist in Outlook code. Only the ExcludeSrvRecordregistry value is used by Outlook to control the SRV recordlookup for Autodiscover. Therefore, if you find a value called ExcludeSrvLookup under the \Autodiscover subkey, you can safely change its value to 0.
