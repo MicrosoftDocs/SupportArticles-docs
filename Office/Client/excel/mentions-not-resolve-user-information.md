@@ -36,7 +36,7 @@ In Microsoft Word, Excel, PowerPoint, and Outlook, if you mention a user by usin
 
 ## Cause
 
-This issue occurs if the user is hidden from the global address list (GAL) in Exchange.
+This issue occurs if the user is hidden from the global address list (GAL) in Microsoft Exchange Server or Exchange Online.
 
 ## Resolution
 
