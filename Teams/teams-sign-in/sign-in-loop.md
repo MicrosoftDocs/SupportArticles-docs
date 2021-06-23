@@ -28,7 +28,7 @@ This issue occurs if your organization uses **Trusted Sites** in Internet Explor
 
 ## Resolution
 
-Change Microsoft Edge, Internet Explorer, Mozilla Firefox or Google Chrome settings using administrator rights or a Group Policy object (GPO).
+Change Microsoft Edge, Internet Explorer, Mozilla Firefox, or Google Chrome settings using administrator rights or a Group Policy object (GPO).
 
 ### Microsoft Edge
 
