@@ -52,7 +52,7 @@ When you hide the Room Finder on the **Appointment** tab of a meeting form, th
 > Value: 0 (If you subsequently display the Room Finder, this value is changed to 1)
 
 > [!NOTE]
-> In this subkey path, the **x.0** placeholder represents your version of Office (16.0 = Office 2016 and Outlook for Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).
+> In this subkey path, the **x.0** placeholder represents your version of Office (16.0 = Office 2016 and Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).
 
 If you hide the Room Finder on the **Scheduling Assistant** screen of a meeting form, this registry data is never used.
 
@@ -69,7 +69,7 @@ There are two different registry values that affect the Room Finder. Which one y
 
     `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\x.0\Outlook\Preferences`
 
-    The *x.0* placeholder represents your version of Office (16.0 = Office 2016 and Outlook for Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).
+    The *x.0* placeholder represents your version of Office (16.0 = Office 2016 and Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).
 
     If RoomFinderShow = 0 in these registry paths, the Room Finder behaves in the following manner when you start Outlook:
 
@@ -85,7 +85,7 @@ There are two different registry values that affect the Room Finder. Which one y
     - [Hotfix KB2880477 for Office 2013 July 8, 2014 (Outexum-x-none.msp)](https://support.microsoft.com/help/2880477)
     - [Hotfix KB2794760 for Outlook 2010 July 8, 2014 (Outexum-x-none.msp)](https://support.microsoft.com/help/2794760)
 
-    After the update is installed, use the following registry data to completely disable the Room Finder. It gives you even greater control over the Room Finder than the **RoomFinderShow** policy.
+    After the update is installed, use the following registry data to completely disable the Room Finder. It gives you even greater control over the Room Finder than the **RoomFinderShow** value.
 
     > Subkey: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\x.0\Outlook\Preferences`  
     > DWORD: RoomFinderForceDisabled   
