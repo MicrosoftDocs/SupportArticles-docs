@@ -38,7 +38,7 @@ If you're looking for information about how to recover other recent Office files
 - [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8)
 - [Find lost files after the upgrade to Windows 10](https://support.microsoft.com/help/12386)
 
-If you can’t open the document, or the content in the document is damaged, see [How to troubleshoot damaged documents in Word](./damaged-documents-in-word).
+If you can’t open the document, or the content in the document is damaged, see [How to troubleshoot damaged documents in Word](./damaged-documents-in-word.md).
 
 ## Find a lost document
 
