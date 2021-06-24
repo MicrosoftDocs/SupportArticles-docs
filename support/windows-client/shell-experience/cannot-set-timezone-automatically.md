@@ -48,9 +48,11 @@ Run **Registry Editor** as an administrator and follow these steps:
 ## Use Group Policy
 
 To change the [registry settings](#1), use [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789188(v=ws.11)) to enable the **Set the time zone automatically** setting. Next, follow these steps to enable the **Location** setting in **Local Group Policy Editor**.
-Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Location and Sensors** > **Windows Location Provider** > **Turn off Windows Location Provider**, and then set the value of the **Turn off Windows Location Provider** setting to **Not Configured** as follows:
 
-:::image type="content" source="media/cannot-set-timezone-automatically/turn-off-location-setting-group-policy.png" alt-text="Turn off location setting group policy":::
+1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Location and Sensors** > **Windows Location Provider** > **Turn off Windows Location Provider**.
+2. Set the value of the **Turn off Windows Location Provider** setting to **Not Configured** as follows:
+
+    :::image type="content" source="media/cannot-set-timezone-automatically/turn-off-location-setting-group-policy.png" alt-text="Turn off location setting group policy":::
 
 ## Use MDM policy
 
