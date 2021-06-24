@@ -98,7 +98,7 @@ To change the settings by using GPO:
 
 ## More information
 
-There are some known issues you might run into when you sign in to Teams. For more information, see [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/en-us/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f)?
+There are some known issues you might run into when you sign in to Teams. For more information, see [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f)?
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 
