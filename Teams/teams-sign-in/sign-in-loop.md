@@ -24,7 +24,7 @@ When you try to sign in to Microsoft Teams in Microsoft Edge, Internet Explorer 
 
 ## Cause
 
-This issue occurs if your organization uses **Trusted Sites** in Internet Explorer and doesn't enable the URLs for Microsoft Teams. In this case, the Teams web-based application cannot sign in, as the trusted sites for Teams are not enabled.
+This issue occurs if your organization uses **Trusted Sites** in Internet Explorer and doesn't enable the URLs for Microsoft Teams. In this case, the Teams web-based application cannot sign in, as the trusted sites for Teams aren't enabled.
 
 ## Resolution
 
@@ -95,6 +95,10 @@ To change the settings by using GPO:
 >
 > - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams)
 > - [Office 365 U.S. Government GCC High endpoints](/microsoft-365/enterprise/microsoft-365-u-s-government-gcc-high-endpoints?view=o365-worldwide&preserve-view=true)
+
+## More information
+
+There are some known issues you might run into when you sign in to Teams. For more information, see [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f)?
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 
