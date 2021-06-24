@@ -26,5 +26,8 @@ To resolve this problem, follow these steps in Visual Studio .NET:
 
 1. In Solution Explorer, select the project name.
 2. From the **Project** menu, click **Properties**.
-3. Click to expand the **Configuration Properties** node.
-4. Under **Debugging**, in the **Enable ASP.NET Debugging** list, click **True**.
+3. Click on the **Web** tab.
+4. Under **Debuggers**, check **ASP.NET** Checkbox.
+
+   :::image type="content" source="./media/adjust-visual-experience-settings/visual-experience-settings.png" alt-text="show the Visual Studio visual experience option":::
+
