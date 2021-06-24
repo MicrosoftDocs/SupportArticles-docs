@@ -29,5 +29,4 @@ To resolve this problem, follow these steps in Visual Studio .NET:
 3. Click on the **Web** tab.
 4. Under **Debuggers**, check **ASP.NET** Checkbox.
 
-   :::image type="content" source="./media/adjust-visual-experience-settings/visual-experience-settings.png" alt-text="show the Visual Studio visual experience option":::
-
+   :::image type="content" source="./media/debugger-not-stop-breakpoint/vs-debugger-settings.png" alt-text="Check ASP.NET debugger Checkbox":::
