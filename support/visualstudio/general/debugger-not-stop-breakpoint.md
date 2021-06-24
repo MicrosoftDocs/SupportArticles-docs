@@ -25,8 +25,8 @@ This problem occurs because ASP.NET debugging isn't enabled on the application.
 To resolve this problem, follow these steps in Visual Studio .NET:
 
 1. In Solution Explorer, select the project name.
-2. From the **Project** menu, click **Properties**.
-3. Click on the **Web** tab.
-4. Under **Debuggers**, check **ASP.NET** Checkbox.
+2. Right-click your project from the Solution Explorer, and then click **Properties**.
+3. Click the **Web** tab.
+4. Under **Debuggers**, check the **ASP.NET** checkbox.
 
    :::image type="content" source="./media/debugger-not-stop-breakpoint/vs-debugger-settings.png" alt-text="Check ASP.NET debugger Checkbox":::
