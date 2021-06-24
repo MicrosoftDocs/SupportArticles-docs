@@ -56,6 +56,9 @@ To identify and remove a forwarding rule from an Exchange Online mailbox, follow
     ```powershell
     Set-Mailbox -Identity <UserID> -DeliverToMailboxAndForward $false -ForwardingSMTPAddress $null
     ```
+> [!NOTE]
+> Forwarding setup to internal SMTP addresses works and the senders receive the out of office notification.
+
 
 ## Resolution - Step 2: Identify and remove Exchange transport rules
 
