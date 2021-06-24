@@ -1,6 +1,6 @@
 ---
 title: Automating Disk Cleanup tool
-description: Introduces how to run the Disk Cleanup tool (Cleanmgr.exe) by using command-line switches.
+description: Introduces how to run the Disk Cleanup tool (cleanmgr.exe) by using command-line switches.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: windows-server-backup-and-storage
 ---
 # Automating Disk Cleanup tool in Windows
 
-This article describes how to run the Disk Cleanup tool (Cleanmgr.exe) by using command-line switches. Cleanmgr.exe is designed to clear unnecessary files from your computer's hard disk. You can configure Cleanmgr.exe with command-line switches to clean up the files you want. You can then schedule the task to run at a specific time by using the Scheduled Tasks tool.
+This article describes how to run the Disk Cleanup tool (*cleanmgr.exe*) by using command-line switches. *cleanmgr.exe* is designed to clear unnecessary files from your computer's hard disk. You can configure *cleanmgr.exe* with command-line switches to clean up the files you want. You can then schedule the task to run at a specific time by using the Scheduled Tasks tool.
 
 _Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 253597
 
-## More information
+## Command-line switches
 
-You can start the Disk Cleanup tool by running Cleanmgr.exe, or by selecting **Start** > **Programs** > **Accessories** > **System Tools** > **Disk Cleanup**. Disk Cleanup supports the following command-line switches:
+You can start the Disk Cleanup tool by running *cleanmgr.exe*, or by selecting **Start** > **Programs** > **Accessories** > **System Tools** > **Disk Cleanup**. Disk Cleanup supports the following command-line switches:
 
 - `/d <driveletter>`: - This switch selects the drive that you want Disk Cleanup to clean. The `/d` switch isn't used with `/sagerun:n`.
 - `/sageset:n` - This switch displays the Disk Cleanup Settings dialog box and creates a registry key to store the settings you select. The **n** value is stored in the registry and allows you to specify different tasks for Disk Cleanup to run. The **n** value can be any integer value from 0 to 65535. To get all the available options when you use the `/sageset` switch, you may need to specify the drive letter that contains the Windows installation.
@@ -50,9 +50,34 @@ If you select the drive that contains the Windows installation, all of these opt
 
 The **More Options** tab contains options for cleaning up Windows components or installed programs. You can use the **Windows Components** option to create free space by removing optional Windows components that you don't use. Selecting the **Clean Up** button for this option starts the Windows Components Wizard. You can use the **Installed Programs** option to free more disk space by removing programs that you don't use. Selecting this **Clean Up** button starts the **Change or Remove Programs** option in the Add/Remove Programs tool.
 
-### Additional information
+## Registry key information
+
+After you run *cleanmgr.exe* with the `/sageset:n` switch, the following registry keys are modified:
+
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Active Setup Temp Folders`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Compress old files`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Content Indexer Cleaner`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Downloaded Program Files`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Internet Cache Files`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Offline Files`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Old ChkDsk Files`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Recycle Bin`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Offline Files`
+
+Each of these registry keys may contain a `StateFlagsNNNN` registry value, where **NNNN** is the number **n** specified in the switch. For example, after you run the `cleanmgr /sageset:9` command, an entry appears under each key beginning with **Stateflags0009**. The registry value can be set as one of the following values.
+
+- If the option box is not selected, the value is **DWORD** type **00000000**.
+- If the option box is selected, the entry is **DWORD** type **00000002**.
+
+> [!Note]
+> Under the **VolumeCaches** registry key, every sub key may have the stateflags values except the **Offline Pages Files** key. There is not an option to delete these files.
+
+For more information, see [Creating a Disk Cleanup Handler](/windows/win32/lwef/disk-cleanup).
+
+## Additional information
 
 For a Microsoft Windows XP version of this article, see [How to Automate the Disk Cleanup Tool in Windows XP](https://support.microsoft.com/help/315246).
 
 > [!NOTE]
-> Disk Cleanup option on drive's general properties and cleanmgr.exe is not present in  Windows Server 2008 R2 by default. For more information on how to have **Disk Cleanup** button or cleanmgr.exe on Windows Server 2008 R2, see [Disk Cleanup option on drive’s general properties and cleanmgr.exe is not present in Windows Server 2008 R2 by default](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff630161(v=ws.10)).
+> Disk Cleanup option on drive's general properties and *cleanmgr.exe* is not present in  Windows Server 2008 R2 by default. For more information on how to have **Disk Cleanup** button or *cleanmgr.exe* on Windows Server 2008 R2, see [Disk Cleanup option on drive’s general properties and *cleanmgr.exe* is not present in Windows Server 2008 R2 by default](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff630161(v=ws.10)).
