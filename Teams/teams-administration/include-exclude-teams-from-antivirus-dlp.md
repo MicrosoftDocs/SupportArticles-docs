@@ -25,7 +25,7 @@ description: How to add Teams to antivirus or DLP to allow Teams to start correc
 
 ## Summary
 
-Third-party antivirus and data loss prevention (DLP) applications can interfere with the Microsoft Teams app, and it can prevent the application from starting correctly. ITPRO and Security customers can include or approve the Teams app when they use non-Microsoft antivirus or DLP in PC clients.  This action specifically helps enhance performance and mitigate the effect on security.
+Third-party antivirus and data loss prevention (DLP) applications can interfere with the Microsoft Teams app, and it can prevent the application from starting correctly. ITPRO and Security customers can include or approve the Teams app when they use non-Microsoft antivirus or DLP in PC clients. This action specifically helps enhance performance and mitigate the effect on security.
 
 ## More information
 
