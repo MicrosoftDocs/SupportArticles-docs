@@ -1,6 +1,6 @@
 ---
 title: Hybrid search fails to crawl or return results
-description: Describes issues that occur when you use SharePoint hybrid search. For example, crawling fails, or no result is returned. Provides resolutions
+description: Describes issues that occur when you use SharePoint hybrid search. For example, crawling fails, or no result is returned. Provides resolutions.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -49,14 +49,14 @@ To fix this issue, enable TLS 1.2 by following these instructions:
 > - The [Easy Fix Tool](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi) can add TLS 1.2 and TLS 1.1 Secure Protocol registry keys automatically. For more information, see [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392).
 > - For Windows Server 2012, if you still receive intermittent connectivity errors after you run the Easy Fix Tool, consider [disabling DHE cipher suites](/security-updates/securitybulletins/2015/ms15-055#workarounds). For more information, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).
 
-Also check the supported cipher suites and cipher suite sort order. For TLS 1.2, the following cipher suites are supported by Azure Front Door:
+Also, check the supported cipher suites and cipher suite sort order. For TLS 1.2, the following cipher suites are supported by Azure Front Door:
 
 - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 
-To add cipher suites, either deploy a Group Policy setting or use local Group Policy, as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
+To add cipher suites, either deploy a Group Policy setting or use the Local Group Policy Editor, as described in [Configuring TLS Cipher Suite Order by using Group Policy](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order-by-using-group-policy).
 
 > [!IMPORTANT]
 > Change the order of the cipher suites to make sure that these four suites are at the top of the list (the highest priority).
