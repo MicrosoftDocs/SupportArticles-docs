@@ -72,9 +72,9 @@ The following modules can cause performance and stability issues when they are l
 
 - Carbon Black -Need dll names
 
-- Trend Micro – Need dll names
+- perfiCrcPerfMonMgr.dll
 
-  Refer to the software vendor exclusion list setting at [Recommended scan exclusion list for Trend Micro Endpoint products](https://success.trendmicro.com/solution/1059770-recommended-scan-exclusion-list-for-trend-micro-endpoint-products).
+  This DLL file is loaded into the SQL Server process if you install Trend Micro OfficeScan client. Refer to the software vendor exclusion list setting at [Recommended scan exclusion list for Trend Micro Endpoint products](https://success.trendmicro.com/solution/1059770-recommended-scan-exclusion-list-for-trend-micro-endpoint-products).
 
 For more information about how to set exclusion policies for Sqlservr.exe in the application software that is discussed in this article, see the product manual or contact the software vendor.
 
