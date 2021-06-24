@@ -75,19 +75,23 @@ To disable MAPI for a specific user, run the following cmdlet:
 Set-CASMailbox <Alias, Primary SMTP, or UPN> -MAPIEnabled $False
 ```
 
-### Enable or disable Outlook Web App for an Exchange Online mailbox
+To use the Exchange Admin Center, see [Enable or disable MAPI for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi).
 
-To enable Outlook Web App for a specific user, run the following cmdlet:
+### Enable or disable Outlook on the web for an Exchange Online mailbox
+
+To enable Outlook on the web for a specific user, run the following cmdlet:
 
 ```powershell
 Set-CASMailbox <Alias, Primary SMTP, or UPN> -OWAEnabled $True
 ```
 
-To disable Outlook Web App for a specific user, run the following cmdlet:
+To disable Outlook on the web for a specific user, run the following cmdlet:
 
 ```powershell
 Set-CASMailbox <Alias, Primary SMTP, or UPN> -OWAEnabled $False
 ```
+
+To use the Exchange Admin Center, see [Enable or disable Outlook on the web for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app).
 
 ### Enable or disable Exchange ActiveSync for an Exchange Online mailbox
 
@@ -102,6 +106,8 @@ To disable Exchange ActiveSync  for a specific user, run the following cmdlet:
 ```powershell
 Set-CASMailbox <Alias, Primary SMTP, or UPN> -ActiveSyncEnabled $False
 ```
+
+To use the Exchange Admin Center, see [Enable or disable Exchange ActiveSync for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync).
 
 ### Enable or disable Exchange Web Services (EWS) for an Exchange Online mailbox
 
