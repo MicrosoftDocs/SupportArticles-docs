@@ -1,21 +1,21 @@
 ---
-title: Fails to run reports in Configuration Manager version 2103
-description: Resolves an issue in which reports don't run in Microsoft Endpoint Configuration Manager version 2103 if SQL Server 2019 is used.
+title: Fails to run reports in Configuration Manager
+description: Resolves an issue in which reports don't run in Microsoft Endpoint Configuration Manager if SQL Server 2019 is used.
 ms.date: 06/16/2021
 ms.prod-support-area-path: 
 ms.reviewer: maosesro
 author: simonxjx
 ms.author: v-six
 ---
-# rsProcessingAborted error when you run reports in Configuration Manager version 2103
+# rsProcessingAborted error when you run reports in Configuration Manager
 
-This article helps you fix an issue in which you can't run reports for collections if you use Microsoft SQL Server 2019 after you upgrade Microsoft Endpoint Configuration Manager to version 2103.
+This article helps you fix an issue in which you can't run reports for collections if you use Microsoft SQL Server 2019 in Microsoft Endpoint Configuration Manager.
 
-_Applies to:_ &nbsp; Microsoft Endpoint Configuration Manager (current branch – version 2103), SQL Server 2019
+_Applies to:_ &nbsp; Microsoft Endpoint Configuration Manager, SQL Server 2019
 
 ## Symptoms
 
-After you upgrade the Configuration Manager environment to version 2103 of Configuration Manager current branch, you receive the following error messages when you run reports for collections:
+When you run reports for collections in Microsoft Endpoint Configuration Manager, you receive the following error messages :
 
 - > An error has occurred during report processing. (rsProcessingAborted)
 - > The EXECUTE permission was denied on the object 'fnIsCas', database 'CM_LKD', schema 'dbo'
