@@ -18,7 +18,7 @@ ms.technology: windows-client-shell-experience
 _Applies to:_ &nbsp; Windows 10  
 
 > [!NOTE]
-> If you're not a support agent or IT professional, you'll find more helpful information in [How to set your time and time zone](/windows/how-to-set-your-time-and-time-zone-dfaa7122-479f-5b98-2a7b-fa0b6e01b261).
+> If you're not a support agent or IT professional, you'll find more helpful information in [How to set your time and time zone](https://support.microsoft.com/windows/how-to-set-your-time-and-time-zone-dfaa7122-479f-5b98-2a7b-fa0b6e01b261).
 
 Non-administrator users cannot change or interact with the **Set time zone automatically** setting. The setting is either not visible or is "greyed out" in the **Settings** app. This is by design as the **Set time zone automatically** setting is a system wide setting that applies to all user profiles on a machine.
 
