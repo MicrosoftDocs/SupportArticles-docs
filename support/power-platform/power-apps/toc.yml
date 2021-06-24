@@ -21,3 +21,7 @@
       href: ribbon-issues-button-not-working-correctly.md
     - name: Regenerate ribbon metadata
       href: regenerate-ribbon-metadata.md
+  - name: Solutions
+    items:
+    - name: Can't import solutions or publish changes
+      href: cannot-import-solutions-publish-changes.md
