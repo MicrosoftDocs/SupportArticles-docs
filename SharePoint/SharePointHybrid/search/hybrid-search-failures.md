@@ -1,6 +1,6 @@
 ---
 title: Hybrid search fails to crawl or return results
-description: Describes issues when you use SharePoint hybrid search. For example, crawling fails, or no result is returned. Provides resolutions.
+description: Describes issues when you use SharePoint hybrid search. For example, crawling fails, or no result is returned. Provides resolutions
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
