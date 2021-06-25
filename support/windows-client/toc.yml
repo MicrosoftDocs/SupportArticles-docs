@@ -372,6 +372,8 @@
       href: ./deployment/edit-boot-ini-file-windows-2000.md
     - name: Installation File Location not behave on the Explain tab
       href: ./deployment/installation-file-location-service-pack-not-behave.md
+    - name: Language features aren't displayed in Windows 10
+      href: ./deployment/language-features-not-displayed.md
     - name: Language packs no longer available
       href: ./deployment/language-packs-no-longer-available-after-upgrade.md
     - name: MiracastView package cause sysprep error after upgrading a computer
