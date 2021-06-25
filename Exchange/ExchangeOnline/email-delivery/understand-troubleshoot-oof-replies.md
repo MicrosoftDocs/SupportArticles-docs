@@ -212,6 +212,14 @@ As you investigate an OOF reply issue, you might find the following error entry 
 
 If you find this entry, you should reach out to [Microsoft Support](https://support.microsoft.com/contactus/) to learn why the unregistered domain block was enforced.
 
+### Message trace shows Drop event
+
+When looking at message trace for OOF replies, you see a Drop event with a description like:
+
+> 250 2.1.5 RESOLVER.OOF.IntToExt; handled internal OOF addressed to external recipient
+
+This is a normal entry to see. When Exchange Online generates OOF replies, both the Internal and External replies are generated and sent. When transport goes to deliver the message, it will drop the message that doesn't apply. So for an external recipient where the remote domain is set to External or ExternalLegacy, the Internal OOF reply is dropped, and the event is logged. For replies sent to Internal recipients, a similar ExtToInt event will occur.
+
 ## Additional OOF issues
 
 When you create, configure, or manage OOF replies, you might also experience the following issues.
