@@ -69,7 +69,7 @@ There are various reasons why expected results maybe be missing that are related
          > [!NOTE]
          > From the same location, admins can also select **Reindex Document Library** to make sure that all content in the document library is indexed during the next scheduled crawl.
 
-1. Verify that the version of the document that's missing from search results is a major version of the document. If the version is a minor version, it will not be displayed in the search results until it's checked in and published as a major version.
+1. Verify that the version of the document that's missing from search results is a major version of the document. If the version is a minor version, it won't be displayed in the search results until it's checked in and published as a major version.
 
     1. As an admin, locate the document that's missing from search results.
     
@@ -82,6 +82,8 @@ There are various reasons why expected results maybe be missing that are related
     1. This time, select the **Advanced** option, and then select **Publish a Major Version**. The admin can go back to **Version History** and see that the document is published as a major version, typically a later version than 1.0.
     
     1. Try to search for the document again. The document will be displayed (after it's crawled and indexed) because it's published as a major version.
+    
+    To have draft items crawled, see [Draft items are not crawled in SharePoint](https://support.microsoft.com/office/draft-items-are-not-crawled-in-sharepoint-9198c307-13d6-425c-a174-542a60e410e4).
 
 1. Verify the site's search visibility options at the following location: 
 
