@@ -25,7 +25,8 @@ _Original KB number:_ &nbsp; 253597
 You can start the Disk Cleanup tool by running *cleanmgr.exe*, or by selecting **Start** > **Programs** > **Accessories** > **System Tools** > **Disk Cleanup**. Disk Cleanup supports the following command-line switches:
 
 - `/d <driveletter>`: - This switch selects the drive that you want Disk Cleanup to clean. The `/d` switch isn't used with `/sagerun:n`.
-- `/sageset:n` - This switch displays the Disk Cleanup Settings dialog box and creates a registry key to store the settings you select. The **n** value is stored in the registry and allows you to specify different tasks for Disk Cleanup to run. The **n** value can be any integer value from 0 to 65535. To get all the available options when you use the `/sageset` switch, you may need to specify the drive letter that contains the Windows installation.
+- `/sageset:n` - This switch displays the Disk Cleanup Settings dialog box and creates a registry key to store the settings you select. The **n** value is stored in the registry and allows you to specify different tasks for Disk Cleanup to run. The **n** value can be any integer value from 0 to 65535. To get all the available options when you use the `/sageset` switch, you may need to specify the drive letter that contains the Windows installation.  
+  For more information, see [Registry key information](#registry-key-information).
 - `/sagerun:n` - This switch runs the specified tasks that are assigned to the **n** value by using the `/sageset` switch. All drives in the computer will be enumerated, and the selected profile will be run against each drive.
 
   For example, in Scheduled Tasks, you could run the following command after running the `cleanmgr /sageset:11` command:  
