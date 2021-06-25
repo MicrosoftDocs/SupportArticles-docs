@@ -838,7 +838,7 @@
     {
       "source_path": "support/windows-client/shell-experience/toggle-full-mode-and-windows-mode.md",
       "redirect_url": "/troubleshoot/windows-client/welcome-windows-client",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/deployment/windows-oobe-fails-start-new-computer.md",
