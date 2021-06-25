@@ -10,7 +10,9 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom:
+- CI 150322
+- CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
 - Skype for Business Online
@@ -58,8 +60,14 @@ During the sign in process, Lync 2013 caches your credentials and other informat
 
 ### Resolution for Lync 2010
 
-1. Update the Lync client to the latest version that's available on the Downloads page of the Office 365 portal.    
-2. Update the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177) to the latest version.    
+1. Update the Lync client to the latest version that's available on the Downloads page of the Office 365 portal.
+2. Make sure that **Microsoft Online Services Sign-in Assistant** is running on Windows Services by following these steps:  
+  (These steps are for Windows 10)
+
+    1. Right-click the **Start** button and select **Run**.
+    2. Type `services.msc` and select **OK**.
+    3. In the **Services** window, check whether the **Status** of **Microsoft Online Services Sign-in Assistant** is listed as **Running**.
+
 3. Clear your cached certificates, credentials and connections.
 
 #### Additional troubleshooting steps for Lync 2013 and Lync 2010

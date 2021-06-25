@@ -86,6 +86,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/exchange/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+      "recommendations": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
       "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-Support/issues",

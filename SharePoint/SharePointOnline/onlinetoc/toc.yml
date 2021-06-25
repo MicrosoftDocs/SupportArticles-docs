@@ -21,10 +21,14 @@
       href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Create a default Site collection Term Set if none is present
       href: ../administration/create-default-site-term-set.md
+    - name: Creation of team site from SharePoint Home doesn’t complete
+      href: ../administration/team-site-creation-stops.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
     - name: Error when accessing SharePoint or OneDrive
       href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Errors when connecting to SharePoint Online Management Shell
+      href: ../administration/errors-connecting-to-management-shell.md
     - name: Exclude or remove sites from a SharePoint Online retention policy
       href: ../administration/exclude-sites-from-retention-policy.md
     - name: Invalid URL error when clicking an online prompted link
@@ -153,6 +157,8 @@
       href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
       href: ../lists-and-libraries/modified-time-shows-incorrectly.md
+    - name: Mentions in SharePoint documents don’t send email to participant
+      href: ../lists-and-libraries/no-email-after-mention.md
     - name: Number of items in this list exceeds the list view threshold
       href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
     - name: Per-location view settings don't work at the folder level
@@ -297,6 +303,8 @@
       href: ../Sites/change-default-language-site-collection.md
     - name: Can't find specified web in the given URL
       href: ../Sites/cannot-find-specified-web-given-url.md
+    - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
+      href: ../Sites/cannot-permanently-delete-site.md
     - name: Classic popularity reports is discontinued
       href: ../Sites/classic-usage-popularity-reports-discontinued.md
     - name: Customizations of the top navigation bar is reverted
@@ -337,6 +345,10 @@
       href: ../Sync/synced-file-moved-to-recycle-bin.md
     - name: SharePoint Workspace doesn't always sync automatically
       href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+  - name: Video
+    items:
+    - name: Can’t view embedded Stream video in Teams app
+      href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
     - name: A list view Web Part for a tasks list doesn't filter values

@@ -55,7 +55,7 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |Migration Exchange Web Services (EWS) throttling policy|Verify that the EWS throttling policy isn't too restrictive for a mailbox data migration that uses third-party tools. (Tools are exclusive of Microsoft tools for Hybrid, IMAP, G Suite, or Public Folder migrations.)|Diag: EWS Throttling||
 |Mailbox or message size|Check the size of a mailbox or check and increase the size of messages.|Diag: Mailbox or Message Size||
 |Deleted mailbox diagnostics|Check the state of recently deleted mailboxes.|Diag: Deleted Mailbox|[Delete or restore user mailboxes in Exchange Online](/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes)|
-|Exchange Remote PowerShell throttling policy|Update the Exchange Remote PowerShell throttling policy for the tenant.|Diag: PS Throttling||
+|Exchange Remote PowerShell throttling policy|Update the Exchange Remote PowerShell throttling policy for the tenant.|Diag: PowerShell Throttling||
 |Email delivery troubleshooter|Check whether email messages are successfully delivered.|Diag: Troubleshoot Email Delivery||
 |Outlook user connectivity diagnostics|Diagnose Outlook connectivity issues for users by running several checks on possible service-side settings (root causes) so that a tenant admin can quickly fix the issues without involving the users.|Diag: Outlook User Connectivity|[About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)|
 |Non-delivery report (NDR) diagnostics|Provide additional information about NDRs that are received through email messages.|Diag: Email NDR||

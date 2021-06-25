@@ -7,13 +7,15 @@
       href: ../infopath/soapserverexception-when-customizing-list-form-using-InfoPath-designer.md
   - name: Search
     items:
+    - name: Hybrid search fails to crawl or return results
+      href: ../search/hybrid-search-failures.md
     - name: Online content isn't displayed in on-premises search
       href: ../search/online-content-not-displayed-in-on-premises-search.md
     - name: On-premises content isn't displayed in online search
       href: ../search/on-premises-content-not-displayed-in-online-search.md
   - name: Workflows
     items:
-    - name: 'Can not set "Hyperlink with formatting and constraints for publishing"'
+    - name: Can't set "Hyperlink with formatting and constraints for publishing"
       href: ../Workflows/fails-setting-workflow-column-value.md
     - name: Completed tasks aren't deleted for workflows
       href: ../Workflows/fails-deleting-completed-workflow-tasks.md

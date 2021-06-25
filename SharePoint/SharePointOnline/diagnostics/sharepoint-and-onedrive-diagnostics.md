@@ -27,8 +27,6 @@ description: SharePoint Online and OneDrive Diagnostics
 
 It’s important that administrators can diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team has released new features in the Microsoft 365 admin center.
 
-Currently we provide diagnostics through text analytics. This feature will remain. However, we want to make it easier to find the diagnostics within the current experience. So we have created a new set of queries to help administrators.
-
 > [!NOTE]
 > This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
@@ -40,7 +38,7 @@ Diagnostic capabilities for a few text queries were first released within the Mi
 
 ### What scenarios are currently covered?
 
-There are currently nine diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed here together with a brief description of its function and also a shortcut command:
+There are currently diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed here together with a brief description of its function and also a shortcut command:
 
 | Diagnostic | Description | Shortcut cmd | Support Article |
 | --- | --- | -- | -- |
