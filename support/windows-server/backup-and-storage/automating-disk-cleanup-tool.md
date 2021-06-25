@@ -59,7 +59,7 @@ After you run *cleanmgr.exe* with the `/sageset:n` switch, some of the registry 
 Each of the modified registry sub keys may contain a **REG_DWORD** type registry value **StateFlags*NNNN***, where *NNNN* is the number *n* specified in the switch. For example, after you run the `cleanmgr /sageset:9` command, a registry value **Stateflags0009** is added. The registry value can be set as one of the following values.
 
 - If the option box is not selected, the value is **00000000**.
-- If the option box is selected, the entry is **00000002**.
+- If the option box is selected, the value is **00000002**.
 
 > [!Note]
 > Under the **VolumeCaches** registry key, the **Offline Pages Files** registry sub key doesn't have the stateflags values. There is not an option to delete these files.
