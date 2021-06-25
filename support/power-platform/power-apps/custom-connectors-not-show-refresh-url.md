@@ -25,7 +25,7 @@ When you try to verify the configuration of custom connectors that use **Generic
 
 ## Cause
 
-These issues are by design. After a custom connector is created, the configured **Refresh URL** value isn't displayed on the **Security** page or in the Swagger Editor.
+These issues are by design. After a custom connector is created, the configured **Refresh URL** value isn't displayed on either the **Security** page or in the Swagger Editor even though the other fields are populated as expected.
 
 ## Workaround
 
