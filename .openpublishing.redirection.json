@@ -836,6 +836,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-client/shell-experience/toggle-full-mode-and-windows-mode",
+      "redirect_url": "troubleshoot/windows-client/welcome-windows-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-oobe-fails-start-new-computer.md",
+      "redirect_url": "https://support.microsoft.com/topic/c4ed5186-9266-de16-24a5-9bd1818b9df5",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/deployment/compute-md5sha-1-cryptographic-hash-value.md",
       "redirect_url": "https://support.microsoft.com/topic/d92a713f-d793-7bd8-b0a4-4db811e29559",
       "redirect_document_id": false
