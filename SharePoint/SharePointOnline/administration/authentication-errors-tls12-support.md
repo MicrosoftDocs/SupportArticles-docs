@@ -132,18 +132,20 @@ Authentication issues when you use Azure App Service.
 1. Set the minimum TLS version for your App Service instance to TLS 1.2. For more information, see [Enforce TLS versions](/azure/app-service/configure-ssl-bindings#enforce-tls-versions).
 2. Make sure that you're using the latest version of .NET Framework.
 
-
 ## Hybrid search fails to crawl or return results
 
 ### Symptom
    
-Hybrid search fails to crawl, return results or receive an error, such as "An existing connection was forcibly closed".
+You experience one or more of the following issues when you use hybrid search in SharePoint in Microsoft 365:
+
+- Crawling fails.
+- No result is returned.
+- You receive an error message, such as "An existing connection was forcibly closed".
 
 ### Resolution
    
-[Hybrid search fails to crawl or return results](https://docs.microsoft.com/en-us/sharepoint/troubleshoot/search/hybrid-search-failures)
+To fix the issues, see [Hybrid search fails to crawl or return results](../../SharePointHybrid/search/hybrid-search-failures.md).
    
-
 ## References
 
 - [TLS cipher suites supported by Office 365](/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365&preserve-view=true)
