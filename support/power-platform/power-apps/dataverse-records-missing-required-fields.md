@@ -23,11 +23,11 @@ When you open the affected case, you must enter a value for the **Case Title** f
 
 ## Cause
 
-This issue occurs if the records are created from a third-party tool such as Postman. Such tools don't validate the required fields. Instead, they send the data as is.
+This issue occurs if the records are created from a third-party tool such as Postman. Such tools don't check for the required fields. Instead, they send the data as is.
 
 ## Workaround
 
 To work around this issue, make sure that you check the following items:
 
 - Check that the required fields are included in the flows.
-- Verify the existence of required fields in the entities that are created through HTTP requests.
+- Check for the existence of required fields in the entities that are created through HTTP requests.
