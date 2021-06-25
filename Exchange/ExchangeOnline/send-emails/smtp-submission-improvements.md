@@ -72,10 +72,6 @@ For example, submission behavior could change if the Reply or Mail From address 
 
 This can often be fixed by updating the settings on the device or printer by adding angle brackets ("<" and ">") around the Reply or Mail From address.
 
-Additionally, messages might arrive at the recipient with a different display name than they did before the change. Messages that are sent by using SMTP Authenticated Submission protocol will not behave in the same way as other submission protocols in Office 365, such as the protocol that is used when emails are sent by using Outlook on the web. As a result, the sender's Office 365 display name will now appear as sent from the client instead of directory display name.
-
-To change the sender's display name that message recipients will see, you can change the Display Name setting on the sender's mailbox to the desired display name.
-
 ## Reference
 
 For more information about the change, see the following Microsoft Exchange Team Blog article:
