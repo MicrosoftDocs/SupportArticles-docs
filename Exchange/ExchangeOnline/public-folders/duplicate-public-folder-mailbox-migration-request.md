@@ -35,7 +35,7 @@ This issue occurs if the public folder mailbox migration request is either dupli
 
 ## Resolution
 
-To resolve this issue, identify and remove the duplicate or orphaned public folder mailbox migration requests by running the [script](https://techcommunity.microsoft.com/t5/exchange-team-blog/giving-you-more-control-over-public-folder-migration-requests/ba-p/608924) or by following these steps:
+To resolve this issue, identify and remove the duplicate or orphaned public folder mailbox migration requests by running the [script](https://techcommunity.microsoft.com/t5/exchange-team-blog/giving-you-more-control-over-public-folder-migration-requests/ba-p/608924). If the script doesn't work, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Identify duplicate public folder mailbox migration requests by running the following cmdlet:
@@ -58,7 +58,7 @@ To resolve this issue, identify and remove the duplicate or orphaned public fold
 
     **Note:** Replace \<RequestGuid> with the actual result that you get from the cmdlet in the step 2. For more information about the cmdlet, see [Remove-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/remove-publicfoldermailboxmigrationrequest).
 
-## Why do we use the RequestGuid parameter to remove duplicate or orphaned jobs?
+## More information
 
 Both healthy and duplicate jobs have the same name that consists of the target mailbox GUID. The formatting of the name is *PublicFolderMailboxMigration\<TargetMailboxGuid>*, such as *PublicFolderMailboxMigration058553ac-200f-4fba-91c4-300e4fa0e8e5*. Both healthy and duplicate jobs points to the same target mailbox, and their identities are same.
 
