@@ -1,5 +1,5 @@
 ---
-title: Find the current Schema Version
+title: Find the current Active Directory Schema Version
 description: Describes how to find the current Schema Version.
 ms.date: 10/09/2020
 author: Deland-Han
@@ -20,46 +20,50 @@ This article describes how to find the current Schema Version.
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 558112
 
-This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
-
-## Summary
-
-The following articles will help you to find the current Schema Version.
-
-## Tips
+## How to find the current Schema Version
 
 To find the current Active Directory Schema Version, you can use one of the following methods:  
 
->[!Note]
->The internal root domain that we use in this demo is: "**domain.local**".
+> [!Note]
+> The internal root domain that we use in this demo is: **domain.local**.
 
-1. Using "**ADSIEdit.msc**" or/and "**LDP.exe**" tools:
+### Method 1
 
-    Navigate to:
+1. Use *ADSIEdit.msc* or *LDP.exe* to navigate to **CN=Schema,CN=Configuration,DC=domain,DC=local**.
 
-    "**CN=Schema,CN=Configuration,DC=domain,DC=local**"
+2. Review the **objectVersion** attribute.
 
-    and review the current "**objectVersion**" attribute.
+### Method 2
 
-2. Using "**DSQuery**" command line:
+Use the `DSQuery` command line. For example, for contoso.local domain, run the following command:
 
-    "**dsquery * cn=schema,cn=configuration,dc=domainname,dc=local -scope base -attr objectVersion**"
+```console
+dsquery * "cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr objectVersion
+```
 
-    The following information provides a mapping between the "**objectVersion**" attribute value, to
+### Method 3
 
-    the Active Directory Schema commutability:
+Use the `Get-ItemProperty` PowerShell cmdlet. For example, for contoso.local domain, run the following command:
 
-    13 -> Windows 2000 Server  
-    30 -> Windows Server 2003 RTM, Windows 2003 With Service Pack 1, Windows 2003 With Service Pack 2  
-    31 -> Windows Server 2003 R2  
-    44 -> Windows Server 2008 RTM
+```powershell
+Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=corp,DC=contoso,DC=local' -Name objectVersion
+```
+
+### Some schema version map
+
+The following information provides a mapping between the "**objectVersion**" attribute value to the Active Directory Schema commutability:
+
+13 -> Windows 2000 Server  
+30 -> Windows Server 2003 RTM, Windows 2003 With Service Pack 1, Windows 2003 With Service Pack 2  
+31 -> Windows Server 2003 R2  
+44 -> Windows Server 2008 RTM
 
 To find the current Exchange Schema Version, you can use one of the following methods:  
 
 >[!Note]
 >The internal root domain that we use in this demo is: "**domain.local**".
 
-1. Using "**ADSIEdit.msc**" or/and "**LDP.exe**" tools:
+1. Using *ADSIEdit.msc* or/and *LDP.exe* tools:
 
     Navigate to:
 
