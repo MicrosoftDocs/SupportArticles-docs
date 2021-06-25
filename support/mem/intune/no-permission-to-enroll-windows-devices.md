@@ -1,7 +1,7 @@
 ---
 title: No permissions to enroll a Windows device
 description: Describes an issue in which you can't enroll a Windows device in Microsoft Intune if you don't log on to Windows as a local administrator.
-ms.date: 07/24/2020
+ms.date: 06/25/2021
 ms.prod-support-area-path: Windows enrollment
 ---
 # You can't enroll a Windows device in Intune with a non-administrator account
@@ -23,13 +23,13 @@ When you try to [enroll your Windows devices in Intune by using the Intune Compa
 
 This issue occurs if the account that you use to log on to Windows isn't a member of the local Administrators group.
 
-This behavior is expected. Local administrative privileges are required for already configured Windows 10 device enrollment in Intune.
+This behavior is expected. Local administrative privileges are required when enrolling an already configured Windows 10 device in Intune.
 
 ## Resolution
 
 You can use either of the following alternative enrollment methods to enroll your Windows devices in Intune:
 
 - [Enroll Windows devices in Intune by using the Windows Autopilot](/mem/intune/enrollment/enrollment-autopilot)
-- [To join a brand-new Windows 10 device](azure/active-directory/user-help/user-help-join-device-on-network#to-join-a-brand-new-windows-10-device)
+- [Join a brand-new Windows 10 device](/azure/active-directory/user-help/user-help-join-device-on-network#to-join-a-brand-new-windows-10-device)
 
 These enrollment methods use the local system account. Therefore, you can use them to enroll your devices without having to be a local administrator.
