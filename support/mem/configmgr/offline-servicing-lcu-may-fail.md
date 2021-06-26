@@ -15,7 +15,7 @@ In this scenario, offline servicing fails and generates an error.
 
 For example:
 
-- You import the ìWindows 10 20H2 (updated Feb 2021)î .wim file.
+- You import the "Windows 10 20H2 (updated Feb 2021)" .wim file.
 - You do offline servicing on this .wim file by using "2021-03 Cumulative Update for Windows 10 Version 20H2 for x64-based Systems" (KB 5000802).
 - The following error entry is logged in the OfflineServicingMgr log:
 
@@ -43,7 +43,7 @@ Used together with the following LCUs:
 - 2021-03 Cumulative Update for Windows 10
 
   > [!NOTE]
-  > This problem does not occur if you do offline servicing by using an earlier version LCU (such as "2021-02 Cumulative Update for Windows 10î).
+  > This problem does not occur if you do offline servicing by using an earlier version LCU (such as "2021-02 Cumulative Update for Windows 10‚Äù).
 
 ## Resolution
 
