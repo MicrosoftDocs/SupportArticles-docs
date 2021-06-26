@@ -47,4 +47,4 @@ This issue occurs because of the [Scalar UDF Inlining](/sql/relational-databases
 
 ## Resolution
 
-To fix this issue, install [KB5003249 - cumulative update 11](https://support.microsoft.com/help/5003249) or a later cumulative update for SQL Server 2019.
+To fix this issue, install [KB5000642 - cumulative update 9](https://support.microsoft.com/help/5000642) or a later cumulative update for SQL Server 2019.
