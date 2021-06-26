@@ -17,6 +17,9 @@ When you deploy software updates in Configuration Manager, you typically add the
 
 For more information about software updates in Configuration Manager, see [Software updates introduction](software-updates-introduction.md).
 
+> [!NOTE]
+> The log snippets provided in this article apply to Configuration Manager 2012 and 2012 R2. Log entries for other Configuration Manager versions may be different.
+
 ## Create a software update group
 
 When you create a software update group in the Configuration Manager console, an instance of the `SMS_AuthorizationList` class is created. This instance contains information about the software update group, and it has relationships with the software updates in the software update group.
