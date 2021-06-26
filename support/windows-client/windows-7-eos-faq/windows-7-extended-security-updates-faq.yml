@@ -161,8 +161,8 @@ sections:
       - question: |
          Will the Windows 7 ESU include updates for .NET Framework? If so, which version?
         answer: |
-         Yes. Windows 7 ESU will include support for the .NET Framework 4.5.2-4.8 releases (as of January 2020) and .NET Framework 3.5 Service Pack 1 (SP1).  
-
+         Yes. Windows 7 ESU will include support for the .NET Framework 4.5.2-4.8 releases (as of January 2020) and .NET Framework 3.5 Service Pack 1 (SP1). [.NET Framework 4.5.2, 4.6, and 4.6.1 reach end of support on April 26 2022](https://docs.microsoft.com/lifecycle/faq/dotnet-framework#what-is-the-microsoft-lifecycle-policy-for-the--net-framework-), after this date Windows 7 ESU will include .NET Framework 4.6.2 - 4.8.
+         
       - question: |
          Do Windows 7 Embedded products qualify?
         answer: |
