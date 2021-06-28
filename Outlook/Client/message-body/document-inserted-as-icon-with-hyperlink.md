@@ -45,6 +45,6 @@ Microsoft is researching this problem and will post more information in this art
 
 ## More information
 
-Newer versions of Exchange Server include a new approach to attachments to simplify document sharing. You can use either the Microsoft Outlook app or Outlook on the web to attach a link to a SharePoint or OneDrive for Business document instead of a traditional attachment. This provides the benefits of coauthoring and version control.
+Exchange Server 2016 includes a new approach to attachments to simplify document sharing. You can use either the Microsoft Outlook app or Outlook on the web to attach a link to a SharePoint or OneDrive for Business document instead of a traditional attachment. This provides the benefits of coauthoring and version control.
 
 Although the user interface has been updated since Outlook 2016, attaching documents as links to SharePoint 2016 and 2019, SharePoint Online, or OneDrive for Business isn't supported with Exchange Server 2013 or earlier versions.
