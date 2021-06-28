@@ -664,7 +664,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 
 **The command is in the Application Ribbon (applies to "All entities")**
 
-If the command is not entity-specific but is, instead, applicable to "All Entities" that are declared in the Application Ribbon, then the steps will be slightly different, as follows:
+If the command is not entity-specific but, instead, applicable to "All Entities" that are declared in the Application Ribbon, then the steps will be slightly different, as follows:
 
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
