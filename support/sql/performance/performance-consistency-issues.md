@@ -70,7 +70,7 @@ The following modules can cause performance and stability issues when they are l
 
   These DLL files are loaded into the SQL Server or SQL Server Agent address space if you enable the “Additional User Mode Data” prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might also encounter failures while attempting to launch SQL Server Management Studio.
 
-- Carbon Black -Need dll names
+- Carbon Black relative dll
 
 - perfiCrcPerfMonMgr.dll
 
