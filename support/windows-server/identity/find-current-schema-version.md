@@ -50,7 +50,7 @@ Use the `Get-ItemProperty` PowerShell cmdlet. Run the following command:
 Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name objectVersion
 ```
 
-### Some **objectVersion** attribute map
+### Some "objectVersion" attribute map
 
 The following information provides a mapping between the **objectVersion** attribute value to the Active Directory Schema commutability:
 
@@ -81,7 +81,7 @@ Ues **DSQuery** command line:
 dsquery * "CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr rangeUpper
 ```
 
-### Some **rangeUpper** attribute map
+### Some "rangeUpper" attribute map
 
 The following information provides a mapping between the **rangeUpper** attribute value, to the Exchange Schema commutability:
 
