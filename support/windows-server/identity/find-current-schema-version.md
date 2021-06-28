@@ -47,7 +47,7 @@ dsquery * "cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr obj
 Use the `Get-ItemProperty` PowerShell cmdlet. Run the following command:
 
 ```powershell
-Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=corp,DC=contoso,DC=local' -Name objectVersion
+Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name objectVersion
 ```
 
 ### Some **objectVersion** attribute map
