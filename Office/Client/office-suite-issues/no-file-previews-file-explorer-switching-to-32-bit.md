@@ -70,11 +70,11 @@ When you try to preview or save a document, Word returns the following error mes
 
 1. Navigate to the following folder:
 
-   C:\Users\\<username\>\AppData\Local\Microsoft\Windows
+   C:\Users\\<username\>\AppData\Local\Microsoft\Windows\INetCache
 
    Note: In this path, **\<username>** represents your user profile name.
 
-1. Create a folder, and name it *INetCacheContent.Word*.
+1. Create a folder, and name it *Content.Word*.
 
    Note: It might be necessary to turn on **Hidden Items** on the View ribbon of Windows Explorer.
 
