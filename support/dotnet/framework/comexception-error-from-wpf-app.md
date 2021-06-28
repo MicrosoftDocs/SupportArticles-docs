@@ -64,7 +64,7 @@ To reinstall the Microsoft .NET Framework 4.7, use one of the following methods.
 
 #### Method 1: Manually download and install the .NET Framework 4.7
 
-1. Download the [web installer for the .NET Framework 4.7](https://www.microsoft.com/download/details.aspx?id=55170).
+1. Download the [web installer for the .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825299).
 2. Install the .NET Framework 4.7.
 
 #### Method 2: Use Windows Update to install the .NET Framework 4.7
