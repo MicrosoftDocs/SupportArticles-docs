@@ -287,7 +287,7 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/new-button.png" alt-text="New button.":::
 
-1. Select the **Command Properties** tab to display the details of the command for this button. This will display the**Actions** and JavaScriptFunction declaration, and any enable or display the rules together with the result (**True**, **False**, **Skipped**) of each rule evaluation.
+1. Select the **Command Properties** tab to display the details of the command for this button. This will display the **Actions** and JavaScriptFunction declaration, and any enable or display the rules together with the result (**True**, **False**, **Skipped**) of each rule evaluation.
 
     Expand **JavaScriptFunction**, by selecting the "chevron" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/chevron-icon.png"::: icon to view the details of the function declaration. The Library property must be a JavaScript web resource and be prefixed with `$webresource:`. The following example shows that the Library property is */_static/_common/scripts/RibbonActions.js*. This is not a path to a valid JavaScript web resource. You should next review the solution layers of the command to try to identify the correct value to fix the issue.
 
