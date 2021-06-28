@@ -15,7 +15,7 @@ ms.reviewer: aruiz, vijayde
 appliesto:
 - Outlook 2019
 - Outlook 2016
-- Outlook for Office 365
+- Outlook for Microsoft 365
 search.appverid: MET150
 ---
 # Outlook inserts document as icon with hyperlink in body of message
@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp; 3175690
 
 ## Symptoms
 
-When you use Microsoft Outlook 2016 or newer to connect to a Microsoft Exchange 2013 or earlier mailbox and you insert a OneDrive for Business or SharePoint file into a new email message, the attachment may be added to the body of the message as an icon with a hyperlink.
+You use Outlook 2016, Outlook 2019, or Outlook for Microsoft 365 to connect to a mailbox in Exchange Server 2013 or earlier versions. When you insert a OneDrive for Business or SharePoint file into a new email message, the attachment may be added to the body of the message as an icon with a hyperlink.
 
 ## Cause
 
-Outlook 2016 and newer include support for new Exchange Server document sharing functionality. This functionality is not supported with Exchange Server 2013 or earlier mailboxes.
+Outlook 2016, Outlook 2019, and Outlook for Microsoft 365 include support for new Exchange Server document sharing functionality. This functionality isn't supported with Exchange Server 2013 or earlier versions.
 
 ## Workaround
 
@@ -45,6 +45,6 @@ Microsoft is researching this problem and will post more information in this art
 
 ## More information
 
-Newer versions of Exchange Server include a new approach to attachments to simplify document sharing. You can use either Outlook 2016 or newer and Outlook on the web to attach a link to a SharePoint or OneDrive for Business document instead of a traditional attachment. This provides the benefits of coauthoring and version control.
+Newer versions of Exchange Server include a new approach to attachments to simplify document sharing. You can use either the Microsoft Outlook app or Outlook on the web to attach a link to a SharePoint or OneDrive for Business document instead of a traditional attachment. This provides the benefits of coauthoring and version control.
 
-Although the user interface has been updated since Outlook 2016, attaching documents as links to SharePoint 2016 and 2019, SharePoint Online (SPO), or OneDrive for Business is not supported with Exchange Serve 2013 or earlier mailboxes.
+Although the user interface has been updated since Outlook 2016, attaching documents as links to SharePoint 2016 and 2019, SharePoint Online, or OneDrive for Business isn't supported with Exchange Server 2013 or earlier versions.
