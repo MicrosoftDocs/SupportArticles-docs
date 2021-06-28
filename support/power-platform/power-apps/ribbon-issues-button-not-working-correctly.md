@@ -357,7 +357,7 @@ Please select the option that reflects your scenario:
 
         :::image type="content" source="media/ribbon-issues-button-not-working-correctly/commanddefinition-example-6.png" alt-text="Sixth command definition example. ":::
 
-    1. Save the *Customizations.xml* file.
+    1. Save the *customizations.xml* file.
     1. Restore the modified *customizations.xml* file to the solution .zip file.
     1. Import the solution file.
     1. Select **Publish All Customizations**.
