@@ -305,8 +305,8 @@
       href: ../Sites/cannot-find-specified-web-given-url.md
     - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
       href: ../Sites/cannot-permanently-delete-site.md
-    - name: Classic popularity reports is discontinued
-      href: ../Sites/classic-usage-popularity-reports-discontinued.md
+    - name: Classic site collection search usage reports
+      href: ../Sites/classic-site-collection-search-usage-reports.md
     - name: Customizations of the top navigation bar is reverted
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error when trying to change site logo on O365 group SharePoint site

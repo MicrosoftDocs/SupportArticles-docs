@@ -40,7 +40,7 @@ If you're looking for information about how to recover other recent Office files
 
 If you can’t open the document, or the content in the document is damaged, see [How to troubleshoot damaged documents in Word](./damaged-documents-in-word.md).
 
-## Find a lost document
+**To find a lost document:**
 
 ### <a id="searchdocs">Search for Word documents</a>
 
@@ -87,7 +87,7 @@ For documents that you saved or synced to SharePoint, see [Restore items in the 
 
 For documents that you saved or synced to OneDrive, see [Restore deleted files or folders in OneDrive](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f).
 
-## Find missing content or a newer version
+**To find missing content or a newer version:**
 
 Word takes different actions to protect your changes in Word documents:
 
@@ -141,7 +141,7 @@ Temporary file names have a .tmp extension. To find these files, follow these st
 1. In File Explorer, change the file type (next to the file name field, near the bottom) to *All files*.
 1. Open the .tmp file.
 
-## References
+**References**
 
 - [What is AutoSave?](https://support.microsoft.com/topic/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)
 - [How Word creates and recovers the AutoRecover files](https://support.microsoft.com/topic/how-word-creates-and-recovers-the-autorecover-files-a33ec235-9d68-cf62-e66a-6a740cf51821)
