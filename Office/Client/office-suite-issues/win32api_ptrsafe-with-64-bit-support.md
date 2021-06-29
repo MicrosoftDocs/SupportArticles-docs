@@ -1,7 +1,7 @@
 ---
 title: Win32API_PtrSafe with 64-bit Support
 description: Link-to Win32API help download for one file containing both 32-bit and 64-bit compatible Declare statements, Type declarations and Global constant declarations for both 32-bit and 64-bit versions of Microsoft Office
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: Rtaylor
 appliesto:
 - Office 2010
@@ -44,4 +44,4 @@ The instructions of installing this download are included on the web page at the
 
 The download "Office2010Win32API_PtrSafe.exe" installs "Win32API_PtrSafe.txt", "Using Win32API_PtrSave.xps" and "UsingWin32API_PtrSafe.docx."  The latter two files contain important information about using the contents of Win32API_PtrSafe.txt when writing VBA code.
 
-For additional information about how to download Microsoft Support files, see [Receive Remote Assistance Support from Microsoft](https://support.microsoft.com/help/).
+For additional information about how to download Microsoft Support files, see [Receive Remote Assistance Support from Microsoft](https://support.microsoft.com/en-us/help).

@@ -1,14 +1,14 @@
 ---
 title: Method to calculate interpolation step value in Excel
 description: Introduces a method to calculate interpolation step value in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: sloanc, briance
 search.appverid: 
 - MET150

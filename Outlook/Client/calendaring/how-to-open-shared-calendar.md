@@ -2,8 +2,8 @@
 title: How to open shared calendar from sharing
 description: Helps you solve issues of opening shared calendars from Outlook sharing invitations.
 ms.date: 08/19/2020
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

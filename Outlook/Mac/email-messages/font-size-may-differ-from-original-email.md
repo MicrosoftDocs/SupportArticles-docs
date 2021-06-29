@@ -1,8 +1,8 @@
 ---
 title: Font size differs from the original email
 description: Email messages sent from Outlook for Mac to other operating systems may have a different font size than the original font size.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

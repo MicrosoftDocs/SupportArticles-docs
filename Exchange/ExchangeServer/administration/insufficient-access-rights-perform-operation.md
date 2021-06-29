@@ -35,8 +35,8 @@ This issue occurs if SID filtering quarantining is enabled between domains in th
 
 ## Resolution
 
-To fix this issue, don't enable SID filter quarantining between domains in the same forest. For information about how to disable SID filter quarantining, see [Disable SID filter quarantining](https://technet.microsoft.com/library/cc772816%28v=ws.10%29.aspx).
+To fix this issue, don't enable SID filter quarantining between domains in the same forest. For information about how to disable SID filter quarantining, see [Disable SID filter quarantining](/previous-versions/windows/it-pro/windows-server-2003/cc772816(v=ws.10)).
 
 ## More information
 
-For more information about SID filter quarantining, see [Configuring SID Filtering Settings](https://technet.microsoft.com/library/cc772633%28v=ws.10%29.aspx).
+For more information about SID filter quarantining, see [Configuring SID Filtering Settings](/previous-versions/windows/it-pro/windows-server-2003/cc772633(v=ws.10)).

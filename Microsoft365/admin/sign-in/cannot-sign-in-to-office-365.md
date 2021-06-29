@@ -1,13 +1,13 @@
 ---
 title: We don't recognize this user ID or password
 description: Describes an issue in which a user gets a We don't recognize this user ID or password error message when trying to sign in to the Office 365 portal. Provides a resolution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.reviewer: willfid, v-chblod
 ms.custom: CSSTroubleshoot
 search.appverid: 

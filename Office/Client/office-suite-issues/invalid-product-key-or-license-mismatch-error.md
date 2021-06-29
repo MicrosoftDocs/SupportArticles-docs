@@ -1,8 +1,8 @@
 ---
 title: Invalid product key or license mismatch error when you activate Office 2013
 description: Describes an Office 2013 activation issue in which you receive an Invalid product key or license mismatch error message.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

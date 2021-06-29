@@ -1,8 +1,8 @@
 ---
 title: The encryption type requested is not supported by the KDC
 description: Describes how to resolve errors that occur after changing SharePoint configuration requirements to support Kerberos AES encryption.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -78,6 +78,8 @@ To resolve this issue, follow these steps:
    - This account supports Kerberos AES 256 bit encryption
 
 6. Perform an `iisreset` on the servers and restart any SharePoint related services that are running in the context of the modified service accounts.
+
+If the issue isn't fixed, try the resolution in [SCCM: "The encryption type requested is not supported by the KDC" Error When Running Reports](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/sccm-quot-the-encryption-type-requested-is-not-supported-by-the/ba-p/570914).
 
 ## More information
 

@@ -1,8 +1,8 @@
 ---
 title: Exchange Online Archive mailbox not shown
 description: This article provides six steps trying to help you fix that the archive mailbox isn't appeared in the Outlook client in Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

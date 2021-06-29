@@ -1,8 +1,8 @@
 ---
 title: Upgrade SharePoint through Workflow Manager
 description: Describes how to upgrade SharePoint 2013 to SharePoint 2016 without creating a new Workflow Manager, and provides resolutions to issues after upgrade.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

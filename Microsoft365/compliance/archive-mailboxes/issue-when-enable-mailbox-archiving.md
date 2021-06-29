@@ -1,8 +1,8 @@
 ---
 title: Issue when you enable mailbox archiving in an Exchange hybrid deployment.
 description: Describes an issue that triggers an error when you use the Exchange admin center in Exchange Online to enable archiving for a mailbox that was moved from your on-premises environment to Exchange Online.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -48,14 +48,14 @@ To resolve this issue, enable archiving for the mailbox from the on-premises Exc
 1. Open the Exchange Admin Center.
 2. Click **recipient**, and then click **mailboxes**.
 3. Click the mailbox that you want to change, click **Enable** under **In-Place Archive**, and then click **yes**.
-4. Wait for two cycles of directory synchronization to run (about six hours). Or, force directory synchronization. For more info about how to do this, see [Synchronize your directories](https://technet.microsoft.com/library/jj151771.aspx).
+4. Wait for two cycles of directory synchronization to run (about six hours). Or, force directory synchronization. For more info about how to do this, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 #### In Exchange 2010
 
 1. Open the Exchange Management Console.
 2. In the console tree, expand **Recipient Configuration**, and then click **Mail Contact**.
 3. Right-click the contact that you want to change, and then click **Enable Hosted Archive**.
-4. Wait for two cycles of directory synchronization to run (about six hours). Or, force directory synchronization. For more info about how to do this, see [Synchronize your directories](https://technet.microsoft.com/library/jj151771.aspx).
+4. Wait for two cycles of directory synchronization to run (about six hours). Or, force directory synchronization. For more info about how to do this, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 ### Method 2: Use the Exchange Management Shell
 
@@ -65,7 +65,7 @@ To resolve this issue, enable archiving for the mailbox from the on-premises Exc
    Enable-RemoteMailbox <UserName> -Archive
    ```
 
-2. Wait for two cycles of directory synchronization to run (about six hours). Or, force directory synchronization. For more info about how to do this, see [Synchronize your directories](https://technet.microsoft.com/library/jj151771.aspx).
+2. Wait for two cycles of directory synchronization to run (about six hours). Or, force directory synchronization. For more info about how to do this, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 ## More information
 

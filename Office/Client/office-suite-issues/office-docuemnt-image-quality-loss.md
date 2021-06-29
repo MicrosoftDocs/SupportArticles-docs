@@ -1,7 +1,7 @@
 ---
 title: Loss of image quality in an Office document
 description: Discusses an issue in which a loss of image quality such as blur may occur after you save a document, spreadsheet, or presentation which contains an image. Provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: wbrandt, abraeg
 appliesto:
 - Office 2007

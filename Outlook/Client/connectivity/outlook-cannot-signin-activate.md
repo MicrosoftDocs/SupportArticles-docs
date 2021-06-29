@@ -1,7 +1,7 @@
 ---
 title: Can't sign in or activate Outlook and Microsoft 365 applications
 description: Provide two resolutions to an issue in which Microsoft 365 applications can't complete activation or connect to Microsoft 365 services.
-author: TobyTu
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

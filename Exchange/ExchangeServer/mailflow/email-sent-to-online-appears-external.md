@@ -1,8 +1,8 @@
 ---
 title: Emails sent to Exchange Online appear external
 description: After you run the Hybrid Configuration Wizard against Exchange Server 2013 or 2016, emails sent from on-premises to Exchange Online appears to be external.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

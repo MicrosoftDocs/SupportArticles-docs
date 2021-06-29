@@ -1,8 +1,8 @@
 ---
 title: Can't send files from an application through email
 description: This article helps fix errors that occur when you send a file from an application other than Microsoft Outlook through an email.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

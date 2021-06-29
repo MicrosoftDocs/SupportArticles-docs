@@ -1,8 +1,8 @@
 ---
 title: Emails aren't saved in the Sent Items folder
 description: Describes an issue in which email messages that are sent in Outlook for Mac aren't saved in the Sent Items folder as expected. Provides a resolution for this issue.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -65,7 +65,7 @@ If you run Exchange Server 2010 or Exchange Server 2007, the following workaroun
     > If you have the shared account added here, select it and then click the minus sign (-) to remove it. Click **Delete** to confirm.
 
 1. Click **Advanced**, and then click **Delegates**.
-1. In the **People I am a delegate for:** section, click the plus sign (+).
+1. In the **Open these additional mailboxes** section, click the plus sign (+).
 
     > [!NOTE]
     > You don't have to be a delegate for the shared account in order to add it here, you only need permissions to access this mailbox.

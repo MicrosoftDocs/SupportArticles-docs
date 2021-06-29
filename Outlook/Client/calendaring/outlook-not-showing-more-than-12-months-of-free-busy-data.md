@@ -1,8 +1,8 @@
 ---
 title: More than 12 months of free/busy data is not shown
 description: Describes an issue in which Outlook 2010 and later versions display only two months of full meeting details and 12 total months of free/busy data. Provides workarounds.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

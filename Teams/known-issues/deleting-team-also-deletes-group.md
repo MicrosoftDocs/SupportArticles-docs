@@ -1,7 +1,7 @@
 ---
 title: When deleting a team in Teams the group is also deleted
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article

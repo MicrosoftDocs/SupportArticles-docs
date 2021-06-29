@@ -149,6 +149,6 @@ To resolve this issue, follow these steps.
 
 ##  More Information
 
-For more information about the Model database, see [model Database](https://technet.microsoft.com/library/ms186388.aspx).
+For more information about the Model database, see [model Database](/sql/relational-databases/databases/model-database).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

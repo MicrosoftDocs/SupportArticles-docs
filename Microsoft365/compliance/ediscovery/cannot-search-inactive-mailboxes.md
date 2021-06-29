@@ -1,8 +1,8 @@
 ---
 title: Can't search inactive mailboxes
 description: Describes an issue in which no inactive mailboxes are listed when you run an In-Place eDiscovery search. Occurs if your user account is a member of the Discovery Management role group but isn't a member of the Organization Management role group.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -37,6 +37,6 @@ This is a known issue. Microsoft is working to address the issue and will post m
 
 ## More information
 
-For more info about inactive mailboxes, go to [Manage inactive mailboxes in Exchange Online](https://technet.microsoft.com/library/dn144876%28v=exchg.150%29.aspx ).
+For more info about inactive mailboxes, go to [Manage inactive mailboxes in Exchange Online](/microsoft-365/security/office-365-security/exchange-online-protection-overview).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,8 +1,8 @@
 ---
 title: File size limits of .pst and .ost files are larger
 description: Describes an issue in which the file size limits of .pst and .ost files are larger in Outlook 2010 and Outlook 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

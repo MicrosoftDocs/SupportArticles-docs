@@ -1,8 +1,8 @@
 ---
 title: Default folder is missing
 description: Documenting issue where folders appear to be missing.  Resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -43,7 +43,7 @@ This behavior can occur if the `PR_ATTR_HIDDEN` property of the affected folder 
 
 Use the steps below to confirm that you are facing this issue, and to reset the `PR_ATTR_HIDDEN` property of the affected folder.
 
-1. Download and extract the [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi) tool.
+1. Download and extract the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool.
 2. Launch mfcmapi.exe and select **OK** through the intro screen.
 3. On the **Session** menu, select **Logon**.
 4. Select the Outlook profile for the affected mailbox, and select **OK**.

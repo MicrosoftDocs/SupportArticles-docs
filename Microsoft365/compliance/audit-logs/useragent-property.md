@@ -1,8 +1,8 @@
 ---
 title: What the UserAgent property value refers to in the unified audit log
 description: Describes what the value for the user agent in a unified audit log refers to and how to disable legacy protocols.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -36,4 +36,4 @@ The details of the audit log may resemble the following:
 
 User agent usually refers to the information about the user's browser. In this particular case, it indicates that you use a legacy protocol such as POP or IMAP to access your mailbox.
 
-Legacy email clients use Basic authentication. Basic authentication in Exchange Online accepts a user name and a password for client access requests. Blocking Basic authentication can help protect an Exchange Online organization from brute force or password spray attacks. To block basic authentication, see [Disable Basic authentication in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/disable-basic-authentication-in-exchange-online?redirectSourcePath=%252fen-us%252farticle%252fdisable-basic-authentication-in-exchange-online-bba2059a-7242-41d0-bb3f-baaf7ec1abd7).
+Legacy email clients use Basic authentication. Basic authentication in Exchange Online accepts a user name and a password for client access requests. Blocking Basic authentication can help protect an Exchange Online organization from brute force or password spray attacks. To block basic authentication, see [Disable Basic authentication in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/disable-basic-authentication-in-exchange-online).

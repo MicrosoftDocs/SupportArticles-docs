@@ -1,8 +1,8 @@
 ---
 title: Contact card not changed via Group Policy or OCT
 description: Describes an issue in which you cannot customize the layout of the Contact Card Contact Tab by using the administrative templates in the Group Policy Object or in the Office Customization Tool (OCT).
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: The Junk Email Reporting Add-in doesn't appear in Outlook
 description: Describes an issue in which the Junk Email Reporting Add-in doesn't appear in Outlook. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -55,6 +55,6 @@ To resolve this issue, make sure that the Junk Email Reporting Add-in is enabled
 
 ## More information
 
-For more information about how to install or uninstall the Junk Email Reporting Add-in for Microsoft Office Outlook, see [Install and Uninstall the Junk Email Reporting Add-in for Microsoft Office Outlook](https://technet.microsoft.com/library/jj723139%28v=exchg.150%29.aspx).
+For more information about how to install or uninstall the Junk Email Reporting Add-in for Microsoft Office Outlook, see [Install and Uninstall the Junk Email Reporting Add-in for Microsoft Office Outlook](/microsoft-365/security/office-365-security/enable-the-report-message-add-in).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,7 +1,7 @@
 ---
 title: Office Lens icons on Windows 10 do not display correctly
 description: Explains why some Office Lens icons may not show up correctly in Windows 10 after creating private characters
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office Lens

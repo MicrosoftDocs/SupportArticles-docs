@@ -1,8 +1,8 @@
 ---
 title: Office cannot check in files 
 description: Fixes an issue in which Office cannot check in files when LAN does not have Internet access
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: CSSTroubleshoot

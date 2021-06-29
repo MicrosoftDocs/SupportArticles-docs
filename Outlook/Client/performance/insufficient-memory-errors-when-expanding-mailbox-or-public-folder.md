@@ -1,8 +1,8 @@
 ---
 title: Insufficient memory errors and sent mail stuck
 description: Describes an issue that occurs when you have lots of cached public folders.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -55,7 +55,7 @@ To resolve this issue by disabling the **Download Public Folder Favorites** opti
 
 To delete the public folder favorites by using MFCMapi, follow these steps:
 
-1. Download [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
+1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 2. Run MFCMAPI.exe.
 3. On the **Session** menu, select **Logon**.
 4. Select your Outlook profile name, and then select **OK**.

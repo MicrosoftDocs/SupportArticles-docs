@@ -1,8 +1,8 @@
 ---
 title: Cannot activate Office 2013 on a new computer
 description: Resolves the  This product key is for Microsoft Office <Edition Name> 2013, which isn't currently installed error message when you try to active Microsoft Office.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

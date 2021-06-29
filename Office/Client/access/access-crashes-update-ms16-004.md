@@ -1,7 +1,7 @@
 ---
 title: Error messages or Access crashes after you install security update MS16-004
 description: Discusses a problem in which you receive error messages or Access crashes after you install security update MS16-004. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Access for Office 365
 - Access 2019
@@ -135,8 +135,6 @@ Problems are also reported to have occurred in other Office products after this 
 For more information about this security update, see the following Microsoft Knowledge Base articles: 
 
 - [Microsoft Security Bulletin MS16-004 - Critical](https://technet.microsoft.com/library/security/ms16-004)
-
-- [MS16-004: Description of the security update for the 2007 Microsoft Office Suite: January 12, 2016](https://support.microsoft.com/help/2881067)
 
 - [MS16-004: Description of the security update for Office 2010: January 12, 2016](https://support.microsoft.com/help/2881029)
 

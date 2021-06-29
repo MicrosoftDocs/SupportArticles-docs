@@ -51,5 +51,5 @@ This option lets an administrator create a public folder mailbox in order to beg
 
 ### Method 2: Remove all public folder databases from earlier versions of Exchange Server
 
-1. Remove existing public folder databases. To do this, see [Remove Public Folder Databases](https://technet.microsoft.com/library/dd876883%28v=exchg.160%29.aspx).
-1. Create the public folder mailbox by using either the Exchange Admin Center (EAC) or the Exchange Management Shell (EMS). To do this, see [Create a public folder mailbox](https://technet.microsoft.com/library/jj552410%28v=exchg.160%29.aspx).
+1. Remove existing public folder databases. To do this, see [Remove Public Folder Databases](/previous-versions/office/exchange-server-2010/dd876883(v=exchg.141)).
+1. Create the public folder mailbox by using either the Exchange Admin Center (EAC) or the Exchange Management Shell (EMS). To do this, see [Create a public folder mailbox](/Exchange/collaboration/public-folders/create-public-folder-mailboxes).

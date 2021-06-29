@@ -67,7 +67,7 @@ See the following table for more information about the path locations that are u
 
 ## More Information 
 
-To view the Lync for Mac 2011 deployment guide, go to the following Microsoft website: [Lync for Mac 2011 Deployment Guide](https://technet.microsoft.com/library/jj984275%28v=office.14%29.aspx).
+To view the Lync for Mac 2011 deployment guide, go to the following Microsoft website: [Lync for Mac 2011 Deployment Guide](/previous-versions/office/office-for-mac-2011/jj984275(v=office.14)).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 

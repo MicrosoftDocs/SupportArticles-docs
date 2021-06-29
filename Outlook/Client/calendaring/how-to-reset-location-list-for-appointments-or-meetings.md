@@ -1,8 +1,8 @@
 ---
 title: How to reset location list for appointments or meetings
 description: Discusses how to reset the location list for appointments or meetings in Microsoft Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

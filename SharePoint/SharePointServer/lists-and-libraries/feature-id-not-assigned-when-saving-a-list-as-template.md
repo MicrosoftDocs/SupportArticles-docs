@@ -1,7 +1,7 @@
 ---
 title: Feature ID not assigned when saving a list as a template
 description: Provides a solution for the issue where Feature ID is not assigned when saving a list as a template.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint
@@ -37,6 +37,6 @@ $web.Update()
 
 ## More Information  
 
-[Document Property Promotion and Demotion](https://msdn.microsoft.com/library/aa543341.aspx)
+[Document Property Promotion and Demotion](/previous-versions/office/developer/sharepoint-2010/aa543341(v=office.14))
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

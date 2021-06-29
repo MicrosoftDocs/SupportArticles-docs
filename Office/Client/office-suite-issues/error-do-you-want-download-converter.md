@@ -1,7 +1,7 @@
 ---
 title: Error (Do you want to download the converter) in Office
 description: Discusses an issue in which you receive an error message to download a converter when you try to open an Excel 2010 workbook (.xlsx), a Word 2010 document (.docx), or a PowerPoint 2010 presentation (.pptx).
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Word 2010
 - Microsoft Excel 2010

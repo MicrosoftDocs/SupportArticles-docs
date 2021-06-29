@@ -1,8 +1,8 @@
 ---
 title: Cannot receive tentative meetings requests or responses
 description: Describes an issue in which a user doesn't receive meeting invitations in their inbox but the meetings appear in the user's calendar as Tentative.  Or, meeting responses from other users don't appear in the user's inbox.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -56,7 +56,7 @@ To resolve this issue, start by following the steps in resolution 1. Depending o
 
 ### Resolution 1
 
-1. Download [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
+1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 2. Start MFCMAPI.
 3. On the **Session** menu, select **Logon**.
 4. Select the user's online mode Outlook profile, and then select **OK**.
@@ -78,7 +78,7 @@ To resolve this issue, start by following the steps in resolution 1. Depending o
 
 ### Resolution 2
 
-1. Download [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
+1. Download [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 2. Start MFCMAPI.
 3. On the **Session** menu, select **Logon**.
 4. Select the user's online mode Outlook profile, and then select **OK**.

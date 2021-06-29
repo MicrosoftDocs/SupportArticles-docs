@@ -1,8 +1,8 @@
 ---
 title: Outlook may be slower to resolve names
 description: You may experience delays in resolving recipient names if Outlook is not configured to download and use a local copy of the Offline Address Book (OAB) files.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

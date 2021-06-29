@@ -1,7 +1,7 @@
 ---
 title: Cannot change recent places
 description: Describes an issue where you cannot change the number of places to list in Recent Places in Word 2010, in Excel 2010, or in PowerPoint 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: kemille
 appliesto:
 - Word 2010

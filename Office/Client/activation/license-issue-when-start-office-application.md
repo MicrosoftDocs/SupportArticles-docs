@@ -1,7 +1,7 @@
 ---
 title: Cannot verify the license for this product when start an Office app
 description: Describes an issue that triggers a licensing error when you try to start an Office 2013 and Office 2016 application. A resolution is provided.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office Professional Plus 2016
@@ -43,9 +43,10 @@ appliesto:
 ## Symptoms
 
 > [!NOTE]
-> -  If you use Azure Multi-Factor Authentication, contact your administrator for help.
-> -  For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](https://docs.microsoft.com/azure/active-directory/user-help/multi-factor-authentication-end-user-signin). 
-> -  To reset your password, see [Reset my Office 365 tenant admin password](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password).
+>
+> - If you use Azure Multi-Factor Authentication, contact your administrator for help.
+> - For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](/azure/active-directory/user-help/multi-factor-authentication-end-user-signin).
+> - To reset your password, see [Reset my Office 365 tenant admin password](/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password&preserve-view=true).
 
 When you start a Microsoft Office 2016 or Office 2013 application, such as Outlook, Word, Excel, or PowerPoint, you may receive the following error message:
 
@@ -62,7 +63,7 @@ The Office application is running in compatibility mode for a different operatin
 To fix this issue, follow these steps to stop running the application in compatibility mode:
 
 1. Exit the Office application that triggers this error.
-2. Locate your Office application, depending on your installation type of Outlook and bitness of Windows and Outlook:
+2. Locate your Office application, depending on your installation type of Outlook and bit version of Windows and Outlook:
 
     - MSI-Based installation type:
 

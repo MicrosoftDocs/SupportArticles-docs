@@ -2,8 +2,8 @@
 title: MAPI apps cannot access archive mailboxes in RDB
 description: MAPI applications can't access archive mailboxes in Recovery Databases (RDB).
 ms.date: 08/10/2020
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

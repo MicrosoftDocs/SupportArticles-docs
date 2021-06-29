@@ -1,8 +1,8 @@
 ---
 title: Performance issues when you connect to Exchange
 description: Resolves an issue in which the CPU or memory usage on the Exchange server is high for some services. This issue occurs if Exchange Server 2013 is installed in Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

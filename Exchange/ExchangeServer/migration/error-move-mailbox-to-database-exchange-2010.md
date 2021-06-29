@@ -40,4 +40,4 @@ This issue occurs because the path value of TEMP and TMP environment variables t
 
 To resolve this issue, set the correct path for TEMP and TMP environment variables. The default path for TEMP and TMP environment variables is *%Userprofile%\Temp*.
 
-For more information about how to the set correct path for TEMP and TMP environment variables, go to the following Microsoft TechNet website: [How to Move the TEMP and TMP Directories](https://technet.microsoft.com/library/aa998945%28v=exchg.65%29.aspx)
+For more information about how to the set correct path for TEMP and TMP environment variables, go to the following Microsoft TechNet website: [How to Move the TEMP and TMP Directories](/previous-versions/tn-archive/aa998945(v=exchg.65))

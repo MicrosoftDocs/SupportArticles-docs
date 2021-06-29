@@ -1,7 +1,7 @@
 ---
 title: Error when you start SharePoint Workspace or Groove
 description: Describe an issue that occurs because the SharePoint Worspace or Groove device URL must be unique for each computer. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: lgreer
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -59,14 +59,10 @@ The following procedures will help you recover from this issue with as little da
 7. Restore the archives that you created in step 3.   
 8. Fetch other workspaces from other members.   
 9. Re-create SharePoint workspaces by using the URLs that you recorded in step 4.    
- 
-For more information about how to uninstall SharePoint Workspace, click the following article number to view the article in the Microsoft Knowledge Base: 
 
-[983271 ](https://support.microsoft.com/help/983271) How to uninstall SharePoint Workspace 2010  
+For more information about how to remove data without uninstalling SharePoint Workspace, click the following article number to view the article in the Microsoft Knowledge Base:
 
-For more information about how to remove data without uninstalling SharePoint Workspace, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[982279 ](https://support.microsoft.com/help/982279) How to delete temporary and permanent data in SharePoint Workspace 2010
+[982279](https://support.microsoft.com/help/982279) How to delete temporary and permanent data in SharePoint Workspace 2010
 
 ### For Groove 2007
 

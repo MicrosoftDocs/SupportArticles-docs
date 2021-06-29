@@ -1,8 +1,8 @@
 ---
 title: How to use Internet Free/Busy 
 description: This article discusses how to use the Internet Free/Busy feature in Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

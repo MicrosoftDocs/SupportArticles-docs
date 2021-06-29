@@ -1,8 +1,8 @@
 ---
 title: Delegates page is not available if setting a delegate
 description: Fixes an issue in which you receive an error message when you select the Delegate Access button in Outlook 2010 or when you select the Delegates tab in Outlook 2007. This issue occurs in an Exchange Server 2010 environment.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

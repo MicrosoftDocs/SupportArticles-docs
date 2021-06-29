@@ -1,8 +1,8 @@
 ---
 title: Errors when opening documents or starting Outlook
 description: Describes an error message that you may receive when you try to open an Office document or to start Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

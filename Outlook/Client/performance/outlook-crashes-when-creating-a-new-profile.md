@@ -1,8 +1,8 @@
 ---
 title: Outlook crashes when creating a new profile
 description: Provides a resolution to solve the crash issue when you try to create a new profile in Microsoft Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

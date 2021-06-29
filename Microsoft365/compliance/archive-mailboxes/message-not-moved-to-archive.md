@@ -1,11 +1,11 @@
 ---
 title: Messages aren't moved to archive mailbox after you create retention policy
 description: Describes a scenario in Exchange Online in Office 365 in which a retention policy that you create to move messages to a user's archive mailbox doesn't automatically run. Provides a workaround.
-author: simonxjx
+author: MaryQiu1987
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
@@ -41,10 +41,8 @@ This issue occurs if the size of the mailbox in Exchange Online is less than 10 
 
 ## Workaround 
 
-For mailboxes that are smaller than 10 MB, manually run the Start-ManagedFolderAssistant –Identity \<mailbox> cmdlet every time that you want to move messages to the archive.
+For mailboxes that are smaller than 10 MB, manually run the `Start-ManagedFolderAssistant –Identity <mailbox>` cmdlet every time that you want to move messages to the archive.
 
-## More information 
-
-For more information about how to set up and manage retention policies in Exchange Online, see [Set Up and Manage Retention Policies in Exchange Online with Windows PowerShell](https://technet.microsoft.com/exchangelabshelp/gg271153#defaulttags).
+For more information about the Managed Folder Assistant, see [Configure and run the Managed Folder Assistant](/Exchange/policy-and-compliance/mrm/configure-managed-folder-assistant?view=exchserver-2019&preserve-view=true).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

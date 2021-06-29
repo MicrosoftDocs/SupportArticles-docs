@@ -1,8 +1,8 @@
 ---
 title: Attachment isn't kept in Office 365 Modern Group Calendar
 description: Describes why an attachment isn't kept in an Office 365 Modern Group Calendar appointment or meeting.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

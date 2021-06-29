@@ -1,8 +1,8 @@
 ---
 title: No available rooms for meeting outside working hours
 description: When you start a meeting outside your working hours, there are no available rooms in the Room Finder pane in Outlook 2010 or Outlook 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

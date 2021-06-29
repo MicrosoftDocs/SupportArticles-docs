@@ -1,11 +1,11 @@
 ---
 title: Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 7/18/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
@@ -52,7 +52,7 @@ Follow the steps below depending on which area you are receiving the error:
 
 ### When accessing a SharePoint site
 
-1. Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
+1. Determine what <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
 
    1. To use the **Check Permissions** feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner, then **Site Permissions**. In the flyout, select **Advanced permissions settings**.
 
@@ -78,8 +78,8 @@ Follow the steps below depending on which area you are receiving the error:
 - **If the user is the owner of the OneDrive site:**
   - This issue most frequently occurs when a user is deleted and re-created with the same user principal name (UPN). The new account is created by using a different Unique ID value. When the user tries to access a site collection or their OneDrive, the user has an incorrect ID. A second scenario involves directory synchronization with an Active Directory organizational unit (OU). If users have already signed into SharePoint, are moved to a different OU that is not currently synchronized with Office365 and then resynced with SharePoint, they may experience this problem.
     - To resolve this issue, you will need to delete the new UPN (if it exists) and restore the original UPN.
-      - To delete the new UPN, follow the steps in [this article](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
-      - Once the new user has been deleted, you can restore the original user using [these steps](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-restore).
+      - To delete the new UPN, follow the steps in [this article](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
+      - Once the new user has been deleted, you can restore the original user using [these steps](/azure/active-directory/fundamentals/active-directory-users-restore).
 
     - If you cannot restore the original user and are still in this state,  create a support request using the following steps:
       - Navigate to <a href="https://admin.microsoft.com" target="_blank">https://admin.microsoft.com</a>.
@@ -95,7 +95,7 @@ Follow the steps below depending on which area you are receiving the error:
 
 - **If the user is attempting to access another user's OneDrive site:**
 
-  - Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and then verify the permissions via the **Check Permissions** feature.
+  - Determine what <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and then verify the permissions via the **Check Permissions** feature.
     - To use the **Check Permissions** feature, navigate to the User.aspx. For example, the full URL will resemble the following: `https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/user.aspx`.
     - In the top ribbon, choose **Check Permissions**.
     - In the **User/Group** field, type the user's name and select **Check Now**.
@@ -113,7 +113,7 @@ For example, the full URL will resemble the following: `https://contoso-my.share
 
 ### If an external user is accessing a site
 
-1. Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
+1. Determine what <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
 
    1. To use the **Check Permissions** feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner and then **Site Settings** Under **Users and Permissions**, select **Site Permissions**.
 
@@ -298,7 +298,7 @@ The steps below remove the external user's ability to access SharePoint Online. 
 
 Next, you have to remove the account from Azure Active Directory. To do this, follow these steps:
 
-1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](https://technet.microsoft.com/library/jj151815.aspx).
+1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 
@@ -347,7 +347,7 @@ To resolve this issue, users must be either site collection administrators or be
 
 If an affected user should be a site collection administrator, go to the following Microsoft website for more information about how to manage administrators for your sites:
 
-[Manage site collection administrators](https://docs.microsoft.com/sharepoint/manage-site-collection-administrators)
+[Manage site collection administrators](/sharepoint/manage-site-collection-administrators)
 
 #### Add the user to the Owners group for the site
 
@@ -410,7 +410,7 @@ This issue occurs because only site collection administrators or users who are m
 
 For more information about how to set up and manage access requests, go to [Set up and manage access requests](https://support.office.com/article/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3).
 
-For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
+For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
 
 ### When accessing a shared folder
 

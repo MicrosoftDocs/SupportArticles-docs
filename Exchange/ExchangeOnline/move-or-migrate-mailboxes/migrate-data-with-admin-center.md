@@ -34,13 +34,13 @@ The Exchange Admin Center in Office 365 is used to migrate data from a hosted an
 
 ### Supported kinds of migration
 
-In Exchange Online, IT admins have several options to migrate mailbox data from their existing on-premises or hosted environment. These options vary based on the source environment and the result that the customer wants to achieve. As with any deployment of Exchange Online in Office 365, customers can review the [Exchange Server Deployment Assistant](https://technet.microsoft.com/exchange/jj657516.aspx) to determine the settings that they have to set up to reach the end state that they want.
+In Exchange Online, IT admins have several options to migrate mailbox data from their existing on-premises or hosted environment. These options vary based on the source environment and the result that the customer wants to achieve. As with any deployment of Exchange Online in Office 365, customers can review the [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant) to determine the settings that they have to set up to reach the end state that they want.
 
 #### Remote move
 
 Remote move enables migration from a deployment of Exchange 2010 or later versions. It uses the Microsoft Exchange Mailbox Replication Service (MRS) Proxy service. For more information about remote moves, go to the following Microsoft TechNet website:
 
-[Mailbox Moves in Exchange 2013](https://technet.microsoft.com/library/jj150543.aspx)
+[Mailbox Moves in Exchange 2013](/Exchange/recipients/mailbox-moves)
 
 #### Staged migration
 
@@ -83,7 +83,7 @@ To create a migration batch, follow these steps:
 
 For more information about remote move, go to the following Microsoft TechNet website:
 
-[Mailbox Moves in Exchange 2013](https://technet.microsoft.com/library/jj150543.aspx)
+[Mailbox Moves in Exchange 2013](/Exchange/recipients/mailbox-moves)
 
 #### Staged migration walkthrough
 

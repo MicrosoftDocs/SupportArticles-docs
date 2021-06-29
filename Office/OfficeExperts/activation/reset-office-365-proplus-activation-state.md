@@ -25,20 +25,20 @@ It's common for users to switch devices or for an enterprise to add or change M3
 > [!NOTE]
 > To automatically perform all of the checks listed below and run the appropriate scripts needed to reset the activation state, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeActivation-Reset).
 
-## Step 1: Remove Office 365 license for subscription -based installations
+## Step 1: Remove Office 365 license for subscription-based installations
 
 > [!NOTE]
 > If Shared Computer Activation (SCA) is enabled and running, you shouldn't see any product keys installed during the procedure. If you're trying to set up SCA on a computer, make sure to clean up existing keys first.
 
-Here's how to remove the Office 365 license:
+You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vbs` script is located in the `Program Files\Microsoft Office\Office16` folder. If you installed the 32-bit version of Office on a 64-bit operating system, go to the `Program Files (x86)\Microsoft Office\Office16` folder.
 
-> [!NOTE]
-> The `ospp.vbs` script is in the \<Program Files\Microsoft Office\Office16> folder. If the 32-bit version of Office is installed on a 64-bit operating system, the script is in the \<Program Files (x86)\Microsoft Office\Office16 folder>. Before running the `ospp.vbs` command, set the correct directory by using one of these commands, based on your Office version:
->
-> - `cd C:\Program Files (x86)\Microsoft Office\Office16`
-> - `cd C:\Program Files\Microsoft Office\Office16`
+> [!IMPORTANT]
+> Before you run the ospp.vbs, ensure that:
+> - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer. 
+> - The user account you will use is a member of the Administrators group on the computer on which you run the script. 
+> - You run ospp.vbs script from an elevated command prompt. 
 
-1. In an elevated command window, run the cd command based on your install location:
+1. In an elevated command prompt, set the correct directory by using one of these commands, based on your Office installation location:
 
    ```console
    cd "C:\Program Files (x86)\Microsoft Office\Office16"
@@ -50,7 +50,7 @@ Here's how to remove the Office 365 license:
    cd "C:\Program Files\Microsoft Office\Office16"
    ```
 
-1. Run the following script command:
+1. Run the following command:
 
    ```vbs
    cscript ospp.vbs /dstatus
@@ -59,7 +59,7 @@ Here's how to remove the Office 365 license:
    The `ospp.vbs` command generates a report of the licenses currently in use. The output is in this format:
 
    ![Screenshot of running the dstatus cscript command.](./media/reset-office-365-proplus-activation-state/command.png)
-
+   
    > [!NOTE]
    > The report could include multiple licenses. If the output contains a "No installed Product Keys" message after you run `ospp.vbs /dstatus`, skip the section below and go to "[Step 2: Remove cached identities in HKCU registry](#step-2-remove-cached-identities-in-hkcu-registry)".
 
@@ -176,6 +176,6 @@ To manually clear Workplace Joined accounts, go to **Access Work or School** on 
 To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip), extract the folder, and run WPJCleanUp.cmd.
 
 > [!NOTE]
-> This tool removes all SSO accounts on the device. After this operation, all applications will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
+> This tool removes all SSO accounts in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
 
 Additional Information: [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)

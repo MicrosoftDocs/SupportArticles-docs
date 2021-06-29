@@ -1,7 +1,7 @@
 ---
 title: A child domain doesn't inherit parent domain changes
 description: Describes an issue in which changes that are made to a parent domain aren't inherited by the child domain in Office 365, Azure, or Microsoft Intune. Provides a resolution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: o365-administration
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Azure Active Directory
 - Microsoft Intune

@@ -1,7 +1,7 @@
 ---
 title: Cannot connect to your account when activate Office from Office 365
 description: Describes how to troubleshoot Office from Office 365 installation and activation issues.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft 365 Apps for enterprise

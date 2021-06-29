@@ -1,7 +1,7 @@
 ---
 title: Excel 2016 for Mac crashes
 description: Assists customers who are migrating from Office for Mac 32-bit to 64-bit after they experience a crash issue while using 32-bit  ODBC drivers.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho
 appliesto:

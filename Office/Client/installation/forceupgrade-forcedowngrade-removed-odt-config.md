@@ -1,7 +1,7 @@
 ---
 title: Information about the deprecated ODT attributes ForceUpgrade and ForceDowngrade
-ms.author: v-todmc
-author: mccoybot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 9/21/2020
 audience: Admin

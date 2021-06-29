@@ -1,6 +1,8 @@
 - name: SharePoint Online Troubleshooting
   href: ../sharepoint-online-welcome.md
   items:
+  - name: SharePoint troubleshooting content updates
+    href: ../sharepoint-troubleshoot-content-updates.md
   - name: Administration
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
@@ -11,12 +13,24 @@
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
       href: ../administration/sync-to-outlook-tasks-link-missing.md
+    - name: Authentication errors when client doesn't have TLS 1.2 support
+      href: ../administration/authentication-errors-tls12-support.md
+    - name: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 7 or 8
+      href: ../administration/authentication-errors-windows7.md
     - name: Automatic EXIF property import unsupported
       href: ../administration/automatic-exif-property-import-unsupported.md
+    - name: Create a default Site collection Term Set if none is present
+      href: ../administration/create-default-site-term-set.md
+    - name: Creation of team site from SharePoint Home doesn’t complete
+      href: ../administration/team-site-creation-stops.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
     - name: Error when accessing SharePoint or OneDrive
       href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Errors when connecting to SharePoint Online Management Shell
+      href: ../administration/errors-connecting-to-management-shell.md
+    - name: Exclude or remove sites from a SharePoint Online retention policy
+      href: ../administration/exclude-sites-from-retention-policy.md
     - name: Invalid URL error when clicking an online prompted link
       href: ../administration/promoted-link-invalid-url.md
     - name: Issue when browsing to a SharePoint site
@@ -44,7 +58,7 @@
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Using relative URLs isn't supported
-      href: ../administration/using-relative-urls-not-supported.md
+      href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
   - name: Diagnostics
     items:
     - name: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive 
@@ -101,8 +115,8 @@
       href: ../lists-and-libraries/change-to-how-lists-are-named.md
     - name: Changes to default versioning setting for document libraries
       href: ../lists-and-libraries/library-versioning-setting-changes.md
-    - name: Check for Know Folder Move eligibility
-      href: ../lists-and-libraries/determine-know-folder-move-eligibility.md
+    - name: Check for Known Folder Move eligibility
+      href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
     - name: Document IDs aren't assigned to items
@@ -111,6 +125,8 @@
       href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
     - name: Edit column doesn't display the edit link
       href: ../lists-and-libraries/edit-column-fails-displaying-edit-link.md
+    - name: Error when creating a list from Excel
+      href: ../lists-and-libraries/error-create-list-excel.md
     - name: Error when view or edit in Word or PowerPoint Online
       href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Excel survey doesn't have full functionality
@@ -141,6 +157,8 @@
       href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
       href: ../lists-and-libraries/modified-time-shows-incorrectly.md
+    - name: Mentions in SharePoint documents don’t send email to participant
+      href: ../lists-and-libraries/no-email-after-mention.md
     - name: Number of items in this list exceeds the list view threshold
       href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
     - name: Per-location view settings don't work at the folder level
@@ -273,6 +291,8 @@
     items:
     - name: '"HTTP request is unauthorized" error'
       href: ../Sites/calendar-overlay-unsupported.md
+    - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
+      href: ../Sites/err-invalid-response-accessing-sharepoint-site.md
     - name: '"You do not have an e-mail address" error with creating an online alert'
       href: ../sites/do-not-have-an-e-mail-address-when-create-an-alert.md
     - name: A URL that resides under a root site collection is broken
@@ -283,6 +303,8 @@
       href: ../Sites/change-default-language-site-collection.md
     - name: Can't find specified web in the given URL
       href: ../Sites/cannot-find-specified-web-given-url.md
+    - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
+      href: ../Sites/cannot-permanently-delete-site.md
     - name: Classic popularity reports is discontinued
       href: ../Sites/classic-usage-popularity-reports-discontinued.md
     - name: Customizations of the top navigation bar is reverted
@@ -323,6 +345,10 @@
       href: ../Sync/synced-file-moved-to-recycle-bin.md
     - name: SharePoint Workspace doesn't always sync automatically
       href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+  - name: Video
+    items:
+    - name: Can’t view embedded Stream video in Teams app
+      href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
     - name: A list view Web Part for a tasks list doesn't filter values
@@ -359,6 +385,8 @@
       href: ../Workflows/copied-workflow-linked-to-source-workflow.md
     - name: Daily email limit has exceeded or unable to send to a recipient
       href: ../Workflows/configured-workflow-fails-running.md
+    - name: Nintex workflow on SharePoint Online fails to start
+      href: ../Workflows/nintex-workflow-fails-to-start.md
     - name: Items revert to the "Pending" status
       href: ../Workflows/item-pending-status.md
     - name: Outlook doesn't respond when approving an online approval workflow
@@ -377,5 +405,3 @@
       href: ../Workflows/connecting-site-workflow-problems.md
     - name: Workflow platform creates Word files that can't be opened
       href: ../Workflows/workflow-platform-created-word-fails-opening.md
-
-

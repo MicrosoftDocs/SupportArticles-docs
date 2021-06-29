@@ -37,7 +37,7 @@ To work around this issue, you can set the Simultaneously Ring feature for your 
 
 For more information, see the following Microsoft websites: 
  
-- [Voice Message Services](https://technet.microsoft.com/library/office-365-voice-message-services.aspx?f=255&mspperror=-2147217396)    
+- [Voice Message Services](/office365/servicedescriptions/exchange-online-service-description/voice-message-services?f=255&mspperror=-2147217396)    
 - [Here's what you get with Cloud PBX](https://support.office.com/article/here-s-what-you-get-with-cloud-pbx-bc9756d1-8a2f-42c4-98f6-afb17c29231c)    
 - [Setting up Cloud PBX voicemail](https://support.office.com/article/setting-up-cloud-pbx-voicemail-ea946bcb-0835-4aa3-baeb-92745956706a?ui=en-us&rs=en-us&ad=us)    
 - [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907)    

@@ -51,12 +51,12 @@ Additionally, if you're using a security-enhanced Access database, make sure tha
 
 ## More Information
 
-In order to open a database in shared mode, the Microsoft Jet database engine must be able to create a locking information file (*.ldb or *.laccdb) in the same folder as the database itself.
+In order to open a database in shared mode, the Microsoft Jet database engine must be able to create a locking information file (`*.ldb`, or `*.laccdb`) in the same folder as the database itself.
 
-For more information about .ldb files, click Microsoft Access Help on the **Help** menu, type *sharing access database* in the Office Assistant or the Answer Wizard, and then click **Search** to view the content.
+For more information about the .ldb files, click Microsoft Access Help on the **Help** menu, type *sharing access database* in the Office Assistant or the Answer Wizard, and then click **Search** to view the content.
 
 ## References
 
-For additional information about .ldb files, see the following article:
+For more information about .ldb files, see the following article:
 
-[Introduction to lock files (.laccdb and .ldb) in Access](https://docs.microsoft.com/office/troubleshoot/access/lock-files-introduction)
+[Introduction to lock files (.laccdb and .ldb) in Access](lock-files-introduction.md)

@@ -47,7 +47,7 @@ Knowledge Base articles
 - [2404385](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365
 - [2427141](https://support.microsoft.com/help/2427141) You can't find a user in the offline address book in Office 365
 - [2429946](https://support.microsoft.com/help/2429946) How to troubleshoot the Outlook Offline Address Book in an Office 365 environment
-- [2710605](https://support.microsoft.com/help/2710605) "Anonymous authentication enabled for virtual directory" error message when you use the Exchange Analyzer tool to send an anonymous HTTP request from the remote server to the URL in Office 365
+- [Anonymous Authentication Enabled for Virtual Directory](/connectivity-analyzer/anonymous-authentication-enabled-virtual-directory)
 - [2710606](https://support.microsoft.com/help/2710606) Error message in the Exchange Remote Connectivity Analyzer tool when you test the Outlook Anywhere feature in an Office 365 environment: "Mutual Authentication could not be established"
 
 ## Repeated password prompts in Outlook

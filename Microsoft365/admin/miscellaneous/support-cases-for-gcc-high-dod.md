@@ -1,7 +1,7 @@
 ---
 title: Open Support cases for GCC High and DoD
 description: Describes that how to open Support cases for GCC High and DoD.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office 365
 ---
@@ -30,9 +30,9 @@ To create a new service request, browse to [https://portal.office365.us/adminpor
 > [!NOTE]
 > Users cannot change their own account permissions and their account needs to be updated by another administrator.
 
-For more details and step-by-step guidance on how to assign administrative roles to users, please see [https://docs.microsoft.com/office365/admin/add-users/assign-admin-roles?view=o365-worldwide.](https://docs.microsoft.com/office365/admin/add-users/assign-admin-roles?view=o365-worldwide)  
+For more details and step-by-step guidance on how to assign administrative roles to users, please see [https://docs.microsoft.com/office365/admin/add-users/assign-admin-roles?view=o365-worldwide.](/office365/admin/add-users/assign-admin-roles)  
 
-For more details on administrator roles, please see [https://docs.microsoft.com/office365/admin/add-users/about-admin-roles](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles?view=o365-worldwide).  
+For more details on administrator roles, please see [https://docs.microsoft.com/office365/admin/add-users/about-admin-roles](/office365/admin/add-users/about-admin-roles).  
 
 For more information on how to populate a valid email address for a user account, see the "More Information" section below.  A valid email address is necessary for the following situations: 
 

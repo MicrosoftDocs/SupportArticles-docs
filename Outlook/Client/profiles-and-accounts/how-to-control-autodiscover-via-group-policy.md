@@ -1,8 +1,8 @@
 ---
 title: How to control AutoDiscover via Group Policy
 description: The Group Policy .adm templates for Outlook 2007 and Outlook 2010 do not include a setting to disable the Outlook AutoDiscover feature or its discovery methods. Article details how to configure the AutoDiscover feature by using custom Group Policy template files.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,8 +13,12 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: aruiz
 appliesto:
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
+- Outlook for Microsoft 365
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
+- Outlook 2010
+- Outlook 2007
 search.appverid: MET150
 ---
 # How to control Outlook AutoDiscover by using Group Policy
@@ -23,7 +27,7 @@ _Original KB number:_ &nbsp; 2612922
 
 ## Summary
 
-When you view the Microsoft Office Outlook 2007 or Outlook 2010 policy settings in the Group Policy Object Editor, you only see the following policy setting that is related to AutoDiscover:
+When you view the Outlook policy settings in the Group Policy Object Editor, you only see the following policy setting that's related to AutoDiscover:
 
 Automatically configure profile based on Active Directory Primary SMTP address
 
@@ -37,7 +41,7 @@ HTTPS AutoDiscover domain query
 HTTP redirect method  
 SRV record query
 
-By default, Outlook uses one or more of these methods to reach the AutoDiscover service. For example, for a computer that is not joined to a domain, Outlook tries to connect to the predefined URLs (for example, `https://autodiscover.contoso.com/autodiscover/autodiscover.xml`) by using DNS. If that fails, Outlook tries the HTTP redirect method. If that does not work, Outlook tries to use the SRV record lookup method. If all lookup methods fail, Outlook cannot obtain "Outlook Anywhere" configuration and URL settings.
+By default, Outlook uses one or more of these methods to reach the AutoDiscover service. For example, for a computer that isn't joined to a domain, Outlook tries to connect to the predefined URLs (for example, `https://autodiscover.contoso.com/autodiscover/autodiscover.xml`) by using DNS. If that fails, Outlook tries the HTTP redirect method. If that does not work, Outlook tries to use the SRV record lookup method. If all lookup methods fail, Outlook cannot obtain "Outlook Anywhere" configuration and URL settings.
 
 This article discusses how you can enable or disable the AutoDiscover feature and how you can specify which methods for Outlook to use to try to reach the AutoDiscover service.
 
@@ -47,23 +51,15 @@ To deploy the custom Group Policy template to control the behavior of the Outloo
 
 1. Download and extract the custom Group Policy template for your version of Outlook from the Microsoft Download Center:
 
-    Outlook 2010:
-
-    [https://download.microsoft.com/download/C/5/2/C5252326-202E-4674-A5A2-BC9F5C8F53BE/outlk14-autodiscover.adm](https://download.microsoft.com/download/c/5/2/c5252326-202e-4674-a5a2-bc9f5c8f53be/outlk14-autodiscover.adm)
-
-    Outlook 2007:
-
-    [https://download.microsoft.com/download/C/5/2/C5252326-202E-4674-A5A2-BC9F5C8F53BE/outlk12-autodiscover.adm](https://download.microsoft.com/download/c/5/2/c5252326-202e-4674-a5a2-bc9f5c8f53be/outlk12-autodiscover.adm)  
-
-2. Copy the .adm file that you downloaded in step 1 to your domain controller:
-
-    Outlook 2010 = Outlk14-autodiscover.adm  
-    Outlook 2007 = Outlk12-autodiscover.adm
+   - Outlook 2016, Outlook 2019, and Outlook for Microsoft 365: [https://www.microsoft.com/download/details.aspx?id=49030](https://www.microsoft.com/download/details.aspx?id=49030)
+   - Outlook 2013: [https://www.microsoft.com/download/details.aspx?id=35554](https://www.microsoft.com/download/details.aspx?id=35554)
+   - Outlook 2010: [https://download.microsoft.com/download/C/5/2/C5252326-202E-4674-A5A2-BC9F5C8F53BE/outlk14-autodiscover.adm](https://download.microsoft.com/download/c/5/2/c5252326-202e-4674-a5a2-bc9f5c8f53be/outlk14-autodiscover.adm)
+   - Outlook 2007: [https://download.microsoft.com/download/C/5/2/C5252326-202E-4674-A5A2-BC9F5C8F53BE/outlk12-autodiscover.adm](https://download.microsoft.com/download/c/5/2/c5252326-202e-4674-a5a2-bc9f5c8f53be/outlk12-autodiscover.adm)
+2. Copy the .adm or .admx file that you downloaded in step 1 to your domain controller:
 
     > [!NOTE]
-    > The steps to add the .adm file to a domain controller vary, depending on the version of Windows that you are running. Also, because you may be applying the policy to an organizational unit (OU) and not to the whole domain, the steps may vary in this aspect of applying a policy. Therefore, check your Windows documentation for more information.
-
-3. Under **User Configuration**, expand Classic Administrative Templates (ADM) to locate the policy node for your template.
+    > The steps to add the .adm or .admx file to a domain controller vary, depending on the version of Windows that you're running. Also, because you may be applying the policy to an organizational unit (OU) and not to the whole domain, the steps may vary in this aspect of applying a policy. Therefore, check your Windows documentation for more information.
+3. Under **User Configuration**, expand Classic Administrative Templates (ADM) or XML‑based administrative template (ADMX) to locate the policy node for your template.
 4. To configure the AutoDiscover feature, find the **Exchange** node. In the Exchange node, select the **AutoDiscover** node. Double-click the **AutoDiscover** policy setting in the details pane.
 5. In the dialog box for the policy setting, select **Enabled** to enable the policy.
 
@@ -72,10 +68,10 @@ To deploy the custom Group Policy template to control the behavior of the Outloo
 
 6. After you finish configuring the AutoDiscover policy and the information has propagated to your Outlook clients, you can verify that the policies are available to Outlook by examining the following subkey in the registry:
 
-    `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<1x.0>\Outlook\AutoDiscover`
+    `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Outlook\AutoDiscover`
 
     > [!NOTE]
-    > The <1x.0> placeholder represents your version of Outlook (12.0 = Outlook 2007, and 14.0 = Outlook 2010).
+    > The \<x.0> placeholder represents your version of Outlook (12.0 = Outlook 2007, 14.0 = Outlook 2010, 15.0 = Outlook 2013, and 16.0 = Outlook 2016, Outlook 2019 and Outlook for Microsoft 365).
 
 ## Methods used to try to reach the AutoDiscover service
 

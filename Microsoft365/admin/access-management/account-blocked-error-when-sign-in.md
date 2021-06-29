@@ -1,7 +1,7 @@
 ---
 title: Account has been blocked error when sign in to Office 365
 description: Describes an issue that triggers an error message when a user tries to sign in to the Microsoft 365 portal. Provides a resolution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office 365 Identity Management
 ---
@@ -63,4 +63,4 @@ Change the sign-in status of the user from Allowed to Blocked, and then change i
 4. In the **Block sign-in** screen, select **Block this user from signing in** and click **Save changes**. 
 5. In the **Unblock sign-in** screen, de-select **Block this user from signing in** and click **Save changes**. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+If you are the only administrator in your organization and your account is locked, contact [Microsoft 365 support](https://support.microsoft.com/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2). Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

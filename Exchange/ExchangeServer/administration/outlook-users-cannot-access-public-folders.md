@@ -1,8 +1,8 @@
 ---
 title: Outlook users can't access public folders
 description: Describes an issue in which Outlook users in an Exchange Server 2013 or Exchange Server 2016 environment can't access public mailbox folders, and provides resolutions.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 

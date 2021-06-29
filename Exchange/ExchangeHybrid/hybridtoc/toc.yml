@@ -23,8 +23,6 @@
       href: ../administration/missing-certificate-on-the-last-page-of-hybrid-configuration-wizard.md
     - name: OAuth authentication configuration fails
       href: ../administration/exchange-oauth-authentication-could-not-find-the-authorization.md
-    - name: Online attributes aren't written back to on-premises
-      href: ../administration/attribute-not-written-to-azure-ad.md
     - name: Outlook Web App address is out of date error
       href: ../administration/outlook-web-app-address-is-out-of-date-error-when-accessing-owa.md
     - name: Primary SMTP address is overwritten by targetAddress
@@ -263,6 +261,8 @@
       href: ../send-emails/overview-delegation-office-365-hybrid.md
     - name: The From field shows addresses not display names
       href: ../send-emails/emails-show-addresses-not-display-names-in-from.md
+    - name: Two OneDrive accounts appear
+      href: ../send-emails/two-onedrive-accounts-when-uploading-attachments.md
   - name: User and Shared Mailboxes
     items:
     - name: Can't access a shared mailbox

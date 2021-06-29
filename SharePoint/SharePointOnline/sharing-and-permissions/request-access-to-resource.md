@@ -1,7 +1,7 @@
 ---
 title: User without permission to resource can't receive the option to request access
 description: This article describes an issue that users without permissions to a SharePoint Online resource don't receive the option to request access to the resource, and provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---

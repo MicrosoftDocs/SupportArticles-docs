@@ -1,7 +1,7 @@
 ---
 title: Misleading labels in the output of Excel Analysis ToolPak t-Test tools
 description: Discusses the problem that the Analysis ToolPak t-Test tools give misleading labels in the output. You may also notice that the t-Test. Paired Two Sample for Means tool gives incorrect results.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2003

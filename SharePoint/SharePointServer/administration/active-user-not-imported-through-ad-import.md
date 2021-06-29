@@ -1,7 +1,7 @@
 ---
 title: Active users are not imported through AD Import
 description: Discusses an issue in which active users are not imported into the Profile database through AD Import. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: 
 - CI 109531
 - CSSTroubleshoot

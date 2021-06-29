@@ -1,13 +1,13 @@
 ---
 title: Workbooks may not open after MS16-088 is installed
 description: Discusses an issue that prevents Excel workbooks from opening after users install security update MS16-088. This issue occurs because of a change that was made in Excel to enhance security.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: lauraho
 ms.custom: CSSTroubleshoot
 search.appverid: 

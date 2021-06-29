@@ -1,7 +1,7 @@
 ---
 title: Outlook for Mac support tools.
 description: Describes some useful tools for Microsoft Outlook for Mac.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Outlook for Mac for Office 365
 ---
@@ -37,7 +37,7 @@ The Outlook Search Repair tool repairs search results within Outlook.
 >     1. Copy and paste the following location into the "Go to the folder:" dialog box and select **Go**:
 > 
 >        > ~/Library/Group Containers/UBF8T346G9.Office/Outlook/Outlook 15 Profiles/
-> 1. Drag the "Main Profile" folder to the **Privacy** tab. Once added, remove the folder, and Spotlight will re-index the folder.
+> 1. Drag the "Main Profile" folder to the **Privacy** tab. Once added, remove the folder from the **Privacy** tab, and Spotlight will re-index the folder.
 > 
 >     You must perform this step for any additional profile folders you have.
 > 

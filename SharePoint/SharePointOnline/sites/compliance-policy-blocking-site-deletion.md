@@ -1,12 +1,12 @@
 ---
 title: Error 'A compliance policy is currently blocking this site deletion' when trying to delete a SharePoint site
 description: This article describes how to resolve an issue when there's an error when trying to delete a SharePoint site.
-author: v-miegge
+author: helenclu
 ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 02/03/2021
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
@@ -34,7 +34,7 @@ When you try to delete a SharePoint site, the following message appears:
 
 There are several reasons for this error to occur:
 
-- There might be a compliance policy which is currently invalid.
+- There might be a compliance policy that is currently invalid.
 - A valid policy can be present, and the SharePoint site shouldn't be deleted. In this situation, contact your administrator to determine whether you can exclude or remove this site from the policy.
 
 ## Resolution
@@ -43,22 +43,22 @@ To remove the **Invalid retention hold**, try one of the following methods, depe
 
 ### Non-administrators
 
-If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles).
+If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles).
 
 ### Administrators
+
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 If you're an administrator, and you're unable to delete the site:
 
 1. Go to the [Microsoft Admin site](https://admin.microsoft.com).
 
-2. In the navigation pane, select **Support**, and then select **New Service Request**.
-
-   > [!Note]
-   > This selection activates the **Need Help?** pane on the right side of the screen.
+2. In the navigation pane, select **Support**, and then select **New Service Request**. This selection activates the **Need Help?** pane on the right side of the screen.
 
 3. In the **Briefly describe your issue** area, enter **invalid retention policy**, and then select **Enter**.
 
-4. In the Run diagnostic section, select the **SharePoint Online root URL**, type or paste the **SharePoint site URL**, and then select **Run Tests**.
+4. In the Run diagnostic section, type or paste the **SharePoint site URL**, and then select **Run Tests**.
 
    ![Run diagnostics window asking for SharePoint URL information](./media/compliance-policy-blocking-site-deletion/run-diagnostics.png)
 

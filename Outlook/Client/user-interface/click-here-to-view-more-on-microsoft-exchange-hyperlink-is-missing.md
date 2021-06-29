@@ -1,8 +1,8 @@
 ---
 title: Click here to view more hyperlink is missing
 description: Describes an issue in which your email folders display only newer items and the Click here to view more on Microsoft Exchange hyperlink is missing.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

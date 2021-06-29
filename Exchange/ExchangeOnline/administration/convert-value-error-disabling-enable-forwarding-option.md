@@ -43,6 +43,6 @@ We're working to address this issue and will post more information in this artic
 
 ## More information
 
-For more information about how to set up mail forwarding, go to [Configure Mail Forwarding for a Mailbox](https://technet.microsoft.com/library/dd351134%28v=exchg.150%29.aspx).
+For more information about how to set up mail forwarding, go to [Configure Mail Forwarding for a Mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

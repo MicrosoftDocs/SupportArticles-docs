@@ -93,7 +93,7 @@ If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have be
 After you complete this procedure, the person's mailbox for which you have been provided access to will display in your Outlook Web App folder list every time you open Outlook Web App.
 
 1. Sign in to your mailbox using Outlook Web App.
-2. Right-click your name in the folder list, and select **Add shared folder**.
+2. Right-click **Folders** in the left navigation pane, and then select **Add shared folder**.
 
    :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
 
@@ -154,7 +154,7 @@ If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have be
 After you complete this procedure, the person's mailbox for which you have been provided access to will display in your Outlook Web App folder list every time you open Outlook Web App.
 
 1. Log in to your mailbox using Outlook Web App.
-2. Right-click your name in the folder list, and select **Add shared folder**.
+2. Right-click **Folders** in the left navigation pane, and then select **Add shared folder**.
 
     :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
 
@@ -204,6 +204,13 @@ After you perform these steps, the specified user will be able to access **all**
 
 For more information, see [How to use Windows PowerShell to grant an admin access to all user mailboxes in Office 365](https://support.microsoft.com/help/2685435).
 
+To assign permissions to a user mailbox, run the following command:
+
+```powershell
+Add-MailboxPermission -Identity ayla@contoso.com -User Ed@contoso.com -AccessRights fullaccess -InheritanceType all
+```
+This example assigns the user Ed Full Access permission to Ayla's mailbox.
+
 ##### How do I access the mailbox
 
 You can access user's mailboxes by using Outlook or Outlook Web App. Use the following steps to open the mailboxes for which you have been granted access. Depending on the email client you choose, the detailed instructions for accessing the shared mailbox are listed below:
@@ -219,7 +226,7 @@ If you are using Outlook 2013 or Outlook 2010, the mailbox for which you have be
 After you complete this procedure, the person's mailbox for which you have been provided access to will display in your Outlook Web App folder list every time you open Outlook Web App.
 
 1. Log in to your mailbox using Outlook Web App.
-2. Right-click your name in the folder list, and select **Add shared folder**.
+2. Right-click **Folders** in the left navigation pane, and then select **Add shared folder**.
 
    :::image type="content" source="media/how-to-access-other-mailboxes/add-shared-folder.png" alt-text="Add shared folder" border="false":::
 

@@ -1,7 +1,7 @@
 ---
 title: (Class not registered) error when updating PowerPivot data
-ms.author: v-todmc
-author: mccoybot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 1/12/2021
 audience: Admin

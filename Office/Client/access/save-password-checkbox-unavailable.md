@@ -1,8 +1,8 @@
 ---
 title: Save Password checkbox is unavailable in Access
 description: Lists two possible causes and feasible workarounds to the issue that you cannot save the logon ID and password locally when you link a table from an ODBC data source since the Save password check box is unavailable in the Link Tables dialog box.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

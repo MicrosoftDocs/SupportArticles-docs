@@ -1,7 +1,7 @@
 ---
 title: Unlicensed Product error when opening Office Professional Plus 2010
 description: Describes that an Office Professional Plus 2010 user receives an "Unlicensed Product" message and many features are disabled in Office Professional Plus 2010 applications. Provides a resolution.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office Professional Plus 2010
 ---

@@ -1,7 +1,7 @@
 ---
 title: Search for Shapes feature on the Internet is discontinued
 description: Fixes an issue in which the Search for Shapes feature on the Internet is discontinued.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Office Visio Professional 2007
 - Microsoft Office Visio Standard 2003
@@ -31,7 +31,7 @@ Some of the shapes that were available only online, such as the geographic map s
 
 In Microsoft Office Visio, you can use the **Search for Shapes** box to search for shapes. The Search for Shapes feature searches the Office Visio stencils that are installed on your computer. The Search for Shapes box works best when Windows Indexing service is enabled and running for Visio 2007 and earlier. Visio 2010 and later utilize the Windows Search service when searching for shapes. If one of these services is disabled or not functioning properly, users may receive "No result found" when searching for shapes. Possible resolutions to this problem include:
 
-Installing the Windows Search service on Windows Server - see the [reference](https://support.microsoft.com/kb/954822) for more details
+Installing the Windows Search service on Windows Server - see the [reference](search-for-shapes-use-windows-search.md) for more details
 
 Enable Windows Search service - Right click the taskbar and select Start Task Manager. On the services tab, confirm that the "Windows Search" service is running. If not,
 

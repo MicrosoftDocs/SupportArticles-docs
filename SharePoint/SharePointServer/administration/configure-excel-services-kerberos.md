@@ -1,7 +1,7 @@
 ﻿---
 title: Configure Excel Services in SharePoint Server 2010 for Kerberos authentication
 description: Describe how to configure Excel Services in SharePoint Server 2010 for Kerberos authentication.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Excel Services in SharePoint Server 2010
@@ -137,6 +137,6 @@ For more information about how to configure Kerberos constrained delegation to e
 > [!NOTE]
 > For more information about Identity delegation for Excel Services, go to the following Microsoft TechNet website:
 
-[Identity delegation for Excel Services (SharePoint Server 2010)](https://docs.microsoft.com/previous-versions/office/sharepoint-server-2010/gg502605(v=office.14))
+[Identity delegation for Excel Services (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/gg502605(v=office.14))
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -1,7 +1,7 @@
 ---
 title: Differences between Excel statistical functions STDEVPA and STDEVP
 description: This article describes changes to the STDEVPA and the STDEVP statistical functions in Excel 2007, in Excel 2003, and in Excel 2004.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007
@@ -81,8 +81,8 @@ STDEVP and STDEVPA return population standard deviation, whereas STDEV and STDEV
 
 To calculate each of these four functions, Excel 2003 and Excel 2007 use a procedure that differs from and improves upon the procedure that earlier versions of Excel use. The article for STDEV gives a worksheet that permits you to examine cases where unusual behavior occurs in STDEV for earlier versions of Excel, but not for Excel 2003 or for Excel 2007. However, such cases are likely to occur only in extreme situations. Procedures for STDEV, STDEVA, STDEVP, STDEVPA, VAR, VARA, VARP, and VARPA have all been modified in the same way to improve the numeric stability of the results. The articles for STDEV and VAR also describe these modifications.
 
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
+For more information, see the following articles:
 
-[826349](https://support.microsoft.com/help/826349) Description of the STDEV function in Excel 2003
+[STDEV function](https://support.microsoft.com/office/stdev-function-51fecaaa-231e-4bbb-9230-33650a72c9b0)
 
 [826112](https://support.microsoft.com/help/826112) Excel Statistical Functions: VAR

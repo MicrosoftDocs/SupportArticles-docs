@@ -15,7 +15,7 @@ appliesto:
 - Skype for Business 2015
 ---
 
-# Video is missing in a Skype for Business 2015 meeting recording after the December 2015 security update 3114351 is installed
+# Video is missing in a Skype for Business 2015 meeting recording after the latest update is installed
 
 ## Symptoms
 
@@ -23,7 +23,7 @@ When you play back a meeting recording that you made in Microsoft Lync 2013 (Mic
 
 **At this point in the meeting, no one was presenting or sharing video.**
 
-This issue occurs in certain situations after the [December 8, 2015 security update](https://support.microsoft.com/help/3114351) for Lync 2013 (Skype for Business) is installed. The recordings do not capture desktop sharing or application sharing. The recordings do capture PowerPoint presentations, white boards, and polling content.
+This issue occurs in certain situations after the latest update is installed. The recordings do not capture desktop sharing or application sharing. The recordings do capture PowerPoint presentations, white boards, and polling content.
 
 However, no any failure or warning message about the missing video are displayed during the recording process.
 

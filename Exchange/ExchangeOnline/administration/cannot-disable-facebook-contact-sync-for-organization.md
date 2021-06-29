@@ -25,9 +25,9 @@ _Original KB number:_ &nbsp; 2898124
 When you try to disable Facebook contact sync in your Office 365 organization through a mailbox policy, you experience one or both of the following symptoms:
 
 - After you try to disable it through the Exchange admin center, the feature still seems to be enabled.
-- If you run the `Set-OwaMailboxPolicy` cmdlet together with the `facebookenabled $false` parameter, you receive the following error message:
+- If you run the `Set-OwaMailboxPolicy` cmdlet together with the `DisableFacebook` switch, you receive the following error message:
 
-> Error Message: A positional parameter cannot be found that accepts argument 'FacebookEnabled=False'.  
+> Error Message: A positional parameter cannot be found that accepts argument 'DisableFacebook'.  
 \+ CategoryInfo : InvalidArgument: (:) [Set-OwaMailboxPolicy], ParameterBindingException  
 \+ FullyQualifiedErrorId : PositionalParameterNotFound,Set-OwaMailboxPolicy  
 \+ PSComputerName : pod\<x>`psh.outlook.com`

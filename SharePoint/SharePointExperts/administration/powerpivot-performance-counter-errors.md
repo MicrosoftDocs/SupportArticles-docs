@@ -1,6 +1,6 @@
 ---
 title: PowerPivot Performance Counter errors
-author: AmandaAZ
+author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal

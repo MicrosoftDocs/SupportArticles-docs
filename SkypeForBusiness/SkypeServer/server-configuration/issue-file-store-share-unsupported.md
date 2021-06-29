@@ -36,7 +36,7 @@ Additionally you may see one or more of the following error or warning events in
 > [!NOTE]
 > For detailed information about using the Lync Server log, see the "Event Viewer" section of following TechNet article:
 > 
-> [Client-side logging and diagnostics](https://technet.microsoft.com/library/gg195661%28v=ocs.14%29.aspx)
+> [Client-side logging and diagnostics](/previous-versions/office/skype-server-2010/gg195661(v=ocs.14))
 
 ```AsciiDoc
 Log Name: Lync Server
@@ -172,11 +172,11 @@ To resolve this issue, make sure that the Lync Server deployment hosts its share
 
 For information about supported Lync Server 2013 file storage configurations, see the following TechNet article:
 
-[File storage support in Lync Server 2013](https://technet.microsoft.com/library/gg399073.aspx)
+[File storage support in Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-file-storage-support)
 
 For step by step information about configuring Lync Server 2013 file storage, see the following TechNet article:
 
-[Configure file storage for Lync Server 2013](https://technet.microsoft.com/library/jj205150.aspx)
+[Configure file storage for Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-configure-dfs-file-storage)
 
 For step by step information about moving Lync Server 2013 file storage, see the following TechNet blog post:
 
@@ -184,8 +184,8 @@ For step by step information about moving Lync Server 2013 file storage, see the
 
 For step by step information about moving Lync Server 2010 file storage, see the following TechNet articles:
 
-- [Move the file store for Lync Server 2010 pool](https://technet.microsoft.com/library/gg195761%28v=ocs.14%29.aspx)
-- [Reassign a server to a different file store](https://technet.microsoft.com/library/gg195633%28v=ocs.14%29.aspx)
+- [Move the file store for Lync Server 2010 pool](/previous-versions/office/skype-server-2010/gg195761(v=ocs.14))
+- [Reassign a server to a different file store](/previous-versions/office/skype-server-2010/gg195633(v=ocs.14))
 
 ## More information
 

@@ -31,7 +31,7 @@ Consider the following scenario:
 
 - In your Microsoft Exchange environment, Exchange Server 2010 coexists with either Exchange Server 2013 or Exchange Server 2016.
 - Public folders are hosted on the Exchange 2010 servers.
-- Access to the legacy public folders has been configured according to the guidelines in [Configure legacy public folders where user mailboxes are on Exchange 2013 servers](https://technet.microsoft.com/library/dn690134%28v=exchg.150%29.aspx).
+- Access to the legacy public folders has been configured according to the guidelines in [Configure legacy public folders where user mailboxes are on Exchange 2013 servers](/exchange/configure-legacy-public-folders-where-user-mailboxes-are-on-exchange-2013-servers-exchange-2013-help).
 - There are multiple Exchange 2010 public folder databases.
 
 In this scenario, users who have an Exchange 2013-based or Exchange 2016-based mailbox can't access public folders by using Microsoft Outlook.

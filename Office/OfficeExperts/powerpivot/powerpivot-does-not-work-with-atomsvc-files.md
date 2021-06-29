@@ -1,6 +1,6 @@
 ---
 title: PowerPivot does not work with .atomsvc files
-author: AmandaAZ
+author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

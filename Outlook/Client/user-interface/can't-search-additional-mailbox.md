@@ -1,7 +1,7 @@
 ---
 title: Error (Something went wrong and your search couldn't be completed) when searching from an additional mailbox in Outlook
 description: When you perform a search from a secondary mailbox that you have Full Access permissions in Outlook, the operation will fail. This is a known limitation of the Exchange Online search service. 
-author: TobyTu
+author: helenclu
 ms.author: aruiz
 manager: dcscontentpm
 audience: ITPro 
@@ -63,4 +63,4 @@ To work around this issue, use any of the following methods:
 > The OCT registry path will be `HKEY_CURRENT_USER\software\microsoft\office\16.0\outlook\search`.
 
 - Set the additional mailbox to stop using Cached Exchange Mode, see this [Microsoft Support article](https://support.office.com/article/Turn-on-Cached-Exchange-Mode-7885AF08-9A60-4EC3-850A-E221C1ED0C1C).
-- Create a shared mailbox as an additional mailbox. For more information, see [Create a shared mailbox](https://docs.microsoft.com/office365/admin/email/create-a-shared-mailbox?view=o365-worldwide).
+- Create a shared mailbox as an additional mailbox. For more information, see [Create a shared mailbox](/office365/admin/email/create-a-shared-mailbox?view=o365-worldwide&preserve-view=true).

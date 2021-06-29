@@ -65,10 +65,10 @@ Set-CsConferencingConfiguration -Identity site:Redmond -MaxContentStorageMb 150
 
 For more details on using the Set-CsConferencingConfiguration PowerShell Command:
 
-[Set-CsConferencingConfiguration](https://technet.microsoft.com/library/gg412969%28v=ocs.14%29.aspx)
+[Set-CsConferencingConfiguration](/previous-versions/office/skype-server-2010/gg412969(v=ocs.14))
 
 For more details on Lync Server 2010 Web Conferencing:
 
-[Features and Functionality of Web Conferencing and A/V Conferencing](https://technet.microsoft.com/library/gg425913%28v=ocs.14%29.aspx)
+[Features and Functionality of Web Conferencing and A/V Conferencing](/previous-versions/office/skype-server-2010/gg425913(v=ocs.14))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

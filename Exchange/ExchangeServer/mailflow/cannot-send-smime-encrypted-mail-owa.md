@@ -74,6 +74,6 @@ With an Outlook client, you can turn off email matching for certificates via a 
 
 For more information on managing S/MIME settings for OWA, see the following articles from TechNet online.
 
-[How to Manage S/MIME for Outlook Web Access (Exchange Server 2007)](https://technet.microsoft.com/library/bb738151%28EXCHG.80%29.aspx)
+[How to Manage S/MIME for Outlook Web Access (Exchange Server 2007)](/previous-versions/office/exchange-server-2007/bb738151(v=exchg.80))
 
-[Manage S/MIME for Outlook Web App (Exchange Server 2010)](https://technet.microsoft.com/library/bb738151.aspx)
+[Manage S/MIME for Outlook Web App (Exchange Server 2010)](/previous-versions/office/exchange-server-2010/bb738151(v=exchg.141))

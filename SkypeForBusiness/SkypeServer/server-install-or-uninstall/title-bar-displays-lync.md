@@ -21,7 +21,7 @@ appliesto:
 
 Consider the following scenario:
 
-- You install the [November 10, 2015 security update (MS15-116 and MS15-123) for Lync 2013 (Skype for Business)](https://support.microsoft.com/help/3101496).    
+- You install the latest update.
 - You configure the Skype for Business user interface to be displayed in the Lync 2013 (Skype for Business 2015) client.   
 
 In this scenario, you see "Lync" displayed in the title bar of the main window after you log on and also in the "Help > About" window.
@@ -109,6 +109,6 @@ For more information about how to configure the Skype for Business user interfac
 
 - [Why do I see Skype for Business when I'm using Lync?](https://support.office.com/article/why-do-i-see-skype-for-business-when-i-m-using-lync-50935112-4978-46b8-b2ad-9dd7b81365bf)   
 - [Switching between the Skype for Business and the Lync client user interfaces](https://support.office.com/article/switching-between-the-skype-for-business-and-the-lync-client-user-interfaces-a2394a4c-7522-484c-a047-7b3289742be0)   
-- [Configure the client experience with Skype for Business 2015](https://technet.microsoft.com/library/dn951355.aspx)   
+- [Configure the client experience with Skype for Business 2015](/skypeforbusiness/deploy/deploy-clients/configure-the-client-experience)   
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

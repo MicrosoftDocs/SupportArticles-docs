@@ -1,7 +1,7 @@
 ---
 title: Known issues for Teams when run on Linux
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 7/1/2020
 audience: Admin

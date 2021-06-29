@@ -1,8 +1,8 @@
 ---
 title: Performance issues if UseLowPriorityConfiguration is 0 
 description: This article introduces the way to resolve some possible computer performance issues that are caused by modifying the UseLowPriorityConfiguration value in the registry.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Cannot move the items error when you copy an appointment to an Outlook.com folder
 description: Provides a summary of issues related to copying or moving appointments into an Outlook.com-based calendar folder from a calendar folder that's based in another account type (Exchange, IMAP, POP).
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

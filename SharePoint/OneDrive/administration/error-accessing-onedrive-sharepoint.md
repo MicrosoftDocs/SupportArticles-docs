@@ -1,12 +1,12 @@
 ---
 title: Error when accessing OneDrive or Sharepoint
 description: Describes how to resolve an issue when unable to OneDrive or Sharepoint
-author: v-miegge
+author: helenclu
 ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 02/01/2021
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: one-drive
 ms.custom: CSSTroubleshoot
@@ -35,7 +35,7 @@ Your subscription to either **OneDrive** or **SharePoint** might have expired.
 
 ### Reactivate your subscription
 
-To reactivate your Microsoft 365 subscription, see [Reactive your subscription](https://docs.microsoft.com/microsoft-365/commerce/subscriptions/reactivate-your-subscription)
+To reactivate your Microsoft 365 subscription, see [Reactive your subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription)
 
 ### Flush the DNS cache
 
@@ -53,7 +53,7 @@ To flush the local systems DNS cache:
 
 Once the DNS has been flushed, try to access **OneDrive** or **SharePoint** again.
 
-If you are still unable to access your service, contact [Microsoft technical support](https://go.microsoft.com/fwlink/?linkid=869559).
+If you are still unable to access your service, contact [Microsoft technical support](/microsoft-365/admin/contact-support-for-business-products).
 
 ## More information
 

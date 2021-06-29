@@ -45,7 +45,7 @@ This problem occurs if the Exchange Online organization or the on-premises organ
 
 1. Verify that centralized mail control is enabled and is set up to promote headers in Office 365. To do this, follow these steps:
 
-   1. Connect to Exchange Online by using a remote Windows PowerShell session. For more information, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+   1. Connect to Exchange Online by using a remote Windows PowerShell session. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    2. View the configuration information of the hybrid outbound connector in the Exchange Online organization. To do this, run the following command:
 
         ```powershell
