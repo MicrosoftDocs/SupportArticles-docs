@@ -576,3 +576,4 @@ Fortunately, the issues that affect these components usually generate an error i
 - [Troubleshooting Errors during synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
 - [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 - [Troubleshoot an object that is not synchronizing with Azure Active Directory](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
+- [Azure AD Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
