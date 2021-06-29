@@ -1864,6 +1864,8 @@
     items:
     - name: Black screen on boot
       href: ./performance/black-screen-on-boot.md
+    - name: Can't boot from the second bootable media on UEFI-based computers
+      href: ./performance/cannot-boot-from-second-media-uefi-computers.md
     - name: Can't format or use a disk partition properly
       href: ./performance/cannot-use-disk-partition-power-failure-system-crash.md
     - name: Computer doesn't start after you mark primary partition as active

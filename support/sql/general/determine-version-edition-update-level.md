@@ -245,7 +245,7 @@ You can use one of the following methods to determine the version of the full-te
 
 The MDS Configuration Manager does not show the currently installed version number directly.
 
-Be aware that MDS has a unique versioning scenario in which the SQL Server database engine installation does not necessarily match the MDS version. The version may vary when you compare the SQL Server installation to the binaries deployed in the MDS website and the MDS catalog schema version. Manual steps that use the MDS Configuration Manager tool are required to update and to upgrade the MDS websites and database schemas. You can refer to the following blog post on hotfix and service pack update methodology for MDS: [Downloading and Installing SQL Server 2008 R2 Master Data Services (MDS) Cumulative Updates](http://sqlblog.com/login.aspx)
+Be aware that MDS has a unique versioning scenario in which the SQL Server database engine installation does not necessarily match the MDS version. The version may vary when you compare the SQL Server installation to the binaries deployed in the MDS website and the MDS catalog schema version. Manual steps that use the MDS Configuration Manager tool are required to update and to upgrade the MDS websites and database schemas. You can refer to the following blog post on hotfix and service pack update methodology for MDS: [Downloading and Installing SQL Server 2008 R2 Master Data Services (MDS) Cumulative Updates](https://techcommunity.microsoft.com/t5/sql-server-integration-services/downloading-and-installing-sql-server-2008-r2-master-data/ba-p/387712)
 
 The following registry subkey shows the binary versions that are installed on the SQL Server. However, this version does not necessarily match the website and database schema version until the MDS upgrade process is complete.
 
@@ -270,7 +270,7 @@ To determine the version of SQL Server Native Client, use one of the following m
 
   |SQL version /</br>SQL Server Native Client version|Registry subkeys|
   |---|---|
-  |SQL Server 2012, SQL Server 2014 and SQL Server 2016/ SQL Server Native Client 11.0 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI10\CurrentVersion|
+  |SQL Server 2012, SQL Server 2014 and SQL Server 2016/ SQL Server Native Client 11.0 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI11\CurrentVersion|
   |SQL Server 2008 & SQL Server 2008 R2/</br> SQL Server Native Client 10 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\SQLNCLI10\CurrentVersion|
   |SQL Server 2005/</br>SQL Server Native Client 9|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Native Client\CurrentVersion|
   |||
