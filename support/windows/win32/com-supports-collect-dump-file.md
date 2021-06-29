@@ -1,6 +1,6 @@
 ---
 title: COM+ supports collection of dump file and process termination
-description: This article introduces the Microsoft COM+ new functionalities that automatic collection of process dump file and process termination.
+description: This article introduces the new functionalities of Microsoft COM+, including automatic collection of process dump file and process termination.
 ms.date: 6/25/2021
 ms.prod-support-area-path: Component development
 ms.reviewer: dave.anderson
@@ -81,7 +81,7 @@ Similarly, collect a full dump file when an unhandled exception occurs in a COM+
 
 ### Analyze the dump files
 
-Here's how to analyze a dump file:
+To analyze the dump file, follow these steps:
 
 1. Download and install the appropriate version of the Microsoft Internet Information Services (IIS) Diagnostics Toolkit.
 
@@ -106,7 +106,7 @@ Here's how to analyze a dump file:
 
 ## Considerations
 
-Here are some information you should consider.
+Here are some factors you should consider.
 
 ### AverageCallThreshold registry value
 
