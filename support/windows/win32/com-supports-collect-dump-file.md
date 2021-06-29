@@ -86,7 +86,7 @@ Here's how to analyze a dump file:
 
     The resulting HTML report is displayed in a new Microsoft Internet Explorer window on the desktop and saved to the DebugDiag Reports directory. The default location for this directory is *C:\Program Files\IIS Resources\DebugDiag\Reports*.
 
-1. To resolve the problem, follow the guidance that is provided in the [Recommendation](#recommendation) section of the report. This section of the report may recommend the following things:
+1. To resolve the problem, follow the guidance that is provided in the [Recommendations](#recommendations) section of the report. This section of the report may recommend the following things:
     - It may direct you to a Microsoft Knowledge Base article that describes known issues.
     - It may provide the developers of the application with information that they can use to make corrections.
     - It may suggest that you follow up with the appropriate vendor or with Microsoft Support. When you contact Microsoft Support for more help, provide the report file to speed the analysis process. The full dump file might also be required.
