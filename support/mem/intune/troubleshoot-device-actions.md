@@ -41,7 +41,7 @@ No. And you don't need to enter the dashes.
 ### How do I tell who started a Retire/Wipe?
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**, check the **Initiated By** column.
-If you don't see an entry, the most likely person to have initiated the action is the user of the device. They probably used the Company Portal app or portal.manage.microsoft.com.
+If you don't see an entry this means the person who initiated the action is the user of the device. They used the Company Portal app or portal.manage.microsoft.com to perform the action and we can see the details in the console under **Devices** > **Monitor** > **Device actions**. 
 
 ### Why wasn't my application uninstalled after using Retire?
 
@@ -60,7 +60,7 @@ Retiring a device doesn't revoke access tokens. You can use Conditional Access p
 
 ### How can I monitor a Retire/Wipe action after it was issued?
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**. If the end user initiated the action, we can see it under **Devices** > **Monitor** > **Device actions**.
 
 ### Why do wipes sometimes show as Pending indefinitely?
 
