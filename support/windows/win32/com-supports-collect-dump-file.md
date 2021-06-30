@@ -83,21 +83,18 @@ Similarly, collect a full dump file when an unhandled exception occurs in a COM+
 
 To analyze the dump file, follow these steps:
 
-1. Download and install the appropriate version of the Microsoft Internet Information Services (IIS) Diagnostics Toolkit.
+1. Download and install the [Debug Diagnostic Tool (DebugDiag)](https://www.microsoft.com/download/details.aspx?id=102635).
 
-1. Use the Debug Diagnostics Tool of the IIS Diagnostics Toolkit to generate an analysis report for the dump file by following these steps:
-    1. Select **Start** > **Programs** > **IIS Diagnostics (32 bit)** > **Debug Diagnostics Tool**, and then select **Debug Diagnostics Tool 1.0**.
-    1. If the **Select Rule Type** dialog box opens, select **Cancel**.
-    1. On the **Tools** menu, select **Options And Settings**.
-    1. Select the **Folders and Search Paths** tab.
-    1. In the **Symbol Search Path For Analysis** box, type `srv*C:\symbols\*http://msdl.microsoft.com/download/symbols`.
-    1. Select the **Advanced Analysis** tab.
-    1. In the **Available Analysis Scripts** list, select **IISAnalysis.asp**.
-    1. Select **Add Data Files**.
-    1. Select the dump file that you want to analyze, and select **OK**.
-    1. Select **Start Analysis**.
+1. Use the Debug Diagnostics Tool to generate an analysis report for the dump file by following these steps:
+    1. Run the **DebugDiag Analysis** application from the **Start** menu
+    2. Select **Settings**, then select the **Preferences** tab.
+    3. Make sure that the **Microsoft Public Symbol Servers** option in the **Symbol Search Path** field is checked, then select **Back**.
+    4. Select the **Default Analysis \ CrashHangAnalysis** option.
+    5. Select **Add Data Files**.
+    6. Select the dump file(s) that you want to analyze.
+    7. Select **Start Analysis**.
 
-    The resulting HTML report is displayed in a new Microsoft Internet Explorer window on the desktop and saved to the DebugDiag Reports directory. The default location for this directory is *C:\Program Files\IIS Resources\DebugDiag\Reports*.
+    The resulting HTML report is displayed in a new Microsoft Internet Explorer window on the desktop and saved to the DebugDiag Reports directory. The default location for this directory is *%USERPROFILE%\Documents\DebugDiag\Reports*.
 
 1. To resolve the problem, follow the guidance that is provided in the [Recommendations](#recommendations) section of the report. This section of the report may recommend the following things:
     - It may direct you to a Microsoft Knowledge Base article that describes known issues.
