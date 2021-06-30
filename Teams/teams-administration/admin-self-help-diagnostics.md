@@ -45,6 +45,9 @@ Enter your organization’s root URL. In the Guest Access diagnostic, select the
 After the diagnostic checks finish and the configuration issue is found, the system provides the steps to resolve the issue. In this example, the Tenant Admin had not turned on Guest Access:
 
 :::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-2.png" alt-text="Example diagnostics response screen.":::
+
+> [!NOTE]
+> If a diagnostic detects an issue and you have implemented a fix based on the results, please consider re-running the diagnostic to ensure the issue is fully resolved. 
  
 ### What scenarios are currently covered?
 
