@@ -82,4 +82,7 @@ Currently, these diagnostics are available only for administrators. They can be 
 
 4. To access a specific diagnostic, enter the corresponding shortcut command from the table above into the “Need help?” text box.
 
+> [!NOTE]
+> If a diagnostic detects an issue and you have implemented a fix based on the results please consider re-running the diagnostic to ensure the issue is fully resolved. 
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
