@@ -86,7 +86,7 @@ To analyze the dump file, follow these steps:
 1. Download and install the [Debug Diagnostic Tool (DebugDiag)](https://www.microsoft.com/download/details.aspx?id=102635).
 
 1. Use the Debug Diagnostics Tool to generate an analysis report for the dump file by following these steps:
-    1. Run the **DebugDiag Analysis** application from the **Start** menu
+    1. Run the **DebugDiag Analysis** application from the **Start** menu.
     2. Select **Settings**, then select the **Preferences** tab.
     3. Make sure that the **Microsoft Public Symbol Servers** option in the **Symbol Search Path** field is checked, then select **Back**.
     4. Select the **Default Analysis \ CrashHangAnalysis** option.
