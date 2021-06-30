@@ -61,7 +61,7 @@ productDirectory:
     url: sql/welcome-sql-server.md
 
   - title: Microsoft Endpoint Manager
-    imageSrc: "media/hub-landing/MEM.jpg"
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
     summary: Troubleshooting articles for Microsoft Endpoint Manager
     url: mem/index.yml
 
@@ -85,18 +85,13 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
       
-  - title: Power Apps
-    imageSrc: "media/hub-landing/power-apps.svg"
-    summary: Troubleshooting articles for Power Apps
-    url: power-platform/power-apps/welcome-power-apps.yml
-
-  - title: Power Automate
-    imageSrc: "media/hub-landing/power-automate.svg"
-    summary: Troubleshooting articles for Power Automate
-    url: power-platform/power-automate/welcome-power-automate.yml
+  - title: Microsoft Power Platform
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    summary: Troubleshooting articles for Microsoft Power Platform
+    url: power-platform/index.yml
 
   - title: Previous Versions
-    imageSrc: "media/hub-landing/MEM.jpg"
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
     summary: Troubleshooting articles for previous versions of products
     url: https://docs.microsoft.com/previous-versions/troubleshoot/
 

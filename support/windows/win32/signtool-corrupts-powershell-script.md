@@ -2,7 +2,7 @@
 title: SignTool may corrupt PowerShell script file
 description: This article provides resolutions for the PowerShell script file corruption that occurs when you use SignTool to sign the file that already contains a digital signature.
 ms.date: 6/15/2021
-ms.prod-support-area-path:
+ms.prod-support-area-path: Security development
 ms.reviewer: mstanley
 author: cobibi
 ms.author: v-yunhya
@@ -18,7 +18,7 @@ Assume that you made changes to a Windows PowerShell script file (.ps1) that alr
 
 ## Cause
 
-When using SignTool to sign a script file for the first time, a carriage return and a line feed are added at end of the file before the signature is added. When using SignTool to add a new signature to the file, the old signature and the two characters before the signature are deleted. SignTool may corrupt the script if the two characters before the signature are not the carriage return and line feed characters added when the script was signed. This can occur when editing the script file after it has been signed using an editor that replaces carriage return and a line feed pairs with a line feed character.  
+When using SignTool to sign a script file for the first time, a carriage return and a line feed are added at the end of the file before the signature is added. When using SignTool to add a new signature to the file, the old signature and the two characters before the signature are deleted. SignTool may corrupt the script if the two characters before the signature are not the carriage return and line feed characters added when the script was signed. This can occur when editing the script file after it has been signed using an editor that replaces carriage return and line feed pairs with a line feed character.  
 
 ## Workaround
 

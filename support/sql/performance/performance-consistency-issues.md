@@ -70,11 +70,11 @@ The following modules can cause performance and stability issues when they are l
 
   These DLL files are loaded into the SQL Server or SQL Server Agent address space if you enable the “Additional User Mode Data” prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might also encounter failures while attempting to launch SQL Server Management Studio.
 
-- Carbon Black -Need dll names
+- Carbon Black relative dll
 
-- Trend Micro – Need dll names
+- perfiCrcPerfMonMgr.dll
 
-  Refer to the software vendor exclusion list setting at [Recommended scan exclusion list for Trend Micro Endpoint products](https://success.trendmicro.com/solution/1059770-recommended-scan-exclusion-list-for-trend-micro-endpoint-products).
+  This DLL file is loaded into the SQL Server process if you install Trend Micro OfficeScan client. Refer to the software vendor exclusion list setting at [Recommended scan exclusion list for Trend Micro Endpoint products](https://success.trendmicro.com/solution/1059770-recommended-scan-exclusion-list-for-trend-micro-endpoint-products).
 
 For more information about how to set exclusion policies for Sqlservr.exe in the application software that is discussed in this article, see the product manual or contact the software vendor.
 

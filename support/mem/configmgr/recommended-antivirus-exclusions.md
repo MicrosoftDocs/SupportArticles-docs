@@ -1,7 +1,7 @@
 ---
 title: Recommended antivirus exclusions for Configuration Manager
 description: Lists the recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients.
-ms.date: 04/28/2021
+ms.date: 06/21/2021
 ms.prod-support-area-path:
 ms.reviewer: jarrettr, jrosse, keiththo
 ---
@@ -54,6 +54,10 @@ We recommend that you add the following real-time protection exclusions to preve
 - *ConfigMgr installation folder*\Inboxes
 - *ConfigMgr installation folder*\Logs
 - *ConfigMgr installation folder*\EasySetupPayload
+- *ContentLib_drive*\SCCMContentLib
+
+  > [!NOTE]
+  > If you have a remote content library, this folder isn't on the site server. For more information, see [Configure a remote content library for the site server](/mem/configmgr/core/plan-design/hierarchy/the-content-library#bkmk_remote).
 
 ### Folder exclusions for site systems
 

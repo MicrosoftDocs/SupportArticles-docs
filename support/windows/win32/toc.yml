@@ -12,6 +12,8 @@
     items:
     - name: An application fails to create a COM+ component
       href: client-application-error-create-com-plus-component.md
+    - name: COM+ supports automatic collection of process dump file
+      href: com-supports-collect-dump-file.md 
     - name: Descriptions and workings of OLE threading models
       href: descriptions-workings-ole-threading-models.md
     - name: Two DLL hosts start when a COM+ object is enabled
