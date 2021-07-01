@@ -56,12 +56,12 @@ You can identify the workflows to be removed by using the ShowScopeDebugInfo() f
 1. Type the following function name: *ShowScopeDebugInfo()*
     - After typing *ShowScopeDebugInfo()* press enter and it will execute a JavaScript function which prints the data in background.
     - **Note** The Workflow Service Health page will need to be refreshed to get updated data from ShowScopeDebugInfo. The information returned by ShowScopeDebugInfo is not real time. There is a slight delay until the results are updated.
-    
+
     :::image type="content" source="./media/reload-the-page/workflow-health.png" alt-text="Image shows workflow status details.":::
 
     **Sample output:**
 
-    ```
+    ```output
     {
       "SupportDocument": "https://go.microsoft.com/fwlink/?linkid=847765",
       "ScopePath": "/spo/ec63b09b-9748-47ba-9018-beeadd405204/f19089ae-d6c6-4feb-be0b-ff4de40a04fc/88890858-ae38-407a-b1e7-152c7cff6fe5",
