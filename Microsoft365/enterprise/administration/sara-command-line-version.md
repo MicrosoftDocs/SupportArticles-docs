@@ -29,7 +29,7 @@ The command-line version of Microsoft Support and Recovery Assistant (SaRA) is s
     **Note:** See the table in the "[Supported switches](#supported-switches)" section to determine whether an elevated Command Prompt window is required to run SaRA for the user's scenario.
 
 1. In the Command Prompt window, navigate to the folder in which you extracted the files from step 2.
-1. Run the command-line version of SaRA by using one or more of the switches that are discussed in the "[Supported switches](#supported-switches)" section.
+1. Run the command-line version of SaRA by using one or more switches that are discussed in the "[Supported switches](#supported-switches)" section.
 
    > [!IMPORTANT]
    > Updates to the command-line version of SaRA will be released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the listed **Created** date for SaRAcmd.exe. Use the link provided in step 1 to download the latest version.
