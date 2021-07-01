@@ -57,9 +57,9 @@ To manually install the SaRA tool, follow these steps:
 1. Double-click **SaraSetup.exe**.
 1. Select **Install**.
    :::image type="content" source="media/install-sara-from-network-share/120760-5.png" alt-text="SaRA setup screen.":::
-1.	Wait for the download and installation process to finish.
+1. Wait for the download and installation process to finish.
    :::image type="content" source="media/install-sara-from-network-share/120760-6.png" alt-text="SaRA setup installation progress.":::
-1.	After the installation is complete, and the End User License agreement has been accepted, the first Support and Recovery screen will be displayed.
+1. After the installation is complete, and the End User License agreement has been accepted, the first Support and Recovery screen will be displayed.
    :::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
 
 
@@ -92,6 +92,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|June 30, 2021|17.00.6805.016|
 |March 16, 2021|17.00.6271.008|
 |February 11, 2021|17.00.6125.006|
 |January 25, 2021|17.00.5991.013|
