@@ -114,4 +114,15 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
   |||
 
+## SaRA command-line version history
+
+Throughout the year, a new build of SaRA is available through the download link that is provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep SaRA updated by replacing the files you have with the latest version.
+
+The following table provides the versions of SaRA that were made available on the specified date.
+
+|Release date|SaRACmd.exe version|
+|--------|--------|
+|May 26, 2021|17.00.6665.000|
+|||
+
 For more information about the full version of SaRA, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/sara_home).
