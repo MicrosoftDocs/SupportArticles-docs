@@ -28,22 +28,21 @@ People who send an email message to a Microsoft 365 user who set up an Out of Of
 
 This issue may occur if one of the following conditions is true:
 
-- A forwarding rule or an automatic reply notification is set up in the user's mailbox.
+- An external forwarding rule, or an automatic reply notification is set up in the user's mailbox.
 - A global Exchange transport rule is created for this mailbox.By design, a mailbox cannot have forwarding rules and an Out of Office notification active at the same time.
 
-## Resolution - Step 1: Identify and remove a forwarding rule
+## Resolution - Step 1: Identify and remove the forwarding rule
 
 To identify and remove a forwarding rule from an Exchange Online mailbox, follow these steps:
 
-1. Connect to Exchange Online by using Windows Remote PowerShell. For information about how to do this, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-
-2. Type the following command, and then press Enter:
+1. [Connect to Exchange Online by using Windows Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+2. Run the following command:
   
     ```powershell
     Get-mailbox -identity <UserID> | FL *forwarding*,*deliver*
     ```
 
-    If forwarding is enabled on the mailbox, the command output resembles the following:
+    If forwarding is enabled on the mailbox, the command output resembles the following example:
 
     ```console
     ForwardingAddress:
@@ -61,9 +60,8 @@ To identify and remove a forwarding rule from an Exchange Online mailbox, follow
 
 To identify and remove Exchange transport rules from an Exchange Online mailbox, follow these steps:
 
-1. Connect to Exchange Online by using Remote PowerShell. For information about how to do this, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-
-2. Type the following command, and then press Enter:
+1. [Connect to Exchange Online by using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+2. Run the following command:
 
     ```powershell
     Get-TransportRule | FL Name,Description
@@ -77,7 +75,7 @@ To identify and remove Exchange transport rules from an Exchange Online mailbox,
 
 ## Workaround
 
-To set up email forwarding rules and an Out of Office notification at the same time, you have to set up Inbox rules for the mailbox instead of setting up a transport rule. To do this, follow these steps:
+To set up email forwarding rules and an Out of Office notification at the same time, you have to set up Inbox rules for the mailbox instead of setting up a transport rule. To do so, follow these steps:
 
 1. Sign in to the [Microsoft 365 portal](https://portal.office.com/) as an administrator.
 2. To open the Exchange admin center, select **Admin**, and then select **Exchange**.
@@ -97,12 +95,9 @@ To set up email forwarding rules and an Out of Office notification at the same t
 
 ## More information
 
-For more information about mail contacts, see [Manage mail contacts](/exchange/recipients-in-exchange-online/manage-mail-contacts).
-
-For more information about how to use the Out of Office functionality in Exchange Online, see [Send automatic replies when you're out of the office](https://support.microsoft.com/office/video-set-up-automatic-replies-and-inbox-rules-b7b63910-c402-48a3-a313-50d5bd5f80c3?ocmsassetid=rz104151618&correlationid=9fbda6e8-5494-47e0-ad15-101de4e16180).
-
-For more information about how to create rules to forward mail, see [Use rules to automatically forward messages](https://support.microsoft.com/office/use-rules-to-automatically-forward-messages-45aa9664-4911-4f96-9663-ece42816d746?ocmsassetid=ha102908356&correlationid=9cb7ef03-bddf-4c05-8688-2cc4e6f4945a).
-
-For more information about how to set up automatic replies, see [Automatic replies (formerly Out of Office assistant)](https://support.microsoft.com/office/automatic-replies-formerly-out-of-office-assistant-48d40166-0129-4653-98f1-eb85f9bd8c20?ocmsassetid=ha102844491&correlationid=bda1a681-d7f6-4368-b572-4ce5bb7dc316).
+- For more information about mail contacts, see [Manage mail contacts](/exchange/recipients-in-exchange-online/manage-mail-contacts).
+- For more information about how to use the Out of Office functionality in Exchange Online, see [Send automatic replies when you're out of the office](https://support.microsoft.com/office/video-set-up-automatic-replies-and-inbox-rules-b7b63910-c402-48a3-a313-50d5bd5f80c3?ocmsassetid=rz104151618&correlationid=9fbda6e8-5494-47e0-ad15-101de4e16180).
+- For more information about how to create rules to forward mail, see [Use rules to automatically forward messages](https://support.microsoft.com/office/use-rules-to-automatically-forward-messages-45aa9664-4911-4f96-9663-ece42816d746?ocmsassetid=ha102908356&correlationid=9cb7ef03-bddf-4c05-8688-2cc4e6f4945a).
+- For more information about how to set up automatic replies, see [Automatic replies (formerly Out of Office assistant)](https://support.microsoft.com/office/automatic-replies-formerly-out-of-office-assistant-48d40166-0129-4653-98f1-eb85f9bd8c20?ocmsassetid=ha102844491&correlationid=bda1a681-d7f6-4368-b572-4ce5bb7dc316).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
