@@ -4,7 +4,7 @@ description: Fixes an issue in which event ID 84 is logged in Active Directory R
 ms.date: 12/31/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

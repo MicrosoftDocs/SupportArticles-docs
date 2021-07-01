@@ -4,14 +4,14 @@ description: Describes how the different NLB operation modes affect network infr
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Network Load Balancing (NLB)
-ms.technology: windows-client-networking 
+ms.technology: networking 
 ---
 # Configure network infrastructure to support the NLB operation mode
 

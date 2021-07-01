@@ -4,7 +4,7 @@ description: Helps to solve an issue where a scheduled task may not run upon reb
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

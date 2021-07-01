@@ -4,7 +4,7 @@ description: Describes new UAC behavior in Windows 10 that will disallow elevati
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

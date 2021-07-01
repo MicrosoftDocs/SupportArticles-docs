@@ -4,7 +4,7 @@ description: How to deactivate or reactivate a license server by using Terminal 
 ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

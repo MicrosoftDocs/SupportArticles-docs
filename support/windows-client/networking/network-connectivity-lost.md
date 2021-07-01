@@ -4,7 +4,7 @@ description: Information about Microsoft Defender Antivirus antimalware platform
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

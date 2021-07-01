@@ -4,7 +4,7 @@ description: Provides a workaround to Event ID 513 when running VSS in Windows S
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

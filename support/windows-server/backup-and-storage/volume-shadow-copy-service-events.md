@@ -4,7 +4,7 @@ description: Describes issues in which Event ID 8019, Event ID 20, Event ID 8193
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

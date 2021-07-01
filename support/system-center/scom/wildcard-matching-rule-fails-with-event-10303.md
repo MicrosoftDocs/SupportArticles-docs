@@ -48,7 +48,7 @@ To resolve this problem, follow these steps:
 
 1. Create the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\v3\Modules\Global\ExpressionFilter`
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Modules\Global\ExpressionFilter`
 
 2. Under this subkey, create a DWORD value.
 3. Type the `MaxExpressionDepth` name for the DWORD value.

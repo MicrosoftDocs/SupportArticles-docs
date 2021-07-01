@@ -4,7 +4,7 @@ description: Describes an issue in which ADAC fails on the domain object propert
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

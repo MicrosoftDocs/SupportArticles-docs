@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot performance and isolate bottlenecks in Linux
-description: Troubleshoot performance and isolate bottlenecks in Linux
+description: Troubleshoot CPU, memory, and disk input and output performance, and isolate bottlenecks in Linux virtual machines
 ms.date: 05/27/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -149,7 +149,7 @@ Latency is the measurement of the average amount of time each operation takes to
 
 `iostat` is a simple command to run, as the basic syntax is:
 
-``iostat <parameters> <time to refresh in seconds> <times to iterate> <block devices>``
+`iostat <parameters> <time to refresh in seconds> <times to iterate> <block devices>`
 
 The options dictate what information `iostat` provides. Without any parameter, `iostat` displays some data which might be helpful:
 
@@ -170,7 +170,7 @@ By default, `iostat` displays data for all block devices present. Additionally, 
 
 Run `iostat` with triggers:
 
-``sudo iostat -dxctm 1``
+`sudo iostat -dxctm 1`
 
 To further expand the `iostat` results, use these variables:
 
@@ -180,7 +180,7 @@ To further expand the `iostat` results, use these variables:
 - `-t`: Print the time for each report displayed. Useful for long runs.
 - `-m`: Display statistics in megabytes per second. A more human readable form.
 
-The number **1** in the command tells `iostat` to refresh every second. Select **Ctrl + C** to stop the refresh.
+The number **1** in the command tells `iostat` to refresh every second. Select Ctrl+C to stop the refresh.
 
 With the extra parameters, the output looks like this:
 
@@ -236,7 +236,7 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
 rtt min/avg/max/mdev = 5.240/5.291/5.339/0.035 ms
 ```
 
-To stop the ping, select **Ctrl + C**.
+To stop the ping, select Ctrl+C.
 
 ## Memory
 
@@ -253,7 +253,7 @@ In Linux systems, it's common to see 99% memory usage. In the `free` output, the
 
 In the `free` output, the *available* column indicates how much memory is available for processes to consume. This amount is calculated by adding buff/cache and free memory.
 
-The `top` command can be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select **Shift + M** when running `top`.
+The `top` command can be configured to sort processes by memory utilization. By default, `top` sorts by CPU percentage (%). To sort by memory utilization (%), select Shift+M when running `top`.
 
 ```output
 [root@rhel78 ~]# top
@@ -285,7 +285,7 @@ Memory usage can increase more than expected in scenarios where the application 
 
 Here is another command used to view the top memory consuming processes:
 
-``ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head``
+`ps -eo pid,comm,user,args,%cpu,%mem --sort=-%mem | head`
 
 The following is an output example:
 
@@ -386,21 +386,21 @@ PerfInsights is the recommended tool from Azure support for VM performance issue
 
 #### Run PerfInsights
 
-PerfInsights is available for both the [Windows](/azure/virtual-machines/how-to-use-perfinsights) and [Linux](/azure/virtual-machines/how-to-use-perfinsights-linux) OS. Verify that your distro is in the list of [supported distros](/azure/virtual-machines/performance-diagnostics#linux) for Performance Diagnostics for Linux.
+PerfInsights is available for both the [Windows](how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) OS. Verify that your distro is in the list of [supported distros](performance-diagnostics.md#linux) for Performance Diagnostics for Linux.
 
 #### Run and analyze reports through Azure portal
 
-When PerfInsights is [installed through the Azure portal](/azure/virtual-machines/performance-diagnostics), the software installs an extension on the VM. Users can also install PerfInsights as an extension by going directly to [Extensions in VM blade](/azure/virtual-machines/performance-diagnostics-vm-extension), and then choosing a performance diagnostics option.
+When PerfInsights is [installed through the Azure portal](performance-diagnostics.md), the software installs an extension on the VM. Users can also install PerfInsights as an extension by going directly to [Extensions in VM blade](performance-diagnostics-vm-extension.md), and then choosing a performance diagnostics option.
 
 ##### Azure portal Option 1
 
-Browse the VM blade and select the *Performance diagnostics* option. You'll be asked to install the option (uses extensions) on the VM that you selected it for.
+Browse the VM blade and select the **Performance diagnostics** option. You'll be asked to install the option (uses extensions) on the VM that you selected it for.
 
 :::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perf-diagnostics-reports-screen-install.png" alt-text="This image shows the Performance Diagnostics reports screen, and asks the user to install Performance diagnostics.":::
 
 #### Azure portal Option 2
 
-Browse to the *Diagnose and Solve Problems* tab in the VM blade, and look for look for the Troubleshoot link under *VM Performance Issues*.
+Browse to the **Diagnose and Solve Problems** tab in the VM blade, and look for look for the **Troubleshoot** link under **VM Performance Issues**.
 
 :::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/look-for-troublshoot-link-vm-perfissues.png" alt-text="This image asks the user to browse to the Diagnose and Solve Problems tab in the VM blade, and look for the Troubleshoot link under VM Performance Issues":::
 
@@ -419,10 +419,10 @@ For example, in the following report, we are seeing Medium impact findings relat
 
 :::image type="content" source="./media/troubleshoot-performance-bottlenecks-linux/perfinsights-report-impact-finding-resources-recommendations.png" alt-text="This image shows the PerfInsights Report and details the results of the report, including Impact Level, Finding, Impacted Resources, and Recommendations.":::
 
-For more information on PerfInsights in the Linux OS, review [How to use PerfInsights Linux in Microsoft Azure - Virtual Machines](/azure/virtual-machines/how-to-use-perfinsights-linux).
+For more information on PerfInsights in the Linux OS, review [How to use PerfInsights Linux in Microsoft Azure - Virtual Machines](how-to-use-perfinsights-linux.md).
 
 ## Additional Resources
 
-- [Troubleshoot Azure virtual machine performance on Linux or Windows - Virtual Machines](/azure/virtual-machines/troubleshoot-performance-virtual-machine-linux-windows)
+- [Troubleshoot Azure virtual machine performance on Linux or Windows - Virtual Machines](troubleshoot-performance-virtual-machine-linux-windows.md)
 
-- [Performance diagnostics for Azure virtual machines](/azure/virtual-machines/performance-diagnostics)
+- [Performance diagnostics for Azure virtual machines](performance-diagnostics.md)

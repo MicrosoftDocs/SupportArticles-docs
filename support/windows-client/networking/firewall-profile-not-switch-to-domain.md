@@ -4,7 +4,7 @@ description: Fixes an issue in which Windows Firewall profile doesn't switch to 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

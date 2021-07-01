@@ -4,7 +4,7 @@ description: Introduce how to troubleshoot ADFS SSO issues.
 ms.date: 03/17/2021
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

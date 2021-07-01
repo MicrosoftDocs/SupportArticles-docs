@@ -4,7 +4,7 @@ description: Resolves an issue that occurs when you start the WDS server on a Wi
 ms.date: 10/21/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

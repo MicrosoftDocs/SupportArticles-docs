@@ -4,7 +4,7 @@ description: Describes an issue in Windows Server 2012 or Windows Server 2012 in
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

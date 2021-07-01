@@ -4,7 +4,7 @@ description: Describes an issue that triggers kernel event ID 2 when the MSFT_Ne
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

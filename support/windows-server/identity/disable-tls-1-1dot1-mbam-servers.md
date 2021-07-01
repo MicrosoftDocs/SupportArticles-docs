@@ -4,7 +4,7 @@ description: Describes steps to disable TLS 1.0 and 1.1 on Microsoft BitLocker A
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

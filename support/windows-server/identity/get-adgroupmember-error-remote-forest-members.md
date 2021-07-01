@@ -4,7 +4,7 @@ description: Describes a problem that occurs when you run the Get-ADGroupMember 
 ms.date: 10/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
