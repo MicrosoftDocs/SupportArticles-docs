@@ -522,10 +522,6 @@
     items:
     - name: Intranet site is identified as Internet site
       href: ./networking/intranet-site-identified-as-an-internet-site.md
-  - name: Network Load Balancing (NLB)
-    items:
-    - name: Configure network infrastructure to support NLB operation mode
-      href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: Remote access
     items:
     - name: Change default MTU Size Settings
