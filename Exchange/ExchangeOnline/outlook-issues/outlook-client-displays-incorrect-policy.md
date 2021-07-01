@@ -30,6 +30,6 @@ If an organization creates multiple retention policies for either Teams or Skyp
 
 The Teams or Skype for Business policy that's displayed in Outlook doesn't apply to a user's mail folders. Therefore, the Outlook client displays the incorrect policy information for the mail folder.
 
-## Status
+## Resolution
 
-Fixed with [Version 2106:June 29](https://docs.microsoft.com/officeupdates/current-channel#version-2106-june-29).
+This issue is fixed in Microsoft 365 Apps [Version 2106:June 29](/officeupdates/current-channel#version-2106-june-29).
