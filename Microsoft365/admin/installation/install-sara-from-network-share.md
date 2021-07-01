@@ -39,7 +39,7 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
 2. Type the path to SaraSetup.exe, and then press **Enter**.
     > [!NOTE]
     >
-    > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.<br />
+    > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.</br>
     > :::image type="content" source="media/install-sara-from-network-share/120760-1.png" alt-text="SaRA cmd line setup.":::
     > If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
     > :::image type="content" source="media/install-sara-from-network-share/120760-2.png" alt-text="SaRA runs in quiet mode.":::
@@ -62,7 +62,6 @@ To manually install the SaRA tool, follow these steps:
 1. After the installation is complete, and the End User License agreement has been accepted, the first Support and Recovery screen will be displayed.
    :::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
 
-
 ## Maintaining the SaRA installation folder and updating SaRA
 
 The files for SaRA are updated regularly. You should update the SaRA files on the network share so that SaRA installations use the latest files. To keep your SaRA files up-to-date, follow these steps:
@@ -82,7 +81,6 @@ Any computer that has SaRA already installed can now be updated by using the fol
 
 SaRA is now installed and ready to run troubleshooting scenarios.
 :::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
-
 
 ## SaRA version history
 
