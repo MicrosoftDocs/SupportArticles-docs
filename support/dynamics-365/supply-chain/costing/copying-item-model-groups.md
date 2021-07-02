@@ -4,6 +4,7 @@ description: When you copy item model groups to another company by using the Ite
 author: niwang
 ms.date: 6/30/2021
 ms.topic: troubleshooting
+ms.service: dynamics-365-supply-chain
 ms.search.form: InventModelGroup
 audience: Application User
 ms.reviewer: kamaybac
@@ -11,6 +12,7 @@ ms.search.region: Global
 ms.author: smnatara
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+search.app: SCM
 ---
 
 # Field settings missing after copying model groups to another company
