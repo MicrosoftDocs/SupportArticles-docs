@@ -88,9 +88,6 @@ If you can open the document, close the document and then reopen it by using met
 1. Select the **File Menu**, and then select **New**.    
 2. Select **Blank document**, and then select **Create**.    
 
-   > [!NOTE]
-   > You might have to reapply some formatting to the last section of the new document.  
-   
 #### Step 2: Insert the damaged document into the new document
 
 1. On the **Insert** tab, select **Insert Object**, and then select **Text From File**.    
