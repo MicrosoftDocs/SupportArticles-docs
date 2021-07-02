@@ -116,8 +116,7 @@
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "browsers/**/*.md": "internet-explorer",
-        "dynamics-365/**/*.md": "dynamics-365"
+        "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
@@ -141,6 +140,9 @@
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
         "power-platform/**/*.md": "power-platform",
+        "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
+        "dynamics-365/marketing/*.md": "dynamics-365-marketing",
+        "dynamics-365/sales/*.md": "dynamics-365-sales",
         "mem/intune/**/*.md": "microsoft-intune"
       },
 
