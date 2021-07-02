@@ -27,4 +27,4 @@ When you copy item model groups to another legal entity (company) by using the *
 
 To create a complete copy of an item model group to another legal entity, you must also select both the item model group inventory policies (`InventInventoryPolicyEntity`) and the cost flow assumption policies (`InventCostFlowAssumptionPolicyEntity`) that are associated with the item model group.
 
-For more information, see [Missing field settings when item model groups are copied to another legal entity](https://docs.microsoft.com/dynamics365/supply-chain/troubleshooting/costing/copying-item-model-groups)
+For more information, see [Missing field settings when item model groups are copied to another legal entity](/dynamics365/supply-chain/troubleshooting/costing/copying-item-model-groups)
