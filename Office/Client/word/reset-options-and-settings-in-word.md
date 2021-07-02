@@ -120,7 +120,7 @@ The Data key and the Options key are the most frequently changed areas.
 
 #### Data key
 
-Word 2016
+Word 2016 or later
 
 **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Data**
 
@@ -152,7 +152,7 @@ This key contains binary information for "most recently used" lists, including t
 
 #### Options key
 
-Word 2016
+Word 2016 or later
 
 **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Options**
 
@@ -204,7 +204,7 @@ All wizard defaults are stored in this key. These settings are created the first
 
 #### Common key
 
-Word 2016
+Word 2016 or later
 
 **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common**
 
