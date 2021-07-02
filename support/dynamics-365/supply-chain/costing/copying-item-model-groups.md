@@ -4,7 +4,7 @@ description: When you copy item model groups to another company by using the Ite
 author: niwang
 ms.date: 6/30/2021
 ms.topic: troubleshooting
-ms.service: dynamics-365-supply-chain
+ms.service: "dynamics-365-supply-chain"
 ms.search.form: InventModelGroup
 audience: Application User
 ms.reviewer: kamaybac
