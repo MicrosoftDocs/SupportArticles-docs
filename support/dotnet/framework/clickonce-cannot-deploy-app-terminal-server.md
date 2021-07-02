@@ -31,5 +31,5 @@ While it might be possible to get a ClickOnce application to deploy on some of t
 
 References:
 
-- [Application Settings Architecture](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8eyb2ct1(v=vs.100))
-- [Choosing a Deployment Strategy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/e2444w33(v=vs.100))
+- [Application Settings Architecture](/previous-versions/visualstudio/visual-studio-2010/8eyb2ct1(v=vs.100))
+- [Choosing a Deployment Strategy](/previous-versions/visualstudio/visual-studio-2010/e2444w33(v=vs.100))
