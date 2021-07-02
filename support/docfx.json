@@ -140,9 +140,9 @@
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
         "power-platform/**/*.md": "power-platform",
-        "power-platform/fraud-protection/*.md": "dynamics-365-fraud-protection",
-        "power-platform/marketing/*.md": "dynamics-365-marketing",
-        "power-platform/sales/*.md": "dynamics-365-sales",
+        "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
+        "dynamics-365/marketing/*.md": "dynamics-365-marketing",
+        "dynamics-365/sales/*.md": "dynamics-365-sales",
         "mem/intune/**/*.md": "microsoft-intune"
       },
 
