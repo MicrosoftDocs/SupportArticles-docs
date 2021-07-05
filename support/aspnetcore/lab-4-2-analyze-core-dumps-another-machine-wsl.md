@@ -146,4 +146,4 @@ If the target runtime version is a private one (remember that .NET Core is open 
 
 ## Next steps
 
-[Lab 4.3 Analyzing core dump files on another machine - Using Docker to open core dump files](lab-4-3-analyze-core-dumps-another-machine-docker)
+[Lab 4.3 Analyzing core dump files on another machine - Using Docker to open core dump files](lab-4-3-analyze-core-dumps-another-machine-docker.md)
