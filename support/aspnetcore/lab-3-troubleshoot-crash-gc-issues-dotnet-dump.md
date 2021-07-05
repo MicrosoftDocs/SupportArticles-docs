@@ -5,7 +5,7 @@ ms.date: 04/15/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Lab 3 Troubleshooting .NET Core dump file crash and GC issues with dotnet-dump in Linux
+# Lab 3 Troubleshooting performance and GC issues with dotnet-dump in Linux
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 

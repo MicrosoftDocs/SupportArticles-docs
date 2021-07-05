@@ -44,5 +44,11 @@
       href: lab-2-1-capture-dumps-createdump.md
     - name: Lab 2.2 Capture dumps with procdump
       href: lab-2-2-capture-dumps-procdump.md
-    - name: Lab 3 Troubleshoot crash and GC issues with dotnet-dump
+    - name: Lab 3 Troubleshoot performance and GC issues with dotnet-dump
       href: lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md
+    - name: Lab 4.1 Copying files to another machine 
+      href: lab-4-1-analyze-core-dumps-another-machine-copy-file.md
+    - name: Lab 4.2 Using WSL to open core dumps in another machine
+      href: lab-4-2-analyze-core-dumps-another-machine-wsl.md
+    - name: Lab 4.3 Using Docker to open core dumps in another machine
+      href: lab-4-3-analyze-core-dumps-another-machine-docker.md
