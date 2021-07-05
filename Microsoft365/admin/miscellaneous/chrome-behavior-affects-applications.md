@@ -69,8 +69,8 @@ The following Microsoft server or client products must also be updated. The upda
 |SharePoint Server 2016|[KB 4484272](https://support.microsoft.com/help/4484272/security-update-for-sharepoint-server-2016-march-10-2020)|March 10, 2020|
 |SharePoint Server 2013|[KB 4484362](https://support.microsoft.com/help/4484362/may-12-2020-cumulative-update-for-microsoft-sharepoint-enterprise-serv)|May 12, 2020|
 |SharePoint Server 2010|[KB 4484389](https://support.microsoft.com/help/4484389/may-12-2020-cumulative-update-for-sharepoint-server-2010-kb4484389)|May 12, 2020|
-|Skype for Business Server 2019||Upcoming late Summer 2020 Cumulative Update (tentative)|
-|Skype for Business Server 2015||April 2020 Cumulative Update (CU 11)|
+|Skype for Business Server 2019|[KB 4549672](https://support.microsoft.com/topic/update-set-cookie-response-header-to-use-samesite-none-in-skype-for-business-server-ucwa-c1d3ad07-e92a-af2e-c030-351b5b753fb7)|September 2020 Cumulative Update (CU 4)|
+|Skype for Business Server 2015|[KB 4549672](https://support.microsoft.com/topic/update-set-cookie-response-header-to-use-samesite-none-in-skype-for-business-server-ucwa-c1d3ad07-e92a-af2e-c030-351b5b753fb7)|May 2020 Cumulative Update (CU 11)|
 
 <a name="Note1"><sup>1</sup></a> This Cumulative Update contains the fix for the SameSite cookie issue, plus additional fixes unrelated to the SameSite cookie issue. Microsoft recommends installing the Cumulative Update rather than the individual update to ensure your environment has all of the fixes available at the time the Cumulative Update was released.
 
