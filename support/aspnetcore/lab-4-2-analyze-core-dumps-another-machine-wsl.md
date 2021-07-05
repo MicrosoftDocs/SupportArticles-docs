@@ -92,7 +92,7 @@ This error occurs because the required .NET Core runtime is not installed on the
 
 This was not a problem in the earlier troubleshooting labs because you had analyzed the dump files on the same VM on which the application was hosted and running. Therefore, the files were already present. Now, you must either copy the correct version of these files from somewhere (for example, from the VM on which the core dump files were taken), or, you have to install the same .NET runtime on the WSL2 Linux VM.
 
-There are several methods to determine the target .NET Core runtime. The easiest is to ask the application owner. Or, if you are the owner, you will know the application's target .NET Core runtime. What if you don't have that information at all? In that case, you can use an SOS extension command, `lm` or `modules`, that lists the *native modules* that are loaded in the process. Run this command to determine the version of your .NET installation.
+There are several methods to determine the target .NET Core runtime. The easiest is to ask the application owner. Or, if you are the owner, you will know the application's target .NET Core runtime. What if you don't have that information at all? In that case, you can use an SOS extension command, `lm` or `modules`, that lists the native modules that are loaded in the process. Run this command to determine the version of your .NET installation.
 
 :::image type="content" source="./media/lab-4-2-analyze-core-dumps-another-machine-wsl/modules.png" alt-text="BuggyAmb modules" border="true":::
 

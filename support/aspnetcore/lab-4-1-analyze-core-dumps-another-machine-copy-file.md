@@ -43,7 +43,7 @@ As the following screenshot shows, you can use the `tar -czvf coredumps.tar.gz c
 
 :::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/tar.png" alt-text="BuggyAmb tar" border="true":::
 
-In the previous example, the archive file *coredumps.tar.gz* is in the dump files folder in the *:::no-loc text="home":::* directory on the Linux VM. The objective is to copy the *:::no-loc text="/home/UserName/coredumps.tar.gz":::* to *:::no-loc text="d:\Learn\Linux\Dumps folder":::* on the target Windows VM.
+In the previous example, the archive file *coredumps.tar.gz* is in the dump files folder in the *:::no-loc text="home":::* directory on the Linux VM. The objective is to copy the *:::no-loc text="/home/UserName/coredumps.tar.gz":::* to *d:\Learn\Linux\Dumps* folder on the target Windows VM.
 
 There are several ways to copy files from a Linux VM. You should already be familiar with one of the options: Using the `pscp` command on the Windows VM. If you have followed the entire series, you should remember this command from [Part 2.5 - Copying files from your development environment to a Linux VM, and then extracting the files in Linux](2-5-copy-file-linux-vm-extract-file.md).
 
@@ -59,7 +59,7 @@ pscp -i D:\Learn\Linux\BuggyAmb-Ubuntu-Training_key.ppk <UserName>@buggyamb:/hom
 > [!NOTE]
 > Similar to PuTTY, pscp uses PPK file format for the private key. If you have only the PEM file and do not have the PPK, you can convert the PEM format to PPK format by using the PuTTY Key Generator tool (PuTTYgen). This is explained in detail in [Part 1.1 - Creating a Linux virtual machine in Azure and connecting to it](1-1-creating-vm.md).
 
-As the following screenshot shows, the command successfully copied the *coredumps.tar.gz* file to the local VM in the *:::no-loc text="D:\Learn\Linux\Dumps":::* folder.
+As the following screenshot shows, the command successfully copied the *coredumps.tar.gz* file to the local VM in the *D:\Learn\Linux\Dumps* folder.
 
 :::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/ahnetnb.png" alt-text="BuggyAmb ahnetnb" border="true":::
 

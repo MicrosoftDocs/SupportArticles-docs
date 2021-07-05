@@ -30,7 +30,7 @@ To create and use Docker containers on a Windows VM, install [Docker Desktop for
 > [!NOTE]
 > Docker can run both Windows and Linux containers, but not at the same time. Therefore, you will have to switch to Linux containers.
 
-Before moving on, we recommend that you review [this FAQ article](https://docs.docker.com/desktop/faqs/) to familiarize yourself with Docker.
+Before moving on, we recommend that you review this [FAQ article](https://docs.docker.com/desktop/faqs/) to familiarize yourself with Docker.
 
 ## Creating a dockerfile
 
