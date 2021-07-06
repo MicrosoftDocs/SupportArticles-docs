@@ -109,11 +109,9 @@ Word 2010
 
 **HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Options**
 
-This key stores the options that you can set from Microsoft Word, either by changing menu options or by running the Registry Options Utility. For more information, see the "Use the Registry Options Utility" section.
+This key stores the options that you can set from Microsoft Word.
 
-The options are in two groups: default options and optional settings. Default options are established during the setup process. You can change them by modifying options in Word. (To modify options in Word, click **Options** on the Tools menu.)
-
-These options may or may not appear in the registry.
+The options are in two groups: default options and optional settings. Default options are established during the setup process. You can change them by modifying options in Word. These options may or may not appear in the registry.
 
 #### Wizards key
 
@@ -182,14 +180,14 @@ To determine whether an item in a Startup folder is causing the problem, you can
 To remove items from the Startup folders, follow these steps:
 
 1. Exit all instances of Word, including Microsoft Outlook if Word is set as your email editor.
-2. Open the `%AppData%\MIcrosoft\Word\STARTUP` folder.   
+2. Open the [Office startup folder](issues-when-start-or-use-word.md#option-6-disable-the-startup-folder-add-ins).
 3. Right-click one of the files that's contained in the folder, and then click **Rename**.
 4. After the file name, type .old, and then press Enter. Note the original name of the file. You may have to rename the file by using its original name.
 5. Start Word.
 6. If you can no longer reproduce the problem, you have found the specific add-in that causes the problem. If you must have the features that the add-in provides, contact the vendor of the add-in for an update.
 
-    If the problem isn't resolved, rename the add-in by using its original name, and then repeat steps 3 through 5 for each file in the Startup folder.
-7. If you can still reproduce the problem, open the `%AppData%\MIcrosoft\Word\STARTUP` folder.   
+   If the problem isn't resolved, rename the add-in by using its original name, and then repeat steps 3 through 5 for each file in the Startup folder.
+7. If you can still reproduce the problem, open the `%AppData%\Microsoft\Word\STARTUP` folder.
 8. Repeat steps 3 through 5 for each file in this Startup folder.
 
 #### COM add-ins
