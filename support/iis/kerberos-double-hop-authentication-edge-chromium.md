@@ -136,6 +136,7 @@ Use the logging feature available in Microsoft Edge (Chromium) to log what the b
 
 - Open a new Microsoft Edge (Chromium) window and type in: *edge://net-export/*
 - Use the **Include cookies and credentials** option when tracing. Without this option authentication trace level data will be omitted.
+
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/option.png" alt-text="image option" border="true":::
 - Click the **Start Logging to Disk** button and provide the file name under which you want to save the trace.
 - In a second Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge (Chromium).
