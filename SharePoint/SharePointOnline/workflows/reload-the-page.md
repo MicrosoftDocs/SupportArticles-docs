@@ -31,11 +31,11 @@ If you select Settings (the gear icon), and then **Site Settings** > **Workflow 
 
 ## Cause
 
-This error occurs if SharePoint 2013 Workflows are in a suspended state for the current SharePoint site.
+This error occurs if SharePoint 2013 Workflows are in a suspended state for the current SharePoint site because one or more workflows have exceeded some limits.
 
 ## Resolution
 
-You can remove the current SharePoint site's suspension by removing SharePoint 2013 Workflows. Use the Workflow Settings page, or delete workflows using SharePoint Designer.
+You can remove the current SharePoint site's suspension by removing SharePoint 2013 Workflows that have exceeded their limits. Use the Workflow Settings page, or delete workflows using SharePoint Designer.
 
 The cleanup process is not instant. It will take time and the Workflow Health will switch to a Connected status when it’s done:
 
