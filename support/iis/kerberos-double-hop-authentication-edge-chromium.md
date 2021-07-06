@@ -30,7 +30,7 @@ The steps below will help you troubleshoot this scenario: The setup works with I
 
 In the scenario above, both configurations allow users to delegate credentials from their user session on machine **Client1** to the back-end API server while connecting through the front-end Web-Server.
 
-In an unconstrained Kerberos delegation configuration, the application pool identity runs on Web-Server and is configured in Active Directory to be trusted for delegation to any service. The application pool's account running on Web-Server can delegate the credentials of authenticated users of the website hosted on that server to any other service in the active directory: an SMTP server, a file server, a database server, another web-server, etc. This is called unconstrained delegation because the application pool account has the permission (it's unconstrained) to delegate credentials to any service it contacts. 
+In an unconstrained Kerberos delegation configuration, the application pool identity runs on Web-Server and is configured in Active Directory to be trusted for delegation to any service. The application pool's account running on Web-Server can delegate the credentials of authenticated users of the website hosted on that server to any other service in the active directory: an SMTP server, a file server, a database server, another web-server, etc. This is called unconstrained delegation because the application pool account has the permission (it's unconstrained) to delegate credentials to any service it contacts.
 
 In a constrained delegation configuration, the active directory account that is used as an application pool identity can delegate the credentials of authenticated users only to a list of services that have been authorized to delegate. If the web-application residing on the server called Web-Server must also contact a database and authenticate on behalf of the user, this service principal name (SPN) must be added to the list of authorized services.  
 
@@ -64,7 +64,7 @@ For compatibility purposes, if you must maintain an application using unconstrai
 - Install the 'Edge Administrative Templates' for Group Policy.
 - Create a new Group Policy object.
 - Edit the configuration of the Group Policy to allow for unconstrained delegation when authenticating to servers.
-- (Optional): Check if Microsoft Edge is using the correct delegation flags
+- (Optional): Check if Microsoft Edge is using the correct delegation flags.
 
 ## Step 1: Install the 'Administrative Templates' for Active Directory
 
@@ -136,7 +136,7 @@ Use the logging feature available in Microsoft Edge (Chromium) to log what the b
 
 - Open a new Microsoft Edge (Chromium) window and type in: *edge://net-export/*
 - Use the **Include cookies and credentials** option when tracing. Without this option authentication trace level data will be omitted.
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/option.png" alt-text="image option" border="true":::
+    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/option.png" alt-text="image option" border="true":::
 - Click the **Start Logging to Disk** button and provide the file name under which you want to save the trace.
 - In a second Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge (Chromium).
 - Once you have tried to authenticate, go back to the previous tab where the tracing was enabled and click **Stop Logging** button. The tracing interface will indicate where the file containing the trace has been written to.
@@ -153,8 +153,8 @@ t=3076 [st=12]       +AUTH_LIBRARY_INIT_SEC_CTX  [dt=3]
 
 This event shows that:
 
-- The browser is calling the library function `InitializeSecurityContext` (first line)
+- The browser is calling the library function `InitializeSecurityContext` (first line).
 - The flags that are passed in (line 2):
-  - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`
+  - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
   - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity – only the client should authenticate to the server to prove its identity.
 - Finally, on line 3 is the `SPN` (Service Principal Name) used by the browser when making the authentication call.
