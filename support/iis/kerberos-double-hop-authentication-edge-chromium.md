@@ -1,0 +1,160 @@
+---
+title: Kerberos double-hop authentication with Microsoft Edge (Chromium)
+description: This article introduces extra steps to set up integrated Windows authentication with Microsoft Edge (Chromium).
+ms.date: 6/30/2021
+ms.prod-support-area-path: WWW authentication and authorization
+ms.reviewer: aartigoyle, dili
+author: cobibi
+ms.author: v-yunhya
+---
+# Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)
+
+_Applies to:_ &nbsp; Internet Information Services
+
+## Introduction
+
+Setting up Windows Authentication based on the Kerberos authentication protocol can be a complex endeavor, especially when dealing with scenarios such as delegation of identity from a front-end site to a back-end service in the context of IIS and ASP.NET. Follow this article's steps to set up the delegation of authentication tickets and use services with a modern browser such as Microsoft Edge (Chromium) version 87 or above.
+
+This article assumes that you are setting up an architecture similar to the one represented in the diagram below:
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/setup.png" alt-text="image setup" border="true":::
+
+- The **Client1** computer is part of the same active directory as Web-Server and Api-Server.
+- Users of the computer Client one will log on to the machine using the Windows Active Directory account.
+- They will then launch a browser (Microsoft Edge (Chromium)), navigate to a website located on Web-Server, and authenticate via integrated Windows authentication using Kerberos.
+- The website located on Web-Server will make HTTP calls using authenticated user's credentials to Api-Server to retrieve application data on behalf of users, using Kerberos credential delegation.
+
+The steps below will help you troubleshoot this scenario: The setup works with Internet Explorer, but when users adopt Microsoft Edge (Chromium), they can no longer use the credential delegation feature. To use Kerberos credential delegation, refer to [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md) first.
+
+## Constrained or unconstrained delegation
+
+In the scenario above, both configurations allow users to delegate credentials from their user session on machine **Client1** to the back-end API server while connecting through the front-end Web-Server.
+
+In an unconstrained Kerberos delegation configuration, the application pool identity runs on Web-Server and is configured in Active Directory to be trusted for delegation to any service. The application pool's account running on Web-Server can delegate the credentials of authenticated users of the website hosted on that server to any other service in the active directory: an SMTP server, a file server, a database server, another web-server, etc. This is called unconstrained delegation because the application pool account has the permission (it's unconstrained) to delegate credentials to any service it contacts. 
+
+In a constrained delegation configuration, the active directory account that is used as an application pool identity can delegate the credentials of authenticated users only to a list of services that have been authorized to delegate. If the web-application residing on the server called Web-Server must also contact a database and authenticate on behalf of the user, this service principal name (SPN) must be added to the list of authorized services.  
+
+Constrained delegation is more secure than unconstrained delegation based on the principle of least privilege: an application is granted the rights it needs to function and nothing more, whereas unconstrained delegation allows an application to contact resources it shouldn't contact on behalf of the user.
+
+## How to know whether the Kerberos ticket obtained on the client to send to the Web-Server uses constrained or unconstrained delegation?
+
+Use the klist command tool present in Windows to list the cache of Kerberos tickets from the client machine (**Client1** in the diagram above). Look for a ticket named HTTP/\<Name of Web-Server> - the name on the ticket is the SPN: the service principal name of the service you wish to contact and authenticate to via Kerberos. The ticket also contains a few flags. Two of them are of interest: `forwardable` and `ok_as_delegate`.
+
+- The first flag, `forwardable`, indicates that the KDC (key distribution center) can issue a new ticket with a new network mask if necessary. This allows for a user to log into a remote system and for the remote system to obtain a new ticket on behalf of the user to log into another backend system as if the user had logged into the remote system locally.
+
+- The second flag, `ok_as_delegate` indicates that the service account of the service the user is trying to authenticate to (in the case of the above diagram, the application pool account of the IIS application pool hosting the web-application) is trusted for unconstrained delegation.
+
+If these services are using unconstrained delegation, the tickets on the client machine contain the `ok_as_delegate` and `forwardable` flags. In most cases, when constrained delegation is configured, the tickets don't contain the `ok_as_delegate` flag but contain the `forwardable` flag.
+
+## Why does unconstrained delegation work in Internet Explorer and not in Microsoft Edge (Chromium)?
+
+When an attempt is made to authenticate to a website using Kerberos based authentication, the browser calls a Windows API to set up the authentication context – the API in question is `InitializeSecurityContext`. This API might receive a series of flags to indicate whether the browser allows the `delegatable` ticket the user has received. The ticket is marked as `delegatable` because the service the user is trying to authenticate to has the right to delegate credentials in an unconstrained manner. However, that doesn't mean that the application trying to authenticate (in this case the browser) should use this capacity.
+
+By default, Internet Explorer passes the flag to `InitializeSecurityContext`, indicating that if the ticket can be delegated, then it should be. Microsoft Edge (Chromium) from version 87 and above doesn't pass the flag to `InitializeSecurityContext` just because the ticket is marked with the `ok_as_delegate` flag. We don't recommend using unconstrained delegation in applications because it gives applications more privileges than required: applications could delegate the user's identity to any other service on the domain and authenticate as the user, which isn't necessary for most applications using credential delegation. Applications should contact only the services on the list that was specified when setting up constrained delegation.
+
+By default, Microsoft Edge (Chromium) works with constrained delegation, where the IIS website running on Web-Server only has the right to contact the backend API site hosted on Api-Server, as shown in the application pool identity account configuration from Active Directory listed below:
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/properties.png" alt-text="image properties" border="true":::
+
+## Enabling Edge-Chromium to work with unconstrained delegation in Active Directory
+
+For compatibility purposes, if you must maintain an application using unconstrained delegation via Kerberos, enable Microsoft Edge (Chromium) to allow tickets delegation. The steps below are detailed in the following sections of this article:
+
+- Install the 'Administrative Templates' for Group Policy Central Store in Active Directory (if not already present).
+- Install the 'Edge Administrative Templates' for Group Policy.
+- Create a new Group Policy object.
+- Edit the configuration of the Group Policy to allow for unconstrained delegation when authenticating to servers.
+- (Optional): Check if Microsoft Edge is using the correct delegation flags
+
+## Step 1: Install the 'Administrative Templates' for Active Directory
+
+Download the templates from [Administrative Templates (.admx)](https://www.microsoft.com/download/details.aspx?id=57576) (for Windows Server 2019).
+
+Download the installer and extract the contents to a folder of your choice. You can simply extract it to the default specified location of the package, which is: *C:\Program Files (x86)\Microsoft Group Policy\Windows 10 October 2018 Update (1809) v2\PolicyDefinitions*.
+
+Once the package is unzipped, locate the *Sysvol* folder on your domain controller. The path to the folder is: *C:\Windows\SYSVOL\sysvol\\*. Inside the *Sysvol* folder is a folder with the same name as your Active Directory name (in the sample here, **Oddessy.local**). From there, navigate to the **Policies** folder. If it doesn't exist, create a folder called **Policy Definitions** as shown below:
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policy-definitions.png" alt-text="image policy-definitions" border="true":::
+
+Copy the content of the *PolicyDefinitions* folder (which was extracted from the installer to the *PolicyDefinitions* folder) you created inside your domain in the *sysvol* folder on the domain controller.
+
+> [!NOTE]
+> The files that were extracted by the installer also contain localized content: to save space, transfer the localized files only for the desired languages. For example, the folder named fr-FR contains all localized content in French.
+
+When the transfer is complete, verify that the templates are available in Active Directory. To do this, open the **Group Policy Management** snap-in of the Microsoft Management Console (type in *Win+R* and then *gpmc.msc* to launch). Inside the **Group Policy Management**, find a group policy object and edit it.
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policy.png" alt-text="image policy" border="true":::
+
+As shown in the screenshot above, under the **Computer Configuration** node, is a **Policies** node and **Administrative templates** node.
+
+## Step 2: Install the Microsoft Edge (Chromium) Administrative templates
+
+While you may have the **Policy Administrative Templates** on the domain controller to start with, you will still have to install the Microsoft Edge (Chromium) Policy files to have access to the policy meant for enabling double-hop unconstrained delegation through this browser. To start, go to the Microsoft Edge (Chromium) for [business download site](https://www.microsoft.com/edge/business/download). Select the version you wish to download from the **Channel / Version** dropdown – the latest stable version is recommended. Then select build you want from the **Build** dropdown and finally the target operating system from the **Select platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear:
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/download.png" alt-text="image download" border="true":::
+
+Click the **Get Policy Files** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Edge. Double click on the file to explore the content – a zip archive with the same name. Extract the content of the zip archive to a folder on your local disk. The extracted content will contain a folder called *Windows* in which you will find a subfolder called *Admx*. This will contain the administrative templates as well as their localized versions (should you need them in a language other than English).
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/admx-folder.png" alt-text="image admx-folder" border="true":::
+
+Transfer the *.admx* files inside the same folder under the *Sysvol* directory where the *Administrative Templates* from the previous were transferred to (in the example above: *C:\Windows\SYSVOL\sysvol\odessy.local\Policies\PolicyDefinitions*).
+
+Open the Active Directory Group Policy Editor and select an existing group policy object for editing to check the presence of the newly transferred Microsoft Edge templates. These will be located in a folder called **Microsoft Edge** located underneath the **Administrative Templates** folder in the tree view:
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/editor.png" alt-text="image editor" border="true":::
+
+## Enable Kerberos double-hop authentication for unconstrained delegation scenarios in Edge
+
+The final step is to enable the policy that allows the Microsoft Edge browser to pass the `ok_as_delegate` flag to the `InitializeSecurityContext` api call when performing authentication using Kerberos to a Windows Integrated enabled website. If you don't know whether your Microsoft Edge browser is using Kerberos to authenticate (and not NTLM), refer to [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md).
+
+In the Active Directory Group Policy Editor, select the group policy object that will be applied to the computers inside your Active Directory from which you intend to allow end users to authenticate via Kerberos authentication and have their credentials delegated to backend services through unconstrained delegation. The policy that will enable unconstrained delegation from Microsoft Edge (Chromium) is located under the **Http Authentication** folder of the **Microsoft Edge** templates as shown below:
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/authentication.png" alt-text="image authentication" border="true":::
+
+Use this setting to configure a list of servers for which delegation of Kerberos tickets is allowed.
+
+> [!NOTE]
+> A list of servers must be provided. In the example used at the beginning of this article, you would have to add the Web-Server server name to the list to allow the front-end Web-Server web-application to delegate credentials to the backend Api-Server.
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/credentials.png" alt-text="image credentials" border="true":::
+
+After the newly editing group policy object is applied to the client computers inside the domain, go to the test authentication page in [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md) and download from [ASP.NET Authentication test page](/archive/blogs/friis/asp-net-authentication-test-page). It will yield a **ImpersonationLevel** setting of Delegate instead of **Impersonate** signaling that the delegation of credentials is now allowed.
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/who-page.png" alt-text="image who-page" border="true":::
+
+To test if the policy was applied correctly on the client workstation, open a new Microsoft Edge (Chromium) tab and type in: *edge://policy:*
+
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policies.png" alt-text="image policies" border="true":::
+
+The `AuthNegotiateDelegateAllowlist` policy should be set to indicate the values of the server names for which Microsoft Edge is allowed to perform delegation of Kerberos tickets. If the policy doesn't appear in the list, it hasn't been deployed or was deployed on the wrong computers.
+
+## Checking if Microsoft Edge uses delegation to contact web-applications
+
+This troubleshooting / optional check step: once the policy has been configured and deployed, additional steps must be taken to verify whether Microsoft Edge (Chromium) is passing the correct delegation flags to `IntializeSecurityContext`. These steps use tools that are already built into Microsoft Edge or that are available as online services.
+
+Use the logging feature available in Microsoft Edge (Chromium) to log what the browser is doing when requesting a website. To enable logging:
+
+- Open a new Microsoft Edge (Chromium) window and type in: *edge://net-export/*
+- Use the **Include cookies and credentials** option when tracing. Without this option authentication trace level data will be omitted.
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/option.png" alt-text="image option" border="true":::
+- Click the **Start Logging to Disk** button and provide the file name under which you want to save the trace.
+- In a second Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge (Chromium).
+- Once you have tried to authenticate, go back to the previous tab where the tracing was enabled and click **Stop Logging** button. The tracing interface will indicate where the file containing the trace has been written to.
+
+Use the JSON file containing the trace to see what parameters the browser has passed to the `InitializeSecurityContext` function when attempting to authenticate. To analyze the trace, use this [online tool](https://netlog-viewer.appspot.com/#import).
+
+Upload the trace file created in the previous steps and run the tool. Inside the parsed trace is an event that resembles the following:
+
+```output
+t=3076 [st=12]       +AUTH_LIBRARY_INIT_SEC_CTX  [dt=3]
+                      --> flags = {"delegated":false,"mutual":false,"value":"0x00000000"}
+                      --> spn = "HTTP/web-server.odessy.local"
+```
+
+This event shows that:
+
+- The browser is calling the library function `InitializeSecurityContext` (first line)
+- The flags that are passed in (line 2):
+  - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`
+  - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity – only the client should authenticate to the server to prove its identity.
+- Finally, on line 3 is the `SPN` (Service Principal Name) used by the browser when making the authentication call.
