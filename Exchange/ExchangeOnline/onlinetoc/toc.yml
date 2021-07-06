@@ -475,6 +475,8 @@
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
+    - name: Migration fails with mailbox GUID
+      href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
     - name: Public folder couldn't be mail-enabled
       href: ../public-folders/public-folder-not-be-mail-enabled.md
     - name: Restored folders cause a migration batch failure
