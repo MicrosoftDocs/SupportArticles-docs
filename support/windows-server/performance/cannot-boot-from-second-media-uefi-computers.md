@@ -21,6 +21,6 @@ Assume that two Windows bootable media devices such as a [CD-ROM](https://uefi.o
 
 For example, suppose the first bootable media is Windows Server 2016 and the second one is Windows Server 2019. When you try to boot the computer from Windows Server 2019, the computer boots from Windows Server 2016 instead.
 
-This is by design. The current Windows OS versions do not support Device Logical Unit–Vendor-Defined Messaging Device Path. A Windows ISO image will boot only when it is mounted from the primary bootable Device Logical Unit mass storage device.
+This is by design. The current Windows OS versions do not support [Device Logical Unit](https://uefi.org/sites/default/files/resources/UEFI_Spec_2_9_2021_03_18.pdf#page=380)–[Vendor-Defined Messaging Device Path](https://uefi.org/sites/default/files/resources/UEFI_Spec_2_9_2021_03_18.pdf#page=384). A Windows ISO image will boot only when it is mounted from the primary bootable Device Logical Unit mass storage device.
 
 [!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
