@@ -16,15 +16,16 @@ appliesto:
 - Outlook 2019
 - Outlook 2016
 - Outlook for Office 365
+- Exchange Online
 search.appverid: MET150
 ---
-# How to remove the Get and set up Outlook Mobile app on my phone option from Outlook
+# How to remove the Get and set up Outlook Mobile app on my phone option from Outlook and Outlook on the Web
 
 _Original KB number:_ &nbsp; 4010175
 
 ## About the Get and set up the Outlook Mobile app on my phone option
 
-Microsoft Outlook 2016, Outlook 2019, and Outlook for Office 365 offer an option to set up the Outlook Mobile app for your phone. The option appears in four places in Outlook:
+Microsoft Outlook 2016, Outlook 2019, Outlook for Office 365 and Outlook on the Web (OWA) offer an option to set up the Outlook Mobile app for your phone. The option appears in four places in Outlook:
 
 - When you select the **Inbox** folder, the following option appears on top of the navigation pane:
 
@@ -84,3 +85,14 @@ You can remove this option in the Local Group Policy Editor by setting **Disable
 3. Right-click **Disable Outlook Mobile Hyperlink**, and select **Edit**.
 4. Select **Enabled**, and then select **OK**.
 5. Exit Local Group Policy Editor.
+
+## How to remove this option in Outlook on the Web
+
+You can remove this option using Exchange Online PowerShell:
+
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+2. Run the following command:
+```powershell
+Set-OrganizationConfig -MobileAppEducationEnabled:$false
+```
+
