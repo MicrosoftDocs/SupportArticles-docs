@@ -61,7 +61,7 @@ By default, Microsoft Edge works with constrained delegation, where the IIS webs
 For compatibility purposes, if you must maintain an application using unconstrained delegation via Kerberos, enable Microsoft Edge to allow tickets delegation. The steps below are detailed in the following sections of this article:
 
 1. [Install the Administrative Templates for Group Policy Central Store in Active Directory (if not already present)](#step-1-install-the-administrative-templates-for-active-directory).
-1. [Install the Microsoft Edge Administrative templates](#step-2-install-the-microsoft-edge-chromium-administrative-templates).
+1. [Install the Microsoft Edge Administrative templates](#step-2-install-the-microsoft-edge-administrative-templates).
 1. Create a new Group Policy object.
 1. [Edit the configuration of the Group Policy to allow for unconstrained delegation when authenticating to servers](#step-3-edit-the-configuration-of-the-group-policy-to-allow-for-unconstrained-delegation-when-authenticating-to-servers).
 1. [(Optional): Check if Microsoft Edge is using the correct delegation flags](#step-4-optional-check-if-microsoft-edge-is-using-the-correct-delegation-flags).
