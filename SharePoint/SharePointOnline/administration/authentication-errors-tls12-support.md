@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 144545
 - CI 147050
+- CI 152523
 ms.collection: SPO_Content
 ms.author: v-matham
 appliesto:
@@ -33,12 +34,15 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 
 You experience one or more of the following errors when you access SharePoint:
 
+>Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+at System.Net.HttpWebRequest.GetResponse()
+
 >System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send.
 
 >System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
 
 >System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
-   
+
 >The Business Data Connectivity Metadata Store is currently unavailable.
 
 ### Resolution
