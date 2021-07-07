@@ -86,7 +86,7 @@ You can remove this option in the Local Group Policy Editor by setting **Disable
 4. Select **Enabled**, and then select **OK**.
 5. Exit Local Group Policy Editor.
 
-## How to remove this option in Outlook on the Web
+## How to remove this option in Outlook on the web
 
 You can remove this option using Exchange Online PowerShell:
 
