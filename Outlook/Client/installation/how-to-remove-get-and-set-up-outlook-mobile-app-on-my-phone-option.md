@@ -19,7 +19,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# How to remove the Get and set up Outlook Mobile app on my phone option from Outlook and Outlook on the Web
+# How to remove the Get and set up Outlook Mobile app on my phone option from Outlook and Outlook on the web
 
 _Original KB number:_ &nbsp; 4010175
 
@@ -95,4 +95,3 @@ You can remove this option using Exchange Online PowerShell:
 ```powershell
 Set-OrganizationConfig -MobileAppEducationEnabled:$false
 ```
-
