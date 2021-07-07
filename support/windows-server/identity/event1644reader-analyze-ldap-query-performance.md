@@ -34,7 +34,7 @@ Script Center disclaimer
 The sample scripts are not supported under any Microsoft standard support program or service. The sample scripts are provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
 
 Online peer support  
-For online peer support, join [The Official Scripting Guys Forum!](https://social.technet.microsoft.com/forums/en/itcg/threads/) To provide feedback or report bugs in sample scripts, start a new discussion on the **Discussions** tab for this script.
+For online peer support, join [The Official Scripting Guys Forum!](https://social.technet.microsoft.com/Forums/scriptcenter/en-US/home/) To provide feedback or report bugs in sample scripts, start a new discussion on the **Discussions** tab for this script.
 
 ## How to use the script
 
@@ -153,4 +153,4 @@ In this situation, numbers in the Excel spreadsheet are rendered as in the follo
 
 To resolve this issue, change the **Decimal symbol** to a period (.) in the **Region settings** item in Control Panel.  
 
-For more information about LDAP queries, see the following blog: [How to find expensive, inefficient, and long running LDAP queries in Active Directory](https://blogs.technet.com/b/askpfeplat/archive/2015/05/11/how-to-find-expensive-inefficient-and-long-running-ldap-queries-in-active-directory.aspx)
+For more information about LDAP queries, see the following blog: [How to find expensive, inefficient, and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859)
