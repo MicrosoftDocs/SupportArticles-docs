@@ -28,7 +28,9 @@ Event1644Reader.ps1 is a Windows PowerShell script that extracts data from 1644 
 
 ## How to obtain the script
 
-You can obtain the script from the [Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/event-1644-reader-export-45205268).
+## The following information is incorrect and needs to include script to dowload as Technet Gallery decommisioned!
+You can obtain the script from the [Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/event-1644-reader-export-45205268). 
+
 
 Script Center disclaimer  
 The sample scripts are not supported under any Microsoft standard support program or service. The sample scripts are provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
