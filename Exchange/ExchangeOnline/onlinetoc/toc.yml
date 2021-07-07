@@ -473,6 +473,8 @@
       href: ../public-folders/cannot-apply-read-unread-setting.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
+    - name: Emails with the "HierarchySync_" subject
+      href: ../public-folders/pf-hierarchy-sync-emails.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
     - name: Public folder couldn't be mail-enabled
