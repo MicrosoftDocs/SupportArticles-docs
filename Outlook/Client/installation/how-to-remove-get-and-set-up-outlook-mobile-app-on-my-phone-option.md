@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4010175
 
 ## About the Get and set up the Outlook Mobile app on my phone option
 
-Microsoft Outlook 2016, Outlook 2019, Outlook for Office 365 and Outlook on the Web (OWA) offer an option to set up the Outlook Mobile app for your phone. The option appears in four places in Outlook:
+Microsoft Outlook 2016, Outlook 2019, Outlook for Office 365, and Outlook on the web (OWA) offer an option to set up the Outlook Mobile app for your phone. The option appears in four places in Outlook:
 
 - When you select the **Inbox** folder, the following option appears on top of the navigation pane:
 
