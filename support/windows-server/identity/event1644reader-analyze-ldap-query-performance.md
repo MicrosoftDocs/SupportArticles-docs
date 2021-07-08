@@ -28,7 +28,6 @@ Event1644Reader.ps1 is a Windows PowerShell script that extracts data from 1644 
 
 ## How to obtain the script
 
-## Update we managed to update the blog post https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859 to include the file
 You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859). 
  
  > [!NOTE]
