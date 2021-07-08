@@ -34,11 +34,11 @@ In an unconstrained Kerberos delegation configuration, the application pool iden
 
 In a constrained delegation configuration, the active directory account that is used as an application pool identity can delegate the credentials of authenticated users only to a list of services that have been authorized to delegate. If the web-application residing on the server called Web-Server must also contact a database and authenticate on behalf of the user, this service principal name (SPN) must be added to the list of authorized services.  
 
-Constrained delegation is more secure than unconstrained delegation based on the principle of least privilege: an application is granted the rights it needs to function and nothing more, whereas unconstrained delegation allows an application to contact resources it shouldn't contact on behalf of the user.
+Constrained delegation is more secure than unconstrained delegation based on the principle of least privilege. An application is granted the rights it needs to function and nothing more, whereas unconstrained delegation allows an application to contact resources it shouldn't contact on behalf of the user.
 
 ## How to know whether the Kerberos ticket obtained on the client to send to the Web-Server uses constrained or unconstrained delegation?
 
-Use the klist command tool present in Windows to list the cache of Kerberos tickets from the client machine (**Client1** in the diagram above). Look for a ticket named HTTP/\<Name of Web-Server>. The name on the ticket is the SPN: the service principal name of the service you wish to contact and authenticate to via Kerberos. The ticket also contains a few flags. Two of them are of interest: `forwardable` and `ok_as_delegate`.
+Use the klist command tool present in Windows to list the cache of Kerberos tickets from the client machine (**Client1** in the diagram above). Look for a ticket named HTTP/\<Name of Web-Server>. **Note**: \<Name of Web-Server> is the SPN of the service you wish to contact and authenticate to via Kerberos. The ticket also contains a few flags. Two of them are of interest: `forwardable` and `ok_as_delegate`.
 
 - The first flag, `forwardable`, indicates that the KDC (key distribution center) can issue a new ticket with a new network mask if necessary. This allows for a user to log into a remote system and for the remote system to obtain a new ticket on behalf of the user to log into another backend system as if the user had logged into the remote system locally.
 
@@ -50,7 +50,7 @@ If these services are using unconstrained delegation, the tickets on the client 
 
 When an attempt is made to authenticate to a website using Kerberos based authentication, the browser calls a Windows API to set up the authentication context – the API in question is `InitializeSecurityContext`. This API might receive a series of flags to indicate whether the browser allows the `delegatable` ticket the user has received. The ticket is marked as `delegatable` because the service the user is trying to authenticate to has the right to delegate credentials in an unconstrained manner. However, that doesn't mean that the application trying to authenticate (in this case the browser) should use this capacity.
 
-By default, Internet Explorer passes the flag to `InitializeSecurityContext`, indicating that if the ticket can be delegated, then it should be. Microsoft Edge from version 87 and above doesn't pass the flag to `InitializeSecurityContext` just because the ticket is marked with the `ok_as_delegate` flag. We don't recommend using unconstrained delegation in applications because it gives applications more privileges than required: applications could delegate the user's identity to any other service on the domain and authenticate as the user, which isn't necessary for most applications using credential delegation. Applications should contact only the services on the list that was specified when setting up constrained delegation.
+By default, Internet Explorer passes the flag to `InitializeSecurityContext`, indicating that if the ticket can be delegated, then it should be. Microsoft Edge from version 87 and above doesn't pass the flag to `InitializeSecurityContext` just because the ticket is marked with the `ok_as_delegate` flag. We don't recommend using unconstrained delegation in applications because it gives applications more privileges than required. Applications could delegate the user's identity to any other service on the domain and authenticate as the user, which isn't necessary for most applications using credential delegation. Applications should contact only the services on the list that was specified when setting up constrained delegation.
 
 By default, Microsoft Edge works with constrained delegation, where the IIS website running on Web-Server only has the right to contact the backend API site hosted on API-Server, as shown in the application pool identity account configuration from Active Directory listed below:
 
@@ -64,22 +64,22 @@ For compatibility purposes, if you must maintain an application using unconstrai
 1. [Install the Microsoft Edge Administrative templates](#step-2-install-the-microsoft-edge-administrative-templates).
 1. [Create a new Group Policy object](#step-3-create-a-new-group-policy-object).
 1. [Edit the configuration of the Group Policy to allow for unconstrained delegation when authenticating to servers](#step-4-edit-the-configuration-of-the-group-policy-to-allow-for-unconstrained-delegation-when-authenticating-to-servers).
-1. [(Optional): Check if Microsoft Edge is using the correct delegation flags](#step-5-optional-check-if-microsoft-edge-is-using-the-correct-delegation-flags).
+1. [(Optional) Check if Microsoft Edge is using the correct delegation flags](#step-5-optional-check-if-microsoft-edge-is-using-the-correct-delegation-flags).
 
 ### Step 1: Install the Administrative Templates for Active Directory
 
 1. Download the templates from [Administrative Templates (.admx)](https://www.microsoft.com/download/details.aspx?id=57576) (for Windows Server 2019).
 
-1. Download the installer and extract the contents to a folder of your choice. You can simply extract it to the default specified location of the package, which is: *C:\Program Files (x86)\Microsoft Group Policy\Windows 10 October 2018 Update (1809) v2\PolicyDefinitions*.
+1. Download the installer and extract the contents to a folder of your choice. You can simply extract it to the default specified location of the package, which is *C:\Program Files (x86)\Microsoft Group Policy\Windows 10 October 2018 Update (1809) v2\PolicyDefinitions*.
 
-1. Once the package is unzipped, locate the *Sysvol* folder on your domain controller. The path to the folder is: *C:\Windows\SYSVOL\sysvol\\*. Inside the *Sysvol* folder is a folder with the same name as your Active Directory name (in the sample here, **Oddessy.local**). From there, navigate to the **Policies** folder. If it doesn't exist, create a folder called **Policy Definitions** as shown below:
+1. Once the package is unzipped, locate the *Sysvol* folder on your domain controller. The path to the folder is *C:\Windows\SYSVOL\sysvol\\*. Inside the *Sysvol* folder is a folder with the same name as your Active Directory name (in the sample here, **Oddessy.local**). From there, navigate to the **Policies** folder. If it doesn't exist, create a folder called **Policy Definitions** as shown below:
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policy-definitions.png" alt-text="image policy-definitions" border="true":::
 
 1. Copy the content of the *PolicyDefinitions* folder (which was extracted from the installer to the *PolicyDefinitions* folder) you created inside your domain in the *sysvol* folder on the domain controller.
 
     > [!NOTE]
-    > The files that were extracted by the installer also contain localized content: to save space, transfer the localized files only for the desired languages. For example, the folder named fr-FR contains all localized content in French.
+    > The files that were extracted by the installer also contain localized content. To save space, transfer the localized files only for the desired languages. For example, the folder named fr-FR contains all localized content in French.
 
 1. When the transfer is complete, verify that the templates are available in Active Directory. To do this, open the **Group Policy Management** snap-in of the Microsoft Management Console (press Windows+R and then type *gpmc.msc* to launch). Inside the **Group Policy Management**, find a group policy object and edit it.
 
@@ -94,12 +94,12 @@ While you may have the **Policy Administrative Templates** on the domain control
 1. Go to the Microsoft Edge for [business download site](https://www.microsoft.com/edge/business/download).
 
 1. Select the version you wish to download from the **Channel/Version** dropdown. The latest stable version is recommended.
-1. Select the build you want from the **Build** dropdown and finally the target operating system from the **Select platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear:
+1. Select the build you want from the **Build** dropdown and finally the target operating system from the **Select platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear.
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/download.png" alt-text="image download" border="true":::
 
 1. Click **Get Policy Files** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Microsoft Edge.
-1. Double click on the file to explore the content—a zip archive with the same name.
+1. Double click the file to explore the content—a zip archive with the same name.
 1. Extract the content of the zip archive to a folder on your local disk. The extracted content will contain a folder called *Windows* in which you will find a subfolder called *Admx*. This will contain the administrative templates as well as their localized versions ( You should need them in a language other than English).
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/admx-folder.png" alt-text="image admx-folder" border="true":::
@@ -140,7 +140,7 @@ After the newly editing group policy object is applied to the client computers i
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/who-page.png" alt-text="image who-page" border="true":::
 
-To test if the policy was applied correctly on the client workstation, open a new Microsoft Edge tab and type: *edge://policy:*
+To test if the policy was applied correctly on the client workstation, open a new Microsoft Edge tab and type *edge://policy*.
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policies.png" alt-text="image policies" border="true":::
 
@@ -150,21 +150,21 @@ The `AuthNegotiateDelegateAllowlist` policy should be set to indicate the values
 
 Here is the troubleshooting/optional check step.
 
-Once the policy has been configured and deployed, additional steps must be taken to verify whether Microsoft Edge is passing the correct delegation flags to `IntializeSecurityContext`. These steps use tools that are already built into Microsoft Edge or that are available as online services.
+Once the policy has been configured and deployed, the following steps must be taken to verify whether Microsoft Edge is passing the correct delegation flags to `IntializeSecurityContext`. The steps use tools that are already built into Microsoft Edge or that are available as online services.
 
-1. To start, use the logging feature available in Microsoft Edge to log what the browser is doing when requesting a website. To enable logging:
+1. Use the logging feature available in Microsoft Edge to log what the browser is doing when requesting a website. To enable logging:
 
-    1. Open a new Microsoft Edge window and type: *edge://net-export/*.
+    1. Open a new Microsoft Edge window and type *edge://net-export/*.
     1. Use the **Include cookies and credentials** option when tracing. Without this option authentication trace level data will be omitted.
 
         :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/option.png" alt-text="image option" border="true":::
     1. Click the **Start Logging to Disk** button and provide the file name under which you want to save the trace.
-    1. In a second Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge.
-    1. Once you have tried to authenticate, go back to the previous tab where the tracing was enabled and click **Stop Logging** button. The tracing interface will indicate where the file containing the trace has been written to.
+    1. Open another Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge.
+    1. Once you have tried to authenticate, go back to the previous tab where the tracing was enabled and click the **Stop Logging** button. The tracing interface will indicate where the file containing the trace has been written to.
 
-1. Use the JSON file containing the trace to see what parameters the browser has passed to the `InitializeSecurityContext` function when attempting to authenticate. To analyze the trace, use this [online tool](https://netlog-viewer.appspot.com/#import).
+1. Use the JSON file containing the trace to see what parameters the browser has passed to the `InitializeSecurityContext` function when attempting to authenticate. To analyze the trace, use the [netlog_viewer](https://netlog-viewer.appspot.com/#import).
 
-1. Upload the trace file created in the previous steps and run the tool. Inside the parsed trace is an event that resembles the following:
+1. Inside the parsed trace is an event log that resembles the following:
 
     ```output
     t=3076 [st=12]       +AUTH_LIBRARY_INIT_SEC_CTX  [dt=3]
@@ -172,10 +172,10 @@ Once the policy has been configured and deployed, additional steps must be taken
                           --> spn = "HTTP/web-server.odessy.local"
     ```
   
-    This event shows that:
+    This log shows that:
   
     - The browser is calling the library function `InitializeSecurityContext` (first line).
-    - The flags that are passed in (line 2):
+    - The flags that are passed in line 2:
       - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
       - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity – only the client should authenticate to the server to prove its identity.
-    - Finally, on line 3 is the `SPN` (Service Principal Name) used by the browser when making the authentication call.
+    - Finally, in line 3 is the `SPN` used by the browser when making the authentication call.
