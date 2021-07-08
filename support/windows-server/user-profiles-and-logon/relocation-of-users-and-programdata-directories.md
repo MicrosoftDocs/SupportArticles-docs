@@ -43,7 +43,7 @@ For information about how to use the answer file setting, see [Answer Files Over
 > [!NOTE]
 > If you use the FolderLocations unattend setting to move user data to a location other than the *%systemdrive%* drive, some servicing components may not be installed. These components may include critical updates, security updates, hotfixes, and service packs.
 
-## Information that is documented in the current release of the Windows AIK and the Windows OPK
+## Information that is documented in the Windows AIK and the Windows OPK
 
 The Windows Automated Installation Kit (AIK) and the Windows OEM Preinstallation Kit (OPK) for Windows and Windows Server contain documentation warnings that are related to the usage of the **ProfilesDirectory** and **ProgramData** unattend settings. These are the settings that let you relocate the *Users* directory and the *ProgramData* directory to locations other than their default locations. This includes other drives.
 
