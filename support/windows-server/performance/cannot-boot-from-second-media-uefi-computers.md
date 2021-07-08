@@ -1,5 +1,5 @@
 ---
-title: UEFI computers always boot from the first bootable media
+title: Can't boot Windows from secondary bootable devices on UEFI computers
 description: Describes a problem in which a Unified Extensible Firmware Interface (UEFI) based computer can't boot Windows from the second bootable media.
 ms.date: 07/05/2021
 author: v-lianna
