@@ -81,7 +81,7 @@ For compatibility purposes, if you must maintain an application using unconstrai
     > [!NOTE]
     > The files that were extracted by the installer also contain localized content: to save space, transfer the localized files only for the desired languages. For example, the folder named fr-FR contains all localized content in French.
 
-1. When the transfer is complete, verify that the templates are available in Active Directory. To do this, open the **Group Policy Management** snap-in of the Microsoft Management Console (type *Win+R* and then *gpmc.msc* to launch). Inside the **Group Policy Management**, find a group policy object and edit it.
+1. When the transfer is complete, verify that the templates are available in Active Directory. To do this, open the **Group Policy Management** snap-in of the Microsoft Management Console (press Windows+R and then type *gpmc.msc* to launch). Inside the **Group Policy Management**, find a group policy object and edit it.
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policy.png" alt-text="image policy" border="true":::
 
@@ -89,16 +89,18 @@ For compatibility purposes, if you must maintain an application using unconstrai
 
 ### Step 2: Install the Microsoft Edge Administrative templates
 
-While you may have the **Policy Administrative Templates** on the domain controller to start with, you will still have to install the Microsoft Edge Policy files to have access to the policy meant for enabling double-hop unconstrained delegation through this browser. To start, go to the Microsoft Edge for [business download site](https://www.microsoft.com/edge/business/download).
+While you may have the **Policy Administrative Templates** on the domain controller to start with, you will still have to install the Microsoft Edge Policy files to have access to the policy meant for enabling double-hop unconstrained delegation through this browser. To install the Microsoft Edge Policy files, follow the steps:
 
-1. Select the version you wish to download from the **Channel/Version** dropdown——the latest stable version is recommended.
-1. Select build you want from the **Build** dropdown and finally the target operating system from the **Select platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear:
+1. Go to the Microsoft Edge for [business download site](https://www.microsoft.com/edge/business/download).
+
+1. Select the version you wish to download from the **Channel/Version** dropdown. The latest stable version is recommended.
+1. Select the build you want from the **Build** dropdown and finally the target operating system from the **Select platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear:
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/download.png" alt-text="image download" border="true":::
 
-1. Click the **Get Policy Files** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Microsoft Edge.
-1. Double click on the file to explore the content——a zip archive with the same name.
-1. Extract the content of the zip archive to a folder on your local disk. The extracted content will contain a folder called *Windows* in which you will find a subfolder called *Admx*. This will contain the administrative templates as well as their localized versions (should you need them in a language other than English).
+1. Click **Get Policy Files** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Microsoft Edge.
+1. Double click on the file to explore the content—a zip archive with the same name.
+1. Extract the content of the zip archive to a folder on your local disk. The extracted content will contain a folder called *Windows* in which you will find a subfolder called *Admx*. This will contain the administrative templates as well as their localized versions ( You should need them in a language other than English).
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/admx-folder.png" alt-text="image admx-folder" border="true":::
 
@@ -112,9 +114,9 @@ While you may have the **Policy Administrative Templates** on the domain control
 
 Here's how to create a new Group Policy object using the Active Directory Group Policy Manager MMC snap-in:
 
-1. Press the Windows+R key to bring up the **Run** menu on your Domain controller.
-1. Type in *Gpmc.msc* to open the Microsoft Management Console and load the Active Directory Group Policy Manager snap-in.
-1. Once the console is loaded, locate the **Group Policy Objects** node in the tree view of the console and right click the node to bring up the context menu.
+1. Press the Windows+R key to open the **Run** menu on your Domain controller.
+1. Type *Gpmc.msc* to open the Microsoft Management Console and load the Active Directory Group Policy Manager snap-in.
+1. Locate the **Group Policy Objects** node in the tree view of the console and right click the node to open the context menu.
 1. Select the **New** menu item, fill in the name of the group policy you wish to create, and then click **OK**.
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/create-policy.png" alt-text="image create-policy" border="false":::
@@ -146,32 +148,34 @@ The `AuthNegotiateDelegateAllowlist` policy should be set to indicate the values
 
 ### Step 5 (Optional): Check if Microsoft Edge is using the correct delegation flags
 
-This troubleshooting / optional check step: once the policy has been configured and deployed, additional steps must be taken to verify whether Microsoft Edge is passing the correct delegation flags to `IntializeSecurityContext`. These steps use tools that are already built into Microsoft Edge or that are available as online services.
+Here is the troubleshooting/optional check step.
 
-Use the logging feature available in Microsoft Edge to log what the browser is doing when requesting a website. To enable logging:
+Once the policy has been configured and deployed, additional steps must be taken to verify whether Microsoft Edge is passing the correct delegation flags to `IntializeSecurityContext`. These steps use tools that are already built into Microsoft Edge or that are available as online services.
 
-1. Open a new Microsoft Edge window and type: *edge://net-export/*
-1. Use the **Include cookies and credentials** option when tracing. Without this option authentication trace level data will be omitted.
+1. To start, use the logging feature available in Microsoft Edge to log what the browser is doing when requesting a website. To enable logging:
 
-    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/option.png" alt-text="image option" border="true":::
-1. Click the **Start Logging to Disk** button and provide the file name under which you want to save the trace.
-1. In a second Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge.
-1. Once you have tried to authenticate, go back to the previous tab where the tracing was enabled and click **Stop Logging** button. The tracing interface will indicate where the file containing the trace has been written to.
+    1. Open a new Microsoft Edge window and type: *edge://net-export/*.
+    1. Use the **Include cookies and credentials** option when tracing. Without this option authentication trace level data will be omitted.
 
-Use the JSON file containing the trace to see what parameters the browser has passed to the `InitializeSecurityContext` function when attempting to authenticate. To analyze the trace, use this [online tool](https://netlog-viewer.appspot.com/#import).
+        :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/option.png" alt-text="image option" border="true":::
+    1. Click the **Start Logging to Disk** button and provide the file name under which you want to save the trace.
+    1. In a second Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge.
+    1. Once you have tried to authenticate, go back to the previous tab where the tracing was enabled and click **Stop Logging** button. The tracing interface will indicate where the file containing the trace has been written to.
 
-Upload the trace file created in the previous steps and run the tool. Inside the parsed trace is an event that resembles the following:
+1. Use the JSON file containing the trace to see what parameters the browser has passed to the `InitializeSecurityContext` function when attempting to authenticate. To analyze the trace, use this [online tool](https://netlog-viewer.appspot.com/#import).
 
-```output
-t=3076 [st=12]       +AUTH_LIBRARY_INIT_SEC_CTX  [dt=3]
-                      --> flags = {"delegated":false,"mutual":false,"value":"0x00000000"}
-                      --> spn = "HTTP/web-server.odessy.local"
-```
+1. Upload the trace file created in the previous steps and run the tool. Inside the parsed trace is an event that resembles the following:
 
-This event shows that:
-
-- The browser is calling the library function `InitializeSecurityContext` (first line).
-- The flags that are passed in (line 2):
-  - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
-  - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity – only the client should authenticate to the server to prove its identity.
-- Finally, on line 3 is the `SPN` (Service Principal Name) used by the browser when making the authentication call.
+    ```output
+    t=3076 [st=12]       +AUTH_LIBRARY_INIT_SEC_CTX  [dt=3]
+                          --> flags = {"delegated":false,"mutual":false,"value":"0x00000000"}
+                          --> spn = "HTTP/web-server.odessy.local"
+    ```
+  
+    This event shows that:
+  
+    - The browser is calling the library function `InitializeSecurityContext` (first line).
+    - The flags that are passed in (line 2):
+      - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
+      - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity – only the client should authenticate to the server to prove its identity.
+    - Finally, on line 3 is the `SPN` (Service Principal Name) used by the browser when making the authentication call.
