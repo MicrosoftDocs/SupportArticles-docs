@@ -1,5 +1,5 @@
 ---
-title: Policy changes in relocation of Users and ProgramData directories
+title: Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 description: Describes information about the policy changes for relocation of the Users directory and ProgramData directory to a drive other than the %systemdrive% in Windows.
 ms.date: 07/09/2021
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
 ms.technology: windows-server-user-profiles
 ---
-# Upgrade to Windows versions before Windows 10 is blocked if Users and ProgramData directories are changed
+# Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 
 Before Windows 10, using the **ProgramData** unattend setting to redirect folders to a drive other than the system volume will block your ability to upgrade to that version of Windows.
 
@@ -47,7 +47,7 @@ For information about how to use the answer file setting, see [Answer Files Over
 
 The Windows Automated Installation Kit (AIK) and the Windows OEM Preinstallation Kit (OPK) for Windows and Windows Server contain documentation warnings that are related to the usage of the **ProfilesDirectory** and **ProgramData** unattend settings. These are the settings that let you relocate the *Users* directory and the *ProgramData* directory to locations other than their default locations. This includes other drives.
 
-These warnings were included before the servicing stack update (update [937287](https://support.microsoft.com/help/937287)) was available. This update addresses the issue that is discussed in the warning text. You cannot upgrade such installations to the next version of Windows.
+These warnings were included before the servicing stack update (update [937287](https://support.microsoft.com/help/937287)) was available. This update addresses the issue that is discussed in the warning text. You cannot upgrade such installations to the Windows version that is before Windows 10.
 
 ## Reference
 
