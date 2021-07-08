@@ -312,6 +312,15 @@ Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect
 
 Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.
 
+### Remote Management Invalid Profile
+Upon enrollment with Apple Business Manager, Remote Management on the device shows "The configuration for your iPhone/iPad could not be downloaded from (company name): Invalid Profile.
+
+**Cause:** If you have confirmed the profile is accurate, *Device Type Restrictions* may be blocking iOS/iPadOS enrollment, regardless of user attestation. Either custom device type restrictions are configured, or the default *All Users* policy is blocking the platform from enrolling altogether, which will block Apple Business Manager from enrolling the device to Endpoint Manager and Azure Active Directory.  
+
+#### Resolution
+Update *All Users* in *Device Type Restrictions* to allow the iOS/PadOS platform.  Blocking personally owned devices only will enable corporate devices, whether they are registered via a Device Enrollment Program or listed with a Corporate Device Identifier to enroll.  
+
+
 ## Next steps
 
 - [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
