@@ -15,7 +15,7 @@ ms.technology: windows-server-user-profiles
 ---
 # Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 
-Before Windows 10, using the **ProgramData** unattend setting to redirect folders to a drive other than the system volume will block your ability to upgrade to a later Windows version that is earlier than Windows 10.
+Before Windows 10, using the **ProgramData** unattend setting to redirect folders to a drive other than the system volume will block your ability to upgrade to a later version of Windows that is earlier than Windows 10.
 
 By changing the default location of the *User* directories or *ProgramData* folders to a volume other than the system volume, you cannot service your Windows installation. Any updates, fixes, or service packs cannot be applied to the installation. We recommend that you do not change the location of the user profile directories or program data folders.
 
