@@ -1,5 +1,5 @@
 ---
-title: SharePoint 2013 Workflow Error To try again, reload the page and then start the workflow
+title: SharePoint 2013 Workflow Error To try again, reload the page
 description: Describes how to troubleshoot an error about Workflows.
 author: salarson
 manager: dcscontentpm
@@ -27,7 +27,7 @@ When starting a SharePoint 2013 Workflow, you encounter the following error mess
 
 If you select Settings (the gear icon), and then **Site Settings** > **Workflow Settings** > **Workflow Health**, the status will show as suspended:
 
-:::image type="content" source="./media/reload-the-page/workflow-suspended.png" alt-text="Image shows the workflow status as suspended.":::
+:::image type="content" source="./media/reload-the-page/workflow-suspended.png" alt-text="Screenshot of the Workflow Health page showing the workflow status as suspended.":::
 
 ## Cause
 
@@ -39,7 +39,7 @@ You can remove the current SharePoint site's suspension by removing SharePoint 2
 
 The cleanup process is not instant. It will take time and the Workflow Health will switch to a Connected status when it’s done:
 
-:::image type="content" source="./media/reload-the-page/workflow-connected.png" alt-text="Image shows workflow status as connected.":::
+:::image type="content" source="./media/reload-the-page/workflow-connected.png" alt-text="Screenshot of the Workflow Health page showing workflow status as connected.":::
 
 We recommend removing SharePoint 2013 Workflows by using the Workflow Settings page.
 
@@ -57,7 +57,7 @@ You can identify the workflows to be removed by using the ShowScopeDebugInfo() f
     - After typing *ShowScopeDebugInfo()* press enter and it will execute a JavaScript function which prints the data in background.
     - **Note** The Workflow Service Health page will need to be refreshed to get updated data from ShowScopeDebugInfo. The information returned by ShowScopeDebugInfo is not real time. There is a slight delay until the results are updated.
 
-    :::image type="content" source="./media/reload-the-page/workflow-health.png" alt-text="Image shows workflow status details.":::
+    :::image type="content" source="./media/reload-the-page/workflow-health.png" alt-text="Screenshot of the Workflow Health page showing workflow status details.":::
 
     **Sample output:**
 
