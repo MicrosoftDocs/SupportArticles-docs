@@ -23,8 +23,6 @@
       href: ../administration/missing-certificate-on-the-last-page-of-hybrid-configuration-wizard.md
     - name: OAuth authentication configuration fails
       href: ../administration/exchange-oauth-authentication-could-not-find-the-authorization.md
-    - name: Online attributes aren't written back to on-premises
-      href: ../administration/attribute-not-written-to-azure-ad.md
     - name: Outlook Web App address is out of date error
       href: ../administration/outlook-web-app-address-is-out-of-date-error-when-accessing-owa.md
     - name: Primary SMTP address is overwritten by targetAddress

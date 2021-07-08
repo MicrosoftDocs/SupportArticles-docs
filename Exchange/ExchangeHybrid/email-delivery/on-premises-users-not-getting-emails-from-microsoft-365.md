@@ -30,13 +30,13 @@ Additionally, when a Microsoft 365 user sends an email message to an on-premises
 
 ## Resolution
 
-This occurs if the domain that's set up in the hybrid deployment isn't set as a shared domain in Microsoft 365. To fix this issue, set up the domain as a shared domain. To do this, follow these steps:
+This occurs if the domain that's set up in the hybrid deployment isn't set as an internal relay domain in Microsoft 365. To fix this issue, set up the domain as an internal relay domain:
 
-1. Sign in to the [Microsoft 365 portal](https://portal.office.com/) as a global admin.
-2. Select **Admin**, and then select **Exchange** to open the Exchange admin center.
-3. In the left navigation pane of the Exchange admin center, select **mail flow**, and then select **accepted domains**.
-4. Double-click the domain that's set up for the hybrid deployment.
-5. Select **Shared**, and then select **save**.
+1. Sign in to the [Exchange admin center](https://admin.exchange.microsoft.com) as a Global admin or Exchange admin.
+2. Go to **Mail flow** > **Accepted domains**.
+3. Select the domain that's set up for the hybrid deployment, and then select **Edit**.
+4. In the **Accepted Domain** window, in the **This accepted domain is** section, select **Internal relay** as the domain type.
+5. When you're finished, select **Save**.
 
 ## More information
 

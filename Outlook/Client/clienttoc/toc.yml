@@ -343,6 +343,8 @@
       href: ../message-body/image-in-html-formatted-email-not-displayed.md
     - name: The Linked image cannot be displayed error
       href: ../message-body/the-linked-image-cannot-be-displayed-error.md
+    - name: User info in @mentions doesn't resolve
+      href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/outlook/troubleshoot/context/client-context
     - name: Yu Gothic font characters are displayed incorrectly
       href: ../message-body/yu-gothic-font-characters-displayed-incorrectly.md
   - name: Performance
