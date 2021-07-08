@@ -135,9 +135,9 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 ### Workaround (supported)
 
-1. Obtain the MFCMapi tool from the following CodePlex website:
+1. Obtain the MFCMapi tool from the following website:
 
-    [https://mfcmapi.codeplex.com/](https://mfcmapi.codeplex.com/)
+    [MFCMapi](https://github.com/stephenegriffin/mfcmapi)
 2. Start the tool on the affected user's computer.
 
     ![MFCMapi screenshot](./media/mapi-unavailable/mfcmapi.png)

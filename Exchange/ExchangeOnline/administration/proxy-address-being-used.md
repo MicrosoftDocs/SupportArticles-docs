@@ -16,7 +16,7 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-# (Proxy address  is already being used) error message in Exchange Online
+# "Proxy address is already being used" error message in Exchange Online
 
 ## Problem
 
@@ -55,8 +55,11 @@ To determine which objects share the proxy address of a specified user, follow t
 
 Only one proxy address at a time can be assigned to an object. After you determine which object is in conflict, you can remove or change the proxy address that's associated with that object.
 
+To resolve this issue when creating shared mailboxes, see [Error when creating shared mailboxes](/microsoft-365/admin/email/resolve-issues-with-shared-mailboxes?view=o365-worldwide#error-when-creating-shared-mailboxes&preserve-view=true).
+
 ## More information
 
 For more information about primary addresses and proxy addresses, see [Add or remove email addresses for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+

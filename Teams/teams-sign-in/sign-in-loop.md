@@ -24,7 +24,7 @@ When you try to sign in to Microsoft Teams in Microsoft Edge, Internet Explorer 
 
 ## Cause
 
-This issue occurs if your organization uses **Trusted Sites** in Internet Explorer and doesn't enable the URLs for Microsoft Teams. In this case, the Teams web-based application cannot sign in, as the trusted sites for Teams are not enabled.
+This issue occurs if your organization uses **Trusted Sites** in Internet Explorer and doesn't enable the URLs for Microsoft Teams. In this case, the Teams web-based application cannot sign in, as the trusted sites for Teams aren't enabled.
 
 ## Resolution
 
@@ -45,7 +45,15 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
 
     :::image type="content" source="media/sign-in-loop/edge.png" alt-text="Screenshot of edge.":::
 
+To change the settings by using GPO, follow these steps:
+
+1. [Download and install the Microsoft Edge administrative template](/deployedge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
+2. Add the sites listed in step 3 above to the **Content settings** > **CookiesAllowedForUrls** setting, either with a mandatory or recommended policy. For more information, see [Set mandatory or recommended policies](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) and [CookiesAllowedForUrls setting](/deployedge/microsoft-edge-policies#cookiesallowedforurls).
+
 ### Internet Explorer
+
+> [!Note]
+> Starting on November 30, 2020, the Microsoft Teams web app no longer supports Internet Explorer 11. For more information, go [here](https://aka.ms/AA97tsw).
 
 1. In Windows Control Panel, open **Internet Options**.
 2. In the Internet Options window, select **Privacy** and **Advanced**.
@@ -77,11 +85,20 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
 
+To change the settings by using GPO:
+
+1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
+2. Add the sites listed in step 3 above to the **Content settings** > **CookiesAllowedForUrls** setting.
+
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:
 >
 > - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams)
 > - [Office 365 U.S. Government GCC High endpoints](/microsoft-365/enterprise/microsoft-365-u-s-government-gcc-high-endpoints?view=o365-worldwide&preserve-view=true)
+
+## More information
+
+There are some known issues you might run into when you sign in to Teams. For more information, see [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f)?
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 

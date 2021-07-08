@@ -289,33 +289,12 @@ If your issues aren't resolved, see [My move request is still not complete or th
 
 ### Network Performance factors to consider
 
-This section describes best practices for improving network performance during migrations. The discussion is generally because the biggest impact on network performance during migration is related to third-party hardware and Internet service providers (ISPs).The Microsoft 365 Network Analysis Tool is deployed to help analyze network-related issues prior to deploying Microsoft 365 services:
+This section describes best practices for improving network performance during migrations. The discussion is generally because the biggest impact on network performance during migration is related to third-party hardware and Internet service providers (ISPs). The [Microsoft 365 network connectivity test tool](/microsoft-365/enterprise/office-365-network-mac-perf-onboarding-tool) helps analyze network-related issues prior to deploying Microsoft 365 services.
 
-- North America: `http://na1-fasttrack.cloudapp.net`
-- EMEA: `http://em1-fasttrack.cloudapp.net`
-- APAC: `http://ap1-fasttrack.cloudapp.net`
+For more information, see the following articles:
 
-The first time you select `http://na1-fasttrack.cloudapp.net`, you will be prompted to install an ActiveX control. Once you install it, you will get a Security Warning as shown below:
-
-:::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/security-warning.jpg" alt-text="screenshot of the security warning 1" border="false":::
-
-Install [Java](https://java.com/download/).
-
-#### Reboot
-
-Go to `http://na1-fasttrack.cloudapp.net` and you will be prompted to run the application as shown below:
-
-:::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/prompted-to-run-application.png" alt-text="screenshot of the security warning 2" border="false":::
-
-:::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/enter-office-365-tenant-name.png" alt-text="Please enter your Office 365 tenant name below" border="false":::
-
-|Element|Description|Best practices|
-|---|---|---|
-|Network capacity|The amount of time it takes to migrate mailboxes to Exchange Online is determined by the available and maximum capacity of your network.|Identify your available network capacity and determine the maximum upload capacity. Contact your ISP to confirm your allocated bandwidth and get details about restrictions, such as the total amount of data that can be transferred in a specific period of time.<br/>Use tools to evaluate your actual network capacity. Make sure you test the end-to-end flow of data, from your on-premises data source to the Microsoft data center gateway servers.<br/>Identify other loads on your network (for example, backup utilities and scheduled maintenance) that can affect your network capacity.|
-|Network stability|A fast network doesn't always result in fast migrations. If the network isn't stable, data transfer takes longer because of error correction. Depending on the migration type, error correction can significantly affect migration performance.|Network hardware and driver issues often cause network stability problems. Work with your hardware vendors to understand your network devices and apply the vendor's latest recommended drivers and software updates.|
-
-- If your issues are resolved, congratulations! Your scenario is complete.
-- [My move request is still not complete.](#have-an-intrusion-detection-issue-ids)
+- [Microsoft 365 network connectivity test tool](/microsoft-365/enterprise/office-365-network-mac-perf-onboarding-tool)
+- [Network connectivity in the Microsoft 365 Admin Center](/microsoft-365/enterprise/office-365-network-mac-perf-overview)
 
 ### Have an Intrusion detection issue (IDS)
 
