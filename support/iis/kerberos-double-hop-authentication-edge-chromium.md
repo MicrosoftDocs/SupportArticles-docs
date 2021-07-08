@@ -106,7 +106,7 @@ While you may have the **Policy Administrative Templates** on the domain control
 
 1. Open the Active Directory Group Policy Editor and select an existing group policy object for editing to check the presence of the newly transferred Microsoft Edge templates. These will be located in a folder called **Microsoft Edge** located underneath the **Administrative Templates** folder in the tree view:
 
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/editor.png" alt-text="image editor" border="true":::
+    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/editor.png" alt-text="image editor" border="true":::
 
 ### Step 3: Create a new Group Policy object
 
@@ -117,7 +117,7 @@ Here's how to create a new Group Policy object using the Active Directory Group 
 1. Once the console is loaded, locate the **Group Policy Objects** node in the tree view of the console and right click the node to bring up the context menu.
 1. Select the **New** menu item, fill in the name of the group policy you wish to create, and then click **OK**.
 
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/create-policy.png" alt-text="image editor" border="false":::
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/create-policy.png" alt-text="image create-policy" border="false":::
 
 ### Step 4: Edit the configuration of the Group Policy to allow for unconstrained delegation when authenticating to servers
 
