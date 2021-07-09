@@ -64,7 +64,7 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 
       :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/docker-inspect-command-output.png" alt-text="Screenshot of the output of running the docker inspect command.":::
 
-Additional information
+## Additional information
 
 - [Container insights overview](/azure/azure-monitor/containers/container-insights-overview)
 - [Monitor your Kubernetes cluster performance with Container insights](/azure/azure-monitor/containers/container-insights-analyze)
