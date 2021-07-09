@@ -102,7 +102,7 @@ To repair authentication-related issues that are associated with provider-hosted
     $appTitle = '{0}'
     $clientID = '{1}'
     $targetWeb = Get-SPWeb '{2}'
-    $Scope = 'Taxonomy'
+    $Scope = 'Site'
     $Right = 'FullControl'
     $authRealm = Get-SPAuthenticationRealm -ServiceContext $targetWeb.Site
     $AppIdentifier = $clientID + '@' + $authRealm
