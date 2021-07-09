@@ -4,7 +4,7 @@ description: Describes an issue in which a backlog is reported for a Read-Only m
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where a backlog is reported for a Read-Only member after you remove a replication file filter.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4021676
 
 ## Symptoms

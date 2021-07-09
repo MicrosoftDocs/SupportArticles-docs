@@ -4,7 +4,7 @@ description: Describes the default encryption settings for the Microsoft L2TP/IP
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes the default encryption settings for the Microsoft L2TP/IPSec virtual private network (VPN) client.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 325158
 
 ## Summary

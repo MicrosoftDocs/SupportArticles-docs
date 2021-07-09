@@ -4,7 +4,7 @@ description: Lists the available updates for Terminal Services (Remote Desktop S
 ms.date: 10/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article summarizes the available hotfixes and updates for issues that can occur in Terminal Services for Windows Server 2008 environments.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2312539
 
 ## Summary

@@ -4,7 +4,7 @@ description: Describes an issue that prevents users of Windows 10 Anniversary Up
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article provides a resolution to make sure you can configure a PIN when Convenience PIN and Hello for Business policies are enabled in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3201940
 
 ## Symptoms

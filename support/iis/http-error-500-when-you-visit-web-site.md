@@ -31,7 +31,7 @@ Error message:
 > Server Error in Application "*application name*"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x80070032  
-Description of HRESULT ISAPI filter *:::no-loc text="drive:\FilePath\ISAPI_FLT.dll":::* tried to register for `SF_NOTIFY_READ_RAW_DATA` notification.
+Description of HRESULT ISAPI filter *:::no-loc text="drive:\\FilePath\\ISAPI_FLT.dll":::* tried to register for `SF_NOTIFY_READ_RAW_DATA` notification.
 
 Cause
 
@@ -69,7 +69,7 @@ Description of HRESULT Handler "ASPClassic" has a bad module "IsapiModule" in it
 
 Cause
 
-This problem occurs because the ISAPIModule module is missing from the modules list for the Web site. The ISAPIModule module is in this location:  *:::no-loc text="drive:\Windows\System32\inetsrv\isapi.dll":::*.
+This problem occurs because the ISAPIModule module is missing from the modules list for the Web site. The ISAPIModule module is in this location:  *:::no-loc text="drive:\\Windows\\System32\\inetsrv\\isapi.dll":::*.
 
 Resolution
 
@@ -102,7 +102,7 @@ Make sure that the script-mapping points to the *ISAPI.dll* file that can proces
 2. In IIS Manager, expand **\<server name>**, expand **Web sites**, and then click the Web site that you want to modify.
 3. In **Features** view, double-click **Handler Mappings**.
 4. Make sure that the script-mapping points to the correct *ISAPI.dll* file.
-   For example, *.asp* files should map to the *:::no-loc text="%windir%\system32\inetsrv\asp.dll":::* file.
+   For example, *.asp* files should map to the *:::no-loc text="%windir%\\system32\\inetsrv\\asp.dll":::* file.
 
 ## HResult code 0x80070005
 
@@ -170,7 +170,7 @@ There are two possibilities for HResult 0x8007007f:
     3. In **Features** view, double-click **Handler Mappings**.
     4. Right-click the script mapping that you want to edit, and then click **Edit**.
     5. In the **Edit Script Map** dialog box, type the appropriate executable file in the **Executable** box, and then click **OK**.  
-    For example, *.asp* files should map to the *:::no-loc text="%windir%\system32\inetsrv\asp.dll":::* file.
+    For example, *.asp* files should map to the *:::no-loc text="%windir%\\system32\\inetsrv\\asp.dll":::* file.
 
 ## More information
 

@@ -4,7 +4,7 @@ description: Provides a solution to an issue where launching the App-V 5.0 Manag
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-application-virtualization-app-v
 
 This article provides a solution to an issue where launching the App-V 5.0 Management console that's installed on a drive other than the C: drive fails.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2800730
 
 ## Symptoms

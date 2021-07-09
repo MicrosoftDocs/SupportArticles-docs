@@ -16,6 +16,8 @@
     href: android-enterprise-enrolled-devices-fails-attaching-photo.md
   - name: Can't create messages in Outlook for Android
     href: creating-message-action-not-allowed.md
+  - name: Can't install apps and run shell scripts in macOS
+    href: cannot-install-macos-apps-and-run-shell-scripts.md
   - name: Can't save corporate data in WIP-allowed apps
     href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: Can't sync apps to Intune
@@ -34,6 +36,8 @@
     href: error-0x87d13ba2-deploy-macos-lob-app.md  
   - name: Fingerprint authentication not prompted for policy-managed apps
     href: no-prompt-for-fingerprint-identity.md
+  - name: LOB app versioning
+    href: lob-app-versioning.md  
   - name: macOS LOB apps aren't deployed
     href: macos-lob-apps-not-deployed.md
   - name: Managed Browser policy triggers error 0x87D1FDE8

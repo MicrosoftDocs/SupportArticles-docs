@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Session variables do not persist between requests after you install Internet Explorer security Patch
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides methods to solve the problem of missing session variables in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 5.5, Internet Explorer 6.0  

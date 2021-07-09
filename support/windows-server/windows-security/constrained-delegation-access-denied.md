@@ -4,7 +4,7 @@ description: Fixes an access denied error that occurs when you access a service 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article helps fix an **access denied** error that occurs when you access a service that uses network shares on a middle-tier server.
 
-_Original product version:_ &nbsp;Window 10 – all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp;2602377
 
 ## Symptoms

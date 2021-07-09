@@ -4,7 +4,7 @@ description: Fixes an issue where Active Directory replication doesn't work and 
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps fix an issue where Active Directory replication doesn't work and event IDs 1865 and 1311 are logged.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp;944351
 
 ## Symptoms

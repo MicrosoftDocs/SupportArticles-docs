@@ -4,7 +4,7 @@ description: Helps to resolve an error (The parameter is incorrect) that occurs 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article helps to resolve the error "The parameter is incorrect" that occurs when cluster validation fails against the Validate Resource status.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4561946
 
 ## Symptoms

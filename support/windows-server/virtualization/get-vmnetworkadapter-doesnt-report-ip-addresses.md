@@ -4,7 +4,7 @@ description: Describes a problem in which the output of the `Get-VMNetworkAdapte
 ms.date: 04/02/2021
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -106,7 +106,7 @@ The [:::no-loc text="NetTCPIP":::](/powershell/module/nettcpip) WMI provider isn
 
 ## Resolution
 
-On the virtual machine, open an elevated Command Prompt window, and then change to the :::no-loc text="%SystemRoot%\System32\wbem"::: folder. At the command prompt, run the following commands:
+On the virtual machine, open an elevated Command Prompt window, and then change to the :::no-loc text="%SystemRoot%\\System32\\wbem"::: folder. At the command prompt, run the following commands:
 
 ```console
 C:\Windows\System32\wbem>regsvr32.exe NetTCPIP.dll

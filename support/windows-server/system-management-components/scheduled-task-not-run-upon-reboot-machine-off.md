@@ -4,7 +4,7 @@ description: Helps to solve an issue where a scheduled task may not run upon reb
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article helps solve an issue where a scheduled task may not run upon reboot if the machine is off at the time of the task.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2437520
 
 ## Symptoms

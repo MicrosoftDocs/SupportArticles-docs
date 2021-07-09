@@ -4,7 +4,7 @@ description: Describes how to create a Windows registry file to configure the pr
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how to create a Windows registry file to configure the proxy server settings on a client computer that's running Microsoft Internet Explorer or Windows Internet Explorer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 819961
 
 ## Summary

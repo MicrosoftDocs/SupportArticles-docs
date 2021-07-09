@@ -4,7 +4,7 @@ description: Describe an issue that prevents the lock screen from being displaye
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue that prevents the lock screen from being displayed when you try to resume a Windows 10-based computer from Away Mode.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 3205123
 
 ## Symptoms

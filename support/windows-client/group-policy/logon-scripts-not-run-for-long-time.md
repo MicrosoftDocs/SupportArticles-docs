@@ -4,7 +4,7 @@ description: Provides a solution to an issue where logon scripts don't run for f
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article provides a solution to an issue where logon scripts don't run for five minutes after a user logs on to a Windows 8.1-based computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2895815
 
 ## Symptoms

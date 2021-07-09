@@ -4,7 +4,7 @@ description: Describes an issue that causes Active Directory replication to fail
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where Active Directory replication fails for one or more partitions with the error 8545.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3110029
 
 > [!NOTE]

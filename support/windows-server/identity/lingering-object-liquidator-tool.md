@@ -4,7 +4,7 @@ description: Describes the Lingering Object Liquidator (LoL) tool for finding an
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the Lingering Object Liquidator (LoL) tool for finding and removing lingering objects.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;3141939
 
 ## Introduction

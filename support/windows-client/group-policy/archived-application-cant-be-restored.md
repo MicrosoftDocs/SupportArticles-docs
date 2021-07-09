@@ -4,7 +4,7 @@ description: Group Policy settings may block automatic application updates. Bloc
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article provides a solution to an issue that archived application can't be restored because of app update policies.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4571552
 
 ## Summary

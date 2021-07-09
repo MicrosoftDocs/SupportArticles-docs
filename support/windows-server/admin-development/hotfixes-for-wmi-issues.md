@@ -4,7 +4,7 @@ description: Provides suggested hotfixes for Windows Management Intrumentation (
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-administration-management-development
 
 This article provides suggested hotfixes for Windows Management Instrumentation (WMI) related issue on Windows platforms.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2591403
 
 ## Symptoms

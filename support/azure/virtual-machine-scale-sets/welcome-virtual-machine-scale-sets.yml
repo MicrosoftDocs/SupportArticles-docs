@@ -1,0 +1,29 @@
+### YamlMime:Landing
+
+title: Azure Virtual Machine Scale Sets troubleshooting documentation
+summary: Welcome to Azure Virtual Machines Scale Sets troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Virtual Machine Scale Sets. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Virtual Machine Scale Sets
+  description: Documentation for troubleshooting common issues with Azure Virtual Machine Scale Sets. # Required; article description that is displayed in search results. < 160 chars.
+  services: virtual-machine-scale-sets
+  ms.service: virtual-machine-scale-sets #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: jc-mackin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: v-jcmackin #Required; microsoft alias of author; optional team alias.
+  ms.date: 5/5/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+  # Card
+  - title: Scaling issue with the scale set
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: QuotaExceeded error when scaling virtual machine scale sets
+            url: ./virtual-machine-scale-sets-quota-exceeded.md
+ 

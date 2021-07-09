@@ -4,7 +4,7 @@ description: Fixes an issue in which device-specific drivers aren't installed fo
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article helps to fix an issue in which Windows 10 doesn't install specific drivers for USB audio devices on the first connection.
 
-_Original product version:_ &nbsp; Windows 10, version 1703  
+_Applies to:_ &nbsp; Windows 10, version 1703  
 _Original KB number:_ &nbsp; 4021854
 
 ## Symptom

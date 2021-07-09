@@ -79,7 +79,7 @@ To resolve this issue:
 
 * Connect to the VM by using SSH, and then try to access the following URL from curl: http://168.63.129.16/?comp=versions.
 * Check for any issues that might be caused by a firewall, a proxy, or another source that might be blocking access to the IP address 168.63.129.16.
-* Check whether Linux IPTables or a third-party firewall is blocking access to ports 80, 443, and 32526.
+* Check whether Linux IPTables or a third-party firewall is blocking access to ports 80, and 32526.
 
 ## Next steps
 

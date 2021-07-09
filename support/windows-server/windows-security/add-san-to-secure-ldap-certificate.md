@@ -4,7 +4,7 @@ description: Describes how to add a subject alternative name to a secure LDAP ce
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how to add a subject alternative name (SAN) to a secure Lightweight Directory Access Protocol (LDAP) certificate.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 931351
 
 ## Summary

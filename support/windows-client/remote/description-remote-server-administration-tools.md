@@ -4,7 +4,7 @@ description: Describes the tools that are available for installation as part of 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-rds
 
 This article describes the tools that are available for installation as part of Remote Server Administration Tools.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 958830
 
 ## Introduction

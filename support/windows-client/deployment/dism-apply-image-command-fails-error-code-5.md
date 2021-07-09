@@ -4,7 +4,7 @@ description: Works around an issue that causes the DISM apply image command to f
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a workaround for an issue where `DISM /Apply-Image` command fails with error code 5 (ERROR_ACCESS_DENIED).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3179598
 
 ## Symptoms

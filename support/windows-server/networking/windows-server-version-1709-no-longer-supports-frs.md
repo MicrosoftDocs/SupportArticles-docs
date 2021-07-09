@@ -4,7 +4,7 @@ description: Discusses that Windows Server 2016 RS3 no longer supports the File 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article discusses that Windows Server version 1709 no longer supports the File Replication Service (FRS).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4025991
 
 ## Summary

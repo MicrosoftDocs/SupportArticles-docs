@@ -57,7 +57,7 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 ## Application IDs for commonly used Microsoft applications
 
-The following table lists some, but not all, application IDs for commonly used Microsoft applications.  
+The following table lists some, but not all, first party Microsoft applications. You may see these applications in the Sign-ins report in Azure AD.  
 
 |Application Name|Application IDs|
 |--|--|
@@ -68,6 +68,7 @@ The following table lists some, but not all, application IDs for commonly used M
 |Bing|9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7|
 |Common Data Service|00000007-0000-0000-c000-000000000000|
 |CRM Power BI Integration|e64aa8bc-8eb4-40e2-898b-cf261a25954f|
+|Media Analysis and Transformation Service|944f0bd1-117b-4b1c-af26-804ed95e767e<br>0cd196ee-71bf-4fd6-a57c-b491ffd4fb1e|
 |Microsoft App Access Panel|0000000c-0000-0000-c000-000000000000|
 |Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
@@ -105,6 +106,7 @@ The following table lists some, but not all, application IDs for commonly used M
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
 |Outlook Mobile|27922004-5251-4030-b22d-91ecd9a37ea4|
 |Power BI Service|00000009-0000-0000-c000-000000000000|
+|SharedWithMe|ffcb16e8-f789-467c-8ce9-f826a080d987|
 |Sway|905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba|
 |Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
 |Windows Search|26a7ee05-5602-4d76-a7ba-eae8b7b67941|

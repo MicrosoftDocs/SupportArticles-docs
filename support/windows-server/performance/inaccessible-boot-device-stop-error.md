@@ -4,7 +4,7 @@ description: Discusses that you receive a Stop error (INACCESSIBLE_BOOT_DEVICE) 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article helps fix the Stop error code 0x00000007B that occurs after you reconfigure critical hardware devices.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3024175
 
 ## Symptoms

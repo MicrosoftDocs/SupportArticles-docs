@@ -4,7 +4,7 @@ description: Describes the Extranet Smart Lockout feature in Windows Server 2016
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the Extranet Smart Lockout feature in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4096478
 
 ## Overview

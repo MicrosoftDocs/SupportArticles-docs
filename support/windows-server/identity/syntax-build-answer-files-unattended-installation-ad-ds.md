@@ -4,7 +4,7 @@ description: Describes the parameters and options that are used in the answer fi
 ms.date: 02/09/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the parameters and options that are used in the DCPROMO answer file to install and remove Active Directory Domain Services (AD DS) on domain controllers.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947034
 
 ## Summary

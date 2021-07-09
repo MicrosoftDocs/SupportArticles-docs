@@ -4,7 +4,7 @@ description: Describes a problem in which various errors messages may be logged 
 ms.date: 09/15/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article helps fix an issue where various errors messages may be logged when you bring a physical disk resource online.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977516
 
 ## Symptoms

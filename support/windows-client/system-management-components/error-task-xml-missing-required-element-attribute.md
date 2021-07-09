@@ -4,7 +4,7 @@ description: Resolve an issue where you receive an error when you use the /z swi
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article helps resolve an issue where you receive an error when you use the **/z** switch together with the **Schtasks.exe** command in Windows Vista.
 
-_Original product version:_ &nbsp;Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp;2004151
 
 ## Symptoms

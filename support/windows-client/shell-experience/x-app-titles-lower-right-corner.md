@@ -4,7 +4,7 @@ description: Provides a solution to an issue in which the titles for Windows 8 a
 ms.date: 09/16/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an issue where the titles for Windows 8 and Windows 8.1 apps have an "x" in the lower-right corner.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2832072
 
 ## Symptoms

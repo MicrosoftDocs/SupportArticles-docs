@@ -4,7 +4,7 @@ description: Describes PAE and AWE and explains how they work together and also 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes Physical Address Extension (PAE) and Address Windowing Extensions (AWE) and explains how they work together. This article also discusses the limitations of using memory beyond the 4-gigabyte (GB) range that is inherent to 32-bit operating systems.
 
-_Original product version:_ &nbsp;Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp;283037
 
 ## More information

@@ -4,7 +4,7 @@ description: Describes a discrepancy in the policy name in Microsoft OneDrive Gr
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article explains a discrepancy in the policy name in Microsoft OneDrive Group Policy Administrative Templates.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 3017037
 
 ## Symptoms

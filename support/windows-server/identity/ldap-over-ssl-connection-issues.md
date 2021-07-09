@@ -4,7 +4,7 @@ description: Describes how to troubleshoot connection problems that involve LDAP
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article discusses steps about how to troubleshoot LDAP over SSL (LDAPS) connection problems.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 938703
 
 ## Step 1: Verify the Server Authentication certificate

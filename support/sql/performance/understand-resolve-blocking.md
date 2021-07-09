@@ -1,7 +1,7 @@
 ---
 title: Understand and resolve blocking problems
 description: This article provides instruction on first understanding what blocking is in terms of SQL Server and furthermore how to investigate its occurrence.
-ms.date: 03/24/2021
+ms.date: 04/14/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: ramakoni
 ms.prod: sql
@@ -177,7 +177,7 @@ INNER JOIN sys.dm_exec_connections [s_ec] ON [s_ec].[session_id] = [s_tst].[sess
 CROSS APPLY sys.dm_exec_sql_text ([s_ec].[most_recent_sql_handle]) AS [s_est];
 ```
 
-* Reference [sys.dm_os_waiting_tasks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql) that is at the thread/task layer of SQL Server. This returns information about what SQL wait type the request is currently experiencing. Like `sys.dm_exec_requests`, only active requests are returned by `sys.dm_os_waiting_tasks`. 
+* Reference [sys.dm_os_waiting_tasks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql) that is at the thread/task layer of SQL Server. This returns information about what SQL wait_type the request is currently experiencing. Like `sys.dm_exec_requests`, only active requests are returned by `sys.dm_os_waiting_tasks`. 
 
 >[!Note]
 > For much more on wait types including aggregated wait stats over time, see the DMV [sys.dm_db_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). 
@@ -207,7 +207,7 @@ In addition to the above information, it is often necessary to capture a trace o
 
 There are two ways to capture traces in SQL Server; [Extended Events (XEvents)](/sql/relational-databases/extended-events/extended-events) and Profiler Traces. However, SQL traces using the [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler) are deprecated. XEvents are the newer, superior tracing platform that allows more versatility and less impact to the observed system, and its interface is integrated into SSMS. 
 
-There are pre-made Extended Event sessions ready to start in SSMS, listed in Object Explorer under the menu for XEvent Profiler. For more information, see [Xevent Profiler](/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). You can also create your own custom Extended Event sessions in SSMS, see [Extended Events New Session Wizard](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server). For troubleshooting blocking issues, we typically will capture:
+There are pre-made Extended Event sessions ready to start in SSMS, listed in Object Explorer under the menu for XEvent Profiler. For more information, see [XEvent Profiler](/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). You can also create your own custom Extended Event sessions in SSMS, see [Extended Events New Session Wizard](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server). For troubleshooting blocking issues, we typically will capture:
 
 - Category Errors:
   - Attention
@@ -327,7 +327,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 |-|-|-|-|-|-|   
 | 1 | NOT NULL | >= 0 | runnable | Yes, when query finishes. | In `sys.dm_exec_sessions`, `reads`, `cpu_time`, and/or `memory_usage` columns will increase over time. Duration for the query will be high when completed. |  
 | 2 | NULL | \>0 | sleeping | No, but SPID can be killed. | An attention signal may be seen in the Extended Event session for this SPID, indicating a query timeout or cancel has occurred. |   
-| 3 | NULL | \>= 0 | runnable | No. Will not resolve until client fetches all rows or closes connection. SPID can be killed, but it may take up to 30 seconds. | If open_transaction_count = 0, and the SPID holds locks while the transaction isolation level is default (READ COMMMITTED), this is a likely cause. |  
+| 3 | NULL | \>= 0 | runnable | No. Will not resolve until client fetches all rows or closes connection. SPID can be killed, but it may take up to 30 seconds. | If open_transaction_count = 0, and the SPID holds locks while the transaction isolation level is default (READ COMMITTED), this is a likely cause. |  
 | 4 | Varies | \>= 0 | runnable | No. Will not resolve until client cancels queries or closes connections. SPIDs can be killed, but may take up to 30 seconds. | The `hostname` column in `sys.dm_exec_sessions` for the SPID at the head of a blocking chain will be the same as one of the SPID it is blocking. |  
 | 5 | NULL | \>0 | rollback | Yes. | An attention signal may be seen in the Extended Events session for this SPID, indicating a query timeout or cancel has occurred, or simply a rollback statement has been issued. |  
 | 6 | NULL | \>0 | sleeping | Eventually. When Windows NT determines the session is no longer active, the connection will be broken. | The `last_request_start_time` value in `sys.dm_exec_sessions` is much earlier than the current time. |
@@ -341,6 +341,9 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
     Reports built-in to SSMS from the [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store) (introduced in SQL Server 2016) are also a highly recommended and valuable tool for identifying the most costly queries, suboptimal execution plans.
 
     If you have a long-running query that is blocking other users and cannot be optimized, consider moving it from an OLTP environment to a dedicated reporting system, or use AlwaysOn availability groups to synchronize a [read-only replica of the database](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).
+
+    > [!NOTE]
+    > Blocking during query execution could be caused by query escalation, a scenario when row or page locks escalated to table locks. Microsoft SQL Server dynamically determines when to perform lock escalation. The simplest and safest way to prevent lock escalation is to keep transactions short and to reduce the lock footprint of expensive queries so that the lock escalation thresholds are not exceeded. For more information on detecting and preventing excessive lock escalation, see [Resolve blocking problem caused by lock escalation](resolve-blocking-problems-caused-lock-escalation.md).
 
 2. Blocking caused by a sleeping SPID that has an uncommitted transaction
 
@@ -373,7 +376,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
    - Applications must properly manage transaction nesting levels, or they may cause a blocking problem following the cancellation of the query in this manner. Consider the following:  
 
      *    In the error handler of the client application, execute `IF @@TRANCOUNT > 0 ROLLBACK TRAN` following any error, even if the client application does not believe a transaction is open. Checking for open transactions is required, because a stored procedure called during the batch could have started a transaction without the client application's knowledge. Certain conditions, such as canceling the query, prevent the procedure from executing past the current statement, so even if the procedure has logic to check `IF @@ERROR <> 0` and abort the transaction, this rollback code will not be executed in such cases.  
-     *    If connection pooling is being used in an application that opens the connection and runs a small number of queries before releasing the connection back to the pool, such as a Web-based application, temporarily disabling connection pooling may help alleviate the problem until the client application is modified to handle the errors appropriately. By disabling connection pooling, releasing the connection will cause a physical disconnect of the SQL Server connection, resulting in the server rolling back any open transactions.  
+     *    If connection pooling is being used in an application that opens the connection and runs a few queries before releasing the connection back to the pool, such as a Web-based application, temporarily disabling connection pooling may help alleviate the problem until the client application is modified to handle the errors appropriately. By disabling connection pooling, releasing the connection will cause a physical disconnect of the SQL Server connection, resulting in the server rolling back any open transactions.  
      *    Use `SET XACT_ABORT ON` for the connection, or in any stored procedures that begin transactions and are not cleaning up following an error. In the event of a run-time error, this setting will abort any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
 
     > [!NOTE]
@@ -480,7 +483,9 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
 
 ## See also
+
 * [Monitoring performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
+* [Resolve blocking problems that are caused by lock escalation in SQL Server](resolve-blocking-problems-caused-lock-escalation.md)
 * [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
 * [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)
 * [Quickstart: Extended events in SQL Server](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)

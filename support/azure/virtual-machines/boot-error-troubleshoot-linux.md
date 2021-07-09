@@ -47,4 +47,4 @@ If you do not have access to GRUB watch [this](https://youtu.be/m5t0GZ5oGAc) vid
 
 ## Unofficial solution
 
-Recovery of a VM can also be attempted with the unsupported BETA script [ALAR](https://github.com/malachma/azure-auto-recover)
+Recovery of a VM can also be attempted with the unsupported BETA script [ALAR](repair-linux-vm-using-ALAR.md).

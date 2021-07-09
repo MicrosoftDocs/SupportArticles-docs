@@ -4,7 +4,7 @@ description: Describes how to diagnose Active Directory replication failures.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to diagnose Active Directory replication failures.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2498185
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Provides a solution to an issue that prevents a complete memory dum
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a solution to an issue that prevents a complete memory dump from being written during a Stop error on a tablet device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3135462
 
 ## Symptoms

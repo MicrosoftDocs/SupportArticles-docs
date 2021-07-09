@@ -8,6 +8,8 @@ ms.topic: troubleshooting
 ---
 # Policy "Configure the home page URL" takes no effect in Microsoft Edge
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 _Original product version:_ &nbsp; Edge for Mac, Edge for Windows  
 _Original KB number:_ &nbsp; 4570005
 

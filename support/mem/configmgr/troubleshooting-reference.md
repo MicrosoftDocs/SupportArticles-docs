@@ -55,7 +55,7 @@ For information about which operating system deployment log files created by Mic
 
   The ZeroTouchInstallation.vbs script automatically scans the USMT progress log files for errors and warnings. The script generates event ID 41010 to Microsoft System Center Operations Manager with the following summary (where *usmt_type* is **ESTIMATE**, **SCANSTATE**, or **LOADSTATE**; *error_count* is the total number of errors found; and *warning_count* is the total number of warnings found):  
 
-```  
+```vbs
 ZTI USMT <usmt_type> reported <error_count> errors and <warning_count> warnings  
 ```  
 
@@ -222,7 +222,7 @@ Listing 1 provides an excerpt from a log file that illustrates how to find the e
 
 **Listing 1. Excerpt from an SMSTS.log file that contains error code 5001**
 
-```
+```output
 .  
 .  
 .  
@@ -748,13 +748,13 @@ Review USMT\-related problems and solutions:
 
 Original:  
 
-```
+```xml
 <include> filter='MigXmlHelper.IgnoreIrrelevantLinks()'>  
 ```  
 
 Modified:  
 
-```
+```xml
 <include> <!-- filter='MigXmlHelper.IgnoreIrrelevantLinks()'> -->  
 ```  
 

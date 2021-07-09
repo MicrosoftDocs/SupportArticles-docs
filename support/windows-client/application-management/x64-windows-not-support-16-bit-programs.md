@@ -4,7 +4,7 @@ description: Discusses the lack of support for 16-bit components, 16-bit process
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article discusses the lack of support for 16-bit components, 16-bit processes, or 16-bit applications in x64-based versions Windows.
 
-_Original product version:_ &nbsp;Window 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;896458
 
 ## Summary

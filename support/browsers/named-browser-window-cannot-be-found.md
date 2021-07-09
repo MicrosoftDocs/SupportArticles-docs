@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Named browser windows cannot be found when Internet Explorer is started as a published application
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem that you can't find the named browser window when Internet Explorer starts as a published application.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

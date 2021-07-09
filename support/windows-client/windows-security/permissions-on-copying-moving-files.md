@@ -4,7 +4,7 @@ description: Describes how Windows Explorer handles file and folder permissions 
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes how Windows Explorer handles file and folder permissions in different situations.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 310316
 
 ## Summary

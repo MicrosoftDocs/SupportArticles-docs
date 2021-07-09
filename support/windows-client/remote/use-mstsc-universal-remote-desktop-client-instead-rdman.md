@@ -4,7 +4,7 @@ description: Discusses why you should use Remote Desktop Connection or universal
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,12 +17,12 @@ ms.technology: windows-client-rds
 
 Virtualization and remote desktops are an important part of your infrastructure and work. And, we recommend that you use Windows built-in Remote Desktop Connection (%windir%\\system32\\mstsc.exe) or [universal Remote Desktop client](https://aka.ms/rdwin) instead of Remote Desktop Connection Manager (RDCMan).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4512838
 
 ## More information
 
-We're increasing our investments in virtualization and remote desktops, such as Windows Virtual Desktop and RDS on Microsoft Azure.
+We're increasing our investments in virtualization and remote desktops, such as Azure Virtual Desktop and RDS on Microsoft Azure.
 
 RDCMan is a client that is widely used to manage multiple remote desktop connections because it's a convenient option. However, RDCMan has not kept pace with the level of advanced technology that we're pursuing.
 

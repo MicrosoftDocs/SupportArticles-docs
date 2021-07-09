@@ -4,7 +4,7 @@ description: Discusses that the default date format is changed in Windows 8 and 
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article describes that the default date format is changed and provides a workaround for issues caused by this change. For example, some tools or programs that depend on the earlier date formats fail.
 
-_Original product version:_ &nbsp; Windows 8, Windows Server 2012  
+_Applies to:_ &nbsp; Windows 8, Windows Server 2012  
 _Original KB number:_ &nbsp; 2905782
 
 ## Summary

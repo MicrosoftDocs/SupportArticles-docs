@@ -4,7 +4,7 @@ description: Describes ARP caching behavior in Windows Vista TCP/IP implementati
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a description of Address Resolution Protocol (ARP) caching behavior in TCP/IP implementations.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 949589
 
 ## Introduction

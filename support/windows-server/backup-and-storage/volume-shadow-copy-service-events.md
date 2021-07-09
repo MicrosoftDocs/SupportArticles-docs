@@ -4,7 +4,7 @@ description: Describes issues in which Event ID 8019, Event ID 20, Event ID 8193
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes issues in which Event ID 8019, 20, 8193, or 12302 is logged in the Application log. You receive an Error 0x8004230F or 0x80004002 error message.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 940032
 
 ## Symptoms

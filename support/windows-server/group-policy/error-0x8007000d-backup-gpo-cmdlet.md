@@ -4,7 +4,7 @@ description: Describes an issue in which you receive error 0x8007000D when you r
 ms.date: 03/11/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -56,4 +56,4 @@ Here are three workarounds:
 
 ## Reference
 
-For more information on wbadmin syntax, see [wbadmin start systemstatebackup](https://docs.microsoft.com/windows-server/administration/windows-commands/wbadmin-start-systemstatebackup).
+For more information on wbadmin syntax, see [wbadmin start systemstatebackup](/windows-server/administration/windows-commands/wbadmin-start-systemstatebackup).

@@ -4,7 +4,7 @@ description: Describes a memory leak issue that causes Windows Server 2012 and W
 ms.date: 01/04/2021
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -20,7 +20,7 @@ This article provides a workaround for a memory leak issue in the remote registr
 > [!NOTE]
 > This issue is fixed in Windows 10.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105719
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Discusses that a Hyper-V virtual machine may not start, and you rec
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article helps fix the error 0x80070005 that occurs when a Hyper-V virtual machine fails to start.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2249906
 
 ## Symptoms

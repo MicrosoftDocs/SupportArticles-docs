@@ -59,7 +59,6 @@ Table 2:
 | .NET version| Version number| Included with operating system| Default with operating systems| Installed with Visual Studio .NET| Redist or download link| Are special procedures required to install redist? |
 |---|---|---|---|---|---|---|
 |2.0|2.0.50727.42|Windows Server 2003 R2|None|Microsoft Visual Studio 2005| [2.0](https://www.microsoft.com/download/details.aspx?id=6523)|No|
-|2.0 SP2|2.0.50727.3053|None|None|None| [2.0 SP2](https://www.microsoft.com/download/details.aspx?id=1639)|No|
 |3.5 SP1|3.5.30729.1|Windows Server 2008 R2|None|None| [3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22)|Yes, for Windows Server 2008 R2|
 ||||||||
 

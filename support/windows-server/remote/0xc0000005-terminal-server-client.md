@@ -4,7 +4,7 @@ description: Provides a solution to an issue that occurs when you log on to a co
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides help to solve an issue that occurs when you log on to a computer running Terminal Server Edition.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 240992
 
 > [!IMPORTANT]

@@ -4,7 +4,7 @@ description: Fixes an issue in which you can't add members to a DFS replication 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides help to solve an issue where you can't add members to a Distributed File System (DFS) replication group or namespace after you install the Microsoft .NET Framework 4.7.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4049095
 
 ## Symptoms

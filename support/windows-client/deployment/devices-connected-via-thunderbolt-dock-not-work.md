@@ -4,7 +4,7 @@ description: Describes an issue in which devices that are connected through a Th
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a workaround for an issue where devices that are connected through a Thunderbolt Dock stop working after the computer resumes from the S5 power state.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4532436
 
 ## Symptoms

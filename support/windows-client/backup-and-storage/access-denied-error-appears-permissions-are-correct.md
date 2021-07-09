@@ -4,7 +4,7 @@ description: Provides a solution for access is denied error message when permiss
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides a solution for "access is denied" error message when permissions are correct.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 250494
 
 ## Symptoms

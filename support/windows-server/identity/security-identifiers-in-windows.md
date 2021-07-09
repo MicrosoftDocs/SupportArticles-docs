@@ -4,7 +4,7 @@ description: Lists well-known security identifiers in Windows operating systems.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides information about well-known SIDs in all versions of Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 243330
 
 ## Summary
@@ -62,7 +62,7 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-12|Restricted Code|This SID is reserved for future use.|
 |S-1-5-13|Terminal Server Users|A group that includes all users that have logged on to a Terminal Services server. Membership is controlled by the operating system.|
 |S-1-5-14|Remote Interactive Logon|A group that includes all users who have logged on through a terminal services logon.|
-|S-1-5-17|This Organization|An account that is used by the default Internet Information Services (IIS) user.|
+|S-1-5-17|IUSR|An account that is used by the default Internet Information Services (IIS) user.|
 |S-1-5-18|Local System|A service account that is used by the operating system.|
 |S-1-5-19|NT Authority|Local Service|
 |S-1-5-20|NT Authority|Network Service|
@@ -141,7 +141,7 @@ When you add a domain controller that runs Windows Server 2008 or a later versio
 |S-1-5-80-0|NT Services\All Services|A group that includes all service processes that are configured on the system. Membership is controlled by the operating system.<br/><br/> **Note** <br/>Added in Windows Server 2008 R2.|
 |S-1-5-80-0|All Services|A group that includes all service processes configured on the system. Membership is controlled by the operating system.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
 |S-1-5-83-0|NT Virtual Machine\Virtual Machines|A built-in group. The group is created when the Hyper-V role is installed. Membership in the group is maintained by the Hyper-V Management Service (VMMS). This group requires the **Create Symbolic Links** right (S **eCreateSymbolicLinkPrivilege**), and also the **Log on as a Service** right (**SeServiceLogonRight**).<br/><br/> **Note** <br/>Added in Windows 8 and Windows Server 2012.|
-|S-1-5-90-0|Windows Manager\Windows Manager Group|A built-in group that is used by the Desktop Window Manager (DWM). DWM is a Windows service that manages information display for Windows applications.<br/><br/> **Note** <br/>Added in Windows Vista.|
+|S-1-5-90-0|Window Manager\Window Manager Group|A built-in group that is used by the Desktop Window Manager (DWM). DWM is a Windows service that manages information display for Windows applications.<br/><br/> **Note** <br/>Added in Windows Vista.|
 |S-1-16-0|Untrusted Mandatory Level|An untrusted integrity level.<br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
 |S-1-16-4096|Low Mandatory Level|A low integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
 |S-1-16-8192|Medium Mandatory Level|A medium integrity level.<br/><br/> **Note** Added in Windows Vista and Windows Server 2008.|

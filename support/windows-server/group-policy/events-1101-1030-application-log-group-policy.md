@@ -4,7 +4,7 @@ description: Describes a problem that may occur when the Group Policy engine doe
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a resolution for the issue that Events 1101 and 1030 are logged in the Application log when applying Group Policy.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 909260
 
 ## Symptoms

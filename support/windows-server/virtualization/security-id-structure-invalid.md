@@ -4,7 +4,7 @@ description: Starting an imported virtual machine under Hyper-V sometimes fails 
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to an error that occurs when you start an imported virtual machine under Hyper-V.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2927313
 
 ## Symptoms

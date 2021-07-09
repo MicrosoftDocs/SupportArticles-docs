@@ -4,7 +4,7 @@ description: Describes how to use Group Policy to apply WinHTTP proxy settings t
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how to use Group Policy to apply WinHTTP proxy settings to clients in a Windows environment.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4494447
 
 ## Summary

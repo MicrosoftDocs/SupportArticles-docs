@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # How to disable Internet Explorer password caching
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 When you try to view a Web site that is protected with a password, you are prompted to type your security credentials in the **Enter Network Password** dialog box. If you click to select the **Save this password in your password list** check box in this dialog box, the computer saves your password so that you do not have to type the password again when you try to use the same document. This behavior is known as password caching. However, you may need to disable this feature. This article provides you the steps that you can follow to disable the password caching.
 
 _Original product version:_ &nbsp; Internet Explorer  

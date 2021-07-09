@@ -4,7 +4,7 @@ description: Provides recommendations from Escalation Engineering about what to 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article explains why a Windows Server Message Block (SMB) server becomes unresponsive and how to troubleshoot the problem.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3061415
 
 ## Symptoms

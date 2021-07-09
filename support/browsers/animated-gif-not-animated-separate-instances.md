@@ -8,6 +8,8 @@ ms.topic: troubleshooting
 ---
 # Animated GIF is not animated in all instances of the WebBrowser control in the same process
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem where an animated GIF is not animated in separate instances of the WebBrowser control in the same process.
 
 _Applies to:_ &nbsp; Internet Explorer 11  

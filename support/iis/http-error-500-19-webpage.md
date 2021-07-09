@@ -26,11 +26,15 @@ Error message:
 
 Cause
 
-This problem occurs because the ApplicationHost.config or Web.config file contains a malformed XML element.
+This problem occurs because the ApplicationHost.config or Web.config file contains a malformed or unidentified XML element. IIS can't identify the XML elements of the modules that are not installed. For example, IIS **URL Rewrite** module.
 
 Resolution
 
-Delete the malformed XML element from the ApplicationHost.config or Web.config file.
+Use one of the following methods:
+
+- Delete the malformed XML element from the ApplicationHost.config or Web.config file.
+- Check the unidentified XML elements, and then install the relevant IIS modules.
+
 
 ## HRESULT code 0x80070021
 

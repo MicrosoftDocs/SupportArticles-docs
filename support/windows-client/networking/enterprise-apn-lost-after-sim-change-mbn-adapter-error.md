@@ -4,7 +4,7 @@ description: A provisioning approach can help prevent a Windows 10 client from l
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a solution to an issue that enterprise APN lost after SIM change or MBN adapter error.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4487376
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Provides a solution to fix the 0x8000FFFF error that occurs when yo
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article provides a solution to fix the 0x8000FFFF error that occurs when you start a Virtual Machine (VM) on a Windows Server 2012 R2-based Hyper-V server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2960802
 
 ## Symptoms

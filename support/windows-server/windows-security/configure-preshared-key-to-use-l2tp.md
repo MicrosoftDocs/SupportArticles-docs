@@ -4,7 +4,7 @@ description: Discusses how to configure a preshared key for use with Layer 2 Tun
 ms.date: 10/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article discusses how to configure a preshared key for use with Layer 2 Tunneling Protocol (L2TP).
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324258
 
 ## Summary

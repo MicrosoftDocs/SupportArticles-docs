@@ -7,6 +7,8 @@ ms.reviewer: louiss
 ---
 # Collected information by Internet Explorer Diagnostics
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article lists the information that can be collected by running Internet Explorer Diagnostics.
 
 _Original product version:_ &nbsp; Internet Explorer  

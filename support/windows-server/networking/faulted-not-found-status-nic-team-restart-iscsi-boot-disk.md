@@ -4,7 +4,7 @@ description: Describes an issue that occurs if Windows Server 2012 is configured
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a resolution for the issue that it shows "Faulted Not Found" status for NIC team after you restart Windows from an iSCSI boot disk.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2969300
 
 ## Symptoms

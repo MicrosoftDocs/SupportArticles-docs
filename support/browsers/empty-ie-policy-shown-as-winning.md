@@ -7,7 +7,9 @@ ms.reviewer: joelba
 ---
 # Policy reporting tools indicate empty Internet Explorer Maintenance policy as winning
 
-This article discusses information about manually deleting extensions in Group Policy after you delete the client’s IEM settings.
+[!INCLUDE [](../includes/browsers-important.md)]
+
+This article discusses information about manually deleting extensions in Group Policy after you delete the client's IEM settings.
 
 _Original product version:_ &nbsp; Internet Explorer, Windows Server 2008 and later versions  
 _Original KB number:_ &nbsp; 2722241

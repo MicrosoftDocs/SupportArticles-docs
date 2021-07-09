@@ -4,7 +4,7 @@ description: Describes an issue in which you experience high CPU usage when you 
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes an issue in which you experience high CPU usage when you search in the **Settings** app in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4504547
 
 ## Symptoms

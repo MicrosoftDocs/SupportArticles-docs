@@ -4,7 +4,7 @@ description: When you try to remove a registry key, you receive the Error while 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides a resolution to solve the **Error while deleting key** error that occurs when trying to remove certain registry keys.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021860
 
 ## Symptoms

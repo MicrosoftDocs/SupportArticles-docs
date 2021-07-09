@@ -4,7 +4,7 @@ description: Describes how to use the Directory Service command-line tools to pe
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to use the Directory Service command-line tools to perform administrative tasks for Active Directory in Windows Server 2003. The following tasks are broken down into task groups.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 322684
 
 ## How to manage users

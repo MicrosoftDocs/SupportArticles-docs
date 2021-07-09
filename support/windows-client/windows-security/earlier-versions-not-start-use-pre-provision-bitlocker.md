@@ -4,7 +4,7 @@ description: Explains why earlier Windows versions don't start after you run the
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article explains why earlier Windows versions don't start after you run the "Setup Windows and Configuration Manager" step if Pre-Provision BitLocker is used with Windows 10, version 1511.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;4494799
 
 ## Symptoms

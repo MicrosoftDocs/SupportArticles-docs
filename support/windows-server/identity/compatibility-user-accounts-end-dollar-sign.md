@@ -4,7 +4,7 @@ description: Starting in Windows 7/2008R2, there are potential compatibility iss
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the potential compatibility issues in using domain user accounts ending with the dollar sign ($) as a service account.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2666116
 
 ## Summary

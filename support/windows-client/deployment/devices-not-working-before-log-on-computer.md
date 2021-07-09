@@ -4,7 +4,7 @@ description: Addresses an issue in which a device isn't working before a logon i
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an issue in which devices are not working before you log on a computer that's running Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4057300
 
 ## Symptoms

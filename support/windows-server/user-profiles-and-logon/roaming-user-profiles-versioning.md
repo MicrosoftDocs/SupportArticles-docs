@@ -4,7 +4,7 @@ description: Roaming user profiles in Windows 10, Windows Server 2016, and later
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article describes incompatibilities of roaming user profiles between Windows 10 or Windows Server 2016 and earlier versions of Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016  
 _Original KB number:_ &nbsp; 3056198
 
 ## Symptoms

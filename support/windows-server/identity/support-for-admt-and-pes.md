@@ -4,7 +4,7 @@ description: Describes free Active Directory migration tools and documentation.
 ms.date: 10/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes information about Active Directory Migration Tool version 3.2 (ADMT v3.2) and Password Export Server version 3.1 (PES v3.1).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4089459
 
 ## Summary

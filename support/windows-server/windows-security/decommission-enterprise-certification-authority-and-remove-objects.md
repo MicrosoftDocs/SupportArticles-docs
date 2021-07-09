@@ -4,7 +4,7 @@ description: Provides step-by-step instructions for removing a CA from Windows S
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This step-by-step article describes how to decommission a Microsoft Windows enterprise CA, and how to remove all related objects from the Active Directory directory service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 889250
 
 ## Summary
@@ -264,7 +264,7 @@ The `-viewdelstore` action invokes the certificate selection UI on the set of ce
 Use the following command to see the full LDAP path to the NtAuthCertificates object in your Active Directory:
 
 ```console
-certutil store -? | findstr "CN=NTAuth"
+certutil -viewdelstore -? | findstr "CN=NTAuth"
 ```
 
 ## Step 8 - Delete the CA database

@@ -4,7 +4,7 @@ description: Describes how to use Recovery Console to replace a driver on a Wind
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This step-by-step article describes how to use Recovery Console to replace a driver on a Windows Server 2003-based computer that you can't start.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816104
 
 ## Requirements

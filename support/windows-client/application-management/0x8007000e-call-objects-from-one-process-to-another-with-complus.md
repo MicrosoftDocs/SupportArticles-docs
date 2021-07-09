@@ -4,7 +4,7 @@ description: Provides a solution to an issue where calling many objects from one
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article provides a solution to an issue where calling many objects from one process to another by using Microsoft COM+ fails.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 890425
 
 ## Symptoms

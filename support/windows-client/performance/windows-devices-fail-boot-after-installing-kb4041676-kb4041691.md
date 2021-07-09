@@ -4,7 +4,7 @@ description: Microsoft is aware of a publishing issue with the October 10, 2017 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides workarounds for the issue where Windows devices may fail to boot after installing October 10 version of KB4041676 or KB4041691.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows 10, version 1607, Windows 10, version 1703  
+_Applies to:_ &nbsp; Windows Server 2016, Windows 10, version 1607, Windows 10, version 1703  
 _Original KB number:_ &nbsp; 4049094
 
 ## Overview

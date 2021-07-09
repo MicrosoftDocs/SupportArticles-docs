@@ -4,7 +4,7 @@ description: Provides a solution to an error that occurs when you launch the Win
 ms.date: 09/10/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to an error that occurs when you launch the Windows Server Backup on Windows Server 2008.
 
-_Original product version:_ &nbsp; Windows Server 2008  
+_Applies to:_ &nbsp; Windows Server 2008  
 _Original KB number:_ &nbsp; 2000779
 
 ## Symptoms

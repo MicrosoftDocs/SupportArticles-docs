@@ -4,7 +4,7 @@ description: This article describes why specific USB devices may not be availabl
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-rds
 
 This article describes why specific USB devices aren't available for RemoteFX USB redirection, and how to make them available.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2653326
 
 ## Symptoms

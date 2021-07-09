@@ -4,7 +4,7 @@ description: Describes how to troubleshoot Service Startup permissions in a Wind
 ms.date: 09/24/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article describes how to troubleshoot Service Startup permissions in a Microsoft Windows Server 2003 environment.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 327545
 
 ## Summary
