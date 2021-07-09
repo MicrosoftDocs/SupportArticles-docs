@@ -2620,7 +2620,7 @@
       href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
   - name: Storage configuration
     items:
-    - name: Can't add second a Fibre Channel adapter to a Hyper-V virtual machine
+    - name: Can't add a second Fibre Channel adapter to a VM
       href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
