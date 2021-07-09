@@ -90,7 +90,7 @@ You can remove this option in the Local Group Policy Editor by setting **Disable
 
 You can remove this option using Exchange Online PowerShell:
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Run the following command:
 ```powershell
 Set-OrganizationConfig -MobileAppEducationEnabled:$false
