@@ -30,7 +30,7 @@ The steps below will help you troubleshoot this scenario: The setup works with I
 
 In the scenario above, both configurations allow users to delegate credentials from their user session on machine **Workstation-Client1** to the back-end API server while connecting through the front-end Web-Server.
 
-In an unconstrained Kerberos delegation configuration, the application pool identity runs on Web-Server and is configured in Active Directory to be trusted for delegation to any service. The application pool's account running on Web-Server can delegate the credentials of authenticated users of the website hosted on that server to any other service in the active directory: an SMTP server, a file server, a database server, another web server, etc. This is called unconstrained delegation because the application pool account has the permission (it's unconstrained) to delegate credentials to any service it contacts.
+In an unconstrained Kerberos delegation configuration, the application pool identity runs on Web-Server and is configured in Active Directory to be trusted for delegation to any service. The application pool's account running on Web-Server can delegate the credentials of authenticated users of the website hosted on that server to any other service in the active directory. For example, an SMTP server, a file server, a database server, another web server, etc. This is called unconstrained delegation because the application pool account has the permission (it's unconstrained) to delegate credentials to any service it contacts.
 
 In a constrained delegation configuration, the active directory account that is used as an application pool identity can delegate the credentials of authenticated users only to a list of services that have been authorized to delegate. If the web-application residing on the server called Web-Server must also contact a database and authenticate on behalf of the user, this service principal name (SPN) must be added to the list of authorized services.  
 
@@ -93,12 +93,12 @@ While you may have the **Policy Administrative Templates** on the domain control
 
 1. Go to the Microsoft Edge for [business download site](https://www.microsoft.com/edge/business/download).
 
-1. Select the version you wish to download from the **Channel/Version** dropdown. The latest stable version is recommended.
-1. Select the build you want from the **Build** dropdown and finally the target operating system from the **Select platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear.
+1. Select the version you wish to download from the **channel/version** dropdown. The latest stable version is recommended.
+1. Select the build you want from the **build** dropdown and finally the target operating system from the **platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear.
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/download.png" alt-text="image download" border="true":::
 
-1. Click **Get Policy Files** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Microsoft Edge.
+1. Click **GET POLICY FILES** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Microsoft Edge.
 1. Double click the file to explore the content (a zip archive with the same name).
 1. Extract the content of the zip archive to a folder on your local disk. The extracted content will contain a folder called *Windows* in which you will find a subfolder called *Admx*. This will contain the administrative templates as well as their localized versions ( You should need them in a language other than English).
 
@@ -125,7 +125,7 @@ Here's how to create a new Group Policy object using the Active Directory Group 
 
 The final step is to enable the policy that allows the Microsoft Edge browser to pass the `ok_as_delegate` flag to the `InitializeSecurityContext` api call when performing authentication using Kerberos to a Windows Integrated enabled website. If you don't know whether your Microsoft Edge browser is using Kerberos to authenticate (and not NTLM), refer to [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md).
 
-In the Active Directory Group Policy Editor, select the group policy object that will be applied to the computers inside your Active Directory from which you intend to allow end users to authenticate via Kerberos authentication and have their credentials delegated to backend services through unconstrained delegation. The policy that will enable unconstrained delegation from Microsoft Edge is located under the **Http Authentication** folder of the **Microsoft Edge** templates as shown below:
+In the Active Directory Group Policy Editor, select the group policy object that will be applied to the computers inside your Active Directory from which you intend to allow end users to authenticate via Kerberos authentication and have their credentials delegated to backend services through unconstrained delegation. The policy that will enable unconstrained delegation from Microsoft Edge is located under the **Http authentication** folder of the **Microsoft Edge** templates as shown below:
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/authentication.png" alt-text="image authentication" border="true":::
 
@@ -175,7 +175,6 @@ Once the policy has been configured and deployed, the following steps must be ta
     This log shows that:
   
     - `AUTH_LIBRARY_INIT_SEC_CTX` means the browser is calling the `InitializeSecurityContext` function.
-    - The flags that are passed in line 2:
-      - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
-      - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity. Only the client should authenticate to the server to prove its identity.
-    - `HTTP/web-server.odessy.local` is the `SPN` used by the browser when making the authentication call.
+    - `"delegated":false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
+    - `"mutual":false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity. Only the client should authenticate to the server to prove its identity.
+    - `HTTP/web-server.odessy.local` is the spn used by the browser when making the authentication call.
