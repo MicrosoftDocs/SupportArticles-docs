@@ -4,6 +4,7 @@ description: Describes how to identify the containers consuming high CPU in an A
 ms.date: 07/08/2021
 ms.prod-support-area-path: 
 ms.reviewer: chiragpa
+ms.service: cloud-services
 ---
 # Identify the containers consuming high CPU in an AKS cluster
 
@@ -25,7 +26,7 @@ To identify containers or pods that are driving high CPU consumption:
 
 In the following example, a container named **myapp-container** inside of the **ultrapewpew2** pod has been up for 36 days. For the last six hours, **myapp-container** has been driving roughly two cores (1834 millicores, 1.8 cores to be exact) of Max CPU usage.
 
-:::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-example.png" alt-text="Screenshot of the CPU usage set to Max, which is located on the right side of the time options.":::
+:::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-example.png" alt-text="Screenshot of the CPU usage output.":::
 
 ## Run simple commands on the node
 
@@ -55,6 +56,6 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 
 Additional information
 
-- [Container insights overview](azure/azure-monitor/containers/container-insights-overview)
-- [Monitor your Kubernetes cluster performance with Container insights](azure/azure-monitor/containers/container-insights-analyze)
-- [How to manage the Container insights agent](azure/azure-monitor/containers/container-insights-manage-agent)
+- [Container insights overview](/azure/azure-monitor/containers/container-insights-overview)
+- [Monitor your Kubernetes cluster performance with Container insights](/azure/azure-monitor/containers/container-insights-analyze)
+- [How to manage the Container insights agent](/azure/azure-monitor/containers/container-insights-manage-agent)
