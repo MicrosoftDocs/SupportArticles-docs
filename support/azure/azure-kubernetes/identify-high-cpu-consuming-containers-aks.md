@@ -15,13 +15,21 @@ ms.service: cloud-services
 To identify containers or pods that are driving high CPU consumption:
 
 1. On the [Azure Portal](https://portal.azure.com), navigate to the cluster.
+
 1. Under **Monitoring** select **Insights**.
+
    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/Insights.png" alt-text="Screenshot of the insights option under the Monitoring selection.":::
+
 1. Set the appropriate **Time Range**.
+
    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/six-hour-time-range.png" alt-text="Screenshot of a time range of six hours.":::
+
 1. Select **Containers**.
+
    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-option.png" alt-text="Screenshot of the Containers option.":::
+
 1. Select the Metric **CPU Usage (millicores)**  and set the sample to **Max**.
+
    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/cpu-usage-at-max.png" alt-text="Screenshot of the CPU usage set to Max, which is located on the right side of the time options.":::
 
 In the following example, a container named **myapp-container** inside of the **ultrapewpew2** pod has been up for 36 days. For the last six hours, **myapp-container** has been driving roughly two cores (1834 millicores, 1.8 cores to be exact) of Max CPU usage.
