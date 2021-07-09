@@ -17,7 +17,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# "550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder" error when users send messages to a mail-enabled public folder
+# "550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder" error for messages sent to a mail-enabled public folder
 
 ## Symptoms
 
