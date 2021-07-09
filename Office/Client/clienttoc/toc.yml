@@ -603,6 +603,8 @@
           href: ../excel/use-shared-workbook.md
         - name: Use startup folders
           href: ../excel/use-startup-folders.md
+        - name: User info in @mentions doesn't resolve
+          href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
         - name: Workbook isn't activated when you run a macro
@@ -649,8 +651,6 @@
       items:
         - name: Can't pass the Welcome Screen in Office for Mac
           href: ../office-for-mac/office-for-mac-welcome-screen.md
-        - name: Error when you open files from SharePoint in Office client
-          href: ../office-for-mac/files-fail-to-open.md
         - name: Known issues with Office for Mac
           href: ../office-for-mac/office-for-mac-issues-macos-10-7.md
         - name: Office 2016 for Mac 64-bit upgrade
@@ -731,6 +731,8 @@
           href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
+        - name: Error when you open files from SharePoint in Office client
+          href: ../office-suite-issues/files-fail-to-open.md
         - name: FAQ about Office Activation Wizard
           href: ../office-suite-issues/faq-about-office-activation-wizard.md
         - name: Features to enable collaboration
@@ -879,6 +881,8 @@
           href: ../powerpoint/slide-transition-sounds-missing.md
         - name: Troubleshoot a damaged presentation
           href: ../powerpoint/damaged-presentation.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
     - name: Project
       items:
         - name: Calculate work and duration with resource assignment changes
@@ -1047,7 +1051,7 @@
           href: ../word/performance-issue-on-autorecover-location.md
         - name: Print failures in Word
           href: ../word/print-failures-in-word.md
-        - name: Recover a lost, unsaved, or corrupted Word document
+        - name: Recover a lost or unsaved Word document
           href: ../word/recover-lost-unsaved-corrupted-document.md
         - name: relationship rID8 was not found
           href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
@@ -1061,6 +1065,8 @@
           href: ../word/track-changes-disabled.md
         - name: Troubleshoot print failures in Word for Office 365 on Windows 10
           href: ../word/print-failures-word-for-office-365-on-win-10.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
         - name: Word slows or stops responding

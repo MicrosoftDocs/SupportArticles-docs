@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 144545
 - CI 147050
+- CI 152523
 ms.collection: SPO_Content
 ms.author: v-matham
 appliesto:
@@ -33,12 +34,15 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 
 You experience one or more of the following errors when you access SharePoint:
 
+>Token request failed. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+at System.Net.HttpWebRequest.GetResponse()
+
 >System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send.
 
 >System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
 
 >System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
-   
+
 >The Business Data Connectivity Metadata Store is currently unavailable.
 
 ### Resolution
@@ -131,8 +135,21 @@ Authentication issues when you use Azure App Service.
    
 1. Set the minimum TLS version for your App Service instance to TLS 1.2. For more information, see [Enforce TLS versions](/azure/app-service/configure-ssl-bindings#enforce-tls-versions).
 2. Make sure that you're using the latest version of .NET Framework.
-   
 
+## Hybrid search fails to crawl or return results
+
+### Symptom
+   
+You experience one or more of the following issues when you use hybrid search in SharePoint in Microsoft 365:
+
+- Crawling fails.
+- No result is returned.
+- You receive an error message, such as "An existing connection was forcibly closed".
+
+### Resolution
+   
+To fix the issues, see [Hybrid search fails to crawl or return results](../../SharePointHybrid/search/hybrid-search-failures.md).
+   
 ## References
 
 - [TLS cipher suites supported by Office 365](/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365&preserve-view=true)

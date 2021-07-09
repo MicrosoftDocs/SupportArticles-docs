@@ -29,7 +29,7 @@ The command-line version of Microsoft Support and Recovery Assistant (SaRA) is s
     **Note:** See the table in the "[Supported switches](#supported-switches)" section to determine whether an elevated Command Prompt window is required to run SaRA for the user's scenario.
 
 1. In the Command Prompt window, navigate to the folder in which you extracted the files from step 2.
-1. Run the command-line version of SaRA by using one or more of the switches that are discussed in the "[Supported switches](#supported-switches)" section.
+1. Run the command-line version of SaRA by using one or more switches that are discussed in the "[Supported switches](#supported-switches)" section.
 
    > [!IMPORTANT]
    > Updates to the command-line version of SaRA will be released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the listed **Created** date for SaRAcmd.exe. Use the link provided in step 1 to download the latest version.
@@ -106,12 +106,23 @@ When you run a scenario by using the command-line version of SaRA, you receive n
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
   |---|---|---|
-  |Office removed successfully|None|*00:* Successfully completed this scenario.<br/><br/>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
-  |Office program found .exe files running:<br/><br/>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
+  |Office removed successfully|None|*00:* Successfully completed this scenario.</br></br>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
+  |Office program found .exe files running:</br></br>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
   |No Office products found|Exit the scenario|*07:* No installed Office versions were found. Please use the full SaRA version.|
   |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
   |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
   |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
   |||
+
+## SaRA command-line version history
+
+Throughout the year, a new build of SaRA is available through the download link that is provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep SaRA updated by replacing the files you have with the latest version.
+
+The following table provides the versions of SaRA that were made available on the specified date.
+
+|Release date|SaRACmd.exe version|
+|--------|--------|
+|May 26, 2021|17.00.6665.000|
+|||
 
 For more information about the full version of SaRA, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/sara_home).
