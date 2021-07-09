@@ -19,16 +19,16 @@ This article assumes that you are setting up an architecture similar to the one 
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/setup.png" alt-text="image setup" border="true":::
 
-- The **Client1** computer is part of the same active directory as Web-Server and API-Server.
-- Users of the computer **Client1** will log on to the machine using the Windows Active Directory account.
-- They will then launch a browser (Microsoft Edge), navigate to a website located on Web-Server, and authenticate via integrated Windows authentication using Kerberos.
-- The website located on Web-Server will make HTTP calls using authenticated user's credentials to API-Server to retrieve application data on behalf of users, using Kerberos credential delegation.
+- The **Workstation-Client1** computer is part of the same active directory as primary Web-Server, called **Primary-IIS-SRV** and the backend web server, called **Backend-Web-SRV**.
+- Users of the computer **Workstation-Client1** will log on to the machine using the Windows Active Directory account.
+- They will then launch a browser (Microsoft Edge), navigate to a website located on Web-Server (which is the alias name used for **Primary-IIS-SRV**), and authenticate via integrated Windows authentication using Kerberos.
+- The website located on Web-Server will make HTTP calls using authenticated user's credentials to API-Server (which is the alias for **Backend-Web-SRV**) to retrieve application data on behalf of users, using Kerberos credential delegation.
 
 The steps below will help you troubleshoot this scenario: The setup works with Internet Explorer, but when users adopt Microsoft Edge, they can no longer use the credential delegation feature. To use Kerberos credential delegation, refer to [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md) first.
 
 ## Constrained or unconstrained delegation
 
-In the scenario above, both configurations allow users to delegate credentials from their user session on machine **Client1** to the back-end API server while connecting through the front-end Web-Server.
+In the scenario above, both configurations allow users to delegate credentials from their user session on machine **Workstation-Client1** to the back-end API server while connecting through the front-end Web-Server.
 
 In an unconstrained Kerberos delegation configuration, the application pool identity runs on Web-Server and is configured in Active Directory to be trusted for delegation to any service. The application pool's account running on Web-Server can delegate the credentials of authenticated users of the website hosted on that server to any other service in the active directory: an SMTP server, a file server, a database server, another web server, etc. This is called unconstrained delegation because the application pool account has the permission (it's unconstrained) to delegate credentials to any service it contacts.
 
@@ -38,7 +38,7 @@ Constrained delegation is more secure than unconstrained delegation based on the
 
 ## How to know whether the Kerberos ticket obtained on the client to send to the Web-Server uses constrained or unconstrained delegation?
 
-Use the klist command tool present in Windows to list the cache of Kerberos tickets from the client machine (**Client1** in the diagram above). Look for a ticket named HTTP/\<Name of Web-Server>. **Note**: \<Name of Web-Server> is the SPN of the service you wish to contact and authenticate to via Kerberos. The ticket also contains a few flags. Two of them are of interest: `forwardable` and `ok_as_delegate`.
+Use the klist command tool present in Windows to list the cache of Kerberos tickets from the client machine (**Workstation-Client1** in the diagram above). Look for a ticket named HTTP/\<Name of Web-Server>. **Note**: \<Name of Web-Server> is the SPN of the service you wish to contact and authenticate to via Kerberos. The ticket also contains a few flags. Two of them are of interest: `forwardable` and `ok_as_delegate`.
 
 - The first flag, `forwardable`, indicates that the KDC (key distribution center) can issue a new ticket with a new network mask if necessary. This allows for a user to log into a remote system and for the remote system to obtain a new ticket on behalf of the user to log into another backend system as if the user had logged into the remote system locally.
 
@@ -48,7 +48,7 @@ If these services are using unconstrained delegation, the tickets on the client 
 
 ## Why does unconstrained delegation work in Internet Explorer and not in Microsoft Edge?
 
-When an attempt is made to authenticate to a website using Kerberos based authentication, the browser calls a Windows API to set up the authentication context – the API in question is `InitializeSecurityContext`. This API might receive a series of flags to indicate whether the browser allows the `delegatable` ticket the user has received. The ticket is marked as `delegatable` because the service the user is trying to authenticate to has the right to delegate credentials in an unconstrained manner. However, that doesn't mean that the application trying to authenticate (in this case the browser) should use this capacity.
+When an attempt is made to authenticate to a website using Kerberos based authentication, the browser calls a Windows API to set up the authentication context. The API in question is `InitializeSecurityContext`. This API might receive a series of flags to indicate whether the browser allows the `delegatable` ticket the user has received. The ticket is marked as `delegatable` because the service the user is trying to authenticate to has the right to delegate credentials in an unconstrained manner. However, that doesn't mean that the application trying to authenticate (in this case the browser) should use this capacity.
 
 By default, Internet Explorer passes the flag to `InitializeSecurityContext`, indicating that if the ticket can be delegated, then it should be. Microsoft Edge from version 87 and above doesn't pass the flag to `InitializeSecurityContext` just because the ticket is marked with the `ok_as_delegate` flag. We don't recommend using unconstrained delegation in applications because it gives applications more privileges than required. Applications could delegate the user's identity to any other service on the domain and authenticate as the user, which isn't necessary for most applications using credential delegation. Applications should contact only the services on the list that was specified when setting up constrained delegation.
 
@@ -177,5 +177,5 @@ Once the policy has been configured and deployed, the following steps must be ta
     - The browser is calling the library function `InitializeSecurityContext` (first line).
     - The flags that are passed in line 2:
       - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
-      - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity – only the client should authenticate to the server to prove its identity.
+      - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity—only the client should authenticate to the server to prove its identity.
     - Finally, in line 3 is the `SPN` used by the browser when making the authentication call.
