@@ -40,11 +40,11 @@ In the following example, a container named **myapp-container** inside of the **
 
 Simple commands can be run on a node through Secure Shell (SSH) to help identify any high CPU consuming containers.
 
-1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`.
+1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`, depending on whether or not you have **ContainerD**.
 
-1. Run the following command:
-
-   `docker stats --no-stream --format "table {{.ID}}\t{{.CPUPerc}}" | sort -t " " --key=2 -h -r | head`.
+   1. If you don't have **ContainerD**, run this command:
+   
+      `docker stats --no-stream --format "table {{.ID}}\t{{.CPUPerc}}" | sort -t " " --key=2 -h -r | head`.
 
    1. If you have **ContainerD**, run this command:
 
@@ -52,9 +52,11 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 
       :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/docker-stats-command-output.png" alt-text="Screenshot of the output of running the docker stats command.":::
 
-1. To identify the hosting pod of the container, run the following command:
+1. To identify the hosting pod of the container, run either `docker inspect` or `crictl inspect`, depending on whether or not you have **ContainerD**:
 
-   `docker inspect containerid –format “{{json .Config.Hostname}}”`.
+   1. If you don't have **ContainerD**, run this command:
+
+      `docker inspect containerid –format “{{json .Config.Hostname}}”`.
 
    1. If you have **ContainerD**, run this command:
 
