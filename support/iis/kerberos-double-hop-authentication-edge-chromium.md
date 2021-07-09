@@ -21,7 +21,7 @@ This article assumes that you are setting up an architecture similar to the one 
 
 - The **Workstation-Client1** computer is part of the same active directory as primary Web-Server, called **Primary-IIS-SRV** and the backend web server, called **Backend-Web-SRV**.
 - Users of the computer **Workstation-Client1** will log on to the machine using the Windows Active Directory account.
-- They will then launch a browser (Microsoft Edge), navigate to a website located on Web-Server (which is the alias name used for **Primary-IIS-SRV**), and authenticate via integrated Windows authentication using Kerberos.
+- They will then launch a browser (Microsoft Edge), navigate to a website located on Web-Server, which is the alias name used for **Primary-IIS-SRV**, and authenticate via integrated Windows authentication using Kerberos.
 - The website located on Web-Server will make HTTP calls using authenticated user's credentials to API-Server (which is the alias for **Backend-Web-SRV**) to retrieve application data on behalf of users, using Kerberos credential delegation.
 
 The steps below will help you troubleshoot this scenario: The setup works with Internet Explorer, but when users adopt Microsoft Edge, they can no longer use the credential delegation feature. To use Kerberos credential delegation, refer to [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md) first.
@@ -99,7 +99,7 @@ While you may have the **Policy Administrative Templates** on the domain control
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/download.png" alt-text="image download" border="true":::
 
 1. Click **Get Policy Files** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Microsoft Edge.
-1. Double click the file to explore the content—a zip archive with the same name.
+1. Double click the file to explore the content (a zip archive with the same name).
 1. Extract the content of the zip archive to a folder on your local disk. The extracted content will contain a folder called *Windows* in which you will find a subfolder called *Admx*. This will contain the administrative templates as well as their localized versions ( You should need them in a language other than English).
 
     :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/admx-folder.png" alt-text="image admx-folder" border="true":::
@@ -174,8 +174,8 @@ Once the policy has been configured and deployed, the following steps must be ta
   
     This log shows that:
   
-    - The browser is calling the library function `InitializeSecurityContext` (first line).
+    - `AUTH_LIBRARY_INIT_SEC_CTX` means the browser is calling the `InitializeSecurityContext` function.
     - The flags that are passed in line 2:
       - `Delegated`: `false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
-      - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity—only the client should authenticate to the server to prove its identity.
-    - Finally, in line 3 is the `SPN` used by the browser when making the authentication call.
+      - `Mutual`: `false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity. Only the client should authenticate to the server to prove its identity.
+    - `HTTP/web-server.odessy.local` is the `SPN` used by the browser when making the authentication call.
