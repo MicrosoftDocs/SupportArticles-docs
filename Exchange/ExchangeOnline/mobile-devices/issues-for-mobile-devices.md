@@ -26,6 +26,9 @@ This article describes how to collect Exchange ActiveSync device logs to trouble
 
 To capture ActiveSync device log information, follow these steps:
 
+    > [!NOTE]
+    >ActiveSync debug logging is enabled for 48 hours in Exchange Online, and 72 hours in Exchange Server. After the time period expires, the value reverts to $false.
+    
 1. Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Run the following command to enable ActiveSync logging for a specific user:
 
