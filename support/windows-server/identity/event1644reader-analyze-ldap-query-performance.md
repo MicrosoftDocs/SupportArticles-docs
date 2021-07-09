@@ -28,13 +28,16 @@ Event1644Reader.ps1 is a Windows PowerShell script that extracts data from 1644 
 
 ## How to obtain the script
 
-You can obtain the script from the [Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/event-1644-reader-export-45205268).
+You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859). 
+ 
+ > [!NOTE]
+    > The script is attached on the blog post with file name Event1644Reader.zip
 
 Script Center disclaimer  
 The sample scripts are not supported under any Microsoft standard support program or service. The sample scripts are provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
 
 Online peer support  
-For online peer support, join [The Official Scripting Guys Forum!](https://social.technet.microsoft.com/forums/en/itcg/threads/) To provide feedback or report bugs in sample scripts, start a new discussion on the **Discussions** tab for this script.
+For online peer support, join [The Official Scripting Guys Forum!](https://social.technet.microsoft.com/Forums/scriptcenter/en-US/home/) To provide feedback or report bugs in sample scripts, start a new discussion on the **Discussions** tab for this script.
 
 ## How to use the script
 
@@ -64,7 +67,7 @@ To better analyze the LDAP queries that are captured in event ID 1644, follow th
     > - One strategy would be to set the registry value for both the Inefficient Search Results Threshold and Expensive Search Results Threshold registry settings, and then focus on events that are identified by Search Time hold (msecs). Start with a larger value like 100 milliseconds and then incrementally decrease the value as you optimize the queries that are occurring in your environment.
     > - Event1644Reader.ps1 can parse events from multiple domain controllers. Configure the field engineering, search time, expensive, and inefficient registry key settings on all domain controllers on which you want to review LDAP searches.
 
-4. Download the Event1644Reader.ps1 file from [Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/event-1644-reader-export-45205268) to the computer that will analyze saved Active Directory Service EVTX files that contain 1644 events.
+4. Download the Event1644Reader.ps1 file from You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859) to the computer that will analyze saved Active Directory Service EVTX files that contain 1644 events.
 
     This computer should have Microsoft Excel 2010 or a later version installed and should have sufficient disk space to host the directory service event logs that the script will parse.
 
@@ -153,4 +156,4 @@ In this situation, numbers in the Excel spreadsheet are rendered as in the follo
 
 To resolve this issue, change the **Decimal symbol** to a period (.) in the **Region settings** item in Control Panel.  
 
-For more information about LDAP queries, see the following blog: [How to find expensive, inefficient, and long running LDAP queries in Active Directory](https://blogs.technet.com/b/askpfeplat/archive/2015/05/11/how-to-find-expensive-inefficient-and-long-running-ldap-queries-in-active-directory.aspx)
+For more information about LDAP queries, see the following blog: [How to find expensive, inefficient, and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859)
