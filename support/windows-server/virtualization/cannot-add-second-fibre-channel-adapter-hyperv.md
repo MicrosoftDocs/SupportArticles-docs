@@ -1,5 +1,5 @@
 ---
-title: can't add second Fibre Channel adapter to Hyper-V virtual machine
+title: VM can not add Fibre Channel adapter
 description: Provides the information that Windows Server 2019 allows only one Fibre Channel adapter per virtual machine.
 ms.date: 07/07/2021
 author: v-lianna
