@@ -6,9 +6,8 @@ Author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: hirotoh
 ---
-# PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps
-
-This article describes the issue that [PreviewKeyDown](/dotnet/api/system.windows.forms.control.previewkeydown) events of TextBox controls can't be triggered by some Microsoft IMEs in Windows Presentation Foundation (WPF) applications.
+# PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps                                                                                                                                                                                
+This article discusses an issue that prevents [PreviewKeyDown](/dotnet/api/system.windows.forms.control.previewkeydown) events of TextBox controls from being triggered by some Microsoft  input method editors (IMEs) in Windows Presentation Foundation (WPF) applications.
 
 _Applies to:_ &nbsp; Windows Presentation Foundation, Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1
 
@@ -17,9 +16,9 @@ _Applies to:_ &nbsp; Windows Presentation Foundation, Windows 10, version 2004, 
 Consider the following scenario:
 
 1. You run a WPF application on Windows 10, version 2004, version 20H2, or version 21H1.
-1. You input in a TextBox control with a Microsoft IME of East Asia.
+1. You input in a TextBox control by using a Microsoft IME of East Asia.
 
-In this scenario, the `PreviewKeyDown` event of the control won't be triggered. Some functions of the application depending on the `PreviewKeyDown` event handlers won't work as expected.
+In this scenario, the `PreviewKeyDown` event of the control is not triggered. Therefore, some functions of the application that depend on the `PreviewKeyDown` event handlers don't work as expected.
 
 ## Cause
 
@@ -27,27 +26,27 @@ Microsoft IMEs are updated in some versions of Windows 10. This issue occurs whe
 
 ## Workaround
 
-Turn on the Compatibility option to revert to the previous version of Microsoft IME. To do this, follow these steps:
+Turn on the **Compatibility** option to revert to the previous version of Microsoft IME. To do this, follow these steps:
 
-1. In the search box on the taskbar, type *language settings*, and then select **Language Settings** in the list of results.
+1. In the search box on the taskbar, enter **language settings**, and then select **Language settings** in the list of results.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/language-settings.png" alt-text="Language settings" border="true":::
 
-1. Select **Options** of your language.
+1. Select **Options** for your language.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/language-options.png" alt-text="Language option" border="true":::
 
-1. From the language option settings page, select **Options** of the IME you're using.
+1. On the language option settings page, select **Options** for the IME that you're using.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/ime-options.png" alt-text="IME option" border="true":::
 
-1. Select **General**
+1. Select **General**.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/ime-general.png" alt-text="general" border="true":::
 
-1. Turn on the **Use previous version of <YourIME>** option and then select **OK** on the popup window.
+1. Turn on the **Use previous version of <YourIME>** option, and then select **OK** in the window that opens.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/turn-on-compatibility.png" alt-text="turn on the previous version option" border="true":::
 
 > [!Note]
-> We do not recommend using the compatibility setting for the long term, but rather as a temporary workaround for users who are impacted by this issue.
+> We recommend that you do not use the compatibility setting as a permanent solution. Instead, use it as a temporary workaround for users who are affected by this issue.
