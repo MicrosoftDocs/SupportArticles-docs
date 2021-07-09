@@ -47,7 +47,7 @@ Microsoft Outlook 2019, Outlook 2016, Outlook for Microsoft 365, and Outlook on
 
 - The final page of the **Add Account** wizard contains a check box that has the following label:
 
-  **Set up Outlook Mobile on my phone, too.**
+  **Set up Outlook Mobile on my phone, too**
 
   :::image type="content" source="media/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option/set-up-outlook-mobile-on-my-phone.png" alt-text="Outlook 2016 - Set up Outlook Mobile on my phone too" border="false":::
 
@@ -55,7 +55,7 @@ Microsoft Outlook 2019, Outlook 2016, Outlook for Microsoft 365, and Outlook on
 
 ### Method 1
 
-You can remove this option by adding and configuring the `DisableOutlookMobileHyperlink` registry entry, as follows.
+You can remove this option by adding and configuring the `DisableOutlookMobileHyperlink` registry entry as follows:
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
@@ -75,7 +75,7 @@ You can remove this option by adding and configuring the `DisableOutlookMobileHy
 
 ### Method 2
 
-You can remove this option in the Local Group Policy Editor by setting **Disable Outlook Mobile Hyperlink** to **Enabled**.
+You can remove this option in the Local Group Policy Editor. To do this, set **Disable Outlook Mobile Hyperlink** to **Enabled** as follows:
 
 1. Select **Search**, type *gpedit*, and then select **Edit Group Policy**.
 2. Select **User Configuration** > **Policies** > **Administrative Templates**, and then select **Microsoft Outlook 2016** > **Outlook Options** > **Other**.
@@ -88,7 +88,7 @@ You can remove this option in the Local Group Policy Editor by setting **Disable
 
 ## How to remove this option in Outlook on the web
 
-You can remove this option by using Exchange Online PowerShell:
+You can remove this option by using Exchange Online PowerShell as follows:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Run the [`Set-OrganizationConfig`](/powershell/module/exchange/set-organizationconfig) cmdlet as follows:
