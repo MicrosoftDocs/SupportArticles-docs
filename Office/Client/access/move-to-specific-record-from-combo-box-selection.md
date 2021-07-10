@@ -44,20 +44,21 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 The following table compares the features (benefits and drawbacks) of the four methods:
 
-|Method | 1|  2 |3| 4|
-|---|---------|---------|----------|-----------------|
-|Requires no code/macros|  |   | x |x|
-|Saves on subforms| x |x |  |x |
-|Can scroll to other records| x |  |x |x |
-|Does not require a query| x |x |x|  |
-|Can edit records| x |x |x|  |
+|Method                     | 1 | 2 | 3 | 4 | 5 |
+|---------------------------|---|---|---|---|---|
+|Requires no code/macros    |   |   | x | x |   |
+|Saves on subforms          | x | x |   | x |   |
+|Can scroll to other records| x |   | x | x |   |
+|Does not require a query   | x | x | x |   | x |
+|Can edit records           | x | x | x |   | x |
+|Opens form in other modes  |   |   |   |   | x |
+
 
 **Note** These methods can also apply to text boxes.
 
 ### Method 1
 
-1. Use the AutoForm: Columnar Wizard to create a new form that is based on the Products table, and then save the form as
-frmComboTest.
+1. Use the AutoForm: Columnar Wizard to create a new form that is based on the Products table, and then save the form as frmComboTest.
 
    To do this in Microsoft Office Access 2003 and earlier versions of Access, follow these steps:
     1. In the Database window, click **Forms** under **Objects**.   
@@ -100,9 +101,7 @@ frmComboTest.
 
 ### Method 2
 
-1. Use the AutoForm: Columnar Wizard to create a new form that is based on the Products table, and save the form as frmComboTest2.
-
-   **Note** See the steps that are mentioned in the step 1 of Method 1.   
+1. Create a new form based on the Products table. Use the AutoForm: Columnar Wizard as instructed in Method 1, Step 1. Save the form as frmComboTest2.
 2. In the property sheet for the **frmComboTest2** form, set the **Filter** property on the **Data** tab as follows:[ProductName] = Forms![frmComboTest2]![cboLookup]
 3. Add an unbound combo box named cboLookup, and then set the properties of the control as follows:
 
@@ -136,7 +135,10 @@ frmComboTest.
 
 ### Method 3
 
-1. Create a new form that is not based on any table or query and save it as frmMain. Then add a combo box and set its properties as follows:
+1. Create a new form based on the Products table. Use the AutoForm: Tabular Wizard as instructed in Method 1, Step 1. 
+2. Set the **DefaultView** property of the form to **Single Form**.
+3. Save the form as frmSub.
+4. Create a new form (that is not based on any table or query) and save it as frmMain. Then add a combo box and set its properties as follows:
 
    ```adoc
    Combo Box
@@ -150,9 +152,12 @@ frmComboTest.
    BoundColumn: 1
    ```
 
-2. Use the AutoForm: Tabular Wizard to create a second form that is based on the Products table, set the **DefaultView** property of the form to **Single Form**, and then save the form as frmSub.   
-3. Use the frmSub form to create a subform control on the frmMain form.   
-4. Set the subform control properties as follows:
+5. Insert a Subform control of the form created in Step 3 'frmSub'. 
+   
+   A. Method A: (Access 2007 and above) "Design" Tab > "Subform/Subreport" > Cancel Wizard
+   B. Method B: (Access 2007 and above) Drag and drop 'frmSub' from Navigation Pane into form > Cancel Wizard
+
+6. Set the subform control properties as follows:
    
    ```adoc
    Subform
@@ -169,7 +174,8 @@ frmComboTest.
 
 1. Create a table named tblProductSelect that has a single field, **ProductID**. Set the **Data Type** property of the field to Number and set the **Field Size** property to Long Integer. 
 
-   **Note** A primary key is not necessary. Do not add records to this table.   
+   **Note** Do not use primary key. Do not add records to this table.
+
 2. Create the following query named qryProductSelect that is based on a join between the **ProductID** fields of the tblProductSelect and Products tables. Include the following attributes in the query:
  
    ```adoc
@@ -182,7 +188,8 @@ frmComboTest.
    TableName: Products
    ```
 
-3. Use the AutoForm: Columnar Wizard to create a form that is based on the qryProductSelect query, and then view the form in Form view.   
+3. Use the AutoForm: Columnar Wizard to create a form based on the qryProductSelect query, and then view the form in Form view. (See Method 1, step 1).
+
 4. Right-click the text box control for the **ProductID** field, point to **Change To**, click **Combo Box**, and then make the following property assignments for this combo box:
    ```adoc
    Combo Box
@@ -196,3 +203,24 @@ frmComboTest.
    BoundColumn: 1
    ```
 5. Save the form as frmComboTest3, and then run the form.   
+
+### Method 5: Use OpenForm Macro with WHERE clause
+
+1. Create a new form based on the Products table. Use the AutoForm: Columnar Wizard as instructed in Method 1, Step 1. Save the form as frmComboTest5.
+2. Use the Combo Box Wizard to add an unbound combo box as instructed in Method 2, Step 3.
+3. Set a new Macro in the After Update Event. Use Macro Builder.
+4. Use "OpenForm" under Add New Action. Set the following properties:
+
+   ```
+   Form Name:   frmComboTest5
+   View:        Form
+   Filter Name: **leave empty**
+   Where Condition: [ProductID] = [Forms]![frmComboTest5]![cboLookup].value
+   Data Mode: **optional**
+   Window Mode: **optional**
+   ```
+
+5. Save the Macro and close.
+6. Save the form and Run.
+
+Changing the value of the combo box will close the form and open the form again with a filter applied.
