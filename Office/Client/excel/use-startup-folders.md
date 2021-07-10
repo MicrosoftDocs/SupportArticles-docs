@@ -20,7 +20,9 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-For a Microsoft Excel 2001 for Mac version of this article, see [259921](https://support.microsoft.com/help/259921).
+For an updated version of this article, see [Customize how Excel starts](https://support.microsoft.com/office/customize-how-excel-starts-6509b9af-2cc8-4fb6-9ef5-cf5f1d292c19).
+
+For a Microsoft Excel for Mac version of this article, see [Customize how Excel starts in Excel for Mac](https://support.microsoft.com/help/259921).
 
 ## Summary
 
