@@ -52,8 +52,8 @@ Several diagnostics currently cover the various areas within Exchange Online and
 
 |Diagnostic|Description|Shortcut cmd|Support article|
 |---|---|---|---|
-|Migration Exchange Web Services (EWS) throttling policy|Verify that the EWS throttling policy isn't too restrictive for a mailbox data migration that uses third-party tools. (Tools are exclusive of Microsoft tools for Hybrid, IMAP, G Suite, or Public Folder migrations.)|Diag: EWS Throttling||
-|Mailbox or message size|Check the size of a mailbox or check and increase the size of messages.|Diag: Mailbox or Message Size||
+|Migration Exchange Web Services (EWS) throttling policy|Verify that the EWS throttling policy isn't too restrictive for a mailbox data migration that uses third-party tools. (Doesn't apply to Microsoft tools for Hybrid, IMAP, G Suite, or Public Folder migrations.)|Diag: EWS Throttling||
+|Mailbox or message size|Check the size of a mailbox or the size of messages (including attachments).|Diag: Mailbox or Message Size||
 |Deleted mailbox diagnostics|Check the state of recently deleted mailboxes.|Diag: Deleted Mailbox|[Delete or restore user mailboxes in Exchange Online](/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes)|
 |Exchange Remote PowerShell throttling policy|Update the Exchange Remote PowerShell throttling policy for the tenant.|Diag: PowerShell Throttling||
 |Email delivery troubleshooter|Check whether email messages are successfully delivered.|Diag: Troubleshoot Email Delivery||
