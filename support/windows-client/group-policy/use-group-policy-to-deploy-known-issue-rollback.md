@@ -99,7 +99,7 @@ For more information about how to create GPOs, see [Create a Group Policy Object
 1. In **Query**, enter the following query string:
 
    ```sql
-   SELECT version.producttype from Win32_OperatingSystem WHERE Version = <VersionNumber>
+   SELECT version from Win32_OperatingSystem WHERE Version = <VersionNumber>
    ```
 
    > [!IMPORTANT]  
