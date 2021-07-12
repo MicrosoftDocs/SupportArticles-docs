@@ -27,15 +27,15 @@ Microsoft 365 reports show anonymous user names instead of the actual user names
 - OneDrive files
 - SharePoint files
 
-To see these reports in the Microsoft 365 portal, go to **Home** > **Reports** > **Usage**.
+To see these reports in the Microsoft 365 admin center, go to **Home** > **Reports** > **Usage**.
 
 ## Cause
 
-This issue occurs because of a setting in the Microsoft 365 portal.
+This issue occurs because of a setting in the Microsoft 365 admin center.
 
 ## Resolution
 
-To resolve this issue, change the following account setting in the Microsoft 365 portal.
+To resolve this issue, change the following account setting in the Microsoft 365 admin center.
 
 > [!NOTE]
 > You must be a Microsoft 365 tenant administrator.
