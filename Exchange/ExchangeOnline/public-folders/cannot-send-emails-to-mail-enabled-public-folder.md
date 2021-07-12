@@ -57,20 +57,20 @@ Here's an example of the output for a public folder that's named PF2:
 
 ## Resolution
 
-To fix the error, follow these steps to enable the Default or Anonymous user permission (as appropriate for your scenario) to be able to create items in the mail-enabled public folder.
+To fix the error, follow these steps to enable the **Default** or **Anonymous** user permission (as appropriate for your scenario) to be able to create items in the mail-enabled public folder.
 
 **Note:** You must have administrator permissions to make the following changes.
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Run the [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission) cmdlet, as follows:
 
-    For the Default user permission:
+    For the **Default** user permission:
 
     ```powershell
     Add-PublicFolderClientPermission -Identity "\<name_of_public_folder>" -User Default -AccessRights CreateItems
     ```
 
-    For the Anonymous user permission:
+    For the **Anonymous** user permission:
 
     ```powershell
     Add-PublicFolderClientPermission -Identity "\<name_of_public_folder>" -User Anonymous -AccessRights CreateItems
