@@ -8,13 +8,17 @@ ms.service: cloud-services
 ---
 # Identify the containers consuming high CPU in an AKS cluster
 
+High CPU consumption is a symptom of one or more applications, or processes, that are requiring enough CPU time, that the performance or usability of the machine is impacted. High CPU consumption can occur in a variety of ways, but is most commonly driven by either user action or applications.
+
+When a machine experiences high CPU consumption, the applications running on the machine can be negatively impacted, and the user experience will be degraded. Applications or processes also become unstable, which may lead to issues beyond slow responses.
+
 [Container Insights](/azure/azure-monitor/containers/container-insights-overview) is a feature within [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) that is designed to monitor the performance of container workloads. You can use Container Insights to identify containers or pods that are driving high CPU consumption.
 
 ## Identify high CPU containers in an AKS cluster
 
 To identify containers or pods that are driving high CPU consumption:
 
-1. On the [Azure Portal](https://portal.azure.com), navigate to the cluster.
+1. On the [Azure portal](https://portal.azure.com), navigate to the cluster.
 
 1. Under **Monitoring** select **Insights**.
 
@@ -38,9 +42,11 @@ In the following example, a container named **myapp-container** inside of the **
 
 ## Run simple commands on the node
 
+A customer may run a simple command because this type of interaction is not available from the Azure portal outside of using one of the az run-commands, which is a slower and less desirable experience for this kind of interaction.
+
 Simple commands can be run on a node through Secure Shell (SSH) to help identify any high CPU consuming containers.
 
-1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`, depending on whether or not you have **ContainerD**.
+1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`, depending on whether or not you have **ContainerD**. ContainerD is container runtime that executes containers and [manages container images on a node](/azure/aks/cluster-configuration#container-runtime-configuration).
 
    1. If you don't have **ContainerD**, run this command:
    
@@ -69,3 +75,9 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 - [Container insights overview](/azure/azure-monitor/containers/container-insights-overview)
 - [Monitor your Kubernetes cluster performance with Container insights](/azure/azure-monitor/containers/container-insights-analyze)
 - [How to manage the Container insights agent](/azure/azure-monitor/containers/container-insights-manage-agent)
+
+### External links (Kubernetes)
+
+- [Resource Limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+- [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
+- [Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/)
