@@ -24,7 +24,7 @@ Specifically, under **Site Content Type** > **Advanced Settings** > **Document T
 ![Enter the URL for Document Template in Site Content Type: Advanced Settings page](./media/relative-url-across-site-collection-not-supported/enter-url.png)
 
 > [!NOTE]
-> Issue affects also SharePoint Server on-premises.
+> This issue also affects SharePoint Server on-premises.
 
 ## More information
 
