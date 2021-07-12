@@ -1,5 +1,5 @@
 ---
-title: M365 reports show anonymous instead of actual user names
+title: Microsoft 365 reports show anonymous instead of actual user names
 description: Describes an issue in which Microsoft 365 reports show anonymous usernames instead of the actual user names.
 author: MaryQiu1987
 manager: dcscontentpm
@@ -27,7 +27,7 @@ Microsoft 365 reports show anonymous user names instead of the actual user names
 - OneDrive files
 - SharePoint files
 
-To see these reports in the Microsoft 365 Portal, go to **Home**, **Reports**, and then **Usage**.
+To see these reports in the Microsoft 365 portal, go to **Home** > **Reports** > **Usage**.
 
 ## Cause
 
@@ -38,8 +38,8 @@ This issue occurs because of a setting in the Microsoft 365 portal.
 To resolve this issue, change the following account setting in the Microsoft 365 portal.
 
 > [!NOTE]
-> You must be an Microsoft 365 tenant administrator.
+> You must be a Microsoft 365 tenant administrator.
 
-1. Go to [https://admin.microsoft.com](https://admin.microsoft.com/Adminportal/Home).
-1. Go to **Settings**, **Org Settings**, and then **Reports**.
-1. Disable the **In all reports, display de-identified names for users, groups and sites.** setting.
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
+1. Go to **Settings** > **Org settings** > **Reports**.
+1. Clear the **In all reports, display de-identified names for users, groups, and sites.** option.
