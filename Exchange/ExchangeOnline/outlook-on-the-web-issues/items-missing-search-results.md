@@ -1,8 +1,8 @@
 ---
 title: Items are missing from search results when Office 365 users search their mailbox in Outlook on the web
 description: Describes an issue in which items are missing in the search results when Office 365 users search their mailbox by using the search box in Outlook on the web. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

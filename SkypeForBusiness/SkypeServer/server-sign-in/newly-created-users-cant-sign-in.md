@@ -1,7 +1,7 @@
 ---
 title: Newly created users can't sign in to a Lync client
 description: Describes an issue that prevents newly created users from signing in to a Lync client. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: lynccic, corbinm, abgm
 appliesto:
 - Lync Server 2010 Enterprise Edition

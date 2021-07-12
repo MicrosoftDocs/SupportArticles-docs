@@ -1,8 +1,8 @@
 ---
 title: Developer Support limitations for open standards
 description: Explains that Microsoft Customer Service and Support don't support a custom-solution that uses open standards for mail and calendaring, such as vCalendar, iCalendar, IMAP, POP3, SMTP, and MIME.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

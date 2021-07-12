@@ -1,7 +1,7 @@
 ---
 title: Error in the Office 365 portal
 description: Describes a problem in which administrators receive an error message in the Office 365 portal that states that the value of msRTCSIP-PrimaryUserAddress or the SIP address isn't unique. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:

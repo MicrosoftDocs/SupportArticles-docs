@@ -1,8 +1,8 @@
 ---
 title: Cannot import trusted publishing domain from RMS Online
 description: Describes an issue in which you receive an error message when you run try to import the trusted publishing domain from RMS Online. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

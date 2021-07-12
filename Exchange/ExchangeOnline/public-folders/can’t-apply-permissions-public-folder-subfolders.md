@@ -1,7 +1,7 @@
 ---
 title: Can't apply permissions to public folder subfolders in EAC
 description: When you apply permissions to a public folder and its subfolders by using EAC, the permissions aren't applied to all or some subfolders.
-author: Norman-sun
+author: simonxjx
 ms.author: batre
 manager: dcscontentpm
 audience: ITPro 

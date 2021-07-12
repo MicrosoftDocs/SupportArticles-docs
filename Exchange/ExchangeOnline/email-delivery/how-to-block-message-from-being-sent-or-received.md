@@ -1,8 +1,8 @@
 ---
 title: How to block message from being sent or received
 description: Describes how to block a message from being sent or received in Microsoft 365 based on the file name extension of the attachment.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

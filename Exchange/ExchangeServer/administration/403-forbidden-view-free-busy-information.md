@@ -1,8 +1,8 @@
 ---
 title: 403 Forbidden and you can't see free/busy information at organization level
 description: Discusses 403 Forbidden error when you view organization-wide free/busy information.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

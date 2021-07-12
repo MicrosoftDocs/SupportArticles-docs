@@ -1,7 +1,7 @@
 ---
 title: Client does not start when click a meeting link if default browser is Chrome
 description: Discusses that users who try to join Lync or Skype for Business online meetings are directed to Lync Web App, and their local client does not start. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-swei
+ms.author: v-six
 appliesto:
 - Skype for Business Online
 - Skype for Business Server 2015
@@ -46,34 +46,6 @@ This problem occurs because, by default, the updated version of Google Chrome de
 [May 2015 cumulative update (5.0.8308.887)](https://support.microsoft.com/help/2809243) for Microsoft Lync Server 2013 that enables Mac users and Windows users to join a meeting by using Lync Web App in any default browser that you set. It does not require to use NPAPI to join a meeting if Chrome is the default browser. See the following article for more information:
 
 > [Cumulative update for Lync Server 2013 that provide full Lync Web App experience](https://support.microsoft.com/help/3038437)
-
-## Workaround
-
-To work around this problem, use one of the following methods.
-
-### Option 1: Change the default browser
-
-Set the [Microsoft Edge browser](https://www.microsoft.com/edge) or another supported browser as the user's default browser.
-
-### Option 2: Set GPO settings
-
-Use the Chrome ADMX template to set GPO settings that apply configurations to domain-joined computers. To do this, follow these steps:
-
-1. Download the following Google Chrome GPO policy templates:
-
-   > [Policy_templates.zip](https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip)
-
-2. Install the GPO policy templates by using the following directions:
-
-   > [Scenario 2: Editing Domain-Based GPOs Using ADMX Files](/previous-versions/windows/it-pro/windows-vista/cc748955(v=ws.10))
-
-3. Configure the "Computer Configuration\Administrative Templates\Google\Google Chrome\Content Settings\Allow plugins on these sites" setting by enabling the policy and by configuring the list of meeting join domain URLs that should be trusted.
-
-    > [!NOTE]
-    > This list should contain the following items:
-    > - The meeting join URL of the user's organization.
-    > - The URLs of any business partners that members of the user's organization frequently join in meetings.
-    > - The default Lync and Skype for Business [online meeting URL](https://meet.lync.com).
 
 ## More information
 

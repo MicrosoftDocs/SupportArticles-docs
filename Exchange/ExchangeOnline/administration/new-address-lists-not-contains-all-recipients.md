@@ -1,8 +1,8 @@
 ---
 title: New address lists do not contain all recipients
 description: Describes a problem in which new address lists that you create in Exchange Online don't contain all the recipients that you expect. Provides a workaround.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

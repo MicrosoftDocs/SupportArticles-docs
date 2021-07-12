@@ -1,7 +1,7 @@
 ---
 title: Configure Proofpoint Email Protection with Exchange Online
-ms.author: v-swei
-author: Norman-sun
+ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
 ms.date: 10/22/2020
 audience: Admin

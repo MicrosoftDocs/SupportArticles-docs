@@ -1,8 +1,8 @@
 ---
 title: Exchange Online Message Trace Diagnostic
 description: Discusses the data that's collected by the Exchange Online Message Trace Diagnostic tool.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

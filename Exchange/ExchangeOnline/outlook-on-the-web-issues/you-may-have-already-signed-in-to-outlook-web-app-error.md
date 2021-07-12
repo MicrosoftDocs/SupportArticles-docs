@@ -1,8 +1,8 @@
 ---
 title: You may have already signed in to Outlook Web App error
 description: Describes an issue in which you receive a You may have already signed in to Outlook Web App error message when you try to open Outlook Web App in Office 365. Provides a workaround.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

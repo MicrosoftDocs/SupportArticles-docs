@@ -1,8 +1,8 @@
 ---
 title: Get-WebServicesVirtualDirectory cmdlet error in HCW
 description: Provides a workaround for an issue that triggers an error when you run the Hybrid Configuration wizard in Exchange Server 2013 in larger environments.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

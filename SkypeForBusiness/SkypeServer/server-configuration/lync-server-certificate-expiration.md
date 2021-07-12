@@ -1,7 +1,7 @@
 ---
 title: Prevent Lync Server certificate expiration
 description: Describes how to prevent Lync Server certificate expiration.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto:

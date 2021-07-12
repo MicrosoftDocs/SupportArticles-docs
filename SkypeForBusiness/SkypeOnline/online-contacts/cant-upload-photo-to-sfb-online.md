@@ -1,7 +1,7 @@
 ---
 title: You can't upload a photo from Lync 2013 to Skype for Business Online
 description: Describes an issue in which Skype for Business Online users can't upload a photo from Lync 2013. Provides a workaround if the user doesn't have a Microsoft Exchange mailbox.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

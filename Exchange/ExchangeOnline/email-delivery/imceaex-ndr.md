@@ -1,11 +1,11 @@
 ---
 title: IMCEAEX non-delivery report when you send email messages to an internal user
 description: Describes an issue in which you receive an NDR when you send email messages to an internal user in Office 365. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-swei
+ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -46,7 +46,7 @@ To create an X500 proxy address for the old `LegacyExchangeDN` attribute for the
 
 After you make these changes, the proxy address for the example in the "Symptoms" section resembles the following:
 
-X500:/O=MMS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=User-addd-4b03-95f5-b9c9a421957358d
+X500:/O=MMS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=User6ed4e168-addd-4b03-95f5-b9c9a421957358d
 
 > [!NOTE]
 > The most common items will be replaced. However, there may be other symbols in the `LegacyExchangeDN` attribute that will also be changed from the way that they appear in the NDR. Generally, any character pattern of "+##" must be replaced with the corresponding ASCII symbol. For example:

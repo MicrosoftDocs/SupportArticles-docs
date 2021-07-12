@@ -1,11 +1,11 @@
 ---
 title: Users in a hybrid deployment can't access a shared mailbox in Exchange Online
 description: Describes an issue in which users in an Exchange hybrid deployment are unable to access, view free/busy information, or send mail to a shared mailbox that was created in Exchange Online.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: troubleshooting
-ms.author: v-swei
+ms.author: v-six
 ms.custom: 
 - Exchange Hybrid
 - CSSTroubleshoot
@@ -114,7 +114,7 @@ Create an on-premises object for the cloud mailbox by using the `New-RemoteMailb
 For example, run the following command:  
 
 ```powershell
-New-Remotemailbox sharedmailbox@contoso.com -Remoteroutingaddress sharedmailbox@contoso.mail.onmicrosoft.com -Shared
+New-Remotemailbox -Name "Shared mailbox" -Alias sharedmailbox -UserPrincipleName sharedmailbox@contoso.com -Remoteroutingaddress sharedmailbox@contoso.mail.onmicrosoft.com -Shared
 ```
 
 ## More information

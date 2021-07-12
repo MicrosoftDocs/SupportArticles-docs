@@ -48,5 +48,9 @@ Subkey: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Outlook\PolicyNudges*
 Value: **LastDownloadTimesPerAccount**
 
 > [!NOTE]
-> - This troubleshooting step does not fix the problem that is caused by the condition that's described in the **Cause** section.
+> - This troubleshooting step doesn't fix the problem that is caused by the condition that's described in the **Cause** section.
 > - OWA isn't affected by the problem that's caused by the condition that's described in the **Cause** section.
+
+## Related article
+
+[Outlook DLP policy tips not working for certain conditions in email body and attachments](https://support.microsoft.com/office/outlook-dlp-policy-tips-not-working-for-certain-conditions-in-email-body-and-attachments-8a32496a-3478-403c-b2eb-04a218f7443c)

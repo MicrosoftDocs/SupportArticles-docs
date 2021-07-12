@@ -1,8 +1,8 @@
 ---
 title: Set IIS SMTP for outgoing TLS authentication
 description: Describes how to configure IIS SMTP so that it works correctly with outgoing Transport Layer Security (TLS) authentication.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

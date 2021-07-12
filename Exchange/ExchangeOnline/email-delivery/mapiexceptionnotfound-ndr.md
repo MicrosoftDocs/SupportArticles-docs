@@ -1,11 +1,11 @@
 ---
 title: STOREDRV.Deliver.Exception:ObjectNotFoundException.MapiExceptionNotFound
 description: Describes an issue that returns a "554.5.2.0 Cannot get ID from name" nondelivery report when users send mail to a distribution group in Exchange Online. Provides a workaround.
-author: Norman-sun
+author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: troubleshooting
-ms.author: v-swei
+ms.author: v-six
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot

@@ -1,7 +1,7 @@
 ---
 title: Error (The seeding operation failed) when running Add-MailboxDatabaseCopy command
 description: Provide a workaround to an issue in which you receive an error message stating "The seeding operation failed" when running Add-MailboxDatabaseCopy command.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

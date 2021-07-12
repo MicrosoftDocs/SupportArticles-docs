@@ -1,8 +1,8 @@
 ---
 title: Description of the Files folder in Office 365
 description: Description of the Files folder that's listed in the output of Get-MailboxFolderStatistics for a mailbox.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

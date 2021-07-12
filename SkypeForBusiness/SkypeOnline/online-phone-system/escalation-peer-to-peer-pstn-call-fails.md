@@ -1,7 +1,7 @@
 ---
 title: Escalation of peer to peer PSTN call fails
 description: Describes an issue that triggers an An error occurred or  An error occurred while presenting when you try to escalate a conference call when you use Skype for Business Cloud Connector. Provides a workaround.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Cloud Connector Edition

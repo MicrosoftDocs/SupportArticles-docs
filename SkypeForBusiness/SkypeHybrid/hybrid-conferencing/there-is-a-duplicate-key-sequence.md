@@ -1,7 +1,7 @@
 ---
 title: There is a duplicate key sequence after you run New-CSHostingProvider
 description: Describes an error in Lync Server, Skype for Business Server, and Skype for Business Online that occurs after you run the New-CSHostingProvider PowerShell cmdlet. Provides a solution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: v-tain, corbinm, dahans
 appliesto:
 - Skype for Business Online

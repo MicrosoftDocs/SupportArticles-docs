@@ -1,7 +1,7 @@
 ---
 title: Invitations are not sent from Outlook when you try to schedule a meeting
 description: Describes an issue in which meeting invitations aren't sent to participants of a Skype for Business Online meeting if Outlook isn't connected to an Exchange server. Provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto:

@@ -1,8 +1,8 @@
 ---
 title: Some cmdlets fails to run with Add-PSSnapin
 description: This article discusses that you can't run script that contains Add-PSSnapin and Test-WebServicesConnectivity cmdlets in PowerShell ISE. This problem occurs after you upgrade an Exchange Server environment to Exchange Server 2010 SP3. This article provides a workaround.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

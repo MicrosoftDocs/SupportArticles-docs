@@ -1,8 +1,8 @@
 ---
 title: Can't access OWA/EAC with expired OAuth certificate
 description: Fixes an issue in which you can't sign in to Outlook on the web (formerly known as Outlook Web App) or EAC if the Exchange Server OAuth certificate is expired. Provide steps to create and deploy a new certificate.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Exchange 2013-based hybrid deployment mail issues
 description: Describes a scenario in which users in your Exchange 2013-based hybrid deployment experience mail issues such as missing Skype for Business presence information and 451 4.7.0 NDR errors. These issues started occurring after April 15, 2016. Provides a solution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

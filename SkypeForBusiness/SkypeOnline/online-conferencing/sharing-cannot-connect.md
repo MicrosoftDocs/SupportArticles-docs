@@ -1,7 +1,7 @@
 ---
 title: Desktop or Application sharing can't connect in a conference
 description: Resolves a problem in which participants can't connect to a desktop-sharing or application-sharing session in Skype for Business Online.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
@@ -50,5 +50,7 @@ This issue usually occurs because one or more of the following conditions are tr
 - Traffic to or from meet.lync.com is blocked.   
 
 If the error message in the "Symptoms" section is present in the UCCP client logs for Lync, there's likely a communication error between two Lync edge servers. This means that two users who try to connect are connected through different edge servers that can't communicate with one another.
+
+For more information about logs for the Skype for Business desktop client, see [Gathering Logs from a Skype for Business Desktop Client](/skype-sdk/websdk/docs/troubleshooting/gatheringlogs/logs-desktopclient).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

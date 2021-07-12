@@ -1,7 +1,7 @@
 ---
 title: Event ID 1649 - A TLS failure occurred
 description: Describes a TLS failure that occurred because the remote server disconnected while TLS negotiation was in progress.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013

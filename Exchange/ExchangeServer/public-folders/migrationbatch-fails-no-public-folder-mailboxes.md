@@ -1,7 +1,7 @@
 ---
 title: Migration batch fails with error message "No active public folder mailboxes were found" at Complete-MigrationBatch command 
 description: This article describes an issue that migration batch will fail with error message "No active public folder mailboxes were found" at Complete-MigrationBatch command, provides a resolution.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro

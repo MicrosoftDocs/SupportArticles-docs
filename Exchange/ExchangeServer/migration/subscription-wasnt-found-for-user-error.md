@@ -1,7 +1,7 @@
 ---
 title: Error (A subscription wasn’t found for this user) when migrating a public folder batch in Exchange Server 2016
-ms.author: v-swei
-author: Norman-sun
+ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
 ms.date: 10/7/2020
 audience: Admin

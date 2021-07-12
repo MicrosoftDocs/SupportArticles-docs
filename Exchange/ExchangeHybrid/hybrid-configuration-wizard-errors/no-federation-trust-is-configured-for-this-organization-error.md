@@ -1,8 +1,8 @@
 ---
 title: No Federation trust is configured for this organization
 description: Describes an issue that triggers an error when you try to run the Hybrid Configuration Wizard. A resolution is provided.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

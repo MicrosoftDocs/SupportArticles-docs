@@ -1,7 +1,7 @@
 ---
 title: New features in the firmware update for Polycom VVX IP phones
 description: Describes the new features in the firmware update for the Polycom VVX IP phone that support Skype for Business Online.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,13 +9,16 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
 
 # New features in the firmware update for Polycom VVX IP phones
+
+> [!IMPORTANT]
+> Skype for Business Online will be retired on July 31, 2021. If you haven't upgraded your Skype for Business Online users to Microsoft Teams before that date, they will be automatically scheduled for an [assisted upgrade](/microsoftteams/upgrade-assisted). If you want to upgrade your organization to Teams yourself, we strongly recommend that you begin planning your upgrade path today. Remember that a successful upgrade aligns technical and user readiness, so be sure to leverage our [upgrade guidance](/microsoftteams/upgrade-start-here) as you navigate your journey to Teams.
 
 ## Introduction 
 

@@ -2,8 +2,8 @@
 title: Troubleshoot ActiveSync with Exchange Server
 description: Resolves ActiveSync issues with Exchange Server.
 ms.date: 08/13/2020
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -981,7 +981,7 @@ ActiveSync device requests do not always reach the destination as desired. To en
 
 We need to determine the ConversationID for the item before we search the mailbox log. To do this, follow these steps:
 
-1. Download and install [MfcMapi](https://mfcmapi.codeplex.com/).
+1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.
@@ -1435,7 +1435,7 @@ Review the mailbox log to determine that attachment the user is attempting to op
 
 We need to determine if the attachment exists within the message. To do this, follow these steps:
 
-1. Download and install [MfcMapi](https://archive.codeplex.com/?p=mfcmapi).
+1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.
@@ -1738,7 +1738,7 @@ ActiveSync device requests do not always reach the destination as desired. To en
 
 We need to determine the UID for the appointment within the mailbox before we search the mailbox log. To do this, follow these steps:
 
-1. Download and install [MfcMapi](https://mfcmapi.codeplex.com/).
+1. Download and install [MfcMapi](https://github.com/stephenegriffin/mfcmapi).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.

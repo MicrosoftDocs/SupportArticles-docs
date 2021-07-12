@@ -1,8 +1,8 @@
 ---
 title: Unsecure redirect warning
 description: Describes an issue that triggers an unsecure redirect warning message when you run the Get-FederationInformation cmdlet. Then, the Hybrid Configuration wizard doesn't finish successfully.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

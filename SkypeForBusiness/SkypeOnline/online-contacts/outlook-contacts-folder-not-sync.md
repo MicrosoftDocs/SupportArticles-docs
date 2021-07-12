@@ -1,7 +1,7 @@
 ---
 title: Outlook SFB Contacts folder doesn't sync with Skype for Business contacts
 description: Summarizes an issue in which the Outlook Skype for Business Contacts folder doesn't sync with Skype for Business contacts. Provides a workaround.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.reviewer: ramesa, dahans, randw
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -35,7 +35,7 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
 > [!NOTE]
 > The steps to remove the contacts in the Contacts folder should only be performed by an administrator. After the following steps are performed, the Contacts folder will remain, but the contacts won't. And the contacts will no longer cause stale information to replicate.
 
-1. Download and install MFCMapi from the following Microsoft website: [MFCMAPI](https://mfcmapi.codeplex.com).
+1. Download and install MFCMapi from the following Microsoft website: [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 2. Close Skype for Business and Microsoft Outlook.   
 3. Open MFCMapi. If you're prompted, click **OK** on the usage notes box. 
 

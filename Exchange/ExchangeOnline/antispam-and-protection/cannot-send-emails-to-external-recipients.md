@@ -1,8 +1,8 @@
 ---
 title: Cannot send emails to an external recipient
 description: Describes an issue in which you're told that the host name does not match the IP address.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

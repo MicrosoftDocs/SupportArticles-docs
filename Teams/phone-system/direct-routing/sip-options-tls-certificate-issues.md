@@ -24,8 +24,8 @@ ms.reviewer: mikebis
 
 When you set up Direct Routing, you might experience the following Session Border Controller (SBC) connectivity issues:
 
-- **Session Initiation Protocol** (SIP) options are not received.
-- **Transport Layer Security** (TLS) connections problems occur.
+- Session Initiation Protocol (SIP) options are not received.
+- Transport Layer Security (TLS) connections problems occur.
 - The SBC doesn’t respond.
 - The SBC is marked as inactive in the Teams Admin portal.
 

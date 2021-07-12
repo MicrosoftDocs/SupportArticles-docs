@@ -1,8 +1,8 @@
 ---
 title: Emails are rejected and NDRs are received
 description: Discusses a scenario in which email messages that are sent from cloud-based mailboxes in a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365 are rejected, and nondelivery reports are received. Provides a resolution.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

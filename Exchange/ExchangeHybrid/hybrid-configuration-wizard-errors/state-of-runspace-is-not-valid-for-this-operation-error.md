@@ -1,8 +1,8 @@
 ---
 title: State of runspace is not valid for this operation error
 description: Describes an issue in which you receive a State of runspace is not valid for this operation error when you run the Hybrid Configuration wizard.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

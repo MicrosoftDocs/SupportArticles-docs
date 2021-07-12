@@ -37,7 +37,7 @@ When Microsoft Outlook tries to connect to a server by using a remote procedure 
 
 - Error message 3
 
-    > There is a problem with the proxy server's security certificate, %s. The security certificate is not from a trusted certifying authority. Outlook is unabletoconnect tothis server.(%s)"
+    > There is a problem with the proxy server's security certificate, %s. The security certificate is not from a trusted certifying authority. Outlook is unable to connect to this server.(%s)"
 
 - Error message 4
 
@@ -82,7 +82,7 @@ To examine the certificate, follow these steps:
 
 ## Resolution 2: Install the trusted root certificate for error message 3
 
-To install the trusted root certificate, follow these steps:
+To install the trusted root certificate on the client, follow these steps:
 
 1. Click **Install Certificate** when you're prompted with the **Certificate** dialog box.
 1. Click **Next**.
@@ -92,6 +92,8 @@ To install the trusted root certificate, follow these steps:
 1. Click **Next**.
 1. Click **Finish**.
 1. Click **OK**.
+
+For references, see [Installing a trusted root certificate](/skype-sdk/sdn/articles/installing-the-trusted-root-certificate#installing-a-trusted-root-certificate).
 
 ## Resolution 3: Disable the third-party add-in or the third-party browser add-in for error message 4
 

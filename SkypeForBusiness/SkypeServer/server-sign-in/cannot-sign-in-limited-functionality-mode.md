@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Lync client in limited functionality mode
 description: Troubleshooting sign-in issues in which users in a routing group cannot sign in to a Lync client or they sign in to the client in limited functionality mode in a Lync Server 2013 environment. These issues occur when Windows Fabric replicas are insufficient for the routing group.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 ms.reviewer: mahesha, miadkins, rdubois, premgan, landerl, bwilson, brandber, dahans
 appliesto:

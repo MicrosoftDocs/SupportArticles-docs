@@ -1,8 +1,8 @@
 ---
 title: Color categories in a calendar aren't print in Outlook on the web
 description: Resolves an issue that occurs when you use Outlook on the web to connect to your mailbox in Exchange Server 2016, Exchange Server 2013, or Office 365 and then assign color categories to calendar appointments.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

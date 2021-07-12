@@ -1,8 +1,8 @@
 ---
 title: Can't replicate public folders to Exchange Server 2010
 description: Discusses an issue where you get an error - The store driver couldn't deliver the public folder replication message when you replicate public folder content to Exchange 2010. 
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

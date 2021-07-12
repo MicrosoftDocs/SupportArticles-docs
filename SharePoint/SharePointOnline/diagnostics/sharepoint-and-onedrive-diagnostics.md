@@ -27,8 +27,6 @@ description: SharePoint Online and OneDrive Diagnostics
 
 It’s important that administrators can diagnose and resolve issues quickly in SharePoint Online and OneDrive. To support this effort, the SharePoint support team has released new features in the Microsoft 365 admin center.
 
-Currently we provide diagnostics through text analytics. This feature will remain. However, we want to make it easier to find the diagnostics within the current experience. So we have created a new set of queries to help administrators.
-
 > [!NOTE]
 > This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
@@ -40,7 +38,7 @@ Diagnostic capabilities for a few text queries were first released within the Mi
 
 ### What scenarios are currently covered?
 
-There are currently nine diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed here together with a brief description of its function and also a shortcut command:
+There are currently diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed here together with a brief description of its function and also a shortcut command:
 
 | Diagnostic | Description | Shortcut cmd | Support Article |
 | --- | --- | -- | -- |
@@ -59,6 +57,7 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 | **Invalid retention hold** | Detects and removes an invalid retention hold blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](../sites/compliance-policy-blocking-site-deletion.md)
 | **OneDrive web access issue** | Detects and renames the OneDrive default document library back to 'Documents'  | Diag: OneDrive Document Library Path Modified | [Error - This item might not exist](/sharepoint/troubleshoot/sharing-and-permissions/this-item-might-not-exist-error)
 | **OneDrive Storage limited to 5 TB**| Verifies that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | Diag: OneDrive Storage limited to 5TB |[Check OneDrive site storage eligibility for storage beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility)
+| **SharePoint Tenant Storage**| Verifies any issues with your SharePoint Online tenant storage quota displayed in SharePoint admin center and shows how quota is allocated | Diag: SharePoint tenant storage |
 
 ### How do I run these diagnostics?
 
@@ -82,5 +81,8 @@ Currently, these diagnostics are available only for administrators. They can be 
 5.	If you want to render one of our specific diagnostics, enter one of the queries from the scenario table under "Shortcut cmd" into the “Need help?” text box.
 
 4. To access a specific diagnostic, enter the corresponding shortcut command from the table above into the “Need help?” text box.
+
+> [!NOTE]
+> If a diagnostic detects an issue, and you've implemented a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved. 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

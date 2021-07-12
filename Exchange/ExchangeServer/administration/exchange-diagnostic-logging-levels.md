@@ -1,8 +1,8 @@
 ---
 title: Exchange server diagnostic logging levels
 description: This article introduces the Exchange server diagnostic logging levels that you can use to control the amount of the saved information.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

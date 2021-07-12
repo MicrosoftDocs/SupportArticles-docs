@@ -1,8 +1,8 @@
 ---
 title: Exchange Frontend Transport service terminated unexpectedly when running Set-ServerComponentState
 description: Exchange transport service crashes with event 7031 logged when you run the Set-ServerComponentState cmdlet against the ServerWideOffline component.
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

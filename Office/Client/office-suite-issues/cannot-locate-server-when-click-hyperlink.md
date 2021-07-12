@@ -54,7 +54,7 @@ When you create a hyperlink in an Office document and then select the link, you 
 **\<URL> = the hyperlink you inserted.**
 
 > [!NOTE]
-> The hyperlink does work if you type it directly in the browser or in the Open box of the Run dialog box (select **Start**, and then select **Run**).
+> The hyperlink does work if you type it directly in the browser, or in the Open box of the Run dialog box (select **Start**, and then select **Run**).
 
 ## Cause
 
@@ -63,20 +63,23 @@ This problem occurs when the following conditions are true:
 - You are using Microsoft Internet Explorer:
 
   - As a proxy server -or-
-  - With a firewall that does not allow HTTP requests to be placed on your local network
+  - With a firewall that doesn't allow HTTP requests to be placed on your local network
 
-- Internet Explorer is not your default browser.
+- Internet Explorer isn't your default browser.
 
-- The ForceShellExecute registry key is not present in the following location or is not set to 1:
+- The **ForceShellExecute** registry key isn't present in the following location, or isn't set to **1**:
 
     - For 32-bit versions of office installed on 64-bit operating systems:
     
-      **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet**
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet`
     
-    - For 32-bit versions of Office installed on 32-bit operating systems or 64-bit versions of Office installed on 64-bit operating systems:
+    - For 32-bit versions of Office installed on 32-bit operating systems, or 64-bit versions of Office installed on 64-bit operating systems:
     
-      **HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet** 
-
+      `HKEY_LOCAL_MACHINE\Software\Microsoft\Office\9.0\Common\Internet` 
+      
+    > [!NOTE]
+    > The registry path doesn't depend on your Office version.
+         
 ## Workaround
 
 > [!IMPORTANT]
@@ -94,17 +97,17 @@ To work around this issue, either add the ForceShellExecute subkey, if it is not
 
     - For a 32-bit version of Office on a 64-bit version of Windows:
     
-      **HKLM\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet\**
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet`
     
     - For a 32-bit version of Office on a 32-bit version of Windows:
     
-      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet**
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet`
     
     - For a 64-bit version of Office on a 64-bit version of Windows:
     
-      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet**
-
-4. Make sure the Internet subkey is selected. On the **Edit** menu, point to **New**, and then select DWORD Value. Add the following registry value:
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet`      
+    
+4. Make sure the Internet subkey is selected. On the **Edit** menu, point to **New**, and then select **DWORD** Value. Add the following registry value:
 
     **Value Name: ForceShellExecute**
 
@@ -113,7 +116,7 @@ To work around this issue, either add the ForceShellExecute subkey, if it is not
 
 ### Did this fix the problem?
 
-Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, [contact support](https://support.microsoft.com/contactus/).
 
 ## More Information
 
@@ -121,8 +124,8 @@ A hyperlink may not go to a Microsoft Word document or a Microsoft Excel workshe
 
 Office uses the Urlmon.dll file to handle all Internet transitions.
 
-In this case, the Urlmon.dll file sends a request to get a file via http:// through the proxy server. The proxy server sees that the request came from Internet Explorer, based upon the HTTP User Agent field of the http://request. It then gives an error 403, basically saying "Access Denied." 
+In this case, the Urlmon.dll file sends a request to get a file via `http://` through the proxy server. The proxy server sees that the request came from Internet Explorer, based upon the HTTP User Agent field of the `http://request`. It then gives an error 403, basically saying "Access Denied." 
 
 The Urlmon.dll file gets this and simply returns the error message mentioned earlier. The error means that the request failed, but it never states why it failed.
 
-The workaround is to use a ShellExecute() on the URL. This allows the operating system to start the URL on the default browser. If the default browser is not restricted by the proxy server, the proper page is displayed.
+The workaround is to use a ShellExecute() on the URL. This allows the operating system to start the URL on the default browser. If the default browser isn't restricted by the proxy server, the proper page is displayed.

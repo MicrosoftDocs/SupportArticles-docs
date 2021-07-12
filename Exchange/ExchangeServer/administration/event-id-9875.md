@@ -1,8 +1,8 @@
 ---
 title: Getting errors 9875 in the event log
 description: Provides a resolution to solve the Event ID 9875 that may occur for a recurring meeting in Exchange Server 2010 Service Pack 3 (SP3).
-author: Norman-sun
-ms.author: v-swei
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

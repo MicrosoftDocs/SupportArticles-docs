@@ -1,7 +1,7 @@
 ---
 title: Lync conferencing feature fails for a mandatory user profile
 description: Describes Lync conferencing feature fails for a mandatory user profile.
-author: Norman-sun
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-swei
+ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Lync 2010
