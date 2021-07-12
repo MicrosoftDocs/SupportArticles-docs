@@ -66,21 +66,21 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-18|Local System|A service account that is used by the operating system.|
 |S-1-5-19|NT Authority|Local Service|
 |S-1-5-20|NT Authority|Network Service|
-|S-1-5-21domain-500|Administrator|A user account for the system administrator. By default, it's the only user account that is given full control over the system.|
-|S-1-5-21domain-501|Guest|A user account for people who don't have individual accounts. This user account doesn't require a password. By default, the Guest account is disabled.|
-|S-1-5-21domain-502|KRBTGT|A service account that is used by the Key Distribution Center (KDC) service.|
-|S-1-5-21domain-512|Domain Admins|A global group whose members are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that have joined a domain, including the domain controllers. Domain Admins is the default owner of any object that is created by any member of the group.|
-|S-1-5-21domain-513|Domain Users|A global group that, by default, includes all user accounts in a domain. When you create a user account in a domain, it's added to this group by default.|
-|S-1-5-21domain-514|Domain Guests|A global group that, by default, has only one member, the domain's built-in Guest account.|
-|S-1-5-21domain-515|Domain Computers|A global group that includes all clients and servers that have joined the domain.|
-|S-1-5-21domain-516|Domain Controllers|A global group that includes all domain controllers in the domain. New domain controllers are added to this group by default.|
-|S-1-5-21domain-517|Cert Publishers|A global group that includes all computers that are running an enterprise certification authority. Cert Publishers are authorized to publish certificates for User objects in Active Directory.|
-|S-1-5-21root domain-518|Schema Admins|A universal group in a native-mode domain; a global group in a mixed-mode domain. The group is authorized to make schema changes in Active Directory. By default, the only member of the group is the Administrator account for the forest root domain.|
-|S-1-5-21root domain-519|Enterprise Admins|A universal group in a native-mode domain; a global group in a mixed-mode domain. The group is authorized to make forest-wide changes in Active Directory, such as adding child domains. By default, the only member of the group is the Administrator account for the forest root domain.|
-|S-1-5-21domain-520|Group Policy Creator Owners|A global group that is authorized to create new Group Policy objects in Active Directory. By default, the only member of the group is Administrator.|
-|S-1-5-21domain-526|Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
-|S-1-5-21domain-527|Enterprise Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
-|S-1-5-21domain-553|RAS and IAS Servers|A domain local group. By default, this group has no members. Servers in this group have Read Account Restrictions and Read Logon Information access to User objects in the Active Directory domain local group.|
+|S-1-5-21-*domain*-500|Administrator|A user account for the system administrator. By default, it's the only user account that is given full control over the system.|
+|S-1-5-21-*domain*-501|Guest|A user account for people who don't have individual accounts. This user account doesn't require a password. By default, the Guest account is disabled.|
+|S-1-5-21-*domain*-502|KRBTGT|A service account that is used by the Key Distribution Center (KDC) service.|
+|S-1-5-21-*domain*-512|Domain Admins|A global group whose members are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that have joined a domain, including the domain controllers. Domain Admins is the default owner of any object that is created by any member of the group.|
+|S-1-5-21-*domain*-513|Domain Users|A global group that, by default, includes all user accounts in a domain. When you create a user account in a domain, it's added to this group by default.|
+|S-1-5-21-*domain*-514|Domain Guests|A global group that, by default, has only one member, the domain's built-in Guest account.|
+|S-1-5-21-*domain*-515|Domain Computers|A global group that includes all clients and servers that have joined the domain.|
+|S-1-5-21-*domain*-516|Domain Controllers|A global group that includes all domain controllers in the domain. New domain controllers are added to this group by default.|
+|S-1-5-21-*domain*-517|Cert Publishers|A global group that includes all computers that are running an enterprise certification authority. Cert Publishers are authorized to publish certificates for User objects in Active Directory.|
+|S-1-5-21-*root_domain*-518|Schema Admins|A universal group in a native-mode domain; a global group in a mixed-mode domain. The group is authorized to make schema changes in Active Directory. By default, the only member of the group is the Administrator account for the forest root domain.|
+|S-1-5-21-*root_domain*-519|Enterprise Admins|A universal group in a native-mode domain; a global group in a mixed-mode domain. The group is authorized to make forest-wide changes in Active Directory, such as adding child domains. By default, the only member of the group is the Administrator account for the forest root domain.|
+|S-1-5-21-*domain*-520|Group Policy Creator Owners|A global group that is authorized to create new Group Policy objects in Active Directory. By default, the only member of the group is Administrator.|
+|S-1-5-21-*domain*-526|Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
+|S-1-5-21-*domain*-527|Enterprise Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
+|S-1-5-21-*domain*-553|RAS and IAS Servers|A domain local group. By default, this group has no members. Servers in this group have Read Account Restrictions and Read Logon Information access to User objects in the Active Directory domain local group.|
 |S-1-5-32-544|Administrators|A built-in group. After the initial installation of the operating system, the only member of the group is the Administrator account. When a computer joins a domain, the Domain Admins group is added to the Administrators group. When a server becomes a domain controller, the Enterprise Admins group also is added to the Administrators group.|
 |S-1-5-32-545|Users|A built-in group. After the initial installation of the operating system, the only member is the Authenticated Users group. When a computer joins a domain, the Domain Users group is added to the Users group on the computer.|
 |S-1-5-32-546|Guests|A built-in group. By default, the only member is the Guest account. The Guests group allows occasional or one-time users to log on with limited privileges to a computer's built-in Guest account.|
@@ -131,10 +131,10 @@ When you add a domain controller that runs Windows Server 2008 or a later versio
 |SID|Name|Description|
 |---|---|---|
 |S-1-2-1|Console Logon|A group that includes users who are logged on to the physical console.<br/><br/> **Note** <br/>Added in Windows 7 and Windows Server 2008 R2.|
-|S-1-5-21 *domain* -498|Enterprise Read-only Domain Controllers|A universal group. Members of this group are read-only domain controllers in the enterprise.|
-|S-1-5-21 *domain* -521|Read-only Domain Controllers|A global group. Members of this group are read-only domain controllers in the domain.|
-|S-1-5-21 *domain* -571|Allowed RODC Password Replication Group|A domain local group. Members in this group can have their passwords replicated to all read-only domain controllers in the domain.|
-|S-1-5-21 *domain* -572|Denied RODC Password Replication Group|A domain local group. Members in this group can't have their passwords replicated to any read-only domain controllers in the domain.|
+|S-1-5-21-*domain*-498|Enterprise Read-only Domain Controllers|A universal group. Members of this group are read-only domain controllers in the enterprise.|
+|S-1-5-21-*domain*-521|Read-only Domain Controllers|A global group. Members of this group are read-only domain controllers in the domain.|
+|S-1-5-21-*domain*-571|Allowed RODC Password Replication Group|A domain local group. Members in this group can have their passwords replicated to all read-only domain controllers in the domain.|
+|S-1-5-21-*domain*-572|Denied RODC Password Replication Group|A domain local group. Members in this group can't have their passwords replicated to any read-only domain controllers in the domain.|
 |S-1-5-32-569|Builtin\Cryptographic Operators|A built-in local group. Members are authorized to perform cryptographic operations.|
 |S-1-5-32-573|Builtin\Event Log Readers|A built-in local group. Members of this group can read event logs from local computer.|
 |S-1-5-32-574|Builtin\Certificate Service DCOM Access|A built-in local group. Members of this group are allowed to connect to Certification Authorities in the enterprise.|
