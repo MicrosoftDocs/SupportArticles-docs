@@ -239,4 +239,4 @@ The following table compares the features (benefits and drawbacks) of the four m
 5. Save and close the macro.
 6. Save and run the form.
 
-Change the value of the combo box will close the form and open the form again with a filter applied.
+After you change the value of the combo box, the form will be closed and opened again with a filter applies.
