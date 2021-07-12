@@ -71,10 +71,16 @@ For additional documentation and instructions, see [az vm repair](/cli/azure/ext
    az extension update -n vm-repair
    ```
 
-3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy.  The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption the command will attempt to unlock the encrypted disk so that it is accessible when attached to the repair VM.
+3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy.  The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption the command will attempt to unlock the encrypted disk so that it is accessible when attached to the repair VM. If you need to troubleshoot your VM in a nested Hyper-V environment use `--enable-nested` and the repair VM will created with the Hyper-V role enabled along with a nested VM using the OS disk copy.
 
+   Repair VM example
    ```azurecli-interactive
    az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password 'password!234' --verbose
+   ```
+   
+   Repair VM with Nested Hyper-V example
+   ```azurecli-interactive
+   az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password 'password!234' --enable-nested --verbose
    ```
 
 4. Run `az vm repair run`. This command will run the specified repair script on the attached disk via the repair VM. If the troubleshooting guide you are using specified a run-id please use it here, otherwise you can use `az vm repair list-scripts` to see available repair scripts. The Resource Group and VM name used here are for the non-functional VM used in step 3. Additional information about the repair scripts can be found in the [repair script library](https://github.com/Azure/repair-script-library).
