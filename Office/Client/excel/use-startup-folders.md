@@ -20,7 +20,10 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-For a Microsoft Excel 2001 for Mac version of this article, see [259921](https://support.microsoft.com/help/259921).
+For information about Excel 2010, Excel for Mac 2011, and later versions, see the following articles:
+
+- [Customize how Excel starts](https://support.microsoft.com/office/6509b9af-2cc8-4fb6-9ef5-cf5f1d292c19)
+- [Customize how Excel starts in Excel for Mac](https://support.microsoft.com/help/259921).
 
 ## Summary
 
@@ -35,19 +38,21 @@ The actual startup folder locations vary, depending on which version of Excel yo
 
 If you install Excel in the default location, Excel opens files from the following paths:
 
-- In Microsoft Office Excel 2003, the path is C:\Program Files\Microsoft Office\Office11\Xlstart
+- *C:\Program Files\Microsoft Office\<Office1x>\Xlstart*
 
-    In Microsoft Office Excel 2007, the path is C:\Program Files\Microsoft Office\Office12\Xlstart
+    > [!NOTE]
+    > The <Office1x> boilerplate represents the version number (Microsoft Office Excel 2007 is Office12 and Microsoft Office Excel 2003 is Office11)
 
-- C:\Documents and Settings\User_name\Application Data\Microsoft\Excel\XLSTART 
+- *C:\Documents and Settings\<User_name>\Application Data\Microsoft\Excel\XLSTART*
 
-    In this path, **User_name** is your logon user name.    
+    In this path, <User_name> is your logon user name.
+
 - The folder that is specified in the **At startup, open all files in** box.
 
     > [!NOTE]
-    > - To find the **At startup, open all files in** box in Excel 2003, click **Options** on the **Tools**menu, and then click the **General** tab.
+    > - To find the **At startup, open all files in** box in Excel 2003, click **Options** on the **Tools** menu, and then click the **General** tab.
     >
-    > - To find the **At startup, open all files in** box in Excel 2007, click the **Microsoft Office Button**, click **Excel Options**, and then click **Advanced**. The **At startup, open all files in** box is under **General**.
+    > - To find the **At startup, open all files in** box in Excel 2007, click **Microsoft Office Button**, click **Excel Options**, and then click **Advanced**. The **At startup, open all files in** box is under **General**.
 
 ### Accepted file types during Excel startup
 
@@ -59,11 +64,11 @@ If you save a workbook named Book.xlt, and then put it in a startup folder locat
 
 To use additional templates, you must save them in the following folder: 
 
-C:\Program Files\Microsoft Office\Templates\1033
+*C:\Program Files\Microsoft Office\Templates\1033*
 
 To use the templates in Excel 2003, follow these steps:
 
-1. On the **File**menu, click **New**.   
+1. On the **File** menu, click **New**.   
 2. In the **New Workbook** task pane, click **On my computer** under **Templates**.   
 3. In the **Templates** dialog box, double-click the template for the type of workbook that you want to create on the **Spreadsheet Solutions** tab.   
 
@@ -91,7 +96,7 @@ When you use the alternative startup file location, you must specify a file path
 
 If Excel finds unrecognizable file types in a startup folder, you may receive an error message. The most common error message is:
 
-**This file is not a recognizable format.**
+> This file is not a recognizable format.
 
 ### Use the default file location
 
@@ -102,6 +107,6 @@ The default file location differs from a startup folder. It can set the folder l
 > [!NOTE]
 > In Excel 2007, to see the default file location, follow these steps:
 >
->   1. Click the **Microsoft Office Button**, and then click **Excel Options**.   
+>   1. Click **Microsoft Office Button**, and then click **Excel Options**.   
 >   2. Click **Save**.   
 >   3. The **Default file location** box is under **Save workbooks**.
