@@ -33,7 +33,7 @@ To capture ActiveSync device log information, follow these steps:
     > Exchange ActiveSync debug logging is enabled for 48 hours in Exchange Online, and 72 hours in Exchange Server. After the time period expires, the value reverts to `$false`.
     
     ```powershell
-    Set-CASMailbox tony@contoso.com -ActiveSyncDebugLogging:$true
+    Set-CASMailbox tony@contoso.com -ActiveSyncDebugLogging $true
     ```
 
     > [!NOTE]
@@ -43,7 +43,7 @@ To capture ActiveSync device log information, follow these steps:
 1. Run the [`Get-MobileDeviceStatistics`](/powershell/module/exchange/get-mobiledevicestatistics) cmdlet to retrieve the log:
 
     ```powershell
-    Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog:$true -NotificationEmailAddresses "admin@contoso.com"
+    Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
     ```
 
     > [!NOTE]
