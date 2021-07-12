@@ -12,6 +12,9 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
+- Excel for Microsoft 365
+- Excel 2019
+- Excel 2016
 - Excel 2013
 - Excel 2010
 - Microsoft Office Excel 2007
@@ -34,7 +37,7 @@ This section includes two methods for using defined names to automatically updat
 
 To use this method, follow these steps, as appropriate for the version of Excel that you are running. 
 
-#### Microsoft Office Excel 2007, 2010 and 2013
+#### Microsoft Office Excel 2007 and newer
 
 1. In a new worksheet, type the following data:
 
