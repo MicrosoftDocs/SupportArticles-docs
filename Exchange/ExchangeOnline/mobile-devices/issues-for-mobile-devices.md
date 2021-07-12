@@ -27,7 +27,7 @@ This article describes how to collect Exchange ActiveSync device logs to trouble
 To capture ActiveSync device log information, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-1. Run the [`Set-CASMailbox`](/powershell/module/exchange/set-casmailbox) to enable ActiveSync logging for a specific user:
+1. Run the [`Set-CASMailbox`](/powershell/module/exchange/set-casmailbox) cmdlet to enable ActiveSync logging for a specific user:
 
     > [!NOTE]
     > Exchange ActiveSync debug logging is enabled for 48 hours in Exchange Online, and 72 hours in Exchange Server. After the time period expires, the value reverts to `$false`.
