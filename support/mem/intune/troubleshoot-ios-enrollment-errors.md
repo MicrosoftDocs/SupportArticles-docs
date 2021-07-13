@@ -189,8 +189,8 @@ Fix the connection issue, or use a different network connection to enroll the de
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll devices** > **Enrollment restrictions**.
 2. Under **Device type restrictions**, select **All Users** > **Properties**.
-3. Click **Edit** next to the **Platform settings**.
-4. On the **Edit restriction** page, select **Allow** for **iOS/iPadOS** and proceed to the **Review + save** page, then click **Save**.
+3. Select **Edit** next to the **Platform settings**.
+4. On the **Edit restriction** page, select **Allow** for **iOS/iPadOS** and proceed to the **Review + save** page, then select **Save**.
 
 ## Sync token errors between Intune and ADE (DEP)
 
