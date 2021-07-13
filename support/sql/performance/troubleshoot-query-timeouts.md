@@ -11,7 +11,7 @@
 ## Explanation
 
 This happens because the application-configured timeout setting was reached and the application aborts the query. It's  application's decision to abort the running query, not SQL Server. SQL Server would execute a query for eternity if there is no time out value (set to 0 - zero).
-The timeout value is set on the Command object .NET framework (CommandTimeout), in JDBC using setQueryTimeout. 
+The timeout value is set on the Command object .NET framework (CommandTimeout), in JDBC using setQueryTimeout.
 
 A query timeout will result in an Attention event (error 3617) on the SQL Server side
 
@@ -68,30 +68,17 @@ namespace ConsoleApplication6
 
 ```
 
-2. Try to run the query in SSMS/SQLCMD directly, if it takes more than 30 seconds to complete, please refer Scenario: Specific query is slow
-3. If it's fast in SSMS/SQLCMD, but only slow from application. Please refer Scenario: Query is Slow from Application but Fast from SSMS/SQLCMD. The goal is make the settings in SSMS/SQLCMD as same as the settings in application, then reproduce the issue in SSMS/SQLCMD and investigate. 
+1. Try to run the query in SSMS/SQLCMD directly, if it takes more than 30 seconds to complete, please refer Scenario: Specific query is slow
+1. If it's fast in SSMS/SQLCMD, but only slow from application. Please refer Scenario: Query is Slow from Application but Fast from SSMS/SQLCMD. The goal is make the settings in SSMS/SQLCMD as same as the settings in application, then reproduce the issue in SSMS/SQLCMD and investigate. 
 
 
 https://channel9.msdn.com/Series/SQL-Workshops/SQL-Server-Command-Timeout-Application-Timeout-Extended-Event-Attention
 
-
-
 ## Query Timeout is not the same as Connection Timeout
 
-Query timeout is different from Connection/Login timeout. Below are examples of a connection or login timeout errors and require SQL Networking team skills (see Timeout  (Web view))
+Query timeout is different from Connection/Login timeout. These occur when the initial connection to the database server takes a long time and reaches a pre-defined time out period. At this stage no query has been submitted to the server.
+These are examples of a connection or login timeout errors:
 
-    Connection Timeout Expired. The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment
+`Connection Timeout Expired. The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment. This could be because the pre-login handshake failed or the server was unable to respond back in time.The duration spent while attempting to connect to this server was [Pre-Login] initialization=23; handshake=14979;`
 
-    System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.
-    The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment.
-    This could be because the pre-login handshake failed or the server was unable to respond back in time.
-    The duration spent while attempting to connect to this server was [Pre-Login] initialization=23; handshake=14979; ---> System.ComponentModel.Win32Exception 0x80004005):     The wait operation timed out.
-
-    System.Data.SqlClient.SqlException (0x80131904): Timeout expired.
-    The timeout period elapsed prior to completion of the operation or the server is not responding.
-    System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.
-
-    Connection Timeout Expired.
-    The timeout period elapsed while attempting to consume the pre-login handshake acknowledgment.
-    This could be because the pre-login handshake failed or the server was unable to respond back in time.
-    The duration spent while attempting to connect to this server was [Pre-Login] initialization=21036; handshake=0; (Microsoft SQL Server, Error: -2).
+`Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.`
