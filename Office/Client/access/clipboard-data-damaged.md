@@ -13,9 +13,12 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Access for Microsoft 365
+- Access 2019
 - Access 2016
+- Access 2013
 - Access 2010
-- Microsoft Office Access 2007
+- Access 2007
 search.appverid: MET150
 ---
 # Access Error: Data on the Clipboard is damaged, so Microsoft Access can't paste it
