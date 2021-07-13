@@ -99,28 +99,22 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-80|NT Service|An NT Service account prefix.|
 ||||
 
-## SIDs added by Windows Server 2003 and later versions
+## SIDs added by Windows Server 2012 and later versions
 
-When you add a domain controller that runs Windows Server 2003 or a later version to a domain, Active Directory adds the security principals in the following table.
+When you add a domain controller that runs Windows Server 2012 or a later version to a domain, Active Directory adds the security principals in the following table.
 
 > [!NOTE]
-> The Windows ACL editor may not display these security principles by name. Active Directory doesn't resolve these SIDs to their corresponding names until the [PDC Emulator FSMO Role](/openspecs/windows_protocols/ms-adts/f96ff8ec-c660-4d6c-924f-c0dbbcac1527) transfers to or is seized by a domain controller that runs Windows Server 2003 or later.
+> The Windows ACL editor may not display these security principles by name. Active Directory doesn't resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2012 or later.
 
 |SID|Name|Description|
 |---|---|---|
-|S-1-3-2|Creator Owner Server|This SID isn't used in Windows 2000.|
-|S-1-3-3|Creator Group Server|This SID isn't used in Windows 2000.|
-|S-1-5-8|Proxy|This SID isn't used in Windows 2000.|
-|S-1-5-15|This Organization|A group that includes all users from the same organization. Only included with AD accounts and only added by a Windows Server 2003 or later domain controller.|
-|S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|An alias added by Windows 2000. A backward compatibility group that allows read access on all users and groups in the domain.|
-|S-1-5-32-555|Builtin\Remote Desktop Users|An alias. Members in this group are granted the right to log on remotely.|
-|S-1-5-32-556|Builtin\Network Configuration Operators|An alias. Members in this group can have some administrative privileges to manage configuration of networking features.|
-|S-1-5-32-557|Builtin\Incoming Forest Trust Builders|An alias. Members of this group can create incoming, one-way trusts to this forest.|
-|S-1-5-32-558|Builtin\Performance Monitor Users|An alias. Members of this group have remote access to monitor this computer.|
-|S-1-5-32-559|Builtin\Performance Log Users|An alias. Members of this group have remote access to schedule logging of performance counters on this computer.|
-|S-1-5-32-560|Builtin\Windows Authorization Access Group|An alias. Members of this group have access to the computed tokenGroupsGlobalAndUniversal attribute on User objects.|
-|S-1-5-32-561|Builtin\Terminal Server License Servers|An alias. A group for Terminal Server License Servers. When Windows Server 2003 Service Pack 1 is installed, a new local group is created.|
-|S-1-5-32-562|Builtin\Distributed COM Users|An alias. A group for COM to provide computer-wide access controls that govern access to all call, activation, or launch requests on the computer.|
+|S-1-5-21-*domain*-522|Cloneable Domain Controllers|A global group. Members of this group that are domain controllers may be cloned.|
+|S-1-5-32-575|Builtin\RDS Remote Access Servers|A built-in local group. Servers in this group enable users of RemoteApp programs and personal virtual desktops access to these resources. In Internet-facing deployments, these servers are typically deployed in an edge network. This group needs to be populated on servers running RD Connection Broker. RD Gateway servers and RD Web Access servers used in the deployment need to be in this group.|
+|S-1-5-32-576|Builtin\RDS Endpoint Servers|A built-in local group. Servers in this group run virtual machines and host sessions where users RemoteApp programs and personal virtual desktops run. This group needs to be populated on servers running RD Connection Broker. RD Session Host servers and RD Virtualization Host servers used in the deployment need to be in this group.|
+|S-1-5-32-577|Builtin\RDS Management Servers|A builtin local group. Servers in this group can perform routine administrative actions on servers running Remote Desktop Services. This group needs to be populated on all servers in a Remote Desktop Services deployment. The servers running the RDS Central Management service must be included in this group.|
+|S-1-5-32-578|Builtin\Hyper-V Administrators|A built-in local group. Members of this group have complete and unrestricted access to all features of Hyper-V.|
+|S-1-5-32-579|Builtin\Access Control Assistance Operators|A built-in local group. Members of this group can remotely query authorization attributes and permissions for resources on this computer.|
+|S-1-5-32-580|Builtin\Remote Management Users|A built-in local group. Members of this group can access WMI resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.|
 ||||
 
 ## SIDs added by Windows Server 2008 and later versions
@@ -154,23 +148,30 @@ When you add a domain controller that runs Windows Server 2008 or a later versio
 |S-1-16-28672|Secure Process Mandatory Level|A secure process integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
 ||||
 
-## SIDs added by Windows Server 2012 and later versions
+## SIDs added by Windows Server 2003 and later versions
 
-When you add a domain controller that runs Windows Server 2012 or a later version to a domain, Active Directory adds the security principals in the following table.
+When you add a domain controller that runs Windows Server 2003 or a later version to a domain, Active Directory adds the security principals in the following table.
 
 > [!NOTE]
-> The Windows ACL editor may not display these security principles by name. Active Directory doesn't resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2012 or later.
+> The Windows ACL editor may not display these security principles by name. Active Directory doesn't resolve these SIDs to their corresponding names until the [PDC Emulator FSMO Role](/openspecs/windows_protocols/ms-adts/f96ff8ec-c660-4d6c-924f-c0dbbcac1527) transfers to or is seized by a domain controller that runs Windows Server 2003 or later.
 
 |SID|Name|Description|
 |---|---|---|
-|S-1-5-21-*domain*-522|Cloneable Domain Controllers|A global group. Members of this group that are domain controllers may be cloned.|
-|S-1-5-32-575|Builtin\RDS Remote Access Servers|A built-in local group. Servers in this group enable users of RemoteApp programs and personal virtual desktops access to these resources. In Internet-facing deployments, these servers are typically deployed in an edge network. This group needs to be populated on servers running RD Connection Broker. RD Gateway servers and RD Web Access servers used in the deployment need to be in this group.|
-|S-1-5-32-576|Builtin\RDS Endpoint Servers|A built-in local group. Servers in this group run virtual machines and host sessions where users RemoteApp programs and personal virtual desktops run. This group needs to be populated on servers running RD Connection Broker. RD Session Host servers and RD Virtualization Host servers used in the deployment need to be in this group.|
-|S-1-5-32-577|Builtin\RDS Management Servers|A builtin local group. Servers in this group can perform routine administrative actions on servers running Remote Desktop Services. This group needs to be populated on all servers in a Remote Desktop Services deployment. The servers running the RDS Central Management service must be included in this group.|
-|S-1-5-32-578|Builtin\Hyper-V Administrators|A built-in local group. Members of this group have complete and unrestricted access to all features of Hyper-V.|
-|S-1-5-32-579|Builtin\Access Control Assistance Operators|A built-in local group. Members of this group can remotely query authorization attributes and permissions for resources on this computer.|
-|S-1-5-32-580|Builtin\Remote Management Users|A built-in local group. Members of this group can access WMI resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.|
+|S-1-3-2|Creator Owner Server|This SID isn't used in Windows 2000.|
+|S-1-3-3|Creator Group Server|This SID isn't used in Windows 2000.|
+|S-1-5-8|Proxy|This SID isn't used in Windows 2000.|
+|S-1-5-15|This Organization|A group that includes all users from the same organization. Only included with AD accounts and only added by a Windows Server 2003 or later domain controller.|
+|S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|An alias added by Windows 2000. A backward compatibility group that allows read access on all users and groups in the domain.|
+|S-1-5-32-555|Builtin\Remote Desktop Users|An alias. Members in this group are granted the right to log on remotely.|
+|S-1-5-32-556|Builtin\Network Configuration Operators|An alias. Members in this group can have some administrative privileges to manage configuration of networking features.|
+|S-1-5-32-557|Builtin\Incoming Forest Trust Builders|An alias. Members of this group can create incoming, one-way trusts to this forest.|
+|S-1-5-32-558|Builtin\Performance Monitor Users|An alias. Members of this group have remote access to monitor this computer.|
+|S-1-5-32-559|Builtin\Performance Log Users|An alias. Members of this group have remote access to schedule logging of performance counters on this computer.|
+|S-1-5-32-560|Builtin\Windows Authorization Access Group|An alias. Members of this group have access to the computed tokenGroupsGlobalAndUniversal attribute on User objects.|
+|S-1-5-32-561|Builtin\Terminal Server License Servers|An alias. A group for Terminal Server License Servers. When Windows Server 2003 Service Pack 1 is installed, a new local group is created.|
+|S-1-5-32-562|Builtin\Distributed COM Users|An alias. A group for COM to provide computer-wide access controls that govern access to all call, activation, or launch requests on the computer.|
 ||||
+
 
 ## Capability SIDs
 
