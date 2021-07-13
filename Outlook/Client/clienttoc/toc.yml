@@ -23,6 +23,8 @@
       href: ../authentication/prevent-saving-credentials.md
     - name: Prompts for credentials when using WAN
       href: ../authentication/outlook-prompts-for-credentials-if-using-wan.md
+    - name: Repeated status codes 401 and 200 when using MAPI over HTTP
+      href: ../authentication/repeated-status-codes-401-200-mapi-over-http.md
     - name: Smart card PIN is blocked when using Outlook
       href: ../authentication/blocked-smart-card-pin-using-outlook.md
     - name: Use policy to control credential prompts
