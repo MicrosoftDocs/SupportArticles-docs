@@ -4,7 +4,7 @@ description: Describes how to enable verbose status messages by using Group Poli
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article describes how to configure Windows so that you receive verbose startup, shutdown, logon, and logoff status messages. Verbose status messages may be helpful when you're troubleshooting slow startup, shutdown, logon, or logoff behavior.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325376
 
 ## How to enable verbose startup, shutdown, logon, and logoff status messages

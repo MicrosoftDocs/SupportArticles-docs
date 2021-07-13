@@ -4,7 +4,7 @@ description: Address an issue in which Windows.edb becomes larger than expected 
 ms.date: 10/12/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a workaround for an issue where Windows.edb becomes larger than expected when PST files are indexed in Windows 10, 8.1, or 8.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2952967
 
 ## Symptoms

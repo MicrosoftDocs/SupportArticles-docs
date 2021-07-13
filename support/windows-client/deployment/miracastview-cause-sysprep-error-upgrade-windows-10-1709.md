@@ -4,7 +4,7 @@ description: Address an issue in which sysprep fails with an error after you upg
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides workarounds to an issue in which sysprep fails with an error after you upgrade a computer to Windows 10 Version 1709.
 
-_Original product version:_ &nbsp; Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4057974
 
 ## Symptoms

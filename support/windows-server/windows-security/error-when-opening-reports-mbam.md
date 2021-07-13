@@ -4,7 +4,7 @@ description: Provides a solution to an error that occurs when you open Enterpris
 ms.date: 09/18/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in Microsoft BitLocker Administration and Monitoring (MBAM).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2639518
 
 ## Symptoms

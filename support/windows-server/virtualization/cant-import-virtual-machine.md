@@ -4,7 +4,7 @@ description: Fixes an issue where you may receive a 0x80070057 error message whe
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article helps fix a 0x80070057 error that occurs when you try to import a virtual machine that has been exported by using Hyper-V Manager or System Center Virtual Machine Manager (SCVMM) on a Hyper-V server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968968
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Resolves an issue where a corrupted memory dump file is generated w
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides a solution to an issue where a corrupted memory dump file is generated when you try to obtain a full memory dump file from a virtual machine.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2913486
 
 ## Symptoms

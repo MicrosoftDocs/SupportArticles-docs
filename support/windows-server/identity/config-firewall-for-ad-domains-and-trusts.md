@@ -4,7 +4,7 @@ description: Describes the ports that are used when you configure a trust relati
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to configure a firewall for Active Directory domains and trusts.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 Standard, Windows Server 2012 Standard  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 Standard, Windows Server 2012 Standard  
 _Original KB number:_ &nbsp; 179442
 
 > [!NOTE]

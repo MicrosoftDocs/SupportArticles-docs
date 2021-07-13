@@ -4,7 +4,7 @@ description: Describes a workaround for an issue in which disk volumes take more
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes a workaround for an issue in which disk volumes take more time to go online after you enable the Volume Shadow Copy Service on the volumes.  
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 945058
 
 > [!IMPORTANT]

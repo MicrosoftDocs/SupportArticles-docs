@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Internal clients cannot use Internet Explorer to access FTP sites through Web proxies
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the steps to solve the error message that occurs when you use internal clients to visit a File Transfer Protocol (FTP) site in Internet Explorer.
 
 _Original version:_ &nbsp; Internet Explorer, Microsoft Internet Security and Acceleration Server 2004 Enterprise Edition  

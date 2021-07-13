@@ -4,7 +4,7 @@ description: Address an issue in which you receive an error when you create Hype
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article solves an error "Error applying virtual switch properties changes" that occurs when you create Hyper-V virtual switch in Windows Server 2019 (Build 17763).
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4492254
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Describes how to manage the Active Directory database file, Ntds.di
 ms.date: 10/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to manage the Active Directory (AD) database file, Ntds.dit, from the command line.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816120
 
 ## How to start your computer in Directory Services Restore mode

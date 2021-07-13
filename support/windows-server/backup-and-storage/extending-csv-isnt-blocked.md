@@ -4,7 +4,7 @@ description: Provides a solution to an issue where extending a Cluster Shared Vo
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to an issue where extending a Cluster Shared Volume by using Diskpart or PowerShell isn't blocked from a non-coordinator node.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3189825
 
 ## Symptoms

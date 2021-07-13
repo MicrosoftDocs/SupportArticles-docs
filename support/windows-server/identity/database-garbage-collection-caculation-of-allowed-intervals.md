@@ -4,7 +4,7 @@ description: Describes the Active Directory database garbage collection process 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the Active Directory database garbage collection process and calculation of allowed intervals.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp;198793
 
 ## Summary

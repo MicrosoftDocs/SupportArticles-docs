@@ -7,6 +7,8 @@ ms.reviewer: v-vmaru
 ---
 # Permission denied error when reading properties of an HTML Application Location object
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides many methods for you to solve the **Permission denied** error message that occurs if you read properties of the Location object that is inside an HTML Application (HTA).
 
 _Original version:_ &nbsp; Internet Explorer  

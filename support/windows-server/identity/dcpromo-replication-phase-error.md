@@ -4,7 +4,7 @@ description: Describes how to troubleshoot an internal error that you receive du
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to troubleshoot an internal error that you receive during the replication phase of the Active Directory Installation Wizard (Dcpromo).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 265090
 
 > [!NOTE]

@@ -4,7 +4,7 @@ description: Describes an issue that occurs when you print from Modern App as th
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article describes an issue that occurs when you print from Modern App as this creates a large spool file when you select Advanced Printing features such as number of pages per sheet.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2989058
 
 ## Symptoms

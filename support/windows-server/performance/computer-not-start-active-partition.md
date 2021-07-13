@@ -4,7 +4,7 @@ description: Provides a solution to an issue where the computer doesn't start af
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides a solution to an issue where the computer doesn't start after you mark your primary partition as active.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315261
 
 ## Symptoms

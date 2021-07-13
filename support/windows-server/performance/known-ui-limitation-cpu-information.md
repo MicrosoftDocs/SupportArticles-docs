@@ -4,7 +4,7 @@ description: Describes the known UI limitations in Windows Server 2016. The Syst
 ms.date: 04/19/2021
 author: v-lianna 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -15,7 +15,7 @@ ms.technology: windows-server-performance
 ---
 # Known UI limitation of the CPU information in Windows Server 2016
 
-_Original product version:_ &nbsp;Windows Server 2016, Windows Server 2016 Datacenter, Windows Server 2016 Standard  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2016 Datacenter, Windows Server 2016 Standard  
 
 If more than 64 logical processors are enabled in Windows Server 2016, the System Information (Msinfo32.exe) tool and the **Performance** tab of Task Manager display incorrect processor sockets number, cores number, L1 cache and L2 cache sizes.
 

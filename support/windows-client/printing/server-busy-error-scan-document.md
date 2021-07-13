@@ -4,7 +4,7 @@ description: Provides a resolution for fixing (Server Busy) error when you try t
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article provides a resolution for fixing "Server Busy" error when you try to scan a document.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2971655
 
 ## Symptoms

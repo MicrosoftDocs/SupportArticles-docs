@@ -4,7 +4,7 @@ description: This article provides some steps for fixing the error which shows i
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution for fixing the error that shows it is no longer working when opening a Library in Windows Explorer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2895090
 
 ## Symptoms

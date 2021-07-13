@@ -4,7 +4,7 @@ description: Resolves an issue where some non-compliant USB 3.0 devices don't fu
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an issue where some non-compliant USB 3.0 devices don't function when connected to USB 3.0 ports in Windows 8.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2792990
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Describes how to troubleshoot AD operations failure with Win32 erro
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -20,7 +20,7 @@ This article describes symptoms, cause, and resolution steps for cases where AD 
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, please [ask the Microsoft Community](https://answers.microsoft.com/en-us).  
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2703028
 
 ## Symptoms

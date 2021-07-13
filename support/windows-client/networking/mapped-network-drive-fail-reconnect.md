@@ -4,7 +4,7 @@ description: An article provides a workaround to resolve mapped network drives n
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a workaround for the issue that mapped network drive may fail to reconnect in Windows 10, version 1809.
 
-_Original product version:_ &nbsp; Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4471218
 
 ## Symptoms

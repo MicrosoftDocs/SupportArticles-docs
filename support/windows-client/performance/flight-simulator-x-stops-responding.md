@@ -4,7 +4,7 @@ description: Fixes an issue in which Flight Simulator X hangs on the loading scr
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a solution to an issue where Microsoft Flight Simulator X stops responding on the loading screen.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 975084
 
 ## Symptoms

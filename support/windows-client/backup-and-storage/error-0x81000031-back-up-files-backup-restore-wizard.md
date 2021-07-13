@@ -4,7 +4,7 @@ description: Describes a problem that occurs when you use the Backup and Restore
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article describes a problem that occurs when you use the Backup and Restore Wizard in Windows 7 to back up files to an external hard disk drive.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 975692
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Describes how to use the System Configuration utility to troublesho
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article describes how to use the System Configuration utility to troubleshoot configuration errors.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 950093
 
 ## Introduction  

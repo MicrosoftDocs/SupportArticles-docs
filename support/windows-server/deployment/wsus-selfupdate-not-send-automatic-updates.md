@@ -4,7 +4,7 @@ description: Provides a resolution to a problem that occurs when a WSUS SelfUpda
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a solution to an issue where the client computers don't receive updates when you use a Microsoft Windows Server Update Services (WSUS) SelfUpdate service to send automatic updates.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 920659
 
 ## Symptoms

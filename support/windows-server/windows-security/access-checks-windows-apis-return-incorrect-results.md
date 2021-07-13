@@ -4,7 +4,7 @@ description: Provides resolutions for an issue where access checks using Windows
 ms.date: 2/7/2021
 author: v-lianna
 ms.author: v-lianna
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 ---
 # Access checks using Windows APIs return incorrect results
 
-_Original product version:_ &nbsp;Windows Server 2019, all editions  
+_Applies to:_ &nbsp; Windows Server 2019, all editions  
 _Original KB number:_ &nbsp;933071
 
 > [!NOTE]

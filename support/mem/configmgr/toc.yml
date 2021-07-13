@@ -12,6 +12,8 @@
       href: reports-not-run-as-expected.md
     - name: Reporting stops working
       href: reporting-stops-working.md
+    - name: rsProcessingAborted error when running reports
+      href: rsprocessingaborted-error-run-reports.md
     - name: SQL query times out or slow console performance
       href: sql-query-times-out-or-console-slow-performance.md
 - name: Application management and software distribution
@@ -332,6 +334,8 @@
           href: clients-automatically-upgrade.md
         - name: Error downloading the ConfigMgr.AdminUIContent.cab file
           href: service-connection-tool-not-download-updates.md
+        - name: Offline servicing a WIM image with Latest Cumulative Update fails
+          href: offline-servicing-lcu-may-fail.md
         - name: Site upgrade gets stuck at database update
           href: site-upgrade-blocked-in-database-update.md
         - name: Upgrade to System Center 2012 Configuration Manager SP1

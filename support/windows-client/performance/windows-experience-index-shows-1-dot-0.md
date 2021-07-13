@@ -4,7 +4,7 @@ description: Provides a solution to an issue where WinSAT fails to generate the 
 ms.date: 09/16/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a solution to an issue where WinSAT fails to generate the correct Windows Experience Index score when you build an image for Windows 7 deployment.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2716476
 
 ## Symptoms

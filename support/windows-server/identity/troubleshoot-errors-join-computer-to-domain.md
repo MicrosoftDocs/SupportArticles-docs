@@ -4,7 +4,7 @@ description: Troubleshooting guide for error messages that occurs when you join 
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes several common error messages that can occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4341920
 
 ## Where to find the Netsetup.log file

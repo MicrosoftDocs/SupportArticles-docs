@@ -4,7 +4,7 @@ description: Provides a resolution to an error that occurs when burning files to
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a resolution to an error that occurs when burning files to disc.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2748977
 
 ## Symptoms

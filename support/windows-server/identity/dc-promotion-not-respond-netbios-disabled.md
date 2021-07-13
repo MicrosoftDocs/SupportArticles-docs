@@ -4,7 +4,7 @@ description: Describes an issue in which domain controller promotion fails. This
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an issue where domain controller promotion stops responding when short credentials are used in an environment that has NetBIOS over TCPIP disabled.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2948052
 
 ## Symptoms

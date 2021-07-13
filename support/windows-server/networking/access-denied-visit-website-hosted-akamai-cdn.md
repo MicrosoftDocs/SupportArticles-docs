@@ -4,7 +4,7 @@ description: When you visit certain Microsoft websites, you may be denied access
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where you receive an "Access Denied" message when you go to certain Microsoft websites that are hosted by the Akamai content delivery network (CDN).
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2016, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4492050
 
 ## Symptoms

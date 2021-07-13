@@ -64,11 +64,11 @@ This script takes the following actions in the given order:
 
 This method is simple. However, it requires you to have sufficient space available in the database to temporarily build the duplicate table. This method also incurs overhead because you are moving the data.
 
-Also, if your table has an [IDENTITY](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql-identity-property) column, you would have to use [SET IDENTITY_INSERT ON](https://docs.microsoft.com/sql/t-sql/statements/set-identity-insert-transact-sql) when you restore the data to the original table.
+Also, if your table has an [IDENTITY](/sql/t-sql/statements/create-table-transact-sql-identity-property) column, you would have to use [SET IDENTITY_INSERT ON](/sql/t-sql/statements/set-identity-insert-transact-sql) when you restore the data to the original table.
 
 ### Method 2
 
-The [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql) that was introduced in Microsoft SQL Server 2005 makes this operation much simpler:
+The [ROW_NUMBER function](/sql/t-sql/functions/row-number-transact-sql) that was introduced in Microsoft SQL Server 2005 makes this operation much simpler:
 
 ```sql
 DELETE T
@@ -99,4 +99,4 @@ Method 2 is simple and effective for these reasons:
 - It does not require you to join the original table with itself (for example, by using a subquery that returns all duplicate records by using a combination of GROUP BY and HAVING).
 - For best performance, you should have a corresponding index on the table that uses the `key_value` as the index key and includes any sorting columns that you might have used in the ORDER BY expression.
 
-However, this method does not work in outdated versions of SQL Server that do not support the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql). In this situation, you should use Method 1 or some similar method instead.
+However, this method does not work in outdated versions of SQL Server that do not support the [ROW_NUMBER function](/sql/t-sql/functions/row-number-transact-sql). In this situation, you should use Method 1 or some similar method instead.

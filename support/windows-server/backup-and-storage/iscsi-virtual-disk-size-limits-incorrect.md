@@ -4,7 +4,7 @@ description: Resolve issues that occur when you provision new iSCSI Target virtu
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides help to solve issues that occur when you provision new iSCSI Target virtual disks through the **New iSCSI Target Virtual Disk** wizard by using Server Manager File and Storage Services GUI.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2896757
 
 ## Symptoms

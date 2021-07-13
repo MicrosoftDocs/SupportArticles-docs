@@ -235,8 +235,10 @@ To fix this issue, clear the TPM and restart the client device. To clear the TPM
 
 After the device restarts, hybrid Azure AD join should be successful. To verify, run `dsregcmd /status` command at a command prompt. The following result indicates a successful join:
 
-> AzureAdJoined : YES  
-> DomainName : \<on-prem Domain name>
+```output
+AzureAdJoined : YES  
+DomainName : \<on-prem Domain name>
+```
 
 For more information, see [Troubleshoot the TPM](/windows/security/information-protection/tpm/initialize-and-configure-ownership-of-the-tpm).
 

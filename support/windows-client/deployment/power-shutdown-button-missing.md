@@ -4,7 +4,7 @@ description: The power/shutdown button's presence on the Windows 8.1 start scree
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes an issue where the power/shutdown button is missing from the start screen after you install or upgrade to Windows 8.1.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2959188
 
 ## Summary

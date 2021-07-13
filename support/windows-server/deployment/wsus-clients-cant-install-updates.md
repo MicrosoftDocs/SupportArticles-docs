@@ -4,7 +4,7 @@ description: Provides a solution to an issue where Windows Server Update Service
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a solution to an issue where Windows Server Update Services (WSUS) clients can't install updates when Symantec Endpoint Protection is installed on the same Web site.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968248
 
 ## Symptom

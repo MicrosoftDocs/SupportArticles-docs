@@ -4,7 +4,7 @@ description: Describes an issue in which you cannot install language packs by us
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article provides solutions to an issue where you cannot configure a language pack for Windows Server 2019 Desktop Experience.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4466511
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Resolves an issue where you fail to set up Folder Redirection compo
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-user-profiles
 
 This article provides a solution to an issue where you fail to set up Folder Redirection component of Group Policy and Event ID 1000 and 101 are logged.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 291087
 
 ## Symptoms

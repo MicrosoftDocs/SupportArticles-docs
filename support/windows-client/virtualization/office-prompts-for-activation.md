@@ -4,7 +4,7 @@ description: Describes an issue when Microsoft Office applications prompt for re
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-hyper-v
 
 This article provides a solution to an issue where Microsoft Office applications prompt for reactivation when they are installed on Windows-based virtual machines in Azure.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2998147
 
 ## Symptoms

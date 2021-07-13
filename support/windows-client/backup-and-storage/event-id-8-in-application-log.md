@@ -4,7 +4,7 @@ description: Provides help to solve the Event ID 8 logged in the Application log
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides help to solve the Event ID 8 logged in the Application log.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 317541
 
 ## Symptoms

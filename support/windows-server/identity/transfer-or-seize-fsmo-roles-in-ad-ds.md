@@ -4,7 +4,7 @@ description: Describes how you can use the Ntdsutil.exe utility to move or to se
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes when and how to transfer or seize Flexible Single Master Operations (FSMO) roles.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
 _Original KB number:_ &nbsp; 255504
 
 ## More information

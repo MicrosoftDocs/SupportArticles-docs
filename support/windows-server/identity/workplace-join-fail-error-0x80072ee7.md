@@ -4,7 +4,7 @@ description: Fixes an error 0x80072EE7 that occurs when users perform a Workplac
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a solution to an error 0x80072EE7 that occurs when users perform a Workplace Join.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3045385
 
 > [!NOTE]

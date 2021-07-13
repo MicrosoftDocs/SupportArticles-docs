@@ -4,7 +4,7 @@ description: Describes how to create desktop shortcuts by using the Windows Scri
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-administration-management-development
 
 This article describes how to create desktop shortcuts by using the Microsoft Windows Script Host (WSH) from within Visual FoxPro.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244677
 
 ## Summary

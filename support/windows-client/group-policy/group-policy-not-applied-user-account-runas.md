@@ -4,7 +4,7 @@ description: Provides some information for the issue where group Policy is not a
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article provides some information for the issue where Group Policy is not applied to a user account for RunAs.exe or "Run as different user".
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4569309
 
 ## Summary

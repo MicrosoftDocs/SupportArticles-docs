@@ -4,7 +4,7 @@ description: Describes an issue in which an error is generated when a Desktop Du
 ms.date: 09/17/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a solution to an error that occurs when a Desktop Duplication API-capable application is run against a discrete GPU.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 3019314
 
 ## Symptoms

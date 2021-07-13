@@ -4,7 +4,7 @@ description: describes how to configure Group Policy to use a Known Issue Rollba
 ms.date: 04/26/2021
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -99,7 +99,7 @@ For more information about how to create GPOs, see [Create a Group Policy Object
 1. In **Query**, enter the following query string:
 
    ```sql
-   SELECT version.producttype from Win32_OperatingSystem WHERE Version = <VersionNumber>
+   SELECT version, producttype from Win32_OperatingSystem WHERE Version = <VersionNumber>
    ```
 
    > [!IMPORTANT]  

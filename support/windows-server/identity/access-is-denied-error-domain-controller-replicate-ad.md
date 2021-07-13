@@ -4,7 +4,7 @@ description: Describes a problem that occurs when the value of the RestrictRemot
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps to fix the error "access is denied" on a domain controller when you try to replicate the Active Directory directory service.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp;895085
 
 > [!IMPORTANT]

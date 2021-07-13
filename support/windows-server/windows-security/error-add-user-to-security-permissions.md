@@ -4,7 +4,7 @@ description: Describes an issue that occurs when you reach the maximum size of t
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes an issue that occurs when you reach the maximum size of the access control list.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;166348
 
 ## Symptoms

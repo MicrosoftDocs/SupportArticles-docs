@@ -4,7 +4,7 @@ description: Describes new UAC behavior in Windows 10 that will disallow elevati
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-active-directory
 
 This article describes new UAC behavior in Windows 10 that will disallow elevation of executable applications that are signed with revoked certificates.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3082125
 
 ## Summary

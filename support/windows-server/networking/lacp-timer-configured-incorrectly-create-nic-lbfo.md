@@ -4,7 +4,7 @@ description: Describes an issue that misconfigures the LACP Timer when you creat
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes an issue that Link Aggregation Control Protocol (LACP) Timer is configured incorrectly when you create a new NIC Team for LBFO in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4014014
 
 ## Symptoms

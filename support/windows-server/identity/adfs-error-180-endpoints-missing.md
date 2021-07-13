@@ -16,7 +16,7 @@ ms.technology: windows-server-active-directory
 
 This article describes a problem in which Active Directory Federation Services (AD FS) features such as Device Authentication and OAuth Discovery do not work.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016
 
 ## Symptoms
 

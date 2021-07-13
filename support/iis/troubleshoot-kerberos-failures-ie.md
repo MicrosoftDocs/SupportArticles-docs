@@ -21,7 +21,7 @@ Although you enter a valid user name and password, you're prompted again (three 
 
 On the Microsoft Internet Information Services (IIS) server, the website logs contain requests that end in a 401.2 status code, such as the following log:
 
-```console
+```output
 #Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken  
 DateTime IP GET /whoami.aspx - 80 – IP Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+10.0;+WOW64;+Trident/7.0;+.NET4.0C;+.NET4.0E;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.30729;+.NET+CLR+3.5.30729) - 401 2 5 1270  
 DateTime IP GET /whoami.aspx - 80 - IP Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+10.0;+WOW64;+Trident/7.0;+.NET4.0C;+.NET4.0E;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.30729;+.NET+CLR+3.5.30729) - 401 2 5 8
@@ -29,7 +29,7 @@ DateTime IP GET /whoami.aspx - 80 - IP Mozilla/4.0+(compatible;+MSIE+7.0;+Window
 
 Or, the screen displays a 401.1 status code, such as the following log:
 
-```console
+```output
 #Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken  
 DateTime IP GET /whoami.aspx - 80 - IP Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+10.0;+WOW64;+Trident/7.0;+.NET4.0C;+.NET4.0E;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.30729;+.NET+CLR+3.5.30729) - 401 2 5 105  
 DateTime IP GET /whoami.aspx - 80 - IP Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+10.0;+WOW64;+Trident/7.0;+.NET4.0C;+.NET4.0E;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.30729;+.NET+CLR+3.5.30729) - 401 1 2148074245 18

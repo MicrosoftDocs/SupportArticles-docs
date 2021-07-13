@@ -4,7 +4,7 @@ description: Provides some approaches to avoid the problem that LDAP Paged Queri
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides some approaches to avoid the problem that LDAP Paged Queries with subordinate referrals are not chased properly.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2561166
 
 ## Symptoms

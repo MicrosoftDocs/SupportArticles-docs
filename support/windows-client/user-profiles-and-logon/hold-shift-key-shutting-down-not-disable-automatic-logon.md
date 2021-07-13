@@ -4,7 +4,7 @@ description: Resolves an issue where you can't disable automatic logon by holdin
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article helps resolve an issue where you can't disable automatic logon by holding the Shift key while shutting down or logging off from a computer.
 
-_Original product version:_ &nbsp;Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp;2840544
 
 ## Symptoms

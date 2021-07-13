@@ -4,7 +4,7 @@ description: Address an issue in which Windows 10 Apps won't open after update. 
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides help to fix an issue where Microsoft Store app cannot start when one user installs an older version than the current version installed by another user.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4055744
 
 ## Symptom

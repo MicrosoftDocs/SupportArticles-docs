@@ -4,7 +4,7 @@ description: Describes an issue that causes memory allocation errors that can be
 ms.date: 12/03/2020
 uthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article provides a workaround for errors that occur when applications frequently allocate memory.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4055223
 
 ## Symptoms

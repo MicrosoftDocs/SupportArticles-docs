@@ -4,7 +4,7 @@ description: Describes an issue where the communications port (COM port) setting
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article describes an issue where the communications port (COM port) settings revert to the default when you restart the computer.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 293762
 
 ## Symptoms

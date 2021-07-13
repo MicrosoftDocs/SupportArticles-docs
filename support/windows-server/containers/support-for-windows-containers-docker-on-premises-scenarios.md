@@ -4,7 +4,7 @@ description: Summary of the configurations that Microsoft supports for Windows c
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-containers
 
 This article outlines Microsoft's support policy concerning Windows Server containers and Mirantis Container Runtime (formerly known as Docker Enterprise engine (Docker EE)) for on-premises implementations.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4489234
 
 Microsoft supports Windows Server containers for the following  Windows versions and releases:

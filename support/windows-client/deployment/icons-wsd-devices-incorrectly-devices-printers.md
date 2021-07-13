@@ -4,7 +4,7 @@ description: This article describes an issue with Web Services for Devices, and 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a resolution to an issue where icons for Web Services for Devices (WSD) devices may show up incorrectly as a different class under Devices and Printers.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2403006
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Describes an issue in which Modern apps are blocked by security sof
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article provides a workaround for an issue where modern apps are blocked by security software when you start the applications on Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809, Windows 10, version 1607  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809, Windows 10, version 1607  
 _Original KB number:_ &nbsp; 4016973
 
 ## Symptoms

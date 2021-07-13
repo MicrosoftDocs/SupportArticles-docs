@@ -4,7 +4,7 @@ description: Describe how to resolve the warning message "Computer Record is Rej
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an issue where you receive a warning message "computer record is rejected" when using Microsoft BitLocker Administration and Monitoring (MBAM).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2612822
 
 ## Symptoms

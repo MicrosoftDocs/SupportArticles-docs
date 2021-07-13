@@ -4,7 +4,7 @@ description: Fixes a 0x1A8 error that occurs when you use the print-related Visu
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article provides help to fix a 0x1A8 error that occurs when you use the print-related Visual Basic script files on a 64-bit Windows operating system.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 2466246
 
 ## Symptoms

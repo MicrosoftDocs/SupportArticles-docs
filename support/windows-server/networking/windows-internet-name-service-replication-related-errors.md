@@ -4,7 +4,7 @@ description: Describes how to troubleshoot Windows Internet Name Service (WINS) 
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to troubleshoot Windows Internet Name Service (WINS) replication-related error messages.
 
-_Original product version:_ &nbsp;Window Server 2003  
+_Applies to:_ &nbsp; Window Server 2003  
 _Original KB number:_ &nbsp;321208
 
 > [!NOTE]

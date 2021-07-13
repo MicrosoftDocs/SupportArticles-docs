@@ -4,7 +4,7 @@ description: Fixes an issue in which new and existing RemoteFX-enabled virtual m
 ms.date: 09/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a solution to an issue where which new and existing RemoteFX-enabled virtual machines cannot run on a domain server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2506417
 
 ## Symptoms

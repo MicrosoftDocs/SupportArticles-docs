@@ -4,7 +4,7 @@ description: Helps you understand and successfully deploy Terminal Services on c
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article helps you understand and successfully deploy Terminal Services on computers that are running Microsoft Windows Server 2003.
 
-_Original product version:_ &nbsp;Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp;823313
 
 ## Summary

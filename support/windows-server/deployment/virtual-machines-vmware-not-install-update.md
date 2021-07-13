@@ -4,7 +4,7 @@ description: Resolves an issue in which you can't install drivers in virtual mac
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps resolve an issue in which you can't install drivers in virtual machines that are hosted on VMware. This issue occurs if you don't select the "Allow service to interact with desktop" checkbox.
 
-_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp;3025586
 
 ## Symptoms

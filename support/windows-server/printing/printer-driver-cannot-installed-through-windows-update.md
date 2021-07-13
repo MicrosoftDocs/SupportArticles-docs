@@ -4,7 +4,7 @@ description: Discusses an issue in which a printer drive cannot be installed fro
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-printing
 
 This article provides a workaround to an issue in which a printer drive cannot be installed from Windows Update in Windows Server 2016 and Windows Server 2019.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4033208
 
 ## Symptoms

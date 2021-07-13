@@ -4,7 +4,7 @@ description: Describes an issue that occurs when you remove a provisioned Window
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses an issue that occurs when you remove or update a provisioned Microsoft Store app by using the Microsoft Store and then running sysprep on the computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2769827
 
 ## Introduction
@@ -95,14 +95,14 @@ To resolve this issue, remove the package for the user who's running sysprep, an
 
 1. Run the Import-Module Appx PowerShell cmdlet.
 2. Run Import-Module Dism.
-3. Run `Get-AppxPackage -AllUser | Where PublisherId -eq 8wekyb3d8bbwe | Format-List -Property PackageFullName,PackageUserInformation`.
+3. Run `Get-AppxPackage -AllUsers | Where PublisherId -eq 8wekyb3d8bbwe | Format-List -Property PackageFullName,PackageUserInformation`.
 
     > [!NOTE]  
     >
     > - In the output of this last cmdlet, check the users for whom the package is showing up as Installed. Delete these user accounts from the reference computer, or log on to the computer by using these user accounts. Then, run the cmdlet in step 4 to remove the `Appx` package.
     > - This command lists all packages that were published by Microsoft and installed by any user of that reference computer. Because the computer is to be sysprepped, we assume that these user profiles no longer require the package.
     > - If you have manually provisioned apps that belong to other publishers, run the following command to list them:  
-    > Get-AppxPackage -AllUser | Format-List -Property PackageFullName,PackageUserInformation
+    > Get-AppxPackage -AllUsers | Format-List -Property PackageFullName,PackageUserInformation
 
 4. Run `Remove-AppxPackage -Package \<packagefullname>`.
 5. Remove the provisioning by running the following cmdlet:

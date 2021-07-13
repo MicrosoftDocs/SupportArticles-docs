@@ -110,6 +110,9 @@
       - name: Virtual Machines
         tocHref: /troubleshoot/azure/virtual-machines/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+      - name: Virtual Machine Scale Sets
+        tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
+        topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/

@@ -4,7 +4,7 @@ description: Describes a problem in which you are prompted to enter your credent
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where you are prompted to enter your credentials when you access Web Distributed Authoring and Versioning (WebDav)-based fully qualified domain names (FQDN) sites in Windows.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 943280
 
 ## Symptoms

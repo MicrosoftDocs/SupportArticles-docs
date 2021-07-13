@@ -4,7 +4,7 @@ description: Fixes an error that indicates the Windows Installer reconfigured al
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-administration-management-development
 
 This article helps fix slow system startup or slow login issues that occur when a group policy with a WMIFilter or installed application queries the `Win32_Product` class.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974524
 
 ## Symptom

@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Cannot access some websites in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides methods to solve the issue that Internet Explorer can't access certain websites and provides solutions.
 
 _Original product version:_ &nbsp; Internet Explorer 10, Internet Explorer 9  

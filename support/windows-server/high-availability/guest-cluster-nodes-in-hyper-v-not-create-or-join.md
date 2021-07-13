@@ -4,7 +4,7 @@ description: This article provides workarounds for the issue that Guest Cluster 
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides workarounds to an issue that Guest Cluster nodes in Hyper-V may not be able to create or join.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2872325
 
 ## Symptoms

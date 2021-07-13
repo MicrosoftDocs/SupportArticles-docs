@@ -4,7 +4,7 @@ description: Describes how to troubleshoot the Cluster service when it creates o
 ms.date: 10/19/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article describes how to troubleshoot the Cluster service when it creates or modifies a computer object in Active Directory for a server cluster (virtual server).
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 307532
 
 ## Active Directory access rights for creating a computer object

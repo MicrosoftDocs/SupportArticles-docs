@@ -4,7 +4,7 @@ description: This article introduces how to do a repair/in-place upgrade of the 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair or in-place upgrade of the existing installation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2255099
 
 ## More information

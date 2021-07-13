@@ -4,7 +4,7 @@ description: Provides a solution to an issue where you are unable to query a Win
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides a solution to an issue where you are unable to query a Windows 2000-based DNS server.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 279678
 
 ## Symptoms

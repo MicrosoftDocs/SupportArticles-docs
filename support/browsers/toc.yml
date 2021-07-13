@@ -229,7 +229,7 @@
       href: how-to-hide-clear-button-ie-10.md
 
     - name: Internet Explorer document modes FAQ
-      href: ie-document-modes-faq.md
+      href: ie-document-modes-faq.yml
 
     - name: Iframe content should be rendered in standard mode
       href: iframe-content-on-top-scrollbar.md

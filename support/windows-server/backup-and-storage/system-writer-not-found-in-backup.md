@@ -4,7 +4,7 @@ description: Provides a solution to an issue where you fail to perform a system 
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to an issue where you fail to perform a system state backup by using Windows Server Backup.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009272
 
 ## Symptoms

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot high-CPU issues for Azure Windows virtual machines
+title: Troubleshoot high-CPU issues for Azure virtual machines
 description: .
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -16,7 +16,7 @@ ms.date: 9/24/2020
 ms.author: mnanda
 ---
 
-# Troubleshoot high-CPU issues for Azure Windows virtual machines
+# Troubleshoot high-CPU issues for Azure virtual machines
 
 ## Summary
 
@@ -73,7 +73,7 @@ Understand your workload. When you select a VM, you may underestimate the virtua
 
 There are certain VM series, such as B (Burst Mode) Series, that are recommended for quality assurance (QA) and testing. Using these series in the production environment limits the computing capability after the CPU credits are exhausted.
 
-For known applications such as SQL Server, Oracle, RDS (Remote Desktop Services), Windows Virtual Desktop, IIS, or SharePoint, there are Azure Best Practices articles that include recommendations for minimal configuration for these workloads.
+For known applications such as SQL Server, Oracle, RDS (Remote Desktop Services), Azure Virtual Desktop, IIS, or SharePoint, there are Azure Best Practices articles that include recommendations for minimal configuration for these workloads.
 
 ### Ongoing high-CPU issues
 

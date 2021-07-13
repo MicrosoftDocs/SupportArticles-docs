@@ -4,7 +4,7 @@ description: Provides the steps to add OEM Plug and Play drivers to Windows inst
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes the steps to add Original Equipment Manufacturer (OEM)-supplied drivers to Windows installations.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 254078
 
 ## Summary

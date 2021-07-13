@@ -4,7 +4,7 @@ description: Describes how to move the zone files from one DNS server that is ru
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to move the zone files from one DNS server that is running Windows 2000 to another DNS server that is running Windows 2000.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 280061
 
 ## Move zone files

@@ -4,7 +4,7 @@ description: Describes a by-design behavior that computer monitor turns off afte
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article describes a by-design behavior that computer monitor turns off after 1 minute when the computer is locked and provides a solution to solve this issue.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2835052
 
 ## Symptoms

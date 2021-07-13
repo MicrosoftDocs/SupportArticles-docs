@@ -254,6 +254,14 @@ Some additional recommendations:
 - Test connecting to the same Wi-Fi endpoint (as mentioned in the first step) again.
 - Roll out to larger groups and eventually to all expected users in your organization.
 
+### All Wi-Fi profiles report as failing
+
+For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices, you might get a report that all profiles have failed. This can occur when you deploy more than one Wi-Fi profile. In this case, when one fails, all the profiles you deployed will report as failing (even if they are still working).
+
+### A Wi-Fi profile reports as failing, but seems to be working
+
+If a Wi-Fi profile is working correctly on a device, but reports as failing, it may be a reporting error. To fix this, update to the Intune app version 2021.05.02 or later.
+
 ## Need more help
 
 - Use the [Intune user forums](/answers/products/mem) or [get support from Microsoft](/mem/get-support).

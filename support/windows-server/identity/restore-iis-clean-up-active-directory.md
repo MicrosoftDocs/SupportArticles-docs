@@ -4,7 +4,7 @@ description: Explains how to restore IIS or clean up Active Directory when you u
 ms.date: 09/15/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to restore Internet Information Services (IIS) and clean up Active Directory when you uninstall Active Directory Federation Services 2.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 982813
 
 ## Introduction

@@ -4,7 +4,7 @@ description: Describes the initialization process of a Terminal Server and descr
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes the initialization process of a Terminal Server and describes what occurs when a user connects to the server and runs an application.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186572
 
 ## Windows Terminal Server Initialization

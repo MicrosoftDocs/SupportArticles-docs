@@ -4,7 +4,7 @@ description: Describes an issue that prevents you from opening files offline whe
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides workarounds for an issue that prevents you from opening files offline when you're using the Offline Files feature together with Windows Information Protection.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3187045
 
 ## Symptoms

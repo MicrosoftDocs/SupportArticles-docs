@@ -4,7 +4,7 @@ description: Helps to fix the error The operation timed out when creating a part
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article helps to fix the error "The operation timed out" when creating a partition using Disk Management console or DiskPart.exe.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2826890
 
 ## Symptoms
