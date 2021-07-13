@@ -69,6 +69,8 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-21-*domain*-500|Administrator|A user account for the system administrator. By default, it's the only user account that is given full control over the system.|
 |S-1-5-21-*domain*-501|Guest|A user account for people who don't have individual accounts. This user account doesn't require a password. By default, the Guest account is disabled.|
 |S-1-5-21-*domain*-502|KRBTGT|A service account that is used by the Key Distribution Center (KDC) service.|
+|S-1-5-21-*domain*-503|DefaultAccount|A built-in account. It is a user neutral account that can be used to run processes that are either multi-user aware or user-agnostic.|
+|S-1-5-21-*domain*-504|WDAGUtilityAccount|WDAGUtilityAccount is part of Application Guard.|
 |S-1-5-21-*domain*-512|Domain Admins|A global group whose members are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that have joined a domain, including the domain controllers. Domain Admins is the default owner of any object that is created by any member of the group.|
 |S-1-5-21-*domain*-513|Domain Users|A global group that, by default, includes all user accounts in a domain. When you create a user account in a domain, it's added to this group by default.|
 |S-1-5-21-*domain*-514|Domain Guests|A global group that, by default, has only one member, the domain's built-in Guest account.|
