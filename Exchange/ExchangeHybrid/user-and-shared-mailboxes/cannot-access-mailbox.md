@@ -63,6 +63,6 @@ New-Remotemailbox -Name "<Shared mailbox>" -Alias <sharedmailbox> -UserPrinciple
 
 ## More information
 
-For more information about remote shared mailboxes, see [Shared mailboxes unexpectedly converted to user mailboxes](/shared-mailboxes-unexpectedly-converted-to-user-mailboxes) and [Cmdlets to create or modify a remote shared mailbox in an on-premises Exchange environment](https://support.microsoft.com/help/4133605/).  
+For more information about remote shared mailboxes, see [Shared mailboxes are unexpectedly converted to user mailboxes after directory synchronization runs in an Exchange hybrid deployment](shared-mailboxes-unexpectedly-converted-to-user-mailboxes.md) and [Cmdlets to create or modify a remote shared mailbox in an on-premises Exchange environment](https://support.microsoft.com/help/4133605/).  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).
