@@ -181,6 +181,17 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
 
+### The configuration for your iPhone/iPad could not be downloaded from \<Company Name>: Invalid Profile.
+
+**Cause:** The enrollment is blocked by a device type restriction.
+
+#### Resolution
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll devices** > **Enrollment restrictions**.
+2. Under **Device type restrictions**, select **All Users** > **Properties**.
+3. Click **Edit** next to the **Platform settings**.
+4. On the **Edit restriction** page, select **Allow** for **iOS/iPadOS** and proceed to the **Review + save** page, then click **Save**.
+
 ## Sync token errors between Intune and ADE (DEP)
 
 This section includes token sync errors with:
@@ -311,15 +322,6 @@ Government users signing in from another device are redirected to the public clo
 Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
 
 Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.
-
-### Remote Management Invalid Profile
-Upon enrollment with Apple Business Manager, Remote Management on the device shows "The configuration for your iPhone/iPad could not be downloaded from (company name): Invalid Profile.
-
-**Cause:** If you have confirmed the profile is accurate, *Device Type Restrictions* may be blocking iOS/iPadOS enrollment, regardless of user attestation. Either custom device type restrictions are configured, or the default *All Users* policy is blocking the platform from enrolling altogether, which will block Apple Business Manager from enrolling the device to Endpoint Manager and Azure Active Directory.  
-
-#### Resolution
-Update *All Users* in *Device Type Restrictions* to allow the iOS/PadOS platform.  Blocking personally owned devices only will enable corporate devices, whether they are registered via a Device Enrollment Program or listed with a Corporate Device Identifier to enroll.  
-
 
 ## Next steps
 
