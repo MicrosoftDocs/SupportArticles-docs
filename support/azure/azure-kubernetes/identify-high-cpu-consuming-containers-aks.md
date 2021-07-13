@@ -56,8 +56,6 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 
       `crictl stats -o "table {{.ID\t{{.CPUPerc}}" | sort -t " " --key=2 -h -r | head`.
 
-      :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/docker-stats-command-output.png" alt-text="Screenshot of the output of running the docker stats command.":::
-
 1. To identify the hosting pod of the container, run either `docker inspect` or `crictl inspect`, depending on whether or not you have **ContainerD**:
 
    1. If you don't have **ContainerD**, run this command:
@@ -67,8 +65,6 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
    1. If you have **ContainerD**, run this command:
 
       `crictl inspect --output go-template --template "{{.info.runtimeSpec.hostname}}" YOUR_CONTAINER_ID`.
-
-      :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/docker-inspect-command-output.png" alt-text="Screenshot of the output of running the docker inspect command.":::
 
 ## Additional information
 
