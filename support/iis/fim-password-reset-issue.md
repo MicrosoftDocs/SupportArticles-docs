@@ -64,7 +64,7 @@ To secure the Administrative accounts in the Active Directory, there is a proces
 - Enterprise Admins
 - Cert Publishers
 
-How and why this process is in place is important to understand before making any changes to the permissions on these objects via a change in the Security Descriptor of the AdminSDHolder object. There are many good articles published on the Microsoft website. Simply search for AdminSDHolder from [Microsoft Docs](https://docs.microsoft.com/).
+How and why this process is in place is important to understand before making any changes to the permissions on these objects via a change in the Security Descriptor of the AdminSDHolder object. There are many good articles published on the Microsoft website. Simply search for AdminSDHolder from [Microsoft Docs](/.).
 
 ### Granting permissions on the AdminSDHolder Object
 
