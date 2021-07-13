@@ -39,10 +39,10 @@ You may see error C01A001D (STATUS_LOG_FULL) for the following reasons after ins
 
 ## Resolution
 
-To prevent the problem described above from occurring in the first place, complete the following resolution steps on Windows Server 2016 VMs before applying the Windows Update KB5003638 (OS Build 14393.4467) released on June 8, 2021. You can also complete these steps on the failed VM, but you must first revert the VM to the state before you applied this update by [restoring the VM from backup](/azure/virtual-machines/windows/expand-os-disk).
+To prevent the problem described above from occurring in the first place, complete the following resolution steps on Windows Server 2016 VMs before applying the [Windows Update KB5003638 (OS Build 14393.4467)](https://support.microsoft.com/en-us/topic/june-8-2021-kb5003638-os-build-14393-4467-d9dfce91-b425-483a-8280-f54d7005b231) released on June 8, 2021. You can also complete these steps on the failed VM, but you must first revert the VM to the state before you applied this update by [restoring the VM from backup](/azure/virtual-machines/windows/expand-os-disk).
 
 1. Ensure that the OS volume has at least 1 GB of free space.
-2. In the Search Windows box, enter winver to open the About Windows dialog box and determine the last Windows update applied. If the number after “OS Build 14393” is lower than 4350, then apply either of the following updates (as allowed by your company’s update policy), and then restart the VM:
+2. In the Search Windows box, enter **winver** to open the About Windows dialog box and determine the last Windows update applied. If the number after “OS Build 14393” is lower than 4350, then apply either of the following updates (as allowed by your company’s update policy), and then restart the VM:
 
     - [April 13, 2021—KB5001347 (OS Build 14393.4350)](https://support.microsoft.com/topic/april-13-2021-kb5001347-os-build-14393-4350-ee0e6301-3428-4a14-8e67-d69c5b31c66a)
     - [May 11, 2021—KB5003197 (OS Build 14393.4402)](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697)
