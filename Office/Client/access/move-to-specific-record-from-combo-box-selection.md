@@ -47,14 +47,14 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 The following table compares the features (benefits and drawbacks) of the four methods:
 
-|Method                     | 1 | 2 | 3 | 4 | 5 |
-|---------------------------|---|---|---|---|---|
-|Requires no code/macros    |   |   | x | x |   |
-|Saves on subforms          | x | x |   | x |   |
-|Can scroll to other records| x |   | x | x |   |
-|Does not require a query   | x | x | x |   | x |
-|Can edit records           | x | x | x |   | x |
-|Opens form in other modes  |   |   |   |   | x |
+|Method                     | 1 | 2 | 3 | 4 |
+|---------------------------|---|---|---|---|
+|Requires no code/macros    |   |   | x |   |
+|Subform is not required    | x | x |   |   |
+|Can scroll to other records| x |   | x |   |
+|Does not require a query   | x | x | x | x | 
+|Can edit records           | x | x | x | x |
+|Opens form in other modes  |   |   |   | x |
 
 > [!NOTE]
 > These methods can also apply to text boxes.
@@ -181,46 +181,9 @@ The following table compares the features (benefits and drawbacks) of the four m
 
    By changing the value in cboLookup control, Access ensures that the records in the subform match the combo box.
 
-   The Orders form in the Northwind sample database illustrates this method. The Order Details subform is related by the **LinkMasterFields** and **LinkChildFields** properties.    
+   The Orders form in the Northwind sample database illustrates this method. The Order Details subform is related by the **LinkMasterFields** and **LinkChildFields** properties. 
 
-### Method 4
-
-1. Create a table named tblProductSelect that has a single field, ProductID. Set the **Data Type** property of the field to **Number** and set the **Field Size** property to **Long Integer**. 
-
-   > [!NOTE]
-   > Don't use primary key and add records to this table.
-
-2. Create the following query named qryProductSelect that is based on a join between the **ProductID** fields of the tblProductSelect and Products tables. Include the following attributes in the query:
- 
-   ```output
-   Query: qryProductSelect
-   -----------------------------------------------
-   Field: ProductID
-   Table Name: tblProductSelect
-
-   Field: <any other fields you are interested in>
-   TableName: Products
-   ```
-
-3. Create a new form based on the qryProductSelect query by using the **AutoForm: Columnar Wizard** as instructed in the step 2 of method 1.
-
-4. Right-click the text box control for the **ProductID** field, point to **Change To**, click **Combo Box**, and then make the following property assignments for this combo box:
-
-   ```output
-   Combo Box
-   --------------------------
-   ControlName: ProductID
-   ControlSource: ProductID
-   RowSourceType: Table/Query
-   RowSource: Products
-   ColumnCount: 1
-   ColumnWidths: 2"
-   BoundColumn: 1
-   ```
-
-5. Save the form as frmComboTest3, and then run the form.   
-
-### Method 5: Use the OpenForm macro action with the WHERE clause
+### Method 4: Use the OpenForm macro action with the WHERE clause
 
 1. Create a new form based on the Products table by using the **AutoForm: Columnar Wizard** as instructed in the step 2 of method 1, and then save the form as frmComboTest5.
 2. Use the **Combo Box Wizard** to add an unbound combo box as instructed in the step 3 of method 2.
