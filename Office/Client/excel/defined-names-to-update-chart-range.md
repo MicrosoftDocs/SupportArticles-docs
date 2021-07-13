@@ -37,7 +37,7 @@ This section includes two methods for using defined names to automatically updat
 
 To use this method, follow these steps, as appropriate for the version of Excel that you are running. 
 
-#### Microsoft Office Excel 2007 and newer
+#### Microsoft Office Excel 2007 and later versions
 
 1. In a new worksheet, type the following data:
 
@@ -65,7 +65,7 @@ To use this method, follow these steps, as appropriate for the version of Excel 
 1. Under **Horizontal (Category) Axis Labels**, click **Edit**.   
 1. In the **Axis label range** box, type **=Sheet1!Date**, and then click **OK**.   
 
-#### Microsoft Office Excel 2003 and earlier versions of Excel
+#### Microsoft Office Excel 2003 and earlier versions
 
 1. In a new worksheet, type the following data:
  
