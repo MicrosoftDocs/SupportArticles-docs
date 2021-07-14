@@ -1,5 +1,5 @@
 ---
-title: SharePoint 2013 Workflow Error To try again, reload the page
+title: SharePoint 2013 Workflow Error “To try again, reload the page and then start the workflow”
 description: Describes how to troubleshoot an error about Workflows.
 author: salarson
 manager: dcscontentpm
@@ -37,25 +37,25 @@ This error occurs if SharePoint 2013 Workflows are in a suspended state for the 
 
 You can remove the current SharePoint site's suspension by removing SharePoint 2013 Workflows that have exceeded their limits. Use the Workflow Settings page, or delete workflows using SharePoint Designer.
 
-The cleanup process is not instant. It will take time and the Workflow Health will switch to a Connected status when it’s done:
+The cleanup process is not instant. It will take time and the Workflow Health will switch to a **Connected** status when it’s done:
 
 :::image type="content" source="./media/reload-the-page/workflow-connected.png" alt-text="Screenshot of the Workflow Health page showing workflow status as connected.":::
 
 We recommend removing SharePoint 2013 Workflows by using the Workflow Settings page.
 
-You can identify the workflows to be removed by using the ShowScopeDebugInfo() function.
+You can identify the workflows to be removed by using the **ShowScopeDebugInfo()** function.
 
 ### How to run the ShowScopeDebugInfo() Function
 
 1. On the site that is having the Workflow problem, select Settings (the gear icon), and then select **Site Settings** > **Workflow Settings** > **Workflow Health**.
     - You can also access Workflow Health from a URL. Example URL: `https://contoso.sharepoint.com/sites/test/_layouts/15/WorkflowServiceHealth.aspx` - in this example, replace *contoso* with your domain, and *test* with the name of the SharePoint site.
-1. Open the Developer tools from the browser (Edge or Google Chrome is recommended).
+1. Open the Developer tools from the browser (Microsoft Edge or Google Chrome is recommended).
     - For Microsoft Edge press the F12 key to toggle open Developer Tools.
     - For Google Chrome press Shift + CTRL + J to open Developer Tools.
 1. Select **Console**.
 1. Type the following function name: *ShowScopeDebugInfo()*
-    - After typing *ShowScopeDebugInfo()* press enter and it will execute a JavaScript function which prints the data in background.
-    - **Note** The Workflow Service Health page will need to be refreshed to get updated data from ShowScopeDebugInfo. The information returned by ShowScopeDebugInfo is not real time. There is a slight delay until the results are updated.
+    - After typing *ShowScopeDebugInfo()* press Enter and it will execute a JavaScript function which prints the data in background.
+    - **Note** The Workflow Service Health page will need to be refreshed to get updated data from **ShowScopeDebugInfo**. The information returned by **ShowScopeDebugInfo** is not real time. There is a slight delay until the results are updated.
 
     :::image type="content" source="./media/reload-the-page/workflow-health.png" alt-text="Screenshot of the Workflow Health page showing workflow status details.":::
 
@@ -104,4 +104,4 @@ You can identify the workflows to be removed by using the ShowScopeDebugInfo() f
 
 1. Once a Workflow or Workflows are removed, a cleanup process is started. You can track the progress by refreshing the Workflow Service Health page and executing the ShowScopeDebugInfo function. **ActiveMessageCount**, **ScopeSizeInBytes**, and **CorrelationFilterCount** will go down, depending on which limit was exceeded.  **ActiveMessageCount** is the slowest and might take days to clear up, but it isn’t blocking. Once the core of the cleanup background job is done, the Workflow Service Health page will no longer display **Workflows are suspended**, and the **StatusDetails** will no longer have a value.
 
-If you are unable to fix the issue by removing workflows, you might opt to open a support request. If you choose to open a support request, please gather some additional information about the workflow health by using the ShowScopeDebugInfo() function. For more information about ShowScopeDebugInfo() function, see [Gather SharePoint 2013 Workflow troubleshooting data with ShowScopeDebugInfo](./gather-workflow-data.md).
+If you are unable to fix the issue by removing workflows, you might opt to open a support request. If you choose to open a support request, please gather some additional information about the workflow health by using the **ShowScopeDebugInfo()** function. For more information about the **ShowScopeDebugInfo()** function, see [Gather SharePoint 2013 Workflow troubleshooting data with ShowScopeDebugInfo](./gather-workflow-data.md).
