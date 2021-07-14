@@ -28,7 +28,7 @@ Microsoft IMEs are updated in some versions of Windows 10. This issue occurs whe
 
 Turn on the **Compatibility** option to revert to the previous version of Microsoft IME. To do this, follow these steps:
 
-1. In the search box on the taskbar, enter _language settings_, and then select **Language settings** in the list of results.
+1. In the search box on the taskbar, enter *language settings*, and then select **Language settings** in the list of results.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/language-settings.png" alt-text="Search language settings." border="true":::
 
@@ -44,7 +44,7 @@ Turn on the **Compatibility** option to revert to the previous version of Micros
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/ime-general.png" alt-text="Select general." border="true":::
 
-1. Turn on the **Use previous version of <YourIME>** option, and then select **OK** in the window that opens.
+1. Turn on the **Use previous version of \<YourIME\>** option, and then select **OK** in the window that opens.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/turn-on-compatibility.png" alt-text="Turn on the compatibility mode and confirm the IME version change." border="true":::
 
