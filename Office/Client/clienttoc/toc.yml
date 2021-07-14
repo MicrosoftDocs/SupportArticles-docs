@@ -651,8 +651,6 @@
       items:
         - name: Can't pass the Welcome Screen in Office for Mac
           href: ../office-for-mac/office-for-mac-welcome-screen.md
-        - name: Error when you open files from SharePoint in Office client
-          href: ../office-for-mac/files-fail-to-open.md
         - name: Known issues with Office for Mac
           href: ../office-for-mac/office-for-mac-issues-macos-10-7.md
         - name: Office 2016 for Mac 64-bit upgrade
@@ -733,6 +731,8 @@
           href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
+        - name: Error when you open files from SharePoint in Office client
+          href: ../office-suite-issues/files-fail-to-open.md
         - name: FAQ about Office Activation Wizard
           href: ../office-suite-issues/faq-about-office-activation-wizard.md
         - name: Features to enable collaboration
@@ -1033,6 +1033,8 @@
           href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
         - name: How to merge multiple documents
           href: ../word/merge-word-documents.md
+        - name: How to recover Word documents
+          href: ../word/recover-lost-unsaved-corrupted-document.md
         - name: Image DPI is changed after you print to PDF
           href: ../word/image-dpi-change-after-print-to-pdf.md
         - name: In-place edit of an embedded Word document with ActiveX control causes flickering
@@ -1051,8 +1053,6 @@
           href: ../word/performance-issue-on-autorecover-location.md
         - name: Print failures in Word
           href: ../word/print-failures-in-word.md
-        - name: Recover a lost or unsaved Word document
-          href: ../word/recover-lost-unsaved-corrupted-document.md
         - name: relationship rID8 was not found
           href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
         - name: Reset user options and registry settings in Word

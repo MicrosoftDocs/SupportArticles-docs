@@ -1,5 +1,5 @@
 ---
-title: How to recover a lost or unsaved Word document
+title: How to recover Word documents
 description: Describes a range of options to locate and recover lost or unsaved Microsoft Word documents.
 author: helenclu
 manager: dcscontentpm
@@ -23,16 +23,16 @@ appliesto:
 ms.date: 6/24/2021
 ---
 
-# Recover a lost or unsaved Word document
+# How to recover Word documents
 
-You can recover a lost or unsaved Microsoft Word document by using any of these methods:
+You can try to recover a Word document by:
 
-- [Search for Word documents](#searchdocs)
-- [Search for Word backup files](#searchbackup)
-- [Check the Recycle Bin](#checkrecycle)
-- [Restart Word to open AutoRecover files](#restartword)
-- [Search for AutoRecover files](#autorecover)
-- [Search for temporary files](#tempfiles)
+- [Searching for Word documents](#searchdocs)
+- [Searching for Word backup files](#searchbackup)
+- [Checking the Recycle Bin](#checkrecycle)
+- [Restarting Word to open AutoRecover files](#restartword)
+- [Searching for AutoRecover files](#autorecover)
+- [Searching for temporary files](#tempfiles)
 
 If you're looking for information about how to recover other recent Office files, see the following articles:
 - [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8)
@@ -51,7 +51,7 @@ Try searching for the document in Windows:
    
 If the search results don't contain the file, go to the next method.
 
-### <a id="searchbackup">Search for Word backup files</a>
+### <a id="searchbackup">Searching for Word backup files</a>
 
 Word backup file names have a ".wbk" extension. If you have the "backup copy" option selected in Word, there might be a backup copy of the file.
 
@@ -67,7 +67,7 @@ To find the backup copy of the file, select **Start**, enter *.wbk* in the **Sea
 
 If you don’t find a backup file for the document, go to the next method.
 
-### <a id="checkrecycle">Check the Recycle Bin</a>
+### <a id="checkrecycle">Checking the Recycle Bin</a>
 
 If you deleted a Word document without emptying the Recycle Bin, you might be able to restore the document.
 
@@ -81,7 +81,7 @@ If you don't find the desired file, go to the next method.
 
 If you are using Windows 10, version 2004 or later, you can try the [Windows File Recovery tool](https://www.microsoft.com/p/windows-file-recovery/9n26s50ln705). Windows File Recovery is available from the Microsoft Store. You can use it to recover files that have been permanently deleted. For more information about this tool, see [Recover lost files on Windows 10](https://support.microsoft.com/windows/recover-lost-files-on-windows-10-61f5b28a-f5b8-3cc2-0f8e-a63cb4e1d4c4).
 
-**Restore documents saved to SharePoint and OneDrive**
+**Restoring documents saved to SharePoint and OneDrive**
 
 For documents that you saved or synced to SharePoint, see [Restore items in the recycle bin that were deleted from SharePoint or Teams](https://support.microsoft.com/office/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams-6df466b6-55f2-4898-8d6e-c0dff851a0be).
 
@@ -97,14 +97,14 @@ Word takes different actions to protect your changes in Word documents:
 - If Word opens a document from your local disk or network shared folder, Word uses AutoRecover to save changes to an AutoRecover file. The default AutoRecover save interval is 10 minutes. We recommend that you leave the AutoRecover feature set to **On**.
     :::image type="content" source="./media/recover-lost-document/word-options.png" alt-text="Image shows the Save Documents section of Word options, with Autorecover set to every ten minutes.":::
 
-### <a id="restartword">Restart Word to open AutoRecover files</a>
+### <a id="restartword">Restarting Word to open AutoRecover files</a>
 
 Word searches for AutoRecover files every time it starts. Therefore, you can try using the AutoRecover feature by closing and reopening Word. If Word finds any automatically recovered file, the **Document Recovery** task pane opens, and the missing document should be listed as "document name [Original]" or as "document name [Recovered]." If this occurs, double-click the file name in the **Document Recovery** pane, select **File** > **Save as**, and then save the document as a .docx file. To manually change the extension to .docx, right-click the file, and select **Rename**.
 
 **Note** In Microsoft 365 Subscription, when Word starts, it searches for AutoRecover files. If any recovered files are found, Word opens them by having a Message Bar. Select **Save** to save the recovered file as a .docx file. If there are many recovered files, Word usually opens the last-changed files, and puts the remaining files into the **Document Recovery** task pane.
     :::image type="content" source="./media/recover-lost-document/recovered-unsaved-file.png" alt-text="Image shows a header that reads, Recovered Unsaved File. This is a recovered file that is temporarily stored on your computer. There is a Save button next to it.":::
 
-### <a id="autorecover">Search for AutoRecover files</a>
+### <a id="autorecover">Searching for AutoRecover files</a>
 
 If you have a Microsoft 365 subscription, check the following folder locations for backup files:
 - C:\Users\<UserName>\AppData\Roaming\Microsoft\Word
@@ -126,7 +126,7 @@ If you find any files that have the .asd extension, follow these steps:
  
 If there are no .asd files, go to the next method.
 
-### <a id="tempfiles">Search for temporary files</a>
+### <a id="tempfiles">Searching for temporary files</a>
 
 Temporary file names have a .tmp extension. To find these files, follow these steps:
 
