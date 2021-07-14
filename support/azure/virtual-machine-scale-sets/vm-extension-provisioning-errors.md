@@ -49,7 +49,9 @@ The output of this command will display the provisioning states of the extension
 
 :::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with info grouped per instance.":::
 
-Within each section dedicated to a particular instance, the “extProvisioningState” list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the “extension” list, which displays the names of the extensions in same corresponding order. For example, in the following example output, the first provisioning state in this instance, “Failed,” corresponds to the first extension named, “customScript.” By matching the provisioning states to the extensions listed, you can also determine that in this example, the second and third extensions listed were successfully provisioned on the same instance.
+Within each section dedicated to a particular instance, the “extProvisioningState” list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the “extension” list, which displays the names of the extensions in same corresponding order. 
+
+For example, in the following example output, the first provisioning state in this instance, “Failed,” corresponds to the first extension, “customScript.” By matching the provisioning states to the extensions listed, you can also determine that in this example, the second and third extensions listed were successfully provisioned on the same instance.
 
 :::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-extensions-matched.png" alt-text="Screenshot of output with arrow from provisioning state to extension name":::
 
