@@ -37,7 +37,7 @@ This scenario would be most applicable if the user mailbox was previously migrat
 
 To use this method, follow these steps:
 
-1. Open the Exchange Management Shell, save the on-premises mailbox information to a file, such as "SMTP addresses", "Legacy Exchange DN", "Exchange attributes", and so on.
+1. Open the [Exchange Management Shell](/powershell/exchange/exchange-management-shell), save the on-premises mailbox information to a file, such as "SMTP addresses", "Legacy Exchange DN", "Exchange attributes", and so on.
 
 2. Set the PowerShell Format enumeration limit to "unlimited" to make sure that no attribute values are truncated. For example:
 
@@ -58,24 +58,27 @@ To use this method, follow these steps:
     Enable-RemoteMailbox "user identity" -RemoteRoutingAddress "user@contoso.mail.onmicrosoft.com"
     ```
 
-5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` command from step 2).
+5. Restore any custom proxy addresses and any other Exchange Server attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` cmdlet from step 2).
 
-6. Add the LegacyExchangeDN value of the previous on-premises mailbox to the proxy address of new remote mailbox as an x500 address. Use the value of the LegacyExchangeDN parameter from the file that's saved in step 2. To do this, run the following command:
+6. Add the `LegacyExchangeDN` value of the previous on-premises mailbox to the proxy address of the new remote mailbox as an x500 address. To do this, run the following cmdlet:
+
+    > [!NOTE] 
+    > The value of the `LegacyExchangeDN` parameter can be found in the file that's saved in step 2. 
 
     ```powershell
-    Set-RemoteMailbox -Identity "user identity" -EmailAddresses @{add="x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=24ebc38e239f4b4abbe81c224908794b-User1"}
+    Set-RemoteMailbox -Identity "user identity" -EmailAddresses @{add="x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=<Email Address>"}
     ```
 
 7. Collect the GUIDs of the mailboxes and database:
 
-   - To get the GUID of the disconnected mailbox, use the value of the ExchangeGUID parameter from the file that's saved in step 2.
-   - To get the GUID of the on-premises database, use the value of the Database parameter from the file that's saved in step 2, then run the following command:
+   - To get the GUID of the disconnected mailbox, use the value of the `ExchangeGUID` parameter from the file that's saved in step 2.
+   - To get the GUID of the on-premises database, use the value of the `Database` parameter from the file that's saved in step 2, then run the following cmdlet:
   
      ```powershell
      Get-MailboxDatabase "database identity" | fl *GUID*
      ```  
    
-   - To get the GUID of the cloud mailbox, run the following command by using Exchange Online PowerShell:
+   - To get the GUID of the cloud mailbox, run the following cmdlet by using Exchange Online PowerShell:
   
      ```powershell
      Get-Mailbox "user identity" | fl *ExchangeGUID*
@@ -102,7 +105,7 @@ To use this method, follow these steps:
     > The remote restore isn't supported for Exchange Server 2010. The minimum supported version is Exchange Server 2013.
 
 > [!IMPORTANT]
-> Because `New-MailboxRestoreRequest` was designed to work in a single Exchange organization, the cross-premises restore jobs will fail due to an unavoidable mismatch between the source and target mailbox ExchangeGuid's.  The mailbox restore request will end in status "FailedOther", and the report (from `Get-MailboxRestoreRequestStatistics -IncludeReport`) will show the following error message in the final report Entry:
+> Because `New-MailboxRestoreRequest` was designed to work in a single Exchange Server organization, the cross-premises restore jobs will fail due to an unavoidable mismatch between the source and target mailbox ExchangeGuid's.  The mailbox restore request will end in status "FailedOther", and the report (from `Get-MailboxRestoreRequestStatistics -IncludeReport`) will show the following error message in the final report Entry:
 
 ```powershell
 Get-MailboxRestoreRequest "<mailbox's ID>" | `
