@@ -69,6 +69,8 @@ There are various reasons why expected results maybe be missing that are related
          > [!NOTE]
          > From the same location, admins can also select **Reindex Document Library** to make sure that all content in the document library is indexed during the next scheduled crawl.
 
+1. Verify draft items are crawled, see [Draft items are not crawled in SharePoint](https://support.microsoft.com/office/9198c307-13d6-425c-a174-542a60e410e4).
+
 1. Verify the site's search visibility options at the following location: 
 
      **<site_name>/_layouts/srchvis.aspx**
