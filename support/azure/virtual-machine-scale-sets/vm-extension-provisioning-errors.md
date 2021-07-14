@@ -1,6 +1,6 @@
 ---
-title: QuotaExceeded error when scaling virtual machine scale sets
-description: Steps to resolve issues when QuotaExceeded error appears.
+title: VM extension provisioning errors
+description: Steps to resolve VM extension provisioning errors in a Virtual Machine Scale Set.
 ms.date: 05/04/2020
 author: jc-mackin
 ms.author: v-jcmackin
