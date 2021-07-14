@@ -37,7 +37,7 @@ This scenario would be most applicable if the user mailbox was previously migrat
 
 To use this method, follow these steps:
 
-1. Open the Exchange Management Shell, save the on-premises mailbox information to a file, such as "SMTP addresses", "Exchange attributes", and so on.
+1. Open the Exchange Management Shell, save the on-premises mailbox information to a file, such as "SMTP addresses", "Legacy Exchange DN", "Exchange attributes", and so on.
 
 2. Set the PowerShell Format enumeration limit to "unlimited" to make sure that no attribute values are truncated. For example:
 
@@ -58,12 +58,18 @@ To use this method, follow these steps:
     Enable-RemoteMailbox "user identity" -RemoteRoutingAddress "user@contoso.mail.onmicrosoft.com"
     ```
 
-5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` command from step 1).
+5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` command from step 2).
 
-6. Collect the GUIDs of the mailboxes and database:
+6. Add the LegacyExchangeDN value of the previous on-premises mailbox to the proxy address of new remote mailbox as an x500 address. Use the value of the LegacyExchangeDN parameter from the file that's saved in step 2. To do this, run the following command:
 
-   - To get the GUID of the disconnected mailbox, use the value of the ExchangeGUID parameter from the file that's saved in step 1.
-   - To get the GUID of the on-premises database, use the value of the Database parameter from the file that's saved in step 1, then run the following command:
+    ```powershell
+    Set-RemoteMailbox -Identity "user identity" -EmailAddresses @{add="x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=24ebc38e239f4b4abbe81c224908794b-User1"}
+    ```
+
+7. Collect the GUIDs of the mailboxes and database:
+
+   - To get the GUID of the disconnected mailbox, use the value of the ExchangeGUID parameter from the file that's saved in step 2.
+   - To get the GUID of the on-premises database, use the value of the Database parameter from the file that's saved in step 2, then run the following command:
   
      ```powershell
      Get-MailboxDatabase "database identity" | fl *GUID*
@@ -75,13 +81,13 @@ To use this method, follow these steps:
      Get-Mailbox "user identity" | fl *ExchangeGUID*
      ```  
     
-7. (Optional) Stamp the Exchange Online GUID on the remote mailbox using Exchange Management Shell (required if you ever want to off board the mailbox back to on-premises).
+8. (Optional) Stamp the Exchange Online GUID on the remote mailbox using Exchange Management Shell (required if you ever want to off board the mailbox back to on-premises).
 
     ```powershell
     Set-RemoteMailbox "user identity" -ExchangeGuid "Exchange guid value of Exchange Online mailbox"
     ```
     
-8. Restore the contents of the disconnected mailbox to Exchange Online by using Exchange Online PowerShell. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
+9. Restore the contents of the disconnected mailbox to Exchange Online by using Exchange Online PowerShell. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
 
    - A member of the Domain Admins group in Active Directory Domain Services (AD DS) in the on-premises organization.
    - A member of the Exchange Recipients Administrators group in Active Directory in the on-premises organization.
