@@ -10,16 +10,16 @@
 
 ## Explanation
 
-This happens because the application-configured timeout setting was reached and the application aborts the query. It's  application's decision to abort the running query, not SQL Server. SQL Server would execute a query for eternity if there is no time out value (set to 0 - zero).
-The timeout value is set on the Command object .NET framework (CommandTimeout), in JDBC using setQueryTimeout.
+This error is raised because the application-configured timeout setting was reached and the application aborts the query.  If a query/commmand timeout value is set to say 30 seconds and the query does not return a single packet of data back to the client application within 30 sec, then the application would cancel the query. It's the application's decision to cancel the running query, not the Database Engine and therefore this is an error that comes from the application side. If the timeout value is set to 0 zero (no timeout limit), then the Database engine would execute the query as long as it needs to until completion.
+The timeout value is set on the Command object in .NET Framework ([CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout)). In JDBC it is set using [setQueryTimeout](/sql/connect/jdbc/reference/setquerytimeout-method-sqlserverstatement).
 
-A query timeout will result in an Attention event (error 3617) on the SQL Server side
+A query timeout will cause an Attention event ([error 3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)) on the SQL Server side.
 
-Query timeout is DIFFERENT from a Connection timeout property which controls how long it takes to wait for a successful connection and has nothing to do with query execution (see Query Timeout is not the same as Connection Timeout)
+Query timeout is different from a Connection timeout property. The latter controls how long it takes to wait for a successful connection and has nothing to do with query execution (see Query Timeout is not the same as Connection Timeout)
 
 ## Troubleshooting Steps
 
-1. Please check if the CommandTimeout setting is smaller than the expected query duration. By default, it's 30 seconds. If there is still a query timeout after customer agreed that their setting is acceptable, then it becomes a SQL Server performance issue.
+1. Please check if the CommandTimeout setting is smaller than the expected query duration. By default, in most drivers and frameworks it's set to 30 seconds. If there is still a query timeout after the user agreed that their setting is acceptable, then this becomes a SQL Server performance issue.
 
 Here is a ADO.NET coding with commandTimeout 1 second
 
@@ -68,7 +68,7 @@ namespace ConsoleApplication6
 
 ```
 
-1. Try to run the query in SSMS/SQLCMD directly, if it takes more than 30 seconds to complete, please refer Scenario: Specific query is slow
+1. Try to run the query in SSMS/SQLCMD directly, if it takes more than 30 seconds to complete, then you need to take steps to troubleshoot the slow query.
 1. If it's fast in SSMS/SQLCMD, but only slow from application. Please refer Scenario: Query is Slow from Application but Fast from SSMS/SQLCMD. The goal is make the settings in SSMS/SQLCMD as same as the settings in application, then reproduce the issue in SSMS/SQLCMD and investigate. 
 
 
