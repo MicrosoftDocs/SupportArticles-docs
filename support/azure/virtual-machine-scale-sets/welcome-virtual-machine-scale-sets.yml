@@ -28,7 +28,7 @@ landingContent:
             url: ./virtual-machine-scale-sets-quota-exceeded.md
  
    # Card
-  - title: Issues with vm extensions in the scale set
+  - title: VM extension issues
     linkLists:
       - linkListType: how-to-guide
         links:
