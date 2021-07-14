@@ -44,4 +44,7 @@ To see if Paste Special is enabled:
     ![paste special](./media/paste-special-missing-or-not-working/paste-special.jpg)  
     ![paste special settings](./media/paste-special-missing-or-not-working/paste-special-settings.jpg) |
 
+> [!NOTE]
+> Using the **PasteSpecial** operation for a **Range** object triggers the **Worksheet_Activate** method. In order to disable the trigger you need to set **Application.EnableEvents** to **False**.
+
 You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
