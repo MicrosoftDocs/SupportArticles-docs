@@ -66,7 +66,7 @@ To use this method, follow these steps:
     > The value of the `LegacyExchangeDN` parameter can be found in the file that's saved in step 2. 
 
     ```powershell
-    Set-RemoteMailbox -Identity "user identity" -EmailAddresses @{add="x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=<Email Address>"}
+    Set-RemoteMailbox -Identity "user identity" -EmailAddresses @{add="x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=<user identity>"}
     ```
 
 7. Collect the GUIDs of the mailboxes and database:
