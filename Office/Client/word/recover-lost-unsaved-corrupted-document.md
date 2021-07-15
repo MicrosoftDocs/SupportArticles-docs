@@ -23,7 +23,7 @@ appliesto:
 ms.date: 6/24/2021
 ---
 
-# Recover a lost or unsaved Word document
+# How to recover Word documents
 
 You can try to recover a Word document by:
 
