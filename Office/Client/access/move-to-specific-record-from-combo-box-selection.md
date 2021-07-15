@@ -186,15 +186,28 @@ The following table compares the features (benefits and drawbacks) of the four m
 ### Method 4: Use the OpenForm macro action with the WHERE clause
 
 1. Create a new form based on the Products table by using the **AutoForm: Columnar Wizard** as instructed in the step 2 of method 1, and then save the form as frmComboTest5.
-2. Use the **Combo Box Wizard** to add an unbound combo box as instructed in the step 3 of method 2.
-3. In the Macro Builder, create a new macro in the AfterUpdate event.
-4. In the **Add New Action** drop-down list, select **OpenForm**, and then set the following properties:
+2. Add an unbound combo box named cboLookup, and then set the properties of the control as follows:
+
+   ```output
+   Combo Box
+   -----------------------------------------------------
+   ControlName: cboLookup
+   ControlSource: <leave blank>
+   RowSourceType: Table/Query
+   RowSource: SELECT [ProductID], [ProductName] FROM Products ORDER BY [ProductName];
+   BoundColumn: 1
+   ColumnCount: 2
+   ColumnWidths: 0";1"
+   ```
+
+4. In the Macro Builder, create a new embedded macro in the `AfterUpdate` event for the cboLookup combo box.
+5. In the **Add New Action** drop-down list, select **OpenForm**, and then set the following properties:
 
    ```output
    Form Name:   frmComboTest5
    View:        Form
    Filter Name: <leave as empty>
-   Where Condition: [ProductID] = [Forms]![frmComboTest5]![cboLookup].value
+   Where Condition: [ID] = [Forms]![frmComboTest5]![cboLookup].value
    Data Mode: <optional>
    Window Mode: <optional>
    ```
