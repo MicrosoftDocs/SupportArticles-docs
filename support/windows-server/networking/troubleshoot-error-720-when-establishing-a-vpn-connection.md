@@ -98,10 +98,10 @@ Disable-NetAdapterBinding -Name "<interface_name>" -IncludeHidden -AllBindings -
 
 ## Other scenarios
 
-If the above steps do not fix your issue, Re-Install the 'WAN Miniport (IP)' interface driver.
+If the above steps do not fix your issue, Re-install the **WAN Miniport (IP)** interface driver.
 
 1. Open **Device Manager**.
-2. Right-click all of the network adapters which name starts from 'WAN Miniport' and click **Uninstall device**. Here are some adapters you may observe.
+2. Right-click all of the network adapters which name starts from **WAN Miniport** and click **Uninstall device**. Here are some adapters you may observe.
    * WAN Miniport (IP)
    * WAN Miniport (IPv6)
    * WAN Miniport (GRE)
