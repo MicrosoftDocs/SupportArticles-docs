@@ -24,27 +24,29 @@ Paste Special can make the task of pasting text go more smoothly by letting you 
 
 ##  Resolution
 
-To see if Paste Special is enabled: 
+To see if the **Paste Special** option is enabled: 
  
-1. Go to: File > Options > Advanced.    
-2. Under Cut, copy and paste, ensure Show Paste Options button when content is pasted is checked. 
+1. Go to **File** > **Options** > **Advanced**.    
+2. Under **Cut, copy and paste**, ensure the **Show Paste Options button when content is pasted** option is checked. 
 
- Ensure that all instances of the web browsers that you use are Closed and try to use Paste Special again. Paste Special will not function if your web browser is causing the conflict. Windows Internet Explorer (8-9) do not conflict with the Excel 2010 Paste Special option.
-   Third party Add-ins can cause a variety of issues, one of then being, conflicting with the Paste Special option. To determine if an Add-in is causing the issue:
+ Ensure that all instances of the web browsers that you use are closed and try to use the **Paste Special** option again. Paste special will not function if your web browser is causing the conflict. Windows Internet Explorer (8-9) do not conflict with the Excel 2010 Paste Special option. Third party Add-ins can cause a variety of issues, one of then being, conflicting with the Paste Special option. To determine if an add-in is causing the issue:
 
+1. Find the Microsoft Excel icon.   
+2. Press and hold the CTRL key and double-click the application shortcut.
+3. Click **Yes** when a window appears asking if you want to [start the application in Safe Mode](https://support.microsoft.com/office/open-office-apps-in-safe-mode-on-a-windows-pc-dedf944a-5f4b-4afb-a453-528af4f7ac72).
+
+   > [!NOTE]
+   > If you have an icon on your desktop, hold the CTRL key and click on the icon. This works with any Microsoft Office product.
  
-1. Click Start > All Programs> Microsoft Office.    
-2. Press and hold the CTRL key, and click Microsoft Excel 2010. You will be asked if you want to open Excel in the Safe Mode, click Yes.
+4. If the **Paste Special** option works in the Safe Mode as follows, enable your Add-ins one by one until you hit that one that is causing the conflict. Leave that one disabled or uninstall it.
 
-   **Note:** If you have an icon on your desktop, hold down Ctrl and click on the icon. This works with any Microsoft Office product.    
-3. If Paste Special works in the Safe Mode as follows, enable your Add-ins one at a time until you hit that one that is causing the conflict. Leave that one disabled or uninstall it.
-
-   **Note:** Find out more on [ Adding or Removing Add-ins.](https://office.microsoft.com/excel-help/add-or-remove-add-ins-HP010342658.aspx) Find out more on [ Working with Office Safe Modes.](https://office.microsoft.com/excel-help/work-with-office-safe-modes-HP010354300.aspx)    
+   > [!NOTE]
+   > For more information, see [Adding or Removing Add-ins](https://office.microsoft.com/excel-help/add-or-remove-add-ins-HP010342658.aspx) and [Working with Office Safe Modes.](https://office.microsoft.com/excel-help/work-with-office-safe-modes-HP010354300.aspx).
 
     ![paste special](./media/paste-special-missing-or-not-working/paste-special.jpg)  
     ![paste special settings](./media/paste-special-missing-or-not-working/paste-special-settings.jpg) |
 
 > [!NOTE]
-> Using the **PasteSpecial** operation for a **Range** object triggers the **Worksheet_Activate** method. In order to disable the trigger you need to set **Application.EnableEvents** to **False**.
+> Using the `PasteSpecial` method for a `Range` object triggers the `Worksheet.Activate` event. You need to set the value of the `Application.EnableEvents` property to `False` to disable the trigger.
 
 You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
