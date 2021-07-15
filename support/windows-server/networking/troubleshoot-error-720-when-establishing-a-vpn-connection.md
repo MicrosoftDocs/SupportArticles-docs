@@ -63,8 +63,8 @@ Based on the output, choose the proper troubleshooting scenario below:
 If you see **ms_wanarp** is disabled as below, re-enable it with the following command.
 
 ```output
-Name                           DisplayName                                        ComponentID          Enabled
-----                           -----------                                        -----------          -------
+Name                   DisplayName                                        ComponentID          Enabled
+----                   -----------                                        -----------          -------
 <interface_name>       QoS Packet Schedular                               ms_pacer             True        
 <interface_name>       Remote Access IP ARP Driver                        ms_wanarp            False　<<<<< ★
 <interface_name>       WFP Native MAC Layer LightWeight                   ms_wfplwf_lower      True 
@@ -81,8 +81,8 @@ Enable-NetAdapterBinding -Name "<interface_name>" -IncludeHidden -AllBindings -C
 If you see **Steelhead Mobile Filter Driver** is bound as below, disable it with the following command.
 
 ```output
-Name                           DisplayName                                        ComponentID          Enabled
-----                           -----------                                        -----------          -------
+Name                   DisplayName                                        ComponentID          Enabled
+----                   -----------                                        -----------          -------
 <interface_name>       QoS Packet Schedular                               ms_pacer             True        
 <interface_name>       Remote Access IP ARP Driver                        ms_wanarp            True
 <interface_name>       Symantec Endpoint Protection Firewall              symc_teefer2         True        
