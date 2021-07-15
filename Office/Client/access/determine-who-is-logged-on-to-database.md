@@ -64,7 +64,6 @@ To determine who is logged onto a database, follow these steps:
     Sub ShowUserRosterMultipleUsers()
         Dim cn As New ADODB.Connection
         Dim rs As New ADODB.Recordset
-        Dim i, j As Long
     
     Set cn = CurrentProject.Connection
     
