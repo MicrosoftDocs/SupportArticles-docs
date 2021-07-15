@@ -50,11 +50,11 @@ You can identify the workflows to be removed by using the **ShowScopeDebugInfo()
 1. On the site that is having the Workflow problem, select Settings (the gear icon), and then select **Site Settings** > **Workflow Settings** > **Workflow Health**.
     - You can also access Workflow Health from a URL. Example URL: `https://contoso.sharepoint.com/sites/test/_layouts/15/WorkflowServiceHealth.aspx` - in this example, replace *contoso* with your domain, and *test* with the name of the SharePoint site.
 1. Open the Developer tools from the browser (Microsoft Edge or Google Chrome is recommended).
-    - For Microsoft Edge press the F12 key to toggle open Developer Tools.
-    - For Google Chrome press Shift + CTRL + J to open Developer Tools.
+    - For Microsoft Edge, press the F12 key to toggle open Developer Tools.
+    - For Google Chrome, press Shift+CTRL+J to open Developer Tools.
 1. Select **Console**.
 1. Type the following function name: *ShowScopeDebugInfo()*
-    - After typing *ShowScopeDebugInfo()* press Enter and it will execute a JavaScript function which prints the data in background.
+    - After typing *ShowScopeDebugInfo()*, press Enter and it will execute a JavaScript function which prints the data in background.
     - **Note** The Workflow Service Health page will need to be refreshed to get updated data from **ShowScopeDebugInfo**. The information returned by **ShowScopeDebugInfo** is not real time. There is a slight delay until the results are updated.
 
     :::image type="content" source="./media/reload-the-page/workflow-health.png" alt-text="Screenshot of the Workflow Health page showing workflow status details.":::
