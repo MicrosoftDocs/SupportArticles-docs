@@ -1,6 +1,6 @@
 ---
 title: Access error String data, right truncation (#0)
-description: Describes an issue that results in the error String data, right truncation (#0).
+description: Describes an issue that causes an error: String data, right truncation (#0).
 author: Dennis Wilmar
 manager: dcscontentpm
 localization_priority: Normal
@@ -19,33 +19,33 @@ appliesto:
 - Access 2016
 ---
 
-# Access error “String data, right truncation (#0)”
+# Access error: “String data, right truncation (#0)”
 
 ## Symptoms
 
-When Microsoft Access tries to update the `varchar(max)` column from a textbox control on a form, or in the datasheet view of a table or query, the following error occurs:
+When Microsoft Access tries to update the **varchar(max)** column in a textbox control on a form or in the datasheet view of a table or query, the following error occurs:
 
 > String data, right truncation (#0)
 
 ## Cause
 
-The error occurs under the following conditions:
+This error occurs under the following conditions:
 
 - The `varchar(max)` column is greater than 8,000 characters.
 
 - The table being updated is linked to Microsoft SQL Server.
 
-- The second- or third-generation SQL Server ODBC driver is in use.
+- The second-generation or third-generation SQL Server ODBC driver is in use.
 
-We are aware of this issue and are investigating possible solutions. In the meantime, see the below workarounds.
+Microsoft is aware of this issue and is investigating possible solutions. In the meantime, we recommend that you use the workarounds in the next section.
 
 ## Workarounds
 
-To work around this problem, try one of the following methods:
+To work around this issue, try either of the following methods.
 
-- Change the table columns to `nvarchar(max)`. SQL Server will return the `SQL_WVARCHAR` instead, which doesn’t have the character limit.
+**Method 1**: Change the table column type to `nvarchar(max)`. SQL Server will return the `SQL_WVARCHAR` value instead. This value doesn’t have any character limit.
 
-- Use the first-generation SQL Server ODBC driver found in the Windows Data Access Components. For more information about SQL Server ODBC drivers, see [Driver history for Microsoft SQL Server](/sql/connect/connect-history).
+**Method 2**: Use the first-generation SQL Server ODBC driver that's included in the Windows Data Access Components. For more information about SQL Server ODBC drivers, see [Driver history for Microsoft SQL Server](/sql/connect/connect-history).
 
 ## References
 
