@@ -41,13 +41,9 @@ To resolve this problem, reset the MIME types that are associated with the defau
     ```powershell
     $owapolicy = Get-OwaMailboxPolicy
     ```
-
+    
     ```powershell
-    $owapolicy.AllowedMimeTypes.Remove("text/html")
-    ```
-
-    ```powershell
-    Set-OwaMailboxPolicy -AllowedMimeTypes $owapolicy.AllowedMimeTypes -Identity $owapolicy.Identity
+    Set-OwaMailboxPolicy -AllowedMimeTypes @{remove = "text/html"} -BlockedMimeTypes @{remove = "text/html"} -ForceSaveMimeTypes @{add = "text/html"} -Identity $owapolicy.Identity
     ```
 
     > [!NOTE]
