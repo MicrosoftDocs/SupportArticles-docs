@@ -27,11 +27,11 @@ The steps you should use to attach a failed OS disk to a repair VM depend on whe
 
 Use the following process to fix a failed VM with the help of a repair VM.
 
-1. Take a snapshot of the OS disk
-2. Create a disk from the snapshot
-3. Create a repair VM with the new disk attached as a data disk
-4. Connect to the repair VM. Edit files or run any tools to fix problems on the original disk.
-5. Swap the failed VM’s OS disk with the repaired disk.
+1. [Take a snapshot of the OS disk](#take-a-snapshot-of-the-os-disk).
+2. [Create a disk from the snapshot](#create-a-disk-from-the-snapshot).
+3. [Create a repair VM with the new disk attached as a data disk](#create-a-repair-vm-with-the-new-disk-attached-as-a-data-disk).
+4. [Repair the failed VM's OS disk](#repair-the-failed-vms-os-disk).
+5. [Swap the failed VM’s OS disk with the repaired disk](#swap-the-failed-vms-os-disk-with-the-repaired-disk).
 
 ### Take a snapshot of the OS disk
 
