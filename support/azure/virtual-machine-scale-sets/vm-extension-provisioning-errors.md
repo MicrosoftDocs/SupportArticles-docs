@@ -1,7 +1,7 @@
 ---
 title: VM extension provisioning errors
 description: Steps to resolve VM extension provisioning errors in a Virtual Machine Scale Set.
-ms.date: 05/04/2020
+ms.date: 07/19/2021
 author: jc-mackin
 ms.author: v-jcmackin
 manager: dcscontentpm
@@ -49,7 +49,7 @@ The output of this command will display the provisioning states of the extension
 
 :::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with info grouped per instance.":::
 
-Within each section dedicated to a particular instance, the “extProvisioningState” list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the “extension” list, which displays the names of the extensions in same corresponding order. 
+Within each section dedicated to a particular instance, the “extProvisioningState” list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the “extension” list, which displays the names of the extensions in same corresponding order.
 
 For example, in the following example output, the first provisioning state in this instance, “Failed,” corresponds to the first extension, “customScript.” By matching the provisioning states to the extensions listed, you can also determine that in this example, the second and third extensions listed were successfully provisioned on the same instance.
 
@@ -66,7 +66,7 @@ To gain further insight on the cause of the error, sign in to the affected insta
 - **Windows Virtual Machine Scale Sets**: C:\WindowsAzure\logs\plugins\ExtensionName\Extension.log
 - **Linux Virtual Machine Scale Sets**: /var/log/plugins/ExtensionName/Extension.log
 
-### Verify that the failed extension is following best practices.
+### Verify that the failed extension is following best practices
 
 If the extension is customizable, such as Custom Script Extension (CSE) or Desired State Configuration (DSC), verify that you are following all necessary pre-requisites and recommended best practices.
 
