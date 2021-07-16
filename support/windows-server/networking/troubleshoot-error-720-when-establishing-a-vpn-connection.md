@@ -109,12 +109,12 @@ If the above steps do not fix your issue, Re-install the **WAN Miniport (IP)** i
 
 1. Open **Device Manager**.
 2. Right-click all of the network adapters which name starts from **WAN Miniport** and click **Uninstall device**. Here are some adapters you may observe.
-   * WAN Miniport (IP)
-   * WAN Miniport (IPv6)
-   * WAN Miniport (GRE)
-   * WAN Miniport (L2TP)
-   * WAN Miniport (Network Monitor)
-   * WAN Miniport (PPPOE)
-   * WAN Miniport (PPTP)
-   * WAN Miniport (SSTP)
+   - WAN Miniport (IP)
+   - WAN Miniport (IPv6)
+   - WAN Miniport (GRE)
+   - WAN Miniport (L2TP)
+   - WAN Miniport (Network Monitor)
+   - WAN Miniport (PPPOE)
+   - WAN Miniport (PPTP)
+   - WAN Miniport (SSTP)
 3. From the menu-bar of the device manager, click **Action** > **Scan for hardware changes**. This will automatically re-install your WAN Miniport devices.
