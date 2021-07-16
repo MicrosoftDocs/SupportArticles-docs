@@ -181,6 +181,17 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
 
+### The configuration for your iPhone/iPad could not be downloaded from \<Company Name>: Invalid Profile.
+
+**Cause:** The enrollment is blocked by a device type restriction.
+
+#### Resolution
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enroll devices** > **Enrollment restrictions**.
+2. Under **Device type restrictions**, select **All Users** > **Properties**.
+3. Select **Edit** next to the **Platform settings**.
+4. On the **Edit restriction** page, select **Allow** for **iOS/iPadOS** and proceed to the **Review + save** page, then select **Save**.
+
 ## Sync token errors between Intune and ADE (DEP)
 
 This section includes token sync errors with:
