@@ -59,7 +59,7 @@ OsVolumeEncryptionSettings : Microsoft.Azure.Management.Compute.Models.DiskEncry
 ProgressMessage            : Extension status not available on the VM
 ```
 
-For more information about the **Get-AzureRmDiskEncryptionStatus** cmdlet, see [Get-AzVMDiskEncryptionStatus (Az.Compute)](/powershell/module/az.compute/get-azvmdiskencryptionstatus?view=azps-6.2.1&viewFallbackFrom=azps-6.0.0).
+For more information about the **Get-AzureRmDiskEncryptionStatus** cmdlet, see [Get-AzVMDiskEncryptionStatus (Az.Compute)](/powershell/module/az.compute/get-azvmdiskencryptionstatus).
 
 #### Azure CLI
 
@@ -72,7 +72,7 @@ C:\Users\admin1>az vm encryption show --name MyVM --resource-group MyResourceGro
 ]
 ```
 
-For more information about the **az vm encryption show** command, see [az vm encryption show](/cli/azure/vm/encryption?view=azure-cli-latest#az_vm_encryption_show).
+For more information about the **az vm encryption show** command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
 
 >[!NOTE]
 >**Offline repair for unencrypted disks**
@@ -106,7 +106,7 @@ You should choose one of three methods to attach the disk to a repair VM and unl
 
 ### Automated method to unlock an encrypted disk on a repair VM (Method 1)
 
-This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest) commands to automatically create a repair VM, attach the failed OS disk, and unlock the disk if it is encrypted. It works only for single-pass-encrypted managed disks and requires use of public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the BitLocker encryption key (BEK) is unwrapped or wrapped by using a key encryption key (KEK).
+This method relies on [az vm repair](/cli/azure/vm/repair) commands to automatically create a repair VM, attach the failed OS disk, and unlock the disk if it is encrypted. It works only for single-pass-encrypted managed disks and requires use of public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the BitLocker encryption key (BEK) is unwrapped or wrapped by using a key encryption key (KEK).
 
 To repair the VM by using this automated method, see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
 

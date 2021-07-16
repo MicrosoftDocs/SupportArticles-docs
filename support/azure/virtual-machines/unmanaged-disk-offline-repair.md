@@ -149,7 +149,7 @@ After you finish repairing the disk, follow these steps:
 
     **Azure CLI**
 
-    Use the [az vm unmanaged-disk detach](/cli/azure/vm/unmanaged-disk?view=azure-cli-latest#az_vm_unmanaged_disk_detach) command, as in the following example:
+    Use the [az vm unmanaged-disk detach](/cli/azure/vm/unmanaged-disk#az_vm_unmanaged_disk_detach) command, as in the following example:
 
     ```console
     az vm unmanaged-disk detach -g MyResourceGroup --vm-name MyVm -n disk_name
@@ -200,4 +200,4 @@ After you finish repairing the disk, follow these steps:
 ## Next Steps
 
 To read an overview of ADE, see [Enable Azure Disk Encryption for Windows VMs](/azure/virtual-machines/windows/disk-encryption-overview).
-For more information about commands you can use to manage unmanaged disks, see [az vm unmanaged-disk](/cli/azure/vm/unmanaged-disk?view=azure-cli-latest).
+For more information about commands you can use to manage unmanaged disks, see [az vm unmanaged-disk](/cli/azure/vm/unmanaged-disk).
