@@ -21,7 +21,7 @@ The steps you should use to attach a failed OS disk to a repair VM depend on whe
 - If you know the OS disk is unmanaged, see “[Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md)” for instructions on attaching the disk to a repair VM. If you are unsure, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 - If you know the disk is both managed and unencrypted, choose one of the following methods:
   - If company policy allows you to assign a public IP address to a repair VM, see “[Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).“  This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest).
-  - If company policies prevent you from assigning a public IP address to a repair VM, use the [manual method to attach an OS disk to a repair VM](#manually-attach-a-failed-os-disk-to-a-repair-vm-for-offline-troubleshooting).
+  - If company policies prevent you from assigning a public IP address to a repair VM, use the [manual method to attach an OS disk to a repair VM](#manually-attach-a-failed-os-disk-to-a-repair-vm).
 
 ## Manually attach a failed OS disk to a repair VM
 
