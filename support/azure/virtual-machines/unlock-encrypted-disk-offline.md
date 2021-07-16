@@ -32,10 +32,10 @@ The procedures in this article describe methods you can use to attach an encrypt
 
 Take the following steps before attaching the failed OS disk to a repair VM:
 
-1. Confirm that ADE is enabled on the disk.
-2. Determine whether the OS disk uses ADE version 1 (dual-pass encryption) or ADE version 2 (single-pass encryption).
-3. Determine whether the OS disk is managed or unmanaged.
-4. Select the method to attach the disk to a repair VM and unlock the disk.
+1. [Confirm that ADE is enabled on the disk](#confirm-that-ade-is-enabled-on-the-disk).
+2. [Determine whether the OS disk uses ADE version 1 (dual-pass encryption) or ADE version 2 (single-pass encryption)](#determine-whether-the-os-disk-uses-ade-version-1-dual-pass-encryption-or-ade-version-2-single-pass-encryption).
+3. [Determine whether the OS disk is managed or unmanaged](#determine-whether-the-os-disk-is-managed-or-unmanaged).
+4. [Select the method to attach the disk to a repair VM and unlock the disk](#select-the-method-to-attach-the-disk-to-a-repair-vm-and-unlock-the-disk).
 
 ### Confirm that ADE is enabled on the disk
 
