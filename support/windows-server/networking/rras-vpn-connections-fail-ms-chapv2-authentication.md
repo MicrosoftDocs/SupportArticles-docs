@@ -32,7 +32,7 @@ Additionally, the domain user's bad password count can increment, resulting in a
 
 This issue can occur when the [LmCompatibilityLevel](/previous-versions/windows/it-pro/windows-2000-server/cc960646(v=technet.10)) settings on the authenticating DC have been modified from the defaults.
 
-`HKLM\SYSTEM\CurrentControlSet\Control\Lsa\LmCompatibilityLevel`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\LmCompatibilityLevel`
 
 For example, when you set this value to **5** (Send NTLMv2 response only. Refuse LM & NTLM), the DC won't accept any requests that use NTLM authentication. When MS-CHAP or MS-CHAPv2 are configured, RAS in Windows Server 2008 R2 will default to NTLM to hash the password. Because the DC only accepts NTLMv2, the request will be denied.
 
