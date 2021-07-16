@@ -108,7 +108,7 @@ The following analysis scenarios are available to run from the Azure portal. Bas
 <summary>Click here to expand this list.</summary>
 
 |Analysis Name|File Name|
-|--|--`|
+|--|--|
 |diagnostic|`/Windows/System32/config/SOFTWARE`|
 |diagnostic|`/Windows/System32/config/SYSTEM`|
 |diagnostic|`/Windows/System32/winevt/Logs/System.evtx`|
@@ -295,7 +295,7 @@ The following analysis scenarios are available to run from the Azure portal. Bas
 <summary>Click here to expand this list.</summary>
 
 |Analysis Name|File Name|
-|--|--`|
+|--|--|
 |diagnostic|`/var/log`|
 |diagnostic|`/var/lib/cloud`|
 |diagnostic|`/run/cloud-init`|
