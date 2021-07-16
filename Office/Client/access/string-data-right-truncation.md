@@ -1,6 +1,6 @@
 ---
 title: Access error String data, right truncation (#0)
-description: Describes an issue that causes an error: String data, right truncation (#0).
+description: Describes an issue that causes the Access error String data, right truncation (#0).
 author: Dennis Wilmar
 manager: dcscontentpm
 localization_priority: Normal
@@ -23,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-When Microsoft Access tries to update the **varchar(max)** column in a textbox control on a form or in the datasheet view of a table or query, the following error occurs:
+When Microsoft Access tries to update the `varchar(max)` data type in a textbox control on a form or in the datasheet view of a table or query, you receive the following error message:
 
 > String data, right truncation (#0)
 
@@ -31,7 +31,7 @@ When Microsoft Access tries to update the **varchar(max)** column in a textbox c
 
 This error occurs under the following conditions:
 
-- The `varchar(max)` column is greater than 8,000 characters.
+- The `varchar(max)` data type contains more than 8,000 characters.
 
 - The table being updated is linked to Microsoft SQL Server.
 
@@ -43,7 +43,7 @@ Microsoft is aware of this issue and is investigating possible solutions. In the
 
 To work around this issue, try either of the following methods.
 
-**Method 1**: Change the table column type to `nvarchar(max)`. SQL Server will return the `SQL_WVARCHAR` value instead. This value doesn’t have any character limit.
+**Method 1**: Change the data type to `nvarchar(max)`. SQL Server will return the `SQL_WVARCHAR` value instead. This value doesn’t have any character limit.
 
 **Method 2**: Use the first-generation SQL Server ODBC driver that's included in the Windows Data Access Components. For more information about SQL Server ODBC drivers, see [Driver history for Microsoft SQL Server](/sql/connect/connect-history).
 
