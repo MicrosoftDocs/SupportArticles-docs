@@ -194,8 +194,8 @@ Get-RemoteDomain | ft -AutoSize Name, DomainName, AutoReplyEnabled
 :::image type="content" source="media/understand-troubleshoot-oof-replies/OOF12.jpg" alt-text="Screenshot of checking OOF reply blocking using PowerShell.":::
 
 > [!NOTE]
-> If the value of the setting is **false**, no automatic replies will be sent to users in that domain. This setting takes precedence over the automatic replies that are set up at the mailbox level or over the OOF type (as discussed earlier). Keep in mind that **false** is the default value for new remote domains that you create and also for the built-in remote domain named "Default" in Exchange Online.
-
+> If the value of the setting is **false**, no automatic replies will be sent to users in that domain. This setting takes precedence over the automatic replies that are set up at the mailbox level or over the OOF type (as discussed earlier). Keep in mind that **true** is the default value for new remote domains that you create and the built-in remote domain named Default in Exchange Online. And **false** is the default value for the built-in remote domain named Default in on-premises Exchange.
+ 
 ### If the email message is marked as spam and sent to Junk, an automatic reply isn't generated at all
 
 This is self-explanatory.
