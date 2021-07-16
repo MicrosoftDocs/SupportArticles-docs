@@ -91,7 +91,7 @@ Use the following steps to install the VM Agent in offline mode.
 
 10.  Select **BROKENSOFTWARE**. From the menu, select **File** > **Unload Hive**​.
 
-11.  Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-os-disk-for-the-vm). For the classic VM, create a new VM by using the repaired OS disk.
+11.  Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk). For the classic VM, create a new VM by using the repaired OS disk.
 
 12.  Access the VM. Notice that the RdAgent is running and the logs are being generated.
 
