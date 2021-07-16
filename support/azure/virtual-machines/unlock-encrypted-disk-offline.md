@@ -190,7 +190,7 @@ By using this procedure, you manually create a VM that has the OS disk of the so
 
 ### Manual method to unlock an encrypted disk on a repair VM (Method 3)
 
-You can unlock the disk manually by following this procedure If you have to unlock a dual-pass-encrypted disk (ADE version 1) or an unmanaged disk, or if the other methods fail.
+You can unlock the disk manually by following this procedure if you have to unlock a dual-pass-encrypted disk (ADE version 1) or an unmanaged disk, or if the other methods fail.
 
 #### Create the repair VM and attach the source VM's OS disk
 

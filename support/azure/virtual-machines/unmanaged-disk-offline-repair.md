@@ -16,7 +16,7 @@ Some troubleshooting scenarios for Windows virtual machines (VMs), such as when 
 
 ### Azure portal
 
-Open the **Overview** blade for the VM. If a VM OS disk is unmanaged, an informational banner indicates that the VM is not using managed disks.
+Open the **Overview** blade for the VM. If the OS disk is unmanaged, an informational banner indicates that the VM is not using managed disks.
 
 :::image type="content" source="media/unmanaged-disk-offline-repair/unmanaged-banner.png" alt-text="Screenshot of a banner message in Azure portal indicating that a V M is not using managed disks.":::
 
