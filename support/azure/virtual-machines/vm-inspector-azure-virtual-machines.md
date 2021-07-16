@@ -104,6 +104,8 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 The following analysis scenarios are available to run from the Azure portal. Based on the logs and issues you are having, choose an analysis to run. Below are the files collected in the analysis.
 
 ### Windows Diagnostics
+<details>
+<summary>Click here to expand this list.</summary>
 
 |Analysis Name|File Name|
 |--|--|
@@ -286,8 +288,11 @@ The following analysis scenarios are available to run from the Azure portal. Bas
 |diagnostic|/WindowsAzure/Logs/Plugins/Microsoft.CPlat.Core.RunCommandWindows/*/*.log|
 |diagnostic|/WindowsAzure/Logs/Plugins/Microsoft.Azure.ActiveDirectory.AADLoginForWindows/*/*.log|
 |diagnostic|/Windows/servicing/sessions/sessions.xml|
+</details>
 
 ### Linux Diagnostics
+<details>
+<summary>Click here to expand this list.</summary>
 
 |Analysis Name|File Name|
 |--|--|
@@ -380,6 +385,7 @@ The following analysis scenarios are available to run from the Azure portal. Bas
 |diagnostic|/etc/*-release|
 |diagnostic|/etc/HOSTNAME|
 |diagnostic|/etc/hostname|
+</details>
 
 ## Change the VM Inspector settings
 
