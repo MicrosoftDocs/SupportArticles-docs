@@ -36,7 +36,15 @@ Event ID: 20227
 Description: The user dialed a connection named VPN Connection which has failed. The error code returned on failure is 720.
 ```
 
-## Analysis before troubleshooting
+## Troubleshooting on the server side
+
+On the server side, check if one of the following issues occurs:
+
+- The static IP Pool is exhausted.
+- The DHCP server for the RRAS is not available or its scope is exhausted.
+- The static IP that is configured in Active Directory user properties cannot be handed out.
+
+## Get network adapter binding on the client
 
 The **error 720 : ERROR_PPP_NO_PROTOCOLS_CONFIGURED** is generally caused when the **WAN Miniport (IP)** adapter is not bound properly on your PC. Even though the **WAN Miniport (IP)** looks healthy when you look into the **Device Manager** > **Network adapters**.
 
@@ -84,8 +92,7 @@ If you see **Steelhead Mobile Filter Driver** is bound as below, disable it with
 Name                   DisplayName                                        ComponentID          Enabled
 ----                   -----------                                        -----------          -------
 <interface_name>       QoS Packet Schedular                               ms_pacer             True        
-<interface_name>       Remote Access IP ARP Driver                        ms_wanarp            True
-<interface_name>       Symantec Endpoint Protection Firewall              symc_teefer2         True        
+<interface_name>       Remote Access IP ARP Driver                        ms_wanarp            True   
 <interface_name>       Steelhead Mobile Filter Driver                     rbt_filter           True　<<<<< ★
 <interface_name>       WFP Native MAC Layer LightWeight                   ms_wfplwf_lower      True
 ```
