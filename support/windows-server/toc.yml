@@ -1649,7 +1649,7 @@
     - name: L2TP VPN fails with error 787
       href: ./networking/l2tp-vpn-fails-with-error-787.md
     - name: LT2P/IPsec RAS VPN connections fail
-      href: ./networking/lt2p-ipsec-ras-vpn-connections-fail.md
+      href: ./networking/rras-vpn-connections-fail-ms-chapv2-authentication.md
     - name: Set Up Routing and Remote Access for an Intranet
       href: ./networking/set-up-routing-remote-access-intranet.md
     - name: The Routing and Remote Access service doesn't start
