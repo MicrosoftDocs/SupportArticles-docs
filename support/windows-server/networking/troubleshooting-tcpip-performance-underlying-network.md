@@ -34,11 +34,11 @@ When the throughput falls below a given baseline, use a packet capturing tool to
     CTSTraffic -target:<serverip> -consoleverbosity:3 -connections:4 -iterations:10 -connectionfilename:<filename>.csv
     ```
 
-2. Stop network traces on both client and server.
+2. Stop network traces on both client and server sides.
 3. Check the \<filename>.csv file:
 
     - If NetworkErrors or ProtocolErrors are displayed in the file, go to the next step.
-    - If no error is displayed, stop and discard the network trace. Collect a new trace on the client and the server. Try with an increasing number of connections(`-connections:`) in step 1 until the error occurs.
+    - If no error is displayed, stop and discard the network trace. Collect a new trace on the client and the server. Try with an increasing number of connections (`-connections:`) in step 1 until the error occurs.
 
 4. Find the client socket number of the error in the \<filename>.csv file and apply this number as a filter to check for a packet loss, a packet retransmission, or a TCP reset that wasn't initiated from either endpoint. With this information in hand, contact the network team for help.
 
