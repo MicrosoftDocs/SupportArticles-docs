@@ -1754,6 +1754,8 @@
       href: ./networking/automatic-metric-for-ipv4-routes.md
     - name: The default dynamic port range for TCP/IP has changed
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
+    - name: Troubleshooting TCP/IP performance issues about underlying network
+      href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Virtual machines lose network connectivity
