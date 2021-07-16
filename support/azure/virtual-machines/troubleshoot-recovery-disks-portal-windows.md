@@ -72,11 +72,15 @@ With the copy of the OS disk mounted on the repair VM, you can now perform any m
 
 Azure portal supports changing the OS disk of the VM. To do this, follow these steps:
 
-1. In the Azure portal, navigate to the source (failed) VM and open the **Disks** blade. Click **Swap OS disk** to replace the existing OS disk with the one you have just repaired.
+1. After you repair the disk, open the **Disks** blade for the repair VM in the Azure portal. Detach the copy of the source VM OS disk. To do this, locate the row for the associated disk name under **Data Disks**, select the “X” at the right side of that row, and then select **Save**.
+
+    :::image type="content" source="media/troubleshoot-recovery-disks-portal-windows/detach-repaired-disk-copy.png" alt-text="A screenshot of a data disk selected on the Disks blade in Azure portal, with the X symbol highlighted next to it.":::
+
+2. In the Azure portal, navigate to the source (failed) VM and open the **Disks** blade. Click **Swap OS disk** to replace the existing OS disk with the one you have just repaired.
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/swap-os-disk.png" alt-text="Screenshot of the disks blade in Azure portal with the swap O S disk option highlighted.":::
 
-2. Choose the new disk that you repaired, and then enter the name of the VM to confirm the change. If you don't see the disk in the list, wait 10 to 15 minutes after you detach the disk from the troubleshooting VM.
+3. Choose the new disk that you repaired, and then enter the name of the VM to confirm the change. If you don't see the disk in the list, wait 10 to 15 minutes after you detach the disk from the troubleshooting VM.
 
 ## Next Steps
 
