@@ -406,6 +406,10 @@
         href: troubleshoot-recovery-disks-windows.md
       - name: Azure Virtual Machine repair
         href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+      - name: Unlocking disks for offline repair
+        href: unlock-encrypted-disk-offline.md
+      - name: Repair unmanaged disks offline
+        href: unmanaged-disk-offline-repair.md
     - name: Linux
       items:
       - name: Portal

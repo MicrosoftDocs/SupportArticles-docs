@@ -82,7 +82,7 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](rese
 
 6. In Azure portal, detach the disk from the troubleshooting VM.
 
-7. [Change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-os-disk-for-the-vm).
+7. [Change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk).
 
 8. After the new VM is running, connect to the VM using Remote Desktop with the new password you specified in the `FixAzureVM.cmd` script.
 
