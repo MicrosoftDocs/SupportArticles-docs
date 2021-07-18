@@ -28,10 +28,10 @@ Call transfers that are initiated by Microsoft can occur in multiple scenarios, 
 A call transfer can be made by using any of the following methods, in order of preference:
 
 1. Using a Session Initiation Protocol (SIP) Refer message.  
-1. Using a SIP Invite message that has a Replaces header. This method is mostly used for call queue responses.
+1. Using an SIP Invite message that has a Replaces header. This method is mostly used for call queue responses.
 1. Using an internal Microsoft Teams infrastructure. This method isn't visible to SBC. It's generally used only if the first two methods are not supported.
 
-All transfers that use a SIP Refer message must go through the Microsoft Teams infrastructure. When the Microsoft SIP proxy sends a SIP Refer message to SBC, a SIP Invite message should be returned to the SIP proxy, not to PSTN or to any other destination. This is true even if the call is transferred to an external PSTN number. SBC doesn't have to parse the SIP Refer message to look for the transfer target. SBC should send the SIP Invite message together with the Request-URI (RURI) setting only to contents of the Refer-To header. It also should include the Referred-by header from the SIP Refer message. Make sure that the strings of the SIP Invite message are not manipulated and are sent exactly as the strings that are provided in the SIP Refer message (especially in the Referred-by header). This is because these strings are used to identify calls, targets, and other important parts of a call transfer.
+All transfers that use an SIP Refer message must go through the Microsoft Teams infrastructure. When the Microsoft SIP proxy sends an SIP Refer message to SBC, an SIP Invite message should be returned to the SIP proxy, not to PSTN or to any other destination. This is true even if the call is transferred to an external PSTN number. SBC doesn't have to parse the SIP Refer message to look for the transfer target. SBC should send the SIP Invite message together with the Request-URI (RURI) setting only to contents of the Refer-To header. It also should include the Referred-by header from the SIP Refer message. Make sure that the strings of the SIP Invite message are not manipulated and are sent exactly as the strings that are provided in the SIP Refer message (especially in the Referred-by header). This is because these strings are used to identify calls, targets, and other important parts of a call transfer.
 
 **Note:** The strings could be either x-* strings or custom strings in the Referred-by and Refer-to headers.
 
