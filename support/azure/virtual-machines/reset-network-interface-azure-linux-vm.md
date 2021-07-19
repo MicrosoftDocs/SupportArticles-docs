@@ -1,3 +1,20 @@
+---
+title: Reset the network interface for Azure Linux VM
+description: This article describes how to reset the network interface for Azure Linux VM
+services: virtual-machines
+documentationcenter: ''
+author: v-miegge
+manager: dcscontentpm
+editor: ''
+ms.service: virtual-machines
+ms.collection: windows
+ms.topic: troubleshooting
+ms.tgt_pltfrm: vm-windows
+ms.workload: infrastructure-services
+ms.date: 07/19/2021
+ms.author: tibasham
+
+---
 # Reset the network interface for Azure Linux VM
 
 This article shows how to reset the network interface for Azure Linux Virtual Machine (VM) to resolve issues when you can't connect to an Azure Linux VM after:
