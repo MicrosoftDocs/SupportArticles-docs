@@ -38,10 +38,12 @@ Take any of the following actions:
 - Use more-specific search terms.
 - Use Microsoft Outlook in Cached Exchange Mode to search the mailbox.
 
-    > [!NOTE]
-    > If you use Outlook to search the Online Archive folder, you will receive the same limited search results as Outlook on the web. This is because Outlook accesses the Online Archive folder in Online Mode.
+> [!NOTE]
+> If you use Outlook to search the Online Archive folder, you will receive the same limited search results as Outlook on the web. This is because Outlook accesses the Online Archive folder in Online Mode.
 
 ## More information
+
+Be aware that, to reduce the time to show search results, users may receive only a subset of the results. In this scenario, scroll down the results list to view additional results up to the limit of 1028 items.
 
 For more information, see [Search Mail and People in Outlook Web App](https://support.office.com/article/88108edf-028e-4306-b87e-7400bbb40aa7).
 
