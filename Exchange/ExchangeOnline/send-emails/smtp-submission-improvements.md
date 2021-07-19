@@ -50,9 +50,14 @@ Additional throttling limits for the SMTP Authentication protocol are:
 - 30 messages per minute
 - Recipient rate limit of 10,000 recipients per day
 
-Exceeding these limits causes the following error:  
+Exceeding these limits will cause the following issues:
 
-> 554 5.2.0 STOREDRV.Submission.Exception:SubmissionQuotaExceededException
+- Exceeding the per minute limit causes email delivery delays, any excess in message submission will be throttled and successively carried over to the following minutes.
+- Exceeding the per day limit causes the following error message:
+
+  > 554 5.2.0 STOREDRV.Submission.Exception:SubmissionQuotaExceededException
+
+For more information, see [sending limits in Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 This change for concurrent connections will better protect the service from large bursts of email messages that are sent by automated systems within a short time period. This change will not affect most SMTP Authenticated Submission users who only send from one email client or multifunction device for a given mailbox.
 
