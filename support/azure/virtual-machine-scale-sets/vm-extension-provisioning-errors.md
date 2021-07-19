@@ -1,5 +1,5 @@
 ---
-title: VM extension provisioning errors
+title: VM extension provisioning errors in Virtual Machine Scale Sets
 description: Steps to resolve VM extension provisioning errors in a Virtual Machine Scale Set.
 ms.date: 07/16/2021
 author: jc-mackin
@@ -11,19 +11,22 @@ ms.prod: azure
 
 ---
 
-# VM Extension Provisioning Errors
+# VM Extension Provisioning Errors in Virtual Machine Scale Sets
 
 This article provides guidance on resolving **VMExtensionProvisioningError**, **VMExtensionHandlerNonTransientError**, or **VMExtensionProvisioningTimeout** errors that appear when you attempt to deploy, update, reimage, start, or scale a Virtual Machine Scale Set.
+
+> [!NOTE]
+> In the context of Virtual Machine Scale Sets, the "VM" in these errors messages refers to an instance within a specific Virtual Machine Scale Set.
 
 ## Symptoms
 
 You see **VMExtensionProvisioningError**, **VMExtensionHandlerNonTransientError**, or **VMExtensionProvisioningTimeout** errors, as in the following examples:
 
-- `'statusMessage': '{\\'status\\':\\'Failed\\',\\'error\\':{\\'code\\':\\'ResourceOperationFailure\\',\\'message\\':\\'The resource operation completed with terminal provisioning state 'Failed'.\\',\\'details\\':[{\\'code\\':\\'VMExtensionProvisioningError\\',\\'message\\':\\'Multiple VM extensions failed to be provisioned on the VM. Please see the VM extension instance view for other failures.`
+> `'statusMessage': '{\\'status\\':\\'Failed\\',\\'error\\':{\\'code\\':\\'ResourceOperationFailure\\',\\'message\\':\\'The resource operation completed with terminal provisioning state 'Failed'.\\',\\'details\\':[{\\'code\\':\\'VMExtensionProvisioningError\\',\\'message\\':\\'Multiple VM extensions failed to be provisioned on the VM. Please see the VM extension instance view for other failures.`
 
-- `{'status': 'Failed','error': {'code':'VMExtensionHandlerNonTransientError','message': 'The handler for VM extension type 'Microsoft.EnterpriseCloud.Monitoring.OmsAgentForLinux' has reported terminal failure for VM extension 'OmsAgentForLinux' with error message: '[ExtensionOperationError] Non-zero exit code: 10`
+> `{'status': 'Failed','error': {'code':'VMExtensionHandlerNonTransientError','message': 'The handler for VM extension type 'Microsoft.EnterpriseCloud.Monitoring.OmsAgentForLinux' has reported terminal failure for VM extension 'OmsAgentForLinux' with error message: '[ExtensionOperationError] Non-zero exit code: 10`
 
-- `'statusMessage': '{\\'status\\':\\'Failed\\',\\'error\\':{\\'code\\':\\'ResourceOperationFailure\\',\\'message\\':\\'The resource operation completed with terminal provisioning state 'Failed'.\\',\\'details\\':[{\\'code\\':\\'VMExtensionProvisioningTimeout\\',\\'message\\':\\'Provisioning of VM extension configure-settings has timed out. Extension provisioning has taken too long to complete.`
+> `'statusMessage': '{\\'status\\':\\'Failed\\',\\'error\\':{\\'code\\':\\'ResourceOperationFailure\\',\\'message\\':\\'The resource operation completed with terminal provisioning state 'Failed'.\\',\\'details\\':[{\\'code\\':\\'VMExtensionProvisioningTimeout\\',\\'message\\':\\'Provisioning of VM extension configure-settings has timed out. Extension provisioning has taken too long to complete.`
 
 ## Cause
 
