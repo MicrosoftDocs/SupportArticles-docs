@@ -1,5 +1,5 @@
 ---
-title: VM extension provisioning errors
+title: VM extension provisioning errors in Virtual Machine Scale Sets
 description: Steps to resolve VM extension provisioning errors in a Virtual Machine Scale Set.
 ms.date: 07/16/2021
 author: jc-mackin
@@ -11,7 +11,7 @@ ms.prod: azure
 
 ---
 
-# VM Extension Provisioning Errors
+# VM Extension Provisioning Errors in Virtual Machine Scale Sets
 
 This article provides guidance on resolving **VMExtensionProvisioningError**, **VMExtensionHandlerNonTransientError**, or **VMExtensionProvisioningTimeout** errors that appear when you attempt to deploy, update, reimage, start, or scale a Virtual Machine Scale Set.
 
