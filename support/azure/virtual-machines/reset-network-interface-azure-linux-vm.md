@@ -138,7 +138,7 @@ Changes to these fields, or adding other configuration options which are commonl
 
 - The boot protocol has been set to something other than *dhcp*,  and a static IP address is configured.
 
-  (:::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture5.png" alt-text="This image shows txt output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
+  :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture5.png" alt-text="This image shows txt output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
 
 Once these details have been corrected, restart the VM with networking configured correctly.
 
