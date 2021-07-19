@@ -47,6 +47,6 @@ To see if the **Paste Special** option is enabled:
     ![paste special settings](./media/paste-special-missing-or-not-working/paste-special-settings.jpg) |
 
 > [!NOTE]
-> Using the `PasteSpecial` method for a `Range` object triggers the `Worksheet.Activate` event. You need to set the value of the `Application.EnableEvents` property to `False` to disable the trigger.
+> Depending on the code structure, using the **Worksheet_SelectionChange** event will lead to clearing the clipboard, thus disabling a later **Paste Special** action. You need to set the value of the `Application.EnableEvents` property to `False` to prevent this from happening.
 
 You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
