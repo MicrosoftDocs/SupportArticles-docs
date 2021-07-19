@@ -13,6 +13,8 @@
           href: ../access/access-2010-crashes.md
         - name: Access database engine cannot find input table
           href: ../access/database-engine-not-find-input-table.md
+        - name: Access error String data, right truncation (#0)
+          href: ../access/string-data-right-truncation.md
         - name: Access freezes when opening a linked table
           href: ../access/access-freezes-when-open-linked-table.md
         - name: ActiveX component can't create object
