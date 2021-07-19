@@ -1,7 +1,7 @@
 ---
 title: Access error String data, right truncation (#0)
 description: Describes an issue that causes the Access error String data, right truncation (#0).
-author: Dennis Wilmar
+author: denniwil
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -19,7 +19,7 @@ appliesto:
 - Access 2016
 ---
 
-# Access error: “String data, right truncation (#0)”
+# Access error: "String data, right truncation (#0)"
 
 ## Symptoms
 
@@ -43,7 +43,7 @@ Microsoft is aware of this issue and is investigating possible solutions. In the
 
 To work around this issue, try either of the following methods.
 
-**Method 1**: Change the data type to `nvarchar(max)`. SQL Server will return the `SQL_WVARCHAR` value instead. This value doesn’t have any character limit.
+**Method 1**: Change the data type to `nvarchar(max)`. SQL Server will return the `SQL_WVARCHAR` value instead. This value doesn't have any character limit.
 
 **Method 2**: Use the first-generation SQL Server ODBC driver that's included in the Windows Data Access Components. For more information about SQL Server ODBC drivers, see [Driver history for Microsoft SQL Server](/sql/connect/connect-history).
 
