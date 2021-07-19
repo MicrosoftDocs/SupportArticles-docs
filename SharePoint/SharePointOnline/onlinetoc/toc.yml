@@ -119,8 +119,10 @@
       href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
-    - name: Document IDs aren't assigned to items
-      href: ../lists-and-libraries/document-ids-unassigned.md
+    - name: Content Organizer doesn't comply with specified interval
+      href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
+    - name: Default column name shown in list settings
+      href: ../lists-and-libraries/default-column-name-still-shown.md
     - name: Documents aren't displayed in web browser with TLS 1.2
       href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
     - name: Edit column doesn't display the edit link
