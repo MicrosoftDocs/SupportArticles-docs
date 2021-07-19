@@ -106,7 +106,7 @@ To reset network interface, follow these steps:
 
    Example output with an IPv4 address:
 
-   :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture2.png" alt-text="This image shows an example of the text output in a terminal window for no IPv4 address.":::
+   :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture2.png" alt-text="This image shows an example of the text output in a terminal window with an IPv4 address.":::
 
    Azure portal > Networking
 
