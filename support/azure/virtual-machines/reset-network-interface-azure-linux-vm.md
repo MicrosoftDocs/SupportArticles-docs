@@ -33,6 +33,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. Select the affected Virtual Machine.
 1. Select **Networking** and then select the network Interface of the VM.
+   :::image type="content" source="media/reset-network-interface-azure-linux-vm/select-network-interface-vm.png" alt-text="This image shows the Network Interface VM selection under Networking.":::
 1. Select **IP configurations**.
 1. Select the IP.
 1. If the **Private IP assignment** isn't set to **Static**, change it to **Static**.
@@ -102,15 +103,15 @@ To reset network interface, follow these steps:
 
    Example output for no IPv4 address:
 
-   :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture1.png" alt-text="This image shows an example of the text output in a terminal window for no IPv4 address.":::
+   :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-window-no-ip4.png" alt-text="This image shows an example of the text output in a terminal window for no IPv4 address.":::
 
    Example output with an IPv4 address:
 
-   :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture2.png" alt-text="This image shows an example of the text output in a terminal window with an IPv4 address.":::
+   :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-window-with-ip4.png" alt-text="This image shows an example of the text output in a terminal window with an IPv4 address.":::
 
    Azure portal > Networking
 
-   :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture3.png" alt-text="This image shows a screenshot in the Azure portal of the private IP address shown under Networking in the Azure portal.":::
+   :::image type="content" source="media/reset-network-interface-azure-linux-vm/azure-portal-screenshot-private-ip-address.png" alt-text="This image shows a screenshot in the Azure portal of the private IP address shown under Networking in the Azure portal.":::
 
 If the IPv4 addresses aren't the same, the interface configuration file may need to be fixed:
 
@@ -134,11 +135,11 @@ Changes to these fields, or adding other configuration options which are commonl
 
 - The MAC address setting doesn't match the address collected in step 2.
 
-  :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture4.png" alt-text="This image shows text output in a terminal window where the MAC address setting doesn't match the address collected in step 2":::
+  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-mac-no-match.png" alt-text="This image shows text output in a terminal window where the MAC address setting doesn't match the address collected in step 2":::
 
 - The boot protocol has been set to something other than *dhcp*,  and a static IP address is configured.
 
-  :::image type="content" source="media/reset-network-interface-azure-linux-vm/Picture5.png" alt-text="This image shows txt output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
+  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-static-ip-configured.png" alt-text="This image shows txt output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
 
 Once these details have been corrected, restart the VM with networking configured correctly.
 
