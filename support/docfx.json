@@ -54,11 +54,6 @@
       "recommendations": true
     },
 
-    "brand": {
-      "power-platform/**/*.md": "power-platform",
-      "dynamics-365/**/*.md": "dynamics"
-    },
-
     "fileMetadata": {
       "feedback_system": {
         "azure/*.md": "GitHub",
