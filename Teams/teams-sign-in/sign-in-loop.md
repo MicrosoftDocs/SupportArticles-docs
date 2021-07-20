@@ -57,7 +57,7 @@ To change the settings by using GPO, follow these steps:
 
 1. In Windows Control Panel, open **Internet Options**.
 2. In the Internet Options window, select **Privacy** and **Advanced**.
-3. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and select the **Always allow session cookies** check box.
+3. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and then select the **Always allow session cookies** check box.
 
     :::image type="content" source="media/sign-in-loop/ie.png" alt-text="Screenshot of IE.":::
 
@@ -75,7 +75,7 @@ To change the settings by using GPO, follow these steps:
 ### Google Chrome
 
 1. In the Chrome **Settings** window, on the **Privacy and security** tab, select **Cookies and other site data**.
-2. Under **Sites that can always use cookies**, select **Add** and select the **Including third-party cookies on this site** check box.
+2. Under **Sites that can always use cookies**, select **Add**, and then select the **Including third-party cookies on this site** check box.
 3. Add the following sites:
 
     - [*.]microsoft.com
@@ -94,7 +94,7 @@ To change the settings by using GPO:
 
 1. In the Firefox **Settings** window, select **the Privacy & Security** tab.
 2. Under **Cookies and Site Data**, select **Manage Exceptions**.
-3. In the **Address of website** text box, type the following sites and select **Allow**.
+3. In the **Address of website** text box, type the following sites, and then select **Allow**.
 
     - `https://*.microsoft.com`
     - `https://*.microsoftonline.com`
