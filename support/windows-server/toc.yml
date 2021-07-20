@@ -2832,6 +2832,8 @@
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
   - name: Permissions, access control, and auditing
     items:
+    - name: .bak log files are deleted and lost
+      href: ./windows-security/bak-log-files-deleted-lost.md
     - name: Access checks using Windows APIs return incorrect results
       href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
