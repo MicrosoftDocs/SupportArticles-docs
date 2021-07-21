@@ -28,8 +28,8 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 |---|---|---|
 |Schema master|Forest-wide|CN=Schema,CN=configuration,DC=\<forest root domain>|
 |Domain naming master|Forest-wide|CN=configuration,DC=\<forest root domain>|
-|RID master|Domain-wide|DC=\<domain>|
 |PDC emulator|Domain-wide|DC=\<domain>|
+|RID master|Domain-wide|DC=\<domain>|
 |Infrastructure master|Domain-wide|DC=\<domain>|
 ||||
 
