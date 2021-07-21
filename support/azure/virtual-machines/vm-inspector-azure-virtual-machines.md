@@ -38,7 +38,7 @@ VM Inspector is supported on the following operating systems:
 
 ## How VM Inspector works
 
-VM Inspector uses a back-end Microsoft service that's named **Compute Diagnostic resource provider** to collect useful event logs, configurations, settings, and registry keys from your VM OS disk for diagnostics. The customer starts by granting access to VM Inspector and running a diagnostic against your selected VM. VM Inspector will then make a connection to the VM managed disk in Azure storage, and use a predefined manifest to do file collection on the OS disk. After the inspection is finished, the collected files are packed into a .zip file, and returned to customer’s storage account for safe keeping.
+VM Inspector uses the Microsoft Compute resource provider, a back-end Microsoft service that collects useful event logs, configurations, settings, and registry keys from your VM OS disk for diagnostics. The customer starts by granting access to VM Inspector and running a diagnostic against your selected VM. VM Inspector will then make a connection to the VM managed disk in Azure storage, and use a predefined manifest to do file collection on the OS disk. After the inspection is finished, the collected files are packed into a .zip file, and returned to customer’s storage account for safe keeping.
 
 For more information about the anatomy of an Azure VM on Windows, see [Run a Windows VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/windows-vm).
 
@@ -48,7 +48,7 @@ For general information about OS disks, see: [Introduction to Azure managed disk
 
 ## Get access to VM Inspector
 
-The user who has Owner-level access must grant disk access to VM Inspector before anyone else can run the diagnostic on that VM. The minimum access level of running VM Inspector at the General built-in role level is the Disk Backup Reader. You must have Owner-level access to run VM Inspector for the first time. If you have a lower access role (Contributor, Reader, or User Access Administrator), you must manually update your access level to that of Owner at the subscription level.
+The user who has Owner-level access must grant disk access to VM Inspector before anyone else can run the diagnostic on that VM. The minimum access level for running VM Inspector by using the General built-in role is the Disk Backup Reader. You must have Owner-level access to run VM Inspector for the first time. If you have a lower access role (Contributor, Reader, or User Access Administrator), you must manually update your access level to that of Owner at the subscription level.
 
 [Azure built-in roles - Azure RBAC](/azure/role-based-access-control/built-in-roles#general)
 
@@ -58,9 +58,9 @@ The user who has Owner-level access must grant disk access to VM Inspector befor
 
 VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspector, follow these steps:
 
-1. In the left column of commands, select **Virtual machines**.
+1. In the left-side column of commands, select **Virtual machines**.
 1. In the list of VM names, select the VM on which you want to run VM Inspector.
-1. In the right column of commands, select **VM Inspector**.
+1. In the right-side column of commands, select **VM Inspector**.
 
    (IMAGE 2)
 
@@ -72,11 +72,11 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
    (IMAGE 3)
 
    > [!NOTE]
-   > If the **Create new** option is not available to select, you don’t have the correct level of access to run VM Inspector. You must have at least the Contributor role to run VM Inspector successfully.
+   > If the **Create new** option is not available to select, this is because you don’t have the correct level of access to run VM Inspector. You must have at least the Contributor role to run VM Inspector successfully.
 
 1. Change a storage account (optional):
 
-   To change a diagnostic storage account, select the **Settings** button in the toolbar, select the storage account, and then select **OK**. For more details, see the **Change VM Inspector settings** section.
+   To change a diagnostic storage account, select the **Settings** button on the toolbar, select the storage account, and then select **OK**. For more details, see the **Change VM Inspector settings** section.
 
 1. Select the **Run Inspector** button or **Browse Inspector Report** button:
 
@@ -85,7 +85,7 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
       A notification is displayed as VM Inspector starts to run.
 
       > [!NOTE]
-      > If you can't select and run VM Inspector successfully in this step, refer to the FAQ section of this article.
+      > If you can't select and run VM Inspector successfully in this step, refer to the "FAQ" section of this article.
 
       After the inspector runs, you see a notification that indicates that the inspection run finished. The inspector report will appear automatically in the blade view and  be uploaded to the Azure table in the specified storage account, as follows:
 
@@ -95,7 +95,7 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 
     (IMAGE 4)
 
-   1. To view the existing reports in the selected diagnostics storage account, select the **Browse Inspector Report** button
+   1. To view existing reports in the selected diagnostics storage account, select the **Browse Inspector Report** button.
 
     (IMAGE 4)
 
