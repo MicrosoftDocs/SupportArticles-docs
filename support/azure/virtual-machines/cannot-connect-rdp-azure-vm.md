@@ -35,11 +35,11 @@ There are multiple reasons why NLA might block the RDP access to a VM:
 
 ### Create a backup snapshot
 
-To create a backup snapshot, follow the steps in [Snapshot a disk](https://docs.microsoft.com/azure/virtual-machines/windows/snapshot-copy-managed-disk).
+To create a backup snapshot, follow the steps in [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 
 ### Connect to the VM remotely
 
-To connect to the VM remotely , use one of the methods in [How to use remote tools to troubleshoot Azure VM issues](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues).
+To connect to the VM remotely , use one of the methods in [How to use remote tools to troubleshoot Azure VM issues](/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues).
 
 ### Group policy client service
 
@@ -63,7 +63,7 @@ If the change is reverted, it means that an Active Directory policy is causing t
 
 ### Workaround
 
-As a work around to connect to the VM and resolve the cause, you can temporarily disable NLA. To disable NLA please use the below commands, or use the `DisableNLA` script in [Run Command](https://docs.microsoft.com/azure/virtual-machines/windows/run-command#azure-portal).
+As a work around to connect to the VM and resolve the cause, you can temporarily disable NLA. To disable NLA please use the below commands, or use the `DisableNLA` script in [Run Command](/azure/virtual-machines/windows/run-command#azure-portal).
 
 ```cmd
 REM Disable the Network Level Authentication
@@ -99,7 +99,7 @@ To troubleshoot this problem:
 > [!NOTE]
 > To test the DC health, you can use another VM that is in the same VNET, subnet, and uses the same logon server.
 
-Connect to the VM that has the problem by using [Serial console, remote CMD, or remote PowerShell](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues), according to the steps in the **Connect to the VM remotely** section.
+Connect to the VM that has the problem by using [Serial console, remote CMD, or remote PowerShell](/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues), according to the steps in the **Connect to the VM remotely** section.
 
 1. Determine the DC that the VM is attempting to connect to. run the following command in the console:
 
@@ -129,7 +129,7 @@ If the communication between the DC and the VM is good, but the DC is not health
 
 If the preceding commands did not fix the communication problem to the domain, you can rejoin this VM to the domain. To do this, follow these steps:
 
-1. Create a script that's named Unjoin.ps1 by using the following content, and then deploy the script as a [Custom Script Extension](https://docs.microsoft.com/azure/virtual-machines/extensions/custom-script-windows) on the Azure portal:
+1. Create a script that's named Unjoin.ps1 by using the following content, and then deploy the script as a [Custom Script Extension](/azure/virtual-machines/extensions/custom-script-windows) on the Azure portal:
 
    ```cmd
    cmd /c "netdom remove <<MachineName>> /domain:<<DomainName>> /userD:<<DomainAdminhere>> /passwordD:<<PasswordHere>> /reboot:10 /Force"
@@ -241,6 +241,6 @@ Restart the VM so that the changes to the registry take effect.
 
 ## Next steps
 
-- [SetEncryptionLevel method of the Win32_TSGeneralSetting class](https://docs.microsoft.com/windows/desktop/termserv/win32-tsgeneralsetting-setencryptionlevel)
-- [Configure Server Authentication and Encryption Levels](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770833(v=ws.11))
-- [Win32_TSGeneralSetting class](https://docs.microsoft.com/windows/desktop/termserv/win32-tsgeneralsetting)
+- [SetEncryptionLevel method of the Win32_TSGeneralSetting class](/windows/desktop/termserv/win32-tsgeneralsetting-setencryptionlevel)
+- [Configure Server Authentication and Encryption Levels](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770833(v=ws.11))
+- [Win32_TSGeneralSetting class](/windows/desktop/termserv/win32-tsgeneralsetting)
