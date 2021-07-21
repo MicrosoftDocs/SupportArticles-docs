@@ -398,7 +398,7 @@ Reopen the VM Inspector page to change a storage account to run a new VM Inspect
 
 Each VM Inspector report might contain multiple files and logs for your troubleshooting. For the complete list of all the collected VM Inspector report data, see Windows or Linux for more information. To download and review the full diagnostics report, select the specific report, and then select **Download report** to download a .zip file that contains all the logs and files within the report.
 
-:::image type="content" source="media/vm-inspector-azure-virtual-machines/download-report.png" alt-text="Screenshot of the existing reports in the selected diagnostics storage account, including the Download Report option.".":::
+:::image type="content" source="media/vm-inspector-azure-virtual-machines/download-report.png" alt-text="Screenshot of the existing reports in the selected diagnostics storage account, including the Download Report option.":::
 
 To delete one or more VM Inspector reports, select **Delete report**.
 
