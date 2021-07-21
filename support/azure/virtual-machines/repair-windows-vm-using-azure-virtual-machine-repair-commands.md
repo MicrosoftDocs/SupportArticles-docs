@@ -15,12 +15,11 @@ ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 09/10/2019
 ms.author: v-miegge
-
 ---
 
 # Repair a Windows VM by using the Azure Virtual Machine repair commands
 
-If your Windows virtual machine (VM) in Azure encounters a boot or disk error, you may need to perform mitigation on the disk itself. A common example would be a failed application update that prevents the VM from being able to boot successfully. This article details how to use Azure VM repair commands to connect the disk to another Windows VM to fix any errors, then rebuild your original VM.
+If your Windows virtual machine (VM) in Azure encounters a boot or disk error, you may need to repair the disk offline. A common example would be a failed application update that prevents the VM from being able to boot successfully. This article details how to use Azure VM repair commands to automatically attach a broken OS disk to another Windows VM for offline repair. Through this procedure, the failed OS disk will automatically be unlocked on the second VM, called a repair VM, if the disk is encrypted with Azure Disk Encryption. When the failed disk is attached to the repair VM, you can fix any errors and then rebuild your original VM with the repaired disk.
 
 > [!IMPORTANT]
 > * The scripts in this article only apply to the VMs that use [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
