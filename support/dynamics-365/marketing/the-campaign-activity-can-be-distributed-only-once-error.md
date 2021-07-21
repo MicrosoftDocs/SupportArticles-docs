@@ -4,7 +4,6 @@ description: Discusses an issue that will occur when trying to distribute a camp
 ms.reviewer: kenakamu, chanson
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-uhfHeaderId: MSDocsHeader-Dynamics365
 ---
 # The Campaign Activity can be distributed only once error after removing Campaign Activity StatusCode field values
 
