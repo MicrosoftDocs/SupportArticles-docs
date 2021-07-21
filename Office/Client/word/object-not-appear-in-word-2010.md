@@ -41,9 +41,6 @@ This issue may also occur if you are experiencing an issue with the video driver
 
 ## Workaround
 
-> [!NOTE]
-> If the issue persists after you have tried all workarounds before the workarounds with the video driver, you can try to delete the picture and add it back again.
-
 ### You are using a Wrapping style option other than the "In line with text" option
 
 If you are using a Wrapping style option other than the **In line with text** option, use one of the following workarounds.
@@ -156,6 +153,8 @@ When you turn off the **Picture Placeholders** option, you can view the picture 
 3. Under **Show document content**, click to clear the **Show Picture Placeholders** check box.   
 4. Click **OK**.   
 
+> [!NOTE]
+> If the issue persists after you have tried all above workarounds, you can try to delete the picture and add it back again before you proceed the workarounds with the video driver.
 
 ### You are experiencing issues with the video driver
 
