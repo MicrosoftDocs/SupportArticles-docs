@@ -114,7 +114,7 @@ Example result:
 `netsh interface ipv4 set global neighborcachelimit = 4096`  
 
     >[!NOTE]
-    >The default neighbor cache limit is 256.  
+    >The default neighbor cache limit is 256 for client versions of Windows, and is 1024 for Windows Server.  
 
 For more information about the neighbor cache entry states, visit the following Web site:  
 [https://www.ietf.org/rfc/rfc2461.txt](http://www.ietf.org/rfc/rfc2461.txt)  
