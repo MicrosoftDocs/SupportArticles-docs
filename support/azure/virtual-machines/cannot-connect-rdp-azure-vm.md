@@ -27,7 +27,7 @@ There are multiple reasons why NLA might block the RDP access to a VM:
   - The Active Directory Security Channel between this VM and the DC is broken.
   - The VM has an old copy of the account password and the DC has a newer copy.
   - The DC that this VM is connecting to is unhealthy.
-- The encryption level of the VM is higher than the one that’s used by the client computer.
+- The encryption level of the VM is higher than the one that's used by the client computer.
 - The TLS 1.0, 1.1, or 1.2 (server) protocols are disabled on the VM.The VM was set up to disable logging on by using domain credentials, and the Local Security Authority (LSA) is set up incorrectly.
 - The VM was set up to accept only Federal Information Processing Standard (FIPS)-compliant algorithm connections. This is usually done by using Active Directory policy. This is a rare configuration, but FIPS can be enforced for Remote Desktop connections only.
 
@@ -129,7 +129,7 @@ If the communication between the DC and the VM is good, but the DC is not health
 
 If the preceding commands did not fix the communication problem to the domain, you can rejoin this VM to the domain. To do this, follow these steps:
 
-1. Create a script that’s named Unjoin.ps1 by using the following content, and then deploy the script as a [Custom Script Extension](https://docs.microsoft.com/azure/virtual-machines/extensions/custom-script-windows) on the Azure portal:
+1. Create a script that's named Unjoin.ps1 by using the following content, and then deploy the script as a [Custom Script Extension](https://docs.microsoft.com/azure/virtual-machines/extensions/custom-script-windows) on the Azure portal:
 
    ```cmd
    cmd /c "netdom remove <<MachineName>> /domain:<<DomainName>> /userD:<<DomainAdminhere>> /passwordD:<<PasswordHere>> /reboot:10 /Force"
@@ -168,7 +168,7 @@ reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP
 
 Based on the registry value, follow these steps:
 
-- 4 (FIPS): Go to [Check FIPs compliant algorithms connections](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-authentication-error-rdp-vm#fips-compliant).
+- 4 (FIPS): Check FIPs compliant algorithms connections.
 - 3 (128-bit encryption): Set the severity to 2 by running the following command:
 
   ```cmd
