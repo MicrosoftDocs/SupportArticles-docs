@@ -34,7 +34,7 @@ Consider the following scenario:
 - You configured legacy on-premises public folders for a hybrid deployment.
 - You create a shared mailbox that's located in Exchange Online.
 - You assign Full Access permissions to one or more users.
-- Users add shared mailboxes as second Exchange accounts in their existing Outlook profile.
+- Users add the shared mailbox as a second Exchange account in their existing Outlook profile.
 
 In this scenario, users are repeatedly prompted for credentials when they open Outlook.
 
