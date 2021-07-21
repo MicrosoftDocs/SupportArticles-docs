@@ -26,7 +26,7 @@ search.appverid: MET150
 
 _Original KB number:_ &nbsp; 3184064
 
-## Symtpoms
+## Symptoms
 
 Consider the following scenario:
 
