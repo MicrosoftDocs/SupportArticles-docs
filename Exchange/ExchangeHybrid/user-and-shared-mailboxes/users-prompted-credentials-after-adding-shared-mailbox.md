@@ -40,7 +40,7 @@ In this scenario, users are repeatedly prompted for credentials when they open O
 
 ## Cause
 
-This issue occurs because Outlook tries to connect to the legacy on-premises public folders for the shared mailbox. If an Exchange Online environment is configured to access the on-premises public folders, Outlook will connect to on-premises public folders for online shared mailboxes.
+This issue occurs because Outlook tries to connect to the legacy on-premises public folders for the shared mailbox.
 
 ## Workaround
 
