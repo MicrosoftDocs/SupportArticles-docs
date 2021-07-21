@@ -26,7 +26,7 @@ search.appverid: MET150
 
 _Original KB number:_ &nbsp; 3184064
 
-## Problem
+## Symtpoms
 
 Consider the following scenario:
 
@@ -38,50 +38,48 @@ Consider the following scenario:
 
 In this scenario, users are repeatedly prompted for credentials when they open Outlook.
 
+## Cause
+
+This issue occurs because Outlook tries to connect to the legacy on-premises public folders for the shared mailbox. If an Exchange Online environment is configured to access the on-premises public folders, Outlook will connect to on-premises public folders for online shared mailboxes.
+
 ## Workaround
 
 To work around the problem, move the shared mailbox to the on-premises environment.
 
-## Solution
+## Resolution
 
-By default, Outlook tries to connect to the legacy public folders for the shared mailbox account. If public folders were created within the organization or if an Exchange Online organization is configured to access on-premises public folders, all clients would make a connection to and show the public folders object in Outlook.
+To fix this issue, you can enable access to public folders for users and disable access to public folders for the shared mailbox. To do this, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and follow these steps:
 
-However, this can be modified to show the public folders object in Outlook to only a set of users who might need them. Initially, this will be available for Outlook for Windows users only. To modify this default, administrators can use two parameters:
-
-1. In a PowerShell window, load the EXO V2 module by running the following command:
+1. Enable access to public folders for users by running the following cmdlet:
 
    ```powershell
-   Import-Module ExchangeOnlineManagement
+   Set-CASMailbox tony@contoso.com -PublicFolderClientAccess $true
    ```
-   
-2. The command that you need to run uses the following syntax:
+
+   > [!NOTE]
+   > This example enables access to public folders for the user tony@contoso.com.
+
+1. Disable access to public folders for the shared mailbox by running the following cmdlet:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName <UPN>
-   ```
-3. Enable  **PublicFolderClientAccess** on the user object. By default, its value is set to ‘false’. Setting this to ‘true’ on a specific user designates this user as one of the users who will see public folders in Outlook. In this example. We are enabling access to only user **John**.
-
-   ```powershell
-   Set-CASMailbox John@contoso.com -PublicFolderClientAccess $true
-   ```
-4. Disable  **PublicFolderClientAccess** on the Shared mailbox. In this example. We are disabling access to only the shared mailbox **Accounts**.
-
-   ```powershell
-   Set-CASMailbox accounts@contoso.com -PublicFolderClientAccess $false
+   Set-CASMailbox adam@contoso.com -PublicFolderClientAccess $false
    ```
 
-5. Enable **PublicFolderShowClientControl** parameter on the organization configuration. By default, the value of this parameter is also ‘false’ and once it is set to ‘true’, the controlled access of public folders is enabled.
+   > [!NOTE]
+   > This example disables access to public folders for the shared mailbox adam@contoso.com.
+
+1. Enable access to public folders for the organization by running the following cmdlet:
 
    ```powershell
    Set-OrganizationConfig -PublicFolderShowClientControl $true
-   ``` 
+   ```
+
 ## More information
 
-Outlook tries to connect to the legacy public folders for the shared mailbox account. An error message that resembles the following is found in the RPC Client Access service log for this connection attempt:
+An error message that resembles the following is found in the RPC Client Access service log for this connection attempt:
 
 > [LoginPermException] 'User SID: *SID*' can't act as owner of a MailUser
-object '/o=ExchangeLabs/ou=Exchange Administrative Group (*Group*)/cn=Recipients/cn=189bd14f1ede49d7977
-85e8f20d55edf-Shared Mail' with SID *SID* and MasterAccountSid S-1-5-10
+object '/o=ExchangeLabs/ou=Exchange Administrative Group (*Group*)/cn=Recipients/cn=<User Identity>' with SID *SID* and MasterAccountSid S-1-5-10
  (StoreError=LoginPerm)
 
 For more information, see [Configure legacy on-premises public folders for a hybrid deployment](/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders).
