@@ -42,7 +42,7 @@ VM Inspector uses the Microsoft Compute resource provider, a back-end Microsoft 
 
 For more information about the anatomy of an Azure VM on Windows, see [Run a Windows VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/windows-vm).
 
-For more information about the anatomy of an Azure VM on Linux, see [Run a Linux VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/linux-vm).
+For more information about the anatomy of an Azure VM on Linux, see [Run a Linux VM on Azure - Azure Reference Architectures](//azure/architecture/reference-architectures/n-tier/linux-vm).
 
 For general information about OS disks, see: [Introduction to Azure managed disks, OS disk](/azure/virtual-machines/managed-disks-overview#os-disk).
 
@@ -74,10 +74,6 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
    > [!NOTE]
    > If the **Create new** option is not available to select, this is because you don’t have the correct level of access to run VM Inspector. You must have at least the Contributor role to run VM Inspector successfully.
 
-1. Change a storage account (optional):
-
-   To change a diagnostic storage account, select the **Settings** button on the toolbar, select the storage account, and then select **OK**. For more details, see the **Change VM Inspector settings** section.
-
 1. Select the **Run Inspector** button or **Browse Inspector Report** button:
 
    1. To run a new diagnostic report, select the **Run Inspector** button.
@@ -99,6 +95,10 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
    1. To view existing reports in the selected diagnostics storage account, select the **Browse Diagnostic Reports** option.
 
       :::image type="content" source="media/vm-inspector-azure-virtual-machines/browse-diagnostic-reports.png" alt-text="Screenshot of the option to browse diagnostic reports, inclduing the Browse Diagnostic Reports button.":::
+
+1. Change a storage account (optional):
+
+   To change a diagnostic storage account, select the **Settings** button on the toolbar, select the storage account, and then select **OK**. For more details, see the **Change VM Inspector settings** section.
 
 ## Select an analysis scenario to run
 
