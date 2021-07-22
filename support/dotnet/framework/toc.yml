@@ -14,6 +14,8 @@
     href: runtime-event-1101.md
   - name: Access violation when you call Ping
     href: access-violation-call-ping-send-repeatedly.md
+  - name: Can't trigger PreviewKeyDown event by IME
+    href: cannot-trigger-event-in-wpf-with-ime.md
   - name: ArgumentException when you select rows
     href: argumentexception-select-row-wpf-datagrid.md
   - name: Build error MC6017 when you define a class

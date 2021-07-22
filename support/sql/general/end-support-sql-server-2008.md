@@ -75,9 +75,9 @@ https://docs.microsoft.com/sql/?view=sql-server-ver15
 
 - [SQL Server 2008 documentation](/previous-versions/sql/sql-server-2008/ms130214%28v=sql.100%29)
 
-### Migration assistance with the Azure Migration Center
+### Migration assistance with the Azure Migration and Modernization Center
 
-The [Azure Migration Center](https://azure.microsoft.com/migration/) has a full range of tools available to help you:
+The [Azure Migration and Modernization Center](https://azure.microsoft.com/migration/) has a full range of tools available to help you:
 
 - Assess your current on-premises environment.
 - Migrate your workloads onto Azure.
