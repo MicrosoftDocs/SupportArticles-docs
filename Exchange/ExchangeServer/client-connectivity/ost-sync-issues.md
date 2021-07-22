@@ -91,7 +91,7 @@ If you're still not able to restore offline folder synchronization, the Microsof
 Follow these steps:
 
 1. Open File Explorer.
-1. Locate *C:\Program Files(x86)\Microsoft Office\root\OFFICE16* or *C:\Program Files\Microsoft Office\root\OFFICE16*.
+1. Locate *C:\Program Files(x86)\Microsoft Office\root\Office16* or *C:\Program Files\Microsoft Office\root\Office16*.
 
     > [!NOTE]
     > The folder path to the *EMSMDB32.dll* file will change depending on the version and bit-value of the Office product installed.
