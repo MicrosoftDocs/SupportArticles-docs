@@ -126,7 +126,7 @@
         "visualstudio/**/*.md": "",
         "webapps/**/*.md": "",
         "windows/win32/**/*.md": "",
-        "windows-hardware/drivers/**/*.md": "",
+        "windows-hardware/drivers/**/*.md": "troubleshooting",
         "mem/configmgr/**/*.md": "",
         "system-center/dpm/**/*.md": "data-protection-manager",
         "system-center/scom/**/*.md": "operations-manager",

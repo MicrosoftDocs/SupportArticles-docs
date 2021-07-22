@@ -60,6 +60,8 @@
     items:
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
+    - name: Detailed SSH troubleshooting
+      href: detailed-troubleshoot-ssh-connection.md
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection
@@ -70,10 +72,10 @@
       href: linux-recovery-cannot-start-file-system-errors.md
     - name: Recover LVM configured VMs and no boot 
       href: chroot-logical-volume-manager.md
+    - name: Reset network interface for Azure Linux VM
+      href: reset-network-interface-azure-linux-vm.md
     - name: Troubleshoot fstab errors 
       href: linux-virtual-machine-cannot-start-fstab-errors.md
-    - name: Detailed SSH troubleshooting
-      href: detailed-troubleshoot-ssh-connection.md
   - name: Windows
     items:
     - name: Cannot RDP into Azure VM because of authentication errors

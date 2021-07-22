@@ -545,9 +545,7 @@
     - name: Use Directory Service to manage AD objects
       href: ./identity/directory-service-manage-objects.md
     - name: UserAccountControl property flags
-      href: ./identity/useraccountcontrol-manipulate-account-properties.md
-    - name: Well-known security identifiers in Windows
-      href: ./identity/security-identifiers-in-windows.md
+      href: ./identity/useraccountcontrol-manipulate-account-properties.md    
   - name: Virtualized domain controller (errors and questions)
     items:
     - name: Host AD DCs in virtual hosting environments
@@ -1654,6 +1652,8 @@
       href: ./networking/set-up-routing-remote-access-intranet.md
     - name: The Routing and Remote Access service doesn't start
       href: ./networking/rras-doesnt-start.md
+    - name: Troubleshoot error 720 when establishing a VPN connection
+      href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
     - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
   - name: TCP/IP communications
@@ -2832,6 +2832,8 @@
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
   - name: Permissions, access control, and auditing
     items:
+    - name: .bak log files are deleted and lost
+      href: ./windows-security/bak-log-files-deleted-lost.md
     - name: Access checks using Windows APIs return incorrect results
       href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
