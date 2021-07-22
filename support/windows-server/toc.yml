@@ -1652,6 +1652,8 @@
       href: ./networking/set-up-routing-remote-access-intranet.md
     - name: The Routing and Remote Access service doesn't start
       href: ./networking/rras-doesnt-start.md
+    - name: Troubleshoot error 720 when establishing a VPN connection
+      href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
     - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
   - name: TCP/IP communications
