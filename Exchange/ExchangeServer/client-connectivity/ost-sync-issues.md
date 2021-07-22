@@ -1,6 +1,6 @@
 ---
-title: Sync issues with an ost file 
-description: Provides guidance for issues when you synchronize a Exchange Server mailbox with an ost file.
+title: Sync issues with an OST file 
+description: Provides guidance for issues when you synchronize an Exchange Server mailbox with an offline Outlook data file.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -20,7 +20,7 @@ appliesto:
 - Outlook 2013
 - Outlook for Microsoft 365
 ---
-# Issues when you synchronize your Exchange Server mailbox with your .ost file in Outlook
+# Issues when you synchronize your Exchange Server mailbox with your OST file in Outlook
 
 _Original KB number:_ &nbsp; 842284
 
@@ -31,7 +31,7 @@ When you try to synchronize a Microsoft Exchange Server mailbox with an offline 
 - Different email count in Outlook and OWA.
 - New email messages not downloaded.
 
-These issues occurs if either the .ost file or the Exchange Server support file is damaged. This article provides guidance to troubleshoot and resolve these issues.
+These issues occur if either the OST file or the Exchange Server support file is damaged. This article provides guidance to troubleshoot and resolve these issues.
 
 ## Determine whether offline folders are being synchronized
 
@@ -76,9 +76,9 @@ To synchronize all offline folders automatically every time that you are online 
 1. In the **Send/Receive Groups** dialog box, make sure that the **Perform an automatic send/receive when exiting** check box is selected, and then select **Close**.
 1. select **OK**.
 
-### Create a new .ost file
+### Create a new OST file
 
-If all the folders except the Inbox folder are synchronized, or if you're not able to synchronize the folders, you may have a damaged .ost file. To fix the issue, create a new .ost file. Follow the steps in [How to rebuild the OST file](/outlook/troubleshoot/synchronization/synchronization-issue-between-outlook-owa#how-to-rebuild-the-ost-file). Then, synchronize the offline folders again.
+If all the folders except the Inbox folder are synchronized, or if you're not able to synchronize the folders, you may have a damaged OST file. To fix the issue, create a new OST file. Follow the steps in [How to rebuild the OST file](/outlook/troubleshoot/synchronization/synchronization-issue-between-outlook-owa#how-to-rebuild-the-ost-file). Then, synchronize the offline folders again.
 
 ## Replace a damaged Exchange Server support file
 
@@ -94,7 +94,7 @@ Follow these steps:
     > [!NOTE]
     > The folder path to the Emsmdb32.dll file will change depending on the version and bit-value of the Office product installed.
 
-1. Right-click the *Emsmdb32.dll* file, select Rename and add the .old filename extension. For example, *Emsmdb32.dll.old*.
+1. Right-click the *Emsmdb32.dll* file, select Rename and add the `.old` filename extension. For example, *Emsmdb32.dll.old*.
 
 ### Replace the Exchange Server service support file
 
@@ -106,6 +106,6 @@ To replace the support file that you renamed in the original media, follow these
 
     |Click-to-run|MSI-based|
     |-|-|
-    |In the window **How would you like to repair your Office Programs**, select **Online Repair** > **Repair** to make sure everything gets fixed. (The faster **Quick Repair** option is also available, but it only detects and then replaces corrupted files.)|In **Change your installation**, select **Repair** and then click **Continue**.|
+    |In the window **How would you like to repair your Office Programs**, select **Online Repair** > **Repair** to make sure everything gets fixed. (The faster **Quick Repair** option is also available, but it only detects and then replaces corrupted files.)|In **Change your installation**, select **Repair**, and then click **Continue**.|
 
 1. Synchronize the offline folders.
