@@ -396,7 +396,7 @@ Reopen the VM Inspector page to change a storage account to run a new VM Inspect
 
 ## Manage and view the VM Inspector report
 
-Each VM Inspector report might contain multiple files and logs for your troubleshooting. For the complete list of all the collected VM Inspector report data, see Windows or Linux for more information. To download and review the full diagnostics report, select the specific report, and then select **Download report** to download a .zip file that contains all the logs and files within the report.
+Each VM Inspector report might contain multiple files and logs for your troubleshooting. For the complete list of all the collected VM Inspector report data, see [Windows](/azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#windows) or [Linux](/azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#linux) for more information. To download and review the full diagnostics report, select the specific report, and then select **Download report** to download a .zip file that contains all the logs and files within the report.
 
 :::image type="content" source="media/vm-inspector-azure-virtual-machines/download-report.png" alt-text="Screenshot of the existing reports in the selected diagnostics storage account, including the Download Report option.":::
 
@@ -408,7 +408,7 @@ To delete one or more VM Inspector reports, select **Delete report**.
 
 **Q1. Where are the VM Inspector reports stored?**
 
-**A1.** All VM Inspector reports are stored in your own storage account. The compressed reports file is stored in ???. To view the storage account information, use the **Setting** button on the toolbar.
+**A1.** All VM Inspector reports are stored in your own storage account. To view the storage account information, use the **Setting** button on the toolbar.
 
 **Q2. How do I submit the feedback for VM Inspector?**
 
