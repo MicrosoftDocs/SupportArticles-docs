@@ -83,7 +83,7 @@ If the connection between the Teams client and the SBC is working correctly but 
 
 ### Cause 1
 
-The users are missing the dial pad in the Teams calling tab.
+The users are missing the dial pad on the **Calls** tab in Teams.
 
 ### Resolution 1
 
@@ -131,7 +131,7 @@ Use the Microsoft Teams admin center to make sure that the gateway being used by
 
 You can also use Teams PowerShell to check and update the gateway as required.
 
-Run the [`Get-CsOnlinePSTNGateway`](/powershell/module/skype/get-csonlinepstngateway) cmdlet to check the status of the gateway. The output must show that the value of the `Enabled` parameter is set to `True`. In the following example, the `sbc1.contoso.com` gateway has the value of the `Enabled` parameter set to `True` but the `sbc2.contoso.com` gateway does not.  
+Run the [`Get-CsOnlinePSTNGateway`](/powershell/module/skype/get-csonlinepstngateway) cmdlet to check the status of the gateway. The output must show that the value of the `Enabled` parameter is set to `True`. In the following example, the `sbc1.contoso.com` gateway has the value of the `Enabled` parameter set to `True` but the `sbc2.contoso.com` gateway does not.
 
 ```powershell
 Get-CsOnlinePSTNGateway | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSessions,Enabled
