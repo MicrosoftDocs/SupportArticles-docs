@@ -71,11 +71,7 @@ The SIP failure message is being sent by the Public Switched Telephone Network (
 
 ### Resolution 2
 
-Contact your PSTN provider for help with fixing the issue.
-
-### Resolution 3
-
-If the issue is not caused by a different device on the network or your PSTN provider, contact the SBC's vendor for support to fix the issue.
+Contact your PSTN provider for help with fixing the issue. If the issue is not caused by a different device on the network or your PSTN provider, contact the SBC's vendor for support to fix the issue.
 
 ## Some users are unable to make calls
 
