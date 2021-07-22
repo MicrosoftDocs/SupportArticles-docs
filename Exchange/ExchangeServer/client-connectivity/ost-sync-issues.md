@@ -94,9 +94,9 @@ Follow these steps:
 1. Locate *C:\Program Files(x86)\Microsoft Office\root\OFFICE16* or *C:\Program Files\Microsoft Office\root\OFFICE16*.
 
     > [!NOTE]
-    > The folder path to the Emsmdb32.dll file will change depending on the version and bit-value of the Office product installed.
+    > The folder path to the *EMSMDB32.dll* file will change depending on the version and bit-value of the Office product installed.
 
-1. Right-click the *Emsmdb32.dll* file, select Rename and add the `.old` filename extension. For example, *Emsmdb32.dll.old*.
+1. Right-click the *EMSMDB32.dll* file, select Rename and add the `.old` filename extension. For example, *EMSMDB32.dll.old*.
 
 ### Replace the Exchange Server service support file
 
