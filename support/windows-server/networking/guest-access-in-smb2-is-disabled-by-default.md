@@ -1,7 +1,7 @@
 ---
-title: Guest access in SMB2 is disabled
+title: Guest access in SMB2 and SMB3 is disabled
 description: Guest access in SMB2 disabled by default in Windows 10, Windows Server 2019.
-ms.date: 09/08/2020
+ms.date: 07/22/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,26 +13,28 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
 ms.technology: networking
 ---
-# Guest access in SMB2 disabled by default in Windows
+# Guest access in SMB2 and SMB3 disabled by default in Windows
 
-This article describes information about Windows disabling guest access in SMB2 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
+This article describes information about Windows disabling guest access in SMB2 and SMB3 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
 _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
 
-Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2 client no longer allows the following actions:
+Starting in Windows 10, version 1709 and Windows Server 2019, SMB2 and SMB3 clients no longer allow the following actions by default:
 
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
 
-SMBv2 has the following behavior in these versions of Windows:
+SMB2 and SMB3 has the following behavior in these versions of Windows:
 
-- Windows 10 Enterprise and Windows 10 Education RS3 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows 10 Pro version 1809 and later no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
+- Windows 10 Enterprise and Windows 10 Education no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
 - Windows Server 2019 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows 10 Home is unchanged from its previous default behavior.
+- Windows 10 Home and Pro are unchanged from their previous default behavior.
+
+> [!NOTE]
+> This Windows 10 behavior occurs Windows 10 2004, Windows 10 20H2, & Windows 10 21H1 as long as [KB5003173](https://support.microsoft.com/topic/may-11-2021-kb5003173-os-builds-19041-985-19042-985-and-19043-985-2824ace2-eabe-4c3c-8a49-06e249f52527) is installed. This default behavior was previously implemented in Windows 10 1709 and 1803 but was later regressed in Windows 10 1809, 1903, 1909, where guest auth was not disabled by default but could still be disabled by an administrator. See below for details on ensuring that guest authentication is disabled.
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive the following error message:
 
@@ -102,6 +104,17 @@ If you want to enable insecure guest access, you can configure the following Gro
 2. In the console tree, select **Computer Configuration** > **Administrative Templates** > **Network** > **Lanman Workstation**.
 3. For the setting, right-click **Enable insecure guest logons** and select **Edit**.
 4. Select **Enabled** and select **OK**.
+
+> [!NOTE]
+> If modifying Active Directory domain-based group policy, use **Group Policy Management** (gpmc.msc).
+
+This group policy is setting the following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
+
+`HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\LanmanWorkstation\`
+`AllowInsecureGuestAuth`
+
+On Windows 10 1709, Windows 10 1803, Windows 10 1903, Windows 10 1909, and Windows Server 2019, guest authentication is disabled if AllowInsecureGuestAuth exists with a value of 0.
+On Windows 10 2004, Windows 10 20H2, and Windows 10 21H1 with KB5003173 installed, guest authentication is disabled if AllowInsecureGuestAuth does not exist or if it exists with a value of 0.
 
 > [!NOTE]
 > By enabling insecure guest logons, this setting reduces the security of Windows clients.
