@@ -1,7 +1,7 @@
 ---
-title: Guest access in SMB2 is disabled
+title: Guest access in SMB2 and SMB3 is disabled
 description: Guest access in SMB2 disabled by default in Windows 10, Windows Server 2019.
-ms.date: 09/08/2020
+ms.date: 07/22/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
 ms.technology: networking
 ---
-# Guest access in SMB2 disabled by default in Windows
+# Guest access in SMB2 and SMB3 disabled by default in Windows
 
-This article describes information about Windows disabling guest access in SMB2/SMB3 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
+This article describes information about Windows disabling guest access in SMB2 and SMB3 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
 _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
 
-Starting in Windows 10, version 1709 and Windows Server 2019, the SMB2/SMB3 client no longer allows the following actions by default:
+Starting in Windows 10, version 1709 and Windows Server 2019, SMB2 and SMB3 clients no longer allow the following actions by default:
 
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
@@ -35,7 +35,6 @@ SMB2/SMB3 has the following behavior in these versions of Windows:
 
 > [!NOTE]
 > This Windows 10 behavior occurs Windows 10 2004, Windows 10 20H2, & Windows 10 21H1 as long as [KB5003173](https://support.microsoft.com/topic/may-11-2021-kb5003173-os-builds-19041-985-19042-985-and-19043-985-2824ace2-eabe-4c3c-8a49-06e249f52527) is installed. This default behavior was previously implemented in Windows 10 1709 and 1803 but was later regressed in Windows 10 1809, 1903, 1909, where guest auth was not disabled by default but could still be disabled by an administrator. See below for details on ensuring that guest authentication is disabled.
-
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive the following error message:
 
@@ -117,13 +116,12 @@ This group policy is setting the following DWORD registry value to 1 (insecure g
 On Windows 10 1709, Windows 10 1803, Windows 10 1903, Windows 10 1909, and Windows Server 2019, guest authentication is disabled if AllowInsecureGuestAuth exists with a value of 0.
 On Windows 10 2004, Windows 10 20H2, and Windows 10 21H1 with KB5003173 installed, guest authentication is disabled if AllowInsecureGuestAuth does not exist or if it exists with a value of 0.
 
-
 > [!NOTE]
 > By enabling insecure guest logons, this setting reduces the security of Windows clients.
 
 ## More information
 
-This setting has no effect on SMB1 behavior. SMB1 continues to use guest access and guest fallback. 
+This setting has no effect on SMB1 behavior. SMB1 continues to use guest access and guest fallback.
 
 > [!NOTE]
 > SMB1 is uninstalled by default in latest Windows 10 and Windows Server configurations. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows).
