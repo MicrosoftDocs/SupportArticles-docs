@@ -851,6 +851,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-server/identity/security-identifiers-in-windows.md",
+      "redirect_url": "/windows/security/identity-protection/access-control/security-identifiers",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/lt2p-ipsec-ras-vpn-connections-fail",
       "redirect_url": "support/windows-server/networking/rras-vpn-connections-fail-ms-chapv2-authentication.md",
       "redirect_document_id": true
