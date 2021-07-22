@@ -359,6 +359,8 @@
       href: ../client-connectivity/cannot-connect-to-re-enabled-mailbox.md
     - name: New appointments and contacts not synchronized to OWA
       href: ../client-connectivity/added-appointments-contacts-not-synchronized-to-owa.md
+    - name: 
+      href: ../client-connectivity/ost-sync-issues.md
     - name: Outlook Anywhere clients can't connect to server
       href: ../client-connectivity/outlook-anywhere-clients-not-connect-to-server.md
     - name: Outlook Can't access public folders hosted on legacy Exchange servers
