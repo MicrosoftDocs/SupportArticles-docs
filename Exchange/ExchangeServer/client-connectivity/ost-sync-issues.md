@@ -26,10 +26,10 @@ _Original KB number:_ &nbsp; 842284
 
 When you try to synchronize a Microsoft Exchange Server mailbox with an offline Outlook Data File (.ost), the synchronization might fail, and you may experience any of the following issues:
 
-- Folders in Microsoft Outlook not being updated.
-- Email messages available in Outlook on the web (OWA), but not in Outlook.
-- Different email count in Outlook and OWA.
-- New email messages not downloaded.
+- Folders in Microsoft Outlook not being updated
+- Email messages available in Outlook on the web (OWA), but not in Outlook
+- Different email count in Outlook and OWA
+- New email messages not downloaded
 
 These issues occur if either the OST file or the Exchange Server support file is damaged. This article provides guidance to troubleshoot and resolve these issues.
 
