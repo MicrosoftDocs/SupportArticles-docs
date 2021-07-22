@@ -93,7 +93,7 @@ Name                   DisplayName                                        Compon
 ----                   -----------                                        -----------          -------
 <interface_name>       QoS Packet Schedular                               ms_pacer             True        
 <interface_name>       Remote Access IP ARP Driver                        ms_wanarp            True   
-<interface_name>       <some_filter_driver>                               <some_filter>           True　<<<<< ★
+<interface_name>       <some_filter_driver>                               <some_filter>        True　<<<<< ★
 <interface_name>       WFP Native MAC Layer LightWeight                   ms_wfplwf_lower      True
 ```
 
