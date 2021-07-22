@@ -27,7 +27,7 @@ Starting in Windows 10, version 1709 and Windows Server 2019, SMB2 and SMB3 clie
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
 
-SMB2/SMB3 has the following behavior in these versions of Windows:
+SMB2 and SMB3 has the following behavior in these versions of Windows:
 
 - Windows 10 Enterprise and Windows 10 Education no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
 - Windows Server 2019 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
