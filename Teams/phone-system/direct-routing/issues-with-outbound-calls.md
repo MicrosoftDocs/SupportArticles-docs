@@ -55,7 +55,7 @@ To ensure that the correct caller ID is displayed to the call recipient, configu
 
 Sometimes the calls reach the SBC but no connection is established. When the SBC receives a SIP Invite message from Teams, it sends a failure message back with error codes in the range 400 to 699.
 
-There might be different reasons that prevent a connection to the SBC.
+There might be different reasons that prevent a connection to the SBC. If the issue is not caused by a different device on the network or your PSTN provider, contact the SBC's vendor for support to fix the issue.
 
 ### Cause 1
 
@@ -71,7 +71,7 @@ The SIP failure message is being sent by the Public Switched Telephone Network (
 
 ### Resolution 2
 
-Contact your PSTN provider for help with fixing the issue. If the issue is not caused by a different device on the network or your PSTN provider, contact the SBC's vendor for support to fix the issue.
+Contact your PSTN provider for help with fixing the issue.
 
 ## Some users are unable to make calls
 
