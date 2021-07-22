@@ -40,3 +40,4 @@ To check the status of RemoteAccess, check the state of the RemoteAccess service
 ## Status
 
 This behavior is by design.
+The RemoteAccess service is disabled on Windows server and client versions by default.
