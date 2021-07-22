@@ -40,14 +40,16 @@ Follow these steps in Outlook:
 1. Right-click an offline folder, and select **Properties**.
 1. Select the **Synchronization** tab.
 
-> [!NOTE]
-> If you don't see the **Synchronization** tab, this indicates that you didn't set up your profile to use offline folders.
+    > [!NOTE]
+    > If you don't see the **Synchronization** tab, this indicates that you didn't set up your profile to use offline folders.
 
 1. Under **Statistics for this folder**, verify the settings in the following fields:
 
     - **Last Synchronized on**
     - **Server folder contains**
     - **Offline folder contains**
+
+    :::image type="content" source="media/ost-sync-issues/synchronization-status.png" alt-text="Screenshot of the synchronization status":::
 
 If synchronization is working correctly, the number of items in the **Server folder contains** field and in the **Offline folder contains** field will be the same.
 
