@@ -34,7 +34,7 @@ The default language and locale of Windows Server 2019 aren't US English. The Ad
 
 Install the English language pack using the corresponding language .cab files from [Language Pack ISO for Windows Server](/windows-hardware/manufacture/desktop/add-language-packs-to-windows). Check if the package is installed by using the following steps:
 
-1. From a Command prompt, run the command:
+1. From a Command prompt, run the following command:
 
     ```command
     intl.cpl
