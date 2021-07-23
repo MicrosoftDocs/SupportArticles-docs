@@ -36,9 +36,9 @@ Here are tips to enhance the throughput:
 
 ## Testing tool for TCP throughput
 
-To attain the highest possible throughput for a certain hardware, you must tune the performance factors. Make sure there's no underlying network issues (packet loss). Use the [NTttcp.exe](https://github.com/microsoft/ntttcp/releases/download/v5.35/NTttcp.exe) or [ctsTraffic.exe](https://github.com/Microsoft/ctsTraffic) tool to test the throughput and adjust the receive buffer, otherwise the tool will use the default settings of the link speed to scale the TCP window. Refer to [Performance Tools for Network Workloads](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tools).
+To attain the highest possible throughput for a certain hardware, you must tune the performance factors. Make sure there's no underlying network issues (packet loss). Use the [NTttcp.exe](https://github.com/microsoft/ntttcp/releases/download/v5.35/NTttcp.exe) or [ctsTraffic.exe](https://github.com/Microsoft/ctsTraffic) tool to test the throughput. Refer to [Performance Tools for Network Workloads](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tools).
 
-## Bottlenecks for TCP throughput testing
+## Bottlenecks for TCP throughput
 
 Don't use network monitor or take network packet level logs during TCP throughput tests. The Network Driver Interface Specification (NDIS) monitoring filters add a delay for the sender and the receivers each time a packet is recorded. This operation demands CPU resources and generates many storage IOs. Performance decreases when packet level logs are taken because the TCP is trying to [recover from packet loss](/windows/client-management/troubleshoot-tcpip-connectivity).
 
