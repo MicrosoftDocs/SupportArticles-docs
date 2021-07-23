@@ -26,7 +26,7 @@ search.appverid: MET150
 
 _Original KB number:_ &nbsp; 3184064
 
-## Problem
+## Symptoms
 
 Consider the following scenario:
 
@@ -34,21 +34,52 @@ Consider the following scenario:
 - You configured legacy on-premises public folders for a hybrid deployment.
 - You create a shared mailbox that's located in Exchange Online.
 - You assign Full Access permissions to one or more users.
-- Users add shared mailboxes as second Exchange accounts in their existing Outlook profile.
+- Users add the shared mailbox as a second Exchange account in their existing Outlook profile.
 
 In this scenario, users are repeatedly prompted for credentials when they open Outlook.
+
+## Cause
+
+This issue occurs because Outlook tries to connect to the legacy on-premises public folders for the shared mailbox.
 
 ## Workaround
 
 To work around the problem, move the shared mailbox to the on-premises environment.
 
+## Resolution
+
+To fix this issue, you can enable access to public folders for users and disable access to public folders for the shared mailbox. To do this, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and follow these steps:
+
+1. Enable access to public folders for users by running the following cmdlet:
+
+   ```powershell
+   Set-CASMailbox tony@contoso.com -PublicFolderClientAccess $true
+   ```
+
+   > [!NOTE]
+   > This example enables access to public folders for the user tony@contoso.com.
+
+1. Disable access to public folders for the shared mailbox by running the following cmdlet:
+
+   ```powershell
+   Set-CASMailbox adam@contoso.com -PublicFolderClientAccess $false
+   ```
+
+   > [!NOTE]
+   > This example disables access to public folders for the shared mailbox adam@contoso.com.
+
+1. Enable access to public folders for the organization by running the following cmdlet:
+
+   ```powershell
+   Set-OrganizationConfig -PublicFolderShowClientControl $true
+   ```
+
 ## More information
 
-Outlook tries to connect to the legacy public folders for the shared mailbox account. An error message that resembles the following is found in the RPC Client Access service log for this connection attempt:
+An error message that resembles the following is found in the RPC Client Access service log for this connection attempt:
 
 > [LoginPermException] 'User SID: *SID*' can't act as owner of a MailUser
-object '/o=ExchangeLabs/ou=Exchange Administrative Group (*Group*)/cn=Recipients/cn=189bd14f1ede49d7977
-85e8f20d55edf-Shared Mail' with SID *SID* and MasterAccountSid S-1-5-10
+object '/o=ExchangeLabs/ou=Exchange Administrative Group (*Group*)/cn=Recipients/cn=<User Identity>' with SID *SID* and MasterAccountSid S-1-5-10
  (StoreError=LoginPerm)
 
 For more information, see [Configure legacy on-premises public folders for a hybrid deployment](/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders).
