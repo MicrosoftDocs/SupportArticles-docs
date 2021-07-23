@@ -15,13 +15,11 @@ ms.technology: networking
 ---
 # Overview of TCP/IP performance
 
-Transmission Control Protocol/Internet Protocol (TCP/IP) performance is a comparison with identical endpoints in terms of hardware, network path, and Operating System (OS) when it comes to enhance it. Performance testing for TCP/IP is done under optimal conditions. Real-life performance is different because multiple factors are involved and may cause a bottleneck. These factors are often the underlying network, the design of TCP and the actual transmit rate of storage IOs.
+Transmission Control Protocol/Internet Protocol (TCP/IP) performance is a comparison. The comparison should be conducted with identical endpoints in terms of hardware, network path, and Operating System (OS). Real-life performance is different because multiple factors are involved and may cause a bottleneck. These factors are often the underlying network, the design of TCP and the actual transmit rate of storage IOs.
 
 Read more about [performance tuning](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) to set the best performing configuration for the endpoints.
 
-[TCP receive window autotuning](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics#bkmk_tcp_params) is an application defined feature used to scale up the connection. For example, if the TCP is configured to use autotuning level to normal and if the application has enough buffer defined for TCP window, then the OS will scale the TCP to maximum quickly. If the TCP has a window size of 65,536*256, and if the latency is 10 milliseconds (ms), then the maximum attainable speed is 1.6 gigabytes per second (GB/s) (the entire bandwidth of a 10 gigabits (Gb) Network Interface Card (NIC)). However, this feature is designed for higher latency networks because the OS won't allocate the entire link speed to a single socket.
-
-For low latency networks, the application tells the TCP to push data to application using Push flag instead of scaling the TCP window.
+[TCP receive window autotuning](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics#bkmk_tcp_params) is an application defined feature used for scaling up the connection to utilize the bandwidth in high latency network. For example, if the TCP is configured to use autotuning level to normal and if the application has enough buffer defined for TCP window, then the OS will scale the TCP to maximum quickly. However, this feature is designed for higher latency networks. For low latency networks, there is no such requirement as there won't be a lot of segments on the fly (for example, on the network infra).
 
 For high latency networks with a TCP window that isn't scaled to maximum at once, there are algorithms such as [CUBIC](https://datatracker.ietf.org/doc/html/draft-rhee-tcpm-cubic-02), [NewReno](https://datatracker.ietf.org/doc/html/rfc6582), and [Compound TCP](https://datatracker.ietf.org/doc/html/draft-sridharan-tcpm-ctcp-02) to determine the bandwidth-delay product (BDP) and scale the window accordingly. Windows OS assigns a congestion algorithm to each socket created.
 
@@ -38,7 +36,7 @@ Here are tips to enhance the throughput:
 
 ## Testing tool for TCP throughput
 
-To attain the highest possible throughput for a certain hardware, you must tune the performance factors. Make sure there's no underlying network issues (packet loss). Use the [NTttcp.exe](https://github.com/microsoft/ntttcp/releases/download/v5.35/NTttcp.exe) tool to test the throughput and adjust the receive buffer, otherwise the tool will use the default settings of the link speed to scale the TCP window. Refer to [Performance Tools for Network Workloads](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tools).
+To attain the highest possible throughput for a certain hardware, you must tune the performance factors. Make sure there's no underlying network issues (packet loss). Use the [NTttcp.exe](https://github.com/microsoft/ntttcp/releases/download/v5.35/NTttcp.exe) or [ctsTraffic.exe](https://github.com/Microsoft/ctsTraffic) tool to test the throughput and adjust the receive buffer, otherwise the tool will use the default settings of the link speed to scale the TCP window. Refer to [Performance Tools for Network Workloads](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tools).
 
 ## Bottlenecks for TCP throughput testing
 
