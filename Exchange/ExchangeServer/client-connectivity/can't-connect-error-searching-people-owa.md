@@ -1,5 +1,5 @@
 ---
-title: Error (Can't connect. Please try again later) when searching people in OWA in Exchange Server 2019
+title: Can't connect. Please try again later when searching people in OWA in Exchange Server 2019
 description: Describes an issue in which you are unable to search people in OWA in Exchange Server 2019. Provides a solution.
 author: simonxjx
 ms.author: jcoiffin
@@ -18,7 +18,7 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# Error (Can't connect. Please try again later) when searching people in OWA in Exchange Server 2019
+# "Can't connect. Please try again later" error when searching people in OWA in Exchange Server 2019
 
 ## Symptoms
 
@@ -32,22 +32,18 @@ The default language and locale of Windows Server 2019 aren't US English. The Ad
 
 ## Resolution
 
-Install the language pack using the corresponding language .cab files from [Language Pack ISO for Windows Server](/windows-hardware/manufacture/desktop/add-language-packs-to-windows#get-language-resources-language-pack-iso-and-feature-on-demand-iso). For example, if you changed the language to French, you must add a French language pack.
+Install the English language pack using the corresponding language .cab files from [Language Pack ISO for Windows Server](/windows-hardware/manufacture/desktop/add-language-packs-to-windows). Check if the package is installed by using the following steps:
 
-1. Open Command-Line as administrator and run these commands:
+1. From a Command prompt, run the command:
 
-    ```
+    ```command
     intl.cpl
     ```
 
-    
-2. Check if Format is set to English (United States):
+1. On the **Formats** tab, make sure that the format is set to **English (United States)**.
 
-![image](https://user-images.githubusercontent.com/43539433/126612620-a0da1ade-dd30-4e4f-931d-3535fb525dff.png)
+    :::image type="content" source="media/can't-connect-error-searching-people-owa/region-format.png" alt-text="Screenshot of format settings":::
 
+1. On the **Administrative** tab, select **Copy settings** and make sure that the settings are also set to **English (United States)**.
 
-3. Select "Administrative" tab and click "Copy settings"
-
-![image](https://user-images.githubusercontent.com/43539433/126612816-ad1c5ba6-323c-42b5-9ffd-6cd3798b898d.png)
-
-4. "Apply" and Reboot server
+    :::image type="content" source="media/can't-connect-error-searching-people-owa/region-settings.png" alt-text="Screenshot of region settings":::
