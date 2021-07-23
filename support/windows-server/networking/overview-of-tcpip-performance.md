@@ -32,7 +32,7 @@ Here are tips to enhance the throughput:
 - Make sure there are no underlying network issues (packet loss).
 - Enable advanced properties of NIC for performance features (such as Jumbo frames, RSS/VMQ, offload features, and RSC), except if there's an underlying network compatibility issue or for troubleshooting purpose.
 - Make sure the TCP is configured to use autotuning level to normal.
-- Use Performance Monitor analysis to make sure there's no CPU or Storage bottleneck.
+- Use Performance Monitor analysis to make sure there's no CPU or storage bottleneck.
 - Select security features based on the actual organizations' requirements.
 - Create a baseline.
 
@@ -42,15 +42,15 @@ To attain the highest possible throughput for a certain hardware, you must tune 
 
 ## Bottlenecks for TCP throughput testing
 
-Don't use network monitor or take network packet level logs during TCP throughput tests. The NDIS monitoring filters add a delay for the sender and the receivers each time a packet is recorded. This operation demands CPU resources and generates many storage IOs. Performance decreases when packet level logs are taken because the TCP is trying to [recover from packet loss](/windows/client-management/troubleshoot-tcpip-connectivity).
+Don't use network monitor or take network packet level logs during TCP throughput tests. The Network Driver Interface Specification (NDIS) monitoring filters add a delay for the sender and the receivers each time a packet is recorded. This operation demands CPU resources and generates many storage IOs. Performance decreases when packet level logs are taken because the TCP is trying to [recover from packet loss](/windows/client-management/troubleshoot-tcpip-connectivity).
 
 Adding security has its own cost and performance issues. Security protocols such as Internet Protocol Security (IPsec) has overhead and extra processing requirements. Comparing data protection with data integrity, IPsec's integrity mode should be preferred for less processing cost. Security software has a huge cost on packet processing too, which will cause slower outputs.
 
 If the tested performance doesn't come up to expectations, take logs as defined in [Network-Related Performance Counters](/windows-server/networking/technologies/network-subsystem/net-sub-performance-counters).
 
-After checking for TCP performance issues, check upper layer associated protocols such as file system protocols (SMB, NFS). These protocols require processor resources and disk IOs. The slow speed is caused by a faulty driver or hardware, a high deferred procedure call (DPC) queue or/and slow disk IOs. Finding out which component in the OS is causing high DPCs is challenging because that requires an analysis using Xperf/Windows Performance Recorder (WPR) (CPU) logging. Finding disk-related slowness issues is comparatively easier. For more information, see [Examining and Tuning Disk Performance](/previous-versions/windows/it-pro/windows-2000-server/cc938959(v=technet.10)).
+After checking for TCP performance issues, check upper layer associated protocols such as file system protocols (Server Message Block (SMB) or Network File System (NFS)). These protocols require processor resources and disk IOs. The slow speed is caused by a faulty driver or hardware, a high deferred procedure call (DPC) queue or/and slow disk IOs. Finding out which component in the OS is causing high DPCs is challenging because that requires an analysis using Xperf/Windows Performance Recorder (WPR) (CPU) logging. Finding disk-related slowness issues is comparatively easier. For more information, see [Examining and Tuning Disk Performance](/previous-versions/windows/it-pro/windows-2000-server/cc938959(v=technet.10)).
 
-During the test, testing applications (client and server applications) can be adjusted to use multiple threads with buffer values high enough to reach the maximum throughput. However, that might not reflect the actual conditions because the number of threads and buffer each API call can utilize is limited based on the programming. In addition, application layer protocol (SMB or CIFS) has its own buffer and optimization ([Performance Tuning for file Servers](/windows-server/administration/performance-tuning/role/file-server) or [SMB: Troubleshooting Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v=ws.11))). If the application doesn't work as expected for baseline, work with an application specialist to find the bottleneck.
+During the test, testing applications (client and server applications) can be adjusted to use multiple threads with buffer values high enough to reach the maximum throughput. However, that might not reflect the actual conditions because the number of threads and buffer each API call can utilize is limited based on the programming. In addition, application layer protocol (SMB or Common Internet File System (CIFS)) has its own buffer and optimization ([Performance Tuning for file Servers](/windows-server/administration/performance-tuning/role/file-server) or [SMB: Troubleshooting Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v=ws.11))). If the application doesn't work as expected for baseline, work with an application specialist to find the bottleneck.
 
 ## How to create a baseline
 
@@ -80,10 +80,10 @@ Here are the steps to measure throughput and create a baseline:
     |`-target:<IP>`      |This option is used on clients, and it specifies the IP address of the server on which ctsTraffic.exe is running and is in listening state. For example, `-target:192.168.1.10`.         |
     |`-pattern:pull`      |The CtsTraffic tool use Push pattern by default. That means data is sent from the client to the server. When this switch is used on both the client and the server, the data is received on the client. Don't use this option when performing a Push test.         |
     |`-connections:<num>`      |This option specifies the number of the TCP connections. TCP sockets will be created from the client simultaneously. Eight is commonly used as the RSS queues on midlevel network cards are 8. For example, `-connections:8`.         |
-    |`-iterations:<num>`      |This option specifies the multiplied number of connections in -connections. For example, `-iterations:10`. With 10 iterations, the client will attempt 80 connections in total. If this option isn't specified, the client will continue to attempt 8 connections until 1000 connections         |
-    |`-statusfilename:<filename.csc>`     |Use this option to flush the console level 1 option to a txt file compatible with excel.         |
+    |`-iterations:<num>`      |This option specifies the multiplied number of connections in `-connections:`. For example, `-iterations:10`. With 10 iterations, the client will attempt 80 connections in total. If this option isn't specified, the client will continue to attempt 8 connections until 1000 connections.         |
+    |`-statusfilename:<filename.csc>`     |Use this option to flush the console level 1 option to a `.txt` file compatible with Microsoft Excel.         |
     |`-connectionfilename:<filename.csv>`     |Use this option to flush verbose details. For example, socket level information such as the time taken by each socket to transfer the data. You can check if there are any errors or advanced troubleshooting with this option.         |
-    |`-consoleverbosity:<0\|1\|2\|3>`      |This option specifies the view or the output on the monitor while the test is running. For example, `-consoleverbosity:1`.         |
+    |`-consoleverbosity:<0|1|2|3>`      |This option specifies the view or the output on the monitor while the test is running. For example, `-consoleverbosity:1`.         |
 
 2. Open Resource Monitor on the receiving side. For example, if you use `-pattern:pull`, open it on the client, otherwise open it on the server.
 3. Start the ctsTraffic tool on the server and run the following command:
