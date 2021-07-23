@@ -21,9 +21,7 @@ This article discusses how to troubleshoot error 720 that occurs when you try to
 
 When you try to establish a VPN connection, you receive the following error message:
 
-```output
-A connection to the remote computer could not be established. You might need to change the network settings for this connection.
-```
+> A connection to the remote computer could not be established. You might need to change the network settings for this connection.
 
 ![VPN connection error](./media/troubleshoot-error-720-when-establishing-a-vpn-connection/vpn-error-message.png)
 
@@ -66,7 +64,7 @@ There are several scenarios that can cause this error. To troubleshoot the error
 
 Based on the output, choose the appropriate troubleshooting scenario from the following options, and follow the provided steps.
 
-## Scenario 1
+## Scenario 1: Remote Access IP ARP Driver is disabled
 
 If you see that **ms_wanarp** is disabled (as shown in the following example output), re-enable it by running the provided command.
 
@@ -84,7 +82,7 @@ Run this command:
 Enable-NetAdapterBinding -Name "<interface_name>" -IncludeHidden -AllBindings -ComponentID ms_wanarp 
 ```
 
-## Scenario 2
+## Scenario 2: A third-party filter driver is bound
 
 If you see that a third-party filter driver is bound (as shown in the following example output), disable it by running the provided command.
 
@@ -103,7 +101,7 @@ Run this command:
 Disable-NetAdapterBinding -Name "<interface_name>" -IncludeHidden -AllBindings -ComponentID <some_filter> 
 ```
 
-## Scenario 3
+## Scenario 3: Reinstall WAN Miniport (IP) interface drivers
 
 If the previous scenarios don't apply, or if the steps don't fix the error, reinstall the **WAN Miniport (IP)** interface driver:
 
