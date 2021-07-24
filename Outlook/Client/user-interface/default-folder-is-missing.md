@@ -16,15 +16,13 @@ appliesto:
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
-- Microsoft Outlook 2010
+- Outlook 2010
 - Outlook for Office 365
 - Exchange Online
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+- Exchange Server 2016
+- Exchange Server 2016
+- Exchange Server 2013
+- Exchange Server 2010
 search.appverid: MET150
 ---
 # Default folder is missing in Outlook and Outlook on the web
