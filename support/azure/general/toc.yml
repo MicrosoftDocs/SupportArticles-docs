@@ -23,7 +23,7 @@
     href: temporary-storage-for-azure-app-service.md
   - name: Troubleshoot instance-related issues
     href: troubleshoot-instance-related-issues-on-azure-app-service.md
-    
+
 - name: Azure API Management
   items:
   - name: Troubleshooting overview
@@ -128,8 +128,6 @@
 
 - name: Other common issues
   items:
-  - name: App Service Compliance with PCI Standards 3.0 and 3.1
-    href: app-service-compliance-wit.md
   - name: Can't load VM metrics
     href: problem-occur-loading-metrics.md
   - name: Delete button doesn't work
