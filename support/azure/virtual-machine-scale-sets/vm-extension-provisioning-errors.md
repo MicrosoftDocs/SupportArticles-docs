@@ -11,7 +11,7 @@ ms.prod: azure
 
 ---
 
-# VM Extension Provisioning Errors in Virtual Machine Scale Sets
+# VM extension provisioning errors in Virtual Machine Scale Sets
 
 This article provides guidance on resolving **VMExtensionProvisioningError**, **VMExtensionHandlerNonTransientError**, or **VMExtensionProvisioningTimeout** errors that appear when you attempt to deploy, update, reimage, start, or scale a Virtual Machine Scale Set.
 
@@ -44,7 +44,7 @@ az vmss list-instances --resource-group MyResourceGroup --name MyVmss --query "[
 
 The output of this command will display the provisioning states of the extensions on each instance. The following example output shows how this extension information is grouped by instance ID.
 
-:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with info grouped per instance.":::
+:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with first instance highlighted.":::
 
 Within each section dedicated to a particular instance, the “extProvisioningState” list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the “extension” list, which displays the names of the extensions in same corresponding order.
 
