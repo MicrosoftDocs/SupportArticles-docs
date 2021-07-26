@@ -42,7 +42,7 @@ VM Inspector uses the Microsoft Compute resource provider, a back-end Microsoft 
 
 For more information about the anatomy of an Azure VM on Windows, see [Run a Windows VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/windows-vm).
 
-For more information about the anatomy of an Azure VM on Linux, see [Run a Linux VM on Azure - Azure Reference Architectures](//azure/architecture/reference-architectures/n-tier/linux-vm).
+For more information about the anatomy of an Azure VM on Linux, see [Run a Linux VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/linux-vm).
 
 For general information about OS disks, see: [Introduction to Azure managed disks, OS disk](/azure/virtual-machines/managed-disks-overview#os-disk).
 
@@ -396,7 +396,7 @@ Reopen the VM Inspector page to change a storage account to run a new VM Inspect
 
 ## Manage and view the VM Inspector report
 
-Each VM Inspector report might contain multiple files and logs for your troubleshooting. For the complete list of all the collected VM Inspector report data, see [Windows](/azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#windows) or [Linux](/azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#linux) for more information. To download and review the full diagnostics report, select the specific report, and then select **Download report** to download a .zip file that contains all the logs and files within the report.
+Each VM Inspector report might contain multiple files and logs for your troubleshooting. For the complete list of all the collected VM Inspector report data, see [Windows](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#windows) or [Linux](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#linux) for more information. To download and review the full diagnostics report, select the specific report, and then select **Download report** to download a .zip file that contains all the logs and files within the report.
 
 :::image type="content" source="media/vm-inspector-azure-virtual-machines/download-report.png" alt-text="Screenshot of the existing reports in the selected diagnostics storage account, including the Download Report option.":::
 
