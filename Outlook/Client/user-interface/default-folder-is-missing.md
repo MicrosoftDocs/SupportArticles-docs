@@ -17,9 +17,9 @@ appliesto:
 - Outlook 2016
 - Outlook 2013
 - Outlook 2010
-- Outlook for Office 365
+- Outlook for Microsoft 365
 - Exchange Online
-- Exchange Server 2016
+- Exchange Server 2019
 - Exchange Server 2016
 - Exchange Server 2013
 - Exchange Server 2010
