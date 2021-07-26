@@ -31,10 +31,10 @@ SMB2 and SMB3 has the following behavior in these versions of Windows:
 
 - Windows 10 Enterprise and Windows 10 Education no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
 - Windows Server 2019 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
-- Windows 10 Home and Pro are unchanged from their previous default behavior.
+- Windows 10 Home and Pro are unchanged from their previous default behavior; they allow guest authentication by default.
 
 > [!NOTE]
-> This Windows 10 behavior occurs Windows 10 2004, Windows 10 20H2, & Windows 10 21H1 as long as [KB5003173](https://support.microsoft.com/topic/may-11-2021-kb5003173-os-builds-19041-985-19042-985-and-19043-985-2824ace2-eabe-4c3c-8a49-06e249f52527) is installed. This default behavior was previously implemented in Windows 10 1709 and 1803 but was later regressed in Windows 10 1809, 1903, 1909, where guest auth was not disabled by default but could still be disabled by an administrator. See below for details on ensuring that guest authentication is disabled.
+> This Windows 10 behavior occurs in Windows 10 1709, Windows 10 1803, Windows 10 1903, Windows 10 1909 as well as Windows 10 2004, Windows 10 20H2, & Windows 10 21H1 as long as [KB5003173](https://support.microsoft.com/topic/may-11-2021-kb5003173-os-builds-19041-985-19042-985-and-19043-985-2824ace2-eabe-4c3c-8a49-06e249f52527) is installed. This default behavior was previously implemented in Windows 10 1709 and 1803 but was later regressed in Windows 10 2004, Windows 10 20H2, and Windows 10 21H1 where guest auth was not disabled by default but could still be disabled by an administrator. See below for details on ensuring that guest authentication is disabled.
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive the following error message:
 
@@ -114,7 +114,7 @@ This group policy is setting the following DWORD registry value to 1 (insecure g
 `AllowInsecureGuestAuth`
 
 On Windows 10 1709, Windows 10 1803, Windows 10 1903, Windows 10 1909, and Windows Server 2019, guest authentication is disabled if AllowInsecureGuestAuth exists with a value of 0.
-On Windows 10 2004, Windows 10 20H2, and Windows 10 21H1 with KB5003173 installed, guest authentication is disabled if AllowInsecureGuestAuth does not exist or if it exists with a value of 0.
+On Windows 10 2004, Windows 10 20H2, and Windows 10 21H1 Enterprise and Education editions with KB5003173 installed, guest authentication is disabled if AllowInsecureGuestAuth does not exist or if it exists with a value of 0. Home and Pro editions allow guest authentication by default unless you disable it using group policy or registry settings.
 
 > [!NOTE]
 > By enabling insecure guest logons, this setting reduces the security of Windows clients.
