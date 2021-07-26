@@ -142,7 +142,7 @@ When you type the domain name, make sure that you type the DNS name and not the 
 Make sure that the DC that hosts the relative ID (RID) operations master is online and functional. For more information, see [Event ID 16650: The account-identifier allocator failed to initialize in Windows Server](/troubleshoot/windows-server/identity/event-16650-account-identifier-allocator-not-initialize).
 
 > [!Note]
-> You can use the `net query fsmo` command to determine which DC has the RID Master role.
+> You can use the `netdom query fsmo` command to determine which DC has the RID Master role.
 
 Verify that Active Directory is replicating between all DCs. You can use the following command to detect any errors:
 

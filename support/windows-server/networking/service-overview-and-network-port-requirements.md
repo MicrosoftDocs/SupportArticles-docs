@@ -123,7 +123,8 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 
 In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
 
-- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit)) = 4 (how many pings are sent before connection is closed)
+- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping)
+- [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit) = 4 (how many pings are sent before connection is closed)
 - [PingWaitTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingwaittimeout) = 2000 ms (how long it waits for the ICMP response)
 - Reference: [LdapSessionOptions Class](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions)
 
