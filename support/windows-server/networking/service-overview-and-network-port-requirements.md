@@ -34,7 +34,7 @@ _Original KB number:_ &nbsp; 832017
 >
 > What this means for you:
 >
-> - If your computer network environment uses only Windows Server 2012, you must enable connectivity over the high port range of 49152 through 65535.
+> - If your computer network environment uses only Windows Server 2012 or a later version of Windows, you must enable connectivity over the high port range of 49152 through 65535.
 > - If your computer network environment uses Windows Server 2012 together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both the following port ranges:  
 > High port range 49152 through 65535  
 > Low port range 1025 through 5000
