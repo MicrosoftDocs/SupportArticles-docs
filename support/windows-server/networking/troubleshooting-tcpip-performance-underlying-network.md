@@ -1,7 +1,7 @@
 ---
 title: TCP/IP underlying network performance issues
 description: Provides the troubleshooting process for TCP/IP performance issues about underlying network. The ctsTraffic tool is used to analyze the network trace.
-ms.date: 07/16/2021
+ms.date: 07/27/2021
 author: v-lianna
 ms.author: delhan 
 manager: dcscontentpm
@@ -15,7 +15,11 @@ ms.technology: networking
 ---
 # Troubleshooting TCP/IP performance issues about underlying network
 
-When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues. Here's an example of how you can use the [ctsTraffic](https://github.com/Microsoft/ctsTraffic) tool to analyze the network trace:
+When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues.
+
+## Use the ctsTraffic tool to analyze the network trace
+
+Here's an example of how you can use the [ctsTraffic](https://github.com/Microsoft/ctsTraffic) tool to analyze the network trace:
 
 > [!NOTE]
 > Taking a network trace may cause further slowdown of the throughput.
@@ -35,12 +39,14 @@ When the throughput falls below a given baseline, use a packet capturing tool to
     ```
 
 2. Stop network traces on both client and server sides.
-3. Check the \<filename>.csv file:
+3. Check the *\<filename>.csv* file:
 
     - If NetworkErrors or ProtocolErrors are displayed in the file, go to the next step.
     - If no error is displayed, stop and discard the network trace. Collect a new trace on the client and the server. Try with an increasing number of connections (`-connections:`) in step 1 until the error occurs.
 
-4. Find the client socket number of the error in the \<filename>.csv file and apply this number as a filter to check for a packet loss, a packet retransmission, or a TCP reset that wasn't initiated from either endpoint. With this information in hand, contact the network team for help.
+4. Find the client socket number of the error in the *\<filename>.csv* file and apply this number as a filter to check for a packet loss, a packet retransmission, or a TCP reset that wasn't initiated from either endpoint. With this information in hand, contact the network team for help.
+
+## Check Performance Monitor logs
 
 Check Performance Monitor logs to find [Packet Received Discarded](/previous-versions/ms803962(v=msdn.10)) in these situations:
 
