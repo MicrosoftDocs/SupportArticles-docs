@@ -18,7 +18,7 @@ Mozilla Firefox users are prompted for credentials when attempting to log in to 
 
 ## Cause
 
-This behavior is by design, as Firefox rejects all SPNEGO login challenges (Kerberos, NTLM, or other authentication protocols). For more information regarding this behavior, see [Integrated Authentication](https://developer.mozilla.org/docs/integrated_authentication).
+This behavior is by design, as Firefox rejects all SPNEGO login challenges (Kerberos, NTLM, or other authentication protocols).
 
 ## Resolution
 

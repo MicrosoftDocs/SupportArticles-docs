@@ -135,11 +135,11 @@ Changes to these fields, or adding other configuration options which are commonl
 
 - The MAC address setting doesn't match the address collected in step 2.
 
-  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-mac-no-match.png" alt-text="This image shows text output in a terminal window where the MAC address setting doesn't match the address collected in step 2":::
+  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-mac-no-match.png" alt-text="Screenshot of the text output in a terminal window where the MAC address setting doesn't match the address collected in step 2":::
 
 - The boot protocol has been set to something other than *dhcp*,  and a static IP address is configured.
 
-  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-static-ip-configured.png" alt-text="This image shows txt output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
+  :::image type="content" source="media/reset-network-interface-azure-linux-vm/text-output-terminal-static-ip-configured.png" alt-text="Screenshot of the txt output in a terminal window where the boot protocol has been set to something other than dhcp, and a static IP address is configured.":::
 
 Once these details have been corrected, restart the VM with networking configured correctly.
 

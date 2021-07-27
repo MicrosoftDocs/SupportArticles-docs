@@ -16,7 +16,7 @@ ms.author: billmath
 
 With the implementation of version 1.4.xx.x of Azure Active Directory Connect (Azure AD Connect), customers may see some or all of their Windows devices disappear from Azure AD. This isn't a cause for concern, as these device identities aren't used by Azure Active Directory (Azure AD) during *Conditional Access* authorization. This change won't delete any Windows devices that were correctly registered with Azure AD for Hybrid Azure AD Join.
 
-If you see the deletion of device objects in Azure AD exceeding the *Export Deletion Threshold*, allow the deletions to go through. [How To: allow deletes to flow when they exceed the deletion threshold](/azure/active-directory/how-to-connect-sync-feature-prevent-accidental-deletes)
+If you see the deletion of device objects in Azure AD exceeding the *Export Deletion Threshold*, allow the deletions to go through. [How To: allow deletes to flow when they exceed the deletion threshold](/azure/active-directory/hybrid/how-to-connect-sync-feature-prevent-accidental-deletes)
 
 ## Background
 
@@ -24,7 +24,7 @@ Windows devices registered as Hybrid Azure AD Joined are represented in Azure AD
 
 ## Windows 10 devices
 
-Only Windows 10 devices with a specific *userCertificate* attribute value that's configured by Hybrid Azure AD Join should be synchronized to the cloud by Azure AD Connect. In previous versions of Azure AD Connect, this requirement was not rigorously enforced, and unnecessary device objects were added to Azure AD. Such devices in Azure AD always stayed in the “pending” state, as these devices were not intended to be registered with Azure AD.
+Only Windows 10 devices with a specific *userCertificate* attribute value that's configured by Hybrid Azure AD Join should be synchronized to the cloud by Azure AD Connect. In previous versions of Azure AD Connect, this requirement was not rigorously enforced, and unnecessary device objects were added to Azure AD. Such devices in Azure AD always stayed in the "pending" state, as these devices were not intended to be registered with Azure AD.
 
 This version of Azure AD Connect will only synchronize Windows 10 devices that are correctly configured to be Hybrid Azure AD Joined. Windows 10 device objects without the Azure AD join specific userCertificate will be removed from Azure AD.
 
@@ -42,7 +42,7 @@ This script generates a report about certificates stored in *Active Directory Co
 
 The script also checks the certificates present in the UserCertificate property of a Computer object in AD. For each non-expired certificate present, the script validates whether or not the certificate was issued for the Hybrid Azure AD join feature; for example, `Subject Name matches CN={ObjectGUID}`.
 
-Before this update, Azure AD Connect would synchronize to Azure AD any Computer that contained at least one valid certificate. Beginning with Azure AD Connect version 1.4, the synchronization engine identifies Hybrid Azure AD join certificates, and will use the *cloudfilter* filter to prevent the computer object from synchronizing to Azure AD unless there’s a valid Hybrid Azure AD join certificate.
+Before this update, Azure AD Connect would synchronize to Azure AD any Computer that contained at least one valid certificate. Beginning with Azure AD Connect version 1.4, the synchronization engine identifies Hybrid Azure AD join certificates, and will use the *cloudfilter* filter to prevent the computer object from synchronizing to Azure AD unless there's a valid Hybrid Azure AD join certificate.
 
 Azure AD devices that were previously synchronized to AD, but don't have a valid Hybrid Azure AD join certificate, will be deleted by the synchronization engine using the filter `CloudFiltered=TRUE`.
 
@@ -64,8 +64,8 @@ non-expired certificate present, validates if the certificate was issued for the
 (i.e. Subject Name matches CN={ObjectGUID}).
 Before, Azure AD Connect would synchronize to Azure AD any Computer that contained at least one valid 
 certificate but starting on Azure AD Connect version 1.4, the sync engine can identify Hybrid 
-Azure AD join certificates and will ‘cloudfilter’ the computer object from synchronizing to Azure AD unless 
-there’s a valid Hybrid Azure AD join certificate.
+Azure AD join certificates and will 'cloudfilter' the computer object from synchronizing to Azure AD unless 
+there's a valid Hybrid Azure AD join certificate.
 Azure AD Device objects that were already synchronized to AD but do not have a valid Hybrid Azure AD join 
 certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
 .EXAMPLE
@@ -217,5 +217,4 @@ certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
 
 ## Next Steps
 
-- [Azure AD Connect Version history](/azure/active-directory/hybrid/reference-connect-version-history.md)
-
+- [Azure AD Connect Version history](/azure/active-directory/hybrid/reference-connect-version-history)
