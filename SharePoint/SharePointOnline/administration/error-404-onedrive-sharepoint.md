@@ -33,16 +33,14 @@ The error occurs because the site, file, or group has been renamed, moved, or de
 
 ## Resolution
 
-Use the Search feature to check if the file or site has been moved.
-
-If you can’t find it using Search, check with your SharePoint administrator. See [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b) for more information.
+If you can’t find the content you're looking for, check with your SharePoint administrator. See [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b) for more information.
 
 ## Actions for administrators
 
 Try to locate the site or file by using the following methods:
 <br/><br/>
 <details>
-<summary><b>Check the site recycle bin</b></summary>
+<summary><b>Check if the Home Page was deleted</b></summary>
 
 If the site home page was deleted, follow these steps:
 1. Browse to the site recycle bin by pasting this url into your browser: `https://tenantname.sharepoint.com/sites/sitename/_layouts/15/RecycleBin.aspx?view=5`
@@ -56,7 +54,7 @@ If you were not able to find the file in the recycle bin, it may have moved to t
 
 1. You should see **Can't find what you're looking for? Check the Second-stage recycle bin** at the bottom of the recycle bin page.
 1. Select **Second-stage recycle bin**.
-1. Highlight the file and select **Restore**. 
+1. Highlight the file and select **Restore**.
 
 If the page is not found in the second stage recycle bin, it has been permanently deleted.
 
@@ -68,7 +66,7 @@ For more information, see the following pages:
 </details>
 <br/>
 <details>
-<summary><b>Check the Deleted sites page</b></summary>
+<summary><b>Check if the site was deleted</b></summary>
 
 **For SharePoint**
 
@@ -98,10 +96,4 @@ If the user is trying to access the site from a saved Site URL or link to a spec
 - See the “To get a list of all redirects” section of [Manage site redirects](/sharepoint/manage-site-redirects) to determine which sites have changed URLs.
 
 1. If the Site was deleted, it can be restored from the SharePoint admin center. For more info, see [Restore deleted sites](/sharepoint/restore-deleted-site-collection).
-</details>
-<br/>
-<details>
-<summary>Check if the Home Page is checked out</summary>
-
-If the Home Page is checked out, you might encounter Error 404. Check the Home Page back in, and see if the error stops.
 </details>
