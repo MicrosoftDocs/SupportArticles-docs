@@ -11,7 +11,7 @@ ms.prod: azure
 
 ---
 
-# VM Extension Provisioning Errors in Virtual Machine Scale Sets
+# VM extension provisioning errors in Virtual Machine Scale Sets
 
 This article provides guidance on resolving **VMExtensionProvisioningError**, **VMExtensionHandlerNonTransientError**, or **VMExtensionProvisioningTimeout** errors that appear when you attempt to deploy, update, reimage, start, or scale a Virtual Machine Scale Set.
 
@@ -32,9 +32,7 @@ You see **VMExtensionProvisioningError**, **VMExtensionHandlerNonTransientError*
 
 A VM extension is hanging or has failed during the provisioning state.
 
-## Resolution
-
-### Get more information about extension failure
+## Get more information about extension failure
 
 To begin resolving this error, you should first determine which extension(s) and instance(s) are affected. To do so, run the following Azure command-line interface (Azure CLI) command:
 
@@ -44,7 +42,7 @@ az vmss list-instances --resource-group MyResourceGroup --name MyVmss --query "[
 
 The output of this command will display the provisioning states of the extensions on each instance. The following example output shows how this extension information is grouped by instance ID.
 
-:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with info grouped per instance.":::
+:::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-instances.png" alt-text="Screenshot of output with first instance highlighted.":::
 
 Within each section dedicated to a particular instance, the “extProvisioningState” list at the top displays the provisioning states of the extensions installed on that instance.  This list is followed by the “extension” list, which displays the names of the extensions in same corresponding order.
 
@@ -52,34 +50,34 @@ For example, in the following example output, the first provisioning state in th
 
 :::image type="content" source="media/vm-extension-provisioning-errors/provisioning-states-extensions-matched.png" alt-text="Screenshot of output with arrow from provisioning state to extension name":::
 
-### Attempt to scale out the Virtual Machine Scale Set
+## Attempt to scale out the Virtual Machine Scale Set
 
 If the extension has not failed on every instance, add new instances to the Virtual Machine Scale Set and see if the extension provisioning succeeds. If it succeeds, delete the instances on which the extension provisioning has failed.
 
-### Read logs on impacted instances
+## Read logs on impacted instances
 
 To gain further insight on the cause of the error, sign in to the affected instances. Depending on the OS of the Virtual Machine Scale Set and the impacted extension, navigate to the appropriate logs and review the impacted time frame:
 
-- **Windows Virtual Machine Scale Sets**: C:\WindowsAzure\logs\plugins\ExtensionName\Extension.log
-- **Linux Virtual Machine Scale Sets**: /var/log/plugins/ExtensionName/Extension.log
+- **Windows Virtual Machine Scale Sets**: *C:\WindowsAzure\logs\plugins\ExtensionName\Extension.log*
+- **Linux Virtual Machine Scale Sets**: */var/log/plugins/ExtensionName/Extension.log*
 
-### Verify that the failed extension is following best practices
+## Verify that the failed extension is following best practices
 
 If the extension is customizable, such as Custom Script Extension (CSE) or Desired State Configuration (DSC), verify that you are following all necessary pre-requisites and recommended best practices.
 
 - [Custom Script Extension Best Practices](/azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks)
 - [Desired State Configuration Prerequisites](/azure/virtual-machines/extensions/dsc-overview)
 
-### Reinstall the extension
+## Reinstall the extension
 
 1. On the **Extensions** blade of the Virtual Machine Scale Set, select the extension with the provisioning errors.
-2. Click **Uninstall**.
+1. Click **Uninstall**.
 
-:::image type="content" source="media/vm-extension-provisioning-errors/uninstall-extension.png" alt-text="Screenshot of extensions blade with the uninstall button highlighted":::
+   :::image type="content" source="media/vm-extension-provisioning-errors/uninstall-extension.png" alt-text="Screenshot of extensions blade with the uninstall button highlighted":::
 
-1. On the **Extensions** blade, click Add.
+1. On the **Extensions** blade, click **Add**.
 1. Select and re-install the same extension.
 
-### Contact support
+## Contact support
 
 If you’re unable to solve the problem, save the logs and [open a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
