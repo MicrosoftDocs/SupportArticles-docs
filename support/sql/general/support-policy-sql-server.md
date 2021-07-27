@@ -89,7 +89,7 @@ For more information about how the operating system vendors support the componen
 
 ## SQL Server running in Windows containers
 
-Windows container images for SQL Server 2016 and SQL Server 2017 are available in the docker hub. Windows container images are provided exclusively for development and testing. They are not supported for production use. These container images contain the Express and Developer editions of SQL Server.
+SQL Server deployments in Windows containers are not covered by support. For development and testing, create your own custom container images to work with SQL Server in Windows containers. Sample files are available on [GitHub](https://github.com/microsoft/mssql-docker/tree/master/windows) but are provided for reference only.
 
 ## SQL Server Containers running on container orchestrators
 
