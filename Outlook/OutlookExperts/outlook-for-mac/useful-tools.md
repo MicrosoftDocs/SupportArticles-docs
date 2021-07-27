@@ -33,7 +33,7 @@ The Outlook Search Repair tool repairs search results within Outlook.
 > 1. Choose **Apple menu**, then **System Preferences**, and then **Spotlight**.
 > 1. Select the **Privacy** tab.
 > 1. In Finder:
->     1. On the Go menu, select **Go to Folder...**
+>     1. On the Go menu, select **Go to Folder...**.
 >     1. Copy and paste the following location into the "Go to the folder:" dialog box and select **Go**:
 > 
 >        > ~/Library/Group Containers/UBF8T346G9.Office/Outlook/Outlook 15 Profiles/
@@ -42,6 +42,13 @@ The Outlook Search Repair tool repairs search results within Outlook.
 >     You must perform this step for any additional profile folders you have.
 > 
 > See the following article from Apple to learn more: [How to rebuild the Spotlight index on your Mac](https://support.apple.com/HT201716). 
+
+> [!Note]
+> If you are using Catalina, below are the setps to manually repair the search index by deleating your profile.
+> 1. Open Finder, then select Microsoft Outlook.
+> 1. Right-click on show package content and under shared support, look for Outlook profile manager.
+> 1. Look for your profile and delete it. 
+> 1. Restart the outlook and reconfigure your profile. After syncing, search will start working. 
 
 #### When to use the tool 
 
