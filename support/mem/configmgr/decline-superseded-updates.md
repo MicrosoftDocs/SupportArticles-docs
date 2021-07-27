@@ -13,7 +13,7 @@ If you are using standalone WSUS servers or an older version of configuration Ma
 
 ```powershell
 # ===============================================
-# Script to decline superseeded updates in WSUS.
+# Script to decline superseded updates in WSUS.
 # ===============================================
 # It's recommended to run the script with the -SkipDecline switch to see how many superseded updates are in WSUS and to TAKE A BACKUP OF THE SUSDB before declining the updates.
 # Parameters:
