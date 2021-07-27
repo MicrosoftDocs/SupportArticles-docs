@@ -58,7 +58,7 @@ Use the steps below to confirm that you are facing this issue, and to reset the 
     1. Expand Root Container
     2. Expand Top of information Store
 
-7. Locate and select the folder that appears missing in Outlook, and check the value of the `PR_ATTR_HIDDEN` to determine if it is set to **True**, as shown in the following figure:
+7. Locate and select the folder that appears missing in Outlook, and check the value of the `PR_ATTR_HIDDEN` to determine if it is set to `True`, as shown in the following figure:
 
    :::image type="content" source="media/default-folder-is-missing/check-the-value-of-pr_attr_hidden.jpg" alt-text="check the value of the PR_ATTR_HIDDEN" border="false":::
 
