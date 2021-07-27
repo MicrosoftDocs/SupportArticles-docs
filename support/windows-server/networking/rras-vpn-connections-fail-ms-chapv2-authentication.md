@@ -1,6 +1,6 @@
 ---
-title: LT2P/IPsec RAS VPN connections fail
-description: L2TP/IPsec VPN connections to a Windows RAS Server fail when using the MS-CHAPv2 authentication. Provides a resolution.
+title: VPN connections fail when using the MS-CHAPv2 authentication
+description: VPN connections to a Windows RAS Server fail when using the MS-CHAPv2 authentication. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,16 +13,16 @@ ms.reviewer: kaushika, BrCaton
 ms.prod-support-area-path: Remote access
 ms.technology: networking
 ---
-# LT2P/IPsec RAS VPN connections fail when using MS-CHAPv2
+# VPN connections fail when using MS-CHAPv2
 
-This article resolves the issue that L2TP/IPsec VPN connections to a Windows RAS Server fail when using the MS-CHAPv2 authentication.
+This article resolves the issue that VPN connections to a Windows RRAS Server fail when using the MS-CHAPv2 authentication.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2811487
 
 ## Symptoms
 
-L2TP/IPsec VPN connections to a Windows RAS Server fail when using the MS-CHAPv2 authentication method. Other symptoms include the end user may receive an error message like this one:
+VPN connections to a Windows RRAS Server fail when using the MS-CHAPv2 authentication method. Other symptoms include the end user may receive an error message like this one:
 
 > error 691 "The remote connection was denied because the user name and password combination you provided is not recognized, or the selected authentication protocol is not permitted on the remote access server.
 
@@ -32,7 +32,7 @@ Additionally, the domain user's bad password count can increment, resulting in a
 
 This issue can occur when the [LmCompatibilityLevel](/previous-versions/windows/it-pro/windows-2000-server/cc960646(v=technet.10)) settings on the authenticating DC have been modified from the defaults.
 
-`HKLM\SYSTEM\CurrentControlSet\Control\Lsa\LmCompatibilityLevel`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\LmCompatibilityLevel`
 
 For example, when you set this value to **5** (Send NTLMv2 response only. Refuse LM & NTLM), the DC won't accept any requests that use NTLM authentication. When MS-CHAP or MS-CHAPv2 are configured, RAS in Windows Server 2008 R2 will default to NTLM to hash the password. Because the DC only accepts NTLMv2, the request will be denied.
 

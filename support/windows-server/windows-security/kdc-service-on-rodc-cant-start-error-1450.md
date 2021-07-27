@@ -111,10 +111,10 @@ If the AD Recycle Bin feature is enabled, follow these steps.
 4. Reset the password of the RODC computer account (also known as the "machine account") by running the following command:
 
    ```cmd
-   netdom resetpwd /server: <RODC_Name> /USERD: administrator /Password:*
+   netdom resetpwd /server: <RWDC_Name> /USERD: administrator /PasswordD:*
    ```
 
-   In this command, \<*RODC_Name*> represents the server name of the RODC.
+   In this command, \<*RWDC_Name*> represents the server name of the RWDC.
 
    > [!NOTE]  
    > This command prompts you for the password of the Administrator account.

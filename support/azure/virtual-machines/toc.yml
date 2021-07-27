@@ -60,6 +60,8 @@
     items:
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
+    - name: Detailed SSH troubleshooting
+      href: detailed-troubleshoot-ssh-connection.md
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection
@@ -70,10 +72,10 @@
       href: linux-recovery-cannot-start-file-system-errors.md
     - name: Recover LVM configured VMs and no boot 
       href: chroot-logical-volume-manager.md
+    - name: Reset network interface for Azure Linux VM
+      href: reset-network-interface-azure-linux-vm.md
     - name: Troubleshoot fstab errors 
       href: linux-virtual-machine-cannot-start-fstab-errors.md
-    - name: Detailed SSH troubleshooting
-      href: detailed-troubleshoot-ssh-connection.md
   - name: Windows
     items:
     - name: Cannot RDP into Azure VM because of authentication errors
@@ -369,6 +371,8 @@
 - name: Remote troubleshooting tools
   href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
+  - name: VM Inspector for Azure Virtual Machines
+    href: vm-inspector-azure-virtual-machines.md
   - name: Serial Console
     items:
     - name: Overview
@@ -406,6 +410,10 @@
         href: troubleshoot-recovery-disks-windows.md
       - name: Azure Virtual Machine repair
         href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+      - name: Unlocking disks for offline repair
+        href: unlock-encrypted-disk-offline.md
+      - name: Repair unmanaged disks offline
+        href: unmanaged-disk-offline-repair.md
     - name: Linux
       items:
       - name: Portal
