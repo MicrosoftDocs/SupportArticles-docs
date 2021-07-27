@@ -8,7 +8,9 @@ ms.date: 7/18/2019
 audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- - CI 153997
 search.appverid:
 - SPO160
 - MET150
@@ -36,21 +38,8 @@ There are many scenarios which can prompt one of these messages. The most freque
 
 Follow the steps below depending on which area you are receiving the error:
 
-[When accessing a SharePoint site](#when-accessing-a-sharepoint-site)
-
-[When accessing a OneDrive site](#when-accessing-a-onedrive-site)
-
-[When an external user is accessing a site](#if-an-external-user-is-accessing-a-site)
-
-[When an external user accepts a SharePoint Online invitation by using another account](#when-an-external-user-accepts-a-sharepoint-online-invitation-by-using-another-account)
-
-[When accessing the "Access Requests" list](#when-accessing-the-access-requests-list)
-
-[When accessing a shared folder](#when-accessing-a-shared-folder)
-
-[When a user tries to approve an Approval Workflow task](#when-a-user-tries-to-approve-an-approval-workflow-task)
-
-### When accessing a SharePoint site
+<details>
+<summary><b>When accessing a SharePoint site</b></summary>
 
 1. Determine what <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
 
@@ -72,8 +61,10 @@ Follow the steps below depending on which area you are receiving the error:
       For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0`
    1. Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection**.
    1. Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
+</details>
 
-### When accessing a OneDrive site 
+<details>
+<summary><b>When accessing a OneDrive site</b></summary>
 
 - **If the user is the owner of the OneDrive site:**
   - This issue most frequently occurs when a user is deleted and re-created with the same user principal name (UPN). The new account is created by using a different Unique ID value. When the user tries to access a site collection or their OneDrive, the user has an incorrect ID. A second scenario involves directory synchronization with an Active Directory organizational unit (OU). If users have already signed into SharePoint, are moved to a different OU that is not currently synchronized with Office365 and then resynced with SharePoint, they may experience this problem.
@@ -110,8 +101,10 @@ Follow the steps below depending on which area you are receiving the error:
 For example, the full URL will resemble the following: `https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/people.aspx/membershipGroupId=0`
      - Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection**. 
      - Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
+</details>
 
-### If an external user is accessing a site
+<details>
+<summary><b>If an external user is accessing a site</b></summary>
 
 1. Determine what <a href="/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
 
@@ -145,15 +138,16 @@ For example, the full URL will resemble the following: `https://contoso-my.share
       For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0`
    1. Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection**.
    1. Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
+</details>
 
-
-### When an external user accepts a SharePoint Online invitation by using another account
+<details>
+<summary><b>When an external user accepts a SharePoint Online invitation by using another account</b></summary>
 
 To resolve this issue, determine which account accepted the invitation, remove the incorrect account if this is necessary, and then re-invite the user to the resource.
 
 Note Many examples in this article use \<contoso> as a placeholder. In your scenario, replace \<contoso> with the domain that you use for your organization.
 
-#### Determine which account has access as an external user
+**Determine which account has access as an external user**
 
 If you can access the site as the incorrect external user, follow these steps:
 
@@ -189,7 +183,7 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 8. If the address is incorrect, go to the "Remove the incorrect external user account" section.
 
-#### Remove the incorrect external user account
+**Remove the incorrect external user account**
 
 External users are managed from a site collection by site collection basis. An external user account will have to be removed from each site collection to which the account was given access. You can do this from the SharePoint Online user interface or through the SharePoint Online Management Shell, depending on your version of Office 365.
 
@@ -321,35 +315,36 @@ Next, you have to remove the account from Azure Active Directory. To do this, fo
 > [!NOTE]
 > Replace **jondoe_contoso.com#EXT#\@yourdomain.onmicrosoft.com** with the specific user in your scenario.
 
-#### Clear the browser cache
+**Clear the browser cache**
 
 SharePoint Online uses browser caching in several scenarios, including the in the People Picker. Even though a user was fully removed from the system, he or she may still remain in the browser cache. Clearing the browser cache resolves this issue. To do this for Internet Explorer, follow the steps given in [Viewing and deleting your browsing history](https://support.microsoft.com/help/17438).
 
 When you clear the cache, make sure that you also select the **Cookies and website data** option.
 
-#### Re-invite the external user
+**Re-invite the external user**
 
 After you follow these steps, re-invite the external user to the site by using the desired email address. To make sure that the end-user accepts with the appropriate email address, it is a best practice to copy the link in the invitation and then paste it into an InPrivate Browsing session. This makes sure that no cached credentials are used to accept the invitation.
 
-#### More information
+**More information**
 
 An external user invitation doesn't require that it be accepted by the email address to which it was first sent. It is a one-time invite. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
 
 For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user selects the link to accept the invite. However, based on the user's browser cookies, the user accidentally accepts the invite by using the incorrect identity.
 
 When the user signs in to the resource by using the user's external user account, the user receives the error that the user isn't found in the directory.
-
-### When accessing the "Access Requests" list
+</details>
+<details>
+<summary><b>When accessing the "Access Requests" list</b></summary>
 
 To resolve this issue, users must be either site collection administrators or be members of the Owners group for the site. The Owners group must also have permissions to access the **Access Requests** list. Use the following solutions as appropriate for your specific configuration.
 
-#### Site collection administrator
+**Site collection administrator**
 
 If an affected user should be a site collection administrator, go to the following Microsoft website for more information about how to manage administrators for your sites:
 
 [Manage site collection administrators](/sharepoint/manage-site-collection-administrators)
 
-#### Add the user to the Owners group for the site
+**Add the user to the Owners group for the site**
 
 If the user should be a site owner, you must add the user to the Owners group for the site. To do this, follow these steps:
 
@@ -365,7 +360,7 @@ If the user should be a site owner, you must add the user to the Owners group fo
 
 1. Test to verify that the user can now access the list and approve or decline requests.
 
-#### Make sure that the Owners group has permissions to the Access Requests list
+**Make sure that the Owners group has permissions to the Access Requests list**
 
 If the Owners group is changed or was removed from the **Access requests** list, you must add the Owners group permissions for the list. You must also make sure that the affected user is included in the Owners list. To do this, follow these steps:
 
@@ -404,15 +399,16 @@ If the Owners group is changed or was removed from the **Access requests** list,
 
 1. Follow the steps in the "Add the user to the Owners group for the site" section to make sure that the user is included in the Owners group.
 
-#### More information
+**More information**
 
 This issue occurs because only site collection administrators or users who are members of the Owners group for the site collection have permission to approve or decline pending requests in the **Access Requests** list. For situations in which users are members of the Owners group for the site, the Owners group must also have Full Control permissions to be able to access the **Access Requests** list.
 
 For more information about how to set up and manage access requests, go to [Set up and manage access requests](https://support.office.com/article/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3).
 
 For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
-
-### When accessing a shared folder
+</details>
+<details>
+<summary><b>When accessing a shared folder</b></summary>
 
 To work around this issue, use one of the following workarounds as appropriate for your situation:
 
@@ -423,23 +419,24 @@ To work around this issue, use one of the following workarounds as appropriate f
     > [!NOTE]
     > Other features such as publishing may require this feature to work correctly.
 
-#### More information
+**More information**
 
 When you share a folder with a user who can't access the parent folder or site, SharePoint assigns the user limited access to the parent items. Specifically, SharePoint lets the user access the folder without obtaining permission to access the parent folder and other items (other than limited access). However, after **Limited-access user permission lockdown mode** is enabled, the user doesn't have access to the folder because the necessary limited access permission on other items no longer works correctly. 
 
-#### What is "Limited Access" permission?
+**What is "Limited Access" permission?**
 
 The **Limited Access** permission level is unusual. It lets a user or group browse to a site page or library to access a specific content item without seeing the whole list. For example, when you share a single item in a list or library with a user who doesn't have permission to open or edit any other items in the library, SharePoint automatically grants limited access to the parent list. This lets the user see the specific item that you shared. In other words, the **Limited Access** permission level includes all the permissions that the user must have to access the required item.
 
 For more information about site collection features that includes **Limited-access user permission lockdown mode**, see [Enable or disable site collection features](https://support.office.microsoft.com/article/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04?correlationid=3fa0f19c-84e4-403d-9046-3c25d66fd867).
-
-### When a user tries to approve an Approval Workflow task
+</details>
+<details>
+<summary><b>When a user tries to approve an Approval Workflow task</b></summary>
 
 To resolve this issue, grant **Edit** access to the specific task list for the workflow to the affected user.
 
 Additionally, the user who is approving the item as part of the workflow is also required to have **Read** access to the item that's the target of the workflow.
 
-#### More information
+**More information**
 
 This behavior is by design. Users who try to approve a SharePoint 2010 Approval Workflow task, but who have only **Edit** permissions to the task list item, can't view the task's form page. The user must have at least **Read** access to the workflow task list.
 
