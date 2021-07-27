@@ -90,7 +90,7 @@ To avoid this situation completely, deploy the VM by using the swap configuratio
 
 
 ## Use cloud-init to configure a swap partition on a Linux VM
-This article shows you how to use [cloud-init](https://cloudinit.readthedocs.io) to configure the swap partition on various Linux distributions. The swap partition was traditionally configured by the Linux Agent (WALA) based on which distributions required one.  This document will outline the process for building the swap partition on demand during provisioning time using cloud-init.  For more information about how cloud-init works natively in Azure and the supported Linux distros, see [cloud-init overview](./linux/using-cloud-init.md)
+This article shows you how to use [cloud-init](https://cloudinit.readthedocs.io) to configure the swap partition on various Linux distributions. The swap partition was traditionally configured by the Linux Agent (WALA) based on which distributions required one.  This document will outline the process for building the swap partition on demand during provisioning time using cloud-init.  For more information about how cloud-init works natively in Azure and the supported Linux distros, see [cloud-init overview](azure/virtual-machines/linux/using-cloud-init)
 
 
 ## Create swap partition for Ubuntu based images
@@ -163,7 +163,7 @@ Filename                Type        Size    Used    Priority
 ## Next steps
 For additional cloud-init examples of configuration changes, see the following:
  
-- [Add an additional Linux user to a VM](./linux/cloudinit-add-user.md)
-- [Run a package manager to update existing packages on first boot](./linux/cloudinit-update-vm.md)
-- [Change VM local hostname](./linux/cloudinit-update-vm-hostname.md) 
-- [Install an application package, update configuration files and inject keys](tutorial-automate-vm-deployment.md)
+- [Add an additional Linux user to a VM](/azure/virtual-machines/linux/cloudinit-add-user)
+- [Run a package manager to update existing packages on first boot](/azure/virtual-machines/linux/cloudinit-update-vm)
+- [Change VM local hostname](/azure/virtual-machines/linux/cloudinit-update-vm-hostname) 
+- [Install an application package, update configuration files and inject keys](azure/virtual-machines/linux/tutorial-automate-vm-deployment)
