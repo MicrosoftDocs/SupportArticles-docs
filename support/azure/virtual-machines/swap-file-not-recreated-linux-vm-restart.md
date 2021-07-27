@@ -152,7 +152,7 @@ swapon -s
 
 The output from this command should look like this:
 
-```text
+```output
 Filename                Type        Size    Used    Priority
 /dev/sdb2  partition   2494440 0   -1
 ```
