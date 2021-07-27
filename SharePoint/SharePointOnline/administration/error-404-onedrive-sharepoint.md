@@ -76,7 +76,7 @@ The site might have been deleted. If so, restore the deleted site from the new S
 1. Select the site to restore.
 1. Select **Restore**.
 
-**Important**: If the deleted site was the root (top-level) SharePoint site, you’ll need restore the site and then replace the site using the steps in Replace your root site.
+**Important**: If the deleted site was the root (top-level) SharePoint site, you’ll need restore the site and then replace the site using the steps in [Replace your root site](../sites/url-that-resides-under-root-site-collection-is-broken.md).
 
 **For OneDrive**
 
