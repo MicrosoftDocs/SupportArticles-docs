@@ -165,5 +165,5 @@ For additional cloud-init examples of configuration changes, see the following:
  
 - [Add an additional Linux user to a VM](cloudinit-add-user.md)
 - [Run a package manager to update existing packages on first boot](./linux/cloudinit-update-vm.md)
-- [Change VM local hostname](cloudinit-update-vm-hostname.md) 
+- [Change VM local hostname](./linux/cloudinit-update-vm-hostname.md) 
 - [Install an application package, update configuration files and inject keys](tutorial-automate-vm-deployment.md)
