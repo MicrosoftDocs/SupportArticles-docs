@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4577868
 
 ## Symptoms
 
-On Linux virtual machines (VMs) that are provisioned by [cloud-init](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init) and that have the [Microsoft Azure Linux Agent (waagent)](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init#what-is-the-difference-between-cloud-init-and-the-linux-agent-wala) installed, you may discover that the swap file is not re-created after a restart.
+On Linux virtual machines (VMs) that are provisioned by [cloud-init](/azure/virtual-machines/linux/using-cloud-init) and that have the [Microsoft Azure Linux Agent (waagent)](/azure/virtual-machines/linux/using-cloud-init#what-is-the-difference-between-cloud-init-and-the-linux-agent-wala) installed, you may discover that the swap file is not re-created after a restart.
 
 ## Cause
 
@@ -90,7 +90,7 @@ To avoid this situation completely, deploy the VM by using the swap configuratio
 
 
 ## Use cloud-init to configure a swap partition on a Linux VM
-This article shows you how to use [cloud-init](https://cloudinit.readthedocs.io) to configure the swap partition on various Linux distributions. The swap partition was traditionally configured by the Linux Agent (WALA) based on which distributions required one.  This document will outline the process for building the swap partition on demand during provisioning time using cloud-init.  For more information about how cloud-init works natively in Azure and the supported Linux distros, see [cloud-init overview](azure/virtual-machines/linux/using-cloud-init)
+This article shows you how to use [cloud-init](https://cloudinit.readthedocs.io) to configure the swap partition on various Linux distributions. The swap partition was traditionally configured by the Linux Agent (WALA) based on which distributions required one.  This document will outline the process for building the swap partition on demand during provisioning time using cloud-init.  For more information about how cloud-init works natively in Azure and the supported Linux distros, see [cloud-init overview](/azure/virtual-machines/linux/using-cloud-init)
 
 
 ## Create swap partition for Ubuntu based images
@@ -166,4 +166,4 @@ For additional cloud-init examples of configuration changes, see the following:
 - [Add an additional Linux user to a VM](/azure/virtual-machines/linux/cloudinit-add-user)
 - [Run a package manager to update existing packages on first boot](/azure/virtual-machines/linux/cloudinit-update-vm)
 - [Change VM local hostname](/azure/virtual-machines/linux/cloudinit-update-vm-hostname) 
-- [Install an application package, update configuration files and inject keys](azure/virtual-machines/linux/tutorial-automate-vm-deployment)
+- [Install an application package, update configuration files and inject keys](/azure/virtual-machines/linux/tutorial-automate-vm-deployment)
