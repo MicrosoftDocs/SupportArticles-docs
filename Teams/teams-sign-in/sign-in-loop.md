@@ -20,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-When you try to sign in to Microsoft Teams in Microsoft Edge, Internet Explorer or Google Chrome, the site continually loops, and you can never sign in.
+When you try to sign in to Microsoft Teams in Microsoft Edge, Internet Explorer, Google Chrome, Mozilla Firefox, or Safari, the site continually loops, and you can never sign in.
 
 ## Cause
 
@@ -28,7 +28,7 @@ This issue occurs if your organization uses **Trusted Sites** in Internet Explor
 
 ## Resolution
 
-Change Microsoft Edge, Internet Explorer or Google Chrome settings using administrator rights or a Group Policy object (GPO).
+Change Microsoft Edge, Internet Explorer, Google Chrome, Mozilla Firefox, or Safari settings using administrator rights or a Group Policy object (GPO).
 
 ### Microsoft Edge
 
@@ -57,7 +57,7 @@ To change the settings by using GPO, follow these steps:
 
 1. In Windows Control Panel, open **Internet Options**.
 2. In the Internet Options window, select **Privacy** and **Advanced**.
-3. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and select the **Always allow session cookies** check box.
+3. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and then select the **Always allow session cookies** check box.
 
     :::image type="content" source="media/sign-in-loop/ie.png" alt-text="Screenshot of IE.":::
 
@@ -75,7 +75,7 @@ To change the settings by using GPO, follow these steps:
 ### Google Chrome
 
 1. In the Chrome **Settings** window, on the **Privacy and security** tab, select **Cookies and other site data**.
-2. Under **Sites that can always use cookies**, select **Add** and select the **Including third-party cookies on this site** check box.
+2. Under **Sites that can always use cookies**, select **Add**, and then select the **Including third-party cookies on this site** check box.
 3. Add the following sites:
 
     - [*.]microsoft.com
@@ -89,6 +89,30 @@ To change the settings by using GPO:
 
 1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
 2. Add the sites listed in step 3 above to the **Content settings** > **CookiesAllowedForUrls** setting.
+
+### Mozilla Firefox
+
+1. In the Firefox **Settings** window, select **the Privacy & Security** tab.
+2. Under **Cookies and Site Data**, select **Manage Exceptions**.
+3. In the **Address of website** text box, type the following sites, and then select **Allow**.
+
+    - `https://*.microsoft.com`
+    - `https://*.microsoftonline.com`
+    - `https://*.teams.skype.com`
+    - `https://*.teams.microsoft.com`
+    - `https://*.sfbassets.com`
+    - `https://*.skypeforbusiness.com`
+
+4. Select **Save Changes**.
+
+To change the settings by using GPO:
+
+1. [Download and install the Firefox administrative template](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
+2. Add the sites listed in step 3 above to the **Cookies** setting.
+
+### Safari
+
+If you want to use Teams in Safari, see [Teams preview won't open in Safari](https://support.microsoft.com/office/1aac0a7c-35a8-42c1-a7df-f674afe234df).
 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:
