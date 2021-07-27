@@ -1724,6 +1724,8 @@
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
       href: ./networking/system-compatibility-with-dnssec-enabled-root-server.md
+    - name: Overview of TCP/IP performance
+      href: ./networking/overview-of-tcpip-performance.md
     - name: PortQry version 2.0 features and functions
       href: ./networking/portqry-command-line-port-scanner-v2.md
     - name: Portqry.exe command-line utility
