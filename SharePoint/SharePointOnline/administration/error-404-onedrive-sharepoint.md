@@ -40,7 +40,7 @@ If you can’t find the content that you're looking for, check with your SharePo
 Try to locate the site or file by using the following methods:
 <br/><br/>
 <details>
-<summary><b>Check whether the home page was deleted</b></summary>
+<summary><b>Restore a deleted home page</b></summary>
 
 If the site home page was deleted, follow these steps:
 
@@ -88,11 +88,11 @@ For more information, see [Restore a deleted OneDrive](/onedrive/restore-deleted
 <details>
 <summary><b>Check whether the site was redirected</b></summary>
 
-If the user is trying to access the site from a saved site URL or a link to a specific site URL, it’s possible that the site URL was either changed or moved, or that the site was deleted.
+If the user is trying to access the site from a saved site URL or a link to a specific site URL, it’s possible that the site URL was changed or that the site was moved or deleted.
 
 If the Site URL was changed, a site redirect page should have been created. For more information, see [Manage site redirects](/sharepoint/manage-site-redirects).
 
-**Important:** 
+**Important:**
 - If the site was removed by using the steps in [To remove a redirect](/sharepoint/manage-site-redirects#to-remove-a-redirect), a "404" error can occur.
 - To determine which sites have new URLs, see the “To get a list of all redirects” section of [Manage site redirects](/sharepoint/manage-site-redirects).
 
