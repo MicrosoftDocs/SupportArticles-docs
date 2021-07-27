@@ -58,7 +58,7 @@ To resolve this problem, follow these steps:
   
     1. Add the following script to `/var/lib/cloud/scripts/per-boot`.
 
-        ```
+        ```bash
         #!/bin/sh
         if [ ! -f '/mnt/swapfile' ]; then
         fallocate --length 2GiB /mnt/swapfile
