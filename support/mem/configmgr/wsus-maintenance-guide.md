@@ -168,7 +168,7 @@ If you are using Configuration Manager current branch version 1906 or a later ve
 
 When you use this option, you can see how many updates were declined by reviewing the WsyncMgr.log file after the synchronization process finishes. If you use this option, you don't need to use the script described later in this section (either by manually running it or by setting up as task to run it on a schedule).
 
-If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdatesWithExclusionPeriod.ps1.txt). To download the script, right-click the link, and then select **Save target as...**. Download the script, remove the `.txt` file extension, and save the file with a `.PS1` extension.
+If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](decline-superseded-updates.md). Copy and save the script as a *Decline-SupersededUpdatesWithExclusionPeriod.ps1* script file.
 
 > [!NOTE]
 > This script is provided as is. It should be fully tested in a lab before you use it in production. Microsoft makes no guarantees regarding the use of this script in any way. Always run the script with the `-SkipDecline` parameter first, to get a summary of how many superseded updates will be declined.
@@ -424,7 +424,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 4. Set any other conditions or settings you would like to tweak as well. When you save the task, you may be prompted for credentials of the **Run As** user.
 
-5. You can also use these steps to configure the [Decline-SupersededUpdatesWithExclusionPeriod.ps1](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdates.txt) script to run every three months. I usually set this script to run before the other cleanup steps, but only after I have run it manually and ensured it completed successfully. I run at 12:00 AM on the first Sunday every three months.
+5. You can also use these steps to configure the [Decline-SupersededUpdatesWithExclusionPeriod.ps1](decline-superseded-updates.md) script to run every three months. I usually set this script to run before the other cleanup steps, but only after I have run it manually and ensured it completed successfully. I run at 12:00 AM on the first Sunday every three months.
 
 ### Setting up the SUSDB reindex for WID using SQLCMD and Task Scheduler
 
