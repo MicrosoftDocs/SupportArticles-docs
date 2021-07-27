@@ -2,9 +2,9 @@
 title: Conversation history doesn't show in conversation window
 description: Describes an issue in which you can't see the previous chat history in Skype for Business. Provide a workaround.
 author: v-charloz
-ms.author: v-charloz
+ms.author: v-chazhang
 manager: dcscontentpm
-ms.service: skype-for-business-itpro
+ms.prod: skype-for-business-itpro
 localization_priority: Normal
 search.appverid: 
 - MET150
