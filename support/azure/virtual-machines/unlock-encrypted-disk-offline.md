@@ -134,7 +134,7 @@ By using this procedure, you manually create a VM that has the OS disk of the so
     >[!IMPORTANT]
     >Make sure that you add the disk during the VM creation. It is only during VM creation that encryption settings are detected. This enables a volume that contains the BEK to be added automatically.
 
-5. After the repair VM is created, sign in to the VM, and open Disk Management (Diskmgmt.msc). Within Disk Management, locate the BEK volume. By default, no drive letter is assigned to this volume.
+5. After the repair VM is created, sign in to the VM, and open Disk Management (*Diskmgmt.msc*). Within Disk Management, locate the BEK volume. By default, no drive letter is assigned to this volume.
 :::image type="content" source="media/unlock-encrypted-disk-offline/find-bek-volume.png" alt-text="Screenshot of disk management with bek volume highlighted":::
 
 6. To assign a drive letter to the BEK volume, right-click the BEK volume, and then select **Change Drive Letter and Paths**.
@@ -151,13 +151,13 @@ By using this procedure, you manually create a VM that has the OS disk of the so
 
 9. To unlock the encrypted disk, you must have the .bek file name within the BEK volume. However, by default, the files in the BEK volume are hidden. At a command prompt, enter the following command to show the hidden files:
 
-    ```dos
+    ```console
     dir <DRIVE LETTER ASSIGNED TO BEK VOLUME>: /a:h /b /s
     ```
 
     For example, if the drive letter that’s assigned to the BEK Volume is H, you would enter the following command:
 
-    ```dos
+    ```console
     dir H: /a:h /b /s
     ```
 
@@ -297,7 +297,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 9. Select **Run Script** to run the script.  
 10. In the output, look for the value beneath **DiskEncryptionKeyFileName** for the name of the BEK file.
 
-    In the following example output, the BEK file name (secret name + the “.BEK” file extension) is AB4FE364-4E51-4034-8E09-0087C3D51C18.BEK. Record this value because it will be used in the next step. (If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the repair VM.)
+    In the following example output, the BEK file name (secret name + the “.BEK” file extension) is *AB4FE364-4E51-4034-8E09-0087C3D51C18.BEK*. Record this value because it will be used in the next step. (If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the repair VM.)
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/show-wrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a wrapped bek.":::
 
@@ -324,12 +324,12 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
     [System.IO.File]::WriteAllBytes($path,$bekFileBytes)
     ```
 
-3. In the PowerShell ISE window, select **Run Script**. If the script runs successfully, there will be no output or completion message. However, new file will be created in the C:\BEK folder. (The C:\BEK folder must already exist.)
+3. In the PowerShell ISE window, select **Run Script**. If the script runs successfully, there will be no output or completion message. However, new file will be created in the *C:\BEK* folder. (The *C:\BEK* folder must already exist.)
 4. Skip to [Verify that the script has completed successfully](#verify-that-the-script-ran-successfully).
 
 #### Download and unwrap the BEK
 
-1. On the repair VM, create a folder named “BEK” (without the quotation marks) in the root of the C volume.
+1. On the repair VM, create a folder named “*BEK*” (without the quotation marks) in the root of the C volume.
 2. Record the following values in Notepad. You will be prompted to supply them when the script runs.
 
     - **secretUrl**. This is the URL of the secret that’s stored in the key vault. A valid secret URL uses the following format:
@@ -349,14 +349,14 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
 3. Navigate [to the following page](https://gist.github.com/ShridharParameshwarBhat/5a4f439afdb99ec4730e481b91bcb795) to download the script that’s used to generate the BEK file for unlocking the encrypted disk.
 4. On the page, select **Raw**.
-5. Copy and paste the contents of the script into an empty script pane in an elevated PowerShell ISE window in the repair VM. 
+5. Copy and paste the contents of the script into an empty script pane in an elevated PowerShell ISE window in the repair VM.
 6. Select **Run Script**.
 7. When you’re prompted, supply the values that you recorded before you ran the script. If you are prompted by an Untrusted Repository message, select **Yes to All**.
-If the script runs successfully, a new file will be created in the C:\BEK folder. (This folder must already exist.)
+If the script runs successfully, a new file will be created in the *C:\BEK* folder. (This folder must already exist.)
 
 #### Verify that the script ran successfully
 
-1. Navigate to the C:\BEK folder on your local computer and locate the new output file.
+1. Navigate to the *C:\BEK* folder on your local computer and locate the new output file.
 2. Open the file in Notepad. If the script ran correctly, you will find the phrase **BitLocker Extension Key Protector** on the top line of the file if you scroll to the right.
 :::image type="content" source="media/unlock-encrypted-disk-offline/verify-script.png" alt-text="A screenshot of a text file open in notepad, with the words Bitlocker Extension Key Protector highlighted.":::
 
@@ -374,13 +374,13 @@ You are now ready to unlock the encrypted disk.
     manage-bde -unlock <ENCRYPTED DRIVE LETTER>: -RecoveryKey <.BEK FILE PATH>
     ```
 
-    For example, if the encrypted drive is F and the BEK file name is “DiskEncryptionKeyFileName.BEK,” you would run the following command:
+    For example, if the encrypted drive is F and the BEK file name is “*DiskEncryptionKeyFileName.BEK*,” you would run the following command:
 
     ```console
     manage-bde -unlock F: -RecoveryKey C:\BEK\DiskEncryptionKeyFileName.BEK
     ```
 
-    If the encrypted drive is F and the BEK file name is “EF7B2F5A-50C6-4637-9F13-7F599C12F85C.BEK,” you would run the following command:
+    If the encrypted drive is F and the BEK file name is “*EF7B2F5A-50C6-4637-9F13-7F599C12F85C.BEK*,” you would run the following command:
 
     ```console
     manage-bde -unlock F: -RecoveryKey C:\BEK\EF7B2F5A-50C6-4637-9F13-7F599C12F85C.BEK
@@ -395,7 +395,7 @@ You are now ready to unlock the encrypted disk.
 3. Now that you can access the volume, you can do troubleshooting and mitigation as necessary, for example, by reading logs or running a script.
 
     >[!IMPORTANT]
-    >The unlocking process gives you access to the disk, but *it does not decrypt the disk*. The disk remains encrypted after you unlock it. If you need to decrypt the disk, use the command *[manage-bde -off [volume]](/windows-server/administration/windows-commands/manage-bde-off)* to begin the decryption process and *[manage-bde [drive] -status](/windows-server/administration/windows-commands/manage-bde-status)* to check the progress of the decryption.
+    >The unlocking process gives you access to the disk, but *it does not decrypt the disk*. The disk remains encrypted after you unlock it. If you need to decrypt the disk, use the command **[manage-bde [volume] -off](/windows-server/administration/windows-commands/manage-bde-off)** to begin the decryption process and **[manage-bde [drive] -status](/windows-server/administration/windows-commands/manage-bde-status)** to check the progress of the decryption.
 
 4. When repairs are complete, and if the disk is managed, you can proceed to [Replace the source VM’s OS disk (managed disks)](#replace-the-source-vms-os-disk-managed-disks). If instead the disk is unmanaged, you can use the CLI-based steps described here: [Replace the OS disk on the source VM](unmanaged-disk-offline-repair.md#replace-the-os-disk-on-the-source-vm)
 
