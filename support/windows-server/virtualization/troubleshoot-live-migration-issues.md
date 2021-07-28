@@ -15,14 +15,38 @@ ms.technology: hyper-v
 ---
 # Troubleshoot live migration issues
 
-This article provides information on solving the problem of live migration in Windows Server 2016.
+This article provides information on solving the issues when live migrating Virtual Machines.
 
-_Applies to:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server  
 _Original KB number:_ &nbsp; 4558514
 
-## Summary
+## Basic troubleshooting checklist
 
-This article lists live migration issues in Windows Server 2016.
+- Check the hosts are at the same level of patching and if they can update to the latest rollup 
+- Update the BIOS, firmware and 3rd party drivers 
+- Check if the Virtual Machines have the latest matching integration services 
+- Check if the migration is authorized on each side 
+- Check if the protocol used is identical on each side 
+- Check if the TCP Port 6600 and 3343 (for clustering) are listening on both sides
+- Check Compatibilities issues by running a **Compare-VM** command. Provide the name of the VM and the destination host. Here’s an example: 
+```powershell
+PS C:\> Compare-VM -Name <vm_name> -DestinationHost <host_name>
+```
+- Check if no group policy object is preventing the migration from occurring. Verify that the following policies have at least the default settings.
+    - Open GPEDIT.MSC and navigate to **Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**  
+    Create Symbolic Links  
+    Administrators  
+    NT VIRTUAL MACHINE\Virtual Machines  
+    Log on as a service  
+    NT SERVICE\ALL SERVICES  
+    NT VIRTUAL MACHINE\Virtual Machines         
+- Check for the antivirus exclusions. For more information, see [Recommended antivirus exclusions for Hyper-V hosts]( https://docs.microsoft.com/troubleshoot/windows-server/virtualization/antivirus-exclusions-for-hyper-v-hosts)  
+- Check corruption of the Registry.pol   
+	*C:\Windows\System32\GroupPolicy\Machine\Registry.pol*   
+	Open it in notepad, it must start with “PReg” signature.  
+- Compare permissions on the folders containing the virtual machines files with a working host with the same operating system level.
+
+Next steps, below you can find the Event IDs encountered during live migration issue:
 
 ## Event ID 21502
 
