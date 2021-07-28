@@ -81,6 +81,6 @@ Error 403 can occur if the user is trying to access a OneDrive site that is not 
 <details>
 <summary><b>Access another user's OneDrive data</b></summary>
 
-If the user is trying to access another user's OneDrive data, such as a former employee's, you can grant permissions to the user by following the steps on the page [Step 4 - Give another employee access to OneDrive and Outlook data](/microsoft-365/admin/add-users/remove-former-employee-step-4?view=o365-worldwide#access-a-former-users-onedrive-documents).
+If the user is trying to access another user's OneDrive data, such as a former employee's, you can grant permissions to the user by following the steps on the page [Step 4 - Give another employee access to OneDrive and Outlook data](/microsoft-365/admin/add-users/remove-former-employee-step-4).
 
 </details>
