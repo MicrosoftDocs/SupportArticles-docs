@@ -74,7 +74,9 @@ As an admin, visit the [Service Health](https://portal.office.com/adminportal/ho
 <details>
 <summary><b>Provision the OneDrive site</b></summary>
 
-Error 403 can occur if the user is trying to access a OneDrive site that is not provisioned. Provision the site using the [Request-SPOPersonalSite](/powershell/module/sharepoint-online/request-spopersonalsite) cmdlet.
+Error 403 can occur if the user is trying to access a OneDrive site that is not provisioned. Have the user attempt to navigate to the OneDrive tile from the Microsoft 365 Portal.
+
+If that does not work, provision the site using the [Request-SPOPersonalSite](/powershell/module/sharepoint-online/request-spopersonalsite) cmdlet.
 
 </details>
 <br/>
