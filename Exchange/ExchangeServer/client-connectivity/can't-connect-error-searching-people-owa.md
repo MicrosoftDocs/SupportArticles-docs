@@ -36,7 +36,7 @@ Install the English language pack using the corresponding language .cab files fr
 
 1. From a Command prompt, run the following command:
 
-    ```command
+    ```console
     intl.cpl
     ```
 
