@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting guide on TCP/IP performance issues
+title: TCP/IP performance known issues
 description: Describes several TCP/IP performance known issues about slow throughput and underlying networks.
 ms.date: 07/28/2021
 author: v-lianna
@@ -38,7 +38,7 @@ netsh int tcp set global autotuninglevel=normal
 To check if the autotuning level is enabled, use the following command:
 
 ```console
-Netsh int tcp show global
+netsh int tcp show global
 ```
 
 :::image type="content" source="media/tcpip-performance-known-issues/check-autotuning-level-command-prompt.png" alt-text="Command Prompt command to check the autotunig level.":::
@@ -54,7 +54,7 @@ Get-NetTCPSetting | Set-NetTCPSetting -AutoTuningLevelLocal Normal
 To check if the autotuning level is enabled, use the following cmdlet:
 
 ```powershell
-Get-NetTCPSetting | format-list SettingName,Autotuninglevel*
+Get-NetTCPSetting | Format-List SettingName,Autotuninglevel*
 ```
 
 :::image type="content" source="media/tcpip-performance-known-issues/check-autotuning-level-powershell.png" alt-text="PowerShell cmdlet for checking the autotuning level.":::
