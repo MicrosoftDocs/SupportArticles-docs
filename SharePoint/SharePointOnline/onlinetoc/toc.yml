@@ -233,6 +233,8 @@
     items:
     - name: '"Access Denied due to organizational policies" error'
       href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
+    - name: Error 403 Forbidden in OneDrive or SharePoints
+      href: ../sharing-and-permissions/error-403-forbidden.md
     - name: Error when trying to access SharePoint Online or OneDrive for Business
       href: ../sharing-and-permissions/access-denied-sharepoint-error.md
     - name: Error when an external user tries to access SharePoint Online or OneDrive for Business
