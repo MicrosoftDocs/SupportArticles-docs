@@ -1718,6 +1718,8 @@
       href: ./networking/network-monitor-3.md
     - name: IP and default gateway settings are assigned incorrectly
       href: ./networking/ip-default-gateway-settings-assigned-incorrectly.md
+    - name: Known issues of TCP/IP performance
+      href: ./networking/tcpip-performance-known-issues.md
     - name: Multiple default gateways cause connectivity problems
       href: ./networking/connectivity-issues-multiple-default-gateways.md
     - name: Net Commands Operating Systems
