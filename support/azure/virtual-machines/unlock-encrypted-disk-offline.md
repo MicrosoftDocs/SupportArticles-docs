@@ -395,7 +395,7 @@ You are now ready to unlock the encrypted disk.
 3. Now that you can access the volume, you can do troubleshooting and mitigation as necessary, for example, by reading logs or running a script.
 
     >[!IMPORTANT]
-    >The unlocking process gives you access to the disk, but *it does not decrypt the disk*. The disk remains encrypted after you unlock it. If you need to decrypt the disk, use the command **[manage-bde [volume] -off](/windows-server/administration/windows-commands/manage-bde-off)** to begin the decryption process and **[manage-bde [drive] -status](/windows-server/administration/windows-commands/manage-bde-status)** to check the progress of the decryption.
+    >The unlocking process gives you access to the disk, but *it does not decrypt the disk*. The disk remains encrypted after you unlock it. If you need to decrypt the disk, use the command **[manage-bde \<volume\> -off](/windows-server/administration/windows-commands/manage-bde-off)** to begin the decryption process and **[manage-bde \<drive\> -status](/windows-server/administration/windows-commands/manage-bde-status)** to check the progress of the decryption.
 
 4. When repairs are complete, and if the disk is managed, you can proceed to [Replace the source VM’s OS disk (managed disks)](#replace-the-source-vms-os-disk-managed-disks). If instead the disk is unmanaged, you can use the CLI-based steps described here: [Replace the OS disk on the source VM](unmanaged-disk-offline-repair.md#replace-the-os-disk-on-the-source-vm)
 
