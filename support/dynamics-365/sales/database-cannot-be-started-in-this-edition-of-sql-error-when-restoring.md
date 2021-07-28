@@ -37,6 +37,9 @@ Be sure to have a database backup of the `'Org_MSCRM'` before performing the fol
 2. Run the following script against the restored database.
 
     ````sql
+    IF OBJECT_ID('tempdb..##indexesScript', 'U') IS NOT NULL
+    DROP TABLE ##indexesScript
+    
     IF EXISTS 
     (
        SELECT
@@ -98,7 +101,7 @@ Be sure to have a database backup of the `'Org_MSCRM'` before performing the fol
                 ELSE
                    ' ' 
              END
-             as Script INTO # indexesScript 
+             as Script INTO ##indexesScript 
           FROM
              sys.indexes ind 
              JOIN
@@ -111,13 +114,13 @@ Be sure to have a database backup of the `'Org_MSCRM'` before performing the fol
              SELECT
                 * 
              FROM
-                # indexesScript 
+                ##indexesScript 
                 DECLARE @recreateScript nvarchar(max) 
                 DECLARE indScript CURSOR FOR 
                 SELECT
                    Script 
                 FROM
-                   # indexesScript OPEN indScript FETCH NEXT 
+                   ##indexesScript OPEN indScript FETCH NEXT 
                 FROM
                    indScript INTO @recreateScript WHILE @@FETCH_STATUS = 0 
                    BEGIN
@@ -137,7 +140,7 @@ Be sure to have a database backup of the `'Org_MSCRM'` before performing the fol
                 FROM
                    indScript INTO @recreateScript 
                       END
-                      DROP PARTITION SCHEME AuditPScheme DROP PARTITION FUNCTION AuditPFN CLOSE indScript DEALLOCATE indScript DROP TABLE # indexesScript 
+                      DROP PARTITION SCHEME AuditPScheme DROP PARTITION FUNCTION AuditPFN CLOSE indScript DEALLOCATE indScript DROP TABLE ##indexesScript 
                    END
     ```
 
