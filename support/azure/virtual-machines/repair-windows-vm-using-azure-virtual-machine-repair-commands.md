@@ -81,6 +81,8 @@ For additional documentation and instructions, see [az vm repair](/cli/azure/ext
    ```azurecli-interactive
    az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password 'password!234' --enable-nested --verbose
    ```
+>[!NOTE]
+>If the VM is encrypted by Azure Disk Encryption (ADE), use `--unlock-encrypted-vm` to unlock the disk. See the "Confirm that ADE is enabled on the disk" section in [Unlocking an encrypted disk for offline repair](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/unlock-encrypted-disk-offline#confirm-that-ade-is-enabled-on-the-disk) to confirm if the disk is ADE encrypted.
 
 4. Run `az vm repair run`. This command will run the specified repair script on the attached disk via the repair VM. If the troubleshooting guide you are using specified a run-id please use it here, otherwise you can use `az vm repair list-scripts` to see available repair scripts. The Resource Group and VM name used here are for the non-functional VM used in step 3. Additional information about the repair scripts can be found in the [repair script library](https://github.com/Azure/repair-script-library).
 
