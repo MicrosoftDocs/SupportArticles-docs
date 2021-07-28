@@ -86,21 +86,21 @@ You can learn the ADE version number in the Azure portal by opening the properti
 
 :::image type="content" source="media/unlock-encrypted-disk-offline/ade-extension-version.png" alt-text="Screenshot of the extensions blade showing azure disk encryption is version 2.":::
 
-If you determine that your disk uses ADE version 1 (dual-pass encryption), you can go to [Manual method to unlock an encrypted disk on a repair VM (Method 3)](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3).
+If you determine that your disk uses ADE version 1 (dual-pass encryption), you can go to [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
 ### Determine whether the OS disk is managed or unmanaged
 
 If you don’t know whether the OS disk is managed or unmanaged, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 
-If you know that the OS disk is an unmanaged disk, go to [Manual method to unlock an encrypted disk on a repair VM (Method 3)](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3).
+If you know that the OS disk is an unmanaged disk, go to [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
 ### Select the method to attach the disk to a repair VM and unlock the disk
 
-You should choose one of three methods to attach the disk to a repair VM and unlock the disk: the [automated method](#automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-1), the [semi-automated method](#semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-2), or the [manual method](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3). 
+You should choose one of three methods to attach the disk to a repair VM and unlock the disk:
 
-- If you have determined the disk is managed and encrypted by using ADE version 2 or later (single-pass encryption), and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use the [Automated method to unlock an encrypted disk on a repair VM (Method 1)](#automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-1).
-- If your disk is both managed and encrypted by using ADE version 2 or later (single-pass encryption), but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use the [Semi-automated method to unlock an encrypted disk on a repair VM (Method 2)](#semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-2). (Another reason to choose this method is if you lack the permissions to create a resource group in Azure.)
-- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use the [Manual method to unlock an encrypted disk on a repair VM (Method 3)](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3).
+- If you have determined the disk is managed and encrypted by using ADE version 2 or later (single-pass encryption), and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use [Resolution method 1: Automated method to unlock an encrypted disk on a repair VM](#resolution-method-1-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
+- If your disk is both managed and encrypted by using ADE version 2 or later (single-pass encryption), but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM](#resolution-method-2-semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm). (Another reason to choose this method is if you lack the permissions to create a resource group in Azure.)
+- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
 ## Resolution method 1: Automated method to unlock an encrypted disk on a repair VM
 
@@ -109,7 +109,7 @@ This method relies on [az vm repair](/cli/azure/vm/repair) commands to automatic
 To repair the VM by using this automated method, see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
 
 >[!NOTE]
->If Automatic troubleshoot fails or the customer does not have permissions, proceed with the [semi-automated resolution](#semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-2).
+>If Automatic troubleshoot fails or the customer does not have permissions, proceed with [Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM](#resolution-method-2-semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
 ## Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM
 
