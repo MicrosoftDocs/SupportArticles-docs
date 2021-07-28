@@ -1,5 +1,5 @@
 ---
-title: The execution of cmdlet Disable-Mailbox failed error
+title: Litigation Hold mailbox doesn't turn into an inactive mailbox after license removal
 description: Fixes an issue in which a Litigation Hold enabled mailbox doesn't turn into an inactive mailbox after the license is removed.
 author: v-charloz
 ms.author: v-chazhang
@@ -39,7 +39,7 @@ Turn the Litigation Hold enabled mailbox into an inactive mailbox by following t
 
 If your organization synchronizes user accounts to Microsoft 365 from a local Active Directory environment, you need to delete the user account from local Active Directory or delete the account from the scope of the synchronization.
 
-## More Information
+## More information
 
 - [Remove-ADUser](/powershell/module/activedirectory/remove-aduser)
 - [Create an Organizational Unit (OU) in an Azure Active Directory Domain Services managed domain](/azure/active-directory-domain-services/create-ou)
