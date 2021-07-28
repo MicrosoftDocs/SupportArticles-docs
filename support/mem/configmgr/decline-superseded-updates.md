@@ -9,26 +9,26 @@ ms.author: v-six
 ---
 # PowerShell script to decline superseded updates in WSUS
 
-If you are using standalone WSUS servers or an older version of configuration Manager, you can manually decline superseded updates by using the WSUS console. Or you can run the following PowerShell script. For some common questions about WSUS maintenance for Configuration Manager environments, see [the complete guide to WSUS and Configuration Manager SUP maintenance](wsus-maintenance-guide.md).
+If you are using standalone Windows Server Update Services (WSUS) servers or an older version of Configuration Manager, you can manually decline superseded updates by using the WSUS console. Or you can run the following PowerShell script. For common questions about WSUS maintenance for Configuration Manager environments, see [the complete guide to WSUS and Configuration Manager SUP maintenance](wsus-maintenance-guide.md).
 
 ```powershell
 # ===============================================
 # Script to decline superseded updates in WSUS.
 # ===============================================
-# It's recommended to run the script with the -SkipDecline switch to see how many superseded updates are in WSUS and to TAKE A BACKUP OF THE SUSDB before declining the updates.
+# We recommend that you run the script together with the -SkipDecline switch to see how many superseded updates are in WSUS. Also, you should MAKE A BACKUP OF THE SUSDB before you decline the updates.
 # Parameters:
 
-# $UpdateServer             = Specify WSUS Server Name
-# $UseSSL                   = Specify whether WSUS Server is configured to use SSL
-# $Port                     = Specify WSUS Server Port
-# $SkipDecline              = Specify this to do a test run and get a summary of how many superseded updates we have
-# $DeclineLastLevelOnly     = Specify whether to decline all superseded updates or only last level superseded updates
-# $ExclusionPeriod          = Specify the number of days between today and the release date for which the superseded updates must not be declined. Eg, if you want to keep superseded updates published within the last 2 months, specify a value of 60 (days)
+# $UpdateServer             = Specify WSUS server name.
+# $UseSSL                   = Specify whether WSUS server is configured to use SSL.
+# $Port                     = Specify WSUS server port.
+# $SkipDecline              = Specify this to do a test run and get a summary of how many superseded updates we have.
+# $DeclineLastLevelOnly     = Specify whether to decline all superseded updates or only last level superseded updates.
+# $ExclusionPeriod          = Specify the number of days between today and the release date for which the superseded updates must not be declined. For example, if you want to keep superseded updates that were published within the last two months, specify a value of 60 (days).
 
 
 # Supersedence chain could have multiple updates. 
 # For example, Update1 supersedes Update2. Update2 supersedes Update3. In this scenario, the Last Level in the supersedence chain is Update3. 
-# To decline only the last level updates in the supersedence chain, specify the DeclineLastLevelOnly switch
+# To decline only the last level updates in the supersedence chain, specify the -DeclineLastLevelOnly switch.
 
 # Usage:
 # =======
@@ -45,7 +45,7 @@ If you are using standalone WSUS servers or an older version of configuration Ma
 # To decline only Last Level superseded updates on the WSUS Server using SSL
 # Decline-SupersededUpdates.ps1 -UpdateServer SERVERNAME -UseSSL -Port 8531 -DeclineLastLevelOnly
 
-# To decline all superseded updates on the WSUS Server using SSL but keep superseded updates published within the last 2 months (60 days)
+# To decline all superseded updates on the WSUS Server using SSL but keep superseded updates that were published within the last two months (60 days)
 # Decline-SupersededUpdates.ps1 -UpdateServer SERVERNAME -UseSSL -Port 8531 -ExclusionPeriod 60
 
 
