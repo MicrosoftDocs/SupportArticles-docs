@@ -15,7 +15,7 @@ ms.technology: networking
 ---
 # Troubleshooting TCP/IP performance issues about underlying network
 
-When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues.
+When the throughput falls below a given [baseline](overview-of-tcpip-performance.md#how-to-create-a-baseline), use a packet capturing tool to take a network trace and detect network issues.
 
 ## Use the ctsTraffic tool to analyze the network trace
 
@@ -59,3 +59,8 @@ For more information, see [Network-Related Performance Counters](/windows-server
 
 > [!NOTE]
 > Customize RSS/VMMQ only for troubleshooting and with a full understanding of the operation.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn more about overview of TCP/IP performance](overview-of-tcpip-performance.md)

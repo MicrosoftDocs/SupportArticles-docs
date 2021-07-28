@@ -122,7 +122,7 @@ To get a packet level log analysis, check underlying network issues by using a n
         > [!NOTE]
         > Multiple captures might be required while using the `netsh trace` command.
 
-2. Run the CTStraffic.exe tool to generate a `.csv` file.
+2. Run the CTStraffic.exe tool to generate a [.csv file](troubleshooting-tcpip-performance-underlying-network).
 3. Stop the logging. For Windows built-in capturing tool, type `NETSH TRACE STOP` in Command Prompt as an administrator.
 
 ### Analyze the capture file
@@ -157,3 +157,8 @@ Here's an example showing how to analyze a filtered result. In this scenario, th
     On the server, only one packet or the acknowledgment of the given sequence is dropped, as shown in the following result:
 
     :::image type="content" source="media/tcpip-performance-known-issues/tcp-sequence-server-side.png" alt-text="The TCP sequence from the server side.":::
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn more about overview of TCP/IP performance](overview-of-tcpip-performance.md)

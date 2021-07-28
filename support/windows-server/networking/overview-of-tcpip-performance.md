@@ -111,3 +111,11 @@ Here are the steps to measure throughput and create a baseline:
     In this example, the throughput is almost 19 Gb/s and is calculated as follows:
 
     (85,899,349,200 bytes/36.678 seconds) * 8 = 18,735,885,097.33355 (bits/second)
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn more about troubleshooting TCP/IP performance issues about underlying network](troubleshooting-tcpip-performance-underlying-network.md)
+
+> [!div class="nextstepaction"]
+> [Learn more about known issues of TCP/IP performance](tcpip-performance-known-issues.md)
