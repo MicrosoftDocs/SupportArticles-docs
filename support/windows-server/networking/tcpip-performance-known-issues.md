@@ -122,7 +122,7 @@ To get a packet level log analysis, check underlying network issues by using a n
         > [!NOTE]
         > Multiple captures might be required while using the `netsh trace` command.
 
-2. Run the CTStraffic.exe tool to generate a [.csv file](troubleshooting-tcpip-performance-underlying-network).
+2. Run the CTStraffic.exe tool to generate a [.csv file](troubleshooting-tcpip-performance-underlying-network.md).
 3. Stop the logging. For Windows built-in capturing tool, type `NETSH TRACE STOP` in Command Prompt as an administrator.
 
 ### Analyze the capture file
