@@ -12,7 +12,7 @@ ms.custom:
 - CSSTroubleshoot
 - CI 151537
 ms.reviewer: kellybos, lindabr, meerak
-appliesto: 
+appliesto:
 - Microsoft 365
 - Exchange Online
 search.appverid: MET150
@@ -43,5 +43,5 @@ If your organization synchronizes user accounts to Microsoft 365 from a local Ac
 
 - [Remove-ADUser](/powershell/module/activedirectory/remove-aduser)
 - [Create an Organizational Unit (OU) in an Azure Active Directory Domain Services managed domain](/azure/active-directory-domain-services/create-ou)
-- [No soft-deleted mailbox after license removal in Microsoft 365](../../../Exchange/ExchangeOnline/user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal.md)
-- [Overview of inactive mailboxes](/microsoft-365/compliance/inactive-mailboxes-in-office-365?view=o365-worldwide)
+- [No soft-deleted mailbox after license removal in Microsoft 365](/exchange/troubleshoot/user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal)
+- [Overview of inactive mailboxes](/microsoft-365/compliance/inactive-mailboxes-in-office-365)
