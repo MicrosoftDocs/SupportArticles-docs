@@ -28,7 +28,7 @@
     - name: Error when accessing SharePoint or OneDrive
       href: ../administration/error-accessing-sharepoint-onedrive.md
     - name: Error 404 in OneDrive or SharePoint
-      href: ../administration/error-accessing-sharepoint-onedrive.md
+      href: ../administration/error-404-onedrive-sharepoint.md
     - name: Errors when connecting to SharePoint Online Management Shell
       href: ../administration/errors-connecting-to-management-shell.md
     - name: Exclude or remove sites from a SharePoint Online retention policy
