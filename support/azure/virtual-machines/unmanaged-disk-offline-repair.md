@@ -137,7 +137,7 @@ This new VM will act as your repair VM, and its own OS disk must be unmanaged.
 
 ## Unlock the disk if it is encrypted
 
-If the disk is encrypted with Azure Disk Encryption (ADE), you will need to unlock it before you can repair it. To do so, use the steps described in [Manual method to unlock an encrypted disk on a repair VM (Method 3)](unlock-encrypted-disk-offline.md#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3).
+If the disk is encrypted with Azure Disk Encryption (ADE), you will need to unlock it before you can repair it. To do so, use the steps described in [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](unlock-encrypted-disk-offline.md#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
 You can determine if the disk is encrypted by using the procedure here: [Confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk)
 
