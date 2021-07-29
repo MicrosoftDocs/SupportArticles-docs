@@ -168,7 +168,7 @@ If you are using Configuration Manager current branch version 1906 or a later ve
 
 When you use this option, you can see how many updates were declined by reviewing the WsyncMgr.log file after the synchronization process finishes. If you use this option, you don't need to use the script described later in this section (either by manually running it or by setting up as task to run it on a schedule).
 
-If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](decline-superseded-updates.md). Copy and save the script as a *Decline-SupersededUpdatesWithExclusionPeriod.ps1* script file.
+If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](decline-superseded-updates.md). Then, copy and save the script as a *Decline-SupersededUpdatesWithExclusionPeriod.ps1* script file.
 
 > [!NOTE]
 > This script is provided as is. It should be fully tested in a lab before you use it in production. Microsoft makes no guarantees regarding the use of this script in any way. Always run the script with the `-SkipDecline` parameter first, to get a summary of how many superseded updates will be declined.
