@@ -155,8 +155,10 @@ Here's an example showing how to analyze a filtered result. In this scenario, th
 
     :::image type="content" source="media/tcpip-performance-known-issues/complete-tcp-sequence.png" alt-text="The complete TCP sequence.":::
 
-    This result shows that the original frame #441 isn't received by the server and is retransmitted by the sender.
+    This result shows that the original frame #441 isn't received by the server and is retransmitted by the sender. The retransmission of a frame happens if no acknowledgment of the sequence is received. To understand how TCP works, see [The three-way handshake via TCP/IP](three-way-handshake-via-tcpip.md) and [Description of Windows TCP features](description-tcp-features.md#tcp-retransmission-behavior-and-fast-retransmit). Then, copy the `TCP.SequenceNumber == <value>` sequence filter from the client trace and paste it on the server trace.
 
-    On the server, only one packet or the acknowledgment of the given sequence is dropped, as shown in the following result:
+    On the server, only one packet of the given sequence is received, as shown in the following result:
 
     :::image type="content" source="media/tcpip-performance-known-issues/tcp-sequence-server-side.png" alt-text="The TCP sequence from the server side.":::
+
+    This result proves that there is packet loss from the sender to the receiver on the intermediate network devices. The packets leave the sender but never reach the receiver. It is an issue with underlying networking and it should be resolved by network administrators.
