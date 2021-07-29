@@ -15,6 +15,9 @@ ms.technology: networking
 ---
 # Known issues of TCP/IP performance
 
+> [!IMPORTANT]
+> This article is included in a series of articles. First review ["Part 2: TCP/IP performance underlying network issues"](troubleshooting-tcpip-performance-underlying-network.md) before reading this article.
+
 This article describes the following TCP/IP performance issues:
 
 - Slow throughput on high latency and high bandwidth network

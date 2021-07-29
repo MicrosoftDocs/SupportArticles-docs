@@ -116,6 +116,3 @@ Here are the steps to measure throughput and create a baseline:
 
 > [!div class="nextstepaction"]
 > [Learn more about troubleshooting TCP/IP performance issues about underlying network](troubleshooting-tcpip-performance-underlying-network.md)
-
-> [!div class="nextstepaction"]
-> [Learn more about known issues of TCP/IP performance](tcpip-performance-known-issues.md)
