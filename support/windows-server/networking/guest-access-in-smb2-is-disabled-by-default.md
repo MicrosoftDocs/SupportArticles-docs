@@ -110,18 +110,19 @@ If you want to enable insecure guest access, you can configure the following Gro
 
 For monitoring and inventory purposes: this group policy is setting the following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
 
-`HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\LanmanWorkstation\`
+`HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\LanmanWorkstation\`  
 `AllowInsecureGuestAuth`
 
 To set the value without using group policy, set the following following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters` 
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters`  
 `AllowInsecureGuestAuth`
 
 > [!NOTE]
 > As usual, the value setting in group policy will override the value setting in the non-group policy registry value.
 
 On Windows 10 1709, Windows 10 1803, Windows 10 1903, Windows 10 1909, and Windows Server 2019, guest authentication is disabled if AllowInsecureGuestAuth exists with a value of 0 in `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] AllowInsecureGuestAuth`.
+
 On Windows 10 2004, Windows 10 20H2, and Windows 10 21H1 Enterprise and Education editions with KB5003173 installed, guest authentication is disabled if AllowInsecureGuestAuth does not exist or if it exists with a value of 0 in `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] AllowInsecureGuestAuth`. Home and Pro editions allow guest authentication by default unless you disable it using group policy or registry settings.
 
 > [!NOTE]
