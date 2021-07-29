@@ -20,7 +20,7 @@ ms.custom:
 ms.reviewer: salarson
 ---
 
-# Error: 404 File/Page not found in OneDrive or SharePoint
+# "Error: 404 File/Page not found" in OneDrive or SharePoint
 
 ## Symptoms
 
