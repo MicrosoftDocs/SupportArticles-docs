@@ -45,6 +45,7 @@ By default, updates are not sent to all recipients but only to the specific adju
 - Location field
 - Message body
 - Attachments
+- If the attendees list contains an unexpanded DL, any attendancy updates are sent out to all participants .
 
 These updates are informational, and they do not require the recipient to process (accept/decline/tentative).
 
