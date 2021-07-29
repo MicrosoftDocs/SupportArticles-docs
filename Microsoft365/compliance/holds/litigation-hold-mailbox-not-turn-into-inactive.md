@@ -13,16 +13,15 @@ ms.custom:
 - CI 151537
 ms.reviewer: kellybos, lindabr, meerak
 appliesto:
-- Microsoft 365
 - Exchange Online
 search.appverid: MET150
 ---
 
-# Litigation Hold mailbox doesn't turn into an inactive mailbox after license removal in Microsoft 365
+# Litigation Hold mailbox doesn't turn into an inactive mailbox after license removal
 
 ## Symptoms
 
-After you remove the Exchange license for an account from a mailbox that has the Litigation Hold feature enabled, the mailbox doesn't turn into an inactive mailbox. Additionally, when you view the account information in Microsoft 365 admin center, you see the following error message:
+Assume that you synchronize accounts from local Active Directory (AD) to Azure AD by using Azure AD Connect. After the Exchange license is removed from a Microsoft 365 account that has a mailbox with Litigation Hold enabled, the mailbox doesn't turn into an inactive mailbox. Additionally, when you view the account information in Microsoft 365 admin center, you see the following error message:
 
 > The execution of cmdlet Disable-Mailbox failed..; Exchange: An unknown error has occurred.
 
@@ -32,12 +31,10 @@ Removing the license will hard delete the mailbox, but a Litigation Hold enabled
 
 ## Resolution
 
-Turn the Litigation Hold enabled mailbox into an inactive mailbox by following the steps in Azure Active Directory:
+Turn the Litigation Hold enabled mailbox into an inactive mailbox by following the steps in Azure AD:
 
 1. Reassign the license to the account to recover the mailbox.
-1. Delete the account from your local Active Directory.
-
-If your organization synchronizes user accounts to Microsoft 365 from a local Active Directory environment, you need to delete the user account from local Active Directory or delete the account from the scope of the synchronization.
+1. Delete the account from your local AD or delete the account from the scope of the synchronization with Azure AD Connect.
 
 ## More information
 
