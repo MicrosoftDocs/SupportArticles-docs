@@ -45,7 +45,7 @@ The Outlook Search Repair tool repairs search results within Outlook.
 > For more information, see [How to rebuild the Spotlight index on your Mac](https://support.apple.com/HT201716) and [Outlook for Mac search returns "No Results," and task items are not displayed](https://support.microsoft.com/topic/outlook-for-mac-search-returns-no-results-and-task-items-are-not-displayed).
 
 > [!NOTE]
-> If you are using macOS Catalina, If you are using macOS Catalina, try to fix the issue by [deleting the Outlook profile and adding it again](https://support.microsoft.com/office/fed2a955-74df-4a24-bef6-78a426958c4c) as follows:
+> If you are using macOS Catalina, try to fix the issue by [deleting the Outlook profile and adding it again](https://support.microsoft.com/office/fed2a955-74df-4a24-bef6-78a426958c4c) as follows:
 >
 > 1. From Finder, open the **Applications** folder.
 > 1. Ctrl+click or right-click **Microsoft Outlook**, and then select **Show Package Contents**.
