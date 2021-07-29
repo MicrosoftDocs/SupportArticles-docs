@@ -102,7 +102,7 @@ You should choose one of three methods to attach the disk to a repair VM and unl
 - If your disk is both managed and encrypted by using ADE version 2 or later (single-pass encryption), but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM](#resolution-method-2-semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm). (Another reason to choose this method is if you lack the permissions to create a resource group in Azure.)
 - If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
-## Resolution method 1: Automated method to unlock an encrypted disk on a repair VM
+## Resolution #1: Automated method to unlock an encrypted disk on a repair VM
 
 This method relies on [az vm repair](/cli/azure/vm/repair) commands to automatically create a repair VM, attach the failed OS disk, and unlock the disk if it is encrypted. It works only for single-pass-encrypted managed disks and requires use of public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the BitLocker encryption key (BEK) is unwrapped or wrapped by using a key encryption key (KEK).
 
@@ -111,7 +111,7 @@ To repair the VM by using this automated method, see [Repair a Windows VM by usi
 >[!NOTE]
 >If Automatic troubleshoot fails or the customer does not have permissions, proceed with [Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM](#resolution-method-2-semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
-## Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM
+## Resolution #2: Semi-automated method to unlock an encrypted disk on a repair VM
 
 The semi-automated resolution unlocks a single-pass-encrypted managed disk without requiring a public IP address for the repair VM.
 
@@ -188,7 +188,7 @@ By using this procedure, you manually create a VM that has the OS disk of the so
 
 12. After you repair the disk, [use the following procedure](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk) to replace the source VM’s OS disk with the newly repaired disk.
 
-## Resolution method 3: Manual method to unlock an encrypted disk on a repair VM
+## Resolution #3: Manual method to unlock an encrypted disk on a repair VM
 
 You can unlock the disk manually by following this procedure if you have to unlock a dual-pass-encrypted disk (ADE version 1) or an unmanaged disk, or if the other methods fail.
 
