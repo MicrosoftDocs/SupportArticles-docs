@@ -37,94 +37,108 @@ Be sure to have a database backup of the `'Org_MSCRM'` before performing the fol
 2. Run the following script against the restored database.
 
     ````sql
-    IF Object_id('tempdb..#indexesScript', 'U') IS NOT NULL
-      DROP TABLE #indexesScript
-    
-    IF EXISTS (SELECT NAME
-               FROM   sys.partition_schemes
-               WHERE  NAME = 'AuditPScheme')
-      BEGIN
-          SELECT CASE WHEN ind.type != 1 THEN 'DROP INDEX [dbo].[AuditBase].' +
-                 Quotename(ind.NAME) + ' ' ELSE ' ' END + 'CREATE ' + CASE is_unique
-                 WHEN
-                 1 THEN
-                 'UNIQUE '
-                 ELSE '' END + ind.type_desc + ' INDEX '
-                 + Quotename(ind.NAME COLLATE sql_latin1_general_cp1_ci_as )
-                 + ' ON [dbo].'
-                 + Quotename(Object_name(object_id)) + ' ('
-                 + Reverse(Substring(Reverse(( SELECT NAME + CASE WHEN
-                 sc.is_descending_key = 1
-                 THEN ' DESC' ELSE ' ASC' END + ',' FROM sys.index_columns sc JOIN
-                 sys.columns c
-                 ON sc.object_id = c.object_id AND sc.column_id = c.column_id WHERE
-                 Object_name(
-                 sc.object_id) = 'AuditBase' AND sc.object_id = ind.object_id AND
-                 sc.index_id =
-                 ind.index_id ORDER BY index_column_id ASC FOR xml path(''))), 2,
-                 8000
-                 )) +
-                 ')' +
-                 CASE WHEN ind.type = 1 THEN
-                 ' WITH (DROP_EXISTING = ON) ON [PRIMARY]'
-                 ELSE ' '
-                 END AS Script
-          INTO   #indexesScript
-          FROM   sys.indexes ind
-                 JOIN sys.partition_schemes ps
-                   ON ind.data_space_id = ps.data_space_id
-          WHERE  Object_name(object_id) = 'AuditBase'
-                 AND ps.NAME = 'AuditPScheme'
-                 AND is_unique_constraint = 0
-    
-          SELECT *
-          FROM   #indexesScript
-    
-          DECLARE @recreateScript NVARCHAR(max)
-          DECLARE indscript CURSOR FOR
-            SELECT script
-            FROM   #indexesScript
-    
-          OPEN indscript
-    
-          FETCH next FROM indscript INTO @recreateScript
-    
-          WHILE @@FETCH_STATUS = 0
-            BEGIN
-                BEGIN TRANSACTION t1
-    
-                EXECUTE Sp_executesql
-                  @recreateScript
-    
-                IF @@ERROR > 0
-                  BEGIN
-                      ROLLBACK TRAN t1
-    
-                      DECLARE @message VARCHAR(max)
-    
-                      SET @message = 'Audit history recreate index failed. SQL: '
-                                     + @recreateScript
-    
-                      RAISERROR (@message,10,1)
-                  END
+    IF EXISTS 
+    (
+       SELECT
+          name 
+       FROM
+          sys.partition_schemes 
+       WHERE
+          name = 'AuditPScheme'
+    )
+    BEGIN
+       SELECT
+          CASE
+             WHEN
+                ind.type != 1 
+             THEN
+                'DROP INDEX [dbo].[AuditBase].' + QUOTENAME(ind.name) + ' ' 
+             ELSE
+                ' ' 
+          END
+          + 'CREATE ' + 
+          CASE
+             is_unique 
+             WHEN
+                1 
+             THEN
+                'UNIQUE ' 
+             ELSE
+                '' 
+          END
+          + ind.type_desc + ' INDEX ' + QUOTENAME(ind.name COLLATE SQL_Latin1_General_CP1_CI_AS ) + ' ON [dbo].' + QUOTENAME(OBJECT_NAME(object_id)) + ' (' + REVERSE(SUBSTRING(REVERSE(( 
+          SELECT
+             name + 
+             CASE
+                WHEN
+                   sc.is_descending_key = 1 
+                THEN
+                   ' DESC' 
                 ELSE
-                  BEGIN
-                      COMMIT TRAN
-                  END
-    
-                FETCH next FROM indscript INTO @recreateScript
-            END
-    
-          DROP partition scheme auditpscheme
-    
-          DROP partition FUNCTION auditpfn
-    
-          CLOSE indscript
-    
-          DEALLOCATE indscript
-    
-          DROP TABLE #indexesScript
-      END
+                   ' ASC' 
+             END
+             + ',' 
+          FROM
+             sys.index_columns sc 
+             JOIN
+                sys.columns c 
+                ON sc.object_id = c.object_id 
+                AND sc.column_id = c.column_id 
+          WHERE
+             OBJECT_NAME(sc.object_id) = 'AuditBase' 
+             AND sc.object_id = ind.object_id 
+             AND sc.index_id = ind.index_id 
+          ORDER BY
+             index_column_id ASC FOR XML PATH(''))), 2, 8000)) + ')' + 
+             CASE
+                WHEN
+                   ind.type = 1 
+                THEN
+                   ' WITH (DROP_EXISTING = ON) ON [PRIMARY]' 
+                ELSE
+                   ' ' 
+             END
+             as Script INTO # indexesScript 
+          FROM
+             sys.indexes ind 
+             JOIN
+                sys.partition_schemes ps 
+                on ind.data_space_id = ps.data_space_id 
+          WHERE
+             OBJECT_NAME(object_id) = 'AuditBase' 
+             AND ps.name = 'AuditPScheme' 
+             AND is_unique_constraint = 0 
+             SELECT
+                * 
+             FROM
+                # indexesScript 
+                DECLARE @recreateScript nvarchar(max) 
+                DECLARE indScript CURSOR FOR 
+                SELECT
+                   Script 
+                FROM
+                   # indexesScript OPEN indScript FETCH NEXT 
+                FROM
+                   indScript INTO @recreateScript WHILE @@FETCH_STATUS = 0 
+                   BEGIN
+                      BEGIN
+                         TRANSACTION t1 Execute sp_executesql @recreateScript IF @@ERROR > 0 
+                         BEGIN
+                            ROLLBACK TRAN t1 
+                            declare @message varchar(max) 
+                set
+                   @message = 'Audit history recreate index failed. SQL: ' + @recreateScript RAISERROR (@message, 10, 1) 
+                         END
+                         ELSE
+                            BEGIN
+                               COMMIT TRAN 
+                            END
+                            FETCH NEXT 
+                FROM
+                   indScript INTO @recreateScript 
+                      END
+                      DROP PARTITION SCHEME AuditPScheme DROP PARTITION FUNCTION AuditPFN CLOSE indScript DEALLOCATE indScript DROP TABLE # indexesScript 
+                   END
     ```
 
 3. Once the script is complete, you can back up the database and now you should be able to restore the database to a Microsoft SQL Server Standard edition.
