@@ -4,7 +4,7 @@ description: Describes how to disable NetBIOS over TCP/IP on the DHCP client by 
 ms.date: 09/28/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

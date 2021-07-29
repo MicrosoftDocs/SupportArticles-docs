@@ -4,7 +4,7 @@ description: Describes an error that's returned in Device Manager for the WAN Mi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

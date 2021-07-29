@@ -4,7 +4,7 @@ description: Discusses an issue in which Events 6804 and 2843 are logged and ROD
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

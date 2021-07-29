@@ -4,7 +4,7 @@ description: Describes how you can use the Ntdsutil.exe utility to move or to se
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -28,8 +28,8 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 |---|---|---|
 |Schema master|Forest-wide|CN=Schema,CN=configuration,DC=\<forest root domain>|
 |Domain naming master|Forest-wide|CN=configuration,DC=\<forest root domain>|
-|RID master|Domain-wide|DC=\<domain>|
 |PDC emulator|Domain-wide|DC=\<domain>|
+|RID master|Domain-wide|DC=\<domain>|
 |Infrastructure master|Domain-wide|DC=\<domain>|
 ||||
 
@@ -145,7 +145,7 @@ To seize or transfer the FSMO roles by using the Ntdsutil utility, follow these 
       > [!NOTE]
       > In this command, \<role> is the role that you want to seize.
 
-   For example, to seize the RID master role, type *seize rid master*. The one exception is for the PDC emulator role, whose syntax is **seize pdc**, not **seize pdc emulator**.
+   For example, to seize the RID master role, type *seize rid master*. Exceptions are for the PDC emulator role, whose syntax is **seize pdc**, and the Domain naming master, whose syntax is **seize naming master**.
 
    To see a list of roles that you can transfer or seize, type *?* at the **fsmo maintenance** prompt, and then press Enter, or see the list of roles at the start of this article.
 
@@ -194,7 +194,7 @@ The following table identifies the FMSO roles that can cause problems if a fores
 
 This issue does not affect the PDC Emulator master or the Infrastructure master. These role holders do not persist operational data. Additionally, the Infrastructure master does not make changes often. Therefore, if multiple islands have these role holders, you can reintegrate the islands without causing long-term issues.
 
-The Schema master, the Domain Naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
+The Schema master, the Domain naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
 
 ## References
 

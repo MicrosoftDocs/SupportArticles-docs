@@ -4,7 +4,7 @@ description: Describes the Windows Media Feature Pack for Windows 7 N and for Wi
 ms.date: 10/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

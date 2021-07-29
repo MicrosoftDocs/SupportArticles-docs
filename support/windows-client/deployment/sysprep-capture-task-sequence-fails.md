@@ -4,7 +4,7 @@ description: Provides a workaround for an issue where the Sysprep and Capture ta
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

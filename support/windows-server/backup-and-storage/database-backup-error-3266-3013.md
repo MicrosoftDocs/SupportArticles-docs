@@ -4,7 +4,7 @@ description: Resolves error 3266 or 3013 that occurs when you perform a database
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -72,7 +72,7 @@ RESTORE HEADERONLY FROM DISK='C:\MyDatabase.bak'
 Each backup set has one entry in the output. To indicate a specific backup set, use this code:
 
 ```sql
-RESTORE DATABASE mydatabase FROM DISK='C:\MyDatabase.bak WITH FILE = FileNumber
+RESTORE DATABASE mydatabase FROM DISK='C:\MyDatabase.bak' WITH FILE = FileNumber
 ```
 
 > [!NOTE]

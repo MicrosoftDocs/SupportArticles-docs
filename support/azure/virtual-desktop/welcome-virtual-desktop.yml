@@ -18,9 +18,9 @@ metadata:
 landingContent:
 
  # Card
-  - title: Windows Virtual Desktop sign-in screen is blank
+  - title: Azure Virtual Desktop sign-in screen is blank
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Windows Virtual Desktop sign-in screen is blank
+          - text: Azure Virtual Desktop sign-in screen is blank
             url: ./windows-virtual-desktop-blank-screen.md

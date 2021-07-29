@@ -4,7 +4,7 @@ description: Provides a resolution for the error "The Best Practices Analyzer sc
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

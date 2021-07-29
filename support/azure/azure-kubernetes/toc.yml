@@ -1,0 +1,7 @@
+- name: Welcome
+  href: welcome-azure-kubernetes.yml
+
+- name: High CPU consumption
+  items:
+  - name: Identify High CPU consuming containers in AKS 
+    href: identify-high-cpu-consuming-containers-aks.md

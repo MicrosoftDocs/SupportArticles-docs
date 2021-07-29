@@ -18,7 +18,7 @@ For more information, see the following websites:
 
 - [About User Profiles](/previous-versions/windows/desktop/legacy/bb776892(v=vs.85))
 
-- [Roaming User Profiles](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/bb776897(v=vs.85))
+- [Roaming User Profiles](/previous-versions/windows/desktop/legacy/bb776897(v=vs.85))
 
 - [ClickOnce cannot be used in Windows Terminal Server](https://support.microsoft.com/help/2020945)
 

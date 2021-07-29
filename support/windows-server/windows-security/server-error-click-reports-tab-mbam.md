@@ -4,7 +4,7 @@ description: This article fixes an error when you click the Reports tab in MBAM.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

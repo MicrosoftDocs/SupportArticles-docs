@@ -4,7 +4,7 @@ description: Discusses that you receive a 0x80004027-CO_E_CLASS_DISABLED error w
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

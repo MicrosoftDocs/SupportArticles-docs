@@ -4,7 +4,7 @@ description: Resolve the 80072EE6 error code that occurs when you download an up
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

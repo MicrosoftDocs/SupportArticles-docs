@@ -4,7 +4,7 @@ description: Describes event ID 4015 that occurs when you run the Domain Name Se
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

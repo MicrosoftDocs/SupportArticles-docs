@@ -4,7 +4,7 @@ description: Fixes an issue in which a Windows 8.1-based computer stops respondi
 ms.date: 09/17/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

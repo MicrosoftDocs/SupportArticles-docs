@@ -4,7 +4,7 @@ description: Clustered Fileshare resource fails on one or more node(s) of a fail
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

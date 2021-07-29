@@ -4,7 +4,7 @@ description: Describes how to obtain updates in Windows 7, Windows 8.1 and Windo
 ms.date: 05/25/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client

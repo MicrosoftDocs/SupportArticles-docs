@@ -10,7 +10,7 @@ ms.prod: sql
 ---
 # Pull subscriptions don't show up in Windows Synchronization Manager
 
-_Applies to:_ &nbsp; SQL Server  
+_Applies to:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014
 
 ## Symptoms
 
@@ -26,7 +26,7 @@ Assume that you [create a pull subscription to a merge publication](/sql/relatio
 
 Here's how to work around this issue:
 
-1. In the search box on the taskbar, type *regedit*, then select **Registry Editor** (Desktop app) from the results to [Open Registry Editor in Windows 10](https://support.microsoft.com/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11).
+1. In the search box on the taskbar, type *regedit*, then select **Registry Editor** (Desktop app) from the results to [open Registry Editor in Windows 10](https://support.microsoft.com/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11).
 
 1. Locate and select the registry subkey: `HKLM\Software\Microsoft\Windows\CurrentVersion\SyncMgr\Handlers\{FFAADE58-9A14-45F3-A497-E969A64F09C7}`.
 

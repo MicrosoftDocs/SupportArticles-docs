@@ -4,7 +4,7 @@ description: This article resolves an issue in which the KDC service on a read-o
 ms.date: 10/26/2020
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 keywords: ad, security,KDC service, RODC, error 1450, handle invalid
 ms.topic: troubleshooting
@@ -111,10 +111,10 @@ If the AD Recycle Bin feature is enabled, follow these steps.
 4. Reset the password of the RODC computer account (also known as the "machine account") by running the following command:
 
    ```cmd
-   netdom resetpwd /server: <RODC_Name> /USERD: administrator /Password:*
+   netdom resetpwd /server: <RWDC_Name> /USERD: administrator /PasswordD:*
    ```
 
-   In this command, \<*RODC_Name*> represents the server name of the RODC.
+   In this command, \<*RWDC_Name*> represents the server name of the RWDC.
 
    > [!NOTE]  
    > This command prompts you for the password of the Administrator account.

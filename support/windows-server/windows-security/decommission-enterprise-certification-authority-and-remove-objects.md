@@ -4,7 +4,7 @@ description: Provides step-by-step instructions for removing a CA from Windows S
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server

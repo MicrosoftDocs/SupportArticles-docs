@@ -1,30 +1,31 @@
 - name: Welcome
   href: welcome-virtual-machines.yml
-
-- name: Troubleshoot deployment failures
+  
+- name: VM deployment issues
+  href: welcome-deployment-troubleshooting.yml
   items:
-  - name: New VM deployments
+  - name: Troubleshoot deployment failures
     items:
-    - name: Troubleshoot deploying Linux virtual machine
-      href: troubleshoot-deployment-new-vm-linux.md
-    - name: Troubleshoot deploying Windows virtual machine
-      href: troubleshoot-deployment-new-vm-windows.md
-  - name: Fail to create a VM with Ed25519 SSH keys
-    href: ed25519-ssh-keys.md
-  - name: Support for Availability sets
-    href: virtual-machines-availability-set-supportability.md
-  - name: Uploaded VHD is not supported
-    href: uploaded-vhd-not-support.md
-
-- name: Image deployment and Management
-  items:
-  - name: Upload Hyper-V DC to Azure
-    href: upload-existing-hyperv-dc-azure-ps.md
-
-- name: VM upgrade issues
-  items:
-  - name: Upgrade to SLES 15 SP1
-    href: linux-upgrade-suse-15sp1.md
+    - name: New VM deployments
+      items:
+      - name: Troubleshoot deploying Linux virtual machine
+        href: troubleshoot-deployment-new-vm-linux.md
+      - name: Troubleshoot deploying Windows virtual machine
+        href: troubleshoot-deployment-new-vm-windows.md
+    - name: Fail to create a VM with Ed25519 SSH keys
+      href: ed25519-ssh-keys.md
+    - name: Support for Availability sets
+      href: virtual-machines-availability-set-supportability.md
+    - name: Uploaded VHD is not supported
+      href: uploaded-vhd-not-support.md
+  - name: Image deployment and Management
+    items:
+    - name: Upload Hyper-V DC to Azure
+      href: upload-existing-hyperv-dc-azure-ps.md
+  - name: VM upgrade issues
+    items:
+    - name: Upgrade to SLES 15 SP1
+      href: linux-upgrade-suse-15sp1.md
 
 - name: Troubleshoot allocation failures
   items:
@@ -43,7 +44,7 @@
 - name: Cannot start or stop VM
   items:
   - name: Start/Stop VMs using Azure Automation
-    href: /azure/automation/troubleshoot/start-stop-vm
+    href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Restarting or resizing a VM
     href: restart-resize-error-troubleshooting.md
   - name: Allocation failures for classic deployments
@@ -51,7 +52,7 @@
   - name: VM startup is stuck
     href: troubleshoot-vm-boot-configure-update.md
   - name: VM lifecycle and states
-    href: /azure/virtual-machines/states-billing
+    href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Cannot connect to my VM
   items:
@@ -59,6 +60,8 @@
     items:
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
+    - name: Detailed SSH troubleshooting
+      href: detailed-troubleshoot-ssh-connection.md
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection
@@ -69,10 +72,10 @@
       href: linux-recovery-cannot-start-file-system-errors.md
     - name: Recover LVM configured VMs and no boot 
       href: chroot-logical-volume-manager.md
+    - name: Reset network interface for Azure Linux VM
+      href: reset-network-interface-azure-linux-vm.md
     - name: Troubleshoot fstab errors 
       href: linux-virtual-machine-cannot-start-fstab-errors.md
-    - name: Detailed SSH troubleshooting
-      href: detailed-troubleshoot-ssh-connection.md
   - name: Windows
     items:
     - name: Cannot RDP into Azure VM because of authentication errors
@@ -143,6 +146,8 @@
       href: linux-kernel-panics-upgrade.md
     - name: Linux VM does not start after an LIS upgrade
       href: linux-vm-not-start-kernel-lis.md
+    - name: Device names are changed
+      href: troubleshoot-device-names-problems.md
   - name: Windows
     href: boot-error-troubleshoot.md
     items:
@@ -228,20 +233,20 @@
       href: error-code-0xc0000605.md
     - name: Can't boot with 0xc0000221
       href: boot-error-0xc0000221.md
-  - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
-    href: windows-boot-failure.md
-  - name: Troubleshoot Windows VM OS with missing boot manager
-    href: os-bootmgr-missing.md
-  - name: OS isn't found
-    href: os-not-found.md
-  - name: Troubleshoot Windows VM OS boot failure
-    href: os-bucket-boot-failure.md
-  - name: 'VM stops at "Please wait for the Group Policy Client" screen'
-    href: vm-stops-at-please-wait-for-group-policy-client.md
-  - name: Azure VM cannot RDP - driver IRQL not less or equal
-    href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
-  - name: Azure VM cannot RDP - working on features
-    href: azure-vm-cannot-rdp-working-features.md
+    - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
+      href: windows-boot-failure.md
+    - name: Troubleshoot Windows VM OS with missing boot manager
+      href: os-bootmgr-missing.md
+    - name: OS isn't found
+      href: os-not-found.md
+    - name: Troubleshoot Windows VM OS boot failure
+      href: os-bucket-boot-failure.md
+    - name: VM stops at "Please wait for the Group Policy Client" screen
+      href: vm-stops-at-please-wait-for-group-policy-client.md
+    - name: Azure VM cannot RDP - driver IRQL not less or equal
+      href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
+    - name: Azure VM cannot RDP - working on features
+      href: azure-vm-cannot-rdp-working-features.md
 
 - name: VM restart issues
   items:
@@ -285,9 +290,9 @@
   - name: Update awareness for Linux Image Provisioning Agent 
     href: linux-image-provisioning-agent-update-awareness.md
   - name: Azure extension overview
-    href: /azure/virtual-machines/extensions/overview
+    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Troubleshoot extension issues
-    href: /azure/virtual-machines/extensions/troubleshoot
+    href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Install Windows VM agent offline
     href: install-vm-agent-offline.md
   - name: Troubleshoot Windows VM agent
@@ -313,6 +318,8 @@
         href: how-to-use-perfinsights-linux.md
   - name: Troubleshoot VM Performance issues
     items:
+    - name: Isolate bottlenecks in Linux
+      href: troubleshoot-performance-bottlenecks-linux.md
     - name: Troubleshoot performance issues through Monitoring
       href: troubleshoot-performance-virtual-machine-linux-windows.md
     - name: Troubleshoot high CPU issues for Azure Windows virtual machines
@@ -328,29 +335,13 @@
     href: reset-local-password-without-agent.md
   - name: Linux
     href: reset-password.md
-  - name: VM recovery access
-    items:
-    - name: Windows
-      items:
-      - name: PowerShell
-        href: troubleshoot-recovery-disks-windows.md
-      - name: Azure portal
-        href: troubleshoot-recovery-disks-portal-windows.md
-    - name: Linux
-      items:
-      - name: CLI
-        href: troubleshoot-recovery-disks-linux.md
-      - name: Azure portal
-        href: troubleshoot-recovery-disks-portal-linux.md
-    - name: Device names are changed
-      href: troubleshoot-device-names-problems.md
 
 - name: Virtual Disk Management issues
   items:
   - name: Overview
-    href: /azure/virtual-machines/managed-disks-overview
+    href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
   - name: FAQ
-    href: /azure/virtual-machines/faq-for-disks
+    href: /azure/virtual-machines/faq-for-disks?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Cannot extend an encrypted OS volume in Windows
     href: cannot-extend-encrypted-os-volume.md
   - name: Errors when deleting storage resources
@@ -359,29 +350,16 @@
     href: storage-classic-cannot-delete-storage-account-container-vhd.md
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
-  - name: Use nested virtualization
-    href: troubleshoot-vm-by-use-nested-virtualization.md
 
 - name: Troubleshoot Shared Image Galleries
   items:
-  - name: Troubleshoot Shared Image Gallery - Windows
-    href: /azure/virtual-machines/troubleshooting-shared-images
-  - name: Troubleshoot Shared Image Gallery - Linux
-    href: /azure/virtual-machines/troubleshooting-shared-images
+  - name: Troubleshoot Shared Image Gallery - Windows/Linux
+    href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Backup and restore
   items:
   - name: Troubleshoot backup failures on Azure VM
-    href: /azure/backup/backup-azure-vms-troubleshoot
-
-- name: Repair a VM using commands
-  items:
-  - name: Windows
-    href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
-  - name: Linux
-    href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
-  - name: Linux - Repair a VM with the help of ALAR
-    href: repair-linux-vm-using-ALAR.md
+    href: /azure/backup/backup-azure-vms-troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Windows Activation issues
   items:
@@ -393,6 +371,8 @@
 - name: Remote troubleshooting tools
   href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
+  - name: VM Inspector for Azure Virtual Machines
+    href: vm-inspector-azure-virtual-machines.md
   - name: Serial Console
     items:
     - name: Overview
@@ -418,24 +398,53 @@
     - name: Common Serial Console errors
       href: serial-console-errors.md
 
+- name: VM recovery access
+  items:
+  - name: Repair VM Creation
+    items:
+    - name: Windows
+      items:
+      - name: Portal
+        href: troubleshoot-recovery-disks-portal-windows.md
+      - name: PowerShell
+        href: troubleshoot-recovery-disks-windows.md
+      - name: Azure Virtual Machine repair
+        href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+      - name: Unlocking disks for offline repair
+        href: unlock-encrypted-disk-offline.md
+      - name: Repair unmanaged disks offline
+        href: unmanaged-disk-offline-repair.md
+    - name: Linux
+      items:
+      - name: Portal
+        href: troubleshoot-recovery-disks-portal-linux.md
+      - name: CLI
+        href: troubleshoot-recovery-disks-linux.md
+      - name: Azure Virtual Machine repair
+        href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
+      - name: Azure Linux Auto Repair
+        href: repair-linux-vm-using-ALAR.md
+    - name: Repair VM with Nested Hyper-V
+      href: troubleshoot-vm-by-use-nested-virtualization.md
+
 - name: Azure Disk Encryption issues
   items:
   - name: Windows
     items:
     - name: Overview
-      href: /azure/virtual-machines/windows/disk-encryption-overview
+      href: /azure/virtual-machines/windows/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Troubleshoot
-      href: /azure/virtual-machines/windows/disk-encryption-troubleshooting
+      href: /azure/virtual-machines/windows/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
     - name: FAQ
-      href: /azure/virtual-machines/windows/disk-encryption-faq
+      href: /azure/virtual-machines/windows/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Linux
     items:
     - name: Overview
-      href: /azure/virtual-machines/linux/disk-encryption-overview
+      href: /azure/virtual-machines/linux/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Troubleshoot
-      href: /azure/virtual-machines/linux/disk-encryption-troubleshooting
+      href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
     - name: FAQ
-      href: /azure/virtual-machines/linux/disk-encryption-faq
+      href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Quota increases
   items:
@@ -444,25 +453,25 @@
     - name: Resource Manager deployment model
       items:
       - name: Increase VM series vCPU limit
-        href: /azure/azure-portal/supportability/per-vm-quota-requests
+        href: /azure/azure-portal/supportability/per-vm-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
       - name: Increase total regional vCPU limit
-        href: /azure/azure-portal/supportability/regional-quota-requests
+        href: /azure/azure-portal/supportability/regional-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
       - name: Increase spot quota limit
-        href: /azure/azure-portal/supportability/low-priority-quota
+        href: /azure/azure-portal/supportability/low-priority-quota?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Classic deployment model
-      href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests
+      href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Increase networking limits
-    href: /azure/azure-portal/supportability/networking-quota-requests
+    href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Migration and Move issues
   items:
   - name: Azure Resource Manager migration (ASM to ARM) FAQ
-    href: /azure/virtual-machines/migration-classic-resource-manager-overview
+    href: /azure/virtual-machines/migration-classic-resource-manager-overview?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Planned Maintenance
   items:
   - name: Overview
-    href: /azure/virtual-machines/maintenance-notifications
+    href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Common error messages
   href: error-messages.md
@@ -496,11 +505,11 @@
 - name: Windows Server 2008 R2 Support
   items:
   - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
-    href: https://docs.microsoft.com/windows-server/get-started/extended-security-updates
+    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Windows Server 2008/2008 R2 Extended Security Updates
-    href: https://docs.microsoft.com/windows-server/get-started/uploading-specialized-ws08-image-to-azure
+    href: /windows-server/get-started/uploading-specialized-ws08-image-to-azure?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
-    href: https://docs.microsoft.com//windows-server/get-started/modernize-windows-server-2008
+    href: /windows-server/get-started/modernize-windows-server-2008?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Support statements
   items:
@@ -527,4 +536,9 @@
   - name: Support for 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
 
-
+- name: Additional Support
+  items:
+  - name: How to get additional support for VM specific issues
+    href: /azure/virtual-machines/vm-support-help
+  - name: How to create an Azure support request
+    href: /azure/azure-portal/supportability/how-to-create-azure-support-request

@@ -4,7 +4,7 @@ description: Provides help to fix the error 0x80004005 that occurs when you conf
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

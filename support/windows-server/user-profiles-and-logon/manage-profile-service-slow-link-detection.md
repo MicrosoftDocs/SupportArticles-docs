@@ -4,7 +4,7 @@ description: Describes how to optimize slow link detection in Windows and Window
 ms.date: 03/19/2021
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

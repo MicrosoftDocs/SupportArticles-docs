@@ -4,7 +4,7 @@ description: Fixes a problem in which you receive errors or experience logon/log
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

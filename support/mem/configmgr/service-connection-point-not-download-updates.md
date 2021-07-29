@@ -29,7 +29,7 @@ The service connection point uses the Intune service when it connects to [http:/
 
 This is a known issue for Intune, as documented in [Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed](../intune/fix-connectivity-issues.md). However, this update is no longer displayed on the Microsoft Update Catalog.
 
-As a workaround, you can download the Baltimore CyberTrust Root certificate from [https://cacert.omniroot.com/bc2025.crt](https://cacert.omniroot.com/bc2025.crt). You can also export the certificate from the certificate authority in your environment.
+As a workaround, you can export the certificate from the certificate authority in your environment.
 
 After you've obtained the certificate, you must import it. To import the certificate, follow these steps:
 

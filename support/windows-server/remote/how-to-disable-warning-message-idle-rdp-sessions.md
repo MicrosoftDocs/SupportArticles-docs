@@ -4,7 +4,7 @@ description: Provides the method to disable warning message for idle remote desk
 ms.date: 4/30/2021
 author: v-lianna 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

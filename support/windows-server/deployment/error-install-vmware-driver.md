@@ -4,7 +4,7 @@ description: Discusses that you can't install a VMWare driver on a server that i
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -4,7 +4,7 @@ description: Fixes slow virtual machines (VMs) startup or shutdown performance i
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

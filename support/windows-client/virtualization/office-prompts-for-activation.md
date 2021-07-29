@@ -4,7 +4,7 @@ description: Describes an issue when Microsoft Office applications prompt for re
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
