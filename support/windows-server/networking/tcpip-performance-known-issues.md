@@ -160,8 +160,3 @@ Here's an example showing how to analyze a filtered result. In this scenario, th
     On the server, only one packet or the acknowledgment of the given sequence is dropped, as shown in the following result:
 
     :::image type="content" source="media/tcpip-performance-known-issues/tcp-sequence-server-side.png" alt-text="The TCP sequence from the server side.":::
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Learn more about overview of TCP/IP performance](overview-of-tcpip-performance.md)
