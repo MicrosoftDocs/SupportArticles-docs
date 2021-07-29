@@ -48,13 +48,13 @@ $objectId = (Get-MsolServicePrincipal -SearchString $displayName).ObjectId
 Replace the "Application Name" with the name of your "Application Service Principal".
 
 ```powershell
-$roleName = "Company Administrator" Add-MsolRoleMember -RoleName 
-$roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
+$roleName = "Company Administrator"
+Add-MsolRoleMember -RoleName $roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
 ```
 
 It will add your "Application Service Principal" to the Company Administrator role.
 
-Also, you must add your application to **User Administrator** in the Office 365 administrative roles if the Azure AD user has any of the following **Administrator** organizational roles:
+Also, you must add your application to **User Account Administrator** in the Office 365 administrative roles if the Azure AD user has any of the following **Administrator** organizational roles:
 
 - Global Administrator
 - Billing Administrator
@@ -66,8 +66,8 @@ To do so, run all the following MSOL cmdlets:
 Connect-MsolService
 $displayName = "Application Name" 
 $objectId = (Get-MsolServicePrincipal -SearchString $displayName).ObjectId
-$roleName = "User Account Administrator" Add-MsolRoleMember -RoleName 
-$roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
+$roleName = "User Account Administrator"
+Add-MsolRoleMember -RoleName $roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
 ```
 
 After you run both sets of cmdlets, your application will be enabled to change the password of all **Administrator** organizational roles.
