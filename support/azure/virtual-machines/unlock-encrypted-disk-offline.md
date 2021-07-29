@@ -49,7 +49,7 @@ View the **Overview** blade for the failed VM in the Azure portal. Beneath **Dis
 
 #### PowerShell
 
-You can use the **Get-AzVmDiskEncryptionStatus** cmdlet to determine whether the OS and/or data volumes for a VM are encrypted by using ADE. The following example output indicates ADE encryption is enabled on the OS volume:
+You can use the `Get-AzVmDiskEncryptionStatus` cmdlet to determine whether the OS and/or data volumes for a VM are encrypted by using ADE. The following example output indicates ADE encryption is enabled on the OS volume:
 
 ```PowerShell
 PS /home/me> Get-AzVmDiskEncryptionStatus -ResourceGroupName "MyRg01" -VMName "MyVm01" 
@@ -59,11 +59,11 @@ OsVolumeEncryptionSettings : Microsoft.Azure.Management.Compute.Models.DiskEncry
 ProgressMessage            : Extension status not available on the VM
 ```
 
-For more information about the **Get-AzureRmDiskEncryptionStatus** cmdlet, see [Get-AzVMDiskEncryptionStatus (Az.Compute)](/powershell/module/az.compute/get-azvmdiskencryptionstatus).
+For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Get-AzVMDiskEncryptionStatus (Az.Compute)](/powershell/module/az.compute/get-azvmdiskencryptionstatus).
 
 #### Azure CLI
 
-You can use the **az vm encryption show** command in Azure CLI with the query **"disks[].encryptionSettings[].enabled”** appended to determine whether ADE is enabled on a VM’s disks. The following output indicates that ADE encryption is enabled.
+You can use the `az vm encryption show` command in Azure CLI with the query `disks[].encryptionSettings[].enabled` appended to determine whether ADE is enabled on a VM’s disks. The following output indicates that ADE encryption is enabled.
 
 ```console
 C:\Users\admin1>az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled”
@@ -72,7 +72,7 @@ C:\Users\admin1>az vm encryption show --name MyVM --resource-group MyResourceGro
 ]
 ```
 
-For more information about the **az vm encryption show** command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
+For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
 
 >[!NOTE]
 >**Offline repair for unencrypted disks**
@@ -86,34 +86,32 @@ You can learn the ADE version number in the Azure portal by opening the properti
 
 :::image type="content" source="media/unlock-encrypted-disk-offline/ade-extension-version.png" alt-text="Screenshot of the extensions blade showing azure disk encryption is version 2.":::
 
-If you determine that your disk uses ADE version 1 (dual-pass encryption), you can go to [Manual method to unlock an encrypted disk on a repair VM (Method 3)](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3).
+If you determine that your disk uses ADE version 1 (dual-pass encryption), you can go to [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
 ### Determine whether the OS disk is managed or unmanaged
 
 If you don’t know whether the OS disk is managed or unmanaged, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 
-If you know that the OS disk is an unmanaged disk, go to [Manual method to unlock an encrypted disk on a repair VM (Method 3)](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3).
+If you know that the OS disk is an unmanaged disk, go to [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
 ### Select the method to attach the disk to a repair VM and unlock the disk
 
-You should choose one of three methods to attach the disk to a repair VM and unlock the disk: the [automated method](#automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-1), the [semi-automated method](#semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-2), or the [manual method](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3). 
+You should choose one of three methods to attach the disk to a repair VM and unlock the disk:
 
-- If you have determined the disk is managed and encrypted by using ADE version 2 or later (single-pass encryption), and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use the [Automated method to unlock an encrypted disk on a repair VM (Method 1)](#automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-1).
-- If your disk is both managed and encrypted by using ADE version 2 or later (single-pass encryption), but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use the [Semi-automated method to unlock an encrypted disk on a repair VM (Method 2)](#semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-2). (Another reason to choose this method is if you lack the permissions to create a resource group in Azure.)
-- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use the [Manual method to unlock an encrypted disk on a repair VM (Method 3)](#manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-3).
+- If you have determined the disk is managed and encrypted by using ADE version 2 or later (single-pass encryption), and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use [Resolution method 1: Automated method to unlock an encrypted disk on a repair VM](#resolution-method-1-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
+- If your disk is both managed and encrypted by using ADE version 2 or later (single-pass encryption), but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM](#resolution-method-2-semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm). (Another reason to choose this method is if you lack the permissions to create a resource group in Azure.)
+- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use [Resolution method 3: Manual method to unlock an encrypted disk on a repair VM](#resolution-method-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
-## Resolution
-
-### Automated method to unlock an encrypted disk on a repair VM (Method 1)
+## Resolution method 1: Automated method to unlock an encrypted disk on a repair VM
 
 This method relies on [az vm repair](/cli/azure/vm/repair) commands to automatically create a repair VM, attach the failed OS disk, and unlock the disk if it is encrypted. It works only for single-pass-encrypted managed disks and requires use of public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the BitLocker encryption key (BEK) is unwrapped or wrapped by using a key encryption key (KEK).
 
 To repair the VM by using this automated method, see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
 
 >[!NOTE]
->If Automatic troubleshoot fails or the customer does not have permissions, proceed with the [semi-automated resolution](#semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm-method-2).
+>If Automatic troubleshoot fails or the customer does not have permissions, proceed with [Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM](#resolution-method-2-semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
 
-### Semi-automated method to unlock an encrypted disk on a repair VM (Method 2)
+## Resolution method 2: Semi-automated method to unlock an encrypted disk on a repair VM
 
 The semi-automated resolution unlocks a single-pass-encrypted managed disk without requiring a public IP address for the repair VM.
 
@@ -127,21 +125,23 @@ By using this procedure, you manually create a VM that has the OS disk of the so
     For the new disk, choose the same location and availability zone that were assigned to the source VM. Note that you will also need to duplicate these same settings when you create the repair VM in the next step.
 
 3. Create a VM that’s based on Windows Server 2016 Datacenter to use as a repair VM. make sure that you assign the VM to the same region and availability zone that’s used for the new disk that you created in step 2.
-4. On the **Disks** page of the “Create a Virtual Machine” wizard, attach as a data disk the new disk that you just created from the snapshot.
+4. On the **Disks** page of the **Create a Virtual Machine** wizard, attach as a data disk the new disk that you just created from the snapshot.
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/attach-existing-disk-repair-vm.png" alt-text="Screenshot of the Disks page of the create a virtual machine wizard, with a disk highlighted along with the option to attach an existing disk.":::
 
     >[!IMPORTANT]
     >Make sure that you add the disk during the VM creation. It is only during VM creation that encryption settings are detected. This enables a volume that contains the BEK to be added automatically.
 
-5. After the repair VM is created, sign in to the VM, and open Disk Management (Diskmgmt.msc). Within Disk Management, locate the BEK volume. By default, no drive letter is assigned to this volume.
+5. After the repair VM is created, sign in to the VM, and open Disk Management (*Diskmgmt.msc*). Within Disk Management, locate the BEK volume. By default, no drive letter is assigned to this volume.
 :::image type="content" source="media/unlock-encrypted-disk-offline/find-bek-volume.png" alt-text="Screenshot of disk management with bek volume highlighted":::
 
 6. To assign a drive letter to the BEK volume, right-click the BEK volume, and then select **Change Drive Letter and Paths**.
-:::image type="content" source="media/unlock-encrypted-disk-offline/change-drive-letter-and-paths.png" alt-text="Screenshot of the shortcut menu of the bek volume, with the change drive letter and paths option highlighted":::
+
+     :::image type="content" source="media/unlock-encrypted-disk-offline/change-drive-letter-and-paths.png" alt-text="Screenshot of the shortcut menu of the bek volume, with the change drive letter and paths option highlighted":::
 
 7. Select **Add** to assign a drive letter to the BEK volume. In this process, the default letter is most frequently H. Select **OK**.
-:::image type="content" source="media/unlock-encrypted-disk-offline/add-drive-letter-or-path.png" alt-text="The add drive letter or path dialog box, with the option highlighted to assign the following drive letter.":::
+
+     :::image type="content" source="media/unlock-encrypted-disk-offline/add-drive-letter-or-path.png" alt-text="The add drive letter or path dialog box, with the option highlighted to assign the following drive letter.":::
 
 8. In File Explorer, select **This PC** in the left pane. You will now see the BEK volume listed. Also, notice the volume that is marked by a lock icon. This is the encrypted disk that you attached when you created the VM. (In the following example, the encrypted disk is assigned the drive letter G.)
 
@@ -149,19 +149,19 @@ By using this procedure, you manually create a VM that has the OS disk of the so
 
 9. To unlock the encrypted disk, you must have the .bek file name within the BEK volume. However, by default, the files in the BEK volume are hidden. At a command prompt, enter the following command to show the hidden files:
 
-    ```dos
+    ```console
     dir <DRIVE LETTER ASSIGNED TO BEK VOLUME>: /a:h /b /s
     ```
 
     For example, if the drive letter that’s assigned to the BEK Volume is H, you would enter the following command:
 
-    ```dos
+    ```console
     dir H: /a:h /b /s
     ```
 
     You should see output that resembles the following:
 
-    ```console
+    ```output
     H:\66ABF036-E331-4B67-A667-D1A8B47B4DAB.BEK
     H:\System Volume Information
     ```
@@ -188,11 +188,11 @@ By using this procedure, you manually create a VM that has the OS disk of the so
 
 12. After you repair the disk, [use the following procedure](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk) to replace the source VM’s OS disk with the newly repaired disk.
 
-### Manual method to unlock an encrypted disk on a repair VM (Method 3)
+## Resolution method 3: Manual method to unlock an encrypted disk on a repair VM
 
 You can unlock the disk manually by following this procedure if you have to unlock a dual-pass-encrypted disk (ADE version 1) or an unmanaged disk, or if the other methods fail.
 
-#### Create the repair VM and attach the source VM's OS disk
+### Create the repair VM and attach the source VM's OS disk
 
 1. If the source VM’s encrypted OS disk is a managed disk, follow steps 1-4 in Method 2 to attach a copy of the locked disk to a repair VM.
 
@@ -200,12 +200,12 @@ You can unlock the disk manually by following this procedure if you have to unlo
 
 2. If the source VM’s encrypted OS disk is an unmanaged disk, see [Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md).
 
-#### Install the Az PowerShell module in the repair VM
+### Install the Az PowerShell module in the repair VM
 
 The manual resolution method to unlock an encrypted disk offline relies on the Az module in PowerShell. Therefore, you have to install this module on the repair VM.
 
 1. Connect to the repair VM through RDP.
-2. On the repair VM, in Server Manager, Select **Local Server**, and then turn off IE Enhanced Security Configuration for Administrators.
+2. On the repair VM, in Server Manager, Select **Local Server**, and then turn off **IE Enhanced Security Configuration** for Administrators.
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/ie-esc-off-admins.png" alt-text="A screenshot of the dialog box for internet explorer enhanced security configuration, with the setting turned off for administrators":::
 
@@ -246,7 +246,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
     Install-Module -Name Az.Accounts -Scope AllUsers -RequiredVersion "1.9.4" -Repository PSGallery -Force
     ```
 
-#### Retrieve the BEK file name
+### Retrieve the BEK file name
 
 1. In the Azure portal, navigate to the key vault that was used to encrypt the source VM. If you don’t know the name of the key vault, enter the following command at the prompt in Azure Cloud Shell, and look for the value next to “sourceVault” in the output:
 
@@ -263,7 +263,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 5. Enter the following command to begin the process of signing into your Azure subscription, replacing “[SubscriptionID]” with your Azure subscription ID:
 
     ```powershell
-    Add-AzAccount -SubscriptionID [SubscriptionID]
+    Add-AzAccount -SubscriptionID <SubscriptionID>
     ```
 
 6. Follow the prompts to complete the process of signing in to your Azure subscription.
@@ -295,7 +295,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 9. Select **Run Script** to run the script.  
 10. In the output, look for the value beneath **DiskEncryptionKeyFileName** for the name of the BEK file.
 
-    In the following example output, the BEK file name (secret name + the “.BEK” file extension) is AB4FE364-4E51-4034-8E09-0087C3D51C18.BEK. Record this value because it will be used in the next step. (If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the repair VM.)
+    In the following example output, the BEK file name (secret name + the “.BEK” file extension) is *AB4FE364-4E51-4034-8E09-0087C3D51C18.BEK*. Record this value because it will be used in the next step. (If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the repair VM.)
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/show-wrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a wrapped bek.":::
 
@@ -303,7 +303,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/show-unwrapped-bek.png" alt-text="Screenshot of PowerShell output in a table showing the disk encryption key file name for a content type of bek.":::
 
-#### Download the BEK to the repair VM
+### Download the BEK to the repair VM
 
 1. On the repair VM, create a folder named “BEK” (without the quotation marks) in the root of the C volume.
 2. Copy and paste the following sample script into an empty PowerShell ISE script pane. 
@@ -322,12 +322,12 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
     [System.IO.File]::WriteAllBytes($path,$bekFileBytes)
     ```
 
-3. In the PowerShell ISE window, select **Run Script**. If the script runs successfully, there will be no output or completion message. However, new file will be created in the C:\BEK folder. (The C:\BEK folder must already exist.)
+3. In the PowerShell ISE window, select **Run Script**. If the script runs successfully, there will be no output or completion message. However, new file will be created in the *C:\BEK* folder. (The *C:\BEK* folder must already exist.)
 4. Skip to [Verify that the script has completed successfully](#verify-that-the-script-ran-successfully).
 
-#### Download and unwrap the BEK
+### Download and unwrap the BEK
 
-1. On the repair VM, create a folder named “BEK” (without the quotation marks) in the root of the C volume.
+1. On the repair VM, create a folder named “*BEK*” (without the quotation marks) in the root of the C volume.
 2. Record the following values in Notepad. You will be prompted to supply them when the script runs.
 
     - **secretUrl**. This is the URL of the secret that’s stored in the key vault. A valid secret URL uses the following format:
@@ -343,24 +343,24 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
         You can get this value in the Azure portal by navigating to the **Keys** blade in your key vault, selecting the name of the key that’s used as the KEK, selecting the current version identifier, and then reading the **Key Identifier URL** below **Properties**. (You can copy this URL to the clipboard.)
 
-    - **secretFilePath**. This is the full pathname for the location to store the BEK file in. For example, if the BEK file name is “AB4FE364-4E51-4034-8E06-0087C3D51C18.BEK,” you can enter “C:\BEK\AB4FE364-4E51-4034-8E06-0087C3D51C18.BEK.” (The C:\BEK folder must already exist.)
+    - **secretFilePath**. This is the full pathname for the location to store the BEK file in. For example, if the BEK file name is *AB4FE364-4E51-4034-8E06-0087C3D51C18.BEK*, you can enter *C:\BEK\AB4FE364-4E51-4034-8E06-0087C3D51C18.BEK.* (The *C:\BEK* folder must already exist.)
 
 3. Navigate [to the following page](https://gist.github.com/ShridharParameshwarBhat/5a4f439afdb99ec4730e481b91bcb795) to download the script that’s used to generate the BEK file for unlocking the encrypted disk.
 4. On the page, select **Raw**.
-5. Copy and paste the contents of the script into an empty script pane in an elevated PowerShell ISE window in the repair VM. 
+5. Copy and paste the contents of the script into an empty script pane in an elevated PowerShell ISE window in the repair VM.
 6. Select **Run Script**.
 7. When you’re prompted, supply the values that you recorded before you ran the script. If you are prompted by an Untrusted Repository message, select **Yes to All**.
-If the script runs successfully, a new file will be created in the C:\BEK folder. (This folder must already exist.)
+If the script runs successfully, a new file will be created in the *C:\BEK* folder. (This folder must already exist.)
 
-#### Verify that the script ran successfully
+### Verify that the script ran successfully
 
-1. Navigate to the C:\BEK folder on your local computer and locate the new output file.
-2. Open the file in Notepad. If the script ran correctly, you will find the phrase "BitLocker Extension Key Protector" on the top line of the file if you scroll to the right.
+1. Navigate to the *C:\BEK* folder on your local computer and locate the new output file.
+2. Open the file in Notepad. If the script ran correctly, you will find the phrase **BitLocker Extension Key Protector** on the top line of the file if you scroll to the right.
 :::image type="content" source="media/unlock-encrypted-disk-offline/verify-script.png" alt-text="A screenshot of a text file open in notepad, with the words Bitlocker Extension Key Protector highlighted.":::
 
-#### Unlock the attached disk
+### Unlock the attached disk
 
-You are now ready to unlock the encrypted disk. 
+You are now ready to unlock the encrypted disk.
 
 1. On the repair VM, in Disk Management bring the attached encrypted disk online if it is not already online. Note the drive letter of the BitLocker encrypted volume.
 2. At a command prompt, enter the following command.
@@ -372,13 +372,13 @@ You are now ready to unlock the encrypted disk.
     manage-bde -unlock <ENCRYPTED DRIVE LETTER>: -RecoveryKey <.BEK FILE PATH>
     ```
 
-    For example, if the encrypted drive is F and the BEK file name is “DiskEncryptionKeyFileName.BEK,” you would run the following command:
+    For example, if the encrypted drive is F and the BEK file name is “*DiskEncryptionKeyFileName.BEK*,” you would run the following command:
 
     ```console
     manage-bde -unlock F: -RecoveryKey C:\BEK\DiskEncryptionKeyFileName.BEK
     ```
 
-    If the encrypted drive is F and the BEK file name is “EF7B2F5A-50C6-4637-9F13-7F599C12F85C.BEK,” you would run the following command:
+    If the encrypted drive is F and the BEK file name is “*EF7B2F5A-50C6-4637-9F13-7F599C12F85C.BEK*,” you would run the following command:
 
     ```console
     manage-bde -unlock F: -RecoveryKey C:\BEK\EF7B2F5A-50C6-4637-9F13-7F599C12F85C.BEK
@@ -386,18 +386,18 @@ You are now ready to unlock the encrypted disk.
 
     You will see output like the following example:
 
-    ```console
+    ```output
     The file "C:\BEK\0D44E996-4BF3-4EB0-B990-C43C250614A4.BEK" successfully unlocked volume F:.
     ```
 
 3. Now that you can access the volume, you can do troubleshooting and mitigation as necessary, for example, by reading logs or running a script.
 
     >[!IMPORTANT]
-    >The unlocking process gives you access to the disk, but *it does not decrypt the disk*. The disk remains encrypted after you unlock it. If you need to decrypt the disk, use the command *[manage-bde -off [volume]](/windows-server/administration/windows-commands/manage-bde-off)* to begin the decryption process and *[manage-bde [drive] -status](/windows-server/administration/windows-commands/manage-bde-status)* to check the progress of the decryption.
+    >The unlocking process gives you access to the disk, but *it does not decrypt the disk*. The disk remains encrypted after you unlock it. If you need to decrypt the disk, use the command **[manage-bde \<volume\> -off](/windows-server/administration/windows-commands/manage-bde-off)** to begin the decryption process and **[manage-bde \<drive\> -status](/windows-server/administration/windows-commands/manage-bde-status)** to check the progress of the decryption.
 
 4. When repairs are complete, and if the disk is managed, you can proceed to [Replace the source VM’s OS disk (managed disks)](#replace-the-source-vms-os-disk-managed-disks). If instead the disk is unmanaged, you can use the CLI-based steps described here: [Replace the OS disk on the source VM](unmanaged-disk-offline-repair.md#replace-the-os-disk-on-the-source-vm)
 
-#### Replace the source VM’s OS disk (managed disks)
+### Replace the source VM’s OS disk (managed disks)
 
 1. After you repair the disk, open the **Disks** blade for the repair VM in the Azure portal. Detach the copy of the source VM OS disk. To do this, locate the row for the associated disk name under **Data Disks**, select the “X” at the right side of that row, and then select **Save**.
 
