@@ -335,7 +335,9 @@ An external user invitation doesn't require that it be accepted by the email add
 For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user selects the link to accept the invite. However, based on the user's browser cookies, the user accidentally accepts the invite by using the incorrect identity.
 
 When the user signs in to the resource by using the user's external user account, the user receives the error that the user isn't found in the directory.
+
 </details>
+
 <details>
 <summary><b>When accessing the "Access Requests" list</b></summary>
 
@@ -410,6 +412,7 @@ For more information about how to set up and manage access requests, go to [Set 
 
 For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
 </details>
+
 <details>
 <summary><b>When accessing a shared folder</b></summary>
 
@@ -431,7 +434,9 @@ When you share a folder with a user who can't access the parent folder or site, 
 The **Limited Access** permission level is unusual. It lets a user or group browse to a site page or library to access a specific content item without seeing the whole list. For example, when you share a single item in a list or library with a user who doesn't have permission to open or edit any other items in the library, SharePoint automatically grants limited access to the parent list. This lets the user see the specific item that you shared. In other words, the **Limited Access** permission level includes all the permissions that the user must have to access the required item.
 
 For more information about site collection features that includes **Limited-access user permission lockdown mode**, see [Enable or disable site collection features](https://support.office.microsoft.com/article/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04?correlationid=3fa0f19c-84e4-403d-9046-3c25d66fd867).
+
 </details>
+
 <details>
 <summary><b>When a user tries to approve an Approval Workflow task</b></summary>
 
@@ -448,4 +453,5 @@ For more information about approval workflows, go to [Understand approval workfl
 For more information about permission levels in SharePoint Online, go to [Understanding permission levels](https://support.office.com/article/87ecbb0e-6550-491a-8826-c075e4859848).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
+
 </details>
