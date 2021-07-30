@@ -1,7 +1,7 @@
 ---
 title: Guest access in SMB2 and SMB3 is disabled
 description: Guest access in SMB2 disabled by default in Windows 10, Windows Server 2019.
-ms.date: 07/22/2021
+ms.date: 07/30/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -108,7 +108,7 @@ If you want to enable insecure guest access, you can configure the following Gro
 > [!NOTE]
 > If modifying Active Directory domain-based group policy, use **Group Policy Management** (gpmc.msc).
 
-For monitoring and inventory purposes, this group policy is setting the following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
+For monitoring and inventory purposes: this group policy is setting the following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
 
 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\LanmanWorkstation\`  
 `AllowInsecureGuestAuth`
