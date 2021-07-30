@@ -141,7 +141,7 @@ Here's an example showing how to analyze a filtered result. In this scenario, th
 
     :::image type="content" source="media/tcpip-performance-known-issues/analyze-capture-file.png" alt-text="Network trace capture for the retransmitted frame.":::
 
-    As shown in the screenshot, frame **#441** is retransmitted twice, which means it is transmitted by the sender three times. Use the same TCP sequence number (2278877548) to identify this frame.
+    As shown in the screenshot, frame `#441` is retransmitted twice, which means it is transmitted by the sender three times. Use the same TCP sequence number (2278877548) to identify this frame.
 
 3. Right-click the **SequenceNumber** in **Frame Details** and select **Add Selected Value to Display Filter**.
 
@@ -155,7 +155,7 @@ Here's an example showing how to analyze a filtered result. In this scenario, th
 
     :::image type="content" source="media/tcpip-performance-known-issues/complete-tcp-sequence.png" alt-text="The complete TCP sequence.":::
 
-    This result shows that the original frame #441 isn't received by the server and is retransmitted by the sender. The retransmission of a frame happens if no acknowledgment of the sequence is received. To understand how TCP works, see [The three-way handshake via TCP/IP](three-way-handshake-via-tcpip.md) and [Description of Windows TCP features](description-tcp-features.md#tcp-retransmission-behavior-and-fast-retransmit). Then, copy the `TCP.SequenceNumber == <value>` sequence filter from the client trace and paste it on the server trace.
+    This result shows that the original frame `#441` isn't received by the server and is retransmitted by the sender. The retransmission of a frame happens if no acknowledgment of the sequence is received. To understand how TCP works, see [The three-way handshake via TCP/IP](three-way-handshake-via-tcpip.md) and [Description of Windows TCP features](description-tcp-features.md#tcp-retransmission-behavior-and-fast-retransmit). Then, copy the `TCP.SequenceNumber == <value>` sequence filter from the client trace and paste it on the server trace.
 
     On the server, only one packet of the given sequence is received, as shown in the following result:
 
