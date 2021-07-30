@@ -15,6 +15,9 @@ ms.technology: networking
 ---
 # Overview of TCP/IP performance
 
+> [!NOTE]
+> This article is included in a 3-part series. You can review [Part 2: TCP/IP performance underlying network issues](troubleshooting-tcpip-performance-underlying-network.md) and [Part 3: TCP/IP performance known issues](tcpip-performance-known-issues.md).
+
 Transmission Control Protocol/Internet Protocol (TCP/IP) performance is a comparison. The comparison should be conducted with identical endpoints in terms of hardware, network path, and Operating System (OS). Real-life performance is different because multiple factors are involved and may cause a bottleneck. These factors are often the underlying network, the design of TCP and the actual transmit rate of storage IOs.
 
 Read more about [performance tuning](/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) to set the best performing configuration for the endpoints.
@@ -111,3 +114,8 @@ Here are the steps to measure throughput and create a baseline:
     In this example, the throughput is almost 19 Gb/s and is calculated as follows:
 
     (85,899,349,200 bytes/36.678 seconds) * 8 = 18,735,885,097.33355 (bits/second)
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn more about troubleshooting TCP/IP performance issues about underlying network](troubleshooting-tcpip-performance-underlying-network.md)

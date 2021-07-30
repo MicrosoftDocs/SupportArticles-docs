@@ -1724,8 +1724,12 @@
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
       href: ./networking/system-compatibility-with-dnssec-enabled-root-server.md
-    - name: Overview of TCP/IP performance
+    - name: "Part 1: TCP/IP performance overview"
       href: ./networking/overview-of-tcpip-performance.md
+    - name: "Part 2: TCP/IP performance underlying network issues"
+      href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
+    - name: "Part 3: TCP/IP performance known issues"
+      href: ./networking/tcpip-performance-known-issues.md
     - name: PortQry version 2.0 features and functions
       href: ./networking/portqry-command-line-port-scanner-v2.md
     - name: Portqry.exe command-line utility
@@ -1756,8 +1760,6 @@
       href: ./networking/automatic-metric-for-ipv4-routes.md
     - name: The default dynamic port range for TCP/IP has changed
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
-    - name: Troubleshoot TCP/IP performance issues about underlying network
-      href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Virtual machines lose network connectivity
