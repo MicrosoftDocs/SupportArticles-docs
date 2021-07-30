@@ -1,7 +1,7 @@
 ---
 title: Description of Windows Mobile Device Center
 description: This article describes the new application that replaces ActiveSync in Windows Vista.
-ms.date: 01/21/2021
+ms.date: 07/29/2021
 ms.prod-support-area-path: 
 ms.topic: troubleshooting
 ---
@@ -12,16 +12,20 @@ This article describes the new application that replaces ActiveSync in Windows V
 _Applies to:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 931937
 
+## Windows Mobile Device Center is no longer supported
+
 > [!IMPORTANT]
-> The content in this article is for Windows Mobile Device Center which is no longer supported. The corresponding downloads have been removed from the Microsoft Download Center. Here are some additional references for Windows 10 environments.
+> The content in this article is for Windows Mobile Device Center which is no longer supported. The corresponding downloads have been removed from the Microsoft Download Center.
 
-To access your phone on your PCs, you can use Your Phone application on your system. For more information review [Your Phone app help & learning - Microsoft Support](https://support.microsoft.com/your-phone-app) and [Your Phone updates - Windows Insider Program | Microsoft Docs](/windows-insider/apps/your-phone#march-12-2019).
+## References for Windows 10 environments
 
-To learn more about mobile device management on Windows 10 review [Mobile device management - Windows Client Management | Microsoft Docs](/windows/client-management/mdm/).
+- To access your phone on your PCs, use Your Phone application on your system. For more information review [Your Phone app help & learning - Microsoft Support](https://support.microsoft.com/your-phone-app) and [Your Phone updates - Windows Insider Program | Microsoft Docs](/windows-insider/apps/your-phone#march-12-2019).
 
-For more information on configuring Windows 10 mobile devices review [Configure Windows 10 Mobile devices - Configure Windows | Microsoft Docs](/windows/configuration/mobile-devices/configure-mobile).
+- To learn more about mobile device management on Windows 10 review [Mobile device management - Windows Client Management | Microsoft Docs](/windows/client-management/mdm/).
 
-## Introduction
+- To configure Windows 10 mobile devices, see [Configure Windows 10 Mobile devices - Configure Windows | Microsoft Docs](/windows/configuration/mobile-devices/configure-mobile).
+
+## Introduction of Windows Mobile Device Center
 
 Microsoft Windows Mobile Device Center replaces ActiveSync for Windows Vista.
 
@@ -29,7 +33,7 @@ Windows Mobile Device Center offers device management and data synchronization b
 
 For Windows XP or earlier operating systems, you must use Microsoft ActiveSync.
 
-## More information
+## How to use Windows Mobile Device Center
 
 Download and install Windows Mobile Device Center 6.1 if you run Windows Vista on your computer and you want to sync content between your mobile phone and your computer. Windows Mobile Device Center is compatible only with Windows Vista.
 
@@ -42,7 +46,7 @@ To determine which Windows Mobile operating system you're using if your phone do
 
 If your phone has a touch screen, tap **Start**, tap the **System** tab, and then tap **About**. To sync content to any of these devices, you must use a USB or serial cable, your computer's Internet connection, and File Explorer.
 
-Windows Mobile Device Center includes the following features:
+## Features of Windows Mobile Device Center
 
 - Streamlined setup
 
