@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.reviewer: 
+ms.reviewer: aruiz, meerak
 ms.custom: 
 - Exchange Server
 - CSSTroubleshoot
@@ -29,7 +29,7 @@ When you try to synchronize a Microsoft Exchange Server mailbox with an offline 
 - Folders in Microsoft Outlook not being updated
 - Email messages available in Outlook on the web (OWA), but not in Outlook
 - Different email count in Outlook and OWA
-- New email messages not downloaded
+- New email messages not downloaded in Outlook
 
 These issues occur if either the OST file or the Exchange Server support file is damaged. This article provides guidance to troubleshoot and resolve these issues.
 
@@ -111,3 +111,5 @@ To replace the support file that you renamed in the original media, follow these
     |In the window **How would you like to repair your Office Programs**, select **Online Repair** > **Repair** to make sure everything gets fixed. (The faster **Quick Repair** option is also available, but it only detects and then replaces corrupted files.)|In **Change your installation**, select **Repair**, and then click **Continue**.|
 
 1. Synchronize the offline folders.
+
+For more information, see [Repair an Office application](https://support.microsoft.com/office/7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
