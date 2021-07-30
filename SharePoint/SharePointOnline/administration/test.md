@@ -19,4 +19,4 @@ description: Outlines resolutions to error messages received
 appliesto:
 - SharePoint Online
 ---
-# "Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business
+# Errors in SharePoint Online and OneDrive for Business
