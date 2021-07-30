@@ -36,16 +36,19 @@ These options were removed from Outlook on the web, and the code logic was moved
 
 ### Two kinds of updates
 
-There are two kinds of updates: an update that requires a response and an informational update.
+There are two kinds of updates:
 
-By default, updates are not sent to all recipients but only to the specific adjusted recipients (added or deleted attendees).
+- An update that requires a response
+- An informational update.
+
+> [!NOTE]
+> By default, updates are not sent to all recipients but only to the specific adjusted recipients (added or deleted attendees). If the attendees list contains an unexpanded distribution group, any updates are sent to all recipients.
 
 **Updates are sent to all recipients for single and recurrence meetings when one of the following items is changed:**
 
 - Location field
 - Message body
 - Attachments
-- If the attendees list contains an unexpanded DL, any attendancy updates are sent out to all participants .
 
 These updates are informational, and they do not require the recipient to process (accept/decline/tentative).
 
