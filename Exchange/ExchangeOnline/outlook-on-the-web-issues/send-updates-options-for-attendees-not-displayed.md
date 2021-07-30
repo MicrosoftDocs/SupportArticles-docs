@@ -39,7 +39,7 @@ These options were removed from Outlook on the web, and the code logic was moved
 There are two kinds of updates:
 
 - An update that requires a response
-- An informational update.
+- An informational update
 
 > [!NOTE]
 > By default, updates are not sent to all recipients but only to the specific adjusted recipients (added or deleted attendees). If the attendees list contains an unexpanded distribution group, any updates are sent to all recipients.
