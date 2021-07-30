@@ -27,7 +27,7 @@ Overall Microsoft Teams performance on laptops may be affected during meetings t
 Reduce the resource requirements for your laptop to improve the Teams experience during the meeting and try:
 
 - Close any applications or browser tabs that you aren't using.
-- Turn off video in the meeting.
+- Turn off video in the meeting:
   - To turn off your own video, select **Turn camera off** in the meeting controls.
   - To turn off incoming video, select **More actions** > **Turn off incoming video** in the meeting controls.
 - Disable GPU hardware acceleration in Teams. To disable this function, select the **Settings and more** menu next to your profile picture at the top right of Teams, make sure that the **Disable GPU hardware acceleration** option is unchecked.
@@ -40,4 +40,4 @@ Reduce the resource requirements for your laptop to improve the Teams experience
 
 ## Status
 
-Microsoft is continuing to improve the experience when using video, sharing screen, and using a 4K/UHD monitor in a meeting. These fixes will be available in upcoming releases.
+In upcoming releases, Microsoft will continue to improve the experience of using video, sharing screen, and using a 4K monitor in a meeting.
