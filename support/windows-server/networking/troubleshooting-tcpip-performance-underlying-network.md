@@ -15,8 +15,8 @@ ms.technology: networking
 ---
 # Troubleshooting TCP/IP performance issues about underlying network
 
-> [!IMPORTANT]
-> This article is included in a series of articles. First review [Part 1: TCP/IP performance overview](overview-of-tcpip-performance.md) before reading this article.
+> [!NOTE]
+> This article is included in a 3-part series. You can review [Part 1: TCP/IP performance overview](overview-of-tcpip-performance.md) and [Part 3: TCP/IP performance known issues](tcpip-performance-known-issues.md).
 
 When the throughput falls below a given [baseline](overview-of-tcpip-performance.md#how-to-create-a-baseline), use a packet capturing tool to take a network trace and detect network issues.
 

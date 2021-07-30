@@ -15,8 +15,8 @@ ms.technology: networking
 ---
 # Known issues of TCP/IP performance
 
-> [!IMPORTANT]
-> This article is included in a series of articles. First review [Part 2: TCP/IP performance underlying network issues](troubleshooting-tcpip-performance-underlying-network.md) before reading this article.
+> [!NOTE]
+> This article is included in a 3-part series. You can review [Part 1: TCP/IP performance overview](overview-of-tcpip-performance.md) and [Part 2: TCP/IP performance underlying network issues](troubleshooting-tcpip-performance-underlying-network.md).
 
 This article describes the following TCP/IP performance issues:
 
