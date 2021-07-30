@@ -108,7 +108,7 @@ If you want to enable insecure guest access, you can configure the following Gro
 > [!NOTE]
 > If modifying Active Directory domain-based group policy, use **Group Policy Management** (gpmc.msc).
 
-For monitoring and inventory purposes: this group policy is setting the following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
+For monitoring and inventory purposes, this group policy is setting the following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
 
 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\LanmanWorkstation\`  
 `AllowInsecureGuestAuth`
