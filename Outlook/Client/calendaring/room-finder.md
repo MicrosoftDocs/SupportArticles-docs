@@ -51,8 +51,8 @@ In Outlook for Microsoft 365, the **Room Finder** control button can be found ne
 :::image type="content" source="./media/room-finder/room-finder-microsoft-365-scheduling-assistant.png" alt-text="Room Finder feature in the Scheduling Assistant view in Microsoft 365.":::
 
 > [!NOTE]
-> There's a known issue in which no available rooms are displayed in the **Room Finder** pane when you start a meeting outside your working hours. For more information, see [No available rooms for a meeting outside working hours](https://support.microsoft.com/help/2932395).  
-  
+> There's a known issue in which no available rooms are displayed in the **Room Finder** pane when you start a meeting outside your working hours. For more information, see [No available rooms for a meeting outside working hours](https://support.microsoft.com/help/2932395).
+
 ## Manually controlling the Room Finder
 
 When you hide the Room Finder on the **Appointment** tab of a meeting form, the following data is written into the Windows registry.
@@ -62,7 +62,7 @@ When you hide the Room Finder on the **Appointment** tab of a meeting form, th
 - Value: 0 (If you subsequently display the Room Finder, this value is changed to 1)
 
 > [!NOTE]
-> In this subkey path, the **x.0** placeholder represents your version of Office (16.0 = Office 2016 and Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).
+> In this subkey path, the *x.0* placeholder represents your version of Office (16.0 = Office 2016 and Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).
 
 If you hide the Room Finder on the **Scheduling Assistant** screen of a meeting form, this registry data is never used.
 
@@ -99,12 +99,12 @@ There are two different registry values that affect the Room Finder. Which one y
 
   - Subkey: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\x.0\Outlook\Preferences`
   - DWORD: `RoomFinderForceDisabled`
-  - Values: 1 = hide the Room Finder, 0 (or missing DWORD) = show the Room Finder  
+  - Values: 1 = hide the Room Finder, 0 (or missing DWORD) = show the Room Finder
 
-  After the required update is installed and you set **RoomFinderForceDisabled=1**, Outlook doesn't display the **Room Finder** pane on either the **Scheduling Assistant** or **Appointment** screens in a meeting form.
+  After the required update is installed and you set the `RoomFinderForceDisabled` value to `1`, Outlook doesn't display the **Room Finder** pane on either the **Scheduling Assistant** or **Appointment** screens in a meeting form.
 
 Another way to completely disable (hide) the Room Finder on the **Scheduling Assistant** and **Appointment** screens is to disable the "Microsoft Exchange Add-in" add-in. To do so, follow these steps.
-  
+
 > [!IMPORTANT]
 > We don't recommend that you disable the Microsoft Exchange Add-in, because it also disables other features, such as "Protect before send" and "Voicemail integration".
 
