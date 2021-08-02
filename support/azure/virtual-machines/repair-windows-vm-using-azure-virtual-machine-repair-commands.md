@@ -70,7 +70,7 @@ For additional documentation and instructions, see [az vm repair](/cli/azure/ext
    az extension update -n vm-repair
    ```
 
-3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy.  The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption the command will attempt to unlock the encrypted disk so that it is accessible when attached to the repair VM. If you need to troubleshoot your VM in a nested Hyper-V environment use `--enable-nested` and the repair VM will created with the Hyper-V role enabled along with a nested VM using the OS disk copy.
+3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy.  The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption, use `--unlock-encrypted-vm` to unlock the encrypted disk so that it is accessible when attached to the repair VM. For more information, see [confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk). If you need to troubleshoot your VM in a nested Hyper-V environment, use `--enable-nested` and the repair VM will created with the Hyper-V role enabled along with a nested VM using the OS disk copy.
 
    Repair VM example
    ```azurecli-interactive
