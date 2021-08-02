@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4013792
 
 ## Symptoms
 
-When you try to create a Linux VM with Ed25519 SSH keys in Microsoft Azure, or when you try to update an Azure Linux VM to use Ed25519 SHH keys, you receive an error message that resembles the following:
+When you try to create a Linux VM with Ed25519 SSH keys in Microsoft Azure, or when you try to update an Azure Linux VM to use Ed25519 SSH keys, you receive an error message that resembles the following:
 
 > The data section of the SSH key starts with an invalid pattern.
 
