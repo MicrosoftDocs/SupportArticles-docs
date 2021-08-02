@@ -29,7 +29,7 @@ search.appverid:
 By default, when you open a new meeting form in Microsoft Outlook 2016, Microsoft Outlook 2013, or Microsoft Outlook 2010, the **Room Finder** panel is displayed on the right side of the **Appointment** screen and the **Scheduling Assistant** screen, as shown in the following screenshots. The **Room Finder** control button can be found in the **Options** group on the **Meeting** tab.
 
 > [!NOTE]
-> You can hide the Room Finder by selecting the **Room Finder** control in the **Options** group of the ribbon. However, the Room Finder remains hidden only if you hide it on the **Appointment** screen. If you hide it on the **Scheduling Assistant** screen, switch to the **Appointment** screen and then back to the **Scheduling Assistant** screen, the Room Finder is visible again. The Room Finder isn't available when you create an appointment. You can select **Invite Attendees** on the **Appointment** tab to make it available.
+> You can hide the Room Finder by selecting the **Room Finder** control in the **Options** group of the ribbon. However, the Room Finder remains hidden only if you hide it on the **Appointment** screen. If you hide it on the **Scheduling Assistant** screen, switch to the **Appointment** screen and then back to the **Scheduling Assistant** screen, the Room Finder is visible again. The Room Finder isn't available when you create an appointment. You can select **Invite Attendees** on the **Appointment** tab to make it available.  
 > :::image type="content" source="./media/room-finder/invite-attendees.png" alt-text="Invite attendees on the Appointment tab.":::
 
 **The Appointment screen in Outlook**
