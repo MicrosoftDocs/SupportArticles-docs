@@ -68,5 +68,5 @@ To resolve this issue, add the certificate back to the Exchange Back End website
 1. Start **IIS Manager** on the Mailbox Server.
 1. Expand **Site**, highlight **Exchange Back End**, and select **Bindings** from the **Actions** pane in the right side column.
 1. Select **Typehttps** on Port 444.
-1. Click **Edit** and select the Microsoft Exchange certificate.
+1. Select **Edit** and select the Microsoft Exchange certificate.
 1. From an administrator command prompt, run `IISReset`.
