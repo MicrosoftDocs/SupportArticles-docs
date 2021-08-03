@@ -237,14 +237,6 @@
       href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
     - name: Error 403 Forbidden in OneDrive or SharePoints
       href: ../sharing-and-permissions/error-403-forbidden.md
-    - name: Error when trying to access SharePoint Online or OneDrive for Business
-      href: ../sharing-and-permissions/access-denied-sharepoint-error.md
-    - name: Error when an external user tries to access SharePoint Online or OneDrive for Business
-      href: ../sharing-and-permissions/error-when-external-user-tries-to-access-sharepoint-onedrive.md
-    - name: 'Error when trying to access a shared folder or "Access Requests" list'
-      href: ../sharing-and-permissions/access-requests-list-error-access-denied.md
-    - name: Error when trying to approve a SharePoint Approval Workflow task
-      href: ../sharing-and-permissions/approval-workflow-access-denied-error.md
     - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
     - name: '"External sharing is disabled for the site" error with Online Admin Center'
@@ -255,8 +247,6 @@
       href: ../sharing-and-permissions/organization-policies-do-not-allow-you-to-share-with-users-error.md
     - name: Anonymous users are prompted for credentials
       href: ../sharing-and-permissions/anonymous-users-are-prompted-for-credentials-in-library.md
-    - name: Can't access a shared folder
-      href: ../sharing-and-permissions/cannot-access-shared-folder.md
     - name: Can't add external users to a SharePoint Online External Content Type
       href: ../sharing-and-permissions/cannot-add-external-users-to-content-type.md
     - name: Can't share/break inheritance of a folder, list, or library
