@@ -79,7 +79,7 @@ To fix this issue, you can enable access to public folders for users and disable
 An error message that resembles the following is found in the RPC Client Access service log for this connection attempt:
 
 > [LoginPermException] 'User SID: *SID*' can't act as owner of a MailUser
-object '/o=ExchangeLabs/ou=Exchange Administrative Group (*Group*)/cn=Recipients/cn=<User Identity>' with SID *SID* and MasterAccountSid S-1-5-10
+object '/o=ExchangeLabs/ou=Exchange Administrative Group (*Group*)/cn=Recipients/cn=<User_Identity>' with SID *SID* and MasterAccountSid S-1-5-10
  (StoreError=LoginPerm)
 
 For more information, see [Configure legacy on-premises public folders for a hybrid deployment](/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders).
