@@ -10,9 +10,9 @@ ms.reviewer: fszita
 
 Authentication fails with the error "The requested federation realm object 'xxxxxx' does not exist" for users who are part of domain which is federated with a 3rd party identity provider in either [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) or [Microsoft 365](https://www.microsoft.com/microsoft-365).
 
-:::image type="content" source="media/authentication-fails-with-error/---.jpg" alt-text="Screenshot of the error message in ---." border="true":::
+:::image type="content" source="media/authentication-fails-with-error/authentication-fails-trouble-sign-in.png" alt-text="Screenshot of an error when signing into a federated domain." border="true":::
 
-:::image type="content" source="media/authentication-fails-with-error/---.jpg" alt-text="Screenshot of the error message in ---." border="true":::
+:::image type="content" source="media/authentication-fails-with-error/authentication-fails-troubleshooting-details.png" alt-text="Screenshot of the details of an error when signing into a federated domain." border="true":::
 
 This failure happens when the 3rd Party identity provider returns the wrong *IssuerURI* within the **Issuer** field in the Security Assertion Markup Language (SAML) response.
 
@@ -51,3 +51,7 @@ Use the command `Set-MsolDomainFederationSettings` to modify the IssuerURI of th
    ```
 
    The necessary IssuerURI value is listed by Azure AD in the authentication failure message.
+
+## Additional information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
