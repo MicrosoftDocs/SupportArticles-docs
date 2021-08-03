@@ -73,7 +73,7 @@ Commonly, provisioning failures can happen for multiple reasons, such as:
 
 To identify the reason for failed provisioning you will need to start with the serial log, this is available to you by deploying the VM with Azure Boot diagnostics.
 
-You will need to deploy a new VM with [boot diagnostics enabled](/azure/virtual-machines/linux/tutorial-monitor#enable-boot-diagnostics) for the VM with the failing image to access provisioning events in the serial log.
+You will need to deploy a new VM with [boot diagnostics enabled](/cli/azure/vm/boot-diagnostics) for the VM with the failing image to access provisioning events in the serial log.
 
 ```bash
 # create resource group
