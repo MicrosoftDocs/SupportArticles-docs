@@ -15,7 +15,7 @@ ms.reviewer: Genli
 appliesto:
 - Outlook 2019
 - Outlook 2016
-- Outlook for Office 365
+- Outlook for Microsoft 365
 search.appverid: MET150
 ---
 # Organizer's meeting remains outdated after a delegate sends an update on their behalf
@@ -54,6 +54,14 @@ In this scenario, the manager's meeting exception time may revert to the origina
 
 This issue occurs when Outlook processes the **Accepted** response before calendar synchronization is complete.
 
-## Status
+## More information
 
-Microsoft is researching this problem and will post more information in this article when the information becomes available.
+This is a known limitation in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
+
+To avoid this issue, allow enough time for Outlook to complete the synchronization of the recurring meeting, before you create a meeting recurrence exception and send the update.
+
+Additionally, this issue doesn't occur with shared calendars that sync using the new model in Outlook for Microsoft 365.
+
+To determine if a shared calendar is the new model, see [Outlook calendar sharing updates](https://support.microsoft.com/office/outlook-calendar-sharing-updates).
+
+For detailed technical changes about calendar sharing, see [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/calendar-sharing-in-microsoft-365).
