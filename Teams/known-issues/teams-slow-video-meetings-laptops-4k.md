@@ -20,20 +20,24 @@ appliesto:
 
 ## Summary
 
-Overall Teams performance on laptops may be affected during meetings that use video. This can occur if a laptop is docked to an external 4K or ultra-high-definition (also known as ultra HD or UHD) display.
+Overall Microsoft Teams performance on laptops may be affected during meetings that use video. This issue can occur if a laptop is docked to an external 4K or ultra-high-definition (also known as ultra HD or UHD) display.
 
 ## Workaround
 
-Reduce the resource requirements for your laptop to improve the Teams experience during the meeting. To do this, try one or more of the following methods:
+Reduce the resource requirements for your laptop to improve the Teams experience during the meeting and try:
 
-- Close any other applications that are running video.
-- Close browser tabs that you don’t need during the meeting.
+- Close any applications or browser tabs that you aren't using.
+- Turn off video in the meeting:
+  - To turn off your own video, select **Turn camera off** in the meeting controls.
+  - To turn off incoming video, select **More actions** > **Turn off incoming video** in the meeting controls.
+- Disable GPU hardware acceleration in Teams. To disable this function, select the **Settings and more** menu next to your profile picture at the top right of Teams, make sure that the **Disable GPU hardware acceleration** option is unchecked.
 - Disconnect your monitor from the port replicator or docking station, and directly connect it to the video port on the laptop, if available.
-- Change the resolution of your 4K or UHD monitor temporarily to 1920 x 1080. Instructions for doing this on Windows are located at [Change desktop icon size or screen resolution](https://support.microsoft.com/help/4026956/windows-10-change-screen-resolution).
-- Turn off your own video during the meeting. To do so, select **Turn camera off** in the meeting controls.
-- Turn off incoming video during the meeting. To do so, select **More actions** > **Turn off incoming video** in the meeting controls.
-- Restart your laptop.
+- Restart Teams.
+- Change the resolution of your 4K or UHD monitor to 1920 x 1080. For more information, see [Change desktop icon size or screen resolution](https://support.microsoft.com/help/4026956).
+- Use DVI or HDMI instead USB-C to connect your monitor, if possible.
+- Disable full screen mode in the meeting by selecting **More actions** > **Full screen**.
+- [Update Teams](https://support.microsoft.com/office/535a8e4b-45f0-4f6c-8b3d-91bca7a51db1) and [make sure that the latest update is installed](/microsoftteams/troubleshoot-installation#check-whether-teams-is-updated-successfully). The latest performance fixes were released in June 2021, which are available in version 1.4.00.16575 or later.
 
-## Resolution
+## Status
 
-Microsoft is actively working to resolve these issues, and will be releasing updates over the next several months. We’ll post more information in this article as it becomes available.
+In upcoming releases, Microsoft will continue to improve the experience of using video, sharing screen, and using a 4K monitor in a meeting.
