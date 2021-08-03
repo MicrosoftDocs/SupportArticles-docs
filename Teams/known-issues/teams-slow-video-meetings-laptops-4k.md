@@ -40,4 +40,4 @@ Reduce the resource requirements for your laptop to improve the Teams experience
 
 ## Status
 
-In upcoming releases, Microsoft will continue to improve the experience of using video, sharing screen, and using a 4K monitor in a meeting.
+Microsoft is continuing to improve meeting experience by optimizing Audio, Video, and Screen sharing when using a 4K monitor. These updates will become available in upcoming client releases.
