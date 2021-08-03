@@ -62,6 +62,6 @@ To avoid this issue, allow enough time for Outlook to complete the synchronizati
 
 Additionally, this issue doesn't occur with shared calendars that sync using the new model in Outlook for Microsoft 365.
 
-To determine if a shared calendar is the new model, see [Outlook calendar sharing updates](https://support.microsoft.com/office/outlook-calendar-sharing-updates).
+To determine if a shared calendar is the new model, see [Outlook calendar sharing updates](https://support.microsoft.com/office/outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26).
 
-For detailed technical changes about calendar sharing, see [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/calendar-sharing-in-microsoft-365).
+For detailed technical changes about calendar sharing, see [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/calendar-sharing-in-microsoft-365-b576ecc3-0945-4d75-85f1-5efafb8a37b4).
