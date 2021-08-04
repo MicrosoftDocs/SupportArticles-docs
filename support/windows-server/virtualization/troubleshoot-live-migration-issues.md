@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 4558514
 - Check compatibilities issues by running a `Compare-VM` command. Provide the name of the VM and the destination host. For example:
 
   ```powershell
-  PS C:\> Compare-VM -Name <vm_name> -DestinationHost <host_name>
+  Compare-VM -Name <vm_name> -DestinationHost <host_name>
   ```
 
 - Check whether any group policy object is preventing the migration from occurring. Verify that the following policy have at least the default settings.
