@@ -43,4 +43,4 @@ This is by design. This issue occurs because, when the database is opened in Dis
 
 ## Workaround
 
-To work around this issue, you must open the database in Enabled mode.
+To work around this issue, you must open the database in Enabled mode by [letting Access to trust the database](https://support.microsoft.com/office/decide-whether-to-trust-a-database-828ce4e9-1f38-4f4b-89c4-81bb0fcda8a4).
