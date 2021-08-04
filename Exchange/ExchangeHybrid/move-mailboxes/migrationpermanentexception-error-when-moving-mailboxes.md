@@ -23,10 +23,7 @@ search.appverid: MET150
 _Original KB number:_ &nbsp; 2932443
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at <https://aka.ms/hybridwizard>. For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
-
-> [!IMPORTANT]
-> Currently, the _ImListMigrationCompleted_ parameter is not available on the **Set-Mailbox** cmdlet in Exchange Online PowerShell. If you encounter the error that's described in this article, use PST migration for the affected mailboxes. For instructions, see [Overview of importing your organization's PST files](/microsoft-365/compliance/importing-pst-files-to-office-365).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Symptoms
 
@@ -38,7 +35,7 @@ Assume that you have an Exchange hybrid deployment that includes on-premises Exc
 
 However, when you run the `Set-UMMailbox mailboxID -ImListMigrationCompleted $false` command as stated in the error message, you receive the following error message:
 
-> The Mailbox '\<username\>@contoso.com' isn't enabled for unified messaging.
+> The Mailbox \<username>@contoso.com isn't enabled for unified messaging.
 
 ## Cause
 
@@ -46,20 +43,21 @@ This occurs if the Lync 2013 contacts of the user who is associated with the mai
 
 ## Resolution
 
-Use the **Set-Mailbox** cmdlet together with the _ImListMigrationCompleted_ parameter instead of the **Set-UMMailbox** cmdlet. For example, run the following command:
+> [!IMPORTANT]
+> Currently, the `ImListMigrationCompleted` parameter is available only in on-premises Exchange. For information about how to import PST files to Exchange Online mailboxes, see [overview of importing your organization's PST files](/microsoft-365/compliance/importing-pst-files-to-office-365).
+
+Use the [`Set-Mailbox`](/powershell/module/exchange/set-mailbox) cmdlet together with the `ImListMigrationCompleted` parameter instead of the `Set-UMMailbox` cmdlet. For example, run the following cmdlet:
 
 ```powershell
-Set-Mailbox <username>@contoso.com -ImListMigrationCompleted $false
+Set-Mailbox John@contoso.com -ImListMigrationCompleted $false
 ```
 
-After you run the command, perform the mailbox move request.
+After you run the cmdlet, perform the mailbox move request.
 
 > [!NOTE]
-> The `$false` setting in the _ImListMigrationCompleted_ parameter indicates that the user's contacts haven't been migrated to Lync to preserve the contact list. Be aware that the solution in this section may result in data loss. Exchange 2010 doesn't support the unified contact store feature in Lync 2013. Therefore, if you move a mailbox back to Exchange 2010 while the user's Lync contacts are stored in the unified contact store, the user could lose access to his or her Lync contacts. You should first make sure that the user's Lync contacts are moved back to Lync server before you move the mailbox to Exchange 2010.
+> The `$false` setting in the `ImListMigrationCompleted` parameter indicates that the user's contacts haven't been migrated to Lync to preserve the contact list. Be aware that the solution in this section may result in data loss. Exchange Server 2010 doesn't support the unified contact store feature in Lync 2013. Therefore, if you move a mailbox back to Exchange Server 2010 while the user's Lync contacts are stored in the unified contact store, the user could lose access to his or her Lync contacts. You should first make sure that the user's Lync contacts are moved back to Lync server before you move the mailbox to Exchange Server 2010.
 
 ## More information
-
-For more information about the **Set-Mailbox** cmdlet and the _ImListMigrationCompleted_ parameter, see [Set-Mailbox](/powershell/module/exchange/set-mailbox).
 
 If you experience issues when you move mailboxes to Exchange Online in Office 365, you can run the Troubleshoot Office 365 Mailbox Migration tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
 
