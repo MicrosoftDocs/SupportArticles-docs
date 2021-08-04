@@ -33,7 +33,7 @@ Assume that you have an Exchange hybrid deployment that includes on-premises Exc
 >
 > You shouldn't migrate mailbox '\<username>' to Exchange 2010 or an earlier version while the user's Instant Messaging contact list is stored in Exchange. If you do, the user could permanently lose access to their Instant Messaging contact list, which will cause serious data loss. The Exchange copy might be the only copy of this user's contact list. To continue, please contact your Instant Messaging administrator and make sure that the user's contact list is moved back to the Instant Messaging server. After this has been done, you should be able to complete this migration. If you must migrate the mailbox despite the potential data loss, you can do so by running 'Set-UMMailbox mailboxID -ImListMigrationCompleted $false'.
 
-However, when you run the `Set-UMMailbox mailboxID -ImListMigrationCompleted $false` command as stated in the error message, you receive the following error message:
+However, when you run the `Set-UMMailbox mailboxID -ImListMigrationCompleted $false` cmdlet as stated in the error message, you receive the following error message:
 
 > The Mailbox \<username>@contoso.com isn't enabled for unified messaging.
 
