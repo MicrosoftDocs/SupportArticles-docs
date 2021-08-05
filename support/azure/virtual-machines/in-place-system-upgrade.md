@@ -51,7 +51,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
-1. Verify that the Windows 10 VM doesn't use [Azure Disk Encryption](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview) or [Ephemeral OS Disk](https://docs.microsoft.com/azure/virtual-machines/ephemeral-os-disks). These features are currently not supported.
+1. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](https://docs.microsoft.com/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
 2. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
 3. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](https://docs.microsoft.com/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 4. Check whether the backup was successful. To do so, turn off the original Windows 10 VM. Verify that a new VM can be successfully restored from the backup, and that all applications are running successfully.
