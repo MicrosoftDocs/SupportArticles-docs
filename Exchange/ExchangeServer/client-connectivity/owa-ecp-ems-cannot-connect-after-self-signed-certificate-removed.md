@@ -35,7 +35,7 @@ In this scenario, several client protocols such as Exchange Control Panel (ECP),
 - EMS can't connect and displays the following error:
 
     ```console
-    New-PSSession : [dc.local.mcrlegal.com] Processing data from remote server dc.local.mcrlegal.com failed with the
+    New-PSSession : [xy.local.contoso.com] Processing data from remote server xy.local.contoso.com failed with the
     following error message: The WinRM Shell client cannot process the request. The shell handle passed to the WSMan Shell
     function is not valid. The shell handle is valid only when WSManCreateShell function completes successfully. Change
     the request including a valid shell handle and try again. For more information, see the about_Remote_Troubleshooting
@@ -59,7 +59,7 @@ During the setup process, a self-signed certificate called Microsoft Exchange is
 To resolve this issue, add the certificate back to the Exchange Back End website by creating a new self-signed certificate, and then bind it to the Exchange Back End website.
 
 > [!NOTE]
-> These steps should be taken on the Exchange Mailbox server role:
+> These steps should be taken on the Exchange Mailbox server role.
 
 1. Start Management Shell on the Mailbox server.
 1. Type *New-ExchangeCertificate*.
@@ -68,5 +68,5 @@ To resolve this issue, add the certificate back to the Exchange Back End website
 1. Start **IIS Manager** on the Mailbox Server.
 1. Expand **Site**, highlight **Exchange Back End**, and select **Bindings** from the **Actions** pane in the right side column.
 1. Select **Typehttps** on Port 444.
-1. Click **Edit** and select the Microsoft Exchange certificate.
+1. Select **Edit** and select the Microsoft Exchange certificate.
 1. From an administrator command prompt, run `IISReset`.
