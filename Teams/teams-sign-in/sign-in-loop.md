@@ -16,7 +16,7 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome
+# Microsoft Teams is stuck in a login loop in Edge, Internet Explorer, Firefox, Safari, or Google Chrome
 
 ## Symptoms
 
