@@ -27,6 +27,10 @@ You cannot use Microsoft Outlook 2016 for Mac or Outlook for Mac 2011 to move a 
 
 This functionality is not supported by Outlook 2016 for Mac or Outlook for Mac 2011. This is because moving a meeting from one calendar to another might trigger discrepancies between your instance of the meeting and the information that the meeting organizer or other attendees have. In such a scenario, you might miss important updates sent by the meeting organizer.
 
+## Workaround 
+
+The workaround is to forward the meeting to the account that you want the calendar item to be moved. 
+
 ## More information
 
 While you cannot move meetings between calendars, you can move appointments in this manner. A Meeting is a calendar item that has attendees, while an Appointment is a calendar item that does not have any attendees and is on your Calendar only.
