@@ -30,9 +30,22 @@ In Microsoft Outlook, you try expand a contact group in a public folder that con
 
 :::image type="content" source="media/cannot-expand-nested-contact-groups-unknown-shown/unknown-shown-for-nested-contact-group.png" alt-text="Nested Contact Group":::
 
-## Resolution
+## Resolution 
+  
+### Method 1
 
 To resolve this issue, right-click the Contact folder in the Public Folder, and then select **Properties**. On the Outlook **Address Book** tab, select the **Show this folder as an email address book** option.
+  
+### Method 2
+  
+1) Open the group, Select **Update now**. If there are members that cannot be found, outlook will prompt you to choose between the three below options
+  
+  - Remove the lost members.
+  - Try to repair  the lost members and remove only those that cannot be resolved.
+  - Cancel this operation and do not change any members.
+ 
+2) Select, **Try to repair  the lost members and remove only those that cannot be resolved** and click **Ok**.
+
 
 ## More information
 
