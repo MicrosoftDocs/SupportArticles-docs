@@ -90,25 +90,6 @@ To change the settings by using GPO:
 1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
 2. Add the sites listed in step 3 above to the **Content settings** > **CookiesAllowedForUrls** setting.
 
-### Mozilla Firefox
-
-1. In the Firefox **Settings** window, select **the Privacy & Security** tab.
-2. Under **Cookies and Site Data**, select **Manage Exceptions**.
-3. In the **Address of website** text box, type the following sites, and then select **Allow**.
-
-    - `https://*.microsoft.com`
-    - `https://*.microsoftonline.com`
-    - `https://*.teams.skype.com`
-    - `https://*.teams.microsoft.com`
-    - `https://*.sfbassets.com`
-    - `https://*.skypeforbusiness.com`
-
-4. Select **Save Changes**.
-
-To change the settings by using GPO:
-
-1. [Download and install the Firefox administrative template](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
-2. Add the sites listed in step 3 above to the **Cookies** setting.
 
 ### Safari
 
