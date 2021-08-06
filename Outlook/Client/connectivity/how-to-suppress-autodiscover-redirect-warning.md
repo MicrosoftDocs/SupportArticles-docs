@@ -62,9 +62,9 @@ To configure Outlook behavior when HTTP redirection occurs, you can set or deplo
 
 4. Select the **Edit** menu, point to **New**, and then select **String Value**.
 
-5. Type the name of the HTTPS server to which AutoDiscover can be redirected without prompting for confirmation from the user, and then press Enter. For example, to allow redirection to `https://adatum.com`, the first String Value (REG_SZ) name would be:
+5. Type the name of the HTTPS server to which AutoDiscover can be redirected without prompting for confirmation from the user, and then press Enter. For example, to allow redirection to `https://contoso.com`, the first String Value (REG_SZ) name would be:
 
-    *adatum.com*
+    *contoso.com*
 
     > [!NOTE]
     > In Outlook 2010 the name of the server is case-sensitive. In Outlook 2013 and Outlook 2016, it is not case-sensitive.
