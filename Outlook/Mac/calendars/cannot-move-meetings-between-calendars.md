@@ -29,7 +29,7 @@ This functionality is not supported by Outlook 2016 for Mac or Outlook for Mac 2
 
 ## Workaround 
 
-The workaround is to forward the meeting to the account that you want the calendar item to be moved. 
+The workaround is to forward the meeting to the account that you want the calendar item to be moved to. 
 
 ## More information
 
