@@ -44,24 +44,24 @@ Here's a sample Autodiscover response that displays the missing OAB URL:
 ```console
 <Protocol>
         <Type>EXCH</Type>
-        <Server>casarray1.tailspintoys.com</Server>
-        <ServerDN>/o=ToysExchOrg/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=casarray1.tailspintoys.com</ServerDN>
+        <Server>casarray1.contoso.com</Server>
+        <ServerDN>/o=ToysExchOrg/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=casarray1.contoso.com</ServerDN>
         <ServerVersion>7383807B</ServerVersion>
-        <MdbDN>/o=ToysExchOrg/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=casarray1.tailspintoys.com/cn=Microsoft Private MDB</MdbDN>
-        <PublicFolderServer>MBX1.tailspintoys.com</PublicFolderServer>
-        <AD>DC3.tailspintoys.com</AD>
-        <ASUrl>https://outlook.tailspintoys.com/ews/exchange.asmx</ASUrl>
-        <EwsUrl>https://outlook.tailspintoys.com/ews/exchange.asmx</EwsUrl>
-        <SharingUrl>https://outlook.tailspintoys.com/ews/exchange.asmx</SharingUrl>
-        <EcpUrl>https://mbx1.tailspintoys.com/ecp/</EcpUrl>
+        <MdbDN>/o=ToysExchOrg/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=casarray1.contoso.com/cn=Microsoft Private MDB</MdbDN>
+        <PublicFolderServer>MBX1.contoso.com</PublicFolderServer>
+        <AD>DC3.contoso.com</AD>
+        <ASUrl>https://outlook.contoso.com/ews/exchange.asmx</ASUrl>
+        <EwsUrl>https://outlook.contoso.com/ews/exchange.asmx</EwsUrl>
+        <SharingUrl>https://outlook.contoso.com/ews/exchange.asmx</SharingUrl>
+        <EcpUrl>https://mbx1.contoso.com/ecp/</EcpUrl>
         <EcpUrl-um>?p=customize/voicemail.aspx&amp;exsvurl=1</EcpUrl-um>
         <EcpUrl-aggr>?p=personalsettings/EmailSubscriptions.slab&amp;exsvurl=1</EcpUrl-aggr>
         <EcpUrl-mt>PersonalSettings/DeliveryReport.aspx?exsvurl=1&amp;IsOWA=&lt;IsOWA&gt;&amp;MsgID=&lt;MsgID&gt;&amp;Mbx=&lt;Mbx&gt;</EcpUrl-mt>
         <EcpUrl-ret>?p=organize/retentionpolicytags.slab&amp;exsvurl=1</EcpUrl-ret>
         <EcpUrl-sms>?p=sms/textmessaging.slab&amp;exsvurl=1</EcpUrl-sms>
         <EcpUrl-publish>customize/calendarpublishing.slab?exsvurl=1&amp;FldID=&lt;FldID&gt;</EcpUrl-publish>
-        <OOFUrl>https://outlook.tailspintoys.com/ews/exchange.asmx</OOFUrl>
-        <UMUrl>https://outlook.tailspintoys.com/ews/UM2007Legacy.asmx</UMUrl>
+        <OOFUrl>https://outlook.contoso.com/ews/exchange.asmx</OOFUrl>
+        <UMUrl>https://outlook.contoso.com/ews/UM2007Legacy.asmx</UMUrl>
 </Protocol>
 ```
 
