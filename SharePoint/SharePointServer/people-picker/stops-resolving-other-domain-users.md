@@ -79,22 +79,22 @@ Here the \<LoginName> and \<Password> refer to an account with read permissions 
 
 If there are multiple domains from which users need to be resolved, they need to be entered in a single `stsadm` command and not separate.
 
-For example, If you have two domains *contoso* and *adatum* from which users need to be resolved.
+For example, If you have two domains *contoso* and *contoso* from which users need to be resolved.
 
 #### Correct way - single stsadm command
 
 ```console
-stsadm -o setproperty -url http://<server:port> -pn peoplepicker-searchadforests -pv "forest:contoso.corp.com, contoso\<account>, <Password>;domain:bar.contoso.corp.com, contoso\<account>, <Password>;forest:adatum.corp.com, adatum\<account>, <Password>;domain:bar.adatum.corp.com, adatum\<account>, <Password>"
+stsadm -o setproperty -url http://<server:port> -pn peoplepicker-searchadforests -pv "forest:contoso.corp.com, contoso\<account>, <Password>;domain:bar.contoso.corp.com, contoso\<account>, <Password>;forest:contoso.corp.com, contoso\<account>, <Password>;domain:bar.contoso.corp.com, contoso\<account>, <Password>"
 ```
 
 #### Wrong way - multiple stsadm commands
 
 ```console
 stsadm -o setproperty -url http://<server:port> -pn peoplepicker-searchadforests -pv "forest:contoso.corp.com, contoso\<account>, <Password>;domain:bar.contoso.corp.com, contoso\<account>, <Password>"
-stsadm -o setproperty -url http://<server:port> -pn peoplepicker-searchadforests -pv "forest:adatum.corp.com, adatum\<account>, <Password>;domain:bar.adatum.corp.com, adatum\<account>, <Password>"
+stsadm -o setproperty -url http://<server:port> -pn peoplepicker-searchadforests -pv "forest:contoso.corp.com, contoso\<account>, <Password>;domain:bar.contoso.corp.com, contoso\<account>, <Password>"
 ```
 
-The second `stsadm` command that sets the property for *adatum* domain would toggle off the property for *contoso* domain. As a result, users from *Contoso* domain will no longer be resolved from the People Picker.
+The second `stsadm` command that sets the property for *contoso* domain would toggle off the property for *contoso* domain. As a result, users from *Contoso* domain will no longer be resolved from the People Picker.
 
 ## More information
 
