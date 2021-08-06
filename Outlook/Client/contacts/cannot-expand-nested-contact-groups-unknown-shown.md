@@ -44,7 +44,7 @@ To resolve this issue, right-click the Contact folder in the Public Folder, and 
   - Try to repair  the lost members and remove only those that cannot be resolved.
   - Cancel this operation and do not change any members.
  
-2) Select, **Try to repair  the lost members and remove only those that cannot be resolved** and click **Ok**.
+2. Choose **Try to repair the lost members and remove only those that cannot be resolved** and select **Ok**.
 
 
 ## More information
