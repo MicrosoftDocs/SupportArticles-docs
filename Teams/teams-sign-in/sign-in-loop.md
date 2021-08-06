@@ -92,7 +92,7 @@ To change the settings by using GPO:
 
 ### Mozilla Firefox
 
-1. In the Firefox **Settings** window, select **the Privacy & Security** tab.
+1. In the Firefox **Settings** window, select the **Privacy & Security** tab.
 2. Under **Cookies and Site Data**, select **Manage Exceptions**.
 3. In the **Address of website** text box, type the following sites, and then select **Allow**.
 
@@ -110,10 +110,11 @@ To change the settings by using GPO:
 1. [Download and install the Firefox administrative template](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
 2. Add the sites listed in step 3 above to the **Cookies** setting.
 
-
 ### Safari
 
-If you want to use Teams in Safari, see [Teams preview won't open in Safari](https://support.microsoft.com/office/1aac0a7c-35a8-42c1-a7df-f674afe234df).
+If you use Teams in Safari while Safari browser support is in preview, go to **Preferences** > **Privacy** and uncheck the **Prevent cross-site tracking** setting. Then, close your browser and navigate back to teams.microsoft.com in Safari.
+
+For more information, see [Teams preview won't open in Safari](https://support.microsoft.com/office/1aac0a7c-35a8-42c1-a7df-f674afe234df).
 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:
