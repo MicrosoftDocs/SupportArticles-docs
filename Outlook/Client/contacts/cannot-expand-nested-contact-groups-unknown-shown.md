@@ -38,7 +38,7 @@ To resolve this issue, right-click the Contact folder in the Public Folder, and 
   
 ### Method 2
   
-1) Open the group, Select **Update now**. If there are members that cannot be found, outlook will prompt you to choose between the three below options
+1. Open the group and select **Update now**. If there are members that cannot be found, Outlook will prompt you to choose between the following three options:
   
   - Remove the lost members.
   - Try to repair the lost members and remove only those that cannot be resolved.
