@@ -41,7 +41,7 @@ To resolve this issue, right-click the Contact folder in the Public Folder, and 
 1) Open the group, Select **Update now**. If there are members that cannot be found, outlook will prompt you to choose between the three below options
   
   - Remove the lost members.
-  - Try to repair  the lost members and remove only those that cannot be resolved.
+  - Try to repair the lost members and remove only those that cannot be resolved.
   - Cancel this operation and do not change any members.
  
 2. Choose **Try to repair the lost members and remove only those that cannot be resolved** and select **Ok**.
