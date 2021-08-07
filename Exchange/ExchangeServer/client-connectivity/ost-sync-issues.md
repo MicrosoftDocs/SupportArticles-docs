@@ -78,7 +78,7 @@ To synchronize all offline folders automatically every time that you're online a
 1. In the **Send/Receive Groups** dialog box, make sure that the **Perform an automatic send/receive when exiting** check box is selected, and then select **Close**.
 1. select **OK**.
 
-### Create an .ost file
+## Create an .ost file
 
 If all the folders except the Inbox folder are synchronized, or if you're not able to synchronize the folders, you might have a damaged .ost file. To fix the issue, create a new .ost file. Follow the steps in [How to rebuild the OST file](/outlook/troubleshoot/synchronization/synchronization-issue-between-outlook-owa#how-to-rebuild-the-ost-file). Then, synchronize the offline folders again.
 
