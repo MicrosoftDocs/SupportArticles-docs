@@ -2,7 +2,7 @@
 title: Read and analyze a client certificate
 description: This article introduces how to read some of the interesting features of a certificate.
 ms.date: 03/24/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: cirvin
 ms.topic: how-to
 ---

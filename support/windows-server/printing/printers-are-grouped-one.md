@@ -4,29 +4,29 @@ description: Provides a solution to an issue where printers installed using the 
 ms.date: 10/21/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers
 
 This article provides a solution to an issue where printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2015694
 
 ## Symptoms
 
 Consider this scenario:
 
-- A computer running a version of Windows listed in the Applies To section
-- Install two or more printers using the same printer driver and installed with the same printer port (that is, LPT1)
-- View the installed printers within **Devices and Printers**
+- A computer running a version of Windows listed in the Applies To section.
+- Install two or more printers using the same printer driver and installed with the same printer port (that is, LPT1).
+- View the installed printers within **Devices and Printers**.
 
 In this scenario, when viewing the installed printers within **Devices and Printers**, you may notice that some of the printers are grouped together and are associated with the same printer icon.
 

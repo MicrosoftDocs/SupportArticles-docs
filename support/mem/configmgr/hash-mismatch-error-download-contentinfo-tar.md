@@ -15,8 +15,8 @@ _Original KB number:_ &nbsp; 4458143
 
 Consider the following scenario:
 
-- You have multiple cloud DPs in Configuration Manager. Each DP is assigned to a different primary site.
-- The DP role isn't installed on the primary site server. Or, the DP role is installed on the primary site server, but the **Enable and configure BranchCache for this Distribution Point** option isn't enabled.
+- You have multiple cloud DPs in Configuration Manager. Each DP is assigned to a different primary site.
+- The DP role isn't installed on the primary site server. Or, the DP role is installed on the primary site server, but the **Enable and configure BranchCache for this Distribution Point** option isn't enabled.
 - The **BranchCache** feature is installed on the primary site servers. And **BranchCache** is enabled on client computers.
 
 In this scenario, you receive hash mismatch error when clients try to download the Contentinfo.tar file from the cloud DPs. An error entry is logged in the ContentTransferManager.log file:
@@ -25,7 +25,7 @@ In this scenario, you receive hash mismatch error when clients try to download t
 
 ## Cause
 
-This issue occurs because the **BranchCache** key isn't synchronized across the primary site servers. When Package Transfer Manager uploads the Contentinfo.tar file to the cloud DPs, the file hash is different on each primary site because the **BranchCache** key is different.
+This issue occurs because the **BranchCache** key isn't synchronized across the primary site servers. When Package Transfer Manager uploads the Contentinfo.tar file to the cloud DPs, the file hash is different on each primary site because the **BranchCache** key is different.
 
 ## Resolution
 

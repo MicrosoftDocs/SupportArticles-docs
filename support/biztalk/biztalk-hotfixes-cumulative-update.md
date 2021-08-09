@@ -27,7 +27,7 @@ The user who installs the hotfix must be:
 - A Windows administrator on the computer that's running BizTalk Server.
 - A system administrator on the computer that's running SQL Server.
 
-Make sure that you [back up all the databases for BizTalk Server](#backing-up-the-biztalk-server-databases).
+Make sure that you [back up all the databases for BizTalk Server](#backing-up-the-biztalk-server-databases).
 
 ## Restart requirements
 
@@ -42,18 +42,18 @@ If the hotfix doesn't include an SQL script, you must restart the BizTalk Server
 
 When multiple computers running BizTalk Server are configured in a group, you must install the hotfix on all computers running BizTalk Server in the group. Follow these steps:
 
-1. Stop all BizTalk Server host instances, custom isolated adapters, and any other services or applications (such as Administration Console and Health and Activity Tracking) that are related to BizTalk Server services. Do this on all computers in the BizTalk Server group. 
+1. Stop all BizTalk Server host instances, custom isolated adapters, and any other services or applications (such as Administration Console and Health and Activity Tracking) that are related to BizTalk Server services. Do this on all computers in the BizTalk Server group. 
 
-   If you use the HTTP, SOAP, WSE, or WCF adapters, restart and stop the IIS services. If you don't stop the IIS services, you might still receive incoming traffic. This behavior might affect the update, and the traffic might be lost when you do the rollback.
-2. Stop SQL Server Agent on the SQL Server instances that host the BizTalk Server databases.
+   If you use the HTTP, SOAP, WSE, or WCF adapters, restart and stop the IIS services. If you don't stop the IIS services, you might still receive incoming traffic. This behavior might affect the update, and the traffic might be lost when you do the rollback.
+2. Stop SQL Server Agent on the SQL Server instances that host the BizTalk Server databases.
 3. Leave the SSO services running.
-4. Verify that the BizTalk Server databases aren't in use by checking **Activity Monitoring** in SQL Server Management Studio or by running the `sp_who2` SQL command.
+4. Verify that the BizTalk Server databases aren't in use by checking **Activity Monitoring** in SQL Server Management Studio or by running the `sp_who2` SQL command.
 5. Install the hotfix on all servers in the BizTalk Server group. Install the hotfix on only one server at a time.
 6. Restart all the BizTalk Server services, all the IIS services, and SQL Server Agent.
 
-## Uninstallation and rollback
+## Uninstallation and rollback
 
-A BizTalk Server hotfix might update .dll files, and it might run SQL scripts. If the hotfix contains only .dll files, and if it doesn't include an SQL script, you can roll it back by using the uninstall command in Add or Remove Programs. You can review the Setup.xml file to determine which files will be updated.
+A BizTalk Server hotfix might update .dll files, and it might run SQL scripts. If the hotfix contains only .dll files, and if it doesn't include an SQL script, you can roll it back by using the uninstall command in Add or Remove Programs. You can review the Setup.xml file to determine which files will be updated.
 
 If the hotfix contains an SQL script, it will run the script against a BizTalk Server database or databases. In this case, uninstalling doesn't roll back the hotfix. Uninstalling by using Add or Remove Programs won't roll back the database changes, and it might leave the BizTalk Server environment in an inconsistent state.
 

@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-scom.md
+  href: welcome-scom.yml
 - name: Agents
   items:
   - name: A push installation fails with error 800706D3
@@ -90,7 +90,7 @@
     href: dns-management-pack-discovery-fails.md
   - name: Domain controllers are unavailable or Not Monitored
     href: domain-controllers-unavailable.md
-  - name: Event 26001 is logged regularly
+  - name: Event 26001 is logged regularly
     href: event-26001-logged-regularly.md
   - name: Event ID 4625 when using Exchange 2010 management pack
     href: event-id-4625-audit-failure.md
@@ -162,6 +162,8 @@
     href: console-not-open-with-sdk-service-error.md
   - name: The System Center Management service stops responding
     href: system-center-management-service-stops-responding.md
+  - name: Troubleshoot SQL Server Service Broker issues
+    href: troubleshoot-sql-server-service-broker-issues.md 
   - name: Use diagnostic tracing
     href: use-diagnostic-tracing.md
   - name: Web console login errors

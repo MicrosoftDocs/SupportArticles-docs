@@ -2,7 +2,7 @@
 title: LNK1102 error out of memory
 description: This article provides workarounds for linker out of memory problems.
 ms.date: 04/23/2020
-ms.prod-support-area-path: Language or compilers
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: yongzhu, corob
 ---
 # Linker fatal error: LNK1102: out of memory
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2891057
 
 Assume that you build large projects by using x86 (32-bit) tool sets ([Whole Program Optimization](/cpp/build/reference/gl-whole-program-optimization) enabled). This implies link-time code generation (LTCG).
 
-In this scenario, the linker may report out of memory (OOM) issues that result in build failure. For example, [Mozilla Firefox](https://developer.mozilla.org/docs/Mozilla/Developer_guide/Build_Instructions/Building_with_Profile-Guided_Optimization) might take advantage of WPO because the linker exhausted the 32-bit address space on x86.
+In this scenario, the linker may report out of memory (OOM) issues that result in build failure.
 
 ## Cause
 

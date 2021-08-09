@@ -4,33 +4,33 @@ description: Discusses a new behavior in which NetBIOS and WINS don't bind to cl
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # NetBIOS and WINS don't bind to cluster IP address resources
 
-This article provides a workaround for the issue that NetBIOS and WINS not bind to cluster IP address resources.
+This article provides a workaround for an issue where NetBIOS and WINS don't bind to cluster IP address resources.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4556018
 
 ## Symptoms
 
-Assume that you have an environment in which cluster servers are running Windows Server 2016 or a later version of Windows. You notice the following issues.
+Assume that you have an environment in which cluster servers are running Windows Server 2016 or a later version of Windows. You notice the following issues:
 
-#### Issue 1
+- Issue 1
 
-Applications that depend on NetBIOS (TCP port 139) connectivity to cluster resources cannot connect to the Cluster service.
+    Applications that depend on NetBIOS (TCP port 139) connectivity to cluster resources cannot connect to the Cluster service.
 
-#### Issue 2
+- Issue 2
 
-The WINS name resolution service does not respond to incoming queries or registration requests on cluster networks.
+    The WINS name resolution service does not respond to incoming queries or registration requests on cluster networks.
 
 ## Cause
 
@@ -41,6 +41,8 @@ This behavior is by design. It occurs because NetBIOS no longer binds to IP addr
 To work around this behavior, use the Cluster Management console to determine the name of the IP address resource that must be changed.  
 After you determine the IP address resource, run the following commands in an elevated PowerShell window. In the commands, substitute the name of the actual IP address resource.  
 
-Get-ClusterResource"resource name"| Set-ClusterParameter EnableNetBIOS 1  
-Stop-ClusterResource"resource name"  
+```powershell
+Get-ClusterResource"resource name"| Set-ClusterParameter EnableNetBIOS 1
+Stop-ClusterResource"resource name"
 Start-ClusterResource"resource name"
+```

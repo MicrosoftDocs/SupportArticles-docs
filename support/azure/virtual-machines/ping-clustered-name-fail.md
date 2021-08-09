@@ -4,6 +4,7 @@ description: Discusses an issue in which you can't ping a Clustered Name that ru
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: mariliu
+ms.service: virtual-machines
 ---
 # Error when you try to ping a Clustered Name that runs on Azure IaaS VMs: Request timed out
 
@@ -20,7 +21,9 @@ Consider the following scenario:
 
 ## More information
 
-This is expected behavior when Failover Cluster networking interacts with the Azure networking. Clustered IP address resources and their associated Network Name resource differ from a regular IP address. Clustered IP address resources have limited functions and do not respond to ping requests over ICMP.
+This is expected behavior when Failover Cluster networking interacts with the Azure networking. Clustered IP address resources and their associated Network Name resource differ from a regular IP address. Clustered IP address resources have limited functions and do not respond to ping requests over ICMP.  
+> [!NOTE] 
+> Due to this limitation, the cluster file share creation from non-active cluster nodes fails as the cluster requires to ping the network name before it allows any file share creation. The workaround is to try creating file share from active cluster nodes.
 
 The IP address for Cluster Name is intended to be an endpoint for management of the cluster and is not for network communication. If the Cluster IP Address resource has an invalid IP address, it cannot be used for remote cluster management. Instead, you can manage the cluster locally by specifying a local connect that has a period (.) or by specifying a name for the node.
 

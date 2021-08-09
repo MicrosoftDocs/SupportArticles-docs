@@ -4,20 +4,20 @@ description: Some networking improvements that were first released in the Window
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: whall, kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to troubleshoot advanced network performance features such as RSS and NetDMA
 
 This article troubleshoots some networking improvements that were first released in the Windows Server 2003 Scalable Networking Pack. Because they may cause slow or intermittent network performance if the network drivers that are being used are old or don't support the new features.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2643970
 
 ## Summary
@@ -28,7 +28,6 @@ This article describes how to troubleshoot network performance issues that invol
 - Receive side scaling (RSS)
 - NetDMA
 - TCP Chimney Offloading
-
 
 ## Network performance improvements
 
@@ -50,10 +49,9 @@ Recommendations for the settings are as follows.
 
 ### Windows Server 2008 R2
 
-
 - Service Pack 1
 - Hotfix KB 2519736
-- If you're using TCP Chimney Offload, you should install hotfix KB 2525390. 
+- If you're using TCP Chimney Offload, you should install hotfix KB 2525390.
 - Recommended install of hotfix KB 2511305
 - Re-enable RSS in the OS and network adapters
 - Update network adapter drivers to latest recommended manufacturer version
@@ -83,6 +81,7 @@ The **Driver**  tab has the following information:
 ![Network adapter driver information ](./media/troubleshoot-network-performance-features-rss-netdma/driver-tab-info.jpg)
 
 For Windows Server 2003, follow these steps to access Device Manager:
+
 1. Open the Administrative Tools in Control Panel.
 2. Within the Administrative Tools click Computer Management.
 3. Click Device Manager. Next, go to the website of the Driver Provider (also on the Driver tab). Check for the latest version of the driver and see whether it's newer than the driver date that you found in the device properties. You may also find a solution in a FAQ or on a forum on the manufacture's site.
@@ -91,20 +90,20 @@ If updating the network drivers doesn't work, you might want to try disabling th
 
 ![TCP Connection Offload- RSS settings ](./media/troubleshoot-network-performance-features-rss-netdma/tcp-connection-offload-rss-settings.png)
 
-To see the settings for the operating system, use net shell command "netsh interface tcp show global" command as follows:
+To see the settings for the operating system, use net shell command `netsh interface tcp show global` command as follows:
 
 ![netsh global command ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-interface-tcp-show-global-cmd.png)
 
 You can check the following two other settings that affect TCPchimney offloading:
 
-- netsh interface tcp show chimneyapplications
+- `netsh interface tcp show chimneyapplications`
 
-- netsh interface tcp show chimneyports
+- `netsh interface tcp show chimneyports`
 
 These commands enable TCP offloading to be set up specifically for a certain application or port combination. Output from both netsh commands is as follows:
 
 > [!NOTE]
-> This operation requires elevated privileges (Run as administrator)
+> This operation requires elevated privileges (Run as administrator).
 
 ![chimney settings ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-cmd-output.png)
 
@@ -112,14 +111,12 @@ If they're blank, no applications or ports were added to the chimney offload set
 
 The most common improved networking features, together with links to more information about how to enable or disable them, are as follows:
 
-[Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008](https://support.microsoft.com/help/951037) 
+[Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008](https://support.microsoft.com/help/951037)
 
-[TCP Chimney Resources](https://technet.microsoft.com/network/dd277645) 
+[TCP Chimney Resources](https://technet.microsoft.com/network/dd277645)
 
-[Receive Side Scaling Resources (RSS)](https://technet.microsoft.com/network/dd277646) 
+[Receive Side Scaling Resources (RSS)](https://technet.microsoft.com/network/dd277646)
 
-[NetDMA](https://technet.microsoft.com/library/gg162716%28ws.10%29.aspx) 
-
-[Windows Server 2003 Scalable Networking Pack](https://support.microsoft.com/help/912222) 
+[NetDMA](https://technet.microsoft.com/library/gg162716%28ws.10%29.aspx)
 
 [Networking Deployment Guide: Deploying High-speed Networking Features](https://technet.microsoft.com/library/gg162681%28ws.10%29.aspx)

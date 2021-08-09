@@ -4,20 +4,20 @@ description: Works around an issue where SystemInfo.exe can't display all instal
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment 
+ms.technology: windows-server-deployment 
 ---
 # SystemInfo.exe does not display all updates in Windows Server 2003
 
 This article provides a workaround for an issue where SystemInfo.exe can't display all installed updates.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 2644427
 
 ## Symptoms
@@ -28,7 +28,7 @@ When using SystemInfo.exe in Windows Server 2003 to display a list of installed 
 
 There is a buffer size limitation that does not allow all system update hotfixes to be displayed.
 
-## Resolution
+## Workaround
 
 Microsoft is currently aware of this issue. To work around this issue, run the following command at a Windows command prompt:
 

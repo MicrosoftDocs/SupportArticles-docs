@@ -7,14 +7,14 @@ ms.reviewer: cmkbreview, yohuang, delhan
 ---
 # Installation of Configuration Manager client version 1602 to 1710 or long-term servicing branch (LSTB) version 1606 fails in Windows Server 2008 SP2
 
-This article provides a solution for the issue that you cannot install the Configuration Manager client current branch versions 1602 through 1710 or LSTB version 1606 on Windows 2008 Service Pack 2 (SP2) clients.
+This article provides a solution for the issue that you cannot install the Configuration Manager client current branch versions 1602 through 1710 or LSTB version 1606 on Windows 2008 Service Pack 2 (SP2) clients.
 
 _Original product version:_ &nbsp;  Configuration Manager (LTSB), Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4015968
 
 ## Symptoms
 
-On some Windows 2008 SP2 clients, when you try to install the Configuration Manager client current branch versions 1602 through 1710 or LSTB version 1606, client setup fails, and errors that resemble the following are logged.
+On some Windows 2008 SP2 clients, when you try to install the Configuration Manager client current branch versions 1602 through 1710 or LSTB version 1606, client setup fails, and errors that resemble the following are logged.
 
 CCMSetup.log
 
@@ -27,7 +27,7 @@ ClientMSI.log
 >
 > ERROR: Failed to execute SQL statement:
 >
-> DROP TABLE CCM_StateMsg;
+> DROP TABLE CCM_StateMsg;
 >
 > with error (0x80040e37).
 >
@@ -41,9 +41,9 @@ ClientMSI.log
 > Action ended 17:56:36: InstallFinalize. Return value 3.  
 > ...
 >
-> MSI (s) 128 (0x80) Product: Configuration Manager Client -- Installation operation failed.
+> MSI (s) 128 (0x80) Product: Configuration Manager Client -- Installation operation failed.
 >
-> MSI (s) 128 (0x80) Windows Installer installed the product. Product Name: Configuration Manager Client. Product Version: 5.00.8458.1000. Product Language: 1033. Installation success or error status: 1603.
+> MSI (s) 128 (0x80) Windows Installer installed the product. Product Name: Configuration Manager Client. Product Version: 5.00.8458.1000. Product Language: 1033. Installation success or error status: 1603.
 
 ## Cause
 

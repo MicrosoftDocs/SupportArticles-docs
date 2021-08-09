@@ -4,20 +4,20 @@ description: Discusses the problem where a new event error message is logged if 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # NTDS Replication Event 2089 is logged if Windows Server 2003 SP1 and later domain controllers aren't backed up in a given time period
 
 This article discusses the problem where a new event error message is logged if you don't back up a Windows Server 2003 Service Pack 1 (SP1)-based domain controller in a given time period that is called the backup latency interval.
 
-_Original product version:_ &nbsp; Window Server 2003  
+_Applies to:_ &nbsp; Window Server 2003  
 _Original KB number:_ &nbsp; 914034
 
 ## Introduction
@@ -68,7 +68,7 @@ DC=domainDC=com
 > "Backup latency interval" (days):  
 30  
 
-It's recommended that you take a backup as often as possible to recover from accidental loss of data. However if you haven't taken a backup since at least the "backup latency interval" number of days this message will be logged every day until a backup is taken. You can take a backup of any replica that holds this partition.
+It's recommended that you take a backup as often as possible to recover from accidental loss of data. However, if you haven't taken a backup since at least the "backup latency interval" number of days, this message will be logged every day until a backup is taken. You can take a backup of any replica that holds this partition.
 
 By default the "Backup latency interval" is set to half the "Tombstone Lifetime Interval". If you want to change the default "Backup latency interval", you could do so by adding the following registry key.
 

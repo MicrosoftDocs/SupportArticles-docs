@@ -4,20 +4,20 @@ description: Describes how to resolve the error messages when you try to bring a
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Error messages occur if you try to bring a cluster group online after a cluster stops
 
 This article describes how to resolve the error messages when you try to bring a cluster group online after a cluster stops.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 313882
 
 ## Symptoms
@@ -61,8 +61,8 @@ A list of possible owners of the resource is displayed. This list indicates that
 
 4. In Cluster Administrator, bring the group that was previously in the offline state online again.  
 
->[!NOTE]
- After the group comes online, if you have problems reviewing the resources in Cluster Administrator, quit Cluster Administrator, and then reconnect to the cluster.
+> [!NOTE]
+> After the group comes online, if you have problems reviewing the resources in Cluster Administrator, quit Cluster Administrator, and then reconnect to the cluster.
 
 ## Status
 

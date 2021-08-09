@@ -4,20 +4,20 @@ description: Describe an issue that prevents the lock screen from being displaye
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Lock Screen or Screensaver 
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Lock screen isn't displayed when you resume a Windows 10-based computer
 
 This article provides a solution to an issue that prevents the lock screen from being displayed when you try to resume a Windows 10-based computer from Away Mode.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 3205123
 
 ## Symptoms
@@ -34,8 +34,8 @@ The Windows Lock screen will be displayed when you press or select any human int
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.  
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.  
 
-Third-party information disclaimer
+### Third-party information disclaimer
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

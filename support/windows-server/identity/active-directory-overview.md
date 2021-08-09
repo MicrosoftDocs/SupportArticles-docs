@@ -4,13 +4,13 @@ description: Overview of Active Directory troubleshooting articles.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Active Directory documentation
 
@@ -32,7 +32,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Domain controller scalability or performance (including LDAP)
 - Domain join issues
 - LDAP configuration and interoperability
-- Schema update - known issues, best practies, workflow review
+- Schema update - known issues, best practices, workflow review
 - Schema update failure or conflict
 - Transport Layer Security (TLS)
 - User, computer, group, and object management

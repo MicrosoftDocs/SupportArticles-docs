@@ -4,20 +4,20 @@ description: Provides a resolution for the issue that an incorrect shutdown reas
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Shutdown is slow or hangs
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # An incorrect shutdown reason code written to SEL on user initiated shutdown
 
 This article provides a resolution for the issue that an incorrect shutdown reason code written to SEL on user initiated shutdown.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2001061
 
 ## Symptoms
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2001061
 After reboot from a manual shutdown (`START`->`Shutdown`), the Windows System Eventlog shows two events 1074. The first entry contains the correct reason code provided by the user, the second looks similar to:  
 >Log Name:      System  
 Source:        USER32  
-Date:          7/29/2009 12:00:26 PM  
+Date:          *\<DateTime>*  
 Event ID:      1074  
 Task Category: None  
 Level:         Information  

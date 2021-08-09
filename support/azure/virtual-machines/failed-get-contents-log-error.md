@@ -4,6 +4,7 @@ description: Discusses an issue in which that you see a (Failed to get contents 
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
 ---
 # Error in VM Boot Diagnostics in Azure portal: Failed to get contents of the log
 

@@ -13,10 +13,10 @@ _Original KB number:_ &nbsp; 2897398
 
 ## Summary
 
-The scripts that are documented in the **Delete records in MessagesToLOB table** section and **Delete records in MessageContent table** section below, maintain the `MessagesToLOB` and `MessageContent` tables. The `MessagesToLOB` table grows as messages are processed. The private process routes incoming messages to the `MessagesToLOB` table in the BTARNDATA SQL Server database, in route to the LOB application. The same occurs with the `MessageContent` table. Whenever a send or receive pipeline processes a message, the pipeline creates a message activity. The pipeline creates a message-activity record in the `MessageContent` table. The record contains the content of the message, including both service content and headers.
+The scripts that are documented in the **Delete records in MessagesToLOB table** section and **Delete records in MessageContent table** section below, maintain the `MessagesToLOB` and `MessageContent` tables. The `MessagesToLOB` table grows as messages are processed. The private process routes incoming messages to the `MessagesToLOB` table in the BTARNDATA SQL Server database, in route to the LOB application. The same occurs with the `MessageContent` table. Whenever a send or receive pipeline processes a message, the pipeline creates a message activity. The pipeline creates a message-activity record in the `MessageContent` table. The record contains the content of the message, including both service content and headers.
 
 > [!NOTE]
-> - You must test the scripts thoroughly in your test environment before running them in a production environment. You can also create SQL Agent jobs to run them on a schedule basis.
+> - You must test the scripts thoroughly in your test environment before running them in a production environment. You can also create SQL Agent jobs to run them on a schedule basis.
 > - See the BTARN product documentation for complete documentation on how BTARN processes a message. The full description is beyond the scope of this kb article.
 
 ## Delete records in MessagesToLOB table

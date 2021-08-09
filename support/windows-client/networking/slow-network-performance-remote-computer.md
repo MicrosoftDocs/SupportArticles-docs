@@ -1,23 +1,23 @@
 ---
 title: Slow network performance on remote network computer
 description: Fixes a slow network performance issue that can occur when you open a file that is located in a shared folder on a remote network computer.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Slow network performance when you open a file that is located in a shared folder on a remote network computer
 
 This article helps fix a slow network performance issue that can occur when you open a file that is located in a shared folder on a remote network computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 829700
 
 ## Symptoms
@@ -78,9 +78,3 @@ To do this, follow these steps:
 1. Click **Start**, click **Run**, type Gpedit.msc, and then click **OK**.
 2. Under **User Configuration** in the left pane, expand **Administrative Templates**, expand **Windows Components**, and then click **Windows Explorer**.
 3. In the right pane, double-click **Allow only per user or approved shell extensions**, click **Enabled**, and then click **OK**.
-
-## References
-
-For more information about how to troubleshoot similar network performance issues, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[265396](https://support.microsoft.com/help/265396) Slow network performance occurs when you select a file on a share that uses NTFS

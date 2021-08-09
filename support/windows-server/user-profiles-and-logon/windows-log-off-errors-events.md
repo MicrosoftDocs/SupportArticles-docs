@@ -4,20 +4,20 @@ description: Discusses log off problems in Windows XP, in Windows Server 2003, i
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User Logon fails
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # You experience log-off problems on a Windows XP-based, Windows Server 2003-based, Windows 2000-based, or Windows NT 4.0-based computer
 
 This article contains a step-by-step method to help you resolve the log-off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10  
 _Original KB number:_ &nbsp; 837115
 
 ## Introduction
@@ -74,9 +74,9 @@ To use the Microsoft User Profile Hive Cleanup Service (UPHClean), follow these 
     > [!NOTE]
     > UPHClean runs as a service in Windows and will start automatically every time that Windows starts.
 8. To confirm that UPHClean is installed and running, click **Start**, and then click **Run**.
-9. In **Open** box, type the following text, and then click **OK:
+9. In **Open** box, type the following text, and then click **OK**:
 
-    services.msc
+    *services.msc*
 10. In Services, in the **Name** column, locate **User Profile Hive Cleanup**. In the **Status** column, confirm that the User Profile Hive Cleanup service is **Started**.
 
 > [!IMPORTANT]
@@ -87,10 +87,6 @@ To use the Microsoft User Profile Hive Cleanup Service (UPHClean), follow these 
 >
 > - Download UPHClean to your computer again. If you are trying to install UPHClean from a computer on your company's network, copy the UPHClean installer (UPHClean-Setup.msi) to your computer first. Then follow the steps in this section again to install UPHClean.
 > - Install the latest run-time components for Visual C++ applications. Then follow the steps in this section again to install UPHClean. If you are using Windows NT 4.0, restart your computer after you install the latest run-time components for Visual C++ applications.
-
-For more information about how to install the latest run-time components for Visual C++ applications, click the following article number to view the article in the Microsoft Knowledge Base:
-
- [259403](https://support.microsoft.com/help/259403) How to obtain the Visual C++ 6.0 run-time components
 
 ### Verification
 

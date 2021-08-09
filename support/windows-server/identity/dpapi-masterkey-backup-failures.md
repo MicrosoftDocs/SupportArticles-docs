@@ -4,20 +4,20 @@ description: Helps solve DPAPI MasterKey backup failures that occur when RWDC is
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # DPAPI MasterKey backup failures when RWDC isn't available
 
 This article provides a solution to solve DPAPI MasterKey backup failures that occur when RWDC isn't available.
 
-_Original product version:_ &nbsp; Windows 10, version 1809, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows 10, version 1809, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 3205778
 
 ## Symptoms
@@ -127,7 +127,7 @@ That is, the legacy behavior performs a local backup of the master key if no RWD
 Consistent with the design brief that RODCs don't store secrets, RODCs do not store or handle the backup of the MasterKey. Therefore, in sites where no RWDC is available, the issues that are described in the "Symptoms" section may occur.
 
 > [!NOTE]
-> When a preferred master key exists but has expired (expired password case). an attempt to generate a new master key is made. If it's not possible to create a domain backup of the new master key, the client falls back to the old one, and the behavior that's described in the "Symptoms" section does not occur.
+> When a preferred master key exists but has expired (expired password case), an attempt to generate a new master key is made. If it's not possible to create a domain backup of the new master key, the client falls back to the old one, and the behavior that's described in the "Symptoms" section does not occur.
 
 The problem occurs only if there's no MasterKey present and when the user has not logged on to the computer before.
 

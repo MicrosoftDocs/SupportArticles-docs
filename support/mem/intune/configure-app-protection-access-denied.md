@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4025997
 
 ## Symptoms
 
-Assume that an administrator isn't in the Global Administrator role but is in the Intune Service Administrator role. When they try to configure Intune App Protection (MAM) **Conditional Access**, an **Access Denied** error occurs.
+Assume that an administrator isn't in the Global Administrator role but is in the Intune Service Administrator role. When they try to configure Intune App Protection (MAM) **Conditional Access**, an **Access Denied** error occurs.
 
 ## Cause
 

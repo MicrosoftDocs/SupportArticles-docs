@@ -4,20 +4,20 @@ description: Provides a resolution for the issue that Windows Time service does 
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Time Service
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # When SpecialPollInterval is used as a polling interval, the Windows Time service does not correct the time if the service gets into Spike state
 
 This article provides a resolution for the issue that Windows Time service does not correct the time if the service gets into Spike state.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2638243
 
 ## Symptoms

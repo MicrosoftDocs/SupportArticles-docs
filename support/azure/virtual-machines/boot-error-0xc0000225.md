@@ -4,6 +4,8 @@ description: Fixes an issue that triggers error 0xc0000225 when you try to start
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error 0xc0000225 on an Azure VM
 
@@ -44,6 +46,9 @@ This issue occurs for one of the following reasons:
 - The binary that's displayed in the error message is corrupted or missing.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps, based on the error message that you received.
 

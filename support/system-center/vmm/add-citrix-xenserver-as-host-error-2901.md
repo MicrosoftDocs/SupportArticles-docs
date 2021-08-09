@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2679668
 
 ## Symptoms
 
-Adding a Citrix XenServer 6.0 computer as a host in System Center 2012 Virtual Machine Manager fails with the following error:
+Adding a Citrix XenServer 6.0 computer as a host in System Center 2012 Virtual Machine Manager fails with the following error:
 
 > Error (2901)  
 > The operation did not complete successfully because of a parameter or call sequence that is not valid.
@@ -26,12 +26,12 @@ Adding a Citrix XenServer 6.0 computer as a host in System Center 2012 Virtual M
 
 This can occur in either of the following situations:
 
-- The certificate name doesn't match the name you're using in the wizard.
-- You need to disable automatic creation of logical networks and virtual networks.
+- The certificate name doesn't match the name you're using in the wizard.
+- You need to disable automatic creation of logical networks and virtual networks.
 
 ## Resolution
 
-If the certificate name matches the name you are using in the wizard, turn off the automatic creation of local network and virtual networks in the Virtual Machine Manager console. To do this, navigate to **Settings**, select **General**, double-click **Network Settings**, and then uncheck the following boxes:
+If the certificate name matches the name you are using in the wizard, turn off the automatic creation of local network and virtual networks in the Virtual Machine Manager console. To do this, navigate to **Settings**, select **General**, double-click **Network Settings**, and then uncheck the following boxes:
 
 - **Create logical networks automatically**  
 - **Create virtual networks automatically**

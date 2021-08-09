@@ -4,6 +4,8 @@ description: Provides the resolution for the error code 0xc0000011 in the Azure 
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Boot error code 0xc0000011 on an Azure VM
 
@@ -27,6 +29,9 @@ In this message, \<BINARY> represents the actual binary file that's found.
 This issue occurs because of a file version mismatch between the binary file that's indicated in the error message and the file that the system expects to find.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 

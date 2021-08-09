@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot database replication service issues
-description: Describes how to diagnose and resolve database replication service problems in Configuration Manager.
+description: Describes how to diagnose and resolve database replication service problems in Configuration Manager.
 ms.date: 08/22/2020
 ms.prod-support-area-path:
 ---
 # Troubleshoot database replication service issues in Configuration Manager
 
-This guide helps administrators diagnose and resolve database replication service (DRS) problems in Configuration Manager.
+This guide helps administrators diagnose and resolve database replication service (DRS) problems in Configuration Manager.
 
 _Original product version:_ &nbsp; Microsoft Endpoint Configuration Manager (current branch), Microsoft System Center 2012 R2 Configuration Manager, Microsoft System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 20033
 
-When you experience a DRS problem in Configuration Manager, the beginning investigative phase is the most critical point. Any type of change or fix should be made only after careful study and understanding of the problem at hand.
+When you experience a DRS problem in Configuration Manager, the beginning investigative phase is the most critical point. Any type of change or fix should be made only after careful study and understanding of the problem at hand.
 
 ## Get started
 
@@ -46,11 +46,11 @@ If RLS finds known problems, it will offer to fix them for you. The RLA output r
 
 ## Get details with SPDiagDRS
 
-If Replication Link Analyzer can't detect and resolve the problem, run `SPDiagDRS` and see if it can offer any clues to what may be failing.
+If Replication Link Analyzer can't detect and resolve the problem, run `SPDiagDRS` and see if it can offer any clues to what may be failing.
 
 To run `SPDiagDRS`, open SQL Server Management Studio and connect to the two servers on each side of the link having the problem. On each *CM_xxx* database, run the `Exec SPDiagDRS` command.
 
-The following is a breakdown of the various `SPDiagDRS` sections and some common places to look for problems. A simple search for error messages and codes found here often guides you to the source of the problem.
+The following is a breakdown of the various `SPDiagDRS` sections and some common places to look for problems. A simple search for error messages and codes found here often guides you to the source of the problem.
 
 ![Screenshot of a breakdown of the various SPDiagDRS sections](./media/troubleshoot-database-replication-service-issues/sections.png)
 
@@ -78,13 +78,13 @@ This is simply the detailed view of the **Initialization Detail** in the console
 
 ### Section 4
 
-This is the detailed view of **Replication Detail**  in the console. It provides more information about the flow between each replication group.
+This is the detailed view of **Replication Detail**  in the console. It provides more information about the flow between each replication group.
 
 :::image type="content" source="media/troubleshoot-database-replication-service-issues/replication-detail.png" alt-text="Screenshot of Replication Detail.":::
 
 ### Section 5
 
-This section has some important and useful information about the sites we are connecting to. In this example we are on primary site server 002, and 001 is the central administration site. If we had a secondary site under 002, it would be shown here. On a central administration site, all primary sites would be reflected but not the secondary sites.
+This section has some important and useful information about the sites we are connecting to. In this example we are on primary site server 002, and 001 is the central administration site. If we had a secondary site under 002, it would be shown here. On a central administration site, all primary sites would be reflected but not the secondary sites.
 
 Primary site 002 example:
 
@@ -96,17 +96,17 @@ Central administration site 001 example:
 
 ### Section 6
 
-This provides the general information of the sites in the hierarchy, the `SiteServerName` and `DBServer` names, as well as the status and version. You can see here that a different primary site (003) is showing as being in **Maintenance Mode**. On working systems, Section 6 should be identical between the central administration site and all primary sites in the hierarchy.
+This provides the general information of the sites in the hierarchy, the `SiteServerName` and `DBServer` names, as well as the status and version. You can see here that a different primary site (003) is showing as being in **Maintenance Mode**. On working systems, Section 6 should be identical between the central administration site and all primary sites in the hierarchy.
 
 ![Screenshot of a primary site in Maintenance Mode](./media/troubleshoot-database-replication-service-issues/primary-site-in-maintenance-mode.png)
 
 ### Section 7
 
-The bottom two sections contain detailed information on the heartbeat or `LastSentStatus` for each group as well as `conversationIDs` and so on, and the built-in replication options configured for each group.
+The bottom two sections contain detailed information on the heartbeat or `LastSentStatus` for each group as well as `conversationIDs` and so on, and the built-in replication options configured for each group.
 
 ## Check RCMCtrl.log for errors
 
-Next you will want to check RCMCtrl.log on each site for errors, as this will often provide valuable clues regarding the source of the problem. For example, you may find that replication is in a **Failed** state for a site and that replication hasn't occurred for some time. In this scenario, you may find that RCMCtrl.log contains entries similar to the following:
+Next you will want to check RCMCtrl.log on each site for errors, as this will often provide valuable clues regarding the source of the problem. For example, you may find that replication is in a **Failed** state for a site and that replication hasn't occurred for some time. In this scenario, you may find that RCMCtrl.log contains entries similar to the following:
 
 > 7/4/2016 1:25:36 PM: ReplicationLinkAnalysis Information: 1 : Completed replication link analysis thread.  
 > **7/4/2016 1:25:37 PM: ReplicationLinkAnalysis Error: 1 : Unable to find SiteCode or SiteNumber**  
@@ -137,7 +137,7 @@ If you still haven't found the source of the problem, it could be that the repli
 
 Is sender throttled to this site and perhaps this is slowing down the BCP transfer?
 
-To verify, open the console and go to **Administration** > **Overview** > **Hierarchy Configuration** > **File Replication**, then right-click the site that would be sending the data. Verify that the schedule availability is set to **Open for all Priorities**, and that **Rate Limits** is set to **Unlimited to this Site**.
+To verify, open the console and go to **Administration** > **Overview** > **Hierarchy Configuration** > **File Replication**, then right-click the site that would be sending the data. Verify that the schedule availability is set to **Open for all Priorities**, and that **Rate Limits** is set to **Unlimited to this Site**.
 
 ![Verify site in File Replication](./media/troubleshoot-database-replication-service-issues/file-replication.png)
 
@@ -154,7 +154,7 @@ Also if you have a rate limit set to **Limited to specified maximum transfer rat
 
 ## More information
 
-For more information about DRS, see the following articles:
+For more information about DRS, see the following articles:
 
 - [DRS Initialization In Configuration Manager 2012](/archive/blogs/sudheesn/drs-initialization-in-configuration-manager-2012)
 - [Planning for Communications in Configuration Manage](/previous-versions/system-center/system-center-2012-R2/gg712701(v=technet.10))

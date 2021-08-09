@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2968666
 
 ## Symptoms
 
-When you use the DpmSync utility to restore a Microsoft System Center Data Protection Manager database, the restore operation fails, and you receive the following error message:
+When you use the DpmSync utility to restore a Microsoft System Center Data Protection Manager database, the restore operation fails, and you receive the following error message:
 
 > Error ID: 470  
 > DPM database is not present in the instance of SQL Server. Check that the DPM database is present in the given instance of SQL Server.

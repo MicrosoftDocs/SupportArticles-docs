@@ -4,20 +4,20 @@ description: Describes how to resolve a problem that is caused by an incorrect d
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ccraig, wincicadsec, kaushika
 ms.prod-support-area-path: Smart card logon
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # Can't authenticate because of an incorrect PIV smart card driver update
 
 This article describes how to resolve a problem where users can't sign in to Windows until the incorrect driver is removed.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4563240
 
 ## Summary
@@ -60,7 +60,7 @@ In Settings, select **Updates & Security** > **View update history**. You should
 
 ### Manually delete the driver
 
-To manually remover the driver, follow these steps:  
+To manually remove the driver, follow these steps:  
 
 1. Connect the smart card device to the computer.
 2. Start Device Manager. You can start Device Manager from Control Panel, or by pressing **Windows** + **R**, and then entering **devmgmt.msc**.

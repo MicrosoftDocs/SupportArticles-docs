@@ -4,20 +4,20 @@ description: Describes how to reset the File Replication service (FRS) staging f
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: FRS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to reset the File Replication service staging folder to a different logical drive
 
 This article describes how to reset the File Replication service (FRS) staging folder to a different logical drive or folder for existing FRS replica members.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 291823
 
 ## More information
@@ -75,8 +75,8 @@ To modify the FrsStagingPath attribute using the Adsiedit.msc tool that is inclu
     Event Source:NtFrs  
     Event Category:None  
     Event ID:13563  
-    Date:3/6/2001  
-    Time:7:13:01 PM  
+    Date:*\<DateTime>*  
+    Time:*\<DateTime>*  
     User:N/A  
     Computer:AC2  
     Description: The File Replication service has detected that the staging path for the replica set DOMAIN SYSTEM VOLUME (SYSVOL SHARE) has changed.  

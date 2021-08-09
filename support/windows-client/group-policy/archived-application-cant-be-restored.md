@@ -4,20 +4,20 @@ description: Group Policy settings may block automatic application updates. Bloc
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, erwong
 ms.prod-support-area-path: AppLocker or software restriction policies
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Archived application can't be restored because of app update policies
 
 This article provides a solution to an issue that archived application can't be restored because of app update policies.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4571552
 
 ## Summary
@@ -34,11 +34,11 @@ In these cases, you have to contact your system administrator to obtain an updat
 
 The following GPOs prevent archived applications from restoring full versions:
 
-- [UpdateServiceUrl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
-- [AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
+- [UpdateServiceUrl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+- [AllowUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 
 If either or both of these GPOs are enabled in your environment, your system administrator can use one of the following methods to push the full version of the application to the device:
 
-- If your organization uses [Microsoft Store for Business](https://businessstore.microsoft.com/store)  to manage applications, the system administrator can push the application to the business store.
-- If your organization uses [Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-add) to manage devices, the system administrator can package the application and push the package to managed devices.
-- If your organization uses custom Windows images to provision devices, the system administrator can use the [DISM App Package](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options) tool to add the full resource packages for the application to the image. By using **dism /StubPackageOption:installfull**, the system administrator can make sure that the device is provisioned by using the full version of the application instead of the archived version.
+- If your organization uses [Microsoft Store for Business](https://businessstore.microsoft.com/store) to manage applications, the system administrator can push the application to the business store.
+- If your organization uses [Microsoft Intune](/mem/intune/apps/apps-add) to manage devices, the system administrator can package the application and push the package to managed devices.
+- If your organization uses custom Windows images to provision devices, the system administrator can use the [DISM App Package](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options) tool to add the full resource packages for the application to the image. By using `dism /StubPackageOption:installfull`, the system administrator can make sure that the device is provisioned by using the full version of the application instead of the archived version.

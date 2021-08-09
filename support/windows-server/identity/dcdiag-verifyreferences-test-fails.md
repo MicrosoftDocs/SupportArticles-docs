@@ -4,20 +4,20 @@ description: Provides a solution to an error that occurs when you use the DFSR s
 ms.date: 10/22/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, harsur, rolandw, justintu, arrenc
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # DCDiag VerifyReferences test fails when you use DFSR to replicate SYSVOL
 
 This article provides a solution to an error that occurs when you use the Distributed File System Replication (DFSR) service to replicate the sysvol folder.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3110032
 
 ## Symptoms
@@ -47,7 +47,7 @@ When this problem occurs, DCDiag validates the reference object for DFSR. Also, 
 
 ## Cause
 
-This problem occurs because there's no Florida Retirement System (FRS) reference in the Active Directory database under the domain controller object when DFSR is used for sysvol replication. Instead, there's only an object for DFSR.
+This problem occurs because there's no File Replication Service (FRS) reference in the Active Directory database under the domain controller object when DFSR is used for sysvol replication. Instead, there's only an object for DFSR.
 
 This logic isn't included in earlier versions of DCDiag, such as DCDiag for Windows Server 2008 or DCDiag installed together with Windows Server 2003 Support Tools. So these versions search for the FRS member reference, and it generates a false error in DCDiag.
 

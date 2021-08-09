@@ -22,14 +22,14 @@ Update 1602 for Cloud Platform System (CPS) Premium 1.0 includes critical Window
 
 This update procedure assumes that you have already installed Update 2.0. To install update 1602 for CPS Premium 1.0, follow these steps.
 
-#### Step 1: Prepare the package
+### Step 1: Prepare the package
 
 Follow steps 1 and 2 in the "Prepare the patching environment" section of the CPS Administrators Guide that was provided by your account team. Because there are no firmware or driver updates in this package, steps 3 and 4 from the CPS Administrators Guide do not apply.
 
 > [!IMPORTANT]
 > Do not start the patching process.
 
-#### Step 2: Run a health check and fix any issues
+### Step 2: Run a health check and fix any issues
 
 The Microsoft Patch and Update (P&U) Framework supports new functionality that lets you run a non-invasive, read-only health check. This ensures fundamental stamp health before you run the actual update.
 
@@ -51,7 +51,7 @@ Run the following command, in which &#60;CPSPU Folder Name&#62; is the folder na
 
 Try to fix any issues that are discovered. You should try to resolve all critical Operations Manager alerts before you start the P&U process.
 
-#### Step 3: Install the prerequisite VMM hotfix before you install Update 1602
+### Step 3: Install the prerequisite VMM hotfix before you install Update 1602
 
 > [!NOTE]
 > If you have already installed Update 2.1, you can skip this step.
@@ -60,7 +60,7 @@ An issue was introduced in Update Rollup 6 for SystemCenter 2012 R2 VMM: When a 
 
 To resolve this issue, you must install the VMM hotfix by using the following method.
 
-#### How to apply the private hotfix for VMM 2012 R2
+### How to apply the private hotfix for VMM 2012 R2
 
 > [!NOTE]
 > The highly available VMM clustered role, <Prefix>-HA-VMM, has two nodes: -VMM-01 and VMM-02. This procedure refers to the nodes as Node1 and Node2.
@@ -132,7 +132,7 @@ $passiveNodes
     2. Click **Roles**. The Roles pane displays the active node in the **Owner Node** column. Right-click the active node, point to **Move**, and then click **Select Node**. Select the other node, and make sure that the status changes to **Running** for the new active node. This may take a few seconds.
 15. Follow steps 6-13 to update the VMM files on the new passive node (in this example, Node1).
 
-#### How to revert the patch
+### How to revert the patch
 
 To revert the patch (if necessary), follow these steps:
 
@@ -143,7 +143,7 @@ To revert the patch (if necessary), follow these steps:
 5. In Failover Cluster Manager, initiate a failover of the < **Prefix** >-HA-VMM clustered role.
 6. Repeat these steps 1-4 on the new passive node.
 
-#### Step 4: Run the P&U update package
+### Step 4: Run the P&U update package
 
 Follow the procedures in the "Update the computers" section of the CPS Administrators Guide to apply Update 2.1. However, starting in Update 1602, P&U automatically runs a health check as part of the update process. You can control what happens if critical Operations Manager alerts are discovered. To do this, change the value of the -ScomAlertAction parameter.
 
@@ -201,15 +201,13 @@ To change the -ScomAlertAction option to **Prompt** or **Continue**, set the -Sc
 
 - [MS15- 132: Description of the security update for Windows: December 8, 2015 (KB3108381)](https://support.microsoft.com/help/3108381) 
 
-- [MS16-008: Description of the security update for Windows Kernel: January 12, 2016 (KB3121212)](https://support.microsoft.com/help/help/3121212) 
-
 - [MS16-007: Description of the security update for Windows: January 12, 2016 (KB3110329)](https://support.microsoft.com/help/3110329) 
 
 - [MS16-007: Description of the security update for Windows: January 12, 2016 (KB3121918)](https://support.microsoft.com/help/3121918) 
 
 - [MS16-005: Description of the security update for Windows kernel-mode drivers: January 12, 2016 (KB3124001)](https://support.microsoft.com/help/3124001) 
 
-- [MS16-019: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: February 9, 2016 (KB3122651 )](https://support.microsoft.com/help/3122651) 
+- [MS16-019: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: February 9, 2016 (KB3122651 )](https://support.microsoft.com/help/3122651)
 
 - [MS16-019: Description of the security update for the .NET Framework 4.5.2 in Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: February 9, 2016 (KB3122654)](https://support.microsoft.com/help/3122654) 
 

@@ -4,20 +4,20 @@ description: This article provides information about the deployment and operatio
 ms.date: 10/10/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.prod-support-area-path: DCPromo and the installation of domain controllers
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Deployment and operation of Active Directory domains that are configured by using single-label DNS names
 
 This article contains information about the deployment and operation of Active Directory (AD) domains that are configured by using single-label DNS names.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 300684
 
 ## Summary
@@ -218,8 +218,6 @@ Root servers may be created by the DCpromo Wizard. If the "." zone exists, a roo
 - [DNS namespace planning](/troubleshoot/windows-server/networking/dns-namespace-design)
 
 - [Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain](/troubleshoot/windows-server/identity/auto-install-dns-server-role-disabled-promte-domain-controller)
-
-- [Warnings installing Active Directory Domain Services on Windows Server 2008 and Windows Server 2008 R2 in domains with single-label DNS names](https://support.microsoft.com/help/2002634)
 
 - [ADMT Guide: Migrating and Restructuring Active Directory Domains](https://www.microsoft.com/download/details.aspx?id=19188)
 

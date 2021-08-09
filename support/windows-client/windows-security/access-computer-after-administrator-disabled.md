@@ -4,20 +4,20 @@ description: Describes how to access your computer by using the Administrator ac
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Account lockouts
-ms.technology: WindowsSecurity 
+ms.technology: windows-client-security 
 ---
 # How to access the computer after you disable the administrator account
 
 This article describes how to access your Microsoft Windows Server 2003-based computer by using the Administrator account after you disable the local Administrator account.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814777
 
 ## Summary
@@ -39,7 +39,7 @@ To log on to Windows by using the disabled local Administrator account, start Wi
 
 If the server is a domain controller, the Local Users and Groups are not available in **Computer Management**. To enable the Administrator account, follow these steps:
 
-1. Start your computer in to Safe mode with networking support.
+1. Start your computer to Safe mode with networking support.
 2. Log on as the administrator.
 3. Click **Start**, click **Run**, type *cmd*, and then press Enter.
 4. At the command prompt, type the following command, and then press Enter:
@@ -50,4 +50,4 @@ If the server is a domain controller, the Local Users and Groups are not availab
 
 ## Log on to Windows by using Recovery Console
 
-You can use the recovery console to access the computer even if the local Administrator account is disabled. Disabling the local Administrator account does not prevent you from logging on to the recovery console as Administrator. 
+You can use the recovery console to access the computer even if the local Administrator account is disabled. Disabling the local Administrator account does not prevent you from logging on to the recovery console as Administrator.

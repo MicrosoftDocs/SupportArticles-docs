@@ -4,28 +4,28 @@ description: Describes how the Windows Time service does not include the value o
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, RyukiY
 ms.prod-support-area-path: Windows Time Service
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How the Windows Time service treats a leap second
 
 This article describes how the Windows Time service treats a leap second.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 909614
 
 ## When the Windows Time service is working as a Network Time Protocol (NTP) client
 
 The Windows Time service does not indicate the value of the Leap Indicator when the Windows Time service receives a packet that includes a leap second. (The Leap Indicator indicates whether an impending leap second is to be inserted or deleted in the last minute of the current day.) Therefore, after the leap second occurs, the NTP client that is running Windows Time service is one second faster than the actual time. This time difference is resolved at the next time synchronization.
 
-For more information about Windows time synchronization, go to the following Microsoft TechNet website.
- [How the Windows Time Service Works](https://technet.microsoft.com/library/cc773013%28v=ws.10%29.aspx) 
+For more information about Windows time synchronization, see
+ [How the Windows Time Service Works](/previous-versions/windows/it-pro/windows-server-2003/cc773013(v=ws.10)).
 
 ## When the Windows Time service is working as an NTP server
 

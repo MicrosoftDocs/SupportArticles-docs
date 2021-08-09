@@ -1,0 +1,6 @@
+- name: Dynamics 365 Fraud Protection
+  href: welcome-fraud-protection.yml
+- name: Application
+  items:
+    - name: Mobile Device Fingerprinting
+      href: mobile-device-fingerprinting.md

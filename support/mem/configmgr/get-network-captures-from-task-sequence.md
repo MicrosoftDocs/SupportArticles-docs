@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4034393
 
 ## Summary
 
-Microsoft Support sometimes asks customers to capture a network trace when a Configuration Manager task sequence fails and returns a network error. Usually, we request that you capture a network trace by configuring port mirroring on the LAN switch or you capture a network trace on a Virtual Machine (VM) host, if the issue can be reproduced by a VM.
+Microsoft Support sometimes asks customers to capture a network trace when a Configuration Manager task sequence fails and returns a network error. Usually, we request that you capture a network trace by configuring port mirroring on the LAN switch or you capture a network trace on a Virtual Machine (VM) host, if the issue can be reproduced by a VM.
 
 It's difficult to capture a network trace in Windows PE, as the `Netsh` command doesn't support tracing in Windows PE. Additionally, you can't bind to any network adapter if you just copy and then run the Network Monitor command in Windows PE.
 
@@ -28,7 +28,7 @@ It's difficult to capture a network trace in Windows PE, as the `Netsh` command 
 
     :::image type="content" source="media/get-network-captures-from-task-sequence/figure-2.png" alt-text="find" border="false":::)
 
-3. Mount the boot image source file and inject the driver Netnm3.inf into it. Be aware that the image file is the original source image, not the file that has a package ID.
+3. Mount the boot image source file and inject the driver Netnm3.inf into it. Be aware that the image file is the original source image, not the file that has a package ID.
 
     :::image type="content" source="media/get-network-captures-from-task-sequence/figure-3.png" alt-text="mount" border="false":::
 

@@ -4,20 +4,20 @@ description: Describes how to enable DES encryption for Kerberos authentication 
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: michikos, kaushika
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # KDC event ID 16 or 27 is logged if DES for Kerberos is disabled
 
 This article describes how to enable DES encryption for Kerberos authentication in Windows 7 and in Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 977321
 
 ## Summary

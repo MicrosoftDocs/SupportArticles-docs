@@ -4,20 +4,21 @@ description: Provides troubleshooting information for Remote desktop disconnecte
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-server-rds
+adobe-target: true
 ---
 # Troubleshoot Remote desktop disconnected errors
 
 This article helps you understand the most common settings that are used to establish a Remote Desktop session in an enterprise environment, and provides troubleshooting information for Remote desktop disconnected errors.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2477176
 
 > [!NOTE]
@@ -89,33 +90,43 @@ Additionally, the following event ID messages may be logged in Event Viewer on t
 
 - Event message 1  
 
-    > Event ID: 50  
-    > Event Source: TermDD  
-    > Event Description: The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client.
+  ```output
+  Event ID: 50  
+  Event Source: TermDD  
+  Event Description: The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client.
+  ```
 
 - Event message 2
 
-    > Event ID: 1088
-    > Event Source: TermService
-    > Event Description: The terminal services licensing grace period has expired and the service has not registered with a license server. A terminal services license server is required for continuous operation. A terminal server can operate without a license server for 90 days after initial start up.
+  ```output
+  Event ID: 1088
+  Event Source: TermService
+  Event Description: The terminal services licensing grace period has expired and the service has not registered with a license server. A terminal services license server is required for continuous operation. A terminal server can operate without a license server for 90 days after initial start up.
+  ```
 
 - Event message 3
 
-    > Event ID: 1004  
-    > Event Source: TermService  
-    > Event Description: The terminal server cannot issue a client license.
+  ```output
+  Event ID: 1004  
+  Event Source: TermService  
+  Event Description: The terminal server cannot issue a client license.
+  ```
 
 - Event message 4
 
-    > Event ID: 1010  
-    > Event Source: TermService  
-    > Event Description: The terminal services could not locate a license server. Confirm that all license servers on the network are registered in WINS/DNS, accepting network requests, and the Terminal Services Licensing Service is running.
+  ```output
+  Event ID: 1010  
+  Event Source: TermService  
+  Event Description: The terminal services could not locate a license server. Confirm that all license servers on the network are registered in WINS/DNS, accepting network requests, and the Terminal Services Licensing Service is running.
+  ```
 
 - Event message 5
 
-    > Event ID: 28  
-    > Event Source: TermServLicensing  
-    > Event Description: Terminal Services Licensing can only be run on Domain Controllers or Server in a Workgroup. See Terminal Server Licensing help topic for more information.
+  ```output
+  Event ID: 28  
+  Event Source: TermServLicensing  
+  Event Description: Terminal Services Licensing can only be run on Domain Controllers or Server in a Workgroup. See Terminal Server Licensing help topic for more information.
+  ```
 
 ## Resolution for Symptom 1
 

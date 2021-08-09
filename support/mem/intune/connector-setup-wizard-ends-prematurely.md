@@ -13,28 +13,28 @@ _Original KB number:_ &nbsp; 4458731
 
 ## Symptoms
 
-When you try to install the Intune Certificate Connector (NDESConnectorSetup.exe), you receive the following error message:
+When you try to install the Intune Certificate Connector (NDESConnectorSetup.exe), you receive the following error message:
 
 > Microsoft Intune Connector Setup Wizard ended prematurely because of an error.
 
 :::image type="content" source="media/connector-setup-wizard-ends-prematurely/intune-connector-setup-error.png" alt-text="screenshot of Intune Connector setup error" border="false":::
 
-You also find entries that resemble the following in the SetupMSI.log file:
+You also find entries that resemble the following in the SetupMSI.log file:
 
 > MSI (s) (20:5C) [09:17:19:129]: Executing op:  
-> CustomActionSchedule(Action=ConfigureIISLimits,ActionType=3170,Source=C:\,Target=C:\Windows\SysWOW64\inetsrv\appcmd set  config "Default Web Site" -section:requestFiltering -requestLimits.maxQueryString:65534 -requestLimits.maxUrl:65534,)  
+> CustomActionSchedule(Action=ConfigureIISLimits,ActionType=3170,Source=C:\,Target=C:\Windows\SysWOW64\inetsrv\appcmd set  config "Default Web Site" -section:requestFiltering -requestLimits.maxQueryString:65534 -requestLimits.maxUrl:65534,)  
 > CustomAction ConfigureIISLimits returned actual error code 1168 but will be translated to success due to continue marking  
-> WriteIIS7ConfigChanges:  Error 0x80070002: Site not found for create application  
-> WriteIIS7ConfigChanges:  Error 0x80070002: Failed to configure IIS application.  
-> WriteIIS7ConfigChanges:  Error 0x80070002: WriteIIS7ConfigChanges Failed.  
+> WriteIIS7ConfigChanges:  Error 0x80070002: Site not found for create application  
+> WriteIIS7ConfigChanges:  Error 0x80070002: Failed to configure IIS application.  
+> WriteIIS7ConfigChanges:  Error 0x80070002: WriteIIS7ConfigChanges Failed.  
 > CustomAction WriteIIS7ConfigChanges returned actual error code 1603
 
 > [!NOTE]
-> By default, the SetupMSI.log file is located in the `C:\NDESConnectorSetup` folder.
+> By default, the SetupMSI.log file is located in the `C:\NDESConnectorSetup` folder.
 
 ## Cause
 
-This issue occurs if the **Default Web Site** name in Internet Information Services (IIS) Manager was changed.
+This issue occurs if the **Default Web Site** name in Internet Information Services (IIS) Manager was changed.
 
 The following is an example that shows that the name was changed to **Default Web Site1**:
 
@@ -42,7 +42,7 @@ The following is an example that shows that the name was changed to **Default We
 
 ## Resolution
 
-To fix the issue, follow these steps to restore the **Default Web Site** name to its default value:
+To fix the issue, follow these steps to restore the **Default Web Site** name to its default value:
 
 1. Open IIS Manager.
 2. Expand \<*Server Name*>\\**Sites**, and then locate the default website.
@@ -55,9 +55,9 @@ To fix the issue, follow these steps to restore the **Default Web Site** name t
 
     :::image type="content" source="media/connector-setup-wizard-ends-prematurely/web-site-id.png" alt-text="screenshot of Web site ID" border="false":::
 
-3. Right-click the default web site, select **Rename**, and then change the name to **Default Web Site**.
+3. Right-click the default web site, select **Rename**, and then change the name to **Default Web Site**.
 
     > [!NOTE]
-    > You may receive an error message that resembles **Unable to connect to Default Web Site1**. This message can be safely ignored.
+    > You may receive an error message that resembles **Unable to connect to Default Web Site1**. This message can be safely ignored.
 
 4. After you change the **Default Web Site** name, restart NDESConnectorSetup.exe to install the Intune Certificate Connector.

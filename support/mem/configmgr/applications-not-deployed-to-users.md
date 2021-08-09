@@ -17,7 +17,7 @@ When you deploy applications to a user collection in Configuration Manager, the 
 
 > Skipping request for user policy assignments for local user \<User SID>.
 
-Additionally, you may not see any applications that are deployed to user collections in **Software Center** on the domain controller.
+Additionally, you may not see any applications that are deployed to user collections in **Software Center** on the domain controller.
 
 ## Cause
 
@@ -25,7 +25,7 @@ This issue occurs because the user policies aren't retrieved on domain controlle
 
 ## Resolution
 
-To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1906).
+To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1906).
 
 ## Workaround
 

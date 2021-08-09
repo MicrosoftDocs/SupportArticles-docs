@@ -268,9 +268,7 @@ The compliance scan output is written to the following location to which the upd
 |KB article|Description|
 |---|---|
 | [3147172](https://support.microsoft.com/help/3147172)|This update fixes the problems described in KB article 3147172|
-| [3147191](https://support.microsoft.com/help/3147191)|This update fixes the problems described in KB article 3147167|
 | [3147167](https://support.microsoft.com/help/3147167)|This update fixes the problems described in KB article 3147167|
-| [3158139](https://support.microsoft.com/help/3158139)|This update fixes the problems described in KB article 3147167|
 | [3158609](https://support.microsoft.com/help/3158609)|This update fixes the problems described in KB article 3158609|
 |||
 
@@ -291,7 +289,6 @@ The compliance scan output is written to the following location to which the upd
 
 |KB Article|Description|
 |---|---|
-| [2461484](https://support.microsoft.com/help/2461484)|Definition Update for Microsoft Endpoint Protection|
 | [3063109](https://support.microsoft.com/help/3063109)|Hyper-V integration components update for Windows virtual machines that are running on a Windows 10-based host|
 | [3153224](https://support.microsoft.com/help/3153224)|Revised March 2016 anti-malware platform update for Endpoint Protection clients|
 | [3174644](https://support.microsoft.com/help/3174644)|Microsoft security advisory: Updated support for Diffie-Hellman Key Exchange|
@@ -300,7 +297,6 @@ The compliance scan output is written to the following location to which the upd
 | [3178539](https://support.microsoft.com/help/3178539)|MS16-112: Description of the security update for Windows lock screen: September 13, 2016|
 | [3179574](https://support.microsoft.com/help/3179574)|August 2016 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2|
 | [3184122](https://support.microsoft.com/help/3184122)|MS16-116: Description of the security update for OLE Automation for VBScript Scripting Engine: September 13, 2016|
-| [3184471](https://support.microsoft.com/help/3184471)|MS16-110: Description of the security update for Windows: September 13, 2016|
 | [3184943](https://support.microsoft.com/help/3184943)|MS16-115: Description of the security update for Microsoft Windows PDF Library: September 13, 2016|
 | [3185319](https://support.microsoft.com/help/3185319)|MS16-104: Security update for Internet Explorer: September 13, 2016|
 | [3185911](https://support.microsoft.com/help/3185911)|MS16-106: Description of the security update for Microsoft Graphics Component: September 13, 2016|
@@ -404,7 +400,6 @@ The compliance scan output is written to the following location to which the upd
 | [3061512](https://support.microsoft.com/help/3061512)|MS15-069: Description of the security update for Windows: July 14, 2015|
 | [3060793](https://support.microsoft.com/help/3060793)|"0x0000001E" or "0x00000133" Stop error when you transfer data through a USB-based RNDIS device on Windows|
 | [3060383](https://support.microsoft.com/help/3060383)|Decimal symbol and digit grouping symbol are incorrect for the Swiss language locale in Windows|
-| [3059316](https://support.microsoft.com/help/3059316)|You cannot move the scrollbar on Windows by dragging the mouse|
 | [3055343](https://support.microsoft.com/help/3055343)|Stop error code 0xD1, 0x139, or 0x3B and cluster nodes go down in Windows Server 2012 R2 or Windows Server 2012|
 | [3055323](https://support.microsoft.com/help/3055323)|Update to enable a security feature in Windows 8.1 or Windows Server 2012 R2|
 | [3054464](https://support.microsoft.com/help/3054464)|Applications that use the AddEntry method may crash in Windows|
@@ -505,10 +500,8 @@ The compliance scan output is written to the following location to which the upd
 | [3078601](https://support.microsoft.com/help/3078601)|MS15-080: Description of the security update for Windows: August 11, 2015|
 | [3076895](https://support.microsoft.com/help/3076895)|MS15-084: Description of the security update for Windows XML core services: August 11, 2015|
 | [3075220](https://support.microsoft.com/help/3075220)|MS15-082: Description of the security update for RDP in Windows: August 11, 2015|
-| [3074553](https://support.microsoft.com/help/3074553)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074548](https://support.microsoft.com/help/3074548)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3074545](https://support.microsoft.com/help/3074545)|MS15-101: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
-| [3074232](https://support.microsoft.com/help/3074232)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074228](https://support.microsoft.com/help/3074228)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3072630](https://support.microsoft.com/help/3072630)|MS15-074: Vulnerability in Windows Installer service could allow elevation of privilege: July 14, 2015|
 | [3072307](https://support.microsoft.com/help/3072307)|MS15-080: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: August 11, 2015|

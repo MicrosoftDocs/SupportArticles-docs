@@ -13,23 +13,23 @@ _Original KB number:_ &nbsp; 4490473
 
 ## Symptoms
 
-When you try to back up an Intune-managed iOS device by using [iTunes](https://support.apple.com/HT203977#computer), the **Encrypt local backup** option is automatically selected and you can't turn it off.
+When you try to back up an Intune-managed iOS device by using [iTunes](https://support.apple.com/HT203977#computer), the **Encrypt local backup** option is automatically selected and you can't turn it off.
 
 ## Cause
 
 This issue occurs if an Intune certificate profile was deployed to the device.
 
-When certain items are on the iOS device, such as the certificates that are embedded in profiles (as payloads), iTunes automatically turns on backup encryption. The behavior is by design.
+When certain items are on the iOS device, such as the certificates that are embedded in profiles (as payloads), iTunes automatically turns on backup encryption. The behavior is by design.
 
 ## More information
 
-The [iOS Security](https://www.apple.com/ph/privacy/docs/iOS_Security_Guide.pdf) document provides the following information:
+The [iOS Security](https://www.apple.com/ph/privacy/docs/iOS_Security_Guide.pdf) document provides the following information:
 
-The backup payload that's created is referred to as a *keybag* that contains the keychain items that are created by iOS. For these keychain items, the following class protection objects are flagged as **non-migratory**:
+The backup payload that's created is referred to as a *keybag* that contains the keychain items that are created by iOS. For these keychain items, the following class protection objects are flagged as **non-migratory**:
 
 - Item accessible
 - VPN certificates **Always, non-migratory**
-- Bluetooth keys **Always, non-migratory**
+- Bluetooth keys **Always, non-migratory**
 - Apple Push Notification service token **Always, non-migratory**
 - iCloud certificates and private key **Always, non-migratory**
 - iMessage keys **Always, non-migratory**

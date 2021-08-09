@@ -4,20 +4,20 @@ description: Fixes a problem in which you cannot use the Server Manager snap-in 
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager
 
 This article helps to fix a problem in which you cannot use the Server Manager snap-in to install WSUS, or WSUS does not appear in the Server Manager snap-in.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 940518
 
 ## INTRODUCTION
@@ -180,5 +180,3 @@ For more information, click the following article number to view the article in 
 [948014](https://support.microsoft.com/help/948014) Description of the Windows Server Update Services 3.0 Service Pack 1 package  
 
 For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates

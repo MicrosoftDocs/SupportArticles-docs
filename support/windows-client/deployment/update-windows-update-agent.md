@@ -4,20 +4,21 @@ description: Provides information about updating Windows Update Agent to the lat
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, brentdav
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
+adobe-target: true
 ---
 # Update the Windows Update Agent to the latest version
 
 This article describes how to update the Windows Update Agent to the latest version.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012  
+_Applies to:_ &nbsp; Windows 7, Windows 8, Windows Server 2008 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 949104
 
 ## Summary

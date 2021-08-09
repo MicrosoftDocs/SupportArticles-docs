@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Apply Property Error when modifying Ratings, Description or Notes of a Favorite shortcut
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the workaround to help you to solve the problem that an error message **Apply Property Error** occurs when you change the **Ratings**, **Description**, or **Notes** fields of a Favorite shortcut in Internet Explorer.
 
 Microsoft has confirmed this to be a problem with Microsoft Windows 7 including Microsoft Windows 7 with Service Pack 1.
@@ -104,12 +106,12 @@ Prop9=19,75
 Prop9=19,99
 
 Example of support.microsoft.com.url:
+
 |Field|Value|
 |---|---|
 |Description Field|Support.microsoft.com|
 |Notes Filed|Support URLs|
 |Star Rating|5 Stars|
-|||
 
 [{000214A0-0000-0000-C000-000000000046}]  
 Prop3=19,2  
@@ -142,7 +144,7 @@ Here is all the manual settings that are introduced above:
 
 |Field|Value|
 |---|---|
-|Description Field|[{5CBF2787-48CF-4208-B90E-EE5E5D420294}]<br/>Prop21=31,<<< Add Description Field Text Here >>>|
-|Notes Field|[{B9B4B3FC-2B51-4A42-B5D8-324146AFCF25}]<br/>Prop5=31,<<< AddNotes Field Text Here >>>|
-|Star Ratings|1 Star:<br/>[{64440492-4C8B-11D1-8B70-080036B11A03}]<br/>Prop9=19,1<br/>2 Star:<br/>[{64440492-4C8B-11D1-8B70-080036B11A03}]<br/>Prop9=19,25<br/>3 Star:<br/>[{64440492-4C8B-11D1-8B70-080036B11A03}]<br/>Prop9=19,50<br/>4 Star:<br/>[{64440492-4C8B-11D1-8B70-080036B11A03}]<br/>Prop9=19,75<br/>5 Star:<br/>[{64440492-4C8B-11D1-8B70-080036B11A03}]<br/>Prop9=19,99|
+|Description Field|[{5CBF2787-48CF-4208-B90E-EE5E5D420294}]</br>Prop21=31,<<< Add Description Field Text Here >>>|
+|Notes Field|[{B9B4B3FC-2B51-4A42-B5D8-324146AFCF25}]</br>Prop5=31,<<< AddNotes Field Text Here >>>|
+|Star Ratings|1 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,1</br>2 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,25</br>3 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,50</br>4 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,75</br>5 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,99|
 |||

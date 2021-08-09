@@ -4,20 +4,20 @@ description: Describes Event 16650 and how to resolve Event 16650 RID Master err
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Event ID 16650: The account-identifier allocator failed to initialize in Windows Server
 
 This article provides a solution to solve errors that occurs when you add objects to Active Directory or restore a domain controller from a system state backup.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 839879
 
 ## Symptoms
@@ -120,18 +120,18 @@ Before you can delete the replication links to the Active Directory naming conte
 1. Click **Start**, click **Run**, type **cmd** in the **Open** box, and then click **OK**.
 2. At the command prompt, type `repadmin /showreps`. You will see output that resembles the following:  
 
-    > CN=Schema,CN=Configuration,DC=contoso,DC=comDefault-First-Site-Name\DC02 via RPC objectGuid: 97c68f88-3864-4a12-9962-ca389937e237 Last attempt @ 2004-02-26 09:10.03 was successful.
+    > CN=Schema,CN=Configuration,DC=contoso,DC=comDefault-First-Site-Name\DC02 via RPC objectGuid: *\<GUID>* Last attempt @ *\<DateTime>* was successful.
     >
-    > CN=Configuration,DC=contoso,DC=com Default-First-Site-Name\DC02 via RPC objectGuid: 97c68f88-3864-4a12-9962-ca389937e237 Last attempt @ 2004-02-26 09:14.43 was successful.
+    > CN=Configuration,DC=contoso,DC=com Default-First-Site-Name\DC02 via RPC objectGuid: *\<GUID>* Last attempt @ *\<DateTime>* was successful.
     >
-    > DC=contoso,DC=com Default-First-Site-Name\DC02 via RPC objectGuid: 97c68f88-3864-4a12-9962-ca389937e237 Last attempt @ 2004-02-26 09:14.01 was successful.
+    > DC=contoso,DC=com Default-First-Site-Name\DC02 via RPC objectGuid: *\<GUID>* Last attempt @ *\<DateTime>* was successful.
 
 3. Type `repadmin /delete` to delete the replication links. Specify the naming context and the objectGUID as shown in the following examples:  
 
     ```console
-    repadmin /delete CN=Schema,CN=Configuration,DC=contoso,DC=com DC01 97c68f88-3864-4a12-9962-ca389937e237._msdcs.contoso.com /localonly  
-    repadmin /delete CN=Configuration,DC=contoso,DC=com DC01 97c68f88-3864-4a12-9962-ca389937e237._msdcs.contoso.com /localonly  
-    repadmin /delete DC=contoso,DC=com DC01 97c68f88-3864-4a12-9962-ca389937e237._msdcs.contoso.com /localonly
+    repadmin /delete CN=Schema,CN=Configuration,DC=contoso,DC=com DC01 <GUID>._msdcs.contoso.com /localonly  
+    repadmin /delete CN=Configuration,DC=contoso,DC=com DC01 <GUID>._msdcs.contoso.com /localonly  
+    repadmin /delete DC=contoso,DC=com DC01 <GUID>._msdcs.contoso.com /localonly
     ```
 
 4. Restart the RID Master computer. The RID Master will initialize correctly.
@@ -139,7 +139,7 @@ Before you can delete the replication links to the Active Directory naming conte
 ### Remove domain controller metadata for all other domain controllers in the domain
 
 You can restore or connect a second domain controller to complete initial synchronization. If you cannot add a second domain controller, you must either perform a metadata cleanup on the non-existent domain controllers to remove them from the domain permanently or delete the replication links to the Active Directory naming contexts.
- For more information about how to remove metadata, click the following article number to view the article [Clean up Server Metadata.](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)  
+ For more information about how to remove metadata, click the following article number to view the article [Clean up Server Metadata.](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup)  
 
 ### Verify that Active Directory objects that are related to RID allocation are valid
 
@@ -184,5 +184,4 @@ This behavior is by design.
 
 ## References
 
-[305476](https://support.microsoft.com/help/305476) Initial synchronization requirements for Windows Server operations master role holders  
 [822053](https://support.microsoft.com/help/822053) Error message: "Windows cannot create the object because the Directory Service was unable to allocate a relative identifier"  

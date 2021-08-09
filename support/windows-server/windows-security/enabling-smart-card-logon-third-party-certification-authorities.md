@@ -4,20 +4,20 @@ description: Provides some guidelines for enabling smart card logon with third-p
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.prod-support-area-path: Smart card logon
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Guidelines for enabling smart card logon with third-party certification authorities
 
 This article provides some guidelines for enabling smart card logon with third-party certification authorities.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 281245
 
 ## Summary
@@ -47,21 +47,21 @@ As with any PKI implementation, all parties must trust the Root CA to which the 
 
 1. Export or download the third-party root certificate. How to obtaining the party root certificate varies by vendor. The certificate must be in Base64 Encoded X.509 format.
 2. Add the third-party root CA to the trusted roots in an Active Directory Group Policy object. To configure Group Policy in the Windows 2000 domain to distribute the third-party CA to the trusted root store of all domain computers:
-   1. Click Start, point to Programs, point to Administrative Tools, and then click **Active Directory Users and Computers**.
+   1. Click **Start**, point to **Programs**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
    2. In the left pane, locate the domain in which the policy you want to edit is applied.
-   3. Right-click the domain, and then click Properties.
-   4. Click the Group Policy tab.
-   5. Click the **Default Domain Policy Group Policy** object, and then click Edit. A new window opens.
+   3. Right-click the domain, and then click **Properties**.
+   4. Click the **Group Policy** tab.
+   5. Click the **Default Domain Policy Group Policy** object, and then click **Edit**. A new window opens.
    6. In the left pane, expand the following items:
-      - Computer Configuration
-      - Windows Settings
-      - Security Settings
-      - Public Key Policy
+      - **Computer Configuration**
+      - **Windows Settings**
+      - **Security Settings**
+      - **Public Key Policy**
    7. Right-click **Trusted Root Certification Authorities**.
-   8. Select All Tasks, and then click Import.
+   8. Select **All Tasks**, and then click **Import**.
    9. Follow the instructions in the wizard to import the certificate.
-   10. Click OK.
-   11. Close the Group Policy window.
+   10. Click **OK**.
+   11. Close the **Group Policy** window.
 3. Add the third party issuing the CA to the NTAuth store in Active Directory.
 
    The smart card logon certificate must be issued from a CA that is in the NTAuth store. By default, Microsoft Enterprise CAs are added to the NTAuth store.

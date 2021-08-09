@@ -4,20 +4,20 @@ description: Describes the errors that are triggered when you run various WinRM 
 ms.date: 09/30/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: WinRM
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Errors when you run WinRM commands to check local functionality in a Windows Server 2008 environment
 
 This article provides a solution to errors that occur when you run WinRM commands to check local functionality in a Windows Server 2008 environment.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2269634
 
 ## Symptoms

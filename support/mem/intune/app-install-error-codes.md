@@ -2,7 +2,7 @@
 title: App installation error codes
 description: Use the app installation error codes to help you troubleshoot app installation issues.
 keywords:
-ms.date: 04/02/2020
+ms.date: 12/24/2020
 ms.reviewer: mghadial
 ---
 # Intune app installation error reference
@@ -45,6 +45,7 @@ The following error messages and descriptions provide details about iOS/iPadOS i
 | 0x87D13B64 | -2016330908 | The   app installation has failed.  | An   app installation failure occurred. iOS/iPadOS Console logs are needed to   troubleshoot this error. |
 | 0x87D13B66 | -2016330906 | The   app is managed, but has expired or been removed by the user.  | Either   the user explicitly uninstalled the app, or the app is expired but failed to   download, or the app detection does not match the response from the device.   Additionally, this error could occur based on an iOS/iPadOS 9.2.2 platform bug. |
 | 0x87D13B60 | -2016330912 | The   app is scheduled for installation, but needs a redemption code to complete   the transaction.  | This   error typically occurs with iOS Store apps which are paid apps. |
+| 0x87D13B7D | -2016330883 | Unknown error.  | An unknown app installation error occurred. This error code can be returned for multiple reasons, one of which is an expired VPP token in Intune. As a general recommendation, whenever an unknown error is encountered, ensure that the Volume Purchase Program (VPP) token is checked to verify that it's current and functional. |
 | 0x87D1041C | -2016345060 | The   application was not detected after installation completed successfully.  | The   app detection process did not match with the response from the device. |
 | 0x87D13B62 | -2016330910 | The   user rejected the offer to install the app.  | During   initial app install, the user clicked cancel. Ask the user to accept the   install request the next time. |
 | 0x87D13B63 | -2016330909 | The   user rejected the offer to update the app.  | The   end user clicked cancel during the update process. Deploy as required or   educate the user to accept the upgrade prompt. |

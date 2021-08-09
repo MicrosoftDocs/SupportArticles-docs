@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 2019903
 
 ## Symptoms
 
-When you use a REST service in WCF, the REST service generates Web Service Description Language (WSDL) for the associated contracts. However, WCF doesn't support metadata for RESTful services. This may cause problems with other non-RESTful services that are hosted in the same service. For example, some properties and methods may be duplicated.
+When you use a REST service in WCF, the REST service generates Web Service Description Language (WSDL) for the associated contracts. However, WCF doesn't support metadata for RESTful services. This may cause problems with other non-RESTful services that are hosted in the same service. For example, some properties and methods may be duplicated.
 
 ## Cause
 
-Even though WCF doesn't support metadata for REST services, WCF still exposes the WSDL. However, this may cause problems if there are conflicts or duplicates in the metadata that describes the other endpoints in the service.
+Even though WCF doesn't support metadata for REST services, WCF still exposes the WSDL. However, this may cause problems if there are conflicts or duplicates in the metadata that describes the other endpoints in the service.
 
 ## Resolution
 

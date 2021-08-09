@@ -4,20 +4,20 @@ description: Describes how to move a certificate server's database and log files
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Move the Certificate Server database and log files
 
 This article describes how to move a certificate server's database and log files.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 283193
 
 > [!IMPORTANT]
@@ -45,6 +45,6 @@ Use these steps to change the location of the certificate server database and lo
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\DBTempDirectory`
 
 4. Start the Certificate Services service.
-5. Check the Application event log for CertSvc event 26 to verify that the Certificate Services service started successfully.A warning message is displayed if the service does not start successfully. If this occurs, check the syntax of the paths in the registry.
+5. Check the Application event log for CertSvc event 26 to verify that the Certificate Services service started successfully. A warning message is displayed if the service does not start successfully. If this occurs, check the syntax of the paths in the registry.
 
 You may need to edit the NTFS permissions to grant Full Control permissions to the System account. By default, the System account and the Administrators and Enterprise Administrators groups have Full Control access for the CertLog folder.

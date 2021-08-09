@@ -14,17 +14,17 @@ _Original KB number:_ &nbsp; 4531963
 
 ## Symptoms
 
-You create a Symbolic Directory Link to a local directory or a remote file share. This creates the link `C:\link` that points to the `C:\temp` folder, as follows:
+You create a Symbolic Directory Link to a local directory or a remote file share. This creates the link `C:\link` that points to the `C:\temp` folder, as follows:
 
 ```console
 mklink /d C:\link C:\temp
 ```
 
-If your application is built by using Microsoft Visual Studio 2013, 2012, or 2010, unpredictable or false results occur when you use C Runtime Library (CRT) function calls of `_stat-family`.
+If your application is built by using Microsoft Visual Studio 2013, 2012, or 2010, unpredictable or false results occur when you use C Runtime Library (CRT) function calls of `_stat-family`.
 
 ## Resolution
 
-To resolve this problem, migrate your C or C++ project to a latest version of Microsoft Visual Studio. This is because C Runtime function calls of `_stat-family` of the Universal C Runtime are used by Visual Studio 2019, 2017, and 2015. These versions support Symbolic Directory Links.
+To resolve this problem, migrate your C or C++ project to a latest version of Microsoft Visual Studio. This is because C Runtime function calls of `_stat-family` of the Universal C Runtime are used by Visual Studio 2019, 2017, and 2015. These versions support Symbolic Directory Links.
 
 ## Workaround
 
@@ -36,7 +36,7 @@ mklink C:\abc C\temp
 mkdir C:\abc\link
 ```  
 
-If you use a `_stat-family` function call that has a `C:\abc\link` path, the result is always correct.
+If you use a `_stat-family` function call that has a `C:\abc\link` path, the result is always correct.
 
 ## More information
 

@@ -4,20 +4,20 @@ description: Describes an issue where AD operations fail with error 8477 (The re
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8477: The replication request has been posted; waiting for reply
 
 This article describes an issue where Active Directory Replications fail with error 8477: "The replication request has been posted; waiting for reply".
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2758780
 
 > [!NOTE]
@@ -26,6 +26,7 @@ _Original KB number:_ &nbsp; 2758780
 ## Symptoms
 
 This article describes the symptoms, cause, and resolution steps involved in troubleshooting Active Directory Replication error 8477: "The replication request has been posted; waiting for reply".
+
 The symptoms discussed in this article are commonly related to the occurrence of event 8477, however may also be observed with other events related to slow or delayed replication. When troubleshooting such issues, consideration should be given to all factors that may cause replication delays and be remediated accordingly.
 
 ### Output from repadmin.exe /showreps /verbose may report the replication attempt has failed with error 8477 - "The replication request has been posted; waiting for reply"  
@@ -110,7 +111,7 @@ Done gathering initial info.
 >DSA transport addr \<source DCs ntds settings object object guid>._msdcs.Contoso.com  
    ......................... DomainController passed test Replications  
 
-### 'NTDS Replication' event 1580 may be logged in the directory service event log:
+### 'NTDS Replication' event 1580 may be logged in the directory service event log
 
 | **Event Source**| **Event ID**| **Event String** |
 |---|---|---|
@@ -151,18 +152,14 @@ An IT Professional may choose to use Performance Monitor with Processor, Physica
 **For Windows Server 2008 and above based Domain Controllers:**  
 Performance Monitor in Windows Server 2008 and later includes the key functionality of Server Performance Advisor straight out of the box. Within the System Data Collector Sets, the Active Directory Diagnostics set will, similarly to Server Performance Advisor, produce a report with key metrics for Active Directory Performance investigation and provide warnings for uncharacteristic behavior on Active Directory Domain Controllers. Any warnings are included at the top of the report an example of which is below:  
 
-| **[WARNING]<br/>** |
-|---|
-|
-
-| **Symptom:**| The system is experiencing excessive paging |
+|WARNING|</br>|
 |---|---|
+| **Symptom:**| The system is experiencing excessive paging |
 | **Cause:**| Available memory on the system is low. |
 | **Details:**| The total physical memory on the system is not capable of handling the load. |
 | **Resolution:**| Upgrade the physical memory or reduce system load |
 | **Related:**| Memory Diagnosis |
 | **Symptom:**| On directory servers, Ntds.dit and Edb.log should be the most active files. In this case, C:\Windows\NTDS\ntds.dit has the highest I/O rate (84.622 operations/sec). |
-||||
 
 ### High rate of change for objects in Active Directory Domain Services (AD DS)  
 

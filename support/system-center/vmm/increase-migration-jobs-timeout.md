@@ -24,16 +24,16 @@ When this happens, you will see errors similar to the following in the VMM admin
 
 A VMM trace will show events similar to the following:
 
-> 00005365 9.20626545 [388] 0184.0008::06/24-23:57:57.717  04VirVMTask.cs(211): GetFinalResult, got error: 32768 => [Storage migration for 'VMName' was not finished because maximum storage migration limit '2' was reached, please wait for completion of an ongoing migration operation (Virtual machine ID \<VMID>).]  
-> 00005366 9.20648384 [388] 0184.0008::06/24-23:57:57.717  16DeployVmSubtask.cs(10151): Win8 live migration failed with error  
-> 00005367 9.20675373 [388] 0184.0008::06/24-23:57:57.717  16DeployVmSubtask.cs(10151): Microsoft.Carmine.WSManWrappers.WSManException: VMM cannot complete the host operation on the serverName.contoso.com server because of the error: Storage migration for 'VMName' was not finished because maximum storage migration limit '2' was reached, please wait for completion of an ongoing migration operation (Virtual machine ID \<VMID>).
+> 00005365 9.20626545 [388] 0184.0008::06/24-23:57:57.717  04VirVMTask.cs(211): GetFinalResult, got error: 32768 => [Storage migration for 'VMName' was not finished because maximum storage migration limit '2' was reached, please wait for completion of an ongoing migration operation (Virtual machine ID \<VMID>).]  
+> 00005366 9.20648384 [388] 0184.0008::06/24-23:57:57.717  16DeployVmSubtask.cs(10151): Win8 live migration failed with error  
+> 00005367 9.20675373 [388] 0184.0008::06/24-23:57:57.717  16DeployVmSubtask.cs(10151): Microsoft.Carmine.WSManWrappers.WSManException: VMM cannot complete the host operation on the serverName.contoso.com server because of the error: Storage migration for 'VMName' was not finished because maximum storage migration limit '2' was reached, please wait for completion of an ongoing migration operation (Virtual machine ID \<VMID>).
 
 ## Workaround
 
-To work around this, you can increase the timeout between jobs by creating the following registry key and restarting the VMM service:
+To work around this, you can increase the timeout between jobs by creating the following registry key and restarting the VMM service:
 
 1. Go to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft System Center Virtual Machine Manager Server\Settings`.
-1. Create a new **DWORD** value.
+1. Create a new **DWORD** value.
 1. Set the name to `LiveMigrationQueueTimeoutSecs`.
 1. Set the value to **00000708 HEX**. This will set the timeout to 30 minutes.
 1. Restart the VMM service.

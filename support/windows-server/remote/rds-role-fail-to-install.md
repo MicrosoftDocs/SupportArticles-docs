@@ -4,25 +4,25 @@ description: Provides a solution to an issue where Remote Desktop Services fails
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # The Remote Desktop Services or Terminal Services Role fails to install when FireWall Service is set to disabled
 
 This article provides a solution to an issue where Remote Desktop Services fails to install and you get the error code 0x800706D9.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2027551
 
 ## Symptoms
 
-When installing the Remote Desktop Services Role on Windows Server 2008 server, you may receive following error:
+When installing the Remote Desktop Services Role on Windows Server 2008 server, you may receive the following error:
 
 > Attempt to configure Terminal Server failed with error code *0x800706D9*. "There are no more endpoints available from the endpoint mapper"
 

@@ -19,7 +19,7 @@ This article describes the significance of CSPs, Open Mobile Alliance – Unifor
 
 By using Microsoft Intune, you can provide a modern device experience to users, and you can better support their digital migration by focusing on an internet-first device connection. Policy-based configuration is the primary method for ensuring that devices have the appropriate settings, and that the policies that are deployed through Intune can be broadly categorized as either a mobile device management (MDM) policy (device management) or mobile app management MAM policy (app protection).
 
-Intune provides a convenient and easy-to-use interface to configure these policies. However, not all settings are necessarily available within the Intune portal user interface (UI). Although  many settings can be potentially configured on a Windows device, it’s not feasible to have all of them in the portal. Also, as advancements are made, it’s not unusual to have a certain degree of lag before a new setting gets added. In these scenarios, deploying a custom OMA-URI profile that uses a Windows Configuration Service Provider (CSP) is the answer.
+Intune provides a convenient and easy-to-use interface to configure these policies. However, not all settings are necessarily available within the Intune portal user interface (UI). Although  many settings can be potentially configured on a Windows device, it's not feasible to have all of them in the portal. Also, as advancements are made, it's not unusual to have a certain degree of lag before a new setting gets added. In these scenarios, deploying a custom OMA-URI profile that uses a Windows Configuration Service Provider (CSP) is the answer.
 
 This topic explains the significance of these CSPs and Open Mobile Alliance–Uniform Resources (OMA-URIs), and also discusses how these custom MDM policies are delivered to Windows 10-based devices.
 
@@ -81,7 +81,7 @@ No matter which method you use, the end result is identical.
 
 ![Sign-in screen](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-sign-in-screen.png)
 
-Here’s another example that uses BitLocker.
+Here's another example that uses BitLocker.
 
 ### Use a custom policy from the portal
 
@@ -112,7 +112,7 @@ The following table shows the different aspects of your Group Policy both before
 |Sysvol folder|Intune database/MSUs|
 |Client-side Extension to process GPO|CSPs to process the MDM policy|
 |SMB protocol used for communication|HTTPS protocol used for communication|
-|`.pol` | `.ini` file (it is usually the input)|SyncML is the input for the devices|
+|`.pol` \| `.ini` file (it is usually the input)|SyncML is the input for the devices|
 
 ## Important notes on policy behavior
 
@@ -147,6 +147,6 @@ If you have a policy that is not working as expected, verify whether the policy 
 
 ![The Windows Event log](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-windows-event-log.png)
 
-Both logs should contain a reference to the custom policy or OMA-URI setting that you’re trying to deploy. If you do not see this reference, it is likely that the policy was not delivered to the device. Verify that the policy is configured correctly and is targeted to the correct group.
+Both logs should contain a reference to the custom policy or OMA-URI setting that you're trying to deploy. If you do not see this reference, it is likely that the policy was not delivered to the device. Verify that the policy is configured correctly and is targeted to the correct group.
 
-If you verify that the policy is reaching the client, check the `DeviceManagement-Enterprise-Diagnostics-Provider > Admin Event log` on the client for errors. You may see an error entry that contains additional information about why the policy did not apply. The causes will vary, but there is frequently a problem in the syntax of the OMA-URI string that’s configured in the custom policy. Double-check the CSP reference, and make sure that the syntax is correct.
+If you verify that the policy is reaching the client, check the `DeviceManagement-Enterprise-Diagnostics-Provider > Admin Event log` on the client for errors. You may see an error entry that contains additional information about why the policy did not apply. The causes will vary, but there is frequently a problem in the syntax of the OMA-URI string that's configured in the custom policy. Double-check the CSP reference, and make sure that the syntax is correct.

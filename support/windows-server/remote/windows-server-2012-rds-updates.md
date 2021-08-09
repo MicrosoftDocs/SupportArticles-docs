@@ -1,36 +1,37 @@
 ---
-title: Available updates for Remote Desktop Services in Windows Server 2012
+title: Available updates for Remote Desktop Services 
 description: Lists the available updates for Remote Desktop Services in Windows Server 2012.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# Available updates for Remote Desktop Services in Windows Server 2012
+# Available updates for Remote Desktop Services
 
 This article lists the available updates for Remote Desktop Services in Windows Server 2012.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2821526
 
 ## Summary
 
-This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services for Windows Server 2012 environments. 
+This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services for Windows Server 2012 environments.  
 
-For Windows Server 2008 R2 Remote Desktop Services updates, see [KB2601888](https://support.microsoft.com/help/2601888)
+For Windows Server 2008 R2 Remote Desktop Services updates, see [KB2601888](https://support.microsoft.com/help/2601888).
 
-For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664) 
+For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664).  
 
-Many of the updates listed later in this article are already included in the normal Windows Update monthly rollups. Select the "Recommended Updates" Windows Update setting to obtain these. 
+Many of the updates listed later in this article are already included in the normal Windows Update monthly rollups. Select the "Recommended Updates" Windows Update setting to obtain these.  
 
-Note If you believe you're experiencing an issue listed later in this article, install just the hotfix for that specific issue, or use the monthly rollups option as mentioned previously.
+> [!Note]
+> If you believe you're experiencing an issue listed later in this article, install just the hotfix for that specific issue, or use the monthly rollups option as mentioned previously.
 
 The hotfixes and updates are arranged by component areas within Remote Desktop Services 2012 environments and could also apply to Windows XP, Windows Vista, Windows 7, Windows 8, and Windows 8.1 Remote Desktop Clients.
 
@@ -42,11 +43,11 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [3020396](https://support.microsoft.com/help/3020396) Sysprep.exe process crashes when you use the SCVMM tool to create a VM template of a Windows Server 2012 image
 
-[3015693](https://support.microsoft.com/help/3015693)"0x000000AB" Stop error in Windows Server 2012-based RDS server when you log off from a Remote Desktop session
+[3015693](https://support.microsoft.com/help/3015693) "0x000000AB" Stop error in Windows Server 2012-based RDS server when you log off from a Remote Desktop session
 
 [2981330](https://support.microsoft.com/help/2981330) WTSQuerySessionInformation API function always returns zero bytes for WTSIncomingBytes and WTSOutgoingBytes
 
-[2954110](https://support.microsoft.com/help/2954110)"Windows was unable to save all the data for the file" error when you log off from an RD Session Host server
+[2954110](https://support.microsoft.com/help/2954110) "Windows was unable to save all the data for the file" error when you log off from an RD Session Host server
 
 [2903333](https://support.microsoft.com/help/2903333) Terminal Services client connection error 0xC000035B when you use LmCompatibility
 
@@ -54,7 +55,7 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [2861935](https://support.microsoft.com/help/2861935) Virtual machine backup fails in a Windows Server 2012 VDI deployment that enables user profile disks
 
-[2852483](https://support.microsoft.com/help/2852483)  Memory leak occurs in the Dwm.exe process on a Remote Desktop computer that is running Windows 8 or Windows Server 2012
+[2852483](https://support.microsoft.com/help/2852483) Memory leak occurs in the Dwm.exe process on a Remote Desktop computer that is running Windows 8 or Windows Server 2012
 
 [2802311](https://support.microsoft.com/help/2802311) RDP virtual static channels don't work and an operation stalls in Windows Server 2012
 
@@ -86,8 +87,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [2959626](https://support.microsoft.com/help/2959626) Reliability improvements for Remote Desktop Session Host and RemoteApp
 
-[2925336](https://support.microsoft.com/help/2925336) Shortcut menu items flicker as you move the mouse pointer over them in a RemoteApp in Windows 8 or Windows Server 2012
-
 [2862077](https://support.microsoft.com/help/2862077) Error when you try to change the properties of a published RemoteApp in Windows Server 2012
 
 [2862019](https://support.microsoft.com/help/2862019) A RemoteApp application main window takes the focus after the applications windows are maximized in Windows
@@ -118,4 +117,4 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [3069129](https://support.microsoft.com/help/3069129) Blank page is displayed when you try to access RemoteApps on a Windows-based RD Web Access server
 
-[2793072](https://support.microsoft.com/help/2793072)  Generic error message when you change your password on a RD Web Access website in Windows Server 2012
+[2793072](https://support.microsoft.com/help/2793072)  Generic error message when you change your password on an RD Web Access website in Windows Server 2012

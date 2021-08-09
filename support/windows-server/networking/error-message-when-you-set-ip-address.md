@@ -4,20 +4,20 @@ description: Provides a solution to an error that occurs when you try to set an 
 ms.date: 09/28/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, TERRYBA
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # Error message when you try to set an IP address on a network adapter
 
 This article provides a solution to an error that occurs when you try to set an IP address on a network adapter.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 269155
 
 ## Symptoms  
@@ -33,7 +33,7 @@ If you select **Yes**, you see the TCP/IP properties. Then, you can change the I
 
 > [!NOTE]
 > On a computer that is running Windows Server 2008, you receive the following error message:
-
+>
 > Cannot rename this connection. A connection with the name you specified already exists. Specify a different name.
 
 ## Cause

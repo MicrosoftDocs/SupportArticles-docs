@@ -4,6 +4,7 @@ description: Provides a list of operating systems that extensions can support.
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
 ---
 # Azure Extension supported operating systems
 

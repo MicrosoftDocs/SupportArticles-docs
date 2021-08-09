@@ -7,6 +7,8 @@ ms.reviewer: louiss
 ---
 # Information collected by Internet Explorer Data Collector
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes the information that may be collected from a computer when running Internet Explorer Diagnostics for Windows Client and Server as well as a description of the Interactive troubleshooting tasks performed.
 
 When first launching the Internet Explorer Data collector, the user will select either the **Internet Explorer Data Collector** option or the **Internet Explorer Troubleshooting Tasks** option.

@@ -26,4 +26,4 @@ In this scenario, you receive the following error message:
 
 ## Cause  
 
-This behavior is by design. After a deduplicated file system is protected by a primary DPM server, it's no longer supported to be protected by a secondary DPM server. For more information, see [Deduplication issues](/system-center/dpm/dpm-support-issues#BKMK_Dedup).
+This behavior is by design. After a deduplicated file system is protected by a primary DPM server, it's no longer supported to be protected by a secondary DPM server. For more information, see [Deduplication issues](/system-center/dpm/dpm-support-issues#BKMK_Dedup).

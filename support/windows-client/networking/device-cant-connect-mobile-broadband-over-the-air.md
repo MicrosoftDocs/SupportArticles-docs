@@ -4,20 +4,20 @@ description: Describes an issue that prevents your Windows 10-based device from 
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Devices can't connect to mobile broadband after over-the-air update from mobile operator
 
 This article provides a resolution for the issue that devices can't connect to mobile broadband after over-the-air update from mobile operator.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3160433
 
 ## Symptoms

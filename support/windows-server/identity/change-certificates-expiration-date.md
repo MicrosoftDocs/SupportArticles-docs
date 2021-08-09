@@ -4,20 +4,20 @@ description: Describes how to change the validity period of a certificate that i
 ms.date: 09/25/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Change the expiration date of certificates that are issued by Certificate Authority
 
 This article describes how to change the validity period of a certificate that is issued by Certificate Authority (CA).
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 254632
 
 ## Summary
@@ -60,7 +60,7 @@ A CA cannot issue a certificate with a longer validity period than its own CA ce
 To change the validity period settings for a CA, follow these steps.
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).  
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).  
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type *regedit*, and then click **OK**.

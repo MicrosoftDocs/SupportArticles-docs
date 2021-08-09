@@ -26,15 +26,15 @@ In this scenario, you can activate the device by using a Google account that isn
 
 ## Cause
 
-This behavior is expected. When you do a factory reset on the device through the **Settings** menu or you wipe the device from Intune in the Azure portal, all your data is removed. This includes the Factory Reset Protection (FRP) data. The only way to do a factory reset on the device without losing the FRP data is through Recovery mode.
+This behavior is expected. When you do a factory reset on the device through the **Settings** menu or you wipe the device from Intune in the Azure portal, all your data is removed. This includes the Factory Reset Protection (FRP) data. The only way to do a factory reset on the device without losing the FRP data is through Recovery mode.
 
 ## More information
 
-We recommend that you set the **Factory reset** value to **Block** to prevent users from using the factory reset option in the device settings.
+We recommend that you set the **Factory reset** value to **Block** to prevent users from using the factory reset option in the device settings.
 
 :::image type="content" source="media/factory-reset-protection-emails-not-enforced/factory-reset.png" alt-text="screenshot of Factory reset":::
 
 Then, use one of the following methods when you reset the device to the factory settings:
 
 - Reset the device through Recovery mode.
-- Wipe the device from Intune when the device is in your possession and is expected to be reset for further use.
+- Wipe the device from Intune when the device is in your possession and is expected to be reset for further use.

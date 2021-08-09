@@ -4,20 +4,20 @@ description: Describes how to create a Central Store on a domain controller. Thi
 ms.date: 10/12/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, timtho
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # How to create the Central Store for Group Policy Administrative Template files in Windows Vista
 
 This article describes how to use the new .admx and .adml files to create and to administer registry-based policy settings in Windows Vista, and how the Central Store is used to store and to replicate Windows Vista policy files in a domain environment.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 929841
 
 ## Overview

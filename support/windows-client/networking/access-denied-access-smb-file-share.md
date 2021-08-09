@@ -1,31 +1,40 @@
 ---
-title: Access Denied when you access SMB file share
-description: Resolves an issue in which you cannot access a shared folder through SMB2 protocol. This issue occurs in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008.
-ms.data: 09/08/2020
+title: Access Denied when you access Server Message Block (SMB) file share
+description: Resolves an issue in which you can't access a shared folder through SMB2 protocol. This issue occurs in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008.
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking 
+ms.technology: windows-client-networking 
 ---
 # Access Denied when you access an SMB file share in Windows
 
-This article helps fix the **Access Denied** error that occurs when you access an Server Message Block (SMB) file share.
+This article helps fix the **Access Denied** error that occurs when you access a Server Message Block (SMB) file share.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3035936
 
 ## Symptoms
 
-When you try to access a specific folder that is located on a Network Appliance (NetApp) Filer or a Windows Server that supports SMB2 from a Windows-based system through the SMB Version 2 protocol, the access is denied. This issue occurs in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008.
+When you try to access a specific folder that's located on a Network Appliance (NetApp) Filer or a Windows Server that supports SMB2 from a Windows-based system through the SMB Version 2 protocol, the access is denied. This issue occurs in the following version of Windows:
+
+- Windows 8.1
+- Windows Server 2012 R2
+- Windows 8
+- Windows Server 2012
+- Windows 7
+- Windows Server 2008 R2
+- Windows Vista
+- Windows Server 2008
 
 > [!NOTE]
-> This issue does not occur if you disable the SMB2 protocol on the client or use a Windows SMB client, such as Windows XP or Windows Server 2003.
+> This issue doesn't occur if you disable the SMB2 protocol on the client or use a Windows SMB client, such as Windows XP or Windows Server 2003.
 
 ## Cause
 
@@ -66,7 +75,8 @@ You can use the following methods to verify and troubleshoot the issue.
 
     Then, you can see the following result that shows the SYNCHRONIZE bit is set:
 
-    > [2] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users  
+    ```output
+    [2] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users  
     [OBJECT_INHERIT_ACE]  
     [CONTAINER_INHERIT_ACE]  
     [INHERITED_ACE]  
@@ -76,6 +86,7 @@ You can use the following methods to verify and troubleshoot the issue.
     FILE_TRAVERSE  
     SYNCHRONIZE  
     READ_CONTROL
+    ```
 
     See the [behavior of the SYNCHRONIZE bit](/openspecs/windows_protocols/ms-smb2/a64e55aa-1152-48e4-8206-edd96444e7f7) on Windows SMB2 clients.
 

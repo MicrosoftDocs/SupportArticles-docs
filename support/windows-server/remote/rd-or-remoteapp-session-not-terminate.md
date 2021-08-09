@@ -4,21 +4,21 @@ description: Resolve an issue where Remote Desktop that specifies a program to s
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop or RemoteApp session does not terminate due to spawned splwow64.exe process
 
 This article provides a solution to solve an issue where Remote Desktop that specifies a program to start on logon doesn't terminate when the specified program is exited.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2513330
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2513330
 
 ## Symptoms
 
@@ -28,7 +28,7 @@ This program may be specified under "Start the following program on connection" 
 
 ## Cause
 
-The specified program may have spawned a new process. As part of the Remote Desktop session termination logic, if the specified program spawns a new process that new process is considered part of the program and the session will not terminate until that process also terminates. 
+The specified program may have spawned a new process. As part of the Remote Desktop session termination logic, if the specified program spawns a new process that new process is considered part of the program and the session will not terminate until that process also terminates.  
 
 One scenario that meets this criteria is printing from a 32-bit application on a 64-bit Remote Desktop Session Host. This printing action will spawn splwow64.exe, the 32-bit to 64-bit thunking process for spooler. Splwow64.exe has a 3-minute timeout to prevent the process from being repeatedly respawned during heavy printing, so it does not immediately exit when printing is complete. This can cause the remote session to appear "hung" with a blank background.
 
@@ -36,12 +36,12 @@ One scenario that meets this criteria is printing from a 32-bit application on a
 
 You can add the splwow64.exe process to the following registry key to tell the operating system that the process may be safely terminated automatically:
 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs]
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Sysprocs`
 
-Value name: splwow64.exe
-Data type: REG_DWORD
-Base: Hex 
-Value data: 0
+Value name: splwow64.exe  
+Data type: REG_DWORD  
+Base: Hex  
+Value data: 0  
 
 ## More information
 

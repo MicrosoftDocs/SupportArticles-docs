@@ -4,20 +4,20 @@ description: Describes how to enable diagnostic logging for Windows Security
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # How to enable diagnostic logging for Windows Security Center
 
 This article describes how to enable diagnostic logging for Windows Security Center.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows Server 2016, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 3155606
 
 ## Summary

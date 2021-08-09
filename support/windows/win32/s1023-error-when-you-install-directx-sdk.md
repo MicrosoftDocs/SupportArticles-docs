@@ -41,4 +41,4 @@ After installing the June 2010 DirectX SDK, you may then reinstall the most curr
 
 ## More information
 
-The same issue can prevent installation of the Windows 7 SDK. For more information, see [Windows SDK Fails to Install with Return Code 5100](https://support.microsoft.com/help/2717426).
+The same issue can prevent installation of the Windows 7 SDK.

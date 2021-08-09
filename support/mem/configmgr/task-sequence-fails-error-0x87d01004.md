@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2716946
 
 ## Symptoms
 
-In System Center 2012 Configuration Manager, task sequence execution fails when using a stand-alone media (USB flash drive or CD/DVD). The task sequence fails to install applications, and the SMSTS.log contains an error similar to the following:
+In System Center 2012 Configuration Manager, task sequence execution fails when using a stand-alone media (USB flash drive or CD/DVD). The task sequence fails to install applications, and the SMSTS.log contains an error similar to the following:
 
 > Failed to invoke Execution Manager to Install Software for PackageID='*CAS0002C*' ProgramID='*setup*' AdvertID='*{00A2B6FB-8E61-47B6-9702-BBDEAD7FBE8A}*'**hr=0x87d01004**  
 
@@ -22,10 +22,10 @@ Items in *italics* above are based on the environment so will not be consistent 
 
 ## Cause
 
-This problem occurs because the Software Distribution Agent isn't enabled since the client hasn't yet received policy.
+This problem occurs because the Software Distribution Agent isn't enabled since the client hasn't yet received policy.
 
 ## Resolution
 
-To resolve the issue and enable the Software Distribution Agent, add the following **Run Command Line** step earlier in the task sequence, before any **Install Package** steps:
+To resolve the issue and enable the Software Distribution Agent, add the following **Run Command Line** step earlier in the task sequence, before any **Install Package** steps:
 
 `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`

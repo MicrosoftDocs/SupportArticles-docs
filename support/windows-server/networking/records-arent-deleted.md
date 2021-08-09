@@ -4,20 +4,20 @@ description: Provides a solution to an issue where you enable Scavenging on the 
 ms.date: 10/22/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # DNS: Scavenging: Records aren't deleted if scavenging manually disabled with DNSCMD
 
 This article provides a solution to an issue where you enable Scavenging on the Windows DNS Server to get rid of some old and stale records on the zone.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2791165
 
 ## Symptoms
@@ -100,4 +100,4 @@ dnscmd /zoneresetscavengeservers contoso.com (without ip address).
 ```
 
 > [!NOTE]
-> The maximum time that an stale record may take to be deleted through Scavenging is (No Refresh interval + Refresh interval + Scavenging cycle interval)
+> The maximum time that an stale record may take to be deleted through Scavenging is (No Refresh interval + Refresh interval + Scavenging cycle interval).

@@ -4,20 +4,20 @@ description: Describes how to configure a logon script or program to run one tim
 ms.date: 10/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
 ms.prod-support-area-path: Windows Script Host (CScript or WScript)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How to run a logon script one time when a new user logs on in Windows Server 2003
 
 This article describes how to configure a logon script or program to run one time when a user signs in to a computer for the first time.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325347
 
 ## Summary

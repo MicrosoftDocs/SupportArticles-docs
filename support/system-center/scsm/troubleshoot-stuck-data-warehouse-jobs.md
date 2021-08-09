@@ -25,9 +25,9 @@ This article helps you troubleshoot when the following data warehouse jobs are h
 
 Symptoms of hung data warehouse jobs include the following ones:
 
-- The job has the status of **Running** in the Service Manager console or the PowerShell results. However, the job runs for a long time (for example, more than several hours).
+- The job has the status of **Running** in the Service Manager console or the PowerShell results. However, the job runs for a long time (for example, more than several hours).
 - The start time and end time of the job are inconsistent.
-- You don't see data or new data in your reports. Which may indicate that Extract, Transform, and Load (ETL) jobs aren't running.
+- You don't see data or new data in your reports. Which may indicate that Extract, Transform, and Load (ETL) jobs aren't running.
 
 Problems that aren't covered by this article:
 
@@ -39,7 +39,7 @@ Problems that aren't covered by this article:
 
 ## Understand the staging and configuration database
 
-The `DWStagingAndConfig` database is the database to use when you troubleshoot. Here is a list of the tables in the database:
+The `DWStagingAndConfig` database is the database to use when you troubleshoot. Here is a list of the tables in the database:
 
 - `Infra.Process`
 
@@ -47,23 +47,23 @@ The `DWStagingAndConfig` database is the database to use when you troubleshoot.
 
 - `Infra.ProcessModule`
 
-    Stores information about the `ProcessModules`, such as `VertexName` (name of the `ProcessModule`), `ProcessModuleId`, and `ModuleConfig`.
+    Stores information about the `ProcessModules`, such as `VertexName` (name of the `ProcessModule`), `ProcessModuleId`, and `ModuleConfig`.
 
 - `Infra.ProcessCategory`
 
-    Stores information about the process categories, such as `ProcessCategoryName` and `IsEnabled`. The value of `IsEnabled` must be **1** for any process in this category to run.
+    Stores information about the process categories, such as `ProcessCategoryName` and `IsEnabled`. The value of `IsEnabled` must be **1** for any process in this category to run.
 
 - `Infra.Batch`
 
-    Stores information about all batches, such as `BatchId`, `BatchStartTime`, and `BatchEndTime`.
+    Stores information about all batches, such as `BatchId`, `BatchStartTime`, and `BatchEndTime`.
 
 - `Infra.WorkItem`
 
-    Stores information about all the `WorkItems` of a batch. You can see any errors for failed `WorkItems` of a batch in this table.
+    Stores information about all the `WorkItems` of a batch. You can see any errors for failed `WorkItems` of a batch in this table.
 
 - `Infra.Status`
 
-    Stores information about respective `StatusIds`. Here is the data returned from the `Infra.Status` table.
+    Stores information about respective `StatusIds`. Here is the data returned from the `Infra.Status` table.
 
     | StatusId|StatusName|Description|
     |---|---|---|
@@ -76,15 +76,15 @@ The `DWStagingAndConfig` database is the database to use when you troubleshoot.
     |7|Waiting|Waiting|
     ||||
 
-The most common reason for a stuck data warehouse job is that the data warehouse management server lost communication with Microsoft SQL Server. It occurs if SQL Server was updated without the Service Manager administrator's knowledge. You can check the Operations Manager event log on the data warehouse management server to determine whether it's the reason.
+The most common reason for a stuck data warehouse job is that the data warehouse management server lost communication with Microsoft SQL Server. It occurs if SQL Server was updated without the Service Manager administrator's knowledge. You can check the Operations Manager event log on the data warehouse management server to determine whether it's the reason.
 
-For other reasons, you can use Windows PowerShell cmdlets and SQL Server statements to troubleshoot. In the following resolution process, all PowerShell cmdlets are executed on the data warehouse management server, and the SQL Server statements are run against the `DWStagingAndConfig` database.
+For other reasons, you can use Windows PowerShell cmdlets and SQL Server statements to troubleshoot. In the following resolution process, all PowerShell cmdlets are executed on the data warehouse management server, and the SQL Server statements are run against the `DWStagingAndConfig` database.
 
 ## Preparation
 
 1. Start SQL Server Management Studio, and verify that you can connect to the SQL Server that hosts the `DWStagingAndConfig` database.
 
-    To find the SQL Server instance, check the registry or type the following command:
+    To find the SQL Server instance, check the registry or type the following command:
 
     ```powershell
     $sql = Get-ItemProperty -path "HKLM:\SOFTWARE\Microsoft\System Center\2010\Common\Database";$sql.StagingSQLInstance
@@ -96,7 +96,7 @@ For other reasons, you can use Windows PowerShell cmdlets and SQL Server state
     $jobs = Get-SCDWJob;$jobs | ft -autosize
     ```
 
-    If no results are returned or you experience an error, use the following command to load the data warehouse cmdlets module, and then rerun the previous command:
+    If no results are returned or you experience an error, use the following command to load the data warehouse cmdlets module, and then rerun the previous command:
 
     ```powershell
     import-module (((Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\System Center\2010\Common\Setup").InstallDirectory)+ "Microsoft.EnterpriseManagement.Warehouse.Cmdlets.psd1")
@@ -121,7 +121,7 @@ Get-SCDWJob
 If certain jobs seem to run forever, use the next steps to reset the jobs.
 
 > [!NOTE]
-> To make sure that you don't interfere with any currently running job, let all jobs finish before going to the next step unless the jobs seem to freeze or run forever.
+> To make sure that you don't interfere with any currently running job, let all jobs finish before going to the next step unless the jobs seem to freeze or run forever.
 
 ## Stop the HealthService service
 
@@ -175,7 +175,7 @@ If certain jobs seem to run forever, use the next steps to reset the jobs.
     SELECT * FROM LockDetails
     ```
 
-2. If the result isn't empty, run the following statement to release the lock:
+2. If the result isn't empty, run the following statement to release the lock:
 
     ```sql
     EXEC dbo.ReleaseLock
@@ -197,7 +197,7 @@ If certain jobs seem to run forever, use the next steps to reset the jobs.
 
     ![Job output](./media/troubleshoot-stuck-data-warehouse-jobs/job-output.png)
 
-    Verify the affected job has a new BatchId and all jobs have the value of **True** for `IsEnabled`. If any job shows **False** for `IsEnabled`, run the following SQL Server statement:
+    Verify the affected job has a new BatchId and all jobs have the value of **True** for `IsEnabled`. If any job shows **False** for `IsEnabled`, run the following SQL Server statement:
 
     ```sql
     UPDATE infra.ProcessCategory SET IsEnabled = 1 WHERE IsEnabled = 0
@@ -211,7 +211,7 @@ Use the following command to start the affected job:
 Start-SCDWJob -jobname \<JobName>
 ```
 
-If the job completes successfully, go to the next step.  
+If the job completes successfully, go to the next step.  
 
 ## Enable all job schedules and restart the HealthService service
 
@@ -240,4 +240,4 @@ If the job completes successfully, go to the next step.
 
 2. Monitor the jobs for a while to make sure that they run correctly.
 
-3. Verify that the issue that you experienced no longer occurs. For report issues, it may take several hours to get the report updated with current results.  
+3. Verify that the issue that you experienced no longer occurs. For report issues, it may take several hours to get the report updated with current results.  

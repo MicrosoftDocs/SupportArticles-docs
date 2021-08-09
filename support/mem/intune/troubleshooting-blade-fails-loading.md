@@ -14,21 +14,21 @@ _Original KB number:_ &nbsp; 4487946
 
 ## Symptoms
 
-When a user signs in to Microsoft Intune as a **Help Desk Operator** role member, and goes to the Intune troubleshooting portal, the **Troubleshooting** blade displays a banner that states **Account status You do not have enough permissions**, and no user or device data is displayed.
+When a user signs in to Microsoft Intune as a **Help Desk Operator** role member, and goes to the Intune troubleshooting portal, the **Troubleshooting** blade displays a banner that states **Account status You do not have enough permissions**, and no user or device data is displayed.
 
 :::image type="content" source="./media/troubleshooting-blade-fails-loading/troubleshooting-blade.png" alt-text="Screenshot of troubleshooting blade.":::
 
 ## Cause
 
-The user is not licensed for Intune.
+The user is not licensed for Intune.
 
 ## Resolution
 
 1. Sign in to [https://portal.azure.com](https://portal.azure.com/) as an Intune Administrator.
-2. On the **Intune** blade, go to **Users**  > **All Users**.
+2. On the **Intune** blade, go to **Users** > **All Users**.
 3. Select the user for whom the **Troubleshooting** blade fails to load.
 4. On the **Licenses** tab, select **+Assign**, and follow the wizard to assign an Intune license.
-5. Advise **Help Desk Operator** role members to access the Intune troubleshooting portal in a new browser session.
+5. Advise **Help Desk Operator** role members to access the Intune troubleshooting portal in a new browser session.
 
 ## More information
 

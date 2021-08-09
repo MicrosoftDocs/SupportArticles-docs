@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: azure-portal
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Can't see list of users or groups when adding permissions in Access Control in the Azure portal

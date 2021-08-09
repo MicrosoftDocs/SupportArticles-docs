@@ -1,3 +1,5 @@
+- name: Welcome
+  href: welcome-general.yml
 - name: Azure Automation
   items:
   - name: Automation modifications aren't reflected in the portal
@@ -6,9 +8,10 @@
     href: automation-scripted-diagnostic-capture.md
   - name: Find-AzureRmResource returns error
     href: find-azurermresource-fails.md
+  - name: How to capture debug stream
+    href: capture-debug-stream-automation-runbook.md
   - name: Reinstall Operations Management Suite Agent
     href: reinstall-oms-agent-linux.md
-
 
 - name: Azure API Management
   items:
@@ -25,12 +28,28 @@
   - name: Unauthorized errors (401)
     href: unauthorized-errors-invoke-apis.md
 
+- name: Azure App Service
+  items:
+  - name: App Service Compliance with PCI Standards 3.0 and 3.1
+    href: app-service-compliance-wit.md
+  - name: Backing up, restoring, and cloning
+    href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
+  - name: Troubleshoot temporary storage
+    href: temporary-storage-for-azure-app-service.md
+  - name: Troubleshoot instance-related issues
+    href: troubleshoot-instance-related-issues-on-azure-app-service.md
+    
 - name: Azure Stack
   items:
   - name: Side-channel vulnerabilities protection
     href: side-channel-vulnerabilities.md
   - name: Warning message in Azure Stack
     href: pending-service-account-password-expiration.md
+
+- name: Azure Stack Edge
+  items:
+  - name: Azure Stack Edge support package and device logs
+    href: azure-stack-edge-support-package-device-logs.md
 
 - name: Cloud Platform System
   items:
@@ -88,10 +107,14 @@
 
 - name: General
   items:
+  - name: Associate a custom domain with Azure websites
+    href: associate-custom-domain-secure-communication.md
   - name: Azure region access request process
     href: region-access-request-process.md
   - name: Container support policy
     href: support-policy-containers.md
+  - name: Delete a corrupted Azure Analysis Services database
+    href: delete-corrupted-azure-analysis-services-database.md
   - name: Deploy TLS 1.2 in Azure Pack
     href: tls-support-deployment-guide.md 
   - name: Error when you try to copy content to Azure
@@ -100,14 +123,11 @@
     href: search-tips-find-troubleshooting-content.md
   - name: Use Secure File Exchange to exchange files
     href: secure-file-exchange-transfer-files.md
-
-  - name: Deploy TLS 1.2 in Azure Pack
-    href: tls-support-deployment-guide.md
+  - name: Domains used by Microsoft support agents
+    href: email-domains-support-agent.md
 
 - name: Other common issues
   items:
-  - name: App Service Compliance with PCI Standards 3.0 and 3.1
-    href: app-service-compliance-wit.md
   - name: Can't load VM metrics
     href: problem-occur-loading-metrics.md
   - name: Delete button doesn't work
@@ -122,9 +142,13 @@
     href: cannot-see-users-groups-list-iam.md
   - name: WebUI "Oops" error message in StorSimple
     href: storsimple-user-receives-web-ui-error.md
+  - name: Connection status is incorrect on portal
+    href: connection-status-not-display-correctly-portal.md
 
 - name:  Support Diagnostic Packages
   items:
+  - name: Diagnostic logs for Apache Spark pools
+    href: synapse-analytics-apache-spark-pools-diagnostic-logs.md
   - name: Diagnostic logs for SQL Server 
     href: sql-vm-logs.md
   - name: SQL database data collector

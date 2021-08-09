@@ -7,20 +7,20 @@ ms.reviewer: joelste, intunecic, alra
 ---
 # HTTP 500 errors on CertificateRegistrationSvc verify request in Intune
 
-This article fixes errors when you configure and assign a certificate profile in Microsoft Intune.
+This article fixes errors when you configure and assign a certificate profile in Microsoft Intune.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4491077
 
 ## Symptoms
 
-After you configure and assign a certificate profile in Microsoft Intune, you experience the following problems:
+After you configure and assign a certificate profile in Microsoft Intune, you experience the following problems:
 
 - Targeted devices do not receive a certificate.
 - The certificate profile shows a status of **Failed** in the Intune admin portal.
 - Incoming SCEP requests generate **HTTP 500** error entries in the IIS logs on the computer that's running the Microsoft Intune NDES Connector. These entries resemble the following:
 
-    > *DateTime* *IPAddress* GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 -IPAddress profiled/1.0+CFNetwork/975.0.3+Darwin/18.2.0 - 200 0 0 0  
+    > *DateTime* *IPAddress* GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 -IPAddress profiled/1.0+CFNetwork/975.0.3+Darwin/18.2.0 - 200 0 0 0  
     > *DateTime* *IPAddress* GET /certsrv/mscep/mscep.dll operation=GetCACaps&message=SCEP%20Authority 443 -IPAddressprofiled/1.0+CFNetwork/975.0.3+Darwin/18.2.0 - 200 0 0 15  
     > *DateTime* *IPAddress* POST /CertificateRegistrationSvc/Certificate/VerifyRequest - 443 -IPAddressNDES_Plugin - 500 0 0 359  
     > *DateTime* *IPAddress* GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 -IPAddressprofiled/1.0+CFNetwork/975.0.3+Darwin/18.2.0 - 200 0 0 189  
@@ -28,7 +28,7 @@ After you configure and assign a certificate profile in Microsoft Intune, you 
     > *DateTime* *IPAddress* POST /CertificateRegistrationSvc/Certificate/VerifyRequest - 443 -IPAddressNDES_Plugin - 500 0 0 375
 
     > [!NOTE]
-    > By default, the IIS logs are located at `\inetpub\logs\LogFiles\W3SVC1\`.
+    > By default, the IIS logs are located at `\inetpub\logs\LogFiles\W3SVC1\`.
 
 - The System event log on the computer that's running the Microsoft Intune NDES Connector contains an Event ID 5009 warning that includes the following:
 
@@ -40,12 +40,12 @@ After you configure and assign a certificate profile in Microsoft Intune, you 
 
 ## Cause
 
-This issue can occur if the **Write** permission is missing for the account that's used to run the `CertificateRegistrationSvc` application pool (for example, the Network Service account) in the `C:\Windows\Temp` folder.
+This issue can occur if the **Write** permission is missing for the account that's used to run the `CertificateRegistrationSvc` application pool (for example, the Network Service account) in the `C:\Windows\Temp` folder.
 
 :::image type="content" source="./media/certificateregistrationsvc-verify-request-returns-500-error/event-1310.png" alt-text="Screenshot of Event ID 1310 warning.":::
 
 ## Resolution
 
-To fix this issue, add the Network Service account that has the **Write** permission to the `C:\Windows\Temp` folder.
+To fix this issue, add the Network Service account that has the **Write** permission to the `C:\Windows\Temp` folder.
 
-Additionally, make sure that there are no other policies that will remove the **Write** permission after it's added. Otherwise, the problem will recur.
+Additionally, make sure that there are no other policies that will remove the **Write** permission after it's added. Otherwise, the problem will recur.

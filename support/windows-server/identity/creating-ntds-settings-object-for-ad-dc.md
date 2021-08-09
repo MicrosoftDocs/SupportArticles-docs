@@ -4,20 +4,20 @@ description: Fixes an error that occurs when you start Active Directory installa
 ms.date: 10/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.prod-support-area-path: Domain join issues
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Active Directory installation stalls at the Creating the NTDS settings object stage
 
 This article provides a solution to an issue where Active Directory installation fails with an error: Creating the NTDS Settings object for this Active Directory Domain Controller on the remote AD DC.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2737935
 
 ## Symptoms
@@ -32,7 +32,7 @@ Regardless of how long you wait, the installation never proceeds beyond this poi
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
-    Date: 7/24/2012 7:16:55 PM  
+    Date: *\<DateTime>*  
     Event ID: **1963**  
     Task Category: DS RPC Client  
     Level: Error  
@@ -62,7 +62,7 @@ Regardless of how long you wait, the installation never proceeds beyond this poi
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
-    Date: 7/24/2012 7:16:55 PM  
+    Date: *\<DateTime>*  
     Event ID: **1962**  
     Task Category: DS RPC Client  
     Level: Error  
@@ -83,7 +83,7 @@ Regardless of how long you wait, the installation never proceeds beyond this poi
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
-    Date: 7/24/2012 7:16:55 PM  
+    Date: *\<DateTime>*  
     Event ID: **1125**  
     Task Category: Setup  
     Level: Error  

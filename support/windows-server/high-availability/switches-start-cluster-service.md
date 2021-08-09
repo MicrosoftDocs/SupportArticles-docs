@@ -4,20 +4,20 @@ description: List all the available switches that can be used as startup paramet
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.prod-support-area-path: Cluster service fails to start
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Cluster service startup options
 
 This article lists all the available switches that can be used as startup parameters to start the Cluster service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 258078
 
 ## Summary
@@ -99,8 +99,6 @@ When the Cluster service is running correctly, press CTRL+C to stop the service.
 
 > [!NOTE]
 > You can use the ClusterLogLevel environment variable to control the output level when you use the debug switch.
-
-For more information, see [How to enable cluster logging in Microsoft Cluster Server](https://support.microsoft.com/help/168801).
 
 ### FixQuorum
 

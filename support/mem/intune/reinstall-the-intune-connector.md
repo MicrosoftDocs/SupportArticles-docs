@@ -21,7 +21,7 @@ This article describes how to uninstall and reinstall the connector when the **S
 
 To make sure that the connector will reinstall correctly, follow these steps before you uninstall it:
 
-1. Verify the certificate's thumbprint. On the Windows server that hosts the connector, open Registry Editor, locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy` subkey, and then check the value of `NDESCertThumbprint`.
+1. Verify the certificate's thumbprint. On the Windows server that hosts the connector, open Registry Editor, locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy` subkey, and then check the value of `NDESCertThumbprint`.
 2. Open the connector user interface (UI) from %ProgramFiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.
     - On the **Enrollment** tab, check whether proxy server is used. If it is, note the proxy server configuration.
     - On the **Advanced** tab, check the account that you use, and note the account information.

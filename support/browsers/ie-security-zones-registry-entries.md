@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Internet Explorer security zones registry entries for advanced users
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes how and where Internet Explorer security zones and privacy settings are stored and managed in the registry. You can use Group Policy or the Microsoft Internet Explorer Administration Kit (IEAK) to set security zones and privacy settings.
 
 _Original product version:_ &nbsp; Internet Explorer 9, Internet Explorer 10  
@@ -98,7 +100,7 @@ Value  Setting
 1      Local Intranet Zone
 2      Trusted sites Zone
 3      Internet Zone
-4      Restricted Sites Zon
+4      Restricted Sites Zone
 ```
 
 > [!NOTE]

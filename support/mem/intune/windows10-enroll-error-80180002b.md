@@ -18,13 +18,15 @@ When you try to [enroll a Windows 10 device automatically by using Group Policy]
 
 - In Event Viewer, the following event is logged under `Applications and Services Logs/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/Admin`:
 
-  > Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin  
-  > Source: DeviceManagement-Enterprise-Diagnostics-Provider  
-  > Event ID: 76  
-  > Level: Error  
-  > Description: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x80180002b)  
+  ```output
+  Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin  
+  Source: DeviceManagement-Enterprise-Diagnostics-Provider  
+  Event ID: 76  
+  Level: Error  
+  Description: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x80180002b)
+  ```
 
-- When you run the `dsregcmd /status` command on the affected device, the value of `AzureAdPrt` is **NO**. This indicates that the user isn't authenticated to Azure Active Directory (Azure AD) when signing in to the device.
+- When you run the `dsregcmd /status` command on the affected device, the value of `AzureAdPrt` is **NO**. This indicates that the user isn't authenticated to Azure Active Directory (Azure AD) when signing in to the device.
 
   Additionally, the values of `TenantId` and `AuthCodeUrl` are incorrect.
 
@@ -41,15 +43,15 @@ The `AuthCodeUrl` and `AccessTokenUrl` values in those registry keys are used to
 To fix the issue, follow these steps:
 
 1. On the affected device, open an elevated Command Prompt window, and then run the `dsregcmd /leave` command.
-2. Delete the device in Azure AD.
-3. Unjoin the device from your on-premises Active Directory domain. Then, delete the device object from the domain controller.
-4. Rejoin the device to your on-premises Active Directory domain. Then, manually initiate a sync cycle by running the following PowerShell cmdlet:
+2. Delete the device in Azure AD.
+3. Unjoin the device from your on-premises Active Directory domain. Then, delete the device object from the domain controller.
+4. Rejoin the device to your on-premises Active Directory domain. Then, manually initiate a sync cycle by running the following PowerShell cmdlet:
 
    ```PowerShell
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
 
-5. Run the `dsregcmd /status` command on the device, and verify that both `AzureAdJoined` and `DomainJoined` are set to **YES**.
-6. Sign out from the device, then sign in again to get a PRT.
-7. Run the `dsregcmd /status` command on the device, and verify that `AzureAdPrt` is set to **YES** and the tenant information is correct.
+5. Run the `dsregcmd /status` command on the device, and verify that both `AzureAdJoined` and `DomainJoined` are set to **YES**.
+6. Sign out from the device, then sign in again to get a PRT.
+7. Run the `dsregcmd /status` command on the device, and verify that `AzureAdPrt` is set to **YES** and the tenant information is correct.
 8. Run the `gpupdate /force` command to force an update of all Group Policy settings. Then, verify that the device is successfully enrolled in Intune.

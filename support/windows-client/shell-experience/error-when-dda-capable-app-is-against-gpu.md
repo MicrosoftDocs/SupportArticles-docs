@@ -1,23 +1,23 @@
 ---
-title: Error when DDA-capable app is against GPU
+title: Error when DDA-capable app is run against GPU
 description: Describes an issue in which an error is generated when a Desktop Duplication API-capable application is run against a discrete GPU on a computer that is running Windows 8.1.
 ms.date: 09/17/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DPI and Display Issues
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Error generated when Desktop Duplication API-capable application is run against discrete GPU
 
 This article provides a solution to an error that occurs when a Desktop Duplication API-capable application is run against a discrete GPU.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 3019314
 
 ## Symptoms
@@ -44,6 +44,6 @@ To work around this issue, run the application on the integrated GPU instead of 
 
 ## More information
 
-When this issue occurs, the IDXGIOutput1::DuplicateOutput  method fails and returns an error code DXGI_ERROR_UNSUPPORTED.
+When this issue occurs, the IDXGIOutput1::DuplicateOutput method fails and returns an error code DXGI_ERROR_UNSUPPORTED.
 
-For example, [this DXGI desktop duplication sample](https://docs.microsoft.com/samples/browse/?-samples) is affected by this issue.
+For example, [this DXGI desktop duplication sample](/samples/browse/?-samples) is affected by this issue.

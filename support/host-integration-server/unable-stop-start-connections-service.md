@@ -2,7 +2,7 @@
 title: Can't stop/start connections or service
 description: This article provides resolutions for problem that occurs when you open SNA Manager, there is no ability to Stop and Start the Services or Connections in HIS 2010 and HIS 2009.
 ms.date: 05/11/2020
-ms.prod-support-area-path: SNA Manager
+ms.prod-support-area-path: SNA Manager
 ---
 # Unable to stop or start connections or service
 

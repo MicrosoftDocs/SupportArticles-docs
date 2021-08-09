@@ -26,11 +26,11 @@ This occurs because Android requires an additional application in the workspace 
 
 ## Resolution
 
-To resolve this issue, approve and assign a File Explorer application (such as [File Explorer application by Google](https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files)) from the managed Google Play store to your device.
+To resolve this issue, approve and assign a File Explorer application (such as [File Explorer application by Google](https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files)) from the managed Google Play store to your device.
 
 Then navigate to the application, and click the **Attach** icon to attach photos.
 
 > [!NOTE]
-> Each app has a different attaching process. For example, when configuring it through Outlook, select the **three horizontal lines** menu in the top left and then select **more**. Then, an option is provided for you to select photos to attach.
+> Each app has a different attaching process. For example, when configuring it through Outlook, select the **three horizontal lines** menu in the top left and then select **more**. Then, an option is provided for you to select photos to attach.
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]

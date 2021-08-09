@@ -27,7 +27,7 @@ This error can occur when attempting to deploy to a cloud that has square bracke
 
 ## Resolution
 
-To resolve this error, navigate to **VMs and Services**, and then expand **Clouds** on the upper left-hand pane of the Virtual Machine Manager console to locate the cloud with square brackets in its name. Right-click the cloud and choose **Properties**. On the **General** tab, delete the brackets in the name of the cloud.
+To resolve this error, navigate to **VMs and Services**, and then expand **Clouds** on the upper left-hand pane of the Virtual Machine Manager console to locate the cloud with square brackets in its name. Right-click the cloud and choose **Properties**. On the **General** tab, delete the brackets in the name of the cloud.
 
 ## More information
 

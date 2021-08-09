@@ -4,20 +4,20 @@ description: Provides the methods to make domain controllers to reply to LDAP Pi
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: LDAP configuration and interoperability
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How Domain Controllers respond to LDAP Ping on UDP 138 port
 
 This article describes how to make domain controllers to reply to LDAP Ping.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3088277
 
 ## Symptoms
@@ -41,10 +41,6 @@ To make Windows Server 2008 or later to reply to LDAP Ping, configure either of 
 1. Move to %windir%\system32\drivers\etc folder
 
 2. Add IP address and hostname of client to LMHOSTS file.
-
-See following links for details:
-
-[Domain Browsing with TCP/IP and LMHOSTS Files](https://support.microsoft.com/help/150800) 
 
 (B) Add WINS server
 

@@ -4,20 +4,20 @@ description: Describes the requirements for using hardware-enforced DEP. Also de
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chrisw, patste, mmill
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # How to determine that hardware DEP is available and configured on your computer
 
 This article describes how to determine that hardware DEP is available and configured on your computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912923
 
 ## Introduction

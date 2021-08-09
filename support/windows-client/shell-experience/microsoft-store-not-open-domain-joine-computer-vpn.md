@@ -4,20 +4,20 @@ description: Discusses an issue in which Microsoft Store doesn't open after a do
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: davusa, winciccore, kaushika
 ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Microsoft Store doesn't open after a domain-joined computer makes a VPN connection
 
 This article discusses an issue in which you can't open Microsoft Store after a domain-joined computer connects to a VPN connection that has force tunneling enabled.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4537233
 
 ## Symptoms
@@ -40,7 +40,7 @@ When the Windows Firewall profile isn't **Public**, there's a default block rule
 
 To fix this issue, follow these steps to create a Group Policy object (GPO):
 
-1. Open the Group Policy Management snap-in (gpmc.msc), and open the **Default Domain Policy**  for editing.
+1. Open the Group Policy Management snap-in (gpmc.msc), and create, or open a Group Policy for editing.
 2. From the Group Policy Management Editor, expand **Computer Configuration** > **Policies** > **Administrative Templates** > **Network**, and then select **Network Isolation**.
 3. In the right pane, double-click **Private network ranges for apps**.
 4. In the **Private network ranges for apps** dialog box, select **Enabled**.

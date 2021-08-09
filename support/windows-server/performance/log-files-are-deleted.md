@@ -1,30 +1,30 @@
 ---
-title: Log files are deleted
-description: Discusses that log data is lost when you run Performance Monitor in Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
-ms.date: 09/17/2020
+title: Log files are deleted when you use Performance Monitor in Windows Server
+description: Discusses that log data is lost when you run Performance Monitor in Windows Server.
+ms.date: 05/12/2021
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Log files are deleted when you use Performance Monitor in Windows Server
 
 This article provides a solution to an error that occurs when you use Windows Performance Monitor to monitor system activity.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2916994
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You use Windows Performance Monitor to monitor system activity in Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+- You use Windows Performance Monitor to monitor system activity in Windows Server.
 - You do one of the following:
   - You use a template to create a Data Collector Set.
   - You configure the new Data Collector Set on the **Data Manager** tab by using the default properties or the same properties that are configured in a different Data Collector Set.
@@ -46,14 +46,8 @@ To work around this issue, do one of the following:
 
 ## References
 
-For more information about Windows Performance Monitor, go to the following Microsoft TechNet website:
+- [Performance Monitoring Getting Started Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd744567(v=ws.10))
 
-[Performance Monitoring Getting Started Guide](https://technet.microsoft.com/library/dd744567%28v=ws.10%29.aspx)
+- [Manage Data in Windows Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc765998(v=ws.11))
 
-For information about how to manage data in Windows Performance Monitor, go to the following Microsoft TechNet website:
-
-[Manage Data in Windows Performance Monitor](https://technet.microsoft.com/library/cc765998.aspx)
-
-For information about the IDataCollectorSet::RootPath property, go to the following MSDN website:
-
-[IDataCollectorSet::RootPath property](https://msdn.microsoft.com/library/windows/desktop/aa371978%28v=vs.85%29.aspx)
+- [IDataCollectorSet::RootPath property](/windows/win32/api/pla/nf-pla-idatacollectorset-get_rootpath)

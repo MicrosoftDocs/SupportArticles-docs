@@ -2,7 +2,7 @@
 title: Processor affinity doesn't work on NUMA
 description: Discusses that the IIS 10.0 processor affinity does not work on NUMA hardware. Provides a resolution.
 ms.date: 04/07/2020
-ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
+ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
 ms.reviewer: yashi
 ---
 # IIS 10.0 processor affinity feature doesn't work on NUMA hardware
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4041818
 
 The processor affinity feature does not work on out-of-box NUMA hardware in IIS 10.0.  
 
-You can specify whether a particular worker process that's assigned to an application pool should be assigned to a particular CPU. To do this, you can use the `smpAffinitized` application pool setting together with the `smpProcessorAffinityMask` and `smpProcessorAffinityMask2` specified affinity masks.
+You can specify whether a particular worker process that's assigned to an application pool should be assigned to a particular CPU. To do this, you can use the `smpAffinitized` application pool setting together with the `smpProcessorAffinityMask` and `smpProcessorAffinityMask2` specified affinity masks.
 
 However, on IIS 10.0 that is running on a NUMA server, a worker process is still assigned to all available processors even if you enable processor affinity and set the affinity mask to indicate only a subset of CPUs.  
 

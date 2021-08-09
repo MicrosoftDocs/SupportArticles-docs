@@ -30,4 +30,4 @@ There are different kinds of HTTP user agents, such as web browsers and SOAP cli
 
 Web browsers usually store HTTP cookies and send them together with the next request to the same server. HTTP cookies are used to remember stateful information for session management.
 
-SOAP clients are another kind of HTTP user agent. They communicate to SOAP servers, and they don't use HTTP cookies or other HTTP headers for session management. In MIM, the SSPR Reset and Registration portals are SOAP clients. They communicate to the MIM Service (a SOAP server). And the web services infrastructure protocols that are used by MIM don't rely on cookies. Therefore, HTTP cookie-based persistence doesn't work in such a scenario.
+SOAP clients are another kind of HTTP user agent. They communicate to SOAP servers, and they don't use HTTP cookies or other HTTP headers for session management. In MIM, the SSPR Reset and Registration portals are SOAP clients. They communicate to the MIM Service (a SOAP server). And the web services infrastructure protocols that are used by MIM don't rely on cookies. Therefore, HTTP cookie-based persistence doesn't work in such a scenario.

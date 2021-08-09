@@ -4,20 +4,20 @@ description: Provides a solution to an issue where deploying an image from a Win
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.prod-support-area-path: MDM
-ms.technology: Deployment 
+ms.technology: windows-server-deployment 
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 
 This article provides a solution to an issue where deploying an image from a Windows Deployment Services (WDS) server by using multicast fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2582106
 
 ## Symptoms
@@ -78,8 +78,7 @@ If you have to disable IP fragmentation to get multicast working, then this may 
 
 Other possible reasons for multicast failures include
 
-- Make sure the WDS server hardware is sized properly.  Especially the amount of RAM and network cards.  For more information on recommended hardware requirements, see [Optimizing Performance and Scalability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732088(v=ws.10)) 
-- If the server is running Windows Server 2008 R2 make sure that [KB981347](https://support.microsoft.com/kb/981347) update is installed so the "automatically disconnect clients below this speed" setting works if it is configured. 
+- Make sure the WDS server hardware is sized properly.  Especially the amount of RAM and network cards.  For more information on recommended hardware requirements, see [Optimizing Performance and Scalability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732088(v=ws.10))
 - If the WDS server is Windows Server 2008 R2 check the Multicast Tab and verify what the "Transfer settings" is set to.
 - If larger images fail but smaller images work it may be due to timeouts.  For instance, on Cisco switches the default value for ip igmp query-interval is 60 seconds, which means that the switch will stop forwarding multicast traffic to the port after 3 * 60 = 180 seconds if it doesn't see any IGMP traffic.  Contact your switch vendor for how to configure these timeouts.
 - The default Multicast range in WDS is 239.0.0.1 to 239.0.0.254.  Depending on the network, this may not work.  Change the range to 239.192.0.2 to 239.192.0.250 or check with your network administrator for an unused range

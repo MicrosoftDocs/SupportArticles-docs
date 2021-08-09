@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2792049
 
 ## Symptoms
 
-When attempting to migrate a virtual machine (VM) with an attached shared ISO using System Center Virtual Machine Manager, the following error message is generated:
+When attempting to migrate a virtual machine (VM) with an attached shared ISO using System Center Virtual Machine Manager, the following error message is generated:
 
 > Virtualization platform on host *Host_Name.domain.com* does not support shared DVD ISO images.  
 > Remove the shared ISO image from hardware profile or select a different host.  

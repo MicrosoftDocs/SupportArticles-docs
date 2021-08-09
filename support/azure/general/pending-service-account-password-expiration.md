@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: azure-stack
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Warning in Azure Stack: Pending service account password expiration

@@ -1,31 +1,31 @@
 ---
 title: Fail to use PXE to boot clients from WDS
 description: Provides a solution to fix an error that occurs when you use PXE to boot a client computer from a Windows Deployment Services (WDS) server.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, scottmca
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Invalid Boot File Received Error Message When PXE booting from WDS
 
 This article provides help to fix an error that occurs when you use PXE to boot a client computer from a Windows Deployment Services (WDS) server.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 2602043
+_Applies to:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp;2602043
 
 ## Symptoms
 
 When using PXE to boot a client computer from a WDS server, you may encounter one of the following symptoms or error messages
 
 - Invalid boot file received
-- PXE client hangs. At the point of the error you are executing code from the PXE bios so the actual error message can vary.
+- PXE client hangs. At the point of the error you are executing code from the PXE bios, so the actual error message can vary.
 
 ## Cause
 
@@ -41,7 +41,8 @@ If you have a mix of UEFI and Legacy BIOS machines, you cannot use DHCP Scope Op
 
 ## More information
 
-The WDS Boot Program's for each type of machine are:
-- Legacy BIOS computers: wdsnbp.com
+The WDS Boot Program's for each type of machine are:  
+
+- Legacy BIOS computers: [Wdsnbp Website](http://wdsnbp.com/)
 - UEFI computers: wdsmgfw.efi
- [https://technet.microsoft.com/library/cc732351(WS.10).aspx](https://technet.microsoft.com/library/cc732351%28ws.10%29.aspx)
+ [Managing Network Boot Programs](https://technet.microsoft.com/library/cc732351%28ws.10%29.aspx)

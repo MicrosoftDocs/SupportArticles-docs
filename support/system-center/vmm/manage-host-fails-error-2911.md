@@ -24,7 +24,7 @@ The following error message is generated when managing a Hyper-V host with Virtu
 
 ## Cause
 
-It can occur if Windows Management Framework (WMF) 3.0 is installed on Hyper-V host without also applying update [2781512](https://support.microsoft.com/help/2781512).
+It can occur if Windows Management Framework (WMF) 3.0 is installed on Hyper-V host without also applying update [2781512](https://support.microsoft.com/help/2781512).
 
 ## Resolution
 
@@ -32,7 +32,7 @@ To resolve this issue install hotfix [2781512](https://support.microsoft.com/hel
 
 Other issues that can cause this error:
 
-1. Antivirus blocking Windows Management Instrumentation (WMI) access.
+1. Antivirus blocking Windows Management Instrumentation (WMI) access.
 2. Missing VMM optimizations found in [Troubleshoot Needs Attention, Not Responding, and Access Denied hosts in Virtual Machine Manager](troubleshoot-host-status-errors.md).
 
 ## More information

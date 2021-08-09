@@ -4,6 +4,7 @@ description: How to mitigate being locked out of Generation 2 Linux VM after a r
 ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: virtual-machines-linux
+ms.collection: linux
 ms.author: genli
 author: genli
 ms.reviewer: 

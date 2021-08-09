@@ -4,20 +4,20 @@ description: Fixes an error (The requested operation cannot be performed over an
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Error when enabling analytic or debug event log: The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation
 
 This article helps to fix an error that occurs when you enable analytic or debug event log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2488055
 
 ## Symptoms
@@ -52,7 +52,7 @@ Logging is taking place even though this error is displayed. The error only mean
 
 You can view an analytic or debug log while it's enabled as long as you don't set **Overwrite events as needed** in Event Viewer, which in Wevtutil is configured using `/retention:false` or `/rt:false`.
 If you set **Overwrite events as needed** (`/retention:false`) because you need circular logging, you must first disable that log before you can view the events.
-For example, to use the Wevtutil tool to enable the WMI-Activity log, set Overwrite events as needed and change the size to 150 MB (default is 1024 KB) you can run the following command:
+For example, to use the Wevtutil tool to enable the WMI-Activity log, set Overwrite events as needed and change the size to 150 MB (default is 1024 KB), you can run the following command:
 
 ```console
 wevtutil set-log "Microsoft-Windows-WMI-Activity/Trace" /enabled:false

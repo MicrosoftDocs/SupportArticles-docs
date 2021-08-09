@@ -17,7 +17,7 @@ Consider the following scenario:
 
 - You [create an app configuration policy](/mem/intune/apps/app-configuration-policies-use-ios#create-an-app-configuration-policy) for managed iOS devices in Intune.
 - Under **Configuration settings** > **Configuration settings format**, you select **Use configuration designer**.
-- You add a setting in which the **Configuration value** is a URL that contains an ampersand (&). The following is an example:
+- You add a setting in which the **Configuration value** is a URL that contains an ampersand (&). The following is an example:
 
     **Configuration key:** `ssoAuthEndpoint`  
     **Value type:** String  
@@ -38,7 +38,7 @@ This issue occurs because iOS configuration profiles don't support the ampersand
 
 To fix the issue, use one of the following methods:
 
-- Create a short URL that redirects to the original URL that contains the ampersand (&), then use the short URL as the **Configuration value**.
+- Create a short URL that redirects to the original URL that contains the ampersand (&), then use the short URL as the **Configuration value**.
 - Replace **&** with `&amp;` in the URL. For example:
 
     `https://sso.contoso.com/idpov/accesslogin/FedSSODispatch.faces?PartnerIdpId=https://sts.windows.net/{GUID}/&amp;TargetResource=https://sso.contoso.com/idprov/pages/home/dispatch.jsp?SpName=MBF`

@@ -4,23 +4,23 @@ description: Describes the hotfixes, product updates, and known solutions that a
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: AJAYPS, kaushika
 ms.prod-support-area-path: Installation and configuration of Hyper-V
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V environments
 
 This article documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V environments.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 3135020
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp;3135020
 
-## Recommended hotfixes for all Hyper V environments
+## More information
 
 The following Microsoft Knowledge Base articles describe the currently available fixes that are highly recommended for all Hyper V environments. These updates are considered important to install to make sure you experience the highest level of reliability.
 

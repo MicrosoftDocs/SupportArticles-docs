@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 2711375
 When using performance widgets in System Center 2012 Operations Manager, you may experience one or more of the following symptoms:
 
 - While creating performance widgets, none of the performance objects or counters are shown in the wizard.
-- You're unable to retrieve availability details using Operations Manager state widgets.
+- You're unable to retrieve availability details using Operations Manager state widgets.
 - Network dashboard views aren't showing any availability details or performance details.
-- The Reset Health State task fails with the exception below shown under the task status view:
+- The Reset Health State task fails with the exception below shown under the task status view:
 
     > A module reported an error 0x80070490 from a callback which was running as part of rule "System.Health.ResetState" running for instance "\<instance name>" with id:"{GUID}" in management group "\<Management Group Name>".
     >
@@ -27,10 +27,10 @@ When using performance widgets in System Center 2012 Operations Manager, you may
 
 ## Cause
 
-It can occur if the management group ID is different in the `MT_ManagementGroup` and `__MOMManagementGroupInfo__` tables. If you create the `OperationsManager` database using DBCreateWizard.exe, the management group GUIDs will be different. We can safely change the management group ID in `__MOMManagementGroupInfo__` table.
+It can occur if the management group ID is different in the `MT_ManagementGroup` and `__MOMManagementGroupInfo__` tables. If you create the `OperationsManager` database using DBCreateWizard.exe, the management group GUIDs will be different. We can safely change the management group ID in `__MOMManagementGroupInfo__` table.
 
 > [!NOTE]
-> This issue will only happen on upgraded environments from System Center Operations Manager 2007 R2.
+> This issue will only happen on upgraded environments from System Center Operations Manager 2007 R2.
 
 ## Resolution
 
@@ -62,4 +62,4 @@ To resolve this issue, complete the steps below.
 
 ## More information
 
-Make sure that you have recent backups of the `OperationsManager` and `OperationsManagerDW` databases before updating the tables.
+Make sure that you have recent backups of the `OperationsManager` and `OperationsManagerDW` databases before updating the tables.

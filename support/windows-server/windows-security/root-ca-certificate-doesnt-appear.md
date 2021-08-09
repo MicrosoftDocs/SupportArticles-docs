@@ -4,20 +4,20 @@ description: The root CA certificate configured for the Wired or Wireless Networ
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, milanmil
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Certificate used by Wired or Wireless Network policies is missing in GPO settings report
 
 This article provides a solution to an issue that certificate used by Wired or Wireless Network policies is missing in GPO settings report.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4047738
 
 ## Symptoms
@@ -33,7 +33,7 @@ Consider the following scenario:
 
 In this scenario, the certificate is missing in the GPO settings report.
 
-Example settings and screenshots
+Example settings and screenshots:
 
 You set the following CA certificates to be used by the authentication:
 
@@ -43,7 +43,7 @@ You set the following CA certificates to be used by the authentication:
     DC = contoso  
     DC = com  
 
-    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate- multiple-subject-names.png" alt-text="The first certificate has multiple subject names.":::
+    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate-multiple-subject-names.png" alt-text="The first certificate has multiple subject names.":::
 
 - The second certificate has a single subject name:
 

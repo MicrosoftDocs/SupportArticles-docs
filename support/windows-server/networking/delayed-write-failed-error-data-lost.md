@@ -4,20 +4,20 @@ description: Helps to fix the error message "Delayed Write Failed" which states 
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # If you receive a "Delayed Write Failed" error message, it states that your data has been lost
 
 This article helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021074
 
 ## Symptoms

@@ -4,6 +4,8 @@ description: Provides the resolution for the error code 0xc0000098.
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error 0xc0000098 on an Azure VM
 
@@ -27,6 +29,9 @@ In this message, \<BINARY> represents the actual binary file that's found.
 This issue occurs if a binary is from a different version of Windows than the operating system of the virtual machine.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 

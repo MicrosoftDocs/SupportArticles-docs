@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot and review Wi-Fi device profile logs in Microsoft Intune - Azure | Microsoft Docs
+title: Troubleshoot and review Wi-Fi device profile logs
 description: Understand and troubleshoot Wi-Fi device configuration profile issues on Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Review logs, and see some common issues and possible resolutions.
 ms.date: 07/20/2020
 ms.reviewer: tycast
@@ -253,6 +253,14 @@ Some additional recommendations:
 - Sync your iOS/iPadOS device to Intune. Enroll if you haven't already enrolled.
 - Test connecting to the same Wi-Fi endpoint (as mentioned in the first step) again.
 - Roll out to larger groups and eventually to all expected users in your organization.
+
+### All Wi-Fi profiles report as failing
+
+For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices, you might get a report that all profiles have failed. This can occur when you deploy more than one Wi-Fi profile. In this case, when one fails, all the profiles you deployed will report as failing (even if they are still working).
+
+### A Wi-Fi profile reports as failing, but seems to be working
+
+If a Wi-Fi profile is working correctly on a device, but reports as failing, it may be a reporting error. To fix this, update to the Intune app version 2021.05.02 or later.
 
 ## Need more help
 

@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: virtual-machines-sql
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # SQL Server on Azure Virtual Machines logs

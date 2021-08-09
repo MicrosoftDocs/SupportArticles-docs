@@ -23,11 +23,11 @@ Figure 1: Output of the `DistributionContentVersion` table before you reassign t
 
 :::image type="content" source="media/duplicate-rows-in-distributioncontentversion/screenshot-of-before-dp-move.png" alt-text="Before DP move":::
 
-Figure 2: Output of the `DistributionContentVersion` table after you reassign the DP and a new content validation cycle ends
+Figure 2: Output of the `DistributionContentVersion` table after you reassign the DP and a new content validation cycle ends
 
 :::image type="content" source="media/duplicate-rows-in-distributioncontentversion/screenshot-of-after-dp-move.png" alt-text="After DP move":::
 
-After you reassign the DP, merging data into the `ContentDistribution` table fails. For example, when the `spRebuildContentDistribution` procedure runs or the Configuration Data group is reinitialized, you receive this error message:
+After you reassign the DP, merging data into the `ContentDistribution` table fails. For example, when the `spRebuildContentDistribution` procedure runs or the Configuration Data group is reinitialized, you receive this error message:
 
 > Msg 8672, Level 16, State 1, Procedure spRebuildContentDistribution, Line 197 [Batch Start Line 29]  
 > The MERGE statement attempted to UPDATE or DELETE the same row more than once. This happens when a target row matches more than one source row. A MERGE statement cannot UPDATE/DELETE the same row of the target table multiple times. Refine the ON clause to ensure a target row matches at most one source row, or use the GROUP BY clause to group the source rows.
@@ -40,7 +40,7 @@ When content validation is enabled, the `DistributionContentVersion` table is po
 
 Therefore, after the DP is reassigned to the new site and a new content validation cycle runs, there are two rows for each package in the `DistributionContentVersion` table: One for the old site and one for the new site.
 
-To determine whether you experience this issue, run this SQL query:
+To determine whether you experience this issue, run this SQL query:
 
 ```sql
 SELECT * FROM DistributionContentVersion DCV
@@ -52,7 +52,7 @@ If the result isn't NULL, the issue occurs.
 
 ## Resolution
 
-To fix the issue, update to [Configuration Manager version 1902](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902).
+To fix the issue, update to [Configuration Manager version 1902](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902).
 
 ## Workaround
 

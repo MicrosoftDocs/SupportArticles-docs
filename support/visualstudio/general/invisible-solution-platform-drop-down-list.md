@@ -2,7 +2,7 @@
 title: Invisible Solution Platform drop-down list
 description: Works around a problem that you can't see the default Solution Platform drop-down list in Visual Studio 2013.
 ms.date: 04/24/2020
-ms.prod-support-area-path: Team explorer/Version control
+ms.prod-support-area-path: Team explorer/Version control
 ms.reviewer: lavonnec, cbrochu
 ---
 # Solution Platform drop-down list isn't visible after you install Visual Studio 2013 Update 2

@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4511621
 
 ## Symptoms
 
-In Configuration Manager, you use the Create Task Sequence Media Wizard to create standalone or prestaged media that contain a large system image. When you try to create the media, you receive the following error message:
+In Configuration Manager, you use the Create Task Sequence Media Wizard to create standalone or prestaged media that contain a large system image. When you try to create the media, you receive the following error message:
 
 > Media creation failed with error message: 'Not enough memory resources are available to process this command.'  
 > Refer to CreateTsMedia.log file to find more details.
@@ -34,11 +34,11 @@ Additionally, the following error entries are logged in CreateTSMedia.log:
 
 ## Cause
 
-CreateMedia.exe is a 32-bit executable that's used to create media in Configuration Manager. If the media contains a large system image, CreateMedia.exe may exceed the 2 GB memory limit and generate the error that is mentioned in the Symptoms section.
+CreateMedia.exe is a 32-bit executable that's used to create media in Configuration Manager. If the media contains a large system image, CreateMedia.exe may exceed the 2 GB memory limit and generate the error that is mentioned in the Symptoms section.
 
 ## Resolution
 
-To fix this issue, follow these steps:
+To fix this issue, follow these steps:
 
 1. If Microsoft Visual Studio isn't already available in your environment, [download and install Visual Studio](/visualstudio/install/install-visual-studio). Select the **Desktop development with C++** workload when you install Visual Studio.
 
@@ -67,12 +67,12 @@ To fix this issue, follow these steps:
    editbin.exe /largeaddressaware createmedia.exe
    ```
 
-   For more information about the `/LARGEADDRESSAWARE` EDITBIN option, see [/LARGEADDRESSAWARE](/cpp/build/reference/largeaddressaware).
+   For more information about the `/LARGEADDRESSAWARE` EDITBIN option, see [/LARGEADDRESSAWARE](/cpp/build/reference/largeaddressaware).
 
 6. On the site server, create a backup of the <*ConfigMgr_Install_Directory*>\AdminConsole\bin\i386\CreateMedia.exe file.
-7. Copy the modified version of CreateMedia.exe from the computer that has Visual Studio installed to the <*ConfigMgr_Install_Directory*>\AdminConsole\bin\i386 folder on the site server.
+7. Copy the modified version of CreateMedia.exe from the computer that has Visual Studio installed to the <*ConfigMgr_Install_Directory*>\AdminConsole\bin\i386 folder on the site server.
 8. If there's a central administration site and multiple primary sites in your environment, repeat steps 6 and 7 on all site servers so that you can create media from any site server.
 9. Create the standalone or prestaged media by using the Create Task Sequence Media Wizard.
 
 > [!NOTE]
-> If you install an update or hotfix on the site server after you make these changes, CreateMedia.exe may be replaced. If this occurs, the replacement will have the default behavior and will not be able to handle large addresses. In this case, follow these steps again for the new instance of CreateMedia.exe.
+> If you install an update or hotfix on the site server after you make these changes, CreateMedia.exe may be replaced. If this occurs, the replacement will have the default behavior and will not be able to handle large addresses. In this case, follow these steps again for the new instance of CreateMedia.exe.

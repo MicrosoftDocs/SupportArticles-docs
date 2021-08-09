@@ -4,20 +4,20 @@ description: Describes an issue that occurs when you try to remotely control a r
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: rkiran, jerrycif, kaushika
 ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# Error message when you try to shadow a remote session in Windows Server 2012 R2: This computer name is invalid 
+# Error message when you try to shadow a remote session in Windows Server 2012 R2: This computer name is invalid
 
 This article describes an issue that occurs when you try to remotely control a remote desktop session in a Virtual Desktop Infrastructure (VDI) collection.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2897666
 
 ## Symptoms
@@ -31,7 +31,7 @@ When you try to shadow (that is, remotely control) a remote desktop session in a
 
 ## Cause
 
-This issue occurs on the virtual machine that is being remotely controlled because File and Printer Sharing isn't turned on. 
+This issue occurs on the virtual machine that is being remotely controlled because File and Printer Sharing isn't turned on.
 
 ## Resolution
 

@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Using Proxy Servers together with Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article discusses how to use Microsoft Internet Explorer in proxy environments.
 
 _Original product version:_ &nbsp; Internet Explorer  
@@ -94,12 +96,6 @@ function FindProxyForURL(url, host)
 
 > [!NOTE]
 > This PAC always returns the proxy **proxyserver:portnumber**. For more information about how to write a PAC file and the different functions of a PAC file, see [Introduction of FindProxyForURL](https://findproxyforurl.com/).
-
-### Optimize performance by using PAC scripts
-
-For more information, see the following articles:
-
-- [Browser Is Slow to Respond When You Use an Automatic Configuration Script](https://support.microsoft.com/help/315810)
 
 ## References
 

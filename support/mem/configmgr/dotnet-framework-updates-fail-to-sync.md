@@ -37,7 +37,7 @@ This intermittent issue only occurs if the update is revised and the `SourceURL`
 
 ## Resolution
 
-This issue only occurs in Configuration Manager current branch version 1810 and later versions. The Microsoft .NET team is working to expire these updates and will republish them soon. This article will be revised when the updates are republished. The subsequent synchronization should complete successfully.
+This issue only occurs in Configuration Manager current branch version 1810 and later versions. The Microsoft .NET team is working to expire these updates and will republish them soon. This article will be revised when the updates are republished. The subsequent synchronization should complete successfully.
 
 - If the listed updates aren't required in your environment, you can decline them in WSUS to prevent them from synchronizing to Configuration Manager.
 - If you need these updates and cannot wait for the republishing, you can manually download and distribute them using software distribution.

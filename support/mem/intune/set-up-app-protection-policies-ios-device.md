@@ -29,6 +29,6 @@ To have Intune app protection policies apply only to managed iOS devices, follow
 
     :::image type="content" source="media/set-up-app-protection-policies-ios-device/app-configuration.jpg" alt-text="screenshot of App configuration":::
 
-5. To validate the setup, select a user and check the **APP PROTECTION STATUS** for that user. For more information, see [How to validate your app protection policy setup](/mem/intune/apps/app-protection-policies-validate).
+5. To validate the setup, select a user and check the **APP PROTECTION STATUS** for that user. For more information, see [How to validate your app protection policy setup](/mem/intune/apps/app-protection-policies-validate).
 
     :::image type="content" source="media/set-up-app-protection-policies-ios-device/app-protection-status.jpg" alt-text="screenshot of App protection status":::

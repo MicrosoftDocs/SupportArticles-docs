@@ -4,6 +4,8 @@ description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual 
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Boot error code 0xC000000F in an Azure VM
 
@@ -45,6 +47,9 @@ This issue occurs when one of following conditions is true:
 - The binary displayed on the screenshot (other than winload.exe or \boot\BCD) is missing from the operating system disk.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, try the one of following resolutions:
 

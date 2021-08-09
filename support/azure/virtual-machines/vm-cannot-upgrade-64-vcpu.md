@@ -4,6 +4,7 @@ description: Describes an issue in which you cannot upgrade an Azure VM to a siz
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
 ---
 # Can't upgrade an Azure VM to a size that contains more than 64 vCPUs
 

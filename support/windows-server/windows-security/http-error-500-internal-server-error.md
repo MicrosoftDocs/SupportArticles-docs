@@ -4,20 +4,20 @@ description: Works around an error that occurs when trying to get the NDES enrol
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: jkuehler, kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Error message when generating NDES enrollment challenge password on an NDES server that is running Windows Server 2012: Http error 500.0 - internal server error
 
 This article helps work around an error that occurs when trying to get the NDES enrollment challenge password.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2800975
 
 ## Symptoms
@@ -39,19 +39,19 @@ Keywords: Classic
 User: N/A  
 Computer: computer name  
 Description:  
- The Network Device Enrollment Service cannot be started (0x800700ea). More data is available. 
+The Network Device Enrollment Service cannot be started (0x800700ea). More data is available.
 
 ## Workaround
 
 A workaround for this issue is to change the order of the handlers for the Microsoft Simple Certificate Enrollment Protocol (MSCEP) applications in IIS so that the ExtensionlessUrlHandler-ISAPI-4.0_64bit handler comes after the StaticFile handler. To do so, you can follow the steps below:
 
-1) Install and configure NDES (and CEP/CES).
-2) Open IIS.
-3) Select "Default Web Site". 
-4) Click "View Applications" in the action panel on the right.
-5) Double-click the mscep application.
-6) Double-click "Handler Mappings".
-7) Click "View Ordered List..." in the action panel.
-8) Select ExtensionlessUrlHandler-ISAPI-4.0_64bit and move it down so it is below StaticFile.
-9) Repeat steps 6-8 for the mscep_admin application.
-10) Restart IIS.
+1. Install and configure NDES (and CEP/CES).
+2. Open IIS.
+3. Select "Default Web Site".
+4. Click "View Applications" in the action panel on the right.
+5. Double-click the mscep application.
+6. Double-click "Handler Mappings".
+7. Click "View Ordered List..." in the action panel.
+8. Select ExtensionlessUrlHandler-ISAPI-4.0_64bit and move it down so it is below StaticFile.
+9. Repeat steps 6-8 for the mscep_admin application.
+10. Restart IIS.

@@ -6,7 +6,7 @@ ms.reviewer: lacranda
 ---
 # Troubleshoot PKCS certificate deployment in Microsoft Intune
 
-The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you’ve completed the following tasks as found in [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure#export-the-root-certificate-from-the-enterprise-ca):
+The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you've completed the following tasks as found in [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure#export-the-root-certificate-from-the-enterprise-ca):
 
 - Review the [requirements for using PKCS certificate profiles](/mem/intune/protect/certificates-pfx-configure#requirements)
 - Export the root certificate from the Enterprise Certification Authority (CA)
@@ -148,9 +148,9 @@ Review the following settings, and fix if they're incorrect:
 - The **Certification authority** property displays the internal FQDN of your CA server.
 - The **Certification authority name** property displays the name of your CA.
 
-#### Cause 2 - CA doesn’t support certificate renewal for requests signed by previous CA certificates
+#### Cause 2 - CA doesn't support certificate renewal for requests signed by previous CA certificates
 
-If the CA FQDN and name are correct in the PKCS certificate profile, review the Windows Application log that’s on the certificate authority server. Look for an **Event ID 128** that resembles the following example:
+If the CA FQDN and name are correct in the PKCS certificate profile, review the Windows Application log that's on the certificate authority server. Look for an **Event ID 128** that resembles the following example:
 
 ```
 Log Name: Application:
@@ -161,7 +161,7 @@ Details:
 An Authority Key Identifier was passed as part of the certificate request 2268. This feature has not been enabled. To enable specifying a CA key for certificate signing, run: "certutil -setreg ca\UseDefinedCACertInRequest 1" and then restart the service.
 ```
 
-When the CA certificate renews, it must sign the Online Certificate Status Protocol (OCSP) Response Signing certificate. Signing enables the OCSP Response Signing certificate to validate other certificates by checking on their revocation status. This signing isn’t enabled by default.
+When the CA certificate renews, it must sign the Online Certificate Status Protocol (OCSP) Response Signing certificate. Signing enables the OCSP Response Signing certificate to validate other certificates by checking on their revocation status. This signing isn't enabled by default.
 
 **Resolution**:
 
@@ -186,7 +186,7 @@ This issue occurs if the computer that hosts the Intune Certificate Connector ca
 
 **Resolution**:
 
-Manually configure the name of the certificate enrollment policy server on the computer that hosts the Intune Certificate Connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver) PowerShell cmdlet.
+Manually configure the name of the certificate enrollment policy server on the computer that hosts the Intune Certificate Connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pki/add-certificateenrollmentpolicyserver) PowerShell cmdlet.
 
 ### The submission is pending
 
@@ -240,7 +240,7 @@ For more information, see [Configure and use PKCS certificates with Intune](/mem
 
 ### Denied by Policy Module
 
-When devices receive the trusted root certificate but don’t receive the PFX certificate and the NDESConnector_date_time.svclog log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
+When devices receive the trusted root certificate but don't receive the PFX certificate and the NDESConnector_date_time.svclog log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
 
 ```
 IssuePfx - The submission failed: Denied by Policy Module
@@ -268,7 +268,7 @@ For more information, see [Configure certificate templates on the CA](/mem/intun
 ### Certificate profile stuck as Pending
 
 In the Microsoft Endpoint Manager admin center, PKCS certificate profiles fail to deploy with a state of **Pending**. There are no obvious errors in the NDESConnector_date_time.svclog log file.
-Because the cause of this problem isn’t identified clearly in logs, work through the following causes.
+Because the cause of this problem isn't identified clearly in logs, work through the following causes.
 
 #### Cause 1 - Unprocessed request files
 
@@ -284,11 +284,11 @@ Review the request files for errors that indicate why they failed to be processe
 
 #### Cause 2 - Misconfiguration for the PKCS certificate profile
 
-When you don’t find request files in the **Failed**, **Processing**, or **Succeed** folders, the cause might be that the wrong certificate is associated with the PKCS certificate profile. For example, a subordinate CA is associated with the profile, or the wrong root certificate is used.
+When you don't find request files in the **Failed**, **Processing**, or **Succeed** folders, the cause might be that the wrong certificate is associated with the PKCS certificate profile. For example, a subordinate CA is associated with the profile, or the wrong root certificate is used.
 
 **Resolution**:
 
-1. Review your trusted certificate profile to ensure you’ve deployed the root certificate from your Enterprise CA to devices.
+1. Review your trusted certificate profile to ensure you've deployed the root certificate from your Enterprise CA to devices.
 2. Review your PKCS certificate profile to ensure it references the correct CA, certificate type, and the trusted certificate profile that deploys the root certificate to devices.
 
 For more information, see [Use certificates for authentication in Microsoft Intune](/mem/intune/protect/certificates-configure).
@@ -298,7 +298,7 @@ For more information, see [Use certificates for authentication in Microsoft Intu
 PKCS certificates fail to deploy, and the certificate console on the issuing CA displays a message with the string **-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED**, as seen in the following example:
 
 ```
-Active Directory Certificate Services denied request abc123 because The Email name is unavailable and cannot be added to the Subject or Subject Alternate name. 0x80094812 (-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED). The request was for CN=” Common Name”.  Additional information: Denied by Policy Module”.
+Active Directory Certificate Services denied request abc123 because The Email name is unavailable and cannot be added to the Subject or Subject Alternate name. 0x80094812 (-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED). The request was for CN=" Common Name".  Additional information: Denied by Policy Module".
 ```
 
 #### Cause - "Supply in the request" is miscongifured
@@ -322,7 +322,7 @@ Edit the template to resolve the configuration issue:
 
 ## Next steps
 
-If you still need a solution or you’re looking for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team frequent the forums, so there’s a good chance that someone can help.
+If you still need a solution or you're looking for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team frequent the forums, so there's a good chance that someone can help.
 
 To open a support request with the Microsoft Intune product support team, see [How to get support in Microsoft Endpoint Manager](/mem/get-support).
 

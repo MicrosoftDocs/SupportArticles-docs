@@ -16,18 +16,18 @@ _Original KB number:_ &nbsp; 4095539
 Consider the following scenario:
 
 - You're running Configuration Manager (current branch, version 1810, or a later version) in your hierarchy.
-- The instance of Microsoft SQL Server that's hosting the database for the primary site is lost.
+- The instance of Microsoft SQL Server that's hosting the database for the primary site is lost.
 - You recover a primary site from a CAS on a newly installed SQL Server instance (for the primary site).
 
-In this scenario, Configuration Manager clients don't receive policy data, and the **Configurations** tab in client properties is blank (that is, baselines aren't visible). Additionally, applications and software update deployments that were created before the recovery may not work.
+In this scenario, Configuration Manager clients don't receive policy data, and the **Configurations** tab in client properties is blank (that is, baselines aren't visible). Additionally, applications and software update deployments that were created before the recovery may not work.
 
 ## Cause
 
-This problem occurs because the **Last Row Version** registry entry for the Object Replication Manager and Policy Provider has a higher value than that of the `rowversion` entry in the site database.
+This problem occurs because the **Last Row Version** registry entry for the Object Replication Manager and Policy Provider has a higher value than that of the `rowversion` entry in the site database.
 
 ## Resolution
 
-To fix this issue, follow these steps:
+To fix this issue, follow these steps:
 
 1. Stop the **SMS_Executive** and **SiteComp** services on the primary site server.
 2. Run the following query on the recovered primary database to obtain the current value for `rowversion`:

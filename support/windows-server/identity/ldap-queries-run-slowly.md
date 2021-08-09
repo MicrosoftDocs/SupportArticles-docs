@@ -1,23 +1,23 @@
 ---
 title: Event ID 1644 when LDAP queries are run
-description: Describes a problem in which an LDAP query performs slowly on a Windows Server 2003 or newer server that uses an AD LDS or an ADAM directory service.
+description: Works around a problem in which an LDAP query performs slowly on a Windows Server 2003 or newer server that uses an AD LDS or an ADAM directory service.
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # LDAP queries are executed more slowly than expected in the AD or LDS/ADAM directory service and Event ID 1644 may be logged
 
 This article provides a workaround for an issue where LDAP queries perform slowly on a Windows Server computer that uses an AD LDS or an ADAM directory service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951581
 
 ## Symptoms
@@ -43,14 +43,13 @@ The LDAP server can only use one index while processing a paged query. This is b
 
 To work around this problem, you can send the query without using the paged query control. This allows the LDAP server to optimize for more complex filters.
 
-Noe that by default, paged queries are enabled for some LDAP client libraries. Therefore, you may have to write additional code in your application to enable and disable paged queries as appropriate for your specific situation.
+> [!NOTE]
+> By default, paged queries are enabled for some LDAP client libraries. Therefore, you may have to write additional code in your application to enable and disable paged queries as appropriate for your specific situation.
 
 ## Status
 
-Microsoft has confirmed that this is a problem. 
+Microsoft has confirmed that this is a problem.
 
-## More information
+## References
 
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[314980](https://support.microsoft.com/help/314980) How to configure Active Directory diagnostic event logging in Windows Server 2003 and in Windows 2000 Server
+[How to configure Active Directory and LDS diagnostic event logging](/troubleshoot/windows-server/identity/configure-ad-and-lds-event-logging)

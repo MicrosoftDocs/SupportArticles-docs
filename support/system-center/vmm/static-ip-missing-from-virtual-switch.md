@@ -18,10 +18,10 @@ When creating a virtual switch using System Center 2012 Virtual Machine Manager 
 
 ## Cause
 
-This issue can occur if a virtual network adapter is not created on the switch, or if the virtual network adapter doesn't have the setting **This virtual network adapter inherits settings from the physical management adapter** enabled.
+This issue can occur if a virtual network adapter is not created on the switch, or if the virtual network adapter doesn't have the setting **This virtual network adapter inherits settings from the physical management adapter** enabled.
 
 ## Resolution
 
-When creating a virtual switch on a Hyper-V host, if you want the Network Interface Card (NIC) to send management information to Virtual Machine Manager, you need to create a management Virtual Network Interface Card (VNIC) adapter. This VNIC needs to be connected to a virtual machine network that doesn't have isolation enabled. If a VNIC isn't created, communication will only be allowed through the virtual machines that are connected.
+When creating a virtual switch on a Hyper-V host, if you want the Network Interface Card (NIC) to send management information to Virtual Machine Manager, you need to create a management Virtual Network Interface Card (VNIC) adapter. This VNIC needs to be connected to a virtual machine network that doesn't have isolation enabled. If a VNIC isn't created, communication will only be allowed through the virtual machines that are connected.
 
-If you want the static IP transferred to the virtual switch in Hyper-V, you need to check the setting **This virtual network adapter inherits settings from the physical management adapter** when creating the VNIC, otherwise it will obtain a DHCP address.
+If you want the static IP transferred to the virtual switch in Hyper-V, you need to check the setting **This virtual network adapter inherits settings from the physical management adapter** when creating the VNIC, otherwise it will obtain a DHCP address.

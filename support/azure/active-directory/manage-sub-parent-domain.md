@@ -23,9 +23,8 @@ Consider the following scenario:
 To manage the domains in this scenario, follow these steps in the order in which they're given:
 
 1. Submit a support request to break the inheritance at [Azure Customer Support](https://ms.portal.azure.com/).
-2. If you have already verified the parent domain, remove it.
-3. Verify and federate the subdomain.
-4. Verify and federate the parent domain.
+2. Verify and federate the subdomain.
+3. Verify and federate the parent domain.
 
 ## More information
 

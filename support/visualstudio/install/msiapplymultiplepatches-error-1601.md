@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2700568
 
 ## Symptoms
 
-`MsiApplyMultiplePatches` may result in the `MainEngineThread` returning and error of 1601 when the UI mode is set to **Basic** or **None**.
+`MsiApplyMultiplePatches` may result in the `MainEngineThread` returning and error of 1601 when the UI mode is set to **Basic** or **None**.
 
 Example of log file showing the failure:
 
@@ -23,7 +23,7 @@ Example of log file showing the failure:
 > MSI (c) (28:E8) [10:30:06:157]: Cloaking enabled.  
 > MSI (c) (28:E8) [10:30:06:157]: Attempting to enable all disabled privileges before calling Install on Server.  
 > MSI (c) (28:E8) [10:30:06:160]: Incrementing counter to disable shutdown. Counter after increment: 0.  
-> MSI (c) (28:E8) [10:30:06:162]: Decrementing counter to disable shutdown. If counter >= 0, shutdown will be denied.  Counter after decrement: -1.  
+> MSI (c) (28:E8) [10:30:06:162]: Decrementing counter to disable shutdown. If counter >= 0, shutdown will be denied.  Counter after decrement: -1.  
 > MSI (c) (28:E8) [10:30:06:162]: MainEngineThread is returning 1601.
 
 ## Cause

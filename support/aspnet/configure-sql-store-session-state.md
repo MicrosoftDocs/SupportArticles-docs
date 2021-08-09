@@ -79,10 +79,8 @@ The modified `<sessionState>` element should appear as follows:
 
 - If entries in the *ASPStateTempSessions* table aren't removed after the related sessions expire, make sure that the SQL Server agent is running. You can implement this functionality through stored procedures that are scheduled through jobs in SQL Server. The SQL Server agent manages these jobs.
 
-- When you use the default *InstallSqlState.sql* and *UninstallSqlState.sql* script files to configure ASP.NET SQL Server mode session state management. These files add the *ASPStateTempSessions* and the *ASPStateTempApplications* tables to the *tempdb* database in SQL Server by default. Furthermore, if you restart SQL Server, you lose the session state data that was stored in the *ASPStateTempSessions* and the *ASPStateTempApplications* tables. For more information about how to run alternative scripts to configure persistent SQL Server session state management so that the session data isn't lost when you restart the server, see [HOW TO: Configure ASP.NET for Persistent SQL Server Session State Management](https://support.microsoft.com/help/311209).
+- When you use the default *InstallSqlState.sql* and *UninstallSqlState.sql* script files to configure ASP.NET SQL Server mode session state management. These files add the *ASPStateTempSessions* and the *ASPStateTempApplications* tables to the *tempdb* database in SQL Server by default. Furthermore, if you restart SQL Server, you lose the session state data that was stored in the *ASPStateTempSessions* and the *ASPStateTempApplications* tables. For more information about how to run alternative scripts to configure persistent SQL Server session state management so that the session data isn't lost when you restart the server.
 
 ## References
 
-- [Using NET STOP and NET START commands to force IIS services to re-read the registry](https://support.microsoft.com/help/236166)
-
-- [Session State](/previous-versions/dotnet/netframework-1.1/87069683(v=vs.71))
+[Session State](/previous-versions/dotnet/netframework-1.1/87069683(v=vs.71))

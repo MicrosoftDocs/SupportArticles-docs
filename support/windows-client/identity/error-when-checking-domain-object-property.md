@@ -4,25 +4,25 @@ description: Describes an issue in which ADAC fails on the domain object propert
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, uspand, amaltsev
-ms.prod-support-area-path: Schema update - known issues, best practies, workflow review
-ms.technology: ActiveDirectory
+ms.prod-support-area-path: Schema update - known issues, best practices, workflow review
+ms.technology: windows-client-active-directory
 ---
-# "msDS-ExpirePasswordsOnSmartCardOnlyAccounts not exist" error when you check domain object properties by using RSAT in Windows 10
+# Error when you check domain object properties by using RSAT in Windows 10: msDS-ExpirePasswordsOnSmartCardOnlyAccounts not exist
 
 This article provides a solution to an error that occurs when you check domain object properties by using RSAT in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1809  
 _Original KB number:_ &nbsp; 3214525
 
 ## Symptoms
 
-You have a Windows 10, version 1607-based or a Windows 10, version 1809-based client that joins a domain with a Windows Server 2008 R2 or Windows Server 2012 R2 controller. Additionally, the [Remote Server Administration Tools (RSAT) for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520) is installed on the client. When you right-click the properties of a domain object in Active Directory Administrative Center (ADAC) in this situation, you receive the following error message:
+You have a Windows 10, version 1809-based client that joins a domain with a Windows Server 2012 R2 controller. Additionally, the [Remote Server Administration Tools (RSAT) for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520) is installed on the client. When you right-click the properties of a domain object in Active Directory Administrative Center (ADAC) in this situation, you receive the following error message:
 
 > Failed to retrieve the object 'DC=CONTOSO,DC=COM' due to the following error:  
 The specified directory service attribute or value does not exist Parameter name: msDS-ExpirePasswordsOnSmartCardOnlyAccounts
@@ -39,5 +39,4 @@ To work around this issue, use one of the following tools to obtain the properti
 - Ldifde.exe
 - Ldp.exe
 - ADSI Edit (adsiedit.msc)
-- Get-ADObject cmdlet
-s
+- Get-ADObject cmdlets

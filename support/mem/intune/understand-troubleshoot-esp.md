@@ -19,10 +19,10 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 - **EnrollmentStatusTracking CSP**: ./Vendor/MSFT/EnrollmentStatusTracking
   
-  The `EnrollmentStatusTracking` CSP is supported in Windows 10 version 1903 and later versions. It's used to track the  installation of the SideCar agent (Intune Management Extension) and Win32 apps.
+  The `EnrollmentStatusTracking` CSP is supported in Windows 10 version 1903 and later versions. It's used to track the installation of the SideCar agent (Intune Management Extension) and Win32 apps.
 - **FirstSyncStatus CSP**: ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus
 
-  The `FirstSyncStatus` CSP is supported in Windows 10, versions 1709 and later versions. It's responsible for delivering the ESP payload that's configured from Intune. The payload includes ESP settings such as the timeout period, applications that are required to be installed and so on. It also delivers the expected MSI (LOB) applications, Microsoft Store for Business apps, Wi-Fi profiles, and SCEP certificate profile.
+  The `FirstSyncStatus` CSP is supported in Windows 10, versions 1709 and later versions. It's responsible for delivering the ESP payload that's configured from Intune. The payload includes ESP settings such as the timeout period, applications that are required to be installed and so on. It also delivers the expected MSI (LOB) applications, Microsoft Store for Business apps, Wi-Fi profiles, and SCEP certificate profile.
 
 ## Phases tracked by ESP
 
@@ -39,17 +39,17 @@ The device preparation phase contains the following steps.
 
    This step isn't required in Windows Autopilot user-driven mode. It's required in self-deploying mode and white glove deployment.
 
-   At this step, the device completes the Trusted Platform Module (TPM) attestation process and sends its hardware hash to Azure AD to prove its identity. When the hardware hash is imported, the Device Directory Service (DDS) creates the computer object. Then, Azure AD sends a device token to the device. This is the token that will be used in Azure AD join.
+   At this step, the device completes the Trusted Platform Module (TPM) attestation process and sends its hardware hash to Azure AD to prove its identity. When the hardware hash is imported, the Device Directory Service (DDS) creates the computer object. Then, Azure AD sends a device token to the device. This is the token that will be used in Azure AD join.
 
-   If the device isn't identified by Azure AD, this step will time out and you'll receive a **Securing your hardware failed with error (0x800705b4)** error message. This error may also be caused by an issue that's related to TPM attestation.
+   If the device isn't identified by Azure AD, this step will time out and you'll receive a **Securing your hardware failed with error (0x800705b4)** error message. This error may also be caused by an issue that's related to TPM attestation.
 2. Azure AD join
 
-   In user-driven mode, this step is already completed before ESP starts when the user enters the corporate credentials. It's required in self-deploying mode and white glove deployment.
+   In user-driven mode, this step is already completed before ESP starts when the user enters the corporate credentials. It's required in self-deploying mode and white glove deployment.
 
    At this step, the device joins Azure AD by using the token it received in the previous step.
 3. Intune (MDM) enrollment
   
-   In user-driven mode, this step is already completed before ESP starts when the user enters the corporate credentials. It's required in self-deploying mode and white glove deployment.
+   In user-driven mode, this step is already completed before ESP starts when the user enters the corporate credentials. It's required in self-deploying mode and white glove deployment.
 
    At this step, the device is enrolled in Intune.
 
@@ -58,7 +58,7 @@ The device preparation phase contains the following steps.
     - The user or device is not authorized
     - In self-deploying mode and white glove deployment, the TPM doesn't meet the minimum requirements. For example, the TPM version isn't 2.0 or the TPM EK certificate is missing.
   
-   If you receive this error message, check the User Device Registration event logs. Also check the MDM diagnostic log file for any TPM-related error in CertReq_Enrollaik.txt and TpmHliInfo.txt.
+   If you receive this error message, check the User Device Registration event logs. Also check the MDM diagnostic log file for any TPM-related error in CertReq_Enrollaik.txt and TpmHliInfo.txt.
 4. Prepare the device for MDM
 
    At this step, the device calculates the policies and apps that are required to be tracked. In Windows 10, version 1903 and later versions, the device also creates the tracking policy for the SideCar agent, and installs the Intune Management Extension.
@@ -81,10 +81,10 @@ The device creates the tracking policy for this phase, calculates all apps and p
 
 - Applications
 
-  All LOB, Microsoft Store for Business and Win32 apps that are deployed in device context are installed.
+  All LOB, Microsoft Store for Business and Win32 apps that are deployed in device context are installed.
 
   >[!NOTE]
-  > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.
+  > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.
 
 ### Account setup
 
@@ -112,7 +112,7 @@ The device creates the tracking policy for this phase, calculates all apps and p
 
 - Applications
 
-  All LOB, Microsoft Store for Business and Win32 apps that are deployed in user context are installed. Online-licensed Microsoft Store for Business apps that are deployed in user context can be installed. Again, don't mix LOB and Win32 apps.
+  All LOB, Microsoft Store for Business and Win32 apps that are deployed in user context are installed. Online-licensed Microsoft Store for Business apps that are deployed in user context can be installed. Again, don't mix LOB and Win32 apps.
 
 ## Troubleshooting
 
@@ -216,7 +216,7 @@ You can find the `EnrollmentStatusTracking` settings under the following registr
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Autopilot\EnrollmentStatusTracking`
 
-The `EnrollmentStatusTracking` registry subkey contains the following subkeys:
+The `EnrollmentStatusTracking` registry subkey contains the following subkeys:
 
 - [Device](#the-device-subkey)
 - [ESPTrackingInfo](#the-esptrackinginfo-subkey)
@@ -234,7 +234,7 @@ This subkey contains the following subkeys:
 
 - `DevicePreparation`
   
-  Under this subkey, you can find the installation state of the Intune Management Extension (SideCar) and the type of resources this SideCar provider tracks.
+  Under this subkey, you can find the installation state of the Intune Management Extension (SideCar) and the type of resources this SideCar provider tracks.
 
   :::image type="content" source="media/understand-troubleshoot-esp/sidecar.png" alt-text="The Sidecar key":::
 
@@ -277,7 +277,7 @@ This subkey contains the following subkeys:
 
 #### The `ESPTrackingInfo` subkey
 
-This subkey contains diagnostics information for all applications and policies that are tracked by ESP and the status of each app and policy during specific timestamps for the device setup and account setup phases.
+This subkey contains diagnostics information for all applications and policies that are tracked by ESP and the status of each app and policy during specific timestamps for the device setup and account setup phases.
 
 :::image type="content" source="media/understand-troubleshoot-esp/diagnostics.png" alt-text="The diagnostics information":::
 

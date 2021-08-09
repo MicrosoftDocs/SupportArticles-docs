@@ -1,23 +1,23 @@
 ---
-title: Version 3 (CNG) templates won't appear in Windows Server 2008 or Windows Server 2008 R2 certificate web enrollment
+title: Version 3 (CNG) templates won't appear in certificate web enrollment
 description: Fixes an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Version 3 (CNG) templates won't appear in Windows Server 2008 or Windows Server 2008 R2 certificate web enrollment
 
 This article helps fix an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2015796
 
 ## Symptoms

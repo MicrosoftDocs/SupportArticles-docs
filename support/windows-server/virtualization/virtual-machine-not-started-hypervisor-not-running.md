@@ -1,40 +1,40 @@
 ---
-title: Virtual machine could not start because the hypervisor is not running error in Windows Server 2008 or Windows Server 2008 R2
+title: Virtual machine could not start because the hypervisor is not running error in Windows Server
 description: Fixes an issue that you're unable to start virtual machines because of incorrect DEP setting in BIOS.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevenxu, kaushika
 ms.prod-support-area-path: Virtual machine will not boot
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
-# Error in Windows Server 2008 or Windows Server 2008 R2: Virtual machine could not start because the hypervisor is not running
+# Error in Windows Server: Virtual machine could not start because the hypervisor is not running
 
 This article helps fix an issue that you're unable to start virtual machines because of incorrect DEP setting in BIOS.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2490458
 
 ## Symptoms
 
 Consider the following scenario:
 
-1. You install the Hyper-V role on a computer that is running Windows Server 2008 or Windows Server 2008 R2.
+1. You install the Hyper-V role on a computer that is running Windows Server.
 2. You create a virtual machine and attempt to start the virtual machine.
 3. You may see the following event ID:
-    
+
     > Log Name: Microsoft-Windows-Hyper-V-Worker-Admin  
     Source: Microsoft-Windows-Hyper-V-Worker  
     Event ID: 3112  
     Level: Error  
     Description:  
     The virtual machine could not be started because the hypervisor is not running.  
-    
+
 In this scenario, you're unable to start the virtual machine and receive the error message below:
 
 > Virtual machine could not start because the hypervisor is not running.

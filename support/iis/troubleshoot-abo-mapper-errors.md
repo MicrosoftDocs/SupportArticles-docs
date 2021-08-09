@@ -2,7 +2,7 @@
 title: Troubleshoot IIS ABO Mapper errors
 description: This article describes that how to create a log file to troubleshoot Admin Base Object (ABO) Mapper errors in IIS 7.5 and 7.0.
 ms.date: 04/17/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: how-to
 ---
 # Create a log file to troubleshoot ABO Mapper errors in IIS
@@ -17,13 +17,13 @@ _Original KB number:_ &nbsp; 931208
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. So make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/kb/322756).
 
-IIS 7.0 and later versions include a compatibility feature that enables scripts and programs that used ABO in earlier versions of IIS to work with IIS 7.0 and later versions. This compatibility feature is known as the ABO Mapper.
+IIS 7.0 and later versions include a compatibility feature that enables scripts and programs that used ABO in earlier versions of IIS to work with IIS 7.0 and later versions. This compatibility feature is known as the ABO Mapper.
 
 Changes that are made by the legacy scripts and code that use ABO are written to the *ApplicationHost.config* file in IIS. The ABO Mapper sub component maps the legacy metabase configuration settings to the new distributed configuration system in IIS. In some cases, this sub component may meet problems.
 
 ## Create a log file to troubleshoot ABO Mapper
 
-To help troubleshoot these problems, you can configure the computer that is running IIS to create an error log file for the ABO Mapper feature. Follow these steps:
+To help troubleshoot these problems, you can configure the computer that is running IIS to create an error log file for the ABO Mapper feature. Follow these steps:
 
 1. Select **Start**, type *regedit* in the **Start Search** box, and then press Enter.
 

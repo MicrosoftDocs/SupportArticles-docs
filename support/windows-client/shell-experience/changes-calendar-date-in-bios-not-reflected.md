@@ -4,20 +4,20 @@ description: In Windows 8 or later and Windows 2012 or later, changing the date 
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DST and Timezones
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Changes to calendar date in BIOS are not reflected in Windows
 
-This article provides a resolution for the issue that changes to calendar date in BIOS are not reflected in Windows.
+This article provides a resolution to an issue where changes to calendar date in BIOS are not reflected in Windows.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2792897
 
 ## Symptoms

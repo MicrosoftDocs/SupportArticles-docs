@@ -4,30 +4,30 @@ description: Describes how to configure FTP for IIS in a Windows Server failover
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # How to configure FTP for IIS in a Windows Server failover cluster
 
 This article describes how to configure FTP for Internet Information Services (IIS) 8.0 or a later version in a Windows Server failover cluster. The procedures in this article apply only to the FTP service.  
 
 > [!NOTE]
-For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
+> For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
 >
 > [970759](https://support.microsoft.com/help/970759) Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974603
 
 ## Configure high availability for IIS FTP servers using Failover Clustering
 
-1. Install the Web Server role on all cluster nodes. If you're installing on Windows Server 2012, don't include the "FTP Server" role. If you're installing on Windows Server 2012 R2 or a later version, include the in-box "FTP Server" role. For more information about IIS 8 deployment guide, visit the following website: [Open IIS Manager (IIS 8)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635847%28v=ws.11%29)
+1. Install the Web Server role on all cluster nodes. If you're installing on Windows Server 2012, don't include the "FTP Server" role. If you're installing on Windows Server 2012 R2 or a later version, include the in-box "FTP Server" role. For more information about IIS 8 deployment guide, visit the following website: [Open IIS Manager (IIS 8)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635847%28v=ws.11%29)
 
 2. Install the Failover Clustering feature on all cluster nodes and create the cluster. For more information, visit the following website: [Failover Cluster Deployment Guide](https://technet.microsoft.com/library/dd197477%28ws.10%29.aspx)
 
@@ -91,7 +91,7 @@ On each cluster node, enable Offline Files:
     2. In the left pane, select **Features**.
     3. Select **Add Features** in the right pane.
     4. Do one of the following, as appropriate for your Windows version:
-       - For Windows Server 2016, go to the [Install Server with Desktop Experience](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-with-desktop-experience) topic on the Microsoft Docs website.
+       - For Windows Server 2016, go to the [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) topic on the Microsoft Docs website.
        - For Windows Server 2102 and 2012 R2, choose **Desktop Experience** under **User Interfaces and Infrastructures** in the features list
 2. Do the following:  
    For Windows Server 2012, 2012 R2 and 2016, select **Sync Center** in Control Panel, and then select **Manage offline files.**
@@ -216,12 +216,12 @@ Function Online( )
     If bOnline <> True Then
         Resource.LogInformation "The resource failed to come online because ftpsvc could not be started."
         Online = False
-        Exit Functiond
+        Exit Function
     End If
 
     Online = true
 
-End Functiond
+End Function
 
 'Cluster resource offline entry point
 'On offline, do nothing.

@@ -2,7 +2,7 @@
 title: Internet Printing fails
 description: This article provides resolutions for the problem where Internet Printing fails if the document to be printed is larger than 29 MB.
 ms.date: 03/19/2020
-ms.prod-support-area-path: Site behavior and performance
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: mlaing
 ---
 # Internet Printing fails if the document to be printed is larger than 29 MB
@@ -40,6 +40,6 @@ date time cs-method cs-uri-stem s-port sc-status sc-substatus sc-win32-status
 2011-01-01 10:00:01 POST /printers/.printer - 80 - 404 13 0
 ```
 
-IIS enforces this request size rule as a security measure. So it isn't recommended to increase the `maxAllowedContentLength` value greater than needed.
+IIS enforces this request size rule as a security measure. So it isn't recommended to increase the `maxAllowedContentLength` value greater than needed.
 
 For more information on how to modify the `maxAllowedContentLength` configuration property in IIS, visit [Error message when you visit a Web site that is hosted on a server that is running Internet Information Services 7.0: 'HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE'](https://support.microsoft.com/help/942074).

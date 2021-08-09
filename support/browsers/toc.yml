@@ -6,28 +6,37 @@
     - name: Can't add favorites in enhanced protected mode
       href: cannot-add-favorites-in-enhanced-protected-mode.md
 
+    - name: Configure the home page URL takes no effect
+      href: configure-home-page-url-no-effect.md
+
     - name: Automatically detect settings not working
       href: automatically-detect-settings-enabled.md
 
     - name: Can't change home page
       href: cannot-change-home-page.md
 
+    - name: Customized settings in IEAK override defined settings
+      href: customized-settings-in-ieak-overtide-settings-defined-in-ie-maintenance-policy.md
+
     - name: Empty IEM is reported as winning
       href: empty-ie-policy-shown-as-winning.md
 
-    - name: Enhanced Protected Mode add-on compatibility
+    - name: Enhanced Protected Mode add-on compatibility
       href: enhanced-protected-mode-add-on-compatibility.md
+
+    - name: How Enterprise Mode works in Windows 10
+      href: internet-explorer-mode-windows-10.md
 
     - name: How to change homepage and search provider
       href: change-homepage-and-search-provider.md
 
-    - name: How to set Internet Explorer to open Office documents in Office program
+    - name: How to set Internet Explorer to open Office documents in Office program
       href: how-to-set-ie-to-open-office-documents-in-office-program.md
 
     - name: How to check version
       href: check-ie-version.md
 
-    - name: How to set Group Policy Preference settings
+    - name: How to set Group Policy Preference settings
       href: how-to-configure-group-policy-preference-settings.md
 
     - name: How to set advanced settings via GPOs
@@ -36,13 +45,19 @@
     - name: How to disable password caching
       href: disable-password-caching.md
 
+    - name: Internet Explorer 11 can't download new Enterprise Mode site list XML file
+      href: internet-explorer-11-does-not-download-new-enterprise-mode-site-list-xml.md
+
+    - name: K-12 assessments unexpectedly report apps running in background
+      href: k-12-assessments-reports-apps-background.md
+
     - name: Non-secure content can't be displayed
       href: only-secure-content-is-displayed-message.md
 
-    - name: PAC file isn't read
+    - name: PAC file isn't read
       href: cannot-read-pac-file.md
 
-    - name: 32-bit browser applications don't work as expected
+    - name: 32-bit browser applications don't work as expected
       href: 32-bit-browser-applications-not-working-as-expected.md
 
 - name: Connectivity and Navigation
@@ -53,7 +68,7 @@
     - name: Download html files via download manager
       href: how-ie-downloads-html-files.md
 
-    - name: How to change keep-alive time-out value
+    - name: How to change keep-alive time-out value
       href: change-keep-alive-time-out.md
 
     - name: How to reset proxy settings
@@ -61,6 +76,9 @@
 
     - name: How to prevent caching
       href: how-to-prevent-caching.md
+
+    - name: Internet Explorer uses proxy server for local IP address
+      href: internet-explorer-uses-proxy-server-local-ip-address.md
 
     - name: Intranet options are enabled automatically
       href: intranet-options-enabled-automatically.md
@@ -70,6 +88,9 @@
 
     - name: Nearly 49.7 days trigger timeout events
       href: timeout-events-in-ie-get-fired.md
+
+    - name: No Internet connectivity if Internet Explorer isn't started
+      href: no-internet-connectivity-internet-explorer-not-started.md
 
     - name: Optimize PAC performance
       href: optimize-pac-performance.md
@@ -83,7 +104,7 @@
     - name: Persistent cookies lost between Internet Explorer and Office
       href: cookies-not-shared-with-office.md
 
-    - name: Repeatedly prompted for credentials to use proxy server
+    - name: Repeatedly prompted for credentials to use proxy server
       href: repeatedly-prompted-to-enter-credentials-to-use-proxy-server.md
 
     - name: Session variables are missing
@@ -106,7 +127,7 @@
     - name: Can't add local pages to Favorites
       href: cannot-pin-local-webpage.md
 
-    - name: Can't print from the web as another user
+    - name: Can't print from the web as another user
       href: cannot-print-from-web-using-another-user.md
 
     - name: Cursor style remains with pressed mouse
@@ -127,6 +148,9 @@
     - name: How to set full-screen mode
       href: how-to-set-fullscreen.md
 
+    - name: Microsoft Store app doesn't open from Internet Explorer print menu
+      href: microsoft-store-app-does-not-open.md
+
     - name: Reset zoom level not respected
       href: new-window-not-respect-zoom-level.md
 
@@ -144,8 +168,14 @@
     - name: ActiveX controls stop receiving focus
       href: webpage-fails-to-get-focus-ie-9.md
 
+    - name: Animated GIF is not animated in separate instances
+      href: animated-gif-not-animated-separate-instances.md
+
     - name: BHOs and toolbars not working
       href: third-party-products-break.md
+
+    - name: Browser default action for Ctrl+P cannot be prevented
+      href: browser-default-action-ctrlp-cannot-prevented.md
 
     - name: CSS styles webpage renders incorrectly
       href: css-styles-webpage-renders-wrongly.md
@@ -198,8 +228,8 @@
     - name: How to hide the Clear button
       href: how-to-hide-clear-button-ie-10.md
 
-    - name: Internet Explorer document modes FAQ
-      href: ie-document-modes-faq.md
+    - name: Internet Explorer document modes FAQ
+      href: ie-document-modes-faq.yml
 
     - name: Iframe content should be rendered in standard mode
       href: iframe-content-on-top-scrollbar.md
@@ -293,13 +323,22 @@
     - name: WPAD data collection
       href: ie-wpad-diagnostic.md
 
+    - name: Incorrect URL shortcut icon
+      href: general/edge-icon-show-for-url-shortcut.md
+
 - name: Installation
   items:
     - name: How to create all-inclusive deployment package
       href: create-all-inclusive-deploy-package.md
 
-    - name: How to repair or reinstall Internet Explorer
+    - name: How to disable Internet Explorer on Windows
+      href: disable-internet-explorer-windows.md
+
+    - name: How to repair or reinstall Internet Explorer
       href: how-to-repair-or-reinstall-ie.md
+
+    - name: How to troubleshoot Internet Explorer 9 installation issues
+      href: how-to-successfully-install-internet-explorer-9.md
 
     - name: Internet Explorer 11 installation fails
       href: ie-installation-fails.md
@@ -316,9 +355,6 @@
     - name: Sysprep fails when Internet Explorer 10 is installed
       href: sysprep-fail-after-ie-10-installed.md
 
-    - name: Troubleshoot Internet Explorer 9 installation issues
-      href: troubleshoot-installation-problems-ie-9.md
-
     - name: Can't uninstall Internet Explorer 9
       href: what-to-do-if-you-cannot-uninstall-internet-explorer-9.md
 
@@ -330,7 +366,7 @@
     - name: Can't view secure web sites
       href: cannot-view-secure-web-sites.md
 
-    - name: Can't sign in to VSTS
+    - name: Can't sign in to VSTS
       href: cannot-sign-in-to-vsts.md
 
     - name: Can't turn off Enhanced Security
@@ -343,24 +379,24 @@
       href: cannot-open-certain-files.md
 
     - name: FAQs about Enhanced Security Configuration
-      href: enhanced-security-configuration-faq.md
+      href: enhanced-security-configuration-faq.yml
 
     - name: Https site can't be displayed
       href: cannot-display-https-site.md
 
-    - name: Internet Explorer security zones registry entries
+    - name: Internet Explorer security zones registry entries
       href: ie-security-zones-registry-entries.md
 
-    - name: Information about the Unsafe File List
+    - name: Information about the Unsafe File List
       href: information-about-the-unsafe-file-list.md
 
-    - name: Java security setup
+    - name: Java security setup
       href: how-to-set-java-security.md
 
     - name: Prompt for a password when using authentication
       href: prompt-for-username-and-password.md
 
-    - name: Protect yourself from spoofed Web sites
+    - name: Protect yourself from spoofed Web sites
       href: steps-to-identify-and-protect-from-spoofed-web-sites.md
 
     - name: Smart card pin prompt appears in Internet Explorer 9
@@ -383,7 +419,13 @@
     - name: Flickers when showing animated content
       href: ie-flickers-with-hybrid-graphics.md
 
-    - name: Internet Explorer opens, flashes, and closes immediately when starting
+    - name: How to prepare support calls for browser crashes
+      href: preparing-support-calls-browser-crashes.md
+
+    - name: Internet Explorer 11 stops responding when selecting strings
+      href: ie-11-stops-responding-selecting-strings-selection-gripper.md
+
+    - name: Internet Explorer opens, flashes, and closes immediately when starting
       href: ie-opens-flashes-and-closes-immediately-when-starting.md
 
     - name: Memory usage rises due to iframes
@@ -398,5 +440,8 @@
     - name: Slow rendering for document mode
       href: document-modes-slow-rendering.md
 
-    - name: We were unable to return you to your webpage error
+    - name: Slow browsing in Internet Explorer
+      href: slow-browsing-internet-explorer.md
+
+    - name: We were unable to return you to your webpage error
       href: we-were-unable-to-return-you-to-your-webpage-error.md

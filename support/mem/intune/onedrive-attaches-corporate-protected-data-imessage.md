@@ -26,13 +26,13 @@ You can change the behavior through a Mobile Device Management (MDM) setting by 
 - **Allow unmanaged documents in other managed apps** (iOS 8.01 and later)
 
 > [!NOTE]
-> These policy settings block users from attaching the deep link to an iMessage.
+> These policy settings block users from attaching the deep link to an iMessage.
 
 ## More information
 
-OneDrive continues to protect corporate data when it is managed. The recipient is still required to have OneDrive installed and be authenticated by using an account that has access to the document. The attached files are deep links to the document within the app. iMessage is not consuming the document in any way. It is only a medium to transfer a deep link. The **Only Managed Apps** setting is still obeyed.
+OneDrive continues to protect corporate data when it is managed. The recipient is still required to have OneDrive installed and be authenticated by using an account that has access to the document. The attached files are deep links to the document within the app. iMessage is not consuming the document in any way. It is only a medium to transfer a deep link. The **Only Managed Apps** setting is still obeyed.
 
 > [!NOTE]
-> This applies to all file types that are managed (links that are made to resemble real files). A file shows a thumbnail only if it is originating from an unmanaged or consumer account.
+> This applies to all file types that are managed (links that are made to resemble real files). A file shows a thumbnail only if it is originating from an unmanaged or consumer account.
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]

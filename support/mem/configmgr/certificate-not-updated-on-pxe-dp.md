@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4511618
 
 ## Symptoms
 
-After you update the certificate of a DP that's used for PXE boot, the updated certificate doesn't seem to be used. When you restart Windows Deployment Services (WDS) on the PXE-enabled DP, the following error entries are logged in the SMSPXE.log file:
+After you update the certificate of a DP that's used for PXE boot, the updated certificate doesn't seem to be used. When you restart Windows Deployment Services (WDS) on the PXE-enabled DP, the following error entries are logged in the SMSPXE.log file:
 
 > Begin validation of Certificate [Thumbprint <Old_Cert_Thumbprint>] issued to '\<DP Server>'  
 > Certificate [<Old_Cert_Thumbprint>] issued to '<DP_Server>' has expired.  
@@ -36,9 +36,9 @@ Additionally, the following entry is not logged in the Distmgr.log file on the p
 > DP registry settings have been successfully updated on \<DP_Server>
 
 > [!NOTE]
-> This log entry would indicate that the new certificate is updated in the registry of the DP.
+> This log entry would indicate that the new certificate is updated in the registry of the DP.
 
-Instead, the following error entry is logged in Distmgr.log:
+Instead, the following error entry is logged in Distmgr.log:
 
 > Failed to get the encrypted PXE password
 
@@ -49,14 +49,14 @@ In this scenario, you observe the following conditions:
     > DP cert query: EXEC spUpdateDPCert N'<DP_Server>', N'\<data>', 0x, <Cert_Info_Blob>
 
     > [!NOTE]
-    > This entry indicates that the **spUpdateDPCert** SQL Server stored procedure has run to update the certificate in the database.
+    > This entry indicates that the **spUpdateDPCert** SQL Server stored procedure has run to update the certificate in the database.
 
 - The certificate is updated in the database.
 - In the Configuration Manager console, the new certificate is displayed under **Administration** > **Overview** > **Security** > **Certificates**.
 
 ## Cause
 
-In most cases, this issue occurs if a PXE password is specified in the properties of the DP, and the parent site is moved to another server or is recovered from a backup on a rebuilt server.
+In most cases, this issue occurs if a PXE password is specified in the properties of the DP, and the parent site is moved to another server or is recovered from a backup on a rebuilt server.
 
 In this case, the machine keys have changed between the old instance of the site and the new instance of the site. The machine keys from the original site are required to correctly decrypt the PXE password. Because the machine keys from the original site are no longer available, the PXE password can't be decrypted and set. If a PXE password is specified, the PXE password must be reset before the new certificate can be set in the registry of the DP.
 
@@ -74,7 +74,7 @@ To fix this issue, follow these steps:
 
     > DP registry settings have been successfully updated on <DP_Server>
 
-3. Restart WDS on the DP, verify that the certificate thumbprint in SMSPXE.log belongs to the updated certificate, and that no error entry is logged in SMSPXE.log.
+3. Restart WDS on the DP, verify that the certificate thumbprint in SMSPXE.log belongs to the updated certificate, and that no error entry is logged in SMSPXE.log.
 
 4. Re-enable the PXE password on the DP.
 

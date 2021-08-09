@@ -4,36 +4,34 @@ description: Describes an issue in which using LBFO causes additional gateways t
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, Joelch
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Additional default gateways may appear in persistent routes when you use LBFO
 
 This article provides a solution to an issue where additional default gateways appear in persistent routes when you use Load Balancing and Failover (LBFO).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2966111
 
 ## Symptoms
 
-Assume that a network adapter is configured with IP settings that include a default gateway. Later, a LBFO team is created that includes the previously configured network adapter. The newly created teamed network adapter is configured with IP settings. In this situation, you may see the previously configured default gateway route and the newly configured default gateway route in the "Persistent Route" section of the Route Print command output.
+Assume that a network adapter is configured with IP settings that include a default gateway. Later, an LBFO team is created that includes the previously configured network adapter. The newly created teamed network adapter is configured with IP settings. In this situation, you may see the previously configured default gateway route and the newly configured default gateway route in the "Persistent Route" section of the Route Print command output.
 
 For example, if an adapter is configured with a default gateway of 10.0.0.1, and it is then added to an LBFO teamed adapter that is configured with a default gateway of 192.168.0.1, both default routes may appear under the "Persistent Route" section of the Route Print command output as shown here:
 
-```console
-===========================================================================
-Persistent Routes:
-Network Address Netmask Gateway Address Metric
- 0.0.0.0 0.0.0.0 10.0.0.1 Default
- 0.0.0.0 0.0.0.0 192.168.0.1 Default
-===========================================================================
-```
+> \===========================================================================  
+Persistent Routes:  
+Network Address &nbsp; &nbsp; Netmask &nbsp; Gateway Address &nbsp; Metric  
+0.0.0.0 &emsp; &emsp; &emsp; &emsp; &emsp;0.0.0.0 &emsp; &emsp; 10.0.0.1 &emsp; &emsp; &emsp;Default  
+0.0.0.0 &emsp; &emsp; &emsp; &emsp; &emsp;0.0.0.0 &emsp; &emsp; 192.168.0.1&emsp;&emsp; Default  
+\===========================================================================
 
 However, in the "Active Routes" section of the Route Print command output, only the newly configured LBFO teamed adapter default gateway is present.
 

@@ -4,20 +4,20 @@ description: Describes how you can use the Ntdsutil.exe utility to move or to se
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.prod-support-area-path: Active Directory FSMO
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Transfer or seize FSMO roles in Active Directory Domain Services
 
 This article describes when and how to transfer or seize Flexible Single Master Operations (FSMO) roles.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
 _Original KB number:_ &nbsp; 255504
 
 ## More information
@@ -28,8 +28,8 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 |---|---|---|
 |Schema master|Forest-wide|CN=Schema,CN=configuration,DC=\<forest root domain>|
 |Domain naming master|Forest-wide|CN=configuration,DC=\<forest root domain>|
-|RID master|Domain-wide|DC=\<domain>|
 |PDC emulator|Domain-wide|DC=\<domain>|
+|RID master|Domain-wide|DC=\<domain>|
 |Infrastructure master|Domain-wide|DC=\<domain>|
 ||||
 
@@ -41,8 +41,6 @@ For more information about the FSMO role holders and recommendations for placing
 When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it does not immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
 
 The information that the DCs pass as part of Active Directory replication includes the identities of the current FSMO role holders. When the newly started DC receives the inbound replication information, it verifies whether it is still the role holder. If it is, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate FSMO role holders.
-
-For more information, see [Initial synchronization requirements for Windows Server operations master role holders](https://support.microsoft.com/help/305476).
 
 > [!IMPORTANT]
 > AD FS operations fail if they require a role holder and if the newly started role holder is, in fact, the role holder and it does not receive inbound replication.  
@@ -112,10 +110,10 @@ For more information, see:
 
 ## Seize or transfer FSMO roles
 
-You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole).
+You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
 
 > [!IMPORTANT]
-> If you have to seize the RID master role, consider using the [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole) cmdlet instead of the Ntdsutil.exe utility.
+> If you have to seize the RID master role, consider using the [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet instead of the Ntdsutil.exe utility.
 >
 > To avoid the risk of duplicate SIDs in the domain, Ntdsutil increments the next available RID in the pool by 10,000 when you seize the RID master role. This behavior can cause your forest to completely consume its available ranges for RID values (also known as RID burn). In contrast, if you use the PowerShell cmdlet to seize the RID master role, the next available RID is not affected.
 
@@ -147,7 +145,7 @@ To seize or transfer the FSMO roles by using the Ntdsutil utility, follow these 
       > [!NOTE]
       > In this command, \<role> is the role that you want to seize.
 
-   For example, to seize the RID master role, type *seize rid master*. The one exception is for the PDC emulator role, whose syntax is **seize pdc**, not **seize pdc emulator**.
+   For example, to seize the RID master role, type *seize rid master*. Exceptions are for the PDC emulator role, whose syntax is **seize pdc**, and the Domain naming master, whose syntax is **seize naming master**.
 
    To see a list of roles that you can transfer or seize, type *?* at the **fsmo maintenance** prompt, and then press Enter, or see the list of roles at the start of this article.
 
@@ -196,16 +194,15 @@ The following table identifies the FMSO roles that can cause problems if a fores
 
 This issue does not affect the PDC Emulator master or the Infrastructure master. These role holders do not persist operational data. Additionally, the Infrastructure master does not make changes often. Therefore, if multiple islands have these role holders, you can reintegrate the islands without causing long-term issues.
 
-The Schema master, the Domain Naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
+The Schema master, the Domain naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
 
 ## References
 
 For more information, see:
 
-- [Active Directory FSMO roles in Windows](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles)
+- [Active Directory FSMO roles in Windows](/troubleshoot/windows-server/identity/fsmo-roles)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
-- [Initial synchronization requirements for Windows Server operations master role holders](https://support.microsoft.com/help/305476)
 - [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)
 - [Troubleshoot DNS Event ID 4013: The DNS server was unable to load AD integrated DNS zones](https://support.microsoft.com/help/2001093)
 - [DCPROMO demotion fails if unable to contact the DNS infrastructure master](https://support.microsoft.com/help/2694933)
@@ -214,4 +211,4 @@ For more information, see:
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
 - [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
-- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole?view=win10-ps&preserve-view=true)
+- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole)

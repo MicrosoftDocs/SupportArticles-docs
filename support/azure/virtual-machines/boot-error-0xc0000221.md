@@ -4,6 +4,8 @@ description: Fixes error 0xc0000221, which occurs when you try to boot an Azure 
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error 0xc0000221 on an Azure VM
 
@@ -25,6 +27,9 @@ Info: The operating system couldn't be loaded because the kernel is missing or c
 This issue occurs if the file system is corrupted.
 
 ## Resolutions
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 

@@ -4,20 +4,20 @@ description: This article describes an issue in which the WLAN is disconnected i
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Windows Connection Manager disconnects WLAN if a VPN connection is established
 
 This article provides a resolution for the issue that Windows Connection Manager disconnects WLAN if a VPN connection is established.
 
-_Original product version:_ &nbsp; Windows 8 Pro  
+_Applies to:_ &nbsp; Windows 8 Pro  
 _Original KB number:_ &nbsp; 2919900
 
 ## Symptom
@@ -38,14 +38,14 @@ To check this, open registry editor, and then browse to this key:
 
 `"*IfType"=dword:00000006 ==> IF_TYPE_ETHERNET_CSMACD`
 
->[!Note]  
-xxxx corresponds to the number below that you can find the name of your VPN Adapter. If the value for IfType equals to 6, the Adapter is considered an Ethernet Adapter.
+> [!Note]  
+> xxxx corresponds to the number below that you can find the name of your VPN Adapter. If the value for IfType equals to 6, the Adapter is considered an Ethernet Adapter.
 
 Starting with Windows 8, the WCMSVC (Windows Connection Manager) disconnects the WLAN connection because an Ethernet Adapter is seen as more reliable and provides better performance compared to a WLAN connection. These items are taken into account during the decision:
 
 - Adapter type, Ethernet, wireless, virtual
 - Does an adapter hold the default gateway and default route?
-- Does Network Connectivity Status Indicator (NCSI) probed that the adapter is successfully connected to the Internet?
+- Does Network Connectivity Status Indicator (NCSI) probe that the adapter is successfully connected to the Internet?
 - Is the client's domain reachable on the adapter?
 
 ## Resolution
@@ -59,8 +59,8 @@ Configure the Windows Connection Manager GPO to "Disabled" by using Group Policy
 
 Alternatively you could change the IfType of the VPN interface to a value different from Ethernet.  
 
->[!NOTE]
->Changing this setting may have some side effects on the functionality of the VPN Adapter. Contact the manufacturer of the VPN Client to get more information.
+> [!NOTE]
+> Changing this setting may have some side effects on the functionality of the VPN Adapter. Contact the manufacturer of the VPN Client to get more information.
 
 The values for different Adapter types can be found here:  
 [https://msdn.microsoft.com/library/aa814491(VS.85).aspx](https://msdn.microsoft.com/library/aa814491%28vs.85%29.aspx)  

@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Session variables do not persist between requests after you install Internet Explorer security Patch
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides methods to solve the problem of missing session variables in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 5.5, Internet Explorer 6.0  
@@ -46,7 +48,5 @@ To work around this problem, use one of the following methods:
 This behavior is by design.
 
 ## References
-
-For more information about IIS configuration changes that may be necessary after you rename the server, see [Updating IIS After You Change the Computer Name](https://support.microsoft.com/help/234142/updating-iis-after-you-change-the-computer-name).
 
 For more information about the RFC 883 specifications, see [DOMAIN NAMES - IMPLEMENTATION and SPECIFICATION](https://www.ietf.org/rfc/rfc883.txt?number=883).

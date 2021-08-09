@@ -1,23 +1,23 @@
 ---
 title: Move Terminal Services CALs from one license server to another
-description: Describes how to move Terminal Services CALs from one license server to another in Windows 2000, Windows 2003, and Windows 2008. You must have the original license documents to perform this operation.
+description: Describes how to move Terminal Services CALs from one license server to another in Windows. You must have the original license documents to perform this operation.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# How to move Terminal Services CALs from one license server to another in Windows 2000, Windows Server 2003 and Windows Server 2008
+# How to move Terminal Services CALs from one license server to another in Windows
 
-This article describes how to move Terminal Services Client Access Licenses (CALs) from one Terminal Services license server to another in Windows 2000, Windows Server 2003, and Windows Server 2008.
+This article describes how to move Terminal Services Client Access Licenses (CALs) from one Terminal Services license server to another in Windows.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 953918
 
 ## Introduction
@@ -41,9 +41,11 @@ To move the CALs, follow these steps.
 4. In the Terminal Server Licensing snap-in, right-click the Terminal Services license server, and then click **Properties**. In the **Installation method** list, click **Telephone**, and then click **OK**.
 5. Right-click the Terminal Services license server, and then click **Install Licenses**. The **Welcome to the Terminal Server CAL Installation Wizard** dialog box appears.
 6. Click **Next**. In the **Obtain Client License Key Pack** dialog box, you'll find the license server ID.
-7. Use this license server ID to obtain a CAL Key Pack ID. To install CALs on the new license server, you must have a CAL Key Pack ID. You can receive a CAL Key Pack ID from the Microsoft Clearinghouse or by visiting the following Microsoft Web site: [https://activate.microsoft.com](https://activate.microsoft.com)
-To contact the Microsoft Clearinghouse, use the following telephone number:1-888-571-2048
-The representative at the Microsoft Clearinghouse will give you a new CAL Key Pack ID. You can also contact Microsoft Customer Support Services at the following telephone number: 1-800-936-3100
+7. Use this license server ID to obtain a CAL Key Pack ID. To install CALs on the new license server, you must have a CAL Key Pack ID. You can receive a CAL Key Pack ID from the Microsoft Clearinghouse or by visiting the following Microsoft Web site: [Remote Desktop Services](https://activate.microsoft.com).
+
+    To contact the Microsoft Clearinghouse, use the following telephone number: 1-888-571-2048.
+
+    The representative at the Microsoft Clearinghouse will give you a new CAL Key Pack ID. You can also contact Microsoft Customer Support Services at the following telephone number: 1-800-936-3100.
 
     For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
@@ -61,4 +63,4 @@ If you restore the system state data and the database to the original Terminal S
 
 ## References
 
-For more information about Terminal Services, visit the following Microsoft Web site: [Terminal Services](https://technet.microsoft.com/library/bb742597.aspx)
+For more information about Terminal Services, visit the following Microsoft Web site: [Terminal Services](/previous-versions/windows/it-pro/windows-2000-server/bb742597(v=technet.10))

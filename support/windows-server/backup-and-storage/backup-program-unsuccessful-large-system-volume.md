@@ -4,20 +4,20 @@ description: Provides a resolution for the issue that backup program is unsucces
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server 
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Backup program is unsuccessful when you back up a large system volume
 
 This article provides a resolution for the issue that backup program is unsuccessful when you back up a large system volume.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 304101
 
 ## Symptoms
@@ -165,9 +165,7 @@ Value data: 15
 4. Quit Registry Editor.
 5. Restart your computer.  
 
-Because you must test these settings during the most stressful backups, you may have to wait a month for a whole backup cycle to complete if you are not sure which backup consumes the most resources. Because of it, Microsoft recommends that you test low values first. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[171458](https://support.microsoft.com/help/171458) Windows NT may fail on request to open large files  
+Because you must test these settings during the most stressful backups, you may have to wait a month for a whole backup cycle to complete if you are not sure which backup consumes the most resources. Because of it, Microsoft recommends that you test low values first.  
 
 #### Resolve the second problem
 

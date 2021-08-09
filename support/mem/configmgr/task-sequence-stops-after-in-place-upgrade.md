@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4470553
 
 ## Symptoms
 
-You run the Windows 10 in-place upgrade task sequence in Configuration Manager to upgrade the operating system on the computer. If you upgrade from Windows 7 or Windows 8.1 to Windows 10, the task sequence doesn't continue after the in-place upgrade completes. Additionally, when you examine the smsts.log file, you find the following entries logged:
+You run the Windows 10 in-place upgrade task sequence in Configuration Manager to upgrade the operating system on the computer. If you upgrade from Windows 7 or Windows 8.1 to Windows 10, the task sequence doesn't continue after the in-place upgrade completes. Additionally, when you examine the smsts.log file, you find the following entries logged:
 
 > TSManager Start to compile TS policy  
 > TSManager spPolicyNamespace.Open(pszNamespace, true), HRESULT=8004100e (..\utils.cpp,3450)  
@@ -31,18 +31,18 @@ You run the Windows 10 in-place upgrade task sequence in Configuration Manager t
 
 ## Cause
 
-This issue can occur if Windows Management Framework (WMF) 5.1 was already installed on the OS (Windows 7 or Windows 8.1) when the in-place upgrade task sequence started.
+This issue can occur if Windows Management Framework (WMF) 5.1 was already installed on the OS (Windows 7 or Windows 8.1) when the in-place upgrade task sequence started.
 
-WMF 5.1 installs a Windows 10 version of the **WMIMigrationPlugin.dll** file in the `C:\Windows\System32\migration` directory. This DLL is responsible for migrating the WMI repository during the in-place upgrade. However, the Windows 10 version of the **WMIMigrationPlugin.dll** file is incompatible with Windows 7 and Windows 8.1. Therefore, the migration of the WMI repository fails during the in-place upgrade. This results in the WMI repository becoming corrupted, and the task sequence can't continue in the new (Windows 10) OS.
+WMF 5.1 installs a Windows 10 version of the **WMIMigrationPlugin.dll** file in the `C:\Windows\System32\migration` directory. This DLL is responsible for migrating the WMI repository during the in-place upgrade. However, the Windows 10 version of the **WMIMigrationPlugin.dll** file is incompatible with Windows 7 and Windows 8.1. Therefore, the migration of the WMI repository fails during the in-place upgrade. This results in the WMI repository becoming corrupted, and the task sequence can't continue in the new (Windows 10) OS.
 
 ## Resolution
 
-This issue is fixed by the latest Windows 7 cumulative update. If the latest Windows 7 cumulative update is installed after WMF 5.1 is installed, the cumulative update correctly replaces **WMIMigrationPlugin.dll** with a Windows 7-compatible version. However, if WMF 5.1 is installed after the last Windows 7 cumulative update is installed, the issue will still occur. The issue will then get corrected when the next Windows 7 cumulative update is installed.
+This issue is fixed by the latest Windows 7 cumulative update. If the latest Windows 7 cumulative update is installed after WMF 5.1 is installed, the cumulative update correctly replaces **WMIMigrationPlugin.dll** with a Windows 7-compatible version. However, if WMF 5.1 is installed after the last Windows 7 cumulative update is installed, the issue will still occur. The issue will then get corrected when the next Windows 7 cumulative update is installed.
 
 > [!IMPORTANT]
 > There is currently no fix for this issue in the Windows 8.1 cumulative updates.
 
-For Windows 7 scenarios where WMF 5.1 was installed after the last cumulative update and for all Windows 8.1 scenarios, or just to make sure that a correct version of **WMIMigrationPlugin.dll** is installed before you run an in-place upgrade in Windows 7 or Windows 8.1, tasks can be added to the task sequence to remediate the issue.
+For Windows 7 scenarios where WMF 5.1 was installed after the last cumulative update and for all Windows 8.1 scenarios, or just to make sure that a correct version of **WMIMigrationPlugin.dll** is installed before you run an in-place upgrade in Windows 7 or Windows 8.1, tasks can be added to the task sequence to remediate the issue.
 
 A download of the exported task sequence that contains the steps that should be added to the in-place upgrade task sequence in Configuration Manager is available.
 

@@ -4,20 +4,20 @@ description: Fixes a problem that occurs when you try to create a cluster on a s
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ahmedb, dewitth
 ms.prod-support-area-path: Initial Cluster Creation or Adding node
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # You receive an error message, and event ID 1289 is logged when you try to create a cluster 
 
 This article helps to fix a problem that occurs when you try to create a cluster on a set of computers that have the Failover Clustering feature installed.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 973838
 
 ## Symptoms

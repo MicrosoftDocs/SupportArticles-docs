@@ -4,20 +4,20 @@ description: Provides a solution to an issue where default gateway route doesn't
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Default gateway route doesn't appear in the Routing Table after you re-add a Routing and Remote Access interface
 
 This article provides a solution to an issue where default gateway route doesn't appear in the Routing Table.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 816905
 
 ## Symptoms

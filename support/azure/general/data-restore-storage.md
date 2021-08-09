@@ -1,7 +1,7 @@
 ---
 title: Data restore scenarios for Azure Storage service
 description: This article describes the data restore scenarios for Azure Storage service.
-ms.date: 08/14/2020
+ms.date: 01/26/2021
 author: genlin
 ms.author: genli
 ms.service: storage
@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 4012226
 
 After the storage account or blob container is deleted, it is queued to be recycled and collected by the garbage collector. The system can then free up space for reuse. The deleted storage account or blob container may be restored if the garbage collector has not yet run and the storage space is not yet cleaned up. 
 
-The time at which the garbage collector is run varies depending on many factors, such as workloads on the storage scale unit, the number of available storage spaces, and so on. On average, the garbage collection of storage accounts occurs 14 days after deletion. However, this time to restore is not guaranteed.  
+The time at which the garbage collector is run varies depending on many factors, such as workloads on the storage scale unit, the number of available storage spaces, and so on. On average, the garbage collection of storage accounts occurs 14 days after deletion. Typically the data is unrecoverable by Microsoft. It is recommended to enabled soft delete for blobs that allow you to recover blob data after it has been deleted. For more information, see [Soft delete for blobs](https://docs.microsoft.com/azure/storage/blobs/soft-delete-blob-overview).
 
 ## Data restore scenarios
 

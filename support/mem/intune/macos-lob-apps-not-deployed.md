@@ -13,27 +13,27 @@ _Original KB number:_ &nbsp; 4344141
 
 ## Symptoms
 
-You [add a macOS line-of-business (LOB) app to Microsoft Intune](/mem/intune/apps/lob-apps-macos), and then you try to deploy the app to macOS devices. However, the app isn't installed on the targeted devices, and no error messages are shown in Intune.
+You [add a macOS line-of-business (LOB) app to Microsoft Intune](/mem/intune/apps/lob-apps-macos), and then you try to deploy the app to macOS devices. However, the app isn't installed on the targeted devices, and no error messages are shown in Intune.
 
 ## Cause
 
-The issue occurs if your .pkg package doesn't contain the following information:
+The issue occurs if your .pkg package doesn't contain the following information:
 
-- The package `version` and `CFBundleVersion` string in the packageinfo file.
-- The correct `install-location` in the pkg-info file.
+- The package `version` and `CFBundleVersion` string in the packageinfo file.
+- The correct `install-location` in the pkg-info file.
 
-This information is required so that Intune can deploy the app on targeted devices.
+This information is required so that Intune can deploy the app on targeted devices.
 
-To check whether your .pkg package contains the required information, follow these steps:
+To check whether your .pkg package contains the required information, follow these steps:
 
-1. On a macOS device, use the following `IntuneAppUtil` command within the [Intune App Wrapping Tool for Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac) to extract the detected parameters and version for the created *.intunemac* file:
+1. On a macOS device, use the following `IntuneAppUtil` command within the [Intune App Wrapping Tool for Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac) to extract the detected parameters and version for the created *.intunemac* file:
 
     `IntuneAppUtil -r <filename.intunemac> [-v]`
 
-2. Check whether the Detection.xml file contains the package version. Here is an example of the Detection.xml file:
+2. Check whether the Detection.xml file contains the package version. Here is an example of the Detection.xml file:
 
     ```xml
-    Archive:  SkypeForBusinessMacOS.intunemac
+    Archive:  SkypeForBusinessMacOS.intunemac
     extracting: IntuneMacPackage/Metadata/Detection.xml
     <?xml version="1.0" encoding="UTF-8"?>
     <PackageMetadata Version="1.0.0.0" TimeStamp="2018-05-18 20:38:20 +0000" MacOSX="10.13.4"
@@ -50,7 +50,7 @@ To check whether your .pkg package contains the required information, follow t
     </PackageMetadata>
     ```
 
-3. Run the following command to extract the pkg-info file in your .pkg file:
+3. Run the following command to extract the pkg-info file in your .pkg file:
 
     `xar -x -f <.pkg file path> -C <Output folder>`
 

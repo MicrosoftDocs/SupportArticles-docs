@@ -13,13 +13,13 @@ _Original KB number:_ &nbsp; 4342995
 
 ## Symptoms
 
-When you try to move a Microsoft Intune Exchange connector from an existing on-premises server that is running Microsoft Exchange Server to another on-premises server that is running Exchange, the configuration process fails and returns the following error message:  
+When you try to move a Microsoft Intune Exchange connector from an existing on-premises server that is running Microsoft Exchange Server to another on-premises server that is running Exchange, the configuration process fails and returns the following error message:
 
 > The Microsoft Intune Exchange Connector version is not supported.
 
 ## Cause
 
-This issue may occur if the original on-premises Exchange connector is still installed.
+This issue may occur if the original on-premises Exchange connector is still installed.
 
 ## Resolution
 
@@ -27,4 +27,4 @@ To resolve this issue, remove the original Exchange connector, and then install 
 
 ## More information
 
-For more information about how to install an Exchange connector, see [Set up the on-premises Intune Exchange connector](/mem/intune/protect/exchange-connector-install).
+For more information about how to install an Exchange connector, see [Set up the on-premises Intune Exchange connector](/mem/intune/protect/exchange-connector-install).

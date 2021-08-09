@@ -4,20 +4,20 @@ description: Provides a resolution for the issue that you can't modify user envi
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # You cannot modify user environment variables in the System Properties dialog box if you log on by using a standard user account
 
 This article provides a resolution for the issue that you can't modify user environment variables in the System Properties dialog box.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 931715
 
 ## Symptoms

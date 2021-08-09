@@ -26,11 +26,11 @@ You use the Authoring console in System Center 2012 Service Manager to extend th
 
 ## Cause
 
-This issue can occur if a management pack public key token is specified for an unsealed management pack. For example, you will find an entry similar to the following in the XML file for the management pack:
+This issue can occur if a management pack public key token is specified for an unsealed management pack. For example, you will find an entry similar to the following in the XML file for the management pack:
 
 > Category ID="RHI.UNIXComputer.CI.ClassExtension.Category" Value=\<"Console!Microsoft.EnterpriseManagement.ServiceManager.ManagementPack"> \<ManagementPackName>RHI.UNIXComputer.CI.ClassExtension\</ManagementPackName> \<ManagementPackVersion>1.0.0.0\</ManagementPackVersion> **\<ManagementPackPublicKeyToken>2abcXyz2d6760a2b\</ManagementPackPublicKeyToken>**
 
-When the authoring tool tries to validate the management pack XML file, the process fails because the management pack is not sealed, so we cannot add a new property successfully.
+When the authoring tool tries to validate the management pack XML file, the process fails because the management pack is not sealed, so we cannot add a new property successfully.
 
 ## Resolution
 
@@ -38,4 +38,4 @@ To resolve this issue, remove the `<ManagementPackPublicKeyToken>2abcXyz2d6760a2
 
 ## More Information
 
-The line `<ManagementPackPublicKeyToken>2abcXyz2d6760a2b</ManagementPackPublicKeyToken>` should be included only when you are going to seal the management pack. The public key token must match the .snk file that the management pack file will be sealed with.
+The line `<ManagementPackPublicKeyToken>2abcXyz2d6760a2b</ManagementPackPublicKeyToken>` should be included only when you are going to seal the management pack. The public key token must match the .snk file that the management pack file will be sealed with.

@@ -4,25 +4,25 @@ description: Describes new behavior in Windows Server 2003 SP1 that affects NTLM
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # New setting modifies NTLM network authentication behavior
 
 This article describes new behavior that affects NTLM password changes and how to change this behavior by using a registry.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 906305
 
 ## Introduction
 
-Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1) there is a change to NTLM network authentication behavior. Domain users can use their old password to access the network for one hour after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
+Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1), there is a change to NTLM network authentication behavior. Domain users can use their old password to access the network for one hour after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
 
 The goal of this change is to allow background processes such as services to continue running for some time until an administrator has the opportunity to update the credentials for the new password.
 

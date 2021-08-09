@@ -4,27 +4,27 @@ description: Describes how to prevent the name of the last logged-on user from b
 ms.date: 10/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
 ms.prod-support-area-path: Lock Screen or Screensaver
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # How to prevent the name of the last logged-on user from being displayed in the Log On to Windows dialog box in Windows Server 2003  
 
 This article describes how to prevent the name of the last logged-on user from being displayed in the **Log On to Windows** dialog box.
 
-_Original product version:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324740
 
 ## Summary
 
 By default, Windows displays the name of the last user who successfully logged on to the computer. This name is displayed in the **Log On to Windows** dialog box. Security administrators may prefer that the last logged-on user name not be displayed in the **Log On to Windows** dialog box. Although this configuration requires that users must type their user name (and password) each time that they sign in, it can help to prevent attempts by unauthorized users to gain access to the computer.
 
-You can use Group Policy to prevent the name of the lasted logged-on user from being displayed in the **Log On to Windows** dialog box. The group policy can apply to the local computer, sites, domains, and organizational units (OU).
+You can use Group Policy to prevent the name of the last logged-on user from being displayed in the **Log On to Windows** dialog box. The group policy can apply to the local computer, sites, domains, and organizational units (OU).
 
 ## Resolution
 

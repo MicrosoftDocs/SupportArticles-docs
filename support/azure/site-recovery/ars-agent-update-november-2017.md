@@ -84,6 +84,3 @@ This update replaces previously released update [KB 4041236](https://support.mic
 If you use System Center 2016 Data Protection Manager (SC DPM), Microsoft recommends that you apply [Update Rollup 1](https://support.microsoft.com/help/3190600) for System Center 2016 Data Protection Manager or a later version.
 
 If you use System Center 2012 R2 Data Protection Manager (SC DPM), apply [Update Rollup 12](https://support.microsoft.com/help/3209592/) for System Center 2012 R2 Data Protection Manager or a later version.
-
-## References
-Learn about the [terminology](https://support.microsoft.com/en-us/kb/824684) that Microsoft uses to describe software updates.

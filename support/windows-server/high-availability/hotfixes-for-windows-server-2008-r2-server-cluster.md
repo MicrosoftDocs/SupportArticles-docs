@@ -4,20 +4,20 @@ description: Discusses the recommended hotfixes and updates for Windows Server 2
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Replacing hardware and updating the operating system
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2008 R2-based server clusters
 
 This article describes the hotfixes and updates that we recommend that you install on each node of a Windows Server 2008 R2-based failover cluster.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2  
+_Applies to:_ &nbsp; Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 980054
 
 ## Summary
@@ -31,7 +31,7 @@ Use the information in the [More information](#more-information) section to help
 
 ## More information
 
-We recommend that you install Windows Server 2008 R2 Service Pack 1 (SP1), as it has many fixes for problems with Windows Clustering. We also recommend installing the hotfixes that are referenced in [2545685](https://support.microsoft.com/help/2545685). If for any reason you cannot immediately apply SP1, we recommend that you install the following Windows Server 2008 R2 hotfixes, depending on your environment.
+We recommend that you install Windows Server 2008 R2 Service Pack 1 (SP1), as it has many fixes for problems with Windows Clustering. We also recommend installing the hotfixes that are referenced in [Recommended hotfixes and updates for Windows Server 2008 R2 SP1 Failover Clusters](/troubleshoot/windows-server/high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster). If for any reason you cannot immediately apply SP1, we recommend that you install the following Windows Server 2008 R2 hotfixes, depending on your environment.
 
 ### General hotfixes
 
@@ -61,4 +61,4 @@ To avoid performance issues on the cluster and possible system crashes, install 
 
 We recommend that you install the following hotfixes, depending on the resources that are running on the server cluster. You do not have to install these hotfixes if you are not running these resources on the server cluster.
 
-- [976571](https://support.microsoft.com/help/976571) Stability update for Windows Server 2008 R2 Failover Print Clusters
+[976571](https://support.microsoft.com/help/976571) Stability update for Windows Server 2008 R2 Failover Print Clusters

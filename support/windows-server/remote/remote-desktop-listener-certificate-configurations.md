@@ -4,20 +4,20 @@ description: Describes the methods to configure RDP listener certificates in Win
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS 
+ms.technology: windows-server-rds 
 ---
 # Remote Desktop listener certificate configurations
 
 This article describes the methods to configure listener certificates on a Windows Server 2012-based or Windows Server 2012-based server that is not part of a Remote Desktop Services (RDS) deployment.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3042780
 
 ## About Remote Desktop server listener availability

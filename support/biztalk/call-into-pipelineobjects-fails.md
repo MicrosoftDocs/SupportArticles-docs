@@ -27,7 +27,7 @@ When you make a call into the `PipelineObjects` assembly from your own applicati
 > at System.Activator.CreateInstance(Type type, Boolean nonPublic)  
 > at System.Activator.CreateInstance(Type type)  
 > at Microsoft.Test.BizTalk.PipelineObjects.PipelineFactory.CreatePipelineFromType(Type pipelineType)  
-> at MyTestApp.Program.Main(String[] args) in C:\MyTestApp\Program.cs:line 9  
+> at MyTestApp.Program.Main(String[] args) in C:\MyTestApp\Program.cs:line 9  
 > at System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)  
 > at System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)  
 > at Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()  

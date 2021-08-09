@@ -2,7 +2,7 @@
 title: Can't use the Scale-140 badge logo
 description: Works around problems in which you can't use the Scale-140 badge logo in Visual Studio 2012 Update 1.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Language or compilers
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: pchapman, rezac, rilee
 ---
 # You can't use the Scale-140 badge logo in Visual Studio 2012 Update 1

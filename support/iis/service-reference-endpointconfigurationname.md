@@ -2,7 +2,7 @@
 title: EndpointConfigurationName isn't updated
 description: This article describes the problem where EndpointConfigurationName properties in the activities that are added to the workflow aren't updated when you use Update Service Reference feature to update the client proxy and the configuration file.
 ms.date: 03/24/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: weixi, lezha, smason
 ---
 # An update to a service reference doesn't update the EndpointConfigurationName property setting in the activities in a Windows Workflow Foundation 4.0 application
@@ -30,7 +30,7 @@ This issue occurs because the endpoint name is changed by using one of the follo
 - You explicitly changed the endpoint name in the service configuration file.
 - You didn't specify the endpoint name in the service configuration file.
 
-By default, the `EndpointConfigurationName` that is generated on client side is *BindingType_ServiceContractName*. When you change the binding type or service contract name, the default endpoint name is updated accordingly.
+By default, the `EndpointConfigurationName` that is generated on client side is *BindingType_ServiceContractName*. When you change the binding type or service contract name, the default endpoint name is updated accordingly.
 
 ## Resolution
 

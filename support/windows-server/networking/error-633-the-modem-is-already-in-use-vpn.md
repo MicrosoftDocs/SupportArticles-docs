@@ -4,20 +4,20 @@ description: Describes an issue where you may not be able to establish a VPN con
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, santoshc
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: networking
 ---
 # "Error 633 - the modem (or other connecting device) is already in use" error message when you try to establish a VPN connection
 
 This article provides a workaround for the issue where you may not be able to establish a VPN connection because of a TCP port conflict.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 885959
 
 >[!IMPORTANT]

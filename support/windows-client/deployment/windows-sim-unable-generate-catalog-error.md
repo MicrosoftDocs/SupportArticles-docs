@@ -4,28 +4,28 @@ description: fixes errors that occur when generating a catalog (.clg) in Windows
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: scottmca, kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Error message: Windows SIM was unable to generate a catalog or Parameter count mismatch
 
 This article helps fix errors that occur when generating a catalog (.clg) in Windows System Image Manager (WSIM).
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2524737
 
 ## Symptoms
 
-When generating a catalog (.clg) in Windows System Image Manager (WSIM) or clicking Edit Unattend.xml in Microsoft Deployment Toolkit(MDT) and trying to generate a catalog file, it may take extended period of time before producing the error message and you may receive the following error messages:
+When generating a catalog (.clg) in Windows System Image Manager (WSIM) or clicking Edit Unattend.xml in Microsoft Deployment Toolkit (MDT) and trying to generate a catalog file, it may take extended period of time before producing the error message and you may receive the following error messages:
 
 > Windows SIM was unable to generate a catalog. For troubleshooting assistance, see the topic: 'Windows System Image Manager Technical Reference' in the Windows OPK or Windows AIK User's Guide.
-System.InvalidOperationException: The operation failed to complete. 
+System.InvalidOperationException: The operation failed to complete.  
 
 or
 
@@ -45,11 +45,11 @@ x86 Windows System Image Manager
 
 Can create catalogs for x86, x64, and Itanium-based Windows images.
 
-x64 Windows System Image Manager 
+x64 Windows System Image Manager  
 
 Can create catalogs only for x64 Windows images.
 
-Itanium-based Windows System Image Manager 
+Itanium-based Windows System Image Manager  
 
 Can create catalogs only for Itanium-based Windows images
 

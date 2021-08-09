@@ -4,20 +4,20 @@ description: Fixes an issue where users fail to access a resource and a System e
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Kerberos Service Principal Name on Wrong Account
 
 This article provides help to solve an issue where users fail to access a resource and a System event log shows Kerberos event 4.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2706695
 
 ## Symptoms
@@ -34,7 +34,7 @@ As a result, the server can't decrypt the ticket and gives back an error to the 
 
 ## Resolution
 
-To resolve this issue, the service principal name must be searched for and removed from the alternative account and then it must be added to the correct account in Active Directory. To do that follow these steps:
+To resolve this issue, the service principal name must be searched for and removed from the alternative account, and then it must be added to the correct account in Active Directory. To do that, follow these steps:
 
 1. At an elevated command prompt and using Enterprise Administrator credentials, run the command `setspn -Q <SPN>`. This will return a computer name. SetSPN.exe is installed with the Active Directory Directory Services role or with RSAT.
 2. Remove the incorrectly registered SPN by going to the command prompt and running the command `setspn -D <SPN> <computername>`.
@@ -54,8 +54,8 @@ KERBEROS Event ID 4
 Event Source: Kerberos  
 Event Category: None  
 Event ID: 4  
-Date: 8/17/2004  
-Time: 1:30:00 PM  
+Date: \<DateTime>  
+Time: \<DateTime>  
 User: N/A  
 Computer: MACHINENAMEDescription:  
 The kerberos client received a KRB_AP_ERR_MODIFIED error from the server

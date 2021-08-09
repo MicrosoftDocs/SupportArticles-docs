@@ -28,14 +28,14 @@ Attempting to deploy the System Center Operations Manager Linux agent to a Red H
 This can occur for either of the following reasons:
 
 - Certificates may not be valid as the reporting server may have been changed.
-- The certificate contains an incorrect host name.
+- The certificate contains an incorrect host name.
 
 ## Resolution
 
 To resolve this issue, complete the following steps:
 
-1. Remove the existing contents of the agent directory on the server and reinstall the agent RPM.
-1. Generate the certificate, making sure to use the correct host name:
+1. Remove the existing contents of the agent directory on the server and reinstall the agent RPM.
+1. Generate the certificate, making sure to use the correct host name:
 
    `/opt/Microsoft/scx/bin/tools/scssslconfig -f -h <hostname>`
 

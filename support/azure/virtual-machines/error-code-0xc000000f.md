@@ -4,6 +4,8 @@ description: Provides a solution to an issue where Windows VM doesn't start with
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows Boot BCD error 0xc000000f in the Azure VM
 
@@ -24,6 +26,9 @@ Status: 0xc000000f
 This issue occurs if t he Boot Configuration Data (BCD) is corrupted.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 

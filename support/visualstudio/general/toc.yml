@@ -62,6 +62,8 @@
     href: cannot-compile-32-bit-app-x64-machine.md
   - name: Help Viewer 2.0 crashes
     href: help-viewer-2-crashes.md
+  - name: Instrumenting an signed assembly would throw warning message
+    href: instrumenting-signed-assembly-throw-warning-message.md
   - name: LNK1102 error when you build projects
     href: linker-fatal-error-out-of-memory.md
   - name: Referenced project doesn't exist
@@ -94,6 +96,8 @@
 
 - name: Project/Build system
   items:
+  - name: Build errors when you delete the debug configuration
+    href: build-errors-delete-debug-configuration.md
   - name: Building a Windows 10 driver fails
     href: building-windows-10-driver-fails.md
   - name: Setup projects have dependencies on .NET Framework

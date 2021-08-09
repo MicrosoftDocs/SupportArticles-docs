@@ -6,7 +6,7 @@ ms.prod-support-area-path: Site behavior and performance
 ---
 # Error logging in HTTP APIs
 
-This article describes the error-logging capabilities of HyperText Transfer Protocol (HTTP) application programming interfaces (APIs).
+This article describes the error-logging capabilities of HyperText Transfer Protocol (HTTP) application programming interfaces (APIs).
 
 _Original product version:_ &nbsp; Windows Server 2008 R2, Windows Server 2008, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1  
 _Original KB number:_ &nbsp; 820729

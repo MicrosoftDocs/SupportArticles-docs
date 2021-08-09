@@ -4,20 +4,20 @@ description: Describes an issue that blocks you from deleting a recovery checkpo
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Snapshots, checkpoints, and differencing disks
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # You can't delete a recovery checkpoint for a virtual machine in Data Protection Manager
 
 This article describes an issue that blocks you from deleting a broken recovery checkpoint for a virtual machine in System Center 2012 Data Protection Manager.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3059372
 
 ## Symptoms

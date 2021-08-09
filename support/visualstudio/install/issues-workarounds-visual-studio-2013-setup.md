@@ -28,7 +28,7 @@ To work around these issues, try one or more of the following methods.
 
 ## 0x80200010, 0x80072efe, or 0x80072ee7 - connectivity issue during download
 
-This error typically occurs when the Visual Studio installer experiences issues that affect your Internet connection during the download of required components. If you receive one of these error messages, try again to install Visual Studio after your Internet connection improves. If you continue to see this error, try the following methods:
+This error typically occurs when the Visual Studio installer experiences issues that affect your Internet connection during the download of required components. When you receive one of these error messages, try again to install Visual Studio after your Internet connection improves. If you continue to see this error, try the following methods:
 
 - Install Visual Studio from a different source. For example, if you installed Visual Studio from [VisualStudio.com](https://visualstudio.microsoft.com/downloads/) or from the [Microsoft Download Center](https://www.microsoft.com/download), try downloading Visual Studio from [MSDN](https://msdn.microsoft.com//subscriptions/securedownloads).
 - Install Visual Studio by using the `layout` switch or an ISO file. For more information about how to do it, see [Install Visual Studio 2015](/visualstudio/install/install-visual-studio-2015).
@@ -37,7 +37,7 @@ This error typically occurs when the Visual Studio installer experiences issues 
 
 This error occurs when Visual Studio can't access one or more of the required installation files. This error may occur for any of the following reasons:
 
-- An outside process, such as an antivirus or anti-malware application, has locked a Visual Studio installation file at the same time that Visual Studio is trying to install the file. To work around this issue, coordinate with your system administrator or other IT professional to make sure that Visual Studio files are not locked by these processes.
+- An outside process, such as an antivirus or anti-malware application, has locked a Visual Studio installation file at the same time that Visual Studio is trying to install the file. To work around this issue, coordinate with your system administrator or other IT professional to make sure that Visual Studio files aren't locked by these processes.
 
 - The user who is trying to install Visual Studio doesn't have administrator credentials on the computer. To successfully install Visual Studio, you must be logged in as an administrator.
 
@@ -81,9 +81,9 @@ If you use an ISO file for your installation of Visual Studio, or if you use a d
 
 If the expected SHA-1 value doesn't match the value that is returned by the File Checksum tool, the ISO file is corrupted. In this case, delete the file, and then download it again.
 
-- If you obtained the ISO file from a DVD, you can try to download the Visual Studio web installer or ISO file from [MSDN](https://msdn.microsoft.com//subscriptions/securedownloads) or [Microsoft Download Center](https://www.microsoft.com/download), and then try the installation again.
+- If you obtained the ISO file from a DVD, try to download the Visual Studio web installer or ISO file from [MSDN](https://msdn.microsoft.com//subscriptions/securedownloads) or [Microsoft Download Center](https://www.microsoft.com/download), and then try the installation again.
 
-- If you purchased the DVD from a retail store, you might also be able to download Visual Studio from the store's website, and then use the license key that was provided together with the DVD to activate Visual Studio. Contact the retail store for more information about this process.
+- If you purchased the DVD from a retail store, you might also be able to download Visual Studio from the store's website. Then use the license key that was provided together with the DVD to activate Visual Studio. Contact the retail store for more information about this process.
 
 ### Error during a repair
 
@@ -108,18 +108,18 @@ To work around this issue, wait for the .NET Framework installer to finish befor
 
 ## Multiple feature installation errors occur after warning about certificate updates is ignored
 
-When you installed Visual Studio on Windows 7, you encountered the following warning:
+When you install Visual Studio on Windows 7, you receive the following warning:
 
 > Installation errors may occur because the security certificate updates that are required to install some Visual Studio components cannot be applied to this computer.
 
-If you select **Continue** to proceed with the Visual Studio installation, you may encounter the **Unable to locate package source** errors that are not resolved through the Download packages from the internet option. When the Visual Studio installation finishes, you see the following message:
+If you select **Continue** to proceed with the Visual Studio installation, you may encounter the **Unable to locate package source** errors that aren't resolved through the Download packages from the internet option. When the Visual Studio installation finishes, you see the following message:
 
 > Setup Completed. However, not all features installed correctly.
 
-You are also shown a list of multiple features that could not be installed because the system can't find the file specified. To fix the issue, try the following method:
+You are also shown a list of multiple features that couldn't be installed because the system can't find the file specified. To fix the issue, try the following method:
 
-- Ensure that you are on a computer that is connected to the internet.
-In some cases, Visual Studio is able to programmatically retrieve and then apply the required certificate updates so that the affected features can be successfully installed.
+- Ensure that you are on a computer that's connected to the internet.
+In some cases, Visual Studio can programmatically retrieve and then apply the required certificate updates so that the affected features can be successfully installed.
 
 - Check the group policy setting on your computer that controls automatic certificate updates. To check the setting, open the Group Policy Editor (gpedit.msc). From the Local Group Policy Editor, under **Computer Configuration**, expand **Administrative Templates**, expand **Internet Communication Management**, and then select **Internet Communication settings**. The setting that controls automatic certificate updates is **Turn off Automatic Root Certificates Update**. For Visual Studio to automatically retrieve and apply the required certificates, this setting should be **Disabled**.
 
@@ -128,7 +128,7 @@ In some cases, Visual Studio is able to programmatically retrieve and then apply
 
 - If the above steps don't resolve the issue, you can also try to manually install the required certificate updates. For information on how to obtain Windows update root certificates, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)).
 
-If you have already installed Visual Studio 2013, you can try to repair Visual Studio after you have tried one or more of the above methods; this process attempts to successfully install the features that did not install on the previous attempt. To repair Visual Studio, open **Programs and Features** (appwiz.cpl). From the **Programs and Features** window, right-click **Visual Studio 2013** and select **Change**, and then click **Repair** to initiate the repair process.
+If you have already installed Visual Studio 2013, try to repair Visual Studio after you have tried one or more of the above methods. This process attempts to successfully install the features that didn't install on the previous attempt. To repair Visual Studio, open **Programs and Features** (appwiz.cpl). From the **Programs and Features** window, right-click **Visual Studio 2013** and select **Change**, and then select **Repair** to initiate the repair process.
 
 > [!NOTE]
 > This error applies only to Windows 7 Service Pack 1 (SP1). Windows 8 and later versions of Windows have these certificate updates installed by default.
@@ -152,7 +152,7 @@ If you installed Visual Studio 2013 Preview and then installed a newer version o
 
 ## More information
 
-If this article doesn't address the Visual Studio installation issue that you're experiencing, visit [Visual Studio Setup and Installation forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vssetup) to find more information.
+If this article doesn't address the Visual Studio installation issue that you're experiencing, visit the [Visual Studio Setup and Installation forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vssetup) to find more information.
 
 Or, you may post your Visual Studio installation log file to the [Visual Studio Setup and Installation forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vssetup) and [Microsoft Community](https://answers.microsoft.com/) for further helps.
 

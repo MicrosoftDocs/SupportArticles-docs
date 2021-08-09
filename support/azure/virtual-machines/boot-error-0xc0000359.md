@@ -4,6 +4,8 @@ description: Provides the resolution for the Windows boot error code 0xc0000359 
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error 0xc0000359 in an Azure VM
 
@@ -27,6 +29,9 @@ In this message, \<BINARY> represents the actual binary file that's found.
 The issue occurs because the binary file is the 32-bit version and it needs to be replaced by the 64-bit version.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 

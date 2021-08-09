@@ -7,6 +7,8 @@ ms.reviewer: rtaylor, klaw
 ---
 # Persistent cookies are not shared between Internet Explorer and Office applications
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving issues when office applications communicate with the Web server that persistent cookies are not shared between them.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

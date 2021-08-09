@@ -21,7 +21,7 @@ When you try to [configure Microsoft Intune Integration in Jamf Pro](/mem/intune
 
 ## Cause
 
-This issue occurs if the ports that are required for communication between Jamf Pro and Intune are blocked by your firewall or proxy server.
+This issue occurs if the ports that are required for communication between Jamf Pro and Intune are blocked by your firewall or proxy server.
 
 ## Resolution
 

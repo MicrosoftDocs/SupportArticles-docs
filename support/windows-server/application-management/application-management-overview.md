@@ -1,18 +1,18 @@
 ---
 title: Application Management overview
-description: Overview of Application Management troubleshooting articles.
+description: Overview of Application Management troubleshooting articles for Windows Server.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
-# Application Management documentation
+# Application Management troubleshooting documentation for Windows Server
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Application Management-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 

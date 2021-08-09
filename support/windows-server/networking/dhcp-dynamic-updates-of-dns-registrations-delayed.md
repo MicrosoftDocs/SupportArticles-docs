@@ -4,20 +4,20 @@ description: Discusses that a change in the DHCP DNS update behavior in Windows 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
-ms.technology: Networking
+ms.technology: networking
 ---
 # DHCP dynamic updates of DNS registrations are delayed or not processed
 
 This article discusses that a change in the DHCP Domain Name System (DNS) update behavior may delay DNS registrations and provides help to solve this issue.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3069564
 
 ## Symptoms
@@ -33,9 +33,12 @@ By default, the DHCP server registers the PTR records for dynamic update-aware c
 In versions of Windows Server that are earlier than Windows Server 2008, the DHCP server uses the DNS servers that are configured in the TCP/IP properties of the network connections as the target of the dynamic updates.
 
 A change in the DHCP dynamic update behavior causes DHCP servers in Windows Server 2008 and later versions to select a DNS server by the following criteria in the given order:
+
 - Scope options
 - Server options
-- TCP/IP configuration of the network connectionsAssume that a scope is configured to have DHCP scope options and that DNS servers are configured. In this situation, the DNS servers that are specified in the scope options will be used as the target DNS servers by the DHCP server for dynamic updates for lease records from that scope.
+- TCP/IP configuration of the network connections
+
+Assume that a scope is configured to have DHCP scope options and that DNS servers are configured. In this situation, the DNS servers that are specified in the scope options will be used as the target DNS servers by the DHCP server for dynamic updates for lease records from that scope.
 
 If the DNS servers that are specified for the scope do not support dynamic updates, the update fails. The DHCP server retries several times to register the failing update. In the meantime, other dynamic updates are put into a queue for processing. Therefore, pending updates are delayed and registrations are not processed in a timely manner.
 
@@ -45,15 +48,12 @@ To prevent failing updates and delayed pending updates, specify DNS servers that
 
 ## Workaround
 
-Use the following registry value to override the default behavior in Windows Server 2008 and Windows Server 2008 R2. 
+Use the following registry value to override the default behavior in Windows Server.
 
 > [!NOTE]
 > This method works for IPv4 scopes only. This value lets you specify the DNS server that should be used for dynamic updates. This overrides the default functionality for all scopes and causes DHCP to use only the specified DNS server for all IPv4 dynamic updates.
 
-**HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DHCPServer\Parameters\AlternateDnsServer\IP_ADDRESS (Reg_Sz)**  
-For more information, click the following article number to go to the article in the Microsoft Knowledge Base:
-
-[919709 DHCP clients may take a long time to register their names on a DNS server that is running Windows Server 2003](https://support.microsoft.com/help/919709) 
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DHCPServer\Parameters\AlternateDnsServer\IP_ADDRESS (Reg_Sz)`
 
 ## More information
 

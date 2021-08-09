@@ -74,3 +74,6 @@ Optionally, if you want to clear password hashes that are already synchronized t
    3. On the **Optional features** page, clear the **Password writeback** feature check box.
    4. Complete the wizard.
 2. Use the [Set-MsolUserPassword](https://docs.microsoft.com/powershell/module/msonline/set-msoluserpassword?view=azureadps-1.0&preserve-view=true) cmdlet to set random passwords on all affected users. You have to run this cmdlet five times for each user because Azure AD stores the last four password hashes in the password hash history.
+
+>[!NOTE]
+> The Set-MsolUserPassword cmdlet does not work if the user is using a federated domain. To clear password hashes for the user in the federated domain, you must change the UPN of the user to a non-federated domain, and then run the cmdlet to set the random password. After that, revert the UPN of the user to the original state.

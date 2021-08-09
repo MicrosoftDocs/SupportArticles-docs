@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-vmm.md
+  href: welcome-vmm.yml
 - name: Administration
   items:
   - name: Authentication and authorization problems

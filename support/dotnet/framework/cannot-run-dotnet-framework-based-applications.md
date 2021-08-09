@@ -29,7 +29,3 @@ This issue occurs because the installation of the .NET Framework 4.5.1 was not c
 ## Workaround
 
 To work around this issue, reinstall the .NET Framework 4.5.1.
-
-## References
-
-[Known issues for the .NET Framework 4.5.1](https://support.microsoft.com/help/2890857)

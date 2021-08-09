@@ -4,6 +4,8 @@ description: Discusses the support policy for Microsoft server software in a Mic
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: drewm, coreysa
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Microsoft server software support for Azure virtual machines
 
@@ -125,7 +127,7 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
 
 ### Requirements for Windows Server Failover Cluster
 
-- Must Run Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+- Must Run Windows Server 2008 R2 or later version
   - For Windows Server 2012 and Windows Server 2008 R2, must have [hotfix 2854082](https://support.microsoft.com/help/2854082) installed on all nodes
   - Must use a single-cluster IP address resource
   - Must use Azure-hosted storage by using one of the following options:
@@ -143,11 +145,11 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
     > [!NOTE]
     > Third-party clustered roles are supported by the vendor
 
-    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](http://www.windowsazure.com/pricing/licensing-faq/#header-3). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
+    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
 
 The following roles are not supported on Microsoft Azure Virtual Machines:
 
-- Dynamic Host Configuration Protocol Server
+- Dynamic Host Configuration Protocol Server (not supported for use on a NIC directly connected to an Azure VNet, but it is supported on internal networks used in nested virtualization scenarios)
 - Hyper-V (Hyper-V role is supported in Azure Ev3, and Dv3 series VMs only)
 - Rights Management Services
 - Windows Deployment Services
@@ -173,7 +175,7 @@ The following significant features are not supported:
 - [Minimum version support for Linux and Windows virtual machine agents in Azure](https://support.microsoft.com/help/4049215/extensions-and-virtual-machine-agent-minimum-version-support).
 - Download the [Azure Virtual Machine Readiness Assessment](https://go.microsoft.com/fwlink/?linkid=335841). This assessment helps you make your move to Azure virtual machines. It automatically inspects your on-premises environment, whether that environment is physical or already virtualized. If you are running Active Directory Domain Services (AD DS), SharePoint Server, or SQL Server, this tool makes it easy for you to get started.
 - The optimization assessment provides prioritized recommendations across six focus areas to optimize your experience while running in Azure. After a short questionnaire, automated data collection and analysis, a custom report is generated. The report includes an executive summary, key, and detail recommendations which provide a high-level view across the focus areas to help you manage, prioritize, and implement the recommendations.
-- In Virtual Machines Image Gallery, you can find prebuilt Linux images that are provided by commercial distributors. For a complete list, go to the following Microsoft website: [Linux on Microsoft Azure-endorsed distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
+- In Virtual Machines Image Gallery, you can find prebuilt Linux images that are provided by commercial distributors. For a complete list, go to the following Microsoft website: [Linux on Microsoft Azure-endorsed distributions](/azure/virtual-machines/linux/endorsed-distros).
 - Our partners offer tools and finished services that you can integrate with your applications that run on Azure virtual machines. For a complete list of add-ons for Microsoft Azure Store, go to [Azure Marketplace](https://azure.microsoft.com/marketplace/).
 - VM Depot is a community-driven catalog of preconfigured operating systems, applications, and development stacks that can be deployed on Microsoft Azure. These images are provided and licensed to you by community members. Microsoft Open Technologies, Inc. does not screen these images for security, compatibility, or performance, and does not provide any license rights or support for them. By using unsupported images, you might forfeit Microsoft Azure availability SLA. For more information, see [Using and contributing to VM Depot](https://www.microsoft.com/research/wp-content/uploads/2016/04/using-and-contributing-vms-to-vm-depot.pdf).
 - Supplemental guidance is available to help you use the following technologies on Azure virtual machines:

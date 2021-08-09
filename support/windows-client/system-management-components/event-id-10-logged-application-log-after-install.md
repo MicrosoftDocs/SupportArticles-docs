@@ -4,20 +4,20 @@ description: Discusses a problem in which an event ID 10 message is logged in th
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chwall
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Event ID 10 is logged in the Application log
 
 This article provides a resolution for the issue that Event ID 10 is logged in the Application log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 950375
 
 ## Symptoms

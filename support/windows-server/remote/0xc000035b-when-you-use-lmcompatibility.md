@@ -4,20 +4,20 @@ description: Discusses that Terminal Services client connection error 0xC000035B
 ms.date: 10/13/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Randym
 ms.prod-support-area-path: Authentication
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Terminal Services client connection error 0xC000035B when you use LmCompatibility
 
 This article provides a solution to an error 0xC000035B that occurs when a Terminal Services client connection that uses Remote Desktop Protocol (RDP) 8.0 to connect through a Windows Server 2012 RD Gateway server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2903333
 
 ## Symptoms
@@ -30,7 +30,7 @@ Additionally, Event 4625 is logged in the Security sign in the Gateway server, a
 
 > Log Name: Security  
 Source: Microsoft-Windows-Security-Auditing  
-Date: 8/5/2013 4:20:00 PM  
+Date: *\<DateTime>*  
 Event ID: 4625  
 Task Category: Logon  
 Level: Information  

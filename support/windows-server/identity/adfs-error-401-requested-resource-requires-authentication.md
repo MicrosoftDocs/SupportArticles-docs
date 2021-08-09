@@ -4,20 +4,20 @@ description: Discusses that you can't authenticate an account in AD FS 2.0, that
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # ADFS 2.0 error: 401 The requested resource requires user authentication
 
 This article discusses an issue where you're prompted for credentials and event 111 is logged when you authenticate an account in Active Directory Federation Services (AD FS) 2.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044976
 
 ## Summary

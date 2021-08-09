@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4509482
 
 Consider the following scenario:
 
-- You use both Microsoft Intune and Configuration Manager to manage your Windows 10 devices.
+- You use both Microsoft Intune and Configuration Manager to manage your Windows 10 devices.
 - You use the application catalog in your Configuration Manager environment.
 - You create a device configuration profile in Intune and assign the profile to your Windows 10 devices.
 - In the device configuration profile, you specify the **Enterprise mode site list location (Desktop only)** setting to open a list of web sites in [Enterprise Mode](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode#what-is-enterprise-mode) on Internet Explorer 11.
@@ -28,7 +28,7 @@ In this scenario, when you type `about:compat` in either Microsoft Edge or Inter
 
 The application catalog website must be viewed by using Internet Explorer 11 Enterprise Mode, while Microsoft Edge is the default browser in Windows 10.
 
-If you don't have the [Configure the Enterprise Mode Site List](/microsoft-edge/deploy/group-policies/interoperability-enterprise-guidance-gp#configure-the-enterprise-mode-site-list) Group Policy configured, Configuration Manager clients add the application catalog website URL to Microsoft Edge Site List file `C:\Windows\CCM\MSEdgeSiteList.xml`, and create the following registry entry:
+If you don't have the [Configure the Enterprise Mode Site List](/microsoft-edge/deploy/group-policies/interoperability-enterprise-guidance-gp#configure-the-enterprise-mode-site-list) Group Policy configured, Configuration Manager clients add the application catalog website URL to Microsoft Edge Site List file `C:\Windows\CCM\MSEdgeSiteList.xml`, and create the following registry entry:
 
 > Subkey: **HKLM\Software\Policies\Microsoft\MicrosoftEdge\Main\EnterpriseMode**  
 > Value name: **SiteList**  
@@ -47,7 +47,7 @@ However, because the registry value `HKLM\Software\Policies\Microsoft\MicrosoftE
 ## Resolution
 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To fix this issue, follow these steps:
 

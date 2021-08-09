@@ -4,20 +4,20 @@ description: You receive a Stop error 0000007F (Error 0x7F, UNEXPECTED KERNEL MO
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, imranu
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # You receive a "Stop error code 0x0000007F (UNEXPECTED_KERNEL_MODE_TRAP)" error message, or your computer unexpectedly restarts
 
 This article helps to fix the error "Stop error code 0x0000007F (UNEXPECTED_KERNEL_MODE_TRAP)".  
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 822789
 
 ## Symptoms

@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2690553
 
 ## Symptoms
 
-Adding a custom property that contains an apostrophe character (e.g. fabrikam's custom property) to a virtual machine (VM) in System Center 2012 Virtual Machine Manager (VMM) causes the Virtual Machine Manager console to crash with a signature similar to the following:
+Adding a custom property that contains an apostrophe character (e.g. fabrikam's custom property) to a virtual machine (VM) in System Center 2012 Virtual Machine Manager (VMM) causes the Virtual Machine Manager console to crash with a signature similar to the following:
 
 > **Description:**
 >
@@ -37,12 +37,12 @@ Adding a custom property that contains an apostrophe character (e.g. fabrikam's 
 
 A corresponding event will be written to the Application Log:  
 
-> Log Name:      Application  
-> Source:        Windows Error Reporting  
-> Event ID:      1001  
+> Log Name:      Application  
+> Source:        Windows Error Reporting  
+> Event ID:      1001  
 > Task Category: None  
-> Level:         Information  
-> Keywords:      Classic  
+> Level:         Information  
+> Keywords:      Classic  
 > Description:  
 > Fault bucket , type 0  
 > Event Name: CLR20r3  

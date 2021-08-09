@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: active-directory
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Azure AD Management Agent hangs during Full Import or Delta Import with error: System.Collections.Generic.KeyNotFoundException
@@ -61,7 +61,7 @@ To resolve this problem, select the missing object type (**device**). To do this
     > The Properties window opens.
 
 4. Under **Connector Design**, click **Select Object Types**.
-5. In the **Select Object Types**  pane, locate and then select the **device**  check box.
+5. In the **Select Object Types** pane, locate and then select the **device**  check box.
 6. Click **OK** three times.
 
 ## Status

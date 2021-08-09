@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2691955
 
 ## Symptoms
 
-While trying to create a protection group for a SQL Server database in System Center Data Protection Manager 2010, you may receive the following error:
+While trying to create a protection group for a SQL Server database in System Center Data Protection Manager 2010, you may receive the following error:
 
 > DPM is unable to enumerate SqlServerWriter on computer ServerHostName.contoso.COM (ID: 3055)  
 
@@ -24,7 +24,7 @@ This problem occurs when the following conditions are true:
 
 - The SQL Server is in an untrusted domain or a workgroup.
 - The SQL Server database is configured with mirroring.
-- You are trying to protect a mirrored SQL Server database on the principle server.
+- You are trying to protect a mirrored SQL Server database on the principle server.
 
 ## Resolution
 

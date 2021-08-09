@@ -4,7 +4,7 @@ description: List information that's collected by the PerfView diagnostic tool.
 ms.date: 05/08/2020
 ms.prod-support-area-path:
 ---
-# [SDP 3] [f0fc366d-d20d-4606-a0e9-1d8787336906] PerfView diagnostic
+# Information collected by PerfView
 
 This article describes the information that may be collected from a machine when running the PerfView diagnostic tool.
 

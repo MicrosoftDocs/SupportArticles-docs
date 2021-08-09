@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: genli
 ---
 # Microsoft Azure Recovery Services Agent System State backup failure (error ID 8007007B)

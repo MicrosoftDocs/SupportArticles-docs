@@ -4,20 +4,20 @@ description: FCoE IO failures on Hyper-V guests for Windows Server 2016.
 ms.date: 09/25/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Storage configuration
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # FCoE IO failures on Hyper-V guests for Windows Server 2016
 
 This article provides a solution to an issue where FCoE IO failures on Hyper-V guests for Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4557869
 
 ## Symptoms
@@ -34,7 +34,7 @@ A typical system configuration is similar to those in the Repro Steps that follo
 1. Configure multiple FC LUNs and present them to the Hyper-V system and have the Hyper-V system present these LUNs to the 2019 guest.
 2. Use a storage IO generation tool to run IO to all FC LUNs on the 2019 guest.
 3. Disable one CNA port.
-4. Wait 30 Seconds.
+4. Wait 30 seconds.
 5. Enable the CNA port.
 6. Wait 2 minutes.
 7. Repeat the port disables/enables above, test failures will be intermittent.

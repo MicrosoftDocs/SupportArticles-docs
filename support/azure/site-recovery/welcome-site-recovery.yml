@@ -1,0 +1,30 @@
+### YamlMime:Landing
+
+title: Azure Site Recovery troubleshooting documentation
+summary: Welcome to Azure Site Recovery troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Site Recovery. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Site Recovery
+  description: Documentation for troubleshooting common issues with Azure Site Recovery. # Required; article description that is displayed in search results. < 160 chars.
+  services: site-recovery
+  ms.service: site-recovery #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 12/18/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Recovery Services
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Backup service and Recovery Services Agent versions do not match
+            url: ./backup-service-mars-agent-versions-not-match.md
+          - text: Recovery Services Agent update failed
+            url: ./upgrade-mars-agent.md
+          - text: Recovery Services Agent System States backup failure with error ID 8007007B
+            url: ./mars-agent-system-state-backup-failure.md

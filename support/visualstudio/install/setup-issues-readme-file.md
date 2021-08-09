@@ -15,8 +15,6 @@ _Original KB number:_ &nbsp; 908451
 
 This article contains the Microsoft Visual Studio 2005 Express Edition Setup issues Readme file.
 
-For a Microsoft Visual Studio 2005 Professional Edition and Standard Edition version of this article, see [Contents of Microsoft Visual Studio 2005 Setup Issues Readme file](https://support.microsoft.com/help/908452).  
-
 ## More information
 
 This document lists issues that concern installation, uninstallation, repair, and other setup procedures.

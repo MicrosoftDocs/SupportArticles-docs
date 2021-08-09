@@ -1,32 +1,28 @@
 ---
 title: Automate regional and language settings
 description: Describes how to automate regional and language settings.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # How to Automate Regional and Language settings in Windows Vista, Windows Server 2008, Windows 7 and in Windows Server 2008 R2
 
 This article describes the regional and language settings options and the method to modify the settings.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2764405
 
 ## Summary
 
 This article describes the Regional and Language Settings options in Windows Vista, in Windows Server 2008, in Windows 7 and in Windows Server 2008 R2. Also, in this article you can find the method to modify the settings using an xml based answer file.
-
-For more information on Windows Server 2003, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[325856](https://support.microsoft.com/help/325856)  How to specify regional and language settings for an unattended installation of Windows MultiLanguage Version in Windows Server 2003
 
 ### Sample XML answer file
 

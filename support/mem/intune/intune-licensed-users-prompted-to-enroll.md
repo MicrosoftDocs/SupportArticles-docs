@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4516689
 
 Consider the following scenario:
 
-- You previously used Mobile Device Management (MDM) for Office 365 or Office 365 MDM Coexistence together with Intune.
+- You previously used Mobile Device Management (MDM) for Office 365 or Office 365 MDM Coexistence together with Intune.
 - You [created and deployed an Office 365 MDM security policy](https://support.office.com/article/Create-and-deploy-device-security-policies-d310f556-8bfb-497b-9bd7-fe3c36ea2fd6) to users.
 - You assign Intune licenses to users, and then assign Intune policies to the users.
 - Conditional Access in Azure isn't configured to enforce Intune MDM enrollment.
@@ -26,7 +26,7 @@ In this scenario, users are unexpectedly prompted to enroll in Intune when they 
 
 This behavior is by design.
 
-This behavior occurs if Office 365 MDM security policies are still deployed to a group that contains the affected users. When users are targeted by Office 365 MDM security policies, Conditional Access will be evaluated by Azure AD authentication services. These services check a user's group membership. Azure AD authentication services don't check the user authority (Intune instead of Office 365 MDM) when they enforce Conditional Access.
+This behavior occurs if Office 365 MDM security policies are still deployed to a group that contains the affected users. When users are targeted by Office 365 MDM security policies, Conditional Access will be evaluated by Azure AD authentication services. These services check a user's group membership. Azure AD authentication services don't check the user authority (Intune instead of Office 365 MDM) when they enforce Conditional Access.
 
 ## Resolution
 

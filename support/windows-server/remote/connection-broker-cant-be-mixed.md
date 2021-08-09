@@ -4,20 +4,20 @@ description: Remote Desktop Service can't be used in a mixed environment where R
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Connection Broker on Windows Server 2012 or 2012 R2 and Session Host on Windows Server 2008 or 2008 R2 cannot be mixed in Remote Desktop Service environment
 
 This article provides a solution to an issue that Remote Desktop Service can't be used in a mixed environment.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3007168
 
 ## Symptoms

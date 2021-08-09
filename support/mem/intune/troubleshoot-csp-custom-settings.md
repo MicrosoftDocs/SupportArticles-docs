@@ -6,7 +6,7 @@ ms.prod-support-area-path: Device configuration
 ---
 # Troubleshoot CSP custom settings for Windows 10 computers enrolled in Intune
 
-This article contains a brief introduction of configuration service provider (CSP) and how to troubleshoot CSP custom settings for Windows 10 computers.
+This article contains a brief introduction of configuration service provider (CSP) and how to troubleshoot CSP custom settings for Windows 10 computers.
 
 _Original product version:_ &nbsp; Microsoft Intune, Windows 10  
 _Original KB number:_ &nbsp; 4055338
@@ -17,7 +17,7 @@ A CSP is an interface in the client operating system between configuration setti
 
 In Windows 10, the management approach for both desktop and mobile devices converges, taking advantage of the same CSPs to configure and manage all devices that are running Windows 10. Each CSP provides access to specific settings. For example, the WiFi CSP contains the settings to create a WiFi profile.
 
-CSPs are behind many of the management tasks and policies for Windows 10 in Microsoft Intune and non-Microsoft mobile device management (MDM) service providers. CSPs receive configuration policies in the XML-based SyncML format that are pushed to the CSP from an MDM-compliant management server, such as Microsoft Intune. Traditional enterprise management systems, such as System Center Configuration Manager, can also target CSPs by using a client-side Windows Management Instrumentation-to-CSP bridge.
+CSPs are behind many of the management tasks and policies for Windows 10 in Microsoft Intune and non-Microsoft mobile device management (MDM) service providers. CSPs receive configuration policies in the XML-based SyncML format that are pushed to the CSP from an MDM-compliant management server, such as Microsoft Intune. Traditional enterprise management systems, such as System Center Configuration Manager, can also target CSPs by using a client-side Windows Management Instrumentation-to-CSP bridge.
 
 For more information about CSPs, see [Introduction to configuration service providers (CSPs) for IT pros](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
@@ -37,21 +37,21 @@ The first step in troubleshooting is to collect information. To collect error in
    - Devices Failed
    - Devices Succeeded
 
-2. Go to **Device Configuration**  > **Profiles**, and then select the profile that shows **Devices with Errors** or **Devices Failed** as listed in step 1.
+2. Go to **Device Configuration** > **Profiles**, and then select the profile that shows **Devices with Errors** or **Devices Failed** as listed in step 1.
 3. If you deploy the profile to a device, go to the **Device Status** section under **Monitor**. Here you can find the following information:
 
    - Device
    - User
    - Deployment status
 
-4. If you deploy the profile to a user, go to the **User Status** section under **Monitor**. Here you can find the following information:
+4. If you deploy the profile to a user, go to the **User Status** section under **Monitor**. Here you can find the following information:
 
    - User
    - Device count
    - Deployment status
    - Last check-in
 
-5. Sometimes an issue occurs because of a specific custom setting for the profile. To check the status of each setting, go to the **Per-Settings status** section under **Monitor**. Here you can find the following information:
+5. Sometimes an issue occurs because of a specific custom setting for the profile. To check the status of each setting, go to the **Per-Settings status** section under **Monitor**. Here you can find the following information:
 
    - Setting
    - Description
@@ -61,13 +61,13 @@ The first step in troubleshooting is to collect information. To collect error in
    - Error
    - Not Applicable
 
-After you collect information and identify the device that has the issue, the next step is to collect logs for that device to further troubleshoot.
+After you collect information and identify the device that has the issue, the next step is to collect logs for that device to further troubleshoot.
 
 ### Collect logs from a Windows 10 computer
 
 To do this, follow these steps:
 
-1. Open Event Viewer and select **Show Analytic and Debug Logs** on the **View** menu to enable Debug logs.
+1. Open Event Viewer and select **Show Analytic and Debug Logs** on the **View** menu to enable Debug logs.
 2. Navigate to **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider**.
 3. To collect Admin logs, do the following:
 
@@ -87,13 +87,13 @@ To do this, follow these steps:
    5. Select **Display information for these languages**, and then select **English**.
    6. Click **Ok**.
 
-After you collect these logs, review them for detailed information about the errors and status that you collect from the Intune Azure portal.
+After you collect these logs, review them for detailed information about the errors and status that you collect from the Intune Azure portal.
 
 ### Collect Azure Active Directory (Azure AD) logs
 
-If you experience issues such as those related to communication with Azure AD, authentication, or workplace join, you may want to collect Azure AD logs. To do this, follow these steps:
+If you experience issues such as those related to communication with Azure AD, authentication, or workplace join, you may want to collect Azure AD logs. To do this, follow these steps:
 
-1. Open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
+1. Open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
 2. To collect analytic logs, do the following:
 
    1. Right-click the **Analytic** node.

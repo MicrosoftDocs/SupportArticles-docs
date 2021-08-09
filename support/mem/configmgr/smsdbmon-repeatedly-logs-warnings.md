@@ -43,11 +43,11 @@ select * from StatusMessages where Component = 'SMS_DATABASE_NOTIFICATION_MONITO
 
 ## Resolution
 
-To fix this issue, update to Configuration Manager current branch version [1902](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902).
+To fix this issue, update to Configuration Manager current branch version [1902](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902).
 
 ## Workaround
 
-To work around this issue in Configuration Manager current branch version 1810:
+To work around this issue in Configuration Manager current branch version 1810:
 
 1. Run the registry editor, locate the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Triggers\<SiteCode of the affected site>` registry key, and then determine whether the following registry values exist:
 
@@ -60,7 +60,7 @@ To work around this issue in Configuration Manager current branch version 1810
 
     ```sql
     IF OBJECT_ID('tempdb..#temp') IS NOT NULL
-         DROP TABLE #temp
+         DROP TABLE #temp
      select name
      INTO #temp
      from sys.objects where type = 'TR' and name in
@@ -70,15 +70,15 @@ To work around this issue in Configuration Manager current branch version 1810
      declare @name NVARCHAR(255)
      declare @sql NVARCHAR(255)
      DECLARE DELETE_OLD_TRIGGERS CURSOR FOR
-         SELECT A.Name FROM #temp AS A
+         SELECT A.Name FROM #temp AS A
      OPEN DELETE_OLD_TRIGGERS;
      FETCH NEXT FROM DELETE_OLD_TRIGGERS INTO @name;
      WHILE @@FETCH_STATUS = 0
-        BEGIN
-             SET @sql = 'DROP TRIGGER ' + @name;
-             EXECUTE(@SQL);
-          FETCH NEXT FROM DELETE_OLD_TRIGGERS INTO @name;
-        END;
+        BEGIN
+             SET @sql = 'DROP TRIGGER ' + @name;
+             EXECUTE(@SQL);
+          FETCH NEXT FROM DELETE_OLD_TRIGGERS INTO @name;
+        END;
      CLOSE DELETE_OLD_TRIGGERS;
      DEALLOCATE DELETE_OLD_TRIGGERS;
      END
@@ -88,14 +88,14 @@ To work around this issue in Configuration Manager current branch version 1810
 
     ```sql
     WHILE 1=1
-       BEGIN
-         DELETE TOP(1000) FROM TableChangeNotifications
-         WHERE ((Component = 'PolicyTargetEvalNotify_iud' AND TableName = 'Collections_L') OR
-                (Component = 'PolicyTargetEvalNotify_ColMember_iu' AND TableName = 'Collection_MemberChg_Notif') OR
-                (Component = 'PolicyAssignmentChg_Notify_iu' AND TableName = 'PolicyAssignmentChg_Notify') OR
-                (Component = 'PolicyTargetEvalNotify_iud_upd'  AND TableName = 'Collections_L'))
+       BEGIN
+         DELETE TOP(1000) FROM TableChangeNotifications
+         WHERE ((Component = 'PolicyTargetEvalNotify_iud' AND TableName = 'Collections_L') OR
+                (Component = 'PolicyTargetEvalNotify_ColMember_iu' AND TableName = 'Collection_MemberChg_Notif') OR
+                (Component = 'PolicyAssignmentChg_Notify_iu' AND TableName = 'PolicyAssignmentChg_Notify') OR
+                (Component = 'PolicyTargetEvalNotify_iud_upd'  AND TableName = 'Collections_L'))
 
     IF @@ROWCOUNT <= 0
-           BREAK;
+           BREAK;
      END
     ```

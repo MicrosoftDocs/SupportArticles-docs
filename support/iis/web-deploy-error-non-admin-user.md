@@ -2,7 +2,7 @@
 title: Web Deployment error with non-admin user
 description: This article provides a resolution to error message when performing a Web Deploy operation that requires administrative permissions.
 ms.date: 03/23/2020
-ms.prod-support-area-path: Deployment and migration
+ms.prod-support-area-path: Deployment and migration
 ---
 # Error when you use the Web Deployment tool as a non-administrative user
 
@@ -24,7 +24,7 @@ When performing a Web Deploy operation that requires administrative permissions,
 
 ## Cause
 
-Internet Information Services (IIS) requires administrative privileges to make configuration changes to the *ApplicationHost.config file*. The user executing the operation doesn't have sufficient rights to access the *ApplicationHost.config* file and perform changes. This error could occur in a hosted scenario where the person executing the command isn't the administrator of the target hosting machine.  
+Internet Information Services (IIS) requires administrative privileges to make configuration changes to the *ApplicationHost.config file*. The user executing the operation doesn't have sufficient rights to access the *ApplicationHost.config* file and perform changes. This error could occur in a hosted scenario where the person executing the command isn't the administrator of the target hosting machine.  
 
 ## Resolution when Web Deploy operation runs by Msdeploy.exe
 
@@ -45,7 +45,7 @@ If Web Deploy operation performed using delegation via the Web Management Servic
 
 > [!NOTE]
 > The account's identity depends on how the `Delegation Rule` is configured:
-> - `CurrentUser`: The user account used to make the remote connection in IIS. 
+> - `CurrentUser`: The user account used to make the remote connection in IIS. 
 > - `ProcessIdentity`: The configured identity of the WMSVC service on the target server.
 > - `SpecificUser`: User defined in the **Specify Credentials** dialog of the delegation rule.
 

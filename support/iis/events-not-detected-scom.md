@@ -2,7 +2,7 @@
 title: IIS events not detected by Management Pack
 description: This article provides resolutions for the problem where certain IIS events are not detected by System Center Operations Manager.
 ms.date: 04/15/2020
-ms.prod-support-area-path: IIS extensions, tools, and Add-ons
+ms.prod-support-area-path: IIS extensions, tools, and Add-ons
 ms.technology: iis
 ms.reviewer: dougste 
 ---
@@ -15,22 +15,22 @@ _Original KB number:_ &nbsp; 2635429
 
 ## Symptoms
 
-When monitoring an IIS 7.0 or 7.5 web site with System Center Operations Manager by using the IIS Management Pack, certain IIS events are not detected by System Center Operations Manager. This problem occurs even though the same IIS events do appear in the Windows event logs. Specifically, events with ID 2269, 2276, 2280, 2281, and 2282 from source Microsoft-Windows-IIS-W3SVC-WP are not detected.
+When monitoring an IIS 7.0 or 7.5 web site with System Center Operations Manager by using the IIS Management Pack, certain IIS events are not detected by System Center Operations Manager. This problem occurs even though the same IIS events do appear in the Windows event logs. Specifically, events with ID 2269, 2276, 2280, 2281, and 2282 from source Microsoft-Windows-IIS-W3SVC-WP are not detected.
 
-For example, the following event may be logged to the Application event log, but not be reported by System Center Operations Manager:
+For example, the following event may be logged to the Application event log, but not be reported by System Center Operations Manager:
 
 ```console
- Log Name:      Application  
- Source:        Microsoft-Windows-IIS-W3SVC-WP  
- Date:          DateTime  
- Event ID:      2281  
+ Log Name:      Application  
+ Source:        Microsoft-Windows-IIS-W3SVC-WP  
+ Date:          DateTime  
+ Event ID:      2281  
  Task Category: None  
- Level:         Error  
- Keywords:      Classic  
- User:          N/A  
- Computer:      MACHINENAME  
+ Level:         Error  
+ Keywords:      Classic  
+ User:          N/A  
+ Computer:      MACHINENAME  
  Description:  
- The worker process failed to initialize communication with the W3SVC and therefore could not be started.  
+ The worker process failed to initialize communication with the W3SVC and therefore could not be started.  
  The data is the error.
 ```
 

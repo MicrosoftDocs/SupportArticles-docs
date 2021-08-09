@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4537088
 
 ## Symptoms
 
-You have a custom Intune role assigned. The custom role includes permissions that are required to manage an application. When you update the application and try to save the change, you receive the following error message:
+You have a custom Intune role assigned. The custom role includes permissions that are required to manage an application. When you update the application and try to save the change, you receive the following error message:
 
 > Save application failed.  
 > You don't have enough permissions to update this application, contact your administrator.
@@ -22,8 +22,8 @@ You have a custom Intune role assigned. The custom role includes permissions th
 
 ## Cause
 
-This problem occurs if the application's targeted groups aren't included in **Scope (Groups)** of the custom role assignment.
+This problem occurs if the application's targeted groups aren't included in **Scope (Groups)** of the custom role assignment.
 
 ## Resolution
 
-To fix this problem, add the application's targeted groups to **Scope (Groups)** in the custom role assignment.
+To fix this problem, add the application's targeted groups to **Scope (Groups)** in the custom role assignment.

@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4493802
 You experience one of the following issues:
 
 - You cannot load the **Help and support** blade in the Intune portal.
-- You receive a **login.microsoftonline.com refused to connect** error message in browsers such as Chrome or Firefox. Other browsers such as Safari or Microsoft Edge may display similar errors or nothing at all.
+- You receive a **login.microsoftonline.com refused to connect** error message in browsers such as Chrome or Firefox. Other browsers such as Safari or Microsoft Edge may display similar errors or nothing at all.
 
     :::image type="content" source="media/cannot-load-help-and-support-blade/error.jpg" alt-text="screenshot of error]" border="false":::
 
@@ -31,13 +31,13 @@ This issue may occur if your browser is configured to block third-party cookies.
 To resolve this issue, configure your browser to allow third-party cookies. To do this, follow these steps.
 
 > [!NOTE]
-> The following example is for the Chrome browser on an Apple Mac device. However, this also works on Windows devices.
+> The following example is for the Chrome browser on an Apple Mac device. However, this also works on Windows devices.
 
-1. In the top-right corner of the browser, to the right of the **Address** bar, click the little icon with a red **x** to display the **Cookies blocked** dialog box.
+1. In the top-right corner of the browser, to the right of the **Address** bar, click the little icon with a red **x** to display the **Cookies blocked** dialog box.
 
     :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-blocked.png" alt-text="screenshot of Cookies blocked" border="false":::
 
-2. Select **Show cookies and other site data**, and then click **Blocked** in the **Cookies in use** dialog box to list the blocked sites.  
+2. Select **Show cookies and other site data**, and then click **Blocked** in the **Cookies in use** dialog box to list the blocked sites.  
 
     :::image type="content" source="media/cannot-load-help-and-support-blade/cookies-in-use-allowed.png" alt-text="screenshot of allowed cookies in use" border="false":::
 

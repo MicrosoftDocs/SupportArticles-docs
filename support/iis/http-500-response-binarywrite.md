@@ -2,7 +2,7 @@
 title: HTTP 500 or Response buffer limit exceeded
 description: This article describes a problem where the client receives an 'HTTP 500' or 'Response buffer limit exceeded' error occurs when you send a file by using a web server that has IIS 7 or a later version installed.
 ms.date: 04/15/2020
-ms.prod-support-area-path: Site behavior and performance
+ms.prod-support-area-path: Site behavior and performance
 ms.technology: iis
 ms.reviewer: mlaing, v-jayc
 ---

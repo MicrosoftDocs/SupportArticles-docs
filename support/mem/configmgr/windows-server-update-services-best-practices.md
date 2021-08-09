@@ -1,46 +1,44 @@
 ---
-title: Windows Server Update Services best practices
-description: Describes best practices for Windows Server Update Services to avoid configurations that experience poor performance.
+title: Windows Server Update Services (WSUS) best practices
+description: Describes best practices for WSUS to avoid configurations that experience poor performance.
 ms.date: 05/25/2020
 ms.prod-support-area-path:
 ms.reviewer: sccmcsscontent, erice
 ---
 # Windows Server Update Services best practices
 
-This article suggests best practices that can help you avoid configurations that experience poor performance because of design or configuration limitations in Windows Server Update Services (WSUS).
+This article provides tips for avoiding configurations that experience poor performance because of design or configuration limitations in WSUS.
 
 _Original product version:_ &nbsp; Configuration Manager (current branch), Windows Server Update Services  
 _Original KB number:_ &nbsp; 4490414
 
 ## Capacity limits
 
-Although WSUS can support [100,000 clients](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939839(v=ws.10)) per server ([150,000 clients](/mem/configmgr/core/plan-design/configs/size-and-scale-numbers#software-update-point) when you use Configuration Manager), we don't recommend approaching this limit. Instead, consider using a configuration of 2-4 servers sharing the same SQL server database.
+Although WSUS can support [100,000 clients](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939839(v=ws.10)) per server ([150,000 clients](/mem/configmgr/core/plan-design/configs/size-and-scale-numbers#software-update-point) when you use Configuration Manager), we don't recommend approaching this limit. 
 
-This is because you have safety in numbers. That is, if one server goes down, although important, it won't immediately spoil your weekend because no client can update, and you have to be updated against the latest 0-day exploit.
+Instead, consider using a configuration of 2-4 servers sharing the same SQL Server database. This way you have safety in numbers. If one server goes down, it won't immediately spoil your weekend because no client can update while you must be updated against the latest zero-day exploit.
 
-The shared database scenario also prevents what we call a scan storm.
+The shared database scenario also prevents a scan storm.
 
-A scan storm can occur when many clients change WSUS servers and the servers don't share a database. WSUS tracks activity in the database so that both know what has changed since a client last scanned and will only send metadata that is updated since then.
+A scan storm can occur when many clients change WSUS servers and the servers don't share a database. WSUS tracks activity in the database, so that both know what has changed since a client last scanned and will only send metadata that's updated since then.
 
-If clients change to a different WSUS server that uses a different database, the client will have to do a full scan. This can result in large metadata transfers. We have seen transfers of greater than 1 GB per client occur in these scenarios, especially if the WSUS server isn't maintained correctly.
+If clients change to a different WSUS server that uses a different database, they must do a full scan. A full scan can cause large metadata transfers. Transfers of greater than 1 GB per client may occur in these scenarios, especially if the WSUS server isn't maintained correctly. It can generate enough load to cause errors when clients communicate with a WSUS instance. And clients retry repeatedly in this case.
 
-This can generate enough load to cause errors when clients communicate with a WSUS instance. This results in clients retrying repeatedly.
-
-Sharing a database means that if a client switches to another WSUS instance that uses the same DB, the scan penalty isn't incurred. The load increases aren't the large penalty you pay for switching databases.
+Sharing a database means when a client switches to another WSUS instance that uses the same DB, the scan penalty isn't incurred. The load increases aren't the large penalty you pay for switching databases.
 
 Configuration Manager client scans put more demand on WSUS than the stand-alone Automatic Updates. Configuration Manager, because it includes compliance checking, requests scans with criteria that will return all updates that are in any status except declined.
 
-When the Automatic Updates Agent scans, or you click **Check for Updates** in Control Panel, the agent sends criteria to retrieve only those updates Approved for Install. Therefore, the metadata returned will usually be less than when the scan is initiated by Configuration Manager. The Update Agent does cache the data and the next scan requests will return the data from the client cache.
+When the Automatic Updates Agent scans, or you select **Check for Updates** in Control Panel, the agent sends criteria to retrieve only those updates Approved for Install. The metadata returned will usually be less than when the scan is initiated by Configuration Manager. The Update Agent does cache the data, and the next scan requests will return the data from the client cache.
 
 ## Disable recycling and configure memory limits
 
-WSUS implements an internal cache that retrieves the update metadata from the database. Retrieving metadata from the database is expensive and very memory intensive and can result in the IIS application pool that hosts WSUS (known as WSUSPool) recycling when it overruns the default private and virtual memory limits.
+WSUS implements an internal cache that retrieves the update metadata from the database. This operation is expensive and very memory intensive. It can cause the IIS application pool that hosts WSUS (known as WSUSPool) to recycle when WSUSPool overruns the default private and virtual memory limits.
 
-When the pool recycles, the cache is removed and must be rebuilt. This isn't a large problem when clients are undergoing delta scans. But if you end up in a scan storm scenario, the pool will recycle constantly, and clients will receive errors when you make scan requests, for example **HTTP 503** errors.
+When the pool recycles, the cache is removed and must be rebuilt. It isn't a large problem when clients are undergoing delta scans. But if you end up in a scan storm scenario, the pool will recycle constantly. And clients will receive errors when you make scan requests, such as **HTTP 503** errors.
 
 We recommend that you increase the default **Queue Length**, and disable both the Virtual and Private Memory Limit by setting them to **0**. IIS implements an automatic recycling of the application pool every 29 hours, Ping, and Idle Time-outs, all which should be disabled. These settings are found in **IIS Manager** > **Application Pools** > choose **WsusPool** and then click the **Advanced Settings** link in the right side pane of IIS manager.
 
-The following is a summary of recommended changes, and a related screenshot. For more information, see [Plan for software updates in Configuration Manager](/mem/configmgr/sum/plan-design/plan-for-software-updates).
+Here's a summary of recommended changes, and a related screenshot. For more information, see [Plan for software updates in Configuration Manager](/mem/configmgr/sum/plan-design/plan-for-software-updates).
 
 |Setting name|Value|
 |---|---|
@@ -53,11 +51,11 @@ The following is a summary of recommended changes, and a related screenshot. For
 
 :::image type="content" source="media/windows-server-update-services-best-practices/advanced-settings.png" alt-text="Alt text here." border="false":::
 
-For reference, in an environment that had around 17,000 updates cached, we have seen greater than 24 GB of memory needed as the cache is built until it stabilized (at around 14 GB).
+In an environment that has around 17,000 updates cached, more than 24 GB of memory may be needed as the cache is built until it stabilizes (at around 14 GB).
 
 ## Check whether compression is enabled (if you want to conserve bandwidth)
 
-WSUS uses a compression type calls Xpress encoding. This implements compression on update metadata. This can result in significant bandwidth savings.
+WSUS uses a compression type calls Xpress encoding. It implements compression on update metadata, and can result in significant bandwidth savings.
 
 Xpress encoding is enabled in IIS ApplicationHost.config with this line under the `<httpCompression>` element and a registry setting:
 
@@ -83,15 +81,15 @@ cscript "%programfiles%\update services\setup\DynamicCompression.vbs" /disable
 
 ## Configure products and categories
 
-When you configure WSUS, choose only the products and categories that you plan to deploy. You can always synchronize categories and products that you must have later but adding them when you don't plan to deploy them increases metadata size and overhead on the WSUS servers.
+When you configure WSUS, choose only the products and categories that you plan to deploy. You can always synchronize categories and products that you must have later. Adding them when you don't plan to deploy them increases metadata size and overhead on the WSUS servers.
 
 ## Disable Itanium updates and other unnecessary updates
 
-This shouldn't be an issue for much longer, because Windows Server 2008 R2 was the last version to support Itanium. But it bears mentioning.
+It shouldn't be an issue for much longer, because Windows Server 2008 R2 was the last version to support Itanium. But it bears mentioning.
 
 Customize and use [this](https://gallery.technet.microsoft.com/Decline-WSUS-Update-Types-13fec5e0) script in your environment to decline Itanium architecture updates. The script can also decline updates that contain **Preview** or **Beta** in the update title.
 
-This leads to the WSUS console being more responsive, but does not affect the client scan.
+It leads to the WSUS console being more responsive, but doesn't affect the client scan.
 
 ## Decline superseded updates and run maintenance
 
@@ -103,11 +101,15 @@ For information about declining superseded updates and other WSUS maintenance it
 
 By default, WSUS isn't configured to use SSL for client communication. The first post-install step should be to configured SSL on WSUS to make sure security between server-client communications.
 
-You have to create a self-signed certificate (not ideal because every client would have to trust this certificate), obtain one from a third-party certificate provider, or from your internal certificate infrastructure.
+You must take one the following actions:
 
-Your certificate should have the short server name, FQDN, and SAN names (aliases) that it goes by.
+- Create a self-signed certificate. It isn't ideal because every client would have to trust this certificate.
+- Obtain one from a third-party certificate provider.
+- Obtain one from your internal certificate infrastructure.
 
-After you have the certificate installed, you have to upgrade the Group Policy (or Client Configuration settings for software updates in Configuration Manager) to use the address and SSL port of the WSUS server. This is typically 8531 or 443.
+Your certificate must have the short server name, FQDN, and SAN names (aliases) that it goes by.
+
+After you have the certificate installed, upgrade the Group Policy (or Client Configuration settings for software updates in Configuration Manager) to use the address and SSL port of the WSUS server. The port is typically 8531 or 443.
 
 For example, configure GPO **Specify intranet Microsoft update service location** to <`https://wsus.contoso.com:8531`>.
 
@@ -120,9 +122,9 @@ To get started, see [Secure WSUS with the Secure Sockets Layer Protocol](/window
 
 ## About Cumulative Updates and Monthly Rollups
 
-You may see the terms **Monthly Rollups** and **Cumulative Update** used for Windows OS updates. Although we may use them interchangeably, Rollups refer to the set of updates published for Windows 7, Windows 8.1, Windows Server 2008 R2 and Windows Server 2012 R2 that are only partly cumulative.
+You may see the terms **Monthly Rollups** and **Cumulative Update** used for Windows OS updates. They may be used interchangeably. Rollups refer to the updates published for Windows 7, Windows 8.1, Windows Server 2008 R2, and Windows Server 2012 R2 that are only partly cumulative.
 
-The following blog posts explain this:
+For more information, see the following blog posts:
 
 - [Simplified servicing for Windows 7 and Windows 8.1: the latest improvements](https://techcommunity.microsoft.com/t5/Windows-Blog-Archive/Simplified-servicing-for-Windows-7-and-Windows-8-1-the-latest/ba-p/166798)
 - [More on Windows 7 and Windows 8.1 servicing changes](https://techcommunity.microsoft.com/t5/Windows-Blog-Archive/More-on-Windows-7-and-Windows-8-1-servicing-changes/ba-p/166783)
@@ -131,11 +133,11 @@ With Windows 10 and Windows Server 2016, the updates were cumulative from the be
 
 - [Windows 10 update servicing cadence](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-10-update-servicing-cadence/ba-p/222376)
 
-Cumulative in this context means, that you install the release version of the OS and only have to apply the latest Cumulative Update in order to be fully patched. For the older operating systems, we don't have such updates yet, although this is the direction we're heading in.
+Cumulative means that: you install the release version of the OS, and only have to apply the latest Cumulative Update to be fully patched. For the older operating systems, we don't have such updates yet, although it's the direction we're heading in.
 
-For Windows 7 and Windows 8.1, this means that after you install the latest monthly rollup, additional updates will still be needed. Here is an example for [Windows 7 and Windows Server 2008 R2](https://social.technet.microsoft.com/wiki/contents/articles/52047.windows-7-refreshed-media-creation.aspx) on what it takes to have an almost fully patched system.
+For Windows 7 and Windows 8.1, it means that after you install the latest monthly rollup, more updates will still be needed. Here's an example for [Windows 7 and Windows Server 2008 R2](https://social.technet.microsoft.com/wiki/contents/articles/52047.windows-7-refreshed-media-creation.aspx) on what it takes to have an almost fully patched system.
 
-You can find the list of Monthly Rollups for Windows 7 and 8.1 and Cumulative Updates for Windows 10/Server 2016 at these links, or you can find them by searching for **Windows X update History**, where *X* is the version.
+The following table contains the list of Windows Monthly Rollups and Cumulative Updates. You can also find them by searching for **Windows \<version> update History**.
 
 | Windows version | Update |
 |---|---|
@@ -149,7 +151,7 @@ Another point to consider is that not all updates are published so that they syn
 
 ## Using PowerShell to connect to a WSUS server
 
-The following is just a code example to get you started with PowerShell and the WSUS API. It can be executed where the WSUS Administration Console is installed.
+Here's just a code example to get you started with PowerShell and the WSUS API. It can be executed where the WSUS Administration Console is installed.
 
 ```powershell
 [void][reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")

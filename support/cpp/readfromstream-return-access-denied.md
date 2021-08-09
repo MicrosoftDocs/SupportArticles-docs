@@ -18,7 +18,7 @@ You have developed an application that uses `CComVariant::ReadFromStream()` to r
 
 ## Cause
 
-Reviewing *atlcomcli.h* we find that the size has been set here:  
+Reviewing *atlcomcli.h* we find that the size has been set here:  
 
 ```cpp
 #ifndef _ATL_STREAM_MAX_SIZE
@@ -41,7 +41,7 @@ else if (cbStrLen > _ATL_STREAM_MAX_SIZE)
 If you have valid scenario where you are streaming data as Batch Stirred Tank Reactor (BSTR) that is larger than the predefined size you can change it. However, if you are using any untrusted code this workaround should not be employed.
 
 One approach would be to override `CCOmVariant::ReadFromStream()`.
-Another way is to change `_ATL_STREAM_MAX_SIZE` itself.
+Another way is to change `_ATL_STREAM_MAX_SIZE` itself.
 
 ## More information
 

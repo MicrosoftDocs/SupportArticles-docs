@@ -7,6 +7,8 @@ ms.reviewer: jeanr
 ---
 # Content of an iFrame is rendered on top of a scrollbar in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about webpages that contain iframe with scroll bars. The content of iframe may get rendered on top of the scrollbars. It is recommended to use Internet Explorer 9's standard mode to render webpages.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

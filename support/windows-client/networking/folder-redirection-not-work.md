@@ -4,20 +4,20 @@ description: Discusses a problem in which folder redirection does not work corre
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, philibla
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Folder redirection does not work correctly after you restart the computer
 
 This article provides workarounds for an issue where folder redirection doesn't work correctly after you restart computers.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951049
 
 ## Problem description
@@ -57,7 +57,7 @@ To fix this problem automatically, click the
  **File Download** dialog box, and follow the steps in this wizard.
 
 > [!NOTE]
-> this wizard may be in English only; however, the automatic fix also works for other language versions of Windows.
+> This wizard may be in English only; however, the automatic fix also works for other language versions of Windows.
 
 > [!NOTE]
 > If you are not on the computer that has the problem, you can save the automatic fix to a flash drive or a CD so that you can run it on the computer that has the problem.

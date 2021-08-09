@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-azure-devops.md
+  href: welcome-azure-devops.yml
 
 - name: Boards
   items:

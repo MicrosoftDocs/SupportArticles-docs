@@ -4,20 +4,20 @@ description: Describes the device driver requirements for x64-based versions of 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, joeswart
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # A description of the driver
 
 This article describes the device driver requirements for x64-based versions of Windows.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 896333
 
 ## Summary
@@ -45,9 +45,6 @@ Obtain a WHQL-certified driver from the device manufacturer's Web site. For info
 > It is the responsibility of the specific hardware or software vendor to make sure that programs and device drivers are compatible with x64-based versions of Windows.
 
 If you experience problems when you try to install a 64-bit driver that is not included with 64-bit versions of Windows, make sure that the driver's .inf file is correctly decorated.
- For more information about the device driver .inf file decoration requirements, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[888728](https://support.microsoft.com/help/888728) A description of the device driver .inf file decoration requirements for Windows Server 2003 x64 Editions and Windows XP Professional x64 Edition  
 
 ### Technical support for Windows x64 editions
 

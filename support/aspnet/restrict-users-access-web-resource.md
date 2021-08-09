@@ -46,8 +46,6 @@ To restrict access to ASP.NET applications that use forms authentication, edit t
 
 ## References
 
-- [HOW TO: Secure an ASP.NET Application Using Client-Side Certificates](https://support.microsoft.com/help/315588)
-
 - [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178)
 
 - [How To Create the Web.config File for an ASP.NET Application](https://support.microsoft.com/help/815179)

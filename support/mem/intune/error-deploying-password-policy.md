@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4095085
 
 When you deploy a device restriction policy for password in Microsoft Intune, you receive error -2016281112.
 
-Here is an example case in which you specify the **Required password type** setting:
+Here is an example case in which you specify the **Required password type** setting:
 
 ![Screenshot of the error code -2016281112.](./media/error-deploying-password-policy/error-code.png)
 
@@ -36,4 +36,4 @@ To fix the issue, direct the users to change their password.
 
 For Android and Windows desktop devices, we recommend that you deploy a device-compliance policy to enforce the same password setting. This enforces the password change at device enrollment or blocks noncompliant devices from company resources.
 
-You can also notify the users by email and give them a grace period to be compliant. See [Configure actions for noncompliant devices in Intune](/mem/intune/protect/actions-for-noncompliance).
+You can also notify the users by email and give them a grace period to be compliant. See [Configure actions for noncompliant devices in Intune](/mem/intune/protect/actions-for-noncompliance).

@@ -4,20 +4,20 @@ description: Guidelines for installing the RDSH  and RD license server role serv
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Install Remote Desktop Session Host role service in Windows Server without Connection Broker role service
 
 This article provides guidelines to install and configure the Remote Desktop Session Host role service on a computer that is running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 without the Remote Desktop Connection Broker role service installed.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2833839
 
 ## Summary
@@ -41,7 +41,7 @@ The process of deploying RDS service roles on a single workgroup server or DC di
 Unless otherwise noted, these steps apply to both workgroup computer and DC cases.
 
 > [!IMPORTANT]
-> If you are using a single computer as both the RDS server and as a DC, configure the computer as a DC before you begin installing the RDS roles. For more information about how to install Active Directory Domain Services (AD DS) and configure the computer as a DC in Windows Server 2016 or Windows Server 2012, see [Install Active Directory Domain Services (Level 100)](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
+> If you are using a single computer as both the RDS server and as a DC, configure the computer as a DC before you begin installing the RDS roles. For more information about how to install Active Directory Domain Services (AD DS) and configure the computer as a DC in Windows Server 2016 or Windows Server 2012, see [Install Active Directory Domain Services (Level 100)](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
 
 1. On the workgroup computer or DC, install the Remote Desktop Licensing role service and the Remote Desktop Session Host role service. To do this, follow these steps:
 
@@ -75,13 +75,13 @@ Unless otherwise noted, these steps apply to both workgroup computer and DC case
 1. Add the users that you want to allow to connect to the Remote Desktop Users group. To do this, use the following tools:
 
    - To find the Remote Desktop Users group on a DC, open Active Directory Users and Computers and navigate to the **Builtin** container.
-   - To find the Remote Desktop Users group on a workgroup server, open Computer Management and then navigate to **Local Users and Groups\Groups**.
+   - To find the Remote Desktop Users group on a workgroup server, open Computer Management and then navigate to **Local Users and Groups\\Groups**.
 
 1. Change the local policy of the computer to add your remote desktop users to the **Allow logon through Remote Desktop Services** local policy object. To do this, follow these steps:
 
     1. Open Local Security Policy.
-    2. Navigate to **Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**.
-    3. Double-click **Allow log on through Remote Desktop Services** and then select **Add User or Group**.
+    2. Navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**.
+    3. Double-click **Allow log on through Remote Desktop Services**, and then select **Add User or Group**.
     4. Type **Remote Desktop Users** (or the user names of each user account that you want to add, separated by semicolons), and then select **OK** two times.
 
 1. Configure the Remote Desktop Session Host role service to use the local RDS license server.

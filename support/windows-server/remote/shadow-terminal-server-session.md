@@ -4,20 +4,20 @@ description: Describes how to shadow a Terminal Server session without a prompt 
 ms.date: 10/09/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, SPAT, ELDENC
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # How to shadow a Terminal Server session without a prompt for approval
 
 This article describes how to shadow a Terminal Server session without a prompt for approval.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 292190
 
 ## Summary
@@ -41,7 +41,7 @@ To remote control the console with no prompt for approval:
     gpupdate /force
     ```
 
-Now, if you establish a Remote Desktop session you can connect to the console and remote control it by going to a command prompt and using the following command:
+Now, if you establish a Remote Desktop session, you can connect to the console and remote control it by going to a command prompt and using the following command:
 
 ```console
 Shadow 0

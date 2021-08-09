@@ -7,6 +7,8 @@ ms.reviewer: v-jomcc, ericlaw
 ---
 # How to fix runtime errors in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 A runtime error is a software or hardware problem that prevents Internet Explorer from working correctly. Runtime errors can be caused when a website uses HTML code that is not compatible with the web browser functionality.
 
 _Original product version:_ &nbsp; Internet Explorer  

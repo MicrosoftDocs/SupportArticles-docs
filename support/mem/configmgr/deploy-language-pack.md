@@ -11,51 +11,51 @@ This article describes how to deploy a Windows language pack as an application i
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4468362
 
-## Deploy a language pack as an application
+## Deploy a language pack as an application
 
-To deploy a language pack as an application in Configuration Manager, follow these steps:
+To deploy a language pack as an application in Configuration Manager, follow these steps:
 
 1. In Configuration Manager console, go to **Software Library** > **Application management** > **Applications**, and then select **Create Application**.
 
     :::image type="content" source="media/deploy-language-pack/create-application.png" alt-text="Screenshot of the Create application button.":::
 
-2. On the **General** page of the **Create Application Wizard**, select **Manually specify the application information**, and then select **Next**.
+2. On the **General** page of the **Create Application Wizard**, select **Manually specify the application information**, and then select **Next**.
 
     :::image type="content" source="media/deploy-language-pack/general-page.png" alt-text="Screenshot of the General page." border="false":::
 
-3. On the **General Information** page, specify information about the application, such as the application name and comments, and then select **Next**.
+3. On the **General Information** page, specify information about the application, such as the application name and comments, and then select **Next**.
 
     :::image type="content" source="media/deploy-language-pack/specify-info.png" alt-text="Screenshot of the General information page.":::
 
 4. On the **Application Catalog** page, specify information about how to display the application to users in the Application Catalog, and then select **Next**.
-5. On the **Deployment Types** page, select **Add** to open the **Create Deployment Type Wizard**.
+5. On the **Deployment Types** page, select **Add** to open the **Create Deployment Type Wizard**.
 
     :::image type="content" source="media/deploy-language-pack/deployment-types.png" alt-text="Screenshot of the Add button." border="false":::
 
-6. On the **General** page, select **Script Installer**  from the **Type** list, and then select **Next**.
+6. On the **General** page, select **Script Installer** from the **Type** list, and then select **Next**.
 
     :::image type="content" source="media/deploy-language-pack/select-type.png" alt-text="Screenshot of selecting type." border="false":::
 
-7. On the **General Information**  page, enter application name, and then select **Next**.
+7. On the **General Information** page, enter application name, and then select **Next**.
 
     :::image type="content" source="media/deploy-language-pack/enter-name.png" alt-text="Enter application name." border="false":::
 
-8. On the **Content** page, specify the content location, enter the following for **Installation program**, and then select **Next**.
+8. On the **Content** page, specify the content location, enter the following for **Installation program**, and then select **Next**.
 
     `DISM /Online /Add-Package /PackagePath:.\`
 
     :::image type="content" source="media/deploy-language-pack/installation-program.png" alt-text="Specify content information.":::
 
-9. On the **Detection Method**  page, select **Add Clause**.
+9. On the **Detection Method** page, select **Add Clause**.
 
     :::image type="content" source="media/deploy-language-pack/add-clause.png" alt-text="Add clause.":::
 
-10. For **Detection Rule**, select **Registry** from the **Setting Type** drop-down list, select **HKEY_LOCAL_MACHINE** for **Hive**, enter `SYSTEM\CurrentControlSet\Control\MUI\UILanguages\<language name>` in **Key**, (for example, `SYSTEM\CurrentControlSet\Control\MUI\UILanguages\fr-FR`), and then select **OK**.
+10. For **Detection Rule**, select **Registry** from the **Setting Type** drop-down list, select **HKEY_LOCAL_MACHINE** for **Hive**, enter `SYSTEM\CurrentControlSet\Control\MUI\UILanguages\<language name>` in **Key**, (for example, `SYSTEM\CurrentControlSet\Control\MUI\UILanguages\fr-FR`), and then select **OK**.
 
     :::image type="content" source="media/deploy-language-pack/detection-rule.png" alt-text="Detection rule.":::
 
 11. Select **Next**.
-12. On **User Experience** page, select **Install for system** from the **Installation behavior** drop-down list, specify a **Logon requirement**, and then select **Next**.
+12. On **User Experience** page, select **Install for system** from the **Installation behavior** drop-down list, specify a **Logon requirement**, and then select **Next**.
 
     :::image type="content" source="media/deploy-language-pack/user-experience.png" alt-text="Specify user experience.":::
 
@@ -76,11 +76,11 @@ To deploy a language pack as an application in Configuration Manager, follow th
 
         :::image type="content" source="media/deploy-language-pack/global-condition.png" alt-text="Global condition.":::
 
-    3. Enter **1803** for **Value**, and then select **OK**.
+    3. Enter **1803** for **Value**, and then select **OK**.
 
         :::image type="content" source="media/deploy-language-pack/value.png" alt-text="Enter value.":::
 
-14. On **Summary**  page, confirm the settings, and then select **Next**.
+14. On **Summary** page, confirm the settings, and then select **Next**.
 15. Wait for the wizard to complete, and then select **Close** to exit the wizard.
 
     :::image type="content" source="media/deploy-language-pack/completion.png" alt-text="Completion.":::
@@ -114,7 +114,7 @@ You can use the following logs to track policy and application installation:
 
     :::image type="content" source="media/deploy-language-pack/policyagent.png" alt-text="Screenshot of the PolicyAgent log example.":::
 
-- Use **AppDiscovery.log** to check the discovery or detection of an application on client devices.
+- Use **AppDiscovery.log** to check the discovery or detection of an application on client devices.
 
     :::image type="content" source="media/deploy-language-pack/appdiscovery.png" alt-text="Screenshot of the AppDiscovery log example.":::
 
@@ -122,7 +122,7 @@ You can use the following logs to track policy and application installation:
 
     :::image type="content" source="media/deploy-language-pack/appintenteval.png" alt-text="Screenshot of the AppIntentEval log example.":::
 
-- Use **AppEnforce.log** to track application installation on the client and to check the exit code to verify that installation completed successfully.
+- Use **AppEnforce.log** to track application installation on the client and to check the exit code to verify that installation completed successfully.
 
     :::image type="content" source="media/deploy-language-pack/appenforce.png" alt-text="Screenshot of the AppEnforce log example.":::
 

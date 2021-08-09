@@ -1,11 +1,11 @@
 ---
-title: Use IComparable and IComparer in Visual C#
-description: This article describes how to use the IComparable and IComparer interfaces in Visual C#.
+title: Use comparison interfaces in Visual C#
+description: This article describes how to use the `IComparable` and `IComparer` interfaces in Visual C#.
 ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
 ---
-# Use the IComparable and IComparer interfaces in Visual CSharp
+# Use the `IComparable` and `IComparer` interfaces in Visual CSharp
 
 This article describes the use of `IComparer` and `IComparable` interfaces in Visual C#.
 
@@ -14,30 +14,30 @@ _Original KB number:_ &nbsp; 320727
 
 ## Summary
 
-The `IComparable` and `IComparer` interfaces are discussed in the same article for two reasons. These interfaces are frequently used together, and although the interfaces are similar (and have similar names), they serve different purposes.
+The `IComparable` and `IComparer` interfaces are discussed in the same article for two reasons. These interfaces are frequently used together. Although the interfaces are similar and have similar names, they serve different purposes.
 
 If you have an array of types (such as string or integer) that already support `IComparer`, you can sort that array without providing any explicit reference to `IComparer`. In that case, the elements of the array are cast to the default implementation of `IComparer` (`Comparer.Default`) for you. However, if you want to provide sorting or comparison capability for your custom objects, you must implement either or both of these interfaces.
 
 This article references the Microsoft .NET Framework Class Library namespace `System.Collections`.
 
-## IComparable
+## `IComparable`
 
-The role of `IComparable` is to provide a method of comparing two objects of a particular type. It is necessary if you want to provide any ordering capability for your object. Think of `IComparable` as providing a default sort order for your objects. For example, if you have an array of objects of your type, and you call the `Sort` method on that array, `IComparable` provides the comparison of objects during the sort. When you implement the `IComparable` interface, you must implement the `CompareTo` method, as follows:
+The role of `IComparable` is to provide a method of comparing two objects of a particular type. It's necessary if you want to provide any ordering capability for your object. Think of `IComparable` as providing a default sort order for your objects. For example, if you have an array of objects of your type, and you call the `Sort` method on that array, `IComparable` provides the comparison of objects during the sort. When you implement the `IComparable` interface, you must implement the `CompareTo` method, as follows:
 
 ```csharp
 // Implement IComparable CompareTo method - provide default sort order.
 int IComparable.CompareTo(object obj)
 {
-   car c=(car)obj;
+   Car c=(Car)obj;
    return String.Compare(this.make,c.make);
 }
 ```
 
 The comparison in the method is different depending on the data type of the value that is being compared. `String.Compare` is used in this example because the property that is chosen for the comparison is a string.
 
-## IComparer
+## `IComparer`
 
-The role of `IComparer` is to provide additional comparison mechanisms. For example, you might want to provide ordering of your class on several fields or properties, ascending and descending order on the same field, or both.
+The role of `IComparer` is to provide more comparison mechanisms. For example, you might want to provide ordering of your class on several fields or properties, ascending and descending order on the same field, or both.
 
 Using `IComparer` is a two-step process. First, declare a class that implements `IComparer`, and then implement the `Compare` method:
 
@@ -46,8 +46,8 @@ private class sortYearAscendingHelper : IComparer
 {
    int IComparer.Compare(object a, object b)
    {
-      car c1=(car)a;
-      car c2=(car)b;
+      Car c1=(Car)a;
+      Car c2=(Car)b;
       if (c1.year > c2.year)
          return 1;
       if (c1.year < c2.year)
@@ -70,11 +70,11 @@ public static IComparer sortYearAscending()
 }
 ```
 
-In this example, the object is used as the second argument when you call the overloaded `Array.Sort` method that accepts `IComparer`. The use of `IComparer` isn't limited to arrays. It's accepted as an argument in a number of different collection and control classes.
+In this example, the object is used as the second argument when you call the overloaded `Array.Sort` method that accepts `IComparer`. The use of `IComparer` isn't limited to arrays. It's accepted as an argument in many different collection and control classes.
 
 ## Step-by-step example
 
-The following example demonstrates the use of these interfaces. To demonstrate `IComparer` and `IComparable`, a class named `car` is created. The `car` object has the make and year properties. An ascending sort for the make field is enabled through the `IComparable` interface, and a descending sort on the make field is enabled through the `IComparer` interface. Both ascending and descending sorts are provided for the year property through the use of `IComparer`.
+The following example demonstrates the use of these interfaces. To demonstrate `IComparer` and `IComparable`, a class named `Car` is created. The `Car` object has the make and year properties. An ascending sort for the make field is enabled through the `IComparable` interface, and a descending sort on the make field is enabled through the `IComparer` interface. Both ascending and descending sorts are provided for the year property by using `IComparer`.
 
 1. In Visual C#, create a new Console Application project. Name the application *ConsoleEnum*.
 
@@ -90,49 +90,49 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           [STAThread]
           static void Main(string[] args)
           {
-             // Create an array of car objects.
-             car[] arrayOfCars= new car[6]
+             // Create an array of Car objects.
+             Car[] arrayOfCars= new Car[6]
              {
-                new car("Ford",1992),
-                new car("Fiat",1988),
-                new car("Buick",1932),
-                new car("Ford",1932),
-                new car("Dodge",1999),
-                new car("Honda",1977)
+                new Car("Ford",1992),
+                new Car("Fiat",1988),
+                new Car("Buick",1932),
+                new Car("Ford",1932),
+                new Car("Dodge",1999),
+                new Car("Honda",1977)
              };
 
              // Write out a header for the output.
              Console.WriteLine("Array - Unsorted\n");
 
-             foreach(car c in arrayOfCars)
+             foreach(Car c in arrayOfCars)
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              // Demo IComparable by sorting array with "default" sort order.
              Array.Sort(arrayOfCars);
              Console.WriteLine("\nArray - Sorted by Make (Ascending - IComparable)\n");
 
-             foreach(car c in arrayOfCars)
+             foreach(Car c in arrayOfCars)
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              // Demo ascending sort of numeric value with IComparer.
-             Array.Sort(arrayOfCars,car.sortYearAscending());
+             Array.Sort(arrayOfCars,Car.sortYearAscending());
              Console.WriteLine("\nArray - Sorted by Year (Ascending - IComparer)\n");
 
-             foreach(car c in arrayOfCars)
+             foreach(Car c in arrayOfCars)
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              // Demo descending sort of string value with IComparer.
-             Array.Sort(arrayOfCars,car.sortMakeDescending());
+             Array.Sort(arrayOfCars,Car.sortMakeDescending());
              Console.WriteLine("\nArray - Sorted by Make (Descending - IComparer)\n");
 
-             foreach(car c in arrayOfCars)
+             foreach(Car c in arrayOfCars)
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              // Demo descending sort of numeric value using IComparer.
-             Array.Sort(arrayOfCars,car.sortYearDescending());
+             Array.Sort(arrayOfCars,Car.sortYearDescending());
              Console.WriteLine("\nArray - Sorted by Year (Descending - IComparer)\n");
 
-             foreach(car c in arrayOfCars)
+             foreach(Car c in arrayOfCars)
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              Console.ReadLine();
@@ -141,7 +141,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
    }
    ```
 
-3. Add a class to the project. Name the class *car*.
+3. Add a class to the project. Name the class *Car*.
 
 4. Replace the code in *Car.cs* with the following code:
 
@@ -150,7 +150,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
     using System.Collections;
     namespace ConsoleEnum
     {
-       public class car : IComparable
+       public class Car : IComparable
        {
           // Beginning of nested classes.
           // Nested class to do ascending sort on year property.
@@ -158,8 +158,8 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           {
              int IComparer.Compare(object a, object b)
              {
-                car c1=(car)a;
-                car c2=(car)b;
+                Car c1=(Car)a;
+                Car c2=(Car)b;
 
                 if (c1.year > c2.year)
                    return 1;
@@ -177,8 +177,8 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           {
              int IComparer.Compare(object a, object b)
              {
-                car c1=(car)a;
-                car c2=(car)b;
+                Car c1=(Car)a;
+                Car c2=(Car)b;
 
                 if (c1.year < c2.year)
                    return 1;
@@ -196,8 +196,8 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           {
              int IComparer.Compare(object a, object b)
              {
-                car c1=(car)a;
-                car c2=(car)b;
+                Car c1=(Car)a;
+                Car c2=(Car)b;
                  return String.Compare(c2.make,c1.make);
              }
           }
@@ -205,7 +205,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           private int year;
           private string make;
 
-          public car(string Make,int Year)
+          public Car(string Make,int Year)
           {
              make=Make;
              year=Year;
@@ -225,7 +225,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           // Implement IComparable CompareTo to provide default sort order.
           int IComparable.CompareTo(object obj)
           {
-             car c=(car)obj;
+             Car c=(Car)obj;
              return String.Compare(this.make,c.make);
           }
           // Method to return IComparer object for sort helper.
@@ -250,7 +250,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
 
 5. Run the project. The following output appears in the **Console** window:
 
-    ```console
+    ```output
     Array - Unsorted
 
     Ford 1992

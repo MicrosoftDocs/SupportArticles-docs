@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: waltero, sarathys, mtandon, mouradl, larsbe, vladimip, genli
 ---
 # TLS 1.2 Protocol Support Deployment Guide for Microsoft Azure Pack

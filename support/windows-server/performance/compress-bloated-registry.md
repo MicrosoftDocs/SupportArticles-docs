@@ -4,20 +4,20 @@ description: Describes how to compress large registry hives.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: System Hang
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Compress "Bloated" Registry Hives
 
 This article describes how to compress large registry hives to avoid performance issues.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2498915
 
 ## Symptoms
@@ -40,6 +40,6 @@ While there may be third-party tools available for this scenario, the process li
  a) You can use dir from a command line to verify the old and new sizes of the registry hives.
 4. Unload the bloated hive from regedit. (If you get an error here, close the registry editor. Then reopen the registry editor and try again.)
 5. Rename the hives so that you'll boot with the compressed hive.
-for example,  
+For example,  
 `c:\windows\system32\config\ren software software.old`  
 `c:\windows\system32\config\ren compressedhive software`

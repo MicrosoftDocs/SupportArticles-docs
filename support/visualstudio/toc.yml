@@ -10,22 +10,32 @@
   href: ./install/toc.yml
 - name: Silverlight
   items:
+  - name: An update is available for Silverlight 5
+    href: ./silverlight/update-available.md
   - name: Applications crash with 0xC0000094 exception
     href: ./silverlight/application-exception-0xc0000094-vmware.md
   - name: Can't display DRM protected subtitles
     href: ./silverlight/drm-protected-subtitles-not-supported.md
+  - name: Playback of protected video content fails
+    href: ./silverlight/playback-protected-video-content-fail-error.md
   - name: Run Silverlight Configuration tool
     href: ./silverlight/run-configuration-tool.md
+  - name: Silverlight may not work in Google Chrome
+    href: ./silverlight/silverlight-not-work-google-chrome.md
   - name: Slsvcutil.exe crashes
     href: ./silverlight/slsvcutil-tool-crashes.md
-  - name: An update is available for Silverlight 5
-    href: ./silverlight/update-available.md
+  - name: Type many characters into a Silverlight TextBox or RichTextBox
+    href: ./silverlight/type-characters-into-silverlight-textbox-richtextbox.md 
 - name: Subscriptions
   items:
   - name: Opt out of dev essentials
     href: ./subscriptions/opt-out-of-dev-essentials.md
 - name: Visual Basic
   items:
+  - name: Integrated Development Environment (IDE)
+    items:
+    - name: Mouse wheel events don't work
+      href: ../dotnet/visual-basic/mouse-wheel-events-do-not-work.md
   - name: Language or compilers
     items:
     - name: Check program running
@@ -34,6 +44,8 @@
       href: ../dotnet/visual-basic/create-dcom-clientserver-application.md
     - name: Create SQL Server database programmatically
       href: ../dotnet/visual-basic/create-database-programmatically.md
+    - name: Format strings to Right-Justify when an application calls printing
+      href: ../dotnet/visual-basic/format-strings-right-justify.md
     - name: Navigate XML with XPathNavigator class
       href: ../dotnet/visual-basic/navigate-xml-xpathnavigator-class.md
     - name: Pass array of values into stored procedure

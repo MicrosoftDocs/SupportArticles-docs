@@ -4,20 +4,20 @@ description: Helps to fix the error "An item with the same key has already been 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Errors when running the Validation Wizard
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Error: "An item with the same key has already been added"
 
 This article helps to fix the error "An item with the same key has already been added".
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002405
 
 ## Symptoms
@@ -36,8 +36,8 @@ A sample output for an adapter would look like this -
  **Name : Intel(R) PRO/1000 MT Desktop Adapter  
 GUID: {7488FB48-851A-40B6-AB47-1EA7408C762F}** 
  
->[!Note]
- This scenario typically occurs if an operating system image is being used to deploy cluster nodes and that image was not correctly prepared for deployment by running sysprep.
+> [!Note]
+> This scenario typically occurs if an operating system image is being used to deploy cluster nodes and that image was not correctly prepared for deployment by running sysprep.
 
 ## Resolution
 

@@ -4,20 +4,20 @@ description: Provides some information about Windows does not boot in Normal Mod
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
-# Not Boot In Normal Mode - Driver Issue
+# Not boot in Normal Mode - driver issue
 
 This article provides some information about Windows does not boot in Normal Mode due to a driver issue.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555996
 
 This article was written by [`Nirmal Sharma`](https://mvp.microsoft.com/en-US/PublicProfile/33635), Microsoft MVP.
@@ -49,6 +49,7 @@ The problem might be either with Windows Driver or Third-Party applications. In 
 - After replacing all entries, save SafeBoot.reg file and double-click on it.
 - Now restart your computer in Normal Mode.  
 
-Note editing registry is not recommended by users only experienced administrators should edit the registry.
+> [!Note]
+> Editing registry is not recommended by users only experienced administrators should edit the registry.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

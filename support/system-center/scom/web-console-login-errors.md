@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4469591
 
 ## Symptoms
 
-When you install the web console in System Center Operations Manager version 1801 or 1807, you receive the following error message when you select the **Use Windows Authentication** sign-in option:
+When you install the web console in System Center Operations Manager version 1801 or 1807, you receive the following error message when you select the **Use Windows Authentication** sign-in option:
 
 > The user credentials are invalid or user does not have permissions...
 
-If you instead select the **Use Alternate Credentials** sign-in option, you receive the following error message after you enter credentials in the form:
+If you instead select the **Use Alternate Credentials** sign-in option, you receive the following error message after you enter credentials in the form:
 
 > The remote server returned an error: (404) Not Found.
 
@@ -26,11 +26,11 @@ If you instead select the **Use Alternate Credentials** sign-in option, you rece
 
 This problem can occur when you configure a specific IP address or host header in the bindings of the web console website.
 
-The problem occurs because web console consists of two separate web applications, `OperationsManager` and `MonitoringView`. Both web applications run as virtual directories under the same website. During login, the `OperationsManager` application makes an outbound request to the `MonitoringView` application's Login.aspx page. The hostname in this request is hard-coded as `localhost`. If the website has a host header or isn't bound to the loopback address, the site can't service the localhost request. Therefore, the site returns the **404** message.
+The problem occurs because web console consists of two separate web applications, `OperationsManager` and `MonitoringView`. Both web applications run as virtual directories under the same website. During login, the `OperationsManager` application makes an outbound request to the `MonitoringView` application's Login.aspx page. The hostname in this request is hard-coded as `localhost`. If the website has a host header or isn't bound to the loopback address, the site can't service the localhost request. Therefore, the site returns the **404** message.
 
 ## Workaround
 
-If you bind the web console website to a specific IP address or use a host header, create additional bindings on the website for the same ports by using the loopback address or the `localhost` hostname, depending on the scenario.
+If you bind the web console website to a specific IP address or use a host header, create additional bindings on the website for the same ports by using the loopback address or the `localhost` hostname, depending on the scenario.
 
 Specifically, assume that you configure the following HTTP and HTTPS bindings:
 

@@ -4,6 +4,8 @@ description: Fixes a Winload.exe error (0xc000000e) that occurs on an Azure virt
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Winload.exe error code 0xc000000e on an Azure VM
 
@@ -25,6 +27,9 @@ Windows doesn't start. Instead, the system generates the following error:
 The issue occurs when a device that doesn't exist is specified in the Boot Configuration data.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps:
 

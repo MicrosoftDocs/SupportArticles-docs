@@ -1,11 +1,11 @@
 ---
 title: Azure region access request process
-description: Describes the Azure Australia Central Regions support ticket whitelisting process.
+description: Describes the process to request access for certain Azure regions.
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Azure region access request process  

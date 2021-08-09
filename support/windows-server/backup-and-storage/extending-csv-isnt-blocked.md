@@ -1,23 +1,23 @@
 ---
-title: Extending a CSV isn't blocked
+title: Extending Cluster Shared Volume isn't blocked from a non-coordinator node
 description: Provides a solution to an issue where extending a Cluster Shared Volume by using Diskpart or PowerShell isn't blocked from a non-coordinator node.
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, josefh
 ms.prod-support-area-path: Data corruption and disk errors
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Extending a CSV by using Diskpart or PowerShell isn't blocked from a non-coordinator node
 
 This article provides a solution to an issue where extending a Cluster Shared Volume by using Diskpart or PowerShell isn't blocked from a non-coordinator node.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3189825
 
 ## Symptoms
@@ -48,13 +48,13 @@ In the Cluster GUI, you may notice that the **Extend Volume** option is greyed o
 
 ## Resolution
 
-To resolve this problem, do not run any metadata operation from a non-coordinator node.
+To resolve this problem, don't run any metadata operation from a non-coordinator node.
 
 ## More information
 
 For more information about clustering and high-availability, see the following Failover Clustering and Network Load-Balancing Team Blog article:
 
-[Cluster Shared Volume (CSV) Inside Out](https://blogs.msdn.microsoft.com/clustering/2013/12/02/cluster-shared-volume-csv-inside-out/)
+[Cluster Shared Volume (CSV) Inside Out](https://techcommunity.microsoft.com/t5/failover-clustering/cluster-shared-volume-csv-inside-out/ba-p/371872)
 
 ## Workaround
 

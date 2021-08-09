@@ -4,20 +4,20 @@ description: Contains troubleshooting information to help you fix Active Directo
 ms.date: 10/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, justintu
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshoot common Active Directory replication errors
 
 This article contains information and links to help you troubleshoot Active Directory Replication errors. It is intended to provide Active Directory administrators with a method to diagnose replication failures and to determine where those failures are occurring.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3108513
 
 > [!NOTE]
@@ -59,14 +59,14 @@ To troubleshoot specific errors, refer to the following table.
 
 To troubleshoot specific event IDs, refer to the following table:
 
-| Event ID| Cause| Related Knowledge Base article |
+| Event ID| Cause| Related article |
 |---|---|---|
-|Event ID 1311|Fixing Replication Topology Problems| [4469664](https://support.microsoft.com/help/4469664) |
+|Event ID 1311|Fixing Replication Topology Problems| [How to troubleshoot Event ID 1311 messages on a Windows domain](/troubleshoot/windows-server/identity/troubleshoot-event-id-1311-messages) |
 |Event ID 1388 or 1988|A lingering object is detected| [4469619](https://support.microsoft.com/help/4469619) |
 |Event ID 2042|It has been too long since this machine replicated| [4469622](https://support.microsoft.com/help/4469622) |
 |Event ID 1925|Attempt to establish a replication link failed due to DNS lookup problem| [4469659](https://support.microsoft.com/help/4469659) |
 |Event ID 2087|DNS lookup failure caused replication to fail| [4469661](https://support.microsoft.com/help/4469661) |
-|Event ID 2088|DNS lookup failure occurred with replication success| [4469662](https://support.microsoft.com/help/4469662) |
+|Event ID 2088|DNS lookup failure occurred with replication success| [Event ID 2088: DNS lookup failure occurred with replication success](/windows-server/identity/ad-ds/manage/component-updates/event-id-2088--dns-lookup-failure-occurred-with-replication-success) |
 ||||
 
 ## References

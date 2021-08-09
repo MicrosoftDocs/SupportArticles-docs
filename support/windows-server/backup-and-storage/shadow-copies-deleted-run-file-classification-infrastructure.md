@@ -1,42 +1,42 @@
 ---
-title: Shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job
-description: Describes an issue in which shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
+title: Shadow copies are deleted on Windows Server when you try to run an FCI classification job
+description: Describes an issue in which shadow copies are deleted on Windows Server when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
-# Shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job
+# Shadow copies are deleted on Windows Server when you try to run an FCI classification job
 
-This article describes an issue in which shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
+This article describes an issue in which shadow copies are deleted on Windows Server when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;977521
 
 ## Symptoms
 
-On a server that is running Windows Server 2008 R2, you have a volume on which you have enabled shadow copies through a Volume Shadow Copy (VSS) provider. On this volume, you run a File Classification Infrastructure (FCI) classification job. However, the classification job doesn't finish, and older shadow copies are deleted faster than expected from the shadow copies storage area. This may result in all shadow copies being deleted from the volume. Additionally, multiple entries that resemble the following may be logged in the System log:
+On a Windows Server computer, you have a volume on which you have enabled shadow copies through a Volume Shadow Copy (VSS) provider. On this volume, you run a File Classification Infrastructure (FCI) classification job. However, the classification job doesn't finish, and older shadow copies are deleted faster than expected from the shadow copies storage area. This may result in all shadow copies being deleted from the volume. Additionally, multiple entries that resemble the following may be logged in the System log:
 
 > The oldest shadow copy of volume **Volume_Letter** : was deleted to keep disk space usage for shadow copies of volume **Volume_Letter** : below the user defined limit.
 
 Also, entries that resemble the following are logged in the FSRM log:
 
-> Warning **DD** / **MM** / **YYYY** **hh** : **mm** : **ss** **AM_PM** SRMSVC 12310 None
+> Warning **DD**/**MM**/**YYYY** **hh** :**mm**:**ss** **AM_PM** SRMSVC 12310 None
 >
-> Shadow copy '\\\\?\GLOBALROOT\Device\ **HarddiskVolumeShadowCopy_File_Name**' was deleted during storage report generation. Volume '**Volume_Letter** :' might be configured with inadequate shadow copy storage area. Storage reports may be temporarily unavailable for this volume.
+> Shadow copy '\\\\?\\GLOBALROOT\\Device\\**HarddiskVolumeShadowCopy_File_Name**' was deleted during storage report generation. Volume '**Volume_Letter** :' might be configured with inadequate shadow copy storage area. Storage reports may be temporarily unavailable for this volume.
 
 Additionally, if you run an FSRM storage report, you receive the following error message:
 
 >Error: RunFileQueries, 0x8004532c, A volume shadow copy could not be created or was unexpectedly deleted.
 >
-> File Server Resource Manager encountered an unexpected error during volume scan of volumes mounted at '\\?\Volume{Volume_PID}\' ('**Volume_Letter** :'). To find out more information about the root cause for this error please consult the Application/System event log for other FSRM, VSS or VOLSNAP errors related with these volumes. Also, you might want to make sure that you can create shadow copies on these volumes by using the VSSADMIN command like this: VSSADMIN CREATE SHADOW /For= **Volume_Letter** :
+> File Server Resource Manager encountered an unexpected error during volume scan of volumes mounted at '\\\\?\\Volume{Volume_PID}\\' ('**Volume_Letter**:'). To find out more information about the root cause for this error please consult the Application/System event log for other FSRM, VSS or VOLSNAP errors related with these volumes. Also, you might want to make sure that you can create shadow copies on these volumes by using the VSSADMIN command like this: VSSADMIN CREATE SHADOW /For=**Volume_Letter** :
 >
 > Error generating report job with the task name '**Task_name**'.
 
@@ -63,9 +63,9 @@ Before you run a full classification of a volume for the first time, increase th
 
     If you're prompted for an administrator password, type the password. If you're prompted for confirmation, click **Continue**.
 3. At the command prompt, type the following command, and then press ENTER:
-    
+
     ```console
-     vssadmin list shadowstorage /for=Volume_Letter: 
+     vssadmin list shadowstorage /for=Volume_Letter:
     ```
 
 4. Note the **Maximum Shadow Copy Storage Space** value.

@@ -16,9 +16,9 @@ _Original KB number:_ &nbsp; 4466879
 
 ## Introduction
 
-Typically, the existing Logging module in IIS is used to log items such as the original client IP address in the `X-FORWARDED-FOR` field in the IIS logs. However, if you use a third-party reporting tool to parse the IIS logs, the tool may not understand the `X-FORWARDED-FOR` field. Instead, it may use a different field, such as the **Client IP Address (c-ip)** field.
+Typically, the existing Logging module in IIS is used to log items such as the original client IP address in the `X-FORWARDED-FOR` field in the IIS logs. However, if you use a third-party reporting tool to parse the IIS logs, the tool may not understand the `X-FORWARDED-FOR` field. Instead, it may use a different field, such as the **Client IP Address (c-ip)** field.
 
-For example, assume that you have a load-balanced environment that consists of at least two web servers together with an F5 load balancer in front of the web servers. Typically, the original client's IP address is logged in the `X-FORWARDED-FOR` field in the IIS logs by the existing Logging module. To use the third-party reporting tool, you try to create a custom **Client IP Address (c-ip)** field. However, you receive the following conflict message:
+For example, assume that you have a load-balanced environment that consists of at least two web servers together with an F5 load balancer in front of the web servers. Typically, the original client's IP address is logged in the `X-FORWARDED-FOR` field in the IIS logs by the existing Logging module. To use the third-party reporting tool, you try to create a custom **Client IP Address (c-ip)** field. However, you receive the following conflict message:
 
 ![Add custom field](./media/customize-iis-log-file-field-names/4466894_en_1.png)
 
@@ -44,7 +44,7 @@ There are two solutions to this problem.
 
         ![Actions pane](./media/customize-iis-log-file-field-names/4466914_en_1.jpg)  
 
-    4. Select the **Edit Logging Fields**  option, and then select the **Add Field** button in the pop-up window.
+    4. Select the **Edit Logging Fields**  option, and then select the **Add Field** button in the pop-up window.
     5. Specify the following field values (for example):
 
        - **Field ID**: \<type any friendly name>
@@ -55,7 +55,7 @@ There are two solutions to this problem.
 
        ![Add logging fields](./media/customize-iis-log-file-field-names/4466916_en_1.jpg)
 
-    6. In the Advanced Logging module, double-click the default Log definition, and then select the **Select Fields**  button.
+    6. In the Advanced Logging module, double-click the default Log definition, and then select the **Select Fields**  button.
 
        ![Double-click the default Log definition](./media/customize-iis-log-file-field-names/4466918_en_1.jpg)  
 

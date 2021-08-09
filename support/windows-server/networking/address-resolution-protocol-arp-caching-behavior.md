@@ -4,20 +4,20 @@ description: Describes ARP caching behavior in Windows Vista TCP/IP implementati
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, muratka
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # Description of Address Resolution Protocol (ARP) caching behavior in TCP/IP implementations
 
 This article provides a description of Address Resolution Protocol (ARP) caching behavior in TCP/IP implementations.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 949589
 
 ## Introduction
@@ -45,8 +45,7 @@ Therefore, the "Reachable Time" value is somewhere between 15 seconds (30 × 0.5
 
 To see the current "Reachable Time" value, follow these steps:
 
-1. Click **Start**, type  
- cmd in the **Start Search** box, and then click **cmd** in the **Programs** list.
+1. Click **Start**, type *cmd* in the **Start Search** box, and then click **cmd** in the **Programs** list.
 
 2. If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**.
 3. At the command prompt, type the following command:  
@@ -115,7 +114,7 @@ Example result:
 `netsh interface ipv4 set global neighborcachelimit = 4096`  
 
     >[!NOTE]
-    >The default neighbor cache limit is 256.  
+    >The default neighbor cache limit is 256 for client versions of Windows, and is 1024 for Windows Server.  
 
 For more information about the neighbor cache entry states, visit the following Web site:  
 [https://www.ietf.org/rfc/rfc2461.txt](http://www.ietf.org/rfc/rfc2461.txt)  

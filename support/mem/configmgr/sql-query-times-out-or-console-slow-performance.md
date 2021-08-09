@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 3196320
 
 ## Symptoms
 
-You experience slow Configuration Manager console performance or unusual SQL query timeouts for certain Configuration Manager database queries in environments running SQL Server 2014, SQL Server 2016, or SQL Server 2017 on Windows.
+You experience slow Configuration Manager console performance or unusual SQL query timeouts for certain Configuration Manager database queries in environments running SQL Server 2014, SQL Server 2016, or SQL Server 2017 on Windows.
 
 ## Cause
 
-SQL Server Cardinality Estimation (CE) changes in SQL Server 2014, SQL Server 2016, and SQL Server 2017 on Windows may cause performance issues with certain Configuration Manager queries in some environments.
+SQL Server Cardinality Estimation (CE) changes in SQL Server 2014, SQL Server 2016, and SQL Server 2017 on Windows may cause performance issues with certain Configuration Manager queries in some environments.
 
 ## Resolution
 
@@ -65,12 +65,12 @@ GO
 ```
 
 > [!NOTE]
-> In the above example, replace \<CM_DB> with your Configuration Manager site database name. To change the CE compatibility level to a different level, change the value in `SET COMPATIBILITY_LEVEL`.
+> In the above example, replace \<CM_DB> with your Configuration Manager site database name. To change the CE compatibility level to a different level, change the value in `SET COMPATIBILITY_LEVEL`.
 
 ## More information
 
-When a SQL Server instance is upgraded in-place from any earlier version of SQL Server, pre-existing databases will keep their existing compatibility level if they are at the minimum allowed level for that new version of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by the new version of SQL Server.
+When a SQL Server instance is upgraded in-place from any earlier version of SQL Server, pre-existing databases will keep their existing compatibility level if they are at the minimum allowed level for that new version of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by the new version of SQL Server.
 
-During upgrades or new installations of Configuration Manager, databases may be automatically configured to use the recommended SQL Server CE compatibility version for that version of SQL Server (as shown in the table that's mentioned in the [Resolution](#resolution) section). If you experience performance degradation after a servicing update, as a result of being reverted back to the default recommended CE level for your version of SQL Server, reassess whether you may have to manually change the CE level back to **110**.
+During upgrades or new installations of Configuration Manager, databases may be automatically configured to use the recommended SQL Server CE compatibility version for that version of SQL Server (as shown in the table that's mentioned in the [Resolution](#resolution) section). If you experience performance degradation after a servicing update, as a result of being reverted back to the default recommended CE level for your version of SQL Server, reassess whether you may have to manually change the CE level back to **110**.
 
 For more information about SQL Server CE compatibility levels, see [ALTER DATABASE (Transact-SQL) Compatibility Level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).

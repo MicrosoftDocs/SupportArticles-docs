@@ -4,24 +4,24 @@ description: Discusses the connection settings that are stored in the Default.rd
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop Protocol settings in Windows Server 2003 and in Windows XP
 
 This article discusses the connection settings that are stored in the Default.rdp file on Windows Server 2003-based and Windows XP-based computers.
 
-Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page:
-
+> [!NOTE]
+> Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page:
 [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;885187
 
 ## Introduction
@@ -30,8 +30,9 @@ When you use the Remote Desktop Protocol (RDP) to connect to a remote computer, 
 
 ## More information
 
-When you use RDP to connect to a remote computer, you can use the Remote Desktop Connection **Options** dialog box to configure many of the connection settings. To configure these settings, follow these steps:
-1. Click **Start**, click **Run**, type mstsc.exe, and then click **OK**.
+When you use RDP to connect to a remote computer, you can use the Remote Desktop Connection **Options** dialog box to configure many of the connection settings. To configure these settings, follow these steps:  
+
+1. Click **Start**, click **Run**, type *mstsc.exe*, and then click **OK**.
 2. In the **Remote Desktop Connection** dialog box, click **Options**.
 
 You can save *.rdp files with different settings if you connect to multiple remote computers. To save a new configuration, click **Save As** on the **General** tab in **Options**.
@@ -66,9 +67,9 @@ This setting corresponds to the color depth that you select in **Colors** on the
 This setting corresponds to the window position that you select on the **Display** tab in Remote Desktop Connection **Options**.
 
 > [!NOTE]
-> On desktop computers, this setting determines the **Remote Desktop Connection** dialog box position on the screen. The six numbers represent a string form of the WINDOWPOS structure. For more information about the WINDOWPOS function, visit the following Microsoft Web site: 
+> On desktop computers, this setting determines the **Remote Desktop Connection** dialog box position on the screen. The six numbers represent a string form of the WINDOWPOS structure. For more information about the WINDOWPOS function, visit the following Microsoft Web site:
 
-[WINDOWPOS structure](https://msdn2.microsoft.com/library/ms632612.aspx) 
+[WINDOWPOS structure](https://msdn2.microsoft.com/library/ms632612.aspx)
 
 > [!NOTE]
 > Microsoft Windows CE-based devices support only full-screen mode.

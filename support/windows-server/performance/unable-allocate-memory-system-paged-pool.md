@@ -4,20 +4,20 @@ description: Provides a resolution for the issue that it is unable to allocate m
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mohak, weiwan
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Unable to allocate memory from the system paged pool
 
 This article provides a resolution for the issue that it is unable to allocate memory from the system paged pool.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312362
 
 ## Symptoms

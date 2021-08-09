@@ -4,20 +4,20 @@ description: Describes an issue that occurs when you uninstall a third-party SAT
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tjung
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # "Stop 0x0000007B" error after you use a Group Policy setting to prevent the installation of devices
 
 This article helps to fix the error "Stop 0x0000007B" after you use a Group Policy setting to prevent the installation of devices.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2773300
 
 ## Symptoms

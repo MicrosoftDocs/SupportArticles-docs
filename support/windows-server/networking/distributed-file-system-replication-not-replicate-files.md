@@ -4,20 +4,20 @@ description: Discusses an issue where the DFS Replication service doesn't replic
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # DFSR no longer replicates files after restoring a virtualized server's snapshot
 
 This article discusses an issue where the Distributed File System Replication (DFSR) service fails to replicate files after restoring a virtualized server's snapshot.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2517913
 
 ## Symptoms
@@ -34,7 +34,7 @@ You notice the following behaviors on the restored server:
 
     > Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:19:07 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2212**  
     Task Category: None  
     Level:         Warning  
@@ -46,10 +46,10 @@ You notice the following behaviors on the restored server:
     >
     > Additional Information:  
     Volume: C:  
-    GUID: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
+    GUID: *\<GUID>*  
     Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:19:07 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2104**  
     Task Category: None  
     Level:         Error  
@@ -65,7 +65,7 @@ You notice the following behaviors on the restored server:
     Database: C:\System Volume Information\DFSR  
     Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:19:07 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2004**  
     Task Category: None  
     Level:         Error  
@@ -80,7 +80,7 @@ You notice the following behaviors on the restored server:
     Volume: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
     Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:51:08 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2106**  
     Task Category: None  
     Level:         Information  

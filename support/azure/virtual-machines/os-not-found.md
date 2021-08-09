@@ -4,6 +4,8 @@ description: Provides a solution to an issue where Windows VM doesn't start with
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error in an Azure VM: An operating system wasn't found
 
@@ -28,6 +30,9 @@ This issue occurs for one of the following reasons:
 - The host can't access the storage in which the disk is hosted.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix this issue, stop (de-allocate) and restart the VM. Then, check whether the issue persists. If the issue persists, follow these steps.
 

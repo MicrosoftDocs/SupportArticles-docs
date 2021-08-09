@@ -18,7 +18,7 @@ ProcDump is a new command-line tool that allows you to monitor a running process
 ## Use ProcDump
 
 1. Create a folder on the C:\ drive named procdump.
-2. Open an elevated command prompt and navigate to the `c:\procdump` folder. In the command-line, type the following command:
+2. Open an elevated command prompt and navigate to the `c:\procdump` folder. In the command-line, type the following command:
 
     ```console
     procdump.exe -ma -e vmmservice.exe
@@ -27,7 +27,7 @@ ProcDump is a new command-line tool that allows you to monitor a running process
     > [!NOTE]
     > The `-ma` parameter will make it take a full dump of the process and `-e` will write a dump when the process encounters an unhandled exception.
 
-3. To capture first chance exceptions, use the following command:
+3. To capture first chance exceptions, use the following command:
 
     ```console
     procdump -ma -e 1 -t -n 10 vmmservice.exe

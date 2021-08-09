@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4537303
 
 ## Symptoms
 
-After you enroll an Android Enterprise work profile device in Intune, the ownership of the device is automatically changed to **Corporate**. You receive the following notification in the Company Portal app:
+After you enroll an Android Enterprise work profile device in Intune, the ownership of the device is automatically changed to **Corporate**. You receive the following notification in the Company Portal app:
 
 > Your company support changed the ownership type of this device from Personal to Corporate.
 
@@ -21,7 +21,7 @@ After you enroll an Android Enterprise work profile device in Intune, the owner
 
 ## Cause
 
-This issue occurs if a corporate identifier was added for the device in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+This issue occurs if a corporate identifier was added for the device in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Resolution
 

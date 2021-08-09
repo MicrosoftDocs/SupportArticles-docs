@@ -4,20 +4,20 @@ description: Fixes an issue where printing pauses after every 11 print jobs when
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Errors and troubleshooting: Print output or print failures'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Printing pauses after every 11 print jobs when you use an LPR port
 
 This article helps fix an issue where printing pauses after every 11 print jobs when printing through a line printer remote (LPR) port and event IDs 2004 and 4227 are logged.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2003449
 
 ## Symptoms
@@ -50,15 +50,13 @@ LPR ports use the default LPR RFC source and destination ports (TCP: 721-731, TC
 
 We recommend that you use standard TCP\IP ports instead of LPR ports. If you must use LPR ports, you can still use TCP\IP ports. However, you should set them to LPR mode. The following articles describe standard TCP\IP ports in more detail.
 
-[The standard port monitor for TCP/IP in Windows Server 2003](https://support.microsoft.com/kb/814586) 
+[The standard port monitor for TCP/IP in Windows Server 2003](standard-port-monitor-for-tcpip.md)  
 
-[https://technet.microsoft.com/library/cc728404(WS.10).aspx](https://technet.microsoft.com/library/cc728404%28WS.10%29.aspx) 
-
-To work around the 11-port RFC default for LPR ports, follow these steps: 
+To work around the 11-port RFC default for LPR ports, follow these steps:  
 
  1. Set the following registry key (REG_DWORD):
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\LPDSVC\lpr  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\LPDSVC\lpr`  
     Value name: UseNonRFCSourcePorts  
     Value Data: 1  
     Value Type: Binary  

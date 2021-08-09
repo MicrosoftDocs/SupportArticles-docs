@@ -4,20 +4,20 @@ description: Describes a problem where event ID 10000 is logged in the Applicati
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Event ID 10000 is logged in the Application log on a Windows Server 2003-based computer that has Terminal Server enabled
 
 This article provides a solution to an issue where event ID 10000 is logged in the Application log when you use a Terminal Server computer that is running Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 914052
 
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 914052
 
 When you try to connect to a Microsoft Windows Server 2003-based computer that has Terminal Server enabled, an event that is similar to the following is logged in the Application log:
 
-> Event Type:Error Event Source:DCOM Event Category:None Event ID:10000 Date:2/20/2006 Time:10:04:57 AM User:N/A Computer: Computer_Name  
+> Event Type:Error Event Source:DCOM Event Category:None Event ID:10000 Date:\<Date> Time:\<Time> User:N/A Computer: Computer_Name  
 > Description: Unable to start a DCOM Server: {0002DF01-0000-0000-C000-000000000046} The error: "%%233" Happened while starting this command: \<command> -Embedding
 
 > [!NOTE]

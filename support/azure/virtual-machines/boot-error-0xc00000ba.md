@@ -4,6 +4,8 @@ description: Provides a solution to an issue where Windows VM doesn't start with
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error 0xc00000ba in the Azure VM
 
@@ -33,6 +35,9 @@ This issue occurs because that the Windows system files are corrupt. This may oc
 The damaged system file causes absent, incorrectly linked documents, and archives essential for the correct operation of the program.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 

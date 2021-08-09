@@ -187,8 +187,4 @@ If your code-behind class files will be compiled on demand instead of precompile
 
 - For more information about general Web Forms syntax, see [Web Forms Syntax](/previous-versions/dotnet/netframework-1.1/fy30at8h(v=vs.71)).
 
-- For additional information, visit the following websites:
-
-  - [ASP.NET Code-behind model overview](/troubleshoot/aspnet/code-behind-model)
-
-  - [How to create a virtual folder (subweb) in IIS 4.0 or in IIS 5.0](https://support.microsoft.com/help/301392)
+- For more information, see [ASP.NET Code-behind model overview](/troubleshoot/aspnet/code-behind-model).

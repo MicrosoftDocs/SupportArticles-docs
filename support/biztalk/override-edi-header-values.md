@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2753540
 
 When using `OverrideEDIHeader` as documented at [Overriding EDI Headers](/biztalk/core/overriding-edi-headers) in order to override EDI headers for an outgoing X12 997 document, the following error happens:
 
-> There was a failure executing the send pipeline: "Microsoft.BizTalk.Edi.DefaultPipelines.EdiSend, Microsoft.BizTalk.Edi.EdiPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Source: "EDI Assembler" Send Port: "SENDPORTNAME" URI: "SENDPORTURI" Reason: Agreement Resolution based on the context properties for x12 Protocol has failed.  
+> There was a failure executing the send pipeline: "Microsoft.BizTalk.Edi.DefaultPipelines.EdiSend, Microsoft.BizTalk.Edi.EdiPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Source: "EDI Assembler" Send Port: "SENDPORTNAME" URI: "SENDPORTURI" Reason: Agreement Resolution based on the context properties for x12 Protocol has failed.  
 
 ## Cause
 
@@ -26,13 +26,13 @@ When using `OverrideEDIHeader` as documented at [Overriding EDI Headers](/biztal
 - DestinationPartySenderIdentifier
 - DestinationPartySenderQualifier
 
-Due to this situation, the logic at [Agreement Resolution and Schema Determination for Outgoing EDI Messages](/biztalk/core/agreement-resolution-and-schema-determination-for-outgoing-edi-messages) still applies.
+Due to this situation, the logic at [Agreement Resolution and Schema Determination for Outgoing EDI Messages](/biztalk/core/agreement-resolution-and-schema-determination-for-outgoing-edi-messages) still applies.
 
 ## Resolution
 
-In order to use the override EDI headers, the custom pipeline component needs to first remove the above four context properties.
+In order to use the override EDI headers, the custom pipeline component needs to first remove the above four context properties.
 
-Below is the sample `Execute()` code for a pipeline component that sets `ISA05`,`ISA06`, `ISA07`, and `ISA08` on an outgoing 997 message.
+Below is the sample `Execute()` code for a pipeline component that sets `ISA05`,`ISA06`, `ISA07`, and `ISA08` on an outgoing 997 message.
 
 ```csharp
 public IBaseMessage Execute(IPipelineContext pContext, IBaseMessage pInMsg)
@@ -45,9 +45,9 @@ public IBaseMessage Execute(IPipelineContext pContext, IBaseMessage pInMsg)
     if (pInMsg.Context.Read("MessageType", systemPropertiesNs).ToString() == EDi997NS)
     {
         pInMsg.Context.Write("DestinationPartyReceiverIdentifier", EdiNS, null);
-        pInMsg.Context.Write("DestinationPartyReceiverQualifier", EdiNS, null);  
-        pInMsg.Context.Write("DestinationPartySenderIdentifier", EdiNS, null);  
-        pInMsg.Context.Write("DestinationPartySenderQualifier", EdiNS, null);  
+        pInMsg.Context.Write("DestinationPartyReceiverQualifier", EdiNS, null);  
+        pInMsg.Context.Write("DestinationPartySenderIdentifier", EdiNS, null);  
+        pInMsg.Context.Write("DestinationPartySenderQualifier", EdiNS, null);  
         pInMsg.Context.Promote("OverrideEDIHeader", EdiPropertyNS, (object)"True");
         pInMsg.Context.Promote("ISA05", EdiPropertyNS, (object)"00;
         pInMsg.Context.Promote("ISA06", EdiPropertyNS, (object)"1111111111");

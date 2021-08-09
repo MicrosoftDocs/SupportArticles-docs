@@ -21,19 +21,19 @@ This error message is also logged in the IIS log on the management point compute
 
 ## Cause
 
-This issue occurs if the WSUS server role was previously installed on the management point computer. When the WSUS server role was installed, it installed the XPress compression schema module (suscomp.dll) that loaded in every application pool in IIS. If the 32-bit version of suscomp.dll is loaded in an application pool that runs in 64-bit mode, you experience this issue.
+This issue occurs if the WSUS server role was previously installed on the management point computer. When the WSUS server role was installed, it installed the XPress compression schema module (suscomp.dll) that loaded in every application pool in IIS. If the 32-bit version of suscomp.dll is loaded in an application pool that runs in 64-bit mode, you experience this issue.
 
 ## Resolution
 
 To fix this issue, follow these steps:
 
-1. Locate `%windir%\system32\inetsrv\config`.
+1. Locate `%windir%\system32\inetsrv\config`.
 2. Open the applicationHost.config file in Notepad.
 3. Look for an entry like this:
 
     > \<scheme name="xpress" doStaticCompression="false" doDynamicCompression="true" dll="C:\Windows\system32\inetsrv\suscomp.dll" staticCompressionLevel="10" dynamicCompressionLevel="0" />
 
-4. Remove the XPress compression schema by running the following command from an elevated command prompt:
+4. Remove the XPress compression schema by running the following command from an elevated command prompt:
 
     ```console
     %windir%\system32\inetsrv\appcmd.exe set config -section:system.webServer/httpCompression /-[name='xpress']
@@ -41,7 +41,7 @@ To fix this issue, follow these steps:
 
 5. Verify that the compression schema is removed from the applicationHost.config file, and then save the file.
 
-6. Run the following command from an elevated command prompt:
+6. Run the following command from an elevated command prompt:
 
     ```console
     iisreset

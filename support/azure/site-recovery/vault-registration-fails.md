@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: markstan
 ---
 # Vault registration fails in Azure Site Recovery with error: The DRA server is already registered in vault

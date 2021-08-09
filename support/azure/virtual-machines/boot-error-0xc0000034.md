@@ -4,6 +4,8 @@ description: Fixes an issue that triggers Boot or BCD error 0xc0000034 when you 
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Windows boot error 0xc0000034 on an Azure VM
 
@@ -25,6 +27,9 @@ Info: You'll need to use the recovery tools on your installation media. if you d
 There's BCD corruption that is not allowing the boot partition to find where the \Windows folder is.
 
 ## Resolution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps.
 

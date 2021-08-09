@@ -4,18 +4,18 @@ description: Describes how to effectively manage the memory and improve the perf
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # RAM, virtual memory, pagefile, and memory management in Windows
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2160852
 
 ## Summary
@@ -117,6 +117,4 @@ Performance Monitor is the principle tool for monitoring system performance and 
 
 ## References
 
-- [How to use Memory Pool Monitor (Poolmon.exe) to troubleshoot kernel mode memory leaks](https://support.microsoft.com/help/177415)
-
-- [Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions)
+[Address Windowing Extensions](/windows/win32/memory/address-windowing-extensions)
