@@ -29,6 +29,7 @@ To avoid disruption in your services, we encourage you to remove all dependencie
 - [How can I check whether my organization is using site mailboxes?](#how-can-i-check-whether-my-organization-is-using-site-mailboxes)
 - [What should I do if I want to keep the data in my site mailboxes?](#what-should-i-do-if-i-want-to-keep-the-data-in-my-site-mailboxes)
 - [Will deleting a site mailbox remove the documents in the associated SharePoint site?](#will-deleting-a-site-mailbox-remove-the-documents-in-the-associated-sharepoint-site)
+- [Site mailbox inaccessible in Outlook as well as OWA](#Site-mailbox-inaccessible)
 
 ## What is a site mailbox?
 
@@ -91,3 +92,19 @@ Get-Mailbox <site_mailbox_name>:* | ?{$_.RecipientTypeDetails -eq "TeamMailbox"}
 The system will remove the link to the site mailbox from the associated SharePoint site when the site mailbox is deleted. Deleting only the site mailbox won't affect the data that's stored on the SharePoint site.
 
 [Back to top](#summary)
+
+#Site-mailbox-inaccessible
+Following [our announcement to retire site mailboxes]((https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704)), the access to site mailbox is now stopped from clients (Outlook and OWA).
+
+Here’s client wise experience o:nce the change is rolled out,
+
+•	Experience in Outlook:
+Outlook would show site mailbox on the left hand pane, just like auto-mapped delegate mailbox. After this change, Outlook will stop receiving site mailbox related payload in Autodiscover, that it was using to auto-map the site mailboxes. The existing auto-mapped site mailboxes will disappear from Outlook client. The end-user would not see any error as such.
+
+•	Experience in Outlook on the web (OWA) extension:
+Clicking the site mailbox app from SharePoint site would launch OWA extension to display site mailbox content. After this change, the end user trying to access site mailbox will receive error “HTTP 500 something went wrong, You don’t have access to this mailbox”.
+
+Detailed error:
+"Microsoft.Exchange.Clients.Owa2.Server.Core.OwaExplicitLogonException"
+
+This change does not block exporting site mailbox data to PST using e-Discovery. You can follow the steps mentioned earlier to export the data from site mailbox to PST.
