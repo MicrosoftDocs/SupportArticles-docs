@@ -4,7 +4,7 @@ description: Describes an issue where the display configuration is retained afte
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article explains an issue where the display configuration is retained after reboot when you use USB-attached monitor.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp;2465368
 
 ## Symptoms

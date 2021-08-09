@@ -6,6 +6,8 @@ ms.date: 02/29/2020
 ---
 # Page Cannot be Displayed error due to bad proxy server timeout
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 Microsoft identified an issue with how server connection failures can affect proxy server use by the web browser. You may receive a **Page Cannot be Displayed** error message in a corporate network. This article provides temporary workarounds to restore connectivity.
 
 _Original product version:_ &nbsp; Internet Explorer  

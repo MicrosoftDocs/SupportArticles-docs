@@ -425,6 +425,8 @@
       href: replication/oracle-publication-triggers-sends-data.md
     - name: Performance statistics for Log Reader and Distribution Agents
       href: replication/performance-statistics-log-reader-distribution-agents.md
+    - name: Pull subscriptions do not show up in Windows Synchronization Manager
+      href: replication/subscriptions-do-not-show-up-windows-sync-manager.md
     - name: Replication agents can't run
       href: replication/sql-replication-agents-not-run.md
     - name: Script failed error when creating merge publication snapshot
@@ -641,4 +643,6 @@
       href: tools/use-sqldumper-generate-dump-file.md
     - name: Using SQLIOSim utility to simulate SQL Server disk activity
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem.md
+    - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
+      href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
 

@@ -4,7 +4,7 @@ description: Describes an issue where you cannot run a batch job that runs as a 
 ms.date: 09/25/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides solution to an error (Access is denied) that occurs when you run a batch job on a Microsoft Windows Server 2003-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 867466
 
 ## Symptoms

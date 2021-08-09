@@ -4,7 +4,7 @@ description: Describes the TCP Chimney offload feature in Windows Server 2008. D
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes the TCP Chimney Offload, Receive Side Scaling (RSS), and Network Direct Memory Access (NetDMA) features that are available for the TCP/IP protocol in Windows Server 2008.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951037
 
 ## TCP Chimney Offload overview
@@ -89,12 +89,14 @@ When TCP Chimney Offload is enabled in the operating system and in the network a
 
     You receive output that resembles the following:
 
-    > Active Connections
-    >
-    > Proto Local Address Foreign Address State Offload State
-    >
-    > TCP 127.0.0.1:52613 computer_name:52614 ESTABLISHED InHost
+    ```output
+    Active Connections
+
+    Proto Local Address Foreign Address State Offload State
+    
+    TCP 127.0.0.1:52613 computer_name:52614 ESTABLISHED InHost
     TCP 192.168.1.103:52614 computer_name:52613 ESTABLISHED Offloaded
+    ```
 
     In this output, the second connection is offloaded.
 
@@ -117,9 +119,11 @@ To determine the current status of RSS, follow these steps:
 
 When you use a command to enable RSS, you receive the following message:
 
-> TCP Global Parameters  
-\----------------------------------------------  
+```output
+TCP Global Parameters  
+----------------------------------------------  
 Receive-Side Scaling State: enabled
+```
 
 > [!NOTE]
 > By default, RSS is enabled.

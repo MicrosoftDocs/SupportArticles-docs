@@ -4,7 +4,7 @@ description: Discusses how to configure Microsoft's BitLocker Administration and
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article discusses how to configure Microsoft's BitLocker Administration and Monitoring (MBAM) with Secure Network Communication.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;2754259
 
 ## Summary

@@ -122,6 +122,24 @@ Events for troubleshooting Windows Azure Guest Agent is recorded in the followin
 
 The following are some common scenarios in which Windows Azure Guest Agent can enter **Not ready** status or stop working as expected.
 
+### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issue with Sysprep
+
+Running Sysprep.exe on these VMs might end up with the below errors.
+
+- When you run Sysprep the first time, you will see the following error:
+
+  > ADMINISTRATOR: Error Handler
+
+- When you run Sysprep more than once, you will see the following error:
+
+  > A fatal error occurred while trying to sysprep the VM
+
+The issue is only with version 1004, hence you can try upgrading the agent to the latest agent version, or you can try upgrading it to version 1005 by using below MSI, which has the bug fixed.
+
+*\\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller*
+
+Also, reset the Sysprep state of the VM first. This consists of [modifying a few registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/).
+
 ### Agent Stuck on "Starting"
 
 In the WaAppAgent log, you can see that the agent is stuck at the Starting process and cannot start.
@@ -230,5 +248,7 @@ The Npcap loopback adapter is installed on the VM by Wireshark. Wireshark is an 
 The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, and then check whether the problem is resolved.
 
 ## Next steps
+
+Other known issues with the Windows Azure Guest Agent are listed in its [Github repository](https://github.com/Azure/WindowsVMAgent/wiki/Known-Issues).
 
 To further troubleshoot the “Windows Azure Guest Agent is not working” issue, [contact Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).

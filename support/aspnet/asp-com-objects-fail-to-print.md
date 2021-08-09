@@ -30,19 +30,19 @@ You can set up printers for the SYSTEM account to resolve this problem. To set u
 2. Launch the **Registry Editor** (Regedit.exe).
 3. Select the following key:
 
-    `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\Current Version\Devices`
+    `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Devices`
 
 4. From the **Registry** menu, select **Export Registry File**.
 5. In the **File Name** text box, type **c:\Devices.reg**.
 6. Select the following key:
 
-    `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\Current Version\PrinterPorts`
+    `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\PrinterPorts`
 
 7. From the **Registry** menu, select **Export Registry File**.
 8. In the **File Name** text box, type **c:\PrinterPorts.reg**.
 9. Select the following key:
 
-    `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\Current Version\Windows`
+    `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows`
 
 10. From the **Registry** menu, select **Export Registry File**.
 11. In the **File Name** text box, type **c:\Windows.reg**.

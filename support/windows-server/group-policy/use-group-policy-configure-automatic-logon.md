@@ -4,7 +4,7 @@ description: Describes the steps to use Group Policy to configure automatic logo
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This step-by-step article describes how to use Group Policy to configure automatic logon in Microsoft Windows Server 2003 Terminal Services.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324807
 
 ## Summary

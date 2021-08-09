@@ -22,7 +22,7 @@ Most ASP.NET applications come with a prebuilt *Web.config* file that can be edi
 
 1. Open the *Machine.config* file in a text editor such as Notepad.
 
-    The *Machine.config* file is located in the `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\directory`.
+    The *Machine.config* file is located in the `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\` directory.
 
 2. In the *Machine.config* file, locate the configuration setting you want to override in your *Web.config* file. When the element is more than one line, the element starts with an `<element_name>` line, and ends with `</element_name>`. The element may also be self-closing and may look similar to `<element_name attribute1='option' attribute2='option' />`. White space is ignored. Therefore, the element may span multiple lines. The element may be preceded by a comment. The comment is contained inside
 `<!-- and -->` markings. The `<trace>` configuration element example that follows is an example of a self-closing element. The `<trace>` configuration element example has multiple attributes, spans multiple lines, and has a comment at the beginning.

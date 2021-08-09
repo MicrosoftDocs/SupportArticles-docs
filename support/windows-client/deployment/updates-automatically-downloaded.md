@@ -4,7 +4,7 @@ description: Explains that if you select the default Windows Update option when 
 ms.date: 10/12/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes that if you select the default Windows Update option when you install Windows Vista, important updates are automatically downloaded and installed.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 931275
 
 ## Summary

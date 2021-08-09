@@ -8,6 +8,8 @@ ms.topic: article
 ---
 # Browser default action for CTRL+P cannot be prevented
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes that browser default action for **CTRL**+**P** cannot be prevented.
 
 _Applies to:_ &nbsp; Internet Explorer 11, Internet Explorer 10, Internet Explorer 9  

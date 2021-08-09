@@ -4,7 +4,7 @@ description: Describes how to create an UEFI bootable Windows PE RAM Disk on a C
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to create an ISO image for UEFI platforms for a Windows PE CD-ROM.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947024
 
 ## Introduction

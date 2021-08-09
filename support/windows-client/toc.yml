@@ -274,8 +274,6 @@
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
       href: ./deployment/command-switches-supported-by-self-extractor-package.md
-    - name: Compute MD5 or SHA-1 cryptographic hash values
-      href: ./deployment/compute-md5sha-1-cryptographic-hash-value.md
     - name: DISM /Apply-Image command fails with error code 5
       href: ./deployment/dism-apply-image-command-fails-error-code-5.md
     - name: Download updates from Windows Update Catalog
@@ -376,14 +374,14 @@
       href: ./deployment/edit-boot-ini-file-windows-2000.md
     - name: Installation File Location not behave on the Explain tab
       href: ./deployment/installation-file-location-service-pack-not-behave.md
+    - name: Language features aren't displayed in Windows 10
+      href: ./deployment/language-features-not-displayed.md
     - name: Language packs no longer available
       href: ./deployment/language-packs-no-longer-available-after-upgrade.md
     - name: MiracastView package cause sysprep error after upgrading a computer
       href: ./deployment/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
     - name: Network provider settings are removed during an in-place upgrade 
       href: ./deployment/network-provider-settings-removed-in-place-upgrade.md
-    - name: OOBE fails when you start a new computer
-      href: ./deployment/windows-oobe-fails-start-new-computer.md
     - name: Operations fail if Windows 8 is improperly identified as a WTG installation
       href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
     - name: Remote Server Admin Tools uninstalled during in-place upgrade
@@ -526,10 +524,6 @@
     items:
     - name: Intranet site is identified as Internet site
       href: ./networking/intranet-site-identified-as-an-internet-site.md
-  - name: Network Load Balancing (NLB)
-    items:
-    - name: Configure network infrastructure to support NLB operation mode
-      href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: Remote access
     items:
     - name: Change default MTU Size Settings
@@ -715,7 +709,7 @@
     - name: Task Manager shows incorrect CPU speed
       href: ./performance/task-manager-shows-incorrect-cpu-speed.md
     - name: User-defined data collector set doesn't run as scheduled
-      href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md
+      href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md?context=/troubleshoot/windows-client/context/context
     - name: Use the System Configuration utility to troubleshoot
       href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
     - name: Windows Experience Index shows 1.0
@@ -812,7 +806,7 @@
       href: ./remote/terminal-server-client-connection-failures.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
-    - name: Support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session
+    - name: Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-session
       href: ./remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md
 - name: Shell Experience
   items:
@@ -851,9 +845,7 @@
   - name: DPI and Display Issues
     items:
     - name: Can't open high resolution file in Photo Gallery
-      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
-    - name: Custom display settings revert to the default
-      href: ./shell-experience/custom-display-settings-revert-to-default.md
+      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md    
     - name: 'Display configuration reverts to "Second screen only"'
       href: ./shell-experience/display-configuration-reverts-second-screen-only-resume-standby.md
     - name: Display issue when you use USB-attached monitor
@@ -876,6 +868,8 @@
       href: ./shell-experience/video-stabilization-resolution-limits-h-264.md
   - name: DST and Timezones
     items:
+    - name: Can't set time zone automatically in Windows 10
+      href: ./shell-experience/cannot-set-timezone-automatically.md
     - name: Changes to calendar date in BIOS are not reflected in Windows
       href: ./shell-experience/changes-calendar-date-in-bios-not-reflected.md
   - name: File Associations
@@ -934,8 +928,6 @@
       href: ./shell-experience/store-app-not-start-after-update.md
   - name: Windows Media Player
     items:
-    - name: Toggle between full screen mode and Windows mode
-      href: ./shell-experience/toggle-full-mode-and-windows-mode.md
     - name: Videos don't play in Windows Media Player 11
       href: ./shell-experience/media-player-11-not-play-video.md
     - name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
@@ -1026,6 +1018,8 @@
       href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
   - name: Smart card logon
     items:
+    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
+      href: ./user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
     - name: Registry keys for smart card PIN caching options not available
       href: ./user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md
   - name: User Logon fails

@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Cannot change your home page in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the steps that you can follow to solve the issue that you cannot change your home page in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer  

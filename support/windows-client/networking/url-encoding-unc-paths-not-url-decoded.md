@@ -4,7 +4,7 @@ description: In Windows 10, version 1803, and later versions of Windows URL-enco
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides some information about URI-encoding in UNC paths interpreted literally in Windows 10, version 1803 and later.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4467268
 
 ## Summary

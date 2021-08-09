@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Nothing happens when you click a link in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem that the webpage can't be opened when you click a hyperlink in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

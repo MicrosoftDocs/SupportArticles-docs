@@ -4,7 +4,7 @@ description: Describes how to configure the Simple Network Management Protocol (
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to configure the Simple Network Management Protocol (SNMP) Service in Windows Server 2003. This article describes how to configure SNMP agent properties, SNMP traps, and SNMP security.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324263
 
 ## Summary

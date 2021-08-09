@@ -4,7 +4,7 @@ description: Fixes an issue in which a Windows 8.1-based computer stops respondi
 ms.date: 09/17/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 After a Windows 8.1-based computer resumes from Sleep mode, the computer stops responding, and the hard disk usage reaches 100 percent. This article provides a solution to this issue.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2922899
 
 ## Symptoms

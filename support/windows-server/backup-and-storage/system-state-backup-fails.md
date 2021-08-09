@@ -4,7 +4,7 @@ description: Discusses a system state backup failure on a Windows Server 2008-ba
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to an issue where event IDs 12290 and 16387 are logged when system state backup fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968128
 
 ## Symptoms

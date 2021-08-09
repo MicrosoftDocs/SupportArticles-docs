@@ -4,7 +4,7 @@ description: Describes how to import a Web site certificate into the certificate
 ms.date: 09/29/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816794
 
 ## Install the Certificates

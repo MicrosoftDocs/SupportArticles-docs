@@ -4,7 +4,7 @@ description: Describes how to resolve a problem that is caused by an incorrect d
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article describes how to resolve a problem where users can't sign in to Windows until the incorrect driver is removed.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4563240
 
 ## Summary

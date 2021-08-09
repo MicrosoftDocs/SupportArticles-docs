@@ -28,6 +28,17 @@
   - name: Unauthorized errors (401)
     href: unauthorized-errors-invoke-apis.md
 
+- name: Azure App Service
+  items:
+  - name: App Service Compliance with PCI Standards 3.0 and 3.1
+    href: app-service-compliance-wit.md
+  - name: Backing up, restoring, and cloning
+    href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
+  - name: Troubleshoot temporary storage
+    href: temporary-storage-for-azure-app-service.md
+  - name: Troubleshoot instance-related issues
+    href: troubleshoot-instance-related-issues-on-azure-app-service.md
+    
 - name: Azure Stack
   items:
   - name: Side-channel vulnerabilities protection
@@ -117,8 +128,6 @@
 
 - name: Other common issues
   items:
-  - name: App Service Compliance with PCI Standards 3.0 and 3.1
-    href: app-service-compliance-wit.md
   - name: Can't load VM metrics
     href: problem-occur-loading-metrics.md
   - name: Delete button doesn't work
@@ -138,6 +147,8 @@
 
 - name:  Support Diagnostic Packages
   items:
+  - name: Diagnostic logs for Apache Spark pools
+    href: synapse-analytics-apache-spark-pools-diagnostic-logs.md
   - name: Diagnostic logs for SQL Server 
     href: sql-vm-logs.md
   - name: SQL database data collector

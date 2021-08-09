@@ -4,7 +4,7 @@ description: Describes how to recover when a password is corrupted or when a use
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-backup-and-storage
 
 This article provides some information about how to use System Restore to log on when you lose access to an account.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 940765
 
 >[!NOTE]

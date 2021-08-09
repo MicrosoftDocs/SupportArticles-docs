@@ -4,7 +4,7 @@ description: Fix an issue that occurs when end user uses remote desktop connecti
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-rds
 
 This article helps fix an issue that occurs when end user uses remote desktop connection to log on to a 802.1x secured Windows 7, Windows 8 or Windows 10 machine that is configured user authentication only.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1, Windows 8, Windows 10  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows 8, Windows 10  
 _Original KB number:_ &nbsp;2820847
 
 ## Symptoms

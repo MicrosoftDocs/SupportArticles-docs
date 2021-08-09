@@ -4,7 +4,7 @@ description: Describe how to solve the problem of overlapping Forest Names cause
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides the resolution when overlapping Forest Names cause problems once Forest Trusts are established.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2744558
 
 ## Symptoms

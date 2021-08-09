@@ -4,7 +4,7 @@ description: This article fixes an error when you click the Reports tab in MBAM.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article fixes an error when you click the Reports tab in MBAM.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;2620287
 
 ## Symptoms

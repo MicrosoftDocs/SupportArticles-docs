@@ -4,7 +4,7 @@ description: Describes an error that's returned in Device Manager for the WAN Mi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a workaround for an issue where Device Manager displays a yellow exclamation mark next to the WAN Miniport (Network monitor) device.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2871372
 
 ## Symptoms

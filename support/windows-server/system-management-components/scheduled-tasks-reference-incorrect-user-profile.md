@@ -4,7 +4,7 @@ description: Discusses a problem in which scheduled tasks reference incorrect us
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article provides help to solve an issue where the output is written to an incorrect user profile path when you run a script under a user account by using Windows Task Scheduler.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2968540
 
 > [!NOTE]

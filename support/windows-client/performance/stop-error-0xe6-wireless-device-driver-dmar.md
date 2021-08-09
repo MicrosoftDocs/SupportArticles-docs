@@ -4,7 +4,7 @@ description: Describes a memory leak that occurs when you stress test a wireless
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-performance
 
 This article helps to fix the Stop error 0xE6: DRIVER_VERIFIER_DMA_VIOLATION that occurs after you repeatedly disable and enable a wireless device driver.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4576784
 
 ## Symptoms

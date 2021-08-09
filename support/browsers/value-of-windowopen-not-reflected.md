@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Windows opened by window.open() do not reflect the specified size and position in Microsoft Edge
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about the value set by calling `window.open()` function will not be reflected in the new window of Microsoft Edge.
 
 _Original product version:_ &nbsp; Internet Explorer  

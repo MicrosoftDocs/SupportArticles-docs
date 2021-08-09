@@ -4,7 +4,7 @@ description: Describes the changes in Windows 10 regarding the registry keys for
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-user-profiles
 
 This article describes the changes in Windows 10 regarding the registry keys for smart card PIN caching options.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4516455
 
 ## Symptoms

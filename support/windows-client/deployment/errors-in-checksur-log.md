@@ -4,7 +4,7 @@ description: Describes how to fix errors that are logged by the System Update Re
 ms.date: 10/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to resolve servicing corruption that the System Update Readiness tool (CheckSUR) finds but cannot correct on its own. Output from the tool is recorded in the %WinDir%\Logs\CBS\CheckSUR.log file.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2700601
 
 > [!NOTE]

@@ -4,7 +4,7 @@ description: Discusses the known issues that affect Windows Desktop Search and C
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -20,7 +20,7 @@ This article describes the known issues that may occur when you use Windows Desk
 > [!NOTE]
 > Home users: This article is intended for use by support agents and IT professionals. If you're looking for more information about website error messages, please see the following Windows website: [Search for anything, anywhere](https://support.microsoft.com/help/17190)
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3206883
 
 ## Known issues

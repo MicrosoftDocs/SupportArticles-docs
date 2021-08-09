@@ -4,7 +4,7 @@ description: Fixes the problem where domain controllers may not demote gracefull
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article provides a workaround for an issue where domain controllers don't demote when you use the Active Directory Installation Wizard (Dcpromo.exe) to force demotion.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 332199
 
 ## Symptoms

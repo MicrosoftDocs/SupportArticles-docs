@@ -36,12 +36,14 @@ This behavior is expected. You can safely ignore the warning message.
 
 Below is an example of the `%windir%\debug\usermode\Gpsvc.log` file entry when you enable Group Policy Service debug logging by following the steps in [A Treatise on Group Policy Troubleshooting–now with GPSVC Log Analysis!](/archive/blogs/askds/a-treatise-on-group-policy-troubleshootingnow-with-gpsvc-log-analysis):
 
-> ProcessGPOs(Machine): Processing extension MDM Policy  
-> CheckGPOs: No GPO changes but called in force refresh flag or extension MDM Policy needs to run force refresh in foreground processing  
-> ProcessGPOList:++ Entering for extension MDM Policy  
-> ProcessGPOList: Passing in the force refresh flag to Extension MDM Policy  
-> ProcessGPOList: **Extension MDM Policy returned 0x8018000a**.  
-> ProcessGPOList: Extension MDM Policy doesn't support rsop logging  
-> ProcessGPOs(Machine): **Extension MDM Policy ProcessGroupPolicy failed, status 0x8018000a**.
+```output
+ProcessGPOs(Machine): Processing extension MDM Policy  
+CheckGPOs: No GPO changes but called in force refresh flag or extension MDM Policy needs to run force refresh in foreground processing  
+ProcessGPOList:++ Entering for extension MDM Policy  
+ProcessGPOList: Passing in the force refresh flag to Extension MDM Policy  
+ProcessGPOList: Extension MDM Policy returned 0x8018000a.  
+ProcessGPOList: Extension MDM Policy doesn't support rsop logging  
+ProcessGPOs(Machine): Extension MDM Policy ProcessGroupPolicy failed, status 0x8018000a.
+```
 
 The [0x8018000a](/windows/win32/mdmreg/mdm-registration-constants) error means that the device is already enrolled.

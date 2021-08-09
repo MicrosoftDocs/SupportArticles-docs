@@ -4,7 +4,7 @@ description: Describes how domain controllers are located.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -18,9 +18,9 @@ ms.technology: windows-server-active-directory
 This article describes the mechanism used by Windows to locate a domain controller in a Windows-based domain.
 
 > [!NOTE]
-> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle/).
+> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 247811
 
 ## Summary
@@ -37,7 +37,9 @@ This sequence describes how the Locator finds a domain controller:
   - For a DNS name, Netlogon queries DNS by using the IP/DNS-compatible Locator. That is, DsGetDcName calls the DnsQuery call to read the Service Resource (SRV) records and "A" records from DNS after it appends the domain name to the appropriate string that specifies the SRV records.
   - A workstation that's logging on to a Windows-based domain queries DNS for SRV records in the general form:
 
-    > _service._protocol.DnsDomainName  
+    ```output
+    _service._protocol.DnsDomainName
+    ```
 
     Active Directory servers offer the Lightweight Directory Access Protocol (LDAP) service over the TCP protocol. So clients find an LDAP server by querying DNS for a record of the form:  
     > _ldap._tcp.DnsDomainName
@@ -56,7 +58,9 @@ UDP allows a program on one computer to send a datagram to a program on another 
 
 When a client logs on or joins the network, it must be able to locate a domain controller. The client sends a DNS Lookup query to DNS to find domain controllers, preferably in the client's own subnet. So clients find a domain controller by querying DNS for a record of the form:
 
->_LDAP._TCP.dc._msdcs.domainname  
+```output
+_LDAP._TCP.dc._msdcs.domainname
+```
 
 After the client locates a domain controller, it establishes communication by using LDAP to gain access to Active Directory. As part of that negotiation, the domain controller identifies which site the client is in based on the IP subnet of that client.
 

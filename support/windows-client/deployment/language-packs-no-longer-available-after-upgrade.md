@@ -4,7 +4,7 @@ description: Discusses that previously installed language packs are no longer av
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses that previously installed language packs are no longer available after you upgrade from Windows 8 to Windows 8.1.  
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2910256
 
 ## Symptoms

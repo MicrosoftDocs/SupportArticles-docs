@@ -4,7 +4,7 @@ description: Wireless and Wired 802.1x Authentication may fail on the first logo
 ms.date: 09/18/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an issue that Single Sign On (SSO) profile with pre-logon fails during user logon after a restart.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3063910
 
 ## Symptoms

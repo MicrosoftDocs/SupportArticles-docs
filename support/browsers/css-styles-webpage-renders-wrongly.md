@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # A webpage that uses CSS styles does not render correctly in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides steps to help describing the issue that a CSS styles webpage does not render correctly in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer  

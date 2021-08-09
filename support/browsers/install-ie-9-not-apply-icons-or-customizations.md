@@ -7,6 +7,8 @@ ms.reviewer:
 ---
 # Installing Internet Explorer 9 doesn't apply icons or per-user customizations
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides information about resolving cases that you don't see icons or per-user customizations of Internet Explorer 9.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

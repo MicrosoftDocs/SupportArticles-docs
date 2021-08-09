@@ -4,7 +4,7 @@ description: Provides troubleshooting for the issue that shared folders can't be
 ms.date: 3/4/2021
 author: v-lianna
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -15,7 +15,7 @@ ms.technology: windows-client-networking
 ---
 # Can't access shared folders from File Explorer in Windows 10
 
-_Original product version:_ &nbsp;Windows 10
+_Applies to:_ &nbsp; Windows 10
 
 ## General troubleshooting
 

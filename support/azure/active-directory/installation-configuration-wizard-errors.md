@@ -84,7 +84,9 @@ Sometimes, joining the computer to a workgroup, and then joining the computer ba
 
     If the settings are correct, you receive output that resembles the following example:
 
-    > DC: \\DC.contoso.com Address:\ \<IP Address> Dom Guid: \<GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
+    ```output
+    DC: \DC.contoso.com Address:\ <IP Address> Dom Guid: <GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
+    ```
 
 - Run the following command to check the computer's site membership:
 

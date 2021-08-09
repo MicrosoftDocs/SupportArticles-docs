@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Internet Explorer 9 fails to load VBD documents
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article introduces the steps for you to make sure the VBD documents can be loaded successfully in Internet Explorer 9.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

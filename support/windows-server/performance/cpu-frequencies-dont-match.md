@@ -4,7 +4,7 @@ description: Provides a solution to an issue where the CPU name is shown and two
 ms.date: 09/11/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-performance
 
 This article provides a solution to an issue where the CPU name is shown and two identical frequencies don't match on the System property page.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1903, Windows 10, version 1909, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1903, Windows 10, version 1909, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2878342
 
 ## Symptoms

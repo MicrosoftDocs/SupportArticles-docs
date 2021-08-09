@@ -4,7 +4,7 @@ description: Discusses the problem where a new event error message is logged if 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article discusses the problem where a new event error message is logged if you don't back up a Windows Server 2003 Service Pack 1 (SP1)-based domain controller in a given time period that is called the backup latency interval.
 
-_Original product version:_ &nbsp; Window Server 2003  
+_Applies to:_ &nbsp; Window Server 2003  
 _Original KB number:_ &nbsp; 914034
 
 ## Introduction

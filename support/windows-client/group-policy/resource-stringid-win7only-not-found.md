@@ -4,7 +4,7 @@ description: Provides help to solve an issue where you receive an error (Resourc
 ms.date: 10/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-group-policy
 
 This article provides help to solve an issue where you receive an error (Resource $(string id="Win7Only)' referenced in attribute displayName could not be found) when you open gpedit.msc.
 
-_Original product version:_ &nbsp; Windows 10, version 1803  
+_Applies to:_ &nbsp; Windows 10, version 1803  
 _Original KB number:_ &nbsp; 4292332
 
 ## Symptom

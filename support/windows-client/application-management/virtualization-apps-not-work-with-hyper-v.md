@@ -4,7 +4,7 @@ description: Discusses an issue in which virtualization applications don't work 
 ms.date: 03/18/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -22,7 +22,7 @@ These symptoms are introduced when the Hyper-V Hypervisor is running. Some secur
 - Device Guard
 - Credential Guard
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3204980
 
 ## Determine whether the Hyper-V hypervisor is running

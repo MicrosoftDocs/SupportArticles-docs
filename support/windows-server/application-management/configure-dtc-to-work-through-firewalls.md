@@ -4,7 +4,7 @@ description: Describes how to configure DTC to work through firewalls.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to configure Microsoft Distributed Transaction Coordinator (DTC) to work through firewalls.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250367
 
 ## More information

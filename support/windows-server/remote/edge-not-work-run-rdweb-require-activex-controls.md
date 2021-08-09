@@ -4,7 +4,7 @@ description: Describes an issue that prevents the Microsoft Edge browser from wo
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides a resolution for an issue that prevents the Microsoft Edge browser from working correctly with websites or apps that require ActiveX controls.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3092523
 
 ## Symptoms

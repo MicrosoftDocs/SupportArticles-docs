@@ -4,7 +4,7 @@ description: Describes how to add the print directory feature, and how to enable
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-printing
 
 This article describes how to add the print directory feature, and how to enable printing of the directory listing from within Windows Explorer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Vista  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Vista  
 _Original KB number:_ &nbsp; 272623
 
 ## Summary

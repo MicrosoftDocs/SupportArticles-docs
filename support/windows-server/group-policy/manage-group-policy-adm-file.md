@@ -4,7 +4,7 @@ description: Describes how ADM files work, the policy settings that are availabl
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes how ADM files work, the policy settings that are available to manage their operation, and recommendations about how to handle common ADM file management scenarios.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 816662
 
 > [!NOTE]

@@ -4,7 +4,7 @@ description: Discusses an issue in which Remote Desktop IP Virtualization does n
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article discusses an issue in which Remote Desktop IP Virtualization does not work in Windows Server 2019.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4501072
 
 ## More information

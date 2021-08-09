@@ -4,7 +4,7 @@ description: Works around a problem in which Windows Update is blocked for Windo
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article helps fix an error that occurs on a computer that has a USB device or SD card attached when you try to upgrade to the May 2019 Feature Update for Windows 10 (Windows 10, version 1903).
 
-_Original product version:_ &nbsp; Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4500988
 
 ## Symptoms

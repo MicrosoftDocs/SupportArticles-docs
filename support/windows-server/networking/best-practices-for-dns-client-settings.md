@@ -4,7 +4,7 @@ description: Describes recommendations for configuring DNS client settings.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes best practices for the configuration of Domain Name System (DNS) client settings. The recommendations in this article are for the installation of Windows 2000 Server or Windows Server 2003 environments where there is no previously defined DNS infrastructure.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 825036
 
 ## Domain controller with DNS installed

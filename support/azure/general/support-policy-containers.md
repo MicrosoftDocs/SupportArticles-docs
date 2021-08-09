@@ -29,82 +29,7 @@ Physical infrastructure support is not provided by Microsoft, except in cases in
 
 ## Containers on Azure Cloud Services
 
-Container orchestrators are enabled to work with container deployments as mentioned in the previous section, such as Windows Server Containers and Azure Container Service. Microsoft provides support for the deployment of common orchestrators such as Docker Swarm, Kubernetes, DC or system, and several others on ACS only. Microsoft does not currently offer phone-based or web-based technical support for the configuration or operation of these container orchestrators within ACS or any support for third-party container orchestrators outside of ACS.
-
-### Azure platform and operating system
-
-:::image type="content" source="./media/support-policy-containers/4037697_en_1.png" alt-text="Azure platform.":::
-
-- Azure platform (storage, disk, computer, and so on): Fully supported
-- Operating System
-  - Window Server 2016: Fully supported by Microsoft
-  - Linux: Endorsed distributions are specifically enabled to run the Docker container engine on Azure. For more information, see [Linux on distributions endorsed by Azure](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros). Customers who use an endorsed distribution receive commercially reasonable support for issues related to the system, as described in [Support for Linux and open source technology in Azure](https://support.microsoft.com/help/2941892/support-for-linux-and-open-source-technology-in-azure).
-
-### Container engine
-
-#### Windows Server 2016
-
-Customers who use Windows Server 2016 and Windows Server Containers (WSC) receive full support for issues that are related to the operating system or container engine.
-
-:::image type="content" source="./media/support-policy-containers/4037698_en_1.png" alt-text="container engine.":::
-
-#### Linux operating system
-
-Customers who use an endorsed distribution receive commercially reasonable support for issues related to the system only. Container engine issues are covered by the third party. For more information, see [Support for Linux and open source technology in Azure](https://support.microsoft.com/help/2941892). 
-
-:::image type="content" source="./media/support-policy-containers/4037700_en_1.png" alt-text="Docker service.":::
-
-### Azure Container Service
-
-Many customers use the Azure Container Service (ACS) to quickly deploy a preferred container configuration in Azure. ACS deploys the Docker Engine on either a Linux or Windows system. Full support for issues in deploying Windows Containers in ACS is provided by Microsoft, as was described earlier. Microsoft provides commercially reasonable support for Linux issues. For container engine issues on Linux (Docker), customers should contact [Docker support](https://www.docker.com/docker-support-services).
-
-The deployment and scaling of the container infrastructure in Azure by using ACS is fully supported by Microsoft.
-
-### AKS Engine
-
-The Azure Kubernetes Service Engine (AKS Engine) generates Azure Resource Manager templates that allow you to easily create Kubernetes clusters on Microsoft Azure. The input to the tool is a cluster definition file with the desired cluster configuration. The cluster definition is the same as the Azure Resource Manager template syntax that is used to deploy a Microsoft AKS cluster
-
-AKS Engine is an open-source project with no official support from Microsoft, any issues can be raised in [GitHub](https://github.com/Azure/aks-engine). 
-
-### Azure Kubernetes Service (AKS)
-
-Azure Kubernetes Services allows customers to deploy a managed Kubernetes environment without having to configure or deploy an orchestrator. 
-
-**What is covered:**  
-
-Support for AKS is scoped to availability and operations against the Kubernetes API.
-Examples of supported issues:
-
-- The ability to successfully connect to the Kubernetes API
-- The ability for VMs in the cluster to connect and register successfully
-- The ability for customers to horizontally scale the VMs attached to their cluster
-- The ability for customers to upgrade their cluster between minor and patch versions 
-
-**What is not covered:**  
-
-Issues that use Deployments, Namespaces, containerizing applications, or complex advisory scenarios are not supported.
-
-As a free service, AKS does not offer a financially backed service level agreement. We will strive to attain at least 99.5 percent availability for the Kubernetes API server. The availability of the agent nodes in your cluster is covered by the Virtual Machines SLA. See the [Virtual Machines SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/) for more details. 
-
-For the limitation of Container workload support, see [Container Workloads](https://docs.microsoft.com/azure/batch/batch-docker-container-workloads).
-
-### Azure Container Instances (ACI)
-
-Azure Container Instances is the fastest way to implement a container in Azure and does not require the provision of VMs or other resources.
-
-**What is covered:**  
-
-Web-assisted and phone-assisted support for ACI is scoped to operation and availability scenarios.
-
-Customers will receive support for the deployment and operation of ACI running in Azure inclusive of Azure Platform and container components that are required for operation.
-Examples of supported Issues:
-
-- ACI connectivity issues
-- ACI deployment, configuration issues  
-
-**What is not covered:**  
-
-Issues that use Deployments, Namespaces, containerizing applications, or complex advisory scenarios are not supported.
+Azure Container Service has been retired on January 31, 2020. For more information, see [Azure Container Service](https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/).
 
 ## Container orchestrators
 
@@ -114,7 +39,7 @@ Customers who have deployed Windows Server Containers on Windows Server 2016 can
 
 ### Third-party orchestrators
 
-Container orchestrators are enabled to work with container deployments as mentioned above, such as Windows Server Containers and Azure Container Service. Microsoft provides support for the deployment of common orchestrators such as Docker Swarm, Kubernetes, DC or system, and several others on **ACS ONLY**. Microsoft does not currently offer phone or web-based technical support for the configuration or operation of these container orchestrators within ACS or any support for third-party container orchestrators outside of ACS. 
+Container orchestrators are enabled to work with container deployments as mentioned above, such as Windows Server Containers and Azure Kubernetes Service (AKS). Microsoft provides support for the deployment of common orchestrators such as Docker Swarm, Kubernetes, DC or system, and several others on **AKS ONLY**. Microsoft does not currently offer phone or web-based technical support for the configuration or operation of these container orchestrators within AKS or any support for third-party container orchestrators outside of AKS.
 
 We recommend that you use community resources or contact the orchestrator provider for additional technical assistance:
 
@@ -123,7 +48,7 @@ We recommend that you use community resources or contact the orchestrator provid
 - [DC/OS](https://dcos.io/community/) 
 - [Kubernetes](https://kubernetes.io/community/) 
 
-If you think you have encountered a bug, visit the ACS community issue page on GitHub: [ACS Community on GitHub](https://github.com/Azure/ACS) 
+If you think you have encountered a bug, visit the AKS community issue page on GitHub: [AKS Community on GitHub](https://github.com/Azure/AKS). 
 
 ## Container workloads
 

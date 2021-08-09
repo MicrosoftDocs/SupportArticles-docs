@@ -4,7 +4,7 @@ description: Introduce how to troubleshoot ADFS SSO issues.
 ms.date: 03/17/2021
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -19,7 +19,7 @@ This article helps you resolve single sign-on (SSO) issues with Active Directory
 
 Select one of the following section according to the type of issue that you encounter.
 
-_Original product version:_ &nbsp; Active Directory Federation Services
+_Applies to:_ &nbsp; Active Directory Federation Services
 _Original KB number:_ &nbsp; 4034932
 
 ## NTLM or forms-based authentication prompt

@@ -4,7 +4,7 @@ description: Event ID 5961 and event ID 1000 are logged when trying to start a M
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-shell-experience
 
 This article helps fix an issue where you can't start a Microsoft Store App if the default registry or file permissions is modified.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2798317
 
 > [!NOTE]

@@ -4,7 +4,7 @@ description: Addresses an issue in which RDS Connection Broker or RDMS fails aft
 ms.date: 12/2/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article provides methods to make sure Remote Desktop service (RDS) Connection Broker and Remote Desktop Management service (RDMS) can work as expected.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4036954
 
 ## Symptoms

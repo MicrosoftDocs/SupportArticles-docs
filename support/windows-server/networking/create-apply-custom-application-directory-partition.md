@@ -4,7 +4,7 @@ description: Describes how to create a custom application directory partition by
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to create a custom application directory partition by using the DnsCmd.exe command.
 
-_Original product version:_ &nbsp;Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp;884116
 
 ## Introduction

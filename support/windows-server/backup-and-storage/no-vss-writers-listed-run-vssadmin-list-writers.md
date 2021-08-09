@@ -4,7 +4,7 @@ description: Fixes an issue where no VSS writers are listed when you run the "vs
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article helps fix an issue where no VSS writers are listed when you run the `vssadmin list writers` command and events are logged.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2009550
 
 ## Symptoms

@@ -4,7 +4,7 @@ description: Provides a solution to an issue where a high pitched noise is heard
 ms.date: 10/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an issue where a high pitched noise is heard when using Bluetooth headphones.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2800101
 
 ## Symptoms

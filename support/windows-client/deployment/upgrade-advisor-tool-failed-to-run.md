@@ -4,7 +4,7 @@ description: Provides a solution to an error that occurs when you run the Window
 ms.date: 10/22/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an error that occurs when you run the Windows 7 Upgrade Advisor tool on a system.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2448270
 
 ## Symptoms

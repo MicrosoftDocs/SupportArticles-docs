@@ -4,7 +4,7 @@ description: Describes how to troubleshoot L2TP/IPSec virtual private network (V
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes how to troubleshoot L2TP/IPSec virtual private network (VPN) connection issues.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 325034
 
 ## Summary

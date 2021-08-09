@@ -4,7 +4,7 @@ description: Provides a solution to an issue where trusted domains don't appear 
 ms.date: 09/21/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an issue where trusted domains don't appear in the Available List for domain logon or setting security permissions.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 310611
 
 ## Symptoms

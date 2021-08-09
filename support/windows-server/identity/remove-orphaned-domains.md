@@ -4,7 +4,7 @@ description: How to remove domain metadata from Active Directory when domain con
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # How to remove orphaned domains from Active Directory  
 
-_Original product version:_ &nbsp;Windows 10, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;230306
 
 ## Summary

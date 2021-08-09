@@ -7,6 +7,8 @@ ms.reviewer: josborne, ericlaw, gsilva
 ---
 # Internet Explorer does not support user names and passwords in Web site addresses (HTTP or HTTPS URLs)
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article is intended to notify Web site administrators and IT professionals about the behavior of Internet Explorer when user information is included in a Web site address (HTTP or HTTPS URL).
 
 _Original product version:_ &nbsp; Internet Explorer  
@@ -95,7 +97,7 @@ This change in the default behavior is also implemented by security updates, ser
 
     If you include HTTP or HTTPS URLs that contain user information in your scripting code, to manage state information, change your scripting code to use cookies instead of user information. For more information about how to use cookies to manage state information, see [HTTP State Management Mechanism](http://www.ietf.org/rfc/rfc2965.txt).
 
-    To see an example of how to use Visual Basic to read and write HTTP cookies in an ASP.NET Web program, see [HttpCookie Class](/dotnet/api/system.web.httpcookie?view=netframework-4.8).
+    To see an example of how to use Visual Basic to read and write HTTP cookies in an ASP.NET Web program, see [HttpCookie Class](/dotnet/api/system.web.httpcookie?view=netframework-4.8&preserve-view=true).
 
 ## How to disable the new behavior or to use it in other programs
 

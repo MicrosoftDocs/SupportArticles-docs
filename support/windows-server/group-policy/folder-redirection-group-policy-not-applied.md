@@ -4,7 +4,7 @@ description: Addresses an issue that prevents folder redirection policy from wor
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article helps fix an issue that prevents folder redirection policy from working in Microsoft System Center Configuration Manager (SCCM).
 
-_Original product version:_ &nbsp;Windows 10  
+_Applies to:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp;3060058
 
 ## Symptoms
