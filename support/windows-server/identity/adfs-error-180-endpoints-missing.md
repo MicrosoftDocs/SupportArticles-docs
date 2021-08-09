@@ -59,7 +59,7 @@ This problem occurs in an AD FS farm that the following conditions apply to:
 
 ## Cause
 
-Installing the March 13, 2018, KB 4088787 update on a primary node in an AD FS farm whose FBL was raised from 1 (WS2012R2) to 3 (WS2016) can cause AD FS regression and a reordering of rows in the AD FS database. This problem leaves the database in a state in which some data elements have duplicate occurrences. This state causes AD FS server start failures and other errors. 
+Installing the March 13, 2018, KB 4088787 update on a primary node in an AD FS farm whose FBL was raised from 1 (WS2012R2) to 3 (WS2016) can cause AD FS regression and a reordering of rows in the AD FS database. This problem leaves the database in a state in which some data elements have duplicate occurrences. This state causes AD FS server start failures and other errors.
 
 ## Resolution
 
@@ -88,7 +88,7 @@ At line:1 char:1
 
 The AD FS team has developed a PowerShell script that you can run on an AD FS server to fix the AD FS configuration settings in the database that is associated with KB 4088787.
 
-This script is found at the [end of this article](#powershell-script-kb4088787fixps1). Save the script as "KB4088787_Fix.ps1" and copy it to the primary node in your AD FS farm.
+This script is found at the [end of this article](#powershell-script-kb4088787_fixps1). Save the script as "KB4088787_Fix.ps1" and copy it to the primary node in your AD FS farm.
 
 ### Step 3: Back up AD FS configuration databas
 
@@ -100,7 +100,7 @@ If you are using WID to store AD FS configuration, you can use the [ADFS Rapid R
 
 In File Explorer, right-click the KB4088787_Fix.ps1 file that you just saved to the primary node in your AD FS farm, and then select **Run with PowerShell**.
 
-The script first verifies that the current AD FS server database has been corrupted by the upgrade problem that is described. If so, the script will locate the broken properties and fix them. The KB4088787_Fix.ps1 script will ask you to confirm any database changes, and the script will then restart AD FS if needed. 
+The script first verifies that the current AD FS server database has been corrupted by the upgrade problem that is described. If so, the script will locate the broken properties and fix them. The KB4088787_Fix.ps1 script will ask you to confirm any database changes, and the script will then restart AD FS if needed.
 
 > [!NOTE]
 > Every time that the script is run, a copy of the service settings XML is saved. The data is saved in the working directory in the following name format:
