@@ -22,7 +22,9 @@ search.appverid: MET150
 _Original KB number:_&nbsp;4490129
 
 > [!NOTE]
-> Starting in July 2021, we'll start to roll out a new relay IP pool, which may affect current SRS rewriting behaviour. Messages that qualify for this relay pool won't be rewritten by SRS, and be sent out of IPs that won't be part of the Microsoft 365 SPF record instead. For more information, check the post about the relay pool change in [Message Center](/microsoft-365/admin/manage/message-center) or see [Outbound delivery pools](/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages#relay-pool).
+> Upcoming changes: 
+> - Starting in July 2021, we'll start to roll out a new relay IP pool, which may affect current SRS rewriting behaviour. Messages that qualify for this relay pool won't be rewritten by SRS, and be sent out of IPs that won't be part of the Microsoft 365 SPF record instead. The main change is for messages that fail SPF checks when they are sent to Office 265. SRS will no longer fix these failures. For more information, check the post about the relay pool change in [Message Center](/microsoft-365/admin/manage/message-center) or see [Outbound delivery pools](/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages#relay-pool).
+> - Starting in October 2021, we'll start using SRS to rewrite all messages forwarded using SMTP or mailbox forwarding. This will consolidate the behaviour to use SRS for all forwarding in the service. There may be disruptions due to the change in behavior such as for messages sent to on-premises which will not longer be rewritten.  
 
 ## Summary
 
