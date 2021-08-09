@@ -1,9 +1,9 @@
 ---
 title: AD FS error 180 and endpoints missing
 description: Describes a problem in Windows Server 2016 that causes AD FS features to fail and that triggers an Event 180 error. Provides a scripted fix.
-ms.date: 04/02/2021
-author: jc-mackin
-ms.author: v-jcmackin 
+ms.date: 08/09/2021
+author: Deland-Han
+ms.author: delhan 
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -79,7 +79,7 @@ If the endpoint is not found, you see the following output that indicates that t
 Get-AdfsEndpoint : PS0137: No Endpoint found with Address '/adfs/.well-known/openid-configuration'.  
 At line:1 char:1  
 + Get-AdfsEndpoint -AddressPath "/adfs/.well-known/openid-configuration ...  
-+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
     + CategoryInfo          : InvalidArgument: (:) [Get-AdfsEndpoint], ArgumentException  
     + FullyQualifiedErrorId : PS0137,Microsoft.IdentityServer.Management.Commands.GetEndpointCommand
 ```
@@ -105,7 +105,7 @@ The script first verifies that the current AD FS server database has been corrup
 > [!NOTE]
 > Every time that the script is run, a copy of the service settings XML is saved. The data is saved in the working directory in the following name format:
 >
-> `serviceSettingsXml_\<yyyy\>-\<MM\>-\<dd\>-\<hh\>-\<mm\>-\<ss\>.xml`
+> `serviceSettingsXml_<yyyy>-<MM>-<dd>-<hh>-<mm>-<ss>.xml`
 >
 > For example, if the script is run on April 14, 2021 at 10:14:53 AM, it is saved as the following:
 >
