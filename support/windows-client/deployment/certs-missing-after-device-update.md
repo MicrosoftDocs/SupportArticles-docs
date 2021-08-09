@@ -59,7 +59,7 @@ To add the latest LCU to the update source, follow these steps:
 1. Mount the source ISO image, and then copy the install.wim file to a writeable location.  
 
    > [!NOTE]  
-   > If the image has an install.esd file instead of an install.wim file, use the [**:::no-loc text="Dism /Export-Image":::**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
+   > If the image has an install.esd file instead of an install.wim file, use the [**:::no-loc text="Dism /Export-Image":::**](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
 
 2. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) and look up the correct LCU number for your system version.
 
@@ -105,7 +105,7 @@ To add the latest LCU to the update source, follow these steps:
 
 ## More information
 
-- [Add updates to a Windows image](https://docs.microsoft.com/windows-hardware/manufacture/desktop/servicing-the-image-with-windows-updates-sxs)
-- [Add-WindowsPackage](https://docs.microsoft.com/powershell/module/dism/add-windowspackage?view=win10-ps)
-- [Modify a Windows image using DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism)
-- [Oscdimg Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oscdimg-command-line-options)
+- [Add updates to a Windows image](/windows-hardware/manufacture/desktop/servicing-the-image-with-windows-updates-sxs)
+- [Add-WindowsPackage](/powershell/module/dism/add-windowspackage)
+- [Modify a Windows image using DISM](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism)
+- [Oscdimg Command-Line Options](/windows-hardware/manufacture/desktop/oscdimg-command-line-options)
