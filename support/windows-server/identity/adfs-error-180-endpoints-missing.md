@@ -21,83 +21,101 @@ _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016
 ## Symptoms
 
 You may experience any of the following symptoms:
+
 - AD FS-registered endpoints are lost intermittently.
 - Event ID 180 is logged every five minutes in the AD FS/Admin event log, as follows:
 
->**Log Name**:      AD FS/Admin  
->**Source**:        AD FS  
->**Event ID**:      180  
->**Task Category**: None  
->**Level**: Error  
->**Keywords**: AD FS  
->**Description**: An error occurred while upgrading FarmBehaviorLevel 'Max' from Minor Version '0' to Minor Version '3'.  
->**Exception details**: Object reference not set to an instance of an object.
+  ```output
+  Log Name:      AD FS/Admin
+  Source:        AD FS
+  Event ID:      180
+  Task Category: None
+  Level:         Error
+  Keywords:      AD FS
+  Description:   An error occurred while upgrading FarmBehaviorLevel 'Max' from Minor Version '0' to Minor Version '3'.  
+  Exception details: Object reference not set to an instance of an object.
+  ```
 
-- Running the get-AdfsGlobalAuthenticationPolicy PowerShell cmdlet reveals that no client authentication methods are set, as shown on the bottom line of the following output:  
+- Running the `Get-AdfsGlobalAuthenticationPolicy` PowerShell cmdlet reveals that no client authentication methods are set, as shown on the bottom line of the following output:
 
->PS C:\Windows\system32> get-AdfsGlobalAuthenticationPolicy  
->AdditionalAuthenticationProvider      : {AzureMfaAuthentication}  
->DeviceAuthenticationEnabled           : True  
->DeviceAuthenticationMethod            : All  
->TreatDomainJoinedDevicesAsCompliant   : False  
->PrimaryIntranetAuthenticationProvider : {FormsAuthentication, WindowsAuthentication, AzurePrimaryAuthentication, MicrosoftPassportAuthentication}  
->PrimaryExtranetAuthenticationProvider : {FormsAuthentication, AzurePrimaryAuthentication, MicrosoftPassportAuthentication}  
->WindowsIntegratedFallbackEnabled      : True  
->ClientAuthenticationMethods           : None
+  ```powershell
+  Get-AdfsGlobalAuthenticationPolicy  
+  
+  AdditionalAuthenticationProvider      : {AzureMfaAuthentication}
+  DeviceAuthenticationEnabled           : True
+  DeviceAuthenticationMethod            : All
+  TreatDomainJoinedDevicesAsCompliant   : False
+  PrimaryIntranetAuthenticationProvider : {FormsAuthentication, WindowsAuthentication, AzurePrimaryAuthentication, MicrosoftPassportAuthentication}
+  PrimaryExtranetAuthenticationProvider : {FormsAuthentication, AzurePrimaryAuthentication, MicrosoftPassportAuthentication}
+  WindowsIntegratedFallbackEnabled      : True
+  ClientAuthenticationMethods           : None
+  ```
 
-This problem occurs in an AD FS farm that the following conditions apply to:  
+This problem occurs in an AD FS farm that the following conditions apply to:
+
 - One or more Windows Server 2016 (WS2016) AD FS servers have been added to a Windows Server 2012 R2 (WS2012R2) AD FS server farm that has KB 4041685 (or later Monthly or Preview releases) installed.
 - The server farm was upgraded to the WS2016 Farm Behavior Level.
 - The KB 4088787 update was installed on the WS2016 AD FS farm.
 
 ## Cause
-Installing the March 13, 2018, KB 4088787 update on a primary node in an AD FS farm whose FBL was raised from 1 (WS2012R2) to 3 (WS2016) can cause AD FS regression and a reordering of rows in the AD FS database. This problem leaves the database in a state in which some data elements have duplicate occurrences. This state causes AD FS server start failures and other errors. 
+
+Installing the March 13, 2018, KB 4088787 update on a primary node in an AD FS farm whose FBL was raised from 1 (WS2012R2) to 3 (WS2016) can cause AD FS regression and a reordering of rows in the AD FS database. This problem leaves the database in a state in which some data elements have duplicate occurrences. This state causes AD FS server start failures and other errors.
 
 ## Resolution
+
 To resolve this problem, follow these steps.
 
 ### Step 1: Verify the problem
+
 Determine whether the openid-configuration endpoint can be reached by running the following command at a PowerShell command prompt:
- 
->PS:\> Get-AdfsEndpoint -AddressPath "/adfs/.well-known/openid-"
+
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/.well-known/openid-configuration"
+```
 
 If the endpoint is not found, you see the following output that indicates that the problem likely exists:
 
->Get-AdfsEndpoint : PS0137: No Endpoint found with Address '/adfs/.well-known/openid-configuration'.  
->At line:1 char:1  
-\+ Get-AdfsEndpoint -AddressPath "/adfs/.well-known/openid-configuration ...  
-\+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
-    \+ CategoryInfo          : InvalidArgument: (:) [Get-AdfsEndpoint], ArgumentException  
-    \+ FullyQualifiedErrorId : PS0137,Microsoft.IdentityServer.Management.Commands.GetEndpointCommand
+```output
+Get-AdfsEndpoint : PS0137: No Endpoint found with Address '/adfs/.well-known/openid-configuration'.  
+At line:1 char:1  
++ Get-AdfsEndpoint -AddressPath "/adfs/.well-known/openid-configuration ...  
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+    + CategoryInfo          : InvalidArgument: (:) [Get-AdfsEndpoint], ArgumentException  
+    + FullyQualifiedErrorId : PS0137,Microsoft.IdentityServer.Management.Commands.GetEndpointCommand
+```
 
-### Step 2: Save the script found at the end of this article as "KB4088787_Fix.ps1" 
-The AD FS team has developed a PowerShell script that you can run on an AD FS server to fix the AD FS configuration settings in the database that is associated with KB 4088787. 
-This script is found at the end of this article. Save the script as "KB4088787_Fix.ps1" and copy it to the primary node in your AD FS farm.
+### Step 2: Save the script found at the end of this article as "KB4088787_Fix.ps1"
 
-### Step 3: Back up AD FS configuration database
+The AD FS team has developed a PowerShell script that you can run on an AD FS server to fix the AD FS configuration settings in the database that is associated with KB 4088787.
+
+This script is found at the [end of this article](#powershell-script-kb4088787_fixps1). Save the script as "KB4088787_Fix.ps1" and copy it to the primary node in your AD FS farm.
+
+### Step 3: Back up AD FS configuration databas
+
 Before you run the KB4088787_Fix.ps1 script, it is important that you back up your AD FS configuration. This AD FS configuration is stored either in the Windows Internal Database (WID) or in a Microsoft SQL Server database.  
 
-If you are using WID to store AD FS configuration, you can use the [ADFS Rapid Restore Tool](https://www.microsoft.com/en-us/download/details.aspx?id=56569) (available from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=56569)) to back up the configuration data. If you are using SQL Server to store the AD FS configuration database, you should create an additional SQL Server backup before you run the script. The database state can be restored from one of these backups, if it is necessary.
+If you are using WID to store AD FS configuration, you can use the [ADFS Rapid Restore Tool](https://www.microsoft.com/download/details.aspx?id=56569) (available from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=56569)) to back up the configuration data. If you are using SQL Server to store the AD FS configuration database, you should create an additional SQL Server backup before you run the script. The database state can be restored from one of these backups, if it is necessary.
 
 ### Step 4: Run the script KB4088787_Fix.ps1
+
 In File Explorer, right-click the KB4088787_Fix.ps1 file that you just saved to the primary node in your AD FS farm, and then select **Run with PowerShell**.
 
-The script first verifies that the current AD FS server database has been corrupted by the upgrade problem that is described. If so, the script will locate the broken properties and fix them. The KB4088787_Fix.ps1 script will ask you to confirm any database changes, and the script will then restart AD FS if needed. 
+The script first verifies that the current AD FS server database has been corrupted by the upgrade problem that is described. If so, the script will locate the broken properties and fix them. The KB4088787_Fix.ps1 script will ask you to confirm any database changes, and the script will then restart AD FS if needed.
 
->[!NOTE]
->Every time that the script is run, a copy of the service settings XML is saved. The data is saved in the working directory in the following name format:
+> [!NOTE]
+> Every time that the script is run, a copy of the service settings XML is saved. The data is saved in the working directory in the following name format:
 >
->serviceSettingsXml_\<yyyy\>-\<MM\>-\<dd\>-\<hh\>-\<mm\>-\<ss\>.xml
+> `serviceSettingsXml_\<yyyy\>-\<MM\>-\<dd\>-\<hh\>-\<mm\>-\<ss\>.xml`
 >
->For example, if the script is run on April 14, 2021 at 10:14:53 AM, it is saved as the following:
+> For example, if the script is run on April 14, 2021 at 10:14:53 AM, it is saved as the following:
 >
->serviceSettingsXml_2021-04-14-10-14-53.xml
+> `serviceSettingsXml_2021-04-14-10-14-53.xml`
 
 After the script is finished, and an AD FS restart occurs, all device authentication and endpoint failures should be fixed.
 
 ## More information
-If applying the script fix and restarting the system does not correct the problem, go to the [Microsoft Support website](https://support.microsoft.com/).
 
+If applying the script fix and restarting the system does not correct the problem, go to the [Microsoft Support website](https://support.microsoft.com/).
 
 ## PowerShell Script: KB4088787_Fix.ps1
 
