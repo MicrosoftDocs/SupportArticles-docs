@@ -121,10 +121,37 @@ Desktop heap is allocated by User32.dll when a process needs user objects. If an
 
 > [!NOTE]
 > In Windows Server 2003, the specific event is logged in the System log when one of the following conditions is true:
->
-> - If the desktop heap becomes full, the following event is logged:In this case, increase the desktop heap size.
-> - If the total desktop heap becomes the system-wide buffer size, the following event is logged:  
-> In this case, decrease the desktop heap size.
+
+- If the desktop heap becomes full, the following event is logged:
+
+  ```output
+  Event Type: Warning
+  Event Source: Win32k
+  Event Category: None
+  Event ID: 243
+  Date: Date
+  Time: Time
+  User: N/A
+  Computer: ServerName
+  Description: A desktop heap allocation failed.
+  ```
+
+  In this case, increase the desktop heap size.
+- If the total desktop heap becomes the system-wide buffer size, the following event is logged:
+
+  ```output
+  Event Type: Warning
+  Event Source: Win32k
+  Event Category: None
+  Event ID: 244
+  Date: Date
+  Time: Time
+  User: N/A
+  Computer: ServerName
+  Description: Failed to create a desktop due to desktop heap exhaustion.
+  ```
+
+  In this case, decrease the desktop heap size.
 
 In Windows Server 2003, a system-wide buffer is 20 MB when one of the following conditions is true:
 

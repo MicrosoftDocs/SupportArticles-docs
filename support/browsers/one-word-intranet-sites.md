@@ -7,6 +7,8 @@ ms.reviewer: bhaskerk, davidcon, axelr, joelba, jmann
 ---
 # One-word intranet sites take you to your default search engine with Internet Explorer 9 and later versions
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides solutions about using one-word to access the intranet in Internet Explorer 9 and later versions.
 
 _Original product version:_ &nbsp; Internet Explorer 9 and later versions  

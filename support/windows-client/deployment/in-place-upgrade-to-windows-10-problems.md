@@ -4,7 +4,7 @@ description: Describes an issue where the upgrade hangs when you try to run an i
 ms.date: 10/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to a problem where an in-place upgrade for Windows 10 on a system that's running Microsoft System Center Configuration Manager hangs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4020149
 
 ## Symptoms

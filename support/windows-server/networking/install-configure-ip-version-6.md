@@ -4,7 +4,7 @@ description: Describes how to install and configure IP version 6 (IPv6) in a Win
 ms.date: 09/25/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to install and configure IP version 6 (IPv6) in a Microsoft Windows Server 2003 Enterprise Edition environment.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325449
 
 ## Summary

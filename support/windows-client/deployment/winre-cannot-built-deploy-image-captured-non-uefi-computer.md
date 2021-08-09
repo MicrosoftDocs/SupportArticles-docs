@@ -4,7 +4,7 @@ description: Describes an issue in which you can't deploy a Windows 8.1-based im
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article provides a solution to an issue in which you can't deploy a Windows 8.1-based image to a UEFI computer when the image was captured from a non-UEFI computer.
 
-_Original product version:_ &nbsp;Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp;2952359
 
 ## Symptoms

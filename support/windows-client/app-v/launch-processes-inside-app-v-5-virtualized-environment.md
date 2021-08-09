@@ -4,7 +4,7 @@ description: Describes how to launch processes inside the App-V 5.0 virtualized 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-application-virtualization-app-v
 
 This article describes how to launch processes inside the Microsoft Application Virtualization 5.0 client (App-V 5.0) virtualized environment.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2848278
 
 ## Summary

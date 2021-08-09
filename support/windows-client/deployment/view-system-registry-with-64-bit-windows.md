@@ -4,7 +4,7 @@ description: Describes how to view the Windows registry by using 64-bit versions
 ms.date: 09/24/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to view the Windows registry by using 64-bit versions of Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 305097
 
 ## Summary

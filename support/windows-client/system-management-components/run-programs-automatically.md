@@ -4,7 +4,7 @@ description: Describes how to use group policies in Windows 2000 to configure a 
 ms.date: 09/27/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-system-management-components
 
 This article describes how to use group policies in Windows 2000 to configure a program to run automatically when a user signs in.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 240791
 
 ## Summary

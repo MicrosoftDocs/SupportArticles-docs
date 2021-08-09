@@ -4,7 +4,7 @@ description: Provides help to fix a File system error that occurs when you paste
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-security
 
 This article provides help to fix a File system error that occurs when you paste password into a credential dialog box.
 
-_Original product version:_ &nbsp;Windows 10  
+_Applies to:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp;4092998
 
 ## Symptoms
@@ -64,7 +64,7 @@ To fix the consent.exe crashing issue, install the Windows 10 cumulative update 
 
 ## Workaround
 
-To work around this issue, display the UAC elevation prompt on the standard user desktop instead of on the Winlogon desktop. The UAC prompt behavior can be configured by using Group Policy. See [User Account Control: Switch to the secure desktop when prompting for elevation](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)  for more information.
+To work around this issue, display the UAC elevation prompt on the standard user desktop instead of on the Winlogon desktop. The UAC prompt behavior can be configured by using Group Policy. See [User Account Control: Switch to the secure desktop when prompting for elevation](/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)  for more information.
 
 ## More information
 

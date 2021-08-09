@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Can't print from the web if you run Internet Explorer 11 as another user
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides a workaround to solve the issue that you cannot print from Internet Explorer 11 by using another user account.
 
 _Original product version:_ &nbsp; Internet Explorer 11  

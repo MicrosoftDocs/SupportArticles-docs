@@ -4,7 +4,7 @@ description: Describes how to troubleshoot and fix the 0x6 ERROR_INVALID_HANDLE 
 ms.date: 11/25/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

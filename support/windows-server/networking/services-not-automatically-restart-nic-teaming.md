@@ -4,7 +4,7 @@ description: Resolves a problem in which services do not automatically restart o
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps to resolves a problem in which services do not automatically restart on a computer that uses NIC Teaming.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4552864
 
 ## Symptoms

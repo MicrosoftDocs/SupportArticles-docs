@@ -4,7 +4,7 @@ description: Describes how to change the product key for a Volume Licensing inst
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article describes how to change the Volume Licensing product key.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 328874
 
 ## Introduction
@@ -58,7 +58,7 @@ If you only have a few volume licensing product keys to change, you can use the 
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type regedit, and then click **OK**.
-3. In the navigation pane, locate and then click the following registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\Current Version\WPAEvents` 
+3. In the navigation pane, locate and then click the following registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\WPAEvents` 
 
 4. In the topic pane, right-click **OOBETimer**, and then click **Modify**.
 5. Change at least one digit of this value to deactivate Windows.

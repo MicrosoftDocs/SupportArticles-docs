@@ -4,7 +4,7 @@ description: Fixes an issue in which WINS registration fails if a Windows Server
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps fix Windows Internet Name Service (WINS) registration failures that occur when a Windows Server 2016 server points to itself for WINS name resolution.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4032719
 
 ## Symptoms

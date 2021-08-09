@@ -4,7 +4,7 @@ description: Describes how to register OCX and DLL files as system globals.
 ms.date: 09/21/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client 
@@ -17,7 +17,7 @@ ms.technology: windows-client-application-compatibility
 
 This article describes how to register OCX and DLL files as system globals.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 186597
 
 ## Summary

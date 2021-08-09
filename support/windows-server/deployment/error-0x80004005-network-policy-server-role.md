@@ -4,7 +4,7 @@ description: Describes an issue in Windows Server 2008 R2 in which you cannot in
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a solution to fix the error 0x80004005 that occurs when you install or start the Network Policy Server role service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 981478
 
 ## Symptoms

@@ -1,14 +1,16 @@
 ---
-title: Disable Internet Explorer on Windows
-description: This article describes how to disable any supported version of Internet Explorer on Windows.
+title: Disable and enable Internet Explorer on Windows
+description: This article describes how to disable and enable any supported version of Internet Explorer on Windows.
 ms.date: 01/21/2021
 ms.prod-support-area-path: installation
 ms.reviewer: 
 ms.topic: how-to
 ---
-# Disable Internet Explorer on Windows
+# Disable and enable Internet Explorer on Windows
 
-This article describes how to disable any supported version of Internet Explorer on Windows.
+[!INCLUDE [](../includes/browsers-important.md)]
+
+This article describes how to disable and enable any supported version of Internet Explorer on Windows.
 
 _Applies to:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 4013567
@@ -20,7 +22,73 @@ To disable Internet Explorer, use one of the following methods.
 > [!NOTE]
 > If you want to restore the program on the same computer, we recommend that you use the same method that you first used (Control Panel or DISM). Because Internet Explorer remains installed on the computer after you disable it, you should continue to install security updates that apply to Internet Explorer.
 
-## Method 1 - Use Control Panel (client systems only)
+## Method 1 - Use Control Panel (client systems only), Feature On Demand
+
+_Applies to:_ &nbsp; Windows 10, version 1703 and higher  
+
+Using the Feature On Demand method is recommended for devices where it is available.
+
+On client systems, you can use the **Program and Features** item in Control Panel to disable Internet Explorer. To do this, follow these steps:
+
+1. Click **Start** and open **Settings**.
+1. Click **Apps**.
+1. Click **Optional features**.
+1. In the list of installed features, locate **Internet Explorer 11**. Click on the entry, then click **Uninstall**.
+1. Wait for the Latest Actions section to indicate reboot required.
+1. Restart the computer.
+
+To enable Internet Explorer:
+
+1. Click **Start** and open **Settings**.
+1. Click **Apps**.
+1. Click **Optional features**.
+1. Click **Add a feature**.
+1. Check the box next to **Internet Explorer 11**.
+1. Click **Install (1)**.
+1. Wait for the Latest Actions section to indicate reboot required.
+1. Restart the computer.
+
+## Method 2 - Use DISM (client and server systems), Feature On Demand
+
+_Applies to:_ &nbsp; Windows 10, version 1703 and higher  
+
+Using the Feature On Demand method is recommended for devices where it is available.  
+
+On client and server systems, you can use the Deployment Image Servicing and Management (DISM) command-line tool to disable Internet Explorer. For example, to disable Internet Explorer 11, follow these steps.
+
+- Disable the feature
+
+    To disable Internet Explorer 11, run the following command at an elevated command prompt: `dism /online /Remove-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0`.
+
+    The following message is returned:
+
+    ```output
+    Deployment Image Servicing and Management tool
+    Version: 10.0.19041.844
+    Image Version: 10.0.19041.985
+    [==========================100.0%==========================]
+    The operation completed successfully.
+    Restart Windows to complete this operation.
+    Do you want to restart the computer now? (Y/N)
+    ```
+
+- Enable the feature
+
+    If you want to re-enable Internet Explorer 11, run the following command at an elevated command prompt: `dism /online /Add-Capability /CapabilityName:Browser.InternetExplorer~~~~0.0.11.0`.
+
+    The following message is returned:
+
+    ```output
+    Deployment Image Servicing and Management tool
+    Version: 10.0.19041.844
+    Image Version: 10.0.19041.985
+    [==========================100.0%==========================]
+    The operation completed successfully.
+    Restart Windows to complete this operation.
+    Do you want to restart the computer now? (Y/N)
+    ```
+
+## Method 3 - Use Control Panel (client systems only), Windows Feature
 
 On client systems, you can use the **Program and Features** item in Control Panel to disable Internet Explorer. To do this, follow these steps:
 
@@ -31,7 +99,7 @@ On client systems, you can use the **Program and Features** item in Control Pane
 1. Select **OK** to commit the change.
 1. Restart the computer.
 
-## Method 2 - Use DISM (client and server systems)
+## Method 4 - Use DISM (client and server systems), Windows Feature
 
 On client and server systems, you can use the Deployment Image Servicing and Management (DISM) command-line tool to disable Internet Explorer. For example, to disable Internet Explorer 11, follow these steps.
 
@@ -41,7 +109,8 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 
     The following message is returned:
 
-    > Deployment Image Servicing and Management tool  
+    ```output
+    Deployment Image Servicing and Management tool  
     Version: 6.1.7600.16385  
     Image Version: 6.1.7600.16385  
     Disabling feature(s)  
@@ -49,6 +118,7 @@ On client and server systems, you can use the Deployment Image Servicing and Man
     The operation completed successfully.  
     Restart Windows to complete this operation.  
     Do you want to restart the computer now (Y/N)?
+    ```
 
     > [!NOTE]
     > You must restart the computer to implement the change.
@@ -59,14 +129,16 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 
     The following message is returned:
 
-    > Deployment Image Servicing and Management tool  
+    ```output
+    Deployment Image Servicing and Management tool  
     Version: 6.1.7600.16385  
     Image Version: 6.1.7600.16385  
     Enabling feature(s)  
     [===================100.0%===================]  
     The operation completed successfully.  
     Restart Windows to complete this operation.  
-    Do you want to restart the computer now (Y/N)?  
+    Do you want to restart the computer now (Y/N)?
+    ```
 
     > [!NOTE]
     > You must restart the computer to implement the change.
@@ -76,8 +148,6 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 - Windows 10, version 2004, all editions
 - Windows Server, version 2004 all editions
 - Windows 10, version 1909, all editions
-- Windows 10, version 1903, all editions
-- Windows Server, version 1903, all editions
 - Windows 10, version 1809, all editions
 - Windows Server 2019, all editions
 - Windows 10, version 1803, all editions
@@ -120,9 +190,3 @@ On client and server systems, you can use the Deployment Image Servicing and Man
 - Windows Server 2008 Standard
 - Windows Server 2008 Foundation
 - Windows Server 2008 for Itanium-Based Systems
-- Windows Vista Service Pack 2
-- Windows Vista Ultimate
-- Windows Vista Enterprise
-- Windows Vista Business
-- Windows Vista Home Premium
-- Windows Vista Home Basic, Windows Vista Starter

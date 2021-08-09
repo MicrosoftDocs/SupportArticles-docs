@@ -4,7 +4,7 @@ description: Provides a solution to an issue where clients can't authenticate wi
 ms.date: 10/14/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides a solution to an issue where clients can't authenticate with a server after you obtain a new certificate to replace an expired certificate on the server.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 822406
 
 ## Symptoms

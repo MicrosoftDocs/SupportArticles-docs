@@ -28,11 +28,7 @@ To work around this problem, use one of the following methods:
 
 Download the VB6 Mouse Wheel.exe file that includes the add-in DLL and the code that is used to create the add-in DLL.
 
-1. Download the VB6 Mouse Wheel.exe file. The following file is available for download from the Microsoft Download Center:  
-[Download the VB6MouseWheel.EXE package now.](https://download.microsoft.com/download/e/f/b/efb39198-7c59-4ace-a5c4-8f0f88e00d34/vb6mousewheel.exe)
-
-    For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
-
+1. Download the VB6 Mouse Wheel.exe file.
 2. Click **Start**, click **Run**, type `regsvr32 <path>\VB6IDEMouseWheelAddin.dll`, and then click **OK**.
 3. Start Visual Basic 6.0.
 4. Click **Add-Ins**, and then click **Add-in Manager**.
@@ -42,15 +38,6 @@ Download the VB6 Mouse Wheel.exe file that includes the add-in DLL and the code 
 
 You can also build the add-in DLL in Visual Basic 6.0. If you do this, the add-in DLL is automatically registered. You can then follow steps 4 through 7 to enable the add-in DLL. To build the add-in DLL, click **Make VB6IDEMouseWheelAddin.dll** on the **File** menu.
 
-## Method 2
-
-Return to an earlier version of Microsoft IntelliPoint software. To do this, follow these steps:
-
-1. If the IntelliPoint software that is installed on your computer is version 4.9 or a later version, remove the IntelliPoint software from your computer.
-2. Install IntelliPoint software version 4.12.
-
-    For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
-  
 > [!NOTE]
 > You can also use this add-in in most VBA environments. Install the add-in as described earlier, create a .reg file with the following values, and merge it with your registry.
 
@@ -64,6 +51,13 @@ Windows Registry Editor Version 5.00
 
 > [!NOTE]
 > These keys may be ignored if you put them under `HKEY_LOCAL_MACHINE`.
+
+## Method 2
+
+Return to an earlier version of Microsoft IntelliPoint software. To do this, follow these steps:
+
+1. If the IntelliPoint software that is installed on your computer is version 4.9 or a later version, remove the IntelliPoint software from your computer.
+2. Install IntelliPoint software version 4.12.
 
 ## More information
 

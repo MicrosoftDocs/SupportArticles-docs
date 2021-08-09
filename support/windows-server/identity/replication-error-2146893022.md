@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot AD replication error 2146893022
+title: Troubleshoot AD replication error -2146893022
 description: This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022).
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022: The target principal name is incorrect).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2090913
 
 > [!NOTE]
@@ -270,7 +270,7 @@ Kerberos tickets for the system account that are used by Active Directory replic
 
 Domain controllers can be made to use other domain controllers by stopping the KDC service on a local or remote domain controller.
 
-Use `REPADIN /SHOWOBJMETA` to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source domain controller in the source domain controller's  and destination domain controller's copy of the Active Directory directory.
+Use `REPADMIN /SHOWOBJMETA` to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source domain controller in the source domain controller's  and destination domain controller's copy of the Active Directory directory.
 
 ```console
 C:\>repadmin /showobjmeta <source DC> <DN path of source DC computer account>

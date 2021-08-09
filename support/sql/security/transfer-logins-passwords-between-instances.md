@@ -138,7 +138,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
       IF (@type IN ( 'G', 'U'))
       BEGIN -- NT authenticated account/group
 
-      SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' FROM WINDOWS WITH DEFAULT_DATABASE = [' + @defaultdb + ']'
+      SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' FROM WINDOWS WITH DEFAULT_DATABASE = ' + QUOTENAME( @defaultdb )
       END
       ELSE BEGIN -- SQL Server authentication
       -- obtain password and sid
@@ -150,7 +150,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
       SELECT @is_policy_checked = CASE is_policy_checked WHEN 1 THEN 'ON' WHEN 0 THEN 'OFF' ELSE NULL END FROM sys.sql_logins WHERE name = @name
       SELECT @is_expiration_checked = CASE is_expiration_checked WHEN 1 THEN 'ON' WHEN 0 THEN 'OFF' ELSE NULL END FROM sys.sql_logins WHERE name = @name
 
-      SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' WITH PASSWORD = ' + @PWD_string + ' HASHED, SID = ' + @SID_string + ', DEFAULT_DATABASE = [' + @defaultdb + ']'
+      SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' WITH PASSWORD = ' + @PWD_string + ' HASHED, SID = ' + @SID_string + ', DEFAULT_DATABASE = ' + QUOTENAME( @defaultdb ) 
 
       IF ( @is_policy_checked IS NOT NULL )
       BEGIN

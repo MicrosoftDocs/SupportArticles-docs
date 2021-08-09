@@ -21,7 +21,7 @@ ASP.NET applications running on IIS 7.0 and later versions use *web.config* file
 
 Beginning in IIS 7.0, both ASP.NET configuration and IIS configuration can be stored in the same *web.config* files. The settings pertaining to ASP.NET will be located under the `<system.web>` section, and IIS settings will be located under `<system.webserver>`.
 
-The main IIS configuration file, *applicationHost.config*, is stored under the `%systemroot%\Windows\System32\inetsrv\config` folder. The *web.config* files for specific web sites, directories, and applications contain settings for both IIS and ASP.NET and are located in the root of each.
+The main IIS configuration file, *applicationHost.config*, is stored under the `%systemroot%\System32\inetsrv\config` folder. The *web.config* files for specific web sites, directories, and applications contain settings for both IIS and ASP.NET and are located in the root of each.
 
 You can run the following command to take a backup of the IIS configuration file using the following command:
 

@@ -7,6 +7,8 @@ ms.reviewer: pierrelc
 ---
 # Third-party products that rely on BHOs or toolbars break in Internet Explorer 11
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides the workaround to make sure the logic of third-party products cannot break due to Browser Helper Objects (BHOs) or toolbars.
 
 _Original product version:_ &nbsp; Internet Explorer 11  

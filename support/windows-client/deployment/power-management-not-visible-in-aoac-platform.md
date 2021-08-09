@@ -4,7 +4,7 @@ description: Discusses a by-design behavior where the Power Management tab is no
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article discusses a by-design behavior where the Power Management tab is no longer available in the Wireless Network advanced properties in an Always-On/Always-Connected (AOAC) platform.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2889143
 
 ## Summary

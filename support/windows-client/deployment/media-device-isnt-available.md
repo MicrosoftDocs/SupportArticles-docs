@@ -4,7 +4,7 @@ description: Describes how to add non-certified devices as Play To endpoints on 
 ms.date: 09/23/2020
 author: Deland-Han 
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes how to determine whether your device is certified for Windows 8, and how to change the default policy to show your non-certified devices in the Devices charm in Windows 8.1.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2871501
 
 ## Summary

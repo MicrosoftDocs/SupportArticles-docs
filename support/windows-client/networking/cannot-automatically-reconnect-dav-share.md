@@ -4,7 +4,7 @@ description: Describe a by-design behavior where Windows 7 can't automatically r
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article describes a by-design behavior where Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2673544
 
 ## Symptoms

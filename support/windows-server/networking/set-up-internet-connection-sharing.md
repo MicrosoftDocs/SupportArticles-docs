@@ -4,7 +4,7 @@ description: Describes how to install Internet Connection Sharing (ICS) on a Mic
 ms.date: 10/12/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes how to install Internet Connection Sharing (ICS) on a Microsoft Windows Server 2003-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324286
 
 ## Summary

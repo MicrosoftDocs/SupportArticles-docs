@@ -8,6 +8,8 @@ ms.topic: troubleshooting
 ---
 # Internet Explorer Uses Proxy Server for Local IP Address Even if the Bypass Proxy Server for Local Addresses Option Is Turned On
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem that occurs when you connect to a Web server using the Internet Protocol (IP) address or Fully Qualified Domain Name (FQDN) on the local network.
 
 _Applies to:_ &nbsp; Windows 7 Enterprise, Windows 7 Enterprise N, Windows 7 Home Basic, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Professional N, Windows 7 Starter, Windows 7 Starter N, Windows 7 Ultimate, Windows 7 Ultimate N, Microsoft Windows Server 2003 Standard Edition (32-bit x86), Internet Explorer  

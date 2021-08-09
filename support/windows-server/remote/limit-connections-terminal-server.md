@@ -4,7 +4,7 @@ description: Describes how to make sure that only one user at a time can connect
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes how to make sure that only one user at a time can connect to a Windows Server 2003 terminal server in Remote Administration Mode remotely or at the console.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 830581
 
 ## Summary

@@ -4,7 +4,7 @@ description: Some security identifiers that you see in access control lists or S
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article provides some information about the issue where some security identifiers (SIDS) do not resolve into friendly names.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4502539
 
 ## Symptoms

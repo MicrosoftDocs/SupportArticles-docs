@@ -4,7 +4,7 @@ description: Provides a solution to an issue where the Microsoft iSCSI Initiator
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article provides a solution to an issue where the Microsoft iSCSI Initiator fails to log in to Favorite Targets after the initiator name is changed.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2500271
 
 ## Symptoms

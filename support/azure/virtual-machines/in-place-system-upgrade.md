@@ -1,7 +1,7 @@
 ---
 title: Steps for in-place system upgrades for supported Windows 10 Azure VMs and workarounds for unsupported versions
 description: Describes how to work around the unsupported in-place system upgrade on a Windows Azure VM.
-ms.date: 07/21/2020
+ms.date: 06/29/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
@@ -64,7 +64,7 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 7. When the Feature Update item appears, select **Download and install now**.
 8. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
 
-If you have general questions about this procedure, write to [azurevmupgrade@microsoft.com](mailto:azurevmupgrade@microsoft.com).
+If you have general questions about this procedure, post to [Microsoft Q&A](https://docs.microsoft.com/answers/topics/azure-virtual-machines.html) and add the `azure-virtual-machines` tag to your question.
 
 ## Workaround
 

@@ -4,7 +4,7 @@ description: Describes the behavior of the Remove this item if it is no longer a
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article describes the behavior of the **Remove this item if it is no longer applied** option in Group Policy preferences.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp;3060859
 
 ## Summary

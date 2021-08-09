@@ -4,7 +4,7 @@ description: Discusses an issue in which the %TEMP% folder that includes the log
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-shell-experience
 
 This article provides workarounds for an issue where the `%TEMP%` folder that includes the logon session ID is deleted in Windows Server 2019 Desktop Experience.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4506040
 
 ## Symptoms

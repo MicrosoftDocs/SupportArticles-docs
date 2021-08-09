@@ -8,6 +8,8 @@ ms.topic: troubleshooting
 ---
 # Can't check for new Enterprise Mode site list XML file in Internet Explorer 11
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem where IE11 can't download a new Enterprise Mode site list XML file.
 
 _Applies to:_ &nbsp; Internet Explorer 11 on Windows Server 2012 R2, Internet Explorer 11 on Windows 8.1 Update, Internet Explorer 11 on Windows 10  

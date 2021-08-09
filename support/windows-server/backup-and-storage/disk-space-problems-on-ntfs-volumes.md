@@ -4,7 +4,7 @@ description: Describes how to locate and correct disk space problems on NTFS vol
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article discusses how to check an NTFS file system's disk space allocation to discover offending files and folders or look for volume corruption in Microsoft Windows Server 2003-based computers.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814594
 
 ## Summary

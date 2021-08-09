@@ -4,7 +4,7 @@ description: Helps fix an issue where File Replication service (FRS) adds "NTFRS
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article provides help to fix an issue where File Replication service (FRS) adds "NTFRS_**xxxxxxxx**" to a folder name.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp;328492
 
 ## Symptoms

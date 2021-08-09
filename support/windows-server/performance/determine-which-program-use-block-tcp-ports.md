@@ -4,7 +4,7 @@ description: Discusses how to determine which program uses or blocks specific Tr
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
@@ -19,7 +19,7 @@ This step-by-step article discusses how to determine which program uses or block
 
 For a Microsoft Windows XP version of this article, see [281336](https://support.microsoft.com/help/281336).  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323352
 
 ## Summary
