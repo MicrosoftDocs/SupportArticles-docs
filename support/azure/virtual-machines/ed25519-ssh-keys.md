@@ -33,4 +33,4 @@ The issue occurs because Ed25519 keys are not supported in Azure.
 ## Workaround
 
 To work around this issue, use other SSH keys for the VM, such as RSA. You can generate SSH keys by using **ssh-keygen** in Linux and OS X, or by using PuTTYGen in Windows.
-For more information, see [How to Use SSH keys with Windows on Azure](https://docs.microsoft.com/azure/virtual-machines/linux/ssh-from-windows).
+For more information, see [How to Use SSH keys with Windows on Azure](/azure/virtual-machines/linux/ssh-from-windows).
