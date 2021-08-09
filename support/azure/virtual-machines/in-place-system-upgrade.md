@@ -80,7 +80,7 @@ Create an Azure VM that runs a supported version of the operating system, and th
 
 #### Step 1: Do an in-place upgrade in a local Hyper-V VM
 
-1. [Download the VHD of the VM](azure/virtual-machines/windows/download-vhd).
+1. [Download the VHD of the VM](/azure/virtual-machines/windows/download-vhd).
 1. Attach the VHD to a local Hyper-V VM.
 1. Start the VM.
 1. Run the in-place upgrade.
