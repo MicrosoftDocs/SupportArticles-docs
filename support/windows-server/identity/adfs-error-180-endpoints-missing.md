@@ -88,7 +88,7 @@ At line:1 char:1
 
 The AD FS team has developed a PowerShell script that you can run on an AD FS server to fix the AD FS configuration settings in the database that is associated with KB 4088787.
 
-This script is found at the [end of this article](#powershell-script-kb4088787_fix.ps1). Save the script as "KB4088787_Fix.ps1" and copy it to the primary node in your AD FS farm.
+This script is found at the [end of this article](#powershell-script-kb4088787fixps1). Save the script as "KB4088787_Fix.ps1" and copy it to the primary node in your AD FS farm.
 
 ### Step 3: Back up AD FS configuration databas
 
