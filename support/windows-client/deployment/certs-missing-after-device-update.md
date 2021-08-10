@@ -1,6 +1,6 @@
 ---
 title: Certificates are missing after you update a device to a newer version of Windows 10
-description: This article provides workarounds for an issue in which a device loses its system and user certificates after an update.
+description: Works around an issue in which a device loses its system and user certificates after an update.
 ms.date: 03/30/2021
 author: Teresa-Motiv
 ms.author: v-tea
@@ -17,17 +17,17 @@ keywords: managed devices, certificates, WSUS, MECM, Windows Update
 
 # Certificates are missing after you update a device to a newer version of Windows 10
 
-This article provides workarounds for an issue in which a device loses its system and user certificates after an update.
+This article provides workarounds for an issue in which a device loses its system and user certificates after an operating system update.
 
 _Original product version:_ &nbsp;Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1903
 
 ## Symptoms
 
-You have a device that runs Windows 10, version 1809 or later. The device also has a latest cumulative update (LCU) that was released on September 16, 2020, or later. After you update the device to a later version of Windows, the device loses its system and user certificates.
+You have a device that runs Windows 10, version 1809 or a later version. The device also has a latest cumulative update (LCU) that was released on September 16, 2020, or a later LCU. After you update the device to a later version of Windows, the device loses its system and user certificates.
 
 ## Cause
 
-This behavior might occur when the installation source or media that was used to update the device is out-of-date. The update doesn't include an LCU that was released on October 13, 2020, or later. The behavior typically affects managed devices in environments in which an update management tool such as Windows Server Update Services (WSUS) or Microsoft Endpoint Configuration Manager downloads updates and then distributes them to devices. It also affects devices that are updated by using outdated physical media or ISO images.
+This behavior might occur if the installation source or media that was used to update the device is out-of-date. The update doesn't include an LCU that was released on October 13, 2020, or later. The behavior typically affects managed devices in environments in which an update management tool such as Windows Server Update Services (WSUS) or Microsoft Endpoint Configuration Manager downloads updates and then distributes them to devices. It also affects devices that are updated by using outdated physical media or ISO images.
 
 This behavior doesn't affect devices that use Windows Update for Business or that connect directly to Windows Update. Any device that connects to Windows Update should always receive the latest versions of the feature update, including the latest LCU, without any extra steps.  
 
@@ -35,13 +35,13 @@ This behavior doesn't affect devices that use Windows Update for Business or tha
 
 To mitigate this issue, do one of the following:
 
-- Download a new source image from the Microsoft Update Catalog or from the Volume Licensing Service Center to replace your previous source image. Then use that image to update the device.
-- Roll the device back to the previous Windows version, add the missing LCU to the update, and then reinstall the update.
+- Download a new source image from the Microsoft Update Catalog or from the Volume Licensing Service Center to replace the previous source image. Then, use that image to update the device.
+- Roll back the device to the previous Windows version, add the missing LCU to the update, and then reinstall the update.
 
 > [!IMPORTANT]  
 >  
 > - The rollback process does not affect your personal files, but it removes any apps and drivers that you installed after you installed the update. It also reverses any changes to settings that you made after you installed the update.
-> - By default, you can only roll back an update within 10 days of installing it. You can change this time limit by opening a Command Prompt window and running the following command:
+> - By default, you can roll back an update only within 10 days of installing it. You can change this time limit in a Command Prompt window by running the following command:
 >  
 >   ```console
 >   Dism /Online /Set-OSUninstallWindow /Value:<days>
@@ -59,18 +59,18 @@ To add the latest LCU to the update source, follow these steps:
 1. Mount the source ISO image, and then copy the install.wim file to a writeable location.  
 
    > [!NOTE]  
-   > If the image has an install.esd file instead of an install.wim file, use the [**:::no-loc text="Dism /Export-Image":::**](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
+   > If the image has an Install.esd file instead of an Install.wim file, use the [**:::no-loc text="Dism /Export-Image":::**](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
 
-2. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) and look up the correct LCU number for your system version.
+2. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) to look up the correct LCU number for your system version.
 
 3. Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and then download the LCU.
 
    > [!NOTE]  
    >
-   > - If you are using WSUS to manage updates, see [WSUS and the Catalog Site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site#the-microsoft-update-catalog-site). This article describes how to use WSUS to download updates from the Microsoft Update Catalog.
+   > - If you're using WSUS to manage updates, see [WSUS and the Catalog Site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site#the-microsoft-update-catalog-site). This article describes how to use WSUS to download updates from the Microsoft Update Catalog.
    > - If you are using Microsoft Enpoint Manager to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
 
-4. To add the LCU to the image, open an administrative Command Prompt window and run the following command:
+4. To add the LCU to the image, open an administrative Command Prompt window, and then run the following command:
 
    ```console
    Dism /Add-Package /Image:"C:\Mount\Windows" /PackagePath="windows10.0-kb4586781-x64_bd543ce012ec1695201cdb2d324a2206bd445132.msu" /LogPath=C:\Mount\Dism.log
@@ -94,14 +94,14 @@ To add the latest LCU to the update source, follow these steps:
    > [!NOTE]  
    > In this command, \<*Path_to_Mount_Directory*> is the path to the mounted image.
 
-7. (Optional) Use the updated file to recreate the image. to do this, run the following command:
+7. (Optional) Use the updated file to re-create the image. To do this, run the following command:
 
    ```console
    Oscdimg –n –d –m “<Source>” “<Target.iso>”
    ```
 
    > [!NOTE]  
-   > In this command, \<*Source*> is the location of the files that you intend to build into an image and \<*Target.iso*> is the name of the ISO image file.
+   > In this command, \<*Source*> is the location of the files that you intend to build into an image, and \<*Target.iso*> is the name of the ISO image file.
 
 ## More information
 
