@@ -526,6 +526,8 @@
       href: ./identity/password-reset-fails-error.md
     - name: Password-change protocols in Windows
       href: ./identity/password-change-mechanisms.md
+    - name: Poor performance when calling lookup functions
+      href: ./identity/poor-performance-calling-lookup-functions.md
     - name: Redirect users and computers containers
       href: ./identity/redirect-users-computers-containers.md
     - name: Rename an item after replication collision
