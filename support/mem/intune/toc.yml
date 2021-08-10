@@ -72,11 +72,11 @@
       href: build-software-inventory-power-bi.md
     - name: Can't sync Microsoft Store for Business apps to Intune
       href: apps-fail-sync-to-intune.md
-- name: App protection policies
+- name: App protection policies (APP)
   items:   
-    - name: Troubleshoot app protection policy deployment
+    - name: Troubleshoot APP deployment
       href: troubleshoot-app-protection-policy-deployment.md
-    - name: Troubleshoot mobile application management
+    - name: Troubleshoot APP user issues
       href: troubleshoot-mam.md   
     - name: Access Denied when accessing Exchange Online & SharePoint Online
       href: app-protection-options-access-denied.md
