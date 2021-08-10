@@ -1,38 +1,22 @@
 ---
-title: Troubleshoot mobile application management
-description: This article describes some troubleshooting tips for Conditional Access deployments.
-ms.date: 08/13/2020
+title: Troubleshoot user issues for Microsoft Intune app protection policies
+description: This article gives troubleshooting guidance for error messages and other common issues when using Intune app protection policies for mobile application management (MAM).
+ms.date: 08/02/2021
+ms.prod-support-area-path: App management
+ms.topic: troubleshooting
+ms.service: microsoft-intune
 ms.reviewer: mghadial
 ---
-# Troubleshoot mobile application management
 
-This article provides solutions to common problems that have occurred when using Intune App Protection (also referred to as MAM or mobile application management).
+# Troubleshooting app protection policy user issues
 
-If it doesn't solve your problem, see [How to get support in Microsoft Endpoint Manager](/mem/get-support) to find more ways to get help.
+This article provides solutions to common user issues and error messages related to mobile application management (MAM) with Intune app protection policies. It provides an explanation and solution, when available, for user issues in the following categories:
 
-## Common IT administrator issues
+- [Normal usage scenarios](#normal-usage-scenarios): A user might experience these scenarios on apps that have an Intune app protection policy. They are not actual issues, but may be perceived as bugs or errors.
 
-These are common issues an IT administrator may experience when using Intune app protection policies.
+- [Normal usage dialogs](#normal-usage-dialogs): Usage dialogs a user might see in apps that have an Intune app protection policy. These messages and dialogs do *not* indicate an error or bug.
 
-| Issue | Description | Resolution |
-|---|---|---|
-| Policy not applied to Skype for Business | App protection policy without device enrollment, made in the Azure portal, is not applying to the Skype for Business app on iOS/iPadOS and Android devices. | Skype for Business must be set up for modern authentication. Follow instructions in [Enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) to set up modern authentication for Skype. |
-| Office app policy not applied | App protection policies are not applying to any [supported Office App](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) for any user. | Confirm that the user is licensed for Intune and the Office apps are targeted by a deployed app protection policy. It can take up to 8 hours for a newly deployed app protection policy to be applied. |
-| Admin can't configure app protection policy in Azure portal | IT administrator user is unable to configure app protection policies in Azure portal. | The following user roles have access to the Azure portal: <ul><li>Global administrator, which you can set up in the [Microsoft 365 admin center](https://admin.microsoft.com/)</li><li>Owner, which you can set up in the [Azure portal](https://portal.azure.com/).</li><li>Contributor, which you can set up in the [Azure portal](https://portal.azure.com/).</li></ul> Refer to [Role-based administration control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control) for setting up these roles.|
-|User accounts missing from app protection policy reports | Admin console reports do not show user accounts to which app protection policy was recently deployed. | If a user is newly targeted by an app protection policy, it can take up to 24 hours for that user to show up in reports as a targeted user. |
-| Policy changes not working | Changes and updates to app protection policy can take up to 8 hours to apply. | If applicable, the end user can log out of the app and log back in to force sync with service. |
-| App protection policy not working with DEP | App protection policy is not applying to Apple DEP devices. | Ensure you are using User Affinity with Apple Device Enrollment Program (DEP). User Affinity is required for any app that requires user authentication under DEP. <br><br>For more information on iOS/iPadOS DEP enrollment, see [Automatically enroll iOS/iPadOS devices with Apple's Device Enrollment Program](/mem/intune/enrollment/device-enrollment-program-enroll-ios).|
-| Data transfer policy not working with iOS/iPadOS | The **Allow app to transfer data to other apps** and **Allow app to receive data from other apps** policies do not successfully manage data transfer in iOS/iPadOS. | See [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios). |
-
-## Common end-user issues
-
-Common end-user issues are broken down in the following categories:
-
-* **Normal usage scenarios**: An end user might experience these scenarios on apps that have an Intune app protection policy. They are not actual issues, but may be perceived as bugs or errors.
-
-* **Normal usage dialogs**: They are usage dialogs an end user might see in apps that have an Intune app protection policy. These messages and dialogs do **not** indicate an error or bug.
-
-* **Error messages and dialogs**: They are error messages and dialogs an end user might see on apps that have an Intune app protection policy. They often indicate an error was made by the IT administrator or a bug with Intune app protection.
+- [Error messages and dialogs on iOS](#error-messages-and-dialogs-on-ios), [Error messages and dialogs on Android](#error-messages-and-dialogs-on-android): Error messages and dialogs a user might see on apps that have an Intune app protection policy. They often indicate an error was made by the IT administrator or a bug with the app protection policy.
 
 ### Normal usage scenarios
 
@@ -90,8 +74,4 @@ Common end-user issues are broken down in the following categories:
 
 ## Next steps
 
-- [Validating your mobile application management setup](/mem/intune/apps/app-protection-policies-validate)
-- Learn how to use log files to troubleshoot Intune App Protection policy, see [https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
-- For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](/mem/intune/fundamentals/help-desk-operators).
-- Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
-- Need extra help? See [How to get support in Microsoft Endpoint Manager](/mem/get-support).
+ - [Additional Intune support channels](get-support.md)
