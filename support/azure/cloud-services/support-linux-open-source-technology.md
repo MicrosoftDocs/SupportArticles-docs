@@ -58,7 +58,7 @@ Microsoft offers Linux support for [endorsed Linux distributions](https://docs.m
 Microsoft may offer support for the following specific open-source technologies (subject to change):
 
 - Languages: PHP, Java, Python, Node.JS
-- Database: MySQL, PostgresSQL
+- Database: MySQL, PostgreSQL
 - Web and application servers: Apache, Tomcat
 - Frameworks: WordPress
 
