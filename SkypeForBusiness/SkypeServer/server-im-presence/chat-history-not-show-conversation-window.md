@@ -34,7 +34,7 @@ In this scenario, you see only the current IM. Any previous chat sessions with t
 
 ## Cause
 
-Chat history is created by the **Conversation History** folder in Microsoft Outlook. If the **Conversation History** folder isn't synchronized with the history, the Skype for Business client can't show the chat history.
+Chat history is created from the contents of the **Conversation History** folder in Microsoft Outlook. If the **Conversation History** folder isn't synchronized with the conversation window, the Skype for Business client can't show the chat history.
 
 ## Workaround
 
