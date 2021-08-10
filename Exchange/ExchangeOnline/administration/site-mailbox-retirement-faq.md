@@ -95,13 +95,13 @@ The system will remove the link to the site mailbox from the associated SharePoi
 
 ## Site mailbox inaccessible in Outlook and OWA
 
-Following [our announcement to retire site mailboxes]((https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704)), access to the site mailbox is now stopped from the clients (Outlook and OWA). 
+Following [our announcement to retire site mailboxes](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704), access to the site mailbox is now stopped from the clients (Outlook and OWA). 
 
 After the change is rolled out, you'll experience the following in Outlook and OWA:
 
 - Outlook
 
-Outlook displays the site mailbox in the left pane, just like an automatically mapped delegate mailbox. After this change, Outlook will stop receiving site mailbox-related payloads in Autodiscover, which is used to automatically map site mailboxes. The existing automatically mapped site mailboxes will disappear from the Outlook client. TThe end user won't see any errors. 
+Outlook displays the site mailbox in the left pane, just like an automatically mapped delegate mailbox. After this change, Outlook will stop receiving site mailbox-related payloads in Autodiscover, which is used to automatically map site mailboxes. The existing automatically mapped site mailboxes will disappear from the Outlook client. The end user won't see any errors. 
 - Outlook on the web (OWA) extension:
 Clicking the site mailbox application in the SharePoint site will launch the OWA extension to display site mailbox content. After this change, the end user will receive the following error when trying to access the site mailbox:
 
