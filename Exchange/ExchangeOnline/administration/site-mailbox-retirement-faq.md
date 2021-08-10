@@ -29,7 +29,7 @@ To avoid disruption in your services, we encourage you to remove all dependencie
 - [How can I check whether my organization is using site mailboxes?](#how-can-i-check-whether-my-organization-is-using-site-mailboxes)
 - [What should I do if I want to keep the data in my site mailboxes?](#what-should-i-do-if-i-want-to-keep-the-data-in-my-site-mailboxes)
 - [Will deleting a site mailbox remove the documents in the associated SharePoint site?](#will-deleting-a-site-mailbox-remove-the-documents-in-the-associated-sharepoint-site)
-- [Site mailbox inaccessible in Outlook as well as OWA](#Site-mailbox-inaccessible)
+- [Site mailbox inaccessible in Outlook and OWA](#site-mailbox-inaccessible-in-outlook-and-owa)
 
 ## What is a site mailbox?
 
@@ -93,18 +93,20 @@ The system will remove the link to the site mailbox from the associated SharePoi
 
 [Back to top](#summary)
 
-#Site-mailbox-inaccessible
-Following [our announcement to retire site mailboxes]((https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704)), the access to site mailbox is now stopped from clients (Outlook and OWA).
+## Site mailbox inaccessible in Outlook and OWA
 
-Here’s client wise experience o:nce the change is rolled out,
+Following [our announcement to retire site mailboxes]((https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704)), access to the site mailbox is now stopped from the clients (Outlook and OWA). 
 
-•	Experience in Outlook:
-Outlook would show site mailbox on the left hand pane, just like auto-mapped delegate mailbox. After this change, Outlook will stop receiving site mailbox related payload in Autodiscover, that it was using to auto-map the site mailboxes. The existing auto-mapped site mailboxes will disappear from Outlook client. The end-user would not see any error as such.
+After the change is rolled out, you'll experience the following in Outlook and OWA:
 
-•	Experience in Outlook on the web (OWA) extension:
-Clicking the site mailbox app from SharePoint site would launch OWA extension to display site mailbox content. After this change, the end user trying to access site mailbox will receive error “HTTP 500 something went wrong, You don’t have access to this mailbox”.
+- Outlook
 
-Detailed error:
-"Microsoft.Exchange.Clients.Owa2.Server.Core.OwaExplicitLogonException"
+Outlook displays the site mailbox in the left pane, just like an automatically mapped delegate mailbox. After this change, Outlook will stop receiving site mailbox-related payloads in Autodiscover, which is used to automatically map site mailboxes. The existing automatically mapped site mailboxes will disappear from the Outlook client. TThe end user won't see any errors. 
+- Outlook on the web (OWA) extension:
+Clicking the site mailbox application in the SharePoint site will launch the OWA extension to display site mailbox content. After this change, the end user will receive the following error when trying to access the site mailbox:
 
-This change does not block exporting site mailbox data to PST using e-Discovery. You can follow the steps mentioned earlier to export the data from site mailbox to PST.
+> HTTP 500 something went wrong, You don't have access to this mailbox.
+>
+> Microsoft.Exchange.Clients.Owa2.Server.Core.OwaExplicitLogonException
+
+This change doesn't block exporting site mailbox data to PST by using eDiscovery. You can follow the steps mentioned earlier to export data from the site mailbox to PST.
