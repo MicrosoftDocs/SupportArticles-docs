@@ -15,6 +15,8 @@ ms.technology: windows-server-active-directory
 ---
 # Poor performance when calling lookup functions to resolve names
 
+_Original KB number:_ &nbsp; 818024
+
 When calling the **LookupAccountName** or **LsaLookupNames** function to resolve isolated names (ambiguous or non-domain-qualified user accounts) to security identifiers (SIDs), you may notice an increased usage of memory and CPU on the domain controller and decreased performance.
 
 For example, poor performance might occur when using scripts or tools (such as *Cacls.exe*, *Xcacls.exe*, *icacls.exe*, *Dsacls.exe*, and *Subinacl.exe*) to call the functions to edit security settings.
