@@ -58,10 +58,10 @@ If the issue isn't resolved by an update, use the following workaround for the a
 
 - Leave and rejoin the meeting. This might restore the recording functionality.
 - Use the [Teams web client](https://teams.microsoft.com/) to join and record the meeting.
-- Make sure you are trying to record a Meeting, and not a 1:1 Call.  Call Recording is controlled by the AllowCloudRecordingForCalls parameter of Teams Calling Policies.  
+- Make sure that you're trying to record a meeting, and not a 1:1 call. Call recording is controlled by the `AllowCloudRecordingForCalls` parameter of Teams calling policies. 
 - Run the 1:1 Call Recording Diagnostic for an impacted user:
-1. Sign in to Microsoft 365 admin center, and type **Diag: Teams 1:1 Call Recording** in the **Need Help?** search box.
-2. Enter the Session Initiation Protocol (SIP) address, and select **Run Tests**.
+  1. Sign in to Microsoft 365 admin center, and type **Diag: Teams 1:1 Call Recording** in the **Need Help?** search box.
+  2. Enter the Session Initiation Protocol (SIP) address, and then select **Run Tests**.
 
 Try again to record the meeting. If the issue still isn't resolved, ask your administrator to open a support ticket with Microsoft.
 
