@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Power Apps
 
 ## Symptoms
 
-When you select a button in a Unified Interface app, there's no response. For example, when you select the **Save and Close** button, it's expected that you're navigated to the previous page. You may need to select the button several times to navigate to the previous page.
+When you select a button in a Unified Interface app, there's no response. For example, when you select the **Save and Close** button, it's expected that you're navigated to the previous page. However, you may need to select the button several times to navigate to the previous page.
 
 ## Cause
 
