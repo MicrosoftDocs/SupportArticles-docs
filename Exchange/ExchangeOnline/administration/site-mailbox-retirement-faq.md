@@ -101,12 +101,15 @@ After the change is rolled out, you'll experience the following in Outlook and O
 
 - Outlook
 
-Outlook displays the site mailbox in the left pane, just like an automatically mapped delegate mailbox. After this change, Outlook will stop receiving site mailbox-related payloads in Autodiscover, which is used to automatically map site mailboxes. The existing automatically mapped site mailboxes will disappear from the Outlook client. The end user won't see any errors. 
-- Outlook on the web (OWA) extension:
-Clicking the site mailbox application in the SharePoint site will launch the OWA extension to display site mailbox content. After this change, the end user will receive the following error when trying to access the site mailbox:
+   Outlook displays the site mailbox in the left pane, just like an automatically mapped delegate mailbox. After this change, Outlook will stop receiving site mailbox-related payloads in Autodiscover, which is used to automatically map site mailboxes. The existing automatically mapped site mailboxes will disappear from the Outlook client. The end user won't see any errors. 
+- Outlook on the web (OWA) extension
 
-> HTTP 500 something went wrong, You don't have access to this mailbox.
->
-> Microsoft.Exchange.Clients.Owa2.Server.Core.OwaExplicitLogonException
+  Clicking the site mailbox application in the SharePoint site will launch the OWA extension to display site mailbox content. After this change, the end user will receive the following error when trying to access the site mailbox:
 
-This change doesn't block exporting site mailbox data to PST by using eDiscovery. You can follow the steps mentioned earlier to export data from the site mailbox to PST.
+  > HTTP 500 something went wrong, You don't have access to this mailbox.
+  >
+  > Microsoft.Exchange.Clients.Owa2.Server.Core.OwaExplicitLogonException
+
+  This change doesn't block exporting site mailbox data to PST by using eDiscovery. You can follow the steps mentioned earlier to export data from the site mailbox to PST.
+  
+  [Back to top](#summary)  
