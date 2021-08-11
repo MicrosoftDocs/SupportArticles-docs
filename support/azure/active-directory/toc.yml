@@ -9,6 +9,12 @@
     href: maximum-number-of-devices-joined-workplace.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md
+  - name: Understand Azure AD Connect 1.4 and device disappearance
+    href: reference-connect-device-disappearance.md
+  - name: Sign-in and Multi-factor Authentication
+    items:
+    - name: Authentication fails with "The requested federation realm object 'xxxxxx' does not exist"
+      href: authentication-fails-with-error.md
 
 - name: App Integration and Development 
   items:

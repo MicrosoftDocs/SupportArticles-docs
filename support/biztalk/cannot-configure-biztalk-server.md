@@ -80,6 +80,6 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
 For more information about this issue, visit the following Microsoft websites:
 
-- [Troubleshooting problems in MSDTC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))
+- [Troubleshooting problems in MSDTC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))
 
-- [Enable Network Access Securely for MS DTC](https://docs.microsoft.com/biztalk/core/troubleshooting-problems-with-msdtc)
+- [Enable Network Access Securely for MS DTC](/biztalk/core/troubleshooting-problems-with-msdtc)

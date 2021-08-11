@@ -72,7 +72,7 @@ RESTORE HEADERONLY FROM DISK='C:\MyDatabase.bak'
 Each backup set has one entry in the output. To indicate a specific backup set, use this code:
 
 ```sql
-RESTORE DATABASE mydatabase FROM DISK='C:\MyDatabase.bak WITH FILE = FileNumber
+RESTORE DATABASE mydatabase FROM DISK='C:\MyDatabase.bak' WITH FILE = FileNumber
 ```
 
 > [!NOTE]

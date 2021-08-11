@@ -34,7 +34,7 @@ The following guide provides guidance for migration of domains by using the Acti
 >
 > - ADMT has not been updated for Windows 8.1 and 10 workstation migration.
 > - Windows Server 2012, Windows Server 2012 R2 and later version of Windows Server have not been tested for modern applications and profile migrations. Your experience may vary, depending on many factors, including the Windows version that you are migrating. Use the tools suite at your own risk.
-> - An alternative to the ADMT tools suite is also available from Microsoft Services:Active Directory Migration Services(ADMS). This tool runs in the Azure cloud. For entry-level information, see [Taste of Premier: Directory Consolidation with Windows Azure Active Directory Migration Services](https://channel9.msdn.com/Blogs/Taste-of-Premier/Taste-of-Premier-Directory-Consolidation-with-Windows-Azure-Active-Directory-Migration-Services) and [Microsoft Azure Active Directory Migration Service](https://download.microsoft.com/download/0/7/F/07FA8BFC-17D5-4F55-AD4F-3A987A7324AA/microsoft-azure-active-directory-migration-service-solution-brief.pdf).
+> - An alternative to the ADMT tools suite is also available from Microsoft Services:Active Directory Migration Services(ADMS). This tool runs in the Azure cloud. For entry-level information, see [Taste of Premier: Directory Consolidation with Windows Azure Active Directory Migration Services](https://channel9.msdn.com/Blogs/Taste-of-Premier/Taste-of-Premier-Directory-Consolidation-with-Windows-Azure-Active-Directory-Migration-Services).
 
 ## Known issues and limitations
 

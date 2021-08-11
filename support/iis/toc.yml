@@ -265,6 +265,8 @@
     href: information-associated-iis-site-is-not-deleted.md
   - name: Impersonation fails when UAC is enabled
     href: impersonation-fails-uac-enabled.md
+  - name: Kerberos double-hop authentication with Microsoft Edge
+    href: kerberos-double-hop-authentication-edge-chromium.md
   - name: Read and analyze a client certificate
     href: analyze-client-certificate.md
   - name: Re-enabling shared configuration causes IIS can't start
