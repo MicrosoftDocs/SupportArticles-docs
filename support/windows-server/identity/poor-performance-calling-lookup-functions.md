@@ -53,3 +53,5 @@ The lookup functions can directly target a domain controller on an appropriate d
 - NetBIOSDomainName\AccountName
 - DnsDomainName\AccountName
 - AccountName@DnsDomainName
+
+For more information, see [Network access validation algorithms and examples for Windows](/windows-server/windows-security/network-access-validation-algorithms).
