@@ -24,7 +24,7 @@ appliesto:
 
 ## Symptom
 
-A Microsoft Access-linked table that contains one or more **datetime** or **datetime2** columns and that’s connected to a Microsoft SQL Server database and has a compatibility level of 130 or larger (the compatibility level for SQL Server 2016) returns “#Deleted” in the results.
+A Microsoft Access-linked table that contains one or more **datetime** or **datetime2** columns and that’s connected to a Microsoft SQL Server database and has a compatibility level of 130 or larger (the compatibility level for SQL Server 2016) returns **#Deleted** in the results.
 
 When you try to commit record changes to the linked table, you may also receive the following “Write Conflict” message:
 
@@ -50,6 +50,9 @@ To improve syntax compatibility with SQL, and to increase the accuracy and level
 > The **Date & Time Extended** data type is incompatible with non-subscription versions of Microsoft Access. Therefore, if the data type is implemented in a local Access table, and the Access database is used together with a non-subscription version of Access, you can’t open the database.
 
 You can enable or disable the **Date & Time Extended** data type for linking and importing operations by using the **Current Database** Access option **Support Date Time Extended (DateTime2) Data Type for Linked/lmported Tables**. For more information, see [Set user options for the current database](https://support.microsoft.com/office/set-user-options-for-the-current-database-29b6b7be-4c3b-43a7-b8f0-5e1c68f5adce).
+
+> [!note]
+> Access does not currently support use of **Date & Time Extended** as part of a linked ODBC table unique identifer / primary key. If one or more columns that make up the linked tables unique identifier utilize the **Date & Time Extended** data type and the date includes fractional seconds, the record may display as **#Deleted**.
 
 For earlier versions of Access, use one of the following methods to work around this issue:
 
