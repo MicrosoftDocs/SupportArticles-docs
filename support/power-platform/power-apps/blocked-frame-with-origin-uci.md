@@ -45,3 +45,5 @@ Chrome should automatically update based upon your Play Store settings. You can 
 1. Tap **Manage apps & device**.
 1. Under "Updates available," find Chrome.
 1. Next to Chrome, tap **Update**.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
