@@ -23,7 +23,7 @@ For example, poor performance might occur when using scripts or tools (such as *
 
 The problem may show up when you have many trusted domains or forests (applies to both external and forest trusts), and/or some of these domains or forests are offline or slow to respond.
 
-When the functions are called for an isolated name (the format is AccountName in contrast to domain\AccountName), a remote procedure call (RPC) is made to domain controllers on all trusted domains/forests. This issue might occur if the primary domain has many trust relationships with other domains/forests or if it's performing many lookups at a same time. For example, that's the case if a script is configured to run at the startup of many clients, or if many trusted domains/forests use the same script simultaneously.
+When the functions are called for an isolated name (the format is AccountName in contrast to domain\AccountName), a remote procedure call (RPC) is made to domain controllers on all trusted domains/forests. This issue might occur if the primary domain has many trust relationships with other domains/forests or if it's doing many lookups at a same time. For example, that's the case if a script is configured to run at the startup of many clients, or if many trusted domains/forests use the same script simultaneously.
 
 ## Disable the lookup of isolated names in trusted domains/forests
 
