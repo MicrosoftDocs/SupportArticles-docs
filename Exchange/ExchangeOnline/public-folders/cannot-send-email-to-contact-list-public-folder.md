@@ -15,10 +15,15 @@ ms.custom:
 ms.reviewer: haembab; meerak; batre
 appliesto: 
 - Exchange Online
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
 search.appverid: MET150
 ---
 
 # Can't send email to a contact list in a public folder from Outlook on the web
+
+## Symptoms
 
 Assume that you have a contact public folder that contains a contact list, you [add the public folder to Favorites in Outlook on the web](/exchange/collaboration-exo/public-folders/use-favorite-public-folders#add-favorite-public-folders-in-outlook-on-the-web). When you send an email to the contact list, you see the following error message:
 
@@ -26,7 +31,11 @@ Assume that you have a contact public folder that contains a contact list, you [
 
 :::image type="content" source="media/cannot-send-email-to-contact-list-public-folder/message-cannot-sent-error.png" alt-text="Screenshot of the error message.":::
 
-This is a known issue for Outlook on the web. We recommend that you use the Outlook client instead.
+This is a known issue for Outlook on the web.
+
+## Workaround
+
+Use the Outlook client to send the email instead.
 
 ## Status
 
