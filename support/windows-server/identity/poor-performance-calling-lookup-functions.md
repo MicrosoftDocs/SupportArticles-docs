@@ -54,4 +54,4 @@ The lookup functions can directly target a domain controller on an appropriate d
 - DnsDomainName\AccountName
 - AccountName@DnsDomainName
 
-For more information, see [Network access validation algorithms and examples for Windows](../../network-access-validation-algorithms.md).
+For more information, see [Network access validation algorithms and examples for Windows](/troubleshoot/windows-server/windows-security/network-access-validation-algorithms).
