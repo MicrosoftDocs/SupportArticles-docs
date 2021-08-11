@@ -16,7 +16,7 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Microsoft Teams is stuck in a login loop in Edge, Internet Explorer, Firefox, Safari, or Google Chrome
+# Microsoft Teams is stuck in a login loop in Edge, Internet Explorer, Google Chrome, Firefox, or Safari
 
 ## Symptoms
 
@@ -24,11 +24,11 @@ When you try to sign in to Microsoft Teams in Microsoft Edge, Internet Explorer,
 
 ## Cause
 
-This issue occurs if your organization uses **Trusted Sites** in Internet Explorer and doesn't enable the URLs for Microsoft Teams. In this case, the Teams web-based application cannot sign in, as the trusted sites for Teams aren't enabled.
+This issue occurs if your organization uses **Trusted Sites** and doesn't enable the URLs for Microsoft Teams. Therefore the Teams web-based application is not able to sign in.
 
 ## Resolution
 
-Change Microsoft Edge, Internet Explorer, Google Chrome, Mozilla Firefox, or Safari settings using administrator rights or a Group Policy object (GPO).
+Change the settings for your browser using administrator rights or a Group Policy Object (GPO).
 
 ### Microsoft Edge
 
@@ -94,7 +94,7 @@ To change the settings by using GPO:
 
 1. In the Firefox **Settings** window, select the **Privacy & Security** tab.
 2. Under **Cookies and Site Data**, select **Manage Exceptions**.
-3. In the **Address of website** text box, type the following sites, and then select **Allow**.
+3. In the **Address of website** text box, type the following URLs, and then select **Allow**.
 
     - `https://microsoft.com`
     - `https://microsoftonline.com`
@@ -108,23 +108,26 @@ To change the settings by using GPO:
 To change the settings by using GPO:
 
 1. [Download and install the Firefox administrative template](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
-2. Add the sites listed in step 3 above to the **Cookies** setting.
+2. Add the sites listed in step 3 above to the **Cookies** > **Allowed Sites** setting.
 
 ### Safari
 
-If you use Teams in Safari while Safari browser support is in preview, go to **Preferences** > **Privacy** and uncheck the **Prevent cross-site tracking** setting. Then, close your browser and navigate back to teams.microsoft.com in Safari.
+Teams support for Safari is currently in preview. Use the following workaround to access the Teams web client:
+
+1. Select **Preferences** > **Privacy**.
+2. Uncheck the **Prevent cross-site tracking** setting.
+3. Close Safari, then reopen it and navigate to teams.microsoft.com.
 
 For more information, see [Teams preview won't open in Safari](https://support.microsoft.com/office/1aac0a7c-35a8-42c1-a7df-f674afe234df).
 
-> [!NOTE]
-> It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:
->
-> - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams)
-> - [Office 365 U.S. Government GCC High endpoints](/microsoft-365/enterprise/microsoft-365-u-s-government-gcc-high-endpoints?view=o365-worldwide&preserve-view=true)
-
 ## More information
 
-There are some known issues you might run into when you sign in to Teams. For more information, see [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f)?
+There are some known issues you might run into when you try to sign in to Teams. See [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/office/why-am-i-having-trouble-signing-in-to-microsoft-teams-a02f683b-61a3-4008-9447-ee60c5593b0f)? for details.
+
+As a best practice, validate and enable all trusted URLs for Teams and review the requirements in the following articles:
+
+- [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#bkmk_teams)
+- [Office 365 U.S. Government GCC High endpoints](/microsoft-365/enterprise/microsoft-365-u-s-government-gcc-high-endpoints?view=o365-worldwide&preserve-view=true)
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 
