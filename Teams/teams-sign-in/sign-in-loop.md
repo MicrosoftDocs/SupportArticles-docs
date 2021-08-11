@@ -16,7 +16,7 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome
+# Microsoft Teams is stuck in a login loop in Edge, Internet Explorer, Firefox, Safari, or Google Chrome
 
 ## Symptoms
 
@@ -92,16 +92,16 @@ To change the settings by using GPO:
 
 ### Mozilla Firefox
 
-1. In the Firefox **Settings** window, select **the Privacy & Security** tab.
+1. In the Firefox **Settings** window, select the **Privacy & Security** tab.
 2. Under **Cookies and Site Data**, select **Manage Exceptions**.
 3. In the **Address of website** text box, type the following sites, and then select **Allow**.
 
-    - `https://*.microsoft.com`
-    - `https://*.microsoftonline.com`
-    - `https://*.teams.skype.com`
-    - `https://*.teams.microsoft.com`
-    - `https://*.sfbassets.com`
-    - `https://*.skypeforbusiness.com`
+    - `https://microsoft.com`
+    - `https://microsoftonline.com`
+    - `https://teams.skype.com`
+    - `https://teams.microsoft.com`
+    - `https://sfbassets.com`
+    - `https://skypeforbusiness.com`
 
 4. Select **Save Changes**.
 
@@ -112,7 +112,9 @@ To change the settings by using GPO:
 
 ### Safari
 
-If you want to use Teams in Safari, see [Teams preview won't open in Safari](https://support.microsoft.com/office/1aac0a7c-35a8-42c1-a7df-f674afe234df).
+If you use Teams in Safari while Safari browser support is in preview, go to **Preferences** > **Privacy** and uncheck the **Prevent cross-site tracking** setting. Then, close your browser and navigate back to teams.microsoft.com in Safari.
+
+For more information, see [Teams preview won't open in Safari](https://support.microsoft.com/office/1aac0a7c-35a8-42c1-a7df-f674afe234df).
 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following articles:

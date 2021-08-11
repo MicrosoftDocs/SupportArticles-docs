@@ -30,7 +30,7 @@ Reduce the resource requirements for your laptop to improve the Teams experience
 - Turn off video in the meeting:
   - To turn off your own video, select **Turn camera off** in the meeting controls.
   - To turn off incoming video, select **More actions** > **Turn off incoming video** in the meeting controls.
-- Disable GPU hardware acceleration in Teams. To disable this function, select the **Settings and more** menu next to your profile picture at the top right of Teams, make sure that the **Disable GPU hardware acceleration** option is unchecked.
+- Disable GPU hardware acceleration in Teams. To disable this function, select the **Settings and more** menu next to your profile picture at the top right of Teams, and then select the **Disable GPU hardware acceleration** option.
 - Disconnect your monitor from the port replicator or docking station, and directly connect it to the video port on the laptop, if available.
 - Restart Teams.
 - Change the resolution of your 4K or UHD monitor to 1920 x 1080. For more information, see [Change desktop icon size or screen resolution](https://support.microsoft.com/help/4026956).
