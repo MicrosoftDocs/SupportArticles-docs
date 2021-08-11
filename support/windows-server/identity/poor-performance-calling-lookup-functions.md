@@ -38,13 +38,13 @@ Here's how to create a registry entry to disable the lookup of isolated names in
 1. Open **Registry Editor**.
 2. Go to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa`.
 3. On the **Edit** menu, select **New** > **DWORD Value**.
-4. Type *LsaLookupRestrictIsolatedNameLevel*, and press ENTER.
+4. Type *LsaLookupRestrictIsolatedNameLevel*, and press Enter.
 5. Right-click **LsaLookupRestrictIsolatedNameLevel** and select **Modify**. Type *1* in the **Value data** box.
 
     > [!NOTE]
     > By default, the **LsaLookupRestrictIsolatedNameLevel** entry is either set to *0* or doesn't exist. That means that the lookup for isolated names in trusted domains/forests is enabled.
 
-6. Select **OK** and quit **Registry Editor**.
+6. Select **OK** and close **Registry Editor**.
 
 ## More information
 
@@ -54,4 +54,4 @@ The lookup functions can directly target a domain controller on an appropriate d
 - DnsDomainName\AccountName
 - AccountName@DnsDomainName
 
-For more information, see [Network access validation algorithms and examples for Windows](/windows-server/windows-security/network-access-validation-algorithms).
+For more information, see [Network access validation algorithms and examples for Windows](../windows-security/network-access-validation-algorithms.md).
