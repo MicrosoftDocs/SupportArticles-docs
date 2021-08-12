@@ -33,5 +33,5 @@
     items:
     - name: '"Blocked a frame with origin" error'
       href: blocked-frame-with-origin-uci.md
-    - name: No response when selecting a button
+    - name: No response with back button
       href: no-navigation-when-selecting-button.md
