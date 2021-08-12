@@ -46,7 +46,7 @@ This occurs if the Lync 2013 contacts of the user who is associated with the mai
 > [!IMPORTANT]
 > Currently, the `ImListMigrationCompleted` parameter is available only in Exchange Server (on-premises). For more information about how to import PST files to Exchange Online mailboxes, see [overview of importing your organization's PST files](/microsoft-365/compliance/importing-pst-files-to-office-365).
 
-Use the [`Set-Mailbox`](/powershell/module/exchange/set-mailbox) cmdlet together with the `ImListMigrationCompleted` parameter instead of the `Set-UMMailbox` cmdlet. For example, run the following cmdlet:
+Use the [Set-Mailbox](/powershell/module/exchange/set-mailbox) cmdlet together with the `ImListMigrationCompleted` parameter instead of the `Set-UMMailbox` cmdlet. For example, run the following cmdlet:
 
 ```powershell
 Set-Mailbox John@contoso.com -ImListMigrationCompleted $false
