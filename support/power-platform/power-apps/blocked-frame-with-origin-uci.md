@@ -19,7 +19,7 @@ When you use Unified Interface apps in the Google Chrome browser or Google Andro
 
 ## Cause
 
-This is a known issue that occurs in older versions of the Chrome browser and Chrome WebView.
+It's a known issue that occurs in older versions of the Chrome browser and Chrome WebView.
 
 ## Workaround
 
