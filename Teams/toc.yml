@@ -163,6 +163,8 @@
       items:
       - name: Issues with LMO
         href: ./phone-system/direct-routing/issues-with-lmo.md
+      - name: Issues with outbound calls
+        href: ./phone-system/direct-routing/issues-with-outbound-calls.md
       - name: Issues with SBC connectivity
         href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
   - name: Provisioning
