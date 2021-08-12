@@ -31,18 +31,18 @@ You might experience various issues when you use Direct Routing to make outbound
 
 This article discusses potential causes of these issues, and provides resolutions that you can try.
 
-## Issue 1: Incorrect caller ID displayed to the recipient
+## Incorrect caller ID displayed to the recipient
 
-When you use Direct Routing, the caller ID information that is delivered to the call recipient is pulled from the `From` and `P-Asserted-Identity` headers in the Session Initiation Protocol (SIP) Invite message.
+When you use Direct Routing, the caller ID information that is delivered to the call recipient is listed in the `From` and `P-Asserted-Identity` headers in the Session Initiation Protocol (SIP) options message.
 
 The `From` header contains any of the following items:
 
-- The phone number that's assigned to the caller who is initiating the call.
+- The phone number that's assigned to the caller who is initiating the call. 
+  If the caller's phone number has to be hidden from the call recipient, it's replaced with "anonymous".
 - A service number that is assigned to the caller by using the `CsCallingLineIdentity` cmdlet.
 - The phone number of the original caller if the call was forwarded.
-- An `anonymous@anonymous.invalid` message that indicates that the caller's number should be hidden from the call recipient.
 
-The `P-Asserted-Identity` header contains the phone number of the user who is billed for the call. If `Privacy:id` is set, this indicates that the information in the header must be hidden from the call recipient.
+The `P-Asserted-Identity` header contains the phone number of the user who is billed for the call. If `Privacy:id` is set, this indicates that the information in the header has to be hidden from the call recipient.
 
 ### Cause
 
@@ -50,11 +50,11 @@ If the information in the `From` and `P-Asserted-Identity` headers don't match, 
 
 ### Resolution
 
-To make sure that the correct caller ID is displayed to the call recipient, configure the SBC to either remove the `P-Asserted-Identity` header from the SIP Invite message or modify its contents.
+To make sure that the correct caller ID is displayed to the call recipient, configure the SBC to either remove the `P-Asserted-Identity` header from the SIP options message or modify its contents.
 
-## Issue 2: Connection to the SBC not established
+## Connection to the SBC not established
 
-Sometimes, calls reach the SBC but no connection is established. When the SBC receives an SIP Invite message from Teams, it returns a failure message that includes error codes in the range of 400 to 699.
+Sometimes, calls reach the SBC but no connection is established. In this situation, when the SBC receives a SIP options message from Teams, it returns a failure message that includes error codes in the range of 400 to 699.
 
 Any of the following causes might prevent a connection to the SBC.
 
@@ -82,7 +82,7 @@ The issue is not caused by another device on the network or by your PSTN provide
 
 Contact the SBC vendor for support to fix the issue.
 
-## Issue 3: Some users are unable to make calls
+## Some users are unable to make calls
 
 If the connection between the Teams client and the SBC is working correctly, but some users cannot make calls, the issue might be caused by incorrect settings or incorrect provisioning of those users.
 
@@ -92,7 +92,7 @@ Users are missing the dial pad on the **Calls** tab in Teams.
 
 ### Resolution 1
 
-Make sure that the user has the correct license (E3 with Phone System or E5) and all required settings. To check it, run the [`Get-CsOnlineUser`](/powershell/module/skype/get-csonlineuser) cmdlet in Teams PowerShell, as follows:
+Make sure that the user has the correct license (E3 with Phone System or E5) and all required settings. To check the settings, run the [`Get-CsOnlineUser`](/powershell/module/skype/get-csonlineuser) cmdlet in Teams PowerShell, as follows:
 
 ```powershell
 Get-CsOnlineUser -Identity <UserIdParameter> | fl Identity,EnterpriseVoiceEnabled,HostedVoiceMail,OnPremLineURI
@@ -118,11 +118,11 @@ The user's OVRP contains invalid characters.
 
 ### Resolution 3
 
-Invalid, invisible characters can be generated in the OVRP when you paste information into it from Microsoft Word or other WYSIWYG editors. Although the characters are not displayed, they are considered when deciding the route that the call should take.
+Invalid, invisible characters can be inserted in the OVRP when you paste information into it from Microsoft Word or other WYSIWYG editors. Although the characters are not displayed, they are considered when deciding the route that the call should take.
 
-To fix the issue, remove the policy, and then restore it by either rewriting it manually or copying it from a non-WYSIWYG editor, such as Notepad.
+To fix the issue, remove the policy, and then recreate it by either rewriting it manually or copying it from a non-WYSIWYG editor, such as Notepad.
 
-## Issue 4: No users are able to make calls
+## No users are able to make calls
 
 If none of the users are able to make calls, the calls are probably not reaching the SBC. Check for one of the following causes.
 
@@ -136,7 +136,7 @@ Use the Microsoft Teams admin center to make sure that the gateway that's used b
 
 You can also use Teams PowerShell to check and update the gateway, as necessary.
 
-To check the status of the gateway, run the [`Get-CsOnlinePSTNGateway`](/powershell/module/skype/get-csonlinepstngateway) cmdlet. The output must show that the value of the `Enabled` parameter is set to `True`. In the following example,  the `Enabled` parameter is set to `True` in the the `sbc1.contoso.com` gateway but not in the `sbc2.contoso.com` gateway.
+To check the status of the gateway, run the [`Get-CsOnlinePSTNGateway`](/powershell/module/skype/get-csonlinepstngateway) cmdlet. The output must show that the value of the `Enabled` parameter is set to `True`. In the following example,  the `Enabled` parameter is set to `True` for the the `sbc1.contoso.com` gateway but not for the `sbc2.contoso.com` gateway.
 
 ```powershell
 Get-CsOnlinePSTNGateway | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSessions,Enabled
@@ -161,7 +161,7 @@ For more information, see [Connect your SBC to Direct Routing](/microsoftteams/d
 
 ### Cause 2
 
-The gateway is not responding to SIP messages because some device on the network, such as a firewall, is blocking the messages.
+The gateway is not responding to SIP options messages because some device on the network, such as a firewall, is blocking the messages.
 
 ### Resolution 2
 
