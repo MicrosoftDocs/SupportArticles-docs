@@ -46,7 +46,7 @@ Analysis of the CRA logs shows that the TimeZoneMatchCheck process failed:
 <CleanGlobalObjectId>040000008200E00074C5B7101A82E00800000000F076BAF92303D001000000000000000010000000F75B1C45DB47C344BF73214BACD3ED66</CleanGlobalObjectId>
 <OwnerAppointmentId>-281888802</OwnerAppointmentId>
 <Attendees>
-<Attendee EmailAddress="jim@tailspintoys.com">
+<Attendee EmailAddress="jim@contoso.com">
 <ConsistencyChecks>
 <ConsistencyCheck Type="CanValidateOwnerCheck" Result="Passed">
 <Description>Checks whether the counterpart user can be validated or not.</Description>
@@ -80,8 +80,8 @@ Analysis of the CRA logs shows that the TimeZoneMatchCheck process failed:
 </Attendee>
 </Attendees>
 </Meeting>
-<Meeting Subject="Test Recurring TimeZone Meeting" MeetingType="RecurringMaster" StartTime="DateTime" EndTime="DateTime" Organizer="sarah@tailspintoys.com">
-<InternetMessageId>&lt;fc699217a05d40dc867c497754df16e5@CLT-EX13-MBX1.tailspintoys.com&gt;</InternetMessageId>
+<Meeting Subject="Test Recurring TimeZone Meeting" MeetingType="RecurringMaster" StartTime="DateTime" EndTime="DateTime" Organizer="sarah@contoso.com">
+<InternetMessageId>&lt;fc699217a05d40dc867c497754df16e5@CLT-EX13-MBX1.contoso.com&gt;</InternetMessageId>
 ```
 
 > [!NOTE]
