@@ -46,7 +46,7 @@ The `P-Asserted-Identity` header contains the phone number of the user who is bi
 
 ### Cause
 
-If the information in the `From` and `P-Asserted-Identity` headers don't match, and if the Public Switched Telephone Network (PSTN) prioritizes the `P-Asserted-Identity` header information over the `From` header information, then incorrect information is displayed.
+If the information in the `From` and `P-Asserted-Identity` headers doesn't match, and if the Public Switched Telephone Network (PSTN) prioritizes the `P-Asserted-Identity` header information over the `From` header information, then incorrect information is displayed.
 
 ### Resolution
 
@@ -92,7 +92,7 @@ Users are missing the dial pad on the **Calls** tab in Teams.
 
 ### Resolution 1
 
-Make sure that the user has the correct license (E3 with Phone System or E5) and all required settings. To check the settings, run the [`Get-CsOnlineUser`](/powershell/module/skype/get-csonlineuser) cmdlet in Teams PowerShell, as follows:
+Make sure that the user has the correct license (E3 with Phone System or E5) and all required settings. To check the settings, run the [Get-CsOnlineUser](/powershell/module/skype/get-csonlineuser) cmdlet in Teams PowerShell, as follows:
 
 ```powershell
 Get-CsOnlineUser -Identity <UserIdParameter> | fl Identity,EnterpriseVoiceEnabled,HostedVoiceMail,OnPremLineURI
@@ -136,7 +136,7 @@ Use the Microsoft Teams admin center to make sure that the gateway that's used b
 
 You can also use Teams PowerShell to check and update the gateway, as necessary.
 
-To check the status of the gateway, run the [`Get-CsOnlinePSTNGateway`](/powershell/module/skype/get-csonlinepstngateway) cmdlet. The output must show that the value of the `Enabled` parameter is set to `True`. In the following example,  the `Enabled` parameter is set to `True` for the the `sbc1.contoso.com` gateway but not for the `sbc2.contoso.com` gateway.
+To check the status of the gateway, run the [Get-CsOnlinePSTNGateway](/powershell/module/skype/get-csonlinepstngateway) cmdlet. The output must show that the value of the `Enabled` parameter is set to `True`. In the following example,  the `Enabled` parameter is set to `True` for the `sbc1.contoso.com` gateway but not for the `sbc2.contoso.com` gateway.
 
 ```powershell
 Get-CsOnlinePSTNGateway | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSessions,Enabled
@@ -144,7 +144,7 @@ Get-CsOnlinePSTNGateway | fl Identity,Fqdn,SipSignalingPort,MaxConcurrentSession
 
 :::image type="content" source="media/issues-with-outbound-calls/gateway-status-1.png" alt-text="Screenshot of gateway status":::
 
-To make sure that the `sbc2.contoso.com` gateway is available to Teams, run the [`Set-CsOnlinePSTNGateway`](/powershell/module/skype/set-csonlinepstngateway) cmdlet to set the `Enabled` parameter to `True`.
+To make sure that the `sbc2.contoso.com` gateway is available to Teams, run the [Set-CsOnlinePSTNGateway](/powershell/module/skype/set-csonlinepstngateway) cmdlet to set the `Enabled` parameter to `True`.
 
 ```powershell
 Set-CsOnlinePSTNGateway -Identity "sbc2.contoso.com" -Enabled $true
