@@ -29,7 +29,7 @@ Physical infrastructure support is not provided by Microsoft, except in cases in
 
 ## Containers on Azure Cloud Services
 
-Azure Container Service has been retired on January 31, 2020. For more information, see [Azure Container Service](https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/).
+Azure Container Service has been retired on January 31, 2020. For more information, see [Azure Container Service](https://azure.microsoft.com/updates/azure-container-service-will-retire-on-january-31-2020/).
 
 ## Container orchestrators
 
@@ -43,12 +43,12 @@ Container orchestrators are enabled to work with container deployments as mentio
 
 We recommend that you use community resources or contact the orchestrator provider for additional technical assistance:
 
-- [Mesosphere](https://support.mesosphere.com/hc/en-us) 
-- [Docker Swarm](https://success.docker.com/Policies/Scope_of_Support) 
-- [DC/OS](https://dcos.io/community/) 
-- [Kubernetes](https://kubernetes.io/community/) 
+- [Mesosphere](https://support.d2iq.com/s/)
+- [Docker Swarm](https://success.docker.com/Policies/Scope_of_Support)
+- [DC/OS](https://dcos.io/community/)
+- [Kubernetes](https://kubernetes.io/community/)
 
-If you think you have encountered a bug, visit the AKS community issue page on GitHub: [AKS Community on GitHub](https://github.com/Azure/AKS). 
+If you think you have encountered a bug, visit the AKS community issue page on GitHub: [AKS Community on GitHub](https://github.com/Azure/AKS).
 
 ## Container workloads
 
@@ -76,10 +76,6 @@ Microsoft offers commercially reasonable support for the components that are dep
 
 :::image type="content" source="./media/support-policy-containers/4037702_en_1.png" alt-text="Component support.":::
 
-**Third-party information disclaimer**
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-**Third-party contact disclaimer**
-
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
