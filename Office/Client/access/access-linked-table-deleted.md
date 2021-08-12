@@ -26,7 +26,7 @@ appliesto:
 
 A Microsoft Access-linked table that contains one or more **datetime** or **datetime2** columns and that’s connected to a Microsoft SQL Server database and has a compatibility level of 130 or larger (the compatibility level for SQL Server 2016) returns **#Deleted** in the results.
 
-When you try to commit record changes to the linked table, you may also receive the following “Write Conflict” message:
+When you try to commit record changes to the linked table, you may also receive the following "Write Conflict" message:
 
 > This record has been changed by another user since you started editing it.
 
@@ -37,8 +37,8 @@ The issue occurs because the **datetime** or **datetime2** columns contain fract
 - [datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql?view=sql-server-2017&preserve-view=true)
 - [SQL Server and Azure SQL database improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261)
 
-> [!note]
-> The **datetime** data type is also affected by the change to **datetime2** because the SQL Server ODBC driver converts **datetime** to **datetime2** when it sends data to the server.
+> [!NOTE]
+> The **datetime** data type is also affected by the change to **datetime2**, because the SQL Server ODBC driver converts **datetime** to **datetime2** when it sends data to the server.
 
 ## Resolution
 
@@ -46,13 +46,13 @@ Access is introducing a new and improved **Date & Time Extended** data type begi
 
 To improve syntax compatibility with SQL, and to increase the accuracy and level of detail in records that include dates and times, Microsoft is implementing the **DateTime2** data type in Access. This data type will include a larger date range (0001-01-01 through 9999-12-31) that has better time precision (nanoseconds, instead of seconds). To enable the **DateTime2** data type, select **New field** > **Date & Time Extended**. For more information, see [Using the Date/Time Extended data type](https://support.microsoft.com/office/using-the-date-time-extended-data-type-708c32da-a052-4cc2-9850-9851042e0024).
 
-> [!note]
+> [!NOTE]
 > The **Date & Time Extended** data type is incompatible with non-subscription versions of Microsoft Access. Therefore, if the data type is implemented in a local Access table, and the Access database is used together with a non-subscription version of Access, you can’t open the database.
 
 You can enable or disable the **Date & Time Extended** data type for linking and importing operations by using the **Current Database** Access option **Support Date Time Extended (DateTime2) Data Type for Linked/lmported Tables**. For more information, see [Set user options for the current database](https://support.microsoft.com/office/set-user-options-for-the-current-database-29b6b7be-4c3b-43a7-b8f0-5e1c68f5adce).
 
-> [!note]
-> Access does not currently support use of **Date & Time Extended** as part of a linked ODBC table unique identifer / primary key. If one or more columns that make up the linked tables unique identifier utilize the **Date & Time Extended** data type and the date includes fractional seconds, the record may display as **#Deleted**.
+> [!NOTE]
+> Access currently doesn't support the use of **Date & Time Extended** as part of the unique identifier/primary key of the linked ODBC table. If one or more of the columns that make up the unique identifier of the linked table use the **Date & Time Extended** data type, and the date includes fractional seconds, the record may appear as **#Deleted**. 
 
 For earlier versions of Access, use one of the following methods to work around this issue:
 
