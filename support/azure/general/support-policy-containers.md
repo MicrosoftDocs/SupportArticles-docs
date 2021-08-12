@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 4035670
 
 ### Containers running on physical infrastructure
 
-For containers that are running on physical infrastructure and servers, Microsoft supports instances of Windows Server Containers on Windows Server 2016. For more information, see [Docker Engine on Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
+For containers that are running on physical infrastructure and servers, Microsoft supports instances of Windows Server Containers on Windows Server 2016. For more information, see [Docker Engine on Windows](/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
 
 For ­­­ support of Linux operating systems that are running on physical infrastructure and servers, customers have to contact the distribution provider for support, such as [Canonical](https://www.canonical.com/services), [CoreOS](https://coreos.com/support), or [Red Hat](https://www.redhat.com/en/services/support).
 
