@@ -109,6 +109,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |SharedWithMe|ffcb16e8-f789-467c-8ce9-f826a080d987|
 |Sway|905fcf26-4eb7-48a0-9ff0-8dcc7194b5ba|
 |Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
+|WindowsDefenderATP Portal|a3b79187-70b2-4139-83f9-6016c58cd27b|
 |Windows Search|26a7ee05-5602-4d76-a7ba-eae8b7b67941|
 |Yammer|00000005-0000-0ff1-ce00-000000000000|
 |Yammer Web|c1c74fed-04c9-4704-80dc-9f79a2e515cb|
