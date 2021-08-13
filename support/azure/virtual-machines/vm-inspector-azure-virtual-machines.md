@@ -26,6 +26,12 @@ VM Inspector is supported on the following operating systems:
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
+- Windows Server 2008 R2
+- Windows Server 2008
+- Windows 10
+- Windows 8.1
+- Windows 8
+- Windows 7
 
 ### Linux
 
@@ -35,6 +41,14 @@ VM Inspector is supported on the following operating systems:
 - RHEL
 - SLES
 - Ubuntu
+
+## Unsupported scenarios
+
+- Unmanaged OS disks and VMs
+- Encrypted OS disks and VMs
+- Ephemeral OS disks and VMs
+- Invisible OS disks and VMs
+- Lockbox enabled OS disks and VMs
 
 ## How VM Inspector works
 
@@ -102,7 +116,7 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 
 ## Select an analysis scenario to run
 
-The following analysis scenarios are available to run from the Azure portal. Based on the logs and issues that you're experiencing, choose an analysis to run.
+The following analysis scenarios are available to run from the Azure portal. Based on the logs and issues that you're experiencing, choose an analysis to run. For a link to the Github documentation of the full list analysis logs and information, see [Manifest Content](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md).
 
 ### Windows diagnostics
 <details>
