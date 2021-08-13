@@ -37,7 +37,7 @@ Source: MSExchange Front End HTTPS Proxy
 
 ## Cause
 
-This issue occurs if the Exchange Server Open Authentication (OAuth) certificate is expired or not present or not configured correctly.
+This issue occurs if the Exchange Server Open Authentication (OAuth) certificate is expired, not present, or not configured correctly.
 
 ## Resolution
 
@@ -47,7 +47,7 @@ To check the status of your existing OAuth certificate, run the following comman
 (Get-AuthConfig).CurrentCertificateThumbprint | Get-ExchangeCertificate | Format-List
 ```
 
-If the command returns an error or if the certificate has expired, use the following steps to create and deploy a new OAuth certificate to the Exchange server.
+If the command returns an error, or the certificate has expired, use the following steps to create and deploy a new OAuth certificate to the Exchange server:
 
 1. Create a new OAuth certificate by running the following command:
 
@@ -86,6 +86,6 @@ To check the expiration date of your certificate, follow these steps:
     > [!NOTE]
     > If you are prompted for an administrator password or for confirmation, type the password or select **Yes**.
 
-1. Select **File** \> **Add/Remove Snap-in** \> **Select Certificates** \> **Add** \> **Computer Account**, and then select **Finish** to close the window.
+1. Select **File** > **Add/Remove Snap-in** > **Select Certificates** > **Add** > **Computer Account**, and then select **Finish** to close the window.
 
-1. Find the **Microsoft Exchange Server Auth Certificate** entry in the **Personal** \> **Certificate** folder, and verify the expiration date.
+1. Find the **Microsoft Exchange Server Auth Certificate** entry in the **Personal** > **Certificate** folder, and verify the expiration date.
