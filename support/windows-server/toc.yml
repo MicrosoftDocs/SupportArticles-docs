@@ -994,7 +994,7 @@
       href: ./deployment/fix-windows-update-errors.md
     - name: How to block user access to Windows Update
       href: ./deployment/block-user-access-windows-update.md
-    - name: How To use the Recovery Consol
+    - name: How to use the Recovery Console
       href: ./deployment/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
