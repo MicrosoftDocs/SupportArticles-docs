@@ -42,4 +42,4 @@ To turn the mailbox that's placed on Litigation Hold or assigned to a retention 
 - [Create an Organizational Unit (OU) in an AD DS-managed domain](/azure/active-directory-domain-services/create-ou)
 - [No soft-deleted mailbox after license removal in Microsoft 365](/exchange/troubleshoot/user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal)
 - [Overview of inactive mailboxes](/microsoft-365/compliance/inactive-mailboxes-in-office-365)
-- [How to identify the type of hold placed on an Exchange Online mailbox](/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox?view=o365-worldwide)
+- [How to identify the type of hold placed on an Exchange Online mailbox](/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox?view=o365-worldwide&preserve-view=true)
