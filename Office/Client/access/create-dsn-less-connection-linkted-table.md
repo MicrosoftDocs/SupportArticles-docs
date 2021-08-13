@@ -29,7 +29,7 @@ This article applies only to a Microsoft Access database (.accdb and .mdb).
 
 ## Introduction
 
-This article describes how to create a connection to Microsoft SQL Server for linked tables in Microsoft Access that does not use a data source name (DSN). This is also known as a DSN-less connection.
+This article describes how to create a connection to Microsoft SQL Server for linked tables in Microsoft Access that doesn't use a data source name (DSN). It's also known as a DSN-less connection.
 
 ## More information
 
@@ -83,7 +83,7 @@ End Function
 
 ```
 
-**dbAttachSavePWD** attribute in the above code allows saving username and password for the linked table with the connection information. [Other attributes](./office/troubleshoot/access/tabledef-attributes-usage#tabledef-attributes) could be used as well.
+For more information about the CreateTableDef method parameters, see [Database.CreateTableDef method (DAO)](/office/client-developer/access/desktop-database-reference/database-createtabledef-method-dao).
 
 To call the AttachDSNLessTable function, add code that is similar to one of the following code examples in the Auto-Exec macro or in the startup form Form_Open event:
 
