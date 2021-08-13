@@ -25,9 +25,9 @@ You create a new user in the Microsoft 365 Admin Center in Office 365. However, 
 
 The following is an example scenario of what happens when you experience this issue: 
 - In the Office 365 portal, single sign-on (SSO) and Active Directory synchronization are enabled.    
-- When you view the properties of the domain on the domain properties page, the domain type is listed as **Federated** or **Single sign-on**. For example, contoso.com is the federated domain. 
+- When you view the properties of the domain on the domain properties page, the domain type is listed as **Federated** or **Single sign-on**. For example, adatum.com is the federated domain. 
 - When you create a new user, you see that the default domain that's provided by Office 365 is listed as the first option in the drop-down box. For example, the default domain is contoso.onmicrosoft.com.    
-- When you click the drop-down box to view the list of domains, the federated domain isn't listed. For example, contoso.com isn't listed. 
+- When you click the drop-down box to view the list of domains, the federated domain isn't listed. For example, adatum.com isn't listed. 
 
 ## Cause
 
