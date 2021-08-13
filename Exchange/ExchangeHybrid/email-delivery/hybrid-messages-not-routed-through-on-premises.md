@@ -31,9 +31,9 @@ Consider the following scenario:
 
 - You have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online.
 - You configured the outbound send connector in Exchange Online to use a remote domain of "*", and you enabled centralized mail transport on that connector.
-- A user or application in the on-premises organization sends an email message to a mailbox that's hosted in Exchange Online, for example, *bill@contoso.com*. And the Exchange Online recipient, *bill@contoso.com*, has a forwarding SMTP address that's set to an external recipient (*bill@contoso.com*).
+- A user or application in the on-premises organization sends an email message to a mailbox that's hosted in Exchange Online, for example, *bill@contoso.com*. And the Exchange Online recipient, *bill@contoso.com*, has a forwarding SMTP address that's set to an external recipient (*bill@tailspintoys.com*).
 
-In this scenario, the message tracking logs show the message that was forwarded to *bill@contoso.com* isn't routed back through the on-premises organization, as expected. Instead, the message is sent directly through Exchange Online Protection.
+In this scenario, the message tracking logs show the message that was forwarded to *bill@tailspintoys.com* isn't routed back through the on-premises organization, as expected. Instead, the message is sent directly through Exchange Online Protection.
 
 ## More information
 
