@@ -30,12 +30,12 @@ To fix the issue, there are 3 workarounds listed below. Either of them can be us
 
 ## Workaround 1: Launch the Powershell from cmd.exe
 
-Start cmd.exe and run powershell.exe from the cmd console.
+Start cmd.exe and run powershell.exe from within the cmd console. This opens up a PowerShell console without any font issues.
 
 ## Workaround 2: Launch the Powershell with this command
 
-Start PowerShell with the command `Powershell -noni` from the search bar.
+Start PowerShell with the command `Powershell -noni` from the search bar. This opens up a PowerShell console without any font issues.
 
 ## Workaround 3: Change the font in the Powershell console
 
-Start PowerShell the normal way. Right click on the Top bar, select Properties-> Font tab. Goto Font and select `MS Gothic` and click OK. This should resolve the issue.
+Start PowerShell the normal way. Right click on the Top bar of PowerShell console, select Properties-> Font tab. Goto Font, select `MS Gothic` and click OK. This should resolve the issue.
