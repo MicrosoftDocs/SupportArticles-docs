@@ -1,7 +1,7 @@
 ---
 title: Duplicate keys from sys.syscommittab table
 description: This article provides information about resolving a SQL Server Change Tracking issue that can result in duplicate rows in `sys.syscommittab` file.
-ms.date: 03/16/2020
+ms.date: 03/16/2020 
 ms.prod-support-area-path:
 ms.prod: sql
 ---
@@ -41,6 +41,9 @@ Although these fixes prevent duplicate key rows from continuing to appear, they 
 1. Disable change tracking on the affected tables and database.
 2. Issue a manual database Checkpoint.
 3. Enable change tracking on the affected database and tables.
+4. In SQL Server Configuration Manager, in the left pane, click SQL Server Services.
+5.In the results pane, right-click SQL Server (MSSQLServer) or a named instance, and then click Restart.
+And than you can chcek this with query select * FROM sys.dm_tran_commit_table where xdes_id='nummers'
 
 For more information about change tracking, see [Enable and disable change tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server). For issuing a manual Checkpoint, see [CHECKPOINT (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql).
 
