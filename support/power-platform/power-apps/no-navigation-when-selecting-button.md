@@ -23,4 +23,4 @@ Browser history is shared by Unified Interface apps and [iFrames](/powerapps/mak
 
 ## Workaround
 
-When you create custom scripts in iFrames, manage the [**Window.history**](https://developer.mozilla.org/docs/Web/API/Window/history) property to make sure that no extra or unexpected history entries are listed before the correct backward navigation entry.
+When you create custom scripts in iFrames, manage the [**Window.history**](https://developer.mozilla.org/docs/Web/API/Window/history) property to remove any extra or unexpected history entries that are listed before the correct backward navigation entry.
