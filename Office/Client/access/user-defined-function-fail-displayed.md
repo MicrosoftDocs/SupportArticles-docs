@@ -43,4 +43,7 @@ This is by design. This issue occurs because, when the database is opened in Dis
 
 ## Workaround
 
-To work around this issue, you must open the database in Enabled mode.
+To work around this issue, you can [trust the database](https://support.microsoft.com/office/828ce4e9-1f38-4f4b-89c4-81bb0fcda8a4#__toc330299901) and stop Disabled mode as follows:
+
+- Use the Message Bar: Select **Enable Content** on the Message Bar. When you choose this option, you may need to repeat the procedure if the database changes. 
+- Trust the database permanently: Place the database in a trusted location (a folder on a drive or network that you mark as trusted). When you choose this option, you no longer see the Message Bar, and you never have to enable the database content as long as the database remains in the trusted location.

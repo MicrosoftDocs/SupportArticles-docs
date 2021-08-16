@@ -26,22 +26,28 @@ This article describes how to collect Exchange ActiveSync device logs to trouble
 
 To capture ActiveSync device log information, follow these steps:
 
-1. Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-1. Run the following command to enable ActiveSync logging for a specific user:
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Run the [Set-CASMailbox](/powershell/module/exchange/set-casmailbox) cmdlet to enable ActiveSync logging for a specific user:
 
+    > [!NOTE]
+    > Exchange ActiveSync debug logging is enabled for 48 hours in Exchange Online, and 72 hours in Exchange Server. After the time period expires, the value reverts to `$false`.
+    
     ```powershell
-    Set-CASMailbox alias -ActiveSyncDebugLogging:$true
-    ```
-
-1. Reproduce the behavior that you want to capture.
-1. Run the following command to retrieve the log:
-
-    ```powershell
-    Get-MobileDeviceStatistics -Mailbox alias -GetMailboxLog:$true -NotificationEmailAddresses "admin@contoso.com"
+    Set-CASMailbox tony@contoso.com -ActiveSyncDebugLogging $true
     ```
 
     > [!NOTE]
-    > This command retrieves the statistics for the mobile device that's set up to synchronize with the mailbox of the user who you specified. In this example, it also sends the log file to admin@contoso.com.
+    > This example enables Exchange ActiveSync debug logging for the user tony@contoso.com.
+
+1. Reproduce the behavior that you want to capture.
+1. Run the [Get-MobileDeviceStatistics](/powershell/module/exchange/get-mobiledevicestatistics) cmdlet to retrieve the log:
+
+    ```powershell
+    Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
+    ```
+
+    > [!NOTE]
+    > This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
 
 ## More information
 
