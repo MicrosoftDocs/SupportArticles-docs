@@ -24,6 +24,10 @@ _Original KB number:_ &nbsp;
 
 When you launch PowerShell console the characters are getting garbbled. This applies only to Chinese, Japanese and Korean languages SKUs.
 
+## Cause
+
+Windows PowerShell .lnk shortcut is hardcoded to Consolas font, by default. This font doesn't have the glyphs for CJK characters so they aren't rendered correctly. Changing to MSGothic explicitly will fix this as MSGothic has glyphs for CJK. The reason cmd.exe works is that the cmd .lnk shortcut doesn't specify a font, so the console chooses the right one at runtime depending on your language. A similar fix is being made in Windows, but won't be backported.
+
 ## Resolution
 
 To fix the issue, there are 3 workarounds listed below. Either of them can be used.
