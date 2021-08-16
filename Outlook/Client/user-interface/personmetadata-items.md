@@ -98,10 +98,12 @@ This method requires you to configure a service account to [impersonate the user
     Import-CSV UserList.csv | .\CleanPersonMetadata.ps1 -Confirm:$false
     ```
 
-**Note**: If you get an error that the module cannot be found, you need to update the script to match the file path to the module. The script currently has the following path:
-Import-Module "C:\Program Files\WindowsPowerShell\Modules\ExchangeOnlineManagement\\<module_version>\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" -force
+    **Note**: If you get an error that the module cannot be found, you need to update the script to match the file path to the module. The script currently has the following path:
 
-Update the path in the script at line #639 as follows:
-Import-Module "C:\Program Files\WindowsPowerShell\Modules\ExchangeOnlineManagement\\<module_version>\netFramework\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" -force
+    `Import-Module "C:\Program Files\WindowsPowerShell\Modules\ExchangeOnlineManagement\<module_version>\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" -force`
+
+    Update the path in the script at line #639 as follows:
+
+    `Import-Module "C:\Program Files\WindowsPowerShell\Modules\ExchangeOnlineManagement\<module_version>\netFramework\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" -force`
 
 5. When you're prompted, enter the credentials of the service account that you configured for impersonation.
