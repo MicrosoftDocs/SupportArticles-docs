@@ -14,7 +14,9 @@ ms.custom:
 search.appverid: 
 - MET150
 appliesto:
-- Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
 ---
 # Determine the requestor that changed Server component state
 
@@ -22,7 +24,7 @@ _Original KB number:_ &nbsp; 2958835
 
 ## Symptoms
 
-In Microsoft Exchange Server 2013 or higher versions, you are trying to change state of server component to `Active` by using the `Set-ServerComponentState` command. The command completes without any error, however, component remains `Inactive`.
+In Microsoft Exchange Server 2013 or later versions, you're trying to change state of server component to `Active` by using the `Set-ServerComponentState` command. The command completes without any error, however, component remains `Inactive`.
 
 It mostly happens because the Requestor name provided in `Set-ServerComponentState` isn't matching the Requestor that changed the state originally.
 
