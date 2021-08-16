@@ -17,7 +17,7 @@ ms.technology: windows-server-system-management-components
 
 This article provides a resolution to an issue that characters in PowerShell console getting garbled.
 
-_Applies to:_ &nbsp; Windows Server 2022
+_Applies to:_ &nbsp; Windows PowerShell
 _Original KB number:_ &nbsp;
 
 ## Symptom
@@ -30,7 +30,7 @@ Windows PowerShell .lnk shortcut is hardcoded to Consolas font, by default. This
 
 ## Resolution
 
-To fix the issue, there are 3 workarounds listed below. Either of them can be used.
+The issue will be fixed in Windows 11 and Windows Server 2022 very soon, but this will not be backported to lower versions. To fix the issue, there are 2 workarounds listed below. Either of them can be used.
 
 ## Workaround 1: Launch the Powershell from cmd.exe
 
