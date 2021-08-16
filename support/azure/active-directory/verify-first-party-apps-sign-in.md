@@ -69,6 +69,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Common Data Service|00000007-0000-0000-c000-000000000000|
 |CRM Power BI Integration|e64aa8bc-8eb4-40e2-898b-cf261a25954f|
 |Media Analysis and Transformation Service|944f0bd1-117b-4b1c-af26-804ed95e767e<br>0cd196ee-71bf-4fd6-a57c-b491ffd4fb1e|
+|Microsoft 365 Support Service|ee272b19-4411-433f-8f28-5c13cb6fd407|
 |Microsoft App Access Panel|0000000c-0000-0000-c000-000000000000|
 |Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
@@ -94,10 +95,12 @@ The following table lists some, but not all, first party Microsoft applications.
 |Office 365 Search Service|66a88757-258c-4c72-893c-3e8bed4d6899|
 |Office 365 SharePoint Online|00000003-0000-0ff1-ce00-000000000000|
 |Office Delve|94c63fef-13a3-47bc-8074-75af8c65887a|
+|Office Online Add-in SSO|93d53678-613d-4013-afc1-62e9e444a0a5|
 |Office Online Client AAD- Augmentation Loop|2abdc806-e091-4495-9b10-b04d93c3f040|
 |Office Online Client AAD- Loki|b23dd4db-9142-4734-867f-3577f640ad0c|
 |Office Online Client AAD- Maker|17d5e35f-655b-4fb0-8ae6-86356e9a49f5|
 |Office Online Client MSA- Loki|b6e69c34-5f1f-4c34-8cdf-7fea120b8670|
+|Office Online Core SSO|243c63a3-247d-41c5-9d83-7788c43f1c43|
 |Office Online Search|a9b49b65-0a12-430b-9540-c80b3332c127|
 |Office.com|4b233688-031c-404b-9a80-a4f3f2351f90|
 |Office365 Shell WCSS-Client|89bee1f7-5e6e-4d8a-9f3d-ecd601259da7|
