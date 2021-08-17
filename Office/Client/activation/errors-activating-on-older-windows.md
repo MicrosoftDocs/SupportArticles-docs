@@ -31,7 +31,7 @@ You receive one of the following errors when trying to activate Microsoft 365 Ap
 > Sorry, but we’re having trouble signing you in.
 >AADSTS9002313: Invalid request. Request is malformed or invalid.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/invalid-request.png" alt-text="Image shows error text Invalid request. Request is malformed or invalid.":::
+:::image type="content" source="./media/errors-activating-on-older-windows/invalid-request.png" alt-text="Image shows error text Invalid request Request is malformed or invalid":::
 
 > Sorry, we are having some temporary server issues.
 
