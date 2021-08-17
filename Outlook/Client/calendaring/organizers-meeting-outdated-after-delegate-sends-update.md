@@ -52,15 +52,12 @@ In this scenario, the manager's meeting exception time may revert to the origina
 
 ## Cause
 
-This issue occurs when Outlook processes the **Accepted** response before calendar synchronization is complete.
+This issue occurs when Outlook processes the **Accepted** response before calendar synchronization is complete. This is a known limitation in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
+
+## Workaround
+
+You might avoid this issue if you allow enough time for Outlook to complete the synchronization of the recurring meeting before you create an exception to the meeting recurrence and send an update for the exception.
 
 ## More information
 
-This is a known limitation in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
-
-To avoid this issue, allow enough time for Outlook to complete the synchronization of the recurring meeting, before you create a meeting recurrence exception and send the update.
-
-Additionally, this issue doesn't occur with shared calendars that sync using the updated calendar sharing model in Outlook for Microsoft 365. The new model is part of the calendar sharing improvements based on the REST protocol. To determine if your Outlook client is accessing a shared calendar using the updated calendar sharing model, see the following Microsoft support articles:
-
-- [Outlook calendar sharing updates](https://support.microsoft.com/office/outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26)
-- [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/calendar-sharing-in-microsoft-365-b576ecc3-0945-4d75-85f1-5efafb8a37b4)
+The issue doesn't occur with shared calendars that sync by using the [new model of calendar sharing in Outlook for Microsoft 365](https://support.microsoft.com/office/calendar-sharing-in-microsoft-365-b576ecc3-0945-4d75-85f1-5efafb8a37b4). The new model is available only for calendars shared between people who use Exchange Online and is a part of the calendar sharing improvements that are based on the REST protocol. See [Outlook calendar sharing updates](https://support.microsoft.com/office/outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26) to determine whether your Outlook client is using the updated calendar sharing model.
