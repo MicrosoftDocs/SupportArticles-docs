@@ -102,22 +102,22 @@ If the permissions are still not synchronized or you meet an error when you forc
 3. If you determine that the hierarchy information isn't the same, run the following command to view the time of the last sync:
 
     ```Powershell
-    $S.AssistantInfo.LastAttemptedSyncTime.LocalTime
+    $s.SyncInfo.LastAttemptedSyncTime.LocalTime
     ```
 
     This command indicates the last time that the sync failed. A nonsense value indicates that sync has never failed.
 
     ```Powershell
-    $s.AssistantInfo.LastFailedSyncTime.LocalTime
+    $s.SyncInfo.LastFailedSyncTime.LocalTime
     ```
 
     The following command provides a detailed failure message from the last sync failure. A blank output indicates that sync has never failed:
 
     ```Powershell
-    $s.AssistantInfo.LastSyncFailure
+    $s.SyncInfo.LastSyncFailure
     ```
 
-    You can also explore other values of AssistantInfo, such as SyncInfo and HierarchyInfo blocks.
+    You can also explore other values such as AssistantInfo and HierarchyInfo blocks.
 
 If you have to contact Microsoft Support, export the report to XML format, and then send it to the Support agent. To export the report, run the following command (for example):
 
