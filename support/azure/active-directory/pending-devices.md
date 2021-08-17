@@ -23,7 +23,7 @@ There are two scenarios in which a device can be stuck in a pending state:
 
 If a new device is stuck in the pending state, it can happen if the device cannot complete the registration process. This problem can be caused by several factors like the device cannot connect to the registration service. To troubleshoot device registration issues, see:
 
-- [Test Device Registration Connectivity](samples/azure-samples/testdeviceregconnectivity/testdeviceregconnectivity/)
+- [Test Device Registration Connectivity](/samples/azure-samples/testdeviceregconnectivity/testdeviceregconnectivity/)
 - [Troubleshooting hybrid Azure Active Directory joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
 
 ### The state of a registered device is changed to pending
