@@ -51,7 +51,7 @@ To work around this issue, use any of the following methods:
 
 - Increase the time that Outlook waits for Exchange to provide search results before falling back to use local search.
 
-  To increase the time, create the `ServerAssistedSearchTimeout` registry value:
+  To increase the time, create the `ServerAssistedSearchTimeout` registry value. For more information, see this [Outlook Global Customer Service & Support Team Blog article](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-2016-utilizes-exchange-server-2016-fast-search/ba-p/381195).
 
   |Type | Value|
   |---------|---------|
