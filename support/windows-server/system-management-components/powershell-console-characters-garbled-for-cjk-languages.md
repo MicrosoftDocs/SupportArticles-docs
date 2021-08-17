@@ -27,7 +27,7 @@ When you launch a PowerShell console, the characters are garbled. This issue onl
 
 By default, Windows PowerShell .lnk shortcut is hardcoded to use the "Consolas" font. The "Consolas" font doesn't have the glyphs for CJK characters, so the characters aren't rendered correctly. Changing the font to "MS Gothic" explicitly fixes the issue because the "MS Gothic" font has glyphs for CJK characters.
 
-Cmd.exe doesn't have this issue because the cmd .lnk shortcut doesn't specify a font so the console chooses the right font at runtime depending on the system language.
+Cmd.exe doesn't have this issue because the cmd .lnk shortcut doesn't specify a font. The console chooses the right font at runtime depending on the system language.
 
 ## Resolution
 
