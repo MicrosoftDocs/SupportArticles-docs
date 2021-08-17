@@ -11,6 +11,9 @@ ms.reviewer:
 
 Pending devices are devices that are synced to Azure Active Directory (Azure AD) from your on-premises Active Directory, but have not successfully completed registration with Azure AD device registration service. When a device’s registered state is pending, the device is unable to complete any authorization and authentication requests, like requesting a [Primary Refresh token](/azure/active-directory/devices/concept-primary-refresh-token) for single sign-on or apply [device based Conditional Access policies](/azure/active-directory/conditional-access/overview).
 
+> [!Note]
+> The pending state only exists in the on-premises devices in Hybird Azure AD.
+
 ## Why would a device be in a pending state?
 
 When you configure a **Hybrid Azure AD join** task in the Azure AD Connect Sync for your on-premises devices, the task will sync the device objects to Azure AD, and temporarily set the registered state of the devices to "pending" before the device completes the device registration. This is because the device must be added to the Azure AD directory before it can be registered. For more information about the device registration process, see [How it works: Device registration](/azure/active-directory/devices/device-registration-how-it-works#hybrid-azure-ad-joined-in-managed-environments).
