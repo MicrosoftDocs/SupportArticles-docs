@@ -35,10 +35,10 @@ The issue will be fixed in Windows 11 and Windows Server 2022 very soon, but the
 
 To work around the issue, use either of the following two workarounds.
 
-## Workaround 1: Launch the PowerShell from cmd.exe
+### Workaround 1: Launch the PowerShell from cmd.exe
 
 Start cmd.exe, and then run `powershell.exe` in the cmd console. This opens a PowerShell console without any font issues.
 
-## Workaround 2: Change the font in the PowerShell console
+### Workaround 2: Change the font in the PowerShell console
 
 Start PowerShell the normal way. Right-click the top bar of PowerShell console, select **Properties** -> **Font** tab. Under **Font**, select **MS Gothic** and select **OK**. This should resolve the issue.
