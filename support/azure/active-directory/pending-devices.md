@@ -21,7 +21,9 @@ There are two scenarios in which a device can be stuck in a pending state:
 
 ### New device to Hybrid Azure AD
 
-If a new device is stuck in the pending state, it can happen if the device fails to complete the device registration. This problem can be caused by several factors like the device cannot connect to the registration service. To troubleshoot device registration issues, see:
+If a new device is stuck in the pending state, this can happen if the device fails to complete the device registration. This problem can be caused by several factors like the device cannot connect to the registration service.
+
+To troubleshoot device registration issues, see:
 
 - [Troubleshooting hybrid Azure Active Directory joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
 - [Test Device Registration Connectivity](/samples/azure-samples/testdeviceregconnectivity/testdeviceregconnectivity/)
