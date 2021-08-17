@@ -26,7 +26,7 @@ You receive one of the following errors when trying to activate Microsoft 365 Ap
 
 > We’re having trouble activating office
 
-:::image type="content" source="./media/errors-activating-on-older-windows/invalid_request.png" alt-text="Image shows error text We're having trouble activating Office":::
+:::image type="content" source="./media/errors-activating-on-older-windows/trouble-activating-office.png" alt-text="Image shows error text We're having trouble activating Office":::
 
 > Sorry, but we’re having trouble signing you in.
 >AADSTS9002313: Invalid request. Request is malformed or invalid.
