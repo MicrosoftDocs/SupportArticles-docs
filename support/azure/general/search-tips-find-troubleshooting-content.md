@@ -23,7 +23,7 @@ This article covers some advanced search tips and tricks that will improve your 
 
 Don't let your browsing history and preferences affect your search. Use **InPrivate (Bing)** or **Incognito (Chrome)** mode in your browser.
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550561_en_1.gif" alt-text="InPrivate Browsing":::
+:::image type="content" source="./media/search-tips-find-troubleshooting-content/search-tips.gif" alt-text="InPrivate Browsing":::
 
 ## Gather and review log files
 
