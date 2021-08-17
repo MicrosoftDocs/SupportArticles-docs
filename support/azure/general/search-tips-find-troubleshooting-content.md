@@ -97,7 +97,7 @@ Don't overlook these valuable resources! Visit these sites and search using thei
 **Forums**
 
 - TechNet forums: [https://social.technet.microsoft.com/Forums/en-US/home](https://social.technet.microsoft.com/Forums/en-US/home) 
-- Microsoft Q&A: [https://docs.microsoft.com/answers/questions/index.html](https://docs.microsoft.com/answers/questions/index.html) 
+- Microsoft Q&A: [https://docs.microsoft.com/answers/questions/index.html](/answers/questions/index) 
 - Consumer or end-user forum: [https://answers.microsoft.com/](https://answers.microsoft.com/) 
 
 **Blogs**
@@ -109,7 +109,7 @@ Don't overlook these valuable resources! Visit these sites and search using thei
 You don't have to open a support ticket just yet! The Microsoft support portals offer a wealth of troubleshooting assistance before you open a support case. Just begin the support experience, describe your issue as accurately as possible, and you will be presented with troubleshooting steps and recommended self-help articles. Here is an example from the Azure portal. If the recommended steps or articles enable you to resolve your issue, there is no need to proceed with opening a support request.
 
 - [Azure Support](https://ms.portal.azure.com/) 
-- [Office 365 Support](https://docs.microsoft.com/Office365/Admin/contact-support-for-business-products)
+- [Office 365 Support](/Office365/Admin/contact-support-for-business-products)
 
 :::image type="content" source="./media/search-tips-find-troubleshooting-content/4550611_en_1.png" alt-text="Microsoft support portals.":::
 
