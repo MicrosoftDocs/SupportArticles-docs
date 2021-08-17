@@ -19,9 +19,9 @@ When you configure a **Hybrid Azure AD join** task in the Azure AD Connect Sync 
 
 There are two scenarios in which a device can be stuck in a pending state:
 
-### New device to Hybrid Azure AD
+### New on-premises device to Hybrid Azure AD
 
-If a new device is stuck in the pending state, this can happen if the device fails to complete the device registration. This problem can be caused by several factors like the device cannot connect to the registration service.
+If a new on-premises device is stuck in the pending state, this can happen if the device fails to complete the device registration. This problem can be caused by several factors like the device cannot connect to the registration service.
 
 To troubleshoot device registration issues, see:
 
