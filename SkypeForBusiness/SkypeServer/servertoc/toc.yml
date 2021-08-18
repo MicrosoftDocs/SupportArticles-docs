@@ -107,6 +107,8 @@
       href: ../server-exchange-integration/sfb-and-exchange-integration-fails.md
   - name: IM and Presence
     items:
+    - name: Chat history not show in conversation window
+      href: ../server-im-presence/chat-history-not-show-conversation-window.md
     - name: Emoticons and emojis converted to text
       href: ../server-im-presence/emoticons-and-emojis-converted-to-text.md
     - name: Enabling presence privacy mode update presence status

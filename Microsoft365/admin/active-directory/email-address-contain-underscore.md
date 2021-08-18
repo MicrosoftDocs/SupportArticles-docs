@@ -35,8 +35,6 @@ This occurs if the user account in your on-premises environment has a **proxyadd
 |`|accent grave |
 |(|opening parenthesis |
 |)|closing parenthesis |
-|'|single quotation mark |
-|&|ampersand |
 |   \|  |pipe |
 |=|equal sign |
 |?|question mark |

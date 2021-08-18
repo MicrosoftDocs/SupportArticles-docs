@@ -91,7 +91,7 @@ You can remove this option in the Local Group Policy Editor. To do this, set **D
 You can remove this option by using Exchange Online PowerShell as follows:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-2. Run the [`Set-OrganizationConfig`](/powershell/module/exchange/set-organizationconfig) cmdlet as follows:
+2. Run the [Set-OrganizationConfig](/powershell/module/exchange/set-organizationconfig) cmdlet as follows:
 
    ```powershell
    Set-OrganizationConfig -MobileAppEducationEnabled $false
