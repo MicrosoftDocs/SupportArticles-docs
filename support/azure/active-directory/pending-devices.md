@@ -5,14 +5,13 @@ author: genlin
 ms.author: genli
 ms.date: 08/17/2021
 ms.services: active-directory
-ms.reviewer: 
 ---
 # Pending devices in Azure Active Directory
 
 Pending devices are devices that are synced to Azure Active Directory (Azure AD) from your on-premises Active Directory, but have not successfully completed registration with Azure AD device registration service. When a device’s registered state is pending, the device is unable to complete any authorization and authentication requests, like requesting a [Primary Refresh token](/azure/active-directory/devices/concept-primary-refresh-token) for single sign-on or apply [device based Conditional Access policies](/azure/active-directory/conditional-access/overview).
 
 > [!Note]
-> The pending state only exists in the on-premises devices in Hybird Azure AD.
+> The pending state only exists for hybrid Azure AD joined devices.
 
 ## Why would a device be in a pending state?
 
@@ -22,7 +21,7 @@ When you configure a **Hybrid Azure AD join** task in the Azure AD Connect Sync 
 
 There are two scenarios in which a device can be stuck in a pending state:
 
-### Add a new on-premises device to Hybrid Azure AD
+### Sync a new on-premises domain joined device to Azure AD
 
 If a new on-premises device is stuck in the pending state, this can happen if the device fails to complete the device registration. This problem can be caused by several factors like the device cannot connect to the registration service.
 
@@ -41,7 +40,7 @@ This problem can happen in the following scenario:
 4. Azure AD Connect Sync creates a pending device object for this device in Azure AD.
 5. The device fails to complete the device registration because it was registered before.
 
-To fix the issue, you can unregister the device by running `dsregcmd /leave` in an elevated command and restart the device. The device will reinitiate the device registration process via the its scheduled task. For Windows 10 based devices, the scheduled task is under **Task Scheduler Library**> **Microsoft** > **Windows** > **Workplace Join** > **Automatic-Device-Join Task**.
+To fix the issue, you can unregister the device by running `dsregcmd /leave` in an elevated command and restart the device. The device will reinitiate the device registration process via the scheduled task. For Windows 10 based devices, the scheduled task is under **Task Scheduler Library**> **Microsoft** > **Windows** > **Workplace Join** > **Automatic-Device-Join Task**.
 
 ### Get list of the pending devices
 
