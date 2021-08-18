@@ -64,9 +64,9 @@ For general information about OS disks, see: [Introduction to Azure managed disk
 
 A user with Owner-level access must grant access to VM Inspector before diagnostics can be run on the VM. The VM Inspector needs the Disk Backup Reader role at minimum to perform disk inspection against the managed OS disk on your VM. If you have Owner-level access and you're running VM Inspector for the first time on your VM, you'll be prompted to automatically grant VM Inspector the Disk Backup Reader role. If you have a lower access role such as Contributor, Reader, or User Access Administrator, you must manually update your access level to that of Owner on the VM to proceed.
 
-For more information on the Disk Backup Reader role, see: [Azure built-in roles - Disk Backup Reader](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#disk-backup-reader)
+For more information on the Disk Backup Reader role, see: [Azure built-in roles - Disk Backup Reader](/azure/role-based-access-control/built-in-roles#disk-backup-reader)
 
-For more information on general Azure built-in RBAC roles, see: [Azure built-in roles - All](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#all)
+For more information on general Azure built-in RBAC roles, see: [Azure built-in roles - All](/azure/role-based-access-control/built-in-roles#all)
 
 
 [Azure built-in roles - Azure RBAC](/azure/role-based-access-control/built-in-roles#general)
