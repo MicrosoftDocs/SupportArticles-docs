@@ -52,11 +52,8 @@ If the command returns an error, or the certificate has expired, use the followi
 1. Create a new OAuth certificate by running the following command:
 
     ```powershell
-    New-ExchangeCertificate -KeySize 2048 -PrivateKeyExportable $true -SubjectName "cn=Microsoft Exchange Server Auth Certificate" -FriendlyName "Microsoft Exchange Server Auth Certificate" -DomainName "contoso.com"
+    New-ExchangeCertificate -KeySize 2048 -PrivateKeyExportable $true -SubjectName "cn=Microsoft Exchange Server Auth Certificate" -FriendlyName "Microsoft Exchange Server Auth Certificate" -DomainName @()
     ```
-
-    > [!NOTE]
-    > Change the value of the `DomainName` parameter in the example (contoso.com) to the SMTP domain that's used in your organization.
 
 2. Set the new certificate for server authentication. To do this, run the following commands:
 
