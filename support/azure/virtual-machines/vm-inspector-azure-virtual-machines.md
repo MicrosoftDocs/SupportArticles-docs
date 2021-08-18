@@ -46,7 +46,7 @@ VM Inspector is supported on the following operating systems:
 - OpenSUSE
 - Ubuntu
 
-[Linux distributions endorsed on Azure](azure/virtual-machines/linux/endorsed-distros)
+[Linux distributions endorsed on Azure](/azure/virtual-machines/linux/endorsed-distros)
 
 ## Unsupported scenarios
 
