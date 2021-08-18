@@ -104,6 +104,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Office Online Search|a9b49b65-0a12-430b-9540-c80b3332c127|
 |Office.com|4b233688-031c-404b-9a80-a4f3f2351f90|
 |Office365 Shell WCSS-Client|89bee1f7-5e6e-4d8a-9f3d-ecd601259da7|
+|OfficeClientService|0f698dd4-f011-4d23-a33e-b36416dcb1e6|
 |OfficeShredderWacClient|4d5c2d63-cf83-4365-853c-925fd1a64357|
 |OneDrive SyncEngine|ab9b8c07-8f02-4f72-87fa-80105867a763|
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
