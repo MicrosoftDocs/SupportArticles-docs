@@ -22,6 +22,7 @@ VM Inspector is supported on the following operating systems:
 
 ### Windows
 
+- Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
@@ -36,10 +37,13 @@ VM Inspector is supported on the following operating systems:
 ### Linux
 
 - CentOS
+- CoreOS
 - Debian
+- Flatcar Container Linux by Kinvolk
 - Oracle Linux Server
 - RHEL
 - SLES
+- OpenSUSE
 - Ubuntu
 
 ## Unsupported scenarios
@@ -47,8 +51,6 @@ VM Inspector is supported on the following operating systems:
 - Unmanaged OS disks and VMs
 - Encrypted OS disks and VMs
 - Ephemeral OS disks and VMs
-- Invisible OS disks and VMs
-- Lockbox enabled OS disks and VMs
 
 ## How VM Inspector works
 
