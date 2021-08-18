@@ -24,7 +24,8 @@ appliesto:
 
 You receive one of the following error messages when you try to activate Microsoft 365 Apps on an older operating system, such as Windows 7 Service Pack 1 (SP1), Windows Server 2008 R2, or Windows Server 2012:
 
-> We’re having trouble activating office
+> We’re having trouble activating office<br>
+> This might be due to a network or temporary service issue. Please make sure you're connected to the internet. We'll activate Office for you when the issue is resolved.
 
 :::image type="content" source="./media/errors-activating-on-older-windows/trouble-activating-office.png" alt-text="Image shows error text We're having trouble activating Office":::
 
