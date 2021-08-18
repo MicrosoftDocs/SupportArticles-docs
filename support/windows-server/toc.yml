@@ -2416,6 +2416,8 @@
     items:
     - name: Enter-PSSession cmdlet fails
       href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
+    - name: CJK characters are garbled in PowerShell
+      href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
     - name: error code 0x800706BE
