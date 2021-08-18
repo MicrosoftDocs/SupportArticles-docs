@@ -25,7 +25,7 @@ Consider the following scenario:
 
 ## Cause
 
-In-place system upgrades are supported for specific versions of Azure Windows VMs. We’re working to broaden support of in-place system upgrade (as a Feature Update) to other versions soon.
+In-place system upgrades are supported for specific versions of Azure Windows VMs. We're working to broaden support of in-place system upgrade (as a Feature Update) to other versions soon.
 
 ### Windows versions supported for in-place system upgrades:
 
@@ -57,7 +57,7 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 4. Check whether the backup was successful. To do so, turn off the original Windows 10 VM. Verify that a new VM can be successfully restored from the backup, and that all applications are running successfully.
 
    > [!NOTE]
-   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. But both VMs can’t be running at the same time, unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
+   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. But both VMs can't be running at the same time, unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
 
 5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
 6. In Windows Update, select **Check for updates**.
@@ -89,11 +89,11 @@ Create an Azure VM that runs a supported version of the operating system, and th
 
 Follow the steps in the following article to upload the VHD to Azure and to deploy the VM.
 
-[Upload a Windows VHD from an on-premises VM to Azure](/virtual-machines/windows/upload-image)
+[Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed)
 
 ### Method 3: Request to join Azure VM Upgrade Preview
 
-If you're interested in upgrading an operating system version that’s not yet supported, you may join a Private or Public Preview program, depending on capacity and availability. Email your request to [azurevmrequest@microsoft.com](mailto:azurevmrequest@microsoft.com).
+If you're interested in upgrading an operating system version that's not yet supported, you may join a Private or Public Preview program, depending on capacity and availability. Email your request to [azurevmrequest@microsoft.com](mailto:azurevmrequest@microsoft.com).
 
 ## References
 
