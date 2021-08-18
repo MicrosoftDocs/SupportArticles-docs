@@ -4,11 +4,11 @@ description: Explains why a device is in the pending state in Azure Active Direc
 author: genlin
 ms.author: genli
 ms.date: 08/17/2021
-ms.services: active-directory
+ms.services: active-directorygit 
 ---
 # Pending devices in Azure Active Directory
 
-Pending devices are devices that are synced to Azure Active Directory (Azure AD) from your on-premises Active Directory, but have not successfully completed registration with Azure AD device registration service. When a device’s registered state is pending, the device is unable to complete any authorization and authentication requests, like requesting a [Primary Refresh token](/azure/active-directory/devices/concept-primary-refresh-token) for single sign-on or apply [device based Conditional Access policies](/azure/active-directory/conditional-access/overview).
+Pending devices are devices that are synced to Azure Active Directory (Azure AD) from your on-premises Active Directory, but have not successfully completed registration with Azure AD device registration service. When a device’s registered state is pending, the device is unable to complete any authorization and authentication requests, like requesting a [Primary Refresh token](/azure/active-directory/devices/concept-primary-refresh-token) for single sign-on or apply [device based Conditional Access policies](/mem/intune/protect/create-conditional-access-intune).
 
 > [!Note]
 > The pending state only exists for hybrid Azure AD joined devices.
