@@ -64,7 +64,7 @@ For this tutorial, you will copy a test application that is named BuggyAmb. This
 
 BuggyAmb is simply a buggy ASP.NET Core 3.1-based Razor Pages application. This application was intentionally created as a buggy application to be used as a learning resource to troubleshoot problematic scenarios for an ASP.NET Core application on Linux.
 
-You can find the source code and ready-to-run published files at `https://github.com/<UserName>/buggyamb/releases/`. Download the *.tar.gz* version (direct link: *buggyamb_v1.1.tar.gz*) because the *.tar.gz* format is common in the Linux world.
+You can find the source code files at [ASP.NET Core binaries for Linux](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz). Download the *.tar.gz* version (direct link: *buggyamb_v1.1.tar.gz*) because the *.tar.gz* format is common in the Linux world. You can also download the [buggyamb_v1.1](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.zip) in Windows.
 
 ### Copying buggyamb_v1.1.tar.gz file to a Linux VM
 
@@ -76,14 +76,14 @@ pscp -i d:\secure\myprivatekey.ppk D:\Learn\Linux\buggyamb_v1.1.tar.gz <UserName
 
 Also run the `pscp` command after you modify it by using your own private key and paths accordingly. The following screenshot shows a successful file transfer between Windows and the Linux VM.
 
-:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/pscp.png" alt-text="BuggyAmb pscp" border="true":::
+:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/pscp-command.png" alt-text="Screenshot of pscp command" border="true":::
 
 > [!NOTE]
 > When you connect to your VM for the first time by using the `pscp` command, you may see a warning message about a host key mismatch.
 
 Connect to your Linux VM, and check whether the file is there. You can do this by using the `ls` command.
 
-:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/ls.png" alt-text="BuggyAmb ls" border="true":::
+:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/ls-command.png" alt-text="Screenshot of ls command" border="true":::
 
 There are other methods to copy files between Linux and Windows. But this method is sufficient for this tutorial.
 
@@ -93,7 +93,7 @@ Use the *buggyamb_v1.1.tar.gz* file to create a second ASP.NET Core application 
 > If you have difficulties copying the *buggyamb_v1.1.tar.gz* file to your Linux machine, you can simply download the .tar.gz file from your Linux VM by using this simple `wget` command:
 
 ```cmd
-wget https://github.com/<UserName>/buggyamb/releases/download/v1.1/buggyamb_v1.1.tar.gz
+wget https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz
 ```
 
 ## Extracting the files and copying to the /var/ folder
@@ -107,11 +107,11 @@ Extract the *.tar.gz* file, and copy it to the */var* folder. There are two simp
 
 **Option 1**: Run `tar -xf buggyamb_v1.1.tar.gz` to create the *buggyamb_v1.1* folder. Then, copy it to the */var* folder using the `sudo cp -a buggyamb_v1.1 /var/` command.
 
-:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/sudo-cp.png" alt-text="Screenshot of sudo cp command" border="true":::
 
 **Option 2**: Extract the application directly to the */var/* folder by using the `sudo tar -xf buggyamb_v1.1.tar.gz -C /var/` command.
 
-:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/tar.png" alt-text="BuggyAmb tar" border="true":::
+:::image type="content" source="./media/2-5-copy-file-linux-vm-extract-file/sudo-tar.png" alt-text="Screenshot of sudo tar command" border="true":::
 
 Choose either option, to extract the *buggyamb_v1.1* application files. These should be extracted or moved to */var/buggyamb_v1.1* folder to complete the setup. This folder will be used as the working directory for the new ASP.NET Core application.
 

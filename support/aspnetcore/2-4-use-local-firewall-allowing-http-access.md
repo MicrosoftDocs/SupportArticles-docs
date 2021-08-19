@@ -38,7 +38,7 @@ Although iptables is a lightweight firewall, it is not easy to manage the persis
 
 The Linux VM that has been used throughout this tutorial is not protected by any firewall rule. This is because, although iptables is installed and running, there are no defined rules.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/sudo-iptables-command.png" alt-text="Screenshot of sudo iptables command" border="true":::
 
 The goal here is to allow only HTTP and SSH (Secure Shell) traffic to reach the VM from the outside. To achieve this, follow these steps:
 
@@ -50,7 +50,7 @@ The goal here is to allow only HTTP and SSH (Secure Shell) traffic to reach the 
 
 The commands for these steps are listed in the following screenshot.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/sixcmd.png" alt-text="BuggyAmb sixcmd" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/six-sudo-command.png" alt-text="Screenshot of six sudo commands" border="true":::
 
 This is what occurs in each step.
 
@@ -72,7 +72,7 @@ This is what occurs in each step.
 
 Here is the `sudo ufw status verbose` output after you complete this procedure.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/verbose.png" alt-text="BuggyAmb verbose" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/sudo-ufw-status-verbose-command.png" alt-text="Screenshot of sudo ufw status verbose command" border="true":::
 
 After the firewall is configured, test whether it works.
 
@@ -82,21 +82,21 @@ Testing the firewall is easy: Create a "deny" rule for the HTTP protocol, and th
 
 Before you create this "deny" rule, make sure that the application is accessible to the browser in its current configuration. To do this, edit the `C:\Windows\System32\drivers\etc\hosts` file on the client computer by adding the buggyamb hostname and using the public IP address of your Linux VM. The buggyamb hostname resolves the Linux VM IP address. You can add any hostname to your hosts file, or you can try to connect directly to the public IP address of your Linux VM.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/welcome.png" alt-text="BuggyAmb welcome" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/welcome-page.png" alt-text="Screenshot of welcome page" border="true":::
 
 After you verify that HTTP requests can reach the VM, try to enable a rule that blocks HTTP traffic. This is make sure that the firewall does work. To do this, add a "deny" rule for HTTP by running `sudo ufw deny http`. This adds two "deny" rules for the HTTP protocol (on port 80). One is for IPv4, the other is for IPv6.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/deny.png" alt-text="BuggyAmb deny" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/sudo-ufw-deny-http-command.png" alt-text="Screenshot of sudo ufw deny http command" border="true":::
 
 Open the browser again, and then try to access the ASP.NET Core application that is running in Linux.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/page.png" alt-text="BuggyAmb page" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/invalid-page.png" alt-text="Screenshot of invalid page" border="true":::
 
 This screenshot shows the expected result.
 
 You could run a similar test directly inside the Linux VM by using the `wget` command. The following screenshot shows the required steps for the same test by running `wget`.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/fourcmd.png" alt-text="BuggyAmb fourcmd" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/four-command.png" alt-text="Screenshot of sudo four commands" border="true":::
 
 This is what occurs in each step.
 
@@ -110,7 +110,7 @@ This is what occurs in each step.
 
 You are now one step closer to completing the required configuration to debug the ASP.NET Core application. Before you go to the next part, make sure again that both SSH and HTTP are allowed in the local firewall.
 
-:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/both.png" alt-text="BuggyAmb both" border="true":::
+:::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/sudo-ufw-status-command.png" alt-text="Screenshot of sudo ufw status command" border="true":::
 
 ## Next steps
 

@@ -29,7 +29,7 @@ The following exercises are based on a Windows 10-based VM that was used to host
 In this first part of the lab, you will be guided through the procedure of copying core dump files from a Linux VM to a Windows VM by using the `pscp` command. This lab will also address methods to copy files that are not recommended.
 
 > [!NOTE]
-> If you don't want to deal with copying files from the Linux VM on which the core dump files were generated to the target Windows VM, or if you didn't follow the previous parts and don't have a core dump file, consider using the sample core dump files that are uploaded to the BuggyAmb GitHub page, and skip this part.
+> If you don't want to deal with copying files from the Linux VM on which the core dump files were generated to the target Windows VM, or if you didn't follow the previous parts and don't have a core dump file, consider using the [sample core dump files](https://buggyambfiles.blob.core.windows.net/dumps/linux_coredumps.tar.gz), and skip this part.
 
 ## Copying a core dump file to your local VM
 
