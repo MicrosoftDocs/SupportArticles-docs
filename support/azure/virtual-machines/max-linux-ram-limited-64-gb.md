@@ -50,7 +50,7 @@ For existing VMs, you can manually add the same kernel boot line option by using
     3. Save and close the grub.conf file.
     4. Restart the VM.  
 
-    For more information, see [Red Hat: GRUB Menu Configuration File](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-grub-configfile.html).
+    For more information, see [Red Hat: GRUB Menu Configuration File](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-grub-configfile).
 
 - For SLES, refer to [SUSE: Booting with GRUB.](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_grub_basic.html)
 - For Debian, refer to [Debian: Boot Parameters](https://www.debian.org/releases/jessie/amd64/ch05s03.html.en).
