@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article describes Server Message Block (SMB) signing, and how to determine whether SMB signing is enabled.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 98, Windows NT 4.0 (SP3 and later), Windows 2000, Windows XP and Windows Server 2003  
 _Original KB number:_ &nbsp; 887429
 
 ## Introduction
@@ -68,7 +68,7 @@ We recommend that you use Group Policies to configure SMB signing because a loca
 
 Microsoft network client: Digitally sign communications (always) Policy Setting: not defined
 
-Microsoft network client: Digitally sign communications (if server agrees) Policy Setting: not defined Effective Setting: enabled (because of local policy)
+Microsoft network client: Digitally sign communications (if server agrees) Policy Setting: not defined
 
 ###### Server
 
@@ -153,9 +153,8 @@ In Windows Server 2003 and Windows XP, the Group Policy named "Microsoft network
 
 > [!NOTE]
 > The default value in Windows Server 2003 domain controllers and Windows 2000 domain controllers is 1 (enabled). The default value in Windows NT 4.0 domain controllers is 0 (disabled).
-Windows Server 2003 and Windows XP policy is named "Microsoft network server: Digitally sign communications (always)"
 
-Windows 2000 policy is named "Digitally sign server communication (always)" and both map to the following registry key:  
+In Windows Server 2003 and Windows XP policy, the Group Policy named "Microsoft network server: Digitally sign communications (always)", and in Windows 2000, the Group Policy named "Digitally sign server communication (always)" map to the following registry key:  
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters`
 
 **Value Name**: RequireSecuritySignature  
@@ -163,7 +162,7 @@ Windows 2000 policy is named "Digitally sign server communication (always)" and 
 **Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
-> The default value in Windows Server 2003 domain controllers and Windows 2000 domain controllers is 1 (required). The default value in Windows NT 4.0 domain controllers is 0 (not required).
+> The default value in Windows Server 2003 domain controllers is 1 (required). The default value in Windows 2000 domain controllers and Windows NT 4.0 domain controllers is 0 (not required).
 
 For Windows NT 4.0-based computers to be able to connect to Windows 2000-based computers by using SMB signing, you must create the following registry value on the Windows 2000-based computers:  
 **Value Name**: enableW9xsecuritysignature  
@@ -171,7 +170,7 @@ For Windows NT 4.0-based computers to be able to connect to Windows 2000-based c
 **Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
-> There is no Group Policy associated with the EnableW9xsecuritysignature registry value.
+> There is no Group Policy associated with the enableW9xsecuritysignature registry value.
 
 #### Configuring SMB signing in Windows NT 4.0
 
@@ -276,7 +275,7 @@ For additional information about CIFS, visit the following Microsoft Web site:
 
 The behavior of the SMB session after the Dialect Negotiation shows the client configuration.
 
-If SMB Signing is enabled and required at both the client and the server, or if SMB signing is disabled at both the client and the server, the connection is successful.
+If SMB Signing is enabled or required at both the client and the server, or if SMB signing is disabled at both the client and the server, the connection is successful.
 
 If SMB signing is enabled and required at the client and disabled at the server, the connection to the TCP session is gracefully closed after the Dialect Negotiation, and the client receives the following "1240 (ERROR_LOGIN_WKSTA_RESTRICTION)" error message:  
 > System error 1240 has occurred. The account is not authorized to log in from this station.
