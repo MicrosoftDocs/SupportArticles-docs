@@ -17,15 +17,13 @@ ms.author: tibasham
 
 This article shows how to resolve the error "Failed to start Switch Root" for an Azure Linux Virtual Machine (VM). This issue can occur when you update to the following GRUB package versions on Oracle 8 SP2:
 
-```powershell
-grub2-common-2.02-78.0.3.el8_1.1.noarch
-grub2-pc-modules-2.02-78.0.3.el8_1.1.noarch
-grub2-efi-x64-2.02-78.0.3.el8_1.1.x86_64
-grub2-tools-extra-2.02-78.0.3.el8_1.1.x86_64
-grub2-tools-2.02-78.0.3.el8_1.1.x86_64
-grub2-pc-2.02-78.0.3.el8_1.1.x86_64
-grub2-tools-minimal-2.02-78.0.3.el8_1.1.x86_64
-```
+- grub2-common-2.02-78.0.3.el8_1.1.noarch
+- grub2-pc-modules-2.02-78.0.3.el8_1.1.noarch
+- grub2-efi-x64-2.02-78.0.3.el8_1.1.x86_64
+- grub2-tools-extra-2.02-78.0.3.el8_1.1.x86_64
+- grub2-tools-2.02-78.0.3.el8_1.1.x86_64
+- grub2-pc-2.02-78.0.3.el8_1.1.x86_64
+- grub2-tools-minimal-2.02-78.0.3.el8_1.1.x86_64
 
 If your Azure issue is not addressed in this article, visit the Azure forums on [MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). Post your issue in either these forums or to [@AzureSupport on Twitter](https://twitter.com/AzureSupport).
 
@@ -33,9 +31,9 @@ To submit an Azure support request on the [Azure support](https://azure.microsof
 
 ## Manually fix the issue in the Guest OS
 
-If you have access to the **Azure Serial Console** proceed with the steps in the following section.
+If you have access to the [Azure Serial Console](serial-console-linux.md) proceed with the steps in the following section.
 
-If you're unable to use the Azure Serial Console section, proceed to the **Offline Method** section.
+If you're unable to use the Azure Serial Console section, proceed to the **Offline Method** section, listed after the **Azure Serial Console** section.
 
 ### Azure Serial Console method
 
@@ -47,7 +45,7 @@ If you're unable to use the Azure Serial Console section, proceed to the **Offli
 
    Example:
 
-   ```powershell
+   ```console
    [root@examplevm ~] # cat /boot/efi/EFI/redhat/grubenv
    saved_entry=d606d39f9aa249beb74216035ea11733-4.18.0-193.19.1.el8_2.x86_64  
    kernelopts=**root=UUID=bc0bc3e1-e621-40ab-96ca-8d6a5268f17e ro  crashkernel=auto console=tty0 console=ttyS0,115200n8**  
@@ -58,7 +56,7 @@ If you're unable to use the Azure Serial Console section, proceed to the **Offli
 
    Example:
 
-   ```powershell
+   ```console
    [root@examplevm ~] # vi /boot/loader/entries/a358b364a6d3492898bedc8d1dea3e92-4.18.0-147.8.1.el8_1.x86_64.conf
    title Oracle Linux Server (4.18.0-147.8.1.el8_1.x86_64) 8.2  
    version 4.18.0-147.8.1.el8_1.x86_64  
@@ -71,15 +69,13 @@ If you're unable to use the Azure Serial Console section, proceed to the **Offli
    grub_class kernel  
    ```
 
-5. Reboot the VM.
-
-   1. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
+5. Reboot the VM. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
 
 ### Offline method
 
 If you're unable to access the VM using the Azure Serial Console, then the repair must be done in offline mode, as the VM isn't booting.
 
-1. Use steps 1-3 of the *VM Repair Commands* to prepare a Repair VM.
+1. Use steps 1-3 of the [VM Repair Commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
 
 2. Using SSH, connect to the Repair VM.
 
@@ -103,7 +99,7 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
    Example:
 
-   ```powershell
+   ```console
    [root@repairvm ~] # cat /boot/efi/EFI/redhat/grubenv
    saved_entry=d606d39f9aa249beb74216035ea11733-4.18.0-193.19.1.el8_2.x86_64  
    kernelopts=**root=UUID=bc0bc3e1-e621-40ab-96ca-8d6a5268f17e ro  crashkernel=auto console=tty0 console=ttyS0,115200n8**  
@@ -114,7 +110,7 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
    Example:
 
-   ```powershell
+   ```console
    [root@repairvm ~] # vi /boot/loader/entries/a358b364a6d3492898bedc8d1dea3e92-4.18.0-147.8.1.el8_1.x86_64.conf
    title Oracle Linux Server (4.18.0-147.8.1.el8_1.x86_64) 8.2  
    version 4.18.0-147.8.1.el8_1.x86_64  
@@ -135,8 +131,6 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
     `umount /repair`
 
-11. Use step 5 of *VM Repair Commands* to rebuild the VM.
+11. Use step 5 of [VM Repair Commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to rebuild the VM.
 
-12. Start the VM.
-
-    1. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
+12. Start the VM. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
