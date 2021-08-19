@@ -1,7 +1,7 @@
 ---
-title: Folder Redirection group policy is not applied
-description: Addresses an issue that prevents folder redirection policy from working in SCCM.
-ms.date: 09/08/2020
+title: User Profiles and Folder Redirection group policies are not applied
+description: Addresses an issue that prevents User Profiles and folder redirection group policies from working in SCCM.
+ms.date: 08/19/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.technology: windows-server-group-policy
 ---
-# Folder Redirection group policy is not applied
+# User Profiles and Folder Redirection group policies are not applied
 
-This article helps fix an issue that prevents folder redirection policy from working in Microsoft System Center Configuration Manager (SCCM).
+This article helps fix an issue that prevents User Profiles and folder redirection policies from working in Microsoft System Center Configuration Manager (SCCM).
 
 _Applies to:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp;3060058
 
 ## Symptoms
 
-Computers running Windows 8 and later versions may not apply Folder Redirection Group Policy objects (GPOs) as expected. This issue can occur if the computers are domain clients and are managed by System Center 2012 Configuration Manager Service Pack 1 (ConfigMgr 2012 SP1) or later.
+Computers running Windows 8 and later versions may not apply User Profiles and Folder Redirection Group Policy objects (GPOs) as expected. This issue can occur if the computers are domain clients and are managed by System Center 2012 Configuration Manager Service Pack 1 (ConfigMgr 2012 SP1) or later.
 
 ## Resolution
 
