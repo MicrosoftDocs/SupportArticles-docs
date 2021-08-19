@@ -9,11 +9,11 @@ ms.reviewer: anthonge, willfid
 
 This article describes how to remove duplicate mobile device management objects in Azure Active Directory (Azure AD). You can use this procedure to remove orphaned device objects in Azure AD that are not automatically removed by the service after 90 days.
 
-> [!NOTE]
-> Microsoft recommends that administrators use PowerShell to remove duplicate or stale devices from Azure AD. However, there may be instances in which it is necessary to remove Intune managed devices manually. For more information, see [clean up stale devices in the Azure portal](/azure/active-directory/devices/manage-stale-devices#clean-up-stale-devices-in-the-azure-portal).
-
 _Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune  
 _Original KB number:_ &nbsp; 3060809
+
+> [!NOTE]
+> Microsoft recommends that administrators use PowerShell to remove duplicate or stale devices from Azure AD. However, there may be instances in which it is necessary to remove Intune managed devices manually. For more information, see [clean up stale devices in the Azure portal](/azure/active-directory/devices/manage-stale-devices#clean-up-stale-devices-in-the-azure-portal).
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) as an administrator.
 2. Select **Azure Active Directory** > **Users**, and then select the user account that the device is registered to.
