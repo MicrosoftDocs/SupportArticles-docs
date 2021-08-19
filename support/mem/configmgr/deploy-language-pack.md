@@ -64,7 +64,8 @@ To deploy a language pack as an application in Configuration Manager, follow the
     The following example requires deploying the language pack on Windows 10 version 1803.
 
     > [!NOTE]
-    > Language packs are specific to OS versions. Therefore, for example, Windows 10 version 1803 language packs only work in version 1803, but not other versions.  
+    > Language packs are specific to OS versions. Therefore, for example, Windows 10 version 1803 language packs only work in version 1803, but not other versions.
+    > You need to extend the Hardware Inventory in order to use ReleaseId as a requirement.
 
     Example
 
