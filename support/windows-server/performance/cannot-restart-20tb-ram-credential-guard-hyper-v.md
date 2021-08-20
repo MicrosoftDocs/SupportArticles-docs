@@ -1,5 +1,5 @@
 ---
-title: Cannot restart a Windows Server that has 20 TB of RAM (or more), Credential Guard enabled, and Hyper-V role enabled
+title: Cannot restart a Windows Server computer that uses Credential Guard, Hyper-V, and at least 20 TB RAM
 description: Discusses an issue that prevents a Windows Server-based computer from restarting correctly if it has 20 TB or more of RAM, and Credential Guard and the Hyper-V role enabled.
 ms.date: 08/09/2021
 author: Teresa-Motiv
@@ -18,8 +18,7 @@ ms.technology: windows-server-performance
 
 This article discusses an issue that prevents a Windows Server-based computer from restarting correctly if the server has 20 TB or more of RAM, and has Credential Guard and the Hyper-V role enabled.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
-_Original KB number:_ &nbsp; 4575723
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 
 ## Symptoms
 
