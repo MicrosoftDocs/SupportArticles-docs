@@ -27,16 +27,16 @@ You receive one of the following error messages when you try to activate Microso
 > We’re having trouble activating office<br>
 > This might be due to a network or temporary service issue. Please make sure you're connected to the internet. We'll activate Office for you when the issue is resolved.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/trouble-activating-office.png" alt-text="Image shows error text We're having trouble activating Office":::
+:::image type="content" source="./media/errors-activating-on-older-windows/trouble-activating-office.png" alt-text="Screenshot with error text We're having trouble activating Office":::
 
 > Sorry, but we’re having trouble signing you in.
->AADSTS9002313: Invalid request. Request is malformed or invalid.
+> AADSTS9002313: Invalid request. Request is malformed or invalid.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/invalid-request.png" alt-text="Image shows error text Invalid request Request is malformed or invalid":::
+:::image type="content" source="./media/errors-activating-on-older-windows/invalid-request.png" alt-text="Screenshot with error text Invalid request Request is malformed or invalid":::
 
 > Sorry, we are having some temporary server issues.
 
-:::image type="content" source="./media/errors-activating-on-older-windows/temp-server-issues.png" alt-text="Image shows error text Sorry, we are having some temporary server issues.":::
+:::image type="content" source="./media/errors-activating-on-older-windows/temp-server-issues.png" alt-text="Screenshot with error text Sorry, we are having some temporary server issues.":::
 
 ## Cause
 
@@ -51,7 +51,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 To resolve this issue:
 
 1. If you are running Windows 7 or Windows Server 2008, make sure that [Service Pack 1](https://support.microsoft.com/topic/information-about-service-pack-1-for-windows-7-and-for-windows-server-2008-r2-df044624-55b8-3a97-de80-5d99cb689063) is installed.
-1. Enable TLS 1.2 as the default protocol by using [this easy fix](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi), and then restarting the device.
+1. Enable TLS 1.2 as the default protocol by using [this easy fix](https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi), and then restart the device.
 
 For more information and troubleshooting guidance, see the following articles:
 
