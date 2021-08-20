@@ -47,8 +47,8 @@ Set-OrganizationConfig -DefaultPublicFolderAgeLimit $null
 Deleted public folders are stored in the public folder dumpster. You can recover the deleted items from a previous backup, or from the public folder dumpster. See [Restore a deleted public folder](/exchange/collaboration-exo/public-folders/restore-deleted-public-folder)
  for more information.
 
-To retrieve statistical information or attributes about the public folder dumpster, run the following [Get-PublicFolder](/powershell/module/exchange/get-publicfolder?view=exchange-ps)
- and [Get-PublicFolderStatistics](/powershell/module/exchange/get-publicfolderstatistics?view=exchange-ps) cmdlets:
+To retrieve statistical information or attributes about the public folder dumpster, run the following [Get-PublicFolder](/powershell/module/exchange/get-publicfolder)
+ and [Get-PublicFolderStatistics](/powershell/module/exchange/get-publicfolderstatistics) cmdlets:
 
 - `Get-PublicFolder <Dumpster path> | Get-PublicFolderStatistics`
 - `Get-PublicFolder <Dumpster EntryID> | Get-PublicFolderStatistic`
