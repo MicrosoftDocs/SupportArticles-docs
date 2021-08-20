@@ -40,7 +40,7 @@ For more information about the Autodiscover service, see [How the Autodiscover s
 Contact your web service provider or the web hosting provider of your domain website to make sure that the web server isn't responding to the following Autodiscover requests:
 
 - `https://<Rootdomain>/autodiscover/autodiscover.xml`
-- `https//autodiscover.<Rootdomain>/autodiscover/autodiscover.xml`.
+- `https://autodiscover.<Rootdomain>/autodiscover/autodiscover.xml`.
 
 ## Workaround
 

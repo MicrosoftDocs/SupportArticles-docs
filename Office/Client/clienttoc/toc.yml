@@ -297,6 +297,8 @@
           href: ../activation/cant-activate-on-new-computer.md
         - name: Can't verify the license for this product
           href: ../activation/license-issue-when-start-office-application.md
+        - name: Errors activating Microsoft 365 on older Windows versions
+          href: ../activation/errors-activating-on-older-windows.md
         - name: Office activation process issues
           href: ../activation/office-activation-process-issues.md
         - name: Issue when activating Microsoft 365 Apps for enterprise
