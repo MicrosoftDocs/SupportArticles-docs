@@ -43,7 +43,7 @@ Set-CsClientPolicy –Identity Global –PolicyEntry @{Add=$a}
 
 ```powershell
 $a = New-CsClientPolicyEntry –Name "EnableContextualMessages" –Value $False
-new-CsCLientPolicy -Identity NoContextualMessages
+New-CsCLientPolicy -Identity NoContextualMessages
 
 Set-CsClientPolicy –Identity NoContextualMessages–PolicyEntry @{Add=$a}
 Grant-CsClientPolicy -Identity userX
