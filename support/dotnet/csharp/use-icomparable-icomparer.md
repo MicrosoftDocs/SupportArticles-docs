@@ -42,7 +42,7 @@ The role of `IComparer` is to provide more comparison mechanisms. For example, y
 Using `IComparer` is a two-step process. First, declare a class that implements `IComparer`, and then implement the `Compare` method:
 
 ```csharp
-private class sortYearAscendingHelper : IComparer
+private class SortYearAscendingHelper : IComparer
 {
    int IComparer.Compare(object a, object b)
    {
@@ -64,9 +64,9 @@ private class sortYearAscendingHelper : IComparer
 The second step is to declare a method that returns an instance of your `IComparer` object:
 
 ```csharp
-public static IComparer sortYearAscending()
+public static IComparer SortYearAscending()
 {
-   return (IComparer) new sortYearAscendingHelper();
+   return (IComparer) new SortYearAscendingHelper();
 }
 ```
 
@@ -115,7 +115,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              // Demo ascending sort of numeric value with IComparer.
-             Array.Sort(arrayOfCars,Car.sortYearAscending());
+             Array.Sort(arrayOfCars,Car.SortYearAscending());
              Console.WriteLine("\nArray - Sorted by Year (Ascending - IComparer)\n");
 
              foreach(Car c in arrayOfCars)
@@ -129,7 +129,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              // Demo descending sort of numeric value using IComparer.
-             Array.Sort(arrayOfCars,Car.sortYearDescending());
+             Array.Sort(arrayOfCars,Car.SortYearDescending());
              Console.WriteLine("\nArray - Sorted by Year (Descending - IComparer)\n");
 
              foreach(Car c in arrayOfCars)
@@ -154,7 +154,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
        {
           // Beginning of nested classes.
           // Nested class to do ascending sort on year property.
-          private class sortYearAscendingHelper: IComparer
+          private class SortYearAscendingHelper: IComparer
           {
              int IComparer.Compare(object a, object b)
              {
@@ -173,7 +173,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           }
 
           // Nested class to do descending sort on year property.
-          private class sortYearDescendingHelper: IComparer
+          private class SortYearDescendingHelper: IComparer
           {
              int IComparer.Compare(object a, object b)
              {
@@ -192,7 +192,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
           }
 
           // Nested class to do descending sort on make property.
-          private class sortMakeDescendingHelper: IComparer
+          private class SortMakeDescendingHelper: IComparer
           {
              int IComparer.Compare(object a, object b)
              {
@@ -229,19 +229,19 @@ The following example demonstrates the use of these interfaces. To demonstrate `
              return String.Compare(this.make,c.make);
           }
           // Method to return IComparer object for sort helper.
-          public static IComparer sortYearAscending()
+          public static IComparer SortYearAscending()
           {
-             return (IComparer) new sortYearAscendingHelper();
+             return (IComparer) new SortYearAscendingHelper();
           }
           // Method to return IComparer object for sort helper.
-          public static IComparer sortYearDescending()
+          public static IComparer SortYearDescending()
           {
-             return (IComparer) new sortYearDescendingHelper();
+             return (IComparer) new SortYearDescendingHelper();
           }
           // Method to return IComparer object for sort helper.
-          public static IComparer sortMakeDescending()
+          public static IComparer SortMakeDescending()
           {
-            return (IComparer) new sortMakeDescendingHelper();
+            return (IComparer) new SortMakeDescendingHelper();
           }
 
        }
