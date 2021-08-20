@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Lab 2.2 Capturing dump files with ProcDump in Linux
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article discusses the installation of ProcDump tool and how to capture .NET Core memory dump files by using ProcDump in Linux.
 
@@ -54,7 +54,7 @@ However, it's still powerful. The following list of command-line options goes a 
 
 Installation instructions are detailed on [this page](https://github.com/Sysinternals/ProcDump-for-Linux/blob/master/INSTALL.md). Recall that you were instructed to add the Microsoft package repository before you installed .NET Core. ProcDump uses the same repository. Therefore, you can directly install the tool by using the `sudo apt install procdump` command.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-apt-install-procdump-command.png" alt-text="Screenshot of sudo apt install procdump command" border="true":::
 
 You can use ProcDump to monitor CPU, memory, thread, or file descriptor usages.
 
@@ -62,7 +62,7 @@ You can use ProcDump to capture a memory dump file when the target process CPU o
 
 Capture a memory dump file of the same process. Notice that you will have to run the command by using `sudo`.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/capture.png" alt-text="BuggyAmb capture" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-command.png" alt-text="Screenshot of sudo procdump command" border="true":::
 
 ## Where does ProcDump create the core dump files?
 
@@ -74,7 +74,7 @@ Because the other tools usually use the */tmp/* or *:::no-loc text="/var/lib/sys
 
 The working directory for the application is defined in the service control unit file. As you can see in the next screenshot, the sample application's working directory is */var/BuggyAmb_v1.1*. Therefore, any dump file that ProcDump creates for this application will be put into the */var/BuggyAmb_v1.1* directory.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/cat.png" alt-text="BuggyAmb cat" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/cat-ll-command.png" alt-text="Screenshot of cat and ll command" border="true":::
 
 ## Sample scenario: Capturing dump files based on memory usage
 
@@ -95,15 +95,15 @@ According to ProcDump Help, here are the switches that you will have to use:
 
 Run the `sudo procdump -p 11724 -n 2 -s 5 -M 750` command. You'll see that ProcDump waits until the criteria that are defined by the arguments that are passed to it are met, or until you decide to end the monitoring phase by pressing Ctrl+C.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/pn.png" alt-text="BuggyAmb pn" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-p-command.png" alt-text="Screenshot of sudo procdump p command" border="true":::
 
 While ProcDump is monitoring the memory usage, reproduce the same problem by sending six requests to the **Slow** scenario by using the `Load Generator` feature of the web-application again. After the memory usage reaches the threshold, ProcDump creates dump files. The next screenshot shows two captured dump files.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/pns.png" alt-text="BuggyAmb pns" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-p-n-command.png" alt-text="Screenshot of sudo procdump p n command" border="true":::
 
 The dump files are written in the working directory, the same as it was the case of the manual memory dump file that you created earlier.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/ls.png" alt-text="BuggyAmb ls" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/ls-command.png" alt-text="Screenshot of ls command" border="true":::
 
 The dump files that are created by using createdump and ProcDump are identical in terms of the information that they contain. You can choose whichever tool you believe is better suited to the scenario that you face when you troubleshoot such problems.
 

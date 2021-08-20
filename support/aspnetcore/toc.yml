@@ -18,7 +18,7 @@
       href: 2-2-install-nginx-configure-it-reverse-proxy.md
     - name: Part 2.3 Configure an app to start automatically
       href: 2-3-configure-aspnet-core-application-start-automatically.md
-    - name: Part 2.3.1 Configure the ASP.NET Core application
+    - name: Part 2.3.1 [Optional] Configure an app to start automatically under a different user
       href: 2-3-1-configure-aspnet-core-application-start-automatically.md
     - name: Part 2.4 Secure VM by configuring a firewall
       href: 2-4-use-local-firewall-allowing-http-access.md

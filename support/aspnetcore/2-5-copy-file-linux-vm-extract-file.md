@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 2.5 - Copying and extracting files from your development environment to Linux
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article introduces how to copy files from a Windows-based computer to a Linux virtual machine and extract files.
 
@@ -60,7 +60,7 @@ The private key is the same *.ppk* key that was converted from a *.pem* file whe
 
 ### Downloading a sample project
 
-For this tutorial, you will copy a test application that is named BuggyAmb. This application is available on its own GitHub page (`https://github.com/<UserName>/buggyamb`). We recommend that you use this sample application because the next parts use this application to simulate high and low CPU performance problems and crash issues in the troubleshooting labs.
+For this tutorial, you will copy a test application that is named BuggyAmb. This application is available on its own GitHub page (`https://github.com/<UserName>/buggyamb`, this link will be changed soon). We recommend that you use this sample application because the next parts use this application to simulate high and low CPU performance problems and crash issues in the troubleshooting labs.
 
 BuggyAmb is simply a buggy ASP.NET Core 3.1-based Razor Pages application. This application was intentionally created as a buggy application to be used as a learning resource to troubleshoot problematic scenarios for an ASP.NET Core application on Linux.
 

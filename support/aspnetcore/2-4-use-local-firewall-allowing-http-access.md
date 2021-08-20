@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 2.4 - Securing Linux using local firewall and allowing remote HTTP access
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article introduces how to configure a local firewall to secure your Linux virtual machine (VM).
 

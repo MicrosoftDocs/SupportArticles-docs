@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Lab 1.2 Troubleshooting crashes - analyzing system-generated core dump files in lldb debugger
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article discusses how to install and configure the lldb debugger in Linux, and then open and analyze system-generated .NET Core dump files.
 
@@ -42,7 +42,7 @@ In this part, you will install and configure the lldb debugger to work together 
 
 For this lab, you must install lldb 3.9 or a later version. Instructions for several Linux distros are detailed in [this article](https://github.com/dotnet/diagnostics/blob/main/documentation/lldb/linux-instructions.md). For this section, we recommend you use the `apt` install command: `sudo apt install lldb`. In the next screenshot, you can see that the lldb-6.0 is installed together with some dependencies.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/sudo-command.png" alt-text="Screenshot of sudo command" border="true":::
 
 After the installation is finished, you have to configure lldb so that it can automatically load SOS when a core dump file is opened.
 
@@ -50,11 +50,11 @@ After the installation is finished, you have to configure lldb so that it can au
 
 Before you open the core dump file in lldb, follow these required steps to set the symbol path, download the symbols, and load the **SOS** automatically when lldb is opened:
 
-1. Install the dotnet-symbol tool: 
+1. Install the dotnet-symbol tool:
 
    > `dotnet tool install -g dotnet-symbol`
 
-1. Download the symbols for the target dump file: 
+1. Download the symbols for the target dump file:
 
    > `dotnet-symbol <path_of_dump_file>`
 
@@ -64,7 +64,7 @@ Before you open the core dump file in lldb, follow these required steps to set t
   
        > `dotnet tool install -g dotnet-sos`
 
-    2. Install SOS:   
+    2. Install SOS:
   
        > `dotnet-sos install`
 
@@ -72,7 +72,7 @@ Before you open the core dump file in lldb, follow these required steps to set t
 
 You should have already installed the dotnet-symbol tool together with dotnet-dump and dotnet-gcdump tools in the previous part. If you have not installed these tools yet, install them before you proceed. To do this, run the `dotnet tool install -g dotnet-symbol` command to install dotnet-symbols. The, install dotnet-dump and dotnet-gcdump, if you haven't already done this. You should now have three tools installed, as shown in the next screenshot.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/list.png" alt-text="BuggyAmb list" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/list-command.png" alt-text="Screenshot of list command" border="true":::
 
 ## Downloading symbols for the dump file
 
@@ -80,7 +80,7 @@ In [part 1](lab-1-1-reproduce-troubleshoot.md), you were instructed how to unpac
 
 You will use the `dotnet-symbol ~/dumps/dotnet/CoreDump -o ~/dumps/symbols --host-only` command to download the symbols for the memory dump file to the *:::no-loc text="~/dumps/symbols":::* directory.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/dumps.png" alt-text="BuggyAmb dumps" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/dumps-command.png" alt-text="Screenshot of dumps command" border="true":::
 
 You may receive several "HTTP 404 not found" error messages when you download symbol files if you don't add the `--host-only` switch. You can safely ignore these messages. The `--host-only` parameter will download only the host program. This is all that lldb needs to start debugging the ASP.NET Core application.
 
@@ -100,7 +100,7 @@ Then, install SOS:
 
 The next screenshot shows the result of a successful installation. Notice that the dotnet-sos tool has configured the lldb debugger so that the SOS extension should be loaded automatically when the debugger starts.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/install.png" alt-text="BuggyAmb install" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/install-command.png" alt-text="Screenshot of install command" border="true":::
 
 You are finally ready to open the dump file by using lldb.
 
@@ -118,7 +118,7 @@ The `<host-program>` is the native program that started the .NET Core applicatio
 
 The next screenshot shows the lldb debugger that has opened the memory dump file.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/lldb.png" alt-text="BuggyAmb lldb" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/lldb-command.png" alt-text="Screenshot of lldb command" border="true":::
 
 ## Setting symbols
 
@@ -130,7 +130,7 @@ setsymbolserver -directory ~/dumps/symbols
 
 Next, load the symbols: `loadsymbols`
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/loadsymbols.png" alt-text="BuggyAmb loadsymbols" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/loadsymbols-command.png" alt-text="Screenshot of loadsymbols command" border="true":::
 
 ## Running lldb and SOS commands
 
@@ -141,17 +141,17 @@ There are several lldb commands. You can list these by using the `help` command.
 
 To begin, look at the thread's native call stack by using the `bt` ("back trace") command. This command shows the call stack of the active thread.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/bt.png" alt-text="BuggyAmb bt" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/bt-command.png" alt-text="Screenshot of sudo command" border="true":::
 
 Next, examine the managed call stack by using the SOS `clrstack` command.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/clrstack.png" alt-text="BuggyAmb clrstack" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/clrstack-command.png" alt-text="Screenshot of clrstack command" border="true":::
 
 You should not be able to retrieve any information. The stack walk will fail because the reported stack is incomplete. This is related to what was discussed before: The auto-generated core dump file can't collect all managed states.
 
 Also recall that an exception occurred, and this caused the process to crash. Take a look at the exception information by running the SOS `pe` command.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/pe.png" alt-text="BuggyAmb pe" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/pe-command.png" alt-text="Screenshot of pe command" border="true":::
 
 As you can see in the output, the `pe` command displays the information about the last exception, if any, that was thrown in the current thread.
 
@@ -162,15 +162,15 @@ The address of the exception is also displayed. You can try to pass this address
 > [!NOTE]
 > In this command, replace the address with the address that's displayed in the dump file.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/unknow.png" alt-text="BuggyAmb unknow" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/unknow-exception-type.png" alt-text="Screenshot of unknow exception type in command" border="true":::
 
 Even if you want to display the objects that are referenced in the stack, you see the same value of **unknown**.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/dso.png" alt-text="BuggyAmb dso" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/dso-command.png" alt-text="Screenshot of dso command" border="true":::
 
 You can try to retrieve more information by selecting an address of one of the objects on the stack, and reviewing the object by using the `dumpobj <address>` command.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/dumpobj.png" alt-text="BuggyAmb dumpobj" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/dumpobj-command.png" alt-text="Screenshot of dumpobj command" border="true":::
 
 However, you will likely conclude that this command will also have a limited effect because it returns only more unknown messages. It's time to stop working with the auto-generated dump file. Run the `exit` command to end the lldb session.
 

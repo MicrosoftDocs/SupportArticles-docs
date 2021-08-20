@@ -7,7 +7,7 @@ ms.reviewer: ramakoni, ahmet.bostanci
 ---
 # Lab 4.2 Analyzing core dump files on another machine - Using WSL to open core dump files
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article discusses how to use Windows Subsystem for Linux (WSL) version 2 to open a core dump file on another virtual machine (VM).
 

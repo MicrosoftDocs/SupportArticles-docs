@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Overview of ASP.NET Core on Linux troubleshooting
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article provides an overview of how to troubleshoot ASP.NET Core applications on Linux and what you should consider before the troubleshooting.
 
@@ -15,7 +15,7 @@ This article provides an overview of how to troubleshoot ASP.NET Core applicatio
 
 This training series targets an audience that has no previous experience with the Linux operating system. The goal is to enable someone who has little or no knowledge about Linux to get started quickly on installing, managing, and troubleshooting ASP.NET Core applications on Linux.
 
-Any experience that you might have in troubleshooting web applications is a plus. However, it’s not necessary. Users who try to follow this tutorial but lack troubleshooting experience should not be concerned about that. Throughout the series, you will learn the reasoning behind every action. The goal is to provide a general, hands-on approach to troubleshooting different kinds of problems that you might encounter when you run ASP.NET Core workloads on Linux.
+Any experience that you might have in troubleshooting web applications is a plus. However, it's not necessary. Users who try to follow this tutorial but lack troubleshooting experience should not be concerned about that. Throughout the series, you will learn the reasoning behind every action. The goal is to provide a general, hands-on approach to troubleshooting different kinds of problems that you might encounter when you run ASP.NET Core workloads on Linux.
 
 The main prerequisite is to have a Linux virtual machine available so that you can follow the proposed exercises throughout the training.
 

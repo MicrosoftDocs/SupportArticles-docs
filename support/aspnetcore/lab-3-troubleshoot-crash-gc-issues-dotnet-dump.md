@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Lab 3 Troubleshooting performance and GC issues with dotnet-dump in Linux
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article introduces how to use the dotnet-dump tool to capture and analyze .NET Core dumps and use `dotnet-gcdump` to generate GC related reports in Linux.
 
@@ -61,24 +61,24 @@ To collect a core dump file by using dotnet-dump, you will use the `dotnet-dump 
 
 If you try to run the `dotnet-dump ps` command, you'll encounter some unexpected results.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/ps.png" alt-text="BuggyAmb ps" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/ps-command.png" alt-text="Screenshot of ps command" border="true":::
 
 Two processes are displayed in this listing. However, one of them is shown as an elevated process, and its path cannot be determined by the `dotnet-dump` ps command. To find its path, examine the process command line information by running the `cat /proc/<PID>/cmdline` command.
 
 > [!NOTE]
 > In this command, replace `<PID>` with the actual process ID of the target process, as seen in the following sample output. You may recall the special */proc/* directory from previous sections, and that a process in Linux can be seen as another folder under that directory (having the name of process ID). You can find all the details about a process by examining the */proc/\<PID>/* directory structure.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/cmdline.png" alt-text="BuggyAmb cmdline" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/cat-cmdline-command.png" alt-text="Screenshot of cat cmdline command" border="true":::
 
 As shown in this screenshot, the output of the first command (`cat /proc/6164/cmdline`) tells you that this is your first demo ASP.NET Core application. The output of the second command (`cat /proc/15586/cmdline`) tells you that this is your buggy application.
 
 Although the `dotnet-dump ps` command was not able to retrieve the process path, it should still be able to generate the necessary dump files to troubleshoot. Try capturing a core dump file by using the `dotnet-dump collect` command. First, try the demo application for which the tool was able to display the process path. Run `dotnet-dump collect -p 6164` (the process PID will be different when you try the exercise).
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/collect.png" alt-text="BuggyAmb collect" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/collect-command.png" alt-text="Screenshot of collect command" border="true":::
 
 Generating the memory dump file is successful. Now, try to collect a core dump file for the buggy application for which the tool could not list the process path when you used the `dotnet-dump ps` command. Run `dotnet-dump collect -p 15586`, and notice that this fails unexpectedly.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/collect2.png" alt-text="BuggyAmb collect2" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/dotnet-collect-command.png" alt-text="Screenshot of dotnet collect command" border="true":::
 
 The following error message is returned:
 
@@ -88,7 +88,7 @@ When you noticed that the `dotnet-dump ps` command could not get the process pat
 
 From the previous error message, you can determine that there is a permission issue involved. But what is the difference between the two processes, the first hosting the .NET Core 5 sample application and the second hosting the .NET Core 3 application? Compare the service files for each process. You should be able to spot the difference with relative ease: The user account that runs each process is different.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/two.png" alt-text="BuggyAmb two" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/two-command.png" alt-text="Screenshot of two commands" border="true":::
 
 The left side of the listing corresponds to the first demo application, in which everything works fine, and the application runs as \<User Name> (or the user account that you used when you set up the environment and logged in). The right side corresponds to the buggy application, for which the dump file collection failed. and the application runs as **www-data** user.
 
@@ -96,7 +96,7 @@ The solution to this issue is discussed on the official [GitHub page](https://gi
 
 As a summary, if you're running your service process as a different user than the one for the account that you used to log in, you should run the `dotnet-dump collect` command as follows.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/sudo.png" alt-text="BuggyAmb sudo" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/sudo-command.png" alt-text="Screenshot of sudo command" border="true":::
 
 Here's the format of the command:
 
@@ -106,7 +106,7 @@ sudo -H -u <user name of service> bash -c "<full path to dotnet tools>/dotnet-du
 
 You can determine the full path of the dotnet-dump tool by using the `whereis dotnet-dump` command.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/whereis.png" alt-text="BuggyAmb whereis" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/whereis-command.png" alt-text="Screenshot of whereis command" border="true":::
 
 The output path should be a directory where the user has the Write permission. Usually, you can create the directory under the */tmp* directory, and then copy the dump file to your home directory later.
 
@@ -116,7 +116,7 @@ For this exercise, you do not have to capture a new dump file. Instead, you can 
 
 To open the dump file by using dotnet-dump, run `dotnet-dump analyze ~/dumps/coredump.manual.2.11724` (the name of the memory dump file will be different on your computer). This is the same managed debugger engine that you used earlier in lldb. If your symbols are correctly configured and SOS is installed correctly, you can run any SOS commands, the same as you can by using lldb. In the following listing, you can see the `clrstack` command in action.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/clrstack.png" alt-text="BuggyAmb clrstack" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/clrstack-command.png" alt-text="Screenshot of clrstack command" border="true":::
 
 There are two things to keep in mind:
 
@@ -127,7 +127,7 @@ While you have the core dump file open, take this opportunity to practice a few 
 
 How can you check the CPU usage in a dump? The `threadpool` command might help to reveal this information. It reports the "total CPU usage of server" (not only for the process that's being debugged), but it still provides a general idea of the resource consumption on the computer at the time that the memory dump file was generated. The following screenshot shows that the server's total CPU usage was around **94%**.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/cpu.png" alt-text="BuggyAmb cpu" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/threadpool-command.png" alt-text="Screenshot of threadpool command" border="true":::
 
 > [!NOTE]
 > The server that was used to create these listings was equipped with two CPUs. This is why it generates reports such as this.
@@ -136,7 +136,7 @@ The same output also shows thread pool configuration and, in the previous listin
 
 Do you want to group the call stack of all running threads and show a merged display, similar to the Visual Studio **Parallel Stacks** panel? Run `pstacks` to obtain a similar result.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/pstacks.png" alt-text="BuggyAmb pstacks" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/pstacks-command.png" alt-text="Screenshot of pstacks command" border="true":::
 
 To further your understanding of the available SOS commands, open SOS Help, and review each command individually to familiarize yourself with the power of SOS debugging.
 
@@ -193,18 +193,18 @@ Here are the steps:
 
 Remember that you're troubleshooting a performance problem. It's a good idea to have multiple sets of data so that you can compare how the managed heap evolved over time. The result of these commands will be that two gcdump files are generated.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/gcdump.png" alt-text="BuggyAmb gcdump" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/sudo-h-command.png" alt-text="Screenshot of sudo h command" border="true":::
 
 ## Creating reports from gcdump files
 
 Copy both gcdump files to your Windows-based computer, and open them in Visual Studio 2019. The following screenshot shows the comparison results of both gcdump files taken for this listing. As you can see, there's a big difference between the **String** object type values. You can also get some root information about objects.
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/files.png" alt-text="BuggyAmb files" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/report-files.png" alt-text="Screenshot of report files" border="true":::
 
 This can be useful information.
 
 Alternatively, you can open gcdump reports in [PerfView](https://linqto.me/PerfView).
 
-:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/report.png" alt-text="BuggyAmb report" border="true":::
+:::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/report-file.png" alt-text="Screenshot of report file" border="true":::
 
 If you have to look at only the managed heap, then this could be the fastest option for you. Just remember to exercise caution when you use `dotnet-gcdump` in production, because as mentioned earlier, it will trigger a full GC in your process, and this might cause long pauses. Use this tool in production carefully and only when necessary when you troubleshoot a memory problem.

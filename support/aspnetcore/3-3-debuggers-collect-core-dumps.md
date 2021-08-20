@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 3.3 - Debuggers, core dumps, and collecting core dumps
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article introduces debuggers and core dumps and the tools to capture and analyze core dump files in Linux.
 
@@ -53,11 +53,11 @@ In Ubuntu, the [apport](https://wiki.ubuntu.com/Apport) system service manages c
 
 Apport uses *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the core dump file into apport. If you run the `cat /proc/sys/kernel/core_pattern` command while apport is running, you should see the following result.
 
-:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/core.png" alt-text="BuggyAmb core" border="true":::
+:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/cat-core-command.png" alt-text="Screenshot of cat core command" border="true":::
 
 If you disable apport, this does not prevent core dump generation upon process termination. Instead, it simply stops apport. The system will then revert to its default behavior by generating core dumps itself. If you run the same `cat /proc/sys/kernel/core_pattern` after apport is stopped, you will see the following default system behavior.
 
-:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/cat.png" alt-text="BuggyAmb cat" border="true":::
+:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/sudo-cat-command.png" alt-text="Screenshot of sudo and cat command" border="true":::
 
 ## Disabling automatic core dump generation
 
@@ -68,7 +68,7 @@ To disable automatic core dump file generation, do the following:
 
 Apport can be stopped and disabled the same as any other service. Use the `sudo systemctl stop apport` command and the `sudo systemctl disable apport` command to stop the service, and then disable it to prevent it from being restarted.
 
-:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/stop.png" alt-text="BuggyAmb stop" border="true":::
+:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/sudo-systemctl-stop-apport-command.png" alt-text="Screenshot of sudo systemctl stop apport command" border="true":::
 
 To disable the operating system's automatic dump file generation for all processes that are running under all user accounts on the computer, you have to take the steps that are provided in such articles [as this one](https://wiki.archlinux.org/index.php/Core_dump).
 
@@ -122,7 +122,7 @@ You have to use lldb 3.9 or a later version to analyze the core dump files that 
 
 You can find createdump in the .NET Core installation directory. To find this directory, run the `dotnet --list-runtimes` command. As shown in the following screenshot, separate createdump file was created for the two versions of active runtimes.
 
-:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/dotnet.png" alt-text="BuggyAmb dotnet" border="true":::
+:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/dotnet-command.png" alt-text="Screenshot of dotnet command" border="true":::
 
 ## dotnet-dump
 
@@ -212,17 +212,17 @@ By default, the SDK installs in a "side-by-side" configuration. This means that 
 
 For example, on the test Linux virtual machine, you should have both the .NET Core 3.1 and 5.0 SDKs installed. If you run .NET Core by including the `--version` switch, you should see that the latest version is used.
 
-:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/list.png" alt-text="BuggyAmb list" border="true":::
+:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/list-command.png" alt-text="Screenshot of list command" border="true":::
 
 Now, create a *global.json* file in the current directory (your home directory), and set the version explicitly by using the cat tool, as shown. Then, check the version again. It is now showing the exact SDK version that you put inside the *global.json* file.
 
-:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/json.png" alt-text="BuggyAmb json" border="true":::
+:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/cat-json-command.png" alt-text="Screenshot of cat json command" border="true":::
 
 This is important to know when you run some SDK commands, such as creating an application by using the .NET Core `new` command. However, you won't have to do this when you use the dotnet-dump and dotnet-gcdump tools.
 
 .NET Core SDK installs the latest version of the tools regardless of which SDK you selected. For example, if you ran the commands to install the dotnet-dump, dotnet-gcdump, and dotnet-symbol tools for .NET Core SDK 3.1, the latest versions of these tools will be downloaded and installed, as shown in the next screenshot (where version 5 of the tools for dotnet-dump and dotnet-gcdump have been installed).
 
-:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/tool.png" alt-text="BuggyAmb tool" border="true":::
+:::image type="content" source="./media/3-3-debuggers-collect-core-dumps/dotnet-tool-command.png" alt-text="Screenshot of dotnet tool command" border="true":::
 
 The following articles are great resources for more information about .NET Core tools:
 

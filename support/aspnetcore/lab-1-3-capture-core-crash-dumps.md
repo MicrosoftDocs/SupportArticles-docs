@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Lab 1.3 Troubleshooting a crash problem - Capturing core crash dumps with createdump tool
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article discusses how to use the createdump tool to capture .NET Core crash dump files in Linux, and then use lldb to diagnose the crash problem.
 

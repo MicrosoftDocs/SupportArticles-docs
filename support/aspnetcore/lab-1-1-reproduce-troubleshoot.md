@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Lab 1.1  Reproducing and troubleshooting a crash problem
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article introduces the process of reproducing the .NET Core crash problem in Linux. This article also discusses how to check the Nginx tool and system logs for symptoms and indications of the crash.
 

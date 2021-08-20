@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 1.1 - Creating a Linux virtual machine in Azure and connecting to it
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 **Goal of this part**
 

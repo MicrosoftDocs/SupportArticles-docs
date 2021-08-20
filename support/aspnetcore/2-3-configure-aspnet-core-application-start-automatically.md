@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Part 2.3 - Configuring the ASP.NET Core application to start automatically
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article introduces how to configure the ASP.NET Core application to ensure that the application starts automatically after the server restarts.
 

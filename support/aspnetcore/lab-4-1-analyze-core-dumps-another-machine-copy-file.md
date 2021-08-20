@@ -7,7 +7,7 @@ ms.reviewer: ramakoni, ahmet.bostanci
 ---
 # Lab 4.1 Analyzing core dump files after copying them to another machine
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article discusses how to copy core dump files from Linux machine to another. For example, you collect core dump files from Linux, and then you copy them to a Windows virtual machine (VM) to analyze.
 
@@ -35,13 +35,13 @@ In this first part of the lab, you will be guided through the procedure of copyi
 
 During the exercises in this training for debugging a failing ASP.net core application, you generated three manual memory dump files. Now, you will learn how to copy those core dump files to a Windows VM.
 
-:::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/ll.png" alt-text="BuggyAmb ll" border="true":::
+:::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/ll-command.png" alt-text="Screenshot of ll command" border="true":::
 
 Remember that a core dump file contains the process memory. Therefore, the size of a core dump could be quite large if the process memory usage is high. Instead of copying each core dump file one by one, you can optimize the transfer. To do this, package and compress them using the tar command so that you will have one compressed *coredumps.tar.gz* file that contains all three core dump files.
 
 As the following screenshot shows, you can use the `tar -czvf coredumps.tar.gz coredump.manual.*` command to create the compressed archive file.
 
-:::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/tar.png" alt-text="BuggyAmb tar" border="true":::
+:::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/tar-command.png" alt-text="Screenshot of tar command" border="true":::
 
 In the previous example, the archive file *coredumps.tar.gz* is in the dump files folder in the *:::no-loc text="home":::* directory on the Linux VM. The objective is to copy the *:::no-loc text="/home/UserName/coredumps.tar.gz":::* to *d:\Learn\Linux\Dumps* folder on the target Windows VM.
 
@@ -61,7 +61,7 @@ pscp -i D:\Learn\Linux\BuggyAmb-Ubuntu-Training_key.ppk <UserName>@buggyamb:/hom
 
 As the following screenshot shows, the command successfully copied the *coredumps.tar.gz* file to the local VM in the *D:\Learn\Linux\Dumps* folder.
 
-:::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/ahnetnb.png" alt-text="BuggyAmb ahnetnb" border="true":::
+:::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/ahnetnb-command.png" alt-text="Screenshot of ahnetnb command" border="true":::
 
 ## Other options to copy files from Linux
 

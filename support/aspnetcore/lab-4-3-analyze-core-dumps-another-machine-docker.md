@@ -7,7 +7,7 @@ ms.reviewer: ramakoni, ahmet.bostanci
 ---
 # Lab 4.3 Analyzing core dump files on another machine - Using Docker to open core dump files
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article discusses how to use Docker to open a core dump file on a Windows virtual machine (VM).
 
@@ -81,7 +81,7 @@ Create a file that's named *dockerfile* in the same directory that contains the 
 
 Again, you have to switch to Linux containers in Docker if it's running Windows containers.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/switch.png" alt-text="BuggyAmb switch" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/switch-linux.png" alt-text="Screenshot of switch linux menu" border="true":::
 
 Then, open a Command Prompt window, and change to the folder that contains the *coredumps.tar.gz* and dockerfile file. To build the docker container, run `docker build -t dotnettools .`.
 
@@ -92,18 +92,18 @@ Then, open a Command Prompt window, and change to the folder that contains the *
 
 Here is the output of the build command. Because the same command had been run several times, it uses its internal cache for the target image. The first time that you run this command, it will download the necessary files, and then cache them for later use when necessary. It may take some time to build the image when you first run the command.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/docker.png" alt-text="BuggyAmb docker" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/docker-command.png" alt-text="Screenshot of docker command" border="true":::
 
 Then, run the container by using the `docker container run -it dotnettools /bin/bash` command.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/bash.png" alt-text="BuggyAmb bash" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/docker-container-command.png" alt-text="Screenshot of docker container command" border="true":::
 
 That's it. You're now inside the newly built Linux container. The rest is the same as before: You will open your core dump by using with the same dotnet-dump command: `dotnet-dump analyze /dumps/coredump.manual.1.11724`. Here is the result from the sample environment that's used to build the training series.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/manual.png" alt-text="BuggyAmb manual" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/dotnet-dump-command.png" alt-text="Screenshot of dotnet dump command" border="true":::
 
 You can run SOS commands, such as `clrthreads`, to display the managed threads.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/clrthreads.png" alt-text="BuggyAmb clrthreads" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/clrthreads-command.png" alt-text="Screenshot of clrthreads command" border="true":::
 
 Now, you are ready to analyze core dump files in a Linux container by using Docker.

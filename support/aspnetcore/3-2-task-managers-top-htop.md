@@ -6,7 +6,7 @@ ms.reviewer: ramakoni
 ---
 # Part 3.2 - Linux task managers, top, and htop
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article introduces how to use `top` and `htop` command line tools to monitor processes.
 

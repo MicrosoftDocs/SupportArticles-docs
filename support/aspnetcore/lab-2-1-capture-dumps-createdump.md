@@ -7,7 +7,7 @@ ms.reviewer: ramakoni
 ---
 # Lab 2.1 Troubleshooting performance problems by using createdump in Linux
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
+_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
 This article helps you analyze performance problems, and describes how to use createdump and procdump to capture .NET Core memory dump files manually in Linux.
 
@@ -35,7 +35,7 @@ So far in this troubleshooting series, you've analyzed a crash problem. In this 
 
 ## Reproducing the problem
 
-In a previous part, you tested the first "slow" scenario by selecting the **Slow** link. When you do this, the page loads correctly, but much more slowly than expected. In this part, You will use the BuggyAmb **Load Generator** feature to troubleshoot this performance problem. This is an "experimental" feature that sends up to six simultaneous requests to any problematic resource. It's limited to six because it uses jQuery and Ajax calls to issue the requests. Web browsers set a limit on most Ajax requests to six concurrent requests to a given URL. If you want to learn how to use **Load Generator** to reproduce different scenarios, see [this Docs article](https://github.com/ahmetmithat/buggyamb/blob/master/Docs/load_generator.md).
+In a previous part, you tested the first "slow" scenario by selecting the **Slow** link. When you do this, the page loads correctly, but much more slowly than expected. In this part, You will use the BuggyAmb **Load Generator** feature to troubleshoot this performance problem. This is an "experimental" feature that sends up to six simultaneous requests to any problematic resource. It's limited to six because it uses jQuery and Ajax calls to issue the requests. Web browsers set a limit on most Ajax requests to six concurrent requests to a given URL.
 
 To reproduce the problem, open **Problem Pages**, select **Load Generator**, and then send six requests in the **Slow** scenario.
 
