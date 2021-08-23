@@ -36,7 +36,7 @@ To enable LDAPS, you must install a certificate that meets the following require
 
 - The Enhanced Key Usage extension includes the Server Authentication (1.3.6.1.5.5.7.3.1) object identifier (also known as OID).
 
-- The Active Directory fully qualified domain name of the domain controller (for example, DC01.EXAMPLE.COM) must appear in one of the following places:
+- The Active Directory fully qualified domain name of the domain controller (for example, dc01.contoso.com) must appear in one of the following places:
   
   - The Common Name (CN) in the Subject field.
   - DNS entry in the Subject Alternative Name extension.
