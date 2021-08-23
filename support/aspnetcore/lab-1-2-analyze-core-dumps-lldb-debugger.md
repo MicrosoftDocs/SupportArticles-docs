@@ -141,7 +141,7 @@ There are several lldb commands. You can list these by using the `help` command.
 
 To begin, look at the thread's native call stack by using the `bt` ("back trace") command. This command shows the call stack of the active thread.
 
-:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/bt-command.png" alt-text="Screenshot of sudo command" border="true":::
+:::image type="content" source="./media/lab-1-2-analyze-core-dumps-lldb-debugger/bt-command.png" alt-text="Screenshot of bt command" border="true":::
 
 Next, examine the managed call stack by using the SOS `clrstack` command.
 

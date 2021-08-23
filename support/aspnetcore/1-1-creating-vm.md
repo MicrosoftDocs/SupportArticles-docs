@@ -188,7 +188,7 @@ To convert files, follow these steps:
 
     Now, you're ready to connect to the virtual machine by using the PPK file.
 
-6. Start PuTTY. You'll use the same \<username>@<host | IP address> format for the connection information. You can save this session information to reuse later. The next screenshot shows the **PuTTY Configuration** dialog box after the current session was saved. The dialog box shows the host information in \<username>@<host | IP address> format and the session name after it was selected from the available list.
+6. Start PuTTY. You'll use the same \<username\>@\<host | IP address\> format for the connection information. You can save this session information to reuse later. The next screenshot shows the **PuTTY Configuration** dialog box after the current session was saved. The dialog box shows the host information in \<username>@<host | IP address> format and the session name after it was selected from the available list.
 
     :::image type="content" source="./media/1-1-creating-vm/save-putty-configuration.png" alt-text="Screenshot of putty configuration" border="false":::
 

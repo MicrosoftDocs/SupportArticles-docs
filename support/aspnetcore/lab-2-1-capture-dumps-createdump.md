@@ -35,7 +35,7 @@ So far in this troubleshooting series, you've analyzed a crash problem. In this 
 
 ## Reproducing the problem
 
-In a previous part, you tested the first "slow" scenario by selecting the **Slow** link. When you do this, the page loads correctly, but much more slowly than expected. In this part, You will use the BuggyAmb **Load Generator** feature to troubleshoot this performance problem. This is an "experimental" feature that sends up to six simultaneous requests to any problematic resource. It's limited to six because it uses jQuery and Ajax calls to issue the requests. Web browsers set a limit on most Ajax requests to six concurrent requests to a given URL.
+In a previous part, you tested the first "slow" scenario by selecting the **Slow** link. When you do this, the page loads correctly, but much more slowly than expected. In this part, You will use the BuggyAmb **Load Generator** feature to troubleshoot this performance problem. This is an "experimental" feature that sends up to six simultaneous requests to any problematic resource. It's limited to six because it uses jQuery and Ajax calls to issue the requests. Web browsers set a limit on most Ajax requests to six concurrent requests to a given URL. If you want to learn how to use **Load Generator** to reproduce different scenarios, see [Experimental "Load Generator"](https://github.com/dotnet/samples/blob/main/core/tutorials/buggyamb/Docs/load_generator.md).
 
 To reproduce the problem, open **Problem Pages**, select **Load Generator**, and then send six requests in the **Slow** scenario.
 

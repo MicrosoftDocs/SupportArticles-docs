@@ -60,11 +60,11 @@ The private key is the same *.ppk* key that was converted from a *.pem* file whe
 
 ### Downloading a sample project
 
-For this tutorial, you will copy a test application that is named BuggyAmb. This application is available on its own GitHub page (`https://github.com/<UserName>/buggyamb`, this link will be changed soon). We recommend that you use this sample application because the next parts use this application to simulate high and low CPU performance problems and crash issues in the troubleshooting labs.
+For this tutorial, you will copy a test application that is named BuggyAmb. This application is available on [What is BuggyAmb](https://github.com/dotnet/samples/tree/main/core/tutorials/buggyamb). We recommend that you use this sample application because the next parts use this application to simulate high and low CPU performance problems and crash issues in the troubleshooting labs.
 
 BuggyAmb is simply a buggy ASP.NET Core 3.1-based Razor Pages application. This application was intentionally created as a buggy application to be used as a learning resource to troubleshoot problematic scenarios for an ASP.NET Core application on Linux.
 
-You can find the source code files at [ASP.NET Core binaries for Linux](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz). Download the *.tar.gz* version (direct link: *buggyamb_v1.1.tar.gz*) because the *.tar.gz* format is common in the Linux world. You can also download the [buggyamb_v1.1](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.zip) in Windows.
+You can find the source code files at [ASP.NET Core binaries for Linux](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz). This is in *.tar.gz* format because that format is common in the Linux world. You can also download the [buggyamb_v1.1](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.zip) in *.zip* format for Windows.
 
 ### Copying buggyamb_v1.1.tar.gz file to a Linux VM
 
