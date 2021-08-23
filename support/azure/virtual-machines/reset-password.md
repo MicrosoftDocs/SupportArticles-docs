@@ -19,15 +19,15 @@ ms.author: genlin
 
 # How to reset local Linux password on Azure VMs
 
-This article introduces two methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you just want to create a new account, you can use the following methods to create a new local admin account and re-gain access to the VM.
+This article introduces two methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you just want to create a new account, you can use the following methods to create a new local admin account and regain access to the VM.
 
 ## Reset the password from a user account
 
-You can reset the password withouht attaching the OS disk to another VM. But this method requireds the WALinuxAgent is installed in the affected VM. 
+You can reset the password without attaching the OS disk to another VM. But this method requires the WALinuxAgent is installed in the affected VM. 
 
 1. Make sure that WA Linux Agent service is running on the affected VM.
 
-2. Setup the environment variables and use the Azure CLI or Azure Cloud Shell to perform the password reset:
+2. Set up the environment variables and use the Azure CLI or Azure Cloud Shell to perform the password reset:
 
     ```
     AZ_RESOURCE_GROUP="YourResourceGroupName"
@@ -41,13 +41,13 @@ You can reset the password withouht attaching the OS disk to another VM. But thi
 
 To update the SSH key, see [Manage administrative users, SSH by using the VMAccess Extension with the Azure CLI](/azure/virtual-machines/extensions/vmaccess#update-ssh-key)
 
-You can also reset the password or SSH key by using the **Reset Password** feature in the Azure Portal.
+You can also reset the password or SSH key by using the **Reset Password** feature in the Azure portal.
 
 ## Reset the password by using a recovery VM
 
-This methods have been tested by using [the supported the Linux distributions and versions](/azure/virtual-machines/linux/endorsed-distros).
+This method have been tested by using [the supported the Linux distributions and versions](/azure/virtual-machines/linux/endorsed-distros). 
 
-If you are experiencing problems with a Azure network virtual appliance, this method does not apply to your scenario. You must contact the vendor of the network virtual appliance to get instructions about how to perform a password reset safely.
+If you are experiencing problems with an Azure network virtual appliance, this method does not apply to your scenario. You must contact the vendor of the network virtual appliance to get instructions about how to perform a password reset safely.
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see Snapshot a disk.
 1. Run [az vm repair create](/cli/azure/vm/repair?view=azure-cli-latest) to create a copy of the OS disk, and attach the disk to a recovery VM:
@@ -115,11 +115,11 @@ If you are experiencing problems with a Azure network virtual appliance, this me
     az vm repair restore -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --verbose
     ```
 
-1. Enter the server from the serial console or using SSH with the user account that the password is reset to blank.  When the system asks of the user password, press enter to log in to the system. If the serial console is not enabled on the virtual machine you will have to attach a storage account to it to enable boot diagnostics.
+1. Enter the server from the serial console or using SSH with the user account that the password is reset to blank.  When the system asks of the user password, press enter to log in to the system. If the serial console is not enabled on the VM you will have to attach a storage account to it to enable boot diagnostics.
 
-1. Use the "passwd" command to setup a new password for the user account intermediately.
+1. Use the "passwd" command to set up a new password for the user account intermediately.
 
-1. Access the server using SSH and enter the new password you setup from the serial console.
+1. Access the server using SSH and enter the new password that you set up from the serial console.
 
 
 
