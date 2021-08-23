@@ -21,9 +21,13 @@ Currently WSUS uses the following endpoints to synchronize metadata:
 - [https://sws.update.microsoft.com](https://sws.update.microsoft.com)
 
   Most WSUS servers should synchronize with this new endpoint. Starting from July 2020, this endpoint accepts only Transport Layer Security (TLS) 1.2 connections. And some ciphers were disabled.
+- [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com)
+  
+  This old endpoint will be decommissioned eventually, as documented here: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/end-of-synchronization-for-wsus-3-0-sp2/ba-p/2371993. This endpoint supports TLS 1.2, TLS 1.1, and TLS 1.0 connections.
+  
 - [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com)
   
-  This old endpoint will be decommissioned eventually. Currently, it's used by some WSUS 3.0 servers that can't connect with the new endpoint. This endpoint supports TLS 1.2, TLS 1.1, and TLS 1.0 connections.
+  This old endpoint is decommissioned and connections to it will fail.
 
 When you experience WSUS synchronization or manual import problems, first check which endpoint you're synchronizing with:
 
@@ -37,7 +41,7 @@ When you experience WSUS synchronization or manual import problems, first check 
    $config.MUUrl
    ```
 
-Windows Server 2012 and later versions should be configured to use the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint. If you're still using the [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com) endpoint, change it to the new endpoint by following the steps in [WSUS synchronization fails with SoapException](wsus-synchronization-fails-with-soapexception.md#resolution). If necessary, troubleshoot connection issues with the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint.
+Windows Server 2012 and later versions should be configured to use the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint. If you're still using [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com) or [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com) endpoints, change to the new endpoint by following the steps in [WSUS synchronization fails with SoapException](wsus-synchronization-fails-with-soapexception.md#resolution). If necessary, troubleshoot connection issues with the [https://sws.update.microsoft.com](https://sws.update.microsoft.com) endpoint.
 
 ## Issue 1: Manual import fails, but synchronization succeeds
 
@@ -51,7 +55,7 @@ This issue occurs on WSUS servers that are running Windows Server 2012, Windows 
 
 ### Troubleshoot issue 1
 
-1. Run the PowerShell script in [Endpoints](#endpoints) to determine which endpoints the WSUS servers use. You'll probably find that working servers are communicating with [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com), and failing servers are communicating with [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
+1. Run the PowerShell script in [Endpoints](#endpoints) to determine which endpoints the WSUS servers use. You'll probably find that working servers are communicating with [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com) or [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com), and failing servers are communicating with [https://sws.update.microsoft.com](https://sws.update.microsoft.com).
 2. Check the `%Program Files%\Update Services\LogFiles\SoftwareDistribution.log` file for errors when you manually import updates. Look for errors that resemble the following example:
 
    ```output
@@ -323,7 +327,7 @@ Additional connection setup occurs in frames 196-203. The data transfer by the a
 
 ## A note about proxy servers
 
-If you use a proxy server, the network capture will look different. The WSUS server connects to the proxy, and you may see a CONNECT request with the destination [https://sws.update.microsoft.com](https://sws.update.microsoft.com) or [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com). WSUS will issue a Client Hello packet with the ciphers it supports. If the connection isn't successful because of wrong TLS version, or if there is no common cipher, you may or may not see an RST packet. Proxies tend to return an FIN to the client to indicate the end of the connection. But this might not be true for every proxy server. Some proxy servers send an RST packet, or something else.
+If you use a proxy server, the network capture will look different. The WSUS server connects to the proxy, and you may see a CONNECT request with the destination [https://sws.update.microsoft.com](https://sws.update.microsoft.com), [https://sws1.update.microsoft.com](https://sws1.update.microsoft.com) or [https://fe2.update.microsoft.com](https://fe2.update.microsoft.com). WSUS will issue a Client Hello packet with the ciphers it supports. If the connection isn't successful because of wrong TLS version, or if there is no common cipher, you may or may not see an RST packet. Proxies tend to return an FIN to the client to indicate the end of the connection. But this might not be true for every proxy server. Some proxy servers send an RST packet, or something else.
 
 When you use a proxy, you have to know the IP address of the internal interface of the proxy server, because WSUS isn't communicating directly with the WU endpoints. If you can't get the IP address of the proxy server, search the network capture for CONNECT requests, and search for the URL of the Windows Update endpoint.
 
