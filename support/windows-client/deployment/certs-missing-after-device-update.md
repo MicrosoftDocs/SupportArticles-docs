@@ -19,7 +19,7 @@ keywords: managed devices, certificates, WSUS, MECM, Windows Update
 
 This article provides workarounds for an issue in which a device loses its system and user certificates after an operating system update.
 
-_Original product version:_ &nbsp;Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1903
+_Applies to:_ &nbsp;Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1903
 
 ## Symptoms
 
@@ -56,10 +56,10 @@ To roll back, follow these steps:
 
 To add the latest LCU to the update source, follow these steps:
 
-1. Mount the source ISO image, and then copy the install.wim file to a writeable location.  
+1. Mount the source ISO image, and then copy the *Install.wim* file to a writeable location.  
 
    > [!NOTE]  
-   > If the image has an Install.esd file instead of an Install.wim file, use the [**:::no-loc text="Dism /Export-Image":::**](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
+   > If the image has an *Install.esd* file instead of an *Install.wim* file, use the [**:::no-loc text="Dism /Export-Image":::**](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
 
 2. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) to look up the correct LCU number for your system version.
 
@@ -68,7 +68,7 @@ To add the latest LCU to the update source, follow these steps:
    > [!NOTE]  
    >
    > - If you're using WSUS to manage updates, see [WSUS and the Catalog Site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site#the-microsoft-update-catalog-site). This article describes how to use WSUS to download updates from the Microsoft Update Catalog.
-   > - If you are using Microsoft Enpoint Manager to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
+   > - If you are using Microsoft Endpoint Manager to manage updates, see [Software update management documentation](/mem/configmgr/sum/).
 
 4. To add the LCU to the image, open an administrative Command Prompt window, and then run the following command:
 
