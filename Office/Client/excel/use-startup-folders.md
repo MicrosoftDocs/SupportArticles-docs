@@ -38,12 +38,12 @@ The actual startup folder locations vary, depending on which version of Excel yo
 
 If you install Excel in the default location, Excel opens files from the following paths:
 
-- *C:\Program Files\Microsoft Office\<Office1x>\Xlstart*
+- `C:\Program Files\Microsoft Office\<Office1x>\Xlstart`
 
     > [!NOTE]
     > The \<Office1x\> boilerplate represents the version number (Microsoft Office Excel 2007 is Office12 and Microsoft Office Excel 2003 is Office11)
 
-- *C:\Documents and Settings\<User_name>\Application Data\Microsoft\Excel\XLSTART*
+- `C:\Documents and Settings\<User_name>\Application Data\Microsoft\Excel\XLSTART`
 
     In this path, <User_name> is your logon user name.
 
