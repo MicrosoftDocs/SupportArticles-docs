@@ -488,7 +488,7 @@ To get mail flow working again, make sure that the following requirements are me
 
 When you run either Exchange setup or the PrepareAD command, the process fails with the following error message:
 
->The well-known object entry B:<guid>:CN=Recipient Management\0ADEL:<guid>,CN=Deleted Objects,DC=contoso,DC=com on the otherWellKnownObjects attribute in the container object CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com points to an invalid DN or a deleted object. Remove the entry, and then rerun the task. at Microsoft.Exchange.Configuration.Tasks.Task.ThrowError(Exception exception, ErrorCategory errorCategory, Object target, String helpUrl)
+>The well-known object entry B:\<guid\>:CN=Recipient Management\0ADEL:\<guid\>,CN=Deleted Objects,DC=contoso,DC=com on the otherWellKnownObjects attribute in the container object CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com points to an invalid DN or a deleted object. Remove the entry, and then rerun the task. at Microsoft.Exchange.Configuration.Tasks.Task.ThrowError(Exception exception, ErrorCategory errorCategory, Object target, String helpUrl)
 
 **Cause:**
 
