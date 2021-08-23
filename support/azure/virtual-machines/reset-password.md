@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 08/23/2021
-ms.author: genlin
+ms.author: genli
 
 ---
 
@@ -50,7 +50,7 @@ This method have been tested by using [the supported the Linux distributions and
 If you are experiencing problems with an Azure network virtual appliance, this method does not apply to your scenario. You must contact the vendor of the network virtual appliance to get instructions about how to perform a password reset safely.
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see Snapshot a disk.
-1. Run [az vm repair create](/cli/azure/vm/repair?view=azure-cli-latest) to create a copy of the OS disk, and attach the disk to a recovery VM:
+1. Run [az vm repair create](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) to create a copy of the OS disk, and attach the disk to a recovery VM:
     ```
     AZ_RESOURCE_GROUP="YourResourceGroupName"
     AZ_VM_NAME="VMname"
