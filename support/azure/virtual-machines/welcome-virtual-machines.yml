@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Azure Virtual Machines troubleshooting documentation
-summary: Welcome to Azure Virtual Machines troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Virtual Machines. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.<a href="https://www.w3schools.com/html/html_links.asp">link text</a>
+summary: Welcome to Azure Virtual Machines troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Virtual Machines. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
   title: Troubleshoot common issues with Azure Virtual Machines
   description: Documentation for troubleshooting common issues with Azure Virtual Machines. # Required; article description that is displayed in search results. < 160 chars.
