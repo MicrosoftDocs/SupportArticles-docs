@@ -23,7 +23,7 @@ This article introduces two methods to reset local Linux Virtual Machine (VM) pa
 
 ## Reset the password from a user account
 
-You can reset the password without attaching the OS disk to another VM. But this method requires the WALinuxAgent is installed in the affected VM. 
+You can reset the password without attaching the OS disk to another VM. This method requires the WALinuxAgent is installed in the affected VM. 
 
 1. Make sure that WA Linux Agent service is running on the affected VM.
 
@@ -120,9 +120,6 @@ If you are experiencing problems with an Azure network virtual appliance, this m
 1. Use the "passwd" command to set up a new password for the user account intermediately.
 
 1. Access the server using SSH and enter the new password that you set up from the serial console.
-
-
-
 
 ## Next steps
 
