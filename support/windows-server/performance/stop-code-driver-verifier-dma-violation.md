@@ -15,7 +15,7 @@ ms.technology: windows-server-performance
 ---
 # Stop code DRIVER_VERIFIER_DMA_VIOLATION when Kernel DMA Protection is enabled
 
-The operating system crashes when the Kernel Direct Memory Access (DMA) Protection feature is enabled in Windows Server 2019, and the following stop error (blue screen error) message is displayed:
+The operating system crashes when the Kernel Direct Memory Access (DMA) Protection feature is enabled in Windows Server 2019 or Windows 10 build 1803 and later, and the following stop error (blue screen error) message is displayed:
 
 > DRIVER_VERIFIER_DMA_VIOLATION (e6)  
 An illegal DMA operation was attempted by a driver being verified.  
