@@ -23,7 +23,7 @@ This article introduces two methods to reset local Linux Virtual Machine (VM) pa
 
 ## Reset the password from a user account
 
-You can reset the password without attaching the OS disk to another VM. This method requires the WALinuxAgent is installed in the affected VM. 
+You can reset the password without attaching the OS disk to another VM. This method requires the WALinuxAgent is installed in the affected VM.
 
 1. Make sure that WA Linux Agent service is running on the affected VM.
 
@@ -39,13 +39,13 @@ You can reset the password without attaching the OS disk to another VM. This met
     ```
 3. Try to access the VM.
 
-To update the SSH key, see [Manage administrative users, SSH by using the VMAccess Extension with the Azure CLI](/azure/virtual-machines/extensions/vmaccess#update-ssh-key)
+To update the SSH key, see [Manage administrative users, SSH by using the VMAccess Extension with the Azure CLI](/azure/virtual-machines/extensions/vmaccess#update-ssh-key).
 
 You can also reset the password or SSH key by using the **Reset Password** feature in the Azure portal.
 
 ## Reset the password by using a recovery VM
 
-This method have been tested by using [the supported the Linux distributions and versions](/azure/virtual-machines/linux/endorsed-distros). 
+This method has been tested by using [the supported the Linux distributions and versions](/azure/virtual-machines/linux/endorsed-distros).
 
 If you are experiencing problems with an Azure network virtual appliance, this method does not apply to your scenario. You must contact the vendor of the network virtual appliance to get instructions about how to perform a password reset safely.
 
@@ -115,7 +115,7 @@ If you are experiencing problems with an Azure network virtual appliance, this m
     az vm repair restore -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --verbose
     ```
 
-1. Enter the server from the serial console or using SSH with the user account that the password is reset to blank.  When the system asks of the user password, press enter to log in to the system. If the serial console is not enabled on the VM you will have to attach a storage account to it to enable boot diagnostics.
+1. Log in to the server from the serial console or using SSH with the user account that the password is reset to blank. When the system asks for the user password, press Enter to log in to the system. If the serial console is not enabled on the VM you will have to attach a storage account to it to enable boot diagnostics.
 
 1. Use the "passwd" command to set up a new password for the user account intermediately.
 
