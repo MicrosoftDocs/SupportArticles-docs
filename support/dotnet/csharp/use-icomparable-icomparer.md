@@ -122,7 +122,7 @@ The following example demonstrates the use of these interfaces. To demonstrate `
                 Console.WriteLine(c.Make + "\t\t" + c.Year);
 
              // Demo descending sort of string value with IComparer.
-             Array.Sort(arrayOfCars,Car.sortMakeDescending());
+             Array.Sort(arrayOfCars,Car.SortMakeDescending());
              Console.WriteLine("\nArray - Sorted by Make (Descending - IComparer)\n");
 
              foreach(Car c in arrayOfCars)
