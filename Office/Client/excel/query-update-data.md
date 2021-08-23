@@ -1,5 +1,6 @@
 ---
 title: How To query and update Excel data using ADO from ASP
+description: Describes how to query and update information in an Excel spreadsheet using ActiveX Data Objects (ADO) from an Active Server Pages (ASP) page.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
