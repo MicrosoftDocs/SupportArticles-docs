@@ -521,6 +521,8 @@
     href: support-policy-citrix-services.md
   - name: Changes to Windows Server images default size
     href: default-size-images-changed-30-gb.md
+  - name: FAQ - Azure IaaS VM disks, and managed and unmanaged premium disks
+    href: azure-iaas-vm-disks-managed-unmanaged.md
   - name: IaaS VM logs
     href: iaas-logs.md
   - name: Maximum RAM memory of Linux VM
