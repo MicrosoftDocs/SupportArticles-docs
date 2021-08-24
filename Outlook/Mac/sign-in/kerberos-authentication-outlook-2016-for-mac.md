@@ -1,7 +1,7 @@
 ---
 title: Use Kerberos authentication with Outlook 2016 for Mac
-ms.author: dmaguire
-author: msdmaguire
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: reference

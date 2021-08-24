@@ -28,15 +28,15 @@ Microsoft Office Web Apps 2013 Server or Office Online Server has a built-in Off
 If this location is on another server and not on the WAC Server, you need to share this folder with the WAC server (the **Computer** Account), as follows:
 
    ![the share folder on Online Server images](./media/test-viewing-office-documents-by-using-office-online-server-viewer/share-folder-to-wac-server.png)
-   
+
    After you have selected **Computers**, you need type the WAC server name and then check the name to make sure that the server name can be resolved.
-   
+
    ![the select users dialog box](./media/test-viewing-office-documents-by-using-office-online-server-viewer/select-users.png)
-1. You need generate an "http://" URL to that folder.  To do this, open the Internet Explorer browser and browse to "http://<ServerName>/op/generate.aspx".
+1. You need generate an "http://" URL to that folder.  To do this, open the Internet Explorer browser and browse to `http://<ServerName>/op/generate.aspx`.
 
    > [!NOTE]
    > Use the URL that is next to "InternalURL" when you run the **Get-OfficeWebAppsFarm** cmdlet. If you are not using an "InternalURL", you will have to use "ExternalURL". In the following example, the URL is "http://wacserver/op/generate.aspx".
-1. Enter the UNC location (\\<Servername>\test\test1.xlsx) of the workbook in the generate.aspx page.  In the following example, the UNC location is "\\wacserver\test\test1.xlsx".
+1. Enter the UNC location (\\\\<Servername\>\test\test1.xlsx) of the workbook in the generate.aspx page.  In the following example, the UNC location is "\\\wacserver\test\test1.xlsx".
 1. Click "Create Link" and then click "Test this link."
 
    ![Generate aspx page](./media/test-viewing-office-documents-by-using-office-online-server-viewer/generate-aspx-page.png)

@@ -1,11 +1,11 @@
 ---
 title: Planning considerations for deploying Outlook 2016 for Windows
-ms.author: dmaguire
-author: msdmaguire
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.reviewer: 
 audience: ITPro
-ms.topic: get-started-article
+ms.topic: article
 ms.prod: office-perpetual-itpro
 ms.custom: 
 - Outlook for Windows
