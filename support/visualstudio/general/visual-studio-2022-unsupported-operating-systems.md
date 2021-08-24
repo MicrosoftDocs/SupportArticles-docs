@@ -50,7 +50,7 @@ Visual Studio 2022 does not install on Windows 8.
 
 ## Windows 8.1, Windows Server 2012, and Windows Server 2012 R2
 
-When installing Visual Studio 2022 on Windows 8.1, Windows Server 20012, or Windows Server 2012 R2, you may experience the following issues.
+When installing Visual Studio 2022 on Windows 8.1, Windows Server 2012, or Windows Server 2012 R2, you may experience the following issues.
 
 - SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012). For more information on installation, see [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
 
