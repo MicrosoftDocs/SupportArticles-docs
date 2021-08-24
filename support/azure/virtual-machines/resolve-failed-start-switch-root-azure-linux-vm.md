@@ -1,5 +1,5 @@
 ---
-title: Resolve 'Failed to start Switch Root' for an Azure Linux VM
+title: Resolve Failed to start Switch Root for an Azure Linux VM
 description: This article shows how to resolve the error "Failed to start Switch Root" for an Azure Linux Virtual Machine (VM).
 services: virtual-machines
 documentationcenter: ''
@@ -13,7 +13,7 @@ ms.date: 08/19/2021
 ms.author: tibasham
 
 ---
-# Resolve 'Failed to start Switch Root' for an Azure Linux VM
+# Resolve "Failed to start Switch Root" for an Azure Linux VM
 
 This article shows how to resolve the error "Failed to start Switch Root" for an Azure Linux Virtual Machine (VM). This issue can occur when you update to the following GRUB package versions on Oracle 8 SP2:
 
@@ -31,13 +31,13 @@ To submit an Azure support request on the [Azure support](https://azure.microsof
 
 ## Manually fix the issue in the Guest OS
 
-If you have access to the [Azure Serial Console](serial-console-linux.md) proceed with the steps in the following section.
+If you have access to the [Azure Serial Console](serial-console-linux.md) proceed with the steps in the following [Azure Serial Console method](#azureconsole) section.
 
-If you're unable to use the Azure Serial Console section, proceed to the **Offline Method** section, listed after the **Azure Serial Console** section.
+If you're unable to use the Azure Serial Console section, proceed to the [Offline method](#offlinemethod).
 
-### Azure Serial Console method
+### <a name="azureconsole"></a>Azure Serial Console method
 
-1. Reboot the VM using the Azure Serial Console, and hold the *Escape* key to access the GRUB menu.
+1. Reboot the VM using the Azure Serial Console, and hold the Escape key to access the GRUB menu.
 
 2. Select the entry for the rescue kernel.
 
@@ -71,7 +71,7 @@ If you're unable to use the Azure Serial Console section, proceed to the **Offli
 
 5. Reboot the VM. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
 
-### Offline method
+### <a name="offlinemethod"></a>Offline method
 
 If you're unable to access the VM using the Azure Serial Console, then the repair must be done in offline mode, as the VM isn't booting.
 
@@ -79,7 +79,7 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
 2. Using SSH, connect to the Repair VM.
 
-3. Once connected to the repair VM, use `lsblk` to find your *boot* and *efi* partitions:
+3. Once connected to the repair VM, use `lsblk` to find your boot and efi partitions:
 
    :::image type="content" source="./media/resolve-failed-start-switch-root-azure-linux-vm/find-boot-efi-partitions.png" alt-text="Screenshot that shows the boot and efi partitions.":::
 
@@ -91,7 +91,7 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
    `mount /dev/sdc1 /repair/`
 
-6. Mount the efi partition under *efi* on the temporary mount point. For example, use `/dev/sdc15`.
+6. Mount the efi partition under `efi` on the temporary mount point. For example, use `/dev/sdc15`.
 
    `mount /dev/sdc15 /repair/efi/`
 

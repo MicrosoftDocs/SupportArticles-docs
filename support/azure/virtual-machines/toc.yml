@@ -144,12 +144,12 @@
       href: linux-kernel-panics-upgrade.md
     - name: Device names are changed
       href: troubleshoot-device-names-problems.md
+    - name: "Failed to start Switch Root" error in an Azure Linux VM
+      href: resolve-failed-start-switch-root-azure-linux-vm.md
     - name: Grub Rescue
       href: troubleshoot-vm-boot-error.md
     - name: Linux VM does not start after an LIS upgrade
       href: linux-vm-not-start-kernel-lis.md
-    - name: Resolve 'Failed to start Switch Root' for an Azure Linux VM
-      href: resolve-failed-start-switch-root-azure-linux-vm.md
   - name: Windows
     href: boot-error-troubleshoot.md
     items:
