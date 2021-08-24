@@ -9,7 +9,7 @@ ms.reviewer: pchapman
 
 ## Summary
 
-Visual Studio 2022 is supported only on 64-bit editions of Windows 10 version 1909 and higher and Windows Server 2016 and higher. See the [full system requirements](/visualstudio/releases/2022/system-requirements) for more details. To enable organizations to schedule their operating system upgrades, this page provides known issues and potential workarounds when using Visual Studio 2022 on an unsupported operating system.
+Visual Studio 2022 is supported only on 64-bit editions of Windows 10 version 1909 and higher and Windows Server 2016 and higher. We do not recommend using Visual Studio on earlier versions of Windows and Windows Server. See the [full system requirements](/visualstudio/releases/2022/system-requirements) for more details. To enable organizations to schedule their operating system upgrades, this page provides known issues and potential workarounds when using Visual Studio 2022 on an unsupported operating system.
 
 Please note that Microsoft is unable to provide support or fixes for issues arising from using Visual Studio 2022 on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
 
