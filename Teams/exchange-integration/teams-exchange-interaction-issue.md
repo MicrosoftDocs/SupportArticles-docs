@@ -319,7 +319,7 @@ Try to access the REST API URL from a browser in the external network. If you ge
 :::image type="content" source="media/teams-exchange-interaction-issue/presence-test-RCA.png" alt-text="Screenshot of Teams Presence test":::
 
 2. Input the requested information.
-3. Select the Perform Test button to start the Teams Presence Based on Calendar Events test.
+3. Select the **Perform Test** button to start the Teams Presence Based on Calendar Events test.
 
 If the test fails, you should attempt to resolve the issue and rerun the test.
 
