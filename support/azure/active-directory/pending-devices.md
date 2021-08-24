@@ -21,24 +21,24 @@ When you configure a **Hybrid Azure AD join** task in the Azure AD Connect Sync 
 
 There are two scenarios in which a device can be stuck in a pending state.
 
-- **Sync a new on-premises domain joined device to Azure AD**
+**Sync a new on-premises domain joined device to Azure AD**
 
-    > A new on-premises device can get stuck in a pending state if it can't complete the device registration process. This problem can be caused by several factors, such as that the device can't connect to the registration service.
+A new on-premises device can get stuck in a pending state if it can't complete the device registration process. This problem can be caused by several factors, such as that the device can't connect to the registration service.
 
-    > To troubleshoot a device registration problem, see:
+To troubleshoot a device registration problem, see:
 
-    > - [Troubleshooting hybrid Azure Active Directory joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
-    > - [Test Device Registration Connectivity](/samples/azure-samples/testdeviceregconnectivity/testdeviceregconnectivity/)
+- [Troubleshooting hybrid Azure Active Directory joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
+- [Test Device Registration Connectivity](/samples/azure-samples/testdeviceregconnectivity/testdeviceregconnectivity/)
 
-- **The state of a registered device is changed to pending**
+**The state of a registered device is changed to pending**
 
-    > This problem might occur in the following scenario:
+This problem might occur in the following scenario:
 
-    > - The device object is moved to another organizational unit (OU) that is not in the sync scope in Azure AD Connect Sync.
-    > - Azure AD Connect Sync recognizes this change as the device object being deleted in the on-premises Active Directory. Therefore, it deletes the device in Azure AD.
-    > - The device object was restored to the OU in the sync scope.
-    > - Azure AD Connect Sync creates a pending device object for this device in Azure AD.
-    > - The device does not complete the device registration process because it was registered previously.
+1.The device object is moved to another organizational unit (OU) that is not in the sync scope in Azure AD Connect Sync.
+1. Azure AD Connect Sync recognizes this change as the device object being deleted in the on-premises Active Directory. Therefore, it deletes the device in Azure AD.
+1. The device object was restored to the OU in the sync scope.
+- Azure AD Connect Sync creates a pending device object for this device in Azure AD.
+1. The device does not complete the device registration process because it was registered previously.
 
 To fix the problem, unregister the device by running `dsregcmd /leave` at an elevated command prompt, and restart the device. The device will reinitiate the device registration process through the scheduled task. For Windows 10-based devices, the scheduled task is under **Task Scheduler Library** > **Microsoft** > **Windows** > **Workplace Join** > **Automatic-Device-Join Task**.
 
