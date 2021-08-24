@@ -140,14 +140,16 @@
   - name: Linux
     href: boot-error-troubleshoot-linux.md
     items:
-    - name: Grub Rescue
-      href: troubleshoot-vm-boot-error.md
     - name: Can't boot after a host node upgrade
       href: linux-kernel-panics-upgrade.md
-    - name: Linux VM does not start after an LIS upgrade
-      href: linux-vm-not-start-kernel-lis.md
     - name: Device names are changed
       href: troubleshoot-device-names-problems.md
+    - name: Grub Rescue
+      href: troubleshoot-vm-boot-error.md
+    - name: Linux VM does not start after an LIS upgrade
+      href: linux-vm-not-start-kernel-lis.md
+    - name: Resolve 'Failed to start Switch Root' for an Azure Linux VM
+      href: resolve-failed-start-switch-root-azure-linux-vm.md
   - name: Windows
     href: boot-error-troubleshoot.md
     items:
