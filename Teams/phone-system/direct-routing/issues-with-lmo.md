@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting 
 ms.service: msteams
 localization_priority: Normal
-ms.custom: CI-126688,CSSTroubleshoot,scenario:Direct-Routing
+ms.custom: CI-126688,CSSTroubleshoot,scenario:Direct-Routing-2
 ms.reviewer: mikebis
 appliesto:
 - Microsoft Teams
