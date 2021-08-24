@@ -76,6 +76,6 @@ Schtasks /create /sc Daily /tn FedRefresh /tr "C:\Windows\System32\WindowsPowerS
 ```
 
 > [!NOTE]
-> The <E201x> boilerplate represents the version number of Exchange Server (Exchange Server 2013 is E2013 and Exchange Server 2016 is E2016)
+> The \<E201x\> boilerplate represents the version number of Exchange Server (Exchange Server 2013 is E2013 and Exchange Server 2016 is E2016)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).
