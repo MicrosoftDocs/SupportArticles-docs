@@ -42,7 +42,7 @@ This problem might occur in the following scenario:
 
 To fix the problem, unregister the device by running `dsregcmd /leave` at an elevated command prompt, and restart the device. The device will reinitiate the device registration process through the scheduled task. For Windows 10-based devices, the scheduled task is under **Task Scheduler Library** > **Microsoft** > **Windows** > **Workplace Join** > **Automatic-Device-Join Task**.
 
-### Get a list of pending devices
+## Get a list of pending devices
 
 **Count all pending devices**
 
