@@ -54,10 +54,10 @@ When installing Visual Studio 2022 on Windows 8.1, Windows Server 2012, or Windo
 
 - SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012). For more information on installation, see [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
 
-## Windows 10 version 1507 and 1511
+## Windows 10, version 1507 and 1511
 
-Visual Studio 2022 does not install on Windows 10 versions 1507 or 1511.
+Visual Studio 2022 does not install on Windows 10, versions 1507 or 1511.
 
-## Windows 10 versions 1607 through 1903
+## Windows 10, versions 1607 through 1903
 
 There are no known issues or workarounds on these versions of Windows 10.
