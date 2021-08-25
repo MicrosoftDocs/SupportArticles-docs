@@ -23,14 +23,12 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Documentation for creating and managing VMs
-            url: azure/virtual-machines
+            url: https://docs.microsoft.com/azure/virtual-machines/
 
   - title: Troubleshoot deployment failures
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Documentation for creating and managing VMs
-            url: azure/virtual-machines
           - text: Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
             url: allocation-failure.md
           - text: Troubleshoot deployment issues when creating a new virtual machine in Azure
