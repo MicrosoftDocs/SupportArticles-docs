@@ -67,10 +67,9 @@ Then, after you log in to the VM, you can use the ADE key file in the BEK volume
 
 ### Unmount any mounted partitions on the encrypted disk 
 
-1. After the repair VM is created, SSH to your repair VM and log in by using the appropriate credentials.  
+1. After the repair VM is created, SSH to your repair VM and log in by using the appropriate credentials， and then elevate to root.
 
    ```
-   Elevate to root. 
 
    sudo -s 
    ```
