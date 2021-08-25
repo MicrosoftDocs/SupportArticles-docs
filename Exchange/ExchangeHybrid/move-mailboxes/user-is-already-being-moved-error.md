@@ -94,4 +94,4 @@ To do this, follow these steps:
     - **msExchMailboxMoveSourceArchiveMDBLink**  
     - **msExchMailboxMoveTargetArchiveMDBLink**
 
-4. Manually clear the value in Azure AD, and then create another move request in Exchange Online for that user.
+4. Manually clear the value in Active Directory, and then create another move request in Exchange Online for that user.
