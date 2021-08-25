@@ -21,9 +21,9 @@ ms.author: genli
 
 This article introduces two methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you just want to create a new account, you can use the following methods to create a new local admin account and regain access to the VM.
 
-## Reset the password from a user account
+## Reset the password by using Azure Linux Agent
 
-You can reset the password without attaching the OS disk to another VM. This method requires the WALinuxAgent is installed in the affected VM.
+You can reset the password without attaching the OS disk to another VM. This method requires the [Azure Linux Agent](azure/virtual-machines/extensions/agent-linux) is installed in the affected VM.
 
 1. Make sure that WA Linux Agent service is running on the affected VM.
 
@@ -50,12 +50,12 @@ This method has been tested by using [the supported the Linux distributions and 
 If you are experiencing problems with an Azure network virtual appliance, this method does not apply to your scenario. You must contact the vendor of the network virtual appliance to get instructions about how to perform a password reset safely.
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see Snapshot a disk.
-1. Run [az vm repair create](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) to create a copy of the OS disk, and attach the disk to a recovery VM:
+1. Run following [az vm repair create](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands. It will create a copy of the OS disk, and attach the disk to a recovery VM automatically:
     ```
     AZ_RESOURCE_GROUP="YourResourceGroupName"
     AZ_VM_NAME="VMname"
-    AZ_ADMIN_USER="adminName"
-    AZ_MSADMIN_PASS="adminPassword"
+    AZ_ADMIN_USER="userName"
+    AZ_MSADMIN_PASS="newPassword"
 
     az vm repair create -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --repair-username $AZ_ADMIN_USER --repair-password "$AZ_MSADMIN_PASS" --verbose
     ```
@@ -109,7 +109,7 @@ If you are experiencing problems with an Azure network virtual appliance, this m
     ```
     umount /rescue
     ```
-1. Swap the OS disks on the VM:
+1. Remount the OS disk to the affected VM by swapping the OS disks:
 
     ```
     az vm repair restore -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --verbose
@@ -117,7 +117,7 @@ If you are experiencing problems with an Azure network virtual appliance, this m
 
 1. Log in to the server from the serial console or using SSH with the user account that the password is reset to blank. When the system asks for the user password, press Enter to log in to the system. If the serial console is not enabled on the VM you will have to attach a storage account to it to enable boot diagnostics.
 
-1. Use the "passwd" command to set up a new password for the user account intermediately.
+1. Use the `passwd` command to set up a new password for the user account intermediately.
 
 1. Access the server using SSH and enter the new password that you set up from the serial console.
 
