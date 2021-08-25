@@ -313,7 +313,7 @@ The boot partition of the encrypted disk contains the header file. You use this 
 
       └─osencrypt xfs 
       ```
-1. If the output does not refer to LVM for the FSTYPE of the new unlocked partition ("osencrypt"), as in the previous example, skip to [Mount the unlocked disk for chroot (RAW /non-LVM only)](#nonlvm)section.
+1. If the output does not refer to LVM for the FSTYPE of the new unlocked partition ("osencrypt"), as in the previous example, skip to [Mount the unlocked disk for chroot (RAW /non-LVM only)](#non-lvm)section.
 1 If the output indicates that the FSTYPE of the unlocked partition as "LVM2_member," as in the following example, continue to the next procedure, Mount the unlocked partition for chroot (LVM only). 
 
       ```
