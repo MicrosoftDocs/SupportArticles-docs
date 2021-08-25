@@ -35,7 +35,7 @@ To repair the VM by using this automated method, see [Repair a Linux VM by using
 
 If you cannot repair the VM by using the `az vm repair` commands, try the following method to unlock the encrypted disk manually.
 
-## Method 2: Unlock an encrypted disk by the BEK key
+## Method 2: Unlock an encrypted disk
 
 The method unlocks a managed Linux disk without requiring a public IP address for the repair VM.
 
@@ -490,22 +490,20 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
 ## Method 3: Manual method to unlock an encrypted disk on a repair VM 
 
-If the other methods fail, you can manually trigger a Linux repair VM to create and attach the BEK volume.  
+If you cannot find the BEK volume or other menthods don't work, try the following method to re-enable Disk encryption for the encrypted disk:  
 
 1. If the source VM’s encrypted OS disk is a managed disk, follow the steps in Create the repair VM to attach a copy of the locked disk to a repair VM. 
 
    If the process of creating a new repair VM together with an attached encrypted disk hangs or fails, you can first create the VM without attaching the encrypted disk. After the repair VM is created, attach the encrypted disk to the VM through the Azure portal. 
 
-2. If the source VM’s encrypted OS disk is an unmanaged disk, see Attach an unmanaged Linux disk to a VM for offline repair. 
+1. In the Azure portal, navigate to the Disks blade for the repair VM. 
 
-3. In the Azure portal, navigate to the Disks blade for the repair VM. 
+1. At the top menu, click Additional Settings. 
 
-4. At the top menu, click Additional Settings. 
-
-5. On the Disk Settings page, reapply Azure Data Encryption to the data disk only. Be sure to specify the same key vault, key, and version as those used to encrypt the disk the first time.  
+1. On the **Disk Settings** page, reapply **Azure Data Encryption** to the data disk only. Be sure to specify the same key vault, key, and version as those used to encrypt the disk the first time.  
 
    This procedure will trigger the VM to create and attach the BEK volume. 
-6. Proceed to Unmount any mounted partitions on the encrypted disk and from that point, simply continue following the steps within the semi-automated method.
+1. Proceed to [Identify the ADE key file in the BEK volume](#identify-the-header-file) and from that point,  continue following the steps to unlock the disk.
 
 ## Next steps
 If you're having problems connecting to your VM, see Troubleshoot Remote Desktop connections to an Azure VM. For problems accessing applications that run on your VM, see Troubleshoot application connectivity issues on virtual machines in Azure.
