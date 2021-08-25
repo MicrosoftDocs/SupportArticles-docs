@@ -34,10 +34,10 @@ To troubleshoot a device registration problem, see:
 
 This problem can occur in the following scenario:
 
-1.The device object is moved to another organizational unit (OU) that isn't in the sync scope in Azure AD Connect Sync.
+1. The device object is moved to another organizational unit (OU) that isn't in the sync scope in Azure AD Connect Sync.
 1. Azure AD Connect Sync recognizes this change as the device object being deleted in the on-premises Active Directory. Therefore, it deletes the device in Azure AD.
 1. The device object was moved back to the OU in the sync scope.
-- Azure AD Connect Sync creates a pending device object for this device in Azure AD.
+1.  Azure AD Connect Sync creates a pending device object for this device in Azure AD.
 1. The device fails to complete the device registration process because it was registered previously.
 
 To fix the problem, unregister the device by running `dsregcmd /leave` at an elevated command prompt, and restart the device. The device will reinitiate the device registration process through the scheduled task. For Windows 10-based devices, the scheduled task is under **Task Scheduler Library** > **Microsoft** > **Windows** > **Workplace Join** > **Automatic-Device-Join Task**.
