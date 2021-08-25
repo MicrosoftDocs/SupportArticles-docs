@@ -29,6 +29,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Documentation for creating and managing VMs
+            url: azure/virtual-machines
           - text: Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
             url: allocation-failure.md
           - text: Troubleshoot deployment issues when creating a new virtual machine in Azure
@@ -166,11 +168,3 @@ landingContent:
             url: /azure/virtual-machines/extensions/diagnostics-windows
           - text:  Custom Script Extension for Windows
             url: /azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks
-                    
-   # Card
-  - title: Backup and restore
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Troubleshoot Azure virtual machine backup in Azure Portal
-            url: /azure/backup/backup-azure-vms-troubleshoot
