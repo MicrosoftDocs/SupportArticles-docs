@@ -18,6 +18,13 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
+  - title: Create and manage VMs
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Documentation for creating and managing VMs
+            url: https://docs.microsoft.com/azure/virtual-machines/
+
   - title: Troubleshoot deployment failures
     linkLists:
       - linkListType: how-to-guide
@@ -159,11 +166,3 @@ landingContent:
             url: /azure/virtual-machines/extensions/diagnostics-windows
           - text:  Custom Script Extension for Windows
             url: /azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks
-                    
-   # Card
-  - title: Backup and restore
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Troubleshoot Azure virtual machine backup in Azure Portal
-            url: /azure/backup/backup-azure-vms-troubleshoot
