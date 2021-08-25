@@ -60,7 +60,7 @@ The private key is the same *.ppk* key that was converted from a *.pem* file whe
 
 ### Downloading a sample project
 
-For this tutorial, you will copy a test application that is named BuggyAmb. This application is available on [BuggyAmb debugging sample application](https://docs.microsoft.com/samples/dotnet/samples/buggyamb-debugging-sample-app). We recommend that you use this sample application because the next parts use this application to simulate high and low CPU performance problems and crash issues in the troubleshooting labs.
+For this tutorial, you will copy a test application that is named BuggyAmb. This application is available on [BuggyAmb debugging sample application](/samples/dotnet/samples/buggyamb-debugging-sample-app). We recommend that you use this sample application because the next parts use this application to simulate high and low CPU performance problems and crash issues in the troubleshooting labs.
 
 BuggyAmb is simply a buggy ASP.NET Core 3.1-based Razor Pages application. This application was intentionally created as a buggy application to be used as a learning resource to troubleshoot problematic scenarios for an ASP.NET Core application on Linux.
 
