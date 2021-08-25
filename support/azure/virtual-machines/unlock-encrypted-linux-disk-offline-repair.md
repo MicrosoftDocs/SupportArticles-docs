@@ -29,7 +29,7 @@ In this case, Azure Disk Encryption (ADE) is enabled on the disk. You’ll be un
 
 ## Method 1: Unlock an encrypted disk automatically
 
-This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest) commands to automatically create a repair VM, attach the failed Linux VM’s OS disk to that repair VM, and unlock the disk if it is encrypted. It requires use of a public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped with a key encryption key (KEK).  
+This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the failed Linux VM’s OS disk to that repair VM, and unlock the disk if it is encrypted. It requires use of a public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped with a key encryption key (KEK).  
 
 To repair the VM by using this automated method, see [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
@@ -46,7 +46,7 @@ There are only six steps to unlock and mount the encrypted disk:
    When you attach the encrypted disk at the time you create the repair VM, the system detects that the attached disk is encrypted. Then it fetches the ADE key from your Azure key vault and creates a new volume named "BEK VOLUME" to store the key file.
 
 2. [Log in to the repair VM, then unmount any mounted partitions on the encrypted disk](#unmount-any-mounted-partitions-on-the-encrypted-disk).
-3. [Identify the ADE key file in the BEK volume](mount-the-bek-volume).
+3. [Identify the ADE key file in the BEK volume](#unmount-any-mounted-partitions-on-the-encrypted-disk).
 4. [Identify the header file in the boot partition of the encrypted OS](#identify-the-header-file).
 4. [Unlock the encrypted disk by using the ADE key file and the header file](#unlock-the-encrypted-disk).
 5. Mount the partition: [LVM](#lvm), [RAW or non-LVM](#non-lvm).
@@ -313,7 +313,7 @@ The boot partition of the encrypted disk contains the header file. You use this 
 
       └─osencrypt xfs 
       ```
-1. If the output does not refer to LVM for the FSTYPE of the new unlocked partition ("osencrypt"), as in the previous example, skip to [Mount the unlocked disk for chroot (RAW /non-LVM only)](test)section.
+1. If the output does not refer to LVM for the FSTYPE of the new unlocked partition ("osencrypt"), as in the previous example, skip to [Mount the unlocked disk for chroot (RAW /non-LVM only)](#nonlvm)section.
 1 If the output indicates that the FSTYPE of the unlocked partition as "LVM2_member," as in the following example, continue to the next procedure, Mount the unlocked partition for chroot (LVM only). 
 
       ```
