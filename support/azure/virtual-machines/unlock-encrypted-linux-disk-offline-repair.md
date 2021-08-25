@@ -35,11 +35,11 @@ To repair the VM by using this automated method, see [Repair a Linux VM by using
 
 If you cannot repair the VM by using the `az vm repair` commands, try the following method to unlock the encrypted disk manually.
 
-## Method 2: Unlock an encrypted disk
+## Method 2: Unlock an encrypted disk manually
 
 The method unlocks a managed Linux disk without requiring a public IP address for the repair VM.
 
-There are only six steps to unlock and mount the encrypted disk:
+There are six steps to unlock and mount the encrypted disk:
 
 1. [Create a new repair VM, and attach the encrypted disk to this VM during VM creation](#create-a-repair-vm).
    
@@ -48,7 +48,7 @@ There are only six steps to unlock and mount the encrypted disk:
 2. [Log in to the repair VM, then unmount any mounted partitions on the encrypted disk](#unmount-any-mounted-partitions-on-the-encrypted-disk).
 3. [Identify the ADE key file in the BEK volume](#unmount-any-mounted-partitions-on-the-encrypted-disk).
 4. [Identify the header file in the boot partition of the encrypted OS](#identify-the-header-file).
-4. [Unlock the encrypted disk by using the ADE key file and the header file](#unlock-the-encrypted-disk).
+4. [Unlock the encrypted disk by using the ADE key file and the header file](#unlock-by-files).
 5. Mount the partition: [LVM](#lvm), [RAW or non-LVM](#non-lvm).
 
 ### Create a Repair VM
@@ -107,7 +107,7 @@ There are only six steps to unlock and mount the encrypted disk:
    ```
    In the second example above, you would not need to unmount any partitions. But in the final example, you would need to unmount /boot directory.
 
-### Identify the BEK key file
+### Identify the ADE key file
 
 You need the key file and the header file to unlock the encrioty disk. The key file is stored in the BEK volume, and the header file is in the boot partition of the encrypted OS disk.
 
@@ -260,7 +260,7 @@ The boot partition of the encrypted disk contains the header file. You use this 
    -rw-r--r--. 1 root root 33554432 Aug  2 16:31 osluksheader 
    ```
 
-### Unlock the encrypted disk
+### <a name="unlock-by-files"></a> Use the ADE key file and the header file to unlock the disk
 
 1. Use the following command to unlock the root partition on the encrypted disk:
 
