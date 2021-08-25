@@ -1,10 +1,10 @@
 ---
 title: Plan and configure Cached Exchange Mode in Outlook 2016 for Windows
-ms.author: dmaguire
-author: msdmaguire
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
-ms.topic: get-started-article
+ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 

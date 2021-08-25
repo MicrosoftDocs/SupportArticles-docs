@@ -1,7 +1,7 @@
 ---
 title: Install Office 365 apps
-ms.author: sirkkuw
-author: Sirkkuw
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
