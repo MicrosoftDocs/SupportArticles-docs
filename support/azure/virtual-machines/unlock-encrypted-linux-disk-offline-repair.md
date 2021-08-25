@@ -37,24 +37,24 @@ If you cannot repair the VM by using the `az vm repair` commands, try the follow
 
 ## Method 2: Unlock an encrypted disk by the BEK key
 
-The menthod unlocks a managed Linux disk without requiring a public IP address for the repair VM.
+The method unlocks a managed Linux disk without requiring a public IP address for the repair VM.
 
 There are only six steps to unlock and mount the encrypted disk:
 
-1. [Create a new repair VM, and attach the encropyted disk to this VM during VM creation](#create-a-repair-vm).
+1. [Create a new repair VM, and attach the encrypted disk to this VM during VM creation](#create-a-repair-vm).
    
    When you attach the encrypted disk at the time you create the repair VM, the system detects that the attached disk is encrypted. Then it fetches the ADE key from your Azure key vault and creates a new volume named "BEK VOLUME" to store the key file.
 
 2. [Log in to the repair VM, then unmount any mounted partitions on the encrypted disk](#unmount-any-mounted-partitions-on-the-encrypted-disk).
 3. [Identify the ADE key file in the BEK volume](mount-the-bek-volume).
-4. [Identify the header file in the boot paritton of the encrypted OS](#identify-the-header-file).
-4. [Unlock the encropyted disk by using the ADE key file and the header file](#unlock-the-encrypted-disk).
+4. [Identify the header file in the boot partition of the encrypted OS](#identify-the-header-file).
+4. [Unlock the encrypted disk by using the ADE key file and the header file](#unlock-the-encrypted-disk).
 5. Mount the partition: [LVM](#lvm), [RAW or non-LVM](#non-lvm).
 
 ### Create a Repair VM
 
 1. Take a snapshot of the encrypted OS disk.
-2. Create a disk from the snapshop. For the new disk, choose the same location and availability zone as the problem VM that you want to repair. 
+2. Create a disk from the snapshot. For the new disk, choose the same location and availability zone as the problem VM that you want to repair. 
 3. Create a new VM based on the following specifications: 
    - In the Azure Marketplace, choose the same image for the repair VM that was used for the failed VM. (The OS version should be the same.)
 
@@ -109,7 +109,7 @@ There are only six steps to unlock and mount the encrypted disk:
 
 ### Identify the BEK key file
 
-You need the key file and the header file to unlock the encrioty disk. The key file is stored in the BEK valume, and the header file is in the boot partition of the encrypeted OS disk.
+You need the key file and the header file to unlock the encrioty disk. The key file is stored in the BEK volume, and the header file is in the boot partition of the encrypted OS disk.
 
 1. Determine which partition is the BEK volume.  
 
