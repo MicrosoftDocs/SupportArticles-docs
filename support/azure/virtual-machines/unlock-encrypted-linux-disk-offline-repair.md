@@ -25,7 +25,7 @@ If you are trying to repair the OS disk of a Linux VM offline, you might see err
   
    > mount: unknown filesystem type 'LVM2_member'
 
-In this case, Azure Disk Encryption (ADE) is enabled on the disk. You’ll be unable to mount the disk or perform any fixes on it from a repair VM until the disk is unlocked.  For more information, see [confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
+These error occurs because Azure Disk Encryption (ADE) is enabled on the disk. You’ll be unable to mount the disk or perform any fixes on it from a repair VM until the disk is unlocked.  For more information, see [confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
 
 ## Method 1: Unlock an encrypted disk automatically
 
