@@ -13,7 +13,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 05/07/2020
-ms.author: v-mibufo
 ---
 
 # VM is unresponsive when applying Group Policy Local Users and Groups policy
@@ -35,7 +34,7 @@ There are conflicting locks when the policy attempts to clean up old user profil
 > [!NOTE]
 > This applies only to Windows Server 2012 and Windows Server 2012 R2.
 
-Here’s the problematic policy:
+Here's the problematic policy:
 
 `Computer Configuration\Policies\Administrative Templates\System/User Profiles\Delete user profiles older than a specified number of days on system restart`
 
@@ -82,7 +81,7 @@ Here’s the problematic policy:
     ```
     reg delete "HKLM\BROKENSOFTWARE\Policies\Microsoft\Windows\System" /v CleanupProfiles /f
     ```
-1.	Unload the BROKENSOFTWARE hive by using this command:
+1.    Unload the BROKENSOFTWARE hive by using this command:
 
     ```
     reg unload HKLM\BROKENSOFTWARE
@@ -142,7 +141,7 @@ Use [step 5 of the VM repair commands](./repair-windows-vm-using-azure-virtual-m
 
 If the issue is fixed, the policy is now disabled locally. For a permanent solution, don't use the CleanupProfiles policy on VMs. Use a different method to perform profile cleanups.
 
-Don’t use this policy:
+Don't use this policy:
 
 `Machine\Admin Templates\System\User Profiles\Delete user profiles older than a specified number of days on system restart`
 

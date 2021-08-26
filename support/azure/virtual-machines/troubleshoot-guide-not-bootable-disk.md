@@ -13,8 +13,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 03/25/2020
-ms.author: v-mibufo
-
 ---
 
 # Boot Error – This is not a Bootable Disk
