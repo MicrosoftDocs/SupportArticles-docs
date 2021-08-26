@@ -31,17 +31,13 @@ These error occurs because Azure Disk Encryption (ADE) is enabled on the disk. Y
 
 This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the failed Linux VM’s OS disk to that repair VM, and unlock the disk if it is encrypted. It requires use of a public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped with a key encryption key (KEK).  
 
-If your infrastructure and company policy don't allow you to assign a public IP address to the VM, move to the next method to [unlock an encrypted disk manually](#method-2-unlock-an-encrypted-disk-manually).
-
 To repair the VM by using this automated method, follow the steps in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
-If you cannot repair the VM by using the `az vm repair` commands, try the following method to unlock the encrypted disk manually.
+If your infrastructure and company policy don't allow you to assign a public IP address or the `az vm repair` command fails to unlock the disk, try the following method to unlock the encrypted disk manually.
 
 ## Method 2: Unlock an encrypted disk manually
 
-The method unlocks a managed Linux disk without requiring a public IP address for the repair VM.
-
-There are six steps to unlock and mount the encrypted disk:
+There are six steps to unlock and mount the encrypted disk manually:
 
 1. [Create a new repair VM, and attach the encrypted disk to this VM during VM creation](#create-a-repair-vm).
    
@@ -287,7 +283,45 @@ Import the newly unlocked partition into a new volume group. In this example, we
    ```
 
    Now the root partition of the failed VM is unlocked and mounted, you can acesss the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline). 
+7. Mount the encrypted disk’s boot partition to the directory /investigateroot/boot/ without using the duplicate UUIDs. (Remember that the encrypted disk’s boot partition is the second largest that is assigned no partition label.) In our current example, the encrypted disk’s boot partition is sdb2.
+   ```
+   mount -o nouuid /dev/sdb2 /investigateroot/boot
+   ```
+8. Mount the encrypted disk’s EFI system partition to the directory /investigateroot/boot/efi. You can identify this partition by its label. In our current example, the EFI system partition is sdb1.
+   ```
+   mount /dev/sdb1 /investigateroot/boot/efi
+   ```
+9. Mount the remaining unmounted logical volumes in the encrypted disk’s volume group into subdirectories of /investigateroot/. 
+   ```
+   mount -o nouuid /dev/mapper/rescuemevg-varlv /investigateroot/var
+   mount -o nouuid /dev/mapper/rescuemevg-homelv /investigateroot/home
+   mount -o nouuid /dev/mapper/rescuemevg-usrlv /investigateroot/usr
+   mount -o nouuid /dev/mapper/rescuemevg-tmplv /investigateroot/tmp
+   mount -o nouuid /dev/mapper/rescuemevg-optlv /investigateroot/opt
+   ```
+10. Change the active directory to the mounted root partition on the encrypted disk.
+      ```
+      cd /investigateroot
+      ```
+11. Enter the following commands to prepare the chroot environment:
 
+      ```
+      mount -t proc proc proc
+      mount -t sysfs sys sys/
+      mount -o bind /dev dev/
+      mount -o bind /dev/pts dev/pts/
+      mount -o bind /run run/
+      ```
+12. Enter the chroot environment:
+      ```
+      chroot /investigateroot/
+      ```
+13. Rename the volume group to rootvg:
+      ```
+      vgrename rescuemevg rootvg
+      ```
+
+14. Troubleshoot issues in the chroot environment.
 
 ### <a name="non-lvm"></a> Mount the unlocked disk and enter the chroot environment (RAW/non-LVM)
 
@@ -313,10 +347,10 @@ Import the newly unlocked partition into a new volume group. In this example, we
    bin  dev   home  lib64  media       opt  root  sbin  srv   tmp  var  vmlinuz.old 
    ```
 
-3. With the root partition of the failed VM now unlocked and mounted, you can already perform troubleshooting that only requires access to the file system. For example, at this time you can edit the settings in investigateroot/etc/fstab or other configuration files to repair (for example) disk, SSH, or networking issues. For more information on offline fixes in the file system, see Repair the VM offline. 
+3.  Now the root partition of the failed VM is unlocked and mounted, you can acesss the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline).
 
-   However, if you want to use the chroot utility for troubleshooting, continue with the following steps: 
-
+      However, if you want to use the chroot utility for troubleshooting, continue with the following steps.
+   
 4. Use the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to review the available devices. Identify the boot partition on the encrypted disk as the second largest partition that is assigned no label. 
 
 5. Mount the boot partition on the encrypted disk to the /investigateroot/boot/ directory, as in the following example: 
@@ -350,15 +384,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
    ```
    chroot /investigateroot/ 
    ```
-### Troubleshoot in the chroot environment
- 
-1. Now that you can access the volume in the chroot environment, you can complete troubleshooting and mitigations as necessary. For example, you can read logs or run a script.  For more information, see Perform fixes in the chroot environment. 
-
-2. After you have completed your repairs, use the umount command to unmount all the partitions on the encrypted disk that are mounted in the repair VM’s file structure. 
-
-3. Stop (deallocate) the repair VM.
-
-4. Use the following procedure to replace the source VM’s OS disk with the newly repaired disk.
+9. Troubleshoot issues in the chroot environment. For example, you can read logs or run a script.  For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager.md#perform-fixes). 
 
 ## <a name="re-encrypt"></a>Re-enable Azure Data Encryption on the disk
 
@@ -368,9 +394,9 @@ If you cannot find the BEK volume, try the following method to re-enable Disk en
 
    If the process of creating a new repair VM together with an attached encrypted disk hangs or fails, you can first create the VM without attaching the encrypted disk. After the repair VM is created, attach the encrypted disk to the VM through the Azure portal. 
 
-1. In the Azure portal, navigate to the Disks blade for the repair VM. 
+1. In the Azure portal, navigate to the Disks blade for the repair VM.
 
-1. At the top menu, click Additional Settings. 
+1. At the top menu, click Additional Settings.
 
 1. On the **Disk Settings** page, reapply **Azure Data Encryption** to the data disk only. Be sure to specify the same key vault, key, and version as those used to encrypt the disk the first time.  
 
