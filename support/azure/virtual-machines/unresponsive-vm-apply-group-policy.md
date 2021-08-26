@@ -78,12 +78,13 @@ Here's the problematic policy:
 
 1. Delete the CleanupProfiles key by using this command:
 
-    ```
+    ```cmd
     reg delete "HKLM\BROKENSOFTWARE\Policies\Microsoft\Windows\System" /v CleanupProfiles /f
     ```
-1.    Unload the BROKENSOFTWARE hive by using this command:
 
-    ```
+1. Unload the BROKENSOFTWARE hive by using this command:
+
+    ```cmd
     reg unload HKLM\BROKENSOFTWARE
     ```
 
@@ -93,14 +94,15 @@ To enable memory dump collection and the serial console, run this script:
 
 1. Open an elevated command prompt session. (Run as administrator.)
 1. Run these commands to enable the serial console:
-    
-    ```
+
+    ```cmd
     bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON
     ```
 
-    ```
+    ```cmd
     bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
     ```
+
 1. Verify if the free space on the OS disk is at least equal to the VM's memory size (RAM).
 
     If there isn't enough space on the OS disk, change the memory dump location and refer it to an attached data disk with enough free space. To change the location, replace "%SystemRoot%" with the drive letter (for example, "F:") of the data disk in the following commands.
@@ -109,29 +111,29 @@ To enable memory dump collection and the serial console, run this script:
 
     Load broken OS disk:
 
-    ```
+    ```cmd
     REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM
     ```
 
     Enable on ControlSet001:
-    
-    ```
+
+    ```cmd
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
     ```
 
     Enable on ControlSet002:
-    
-    ```
+
+    ```cmd
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
     ```
-    
+
     Unload broken OS disk:
 
-    ```
+    ```cmd
     REG UNLOAD HKLM\BROKENSYSTEM
     ```
 
