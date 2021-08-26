@@ -5,7 +5,7 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
+editor: 'v-jesits'
 tags: ''
 ms.service: virtual-machines
 ms.collection: linux
@@ -60,7 +60,7 @@ This method has been tested by using [the supported Linux distributions and vers
 
     az vm repair create -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --repair-username $AZ_ADMIN_USER --repair-password "$AZ_MSADMIN_PASS" --verbose
     ```
-1. Mount the root file system on the data disk on /recovery, and set the password field a blank state.
+1. Log in to the recovery VM. Mount the root file system on the data disk on /recovery, and set the password field a blank state.
 
     ```
     # You have to run the following commands as the root user.
@@ -71,7 +71,7 @@ This method has been tested by using [the supported Linux distributions and vers
 
     lsblk
 
-    # Mount the OS disk that's attached as a data disk to the recovery VM.
+    # Mount the OS disk that's attached as a data disk to the recovery VM. 
 
     mkdir /recovery
     mount /dev/sdc1 /recovery
