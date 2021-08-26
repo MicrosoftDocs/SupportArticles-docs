@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/azure/active-directory/remove-duplicate-mobile-device-management.md",
+      "redirect_url": "/troubleshoot/mem/intune/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
