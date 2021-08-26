@@ -1,109 +1,127 @@
 ---
 title: How to reset local Linux password on Azure VMs | Microsoft Docs
-description: Introduce the steps to reset the local Linux password on Azure VM
+description: Provides the steps to reset the local Linux password on Azure VM
 services: virtual-machines
 documentationcenter: ''
-author: Deland-Han
+author: genlin
 manager: dcscontentpm
-editor: ''
+editor: 'v-jesits'
 tags: ''
 ms.service: virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 08/20/2019
-ms.author: delhan
+ms.date: 08/23/2021
+ms.author: genli
 
 ---
 
-# How to reset local Linux password on Azure VMs
+# How to reset a local Linux password on Azure VMs
 
-This article introduces several methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you just want to create a new account, you can use the following methods to create a new local admin account and re-gain access to the VM.
+This article provides two methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you want to create a new account, you can use the following methods to create a new local admin account and regain access to the VM.
 
-## Symptoms
+## Reset the password by using Azure Linux Agent
 
-You can't log in to the VM, and you receive a message that indicates that the password that you used is incorrect. Additionally, you can't use VMAgent to reset your password on the Azure portal.
+You can reset the password without attaching the OS disk to another VM. This method requires that the [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) be installed on the affected VM.
 
-## Manual password reset procedure
+1. Make sure that the Azure Linux Agent (waagent) service is running on the affected VM.
+
+2. Set up the environment variables, and use the Azure CLI or Azure Cloud Shell to do the password reset:
+
+    ```
+    AZ_RESOURCE_GROUP="YourResourceGroupName"
+    AZ_VM_NAME="VMname"
+    AZ_ADMIN_USER="adminName"
+    AZ_MSADMIN_PASS="newPassword"
+
+    az vm user update -u $AZ_ADMIN_USER -p $AZ_MSADMIN_PASS -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME
+    ```
+3. Try to access the VM.
+
+To update the SSH key, see [Manage administrative users, SSH by using the VMAccess Extension with the Azure CLI](/azure/virtual-machines/extensions/vmaccess#update-ssh-key).
+
+You can also reset the password or SSH key by using the **Reset Password** feature in the Azure portal.
+
+## Reset the password by using a recovery VM
+
+This method has been tested by using [the supported Linux distributions and versions](/azure/virtual-machines/linux/endorsed-distros).
 
 > [!NOTE]
-> The following steps does not apply to the VM with unmanaged disk.
+> If you are experiencing problems that affect an Azure network virtual appliance, this method does not apply to your situation. Instead, you must contact the vendor of the network virtual appliance to get instructions about how to do a password reset safely.
 
-1. Take a snapshot for the OS disk of the affected VM, create a disk from the snapshot, and then attach the disk to a troubleshoot VM. For more information, see [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
+1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
+1. Run following [az vm repair create](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands. This will create a copy of the OS disk, and attach the disk to a recovery VM automatically.
+    ```
+    AZ_RESOURCE_GROUP="YourResourceGroupName"
+    AZ_VM_NAME="VMname"
+    AZ_ADMIN_USER="userName"
+    AZ_MSADMIN_PASS="newPassword"
 
-2. Connect to the troubleshooting VM using Remote Desktop.
+    az vm repair create -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --repair-username $AZ_ADMIN_USER --repair-password "$AZ_MSADMIN_PASS" --verbose
+    ```
+1. Log in to the recovery VM. Mount the root file system on the data disk on /recovery, and set the password field a blank state.
 
-3.	Run the following SSH command on the troubleshooting VM to become a super-user.
+    ```
+    # You have to run the following commands as the root user.
 
-    ```bash
-    sudo su
+    sudo -i
+
+    # Identify the device name of the data disk that's attached to the VM.
+
+    lsblk
+
+    # Mount the OS disk that's attached as a data disk to the recovery VM. 
+
+    mkdir /recovery
+    mount /dev/sdc1 /recovery
+
+    # [OPTIONAL] If the output from lsblk shows that the root file system is located on a logical volume, then you have to mount that logical volume instead.
+
+    mount /dev/rootvg/rootlv /recovery
+
+    # Make sure that password authentication is enabled on the OpenSSH server if you will try to log in to the server by using SSH and password authentication.
+
+    egrep "^PasswordAuthentication" /recovery/etc/ssh/sshd_config
+
+    # Enter the user name. It can be "root" or the name of the admin user.
+
+    USER_NAME="root"
+
+    # Make a backup of the current /recovery/etc/shadow file.
+
+    cp -av /recovery/etc/shadow /recovery/etc/shadow.$( date '+%Y.%m.%d_%H.%M.%S' )
+
+    # Remove the root password from the /recovery/etc/shadow file.
+
+    sed -r -i.azbackup "s/${USER_NAME}\:[^\:]*/${USER_NAME}\:/g" /recovery/etc/shadow
+
+    # Compare the differences between the password files.
+
+    diff /recovery/etc/shadow /recovery/etc/shadow.azbackup
+
+    # Make sure that you sync any pending I/O operations on the file system.
+
+    sync 
+
+    # Unmount the root file system before you remove the disk.
+    umount /recovery
     ```
 
-4.	Run **fdisk -l** or look at system logs to find the newly attached disk. Locate the drive name to mount. Then on the temporal VM, look in the relevant log file.
+1. Remount the OS disk to the affected VM by swapping the OS disks:
 
-    ```bash
-    grep SCSI /var/log/kern.log (ubuntu)
-    grep SCSI /var/log/messages (centos, suse, oracle)
+    ```
+    az vm repair restore -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --verbose
     ```
 
-    The following is example output of the grep command:
+1. Log in to the server from the serial console or by using SSH and the user account for which the password field was reset to a blank state.. When the system asks for the user password, press **Enter** to log in to the system. If the serial console is not enabled on the VM, you will have to attach a storage account to it in order to enable boot diagnostics.
 
-    ```bash
-    kernel: [ 9707.100572] sd 3:0:0:0: [sdc] Attached SCSI disk
-    ```
+1. Use the `passwd` command to set up a new password for the user account intermediately.
 
-5.	Create a mount point called **tempmount**.
-
-    ```bash
-    mkdir /tempmount
-    ```
-
-6.	Mount the OS disk on the mount point. You usually need to mount *sdc1* or *sdc2*. This will depend on the hosting partition in */etc* directory from the broken machine disk.
-
-    ```bash
-    mount /dev/sdc1 /tempmount
-    ```
-
-7.	Create copies of the core credential files before making any changes:
-
-    ```bash
-    cp /etc/passwd /etc/passwd_orig    
-    cp /etc/shadow /etc/shadow_orig    
-    cp /tempmount/etc/passwd /etc/passwd
-    cp /tempmount/etc/shadow /etc/shadow 
-    cp /tempmount/etc/passwd /tempmount/etc/passwd_orig
-    cp /tempmount/etc/shadow /tempmount/etc/shadow_orig
-    ```
-
-8.	Reset the user’s password that you need:
-
-    ```bash
-    passwd <<USER>> 
-    ```
-
-9.	Move the modified files to the correct location on the broken machine's disk.
-
-    ```bash
-    cp /etc/passwd /tempmount/etc/passwd
-    cp /etc/shadow /tempmount/etc/shadow
-    cp /etc/passwd_orig /etc/passwd
-    cp /etc/shadow_orig /etc/shadow
-    ```
-
-10.	Go back to the root and unmount the disk.
-
-    ```bash
-    cd /
-    umount /tempmount
-    ```
-
-11. In Azure portal, detach the disk from the troubleshooting VM.
-
-12. [Change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-linux.md#swap-the-os-disk-for-the-vm).
+1. Access the server by using SSH, and enter the new password that you set up from the serial console.
 
 ## Next steps
 
 * [Troubleshoot Azure VM by attaching OS disk to another Azure VM](https://social.technet.microsoft.com/wiki/contents/articles/18710.troubleshoot-azure-vm-by-attaching-os-disk-to-another-azure-vm.aspx)
 
-* [Azure CLI: How to delete and re-deploy a VM from VHD](/archive/blogs/linuxonazure/azure-cli-how-to-delete-and-re-deploy-a-vm-from-vhd)
+* [Azure CLI: How to delete and redeploy a VM from VHD](/archive/blogs/linuxonazure/azure-cli-how-to-delete-and-re-deploy-a-vm-from-vhd)
