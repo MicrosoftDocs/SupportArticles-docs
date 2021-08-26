@@ -2,6 +2,7 @@
 
 title: Azure Virtual Machines troubleshooting documentation
 summary: Welcome to Azure Virtual Machines troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Virtual Machines. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
 metadata:
   title: Troubleshoot common issues with Azure Virtual Machines
   description: Documentation for troubleshooting common issues with Azure Virtual Machines. # Required; article description that is displayed in search results. < 160 chars.
@@ -17,6 +18,7 @@ metadata:
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
+
   # Card
   - title: Create and manage Virtual machines
     linkLists:
@@ -165,19 +167,3 @@ landingContent:
             url: /azure/virtual-machines/extensions/diagnostics-windows
           - text:  Custom Script Extension for Windows
             url: /azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks
-       
-   # Card
-  - title: On-demand Capacity Reservation issues
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
-            url: ./capacity-reservation-cant-deploy-vm-vmss.md
-          - text:  Can't create a Capacity Reservation
-            url: ./capacity-reservation-cant-create-vm-vmss.md
-          - text:  Can't delete a Capacity Reservation or Group
-            url: ./capacity-reservation-cant-delete-group.md
-          - text:  Capacity Reservation billing scenarios
-            url: ./capacity-reservation-billing-scenerios.md
-          - text:  A Capacity Reservation is in a "Failed" provisioning state
-            url: ./capacity-reservation-failed-provisioning-state.md
