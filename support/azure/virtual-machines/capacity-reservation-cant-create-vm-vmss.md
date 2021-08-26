@@ -16,7 +16,7 @@ The following article discusses the reasons why you are not able to create Capac
 
 1. There is a lack of capacity in the Region/Availability zone.
 
-   Azure doesn't have capacity for the combination of requested VM size, location, and quanity. Either wait and retry later, when new capacity becomes available, or try a different combination of VM size, location, and quantity.
+   Azure doesn't have capacity for the combination of requested VM size, location, and quantity. Either wait and retry later, when new capacity becomes available, or try a different combination of VM size, location, and quantity.
 
    > [!NOTE}
    > Capacity Reservation creation succeeds or fails in its entirety. For a request to reserve ten instances, success is returned only if all ten instances are allocated. Otherwise, the capacity reservation creation will fail.

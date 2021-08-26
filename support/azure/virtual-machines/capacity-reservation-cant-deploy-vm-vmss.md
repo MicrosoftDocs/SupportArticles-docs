@@ -28,7 +28,7 @@ If you have an existing Capacity Reservations that you can't use with VMs or VMS
 
   - Spot VMs and Azure Dedicated Host Nodes are not supported with capacity reservation.
 
-  - For the supported VM series during public preview, up to 3 Fault Domains (FDs) will be supported. A deployment with more than 3 FDs will fail to deploy against capacity reservation.
+  - For the supported VM series during public preview, up to three Fault Domains (FDs) will be supported. A deployment with more than 3 FDs will fail to deploy against capacity reservation.
 
   - Availability Sets are not supported with capacity reservation.
 
@@ -38,7 +38,7 @@ If you have an existing Capacity Reservations that you can't use with VMs or VMS
 
   To consume Capacity Reservation, the reservation should be explicitly added as a property of the VM or VMSS.
   
-  For more information, refer to the following documentation:
+  For more information, see the following documentation:
 
   - [Associate a new Virtual Machine to Capacity Reservation](/azure/virtual-machines/capacity-reservation-associate-vm)
   - [Associate a new Virtual Machine Scale Sets to Capacity Reservation](/virtual-machines/capacity-reservation-associate-vm-scale-set)
