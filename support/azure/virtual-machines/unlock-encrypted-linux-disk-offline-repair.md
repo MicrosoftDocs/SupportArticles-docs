@@ -45,7 +45,7 @@ There are six steps to unlock and mount the encrypted disk:
 
 1. [Create a new repair VM, and attach the encrypted disk to this VM during VM creation](#create-a-repair-vm).
    
-   When you attach the encrypted disk at the time you create the repair VM, the system detects that the attached disk is encrypted. Then it fetches the ADE key from your Azure key vault and creates a new volume named "BEK VOLUME" to store the key file.
+   You must attach the encrypted disk the during the VM creation create the VM. This is because when you attach the encrypted disk at the time you create the repair VM, the system detects that the attached disk is encrypted. Then it fetches the ADE key from your Azure key vault and creates a new volume named "BEK VOLUME" to store the key file.
 
 2. [Log in to the repair VM, then unmount any mounted partitions on the encrypted disk](#unmount-any-mounted-partitions-on-the-encrypted-disk).
 3. [Identify the ADE key file in the BEK volume](#unmount-any-mounted-partitions-on-the-encrypted-disk).
