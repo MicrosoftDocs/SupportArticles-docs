@@ -672,7 +672,7 @@ _Original KB number:_ &nbsp; 3041345
 |3011|There is not enough content to generate a report for this time period.<br/><br/>The number of days of available data must be at least <*DaysCount*> before DPM can generate this report.|To generate this report, specify at least <*DaysCount*> days.|
 |3012|DPM cannot perform this action because no valid property settings have been detected for this report.|To repair the configuration, follow the steps for repairing DPM in [Repairing DPM 2010](/previous-versions/system-center/data-protection-manager-2010/ff399388(v=technet.10)).|
 |3013|DPM could not connect to SQL Server Reporting Services.|Restart SQL Server Reporting Services, and then try the operation again.|
-|3014|An error occurred causing the reporting job on <*ServerName*> to fail. The system files may be corrupt.|Retry the reporting task. If the problem persists, repair your DPM installation by using the steps described in [Repairing DPM 2010](https://docs.microsoft.com/previous-versions/system-center/data-protection-manager-2010/ff399388%28v=technet.10%29).|
+|3014|An error occurred causing the reporting job on <*ServerName*> to fail. The system files may be corrupt.|Retry the reporting task. If the problem persists, repair your DPM installation by using the steps described in [Repairing DPM 2010](/previous-versions/system-center/data-protection-manager-2010/ff399388%28v=technet.10%29).|
 |3015|DPM is unable to change the e-mail settings.|Log on to <*ServerName*>. On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Server 2008**, point to **Configuration Tools**, and then select **Reporting Services Configuration**. In **Configure Report Server**, update the email settings.|
 |3016|A Windows account is required to view DPM reports.|To create the account, reinstall DPM using the steps described in DPM Setup Help.|
 |3017|The user account that DPM Reporting created is not enabled.|To re-enable the account, in DPM Administrator Console, on the **Navigation** bar, select **Reporting**. In the **Actions** pane, select **Options**, and then, on the **Reporting Password** tab, enter a valid password.|
@@ -884,18 +884,18 @@ _Original KB number:_ &nbsp; 3041345
 |4070|The prerequisite check failed with errors.|Review the errors in the DPM setup log file <*SetupLogFile*>. Resolve the errors, and then run DPM Setup again.|
 |4071|DPM Setup could not delete the DPM Administrator Console shortcut from: <*CommaSeparatedShortcutLocations*>.|Delete the shortcuts manually.|
 |4072|The specified path <*FileName*> is invalid.|Specify a valid path and verify that the path is accessible.|
-|4073|The command-line argument <*CommandlineArgument*> is invalid.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4073|The command-line argument <*CommandlineArgument*> is invalid.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4074|The path <*FileName*> exceeds <*MaxLimit*> characters.|Choose a path with a shorter length.|
-|4075|The command-line argument <*CommandlineArgument*> is already specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
-|4076|The value for <*CommandlineArgument*> was not specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4075|The command-line argument <*CommandlineArgument*> is already specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
+|4076|The value for <*CommandlineArgument*> was not specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4077|DPM is not installed on this computer.|Run DPM Setup from the DPM product DVD.|
 |4078|DPM is already installed on this computer.|To uninstall DPM, use **Add or Remove Programs** in Control Panel.|
 |4079|DPM is not installed on this computer.|To install DPM, see [Installing DPM](/system-center/dpm/install-dpm).|
-|4080|No IN file is specified in the command line.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
-|4081|DPM configuration failed.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4080|No IN file is specified in the command line.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
+|4081|DPM configuration failed.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4082|DPM cannot start service <*SetupServiceName*>.|Start the service manually. On the **Administrative Tools** menu, select **Services**. Right-click <*SetupServiceName*>, and then select **Start**.|
-|4083|DPM setup could not configure agents.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
-|4085|DPM setup could not extract the prerequisites.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4083|DPM setup could not configure agents.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
+|4085|DPM setup could not extract the prerequisites.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4086|DPM has been successfully installed. However, DPM Setup could not delete the extracted folder <*FolderPath*>.|Delete folder <*FolderPath*> manually.|
 |4087|DPM Setup could not delete the extracted folder <*FolderPath*>.|Delete folder <*FolderPath*> manually.|
 |4089|DPM Setup could not configure the database <*Database Name*>.|Verify that the MSSQL$<*InstanceName*> service is started. If the service is not started, on the Administrative Tools menu, click Services. Right-click MSSQL$<*InstanceName*>, and then click **Start**.|

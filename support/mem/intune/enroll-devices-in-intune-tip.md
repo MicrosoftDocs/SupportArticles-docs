@@ -99,7 +99,7 @@ Group Policy provides a means of bulk-enrolling Corporate devices without involv
 - The device runs Windows 10, version 1709 or a later version.
 - The device is joined to a hybrid Azure AD domain, and has an Azure AD Primary Refresh Token (PRT).
 
-To enroll the devices, configure a Group Policy object (GPO). For more information about how to configure and target the GPO, see [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+To enroll the devices, configure a Group Policy object (GPO). For more information about how to configure and target the GPO, see [Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-gpo-for-mem-enrollment-4.png" alt-text="MDM GPO in the Group Policy Management Editor":::
 
@@ -116,10 +116,10 @@ As part of the Windows Autopilot process, you can customize the greeting screen 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-windows-autopilot-greeting-6.png" alt-text="Customized greeting screen for Windows Autopilot OOBE":::
 
 To configure Windows Autopilot, you have to have the hardware hashes or serial numbers of the device. In Intune, make sure that you configure the MDM scope for Autopilot.
-For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/mem/intune/enrollment/enrollment-autopilot).
+For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](/mem/intune/enrollment/enrollment-autopilot).
 
 > [!NOTE]  
-> Windows Autopilot can also join a device to a Hybrid Azure AD domain, and then enroll it in Intune. For more information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](https://docs.microsoft.com/mem/intune/enrollment/windows-autopilot-hybrid)
+> Windows Autopilot can also join a device to a Hybrid Azure AD domain, and then enroll it in Intune. For more information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](/mem/intune/enrollment/windows-autopilot-hybrid)
 
 ### <a id="5"></a>Intune and Configuration Manager co-management enrollment
 
@@ -194,7 +194,7 @@ You can use WCD to create a provisioning package (a .ppkg file) that contains co
 
 Existing users can access and install the package from their Windows desktop screens. Alternatively, you can load the package on removable USB media and distribute that media to new Windows devices. When a new device starts for the first time, the USB media copies the package to the device. Then the enrollment process is completed during the Windows OOBE experience.
 
-For more information about how to create provisioning packages, see [Bulk enrollment for Windows devices](https://docs.microsoft.com/mem/intune/enrollment/windows-bulk-enroll).
+For more information about how to create provisioning packages, see [Bulk enrollment for Windows devices](/mem/intune/enrollment/windows-bulk-enroll).
 
 ## Logs
 
@@ -274,5 +274,5 @@ Your choice of method to enroll Windows devices in Intune depends on several fac
 
 ## References
 
-- [Intune enrollment method capabilities for Windows devices](https://docs.microsoft.com/mem/intune/enrollment/enrollment-method-capab)
-- [MDM enrollment of Windows 10-based devices](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices)
+- [Intune enrollment method capabilities for Windows devices](/mem/intune/enrollment/enrollment-method-capab)
+- [MDM enrollment of Windows 10-based devices](/windows/client-management/mdm/mdm-enrollment-of-windows-devices)

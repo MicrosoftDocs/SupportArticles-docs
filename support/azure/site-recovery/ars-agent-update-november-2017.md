@@ -22,7 +22,7 @@ System State backup with MARS Agent is now [generally available](https://aka.ms/
 
 :::image type="content" source="./media/ars-agent-update-november-2017/backup-wizard.png" alt-text="<alt The image about the System State backup wizard>":::
 
-By using System State Backup, you can protect your Active Directory servers, file servers, and IIS web servers for comprehensive disaster recovery. If you already back up files and folders, you can easily add System State to your policy without much effect on the size of backups that you send to Azure. Learn more about how you can [get started backing up](https://docs.microsoft.com/azure/backup/backup-azure-system-state#back-up-windows-server-system-state-preview) and [recovering system state](https://docs.microsoft.com/azure/backup/backup-azure-restore-system-state) by using MARS Agent.
+By using System State Backup, you can protect your Active Directory servers, file servers, and IIS web servers for comprehensive disaster recovery. If you already back up files and folders, you can easily add System State to your policy without much effect on the size of backups that you send to Azure. Learn more about how you can [get started backing up](/azure/backup/backup-azure-system-state#back-up-windows-server-system-state-preview) and [recovering system state](/azure/backup/backup-azure-restore-system-state) by using MARS Agent.
 
 ## New features
 ### Flexible backup schedule and retention policy for System State

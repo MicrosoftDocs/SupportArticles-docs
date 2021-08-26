@@ -37,8 +37,8 @@ Running Visual Studio 2022 Community, Professional, or Enterprise editions in Wi
 
 When installing Visual Studio 2022 on Windows 7 or Windows Server 2008 R2, you may experience the following issues.
 
-* SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012). For more information on installing, see [SQL Server Express LocalDB](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15).
-* The Diagnostic Hub requires Edge and the Chromium browser engine. [Chromium](https://cloud.google.com/blog/products/chrome-enterprise/extending-chrome-on-windows-7-to-support-enterprise-customers) and [Edge](https://docs.microsoft.com/deployedge/microsoft-edge-supported-operating-systems) support on Windows 7 ends January 15, 2022. After this date, the browser components will no longer receive security updates. Microsoft recommends upgrading to a supported operating system.
+* SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012). For more information on installing, see [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15).
+* The Diagnostic Hub requires Edge and the Chromium browser engine. [Chromium](https://cloud.google.com/blog/products/chrome-enterprise/extending-chrome-on-windows-7-to-support-enterprise-customers) and [Edge](/deployedge/microsoft-edge-supported-operating-systems) support on Windows 7 ends January 15, 2022. After this date, the browser components will no longer receive security updates. Microsoft recommends upgrading to a supported operating system.
 * Visual Studio Terminal does not work and is not supported on Windows 7 and Windows Server 2008 R2.
 
 ## Windows 8
@@ -49,7 +49,7 @@ Visual Studio 2022 does not install on Windows 8.
 
 When installing Visual Studio 2022 on Windows 8.1, Windows Server 20012, or Windows Server 2012 R2, you may experience the following issues.
 
-* SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012). For more information on installing, see [SQL Server Express LocalDB](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15).
+* SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012). For more information on installing, see [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15).
 
 ## Windows 10 version 1507 and 1511
 

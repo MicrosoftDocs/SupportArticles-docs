@@ -146,4 +146,4 @@ The following table lists some, but not all, first party Microsoft applications.
 
 ## More information
 
-For more information, please see: [Sign-in activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report)
+For more information, please see: [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report)

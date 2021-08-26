@@ -27,7 +27,7 @@ Microsoft Azure is planning to roll back this change in an update that is curren
 ## Workaround
 
 If you have to expand the OS disk of the VM, follow the steps in this article:
-[How to expand the OS drive of a Virtual Machine in an Azure Resource Group](https://docs.microsoft.com/azure/virtual-machines/windows/expand-os-disk)
+[How to expand the OS drive of a Virtual Machine in an Azure Resource Group](/azure/virtual-machines/windows/expand-os-disk)
 
 When you enable Azure Disk Encryption on your Azure VM, the process shrinks your existing OS partition a small amount to implement the System Reserved partition. The System Reserved partition is put at the end of the OS disk. When you resize the OS disk, the free space is added after the System Reserved partition.
 

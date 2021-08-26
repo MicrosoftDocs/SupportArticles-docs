@@ -24,7 +24,7 @@ This issue occurs if you try to use the New-MSOLDomain command to add a subdomai
 
 To add a subdomain to a domain that's set up for federated authentication, follow these steps:
 
-1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more information, see [Connect to Azure AD Using Windows PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#bkmk_connect).
+1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more information, see [Connect to Azure AD Using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#bkmk_connect).
 2. Use the New-MSOLFederatedDomain command.
 
     The syntax to add a subdomain is as follows, where \<subdomain> is the name of the subdomain that you want to add:
