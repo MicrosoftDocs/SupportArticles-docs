@@ -21,13 +21,13 @@ In this release, customers can specify the expiry time of ad-hoc backups (for bo
 
 ### Robocopy to accelerate item-level restores
 
-Customers can now use the Windows native Robocopy tool for higher copy speeds when they recover individual files and folders from the recovery volume through the [Instant Restore](https://docs.microsoft.com/azure/backup/backup-azure-restore-windows-server#use-instant-restore-to-recover-data-to-the-same-machine) method.
+Customers can now use the Windows native Robocopy tool for higher copy speeds when they recover individual files and folders from the recovery volume through the [Instant Restore](/azure/backup/backup-azure-restore-windows-server#use-instant-restore-to-recover-data-to-the-same-machine) method.
 
 ## Improvements
 
 ### More robust incremental backups with better tracking of skipped and failed files
 
-MARS agent is now equipped for more resilient incremental backups, even when it encounters files that either are not backed up despite multiple attempts or get skipped because of [unsupported file types](https://docs.microsoft.com/azure/backup/backup-support-matrix-mars-agent#supported-file-types-for-backup). Additionally, customers can now track skipped files during a backup.
+MARS agent is now equipped for more resilient incremental backups, even when it encounters files that either are not backed up despite multiple attempts or get skipped because of [unsupported file types](/azure/backup/backup-support-matrix-mars-agent#supported-file-types-for-backup). Additionally, customers can now track skipped files during a backup.
 
 ### Enhanced error-reporting to resolve issues effectively
 

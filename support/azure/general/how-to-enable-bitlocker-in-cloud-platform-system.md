@@ -17,7 +17,7 @@ This article explains how to enable BitLocker to provide Data at Rest encryption
 
 ## More information
 
-Microsoft Cloud Platform System leverages the Windows Server 2012 ability to encrypt Cluster Shared Volumes (CSV) by using BitLocker®. This article explains how to enable BitLocker. It also provides the scripts to automate the process.
+Microsoft Cloud Platform System leverages the Windows Server 2012 ability to encrypt Cluster Shared Volumes (CSV) by using BitLocker&reg;. This article explains how to enable BitLocker. It also provides the scripts to automate the process.
 > [!NOTE]
 >  BitLocker should be enabled as early as possible in the CPS lifecycle because the process generates significant downtime. That is, the second script in this process will turn off all tenant VMs and all management VMs (except AD/DC VMs) to enable BitLocker . Follow these steps carefully. Failure to do so could result in extended downtime and data corruption.
 
@@ -25,7 +25,7 @@ Microsoft Cloud Platform System leverages the Windows Server 2012 ability to enc
 
 Enable the BitLocker Drive Encryption feature on every node of the storage cluster:
 
-1. Copy the following code, and then save it as Enable-BitLockerFeature.ps1 in < *myFolder* > on the Console VM:
+1. Copy the following code, and then save it as Enable-BitLockerFeature.ps1 in \<myFolder\> on the Console VM:
     
     ```
     <###################################################
@@ -91,7 +91,7 @@ Enable the BitLocker Drive Encryption feature on every node of the storage clust
     }
     
     ```
-2. From the console VM, open a PowerShell console with admin rights, go to < *myFolder* >, and then enter the following: ./Enable-BitLockerFeature.ps1 -storageClusterName <yourStorageCluster> -verbose 
+2. From the console VM, open a PowerShell console with admin rights, go to \<myFolder\>, and then enter the following: ./Enable-BitLockerFeature.ps1 -storageClusterName \<yourStorageCluster\> -verbose 
 The script will iterate through all the nodes of the storage cluster and install BitLocker. The nodes will be rebooted during the process.
 
 3. After the script finishes running successfully, go to step 2.
@@ -135,7 +135,7 @@ Enable BitLocker encryption on all the storage volumes.
 > [!IMPORTANT]
 > This procedure needs to be repeated on each rack of your CPS stamp as each rack has its own storage cluster. 
 
-1. Copy the following code, and then save it as Enable-ClusterDiskBitlocker.ps1 in < *myFolder* > on one of the nodes of the storage cluster. Let's call that node < *myStorageNode* >. 
+1. Copy the following code, and then save it as Enable-ClusterDiskBitlocker.ps1 in \<myFolder\> on one of the nodes of the storage cluster. Let's call that node < *myStorageNode* >. 
 
     ```
     <###################################################
@@ -264,7 +264,7 @@ Enable BitLocker encryption on all the storage volumes.
        [Parameter (Mandatory = $true)] [String] $edgeClusterName
     )
         $ErrorActionPreference = "Stop"
-    while ((Read-Host “Please make sure all the tenant VMs are turned off before proceeding.`nPress Y to proceed if the tenant VMs are already turned off or after the tenant VMs are turned off”) -ne “Y”) {}          
+    while ((Read-Host "Please make sure all the tenant VMs are turned off before proceeding.`nPress Y to proceed if the tenant VMs are already turned off or after the tenant VMs are turned off") -ne "Y") {}          
     
         $creds = get-credential -Message "Please provide Admin credentials to enable BitLocker"
      if(-not $managementClusterName)
@@ -400,7 +400,7 @@ Enable BitLocker encryption on all the storage volumes.
                 Invoke-Command -ComputerName $CSVPhysicalOwner -Authentication Credssp -Credential $creds -ArgumentList $CSVMountPoint,$bitlockerEncryptionKey {param($CSVMountPoint, $bitlockerEncryptionKey) Add-BitLockerKeyProtector $CSVMountPoint -PasswordProtector –Password $bitlockerEncryptionKey}
             #enable using a recovery password protector and backup the protector to Active Directory
                 write-verbose "Backup BitLocker Key Protector on AD for $clusterSharedVolume..."        
-                $protectorId = Invoke-Command -ComputerName $CSVPhysicalOwner -Authentication Credssp -Credential $creds -ArgumentList $CSVMountPoint {param($CSVMountPoint) (Get-BitLockerVolume $CSVMountPoint).Keyprotector | Where-Object {$_.KeyProtectorType -eq "RecoveryPassword”}}            
+                $protectorId = Invoke-Command -ComputerName $CSVPhysicalOwner -Authentication Credssp -Credential $creds -ArgumentList $CSVMountPoint {param($CSVMountPoint) (Get-BitLockerVolume $CSVMountPoint).Keyprotector | Where-Object {$_.KeyProtectorType -eq "RecoveryPassword"}}            
     
                 if($protectorId -eq $null)
                 {
@@ -468,7 +468,7 @@ Enable BitLocker encryption on all the storage volumes.
     ```
 2. Use Remote Desktop to connect to < *myStorageNode* > by using your admin credentials, and then open a PowerShell console with administrator rights. If you cannot connect, enable Remote Desktop on the storage nodes. For instructions on how to enable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](https://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx) 
 
-3. Go to < *myFolder* >, and then enter the following command line:PS C:\Users\admin1\Desktop> .\Enable-ClusterDiskBitlocker.ps1 -Verbose
+3. Go to \<myFolder\>, and then enter the following command line:PS C:\Users\admin1\Desktop> .\Enable-ClusterDiskBitlocker.ps1 -Verbose
 The encryption key is the key that you want to use for BitLocker. The script prompts for your admin credentials and the names of the management cluster, the compute cluster, and the edge cluster. 
 
 4. The script will first turn off all the VMs on the stamps (except the AD/DC VMs), so you will lose the connectivity to the console VM. The script will go through each cluster disk and enable BitLocker encryption. After BitLocker has been enabled on every cluster disk, the script will bring all the VMs online that were turned off during the process.
@@ -544,7 +544,7 @@ Write-Host "The cmdlet encountered a problem. Execution stopped." -ForegroundCol
 write-host "Exception Message: $($_.Exception.Message)" -ForegroundColor Red
 }
 ```
-1. Copy this code and save it as Get-VolumeEncryptionStatus.ps1 in < *myFolder* > on a console VM.
+1. Copy this code and save it as Get-VolumeEncryptionStatus.ps1 in \<myFolder\> on a console VM.
 
 2. Open a Powershell console with admin rights and run the following cmdlet to pass the name of your storage cluster: `PS C:\Users\admin1\Desktop> .\Get-VolumeEncryptionStatus.ps1 -storageClusterName`
 

@@ -12,8 +12,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 11/13/2020
-ms.author: v-mibufo
-
 ---
 
 # Windows stop error - Hardware malfunction
@@ -36,7 +34,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 #### Serial console
 
-![The screenshot shows the message “Hardware Malfunction” on the Serial Console feature if Serial Console has been enabled.](media/windows-stop-error-hardware-malfunction/windows-stop-error-hardware-malfunction-2.png)
+![The screenshot shows the message "Hardware Malfunction" on the Serial Console feature if Serial Console has been enabled.](media/windows-stop-error-hardware-malfunction/windows-stop-error-hardware-malfunction-2.png)
 
 ## Cause
 
@@ -92,7 +90,7 @@ This screen will appear when the Guest OS wasn't set up correctly and a Non-Mask
 > After restarting, test your VM to make sure it is functioning like normal. If you are still experiencing issues, then you can continue to the next section for further instructions.
 
 > [!TIP]
-> It is recommended to setup the non-maskable interrupt (NMI) registry key in the section above, however if your VM didn’t boot normally afterwards then intended changes to the Guest OS registry may not have taken place. If that’s the case, you can follow the directions below to manually add the registry settings instead.
+> It is recommended to setup the non-maskable interrupt (NMI) registry key in the section above, however if your VM didn't boot normally afterwards then intended changes to the Guest OS registry may not have taken place. If that's the case, you can follow the directions below to manually add the registry settings instead.
 
 ### Create and access a repair VM
 
@@ -131,7 +129,7 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
     * In the command, replace `<VOLUME LETTER WHERE THE BCD FOLDER IS>` with the letter of the BCD folder.
     * In the command, replace `<BOOT LOADER IDENTIFIER>` with the identifier you found in the previous step.
 4. Verify that the free space on the OS disk is greater than the memory size (RAM) on the VM. 
-    1. If there’s not enough space on the OS disk, you should change the location where the memory dump file will be created. Rather than creating the file on the OS disk, you can refer it to any other data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter (for example **F:**) of the data disk in the commands listed below. 
+    1. If there's not enough space on the OS disk, you should change the location where the memory dump file will be created. Rather than creating the file on the OS disk, you can refer it to any other data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter (for example **F:**) of the data disk in the commands listed below. 
     2. Enter the commands below (suggested dump configuration):
 
     **Load Registry Hive from the broken OS Disk:**

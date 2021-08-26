@@ -43,7 +43,7 @@ As of April 12, 2017, Hybrid Use Benefit is open for all Azure subscriptions and
 
 ## About the Hybrid Use Benefit images
 
-In November 2016, Azure introduced a second set of Windows Server Marketplace image SKUs to enable Enterprise Agreement (EA) subscriptions to use Hybrid Use Benefit. See [how to deploy a Windows Server image with Hybrid Use Benefits in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
+In November 2016, Azure introduced a second set of Windows Server Marketplace image SKUs to enable Enterprise Agreement (EA) subscriptions to use Hybrid Use Benefit. See [how to deploy a Windows Server image with Hybrid Use Benefits in Azure](/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
 
 ### Current experience in the Azure portal
 
