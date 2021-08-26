@@ -17,7 +17,7 @@ metadata:
 landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
-  # Card (optional)
+  # Card
   - title: Create and manage VMs
     linkLists:
       - linkListType: how-to-guide
@@ -25,6 +25,7 @@ landingContent:
           - text: Documentation for creating and managing VMs
             url: https://docs.microsoft.com/azure/virtual-machines/
 
+  # Card
   - title: Troubleshoot deployment failures
     linkLists:
       - linkListType: how-to-guide
@@ -38,7 +39,7 @@ landingContent:
           - text: Resolve errors for SKU not available
             url: /azure/azure-resource-manager/templates/error-sku-not-available
 
-  # Card (optional)
+  # Card
   - title: VM deployment guidance
     linkLists:
       - linkListType: how-to-guide
@@ -59,7 +60,7 @@ landingContent:
           - text: Troubleshoot Azure VM RDP connection issues by Event ID
             url: ./event-id-troubleshoot-vm-rdp-connecton.md
           - text: Troubleshoot authentication errors when you use RDP to connect to Azure VM
-            url: ./troubleshoot/azure/virtual-machines/cannot-connect-rdp-azure-vm
+            url: ./cannot-connect-rdp-azure-vm.md
           - text: VM guest network card is disabled
             url: ./troubleshoot-rdp-nic-disabled.md
           
@@ -172,7 +173,7 @@ landingContent:
         links:
           - text:  Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
             url: ./capacity-reservation-cant-deploy-vm-vmss.md
-          - text:  Can't create Capacity Reservation
+          - text:  Can't create a Capacity Reservation
             url: ./capacity-reservation-cant-create-vm-vmss.md
           - text:  Can't delete a Capacity Reservation or Group
             url: ./capacity-reservation-cant-delete-group.md

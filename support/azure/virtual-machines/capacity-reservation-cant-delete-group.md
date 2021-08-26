@@ -1,4 +1,15 @@
-# Not able to delete a Capacity Reservation or Group
+---
+title: Can't delete a Capacity Reservation or Group
+description: The following article discusses why you may not be able to delete a Capacity Reservation or Group
+
+ms.date: 08/26/2021
+ms.prod-support-area-path: 
+ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
+---
+
+# Can't delete a Capacity Reservation or Group
 
 The following article discusses why you may not be able to delete a Capacity Reservation or Group
 

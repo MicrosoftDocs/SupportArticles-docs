@@ -1,3 +1,13 @@
+---
+title: Capacity Reservation billing scenarios
+description: This article discusses billing scenarios as they apply to a Capacity Reservation
+ms.date: 08/26/2021
+ms.prod-support-area-path: 
+ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
+---
+
 # Capacity Reservation billing scenarios
 
 This article discusses billing scenarios as they apply to a Capacity Reservation

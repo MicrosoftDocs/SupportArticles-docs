@@ -1,3 +1,13 @@
+---
+title: A Capacity Reservation is in a "Failed" provisioning state
+description: The following article discusses how to resolve the situation of a Capacity Reservation being in a "failed" provisioning state.
+ms.date: 08/26/2021
+ms.prod-support-area-path: 
+ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
+---
+
 # A Capacity Reservation is in a "Failed" provisioning state
 
 The following article discusses how to resolve the situation of a Capacity Reservation being in a "failed" provisioning state.

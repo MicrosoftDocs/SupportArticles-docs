@@ -1,3 +1,13 @@
+---
+title: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
+description: The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
+ms.date: 08/26/2021
+ms.prod-support-area-path: 
+ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
+---
+
 # Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
 
 The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
