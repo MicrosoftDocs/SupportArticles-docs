@@ -1,0 +1,11 @@
+# Not able to delete a Capacity Reservation or Group
+
+The following article discusses why you may not be able to delete a Capacity Reservation or Group
+
+## Unable to delete a Capacity Reservation or Group
+
+Capacity Reservations can be deleted only when no Virtual Machines (VMs) or Virtual Machine Scale Sets (VMSS) are associated to the group.
+
+- [Delete capacity reservation](/azure/virtual-machines/capacity-reservation-modify)
+
+Azure will only allow a Capacity Reservation Group to be deleted when all member Capacity Reservations.
