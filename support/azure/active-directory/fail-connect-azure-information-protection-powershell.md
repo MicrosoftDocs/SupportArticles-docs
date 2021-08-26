@@ -61,5 +61,5 @@ To resolve this issue, make sure that the following are true:
 
 ## More information
 
-- For more information on Azure Information Protection, visit [AIPService](/powershell/module/aipservice/?view=azureipps)
+- For more information on Azure Information Protection, visit [AIPService](/powershell/module/aipservice/)
 - Still need help? Visit the [Microsoft Community](https://answers.microsoft.com/).
