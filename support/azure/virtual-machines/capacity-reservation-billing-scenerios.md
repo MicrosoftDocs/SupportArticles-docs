@@ -12,7 +12,7 @@ ms.collection: windows
 
 This article discusses billing scenarios as they apply to a Capacity Reservation
 
-## Billing scenarios that change how a Capacity Reservation is billed
+## Billing for Capacity Reservation
 
 Capacity Reservations are priced at the same rate as the underlying virtual machine(VM) size.
 
