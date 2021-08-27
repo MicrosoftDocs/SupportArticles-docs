@@ -77,7 +77,7 @@ If you carefully look into the autoscale rule that we have configured, it says t
 }
 ```
 
-[Set up diagnostics for Azure Cloud Services](https://docs.microsoft.com/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines) and check the CPU utilization of each role instance from **WADPerformanceCountersTable**. You can also fetch metric data for the cloud service role using [this REST API](https://docs.microsoft.com/rest/api/monitor/metrics/list) or [PowerShell](https://gallery.technet.microsoft.com/How-to-use-PowerShell-to-bc7aab03) as well.
+[Set up diagnostics for Azure Cloud Services](/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines) and check the CPU utilization of each role instance from **WADPerformanceCountersTable**. You can also fetch metric data for the cloud service role using [this REST API](/rest/api/monitor/metrics/list) or [PowerShell](https://gallery.technet.microsoft.com/How-to-use-PowerShell-to-bc7aab03) as well.
 
 You can also monitor the average CPU utilization of FileUploader role from **Metrics** tab in your cloud service resource. So as you can see from the below graph the average CPU utilization is around 33.35% that is quite below the threshold.
 

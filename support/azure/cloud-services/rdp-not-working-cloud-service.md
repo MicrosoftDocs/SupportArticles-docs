@@ -42,7 +42,7 @@ Sometimes while troubleshooting the RDP issues, you might find that resetting th
 3. Delete all the existing RDP extensions if present.
 4. Re-enable Remote Desktop for the roles by using the self-signed certificate that you created in the step 1.
 
-You can also perform the above four steps using a PowerShell script. Run the below PowerShell script in admin or elevated mode. Make sure you have [Azure PowerShell Service Management module](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0&preserve-view=true)  installed in your system before running it.
+You can also perform the above four steps using a PowerShell script. Run the below PowerShell script in admin or elevated mode. Make sure you have [Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0&preserve-view=true)  installed in your system before running it.
 
 ```powershell
 $SubscriptionId = "your-subscription-id" # Subscription Id$CloudServiceName = "mycloudservice" # Cloud Service name$CertPassword = "CertPassword" # Password for the self-signed certificate$CertExportFilePath = "C:\my-cert-file.pfx" # Local file path where self-signed certificate will be exported$RdpUserName = "RemoteUserName" # RDP user name$RdpUserPassw0rd = "RdpPassword" # RDP user password$Slot = "Production" # Cloud Service slot$RdpAccountExpiry = $(Get-Date).AddDays(365) # RDP user account expiration DateTime
@@ -79,6 +79,6 @@ If you are not able to RDP after running the above script, then definitely it's 
 - Firewall rules configured using startup tasks.
 - If your cloud service is sitting behind an NSG, you may need to create rules that allow traffic on ports **3389** and **20000**. The RemoteForwarder and RemoteAccess agents require that port 20000* is open, which may be blocked if you have an NSG.
 
-Most of time your corporate network blocks the RDP traffic due to security reasons. So the first thing you should check if you are able to reach to RDP ports 3389 and 20000 (if applicable as mentioned above) using [PsPing](https://docs.microsoft.com/sysinternals/downloads/psping)  or [PortQry](https://www.microsoft.com/download/details.aspx?id=24009) or [Telnet](https://blogs.technet.microsoft.com/danielmauser/2015/03/18/tip-installing-telnet-client-via-command-line/).
+Most of time your corporate network blocks the RDP traffic due to security reasons. So the first thing you should check if you are able to reach to RDP ports 3389 and 20000 (if applicable as mentioned above) using [PsPing](/sysinternals/downloads/psping)  or [PortQry](https://www.microsoft.com/download/details.aspx?id=24009) or [Telnet](https://blogs.technet.microsoft.com/danielmauser/2015/03/18/tip-installing-telnet-client-via-command-line/).
 
 You can refer this [article](https://support.microsoft.com/help/4464850) where discusses how to troubleshoot RDP issues using various tools like PsPing and Network monitor. If you are not getting any response, try to RDP from a different network, may be home network or mobile hotspot, etc.

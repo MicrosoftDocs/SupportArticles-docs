@@ -47,7 +47,7 @@ Expected output of Divide operation should be something like below:
 
 ## Troubleshooting steps
 
-You need to understand who is throwing these HTTP 404 and 500 responses, APIM, or the backend SOAP API. The best way to get that answer is to collect [APIM inspector trace](https://docs.microsoft.com/azure/api-management/api-management-howto-api-inspector) to inspect request and response.
+You need to understand who is throwing these HTTP 404 and 500 responses, APIM, or the backend SOAP API. The best way to get that answer is to collect [APIM inspector trace](/azure/api-management/api-management-howto-api-inspector) to inspect request and response.
 
 - Multiply operation throwing HTTP - 404 (Not Found) status code indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists.
 - If you examine the backend section of APIM inspector trace, the same observation is evident from the message as well:

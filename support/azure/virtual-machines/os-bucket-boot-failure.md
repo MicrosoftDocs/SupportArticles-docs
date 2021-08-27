@@ -31,7 +31,7 @@ There are several causes for this error:
 ## Solution
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 ### Process overview
 
@@ -45,7 +45,7 @@ There are several causes for this error:
 
 ### Create and access a repair VM
 
-1. Use steps 1-3 of the [VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
+1. Use steps 1-3 of the [VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
 1. Using Remote Desktop Connection, connect to the Repair VM.
 
 ### Verify that the OS partition is active
@@ -167,7 +167,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
 ### Rebuild the VM
 
-Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
+Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
 
 ## Next steps
 

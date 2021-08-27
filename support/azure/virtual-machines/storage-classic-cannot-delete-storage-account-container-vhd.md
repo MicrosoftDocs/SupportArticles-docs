@@ -20,7 +20,7 @@ This article only covers issues with classic storage resources. If a user delete
 More information about Azure disks can be found [here](/azure/virtual-machines/managed-disks-overview). Azure prevents deletion of a disk that is attached to a VM to prevent corruption. It also prevents deletion of containers and storage accounts, which have a page blob that is attached to a VM. 
 
 ## What is a "Disk"?
-A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, as an OS disk or Data disk. An OS disk or Data disk resource, until deleted, will continue to hold a lease on the *.vhd file. Any storage resource in the path shown in below image can’t be deleted if a “Disk” resource points to it.
+A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, as an OS disk or Data disk. An OS disk or Data disk resource, until deleted, will continue to hold a lease on the *.vhd file. Any storage resource in the path shown in below image can't be deleted if a "Disk" resource points to it.
 
 ![Screenshot of the portal, with the disk (classic) "Property" pane open](./media/storage-classic-cannot-delete-storage-account-container-vhd/Disk_Lease_Illustration.jpg) 
 
@@ -31,7 +31,7 @@ A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, 
 
 
 1. Delete the classic virtual machine.
-2. If the “Disks” checkbox is selected, the **disk lease** (shown in image above) associated with the page blob *.vhd is broken. The actual page blob *.vhd file will still exist in the storage account.
+2. If the "Disks" checkbox is selected, the **disk lease** (shown in image above) associated with the page blob *.vhd is broken. The actual page blob *.vhd file will still exist in the storage account.
 ![Screenshot shows a dialog box to confirm deletion of a virtual machine.](./media/storage-classic-cannot-delete-storage-account-container-vhd/steps_while_deleting_classic_vm.jpg) 
 
 3. Once the disk(s) lease is broken, the page blob(s) itself can be deleted. A storage account or container can be deleted once all "Disk" resource present in them are deleted.
@@ -46,7 +46,7 @@ When user tries to delete a classic storage account that is no longer needed, us
 #### Azure portal 
 User navigates to the classic storage account on the [Azure portal](https://portal.azure.com) and clicks **Delete**, user will see the following message: 
 
-With disk(s) “attached” to a virtual machine
+With disk(s) "attached" to a virtual machine
 
 ![Screenshot shows a message explaining why a storage account can't be deleted.](./media/storage-classic-cannot-delete-storage-account-container-vhd/unable_to_delete_storage_account_disks_attached_portal.jpg) 
 
@@ -59,10 +59,9 @@ With disk(s) "unattached" to a virtual machine
 #### Azure PowerShell
 User tries to delete a storage account, that is no longer being used, by using classic PowerShell cmdlets. User will see the following message:
 
-> <span style="color:cyan">**Remove-AzureStorageAccount -StorageAccountName myclassicaccount**</span>
-> 
-> <span style="color:red">Remove-AzureStorageAccount : BadRequest: Storage account myclassicaccount has some active image(s) and/or disk(s), e.g.  
-> myclassicaccount. Ensure these image(s) and/or disk(s) are removed before deleting this storage account.</span>
+> Remove-AzureStorageAccount -StorageAccountName myclassicaccount
+>
+> Remove-AzureStorageAccount : BadRequest: Storage account myclassicaccount has some active image(s) and/or disk(s), e.g. myclassicaccount. Ensure these image(s) and/or disk(s) are removed before deleting this storage account.
 
 ## Unable to delete storage container
 
@@ -77,9 +76,9 @@ Azure portal wouldn't allow the user to delete a container if a "Disk(s)" lease 
 #### Azure PowerShell
 If the user chooses to delete using PowerShell, it will result in the following error. 
 
-> <span style="color:cyan">**Remove-AzureStorageContainer -Context $context -Name vhds**</span>
-> 
-> <span style="color:red">Remove-AzureStorageContainer : The remote server returned an error: (412) There is currently a lease on the container and no lease ID was specified in the request.. HTTP Status Code: 412 - HTTP Error Message: There is currently a lease on the container and no lease ID was specified in the request.</span>
+> Remove-AzureStorageContainer -Context $context -Name vhds
+>
+> Remove-AzureStorageContainer : The remote server returned an error: (412) There is currently a lease on the container and no lease ID was specified in the request.. HTTP Status Code: 412 - HTTP Error Message: There is currently a lease on the container and no lease ID was specified in the request.
 
 ## Unable to delete a vhd 
 
@@ -88,41 +87,41 @@ After deleting the Azure virtual machine, user tries to delete the vhd file (pag
 #### Azure portal 
 On the portal, there could be two experiences depending on the list of blobs selected for deletion.
 
-1. If only “Leased” blobs are selected, then the Delete button doesn’t show up.
+1. If only "Leased" blobs are selected, then the Delete button doesn't show up.
 ![Screenshot of the portal, with the container blob list pane open and only leased blobs selected.](./media/storage-classic-cannot-delete-storage-account-container-vhd/unable_to_delete_vhd_leased_portal.jpg)
 
 
-2. If a mix of “Leased” and “Available” blobs are selected, the “Delete” button shows up. But the “Delete” operation will leave behind the page blobs, which have a Disk lease on them. 
+2. If a mix of "Leased" and "Available" blobs are selected, the "Delete" button shows up. But the "Delete" operation will leave behind the page blobs, which have a Disk lease on them. 
 ![Screenshot of the portal, with the container blob list pane open and both leased and available blobs selected.](./media/storage-classic-cannot-delete-storage-account-container-vhd/unable_to_delete_vhd_leased_and_unleased_portal_1.jpg)
 ![Screenshot of the portal, with the selected blob "delete" pane open](./media/storage-classic-cannot-delete-storage-account-container-vhd/unable_to_delete_vhd_leased_and_unleased_portal_2.jpg)
 
 #### Azure PowerShell 
 If the user chooses to delete using PowerShell, it will result in the following error. 
 
-> <span style="color:cyan">**Remove-AzureStorageBlob -Context $context -Container vhds -Blob "classicvm-os-8698.vhd"**</span>
-> 
-> <span style="color:red">Remove-AzureStorageBlob : The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.. HTTP Status Code: 412 - HTTP Error Message: There is currently a lease on the blob and no lease ID was specified in the request.</span>
+> Remove-AzureStorageBlob -Context $context -Container vhds -Blob "classicvm-os-8698.vhd"
+>
+> Remove-AzureStorageBlob : The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.. HTTP Status Code: 412 - HTTP Error Message: There is currently a lease on the blob and no lease ID was specified in the request.
 
 
 ## Resolution steps
 
 ### To remove classic Disks
 Follow these steps on the Azure portal:
-1.	Navigate to the [Azure portal](https://portal.azure.com).
-2.	Navigate to the Disks(classic). 
-3.	Click the Disks tab.
+1.    Navigate to the [Azure portal](https://portal.azure.com).
+2.    Navigate to the Disks(classic). 
+3.    Click the Disks tab.
  ![Screenshot shows the Azure portal with Disks (classic) selected and a classic disk name and storage account.](./media/storage-classic-cannot-delete-storage-account-container-vhd/resolution_click_disks_tab.jpg)
  
-4.	Select your data disk, then click Delete Disk.
+4.    Select your data disk, then click Delete Disk.
  ![Screenshot shows the Azure portal with Disks (classic) selected, with a data disk selected and the option to delete.](./media/storage-classic-cannot-delete-storage-account-container-vhd/resolution_click_delete_disk.jpg)
  
-5.	Retry the Delete operation that previously failed.
-6.	A storage account or container can't be deleted as long as it has a single Disk.
+5.    Retry the Delete operation that previously failed.
+6.    A storage account or container can't be deleted as long as it has a single Disk.
 
 ### To remove classic Images   
 Follow these steps on the Azure portal:
-1.	Navigate to the [Azure portal](https://portal.azure.com).
-2.	Navigate to OS images (classic).
-3.	Delete the image.
-4.	Retry the Delete operation that previously failed.
-5.	A storage account or container can’t be deleted as long as it has a single Image.
+1.    Navigate to the [Azure portal](https://portal.azure.com).
+2.    Navigate to OS images (classic).
+3.    Delete the image.
+4.    Retry the Delete operation that previously failed.
+5.    A storage account or container can't be deleted as long as it has a single Image.
