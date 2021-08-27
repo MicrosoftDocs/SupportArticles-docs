@@ -32,7 +32,7 @@
       href: 3-2-task-managers-top-htop.md
     - name: Part 3.3 Collect core dumps
       href: 3-3-debuggers-collect-core-dumps.md
-  - name: Part 4 - Troubleshooting labs
+  - name: Lab - Troubleshooting labs
     items:
     - name: Lab 1.1 Reproduce and troubleshoot
       href: lab-1-1-reproduce-troubleshoot.md

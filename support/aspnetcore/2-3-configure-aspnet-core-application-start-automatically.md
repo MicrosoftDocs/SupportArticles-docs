@@ -5,7 +5,7 @@ ms.date: 03/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 2.3 - Configuring the ASP.NET Core application to start automatically
+# Part 2.3 - Configure the ASP.NET Core application to start automatically
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
@@ -19,15 +19,15 @@ You also have to configure the Nginx web server as a reverse proxy to route the 
 
 ## Goal of this part
 
-The previous parts in this series showed how to configure Nginx as a reverse proxy and how to troubleshoot an HTTP 502 proxy error. The cause of the HTTP 502 response code is that the back-end ASP.NET Core application was not running when Nginx tried to forward traffic to it.
+The previous parts in this series showed how to configure Nginx as a reverse proxy and how to troubleshoot an HTTP 502 proxy error. The cause of the HTTP 502 response code is that the back-end ASP.NET Core application wasn't running when Nginx tried to forward traffic to it.
 
-The issue was resolved temporarily by running your ASP.NET Core application manually. But what if the application crashes? Or the server has to be restarted? Manually restarting the ASP.NET Core application every time is not a practical solution. Therefore, in this section, you will configure Linux to start your application after it crashes.
+The issue was resolved temporarily by running your ASP.NET Core application manually. But what if the application crashes? Or the server has to be restarted? Manually restarting the ASP.NET Core application every time isn't a practical solution. Therefore, in this section, you'll configure Linux to start your application after it crashes.
 
 So far, you have configured Nginx and ASP.NET Core to work together. Nginx listens on port 80 and routes requests to the ASP.NET Core application that listens on port 5000. Although Nginx starts automatically, the ASP.NET Core application must be started manually every time that the server is restarted. Otherwise, the ASP.NET Core application exits gracefully or crashes.
 
 If you run the ASP.NET Core by having IIS as a proxy, the IIS ASP.NET Core Module (ANCM) handles the process management, and the ASP.NET Core process starts automatically. Another option is to run the ASP.NET Core as a service in Windows so that the auto-start feature can be configured as soon as the computer starts.
 
-## Creating service file for your ASP.NET Core application
+## Create service file for your ASP.NET Core application
 
 Recall that the `systemctl` command is used to manage the "services", or "daemons". A daemon is a similar concept to that of a Windows service. Such a service can be restarted automatically when the system starts.
 
@@ -42,11 +42,11 @@ These service files are located in one of the following directories:
 
 Inspect the Nginx service file. It's installed through a package manager. Its configuration file should be in the /usr/lib/systemd/system/ folder. Running the `systemctl status nginx` command also displays the location of the service file.
 
-:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/systemctl-status-nginx-command.png" alt-text="Screenshot of systemctl status nginx command" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/systemctl-status-nginx-command.png" alt-text="Screenshot of systemctl status nginx command." border="true":::
 
 This is what the Nginx service file looks like.
 
-:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/cat-command.png" alt-text="Screenshot of cat command" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/cat-command.png" alt-text="Screenshot of cat command." border="true":::
 
 ### Sample service file for ASP.NET Core applications
 
@@ -85,11 +85,11 @@ Here are some key aspects of this content:
 > [!NOTE]
 > The `www-data` user is a special user in the system. You can make use of this account. You'll create a new user for practicing user permissions in Linux. However, it's fine to use `www-data` if you don't want to create another Linux user.
 
-### Creating a service file for the ASP.NET Core application
+### Create a service file for the ASP.NET Core application
 
 You'll use `vi` to create and edit the service file. Your service file will go into the `/etc/systemd/system/` folder. Remember that, in this series, you published your first application to the `/var/firstwebapp/` folder. Therefore, `WorkingDirectory` should point to this folder.
 
-Here is the final configuration file:
+Here's the final configuration file:
 
 ```ini
 [Unit]
@@ -113,17 +113,17 @@ WantedBy=multi-user.target
 
 Run sudo `vi /etc/systemd/system/myfirstwebapp.service` , paste the final configuration, and save the file.
 
-:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-command.png" alt-text="Screenshot of sudo command" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-command.png" alt-text="Screenshot of sudo command." border="true":::
 
 This completes the required configuration for the ASP.NET Core web application to run as a daemon.
 
-Because the web application is now configured as a service, you can check its status by running `systemctl status myfirstwebapp.service`. As you can see in the next screenshot, the application is disabled (won't start automatically after a system restart), and it's not currently running.
+Because the web application is now configured as a service, you can check its status by running `systemctl status myfirstwebapp.service`. As you can see in the following screenshot, the application is disabled (won't start automatically after a system restart), and it's not currently running.
 
-:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/systemctl-status-command.png" alt-text="Screenshot of systemctl status command" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/systemctl-status-command.png" alt-text="Screenshot of systemctl status command." border="true":::
 
 To start the service, run the `sudo systemctl start myfirstwebapp.service` command, and then check the status again. This time, you should see the service running, and a process ID should be listed next to it. The command output also shows the final few lines from system logs for the newly created service, and it shows that the service is listening on `http://localhost:5000`.
 
-:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-systemctl-start-command.png" alt-text="Screenshot of sudo systemctl start command" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-systemctl-start-command.png" alt-text="Screenshot of sudo systemctl start command." border="true":::
 
 Should the web application stop unexpectedly, it will automatically start again after 10 seconds.
 
@@ -133,11 +133,11 @@ There is one final step: The service is running but not enabled. "Enabled" means
 Sudo systemctl enable myfirstwebapp.service
 ```
 
-:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-systemctl-enable-command.png" alt-text="Screenshot of sudo systemctl enable command" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-systemctl-enable-command.png" alt-text="Screenshot of sudo systemctl enable command." border="true":::
 
 This is a milestone for your ASP.NET Core application because you have configured it to start automatically after a server restart or a process termination.
 
-## Testing whether ASP.NET Core application restarts automatically
+## Test whether ASP.NET Core application restarts automatically
 
 Before you advance to the next part, make sure that everything is working as expected. The current configuration is as follows
 
@@ -145,7 +145,7 @@ Before you advance to the next part, make sure that everything is working as exp
 - Nginx is configured as a reverse proxy, and it routes requests to the ASP.NET Core application. The application is listening on port 5000.
 - The ASP.NET Core application is configured to start automatically after the server restarts or if the process stops or crashes.
 
-Therefore, whenever the ASP.NET Core service stops, it should restart in 10 seconds. To test this behavior, you will force the process to stop. You can expect it to start again in 10 seconds.
+Therefore, whenever the ASP.NET Core service stops, it should restart in 10 seconds. To test this behavior, you'll force the process to stop. You can expect it to start again in 10 seconds.
 
 > [!NOTE]
 > The current process ID of the ASP.NET Core application. The process ID for the attempt that's shown here was **5084** before the process was killed. To find the process ID for your ASP.net Core application, run the `systemctl status myfirstwebapp.service` command.
@@ -161,7 +161,7 @@ sudo kill -9 <PID>
 
 Run the `systemctl status myfirstwebapp.service` command immediately after the `kill` command, wait for about 10 seconds, and then run the same command again.
 
-:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/kill-command.png" alt-text="Screenshot of kill command" border="true":::
+:::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/kill-command.png" alt-text="Screenshot of kill command." border="true":::
 
 In this screenshot, you can see the following information:
 
@@ -173,4 +173,4 @@ If you try to access the site by using `curl localhost`, you should see that the
 
 ## Next steps
 
-[Part 2.3.1 - [Optional] Configuring the ASP.NET Core application in Linux to start automatically under a different user](2-3-1-configure-aspnet-core-application-start-automatically.md).
+[Part 2.3.1 - [Optional] Configure the ASP.NET Core application in Linux to start automatically under a different user](2-3-1-configure-aspnet-core-application-start-automatically.md).

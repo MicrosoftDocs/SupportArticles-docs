@@ -1,11 +1,11 @@
 ---
-title: Using Docker to open core dump files on another machine
+title: Use Docker to open core dump files on another machine
 description: This article describes how to use Docker to open a core dump file on another machine.
 ms.date: 06/11/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmet.bostanci
 ---
-# Lab 4.3 Analyzing core dump files on another machine - Using Docker to open core dump files
+# Lab 4.3 Analyze core dump files on another machine - Use Docker to open core dump files
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
@@ -17,7 +17,7 @@ To complete this section, you should have at least one core dump file copied on 
 
 ## Goal of this lab
 
-You will learn how to open a core dump file on another Linux VM by using Docker.
+You'll learn how to open a core dump file on another Linux VM by using Docker.
 
 ## About containers and Docker
 
@@ -28,13 +28,13 @@ Simply put, you can use Docker containers to run and deploy your applications. Y
 To create and use Docker containers on a Windows VM, install [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/). The linked article explains the requirements and installation steps. Per the requirements, Docker uses Windows Subsystem For Linux (WSL) for Linux containers.
 
 > [!NOTE]
-> Docker can run both Windows and Linux containers, but not at the same time. Therefore, you will have to switch to Linux containers.
+> Docker can run both Windows and Linux containers, but not at the same time. Therefore, you'll have to switch to Linux containers.
 
-Before moving on, we recommend that you review this [FAQ article](https://docs.docker.com/desktop/faqs/) to familiarize yourself with Docker.
+Before moving on, we recommend that you review this [FAQ article about Docker](https://docs.docker.com/desktop/faqs/) to familiarize yourself with Docker.
 
-## Creating a dockerfile
+## Create a dockerfile
 
-After you install the Docker Desktop on Windows, you will need a *dockerfile*. A dockerfile is simply a set of instructions to create the container. The "dockerfile" file name is case-sensitive and should be all lowercase without any file name extension.
+After you install the Docker Desktop on Windows, you'll need a *dockerfile*. A dockerfile is simply a set of instructions to create the container. The "dockerfile" file name is case-sensitive and should be all lowercase without any file name extension.
 
 You can run commands on the target container by using the **RUN** command. For example, the dockerfile in this section shows that you can use `RUN mkdir /dumps` to run a `mkdir /dumps` command on the target container OS.
 
@@ -43,7 +43,7 @@ This sample shows dockerfile content that lets you achieve this section's goal: 
 > [!NOTE]
 > Comments begin with a pound sign (#). Comments are provided for each line so that you can understand what each command does.
 
-```cmd
+```console
 # Install the latest Ubuntu container image
 FROM ubuntu:latest
  
@@ -77,33 +77,33 @@ RUN dotnet-symbol --host-only --debugging ~/dumps/coredump.manual.1.11724
 
 Create a file that's named *dockerfile* in the same directory that contains the *coredumps.tar.gz* archive file. Remember: The file name is case-sensitive and has no extension.
 
-## Building and running the Docker container
+## Build and run the Docker container
 
 Again, you have to switch to Linux containers in Docker if it's running Windows containers.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/switch-linux.png" alt-text="Screenshot of switch linux menu" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/switch-linux.png" alt-text="Screenshot of switch linux menu." border="true":::
 
 Then, open a Command Prompt window, and change to the folder that contains the *coredumps.tar.gz* and dockerfile file. To build the docker container, run `docker build -t dotnettools .`.
 
 > [!NOTE]
-> The `-t` parameter means "tag." You will use this tag name when you run your docker container.
+> The `-t` parameter means "tag." You'll use this tag name when you run your docker container.
 >
 > The period (.) at the end of the command means that the Docker build command will use the dockerfile from the current directory.
 
-Here is the output of the build command. Because the same command had been run several times, it uses its internal cache for the target image. The first time that you run this command, it will download the necessary files, and then cache them for later use when necessary. It may take some time to build the image when you first run the command.
+Here's the output of the build command. Because the same command had been run several times, it uses its internal cache for the target image. The first time that you run this command, it will download the necessary files, and then cache them for later use when necessary. It may take some time to build the image when you first run the command.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/docker-command.png" alt-text="Screenshot of docker command" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/docker-command.png" alt-text="Screenshot of docker command." border="true":::
 
 Then, run the container by using the `docker container run -it dotnettools /bin/bash` command.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/docker-container-command.png" alt-text="Screenshot of docker container command" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/docker-container-command.png" alt-text="Screenshot of docker container command." border="true":::
 
-That's it. You're now inside the newly built Linux container. The rest is the same as before: You will open your core dump by using with the same dotnet-dump command: `dotnet-dump analyze /dumps/coredump.manual.1.11724`. Here is the result from the sample environment that's used to build the training series.
+That's it. You're now inside the newly built Linux container. The rest is the same as before: You'll open your core dump by using with the same dotnet-dump command: `dotnet-dump analyze /dumps/coredump.manual.1.11724`. Here's the result from the sample environment that's used to build the training series.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/dotnet-dump-command.png" alt-text="Screenshot of dotnet dump command" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/dotnet-dump-command.png" alt-text="Screenshot of dotnet dump command." border="true":::
 
 You can run SOS commands, such as `clrthreads`, to display the managed threads.
 
-:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/clrthreads-command.png" alt-text="Screenshot of clrthreads command" border="true":::
+:::image type="content" source="./media/lab-4-3-analyze-core-dumps-another-machine-docker/clrthreads-command.png" alt-text="Screenshot of clrthreads command." border="true":::
 
-Now, you are ready to analyze core dump files in a Linux container by using Docker.
+Now, you're ready to analyze core dump files in a Linux container by using Docker.

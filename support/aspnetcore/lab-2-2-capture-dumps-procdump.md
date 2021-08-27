@@ -5,7 +5,7 @@ ms.date: 04/15/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Lab 2.2 Capturing dump files with ProcDump in Linux
+# Lab 2.2 Capture dump files with ProcDump in Linux
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
@@ -27,13 +27,13 @@ If you have followed the previous parts of this series, you should have the foll
 - The Linux local firewall is enabled and configured to allow SSH and HTTP traffic.
 
 > [!NOTE]
-> If your setup is not ready, please visit the "[Part 2 Create and run ASP.NET Core apps](2-1-create-configure-aspnet-core-applications.md)".
+> If your setup isn't ready, go to "[Part 2 Create and run ASP.NET Core apps](2-1-create-configure-aspnet-core-applications.md)."
 
 ## Goal of this lab
 
 In the previous labs, you learned how to analyze a crash or performance problem. You used the createdump tool to capture dump files.
 
-Now, you will install ProcDump, and capture core dump files by using ProcDump. That will be the extent of this lab because you'll work in the same scenario that you investigated in the previous part.
+Now, you'll install ProcDump, and capture core dump files by using ProcDump. That will be the extent of this lab because you'll work in the same scenario that you investigated in the previous part.
 
 ## ProcDump
 
@@ -43,7 +43,7 @@ The Linux version has some limitations when compared with the Windows version. I
 
 However, it's still powerful. The following list of command-line options goes a long way in proving the strength of the tool:
 
-```cmd
+```console
 -C: Trigger core dump generation when CPU exceeds or equals specified value (0 to 100 * nCPU)
 -c: Trigger core dump generation when CPU is less than specified value (0 to 100 * nCPU)
 -M: Trigger core dump generation when memory commit limit exceeds or equals specified value (MB)
@@ -52,31 +52,31 @@ However, it's still powerful. The following list of command-line options goes a 
 -F: Trigger core dump generation when filedescriptor count exceeds or equals specified value.
 ```
 
-Installation instructions are detailed on [this page](https://github.com/Sysinternals/ProcDump-for-Linux/blob/master/INSTALL.md). Recall that you were instructed to add the Microsoft package repository before you installed .NET Core. ProcDump uses the same repository. Therefore, you can directly install the tool by using the `sudo apt install procdump` command.
+Installation instructions are detailed on [Install ProcDump](https://github.com/Sysinternals/ProcDump-for-Linux/blob/master/INSTALL.md). Recall that you were instructed to add the Microsoft package repository before you installed .NET Core. ProcDump uses the same repository. Therefore, you can directly install the tool by using the `sudo apt install procdump` command.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-apt-install-procdump-command.png" alt-text="Screenshot of sudo apt install procdump command" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-apt-install-procdump-command.png" alt-text="Screenshot of sudo apt install procdump command." border="true":::
 
 You can use ProcDump to monitor CPU, memory, thread, or file descriptor usages.
 
 You can use ProcDump to capture a memory dump file when the target process CPU or memory usage reaches a certain threshold or drops below a limit value. However, for this exercise, you'll use the simplest method to invoke the tool: `procdump -p <PID>`. This manually creates a dump file of the process.
 
-Capture a memory dump file of the same process. Notice that you will have to run the command by using `sudo`.
+Capture a memory dump file of the same process. Notice that you'll have to run the command by using `sudo`.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-command.png" alt-text="Screenshot of sudo procdump command" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-command.png" alt-text="Screenshot of sudo procdump command." border="true":::
 
 ## Where does ProcDump create the core dump files?
 
-This is the information that you will certainly have to know. You could spend a lot of time trying to learn where the dump files are created when ProcDump is used to capture core dump files.
+This is the information that you'll certainly have to know. You could spend a lot of time trying to learn where the dump files are created when ProcDump is used to capture core dump files.
 
-The ProcDump output is not clear about where the core dump files are created. As shown in the previous screenshot, the output simply writes the name of the file, but not the actual path.
+The ProcDump output isn't clear about where the core dump files are created. As shown in the previous screenshot, the output simply writes the name of the file, but not the actual path.
 
-Because the other tools usually use the */tmp/* or *:::no-loc text="/var/lib/systemd/coredump/":::* directories, you may think that the ProcDump also uses one of these directories. However, this is not the case. Instead, the dump files that are captured by ProcDump are created in the ASP.NET Core application working directory.
+Because the other tools usually use the */tmp/* or *:::no-loc text="/var/lib/systemd/coredump/":::* directories, you may think that the ProcDump also uses one of these directories. However, this isn't the case. Instead, the dump files that are captured by ProcDump are created in the ASP.NET Core application working directory.
 
-The working directory for the application is defined in the service control unit file. As you can see in the next screenshot, the sample application's working directory is */var/BuggyAmb_v1.1*. Therefore, any dump file that ProcDump creates for this application will be put into the */var/BuggyAmb_v1.1* directory.
+The working directory for the application is defined in the service control unit file. As you can see in the following screenshot, the sample application's working directory is */var/BuggyAmb_v1.1*. Therefore, any dump file that ProcDump creates for this application will be put into the */var/BuggyAmb_v1.1* directory.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/cat-ll-command.png" alt-text="Screenshot of cat and ll command" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/cat-ll-command.png" alt-text="Screenshot of cat and ll command." border="true":::
 
-## Sample scenario: Capturing dump files based on memory usage
+## Sample scenario: Capture dump files based on memory usage
 
 Consider the following scenario:
 
@@ -85,7 +85,7 @@ Consider the following scenario:
 - Because you can't continuously monitor the memory usage, you want to automate the dump collection process. Your goal is to capture two consecutive dump files of the same process after the memory usage exceeds the 750 MB threshold.
 - You want to capture two memory dump files, with at least a five-second interval between the generation of the first and second memory dump files.
 
-According to ProcDump Help, here are the switches that you will have to use:
+According to ProcDump Help, here are the switches that you'll have to use:
 
 - `-M`: Trigger core dump file generation when memory commit exceeds or equals the specified value (MB)
 - `-n`: Number of core dump files to write before exiting (default is 1)
@@ -95,15 +95,15 @@ According to ProcDump Help, here are the switches that you will have to use:
 
 Run the `sudo procdump -p 11724 -n 2 -s 5 -M 750` command. You'll see that ProcDump waits until the criteria that are defined by the arguments that are passed to it are met, or until you decide to end the monitoring phase by pressing Ctrl+C.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-p-command.png" alt-text="Screenshot of sudo procdump p command" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-p-command.png" alt-text="Screenshot of sudo procdump p command." border="true":::
 
-While ProcDump is monitoring the memory usage, reproduce the same problem by sending six requests to the **Slow** scenario by using the `Load Generator` feature of the web-application again. After the memory usage reaches the threshold, ProcDump creates dump files. The next screenshot shows two captured dump files.
+While ProcDump is monitoring the memory usage, reproduce the same problem by sending six requests to the **Slow** scenario by using the `Load Generator` feature of the web-application again. After the memory usage reaches the threshold, ProcDump creates dump files. The following screenshot shows two captured dump files.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-p-n-command.png" alt-text="Screenshot of sudo procdump p n command" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-p-n-command.png" alt-text="Screenshot of sudo procdump p n command." border="true":::
 
 The dump files are written in the working directory, the same as it was the case of the manual memory dump file that you created earlier.
 
-:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/ls-command.png" alt-text="Screenshot of ls command" border="true":::
+:::image type="content" source="./media/lab-2-2-capture-dumps-procdump/ls-command.png" alt-text="Screenshot of ls command." border="true":::
 
 The dump files that are created by using createdump and ProcDump are identical in terms of the information that they contain. You can choose whichever tool you believe is better suited to the scenario that you face when you troubleshoot such problems.
 
@@ -111,4 +111,4 @@ The dump files that are created by using createdump and ProcDump are identical i
 
 [Lab 3 Troubleshooting performance and GC issues with dotnet-dump in Linux](lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md)
 
-The next part discusses other options for working with memory dump files: dotnet-dump and dotnet-gcdump.
+Lab 3 discusses other options for working with memory dump files by using `dotnet-dump` and `dotnet-gcdump`.
