@@ -15,11 +15,11 @@ _Original KB number:_ &nbsp; 4466541
 
 ## Summary
 
-These troubleshooting series articles provide some of the scenarios, which would be helpful for you having intermediate experience in Azure API Management (APIM). To troubleshoot these issues, you need to have some basic understanding of how APIM works along with the key concepts and terminology associated with it. You can refer [this link](https://docs.microsoft.com/azure/api-management/api-management-key-concepts) if you are at beginner or Rookie level with regards to APIM.
+These troubleshooting series articles provide some of the scenarios, which would be helpful for you having intermediate experience in Azure API Management (APIM). To troubleshoot these issues, you need to have some basic understanding of how APIM works along with the key concepts and terminology associated with it. You can refer [this link](/azure/api-management/api-management-key-concepts) if you are at beginner or Rookie level with regards to APIM.
 
 [Here](https://github.com/prchanda/apimlab) are the prerequisites or instructions that you need to follow to set up the lab.
 
-This troubleshooting series will not only help you to get accustomed with various APIM policies but also give you an idea how to leverage [APIM inspector trace](https://docs.microsoft.com/azure/api-management/api-management-howto-api-inspector) to debug issues related to failed API calls, exceptions thrown from policies, performance problems, etc.
+This troubleshooting series will not only help you to get accustomed with various APIM policies but also give you an idea how to leverage [APIM inspector trace](/azure/api-management/api-management-howto-api-inspector) to debug issues related to failed API calls, exceptions thrown from policies, performance problems, etc.
 
 Troubleshooting scenarios:
 

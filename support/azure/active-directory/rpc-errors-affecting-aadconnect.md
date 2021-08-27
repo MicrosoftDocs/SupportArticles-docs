@@ -43,13 +43,13 @@ DrsException:  There was an error creating the connection context. ---> Microsof
 
 In this case, the RPC communication failed with error **"1722 : The RPC server is unavailable"**.
 
-[System Error Codes 1700-3999](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-)
+[System Error Codes 1700-3999](/windows/win32/debug/system-error-codes--1700-3999-)
 
 In this example, the error is affecting AADConnect password synchronization feature.
 
 ### Troubleshooting Example 1
 
-The error in Example 1 is a common networking related error for which troubleshooting steps can be found in [Troubleshoot TCP/IP RPC Errors](https://docs.microsoft.com/windows/client-management/troubleshoot-tcpip-rpc-errors).
+The error in Example 1 is a common networking related error for which troubleshooting steps can be found in [Troubleshoot TCP/IP RPC Errors](/windows/client-management/troubleshoot-tcpip-rpc-errors).
 
 In this scenario, investigating a network trace reveals retransmit packets being sent for communication with destination **port 135**, so traffic on this port is being blocked on the destination server.
 
@@ -113,7 +113,7 @@ It’s important to note the error number for appropriate investigation and trou
 
 In Example 2 the Remote Procedure Call returned error is **8333**, an error for **"Directory object not found"**
 
-[System Error Codes 8200-8999](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-)
+[System Error Codes 8200-8999](/windows/win32/debug/system-error-codes--8200-8999-)
 
 AADConnect server was not able to find the user object for which it is trying to perform Password Hash Synchronization in Active Directory.
 
@@ -159,7 +159,7 @@ You can also use the hexadecimal error code to search the error symbolic name.
 
 The error **"0x6ba"** translates to an **"RPC Server Unavailable" error 1722**. The troubleshooting steps used in **Example 1** also apply here.
 
-[System Error Codes 1700-3999](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-)
+[System Error Codes 1700-3999](/windows/win32/debug/system-error-codes--1700-3999-)
 
 ### Example 4
 
@@ -169,40 +169,40 @@ Another example with the RPC error represented in its hexadecimal form:
 
 In this case, the error returned **"0x5"** translates to an access denied error:
 
-[System Error Codes 0-499](https://docs.microsoft.com/windows/win32/debug/system-error-codes--0-499-)  
+[System Error Codes 0-499](/windows/win32/debug/system-error-codes--0-499-)  
 
 There may be various reasons to raise an access denied error. Hardening group policies implemented in Active Directory is one of them. One example is restricting clients allowed to make calls to SAM:
 
-[Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)  
+[Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)  
 
 ## Other commonly found system error codes returned in Remote Procedure Call affecting AADConnect
 
 | Error ID | Hexadecimal error representation | Error symbolic name | Error descriptive text
 |:-----------:|:-----------:|:-----------:|:-----------:|  
-| [1127](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1000-1299-) | 0x467 | ERROR_DISK_OPERATION_FAILED  |  While accessing the hard disk, a disk operation failed even after retries. |
-| [1130](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1000-1299-) | 0x46A | ERROR_NOT_ENOUGH_SERVER_MEMORY | Not enough server storage is available to process this command. |
-| [1331](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1300-1699-) | 0x533 | ERROR_ACCOUNT_DISABLED | This user can't sign in because this account is currently disabled. |
-| [14](https://docs.microsoft.com/windows/win32/debug/system-error-codes--0-499-) | 0xE | ERROR_OUTOFMEMORY | Not enough storage is available to complete this operation. |
-| [1450](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1300-1699-) | 0x5AA | ERROR_NO_SYSTEM_RESOURCES | Insufficient system resources exist to complete the requested service. |
-| [1722](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BA | RPC_S_SERVER_UNAVAILABLE | The RPC server is unavailable. |
-| [1723](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BB | RPC_S_SERVER_TOO_BUSY | The RPC server is too busy to complete this operation. |
-| [1726](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BE | RPC_S_CALL_FAILED | The remote procedure call failed. |
-| [1727](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BF | RPC_S_CALL_FAILED_DNE | The remote procedure call failed and did not execute. |
-| [1728](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-) | 0x6C0 | RPC_S_PROTOCOL_ERROR | A remote procedure call (RPC) protocol error occurred. |
-| [1753](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-) | 0x6D9 | EPT_S_NOT_REGISTERED | There are no more endpoints available from the endpoint mapper. |
-| [1818](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-)| 0x71A| RPC_S_CALL_CANCELLED | The remote procedure call was cancelled.|
-| [1825](https://docs.microsoft.com/windows/win32/debug/system-error-codes--1700-3999-) | 0x721 | RPC_S_SEC_PKG_ERROR | A security package specific error occurred. |
-| [5](https://docs.microsoft.com/windows/win32/debug/system-error-codes--0-499-) | 0x5 | ERROR_ACCESS_DENIED| Access is denied. |
-| [6](https://docs.microsoft.com/windows/win32/debug/system-error-codes--0-499-) | 0x6 | ERROR_INVALID_HANDLE | The handle is invalid. |
-| [8333](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x208D | ERROR_DS_OBJ_NOT_FOUND | Directory object not found. |
-| [8420](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x20E4 | ERROR_DS_CANT_FIND_EXPECTED_NC | The naming context could not be found. |
-| [8439](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x20F7 | ERROR_DS_DRA_BAD_DN | The distinguished name specified for this replication operation is invalid. |
-| [8446](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x20FE | ERROR_DS_DRA_OUT_OF_MEM | The replication operation failed to allocate memory. |
-| [8451](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x2103 | ERROR_DS_DRA_DB_ERROR | The replication operation encountered a database error. |
-| [8453](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x2105 | ERROR_DS_DRA_ACCESS_DENIED | Replication access was denied. |
-| [8456](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x2108 | ERROR_DS_DRA_SOURCE_DISABLED | The source server is currently rejecting replication requests. |
-| [8465](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-) | 0x2111 | ERROR_DS_DRA_SOURCE_IS_PARTIAL_REPLICA | The replication synchronization attempt failed because a master replica attempted to sync from a partial replica. |
+| [1127](/windows/win32/debug/system-error-codes--1000-1299-) | 0x467 | ERROR_DISK_OPERATION_FAILED  |  While accessing the hard disk, a disk operation failed even after retries. |
+| [1130](/windows/win32/debug/system-error-codes--1000-1299-) | 0x46A | ERROR_NOT_ENOUGH_SERVER_MEMORY | Not enough server storage is available to process this command. |
+| [1331](/windows/win32/debug/system-error-codes--1300-1699-) | 0x533 | ERROR_ACCOUNT_DISABLED | This user can't sign in because this account is currently disabled. |
+| [14](/windows/win32/debug/system-error-codes--0-499-) | 0xE | ERROR_OUTOFMEMORY | Not enough storage is available to complete this operation. |
+| [1450](/windows/win32/debug/system-error-codes--1300-1699-) | 0x5AA | ERROR_NO_SYSTEM_RESOURCES | Insufficient system resources exist to complete the requested service. |
+| [1722](/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BA | RPC_S_SERVER_UNAVAILABLE | The RPC server is unavailable. |
+| [1723](/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BB | RPC_S_SERVER_TOO_BUSY | The RPC server is too busy to complete this operation. |
+| [1726](/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BE | RPC_S_CALL_FAILED | The remote procedure call failed. |
+| [1727](/windows/win32/debug/system-error-codes--1700-3999-) | 0x6BF | RPC_S_CALL_FAILED_DNE | The remote procedure call failed and did not execute. |
+| [1728](/windows/win32/debug/system-error-codes--1700-3999-) | 0x6C0 | RPC_S_PROTOCOL_ERROR | A remote procedure call (RPC) protocol error occurred. |
+| [1753](/windows/win32/debug/system-error-codes--1700-3999-) | 0x6D9 | EPT_S_NOT_REGISTERED | There are no more endpoints available from the endpoint mapper. |
+| [1818](/windows/win32/debug/system-error-codes--1700-3999-)| 0x71A| RPC_S_CALL_CANCELLED | The remote procedure call was cancelled.|
+| [1825](/windows/win32/debug/system-error-codes--1700-3999-) | 0x721 | RPC_S_SEC_PKG_ERROR | A security package specific error occurred. |
+| [5](/windows/win32/debug/system-error-codes--0-499-) | 0x5 | ERROR_ACCESS_DENIED| Access is denied. |
+| [6](/windows/win32/debug/system-error-codes--0-499-) | 0x6 | ERROR_INVALID_HANDLE | The handle is invalid. |
+| [8333](/windows/win32/debug/system-error-codes--8200-8999-) | 0x208D | ERROR_DS_OBJ_NOT_FOUND | Directory object not found. |
+| [8420](/windows/win32/debug/system-error-codes--8200-8999-) | 0x20E4 | ERROR_DS_CANT_FIND_EXPECTED_NC | The naming context could not be found. |
+| [8439](/windows/win32/debug/system-error-codes--8200-8999-) | 0x20F7 | ERROR_DS_DRA_BAD_DN | The distinguished name specified for this replication operation is invalid. |
+| [8446](/windows/win32/debug/system-error-codes--8200-8999-) | 0x20FE | ERROR_DS_DRA_OUT_OF_MEM | The replication operation failed to allocate memory. |
+| [8451](/windows/win32/debug/system-error-codes--8200-8999-) | 0x2103 | ERROR_DS_DRA_DB_ERROR | The replication operation encountered a database error. |
+| [8453](/windows/win32/debug/system-error-codes--8200-8999-) | 0x2105 | ERROR_DS_DRA_ACCESS_DENIED | Replication access was denied. |
+| [8456](/windows/win32/debug/system-error-codes--8200-8999-) | 0x2108 | ERROR_DS_DRA_SOURCE_DISABLED | The source server is currently rejecting replication requests. |
+| [8465](/windows/win32/debug/system-error-codes--8200-8999-) | 0x2111 | ERROR_DS_DRA_SOURCE_IS_PARTIAL_REPLICA | The replication synchronization attempt failed because a master replica attempted to sync from a partial replica. |
 
 ## More information
 
-System Error codes can be found through [Error Codes](https://docs.microsoft.com/windows/win32/debug/system-error-codes)
+System Error codes can be found through [Error Codes](/windows/win32/debug/system-error-codes)

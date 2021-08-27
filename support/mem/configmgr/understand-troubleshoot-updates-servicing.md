@@ -461,7 +461,7 @@ Review the following logs:
 To do so, compare the following folders:
 
 - \\\\\<Service Connection Point>\EasySetupPayloader\\\<PackageGUID>
-- SCCMContentLib\DataLib\\<PackageGUID> (on the site servers)
+- SCCMContentLib\DataLib\\\<PackageGUID\> (on the site servers)
 
 ### Step 4: Retry content replication for EasySetup package
 

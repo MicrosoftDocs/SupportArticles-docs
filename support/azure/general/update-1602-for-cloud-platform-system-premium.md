@@ -63,7 +63,7 @@ To resolve this issue, you must install the VMM hotfix by using the following me
 ### How to apply the private hotfix for VMM 2012 R2
 
 > [!NOTE]
-> The highly available VMM clustered role, <Prefix>-HA-VMM, has two nodes: -VMM-01 and VMM-02. This procedure refers to the nodes as Node1 and Node2.
+> The highly available VMM clustered role, \<Prefix\>\-HA\-VMM, has two nodes: \-VMM\-01 and VMM\-02. This procedure refers to the nodes as Node1 and Node2.
 
 To apply the hotfix, follow these steps:
 
@@ -71,7 +71,7 @@ To apply the hotfix, follow these steps:
 1. From the specified location, copy the HostMode_Hotfix.exe file to a folder on a Console VM, such as C: \HostModeHotfix.
 2. Double-click the HostMode_Hotfix.exe file, review the EULA, and then click **Yes** to accept the terms.
 3. Select a folder in which to store the extracted files. For example, select C:\HostModeHotfix. Then, click **OK**.
-4. Determine the passive VMM node. To do this, open a Windows PowerShell ISE session and run the following script, in which "< **Prefix** >" is your stamp prefix:
+4. Determine the passive VMM node. To do this, open a Windows PowerShell ISE session and run the following script, in which "\<Prefix\>" is your stamp prefix:
 
 ```
 $VmmServerName = "<Prefix>-HA-VMM"$vmmServer = Get-SCVMMServer -ComputerName $VmmServerName 
@@ -128,7 +128,7 @@ $passiveNodes
     SCVMMService does not start when the passive VMM server node is not active. SCVMMService starts only when the node becomes the active node. This behavior is by design.
 14. In Failover Cluster Manager, start a failover. This makes Node1 the new passive node and Node2 (which is already updated) the active node. To do this, follow these steps:
 
-    1. Open Failover Cluster Manager, and then connect to the &#60;**Prefix**&#62;-CL-VMM cluster.
+    1. Open Failover Cluster Manager, and then connect to the \<Prefix\>\-CL\-VMM cluster.
     2. Click **Roles**. The Roles pane displays the active node in the **Owner Node** column. Right-click the active node, point to **Move**, and then click **Select Node**. Select the other node, and make sure that the status changes to **Running** for the new active node. This may take a few seconds.
 15. Follow steps 6-13 to update the VMM files on the new passive node (in this example, Node1).
 
@@ -140,7 +140,7 @@ To revert the patch (if necessary), follow these steps:
 2. Replace the files in your VMM installation folder with your backup files.
 3. Start the SCVMMAgent service.
 4. Start the SCVMMService service.
-5. In Failover Cluster Manager, initiate a failover of the < **Prefix** >-HA-VMM clustered role.
+5. In Failover Cluster Manager, initiate a failover of the \<Prefix\>\-HA\-VMM clustered role.
 6. Repeat these steps 1-4 on the new passive node.
 
 ### Step 4: Run the P&U update package

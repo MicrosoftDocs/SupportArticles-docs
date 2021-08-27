@@ -13,8 +13,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 03/26/2020
-ms.author: v-mibufo
-
 ---
 
 # Windows Stop Error - #0x000000EF "Critical Process Died"
