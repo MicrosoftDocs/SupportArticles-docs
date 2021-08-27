@@ -59,6 +59,15 @@ After the Group Policy is applied, the IP range that was added is the only priva
 >- On the individual computers, you can check the following registry location to make sure that the GPO takes effect:
 
  `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation`
+ 
+ If the previous solution did not work, the firewall profile for the VPN connection can temporarily be changed to public. That way the alternatie firewall profile will be used,
+ where internet acecss is permitted.
+ 1. Open a PowerShell window as Administrator
+ 2. Enter the command **Get-NetConnectionProfile** and take note of **Name** of the VPN connection
+ 3. Enter the command **Set-NetConnectionProfile -name "NameofVPNconnection" -networkcategory public
+ 4. The firewall profile is now set to public.
+ You might need to restart the previously restricted apps to get them working again. This command needs to be entered after **every fresh start** of Windows.
+
 
 ## More information
 
