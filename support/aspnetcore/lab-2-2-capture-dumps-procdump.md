@@ -109,6 +109,6 @@ The dump files that are created by using createdump and ProcDump are identical i
 
 ## Next steps
 
-[Lab 3 Troubleshooting .NET Core dump file crash and GC issues by using dotnet-dump](lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md)
+[Lab 3 Troubleshooting performance and GC issues with dotnet-dump in Linux](lab-3-troubleshoot-crash-gc-issues-dotnet-dump.md)
 
 The next part discusses other options for working with memory dump files: dotnet-dump and dotnet-gcdump.

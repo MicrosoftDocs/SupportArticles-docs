@@ -236,3 +236,5 @@ The following articles are great resources for more information about .NET Core 
 ## Next steps
 
 You are now ready to begin the troubleshooting labs. In the labs, you will learn how to use the tools that are discussed here to troubleshoot problems.
+
+[Lab 1.1 Reproducing and troubleshooting a crash problem](lab-1-1-reproduce-troubleshoot.md)
