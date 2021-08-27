@@ -27,8 +27,8 @@ This part (1.1) contains the following steps:
 
 - [Create a Linux virtual machine in Windows Azure](#create-a-linux-virtual-machine-in-windows-azure)
 - [Connect to the Linux virtual machine](#connect-to-the-linux-virtual-machine):
-  - [By using PowerShell SSH client](#connecting-by-using-powershell-ssh-terminal)
-  - [By using PuTTY](#connecting-by-using-putty)
+  - [By using PowerShell SSH client](#connect-by-using-powershell-ssh-terminal)
+  - [By using PuTTY](#connect-by-using-putty)
 
 If you're familiar with Linux, you might want to skip this part entirely and go directly to [Part 1.2 - Linux special directories, elevated users, and package managers](1-2-linux-special-directories-users-package-managers.md).
 
