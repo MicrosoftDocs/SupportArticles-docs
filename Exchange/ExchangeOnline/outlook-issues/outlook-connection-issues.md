@@ -43,7 +43,7 @@ If you're using Outlook to access your Office 365 email account or another Excha
 
 We can diagnose and fix several common Outlook connectivity issues for you. If our automated tool can't fix your issue, or you'd like to fix it yourself, see the next section.
 
-|<br/>|<br/>|<br/>|<br/>|
+|||||
 |:-----|:-----|:-----|:-----|
 |[![Get started](./media/outlook-connection-issues/8226d576-eac7-40df-89cb-28c1634067c5.png)](https://diagnostics.office.com/#/)|**Let us fix your issue** <br/>[Support and Recovery Assistant for Office 365](https://diagnostics.office.com/#/)|[![Help](./media/outlook-connection-issues/cced52be-9b54-4fff-a6b4-756afef8cedd.png)](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)|**Need more help?** <br/> [Contact support for business products - Admin Help](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 |||||
