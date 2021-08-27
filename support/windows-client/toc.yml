@@ -394,6 +394,8 @@
       href: ./deployment/system-restore-points-disabled.md
     - name: Windows optional component setup tool
       href: ./deployment/use-ocsetup-to-install-remove-components.md
+    - name: Windows setup block when shell folders are redirected to Windows.old
+      href: ./deployment/windows-setup-block-shell-folders-windows-old.md
     - name: Windows setup log file locations
       href: ./deployment/windows-setup-log-file-locations.md
     - name: Windows SIM can't generate a catalog
