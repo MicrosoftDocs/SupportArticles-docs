@@ -1,6 +1,6 @@
 ---
-title: RDP not working for classic cloud service resource
-description: Provides information about troubleshooting issues in which RDP is not working for Azure customers who are using classic cloud service resource.
+title: Remote Desktop Protocol (RDP) not working for classic cloud service resource
+description: Provides information about troubleshooting issues in which Remote Desktop Protocol (RDP) is not working for Azure customers who are using classic cloud service resource.
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -8,9 +8,9 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ---
-# RDP not working for classic cloud service resource
+# Remote Desktop Protocol (RDP) not working for classic cloud service resource
 
-This article provides information about troubleshooting issues in which RDP is not working for Azure customers who are using classic cloud service resource.
+This article provides information about troubleshooting issues in which Remote Desktop Protocol (RDP) is not working for Azure customers who are using classic cloud service resource.
 
 _Original product version:_ &nbsp; API Management Service  
 _Original KB number:_ &nbsp; 4464927
@@ -42,30 +42,52 @@ Sometimes while troubleshooting the RDP issues, you might find that resetting th
 3. Delete all the existing RDP extensions if present.
 4. Re-enable Remote Desktop for the roles by using the self-signed certificate that you created in the step 1.
 
-You can also perform the above four steps using a PowerShell script. Run the below PowerShell script in admin or elevated mode. Make sure you have [Azure PowerShell Service Management module](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0&preserve-view=true)  installed in your system before running it.
+You can also perform the above four steps using a PowerShell script. Run the below PowerShell script in admin or elevated mode. Make sure you have [Azure PowerShell Service Management module](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0&preserve-view=true)  installed in your system before running it.  In addition as this module leverages the Azure Service Manager API, you will also require Global Admin rights in order to execute it.
 
 ```powershell
-$SubscriptionId = "your-subscription-id" # Subscription Id$CloudServiceName = "mycloudservice" # Cloud Service name$CertPassword = "CertPassword" # Password for the self-signed certificate$CertExportFilePath = "C:\my-cert-file.pfx" # Local file path where self-signed certificate will be exported$RdpUserName = "RemoteUserName" # RDP user name$RdpUserPassw0rd = "RdpPassword" # RDP user password$Slot = "Production" # Cloud Service slot$RdpAccountExpiry = $(Get-Date).AddDays(365) # RDP user account expiration DateTime
+$SubscriptionId = "your-subscription-id" # Subscription Id
+$CloudServiceName = "mycloudservice" # Cloud Service name
+$CertPassword = "CertPassword" # Password for the self-signed certificate
+$CertExportFilePath = "C:\my-cert-file.pfx" # Local file path where self-signed certificate will be exported
+$RdpUserName = "RemoteUserName" # RDP user name
+$RdpUserPassw0rd = "RdpPassword" # RDP user password
+$Slot = "Production" # Cloud Service slot
+$RdpAccountExpiry = $(Get-Date).AddDays(365) # RDP user account expiration DateTime
 
 # Creating self-signed certificate
 
-Write-Host (Get-Date).ToString()" : Creating self-signed certificate." -ForegroundColor Magenta$cert = New-SelfSignedCertificate -DnsName ($CloudServiceName + ".cloudapp.net") -CertStoreLocation "cert:\LocalMachine\My" -KeyLength 2048 -KeySpec "KeyExchange"$SecureCertPassword = ConvertTo-SecureString -String $CertPassword -Force -AsPlainTextExport-PfxCertificate -Cert $cert -FilePath $CertExportFilePath -Password $SecureCertPasswordWrite-Host (Get-Date).ToString()" : Self-signed certificate created successfully at" $CertExportFilePath -ForegroundColor Magenta
+Write-Host (Get-Date).ToString()" : Creating self-signed certificate." -ForegroundColor Magenta
+$cert = New-SelfSignedCertificate -DnsName ($CloudServiceName + ".cloudapp.net") -CertStoreLocation "cert:\LocalMachine\My" -KeyLength 2048 -KeySpec "KeyExchange"
+$SecureCertPassword = ConvertTo-SecureString -String $CertPassword -Force -AsPlainText
+ Export-PfxCertificate -Cert $cert -FilePath $CertExportFilePath -Password $SecureCertPassword
+Write-Host (Get-Date).ToString()" : Self-signed certificate created successfully at" $CertExportFilePath -ForegroundColor Magenta
 
 # Login to your Azure account
 
-Write-Host (Get-Date).ToString()" : Logging into your Azure account." -ForegroundColor MagentaAdd-AzureAccountSelect-AzureSubscription -SubscriptionId $SubscriptionIdWrite-Host (Get-Date).ToString()" : Logged in successfully." -ForegroundColor Magenta
+Write-Host (Get-Date).ToString()" : Logging into your Azure account." -ForegroundColor Magenta
+Add-AzureAccount
+Select-AzureSubscription -SubscriptionId $SubscriptionId
+Write-Host (Get-Date).ToString()" : Logged in successfully." -ForegroundColor Magenta
 
 # Uploading self-signed certificate to the cloud service certificate store
 
-Write-Host (Get-Date).ToString()" : Uploading self-signed certificate to the cloud service certificate store." -ForegroundColor MagentaAdd-AzureCertificate -serviceName $CloudServiceName -certToDeploy $CertExportFilePath -password $CertPasswordWrite-Host (Get-Date).ToString()" : Self-signed certificate uploaded successfully." -ForegroundColor Magenta
+Write-Host (Get-Date).ToString()" : Uploading self-signed certificate to the cloud service certificate store." -ForegroundColor Magenta
+Add-AzureCertificate -serviceName $CloudServiceName -certToDeploy $CertExportFilePath -password $CertPassword
+Write-Host (Get-Date).ToString()" : Self-signed certificate uploaded successfully." -ForegroundColor Magenta
 
 # Delete all the existing RDP extensions for a given cloud service slot
 
-Write-Host (Get-Date).ToString()" : Deleting all the existing RDP extensions for" $Slot "slot." -ForegroundColor MagentaRemove-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -UninstallConfiguration -Slot $SlotWrite-Host (Get-Date).ToString()" : Successfully deleted all the existing RDP extensions for" $Slot "slot." -ForegroundColor Magenta
+Write-Host (Get-Date).ToString()" : Deleting all the existing RDP extensions for" $Slot "slot." -ForegroundColor Magenta
+Remove-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -UninstallConfiguration -Slot $Slot
+Write-Host (Get-Date).ToString()" : Successfully deleted all the existing RDP extensions for" $Slot "slot." -ForegroundColor Magenta
 
 # Enabling remote desktop extension on specified role(s) or all roles on a cloud service slot
 
-Write-Host (Get-Date).ToString()" : Enabling remote desktop extension on all the roles." -ForegroundColor Magenta$SecureRdpPassword = ConvertTo-SecureString -String $RdpUserPassw0rd -Force -AsPlainText$Credential = New-Object System.Management.Automation.PSCredential $RdpUserName,$SecureRdpPasswordSet-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -Credential $Credential -CertificateThumbprint$cert.Thumbprint -Expiration $RdpAccountExpiry -Slot $SlotWrite-Host (Get-Date).ToString()" : Remote desktop extension applied successfully." -ForegroundColor Magenta
+Write-Host (Get-Date).ToString()" : Enabling remote desktop extension on all the roles." -ForegroundColor Magenta
+$SecureRdpPassword = ConvertTo-SecureString -String $RdpUserPassw0rd -Force -AsPlainText
+$Credential = New-Object System.Management.Automation.PSCredential $RdpUserName,$SecureRdpPassword
+Set-AzureServiceRemoteDesktopExtension -ServiceName $CloudServiceName -Credential $Credential -CertificateThumbprint $cert.Thumbprint -Expiration $RdpAccountExpiry -Slot $Slot
+Write-Host (Get-Date).ToString()" : Remote desktop extension applied successfully." -ForegroundColor Magenta
 ```
 
 Output of the script will be something like below:
