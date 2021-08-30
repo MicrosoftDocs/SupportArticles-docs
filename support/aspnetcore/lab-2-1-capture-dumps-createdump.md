@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot performance problems with createdump
-description: This article helps you analyze performance problems and describes how to use createdump and procdump to capture memory .NET Core dumps manually in Linux.
+description: This article helps you analyze performance problems and describes how to use createdump and ProcDump to capture memory .NET Core dumps manually in Linux.
 ms.date: 04/15/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
@@ -9,7 +9,7 @@ ms.reviewer: ramakoni
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
-This article helps you analyze performance problems, and describes how to use createdump and procdump to capture .NET Core memory dump files manually in Linux.
+This article helps you analyze performance problems, and describes how to use createdump and ProcDump to capture .NET Core memory dump files manually in Linux.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ If you have followed the previous parts of this series, you should have the foll
 
 ## Goal of this lab
 
-So far in this troubleshooting series, you've analyzed a crash problem. In this lab, you'll be given the chance to analyze a performance problem, and learn how to use createdump and procdump to capture memory dump files manually.
+So far in this troubleshooting series, you've analyzed a crash problem. In this lab, you'll be given the chance to analyze a performance problem, and learn how to use createdump and ProcDump to capture memory dump files manually.
 
 ## Reproduce the problem
 

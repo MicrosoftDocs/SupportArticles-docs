@@ -60,7 +60,7 @@ The troubleshooting labs in this series are based on a sample application, Buggy
 - Downloading and installing the "BuggyAmb" sample application on Linux.
 - Addressing an ASP.NET Core application crash by checking the system and application logs, and analyzing a system-generated core dump file.
 - Collecting and analyzing core dump files by using .NET development tools to troubleshoot a crash problem.
-- Collecting core dump files by using .NET tools and procdump to troubleshoot a performance issue.
+- Collecting core dump files by using .NET tools and ProcDump to troubleshoot a performance issue.
 - Analyzing core dump files on a Windows computer:
   - Windows Subsystem for Linux (WSL2)
   - Docker containers

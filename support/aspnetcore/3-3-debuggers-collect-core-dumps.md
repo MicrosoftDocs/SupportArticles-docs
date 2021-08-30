@@ -101,7 +101,7 @@ You can also develop your own tools or choose to make use of several third-party
 To install these tools together with the others, you have to have .NET Core SDK installed. For more information about .NET Core SDK, see: [.NET SDK overview](/dotnet/core/sdk).
 
 > [!NOTE]
-> Procdump is also worthy of a mention, although it's not part of SDK. An in-depth discussion of procdump options can be found at the end of this part.
+> Procdump is also worthy of a mention, although it's not part of SDK. An in-depth discussion of ProcDump options can be found at the end of this part.
 
 ## createdump
 
@@ -185,9 +185,9 @@ You'll use this tool to configure the debugger in the upcoming lab sections.
 
 ## procdump
 
-[A linux version of procdump](https://github.com/Sysinternals/ProcDump-for-Linux) is also available. It has some limited feature sets compared to its Windows counterpart. It doesn't support every feature that the Windows version does. For example, it can't be configured to collect core dump files when the process crashes or throws a first-chance exception. However it is still a powerful tool.
+[A linux version of ProcDump](https://github.com/Sysinternals/ProcDump-for-Linux) is also available. It has some limited feature sets compared to its Windows counterpart. It doesn't support every feature that the Windows version does. For example, it can't be configured to collect core dump files when the process crashes or throws a first-chance exception. However it is still a powerful tool.
 
-The following command-line options for procdump trigger core dump files generation in the specified conditions.
+The following command-line options for ProcDump trigger core dump files generation in the specified conditions.
 
 ```console
 -C: CPU exceeds or equals a specified value (0 to 100 * nCPU)
@@ -198,7 +198,7 @@ The following command-line options for procdump trigger core dump files generati
 -F: The filedescriptor count exceeds or equals a specified value
 ```
 
-Follow the [installation instructions](https://github.com/Sysinternals/ProcDump-for-Linux/blob/master/INSTALL.md) to install procdump in your environment.
+Follow the [installation instructions](https://github.com/Sysinternals/ProcDump-for-Linux/blob/master/INSTALL.md) to install ProcDump in your environment.
 
 You'll use this tool to capture a core dump file that's based on CPU usage in the upcoming lab sections.
 
@@ -231,7 +231,7 @@ The following articles are great resources for more information about .NET Core 
 - [dotnet tool install](/dotnet/core/tools/dotnet-tool-install)
 
 > [!NOTE]
-> Selecting the runtime version to use is different than selecting the SDK version. If you want to use a specific version of the .NET runtime, use the **--fx-version \<VERSION>** option, as explained in  [this article](/dotnet/core/tools/).
+> Selecting the runtime version to use is different than selecting the SDK version. If you want to use a specific version of the .NET runtime, use the **--fx-version \<VERSION\>** option, as explained in  [this article](/dotnet/core/tools/).
 
 ## Next steps
 

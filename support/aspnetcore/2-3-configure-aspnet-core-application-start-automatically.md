@@ -37,10 +37,10 @@ In Linux, there are also unit configuration files that have a ".service" extensi
 
 These service files are located in one of the following directories:
 
-- `/usr/lib/systemd/`: Stores service files for downloaded applications
-- `/etc/systemd/system/`: Stores service files that are created by system administrators
+- */usr/lib/systemd/*: Stores service files for downloaded applications
+- */etc/systemd/system/*: Stores service files that are created by system administrators
 
-Inspect the Nginx service file. It's installed through a package manager. Its configuration file should be in the /usr/lib/systemd/system/ folder. Running the `systemctl status nginx` command also displays the location of the service file.
+Inspect the Nginx service file. It's installed through a package manager. Its configuration file should be in the */usr/lib/systemd/system/* folder. Running the `systemctl status nginx` command also displays the location of the service file.
 
 :::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/systemctl-status-nginx-command.png" alt-text="Screenshot of systemctl status nginx command." border="true":::
 
@@ -87,7 +87,7 @@ Here are some key aspects of this content:
 
 ### Create a service file for the ASP.NET Core application
 
-You'll use `vi` to create and edit the service file. Your service file will go into the `/etc/systemd/system/` folder. Remember that, in this series, you published your first application to the `/var/firstwebapp/` folder. Therefore, `WorkingDirectory` should point to this folder.
+You'll use `vi` to create and edit the service file. Your service file will go into the */etc/systemd/system/* folder. Remember that, in this series, you published your first application to the */var/firstwebapp/* folder. Therefore, *WorkingDirectory* should point to this folder.
 
 Here's the final configuration file:
 

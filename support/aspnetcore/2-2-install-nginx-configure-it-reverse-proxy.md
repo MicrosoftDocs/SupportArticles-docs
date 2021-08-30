@@ -13,11 +13,11 @@ This article introduces how to install Nginx and configure it as a reverse proxy
 
 ## Prerequisites
 
-To follow the exercises in this part, you must have one ASP.NET Core web application created and deployed to the `/var` folder.
+To follow the exercises in this part, you must have one ASP.NET Core web application created and deployed to the */var* folder.
 
 ## Goal of this part
 
-In the previous part, you created an ASP.NET Core web application by using the .NET CLI tool, and the application is deployed to the `/var` folder. The application was also configured to listen on port 5000 for HTTP requests, and HTTPS redirection was removed.
+In the previous part, you created an ASP.NET Core web application by using the .NET CLI tool, and the application is deployed to the */var* folder. The application was also configured to listen on port 5000 for HTTP requests, and HTTPS redirection was removed.
 
 At this point, the clients should provide the port number when you connect to the application (for example, `http://localhost:5000`). However, this isn't the desired behavior.
 
@@ -42,7 +42,7 @@ Installing Nginx is straightforward. Run the `sudo apt install nginx` command to
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/sudo.png" alt-text="BuggyAmb sudo." border="true":::
 
-After the installation finishes, run `whereis nginx` to discover where the program is installed. You can see where the Nginx configuration files are located by inspecting the output. The following screenshot shows that the configuration files are located in the `/etc/nginx` folder.
+After the installation finishes, run `whereis nginx` to discover where the program is installed. You can see where the Nginx configuration files are located by inspecting the output. The following screenshot shows that the configuration files are located in the */etc/nginx* folder.
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/whereis.png" alt-text="BuggyAmb whereis." border="true":::
 
@@ -160,10 +160,10 @@ Scroll through the configuration to locate the server directive. You should expe
 
 Include directives make it easier to manage the configuration by splitting it into chunks to be included in the main configuration file. The main configuration file can be kept simple, and some specific configuration parts can be moved to other files. The highlighted lines in this screenshot indicate the following:
 
-- Nginx will load configuration from each *.conf* file that's located in the `/etc/nginx/conf.d` directory.
-- Nginx will load the configurations from each file that's located in the `/etc/nginx/sites-enabled` directory.
+- Nginx will load configuration from each *.conf* file that's located in the */etc/nginx/conf.d* directory.
+- Nginx will load the configurations from each file that's located in the */etc/nginx/sites-enabled* directory.
 
-If you inspect these directories, you won't find any configuration files in `/etc/nginx/conf.d`. However, there is one file in `/etc/nginx/sites-enabled`.
+If you inspect these directories, you won't find any configuration files in */etc/nginx/conf.d*. However, there is one file in */etc/nginx/sites-enabled*.
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/conf.png" alt-text="BuggyAmb conf." border="true":::
 
@@ -171,7 +171,7 @@ The default configuration file looks like a prime candidate to host the configur
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/default.png" alt-text="BuggyAmb default." border="true":::
 
-Therefore, the `/etc/nginx/sites-enabled/default file` will have to be edited to change the configuration.
+Therefore, the */etc/nginx/sites-enabled/default file* will have to be edited to change the configuration.
 
 ### Edit the configuration file by using vi
 
@@ -245,7 +245,7 @@ If you run `cat /etc/nginx/nginx.conf` again, and then look for the `logging set
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/log.png" alt-text="BuggyAmb log." border="true":::
 
-This shows that Nginx has two kinds of logs: Access logs and Error logs. These are stored in the `/var/log/nginx/` directory.
+This shows that Nginx has two kinds of logs: Access logs and Error logs. These are stored in the */var/log/nginx/* directory.
 
 Access logs are similar to IIS log files. A quick inspection of the content reveals that they resemble the following screenshot.
 

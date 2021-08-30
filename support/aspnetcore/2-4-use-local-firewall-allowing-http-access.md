@@ -80,7 +80,7 @@ After the firewall is configured, test whether it works.
 
 Test the firewall is easy: Create a "deny" rule for the HTTP protocol, and then try to access the site from another computer. The request should be blocked.
 
-Before you create this "deny" rule, make sure that the application is accessible to the browser in its current configuration. To do this, edit the `C:\Windows\System32\drivers\etc\hosts` file on the client computer by adding the buggyamb hostname and using the public IP address of your Linux VM. The buggyamb hostname resolves the Linux VM IP address. You can add any hostname to your hosts file, or you can try to connect directly to the public IP address of your Linux VM.
+Before you create this "deny" rule, make sure that the application is accessible to the browser in its current configuration. To do this, edit the *C:\Windows\System32\drivers\etc\hosts* file on the client computer by adding the buggyamb hostname and using the public IP address of your Linux VM. The buggyamb hostname resolves the Linux VM IP address. You can add any hostname to your hosts file, or you can try to connect directly to the public IP address of your Linux VM.
 
 :::image type="content" source="./media/2-4-use-local-firewall-allowing-http-access/welcome-page.png" alt-text="Screenshot of welcome page." border="true":::
 

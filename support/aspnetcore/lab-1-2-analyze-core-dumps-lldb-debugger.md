@@ -114,7 +114,7 @@ lldb --core <dump path> <host-program>
 
 The `<host-program>` is the native program that started the .NET Core application. This is usually dotnet, unless the application is self-contained. If this is a self-contained application, then this variable is the name of the application without the *.dll* extension.
 
- Assuming you're following along by using the same folder names, the path to the memory dump file that you generated in the previous section should be `~/dumps/dotnet/CoreDump`. Therefore, you'll run `lldb --core ~/dumps/dotnet/CoreDump` to open the file.
+ Assuming you're following along by using the same folder names, the path to the memory dump file that you generated in the previous section should be *~/dumps/dotnet/CoreDump*. Therefore, you'll run `lldb --core ~/dumps/dotnet/CoreDump` to open the file.
 
 The following screenshot shows the lldb debugger that has opened the memory dump file.
 

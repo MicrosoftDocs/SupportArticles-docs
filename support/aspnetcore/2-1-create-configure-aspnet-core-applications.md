@@ -17,7 +17,7 @@ To follow the exercises in this part, you must have a .NET Core SDK installed. T
 
 ## Goal of this part
 
-You'll learn how to create an ASP.NET Core web application by using .NET Core command-line interface (CLI) in Linux, and how to publish the application to the `/var` directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
+You'll learn how to create an ASP.NET Core web application by using .NET Core command-line interface (CLI) in Linux, and how to publish the application to the */var* directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
 
 ## .NET CLI
 
@@ -115,7 +115,7 @@ vi ~/firstwebapp/Startup.cs
 ```
 
 > [!NOTE]
-> This command starts the vi editor, and then loads the file. The ~ (tilde) shortcut refers to your home directory where you created your project. That is, the command points to `/home/<YourName>/firstwebapp/Startup.cs`.
+> This command starts the vi editor, and then loads the file. The ~ (tilde) shortcut refers to your home directory where you created your project. That is, the command points to */home/\<YourName\>/firstwebapp/Startup.cs*.
 
 Press the **I** (Insert) key to enable edit mode. You should now see -- **INSERT** -- at the bottom of the command line. Use the arrow keys to navigate within the file. Comment both the `app.UseHsTs()`; and `app.UseHttpsRedirection()`; lines by adding `//` at the start of them, as shown in the following screenshot.
 
@@ -135,22 +135,22 @@ You have now successfully run your first ASP.NET Core Web App on Linux.
 
 ## Deploy the application to the /var directory
 
-The primary goal of this exercise is to host your web application behind a reverse proxy so that connecting clients can access the application from another computer by using only the hostname without the port number. This is what you'd expect to occur in real world scenarios. You'll work with Nginx later to complete this task.  But before you do that, publish your application to the `/var` directory. This is because we recommend that you don't run the application in a user's home directory.
+The primary goal of this exercise is to host your web application behind a reverse proxy so that connecting clients can access the application from another computer by using only the hostname without the port number. This is what you'd expect to occur in real world scenarios. You'll work with Nginx later to complete this task.  But before you do that, publish your application to the */var* directory. This is because we recommend that you don't run the application in a user's home directory.
 
-Remember that the `/var` directory is used to store content and log files by various applications such as Apache and Nginx. You'll follow that practice here by publishing the newly created web application to `/var`.
+Remember that the */var* directory is used to store content and log files by various applications such as Apache and Nginx. You'll follow that practice here by publishing the newly created web application to */var*.
 
 Change to the project folder, and then run `dotnet publish` to create a publishing folder. Copy that folder to the /var directory.
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/dotnet-publish.png" alt-text="Screenshot of dotnet publish command." border="true":::
 
-The screenshot shows that the `dotnet publish` command created publishing files in the `~/firstwebapp/bin/Debug/net5.0/publish/` folder. Then, the following command was used to copy all files to `/var/firstwebapp/` folder:
+The screenshot shows that the `dotnet publish` command created publishing files in the *~/firstwebapp/bin/Debug/net5.0/publish/* folder. Then, the following command was used to copy all files to */var/firstwebapp/* folder:
 
 ```bash
 sudo cp -a ~/firstwebapp/bin/Debug/net5.0/publish/ /var/firstwebapp/
 ```
 
 > [!NOTE]
-> The usage of `sudo` before the copy command. You use this because standard users don't have write permission to `/var` directory. Therefore, you must run the command as a superuser.
+> The usage of `sudo` before the copy command. You use this because standard users don't have write permission to */var* directory. Therefore, you must run the command as a superuser.
 
 To run your application from a published folder, run the following command:
 

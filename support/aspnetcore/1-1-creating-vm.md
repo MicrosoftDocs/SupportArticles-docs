@@ -39,7 +39,7 @@ Your first decision is which distribution of Linux you want to use. There are di
 > [!NOTE]
 > As explained in [Linux virtual machines in Azure](/azure/virtual-machines/linux/overview), Microsoft Azure supports several popular Linux distributions that are provided and maintained by our partners. You can find distributions such as Red Hat Enterprise, CentOS, SUSE Linux Enterprise, Debian, Ubuntu, CoreOS, RancherOS, FreeBSD, and others in the Azure Marketplace.
 
-The instructions to create a Linux virtual machine in Azure are clearly explained in 
+The instructions to create a Linux virtual machine in Azure are clearly explained in
 [QuickStart: Create a Linux virtual machine in the Azure portal](/azure/virtual-machines/linux/quick-create-portal).
 
 > [!NOTE]
@@ -92,7 +92,7 @@ After the virtual machine is created, go to the resource page, and determine and
 
 ## Connect to the Linux virtual machine
 
-Now that you have a Linux virtual machine and you know its IP address, you also have your private key to authenticate by using SSH public key authentication, and you can log in. This is a good time to discuss some terminologies that you'll encounter when you connect to the Linux virtual machine.
+Now that you have a Linux virtual machine and you know its IP address, you also have your private key to authenticate by using SSH public key authentication, and you can log in. It's a good time to discuss some terminologies that you'll encounter when you connect to the Linux virtual machine.
 
 You'll not use a GUI to connect to and manage your Linux virtual machine. Instead, you'll use a terminal to connect and a shell to run commands.
 
@@ -127,11 +127,11 @@ ssh -i d:\Learn\Linux\myPrivateKey.pem <UserName>@127.0.0.1
 
 If you have never connected to this server before, you receive the following warning message:
 
-> The authenticity of host '\<HostName>' can't be established.
+> The authenticity of host '\<HostName\>' can't be established.
 
 :::image type="content" source="./media/1-1-creating-vm/warning-message.png" alt-text="Screenshot of warning message." border="true":::
 
-If you enter *yes*, you receive the following additional warning:
+If you enter *yes*, you receive the following more warning:
 
 :::image type="content" source="./media/1-1-creating-vm/additional-warning-message.png" alt-text="Screenshot of additional warning message." border="true":::
 
@@ -188,7 +188,7 @@ To convert files, follow these steps:
 
     Now, you're ready to connect to the virtual machine by using the PPK file.
 
-6. Start PuTTY. You'll use the same \<username\>@\<host | IP address\> format for the connection information. You can save this session information to reuse later. The following screenshot shows the **PuTTY Configuration** dialog box after the current session was saved. The dialog box shows the host information in \<username>@<host | IP address> format and the session name after it was selected from the available list.
+6. Start PuTTY. You'll use the same \<username\>@\<host | IP address\> format for the connection information. You can save this session information to reuse later. The following screenshot shows the **PuTTY Configuration** dialog box after the current session was saved. The dialog box shows the host information in \<username\>@\<host | IP address\> format and the session name after it was selected from the available list.
 
     :::image type="content" source="./media/1-1-creating-vm/save-putty-configuration.png" alt-text="Screenshot of putty configuration." border="false":::
 

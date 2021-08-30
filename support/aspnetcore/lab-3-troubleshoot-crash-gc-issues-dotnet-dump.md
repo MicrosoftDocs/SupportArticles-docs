@@ -66,7 +66,7 @@ If you try to run the `dotnet-dump ps` command, you'll encounter some unexpected
 Two processes are displayed in this list. However, one of them is shown as an elevated process, and its path can't be determined by the `dotnet-dump` ps command. To find its path, examine the process command line information by running the `cat /proc/<PID>/cmdline` command.
 
 > [!NOTE]
-> In this command, replace `<PID>` with the actual process ID of the target process, as seen in the following sample output. You may recall the special */proc/* directory from previous sections, and that a process in Linux can be seen as another folder under that directory (having the name of process ID). You can find all the details about a process by examining the */proc/\<PID>/* directory structure.
+> In this command, replace `<PID>` with the actual process ID of the target process, as seen in the following sample output. You may recall the special */proc/* directory from previous sections, and that a process in Linux can be seen as another folder under that directory (having the name of process ID). You can find all the details about a process by examining the */proc/\<PID\>/* directory structure.
 
 :::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/cat-cmdline-command.png" alt-text="Screenshot of cat cmdline command." border="true":::
 
@@ -90,7 +90,7 @@ From the previous error message, you can determine that there is a permission is
 
 :::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/two-command.png" alt-text="Screenshot of two commands." border="true":::
 
-The left side of the list corresponds to the first demo application, in which everything works fine, and the application runs as \<User Name> (or the user account that you used when you set up the environment and logged in). The right side corresponds to the buggy application, for which the dump file collection failed. and the application runs as **www-data** user.
+The left side of the list corresponds to the first demo application, in which everything works fine, and the application runs as \<User Name\> (or the user account that you used when you set up the environment and logged in). The right side corresponds to the buggy application, for which the dump file collection failed. and the application runs as **www-data** user.
 
 The solution to this issue is discussed on the official [GitHub page](https://github.com/dotnet/diagnostics/issues/449).
 

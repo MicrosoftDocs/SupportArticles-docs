@@ -24,15 +24,15 @@ For this training, it's not necessary to dive deeply into how to manage Linux. H
 |/|Root directory (top-level folder).|
 |/bin|Contains user binaries, executable files.|
 |/sbin|Contains user binaries, executable files.|
-|/etc|Contains the configuration files for the local system and applications. For example, you'll create some configuration files in the `/etc/system` directory to enable the ASP.NET Core application to be started automatically by the system.|
-|/home|Contains each user's home directory. For example, `/home/<username>`.|
+|/etc|Contains the configuration files for the local system and applications. For example, you'll create some configuration files in the */etc/system* directory to enable the ASP.NET Core application to be started automatically by the system.|
+|/home|Contains each user's home directory. For example, */home/\<username\>*.|
 |/tmp|Temporary directory to store temporary files that are created by the system and applications.|
-|/usr|Stores shareable files including executables, libraries, and documents. For example, .NET Core runtime and SDKs are installed in the `/usr/share/dotnet/` directory.|
-|/var|Stores variable data files. For example, Apache stores the root web site's content in the /var/www/html directory, and the log files in the `/var/log/apache2/` directory. Although it's not necessary, you'll publish your web applications in this directory.|
+|/usr|Stores shareable files including executables, libraries, and documents. For example, .NET Core runtime and SDKs are installed in the */usr/share/dotnet/* directory.|
+|/var|Stores variable data files. For example, Apache stores the root web site's content in the /var/www/html directory, and the log files in the */var/log/apache2/* directory. Although it's not necessary, you'll publish your web applications in this directory.|
 ||
 
 > [!NOTE]
-> Linux is case-sensitive. Therefore, `/home` and `/Home` are different directories, and filename and Filename are different files.
+> Linux is case-sensitive. Therefore, */home* and */Home* are different directories, and filename and Filename are different files.
 
 When you first connect to your Linux virtual machine, you'll start at your root directory. This will be `/home/<username>`.
 
@@ -40,7 +40,7 @@ The root directory shortcut is **~** (tilde). You can use the `cd ~` command at 
 
 Review and try the following commands (shown in the following screenshot):
 
-- `pwd` (print working directory): Prints the current directory and the `/etc/systemd` directory.
+- `pwd` (print working directory): Prints the current directory and the */etc/systemd* directory.
 - `echo`: Prints the value of the ~ (root) directory.
 - `cd ~`: Returns you to the root directory.
 
@@ -65,9 +65,9 @@ There are several ways to run commands as the root account user. One is to use t
 > [!IMPORTANT]
 > After you become the root account user, everything you do runs in root context. Therefore, you should act carefully because the root account has access to the entire system.
 
-To demonstrate a permissions issue, create a text file in a special folder that's named `/etc`.
+To demonstrate a permissions issue, create a text file in a special folder that's named */etc*.
 
-The `/etc/` folder is where system configuration files are located. This folder protects its contents from being changed by a standard user.
+The */etc/* folder is where system configuration files are located. This folder protects its contents from being changed by a standard user.
 
 Run the following command:
 
@@ -86,7 +86,7 @@ When you run this command, you receive a **permission denied** error message.
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/permission-denied-message.png" alt-text="Screenshot of permission denied message." border="false":::
 
-The operation fails because the `/etc` folder is special folder that a standard user can't change. Verify the user by running the `id` command.
+The operation fails because the */etc* folder is special folder that a standard user can't change. Verify the user by running the `id` command.
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/id-command.png" alt-text="Screenshot of id command." border="false":::
 
@@ -127,7 +127,7 @@ To prevent mistakes that could damage the system while you're elevated to root s
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/exit-command.png" alt-text="Screenshot of exit command." border="false":::
 
-For additional practice, run the same `ll` and `cat` commands within your standard user context. You'll see that you can't create the file in the `/etc/` folder, but can you list the file and read the contents.
+For additional practice, run the same `ll` and `cat` commands within your standard user context. You'll see that you can't create the file in the */etc/* folder, but can you list the file and read the contents.
 
 ## Run commands by using the "sudo" prefix
 
@@ -266,11 +266,11 @@ According to the Help page for `whereis`, the definition is as follows:
 
 `whereis` locates the binary, source, and manual files for the specified command names.
 
-If you run `whereis apache2`, you should find the `/etc/apache2` installation.
+If you run `whereis apache2`, you should find the */etc/apache2* installation.
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/whereis-apache2-command.png" alt-text="Screenshot of whereis apache2 command." border="false":::
 
-Remember that the `/etc/` directory is where the system configuration files are located. To learn whether "apache2"is a file or folder, run `ll /etc/apache2`. As you can see, this is a folder, and it contains the apache2 configuration files.
+Remember that the */etc/* directory is where the system configuration files are located. To learn whether "apache2"is a file or folder, run `ll /etc/apache2`. As you can see, this is a folder, and it contains the apache2 configuration files.
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/ll-etc-apache2-command.png" alt-text="Screenshot of ll etc apache2 command." border="false":::
 
