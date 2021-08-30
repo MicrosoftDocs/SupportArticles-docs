@@ -85,7 +85,7 @@ To do this, follow these steps:
 
     For example, **msExchMailboxMoveRemoteHostName** is populated by the `<tenant.onmicrosoft.com>` value if there was at least one attempt to move the user to Exchange Online.
 
-    If the move request was successfully removed from Exchange Online (that is, you don't find it by running `Get-MoveRequest` in Exchange Online PowerShell) but the **msExchMailboxMoveRemoteHostName** attribute is set, this suggests that the move reference was not cleared up correctly from on-premises Azure Active Directory (Azure AD). In this scenario, you have an orphaned move request for that user.
+    If the move request was successfully removed from Exchange Online (that is, you don't find it by running `Get-MoveRequest` in Exchange Online PowerShell) but the **msExchMailboxMoveRemoteHostName** attribute is set, this suggests that the move reference was not cleared up correctly from on-premises Active Directory. In this scenario, you have an orphaned move request for that user.
 
     Another example for an orphaned local move request for a primary or archived mailbox would be if there's no move request on-premises for it, but there are attributes set, such as the following:
 
