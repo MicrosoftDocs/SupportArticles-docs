@@ -41,7 +41,7 @@ The second way to modify this attribute is analogous to an administrator resetti
 
 The following two functions provide examples of these operations:
 
-```javascript
+```c
 ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPassword)
 {
     ULONG err = 1;
