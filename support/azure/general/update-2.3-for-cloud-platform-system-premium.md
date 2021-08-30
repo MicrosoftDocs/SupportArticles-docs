@@ -41,9 +41,9 @@ $ cred = Get- Credential (whoami)
 
 When you're prompted, enter the account password.
 
-Run the following command, where <CPSPU Folder Name> is the folder name that you used for the specific update package:
+Run the following command, where \<CPSPU Folder Name\> is the folder name that you used for the specific update package:
 
-<Name of SOFS in rack 1> \SU1_InfrastructureShare1\<CPSPU Folder Name>\Framework\PatchingUpgrade\Invoke-PURun.ps1 -HealthCheckOnly -PUCredential $cred 
+\<Name of SOFS in rack 1\>\SU1_InfrastructureShare1\\\<CPSPU Folder Name\>\Framework\PatchingUpgrade\Invoke-PURun.ps1 -HealthCheckOnly -PUCredential $cred 
 
 Try to fix any discovered issues. (Optimally, you should resolve all critical Operations Manager alerts before a P&U run.)
 
@@ -59,13 +59,13 @@ To resolve this issue, you must install the VMM hotfix by using the following in
 #### How to apply the private hotfix for VMM 2012 R2
 
 > [!NOTE]
-> The highly available VMM role (<Prefix>-HA-VMM) clustered role has two nodes: <Prefix>-VMM-01 and <Prefix>VMM-02. In the instructions, we refer to these as Node1 and Node2.
+> The highly available VMM role (\<Prefix\>\-HA\-VMM) clustered role has two nodes: \<Prefix\>\-VMM\-01 and \<Prefix\>\-VMM\-02. In the instructions, we refer to these as Node1 and Node2.
 
 
 1. From the specified location, copy the HostMode_Hotfix.exe file to a folder on a Console VM, such as C: \HostModeHotfix.
 2. Double-click the HostMode_Hotfix.exe file, review the EULA, and then click Yes to accept.
 3. Choose a folder to store the extracted files, such as C:\HostModeHotfix, and then click OK.
-4. Determine the passive VMM node. To do this, open a Windows PowerShell ISE session and run the following script, where <Prefix> is your stamp prefix:
+4. Determine the passive VMM node. To do this, open a Windows PowerShell ISE session and run the following script, where \<Prefix\> is your stamp prefix:
     ```
     $VmmServerName = "<Prefix>-HA-VMM"
     $vmmServer = Get-SCVMMServer -ComputerName $VmmServerName
@@ -103,9 +103,9 @@ To resolve this issue, you must install the VMM hotfix by using the following in
 
     Verify that the status of each is Stopped. If you're prompted to close the System Center Management Service Host process, click **Ignore**.
 11. On the Console VM, browse to the following folder on the passive node:
-    ``azurepowershell
-    \\<Prefix>-VMM-0#> \c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
-    ```
+
+    \\\\\<Prefix\>\-VMM\-0#\> \c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
+
 12. In the \bin folder, replace the following files with the new versions of the files that you extracted from the hotfix package:
     - Engine.Common.dl
     - Utils.dll
@@ -117,7 +117,7 @@ To resolve this issue, you must install the VMM hotfix by using the following in
     The SCVMMService will not start when the passive VMM server node is not active. The SCVMMService starts only when the node becomes the Active node. This is by design.
 14. In Failover Cluster Manager, initiate a failover. This will make Node1 become the new passive node and Node2 (which has already been updated) become the active node:
 
-    1. Open Failover Cluster Manager, and then connect to the <Prefix>-CL-VMM cluster.
+    1. Open Failover Cluster Manager, and then connect to the \<Prefix\>\-CL\-VMM cluster.
     1. Click **Roles**. The Roles pane displays the active node in the **Owner Node** column. Right-click the active node, point to **Move**, and then click **Select Node**. Select the other node, and make sure that the status changes to **Running** for the new active node. This may take a few seconds.
 1. Follow steps 6-13 to update the VMM files on the new passive node (in this example, Node1).
 
@@ -126,7 +126,7 @@ To resolve this issue, you must install the VMM hotfix by using the following in
   2. Replace the files under your Virtual Machine Manager Install directory with your backup files.
   3. Start the SCVMMAgent service.
   4. Start the SCVMMService service.
-  5. In Failover Cluster Manager, initiate a failover of the <Prefix>-HA-VMM clustered role.
+  5. In Failover Cluster Manager, initiate a failover of the \<Prefix\>\-HA\-VMM clustered role.
   6. Repeat steps A-D on the new passive node.
 
 ### Step 4: Run the P&U update package

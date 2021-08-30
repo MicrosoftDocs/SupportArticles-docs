@@ -32,7 +32,7 @@ This issue can occur if the Azure Active Directory Module for Windows PowerShell
 
 To resolve this issue, follow these steps.
 
-1. Install the Azure Active Directory Module for Windows PowerShell on the computer (if it isn't already installed). To install the Azure Active Directory Module for Windows PowerShell, see [Manage Azure AD using Windows PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
+1. Install the Azure Active Directory Module for Windows PowerShell on the computer (if it isn't already installed). To install the Azure Active Directory Module for Windows PowerShell, see [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
 2. Select **Start** > **All Programs**, select **Windows Azure Active Directory**, and then select **Windows Azure Active Directory Module for Windows PowerShell**.
 3. At the Windows PowerShell command prompt, type `Get-Module`, and then press Enter.
 4. In the output, check that the `MSOnline` module is present. The output should look similar to the following one:
@@ -45,7 +45,7 @@ To resolve this issue, follow these steps.
 
     If the `MSOnline` module isn't present, use Windows PowerShell to import the `MSOnline` module. To do it, follow these steps:
 
-    1. Connect to Exchange Online by using remote PowerShell. For more info about how to do it, see [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?redirectedfrom=MSDN&view=exchange-ps&preserve-view=true).
+    1. Connect to Exchange Online by using remote PowerShell. For more info about how to do it, see [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?redirectedfrom=MSDN&view=exchange-ps&preserve-view=true).
     2. Type the following cmdlet, and then press Enter:
 
         ```powershell
