@@ -120,12 +120,14 @@ If you have the [SharePoint Online Management Shell](https://www.microsoft.com/d
 
 ### Run a self-diagnostics tool
 
-Office 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
 
-To do this, follow these steps:
-1.	Navigate to the Office 365 admin center and select **Need help?** 
-2.	In the search bar type "Diag:" to see all the available diagnostics.
-3.	The "Diag: OneDrive Provisioning" diagnostic will perform a large range of verifications.
+To do this, Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: OneDrive Provisioning](https://aka.ms/PillarOneDriveProvisioning)
+
+3.	The diagnostic will perform a large range of verifications.
 ![Search the diagnostics library.](./media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-2.png)
 
  
