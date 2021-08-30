@@ -33,7 +33,7 @@ This issue may occur if one or more of the following conditions are true:
 
 You want to manage objects in Office 365, Azure, or Intune and you no longer want to use directory synchronization.
 
-1.Istall [Microsoft Azure Active Directory Module for Windows PowerShell](/microsoft-365/enterprise/connect-to-microsoft-365-powershell?view=o365-worldwide#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+1.Istall [Microsoft Azure Active Directory Module for Windows PowerShell](/microsoft-365/enterprise/connect-to-microsoft-365-powershell?view=o365-worldwide&preserve-view=true#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
 1. Disable directory synchronization by running the following command:
 
