@@ -54,11 +54,11 @@ When you try to preview or save a document, Word returns the following error mes
 
 1. Select **Environment Variables**.
 
-1. Under **User variables for <username>** (where <*username*> is your user name), select the **New** button.
+1. Under **User variables for \<username>** (where **\<username>** is your user name), select the **New** button.
 
-1. In the **Variable name** field, enter *%userprofile%*.
+1. In the **Variable name** field, enter **%userprofile%**.
  
-1. In the **Variable value** field, enter *C:\Users\<username>* (where <*username*> is the same value as <*username*> in step 4).
+1. In the **Variable value** field, enter **C:\Users\\<username\>** (where **\<username\>** is the same value as **\<username>** in step 4).
 
 1. Select **OK**, and then select **OK** on any confirmation window that opens.
 
@@ -70,11 +70,11 @@ When you try to preview or save a document, Word returns the following error mes
 
 1. Navigate to the following folder:
 
-   C:\Users\<XXXX>\AppData\Local\Microsoft\Windows
+   C:\Users\\<username\>\AppData\Local\Microsoft\Windows\INetCache
 
-   Note: In this path, <*XXXX*> represents your user profile name.
+   Note: In this path, **\<username>** represents your user profile name.
 
-1. Create a folder, and name it *INetCacheContent.Word*.
+1. Create a folder, and name it *Content.Word*.
 
    Note: It might be necessary to turn on **Hidden Items** on the View ribbon of Windows Explorer.
 

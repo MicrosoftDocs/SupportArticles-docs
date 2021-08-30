@@ -27,6 +27,8 @@
       href: ../administration/deleting-content-type-from-hub.md
     - name: Error when accessing SharePoint or OneDrive
       href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Error 404 in OneDrive or SharePoint
+      href: ../administration/error-404-onedrive-sharepoint.md
     - name: Errors when connecting to SharePoint Online Management Shell
       href: ../administration/errors-connecting-to-management-shell.md
     - name: Exclude or remove sites from a SharePoint Online retention policy
@@ -121,8 +123,10 @@
       href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
-    - name: Document IDs aren't assigned to items
-      href: ../lists-and-libraries/document-ids-unassigned.md
+    - name: Content Organizer doesn't comply with specified interval
+      href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
+    - name: Default column name shown in list settings
+      href: ../lists-and-libraries/default-column-name-still-shown.md
     - name: Documents aren't displayed in web browser with TLS 1.2
       href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
     - name: Edit column doesn't display the edit link
@@ -233,14 +237,8 @@
     items:
     - name: '"Access Denied due to organizational policies" error'
       href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
-    - name: Error when trying to access SharePoint Online or OneDrive for Business
-      href: ../sharing-and-permissions/access-denied-sharepoint-error.md
-    - name: Error when an external user tries to access SharePoint Online or OneDrive for Business
-      href: ../sharing-and-permissions/error-when-external-user-tries-to-access-sharepoint-onedrive.md
-    - name: 'Error when trying to access a shared folder or "Access Requests" list'
-      href: ../sharing-and-permissions/access-requests-list-error-access-denied.md
-    - name: Error when trying to approve a SharePoint Approval Workflow task
-      href: ../sharing-and-permissions/approval-workflow-access-denied-error.md
+    - name: Error 403 Forbidden in OneDrive or SharePoints
+      href: ../sharing-and-permissions/error-403-forbidden.md
     - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
     - name: '"External sharing is disabled for the site" error with Online Admin Center'
@@ -251,8 +249,6 @@
       href: ../sharing-and-permissions/organization-policies-do-not-allow-you-to-share-with-users-error.md
     - name: Anonymous users are prompted for credentials
       href: ../sharing-and-permissions/anonymous-users-are-prompted-for-credentials-in-library.md
-    - name: Can't access a shared folder
-      href: ../sharing-and-permissions/cannot-access-shared-folder.md
     - name: Can't add external users to a SharePoint Online External Content Type
       href: ../sharing-and-permissions/cannot-add-external-users-to-content-type.md
     - name: Can't share/break inheritance of a folder, list, or library
@@ -307,8 +303,8 @@
       href: ../Sites/cannot-find-specified-web-given-url.md
     - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
       href: ../Sites/cannot-permanently-delete-site.md
-    - name: Classic popularity reports is discontinued
-      href: ../Sites/classic-usage-popularity-reports-discontinued.md
+    - name: Classic site collection search usage reports
+      href: ../Sites/classic-site-collection-search-usage-reports.md
     - name: Customizations of the top navigation bar is reverted
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error when trying to change site logo on O365 group SharePoint site
@@ -387,10 +383,12 @@
       href: ../Workflows/copied-workflow-linked-to-source-workflow.md
     - name: Daily email limit has exceeded or unable to send to a recipient
       href: ../Workflows/configured-workflow-fails-running.md
-    - name: Nintex workflow on SharePoint Online fails to start
-      href: ../Workflows/nintex-workflow-fails-to-start.md
+    - name: Gather Workflow troubleshooting data
+      href: ../Workflows/gather-workflow-data.md
     - name: Items revert to the "Pending" status
       href: ../Workflows/item-pending-status.md
+    - name: Nintex workflow on SharePoint Online fails to start
+      href: ../Workflows/nintex-workflow-fails-to-start.md
     - name: Outlook doesn't respond when approving an online approval workflow
       href: ../Workflows/outlook-fails-responding-sharepoint-workflow.md
     - name: Publishing Approval workflow doesn't automatically start
@@ -399,6 +397,8 @@
       href: ../Workflows/replace-list-item-permission-fail.md
     - name: SharePoint 2013 workflow HTTP Unauthorized
       href: ../workflows/workflow-http-unauthorized.md
+    - name: SharePoint 2013 Workflow Error '“To try again, reload the page”'
+      href: ../workflows/reload-the-page.md
     - name: Workflow contains blank values in output
       href: ../Workflows/workflow-contains-blank-values.md
     - name: Workflow fails to update a Person or Group column

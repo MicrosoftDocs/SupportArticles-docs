@@ -463,18 +463,20 @@
       href: ../outlook-on-the-web-issues/you-may-have-already-signed-in-to-outlook-web-app-error.md
   - name: Public Folders
     items:
+    - name: "\"550 5.7.13\" error when sending emails to MEPF"
+      href: ../public-folders/cannot-send-emails-to-mail-enabled-public-folder.md
     - name: Can't add or expand public folders
       href: ../public-folders/cannot-expand-add-public-folder.md
     - name: Can't add reviewer permission to calendars
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
-    - name: Can't apply permissions to subfolders
-      href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
-    - name: Can't apply the read and unread setting
-      href: ../public-folders/cannot-apply-read-unread-setting.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
+    - name: Can't send email to public folder contact list
+      href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
+    - name: Permissions and settings don't propagate in EAC
+      href: ../public-folders/permissions-settings-not-propagate-eac.md
     - name: Public folder couldn't be mail-enabled
       href: ../public-folders/public-folder-not-be-mail-enabled.md
     - name: Restored folders cause a migration batch failure
