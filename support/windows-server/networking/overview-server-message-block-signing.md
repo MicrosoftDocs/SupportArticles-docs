@@ -60,7 +60,7 @@ In these policies, the "always" indicates the SMB signing is required to be used
 
 The **EnableSecuritySignature** registry setting for SMB2+ client and SMB2+ server is ignored. It does nothing at all. It is pointless unless you are using SMB1. SMB2 signing is controlled solely by being required or not. It is used when either the server or client require SMB signing. Only if they both have signing set to 0 will signing not occur. Again, SMB signing is always enabled in SMB2+.
 
-||Server – RequireSecuritySignature=1|Server – RequireSecuritySignature=0|
+|-|Server – RequireSecuritySignature=1|Server – RequireSecuritySignature=0|
 |---|---|---|
 |Client – RequireSecuritySignature=1|Signed|Signed|
 |Client – RequireSecuritySignature=0|Signed|Not signed|
