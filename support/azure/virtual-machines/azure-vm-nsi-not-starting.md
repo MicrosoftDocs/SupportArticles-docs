@@ -64,7 +64,7 @@ ms.collection: windows
 
 ### Connect to the VM using Serial console (Troubleshoot cause)
 
-If you're unable to successfully RDP to the virtual machine (VM), use PowerShell and [Serial Console](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/serial-console-windows) to check for the log entries.
+If you're unable to successfully RDP to the virtual machine (VM), use PowerShell and [Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) to check for the log entries.
 
 1. On the command line, launch PowerShell by running `powershell.exe`.
 2. In PowerShell, execute the following commands:
@@ -93,11 +93,11 @@ The NSI service is not running on the Virtual Machine. This issue happens in the
 
 Backup the VM OS disk using your preferred method.
 
-One method that you can use is to [take a snapshot of the disk](https://docs.microsoft.com/azure/virtual-machines/windows/snapshot-copy-managed-disk).
+One method that you can use is to [take a snapshot of the disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 
 ### Connect to the VM using Serial console (Solution)
 
-Connect to the VM using [Serial Console](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/serial-console-windows) to attempt to get the NSI service started.
+Connect to the VM using [Serial Console](/azure/virtual-machines/troubleshooting/serial-console-windows) to attempt to get the NSI service started.
 
 1. In the Serial Console, execute this command:
 

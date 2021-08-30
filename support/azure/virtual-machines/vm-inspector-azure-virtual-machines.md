@@ -22,23 +22,41 @@ VM Inspector is supported on the following operating systems:
 
 ### Windows
 
+- Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
+- Windows Server 2008 R2
+- Windows Server 2008
+- Windows 10
+- Windows 8.1
+- Windows 8
+- Windows 7
 
 ### Linux
 
 - CentOS
+- CoreOS
 - Debian
+- Flatcar Container Linux by Kinvolk
 - Oracle Linux Server
 - RHEL
 - SLES
+- OpenSUSE
 - Ubuntu
+
+[Linux distributions endorsed on Azure](/azure/virtual-machines/linux/endorsed-distros)
+
+## Unsupported scenarios
+
+- Unmanaged OS disks and VMs
+- Encrypted OS disks and VMs
+- Ephemeral OS disks and VMs
 
 ## How VM Inspector works
 
-VM Inspector uses the Microsoft Compute resource provider, a back-end Microsoft service that collects useful event logs, configurations, settings, and registry keys from your VM OS disk for diagnostics. The customer starts by granting access to VM Inspector and running a diagnostic against your selected VM. VM Inspector will then make a connection to the VM managed disk in Azure storage, and use a predefined manifest to do file collection on the OS disk. After the inspection is finished, the collected files are packed into a .zip file, and returned to customer’s storage account for safe keeping.
+VM Inspector uses the Microsoft Compute Diagnostic resource provider, a back-end Microsoft service that collects useful event logs, configurations, settings, and registry keys from your VM OS disk for diagnostics. The customer starts by granting access to VM Inspector and running a diagnostic against your selected VM. VM Inspector will then make a connection to the VM managed disk in Azure blob storage, and use a predefined manifest to do file collection on the OS disk. After the inspection is finished, the collected files are packed into a .zip file, and returned to customer’s storage account for safe keeping.
 
 For more information about the anatomy of an Azure VM on Windows, see [Run a Windows VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/windows-vm).
 
@@ -48,7 +66,12 @@ For general information about OS disks, see: [Introduction to Azure managed disk
 
 ## Get access to VM Inspector
 
-The user who has Owner-level access must grant disk access to VM Inspector before anyone else can run the diagnostic on that VM. The minimum access level for running VM Inspector by using the General built-in role is the Disk Backup Reader. You must have Owner-level access to run VM Inspector for the first time. If you have a lower access role (Contributor, Reader, or User Access Administrator), you must manually update your access level to that of Owner at the subscription level.
+A user with Owner-level access must grant access to VM Inspector before diagnostics can be run on the VM. The VM Inspector needs the Disk Backup Reader role at minimum to perform disk inspection against the managed OS disk on your VM. If you have Owner-level access and you're running VM Inspector for the first time on your VM, you'll be prompted to automatically grant VM Inspector the Disk Backup Reader role. If you have a lower access role such as Contributor, Reader, or User Access Administrator, you must manually update your access level to that of Owner on the VM to proceed.
+
+For more information on the Disk Backup Reader role, see: [Azure built-in roles - Disk Backup Reader](/azure/role-based-access-control/built-in-roles#disk-backup-reader)
+
+For more information on general Azure built-in RBAC roles, see: [Azure built-in roles - All](/azure/role-based-access-control/built-in-roles#all)
+
 
 [Azure built-in roles - Azure RBAC](/azure/role-based-access-control/built-in-roles#general)
 
@@ -102,7 +125,7 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 
 ## Select an analysis scenario to run
 
-The following analysis scenarios are available to run from the Azure portal. Based on the logs and issues that you're experiencing, choose an analysis to run.
+The following analysis scenarios are available to run from the Azure portal. Based on the logs and issues that you're experiencing, choose an analysis to run. For a link to the Github documentation of the full list analysis logs and information, see [Manifest Content](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md).
 
 ### Windows diagnostics
 <details>

@@ -46,7 +46,7 @@ The Azure support team continues to offer assistance in troubleshooting issues t
 
 **Can I build custom images that contain updates provided by Microsoft through a custom support agreement?**
 
-Yes. You can create and upload [specialized VHD](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal)  only for your own use, including situations in which those images contain updates resulting from a custom support agreement.
+Yes. You can create and upload [specialized VHD](/azure/virtual-machines/windows/create-vm-specialized-portal)  only for your own use, including situations in which those images contain updates resulting from a custom support agreement.
 
 **Will I be able to import new Windows Server 2003 virtual machines after the end of extended support?**
   

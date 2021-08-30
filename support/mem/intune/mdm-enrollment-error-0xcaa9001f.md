@@ -28,7 +28,7 @@ MDM enrollment fails for co-managed Windows devices that are hybrid Azure AD-joi
 
 - In logs under **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational** in the Event Viewer:
 
-  > Http request status: 400. Method: POST Endpoint Uri: https://login.microsoftonline.com/\<AADTenantID>/oauth2/token Correlation ID: \<ID>  
+  > Http request status: 400. Method: POST Endpoint Uri: https://login.microsoftonline.com/\<AADTenantID\>/oauth2/token Correlation ID: \<ID\>  
   > OAuth response error: invalid_grant  
   > Error description: **AADSTS70002: Error validating credentials. AADSTS50155: Device is not authenticated.**
 

@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4095462
 
 If you currently use an earlier version than 2.0.9083.0 of the Microsoft Azure Recovery Services (MARS) agent, also known as the Azure Backup agent, you must immediately download this update, install it, and then re-register the server that has Azure Backup. This is required to avoid backup and recovery failures that are caused by the deprecation of Access Control Services (ACS).
 
-For more information about how to identify servers that have earlier versions of MARS agent in your environment, and the steps to update those servers, see the [Updating Azure Backup agents](https://docs.microsoft.com/archive/blogs/srinathv/updating-azure-backup-agents).
+For more information about how to identify servers that have earlier versions of MARS agent in your environment, and the steps to update those servers, see the [Updating Azure Backup agents](/archive/blogs/srinathv/updating-azure-backup-agents).
 
 ## New features
 

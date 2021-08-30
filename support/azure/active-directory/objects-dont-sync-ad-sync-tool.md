@@ -67,9 +67,9 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 Use the [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix) to find objects and errors that prevent synchronization to Azure AD.
 
-- If you see "Blank" in the **ERROR** column after you run IdFix, see ["Blank" is displayed in the ERROR column for one or more objects after you run the IdFix tool](https://docs.microsoft.com/office365/troubleshoot/active-directory/idfix-not-display-objects-errors).
+- If you see "Blank" in the **ERROR** column after you run IdFix, see ["Blank" is displayed in the ERROR column for one or more objects after you run the IdFix tool](/office365/troubleshoot/active-directory/idfix-not-display-objects-errors).
 
-- If you see "Duplicate" in the **ERROR** column after you run IdFix, see: ["Duplicate" is displayed in the ERROR column for one or more objects after you run the IdFix tool](https://docs.microsoft.com/office365/troubleshoot/active-directory/run-idfix-dirsync-error-remediation-tool)
+- If you see "Duplicate" in the **ERROR** column after you run IdFix, see: ["Duplicate" is displayed in the ERROR column for one or more objects after you run the IdFix tool](/office365/troubleshoot/active-directory/run-idfix-dirsync-error-remediation-tool)
 
 ### Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
 
@@ -96,7 +96,7 @@ To determine attribute conflicts caused by user objects that were created by usi
         > [!NOTE]
         > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the Support Tools, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
-2. Connect to Azure AD by using the Azure Active Directory Module for Windows PowerShell. For more info, go to [Manage Azure AD using Windows PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
+2. Connect to Azure AD by using the Azure Active Directory Module for Windows PowerShell. For more info, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
 
     Leave the console window open. You'll need to use it in the next step.
 3. Check for the duplicate userPrincipalName attributes.
@@ -225,7 +225,7 @@ We highly recommend that one of these attributes is used consistently to manage 
 ## More information
 
 The Windows PowerShell commands that are mentioned in this article require the Azure Active Directory Module for Windows PowerShell. For more information about the Azure Active Directory Module for Windows PowerShell, see the following article:  
-[Manage Azure AD using Windows PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
+[Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
 
 For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
 [List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)

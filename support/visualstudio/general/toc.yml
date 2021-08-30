@@ -11,7 +11,6 @@
   - name: Debugger doesn't stop on breakpoints
     href: debugger-not-stop-breakpoint.md
 
-
 - name: General
   items:
   - name: _stat-family function can't support Symbolic Directory Link
@@ -44,6 +43,8 @@
     href: vbs-type-mismatch-error.md
   - name: Windows Automation API 3.0 improves performance
     href: windows-automation-api-3-improve-visual-studio.md
+  - name: Workarounds for Visual Studio 2022 on unsupported operating systems
+    href: visual-studio-2022-unsupported-operating-systems.md
   
 - name: Installation
   items:

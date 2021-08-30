@@ -117,9 +117,7 @@ All minimum requirements are met.
 
 ### Download locations for the minimum requirements
 
-- The .NET Framework (select to install one of the below if it is not already on the computer that you want to run the diagnostic package on):
-  - 2.0 - [Microsoft .NET Framework Version 2.0 Redistributable Package (x64)](https://www.microsoft.com/download/en/details.aspx?id=6523) (x64)
-  - 3.5 - [Microsoft .NET Framework 3.5 Service pack 1 (Full Package)](https://www.microsoft.com/download/en/details.aspx?id=25150)
+- The .NET Framework (Select this link to install if .NET Framework 3.5 is not already on the computer that you want to run the diagnostic package on): [Microsoft .NET Framework 3.5 Service pack 1 (Full Package)](https://www.microsoft.com/download/en/details.aspx?id=25150)
 - Microsoft Core XML Services (MSXML) 6.0
 - [Windows PowerShell System Requirements](/powershell/scripting/windows-powershell/install/windows-powershell-system-requirements)
 

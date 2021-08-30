@@ -24,4 +24,4 @@ Azure can host many operating systems. The following is the list of operating s
 
 ## Linux
  
-[Endorsed Linux operating systems](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros), except CoreOS and OpenSUSE
+[Endorsed Linux operating systems](/azure/virtual-machines/linux/endorsed-distros), except CoreOS and OpenSUSE
