@@ -59,10 +59,11 @@ If you are an administrator, and you have locked yourself out of SharePoint and 
 > [!div class="nextstepaction"]
 > [Run Tests: Access Denied due to Network Location](http://aka.ms/AccessDeniedDuetoNetworkLocation)
 
-3. In the diagnostic form, select the SharePoint Online root URL and then select **Run Tests**.
+2. In the diagnostic form, select the SharePoint Online root URL and then select **Run Tests**.
 
     :::image type="content" source="media/access-denied-due-to-org-policies/access-denied-due-to-org-policies-1.png" alt-text="Select Run Tests.":::
-5. If the test detects that you have a network-based location policy set and you are currently locked out of your tenant, you may opt to disable the policy.
+    
+3. If the test detects that you have a network-based location policy set and you are currently locked out of your tenant, you may opt to disable the policy.
 
     :::image type="content" source="media/access-denied-due-to-org-policies/access-denied-due-to-org-policies-2.png" alt-text="Select Update Settings to disable to location-based policy.":::
  
