@@ -13,7 +13,6 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 06/22/2020
-ms.author: v-mibufo
 ---
 
 # OS start-up – Computer restarted unexpectedly or encountered an unexpected error
@@ -38,7 +37,7 @@ The answer file is a special XML file that contains setting definitions and valu
 
 Again, custom answer files are not supported in Azure. Thus, this situation occurs when an image was prepared for use in Azure, but you specified a custom Unattend.xml file by using **SYSPREP** with a flag similar to the following command:
 
-`sysprep /oobe /generalize /unattend:<your file’s name> /shutdown`
+`sysprep /oobe /generalize /unattend:<your file's name> /shutdown`
 
 In Azure, use the **Enter System Out-of-Box Experience (OOBE)** option in **System Preparation tool GUI**, or use `sysprep /oobe` rather than the Unattend.xml file.
 
@@ -51,7 +50,7 @@ This issue is most often created while you are using sysprep with an on-premises
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-To fix this issue, follow [the Azure guidance on preparing/capturing an image](/azure/virtual-machines/windows/upload-generalized-managed) and prepare a new generalized image. During sysprep, **do not use `/unattend:<your file’s name>` flag**. Instead, use only the flags below:
+To fix this issue, follow [the Azure guidance on preparing/capturing an image](/azure/virtual-machines/windows/upload-generalized-managed) and prepare a new generalized image. During sysprep, **do not use `/unattend:<your file's name>` flag**. Instead, use only the flags below:
 
 `sysprep /oobe /generalize /shutdown`
 

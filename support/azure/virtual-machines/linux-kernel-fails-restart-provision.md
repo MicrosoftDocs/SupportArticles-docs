@@ -36,7 +36,7 @@ Consider the following scenario:
 
 - The virtual machine restarts, or a new virtual machine provisioning request is made.
 
-In this scenario, the virtual machine becomes unresponsive or provisioning times out. When this problem occurs, an entry that resembles the following is logged in the [Linux serial log](https://docs.microsoft.com/azure/virtual-machines/linux/boot-diagnostics):  
+In this scenario, the virtual machine becomes unresponsive or provisioning times out. When this problem occurs, an entry that resembles the following is logged in the [Linux serial log](/azure/virtual-machines/linux/boot-diagnostics):  
 
 ```
 [5.464091] hv_vmbus: probe failed for device vmbus_3 (-110) 
@@ -52,7 +52,7 @@ This problem occurs because the Linux virtual machine  does not communicate wit
 
 ## Resolution
 
-To resolve this problem, try [manually restarting](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest&preserve-view=true#az_vm_restart) the virtual machine  after some time.  If the problem persists, [redeploy the virtual machine to a new Azure node](https://docs.microsoft.com/azure/virtual-machines/linux/redeploy-to-new-node), start the virtual machine, and then update the Linux kernel by using the following instructions. You must also perform these steps on the custom image you are using to deploy the VM.  
+To resolve this problem, try [manually restarting](/cli/azure/vm?view=azure-cli-latest&preserve-view=true#az_vm_restart) the virtual machine  after some time.  If the problem persists, [redeploy the virtual machine to a new Azure node](/azure/virtual-machines/linux/redeploy-to-new-node), start the virtual machine, and then update the Linux kernel by using the following instructions. You must also perform these steps on the custom image you are using to deploy the VM.  
 
 | **Linux distro**| **Distro version**| **Kernel version that has the fix**| **Update instructions** |
 |---|---|---|---|
@@ -70,7 +70,7 @@ To resolve this problem, try [manually restarting](https://docs.microsoft.com/cl
 
 ## More information
 
-For more information about [Endorsed Linux distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).  
+For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).  
 
 **Third-party information disclaimer**
   

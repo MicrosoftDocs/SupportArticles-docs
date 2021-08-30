@@ -55,10 +55,10 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
      \<TimeCreated SystemTime="YYYY-MM-DDTHH:MM:SS.MSZ" />  
      \<EventRecordID>3965\</EventRecordID>  
      \<Correlation />  
-     \<Execution ProcessID="<PID>" ThreadID="\<TID>" />  
+     \<Execution ProcessID="\<PID\>" ThreadID="\<TID\>" />  
      \<Channel>System\</Channel>  
      \<Computer>`DC1.contoso.com`\</Computer>  
-     \<Security UserID="\<SID>" />  
+     \<Security UserID="\<SID\>" />  
    \</System>  
    \<EventData Name="TMP_EVENT_STOP_ADVERTISING">  
    \</EventData>  
@@ -150,10 +150,10 @@ Microsoft-Windows-Time-Service Event 142 was logged on `\\DC2.contoso.com`. The 
      \<TimeCreated SystemTime="YYYY-MM-DDTHH:MM:SS.MSZ" />  
      \<EventRecordID>3965</EventRecordID>  
      \<Correlation />  
-     \<Execution ProcessID="<PID>" ThreadID="\<TID>" />  
+     \<Execution ProcessID="\<PID\>" ThreadID="\<TID\>" />  
      \<Channel>System\</Channel>  
      \<Computer>DC1.contoso.com\</Computer>  
-     \<Security UserID="<SID>" />  
+     \<Security UserID="\<SID\>" />  
    \</System>  
    \<EventData Name="TMP_EVENT_STOP_ADVERTISING">  
    \</EventData>  

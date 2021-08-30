@@ -34,7 +34,7 @@ Apart from the above, we are also encountering **HTTP 429 - Too many requests** 
 ## Troubleshooting steps
 
 - **HTTP 403 - Forbidden** error can be thrown when there is any access restriction policy implemented.
-- Check the [APIM inspector trace](https://docs.microsoft.com/azure/api-management/api-management-howto-api-inspector) and you should notice the existence of a 'ip-filter' policy that filters (allows/denies) calls from specific IP addresses and/or address ranges.
+- Check the [APIM inspector trace](/azure/api-management/api-management-howto-api-inspector) and you should notice the existence of a 'ip-filter' policy that filters (allows/denies) calls from specific IP addresses and/or address ranges.
 - To check the scope of the 'ip-filter' policy, select the **Calculate effective policy** button. If you don't see any access restriction policy implemented at any scopes, next validation step should be done at product level, by navigating to the associated product and then click on Policies option.
 
     ```xml
@@ -63,4 +63,4 @@ Apart from the above, we are also encountering **HTTP 429 - Too many requests** 
     </inbound>
     ```
 
-Read more about [ip-filter](https://docs.microsoft.com/azure/api-management/api-management-access-restriction-policies#RestrictCallerIPs)  and [rate-limit-by-key](https://docs.microsoft.com/azure/api-management/api-management-access-restriction-policies#LimitCallRateByKey) policies in APIM.
+Read more about [ip-filter](/azure/api-management/api-management-access-restriction-policies#RestrictCallerIPs)  and [rate-limit-by-key](/azure/api-management/api-management-access-restriction-policies#LimitCallRateByKey) policies in APIM.

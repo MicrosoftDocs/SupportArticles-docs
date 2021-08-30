@@ -35,7 +35,7 @@ This issue typically occurs because a prerequisite isn't installed. Most frequen
 
 To work around this issue, follow these steps:
 
-1. Upgrade [Windows Management Framework](https://docs.microsoft.com/powershell/scripting/windows-powershell/wmf/overview) on the production server to version 4.0.
+1. Upgrade [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) on the production server to version 4.0.
 2. Make sure all other [prerequisites](/system-center/dpm/prepare-environment-for-dpm#protected-workloads) are installed.
 3. Again try to install the DPM agent.
 
