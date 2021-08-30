@@ -1,6 +1,6 @@
 ---
-title: Remote Desktop Protocol (RDP) not working for classic cloud service resource
-description: Provides information about troubleshooting issues in which Remote Desktop Protocol (RDP) is not working for Azure customers who are using classic cloud service resource.
+title: Remote Desktop Protocol not working for classic cloud service resource
+description: Provides information about troubleshooting issues in which Remote Desktop Protocol is not working for Azure customers who are using classic cloud service resource.
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -8,7 +8,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ---
-# Remote Desktop Protocol (RDP) not working for classic cloud service resource
+# Remote Desktop Protocol not working for classic cloud service resource
 
 This article provides information about troubleshooting issues in which Remote Desktop Protocol (RDP) is not working for Azure customers who are using classic cloud service resource.
 
