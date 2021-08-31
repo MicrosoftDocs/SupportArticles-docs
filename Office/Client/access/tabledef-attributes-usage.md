@@ -37,14 +37,14 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 The `Attributes` property of a `TableDef` object specifies characteristics of the table represented by the `TableDef` object. The `Attributes` property is stored as a single Long Integer and is the sum of the following Long constants:
 
-|Constant|Description|
-|-----|-----|
-|dbAttachExclusive|For databases that use the Microsoft Jet database engine,  indicates the table is a linked table opened for exclusive use.|
-|dbAttachSavePWD|For databases that use the Jet database engine, indicates the user ID and password for the linked table should be saved with the connection information.|
-|dbSystemObject|Indicates the table is a system table.|
-|dbHiddenObject|Indicates the table is a hidden table (for temporary use).|
-|dbAttachedTable|Indicates the table is a linked table from a non-Open Database Connectivity (ODBC) database, such as Microsoft Access or Paradox.|
-|dbAttachedODBC|Indicates the table is a linked table from an ODBC database, such as Microsoft SQL Server or ORACLE Server.|
+|Constant|Value|Description|
+|-----|-----|-----|
+|dbAttachExclusive|65536|For databases that use the Microsoft Jet database engine,  indicates the table is a linked table opened for exclusive use.|
+|dbAttachSavePWD|131072|For databases that use the Jet database engine, indicates the user ID and password for the linked table should be saved with the connection information.|
+|dbSystemObject|-2147483646|Indicates the table is a system table.|
+|dbHiddenObject|1|Indicates the table is a hidden table (for temporary use).|
+|dbAttachedTable|1073741824|Indicates the table is a linked table from a non-Open Database Connectivity (ODBC) database, such as Microsoft Access or Paradox.|
+|dbAttachedODBC|536870912|Indicates the table is a linked table from an ODBC database, such as Microsoft SQL Server or ORACLE Server.|
 
 For a `TableDef` object, use of the `Attributes` property depends on the status of `TableDef`, as the following table shows:
 
