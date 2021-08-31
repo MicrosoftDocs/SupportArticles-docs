@@ -42,7 +42,7 @@ In Outlook on the web, [add the public folder to Favorites](/exchange/collaborat
 
 ### Method 2: Use Outlook in Cached Exchange Mode
 
-**Note** Outlook will retrieve the information from the local data file (.ost) in Cached Exchange Mode.
+**Note:** Outlook will retrieve the information from the local data file (.ost) in Cached Exchange Mode.
 
 1. [Download public folders in Cached Exchange Mode](https://support.microsoft.com/office/download-public-folders-in-cached-exchange-mode-39807488-8098-4a9c-b246-4c25e3e20510).
 1. [Add public folders to Favorites in Outlook](/exchange/collaboration-exo/public-folders/use-favorite-public-folders#add-public-folders-to-favorites-in-outlook) and then access the contact list.
@@ -56,7 +56,9 @@ Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool to split the 
 1. Double-click **Public Folders**, expand the **IPM_SUBTREE list**, and then double-click the public folder that has the contact list.
 1. Select the contact list, and then select **Actions** > **Export message**.
 1. Export the contact list in the **MSG file (UNICODE)** format (for example, brokenlist.msg).
-:::image type="content" source="media/cannot-access-contact-list/msg-file-format.png" alt-text="Screenshot of exporting contact list with the MSG file format.":::
+
+    :::image type="content" source="media/cannot-access-contact-list/msg-file-format.png" alt-text="Screenshot of exporting contact list with the MSG file format.":::
+
 1. Double-click to open the exported item and edit the contact list, remove some members from the contact list and change its name (for example, splittedlist.msg).
 1. Double-click the public folder in the **IPM_SUBTREE** list, and then select **Folder** > **Import** > **From MSG** to import the updated contact list.
 
