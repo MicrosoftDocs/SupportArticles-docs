@@ -5,7 +5,7 @@ ms.date: 03/29/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 2.5 - Copy and extracting files from your development environment to Linux
+# Part 2.5 - Copy and extract files from your development environment to Linux
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 
@@ -56,7 +56,7 @@ pscp -i d:\secure\myprivatekey.ppk c:\web\publish.zip <UserName>@buggyamb:<Linux
 
 The private key is the same *.ppk* key that was converted from a *.pem* file when you tried to connect to your VM by using PuTTY. If you did this successfully, you should already have this file. If you don't have the *.ppk* file, follow the instructions from the "Connecting with PuTTY" section, and convert your *.pem* file to *.ppk*.
 
-## Copy a file to Linux and extracting it to another folder
+## Copy a file to Linux and extract it to another folder
 
 ### Download a sample project
 
@@ -96,7 +96,7 @@ Use the *buggyamb_v1.1.tar.gz* file to create a second ASP.NET Core application 
 wget https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz
 ```
 
-## Extract the files and copying to the /var/ folder
+## Extract the files and copy to the /var/ folder
 
 *Buggyamb_v1.1.tar.gz* contains everything that you need to run your buggy application. Just as you did for your first ASP.NET Core application, follow the same steps to configure this application to run always behind Nginx.
 

@@ -5,7 +5,7 @@ ms.date: 03/08/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 1.2 - Linux special directories, elevated users, and package managers
+# Part 1.2 - Basic operations on Linux
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 

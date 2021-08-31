@@ -1,11 +1,11 @@
 ---
-title: Debuggers, core dumps, and collecting core dumps
+title: Debuggers, core dumps, and collect core dumps
 description: This article describes the debuggers, core dumps, and other tools to capture and analyze core dump files in Linux.
 ms.date: 03/25/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 3.3 - Debuggers, core dumps, and collecting core dumps
+# Part 3.3 - Debuggers, core dumps, and collect core dumps
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 

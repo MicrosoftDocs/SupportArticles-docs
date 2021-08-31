@@ -217,6 +217,6 @@ To convert files, follow these steps:
 
 ## Next steps
 
-[Part 1.2 - Linux special directories, elevated users, and package managers](1-2-linux-special-directories-users-package-managers.md)
+[Part 1.2 - Basic operations on Linux](1-2-linux-special-directories-users-package-managers.md)
 
 [!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]

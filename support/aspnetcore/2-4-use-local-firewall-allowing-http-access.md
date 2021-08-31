@@ -5,7 +5,7 @@ ms.date: 03/29/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 2.4 - Secure Linux using local firewall and allowing remote HTTP access
+# Part 2.4 - Secure Linux using local firewall and allow remote HTTP access
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 

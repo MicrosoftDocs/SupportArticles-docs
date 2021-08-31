@@ -5,7 +5,7 @@ ms.date: 03/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 2.2 - Install Nginx and configuring it as a reverse proxy server
+# Part 2.2 - Install Nginx and configure it as a reverse proxy server
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 

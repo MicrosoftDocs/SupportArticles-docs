@@ -34,7 +34,7 @@ To open the Task Manager equivalent in Linux, run the `top` command.
 
 In this example, you can observe in the first listed process for PID 19933 that the process exhibits high CPU usage, and memory usage is also high.
 
-### Select and deselecting columns
+### Select and deselect columns
 
 To add or remove columns in the view that the `top` tool provides, press the F key while you run the tool. The columns that are marked by an asterisk (*) are the ones that are selected for display. Use the arrow keys to move through the available columns, and use the Spacebar to select or deselect the columns. Then, press Esc to exit.
 

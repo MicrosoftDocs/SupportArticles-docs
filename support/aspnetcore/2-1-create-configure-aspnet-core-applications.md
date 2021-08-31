@@ -5,7 +5,7 @@ ms.date: 03/18/2021
 ms.prod: aspnet-core
 ms.reviewer: ramakoni
 ---
-# Part 2.1 - Create and configuring ASP.NET Core applications in Linux
+# Part 2.1 - Create and configure ASP.NET Core applications in Linux
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 

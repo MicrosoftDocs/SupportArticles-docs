@@ -23,7 +23,7 @@ The main prerequisite is to have a Linux virtual machine available so that you c
 
 This troubleshooting training covers the following topics.
 
-### Part 1 - Connect to a Linux computer and managing basic tasks
+### Part 1 - Connect to a Linux computer and manage basic tasks
 
 Part 1 is for those who have no previous experience with Linux. It covers the following topics:
 
