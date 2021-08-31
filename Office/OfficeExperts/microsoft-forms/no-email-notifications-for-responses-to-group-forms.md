@@ -32,11 +32,11 @@ You might not receive email notifications for responses that you submit to a Gro
 
    ![Selecting your group](./media/no-email-notifications-for-responses-to-group-forms/select-group.png)
 
-4. On the right side, you see the number of members in the group. Select that number, and then it opens the group email page in Outlook.
+4. On the right side, you see the number of members in the group. Select that number, and then it opens the group email page in Outlook on the Web.
 
    ![Selecting the number of members in the top-right](./media/no-email-notifications-for-responses-to-group-forms/number-of-members.png)
 
-5. In Outlook web app, select the ellipsis button (...) next to **Send email**, and in the drop-down box select **Edit group**.
+5. In Outlook on the Web, select **Edit** button above the group name.
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/no-email-notifications-for-responses-to-group-forms-1.png" alt-text="Select the ellipsis and then Edit group.":::
 
