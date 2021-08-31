@@ -55,10 +55,10 @@ If you receive this error message, contact your [Microsoft 365 Administrator](/m
 
 If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy, follow these steps to unlock the tenant:
 
-1.	Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
+1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
-> [!div class="nextstepaction"]
-> [Run Tests: Access Denied due to Network Location](http://aka.ms/AccessDeniedDuetoNetworkLocation)
+    > [!div class="nextstepaction"]
+    > [Run Tests: Access Denied due to Network Location](https://aka.ms/AccessDeniedDuetoNetworkLocation)
 
 2. In the diagnostic form, select the SharePoint Online root URL and then select **Run Tests**.
 
