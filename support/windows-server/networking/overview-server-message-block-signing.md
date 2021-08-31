@@ -74,3 +74,5 @@ The **EnableSecuritySignature** registry setting for SMB2+ client and SMB2+ serv
 [SMB 2 and SMB 3 security in Windows 10: the anatomy of signing and cryptographic keys](/archive/blogs/openspecification/smb-2-and-smb-3-security-in-windows-10-the-anatomy-of-signing-and-cryptographic-keys)
 
 [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows)
+
+[Netdom computername](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc835082(v=ws.11))
