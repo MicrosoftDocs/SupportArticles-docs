@@ -47,6 +47,8 @@
       href: ../administration/information-about-uls-log-access.md
     - name: Presence information doesn't show
       href: ../administration/presence-information-fails-showing.md
+    - name: Profile picture not showing in SharePoint Online
+      href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
       href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Third-party tools changes support
@@ -179,6 +181,8 @@
       href: ../lists-and-libraries/simple-controls-missing.md
     - name: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
       href: ../lists-and-libraries/slow-open-with-explorer-performance.md
+    - name: Task list shows item title as .000 
+      href: ../lists-and-libraries/task-list-shows-000.md
     - name: Template-generated list doesn't display correct column data
       href: ../lists-and-libraries/template-generated-list-incorrect-data.md
     - name: The URL <file name> is invalid when uploading a file
