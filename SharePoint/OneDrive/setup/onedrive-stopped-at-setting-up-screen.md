@@ -58,7 +58,7 @@ Due to the connection between OneDrive and SharePoint, it is necessary for users
 > [!NOTE]
 > In this situation, the same "Setting up..." message may also appear for SharePoint.
 
-In order to verify if the user has a current profile created within SharePoint, perform the following steps:
+To verify if the user has a current profile created within SharePoint, perform the following steps:
 
 1.	Sign in to portal.office.com with an admin account.
 2.	Select **Admin** to open the Office 365 admin center.
@@ -104,31 +104,34 @@ In some situations, the OneDrive site might have already been provisioned but th
 
 If you have the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) (which contains the Windows PowerShell module to manage SharePoint Online), you can verify the site status and attempt to give user the ownership of their OneDrive for Business personal site.
 
-
-- To verify that the site exists, run the following PowerShell command:<br/>
-    ```
+- To verify that the site exists, run the following PowerShell command:
+    
+    ```powershell
     Get-SPOSite -Site https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com 
     ```
+    
     [Get-SPOSite documentation](/powershell/module/sharepoint-online/get-sposite?view=sharepoint-ps&preserve-view=true)
 
 - To attempt to restore ownership, run the following PowerShell command: 
-    ```
+    
+    ```powershell
     Set-SPOSite -Identity https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com -Owner user@contoso.onmicrosoft.com 
     ```
+    
     [Set-SPOSite documentation](/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps&preserve-view=true)
-
 
 ### Run a self-diagnostics tool
 
-Office 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
 
-To do this, follow these steps:
-1.	Navigate to the Office 365 admin center and select **Need help?** 
-2.	In the search bar type "Diag:" to see all the available diagnostics.
-3.	The "Diag: OneDrive Provisioning" diagnostic will perform a large range of verifications.
+To do this, select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: OneDrive Provisioning](https://aka.ms/PillarOneDriveProvisioning)
+
+The diagnostic will perform a large range of verifications.
+
 ![Search the diagnostics library.](./media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-2.png)
-
- 
 
 ### Need More Help?
 
