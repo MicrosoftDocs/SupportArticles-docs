@@ -24,7 +24,7 @@ To get support for Linux Agent and extensions in Azure, the [Linux Agent](https
 - If the distribution vendor doesn't have the minimum Linux Agent version in the package repositories, the system is still in support. If the Linux Agent version is later than version 2.1.7, you must enable the Agent auto-update feature. It will retrieve the latest version of code for extension handling.
 - If the Linux Agent version is earlier than version 2.2.10, or if the Linux system is out-of-support, we may require you to update the agent before getting support.
 - If the Linux Agent version is customized by a publisher, Microsoft may direct you to the publisher for support agent or extension-specific support because of the customization.
- To upgrade the Linux Agent, see [How to update the Azure Linux Agent on a VM](https://docs.microsoft.com/azure/virtual-machines/linux/update-agent).
+ To upgrade the Linux Agent, see [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/linux/update-agent).
 
 ### How to check your Linux Agent Version?
 
@@ -49,13 +49,13 @@ For more information about the agent, see [https://github.com/Azure/WALinuxAgent
 To get support for Windows Agent and extensions in Azure, the Windows Agent on the Windows VM must be later than or equal to version 2.7.41491.911.
 
 - If the Windows Agent is earlier than version 2.7.41491.911, or if the Windows system is out-of-support, we may require you to update the agent before we can offer support.
- To upgrade the Windows Agent, see [About the virtual machine agent and extensions for Windows VMs](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows). 
+ To upgrade the Windows Agent, see [About the virtual machine agent and extensions for Windows VMs](/azure/virtual-machines/extensions/agent-windows). 
 
 ## Frequently asked questions
 
 **What is the Azure Linux Agent?**
   
-The Microsoft Azure Linux Agent (waagent) manages both Linux & FreeBSD provisioning, and virtual machine (VM) interaction with the Azure Fabric Controller. Besides the Linux Agent providing provisioning functionality, Azure also provides the option of using cloud-init for some Linux operating systems. To know more about the functionality, visit the [Linux VM Agent page](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux).
+The Microsoft Azure Linux Agent (waagent) manages both Linux & FreeBSD provisioning, and virtual machine (VM) interaction with the Azure Fabric Controller. Besides the Linux Agent providing provisioning functionality, Azure also provides the option of using cloud-init for some Linux operating systems. To know more about the functionality, visit the [Linux VM Agent page](/azure/virtual-machines/extensions/agent-linux).
 
 **What is changing on Azure Linux Agent version requirements after July 31, 2020?**
   
@@ -79,8 +79,8 @@ No. This change only affects Linux VM publishers.
 
 **How do I install or update the VM with Linux agent?**
   
-- For information on how to install Azure VM agent with Linux, follow steps in [this article](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-linux#installation).
-- For more information on updating the Azure Linux Agent on a VM, follow steps in [this article](https://docs.microsoft.com/azure/virtual-machines/extensions/update-linux-agent).
+- For information on how to install Azure VM agent with Linux, follow steps in [this article](/azure/virtual-machines/extensions/agent-linux#installation).
+- For more information on updating the Azure Linux Agent on a VM, follow steps in [this article](/azure/virtual-machines/extensions/update-linux-agent).
 
 ## More information
 

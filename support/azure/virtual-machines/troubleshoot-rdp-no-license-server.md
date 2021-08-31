@@ -30,6 +30,8 @@ When you try to connect to a virtual machine (VM), you experience the following 
 
   - No Remote Desktop license server is available. Remote Desktop Services will stop working because this computer is past its grace period and hasn't contacted at least a valid Windows Server 2008 license server. Select this message to open RD Session Host Server Configuration to use Licensing Diagnosis.
 
+  - A licensing error occurred while the client was attempting to connect (Licensing timed out). Please try connecting to the remote computer again.
+
 However, you can connect to the VM normally by using an administrative session:
 
 ```

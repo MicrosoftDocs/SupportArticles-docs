@@ -41,13 +41,15 @@ To resolve this problem, add your application to **Company Administrator** in th
  It will prompt you for your tenant's credential. You should be able to use your Azure AD administrative user name in the `admin@tenant.onmicrosoft.com` format.
 
 ```powershell
-$displayName = "Application Name" $objectId = (Get-MsolServicePrincipal -SearchString $displayName).ObjectId
+$displayName = "Application Name" 
+$objectId = (Get-MsolServicePrincipal -SearchString $displayName).ObjectId
 ```
 
 Replace the "Application Name" with the name of your "Application Service Principal".
 
 ```powershell
-$roleName = "Company Administrator" Add-MsolRoleMember -RoleName $roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
+$roleName = "Company Administrator"
+Add-MsolRoleMember -RoleName $roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
 ```
 
 It will add your "Application Service Principal" to the Company Administrator role.
@@ -62,8 +64,10 @@ To do so, run all the following MSOL cmdlets:
 
 ```powershell
 Connect-MsolService
-$displayName = "Application Name" $objectId = (Get-MsolServicePrincipal -SearchString $displayName).ObjectId
-$roleName = "User Account Administrator" Add-MsolRoleMember -RoleName $roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
+$displayName = "Application Name" 
+$objectId = (Get-MsolServicePrincipal -SearchString $displayName).ObjectId
+$roleName = "User Account Administrator"
+Add-MsolRoleMember -RoleName $roleName -RoleMemberType ServicePrincipal -RoleMemberObjectId $objectId
 ```
 
 After you run both sets of cmdlets, your application will be enabled to change the password of all **Administrator** organizational roles.

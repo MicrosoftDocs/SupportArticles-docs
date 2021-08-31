@@ -36,7 +36,7 @@ User records are stored in the security accounts manager (SAM) database or in th
 
 The LAN Manager-compatible password is compatible with the password that is used by LAN Manager. This password is based on the original equipment manufacturer (OEM) character set. This password is not case-sensitive and can be up to 14 characters long. The OWF version of this password is also known as the LAN Manager OWF or ESTD version. This password is computed by using DES encryption to encrypt a constant with the clear text password. The LAN Manager OWF password is 16 bytes long. The first 7 bytes of the clear text password are used to compute the first 8 bytes of the LAN Manager OWF password. The second 7 bytes of the clear text password are used to computer the second 8 bytes of the LAN Manager OWF password.
 
-The Windows password is based on the Unicode character set. This password is case-sensitive and can be up to 128 characters long. The OWF version of this password is also known as the Windows OWF password. This password is computed by using the RSA MD-4 encryption algorithm. This algorithm computes a 16-byte digest of a variable-length string of clear text password bytes.
+The Windows password is based on the Unicode character set. This password is case-sensitive and can be up to 128 characters long. The OWF version of this password is also known as the Windows OWF password. This password is computed by using the RSA MD4 hash function. This function computes a 16-byte digest of a variable-length string of clear text password bytes.
 
 Any user account might lack either the LAN Manager password or the Windows password. However, every attempt is made to maintain both versions of the password.  
 
