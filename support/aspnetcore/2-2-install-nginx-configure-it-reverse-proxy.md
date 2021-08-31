@@ -51,7 +51,7 @@ After the installation finishes, run `whereis nginx` to discover where the progr
 
 ## Manage services by using systemctl
 
-If you don't see that Nginx is running, you can start it explicitly by running `sudo systemctl start nginx`. Although this exercise will demonstrate the `systemctl` commands for Nginx, these commands are mainly used to configure the web application to start automatically as a daemon.
+If you don't see that Nginx is running, you can start it explicitly by running `sudo systemctl start nginx`. Although this exercise will demonstrate the `systemctl` commands for Nginx, these commands are used to configure the web application to start automatically as a daemon.
 
 After the installation finishes, Nginx is already configured to start automatically. Nginx runs as a daemon. You can check the status of the daemon by using [systemctl](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units).
 
@@ -69,7 +69,7 @@ By default, Nginx listens on port 80. Because it's running, you should be able t
 
 ## systemctl command options
 
-Services, or daemons, can be managed by using the `systemctl` command. Starting, stopping, or making changes requires superuser access. Therefore, you must add the `sudo` prefix to these commands.
+Services, or daemons, can be managed by using the `systemctl` command. Starting, stopping, or making changes require superuser access. Therefore, you must add the `sudo` prefix to these commands.
 
 ### Restart daemons
 

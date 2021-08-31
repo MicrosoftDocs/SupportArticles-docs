@@ -130,11 +130,11 @@ You should now be able to open the core dump file on your Windows VM by using WS
 
 ## Open dump files in lldb
 
-These steps are the same as as in previous troubleshooting labs. You should already have covered the important parts earlier to get the necessary files to debug core dump files by using dotnet-dump. The procedure is the same for LLDB. If you want to install and use lldb for debugging, check the previous labs.
+These steps are the same as in previous troubleshooting labs. You should already have covered the important parts earlier to get the necessary files to debug core dump files by using dotnet-dump. The procedure is the same for LLDB. If you want to install and use lldb for debugging, check the previous labs.
 
 ## If dotnet-symbol can't find the necessary files
 
-Dotnet-symbol will work for most of the core dump files. If, for some reason, it fails to download the necessary files, there are ways to work around the blockage. You can download and extract the binaries from the official Microsoft webpage. Then, manually copy the necessary files to the same folder that contains the core dump file.
+Dotnet-symbol will work for most of the core dump files. If for some reason, it fails to download the necessary files, there are ways to work around the blockage. You can download and extract the binaries from the official Microsoft webpage. Then, manually copy the necessary files to the same folder that contains the core dump file.
 
 For example, if you need the files for .NET Core 3.1.10 x64, you can download the binaries from this [ASP.NET Core 3.1 Runtime (v3.1.10) - Linux x64 Binaries download page](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-aspnetcore-3.1.10-linux-x64-binaries), and copy the files manually:
 

@@ -42,7 +42,7 @@ dotnet new <template_type> -n <project_name> -o <output_directory>
 
 These rules apply when you use `dotnet new`:
 
-- The command creates the project files in the output directory. If you omit the `-o <output_directory>` segment, then the project will be created in the current directory. You should always use the `-o` switch.
+- The command creates the project files in the output directory. If you omit the `-o <output_directory>` segment, then the project will be created in the current directory. You can always use the `-o` switch.
 - If the folder doesn't exist, the command creates it.
 - If you omit the `-n <project_name>` segment, then the project name will be the same as the directory name.
 

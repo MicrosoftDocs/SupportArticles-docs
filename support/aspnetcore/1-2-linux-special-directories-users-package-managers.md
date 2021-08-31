@@ -107,7 +107,7 @@ Now, run the same command one more time:
 echo hello world > /etc/helloworld.txt
 ```
 
-This time, you don't receive any error message. But is the file actually created? To verify this, run the following command:
+This time, you don't receive any error message. But is the file created? To verify this, run the following command:
 
 ```bash
 ll /etc/hello*
@@ -123,7 +123,7 @@ The output shows that the file was created. What if we want to examine the conte
 
 The `cat` command reads files sequentially, and writes their content to the standard output. Therefore, it writes "hello world" in the console.
 
-To prevent mistakes that could damage the system while you're elevated to root status, it's a good practice to exit the root session and return to your standard user session to avoid some dangerous operations. To do this, simply run `exit`. You can see that the pound sign reverts to a dollar sign, and the username is displayed as your standard user.
+To prevent mistakes that could damage the system while you're elevated to root status, it's a good practice to exit the root session and return to your standard user session to avoid some dangerous operations. To do this, run `exit`. You can see that the pound sign reverts to a dollar sign, and the username is displayed as your standard user.
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/exit-command.png" alt-text="Screenshot of exit command." border="false":::
 
@@ -224,7 +224,7 @@ If you run the same `apt list --installed | grep apache2` command again, you see
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/apt-list-grep-command.png" alt-text="Screenshot of apt list grep command." border="false":::
 
-Although you have just installed Apache 2, you actually have to use Nginx. Therefore, you no longer need Apache, and you can remove that package from the virtual machine.
+Although you have installed Apache 2, you actually have to use Nginx. Therefore, you no longer need Apache, and you can remove that package from the virtual machine.
 
 ## Remove packages
 
@@ -241,7 +241,7 @@ Remove the package by using `apt remove` as a root user to see the result. To do
 The command output tells you the following:
 
 - APT detected that there are packages that were automatically installed and won't be required anymore.
-- APT removed only the `apache2` package, and it recommends that you run sudo apt autoremove to remove the associated packages.
+- APT removed only the `apache2` package, and it recommends that you run `sudo apt autoremove` to remove the associated packages.
 
 List the installed packages again. You see that the `apache2` package is removed but that the automatically installed packages that were provided with it remain installed.
 
@@ -255,9 +255,9 @@ List the installed packages one more time. Now, you should see no apache2-relate
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/no-apache2-related-packages.png" alt-text="Screenshot of no apache2-related packages." border="false":::
 
-This procedure isn't quite finished. Remember that the difference between `apt remove` and `apt purge` is whether the configuration file is removed. In this exercise, you didn't remove it. So where is it?
+This procedure isn't finished. Remember that the difference between `apt remove` and `apt purge` is whether the configuration file is removed. In this exercise, you didn't remove it. So where is it?
 
-Finding the file doesn't involve package managers. Instead, you'll run a standard search for files in Linux. There are several ways to do this. One of the most common search commands is `find`. However, this command is also quite confusing to use, so we won't discuss it here. Instead, we'll use `whereis`.
+Finding the file doesn't involve package managers. Instead, you'll run a standard search for files in Linux. There are several ways to do this. One of the most common search commands is `find`. However, this command is also confusing to use, so we won't discuss it here. Instead, we'll use `whereis`.
 
 > [!NOTE]
 > Linux is very well documented. Nearly every command has a useful help page available. Use the [man](https://www.geeksforgeeks.org/man-command-in-linux-with-examples/) and [info](https://www.geeksforgeeks.org/info-command-in-linux-with-examples/) commands to show the Help pages in Linux. For example, to learn more on your own about the `find` command, run `man find` or `info find`.

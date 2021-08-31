@@ -94,7 +94,7 @@ This is a good start. However, the call stack that's displayed belongs to the ma
 > [!NOTE]
 > If we open a crash dump file in WinDbg on Windows, WinDbg would directly select the thread that caused the crash. However, this isn't the case in lldb. In lldb, WinDbg doesn't automatically select the thread that triggered the debugger to generate the memory dump.
 
-Although this WinDbg behavior is quite useful when you're debugging, the lack of this feature in lldb isn't the end of the world. Instead, you can examine all the threads to try to determine where the exception could be thrown. Start by examining the native threads by using the `thread list` command.
+Although this WinDbg behavior is useful when you're debugging, the lack of this feature in lldb isn't the end of the world. Instead, you can examine all the threads to try to determine where the exception could be thrown. Start by examining the native threads by using the `thread list` command.
 
 It's always a good idea to start by running a quick inspection of all the thread calls stacks so that you can understand what was running at the time that the dump file was generated. Look first at the native thread list that has the `thread list` command.
 
@@ -130,7 +130,7 @@ This information indicates: A `System.Net.HttpWebRequest` is triggered in your C
 
 This isn't helpful. You should not see any `System.Net.HttpWebRequest` instances. There are instances of the exception, and you've already inspected it. Therefore, this command didn't yield new information that's related to the cause.
 
-All the managed objects are stored in a managed heap, and we can look at the managed heap by running `dumpheap`. Don't run `dumpheap` without any parameter because then the command will list all the objects inside the managed heap (a very large list). Instead, you can get the statistics of the heap by using the `dumpheap -stat` command.
+All the managed objects are stored in a managed heap, and we can look at the managed heap by running `dumpheap`. Don't run `dumpheap` without any parameter because then the command will list all the objects inside the managed heap (a large list). Instead, you can get the statistics of the heap by using the `dumpheap -stat` command.
 
 You can use one more tactic to narrow down the statistics by running the command in the following format:
 

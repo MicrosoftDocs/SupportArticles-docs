@@ -61,7 +61,7 @@ If you disable apport, this doesn't prevent core dump generation upon process te
 
 ## Disable automatic core dump generation
 
-To disable automatic core dump file generation, do the following:
+To disable automatic core dump file generation, do the following steps:
 
 1. Stop and disable apport.
 2. Disable the system's default action.

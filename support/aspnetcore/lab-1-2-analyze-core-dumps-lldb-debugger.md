@@ -76,7 +76,7 @@ You should have already installed the dotnet-symbol tool together with dotnet-du
 
 ## Download symbols for the dump file
 
-In [part 1](lab-1-1-reproduce-troubleshoot.md), you were instructed how to unpack the core dump file from the apport report. Now it's time to download the symbol files. As explained in this [article](/dotnet/core/diagnostics/symbols), symbols operate at a very high level. They serve as mappings between the source code and the binaries. These mappings are used by debuggers to resolve the function or method names, source line information, or local variable names when they read a call stack.
+In [part 1](lab-1-1-reproduce-troubleshoot.md), you were instructed how to unpack the core dump file from the apport report. Now it's time to download the symbol files. As explained in this [article](/dotnet/core/diagnostics/symbols), symbols operate at a high level. They serve as mappings between the source code and the binaries. These mappings are used by debuggers to resolve the function or method names, source line information, or local variable names when they read a call stack.
 
 You'll use the `dotnet-symbol ~/dumps/dotnet/CoreDump -o ~/dumps/symbols --host-only` command to download the symbols for the memory dump file to the *:::no-loc text="~/dumps/symbols":::* directory.
 
@@ -88,7 +88,7 @@ The next step is to install the SOS-managed debugging extension. This will expos
 
 ## Install SOS
 
-What is SOS? According to the [official documentation](https://github.com/dotnet/diagnostics/blob/main/documentation/sos.md), SOS is a debugger extension that enables a developer to inspect the managed state of a .NET application, including the ASP.NET Core and other .NET-based applications such as .NET WPF and .NET Windows Forms. SOS is a cross-platform extension that can be loaded by WinDbg or a cdb debugger on Windows and by lldb on Linux and MacOS.
+What is SOS? According to the [official documentation](https://github.com/dotnet/diagnostics/blob/main/documentation/sos.md), SOS is a debugger extension that enables a developer to inspect the managed state of a .NET application, including the ASP.NET Core and other .NET-based applications such as .NET WPF and .NET Windows Forms. SOS is a cross-platform extension that can be loaded by WinDbg or a cdb debugger on Windows and by lldb on Linux and macOS.
 
 To install SOS, you must first install the following dotnet-sos tool:
 

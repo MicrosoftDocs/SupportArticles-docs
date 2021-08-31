@@ -58,7 +58,7 @@ Now, the package manager is aware of the Microsoft repository, and we can contin
 
 ## .NET Core versions
 
-At the time of this writing, the latest .NET Core version is 5.0. We recommend that you install the latest version. However, you should also install the .NET Core 3.1 SDK. This is necessary because the troubleshooting labs in this series of articles assumes that you're using BuggyAmb -- a buggy ASP.NET Core application that we use to learn how to troubleshoot ASP.NET Core applications. The current version of BuggyAmb is .NET Core 3.1.
+At the time of this writing, the latest .NET Core version is 5.0. We recommend that you install the latest version. However, you should also install the .NET Core 3.1 SDK. This is necessary because the troubleshooting labs in this series of articles assume that you're using BuggyAmb -- a buggy ASP.NET Core application that we use to learn how to troubleshoot ASP.NET Core applications. The current version of BuggyAmb is .NET Core 3.1.
 
 The different versions of these applications can successfully run side by side on the same computer.
 

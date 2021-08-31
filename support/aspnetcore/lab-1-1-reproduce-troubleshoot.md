@@ -68,7 +68,7 @@ Select **Expected Results**, and then select **Slow**. Although you should see t
 
 Even if you select any other link on the webpage, you'll experience the same error for a short while. After 10–15 seconds, everything will start to respond as expected again.
 
-To check whether the PID is changed, run `systemctl status buggyamb.service` again. This time, you should notice that the process seems to have actually stopped because the PID is changed. In the previous example, the process PID was 2255. In the following example, it's changed to 2943. Apparently, the website made good on its promise to crash the process.
+To check whether the PID is changed, run `systemctl status buggyamb.service` again. This time, you should notice that the process seems to have stopped because the PID is changed. In the previous example, the process PID was 2255. In the following example, it's changed to 2943. Apparently, the website made good on its promise to crash the process.
 
 :::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/service2943.png" alt-text="BuggyAmb service2943." border="true":::
 

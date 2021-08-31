@@ -41,7 +41,7 @@ To reproduce the problem, open **Problem Pages**, select **Load Generator**, and
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/problem.png" alt-text="BuggyAmb problem." border="true":::
 
-The following list shows what you should, eventually, see in your browser. The displayed response times are quite high. The expected response time is less than one second. That's what you can expect to see when you select the **Expected Results** link from the application landing page.
+The following list shows what you should, eventually, see in your browser. The displayed response times are high. The expected response time is less than one second. That's what you can expect to see when you select the **Expected Results** link from the application landing page.
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/load.png" alt-text="BuggyAmb load." border="true":::
 
@@ -183,7 +183,7 @@ Use the MT address of the `string` object to get the list of the addresses of th
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/live2.png" alt-text="BuggyAmb live2." border="true":::
 
-Now, pick one address randomly from the resulting list. In the following screenshot, the third address in the list is displayed. You can try to examine the chosen address by running `dumpobj`. However, because this is a big object, the debugger won't display the value. So, instead, inspect the native memory address one more time, and you'll see that this is a `string` object that resembles what you can find in the list of the products table on the page that responds slowly.
+Now, pick one address randomly from the resulting list. In the following screenshot, the third address in the list is displayed. You can try to examine the chosen address by running `dumpobj`. However, because this is a large object, the debugger won't display the value. So, instead, inspect the native memory address one more time, and you'll see that this is a `string` object that resembles what you can find in the list of the products table on the page that responds slowly.
 
 :::image type="content" source="./media/lab-2-1-capture-dumps-createdump/page.png" alt-text="BuggyAmb page." border="true":::
 

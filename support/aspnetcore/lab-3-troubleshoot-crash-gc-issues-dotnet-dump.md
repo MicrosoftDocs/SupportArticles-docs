@@ -63,7 +63,7 @@ If you try to run the `dotnet-dump ps` command, you'll encounter some unexpected
 
 :::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/ps-command.png" alt-text="Screenshot of ps command." border="true":::
 
-Two processes are displayed in this list. However, one of them is shown as an elevated process, and its path can't be determined by the `dotnet-dump` ps command. To find its path, examine the process command line information by running the `cat /proc/<PID>/cmdline` command.
+Two processes are displayed in this list. However, one of them is shown as an elevated process, and its path can't be determined by the `dotnet-dump` ps command. To find its path, examine the process command-line information by running the `cat /proc/<PID>/cmdline` command.
 
 > [!NOTE]
 > In this command, replace `<PID>` with the actual process ID of the target process, as seen in the following sample output. You may recall the special */proc/* directory from previous sections, and that a process in Linux can be seen as another folder under that directory (having the name of process ID). You can find all the details about a process by examining the */proc/\<PID\>/* directory structure.

@@ -33,11 +33,11 @@ In this first part of the lab, you'll be guided through the procedure of copying
 
 ## Copy a core dump file to your local VM
 
-During the exercises in this training for debugging a failing ASP.net core application, you generated three manual memory dump files. Now, you'll learn how to copy those core dump files to a Windows VM.
+During the exercises in this training for debugging a failing ASP.NET core application, you generated three manual memory dump files. Now, you'll learn how to copy those core dump files to a Windows VM.
 
 :::image type="content" source="./media/lab-4-1-analyze-core-dumps-another-machine-copy-file/ll-command.png" alt-text="Screenshot of ll command." border="true":::
 
-Remember that a core dump file contains the process memory. Therefore, the size of a core dump could be quite large if the process memory usage is high. Instead of copying each core dump file one by one, you can optimize the transfer. To do this, package and compress them using the tar command so that you'll have one compressed *coredumps.tar.gz* file that contains all three core dump files.
+Remember that a core dump file contains the process memory. Therefore, the size of a core dump could be large if the process memory usage is high. Instead of copying each core dump file one by one, you can optimize the transfer. To do this, package and compress them using the tar command so that you'll have one compressed *coredumps.tar.gz* file that contains all three core dump files.
 
 As the following screenshot shows, you can use the `tar -czvf coredumps.tar.gz coredump.manual.*` command to create the compressed archive file.
 
