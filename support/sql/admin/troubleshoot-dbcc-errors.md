@@ -32,7 +32,7 @@ The cause of these problems can vary from file system corruption, underlying har
 
 ## Resolution
 
-The first, best solution if DBCC CHECKDB reports consistency errors is to restore from a known good Backup. However, if you cannot restore from a Backup, then CHECKDB provides a feature to repair errors. If system level problems such as the file system or hardware may be causing these problems, it is recommended you correct these first before restoring or running repair.
+The first, best solution if DBCC CHECKDB reports consistency errors is to restore from a known good Backup. However, if you cannot restore from a Backup, then CHECKDB provides a feature to repair errors. If system level problems such as the file system or hardware may be causing these problems, it is recommended you correct these first before restoring or running repair. Microsoft support engineers cannot help you with physical recovery of the corrupt data if the repair do not fix the consistency errors .
 
 When you run DBCC CHECKDB, a recommendation is provided to indicate what the minimum repair option that is required to repair all errors. These messages may look something like the following:
 
