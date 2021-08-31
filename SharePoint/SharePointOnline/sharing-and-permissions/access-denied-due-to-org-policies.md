@@ -58,7 +58,7 @@ If you are an administrator, and you have locked yourself out of SharePoint and 
 1.	Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
 > [!div class="nextstepaction"]
-> [Run Tests: Access Denied due to Network Location](http://aka.ms/AccessDeniedDuetoNetworkLocation)
+> [Run Tests: Access Denied due to Network Location](https://aka.ms/AccessDeniedDuetoNetworkLocation)
 
 2. In the diagnostic form, select the SharePoint Online root URL and then select **Run Tests**.
 
