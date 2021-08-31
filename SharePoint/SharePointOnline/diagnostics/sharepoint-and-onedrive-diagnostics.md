@@ -43,7 +43,7 @@ There are currently diagnostics covering various areas within Sharepoint and One
 | Diagnostic | Description | Shortcut cmd | Support Article |
 | --- | --- | -- | -- |
 | **External sharing** | Diagnose issues with sharing, such as determining why guests are unable to access content. | Diag: External Sharing |
-| **OneDrive provisioning** | Diagnose issues that may occur during the provisioning of a OneDrive site collection. | Diag: OneDrive Provisioning |
+| **OneDrive provisioning** | Diagnose issues that may occur during the provisioning of a OneDrive site collection. | Diag: OneDrive Provisioning | [OneDrive for Business stopped at "Setting up..."](/sharepoint/troubleshoot/setup/onedrive-stopped-at-setting-up-screen)
 | **Site and page performance** | Diagnose why a site or page may be loading slowly. | Diag: SharePoint Site and Page Performance |
 | **Sharepoint picture synchronization** | Diagnose why a picture may not be showing up in the user’s profile or via the People Web Part. | Diag: Picture Synchronization to SharePoint |
 | **OneDrive storage quota** | Diagnose issues that may occur during a quota change for a OneDrive for Business site. | Diag: OneDrive Storage Quota  |
