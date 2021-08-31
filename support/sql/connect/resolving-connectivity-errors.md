@@ -129,7 +129,7 @@ Things to try:
 
 Things to try:
 
-- Determine the port number your SQL instance is running. If your SQL server default instance is using a non-standard port, see [Running SQL Server ‘Default’ instance on a non-default (or non-standard) TCP port: : tips for making application connectivity work](/archive/blogs/dataaccesstechnologies/running-sql-server-default-instance-on-a-non-default-or-non-standard-tcp-port-tips-for-making-application-connectivity-work).
+- Determine the port number your SQL instance is running. If your SQL server default instance is using a non-standard port, see [Running SQL Server 'Default' instance on a non-default (or non-standard) TCP port: : tips for making application connectivity work](/archive/blogs/dataaccesstechnologies/running-sql-server-default-instance-on-a-non-default-or-non-standard-tcp-port-tips-for-making-application-connectivity-work).
 
 - Try appending the port number of SQL Server to the server name using the format *\<servername>, portnumber* and see if that works. For example, if your SQL instance name is *MySQLDefaultinstance* and it is running on port 2000, specify the server name as *MySQLServer, 2000* and see if that works. If it does work it is an indication the firewall is blocking the port.
 
@@ -287,7 +287,7 @@ If this does not resolve your issue, move to [Still having problems](#still-havi
 
 ### Tell if SQL is listening on Dynamic vs Static ports
 
-1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**, expand **Protocols for <instance name>**, and then double-click **TCP/IP**.
+1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**, expand **Protocols for \<instance name>**, and then double-click **TCP/IP**.
 
 2. In the **TCP/IP Properties** dialog box, on the **IP Addresses** tab, several IP addresses appear in the format **IP1**, **IP2**, up to **IPAll**. One of these is for the IP address of the loopback adapter, 127.0.0.1. Additional IP addresses appear for each IP Address on the computer. (You will probably see both IP version 4 and IP version 6 addresses.) Right-click each address, and then click **Properties** to identify the IP address that you want to configure.
 
@@ -335,7 +335,7 @@ Kerberos authentication failures can happen due to a variety of reasons. The maj
 | Issue type| Suggested resolutions|
 |---|---|
 | SPN Issues:<br/><ul><li> Missing SPNs: SPN is not registered in the Active directory.</li> <li>Incorrect SPN entries: SPN exists, but the port number is incorrect or it exists on a different account other than the SQL Service account.</li><li>Duplicate SPNs: The same SPN exists on multiple accounts in the active directory.</li></ul> |Check [Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues](#using-kerberos-configuration-manager-to-diagnose-and-fix-spn-and-delegation-issues) section to diagnose and resolve SPN issues.<br/><br/>**Note** For in-depth understanding of SPNs, Kerberos, and other related concepts review the information in the following KB article:<br/> [How to troubleshoot the "Cannot generate SSPI context" error message](https://support.microsoft.com/help/811889) |
-| SQL Service accounts not trusted for delegation. If you are using Local System account, the middle server should be trusted for delegation in the active directory.|UseKerberos configuration manager 's delegation tab to confirm and work with your Active directory administrator to enable delegation for the account. Check [Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues](#using-kerberos-configuration-manager-to-diagnose-and-fix-spn-and-delegation-issues) for details in the following paragraph. |
+| SQL Service accounts not trusted for delegation. If you are using Local System account, the middle server should be trusted for delegation in the active directory.|Use Kerberos configuration manager 's delegation tab to confirm and work with your Active directory administrator to enable delegation for the account. Check [Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues](#using-kerberos-configuration-manager-to-diagnose-and-fix-spn-and-delegation-issues) for details in the following paragraph. |
 |Incorrect name resolution: Your server name may be resolving to a different IP address than that is registered by your network's DNS server.| **ping -a <your_target_machine>** (use -4 and -6 for IPv4 and IPv6 specifically)<br/> **ping -a <Your_remote_IPAddress> nslookup** (type your local and remote machine name and IP address multiple times)<br/><br/>Look for any discrepancies and mismatches on the returned results. The correctness of DNS configuration on the network is vital to SQL connection. Wrong DNS entry could cause of all sorts of connectivity issue later.|
 |Firewalls or other network devices preventing connections from the client to the domain controller: SPNs are stored in active directory and if the clients are unable to communicate with the AD, the connection cannot proceed further.| Check the following links for additional information:<br/><ul><li> [Active Directory and Active Directory Domain Services Port Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10)) </li><li> [Kerberos Authentication Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc738673(v=ws.10))</li></ul> |
 |||
@@ -348,7 +348,7 @@ Kerberos authentication failures can happen due to a variety of reasons. The maj
 
 #### Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues
 
-1. Download [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046) and install it on a client machine.
+1. Download [Microsoft&reg; Kerberos Configuration Manager for SQL Server&reg;](https://www.microsoft.com/download/details.aspx?id=39046) and install it on a client machine.
 
 2. Launch the tool using a domain account preferably with an account that has sufficient privileges to create SPNs in your active directory. See the below picture:
 
@@ -425,7 +425,7 @@ There could be a more specific error. Select the exact error you receive:
 
 - [Login failed for user '\<domain>\\\<username>'](#login-failed-for-user-username-or-login-failed-for-user-domainusername)
 
-- [Login failed for user '<domainname>\<computername$>'](#login-failed-for-user-domaincomputername)
+- [Login failed for user '\<domainname>\\\<computername$>'](#login-failed-for-user-domaincomputername)
 
 ### Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'
 

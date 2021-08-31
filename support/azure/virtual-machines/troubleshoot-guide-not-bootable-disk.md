@@ -13,8 +13,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 03/25/2020
-ms.author: v-mibufo
-
 ---
 
 # Boot Error – This is not a Bootable Disk
@@ -100,8 +98,7 @@ Generation 1 VMs should first verify that the OS partition, which holds the BCD 
 
    `chkdsk <DRIVE LETTER>: /f`
 
-   Adding the '/f' command option will fix any errors on the disk. Make 
-sure to replace <DRIVE LETTER> with the letter of the attached OS VHD.
+   Adding the '/f' command option will fix any errors on the disk. Make sure to replace \<DRIVE LETTER\> with the letter of the attached OS VHD.
 
 ### Recommended: Before you rebuild the VM, enable serial console and memory dump collection
 

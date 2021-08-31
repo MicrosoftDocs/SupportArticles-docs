@@ -4,7 +4,7 @@ description: Provides guidance for capturing diagnostic information from Azure 
 ms.date: 04/02/2021
 ms.prod-support-area-path: 
 ms.service: automation
-ms.author: Charles.Wong
+ms.author: chawon
 author: v-miegge
 ms.reviewer: Andrew.Brenner
 ---

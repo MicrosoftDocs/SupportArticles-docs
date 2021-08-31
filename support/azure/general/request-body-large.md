@@ -24,4 +24,4 @@ MaxLimit : 4194304
 
 ## Cause
 
-There's a 4-MB limit for each call to the Azure Storage service. If your file is larger than 4 MB, you must break it in chunks. For more information, see [Azure Storage scalability and performance targets](https://docs.microsoft.com/azure/storage/storage-scalability-targets).
+There's a 4-MB limit for each call to the Azure Storage service. If your file is larger than 4 MB, you must break it in chunks. For more information, see [Azure Storage scalability and performance targets](/azure/storage/storage-scalability-targets).

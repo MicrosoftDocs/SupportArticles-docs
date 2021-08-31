@@ -526,6 +526,8 @@
       href: ./identity/password-reset-fails-error.md
     - name: Password-change protocols in Windows
       href: ./identity/password-change-mechanisms.md
+    - name: Poor performance when calling lookup functions
+      href: ./identity/poor-performance-calling-lookup-functions.md
     - name: Redirect users and computers containers
       href: ./identity/redirect-users-computers-containers.md
     - name: Rename an item after replication collision
@@ -994,7 +996,7 @@
       href: ./deployment/fix-windows-update-errors.md
     - name: How to block user access to Windows Update
       href: ./deployment/block-user-access-windows-update.md
-    - name: How To use the Recovery Consol
+    - name: How to use the Recovery Console
       href: ./deployment/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
@@ -1842,6 +1844,8 @@
       href: ./performance/memory-dump-file-options.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
+    - name: Stop code DRIVER_VERIFIER_DMA_VIOLATION
+      href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
       href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 0x109 on a VMWare virtual machine
@@ -1966,7 +1970,7 @@
       href: ./performance/slow-performance-file-server.md
   - name: System Hang
     items:
-    - name: Cannot restart a Windows Server that has 20 TB of RAM (or more), Credential Guard enabled, and Hyper-V role enabled
+    - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
       href: ./performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md
     - name: Compress large registry hives
       href: ./performance/compress-bloated-registry.md
@@ -2412,6 +2416,8 @@
     items:
     - name: Enter-PSSession cmdlet fails
       href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
+    - name: CJK characters are garbled in PowerShell
+      href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
     - name: error code 0x800706BE

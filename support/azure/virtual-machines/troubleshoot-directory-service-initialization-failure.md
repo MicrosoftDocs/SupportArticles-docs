@@ -119,9 +119,9 @@ Set up the VM to boot on **Directory Services Restore Mode (DSRM)** mode to bypa
 
    `bcdedit /store <Drive Letter>:\boot\bcd /enum`
 
-   Replace `< Drive Letter >` with the letter determined in the previous steps.
+   Replace `<Drive Letter>` with the letter determined in the previous steps.
 
-   ![The screenshot shows an elevated CMD instance after entering the 'bcdedit /store <Drive Letter>:\boot\bcd /enum' command, which displays Windows Boot Manager with the identifier.](./media/troubleshoot-directory-service-initialization-failure/2.png)
+   ![The screenshot shows an elevated CMD instance after entering the command, which displays Windows Boot Manager with the identifier.](./media/troubleshoot-directory-service-initialization-failure/2.png)
 
 1. Enable the `safeboot DsRepair` flag on the booting partition:
 

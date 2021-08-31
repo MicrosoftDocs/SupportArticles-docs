@@ -13,7 +13,7 @@
     href: reference-connect-device-disappearance.md
   - name: Sign-in and Multi-factor Authentication
     items:
-    - name: Authentication fails with "The requested federation realm object 'xxxxxx' does not exist"
+    - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
       href: authentication-fails-with-error.md
 
 - name: App Integration and Development 
@@ -66,10 +66,10 @@
     href: method-invocation-failed-error.md
   - name: Password changes aren't saved
     href: pwd-change-not-save.md
+  - name: Pending devices
+    href: pending-devices.md
   - name: Perform a Workplace Join using DRS
     href: cant-perform-workplace-join.md
-  - name: Remove duplicate mobile device management objects
-    href: remove-duplicate-mobile-device-management.md
   - name: Remove user from recycle bin
     href: remove-msoluser-user-not-found-recyclebin.md
   - name: Set up your enterprise for working remotely FAQ

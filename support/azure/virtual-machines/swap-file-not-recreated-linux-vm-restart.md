@@ -46,9 +46,6 @@ To resolve this problem, follow these steps:
     #Create and use swapfile on resource disk. 
     ResourceDisk.EnableSwap=n 
 
-    # Create and use swapfile on resource disk. 
-    ResourceDisk.EnableSwap=n 
-
     #Size of the swapfile. 
     ResourceDisk.SwapSizeMB=0
     ```

@@ -23,7 +23,7 @@ This article covers some advanced search tips and tricks that will improve your 
 
 Don't let your browsing history and preferences affect your search. Use **InPrivate (Bing)** or **Incognito (Chrome)** mode in your browser.
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550561_en_1.gif" alt-text="InPrivate Browsing":::
+:::image type="content" source="./media/search-tips-find-troubleshooting-content/search-tips.gif" alt-text="InPrivate Browsing":::
 
 ## Gather and review log files
 
@@ -63,11 +63,11 @@ For example:
 
 ### Scope searches to well-known domains using the "site:" operand
 
-The search string **"a user account is required" site:Microsoft.com** targets only the **microsoft.com** domain: 
+The search string **"a user account is required" site:Microsoft.com** targets only the **microsoft.com** domain:
 
 :::image type="content" source="./media/search-tips-find-troubleshooting-content/4550609_en_1.png" alt-text="Microsoft search results":::
 
-The search string **"a user account is required" site:reddit.com** targets just the **reddit.com** domain: 
+The search string **"a user account is required" site:reddit.com** targets just the **reddit.com** domain:
 
 :::image type="content" source="./media/search-tips-find-troubleshooting-content/4550610_en_1.png" alt-text="Reddit search results.":::
 
@@ -80,7 +80,7 @@ This excludes answers.microsoft.com and social.microsoft.com:"a user account is 
 
 ## Trusted sites
 
-Build a list of trusted sites to use during your investigation. 
+Build a list of trusted sites to use during your investigation.
 
 | **Asset**| **Comments** |
 |---|---|
@@ -96,20 +96,20 @@ Don't overlook these valuable resources! Visit these sites and search using thei
 
 **Forums**
 
-- TechNet forums: [https://social.technet.microsoft.com/Forums/en-US/home](https://social.technet.microsoft.com/Forums/en-US/home) 
-- Microsoft Q&A: [https://docs.microsoft.com/answers/questions/index.html](https://docs.microsoft.com/answers/questions/index.html) 
-- Consumer or end-user forum: [https://answers.microsoft.com/](https://answers.microsoft.com/) 
+- TechNet forums: [https://social.technet.microsoft.com/Forums/en-US/home](https://social.technet.microsoft.com/Forums/en-US/home)
+- Microsoft Q&A: [https://docs.microsoft.com/answers/index.html](/answers/index.html)
+- Consumer or end-user forum: [https://answers.microsoft.com/](https://answers.microsoft.com/)
 
 **Blogs**
- 
-- [https://techcommunity.microsoft.com/](https://techcommunity.microsoft.com/) 
+
+- [https://techcommunity.microsoft.com/](https://techcommunity.microsoft.com/)
 
 ## Microsoft Support Portals (An overlooked resource for troubleshooting)
 
 You don't have to open a support ticket just yet! The Microsoft support portals offer a wealth of troubleshooting assistance before you open a support case. Just begin the support experience, describe your issue as accurately as possible, and you will be presented with troubleshooting steps and recommended self-help articles. Here is an example from the Azure portal. If the recommended steps or articles enable you to resolve your issue, there is no need to proceed with opening a support request.
 
-- [Azure Support](https://ms.portal.azure.com/) 
-- [Office 365 Support](https://docs.microsoft.com/Office365/Admin/contact-support-for-business-products)
+- [Azure Support](https://ms.portal.azure.com/)
+- [Office 365 Support](/Office365/Admin/contact-support-for-business-products)
 
 :::image type="content" source="./media/search-tips-find-troubleshooting-content/4550611_en_1.png" alt-text="Microsoft support portals.":::
 
