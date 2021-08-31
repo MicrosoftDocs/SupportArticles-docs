@@ -312,7 +312,18 @@ Try to access the REST API URL from a browser in the external network. If you ge
 > [!NOTE]
 > Teams presence service doesn't support the fallback to the EWS URL if the access to the Exchange REST API fails.
 
-#### Step 2: Verify that Teams isn't blocked from accessing EWS for the entire organization
+#### Step 2: Verify that the Teams Presence Based on Calendar Events test is successful
+
+1. Ask the user to go to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) section of **Microsoft Remote Connectivity Analyzer**.
+
+:::image type="content" source="media/teams-exchange-interaction-issue/presence-test-RCA.png" alt-text="Screenshot of Teams Presence test":::
+
+2. Input the requested information.
+3. Select the **Perform Test** button to start the Teams Presence Based on Calendar Events test.
+
+If the test fails, you should attempt to resolve the issue and rerun the test.
+
+#### Step 3: Verify that Teams isn't blocked from accessing EWS for the entire organization
 
 Run this Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the entire organization:
 
@@ -330,7 +341,7 @@ Set-OrganizationConfig -EwsAllowList @{Add="*Microsoft.Skype.Presence.App/*"}
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing the EWS.
 
-#### Step 3: Verify that Teams isn't blocked from accessing EWS for the user's mailbox
+#### Step 4: Verify that Teams isn't blocked from accessing EWS for the user's mailbox
 
 Run this Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the user's mailbox:
 
@@ -348,7 +359,7 @@ Set-CASMailbox <user's UserPrincipalName> -EwsAllowList @{Add="* Microsoft.Skype
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will be blocked from accessing the EWS.
 
-#### Step 4: Escalate the issue
+#### Step 5: Escalate the issue
 
 If you verified there's no problem with the prerequisites and configurations mentioned in this article, submit a service request to Microsoft Support with this information:
 
