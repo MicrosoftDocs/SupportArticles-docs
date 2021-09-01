@@ -88,7 +88,9 @@ Here are the steps to book a workspace:
 
     In Outlook for Windows:
 
-    :::image type="content" source="media/create-book-workspace-outlook/workspace-outlook-for-windows.png" alt-text="Workspace in Outlook for Windows.":::
+    :::image type="content" source="media/create-book-workspace-outlook/workspace-outlook-for-windows.png" alt-text="Workspace in Outlook for Windows." lightbox="media/create-book-workspace-outlook/workspace-outlook-for-windows-expanded.png":::
+
+    [ ![Workspace in Outlook for Windows.](media/create-book-workspace-outlook/workspace-outlook-for-windows-expanded.png) ](media/create-book-workspace-outlook/workspace-outlook-for-windows-expanded.png#lightbox)
 
     In Outlook on the web:
 
