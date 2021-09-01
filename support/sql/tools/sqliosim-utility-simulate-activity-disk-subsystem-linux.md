@@ -122,7 +122,7 @@ wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/s
 > [!NOTE]
 > `/tmp` is an example path. Change it to your own path.
 
-### Sample command to run SQLIOSim with default.ini file
+### Sample command to run SQLIOSim with the default.ini file
 
 `sudo /opt/mssql-sqliosim/bin/sqliosim -cfg /tmp/sqliosim.default.cfg.ini -dir /tmp -log /tmp/sqliosim_log.xml`
 
