@@ -1,0 +1,62 @@
+---
+title: Chat issues in Teams meeting
+description: Fixes some chat issues when you join a Teams meeting. 
+author: v-charloz
+ms.author: v-chazhang
+manager: dcscontentpm
+audience: ITPro 
+ms.topic: troubleshooting 
+ms.service: msteams
+localization_priority: Normal
+ms.custom: 
+- CI 154689
+- CSSTroubleshoot
+ms.reviewer: sylviebo; meerak
+appliesto:
+- Microsoft Teams
+search.appverid: 
+- MET150
+---
+
+# Chat issues in Teams meeting
+
+## Symptoms
+
+You may experience one of the following chat issues when you join a Microsoft Teams meeting:
+
+- The **Chat** icon is missing.
+- You receive the "Administrator has disabled chat for this user" error message.
+- You can't access the chat history.
+
+Leave the meeting and join the meeting again to work around these issues. If it doesn't work, check the potential causes, and try the resolutions in this article.
+
+## Cause
+
+These issues occur if one of the following conditions is true:
+
+- The **Allow chat in meetings** meeting policy is disabled.
+- The number of people in a meeting exceeds the [limit](/microsoftteams/limits-specifications-teams#meetings-and-calls).
+- Meeting participant isn't added to a meeting.
+
+## Configure meeting policy
+
+You can change the policy setting in the admin center by following the steps:
+
+1. In **Microsoft Teams admin center**, select **Users**.
+1. Select the user, select **Policies** and then select the meeting policy assigned to the user.
+1. In the **Participants & guests** page, change **Allow chat in meetings** to **Enabled**.
+
+To view other users that have been assigned this meeting policy:
+
+1. In **Microsoft Teams admin center**, select **Users**.
+1. On the right of the Search bar, select the **Filter** icon.
+1. Select **Meeting policy** and the name of the policy that was changed above.
+1. Select **Apply**. A list of users with this policy is displayed.
+
+For Teams for Education users, you can refer to the [policy packages](/microsoftteams/policy-packages-edu) or the [Teams for Education policy wizard](/microsoftteams/easy-policy-setup-edu?tabs=students%2Cstudent-settings) to manage meeting policies.
+
+## Add participants to a meeting
+
+Participants may be removed from a chat thread to secure the corporate data. Meeting participants who were added to a meeting via a meeting link (such as a meeting forward), and were not added to the original meeting invite will only have access to chats, files, notes, and other meeting content during the meeting, but lose access once the meeting ends. In addition, if this meeting is part of a recurrence, the user may not have access to the chat after the meeting.
+
+To enable access to the chat, meeting organizer can invite the user to the meeting series.
