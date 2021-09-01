@@ -38,8 +38,12 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
 1. Add the repo using this command:
 
-   - For RHEL 7: `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/prod.repo`.
-   - For RHEL 8: `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo`.
+   - For RHEL 7:
+
+     `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/prod.repo`.
+   - For RHEL 8:
+
+     `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo`.
 
 1. After adding repo, run the installation with the following commands:
 
@@ -73,8 +77,12 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 1. Import the public repository GPG keys: `wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add`.
 1. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:
 
-   - For Ubuntu 18.04: `sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"`.
-   - For Ubuntu 20.04: `sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"`.
+   - For Ubuntu 18.04:
+
+     `sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"`.
+   - For Ubuntu 20.04:
+
+     `sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"`.
 
 1. Run the installation using the following commands:
 
