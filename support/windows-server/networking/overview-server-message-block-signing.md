@@ -27,7 +27,7 @@ SMB signing first appeared in Microsoft Windows 2000, Microsoft NT 4.0, and Micr
 
 ## How SMB signing protects the connection
 
-If someone changes a message during transmission, the hash won't match, and SMB will know that someone tampered with the data. It also confirms to the sender's and the receiver's identity, breaking relay attacks. Ideally, you are using Kerberos instead of NTLMv2 so that your session key starts strong. Don't connect to shares by using IP addresses, and don't use CNAME records. Use Kerberos instead. See [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064) for more information.
+If someone changes a message during transmission, the hash won't match, and SMB will know that someone tampered with the data. It also confirms the sender's and receiver's identity. This breaks relay attacks. Ideally, you are using Kerberos instead of NTLMv2 so that your session key starts strong. Don't connect to shares by using IP addresses, and don't use CNAME records. Use Kerberos instead. See [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064) for more information.
 
 ## Policy locations for SMB signing
 
