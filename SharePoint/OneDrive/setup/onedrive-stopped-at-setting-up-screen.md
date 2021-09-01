@@ -131,8 +131,6 @@ To do this, select **Run Tests** below, which will populate the diagnostic in th
 
 The diagnostic will perform a large range of verifications.
 
-![Search the diagnostics library.](./media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-2.png)
-
 ### Need More Help?
 
 Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
