@@ -63,7 +63,7 @@ It's similar to configuring a room. The difference is to set the resource mailbo
    Set-CalendarProcessing  -Identity <alias> -EnforceCapacity $True -MinimumDurationInMinutes <int32>  
     ```
 
-**Note**:
+**Notes**:
 
 - Distribution groups or lists can't be added to the booking request, while only individual users can be added. Workspace bookings will count the attendees on the request based on the capacity.
 - It can take up to 24 hours for workspaces and new room lists to appear in the room finder.
@@ -82,7 +82,7 @@ Here are the steps to book a workspace:
 2. Set the **Show as:** status to **Free**, so that the workspace booking doesn't block your calendar.
 3. On the **Room Finder** panel, select a building from the **Building** drop-down list, and then select **Workspaces** from the **Type** drop-down list as follows:
 
-    **Note**:
+    **Notes**:
     - If you don't see the **Type** drop-down list or the **Workspaces** option, the **Building** (room list) might not have workspaces.
     - The **Building** drop-down list is populated based on room lists rather than the **Building** attribute.
 
@@ -92,11 +92,11 @@ Here are the steps to book a workspace:
 
     In Outlook on the web:
 
-    :::image type="content" source="media/create-book-workspace-outlook/workspace-outlook-on-the-web.png" alt-text="Workspace in Outlook on the web.":::
+    :::image type="content" source="media/create-book-workspace-outlook/workspace-outlook-on-the-web.png" alt-text="Workspace in Outlook on the web." lightbox="media/create-book-workspace-outlook/workspace-outlook-on-the-web.png":::
 
     In Outlook for iOS and Android:
 
-    :::image type="content" source="media/create-book-workspace-outlook/workspace-outlook-ios-android.png" alt-text="Workspace in Outlook for iOS and Android.":::
+    :::image type="content" source="media/create-book-workspace-outlook/workspace-outlook-ios-android.png" alt-text="Workspace in Outlook for iOS and Android." lightbox="media/create-book-workspace-outlook/workspace-outlook-ios-android.png":::
   
     **Note**:  
     Make sure the workspace booking is enabled in the calendar settings.
