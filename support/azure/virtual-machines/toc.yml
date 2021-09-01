@@ -144,12 +144,12 @@
       href: linux-kernel-panics-upgrade.md
     - name: Device names are changed
       href: troubleshoot-device-names-problems.md
+    - name: Failed to start Switch Root error in an Azure Linux VM
+      href: resolve-failed-start-switch-root-azure-linux-vm.md
     - name: Grub Rescue
       href: troubleshoot-vm-boot-error.md
     - name: Linux VM does not start after an LIS upgrade
       href: linux-vm-not-start-kernel-lis.md
-    - name: Resolve 'Failed to start Switch Root' for an Azure Linux VM
-      href: resolve-failed-start-switch-root-azure-linux-vm.md
   - name: Windows
     href: boot-error-troubleshoot.md
     items:
@@ -519,8 +519,6 @@
     href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
-  - name: Changes to Windows Server images default size
-    href: default-size-images-changed-30-gb.md
   - name: IaaS VM logs
     href: iaas-logs.md
   - name: Maximum RAM memory of Linux VM
@@ -544,3 +542,16 @@
     href: /azure/virtual-machines/vm-support-help
   - name: How to create an Azure support request
     href: /azure/azure-portal/supportability/how-to-create-azure-support-request
+
+- name: On-demand Capacity Reservation issues
+  items:
+  - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
+    href: capacity-reservation-cant-deploy-vm-vmss.md
+  - name: Can't create Capacity Reservation
+    href: capacity-reservation-cant-create-vm-vmss.md
+  - name: Can't delete a Capacity Reservation or Group
+    href: capacity-reservation-cant-delete-group.md
+  - name: Capacity Reservation billing scenarios
+    href: capacity-reservation-billing-scenerios.md
+  - name: A Capacity Reservation is in a "Failed" provisioning state
+    href: capacity-reservation-failed-provisioning-state.md

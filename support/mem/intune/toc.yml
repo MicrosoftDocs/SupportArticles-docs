@@ -182,6 +182,8 @@
     href: intune-managed-ios-device-backup-encrypted.md
   - name: RemoteWipe CSP fails to send a doWipe command
     href: remotewipe-fails-sending-dowipe-command.md
+  - name: Remove duplicate mobile device management objects
+    href: remove-duplicate-mobile-device-management.md
   - name: Troubleshoot device actions
     href: troubleshoot-device-actions.md
   - name: UPN listed as None for orphaned devices

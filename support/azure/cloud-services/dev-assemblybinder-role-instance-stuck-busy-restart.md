@@ -30,7 +30,7 @@ Unhandled Exception: There is not enough space on the disk. at System.IO.__Error
 
 From the error call stack, it looks like this WorkerRole is performing some unzip or extract operation at **OnStart()** method but it is failing due to insufficient storage. The next obvious question that will come to your mind is where exactly **WaWorkerHost.exe** process is extracting the file.
 
-In order to find out the answer, use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) tool to take a ProcMon trace and see what you can find.
+In order to find out the answer, use [Process Monitor](/sysinternals/downloads/procmon) tool to take a ProcMon trace and see what you can find.
 
 :::image type="content" source="media/scenario-2-assemblybinder-role-instance-stuck-busy-restart/4464905_en_1.png" alt-text="Screenshot of ProcMon trace.":::
 
@@ -39,7 +39,7 @@ In order to find out the answer, use [Process Monitor](https://docs.microsoft.co
 :::image type="content" source="media/scenario-2-assemblybinder-role-instance-stuck-busy-restart/4464906_en_1.png" alt-text="Screenshot of RoleTemp directory.":::
 
 
-You might have figured out the cause of the problem, but what should you do when running out of space in **RoleTemp** location? [Here](https://docs.microsoft.com/azure/cloud-services/cloud-services-troubleshoot-default-temp-folder-size-too-small-web-worker-role) is the answer.
+You might have figured out the cause of the problem, but what should you do when running out of space in **RoleTemp** location? [Here](/azure/cloud-services/cloud-services-troubleshoot-default-temp-folder-size-too-small-web-worker-role) is the answer.
 
 Therefore, you should configure a local storage resource, and point the TEMP and TMP directories to the path of the local storage resource like below:
 
@@ -52,7 +52,7 @@ The local resource declaration must have been added to the service definition fi
 </LocalResources>
 ```
 
-This modification should be performed within the [RoleEntryPoint.OnStart](https://docs.microsoft.com/previous-versions/azure/reference/ee772851(v=azure.100)?redirectedfrom=MSDN)  method.
+This modification should be performed within the [RoleEntryPoint.OnStart](/previous-versions/azure/reference/ee772851(v=azure.100)?redirectedfrom=MSDN)  method.
 
 ```
 localResource = RoleEnvironment.GetLocalResource("FileStorage");

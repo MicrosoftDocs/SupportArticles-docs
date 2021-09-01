@@ -109,7 +109,7 @@ Use the generic [DCDIAG](https://technet.microsoft.com/library/cc731968.aspx) co
 To work around this issue, follow these steps:
 
 1. At command prompt, run DCDIAG on the destination domain controller.
-2. Run `DCDAIG /TEST:CheckSecurityError`.
+2. Run `DCDIAG /TEST:CheckSecurityError`.
 3. Run NETDIAG.
 4. Resolve any faults that were identified by DCDIAG and NETDIAG.
 5. Retry the previously failing replication operation.If replications continue to fail, see the "[Causes and solutions](#causes-and-solutions)" section.

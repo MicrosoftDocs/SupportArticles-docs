@@ -72,7 +72,7 @@ The process to request access is relatively straight forward, you can initiate t
     |---|---|
     | Issue Type| Reserved Instance Region enablement |
     | Subscription ID that needs to be enabled| |
-    | Region: Name of the region| <insert the Azure region you are requesting access to> |
+    | Region: Name of the region| \<insert the Azure region you are requesting access to\> |
     | VM Series: (Example Dv2)| |
     | Planned usage in Cores| |
     |||
