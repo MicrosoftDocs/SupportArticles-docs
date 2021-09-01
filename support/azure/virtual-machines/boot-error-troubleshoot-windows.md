@@ -15,13 +15,13 @@ ms.date: 12/19/2019
 ms.author: tibasham
 ---
 
-# Azure Windows VM shutdown is stuck on "Restarting", “Shutting Down”, or “Stopping services”
+# Azure Windows VM shutdown is stuck on "Restarting", "Shutting Down", or "Stopping services"
 
-This article provides steps to resolve the issues of "Restarting", “Shutting down”, or “Stopping services” messages that you may encounter when you reboot a Windows virtual machine (VM) in Microsoft Azure.
+This article provides steps to resolve the issues of "Restarting", "Shutting down", or "Stopping services" messages that you may encounter when you reboot a Windows virtual machine (VM) in Microsoft Azure.
 
 ## Symptoms
 
-When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you may see that the screenshot displays the message "Restarting", “Shutting down”, or “Stopping services”.
+When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you may see that the screenshot displays the message "Restarting", "Shutting down", or "Stopping services".
 
 ![Restarting, Shutting Down, and Stopping Services Screens](./media/boot-error-troubleshooting-windows/restart-shut-down-stop-service.png)
  
@@ -41,33 +41,33 @@ Use [Serial Console](./serial-console-windows.md) to complete the following step
 
 1. Open an administrative PowerShell and check the service that stops responding upon stopping.
 
-   ``
+   ```powershell
    Get-Service | Where-Object {$_.Status -eq "STOP_PENDING"}
-   ``
+   ```
 
 2. On an administrative CMD, get the PID of the unresponsive service.
 
-   ``
+   ```powershell
    tasklist /svc | findstr /i <STOPING SERVICE>
-   ``
+   ```
 
-3. Get a memory dump sample from the unresponsive process <STOPPING SERVICE>.
+3. Get a memory dump sample from the unresponsive process \<STOPPING SERVICE\>.
 
-   ``
+   ```powershell
    procdump.exe -s 5 -n 3 -ma <PID>
-   ``
+   ```
 
 4. Now kill the unresponsive process to unlock the shutdown process.
 
-   ``
+   ```powershell
    taskkill /PID <PID> /t /f
-   ``
+   ```
 
 Once the OS starts again, if it boots normally, then just ensure the OS consistency is ok. If corruption is reported run the following command until the disk is corruption free:
 
-``
+```powershell
 dism /online /cleanup-image /restorehealth
-``
+```
 
 If you are unable to collect a process memory dump, or this issue is recursive and you require a root cause analysis, proceed with collecting an OS memory dump below, the proceed to open a support request.
 
@@ -103,7 +103,7 @@ To enable dump log and Serial Console, run the following script.
 
    In this script, we assume that the drive letter that is assigned to the attached OS disk is F. Replace it with the appropriate value in your VM.
 
-   ```
+   ```cmd
    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
    
    REM Enable Serial Console
@@ -129,7 +129,7 @@ To enable dump log and Serial Console, run the following script.
 
 4. If there's not enough space or the VM is large (G, GS or E series), you could change the location where this file will be created and refer that to any other data disk, which is attached to the VM. To change the location, you must change the following key:
 
-   ```
+   ```cmd
    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f

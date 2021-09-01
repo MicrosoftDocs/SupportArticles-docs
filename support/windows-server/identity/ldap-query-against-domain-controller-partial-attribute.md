@@ -28,6 +28,7 @@ When you run a Lightweight Directory Access Protocol (LDAP) request against a Wi
 > You can run this query from the domain controller or from a client computer that is running Windows Vista or Windows Server 2008.
 
 The user account that you use to run the LDAP query has the following properties:
+
 - The account is a member of the built-in Administrators group.
 - The account is not the built-in administrator account.
 - The account is a member of the Domain Admins group.
@@ -62,7 +63,7 @@ For more information about how to specify the value of this security setting, vi
 2. Add the Domain Admins group to this new group.
 3. Grant the Read permission on the domain partition to this new group. To do this, follow these steps:
    1. Click **Start**, click **Run**, type adsiedit.msc, and then click **OK**.
-   2. In the **ADSI Edit** window, right-click **DC=**<Name>**,DC=com**, and then click **Properties**.
+   2. In the **ADSI Edit** window, right-click **DC=**\<Name\>**,DC=com**, and then click **Properties**.
    3. In the **Properties** window, click the **Security** tab.
    4. On the **Security** tab, click **Add**.
    5. Under **Enter the object names to select**, type the name of the new group, and then click **OK**.

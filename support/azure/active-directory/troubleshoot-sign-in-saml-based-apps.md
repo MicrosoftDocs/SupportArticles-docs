@@ -9,10 +9,10 @@ ms.reviewer: bernawy
 # Problems signing in to SAML-based single sign-on configured apps
 To troubleshoot the sign-in issues below, we recommend the following to better diagnosis and automate the resolution steps:
 
-- Install the [My Apps Secure Browser Extension](https://docs.microsoft.com/azure/active-directory/manage-apps/my-apps-deployment-plan) to help Azure Active Directory (Azure AD) to provide better diagnosis and resolutions when using the testing experience in the Azure portal.
-- Reproduce the error using the testing experience in the app configuration page in the Azure portal. Learn more on [Debug SAML-based single sign-on applications](https://docs.microsoft.com/azure/active-directory/manage-apps/debug-saml-sso-issues)
+- Install the [My Apps Secure Browser Extension](/azure/active-directory/manage-apps/my-apps-deployment-plan) to help Azure Active Directory (Azure AD) to provide better diagnosis and resolutions when using the testing experience in the Azure portal.
+- Reproduce the error using the testing experience in the app configuration page in the Azure portal. Learn more on [Debug SAML-based single sign-on applications](/azure/active-directory/manage-apps/debug-saml-sso-issues)
 
-If you use the [testing experience](https://docs.microsoft.com/azure/active-directory/manage-apps/debug-saml-sso-issues) in the Azure portal with the My Apps Secure Browser Extension, you don't need to manually follow the steps below to open the SAML-based single sign-on configuration page.
+If you use the [testing experience](/azure/active-directory/manage-apps/debug-saml-sso-issues) in the Azure portal with the My Apps Secure Browser Extension, you don't need to manually follow the steps below to open the SAML-based single sign-on configuration page.
 
 To open the SAML-based single sign-on configuration page:
 1.  Open the [**Azure portal**](https://portal.azure.com/) and sign in as a **Global Administrator** or **Coadmin**.
@@ -30,7 +30,7 @@ To open the SAML-based single sign-on configuration page:
 ## General troubleshooting
 
 ### Problem when customizing the SAML claims sent to an application
-To learn how to customize the SAML attribute claims sent to your application, see [Claims mapping in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-claims-mapping).
+To learn how to customize the SAML attribute claims sent to your application, see [Claims mapping in Azure Active Directory](/azure/active-directory/develop/active-directory-claims-mapping).
 
 ### Errors related to misconfigured apps
 Verify both the configurations in the portal match what you have in your app. Specifically, compare Client/Application ID, Reply URLs, Client Secrets/Keys, and App ID URI.

@@ -161,5 +161,5 @@ MonitoringAlertCriteria alertCriteria = new MonitoringAlertCriteria(qStr);
 
 ## More information
 
-- [System Center Operations Manager troubleshooting](https://docs.microsoft.com/troubleshoot/system-center/scom/welcome-scom)
-- [Troubleshoot gray agent states in System Center Operations Manager](https://docs.microsoft.com/troubleshoot/system-center/scom/troubleshoot-gray-agent-states)
+- [System Center Operations Manager troubleshooting](/troubleshoot/system-center/scom/welcome-scom)
+- [Troubleshoot gray agent states in System Center Operations Manager](/troubleshoot/system-center/scom/troubleshoot-gray-agent-states)

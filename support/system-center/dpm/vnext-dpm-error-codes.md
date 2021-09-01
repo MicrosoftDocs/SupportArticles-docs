@@ -672,7 +672,7 @@ _Original KB number:_ &nbsp; 3041345
 |3011|There is not enough content to generate a report for this time period.<br/><br/>The number of days of available data must be at least <*DaysCount*> before DPM can generate this report.|To generate this report, specify at least <*DaysCount*> days.|
 |3012|DPM cannot perform this action because no valid property settings have been detected for this report.|To repair the configuration, follow the steps for repairing DPM in [Repairing DPM 2010](/previous-versions/system-center/data-protection-manager-2010/ff399388(v=technet.10)).|
 |3013|DPM could not connect to SQL Server Reporting Services.|Restart SQL Server Reporting Services, and then try the operation again.|
-|3014|An error occurred causing the reporting job on <*ServerName*> to fail. The system files may be corrupt.|Retry the reporting task. If the problem persists, repair your DPM installation by using the steps described in [Repairing DPM 2010](https://docs.microsoft.com/previous-versions/system-center/data-protection-manager-2010/ff399388%28v=technet.10%29).|
+|3014|An error occurred causing the reporting job on <*ServerName*> to fail. The system files may be corrupt.|Retry the reporting task. If the problem persists, repair your DPM installation by using the steps described in [Repairing DPM 2010](/previous-versions/system-center/data-protection-manager-2010/ff399388%28v=technet.10%29).|
 |3015|DPM is unable to change the e-mail settings.|Log on to <*ServerName*>. On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Server 2008**, point to **Configuration Tools**, and then select **Reporting Services Configuration**. In **Configure Report Server**, update the email settings.|
 |3016|A Windows account is required to view DPM reports.|To create the account, reinstall DPM using the steps described in DPM Setup Help.|
 |3017|The user account that DPM Reporting created is not enabled.|To re-enable the account, in DPM Administrator Console, on the **Navigation** bar, select **Reporting**. In the **Actions** pane, select **Options**, and then, on the **Reporting Password** tab, enter a valid password.|
@@ -884,18 +884,18 @@ _Original KB number:_ &nbsp; 3041345
 |4070|The prerequisite check failed with errors.|Review the errors in the DPM setup log file <*SetupLogFile*>. Resolve the errors, and then run DPM Setup again.|
 |4071|DPM Setup could not delete the DPM Administrator Console shortcut from: <*CommaSeparatedShortcutLocations*>.|Delete the shortcuts manually.|
 |4072|The specified path <*FileName*> is invalid.|Specify a valid path and verify that the path is accessible.|
-|4073|The command-line argument <*CommandlineArgument*> is invalid.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4073|The command-line argument <*CommandlineArgument*> is invalid.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4074|The path <*FileName*> exceeds <*MaxLimit*> characters.|Choose a path with a shorter length.|
-|4075|The command-line argument <*CommandlineArgument*> is already specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
-|4076|The value for <*CommandlineArgument*> was not specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4075|The command-line argument <*CommandlineArgument*> is already specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
+|4076|The value for <*CommandlineArgument*> was not specified.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4077|DPM is not installed on this computer.|Run DPM Setup from the DPM product DVD.|
 |4078|DPM is already installed on this computer.|To uninstall DPM, use **Add or Remove Programs** in Control Panel.|
 |4079|DPM is not installed on this computer.|To install DPM, see [Installing DPM](/system-center/dpm/install-dpm).|
-|4080|No IN file is specified in the command line.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
-|4081|DPM configuration failed.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4080|No IN file is specified in the command line.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
+|4081|DPM configuration failed.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4082|DPM cannot start service <*SetupServiceName*>.|Start the service manually. On the **Administrative Tools** menu, select **Services**. Right-click <*SetupServiceName*>, and then select **Start**.|
-|4083|DPM setup could not configure agents.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
-|4085|DPM setup could not extract the prerequisites.|For information about installing DPM and its prerequisites, see [Get DPM installed](https://docs.microsoft.com/system-center/dpm/install-dpm#BKMK_SQL).|
+|4083|DPM setup could not configure agents.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
+|4085|DPM setup could not extract the prerequisites.|For information about installing DPM and its prerequisites, see [Get DPM installed](/system-center/dpm/install-dpm#BKMK_SQL).|
 |4086|DPM has been successfully installed. However, DPM Setup could not delete the extracted folder <*FolderPath*>.|Delete folder <*FolderPath*> manually.|
 |4087|DPM Setup could not delete the extracted folder <*FolderPath*>.|Delete folder <*FolderPath*> manually.|
 |4089|DPM Setup could not configure the database <*Database Name*>.|Verify that the MSSQL$<*InstanceName*> service is started. If the service is not started, on the Administrative Tools menu, click Services. Right-click MSSQL$<*InstanceName*>, and then click **Start**.|
@@ -1547,7 +1547,7 @@ _Original KB number:_ &nbsp; 3041345
 |31138|Operation failed because <*LibraryType*> <*Library*> is disabled.| |
 |31139|Door of <*LibraryType*> <*Library*> is already unlocked.| |
 |31140|Door of <*LibraryType*> <*Library*> is being unlocked. Wait for the operation to complete.| |
-|31141|Door of *<Librar Type>* <*Library*> is already locked.| |
+|31141|Door of <*LibraryType*> <*Library*> is already locked.| |
 |31142|Door of <*LibraryType*> <*Library*> is being locked. Please wait for the operation to complete.| |
 |31143|Connection already exists to DPM server <*ServerName*>. You can only be connected to a single DPM server at a time. End the existing connection using Disconnect-DPMServer before attempting to run cmdlets that are targeted to another DPM server.| |
 |31144|The server <*ServerName*> could not be found in Active Directory.|To verify that this server is accessible, ping it. Then retry the operation. If the server is accessible, verify that the DPM service is running and that the current user has a domain account and is a member of the local administrators group. If the problem persists, contact your DPM administrator.|
@@ -2473,7 +2473,7 @@ _Original KB number:_ &nbsp; 3041345
 |100239|System State backup failed because multiple staging disks are mounted.|Open disk management and unmount all unnecessary disks and retry the backup.|
 |100240|Failed to set Offline Seeding Policy as the required ARM Certificate XML file required for this policy could not be found.|Ensure that you have generated and imported the Certificate XML using the Microsoft Azure Offline Backup AD App and Certificate Generation Utility. For more information, see [Prerequisites](/azure/backup/backup-azure-backup-server-import-export#prerequisites).|
 |100241|Offline Backup policy cannot be saved as the provided Import Job name has already been configured with a different storage account name "%StorageAccountName;" as part of another Backup policy configured on this server.|Reconfigure Offline Backup, with the same Import Job Name and storage account pair or choose a different Resource Group or Import Job Name.|
-|100242|Unable to create Offline Backup policy for the current Azure account as this server’s authentication information could not be uploaded to Azure.|Login using a different Azure account or refer to the steps listed at https://go.microsoft.com/fwlink/?linkid=2051112. If the issue persists, please contact Microsoft support.|
+|100242|Unable to create Offline Backup policy for the current Azure account as this server's authentication information could not be uploaded to Azure.|Login using a different Azure account or refer to the steps listed at https://go.microsoft.com/fwlink/?linkid=2051112. If the issue persists, please contact Microsoft support.|
 |100262|The encryption passphrase has not been validated to meet requirements. This is required to ensure successful online restores.|Please validate the encryption passphrase at the earliest by launching PassphraseValidator.exe from the `%ProgramFiles%\Microsoft Azure Recovery Services Agent\bin\` folder.|
 |120001|The operation was performed successfully.| |
 |120002|Operation failed.| |

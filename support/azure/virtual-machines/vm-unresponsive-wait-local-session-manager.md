@@ -12,8 +12,6 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 10/22/2020
-ms.author: v-mibufo
-
 ---
 
 # VM is unresponsive while waiting for the Local Session Manager service
