@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 2855271
 Before you perform the troubleshooting steps, make sure that you have the latest version of Azure AD Connect installed.
 
 > [!NOTE]
-> All other Azure AD Sync appliances are being deprecated. Therefore, if you're using another appliance, install Azure AD Connect.
+> All other Azure AD Sync appliances are deprecated. Install [Azure AD Connect](azure/active-directory/hybrid/whatis-azure-ad-connect) for the directory synchronization.
 
-Additionally, make sure that directory synchronization is in a healthy state. To help you with it, run the Troubleshooting Directory Synchronization tool. To run the troubleshooter tool, on the server on which the Azure AD sync appliance is installed, open Internet Explorer, browse to `http://aka.ms/hrcsync`, and then follow the steps on the screen.
+Additionally, make sure that directory synchronization is in a healthy state. 
 
 ## Some users can't sign in to Office 365, Azure, or Microsoft Intune
 
