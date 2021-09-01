@@ -60,7 +60,7 @@ When you pull the screenshot of the virtual machine (VM), the operating system (
 
 ### Create and Access a Repair VM<a id="1"></a>
 
-1. Use [steps 1-3 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
+1. Use [steps 1-3 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
 2. Use Remote Desktop Connection connect to the Repair VM.
 
 ### Remove the KB or collect the memory dump file<a id="2"></a>
@@ -85,7 +85,7 @@ When you pull the screenshot of the virtual machine (VM), the operating system (
       > [!NOTE]
       > DISM is not a fast tool. Every time that you run it, and depending on the size of the package being removed, this operation could last quite some time, up to approximately 16 minutes. As the process continues, you will see a percentage process of the operation.
 
-   Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
+   Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
 
 2. If the above fix doesn't apply, then a memory dump analysis will be required.
 
@@ -97,13 +97,13 @@ To resolve this problem, gather the memory dump file for the crash, and contact 
 
    - On the repair VM, go to the Windows folder on the attached OS disk. If the driver letter that is assigned to the attached OS disk is `F`, then go to `F:\Windows`.
    - Locate the `memory.dmp` file, and [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
-   - If you are having trouble locating the memory.dmp file, you may wish to use [non-maskable interrupt (NMI) calls in serial console](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/serial-console-windows#use-the-serial-console-for-nmi-calls) instead.
+   - If you are having trouble locating the memory.dmp file, you may wish to use [non-maskable interrupt (NMI) calls in serial console](/azure/virtual-machines/troubleshooting/serial-console-windows#use-the-serial-console-for-nmi-calls) instead.
 
-   Follow the guide to [generate a crash dump file using NMI calls](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump).
+   Follow the guide to [generate a crash dump file using NMI calls](/windows/client-management/generate-kernel-or-complete-crash-dump).
 
 ### Rebuild the VM<a id="3"></a>
 
-Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
+Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
 
 ## Next steps
 

@@ -44,4 +44,4 @@ Also, never clone a device that is either joined to Azure AD, or enrolled into a
 
 When you create an image, follow a consistent, repeatable process (such as using **MDT** or **ConfigMgr OSD**), while using a VM and running an automated task sequence that can complete the whole process. Don't join it to either Active Directory or Azure AD, and don't set the image into a co-managed state, as that would already be enrolled in Intune. Keep the image in a workgroup, perform customizations, and run `sysprep /generalize` at the end of the process.
 
-To bypass many of the issues explained here, Microsoft recommends that you use [Windows Autopilot](https://docs.microsoft.com/mem/autopilot/windows-autopilot) to automate the process.
+To bypass many of the issues explained here, Microsoft recommends that you use [Windows Autopilot](/mem/autopilot/windows-autopilot) to automate the process.

@@ -1,6 +1,6 @@
 ---
 title: Windows stop error - Status No Memory
-description: This article provides steps to resolve issues where Windows fails to start and displays the status “Status No Memory”.
+description: This article provides steps to resolve issues where Windows fails to start and displays the status "Status No Memory".
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: v-miegge
@@ -13,12 +13,11 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 06/26/2020
-ms.author: v-mibufo
 ---
 
 # Windows stop error - Status No Memory
 
-This article provides steps to resolve issues where Windows fails to start and displays the status or error code #0xC0000017, also known as “Status No Memory”.
+This article provides steps to resolve issues where Windows fails to start and displays the status or error code #0xC0000017, also known as "Status No Memory".
 
 ## Symptom
 
@@ -26,15 +25,15 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
    **Windows Boot Manager**
 
-   ![Windows Boot Manager stating that “Windows failed to start. A recent hardware or software change might be the cause”. Scrolling down, you see the Status code “0xC0000017” as well as info stating that “The application or operating system couldn’t be loaded because a required file is missing or contains errors”.](./media/troubleshoot-windows-stop-error/1.png)
+   ![Windows Boot Manager stating that "Windows failed to start. A recent hardware or software change might be the cause". Scrolling down, you see the Status code "0xC0000017" as well as info stating that "The application or operating system couldn't be loaded because a required file is missing or contains errors".](./media/troubleshoot-windows-stop-error/1.png)
 
    **Recovery Screen**
  
-   ![The Recovery screen stating that “Your PC/Device needs to be repaired. There isn’t enough memory available to create a ramdisk device”. You should also see the error code “0xC0000017”.](./media/troubleshoot-windows-stop-error/2.png)
+   ![The Recovery screen stating that "Your PC/Device needs to be repaired. There isn't enough memory available to create a ramdisk device". You should also see the error code "0xC0000017".](./media/troubleshoot-windows-stop-error/2.png)
 
 ## Cause
 
-The operating system’s disk is either full, too fragmented, or the operating system (OS) isn't able to access the memory or page file, or both.
+The operating system's disk is either full, too fragmented, or the operating system (OS) isn't able to access the memory or page file, or both.
 
 ## Solution
 
@@ -64,9 +63,9 @@ If you're using a Generation 2 VM, the EFI partition of the attached disk may no
 
 1. In Windows search, enter `diskmgmt` and open the **Disk Management console**.
 1. Identify the broken disk attached to the repair VM. Typically, this disk is listed last in the console, and has the highest numerical value.
-1. Note if in that disk there's a partition that holds the **EFI System Partition**, which also doesn’t have a letter value assigned to it (such as drive *F:*). If all partitions are assigned, you may skip ahead to free up space on the disk. Otherwise, continue to assign a letter to this disk.
+1. Note if in that disk there's a partition that holds the **EFI System Partition**, which also doesn't have a letter value assigned to it (such as drive *F:*). If all partitions are assigned, you may skip ahead to free up space on the disk. Otherwise, continue to assign a letter to this disk.
 
-   ![The Disk Management console, with the attached disk “Disk 2”, as well as the unassigned partition that is 100 MB and is the “EFI System Partition”.](./media/troubleshoot-windows-stop-error/3.png)
+   ![The Disk Management console, with the attached disk "Disk 2", as well as the unassigned partition that is 100 MB and is the "EFI System Partition".](./media/troubleshoot-windows-stop-error/3.png)
 
 1. Open an elevated command prompt as an administrator and enter `diskpart` to launch the **DISKPART** tool.
 1. Enter the following commands:
@@ -101,7 +100,7 @@ Now that the broken disk is attached to the repair VM, you should verify that th
    ``
    
    - Depending upon the level of fragmentation, de-fragmentation could take hours.
-   - In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS disk’s letter (such as drive *F:*).
+   - In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS disk's letter (such as drive *F:*).
 
 ### Clean out bad memory from the Boot Configuration Data (BCD) store
 
@@ -112,7 +111,7 @@ Now that the broken disk is attached to the repair VM, you should verify that th
    bcdedit /store <LETTER ASSIGNED TO THE OS DISK>:\boot\bcd /enum {badmemory}
    ``
    
-   - In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS disk’s letter (such as drive *F:*).
+   - In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS disk's letter (such as drive *F:*).
 
 1. If the query shows no bad memory blocks, skip ahead to the next task. Otherwise, continue to step 4.
 1. If bad memory blocks are identified, these blocks are preventing the creation of a ramdisk and should be deleted with the following command:
@@ -121,11 +120,11 @@ Now that the broken disk is attached to the repair VM, you should verify that th
    bcdedit /store <LETTER ASSIGNED TO THE OS DISK>:\boot\bcd /deletevalue {badmemory} badmemorylist
    ``
    
-   - In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS disk’s letter (such as drive *F:*).
+   - In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS disk's letter (such as drive *F:*).
 
 ### Restore the page file to its default location
 
-The page file stores data that cannot be held by your computer’s random-access memory (RAM) as a form of overflow/backup. It is possible that the file is hosted in a VHD rather than the temp drive, which is the default Azure location. If true, the file may not be accessible, and should be restored to the default location.
+The page file stores data that cannot be held by your computer's random-access memory (RAM) as a form of overflow/backup. It is possible that the file is hosted in a VHD rather than the temp drive, which is the default Azure location. If true, the file may not be accessible, and should be restored to the default location.
 
 Before taking any steps, you should create a copy of the **\windows\system32\config** folder on a healthy disk. This step ensures that can undo any unwanted changes. You'll be working on important system files, so this precaution is highly recommended.
 
@@ -143,7 +142,7 @@ Before taking any steps, you should create a copy of the **\windows\system32\con
 1. Check the location where the PageFile creation is configured.
    1. While in HKEY_LOCAL_MACHINE\BROKENSYSTEM, expand the directory matching the ControlSet number you identified in step 4, such as **ControlSet001**.
    1. Navigate to **Control >> Session Manager >> Memory Management** and note the location of the **ExistingPageFiles** key.
-   1. This key should be in the default Azure location of the Temp drive. If it isn’t there and is in a VHD in another location, such as the data disk drive or OS drive, then it will need to be deleted.
+   1. This key should be in the default Azure location of the Temp drive. If it isn't there and is in a VHD in another location, such as the data disk drive or OS drive, then it will need to be deleted.
    1. Browse to that location in File Explorer and then delete the **pagefile.sys** file.
 
 ### Enable the Serial Console and memory dump collection

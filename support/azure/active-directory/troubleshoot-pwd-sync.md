@@ -7,7 +7,7 @@ ms.reviewer: willfid
 ---
 # How to troubleshoot password synchronization when using an Azure AD sync appliance
 
-This article helps you troubleshoot common issues that you may encounter when you synchronize passwords from the on-premises environment to Azure Active Directory (Azure AD) by using an Azure AD sync appliance.
+This article helps you troubleshoot common issues that you may encounter when you synchronize passwords from the on-premises environment to Azure Active Directory (Azure AD) by using [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2855271
@@ -16,10 +16,7 @@ _Original KB number:_ &nbsp; 2855271
 
 Before you perform the troubleshooting steps, make sure that you have the latest version of Azure AD Connect installed.
 
-> [!NOTE]
-> All other Azure AD Sync appliances are being deprecated. Therefore, if you're using another appliance, install Azure AD Connect.
-
-Additionally, make sure that directory synchronization is in a healthy state. To help you with it, run the Troubleshooting Directory Synchronization tool. To run the troubleshooter tool, on the server on which the Azure AD sync appliance is installed, open Internet Explorer, browse to `http://aka.ms/hrcsync`, and then follow the steps on the screen.
+Additionally, make sure that directory synchronization is in a healthy state. For more information, see [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync).
 
 ## Some users can't sign in to Office 365, Azure, or Microsoft Intune
 
@@ -80,11 +77,11 @@ To resolve this issue, first make sure that you enable password synchronization.
 
 After password synchronization is enabled, you must do a full password sync. See How to perform a full password sync section.
 
-For more information, see [Troubleshoot password hash synchronization with Azure AD Connect sync](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task).
+For more information, see [Troubleshoot password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task).
 
 ## Troubleshoot one user whose password isn't synced
 
-To troubleshoot this issue, see [Troubleshoot password hash synchronization with Azure AD Connect sync](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task)
+To troubleshoot this issue, see [Troubleshoot password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task)
 
 ## You're changing from a single-sign on (SSO) solution to password synchronization
 
