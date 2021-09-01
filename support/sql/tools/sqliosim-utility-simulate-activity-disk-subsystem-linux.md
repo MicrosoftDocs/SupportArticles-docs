@@ -15,20 +15,18 @@ _Applies to:_ SQL Server 2019 on Linux, SQL Server 2017 on Linux
 
 ## Introduction
 
-This article describes the SQLIOSim tool. You can use this tool to perform reliability and integrity tests on disk subsystems on SQL on Linux, Container platform. These tests simulate read, write, checkpoint, backup, sort, and read-ahead activities for SQL Server on Linux.
-
-## Use the SQLIOSim utility on Linux
-
-### Supported platforms
-
-| Platform | File System | Installation Guide
-|---|---|---|
-|Red Hat Enterprise Linux 7.9, or 8.0 - 8.3 Server|XFS or EXT4|[Installation guide](/sql/linux/quickstart-install-connect-red-hat)|
-|SUSE Enterprise Linux Server v12 SP4 - SP5|XFS or EXT4|[Installation guide](/sql/linux/quickstart-install-connect-suse)|
-|Ubuntu 18.04 LTS, 20.04 LTS|XFS or EXT4|[Installation guide](/sql/linux/quickstart-install-connect-ubuntu)|
-|Docker Engine 1.8+ on Windows, Mac, or Linux|N/A|[Installation guide](/sql/linux/quickstart-install-connect-docker)|
+This article describes the SQLIOSim tool. You can use this tool to perform reliability and integrity tests on disk subsystems on SQL Server on Linux, Container Platform. These tests simulate read, write, checkpoint, backup, sort, and read-ahead activities for SQL Server on Linux.
 
 The SQLIOSim tool was first written for and released on the Windows platform. SQLIOSim has a dependency on SQLPAL, which enables the execution of the Windows SQLIOSim utility on Linux.
+
+## Supported platforms
+
+| Platform | File system | Installation guide
+|---|---|---|
+|Red Hat Enterprise Linux 7.9, or 8.0 - 8.3 Server|XFS or EXT4|[Red Hat installation guide](/sql/linux/quickstart-install-connect-red-hat)|
+|SUSE Enterprise Linux Server v12 SP4 - SP5|XFS or EXT4|[SUSE Linux Enterprise Server installation guide](/sql/linux/quickstart-install-connect-suse)|
+|Ubuntu 18.04 LTS, 20.04 LTS|XFS or EXT4|[Ubuntu installation guide](/sql/linux/quickstart-install-connect-ubuntu)|
+|Docker Engine 1.8+ on Windows, Mac, or Linux|N/A|[Run SQL Server container images with Docker guide](/sql/linux/quickstart-install-connect-docker)|
 
 ## SQLIOSim on Linux installation instructions
 
@@ -36,7 +34,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
 ### Red Hat Enterprise Linux (RHEL)
 
-1. Add the repo using this command:
+1. Add the repository using this command:
 
    - For RHEL 7:
 
@@ -45,7 +43,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
      `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo`.
 
-1. After adding repo, run the installation with the following commands:
+1. After adding the repository, run the installation with the following commands:
 
     ```bash
     # Switch to root user
@@ -58,7 +56,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
 ### SUSE Linux Enterprise Server (SLES)
 
-1. To add the repository, run this command: `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo`.
+1. Add the repository using this command: `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo`.
 1. Refresh the repository: `sudo zypper --gpg-auto-import-keys refresh`.
 1. Download Microsoft signing key: `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`.
 1. Run the installation using the following commands:
@@ -95,7 +93,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
     apt-get install mssql-server-sqliosim
     ```
 
-## Running SQLIOSim tool as non-root user across all distributions
+## Run SQLIOSim tool as a non-root user across all distributions
 
 Non-root users can't install SQLIOSim but can run it. To run SQLIOSim, add the non-root user to the "sqliosim" group.
 
@@ -122,10 +120,10 @@ wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/s
 ```
 
 > [!NOTE]
-> `/tmp` is is an example. Change it for your own path.
+> `/tmp` is an example path. Change it to your own path.
 
 ### Sample command to run SQLIOSim with default.ini file
 
 `sudo /opt/mssql-sqliosim/bin/sqliosim -cfg /tmp/sqliosim.default.cfg.ini -dir /tmp -log /tmp/sqliosim_log.xml`
 
-For more information about various configuration parameters for configuration files and how to run SQLIOSim, see [Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem](sqliosim-utility-simulate-activity-disk-subsystem.md). This article applies to SQLIOSim for Linux ecosystems as well.
+For more information about various configuration parameters for configuration files and how to run SQLIOSim, see [Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem](sqliosim-utility-simulate-activity-disk-subsystem.md). The article applies to SQLIOSim for Linux ecosystems as well.
