@@ -41,4 +41,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Resolve errors for resource quotas
-            url: /azure/azure-resource-manager/templates/error-resource-quota
+            url: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
