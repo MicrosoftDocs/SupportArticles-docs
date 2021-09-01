@@ -641,10 +641,10 @@
       href: tools/error-you-run-sqlmaint-utility.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
-    - name: Using SQLIOSim utility to simulate SQL Server disk activity
-      href: tools/sqliosim-utility-simulate-activity-disk-subsystem.md
     - name: Using SQLIOSim utility on Linux
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
+    - name: Using SQLIOSim utility to simulate SQL Server disk activity
+      href: tools/sqliosim-utility-simulate-activity-disk-subsystem.md
     - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
       href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
 
