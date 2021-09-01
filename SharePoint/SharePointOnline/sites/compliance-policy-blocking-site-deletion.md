@@ -52,17 +52,16 @@ If you receive the **Compliance policy** error message, contact your [Microsoft 
 
 If you're an administrator, and you're unable to delete the site:
 
-1. Go to the [Microsoft Admin site](https://admin.microsoft.com).
+1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
-2. In the navigation pane, select **Support**, and then select **New Service Request**. This selection activates the **Need Help?** pane on the right side of the screen.
+   > [!div class="nextstepaction"]
+   > [Run Tests: Invalid Retention Hold](https://aka.ms/PillarInvalidRetention)
 
-3. In the **Briefly describe your issue** area, enter **invalid retention policy**, and then select **Enter**.
-
-4. In the Run diagnostic section, type or paste the **SharePoint site URL**, and then select **Run Tests**.
+2. In the Run diagnostic section, type or paste the **SharePoint site URL**, and then select **Run Tests**.
 
    ![Run diagnostics window asking for SharePoint URL information](./media/compliance-policy-blocking-site-deletion/run-diagnostics.png)
 
-5. If the test finds an **invalid retention policy**, and the policy is blocking the site deletion, you may choose to remove the policy.
+3. If the test finds an **Invalid retention policy**, and the policy is blocking the site deletion, you may choose to remove the policy.
 
    ![Run diagnostics window asking to update settings](./media/compliance-policy-blocking-site-deletion/invalid-retention-policies-on-tenant.png)
 
