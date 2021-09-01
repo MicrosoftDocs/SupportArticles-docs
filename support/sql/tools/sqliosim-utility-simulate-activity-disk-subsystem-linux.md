@@ -64,7 +64,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 1. Run the installation using the following commands:
 
     ```bash
-    #Switch to root user
+    # Switch to root user
     sudo su
     # Set the environment variable ACCEPT_EULA to 'yes' this is to accept the Preview EULA
     export ACCEPT_SQLIOSIM_EULA=y
@@ -87,7 +87,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 1. Run the installation using the following commands:
 
     ```bash
-    #Switch to root user
+    # Switch to root user
     sudo su
     # Set the environment variable ACCEPT_EULA to 'yes' this is to accept the Preview EULA
     export ACCEPT_SQLIOSIM_EULA=y
