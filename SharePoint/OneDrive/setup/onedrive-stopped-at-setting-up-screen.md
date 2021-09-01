@@ -40,7 +40,7 @@ See the Microsoft Knowledge Base article ["Setting up..." messages in the Micros
 
 If the health of all affected services appears valid, and if more than 24 hours have passed since you first saw this issue, contact Office 365 Technical Support after performing the other actions in this article.
 
-### Remove and readd licenses
+### Remove and read licenses
 
 In some situations, the user's license might not have been assigned correctly. This reason alone can cause the behavior. We recommend that you remove and readd the OneDrive and/or SharePoint license assigned to the user. To do so perform the below steps:
 1.	Sign in to portal.office.com with an admin account.
