@@ -10,3 +10,8 @@
   items:
   - name: VM extension provisioning errors
     href: vm-extension-provisioning-errors.md
+
+- name: Troubleshoot resource quota errors
+  items:
+  - name: Resolve errors for resource quotas
+    href: /azure/azure-resource-manager/templates/error-resource-quota.md

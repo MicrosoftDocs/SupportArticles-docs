@@ -35,3 +35,10 @@ landingContent:
           - text: VM extension provisioning errors in Virtual Machine Scale Sets
             url: ./vm-extension-provisioning-errors.md
  
+   # Card
+  - title: Resource quota issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve errors for resource quotas
+            url: /azure/azure-resource-manager/templates/error-resource-quota.md
