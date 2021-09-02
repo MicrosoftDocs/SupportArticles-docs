@@ -15,9 +15,9 @@ _Applies to:_ SQL Server 2019 on Linux, SQL Server 2017 on Linux
 
 ## Introduction
 
-This article describes the SQLIOSim tool. You can use this tool to perform reliability and integrity tests on disk subsystems on SQL Server on Linux, Container Platform. These tests simulate read, write, checkpoint, backup, sort, and read-ahead activities for SQL Server on Linux.
+This article describes the SQLIOSim tool. You can use this tool to perform reliability and integrity tests on disk subsystems for SQL Server on Linux and Container Platform. These tests simulate read, write, checkpoint, backup, sort, and read-ahead activities for SQL Server on Linux.
 
-The SQLIOSim tool was first written for and released on the Windows platform. SQLIOSim has a dependency on SQLPAL, which enables the execution of the Windows SQLIOSim utility on Linux.
+The SQLIOSim tool was first written for and released on the Windows platform. SQLIOSim has a dependency on SQLPAL Platform, which enables the execution of the Windows SQLIOSim utility on Linux.
 
 ## Supported platforms
 
@@ -34,7 +34,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
 ### Red Hat Enterprise Linux (RHEL)
 
-1. Add the repository using this command:
+1. Use the commands below to add the repository:
 
    - For RHEL 7:
 
@@ -43,7 +43,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
      `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo`.
 
-1. After adding the repository, run the installation with the following commands:
+1. After you've added the repository, run the installation with the commands listed below.:
 
     ```bash
     # Switch to root user
@@ -56,10 +56,10 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
 ### SUSE Linux Enterprise Server (SLES)
 
-1. Add the repository using this command: `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo`.
-1. Refresh the repository: `sudo zypper --gpg-auto-import-keys refresh`.
-1. Download Microsoft signing key: `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`.
-1. Run the installation using the following commands:
+1. Add the repository using the command: `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo`.
+2. To refresh the repository, run the command: `sudo zypper --gpg-auto-import-keys refresh`.
+3. Download Microsoft signing key using the command: `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`.
+4. Now, run the installation using the following commands:
 
     ```bash
     # Switch to root user
@@ -73,7 +73,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 ### Ubuntu
 
 1. Import the public repository GPG keys: `wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add`.
-1. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:
+1. Use the commands below to add the repository:
 
    - For Ubuntu 18.04:
 
@@ -95,17 +95,21 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
 ## Run SQLIOSim tool as a non-root user across all distributions
 
-Non-root users can't install SQLIOSim but can run it. To run SQLIOSim, add the non-root user to the "sqliosim" group.
+Non-root users can't install SQLIOSim but can run it. To run SQLIOSim as a non-root user, add the non-root user to the "sqliosim" group.
 
 ```bash
 # Add your account to the sqliosim group, by default during the installation of the SQLIOSim the group
-# sqliosim is created and the group is made the owner of the /var/opt/mssql-sqliosim directory.
+# "sqliosim" is created and the group is made the owner of the /var/opt/mssql-sqliosim directory.
 
 sudo usermod -a -G sqliosim <accounttoadd>
 ```
 
 > [!NOTE]
 > Log out and log back in with the same user credentials to ensure that group permissions take effect.
+
+Now, you are ready to run SQLIOSim using the command:
+
+`/opt/mssql-sqliosim/bin/sqliosim -cfg /tmp/sqliosim.default.cfg.ini -dir /tmp -log /tmp/sqliosim_log.xml`
 
 ## SQLIOSim configuration file
 
@@ -124,6 +128,9 @@ wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/s
 
 ### Sample command to run SQLIOSim with the default.ini file
 
-`sudo /opt/mssql-sqliosim/bin/sqliosim -cfg /tmp/sqliosim.default.cfg.ini -dir /tmp -log /tmp/sqliosim_log.xml`
+`/opt/mssql-sqliosim/bin/sqliosim -cfg /tmp/sqliosim.default.cfg.ini -dir /tmp -log /tmp/sqliosim_log.xml`
+
+> [!NOTE]
+> When you run SQLIOSim in the current release, you will see an Evaluation message similar to this "This is an evaluation version. There are [140] days left in the evaluation period." this will be removed in the next CU release. 
 
 For more information about various configuration parameters for configuration files and how to run SQLIOSim, see [Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem](sqliosim-utility-simulate-activity-disk-subsystem.md). The article applies to SQLIOSim for Linux ecosystems as well.
