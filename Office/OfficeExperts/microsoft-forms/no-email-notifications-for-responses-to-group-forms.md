@@ -32,7 +32,7 @@ You might not receive email notifications for responses that you submit to a Gro
 
    ![Selecting your group](./media/no-email-notifications-for-responses-to-group-forms/select-group.png)
 
-4. On the right side, you see the number of members in the group. Select that number, and then it opens the group email page in Outlook on the Web.
+4. On the right side, you see the number of members in the group. Select that number, and then it opens the group email page in Outlook on the web.
 
    ![Selecting the number of members in the top-right](./media/no-email-notifications-for-responses-to-group-forms/number-of-members.png)
 
