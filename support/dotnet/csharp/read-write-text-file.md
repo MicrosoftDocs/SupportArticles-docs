@@ -45,7 +45,7 @@ The following code uses the `StreamReader` class to open, to read, and to close 
         //Continue to read until you reach end of file
         while (line != null)
         {
-            //write the lie to console window
+            //write the line to console window
             Console.WriteLine(line);
             //Read the next line
             line = sr.ReadLine();

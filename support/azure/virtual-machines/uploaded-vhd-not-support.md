@@ -34,18 +34,18 @@ This problem occurs for one of the following reasons:
 
 To resolve this problem, resize the disk to comply with 1 MB alignment:
 
-- In Windows, use the [Resize-VHD](https://docs.microsoft.com/powershell/module/hyper-v/resize-vhd?view=win10-ps&preserve-view=true) PowerShell cmdlet. 
+- In Windows, use the [Resize-VHD](/powershell/module/hyper-v/resize-vhd?view=win10-ps&preserve-view=true) PowerShell cmdlet. 
     > [!NOTE]
     > **Resize-VHD** is not an Azure PowerShell cmdlet. 
-- In Linux, use the [qemu-img](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic) command.
+- In Linux, use the [qemu-img](/azure/virtual-machines/linux/create-upload-generic) command.
 
 For more information about how to create and upload a VHD for creating Azure VM, see the following articles: 
 
-[Upload and create a Linux VM from custom disk image by using the Azure CLI 1.0](https://docs.microsoft.com/azure/virtual-machines/linux/upload-vhd-nodejs)  
+[Upload and create a Linux VM from custom disk image by using the Azure CLI 1.0](/azure/virtual-machines/linux/upload-vhd-nodejs)  
 
-[Create and upload a Windows Server VHD to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/classic/createupload-vhd) 
+[Create and upload a Windows Server VHD to Azure](/azure/virtual-machines/windows/classic/createupload-vhd) 
 
 If the problem continues to occur, this may indicate a corrupted VHD. In this situation, we recommend that you rebuild the VHD from scratch. For more information, see the following articles:
 
-- [About Windows VHD](https://docs.microsoft.com/azure/virtual-machines/windows/about-disks-and-vhds#about-vhds)
-- [About Linux VHD](https://docs.microsoft.com/azure/virtual-machines/linux/about-disks-and-vhds#about-vhds)
+- [About Windows VHD](/azure/virtual-machines/windows/about-disks-and-vhds#about-vhds)
+- [About Linux VHD](/azure/virtual-machines/linux/about-disks-and-vhds#about-vhds)

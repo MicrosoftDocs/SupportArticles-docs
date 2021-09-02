@@ -26,7 +26,7 @@ After you update your global administrator credentials in FIM for directory sync
 
 ## Resolution
 
-To resolve this issue, run the Azure Active Directory Sync tool Configuration Wizard. For more information about how to do this, see [Synchronize your directories](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity).
+To resolve this issue, run the Azure Active Directory Sync tool Configuration Wizard. For more information about how to do this, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
 ## More information
 

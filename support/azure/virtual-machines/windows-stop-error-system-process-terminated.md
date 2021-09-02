@@ -13,7 +13,6 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 09/21/2020
-ms.author: v-mibufo
 ---
 
 # Windows stop error - 0xC000021A Status System Process Terminated
@@ -26,7 +25,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 **Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart. (##% complete) If you'd like to know more, you can search online later for this error: 0xC000021a**.
 
-  ![Figure 1 displays error code #0xC000021A  with the message “Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart.”.](./media/windows-stop-error-system-process-terminated/1-pc-problem-restart.png)
+  ![Figure 1 displays error code #0xC000021A  with the message "Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart.".](./media/windows-stop-error-system-process-terminated/1-pc-problem-restart.png)
 
 ## Cause
 
@@ -52,14 +51,14 @@ To collect the dump file, follow these steps:
 
 ### Attach the OS disk to a new Repair VM
 
-1.	Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
-2.	Using **Remote Desktop Connection**, connect to the Repair VM.
+1.    Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
+2.    Using **Remote Desktop Connection**, connect to the Repair VM.
 
 ### Locate the dump file and submit a support ticket
 
-1.	On the repair VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, go to F:\Windows.
-2.	Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
-3.	If you are having trouble locating the memory.dmp file, you may wish to use [non-maskable interrupt (NMI) calls in serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. You can follow the guide to [generate a crash dump file using NMI calls here](/windows/client-management/generate-kernel-or-complete-crash-dump).
+1.    On the repair VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, go to F:\Windows.
+2.    Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
+3.    If you are having trouble locating the memory.dmp file, you may wish to use [non-maskable interrupt (NMI) calls in serial console](./serial-console-windows.md#use-the-serial-console-for-nmi-calls) instead. You can follow the guide to [generate a crash dump file using NMI calls here](/windows/client-management/generate-kernel-or-complete-crash-dump).
 
 ## Next Steps
 
