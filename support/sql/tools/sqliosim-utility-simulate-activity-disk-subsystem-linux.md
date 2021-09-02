@@ -93,7 +93,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
     apt-get install mssql-server-sqliosim
     ```
 
-## Run SQLIOSim tool as a non-root user across all distributions
+## Run SQLIOSim as a non-root user across all distributions
 
 Non-root users can't install SQLIOSim but can run it. To run SQLIOSim as a non-root user, add the non-root user to the "sqliosim" group.
 
@@ -131,6 +131,6 @@ wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/s
 `/opt/mssql-sqliosim/bin/sqliosim -cfg /tmp/sqliosim.default.cfg.ini -dir /tmp -log /tmp/sqliosim_log.xml`
 
 > [!NOTE]
-> When you run SQLIOSim in the current release, you will see an Evaluation message similar to this "This is an evaluation version. There are [140] days left in the evaluation period." this will be removed in the next CU release. 
+> When you run SQLIOSim in the current release, you'll see an evaluation message similar to  "This is an evaluation version. There are [140] days left in the evaluation period." This will be removed in the next CU release.
 
 For more information about various configuration parameters for configuration files and how to run SQLIOSim, see [Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem](sqliosim-utility-simulate-activity-disk-subsystem.md). The article applies to SQLIOSim for Linux ecosystems as well.
