@@ -1,6 +1,6 @@
 ---
 title:  Cannot find a recipient that has mailbox GUID when creating public folder endpoint
-description: Works around an error that occurs when running the New-MigrationEndpoint cmdlet for the public folder migration.
+description: Works around an error that occurs when you run the New-MigrationEndpoint cmdlet for the public folder migration.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -23,13 +23,13 @@ search.appverid: MET150
 
 ## Symptoms
 
-You're migrating public folders from a Microsoft Exchange 2019, Exchange 2016, Exchange 2013, or Exchange 2010 on-premises server to Exchange Online. When you run the following cmdlet to create a migration endpoint:
+Assume that you're migrating public folders from an on-premises server that's running Microsoft Exchange Server 2019, Exchange Server 2016, Exchange Server 2013, or Exchange Server 2010 to Exchange Online. You try to run the following cmdlet to create a migration endpoint:
 
 ```powershell
 New-MigrationEndpoint -Name <PublicFolderEndpoint> -PublicFolder -RemoteServer <mail.contoso.com> -Credentials $c
 ```
 
-You receive the following error message:
+However, you receive the following error message:
 
 > cmdlet New-MigrationEndpoint at command pipeline position 1  
 > Supply values for the following parameters:  
@@ -38,8 +38,8 @@ You receive the following error message:
 
 ## Cause
 
-The issue might occur if you run the `New-MigrationEndpoint` cmdlet immediately after creating target public folder mailboxes in Exchange Online.
+This issue might occur if you run the `New-MigrationEndpoint` cmdlet immediately after you create target public folder mailboxes in Exchange Online.
 
 ## Workaround
 
-It's a transient issue and will be fixed once the Active Directory (AD) replication is completed successfully. Wait for an hour and try to create the migration endpoint again.
+This is a transient issue that should discontinue after the Active Directory replication is completed successfully. Wait for an hour, and then try again to create the migration endpoint.
