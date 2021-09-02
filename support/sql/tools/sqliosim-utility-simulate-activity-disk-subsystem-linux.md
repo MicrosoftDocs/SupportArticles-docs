@@ -15,9 +15,9 @@ _Applies to:_ SQL Server 2019 on Linux, SQL Server 2017 on Linux
 
 ## Introduction
 
-This article describes the SQLIOSim tool. You can use this tool to perform reliability and integrity tests on disk subsystems for SQL Server on Linux and Container Platform. These tests simulate read, write, checkpoint, backup, sort, and read-ahead activities for SQL Server on Linux.
+This article describes the SQLIOSim tool. You can use this tool to perform reliability and integrity tests on disk subsystems for SQL Server on Linux and container platforms. These tests simulate read, write, checkpoint, backup, sort, and read-ahead activities for SQL Server on Linux.
 
-The SQLIOSim tool was first written for and released on the Windows platform. SQLIOSim has a dependency on SQLPAL Platform, which enables the execution of the Windows SQLIOSim utility on Linux.
+The SQLIOSim tool was first written for and released on the Windows platform. SQLIOSim has a dependency on SQLPAL platform, which enables the execution of the Windows SQLIOSim utility on Linux.
 
 ## Supported platforms
 
