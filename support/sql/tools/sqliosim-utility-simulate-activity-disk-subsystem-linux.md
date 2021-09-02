@@ -43,7 +43,7 @@ To install SQLIOSim, follow the steps relevant to the Linux distribution the hos
 
      `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo`.
 
-1. After you've added the repository, run the installation with the commands listed below.:
+1. After you've added the repository, run the installation with the commands listed below:
 
     ```bash
     # Switch to root user
