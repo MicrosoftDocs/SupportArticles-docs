@@ -131,6 +131,6 @@ wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/s
 `/opt/mssql-sqliosim/bin/sqliosim -cfg /tmp/sqliosim.default.cfg.ini -dir /tmp -log /tmp/sqliosim_log.xml`
 
 > [!NOTE]
-> When you run SQLIOSim in the current release, you'll see an evaluation message similar to  "This is an evaluation version. There are [140] days left in the evaluation period." This will be removed in the next CU release.
+> When you run SQLIOSim in the current release, you'll see an evaluation message similar to "This is an evaluation version. There are [140] days left in the evaluation period." This will be removed in the next CU release.
 
 For more information about various configuration parameters for configuration files and how to run SQLIOSim, see [Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem](sqliosim-utility-simulate-activity-disk-subsystem.md). The article applies to SQLIOSim for Linux ecosystems as well.
