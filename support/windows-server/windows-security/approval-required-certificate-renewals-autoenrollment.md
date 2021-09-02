@@ -29,6 +29,6 @@ To be renewed, a certificate should have completed 80% of its validity period an
 For normal renewal behaviors, set the renewal period to more than 8 hours and less than 20% of the validity period.
 
 > [!NOTE]
-> Certificate autoenrollment computes the number of times it will be executed in the last 20% of the validity period before the certificate expires to determine when to attempt a renewal.
+> The execution of the certificate renewal will be skipped during the first 80% of the certificate validity period and triggered in the last 20%.
 
 This issue might occur with any type of certificate renewals.
