@@ -17,11 +17,11 @@ When you create a new virtual machine scale set, the following error message is 
 
 ## Cause
 
-This issue occurs because the maximum number of public IP addresses allowed for your subscription is reached.
+This issue occurs because the maximum number of public IP addresses allowed for your subscription is reached. For more information, see [Public IP address limits](azure/azure-resource-manager/management/azure-subscription-service-limits#publicip-address).
 
 ## Solution
 
-To raise the limit or quota, go to the [Azure portal]( https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest), file a **Service and subscription limits (quotes)** support ticket and set the quota type to **Networking**. 
+To raise the limit or quota, go to the [Azure portal]( https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest), file a **Service and subscription limits (quotes)** support ticket and set the quota type to **Networking**.
 
 :::image type="content" source="./media/vmss-public-ip-count-limit-exceeded/increase-public-ip.png" alt-text="The image about filing a support ticket":::
 
