@@ -15,7 +15,7 @@ ms.author: genli
 ---
 # Unlocking an encrypted Linux disk for offline repair 
 
-This article describes how to unlock an encrypted OS disk for a Linux virtual machine (VM) for offline repair.
+This article provides two methods to unlock an managed encrypted OS disk for a Linux virtual machine (VM) for offline repair.
 
 ## Symptoms
 
@@ -82,27 +82,17 @@ There are six steps to unlock and mount the encrypted disk manually:
 
    - The disk will match the size you noted when you created it from the snapshot.  
 
-   In this first example that follows, the output indicates that "sdd" is the encrypted disk. It is the only disk with multiple partitions that does not list "/" as a mountpoint. 
+   In the following example, the output indicates that "sdd" is the encrypted disk. It is the only disk with multiple partitions that does not list "/" as a mountpoint.
 
    ![The image about the first example](media/unlock-encrypted-linux-disk-offline-repair/dev-sample-1.png)
 
-   In the following example, sdc is the encrypted disk. Again, it is the only disk with multiple partitions that does not list "/" as a mountpoint.
-
-   ![The image about the second example](media/unlock-encrypted-linux-disk-offline-repair/dev-sample-2.png)
-
-
-   In this final example that follows, sda is the encrypted disk.  
-      
-   ![The image about the third example](media/unlock-encrypted-linux-disk-offline-repair/dev-sample-3.png)
-
-4. Unmount any partitions on the encrypted data disk that have been mounted in the file system. For example, in the first example above with LVM, you would need to unmount both "/boot/efi"* and "/boot". 
+4. Unmount any partitions on the encrypted data disk that have been mounted in the file system. For example, in the example above, you would need to unmount both "/boot/efi"* and "/boot".
 
    ```
    umount /boot/efi 
 
    umount /boot 
    ```
-   In the second example above, you would not need to unmount any partitions. But in the final example, you would need to unmount /boot directory.
 
 ### Identify the ADE key file
 
@@ -113,12 +103,10 @@ You need the key file and the header file to unlock the encrypted disk. The key 
    ```
    lsblk -fs | grep -i bek 
    ```
-   The following example output indicates that sdb1 is the BEK volume: 
+   The following example output indicates that sdb1 is the BEK volume:
 
-   ```
-   sdb1  vfat   BEK VOLUME      04A2-FE67 
-   ```
-
+   >sdb1  vfat   BEK VOLUME      04A2-FE67 
+   
    If no BEK volume is present, re-create the repair VM with the encrypted disk attached. If the BEK volume still does not attach automatically, [re-enable the ADE on the disk](#re-encrypt) to retrieve the BEK volume.
 1. Create a directory named "azure_bek_disk" under the "/mnt" folder:
 
@@ -137,20 +125,18 @@ You need the key file and the header file to unlock the encrypted disk. The key 
    ```
    You see the following files in the output. The ADE key file is "LinuxPassPhraseFileName".
 
-   ```
-   total 1 
-
-   -rwxr-xr-x 1 root root 148 Aug  4 01:04 CRITICAL_DATA_WARNING_README.txt 
-
-   -r-xr-xr-x 1 root root 172 Aug  4 01:04 LinuxPassPhraseFileName 
-   ```
+   
+   >total 1 
+    -rwxr-xr-x 1 root root 148 Aug  4 01:04 CRITICAL_DATA_WARNING_README.txt 
+    -r-xr-xr-x 1 root root 172 Aug  4 01:04 LinuxPassPhraseFileName 
+  
 ### Identify the header file
 
 The boot partition of the encrypted disk contains the header file. You use this file, together with the key file "LinuxPassPhraseFileName", to unlock the encrypted disk.
 
 1. Use the command **lsblk** to show selected attributes of the available disks and partitions. 
 
-   ```
+   ```output
    lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT 
 
    NAME     SIZE LABEL           PARTLABEL            MOUNTPOINT 
