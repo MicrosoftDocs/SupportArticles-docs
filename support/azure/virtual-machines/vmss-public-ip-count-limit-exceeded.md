@@ -1,16 +1,16 @@
 ---
-title: PublicIPCountLimitExceededByVMScaleSet error when you create VMSS
-description: Describes how file a support ticket for Public IP quotes increase.
+title: PublicIPCountLimitExceededByVMScaleSet error when you create virtual machine scale set
+description: Describes how to file a support ticket for Public IP quotes increase.
 ms.date: 09/03/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
 ---
-# PublicIPCountLimitExceededByVMScaleSet error when you create VMSS
+# PublicIPCountLimitExceededByVMScaleSet error when you create virtual machine scale set
 
 ## Symptom
 
-When you create a new virtual machine scale set (VMSS), the following error message is received:
+When you create a new virtual machine scale set, the following error message is received:
 
 >Error: Code='PublicIPCountLimitExceededByVMScaleSet' Message='The requested number of publicIPAddresses &lt;number&gt; for VM Scale Set &lt;Resource-ID&gt; will exceed the maximum number of publicIPAddresses allowed &lt;maximum number&gt; for subscription.
 
