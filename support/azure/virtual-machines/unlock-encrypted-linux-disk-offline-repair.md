@@ -13,21 +13,21 @@ ms.workload: infrastructure
 ms.date: 08/24/2021
 ms.author: genli
 ---
-# Unlocking an encrypted Linux disk for offline repair 
+# Unlocking an encrypted Linux disk for offline repair
 
-This article provides two methods to unlock an managed encrypted OS disk for a Linux virtual machine (VM) for offline repair.
+This article provides two methods to unlock an Azure Disk Encryption (ADE) enabled OS disk for offline repair. These methods only apply to managed disks with [single-pass encryption](/azure/virtual-machines/linux/how-to-verify-encryption-status).
 
 ## Symptoms
 
-If you are trying to repair the OS disk of a Linux VM offline, you might see error messages like the following examples after you try to mount the disk on a repair VM:  
+If you are trying to repair the OS disk of a Linux VM offline, you might see the following error messages after you try to mount the disk on a repair VM:
 
-   > mount: wrong fs type, bad option, bad superblock on /dev/sda2, missing codepage or helper program, or other error 
-  
-   > mount: unknown filesystem type 'LVM2_member'
+   >mount: wrong fs type, bad option, bad superblock on /dev/sda2, missing codepage or helper program, or other error
 
-These error occurs because Azure Disk Encryption (ADE) is enabled on the disk. You’ll be unable to mount the disk or perform any fixes on it from a repair VM until the disk is unlocked.  For more information, see [how to confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
+   >mount: unknown filesystem type 'LVM2_member'
 
-## Method 1: Unlock an encrypted disk automatically
+These error occurs because ADE is enabled on the disk. You’ll be unable to mount the disk or perform any fixes on it from a repair VM until the disk is unlocked. For more information, see [how to confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
+
+## Method 1: Unlock an encrypted disk automatically (Recommended)
 
 This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the failed Linux VM’s OS disk to that repair VM, and unlock the disk if it is encrypted. It requires use of a public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped with a key encryption key (KEK).  
 
@@ -112,7 +112,7 @@ You need the key file and the header file to unlock the encrypted disk. The key 
    If no BEK volume is present, re-create the repair VM with the encrypted disk attached. If the BEK volume still does not attach automatically, [re-enable the ADE on the disk](#re-encrypt) to retrieve the BEK volume.
 1. Create a directory named "azure_bek_disk" under the "/mnt" folder:
 
-   ```
+   ```bash
    mkdir /mnt/azure_bek_disk 
    ```
 1. Mount the BEK volume in the "/mnt/azure_bek_disk" directory. For example, if sdb1 is the BEK volume, you would type the following command: 
@@ -138,11 +138,9 @@ You need the key file and the header file to unlock the encrypted disk. The key 
 
 The boot partition of the encrypted disk contains the header file. You use this file, together with the key file "LinuxPassPhraseFileName", to unlock the encrypted disk.
 
-1. Use the command **lsblk** to show selected attributes of the available disks and partitions. 
+1. Use the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to show selected attributes of the available disks and partitions. 
 
    ```output
-   lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT 
-
    NAME     SIZE LABEL           PARTLABEL            MOUNTPOINT 
 
    sda       64G 
