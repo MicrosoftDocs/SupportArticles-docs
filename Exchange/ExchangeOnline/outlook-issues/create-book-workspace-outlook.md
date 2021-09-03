@@ -33,7 +33,7 @@ In this case, capacity refers to the total number of people who can work in the 
 
 ## Advantages of a workspace
 
-Administrators can enable users to book desks, cubes, or other workspace types without the complexity. The resources of each workspace can be managed as a conference room.
+Administrators can enable users to book desks, cubes, or other workspace types in a quick and simple process. The resources of each workspace can be managed as a conference room.
 
 A workspace can be reserved multiple times by different users at the same time up to a defined capacity. However, rooms can be reserved only one time at a specific time. Like rooms, administrators can add workspaces to room lists, add `Set-Place` tags, and make `Set-CalendarProcessing` settings.
 
