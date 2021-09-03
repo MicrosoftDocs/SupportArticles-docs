@@ -179,48 +179,6 @@ Reservations are made in the amount of disks, not capacity. In other words, when
 **A:** Yes. All disk types support "single instance VM SLA."
 </details>
 
-## Azure shared disks
-
-<details>
-  <summary>Click here to expand this section.</summary>
-
-**Q: Is the shared disks feature supported for unmanaged disks or page blobs?**
-
-**A:** No. The feature is supported only for ultra disks and Premium SSD managed disks.
-
-**Q: Which regions support shared disks?**
-
-**A:** For regional information, see our [conceptual article](/azure/virtual-machines/disks-shared).
-
-**Q: Can shared disks be used as an OS disk?**
-
-**A:** No. Shared disks are only supported for data disks.
-
-**Q: Which disk sizes support shared disks?**
-
-**A:** For supported sizes, see our [conceptual article](/azure/virtual-machines/disks-shared).
-
-**Q: If I have an existing disk, can I enable shared disks on it?**
-
-**A:** All managed disks that are created by using API version 2019-07-01 or a later version can enable shared disks. To do this, you have to unmount the disk from all VMs that it is attached to. Next, edit the maxShares property on the disk.
-
-**Q: If I no longer want to use a disk in shared mode, how do I disable it?**
-
-**A:** Unmount the disk from all VMs that it is attached to. Then change the maxShare property on the disk to **1**.
-
-**Q: Can I resize a shared disk?**
-
-**A:** Yes.
-
-**Q: Can I enable write accelerator on a disk that also has shared disks enabled?**
-
-**A:** No. You can't enable write accelerator on a disk that also has shared disks enabled.
-
-**Q: Can I enable host caching for a disk that has shared disks enabled?**
-
-**A:** The only supported host caching option is **None**.
-</details>
-
 ## Ultra disks
 
 <details>
@@ -359,52 +317,6 @@ Reservations are made in the amount of disks, not capacity. In other words, when
 **A:** Yes.
 </details>
 
-## Managed disks and storage service encryption
-
-<details>
-  <summary>Click here to expand this section.</summary>
-
-**Q: Is Server-side Encryption enabled by default when I create a managed disk?**
-
-**A:** Yes. Managed disks are encrypted by using server-side encryption and platform-managed keys.
-
-**Q: Is the boot volume encrypted by default on a managed disk?**
-
-**A:** Yes. By default, all managed disks are encrypted, including the OS disk.
-
-**Q: Who manages the encryption keys?**
-
-**A:** Platform-managed keys are managed by Microsoft. You can also use and manage your own keys that are stored in Azure Key Vault.
-
-**Q: Can I disable Server-side Encryption for my managed disks?**
-
-**A:** No.
-
-**Q: Is Server-side Encryption available only in specific regions?**
-
-**A:** No. Server-side Encryption that uses both platform-managed and customer-managed keys are available in all regions where Azure Managed Disks is available.
-
-**Q: Does Azure Site Recovery support Server-side Encryption that uses customer-managed key for on-premises-to-Azure and Azure-to-Azure disaster recovery scenarios?**
-
-**A:** Yes.
-
-**Q: Can I use the Azure Backup service to back up managed disks that are encrypted by server-side encryption that uses customer-managed keys?**
-
-**A:** Yes.
-
-**Q: Are managed snapshots and images encrypted?**
-
-**A:** Yes. All managed snapshots and images are automatically encrypted.
-
-**Q: Can I convert VM unmanaged disks to managed disks if those disks are located on storage accounts that are, or were previously, encrypted?**
-
-**A:** Yes.
-
-**Q: Will an exported VHD from a managed disk or a snapshot also be encrypted?**
-
-**A:** No. But if you export a VHD to an encrypted storage account from an encrypted managed disk or snapshot, then it's encrypted.
-</details>
-
 ## Manage disk sizes
 
 <details>
@@ -525,36 +437,6 @@ On-demand bursting is available only in the west-central United States region.
 **Q: Are P4 and P6 disk sizes supported for unmanaged disks or page blobs?**
 
 **A:** P4 (32 GiB) and P6 (64 GiB) disk sizes aren't supported as the default disk tiers for unmanaged disks and page blobs. You have to explicitly [set the Blob Tier](/rest/api/storageservices/set-blob-tier) to P4 or P6 to have your disk mapped to these tiers. If you deploy an unmanaged disk or page blob that has a disk size or content length less of than 32 GiB, or between 32 and 64 GiB without setting the blob tier, you'll continue to land on P10 with 500 IOPS and 100 MiB/s and the mapped pricing tier.
-
-## Private Links to securely export and import managed disks
-
-<details>
-  <summary>Click here to expand this section.</summary>
-
-**Q: What is the benefit of using Private Links for exporting and importing Managed Disks?**
-
-**A:** You can use Private Links to restrict the export and import process to Managed Disks only from your Azure virtual network.
-
-**Q: How can I make sure that a disk can be exported or imported only through Private Links?**
-
-**A:** You must set the **DiskAccessId** property to an instance of a disk access object. Additionally, you can set the **NetworkAccessPolicy** property to **AllowPrivate**.
-
-**Q: Can I link multiple virtual networks to the same disk access object?**
-
-**A:** No. Currently, you can link a disk access object to only one virtual network.
-
-**Q: Can I link a virtual network to a disk access object in another subscription?**
-
-**A:** No. Currently, you can link a disk access object to only a virtual network in the same subscription.
-
-**Q: How many exports or imports that use the same disk access object can occur at the same time?**
-
-**A:** You can have five simultaneous exports or imports.
-
-**Q: Can I use an SAS URI of a disk or snapshot to download the underlying VHD of a VM that's not in the same subnet as the subnet of the private endpoint that's associated with the disk?**
-
-**A:** No. You can do this only for a VM that's in the same subnet as the subnet of the private endpoint that's associated with the disk.
-</details>
 
 ## What if my question isn't answered here?
 
