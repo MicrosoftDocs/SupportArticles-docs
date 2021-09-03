@@ -8,7 +8,7 @@ ms.service: virtual-machines
 ---
 # PublicIPCountLimitExceededByVMScaleSet error when you create virtual machine scale set
 
-## Symptom
+## Symptoms
 
 When you create a new virtual machine scale set, the following error message is received:
 
