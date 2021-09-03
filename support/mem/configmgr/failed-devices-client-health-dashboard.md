@@ -11,7 +11,8 @@ ms.prod-support-area-path:
 
 In [version 1902 of Configuration Manager current branch](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902#client-health-dashboard), the client health dashboard is available to assess the health of Configuration Manager clients in your environment. This article describes an issue in which some devices are reported as **Failure** unexpectedly on the **Status Messages** bar of the **Scenario Health** bar chart. This article also provides some insights on the internals and calculations of the **Scenario Health** bar chart.
 
-_Applies to:_ &nbsp; Configuration Manager (current branch)
+_Applies to:_ &nbsp; Configuration Manager (current branch)  
+_Original KB number:_ &nbsp; 4643234
 
 ## Symptoms
 
