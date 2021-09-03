@@ -293,7 +293,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
       vgrename rescuemevg rootvg
       ```
 
-14. Troubleshoot issues in the chroot environment. For example, you can read logs or run a script. For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager.md#perform-fixes.md).
+14. Troubleshoot issues in the chroot environment. For example, you can read logs or run a script. For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager.md#perform-fixes).
 
 ### <a name="non-lvm"></a> Mount the unlocked disk and enter the chroot environment (RAW/non-LVM)
 
