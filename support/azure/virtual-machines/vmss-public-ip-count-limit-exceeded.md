@@ -17,7 +17,7 @@ When you create a new virtual machine scale set, the following error message is 
 
 ## Cause
 
-This issue occurs because the maximum number of public IP addresses allowed for your subscription is reached. For more information, see [Public IP address limits](azure/azure-resource-manager/management/azure-subscription-service-limits#publicip-address).
+This issue occurs because the maximum number of public IP addresses allowed for your subscription is reached. For more information, see [Public IP address limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#publicip-address).
 
 ## Solution
 
