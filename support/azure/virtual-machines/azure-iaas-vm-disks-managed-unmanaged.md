@@ -414,6 +414,8 @@ On-demand bursting is available only in the west-central United States region.
 </details>
 
 ## Unmanaged disks
+<details>
+  <summary>Click here to expand this section.</summary>
 
 **Q: What is the largest unmanaged disk size that's supported for operating system and data disks?**
 
@@ -437,6 +439,7 @@ On-demand bursting is available only in the west-central United States region.
 **Q: Are P4 and P6 disk sizes supported for unmanaged disks or page blobs?**
 
 **A:** P4 (32 GiB) and P6 (64 GiB) disk sizes aren't supported as the default disk tiers for unmanaged disks and page blobs. You have to explicitly [set the Blob Tier](/rest/api/storageservices/set-blob-tier) to P4 or P6 to have your disk mapped to these tiers. If you deploy an unmanaged disk or page blob that has a disk size or content length less of than 32 GiB, or between 32 and 64 GiB without setting the blob tier, you'll continue to land on P10 with 500 IOPS and 100 MiB/s and the mapped pricing tier.
+</details>
 
 ## What if my question isn't answered here?
 
