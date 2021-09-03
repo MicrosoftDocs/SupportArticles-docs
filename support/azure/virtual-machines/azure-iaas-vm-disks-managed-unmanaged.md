@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions - Azure IaaS VM disks, and managed and unmanaged premium disks
+title: FAQs for Azure Disks
 description: This article answers some frequently asked questions about Azure Managed Disks and Azure Premium SSD disks.
 ms.date: 08/24/2021
 ms.prod-support-area-path: 
@@ -8,7 +8,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ---
 
-# Frequently asked questions - Azure IaaS VM disks, and managed and unmanaged Premium disks
+# FAQs for Azure Disks
 
 This article answers frequently asked questions about Azure Managed Disks and Azure Premium SSD disks.
 
@@ -111,7 +111,9 @@ For more information, see the [pricing page](https://azure.microsoft.com/pricing
 
 **Q: Can I create locally redundant storage, geo-redundant storage, and zone-redundant storage managed disks?**
 
-**A:** Azure Managed Disks currently supports only locally redundant storage managed disks.
+**A:** Azure Managed Disks currently supports locally redundant storage and Zone Redundant storage which is currently in preview.
+
+For more information on Managed Disk Redundancy, see [Redundancy options for managed disks](/azure/virtual-machines/disks-redundancy)
 
 **Q: Can I shrink or downsize my managed disks?**
 
@@ -403,7 +405,7 @@ Reservations are made in the amount of disks, not capacity. In other words, when
 **A:** No. But if you export a VHD to an encrypted storage account from an encrypted managed disk or snapshot, then it's encrypted.
 </details>
 
-## Premium disks: managed and unmanaged
+## Manage disk sizes
 
 <details>
   <summary>Click here to expand this section.</summary>
@@ -439,7 +441,7 @@ For more information, see [the pricing page](https://azure.microsoft.com/pricing
 **A:** There is no downside to using TRIM on Azure disks on either Premium or Standard disks.
 </details>
 
-## New disk sizes: managed and unmanaged
+## New disk sizes
 
 <details>
   <summary>Click here to expand this section.</summary>
@@ -465,29 +467,6 @@ On-demand bursting is available only in the west-central United States region.
 **Q: What is the largest Managed disk size that's supported for operating system and data disks on Gen2 VMs?**
 
 **A:** The partition type that Azure supports for Gen2 operating system disks is GUID Partition Table (GPT). Gen2 VMs support up to a 4 TiB OS disk. Azure supports up to 32 TiB for managed data disks.
-
-**Q: What is the largest unmanaged disk size that's supported for operating system and data disks?**
-
-**A:** The partition type that Azure supports for an operating system disk that uses unmanaged disks is the master boot record (MBR). Although you can allocate up to a 4 TiB OS disk, the MBR partition type can use only up to 2 TiB of this disk space for the operating system. Azure supports up to 4 TiB for unmanaged data disks.
-
-**Q: What is the largest page blob size that's supported?**
-
-**A:** The largest page blob size that Azure supports is 8 TiB (8,191 GiB). The maximum page blob size while it's attached to a VM as data or operating system disks is 4 TiB (4,095 GiB).
-
-**Q: Do I have to use a new version of Azure tools to create, attach, resize, or upload disks that are greater than 1 TiB?**
-
-**A:** You don't have to upgrade your existing Azure tools to create, attach, or resize disks greater than 1 TiB. To upload your VHD file from on-premises directly to Azure as a page blob or unmanaged disk, you have to use the following latest tool sets. We support VHD uploads of up to 8 TiB only.
-
-|Azure tools|Supported versions|
-|--|--|
-|Azure PowerShell|Version number 4.1.0: June 2017 release or later|
-|Azure CLI v1|Version number 0.10.13: May 2017 release or later|
-|Azure CLI v2|Version number 2.0.12: July 2017 release or later|
-|AzCopy|Version number 6.1.0: June 2017 release or later|
-
-**Q: Are P4 and P6 disk sizes supported for unmanaged disks or page blobs?**
-
-**A:** P4 (32 GiB) and P6 (64 GiB) disk sizes aren't supported as the default disk tiers for unmanaged disks and page blobs. You have to explicitly [set the Blob Tier](/rest/api/storageservices/set-blob-tier) to P4 or P6 to have your disk mapped to these tiers. If you deploy an unmanaged disk or page blob that has a disk size or content length less of than 32 GiB, or between 32 and 64 GiB without setting the blob tier, you'll continue to land on P10 with 500 IOPS and 100 MiB/s and the mapped pricing tier.
 
 **Q: If my existing Premium managed disk that's smaller than 64 GiB was created before the small Premium disk was enabled (around June 15, 2017), how is it billed?**
 
@@ -521,6 +500,31 @@ On-demand bursting is available only in the west-central United States region.
 
 **A:** Host Caching (ReadOnly and Read/Write) is supported on disk sizes of less than 4 TiB. This means that any disk that is provisioned up to 4,095 GiB can take advantage of Host caching. Host caching isn't supported for disk sizes that are greater than or equal to 4,096 GiB. For example, a P50 Premium disk that's provisioned at 4,095 GiB can take advantage of host caching, and a P50 disk that's provisioned at 4,096 GiB can't take advantage of host caching. We recommend that you use caching for smaller disk sizes for which you can expect to see a better performance boost because data cached to the VM.
 </details>
+
+## Unmanaged disks
+
+**Q: What is the largest unmanaged disk size that's supported for operating system and data disks?**
+
+**A:** The partition type that Azure supports for an operating system disk that uses unmanaged disks is the master boot record (MBR). Although you can allocate up to a 4 TiB OS disk, the MBR partition type can use only up to 2 TiB of this disk space for the operating system. Azure supports up to 4 TiB for unmanaged data disks.
+
+**Q: What is the largest page blob size that's supported?**
+
+**A:** The largest page blob size that Azure supports is 8 TiB (8,191 GiB). The maximum page blob size while it's attached to a VM as data or operating system disks is 4 TiB (4,095 GiB).
+
+**Q: Do I have to use a new version of Azure tools to create, attach, resize, or upload disks that are greater than 1 TiB?**
+
+**A:** You don't have to upgrade your existing Azure tools to create, attach, or resize disks greater than 1 TiB. To upload your VHD file from on-premises directly to Azure as a page blob or unmanaged disk, you have to use the following latest tool sets. We support VHD uploads of up to 8 TiB only.
+
+|Azure tools|Supported versions|
+|--|--|
+|Azure PowerShell|Version number 4.1.0: June 2017 release or later|
+|Azure CLI v1|Version number 0.10.13: May 2017 release or later|
+|Azure CLI v2|Version number 2.0.12: July 2017 release or later|
+|AzCopy|Version number 6.1.0: June 2017 release or later|
+
+**Q: Are P4 and P6 disk sizes supported for unmanaged disks or page blobs?**
+
+**A:** P4 (32 GiB) and P6 (64 GiB) disk sizes aren't supported as the default disk tiers for unmanaged disks and page blobs. You have to explicitly [set the Blob Tier](/rest/api/storageservices/set-blob-tier) to P4 or P6 to have your disk mapped to these tiers. If you deploy an unmanaged disk or page blob that has a disk size or content length less of than 32 GiB, or between 32 and 64 GiB without setting the blob tier, you'll continue to land on P10 with 500 IOPS and 100 MiB/s and the mapped pricing tier.
 
 ## Private Links to securely export and import managed disks
 
