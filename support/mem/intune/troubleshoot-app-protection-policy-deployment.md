@@ -31,7 +31,7 @@ Now, you can start troubleshooting based on the answers to these questions.
 
 Successful app protection policy deployment relies on proper configuration of settings and other dependencies. The following sections offer solutions to the most common issues customers encounter when deploying APP:
 
-- [Solution 1: Verify app protection policy prerequisites](#solution-1-verify-app-protection-policy) prerequisites)
+- [Solution 1: Verify app protection policy prerequisites](#solution-1-verify-app-protection-policy-prerequisites)
 - [Solution 2: Check app protection policy status](#solution-2-check-app-protection-policy-status)
 - [Solution 3: Verify that user identity is consistent between the app and Intune App SDK](#solution-3-verify-that-user-identity-is-consistent-between-the-app-and-intune-app-sdk)
 - [Solution 4: Verify that the user is targeted](#solution-4-verify-that-the-user-is-targeted)
