@@ -9,7 +9,7 @@ ms.prod-support-area-path:
 ---
 # Some devices are reported as failure on the Status Messages bar of the client health dashboard
 
-In [version 1902 of Configuration Manager current branch](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902#client-health-dashboard), the client health dashboard is available to assess the health of Configuration Manager clients in your environment. This article describes an issue in which some devices are reported as failure unexpectedly on the **Status Messages** bar of the **Scenario Health** bar chart. This article also provides some insights on the internals and calculations of the **Scenario Health** bar chart.
+In [version 1902 of Configuration Manager current branch](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902#client-health-dashboard), the client health dashboard is available to assess the health of Configuration Manager clients in your environment. This article describes an issue in which some devices are reported as **Failure** unexpectedly on the **Status Messages** bar of the **Scenario Health** bar chart. This article also provides some insights on the internals and calculations of the **Scenario Health** bar chart.
 
 _Applies to:_ &nbsp; Configuration Manager (current branch)
 
@@ -33,7 +33,7 @@ If you use the Modern Software Distribution technologies to deploy software, a s
 
 ## Workaround
 
-On the clients that do not have an issue, you can deploy a dummy legacy package (such as the `cmd /c echo` cmdlet) to generate a constant status message. Then, a status message timestamp will be added regularly, and the **Status Messages** bar will be updated. Alternatively, you can also ignore or hide the **Status Messages** bar.
+You can deploy a dummy legacy package (such as the `cmd /c echo` cmdlet) on a client to generate a constant status message. Then, a status message timestamp will be added regularly, and the client will be reported as **Success** on the **Status Messages** bar. Alternatively, you can also ignore or hide the **Status Messages** bar.
 
 ## More information
 
@@ -52,10 +52,10 @@ In Configuration Manager, administrators can use a maintenance task to [delete a
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/delete-aged-status-messages.png" alt-text="A task setting to delete aged status messages.":::
 
-The SQL Stored Procedure (`spGetClientHealthDashboard`) calculates the success and failure status for individual clients as follows:
+The SQL Stored Procedure (`spGetClientHealthDashboard`) calculates the **Success** and **Failure** status for individual clients as follows:
 
-- The timestamp of the recent status message is less than seven days, or there is no status message, the client is marked as the **Success** status.
-- The timestamp of the recent status message is older than seven days, and the status message is not deleted, the client is marked as the **Failure** status.
+- The timestamp of the recent status message is less than seven days, or there is no status message, the client is reported as the **Success** status.
+- The timestamp of the recent status message is older than seven days, and the status message is not deleted, the client is reported as the **Failure** status.
 
 > [!NOTE]
 > This algorithm is also applied to other bars. However, there is no cleanup mechanism for inventory timestamps.
