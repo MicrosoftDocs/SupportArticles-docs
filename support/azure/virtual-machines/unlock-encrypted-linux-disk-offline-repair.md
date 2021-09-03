@@ -17,16 +17,6 @@ ms.author: genli
 
 This article provides two methods to unlock an Azure Disk Encryption (ADE) enabled OS disk for offline repair. These methods only apply to managed disks with [single-pass encryption](/azure/virtual-machines/linux/how-to-verify-encryption-status).
 
-## Symptoms
-
-If you are trying to repair the OS disk of a Linux VM offline, you might see the following error messages after you try to mount the disk on a repair VM:
-
-   >mount: wrong fs type, bad option, bad superblock on /dev/sda2, missing codepage or helper program, or other error
-
-   >mount: unknown filesystem type 'LVM2_member'
-
-These error occurs because ADE is enabled on the disk. You’ll be unable to mount the disk or perform any fixes on it from a repair VM until the disk is unlocked. For more information, see [how to confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
-
 ## Method 1: Unlock an encrypted disk automatically (Recommended)
 
 This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the failed Linux VM’s OS disk to that repair VM, and unlock the disk if it is encrypted. It requires use of a public IP address for the repair VM. This method unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped with a key encryption key (KEK).  
@@ -308,6 +298,9 @@ Import the newly unlocked partition into a new volume group. In this example, we
 ### <a name="non-lvm"></a> Mount the unlocked disk and enter the chroot environment (RAW/non-LVM)
 
 1. In the root directory ("/") of the file structure, create a directory into which to mount the root partition of the encrypted disk. You will use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, name it to "investigateroot".
+   ```bash
+   mkdir /{investigateboot,investigateroot}
+   ```
 1. Mount the newly unlocked partition ("osencrypt") to the /investigateroot/ directory.
 
    ```bash
