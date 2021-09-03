@@ -13,7 +13,7 @@ ms.devlang: azurecli
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 02/16/2017
+ms.date: 09/01/2021
 ms.author: genli
 
 ---
@@ -193,7 +193,7 @@ This example stops the VM named `myVM` and assigns the disk named `myNewOSDisk` 
 az vm stop -n myVM -g myResourceGroup
 
 # Get ID of the OS disk that is repaired.
-$myNewOSDiskid=(az vm show -g $resourceGroup -n $osDisk --query id -o tsv)
+$myNewOSDiskid=(az disk show -g $resourceGroup -n $osDisk --query id -o tsv)
 
 # Change the OS disk of the affected VM to "myNewOSDisk"
 az vm update -g myResourceGroup -n myVM --os-disk $myNewOSDiskid

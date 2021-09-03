@@ -89,8 +89,6 @@ In addition, ensure that Adobe Acrobat Reader is installed on the client compute
 
 - [HttpResponse Class](/dotnet/api/system.web.httpresponse)
 
-- [.NET Framework SDK Version 1.1](https://www.microsoft.com/download/details.aspx?id=16217)
-
 - [.NET Framework Class Library](/previous-versions/ms229335(v=vs.100))
 
 [!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
