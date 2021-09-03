@@ -1,15 +1,12 @@
 ---
 title: RemoteWipe CSP fails to send a doWipe command
 description: Fixes an issue in which RemoteWipe fails to execute on Windows 10 client and an Event ID 400 error is generated.
-ms.date: 05/11/2020
+ms.date: 09/02/2021
 ms.prod-support-area-path: Device management
 ---
 # The request is not supported when RemoteWipe fails to execute on Windows 10 client
 
-This article fixes an issue in which RemoteWipe fails to execute on Windows 10 client and an Event ID 400 error is generated.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4034985
+This article fixes an issue in which RemoteWipe fails to execute on Windows 10 client and an Event ID 400 error is generated. For information on the RemoteWipe configuration service provider, see [RemoteWipe CSP](/windows/client-management/mdm/remotewipe-csp).
 
 ## Symptoms
 
@@ -53,7 +50,7 @@ When using the RemoteWipe CSP to send a `doWipe` command to a Windows 10 compute
 
 This can occur if the Windows Recovery Environment (Windows RE) is disabled on the Windows 10 client computer. The RemoteWipe CSP requires Windows RE in order to function.
 
-## Resolution
+## Solution
 
 First check the status of Windows RE. You can do this by running a Command Prompt as an administrator, then executing the following command:
 
@@ -66,9 +63,3 @@ The command should show a Windows RE status of **Enabled**, like this:
 :::image type="content" source="./media/remotewipe-fails-sending-dowipe-command/status.png" alt-text="Screenshot of Windows RE status of Enabled.":::
 
 If the status is **Disabled**, you will need to troubleshoot why Windows RE is disabled.
-
-## More information
-
-For more information on the RemoteWipe CSP and the `doWipe` command, see the following article:
-
-[RemoteWipe CSP](/windows/client-management/mdm/remotewipe-csp)

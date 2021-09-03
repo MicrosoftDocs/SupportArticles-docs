@@ -1,24 +1,26 @@
 ---
-title: Missing Intune information if removing user from Azure AD
-description: Fixes a problem in which a user's device becomes unidentifiable if the user is removed from Azure Active Directory before the device is removed from Intune.
-ms.date: 05/13/2020
+title: Troubleshoot missing Intune information if removing user from Azure AD
+description: Fixes a problem in which a user's device becomes unidentifiable if the user is removed from Azure Active Directory before the device is removed from Microsoft Intune.
+ms.date: 09/02/2021
 ms.prod-support-area-path: Remove devices
 ms.reviewer: patlewis
 ---
-# Removing a user from Azure AD before removing the user's device from Intune shows the device UPN as None
 
-This article solves the issue that a removed user's Intune information is not available if the user is deleted from Azure Active Directory before the device is removed from Intune.
+# Intune-enrolled device UPN shows as None if you remove a user from Azure AD
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4471001
+This article explains how to retrieve a user's Intune information if a user is deleted from Azure Active Directory (Azure AD) before their device is removed from Intune.
 
 ## Symptoms
 
-If an administrator removes or deletes a user from Microsoft Azure Active Directory (Azure AD), and that user has a device that's enrolled in Microsoft Intune, the Intune information for that user becomes unavailable. If you view the enrolled device in the Intune portal under **Devices** > **All Devices**, you see that the user principal name (UPN) is listed as **None**.
+If you view an enrolled device in the Microsoft Endpoint Manage admin center under **Devices** > **All Devices**, you see that the user principal name (UPN) is listed as **None**.
 
-## Resolution
+## Cause
 
-A script is available that removes an orphaned device that is managed by Intune and whose owner was removed from Azure AD. The script requires that you have the UPN of the active or deleted user. You can download the script ([RemoveIntuneDevice.ps1](https://github.com/patlewis-MSFT/RemoveIntuneDevice/blob/master/RemoveIntuneDevice.ps1)) from the following Microsoft website:  
+This issue occurs when an administrator removes or deletes a user from Azure AD, before deleting their enrolled device in Microsoft Intune. Once the user is removed from Azure AD, the Intune information for that user becomes unavailable and the user principal name (UPN) for their enrolled device shows **None**.
+
+## Solution
+
+A script is available that removes an orphaned, Intune-managed device if the owner was removed from Azure AD. The script requires that you have the UPN of the active or deleted user. You can download the script ([RemoveIntuneDevice.ps1](https://github.com/patlewis-MSFT/RemoveIntuneDevice/blob/master/RemoveIntuneDevice.ps1)) from the following Microsoft website:  
 [https://github.com/patlewis-MSFT/RemoveIntuneDevice](https://github.com/patlewis-MSFT/RemoveIntuneDevice)
 
 ### Prerequisites
@@ -41,11 +43,11 @@ A script is available that removes an orphaned device that is managed by Intune 
 
 - If you receive an error message that states that scripts are disabled on your computer, you have to enable the script to run by running the `Set-ExecutionPolicy` cmdlet. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
-### Getting started
+### Run the script
 
 After the prerequisites are installed or met, follow these steps to use the script:
 
 1. Download the RemoveIntuneDevice.ps1 script file to your local Windows computer.
-2. Run PowerShell at an elevated administrator account.
-3. Browse to the folder to which you copied RemoveIntuneDevice.ps1, and then type: **.\RemoveIntuneDevice.ps1**.
-4. Follow the prompts for authentication and to get the UPN of the owner or previous owner's device.
+1. Run PowerShell at an elevated administrator account.
+1. Browse to the folder to which you copied RemoveIntuneDevice.ps1, and then type: **.\RemoveIntuneDevice.ps1**.
+1. Follow the prompts for authentication and to get the UPN of the owner or previous owner's device.

@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot device actions in Microsoft Intune
-description: Get help troubleshooting device action issues.
-ms.date: 08/02/2019
+description: Get answers to common questions and troubleshooting guidance for device action issues in Intune.
+ms.date: 09/02/2021
 ms.reviewer: coferro
 ---
 # Troubleshoot device actions in Intune
 
-Microsoft Intune has many actions that help you managed devices. This article provides answers for some common questions that can help you troubleshoot device actions.
+This article gives answers and troubleshooting guidance for issues with device actions in Intune. To learn about using remote actions, see [Remotely run device actions with Intune](/mem/intune/remote-actions/).
 
 ## Disable Activation Lock action
 
@@ -36,13 +36,25 @@ The most likely reasons include:
 
 No. And you don't need to enter the dashes.
 
-## Remove devices action
+## Wipe and Retire actions
 
 ### How do I tell who started a Retire/Wipe?
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**, check the **Initiated By** column.
 
-If you don't see an entry, it means the person who initiated the action is the user of the device. They used the Company Portal app or portal.manage.microsoft.com to perform the action. We can see the details in the console under **Devices** > **Monitor** > **Device actions**. 
+If you don't see an entry, it means the person who initiated the action is the user of the device. They used the Company Portal app or portal.manage.microsoft.com to perform the action. We can see the details in the console under **Devices** > **Monitor** > **Device actions**.
+
+### How can I monitor a Retire/Wipe action after it was issued?
+
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**. If the end user initiated the action, we can see it under **Devices** > **Monitor** > **Device actions**.
+
+### What happens if I start a retire/wipe on an offline device or a device that hasn't communicated with the service in a while?
+
+The device will remain in **Retire/Wipe Pending** state until the MDM certificate expires. The MDM certificate lasts for one year from enrollment, and automatically renews every year. If the device checks in before the MDM certificate expires, it will be retired/wiped. If the device doesn't check in before the MDM certificate expires, it won't be able to check in to the service. 180 days after the MDM certificate expires, the device will be automatically removed from the Azure portal.
+
+### Why can I sign back into my Office apps after my device was retired?
+
+Retiring a device doesn't revoke access tokens. You can use Conditional Access policies to mitigate this condition.
 
 ### Why wasn't my application uninstalled after using Retire?
 
@@ -53,35 +65,35 @@ It wasn't considered a managed application. In this context, a managed applicati
 
 ### Why is Wipe grayed out for Android Enterprise Work Profile devices?
 
-This behavior is expected. Google doesn't allow Factory Resetting of personally owned Work Profile devices from the MDM Provider.
+This behavior is expected. Google doesn't allow factory reset of personally owned Work Profile devices from the MDM Provider.
 
-### Why can I sign back into my Office apps after my device was retired?
+### I can't restart a Windows 10 device after using the Wipe action.
 
-Retiring a device doesn't revoke access tokens. You can use Conditional Access policies to mitigate this condition.
+This issue can be caused if you choose the **Wipe device, and continue to wipe even if devices lose power** option. If you select this option, be aware that it might prevent some Windows 10 devices from starting up again.
 
-### How can I monitor a Retire/Wipe action after it was issued?
+This issue may be caused when the installation of Windows has major corruption that is preventing the operating system from reinstalling. In such a case, the process fails and leaves the system in the [Windows Recovery Environment](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**. If the end user initiated the action, we can see it under **Devices** > **Monitor** > **Device actions**.
+### I can't restart a BitLocker encrypted device after using the Wipe action.
+
+This issue can be caused if you choose the **Wipe device, and continue to wipe even if devices lose power** option on a BitLocker encrypted device.
+
+To resolve this issue, use bootable media to reinstall Windows 10 on the device.
 
 ### Why do wipes sometimes show as Pending indefinitely?
 
 Devices don't always report their status back to the Intune service before the reset was started. So, the action shows as Pending. If you've confirmed the action was successful, delete the device from the service.
 
-### What happens if I start a retire/wipe on an offline device or a device that hasn't communicated with the service in a while?
-
-The device will remain in **Retire/Wipe Pending** state until the MDM certificate expires. The MDM certificate lasts for one year from enrollment, and automatically renews every year. If the device checks in before the MDM certificate expires, it will be retired/wiped. If the device doesn't check in before the MDM certificate expires, it won't be able to check in to the service. 180 days after the MDM certificate expires, the device will be automatically removed from the Azure portal.
-
 ## Reset Passcode action
 
 ### Why is the Reset Passcode action greyed out on my Android Device Admin enrolled device?
 
-To combat Ransom ware, Google removed the  passcode reset feature on the Device Admin API (applies to Android version 7.0 or higher devices).
+To combat ransomware, Google removed the passcode reset feature on the Device Admin API (applies to Android version 7.0 or higher devices).
 
 ### Why do I get a "Not Supported" message when I issue a passcode reset to my Android 8.0 or later personally owned work profile enrolled device?
 
-The Reset Token hasn't been activated on the device. To activate the Reset Token:
+The reset token hasn't been activated on the device. To activate the reset token:
 
-1. You must require a personally owned work profile passcode in your Configuration Policy.
+1. You must require a personally owned work profile passcode in your configuration policy.
 2. The end user must set an appropriate personally owned work profile passcode.
 3. The end user must accept the secondary prompt to allow passcode reset.
 
@@ -90,21 +102,3 @@ After these steps are complete, you should no longer receive this response.
 ### Why am I prompted to set a new passcode on my iOS/iPadOS device when I issue the Remove Passcode action?
 
 One of your compliance policies requires a passcode.
-
-## Wipe action
-
-### I can't restart a Windows 10 device after using the wipe action
-
-This issue can be caused if you choose the **Wipe device, and continue to wipe even if devices lose power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** on a Windows 10 device.
-
-This issue may be caused when the installation of Windows has major corruption that is preventing the operating system from reinstalling. In such a case, the process fails and leaves the system in the [Windows Recovery Environment](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
-
-### I can't restart a BitLocker encrypted device after using the wipe action
-
-This issue can be caused if you choose the **Wipe device, and continue to wipe even if devices lose power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** option on a BitLocker encrypted device.
-
-To resolve this issue, use bootable media to reinstall Windows 10 on the device.
-
-## Next steps
-
-Get [support help from Microsoft](/mem/get-support), or use the [community forums](/answers/products/mem).
