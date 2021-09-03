@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot Microsoft Intune app protection policy deployment
 description: This articles gives troubleshooting guidance for IT Admins for issues when you deploying Intune app protection policies. 
-ms.date: 08/02/2021
+ms.date: 09/03/2021
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ---
@@ -10,9 +10,9 @@ ms.service: microsoft-intune
 
 This article helps IT Admins understand and troubleshoot problems when you apply app protection policies (APP) in Microsoft Intune. Follow the instructions in the sections that apply to your situation.
 
-## Prerequisites
+## Before you begin
 
-Before you begin troubleshooting, you should collect some basic information to help you better understand the problem and reduce the time to find a resolution.
+Before you start troubleshooting, collect some basic information to help you better understand the problem and reduce the time to find a resolution.
 
 Collect the following information:
 
@@ -29,7 +29,13 @@ Now, you can start troubleshooting based on the answers to these questions.
 
 ## Root cause and solutions
 
-A successful app protection policy deployment relies on proper configuration of settings and other dependencies. The following sections offer steps to help resolve the most common issues customers encounter when deploying APP.
+Successful app protection policy deployment relies on proper configuration of settings and other dependencies. The following sections offer solutions to the most common issues customers encounter when deploying APP:
+
+- [Solution 1: Verify app protection policy prerequisites](#solution-1-verify-app-protection-policy) prerequisites)
+- [Solution 2: Check app protection policy status](#solution-2-check-app-protection-policy-status)
+- [Solution 3: Verify that user identity is consistent between the app and Intune App SDK](#solution-3-verify-that-user-identity-is-consistent-between-the-app-and-intune-app-sdk)
+- [Solution 4: Verify that the user is targeted](#solution-4-verify-that-the-user-is-targeted)
+- [Solution 5: Verify that the managed app is targeted](#solution-5-verify-that-the-managed-app-is-targeted)
 
 ### Solution 1: Verify app protection policy prerequisites
 
@@ -106,7 +112,6 @@ When you assign the policy to a user group, make sure that the user is in the us
 > - If the affected device uses Android Enterprise, only personally-owned work profiles will support app protection policies.
 > - If the affected device uses Apple's Automated Device Enrollment (ADE), make sure that **User Affinity** is enabled. User Affinity is required for any app that requires user authentication under ADE. For more information on iOS/iPadOS DEP enrollment, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
 
-
 ### Solution 5: Verify that the managed app is targeted
 
 When you configure Intune app protection policies, the targeted apps must use [Intune App SDK](/mem/intune/developer/app-sdk-get-started). Otherwise, app protection policies may not work correctly.
@@ -116,24 +121,6 @@ Make sure that the targeted app is listed in [Microsoft Intune protected apps](/
 For iOS, this practice is important because each version contains fixes that affect how these policies are applied and how they function. For more information, see [Intune App SDK iOS releases](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/releases). For Android, this practice isn't as important. However, users must have the latest version of the Company Portal app installed because the Company Portal app works as the policy broker agent.
 
 ## Additional troubleshooting scenarios
-
-### Special requirements for Intune MDM-managed devices
-
-When you create an app protection policy, you can target it to all app types or to the following app types:
-
-- Apps on unmanaged devices
-- Apps on Intune-managed devices
-- Apps in the Android personally-owned work profile
-
-> [!NOTE]
-> To specify the app types, set **Target to all app types** to **No**, and then select from the **App types** list.
-
-For iOS, the following additional [app configuration settings](/mem/intune/apps/app-configuration-policies-use-ios) are required to target app protection policy (APP) settings to apps on Intune-enrolled devices:
-
-- **IntuneMAMUPN** must be configured for all MDM (Intune or a third-party EMM)-managed applications. For more information, see Configure user UPN setting for Microsoft Intune or third-party EMM.
-- **IntuneMAMDeviceID** must be configured for all third-party and LOB MDM-managed applications.
-- **IntuneMAMDeviceID** must be configured as the device ID token. For example, key=IntuneMAMDeviceID, value={{deviceID}}. For more information, see [Add app configuration policies for managed iOS devices](/mem/intune/apps/app-configuration-policies-use-ios).
-- If only the **IntuneMAMDeviceID** value is configured, Intune APP will consider the device as unmanaged.
 
 ### Scenario: Policy changes are not applying
 
@@ -157,6 +144,24 @@ To check app protection status, follow these steps:
 1. If the status is **Not checked in**, or if the display indicates that there has not been a recent sync, check whether the user has a consistent network connection. For Android users, make sure that they have the latest version of the Company Portal app installed.
 
 Intune app protection policies includes multi-identity support. Intune can apply app protection policies to only the work or school account that's signed in to the app. However, only one work or school account per device is supported.
+
+### Scenario: Intune-enrolled iOS devices require additional configuration
+
+When you create an app protection policy, you can target it to all app types or to the following app types:
+
+- Apps on unmanaged devices
+- Apps on Intune-managed devices
+- Apps in the Android personally-owned work profile
+
+> [!NOTE]
+> To specify the app types, set **Target to all app types** to **No**, and then select from the **App types** list.
+
+For iOS, the following additional [app configuration settings](/mem/intune/apps/app-configuration-policies-use-ios) are required to target app protection policy (APP) settings to apps on Intune-enrolled devices:
+
+- **IntuneMAMUPN** must be configured for all MDM (Intune or a third-party EMM)-managed applications. For more information, see Configure user UPN setting for Microsoft Intune or third-party EMM.
+- **IntuneMAMDeviceID** must be configured for all third-party and LOB MDM-managed applications.
+- **IntuneMAMDeviceID** must be configured as the device ID token. For example, key=IntuneMAMDeviceID, value={{deviceID}}. For more information, see [Add app configuration policies for managed iOS devices](/mem/intune/apps/app-configuration-policies-use-ios).
+- If only the **IntuneMAMDeviceID** value is configured, Intune APP will consider the device as unmanaged.
 
 ### Scenario: The policy is applied, but iOS users can still transfer work files to unmanaged apps
 
@@ -186,4 +191,4 @@ For more information, see [How to manage data transfer between iOS apps in Micro
 - [Frequently asked questions about MAM and app protection](/mem/intune/apps/mam-faq)
 - [Validate your app protection policy setup in Microsoft Intune](/mem/intune/apps/app-protection-policies-validate)
 - [Troubleshooting app protection policy user issues](troubleshoot-mam.md)
-- [Additional Intune support channels](get-support.md)
+- [How to get support in Microsoft Endpoint Manager admin center](/mem/get-support)

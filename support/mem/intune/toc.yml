@@ -337,4 +337,4 @@
     - name: Manage Windows 10 feature updates for co-managed devices
       href: create-feature-update-hold-co-managed-devices.md
 - name: Get support
-  href: get-support.md
+  href: /mem/get-support

@@ -10,29 +10,29 @@ ms.reviewer: mghadial
 
 # Troubleshooting app protection policy user issues
 
-This article provides solutions to common user issues and error messages related to mobile application management (MAM) with Intune app protection policies. It provides an explanation and solution, when available, for user issues in the following categories:
+This article provides solutions to common user issues and error messages related to Intune app protection policies. It provides an explanation and solution, when available, for user issues in the following categories:
 
-- [Normal usage scenarios](#normal-usage-scenarios): A user might experience these scenarios on apps that have an Intune app protection policy. They are not actual issues, but may be perceived as bugs or errors.
+- [Common usage scenarios](#common-usage-scenarios): A user might experience these scenarios on apps that have an Intune app protection policy. They are not actual issues, but may be perceived as bugs or errors.
 
-- [Normal usage dialogs](#normal-usage-dialogs): Usage dialogs a user might see in apps that have an Intune app protection policy. These messages and dialogs do *not* indicate an error or bug.
+- [Common usage dialogs](#common-usage-dialogs): Usage dialogs a user might see in apps that have an Intune app protection policy. These messages and dialogs do *not* indicate an error or bug.
 
 - [Error messages and dialogs on iOS](#error-messages-and-dialogs-on-ios), [Error messages and dialogs on Android](#error-messages-and-dialogs-on-android): Error messages and dialogs a user might see on apps that have an Intune app protection policy. They often indicate an error was made by the IT administrator or a bug with the app protection policy.
 
-### Normal usage scenarios
+## Common usage scenarios
 
 | Platform | Scenario | Explanation |
 |---|---|---|
-|iOS | The end user can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **Managed apps only** or **No apps.** Doesn't this leak data? | Intune app protection policy can't control the iOS/iPadOS share extension without managing the device. Therefore, **Intune encrypts "corporate" data before sharing it outside the app**. You can validate it by attempting to open the "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.|
-|iOS | Why is the end user **prompted to install the Microsoft Authenticator app** | It is needed when App Based Conditional Access is applied, see [Require approved client app](/azure/active-directory/conditional-access/app-based-conditional-access).|
-|Android | Why does the end user **need to install the Company Portal app**, even if I'm using MAM app protection without device enrollment?  | On Android, much of app protection functionality is built into the Company Portal app. **Device enrollment is not required even though the Company Portal app is always required**. For app protection without enrollment, the end user just needs to have the Company Portal app installed on the device.|
-|iOS/Android | App Protection policy not applied on draft email in the Outlook app | Since Outlook supports both corporate and personal context, it does not enforce MAM on draft email.|
-|iOS/Android | App Protection policy not applied on new documents in WXP (Word, Excel, PowerPoint) | Since WXP supports both corporate and personal context, it does not enforce MAM on new documents until they are saved in an identified corporate location like OneDrive.|
+|iOS | The user can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **Managed apps only** or **No apps**. Will this leak data? | Intune app protection policy can't control the iOS/iPadOS share extension without managing the device. Therefore, **Intune encrypts "corporate" data before sharing it outside the app**. You can validate it by attempting to open the "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.|
+|iOS | The user is **prompted to install the Microsoft Authenticator app**. | It is needed when App Based Conditional Access is applied, see [Require approved client app](/azure/active-directory/conditional-access/app-based-conditional-access).|
+|Android | The user is **required to install the Company Portal app**, even if we use app protection without device enrollment.  | On Android, much of app protection functionality is built into the Company Portal app. **Device enrollment is not required even though the Company Portal app is always required**. For app protection without enrollment, the end user just needs to have the Company Portal app installed on the device.|
+|iOS/Android | App protection policy not applied on draft email in the Outlook app | Since Outlook supports both corporate and personal context, it does not enforce MAM on draft email.|
+|iOS/Android | App protection policy not applied on new documents in WXP (Word, Excel, PowerPoint) | Since WXP supports both corporate and personal context, it does not enforce MAM on new documents until they are saved in an identified corporate location like OneDrive.|
 |iOS/Android | Apps not allowing Save As to Local Storage when policy is enabled | The App behavior for this setting is controlled by the App Developer.|
 |Android | Android has more restrictions than iOS/iPadOS on what "native" apps can access MAM protected content | Android is an open platform and the **native** app association can be changed by the end user to potentially unsafe apps. Apply [Data transfer policy exceptions](/mem/intune/apps/app-protection-policies-exception) to exempt specific apps.|
 |Android | Azure Information Protection (AIP) can Save as PDF when Save As is prevented | AIP honors the MAM policy for 'Disable printing' when Save as PDF is used.|
 |iOS | Opening PDF attachments in Outlook app fails with **Action Not Allowed** | This issue can occur if the user has not authenticated to Acrobat Reader for Intune, or has used thumbprint to authenticate to their organization. Open Acrobat Reader beforehand and authenticate using UPN credentials.|
 
-### Normal usage dialogs
+## Common usage dialogs
 
 |Platform | Message or dialog | Explanation |
 |---|---|---|
@@ -43,7 +43,7 @@ This article provides solutions to common user issues and error messages related
 |iOS, Android |**Wipe Alert**: Your organization has removed its data associated with this app. To continue, restart the app. | The IT administrator has initiated an app wipe using Intune app protection.|
 |Android | **Company Portal required**: To use your work or school account with this app, you must install the Intune Company Portal app. Click "Go to store" to continue. | On Android, much of app protection functionality is built into the Company Portal app. **Device enrollment is not required even though the Company Portal app is always required**. For app protection without enrollment, the end user just needs to have the Company Portal app installed on the device.|
 
-### Error messages and dialogs on iOS
+## Error messages and dialogs on iOS
 
 |Error message or dialog | Cause | Remediation |
 |---|---|---|
@@ -59,7 +59,7 @@ This article provides solutions to common user issues and error messages related
 |**Alert**: This app can no longer be used. Contact your IT administrator for more information. | Failure to validate the app's certificate. | Make sure the app version is up to date. <br><br> Reinstall the app.|
 |**Error**: This app has encountered a problem and must close. If this error persists, please contact your IT administrator. | Failure to read the MAM app PIN from the Apple iOS Keychain. | Restart the device. Make sure the app version is up to date. <br><br> Reinstall the app.|
 
-### Error messages and dialogs on Android
+## Error messages and dialogs on Android
 
 |Dialog/Error message | Cause | Remediation |
 |---|---|---|
@@ -71,7 +71,3 @@ This article provides solutions to common user issues and error messages related
 |**Device noncompliant**: This app can't be used because you are using a rooted device. Contact your IT administrator for help. | Intune detected the user is on a rooted device. | Reset the device to default factory settings.|
 |**Account not set up**: This app must be managed by Microsoft Intune, but your account has not been set up. Contact your IT administrator for help. | The user account does not have an Intune A Direct license. | Make sure the user's account has an Intune license assigned in the [Microsoft 365 admin center](https://admin.microsoft.com).|
 |**Unable to register the app**: This app must be managed by Microsoft Intune, but we were unable to register this app at this time. Contact your IT administrator for help. | Failure to automatically enroll the app with the MAM service when app protection policy is required. | Clear the app's data. <br><br> Send logs to Intune through the Company Portal app or file a support ticket. For more information, see [How to get support in Microsoft Endpoint Manager](/mem/get-support).|
-
-## Next steps
-
- - [Additional Intune support channels](get-support.md)
