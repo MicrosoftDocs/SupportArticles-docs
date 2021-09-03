@@ -166,7 +166,7 @@ The boot partition of the encrypted disk contains the header file. You use this 
 3. In the root directory ("/") of the file structure, create a directory into which to mount the root partition of the encrypted disk. You will use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, give it the name "investigateroot".
 
    ```bash
-   mkdir /investigateroot 
+   mkdir /{investigateboot,investigateroot}
    ```
 4. On the encrypted disk, identify the boot partition, which contains the header file. On the encrypted disk, the boot partition is the second largest partition that shows no value in the LABEL or PARTLABEL column. In the example output above, the encrypted disk’s boot partition is "sda2". In the example output below, the encrypted disk’s boot partition is sdc2".
 
@@ -264,14 +264,14 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
    However, if you want to use the chroot utility for troubleshooting, continue with the following steps.
 
-7. Mount the encrypted disk’s boot partition to the directory /investigateroot/boot/ without using the duplicate UUIDs. (Remember that the encrypted disk’s boot partition is the second largest that is assigned no partition label.) In our current example, the encrypted disk’s boot partition is sdb2.
+7. Mount the encrypted disk’s boot partition to the directory /investigateroot/boot/ without using the duplicate UUIDs. (Remember that the encrypted disk’s boot partition is the second largest that is assigned no partition label.) In our current example, the encrypted disk’s boot partition is sda2.
 
    ```bash
-   mount -o nouuid /dev/sdb2 /investigateroot/boot
+   mount -o nouuid /dev/sda2 /investigateroot/boot
    ```
-1. Mount the encrypted disk’s EFI system partition to the directory /investigateroot/boot/efi. You can identify this partition by its label. In our current example, the EFI system partition is sdb1.
+1. Mount the encrypted disk’s EFI system partition to the directory /investigateroot/boot/efi. You can identify this partition by its label. In our current example, the EFI system partition is sda1.
    ```bash
-   mount /dev/sdb1 /investigateroot/boot/efi
+   mount /dev/sda1 /investigateroot/boot/efi
    ```
 1. Mount the remaining unmounted logical volumes in the encrypted disk’s volume group into subdirectories of "/investigateroot/".
    ```bash
@@ -298,16 +298,17 @@ Import the newly unlocked partition into a new volume group. In this example, we
       ```bash
       chroot /investigateroot/
       ```
-13. Rename the volume group to rootvg:
+13. Rename the rescuemevg to rootvg to avoid conflicts or possible issues with grub and initramfs. Keep the same naming convention when regenerating initramfs.
       ```bash
       vgrename rescuemevg rootvg
       ```
 
-14. Troubleshoot issues in the chroot environment.
+14. Troubleshoot issues in the chroot environment. For example, you can read logs or run a script. For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager#perform-fixes.md).
 
 ### <a name="non-lvm"></a> Mount the unlocked disk and enter the chroot environment (RAW/non-LVM)
 
-1. Mount the newly unlocked partition ("osencrypt") to the /investigateroot/ directory. 
+1. In the root directory ("/") of the file structure, create a directory into which to mount the root partition of the encrypted disk. You will use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, name it to "investigateroot".
+1. Mount the newly unlocked partition ("osencrypt") to the /investigateroot/ directory.
 
    ```bash
    mount /dev/mapper/osencrypt /investigateroot/ 
