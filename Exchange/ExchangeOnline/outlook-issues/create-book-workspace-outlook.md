@@ -86,7 +86,7 @@ Here are the steps to book a workspace:
     - If you don't see the **Type** list or the **Workspaces** option, the **Building** (room list) might not include workspaces.
     - The **Building** list is populated based on room lists instead of the **Building** attribute.
 
-### Screenshot examples
+    **Screenshot examples**
 
     In Outlook for Windows:
 
@@ -114,6 +114,7 @@ Here are the steps to book a workspace:
 You can add more attendees to a workspace booking and reserve seats for them based on the capacity of a workspace. If the number of attendees exceeds the workspace capacity, the workspace booking will be rejected.
 
 ## Frequently asked questions
+
 **Q1: Can administrators restrict who can book a workspace?**
 
 **A1:** Yes. Administrators can restrict who can book a workspace in the same way that an administrator can restrict who can [book a room](/exchange/recipients/room-mailboxes).
