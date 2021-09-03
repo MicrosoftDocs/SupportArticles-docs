@@ -41,7 +41,7 @@ The client health dashboard displays the summarized client health information. T
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/client-health-dashboard-scenario-health.png" alt-text="Screenshot of client health dashboard scenario health in the Configuration Manager console.":::
 
-By default, the health information is summarized on a site server once a day. In the **Client Status Settings Properties** dialog box on the **Client Activity** site, administrator can also configure the settings to monitor [client status](/mem/configmgr/core/clients/manage/monitor-clients).
+By default, the health information is summarized on a site server once a day. In the **Client Status Settings Properties** dialog box on the **Client Activity** site, administrator can also configure the settings to [monitor client status](/mem/configmgr/core/clients/manage/monitor-clients).
 
 > [!NOTE]
 > If the recent status message is created within seven days, it is considered as a client active on the **Status Messages** bar.
@@ -63,3 +63,9 @@ The SQL Stored Procedure (`spGetClientHealthDashboard`) calculates the **Success
 By default, the client health dashboard displays the health information of clients that were online in the last three days.
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/client-health-dashboard-settings.png" alt-text="Settings of the client health dashboard.":::
+
+## See Also
+
+[MMS: ConfigMgr State and Status Messages](https://mms2014.sched.com/event/Z78Zmr/configmgr-state-and-status-messages-under-the-hood)
+
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
