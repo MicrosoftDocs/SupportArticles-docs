@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Configuration Manager (current branch)
 
 ## Symptoms
 
-In the **Scenario Health** bar chart of the client health dashboard, some devices are reported as **Failure** on the **Status Messages** bar unexpectedly. The corresponding information is also reflected in the **Combined (Any)** bar.
+In the **Scenario Health** bar chart of the client health dashboard, some devices are reported as **Failure** on the **Status Messages** bar unexpectedly. The corresponding information is also reflected on the **Combined (Any)** bar.
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/scenario-health-bar-chart.png" alt-text="Screenshot of the scenario health bar chart.":::
 
