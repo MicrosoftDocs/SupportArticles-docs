@@ -25,7 +25,7 @@ If your Azure issue isn't addressed in this article, visit the Azure forums on [
 
 To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
 
-## You're unable to complete an rdp to the VM
+## Symptom
 
 You're unable to complete a remote desktop protocol (RDP) connection to the VM and you receive the error: "The trust relationship between this workstation and the primary domain failed".
 
