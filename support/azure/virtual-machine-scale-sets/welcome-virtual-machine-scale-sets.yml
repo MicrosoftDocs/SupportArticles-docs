@@ -34,7 +34,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Public IP count limit exceeded
-            url: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
+            url: vmss-public-ip-count-limit-exceeded.md
 
    # Card
   - title: VM extension issues
