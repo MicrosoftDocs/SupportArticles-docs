@@ -29,9 +29,9 @@ A call transfer can be made by using any of the following methods, in order of p
 
 1. Using a Session Initiation Protocol (SIP) Refer message.  
 1. Using an SIP Invite message that has a Replaces header. This method is mostly used for call queue responses.
-1. Using an internal Microsoft Teams infrastructure. This method isn't visible to SBC. It's generally used only if the first two methods are not supported.
+1. Using an internal Microsoft Teams infrastructure. This method isn't visible to SBC. The method is used only if the first two methods are not supported.
 
-All transfers that use an SIP Refer message must go through the Microsoft Teams infrastructure. When the Microsoft SIP proxy sends an SIP Refer message to SBC, an SIP Invite message should be returned to the SIP proxy, not to PSTN or to any other destination. This is true even if the call is transferred to an external PSTN number. SBC doesn't have to parse the SIP Refer message to look for the transfer target. SBC should send the SIP Invite message together with the Request-URI (RURI) setting only to contents of the Refer-To header. It also should include the Referred-By header from the SIP Refer message. Make sure that the strings of the SIP Invite message are not changed and are sent exactly as the same strings that are provided in the SIP Refer message (especially in the Referred-By header). This is because these strings are used to identify calls, targets, and other important parts of a call transfer.
+All transfers that use an SIP Refer message must go through the Microsoft Teams infrastructure. When the Microsoft SIP proxy sends an SIP Refer message to SBC, an SIP Invite message should be returned to the SIP proxy, not to PSTN or to any other destination. It is true even if the call is transferred to an external PSTN number. SBC doesn't have to parse the SIP Refer message to look for the transfer target. SBC should send the SIP Invite message together with the Request-URI (RURI) setting only to contents of the Refer-To header. It also should include the Referred-By header from the SIP Refer message. Make sure that the strings of the SIP Invite message are not changed and are sent exactly as the same strings that are provided in the SIP Refer message (especially in the Referred-By header). It is because these strings are used to identify calls, targets, and other important parts of a call transfer.
 
 **Note:** The strings could be either x-* strings or custom strings in the Referred-By and Refer-To headers.
 
@@ -42,7 +42,7 @@ This issue might occur for the following reasons:
 - No licenses, or incorrect licenses, are assigned to the auto attendant. If you can transfer a call to an internal user or a bot, but if you can't transfer a call to an external PSTN number, this might indicate a licensing issue.
 - The SIP Invite message is sent to an incorrect device. For example, the message is sent to a PSTN provider. By design, SIP Refer messages don't contain complete information about the target. For example, a PSTN number is normalized to the international format.
 
-To resolve this issue, assign the correct license to the auto attendant to enable it to make PSTN calls. If this doesn't resolve the issue, make sure that the SIP Invite message is sent to the SIP proxy that can transfer calls appropriately. The SIP proxy sends the SIP Invite message to the PSTN network according to settings (such as normalization rules, SBC routing, caller ID).
+To resolve this issue, assign the correct license to the auto attendant to enable it to make PSTN calls. If the issue persists, make sure that the SIP Invite message is sent to the SIP proxy that can transfer calls appropriately. The SIP proxy sends the SIP Invite message to the PSTN network according to settings (such as normalization rules, SBC routing, caller ID).
 
 ## SIP Refer message doesn't contain a phone number or the phone number is incorrectly formatted
 
@@ -70,7 +70,7 @@ To resolve this issue, make sure that SBC sends the "SIP 202 Accepted" response 
 
 To resolve this issue, follow these steps:
 
-1. Make sure that the SIP Refer method is supported by SBC in the initial SIP Invite or "SIP 200 OK" response (depending on whether the call is initiated by SBC or by Microsoft). SIP Refer is required to successfully generate the ringing sound. This is because, currently, no simulated ringing sound is generated when you transfer calls internally.
+1. Make sure that the SIP Refer method is supported by SBC in the initial SIP Invite or "SIP 200 OK" response (depending on whether the call is initiated by SBC or by Microsoft). SIP Refer is required to successfully generate the ringing sound. It is because, currently, no simulated ringing sound is generated when you transfer calls internally.
 1. If SBC receives the SIP Refer message, but PSTN users still don't hear a ring tone, make sure that SBC connects to the newly initiated transfer call and plays a ring tone that's based on the "SIP 180 Ringing" or "SIP 183 Session" response that's sent from the SIP proxy.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
