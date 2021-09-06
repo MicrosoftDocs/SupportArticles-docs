@@ -21,14 +21,15 @@ search.appverid: MET150
 
 <a id="summary"></a>
 
-The site mailbox feature was [deprecated for Exchange Online in 2017](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028). In October 2020, we announced that all site mailboxes will be [discontinued after April 2021](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704). No extension will be provided beyond this timeframe.
+The site mailbox feature was [deprecated for Exchange Online in 2017](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028). In October 2020, we announced that all site mailboxes will be [discontinued after April 2021](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704). No extension will be provided beyond this time frame.
 
 To avoid disruption in your services, we encourage you to remove all dependencies from site mailboxes in your organization as soon as possible. This article answers questions that you might have about how the retirement will affect your organization and what actions you should take.
 
 - [What is a site mailbox?](#what-is-a-site-mailbox)
 - [How can I check whether my organization is using site mailboxes?](#how-can-i-check-whether-my-organization-is-using-site-mailboxes)
-- [What should I do if I want to keep the data in my site mailboxes?](#what-should-i-do-if-i-want-to-keep-the-data-in-my-site-mailboxes)
+- [How can I keep the data from my site mailboxes?](#how-can-i-keep-the-data-from-my-site-mailboxes)
 - [Will deleting a site mailbox remove the documents in the associated SharePoint site?](#will-deleting-a-site-mailbox-remove-the-documents-in-the-associated-sharepoint-site)
+- [Are site mailboxes still accessible in Outlook and OWA?](#are-site-mailboxes-still-accessible-in-outlook-and-owa)
 
 ## What is a site mailbox?
 
@@ -52,11 +53,11 @@ Get-SiteMailbox -BypassOwnerCheck -ResultSize Unlimited | ft Name, WhenCreated, 
 
 If the cmdlet returns a blank output, your organization doesn't use site mailboxes. Therefore, your organization won't be affected by this feature retirement.
 
-If the output is not blank, you'll see a list of the site mailboxes and their associated SharePoint site URLs. To prepare for the site mailbox retirement, we recommend that you [back up the site mailboxes and then delete them](/sharepoint/deprecation-of-site-mailboxes).
+If your organization uses site mailboxes, you'll see a list of the mailboxes and their associated SharePoint site URLs. To prepare for the site mailbox retirement, we recommend that you [back up the site mailboxes and then delete them](/sharepoint/deprecation-of-site-mailboxes).
 
 [Back to top](#summary)
 
-## What should I do if I want to keep the data in my site mailboxes?
+## How can I keep the data from my site mailboxes?
 
 If you want to keep the data that's in your site mailboxes, you can migrate the site mailboxes to either [Microsoft 365 Groups](/microsoft-365/admin/create-groups/office-365-groups) or shared mailboxes by using one of the following methods.
 
@@ -91,3 +92,25 @@ Get-Mailbox <site_mailbox_name>:* | ?{$_.RecipientTypeDetails -eq "TeamMailbox"}
 The system will remove the link to the site mailbox from the associated SharePoint site when the site mailbox is deleted. Deleting only the site mailbox won't affect the data that's stored on the SharePoint site.
 
 [Back to top](#summary)
+
+## Are site mailboxes still accessible in Outlook and OWA?
+
+Following [our announcement to retire site mailboxes](https://techcommunity.microsoft.com/t5/microsoft-365-blog/update-retirement-of-sharepoint-site-mailboxes-in-microsoft-365/ba-p/1754704), access to site mailbox from the clients (Outlook and OWA) is now stopped. 
+
+Because of this change, you'll experience the following conditions in Outlook and OWA:
+
+- Outlook
+
+   Outlook displays site mailboxes in the left pane in the same manner in which it displays automatically mapped delegate mailboxes. Outlook no longer receives site mailbox-related payloads in the Autodiscover feature that was used to automatically map site mailboxes. Any existing automatically mapped site mailboxes will be removed from the Outlook client. Users won't receive any related error messages.
+
+- Outlook on the web (OWA) extension
+
+  Selecting the site mailbox application in the SharePoint website starts the OWA extension to display site mailbox content. Because site mailboxes are no longer accessible, users will receive the following error message when they try to access a site mailbox:
+
+  > HTTP 500 something went wrong, You don't have access to this mailbox.
+  >
+  > Microsoft.Exchange.Clients.Owa2.Server.Core.OwaExplicitLogonException
+
+  This change doesn't block you from exporting site mailbox data to a .pst file by using eDiscovery. You can follow the steps under "How can I keep the data from my site mailboxes?" to export data from site mailboxes to a .pst file.
+  
+  [Back to top](#summary)  

@@ -49,9 +49,11 @@ To resolve this issue, you must rename the document library to “Documents” b
 > [!NOTE]
 > This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-1. Go to the [Microsoft Admin site](https://admin.microsoft.com/).
-1. In the left pane, select **Support**, and then select **New Service Request**.
-1. In the **Briefly describe your issue** field, enter *OneDrive Document Library Path Modified*.
+1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
+
+    > [!div class="nextstepaction"]
+    > [Run Tests: OneDrive Document Library Path Modified](https://aka.ms/PillarOneDriveLibraryPathModified)
+    
 1. In the **Run diagnostics** section, enter a value for **User Principal Name (UPN)** for the user in question, and then select **Run Tests**.
 
     :::image type="content" source="this-item-might-not-exist-error/run-diagnostics.png" alt-text="Image shows the Run Diagnostics section.":::

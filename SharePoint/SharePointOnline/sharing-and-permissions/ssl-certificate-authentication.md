@@ -40,10 +40,6 @@ Consider the following scenarios.
 
 To resolve this problem, update your operating system or device by installing the Baltimore CyberTrust root certificate, or update your solution to accept the Baltimore CyberTrust Root certificate to authenticate with SharePoint Online.
 
-You can download the Baltimore CyberTrust Root certificate from the following website:
-
-https://cacert.omniroot.com/bc2025.crt
-
 > [!NOTE]
 > As a best practice, we recommend that you don't hard-code trusted root lists for certificate validation. Instead, you should use policy-based root certificate validation that can be updated as industry standards or certificate authorities change.
 
