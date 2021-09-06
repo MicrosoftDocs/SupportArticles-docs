@@ -94,35 +94,8 @@ If you find Microsoft .NET Framework 4 Client Profile, follow these steps to rep
 
 If you can't find Microsoft .NET Framework 4 Client Profile, download and install [Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/en/details.aspx?id=17851) to update the computer.
 
-Try to install Microsoft Office again. If error 1935 continues to occur, follow the steps to uninstall and reinstall .NET Framework from the computer.
-
-## Uninstall and reinstall Microsoft .NET Framework components
-
-> [!IMPORTANT]
-> The .NET Framework Setup Cleanup Utility provided here should be used only after you've tried the previous options.
-
-To uninstall .NET Framework components from the computer, follow these steps:
-
-1. Create a temporary folder on your desktop.
-2. Visit the [.NET Framework Cleanup Tool User's Guide](/archive/blogs/astebner/net-framework-cleanup-tool-users-guide) blog and download the [dotnetfx_cleanup_tool.zip](https://msdnshared.blob.core.windows.net/media/2018/05/dotnetfx_cleanup_tool.zip) file.
-3. When prompted, click **Open**, and then click **Extract Now**. Extract the files to the folder you created.
-4. Find **cleanup_tool.exe** in the folder you created and double-click it.
-5. In the **Do you want to run the .NET Framework Setup Cleanup Utility?** message, click **Yes**.
-6. Click **Yes** to accept the license agreement.
-7. In the **Product to cleanup** window, choose a .NET Framework version that you want to remove.
-
-    > [!NOTE]
-    > You can't remove .NET Framework versions that are part of the Windows operating system. If you have Windows 7, you can't remove .NET Framework versions 3.5 or lower. If you have Windows Vista, you can't remove .NET Framework versions 3.0 or lower. If you have Windows XP, you can't remove .NET Framework versions 2.0 or lower.
-8. Click **Cleanup Now**.
-9. Restart the computer after the .NET Framework component is removed.
-10. Download and install the following components, one at a time, based on your operating system:  
-  
-    - [.NET Framework 1.1](https://www.microsoft.com/downloads/details.aspx?familyid=262d25e3-f589-4842-8157-034d1e7cf3a3) - For Windows XP only.
-    - [.NET Framework 1.1 SP1](https://www.microsoft.com/downloads/details.aspx?familyid=a8f5654f-088e-40b2-bbdb-a83353618b38) - For Windows XP only.
-    - [.NET Framework 3.5 SP1](https://www.microsoft.com/downloads/details.aspx?familyid=ab99342f-5d1a-413d-8319-81da479ab0d7) - For Windows XP, Windows Vista, and Windows 7.
-    - [.NET Framework 4.0](https://www.microsoft.com/download/details.aspx?id=17851) - For Windows XP, Windows Vista, and Windows 7.
-
-11. Restart the computer, and run Windows Update to install updates.
+> [!NOTE]
+> You can use the [Microsoft .NET Framework Repair Tool](https://support.microsoft.com/topic/microsoft-net-framework-repair-tool-is-available-942a01e3-5b8b-7abb-c166-c34a2f4b612a) to repair Microsoft .NET Framework components. For more information, see [.NET Framework Cleanup Tool User's Guide](/archive/blogs/astebner/net-framework-cleanup-tool-users-guide).
 
 Need More Help?
 

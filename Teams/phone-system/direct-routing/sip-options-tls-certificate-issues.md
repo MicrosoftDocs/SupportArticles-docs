@@ -14,9 +14,7 @@ search.appverid:
 - MET150
 appliesto:
 - Microsoft Teams
-ms.custom: 
-- CI 124780
-- CSSTroubleshoot 
+ms.custom: CI-124780,CSSTroubleshoot,scenario:Direct-Routing-1
 ms.reviewer: mikebis
 ---
 
