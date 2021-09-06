@@ -23,6 +23,8 @@
       href: ../authentication/prevent-saving-credentials.md
     - name: Prompts for credentials when using WAN
       href: ../authentication/outlook-prompts-for-credentials-if-using-wan.md
+    - name: Repeated status codes 401 and 200 when using MAPI over HTTP
+      href: ../authentication/repeated-status-codes-401-200-mapi-over-http.md
     - name: Smart card PIN is blocked when using Outlook
       href: ../authentication/blocked-smart-card-pin-using-outlook.md
     - name: Use policy to control credential prompts
@@ -47,6 +49,8 @@
       href: ../calendaring/cannot-send-meeting-on-behalf-of-managers.md
     - name: Can't add an Internet calendar
       href: ../calendaring/cannot-add-an-internet-calendar.md
+    - name: Create and book a workspace in Outlook
+      href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/client-context
     - name: Create online meeting failed error
       href: ../calendaring/create-online-meeting-failed-error.md
     - name: Delegate can't create Skype or Teams meeting

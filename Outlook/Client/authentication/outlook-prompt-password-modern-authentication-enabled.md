@@ -47,7 +47,7 @@ Outlook limits its choices of authentication schemes to schemes that are support
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-Create the following registry key to force Outlook to use the newer authentication method for web services, such as EWS and Autodiscover.
+Create the following registry key to force Outlook to use a newer authentication method for web services, such as EWS and Autodiscover. We recommend that users force Outlook to use Modern Authentication.
 
 1. Exit Outlook.
 1. Start Registry Editor by using one of the following procedures, as appropriate for your version of Windows:

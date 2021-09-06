@@ -207,15 +207,16 @@ In order for a mailbox move to succeed you need to have a user account in both o
 1. On the On-Premise Hybrid server, run the following cmdlet via Exchange Management Shell (EMS).
 
     ```powershell
-    Get-RemoteMailbox -Identity "Alias" | fl *guid*
+    Get-RemoteMailbox -Identity "Alias" | fl ExchangeGuid
     ```
 
 2. Connect Windows PowerShell to the Exchange Online, run the following cmdlet.
-3. If there is no mail user in the on-premises environment, you can perform the following from EMS:
 
     ```powershell
-    Get-Mailbox -Identity "Alias" | fl *guid*
+    Get-Mailbox -Identity "Alias" | fl ExchangeGuid
     ```
+
+3. If there is no mail user in the on-premises environment, you can perform the following from EMS:
 
    - Create a new user account:
 
