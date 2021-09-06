@@ -27,7 +27,7 @@ A Configuration Manager client sends a status message in the following scenarios
 - You run a legacy software distribution such as a classic package on the client.
 - Something is changed or broken on the client. For example, software inventory isn't completed within the timeout.
 
-If you use only the Modern Software Distribution technologies and deploy software updates, no status message will be sent and the last status message timestamp in the database will not be updated.
+If you use only the Modern Software Distribution technologies and deploy software updates, no status message will be sent and the last status message timestamp will not be updated in the database.
 
 > [!NOTE]
 > Hidden legacy package deployments such as Configuration Manager Client Upgrade packages may update the last status message timestamp.
