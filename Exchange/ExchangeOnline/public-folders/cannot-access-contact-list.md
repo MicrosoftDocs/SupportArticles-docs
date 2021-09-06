@@ -1,5 +1,5 @@
 ---
-title: Can't access a contact list from public folder
+title: Can't access contact list from public folder
 description: Describes an issue in which you can't access a contact list from a public folder in Outlook.
 author: v-charloz
 ms.author: v-chazhang
@@ -18,7 +18,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# "Out of memory or system resources" error when you access a contact list from a public folder in Outlook
+# "Out of memory or system resources" error when accessing contact list from public folder
 
 ## Symptoms
 
@@ -49,7 +49,7 @@ In Outlook on the web, [add the public folder to Favorites](/exchange/collaborat
 
 ### Method 3: Use the MFCMAPI tool to split the contact list
 
-Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool to split the contact list and try to access the list again.
+Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool to split the contact list and try to access the contact list again.
 
 1. Start the MFCMAPI tool.
 1. Select **Session** > **Logon**.
