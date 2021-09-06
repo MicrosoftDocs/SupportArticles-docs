@@ -20,21 +20,17 @@ appliesto:
 - Exchange Server 2019 
 search.appverid: MET150
 ---
-# Email messages with the "HierarchySync_" subject in the message tracking
+# Email messages with the "HierarchySync_" subject in message tracking
 
-## Symptoms
+Email messages with the "HierarchySync_" subject are displayed in message tracking, flooding the queue, or delivered to unintended recipients.
 
-You may see email messages with the "HierarchySync_" subject in the message tracking, stuck in the queues, or delivered to unintended recipients.
+If the public folder hierarchy synchronization messages are sent incorrectly, the public folder hierarchy is synchronized by using SMTP messages that has subject starting with "HierarchySync_". In the synchronization process, all public folder mailboxes in the organization are added to a special system group. The primary hierarchy mailbox sends hierarchy sync notification email messages to this special group. The message class of these notification email messages is "IPM.HierarchySync.Message". For more information about the hierarchy sync, see [Introduction to Public Folder Hierarchy Sync](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344).
 
-## Cause
-
-This issue occurs if the public folder hierarchy synchronization messages are sent incorrectly. The public folder hierarchy is synchronized by using SMTP messages that has subject starting with "HierarchySync_". In the synchronization process, all public folder mailboxes in the organization are added to a special system group. The primary hierarchy mailbox sends hierarchy sync notification email messages to this special group. The message class of these notification email messages is "IPM.HierarchySync.Message". For more information about the hierarchy sync, see [Introduction to Public Folder Hierarchy Sync](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344).
-
-Since these notification email messages are SMTP messages, they show in message tracking reports. Therefore, if you see email messages with the "HierarchySync_" subject, this behavior is by design, and you can safely ignore these email messages.
+Since these notification email messages are SMTP messages, they are displayed in message tracking reports. Therefore, if you see email messages with the "HierarchySync_" subject, this behavior is by design, and you can safely ignore these email messages.
 
 However, if you see these messages being delivered to unintended recipients, this issue occurs if your organization has created a catch-all transport rule to process all email messages that are generated from the organization or has enabled global journaling of email messages. If you're using global journaling, the behavior to see hierarchy sync emails being sent to a journal recipient is by design.
 
-For a transport rule, to work around this issue, use one of the following methods:
+To work around this issue, use one of the following methods:
 
 ## Workaround 1: Add an exception for the transport rule
 
