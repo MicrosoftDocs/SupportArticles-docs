@@ -100,6 +100,8 @@
       href: troubleshoot-rdp-connection.md
     - name: Detailed RDP troubleshooting
       href: detailed-troubleshoot-rdp.md
+    - name: Troubleshoot Failed trust relationship in an Azure Windows VM
+      href: troubleshoot-broken-secure-channel.md
     - name: Troubleshoot RDP error because the DHCP is disabled
       href: troubleshoot-rdp-dhcp-disabled.md
     - name: Troubleshoot RDP error because of the NSG setting
