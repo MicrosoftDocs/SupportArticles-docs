@@ -13,6 +13,8 @@
           href: ../access/access-2010-crashes.md
         - name: Access database engine cannot find input table
           href: ../access/database-engine-not-find-input-table.md
+        - name: Access error String data, right truncation (#0)
+          href: ../access/string-data-right-truncation.md
         - name: Access freezes when opening a linked table
           href: ../access/access-freezes-when-open-linked-table.md
         - name: ActiveX component can't create object
@@ -295,6 +297,8 @@
           href: ../activation/cant-activate-on-new-computer.md
         - name: Can't verify the license for this product
           href: ../activation/license-issue-when-start-office-application.md
+        - name: Errors activating Microsoft 365 on older Windows versions
+          href: ../activation/errors-activating-on-older-windows.md
         - name: Office activation process issues
           href: ../activation/office-activation-process-issues.md
         - name: Issue when activating Microsoft 365 Apps for enterprise
@@ -1033,7 +1037,7 @@
           href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
         - name: How to merge multiple documents
           href: ../word/merge-word-documents.md
-        - name: How to recover Word documents
+        - name: How to recover unsaved Word documents
           href: ../word/recover-lost-unsaved-corrupted-document.md
         - name: Image DPI is changed after you print to PDF
           href: ../word/image-dpi-change-after-print-to-pdf.md

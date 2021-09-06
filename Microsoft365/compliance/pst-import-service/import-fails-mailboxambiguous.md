@@ -26,7 +26,7 @@ _Original KB number:_&nbsp;4025464
 
 When you use the Office 365 Import Service in the Security & Compliance Center to import PST files through the network or drive shipping, you may receive an error message that resembles the following:
 
-> Test.pst,Test@constoso.com,Failed,MailboxAmbiguous,0,0,,0,Microsoft.Exchange.Configuration.Tasks.ManagementObjectAmbiguousException, The operation couldn't be performed because Test@constoso.com matches multiple entries, such as 'Test'
+> Test.pst,Test@contoso.com,Failed,MailboxAmbiguous,0,0,,0,Microsoft.Exchange.Configuration.Tasks.ManagementObjectAmbiguousException, The operation couldn't be performed because Test@contoso.com matches multiple entries, such as 'Test'
 
 ## Cause
 
