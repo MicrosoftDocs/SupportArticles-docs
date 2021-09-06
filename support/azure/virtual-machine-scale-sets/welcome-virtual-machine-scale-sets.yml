@@ -20,7 +20,7 @@ landingContent:
 # Start card title with a verb
 
   # Card
-  - title: Scaling issue with the scale set
+  - title: Scaling issues with the scale set
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -29,7 +29,7 @@ landingContent:
           - text: Resolve errors for resource quotas
             url: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
    # Card
-  - title: Deployment with the scale set
+  - title: Deployment issues with the scale set
     linkLists:
       - linkListType: how-to-guide
         links:
