@@ -33,7 +33,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Public IP count limit exceeded error
+          - text: Public IP count limit exceeded
             url: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
 
    # Card
