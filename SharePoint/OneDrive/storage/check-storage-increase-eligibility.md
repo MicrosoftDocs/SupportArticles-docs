@@ -33,13 +33,10 @@ Admins can request Microsoft to increase the default storage space up to 25 TB p
 > [!NOTE]
 > This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com).
+1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
-1. In the left pane, select **Support**, and then select **New Service Request**.
-
-   **Note:** This enables the **Need Help?** pane on the right side of the screen.
-
-1. In the **Briefly describe your issue** area, enter **OneDrive Storage limited to 5 TB**, and then press Enter.
+    > [!div class="nextstepaction"]
+    > [Run Tests: OneDrive Storage Limited to 5TB](https://aka.ms/PillarOneDriveStorageLimited)
 
 1. In the **Run diagnostics** section, type or paste the User Principle Name (UPN) of the user whose OneDrive storage limit needs to be increased, and then select **Run Tests**.
 

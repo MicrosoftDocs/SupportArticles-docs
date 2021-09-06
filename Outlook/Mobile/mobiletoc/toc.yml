@@ -1,6 +1,10 @@
 - name: Outlook for iOS and Android Troubleshooting
   href: ../outlook-mobile-welcome.md
   items:
+  - name: Calendars
+    items:
+    - name: Create and book a workspace in Outlook
+      href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mobile-context
   - name: Contacts
     items:
     - name: Duplicate Outlook contacts in iOS Contacts app
