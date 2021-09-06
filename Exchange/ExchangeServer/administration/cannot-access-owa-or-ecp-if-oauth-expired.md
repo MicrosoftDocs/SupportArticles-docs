@@ -37,20 +37,23 @@ Source: MSExchange Front End HTTPS Proxy
 
 ## Cause
 
-This issue occurs because the Exchange Server Open Authentication (OAuth) certificate is expired.
+This issue occurs if the Exchange Server Open Authentication (OAuth) certificate is expired, not present, or not configured correctly.
 
 ## Resolution
 
-To create and deploy a new OAuth certificate to the server that's running Exchange Server, follow these steps:
+To check the status of your existing OAuth certificate, run the following command in the Exchange Management Shell:
+
+```powershell
+(Get-AuthConfig).CurrentCertificateThumbprint | Get-ExchangeCertificate | Format-List
+```
+
+If the command returns an error, or the certificate has expired, use the following steps to create and deploy a new OAuth certificate to the Exchange server:
 
 1. Create a new OAuth certificate by running the following command:
 
     ```powershell
-    New-ExchangeCertificate -KeySize 2048 -PrivateKeyExportable $true -SubjectName "cn=Microsoft Exchange Server Auth Certificate" -FriendlyName "Microsoft Exchange Server Auth Certificate" -DomainName "contoso.com"
+    New-ExchangeCertificate -KeySize 2048 -PrivateKeyExportable $true -SubjectName "cn=Microsoft Exchange Server Auth Certificate" -FriendlyName "Microsoft Exchange Server Auth Certificate" -DomainName @()
     ```
-
-    > [!NOTE]
-    > Change the value of the `DomainName` parameter in the example (contoso.com) to the SMTP domain that's used in your organization.
 
 2. Set the new certificate for server authentication. To do this, run the following commands:
 

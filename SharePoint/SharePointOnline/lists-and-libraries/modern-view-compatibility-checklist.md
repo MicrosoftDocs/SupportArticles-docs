@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: clake
+ms.author: luche
 keyword: modern view
 ms.custom: CSSTroubleshoot
 appliesto:

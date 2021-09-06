@@ -16,10 +16,9 @@ ms.reviewer: tmoore, gregmans
 search.appverid: 
 - MET150
 appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition  
+- Exchange Server 2019
+- Exchange Server 2016
+- Exchange Server 2013
 ---
 # Exchange Server doesn't display all OUs when it creates a new mailbox
 

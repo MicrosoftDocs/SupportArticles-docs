@@ -25,12 +25,12 @@ _Original KB number:_ &nbsp; 2292741
 
 ## Summary
 
-Follow the steps given below to manually update the scan engines in Exchange Server. You may need to do this if you experience issues with accessing anti-malware updates online and want to download those definitions to a central location.
+Follow the steps given below to manually update the scan engines in Exchange Server. You may need to do so if you experience issues with accessing anti-malware updates online and want to download those definitions to a central location.
 
 The manual update involves running the Update-Engines.ps1 PowerShell script. This script can be changed according to your needs. The update path, list of engines, and list of platforms can be changed in the script, or passed as parameters when the script is executed.
 
 > [!NOTE]
-> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. If this endpoint isn't available, it'll use the failover endpoint `https://amupdatedl.microsoft.com/server/scanengineupdate/`. By default, all engines will be downloaded for 64-bit platforms.
+> The script will default the engine update path to `https://forefrontdl.microsoft.com/server/scanengineupdate/`. If this endpoint isn't available, you can change the script to use the failover endpoint `https://amupdatedl.microsoft.com/server/scanengineupdate/`. If the previous endpoints aren't available, you can use `http://amupdatedl.microsoft.com/server/amupdate/` as an alternative site. By default, all engines will be downloaded for 64-bit platforms.
 
 ## Steps to update scan engines
 
@@ -62,6 +62,7 @@ The manual update involves running the Update-Engines.ps1 PowerShell script. Thi
     [string]$EngineDirPath,
     [string]$UpdatePathUrl = "http://forefrontdl.microsoft.com/server/scanengineupdate/",
     [string]$FailoverPathUrl = "https://amupdatedl.microsoft.com/server/scanengineupdate/",
+    [string]$EngineDownloadUrlV2 = "http://amupdatedl.microsoft.com/server/amupdate/",
     [string[]]$Engines = ("Microsoft"),
     [string[]]$Platforms = ("amd64")
     )
@@ -329,13 +330,13 @@ The manual update involves running the Update-Engines.ps1 PowerShell script. Thi
     Remove-Item $tempFilePath -recurse
     ```
 
-3. Execute the Update-Engines.ps1 Powershell script, providing any necessary parameters. The format of the command to use is:
+3. Execute the Update-Engines.ps1 PowerShell script, providing any necessary parameters. The format of the command to use is:
 
     ```powershell
     Update-Engines.ps1 -EngineDirPath <string> -UpdatePathUrl <update url> -Engines <engine names> -Platforms <platform names>
     ```
 
-   - `EngineDirPath <string>` - The directory to serve as the root engine's directory (created in step 1). This is a required parameter.
+   - `EngineDirPath <string>` - The directory to serve as the root engine's directory (created in step 1). It's a required parameter.
    - `UpdatePathUrl <update url>` - The update path used to download the updates.
    - `Engines <engine names>` - The list of engine names to update.
 

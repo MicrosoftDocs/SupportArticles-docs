@@ -29,32 +29,32 @@ To cleanly uninstall Lync for Mac 2011, follow these steps:
 > [!NOTE]
 > You may be able to avoid uninstalling Lync for Mac 2011 if you create a new profile on the Mac. If you contact Microsoft technical support, you may be asked to create the new profile as a troubleshooting step. If the issue is resolved by creating the new profile, it will be determined that the issue was caused by a corrupted profile.
 
-1. Log on to your computer by using administrative credentials.   
-2. Exit Lync if it's running.   
-3. Drag the Lync application to the Trash.   
+1. Log on to your computer by using administrative credentials.
+2. Exit Lync if it's running.
+3. Drag the Lync application to the Trash.
 4. To remove your existing Lync preferences, delete the following files:
 
-   - Users/username/Library/Preferences/com.microsoft.Lync.plist    
-   - Users/username/Library/Preferences/ByHost/MicrosoftLyncRegistrationDB.xxxx.plist   
-   - Users/username/Library/Logs/Microsoft-Lync-x.log 
+   - Users/username/Library/Preferences/com.microsoft.Lync.plist
+   - Users/username/Library/Preferences/ByHost/MicrosoftLyncRegistrationDB.xxxx.plist
+   - Users/username/Library/Logs/Microsoft-Lync-x.log
 
-     **Note** This file is present only if you turned on Lync Logging.   
-   - Users/username/Library/Logs/Microsoft-Lync.log   
-   
+     **Note** This file is present only if you turned on Lync Logging.
+   - Users/username/Library/Logs/Microsoft-Lync.log
+
 5. To remove all Lync files from your computer, delete the following folders in the Users/username/Documents/Microsoft User Data folder:
 
-   - Microsoft Lync Data   
+   - Microsoft Lync Data
    - Microsoft Lync History
 
     > [!NOTE]
-    > If you delete the Microsoft Lync History folder, you delete all conversations that are saved in the Conversation History.   
-   
+    > If you delete the Microsoft Lync History folder, you delete all conversations that are saved in the Conversation History.
+
 6. In the Applications/Utilities folder, open Keychain Access.
 
-   - Delete any keychains on the left that resemble OC__KeyContainer__<email address>.   
-   - In your Login keychain, delete the <your email address> certificate.   
-   
-7. In the Users/username/Library/Keychains folder, delete all the files that resemble OC__KeyContainer__<email address>.   
+   - Delete any keychains on the left that resemble `OC__KeyContainer__<email address>`.
+   - In your Login keychain, delete the \<your email address\> certificate.
+
+7. In the Users/username/Library/Keychains folder, delete all the files that resemble `OC__KeyContainer__<email address>`.
 
 See the following table for more information about the path locations that are used in Lync for Mac 2011.
 
@@ -65,7 +65,7 @@ See the following table for more information about the path locations that are u
 |Users/Home Folder/Library/Preferences/com.microsoft.Lync.plist|Contains application preferences for Lync.|
 |Users/Home Folder/Library/Caches/com.microsoft.Lync|Contains server names and endpoints from previous connections to Lync servers.|
 
-## More Information 
+## More Information
 
 To view the Lync for Mac 2011 deployment guide, go to the following Microsoft website: [Lync for Mac 2011 Deployment Guide](/previous-versions/office/office-for-mac-2011/jj984275(v=office.14)).
 
