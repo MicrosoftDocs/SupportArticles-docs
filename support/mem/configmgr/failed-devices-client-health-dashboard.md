@@ -24,17 +24,17 @@ In the **Scenario Health** bar chart of the client health dashboard, some device
 
 A Configuration Manager client sends a status message in the following scenarios.
 
-- You process a legacy software distribution such as a legacy package or task sequence on the client.
-- Something is changed or broken on the client. For example, an update scan fails because a Windows Server Update Services server address is configured instead of a Configuration Manager Software Update Point address.
+- You run a legacy software distribution such as a classic package on the client.
+- Something is changed or broken on the client. For example, software inventory isn't completed within the timeout.
 
-If you use the Modern Software Distribution technologies to deploy software, a status message timestamp will not be added, and outdated status message timestamp is still displayed.
+If you use only the Modern Software Distribution technologies and deploy software updates, no status message will be sent and the last status message timestamp in the database will not be updated.
 
 > [!NOTE]
-> If there are hidden legacy package deployments such as Configuration Manager Client Upgrade packages, a new status message timestamp will be added.
+> Hidden legacy package deployments such as Configuration Manager Client Upgrade packages may update the last status message timestamp.
 
 ## Workaround
 
-You can deploy a dummy legacy package (such as the `cmd /c echo` cmdlet) on a client to generate a constant status message. Then, a status message timestamp will be added regularly, and the client will be reported as **Success** on the **Status Messages** bar. Alternatively, you can also ignore or hide the **Status Messages** bar.
+You can deploy a dummy legacy package (such as the `cmd /c echo` cmdlet) to a client of concern to generate a constant status message flow. Then, a status message timestamp will be updated regularly, and the client will be reported as **Success** on the **Status Messages** bar. Alternatively, you can also ignore or hide the **Status Messages** bar.
 
 ## More information
 
@@ -42,11 +42,11 @@ The client health dashboard displays the summarized client health information. T
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/client-health-dashboard-scenario-health.png" alt-text="Screenshot of client health dashboard scenario health in the Configuration Manager console.":::
 
-By default, the health information is summarized on a site server once a day. In the **Client Status Settings Properties** dialog box on the **Client Activity** site, administrator can also configure the settings to [monitor client status](/mem/configmgr/core/clients/manage/monitor-clients). If the recent status message is created within seven days, it is considered as a client active on the **Status Messages** bar.
+By default, the health information is summarized on a site server once a day. In the **Client Status Settings Properties** dialog box on the **Client Activity** site, administrator can also configure the settings to [monitor client status](/mem/configmgr/core/clients/manage/monitor-clients). If the recent status message was created within seven days, it is considered as a client active via **Monitoring** > **Overview** > **Client Status** > **Client Activity**.
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/client-status-settings-properties.png" alt-text="Screenshot of the Client Status Settings Properties dialog box.":::
 
-In Configuration Manager, administrators can use a maintenance task to [delete aged status messages](/mem/configmgr/core/servers/manage/reference-for-maintenance-tasks#delete-aged-status-messages) as configured in [status filter rules](/mem/configmgr/core/servers/manage/use-status-system#manage-status-filter-rules) (30 days by default).
+In Configuration Manager, administrators can use a maintenance task ([Delete Aged Status Messages](/mem/configmgr/core/servers/manage/reference-for-maintenance-tasks#delete-aged-status-messages)) to delete status messages older than 30 days (by default) as configured in [status filter rules](/mem/configmgr/core/servers/manage/use-status-system#manage-status-filter-rules).
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/delete-aged-status-messages.png" alt-text="A task setting to delete aged status messages.":::
 
@@ -56,7 +56,7 @@ The SQL Stored Procedure (`spGetClientHealthDashboard`) calculates the **Success
 - The timestamp of the recent status message is older than seven days, and the status message is not deleted, the client is reported as the **Failure** status.
 
 > [!NOTE]
-> This algorithm is also applied to other bars. However, there is no cleanup mechanism for inventory timestamps.
+> This algorithm is also applicable to other bars. However, there is no cleanup mechanism for inventory timestamps.
 
 By default, the client health dashboard displays the health information of clients that were online in the last three days.
 
