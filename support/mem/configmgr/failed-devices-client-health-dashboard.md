@@ -42,7 +42,7 @@ The client health dashboard displays the summarized client health information. T
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/client-health-dashboard-scenario-health.png" alt-text="Screenshot of client health dashboard scenario health in the Configuration Manager console.":::
 
-By default, the health information is summarized on a site server once a day. In the **Client Status Settings Properties** dialog box on the **Client Activity** site, administrator can also configure the settings to [monitor client status](/mem/configmgr/core/clients/manage/monitor-clients). If the recent status message was created within seven days, it is considered as a client active via **Monitoring** > **Overview** > **Client Status** > **Client Activity**.
+By default, the health information is summarized on a site server once a day. In the **Client Status Settings Properties** dialog box on the **Client Activity** site, administrator can also configure the settings to [monitor client status](/mem/configmgr/core/clients/manage/monitor-clients). If the recent status message was created within seven days, it is considered as a client active at **Monitoring** > **Overview** > **Client Status** > **Client Activity**.
 
 :::image type="content" source="media/failed-devices-client-health-dashboard/client-status-settings-properties.png" alt-text="Screenshot of the Client Status Settings Properties dialog box.":::
 
