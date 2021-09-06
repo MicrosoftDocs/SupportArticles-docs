@@ -7,8 +7,11 @@
     href: virtual-machine-scale-sets-quota-exceeded.md
   - name: Resolve errors for resource quotas
     href: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
+  - name: Public IP count limit exceeded by VMSS
+    href: vmss-public-ip-count-limit-exceeded.md
 
 - name: Troubleshoot extension issues
   items:
   - name: VM extension provisioning errors
     href: vm-extension-provisioning-errors.md
+
