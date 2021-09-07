@@ -50,6 +50,6 @@ To fix this issue, rerun the configuration wizard for Directory Synchronization 
 
 Attributes that were added to your Active Directory environment after identity synchronization was set up won't be recognized until you rerun the configuration wizard for the Azure AD identity synchronization appliance. For Skype for Business, the MSRtcSip* attributes were added. Because these are missing from the sync, Skype for Business Online will continue to believe that these users are Skype for Business Online and not Skype for Business on-premises users.
 
-For more information, see [Migrating Lync Online users to Lync on-premises in Lync Server 2013](https://technet.microsoft.com/library/dn689115%28v=ocs.15%29.aspx?f=255&mspperror=-2147217396).
+For more information, see [Migrating Lync Online users to Lync on-premises in Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-migrating-lync-online-users-to-lync-on-premises?f=255&mspperror=-2147217396).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

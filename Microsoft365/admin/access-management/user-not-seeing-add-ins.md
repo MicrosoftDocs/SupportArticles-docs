@@ -1,7 +1,7 @@
 ---
 title: User not seeing add-ins
-ms.author: sirkkuw
-author: Sirkkuw
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -61,9 +61,9 @@ Users can't see add-in? Try one of these:
     
   - Microsoft Exchange stores the add-in manifests within your organization's tenant. The admin deploying add-ins and the users receiving those add-ins must be on a version of Exchange Server that supports OAuth authentication. By default, Exchange Multi-Tenant and Dedicated VNext deployments support OAuth. Exchange Dedicated Legacy and hybrid on-premises deployments can be configured to support OAuth; however, it isn't the default configuration.
     
-  - Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](https://docs.microsoft.com/powershell/module/exchange/organization/Test-OAuthConnectivity?view=exchange-ps) PowerShell cmdlet. 
+  - Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](/powershell/module/exchange/organization/Test-OAuthConnectivity) PowerShell cmdlet. 
  
-- For more information on requirements, see [Determine if Centralized Deployment of add-ins works for your organization](https://docs.microsoft.com/en-us/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide#requirements).
+- For more information on requirements, see [Determine if Centralized Deployment of add-ins works for your organization](/microsoft-365/admin/manage/centralized-deployment-of-add-ins#requirements).
     
 - **See regulations surrounding minors using add-ins**
     
@@ -79,4 +79,4 @@ Users can't see add-in? Try one of these:
     
 ## See also
 
-[Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
+[Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](/office365/admin/manage/manage-deployment-of-add-ins).

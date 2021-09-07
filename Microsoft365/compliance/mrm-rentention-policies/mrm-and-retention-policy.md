@@ -1,12 +1,12 @@
 ---
 title: Messaging Records Management (MRM) and Retention Policies in Office 365.
 description: Describes the retention policy in Office 365 dedicated/ITAR.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -120,14 +120,14 @@ If a retention policy is not working as expected, review the following articles 
 
 - Issue: Items are not expiring as expected.
 
-  [How retention age is calculated in Exchange 2016](https://technet.microsoft.com/library/bb430780%28v=exchg.160%29.aspx)
+  [How retention age is calculated in Exchange 2016](/Exchange/policy-and-compliance/mrm/retention-age)
 
 - Issue: Managed Folder Assistant seems not to be processing my items.
 
-  [Understanding of Managed Folder Assistant with retention policies](https://blogs.technet.microsoft.com/anya/2014/11/19/understanding-of-managed-folder-assistant-with-retention-policies/)
+  [Understanding of Managed Folder Assistant with retention policies](/archive/blogs/anya/understanding-of-managed-folder-assistant-with-retention-policies)
 
   > [!NOTE]
-  > If you must start the Managed Folder Assistant immediately, see [Start-ManagedFolderAssistant](https://technet.microsoft.com/library/aa998864%28v=exchg.160%29.aspx).
+  > If you must start the Managed Folder Assistant immediately, see [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant).
 
 - Information about expiring contacts, calendar items, and tasks.
 - How to recover items that may have been processed by Managed Folder Assistant.
@@ -164,7 +164,7 @@ Set a specific expiration date. For detailed steps, see [Set a message expiratio
 
 ### For administrators
 
-Administrators can create new retention tags and policies by using the correct permission through the Exchange admin center (EAC) or PowerShell. For detailed steps, see [Create a Retention Policy](https://technet.microsoft.com/library/jj150573%28v=exchg.150%29.aspx).
+Administrators can create new retention tags and policies by using the correct permission through the Exchange admin center (EAC) or PowerShell. For detailed steps, see [Create a Retention Policy](/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy).
 
 #### New Retention Tag
 
@@ -182,15 +182,15 @@ Administrators can create new retention tags and policies by using the correct 
 
 For more information, see the following articles:  
 
-- [Messaging records management](https://technet.microsoft.com/library/dd335093%28v=exchg.150%29.aspx)
-- [Messaging records management terminology](https://technet.microsoft.com/library/bb408414%28v=exchg.150%29.aspx)
-- [Retention tags and retention policies](https://technet.microsoft.com/library/dd297955%28v=exchg.150%29.aspx)
+- [Messaging records management](/exchange/security-and-compliance/messaging-records-management/messaging-records-management)
+- [Messaging records management terminology](/exchange/messaging-records-management-terminology-in-exchange-2013-exchange-2013-help)
+- [Retention tags and retention policies](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies)
 
 #### Help users recover missing message
 
-- Check whether an item was deleted, and then recover the item if it's necessary. To do this, see[How to recover deleted items in Office 365 dedicated/ITAR](https://support.microsoft.com/help/3139942).
+- Check whether an item was deleted, and then recover the item if it's necessary. To do this, see [Recover deleted messages in a user's mailbox in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages).
 
 - Search and investigate missing items. To do this, see the following articles:
   - [How to use mailbox audit logs in Office 365 dedicated](https://support.microsoft.com/help/4021960/how-to-use-mailbox-audit-logs-in-office-365-dedicated)
-  - [Search-Mailbox](https://technet.microsoft.com/library/dd298173%28v=exchg.160%29.aspx)
-  - [Create an In-Place eDiscovery search](https://technet.microsoft.com/library/dd353189%28v=exchg.150%29.aspx)  
+  - [Search-Mailbox](/powershell/module/exchange/search-mailbox)
+  - [Create an In-Place eDiscovery search](/microsoft-365/compliance/content-search)

@@ -1,15 +1,15 @@
 ---
 title: Date format that's convert a CSV text file by using VBA is not correct
 description: Fixes an issue in which the format of dates that are converted from a csv text file into your Excel workbook may not be correct.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel 

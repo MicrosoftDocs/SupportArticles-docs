@@ -1,14 +1,15 @@
 ---
 title: Delete junk email rules by using MFCMAPI
 description: Describes how to delete junk email rules by using MFCMAPI in Exchange Server 2010, Exchange Server 2013, and Exchange Server 2016.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CI 119623
 - CSSTroubleshoot
 ms.reviewer: ChrisBur, MHAQUE, DJBall, ChrisBur, genli
@@ -40,7 +41,7 @@ To delete a junk email rule, follow these steps:
 
 2. Export the list of addresses that contain safe senders and blocked senders to a text (.txt) file.
 
-3. Download MFCMAPI from [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
+3. Download MFCMAPI from [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 
     > [!NOTE]
     > Only an Exchange administrator who has full permissions of a mailbox can use the MFCMAPI tool to remove a junk email rule.

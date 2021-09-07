@@ -41,6 +41,8 @@
       href: ../server-configuration/central-management-store-replication-failures.md
     - name: Check the version of Skype for Business 2016
       href: ../server-configuration/check-version-of-skype-for-business-2016.md
+    - name: Collect log files from Skype for Business Client
+      href: ../server-configuration/collect-log-files.md
     - name: Disable Automatic Gain Control
       href: ../server-configuration/disable-automatic-gain-control.md
     - name: Disable contextual tips
@@ -53,7 +55,7 @@
       href: ../server-configuration/event-32263-0xc3e93c2f-front-end.md
     - name: Event IDs 32402, 61045 logged in Front End
       href: ../server-configuration/event-32402-61045-front-end.md
-    - name: How to use Configuration Information
+    - name: How to use Configuration Information
       href: ../server-configuration/how-to-use-configuration-information.md
     - name: Insufficient access rights when move user command
       href: ../server-configuration/issue-attempt-move-or-enable-user-command.md
@@ -87,6 +89,8 @@
     items:
     - name: Contact card shows phone number instead of name
       href: ../server-contacts/contact-card-not-display-phone-number.md
+    - name: Didn't find an organizational chart
+      href: ../server-contacts/not-find-organizational-chart-error.md
     - name: Duplicated working numbers for contacts
       href: ../server-contacts/duplicated-working-numbers-for-contacts.md
     - name: Maximum Followers Reached in contact card
@@ -103,11 +107,13 @@
       href: ../server-exchange-integration/sfb-and-exchange-integration-fails.md
   - name: IM and Presence
     items:
+    - name: Chat history not show in conversation window
+      href: ../server-im-presence/chat-history-not-show-conversation-window.md
     - name: Emoticons and emojis converted to text
       href: ../server-im-presence/emoticons-and-emojis-converted-to-text.md
     - name: Enabling presence privacy mode update presence status
       href: ../server-im-presence/presence-privacy-mode-update-presence-status.md
-    - name: Lync conversation window doesn't contain IM
+    - name: Lync conversation window doesn't contain IM
       href: ../server-im-presence/blank-conversation-window.md
     - name: Presence not show in Outlook
       href: ../server-im-presence/presence-not-show-outlook.md
@@ -209,3 +215,9 @@
       href: ../server-sign-in/registry-settings-overwritten-when-sign-in.md
     - name: Newly created users can't sign in 
       href: ../server-sign-in/newly-created-users-cant-sign-in.md
+    - name: SideBySide event ID 35 is logged
+      href: ../server-sign-in/sidebyside-event-id-35-logged.md
+    - name: Sign-in error when creating or joining a meeting
+      href: ../server-sign-in/create-join-meeting-sign-in-error.md
+    - name: Troubleshoot issues related to Skype for Business sign-in
+      href: ../../SkypeOnline/online-sign-in/troubleshoot-issues-related-skype-for-business-sign-in.md?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json

@@ -1,13 +1,13 @@
 ---
 title: Database requires a newer version of Access
 description: Describes an error that occurs when you try to open a Microsoft Access database. The error message prompts you to use a newer version of Access. This issue concerns to use of the BigInt data type. A resolution is provided.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150

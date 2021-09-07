@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: gregmans, wduff
 appliesto:
 - Exchange Server 2016 Enterprise Edition
@@ -151,7 +152,7 @@ The default Group Policy template for Outlook 2013 contains the Group Policy set
 2. Add the .admx and .adml files to your domain controller. This adds the Outlook ADM template to make it available in the Local Group Policy Editor.
 
     > [!NOTE]
-    > The steps to add the .admx and adml files to a domain controller vary according to the version of Windows that you are running. In addition, because you may be applying the policy to an organizational unit and not to the domain, the steps may also vary for this aspect of policy application. Therefore, check your [Windows documentation](https://technet.microsoft.com/library/cc179081) for detailed information. (This article is labeled for Office 2010. However, it also applies to Office 2013.)
+    > The steps to add the .admx and adml files to a domain controller vary according to the version of Windows that you are running. In addition, because you may be applying the policy to an organizational unit and not to the domain, the steps may also vary for this aspect of policy application. Therefore, check your [Windows documentation](/previous-versions/office/office-2010/cc179081(v=office.14)) for detailed information. (This article is labeled for Office 2010. However, it also applies to Office 2013.)
 
 3. Start the Local Group Policy Editor.
 4. Under **User Configuration**, expand **Administrative Templates (ADM)** to locate the policy node for your template. When you use the Outlk15.admx template, this node will be named **Microsoft Outlook 2013**.
@@ -203,7 +204,7 @@ To disable the required encryption between Outlook and Exchange, follow these st
     To re-enable the RPC encryption requirement on your Exchange servers that have the **Client Access Server** role, run the following command in the Exchange Management Shell:
 
     ```powershell
-     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True -EncryptionRequired:$True
+     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True
     ```
 
     > [!NOTE]

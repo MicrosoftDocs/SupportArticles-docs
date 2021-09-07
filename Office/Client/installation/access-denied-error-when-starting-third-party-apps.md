@@ -1,12 +1,12 @@
 ---
 title: Starting third-party add-in causes "Access Denied" error
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 4/29/2020
 audience: Admin
 ms.topic: article
-ms.prod: office
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

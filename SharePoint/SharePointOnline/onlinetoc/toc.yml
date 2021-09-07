@@ -1,18 +1,38 @@
 - name: SharePoint Online Troubleshooting
   href: ../sharepoint-online-welcome.md
   items:
+  - name: SharePoint troubleshooting content updates
+    href: ../sharepoint-troubleshoot-content-updates.md
   - name: Administration
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
       href: ../administration/access-denied-to-pim-user-accounts.md
+    - name: '"API access" does not appear in the Modern admin center'
+      href: ../administration/api-access-does-not-appear.md
     - name: Temporary changes in process schedule for SharePoint Online services 
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
       href: ../administration/sync-to-outlook-tasks-link-missing.md
+    - name: Authentication errors when client doesn't have TLS 1.2 support
+      href: ../administration/authentication-errors-tls12-support.md
+    - name: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 7 or 8
+      href: ../administration/authentication-errors-windows7.md
     - name: Automatic EXIF property import unsupported
       href: ../administration/automatic-exif-property-import-unsupported.md
+    - name: Create a default Site collection Term Set if none is present
+      href: ../administration/create-default-site-term-set.md
+    - name: Creation of team site from SharePoint Home doesn’t complete
+      href: ../administration/team-site-creation-stops.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
+    - name: Error when accessing SharePoint or OneDrive
+      href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Error 404 in OneDrive or SharePoint
+      href: ../administration/error-404-onedrive-sharepoint.md
+    - name: Errors when connecting to SharePoint Online Management Shell
+      href: ../administration/errors-connecting-to-management-shell.md
+    - name: Exclude or remove sites from a SharePoint Online retention policy
+      href: ../administration/exclude-sites-from-retention-policy.md
     - name: Invalid URL error when clicking an online prompted link
       href: ../administration/promoted-link-invalid-url.md
     - name: Issue when browsing to a SharePoint site
@@ -27,6 +47,8 @@
       href: ../administration/information-about-uls-log-access.md
     - name: Presence information doesn't show
       href: ../administration/presence-information-fails-showing.md
+    - name: Profile picture not showing in SharePoint Online
+      href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
       href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Third-party tools changes support
@@ -40,7 +62,7 @@
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Using relative URLs isn't supported
-      href: ../administration/using-relative-urls-not-supported.md
+      href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
   - name: Diagnostics
     items:
     - name: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive 
@@ -73,8 +95,6 @@
       href: ../InfoPath/fails-connecting-infopath-form.md
   - name: Lists and Libraries
     items:
-    - name: Lists and Libraries Modern View Compatibility check
-      href: ../lists-and-libraries/modern-view-compatibility-checklist.md
     - name: '"drag files here" option is missing for a list'
       href: ../lists-and-libraries/drag-files-here-option-missing.md
     - name: 0x80070005 error for an online list sync
@@ -93,20 +113,32 @@
       href: ../lists-and-libraries/error-share-break-inheritance.md
     - name: Can't sync files or folders
       href: ../lists-and-libraries/cannot-sync-files-folders.md
+    - name: Can't sync recurring Calendar items with error 0x80004005
+      href: ../lists-and-libraries/outlook-not-sync-recurring-calendar-items.md
+    - name: Change to default content type setting for new lists 
+      href: ../lists-and-libraries/change-to-how-lists-are-named.md
     - name: Changes to default versioning setting for document libraries
       href: ../lists-and-libraries/library-versioning-setting-changes.md
+    - name: Check for Known Folder Move eligibility
+      href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
-    - name: Document IDs aren't assigned to items
-      href: ../lists-and-libraries/document-ids-unassigned.md
+    - name: Content Organizer doesn't comply with specified interval
+      href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
+    - name: Default column name shown in list settings
+      href: ../lists-and-libraries/default-column-name-still-shown.md
     - name: Documents aren't displayed in web browser with TLS 1.2
       href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
     - name: Edit column doesn't display the edit link
       href: ../lists-and-libraries/edit-column-fails-displaying-edit-link.md
+    - name: Error when creating a list from Excel
+      href: ../lists-and-libraries/error-create-list-excel.md
     - name: Error when view or edit in Word or PowerPoint Online
       href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Excel survey doesn't have full functionality
       href: ../lists-and-libraries/excel-survey-does-not-have-full-functionality-when-click-new.md
+    - name: File post-processing may take up to 24 hours
+      href: ../lists-and-libraries/file-post-processing-takes-up-to-24-hours.md
     - name: Filtering doesn't work for Managed Metadata in SharePoint
       href: ../lists-and-libraries/managed-metadata-column-fails-filtering.md
     - name: Information about dragging files into document libraries
@@ -125,10 +157,14 @@
       href: ../lists-and-libraries/fails-filtering-sharepoint-column.md
     - name: Issues with Open with Explorer
       href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
+    - name: Lists and Libraries Modern View Compatibility check
+      href: ../lists-and-libraries/modern-view-compatibility-checklist.md
     - name: Minimal Download Strategy feature isn't used for a list or library
       href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
       href: ../lists-and-libraries/modified-time-shows-incorrectly.md
+    - name: Mentions in SharePoint documents don’t send email to participant
+      href: ../lists-and-libraries/no-email-after-mention.md
     - name: Number of items in this list exceeds the list view threshold
       href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
     - name: Per-location view settings don't work at the folder level
@@ -145,6 +181,8 @@
       href: ../lists-and-libraries/simple-controls-missing.md
     - name: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
       href: ../lists-and-libraries/slow-open-with-explorer-performance.md
+    - name: Task list shows item title as .000 
+      href: ../lists-and-libraries/task-list-shows-000.md
     - name: Template-generated list doesn't display correct column data
       href: ../lists-and-libraries/template-generated-list-incorrect-data.md
     - name: The URL <file name> is invalid when uploading a file
@@ -186,7 +224,7 @@
     - name: Can't force Modern Authentication with using Connect-SPOService
       href: ../security/cannot-force-modern-authentication.md
     - name: Documents deleted by retention policy after workload is removed
-      href: ../../OneDrive/sync/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+      href: ../../OneDrive/security/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
@@ -199,16 +237,10 @@
       href: ../Security/problem-with-your-account.md
   - name: Sharing and Permissions
     items:
-    - name: Error when trying to access SharePoint Online or OneDrive for Business
-      href: ../sharing-and-permissions/access-denied-sharepoint-error.md
-    - name: Error when an external user tries to access SharePoint Online or OneDrive for Business
-      href: ../sharing-and-permissions/error-when-external-user-tries-to-access-sharepoint-onedrive.md
-    - name: 'Error when trying to access a shared folder or "Access Requests" list'
-      href: ../sharing-and-permissions/access-requests-list-error-access-denied.md
-    - name: Error when trying to approve a SharePoint Approval Workflow task
-      href: ../sharing-and-permissions/approval-workflow-access-denied-error.md
-    - name: '"Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website'
-      href: ../sharing-and-permissions/everyone-except-external-users-group-readded.md
+    - name: '"Access Denied due to organizational policies" error'
+      href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
+    - name: Error 403 Forbidden in OneDrive or SharePoints
+      href: ../sharing-and-permissions/error-403-forbidden.md
     - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
     - name: '"External sharing is disabled for the site" error with Online Admin Center'
@@ -219,8 +251,6 @@
       href: ../sharing-and-permissions/organization-policies-do-not-allow-you-to-share-with-users-error.md
     - name: Anonymous users are prompted for credentials
       href: ../sharing-and-permissions/anonymous-users-are-prompted-for-credentials-in-library.md
-    - name: Can't access a shared folder
-      href: ../sharing-and-permissions/cannot-access-shared-folder.md
     - name: Can't add external users to a SharePoint Online External Content Type
       href: ../sharing-and-permissions/cannot-add-external-users-to-content-type.md
     - name: Can't share/break inheritance of a folder, list, or library
@@ -261,6 +291,8 @@
     items:
     - name: '"HTTP request is unauthorized" error'
       href: ../Sites/calendar-overlay-unsupported.md
+    - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
+      href: ../Sites/err-invalid-response-accessing-sharepoint-site.md
     - name: '"You do not have an e-mail address" error with creating an online alert'
       href: ../sites/do-not-have-an-e-mail-address-when-create-an-alert.md
     - name: A URL that resides under a root site collection is broken
@@ -271,12 +303,16 @@
       href: ../Sites/change-default-language-site-collection.md
     - name: Can't find specified web in the given URL
       href: ../Sites/cannot-find-specified-web-given-url.md
-    - name: Classic popularity reports is discontinued
-      href: ../Sites/classic-usage-popularity-reports-discontinued.md
+    - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
+      href: ../Sites/cannot-permanently-delete-site.md
+    - name: Classic site collection search usage reports
+      href: ../Sites/classic-site-collection-search-usage-reports.md
     - name: Customizations of the top navigation bar is reverted
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error when trying to change site logo on O365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
+    - name: Error when trying to delete a SharePoint site
+      href: ../sites/compliance-policy-blocking-site-deletion.md
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
     - name: Issue when creating an online site
@@ -309,6 +345,10 @@
       href: ../Sync/synced-file-moved-to-recycle-bin.md
     - name: SharePoint Workspace doesn't always sync automatically
       href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+  - name: Video
+    items:
+    - name: Can’t view embedded Stream video in Teams app
+      href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
     - name: A list view Web Part for a tasks list doesn't filter values
@@ -345,8 +385,12 @@
       href: ../Workflows/copied-workflow-linked-to-source-workflow.md
     - name: Daily email limit has exceeded or unable to send to a recipient
       href: ../Workflows/configured-workflow-fails-running.md
+    - name: Gather Workflow troubleshooting data
+      href: ../Workflows/gather-workflow-data.md
     - name: Items revert to the "Pending" status
       href: ../Workflows/item-pending-status.md
+    - name: Nintex workflow on SharePoint Online fails to start
+      href: ../Workflows/nintex-workflow-fails-to-start.md
     - name: Outlook doesn't respond when approving an online approval workflow
       href: ../Workflows/outlook-fails-responding-sharepoint-workflow.md
     - name: Publishing Approval workflow doesn't automatically start
@@ -355,6 +399,8 @@
       href: ../Workflows/replace-list-item-permission-fail.md
     - name: SharePoint 2013 workflow HTTP Unauthorized
       href: ../workflows/workflow-http-unauthorized.md
+    - name: SharePoint 2013 Workflow Error '“To try again, reload the page”'
+      href: ../workflows/reload-the-page.md
     - name: Workflow contains blank values in output
       href: ../Workflows/workflow-contains-blank-values.md
     - name: Workflow fails to update a Person or Group column
@@ -363,5 +409,3 @@
       href: ../Workflows/connecting-site-workflow-problems.md
     - name: Workflow platform creates Word files that can't be opened
       href: ../Workflows/workflow-platform-created-word-fails-opening.md
-
-

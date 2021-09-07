@@ -1,12 +1,12 @@
 ---
 title: SharePoint Online service process schedule temporary change 
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
-ms.date: 2/5/2019
+ms.date: 03/25/2020
 audience: Admin
 ms.topic: article
-ms.prod: microsoft-SharePoint 
+ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160
@@ -47,8 +47,8 @@ Migration, DLP, and Backup solutions might achieve limited throughput during reg
 
 The following documents provide best practice guidance for getting maximize throughput:
 
-- [General migration performance guidance](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). (This includes an [FAQ & Troubleshooting section](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed#faq-and-troubleshooting).
-- For DLP, apps that scan the service and Backup apps: [Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online).
+- [General migration performance guidance](/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). (This includes an [FAQ & Troubleshooting section](/sharepointmigration/sharepoint-online-and-onedrive-migration-speed#faq-and-troubleshooting).
+- For DLP, apps that scan the service and Backup apps: [Best practices for discovering files and detecting changes at scale](/onedrive/developer/rest-api/concepts/scan-guidance).
 
 ### File management 
 
@@ -66,7 +66,8 @@ Modified processes include:
 
 There is no workaround at this time. We will continue to listen to your feedback regarding this approach.
 
-## More information  
+## References
+
 - [Our commitment to customers and Microsoft cloud services continuity](https://www.microsoft.com/microsoft-365/blog/2020/03/21/commitment-customers-microsoft-cloud-services-continuity/) 
 - [Awareness of temporary adjustments in Microsoft OneNote](https://techcommunity.microsoft.com/t5/onenote-service-updates/awareness-of-temporary-adjustments-in-microsoft-onenote/m-p/1248100)
 - [Awareness of temporary adjustments in SharePoint Online](https://techcommunity.microsoft.com/t5/sharepoint-support-blog/awareness-of-temporary-adjustments-in-sharepoint-online/ba-p/1250603)

@@ -58,7 +58,7 @@ You can launch the Switchboard Manager in an *.accdb* file in Access 2010 or lat
 1. Open your *.accdb* client database in Microsoft Access.
 2. Select the **File** tab > **Options** > **Customize Ribbon**.
 3. In the right column, highlight **Database Tools**.
-4. Click **New Group**. Click **Rename** to name the group "Switchboard."
+4. Click **New Group**. Click **Rename** to name the group "Administer."
 5. In the **Choose commands from** combo box at the top of the window, select **All Commands**
 6. Scroll down and highlight **Switchboard Manager**.
 7. Click **Add** to add the **Switchboard Manager** to the new group you created under the **Database Tools** tab.

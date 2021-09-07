@@ -1,8 +1,8 @@
 ---
 title: Importing a Task Outline Structure into Project
 description: Introduces how to import a task outline structure into Project.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -60,12 +60,14 @@ A comma-separated values (CSV) file contains the following text:
 |Outline Level|Name|
 |--|--|
 |1| 1 Summary Task 1|
- |2 |1.1 Task A|
- |2 |1.2 Task B|
- |2| 1.3 Summary Task 2|
- |3| 1.3.1 Task C|
- |3| 1.3.2 Task D|
- |1| 2 Summary Task 3|
- |2| 2.1 Task E|
- |2| 2.2 Task F|
- **NOTE** The Outline Number and name indentation are shown to clearly illustrate the structure.
+|2|1.1 Task A|
+|2|1.2 Task B|
+|2| 1.3 Summary Task 2|
+|3| 1.3.1 Task C|
+|3| 1.3.2 Task D|
+|1| 2 Summary Task 3|
+|2| 2.1 Task E|
+|2| 2.2 Task F|
+|||
+
+**NOTE** The Outline Number and name indentation are shown to clearly illustrate the structure.

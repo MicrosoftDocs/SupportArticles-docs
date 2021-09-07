@@ -1,15 +1,16 @@
 ---
 title: Can't configure Out of Office messages in OWA
 description: Discusses a problem in which users can't configure Out of Office messages in Outlook Web App or Exchange Control Panel in an Active Directory multi-domain environment. Provides a workaround.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: batre, jmartin
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 search.appverid: 
 - MET150

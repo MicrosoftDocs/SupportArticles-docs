@@ -1,16 +1,16 @@
 ---
 title: Cannot access Excel through ADO and ODBC
 description: You can't edit an Excel worksheet through ADO and ODBC because this worksheet is saved or opened as ReadOnly.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Excel
 ---

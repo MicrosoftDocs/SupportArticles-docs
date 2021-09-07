@@ -1,16 +1,16 @@
 ---
 title: The conditional formatting is set incorrectly when using VBA in Excel
 description: Discusses a workaround  for a problem that occurs in Excel in which conditional formatting may be set incorrectly when you use a VBA macro.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2007
 - Excel 2003

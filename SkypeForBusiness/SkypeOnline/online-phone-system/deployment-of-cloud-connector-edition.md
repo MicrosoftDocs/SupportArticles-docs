@@ -28,8 +28,6 @@ This is expected behavior. There's no current workaround. We don't support deplo
 
 Additionally, deploying Cloud Connector Edition isn't supported in Azure or in a VMware virtualization infrastructure.
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

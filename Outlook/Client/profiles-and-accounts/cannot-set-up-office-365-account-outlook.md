@@ -1,15 +1,16 @@
 ---
 title: Can't set up Office 365 account in Outlook
 description: Fixes an issue in which a user can't set up an Office 365 account in Outlook.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: aruiz
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CI 119623
 - CSSTroubleshoot
 search.appverid: 

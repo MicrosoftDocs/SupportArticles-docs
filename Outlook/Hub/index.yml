@@ -118,9 +118,13 @@ additionalContent:
           summary: Find help, training, and technical support for business owners who use Office 365.
           url: /office365/smallbusiness/build-your-small-business/build-your-small-business
         # Card
-        - title: Educators
+        - title: Educators IT
           summary: Find guidance for admins and IT Professionals in educational organizations.
           url: /education/
+        # Card
+        - title: Educators
+          summary: Find help, training, and technical support for educators.
+          url: https://support.microsoft.com/education          
         # Card
         - title: Admins and IT Professionals
           summary: Guidance for admins and IT Professionals managing Office products and services.

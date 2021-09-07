@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot account issues for federated users in Office 365, Azure, or Intune
 description: Describes how to troubleshoot single sign-on (SSO) user account issues in Office 365, Azure, or Microsoft Intune.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -85,7 +85,7 @@ To resolve this issue, use one or more of the following methods:
 
   To resolve this issue, remove the subdomain from the Office 365 portal. For more info about how to remove a domain, go to the following Microsoft website:
 
-   [Remove a domain](https://office.microsoft.com/redir/ha102818535.aspx)
+   [Remove a domain](/microsoft-365/admin/get-help-with-domains/remove-a-domain)
 
   After the domain is removed, you have to re-create the domain.
 
@@ -98,19 +98,15 @@ To resolve this issue, use one or more of the following methods:
   1. Make a minor (arbitrary) change to the on-premises Active Directory user account.   
   2. Force directory synchronization. For more info about how to force synchronization, go to the following Microsoft website:
 
-     [Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories)
+     [Force directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_synchronizedirectories)
 
      For info about how to determine whether synchronization was successful, go to the following Microsoft website: 
 
-     [Verify directory synchronization](https://technet.microsoft.com/library/jj151797.aspx)
+     [Verify directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity)
 
      If minor changes are not synced to the Office 365 user account, a directory synchronization problem may cause this issue.
 
      **Note** Directory synchronization may sync successfully without updating the user's UPN to the appropriate value if the user account is already licensed.
-
-     For more info about how to update the UPN in this case, see the following Microsoft Knowledge Base article: 
-
-     [2523192](https://support.microsoft.com/help/2523192) User names in Office 365, Azure, or Intune don't match the on-premises UPN or alternate login ID    
 
 
 ## More Information

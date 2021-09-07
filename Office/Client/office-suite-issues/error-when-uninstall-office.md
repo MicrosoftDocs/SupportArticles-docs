@@ -1,8 +1,8 @@
 ---
 title: Error messages when you try to uninstall Microsoft Office 2013
 description: Provides steps to restart the computer and uninstall Office 2013 or Office 365 suite if you see error messages such as "We're sorry, Office couldn't be uninstalled."
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -24,13 +24,13 @@ appliesto:
 
 You receive one of the following error messages when you try to uninstall Microsoft Office 2013 or Office 365 suite.
 
-    Couldn't uninstall Office
-    We're sorry, Office couldn't be uninstalled. Please try uninstalling Office again.
+> Couldn't uninstall Office  
+> We're sorry, Office couldn't be uninstalled. Please try uninstalling Office again.
 
 ![could not uninstall office](./media/error-when-uninstall-office/could-not-uninstall-office.PNG)
 
-    Office is busy.
-    Office can't do that right now because your product is busy with another task. Please wait for this task to complete and try again.
+> Office is busy.  
+> Office can't do that right now because your product is busy with another task. Please wait for this task to complete and try again.
 
 ![office is busy](./media/error-when-uninstall-office/office-is-busy.png)
 

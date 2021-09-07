@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: dpaul, jarrettr
 appliesto:
 - Exchange Server 2016 Enterprise Edition
@@ -65,7 +66,7 @@ Disable the Client Proxy Prefer Mailbox Mounted Server by setting its value to "
 Don't use **Basic Authentication** on the receive connector. Instead, use an external secure authentication method.
 
 > [!NOTE]
-> This will make the server an open relay type. This is not a recommended configuration. For more information, see [Allow anonymous relay on Exchange servers](https://docs.microsoft.com/exchange/mail-flow/connectors/allow-anonymous-relay?view=exchserver-2019).
+> This will make the server an open relay type. This is not a recommended configuration. For more information, see [Allow anonymous relay on Exchange servers](/exchange/mail-flow/connectors/allow-anonymous-relay).
 
 ## Workaround 3
 

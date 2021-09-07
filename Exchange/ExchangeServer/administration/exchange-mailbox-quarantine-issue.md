@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: Brianpr, charray
 appliesto:
 - Exchange Server 2010 Enterprise
@@ -42,4 +43,4 @@ The cause of the poison mailbox must be identified and corrected. Once this is a
 
 ## More information
 
-For more information, see [Poison Mailbox Detection and Correction](https://technet.microsoft.com/library/bb331958.aspx#sh).
+For more information, see [Poison Mailbox Detection and Correction](/previous-versions/office/exchange-server-2010/bb331958(v=exchg.141)#sh).

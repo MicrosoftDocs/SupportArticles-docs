@@ -1,12 +1,12 @@
 ---
 title: How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment
 description: Describes how to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -47,7 +47,7 @@ To restore In-Place Hold settings, follow these steps:
 
    ![Screenshot of the in-place eDiscovery & hold page in the Exchange Admin Center](./media/restore-in-place-litigation-hold/ediscovery.jpg)
 
-1. Select the In-Place Hold entry for which you want to restore In-Place Hold settings, and then double-click it, or click **Edit** (![Edit](./media/restore-in-place-litigation-hold/edit.jpg)), to open the properties page.
+1. Select the In-Place Hold entry for which you want to restore In-Place Hold settings, and then double-click it, or click **Edit** (![Edit icon](./media/restore-in-place-litigation-hold/edit.jpg)), to open the properties page.
 
    ![Screenshot of the properties page for an In-Place Hold entry](./media/restore-in-place-litigation-hold/properties.jpg)
 
@@ -86,7 +86,7 @@ To restore Litigation Hold settings, follow these steps:
 
 To restore the Litigation Hold duration setting, follow these steps:
 
-1. Connect to Exchange Online by using remote PowerShell. For more information, go to [Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
+1. Connect to Exchange Online by using remote PowerShell. For more information, go to [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. To restore a user's Litigation Hold duration setting, run the following command:
 
     ```powershell
@@ -103,4 +103,4 @@ To restore the Litigation Hold duration setting, follow these steps:
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

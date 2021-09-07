@@ -1,7 +1,7 @@
 ---
 title: Teams Class Schedule does not show task buckets
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -29,9 +29,5 @@ Tasks buckets in Microsoft Teams Class Schedule do not show up in the Class Sche
 ## More information
 
 Microsoft is researching this problem and will post more information as it becomes available.
-
-
-
-## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

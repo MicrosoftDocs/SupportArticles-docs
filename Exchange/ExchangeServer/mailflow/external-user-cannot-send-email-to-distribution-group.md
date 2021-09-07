@@ -1,14 +1,15 @@
 ---
 title: Can't externally send emails to Distribution Group
 description: This article resolves an issue in which you receive a NDR message when you send an email message from an external domain to a Distribution Group.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 search.appverid: 
 - MET150

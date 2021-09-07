@@ -1,7 +1,7 @@
 ---
 title: Open Support cases for GCC High and DoD
 description: Describes that how to open Support cases for GCC High and DoD.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office 365
 ---
@@ -21,14 +21,18 @@ appliesto:
 
 ## Summary
 
-Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Office 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Office 365 admin center to manage your user accounts and define who has permissions to contact support.  
-If a user does not need any specialized administrative access you can grant them the role of Service Administrator, which will provide them view-only access and the ability to contact support to create an incident.  
+Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Office 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Office 365 admin center to manage your user accounts and define who has permissions to contact support.
 
-**Note** Users cannot change their own account permissions and their account needs to be updated by another administrator.
+If a user does not need any specialized administrative access you can grant them the role of Service Administrator, which will provide them view-only access and the ability to contact support to create an incident.
 
-For more details and step-by-step guidance on how to assign administrative roles to users, please see [https://docs.microsoft.com/office365/admin/add-users/assign-admin-roles?view=o365-worldwide.](https://docs.microsoft.com/office365/admin/add-users/assign-admin-roles?view=o365-worldwide)  
+To create a new service request, browse to [https://portal.office365.us/adminportal](https://portal.office365.us/adminportal). After login, navigate to **Show all** > **Support** > **New Service Request**, and use the subject to briefly describe the problem for the new service request.
 
-For more details on administrator roles, please see [https://docs.microsoft.com/office365/admin/add-users/about-admin-roles](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles?view=o365-worldwide).  
+> [!NOTE]
+> Users cannot change their own account permissions and their account needs to be updated by another administrator.
+
+For more details and step-by-step guidance on how to assign administrative roles to users, please see [https://docs.microsoft.com/office365/admin/add-users/assign-admin-roles?view=o365-worldwide.](/office365/admin/add-users/assign-admin-roles)  
+
+For more details on administrator roles, please see [https://docs.microsoft.com/office365/admin/add-users/about-admin-roles](/office365/admin/add-users/about-admin-roles).  
 
 For more information on how to populate a valid email address for a user account, see the "More Information" section below.  A valid email address is necessary for the following situations: 
 

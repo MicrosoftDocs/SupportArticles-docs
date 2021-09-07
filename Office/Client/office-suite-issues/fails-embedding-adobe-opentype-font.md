@@ -1,16 +1,16 @@
 ---
 title: Cannot embed an Adobe OpenType font in an Office document
 description: Describes an issue when you embed fonts in an Office document, OpenType fonts (.otf) are not embedded.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Office
 ---

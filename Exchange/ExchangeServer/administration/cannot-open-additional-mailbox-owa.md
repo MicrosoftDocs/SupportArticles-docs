@@ -1,15 +1,16 @@
 ---
 title: Can't open additional mailboxes in Outlook Web App
 description: Resolves an issue in which you receive an error message when you try to open an additional mailbox in Outlook Web App. This issue occurs after you install Update Rollup 4 for Exchange Server 2010 SP2.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: shashikg
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 search.appverid: 
 - MET150

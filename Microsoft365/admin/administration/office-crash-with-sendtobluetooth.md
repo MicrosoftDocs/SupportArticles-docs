@@ -1,8 +1,8 @@
 ---
 title: Office programs may crash with the SendToBluetooth add-in installed
 description: Describes problems that may occur with Office applictions with the SendToBluetooth add-in installed.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -50,7 +50,7 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-##  Resolution
+## Resolution
 
 If you have the WIDCOMM SendToBluetoothadd-in installed, your Office programs might be crashing due to an incompatibility issue between the add-in and other Microsoft Office programs.
 
@@ -58,25 +58,22 @@ Note: This add-in is installed by default on many OEM images of Windows.
 
 Here's how you can check to see if the add-in is the cause of your Office programs crashing:
 
-### First, open the Event Viewer 
+### First, open the Event Viewer
 
 **For a Windows 10, Windows 8.1 and Windows 8**
 
-
-1. From the Startscreen, type View event logsin the search box.    
-2. Select View event logs.   
+1. From the Start screen, type *View event logs* in the search box.
+2. Select **View event logs**.
 
 **Windows 7 and Vista**
 
-
-1. Click Start.   
-2. In the Search box, type Event Viewer, and then, in the list of results, double-click Event Viewer.    
+1. Click Start.
+2. In the Search box, type Event Viewer, and then, in the list of results, double-click Event Viewer.
 
 **Windows XP**
 
-
-1. Click Start>Control Panel>Performance and Maintenance, and then click Administrative Tools, and then double-click Computer Management.    
-2. In the console tree, expand Event Viewer.   
+1. Click Start>Control Panel>Performance and Maintenance, and then click Administrative Tools, and then double-click Computer Management.
+2. In the console tree, expand Event Viewer.
 
 ### Now, check for the following events
 
@@ -88,29 +85,30 @@ Event ID: 1000
 
 Faulting module name: ntdll.dll
 
-Note: Even if you do not see an Event 1000with either of these two dlls listed, you may still be encountering crashes due to this add-in.
+Note: Even if you do not see an Event 1000 with either of these two dlls listed, you may still be encountering crashes due to this add-in.
 
-### Method 1: Try to update the SendToBluetooth add-inYou might be able to find an update to the Bluetooth add-in here:
+### Method 1: Try to update the SendToBluetooth add-inYou might be able to find an update to the Bluetooth add in here
 
-[https://www.broadcom.com/support/bluetooth/update.php[Enter](https://www.broadcom.com/support/bluetooth/update.php)
+[Bluetooth Software](https://www.broadcom.com/support/bluetooth/update.php)
 
-If you weren't able to update the add-in, you can continue to Method 2 to disable the SendToBluetooth add-in. 
+If you weren't able to update the add-in, you can continue to Method 2 to disable the SendToBluetooth add-in.
 
 ### Method 2: Manually disable the SendToBluetooth add-in
-Important:This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
+
+Important: This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
 
 Warning: Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
 Before you start the steps below, make sure you close all of your Office programs.
 
-
 1. Open the Registry, here's how:
-   - Windows 10, Windows 8.1 and Windows 8: Press Windows Key + R to open a Run dialog box. Type regedit.exeand then select OK.   
-   - Windows 7 or Vista: Click Start, type regedit.exein the search box, and then select Enter.    
-
+   - Windows 10, Windows 8.1 and Windows 8: Press Windows Key + R to open a Run dialog box. Type regedit.exeand then select OK.
+   - Windows 7 or Vista: Click Start, type regedit.exein the search box, and then select Enter.
 
 2. Select the Office program that is crashing and locate and then select the key listed for it:
+
 ### Click for a list of Office programs
+
 Word
 
 HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
@@ -142,14 +140,11 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Visio\Addins
 
 Note: If you are using a 32-bit version of Office on a 64-bit version of Windows, you will need to select the following key:
 
-HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Visio\Addins   
-3.  Expand the \Addins subkeyto display all of the add-ins registered at the Machine level.   
-4. If listed, select the subkey for the SendToBluetooth add-in called BtOfficeAddin.BtOfficeIntegration.1.   
-5. Right-click the LoadBehavior value and then click Modify.   
-6. Change the Value data to 0, and then click OK and then close the Registry Editor.   
-7. Start your Office program that was crashing to determine if the registry change has improved the stability of the program.   
+HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Visio\Addins
+3.  Expand the \Addins subkey to display all of the add-ins registered at the Machine level.
+4. If listed, select the subkey for the SendToBluetooth add-in called BtOfficeAddin.BtOfficeIntegration.1.
+5. Right-click the LoadBehavior value and then click Modify.
+6. Change the Value data to 0, and then click OK and then close the Registry Editor.
+7. Start your Office program that was crashing to determine if the registry change has improved the stability of the program.
 
-
-##  More Information
-
-Disclaimer: The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

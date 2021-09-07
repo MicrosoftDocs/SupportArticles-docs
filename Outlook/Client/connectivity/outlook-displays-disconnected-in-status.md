@@ -1,15 +1,16 @@
 ---
 title: Outlook shows Disconnected in status bar
 description: Describes the error messages that are caused by the trailing space in the legacyExchangeDN attribute in Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: robevans, Eduardo.Oliveira, sfellman
 appliesto:
 - Outlook 2016

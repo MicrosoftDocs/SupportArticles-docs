@@ -1,7 +1,7 @@
 ---
 title: Excel survey does not have full functionality when you click new in a SharePoint Online library
 description: Describes an issue in which you Excel survey does not have full functionality when you click new in a SharePoint Online library.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -83,7 +83,7 @@ To disable mutiple content types, follow these steps:
 
 This behavior occurs by design, when external sharing is not enabled for a site collection.
 
-For more information about how to manage external sharing for your SharePoint online environment, go to [External sharing overview](https://docs.microsoft.com/sharepoint/external-sharing-overview?redirectSourcePath=%252fen-us%252farticle%252fexternal-sharing-overview-c8a462eb-0723-4b0b-8d0a-70feafe4be85).
+For more information about how to manage external sharing for your SharePoint online environment, go to [External sharing overview](/sharepoint/external-sharing-overview).
 
 For more information about document check-out, go to [Set up a library to require check-out of files](https://support.office.com/article/set-up-a-library-to-require-check-out-of-files-0c73792b-f727-4e19-a1f9-3173899e695b).
 

@@ -1,7 +1,7 @@
 ---
 title: Lync Meeting control is not displayed on the Outlook 2013 ribbon
 description: Describes how to turn on the Lync Meeting Add-in for Microsoft Office 2013 in Microsoft Outlook. Also describes how to verify that this feature is turned on by checking the system registry.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,8 +9,10 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.custom: 
+- Outlook for Windows
+- CSSTroubleshoot
+ms.author: luche
 appliesto:
 - Outlook 2010
 - Outlook 2013

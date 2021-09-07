@@ -1,15 +1,16 @@
 ---
 title: Upgrading to Office 2016 fails
 description: Provides a solution to an issue where upgrading to Office 2016 fails.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: gbratton, tasitae
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CSSTroubleshoot
 search.appverid: 
 - MET150

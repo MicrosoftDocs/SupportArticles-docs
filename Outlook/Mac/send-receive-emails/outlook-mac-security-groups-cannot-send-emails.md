@@ -1,15 +1,16 @@
 ---
 title: Can't send emails from security groups, distribution lists, or mail-enabled Public Folders in Outlook for Mac
 description: You receive error code 19991, 19992 or 21999 when you try to send email messages from a distribution list, a security group, or a mail-enabled Public Folder in Outlook for Mac.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: tsimon, tasitae
 appliesto:
 - Outlook for Mac for Office 365

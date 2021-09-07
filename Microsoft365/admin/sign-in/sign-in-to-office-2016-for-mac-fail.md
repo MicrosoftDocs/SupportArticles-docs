@@ -1,7 +1,7 @@
 ---
 title: Another account from your organization is already signed in on this computer
 description: Discusses an error message that a user receives when he or she tries to sign in to an Office 2013 app by using Office 365 credentials.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office 2016 for Mac
@@ -40,7 +40,6 @@ To resolve this issue, use the Keychain Access app to delete any password entrie
 
 This behavior is expected. It occurs if you're already signed in to Office 2016 for Mac through a different Office 365 user account in the same organization. 
 
-### Third-party information disclaimer
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-Sign out of the first account that signed in, then restart that computer. If this solution does not resolve the issue, try the workaround below. 
+Sign out of the first account that signed in, then restart that computer. If this solution does not resolve the issue, try the workaround below.

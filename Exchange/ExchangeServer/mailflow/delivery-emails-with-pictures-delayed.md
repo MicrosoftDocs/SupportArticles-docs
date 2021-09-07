@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: shanbram, genli, christys
 appliesto:
 - Exchange Server 2016 Enterprise Edition
@@ -26,7 +27,7 @@ When you send an email with a picture attachment to a large distribution list (c
 
 ## Cause
 
-This issue occurs because Exchange Server 2016 uses the [Windows Imaging Component](https://msdn.microsoft.com/library/windows/desktop/ee719654%28v=vs.85%29.aspx) (WIC) to create thumbnails for picture attachments.
+This issue occurs because Exchange Server 2016 uses the [Windows Imaging Component](/windows/win32/wic/-wic-about-windows-imaging-codec) (WIC) to create thumbnails for picture attachments.
 
 ## Workaround
 

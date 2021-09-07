@@ -1,8 +1,8 @@
 ---
 title: Description of the numbering scheme for product code GUIDs in Office 2013
 description: Describes how to read the product GUIDs in the Windows registry to determine information about the Office 2013 suite, programs, or utilities that you are using.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -72,6 +72,8 @@ The following table describes the characters of the GUID.
 |000|Reserved for future use, currently 0|0|
 |D|1 for debug, 0 for ship|0-1|
 |000000FF1CE|Office Family ID|0-9|
+|||
+
 To view the GUIDs for the Office 2013 suites and programs that are installed on a computer, follow these steps: 
 
 1.  Click **Start**, click **Run**, type regedit, and then click **OK**.    

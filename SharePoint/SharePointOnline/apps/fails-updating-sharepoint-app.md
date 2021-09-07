@@ -1,7 +1,7 @@
 ---
 title: Unable to update a SharePoint app because of different version installed
 description: You cannot update a SharePoint app with the error message saying that a different version of this App is already installed with the same version number.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -27,7 +27,7 @@ When you try to update a Microsoft SharePoint app that you're developing by usin
 
 To resolve this issue, use a later version number in the App element of the Appmanifest.xml file.
 
-For more information, see [Update SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/update-sharepoint-add-ins).
+For more information, see [Update SharePoint Add-ins](/sharepoint/dev/sp-add-ins/update-sharepoint-add-ins).
 
 ## More information
 

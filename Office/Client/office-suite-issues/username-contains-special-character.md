@@ -1,14 +1,14 @@
 ---
 title: Error when you create a user name that contains a special character
 description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft Office 365.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 date: 3/16/2020
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: 
 - CI 115151
 - CSSTroubleshoot

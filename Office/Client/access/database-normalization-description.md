@@ -82,7 +82,7 @@ These steps demonstrate the process of normalizing a fictitious student table.
    |Student#|Advisor|Adv-Room|Class1|Class2|Class3|
    |------|------|------|------|------|------|
    |1022|Jones|412|101-07|143-01|159-02|
-   |4123|Smith|216|201-01|211-02|214-01|
+   |4123|Smith|216|101-07|143-01|179-04|
 
 2. First normal form: No repeating groups
 
@@ -95,15 +95,15 @@ These steps demonstrate the process of normalizing a fictitious student table.
    |1022|Jones|412|101-07|
    |1022|Jones|412|143-01|
    |1022|Jones|412|159-02|
-   |4123|Smith|216|201-01|
-   |4123|Smith|216|211-02|
-   |4123|Smith|216|214-01|
+   |4123|Smith|216|101-07|
+   |4123|Smith|216|143-01|
+   |4123|Smith|216|179-04|
 
 3. Second normal form: Eliminate redundant data
 
    Note the multiple Class# values for each Student# value in the above table. Class# is not functionally dependent on Student# (primary key), so this relationship is not in second normal form.
 
-   The following two tables demonstrate second normal form:
+   The following tables demonstrate second normal form:
 
    Students:
 
@@ -119,9 +119,9 @@ These steps demonstrate the process of normalizing a fictitious student table.
    |1022|101-07|
    |1022|143-01|
    |1022|159-02|
-   |4123|201-01|
-   |4123|211-02|
-   |4123|214-01|
+   |4123|101-07|
+   |4123|143-01|
+   |4123|179-04|
 
 4. Third normal form: Eliminate data not dependent on key
 

@@ -1,21 +1,21 @@
 ---
 title: Outlook asks for password repeatedly when it uses MAPI over HTTP
 description: Outlook repeatedly prompts for password when you change the protocol it uses to access Exchange Server from RPC over HTTP to MAPI over HTTP.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: cjiang, todla
 appliesto:
-- Microsoft Outlook 2010
+- Outlook 2010
 - Outlook 2016
-- Outlook for Office 365
-- Outlook 2019
+
 search.appverid: MET150
 ---
 # Outlook repeatedly prompts for credentials when using MAPI over HTTP to connect to Exchange

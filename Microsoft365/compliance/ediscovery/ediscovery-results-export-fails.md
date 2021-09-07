@@ -1,12 +1,12 @@
 ---
-title: (Export failed with error type FailedToSearchMailboxes) when export eDiscovery search results. 
+title: Export failed with error type FailedToSearchMailboxes error when export eDiscovery search results. 
 description: Describes a problem that triggers an error message when you try to export eDiscovery search results to a PST file in the Exchange admin center in Exchange Online. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Error (Export failed with error type FailedToSearchMailboxes) when you try to export eDiscovery search results to a PST file in Exchange Online
+# "Export failed with error type FailedToSearchMailboxes" error when you try to export eDiscovery search results to a PST file in Exchange Online
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -58,6 +58,6 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-For more information, see [Export eDiscovery search results to a PST file](https://technet.microsoft.com/library/dn440164%28v=exchg.150%29.aspx).
+For more information, see [Export eDiscovery search results to a PST file](/exchange/security-and-compliance/in-place-ediscovery/export-search-results).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

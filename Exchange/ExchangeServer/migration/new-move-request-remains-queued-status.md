@@ -1,15 +1,16 @@
 ---
 title: New move request remains in queued status
 description: Resolves an issue in which a new move request is created but remains in a queued state. This issue occurs in an Exchange Server 2013 or Server 2016 environment.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: batre, robwhal, bradhugh
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 search.appverid: 
 - MET150

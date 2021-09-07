@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: junkoy
 appliesto:
 - Exchange Server 2010 Enterprise
@@ -41,7 +42,7 @@ To use HAB, you must extend the Active Directory schema in the Active Directory 
 
 An organization is represented by a distribution group in your Exchange organization. To create a distribution group, use the Exchange Management Console (EMC) or the Exchange Management Shell (the Shell) in Exchange Server 2010.
 
-For more information about how to create a distribution group in Exchange Server 2010, see [Create and manage distribution groups in Exchange Online](https://technet.microsoft.com/library/bb124513%28exchg.140%29.aspx).
+For more information about how to create a distribution group in Exchange Server 2010, see [Create and manage distribution groups in Exchange Online](/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups).
 
 For example, the following screenshot shows the organization hierarchy for an example organization named **Contoso, Ltd**.
 
@@ -61,7 +62,7 @@ The following list explains this hierarchy:
 > 1. Install Exchange Server 2010 Service Pack 1 (SP1) on the server.
 > 1. Run the command in the Exchange Management Shell (the Shell): `Set-DisctibutionGroup -identity <distribution group name>  -forceupgrade`.
 
-For more information about the `Set-DistributionGroup` command, see [General information about the Set-DistributionGroup command](https://technet.microsoft.com/library/bb124955.aspx).
+For more information about the `Set-DistributionGroup` command, see [General information about the Set-DistributionGroup command](/powershell/module/exchange/set-distributiongroup).
 
 ## Step three: Create an organization
 
@@ -97,7 +98,7 @@ For more information about the `Set-DistributionGroup` command, see [General inf
     - **Account Group**  
     - **Administration Group**
 
-    For more information about how to configure message delivery restrictions on Exchange Server 2010, see [Configure message delivery restrictions for a mailbox](https://technet.microsoft.com/library/bb397214%28exchg.140%29.aspx).
+    For more information about how to configure message delivery restrictions on Exchange Server 2010, see [Configure message delivery restrictions for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-message-delivery-restrictions).
 
 ## Step four: Change the msOrg-IsOrganizational attribute to make the distribution group an organization
 
@@ -105,7 +106,7 @@ To make the distribution group an organization, you have to change the `msOrg-Is
 
 1. If you don't have ADSI Edit installed on your computer, install the Windows Support Tools. For detailed instructions for ADSI Edit, go to the following Microsoft website:
 
-    [ADSI Edit (adsiedit.msc)](https://technet.microsoft.com/library/cc773354%28ws.10%29.aspx)
+    [ADSI Edit (adsiedit.msc)](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10))
 
 1. Open **ADSI Edit**, expand **Default naming context**, expand the organizational unit, and then expand the **OU=HAB Groups** container where you created a distribution group named **Contoso, Ltd**. The screenshot for this step is listed below.
 
@@ -154,7 +155,7 @@ To add child organizations, follow the steps:
     Add-DistributionGroupMember -Identity "ContosoRoot" -Member "CorporateOffice@Contoso.com"
     ```
 
-    For more information about how to add a member to a distribution group in Exchange Server 2010, see [Add a Member to a Distribution Group](https://technet.microsoft.com/library/aa995970%28exchg.140%29.aspx).
+    For more information about how to add a member to a distribution group in Exchange Server 2010, see [Add a Member to a Distribution Group](/previous-versions/exchange-server/exchange-140/aa995970(v=exchg.140)).
 
     > [!NOTE]
     > To run this command, you must be assigned one of the following management roles, either directly or by using a universal security group:
@@ -198,7 +199,7 @@ To add David Hamilton (SMTP address: `dhamilton@contoso.com`) to **Corporate Off
 Add-DistributionGroupMember -Identity "Corporate Office" -Member "DHamilton@Contoso.com"
 ```
 
-For more information about how to add a member to a distribution group in Exchange Server 2010, see [Add a Member to a Distribution Group](https://technet.microsoft.com/library/aa995970%28exchg.140%29.aspx).
+For more information about how to add a member to a distribution group in Exchange Server 2010, see [Add a Member to a Distribution Group](/previous-versions/exchange-server/exchange-140/aa995970(v=exchg.140)).
 
 > [!NOTE]
 > To run this command, you must be assigned one of the following management roles, either directly or by using a universal security group:
@@ -260,7 +261,7 @@ To change the display order of these members, follow the steps:
 
 After you set the `msDS-HABSeniorityIndex` attribute, David Hamilton is the top of the list as the following screenshot shows, and other members are sorted by descending number of the Seniority In.
 
-:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/how-david hamilton-shows.png" alt-text="Screenshot of how David Hamilton shows.":::
+:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/how-david-hamilton-shows.png" alt-text="Screenshot of how David Hamilton shows.":::
 
 ## Step ten: Enable the Hierarchical Address Book feature
 

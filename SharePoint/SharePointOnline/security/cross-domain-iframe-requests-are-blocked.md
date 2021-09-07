@@ -1,7 +1,7 @@
 ---
 title: Cross-domain iframe requests are blocked in SharePoint Online
 description: Describes an issue in which cross-domain iframe requests are blocked in SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -31,6 +31,6 @@ This issue occurs when one of the following conditions is true:
 
 ## More information
 
-For more information about iframing SharePoint-OnPrem-hosted pages in applications, go to [IFraming SharePoint-OnPrem-hosted pages in apps](https://blogs.msdn.microsoft.com/officeapps/2012/12/12/iframing-sharepoint-hosted-pages-in-apps/).
+For more information about iframing SharePoint-OnPrem-hosted pages in applications, go to [IFraming SharePoint-OnPrem-hosted pages in apps](/archive/blogs/officeapps/iframing-sharepoint-hosted-pages-in-apps).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

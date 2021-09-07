@@ -1,7 +1,7 @@
 ---
 title: Can't use Convert bibliography to static text
 description: Describes a problem in which you cannot use the Convert bibliography to static text option in Word 2007 or Word 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: v-mizhu
 appliesto:
 - Word 2010

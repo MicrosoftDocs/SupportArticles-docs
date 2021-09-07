@@ -1,7 +1,7 @@
 ---
 title: You receive a Too many different cell formats error message in Excel
 description: Discusses that you receive a "Too many different cell formats" error message in Excel. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel for Office 365
 - Excel 2019
@@ -108,6 +108,4 @@ Simplify the formatting of your workbooks. For example, follow these guidelines 
 
 In most cases, the current limit of different formatting combinations for a single workbook (4,000 for .xls format and 64,000 for .xlsx format) is sufficient. This problem is likely to occur only when the workbook contains many worksheets that use different formatting, or when many cells are formatted differently.
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

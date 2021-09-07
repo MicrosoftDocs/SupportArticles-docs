@@ -1,7 +1,7 @@
 ---
 title: Another account is already signed in computer when signing in to Office 2013
 description: Discusses an error message that a user receives when he or she tries to sign in to an Office 2013 app by using Office 365 credentials.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office 365
 - Office 2013
@@ -28,9 +28,12 @@ When you try to sign in to an Office 2013 app by using your Office 365 user ID a
 
 ## Cause
 
-This behavior is expected. It occurs if another account is already signed in to Office 2013 by using a different Office 365 user account within the same organization. 
+This behavior is expected. It occurs if another account is already signed in to Office 2013 by using a different Office 365 user account within the same organization.
 
 ## Resolution
+
+> [!TIP]
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
 Sign out of the first account that signed in, then restart that computer. If this solution does not resolve the issue, try the workaround below.
 
@@ -47,31 +50,31 @@ To work around this behavior, remove the existing user account and all connected
 ### Step 1: Sign out of Office and then sign back in
 
 Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, Outlook, etc.
- 
-   1. Select **File**, and then select **Account**. 
-   2. Select **Sign out**. 
-   3. Close the Office product and then restart it.
-   4. Select **File**, and then select **Account**.
-   5. Select **Sign in** and use your credentials to sign back in. 
+
+1. Select **File**, and then select **Account**.
+2. Select **Sign out**.
+3. Close the Office product and then restart it.
+4. Select **File**, and then select **Account**.
+5. Select **Sign in** and use your credentials to sign back in.
 
 ### Step 2: Remove the user account from your Office 2013 profile
- 
+
 1. In the upper-right corner of an Office 2013 app (Word, Excel, PowerPoint), select your name, and then select **Switch Account**.
 1. On the **Accounts** screen, select **Sign out**.
 
-   ![Sign out on the Accounts page](./media/another-account-already-signed-in/2750229-4.png)
+   :::image type="content" source="./media/another-account-already-signed-in/accounts.png" alt-text="Sign out on the Accounts page.":::
 
 1. Locate the account that you want to remove, and then select **Sign out**.
 
 ### Step 3: Remove connected services from your Office 2013 profile
- 
+
 1. Go to **File**, and then select **Account**.
 1. Under **Connected Services**, remove all the services for the existing account.
- 
-   ![Under Connected Services, remove all the services for the existing account.](./media/another-account-already-signed-in/2750229-5.png)
+
+   :::image type="content" source="./media/another-account-already-signed-in/connected-services.png" alt-text="Screenshot of removing all the services for the existing account under Connected Services.":::
 
 ### Step 4: Clear cached credentials on the computer
- 
+
 1. Edit the registry to remove cached credentials:
 
    1. Select **Start**, select **Run**, type **regedit**, and then select **OK**.
@@ -82,9 +85,9 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
    1. Select the Office account that you want to delete, and then select **Delete**.
    1. In the Identity subkey, locate **Profiles**, right-click the same Office account that you located in **Step 1** of this procedure, and then select **Delete**.
    1. Select **File** and then **Exit** Registry Editor.
-    
+
 1. Remove the cached credentials in Credentials Manager:  
-   
+
    1. Select **Start**, then **Windows System**, then open the **Control Panel** and select **Credential Manager**.
 
       > [!NOTE]
@@ -93,15 +96,15 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
    1. Under the **Windows Credentials** tab, locate the account that you want to remove and then select **Remove**.
 
       > [!NOTE]
-      > In Windows 7, this is listed as **Generic Credentials**. 
+      > In Windows 7, this is listed as **Generic Credentials**.
 
-      ![Remove Windows Credentials](./media/another-account-already-signed-in/2750229-6.png)
+       :::image type="content" source="./media/another-account-already-signed-in/windows-credentials.png" alt-text="Remove Windows Credentials":::
 
 1. Log off, and then log back in to the computer.
 
 ## More information
 
-For more information, see [Recommendations on resolving common sign-in issues](https://docs.microsoft.com/office365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
+For more information, see [Recommendations on resolving common sign-in issues](/office365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
 
 In Office 2013 apps, you can access Office 365 content in SharePoint Online by providing your Office 365 user ID and password. If you have multiple Office 365 user IDs from different organizations, you can access content from the SharePoint Online deployments of each organization.
 

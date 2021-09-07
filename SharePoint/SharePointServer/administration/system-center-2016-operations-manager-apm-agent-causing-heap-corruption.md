@@ -1,7 +1,7 @@
 ---
 title: System Center 2016 Operations Manager APM Agent causing heap corruption in SharePoint
 description: Provides workarounds for an issue in which heap corruption occurs in SharePoint because of System Center 2016 Operations Manager APM Agent.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
 - MET150
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Server 2010
 - SharePoint Server 2013
@@ -51,7 +51,7 @@ To work around this issue, use one of the following methods:
 
   **msiexec /i MonAgent.msi NOAPM=1**
 
-  **Note** The NOAPM=1 parameter causes the Operations Manager agent to install without the .NET Framework application performance monitoring. For more information, see [Install Agent Using the Command Line](https://technet.microsoft.com/library/hh230736%28v=sc.12%29.aspx?f=255&MSPPError=-2147217396).  
+  **Note** The NOAPM=1 parameter causes the Operations Manager agent to install without the .NET Framework application performance monitoring. For more information, see [Install Agent Using the Command Line](/previous-versions/system-center/system-center-2012-R2/hh230736(v=sc.12)?f=255&MSPPError=-2147217396).  
 
 ## More information  
 

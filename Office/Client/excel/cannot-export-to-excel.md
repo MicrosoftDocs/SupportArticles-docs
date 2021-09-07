@@ -1,7 +1,7 @@
 ---
 title: Unable to export to Excel from SharePoint Online
 description: Export to excel from SharePoint Online doesn't work, An unexpected error has occurred. Changes to your data cannot be saved. error returned.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel
 ---
@@ -39,20 +39,21 @@ You can increase the default Excel timeout value by using a registry key. To inc
 
         **For 32-bit Excel on 32-bit Windows or 64-bit Excel on 64-bit Windows**
 
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines`
 
         **For 32-bit Excel on 64-bit Windows**
 
-        HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines`
 
-       - For Click-to-Run installation of Excel
+      - For Click-to-Run installation of Excel
 
-            **For 32-bit Excel on 32-bit Windows or 64-bit Excel on 64-bit Windows**
-            HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Access Connectivity Engine\Engines
+        **For 32-bit Excel on 32-bit Windows or 64-bit Excel on 64-bit Windows**  
 
-            **For 32-bit Excel on 64-bit Windows**
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Access Connectivity Engine\Engines`
 
-            HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines
+        **For 32-bit Excel on 64-bit Windows**
+
+        `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines`
 
 2. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 3. Type **DataFetchTimeout**, and then press **Enter**.

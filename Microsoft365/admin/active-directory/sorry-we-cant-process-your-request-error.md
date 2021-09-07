@@ -1,8 +1,8 @@
 ---
 title: Can't set security verification with Azure MFA
 description: Describes an issue that triggers an error message when you try to set up additional security verification settings for a user for Azure Multi-Factor Authentication.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -27,9 +27,9 @@ appliesto:
 
 When you try to set up additional security verification settings for Microsoft Azure Multi-Factor Authentication, you receive the following message:
 
-    Sorry! We can't process your request. Your session is invalid or expired.
-
-    There was an error processing your request because your session is invalid or expired. Please try again.
+> Sorry! We can't process your request. Your session is invalid or expired.
+>
+> There was an error processing your request because your session is invalid or expired. Please try again.
 
 This issue occurs if you waited too long to complete the Azure Multi-Factor Authentication set up process for the user. 
 

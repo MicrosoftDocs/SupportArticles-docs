@@ -1,14 +1,15 @@
 ---
 title: Some rules are disabled and can't be enabled
 description: Explains that some rules may be disabled after you upgrade to Outlook 2010, Outlook 2007, or Outlook 2003 if the size of your rules exceeds the 32-KB limit. Includes several suggested workarounds to decrease the size of your rules.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CI 119623
 - CSSTroubleshoot
 ms.reviewer: sercast

@@ -8,50 +8,52 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-solutions
-ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.custom: 
+- CSSTroubleshoot
+- CI 125260
+ms.topic: troubleshooting
 ms.author: zakirh
 appliesto:
 - Microsoft Forms
 ---
-
 # No email notifications for responses to Group Forms
 
 This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
 
-You may not receive email notifications for responses that you submit to a Group Form, such as a Form that you create in Microsoft Teams. To receive email notifications, follow these steps:
+You might not receive email notifications for responses that you submit to a Group Form, such as a Form that you create in Microsoft Teams. To receive email notifications, do the following:
 
-1. Sign in to Forms at [https://forms.office.com](https://forms.office.com), and then click **Group forms**.
-   
-   ![Selecting Group forms tab](./media/no-email-notifications-for-responses-to-group-forms/group-forms.png)
+1. Sign in to Forms at [https://forms.office.com](https://forms.office.com).
 
-1. Click **Recent group forms**.
-   
-   ![Selecting Recent group forms field](./media/no-email-notifications-for-responses-to-group-forms/recent-group-forms.png)
+2. Scroll down to **My groups**.
 
-1. Select your group. In this example, the test group is selected.
+   ![Select My groups](./media/no-email-notifications-for-responses-to-group-forms/my-groups.png)
 
-   ![Selecting your group](./media/no-email-notifications-for-responses-to-group-forms/selecting-group.png)
+3. Select the group for which you want to get email notifications.
 
-1. On the right side, you see the number of members in the group. Click that number, and then it opens the group email page in Outlook.
+   ![Selecting your group](./media/no-email-notifications-for-responses-to-group-forms/select-group.png)
+
+4. On the right side, you see the number of members in the group. Select that number, and then it opens the group email page in Outlook on the web.
 
    ![Selecting the number of members in the top-right](./media/no-email-notifications-for-responses-to-group-forms/number-of-members.png)
 
-1. In Outlook, on the right side of the number of members in the upper-right corner, select the gear icon.
+5. In Outlook on the web, select the **Edit** button above the group name.
 
-   ![Selecting the gear icon in the upper-right corner](./media/no-email-notifications-for-responses-to-group-forms/setting-icon.png)
+    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/no-email-notifications-for-responses-to-group-forms-1.png" alt-text="Select the ellipsis and then Edit group.":::
 
-1. Click **Edit group**.
+6. Select the **Let people outside the organization email the groups** and **Members will receive all group conversations and events ...** check boxes and then select **Save**.
 
-   ![Selecting Edit group action](./media/no-email-notifications-for-responses-to-group-forms/edit-group.png)
+    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/no-email-notifications-for-responses-to-group-forms-2.png" alt-text="Select the two checkboxes.":::
 
-1. Select the **Let people outside the organization email the group** and **Send all group conversations and events to members' inboxes** check boxes.
+    The global administrator can use these steps instead:
 
-   ![Selecting two check boxes](./media/no-email-notifications-for-responses-to-group-forms/check-boxes.png)
+    1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) and go to **Groups** > **Active groups**.
+    2. Select the appropriate group from the list, and then select the **Settings** tab.
+    3. Select the **Allow external senders to email this group** and **Send copies of group conversations and events to group members** check boxes.
 
-1. Click **Save**.
-1. Open the Form, click the ellipsis button (...) on the upper-right corner of your screen, select **Settings**, and then select the **Email notification of each response** check box.
+    ![Enable settings for global administrators](./media/no-email-notifications-for-responses-to-group-forms/active-groups.png)
 
-   ![Selecting the Email notification of each response check box](./media/no-email-notifications-for-responses-to-group-forms/notification-optin.png)
+7. Open the Form, select the ellipsis button (...) on the upper-right corner of your screen, select **Settings**, and then select the **Get email notification of each response** check box.
+
+    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/no-email-notifications-for-responses-to-group-forms-3.png" alt-text="Select the ellipsis button, then Settings, then Get email notification of each response.":::
 
 All the users in the group will receive email notifications when a response is submitted to the Form.

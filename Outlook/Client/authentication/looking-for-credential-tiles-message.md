@@ -1,15 +1,16 @@
 ---
 title: Looking for credential tiles when starting Outlook
 description: When you launch Microsoft Outlook 2013 or 2010, you receive a Looking for credential tiles message but the OK button is not available.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: tasitae, rakeshs
 appliesto:
 - Outlook 2013

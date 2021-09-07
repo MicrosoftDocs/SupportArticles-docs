@@ -1,16 +1,16 @@
 ---
 title: 0x80041015 error when you start an Office program
 description: Discusses that you receive a 0x80041015 error when you try to start a Microsoft Office 2013 or Microsoft Office 365 program. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: Office 365
+ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft 365 Apps for enterprise
 - Office 365 Home

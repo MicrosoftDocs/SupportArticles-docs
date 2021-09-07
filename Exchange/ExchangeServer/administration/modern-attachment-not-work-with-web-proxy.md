@@ -1,15 +1,16 @@
 ---
 title: Modern attachment doesn't work with web proxy
 description: Provides a workaround for an issue in which the modern attachment feature doesn't work when web proxy is used in Exchange Server 2016.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: robwhal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 search.appverid: 
 - MET150

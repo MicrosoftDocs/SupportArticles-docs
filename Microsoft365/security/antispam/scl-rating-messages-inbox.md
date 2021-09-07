@@ -1,12 +1,12 @@
 ---
 title: Messages that have an SCL rating of 5 or higher are delivered to the Inbox instead of to the Junk Email folder in Outlook in Exchange Online
 description: Describes expected behavior in Exchange Online in which messages that have an SCL of 5 or higher are delivered to the Inbox instead of to the Junk Email folder in Outlook.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot

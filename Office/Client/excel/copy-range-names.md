@@ -1,15 +1,15 @@
 ---
 title: Copy all range names programmatically
 description: Describes how to create and use a macro to copy all of the range names from the active workbook to another workbook in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2007

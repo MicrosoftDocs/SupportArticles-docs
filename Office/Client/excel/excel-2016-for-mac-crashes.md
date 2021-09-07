@@ -1,7 +1,7 @@
 ---
 title: Excel 2016 for Mac crashes
 description: Assists customers who are migrating from Office for Mac 32-bit to 64-bit after they experience a crash issue while using 32-bit  ODBC drivers.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho
 appliesto:
@@ -48,6 +48,4 @@ To determine whether your driver is 32-bit or 64-bit, follow these steps:
 
 For more information about compatible ODBC drivers, see [ODBC drivers that are compatible with Excel for Mac](https://support.office.com/article/odbc-drivers-that-are-compatible-with-excel-for-mac-9fa6bc7f-d19e-4f7f-9be4-92e85c77d712?ui=en-us&rs=en-us&ad=us).
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

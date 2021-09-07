@@ -1,15 +1,15 @@
 ---
 title: Excel statistical functions INTERCEPT
 description: Describes the Excel statistical function INTERCEPT for Excel 2003 and later.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007
@@ -40,8 +40,9 @@ The arguments, **known_y's** and **known_x's**, must be arrays or cell ranges th
 
 To illustrate the INTERCEPT function, create a blank Excel worksheet, copy the following table, select cell **A1** in your blank Excel worksheet, and then paste the entries so that the following table fills cells A1:D13 in your worksheet.
 
-|y-values|x-values|||
+|A|B|C|D|
 |---|---|---|---|
+|y-values|x-values|||
 |1|= 3 + 10^$D$3||Power of 10 to add to data|
 |2|=4 + 10^$D$3||0|
 |3|=2 + 10^$D$3|||

@@ -1,7 +1,7 @@
 ---
 title: Error (The app couldn't be downloaded) when you install add-ins using Microsoft Store on Exchange Server 2016
 description: Provides a solution to an issue in which you can't install add-ins using Microsoft Store on Exchange Server 2016
-author: TobyTu
+author: simonxjx
 ms.author: cmcgurk
 manager: dcscontentpm
 audience: ITPro
@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
   - CI 122584
 ms.reviewer: cmcgurk
 appliesto:

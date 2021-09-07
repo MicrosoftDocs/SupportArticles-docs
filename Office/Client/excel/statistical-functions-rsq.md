@@ -1,15 +1,15 @@
 ---
 title: Excel statistical functions RSQ
 description: Describes the Excel statistical function RSQ.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007
@@ -44,8 +44,9 @@ To illustrate the RSQ function, follow these steps:
 
 1. Create a blank Excel worksheet, and then copy the following table.
 
-   |1||= 3 + 10^$D$2|Power of 10 to add to data|
+   |A|B|C|D|
    |---|---|---|---|
+   |1||= 3 + 10^$D$2|Power of 10 to add to data|
    |2|=4 + 10^$D$2||0|
    |3|=2 + 10^$D$2|||
    |4|=5 + 10^$D$2|||

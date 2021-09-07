@@ -1,24 +1,36 @@
 - name: OneDrive for Business Troubleshooting
   href: ../onedrive-welcome.md
   items:
+  - name: Administration
+    items:
+    - name: Error when accessing OneDrive or Sharepoint
+      href: ../administration/error-accessing-onedrive-sharepoint.md
+    - name: Error Code 0x8004de40 when signing in to OneDrive
+      href: ../administration/error-0x8004de40-in-onedrive.md
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data
       href: ../lists-and-libraries/401-error-when-using-graph-api-to-access-data.md
     - name: Can't open online-only file error when opening a file in OneDrive
-      href: ../sync/cant-open-online-only-file.md
+      href: ../lists-and-libraries/cant-open-online-only-file.md
+    - name: Can't open OneDrive on images using Sysprep
+      href: ../lists-and-libraries/cannot-open-onedrive-on-images-using-sysprep.md
+    - name: File post-processing may take up to 24 hours
+      href: ../../SharePointOnline/lists-and-libraries/file-post-processing-takes-up-to-24-hours.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Security
     items:
     - name: Documents deleted by retention policy after workload is removed
-      href: ../sync/retention-policies-deleting-documents-after-workload-removal.md
+      href: ../security/retention-policies-deleting-documents-after-workload-removal.md
     - name: There is a problem with your account when opening documents
       href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search
     items:
     - name: Search doesn't provide results from another language
       href: ../../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-  - name: Set up
+  - name: Setup
     items:
+    - name: OneDrive for Business installation fails
+      href: ../setup/onedrive-for-business-installation-fails.md
     - name: Stop at "Setting up..." screen
       href: ../setup/onedrive-stopped-at-setting-up-screen.md
   - name: Sharing and Permissions
@@ -26,7 +38,13 @@
     - name: Credential prompts after resting mouse pointer over a user name
       href: ../../SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Restore OneDrive Sharing settings in O365 admin center
-      href: ../setup/restore-onedrive-share-settings-office365.md
+      href: ../sharing-and-permissions/restore-onedrive-share-settings-office365.md
+    - name: '"This item might not exist" error'
+      href: ../sharing-and-permissions/this-item-might-not-exist-error.md
+  - name: Storage
+    items:
+    - name: Check OneDrive site eligibility for increased storage
+      href: ../storage/check-storage-increase-eligibility.md
   - name: Sites
     items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
@@ -39,6 +57,8 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+    - name: Sync error “Sorry, OneDrive can’t add your folder right now” 
+      href: ../sync/cant-add-folder-right-now.md
     - name: Troubleshoot sync issues
       href: ../sync/troubleshoot-sync-issues.md
     - name: Upload blocked error in OneDrive

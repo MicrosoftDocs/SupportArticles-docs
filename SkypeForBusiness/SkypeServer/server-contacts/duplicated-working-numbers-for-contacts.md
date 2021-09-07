@@ -21,11 +21,11 @@ appliesto:
 
 ## Symptoms
 
-Assume that you have custom phone number normalization rules, and you don't use standard extensions. When you hover over a contact, and then click the drop-down menu under the **Call** option in Microsoft Skype for Business 2015 (Lync 2013), you see duplicated working numbers. 
+Assume that you have custom phone number normalization rules, and you don't use standard extensions. When you hover over a contact, and then click the drop-down menu under the **Call** option in Microsoft Skype for Business 2015 (Lync 2013), you see duplicated working numbers.
 
 ## Resolution
 
-To fix this issue, install the [Description of the security update for Skype for Business 2015 (Lync 2013): October 10, 2017](https://support.microsoft.com/help/4011179), and then apply the *RenormalizeContactModelPhoneNumbersBeforeDisplay* policy either as a Skype for Business Server In-Band policy or as a client policy in the client registry. 
+To fix this issue, install the latest updates, and then apply the *RenormalizeContactModelPhoneNumbersBeforeDisplay* policy either as a Skype for Business Server In-Band policy or as a client policy in the client registry.
 
 **Note** Lync 2013 was upgraded to Skype for Business in April 2015.
 

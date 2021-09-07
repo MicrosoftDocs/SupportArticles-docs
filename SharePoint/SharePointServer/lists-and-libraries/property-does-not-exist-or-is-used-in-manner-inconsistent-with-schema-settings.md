@@ -1,7 +1,7 @@
 ---
 title: Property doesn't exist or is used in a manner inconsistent with schema settings
 description: Describes Property doesn't exist or is used in a manner inconsistent with schema settings error. Provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint

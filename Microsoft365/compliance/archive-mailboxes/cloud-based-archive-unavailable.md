@@ -1,15 +1,16 @@
 ---
-title: (Your archive appears to be unavailable) in a hybrid deployment.
+title: Your archive appears to be unavailable error in a hybrid deployment.
 description: Describes a scenario in which users can't access a cloud-based archive mailbox by using Outlook Web App and can't update the archive mailbox in Outlook in a hybrid deployment. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- CSSTroubleshoot
+- 'Associated content asset: 4555324'
 ms.reviewer: chrisbur, jhayes
 appliesto: 
 - Exchange Online Archiving
@@ -21,14 +22,14 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Error (Your archive appears to be unavailable) when you try to access a cloud-based archive mailbox in a hybrid deployment
+# "Your archive appears to be unavailable" error when you try to access a cloud-based archive mailbox in a hybrid deployment
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 2860302
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [http://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Problem
 
@@ -62,9 +63,9 @@ For more information about how to update root certificates for a particular vers
 
 Rerun the Hybrid Configuration Wizard to update the deployment and resolve the issue. For more information about how to run the Hybrid Configuration Wizard, go to the following Microsoft websites:
 
-- Exchange 2013: [Manage a Hybrid Deployment](https://technet.microsoft.com/library/jj200791%28v=exchg.150%29.aspx)
-- Exchange 2010: [Manage a Hybrid Deployment](https://technet.microsoft.com/library/hh529933%28v=exchg.141%29.aspx)
+- Exchange 2013: [Manage a Hybrid Deployment](/previous-versions/exchange-server/exchange-150/jj200791(v=exchg.150))
+- Exchange 2010: [Manage a Hybrid Deployment](/previous-versions/office/exchange-server-2010/hh529933(v=exchg.141))
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

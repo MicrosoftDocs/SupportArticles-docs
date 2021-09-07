@@ -1,14 +1,16 @@
 ---
 title: Migration batch fails with error message "No active public folder mailboxes were found" at Complete-MigrationBatch command 
 description: This article describes an issue that migration batch will fail with error message "No active public folder mailboxes were found" at Complete-MigrationBatch command, provides a resolution.
-author: TobyTu
+author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.custom: CSSTroubleshoot
-ms.prod: Exchange Server
+ms.custom: 
+- Exchange Server
+- CSSTroubleshoot
+ms.prod: exchange-server-it-pro
 ms.topic: article
-ms.author: Bhalchandra.Atre
+ms.author: batre
 search.appverid: 
 - MET150
 appliesto:
@@ -26,9 +28,9 @@ You are migrating public folders from Microsoft Exchange Server 2019, 2016, or 2
 
 When you run the **Complete-MigrationBatch** command, the migration batch goes into a failed state and generates the following error message:
 
-![Get-MigrationBatch-command](./media/migrationbatch-fails-no-public-folder-mailboxes/Get-MigrationBatch-command.png)
+![Screenshot of Get-MigrationBatch-command](./media/migrationbatch-fails-no-public-folder-mailboxes/Get-MigrationBatch-command.png)
 
-![Complete-MigrationBatch-error-message](./media/migrationbatch-fails-no-public-folder-mailboxes/Complete-MigrationBatch-error-message.png)
+![Screenshot of Complete-MigrationBatch-error-message](./media/migrationbatch-fails-no-public-folder-mailboxes/Complete-MigrationBatch-error-message.png)
 
 ```
 "No active public folder mailboxes were found. This happens when no public folder mailboxes are provisioned or they are provisioned in 'HoldForMigration' mode."
@@ -40,4 +42,4 @@ This problem occurs because the public folder mailbox and associated user accoun
 
 ## Resolution
 
-To fix this problem, use [Active Directory Migration Tool](https://www.microsoft.com/download/details.aspx?id=56570) to move the AD account that is associated with the public folder mailbox to the same AD domain that hosts Exchange Server, and then run the **Complete-MigrationBatch** command again.
+To fix this problem, use [Active Directory Migration Tool](https://support.microsoft.com/help/4089459) to move the AD account that is associated with the public folder mailbox to the same AD domain that hosts Exchange Server, and then run the **Complete-MigrationBatch** command again.

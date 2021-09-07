@@ -1,8 +1,8 @@
 ---
 title: Excel cannot complete this task with available resources error in Excel 2010
 description: Provides information about this error and various steps you can take to resolve it depending on the scenario.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -24,7 +24,8 @@ appliesto:
 
 You receive the following error message:
 
-    Excel cannot complete this task with available resources. Choose less data or close other applications.
+> Excel cannot complete this task with available resources. Choose less data or close other applications.
+
 The error occurs when you:
 
 - Open or save an Excel workbook   

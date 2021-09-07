@@ -1,22 +1,23 @@
 ---
 title: Open Shared Calendar option is unavailable 
 description: Describes a scenario in which you cannot open a shared calendar in Outlook 2016 for Mac. Provides several workarounds.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: tasitae
 appliesto:
 - Outlook 2016 for Mac
 - Outlook for Mac for Office 365
 search.appverid: MET150
 ---
-# You cannot open a shared calendar in Outlook 2016 for Mac
+# You can't open a shared calendar in Outlook 2016 for Mac
 
 _Original KB number:_ &nbsp; 3007307
 
@@ -66,4 +67,14 @@ To work around this issue, use one of the following methods:
   1. On the **Outlook** menu, select **Preferences**.
   2. Select **General**.
   3. Clear the **Group similar folders, such as Inboxes, from different accounts** check box.
-  4. If you want, select the **Hide On My Computer folders** check box.
+  
+     > [!NOTE]
+     > If you're using Outlook 2019 for Mac, clear the **Show all mail account folders** check box.
+  5. If you want, select the **Hide On My Computer folders** check box.
+
+## More information
+
+- [Open/View Shared Calendars](https://outlook.uservoice.com/forums/924856-the-new-outlook-for-mac/suggestions/38980501-open-view-shared-calendars)
+- [The new Outlook for Mac](https://support.microsoft.com/office/6283be54-e74d-434e-babb-b70cefc77439)
+- [Shared calendars in "New outlook"](https://answers.microsoft.com/en-US/msoffice/forum/all/shared-calendars-in-new-outlook/7094d0fb-5675-41fc-9ea7-d76bbe43eb97?auth=1)
+- [Viewing People's Calendars in New Outlook for Mac](https://answers.microsoft.com/en-US/msoffice/forum/all/viewing-peoples-calendars-in-new-outlook-for-mac/04f94323-cf88-404a-98fe-d08ab31f32f6?auth=1)

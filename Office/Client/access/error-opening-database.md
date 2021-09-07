@@ -1,5 +1,5 @@
 ---
-title: Unable to open an Access database
+title: Unable to open an Access database on a server
 description: Fixes an issue in which you may receive a "file already in use" error message when you open an Access database.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -39,10 +39,11 @@ If doesn't have the Create permissions for the folder in which the database is l
 
 > [!NOTE]
 > The locking information file is:
+>
 > - *.ldb in Access 2003 and in earlier versions of Access
 > - *.laccdb in Access 2007/2010
 
-## Resolution
+## Workaround
 
 To prevent this behavior, make sure that all users who open the database have the Read, Write, and Create permissions for the folder in which the database is located.
 
@@ -50,12 +51,12 @@ Additionally, if you're using a security-enhanced Access database, make sure tha
 
 ## More Information
 
-In order to open a database in shared mode, the Microsoft Jet database engine must be able to create a locking information file (*.ldb or *.laccdb) in the same folder as the database itself.
+In order to open a database in shared mode, the Microsoft Jet database engine must be able to create a locking information file (`*.ldb`, or `*.laccdb`) in the same folder as the database itself.
 
-For more information about .ldb files, click Microsoft Access Help on the **Help** menu, type *sharing access database* in the Office Assistant or the Answer Wizard, and then click **Search** to view the content.
+For more information about the .ldb files, click Microsoft Access Help on the **Help** menu, type *sharing access database* in the Office Assistant or the Answer Wizard, and then click **Search** to view the content.
 
 ## References
 
-For additional information about .ldb files, see the following article:
+For more information about .ldb files, see the following article:
 
-[Introduction to lock files (.laccdb and .ldb) in Access](https://docs.microsoft.com/office/troubleshoot/access/lock-files-introduction)
+[Introduction to lock files (.laccdb and .ldb) in Access](lock-files-introduction.md)

@@ -48,8 +48,8 @@ To work around this issue as a Skype for Business administrator, associate the S
    
 For more information about these commands, go to the following Microsoft websites:
 
-- [How to publish Lync Server 2013 Web Services with Windows Server 2012 R2 Web application proxy](https://blogs.technet.com/b/dodeitte/archive/2013/10/29/how-to-publish-lync-server-2013-web-services-with-windows-server-2012-r2-web-application-proxy.aspx)   
-- [How to: Configure a port with an SSL certificate](https://msdn.microsoft.com/library/ms733791.aspx)   
+- [How to publish Lync Server 2013 Web Services with Windows Server 2012 R2 Web application proxy](/archive/blogs/dodeitte/how-to-publish-lync-server-2013-web-services-with-windows-server-2012-r2-web-application-proxy)   
+- [How to: Configure a port with an SSL certificate](/dotnet/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate)   
 
 ## More Information
 
@@ -61,8 +61,6 @@ This issue occurs when the following conditions are true:
 > [!NOTE]
 > If you need help configuring ADFS 3.0, we recommend that you contact ADFS 3.0 technical support. We also recommended that you run the most recent versions of the ADFS 3.0 components. 
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -52,7 +52,7 @@ Test-CsFederatedPartner -TargetFqdn ocsedge.contoso.com -Domain fabrikam.com
 
 For more details on the Test-CsFederatedPartner Lync Server PowerShell cmdlet:
 
-[Test-CsFederatedPartner](https://technet.microsoft.com/library/gg398281.aspx)
+[Test-CsFederatedPartner](/powershell/module/skype/Test-CsFederatedPartner)
 
 Using the Test-CsFederatedPartner Lync Server PowerShell cmdlet with the -ProxyFQDN parameter as described in the Cause section of this article will provide the results similar to the information listed below in the Office Communications Server 2007 R2 Edge Server SipStack logging:
 

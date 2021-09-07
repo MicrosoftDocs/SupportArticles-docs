@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: jmartin
 appliesto:
 - Exchange Server 2010 Enterprise
@@ -59,4 +60,4 @@ This behavior is by design. The user must create a password that meets these com
 
 ## More information
 
-For more information, see the [Exchange ActiveSync policy engine overview](https://technet.microsoft.com/library/dn282287.aspx).
+For more information, see the [Exchange ActiveSync policy engine overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282287(v=ws.11)).

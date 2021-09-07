@@ -1,14 +1,15 @@
 ---
 title: HTTP 403 when you start Exchange Management Shell
 description: Provides a resolution to fix an issue in which you receive an HTTP status code of 403 when you start Exchange Management Shell on an Exchange Server 2010 Client Access server.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 ms.reviewer: wduff
 search.appverid: 

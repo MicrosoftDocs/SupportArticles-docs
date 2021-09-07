@@ -1,7 +1,7 @@
 ---
 title: A user with this name could not be found when resetting a password
 description: Describes an issue that occurs when you try to reset a password for a user in Microsoft Office 365. A resolution is provided.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office 365 User and Domain Management
@@ -32,7 +32,7 @@ To resolve this issue, use Microsoft Azure Active Directory Module for Windows P
 1. Start Azure Active Directory Module for Windows PowerShell, and connect to Azure Active Directory.
 
    > [!NOTE]
-   > For more info about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website: [Azure Active Directory Cmdlets](https://aka.ms/aadposh).
+   > For more info about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website: [Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
 1. Change the UPN of the user to the default domain. To do this, run the following command:
 

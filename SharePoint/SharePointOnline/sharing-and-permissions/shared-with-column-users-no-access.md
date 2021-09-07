@@ -1,7 +1,7 @@
 ---
 title: Shared With column displays users who no longer have access to a document
 description: This article explains an issue where the Shared With column displays users who no longer have access to a document in SharePoint Online.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -29,7 +29,7 @@ Consider the following scenario.
 
 ## Solution
 
-To avoid this issue, [hide the **Shared with** column](https://support.microsoft.com/office/show-or-hide-columns-in-a-list-or-library-b820db0d-9e3e-4ff9-8b8b-0b2dbefa87e2) and then determine who a file is shared with by using the [Manage Access panel](https://support.office.com/article/see-who-a-file-is-shared-with-in-onedrive-or-sharepoint-51bb79a9-b696-410d-a7a7-c320e541272d), audit logs, or the [site sharing report](https://docs.microsoft.com/sharepoint/sharing-reports).
+To avoid this issue, [hide the **Shared with** column](https://support.microsoft.com/office/show-or-hide-columns-in-a-list-or-library-b820db0d-9e3e-4ff9-8b8b-0b2dbefa87e2) and then determine who a file is shared with by using the [Manage Access panel](https://support.office.com/article/see-who-a-file-is-shared-with-in-onedrive-or-sharepoint-51bb79a9-b696-410d-a7a7-c320e541272d), audit logs, or the [site sharing report](/sharepoint/sharing-reports).
 
 ## More information
 

@@ -1,8 +1,8 @@
 ---
 title: Cannot continue error when you start the Office 365 Desktop Setup Tool 
 description: Describes a scenario in which you receive an error message when you try to start the Office 365 Desktop Setup Tool. Provides a resolution.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -16,19 +16,19 @@ appliesto:
 - Office 365 User and Domain Management
 ---
 
-# "Cannot continue" error when you start the Office 365 Desktop Setup Tool: 
+# Cannot continue error when you start the Office 365 Desktop Setup Tool
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 
-When you try to start the Office 365 Desktop Setup Tool, you receive the following error message: 
+When you try to start the Office 365 Desktop Setup Tool, you receive the following error message:
 
-    Cannot continue. The application is improperly formatted. Contact the application vendor for assistance.
+> Cannot continue. The application is improperly formatted. Contact the application vendor for assistance.
 
 ![Screenshot of Cannot continue. The application is improperly formatted. Contact the application vendor for assistance error message ](./media/error-when-start-desktop-setup-tool/cannot-start-app.jpg)
 
-If you click **Details** in the dialog box, you receive a detailed error message that's like the following: 
+If you click **Details** in the dialog box, you receive a detailed error message that's like the following:
 
 PLATFORM VERSION INFO
 

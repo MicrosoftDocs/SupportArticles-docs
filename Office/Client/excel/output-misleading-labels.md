@@ -1,15 +1,15 @@
 ---
 title: Misleading labels in the output of Excel Analysis ToolPak t-Test tools
 description: Discusses the problem that the Analysis ToolPak t-Test tools give misleading labels in the output. You may also notice that the t-Test. Paired Two Sample for Means tool gives incorrect results.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2003
@@ -38,7 +38,7 @@ Problems with misleading labels are illustrated and discussed in this article.
 
 To illustrate the t-Test tools, create a blank Excel worksheet, copy the following table, and then select cell A1 in your blank Excel worksheet. Then, paste the entries so that the following table fills cells A1:C20 in your worksheet.
 
-||||
+|A|B|C|
 |---|---|---|
 |200|220||
 |190|210||

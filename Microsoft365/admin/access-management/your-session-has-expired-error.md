@@ -1,7 +1,7 @@
 ---
 title: Your session has expired in Office Online
 description: If you begin IP address enforcement for OneDrive for Business, you'll receive a Your session has expired error in Office Online after 15 minutes.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office apps for the web
 ---
@@ -35,7 +35,7 @@ You can determine whether you're using IP address enforcement in the following 
 - See whether the **Allow access only from specific IP address locations** check box is selected in your OneDrive admin portal ([https://admin.onedrive.com/?v=AccessPolicySettings](https://admin.onedrive.com/?v=AccessPolicySettings)).    
 - Check if the **IPAddressEnforcement** parameter value is set to **True**. To do this, follow these steps:   
   1. Download and install [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588).     
-  1. In the SharePoint Online Management Shell module, connect to the SharePoint Online admin center by using the [Connect-SPOService](https://go.microsoft.com/fwlink/?linkid=873059) cmdlet. For example, run the following cmdlet: 
+  1. In the SharePoint Online Management Shell module, connect to the SharePoint Online admin center by using the [Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice) cmdlet. For example, run the following cmdlet: 
 
         ```powershell
         Connect-SPOService -URL https://contoso-admin.sharepoint.com
@@ -65,8 +65,8 @@ Set-SPOTenant -IPAddressWACTokenLifetime 20
 
 For more information, see the following articles:  
 
-- [Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps)    
-- [Manage SharePoint Online with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell)    
+- [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)    
+- [Manage SharePoint Online with Office 365 PowerShell](/office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell)    
 
 ## More Information
 

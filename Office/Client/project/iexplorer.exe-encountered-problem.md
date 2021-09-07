@@ -1,8 +1,8 @@
 ---
 title: Iexplorer.exe encountered a problem error when viewing timesheet in PWA
 description: Describes an error message that you receive when you try view a timesheet in Microsoft Project Web Access in Internet Explorer when you have the Google Toolbar installed on your computer.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -23,19 +23,16 @@ appliesto:
 ##  Symptoms
 
 When you try to view a timesheet in Microsoft Project Web Access, Microsoft Internet Explorer quits, and you receive the following error message:
- 
-    Iexplorer.exe has encountered a problem and needs to close
+
+> Iexplorer.exe has encountered a problem and needs to close
 
 When you click **more information**, you receive the following error message where **x.x.xxxx.xxxx** is the version of Internet Explorer, and **yyyyyyy** is the offset:
 
-    AppName: iexplore.exe
-
-    AppVer: x.x.xxxx.xxxx
-    ModName: pjgrid.ocx
-
-    ModVer: 9.0.2000.224
-
-    Offset: yyyyyyy
+> AppName: iexplore.exe  
+> AppVer: x.x.xxxx.xxxx  
+> ModName: pjgrid.ocx  
+> ModVer: 9.0.2000.224  
+> Offset: yyyyyyy
 
 ##  Cause
 

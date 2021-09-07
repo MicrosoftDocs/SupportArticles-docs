@@ -1,7 +1,7 @@
 ---
 title: OneDrive for Business stopped at "Setting up..." screen
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 2/20/2020
 audience: Admin
@@ -40,7 +40,7 @@ See the Microsoft Knowledge Base article ["Setting up..." messages in the Micros
 
 If the health of all affected services appears valid, and if more than 24 hours have passed since you first saw this issue, contact Office 365 Technical Support after performing the other actions in this article.
 
-### Remove and readd licenses
+### Remove and read licenses
 
 In some situations, the user's license might not have been assigned correctly. This reason alone can cause the behavior. We recommend that you remove and readd the OneDrive and/or SharePoint license assigned to the user. To do so perform the below steps:
 1.	Sign in to portal.office.com with an admin account.
@@ -58,7 +58,7 @@ Due to the connection between OneDrive and SharePoint, it is necessary for users
 > [!NOTE]
 > In this situation, the same "Setting up..." message may also appear for SharePoint.
 
-In order to verify if the user has a current profile created within SharePoint, perform the following steps:
+To verify if the user has a current profile created within SharePoint, perform the following steps:
 
 1.	Sign in to portal.office.com with an admin account.
 2.	Select **Admin** to open the Office 365 admin center.
@@ -70,7 +70,7 @@ If the profile doesn't exist, perform a sync from the Active Directory. You can 
 
 ### Check Personal Site Capabilities
 
-Another reason for provisioning issues on OneDrive sites is the lack of enough capabilities to the site to be provisioned. This value can be found within the user's profile in SharePoint. For more information about the Personal Site Capabilities property and what each number represents, see the Microsoft support article [PersonalSiteCapabilities enumeration](https://docs.microsoft.com/previous-versions/office/sharepoint-csom/jj163383%28v%3Doffice.15%29).
+Another reason for provisioning issues on OneDrive sites is the lack of enough capabilities to the site to be provisioned. This value can be found within the user's profile in SharePoint. For more information about the Personal Site Capabilities property and what each number represents, see the Microsoft support article [PersonalSiteCapabilities enumeration](/previous-versions/office/sharepoint-csom/jj163383%28v%3Doffice.15%29).
 
 To perform this verification and/or change of the value follow the below steps:
 1.	Sign in to portal.office.com with an admin account.
@@ -104,31 +104,32 @@ In some situations, the OneDrive site might have already been provisioned but th
 
 If you have the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) (which contains the Windows PowerShell module to manage SharePoint Online), you can verify the site status and attempt to give user the ownership of their OneDrive for Business personal site.
 
-
-- To verify that the site exists, run the following PowerShell command:<br/>
-    ```
+- To verify that the site exists, run the following PowerShell command:
+    
+    ```powershell
     Get-SPOSite -Site https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com 
     ```
-    [Get-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/get-sposite?view=sharepoint-ps )
+    
+    [Get-SPOSite documentation](/powershell/module/sharepoint-online/get-sposite?view=sharepoint-ps&preserve-view=true)
 
 - To attempt to restore ownership, run the following PowerShell command: 
-    ```
+    
+    ```powershell
     Set-SPOSite -Identity https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com -Owner user@contoso.onmicrosoft.com 
     ```
-    [Set-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps)
-
+    
+    [Set-SPOSite documentation](/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps&preserve-view=true)
 
 ### Run a self-diagnostics tool
 
-Office 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
 
-To do this, follow these steps:
-1.	Navigate to the Office 365 admin center and select **Need help?** 
-2.	In the search bar type "Diag:" to see all the available diagnostics.
-3.	The "Diag: OneDrive Provisioning" diagnostic will perform a large range of verifications.
-![Search the diagnostics library.](./media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-2.png)
+To do this, select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
 
- 
+> [!div class="nextstepaction"]
+> [Run Tests: OneDrive Provisioning](https://aka.ms/PillarOneDriveProvisioning)
+
+The diagnostic will perform a large range of verifications.
 
 ### Need More Help?
 

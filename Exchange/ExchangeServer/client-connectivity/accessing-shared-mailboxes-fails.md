@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 113906
 - CSSTroubleshoot
 ms.reviewer: cmcgurk
@@ -48,7 +49,7 @@ To fix this problem, use either of the following methods (but only one).
 
 ### Method 1:  Create a mailbox for the service account
 
-Use the Exchange Admin Center or Exchange Management Shell to create a mailbox for the service account. For more information about how to create a mailbox for an existing user, see [Create user mailboxes in Exchange Server](https://docs.microsoft.com/Exchange/recipients/create-user-mailboxes?view=exchserver-2019).
+Use the Exchange Admin Center or Exchange Management Shell to create a mailbox for the service account. For more information about how to create a mailbox for an existing user, see [Create user mailboxes in Exchange Server](/Exchange/recipients/create-user-mailboxes).
 
 ### Method 2:  Add a primary SMTP address to the proxyAddresses attribute
 
@@ -63,7 +64,7 @@ Add a primary SMTP address to the proxyAddresses attribute for the service accou
 7. Find the **proxyAddresses** attribute, and then select **Edit**.
 8. In the **Value to add** text box, add the following text to set a primary SMTP address, and then select the **Add** button:
 
-   **SMTP:serviceaccount01@contoso.com**
+   **SMTP:serviceaccount01\@contoso.com**
 
 9. Select **OK** two times, and then close Active Directory Users and Computers.
 

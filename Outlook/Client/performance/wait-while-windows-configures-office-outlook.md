@@ -1,15 +1,16 @@
 ---
 title: Please wait while Windows configures Microsoft Office 64-bit Components 2013 when starting Outlook 2013
 description: Describes an issue that occurs when the Windows Search Service isn't installed on the computer.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: tasitae
 appliesto:
 - Outlook 2013

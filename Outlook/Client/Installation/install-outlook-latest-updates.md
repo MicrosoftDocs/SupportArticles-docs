@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
+- Outlook for Windows
 - CI 116784
 - CSSTroubleshoot
 ms.reviewer: aruiz, gregmans, tasitae
@@ -223,10 +224,6 @@ The following hotfix packages dated **February 2013** (or later versions) requir
 **Outlook (global) update**
 
 [3118303](https://support.microsoft.com/help/3118303) MS16-107: Description of the security update for Outlook 2007: September 13, 2016
-
-**Outlook (US English) update**
-
-[2687329](https://support.microsoft.com/help/2687329) Description of the Outlook 2007 hotfix package (Outlook-en-us.msp): August 28, 2012
 
 **Outlook Junk Email Filter update**
 

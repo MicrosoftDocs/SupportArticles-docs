@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: hafizk, jmartin
 appliesto:
 - Exchange Server 2016 Enterprise Edition
@@ -50,21 +51,31 @@ To resolve this issue, follow these steps:
    - **maxAllowedContentLength** (value in bytes)
    - **maxReceivedMessageSize** (value in bytes)
 6. Stop and then restart the **MSExchangeOWAAppPool** application pool.
-7. Stop and then restart the**MSExchangeServicesAppPool** application pool.
+7. Stop and then restart the **MSExchangeServicesAppPool** application pool.
+8. Restart IIS on the Exchange server by using either of the following methods:
+
+   - Open IIS Manager, select the server, and in the **Actions** pane, click **Restart**.
+
+   - Run the following commands from an elevated command prompt (a Command Prompt window you open by selecting **Run as administrator**):
+
+     ```console
+     net stop w3svc /y
+     ```
+
+     ```console
+     net start w3svc
+     ```
 
 > [!NOTE]
 > Steps 3-6 must be performed in both of the following locations:
-
-- The Client Access server on which the Web.config files are located in the following path:
-
-   *%ExchangeInstallPath%\FrontEnd\HttpProxy*
-
-- The Mailbox server on which the Web.config files are located in the following path:
-
-  *%ExchangeInstallPath%\ClientAccess*
+>
+> - The Client Access server on which the Web.config files are located under *%ExchangeInstallPath%\FrontEnd\HttpProxy*.
+> - The Mailbox server on which the Web.config files are located under *%ExchangeInstallPath%\ClientAccess*.
 
 ## More information
 
-For more information about client-specific message size limits, see the following Microsoft Exchange website:
+For more information about client-specific message size limits, see the following articles:
 
-[Configure Client-Specific Message Size Limits on Client Access Servers](https://technet.microsoft.com/library/hh529949%28v=exchg.150%29.aspx)
+- [Configure Client-Specific Message Size Limits on Client Access Servers](/exchange/configure-client-specific-message-size-limits-exchange-2013-help)
+- [Configure client-specific message size limits](/exchange/architecture/client-access/client-message-size-limits)
+

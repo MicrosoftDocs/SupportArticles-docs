@@ -1,16 +1,16 @@
 ---
 title: The following connection failed to refresh in Excel 2013
 description: Provides a workaround for an issue in which you receive an error message when you upload a pivot table to a WAC server and then update the data connection or change the PivotTable fields. This issue occurs when the pivot table references external data in Excel 2013.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2013
 ---

@@ -17,6 +17,9 @@ appliesto:
 
 # New features in the firmware update for Polycom VVX IP phones
 
+> [!IMPORTANT]
+> Skype for Business Online will be retired on July 31, 2021. If you haven't upgraded your Skype for Business Online users to Microsoft Teams before that date, they will be automatically scheduled for an [assisted upgrade](/microsoftteams/upgrade-assisted). If you want to upgrade your organization to Teams yourself, we strongly recommend that you begin planning your upgrade path today. Remember that a successful upgrade aligns technical and user readiness, so be sure to leverage our [upgrade guidance](/microsoftteams/upgrade-start-here) as you navigate your journey to Teams.
+
 ## Introduction 
 
 This article describes the features of the firmware update for the Polycom VVX Phone for Skype for Business (IP phone) that supports Microsoft Skype for Business Online.
@@ -24,7 +27,7 @@ This article describes the features of the firmware update for the Polycom VVX 
 
 ### Firmware upgrade options
 
-Phones that are certified for the Skype for Business Cloud PBX add-on are configured to download and install new firmware automatically when updates are available. For manual control of firmware upgrades, see [Set-CsIPPhonePolicy](https://technet.microsoft.com/library/mt629497.aspx).
+Phones that are certified for the Skype for Business Cloud PBX add-on are configured to download and install new firmware automatically when updates are available. For manual control of firmware upgrades, see [Set-CsIPPhonePolicy](/powershell/module/skype/Set-CsIPPhonePolicy).
 
 To avoid affecting core business hours, the phones receive firmware updates during off hours for specific regions. The updates are also delivered on a staggered schedule to have a minimal effect on traffic bandwidth.
 
@@ -63,15 +66,13 @@ The following table lists the features that are provided in this firmware update
 |QoE|Quality of Experience (QoE) upload metrics|
 |Modern authentication support|For improved and secured authentication against Skype for Business and Microsoft Exchange Server|
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## More information
 
 - [Polycom Phones FAQ](https://www.polycom.com/polycom-phones-and-microsoft-teams-faq.html)
 - [OAuth 2.0 and third-party application ID](https://techcommunity.microsoft.com/t5/skype-for-business-blog/oauth-2-0-and-third-party-application-id-timeline-extended-to/ba-p/482876)
-- [IP Phones](https://docs.microsoft.com/skypeforbusiness/certification/devices-ip-phones)
-- [Device update considerations](https://docs.microsoft.com/skypeforbusiness/what-is-phone-system-in-office-365/getting-phones-for-skype-for-business-online/deploying-skype-for-business-online-phones#step-4---device-update-considerations)
+- [IP Phones](/skypeforbusiness/certification/devices-ip-phones)
+- [Device update considerations](/skypeforbusiness/what-is-phone-system-in-office-365/getting-phones-for-skype-for-business-online/deploying-skype-for-business-online-phones#step-4---device-update-considerations)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

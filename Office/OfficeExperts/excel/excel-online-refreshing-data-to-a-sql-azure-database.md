@@ -30,10 +30,10 @@ This article describes how to connect to Microsoft SQL Azure Database and refres
    ![Selecting Other/Advanced](./media/excel-online-refreshing-data-to-a-sql-azure-database/data-connection-wizard.png)
 
 1. Select **SQL Server Native Client 11.0**.
-   
+
    > [!NOTE]
-   > If you don't have SQL Server Native Client 11.0, you have to install it from [www.microsoft.com/en-us/download/details.aspx?id=35580](https://www.microsoft.com/en-us/download/details.aspx?id=35580).
-   
+   > If you don't have [SQL Server Native Client 11.0](/sql/relational-databases/native-client/applications/installing-sql-server-native-client?view=sql-server-ver15).
+
    ![Selecting SQL Server Native Client 11.0](./media/excel-online-refreshing-data-to-a-sql-azure-database/sql-server-native-client.png)
 
 1. Enter your SQL Azure Database name, and then click **OK**.

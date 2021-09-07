@@ -1,16 +1,17 @@
 ---
 title: Listing some issues for Outlook
 description: This article lists Outlook related issues.
-author: AmandaAZ
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-weizhu
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CSSTroubleshoot
 appliesto: 
 - Microsoft Outlook

@@ -1,7 +1,7 @@
 ---
 title: Using symlink or drivemap to C:\users causes Teams to open with white screen
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -33,9 +33,5 @@ When Microsoft Teams is installed to Program Files using installation scripts ra
 ## More information
 
 This is by design. Make sure you install the application in the default location: `user\Appdata`. If the mapping must exist, use the web version of Microsoft Teams instead.
-
-
-
-## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

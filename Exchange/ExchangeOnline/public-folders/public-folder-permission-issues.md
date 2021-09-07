@@ -1,14 +1,15 @@
 ---
 title: How to diagnose and fix public folder permission issues
 description: This article helps you diagnose and fix public folder permission-related issues.
-author: TobyTu
+author: simonxjx
 ms.author: batre
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 115162
 - CSSTroubleshoot
 ms.reviewer: batre
@@ -17,7 +18,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # How to diagnose and fix public folder permission issues
 
 ## Symptoms
@@ -52,11 +52,11 @@ This issue typically occurs because the public folder hierarchy replication isn'
 
     This cmdlet returns the following output:
 
-    ```
+    ```output
     There is no existing permission entry found for user: user1.
         + CategoryInfo          : NotSpecified: (:) [Get-PublicFolderClientPermission], UserNotFoundInPermissionEntryExcep
        tion
-        + FullyQualifiedErrorId : [Server=DM6PR01MB4009,RequestId=2559dc80-9fa2-42d6-bf86-fac92f561891,TimeStamp=3/19/2020
+        + FullyQualifiedErrorId : [Server=<*ServerName*>,RequestId=<*RequestId*>,TimeStamp=3/19/2020
         5:22:40 AM] [FailureCategory=Cmdlet-UserNotFoundInPermissionEntryException] 91D3F338,Microsoft.Exchange.Managemen
       t.StoreTasks.GetPublicFolderClientPermission
     + PSComputerName        : outlook.office365.com
@@ -102,26 +102,25 @@ If the permissions are still not synchronized or you meet an error when you forc
 3. If you determine that the hierarchy information isn't the same, run the following command to view the time of the last sync:
 
     ```Powershell
-    $S.AssistantInfo.LastAttemptedSyncTime.LocalTime
+    $s.SyncInfo.LastAttemptedSyncTime.LocalTime
     ```
 
     This command indicates the last time that the sync failed. A nonsense value indicates that sync has never failed.
 
     ```Powershell
-    $s.AssistantInfo.LastFailedSyncTime.LocalTime
+    $s.SyncInfo.LastFailedSyncTime.LocalTime
     ```
 
     The following command provides a detailed failure message from the last sync failure. A blank output indicates that sync has never failed:
 
     ```Powershell
-    $s.AssistantInfo.LastSyncFailure
+    $s.SyncInfo.LastSyncFailure
     ```
 
-    You can also explore other values of AssistantInfo, such as SyncInfo and HierarchyInfo blocks.
+    You can also explore other values such as AssistantInfo and HierarchyInfo blocks.
 
 If you have to contact Microsoft Support, export the report to XML format, and then send it to the Support agent. To export the report, run the following command (for example):
 
 ```powershell
 Get-PublicFolderMailboxDiagnostics <pf mailbox failing to sync> -IncludeHierarchyInfo |Export-Clixml epf.xml
 ```
-

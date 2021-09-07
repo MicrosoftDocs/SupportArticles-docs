@@ -1,8 +1,8 @@
 ---
 title: Image DPI is changed after you print to PDF from Word 2013 or 2010
 description: Works around an issue in which the image DPI is changed after you convert the documents to PDF files by using PDF printer.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -37,6 +37,8 @@ The following table shows the Default print quality in Word 2013 and Word 2010:
 |--|--|
 |Word 2013|Medium|
 |Word 2010|High|
+|||
+
 Note If the printer can only handle a single tile at the time, the print quality is automatically set to Low.
 
 ##  Workaround

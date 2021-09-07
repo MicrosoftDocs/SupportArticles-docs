@@ -1,14 +1,15 @@
 ---
 title: Can't install Calendar Printing Assistant
 description: Works around an issue in which you cannot install the Calendar Printing Assistant for Outlook when you have Outlook 2013 and later versions installed.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CSSTroubleshoot
 search.appverid: 
 - MET150
@@ -53,7 +54,7 @@ To modify the registry subkey manually, follow these steps:
 
       `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Common\ProductVersion`
 
-   - For a 64-bit version of Office that is installed on a 64-bit version of Windows:
+   - For a 32-bit version of Office that is installed on a 64-bit version of Windows:
 
       `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Common\ProductVersion`
 

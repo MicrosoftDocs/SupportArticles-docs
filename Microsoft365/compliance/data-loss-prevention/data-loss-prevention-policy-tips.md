@@ -150,12 +150,12 @@ To resolve this issue, carefully follow the steps in the "Resolution" section of
 
 ## Invalid test data
 
-When you evaluate the **Instance count** and **Match accuracy** of the DLP policy rule, the test data that's being used is not valid based on the information in [What the sensitive information types look for](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for?redirectSourcePath=%252fen-US%252farticle%252fWhat-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b).
+When you evaluate the **Instance count** and **Match accuracy** of the DLP policy rule, the test data that's being used is not valid based on the information in [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for).
 
 ![Invalid Instance count and Match accuracy values](./media/troubleshooting-data-loss-protection-policy-tips/13.png)
 
 ## References
 
-- [Overview of data loss prevention policies](https://docs.microsoft.com/office365/securitycompliance/data-loss-prevention-policies)
-- [Send email notifications and show policy tips for DLP policies](https://docs.microsoft.com/office365/securitycompliance/use-notifications-and-policy-tips)
-- [What the sensitive information types look for](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for?redirectSourcePath=%252fen-US%252farticle%252fWhat-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b)
+- [Overview of data loss prevention policies](/office365/securitycompliance/data-loss-prevention-policies)
+- [Send email notifications and show policy tips for DLP policies](/office365/securitycompliance/use-notifications-and-policy-tips)
+- [What the sensitive information types look for](/office365/securitycompliance/what-the-sensitive-information-types-look-for)

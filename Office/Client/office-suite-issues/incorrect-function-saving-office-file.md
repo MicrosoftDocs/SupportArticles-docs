@@ -1,16 +1,16 @@
 ---
 title: Incorrect function when saving an Office file to a CD-RW or a DVD/CD-RW drive
 description: Describes an issue when you try to save a file in an Office program to a CD-RW, or a DVD/CD-RW drive, the file is not saved and you receive the "Incorrect function" error message.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Office
 ---
@@ -45,10 +45,6 @@ To work around this behavior, install a third-party CD-ROM recording program. A 
 For more information about how to do this with your third-party CD-ROM recording program, look at the documentation for the program.
 
 ## More Information
-
-For more information about the CD-ROM writing function that is available in some Microsoft Windows operating systems, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[317525](https://support.microsoft.com/help/317525) Description of the CD-ROM recording feature in Windows Server 2003
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 

@@ -71,7 +71,7 @@ You might also receive the error message when you type a number that corresponds
 5. In the right pane, double-click **Create form in Design view**.
 6. Add a **ComboTest** combo box to the form, and then set the properties as follows:
    
-   |||
+   |Property|Value|
    |---|---|
    |Name:|ComboTest|
    |Bound Column:|1|

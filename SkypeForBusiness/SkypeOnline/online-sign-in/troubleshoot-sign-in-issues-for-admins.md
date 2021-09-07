@@ -1,14 +1,15 @@
 ---
 title: Troubleshoot sign-in issues for admins
 description: Helps Office 365 administrators troubleshoot and solve sign-in issues with Skype for Business Online.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: skype-for-business
 localization_priority: Normal
 ms.custom:
+- CI 150322
 - CSSTroubleshoot
 search.appverid: 
 - MET150
@@ -41,14 +42,15 @@ If the issue still exists, [contact support](#contact-support).
 
 Check that the affected users have a valid Skype for Business license with the following steps:
 
-1. Go to **Admin** > **Office 365** > **Users and groups**.
-1. Choose the name of the user whose licensing status you want to check, and then click **Edit**![Screenshot of Edit icon](./media/troubleshoot-sign-in-issues-for-admins/edit-icon.png).
-1. Verify that the user is licensed for Skype for Business Online.
+1. Sign in at <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">admin.microsoft.com</a> with your admin account.
+2. Go to **Users** > **Active users**, select the user that you want to check the license status.
+3. In the right pane, select **Licenses and Apps**.
+4. Verify that the user is licensed for Skype for Business Online.
 
     ![Screenshot of licensed users](./media/troubleshoot-sign-in-issues-for-admins/verify-user-licensed.png)
 
     Your user license screen may be different from this example.
-1. Wait 30 minutes, and then ask the user to try signing in again.
+5. Wait 30 minutes, and then ask the user to try signing in again.
 
 If this method doesn't resolve your issue, [sign in on another device](#sign-in-on-another-device).
 
@@ -104,19 +106,17 @@ If you're using the desktop version of Skype for Business, find out if it's Skyp
 
 Choose your version of Skype for Business:
 
-- [Lync 2010](#update-lync-2010)
 - [Skype for Business 2015](#update-skype-for-business-2015)
 - [Skype for Business Windows Store app](#update-skype-for-business-windows-store-app)
 
-###### Update Lync 2010
-
-Make sure that you have the most current version of the [Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177).
-
-If the issue still exists, go to the [Office 365 Desktop Setup (Lync 2010)](#office-365-desktop-setup-lync-2010) section.
-
 ###### Office 365 Desktop Setup (Lync 2010)
 
-Make sure that you have the most current version of the [Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177).
+Make sure that **Microsoft Online Services Sign-in Assistant** is running on Windows Services by following these steps:  
+(These steps are for Windows 10)
+
+1. Right-click the **Start** button and select **Run**.
+2. Type `services.msc` and select **OK**.
+3. In the **Services** window, check whether the **Status** of **Microsoft Online Services Sign-in Assistant** is listed as **Running**.
 
 ###### Delete Lync 2010 sign-in information
 

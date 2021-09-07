@@ -24,8 +24,8 @@ appliesto:
 
 The Lync Server Enable-CsAdForest command will fail under the following circumstances and return the error listed below:
 
-- When used as a Lync Server active directory preparation step for an Office Communications Server and Lync Server migration coexistence scenario   
-- When run in an active directory domain that does not host the pre-existing Office Communications Server RTC Universal security groups   
+- When used as a Lync Server active directory preparation step for an Office Communications Server and Lync Server migration coexistence scenario
+- When run in an active directory domain that does not host the pre-existing Office Communications Server RTC Universal security groups
 
 ```adoc
 PS C:\Users\Administrator.SERVER01> Enable-CsAdForest
@@ -46,25 +46,25 @@ The Enable-CsAdForest Lync Server command is designed to run from the Active Dir
 
 The Enable-CsAdForest Lync Server command has to be directed to the Active Directory Domain Services domain that hosts the pre-existing RTC Universal security groups for the forest using the -GroupDomain parameter. As listed below:
 
-**Enable-CsAdForest -GroupDomain domain.contoso.com**
+`Enable-CsAdForest -GroupDomain domain.contoso.com`
 
 ## More Information
 
 The Lync Server Get-CsADForest command will not reveal any information that is related to the Office Communications Server forest preparation. The Office Communications Server command-line tool LcsCmd.exe can be used with the following parameters to provide an HTML report that will disclose the Active Directory Domain Services domain that hosts the pre-existing RTC Universal security groups for the forest. As listed below:
 
-**LcsCmd /forest:<forest FQDN> /action:CheckForestPrepState**
+`LcsCmd /forest:<forest FQDN> /action:CheckForestPrepState`
 
 The Office Communications Server LcsCmd.exe command listed above will provide a path location for the CheckForestPrepState HTML report that is similar to the one listed below:
 
-"C:\Users\ADMINISTRATOR\AppData\Local\Temp\2\Forest_CheckForestPrepState[YYYY_MM_DD][HH_MM_SS].html" 
+"C:\Users\ADMINISTRATOR\AppData\Local\Temp\2\Forest_CheckForestPrepState[YYYY_MM_DD][HH_MM_SS].html"
 
 For more details on using the Lync Server Enable-CsAdForest PowerShell cmdlet:
 
-[Enable-CsAdForest](https://technet.microsoft.com/library/gg425713.aspx)
+[Enable-CsAdForest](/powershell/module/skype/Enable-CsAdForest)
 
 For more details on using the Office Communications Server LcsCmd.exe CheckForestPrepState command:
 
 Microsoft Office Communications Server 2007 R2
-[Forest Preparation Commands](https://technet.microsoft.com/library/dd573032(office.13).aspx)
+[Forest Preparation Commands](/previous-versions/office/communications-server/dd573032(v=office.13))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

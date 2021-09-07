@@ -1,7 +1,7 @@
 ---
 title: How to delete a content type from the SharePoint Content Type Hub
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 5/11/2020
 audience: Admin
@@ -50,9 +50,5 @@ To correctly delete a content type, follow the steps below:
 1.	Unpublish the content type.
 2.	Delete the content type in the content type hub.
 3.	Optionally, clean up unsealed copies of the content type in the subscribing site collections.
-
-
-
-## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,15 +1,16 @@
 ---
 title: Could not get delegate information form the server error 
 description: You receive a Could not get delegate information form the server error when make changes to delegate settings. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: tasitae
 appliesto:
 - Outlook 2016 for Mac

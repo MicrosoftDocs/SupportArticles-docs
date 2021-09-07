@@ -1,8 +1,8 @@
 ---
 title: Invalid product key or license mismatch error when you activate Office 2013
 description: Describes an Office 2013 activation issue in which you receive an Invalid product key or license mismatch error message.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -26,7 +26,7 @@ appliesto:
 
 Assume that you try to activate Microsoft Office 2013 by using the Volume Activation Tools wizard on a Windows Server 2012-based computer. Additionally, assume that you use Active Directory-based or Key Management Service-based activation. In this situation, you receive the following error message: 
 
-    Invalid product key or license mismatch. Please confirm this product key is entered correctly and is valid for this application or Windows edition.
+> Invalid product key or license mismatch. Please confirm this product key is entered correctly and is valid for this application or Windows edition.
 
 ##  Cause
 

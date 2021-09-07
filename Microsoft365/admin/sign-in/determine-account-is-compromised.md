@@ -1,7 +1,7 @@
 ---
 title: Determine whether Office 365 account is compromised
 description: Describes how to determine whether your Office 365 account has been compromised.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office 365
@@ -67,7 +67,7 @@ These issues may occur when your Office 365 subscription has been compromised. I
 
 For more information about phishing scams and fraudulent email messages, go to the following websites:
 
-- [Internet Crime Complaint Center](https://www.ic3.gov/preventiontips.aspx)
+- [Internet Crime Complaint Center](https://www.ic3.gov/)
 - [Securities and Exchange Commission - "Phishing" Fraud](https://www.sec.gov/investor/pubs/phishing.htm)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,13 +1,13 @@
 ---
 title: Create a dynamic defined range in a worksheet
 description: Provides a method to create a dynamic defined range that can automatically extend to include new information if you have a named range that must be extended.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: v-barryb
 ms.custom: CSSTroubleshoot
 search.appverid: 
@@ -38,7 +38,7 @@ To do this, follow these steps, as appropriate for the version of Excel that you
 
 1. In a new worksheet, enter the following data.
 
-    ||A|B|
+    |Number|A|B|
     |---|---|---|
     |1|Month|Sales|
     |2|Jan|10|
@@ -72,7 +72,7 @@ Sales.
 
 1. In a new worksheet, enter the following data: 
 
-    ||A|B|
+    |Number|A|B|
     |---|---|---|
     |1|Month|Sales|
     |2|Jan|10|

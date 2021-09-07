@@ -1,12 +1,12 @@
 ---
 title: Items reappear in a user's mailbox or are duplicated in the archive mailbox when an archiving policy is enabled during IMAP migration
 description: Discusses a scenario in Office 365 in which enabling an archiving policy through messaging records management (MRM) causes items to reappear in the user's mailbox and items to be duplicated in the archive mailbox.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot

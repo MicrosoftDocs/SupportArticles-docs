@@ -27,7 +27,7 @@ To resolve this issue, use one of the following methods:
  
 - Method 1: For Office 365 Enterprise organizations, disable PIC in the Skype for Business (formerly Lync Online) Admin Center. To do this, follow the steps on the following Microsoft website:  
     
-    [Let Skype for Business Online users communicate with external Lync or Skype contacts](https://office.microsoft.com/redir/ha102817865.aspx)     
+    [Let Skype for Business Online users communicate with external Lync or Skype contacts](https://support.microsoft.com/office/9e15aceb-8d92-4fe0-ab76-2657bd4ef804)     
 - Method 2: For Office 365 Business organizations, disable External Communications on the Office 365 Service Settings page. To do this, follow the steps on the following Microsoft website:  
 
     [Let Skype for Business Online users communicate outside your organization](https://support.office.com/en-us/article/let-skype-for-business-online-users-communicate-outside-your-organization-89d9cbeb-c35d-42be-8a95-92c14444eac8)     

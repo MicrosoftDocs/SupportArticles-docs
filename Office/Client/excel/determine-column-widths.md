@@ -1,16 +1,16 @@
 ---
 title: How column widths are determined in Excel
 description: Provides information about the factors that determine the column widths in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2007
 - Excel 2000
@@ -31,7 +31,7 @@ Excel begins with a default width of 8 characters and translates this into a giv
 A column width of 8.43 means that 8.43 of the default font's characters fit into a cell. The default font for the worksheet is the font that is assigned to the Normal style. Excel 2000 uses a factory default font of Arial 10. 
 
 > [!NOTE]
-> Changing Printer DPI can affect the font metrics and can adjust the column widths.Microsoft Office Excel 2007 uses a default theme that is named Office. This default theme has Cambria as the default heading font and Calibri 11 as the default body font.
+> Changing Printer DPI can affect the font metrics and can adjust the column widths. Microsoft Office Excel 2007 uses a default theme that is named Office. This default theme has Cambria as the default heading font and Calibri 11 as the default body font.
 
 To determine the default font on your worksheet, follow these steps: 
 

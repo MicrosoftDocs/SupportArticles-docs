@@ -1,15 +1,16 @@
 ---
 title: Outlook Anywhere clients can't connect to server
 description: Resolves an issue in which Outlook Anywhere clients receive a 503 error when they try to connect to the Exchange server.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: davidsan, nasira, wduff
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 search.appverid:
 - MET150

@@ -31,14 +31,6 @@ _Original KB number:_ &nbsp; 824271
 
 In a Microsoft Office Access 2003 database, corruption in your database may occur for a number of reasons. This article contains a list of references that may help you to resolve corruption in your database.
 
-## Troubleshooting and preventing database corruption
-
-The following Knowledge Base article contains the troubleshooting steps that Support Professionals follow when they try to recover a corrupted database.
-
-For additional information about troubleshooting and about repairing an Access database, see the following article:
-
-[How to troubleshoot and repair a damaged Access 2002 or later database](https://support.microsoft.com/help/283849)
-
 ## Data recovery
 
 After you complete reading the troubleshooting articles that are listed earlier in this article, even if you still cannot recover your database, your data may be recoverable. There are a number of third-party companies that specialize in data recovery.
@@ -48,10 +40,6 @@ The following companies are known to specialize in data recovery. You may be abl
 For additional information, visit the Action Front Data Recovery Labs Web site:
 
 [http://www.actionfront.com/](https://www.seagate.com/sg/en/services-software/recover/)
-
-For additional information, visit the PK Solutions Web site:
-
-[http://www.pksolutions.com/](https://pksolutions.com/)
 
 For additional information, visit the OfficeRecovery.com Web site:
 

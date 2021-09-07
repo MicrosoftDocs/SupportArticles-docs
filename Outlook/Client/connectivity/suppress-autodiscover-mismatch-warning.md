@@ -1,14 +1,15 @@
 ---
 title: Suppress AutoDiscover mismatch warning
 description: Provides information about how to suppress the AutoDiscover mismatch warning in Outlook 2007 and later versions.
-author: AmandaAZ
-ms.author: v-weizhu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CI 119623
 - CSSTroubleshoot
 ms.reviewer: aruiz, grtaylor

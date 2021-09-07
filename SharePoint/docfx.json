@@ -118,13 +118,18 @@
     "globalMetadata": {
       "breadcrumb_path": "/sharepoint/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+      "recommendations": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-support",
       "feedback_product_url": "https://sharepoint.uservoice.com/",
       "searchScope": "SharePoint Support",
       "titleSuffix": "SharePoint"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "feedback_product_url": {
+        "OneDrive/**.md": "https://onedrive.uservoice.com/"
+      }
+    },
     "template": [],
     "dest": "OfficeDocs-Support-SharePoint",
     "markdownEngineName": "markdig"

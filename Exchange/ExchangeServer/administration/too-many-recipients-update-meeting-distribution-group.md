@@ -1,14 +1,15 @@
 ---
 title: Can't update a meeting in large distribution group
 description: Describes an issue that triggers a non-delivery report when you send an update to a meeting, and provides resolutions.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CI 119623
 - CSSTroubleshoot
 ms.reviewer: tmoore, gregmans

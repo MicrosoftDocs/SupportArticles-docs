@@ -1,7 +1,7 @@
 ---
 title: Symantec DLP interfering with Teams processes
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
@@ -28,11 +28,11 @@ Installing Symantec DLP creates operability issues with Microsoft Teams.
 
 ## Cause
 
-Symantec DLP Endpoint agents can interfere with Teams processes, which can then lead to launch or exit failures. 
+Symantec DLP Endpoint agents can interfere with Teams processes, which can then lead to launch or exit failures.
 
 ## Resolution
 
-Exclude (whitelist) Teams.exe from the Symantec DLP's Endpoint agents as described in this [Symantec support article](https://support.symantec.com/us/en/article.TECH220322.html).
+Exclude Teams.exe from the Symantec DLP's Endpoint agents as described in this [Symantec support article](https://support.symantec.com/us/en/article.TECH220322.html).
 
 ## More information
 

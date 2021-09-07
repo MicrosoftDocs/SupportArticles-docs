@@ -1,7 +1,7 @@
 ---
 title: Text is not displayed when you open the drawing in a browser
 description: Resolves an issue in which text in a Visio 2010 / 2013 drawing is not displayed if the drawing is saved as a Web drawing (*.vdw) file on an HTTP server.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: poyant, Arykhus, Kemille, barbway
 appliesto:

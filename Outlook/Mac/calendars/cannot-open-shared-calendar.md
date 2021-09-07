@@ -1,15 +1,16 @@
 ---
 title: Cannot open a shared calendar
 description: Describes an issue in which you cannot open one or more shared calendars in Outlook for Mac. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: tasitae, tsimon
 appliesto:
 - Outlook 2016 for Mac

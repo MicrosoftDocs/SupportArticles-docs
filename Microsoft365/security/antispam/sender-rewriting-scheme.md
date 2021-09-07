@@ -1,12 +1,12 @@
 ---
 title: Sender Rewriting Scheme (SRS) in Office 365
 description: Describes Sender Rewriting Scheme (SRS) in Office 365.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -20,6 +20,12 @@ search.appverid: MET150
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_&nbsp;4490129
+
+> [!NOTE]
+> Upcoming changes:  
+> 
+> - Starting in July 2021, we'll start to roll out a new relay IP pool, which may affect current SRS rewriting behaviour. Messages that qualify for this relay pool won't be rewritten by SRS, and be sent out of IPs that won't be part of the Microsoft 365 SPF record instead. The main change is for messages that fail SPF checks when they are sent to Office 365. SRS will no longer fix these failures. For more information, check the post about the relay pool change in [Message Center](/microsoft-365/admin/manage/message-center) or see [Outbound delivery pools](/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages#relay-pool).
+> - Starting in October 2021, we'll start to use SRS to rewrite all messages forwarded by using SMTP or mailbox forwarding. This will consolidate the behaviour to use SRS for all forwarding in the service. Due to changes in behavior, disruptions may occur. For example, messages sent to on-premises will no longer be rewritten.
 
 ## Summary
 
@@ -48,7 +54,7 @@ This change causes Non-Delivery Reports (NDRs) to return to Office 365 instead 
 > [!NOTE]
 > SRS rewriting is used to prevent spoofing of unverified domains. Customers are advised to send messages only from domains that they own and for which they have verified their ownership through the Accepted Domains list. For more information about Accepted Domains in Office 365, see the following TechNet topic:
 >  
-> [Manage accepted domains in Exchange Online](https://technet.microsoft.com/library/jj945194%28v=exchg.150%29.aspx)
+> [Manage accepted domains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)
 
 ## More information
 
@@ -88,12 +94,11 @@ Example
 
 A message is sent from Bob (bob@fabrikam.com) to John's mailbox (john.onprem@contoso.com) on his company's own server that is running Exchange Server. John has set up autoforwarding to his home email address (john.home@example.com).
 
-||Original message|Relayed message received by Office 365|Relayed message sent from Office 365|
+|Type|Original message|Relayed message received by Office 365|Relayed message sent from Office 365|
 |---|---|---|---|
 |Recipient|john.onprem@contoso.com|john.home@example.com|john.home@example.com|
 |P1 From|bob@fabrikam.com|bob@fabrikam.com|bounces+SRS=44ldt=IX@contoso.com|
 |From header|bob@fabrikam.com|bob@fabrikam.com|bob@fabrikam.com|
-
 
 
 Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.

@@ -1,15 +1,16 @@
 ---
 title: Mailboxes are quarantined and databases fail over
 description: Describes an issue in Exchange Server 2013 where mailboxes are quarantined and databases are dismounted unexpectedly. This problem occurs if .NET Framework 4.6 is installed. A resolution is provided.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: dpaul, cmcgurk
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 search.appverid: 
 - MET150

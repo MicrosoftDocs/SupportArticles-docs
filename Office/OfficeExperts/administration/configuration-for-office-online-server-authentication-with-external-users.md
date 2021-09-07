@@ -1,6 +1,6 @@
 ---
 title: Configuration for Microsoft Offices Online or Office Online Server authentication with external users
-author: AmandaAZ
+author: helenclu
 ms.author: jhaak
 manager: dcscontentpm
 localization_priority: Normal

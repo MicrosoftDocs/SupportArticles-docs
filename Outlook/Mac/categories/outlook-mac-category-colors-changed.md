@@ -1,15 +1,16 @@
 ---
 title: Category colors are changed after you migrate from Outlook for Mac 2011 to Outlook 2016 for Mac
 description: Describes an issue in which category colors changed after you migrate to Outlook 2016 for Mac from Outlook for Mac 2011.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: tasitae
 appliesto:
 - Outlook 2016 for Mac 

@@ -1,8 +1,8 @@
 ---
 title: We're having trouble signing you in error when accessing mail
 description: Describes a problem that triggers a "that account can't be used with Outlook Web App" error when you try to access mail for your organizational account in Office 365 through outlook.com. Provides a resolution.
-author: lucciz
-ms.author: v-zolu
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -23,10 +23,10 @@ appliesto:
 
 When you try to access mail for your organizational account in Office 365, you receive the following error message: 
 
-    We're having trouble signing you in
-
-    You're currently signed in with a Microsoft account as <>, but that account can't be used with Outlook Web App.
-    Please sign out of your Microsoft account, then sign in to Outlook Web App with the account you use to read your organization's email. Click here to sign out. Learn more.
+> We're having trouble signing you in
+>
+> You're currently signed in with a Microsoft account as <>, but that account can't be used with Outlook Web App.  
+> Please sign out of your Microsoft account, then sign in to Outlook Web App with the account you use to read your organization's email. Click here to sign out. Learn more.
 
 This issue may occur when you try to access your mailbox through [https://www.outlook.com](https://www.outlook.com). 
 

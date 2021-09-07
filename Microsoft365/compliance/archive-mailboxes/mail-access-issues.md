@@ -1,15 +1,16 @@
 ---
 title: Mail access issues in a hybrid Exchange deployment with cloud-based archive
 description: Describes an issue in which users who have a cloud-based archive in a hybrid Exchange deployment can't access their mail in Outlook or Outlook on the web. Also, on-premises users receive an NDR when they try to send mail to users who have a cloud-based archive.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- CSSTroubleshoot
+- 'Associated content asset: 4555316'
 ms.reviewer: timothyh, bilong
 appliesto: 
 - Exchange Online,Exchange Online Archiving
@@ -28,7 +29,7 @@ search.appverid: MET150
 _Original KB number:_&nbsp;2901386
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [http://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Problem
 
@@ -82,7 +83,7 @@ This issue occurs if the email address policy has a default domain that isn't a 
 
         To do this, use the Exchange admin center or the Exchange Management Console to add the domain name to the existing federation trust.
 
-        For more information about how to do this, go to [Manage a federation trust](https://technet.microsoft.com/library/jj673036%28v=exchg.160%29.aspx).
+        For more information about how to do this, go to [Manage a federation trust](/exchange/manage-a-federation-trust-exchange-2013-help).
 
    - Change the SMTP address of the arbitration mailbox and the transport settings container in Active Directory
 

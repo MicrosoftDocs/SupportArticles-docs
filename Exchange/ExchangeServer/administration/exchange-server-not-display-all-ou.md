@@ -1,24 +1,24 @@
 ---
 title: Exchange Server doesn't display all OUs
 description: Describes an Exchange Server issue that blocks the display of organizational units when a new mailbox and associated user account are created. A resolution is provided.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CI 119623
 - CSSTroubleshoot
 ms.reviewer: tmoore, gregmans
 search.appverid: 
 - MET150
 appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition  
+- Exchange Server 2019
+- Exchange Server 2016
+- Exchange Server 2013
 ---
 # Exchange Server doesn't display all OUs when it creates a new mailbox
 
@@ -57,3 +57,6 @@ To resolve this issue, follow these steps:
     > The value of `GetListDefaultResultSize` key should exceed the number of OUs that you found in step 1. Additionally, you will have to add this value every time that you install a cumulative update.
 
 4. In IIS Manager, restart the **MSExchangeECPAppPool** application pool.
+
+  > [!CAUTION]
+  > Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files or the EdgeTransport.exe.config file) **will be overwritten** when you install an Exchange Cumulative Update. For more information, see [Upgrade Exchange to the latest Cumulative Update](/exchange/plan-and-deploy/install-cumulative-updates).

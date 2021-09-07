@@ -1,12 +1,12 @@
 ---
 title: Can't open Office files from SharePoint Online or OneDrive for Business
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 2/7/2019
 audience: Admin
 ms.topic: article
-ms.prod: office
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

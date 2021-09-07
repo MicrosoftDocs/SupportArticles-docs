@@ -1,14 +1,15 @@
 ---
 title: Low disk space on database logs or drives
 description: Check the database log or drive disk space and create warning alert when the disk is free space is < 20 MB or free space is < 10%.
-author: AmandaAZ
-ms.author: v-weizhu
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CSSTroubleshoot
 ms.reviewer: brianpr
 search.appverid: 

@@ -1,7 +1,7 @@
 ---
 title: Attachment is missing from an e-mail message that is sent to a Microsoft Windows SharePoint Services 3.0 document library
 description: Describes a problem in Microsoft Windows SharePoint Services 3.0. When e-mail messages that contain attachments are sent to a document library, the attachments are removed. Provides a resolution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Windows SharePoint Services 3.0

@@ -1,8 +1,8 @@
 ---
 title: Visio 2010 or 2013 does not have certain shapes and stencils included
 description: Explains that Visio 2010 or 2013 does not have certain shapes and stencils included with the product. These stencils include the ROOM, Jackson, ORM, and Express-G shapes. These stencils are available for download on the Microsoft Download Center.
-author: lucciz
-ms.author: v-zolu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

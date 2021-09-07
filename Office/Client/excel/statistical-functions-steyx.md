@@ -1,15 +1,15 @@
 ---
 title: Excel statistical functions STEYX
 description: Describes the STEYX function in Excel 2003 and in later versions of Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007
@@ -42,8 +42,9 @@ The most common usage of STEYX includes two ranges of cells that contain the dat
 
 To illustrate the function STEYX, create a blank Excel worksheet, copy the following table, select cell A1 in your blank Excel worksheet and then paste the entries so that the table fills cells A1:D12 in your worksheet.
 
-|y-values|x-values|||
+|A|B|C|D|
 |---|---|---|---|
+|y-values|x-values|||
 |1|= 3 + 10^$D$3||Power of 10 to add to data|
 |2|=4 + 10^$D$3||0|
 |3|=2 + 10^$D$3|||

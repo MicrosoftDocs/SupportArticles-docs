@@ -1,15 +1,16 @@
 ---
 title: Outlook search folders aren't populated in Online mode after migration from Exchange 2013 to 2010
 description: Describes problems in Outlook after your mailbox is migrated from Exchange Server 2013 or Exchange Online to Exchange Server 2010. These problems involve a missing SEARCH_RUNNING flag. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: comat
 appliesto:
 - Microsoft Outlook 2010
@@ -35,7 +36,7 @@ This issue occurs when the hidden SEARCH_RUNNING flag isn't set on some folders 
 
 ## Resolution
 
-To resolve this issue, use the MFCMapi utility to restart the search service for each affected folder. To download MFCMapi, go to [April 2017 Release of MFCMAPI and MrMAPI](https://mfcmapi.codeplex.com/).
+To resolve this issue, use the MFCMapi utility to restart the search service for each affected folder. To download MFCMapi, go to [April 2017 Release of MFCMAPI and MrMAPI](https://github.com/stephenegriffin/mfcmapi).
 
 To configure and use MFCMapi to restart the search service, follow these steps:
 

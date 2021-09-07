@@ -22,10 +22,7 @@ appliesto:
 
 ## Summary
 
-After you apply one of the following security updates, a new category of client telemetry (Census) data collection is enabled for Microsoft Lync 2013 (Microsoft Skype for Business) and Microsoft Skype for Business 2016:
-
-- [December 8, 2015 security update (KB3114351)](https://support.microsoft.com/help/3114351) for Lync 2013 (Skype for Business)   
-- [December 8, 2015 security update (KB3114372)](https://support.microsoft.com/help/3114372) for Skype for Business 2016   
+After you apply the latest updates, a new category of client telemetry (Census) data collection is enabled for Microsoft Lync 2013 (Microsoft Skype for Business) and Microsoft Skype for Business 2016.
 
 ## More Information
 

@@ -1,12 +1,12 @@
 ---
-title: (Your request couldn't be completed. Please try again) when searching audit log.
+title: Your request couldn't be completed. Please try again error when searching audit log.
 description: Describes an error that occurs when a user tries to search the audit log in the Office 365 Security & Compliance Center. Provides a solution.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Error (Your request couldn't be completed. Please try again) when you try to search the audit log in Office 365
+# "Your request couldn't be completed. Please try again" error when you try to search the audit log in Office 365
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -36,7 +36,7 @@ The user isn't assigned to the View-Only Audit Logs role or the Audit Logs role 
 
 Create a custom role group in the Exchange admin center, add the View-Only Audit Logs or Audit Logs role, and then add the user as a member of the new role group. To do this, follow these steps:
 
-1. Open the Exchange admin center. For more information, see [Exchange admin center in Exchange Online](https://technet.microsoft.com/library/jj200743%28v=exchg.150%29.aspx).
+1. Open the Exchange admin center. For more information, see [Exchange admin center in Exchange Online](/exchange/exchange-admin-center).
 2. Click **Permission**, click **admin role**, and then click **New** (![button icon](./media/issue-search-audit-log/button.png)) to create a new role group.
 3. On the 'New role group' page, do the following:
    1. Specify a name for the role group.

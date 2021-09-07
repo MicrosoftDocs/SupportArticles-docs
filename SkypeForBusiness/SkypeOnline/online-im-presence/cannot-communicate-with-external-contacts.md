@@ -80,11 +80,11 @@ If your Skype for Business Online users can't communicate with all external cont
  
 If the external contact's organization hasn't been configured for federation with Skype for Business Online, go to the following TechNet website: 
 
-[Configuring Federation Support for a Skype for Business Online Customer](https://technet.microsoft.com/library/hh202193.aspx) 
+[Configuring Federation Support for a Skype for Business Online Customer](/previous-versions/office/lync-server-2013/lync-server-2013-configuring-federation-support-for-a-lync-online-customer) 
  
 After you verify that federation is configured correctly for the external contact's domain, Office 365 for enterprises customers should examine the Lync Control Panel or Lync Admin Center to make sure that the external contact's domain is either on the allowed list of domains or not on the blocked list of domains. For guidance about how to configure external communications with other organizations, view the following Microsoft website: 
 
-[Configure external communications](https://office.microsoft.com/redir/ha102817865.aspx)
+[Configure external communications](https://support.microsoft.com/office/9e15aceb-8d92-4fe0-ab76-2657bd4ef804)
 
 ### Adding contacts in the correct format  
 Contacts that don't use the standard domains for Microsoft Messenger, such as live.com, outlook.com, msn.com or Hotmail.com, must be added to Lync by using a special format. For information about how to add external contacts in this manner, go to the following article in the Microsoft Knowledge Base: 

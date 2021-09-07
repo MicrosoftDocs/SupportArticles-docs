@@ -1,7 +1,7 @@
 ---
 title: Some settings for VB Editor disabled in Office 2010
 description: Describes a problem in which some settings for the Visual Basic Editor that you enabled in an earlier version of an Office application are not enabled in Office 2010. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: tputt, gregli, brreich, sloanc, djess, andyfel
 appliesto:
 - Office 2010

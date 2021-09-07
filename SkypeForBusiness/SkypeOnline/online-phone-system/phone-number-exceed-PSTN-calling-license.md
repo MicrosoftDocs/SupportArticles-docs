@@ -30,7 +30,7 @@ To determine how many phone numbers you can reserve, add 10 percent onto the num
 
 For example, if you have 100 PSTN Calling licenses, you can reserve 120 phone numbers. This assumes that you have not already acquired some phone numbers for those 100 users.
 
-## More Information
+## Reference
 
 For more information about how to reserve phone numbers, see [Getting phone numbers for your users](https://support.office.com/article/getting-phone-numbers-for-your-users-aa2ec464-3481-4bbb-8c14-e13e18093df5).
 

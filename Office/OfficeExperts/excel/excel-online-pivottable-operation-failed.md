@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: randrin
+ms.author: randring
 appliesto:
 - Excel Online
 ---

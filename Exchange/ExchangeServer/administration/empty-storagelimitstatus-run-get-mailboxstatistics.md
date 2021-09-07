@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: batre
 appliesto:
 - Exchange Server 2016 Enterprise Edition
@@ -57,4 +58,4 @@ Get-MailboxStatistics -Database DatabaseName | ft displayname,*quota*,*size -Aut
 
 ## More information
 
-For more information about the Get-MailboxStatistics cmdlet in Exchange Server 2013, see [General information about the Get-MailboxStatistics cmdlet](https://technet.microsoft.com/library/bb124612.aspx).
+For more information about the Get-MailboxStatistics cmdlet in Exchange Server 2013, see [General information about the Get-MailboxStatistics cmdlet](/powershell/module/exchange/get-mailboxstatistics).
