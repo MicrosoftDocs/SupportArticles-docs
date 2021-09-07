@@ -1,6 +1,6 @@
 ---
 title: Duplicate public folder mailbox migration request
-description: Fixes an issue in which you can't remove a failed public folder mailbox migration request because it's duplicate or orphaned.
+description: Fixes an issue in which you can't remove a failed public folder mailbox migration request because it's orphaned or a duplicate.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
@@ -13,6 +13,7 @@ ms.custom:
 - CI 149097
 - CSSTroubleshoot
 ms.reviewer: haembab
+editor:v-jesits
 appliesto:
 - Exchange Online 
 search.appverid: MET150
@@ -21,21 +22,21 @@ search.appverid: MET150
 
 ## Symptoms
 
-In a public folder migration batch, you see a public folder mailbox migration request fails with the "DestinationADNotUpToDatePermanentException" failure type.
+In a public folder migration batch, you see a failed public folder mailbox migration request that has the "DestinationADNotUpToDatePermanentException" failure type.
 
 :::image type="content" source="media/duplicate-public-folder-mailbox-migration-request/pf-migration-job-error.png" alt-text="Screenshot of the detailed failures.":::
 
-When you remove the failed public folder mailbox migration request, you receive the following error message:
+After you remove the failed public folder mailbox migration request, you receive the following error message:
 
 > Couldn't find a unique request with the provided information.
 
 ## Cause
 
-This issue occurs if the public folder mailbox migration request is either duplicate or orphaned.
+This issue occurs if the public folder mailbox migration request is either orphaned or a duplicate.
 
 ## Resolution
 
-To resolve this issue, identify and remove the duplicate or orphaned public folder mailbox migration requests by running the [script](https://techcommunity.microsoft.com/t5/exchange-team-blog/giving-you-more-control-over-public-folder-migration-requests/ba-p/608924). If the script doesn't work, follow these steps:
+To resolve this issue, identify and remove the orphaned or duplicate public folder mailbox migration requests by running [this script](https://techcommunity.microsoft.com/t5/exchange-team-blog/giving-you-more-control-over-public-folder-migration-requests/ba-p/608924). If the script doesn't work, follow these steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Identify duplicate public folder mailbox migration requests by running the following cmdlet:
@@ -44,7 +45,7 @@ To resolve this issue, identify and remove the duplicate or orphaned public fold
     Get-PublicFolderMailboxMigrationRequest|Sort-Object targetmailbox|fl targetmailbox,requestguid,name,status
     ```
 
-    **Note:** For more information about the cmdlet, see [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/get-publicfoldermailboxmigrationrequest).
+    **Note:** For more information about this cmdlet, see [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/get-publicfoldermailboxmigrationrequest).
 
     Here's an example of the output:
 
@@ -60,13 +61,13 @@ To resolve this issue, identify and remove the duplicate or orphaned public fold
 
 ## More information
 
-Both healthy and duplicate jobs have the same name that consists of the target mailbox GUID. The formatting of the name is *PublicFolderMailboxMigration\<TargetMailboxGuid>*, such as *PublicFolderMailboxMigration058553ac-200f-4fba-91c4-300e4fa0e8e5*. Both healthy and duplicate jobs points to the same target mailbox, and their identities are same.
+Both healthy and duplicate jobs have the same name that contains the target mailbox GUID. The formatting of the name is *PublicFolderMailboxMigration\<TargetMailboxGuid>*. For example, *PublicFolderMailboxMigration058553ac-200f-4fba-91c4-300e4fa0e8e5*. Both healthy and duplicate jobs point to the same target mailbox, and their identities are the same.
 
-However, the completion of a migration batch isn't related to duplicate jobs because the batch doesn't consider duplicate jobs as part of the migration. Only those jobs that have corresponding active migration users are considered as part of a migration. Both an active migration user and a migration request are connected through the `RequestGuid` parameter. So duplicate jobs don't have corresponding active migration users that are part of a migration.
+However, completing a migration batch isn't related to duplicate jobs because the batch doesn't consider duplicate jobs to be part of the migration. Only those jobs that have corresponding active migration users are considered to belong to a migration. Both an active migration user and a migration request are connected through the `RequestGuid` parameter. Therefore, duplicate jobs don't have corresponding active migration users that are part of a migration.
 
-In this case, it's best to remove the duplicate or orphaned jobs by using the `RequestGuid` parameter.
+In this case, it's best to remove the orpahned or duplicate jobs by using the `RequestGuid` parameter.
 
-Here's an example that can help you illustrate this point. In the output of the [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/get-publicfoldermailboxmigrationrequest) cmdlet (as shown in the screenshot 1), you view the status of individual jobs in a public folder migration batch, and you see duplicate jobs that point to the same target mailboxes as the healthy jobs. In the output of the [Get-MigrationUser](/powershell/module/exchange/get-migrationuser) cmdlet (as shown in the screenshot 2), you see the information of migration users, but you don't see any failed status for the target mailboxes that the duplicate jobs point to.
+Here's an example to illustrate this point. In the output of the [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/get-publicfoldermailboxmigrationrequest) cmdlet (as shown in the screenshot 1), you view the status of individual jobs in a public folder migration batch, and you see duplicate jobs that point to the same target mailboxes as the healthy jobs. In the output of the [Get-MigrationUser](/powershell/module/exchange/get-migrationuser) cmdlet (as shown in the screenshot 2), you see the information of migration users, but you don't see any failed status for the target mailboxes that the duplicate jobs point to.
 
 **Screenshot 1:**
 
