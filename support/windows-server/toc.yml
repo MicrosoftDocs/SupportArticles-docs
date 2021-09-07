@@ -2726,6 +2726,8 @@
       href: ./windows-security/http-error-500-internal-server-error.md
     - name: Add SAN to secure LDAP certificate
       href: ./windows-security/add-san-to-secure-ldap-certificate.md
+    - name: Approval required for certificate renewals
+      href: ./windows-security/approval-required-certificate-renewals-autoenrollment.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./windows-security/cannot-publish-certificate-trusted-domain.md
     - name: Can't request certificate from web enrollment pages
