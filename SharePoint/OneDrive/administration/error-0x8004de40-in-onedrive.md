@@ -58,7 +58,7 @@ To add cipher suites, either deploy a group policy or use local group policy as 
 > [!IMPORTANT]
 > Edit the order of the cipher suites to ensure that these four suites are at the top of the list (the highest priority).
 
-Alternativley, you can use the [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true) cmdlet to enable the TLS cipher suites. For example, run the following command to enable a cipher suite as the highest priority:
+Alternatively, you can use the [Enable-TlsCipherSuite](/powershell/module/tls/enable-tlsciphersuite?view=windowsserver2019-ps&preserve-view=true) cmdlet to enable the TLS cipher suites. For example, run the following command to enable a cipher suite as the highest priority:
 
 ```powershell
 Enable-TlsCipherSuite -Name "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384" -Position 0

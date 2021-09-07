@@ -14,9 +14,7 @@ search.appverid:
 - MET150
 appliesto:
 - Microsoft Teams
-ms.custom: 
-- CI 126689
-- CSSTroubleshoot 
+ms.custom: CI-126689,CSSTroubleshoot,scenario:Direct-Routing-3
 ms.reviewer: mikebis
 ---
 
@@ -37,7 +35,7 @@ When you use Direct Routing, the caller ID information that is delivered to the 
 
 The `From` header contains any of the following items:
 
-- The phone number that's assigned to the caller who is initiating the call. 
+- The phone number that's assigned to the caller who is initiating the call.
   If the caller's phone number has to be hidden from the call recipient, it's replaced with "anonymous".
 - A service number that is assigned to the caller by using the `CsCallingLineIdentity` cmdlet.
 - The phone number of the original caller if the call was forwarded.
