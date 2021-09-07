@@ -14,10 +14,10 @@ ms.custom:
 search.appverid:
 - MET150
 appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
+- Exchange Server 2016/2019 Enterprise Edition
+- Exchange Server 2016/2019 Standard Edition
 ---
-# Error when you try to remove a mailbox database in Exchange Server 2016
+# Error when you try to remove a mailbox database in Exchange Server 2016 or 2019
 
 _Original KB number:_ &nbsp; 3093175
 
@@ -39,7 +39,7 @@ Or
 
 ## Cause
 
-This issue occurs because Exchange Server 2016 introduces an AuditLog mailbox. This mailbox may be still present and blocking removal of the database.
+This issue occurs because Exchange Server 2016 and 2019 introduces an AuditLog mailbox. This mailbox may be still present and blocking removal of the database.
 
 ## Resolution
 
@@ -49,4 +49,16 @@ To fix this issue, use the `Get-Mailbox` cmdlet together with the `-AuditLog` pa
 Get-Mailbox -AuditLog -Database <DatabaseName>
 ```
 
-If the AuditLog mailbox is present, move the mailbox to a different database, or remove or disable it.
+If the AuditLog mailbox is present, you have the following options:
+
+- If this is not the last mailbox server and database in the organization, move the mailbox to a different database by running the following cmdlet in the Exchange Management Shell:
+
+```powershell
+Get-Mailbox -AuditLog -Database <SourceDatabaseName> | New-MoveRequest -TargetDatabase <TargetDatabaseName>
+```
+
+- If this is the last mailbox server and database in the organization, you can safely remove it by running the following cmdlet in the Exchange Management Shell:
+
+```powershell
+Remove-Mailbox -AuditLog
+```
