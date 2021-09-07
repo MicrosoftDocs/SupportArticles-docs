@@ -28,6 +28,7 @@ In Microsoft Outlook, items such as email messages or meeting requests that are 
 
 > [!NOTE]
 > Only the sender can set the sensitivity level of the item. This option is unavailable in the recipient's **Inbox**.
+> Even though the cmdlet included later in the Workaround section specifies Calendar as the target folder, it will also enable viewing Private Items in the **Inbox**.
 
 ## Workaround
 
