@@ -239,7 +239,7 @@
     items:
     - name: '"Access Denied due to organizational policies" error'
       href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
-    - name: Error 403 Forbidden in OneDrive or SharePoints
+    - name: '"Error 403 Forbidden" in OneDrive or SharePoints'
       href: ../sharing-and-permissions/error-403-forbidden.md
     - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
