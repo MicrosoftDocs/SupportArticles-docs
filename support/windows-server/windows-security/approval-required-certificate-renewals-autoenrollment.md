@@ -1,6 +1,6 @@
 ---
 title: Recommended values of validity period and renewal period in certificate templates
-description: Describes an issue in which approval is required for a certificate renewal when certificate autoenrollment is configured. Recommend values of the validity period and renewal period in certificate templates.
+description: Describes an issue in which certificate renewals require approvals when certificate autoenrollment is configured. Recommend values of the validity period and renewal period in certificate templates.
 ms.date: 09/01/2021
 author: v-lianna
 ms.author: delhan
@@ -22,7 +22,7 @@ Assume that you're configuring a certificate autoenrollment that has the **CA ce
 
 :::image type="content" source="./media/approval-required-certificate-renewals-autoenrollment/certificate-autoenrollment-configuration.png" alt-text="Configuration for certificate autoenrollment.":::
 
-Certificate autoenrollment runs every eight hours. When unsupported values of validity and renewal period are configured in a certificate template, the certificate renewal is skipped and the client triggers new enrollment requests instead of renewals, hence prompting CA certificate manager approval.
+Certificate autoenrollment runs every eight hours. When unsupported values of validity and renewal period are configured in a certificate template, the certificate renewal is skipped and the client triggers new enrollment requests instead of renewals, then prompting CA certificate manager approval.
 
 ## Recommended values of validity period and renewal period
 
