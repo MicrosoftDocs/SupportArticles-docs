@@ -2,74 +2,92 @@
   href: welcome-intune.yml
 - name: App management
   items:
-  - name: Access denied configuring MAM
-    href: configure-app-protection-access-denied.md
-  - name: Access denied for app protection options
-    href: app-protection-options-access-denied.md
-  - name: Android APK app installation fails
-    href: app-installation-failed-error.md
-  - name: App installation error codes reference
-    href: app-install-error-codes.md
-  - name: Apps don't appear as Available
-    href: apps-appear-unavailable.md
-  - name: Can't attach photos because of IO error
-    href: android-enterprise-enrolled-devices-fails-attaching-photo.md
-  - name: Can't create messages in Outlook for Android
-    href: creating-message-action-not-allowed.md
-  - name: Can't install apps and run shell scripts in macOS
-    href: cannot-install-macos-apps-and-run-shell-scripts.md
-  - name: Can't save corporate data in WIP-allowed apps
-    href: corporate-data-unsaved-in-wip-allowed-apps.md
-  - name: Can't sync apps to Intune
-    href: apps-fail-sync-to-intune.md
-  - name: Can't uninstall apps installed from the App Store
-    href: cannot-uninstall-apple-app-store-apps.md
-  - name: Can't wrap an LOB app with Intune App Wrapping Tool
-    href: application-could-not-be-wrapped.md
-  - name: Data associated with an app is removed
-    href: removed-data-associated-with-app-error.md
-  - name: Deploy Windows update packages as Win32 apps
-    href: deploy-windows-update-packages-as-win32-apps.md
-  - name: Error when you open a web app on iOS 
-    href: invalid-address-open-web-app.md
-  - name: Error 0x87D13BA2 when you deploy a macOS LOB app
-    href: error-0x87d13ba2-deploy-macos-lob-app.md  
-  - name: Fingerprint authentication not prompted for policy-managed apps
-    href: no-prompt-for-fingerprint-identity.md
-  - name: LOB app versioning
-    href: lob-app-versioning.md  
-  - name: macOS LOB apps aren't deployed
-    href: macos-lob-apps-not-deployed.md
-  - name: Managed Browser policy triggers error 0x87D1FDE8
-    href: managed-browser-policy-triggers-error-0x87d1fde8.md
-  - name: Mismatch between value type and configuration value
-    href: mismatch-error-configuration-value-ampersand.md
-  - name: OneDrive supports Open-in protection on unenrolled devices
-    href: open-in-protection-unenrolled-devices.md
-  - name: Only one app configuration policy applied to Edge or Managed Browser
-    href: only-one-app-policy-applied-edge-managed-browser.md
-  - name: Personal apps listed in Discovered apps list
-    href: discovered-apps-list-personal-apps.md
-  - name: Protected data is attached to an iMessage
-    href: onedrive-attaches-corporate-protected-data-imessage.md
-  - name: Save application failed error
-    href: save-application-failed-error.md
-  - name: Saving images locally not restricted
-    href: saving-images-locally-not-restricted.md
-  - name: Set up and validate app protection policies
-    href: set-up-app-protection-policies-ios-device.md
-  - name: Support tip - Deployment, delivery, and processing of a Win32 application
-    href: develop-deliver-working-win32-app-via-intune.md
-  - name: Support tip - Build software inventory using Power BI
-    href: build-software-inventory-power-bi.md
-  - name: Support tip - Devices enrolled in Intune MAM policy are prompted to enroll
-    href: device-enroll-intune-app-management-error.md
-  - name: Troubleshoot app installation issues
-    href: troubleshoot-app-install.md
-  - name: Troubleshoot app protection policy deployment
-    href: troubleshoot-app-protection-policy-deployment.md
-  - name: Troubleshoot mobile application management
-    href: troubleshoot-mam.md
+  - name: App management overview
+    href: app-management.yml   
+  - name: App installation
+    items:
+    - name: App installation error codes reference
+      href: app-install-error-codes.md
+    - name: Troubleshoot app installation issues
+      href: troubleshoot-app-install.md
+    - name: Android APK app installation fails
+      href: app-installation-failed-error.md
+  - name: Windows apps
+    items:
+    - name: Company Portal apps don't appear as available
+      href: apps-appear-unavailable.md
+    - name: Deployment, delivery, and processing of a Win32 application
+      href: develop-deliver-working-win32-app-via-intune.md
+    - name: Deploy Windows update packages as Win32 apps
+      href: deploy-windows-update-packages-as-win32-apps.md
+    - name: Can't save corporate data in WIP-allowed apps
+      href: corporate-data-unsaved-in-wip-allowed-apps.md
+  - name: iOS apps
+    items:
+    - name: Can't uninstall apps installed from the Apple App Store
+      href: cannot-uninstall-apple-app-store-apps.md
+    - name: Protected data is attached to an iMessage
+      href: onedrive-attaches-corporate-protected-data-imessage.md
+    - name: Mismatch between value type and configuration value
+      href: mismatch-error-configuration-value-ampersand.md
+    - name: OneDrive for iOS supports Open-in protection on unenrolled devices
+      href: open-in-protection-unenrolled-devices.md
+    - name: Saving images locally not restricted
+      href: saving-images-locally-not-restricted.md
+  - name: macOS apps
+    items:
+    - name: macOS LOB apps aren't deployed
+      href: macos-lob-apps-not-deployed.md
+    - name: Error 0x87D13BA2 when you deploy a macOS LOB app
+      href: error-0x87d13ba2-deploy-macos-lob-app.md  
+    - name: Can't install apps and run shell scripts in macOS
+      href: cannot-install-macos-apps-and-run-shell-scripts.md
+  - name: Android apps
+    items:
+    - name: Can't wrap Android LOB app with Intune App Wrapping Tool
+      href: application-could-not-be-wrapped.md
+    - name: Data associated with an app is removed
+      href: removed-data-associated-with-app-error.md
+    - name: Personal apps listed in Discovered apps list
+      href: discovered-apps-list-personal-apps.md
+    - name: Can't attach photos because of IO error
+      href: android-enterprise-enrolled-devices-fails-attaching-photo.md
+    - name: Can't create messages in Outlook for Android
+      href: creating-message-action-not-allowed.md
+  - name: Managed browsers
+    items:
+    - name: Error when you open a web app on iOS 
+      href: invalid-address-open-web-app.md
+    - name: Managed Browser policy triggers error 0x87D1FDE8
+      href: managed-browser-policy-triggers-error-0x87d1fde8.md
+    - name: Only one app configuration policy applied to Edge or Managed Browser
+      href: only-one-app-policy-applied-edge-managed-browser.md
+  - name: General help and troubleshooting
+    items:
+    - name: LOB app versioning
+      href: lob-app-versioning.md  
+    - name: Save application failed error
+      href: save-application-failed-error.md
+    - name: Build software inventory using Power BI
+      href: build-software-inventory-power-bi.md
+    - name: Can't sync Microsoft Store for Business apps to Intune
+      href: apps-fail-sync-to-intune.md
+- name: App protection policies (APP)
+  items:   
+    - name: Troubleshoot APP deployment
+      href: troubleshoot-app-protection-policy-deployment.md
+    - name: Troubleshoot APP user issues
+      href: troubleshoot-mam.md   
+    - name: Access Denied when accessing Exchange Online & SharePoint Online
+      href: app-protection-options-access-denied.md
+    - name: Access denied configuring Conditional Access
+      href: configure-app-protection-access-denied.md
+    - name: Devices enrolled in Conditional Access policy prompted to enroll in Intune
+      href: device-enroll-intune-app-management-error.md
+    - name: Known issue - Fingerprint authentication on Samsung Note 4
+      href: no-prompt-for-fingerprint-identity.md
+    - name: Set up and validate iOS app protection policies
+      href: set-up-app-protection-policies-ios-device.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -300,7 +318,7 @@
     href: troubleshoot-software-updates-in-microsoft-intune.md
   - name: Use PowerShell to look up licenses
     href: look-up-intune-licenses.md
-- name: Migration to the Azure Portal
+- name: Migration to the Azure portal
   items:
   - name: Migration blockers for grouping and targeting
     href: grouping-targeting-migration-blockers.md
@@ -318,3 +336,5 @@
     items:
     - name: Manage Windows 10 feature updates for co-managed devices
       href: create-feature-update-hold-co-managed-devices.md
+- name: Get support
+  href: /mem/get-support
