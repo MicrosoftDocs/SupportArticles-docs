@@ -25,17 +25,17 @@ appliesto:
 
 You experience one of the following symptoms in a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune:
 
-- When you activate directory synchronization in the [Office 365 portal](https://portal.office.com/DirSync/DirectorySynchronization.aspx), the page indicates that directory synchronization is enabled. However, when you install the Azure Active Directory Sync tool and run the Configuration Wizard, you receive the following message:
+- When you activate directory synchronization in the [Microsoft 365 admin center](https://admin.microsoft.com/#/dirsyncmanagement), the page indicates that directory synchronization is enabled. However, when you install the Azure Active Directory Sync tool and run the Configuration Wizard, you receive the following message:
 
     `Error 15: DirSync not activated`
 
-    You then revisit the [directory synchronization](https://portal.office.com/DirSync/DirectorySynchronization.aspx) page to view the directory synchronization status. When you look under **3: Active Directory Synchronization** in the center pane, you see the following message:
+    You then revisit the [Directory sync status](https://admin.microsoft.com/#/dirsyncmanagement) page to view the directory synchronization status. When you look under **3: Active Directory Synchronization** in the center pane, you see the following message:
 
     `Active Directory synchronization is being activated`
 
-- When you deactivate directory synchronization on the [directory synchronization](https://portal.office.com/DirSync/DirectorySynchronization.aspx) page of the Office 365 portal, the page indicates that directory synchronization is enabled.
+- When you deactivate directory synchronization on the [Directory sync status](https://admin.microsoft.com/#/dirsyncmanagement) page of the Office 365 portal, the page indicates that directory synchronization is enabled.
 
-    You then revisit the [directory synchronization](https://portal.office.com/DirSync/DirectorySynchronization.aspx) page to view the directory synchronization status. When you look under **3: Active Directory Synchronization** in the center pane, you see the following message:
+    You then revisit the [Directory sync status](https://admin.microsoft.com/#/dirsyncmanagement) page to view the directory synchronization status. When you look under **3: Active Directory Synchronization** in the center pane, you see the following message:
 
     `Active Directory synchronization is being deactivated`
 
