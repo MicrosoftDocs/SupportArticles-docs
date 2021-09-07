@@ -194,18 +194,18 @@
       href: windows-failed-to-apply-mdm-policy.md
 - name: Device management
   items:
+  - name: Troubleshoot device actions
+    href: troubleshoot-device-actions.md
+  - name: Remove duplicate mobile device management objects
+    href: remove-duplicate-mobile-device-management.md
+  - name: UPN listed as None for orphaned devices
+    href: orphaned-device-upn-shown-as-none.md
   - name: Help desk operators can't perform remote tasks
     href: help-desk-operator-fails-remote-tasks.md
   - name: iTunes automatically turns on backup encryption
     href: intune-managed-ios-device-backup-encrypted.md
   - name: RemoteWipe CSP fails to send a doWipe command
     href: remotewipe-fails-sending-dowipe-command.md
-  - name: Remove duplicate mobile device management objects
-    href: remove-duplicate-mobile-device-management.md
-  - name: Troubleshoot device actions
-    href: troubleshoot-device-actions.md
-  - name: UPN listed as None for orphaned devices
-    href: orphaned-device-upn-shown-as-none.md
   - name: Windows 10 devices can't sync with Intune
     href: cannot-sync-windows-10-devices.md
 - name: Device protection
