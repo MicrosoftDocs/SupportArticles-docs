@@ -19,7 +19,7 @@ appliesto:
 - Exchange Server 2019
 search.appverid: MET150
 ---
-# "MapiExceptionCorruptData" error when moving a mailbox to an Exchange Server 2013 mailbox database
+# "MapiExceptionCorruptData" error when moving a mailbox to an Exchange Server 2013 database
 
 ## Symptoms
 
