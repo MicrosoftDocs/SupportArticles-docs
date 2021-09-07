@@ -28,18 +28,22 @@ After a public folder batch migration is completed, items in the public folder a
 
 ## Cause
 
-This issue occurs because the `DefaultPublicFolderAgeLimit` parameter is set to a specific value at the organizational level.
+This issue occurs because one of the following condition is true:
 
-The `DefaultPublicFolderAgeLimit` parameter specifies the default age limit for the contents of public folders across the entire organization. Items in a public folder are automatically deleted when this age limit is exceeded. This attribute applies to all public folders in the organization that don't have their own Age Limit setting.
-
-To specify a value, enter it as a time span: *dd.hh:mm:ss*, where d = days, h = hours, m = minutes, and s = seconds. Or, enter the default value *$null*.
+- The `DefaultPublicFolderAgeLimit` parameter is set to a value that exceeds the default age limit set for the organization.
+- The `AgeLimit` parameter is set to a value that exceeds the age limit set for the public folder.
 
 ## Resolution
 
-To prevent the items in a public folder from being deleted automatically, set the value of the `DefaultPublicFolderAgeLimit` parameter to *$null* by running the following PowerShell cmdlet:
+You can use the Exchange admin center (EAC) to check the age limit set for a public folder.
+
+:::image type="content" source="media/items-deleted-public-folder-batch-migration/age-limits-in-EAC.png" alt-text="Screenshot of age limit in EAC.":::
+
+To prevent the items in a public folder from being deleted automatically, set the value of the `DefaultPublicFolderAgeLimit` parameter or the `AgeLimit` parameter to *$null* by running one of the following PowerShell cmdlet:
 
 ```powershell
 Set-OrganizationConfig -DefaultPublicFolderAgeLimit $null
+Set-PublicFolder <Folder path> -AgeLimit $null
 ```
 
 ## More information
