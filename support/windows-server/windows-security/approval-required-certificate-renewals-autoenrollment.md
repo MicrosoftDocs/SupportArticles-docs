@@ -24,6 +24,8 @@ Assume that you're configuring a certificate autoenrollment that has the **CA ce
 
 Certificate autoenrollment runs every eight hours. When unsupported values of validity and renewal period are configured in a certificate template, the certificate renewal is skipped and the client triggers new enrollment requests instead of renewals, hence prompting CA certificate manager approval.
 
+## Recommended values of validity period and renewal period
+
 To be renewed, a certificate should have completed 80% of its validity period and be within the renewal period. For example, a certificate valid for one year reaches the 80% mark at around 41.5 weeks. If the certificate has a renewal period of six weeks, it will be renewed during the 46th week period.
 
 For normal renewal behaviors, set the renewal period to more than 8 hours and less than 20% of the validity period.
