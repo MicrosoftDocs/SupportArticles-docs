@@ -108,6 +108,27 @@ Information about the Linux virtual machine, operating system, block devices, hi
 
 - [Azure virtual machine instance metadata](/azure/virtual-machines/windows/instance-metadata-service)
 
+### Performance diagnostics trace
+
+Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. Rules are displayed in the report under the Category -> Finding tab. 
+
+Each rule consists of the following:
+- Finding: Description of the finding.
+- Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation that provide more information on the finding and/or recommendation.
+- Impact Level: Represents the potential for having an impact on performance.
+
+The following cateogries of rules are currently supported:
+
+- High resource usage:
+    * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
+    * High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+    * High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+- Storage: Detects specific storage configurations.
+- Memory: Detects specific memory configurations.
+- Network: Detects specific network settings.
+- System: Detects specific system settings. 
+
+
 >[!Note]
 >[`*`] PCI information is not yet collected on Debian and SLES distributions.
 > 

@@ -64,7 +64,7 @@ The following topics discuss how to detect and recover from a USN rollback in a 
 
 ## Supported methods to back up Active Directory on domain controllers that are running Windows Server 2012 and later versions
 
-Windows Server 2012 adds support for Hyper-Visor Generation ID (GenID). This allows the virtual guest to detect the disk volumes that have a new ID, and respond to the new GenID. In Active Directory, Directory Services reacts as if the domain controller was restored from a backup. It then generates a new Invocation ID. By using the new Invocation ID, the database instance can to safely re-enter replication in the forest.
+Windows Server 2012 adds support for Hyper-Visor Generation ID (GenID). This allows the virtual guest to detect the disk volumes that have a new ID, and respond to the new GenID. In Active Directory, Directory Services reacts as if the domain controller was restored from a backup. It then generates a new Invocation ID. By using the new Invocation ID, the database instance can safely re-enter replication in the forest.
 
 This is one of the scenarios that is covered in [Virtualized Domain Controller Deployment and Configuration](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-deployment-and-configuration).
 
