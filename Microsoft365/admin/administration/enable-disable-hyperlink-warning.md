@@ -70,7 +70,7 @@ To enable or to disable the hyperlink warnings in Microsoft Office programs when
 3. Locate and then select the following registry subkey (if the subkey does not exist, create it manually):
    **HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Common**
    
-   **Note** In this subkey, replace "xx.0" with 12.0 for Office 2007, 14.0 for Office 2010, 15.0 for Office 2013 and 16.0 for Office 2016 and later.   
+   **Note** In this subkey, replace "xx.0" with 12.0 for Office 2007, 14.0 for Office 2010, 15.0 for Office 2013, and 16.0 for Office 2016 and later.   
 4. Click the registry subkey, point to **New** on the **Edit** menu, and then click **Key**.   
 5. Type Security, and then press Enter to name the key.   
 6. On the **Edit** menu, point to **New**, and then click **DWORD Value**.    
@@ -90,9 +90,9 @@ To disable the display of security warnings for a specific protocol, follow thes
 
 2. Locate the following registry subkey: 
 
-    **HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\Security\Trusted Protocols\All Applications**
+    **HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\xx.0\Common\Security\Trusted Protocols\All Applications**
 
-    **Note** In this subkey, replace "xx.0" with 12.0 for Office 2007, 14.0 for Office 2010, 15.0 for Office 2013 and 16.0 for Office 2016 and later.      
+    **Note** In this subkey, replace "xx.0" with 12.0 for Office 2007, 14.0 for Office 2010, 15.0 for Office 2013, and 16.0 for Office 2016 and later.      
 3. Click the All Applications subkey.   
 4. On the **Edit** menu, point to **New**, and then click **Key**.   
 5. Type the name of the protocol that you want to exclude. For example, to disable the display of a security warning for the "Notes:" protocol, type Notes:.
@@ -116,7 +116,7 @@ After you disable warning messages, you may still receive a warning message from
 1. Click to clear the **Confirm open after download** check box, and then click **OK**.
 1. In the **Folder Options** dialog box, click **Close**.
 
-#### Method 2: Modify the HKEY_CLASSES_ROOT\\CLSID>\EditFlags registry subkey
+#### Method 2: Modify the HKEY_CLASSES_ROOT\\\<CLSID\>\EditFlags registry subkey
 
 Use this method if the warning message affects multiple computers. 
 
@@ -125,7 +125,7 @@ To disable the warning message, follow these steps:
 1. Click **Start**, click **Run**, type regedit, and then click **OK**. 
 2. Locate the following registry subkey:
 
-   **HKEY_CLASSES_ROOT\\\<CLSID>\EditFlags**
+   **HKEY_CLASSES_ROOT\\\<CLSID\>\EditFlags**
    
    For example, if the file name extension is WMV, select HKEY_CLASSES_ROOT\WMVFile\EditFlags   
 3. Click **EditFlags**, and then click **Rename** on the **Edit** menu.
@@ -141,7 +141,7 @@ To re-enable the warning message, follow these steps:
 1. Click **Start**, click **Run**, type regedit, and then click **OK**.   
 2. Locate the following registry subkey: 
 
-   **HKEY_CLASSES_ROOT\\\<CLSID>\EditFlags**   
+   **HKEY_CLASSES_ROOT\\\<CLSID\>\EditFlags**   
 3. Click **EditFlags**, and then click **Modify** on the **Edit** menu.
 
 4. Type 0, and then click **OK**.    
