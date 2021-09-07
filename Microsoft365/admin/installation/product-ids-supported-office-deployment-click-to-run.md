@@ -52,12 +52,12 @@ The following table lists Office 365 and Microsoft 365 plan names and the correc
 |Office 365 Enterprise E4     |O365ProPlusRetail   |
 |Office 365 Enterprise E5     |O365ProPlusRetail   |
 |Office 365 Midsize           |O365ProPlusRetail   |
-|Office 365 Business          |O365BusinessRetail  |
-|Office 365 Business Premium  |O365BusinessRetail  |
+|Microsoft 365 Apps for business          |O365BusinessRetail  |
+|Microsoft 365 Business Standard |O365BusinessRetail  |
 |Office Small Business Premium|O365SmallBusPremRetail |
 |Microsoft 365 E3 | O365ProPlusRetail|
 |Microsoft 365 E5 | O365ProPlusRetail |
-|Microsoft 365 Business | O365BusinessRetail |
+|Microsoft 365 Business Premium | O365BusinessRetail |
 
 
 In addition to these product IDs, the following non-Office 365 product IDs are supported by this tool:
