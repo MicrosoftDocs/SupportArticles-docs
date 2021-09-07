@@ -3,15 +3,17 @@ title: Troubleshoot state message backlog
 description: Describes how to troubleshoot state messaging performance issues in Configuration Manager.
 ms.date: 09/02/2021
 ms.prod-support-area-path: 
-ms.reviewer: jarrettr
+ms.reviewer: buzb, lamosley
 author: helenclu
 ms.author: luche
 ---
 # Troubleshoot state message processing performance issues
 
+*Applies to*: Configuration Manager
+
 State messaging is one of the most important reporting mechanisms in Configuration Manager. It's responsible for application and update deployment statistics, and many other flows.
 
-In this article, we focus on the SMS_STATE_SYSTEM component, which processes the incoming state messages and updates the database.
+In this article, we focus on the SMS_STATE_SYSTEM component (also referred to as StateSys), which processes the incoming state messages and updates the database.
 
 For more information about the state messaging system, see [Description of state messaging in Configuration Manager](state-messaging-description.md).
 
@@ -19,7 +21,7 @@ For more information about the state messaging system, see [Description of state
 
 A Configuration Manager administrator notices a significant delay on reporting Software Update compliance, and application deployment. In this situation, there are a large number of files under the `<Configuration Manager Installation Directory>\Inboxes\auth\statesys.box\incoming` folder. For example, there are millions of files.
 
-Here's an example output when filtering the InboxMon.log file by `StateSys`:
+Here's a sample output when filtering the InboxMon.log file by `StateSys`:
 
 ```output
 06-11-2021 08:53:35.276    SMS_INBOX_MONITOR    8972 (0X230C)    FILE COUNT FOR DIRECTORY F:\PROGRAM FILES\MICROSOFT CONFIGURATION MANAGER\INBOXES\AUTH\STATESYS.BOX\INCOMING\HIGH IS 13360.~
@@ -62,16 +64,16 @@ To troubleshoot the performance issue, follow these steps:
    :::image type="content" source="media\state-message-processing-performance\performance-counter.png" alt-text="Performance counters for StateSys":::
 
    If your normal processing rate isn't enough to handle the backlog, go to the next step.
-3. Change the internal settings of the StateSys component.
+3. Change the [internal settings](state-messaging-description.md#state_message_system-settings) of the SMS_STATE_SYSTEM component.
 
    > [!WARNING]
    > Serious problems might occur if you change these settings incorrectly. Microsoft can't guarantee that these problems can be solved, and doesn't support this scenario. Modify the settings at your own risk. And it's recommended that you restore these settings after you resolve the backlog.
 
    You must have at least Configuration Manager infrastructure administrator permissions to modify these settings.
 
-   1. Use the Windows Management Instrumentation Tester tool (Wbemtest) to connect to your SMS Provider. Select **Connect**, enter the site server under **Namespace**, and then select **Connect**. Enter `root\SMS\site_<site code>` for a local connection,  enter `\\MachineName\root\SMS\site_<site code>` for a remote connection.
+   1. Use the Windows Management Instrumentation Tester tool (Wbemtest) to connect to the SMS Provider. Select **Connect**, enter the site server under **Namespace**, and then select **Connect**. Enter `root\SMS\site_<site code>` for a local connection,  enter `\\MachineName\root\SMS\site_<site code>` for a remote connection.
 
-      :::image type="content" source="media\state-message-processing-performance\connect-namespace.png" alt-text="Connect to your SMS Provider":::
+      :::image type="content" source="media\state-message-processing-performance\connect-namespace.png" alt-text="Connect to the SMS Provider":::
    2. Select **Query**, enter the following query, and then select **Apply**. It returns the list of Configuration Manager sites that have the SMS_STATE_SYSTEM component installed.
 
       ```sql
@@ -79,26 +81,26 @@ To troubleshoot the performance issue, follow these steps:
       ```
 
       :::image type="content" source="media\state-message-processing-performance\query-result.png" alt-text="WMI query result":::
-   3. Double-click the site for which you want to change settings, and then double-click **Props** from the list of properties of the site/StateSys instance.
+   3. Double-click the site whose settings you want to change, and then double-click **Props** from the list of properties of the site/StateSys instance.
 
-      :::image type="content" source="media\state-message-processing-performance\statesys-property.png" alt-text="Double-click Props ":::
+      :::image type="content" source="media\state-message-processing-performance\statesys-property.png" alt-text="Double-click Props":::
    4. Select **View Embedded** to see the list of embedded properties of this instance.
 
-      :::image type="content" source="media\state-message-processing-performance\embedded-properties.png" alt-text="View embedded properties ":::
+      :::image type="content" source="media\state-message-processing-performance\embedded-properties.png" alt-text="View embedded properties":::
    5. Double-click each embedded property to check the property name and value. Look for the property with the name **Loader Threads**, and the value **4**.
 
        :::image type="content" source="media\state-message-processing-performance\loader-threads.png" alt-text="Loader Threads":::
    6. Double-click **Value**, increase it to **16**. Select **Save Property**, and then select **Save Object**.
 
-       :::image type="content" source="media\state-message-processing-performance\increase-loader-threads.png" alt-text="Incease Loader Threads":::
-   7. Look for another embedded property with the name **Min Missing Message Age**, and the value **2880** (minutes).
+       :::image type="content" source="media\state-message-processing-performance\increase-loader-threads.png" alt-text="Increase Loader Threads":::
+   7. Look for another embedded property with the name **Min Missing Message Age**, and the value **2,880** (minutes).
 
        :::image type="content" source="media\state-message-processing-performance\missing-message-age.png" alt-text="Minimum missing message age":::
    8. Double-click **Value**, increase it to **10,080** (seven days) to prevent unnecessary resynchronization. Select **Save Property**, and then select **Save Object**.
-   9. In the **Property Editor** dialog of **Props**, select **Save Property**.
+   9. In the **Property Editor** dialog box of **Props**, select **Save Property**.
 
       :::image type="content" source="media\state-message-processing-performance\save-property.png" alt-text="Save property":::
-   10. In the **Object Editor** dialog of the StateSys instance, select **Save Object**.
+   10. In the **Object Editor** dialog box of the StateSys instance, select **Save Object**.
    11. Close Wbemtest.
    12. Use Configuration Manager Service Manager to stop and restart the SMS_STATE_SYSTEM component.
 
