@@ -479,6 +479,8 @@
       href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
+    - name: Migration fails with mailbox GUID
+      href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
     - name: Permissions and settings don't propagate in EAC
       href: ../public-folders/permissions-settings-not-propagate-eac.md
     - name: Public folder couldn't be mail-enabled
