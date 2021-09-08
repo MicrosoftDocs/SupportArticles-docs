@@ -13,7 +13,7 @@ ms.custom:
 - CI 149097
 - CSSTroubleshoot
 ms.reviewer: haembab
-editor:v-jesits
+editor: v-jesits
 appliesto:
 - Exchange Online 
 search.appverid: MET150
