@@ -13,6 +13,7 @@ ms.custom:
 - Exchange Online
 - CSSTroubleshoot
 ms.reviewer: batre
+editor: v-jesits
 appliesto: 
 - Exchange Online via Office 365 E Plans
 - Exchange Online via Office 365 P Plans
@@ -22,29 +23,31 @@ search.appverid: MET150
 ---
 # Email messages with the "HierarchySync_" subject in message tracking
 
-Email messages with the "HierarchySync_" subject are displayed in message tracking, flooding the queue, or delivered to unintended recipients.
+Email messages that have the "HierarchySync_" subject are displayed in message tracking, are flooding the queue, or are delivered to unintended recipients.
 
-If the public folder hierarchy synchronization messages are sent incorrectly, the public folder hierarchy is synchronized by using SMTP messages that has subject starting with "HierarchySync_". In the synchronization process, all public folder mailboxes in the organization are added to a special system group. The primary hierarchy mailbox sends hierarchy sync notification email messages to this special group. The message class of these notification email messages is "IPM.HierarchySync.Message". For more information about the hierarchy sync, see [Introduction to Public Folder Hierarchy Sync](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344).
+If the public folder hierarchy synchronization messages are sent incorrectly, the public folder hierarchy is synchronized by using SMTP messages that have subject lines that start at "HierarchySync_". In the synchronization process, all public folder mailboxes in the organization are added to a special system group. The primary hierarchy mailbox sends hierarchy sync notification email messages to this special group. The message class of these notification email messages is "IPM.HierarchySync.Message". For more information about the hierarchy sync, see [Introduction to Public Folder Hierarchy Sync](https://techcommunity.microsoft.com/t5/exchange-team-blog/introduction-to-public-folder-hierarchy-sync/ba-p/609344).
 
-Since these notification email messages are SMTP messages, they are displayed in message tracking reports. Therefore, if you see email messages with the "HierarchySync_" subject, this behavior is by design, and you can safely ignore these email messages.
+Because these notification messages are SMTP messages, they are displayed in message tracking reports. Therefore, if you see email messages that have the "HierarchySync_" subject, you can trust that this behavior is by design, and you can safely ignore these email messages.
 
-However, if you see these messages being delivered to unintended recipients, this issue occurs if your organization has created a catch-all transport rule to process all email messages that are generated from the organization or has enabled global journaling of email messages. If you're using global journaling, the behavior to see hierarchy sync emails being sent to a journal recipient is by design.
+However, if you see these messages gettng delivered to unintended recipients, this is because your organization has created a catch-all transport rule to process all email messages that are generated from the organization or that have enabled global journaling of email messages. If you're using global journaling, the behavior to see hierarchy sync email messages being sent to a journal recipient is by design.
 
-To work around this issue, use one of the following methods:
+To work around this issue, use one of the following methods.
 
 ## Workaround 1: Add an exception for the transport rule
 
-Here's how to add an exception for the transport rule that processes all email messages in the organization to exclude messages that have the words "HierarchySync_" included in the subject.
+Add an exception for the transport rule that processes all email messages in the organization to exclude messages that have the words "HierarchySync_" in the subject line. Here's how:
 
 1. In the Exchange admin center, go to **Mail flow** > **Rules**.
 
-1. Check the rules and find the one that's acting on all messages.
+1. Check the rules, and find the one that's acting on all messages.
 
-1. Double-click the transport rule to open the rule editor window, select **Add exception**, and then select **The subject includes** in the **Except if...** dropdown as in the following screenshot.
+1. Double-click the transport rule to open the rule editor window, select **Add exception**, and then select **The subject includes** in the **Except if...** list, as shown in the following screenshot.
 
     :::image type="content" source="media/pf-hierarchy-sync-emails/transport-rule.png" alt-text="Screenshot of adding exception to the transport rule.":::
 
-## Workaround 2: Exclude email messages sent from the primary hierarchy mailbox
+## Workaround 2: Exclude messages sent from the primary hierarchy mailbox
+
+Exclude email messages that are sent from the primary hierarchy mailbox. Here's how:
 
 1. Find the email address of the primary hierarchy mailbox by running the following Exchange Online PowerShell command:
 
@@ -58,4 +61,4 @@ Here's how to add an exception for the transport rule that processes all email m
     Set-TransportRule -Identity "[Apply to all messages]" -ExceptIfFrom "<primary hierarchy mailbox address>"
     ```
 
-    **Note:** You must find the transport rule that's working on public folder hierarchy sync email messages. Replace \<primary hierarchy mailbox address> with the address that you get from step 1.
+    **Note:** You must find the transport rule that's working on public folder hierarchy sync email messages. Replace \<*primary hierarchy mailbox address*> with the address that you obtained in step 1.
