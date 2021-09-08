@@ -23,7 +23,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-You're moving a mailbox from an organization that has Microsoft Exchange 2016 servers or Exchange 2019 servers to an Exchange Server 2013 database in another organization. When you use the `Remote` switch to initiate the cross-forest move from the target forest to move the mailbox to the database, the cross-forest move fails with the following error message:
+You're moving a mailbox from an organization that has Microsoft Exchange Server 2016-based servers or Exchange Server 2019-based servers to an Exchange Server 2013 database in another organization. When you use the `Remote` switch to initiate the cross-forest move of the mailbox from the target forest to the database, the move fails and generates the following error message:
 
 > MapiExceptionCorruptData: Unable to write mailbox info.
 
