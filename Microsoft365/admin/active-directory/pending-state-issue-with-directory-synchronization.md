@@ -1,6 +1,6 @@
 ---
-title: Fix pending state issue with Directory synchronization for Office 365, Azure, or Intune
-description: Provides resolution to the pending state issue with directory synchronization for Office 365, Azure, or Intune
+title: Fix pending state issue with Directory synchronization for Microsoft 365, Azure, or Intune
+description: Provides resolution to the pending state issue with directory synchronization for Microsoft 365, Azure, or Intune
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,14 +16,14 @@ appliesto:
 - Azure Active Directory
 - Microsoft Intune
 - Azure Backup
-- Office 365 Identity Management 
+- Microsoft 365 Identity Management 
 ---
-# Fix pending state issue with Directory synchronization for Office 365, Azure, or Intune
+# Fix pending state issue with Directory synchronization for Microsoft 365, Azure, or Intune
 
 
 ## Symptoms
 
-You experience one of the following symptoms in a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune:
+You experience one of the following symptoms in a Microsoft cloud service such as Microsoft 365, Microsoft Azure, or Microsoft Intune:
 
 - When you activate directory synchronization in the [Microsoft 365 admin center](https://admin.microsoft.com/#/dirsyncmanagement), the page indicates that directory synchronization is enabled. However, when you install the Azure Active Directory Sync tool and run the Configuration Wizard, you receive the following message:
 
@@ -33,7 +33,7 @@ You experience one of the following symptoms in a Microsoft cloud service such a
 
     `Active Directory synchronization is being activated`
 
-- When you deactivate directory synchronization on the [Directory sync status](https://admin.microsoft.com/#/dirsyncmanagement) page of the Office 365 portal, the page indicates that directory synchronization is enabled.
+- When you deactivate directory synchronization on the [Directory sync status](https://admin.microsoft.com/#/dirsyncmanagement) page of the Microsoft 365 portal, the page indicates that directory synchronization is enabled.
 
     You then revisit the [Directory sync status](https://admin.microsoft.com/#/dirsyncmanagement) page to view the directory synchronization status. When you look under **3: Active Directory Synchronization** in the center pane, you see the following message:
 
@@ -91,6 +91,6 @@ If directory synchronization isn't activated or deactivated after the expected t
 
 ## More information
 
-For more information about how to enable directory synchronization in Office 365, Azure, and Intune, see [Prepare for directory synchronization to Microsoft 365](/office365/enterprise/prepare-for-directory-synchronization).
+For more information about how to enable directory synchronization in Microsoft 365, Azure, and Intune, see [Prepare for directory synchronization to Microsoft 365](/office365/enterprise/prepare-for-directory-synchronization).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
