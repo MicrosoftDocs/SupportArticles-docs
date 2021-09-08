@@ -40,4 +40,4 @@ For more information about secure boot and TPM, see the following resources:
 
 [Trusted computing group](https://www.trustedcomputinggroup.org/)  
 
-[!INCLUDE [Third-party-contact-disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
