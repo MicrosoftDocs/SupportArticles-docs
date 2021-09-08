@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Failed trust relationship in an Azure Windows VM
+title: Troubleshoot a failed trust relationship in an Azure Windows VM
 description: This article shows how to troubleshoot a failed trust relationship between the workstation and primary domain in an Azure Windows virtual machine (VM).
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -17,7 +17,7 @@ ms.author: tibasham
 
 ---
 
-# Troubleshoot Failed trust relationship in an Azure Windows VM
+# Troubleshoot a failed trust relationship in an Azure Windows VM
 
 This article shows how to troubleshoot a failed trust relationship between the workstation and primary domain in an Azure Windows virtual machine (VM).
 
@@ -45,7 +45,7 @@ Complete the following steps on the VM. If available, try to connect to the VM v
 
    `set | find /i "LOGONSERVER"`
 
-2. Check network connectivity to the domain controller. For example, you can use the `[Test-Connection](/powershell/module/microsoft.powershell.management/test-connection)` cmdlet to test connectivity to the Fully Qualified Domain Name (FQDN) of the domain controller identified in step 1.
+2. Check network connectivity to the domain controller. For example, you can use the [Test-Connection](/powershell/module/microsoft.powershell.management/test-connection) cmdlet to test connectivity to the Fully Qualified Domain Name (FQDN) of the domain controller identified in step 1.
 
 3. If there is no connectivity to the domain controller from your VM, troubleshoot the network path. [Network Watcher diagnostics](/azure/network-watcher/network-watcher-monitoring-overview#diagnostics) may help in this troubleshooting.
 
@@ -92,14 +92,14 @@ As a last option, remove the VM from the domain and then re-join the domain.
 
    Example:
 
-   ```ps
+   ```powershell
    'Remove-Computer -UnjoinDomaincredential Domain01\Admin01 -PassThru -Verbose -Restart'
    ```
 
-2. Using Powershell, execute the '[Add-Computer](/powershell/module/microsoft.powershell.management/add-computer)' cmdlet to re-join the VM to the domain.
+2. Using PowerShell, execute the '[Add-Computer](/powershell/module/microsoft.powershell.management/add-computer)' cmdlet to re-join the VM to the domain.
 
    Example:
 
-   ```ps
+   ```powershell
    'Add-Computer -ComputerName Server01 -LocalCredential Server01\Admin01 -DomainName Domain02 -Credential Domain02\Admin02 -Restart -Force'
    ```
