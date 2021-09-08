@@ -477,6 +477,8 @@
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: Can't send email to public folder contact list
       href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
+    - name: Emails with the "HierarchySync_" subject
+      href: ../public-folders/pf-hierarchy-sync-emails.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
     - name: Migration fails with mailbox GUID
