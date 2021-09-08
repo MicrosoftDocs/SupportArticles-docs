@@ -52,8 +52,8 @@ To resolve this issue, follow these steps:
 1. Open Active Directory Service Interfaces (ADSI) Edit. To do this, click **Start**, click **Run**, type *ADSIEdit.msc*, and then click **OK**.
 2. After the ADSI Edit window is loaded, right-click **ADSI Edit** in the navigation pane, and then click **Connect To**.
 3. In the **Connection Settings** window, click **Select a well known Naming Context** in the **Connection Point** area, and then click **Schema**.
-4. Expand the **Schema [DC.domain.com]** node, and then click **CN=Schema, CN=Configuartion,DC=domain,DC=com**.
+4. Expand the **Schema [DC.domain.com]** node, and then click **CN=Schema, CN=Configuration,DC=domain,DC=com**.
 5. In the result pane, right-click **CN= ms-Exch-Resource-Schema**, click **Property**, and then change the value of the **lDAPDisplayName** attribute to **msExchResourceSchema**.
 6. In the result pane, right-click **ms-Exch-Resource-Property-Schema**, click **Property**, and then change the value of the **lDAPDisplayName** attribute to **msExchResourcePropertySchema**.
 7. Force Active Directory replication between the domain controllers.
-8. Run the `Setup.exe /PreparAD` command to install Exchange Server.
+8. Run the `Setup.exe /PrepareAD` command to install Exchange Server, this should be run as Administrator in PowerShell or CMD.
