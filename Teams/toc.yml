@@ -161,6 +161,8 @@
         href: ./phone-system/dial-plans/errors-managing-dial-plans.md
     - name: Direct Routing
       items:
+      - name: Issues with call transfers
+        href: ./phone-system/direct-routing/issues-with-call-transfers.md
       - name: Issues with LMO
         href: ./phone-system/direct-routing/issues-with-lmo.md
       - name: Issues with outbound calls
