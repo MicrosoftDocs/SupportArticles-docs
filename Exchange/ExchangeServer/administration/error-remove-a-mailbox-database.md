@@ -1,6 +1,6 @@
 ---
 title: Error when you remove a mailbox database
-description: Fixes an issue that prevents you from removing a mailbox database in Exchange Server 2016.
+description: Fixes an issue that prevents you from removing a mailbox database in Exchange Server 2016 and 2019.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,16 +14,16 @@ ms.custom:
 search.appverid:
 - MET150
 appliesto:
-- Exchange Server 2016 Enterprise Edition
-- Exchange Server 2016 Standard Edition
+- Exchange Server 2019
+- Exchange Server 2016
 ---
-# Error when you try to remove a mailbox database in Exchange Server 2016
+# Error when you try to remove a mailbox database in Exchange Server 2019 or 2016
 
 _Original KB number:_ &nbsp; 3093175
 
 ## Symptoms
 
-Even if you've already moved or disabled all users, public folders, and arbitration mailboxes, you receive one of the following error messages when running the `Remove-MailboxDatabase` cmdlet. This message states there are still mailboxes left on a Microsoft Exchange Server 2016 database.
+Even if you've already moved or disabled all users, public folders, and arbitration mailboxes, you receive one of the following error messages when running the `Remove-MailboxDatabase` cmdlet. This message states there are still mailboxes left on a Microsoft Exchange Server database.
 
 > This mailbox database contains one or more mailboxes, mailbox plans, archive mailboxes, public folder mailboxes or
 arbitration mailboxes. To get a list of all mailboxes in this database, run the command Get-Mailbox -Database **Database ID**. To get a list of all mailbox plans in this database, run the command Get-MailboxPlan. To get a list of archive mailboxes in this database, run the command Get-Mailbox -Database **Database ID** -Archive. To get a list of all public folder mailboxes in this database, run the command Get-Mailbox -Database **Database ID** -PublicFolder. To get a list of all arbitration mailboxes in this database, run the command Get-Mailbox -Database **Database ID** -Arbitration.  
@@ -39,7 +39,7 @@ Or
 
 ## Cause
 
-This issue occurs because Exchange Server 2016 introduces an AuditLog mailbox. This mailbox may be still present and blocking removal of the database.
+This issue occurs because Exchange Server 2016 and 2019 introduces an AuditLog mailbox. This mailbox may be still present and blocking removal of the database.
 
 ## Resolution
 
@@ -49,4 +49,16 @@ To fix this issue, use the `Get-Mailbox` cmdlet together with the `-AuditLog` pa
 Get-Mailbox -AuditLog -Database <DatabaseName>
 ```
 
-If the AuditLog mailbox is present, move the mailbox to a different database, or remove or disable it.
+If the AuditLog mailbox is present, use one of the following methods:
+
+- If it isn't the last mailbox server and database in the organization, move the mailbox to a different database by running the following cmdlet in the Exchange Management Shell:
+
+  ```powershell
+  Get-Mailbox -AuditLog -Database <SourceDatabaseName> | New-MoveRequest -TargetDatabase <TargetDatabaseName>
+  ```
+
+- If it's the last mailbox server and database in the organization, you can safely remove it by running the following cmdlet in the Exchange Management Shell:
+
+  ```powershell
+  Remove-Mailbox -AuditLog
+  ```
