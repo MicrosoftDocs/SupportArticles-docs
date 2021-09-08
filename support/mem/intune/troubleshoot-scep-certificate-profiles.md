@@ -4,7 +4,7 @@ description: Troubleshoot the use of SCEP by devices to request certificates for
 ms.date: 01/30/2020
 ms.reviewer: lacranda
 ---
-# Overview for troubleshooting SCEP certificate profiles with Microsoft Intune
+# Troubleshooting SCEP certificate profiles with Microsoft Intune
 
 Use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles can be challenging to troubleshoot in Intune. This article is an overview that can help you resolve issues by:
 

@@ -1,28 +1,21 @@
 ---
-title: Use certificates for authentication
-description: Compares Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificates for authentication. Helps you decide which one is better for your organization.
+title: Learn about SCEP and PKCS certificates for authentication
+description: Compares Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificates for authentication, which you can deliver with Microsoft Intune.
 author: helenclu
 ms.author: luche
 ms.reviewer: sausarka
-ms.date: 10/09/2020
+ms.date: 09/08/2021
 ms.prod-support-area-path: 
 ---
-# Support Tip: Use certificates for authentication, and choose between SCEP and PKCS
+# Choose between SCEP and PKCS for authentication
 
-When you try to access protected company resources, the process generally involves the following phases:
+When a user tries to access protected company resources, the process generally involves authentication to determine user identity, and then authorization to confirm the user has access to a protected resource, and what the user can do with that data.
 
-- Authentication: Determining your identity.
-- Authorization: Determining whether you have access to a resource. This process specifies what data you're allowed to access and what you can do with that data.
-
-Typically, users authenticate an app, a Wi-Fi or VPN connection by entering a username and password. To make this process more seamless for users, use certificates for authentication. Using certificates for authentication has the following advantages:
-
-- It provides a more secure authentication.
-- Your users won't have to enter their credentials.  
-
+Typically, users authenticate  with a user name and password, via an app with a Wi-Fi or VPN connection. To make the authentication process more seamless for your users, you can use certificates. Certificates offer more secure authentication and don't require your users to enter their credentials.
 > [!NOTE]
 > The certificate that the user uses to prove authenticity must come from a trusted certification authority (CA), such as a trusted third-party CA or an on-premises Microsoft CA.
 
-You can deploy the following kinds of user or device certificates by using Intune:
+You can use Microsoft Intune to deploy the following types of user or device certificates:
 
 - Simple Certificate Enrollment Protocol (SCEP)
 - Public Key Cryptography Standards (PKCS)

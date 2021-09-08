@@ -98,12 +98,12 @@
     href: troubleshoot-co-management-workloads.md
 - name: Certificates
   items:
+  - name: Choose between SCEP and PKCS
+    href: scep-pkcs-certificate-comparison.md
   - name: Intune Certificate Connector events and diagnostic codes
     href: troubleshoot-certificate-connector-events.md
   - name: Reinstall the Intune Certificate Connector
     href: reinstall-the-intune-connector.md
-  - name: Choose between SCEP and PKCS
-    href: scep-pkcs-certificate-comparison.md
   - name: SCEP certificates
     items:
     - name: SCEP deployment
