@@ -24,7 +24,7 @@ search.appverid: MET150
 
 When you run a public folder migration batch from Microsoft Exchange Server to Exchange Online, you experience the "EndpointNotFoundTransientException" error and receive the following error messages:
 
-- There was no endpoint listening at https://mail.\<Domain Name>.com/EWS/mrsproxy.svc that could accept the message.
+- There was no endpoint listening at `https://mail.<Domain Name>.com/EWS/mrsproxy.svc` that could accept the message.
 - The remote server returned an error: (404) Not Found.
 
 Here's an example of the "EndpointNotFoundTransientException" error message.
@@ -100,6 +100,10 @@ To resolve this issue, re-create the migration batch by specifying the `SourcePF
        **Note:** It might take 10 to 15 minutes for the migration batch to be removed.
 
     1. Make sure that the migration batch is removed by running the following cmdlet:
+
+       ```powershell
+       Get-MigrationBatch | ?{$_.MigrationType.ToString() -eq "PublicFolder"}
+       ```
 
     1. Create a new public folder migration batch by running the following cmdlet:
 
