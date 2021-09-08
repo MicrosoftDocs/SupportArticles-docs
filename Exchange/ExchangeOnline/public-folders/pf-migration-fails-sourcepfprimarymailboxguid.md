@@ -1,6 +1,6 @@
 ---
 title: Incorrect SourcePFPrimaryMailboxGuid causes failed public folder migration 
-description: Fixes an issue in which you receive the "EndpointNotFoundTransientException" error when you run a public folder migration batch job.
+description: Fixes an issue in which you get an "EndpointNotFoundTransientException" error when you run a public folder migration batch job.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -22,22 +22,22 @@ search.appverid: MET150
 
 ## Symptoms
 
-When you run a public folder migration batch from Microsoft Exchange Server to Exchange Online, you receive the "EndpointNotFoundTransientException" error that includes the following error messages:
+When you run a public folder migration batch from Microsoft Exchange Server to Exchange Online, you experience the "EndpointNotFoundTransientException" error and receive the following error messages:
 
-- > There was no endpoint listening at https://mail.\<Domain Name>.com/EWS/mrsproxy.svc that could accept the message.
-- > The remote server returned an error: (404) Not Found.
+- There was no endpoint listening at https://mail.\<Domain Name>.com/EWS/mrsproxy.svc that could accept the message.
+- The remote server returned an error: (404) Not Found.
 
-Here's an example of the "EndpointNotFoundTransientException" error with details:
+Here's an example of the "EndpointNotFoundTransientException" error message.
 
 :::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/pf-migration.png" alt-text="Screenshot of the detailed errors.":::
 
-However, when you test migration server availability for the public folder endpoint by running the following cmdlet, the result is successful.
+However, when you test migration server availability for the public folder endpoint by running the following cmdlet, the result is successful:
 
 ```powershell
 Test-MigrationServerAvailability -Endpoint <PublicFolderMigrationEndPoint>
 ```
 
-Here's an example of the cmdlet and the output:
+Here's an example of the cmdlet and the output.
 
 :::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/endpoint.png" alt-text="Screenshot of cmdlet and output for endpoint.":::
 
@@ -45,7 +45,7 @@ Here's an example of the cmdlet and the output:
 
 This issue occurs if you create the migration batch by specifying the `SourcePFPrimaryMailboxGuid` parameter of Exchange Online instead of Exchange Server.
 
-To verify if the migration batch uses incorrect `SourcePFPrimaryMailboxGuid`, you can run the following cmdlets:
+To verify that the migration batch uses incorrect `SourcePFPrimaryMailboxGuid`, you can run the cmdlets in the following steps:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).  
 
@@ -55,27 +55,27 @@ To verify if the migration batch uses incorrect `SourcePFPrimaryMailboxGuid`, yo
    (Get-MigrationBatch | ?{$_.MigrationType.ToString() -eq "PublicFolder"}).SourcePFPrimaryMailboxGuid
    ```
 
-   Here's an example of the cmdlet and the output:
+   Here's an example of the cmdlet and the output.
 
    :::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/exo-guid.png" alt-text="Screenshot of cmdlet for GUID.":::
 
-1. Confirm if the GUID provided is from Exchange Online by running the following cmdlet:
+1. Verify that the GUID provided is from Exchange Online by running the following cmdlet:
 
    ```powershell
    Get-Mailbox -PublicFolder <GUID>
    ```
 
-   **Note:** Replace \<GUID> with the value that you get from the cmdlet of step 2.
+   **Note:** Replace \<*GUID*> with the value that you get from the cmdlet in step 2.
 
-   If the public folder mailbox is successfully listed from Exchange Online, you can confirm that the migration batch is not correctly created. Here's an example of the cmdlet and the output:
+   If the public folder mailbox is successfully listed from Exchange Online, you can verify that the migration batch is not correctly created. Here's an example of the cmdlet and the output.
 
    :::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/confirm-guid.png" alt-text="Screenshot of checking if it's Exchange Online GUID.":::
 
 ## Resolution
 
-To resolve this issue, re-create the migration batch by specifying `SourcePFPrimaryMailboxGuid` of the public folder mailbox at Exchange on-premises server. Here's how to re-create the migration batch:
+To resolve this issue, re-create the migration batch by specifying the `SourcePFPrimaryMailboxGuid` of the public folder mailbox on the Exchange on-premises server. Here's how to re-create the migration batch:
 
-1. [Open Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) at Exchange on-premises server.
+1. [Open Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) on the Exchange on-premises server.
 
 1. Get the public folder mailbox GUID from Exchange Server by running the following cmdlet:
 
@@ -83,7 +83,7 @@ To resolve this issue, re-create the migration batch by specifying `SourcePFPrim
    (Get-OrganizationConfig).RootPublicFolderMailbox.HierarchyMailboxGuid.GUID
    ```
 
-   Here's an example of the cmdlet and the output:
+   Here's an example of the cmdlet and the output.
 
    :::image type="content" source="media/pf-migration-fails-sourcepfprimarymailboxguid/on-premises-guid.png" alt-text="Screenshot of getting on-premises Exchange GUID.":::
 
@@ -97,7 +97,7 @@ To resolve this issue, re-create the migration batch by specifying `SourcePFPrim
        Get-MigrationBatch | ?{$_.MigrationType.ToString() -eq "PublicFolder"} | Remove-MigrationBatch
        ```
 
-       **Note:** It might take up to 10 to 15 minutes for the migration batch to be removed.
+       **Note:** It might take 10 to 15 minutes for the migration batch to be removed.
 
     1. Make sure that the migration batch is removed by running the following cmdlet:
 
