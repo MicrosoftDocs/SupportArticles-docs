@@ -23,7 +23,7 @@ For this part, you should have the following items set up:
 
 ## Goal of this part
 
-Currently, there is one site configured in Nginx. Any request that arrives on port 80 to Nginx is routed to that site. The hostname doesn't matter in this setup. Use either the IP address or any hostname that resolves to the IP address. All requests will be routed to the default website. That default website acts as a reverse proxy and routes requests to the first ASP.NET Core application that's listening on port 5000.
+Currently, there's one site configured in Nginx. Any request that arrives on port 80 to Nginx is routed to that site. The hostname doesn't matter in this setup. Use either the IP address or any hostname that resolves to the IP address. All requests will be routed to the default website. That default website acts as a reverse proxy and routes requests to the first ASP.NET Core application that's listening on port 5000.
 
 In this part of the tutorial, you'll create a second website in Nginx. That website will also act as a reverse proxy, and any request that has a specific hostname will be routed to the second ASP.NET Core application that's listening on port 5001.
 
@@ -38,12 +38,12 @@ These host names are for demonstration only. Feel free to use any other host nam
 
 ## Configure a second web using a hostname in Nginx
 
-If you recall, one of the directories in which Nginx loads the site configurations is */etc/nginx/sites-enabled/*. Currently, there is one default configuration file. The file resembles the following screenshot.
+If you recall, one of the directories in which Nginx loads the site configurations is */etc/nginx/sites-enabled/*. Currently, there's one default configuration file. The file resembles the following screenshot.
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/cat-command.png" alt-text="Screenshot of cat command." border="true":::
 
 > [!NOTE]
-> Notice the highlighted parts because you are going to have to modify these:
+> Notice the highlighted parts because you're going to have to modify these:
 >
 > - `server_name`: You can set the desired hostname here. Currently, this is configured to the value `_`. This means any hostname.
 > - `proxy_pass`: This is actual ASP.NET Core application that's running and listening on a given URL. Requests are routed to this URL.
@@ -58,7 +58,7 @@ Create a second Nginx configuration file for the second website. Use this file a
 sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/buggyamb.config
 ```
 
-Edit the configuration file by running the `sudo vi /etc/nginx/sites-enabled/buggyamb.config` command. Here is the final version of the */etc/nginx/sites-enabled/buggyamb.config* file.
+Edit the configuration file by running the `sudo vi /etc/nginx/sites-enabled/buggyamb.config` command. Here's the final version of the */etc/nginx/sites-enabled/buggyamb.config* file.
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/sudo-command.png" alt-text="Screenshot of sudo command." border="true":::
 
@@ -79,11 +79,11 @@ This is the content of the Linux hosts file.
 
 You can run the `curl myfirstwebsite` and `curl buggyamb` commands to make requests to each of the two sites.
 
-Here is the `curl myfirstwebsite` output. The response seems to be correctly displaying the HTML content from the home page of the demonstration ASP.NET core application that was initially deployed and is listening on port 5000.
+Here's the `curl myfirstwebsite` output. The response seems to be correctly displaying the HTML content from the home page of the demonstration ASP.NET core application that was initially deployed and is listening on port 5000.
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/curl-first-web-command.png" alt-text="Screenshot of curl first web command." border="true":::
 
-And here is the `curl buggyamb` output. This displays the HTML content from the home page of the BuggyAmb sample application that's running on port 5001.
+And here's the `curl buggyamb` output. This displays the HTML content from the home page of the BuggyAmb sample application that's running on port 5001.
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/curl-buggyamb-command.png" alt-text="Screenshot of curl buggyamb command." border="true":::
 
@@ -103,13 +103,13 @@ Up to this point, you have the following setup:
 
 ## Some troubleshooting tips
 
-You may receive **HTTP 502 - Bad Gateway error** when you browse a site. "HTTP 502 - Bad Gateway" means that Nginx was not able to communicate with the back-end ASP.NET Core application. This occurs if the back-end application is not running.
+You may receive **HTTP 502 - Bad Gateway error** when you browse a site. "HTTP 502 - Bad Gateway" means that Nginx was not able to communicate with the back-end ASP.NET Core application. This occurs if the back-end application isn't running.
 
 In this case:
 
 - Make sure that both ASP.NET Core applications listen on different ports. One should listen on port 5000 while the other one should listen on port 5001.
 - Make sure that both ASP.NET Core applications are configured to start automatically.
-- Check the status of the ASP.NET Core application services that are using the `systemctl status` commands. If one is not running, troubleshoot it by examining the system logs by running the `journalctl` command. Use `syslogIdentifier` to filter the logs.
+- Check the status of the ASP.NET Core application services that are using the `systemctl status` commands. If one isn't running, troubleshoot it by examining the system logs by running the `journalctl` command. Use `syslogIdentifier` to filter the logs.
 - Makes sure that both .NET Core 3.1 and .NET Core 5.0 are installed. One site uses .NET Core 3.1, the other uses .NET Core 5.0.
 
 ## Next steps

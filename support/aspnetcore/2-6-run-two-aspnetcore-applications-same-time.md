@@ -22,7 +22,7 @@ To complete this part of the tutorial, you should have following items set up:
 - Linux local firewall that's enabled and configured to allow SSH and HTTP traffic.
 - Sample buggy ASP.NET Core application that's downloaded and extracted to the */var/buggyamb_v1.1* directory.
 
-The first ASP.NET Core demo application that was used is this series is an ASP.NET Core 5.0 application. The second application is an ASP.NET Core 3.1 application. If you do not have both .NET Core 3.1 and .NET Core 5.0 SDKs installed, install the missing one before you continue.
+The first ASP.NET Core demo application that was used in this series is an ASP.NET Core 5.0 application. The second application is an ASP.NET Core 3.1 application. If you don't have both .NET Core 3.1 and .NET Core 5.0 SDKs installed, install the missing one before you continue.
 
 > [!NOTE]
 > You can check the installed version of runtimes and SDKs by running the `dotnet --info` command. .NET Core installation was discussed in previous parts of this series.
@@ -37,13 +37,11 @@ Most of the actions that you'll take in this part will be similar: create a serv
 
 Run a second application as a service that's similar to the first application that's running. Before you create the service file, make sure that it runs correctly.
 
-Recall that, in earlier chapters, you were instructed to copy the test debugging application to */var/buggyamb_v1.1/* directory, and then run the application by using the `dotnet /var/buggyamb_v1.1/BuggyAmb.dll` command. You may receive the following error message:
+Recall that, in earlier chapters, you were instructed to copy the test debugging application to the */var/buggyamb_v1.1/* directory, and then run the application by using the `dotnet /var/buggyamb_v1.1/BuggyAmb.dll` command. You may receive the following error message:
+
+> System.IO.IOException: Failed to bind to address `http://127.0.0.1:5000`: address already in use.
 
 :::image type="content" source="./media/2-6-run-two-aspnetcore-applications-same-time/io-error-message.png" alt-text="Screenshot of IO error message." border="true":::
-
-The error message is clear:
-
-> System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
 
 Per this message, another process is already using port 5000. This is obvious. But how can you learn which process is using the port? By running the `sudo netstat -tulpn | grep 5000` command. In the following screenshot, the PID is `12536` and process name is `dotnet`. You'll most likely see that your process ID will be different:
 
@@ -56,7 +54,7 @@ The next step is to understand which ASP.NET Core application is hosted by the d
 This is the first ASP.NET Core application that was configured in this series. It's listening on port 5000. Therefore, our new ASP.NET Core buggy application can't listen on the same port.
 
 > [!NOTE]
-> You have learned something new here. There is a directory named */proc*. If you list the content of this directory, you'll see directories that are named for each PID that's running at that moment. Each subfolder will have several files that you can use to get properties of each process, such as the command-line, and memory or CPU information. For now, don't focus on this because we'll discuss it when we cover tools and processes.
+> You've learned something new here. There's a directory named */proc*. If you list the content of this directory, you'll see directories that are named for each PID that's running at that moment. Each subfolder will have several files that you can use to get properties of each process, such as the command-line, and memory or CPU information. For now, don't focus on this because we'll discuss it when we cover tools and processes.
 
 The solution to the port conflict issue isn't to stop running the first application. Because the goal is to have both applications running at the same time, the solution is actually to run the second ASP.NET Core application on a different port.
 
@@ -64,8 +62,8 @@ The solution to the port conflict issue isn't to stop running the first applicat
 
 There are different ways to achieve this goal:
 
-- Use `UseUrls()` to set the port in *Program.cs*: This means that the port is hard-coded in the application. Although we can read the port from a configuration file, you do not want to change the application and compile again. Therefore, this training will not focus on this solution.
-- Command-line arguments: Use `--urls` parameter when you run your application.
+- Use `UseUrls()` to set the port in *Program.cs*: This means that the port is hard-coded in the application. Although we can read the port from a configuration file, you don't want to change the application and compile again. Therefore, this training won't focus on this solution.
+- Command-line arguments: Use the `--urls` parameter when you run your application.
 - Environment variables: Set the URL for listening to use an environment variable. Use `DOTNET_URLS` or `ASPNETCORE_URLS` environment variable names to achieve this.
 
 Both environment variables and the command-line argument approach are options to consider. Try to test the `--urls` option, as shown in the following screenshot.
@@ -106,17 +104,17 @@ The service file name will be *buggyamb.service* and will be created in the */et
 
 :::image type="content" source="./media/2-6-run-two-aspnetcore-applications-same-time/sudo-vi-command.png" alt-text="Screenshot of sudo vi command." border="true":::
 
-Now you have configured the buggy ASP.NET Core web application to run as a daemon. Is this enough to meet the goal that we stated at the beginning of the training? Enable and start the service by running the `sudo systemctl enable buggyamb.service` and `sudo systemctl start buggyamb.service` commands. Then check the service status by running `systemctl status buggyamb.service`, as shown.
+Now you've configured the buggy ASP.NET Core web application to run as a daemon. Is this enough to meet the goal that we stated at the beginning of the training? Enable and start the service by running the `sudo systemctl enable buggyamb.service` and `sudo systemctl start buggyamb.service` commands. Then check the service status by running `systemctl status buggyamb.service`, as shown in the following screenshot.
 
 :::image type="content" source="./media/2-6-run-two-aspnetcore-applications-same-time/systemctl-status-command.png" alt-text="Screenshot of systemctl status command." border="true":::
 
-You are at the point where you can now check whether the BuggyAmb application works as expected. Run the `curl localhost:5001` command to have the Welcome page of BuggyAmb HTML be displayed in the console, as shown.
+You're at the point where you can now check whether the BuggyAmb application works as expected. Run the `curl localhost:5001` command to have the Welcome page of BuggyAmb HTML be displayed in the console, as shown in the following screenshot.
 
 :::image type="content" source="./media/2-6-run-two-aspnetcore-applications-same-time/curl-localhost-command.png" alt-text="Screenshot of curl localhost command." border="true":::
 
-The application can't be tested yet from the client because it's listening on port 5001. This port is not allowed in firewall settings. Because Nginx doesn't expose the port to the internet, you can configure Nginx to listen on port 80, and route the traffic to BuggyAmb when the incoming HTTP requests are made by using a certain hostname. For example, you could use the following hostnames: `http://buggyamb` or `http://buggyweb`. You could also use any other hostname that you want.
+The application can't be tested yet from the client because it's listening on port 5001. This port isn't allowed in firewall settings. Because Nginx doesn't expose the port to the internet, you can configure Nginx to listen on port 80, and route the traffic to BuggyAmb when the incoming HTTP requests are made by using a certain hostname. For example, you could use the hostnames: `http://buggyamb` or `http://buggyweb`. You could also use any other hostname that you want.
 
-For now, the goal is met to have the second ASP.NET Core application running side-by-side with the first demo application. In the next chapter, we will continue to configure Nginx as we describe it in this part.
+For now, the goal is met to have the second ASP.NET Core application running side-by-side with the first demo application. In the next chapter, we'll continue to configure Nginx as we describe it in this part.
 
 ## Next steps
 
