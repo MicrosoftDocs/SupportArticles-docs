@@ -56,4 +56,4 @@ To resolve this issue, follow these steps:
 5. In the result pane, right-click **CN= ms-Exch-Resource-Schema**, click **Property**, and then change the value of the **lDAPDisplayName** attribute to **msExchResourceSchema**.
 6. In the result pane, right-click **ms-Exch-Resource-Property-Schema**, click **Property**, and then change the value of the **lDAPDisplayName** attribute to **msExchResourcePropertySchema**.
 7. Force Active Directory replication between the domain controllers.
-8. Run the `Setup.exe /PrepareAD` command to install Exchange Server, this should be run as Administrator in PowerShell or CMD.
+8. Run the `Setup.exe /PrepareAD` command to install Exchange Server, this command must be run as Administrator in PowerShell or Command Prompt.
