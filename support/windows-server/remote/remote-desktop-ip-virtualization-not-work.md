@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop IP Virtualization in Windows Server 2019
 description: Remote Desktop IP Virtualization in Windows Server 2019.
-ms.date: 12/07/2020
+ms.date: 09/09/2021
 author: Deland-Han
 ms.author: delhan 
 manager: dcscontentpm
@@ -15,17 +15,13 @@ ms.technology: windows-server-rds
 ---
 # Remote Desktop IP Virtualization in Windows Server 2019
 
-This article discusses how to enable Remote Desktop IP Virtualization in Windows Server 2019.
+This article discusses about Remote Desktop IP Virtualization in Windows Server 2019. If you want to use IP virtualization on Windows Server 2019, follow [these steps](/azure/virtual-desktop/security-guide#ip-virtualization).
 
 _Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4501072
 
 ## More information
 
-Remote Desktop IP Virtualization in Windows Server 2019. 
-
 Remote Desktop IP Virtualization was introduced in Windows Server 2008 R2. In Windows Server 2008, Terminal Server had a single IP address that was shared among all remote desktop users. This made the remote desktop experience different from that of regular desktops, and it introduced some application compatibility problems.
 
 In Windows Server 2008 R2, Remote Desktop Session Host server, formerly known as Terminal Server, supported per-session and per-program Remote Desktop IP Virtualization for Winsock applications. This support was provided by assigning individual IP addresses to user sessions to avoid application incompatibility issues by simulating a single user desktop. This method continues to be used in the current version of Windows Server.
-
-If you want to use IP virtualization on Windows Server 2019, please follow [these steps](https://docs.microsoft.com/azure/virtual-desktop/security-guide#ip-virtualization):
