@@ -32,6 +32,8 @@ For more information about availability sets, see [Manage the availability of VM
 
 Azure Resource Health is a service that exposes the health of individual Azure resources and provides actionable guidance for troubleshooting problems. In a cloud environment where it isn’t possible to directly access servers or infrastructure elements, the goal of Resource Health is to reduce the time that you spend on troubleshooting. In particular, the aim is to reduce the time that you spend determining whether the root of the problem lies in the application or in an event inside the Azure platform. For more information, see [Understand and use Resource Health](/azure/service-health/resource-health-overview).
 
+If Azure has further information about the root cause of a platform-initiated unavailability for a Virtual Machine, that information may be posted in resource health up to 72 hours after the initial unavailability.
+
 ## Actions and events that can cause the VM to reboot
 
 ### Planned maintenance
@@ -110,3 +112,7 @@ VMs in Azure rely on virtual disks for operating system and data storage that is
 ### Other incidents
 
 In rare circumstances, a widespread issue can affect multiple servers in an Azure datacenter. If this issue occurs, the Azure team sends email notifications to the affected subscriptions. You can check the [Azure Service Health dashboard](https://azure.microsoft.com/status/) and the Azure portal for the status of ongoing outages and past incidents.
+
+## Diagnose VM Restarts
+
+You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. 
