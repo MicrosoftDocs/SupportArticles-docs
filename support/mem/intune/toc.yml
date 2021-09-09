@@ -104,6 +104,10 @@
     href: troubleshoot-certificate-connector-events.md
   - name: Reinstall the Intune Certificate Connector
     href: reinstall-the-intune-connector.md
+  - name: Intune Connector Setup Wizard ended prematurely
+    href: connector-setup-wizard-ends-prematurely.md
+  - name: Sign in to Intune NDES Connector error 0x80004003
+    href: ndes-connector-signin-error-80004003.md
   - name: SCEP certificates
     items:
     - name: SCEP deployment
@@ -124,10 +128,6 @@
         href: scep-deployment-to-win10-devices-fails.md
       - name: NDES certificate not installed
         href: error-0x80090014-installing-ndes-certificate.md
-      - name: Intune Connector Setup Wizard ended prematurely
-        href: connector-setup-wizard-ends-prematurely.md
-      - name: Sign in to Intune NDES Connector error 0x80004003
-        href: ndes-connector-signin-error-80004003.md
     - name: SCEP functionality
       items:
       - name: SCEP certificate request fails on CRP

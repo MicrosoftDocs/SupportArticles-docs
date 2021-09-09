@@ -1,15 +1,12 @@
 ---
-title: Devices can't obtain SCEP certificates
-description: Describes an issue in which devices can't obtain SCEP certificates from the NDES server and return error 80094800 and Event ID 31.
-ms.date: 05/18/2020
+title: Troubleshoot when devices can't obtain SCEP certificates
+description: Helps resolve an issue when devices can't obtain SCEP certificates from the NDES server and return error 80094800 and Event ID 31.
+ms.date: 09/09/2021
 ms.prod-support-area-path: Configure certificates
 ---
 # 0x80094800 error and Event ID 31 when devices fail to receive SCEP certificates
 
 This article fixes an issue in which devices can't obtain Simple Certificate Enrollment Protocol (SCEP) certificates from the Network Device Enrollment Service (NDES) server.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4488562
 
 ## Symptoms
 
@@ -43,11 +40,9 @@ Devices can't obtain SCEP certificates from the NDES server. Additionally, the f
 
 ## Cause
 
-This issue occurs if the template name on the NDES server doesn't match the name on the CA.
+This issue occurs if the template name on the NDES server doesn't match the name on the CA. In this situation, you have to use a friendly name instead of the template name for the template.
 
-In this situation, you have to use a friendly name instead of the template name for the template.
-
-## Resolution
+## Solution
 
 To fix this issue, follow these steps:
 

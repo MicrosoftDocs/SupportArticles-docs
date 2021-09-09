@@ -1,20 +1,17 @@
 ---
-title: Can't assign SCEP certificates to devices
+title: Troubleshoot when ou are unable to assign SCEP certificates to devices
 description: Fixes an issue in which you can't assign SCEP certificates to devices in Microsoft Intune after you renew an expired certificate.
-ms.date: 05/11/2020
+ms.date: 09/09/2021
 ms.prod-support-area-path: Device protection
 ms.reviewer: joelste, shhodge
 ---
-# You can't issue SCEP certificates to devices in Intune after a certificate renewal
+# You can't assign SCEP certificates to devices in Intune after a certificate renewal
 
 This article fixes an issue in which you can't assign Simple Certificate Enrollment Protocol (SCEP) certificates to devices in Microsoft Intune after you renew an expired certificate.
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4045957
-
 ## Symptoms
 
-You use Microsoft Intune to assign Simple Certificate Enrollment Protocol (SCEP) certificates to devices that you manage. After you renew an expired certificate, new certificates can't be assigned to the devices. When you open the NDESPlugin.log file, the log stops at **Sending request to certificate registration point**.
+You use Microsoft Intune to assign SCEP certificates to devices that you manage. After you renew an expired certificate, new certificates can't be assigned to the devices. When you open the NDESPlugin.log file, the log stops at **Sending request to certificate registration point**.
 
 Additionally, if you [enable CAPI2 logging](/archive/blogs/benjaminperkins/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues) on the Network Device Enrollment Service (NDES) server, you receive the following error message:
 
@@ -24,9 +21,9 @@ Additionally, if you [enable CAPI2 logging](/archive/blogs/benjaminperkins/enabl
 
 This problem occurs because the NDES policy module still uses the thumbprint from an expired client authentication certificate. That certificate was selected when the NDES policy module or Intune Certificate Connector was first installed.
 
-## Resolution
+## Solution
 
-To fix this problem, set the NDES policy module to use the new certificate. To do so, follow these steps on the NDES server:
+To fix this problem, set the NDES policy module to use the new certificate. To do this, complete these steps on the NDES server:
 
 1. Use `certlm.msc` to open the local computer certificate store, expand **Personal**, and then select **Certificates**.
 1. In the list of certificates, find an expired certificate that satisfies the following conditions:
@@ -40,7 +37,7 @@ To fix this problem, set the NDES policy module to use the new certificate. To d
 1. Select **OK** to close the **Certificate** dialog box.
 1. Right-click the certificate, select **All Tasks**, then select **Request Certificate with New Key** or **Renew Certificate with New Key**.
 1. In the **Certificate Enrollment** page, select **Next**, select the correct SSL template, and then select **More information is required to enroll for this certificate. Click here to configure settings**.
-1. In the **Certificate Properties** dialog box, select the **Subject** tab, and then perform the following steps:
+1. In the **Certificate Properties** dialog box, select the **Subject** tab, and then complete the following steps:
       1. Under **Subject name**, in the **Type** drop-down box, select **Common Name**. In the **Value** box, enter the fully qualified domain name (FQDN) of the NDES server. Then select **Add**.
       1. Under **Alternative name**, in the **Type** drop-down box, select **DNS**. In the **Value** box, enter the FQDN of the NDES server. Then select **Add**.
       1. Select **OK** to close the **Certificate Properties** dialog box.
