@@ -36,7 +36,7 @@ For all Office 365 services (including OneDrive For Business, Delve, and SharePo
 
 ### For all Office 365 services except Exchange Online
 
-Cloud identity model
+#### Cloud identity model
 
 To sync the settings by using a user ID, run the following example cmdlets after you substitute the actual values:
 
@@ -45,7 +45,7 @@ Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser -PreferredLangu
 Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
 ```
 
-Synchronized identity model
+#### Synchronized identity model
 
 To sync the settings by using an on-premises instance of Active Directory, run the following example cmdlets after you substitute the actual values:
 
