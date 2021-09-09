@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot delivery of Simple Certificate Enrollment Protocol (SCEP) certificates
 description: Troubleshoot the delivery of a certificate to a device from the CA when using SCEP certificate profiles with Intune to deploy certificates.
-ms.date: 01/30/2020
+ms.date: 09/09/2021
 ms.reviewer: lacranda
 ---
-# Troubleshoot the delivery of certificates provisioned by SCEP to devices in Microsoft Intune
+# Troubleshooting the delivery of certificates provisioned by SCEP to devices in Microsoft Intune
 
-Use the information in this article to help you investigate delivery of certificates to devices when you use Simple Certificate Enrollment Protocol (SCEP) to provision certificates in Intune. After the Network Device Enrollment Service (NDES) server receives the requested certificate for a device from the certification authority (CA), it passes that certificate back to the device.
+This article gives troubleshooting guidance to help you investigate delivery of certificates to devices when you use Simple Certificate Enrollment Protocol (SCEP) to provision certificates in Intune. After the Network Device Enrollment Service (NDES) server receives the requested certificate for a device from the certification authority (CA), it passes that certificate back to the device.
 
 This article applies to the step 5 of the [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md); delivery of the certificate to the device that submitted the certificate request.
 
@@ -56,7 +56,7 @@ You can also review the [devices OMADM log](troubleshoot-scep-certificate-profil
 
 ### iOS/iPadOS
 
-On the iOS/iPadOS or iPadOS device, you can view the certificate under the Device Management Profile. Drill-in to see details for installed certificates.
+On the iOS/iPadOS or iPadOS device, you can view the certificate under the Device Management Profile. Drill down to see details for installed certificates.
 
 ![iOS certificate](./media/troubleshoot-scep-certificate-delivery/ios-certificate.png)
 
@@ -72,7 +72,7 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 ### Windows
 
-On the Windows device, verify the certificate was delivered:
+On a Windows device, verify the certificate was delivered:
 
 - Run **eventvwr.msc** to open Event Viewer. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin** and look for **Event 39**. This Event should have a general description of: **SCEP: Certificate installed successfully.**
 
@@ -87,11 +87,11 @@ To view the certificate on the device, run **certmgr.msc** to open the Certifica
 
 ### Android
 
-To troubleshoot this step, review errors that are logged in the OMA DM log.
+To troubleshoot certificate delivery, review errors that are logged in the OMA DM log.
 
 ### iOS/iPadOS
 
-To troubleshoot this step, review errors that are logged in the devices debug log.
+To troubleshoot certificate delivery, review errors that are logged in the devices debug log.
 
 ### Windows
 
@@ -103,4 +103,4 @@ Errors with delivery and installation of the certificate to the device are typic
 
 ## Next steps
 
-When the certificate successfully deploys to the device, but Intune doesn't report success, see [NDES reporting to Intune](troubleshoot-scep-certificate-reporting.md) to troubleshoot reporting.
+If the certificate successfully deploys to the device, but Intune doesn't report success, see [NDES reporting to Intune](troubleshoot-scep-certificate-reporting.md) to troubleshoot reporting.

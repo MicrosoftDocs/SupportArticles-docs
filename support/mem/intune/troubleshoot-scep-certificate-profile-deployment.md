@@ -4,11 +4,9 @@ description: Troubleshoot sending a SCEP certificate profile to a device with In
 ms.date: 03/19/2021
 ms.reviewer: lacranda
 ---
-# Troubleshoot deployment of a SCEP certificate profile to devices in Microsoft Intune
+# Troubleshooting the deployment of SCEP certificates profile to devices in Intune
 
-Use the following information to help you troubleshoot deployment of Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Intune.
-
-This article references Step 1 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md).
+This articles gives troubleshooting guidance for issues deploying of Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Microsoft Intune. Certificate deployment is Step 1 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md).
 
 The SCEP certificate profile, and the trusted certificate profile specified in the SCEP profile, must both be assigned to the same user, or the same device. The following table shows the expected result of mixed assignments:
 
@@ -26,11 +24,11 @@ SCEP certificate profiles for Android come down to the device as a SyncML and ar
 
 To validate a profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
-1. Specify a User that should receive the SCEP certificate profile.
+1. Specify the user who should receive the SCEP certificate profile.
 
-2. Review the users Group Membership to ensure they are in the security group you used with the SCEP certificate profile.
+1. Review the user's group membership to ensure they are in the security group you used with the SCEP certificate profile.
 
-3. Review when the device last checked in with Intune.
+1. Review when the device last checked in with Intune.
 
 ![Validate the Android device policy](./media/troubleshoot-scep-certificate-profile-deployment/validate-policy-android.png)
 
@@ -53,9 +51,9 @@ Examples of key entries:
 
 To validate a profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
-1. Specify a User that should receive the SCEP certificate profile.
+1. Specify the user who should receive the SCEP certificate profile.
 
-2. Review the users Group Membership to ensure they are in the security group you used with the SCEP certificate profile.
+2. Review the user's group Membership to ensure they are in the security group you used with the SCEP certificate profile.
 
 3. Review when the device last checked in with Intune.
 
@@ -80,9 +78,9 @@ Examples of key entries:
 
 To validate the profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
-1. Specify a User that should receive the SCEP certificate profile.
+1. Specify the user who should receive the SCEP certificate profile.
 
-2. Review the users Group Membership to ensure they are in the security group you used with the SCEP certificate profile.
+2. Review the user's group membership to ensure they are in the security group you used with the SCEP certificate profile.
 
 3. Review when the device last checked in with Intune.
 

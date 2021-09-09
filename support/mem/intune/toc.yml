@@ -110,8 +110,10 @@
       items:
       - name: Troubleshoot SCEP delivery to devices
         href: troubleshoot-scep-certificate-delivery.md
-      - name: Troubleshoot SCEP profile deployment
+      - name: Troubleshoot SCEP certificate profiles
         href: troubleshoot-scep-certificate-profiles.md
+      - name: Troubleshoot SCEP profile deployment to devices
+        href: troubleshoot-scep-certificate-profile-deployment.md
       - name: Can't assign SCEP certificates to devices
         href: cannot-assign-scep-certificates.md
       - name: CertificateRegistrationSvc verify request error
@@ -130,8 +132,6 @@
       items:
       - name: SCEP certificate request fails on CRP
         href: scep-certificate-request-fails.md
-      - name: Profile deployment to devices
-        href: troubleshoot-scep-certificate-profile-deployment.md
       - name: Device to NDES server communication
         href: troubleshoot-scep-certificate-device-to-ndes.md
       - name: Troubleshoot NDES operations
