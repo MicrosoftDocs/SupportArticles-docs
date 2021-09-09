@@ -48,7 +48,7 @@ If you recall, one of the directories in which Nginx loads the site configuratio
 > - `server_name`: You can set the desired hostname here. Currently, this is configured to the value `_`. This means any hostname.
 > - `proxy_pass`: This is actual ASP.NET Core application that's running and listening on a given URL. Requests are routed to this URL.
 
-Configure the first website to listen on host header `http://myfirstwebsite`. To achieve this, change the `server_name` in */etc/nginx/sites-enabled/default* configuration file, as shown in the next screenshot. As a reminder, you'll have to use the `sudo vi /etc/nginx/sites-enabled/default` command to edit this file.
+Configure the first website to listen on host header `http://myfirstwebsite`. To achieve this, change the `server_name` in the */etc/nginx/sites-enabled/default* configuration file, as shown in the following screenshot. As a reminder, you'll have to use the `sudo vi /etc/nginx/sites-enabled/default` command to edit this file.
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/cat-default-command.png" alt-text="Screenshot of cat default command." border="true":::
 
@@ -66,7 +66,7 @@ The resulting setup should have two configuration files in the Nginx site config
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/sudo-nginx-command.png" alt-text="Screenshot of sudo nginx command." border="true":::
 
-## Testing the new configuration
+## Test the new configuration
 
 Set the `myfirstwebsite` and `buggyamb` hostnames to resolve to the correct IP addresses. When you access the sites from the Linux computer, these hostnames should resolve to 127.0.0.1 and for the external clients, such as the client Windows computer. The hostnames should resolve to your Linux virtual machine's public IP address. You can retrieve that IP address from the Azure portal.
 
@@ -87,7 +87,7 @@ And here's the `curl buggyamb` output. This displays the HTML content from the h
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/curl-buggyamb-command.png" alt-text="Screenshot of curl buggyamb command." border="true":::
 
-You should be able to browse the same URLs from the client computer by using a browser. That should also work if you configure the hosts file correctly. This is what is displayed when browsing to `http://buggaymb` from a browser that's running on a Windows computer.
+You should be able to browse the same URLs from the client computer by using a browser. That should also work if you configure the hosts file correctly. This is what's displayed when browsing to `http://buggaymb` from a browser that's running on a Windows computer.
 
 :::image type="content" source="./media/2-7-configure-second-nginx-site-hostname/welcome-page.png" alt-text="Screenshot of welcome page." border="true":::
 
@@ -101,9 +101,9 @@ Up to this point, you have the following setup:
 - Both ASP.NET Core applications are running as services that restart automatically when the server is restarted, or the applications stop responding.
 - Linux local firewall is enabled and configured to allow SSH and HTTP traffics.
 
-## Some troubleshooting tips
+## Troubleshooting tips
 
-You may receive **HTTP 502 - Bad Gateway error** when you browse a site. "HTTP 502 - Bad Gateway" means that Nginx was not able to communicate with the back-end ASP.NET Core application. This occurs if the back-end application isn't running.
+You may receive **HTTP 502 - Bad Gateway error** when you browse a site. "HTTP 502 - Bad Gateway" means that Nginx wasn't able to communicate with the back-end ASP.NET Core application. This occurs if the back-end application isn't running.
 
 In this case:
 
