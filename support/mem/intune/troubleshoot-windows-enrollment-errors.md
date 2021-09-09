@@ -249,6 +249,8 @@ If the UPN contains an unverified or non-routable domain, follow these steps:
     Import-Module ADSync
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
+> [!NOTE]
+> Another alternative for this issue would be [Configuring Alternate Login ID](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/configuring-alternate-login-id). Make sure to review the Alternate login Id article before making a decision to implement it.
 
 If **MDM user scope** is set to **None**, follow these steps:
 
