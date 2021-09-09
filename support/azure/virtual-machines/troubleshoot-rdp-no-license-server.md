@@ -32,7 +32,7 @@ When you try to connect to a virtual machine (VM), you experience the following 
 
   - A licensing error occurred while the client was attempting to connect (Licensing timed out). Please try connecting to the remote computer again.
 
-  - The RDC connection appears to be stuck at "Configuring remote session".
+- The RDP connection appears to be stuck in the Configuring remote session status.
 
 However, you can connect to the VM normally by using an administrative session:
 
