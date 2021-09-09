@@ -41,7 +41,7 @@ If you have an existing Capacity Reservations that you can't use with VMs or VMS
   For more information, see the following documentation:
 
   - [Associate a new Virtual Machine to Capacity Reservation](/azure/virtual-machines/capacity-reservation-associate-vm)
-  - [Associate a new Virtual Machine Scale Sets to Capacity Reservation](/virtual-machines/capacity-reservation-associate-vm-scale-set)
+  - [Associate a new Virtual Machine Scale Sets to Capacity Reservation](/azure/virtual-machines/capacity-reservation-associate-virtual-machine-scale-set)
 
 - Trying to attach a running VM/VMSS without first de-allocating the VM/VMSS.
 

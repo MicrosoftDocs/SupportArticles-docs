@@ -32,6 +32,8 @@ When you try to connect to a virtual machine (VM), you experience the following 
 
   - A licensing error occurred while the client was attempting to connect (Licensing timed out). Please try connecting to the remote computer again.
 
+- The RDP connection appears to be stuck in the Configuring remote session status.
+
 However, you can connect to the VM normally by using an administrative session:
 
 ```
@@ -60,7 +62,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
     If you can't connect to the VM by using an administrative session, you can use the [Virtual Machine Serial Console on Azure](serial-console-windows.md) to access the VM as follows:
 
-    1. Access the Serial Console by selecting **Support & Troubleshooting** > **Serial console (Preview)**. If the feature is enabled on the VM, you can connect the VM successfully.
+    1. Access the Serial Console by selecting **Support & Troubleshooting** > **Serial console**. If the feature is enabled on the VM, you can connect the VM successfully.
 
     2. Create a new channel for a CMD instance. Enter **CMD** to start the channel and get the channel name.
 

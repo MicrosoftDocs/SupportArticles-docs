@@ -57,7 +57,7 @@ SQLIOSim.com accepts a limited number of command-line parameters to control basi
 
 ## SQLIOSim configuration file
 
-Sample configuration files for various tests can be downloaded from SQL Server support team’s github repo [here](https://github.com/microsoft/mssql-support/tree/master/sqliosim).
+Sample configuration files for various tests can be downloaded from SQL Server support team's github repo [here](https://github.com/microsoft/mssql-support/tree/master/sqliosim).
 
 You do not have to use a configuration file. If you do not use a configuration file, all parameters take default values except the data file location and the log file location. You must use one of the following methods to specify the data file location and the log file location:
 
@@ -232,6 +232,8 @@ In addition to the default Sqliosim.cfg.ini file, the package provides the follo
 ||||
 
 ## References
+
+- [Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem on Linux](sqliosim-utility-simulate-activity-disk-subsystem-linux.md)
 
 - [Description of caching disk controllers in SQL Server](https://support.microsoft.com/help/86903)
 

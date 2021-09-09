@@ -156,6 +156,7 @@ The following are possible values of `ClientHealthStatus`:
 
 - **1**: Client installed
 - **2**: Client registered
+- **5**: Client installed, but hasn't run Health Evaluation yet
 - **7**: Client healthy
 - **8**: Client install or upgrade error
 - **16**: Communication error in management point

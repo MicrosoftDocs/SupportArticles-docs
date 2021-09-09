@@ -98,6 +98,8 @@
       href: troubleshoot-rdp-connection.md
     - name: Detailed RDP troubleshooting
       href: detailed-troubleshoot-rdp.md
+    - name: Troubleshoot a failed trust relationship in an Azure Windows VM
+      href: troubleshoot-broken-secure-channel.md
     - name: Troubleshoot RDP error because the DHCP is disabled
       href: troubleshoot-rdp-dhcp-disabled.md
     - name: Troubleshoot RDP error because of the NSG setting
@@ -519,6 +521,8 @@
     href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
+  - name: FAQ - Azure IaaS VM disks, and managed and unmanaged premium disks
+    href: azure-iaas-vm-disks-managed-unmanaged.md
   - name: IaaS VM logs
     href: iaas-logs.md
   - name: Maximum RAM memory of Linux VM
