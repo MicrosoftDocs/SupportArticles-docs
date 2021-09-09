@@ -178,4 +178,18 @@ To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.co
 > [!NOTE]
 > This tool removes all SSO accounts in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
 
-Additional Information: [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
+### Prevent “Workplace Join” on your machine.
+
+When Office successfully authenticates and activates, at the end, a window pops up mentioning **Stay signed in to all your apps** along with a check box which states **Allow my organization to manage the devices**. This registers your device in Azure while adding your account to Workplace Join which can be accessed from Microsoft Work/School account on your machine. 
+
+If you do not want your device to be joined to Azure, you can prevent it by unchecking the box **Allow my organization to manage my device** and clicking **No, this app only** and **OK**
+
+--A screenshot will be placed here--
+
+If you want to automate the above configuration, add the following registry in your system:  
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin: "BlockAADWorkplaceJoin"=dword:00000001 
+
+Additional Information:  
+[Plan hybrid Azure Active Directory join - Azure Active Directory | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-plan#handling-devices-with-azure-ad-registered-state)
+
+[Device identity and desktop virtualization - Azure Active Directory | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#non-persistent-vdi)
