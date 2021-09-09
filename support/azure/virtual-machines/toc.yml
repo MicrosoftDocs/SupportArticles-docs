@@ -146,7 +146,7 @@
       href: linux-kernel-panics-upgrade.md
     - name: Device names are changed
       href: troubleshoot-device-names-problems.md
-    - name: Failed to start Switch Root error in an Azure Linux VM
+    - name: Error in an Azure Linux VM - Failed to start Switch Root
       href: resolve-failed-start-switch-root-azure-linux-vm.md
     - name: Grub Rescue
       href: troubleshoot-vm-boot-error.md
