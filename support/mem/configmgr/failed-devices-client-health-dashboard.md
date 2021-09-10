@@ -52,7 +52,7 @@ In Configuration Manager, administrators can use a maintenance task ([Delete Age
 
 The SQL Stored Procedure (`spGetClientHealthDashboard`) calculates the **Success** and **Failure** status for individual clients, as follows:
 
-- If the timestamp of the recent status message is less than or equal to seven days old, or there is no status message, the client is reported as **Success**.
+- If the timestamp of the recent status message is less than seven days old, or there is no status message, the client is reported as **Success**.
 - If the timestamp of the recent status message is more than seven days old, and the status message is not deleted, the client is reported as **Failure**.
 
 > [!NOTE]
