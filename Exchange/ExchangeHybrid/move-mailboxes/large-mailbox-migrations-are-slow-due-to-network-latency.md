@@ -47,7 +47,7 @@ OldItemAge = "366.00:00:00"
 
 You must also set the `DataImportTimeout` value in the MRSProxyConfiguration section of the MSExchangeMailboxReplication.exe.config file to correspond to the minimum upload rate that you can sustain during the migration. For example:
 
-7.5 MB/(60 seconds) = 131,072 bytes/second (for reference, 1,024 KB/s = 1 Megabit/s)
+7.5 MB/(60 seconds) = 131,072 bytes/second (for reference, 1,024 KB/s = 1 MB/s)
 
 This means that you can never go lower than this rate. You can increase the `DataImportTimeout` value a bit more than the computed minimum. The following example shows the `DataImportTimeout` setting in the configuration file. In this example, it's set to 5 minutes. You can safely increase the value to 20 minutes.
 
