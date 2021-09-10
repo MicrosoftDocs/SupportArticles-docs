@@ -1,6 +1,6 @@
 ---
 title: Can't access or move a mailbox after mailbox server is added to a DAG
-description: Describes mailbox access or move errors on newly created database in DAG.
+description: Describes mailbox access or move errors on a newly created database in DAG.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -22,9 +22,9 @@ search.appverid: MET150
 
 ## Symptoms
 
-After you add a Microsoft Exchange 2019 mailbox server as a node to a database availability group (DAG) and create additional mailbox databases, you experience the following issues:
+After you add a Microsoft Exchange Server 2019 mailbox server as a node to a database availability group (DAG), and you create additional mailbox databases, you experience the following issues:
 
-- When you try to access a mailbox on the mailbox server with Outlook on the web, you receive the following error message:
+- When you try to access a mailbox on the mailbox server by using Outlook on the web, you receive the following error message:
 
     > A problem occurred while you were trying to use your mailbox.  
     > X-OWA-Error Microsoft.Exchange.Data.Storage.NoSupportException
@@ -35,19 +35,19 @@ After you add a Microsoft Exchange 2019 mailbox server as a node to a database a
 
 ## Cause
 
-These issues occur because the value of the mailbox database's schema version is incorrect. If the Information Store service isn't restarted on every node after they're added to the DAG before creating additional mailbox databases, the cluster's database isn't updated for the correct schema version.
+These issues occur because the schema version number of the mailbox database is incorrect. Before you create additional mailbox databases, the Information Store service must be restarted on every node after the node is added to the DAG. Otherwise, the cluster database isn't updated for the correct schema version.
 
 ## Workaround
 
-After you add the node to the cluster, restart the Information Store service on the node.
+After you add a node to the cluster, restart the Information Store service on the node.
 
-If you already have created new databases in a cluster, you need to check if their schema version value is set to 121 before restarting the Information Store service on all nodes in the cluster. You can run the following cmdlet to check the database's schema version for the mailbox database:
+If you have already created new databases in a cluster, check whether their schema version number is set to **121** before you restart the Information Store service on all nodes in the cluster. To check the database schema version for the mailbox database, run the following cmdlet:
 
 ```powershell
 Get-MailboxDatabase DB01 -Status | fl *Schema*
 ```
 
-Then, you'll get a result that looks like the following:
+You should get a result that resembles the following:
 
 ```output
 IsExcludedFromProvisioningBySchemaVersionMonitoring: False
@@ -56,7 +56,7 @@ CurrentSchemaVersion        : 0.121
 RequestedSchemaVersion      : 0.121
 ```
 
-If you need to update the schema version value, update the database schema, dismount and mount the database again:
+If you have to update the schema version number, update the database schema, and then dismount and remount the database:
 
 ```powershell
 Update-DatabaseSchema DB01
@@ -64,4 +64,4 @@ Dismount-Database DB01
 Mount-Database DB01
 ```
 
-If the `CurrentSchemaVersion` value still shows 121, all the Information Store services haven't been restarted in the entire cluster.
+If the `CurrentSchemaVersion` value still shows **121**, this mean that not all the Information Store services across the whole cluster were restarted.
