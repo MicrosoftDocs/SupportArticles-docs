@@ -864,6 +864,11 @@
       "source_path": "support/windows-server/networking/lt2p-ipsec-ras-vpn-connections-fail",
       "redirect_url": "support/windows-server/networking/rras-vpn-connections-fail-ms-chapv2-authentication.md",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-ip-virtualization-not-work.md",
+      "redirect_url": "support/windows-server/remote/remote-desktop-ip-virtualization.md",
+      "redirect_document_id": true
     }
   ]
 }

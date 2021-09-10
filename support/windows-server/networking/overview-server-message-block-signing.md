@@ -58,7 +58,7 @@ The policies for SMB signing are located in **Computer Configuration** > **Windo
 
 ### Understanding "RequireSecuritySignature" and "EnableSecuritySignature"
 
-The **EnableSecuritySignature** registry setting for SMB2+ client and SMB2+ server is ignored. Therefore, this setting does nothing unless you're using SMB1. SMB2 signing is controlled solely by being required or not. This setting is used when either the server or client requires SMB signing. Only if both have signing set to **0** will signing not occur. SMB signing is always enabled for SMB2+.
+The **EnableSecuritySignature** registry setting for SMB2+ client and SMB2+ server is ignored. Therefore, this setting does nothing unless you're using SMB1. SMB2 signing is controlled solely by being required or not. This setting is used when either the server or client requires SMB signing. Only if both have signing set to **0** will signing not occur.
 
 |-|Server – RequireSecuritySignature=1|Server – RequireSecuritySignature=0|
 |---|---|---|
