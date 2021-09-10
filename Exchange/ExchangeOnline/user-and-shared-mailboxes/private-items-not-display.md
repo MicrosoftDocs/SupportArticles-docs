@@ -41,7 +41,9 @@ To work around this issue, use any of the following methods:
     ```powershell
     Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User laura@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate,CanViewPrivateItems
     ```
-
+    > [!NOTE]
+    > Although this cmdlet specifies **Calendar** as the target folder, it also enables you to view private items in the **Inbox** folder.
+    
     In Outlook:
 
     1. Select **File** > **Account Settings** > **Delegate Access**
