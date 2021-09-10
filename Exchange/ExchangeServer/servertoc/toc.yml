@@ -497,6 +497,8 @@
       href: ../migration/cannot-replicate-public-folder-to-exchange-server.md
     - name: Can't see free/busy info after a mailbox move
       href: ../migration/no-free-busy-info-mailbox-move.md
+    - name: Cross-forest move to an Exchange 2013 database fails
+      href: ../migration/cannot-move-mailbox-to-Exchange-2013-database.md
     - name: Error when you move a mailbox
       href: ../migration/cannot-set-folder-security-descriptor-non-canonical-acl.md
     - name: Issues if msExchMasterAccountSID is on a user account
