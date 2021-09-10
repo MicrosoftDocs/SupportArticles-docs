@@ -47,7 +47,7 @@ To confirm the validation request is submitted to the module, look for an entry 
 
 **When success indicators aren't present**:
 
-If you don't find these entries, start by reviewing the troubleshooting guidance for [device to NDES server communication](troubleshoot-scep-certificate-device-to-ndes.md#troubleshoot-common-errors).
+If you don't find these entries, start by reviewing the troubleshooting guidance for [device to NDES server communication](troubleshoot-scep-certificate-device-to-ndes.md).
 
 If the information in that article doesn't help you resolve the issue, the following are additional entries that can indicate problems.
 

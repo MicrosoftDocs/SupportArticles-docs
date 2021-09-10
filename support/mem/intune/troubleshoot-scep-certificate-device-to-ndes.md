@@ -28,10 +28,10 @@ Internet Information Services (IIS) log files include the same type of entries f
 
    Review the status code near the end of this request:
    - **Status code of 200**: This status indicates the connection with the NDES server is successful.
-   - **Status code of 500**: The IIS_IURS group might lack correct permissions. See [Status code 500](#status-code-500), later in this article.
+   - **Status code of 500**: The IIS_IURS group might lack correct permissions. See [Troubleshoot status code 500](#troubleshoot-status-code-500), later in this article.
    - If the status code isn't 200 or 500:
 
-     - See [Test the SCEP server URL](#test-the-scep-server-url) later in this article to help validate the configuration.
+     - See [Test and troubleshoot the SCEP server URL](#test-and-troubleshoot-the-scep-server-url) later in this article to help validate the configuration.
 
      - See [The HTTP status code in IIS 7 and later versions](https://support.microsoft.com/help/943891) for information about less common error codes.
 
