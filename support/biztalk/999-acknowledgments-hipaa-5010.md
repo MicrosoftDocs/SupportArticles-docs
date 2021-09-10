@@ -42,15 +42,15 @@ BizTalk Server 2010 cumulative update 3 includes a schema that allows 999 Acknow
     1. Add a new receive pipeline.
     1. From the Toolbox, drag and drop the EDI disassembler component to the Disassembler stage of the pipeline:
 
-        ![EDI Disassembler](./media/999-acknowledgments-hipaa-5010/edi-disassembler-image.jpg)
+        :::image type="content" source="media/999-acknowledgments-hipaa-5010/edi-disassembler.png" alt-text="Screenshot of the E D I Disassembler component.":::
 
     1. In the EDI disassembler Pipeline Component Properties, set the Use 999 acknowledgment instead of 997 property to True:
-
-        ![Use 999 acknowledgement instead of 997](./media/999-acknowledgments-hipaa-5010/use-999-acknowledgement-instead-of-997-image.jpg)
+\
+        :::image type="content" source="media/999-acknowledgments-hipaa-5010/use-999-acknowledgement-instead-of-997.png" alt-text="Screenshot of the Use 999 acknowledgement instead of 997 property.":::
 
     1. From the Toolbox, drag and drop the Batch Marker component to the ResolveParty stage. Leave the default property settings:
 
-        ![Batch Marker Component](./media/999-acknowledgments-hipaa-5010/batch-marker-component-image.jpg)
+        :::image type="content" source="media/999-acknowledgments-hipaa-5010/batch-marker-component.png" alt-text="Screenshot of the Batch Marker component.":::
 
         > [!NOTE]
         > This Batch Marker component is also used with the EDI Batching Orchestration.
