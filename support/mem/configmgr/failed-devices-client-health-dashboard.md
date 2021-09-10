@@ -11,7 +11,7 @@ ms.prod-support-area-path:
 
 Starting in [version 1902 of Configuration Manager current branch](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1902#client-health-dashboard), the client health dashboard is available to assess the health of Configuration Manager clients in your environment. This article describes an issue in which some devices are  unexpectedly reported as **Failure** on the **Status Messages** bar of the **Scenario Health** bar chart. This article also provides some insights into the internals and calculations of the **Scenario Health** bar chart.
 
-_Applies to:_ &nbsp; Configuration Manager (current branch)
+_Applies to:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4643234
 
 ## Symptoms
@@ -52,7 +52,7 @@ In Configuration Manager, administrators can use a maintenance task ([Delete Age
 
 The SQL Stored Procedure (`spGetClientHealthDashboard`) calculates the **Success** and **Failure** status for individual clients, as follows:
 
-- If the timestamp of the recent status message is less than seven days old, or there is no status message, the client is reported as **Success**.
+- If the timestamp of the recent status message is less than or equal to seven days old, or there is no status message, the client is reported as **Success**.
 - If the timestamp of the recent status message is more than seven days old, and the status message is not deleted, the client is reported as **Failure**.
 
 > [!NOTE]
