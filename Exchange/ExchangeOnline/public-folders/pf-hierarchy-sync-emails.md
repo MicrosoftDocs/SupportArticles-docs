@@ -61,4 +61,4 @@ Exclude email messages that are sent from the primary hierarchy mailbox. Here's 
     Set-TransportRule -Identity "[Apply to all messages]" -ExceptIfFrom "<primary hierarchy mailbox address>"
     ```
 
-    **Note:** You must find the transport rule that's working on public folder hierarchy sync email messages. Replace \<*primary hierarchy mailbox address*> with the address that you obtained in step 1.
+    **Note:** You must find the transport rule that's working on public folder hierarchy sync email messages. Replace \<primary hierarchy mailbox address> with the address that you obtained in step 1.
