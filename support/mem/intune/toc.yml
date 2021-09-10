@@ -124,7 +124,7 @@
         href: certificateregistrationsvc-verify-request-error.md
       - name: Devices fail to obtain SCEP certificates
         href: devices-receive-scep-certificates-error-0x80094800.md
-      - name: SCEP certificate deployment fails after CA renewal
+      - name: Certificate deployment to Windows 10 device fails after CA renewal
         href: scep-deployment-to-win10-devices-fails.md
       - name: NDES certificate not installed
         href: error-0x80090014-installing-ndes-certificate.md
@@ -138,7 +138,7 @@
         href: troubleshoot-scep-certificate-ndes-policy-module.md
       - name: Troubleshoot NDES reporting
         href: troubleshoot-scep-certificate-reporting.md
-      - name: Verify NDES configuration on-premises
+      - name: Verify on-premises NDES configuration
         href: verify-ndes-configuration.md
   - name: PKCS certificates
     items:

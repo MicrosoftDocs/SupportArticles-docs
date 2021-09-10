@@ -11,7 +11,7 @@ ms.prod-support-area-path:
 
 When a user tries to access protected company resources, the process generally involves authentication to determine user identity, and then authorization to confirm the user has access to a protected resource, and what the user can do with that data.
 
-Typically, users authenticate  with a user name and password, via an app with a Wi-Fi or VPN connection. To make the authentication process more seamless for your users, you can use certificates. Certificates offer more secure authentication and don't require your users to enter their credentials.
+Typically, users authenticate  with a user name and password, via an app with a Wi-Fi or VPN connection. To make this process more seamless for your users, you can [use certificates for authentication](/mem/intune/protect/certificates-configure). Certificates offer more secure authentication and don't require your users to enter their credentials.
 > [!NOTE]
 > The certificate that the user uses to prove authenticity must come from a trusted certification authority (CA), such as a trusted third-party CA or an on-premises Microsoft CA.
 
@@ -22,7 +22,7 @@ You can use Microsoft Intune to deploy the following types of user or device cer
 
 Both provide seamless authentication by delivering a certificate from a trusted CA in the intranet to a device that exists anywhere on the internet.
 
-Intune is merely a delivery mechanism that's responsible for providing a certificate from an on-premises CA to devices through the internet. After the certificate is obtained by the device, the device is responsible for using the certificate to prove its authenticity.
+Intune is merely a delivery mechanism that's responsible for providing a certificate from an on-premises CA to devices through the internet. After the certificate is obtained by the device, the device is responsible for using the certificate to prove its authenticity. 
 
 ## SCEP versus PKCS
 

@@ -1,15 +1,15 @@
 ---
-title: SCEP deployment fails after CA renewal
+title: SCEP deployment to Windows 10 devices fails after CA renewal
 description: Describes an issue in which SCEP certificates can't be deployed to Windows 10 devices after you renew the CA certificate.
-ms.date: 05/20/2020
+ms.date: 09/10/2021
 ms.prod-support-area-path: Microsoft Intune
 ---
 # SCEP deployment to Windows 10 devices fails after you renew the CA certificate
 
-This article provides a solution for the issue that Simple Certificate Enrollment Protocol (SCEP) certificate deployment fails after you renew the certification authority (CA) certificate.
+This article provides a solution for when Simple Certificate Enrollment Protocol (SCEP) certificate deployment fails to a Windows 10 device after you renew the certification authority (CA) certificate.
 
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4510728
+> [!NOTE]
+> This issue does not occur when you use Intune to deploy SCEP certificates to Android or iOS devices.
 
 ## Symptoms
 
@@ -29,9 +29,6 @@ Event 30 is logged in CAPI2 log, as shown in the following screenshot:
 
 :::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-30.png" alt-text="screenshot of Event 30":::
 
-> [!NOTE]
-> This issue does not occur when you use Intune to deploy SCEP certificates to Android or iOS devices.
-
 ## Cause
 
 The most likely cause is that the registration authority (RA) certificates that are issued by your CA to the Network Device Enrollment Service (NDES) server still refer to the old CA certificate. In this case, the CA certificate is no longer trusted after renewal, and you receive the following error message that's logged in event 30 in CAPI2 log:
@@ -40,7 +37,7 @@ The most likely cause is that the registration authority (RA) certificates that 
 
 Therefore, the devices can no longer receive SCEP certificates.
 
-## Resolution
+## Solution
 
 To fix the issue, reinstall both the NDES server role and Microsoft Intune Certificate Connector on the NDES server. During the reinstallation, RA certificates will be reissued to the NDES server.
 

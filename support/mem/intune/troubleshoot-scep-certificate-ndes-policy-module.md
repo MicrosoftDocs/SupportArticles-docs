@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot the Microsoft Intune Certificate Connector policy module
-description: Troubleshoot the operation of the Network Device Enrollment Service (NDES) policy module when the module processes a certificate request when you use SCEP certificate profiles to deploy certificates with Intune.
-ms.date: 01/30/2020
+description: Troubleshooting the operation of the Network Device Enrollment Service (NDES) policy module when the module processes a certificate request when you use SCEP certificate profiles to deploy certificates with Intune.
+ms.date: 09/10/2021
 ms.reviewer: lacranda
 ---
-# Troubleshoot the NDES policy module in Microsoft Intune
+# Troubleshooting the NDES policy module in Microsoft Intune
 
-The information in this article can help you validate operation of the Network Device Enrollment Service (NDES) policy module that installs with the Microsoft Intune Certificate Connector. When NDES receives a request for a certificate, it forwards the request to the policy module, which validates the request as valid for the device. After the validation, NDES contacts the certificate authority (CA) to request the certificate on behalf of the device.
+This article gives guidance to help you validate and troubleshoot operation of the Network Device Enrollment Service (NDES) policy module that installs with the Microsoft Intune Certificate Connector. When NDES receives a request for a certificate, it forwards the request to the policy module, which validates the request as valid for the device. After the validation, NDES contacts the certificate authority (CA) to request the certificate on behalf of the device.
 
-This article applies to both step 3 and step 4 of [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
+This article applies to both Step 3 and Step 4 of [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
 
 ## NDES communication to the policy module
 
@@ -62,7 +62,7 @@ Failed to send http request /CertificateRegistrationSvc/Certificate/VerifyReques
 
 Modern browsers and browsers on mobile devices ignore the *Common Name* on an SSL certificate if there are *Subject Alternative Names* present.
 
-**Resolution**:  Issue the web server SSL certificate with the following attributes for *Common Name* and *Subject Alternative Name*, and then bind it to port 443 in IIS:
+**Solution**:  Issue the web server SSL certificate with the following attributes for *Common Name* and *Subject Alternative Name*, and then bind it to port 443 in IIS:
 
   - **Subject name**  
     CN = external server name
@@ -93,7 +93,7 @@ This issue occurs if there are intermediate CA certificates in the NDES server's
 
 If a certificate has the same *Issued to* and *Issued by* values, it's a root certificate. Otherwise, it's an intermediate certificate.
 
-**Resolution**: To fix the issue, identify and remove the intermediate CA certificates from the Trusted Root Certification Authorities certificate store.
+**Solution**: To fix the issue, identify and remove the intermediate CA certificates from the Trusted Root Certification Authorities certificate store.
 
 ### NDESPlugin.log indicates the challenge returns false
 
@@ -103,7 +103,7 @@ When the result of the challenge returns **false**, check the *CertificateRegist
 Signing certificate could not be retrieved. System.Security.Cryptography.CryptographicException: m_safeCertContext is an invalid handle. at System.Security.Cryptography.X509Certificates.X509Certificate.ThrowIfContextInvalid() at System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString() at Microsoft.ConfigurationManager.CertRegPoint.CRPCertificate.RetrieveSigningCert(String certThumbprint
 ```
 
-**Resolution**: On the server where the connector is installed, open the Registry Editor, locate the `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` registry key, and then check whether the SigningCertificate value exists.
+**Solution**: On the server where the connector is installed, open the Registry Editor, locate the `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` registry key, and then check whether the SigningCertificate value exists.
 
 If this value doesn't exist, restart the Intune Connector Service in services.msc, and then check whether the value appears in registry. If the value is still missing, it's often because of network connectivity issues between the server that NDES and the Intune service.
 
@@ -135,18 +135,18 @@ After a successful validation by the certificate registration point (the policy 
 
 **When success indicators aren't present**:
 
-If you don't see the entries that indicate success, follow these steps:
+If you don't see the entries that indicate success, complete these steps:
 
 1. Look for problems that are logged in *CertificateRegistrationPoint.svclog* when the certificate registration point verifies the challenge. Look for the entries between the following lines:
 
    - VerifyRequest Started.
    - VerifyRequest Finished with status False
 
-2. Open the Certification Authority MMC on the CA, and select **Failed Requests** to look for errors that help identify a problem. The following image is an example:
+1. Open the Certification Authority MMC on the CA, and select **Failed Requests** to look for errors that help identify a problem. The following image is an example:
 
    ![Example of a failed request](./media/troubleshoot-scep-certificate-ndes-policy-module/failed-requests.png)
 
-3. Review the application event log on the CA for errors. Usually you can see errors that match what you see in the **Failed Requests** from the previous step. The following image is an example:
+1. Review the application event log on the CA for errors. Usually you can see errors that match what you see in the **Failed Requests** from the previous step. The following image is an example:
 
    ![Review the application log](./media/troubleshoot-scep-certificate-ndes-policy-module/application-log-errors.png)
 
