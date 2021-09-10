@@ -36,5 +36,4 @@ To work around this issue, disable RTPM in the Intel driver.
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.  
 
-Third-party information disclaimer  
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -30,6 +30,4 @@ Temporary support from Microsoft to address this issue was introduced in the [Ma
 
 This support is applicable only to Windows 10 Version 1607. For long-term support for Windows 10 Version 1607 and later versions, contact [Check Point](https://www.checkpoint.com/) or [Centrify](https://www.centrify.com/) about the availability of new, Windows-compatible versions of these applications.
 
-### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

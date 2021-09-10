@@ -75,6 +75,4 @@ To manually assign a MAC address, follow these steps:
 
 - If there's another unaffected network adapter on the Hyper-V host, bind the virtual switch to that network adapter.
 
-Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
