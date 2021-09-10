@@ -18,24 +18,42 @@ _Original KB number:_ &nbsp; 4465511
 Consider the following scenario:
 
 - You have a Microsoft SQL Server 2016 database that's using the Query Data Store feature.
+
 - You have a stored procedure that makes a call to another stored procedure by using *INSERT...EXEC* syntax.
+
 - The Query Data Store periodically runs auto-cleanup as the size increases to its maximum configured size, and the Query Data Store changes status `fromREAD_WRITEtoREAD_ONLY`.
 
 In this scenario, parent stored procedure execution periodically fails, and you receive an error message that resembles the following:
 
-> Msg 556, Level 16, State 2, Line 5  
+> Msg 556, Level 16, State 2, Line *LineNumber*  
 INSERT EXEC failed because the stored procedure altered the schema of the target table.
 
 ## Cause
 
 When the Query Data Store runs auto-cleanup, this flush plans out of Query Data Store. The query encounters a recompile operation because the plan is missing from Query Data Store, but the plan is still present in the procedure cache. By design, when the recompile operation occurs, SQL Server throws error 556 to prevent duplicate execution of the child procedure, which would result in incorrect results being returned.
 
+## Resolution
+
+### Service Pack Information for SQL Server 2016
+
+This issue is fixed in the following service pack for SQL Server:  
+
+[Service Pack 3 for SQL Server 2016](https://support.microsoft.com/help/5003279)
+
+**About service packs for SQL Server:**  
+
+Service packs are cumulative. Each new service pack contains all the fixes that are in previous service packs, together with any new fixes. Our recommendation is to apply the latest service pack and the latest cumulative update for that service pack. You do not have to install a previous service pack before you install the latest service pack. Use Table 1 in the following article for finding more information about the latest service pack and latest cumulative update.  
+
+[How to determine the version, edition and update level of SQL Server and its components](/general/determine-version-edition-update-level.md)
+
 ## Workaround
 
 To work around this issue, follow these steps:
 
 1. Increase the size of the Query Data Store. This will reduce the frequency or likelihood of the Query Data Store clearing out the plan and entering `READ_ONLY` operating mode.
+
 2. Add error handling to your code to catch error 556, and then resubmit the `INSERT EXEC` query.
+
 3. Clear the procedure cache when Query Data Store comes back to `READ_WRITE` state from `READ_ONLY`.
 
 ## Additional information
