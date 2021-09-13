@@ -42,7 +42,7 @@ To resolve this issue, see [How to manage groups that I already own in Exchange 
 
 ### Cause 2
 
-Distribution groups are configured to be managed by other distribution and security groups. Unfortunately, in Exchange Server 2010 and later, you could only use mail-enabled security groups or individual users to manage distribution groups. 
+Distribution groups are configured to be managed by other distribution and security groups. However, in Exchange Server 2010 and later, you can only use mail-enabled security groups or individual users to manage distribution groups. 
 
 To resolve this issue, convert the required distribution or security group to a mail-enabled security group.
 
