@@ -15,7 +15,26 @@ ms.technology: windows-server-rds
 ---
 # Remote Desktop IP Virtualization in Windows Server 2019
 
-This article discusses about Remote Desktop IP Virtualization in Windows Server 2019. If you want to use IP virtualization on Windows Server 2019, follow [these steps](/azure/virtual-desktop/security-guide#ip-virtualization).
+This article discusses about Remote Desktop IP Virtualization in Windows Server 2019. 
+
+If you want to use IP virtualization on Windows Server 2019, please follow these steps:
+
+1. From an admin Windows PowerShell window, rename the following key: 
+```powershell
+Rename-Item HKLM:\SYSTEM\ControlSet001\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1 Backup_2C69D9F1
+```
+>[!NOTE]
+>Deleting the key would achieve the same thing, but the rename provides a way to revert back more easily if desired. This is the data that is there by default:
+>       
+>HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1\
+>AppFullPath: C:\Windows\System32\svchost.exe\
+>PermittedLspCategories: 0x40000000
+
+2. Restart the computer.
+
+3. Enable the IP Virtualization feature by opening **gpedit.msc**, then going to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Application Compatibility**. Enable the **Turn on Remote Desktop IP Virtualization** policy.
+
+4. Restart the computer.
 
 _Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4501072
