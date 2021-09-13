@@ -154,7 +154,7 @@ You may experience the following issues when you use the functionality in Outloo
     **Note:** It's possible that Outlook can't contact the server when you insert the link (for example, you work offline), but Outlook performs the check later and update what you see accordingly.
 
 - The link doesn't have "SharePoint.com" but uses a fictitious domain name such as "contoso.com", Outlook can only recognize the link if you are also signed in with a OneDrive or SharePoint account using that domain name via **File** > **Office Account** > **Connected Services**.
-- The link may be [SafeLink wrapped](https://support.microsoft.com/office/advanced-outlook-com-security-for-microsoft-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2), and Outlook can't check whether the link pointing to OneDrive or SharePoint.
+- The link may be [Safelink wrapped](https://support.microsoft.com/office/advanced-outlook-com-security-for-microsoft-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2), and Outlook can't check whether the link pointing to OneDrive or SharePoint.
 - The link is for the consumer version of OneDrive, but only the business version is supported now.
 
 **Q:** What warnings that Outlook might give me if it can't check whether my recipients can access to my links?
