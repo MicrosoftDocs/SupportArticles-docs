@@ -66,7 +66,7 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
     After you configure the properties page, the properties page settings resemble the settings in the following image.
 
-    ![local DTC properties configure screenshot](./media/cannot-configure-biztalk-server/local-dtc-property-setting.jpg)
+    :::image type="content" source="media/cannot-configure-biztalk-server/local-dtc-property-setting.png" alt-text="Screenshot of local D T C properties settings." border="false":::
 
 3. Save the configurations, and then wait for the MSDTC service to restart.
 
