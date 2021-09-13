@@ -527,6 +527,8 @@
       href: ../../ExchangeOnline/calendars/public-folder-meetings-not-modified-in-owa.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
     - name: Large items skipped during migration
       href: ../public-folders/large-items-skipped.md
+    - name: Public folder items are deleted after batch migration
+      href: ../public-folders/items-deleted-public-folder-batch-migration.md
     - name: Public folder migration stops at 95%
       href: ../public-folders/public-folder-migration-fails.md
     - name: Troubleshoot public folder replication issues
