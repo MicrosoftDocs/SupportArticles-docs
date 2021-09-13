@@ -86,12 +86,12 @@ The link color shows red and there's a red exclamation mark over the upper right
 
 In the above example, the recipient is outside of your organization and won't have access to this link. There are three options together with the information:
 
-- **Manage access**
-Change who can access the link.
-- **Attach as a copy**
-Attach the file as a copy instead if you have the permission to do so.
-- **Ignore**
-Ignore the error, then there will be no warning before you send the email message.
+- **Manage access**  
+    Change who can access the link.
+- **Attach as a copy**  
+    Attach the file as a copy instead if you have the permission to do so.
+- **Ignore**  
+    Ignore the error, then there will be no warning before you send the email message.
 
 **Notes:**
 
