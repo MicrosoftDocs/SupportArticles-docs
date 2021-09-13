@@ -11,7 +11,7 @@ ms.prod: sql
 
 This article provides general guidelines for the Sqldumper.exe utility that is included with SQL Server. You can use this utility to generate different kinds of dump files.
 
-_Original product version:_ &nbsp; SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
+_Original product version:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
 _Original KB number:_ &nbsp; 917825
 
 ## Summary
@@ -53,6 +53,7 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
     > [!NOTE]
     > In this folder path, **number** is a placeholder for one of the following:
     >
+    > - 150 for SQL Server 2019
     > - 140 for SQL Server 2017
     > - 130 for SQL Server 2016
     > - 120 for SQL Server 2014
