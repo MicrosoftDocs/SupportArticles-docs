@@ -1,7 +1,7 @@
 ---
 title: CPU usage over 100% if Intel Turbo Boost is active
 description: Describes an issue where CPU usage exceeds 100% in Task Manager and Performance Monitor if Intel Turbo Boost is active.
-ms.date: 09/08/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -34,6 +34,4 @@ The difference between the two counter types concerns how they measure the actua
 
 This change was intended to provide a more accurate representation of how much work the system is handling, and the utility counters do just that. A processor that's running 50% of the time and clocked down to 50% frequency performs only half the work of a processor that's running 100% of the time at 100% frequency. Before this change, under the time-based performance counters (used in Windows 7 Task Manager), those two processors clocked differently. Both appear to be doing the same amount of work: 100% of their capacity. With the redesigned Task Manager, the first processor is shown to be running at 50% capacity, whereas the second processor is shown to be running at 100% capacity. And Turbo Boost drives the processor above 100% of its nominal speed, and allows the processor to exceed 100% capacity.  
 
-### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
