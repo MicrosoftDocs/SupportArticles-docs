@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot the reporting of successful certificate deployment to devices when you use SCEP with Microsoft Intune
+title: Troubleshoot reporting for SCEP certificate deployment to devices with Microsoft Intune
 description: Troubleshoot the reporting by NDES and the Intune Certificate Connector about a successful deployment of certificates that were provisioned with SCEP certificate profiles. 
 ms.date: 09/10/2021
 ms.reviewer: lacranda
 ---
-# Troubleshooting NDES reporting of certificate deployments in Microsoft Intune
+# Troubleshooting NDES reporting of certificate deployments in Intune
 
 When using SCEP certificate profiles to provision certificates to Windows devices, the last phase is that the Intune Certificate Connector reports the deployment to Intune. This article explains how to confirm that NDES and the Intune Certificate Connector are successfully reporting on certificate delivery to devices.
 

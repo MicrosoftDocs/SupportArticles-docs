@@ -6,15 +6,13 @@ ms.reviewer: lacranda
 ---
 # Troubleshooting SCEP certificate profiles with Intune
 
-It can be challenging to troubleshoot Simple Certificate Enrollment Protocol (SCEP) certificate profiles in Microsoft Intune. This articles gives guidance to help you troubleshooting and resolve issues with SCEP certificates, including the following concepts:
+This articles gives guidance to help you troubleshoot and resolve issues with Simple Certificate Enrollment Protocol (SCEP) certificate profiles in Microsoft Intune. The following sections cover these concepts:
 
 - The architecture and the communication flow of the SCEP process
 - Narrowing down where a problem exists in that communication flow
 - Identifying the key log files that are referenced in subsequent articles for troubleshooting certificate profiles
 
-The information in this article and related SCEP certificate troubleshooting articles applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS isn't available at this time.
-
-To troubleshoot Network Device Enrollment Service (NDES), see the following articles:
+The information in this article and related SCEP certificate troubleshooting articles applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS isn't available at this time. To troubleshoot Network Device Enrollment Service (NDES), see the following articles:
 
 - [Verify NDES configuration on-premises for SCEP certificates in Intune](verify-ndes-configuration.md)
 - [Configure infrastructure to support SCEP with Intune](/mem/intune/protect/certificates-scep-configure)

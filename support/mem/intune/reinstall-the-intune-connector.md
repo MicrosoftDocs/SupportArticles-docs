@@ -9,7 +9,7 @@ ms.prod-support-area-path:
 ---
 # How to reinstall the Intune Certificate Connector
 
-This article describes how to uninstall and reinstall the Intune Certificate Connector. You might need to resitall the connector in one of these scenarios:
+This article describes how to uninstall and reinstall the Intune Certificate Connector. You might need to reinstall the connector in one of these scenarios:
 
 - The connector displays an **Error** status in Intune.
 - The connector certificate is expired.

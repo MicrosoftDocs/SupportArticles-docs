@@ -7,7 +7,7 @@ ms.reviewer: luche
 ---
 # Unexpected error when you sign in to the NDES Connector UI
 
-This article fixes an issue in which you receive an unexpected error and and error 0x80004003 when you sign in to the NDES Connector UI when you configure NDES.
+This article fixes an issue in which you receive an unexpected error and and error 0x80004003 when you sign in to the Network Device Enrollment Service (NDES) Connector UI when you configure NDES.
 
 ## Symptoms
 

@@ -108,23 +108,25 @@
     href: connector-setup-wizard-ends-prematurely.md
   - name: Sign in to Intune NDES Connector error 0x80004003
     href: ndes-connector-signin-error-80004003.md
+  - name: Troubleshoot PKCS certificate deployment
+    href: troubleshoot-pkcs-certificate-profiles.md
   - name: SCEP certificates
     items:
     - name: SCEP deployment
       items:
-      - name: Troubleshoot SCEP delivery to devices
-        href: troubleshoot-scep-certificate-delivery.md
       - name: Troubleshoot SCEP certificate profiles
         href: troubleshoot-scep-certificate-profiles.md
-      - name: Troubleshoot SCEP profile deployment to devices
+      - name: Troubleshoot SCEP profile deployment
         href: troubleshoot-scep-certificate-profile-deployment.md
+      - name: Troubleshoot SCEP delivery to devices
+        href: troubleshoot-scep-certificate-delivery.md
       - name: Can't assign SCEP certificates to devices
         href: cannot-assign-scep-certificates.md
       - name: CertificateRegistrationSvc verify request error
         href: certificateregistrationsvc-verify-request-error.md
       - name: Devices fail to obtain SCEP certificates
         href: devices-receive-scep-certificates-error-0x80094800.md
-      - name: Certificate deployment to Windows 10 device fails after CA renewal
+      - name: Certificate deployment to Windows 10 device fails
         href: scep-deployment-to-win10-devices-fails.md
       - name: NDES certificate not installed
         href: error-0x80090014-installing-ndes-certificate.md
@@ -132,7 +134,7 @@
       items:
       - name: SCEP certificate request fails on CRP
         href: scep-certificate-request-fails.md
-      - name: Device to NDES server communication
+      - name: Troubleshoot device to NDES server communication
         href: troubleshoot-scep-certificate-device-to-ndes.md
       - name: Troubleshoot NDES operations
         href: troubleshoot-scep-certificate-ndes-policy-module.md
@@ -140,10 +142,6 @@
         href: troubleshoot-scep-certificate-reporting.md
       - name: Verify on-premises NDES configuration
         href: verify-ndes-configuration.md
-  - name: PKCS certificates
-    items:
-    - name: Troubleshoot PKCS certificate deployment
-      href: troubleshoot-pkcs-certificate-profiles.md
 - name: Device configuration
   items:
   - name: 2016341112 -iOS device is currently busy

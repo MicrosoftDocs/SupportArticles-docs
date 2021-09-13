@@ -37,7 +37,7 @@ The following graphic provides a basic overview of the PKCS certificate deployme
 1. Intune decrypts the PFX User Certificate and re-encrypts for the device using the Device Management Certificate.  Intune then sends the PFX User Certificate to the Device.
 1. The device reports the certificate status to Intune.
 
-## Data and Log files
+## Log files
 
 To identify problems for the communication and certificate provisioning workflow, review log files from both the Server infrastructure, and from devices. Later sections for troubleshooting PKCS certificate profiles refer to log files referenced in this section.
 
