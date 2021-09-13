@@ -35,13 +35,13 @@ After you add a Microsoft Exchange Server 2019 mailbox server as a node to a dat
 
 ## Cause
 
-These issues occur because the schema version number of the mailbox database is incorrect. Before you create additional mailbox databases, the Information Store service must be restarted on every node after the node is added to the DAG. Otherwise, the cluster database isn't updated for the correct schema version.
+These issues occur because the schema version value of the mailbox database is incorrect. Before you create additional mailbox databases, the Information Store service must be restarted on every node after the node is added to the DAG. Otherwise, the cluster database isn't updated for the correct schema version.
 
 ## Workaround
 
 After you add a node to the cluster, restart the Information Store service on the node.
 
-If you have already created new databases in a cluster, check whether their schema version number is set to **121** before you restart the Information Store service on all nodes in the cluster. To check the database schema version for the mailbox database, run the following cmdlet:
+If you have already created new databases in a cluster, check whether their schema version value is set to **121** before you restart the Information Store service on all nodes in the cluster. To check the database schema version for the mailbox database, run the following cmdlet:
 
 ```powershell
 Get-MailboxDatabase DB01 -Status | fl *Schema*
@@ -56,7 +56,7 @@ CurrentSchemaVersion        : 0.121
 RequestedSchemaVersion      : 0.121
 ```
 
-If you have to update the schema version number, update the database schema, and then dismount and remount the database:
+If you have to update the schema version value, update the database schema, and then dismount and remount the database:
 
 ```powershell
 Update-DatabaseSchema DB01
