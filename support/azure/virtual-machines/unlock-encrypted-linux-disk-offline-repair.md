@@ -56,7 +56,7 @@ For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Ge
 
 #### Azure CLI
 
-You can use the `az vm encryption show` command in Azure CLI with the query `disks[].encryptionSettings[].enabled` appended to determine whether ADE is enabled on a VM's disks. The following output indicates that ADE encryption is enabled.
+You can use the `az vm encryption show` command to check whether ADE is enabled on a VM's disks:
 
 ```azureclio
 az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
@@ -65,8 +65,8 @@ az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disk
 For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
 
 >[!NOTE]
->If you determine that ADE is not enabled on the disk, see the following article for instructions about how to attach a disk to a repair VM: 
->[Troubleshoot a Linux VM by attaching the OS disk to a repair VM through the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
+>If ADE is not enabled on the disk, see the following article to attach a disk to a repair VM:
+>[Troubleshoot a Linux VM by attaching the OS disk to a repair VM](troubleshoot-recovery-disks-portal-linux.md).
 
 <a name="adeversion"></a>
 
@@ -91,7 +91,7 @@ You should choose one of three methods to unlock the encrypted disk:
 
 - If the disk is managed and encrypted by using ADE version 1, and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use [Method 1: Unlock the encrypted disk automatically by using az vm repair command](#method1).
 - If your disk is both managed and encrypted by using ADE version 1, but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Method 2: Unlock the encrypted disk by the Key file in the BEK volume](#method2). Another reason to choose this method is if you lack the permissions to create a resource group in Azure.
-- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use [Method 3: Re-encrypt the disk to generate the BEK volume with the key file, and unlock the encrypted disk](#method3).
+- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), follow the steps in the [Method 3](#method3) to unlock the disk.
 
 ## <a name="method1"></a> Method 1: Unlock the encrypted disk automatically by using az vm repair command
 
