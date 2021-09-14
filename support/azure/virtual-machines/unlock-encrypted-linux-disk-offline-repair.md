@@ -448,12 +448,12 @@ Import the newly unlocked partition into a new volume group. In this example, we
        ```azurecli
       az vm encryption enable -g "resource group" --name "VMName" --disk-encryption-keyvault "keyvault"  --volume-type "data" --encrypt-format-all
       ```
-        To identify the the values for **disk-encryption-keyvault** and **key-encryption-key**, run the following command:
+        To identify the values for **disk-encryption-keyvault** and **key-encryption-key**, run the following command:
 
         ```azurecli
         az vm encryption show --name "OriginalVmName" --resource-group "ResourceGroupName"
         ```
-        Check the following table to find the correct values in the output. If the **keyEncryptionKey** is blank, your VM is encrypted by **BEK**.
+        Check the following table, and find the values in the output . If the **keyEncryptionKey** is blank, your VM is encrypted by **BEK**.
     
         |  Parameter |  Value in the output | example  |
         |---|---|---|
