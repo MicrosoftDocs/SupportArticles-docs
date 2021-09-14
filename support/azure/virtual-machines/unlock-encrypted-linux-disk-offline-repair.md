@@ -27,7 +27,7 @@ If ADE is enabled on the OS disk, you might see following error messages after y
 
 ## Preparation
 
-Before you unlock the encrypted OS disk, you need to
+Before you unlock the encrypted OS disk ofr offline repair, you need to
 
 1. [Confirm that ADE is enabled on the disk](#confirm-that-ade-is-enabled-on-the-disk).
 2. [Determine whether the OS disk uses ADE version 0 (dual-pass encryption) or ADE version 1 (single-pass encryption)](#adeversion).
@@ -49,11 +49,7 @@ View the **Overview** blade for the failed VM in the Azure portal. Beneath **Dis
 You can use the `Get-AzVmDiskEncryptionStatus` cmdlet to determine whether the OS and/or data volumes for a VM are encrypted by using ADE. The following example output indicates ADE encryption is enabled on the OS volume:
 
 ```PowerShell
-PS /home/me> Get-AzVmDiskEncryptionStatus -ResourceGroupName "MyRg01" -VMName "MyVm01" 
-OsVolumeEncrypted          : Encrypted
-DataVolumesEncrypted       : NoDiskFound
-OsVolumeEncryptionSettings : Microsoft.Azure.Management.Compute.Models.DiskEncryptionSettings
-ProgressMessage            : Extension status not available on the VM
+Get-AzVmDiskEncryptionStatus -ResourceGroupName "ResourceGroupName" -VMName "VmName" 
 ```
 
 For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Get-AzVMDiskEncryptionStatus (Az.Compute)](/powershell/module/az.compute/get-azvmdiskencryptionstatus).
@@ -62,18 +58,15 @@ For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Ge
 
 You can use the `az vm encryption show` command in Azure CLI with the query `disks[].encryptionSettings[].enabled` appended to determine whether ADE is enabled on a VM's disks. The following output indicates that ADE encryption is enabled.
 
-```console
-C:\Users\admin1>az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
-[
-  true
-]
+```azureclio
+az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
 ```
 
 For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
 
 >[!NOTE]
 >If you determine that ADE is not enabled on the disk, see the following article for instructions about how to attach a disk to a repair VM: 
->[Troubleshoot a Linux VM by attaching the OS disk to a repair VM through the Azure portal](troubleshoot-recovery-disks-portal-linux.md)
+>[Troubleshoot a Linux VM by attaching the OS disk to a repair VM through the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
 <a name="adeversion"></a>
 
@@ -84,13 +77,13 @@ You can identify the ADE version in the Azure portal by opening the properties o
 - If the version number is ``0.*``, the disk uses dual-pass encryption.
 - If the version number is `1.*` or a later version, the disk uses single-pass encryption.
 
-If you determine that your disk uses ADE version 1 (dual-pass encryption), go to [Method 3: Re-encrypt the disk to generate the BEK volume with the key file, and unlock the encrypted disk](#method3).
+If your disk uses ADE version 1 (dual-pass encryption), use the [Method 3](#method3) to unlock the disk.
 
 ### Determine whether the OS disk is managed or unmanaged
 
 If you don't know whether the OS disk is managed or unmanaged, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 
-If you know that the OS disk is an unmanaged disk, go to [Method 3](#method3).
+If the OS disk is an unmanaged disk, follow the steps in the [Method 3](#method3) to unlock the disk.
 
 ### Select the method to unlock the encrypted disk
 
@@ -108,7 +101,7 @@ To repair the VM by using this automated method, follow the steps in [Repair a L
 
 If your infrastructure and company policy don't allow you to assign a public IP address, or if the `az vm repair` command doesn't unlock the disk, go to the next method.
 
-## <a name="method2"></a> Method 2: Unlock the encrypted disk by the Key file in the BEK volume
+## <a name="method2"></a> Method 2: Unlock the encrypted disk by the key file in the BEK volume
 
 To unlock and mount the encrypted disk manually, follow these steps:
 
@@ -443,8 +436,9 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
      - For managed disk, see [Troubleshoot a Linux VM by attaching the managed OS disk to a repair VM ](troubleshoot-recovery-disks-portal-linux.md).
      - For unmanaged disk, use the Storage Explorer to create a copy of the affected VM's OS Disk. For more information, see [Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md).
-1. After you attach the encrypted disk as the data disk to the repair VM, use the same Key Vault and Key Encrypted key (KEK) that used for the original VM to re-encrypt this data disk. This process will automatically generate and mount a BEK volume with BKE key file in the repair VM. 
-    - If the original VM is encrypted by **wrapped BEK**, run the following command. You must use the **EncryptFormatAll** option, otherwise the ADE extension could encrypt the boot slices on the data disk.
+1. After you attach the encrypted disk as the data disk to the repair VM, use the Key Vault and Key Encrypted key (KEK) that used for the original VM to re-encrypt this data disk. This process will automatically generate and mount a BEK volume with BKE key file in the repair VM. You must use the **EncryptFormatAll** option, otherwise the ADE extension could encrypt the boot slices on the data disk.
+
+    - If the original VM is encrypted by **wrapped BEK**, run the following command.
        ```azurecli
         az vm encryption enable -g "resource group" --name "VMName" --disk-encryption-keyvault "keyvault"  --key-encryption-key "kek" --volume-type "data" --encrypt-format-all
        ```
