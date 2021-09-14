@@ -39,13 +39,13 @@ The number of files might continue to grow, or it might decrease too slowly for 
 
 ## Cause
 
-The excess files are usually plain text XML files that have a file name extension of .smx or .smw. These files contain the client ID (known as SMS GUID) and payload. Typically, every file contains multiple messages. This is because a client will batch the messages before it sends them (the default is 15 minutes).
+The incoming files are plain text XML files that usually have a file name extension of .smx or .smw. These files contain the client ID (known as SMS GUID) and payload. Typically, every file contains multiple messages. This is because a client will batch the messages before it sends them (the default is 15 minutes).
 
 StateSys is designed to pick up files in batches, parse XML files, and update the database. When it updates the database, it runs some SQL stored procedures and CLR assemblies that are provided by Configuration Manager. Therefore, it mainly depends on the SQL Server back-end performance. When SQL Server is saturated with other tasks for a long time, this condition can cause status messages to accumulate.
 
 At the same time, StateSys has little design to prevent it from catching up with a backlog of nearly millions of files:
 
-- Files are processed in alphabetical order, but not in "first in first out (FIFO)" order. Because the management point generates random names for the files, new messages might be processed before old messages. StateSys is resistent to this situation.
+- Files are processed in alphabetical order, but not in "first in first out (FIFO)" order. Because the management point generates random names for the files, new messages might be processed before old messages. StateSys is resilient to this situation.
 - Each message contains a sequence number. StateSys maintains a list of missing ranges that are stored in the `SR_MissingRanges` table. When a missing range becomes older than two days (default), StateSys issues a resynchronization for the client. This causes the client to send a large XML file that goes to the same queue as all other messages. If new status messages are always processed two days earlier than old messages, this condition can become a vicious cycle for some clients and cause frequent resynchronization.
 
 ## Resolution
@@ -83,7 +83,7 @@ To troubleshoot the performance issue, follow these steps:
       This query returns the list of Configuration Manager sites that have the SMS_STATE_SYSTEM component installed.
 
       :::image type="content" source="media\state-message-processing-performance\query-result.png" alt-text="WMI query result":::
-   3. Double-click the site whose settings you want to change, and then double-click **Props** from the list of properties of the site or StateSys instance.
+   3. Double-click the site whose settings you want to change, and then double-click **Props** from the list of properties of the \<site\>/StateSys instance.
 
       :::image type="content" source="media\state-message-processing-performance\statesys-property.png" alt-text="Double-click Props":::
    4. To see the list of embedded properties of this instance, select **View Embedded**.
@@ -99,10 +99,10 @@ To troubleshoot the performance issue, follow these steps:
 
        :::image type="content" source="media\state-message-processing-performance\missing-message-age.png" alt-text="Minimum missing message age":::
    8. Double-click **Value**, and increase the value to **10,080** (seven days) to prevent unnecessary resynchronization. Select **Save Property**, and then select **Save Object**.
-   9. In the **Property Editor** dialog box under **Props**, select **Save Property**.
+   9. In the **Property Editor** dialog of **Props**, select **Save Property**.
 
       :::image type="content" source="media\state-message-processing-performance\save-property.png" alt-text="Save property":::
-   10. In the **Object Editor** dialog box of the StateSys instance, select **Save Object**.
+   10. In the **Object Editor** dialog of the StateSys instance, select **Save Object**.
    11. Close Wbemtest.
    12. Use Configuration Manager Service Manager to stop and then restart the SMS_STATE_SYSTEM component.
 
