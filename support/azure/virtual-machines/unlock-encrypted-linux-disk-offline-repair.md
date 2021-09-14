@@ -32,7 +32,7 @@ Before you unlock the encrypted OS disk, you need to
 1. [Confirm that ADE is enabled on the disk](#confirm-that-ade-is-enabled-on-the-disk).
 2. [Determine whether the OS disk uses ADE version 0 (dual-pass encryption) or ADE version 1 (single-pass encryption)](#adeversion).
 3. [Determine whether the OS disk is managed or unmanaged](#determine-whether-the-os-disk-is-managed-or-unmanaged).
-1. [Select the method to unlock the encrypted disk](#select-the-method-to-attach-the-disk-to-a-repair-vm-and-unlock-the-disk).
+1. [Select the method to unlock the encrypted disk](#select-the-method-to-unlock-the-encrypted-disk).
 
 ### Confirm that ADE is enabled on the disk
 
@@ -42,7 +42,7 @@ You can perform this step in the Azure portal, PowerShell, or the Azure command-
 
 View the **Overview** blade for the failed VM in the Azure portal. Beneath **Disk**, **Azure disk encryption** will appear as **Enabled** or **Not Enabled**, as shown in the following screenshot.
 
-:::image type="content" source="media/unlock-encrypted-disk-offline/ade-enabled.png" alt-text="Screenshot of the overview blade for a V M in azure portal showing A D E is enabled on the disk.":::
+:::image type="content" source="media/unlock-encrypted-linux-disk-offline-repair/ade-enabled.png" alt-text="Screenshot of the overview blade for a V M in azure portal showing A D E is enabled on the disk.":::
 
 #### PowerShell
 
@@ -84,23 +84,23 @@ You can identify the ADE version in the Azure portal by opening the properties o
 - If the version number is ``0.*``, the disk uses dual-pass encryption.
 - If the version number is `1.*` or a later version, the disk uses single-pass encryption.
 
-If you determine that your disk uses ADE version 1 (dual-pass encryption), you can go to [Resolution #3: Manual method to unlock an encrypted disk on a repair VM](#resolution-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
+If you determine that your disk uses ADE version 1 (dual-pass encryption), go to [Resolution #3: Manual method to unlock an encrypted disk on a repair VM](#method3).
 
 ### Determine whether the OS disk is managed or unmanaged
 
 If you don't know whether the OS disk is managed or unmanaged, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 
-If you know that the OS disk is an unmanaged disk, go to [Resolution #3: Manual method to unlock an encrypted disk on a repair VM](#resolution-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
+If you know that the OS disk is an unmanaged disk, go to [Resolution #3: Manual method to unlock an encrypted disk on a repair VM](#method3).
 
 ### Select the method to unlock the encrypted disk
 
 You should choose one of three methods to unlock the encrypted disk:
 
-- If the disk is managed and encrypted by using ADE version 1, and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use [Resolution #1: Automated method to unlock an encrypted disk on a repair VM](unlock-encrypted-disk-offline.md#resolution-1-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
-- If your disk is both managed and encrypted by using ADE version 1, but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Resolution #2: Semi-automated method to unlock an encrypted disk on a repair VM](#resolution-2-semi-automated-method-to-unlock-an-encrypted-disk-on-a-repair-vm). (Another reason to choose this method is if you lack the permissions to create a resource group in Azure.)
-- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use [Resolution #3: Manual method to unlock an encrypted disk on a repair VM](#resolution-3-manual-method-to-unlock-an-encrypted-disk-on-a-repair-vm).
+- If the disk is managed and encrypted by using ADE version 1, and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use [Resolution #1: Automated method to unlock an encrypted disk on a repair VM](#method1).
+- If your disk is both managed and encrypted by using ADE version 1, but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Resolution #2: Semi-automated method to unlock an encrypted disk on a repair VM](#method2). Another reason to choose this method is if you lack the permissions to create a resource group in Azure.
+- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), use [Resolution #3: Manual method to unlock an encrypted disk on a repair VM](#method3).
 
-## Method 1: Unlock an encrypted disk automatically
+## <a name="method1"></a> Method 1: Unlock an encrypted disk automatically
 
 This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the OS disk of the failed Linux VM  to that repair VM, and then unlock the disk if it is encrypted. This method requires using a public IP address for the repair VM, and it unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped by using a key encryption key (KEK).  
 
@@ -108,7 +108,7 @@ To repair the VM by using this automated method, follow the steps in [Repair a L
 
 If your infrastructure and company policy don't allow you to assign a public IP address, or if the `az vm repair` command doesn't unlock the disk, go to the next method.
 
-## Method 2: Unlock an encrypted disk manually
+## <a name="method2"></a> Method 2: Unlock an encrypted disk manually
 
 To unlock and mount the encrypted disk manually, follow these steps:
 
@@ -178,7 +178,7 @@ You need the key file and the header file to unlock the encrypted disk. The key 
    >sdb1  vfat   BEK VOLUME      04A2-FE67 
    ```
 
-   If no BEK volume is present, re-create the repair VM by having the encrypted disk attached. If the BEK volume still does not attach automatically, [try the method 3](#re-encrypt) to retrieve the BEK volume.
+   If no BEK volume is present, re-create the repair VM by having the encrypted disk attached. If the BEK volume still does not attach automatically, [try the method 3](#method3) to retrieve the BEK volume.
 1. Create a directory that's named "azure_bek_disk" under the "/mnt" folder:
 
    ```bash
