@@ -34,18 +34,11 @@ Additionally, when you view the properties of the recipient in the Exchange admi
 >
 > There are too many proxy addresses: \<X>, and maximum supported number of recipient proxy addresses is 200.
 
-After November 2016, the error messages will change to the following, where \<X> represents a number that's greater than 400:
-
-> There are too many proxy addresses: \<X>, and maximum supported number of recipient proxy addresses is 400.
-
 ## Cause
 
 The number of proxy addresses on the recipient is more than the current limit.
 
-To increase reliability and performance of the service, Microsoft has changed the limit on the number of email addresses that a recipient can have.
-
-- The current new limit is set to a maximum of 200 email addresses per object. This limit is documented in [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
-- The limit will be increased to 400 by the end of November 2016. Documentation will be updated accordingly.
+The current limit is set to a maximum of 200 email addresses per object. This limit is documented in [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 ## Solution
 
