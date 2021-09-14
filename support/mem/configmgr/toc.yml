@@ -162,6 +162,8 @@
   items:
     - name: Configuration Manager diagnostics
       href: diagnostics-sdp.md
+    - name: Failed devices on client health dashboard
+      href: failed-devices-client-health-dashboard.md
 - name: Discovery
   items:
     - name: lastLogonTimestamp isn't updated as expected

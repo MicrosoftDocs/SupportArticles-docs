@@ -77,7 +77,7 @@ If you couldn't repair the secure channel, try to reset the machine password.
 
    Example:
 
-   ```ps
+   ```powershell
    $cred = Get-Credential
    Invoke-Command -ComputerName "Server01" -ScriptBlock {Reset-ComputerMachinePassword -Credential $using:cred}
    ```

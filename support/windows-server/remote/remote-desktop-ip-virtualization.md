@@ -1,7 +1,7 @@
 ---
-title: Remote Desktop IP Virtualization does not work
-description: Discusses an issue in which Remote Desktop IP Virtualization does not work in Windows Server 2019.
-ms.date: 12/07/2020
+title: Remote Desktop IP Virtualization in Windows Server 2019
+description: Remote Desktop IP Virtualization in Windows Server 2019.
+ms.date: 09/09/2021
 author: Deland-Han
 ms.author: delhan 
 manager: dcscontentpm
@@ -13,16 +13,14 @@ ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Remote desktop sessions
 ms.technology: windows-server-rds
 ---
-# Remote Desktop IP Virtualization does not work in Windows Server 2019
+# Remote Desktop IP Virtualization in Windows Server 2019
 
-This article discusses an issue in which Remote Desktop IP Virtualization does not work in Windows Server 2019.
+This article discusses about Remote Desktop IP Virtualization in Windows Server 2019. If you want to use IP virtualization on Windows Server 2019, follow [these steps](/azure/virtual-desktop/security-guide#ip-virtualization).
 
 _Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4501072
 
 ## More information
-
-Remote Desktop IP Virtualization is currently not working in Windows Server 2019. We are investigating this issue.
 
 Remote Desktop IP Virtualization was introduced in Windows Server 2008 R2. In Windows Server 2008, Terminal Server had a single IP address that was shared among all remote desktop users. This made the remote desktop experience different from that of regular desktops, and it introduced some application compatibility problems.
 

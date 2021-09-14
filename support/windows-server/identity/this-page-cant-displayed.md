@@ -1,7 +1,7 @@
 ---
 title: This page can't be displayed
 description: Discusses that you receive a "This page cannot be displayed" error message when you try to access an application on a website that uses AD FS 2.0. Provides a resolution.
-ms.date: 10/13/2020
+ms.date: 09/10/2021
 author: Deland-Han 
 ms.author: delhan
 manager: dcscontentpm
@@ -131,6 +131,4 @@ To resolve this problem, follow these steps in the order. These steps will help 
       1. Collect Fiddler Web Debugger trace and network capture information while you're accessing the `IDPInitiatedsignon` page. For more information, see [AD FS 2.0: How to Use Fiddler Web Debugger to Analyze a WS-Federation Passive Sign-In](https://social.technet.microsoft.com/wiki/contents/articles/3286.ad-fs-2-0-how-to-use-fiddler-web-debugger-to-analyze-a-ws-federation-passive-sign-in.aspx).
       2. Collect network traces from the client computer to check whether the SSL handshake completed successfully, whether there's an encrypted message, whether you're accessing the correct IP address, and so on. For more information, see [How to enable Schannel event logging in Windows and Windows Server](https://support.microsoft.com/help/260729).
 
-### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

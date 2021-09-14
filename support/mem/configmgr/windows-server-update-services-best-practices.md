@@ -87,7 +87,7 @@ When you configure WSUS, choose only the products and categories that you plan t
 
 It shouldn't be an issue for much longer, because Windows Server 2008 R2 was the last version to support Itanium. But it bears mentioning.
 
-Customize and use [this](https://gallery.technet.microsoft.com/Decline-WSUS-Update-Types-13fec5e0) script in your environment to decline Itanium architecture updates. The script can also decline updates that contain **Preview** or **Beta** in the update title.
+Customize and use [this](https://www.powershellgallery.com/packages/decline-WSUSUpdatesTypes) script in your environment to decline Itanium architecture updates. The script can also decline updates that contain **Preview** or **Beta** in the update title.
 
 It leads to the WSUS console being more responsive, but doesn't affect the client scan.
 
