@@ -463,4 +463,4 @@ Import the newly unlocked partition into a new volume group. In this example, we
 1. Run `lsblk -f` to check if a new disk is attached. If yes, proceed to [Identify the ADE key file in the BEK volume](#identify-the-header-file) and from that point,  continue following the steps to unlock the disk.
 
 ## Next steps
-If you're having problems connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection).
+If you're having problems connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection.md).
