@@ -42,11 +42,11 @@ This article is the first of two lab parts. The lab work is divided as follows:
 
 When you browse to the site URL, `http://buggyamb/`, and select the **Problem Pages** link, you'll see links to some problem scenarios. There are three different crash scenarios. However, for this lab, you'll troubleshoot only the third crash scenario.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/buggyamb_website_ui_look.png" alt-text="BuggyAmb crash." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/buggyamb-website-ui-look.png" alt-text="Screenshot of web site crash information." border="true":::
 
 Before you select any link, select **Expected Results**, and verify that your application is working as expected. You should see an output that resembles the following.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/output.png" alt-text="BuggyAmb output." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/output-information.png" alt-text="Screenshot of output information." border="true":::
 
 The page should load quickly (in less than one second), and display a list of products.
 
@@ -54,23 +54,23 @@ To test the first "slow page" scenario, select the **Slow** link. The page will 
 
 Before you reproduce the crash problem, note the process ID of the buggy application. You'll use this information to verify that your application restarts. Run the `systemctl status buggyamb.service` command to get the current PID. In the following results, the PID of the process that's running the service is 2255.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/service.png" alt-text="BuggyAmb service." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/service-information.png" alt-text="Screenshot of service information." border="true":::
 
 Select the **Crash 3** link. The page loads and displays following message:
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/crash3.png" alt-text="BuggyAmb crash3." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/crash3-information.png" alt-text="Screenshot of crash3 information." border="true":::
 
 This message asks the user to consider the following question: Will this page cause the process to crash? Run the same `systemctl status buggyamb.service` command, and you should see the same PID. This indicates that a crash didn't occur.
 
 Select **Expected Results**, and then select **Slow**. Although you should see the correct page after you select **Expected Results**, selecting **Slow** should generate the following error message.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/slow.png" alt-text="BuggyAmb slow." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/slow-command.png" alt-text="Screenshot of slow command." border="true":::
 
 Even if you select any other link on the webpage, you'll experience the same error for a short while. After 10–15 seconds, everything will start to respond as expected again.
 
 To check whether the PID is changed, run `systemctl status buggyamb.service` again. This time, you should notice that the process seems to have stopped because the PID is changed. In the previous example, the process PID was 2255. In the following example, it's changed to 2943. Apparently, the website made good on its promise to crash the process.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/service2943.png" alt-text="BuggyAmb service2943." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/service2943-information.png" alt-text="Screenshot of service2943 information." border="true":::
 
 ## Troubleshooting the steps of repro
 
@@ -89,13 +89,13 @@ Before you continue, you might want to check whether Nginx is working correctly.
 
 Nginx has two kinds of logs: Access logs and error logs. These are stored in the *:::no-loc text="/var/log/nginx/":::* folder.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/log.png" alt-text="BuggyAmb log." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/log-information.png" alt-text="Screenshot of log information." border="true":::
 
 Access logs are just like IIS log files. Open and examine them, just as you did in the previous section. The logs don't show any new information other than the "HTTP 502" response status code that you already encountered during the navigation attempts on the site's pages.
 
 Inspect the error logs by using the `cat /var/log/nginx/error.log` command. This log is more helpful and clear. It shows that Nginx was able to process the request, but the connection between Nginx and the buggy application closed before the final response was sent.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/error.png" alt-text="BuggyAmb error." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/error-information.png" alt-text="Screenshot of error information." border="true":::
 
 This log clearly indicates that what you see isn't a Nginx problem.
 
@@ -121,11 +121,11 @@ There are several useful switches for the `journalctl` command that can help you
 
 Run `journalctl -r --identifier=buggyamb-identifier --since today -o cat`. You should notice that some warning messages are generated.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/cat.png" alt-text="BuggyAmb cat." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/cat-command.png" alt-text="Screenshot of cat command." border="true":::
 
 To see the details, scroll down by using the arrow keys. You'll find a `System.Net.WebException` exception.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/webexception.png" alt-text="BuggyAmb webexception." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/webexception-information.png" alt-text="Screenshot of webexception information." border="true":::
 
 If you closely examine the logs, you'll see the code file name and the line number on which the problem occurred. For this lab, we'll assume that this information isn't available. This is because, in real world scenarios, you might not be able to retrieve this kind of information. Therefore, the objective is to continue by analyzing a crash dump to learn the cause of the crash.
 
@@ -138,11 +138,11 @@ Recall some of the key system behavior when a process is terminated:
 
 Although the default behavior is for the system to generate a core dump file, this setting can be overwritten in *:::no-loc text="/proc/sys/kernel/core_pattern":::* to directly pipe the resulting core dump file into another application. When you used Ubuntu in the previous parts in this series, you learned that apport manages core dump file generation in Ubuntu. The `core_pattern` file is overwritten to pipe the core dump to apport.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/core.png" alt-text="BuggyAmb core." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/core-information.png" alt-text="Screenshot of core information." border="true":::
 
 Apport uses *:::no-loc text="/var/crash":::* folder to store its report files. If you inspect this folder, you should see a file that was already generated after a crash.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/varcrash.png" alt-text="BuggyAmb varcrash." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/varcrash-information.png" alt-text="Screenshot of varcrash information." border="true":::
 
 However, this isn't the core dump file. This is a report file that contains several pieces of information together with the dump file. You have to unpack this file to get the core dump file.
 
@@ -152,11 +152,11 @@ Create a dumps folder under your home folder. You'll be instructed to extract th
 
 This command creates the */dumps* folder. The `apport-unpack` command will create the */dumps/dotnet* folder. Here's the result.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/sudo.png" alt-text="BuggyAmb sudo." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/sudo-command.png" alt-text="Screenshot of sudo command." border="true":::
 
 In the *~/dumps/dotnet* folder, you should see the dump file. The file is named *CoreDump*, and it should be around 191 MB.
 
-:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/dump.png" alt-text="BuggyAmb dump." border="true":::
+:::image type="content" source="./media/lab-1-1-reproduce-troubleshoot/dump-command.png" alt-text="Screenshot of dump command." border="true":::
 
 Extracting the auto-generated core dump file can be a cumbersome process. In the next lab, you'll see that it's easier to capture core dump files by using `createdump`.
 
