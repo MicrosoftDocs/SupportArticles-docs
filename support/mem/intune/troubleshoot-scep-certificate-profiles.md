@@ -19,7 +19,7 @@ To troubleshoot Network Device Enrollment Service (NDES), see the following arti
 - [Verify NDES configuration on-premises for SCEP certificates in Intune](verify-ndes-configuration.md)
 - [Configure infrastructure to support SCEP with Intune](/mem/intune/protect/certificates-scep-configure)
 
-Before proceeding, ensure you've meet the [prerequisites for using SCEP certificate profiles](/mem/intune/protect/certificates-scep-configure#prerequisites-for-using-scep-for-certificates), including the deployment of a root certificate through a trusted certificate profile.
+Before proceeding, ensure you've met the [prerequisites for using SCEP certificate profiles](/mem/intune/protect/certificates-scep-configure#prerequisites-for-using-scep-for-certificates), including the deployment of a root certificate through a trusted certificate profile.
 
 ## SCEP communication flow overview
 
