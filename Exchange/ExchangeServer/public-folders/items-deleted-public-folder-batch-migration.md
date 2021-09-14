@@ -37,9 +37,9 @@ This issue occurs because one of the following conditions is true:
 
 You can use the Exchange admin center (EAC) to check the age limit that's set for a public folder.
 
-:::image type="content" source="media/items-deleted-public-folder-batch-migration/age-limits-in-EAC.png" alt-text="Screenshot of age limit in EAC.":::
+:::image type="content" source="media/items-deleted-public-folder-batch-migration/age-limits-in-eac.png" alt-text="How to check age limit in Exchange admin center.":::
 
-To prevent the items in a public folder from being deleted automatically, set the value of the `DefaultPublicFolderAgeLimit` parameter or the `AgeLimit` parameter to *$null* by running one of the following PowerShell cmdlets:
+To prevent the items in a public folder from being deleted automatically, set the value of the `DefaultPublicFolderAgeLimit` parameter or the `AgeLimit` parameter to *`$null`* by running one of the following PowerShell cmdlets:
 
 ```powershell
 Set-OrganizationConfig -DefaultPublicFolderAgeLimit $null

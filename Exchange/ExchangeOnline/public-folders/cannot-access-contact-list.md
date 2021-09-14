@@ -56,11 +56,11 @@ Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool to split the 
 1. Select **Session** > **Logon**.
 1. Double-click **Public Folders**, expand the **IPM_SUBTREE list**, and then double-click the public folder that has the contact list.
 1. Select the contact list, and then select **Actions** > **Export message**.
-1. Export the contact list in the **MSG file (UNICODE)** format (for example, Brokenlist.msg).
+1. Export the contact list in the **MSG file (UNICODE)** format (for example, *Brokenlist.msg*).
 
     :::image type="content" source="media/cannot-access-contact-list/msg-file-format.png" alt-text="Screenshot of exporting contact list with the MSG file format.":::
 
-1. Double-click to open the exported item and edit the contact list. Remove some members from the contact list, and change the list name (for example, Splitlist.msg).
+1. Double-click to open the exported item and edit the contact list. Remove some members from the contact list, and change the list name (for example, *Splitlist.msg*).
 1. Double-click the public folder in the **IPM_SUBTREE** list, and then select **Folder** > **Import** > **From MSG** to import the updated contact list.
 
 To edit the remaining contacts in the contact list, repeat steps 4-7.
