@@ -110,7 +110,7 @@ In this case:
 - Make sure that both ASP.NET Core applications listen on different ports. One should listen on port 5000 while the other one should listen on port 5001.
 - Make sure that both ASP.NET Core applications are configured to start automatically.
 - Check the status of the ASP.NET Core application services that are using the `systemctl status` commands. If one isn't running, troubleshoot it by examining the system logs by running the `journalctl` command. Use `syslogIdentifier` to filter the logs.
-- Makes sure that both .NET Core 3.1 and .NET Core 5.0 are installed. One site uses .NET Core 3.1, the other uses .NET Core 5.0.
+- Makes sure that both .NET Core 3.1 and .NET 5.0 are installed. One site uses .NET Core 3.1, the other uses .NET 5.0.
 
 ## Next steps
 

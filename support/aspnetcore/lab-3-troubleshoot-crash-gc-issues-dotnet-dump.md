@@ -86,7 +86,7 @@ The following error message is returned:
 
 When you noticed that the `dotnet-dump ps` command could not get the process path, you may have suspected that trying to generate the core dump file would fail.
 
-From the previous error message, you can determine that there is a permission issue involved. But what is the difference between the two processes, the first hosting the .NET Core 5 sample application and the second hosting the .NET Core 3 application? Compare the service files for each process. You should be able to spot the difference with relative ease: The user account that runs each process is different.
+From the previous error message, you can determine that there is a permission issue involved. But what is the difference between the two processes, the first hosting the .NET 5 sample application and the second hosting the .NET Core 3 application? Compare the service files for each process. You should be able to spot the difference with relative ease: The user account that runs each process is different.
 
 :::image type="content" source="./media/lab-3-troubleshoot-crash-gc-issues-dotnet-dump/two-command.png" alt-text="Screenshot of two commands." border="true":::
 

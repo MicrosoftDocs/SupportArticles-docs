@@ -83,7 +83,7 @@ Enter *y* and press Enter. The package manager downloads and installs both .NET 
 :::image type="content" source="./media/1-3-install-dotnet-core-linux/package-download-install.png" alt-text="Screenshot of the package manager downloads and installs both .NET Core and ASP.NET Core runtimes and SDKs." border="false":::
 
 > [!NOTE]
-> You can also installing the .NET Core 5.0 SDK by running the `sudo apt install dotnet-sdk-5.0` command.
+> You can also installing the .NET 5.0 SDK by running the `sudo apt install dotnet-sdk-5.0` command.
 
 Now, verify the installation of the runtimes and SDKs by running `dotnet --info`. The following screenshot shows that .NET Core 3.1 and 5.0 runtimes and SDKs are installed side by side.
 

@@ -15,14 +15,14 @@ This article discusses how to make two ASP.NET Core applications run side-by-sid
 
 To complete this part of the tutorial, you should have following items set up:
 
-- Both .NET Core 3.1 and .NET Core 5.0 SDKs installed.
+- Both .NET Core 3.1 and .NET 5.0 SDKs installed.
 - Nginx running automatically and listening for requests that are sent on port 80.
 - Nginx configured as a reverse proxy and routing all the requests to the ASP.NET Core application (listening on port 5000.)
 - One ASP.NET Core application that's running and configured to start automatically after the server is restarted or after the process is stopped.
 - Linux local firewall that's enabled and configured to allow SSH and HTTP traffic.
 - Sample buggy ASP.NET Core application that's downloaded and extracted to the */var/buggyamb_v1.1* directory.
 
-The first ASP.NET Core demo application that was used in this series is an ASP.NET Core 5.0 application. The second application is an ASP.NET Core 3.1 application. If you don't have both .NET Core 3.1 and .NET Core 5.0 SDKs installed, install the missing one before you continue.
+The first ASP.NET Core demo application that was used in this series is an ASP.NET Core 5.0 application. The second application is an ASP.NET Core 3.1 application. If you don't have both .NET Core 3.1 and .NET 5.0 SDKs installed, install the missing one before you continue.
 
 > [!NOTE]
 > You can check the installed version of runtimes and SDKs by running the `dotnet --info` command. .NET Core installation was discussed in previous parts of this series.
