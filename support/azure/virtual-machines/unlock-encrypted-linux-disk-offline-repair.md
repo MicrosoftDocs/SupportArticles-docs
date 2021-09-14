@@ -27,7 +27,7 @@ If ADE is enabled on the OS disk, you might see following error messages after y
 
 ## Preparation
 
-Before you unlock the encrypted OS disk ofr offline repair, you need to
+Before you unlock the encrypted OS disk for offline repair, you need to
 
 1. [Confirm that ADE is enabled on the disk](#confirm-that-ade-is-enabled-on-the-disk).
 2. [Determine whether the OS disk uses ADE version 0 (dual-pass encryption) or ADE version 1 (single-pass encryption)](#adeversion).
@@ -200,7 +200,7 @@ You need the key file and the header file to unlock the encrypted disk. The key 
 
 The boot partition of the encrypted disk contains the header file. You use this file, together with the "LinuxPassPhraseFileName"  key file, to unlock the encrypted disk.
 
-1. Use the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to show selected attributes of the available disks and partitions.
+1. Use the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to show selected attributes of the available disks and partitions. Here is an example of the output.
 
    ```output
    NAME     SIZE LABEL           PARTLABEL            MOUNTPOINT 
