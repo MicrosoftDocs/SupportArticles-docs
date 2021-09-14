@@ -64,4 +64,4 @@ Dismount-Database DB01
 Mount-Database DB01
 ```
 
-If the `CurrentSchemaVersion` value still shows **121**, this mean that not all the Information Store services across the whole cluster were restarted.
+If the `CurrentSchemaVersion` value still shows **121**, this means that not all the Information Store services across the whole cluster were restarted.
