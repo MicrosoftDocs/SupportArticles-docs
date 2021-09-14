@@ -20,7 +20,7 @@ Typically, the existing Logging module in IIS is used to log items such as the o
 
 For example, assume that you have a load-balanced environment that consists of at least two web servers together with an F5 load balancer in front of the web servers. Typically, the original client's IP address is logged in the `X-FORWARDED-FOR` field in the IIS logs by the existing Logging module. To use the third-party reporting tool, you try to create a custom **Client IP Address (c-ip)** field. However, you receive the following conflict message:
 
-![Add custom field](./media/customize-iis-log-file-field-names/4466894_en_1.png)
+:::image type="content" source="media/customize-iis-log-file-field-names/field-c-ip-conflicts-error.png" alt-text="An error occurs when adding a custom field such as the Client IP Address (c-ip) field." border="false":::
 
 This article describes how to add a custom field such as the **Client IP Address (c-ip)** field so that it does not conflict with any predefined fields in the IIS logs.
 
@@ -38,11 +38,11 @@ There are two solutions to this problem.
     1. Download the [Advanced Logging](https://www.iis.net/downloads/microsoft/advanced-logging), and install it on the server that is running IIS.
     2. Locate the root node or server level, and then double-click the Advanced Logging module:
 
-        ![Double-click the Advanced Logging module](./media/customize-iis-log-file-field-names/4466909_en_1.png)  
+        :::image type="content" source="media/customize-iis-log-file-field-names/advanced-logging.png" alt-text="Double-click the Advanced Logging module at the root node or server level.":::
 
     3. Select the **Enable Advanced Logging** option on the Actions pane:
 
-        ![Actions pane](./media/customize-iis-log-file-field-names/4466914_en_1.jpg)  
+        :::image type="content" source="media/customize-iis-log-file-field-names/actions-pane.png" alt-text="The Enable Advanced Logging option on the Actions pane." border="false":::
 
     4. Select the **Edit Logging Fields**  option, and then select the **Add Field** button in the pop-up window.
     5. Specify the following field values (for example):
@@ -53,15 +53,15 @@ There are two solutions to this problem.
        - **Source name**: X-FORWARDED-FOR
        - **Log header name**: c-ip
 
-       ![Add logging fields](./media/customize-iis-log-file-field-names/4466916_en_1.jpg)
+       :::image type="content" source="media/customize-iis-log-file-field-names/add-logging-fields.png" alt-text="The logging field values that you need to set." border="false":::
 
     6. In the Advanced Logging module, double-click the default Log definition, and then select the **Select Fields**  button.
 
-       ![Double-click the default Log definition](./media/customize-iis-log-file-field-names/4466918_en_1.jpg)  
+       :::image type="content" source="media/customize-iis-log-file-field-names/default-log-definition.png" alt-text="Double-click the default log definition." border="false":::
 
     7. Select the custom field that you created in step 5, and then select **OK**.
 
-       ![Select the custom field](./media/customize-iis-log-file-field-names/4466920_en_1.jpg)  
+       :::image type="content" source="media/customize-iis-log-file-field-names/custom-field.png" alt-text="Select the custom field that you created in step 5." border="false":::
 
     8. Try to access the website from any client system, and then check the log that was created by the Advanced Logging module. (By default, the log file is in the `C:\inetpub\logs\AdvancedLogs` folder, but it can be configured for a different folder.)
 

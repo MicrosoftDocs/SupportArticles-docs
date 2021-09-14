@@ -13,11 +13,11 @@ This article helps you isolate and fix the causes of various errors when you acc
 
 You try to access a website where Windows Integrated Authenticated has been configured and you expect to be using the Kerberos authentication protocol. In this situation, your browser immediately prompts you for credentials, as follows:
 
-![Screenshot of the prompt for credentials](./media/troubleshoot-kerberos-failures-ie/prompt-for-credentials.png)
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/prompt-for-credentials.png" alt-text="Screenshot of the prompt for credentials." border="false":::
 
 Although you enter a valid user name and password, you're prompted again (three prompts total). Then, you're shown a screen that indicates that you aren't allowed to access the desired resource. The screen displays an HTTP 401 status code that resembles the following error:
 
-:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/http-error-401.png" alt-text="Screenshot of http error 401.":::
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/http-error-401.png" alt-text="Screenshot of H T T P Error 401.":::
 
 On the Microsoft Internet Information Services (IIS) server, the website logs contain requests that end in a 401.2 status code, such as the following log:
 
@@ -63,11 +63,11 @@ For more information about how such traces can be generated, see [client-side tr
 
 When Kerberos is used, the request that's sent by the client is large (more than 2,000 bytes), because the `HTTP_AUTHORIZATION` header includes the Kerberos ticket. The following request is for a page that uses Kerberos-based Windows Authentication to authenticate incoming users. The size of the GET request is more than 4,000 bytes.
 
-:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/get-request-more-than-4000-bytes.png" alt-text="Screenshot of requests more than 4,000 bytes.":::
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/get-request-more-than-4000-bytes.png" alt-text="Screenshot of requests that're more than 4,000 bytes.":::
 
 If the NTLM handshake is used, the request will be much smaller. The following client-side capture shows an NTLM authentication request. The GET request is much smaller (less than 1,400 bytes).
 
-:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/get-request-under-1400-bytes.png" alt-text="Screenshot of requests less than 1,400 bytes.":::
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/get-request-under-1400-bytes.png" alt-text="Screenshot of requests that're less than 1,400 bytes.":::
 
 After you determine that Kerberos authentication is failing, check each of the following items in the given order.
 
@@ -86,11 +86,11 @@ These possible scenarios are discussed in the [Why does Kerberos delegation fail
 
 ### Is IIS configured to use integrated authentication
 
-:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/windows-authentication.png" alt-text="Screenshot of windows authentication.":::
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/windows-authentication.png" alt-text="Screenshot of Windows Authentication setting.":::
 
 ### Is integrated authentication enabled in Internet Explorer
 
-![internet options](./media/troubleshoot-kerberos-failures-ie/internet-options.png)
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/internet-options.png" alt-text="Select the Enable Integrated Windows Authentication option in the Internet Options page." border="false":::
 
 ### Does the URL that's used resolve to a security zone for which credentials can be sent
 
@@ -101,22 +101,22 @@ Always run this check for the following sites:
 
 You can check in which zone your browser decides to include the site. To do so, open the **File** menu of Internet Explorer, and then select **Properties**. The **Properties** window will display the zone in which the browser has decided to include the site that you're browsing to.
 
-![ie properties](./media/troubleshoot-kerberos-failures-ie/properties.png)
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/properties.png" alt-text="Check the zone in the Properties of Internet Explorer." border="false":::
 
 You can check whether the zone in which the site is included allows Automatic logon. To do so, open the **Internet options** menu of Internet Explorer, and select the **Security** tab. After you select the desired zone, select the **Custom level** button to display the settings and make sure that **Automatic logon** is selected. (Typically, this feature is turned on by default for the Intranet and Trusted Sites zones).
 
-![local intranet](./media/troubleshoot-kerberos-failures-ie/local-intranet.png)
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/local-intranet.png" alt-text="Check whether the Automatic logon is selected.":::
 
 > [!NOTE]
 > Even through this configuration is not common (because it requires the client to have access to a DC), Kerberos can be used for a URL in the Internet Zone. In this case, unless default settings are changed, the browser will always prompt the user for credentials. Kerberos delegation won't work in the Internet Zone. This is because Internet Explorer allows Kerberos delegation only for a URL in the Intranet and Trusted sites zones.
 
 ### Is the IIS server configured to send the WWW-Authenticate: Negotiate header
 
-:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/headers.png" alt-text="Screenshot of headers.":::
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/headers.png" alt-text="Check whether the IIS server configured to send the WWW-Authenticate: Negotiate header.":::
 
 If IIS doesn't send this header, use the IIS Manager console to set the Negotiate header through the **NTAuthenticationProviders** configuration property. For more information, see [Windows Authentication Providers \<providers>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/providers/). You can access the console through the **Providers** setting of the Windows Authentication details in the IIS manager.
 
-![providers settings in authentication](./media/troubleshoot-kerberos-failures-ie/providers-settings-in-authentication.png)
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/providers-settings-in-authentication.png" alt-text="Providers settings in authentication.":::
 
 > [!NOTE]
 > By default, the **NTAuthenticationProviders** property is not set. This causes IIS to send both Negotiate and Windows NT LAN Manager (NTLM) headers.
@@ -132,7 +132,7 @@ You can use the Kerberos List (KLIST) tool to verify that the client computer ca
 > [!NOTE]
 > KLIST is a native Windows tool since Windows Server 2008 for server-side operating systems and Windows 7 Service Pack 1 for client-side operating systems.
 
-![klist tool](./media/troubleshoot-kerberos-failures-ie/klist-tool.png)
+:::image type="content" source="./media/troubleshoot-kerberos-failures-ie/klist-tool.png" alt-text="Use the KLIST tool to verify that the client computer can obtain a Kerberos ticket for a given service principal name.":::
 
 When the Kerberos ticket request fails, Kerberos authentication isn't used. NTLM fallback may occur, because the SPN requested is unknown to the DC. If the DC is unreachable, no NTLM fallback occurs.
 
