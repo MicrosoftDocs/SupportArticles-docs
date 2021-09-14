@@ -19,7 +19,7 @@ For more information about the state messaging system, see [Description of state
 
 ## Symptoms
 
-A Configuration Manager administrator notices a significant delay in reporting Software Update compliance and application deployment. In this situation, the `<Configuration Manager Installation Directory>\Inboxes\auth\statesys.box\incoming` folder contains a very large number of files. For example, there are millions of files.
+A Configuration Manager administrator notices a significant delay in reporting Software Update compliance and application deployment. In this situation, the `<Configuration Manager Installation Directory>\Inboxes\auth\statesys.box\incoming` folder contains a large number of files. For example, there are millions of files.
 
 Here's a sample output when you filter the InboxMon.log file by `StateSys`:
 
@@ -39,14 +39,14 @@ The number of files might continue to grow, or it might decrease too slowly for 
 
 ## Cause
 
-The incoming files are plain text XML files that usually have a file name extension of .smx or .smw. These files contain the client ID (known as SMS GUID) and payload. Typically, every file contains multiple messages. This is because a client will batch the messages before it sends them (the default is 15 minutes).
+The incoming files are plain text XML files that usually have a file name extension of `.smx` or `.smw`. These files contain the client ID (known as SMS GUID) and payload. Typically, every file contains multiple messages. It's because a client will batch the messages before it sends them (the default is 15 minutes).
 
 StateSys is designed to pick up files in batches, parse XML files, and update the database. When it updates the database, it runs some SQL stored procedures and CLR assemblies that are provided by Configuration Manager. Therefore, it mainly depends on the SQL Server back-end performance. When SQL Server is saturated with other tasks for a long time, this condition can cause status messages to accumulate.
 
 At the same time, StateSys has little design to prevent it from catching up with a backlog of nearly millions of files:
 
 - Files are processed in alphabetical order, but not in "first in first out (FIFO)" order. Because the management point generates random names for the files, new messages might be processed before old messages. StateSys is resilient to this situation.
-- Each message contains a sequence number. StateSys maintains a list of missing ranges that are stored in the `SR_MissingRanges` table. When a missing range becomes older than two days (default), StateSys issues a resynchronization for the client. This causes the client to send a large XML file that goes to the same queue as all other messages. If new status messages are always processed two days earlier than old messages, this condition can become a vicious cycle for some clients and cause frequent resynchronization.
+- Each message contains a sequence number. StateSys maintains a list of missing ranges that are stored in the `SR_MissingRanges` table. When a missing range becomes older than two days (default), StateSys issues a resynchronization for the client. The resynchronization causes the client to send a large XML file that goes to the same queue as all other messages. If new status messages are always processed two days earlier than old messages, this condition can become a vicious cycle for some clients and cause frequent resynchronization.
 
 ## Resolution
 
@@ -54,7 +54,7 @@ To troubleshoot the performance issue, follow these steps:
 
 1. Identify and eliminate the issue that causes the backlog.
 
-   If the issue is a massive deployment, disable the deployment temporarily, or reconsider the deployment strategy. For example, if you deploy a software update group of 1,000 updates, this might generate enforcement state messages for each update, each state (by default), each client, and the entire group. This can create millions of state messages.
+   If the issue is a massive deployment, disable the deployment temporarily, or reconsider the deployment strategy. For example, if you deploy a software update group of 1,000 updates, it might generate enforcement state messages for each update, each state (by default), each client, and the entire group. This can create millions of state messages.
 
    If the issue is poor SQL Server performance, work with your database administrator to resolve the issue. If there are many files that can't be processed, investigate the root cause first.
 
