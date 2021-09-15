@@ -24,7 +24,7 @@ description: Explains what the website tab is and why it may be confusing to cus
 
 ## Summary
 
-Customers become confused by using website tabs in Microsoft Teams as some website functions are not loading properly.
+Customers become confused by using website tabs in Microsoft Teams since some website elements do not load properly.
 
 ## More information
 
