@@ -80,7 +80,7 @@ Use the following method to copy a database that's hosted on a later version of 
 
 This procedure typically works well for small-to-medium-sized databases. For larger databases, Out Of Memory issues might occur in SSMS and other tools. You should consider using [SQL Server Integration Services (SSIS)](/sql/integration-services/sql-server-integration-services), replication, or other options to create a copy of a database from a later version to an earlier version of SQL Server.
 
-For more information about how to generate scripts for your database, see [Script a database by using the Generate Scripts option](/sql/ssms/tutorials/scripting-ssms#script-a-database-by-using-the-generate-scripts-option) and [MSSQLSERVER_3169](/sql/relational-databases/errors-events/mssqlserver-3169-database-engine-error).
+For more information about how to generate scripts for your database, see [Script a database by using the Generate Scripts option](/sql/ssms/tutorials/scripting-ssms#script-a-database-by-using-the-generate-scripts-option).
 
 ## Issues that affect backup tasks in Always On environments
 
