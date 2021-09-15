@@ -33,7 +33,7 @@ It's common for users to switch devices or for an enterprise to add or change M3
 You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vbs` script is located in the `Program Files\Microsoft Office\Office16` folder. If you installed the 32-bit version of Office on a 64-bit operating system, go to the `Program Files (x86)\Microsoft Office\Office16` folder.
 
 > [!IMPORTANT]
-> Before you run the ospp.vbs, ensure that:
+> Before you run the ospp.vbs, make sure that:
 >
 > - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer.
 > - The user account you will use is a member of the Administrators group on the computer on which you run the script. 
@@ -85,8 +85,7 @@ You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vb
    If the output contains the message "product key uninstall successful", close the Command Prompt window and go to Step 2.
 
 > [!NOTE]
-> For Shared Computer Activation (SCA), remove the tokens listed here:
-%localappdata%\Microsoft\Office\16.0\Licensing
+> For Shared Computer Activation (SCA), remove the tokens listed under %localappdata%\Microsoft\Office\16.0\Licensing.
 
 ## Step 2: Remove cached identities in HKCU registry
 
@@ -195,4 +194,3 @@ For more information, see the following articles:
 
 - [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
 - [Device identity and desktop virtualization](/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#non-persistent-vdi)
-
