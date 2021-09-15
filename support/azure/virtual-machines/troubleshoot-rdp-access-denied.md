@@ -25,30 +25,30 @@ When you connect to an Azure Windows virtual machine (VM) by remote desktop, the
 
    >Access is denied.
 
-You can connect to the VM by using an administrative RDP session (mstsc /admin), however you notice that there is networking connectivity error in the notification area.
+You can connect to the VM by using an administrative RDP session (mstsc /admin), however you notice that there is a networking connectivity error in the notification area.
 
 ## Cause
 
 This issue might occur for the following reasons:
 
 - The user does not have permission to read the certificate registry entries on terminal services.
-- Fail to load the profiles during login.
+- Fail to load the user profile.
 - The size of the Kerberos token is not large enough to contain all the group memberships information for the user. This situation happens when the user belongs to many AD groups and nested AD groups. Windows builds the token to represent the user for purposes of authorization. This token (also called an authorization context) includes the security identifiers (SID) of the user, and the SIDs of all of the groups that the user belongs to.
 
 
 ## Solution
 
-Before start troubleshooting the issue, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). Then connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console does not work, connect the VM by remote PowerShell. For more information see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
+Before start troubleshooting, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). Then connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console does not work, connect the VM by remote PowerShell. For more information see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
 After you connect to the VM by using PowerShell, follow these steps to troubleshoot the issues. Restart the VM and check if the problem is resolved after each step.
 
- 1. Check if local Remote Desktop Users have read access permission over the following key:
+ 1. Check if the local **Remote Desktop Users** have read permission over the following key:
 
     ```
     Get-Acl -Path "HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates" | Format-List 
     ```
     
-    If this permission is missing, grant the read access for local Remote Desktop Users.
+    If this permission is not granted, run the following commands to grant the read access for local Remote Desktop Users.
 
     ```
     $NewAcl = Get-Acl -Path " HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates"
