@@ -31,10 +31,10 @@ You can connect to the VM by using an administrative RDP session (mstsc /admin),
 
 This issue might occur for the following reasons:
 
--	The user does not have permission to read the certificate registry entries on terminal services 
--	Fail to load the profiles during login.
--	The size of the Kerberos token is not large enough to contain all the permissions for that user. This situation happens when the user belongs to many AD groups and nested AD groups. For more information, see [How Kerberos token works](../../windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups#cause).
--	The Terminal Service is not starting with the correct account.
+- The user does not have permission to read the certificate registry entries on terminal services 
+- Fail to load the profiles during login.
+- The size of the Kerberos token is not large enough to contain all the permissions for that user. This situation happens when the user belongs to many AD groups and nested AD groups. For more information, see [How Kerberos token works](../../windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups#cause).
+- The Terminal Service is not starting with the correct account.
 
 
 ## Solution
@@ -43,13 +43,13 @@ Before start troubleshooting the issue, [back up the OS disk](/azure/virtual-mac
 
 After you connect to the VM by using PowerShell, follow these steps to troubleshoot the issues. Restart the VM and check if the problem is resolved after each step.
 
- 1. Check if local Remote Desktop users has READ access permission over the following key:
+ 1. Check if local Remote Desktop Users have read access permission over the following key:
 
     ```
     Get-Acl -Path "HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates" | Format-List 
     ```
     
-    If this permission is missing, grant the READ access for local Remote Desktop Users.
+    If this permission is missing, grant the read access for local Remote Desktop Users.
 
     ```
     $NewAcl = Get-Acl -Path " HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates"
