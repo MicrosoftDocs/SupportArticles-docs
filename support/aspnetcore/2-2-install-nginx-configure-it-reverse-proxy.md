@@ -167,11 +167,11 @@ If you inspect these directories, you won't find any configuration files in */et
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/conf-command.png" alt-text="Screenshot of conf command." border="true":::
 
-The default configuration file looks like a prime candidate to host the configuration that we're looking for. If you inspect the `/etc/nginx/sites-enabled/default file` by using `cat /etc/nginx/sites-enabled/default`, you would see that the default server directive is put within the following code.
+The default configuration file looks like a prime candidate to host the configuration that we're looking for. If you inspect the */etc/nginx/sites-enabled/default* file by using `cat /etc/nginx/sites-enabled/default`, you would see that the default server directive is put within the following code.
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/default-information.png" alt-text="Screenshot of default information." border="true":::
 
-Therefore, the */etc/nginx/sites-enabled/default file* will have to be edited to change the configuration.
+Therefore, the */etc/nginx/sites-enabled/default* file will have to be edited to change the configuration.
 
 ### Edit the configuration file by using vi
 

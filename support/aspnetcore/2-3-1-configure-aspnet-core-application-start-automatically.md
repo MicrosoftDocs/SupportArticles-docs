@@ -43,7 +43,7 @@ This screenshot shows the result of creating the `firstappuser` account.
 
 Recall that the ASP.NET Core service runs in the www-data user context. This is a built-in account that's used for service applications, including Apache and Nginx. We recommend that you use this account for such workloads. If we check both users' group memberships by running the `groups www-data` and `groups firstappuser` commands, you won't notice any differences.
 
-The local user accounts in Linux are stored in the `/etc/passwd` file. If you run `sudo cat /etc/passwd`, you'll see all the users, including the root user. The following screenshot describes each column.
+The local user accounts in Linux are stored in the */etc/passwd* file. If you run `sudo cat /etc/passwd`, you'll see all the users, including the root user. The following screenshot describes each column.
 
 :::image type="content" source="./media/2-3-1-configure-aspnet-core-application-start-automatically/sudo-cat-command.png" alt-text="Screenshot of sudo cat command." border="true":::
 

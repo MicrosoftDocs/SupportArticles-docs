@@ -93,7 +93,7 @@ According to ProcDump Help, here are the switches that you'll have to use:
 - `-d`: Write diagnostic logs to Syslog
 - `-p`: PID of the process
 
-Run the `sudo procdump -p 11724 -n 2 -s 5 -M 750` command. You'll see that ProcDump waits until the criteria that are defined by the arguments that are passed to it are met, or until you decide to end the monitoring phase by pressing Ctrl+C.
+Run the `sudo procdump -p 11724 -n 2 -s 5 -M 750` command. You'll see that ProcDump waits until the criteria that are defined by the arguments that are passed to it are met, or until you decide to end the monitoring phase by pressing **Ctrl+C**.
 
 :::image type="content" source="./media/lab-2-2-capture-dumps-procdump/sudo-procdump-p-command.png" alt-text="Screenshot of sudo procdump p command." border="true":::
 

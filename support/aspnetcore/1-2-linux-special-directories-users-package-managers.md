@@ -34,7 +34,7 @@ For this training, it's not necessary to dive deeply into how to manage Linux. H
 > [!NOTE]
 > Linux is case-sensitive. Therefore, */home* and */Home* are different directories, and filename and Filename are different files.
 
-When you first connect to your Linux virtual machine, you'll start at your root directory. This will be `/home/<username>`.
+When you first connect to your Linux virtual machine, you'll start at your root directory. This will be */home/\<username\>*.
 
 The root directory shortcut is **~** (tilde). You can use the `cd ~` command at any time to return to the home directory.
 
@@ -75,7 +75,7 @@ Run the following command:
 echo hello world > /etc/helloworld.txt
 ```
 
-The `echo` command writes all the text that follows it to the output. The angle bracket (`>`) tells the system to send the output to the `/etc/helloworld.txt` file instead of the console. This is similar to how Windows works.
+The `echo` command writes all the text that follows it to the output. The angle bracket (`>`) tells the system to send the output to the */etc/helloworld.txt* file instead of the console. This is similar to how Windows works.
 
 > [!NOTE]
 > Linux is case-sensitive: *Helloworld.txt*, *helloworld.txt* and *helloworld.Txt* are different files.

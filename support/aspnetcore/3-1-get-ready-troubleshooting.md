@@ -35,7 +35,7 @@ The proc filesystem (procfs) is a special filesystem in [Unix-like](https://wiki
 
 Therefore, if you're a superuser on a Linux-based computer, you can access information about each of the running processes through a file system file. If [everything in Linux is a file](https://wikipedia.org/wiki/Everything_is_a_file), so is a process.
 
-You might recall that we briefly discussed this in previous parts of this series: A process is seen as a file under the */proc/* directory. This directory is defined as a *special directory* [here](https://www.linux.com/news/discover-possibilities-proc-directory/):
+You might recall that we briefly discussed this in previous parts of this series: A process is seen as a file under the */proc/* directory. This directory is defined as a special directory [here](https://www.linux.com/news/discover-possibilities-proc-directory/):
 
 "This special directory holds all the details about your Linux system, including its kernel, processes, and configuration parameters."
 

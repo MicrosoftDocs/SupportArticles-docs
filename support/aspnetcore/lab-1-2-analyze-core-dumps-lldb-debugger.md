@@ -137,7 +137,7 @@ Next, load the symbols: `loadsymbols`
 There are several lldb commands. You can list these by using the `help` command. In the list, you can see that the SOS commands are also listed under **user defined commands**. SOS is a plugin for lldb. You can retrieve plugin help information by using the same `help` command.
 
 > [!NOTE]
-> You might want to clear the lldb output occasionally. To do this, press Ctrl+L.
+> You might want to clear the lldb output occasionally. To do this, press **Ctrl+L**.
 
 To begin, look at the thread's native call stack by using the `bt` ("back trace") command. This command shows the call stack of the active thread.
 

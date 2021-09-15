@@ -53,7 +53,7 @@ Remember that a good troubleshooting session starts by defining the problem and 
 
 Before you try to reproduce the problem, start by setting a baseline for how the application should perform. Select **Expected Results** or send multiple requests to the **Expected Results** scenario by using the **Load Generator** feature. Then, check what the CPU and memory usage look like when the problem isn't manifesting. You'll use `htop` to check the CPU and memory usage.
 
-Run `htop`, and filter it to show only the processes that belong to the user under whom the buggy application is run. The user of the target ASP.NET Core application in this case is www-data. Press the U key to select that www-data user from list. Also press the Shift+H to hide the threads. As you can see, there are four processes running in the context of www-data, and two of them are the Nginx processes. The others are for the buggy application and the demo application that you created when you set up the environment.
+Run `htop`, and filter it to show only the processes that belong to the user under whom the buggy application is run. The user of the target ASP.NET Core application in this case is www-data. Press the **U** key to select that www-data user from list. Also press the **Shift+H** to hide the threads. As you can see, there are four processes running in the context of www-data, and two of them are the Nginx processes. The others are for the buggy application and the demo application that you created when you set up the environment.
 
 Because you haven't reproduced the performance problem yet, notice that all the CPU and memory usage statistics are currently low.
 

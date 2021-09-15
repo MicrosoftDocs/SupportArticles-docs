@@ -121,7 +121,7 @@ To open the dump file by using dotnet-dump, run `dotnet-dump analyze ~/dumps/cor
 There are two things to keep in mind:
 
 - Because this isn't a native debugger, you can't run lldb native debugger commands, such as the memory read command that you were instructed to use in lldb earlier. You can run only SOS commands.
-- Auto-completion isn't working. In lldb, you can start typing a command and then press the TAB key to auto-complete the command, the same as you did in the command line and shell. The feature isn't working for dotnet-dump. However, this shouldn't affect your training.
+- Auto-completion isn't working. In lldb, you can start typing a command and then press the **TAB** key to auto-complete the command, the same as you did in the command line and shell. The feature isn't working for dotnet-dump. However, this shouldn't affect your training.
 
 While you have the core dump file open, take this opportunity to practice a few new SOS commands.
 

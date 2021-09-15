@@ -174,7 +174,7 @@ At this point, you should probably have more questions about what caused the cra
 
 Feel free to continue investigation by yourself. The next suggested step you could take would be to run the `gcroot` command by using the  `HttpWebRequest` object address to find out where it is rooted. This might help you develop a picture of how the crash occurred.
 
-This concludes the lab. Press Ctrl+C or use the `q` command to quit the lldb debugger.
+This concludes the lab. Press **Ctrl+C** or use the `q` command to quit the lldb debugger.
 
 ## Next steps
 
