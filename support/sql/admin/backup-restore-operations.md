@@ -202,7 +202,7 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 ### Can I restore 32-bit backups on 64-bit servers, and vice-versa?
 
-  Yes. Per the **Back Up and Restore of SQL Server Databases** topic, the SQL Server on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, backup and restore operations work across 32-bit and 64-bit environments. A backup that's created on a server instance that's running in one environment can be restored on a server instance that's running in the other environment.
+  Yes. The SQL Server on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, backup and restore operations work across 32-bit and 64-bit environments. 
 
 ## General troubleshooting tips
 
