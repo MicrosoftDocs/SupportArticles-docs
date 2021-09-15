@@ -162,6 +162,8 @@
   items:
     - name: Configuration Manager diagnostics
       href: diagnostics-sdp.md
+    - name: Failed devices on client health dashboard
+      href: failed-devices-client-health-dashboard.md
 - name: Discovery
   items:
     - name: lastLogonTimestamp isn't updated as expected
@@ -306,6 +308,8 @@
           href: management-points-fail-http-500-errors.md
         - name: Service connection point doesn't download updates
           href: service-connection-point-not-download-updates.md
+        - name: Troubleshoot state message processing performance issues
+          href: state-message-processing-performance.md
     - name: SMS Executive service
       items:
         - name: SMS_EXECUTIVE service crashes
