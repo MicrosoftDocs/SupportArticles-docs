@@ -26,7 +26,7 @@ In a public folder migration batch, you see a failed public folder mailbox migra
 
 :::image type="content" source="media/duplicate-public-folder-mailbox-migration-request/pf-migration-job-error.png" alt-text="Screenshot of the detailed failures.":::
 
-After you remove the failed public folder mailbox migration request, you receive the following error message:
+When you try to remove the failed public folder mailbox migration request, you receive the following error message:
 
 > Couldn't find a unique request with the provided information.
 

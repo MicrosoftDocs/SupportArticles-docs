@@ -34,7 +34,8 @@ You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vb
 
 > [!IMPORTANT]
 > Before you run the ospp.vbs, ensure that:
-> - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer. 
+>
+> - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer.
 > - The user account you will use is a member of the Administrators group on the computer on which you run the script. 
 > - You run ospp.vbs script from an elevated command prompt. 
 
@@ -59,7 +60,7 @@ You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vb
    The `ospp.vbs` command generates a report of the licenses currently in use. The output is in this format:
 
    ![Screenshot of running the dstatus cscript command.](./media/reset-office-365-proplus-activation-state/command.png)
-   
+
    > [!NOTE]
    > The report could include multiple licenses. If the output contains a "No installed Product Keys" message after you run `ospp.vbs /dstatus`, skip the section below and go to "[Step 2: Remove cached identities in HKCU registry](#step-2-remove-cached-identities-in-hkcu-registry)".
 
@@ -178,18 +179,20 @@ To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.co
 > [!NOTE]
 > This tool removes all SSO accounts in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
 
-### Prevent “Workplace Join” on your machine.
+### Prevent Workplace Join on your device
 
-When Office successfully authenticates and activates, at the end, a window pops up mentioning **Stay signed in to all your apps** along with a check box which states **Allow my organization to manage the devices**. This registers your device in Azure while adding your account to Workplace Join which can be accessed from Microsoft Work/School account on your machine. 
+After Office successfully authenticates and activates, the **Stay signed in to all your apps** dialog pops up. By default, the **Allow my organization to manage the devices** checkbox is selected. This registers your device in Azure AD while adding your account to Workplace Join.
 
-If you do not want your device to be joined to Azure, you can prevent it by unchecking the box **Allow my organization to manage my device** and clicking **No, this app only** and **OK**
+To prevent your device from being Azure AD registered, clear **Allow my organization to manage my device**, select **No, sign in to this app only**, and then select **OK**.
 
---A screenshot will be placed here--
+:::image type="content" source="media/reset-office-365-proplus-activation-state/prevent-azure-join.png" alt-text="Prevent Azure AD registration":::
 
-If you want to automate the above configuration, add the following registry in your system:  
-HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin: "BlockAADWorkplaceJoin"=dword:00000001 
+To automate this configuration, add the following registry value to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin`:
 
-Additional Information:  
-[Plan hybrid Azure Active Directory join - Azure Active Directory | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-plan#handling-devices-with-azure-ad-registered-state)
+"BlockAADWorkplaceJoin"=dword:00000001
 
-[Device identity and desktop virtualization - Azure Active Directory | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#non-persistent-vdi)
+For more information, see the following articles:
+
+- [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Device identity and desktop virtualization](/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#non-persistent-vdi)
+
