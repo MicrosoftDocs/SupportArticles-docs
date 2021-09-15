@@ -68,8 +68,8 @@ namespace ConsoleApplication6
 
 ```
 
-1. Try to run the query in SSMS/SQLCMD directly, if it takes more than 30 seconds to complete, then you need to take steps to troubleshoot the slow query.
-1. If it's fast in SSMS/SQLCMD, but only slow from application. Please refer Scenario: Query is Slow from Application but Fast from SSMS/SQLCMD. The goal is make the SET options in SSMS/SQLCMD as same as the SET options submitted by the application or driver, then reproduce the issue in SSMS/SQLCMD and investigate. 
+1. Try to run the query in SSMS/SQLCMD directly, if it takes more than 30 seconds to complete, then you need to take steps to troubleshoot the slow query. SSMS and SQLCMD by default have their timeout value set to 0, which means never time out. 
+1. If it's fast in SSMS/SQLCMD, but only slow from application then there is likely a different SET option. The goal is make the SET options in SSMS/SQLCMD as same as the SET options submitted by the application or driver, then reproduce the issue in SSMS/SQLCMD and investigate. 
 
 
 https://channel9.msdn.com/Series/SQL-Workshops/SQL-Server-Command-Timeout-Application-Timeout-Extended-Event-Attention
