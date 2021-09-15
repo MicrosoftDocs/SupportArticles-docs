@@ -16,6 +16,19 @@
     - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
       href: authentication-fails-with-error.md
 
+  - name: Azure AD Hybrid Sync Agent Installation Issues
+    items:
+    - name: No privileges to install MSI
+      href: azure-ad-hybrid-synch-no-privilages-install-msi.md
+    - name: Cannot start service AADConnectProvisioningAgent
+      href: azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent.md
+    - name: The gMSA is set to log on as Service
+      href: azure-ad-hybrid-synch-gMSA-set-logon-service.md
+    - name: There is no such object on the server
+      href: azure-ad-hybrid-synch-no-such-object-on-server.md
+    - name: Unable to create gMSA because KDS may not be running on domain controller
+      href: azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller.md
+
 - name: App Integration and Development 
   items:
   - name: Troubleshoot adding apps
