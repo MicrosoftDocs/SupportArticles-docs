@@ -35,11 +35,14 @@ Set-CsTeamsMeetingPolicy -WhoCanRegister Everyone
 
 **Note:** If the "anonymous join" functionality is turned off in the meeting settings, anonymous users can't join the webinars. To enable this setting, see [Manage meeting settings in Microsoft Teams](/microsoftteams/meeting-settings-in-teams).
 
-## Webinar option is missing on the New meeting menu (FIXED)
+## Webinar option is missing on the New meeting menu
 
 When you create a meeting, the **Webinar** option is missing on the **New meeting** menu.
 
-This issue occurs if a user doesn't have permissions to schedule a live event. A fix for this issue is rolling out and should be released now, if you are still seeing the issue please update your client and try again.
+This issue occurs if a user doesn't have permissions to schedule a live event. 
+
+> [!NOTE]
+> A fix for this issue has been released. If you still experience the issue, update your client and try again.
 
 To work around this issue, select the **Schedule meeting** option, and set it to **Require registration** to enable this functionality.
 
