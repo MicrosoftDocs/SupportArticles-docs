@@ -28,10 +28,10 @@ Event1644Reader.ps1 is a Windows PowerShell script that extracts data from 1644 
 
 ## How to obtain the script
 
-You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859). 
- 
- > [!NOTE]
-    > The script is attached on the blog post with file name Event1644Reader.zip
+You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859).
+
+> [!NOTE]
+> The script is attached on the blog post with file name Event1644Reader.zip
 
 Script Center disclaimer  
 The sample scripts are not supported under any Microsoft standard support program or service. The sample scripts are provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
@@ -45,49 +45,50 @@ To better analyze the LDAP queries that are captured in event ID 1644, follow th
 
 1. Make sure that the domain controllers that you are troubleshooting capture enhanced ** 1644 event metadata.
 
-    > [!NOTE]
-    > Windows Server 2012 R2 added enhanced 1644 event logging by recording the duration of LDAP queries and other metadata. The enhanced 1644 event logging was backported to Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 by hotfix [2800945](https://support.microsoft.com/help/2800945).
+   > [!NOTE]
+   > Windows Server 2012 R2 added enhanced 1644 event logging by recording the duration of LDAP queries and other metadata. The enhanced 1644 event logging was backported to Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 by hotfix [2800945](https://support.microsoft.com/help/2800945).
 
 2. Set the value of the following Field Engineering registry entry to 5: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\Field Engineering`  
 
-    > [!NOTE]
-    > Setting field engineering log verbosity to 5 will cause other events to be logged in the directory service event log. Reset field engineering back to its default value of 0 when you are not actively collecting 1644 events. (This action does not require a restart.)
+   > [!NOTE]
+   > Setting field engineering log verbosity to 5 will cause other events to be logged in the directory service event log. Reset field engineering back to its default value of 0 when you are not actively collecting 1644 events. (This action does not require a restart.)
 
 3. If the following registry entries exist, change the values to the desired threshold in milliseconds. If a particular registry entry does not exist, create a new entry with that name, and then set its value to the desired threshold in milliseconds.
 
-    |Registry path|Data type|Default value|
-    |---|---|---|
-    |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)|DWORD|30,000|
-    |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold|DWORD|10,000|
-    |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold|DWORD|1,000|
+   |Registry path|Data type|Default value|
+   |---|---|---|
+   |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)|DWORD|30,000|
+   |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold|DWORD|10,000|
+   |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold|DWORD|1,000|
 
-    > [!Note]
-    >
-    > - When the Field Engineering logging level is enabled and the Search Time Threshold (msecs) registry entry is not used or is set to 0, the default value of the time threshold is 30,000 milliseconds. (This action does not require a restart.)
-    > - One strategy would be to set the registry value for both the Inefficient Search Results Threshold and Expensive Search Results Threshold registry settings, and then focus on events that are identified by Search Time hold (msecs). Start with a larger value like 100 milliseconds and then incrementally decrease the value as you optimize the queries that are occurring in your environment.
-    > - Event1644Reader.ps1 can parse events from multiple domain controllers. Configure the field engineering, search time, expensive, and inefficient registry key settings on all domain controllers on which you want to review LDAP searches.
+   > [!Note]
+   >
+   > - When the Field Engineering logging level is enabled and the Search Time Threshold (msecs) registry entry is not used or is set to 0, the default value of the time threshold is 30,000 milliseconds. (This action does not require a restart.)
+   > - One strategy would be to set the registry value for both the Inefficient Search Results Threshold and Expensive Search Results Threshold registry settings, and then focus on events that are identified by Search Time hold (msecs). Start with a larger value like 100 milliseconds and then incrementally decrease the value as you optimize the queries that are occurring in your environment.
+   > - Event1644Reader.ps1 can parse events from multiple domain controllers. Configure the field engineering, search time, expensive, and inefficient registry key settings on all domain controllers on which you want to review LDAP searches.
 
 4. Download the Event1644Reader.ps1 file from You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859) to the computer that will analyze saved Active Directory Service EVTX files that contain 1644 events.
 
-    This computer should have Microsoft Excel 2010 or a later version installed and should have sufficient disk space to host the directory service event logs that the script will parse.
+   This computer should have Microsoft Excel 2010 or a later version installed and should have sufficient disk space to host the directory service event logs that the script will parse.
 
 5. Copy saved Directory Service event logs that contain 1644 events from the domain controllers where you enabled 1644 event logging to the 1644 analysis computer.
 
 6. In Windows Explorer, right-click the Event1644Reader.ps1 file, and then select **Run with PowerShell**.
-The following is the screenshot for this step:
+
+   The following is the screenshot for this step:
 
     :::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/run-event1644reader-file.png" alt-text="The screenshot of this step.":::
 
 7. Press Y to bypass PowerShell Execution Policy as required.
 8. Specify the path of the EVTX files to be parsed.
 9. When you see the prompt as the following screenshot, take the following actions:
-    :::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/prompt.jpg" alt-text="The screenshot of PowerShell.":::
+   :::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/prompt.jpg" alt-text="The screenshot of PowerShell.":::
 
-    - Press Enter to parse all EVTX files that are located in the same directory as the Enent1644Reader.ps1 file.
-    - Type the `drive:\path` path that contains the EVTX files to be parsed.  
+   - Press Enter to parse all EVTX files that are located in the same directory as the Enent1644Reader.ps1 file.
+   - Type the `drive:\path` path that contains the EVTX files to be parsed.  
 
-    > [!NOTE]
-    > Event1644Reader.ps1 parses 1644 events in all up-level directory service event logs that are located in the targeted path every time that the script runs.  
+   > [!NOTE]
+   > Event1644Reader.ps1 parses 1644 events in all up-level directory service event logs that are located in the targeted path every time that the script runs.  
 10. Open the worksheet to review data and walk through the series of tabs, and then save the Excel spreadsheet as required. For more information about the tabs in the worksheet, see the [Walkthrough of the Excel spreadsheet created by 1644Reder.ps1](#walkthrough-of-the-excel-spreadsheet-that-is-created-by-event1644readerps1) section.
 
     > [!NOTE]
@@ -151,8 +152,8 @@ LCID Name DisplayName
 1033 en-US English (United States)
 ```
 
-In this situation, numbers in the Excel spreadsheet are rendered as in the following screenshot:
-    :::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/numbers-render-result.png" alt-text="The screenshot for the Excel rendering":::
+In this situation, numbers in the Excel spreadsheet are rendered as in the following screenshot:  
+:::image type="content" source="./media/event1644reader-analyze-ldap-query-performance/numbers-render-result.png" alt-text="The screenshot for the Excel rendering":::
 
 To resolve this issue, change the **Decimal symbol** to a period (.) in the **Region settings** item in Control Panel.  
 

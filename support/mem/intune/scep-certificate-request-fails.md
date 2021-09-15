@@ -7,7 +7,7 @@ ms.reviewer: joelste, intunecic, kolldhee
 ---
 # SCEP certificate request fails during the verification phase on the certificate registration point
 
-This article provides the methods to solve the failure issue of Microsoft System Center Endpoint Protection (SCEP) certificate request.
+This article provides the methods to solve the failure issue of Simple Certificate Enrollment Protocol (SCEP) certificate request.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4487170

@@ -15,7 +15,7 @@ This article helps you resolve the common problem about AlwaysOn configuration o
 _Original product version:_ &nbsp; SQL Server 2012 Enterprise, SQL Server 2014 Enterprise, SQL Server 2016 Enterprise  
 _Original KB number:_ &nbsp; 10179
 
-## What issues are you facing
+## Important notes
 
 - Microsoft CSS data indicates that a significant percentage of customer issues is often previously addressed in a released CU, but not applied proactively and hence recommends ongoing, proactive installation of CUs as they become available. For more information, see: [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism).
 

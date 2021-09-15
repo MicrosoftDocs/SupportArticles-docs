@@ -1158,8 +1158,8 @@ The following steps outline the flow of events that occur when a package is redi
 
    The DP thread starts working on adding the package to the DP. DP threads do not copy the package content to the DP directly, but instead creates a job for Package Transfer Manager (PkgXferMgr) instructing it to copy the package content to the DP. The following log entries show the DP thread creating a PkgXferMgr job. After the job is created, the DP thread's work is done and the DP thread exits.
 
-   > SMS_DISTRIBUTION_MANAGER 3792 (0xed0) DP Thread: Attempting to add or update package <PackageID> on DP ["Display=\\\PS1DP2.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP2.CONTOSO.COM\\  
-   > SMS_DISTRIBUTION_MANAGER 3792 (0xed0) ~Created package transfer job to send package <PackageID> to distribution point ["Display=\\\PS1DP2.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP2.CONTOSO.COM\\.  
+   > SMS_DISTRIBUTION_MANAGER 3792 (0xed0) DP Thread: Attempting to add or update package \<PackageID\> on DP ["Display=\\\PS1DP2.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP2.CONTOSO.COM\\  
+   > SMS_DISTRIBUTION_MANAGER 3792 (0xed0) ~Created package transfer job to send package \<PackageID\> to distribution point ["Display=\\\PS1DP2.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP2.CONTOSO.COM\\.  
    > SMS_DISTRIBUTION_MANAGER 3792 (0xed0) STATMSG: ID=2357 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_DISTRIBUTION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5428 TID=3792 GMTDATE=Mon May 16 19:26:58.642 2016 ISTR0="\<PackageID>" ISTR1="["Display=\\\PS1DP2.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP2.CONTOSO.COM\\" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=2 AID0=400 AVAL0="\<PackageID>" AID1=404 AVAL1="["Display=\\\PS1DP2.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP2.CONTOSO.COM\\"
 
    When the DP thread creates a PkgXferMgr job, it does so by inserting a row in the `DistributionJobs` table. For redistributing a package, **Action** is set to **2**.

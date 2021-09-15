@@ -18,7 +18,7 @@ This article describes how to resolve issues that you may experience when you 
 - Transport Layer Security (TLS) 1.0 is disabled 
 - TLS 1.1 and TLS 1.2 are enabled 
 
-To update TLS settings, refer to [this article](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786418(v=ws.11)?redirectedfrom=MSDN).  
+To update TLS settings, refer to [this article](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786418(v=ws.11)?redirectedfrom=MSDN).  
 
 ## Symptoms
 
