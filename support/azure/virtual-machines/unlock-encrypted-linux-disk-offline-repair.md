@@ -436,17 +436,17 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
      - For managed disk, see [Troubleshoot a Linux VM by attaching the managed OS disk to a repair VM ](troubleshoot-recovery-disks-portal-linux.md).
      - For unmanaged disk, use the Storage Explorer to create a copy of the affected VM's OS Disk. For more information, see [Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md).
-1. After you attach the encrypted disk as the data disk to the repair VM, use the Key Vault and Key Encrypted key (KEK) that used for the original VM to re-encrypt this data disk. This process will automatically generate and mount a BEK volume with BKE key file in the repair VM. You must use the **EncryptFormatAll** option, otherwise the ADE extension could encrypt the boot slices on the data disk.
+1. After you attach the encrypted disk as the data disk to the repair VM, use the Key Vault and Key Encrypted key (KEK) that used for the original VM to re-encrypt this data disk. This process will automatically generate and mount a BEK volume with BKE key file in the repair VM. You must not use the **EncryptFormatAll** option, otherwise the ADE extension could encrypt the boot sector on the data disk.
 
     - If the original VM is encrypted by **wrapped BEK**, run the following command.
        ```azurecli
-        az vm encryption enable -g "resource group" --name "VMName" --disk-encryption-keyvault "keyvault"  --key-encryption-key "kek" --volume-type "data" --encrypt-format-all
+        az vm encryption enable -g "resource group" --name "VMName" --disk-encryption-keyvault "keyvault"  --key-encryption-key "kek" --volume-type "data"
        ```
 
     - If the original VM is encrypted by **BEK**, run the following command:
     
        ```azurecli
-      az vm encryption enable -g "resource group" --name "VMName" --disk-encryption-keyvault "keyvault"  --volume-type "data" --encrypt-format-all
+      az vm encryption enable -g "resource group" --name "VMName" --disk-encryption-keyvault "keyvault"  --volume-type "data"
       ```
         To identify the values for **disk-encryption-keyvault** and **key-encryption-key**, run the following command:
 
