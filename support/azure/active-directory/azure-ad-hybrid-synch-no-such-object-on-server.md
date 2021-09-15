@@ -1,16 +1,16 @@
 ---
 title: Azure AD Hybrid Sync Agent Installation Issues - There is no such object on the server
-description: This troubleshooting guide focuses on the situation where the object reference is not set to an instance of an object, which may block you from successfully installing the Azure AD Connect Provisioing Agent.
+description: This troubleshooting guide focuses on the situation where the object reference is not set to an instance of an object, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
 ms.date: 09/15/2021
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - There is no such object on the server
 
-This troubleshooting guide focuses on the situation where the object reference is not set to an instance of an object, which may block you from successfully installing the Azure AD Connect Provisioing Agent.
+This troubleshooting guide focuses on the situation where the object reference is not set to an instance of an object, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following is required:
+To install *Cloud Provisioning Agent*, the following prerequisites are required:
 
 - Domain or Enterprise Administrator credentials to execute the installer.
 - A Global Administrator Account at the Azure AD Tenant.
@@ -18,7 +18,7 @@ To install *Cloud Provisioning Agent*, the following is required:
 - At least one domain controller running Windows Server 2016, and both a domain functional level and a forest functional level of at least 2012 R2.
 - [Network prerequisites](/azure/active-directory/cloud-sync/how-to-prerequisites#in-your-on-premises-environment)
 
-## Scenerio 1
+## Scenario 1
 
 When installing Cloud Provisioning Agent you may encounter this error during installation process.
 
@@ -90,7 +90,7 @@ Once you verify and confirm that Managed Service account container is present at
 
 The agent could not find the WellKnown globally unique identifier (GUID) for the Managed Service Accounts (MSA) container.
 
-This can be verified with the following PowerShell command:
+This error can be verified with the following PowerShell command:
 
 ```powershell
 $ListOWKO = Get-ADObject (Get-ADRootDSE).DefaultNamingContext -Properties otherwellKnownObjects
@@ -104,7 +104,7 @@ The output of the previous command will display the following results:
 
 :::image type="content" source="media/azure-ad-hybrid-synch-no-such-object-on-server/4-powershell-output-for-attribute.png" alt-text="Screenshot of the output for the command, showing the missing attribute." border="true":::
 
-This is an orphan metadata value and indicates that either the MSA container was previously deleted and wasn't properly restored, or that the value is missing.
+This orphan metadata value indicates that either the MSA container was previously deleted and wasn't properly restored, or that the value is missing.
 
 The default value for the **OtherWellKnownObjects** attribute is:
 

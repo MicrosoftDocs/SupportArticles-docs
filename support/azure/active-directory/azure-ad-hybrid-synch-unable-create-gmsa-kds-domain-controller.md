@@ -1,16 +1,16 @@
 ---
 title: Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
-description: This troubleshooting guide focuses on the situation where you're unable to install the service account after multiple retries, which may block you from successfully installing the Azure AD Connect Provisioing Agent.
+description: This troubleshooting guide focuses on the situation where you're unable to install the service account after multiple retries, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
 ms.date: 09/15/2021
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
 
-This troubleshooting guide focuses on the situation where you're unable to install the service account after multiple retries, which may block you from successfully installing the Azure AD Connect Provisioing Agent.
+This troubleshooting guide focuses on the situation where you're unable to install the service account after multiple retries, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following is required:
+To install *Cloud Provisioning Agent*, the following prerequisites are required:
 
 - Domain or Enterprise Administrator credentials to execute the installer.
 - A Global Administrator Account at the Azure AD Tenant.
@@ -28,7 +28,7 @@ While installing Cloud Provisioning Agent, you may encounter the following error
 
 To locate the 9001 and 9002 EventIDs, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Security - Netlogon**.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controllerr/2-event-9001.png" alt-text="Screenshot of the Event 9001 window." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/2-event-9001.png" alt-text="Screenshot of the Event 9001 window." border="true":::
 
 :::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/3-event-9002.png" alt-text="Screenshot of the Event 9002 window." border="true":::
 
@@ -48,7 +48,7 @@ Using 'DSA.MSC' to open the **provAgentgMSA** properties of the domain controlle
 1. Select the **Attribute Editor** tab.
 1. Locate the value for **msDS-SupportedEncryptionTypes**.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/4-provagentgmsa-properties-integer-attribute-editor.png" alt-text="Screenshot of the Agent gMSA Properties window open to the Attribute Editor tab, with the Integery Attribut Editor window on top of it." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/4-provagentgmsa-properties-integer-attribute-editor.png" alt-text="Screenshot of the Agent gMSA Properties window open to the Attribute Editor tab, with the Integer Attribute Editor window on top of it." border="true":::
 
 Verify that the encryption types offered by the server and the accepted by the account don't match.
 
@@ -60,4 +60,4 @@ Set-ADServiceAccount -Identity provAgentgMSA -KerberosEncryptionType AES128,AES2
 
 Next, reboot the Provisioning agent server and re-install the agent.
 
-For more information on this issue refer to [Cannot install service account. The provided context did not match the target.](/archive/blogs/joelvickery/cannot-install-service-account-the-provided-context-did-not-match-the-target)
+For more information on this issue, see [Cannot install service account. The provided context did not match the target.](/archive/blogs/joelvickery/cannot-install-service-account-the-provided-context-did-not-match-the-target)

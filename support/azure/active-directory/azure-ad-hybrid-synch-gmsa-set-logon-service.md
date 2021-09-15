@@ -1,16 +1,16 @@
 ---
 title: Azure AD Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service
-description: This troubleshooting guide focuses on the situation where the gMSA is set to log on as Service, which may block you from successfully installing the Azure AD Connect Provisioing Agent.
+description: This troubleshooting guide focuses on the situation where the gMSA is set to log on as Service, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
 ms.date: 09/15/2021
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service
 
-This troubleshooting guide focuses on the situation where the gMSA is set to log on as Service, which may block you from successfully installing the Azure AD Connect Provisioing Agent.
+This troubleshooting guide focuses on the situation where the gMSA is set to log on as Service, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following is required:
+To install *Cloud Provisioning Agent*, the following prerequisites are required:
 
 - Domain or Enterprise Administrator credentials to execute the installer.
 - A Global Administrator Account at the Azure AD Tenant.
@@ -28,11 +28,11 @@ To resolve this issue, check the System event logs for **EventID 7038**. The fol
 
 > The user name or password is incorrect.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-gMSA-set-logon-service/1-user-name-password-incorrect.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message The user name or password is incorrect." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-gmsa-set-logon-service/1-user-name-password-incorrect.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message The user name or password is incorrect." border="true":::
 
-When you open the **Microsoft Azure AD Connect Provisioning Agent** properties, and select the the **Log On** tab, you will find that the settings aren’t grey out, as is expected for a managed account service.
+When you open the **Microsoft Azure AD Connect Provisioning Agent** properties, and select the **Log On** tab, you will find that the settings aren’t grey out, as is expected for a managed account service.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-gMSA-set-logon-service/2-provisioning-agent-properties.png" alt-text="Screenshot of the Log On tab of the Microsoft Azure AD Connect Provisioning Agent window, including the account and password entries." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-gmsa-set-logon-service/2-provisioning-agent-properties.png" alt-text="Screenshot of the Log On tab of the Microsoft Azure AD Connect Provisioning Agent window, including the account and password entries." border="true":::
 
 To verify whether the account is managed, open a command prompt and type the following command: 
 
@@ -42,7 +42,7 @@ Sc.exe qmanagedaccount aadconnectprovisioningagent
 
 The account managed status will show as **False**.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-gMSA-set-logon-service/3-account-managed-false.png" alt-text="Screenshot of the output for the command, showing the False attribute." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-gmsa-set-logon-service/3-account-managed-false.png" alt-text="Screenshot of the output for the command, showing the False attribute." border="true":::
 
 To set the status to **True** and resolve this issue, type the following command:
 

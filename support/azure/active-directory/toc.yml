@@ -19,11 +19,11 @@
   - name: Azure AD Hybrid Sync Agent Installation Issues
     items:
     - name: No privileges to install MSI
-      href: azure-ad-hybrid-synch-no-privilages-install-msi.md
+      href: azure-ad-hybrid-synch-no-privileges-install-msi.md
     - name: Cannot start service AADConnectProvisioningAgent
       href: azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent.md
     - name: The gMSA is set to log on as Service
-      href: azure-ad-hybrid-synch-gMSA-set-logon-service.md
+      href: azure-ad-hybrid-synch-gmsa-set-logon-service.md
     - name: There is no such object on the server
       href: azure-ad-hybrid-synch-no-such-object-on-server.md
     - name: Unable to create gMSA because KDS may not be running on domain controller

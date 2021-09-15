@@ -10,7 +10,7 @@ This troubleshooting guide focuses on the situation where you can't start servic
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following is required:
+To install *Cloud Provisioning Agent*, the following prerequisites are required:
 
 - Domain or Enterprise Administrator credentials to execute the installer.
 - A Global Administrator Account at the Azure AD Tenant.
@@ -24,7 +24,7 @@ While installing Cloud Provisioning Agent, you may encounter the following error
 
 > Service 'Microsoft Azure AD Connect Provisioning Agent' (AADConnectProvisioningAgent) could not be installed. Verify that you have sufficient privilages to install system services.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent/1-aad-connect-provision-agent-failed.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message Service Microsoft Azure AD Connect Provisioning Agent could not be installed. Verify that you have sufficient privilages to install system services." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent/1-aad-connect-provision-agent-failed.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message Service Microsoft Azure AD Connect Provisioning Agent could not be installed. Verify that you have sufficient privileges to install system services." border="true":::
 
 Assign domain administrator credentials to the service **AADConnectProvisioningAgent** as shown in [How to troubleshoot agent failed to start](/azure/active-directory/cloud-sync/how-to-troubleshoot#agent-failed-to-start).
 
@@ -32,9 +32,9 @@ Assign domain administrator credentials to the service **AADConnectProvisioningA
 
 After assigning credentials to the service, you may still be unable to complete the installation wizard, and receive the following error message:
 
-> Failed dchanging Windows sevice credentials to gMSA. Please check the logs for more detailed information. If that doesn't help resolve this issue, please contact support.
+> Failed changing Windows service credentials to gMSA. Please check the logs for more detailed information. If that doesn't help resolve this issue, please contact support.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent/3-failed-changing-service-credentials.png" alt-text="Screenshot of the Agent configuration with the error message Failed dchanging Windows sevice credentials to gMSA. Please check the logs for more detailed information. If that doesn't help resolve this issue, please contact support." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent/3-failed-changing-service-credentials.png" alt-text="Screenshot of the Agent configuration with the error message Failed changing Windows service credentials to gMSA. Please check the logs for more detailed information. If that doesn't help resolve this issue, please contact support." border="true":::
 
 If you select the confirm button again, following message will be displayed:
 
@@ -44,4 +44,4 @@ If you select the confirm button again, following message will be displayed:
 
 To resolve this issue, check the System event logs for **eventID 7041**. The event details will describe how to assign **Log on as a Service** user right at the `secpol.msc` console.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent/5-event-7041.png" alt-text="Screenshot of Event 7041, Service Control Manager. This includes the error message, This service account does not have the required user right." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent/5-event-7041.png" alt-text="Screenshot of Event 7041, Service Control Manager. This includes the error message This service account does not have the required user right." border="true":::
