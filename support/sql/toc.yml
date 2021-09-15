@@ -117,8 +117,6 @@
       href: admin/revocery-jobs-fail-servers.md
     - name: Back up a database using a VSS backup application
       href: admin/backup-database-using-vss-backup-application.md
-    - name: Troubleshooting Backup and Restore
-      href: admin/backup-restore-operations.md
     - name: Backup operation in the backupset history table
       href: admin/backup-operation-backup-history-table.md
     - name: Compressed backups behavior
@@ -191,6 +189,8 @@
       href: admin/database-mail-fails-send-message.md
     - name: Transaction log file doesn't grow
       href: admin/transaction-log-file-not-grow.md
+    - name: Troubleshoot backup and restore
+      href: admin/backup-restore-operations.md
     - name: Troubleshoot DBCC errors
       href: admin/troubleshoot-dbcc-errors.md
     - name: Unable to begin a distributed transaction
