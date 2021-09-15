@@ -17,7 +17,7 @@ ms.author: genli
 
 # Access is denied error when you connect to an Azure Windows VM
 
-This article helps resolve the issue when you can't connect to an Azure virtual machine (VM) because the Access is denied error.
+This article shows how to troubleshoot a problem in which you cannot connect to an Azure Windows virtual machine (VM) because the "Access is denied" error.
 
 ## Symptoms
 
@@ -31,15 +31,14 @@ You can connect to the VM by using an administrative RDP session (mstsc /admin),
 
 This issue might occur for the following reasons:
 
-- The user does not have permission to read the certificate registry entries on terminal services 
+- The user does not have permission to read the certificate registry entries on terminal services.
 - Fail to load the profiles during login.
-- The size of the Kerberos token is not large enough to contain all the permissions for that user. This situation happens when the user belongs to many AD groups and nested AD groups. For more information, see [How Kerberos token works](../../windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups#cause).
-- The Terminal Service is not starting with the correct account.
+- The size of the Kerberos token is not large enough to contain all the group memberships information for the user. This situation happens when the user belongs to many AD groups and nested AD groups. Windows builds the token to represent the user for purposes of authorization. This token (also called an authorization context) includes the security identifiers (SID) of the user, and the SIDs of all of the groups that the user belongs to.
 
 
 ## Solution
 
-Before start troubleshooting the issue, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). Then connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If you can't connect to the VM by using Azure Serial Console, connect the VM by remote PowerShell, for more information see  How to use remote tools to troubleshoot Azure VM issues.
+Before start troubleshooting the issue, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). Then connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console does not work, connect the VM by remote PowerShell. For more information see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
 After you connect to the VM by using PowerShell, follow these steps to troubleshoot the issues. Restart the VM and check if the problem is resolved after each step.
 
