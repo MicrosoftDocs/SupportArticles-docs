@@ -34,7 +34,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: No privileges to install MSI
-            url: ./azure-ad-hybrid-synch-no-privilages-install-msi.md
+            url: ./azure-ad-hybrid-synch-no-privileges-install-msi.md
           - text: Cannot start service AADConnectProvisioningAgent
             url: ./azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent.md
           - text: The gMSA is set to log on as Service

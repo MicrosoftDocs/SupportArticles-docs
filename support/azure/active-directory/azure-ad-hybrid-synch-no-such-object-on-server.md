@@ -24,7 +24,7 @@ When installing Cloud Provisioning Agent you may encounter this error during ins
 
 > There is no such object on the server.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-no-such-object-on-server/1-agent-configuration-error-creating gmsa-v1.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen, including the error message Error while creating group managed service account gmsa. Error, there is no such object on the server." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-synch-no-such-object-on-server/1-agent-configuration-error-creating gmsa-v1.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen. This screenshot includes the error message Error while creating group managed service account gmsa. Error, there is no such object on the server." border="true":::
 
 The installation wizard's trace file is not clear about what's missing:
 
