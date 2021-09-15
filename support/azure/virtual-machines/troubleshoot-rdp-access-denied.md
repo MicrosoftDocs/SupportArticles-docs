@@ -21,7 +21,7 @@ This article shows how to troubleshoot a problem in which you cannot connect to 
 
 ## Symptoms
 
-When you connect to an Azure Windows virtual machine (VM) by remote desktop, the following error is received in the login screen:
+When you connect to an Azure Windows VM by remote desktop, the following error is received in the login screen:
 
    >Access is denied.
 
@@ -32,7 +32,7 @@ You can connect to the VM by using an administrative RDP session (mstsc /admin),
 This issue might occur for the following reasons:
 
 - The user does not have permission to read the certificate registry entries on terminal services.
-- Fail to load the user profile.
+- Fail to load the user profile. This is usually due to some user policies causing a conflict on the profile.
 - The size of the Kerberos token is not large enough to contain all the group memberships information for the user. This situation happens when the user belongs to many AD groups and nested AD groups. Windows builds the token to represent the user for purposes of authorization. This token (also called an authorization context) includes the security identifiers (SID) of the user, and the SIDs of all of the groups that the user belongs to.
 
 
