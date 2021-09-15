@@ -39,7 +39,10 @@ Set-CsTeamsMeetingPolicy -WhoCanRegister Everyone
 
 When you create a meeting, the **Webinar** option is missing on the **New meeting** menu.
 
-This issue occurs if a user doesn't have permissions to schedule a live event. A fix for this issue is being developed.
+This issue occurs if a user doesn't have permissions to schedule a live event. 
+
+> [!NOTE]
+> A fix for this issue has been released. If you still experience the issue, update your client and try again.
 
 To work around this issue, select the **Schedule meeting** option, and set it to **Require registration** to enable this functionality.
 
