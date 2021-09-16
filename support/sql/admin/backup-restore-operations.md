@@ -84,7 +84,7 @@ This procedure typically works well for small-to-medium-sized databases. For lar
 
 For more information about how to generate scripts for your database, see [Script a database by using the Generate Scripts option](/sql/ssms/tutorials/scripting-ssms#script-a-database-by-using-the-generate-scripts-option).
 
-## Issues that affect backup tasks in Always On environments
+## Backup job issues in Always On environments
 
 If you encounter problems that affect backup jobs or maintenance plans in Always On environments, note the following:
 
@@ -96,7 +96,7 @@ For more information about backups in an Always On environment, see the followin
 - [Configure backups on secondary replicas of an Always On availability group](/sql/database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server)
 - [Offload supported backups to secondary replicas of an availability group](/sql/database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups)
 
-## Errors when you restore a database from a backup
+## Media-related errors when you restore a database from a backup
 
 If you receive error messages that indicate a file issue, this is symptomatic of a corrupted backup file. Examples of errors that you might experience if a backup set is corrupted include, but are not limited to, the following:
 
@@ -175,34 +175,34 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 |Symptom/scenario|Remedial actions or additional information|
 |---|---|
-|Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following:<br/><br/>Error: 3999, Severity: 17, State: 1.<br/><br/>< **Time Stamp** t> spid< **spid** > Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the errorlog for<br/><br/><br/>|See the following Microsoft Knowledge Base articles:<ul><li> [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)</li><li> [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910) </li><li> [2522893 FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)</li><ul> |
+|Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following:<br/><br/>Error: 3999, Severity: 17, State: 1.<br/><br/>< **Time Stamp** t> spid< **spid** > Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for<br/><br/><br/>|See the following Microsoft Knowledge Base articles:<ul><li> [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)</li><li> [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910) </li><li> [2522893 FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)</li><ul> |
 |Issues restoring backups of encrypted databases| [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server) |
 |Trying to restore a CRM backup from the Enterprise edition fails on a Standard edition| [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984) |
 |||
 
 ## FAQ about SQL Server backup and restore operations
 
-### How can I check the status of a backup operation?
+#### How can I check the status of a backup operation?
 
    Use the [estimate_backup_restore](https://github.com/microsoft/mssql-support/blob/master/sample-scripts/backup_restore/estimate_backup_restore.sql) script to get an estimate of backup times.
 
-### What should I do if SQL Server fails over in the middle of backup?
+#### What should I do if SQL Server fails over in the middle of backup?
 
   Restart the restore or backup operation per [Restart an Interrupted Restore Operation (Transact-SQL)](/sql/relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql).
 
-### Can I restore database backups from older program versions on newer versions, and vice-versa?
+#### Can I restore database backups from older program versions on newer versions, and vice-versa?
 
   SQL Server backup cannot be restored by using a version of SQL Server that's later than the version that created the backup. For more information, see [Compatibility Support](/sql/t-sql/statements/restore-statements-transact-sql).
 
-### How do I verify my SQL Server database backups?
+#### How do I verify my SQL Server database backups?
 
   See the procedures that are documented in [RESTORE Statements - VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).
 
-### How can I get the backup history of databases in SQL Server?
+#### How can I get the backup history of databases in SQL Server?
 
   See [How to get the backup history of databases in SQL Server](/sql/relational-databases/system-tables/backupset-transact-sql#query-backup-history).
 
-### Can I restore 32-bit backups on 64-bit servers, and vice-versa?
+#### Can I restore 32-bit backups on 64-bit servers, and vice-versa?
 
   Yes. The SQL Server on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, backup and restore operations work across 64-bit and 32-bit environments.
 
