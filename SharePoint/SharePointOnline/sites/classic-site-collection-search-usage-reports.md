@@ -10,7 +10,6 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: wbaer
 appliesto:

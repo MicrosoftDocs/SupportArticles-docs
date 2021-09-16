@@ -6,7 +6,6 @@ ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
 ms.topic: article
-ms.prod: sharepoint-server-itpro 
 localization_priority: Normal
 ms.custom: 
 - CI 114943
