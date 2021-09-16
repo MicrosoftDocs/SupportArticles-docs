@@ -34,7 +34,7 @@ When using SharePoint Online or OneDrive for Business, you receive one of the fo
 
 There are many scenarios which can prompt one of these messages. The most frequent cause is that permissions for the user or administrator are configured incorrectly or not configured at all. 
 
-## Resolution Option 1: Run the Check User Access Diagnostic
+## Resolution 1: Run the Check User Access Diagnostic
 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user access.
 
@@ -45,7 +45,7 @@ Select **Run Tests** below, which will populate the diagnostic in the Microsoft 
 
 The diagnostic performs a large range of verifications for internal or external users who try to access SharePoint and OneDrive sites. 
 
-## Resolution Option 2: Select the most relevant option below and follow the steps to correct the issue. 
+## Resolution 2: Select the most relevant option below and follow the steps to correct the issue
 
 Follow the steps below depending on which area you are receiving the error:
 
