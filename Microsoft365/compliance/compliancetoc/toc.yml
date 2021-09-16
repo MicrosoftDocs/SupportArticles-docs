@@ -87,6 +87,10 @@
       href: ../holds/retention-policy-not-working-after-mailbox-moved.md
     - name: Search logic change for Title property
       href: ../holds/change-to-search-logic-for-title-property.md
+  - name: Information barriers
+    items:
+    - name: Issues related to information barrier policies
+      href: ../information-barriers/information-barriers-troubleshooting.md
   - name: MRM & Retention Policies
     items:
     - name: Managed folders disappear
