@@ -4,6 +4,7 @@ description: This article lists OneDrive for Business related issues.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: luche
 localization_priority: Normal
