@@ -22,7 +22,7 @@ f1.keywords:
 
 [Information barriers](/microsoft-365/compliance/information-barriers) can help your organization remain compliant with legal requirements and industry regulations. For example, with information barriers, you can restrict communication between specific groups of users to avoid a conflict of interest or other issues. (To learn more about how to set up information barriers, see [Define policies for information barriers](/microsoft-365/compliance/information-barriers-policies).)
 
-In the event that people run into unexpected issues after information barriers are in place, there are some steps you can take to resolve those issues. Use this article as a guide.
+When people run into unexpected issues after information barriers are in place, there are some steps you can take to resolve those issues. Use this article as a guide.
 
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:
@@ -60,7 +60,7 @@ Determine whether the users are affected by an information barrier policy. Depen
 
     |**Syntax**|**Example**|
     |:---------|:----------|
-    | `Get-InformationBarrierPolicy` <p> Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value. | `Get-InformationBarrierPolicy -Identity b42c3d0f-49e9-4506-a0a5-bf2853b5df6f` <p> In this example, we are getting detailed information about the information barrier policy that has ExoPolicyId *b42c3d0f-49e9-4506-a0a5-bf2853b5df6f*. |
+    | `Get-InformationBarrierPolicy` <p> Use details, such as the policy GUID (ExoPolicyId) you received during the previous step, as an identity value. | `Get-InformationBarrierPolicy -Identity b42c3d0f-xyxy-4506-xyxy-bf2853b5df6f` <p> In this example, we are getting detailed information about the information barrier policy that has ExoPolicyId *b42c3d0f-xyxy-4506-xyxy-bf2853b5df6f*. |
 
     After you run the cmdlet, in the results, look for **AssignedSegment**, **SegmentsAllowed**, and **SegmentsBlocked** values.
 
@@ -82,7 +82,7 @@ Determine whether the users are affected by an information barrier policy. Depen
     |:---------|:----------|
     | `Get-OrganizationSegment`<p> Use this cmdlet with an Identity parameter. | `Get-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd` <p> In this example, we are getting information about the segment that has GUID *c96e0837-c232-4a8a-841e-ef45787d8fcd*. |
 
-    Review the details for the segment. If necessary, [edit a segment](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-segment), and then re-use the `Start-InformationBarrierPoliciesApplication` cmdlet.
+    Review the details for the segment. If necessary, [edit a segment](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-segment), and then reuse the `Start-InformationBarrierPoliciesApplication` cmdlet.
 
     **If you are still having issues with your information barrier policy, contact support**.
 
@@ -115,7 +115,7 @@ Verify that the users in question are included in an information barrier policy.
 
 ## Issue: I need to remove a single user from an information barrier policy
 
-In this case, information barrier policies are in effect, and a one or more users are unexpectedly blocked from communicating with others in Microsoft Teams. Rather than remove information barrier policies altogether, you can remove one or more individual users from information barrier policies.
+In this case, information barrier policies are in effect, and one or more users are unexpectedly blocked from communicating with others in Microsoft Teams. Rather than remove information barrier policies altogether, you can remove one or more individual users from information barrier policies.
 
 ### What to do
 
@@ -136,11 +136,11 @@ Information barrier policies are assigned to segments of users. Segments are def
 
 ## Issue: The information barrier application process is taking too long
 
-After running the **Start-InformationBarrierPoliciesApplication** cmdlet, the process is taking a really long time to finish.
+After running the **Start-InformationBarrierPoliciesApplication** cmdlet, the process is taking a long time to finish.
 
 ### What to do
 
-Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have a lot of users, it will take a while to process. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
+Keep in mind that when you run the policy application cmdlet, information barrier policies are being applied (or removed), user by user, for all accounts in your organization. If you have many users, it will take a while to process. (As a general guideline, it takes about an hour to process 5,000 user accounts.)
 
 1. Use the **Get-InformationBarrierPoliciesApplicationStatus** cmdlet to verify status of the most recent policy application.
 
@@ -155,7 +155,7 @@ Keep in mind that when you run the policy application cmdlet, information barrie
     |**Status**|**Next step**|
     |:---------|:------------|
     | **Not started** | If it has been more than 45 minutes since the **Start-InformationBarrierPoliciesApplication** cmdlet has been run, review your audit log to see if there are any errors in policy definitions, or some other reason why the application has not started. |
-    | **Failed** | If the application has failed, review your audit log. Also review your segments and policies. Are any users assigned to more than one segment? Are any segments assigned more than one poliicy? If necessary, [edit segments](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-segment) and/or [edit policies](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again. |
+    | **Failed** | If the application has failed, review your audit log. Also review your segments and policies. Are any users assigned to more than one segment? Are any segments assigned more than one policy? If necessary, [edit segments](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-segment) and/or [edit policies](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again. |
     | **In progress** | If the application is still in progress, allow more time for it to complete. If it has been several days, gather your audit logs, and then contact support. |
 
 ## Issue: Information barrier policies are not being applied at all
@@ -214,7 +214,7 @@ When you run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet, searc
 
 3. Usually, you will find that a user has been included in more than one segment. You can fix this by updating the `-UserGroupFilter` value in `OrganizationSegments`.
 
-4. Re-apply information barrier policies using these procedures [Information Barriers policies](/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
+4. Reapply information barrier policies using these procedures [Information Barriers policies](/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
 
 ## Resources
 
