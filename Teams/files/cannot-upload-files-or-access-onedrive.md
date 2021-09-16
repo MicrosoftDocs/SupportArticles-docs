@@ -56,11 +56,16 @@ Error 1 and Error 3 can occur if the name of the **Documents** folder (the defau
 
 To fix the error, you must revert the folder name to **Documents** by using an administrative account and following these steps:
 
-1. Navigate to the [Microsoft 365 admin center](https://admin.microsoft.com/).
-2. In the left pane, select **Support**, and then select **New Service Request**.
-3. In the **Briefly describe your issue** field, type *OneDrive Document Library Path Modified*.
-4. In the **Run diagnostics** section, type the **User Principal Name (UPN)** of the user who is seeing the error, and then select **Run Tests**.
-5. If the test result indicates that the name of the default document library name is not Documents, select the checkbox to authorize the diagnostic to change it back to Documents, and then select **Update Settings**.
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
+
+    > [!div class="nextstepaction"]
+    > [Run Tests: OneDrive Library Rename](https://aka.ms/PillarOneDriveLibraryRename)
+
+2. In the **Run diagnostics** section, type the **User Principal Name (UPN)** of the user who is seeing the error, and then select **Run Tests**.
+3. If the test result indicates that the name of the default document library name is not Documents, select the checkbox to authorize the diagnostic to change it back to Documents, and then select **Update Settings**.
 
     You'll see a confirmation notice that states that the document library was successfully renamed to **Documents**.
 
