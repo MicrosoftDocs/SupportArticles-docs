@@ -24,11 +24,10 @@ description: Explains what the website tab is and why it may be confusing to cus
 
 ## Summary
 
-Customers become confused by using website tabs in Microsoft Teams since some website elements do not load properly.
+Customers become confused by using website tabs in Microsoft Teams because some website elements don't load properly.
 
 ## More information
 
-Website tabs are not equivalent to a standard web browser. A number of sites, especially those requiring authentication, using popups, or complex HTML framing, will not work as expected when pinned as a website tab. Microsoft is working on improving the UI to make it clearer for customers.
-
+Website tabs aren't equivalent to a standard web browser. A number of sites, especially those requiring authentication, using popups, or complex HTML framing, will not work as expected when pinned as a website tab. Microsoft is working on improving the UI to make it clearer for customers.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
