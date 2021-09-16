@@ -71,3 +71,20 @@ This error occurs if the ownership information for the Microsoft 365 group that'
 Assign an owner to the Microsoft 365 group that's associated with the team. For more information, see [Assign a new owner to an orphaned group](https://support.microsoft.com/topic/assign-a-new-owner-to-an-orphaned-group-86bb3db6-8857-45d1-95c8-f6d540e45732).
 
 **Note:** Only a Microsoft 365 administrator in your organization can make this change.
+
+### Run a self-diagnostics tool
+
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with accessing files to Teams.
+
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+To do this, select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+> [!div class="nextstepaction"]
+> [Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat)
+
+The diagnostic will perform a large range of verifications.
+
+### Need More Help?
+
+Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
