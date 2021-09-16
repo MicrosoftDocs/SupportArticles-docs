@@ -29,21 +29,23 @@ However, you can connect to the VM by using an administrative RDP session (mstsc
 
 ## Cause
 
-The issue can occurs if you have reached maximum allowed number of concurrent RDP connections.
+The issue occurs if you have reached the maximum allowed number of concurrent RDP connections.
 
 ## Solution
 
-Before start troubleshooting, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). 
+Before start troubleshooting, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 
 1. Connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console does not work, connect the VM by remote PowerShell. For more information, see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
-1. After you connect to the VM by using CMD or PowerShell, run the following command identify the current maximum connection setting for the RDP service:
+1. After you connect to the VM by using PowerShell, run the following command to identify the current maximum connection setting for the RDP service:
 
     ```powershell
    reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections
     ```
-    
-    If the value exists, run the following command to set the MaxConnections value to 0 that means allow unlimited number of RDP connections.
+    If the value does not exist, it uses default setting that allows unlimited number of RDP connections.
+
+    If the value exists, run the following command to set the MaxConnections value to 0 to allow unlimited RDP connections.
+
     ```powershell
     reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections /t REG_DWORD /d 0 /f 
     ```
