@@ -35,7 +35,7 @@ The issue can occurs if you have reached maximum allowed number of concurrent RD
 
 Before start troubleshooting, [back up the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). 
 
-1. Connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console does not work, connect the VM by remote PowerShell. For more information see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
+1. Connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console does not work, connect the VM by remote PowerShell. For more information, see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
 1. After you connect to the VM by using PowerShell, run the following command identify the current maximum connection setting for the RDP service:
 
