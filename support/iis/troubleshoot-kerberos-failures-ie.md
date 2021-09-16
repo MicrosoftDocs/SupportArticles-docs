@@ -17,6 +17,9 @@ You try to access a website where Windows Integrated Authenticated has been conf
 
 Although you enter a valid user name and password, you're prompted again (three prompts total). Then, you're shown a screen that indicates that you aren't allowed to access the desired resource. The screen displays an HTTP 401 status code that resembles the following error:
 
+> Not Authorized  
+> HTTP Error 401. The requested resource requires user authentication.
+
 :::image type="content" source="./media/troubleshoot-kerberos-failures-ie/http-error-401.png" alt-text="Screenshot of H T T P Error 401.":::
 
 On the Microsoft Internet Information Services (IIS) server, the website logs contain requests that end in a 401.2 status code, such as the following log:
