@@ -42,7 +42,7 @@ To resolve this issue, identify and remove the orphaned or duplicate public fold
 1. Identify duplicate public folder mailbox migration requests by running the following cmdlet:
 
     ```powershell
-    Get-PublicFolderMailboxMigrationRequest|Sort-Object targetmailbox|fl targetmailbox,requestguid,name,status
+    Get-PublicFolderMailboxMigrationRequest|Sort-Object targetmailbox|ft targetmailbox,requestguid,name,status
     ```
 
     **Note:** For more information about this cmdlet, see [Get-PublicFolderMailboxMigrationRequest](/powershell/module/exchange/get-publicfoldermailboxmigrationrequest).
