@@ -44,3 +44,20 @@ To fix this issue, deactivate this feature in OneDrive.
 5. Locate **Limited-access user permission lockdown mode**, and then select **Deactivate**.
 
 For more information about **Limited-access user permission lockdown mode**, see [Enable or disable site collection features](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04).
+
+### Run a self-diagnostics tool
+
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with accessing files shared in Teams chat.
+
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+To do this, select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+> [!div class="nextstepaction"]
+> [Run Tests: Unable to access files shared in Teams chat](https://aka.ms/TeamsSharedFilesInChat)
+
+The diagnostic will perform a large range of verifications.
+
+### Need More Help?
+
+Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
