@@ -1,6 +1,6 @@
 ---
-title: Backup and restore operations
-description: This article describes how to troubleshoot SQL Server back up and restore operation issues.
+title: SQL Server backup and restore operation issues
+description: This article troubleshoots SQL Server backup and restore operation issues, such as the operation taking a long time, issues between different SQL Server versions.
 ms.date: 9/10/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni
@@ -8,7 +8,7 @@ editor: v-jesits
 ms.topic: how-to
 ms.prod: sql
 ---
-# Troubleshooting SQL Server backup and restore operations  
+# Troubleshoot SQL Server backup and restore operations  
 
 This article provides solutions for common issues that you might experience during Microsoft SQL Server backup and restore operations, and provides references to further information about these operations.
 
@@ -21,7 +21,9 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 - The SQL Server error log contains information about previous backup and restore operations. You can use these details to estimate the time that's required to back up and restore the database in its current state. The following is a sample output from the error log:
 
-    > RESTORE DATABASE successfully processed 315 pages in 0.372 seconds (6.604 MB/sec)
+    ```output
+    RESTORE DATABASE successfully processed 315 pages in 0.372 seconds (6.604 MB/sec)
+    ```
 
 - In SQL Server 2016 and later versions, you can use XEvent [backup_restore_progress_trace](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases) to track the progress of backup and restore operations.
 
@@ -56,7 +58,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 4. Work with your windows administrator to check for firmware updates for your hardware.  
 
-## Issues that affect database restoration between different SQL versions
+## Issues that affect database restoration between different SQL Server versions
 
 A SQL Server backup can't be restored to an earlier version of SQL Server than the version at which the backup was created. For example, you can't restore a backup that's taken on a SQL Server 2019 instance to a SQL Server 2017 instance. Trying to do this will cause the following error message to be generated:
 
@@ -198,11 +200,11 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 ### How can I get the backup history of databases in SQL Server?
 
-  See [How to get the backup history of databases in SQL Server](https://gallery.technet.microsoft.com/scriptcenter/how-to-get-the-backup-ea70af7f).
+  See [How to get the backup history of databases in SQL Server](/sql/relational-databases/system-tables/backupset-transact-sql#query-backup-history).
 
 ### Can I restore 32-bit backups on 64-bit servers, and vice-versa?
 
-  Yes. The SQL Server on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, backup and restore operations work across 32-bit and 64-bit environments. 
+  Yes. The SQL Server on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, backup and restore operations work across 64-bit and 32-bit environments.
 
 ## General troubleshooting tips
 
@@ -218,7 +220,7 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 - For more information about backup and restore operations, see the following topics in Books Online:
 
-   > - ["Back Up and Restore of SQL Server Databases"](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases): This topic covers the concepts of the backup and restore operations for SQL Server databases, provides links to additional topics, and provides detailed procedures to run various backups or restore tasks (such as verifying backups, and backing up by using T-SQL or SSMS). This is the parent topic about this subject in SQL Server documentation.
+   ["Back Up and Restore of SQL Server Databases"](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases): This topic covers the concepts of the backup and restore operations for SQL Server databases, provides links to additional topics, and provides detailed procedures to run various backups or restore tasks (such as verifying backups, and backing up by using T-SQL or SSMS). This is the parent topic about this subject in SQL Server documentation.
 - The following table lists additional topics that you might want to review for specific tasks that are related to backup and restore operations.
 
     |Reference|Description|

@@ -189,7 +189,7 @@
       href: admin/database-mail-fails-send-message.md
     - name: Transaction log file doesn't grow
       href: admin/transaction-log-file-not-grow.md
-    - name: Troubleshoot backup and restore
+    - name: Troubleshoot backup and restore operation issues
       href: admin/backup-restore-operations.md
     - name: Troubleshoot DBCC errors
       href: admin/troubleshoot-dbcc-errors.md
