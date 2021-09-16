@@ -37,14 +37,14 @@ Before start troubleshooting, [back up the OS disk](/azure/virtual-machines/wind
 
 1. Connect to the VM by using the Azure Serial Console and [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console does not work, connect the VM by remote PowerShell. For more information, see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
-1. After you connect to the VM by using PowerShell, run the following command identify the current maximum connection setting for the RDP service:
+1. After you connect to the VM by using CMD or PowerShell, run the following command identify the current maximum connection setting for the RDP service:
 
     ```powershell
    reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections
     ```
     
     If the value exists, run the following command to set the MaxConnections value to 0 that means allow unlimited number of RDP connections. 
-    ```
+    ```powershell
     reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections /t REG_DWORD /d 0 /f 
     ```
 1. Restart the VM, and then try to RDP to the VM.
