@@ -487,6 +487,8 @@
       href: ../mailflow/get-internet-mx-record-smtp-domain-with-nslookup.md
   - name: Migration
     items:
+    - name: Can't access mailbox after adding mailbox server to a DAG
+      href: ../migration/cannot-access-move-mailbox.md
     - name: Can't move a mailbox to a database
       href: ../migration/error-move-mailbox-to-database-exchange-2010.md
     - name: Can't move mailboxes due to Exchange Online limits
@@ -525,6 +527,8 @@
       href: ../../ExchangeOnline/calendars/public-folder-meetings-not-modified-in-owa.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
     - name: Large items skipped during migration
       href: ../public-folders/large-items-skipped.md
+    - name: Public folder items are deleted after batch migration
+      href: ../public-folders/items-deleted-public-folder-batch-migration.md
     - name: Public folder migration stops at 95%
       href: ../public-folders/public-folder-migration-fails.md
     - name: Troubleshoot public folder replication issues
