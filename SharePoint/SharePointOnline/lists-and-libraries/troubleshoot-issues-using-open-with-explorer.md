@@ -144,6 +144,6 @@ For more information about how to work with the WebClient service, see the follo
 
 - [2548470 A WebClient service crashes on a computer that is running Windows 7 or Windows Server 2008 R2 when you connect a WebDav resource](https://support.microsoft.com/help/2548470)
 - [943280 Prompt for Credentials When Accessing FQDN Sites From a Windows Vista or Windows 7 Computer](https://support.microsoft.com/help/943280)
-- [View SharePoint files with File Explorer in Microsoft Edge](https://docs.microsoft.com/en-us/SharePoint/sharepoint-view-in-edge)
+- [View SharePoint files with File Explorer in Microsoft Edge](/sharepoint/sharepoint-view-in-edge)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
