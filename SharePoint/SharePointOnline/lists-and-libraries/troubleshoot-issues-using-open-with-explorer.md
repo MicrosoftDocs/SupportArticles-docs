@@ -25,11 +25,10 @@ ms.custom:
 This article discusses how to troubleshoot issues that you may experience when you use the "View in File Explorer" command in SharePoint Online.
 
 > [!NOTE]
-> The View in File Explorer command doesn't work in the Google Chrome, Mozilla Firefox, or on the Mac platform.
+> The View in File Explorer command doesn't work in Google Chrome, Mozilla Firefox, or on the Mac platform.
 
 > [!IMPORTANT]
-> The View in File Explorer option is coming to Microsoft Edge.
-> For more information please visit , [View SharePoint files with File Explorer in Microsoft Edge](https://docs.microsoft.com/en-us/SharePoint/sharepoint-view-in-edge)
+> The View in File Explorer option is coming to Microsoft Edge. For more information, see [View SharePoint files with File Explorer in Microsoft Edge](/sharepoint/sharepoint-view-in-edge).
 
 The Open with Explorer command is slower and less reliable than [syncing SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88). The OneDrive sync client provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e), which allows you to access all your files in OneDrive without using local storage space. 
 
