@@ -57,7 +57,7 @@ Error 1 and Error 3 can occur if the name of the **Documents** folder (the defau
 To fix the error, you must revert the folder name to **Documents** by using an administrative account and following these steps:
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
@@ -65,10 +65,8 @@ To fix the error, you must revert the folder name to **Documents** by using an a
     > [Run Tests: OneDrive Library Rename](https://aka.ms/PillarOneDriveLibraryRename)
 
 2. In the **Run diagnostics** section, type the **User Principal Name (UPN)** of the user who is seeing the error, and then select **Run Tests**.
-3. If the test result indicates that the name of the default document library name is not Documents, select the checkbox to authorize the diagnostic to change it back to Documents, and then select **Update Settings**.
-
-    You'll see a confirmation notice that states that the document library was successfully renamed to **Documents**.
-
+3. If the test result shows that the default document library name isn't **Documents**, select the checkbox to authorize the diagnostic to change it back to **Documents**, and then select **Update Settings**. You'll receive a confirmation notification stating that the document library has been successfully renamed to **Documents**.
+ 
 **Note:** Although you can use SharePoint Designer to change the name of the default document library, we don't recommend this option.
 
 **Resolution 2**
