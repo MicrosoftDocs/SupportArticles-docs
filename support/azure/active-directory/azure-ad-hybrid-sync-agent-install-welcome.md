@@ -8,13 +8,15 @@ ms.date: 09/15/2021
 
 ## Overview
 
-The scenarios in this set of articles describes frequent issues when installing Azure AD Hybrid Synch Agent, and how correct them.
+The scenarios in this set of articles describe frequent issues when installing Azure AD Hybrid Sync Agent, and how to correct them.
 
-- [No privileges to install MSI](azure-ad-hybrid-synch-no-privileges-install-msi.md)
-- [Cannot start service AADConnectProvisioningAgent](azure-ad-hybrid-synch-cannot-start-aadconnect-provisioning-agent.md)
-- [The gMSA is set to log on as Service](azure-ad-hybrid-synch-gmsa-set-logon-service.md)
-- [There is no such object on the server](azure-ad-hybrid-synch-no-such-object-on-server.md)
-- [Unable to create gMSA because KDS may not be running on domain controller](azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller.md)
+This troubleshooting doc applies to configuring the agent for [Azure AD Connect Cloud Sync](/azure/active-directory/cloud-sync/how-to-install) or [Workday automatic user provisioning](/azure/active-directory/saas-apps/workday-inbound-tutorial).
+
+- [No privileges to install MSI](azure-ad-hybrid-sync-no-privileges-install-msi.md)
+- [Cannot start service AADConnectProvisioningAgent](azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md)
+- [The gMSA is set to log on as Service](azure-ad-hybrid-sync-gmsa-set-logon-service.md)
+- [There is no such object on the server](azure-ad-hybrid-sync-no-such-object-on-server.md)
+- [Unable to create gMSA because KDS may not be running on domain controller](azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md)
 
 ## Prerequisites
 

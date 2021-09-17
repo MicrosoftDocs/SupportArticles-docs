@@ -24,13 +24,13 @@ While installing Cloud Provisioning Agent, you may encounter the following error
 
 > Unable to create gMSA because KDS may not be running on domain controller. Please create/run KDS manually.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/1-agent-configuration-unable-create-gmsa.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen, including the error message Unable to create gMSA because KDS may not be running on domain controller. Please create/run KDS manually." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/1-agent-configuration-unable-create-gmsa.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen, including the error message Unable to create gMSA because KDS may not be running on domain controller. Please create/run KDS manually." border="true":::
 
 To locate the 9001 and 9002 EventIDs, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Security - Netlogon**.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/2-event-9001.png" alt-text="Screenshot of the Event 9001 window." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/2-event-9001.png" alt-text="Screenshot of the Event 9001 window." border="true":::
 
-:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/3-event-9002.png" alt-text="Screenshot of the Event 9002 window." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/3-event-9002.png" alt-text="Screenshot of the Event 9002 window." border="true":::
 
 Use the following command to retrieve the server settings for the [supported encryption types](/windows/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos)
 
@@ -48,7 +48,7 @@ Using 'DSA.MSC' to open the **provAgentgMSA** properties of the domain controlle
 1. Select the **Attribute Editor** tab.
 1. Locate the value for **msDS-SupportedEncryptionTypes**.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-unable-create-gmsa-kds-domain-controller/4-provagentgmsa-properties-integer-attribute-editor.png" alt-text="Screenshot of the Agent gMSA Properties window open to the Attribute Editor tab, with the Integer Attribute Editor window on top of it." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/4-provagentgmsa-properties-integer-attribute-editor.png" alt-text="Screenshot of the Agent gMSA Properties window open to the Attribute Editor tab, with the Integer Attribute Editor window on top of it." border="true":::
 
 Verify that the encryption types offered by the server and the accepted by the account don't match.
 

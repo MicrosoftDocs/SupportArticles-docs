@@ -24,7 +24,7 @@ While installing Cloud Provisioning Agent, you may encounter the following error
 
 > Service 'Microsoft Azure AD Connect Provisioning Agent' (AADConnectProvisioningAgent) could not be installed. Verify that you have sufficient privileges to install system services.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-no-privileges-install-msi/1-provisioning-agent-failed-start.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message Service Microsoft Azure AD Connect Provisioning Agent failed to start. Verify that you have sufficient privileges to install system services." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/1-provisioning-agent-failed-start.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message Service Microsoft Azure AD Connect Provisioning Agent failed to start. Verify that you have sufficient privileges to install system services." border="true":::
 
 To verify that you have sufficient privileges:
 
@@ -32,11 +32,11 @@ To verify that you have sufficient privileges:
 
 1. Check the Local Security Policy (secpol.msc) through **Open local policies** > **User Rights Assignment** > **Log on as a service**
 
-   :::image type="content" source="media/azure-ad-hybrid-synch-no-privileges-install-msi/2-log-on-service-policy.png" alt-text="Screenshot of the Local Security Policy window, highlighting the Log on as a service policy." border="true":::
+   :::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/2-log-on-service-policy.png" alt-text="Screenshot of the Local Security Policy window, highlighting the Log on as a service policy." border="true":::
 
 1. Verify that NT SERVICE\ALL SERVICES is listed as a **Local Security Setting**.
 
-   :::image type="content" source="media/azure-ad-hybrid-synch-no-privileges-install-msi/3-log-on-service-properties.png" alt-text="Screenshot of the Local Security Setting tab in the Log on as a service Properties window." border="true":::
+   :::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/3-log-on-service-properties.png" alt-text="Screenshot of the Local Security Setting tab in the Log on as a service Properties window." border="true":::
 
 During Package installation the service **AADConnectProvisioningAgent** is created, and log on credentials are temporarily set to **NT Service\AADConnectProvisioningAgent**.
 

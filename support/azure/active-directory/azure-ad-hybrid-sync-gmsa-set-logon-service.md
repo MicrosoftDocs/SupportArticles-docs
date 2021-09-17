@@ -28,11 +28,11 @@ To resolve this issue, check the System event logs for **EventID 7038**. The fol
 
 > The user name or password is incorrect.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-gmsa-set-logon-service/1-user-name-password-incorrect.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message The user name or password is incorrect." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-gmsa-set-logon-service/1-user-name-password-incorrect.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message The user name or password is incorrect." border="true":::
 
 When you open the **Microsoft Azure AD Connect Provisioning Agent** properties, and select the **Log On** tab, you will find that the settings aren’t grey out, as is expected for a managed account service.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-gmsa-set-logon-service/2-provisioning-agent-properties.png" alt-text="Screenshot of the Log On tab of the Microsoft Azure AD Connect Provisioning Agent window, including the account and password entries." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-gmsa-set-logon-service/2-provisioning-agent-properties.png" alt-text="Screenshot of the Log On tab of the Microsoft Azure AD Connect Provisioning Agent window, including the account and password entries." border="true":::
 
 To verify whether the account is managed, open a command prompt and type the following command: 
 
@@ -42,7 +42,7 @@ Sc.exe qmanagedaccount aadconnectprovisioningagent
 
 The account managed status will show as **False**.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-gmsa-set-logon-service/3-account-managed-false.png" alt-text="Screenshot of the output for the command, showing the False attribute." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-gmsa-set-logon-service/3-account-managed-false.png" alt-text="Screenshot of the output for the command, showing the False attribute." border="true":::
 
 To set the status to **True** and resolve this issue, type the following command:
 

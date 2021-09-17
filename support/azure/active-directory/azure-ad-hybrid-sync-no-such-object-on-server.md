@@ -24,7 +24,7 @@ When installing Cloud Provisioning Agent you may encounter this error during ins
 
 > There is no such object on the server.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-no-such-object-on-server/1-agent-configuration-error-creating gmsa-v1.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen. This screenshot includes the error message Error while creating group managed service account gmsa. Error, there is no such object on the server." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-no-such-object-on-server/1-agent-configuration-error-creating gmsa-v1.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen. This screenshot includes the error message Error while creating group managed service account gmsa. Error, there is no such object on the server." border="true":::
 
 The installation wizard's trace file is not clear about what's missing:
 
@@ -41,7 +41,7 @@ The installation wizard's trace file is not clear about what's missing:
 
 To resolve the issue in this scenerio, use the command `dsa.msc` to verify within the domain controller whether the **Managed Service Account** container is present.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-no-such-object-on-server/2-active-directory-users-computers.png" alt-text="Screenshot of the Active Directory Users and Computers window." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-no-such-object-on-server/2-active-directory-users-computers.png" alt-text="Screenshot of the Active Directory Users and Computers window." border="true":::
 
 If the container is missing, contact the Windows Directory Services Team to restore or create the container with the `ADPrep /Domainprep` command.
 
@@ -57,7 +57,7 @@ In a similar scenario as above, you may encounter the following error:
 
 > Error when creating group managed service account (gMSA). Error: There is no such object on the server.
 
-:::image type="content" source="media/azure-ad-hybrid-synch-no-such-object-on-server/3-agent-configuration-error-creating-gmsa-v2.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen, including the error message Error while creating group managed service account gmsa. Error, there is no such object on the server." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-no-such-object-on-server/3-agent-configuration-error-creating-gmsa-v2.png" alt-text="Screenshot of the Microsoft Azure Active Directory Connect Provisioning Agent Configuration screen, including the error message Error while creating group managed service account gmsa. Error, there is no such object on the server." border="true":::
 
 The wizard trace shows the following information:
 
@@ -102,7 +102,7 @@ The output of the previous command will display the following results:
 
 > B:32:1EB93889E40C45DF9F0C64D23BBB6237:CN=Managed Service Accounts\0ADEL:8b637607-65e8-4a80-b194-f738b26b9414,CN=Deleted Objects,DC=child,DC=< name of DC >,DC=com
 
-:::image type="content" source="media/azure-ad-hybrid-synch-no-such-object-on-server/4-powershell-output-for-attribute.png" alt-text="Screenshot of the output for the command, showing the missing attribute." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-no-such-object-on-server/4-powershell-output-for-attribute.png" alt-text="Screenshot of the output for the command, showing the missing attribute." border="true":::
 
 This orphan metadata value indicates that either the MSA container was previously deleted and wasn't properly restored, or that the value is missing.
 
