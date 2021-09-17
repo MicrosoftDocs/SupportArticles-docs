@@ -85,13 +85,14 @@ To resolve this error, [delete the re-created user, and restore the original use
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with uploading files to Teams chat.
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-To do this, select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+
 > [!div class="nextstepaction"]
 > [Run Tests: Unable to upload files to Teams chat](https://aka.ms/TeamsUploadFilesInChat)
 
-The diagnostic will perform a large range of verifications.
+The diagnostic performs a large range of verifications.
 
 ## Contact Support
 
