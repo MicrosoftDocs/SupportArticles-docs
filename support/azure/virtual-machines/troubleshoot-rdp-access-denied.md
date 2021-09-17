@@ -41,13 +41,13 @@ Before you begin troubleshooting, [back up the OS disk](/azure/virtual-machines/
 
 After you connect to the VM by using PowerShell, follow these steps to troubleshoot the issues. After each step, restart the VM, and check whether the problem is resolved.
 
- 1. Check whether members of the local **Remote Desktop Users** group have read permission for the following key:
+ 1. Check whether members of the local **Remote Desktop Users** group have the Read permission for the following key:
 
     ```
     Get-Acl -Path "HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates" | Format-List 
     ```
     
-    If this permission is not granted, run the following commands to grant Read access for local Remote Desktop Users members:
+    If this permission is not granted, run the following commands to grant Read access to the local Remote Desktop Users members:
 
     ```
     $NewAcl = Get-Acl -Path " HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates"
