@@ -18,17 +18,19 @@ ms.custom:
 - CSSTroubleshoot 
 ---
 
-# Troubleshoot "Open with Explorer" issues in SharePoint Online
+# Troubleshoot "View in File Explorer" issues in SharePoint Online
 
 ## Introduction
 
-This article discusses how to troubleshoot issues that you may experience when you use the "Open with Explorer" command in SharePoint Online.
+This article discusses how to troubleshoot issues that you may experience when you use the "View in File Explorer" command in SharePoint Online.
 
 > [!NOTE]
-> The Open with Explorer command doesn't work in the Microsoft Edge browser, Google Chrome, Mozilla Firefox, or on the Mac platform. Open with Explorer only works with Internet Explorer. However, beginning August 17th, 2021, [Microsoft 365 apps will no longer support Internet Explorer 11](/lifecycle/announcements/m365-ie11-microsoft-edge-legacy). 
+> The View in File Explorer command doesn't work in Google Chrome, Mozilla Firefox, or on the Mac platform.
 
-> [!NOTE]
-> The Open with Explorer command is slower and less reliable than [syncing SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88). The OneDrive sync client provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e), which allows you to access all your files in OneDrive without using local storage space. 
+> [!IMPORTANT]
+> The View in File Explorer option is coming to Microsoft Edge. For more information, see [View SharePoint files with File Explorer in Microsoft Edge](/sharepoint/sharepoint-view-in-edge).
+
+The Open with Explorer command is slower and less reliable than [syncing SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88). The OneDrive sync client provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e), which allows you to access all your files in OneDrive without using local storage space. 
 
 For more information about how to copy or move library files by using "Open with Explorer," go to [Copy or move library files by using Open with Explorer](https://support.office.com/article/copy-or-move-library-files-by-using-open-with-explorer-aaee7bfb-e2a1-42ee-8fc0-bcc0754f04d2?ocmsassetID=HA101811182&CorrelationId=93c20e9a-ab98-496b-8c8a-32ed16406dec).
 
@@ -142,5 +144,6 @@ For more information about how to work with the WebClient service, see the follo
 
 - [2548470 A WebClient service crashes on a computer that is running Windows 7 or Windows Server 2008 R2 when you connect a WebDav resource](https://support.microsoft.com/help/2548470)
 - [943280 Prompt for Credentials When Accessing FQDN Sites From a Windows Vista or Windows 7 Computer](https://support.microsoft.com/help/943280)
+- [View SharePoint files with File Explorer in Microsoft Edge](https://docs.microsoft.com/en-us/SharePoint/sharepoint-view-in-edge)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
