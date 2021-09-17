@@ -77,13 +77,14 @@ Assign an owner to the Microsoft 365 group that's associated with the team. For 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with accessing files to Teams.
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-To do this, select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+
 > [!div class="nextstepaction"]
 > [Run Tests: Unable to access files in a team](https://aka.ms/TeamsAccessFilesInChat)
 
-The diagnostic will perform a large range of verifications.
+The diagnostic performs a large range of verifications.
 
 ### Need More Help?
 
