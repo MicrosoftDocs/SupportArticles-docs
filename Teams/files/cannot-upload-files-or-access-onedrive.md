@@ -80,6 +80,20 @@ Error 1 can occur if a user is deleted and then re-created by using the same Use
 
 To resolve this error, [delete the re-created user, and restore the original user](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-sharepoint-error#accessing-a-onedrive-site).
 
+### Run a self-diagnostics tool
+
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with uploading files to Teams chat.
+
+> [!NOTE]
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: Unable to upload files to Teams chat](https://aka.ms/TeamsUploadFilesInChat)
+
+The diagnostic performs a large range of verifications.
+
 ## Contact Support
 
 If none of the resolutions fix the error, create a new service request. Use the following description: "files upload failing to teams chat." Attach the Teams desktop logs and a browser trace to it. For information about how to collect the desktop logs and browser trace, see [Collect logs to troubleshoot Teams issues](/microsoftteams/log-files#desktop-logs).
