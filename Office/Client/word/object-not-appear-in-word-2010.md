@@ -33,9 +33,10 @@ This issue occurs if you are using a Wrapping style option other than the **In l
 - You are viewing the Word document in Draft view or in Outline view.   
 - The **Show drawings and text boxes on screen** option is turned off.   
 - The **Print drawings created in Word** option turned off.   
-- The **Use draft quality** option is turned on.   
+- The **Use draft quality** option is turned on.
+- The **Show field codes instead of their values** option is turned on   
 
-If you are using the **In line with text** option with the picture or with the object, this issue may occur if the **Picture Placeholders** option is turned on. 
+If you are using the **In line with text** option with the picture or with the object, this issue may occur if the **Picture Placeholders** option is turned on.
 
 This issue may also occur if you are experiencing an issue with the video driver.
 
@@ -87,7 +88,7 @@ When you turn on the **Show drawings and text boxes on screen** option, you can 
 3. Under **Show document content**, click to select the **Show drawings and text boxes on screen** check box.   
 4. Click **OK**.   
 
-##### Word 2010
+##### Word 2010 or later
 
 1. Click **File**, and then click **Options**.   
 2. Click **Advanced**.   
@@ -105,7 +106,7 @@ When you turn on the **Print drawings created in Word** option, you can view the
 3. Under **Printing options**, click to select the **Print drawings created in Word** check box.   
 4. Click **OK**.   
 
-##### Word 2010
+##### Word 2010 or later
 
 1. Click **File**, and then click **Options**.   
 2. Click **Display**.   
@@ -123,11 +124,29 @@ When you turn off the **Use draft quality** option, you can view the picture or 
 3. Under **Print**, click to clear the **Use draft quality** check box.   
 4. Click **OK**.   
 
-##### Word 2010
+##### Word 2010 or later
 
 1. Click **File**, and then click **Options**.   
 2. Click **Advanced**.   
 3. Under **Print**, click to clear the **Use draft quality** check box.
+4. Click **OK**.   
+
+#### Turn off the "Show field codes instead of their values" option
+
+In some cases, when you turn off the **Show field codes instead of their values** option, embedded objects are not displayed. To turn off this option, follow these steps, as appropriate for your version of Word.
+
+##### Word 2007
+
+1. Click the **Microsoft Office Button**, and then click **Word Options**.   
+2. Click **Advanced**.   
+3. Under **Show document content**, click to clear the **Show field codes instead of their values** check box.   
+4. Click **OK**.   
+
+##### Word 2010 or later
+
+1. Click **File**, and then click **Options**.   
+2. Click **Advanced**.   
+3. Under **Show document content**, click to clear the **Show field codes instead of their values** check box.
 4. Click **OK**.   
 
 ### You are using the "In line with text" Wrapping style option
@@ -146,7 +165,7 @@ When you turn off the **Picture Placeholders** option, you can view the picture 
 3. Under **Display document content**, click to clear the **Picture Placeholders** check box.   
 4. Click **OK**.   
 
-##### Word 2010
+##### Word 2010 or later
 
 1. Click **File**, and then click **Options**.   
 2. Click **Advanced**.   
