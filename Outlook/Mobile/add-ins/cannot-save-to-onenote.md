@@ -21,7 +21,7 @@ search.appverid: MET150
 
 # "You cannot access this right now" error when saving items from Outlook for iOS to OneNote
 
-On an Intune-managed iOS device, when you use the **Save to OneNote** Agave add-in to save items from Microsoft Outlook for iOS to OneNote, you receive the following error message:
+On an Intune-managed iOS device, when you use the **Send to OneNote** Agave add-in to save items from Microsoft Outlook for iOS to OneNote, you receive the following error message:
 
 > You cannot access this right now
 
