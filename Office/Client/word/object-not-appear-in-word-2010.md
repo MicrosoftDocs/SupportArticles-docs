@@ -34,7 +34,7 @@ This issue occurs if you are using a Wrapping style option other than the **In l
 - The **Show drawings and text boxes on screen** option is turned off.   
 - The **Print drawings created in Word** option turned off.   
 - The **Use draft quality** option is turned on.
-- The **Show field codes instead of their values** option is turned on   
+- The **Show field codes instead of their values** option is turned on.
 
 If you are using the **In line with text** option with the picture or with the object, this issue may occur if the **Picture Placeholders** option is turned on.
 
