@@ -74,7 +74,6 @@ The following diagnostics are currently available with brief scenario descriptio
 | Presence | Teams presence | Validates that a user's Teams presence can be correctly displayed. | [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag) |
 | Voice | Teams Direct Routing | Validates that a user is correctly configured for direct routing. | [Run Tests: Teams Direct Routing](https://aka.ms/TeamsDirectRoutingDiag) |
 | Voice | Teams Call Queue | Validates that a call queue is able to receive calls. | [Run Tests: Teams Call Queue](https://aka.ms/TeamsCallQueueDiag) |
-| Voice | Teams Remove Number from Conference Bridge | Validates that the number can be removed from the conference bridge. | [Run Tests: Remove Conf Bridge Number](https://aka.ms/RemoveConfBridgeNumber) |
 | Voice | Teams Dial Pad is Missing | Validates that the dial pad is visible within Teams. | [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag) |
 | Voice | Unable to Make Domestic or International PSTN calls in Teams | Validates that a user has the ability to make or receive domestic or international PSTN calls. | [Run Tests: Teams PSTN](https://aka.ms/TeamsPSTNDiag) |
 | Voice | Unable to Join or Create a Teams Conference Call | Validates that a user has the ability to create or join a PSTN conference call. | [Run Tests: Teams Conference](https://aka.ms/TeasConfDiag) |
