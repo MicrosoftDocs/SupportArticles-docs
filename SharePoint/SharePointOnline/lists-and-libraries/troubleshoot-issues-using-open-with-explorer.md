@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot "Open with Explorer" issues in SharePoint Online
-description: Discusses how to troubleshoot issues that you may experience when you use the "Open with Explorer" command.
+title: Troubleshoot "View In File Explorer" issues in SharePoint Online
+description: Discusses how to troubleshoot issues that you may experience when you use the "View In File Explorer" command.
 author: helenclu
 manager: dcscontentpm
 ms.date: 02/14/2020
