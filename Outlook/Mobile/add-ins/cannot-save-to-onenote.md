@@ -1,6 +1,6 @@
 ---
-title: Can't use Save to OneNote add-in to save items from Outlook for iOS
-description: Describes an issue where you can't use the Save to OneNote button to save items from Outlook for iOS to OneNote.
+title: Can't use Send to OneNote add-in to save items from Outlook for iOS
+description: Describes an issue where you can't use the Send to OneNote button to save items from Outlook for iOS to OneNote.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
