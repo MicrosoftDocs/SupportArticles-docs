@@ -21,7 +21,7 @@ For more information about the state messaging system, see [Description of state
 
 A Configuration Manager administrator notices a significant delay in reporting Software Update compliance and application deployment. In this situation, the `<Configuration Manager Installation Directory>\Inboxes\auth\statesys.box\incoming` folder contains a large number of files. For example, there are millions of files.
 
-Here's a sample output when you filter the InboxMon.log file by `StateSys`:
+Here's a sample output when you filter the *InboxMon.log* file by `StateSys`:
 
 ```output
 06-11-2021 08:53:35.276    SMS_INBOX_MONITOR    8972 (0X230C)    FILE COUNT FOR DIRECTORY F:\PROGRAM FILES\MICROSOFT CONFIGURATION MANAGER\INBOXES\AUTH\STATESYS.BOX\INCOMING\HIGH IS 13360.~
@@ -60,7 +60,7 @@ To troubleshoot the performance issue, follow these steps:
 
 2. Establish a Configuration Manager performance baseline to understand the usual processing rate of your environment. Particular performance counters for StateSys include "Message Records Processed/min" and "Message File Records PreProcessed/min." Typically, these average tens of thousands. If there are no files to be processed, both counters will decrease to 0.
 
-   :::image type="content" source="media\state-message-processing-performance\performance-counter.png" alt-text="Performance counters for StateSys":::
+   :::image type="content" source="media\state-message-processing-performance\performance-counter.png" alt-text="Performance counters for StateSys.":::
 
    If your usual processing rate isn't enough to handle the backlog, go to the next step.
 
@@ -73,7 +73,7 @@ To troubleshoot the performance issue, follow these steps:
 
    1. Use the Windows Management Instrumentation Tester tool (Wbemtest) to connect to the SMS Provider. Select **Connect**, enter the site server under **Namespace**, and then select **Connect**. Enter `root\SMS\site_<site code>` for a local connection, or enter `\\MachineName\root\SMS\site_<site code>` for a remote connection.
 
-      :::image type="content" source="media\state-message-processing-performance\connect-namespace.png" alt-text="Connect to the SMS Provider":::
+      :::image type="content" source="media\state-message-processing-performance\connect-namespace.png" alt-text="Connect to the SMS Provider.":::
    2. Select **Query**, enter the following query, and then select **Apply**:
 
       ```sql
@@ -82,31 +82,31 @@ To troubleshoot the performance issue, follow these steps:
 
       This query returns the list of Configuration Manager sites that have the SMS_STATE_SYSTEM component installed.
 
-      :::image type="content" source="media\state-message-processing-performance\query-result.png" alt-text="WMI query result":::
+      :::image type="content" source="media\state-message-processing-performance\query-result.png" alt-text="WMI query result.":::
    3. Double-click the site whose settings you want to change, and then double-click **Props** from the list of properties of the \<site\>/StateSys instance.
 
-      :::image type="content" source="media\state-message-processing-performance\statesys-property.png" alt-text="Double-click Props":::
+      :::image type="content" source="media\state-message-processing-performance\statesys-property.png" alt-text="Double-click Props.":::
    4. To see the list of embedded properties of this instance, select **View Embedded**.
 
-      :::image type="content" source="media\state-message-processing-performance\embedded-properties.png" alt-text="View embedded properties":::
+      :::image type="content" source="media\state-message-processing-performance\embedded-properties.png" alt-text="View embedded properties.":::
    5. Double-click each embedded property to check the property name and value. Look for the property that has the name **Loader Threads** and the value **4**.
 
-       :::image type="content" source="media\state-message-processing-performance\loader-threads.png" alt-text="Loader Threads":::
+       :::image type="content" source="media\state-message-processing-performance\loader-threads.png" alt-text="Loader Threads.":::
    6. Double-click **Value**, increase the value to **16**. Select **Save Property**, and then select **Save Object**.
 
-       :::image type="content" source="media\state-message-processing-performance\increase-loader-threads.png" alt-text="Increase Loader Threads":::
+       :::image type="content" source="media\state-message-processing-performance\increase-loader-threads.png" alt-text="Increase Loader Threads.":::
    7. Look for another embedded property that has the name **Min Missing Message Age** and the value **2,880** (minutes).
 
-       :::image type="content" source="media\state-message-processing-performance\missing-message-age.png" alt-text="Minimum missing message age":::
+       :::image type="content" source="media\state-message-processing-performance\missing-message-age.png" alt-text="Minimum missing message age.":::
    8. Double-click **Value**, and increase the value to **10,080** (seven days) to prevent unnecessary resynchronization. Select **Save Property**, and then select **Save Object**.
    9. In the **Property Editor** dialog of **Props**, select **Save Property**.
 
-      :::image type="content" source="media\state-message-processing-performance\save-property.png" alt-text="Save property":::
+      :::image type="content" source="media\state-message-processing-performance\save-property.png" alt-text="Save property.":::
    10. In the **Object Editor** dialog of the StateSys instance, select **Save Object**.
    11. Close Wbemtest.
    12. Use Configuration Manager Service Manager to stop and then restart the SMS_STATE_SYSTEM component.
 
-       After the SMS_STATE_SYSTEM component is restarted, the new settings are logged in StateSys.log, as follows.
+       After the SMS_STATE_SYSTEM component is restarted, the new settings are logged in *StateSys.log*, as follows.
 
        ```output
        08-24-2021 21:24:16.574    SMS_STATE_SYSTEM    19380 (0X4BB4)    USING THE FOLLOWING CONFIGURATION PROPERTIES FROM THE SITEF CONTROL FILE:

@@ -59,7 +59,7 @@ When you report these kinds of issues to Microsoft Support, you must provide all
 
 The welcome screen in LogCatcher provides instructions for its use. The UI resembles the following screenshot.
 
-:::image type="content" source="media/data-collection-strategies/collect-data-in-logcatcher.jpg" alt-text="screenshot of collecting data in log catcher":::
+:::image type="content" source="media/data-collection-strategies/collect-data-in-logcatcher.png" alt-text="Screenshot of collecting data in log catcher.":::
 
 At the bottom of the main window, LogCatcher displays a list of websites that are hosted on the server that the tool is running on, and also the corresponding application pools and content location of each website.
 
@@ -67,7 +67,7 @@ To filter the data that is collected from your system, collect data from only a 
 
 Determine the filters that you want to apply, which websites to apply them to, and during what time period the data should be collected. Then, press the **GENERATE ZIP** button, and begin the log collection process. The status bar turns green when data collection is completed to confirm that all required logs were collected and compressed into a .zip file. The status bar also provides the file location.
 
-:::image type="content" source="media/data-collection-strategies/generate-zip-in-logcatcher.jpg" alt-text="screenshot of generating data in log catcher":::
+:::image type="content" source="media/data-collection-strategies/generate-zip-in-logcatcher.png" alt-text="Screenshot of generating data in log catcher.":::
 
 Windows File Explorer automatically opens the folder where the compressed log file was saved.
 
