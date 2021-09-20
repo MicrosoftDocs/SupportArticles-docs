@@ -78,6 +78,8 @@
       href: linux-virtual-machine-cannot-start-fstab-errors.md
   - name: Windows
     items:
+    - name: Azure virtual machine error '“You must change your password before logging on the first time”'
+      href: must-change-password.md
     - name: Cannot RDP into Azure VM because of authentication errors
       href: cannot-connect-rdp-azure-vm.md
     - name: CredSSP encryption oracle remediation
