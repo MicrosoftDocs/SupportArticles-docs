@@ -34,14 +34,18 @@ The cause of these problems can vary from file system corruption, underlying har
 
 - The first, best solution if DBCC CHECKDB reports consistency errors is to restore from a known good backup.  See [Restore and Recovery](/sql/relational-databases/backup-restore/restore-and-recovery-overview-sql-server) for more information.
 - If you cannot restore from a backup, then CHECKDB provides a feature to repair errors. If system level problems such as hardware or file system may be causing data corruption, you must correct these first before restoring or running repair. Microsoft support engineers cannot assist you with physical recovery of the corrupt data if the repair doesn't fix the consistency errors or your database backup is corrupt.
-- You can attempt to [script out the database schema](/sql/ssms/scripting/generate-scripts-sql-server-management-studio), use the script to create a new database, and then use a tool like [BCP](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server) or [SSIS Export/Import Wizard](/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard) to export as much of the data as possible from the corrupted database and into the new database. Keep in mind that exporting out from a corrupt table is likely to fail. In such cases, you can skip this and move to the next table.
 
-When you run DBCC CHECKDB, a recommendation is provided to indicate what the minimum repair option that is required to repair all errors. These messages may look something like the following:
 
-> CHECKDB found 0 allocation errors and 15 consistency errors in database 'mydb'.  
+  When you run DBCC CHECKDB, a recommendation is provided to indicate what the minimum repair option that is required to repair all errors. These messages may look something like the following:
+
+  > CHECKDB found 0 allocation errors and 15 consistency errors in database 'mydb'.  
  **repair_allow_data_loss** is the minimum repair level for the errors found by DBCC CHECKDB (mydb).
 
-The repair recommendation is the minimum level of repair to attempt to resolve all errors from CHECKDB. This does not mean that this repair option will actually fix all errors. Furthermore, not all errors reported may require this level of repair to resolve the error. This means that not all errors reported by CHECKDB when `repair_allow_data_loss` is recommended will result in data loss. Repair must be run to determine if the resolution to an error will result in data loss. One technique to help narrow down what the repair level will be for each table is to use DBCC CHECKTABLE for any table reporting an error. This will show the minimum level of repair for a given table.
+  The repair recommendation is the minimum level of repair to attempt to resolve all errors from CHECKDB. This does not mean that this repair option will actually fix all errors. Furthermore, not all errors reported may require this level of repair to resolve the error. This means that not all errors reported by CHECKDB when `repair_allow_data_loss` is recommended will result in data loss. Repair must be run to determine if the resolution to an error will result in data loss. One technique to help narrow down what the repair level will be for each table is to use DBCC CHECKTABLE for any table reporting an error. This will show the minimum level of repair for a given table.
+
+- You can attempt to [script out the database schema](/sql/ssms/scripting/generate-scripts-sql-server-management-studio), use the script to create a new database, and then use a tool like [BCP](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server) or [SSIS Export/Import Wizard](/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard) to export as much of the data as possible from the corrupted database and into the new database. Keep in mind that exporting out from a corrupt table is very likely to fail. In such cases, you can skip this and move to the next table and attempt to salvage what is possible.
+
+> [!WARNING] You must perform manual data validation after CHECKDB repair or data export/import is complete. Microsoft cannot guarantee consistency of the data after repair is done. Refer to DBCC CHECKDB [arguments](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#arguments) for further details.
 
 ## Investigate root cause for database consistency errors
 
