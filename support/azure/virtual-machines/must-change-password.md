@@ -34,11 +34,11 @@ The account you are trying to use on the RDP connection is flagged to change the
 ## Resolution
 
 **Important**
-Before following the troubleshooting steps below, backup the VM OS disk by creating an snapshot, following the steps in [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). If you need to revert any changes made while troubleshooting, you can use the snapshot to recreate the disk.
+Before following the troubleshooting steps below, backup the VM OS disk by creating a snapshot, following the steps in [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk). If you need to revert any changes made while troubleshooting, you can use the snapshot to recreate the disk.
 
 **Troubleshooting:**
 
-Before using this option make sure the VM agent is running. You can check the status of Azure guest agent in the Azure portal by going to the Virtual Machine, then VM > Settings > Properties > Agent status. If the VM agent is running healthy, you can use the Run Command described in [Remote troubleshooting tool for Azure VMs](./remote-tools-troubleshoot-azure-vm-issues.md).
+Before using this option, make sure the VM agent is running. You can check the status of Azure guest agent in the Azure portal by going to the Virtual Machine, then **VM** > **Settings** > **Properties** > **Agent status**. If the VM agent is running healthy, you can use the Run Command described in [Remote troubleshooting tool for Azure VMs](./remote-tools-troubleshoot-azure-vm-issues.md).
 
 If your VM doesn’t have an agent running, you can follow the steps in [Reset local Windows password for Azure VM offline](./virtual-machines/reset-local-password-without-agent.md). When you can connect to the VM, you can use the following instructions to solve the issue on the account that needs a password reset.
 
@@ -50,6 +50,6 @@ If your VM doesn’t have an agent running, you can follow the steps in [Reset l
 
         `net user <USERNAME> * /domain`
 
-    **Note** This will ask for the password. Type the new password to setup the account.
+    **Note** This will ask for the password. Type the new password to set up the account.
 
-1. After you change the password, the issue should be resolved and you can use the account to login into the VM. There is no need to restart the VM.
+1. After you change the password, the issue should be resolved and you can use the account to log in into the VM. There is no need to restart the VM.
