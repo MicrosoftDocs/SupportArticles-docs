@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot database consistency errors reported
 description: This article introduces how to troubleshoot errors reported by DBCC CHECKDB command.
-ms.date: 09/25/2020
+ms.date: 09/20/2021
 ms.prod-support-area-path: Administration and Management
 ms.prod: sql
 ---
@@ -28,11 +28,13 @@ This article will not discuss how to troubleshoot each specific error reported b
 
 DBCC CHECKDB checks the physical and logical consistency of database pages, rows, allocation pages, index relationships, system table referential integrity, and other structure checks. If any of these checks fail (depending on the options you have chosen), errors will be reported as part of the command.
 
-The cause of these problems can vary from file system corruption, underlying hardware system issues, driver issues, corrupted pages in memory, or problems with the SQL Server Engine. Read through the Resolution section for more information on how to find the cause of errors that are reported.
+The cause of these problems can vary from file system corruption, underlying hardware system issues, driver issues, corrupted pages in memory, or problems with the SQL Server Engine. Refer to the [Investigate root cause](#investigate-root-cause-for-database-consistency-errors) section on how to find the cause of errors that are reported.
 
 ## Resolution
 
-The first, best solution if DBCC CHECKDB reports consistency errors is to restore from a known good Backup. However, if you cannot restore from a Backup, then CHECKDB provides a feature to repair errors. If system level problems such as the file system or hardware may be causing these problems, it is recommended you correct these first before restoring or running repair. Microsoft support engineers can't help you with physical recovery of the corrupt data if the repair doesn't fix the consistency errors.
+- The first, best solution if DBCC CHECKDB reports consistency errors is to restore from a known good backup.  See [Restore and Recovery](/sql/relational-databases/backup-restore/restore-and-recovery-overview-sql-server) for more information.
+- If you cannot restore from a backup, then CHECKDB provides a feature to repair errors. If system level problems such as hardware or file system may be causing data corruption, you must correct these first before restoring or running repair. Microsoft support engineers cannot assist you with physical recovery of the corrupt data if the repair doesn't fix the consistency errors or your database backup is corrupt.
+- You can attempt to [script out the database schema](/sql/ssms/scripting/generate-scripts-sql-server-management-studio), use the script to create a new database, and then use a tool like [BCP](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server) or [SSIS Export/Import Wizard](/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard) to export as much of the data as possible from the corrupted database and into the new database. Keep in mind that exporting out from a corrupt table is likely to fail. In such cases, you can skip this and move to the next table.
 
 When you run DBCC CHECKDB, a recommendation is provided to indicate what the minimum repair option that is required to repair all errors. These messages may look something like the following:
 
@@ -40,6 +42,8 @@ When you run DBCC CHECKDB, a recommendation is provided to indicate what the min
  **repair_allow_data_loss** is the minimum repair level for the errors found by DBCC CHECKDB (mydb).
 
 The repair recommendation is the minimum level of repair to attempt to resolve all errors from CHECKDB. This does not mean that this repair option will actually fix all errors. Furthermore, not all errors reported may require this level of repair to resolve the error. This means that not all errors reported by CHECKDB when `repair_allow_data_loss` is recommended will result in data loss. Repair must be run to determine if the resolution to an error will result in data loss. One technique to help narrow down what the repair level will be for each table is to use DBCC CHECKTABLE for any table reporting an error. This will show the minimum level of repair for a given table.
+
+## Investigate root cause for database consistency errors
 
 To find the cause of why database consistency errors have occurred, consider these methods:
 
@@ -53,7 +57,7 @@ To find the cause of why database consistency errors have occurred, consider the
 - Check for any other errors reported by SQL Server such as Access Violations or Assertions.
 - Ensure your databases are using the `PAGE_VERIFY CHECKSUM` option. If checksum errors are being reported, these are indicators that the consistency errors have occurred after SQL Server has written pages to disk so your disk system should be thoroughly checked, see [How to Troubleshoot Msg 824 in SQL Server](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error) for more information about checksum errors.
 - Look for Msg 832 errors in the ERRORLOG. These are indicators that pages may be damaged while they are in cache before written to disk. See [How to Troubleshoot Msg 832 in SQL Server](/sql/relational-databases/errors-events/mssqlserver-832-database-engine-error) for more information.
-- Try to restore a database Backup you know that is "clean" (no errors from CHECKDB) and transaction log Backups you know span the time when the error was encountered. If you can "replay" this problem by restoring a "clean" database Backup and transaction logs then contact Microsoft Technical Support for assistance.
+- On another system, try to restore a database backup you know that is "clean" (no errors from CHECKDB) followed by transaction log backups that span the time when the error was encountered. If you can "replay" this problem by restoring a "clean" database backup and transaction log backups, then contact Microsoft Technical Support for assistance.
 - Data Purity errors can be a problem with the application inserting or updating invalid data into SQL Server tables. For more information about troubleshooting Data Purity errors, see [Troubleshooting DBCC Error 2570 in SQL server 2005](/sql/relational-databases/errors-events/mssqlserver-2570-database-engine-error).
 
 ## More information
