@@ -112,6 +112,8 @@
       href: troubleshoot-remote-desktop-services-issues.md
     - name: Troubleshoot An internal error
       href: Troubleshoot-rdp-internal-error.md
+    - name: Troubleshoot RDP access is denied error 
+      href: troubleshoot-rdp-access-denied.md 
     - name: Troubleshoot connection disconnects frequently
       href: troubleshoot-rdp-intermittent-connectivity.md
     - name: Troubleshoot a general error
