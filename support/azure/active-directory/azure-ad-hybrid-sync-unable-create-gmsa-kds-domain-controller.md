@@ -10,13 +10,7 @@ This troubleshooting guide focuses on the situation where you're unable to insta
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required:
-
-- Domain or Enterprise Administrator credentials to execute the installer.
-- A Global Administrator Account at the Azure AD Tenant.
-- The server for the provisioning agent must be Windows Server 2016 or later, domain-joined, and following directives for Tier 0 based on the Active directory administrative model.
-- At least one domain controller running Windows Server 2016, and both a domain functional level and a forest functional level of at least 2012 R2.
-- [Network prerequisites](/azure/active-directory/cloud-sync/how-to-prerequisites#in-your-on-premises-environment)
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites)
 
 ## Unable to create gMSA because KDS may not be running on domain controller
 

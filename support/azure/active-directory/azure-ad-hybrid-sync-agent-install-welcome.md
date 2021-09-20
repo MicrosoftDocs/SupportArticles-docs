@@ -20,10 +20,4 @@ This troubleshooting doc applies to configuring the agent for [Azure AD Connect 
 
 ## Prerequisites
 
-To install Cloud Provisioning Agent, it is required:
-
-- To have Domain or Enterprise Administrator credentials to execute the installer.
-- A Global Administrator Account at the Azure AD Tenant
-- The server for the provisioning agent must be Windows Server 2016 or later, domain joined and following directives for tier 0 based on Active directory administrative model.
-- At least one domain controller running Windows Server 2016, domain functional level and forest functional level at least 2012 R2.
-- [Network prerequisites](/azure/active-directory/cloud-sync/how-to-prerequisites#in-your-on-premises-environment)
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites)
