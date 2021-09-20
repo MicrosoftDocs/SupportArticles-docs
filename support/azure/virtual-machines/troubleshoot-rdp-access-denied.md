@@ -43,13 +43,13 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
 
  1. Check whether the **Remote Desktop Users**  group has the Read permission for the following key:
 
-    ```
+    ```powershell
     Get-Acl -Path "HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates" | Format-List 
     ```
     
     If this permission is not granted, run the following commands to grant Read access to the **Remote Desktop Users** group:
 
-    ```
+    ```powershell
     $NewAcl = Get-Acl -Path " HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates"
     # Set properties
     $identity = "BUILTIN\Remote Desktop Users"
@@ -64,19 +64,19 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
     ```
 2. Set the following registry key value to ignore the profile loading error:
 
-    ```
+    ```powershell
     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server' -name "IgnoreRegUserConfigErrors" 1 -Type DWord -force
     ```
 
  3. Set the size of the token to its maximum value:
 
-     ```
+     ```powershell
 	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters' -name "MaxTokenSize" 65535 -Type DWord -force 
     ```
 
 1. Set the correct account for the terminal services:
 
-    ```
+    ```powershell
 	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\services\termservice' -name "ObjectName" "NT Authority\NetworkService" -Type String -force
    ```
 
