@@ -45,7 +45,8 @@ The cause of these problems can vary from file system corruption, underlying har
 
 - You can attempt to [script out the database schema](/sql/ssms/scripting/generate-scripts-sql-server-management-studio), use the script to create a new database, and then use a tool like [BCP](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server) or [SSIS Export/Import Wizard](/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard) to export as much of the data as possible from the corrupted database and into the new database. Keep in mind that exporting out from a corrupt table is very likely to fail. In such cases, you can skip this and move to the next table and attempt to salvage what is possible.
 
-> [!WARNING] You must perform manual data validation after CHECKDB repair or data export/import is complete. Microsoft cannot guarantee consistency of the data after repair is done. Refer to DBCC CHECKDB [arguments](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#arguments) for further details.
+> [!WARNING]
+> You must perform manual data validation after CHECKDB repair or data export/import is complete. Microsoft cannot guarantee consistency of the data after repair is done. Refer to DBCC CHECKDB [arguments](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#arguments) for further details.
 
 ## Investigate root cause for database consistency errors
 
