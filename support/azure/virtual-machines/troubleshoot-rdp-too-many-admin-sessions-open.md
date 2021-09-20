@@ -47,7 +47,7 @@ Before start troubleshooting, [back up the OS disk](/azure/virtual-machines/wind
     If the value exists, run the following command to set the MaxConnections value to 0 to allow unlimited RDP connections.
 
     ```powershell
-    reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections /t REG_DWORD /d 0 /f 
+    reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections /t REG_DWORD /d 0xffffffff /f 
     ```
 1. Restart the VM, and then try to connect to the VM.
 
