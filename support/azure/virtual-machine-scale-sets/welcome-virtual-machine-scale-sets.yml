@@ -20,7 +20,7 @@ landingContent:
 # Start card title with a verb
 
   # Card
-  - title: Scaling issue with the scale set
+  - title: Scaling issues with the scale set
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -28,7 +28,14 @@ landingContent:
             url: ./virtual-machine-scale-sets-quota-exceeded.md
           - text: Resolve errors for resource quotas
             url: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
- 
+   # Card
+  - title: Deployment issues with the scale set
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Public IP count limit exceeded
+            url: vmss-public-ip-count-limit-exceeded.md
+
    # Card
   - title: VM extension issues
     linkLists:

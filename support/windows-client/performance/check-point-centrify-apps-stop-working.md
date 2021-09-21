@@ -1,7 +1,7 @@
 ---
 title: Check Point and Centrify apps stop working
 description: Describes an issue in which Check Point and Centrify applications stop working in Windows 10 Version 1607 after the January 2017 Quality Update is installed. A temporary fix is scheduled for a March 2017 update.
-ms.date: 09/24/2020
+ms.date: 09/10/2021
 author: Deland-Han 
 ms.author: delhan
 manager: dcscontentpm
@@ -30,6 +30,4 @@ Temporary support from Microsoft to address this issue was introduced in the [Ma
 
 This support is applicable only to Windows 10 Version 1607. For long-term support for Windows 10 Version 1607 and later versions, contact [Check Point](https://www.checkpoint.com/) or [Centrify](https://www.centrify.com/) about the availability of new, Windows-compatible versions of these applications.
 
-### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

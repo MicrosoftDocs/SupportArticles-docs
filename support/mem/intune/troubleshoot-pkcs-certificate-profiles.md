@@ -6,7 +6,7 @@ ms.reviewer: lacranda
 ---
 # Troubleshoot PKCS certificate deployment in Microsoft Intune
 
-The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you've completed the following tasks as found in [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure#export-the-root-certificate-from-the-enterprise-ca):
+The information in this article can help you resolve several common issues when deploying Public Key Cryptography Standards (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you've completed the following tasks as found in [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure#export-the-root-certificate-from-the-enterprise-ca):
 
 - Review the [requirements for using PKCS certificate profiles](/mem/intune/protect/certificates-pfx-configure#requirements)
 - Export the root certificate from the Enterprise Certification Authority (CA)
