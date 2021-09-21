@@ -1,7 +1,7 @@
 ---
 title: The processor is not supported together with the Windows version error
 description: Discusses an issue in which you receive "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates.
-ms.date: 12/03/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan 
 manager: dcscontentpm
@@ -48,6 +48,4 @@ To ensure that Windows is compatible with the processor you are using, please re
 [Lifecycle support policy FAQ -Windows Products](/lifecycle/faq/windows#%2Fhelp%2F18581%2Flifecycle-support-policy-faq-windows-products%23b4)  
 [Windows 10 Embracing Silicon Innovation](https://blogs.windows.com/windowsexperience/2016/01/15/windows-10-embracing-silicon-innovation)  
 
-## Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
