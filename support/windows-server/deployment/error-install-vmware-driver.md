@@ -1,7 +1,7 @@
 ---
 title: You can't install a VMWare driver in Windows Server 2008 R2
 description: Discusses that you can't install a VMWare driver on a server that is running Windows Server 2008 R2 and that has the Telnet Server service installed. Provides a workaround.
-ms.date: 09/08/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -66,6 +66,4 @@ If this doesn't temporarily fix the problem, verify that the latest version of V
 6. Verify that the Telnet Service logon setting is set correctly.
 7. Restart the server.
 
-## Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

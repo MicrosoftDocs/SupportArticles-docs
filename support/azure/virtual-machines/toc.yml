@@ -112,6 +112,8 @@
       href: troubleshoot-remote-desktop-services-issues.md
     - name: Troubleshoot An internal error
       href: Troubleshoot-rdp-internal-error.md
+    - name: Troubleshoot RDP access is denied error 
+      href: troubleshoot-rdp-access-denied.md 
     - name: Troubleshoot connection disconnects frequently
       href: troubleshoot-rdp-intermittent-connectivity.md
     - name: Troubleshoot a general error
@@ -134,6 +136,8 @@
       href: guest-os-firewall-misconfigured.md
     - name: Troubleshoot RDP error caused by netvsc.sys
       href: troubleshoot-rdp-driver-netvsc.md
+    - name: Maximum allowed connections reached
+      href: troubleshoot-rdp-too-many-admin-sessions-open.md
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
@@ -146,7 +150,7 @@
       href: linux-kernel-panics-upgrade.md
     - name: Device names are changed
       href: troubleshoot-device-names-problems.md
-    - name: Failed to start Switch Root error in an Azure Linux VM
+    - name: Error in an Azure Linux VM - Failed to start Switch Root
       href: resolve-failed-start-switch-root-azure-linux-vm.md
     - name: Grub Rescue
       href: troubleshoot-vm-boot-error.md

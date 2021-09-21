@@ -1,7 +1,7 @@
 ---
 title: Stop error on Lenovo ThinkPad that has KB4568831 or a later update and Enhanced Windows Biometric Security enabled in UEFI
 description: Describes a problem that causes a Stop error on Lenovo ThinkPad devices that were manufactured in 2019 or 2020 and that have received the KB4568831 update.
-ms.date: 12/03/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan 
 manager: dcscontentpm
@@ -50,10 +50,6 @@ The new restrictions are designed to prevent malicious processes from modifying 
 
 Enabling the Enhanced Windows Biometric Security option in the UEFI of Lenovo ThinkPad devices that were manufactured in 2019 and 2020 enables an SDEV table. When Lenovo Vantage software runs, some versions may try to access PCI device configuration space in an unsupported manner. This action causes a Stop error. The error is typically displayed as described in the "Symptoms" section.
 
-## Third-party information disclaimer
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-## Third-party contact disclaimer
-
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

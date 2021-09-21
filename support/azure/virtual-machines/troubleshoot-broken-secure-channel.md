@@ -103,3 +103,7 @@ As a last option, remove the VM from the domain and then re-join the domain.
    ```powershell
    'Add-Computer -ComputerName Server01 -LocalCredential Server01\Admin01 -DomainName Domain02 -Credential Domain02\Admin02 -Restart -Force'
    ```
+
+## Additional resources
+
+[Detailed Concepts: Secure Channel Explained](https://social.technet.microsoft.com/wiki/contents/articles/24644.detailed-concepts-secure-channel-explained.aspx#What_is_a_broken_secure_channel)

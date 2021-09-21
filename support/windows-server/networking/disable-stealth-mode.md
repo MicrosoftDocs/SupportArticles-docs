@@ -1,7 +1,7 @@
 ---
 title: How to disable stealth mode
 description: Discusses how to disable stealth mode (a Windows filtering platform feature) for a given profile.
-ms.date: 09/08/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -64,6 +64,6 @@ Data: **0x00000000 (default - StealthMode enabled) 0x00000001 (StealthMode disab
 
 [Stealth Mode in Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd448557%28v=ws.10%29)  
 [Disable Stealth Mode](/openspecs/windows_protocols/ms-gpfas/e0e681d3-0468-4796-b541-c5f9945041d8)  in the "[MS-GPFAS]: Group Policy: Firewall and Advanced Security Data Structure" specification  
-[Appendix B: Product Behavior](/openspecs/windows_protocols/ms-fasp/1da2ee70-a6ae-4f76-b08f-fdc25c77d8a0) in "[MS-FASP]: Firewall and Advanced Security Protocol" specification (look for FW_PROFILE_CONFIG_DISABLE_STEALTH_MODE in this appendix) Third-party information disclaimer  
+[Appendix B: Product Behavior](/openspecs/windows_protocols/ms-fasp/1da2ee70-a6ae-4f76-b08f-fdc25c77d8a0) in "[MS-FASP]: Firewall and Advanced Security Protocol" specification (look for FW_PROFILE_CONFIG_DISABLE_STEALTH_MODE in this appendix)
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

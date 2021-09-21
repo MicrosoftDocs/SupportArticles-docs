@@ -9,7 +9,6 @@ ms.reviewer: joelste, intunecic, kolldhee
 
 This article gives two methods to help resolve when a Simple Certificate Enrollment Protocol (SCEP) certificate request fails during verification.
 
-
 ## Symptoms
 
 The SCEP certificate request fails during the verification phase on the certificate registration point (CRP). Therefore, Android and iOS devices do not receive SCEP certificates even though NDES is configured.

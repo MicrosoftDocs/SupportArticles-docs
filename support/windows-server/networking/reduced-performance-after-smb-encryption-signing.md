@@ -15,9 +15,9 @@ ms.technology: networking
 ---
 # Reduced networking performance after you enable SMB Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019
 
-This article provides a solution to an issue where networking performance is reduced after you enable Server Message Block (SMB) Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019.
+This article provides a solution to an issue where networking performance is reduced after you enable Server Message Block (SMB) Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019. Windows Server 2022 improves network performance for this scenario.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4458042
 
 ## Symptoms
