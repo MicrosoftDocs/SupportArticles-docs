@@ -22,6 +22,26 @@ search.appverid:
 
 When you try to upload a file in a Microsoft Teams chat, you receive either of the following error messages.
 
+# [Error Message 1](#tab/Error-Message-1)
+
+> The file \<FileName> didn't upload.  
+> The file \<FileName> is locked.
+
+This error occurs while Teams is uploading the file to your OneDrive cloud storage.
+
+# [Error Message 2](#tab/Error-Message-2)
+
+> The file \<FileName> didn't upload.  
+> Your OneDrive isn't available.
+
+# [Error Message 3](#tab/Error-Message-3)
+
+When you access your OneDrive cloud storage through the **Files** tab, you receive the following error message:
+
+> This item might not exist or is no longer available.  
+> This item might have been deleted, expired, or you might not have permission to view it.  
+> Contact the owner of this item for more information.
+
 - **Error Message 1**
 
     > The file \<FileName> didn't upload.  
