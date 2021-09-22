@@ -1,22 +1,22 @@
 ---
-title: Troubleshoot missing Intune information if removing user from Azure AD
-description: Fixes a problem in which a user's device becomes unidentifiable if the user is removed from Azure Active Directory before the device is removed from Microsoft Intune.
-ms.date: 09/02/2021
+title: How to remove a disabled Azure AD user's device from Intune
+description: Fixes a problem in which a device becomes orphaned/unidentifiable if its owner is removed from Azure Active Directory before the device is removed from Microsoft Intune.
+ms.date: 09/22/2021
 ms.prod-support-area-path: Remove devices
 ms.reviewer: patlewis
 ---
 
-# Intune-enrolled device UPN shows as None if you remove a user from Azure AD
+# How to remove a disabled Azure AD user's device from Intune
 
-This article explains how to retrieve a user's Intune information if a user is deleted from Azure Active Directory (Azure AD) before their device is removed from Intune.
+This article explains how to remove an orphaned device in Intune if its owner has been deleted from Azure Active Directory (Azure AD). In this scenario, the device's user principal name (UPN) in Intune is listed as **None**.
 
 ## Symptoms
 
-If you view an enrolled device in the Microsoft Endpoint Manage admin center under **Devices** > **All Devices**, you see that the user principal name (UPN) is listed as **None**.
+If you view an enrolled device in the Microsoft Endpoint Manage admin center under **Devices** > **All Devices**, you see that the UPN is **None**.
 
 ## Cause
 
-This issue occurs when an administrator removes or deletes a user from Azure AD, before deleting their enrolled device in Microsoft Intune. Once the user is removed from Azure AD, the Intune information for that user becomes unavailable and the user principal name (UPN) for their enrolled device shows **None**.
+This issue occurs when an administrator removes or deletes a user from Azure AD, before deleting their enrolled device in Microsoft Intune. Once the user is removed from Azure AD, the Intune information for that user becomes unavailable and the UPN for their enrolled device shows **None**.
 
 ## Solution
 
@@ -25,7 +25,7 @@ A script is available that removes an orphaned, Intune-managed device if the own
 
 ### Prerequisites
 
-- The Azure Active Directory recycle bin must be enabled before you delete a device for a deleted user. Read more about [Azure AD Connect sync: Enable AD recycle bin](/azure/active-directory/hybrid/how-to-connect-sync-recycle-bin).
+- The Azure AD recycle bin must be enabled before you delete a device for a deleted user. Read more about [Azure AD Connect sync: Enable AD recycle bin](/azure/active-directory/hybrid/how-to-connect-sync-recycle-bin).
 
 - The logged-on user must have the appropriate Graph permissions set up in Intune before you run the script. For more information, see the **Intune permission scopes** section of [How to use Azure AD to access the Intune APIs in Microsoft Graph](/mem/intune/developer/intune-graph-apis#intune-permission-scopes).
 
@@ -49,5 +49,5 @@ After the prerequisites are installed or met, follow these steps to use the scri
 
 1. Download the RemoveIntuneDevice.ps1 script file to your local Windows computer.
 1. Run PowerShell at an elevated administrator account.
-1. Browse to the folder to which you copied RemoveIntuneDevice.ps1, and then type: **.\RemoveIntuneDevice.ps1**.
+1. Browse to the folder where you copied RemoveIntuneDevice.ps1, and then type: **.\RemoveIntuneDevice.ps1**.
 1. Follow the prompts for authentication and to get the UPN of the owner or previous owner's device.

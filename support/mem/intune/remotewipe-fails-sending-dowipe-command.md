@@ -1,5 +1,5 @@
 ---
-title: RemoteWipe CSP fails to send a doWipe command
+title: RemoteWipe CSP fails to execute on Windows 10 client
 description: Fixes an issue in which RemoteWipe fails to execute on Windows 10 client and an Event ID 400 error is generated.
 ms.date: 09/02/2021
 ms.prod-support-area-path: Device management
@@ -10,7 +10,7 @@ This article fixes an issue in which RemoteWipe fails to execute on Windows 10 c
 
 ## Symptoms
 
-When using the RemoteWipe CSP to send a `doWipe` command to a Windows 10 computer, the Windows computer shows no sign of wiping the device and an Event ID 400 error is generated in the `Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin` event log with **The request is not supported**:
+When using the RemoteWipe CSP to send a command, such as `doWipe`, to a Windows 10 computer, the Windows computer shows no sign of wiping the device and an Event ID 400 error is generated in the `Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin` event log with **The request is not supported**:
 
 > Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin  
 > Source: DeviceManagement-Enterprise-Diagnostics-Provider  
