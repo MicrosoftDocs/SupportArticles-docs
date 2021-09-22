@@ -13,12 +13,13 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer:
 appliesto:
-- Outlook 2016
+- Outlook 2003
+- Outlook 2007
+- Outlook 2010
 - Outlook 2013
-- Microsoft Outlook 2010
-- Microsoft Office Outlook 2007
-- Microsoft Office Outlook 2003
-- Outlook for Office 365
+- Outlook 2016
+- Outlook 2019
+- Outlook for Microsoft 365
 search.appverid: MET150
 ---
 # Hyperlinks are not working in Outlook
@@ -158,7 +159,7 @@ This section is intended for advanced computer users. For help with advanced tro
 
    :::image type="content" source="media/hyperlinks-not-working-in-outlook/export.png" alt-text="select Export":::
 
-5. Note the location where the file will be saved. The registry file can be saved directly to the hard disk or floppy disk.
+5. Note the location where the file will be saved.
 6. Type a unique file name, and then select **Save**.
 7. Exit Registry Editor.
 
