@@ -1,7 +1,7 @@
 ---
 title: Error when BIOS is in legacy mode with TPM 2.0
 description: Describes an issue that triggers an error (TPM is ready for use, with reduced functionality) when the BIOS is in legacy mode with TPM 2.0.
-ms.date: 09/08/2020
+ms.date: 09/08/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -38,9 +38,6 @@ For more information about secure boot and TPM, see the following resources:
 
 [Windows hardware certification requirements for Client and Server systems](https://msdn.microsoft.com/library/windows/hardware/jj128256)
 
-[UEFI implications for Windows Server (pdf)](https://members.uefi.org/learning_center/UEFI_PlugFest_UEFI_implications_for_Windows_Server_Microsoft_March_2013.pdf)  
-
 [Trusted computing group](https://www.trustedcomputinggroup.org/)  
 
-Third-party information disclaimer  
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
