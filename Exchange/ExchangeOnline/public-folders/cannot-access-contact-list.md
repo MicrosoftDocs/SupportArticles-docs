@@ -39,7 +39,7 @@ To work around this issue, use one of the following methods.
 
 ### Method 1: Use Outlook on the web to access the contact list
 
-In Outlook on the web, [add the public folder to Favorites](/exchange/collaboration-exo/public-folders/use-favorite-public-folders#add-favorite-public-folders-in-outlook-on-the-web), and then access the contact list.
+In Outlook on the web, [add the public folder to Favorites](/exchange/collaboration-exo/public-folders/use-favorite-public-folders#add-favorite-public-folders-in-outlook-on-the-web), and then access the contact list (e.g. select the People icon --> expand Public folders --> click on the Contact PF --> access the Contact list).
 
 ### Method 2: Use Outlook in Cached Exchange Mode
 
