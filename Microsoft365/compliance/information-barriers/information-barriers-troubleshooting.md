@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting communications and information barriers
 description: Use this article as a guide for troubleshooting communications and information barriers.
-author: robmazz
-ms.author: robmazz
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
