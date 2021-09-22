@@ -157,8 +157,6 @@
       href: ../calendars/activesync-not-downloading-attachments-to-calendar-items.md
     - name: Attendees receive multiple meeting invitations
       href: ../calendars/attendees-receive-multiple-meeting-invitations.md
-    - name: Attendees get cancellation followed by a meeting update
-      href: ../calendars/attendees-receive-meeting-cancellation-followed-by-meeting-update.md
     - name: Calendar on mobile device isn't synced to Online mailbox
       href: ../calendars/calendar-on-mobile-device-not-synced-to-online-mailbox.md
     - name: Can't accept a meeting invitation for a room mailbox
