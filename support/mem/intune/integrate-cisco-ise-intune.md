@@ -110,9 +110,10 @@ These values are used when you [configure the Microsoft Intune server in ISE](#c
 ## Configure API permissions
 
 1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **App registrations**, and then select the ISE application.
-2. Select **API permissions** > **Add a permission**.
-3. Select **Microsoft Graph** from the APIs.
-4. Select **Delegated permissions**, and then select the following permissions:
+2. Select **API permissions** > **Add a permission**.  
+3. Select **APIs my organization uses**.
+4. Select **Microsoft Graph** from the APIs.
+5. Select **Delegated permissions**, and then select the following permissions:
 
    |Permission|Description|
    |----------|-----------|
@@ -123,7 +124,7 @@ These values are used when you [configure the Microsoft Intune server in ISE](#c
    |`openid`|Sign users in|
    |`offline_access`|Maintain access to data you have given it access to|
 5. Select **Application permissions**, expand **Directory**, and then select the `Directory.Read.All` permission.
-6. Select **Intune** from the APIs, select **Application permissions**, and then select the `get_device_compliance` permission.
+6. Select **Microsoft Intune API** with the ClientID:**c161e42e-d4df-4a3d-9b42-e7a3c31f59d4** from the APIs, select **Application permissions**, and then select the `get_device_compliance` permission.
 7. Select **Add permissions**.
 8. Select **Grant admin consent for \<tenant>** to grant administrator consent to the configured permissions. Select **Yes** when you are prompted to confirm the consent action.
 
