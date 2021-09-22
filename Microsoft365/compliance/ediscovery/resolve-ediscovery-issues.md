@@ -28,7 +28,9 @@ This article covers basic troubleshooting steps you can take to identify and res
 
 ## Error/issue: Ambiguous location
 
-If you try to add user's mailbox location to search and there are duplicate or conflicting objects with the same userID in the Exchange Online Protection (EOP) directory, you receive this error: `The compliance search contains the following invalid location(s):useralias@contoso.com. The location "useralias@contoso.com" is ambiguous`.
+If you try to add user's mailbox location to search and there are duplicate or conflicting objects with the same userID in the Exchange Online Protection (EOP) directory, you receive this error:
+
+> The compliance search contains the following invalid location(s):`useralias@contoso.com`. The location `useralias@contoso.com` is ambiguous.
 
 ### Resolution
 
