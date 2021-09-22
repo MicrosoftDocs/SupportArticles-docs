@@ -31,7 +31,6 @@ Countries that have Azure dependencies availability as of September 2021:
 - Brazil
 - Canada
 - France
-- Germany
 - India
 - Japan
 - South Korea
