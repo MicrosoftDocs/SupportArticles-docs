@@ -85,7 +85,7 @@ To resolve this error, [delete the re-created user, and restore the original use
 
 Error 1 can occur if the user doesn't have permissions to the MySite Host. To make SharePoint Online work as expected, all users who use OneDrive sites must have access to the MySite Host. In order to restore default permissions to MySite host site, use one of the following methods:
 
-1. Navigate to the site permissions page in your tenant: `https://contoso-my.sharepoint.com/_layouts/15/user.aspx`, and grant **Read** permission to **Everyone except external users**
+1. Navigate to the site permissions page in your tenant: `https://contoso-my.sharepoint.com/_layouts/15/user.aspx`, and grant **Read** permission to **Everyone except external users**.
 
 2. Use SharePoint Online Management Shell to run the following two cmdlets:
 
