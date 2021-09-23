@@ -202,9 +202,9 @@ As can be derived from the previous statement, the duration of the freeze is the
 
 Furthermore, the **size of the dump file** on disk should be planned for, especially if multiple dumps are a possibility and if large, non-default dump types are selected. Make sure you review the 'Dump Types' section to know what to expect. By default, some dump methods will create the dump in SQL Server Instance's *\Log* folder, which, in default simple configuration would also be system disk and data+log disk for SQL Server. Bringing that disk to saturation will have severe impact on SQL Server and/or system availability.
 
-## Address impact of dump generation on clustered systems
+## Manage the impact on clustered systems
 
-The process stops responding during the dump generation. This might affect the SQL Server service availability and trigger resources failover in Always On contexts (both Failover cluster instance and Availability group). The dump generation of different processes impacts resources differently. Read the [Impact of Dump Generation](#impact-of-dump-generation) and [Dump Types](#dump-types) sections carefully.
+The process is suspended temporarily during the dump generation. This might affect the SQL Server service availability and trigger resources failover in Always On contexts (both Failover cluster instance and Availability group). The dump generation of different processes impacts resources differently. Read the [Impact of Dump Generation](#impact-of-dump-generation) and [Dump Types](#dump-types) sections carefully.
 
 When capturing a SQL Server process dump file (especially a filtered dump file or a full dump file) on a clustered SQL Server or a SQL Server hosting an Always On availability group (AG) instance, the clustered SQL Server or AG might fail over to another node if the dump file takes too long to be completed. To prevent failover, use the following settings before capturing the dump file. The change can be reverted after a dump file is taken:
 
@@ -214,7 +214,7 @@ When capturing a SQL Server process dump file (especially a filtered dump file o
   - Change the auto failover of all replicas to manual failover. In SSMS, right-click replica, select **Properties** and change the "auto failover" of all replicas to manual failover on the **Properties** tab. For more information, see [Change the Failover Mode of an Availability Replica (SQL Server)](/sql/database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server).
   - Increase the **LeaseTimeout** to 60,000 ms (60 seconds) and change **HealthCheckTimeout** to 90,000 ms (90 seconds). In **Cluster Administrator**, right-click AG resource, select **Properties**, and then switch to the **Properties** tab to modify both settings. For more information, see [Configure HealthCheckTimeout Property Settings](/sql/sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings).
 
-## Improvements to reduce the impact on SQL Server
+## Product improvements to reduce the impact on SQL Server
 
 Three major improvements have been added to recent versions of SQL Server to reduce the size of the dump file and/or time for generating the memory dump:
 
@@ -224,7 +224,7 @@ Three major improvements have been added to recent versions of SQL Server to red
 
 - Shortened output in the Errorlog
 
-SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You will see the following messages in the SQL Server Error log when the bitmap is enabled or disabled respectively: `Page exclusion bitmap is enabled.` and `Page exclusion bitmap is disabled.`
+**Bitmap filtering mechanism:** SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You will see the following messages in the SQL Server Error log when the bitmap is enabled or disabled respectively: `Page exclusion bitmap is enabled.` and `Page exclusion bitmap is disabled.`
 
 - SQL Server 2016
 
@@ -240,9 +240,9 @@ SQL Server allocates a bitmap that keeps track of memory pages to be excluded fr
 
     This is enabled by default in SQL Server 2019 RTM. It can be disabled via T8095.
 
-Elimination of repeated dumps on the same issue:  Repeated memory dumps on the same problem are now eliminated. Using a stack signature, the SQL engine keeps track if an exception has already occurred and will not produce a new memory dump if there is one already. This applies to access violations, stack overflow, asserts, and index corruption exceptions. This significantly reduces the amount of disk space used by memory dumps and does not freeze the process temporarily to generate a dump. This was added in SQL Server 2019.
+**Elimination of repeated dumps on the same issue:**  Repeated memory dumps on the same problem are eliminated. Using a stack signature, the SQL engine keeps track if an exception has already occurred and will not produce a new memory dump if there is one already. This applies to access violations, stack overflow, asserts, and index corruption exceptions. This significantly reduces the amount of disk space used by memory dumps and does not freeze the process temporarily to generate a dump. This was added in SQL Server 2019.
 
-Shortened output in the Error log: The content generated in the SQL Server Error log from a single memory dump cannot only be overwhelming, but it also slowed down the process of generating a memory dump due to the time all this information had to be serialized into a text format in the Error log. In SQL Server 2019, the content stored in the Error log upon dump generation has been greatly reduced and it may look like this:
+**Shortened output in the Error log:** The content generated in the SQL Server Error log from a single memory dump cannot only be overwhelming, but it also slowed down the process of generating a memory dump due to the time all this information had to be serialized into a text format in the Error log. In SQL Server 2019, the content stored in the Error log upon dump generation has been greatly reduced and it may look like this:
 
 ```console
 DateTimespidS pid    **Dump thread - spid = 0, EC = 0x0000015C7169BF40
@@ -285,9 +285,9 @@ The SQL Server process calls the Sqldumper.exe utility internally to generate a 
 
 If two or more trace flags are active, the option indicating the largest memory dump will be honored. For example, if trace flags 2551 and 2544 are used, SQL Server will create a full memory dump.
 
-### Cluster failovers and the Sqldumper.exe utility
+### Generate a memory dump on Cluster failovers
 
-In cluster failover scenarios, the SQL Server resource DLL now can obtain a dump file before the failover occurs. When the SQL Server resource DLL determines that a SQL Server resource has failed, the SQL Server resource DLL uses the Sqldumper.exe utility to obtain a dump file of the SQL Server process. To make sure that the Sqldumper.exe utility successfully generates the dump file, you must set the following three properties as prerequisites:
+In cluster failover scenarios, the SQL Server resource DLL can obtain a dump file before the failover occurs to assist with troubleshooting. When the SQL Server resource DLL determines that a SQL Server resource has failed, the SQL Server resource DLL uses the Sqldumper.exe utility to obtain a dump file of the SQL Server process. To make sure that the Sqldumper.exe utility successfully generates the dump file, you must set the following three properties as prerequisites:
 
 - SqlDumperDumpTimeOut
     A user-specified time-out. The resource DLL waits for the dump file to be completed before the resource DLL stops the SQL Server service.
