@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-script-host-(wsh), csstroubleshoot
+ms.prod-support-area-path: Windows Script Host (WSH)
 ms.technology: windows-client-administration-management-development
 ---
 # How to create a desktop shortcut with the Windows Script Host

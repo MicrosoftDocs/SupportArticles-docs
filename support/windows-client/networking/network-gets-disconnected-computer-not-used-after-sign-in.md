@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tyagi
-ms.custom: sap:tcp/ip-communication, csstroubleshoot
+ms.prod-support-area-path: TCP/IP communication
 ms.technology: windows-client-networking
 ---
 # Network gets disconnected for several seconds if the computer isn't used after you sign in to Windows 10

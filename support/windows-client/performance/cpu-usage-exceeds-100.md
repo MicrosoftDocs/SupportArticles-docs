@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
+ms.prod-support-area-path: Performance monitoring tools
 ms.technology: windows-client-performance
 ---
 # CPU usage exceeds 100% in Task Manager and Performance Monitor if Intel Turbo Boost is active

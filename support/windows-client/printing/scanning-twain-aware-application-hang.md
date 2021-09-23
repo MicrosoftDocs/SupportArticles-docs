@@ -3,14 +3,14 @@ title: Scanning using a scanner may cause a TWAIN aware application to hang
 description: Provides a resolution for the issue that scanning using a scanner may cause a TWAIN aware application to hang
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:issues-with-scanning, csstroubleshoot
+ms.prod-support-area-path: Issues with Scanning
 ms.technology: windows-client-printing
 ---
 # Scanning using a scanner may cause a TWAIN aware application to hang

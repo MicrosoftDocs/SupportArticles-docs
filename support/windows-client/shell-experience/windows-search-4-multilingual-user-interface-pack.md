@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-search, csstroubleshoot
+ms.prod-support-area-path: Windows Search
 ms.technology: windows-client-shell-experience
 ---
 # Description of Windows Search 4.0 and the Multilingual User Interface Pack for Windows Search 4.0

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:1st-party-applications, csstroubleshoot
+ms.prod-support-area-path: 1st Party Applications
 ms.technology: windows-client-application-compatibility
 ---
 # Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard

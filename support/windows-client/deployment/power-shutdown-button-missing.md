@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:power-management, csstroubleshoot
+ms.prod-support-area-path: Power Management
 ms.technology: windows-client-deployment
 ---
 # Power/shutdown button may be missing from the Windows 8.1 start screen

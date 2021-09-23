@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.prod-support-area-path: Wireless networking and 802.1X authentication
 ms.technology: windows-client-networking
 ---
 # How to configure Wi-Fi Sense and Paid Wi-Fi Services on Windows 10 in an enterprise

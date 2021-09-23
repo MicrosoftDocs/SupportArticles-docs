@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
+ms.prod-support-area-path: File Explorer/Windows Explorer
 ms.technology: windows-client-shell-experience
 ---
 # Renaming a network folder in Windows 7 Explorer fails with "the action can't be completed..."

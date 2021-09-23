@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
+ms.prod-support-area-path: Applications
 ms.technology: windows-client-performance
 ---
 # SuperFetch(SysMain) service spikes the CPU for 1-2 minutes when a 64-bit application is running in Windows
@@ -18,7 +18,7 @@ ms.technology: windows-client-performance
 This article provides a workaround for an issue where the system experiences CPU spike for 1-2 minutes when a 64-bit application runs in the 64-bit version of Windows.
 
 _Applies to:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 2723033
+_Original KB number:_ &nbsp;2723033
 
 ## Symptoms
 

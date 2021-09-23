@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: timtho, kaushika
-ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
+ms.prod-support-area-path: File Explorer/Windows Explorer
 ms.technology: windows-client-shell-experience
 ---
 # How to remove the Security tab by using a group policy  
@@ -18,7 +18,7 @@ ms.technology: windows-client-shell-experience
 This article describes how an administrator can disable the **Security** tab from Windows 2000 Professional-based workstations that are members of a Windows 2000 domain.
 
 _Applies to:_ &nbsp; Windows 2000  
-_Original KB number:_ &nbsp; 303153
+_Original KB number:_ &nbsp;303153
 
 ## Summary
 

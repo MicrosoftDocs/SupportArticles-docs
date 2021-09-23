@@ -3,14 +3,14 @@ title: Registry keys for smart card PIN caching options are no longer available 
 description: Describes the changes in Windows 10 regarding the registry keys for smart card PIN caching options.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, monaha
-ms.custom: sap:smart-card-logon, csstroubleshoot
+ms.prod-support-area-path: Smart card logon
 ms.technology: windows-client-user-profiles
 ---
 # Registry keys for smart card PIN caching options are no longer available in Windows 10

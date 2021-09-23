@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.prod-support-area-path: Devices and Drivers
 ms.technology: windows-client-deployment
 ---
 # Firmware update failures in Windows 8.1
@@ -18,7 +18,7 @@ ms.technology: windows-client-deployment
 This article describes how and why firmware updates occasionally fail in a Windows 8.1 environment.
 
 _Applies to:_ &nbsp; Windows 8.1  
-_Original KB number:_ &nbsp; 2909710
+_Original KB number:_ &nbsp;2909710
 
 ## Summary
 

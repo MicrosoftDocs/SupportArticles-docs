@@ -2,7 +2,7 @@
 title: How to downgrade from Windows 8
 description: Describes the factors that determine whether you can downgrade Windows 8 to an earlier version of Windows.
 ms.date: 10/22/2020
-author: Deland-Han
+author: Deland-Han 
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jennrowe
-ms.custom: sap:servicing, csstroubleshoot
+ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
 ---
 # How to downgrade from Windows 8

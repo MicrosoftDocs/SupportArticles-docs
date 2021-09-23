@@ -2,7 +2,7 @@
 title: Errors when you run WinRM commands
 description: Describes the errors that are triggered when you run various WinRM commands to verify local computer functionality in a Windows Remote Management environment.
 ms.date: 09/30/2020
-author: Deland-Han
+author: Deland-Han 
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:winrm, csstroubleshoot
+ms.prod-support-area-path: WinRM
 ms.technology: windows-client-system-management-components
 ---
 # Errors when you run WinRM commands to check local functionality in a Windows Server 2008 environment

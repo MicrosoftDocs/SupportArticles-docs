@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:modern,-inbox-and-microsoft-store-apps, csstroubleshoot
+ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
 ms.technology: windows-client-shell-experience
 ---
 # Microsoft-Windows-AppReadiness event ID 215 error after a user first logs on

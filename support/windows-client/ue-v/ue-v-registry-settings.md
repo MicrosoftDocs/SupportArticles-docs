@@ -2,7 +2,7 @@
 title: UE-V registry settings
 description: Describes UE-V registry settings.
 ms.date: 09/16/2020
-author: Deland-Han
+author: Deland-Han 
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:user-experience-virtualization-(ue-v), csstroubleshoot
+ms.prod-support-area-path: User Experience Virtualization (UE-V)
 ms.technology: windows-client-user-experience-virtualization-ue-v
 ---
 # User Experience Virtualization (UE-V) registry settings

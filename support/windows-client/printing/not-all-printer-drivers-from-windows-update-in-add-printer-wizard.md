@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration---installing-print-drivers, csstroubleshoot
+ms.prod-support-area-path: Management and Configuration - Installing Print drivers
 ms.technology: windows-client-printing
 ---
 # Not all printer drivers downloaded from Windows Update are listed in Add Printer wizard

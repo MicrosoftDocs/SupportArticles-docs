@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
-ms.custom: sap:winrm, csstroubleshoot
+ms.prod-support-area-path: WinRM
 ms.technology: windows-client-system-management-components
 ---
 # How to configure WINRM for HTTPS

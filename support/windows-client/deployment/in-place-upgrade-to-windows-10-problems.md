@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, frankroj
-ms.custom: sap:servicing, csstroubleshoot
+ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
 ---
 # Updates fix in-place upgrade to Windows 10 problem

@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, v-dehaas, waltere, lseri
-ms.custom: sap:folder-redirection-and-offline-files-and-folders-(csc), csstroubleshoot
+ms.reviewer: kaushika, v-dehaas, waltere, lseri 
+ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
 ms.technology: windows-client-networking
 ---
 # How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows
@@ -18,7 +18,7 @@ ms.technology: windows-client-networking
 This article describes how to change the location of the client-side caching (CSC) folder by configuring the CacheLocation registry value.
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 937475
+_Original KB number:_ &nbsp;937475
 
 ## Introduction
 

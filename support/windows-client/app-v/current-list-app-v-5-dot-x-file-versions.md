@@ -3,14 +3,14 @@ title: Current list of App-V 5.x file versions
 description: Provides current list of App-V 5.x file versions.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markstan
-ms.custom: sap:installation-and-configuration, csstroubleshoot
+ms.prod-support-area-path: Installation and configuration
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # Current list of App-V 5.x file versions

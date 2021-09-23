@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.prod-support-area-path: Devices and Drivers
 ms.technology: windows-client-deployment
 ---
 # Event ID 7000 or 7026 is logged in the System log on a computer that's running Windows

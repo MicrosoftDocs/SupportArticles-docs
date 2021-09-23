@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:1st-party-applications, csstroubleshoot
+ms.prod-support-area-path: 1st Party Applications
 ms.technology: windows-client-application-compatibility
 ---
 # Registry key WOW6432Node may be listed in system registry in 32 bit (x86) version of Windows 7

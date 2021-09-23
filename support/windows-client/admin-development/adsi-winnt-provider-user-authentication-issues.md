@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-services-interface-(adsi), csstroubleshoot
+ms.prod-support-area-path: Active Directory Services Interface (ADSI)
 ms.technology: windows-client-administration-management-development
 ---
 # User authentication issues with the Active Directory Service Interfaces WinNT provider

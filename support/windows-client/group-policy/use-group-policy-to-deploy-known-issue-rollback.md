@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.technology: windows-client-group-policy
 keywords: Windows Update, known issue, kir, group policy, rollback
 ---

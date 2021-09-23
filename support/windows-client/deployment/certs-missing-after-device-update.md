@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:deployment, csstroubleshoot
+ms.prod-support-area-path: deployment
 ms.technology: windows-client-deployment
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
 ---
@@ -19,7 +19,7 @@ keywords: managed devices, certificates, WSUS, MECM, Windows Update
 
 This article provides workarounds for an issue in which a device loses its system and user certificates after an operating system update.
 
-_Applies to:_ &nbsp; Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1903
+_Applies to:_ &nbsp;Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1903
 
 ## Symptoms
 

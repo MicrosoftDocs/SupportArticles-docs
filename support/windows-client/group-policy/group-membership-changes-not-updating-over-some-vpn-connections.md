@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 ms.technology: windows-client-group-policy
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.reviewer: kaushika
 localization_priority: medium
 keywords: group policy, group membership

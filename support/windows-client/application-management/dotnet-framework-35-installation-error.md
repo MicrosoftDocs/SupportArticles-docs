@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:.net-framework-installation, csstroubleshoot
+ms.prod-support-area-path: .NET Framework installation
 ms.technology: windows-client-application-compatibility
 adobe-target: true
 ---

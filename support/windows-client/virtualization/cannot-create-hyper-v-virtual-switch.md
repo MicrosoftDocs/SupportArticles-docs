@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, bobcombs, ajayps
-ms.custom: sap:hyper-v-network-virtualization-(hnv), csstroubleshoot
+ms.prod-support-area-path: Hyper-V Network Virtualization (HNV)
 ms.technology: windows-client-hyper-v
 ---
 # Can't create a Hyper-V virtual switch on 64-bit versions of Windows 10

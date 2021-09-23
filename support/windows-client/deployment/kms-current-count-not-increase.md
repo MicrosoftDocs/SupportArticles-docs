@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:activation, csstroubleshoot
+ms.prod-support-area-path: Activation
 ms.technology: windows-client-deployment
 ---
 # The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network
@@ -18,7 +18,7 @@ ms.technology: windows-client-deployment
 This article provides help to fix a problem where the number of clients in a Key Management Server (KMS) computer doesn't increase when you add new Windows Vista-based client computers to the network.
 
 _Applies to:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 929829
+_Original KB number:_ &nbsp;929829
 
 ## Symptoms
 

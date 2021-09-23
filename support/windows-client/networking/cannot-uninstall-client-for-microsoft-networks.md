@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.prod-support-area-path: TCP/IP communications
 ms.technology: windows-client-networking
 ---
 # Error 0x80071779 when removing network components in Windows 10

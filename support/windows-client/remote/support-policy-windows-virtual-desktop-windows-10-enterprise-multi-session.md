@@ -3,14 +3,14 @@ title: Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-
 description: Describes the Microsoft support policy for Azure Virtual Desktop and Windows 10 Enterprise for virtual desktops. Both are supported in Azure only.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jerrycif, v-tea, v-jesits
-ms.custom: sap:virtual-desktop-infrastructure-(vdi), csstroubleshoot
+ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
 ms.technology: windows-client-rds
 ---
 # Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-session

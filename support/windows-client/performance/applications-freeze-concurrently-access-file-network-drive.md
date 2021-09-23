@@ -3,14 +3,14 @@ title: Applications freeze when they concurrently try to access a file on a netw
 description: Discusses an issue in which applications freeze when they try to access the same file on a network drive in Windows.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:applications, csstroubleshoot
+ms.prod-support-area-path: Applications
 ms.technology: windows-client-performance
 ---
 # Applications freeze when they concurrently try to access a file on a network drive in Windows

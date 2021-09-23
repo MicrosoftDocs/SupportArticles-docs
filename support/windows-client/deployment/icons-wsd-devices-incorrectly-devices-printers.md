@@ -3,14 +3,14 @@ title: Icons for WSD devices show up incorrectly as a different class
 description: This article describes an issue with Web Services for Devices, and includes an automated FixIt solution.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.prod-support-area-path: Devices and Drivers
 ms.technology: windows-client-deployment
 ---
 # Icons for WSD devices may show up incorrectly as a different class under Devices and Printers

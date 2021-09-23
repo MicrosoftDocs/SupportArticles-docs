@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.prod-support-area-path: Devices and Drivers
+ms.technology: windows-client-deployment 
 ---
 # Some non-compliant USB 3.0 devices may not function when connected to USB 3.0 ports in Windows 8
 

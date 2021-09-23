@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
+ms.prod-support-area-path: MSI
 ms.technology: windows-client-application-compatibility
 ---
 # "HRESULT: 0x80070BC9" error message while you're installing an MSI package during Windows setup or hotfix installation
@@ -18,7 +18,7 @@ ms.technology: windows-client-application-compatibility
 This article provides help to fix the 0x80070BC9 error that occurs when you're installing an MSI package during Windows setup or hotfix installation.
 
 _Applies to:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 3024471
+_Original KB number:_ &nbsp;3024471
 
 ## Symptoms
 

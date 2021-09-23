@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dpi-and-display-issues, csstroubleshoot
+ms.prod-support-area-path: DPI and Display Issues
 ms.technology: windows-client-shell-experience
 ---
 # Unable to open high-resolution file in Windows Photo Gallery

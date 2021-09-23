@@ -3,14 +3,14 @@ title: The processor is not supported together with the Windows version error
 description: Discusses an issue in which you receive "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates.
 ms.date: 09/10/2021
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:servicing, csstroubleshoot
+ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
 adobe-target: true
 ---

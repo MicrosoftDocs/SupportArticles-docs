@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cortana-and-search, csstroubleshoot
+ms.prod-support-area-path: Cortana and Search
 ms.technology: windows-client-shell-experience
 ---
 # Known issues for Windows Desktop Search and Cortana in Windows 10

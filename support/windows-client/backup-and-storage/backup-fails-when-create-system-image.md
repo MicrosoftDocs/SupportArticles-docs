@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
+ms.prod-support-area-path: Configuring and using Backup software
+ms.technology: windows-client-backup-and-storage 
 ---
 # Backup fails when you try to create a system image
 

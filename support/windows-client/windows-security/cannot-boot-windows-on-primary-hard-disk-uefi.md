@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
+ms.prod-support-area-path: Secure Boot and UEFI
 ms.technology: windows-client-security
 ---
 # Unable to boot if more than one EFI system partition is present

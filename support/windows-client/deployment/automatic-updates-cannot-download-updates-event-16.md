@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, drewel
-ms.custom: sap:servicing, csstroubleshoot
+ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
 ---
 # Automatic Updates can't download updates and event ID 16 is logged
@@ -18,7 +18,7 @@ ms.technology: windows-client-deployment
 This article describes an issue where Automatic Updates can't download updates and event ID 16 is recorded in the system log.
 
 _Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 824208
+_Original KB number:_ &nbsp;824208
 
 ## Symptoms
 

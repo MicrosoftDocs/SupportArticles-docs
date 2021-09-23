@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-profiles, csstroubleshoot
+ms.prod-support-area-path: User profiles
 ms.technology: windows-client-user-profiles
 ---
 # Renaming a user account doesn't automatically change the profile path

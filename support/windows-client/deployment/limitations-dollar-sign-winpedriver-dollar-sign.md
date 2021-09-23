@@ -2,7 +2,7 @@
 title: Limitations of $WinPeDriver$
 description: Describes limitations of $WinPeDriver$.
 ms.date: 09/15/2020
-author: Deland-Han
+author: Deland-Han 
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.prod-support-area-path: Devices and Drivers
 ms.technology: windows-client-deployment
 ---
 # Limitations of $WinPeDriver$ when used in conjunction with other driver injection methods

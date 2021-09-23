@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dpi-and-display-issues, csstroubleshoot
+ms.prod-support-area-path: DPI and Display Issues
 ms.technology: windows-client-shell-experience
 ---
 # When using USB-attached monitor, display configuration may not be retained after reboot
@@ -18,7 +18,7 @@ ms.technology: windows-client-shell-experience
 This article explains an issue where the display configuration is retained after reboot when you use USB-attached monitor.
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 2465368
+_Original KB number:_ &nbsp;2465368
 
 ## Symptoms
 

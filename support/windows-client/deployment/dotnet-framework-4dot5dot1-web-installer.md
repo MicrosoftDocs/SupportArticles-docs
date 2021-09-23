@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, preetikr
-ms.custom: sap:setup, csstroubleshoot
+ms.prod-support-area-path: Setup
 ms.technology: windows-client-deployment
 ---
 # The .NET Framework 4.5.1 (web installer) for Windows 7 SP1 and Windows Server 2008 R2 SP1

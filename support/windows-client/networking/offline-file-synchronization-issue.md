@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:folder-redirection-and-offline-files-and-folders-(csc), csstroubleshoot
+ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
 ms.technology: windows-client-networking
 ---
 # Offline File Synchronization - In Windows 7 the "Work Offline/Work Online" option button disappears from Windows Explorer after an offline/online transition and the Client-Side Caching remains offline until the next restart of the computer

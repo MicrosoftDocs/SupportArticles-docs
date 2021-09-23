@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, naokioh, juesaigo
-ms.custom: sap:errors-and-troubleshooting:-print-output-or-print-failures, csstroubleshoot
+ms.prod-support-area-path: 'Errors and troubleshooting: Print output or print failures'
 ms.technology: windows-client-printing
 ---
 # Two-sided (duplex) printing options cannot be set for applications in Windows 8.1 and Windows 8
@@ -18,7 +18,7 @@ ms.technology: windows-client-printing
 This article provides workarounds for an issue where two-sided (duplex) printing options can't be set for applications.
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 3022505
+_Original KB number:_ &nbsp;3022505
 
 ## Symptoms
 

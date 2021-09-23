@@ -10,13 +10,13 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
+ms.prod-support-area-path: MSI
 ms.technology: windows-client-application-compatibility
 ---
 # Error when trying to uninstall an application: Error opening installation log file. Verify that the specified location exists and is writable
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 2564571
+_Original KB number:_ &nbsp;2564571
 
 ## Summary
 

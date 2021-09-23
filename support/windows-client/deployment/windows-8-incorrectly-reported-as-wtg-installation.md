@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:setup, csstroubleshoot
+ms.prod-support-area-path: Setup
 ms.technology: windows-client-deployment
 ---
 # Multiple operations fail if Windows 8 is improperly identified as a Windows To Go installation
@@ -18,7 +18,7 @@ ms.technology: windows-client-deployment
 This article discusses issues that occur when Windows 8 is improperly identified as a Windows To Go installation.
 
 _Applies to:_ &nbsp; Windows 8  
-_Original KB number:_ &nbsp; 2778881
+_Original KB number:_ &nbsp;2778881
 
 ## Symptoms
 

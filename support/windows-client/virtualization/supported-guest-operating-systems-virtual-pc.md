@@ -3,14 +3,14 @@ title: Supported Guest Operating Systems in Virtual PC
 description: Provides some information about supported Guest Operating Systems in Virtual PC
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan
+ms.author: delhan 
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, benarm, kledman
-ms.custom: sap:virtual-machine-creation, csstroubleshoot
+ms.prod-support-area-path: Virtual machine creation
 ms.technology: windows-client-hyper-v
 ---
 # Supported Guest Operating Systems in Virtual PC

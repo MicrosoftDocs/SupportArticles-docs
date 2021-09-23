@@ -2,7 +2,7 @@
 title: Network connectivity is lost
 description: Information about Microsoft Defender Antivirus antimalware platform update to solve problem of vpn users losing network connectivity.
 ms.date: 09/25/2020
-author: Deland-Han
+author: Deland-Han 
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, yongrhee, ksarens, alexsc, niwelton
-ms.custom: sap:windows-defender-exploit-guard, csstroubleshoot
+ms.prod-support-area-path: Windows Defender Exploit Guard
 ms.technology: windows-client-networking
 ---
 # Lost internet connectivity using VPN in Windows Defender Exploit Guard - Network Protection

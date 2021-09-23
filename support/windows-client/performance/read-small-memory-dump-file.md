@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.prod-support-area-path: Blue Screen/Bugcheck
 ms.technology: windows-client-performance
 adobe-target: true
 ---

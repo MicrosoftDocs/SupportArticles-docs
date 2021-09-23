@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: rnitsch, kaushika
-ms.custom: sap:remote-access, csstroubleshoot
+ms.prod-support-area-path: Remote access
 ms.technology: windows-client-networking
 ---
 # Modern Apps can't connect when you use a Check Point VPN connection
@@ -18,7 +18,7 @@ ms.technology: windows-client-networking
 This article provides a solution to an issue where Modern Apps can't connect to the Internet after you connect to the corporate network by using Check Point VPN software.
 
 _Applies to:_ &nbsp; Windows 8  
-_Original KB number:_ &nbsp; 2855849
+_Original KB number:_ &nbsp;2855849
 
 ## Symptoms
 
