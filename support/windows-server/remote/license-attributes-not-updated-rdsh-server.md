@@ -41,6 +41,6 @@ To work around this issue, delegate control for the organizational unit (OU) con
 
     :::image type="content" source="media/license-attributes-not-updated-rdsh-server/only-the-following-objects-in-the-folder.png" alt-text="Select only the following objects in the folder.":::
 
-5. Check **General and Read and Write Terminal Server License server**, and then select **Next** > **Finish**.
+5. Check **General** and **Read and Write Terminal Server License server**, and then select **Next** > **Finish**.
 
     :::image type="content" source="media/license-attributes-not-updated-rdsh-server/read-write-terminal-server-license-server.png" alt-text="Check General and Read and Write Terminal Server License server.":::
