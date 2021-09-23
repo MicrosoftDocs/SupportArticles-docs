@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tode, arrenc
-ms.prod-support-area-path: Secure channel issues
+ms.custom: sap:secure-channel-issues, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # SSL/TLS communication problems after you install KB 931125

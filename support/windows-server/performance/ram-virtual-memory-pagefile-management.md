@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # RAM, virtual memory, pagefile, and memory management in Windows

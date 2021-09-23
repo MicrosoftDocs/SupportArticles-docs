@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, stevemat, davidg, johnmar  
-ms.prod-support-area-path: High availability virtual machines
+ms.reviewer: kaushika, stevemat, davidg, johnmar
+ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
 ms.technology: hyper-v
 ---
 # MAC address changes for virtual server during a failover with clustering
@@ -18,7 +18,7 @@ ms.technology: hyper-v
 This article provides a solution to an issue where users in a different subnet are unable to connect to the virtual server after a failover from one cluster node to another.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;244331
+_Original KB number:_ &nbsp; 244331
 
 ## Symptoms
 

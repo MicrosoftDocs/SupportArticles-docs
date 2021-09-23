@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Virtual machine creation
+ms.custom: sap:virtual-machine-creation, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Error when you manage a VHD file in Windows Server: "A Virtual Disk Provider for the specified file was not found"

@@ -2,7 +2,7 @@
 title: Delete corrupt Event Viewer Log files
 description: Describes a method to rename or move these files for troubleshooting purposes.
 ms.date: 09/27/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lynnroe, jwojan
-ms.prod-support-area-path: Event System
+ms.custom: sap:event-system, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # How to delete corrupt Event Viewer Log files

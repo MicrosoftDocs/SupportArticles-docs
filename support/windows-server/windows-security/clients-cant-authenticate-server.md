@@ -2,7 +2,7 @@
 title: Clients can't authenticate with a server
 description: Provides a solution to an issue where clients can't authenticate with a server after you obtain a new certificate to replace an expired certificate on the server.
 ms.date: 10/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Clients can't authenticate with a server after you obtain a new certificate to replace an expired certificate on the server

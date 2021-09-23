@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: MDM
-ms.technology: windows-server-deployment 
+ms.custom: sap:mdm, csstroubleshoot
+ms.technology: windows-server-deployment
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 

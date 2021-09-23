@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Virtual machine will not boot
+ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
 ms.technology: hyper-v
 ---
 # An error occurred while attempting to start the selected virtual machine

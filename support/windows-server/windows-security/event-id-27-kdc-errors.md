@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Event ID 27 KDC Errors on Windows Server 2003 Domain Controllers

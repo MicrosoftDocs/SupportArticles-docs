@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Redirection (not printer)
+ms.custom: sap:redirection-not-printer, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Caps Lock key unexpectedly inverts characters in a remote desktop session to a Windows Server 2012-based computer

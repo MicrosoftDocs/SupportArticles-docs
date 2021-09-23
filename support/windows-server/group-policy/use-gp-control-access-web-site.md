@@ -2,7 +2,7 @@
 title: Use GP to control access to web sites
 description: Helps you to use Windows Group Policy to control access to web sites.
 ms.date: 10/19/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Managing Internet Explorer settings through Group Policy
+ms.custom: sap:managing-internet-explorer-settings-through-group-policy, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to use Group Policy to control access to web sites

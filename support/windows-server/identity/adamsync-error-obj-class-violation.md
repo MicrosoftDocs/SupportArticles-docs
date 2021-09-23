@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis
-ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
+ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot an OBJ_CLASS_VIOLATION error in Adamsync
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes how to troubleshoot an OBJ_CLASS_VIOLATION error that occurs when you use the Adamsync tool in Windows Server.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;923835
+_Original KB number:_ &nbsp; 923835
 
 ## Summary
 

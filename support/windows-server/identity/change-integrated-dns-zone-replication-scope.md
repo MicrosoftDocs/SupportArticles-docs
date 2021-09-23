@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roblane
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # You cannot change the replication scope of an Active Directory integrated DNS zone in Windows Server 2003

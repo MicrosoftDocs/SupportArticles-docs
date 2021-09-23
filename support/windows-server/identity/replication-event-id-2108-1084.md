@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication event IDs 2108 and 1084 occur during inbound replication of Active Directory Domain Services
