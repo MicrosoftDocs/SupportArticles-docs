@@ -34,8 +34,8 @@ Assume that you use the `Get-ADGroupMember` cmdlet to identify the members of a 
 > [!NOTE]
 > In a one-way trust, when using the `Get-ADGroupMember` cmdlet on a group from the trusting forest, you receive the following errors if the group contains members from the trusted forest:
 >
-> - An unspecified error has occurred
-> - The server was unable to process the request due to an internal error
+> - "An unspecified error has occurred"
+> - "The server was unable to process the request due to an internal error"
 >
 > As a workaround, use the Active Directory Users and Computers snap-in to view the members of the group, or convert the one-way trust into a two-way trust.
 
