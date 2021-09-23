@@ -3,14 +3,14 @@ title: Use Group Policy to apply WinHTTP proxy settings to clients
 description: Describes how to use Group Policy to apply WinHTTP proxy settings to Windows clients. Applies to Windows 7/Windows Server 2008 R2 and later versions.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, tfairman, dantes
-ms.prod-support-area-path: Web Application Proxy (WAP) role service
+ms.custom: sap:web-application-proxy-(wap)-role-service, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Use Group Policy to apply WinHTTP proxy settings to Windows clients

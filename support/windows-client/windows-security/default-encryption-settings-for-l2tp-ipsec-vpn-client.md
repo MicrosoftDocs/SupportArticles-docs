@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, MASOUDH
-ms.prod-support-area-path: Internet Protocol security (IPSec)
+ms.custom: sap:internet-protocol-security-(ipsec), csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Default encryption settings for the Microsoft L2TP/IPSec VPN Client

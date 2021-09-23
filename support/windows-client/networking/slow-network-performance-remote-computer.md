@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-(smb-or-dfs-namespace), csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Slow network performance when you open a file that is located in a shared folder on a remote network computer

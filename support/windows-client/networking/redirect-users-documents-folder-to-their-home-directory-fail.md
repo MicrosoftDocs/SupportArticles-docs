@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kimnich, kaushika
-ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.custom: sap:folder-redirection-and-offline-files-and-folders-(csc), csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Redirecting the user's Documents folder to their home directory fails when Grant the user exclusive rights to Documents is selected
@@ -18,7 +18,7 @@ ms.technology: windows-client-networking
 This article helps fix an issue where you can't redirect the user's Documents folder to their home directory when "Grant the user exclusive rights to Documents" is selected.
 
 _Applies to:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2493506
+_Original KB number:_ &nbsp; 2493506
 
 ## Symptoms
 

@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
-ms.technology: windows-client-shell-experience 
+ms.custom: sap:modern,-inbox-and-microsoft-store-apps, csstroubleshoot
+ms.technology: windows-client-shell-experience
 ---
 # Microsoft Store app cannot start when one user installs an older version than the current version installed by another user in Windows 10
 

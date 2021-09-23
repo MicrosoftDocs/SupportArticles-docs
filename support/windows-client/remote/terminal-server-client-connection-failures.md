@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-client-rds
 ---
 # Troubleshooting RDP Client connection problems
@@ -18,7 +18,7 @@ ms.technology: windows-client-rds
 This article describes various symptoms for Remote Desktop Client connection failures.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;186645
+_Original KB number:_ &nbsp; 186645
 
 ## Summary
 
