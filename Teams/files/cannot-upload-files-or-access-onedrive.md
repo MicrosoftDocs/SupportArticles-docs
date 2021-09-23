@@ -89,10 +89,10 @@ Error 1 can occur if the user doesn't have permissions to the MySite Host. To ma
 
 2. Use SharePoint Online Management Shell to run the following two cmdlets:
 
-```powershell
-Connect-SPOService -Url https://contoso-admin.sharepoint.com/
-Add-SPOUser -Site https://contoso-my.sharepoint.com -LoginName "Everyone Except External Users" -Group Visitors
-```
+    ```powershell
+    Connect-SPOService -Url https://contoso-admin.sharepoint.com/
+    Add-SPOUser -Site https://contoso-my.sharepoint.com -LoginName "Everyone Except External Users" -Group Visitors
+    ```
 
 # [Error Message 2](#tab/Error-Message-2)
 
