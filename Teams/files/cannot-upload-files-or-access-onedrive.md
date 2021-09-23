@@ -85,7 +85,7 @@ To resolve this error, [delete the re-created user, and restore the original use
 
 Error 1 can occur if the user doesn't have permissions to the MySite Host. To make SharePoint Online work as expected, all users who use OneDrive sites must have access to the MySite Host. In order to restore default permissions to MySite host site, use one of the following methods:
 
-1. Through GUI, navigate to `https://contoso-my.sharepoint.com/_layouts/15/user.aspx` and grant Read Permissions to **Everyone Except External Users**
+1. Navigate to the site permissions page in your tenant: `https://contoso-my.sharepoint.com/_layouts/15/user.aspx`, and grant **Read** permission to **Everyone except external users**
 
 2. Use SharePoint Online Management Shell to run the following two cmdlets:
 
@@ -118,43 +118,6 @@ To fix the error, you must revert the folder name to **Documents** by using an a
 3. If the test result shows that the default document library name isn't **Documents**, select the checkbox to authorize the diagnostic to change it back to **Documents**, and then select **Update Settings**. You'll receive a confirmation notification stating that the document library has been successfully renamed to **Documents**.
 
 ---
-
-To resolve Error 2, try Resolution 2.
-
-To resolve Error 3, try Resolution 1.
-
-**Resolution 1**
-
-Error 1 and Error 3 can occur if the name of the **Documents** folder (the default document library on the OneDrive site) was changed to something else.
-
-To fix the error, you must revert the folder name to **Documents** by using an administrative account and following these steps:
-
-> [!NOTE]
-> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
-
-1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
-
-    > [!div class="nextstepaction"]
-    > [Run Tests: OneDrive Library Rename](https://aka.ms/PillarOneDriveLibraryRename)
-
-2. In the **Run diagnostics** section, type the **User Principal Name (UPN)** of the user who is seeing the error, and then select **Run Tests**.
-3. If the test result shows that the default document library name isn't **Documents**, select the checkbox to authorize the diagnostic to change it back to **Documents**, and then select **Update Settings**. You'll receive a confirmation notification stating that the document library has been successfully renamed to **Documents**.
- 
-**Note:** Although you can use SharePoint Designer to change the name of the default document library, we don't recommend this option.
-
-**Resolution 2**
-
-Error 1 can occur if your OneDrive site is set as ReadOnly.
-
-Error 2 can occur if your OneDrive site is set as NoAccess.
-
-Both these settings indicate that your OneDrive site is locked. To fix the error, [unlock the site](/sharepoint/manage-lock-status).
-
-**Resolution 3**
-
-Error 1 can occur if a user is deleted and then re-created by using the same User Principal Name (UPN). This situation will cause a user ID mismatch on the OneDrive site.
-
-To resolve this error, [delete the re-created user, and restore the original user](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-sharepoint-error#accessing-a-onedrive-site).
 
 ### Run a self-diagnostics tool
 
