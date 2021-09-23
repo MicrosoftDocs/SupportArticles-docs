@@ -192,7 +192,7 @@ Unknown callback type during minidump 7
 
 When a dump of a user-mode process is requested (as is discussed in this article, to be contrasted with Operating System Kernel Dumps, which are outside our scope), the target Process (here SQLServer.exe) is frozen for the duration it takes to serialize the dump content to its file target.
 
-Frozen means that the process won't be able to execute any user request or any internal operation, including any Resource Polling mechanism like the implementation of Windows Clustering's IsAlive and Looks Alive (see the [Cluster failovers and the Sqldumper.exe utility](#cluster-failovers-and-the-sqldumperexe-utility) section for details on handling that situation). Any time-out relying on wall clock time may also be breached as a consequence of the freeze.
+Frozen means that the process won't be able to execute any user request or any internal operation, including any Resource Polling mechanism like the implementation of Windows Clustering's IsAlive and Looks Alive (see the [Memory dumps on Cluster failovers section](#generate-a-memory-dump-on-cluster-failovers) for details on handling that situation). Any time-out relying on wall clock time may also be breached as a consequence of the freeze.
 
 As can be derived from the previous statement, the duration of the freeze is therefore the critical factor here, and it is driven by the following:
 
