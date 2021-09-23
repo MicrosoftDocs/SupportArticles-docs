@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 ms.localizationpriority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 

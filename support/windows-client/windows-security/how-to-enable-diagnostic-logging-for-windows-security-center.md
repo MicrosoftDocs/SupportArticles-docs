@@ -3,14 +3,14 @@ title: How to enable diagnostic logging for Windows Security Center
 description: Describes how to enable diagnostic logging for Windows Security
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
+ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # How to enable diagnostic logging for Windows Security Center

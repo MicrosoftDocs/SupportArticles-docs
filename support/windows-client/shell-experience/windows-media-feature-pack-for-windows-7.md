@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Media Player
+ms.custom: sap:windows-media-player, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Description of the Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
