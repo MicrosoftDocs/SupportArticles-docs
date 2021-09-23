@@ -56,8 +56,6 @@
     href: save-application-failed-error.md
   - name: Saving images locally not restricted
     href: saving-images-locally-not-restricted.md
-  - name: Set up and validate app protection policies
-    href: set-up-app-protection-policies-ios-device.md
   - name: Support tip - Deployment, delivery, and processing of a Win32 application
     href: develop-deliver-working-win32-app-via-intune.md
   - name: Support tip - Build software inventory using Power BI
