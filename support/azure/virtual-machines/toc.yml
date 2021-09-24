@@ -76,7 +76,8 @@
       href: reset-network-interface-azure-linux-vm.md
     - name: Troubleshoot fstab errors 
       href: linux-virtual-machine-cannot-start-fstab-errors.md
-  - name: Windows
+    - name: Troubleshoot permissions are too open error
+      href: troubleshoot-ssh-permissions-too-open.md
     items:
     - name: Azure virtual machine error '“You must change your password before logging on the first time”'
       href: must-change-password.md
