@@ -1,4 +1,4 @@
---- 
+---
 title: How to restore a Windows 7 installation
 description: Describes how to restore a Windows 7 installation.
 ms.date: 09/08/2020
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, keithpe
-ms.prod-support-area-path: System Restore or resetting your computer
+ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # How to restore a Windows 7 installation

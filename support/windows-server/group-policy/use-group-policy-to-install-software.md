@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Deploying software through Group Policy
+ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Use Group Policy to remotely install software

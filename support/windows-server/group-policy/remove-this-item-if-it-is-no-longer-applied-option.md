@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # "Remove this item if it is no longer applied" option behavior in Group Policy preferences
@@ -18,7 +18,7 @@ ms.technology: windows-server-group-policy
 This article describes the behavior of the **Remove this item if it is no longer applied** option in Group Policy preferences.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
-_Original KB number:_ &nbsp;3060859
+_Original KB number:_ &nbsp; 3060859
 
 ## Summary
 

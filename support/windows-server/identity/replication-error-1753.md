@@ -10,15 +10,15 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory  
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper
 
 This article describes an issue where Active Directory Replications fail with Win32 error 1753: "There are no more endpoints available from the endpoint mapper."
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2089874
+_Original KB number:_ &nbsp; 2089874
 
 **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 

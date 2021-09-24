@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jories, milanmil
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: windows-server-security 
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.technology: windows-server-security
 ---
 # Approval required for certificate renewals when certificate autoenrollment configured
 

@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
-ms.technology: networking 
+ms.custom: sap:dns, csstroubleshoot
+ms.technology: networking
 ---
 # Windows Server 2008 and Windows Server 2008 R2 DNS Servers may fail to resolve queries for some top-level domains
 

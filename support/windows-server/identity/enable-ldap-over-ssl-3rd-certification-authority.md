@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: LDAP configuration and interoperability
+ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Enable LDAP over SSL with a third-party certification authority

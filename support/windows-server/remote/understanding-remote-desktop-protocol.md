@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Understanding the Remote Desktop Protocol (RDP)
