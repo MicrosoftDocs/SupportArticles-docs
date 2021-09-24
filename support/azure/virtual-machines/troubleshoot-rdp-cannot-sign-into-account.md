@@ -17,16 +17,16 @@ ms.author: genli
 
 #  Can't sign into your account when you try to connect to an Azure Windows VM
 
-This article shows how to troubleshoot the error "We can't sign into your account" when you try to connect to an Azure VM by using Remote Desktop Protocol (RDP).
+This article shows how to troubleshoot the error "We can't sign into your account" when you try to connect to an Azure Windows VM by using Remote Desktop Protocol (RDP).
 
 ## Symptoms
 
-When you try to connect the Azure Windows VM by using RDP,  you receive the following error message:
+When you try to connect the Windows VM by using RDP,  you receive the following error message:
 
- > We can't sign into your account
+ > We can't sign into your account<br>
  > This problem can often be fixed by signing out of your account and then signing back in. If you don't sign out now, any files you create or changes you make will be lost.
 
-In the Applications Event log, you see Event Id 1511 is logged for each RDP connection attempt.
+In the Applications Event log, you see Event ID 1511 is logged for each RDP connection attempt.
 
 ID:       1511<br>
 Level:    Error<br>
@@ -36,7 +36,7 @@ Message:  Windows cannot find the local profile and is logging you on with a tem
 
 ## Cause
 
-The local profile of the user is corrupt, and Windows is unable to create a new local profile for the RDP session.
+The issue can occur if the local profile of the user is corrupt, and Windows is unable to create a new local profile for the RDP session.
 
 ## Solution
 
@@ -46,7 +46,7 @@ Before proceeding with any of the solutions in this document, back up your VM OS
 
 1. Connect to the VM by using the Azure Serial Console, and then [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console doesn't work, connect to the VM by using remote PowerShell. For more information, see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
-1. After you connect to the VM, run the following command to list the user profiles entries. Locate any profile that has the ".bak" extension on the end of the name.
+1. After you connect to the VM, run the following command to list the user profiles entries. Locate any profiles that have the ".bak" extension on the end of the name.
 
     ```powershell
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList" /s | more
@@ -56,15 +56,16 @@ Before proceeding with any of the solutions in this document, back up your VM OS
     ```powershell
     `reg delete "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\ProfileList\<GUID>.bak"`
     ```
-1. Try to connect to the VM and see if the problem is resolved. 
+1. Try to connect to the VM and see if the problem is resolved.
+1. If the problem sill occurs, you can try removing all the user profile entries except the built-in system accounts **S-1-5-18**, **S-1-5-19** and **S-1-5-20**.
 
 ### Offline repair
 
 If you're unable to access the VM using the Azure Serial Console or other remote tools, then the repair must be done in offline mode.
 
-1. Follow the steps 1-3 of the [VM Repair process](repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to create a Repair VM. 
-1. Connect to the Repair VM. Identify the copied OS disk of the failed VM. Usually the disk is attached as drive F.
-1. On the Repair VM, start Registry Editor (regedit.exe). Select the **HKEY_LOCAL_MACHINE** key, select **File** > **Load Hive** from the menu. Locate and load the SYSTEM hive file in the "F:\Windows\System32\config" folder, and then provide a name for the hive, example "RepairSOFTWARE".
+1. Follow the steps 1-3 of the [VM Repair process](repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to create a Repair VM. A copied OS disk of the failed VM will be attached to the Repair VM automatically. Usually the disk is attached as drive F.
+1. Connect to the Repair VM.
+1. On the Repair VM, start Registry Editor (regedit.exe). Select the **HKEY_LOCAL_MACHINE** key, select **File** > **Load Hive** from the menu. Locate and load the SYSTEM hive file in the **F:\Windows\System32\config** folder, and then provide a name for the hive, example "RepairSOFTWARE".
 1. Navigate to **RepairSOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList** and remove any registry keys that end in ".BAK". 
 1. Use step 5 of the [VM Repair process](repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to mount the repaired OS disk to the failed VM.
 1. Start the failed VM and try to connect to the VM using RDP. If the problem still occurs, you can try removing all the user profile entries except the built-in system accounts **S-1-5-18**, **S-1-5-19** and **S-1-5-20**.
