@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, CCLAY,
+ms.reviewer: kaushika, CCLAY
 ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---

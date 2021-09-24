@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, JOELSCH,
+ms.reviewer: kaushika, JOELSCH
 ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---

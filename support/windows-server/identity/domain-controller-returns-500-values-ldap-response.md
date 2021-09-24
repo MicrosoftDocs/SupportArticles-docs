@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, nedpyle, rolandw, aconkle,
+ms.reviewer: kaushika, nedpyle, rolandw, aconkle
 ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
