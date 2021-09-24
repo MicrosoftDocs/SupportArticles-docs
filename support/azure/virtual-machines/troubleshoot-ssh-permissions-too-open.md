@@ -30,8 +30,8 @@ This issue can occur if the /etc/ssh configuration directory or the files in thi
 
 ## Solution
 
-If you have access to the [Azure Serial Console](serial-console-linux.md), follow the steps in the [online repair](#online-repair-by-using-azure-serial-console) section.
-If you're unable to use the Azure Serial Console, move to the [#offline-repair] section.
+If you have the access to the [Azure Serial Console](serial-console-linux.md), follow the steps in the [online repair](#online-repair-by-using-azure-serial-console) section.
+If you're unable to use the Azure Serial Console, move to the [Offline repair](#offline-repair) section.
 
 ### Online repair by using Azure Serial Console
 
