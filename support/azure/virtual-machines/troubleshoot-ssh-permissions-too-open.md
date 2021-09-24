@@ -19,11 +19,11 @@ ms.author: genli
 ## Symptom
 You’re unable to connect your Azure Linux VM by using Secure Shell (SSH). You receive the following messages in the system log (/var/log/messages, /var/log/syslog, /var/log/secure, or /var/log/auth.log):
 
->sshd: error: Permissions 0777 for '/etc/ssh/<sshKeyNAME>' are too open.</br>
+>sshd: error: Permissions 0777 for '/etc/ssh/sshKeyName' are too open.</br>
 >sshd: error: It is required that your private key files are NOT accessible by others.</br>
 >sshd: error: This private key will be ignored.</br>
 >sshd: error: key_load_private: bad permissions</br>
->shd: error: Could not load host key: /etc/ssh/<sshKeyNAME>
+>shd: error: Could not load host key: /etc/ssh/sshKeyName
 
 ## Cause
 This issue can occur if the /etc/ssh configuration directory or the files in this directory are accessible by other users than owner. This is generally the result of a "chmod" command having been run on the wrong directory or with incorrect parameters.
