@@ -17,10 +17,10 @@ On a touch-enabled device, you use the selection gripper by touching a text fiel
 
 For example, when you double-tap a string in a text field to select all of it, the issue occurs if you tap and hold the left selection gripper and move the gripper to the end of the string.
 
+## Resolution
+
+To fix this issue in Windows 10, version 1909, install the update [KB5005624](https://support.microsoft.com/topic/september-21-2021-kb5005624-os-build-18363-1830-preview-b2a3af81-696b-4d59-8d7b-a05389407bb8) released on September 21, 2021.
+
 ## Workaround
 
 End the Internet Explorer (iexplore.exe) process in the **Task Manager** and restart Windows.
-
-## Status
-
-Microsoft is currently investigating this problem. This article will be updated when a resolution is available.
