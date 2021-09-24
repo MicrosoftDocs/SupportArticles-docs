@@ -79,6 +79,9 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 1.	Use step 5 of the [VM Repair process](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to mount the repaired OS disk to the failed VM.
 1.	Start the failed VM and try to connect to the VM using SSH.
 
+## Next steps
 
+If your Azure issue isn't addressed in this article, visit the Azure forums on [MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue in these forums, or post to [@AzureSupport on Twitter](https://twitter.com/AzureSupport). You also can submit an Azure support request.
 
+To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
 
