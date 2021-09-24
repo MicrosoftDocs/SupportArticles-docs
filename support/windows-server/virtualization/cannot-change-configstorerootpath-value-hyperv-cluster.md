@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, akshittu, maperric  
-ms.prod-support-area-path: High availability virtual machines
+ms.reviewer: kaushika, akshittu, maperric
+ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Can't change the ConfigStoreRootPath value of a Hyper-V cluster in Windows Server

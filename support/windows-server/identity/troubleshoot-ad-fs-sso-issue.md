@@ -3,14 +3,14 @@ title: ADFS SSO troubleshooting
 description: Introduce how to troubleshoot ADFS SSO issues.
 ms.date: 03/17/2021
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot SSO issues with Active Directory Federation Services (AD FS)

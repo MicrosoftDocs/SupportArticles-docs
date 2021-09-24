@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: v-jomcc, kaushika
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # A Group Policy setting isn't available in the security policy settings list
@@ -18,7 +18,7 @@ ms.technology: windows-server-group-policy
 This article describes a problem in which the "System objects: Default owner for objects created by members of the Administrators group" Group Policy setting isn't available in the security policy settings list. 
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;947721
+_Original KB number:_ &nbsp; 947721
 
 ## Symptoms
 

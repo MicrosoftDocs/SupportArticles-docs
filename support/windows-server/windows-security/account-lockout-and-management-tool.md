@@ -3,14 +3,14 @@ title: Introduction to Account Lockout and Management Tools
 description: Introduces Account Lockout and Management Tools for Windows Server.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Account lockouts
+ms.custom: sap:account-lockouts, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Introduction to Account Lockout and Management Tools

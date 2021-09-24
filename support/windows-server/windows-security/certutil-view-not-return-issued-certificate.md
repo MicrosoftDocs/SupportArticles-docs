@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jtierney
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # "Certutil -view" command does not return issued certificates correctly
@@ -18,7 +18,7 @@ ms.technology: windows-server-security
 This article provides help to fix an issue where the `Certutil -view`command doesn't return issued certificates correctly.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2233022
+_Original KB number:_ &nbsp; 2233022
 
 ## Symptoms
 

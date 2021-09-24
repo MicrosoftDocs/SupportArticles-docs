@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
-ms.prod-support-area-path: Replacing hardware and updating the operating system
+ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # You cannot upgrade the operating system of a clustered server from Windows Server 2003 or later versions

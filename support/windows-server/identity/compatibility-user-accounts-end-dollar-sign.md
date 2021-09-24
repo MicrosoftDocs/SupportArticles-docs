@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Compatibility with user accounts ending with the dollar sign ($)
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article describes the potential compatibility issues in using domain user accounts ending with the dollar sign ($) as a service account.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2666116
+_Original KB number:_ &nbsp; 2666116
 
 ## Summary
 
