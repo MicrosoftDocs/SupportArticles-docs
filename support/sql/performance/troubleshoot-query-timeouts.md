@@ -20,7 +20,7 @@ Assume that an application queries data from a SQL Server database. If the query
 > [!NOTE]
 > These errors occur on the application side. On the SQL Server side, a query time-out causes an Attention event ([error 3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value is set to *0* (no time limit), the Database Engine executes the query until it's completed. The time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property in .NET Framework.
 >
-> - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute of the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function?view=sql-server-ver15) function.
+> - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute of the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function) function.
 > - In Java Database Connectivity (JDBC) API, it's set through the [setQueryTimeout](/sql/connect/jdbc/reference/setquerytimeout-method-sqlserverstatement) method.
 
 ## Cause
