@@ -21,10 +21,10 @@ search.appverid: MET150
 
 # "You cannot access this right now" error when saving items from Outlook for iOS to OneNote
 
-On an Intune-managed iOS device, when you use the **Send to OneNote** Agave add-in to save items from Microsoft Outlook for iOS to OneNote, you receive the following error message:
+On an Intune-managed iOS device, when you use the **Send to OneNote** add-in to save items from Microsoft Outlook for iOS to OneNote, you receive the following error message:
 
 > You cannot access this right now
 
-This error occurs because the add-in isn't able to complete device authentication to satisfy the requirements of conditional access. Because the add-in uses Agave, authentication doesn't work when conditional policies are in place. Consequently, [WebView](https://developer.apple.com/documentation/webkit/webview) between Outlook and OneNote breaks.
+This error occurs because the add-in isn't able to complete device authentication to satisfy the requirements of conditional access. Because the add-in uses the new Office add-in platform that is HTML/JavaScript-based, authentication doesn't work when conditional policies are in place. Consequently, [WebView](https://developer.apple.com/documentation/webkit/webview) between Outlook and OneNote breaks.
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
