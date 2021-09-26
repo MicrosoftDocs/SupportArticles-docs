@@ -27,19 +27,19 @@ There are two other methods to generate dump files:
 
 Run the Sqldumper.exe utility under the context of the folder where SQL Server originally installed the utility. By default, the installation path of the Sqldumper.exe utility is as follows:
 
-`SQLServerInstallDrive:\Program Files\Microsoft SQL Server\90\Shared\SQLDumper.exe`
+`<SQLServerInstall Drive>:\Program Files\Microsoft SQL Server\90\Shared\SQLDumper.exe`
 
 > [!NOTE]
-> `SQLServerInstallDrive` is a placeholder for the drive where you installed SQL Server 2005.
+> \<SQLServerInstall Drive\> is a placeholder for the drive where you installed SQL Server 2005.
 
 To generate a dump file by using the Sqldumper.exe utility, follow these steps:
 
 1. Open the following folder:
 
-    `SQLServerInstallDrive:\Program Files\Microsoft SQL Server\number\Shared`
+    `<SQLServerInstall Drive>:\Program Files\Microsoft SQL Server\<number>\Shared`
 
     > [!NOTE]
-    > In this folder path, **number** is a placeholder for one of the following:
+    > In this folder path, \<number\> is a placeholder for one of the following:
     >
     > - 150 for SQL Server 2019
     > - 140 for SQL Server 2017
@@ -54,52 +54,52 @@ To generate a dump file by using the Sqldumper.exe utility, follow these steps:
 4. At the command prompt, type the following command, and then press **Enter**:
 
     ```dos
-    cd SQLServerInstallDrive:\Program Files\Microsoft SQL Server\number\Shared
+    cd <SQLServerInstall Drive>:\Program Files\Microsoft SQL Server\<number>\Shared
     ```
 
     > [!NOTE]
-    > In this folder path, `number` is the same placeholder changing with SQL Server version as described earlier.
+    > In this folder path, \<number\> is the same placeholder changing with SQL Server version as described earlier.
 
 5. To generate a specific kind of dump file, type the corresponding command at the command prompt, and then press **Enter**:
    - Full dump file
 
         ```dos
-        Sqldumper.exe ProcessID 0 0x01100
+        Sqldumper.exe <ProcessID> 0 0x01100
         ```
 
    - Mini-dump file
 
         ```dos
-        Sqldumper.exe ProcessID 0 0x0120
+        Sqldumper.exe <ProcessID> 0 0x0120
         ```
 
    - Mini-dump file that includes indirectly referenced memory. This is the recommended option and is also used by SQL Server by default when auto-generating memory dumps
 
        ```dos
-       Sqldumper.exe ProcessID 0 0x0128
+       Sqldumper.exe <ProcessID> 0 0x0128
        ```
 
    - Filtered dump file
 
         ```dos
-        Sqldumper.exe ProcessID 0 0x8100
+        Sqldumper.exe <ProcessID> 0 0x8100
         ```
 
     > [!NOTE]
-    > **ProcessID** is a placeholder for the process identifier of the Windows application for which you want to generate a dump file.
+    > \<ProcessID\> is a placeholder for the process identifier of the Windows application for which you want to generate a dump file.
 
 If the Sqldumper.exe utility runs successfully, the utility generates a dump file in the folder where the utility is installed.
 
 The dump file that the Sqldumper.exe utility generates has a file name pattern that resembles the following:  
-*SQLDmpr**xxxx**.mdmp*
+*SQLDmpr\<xxxx\>.mdmp*
   
-In this pattern, **xxxx** is an increasing number that is determined based on other files that have a similar file name in the same folder. If you already have files in the folder that have file names in the specified pattern, you may have to compare the date and the time that the file was created to identify the file that you want.
+In this pattern, \<xxxx\> is an increasing number that is determined based on other files that have a similar file name in the same folder. If you already have files in the folder that have file names in the specified pattern, you may have to compare the date and the time that the file was created to identify the file that you want.
 
 #### How to obtain a Microsoft Windows application process identifier
 
 To generate a dump file by using the Sqldumper.exe utility, you must have the process identifier of the Windows application you want to generate a dump file for. Here's how to obtain the process identifier:
 
-1. Press **CTRL+ALT+DELETE**, and select **Task Manager**.
+1. Press **Ctrl+Alt+Delete**, and select **Task Manager**.
 2. In the **Windows Task Manager** dialog box, select the **Processes** tab.
 3. On the **View** menu, select **Select Columns**.
 4. In the **Select Columns** dialog box, click to select the **PID (Process Identifier)** check box, and select **OK**.
@@ -127,7 +127,7 @@ SQLDumper.exe exists primarily to generate memory dumps for the SQL Server proce
 
 1. Open **SQL Server Configuration Manager**.  
 2. Under **SQL Server Services** locate the SQL Server under investigation.
-3. Right-click on it, choose **Properties** and go to the **Advanced** tab.
+3. Right-click it, select **Properties** and go to the **Advanced** tab.
 4. Modify that Dump Directory to the desired path and select **OK**.
 5. Restart SQL Server (when possible) for the new setting to take effect.
 
@@ -151,7 +151,7 @@ You can specify the directory where you want the Sqldumper.exe utility to write 
     ```
 
     > [!NOTE]
-    > `MdumpPath` is a placeholder for the directory where you want the Sqldumper.exe utility to write the dump file. By default, the file is written to the current folder.
+    > \<MdumpPath\> is a placeholder for the directory where you want the Sqldumper.exe utility to write the dump file. By default, the file is written to the current folder.
 
 If you specify a full dump file or a filtered dump file to be generated, the Sqldumper.exe utility may take several minutes to generate the dump file. The time depends on the following variables:
 
@@ -169,7 +169,7 @@ To run the Sqldumper.exe utility, you must log on to Windows by using one of the
 
 For the Sqldumper.exe utility to work successfully through Remote Desktop or through Terminal Services, you must start Remote Desktop or Terminal Services in console mode. For example, to start Remote Desktop in console mode, select **Start** > **Run**, type *mstsc /console*, and then select **OK**. If the target server runs Windows 2000, the **/console** option is silently ignored. You can connect to the server through Remote Desktop. But you will not be using the console session.
 
-If you notice that no dump file has been generated in the current folder after you run the Sqldumper.exe utility, review the information that the utility has generated at the command line to try to determine the possible cause of the failure. This information is also logged in the Sqldumper_errorlog.log file in current directory. The following are two possible error messages and their causes:
+If you notice that no dump file has been generated in the current folder after you run the Sqldumper.exe utility, review the information that the utility has generated at the command line to try to determine the possible cause of the failure. This information is also logged in the *Sqldumper_errorlog.log* file in current directory. The following are two possible error messages and their causes:
 
 - Message 1
 
@@ -200,11 +200,11 @@ As can be derived from the previous statement, the duration of the freeze is the
 - The **size of SQL Server process in memory**, which in the case of a single active instance running default parameters is often close to the **total physical RAM of the server**.
 - The performance of the disk used as a target for the dump.
 
-Furthermore, the **size of the dump file** on disk should be planned for, especially if multiple dumps are a possibility and if large, non-default dump types are selected. Make sure you review the 'Dump Types' section to know what to expect. By default, some dump methods will create the dump in SQL Server Instance's *\Log* folder, which, in default simple configuration would also be system disk and data+log disk for SQL Server. Bringing that disk to saturation will have severe impact on SQL Server and/or system availability.
+Furthermore, the **size of the dump file** on disk should be planned for, especially if multiple dumps are a possibility and if large, non-default dump types are selected. Make sure you review the [Dump types](#dump-types) to know what to expect. By default, some dump methods will create the dump in SQL Server Instance's *\Log* folder, which, in default simple configuration would also be system disk and data+log disk for SQL Server. Bringing that disk to saturation will have severe impact on SQL Server and/or system availability.
 
 ## Manage the impact on clustered systems
 
-The process is suspended temporarily during the dump generation. This might affect the SQL Server service availability and trigger resources failover in Always On contexts (both Failover cluster instance and Availability group). The dump generation of different processes impacts resources differently. Read the [Impact of Dump Generation](#impact-of-dump-generation) and [Dump Types](#dump-types) sections carefully.
+The process is suspended temporarily during the dump generation. This might affect the SQL Server service availability and trigger resources failover in Always On contexts (both Failover cluster instance and Availability group). The dump generation of different processes impacts resources differently. Read the [Impact of dump generation](#impact-of-dump-generation) and [Dump types](#dump-types) sections carefully.
 
 When capturing a SQL Server process dump file (especially a filtered dump file or a full dump file) on a clustered SQL Server or a SQL Server hosting an Always On availability group (AG) instance, the clustered SQL Server or AG might fail over to another node if the dump file takes too long to be completed. To prevent failover, use the following settings before capturing the dump file. The change can be reverted after a dump file is taken:
 
@@ -222,9 +222,11 @@ Three major improvements have been added to recent versions of SQL Server to red
 
 - Elimination of repeated dumps on the same issue.
 
-- Shortened output in the Errorlog.
+- Shortened output in the error log.
 
-**Bitmap filtering mechanism:** SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You will see the following messages in the SQL Server Error log when the bitmap is enabled or disabled respectively: `Page exclusion bitmap is enabled.` and `Page exclusion bitmap is disabled.`
+**Bitmap filtering mechanism:** SQL Server allocates a bitmap that keeps track of memory pages to be excluded from a filtered dump. Sqldumper.exe reads the bitmap and filters out pages without the need to read any other memory manager metadata. You will see the following messages in the SQL Server error log when the bitmap is enabled or disabled respectively:
+
+`Page exclusion bitmap is enabled.` and `Page exclusion bitmap is disabled.`
 
 - SQL Server 2016
 
@@ -381,11 +383,11 @@ To set the `SqlDumperDumpFlags` property for a specific kind of dump file, type 
    - The `SqlDumperDumpTimeOut` property
 
      ```dos
-     cluster resource "SQL Server" /priv SqlDumperDumpTimeOut= Timeout  
+     cluster resource "SQL Server" /priv SqlDumperDumpTimeOut = <Timeout>  
      ```
 
      > [!NOTE]
-     > **Timeout** is a placeholder for the time-out in milliseconds (ms).
+     > \<Timeout\> is a placeholder for the time-out in milliseconds (ms).
 
 The time that the utility takes to generate a dump file of a SQL Server process depends on the computer configuration. For a computer that has lots of memories, the time could be significant. To obtain an estimate of the time that the process takes, use the Sqldumper.exe utility to manually generate a dump file. The valid values for the `SqlDumperDumpTimeOut` property are from **10,000 ms** to **MAXDWORD.MAXDWORD** represents the highest value in the range of the DWORD data type (4294967295).
 
@@ -448,7 +450,7 @@ The `DBCC STACKDUMP` command can help you create a memory dump in the LOG direct
  DBCC STACKDUMP
 ```
 
-For extended functionality of `DBCC STACKDUMP` in SQL Server 2019, see [this section](#extended-dbcc-stackdump-functionality-introduced-in-sql-server-2019).
+For extended functionality of `DBCC STACKDUMP` in SQL Server 2019, see [Extended DBCC STACKDUMP functionality introduced in SQL Server 2019](#extended-dbcc-stackdump-functionality-introduced-in-sql-server-2019).
 
 To enable this method to create a filtered dump, turn on trace flags 2551 with following command:
 
@@ -545,8 +547,6 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
          Write-Warning "Administrator rights are required to generate a memory dump!`nPlease re-run this script as an Administrator!"
          #break
     }
-    
-    
     
     #what product would you like to generate a memory dump
     while(($ProductNumber -ne "1") -and ($ProductNumber -ne "2") -and ($ProductNumber -ne "3") -and ($ProductNumber -ne "4") -and ($ProductNumber -ne "5"))
@@ -653,7 +653,6 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         Write-Host ""
     }
     
-    
     #dump type
     
     if ($ProductNumber -eq "1")  #SQL Server memory dump
@@ -687,9 +686,7 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             "3" {$DumpType="0x8100";break}
             "4" {$DumpType="0x01100";break}
             default {"0x0120"; break}
-    
         }
-    
     }
     elseif ($ProductNumber -eq "2")  #SSAS dump 
     {
@@ -719,13 +716,11 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             "1" {$DumpType="0x0";break}
             "2" {$DumpType="0x34";break}
             default {"0x0120"; break}
-    
         }
     }
     
     elseif ($ProductNumber -eq "3" -or $ProductNumber -eq "4" -or $ProductNumber -eq "5")  #SSIS/SSRS/SQL Agent dump
     {
-    
         #ask what type of SSIS memory dump 
         while(($SSISDumpTypeSelection   -ne "1") -and ($SSISDumpTypeSelection  -ne "2"))
         {
@@ -751,10 +746,8 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             "1" {$DumpType="0x0";break}
             "2" {$DumpType="0x34";break}
             default {"0x0120"; break}
-    
         }
     }
-    
     
     # Sqldumper.exe PID 0 0x0128 0 c:\temp
     #output folder
@@ -769,15 +762,12 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         }
     }
     
-    
     #strip the last character of the Output folder if it is a backslash "\". Else Sqldumper.exe will fail
     if ($OutputFolder.Substring($OutputFolder.Length-1) -eq "\")
     {
         $OutputFolder = $OutputFolder.Substring(0, $OutputFolder.Length-1)
         Write-Host "Stripped the last '\' from output folder name. Now folder name is  $OutputFolder"
     }
-    
-    
     
     #find the highest version of SQLDumper.exe on the machine
     $NumFolder = dir "c:\Program Files\microsoft sql server\1*" | Select-Object @{name = "DirNameInt"; expression={[int]($_.Name)}}, Name, Mode | Where-Object Mode -Match "da*" | Sort-Object DirNameInt -Descending
@@ -821,7 +811,6 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
             Write-Host "Not a valid 'Y' or 'N' response"
         }
     }
-    
     
     #get input on how many dumps and at what interval
     if ($YesNo -eq "y")
@@ -910,9 +899,9 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
         Write-Host "Process complete"
     }
     
-    
-    
-    Write-Host "For errors and completion status, review SQLDUMPER_ERRORLOG.log created by SQLDumper.exe in the output folder '$OutputFolder'. `Or if SQLDumper.exe failed look in the folder from which you are running this script"```
+    Write-Host "For errors and completion status, review SQLDUMPER_ERRORLOG.log created by SQLDumper.exe in the output folder '$OutputFolder'. `Or if SQLDumper.exe failed look in the folder from which you are running this script"
+
+    ```
 
 - Run it from Command Prompt as administrator by using the following command:
 
@@ -928,7 +917,8 @@ DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
 
 > [!NOTE]
 > If you have never executed PowerShell scripts on your system, you may receive the error message:
-> File ...SQLDumpHelper.ps1 cannot be loaded because running scripts is disabled on this system.
+>
+> "File ...SQLDumpHelper.ps1 cannot be loaded because running scripts is disabled on this system."
 
 You have to enable the ability to run them by the following steps:
 
