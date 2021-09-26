@@ -50,7 +50,7 @@ The cause of these problems can vary from file system corruption, underlying har
 - Attempt to [script out the database schema](/sql/ssms/scripting/generate-scripts-sql-server-management-studio), use the script to create a new database, and then use a tool like [BCP](/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server) or [SSIS Export/Import Wizard](/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard) to export as much of the data as possible from the corrupted database to the new database. Be aware that exporting out from a corrupt table is likely to fail. In such cases, skip this table, move to the next and salvage what can be salvaged.
 
 > [!WARNING]
-> You must perform manual data validation after `CHECKDB` repair or data export/import is complete. The data might not be consistent after the repair. Refer to [DBCC CHECKDB arguments](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#arguments) for further details.
+> You must perform manual data validation after `CHECKDB` repair or data export/import is complete. Refer to [DBCC CHECKDB arguments](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#arguments) for further details. The data might not be logically consistent after the repair. For example, repair (particularly `REPAIR_ALLOW_DATA_LOSS` option) may remove entire data pages that contain inconsistent data. In such cases a table with a foreign key relationship to another table may end up with rows that don't have corresponding primary key rows in the parent table. 
 
 ## Investigate root cause for database consistency errors
 
