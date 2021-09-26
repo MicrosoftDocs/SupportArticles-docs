@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # New features and functionality in PortQry version 2.0  
@@ -18,7 +18,7 @@ ms.technology: networking
 This article discusses the new features and functionality that are available in PortQry Command Line Port Scanner version 2.0.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;832919
+_Original KB number:_ &nbsp; 832919
 
 ## Summary
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Remote Desktop Protocol settings in Windows Server 2003 and in Windows XP
@@ -22,7 +22,7 @@ This article discusses the connection settings that are stored in the Default.rd
 [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
 _Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;885187
+_Original KB number:_ &nbsp; 885187
 
 ## Introduction
 

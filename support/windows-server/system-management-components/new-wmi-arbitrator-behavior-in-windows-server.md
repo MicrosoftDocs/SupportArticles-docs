@@ -3,14 +3,14 @@ title: New WMI arbitrator behavior in Windows Server
 description: Introduces new WMI arbitrator behavior in Windows Server 2016 and 2012 R2 introduced by March 2018 Windows cumulative updates.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gbrag, lindakup, stevepar, arrenc, v-jeffbo
-ms.prod-support-area-path: WMI
+ms.custom: sap:wmi, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # New WMI arbitrator behavior in Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg, georgev
-ms.prod-support-area-path: 'Management and Configuration: General issues'
+ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # How to add the Print Directory feature for folders in Windows XP, in Windows Vista, in Windows 7
@@ -18,7 +18,7 @@ ms.technology: windows-server-printing
 This article describes how to print a directory listing of the contents of a folder by using the Print Directory feature.
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp;321379
+_Original KB number:_ &nbsp; 321379
 
 ## Summary  
 

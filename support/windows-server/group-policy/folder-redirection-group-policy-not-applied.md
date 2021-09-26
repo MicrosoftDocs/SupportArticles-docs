@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # User Profiles and Folder Redirection group policies aren't applied
@@ -18,7 +18,7 @@ ms.technology: windows-server-group-policy
 This article helps fix an issue that prevents User Profiles and folder redirection policies from working in Microsoft System Center Configuration Manager (SCCM).
 
 _Applies to:_ &nbsp; Windows 10  
-_Original KB number:_ &nbsp;3060058
+_Original KB number:_ &nbsp; 3060058
 
 ## Symptoms
 

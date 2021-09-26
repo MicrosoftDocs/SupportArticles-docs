@@ -1,16 +1,16 @@
 ---
-title: Error message when you try to install a network printer in Windows 7 
+title: Error message when you try to install a network printer in Windows 7
 description: Provides a workaround to an error that occurs when you try to install a network printer in Windows 7.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Management and Configuration Installing Print drivers
+ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
 ms.technology: windows-client-printing
 ---
 # Error message when you try to install a network printer in Windows 7: "0x0000052e"

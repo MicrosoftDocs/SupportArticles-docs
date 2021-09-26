@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: joscon, kaushika
-ms.prod-support-area-path: Slow Performance
+ms.custom: sap:slow-performance, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # How to add processors to a computer

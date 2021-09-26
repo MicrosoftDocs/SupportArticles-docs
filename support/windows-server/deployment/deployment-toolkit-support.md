@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, aaroncz, v-jesits
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Microsoft Deployment Toolkit support life cycle
@@ -18,7 +18,7 @@ ms.technology: windows-server-deployment
 This article discusses the support life cycle for Microsoft Deployment Toolkits.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2872000
+_Original KB number:_ &nbsp; 2872000
 
 ## Summary
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Ajayps, v-jesits
-ms.prod-support-area-path: Boot is slow
+ms.custom: sap:boot-is-slow, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Unexpectedly slow logon caused by large WMI repository in Windows or Windows Server

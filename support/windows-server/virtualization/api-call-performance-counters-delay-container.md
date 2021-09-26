@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roumaago
-ms.prod-support-area-path: Container
+ms.custom: sap:container, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Application Programming Interface (API) call of performance counters is delayed inside a container

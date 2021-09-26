@@ -3,14 +3,14 @@ title: How to download updates that include drivers and hotfixes from the Window
 description: Describes how to obtain updates, WHQL drivers, and hotfixes from the Windows Update Catalog. This information is for advanced users only.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chughes
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to download updates that include drivers and hotfixes from the Windows Update Catalog

@@ -3,14 +3,14 @@ title: Registry Size Limit (RSL) functionality is still be honored if the Regist
 description: Helps to solve the issue that Registry Size Limit (RSL) functionality is still be honored if the RegistrySizeLimit registry key is set
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Connecting to a session or desktop
+ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Registry Size Limit (RSL) functionality is still be honored if the RegistrySizeLimit registry key is set

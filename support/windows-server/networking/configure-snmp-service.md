@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
-ms.prod-support-area-path: TCP/IP communications
-ms.technology: networking 
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.technology: networking
 ---
 # Configure the Simple Network Management Protocol (SNMP) Service in Windows Server 2003  
 

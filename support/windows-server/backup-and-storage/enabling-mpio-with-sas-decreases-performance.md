@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Multipath I/O (MPIO) and Storport
+ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Enabling MPIO with SAS Storage decreases performance

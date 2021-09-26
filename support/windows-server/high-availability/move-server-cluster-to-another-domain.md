@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Initial Cluster Creation or Adding node
+ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Move a Windows Server cluster from one domain to another
