@@ -3,14 +3,14 @@ title: RODC replicates passwords of all users incorrectly in Windows Server
 description: Address an issue in which RODC replicates passwords of users that are not members of Allowed RODC Password Replication Group or are not listed in the RODC account's msDS-RevealOnDemandGroup attribute.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
-ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
+ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # RODC replicates passwords when it's granted incorrect permissions in Windows Server

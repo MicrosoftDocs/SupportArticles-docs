@@ -3,14 +3,14 @@ title: Daylight saving time help and support
 description: Describes the Microsoft policy in response to DST and time zone changes.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Help and Support
+ms.custom: sap:help-and-support, csstroubleshoot
 ms.technology: windows-client-system-management-components
 adobe-target: true
 ---

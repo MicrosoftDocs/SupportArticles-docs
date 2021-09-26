@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Legacy authentication (NTLM)
+ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases
@@ -18,7 +18,7 @@ ms.technology: windows-server-security
 This article provides three methods to prevent Windows from storing a LAN Manager (LM) hash of your password in Active Directory and local Security Accounts Manager (SAM) databases.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;299656
+_Original KB number:_ &nbsp; 299656
 
 ## Summary
 

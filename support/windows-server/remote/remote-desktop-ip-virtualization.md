@@ -3,14 +3,14 @@ title: Remote Desktop IP Virtualization in Windows Server 2019
 description: Remote Desktop IP Virtualization in Windows Server 2019.
 ms.date: 09/14/2021
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Remote Desktop IP Virtualization in Windows Server 2019

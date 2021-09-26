@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: keithpe, kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # AuditPol and Local Security Policy results may differ
@@ -18,7 +18,7 @@ ms.technology: windows-server-active-directory
 This article helps fix an issue where audit policy settings with AuditPol and the Local Security Policy (SECPOL.msc) show different results.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2573113
+_Original KB number:_ &nbsp; 2573113
 
 ## Symptoms
 

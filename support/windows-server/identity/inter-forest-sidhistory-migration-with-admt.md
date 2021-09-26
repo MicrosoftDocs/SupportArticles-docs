@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot inter-forest sIDHistory migration with ADMTv2
