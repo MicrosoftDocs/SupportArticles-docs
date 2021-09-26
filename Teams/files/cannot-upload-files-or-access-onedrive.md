@@ -46,9 +46,11 @@ When you access your OneDrive cloud storage through the **Files** tab, you recei
 
 ## Resolution
 
-Error 1 can have multiple causes. To resolve Error 1, try each of the following resolutions in the order in which they're listed. Check whether the issue is resolved after you try each resolution before you go to the next one.
+To resolve this issue, try the resolutions listed under the related error message.
 
 # [Error Message 1](#tab/Error-Message-1)
+
+Error 1 can have multiple causes. To resolve Error 1, try each of the following resolutions in the order in which they're listed. Check whether the issue is resolved after you try each resolution before you go to the next one.
 
 **Resolution 1**
 
