@@ -1,5 +1,5 @@
 ---
-title: License attributes aren't updated in 2019 RDSH server
+title: License attributes aren't updated after installing 2019 license server
 description: Provides a workaround for the issue in which the users license attributes (msTS*) aren't updated in Active Directory (AD).
 ms.date: 09/23/2021
 author: v-lianna
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, feshehad
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
 ms.technology: windows-server-rds
 ---
-# License attributes aren't updated in 2019 RDSH server
+# License attributes aren't updated after installing 2019 license server
 
 _Original KB number:_ &nbsp; 4547091
 
