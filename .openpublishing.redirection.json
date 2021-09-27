@@ -521,6 +521,11 @@
       "redirect_document_id": false
     },  
     {
+      "source_path": "support/mem/intune/lob-app-versioning.md",
+      "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
+      "redirect_document_id": false
+    },  
+    {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
