@@ -20,7 +20,7 @@ ms.reviewer: sharepoint_triage
 description: Resolutions for some common issues with syncing SharePoint lists offline.
 ---
 
-# Common issues syncing SharePoint lists offline
+# Common issues syncing Microsoft SharePoint lists offline
 
 This document has information about troubleshooting common issues for syncing lists offline.
 
@@ -30,15 +30,18 @@ This document has information about troubleshooting common issues for syncing li
 <summary><b>Sync icon doesn't appear</b></summary>
 
 1. Open the Windows task manager and look for “Microsoft SharePoint (Microsoft.SharePoint.exe)” under **Processes** > **Background Processes**.
-    - If SharePoint is running, continue to step 2.
-    - If SharePoint is not running, List sync isn't running. The most likely reason is that you aren't currently opted into List sync because we are still rolling out the feature. Please wait for the rollout to complete, and then List sync will be available.
+    :::image type="content" source="./media/common-sync-issues/background-processes.png" alt-text="Microsoft SharePoint shows as a background process":::
 
-1. Enable Web App Logging (see the steps below if needed).  
-1. Check the console log for a line that includes "Found list:".
+    - If SharePoint is running, continue to step 2.
+    - If SharePoint isn't running, List sync isn't running. Your SharePoint site might not have List sync yet because we are still rolling out the feature. Please wait for the rollout to complete, and then List sync will be available.
+
+1. <a href=#logging>Enable Web App Logging</a>.  
+1. Check the console log for a line that includes "Found list". It will look similar to this example:
+    :::image type="content" source="./media/common-sync-issues/console.png" alt-text="Console log line that starts with Found List":::
     - If there is no log line starting with “Found list”, it might mean the List sync process hasn't synced the list yet. Wait for silent configuration or syncing to occur.
     - If the line with "Found list" shows “unsynced:true", the list is currently unsynced because List sync doesn’t support it. This is by design, and List sync will be extending our support for lists in future versions. See the "Current Limitations of List sync" section in [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9).
 
-1. If Microsoft.SharePoint.exe is running, and there is a “Found list” log line that does not show "unsynced",  it could be a client issue. See Contacting Support, below.  
+1. If Microsoft.SharePoint.exe is running, and there is a “Found list” log line that does not show "unsynced",  it could be a client issue. See <a href=#support>Contacting Support</a>.  
 
 </details>
 <br/>
@@ -46,9 +49,10 @@ This document has information about troubleshooting common issues for syncing li
 <summary><b>Sync icon stays on for more than 10 minutes</b></summary>
 
 The sync icon will often be on for a few minutes, appearing next to the list name:
+:::image type="content" source="./media/common-sync-issues/sync-icon.png" alt-text="The sync icon appears next to the list name":::
 
 If the icon stays on for more than 10 minutes, first make sure that the client device is online. If it is offline, the sync icon will stay on.
-If the client device is online, and the sync icon shows for more than 10 minutes, see Contacting Support, below.
+If the client device is online, and the sync icon shows for more than 10 minutes, see <a href=#support>Contacting Support</a>.
 
 </details>
 <br/>
@@ -56,10 +60,12 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 <summary><b>Local changes not synced</b></summary>
 
 1. See if there are any conflicts or failed uploads. Navigate to **View** > **All items** > **Items that need attention**.  
-1. If there are conflicts, refresh the page and try the update again. 
-1. If there are no conflicts, or the conflicts continue to appear after step 2, see Contacting Support, below.
+    :::image type="content" source="./media/common-sync-issues/conflicts.png" alt-text="Conflicts are shown in the menu":::
+1. If there are conflicts, refresh the page and try the update again.
+1. If there are no conflicts, or the conflicts continue to appear after step 2, see <a href=#support>Contacting Support</a>.
 
 </details>
+<div id="support"></div>
 
 ## Contacting support
 <br/>
@@ -75,6 +81,7 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 - **Optional** The ticket may require client logs to be collected separately. See “Collect Microsoft SharePoint client logs” below.
 </details>
 <br/>
+<div id="logging"></div>
 <details>
 <summary><b>Enable web app logging</b></summary>
 
@@ -82,10 +89,11 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 1. Make sure you are using Microsoft Edge, Google Chrome, or Mozilla FireFox. These are the only currently supported browsers. Also make sure you are on a device running Windows 10 or later.  
 1. Press F12 to open the browser tools.
 1. Switch to the **Application** tab.
-1. On the left side of the pane should be a list of Local Storage domains. Expand the **Local Storage** category and select the one that corresponds to the list URL. For example, if I was viewing https://contoso.sharepoint-df.com/teams/teamSite/Lists/Number%20List/AllItems.aspx I would pick https://contoso.sharepoint.com as shown in the following screenshot.  
- 
-1. Add `sharepoint.datasync.List sync.logToConsole` in the right pane by selecting an empty line. Set the value to **true**.  
- 
+1. On the left side of the pane should be a list of Local Storage domains. Expand the **Local Storage** category and select the one that corresponds to the list URL. For example, if you were viewing https://contoso.sharepoint.com/teams/teamSite/Lists/Number%20List/AllItems.aspx you would pick https://contoso.sharepoint.com.  
+
+1. Add `sharepoint.datasync.List sync.logToConsole` in the right pane by selecting an empty line. Set the value to **true**.
+    :::image type="content" source="./media/common-sync-issues/logto.png" alt-text=sharepoint.datasync.List sync.logToConsole is added with the value set to True":::
+
 1. With the browser tools still open, switch to the **Console** tab and press F5 to refresh the page.
 1. The console will contain useful logging for web app issues.  
 </details>
