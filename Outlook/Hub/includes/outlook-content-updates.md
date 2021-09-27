@@ -2,6 +2,14 @@
 
 
 
+## Week of September 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/22/2021 | [Hyperlinks are not working](/outlook/troubleshoot/message-body/hyperlinks-not-working-in-outlook) | modified |
+
+
 ## Week of September 13, 2021
 
 
