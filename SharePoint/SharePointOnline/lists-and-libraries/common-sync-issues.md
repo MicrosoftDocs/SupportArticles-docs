@@ -92,7 +92,7 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 1. On the left side of the pane should be a list of Local Storage domains. Expand the **Local Storage** category and select the one that corresponds to the list URL. For example, if you were viewing https://contoso.sharepoint.com/teams/teamSite/Lists/Number%20List/AllItems.aspx you would pick https://contoso.sharepoint.com.  
 
 1. Add `sharepoint.datasync.List sync.logToConsole` in the right pane by selecting an empty line. Set the value to **true**.
-    :::image type="content" source="./media/common-sync-issues/logto.png" alt-text=sharepoint.datasync.List sync.logToConsole is added with the value set to True":::
+    :::image type="content" source="./media/common-sync-issues/logto.png" alt-text="sharepoint.datasync.List sync.logToConsole is added with the value set to True":::
 
 1. With the browser tools still open, switch to the **Console** tab and press F5 to refresh the page.
 1. The console will contain useful logging for web app issues.  
