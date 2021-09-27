@@ -521,6 +521,21 @@
       "redirect_document_id": false
     },  
     {
+      "source_path": "support/mem/intune/app-protection-options-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/configure-app-protection-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/device-enroll-intune-app-management-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
       "source_path": "support/mem/intune/lob-app-versioning.md",
       "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
       "redirect_document_id": false

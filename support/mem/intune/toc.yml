@@ -2,10 +2,6 @@
   href: welcome-intune.yml
 - name: App management
   items:
-  - name: Access denied configuring MAM
-    href: configure-app-protection-access-denied.md
-  - name: Access denied for app protection options
-    href: app-protection-options-access-denied.md
   - name: Android APK app installation fails
     href: app-installation-failed-error.md
   - name: App installation error codes reference
@@ -58,8 +54,6 @@
     href: develop-deliver-working-win32-app-via-intune.md
   - name: Support tip - Build software inventory using Power BI
     href: build-software-inventory-power-bi.md
-  - name: Support tip - Devices enrolled in Intune MAM policy are prompted to enroll
-    href: device-enroll-intune-app-management-error.md
   - name: Troubleshoot app installation issues
     href: troubleshoot-app-install.md
   - name: Troubleshoot app protection policy deployment
