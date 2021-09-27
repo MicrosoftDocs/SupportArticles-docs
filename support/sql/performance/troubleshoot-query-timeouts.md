@@ -38,55 +38,53 @@ By far, the most common reason for query time-outs is underperforming queries. T
 
 4. If the queries are fast in SQLCMD and SSMS, but slow on the application side, change the queries to use the same set options used in SQLCMD and SSMS. Compare the set options by collecting an Extended Events trace (login and connecting events with `collect_options_text`) and check the `options_text` column. Here's an example:
 
-        ```tsql
-        ALTER EVENT SESSION [setOptions] ON SERVER 
-        ADD EVENT sqlserver.existing_connection(SET collect_options_text=(1) 
-            ACTION(package0.event_sequence,package0.last_error,sqlos.system_thread_id,sqlserver.context_info,sqlserver.session_id,sqlserver.sql_text)), 
-        ADD EVENT sqlserver.login(SET collect_options_text=(1)
-            ACTION(sqlos.system_thread_id,sqlserver.context_info,sqlserver.sql_text))
-        ```
+    ```tsql
+    ALTER EVENT SESSION [setOptions] ON SERVER 
+    ADD EVENT sqlserver.existing_connection(SET collect_options_text=(1) 
+        ACTION(package0.event_sequence,package0.last_error,sqlos.system_thread_id,sqlserver.context_info,sqlserver.session_id,sqlserver.sql_text)), 
+    ADD EVENT sqlserver.login(SET collect_options_text=(1)
+        ACTION(sqlos.system_thread_id,sqlserver.context_info,sqlserver.sql_text))
+    ```
 
-5. Check if the `CommandTimeout` setting is smaller than the expected query duration. If the user's setting is fit and time-outs still occur, it's because of a query performance issue.
-
-    Here's an ADO.NET code example with a time-out value set to *10* seconds:
+5. Check if the `CommandTimeout` setting is smaller than the expected query duration. If the user's setting is fit and time-outs still occur, it's because of a query performance issue. Here's an ADO.NET code example with a time-out value set to *10* seconds:
 
     ```csharp
-        using System;
-        using System.Collections.Generic;
-        using System.Linq;
-        using System.Text;
-        using System.Threading.Tasks;
-        using System.Data.SqlClient;
-        using System.Data;
-        
-        namespace ConsoleApplication6
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Data.SqlClient;
+    using System.Data;
+    
+    namespace ConsoleApplication6
+    {
+        class Program
         {
-            class Program
+            static void Main()
             {
-                static void Main()
+                string ConnectionString = "Data Source=.\sql2019;Integrated Security=SSPI;Initial Catalog=tempdb;";
+                string queryString = "exec test";
+        
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    string ConnectionString = "Data Source=.\sql2019;Integrated Security=SSPI;Initial Catalog=tempdb;";
-                    string queryString = "exec test";
-            
-                    using (SqlConnection connection = new SqlConnection(ConnectionString))
-                    {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand(queryString, connection);
-                        
-                        // Setting command timeout to 10 seconds
-                        command.CommandTimeout = 10;
-                        //command.ExecuteNonQuery();
-                        try {
-                            command.ExecuteNonQuery();
-                        }
-                        catch (SqlException e) {
-                            Console.WriteLine("Got expected SqlException due to command timeout ");
-                            Console.WriteLine(e);
-                        }
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(queryString, connection);
+                    
+                    // Setting command timeout to 10 seconds
+                    command.CommandTimeout = 10;
+                    //command.ExecuteNonQuery();
+                    try {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (SqlException e) {
+                        Console.WriteLine("Got expected SqlException due to command timeout ");
+                        Console.WriteLine(e);
                     }
                 }
             }
         }
+    }
     ```
 
 ## Query time-out is not the same as connection time-out
