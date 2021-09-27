@@ -516,6 +516,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
+      "redirect_url": "/mem/intune/apps/app-protection-policies",
+      "redirect_document_id": false
+    },  
+    {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
