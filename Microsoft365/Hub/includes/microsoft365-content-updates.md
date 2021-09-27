@@ -2,6 +2,18 @@
 
 
 
+## Week of September 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/21/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | added |
+| 9/21/2021 | [Troubleshoot eDiscovery hold errors](/office365/troubleshoot/holds/resolve-ediscovery-hold-issues) | added |
+| 9/21/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | modified |
+| 9/21/2021 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
+| 9/22/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+
+
 ## Week of September 13, 2021
 
 
