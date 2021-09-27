@@ -22,7 +22,7 @@ description: Resolutions for some common issues with syncing SharePoint lists of
 
 # Common issues syncing Microsoft SharePoint lists offline
 
-This document has information about troubleshooting common issues for syncing lists offline.
+This document contains troubleshooting steps for common issues with syncing lists offline.
 
 ## Troubleshooting
 <br/>
