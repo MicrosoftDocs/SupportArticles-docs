@@ -121,32 +121,32 @@ When you turn off the **Use draft quality** option, you can view the picture or 
 
 1. Click the **Microsoft Office Button**, and then click **Word Options**.   
 2. Click **Advanced**.   
-3. Under **Print**, click to clear the **Use draft quality** check box.   
+3. Under **Print**, clear the **Use draft quality** check box.   
 4. Click **OK**.   
 
 ##### Word 2010 or later
 
 1. Click **File**, and then click **Options**.   
 2. Click **Advanced**.   
-3. Under **Print**, click to clear the **Use draft quality** check box.
+3. Under **Print**, clear the **Use draft quality** check box.
 4. Click **OK**.   
 
 #### Turn off the "Show field codes instead of their values" option
 
-In some cases, when you turn off the **Show field codes instead of their values** option, embedded objects are not displayed. To turn off this option, follow these steps, as appropriate for your version of Word.
+To turn off this option, follow these steps, as appropriate for your version of Word.
 
 ##### Word 2007
 
 1. Click the **Microsoft Office Button**, and then click **Word Options**.   
 2. Click **Advanced**.   
-3. Under **Show document content**, click to clear the **Show field codes instead of their values** check box.   
+3. Under **Show document content**, clear the **Show field codes instead of their values** check box.   
 4. Click **OK**.   
 
 ##### Word 2010 or later
 
 1. Click **File**, and then click **Options**.   
 2. Click **Advanced**.   
-3. Under **Show document content**, click to clear the **Show field codes instead of their values** check box.
+3. Under **Show document content**, clear the **Show field codes instead of their values** check box.
 4. Click **OK**.   
 
 ### You are using the "In line with text" Wrapping style option
@@ -162,14 +162,14 @@ When you turn off the **Picture Placeholders** option, you can view the picture 
 
 1. Click the **Microsoft Office Button**, and then click **Word Options**.   
 2. Click **Advanced**.   
-3. Under **Display document content**, click to clear the **Picture Placeholders** check box.   
+3. Under **Display document content**, clear the **Picture Placeholders** check box.   
 4. Click **OK**.   
 
 ##### Word 2010 or later
 
 1. Click **File**, and then click **Options**.   
 2. Click **Advanced**.   
-3. Under **Show document content**, click to clear the **Show Picture Placeholders** check box.   
+3. Under **Show document content**, clear the **Show Picture Placeholders** check box.   
 4. Click **OK**.   
 
 > [!NOTE]
