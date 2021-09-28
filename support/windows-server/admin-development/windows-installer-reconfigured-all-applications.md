@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Management Instrumentation (WMI)
+ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
 ms.technology: windows-server-administration-management-development
 ---
 # Event log message indicates that the Windows Installer reconfigured all installed applications

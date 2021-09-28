@@ -2,7 +2,7 @@
 title: Delegate DFS replication
 description: Describes the Active Directory configuration objects that you can use to delegate user rights. Describes how to directly modify the permissions on the configuration objects for each replication group.
 ms.date: 09/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mikelan
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # Delegate DFS replication in Windows Server 2003 R2

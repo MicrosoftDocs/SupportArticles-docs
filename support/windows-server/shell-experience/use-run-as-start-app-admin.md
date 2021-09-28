@@ -2,7 +2,7 @@
 title: Use Run as to start an app as an admin
 description: Describes how to use the Run as command to start an application as an administrator.
 ms.date: 09/28/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # How to use Run as to start an application as an administrator in Windows Server 2003  

@@ -1,5 +1,5 @@
 ---
-title: Error The product key entered does not match any of the Windows images during Windows installation 
+title: Error The product key entered does not match any of the Windows images during Windows installation
 description: Describes an issue where you receive an error message during the installation of Windows.
 ms.date: 10/09/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Windows installation fails with error: The product key entered does not match any of the Windows images available for installation. Enter a different product key

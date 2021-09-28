@@ -2,7 +2,7 @@
 title: Description of Shutdown Event Tracker
 description: Describes the Shutdown Event Tracker.
 ms.date: 10/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JEFFWADE, ScottMca
-ms.prod-support-area-path: Event System
+ms.custom: sap:event-system, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # Description of the Shutdown Event Tracker

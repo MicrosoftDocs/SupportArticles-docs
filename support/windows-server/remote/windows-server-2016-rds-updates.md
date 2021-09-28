@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Available Remote Desktop Services updates in Windows Server 2016
@@ -18,7 +18,7 @@ ms.technology: windows-server-rds
 This article introduces the recommended hotfixes and updates for Remote Desktop Services in Windows Server 2016.
 
 _Applies to:_ &nbsp; Windows Server 2016  
-_Original KB number:_ &nbsp;4039839
+_Original KB number:_ &nbsp; 4039839
 
 ## Summary  
 

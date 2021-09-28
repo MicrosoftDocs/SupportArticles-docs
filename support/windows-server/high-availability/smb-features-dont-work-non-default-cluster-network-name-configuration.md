@@ -3,14 +3,14 @@ title: SMB features don't work with non-default cluster network name configurati
 description: Describes an issue in which some SMB features don't work correctly together with non-default cluster network name configuration in Windows Server 2012 R2.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bhogen, v-jeffbo
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # SMB features don't work with non-default cluster network name configuration on Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
