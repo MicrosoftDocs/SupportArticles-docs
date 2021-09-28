@@ -115,7 +115,7 @@ Microsoft 365 admin users have access to create support requests.
 
 Select the link below, which will populate the pane in the Microsoft 365 Admin Center.
 
-[Run query: Issues with editing Microsoft Lists offline](https://aka.ms/PillarCheckUserAccess)
+[Run query: Issues with editing Microsoft Lists offline](https://aka.ms/editlistofflineIssue)
 
 Fill in the Description field with the **Information needed to open a Microsoft support request**, above.
 
