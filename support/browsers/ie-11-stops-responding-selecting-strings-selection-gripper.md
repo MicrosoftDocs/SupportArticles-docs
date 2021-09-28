@@ -1,7 +1,7 @@
 ---
 title: Internet Explorer 11 stops responding when selecting strings
 description: Provides a workaround for the issue that Internet Explorer 11 stops responding when selecting strings with the selection gripper.
-ms.date: 12/7/2020
+ms.date: 28/09/2021
 ms.prod-support-area-path: 
 ms.reviewer: ramakoni, yuhara
 ---
@@ -23,4 +23,4 @@ To fix this issue in Windows 10, version 1909, install the update [KB5005624](ht
 
 ## Workaround
 
-End the Internet Explorer (iexplore.exe) process in the **Task Manager** and restart Windows.
+To work around this issue in other versions of Windows 10 or if you don't want to install the update for Windows 10, version 1909, end the Internet Explorer (iexplore.exe) process in the **Task Manager** and restart Windows.
