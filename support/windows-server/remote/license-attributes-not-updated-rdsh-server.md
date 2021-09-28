@@ -37,7 +37,7 @@ To work around this issue, delegate control for the organizational unit (OU) con
 
     :::image type="content" source="media/license-attributes-not-updated-rdsh-server/create-a-custom-task-to-delegate.png" alt-text="Select create a custom task to delegate.":::
 
-4. Select **only the following objects in the folder**, check **User objects** ,and select **Next**.
+4. Select **Only the following objects in the folder**, check **User objects**, and select **Next**.
 
     :::image type="content" source="media/license-attributes-not-updated-rdsh-server/only-the-following-objects-in-the-folder.png" alt-text="Select only the following objects in the folder.":::
 
