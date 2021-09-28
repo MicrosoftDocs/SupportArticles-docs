@@ -67,9 +67,9 @@ A problem might exist with the physical printer, the logical printer setting on 
 
 Try the following to isolate and solve the problem:
 
-- Verify basic network connectivity. Check user rights, protocols, share names, and so on, to determine whether you can see the server. Try to copy a file to the server; if you cannot access the server, you might not be able to access the printer.
+- Verify basic network connectivity. Check user rights, protocols, share names, and so on, to determine whether you can see the server. Try to copy a file to the server, if you can't access the server, you might not be able to access the printer.
 - On the **Advanced** tab, make sure the printer availability time is correct.
-- Create a local printer and redirect the port to the network server. Using the Add Printer Wizard, select Local, and then type the server and printer name for the printer (*\\\\\<servername\>\\\<printername\>*). It determines whether you can copy files from the print server.
+- Create a local printer and redirect the port to the network server. Using the **Add Printer Wizard**, select Local, and then type the server and printer name for the printer (*\\\\\<servername\>\\\<printername\>*). It determines whether you can copy files from the print server.
 - Check the available disk space on the print server. If there is not enough room to spool the job, larger jobs might fail where smaller jobs do not.
 
 ## Access Denied message when trying to configure a printer from within an application
@@ -132,7 +132,7 @@ Windows printer drivers are developed through cooperation between Microsoft and 
 
 ### Cause
 
-The print driver is not listed in the Add Printer Wizard's list of printers, but instead was downloaded from the Internet.
+The print driver is not listed in the **Add Printer Wizard**'s list of printers, but instead was downloaded from the Internet.
 
 ### Solution
 

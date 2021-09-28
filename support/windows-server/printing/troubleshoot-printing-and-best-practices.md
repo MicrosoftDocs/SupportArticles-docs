@@ -42,14 +42,14 @@ The modularity of the printing architecture makes diagnosing problems fairly eas
 - The administrator adds a printer and shares it.
 
     1. Check the property of the logical printer; make sure the driver is correct for that printer.
-    1. Using the Add Printer Wizard, you can add another logical printer for the same physical printer to quickly identify whether the problem is with the logical printer.
+    1. Using the **Add Printer Wizard**, you can add another logical printer for the same physical printer to quickly identify whether the problem is with the logical printer.
     1. If you can't browse printer connections, or can't find the printer port, you might have a network problem.
     1. Verify you are logged on as administrator, or as a member of the administrator group.
 
 - A network client connects to that share.
 
     1. Check the property of the logical printer on the client computer; make sure the driver is correct for that printer.
-    1. Using the Add Printer Wizard, you can add another logical printer for the same physical printer to quickly identify whether the problem is with the logical printer.
+    1. Using the **Add Printer Wizard**, you can add another logical printer for the same physical printer to quickly identify whether the problem is with the logical printer.
     1. Check the users' permissions to print to that printer, and check which Group Policy settings for printers are enabled.
     1. If you can't browse printer connections, you might have a network problem.
 
