@@ -1,7 +1,7 @@
 ---
 title: Poor network performance on virtual machines
 description: Describes an issue that may occur if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter. Provides a workaround.
-ms.date: 09/08/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
+ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
 ms.technology: networking
 ---
 # Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
@@ -75,6 +75,4 @@ To manually assign a MAC address, follow these steps:
 
 - If there's another unaffected network adapter on the Hyper-V host, bind the virtual switch to that network adapter.
 
-Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Hyper-V Replica
+ms.custom: sap:hyper-v-replica, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Events 18210, 3041, and 1 are logged when Hyper-V Replica is configured

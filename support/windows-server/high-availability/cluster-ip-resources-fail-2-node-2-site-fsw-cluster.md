@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: node removed from the cluster
+ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
 ms.technology: windows-server-high-availability
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---

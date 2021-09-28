@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, huberts
-ms.prod-support-area-path: PowerShell
-ms.technology: windows-client-system-management-components 
+ms.custom: sap:powershell, csstroubleshoot
+ms.technology: windows-client-system-management-components
 ---
 # Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links
 

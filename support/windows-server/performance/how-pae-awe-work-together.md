@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Slow Performance
+ms.custom: sap:slow-performance, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Large memory support is available in Windows Server 2003 and in Windows 2000
@@ -18,7 +18,7 @@ ms.technology: windows-server-performance
 This article describes Physical Address Extension (PAE) and Address Windowing Extensions (AWE) and explains how they work together. This article also discusses the limitations of using memory beyond the 4-gigabyte (GB) range that is inherent to 32-bit operating systems.
 
 _Applies to:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp;283037
+_Original KB number:_ &nbsp; 283037
 
 ## More information
 

@@ -64,7 +64,7 @@ To disconnect the clients, use one of the following methods.
 
 2. Select **Client web service** > **Manage application** > **Advanced settings**, and then change the application pool to the test application pool that you created.
 
-### Method2: Change the port for the WSUS website
+### Method 2: Change the port for the WSUS website
 
 1. Select **WSUS Administration Web Site** > **Edit Bindings**.
 2. Change the WSUS console to connect to the new port, run the script, and synchronize with USS.
@@ -72,9 +72,9 @@ To disconnect the clients, use one of the following methods.
    > [!NOTE]
    > This method will cause syncing with Configuration Manager to fail.
 
-### Method3: Use Firewall rules to block all client IP addresses or allow only USS and site server incoming connections
+### Method 3: Use Firewall rules to block all client IP addresses or allow only USS and site server incoming connections
 
-After the clients are disconnected from the WSUS server, you can run the [PowerShell script](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdatesWithExclusionPeriod.ps1.txt) by using the `-skipdecline` (and `-exclusion` period, if necessary) parameters to determine the total number of superseded updates that can be declined. Then, run the script again by using `-skipdecline` to actually decline the updates.
+After the clients are disconnected from the WSUS server, you can run the [PowerShell script](decline-superseded-updates.md) by using the `-skipdecline` (and `-exclusion` period, if necessary) parameters to determine the total number of superseded updates that can be declined. Then, run the script again by using `-skipdecline` to actually decline the updates.
 
 In extreme cases in which the PowerShell script can't run because of timeouts, you can add the supersedence column to the WSUS console when all updates are displayed, and then decline the updates manually by following these steps:
 

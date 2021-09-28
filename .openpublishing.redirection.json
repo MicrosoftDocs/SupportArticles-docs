@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/azure/active-directory/remove-duplicate-mobile-device-management.md",
+      "redirect_url": "/troubleshoot/mem/intune/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
@@ -511,6 +516,31 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
+      "redirect_url": "/mem/intune/apps/app-protection-policies",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "support/mem/intune/app-protection-options-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/configure-app-protection-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/device-enroll-intune-app-management-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/mem/intune/lob-app-versioning.md",
+      "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
+      "redirect_document_id": false
+    },  
+    {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false
@@ -849,6 +879,21 @@
       "source_path": "support/windows-client/deployment/compute-md5sha-1-cryptographic-hash-value.md",
       "redirect_url": "https://support.microsoft.com/topic/d92a713f-d793-7bd8-b0a4-4db811e29559",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/identity/security-identifiers-in-windows.md",
+      "redirect_url": "/windows/security/identity-protection/access-control/security-identifiers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/lt2p-ipsec-ras-vpn-connections-fail.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/rras-vpn-connections-fail-ms-chapv2-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-ip-virtualization-not-work.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-ip-virtualization",
+      "redirect_document_id": true
     }
   ]
 }

@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, justintu
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory  
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 8464: Synchronization attempt failed
 
@@ -85,17 +85,17 @@ The following is the `Repadmin` commands and other tools that typically cite the
 
 The following is a sample output from `Repadmin /showrepl` that shows incoming replication from DC2 to DC1 being delayed:
 
-> Domain\\DC2 DSA Options: IS_GC Site Options: (none) DSA object GUID: \<GUID> DSA invocationID: \<ID>  
+> Domain\\DC2 DSA Options: IS_GC Site Options: (none) DSA object GUID: \<GUID\> DSA invocationID: \<ID\>  
 DC=child,DC=root,DC=contoso,DC=com  
-Domain\\DC1 via RPC DSA object GUID: \<GUID> Last attempt @ 2014-08-28 04:50:44 was delayed for a normal reason, result 8464 (0x2110)
+Domain\\DC1 via RPC DSA object GUID: \<GUID\> Last attempt @ 2014-08-28 04:50:44 was delayed for a normal reason, result 8464 (0x2110)
 
 The following is the verbose output of the `Repadmin /showrepl` command:
 
 > Domain\\TRDC1 via RPC  
-DSA object GUID: \<GUID> Address: xxxxxxxxxx._msdcs.root.contoso.com DSA invocationID: <ID> SYNC_ON_STARTUP DO_SCHEDULED_SYNCS PARTIAL_ATTRIBUTE_SET USNs: 0/OU, 234943/PU  
-Last attempt @ \<Date & Time> was delayed for a normal reason, result 8464 (0x2110):  
+DSA object GUID: \<GUID\> Address: xxxxxxxxxx._msdcs.root.contoso.com DSA invocationID: \<ID\> SYNC_ON_STARTUP DO_SCHEDULED_SYNCS PARTIAL_ATTRIBUTE_SET USNs: 0/OU, 234943/PU  
+Last attempt @ \<Date & Time\> was delayed for a normal reason, result 8464 (0x2110):  
 Synchronization attempt failed because the destination DC is currently waiting to synchronize new partial attributes from source. This condition is normal if a recent schema change modified the partial attribute set.  
-The destination partial attribute set is not a subset of source partial attribute set. Last success @ \<Date & Time>.
+The destination partial attribute set is not a subset of source partial attribute set. Last success @ \<Date & Time\>.
 
 ### How to determine the destination domain controller
 

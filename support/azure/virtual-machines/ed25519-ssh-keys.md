@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4013792
 
 ## Symptoms
 
-When you try to create a Linux VM with Ed25519 SSH keys in Microsoft Azure, or when you try to update an Azure Linux VM to use Ed25519 SHH keys, you receive an error message that resembles the following:
+When you try to create a Linux VM with Ed25519 SSH keys in Microsoft Azure, or when you try to update an Azure Linux VM to use Ed25519 SSH keys, you receive an error message that resembles the following:
 
 > The data section of the SSH key starts with an invalid pattern.
 
@@ -33,4 +33,4 @@ The issue occurs because Ed25519 keys are not supported in Azure.
 ## Workaround
 
 To work around this issue, use other SSH keys for the VM, such as RSA. You can generate SSH keys by using **ssh-keygen** in Linux and OS X, or by using PuTTYGen in Windows.
-For more information, see [How to Use SSH keys with Windows on Azure](https://docs.microsoft.com/azure/virtual-machines/linux/ssh-from-windows).
+For more information, see [How to Use SSH keys with Windows on Azure](/azure/virtual-machines/linux/ssh-from-windows).

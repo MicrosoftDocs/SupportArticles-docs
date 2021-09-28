@@ -1,7 +1,7 @@
 ---
 title: Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 description: Resolves an issue that you can't manage or remove objects created through directory synchronization from Azure AD.
-ms.date: 06/22/2020
+ms.date: 08/30/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
@@ -33,17 +33,19 @@ This issue may occur if one or more of the following conditions are true:
 
 You want to manage objects in Office 365, Azure, or Intune and you no longer want to use directory synchronization.
 
-1. Install the Azure Active Directory Module for Windows PowerShell. For more information, see [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN)
+1. If you're not running Windows 10, install the 64-bit version of the Microsoft Online Services Sign-in Assistant: [Microsoft Online Services Sign-in Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi).
+1. Install the Microsoft Azure Active Directory Module for Windows PowerShell:
 
-2. Connect to Azure AD by using Windows PowerShell. For more information, see [Connect to Azure AD](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN) 
+    1. Open an elevated Windows PowerShell command prompt (run Windows PowerShell as an administrator).
+    2. Run the `Install-Module MSOnline` command.
 
-3. Disable directory synchronization by running the following command:
+1. Disable directory synchronization by running the following command:
 
     ```powershell
      Set-MsolDirSyncEnabled -EnableDirSync $false
     ```
 
-4. Check that directory synchronization was fully disabled by using the Windows PowerShell. To do it, run the following command periodically:
+1. Check that directory synchronization was fully disabled by using the Windows PowerShell. To do it, run the following command periodically:
 
     ```powershell
      (Get-MSOLCompanyInformation).DirectorySynchronizationEnabled
@@ -53,7 +55,7 @@ You want to manage objects in Office 365, Azure, or Intune and you no longer wan
 
     It may take 72 hours for deactivation to be completed. The time depends on the number of objects that are in your cloud service subscription account.
 
-5. Try to update an object by using Windows PowerShell or by using the cloud service portal.
+1. Try to update an object by using Windows PowerShell or by using the cloud service portal.
 
      Step 4 may take a while to be completed. There's a process in the cloud service environment that computes attribute values. The process must be completed before the objects can be changed by using Windows PowerShell or by using the cloud service portal.
 

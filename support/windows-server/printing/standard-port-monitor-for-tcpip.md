@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-dgit
-ms.prod-support-area-path: 'Management and Configuration: General issues'
+ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # The standard port monitor for TCP/IP
@@ -18,7 +18,7 @@ ms.technology: windows-server-printing
 This article describes how the standard port monitor works in Microsoft Windows Server 2003 and compares it with the LPR port monitor.
 
 _Applies to:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp;814586
+_Original KB number:_ &nbsp; 814586
 
 ## Summary
 

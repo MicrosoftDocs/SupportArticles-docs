@@ -526,6 +526,8 @@
       href: ./identity/password-reset-fails-error.md
     - name: Password-change protocols in Windows
       href: ./identity/password-change-mechanisms.md
+    - name: Poor performance when calling lookup functions
+      href: ./identity/poor-performance-calling-lookup-functions.md
     - name: Redirect users and computers containers
       href: ./identity/redirect-users-computers-containers.md
     - name: Rename an item after replication collision
@@ -545,9 +547,7 @@
     - name: Use Directory Service to manage AD objects
       href: ./identity/directory-service-manage-objects.md
     - name: UserAccountControl property flags
-      href: ./identity/useraccountcontrol-manipulate-account-properties.md
-    - name: Well-known security identifiers in Windows
-      href: ./identity/security-identifiers-in-windows.md
+      href: ./identity/useraccountcontrol-manipulate-account-properties.md    
   - name: Virtualized domain controller (errors and questions)
     items:
     - name: Host AD DCs in virtual hosting environments
@@ -996,7 +996,7 @@
       href: ./deployment/fix-windows-update-errors.md
     - name: How to block user access to Windows Update
       href: ./deployment/block-user-access-windows-update.md
-    - name: How To use the Recovery Consol
+    - name: How to use the Recovery Console
       href: ./deployment/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
@@ -1624,6 +1624,8 @@
     items:
     - name: Network Load Balancing concept and notes
       href: ./networking/network-load-balancing-concept-notes.md
+    - name: Configure network infrastructure to support NLB operation mode
+      href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
     items:
     - name: Certificate requirements when you use EAP-TLS
@@ -1647,11 +1649,13 @@
     - name: L2TP VPN fails with error 787
       href: ./networking/l2tp-vpn-fails-with-error-787.md
     - name: LT2P/IPsec RAS VPN connections fail
-      href: ./networking/lt2p-ipsec-ras-vpn-connections-fail.md
+      href: ./networking/rras-vpn-connections-fail-ms-chapv2-authentication.md
     - name: Set Up Routing and Remote Access for an Intranet
       href: ./networking/set-up-routing-remote-access-intranet.md
     - name: The Routing and Remote Access service doesn't start
       href: ./networking/rras-doesnt-start.md
+    - name: Troubleshoot error 720 when establishing a VPN connection
+      href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
     - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
   - name: TCP/IP communications
@@ -1722,6 +1726,12 @@
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
       href: ./networking/system-compatibility-with-dnssec-enabled-root-server.md
+    - name: "Part 1: TCP/IP performance overview"
+      href: ./networking/overview-of-tcpip-performance.md
+    - name: "Part 2: TCP/IP performance underlying network issues"
+      href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
+    - name: "Part 3: TCP/IP performance known issues"
+      href: ./networking/tcpip-performance-known-issues.md
     - name: PortQry version 2.0 features and functions
       href: ./networking/portqry-command-line-port-scanner-v2.md
     - name: Portqry.exe command-line utility
@@ -1834,6 +1844,8 @@
       href: ./performance/memory-dump-file-options.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
+    - name: Stop code DRIVER_VERIFIER_DMA_VIOLATION
+      href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
       href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 0x109 on a VMWare virtual machine
@@ -1958,6 +1970,8 @@
       href: ./performance/slow-performance-file-server.md
   - name: System Hang
     items:
+    - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
+      href: ./performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md
     - name: Compress large registry hives
       href: ./performance/compress-bloated-registry.md
     - name: Description of Windows registry
@@ -2402,6 +2416,8 @@
     items:
     - name: Enter-PSSession cmdlet fails
       href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
+    - name: CJK characters are garbled in PowerShell
+      href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
     - name: error code 0x800706BE
@@ -2548,6 +2564,8 @@
       href: ./virtualization/vm-not-reach-vlan-tagging-enabled-network.md
   - name: High availability virtual machines
     items:
+    - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
+      href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
   - name: Hyper-V Network Virtualization (HNV)
@@ -2618,6 +2636,8 @@
       href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
   - name: Storage configuration
     items:
+    - name: Can't add a second Fibre Channel adapter
+      href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
@@ -2706,6 +2726,8 @@
       href: ./windows-security/http-error-500-internal-server-error.md
     - name: Add SAN to secure LDAP certificate
       href: ./windows-security/add-san-to-secure-ldap-certificate.md
+    - name: Approval required for certificate renewals
+      href: ./windows-security/approval-required-certificate-renewals-autoenrollment.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./windows-security/cannot-publish-certificate-trusted-domain.md
     - name: Can't request certificate from web enrollment pages
@@ -2826,6 +2848,8 @@
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
   - name: Permissions, access control, and auditing
     items:
+    - name: .bak log files are deleted and lost
+      href: ./windows-security/bak-log-files-deleted-lost.md
     - name: Access checks using Windows APIs return incorrect results
       href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: waltere, v-dehaas, kaushika
-ms.prod-support-area-path: WINS
+ms.custom: sap:wins, csstroubleshoot
 ms.technology: networking
 ---
 # Troubleshooting WINS error event ID 4102, 4243, 4242, and 4286 messages
@@ -18,7 +18,7 @@ ms.technology: networking
 This article describes how to troubleshoot Windows Internet Name Service (WINS) replication-related error messages.
 
 _Applies to:_ &nbsp; Window Server 2003  
-_Original KB number:_ &nbsp;321208
+_Original KB number:_ &nbsp; 321208
 
 > [!NOTE]
 > You may receive different WINS event log messages, depending on the version of Microsoft Windows and the service pack that you have installed on your computer. The Microsoft Knowledge Base contains information about all the changes to event log messages. Always note the error message and the event ID. An event ID alone may mislead you.

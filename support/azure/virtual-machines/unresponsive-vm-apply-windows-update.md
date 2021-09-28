@@ -3,7 +3,7 @@ title: Azure VM is unresponsive with C01A001D error when applying Windows Update
 description: This article provides steps to resolve issues where Windows update generates an error and becomes unresponsive in an Azure VM.
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: jc-mackin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -12,105 +12,54 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.date: 03/31/2020
-ms.author: v-mibufo
+ms.date: 07/14/2021
+ms.author: v-jcmackin
 ---
 
-# VM is unresponsive with "C01A001D" error when applying Windows Update
+# VM is unresponsive with "C01A001D" error after applying Windows Update
 
-This article provides steps to resolve issues where Windows Update (KB) generates an error and becomes unresponsive in an Azure VM.
+This article provides steps to resolve issues where Windows Update (KB) generates an error and becomes unresponsive in an Azure VM running Windows Server 2016.
 
 ## Symptoms
 
-When using [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, the Windows Update (KB) in progress is displayed, but fails with error code: 'C01A001D'.
+You are unable to apply the following Windows Update (and particularly after KB5003638, released on June 8, 2021) on a Windows Server 2016 VM without experiencing the following symptoms:
+
+- The VM cannot boot, and Remote Desktop Protocol (RDP) connections to the VM fail.
+
+- When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, the Windows Update (KB) in progress is displayed, but fails with error code: 'C01A001D'.
 
 ![unresponsive Windows Update](./media/unresponsive-vm-apply-windows-update/unresponsive-windows-update.png)
 
 ## Cause
 
-A core file can't be created in the file system. The operating system is unable to write files to the disk.
+You may see error C01A001D (STATUS_LOG_FULL) for the following reasons after installing Windows Updates and Language Packs:
+
+- Insufficient free disk space
+- A permission issue related to the handling of files located in *%systemroot%\system32\config\TxR* directory after applying [KB5003638](https://support.microsoft.com/topic/june-8-2021-kb5003638-os-build-14393-4467-d9dfce91-b425-483a-8280-f54d7005b231).
 
 ## Resolution
 
-### Process overview
+To prevent the problem described above from occurring in the first place, complete the following resolution steps on Windows Server 2016 VMs before applying the [Windows Update KB5003638 (OS Build 14393.4467)](https://support.microsoft.com/en-us/topic/june-8-2021-kb5003638-os-build-14393-4467-d9dfce91-b425-483a-8280-f54d7005b231) released on June 8, 2021. You can also complete these steps on the failed VM, but you must first revert the VM to the state before you applied this update by [restoring the VM from backup](/azure/virtual-machines/windows/expand-os-disk).
 
-> [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+1. Ensure that the OS volume has at least 1 GB of free space.
+2. In the Search Windows box, enter **winver** to open the About Windows dialog box and determine the last Windows update applied. If the number after “OS Build 14393” is lower than 4350, then apply either of the following updates (as allowed by your company’s update policy), and then restart the VM:
 
-1. [Create and access a repair VM](#create-and-access-a-repair-vm).
-2. [Free up space on the hard disk](#free-up-space-on-the-hard-disk).
-3. [Recommended: Before rebuilding the VM, enable serial console and memory dump collection](#recommended-before-rebuilding-the-vm-enable-serial-console-and-memory-dump-collection).
-4. [Rebuild the VM](#rebuild-the-vm).
+    - [April 13, 2021—KB5001347 (OS Build 14393.4350)](https://support.microsoft.com/topic/april-13-2021-kb5001347-os-build-14393-4350-ee0e6301-3428-4a14-8e67-d69c5b31c66a)
+    - [May 11, 2021—KB5003197 (OS Build 14393.4402)](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697)
+
+![About Windows dialog box with OS build highlighted](./media/unresponsive-vm-apply-windows-update/about-windows.png)
+
+3. After the OS build is updated to [April 13, 2021—KB5001347 (OS Build 14393.4350)](https://support.microsoft.com/topic/april-13-2021-kb5001347-os-build-14393-4350-ee0e6301-3428-4a14-8e67-d69c5b31c66a) or [May 11, 2021—KB5003197 (OS Build 14393.4402)](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697), download and run the [Known Issue Rollback 062521 01.msi](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697) on the VM that applies local or domain policy. Note the appearance of **KB5001347 Issue 001 Evaluation.admx** in the *%systemroot%\policydefinitions* folder after the item is installed.
+4. Open a policy editor and enable the following setting in local or domain policy:
+
+    - **Path**: Computer configuration\Administrative Templates
+
+    - **Setting**: KB5001347 Issue 001 Evaluation
+
+    - **Value**: Enabled
+5. Restart all the VMs running Windows Server 2016 that fall within the scope of the policy you have just configured.
+
+After completing the steps above, you can now safely apply the [Windows Update June 8, 2021—KB5003638 (OS Build 14393.4467)](https://support.microsoft.com/en-us/topic/june-8-2021-kb5003638-os-build-14393-4467-d9dfce91-b425-483a-8280-f54d7005b231) or later.
 
 > [!NOTE]
-> When this error occurs, the Guest OS isn't operational. You must troubleshoot in offline mode to resolve this issue.
-
-### Create and access a repair VM
-
-1. Follow [steps 1-3 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
-2. Connect to the Repair VM using Remote Desktop Connection.
-
-### Free up space on the hard disk
-
-If the disk isn't already 1 Tb, you must resize it. Once the disk is 1 TB, perform a disk cleanup and a defragmentation of the drive.
-
-1. Check if the disk is full. If the disk is below 1 Tb, [expand it to a maximum of 1 Tb using PowerShell](/azure/virtual-machines/windows/expand-os-disk).
-2. Once the disk is 1 Tb, perform a disk cleanup.
-    - [Detach the data disk from the broken VM](/azure/virtual-machines/windows/detach-disk).
-    - [Attach the data disk to a functioning VM](/azure/virtual-machines/windows/attach-disk-ps#attach-an-existing-data-disk-to-a-vm).
-    - Use the [Disk Cleanup tool](https://support.microsoft.com/help/4026616/windows-10-disk-cleanup) to free up space.
-3. After resizing and cleanup, defragment the drive:
-
-    ```
-    defrag <LETTER ASSIGN TO THE OS DISK>: /u /x /g
-    ```
-    Depending on the level of fragmentation, this could take hours.
-
-### Recommended: Before rebuilding the VM, enable serial console and memory dump collection
-
-1. Open an elevated command prompt session (Run as administrator).
-2. Run the following commands:
-
-    Enable Serial Console:
-
-    ```
-    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON
-    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-    ```
-3. Make sure the free space on the OS disk is at least equal to the VM memory (RAM) size.
-
-    If there isn't enough space on the OS disk, change the location where the memory dump file will be created and refer it to a data disk attached to the VM and with sufficient free space. To change the location, replace `%SystemRoot%` with the drive letter (for example "F:") of the data disk in the below commands:
-
-    **Enable OS dump suggested configuration:**
-
-    Load Broken OS Disk:
-
-    ```
-    REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM
-    ```
-
-    Enable on ControlSet001:
-
-    ```
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-    ```
-
-    Enable on ControlSet002:
-
-    ```
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-    ```
-
-    Unload broken OS disk:
-
-    ```
-    REG UNLOAD HKLM\BROKENSYSTEM
-    ```
-
-### Rebuild the VM
-
-Use [step 5 of the VM repair commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to reassemble the VM.
+> If you cannot revert the state of a VM in a non-boot state, [open a support ticket with Azure Support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).

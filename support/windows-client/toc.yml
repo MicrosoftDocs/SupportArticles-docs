@@ -268,6 +268,8 @@
       href: ./deployment/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
     - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
+    - name: Certificates are missing after you update a device
+      href: ./deployment/certs-missing-after-device-update.md
     - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
@@ -522,10 +524,6 @@
     items:
     - name: Intranet site is identified as Internet site
       href: ./networking/intranet-site-identified-as-an-internet-site.md
-  - name: Network Load Balancing (NLB)
-    items:
-    - name: Configure network infrastructure to support NLB operation mode
-      href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: Remote access
     items:
     - name: Change default MTU Size Settings

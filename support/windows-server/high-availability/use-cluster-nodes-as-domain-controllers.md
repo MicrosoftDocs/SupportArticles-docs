@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # How to use Windows Server cluster nodes as domain controllers
@@ -18,7 +18,7 @@ ms.technology: windows-server-high-availability
 This article describes how to use Windows Server cluster nodes as domain controllers.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;281662
+_Original KB number:_ &nbsp; 281662
 
 ## Summary
 

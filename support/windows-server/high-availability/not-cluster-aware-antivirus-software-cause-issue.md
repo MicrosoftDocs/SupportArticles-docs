@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Antivirus software that isn't cluster-aware may cause problems with Cluster Services
@@ -44,8 +44,8 @@ You can run antivirus software on a SQL Server cluster. However, you must make s
 
 Additionally, you should exclude the following file system locations from virus scanning on a server that is running Cluster Services:
 
-- The path of the `\mscs` folder on the quorum hard disk. For example, exclude the `Q:\mscs` folder from virus scanning.
+- The path of the `\Cluster` folder on the quorum hard disk. For example, exclude the `Q:\Cluster` folder from virus scanning.
 - The `%Systemroot%\Cluster` folder.
-- The temp folder for the Cluster Service account. For example, exclude the `\clusterserviceaccount\Local Settings\Temp` folder from virus scanning.
+- The temp folder for the Cluster Service account. For example, exclude the `\cliusr\Local Settings\Temp` folder from virus scanning.
 
 For more information about running antivirus software on servers that are running SQL Server, see [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422).

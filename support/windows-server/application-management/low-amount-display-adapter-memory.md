@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joelch, waltere
-ms.prod-support-area-path: Application Compatibility Toolkit (ACT)
+ms.custom: sap:application-compatibility-toolkit-act, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # Direct-X diagnostics tool may report an unexpected value for the display adapters memory

@@ -3,14 +3,14 @@ title: Can't use ImageX.exe as backup tool
 description: Describes the reasons why you cannot use the ImageX.exe tool as a backup tool
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # You can't use the ImageX.exe tool as a backup tool

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, klausu
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Standard user: RunOnce and RunOnceEx are not being executed
@@ -18,7 +18,7 @@ ms.technology: windows-client-shell-experience
 This article provides help to fix an issue where standard users can't execute a command set via RunOnce or RunOnceEx.
 
 _Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp;2021405
+_Original KB number:_ &nbsp; 2021405
 
 ## Symptoms
 

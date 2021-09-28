@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: samacha, kaushika
-ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Emulated and synthetic hardware specification for Windows Server 2012 Hyper-V
@@ -18,7 +18,7 @@ ms.technology: hyper-v
 This article summarizes the specifications for supported emulated and synthetic hardware in a Windows Server 2012 environment.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2844106
+_Original KB number:_ &nbsp; 2844106
 
 ## Summary
 

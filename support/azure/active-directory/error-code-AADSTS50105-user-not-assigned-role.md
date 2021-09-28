@@ -19,7 +19,7 @@ The user has not been granted access to the application in Azure AD.
 
 ## Resolution
 
-To assign one or more users to an application directly, see [Quickstart: Assign users to an app](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users).
+To assign one or more users to an application directly, see [Quickstart: Assign users to an app](/azure/active-directory/manage-apps/add-application-portal-assign-users).
 
 ## More Information
 

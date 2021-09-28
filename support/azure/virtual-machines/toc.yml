@@ -60,6 +60,8 @@
     items:
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
+    - name: Detailed SSH troubleshooting
+      href: detailed-troubleshoot-ssh-connection.md
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection
@@ -70,12 +72,14 @@
       href: linux-recovery-cannot-start-file-system-errors.md
     - name: Recover LVM configured VMs and no boot 
       href: chroot-logical-volume-manager.md
+    - name: Reset network interface for Azure Linux VM
+      href: reset-network-interface-azure-linux-vm.md
     - name: Troubleshoot fstab errors 
       href: linux-virtual-machine-cannot-start-fstab-errors.md
-    - name: Detailed SSH troubleshooting
-      href: detailed-troubleshoot-ssh-connection.md
   - name: Windows
     items:
+    - name: Azure virtual machine error '“You must change your password before logging on the first time”'
+      href: must-change-password.md
     - name: Cannot RDP into Azure VM because of authentication errors
       href: cannot-connect-rdp-azure-vm.md
     - name: CredSSP encryption oracle remediation
@@ -96,6 +100,8 @@
       href: troubleshoot-rdp-connection.md
     - name: Detailed RDP troubleshooting
       href: detailed-troubleshoot-rdp.md
+    - name: Troubleshoot a failed trust relationship in an Azure Windows VM
+      href: troubleshoot-broken-secure-channel.md
     - name: Troubleshoot RDP error because the DHCP is disabled
       href: troubleshoot-rdp-dhcp-disabled.md
     - name: Troubleshoot RDP error because of the NSG setting
@@ -108,6 +114,8 @@
       href: troubleshoot-remote-desktop-services-issues.md
     - name: Troubleshoot An internal error
       href: Troubleshoot-rdp-internal-error.md
+    - name: Troubleshoot RDP access is denied error 
+      href: troubleshoot-rdp-access-denied.md 
     - name: Troubleshoot connection disconnects frequently
       href: troubleshoot-rdp-intermittent-connectivity.md
     - name: Troubleshoot a general error
@@ -130,6 +138,8 @@
       href: guest-os-firewall-misconfigured.md
     - name: Troubleshoot RDP error caused by netvsc.sys
       href: troubleshoot-rdp-driver-netvsc.md
+    - name: Maximum allowed connections reached
+      href: troubleshoot-rdp-too-many-admin-sessions-open.md
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
@@ -138,14 +148,16 @@
   - name: Linux
     href: boot-error-troubleshoot-linux.md
     items:
-    - name: Grub Rescue
-      href: troubleshoot-vm-boot-error.md
     - name: Can't boot after a host node upgrade
       href: linux-kernel-panics-upgrade.md
-    - name: Linux VM does not start after an LIS upgrade
-      href: linux-vm-not-start-kernel-lis.md
     - name: Device names are changed
       href: troubleshoot-device-names-problems.md
+    - name: Error in an Azure Linux VM - Failed to start Switch Root
+      href: resolve-failed-start-switch-root-azure-linux-vm.md
+    - name: Grub Rescue
+      href: troubleshoot-vm-boot-error.md
+    - name: Linux VM does not start after an LIS upgrade
+      href: linux-vm-not-start-kernel-lis.md
   - name: Windows
     href: boot-error-troubleshoot.md
     items:
@@ -369,6 +381,8 @@
 - name: Remote troubleshooting tools
   href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
+  - name: VM Inspector for Azure Virtual Machines
+    href: vm-inspector-azure-virtual-machines.md
   - name: Serial Console
     items:
     - name: Overview
@@ -406,6 +420,10 @@
         href: troubleshoot-recovery-disks-windows.md
       - name: Azure Virtual Machine repair
         href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+      - name: Unlocking disks for offline repair
+        href: unlock-encrypted-disk-offline.md
+      - name: Repair unmanaged disks offline
+        href: unmanaged-disk-offline-repair.md
     - name: Linux
       items:
       - name: Portal
@@ -509,8 +527,8 @@
     href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
-  - name: Changes to Windows Server images default size
-    href: default-size-images-changed-30-gb.md
+  - name: FAQ - Azure IaaS VM disks, and managed and unmanaged premium disks
+    href: azure-iaas-vm-disks-managed-unmanaged.md
   - name: IaaS VM logs
     href: iaas-logs.md
   - name: Maximum RAM memory of Linux VM
@@ -534,3 +552,16 @@
     href: /azure/virtual-machines/vm-support-help
   - name: How to create an Azure support request
     href: /azure/azure-portal/supportability/how-to-create-azure-support-request
+
+- name: On-demand Capacity Reservation issues
+  items:
+  - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
+    href: capacity-reservation-cant-deploy-vm-vmss.md
+  - name: Can't create Capacity Reservation
+    href: capacity-reservation-cant-create-vm-vmss.md
+  - name: Can't delete a Capacity Reservation or Group
+    href: capacity-reservation-cant-delete-group.md
+  - name: Capacity Reservation billing scenarios
+    href: capacity-reservation-billing-scenerios.md
+  - name: A Capacity Reservation is in a "Failed" provisioning state
+    href: capacity-reservation-failed-provisioning-state.md

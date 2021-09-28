@@ -2,7 +2,7 @@
 title: Remove administrative shares
 description: Describes how to remove administrative shares in Windows Server 2008, and how to prevent Windows Server 2008 from automatically creating administrative shares.
 ms.date: 10/12/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # How to remove administrative shares in Windows Server 2008

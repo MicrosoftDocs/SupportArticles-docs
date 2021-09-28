@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Distributed Link Tracking on Windows-based domain controllers
@@ -165,7 +165,8 @@ In the case of the link-tracking objects, marking the object for deletion only a
 ## Text version of Dltpurge.vbs
 
 To use this script:
-1. Copy all of the text between the <Start Copy Here> tag and the <End Copy Here> tag in this article, and then paste the text to a ASCII text editor file (for example, a Microsoft Notepad file).
+
+1. Copy all of the text between the \<Start Copy Here\> tag and the \<End Copy Here\> tag in this article, and then paste the text to a ASCII text editor file (for example, a Microsoft Notepad file).
 2. Save the file as "Dltpurge.vbs".
 3 Complete the procedure that is described in [How to delete Distributed Link Tracking objects](/troubleshoot/windows-server/backup-and-storage/distributed-link-tracking-on-domain-controller#how-to-delete-distributed-link-tracking-objects)
 

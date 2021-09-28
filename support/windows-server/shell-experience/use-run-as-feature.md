@@ -1,5 +1,5 @@
 ---
-title: Enable and use the Run As feature 
+title: Enable and use the Run As feature
 description: Describes how to enable and use the Run as feature in Microsoft Windows Server 2003.
 ms.date: 10/13/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # Enable and use the Run As feature in Windows Server 2003

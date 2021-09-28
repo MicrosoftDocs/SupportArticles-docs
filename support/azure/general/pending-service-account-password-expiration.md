@@ -27,7 +27,7 @@ To resolve this problem, follow these steps.
 
 **For an installation of Azure Stack earlier than version 1807** 
 
-1. Update the system to [Azure Stack 1807](https://docs.microsoft.com/azure/azure-stack/azure-stack-update-1807) or a later version.  
+1. Update the system to [Azure Stack 1807](/azure/azure-stack/azure-stack-update-1807) or a later version.  
 2. Create a support request if you have issues when you try to update your environment, or if you expect that you won't be able to update to version 1807 before the account passwords expire. 
 
 **For an installation of Azure Stack 1807 or a later version** 
@@ -41,4 +41,4 @@ The Azure Stack servicing policy requires that you run versions that are curre
 ## References
 
 For more information about updates for Azure Stack, see the "Update package release cadence" section of the following article:
-[Azure Stack servicing policy](https://docs.microsoft.com/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005&preserve-view=true#update-package-release-cadence)
+[Azure Stack servicing policy](/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005&preserve-view=true#update-package-release-cadence)
