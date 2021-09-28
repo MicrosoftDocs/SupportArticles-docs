@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot printing known issues
 description: Overview of printing known issues.
-ms.date: 27/09/2021
+ms.date: 09/27/2021
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -153,7 +153,7 @@ After printer location tracking is enabled, the default behavior is that the use
 
 ### Solution
 
-Set the location string again for this printer. For information on how to do it, see [Enable printer location tracking](cc784120\(v=ws.10\).md).
+Set the location string again for this printer. For information on how to do it, see [Enable printer location tracking](/previous-versions/windows/it-pro/windows-server-2003/cc784120(v=ws.10)).
 
 ## The company has changed its organization, and as a result the naming scheme has to change
 
