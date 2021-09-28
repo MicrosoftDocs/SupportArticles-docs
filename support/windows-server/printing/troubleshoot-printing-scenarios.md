@@ -47,9 +47,9 @@ Follow these steps from the client/workstation machine:
     1. The Spool folder location can be confirmed by checking the `DefaultSpoolDirectory` registry value in the following registry key:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers`.
     2. Move any old files that are in the Spool folder to see if the problem still occurs. Corrupt files in the Spool folder can cause Print Spooler service problems. You may need to stop the Print Spooler service to move the files from the Spool folder.
-    3. The Print Spooler service is, by default, dependent only upon the Remote Procedure Call (RPC) service, RPCSS. To confirm the Spooler dependencies, check the `DependOnService` value in the following Registry key:
+    3. The Print Spooler service is, by default, dependent only upon the Remote Procedure Call service (RpcSs). To confirm the Spooler dependencies, check the `DependOnService` value in the following Registry key:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler`.
-    4. Confirm that the dependent services are started. If there are any other dependent services listed, in addition to RPCSS, edit the `DependOnService` registry value to remove all dependencies except RPCSS.
+    4. Confirm that the dependent services are started. If there are any other dependent services listed, in addition to the RpcSs, edit the `DependOnService` registry value to remove all dependencies except the RpcSs.
     5. It can sometimes be difficult to confirm that a print job is being spooled, pausing the printer will allow the job to be spooled but not printed. It will allow you time to confirm that the print job is being spooled, helping to further narrow the focus of the problem.
 
 ## Slow printing or unexpected output
@@ -93,12 +93,12 @@ Find out where the slowness occurs by doing a pause queue test.
 2. The Spool folder location can be confirmed by checking the `DefaultSpoolDirectory` registry value in the following registry key:
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers`.
 3. Move any old files that are in the Spool folder to see if the problem still occurs. Corrupt files in the Spool folder can cause Print Spooler service problems. You may need to stop the Print Spooler service to move the files from the Spool folder.
-4. The Print Spooler service is, by default, dependent only upon the Remote Procedure Call (RPC) service, RPCSS. To confirm the Spooler dependencies, check the `DependOnService` value in the following Registry key:
+4. The Print Spooler service is, by default, dependent only upon the RpcSs. To confirm the Spooler dependencies, check the `DependOnService` value in the following Registry key:
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler`.
-5. Confirm that the dependent services are started. If there are any other dependent services listed, in addition to RPCSS, edit the `DependOnService` registry value to remove all dependencies except RPCSS.
+5. Confirm that the dependent services are started. If there are any other dependent services listed, in addition to the RpcSs, edit the `DependOnService` registry value to remove all dependencies except the RpcSs.
 6. Since it can sometimes be difficult to confirm that a print job is being spooled, pausing the printer will allow the job to be spooled but not printed. It will allow you time to confirm that the print job is being spooled, helping to further narrow the focus of the problem.
     - Another way to confirm that the client print job is being spooled on the server is to configure the printer to use the NUL port. Since the NUL port is a virtual port, not an actual port, jobs sent to NUL do not waste paper, and do not interfere with print jobs that are printing to other installed ports.
-    - The NUL port is not listed by default in a printer's list of available ports, but can be added by changing a printer's configured port to a Local Port, clicking the New Port button, entering NUL as the port name, and clicking OK. The NUL port is listed in the Print Server Properties' Ports list and can be used to test any installed printer.
+    - The NUL port is not listed by default in a printer's list of available ports, but can be added by changing a printer's configured port to a Local Port, selecting the **New Port** button, entering *NUL* as the port name, and selecting **OK**. The NUL port is listed in the Print Server Properties' Ports list and can be used to test any installed printer.
     - After installing the NUL port, pause the printer using this port and print to the printer from a client. You should see the print job being spooled in the print queue for the printer being tested. Resume the printer to process the spooled print job (the spools are then deleted).
     - Replace third-party drivers with Windows in-box drivers. It is important to understand that there is only one source for a true inbox driver, the *Driver.cab* file that ships on Windows' distribution media. Drivers that are on the Windows Catalog site are Microsoft&reg; Windows&reg; Hardware Quality Lab (WHQL) signed, but are not tested by Microsoft. It means that the drivers meet published criteria but have not been stress-tested by Microsoft as other drivers in the distribution cab have been.
 
@@ -110,7 +110,7 @@ You may need to enable auditing on the specific objects (printers). Unless you h
 2. Right-click the printer you want to audit, and select **Properties**.
 3. Select the **Security** tab, select the **Advanced** button, and then select the **Auditing** tab.
 4. Select the **Add** button, and select all of the user(s) or group(s) whose printer access you wish to audit and select **OK**. The Auditing Entry window will appear to allow you to select the access events that you wish to audit.
-5. Place a check in the Failure column for all of the Access actions listed.
+5. Place a check in the **Failure** column for all of the Access actions listed.
 6. Select **OK** to return to the Advanced Security Settings window and view the audit configuration that is in place.
 7. Select **OK** to close the Advanced Security Settings window and return to the **Properties** for the printer that you configured auditing for. Select **OK** to commit the changes.
 8. Repeat the steps above to enable auditing on all desired printer objects.

@@ -19,7 +19,7 @@ The article describes emerging and common issues that can occur during printing,
 
 ## Printing and scanning might fail when these devices use smart-card authentication
 
-After installing KB5004237 on domain controllers (DCs) in your environment, some printers, scanners, and multifunction devices might fail to print when using smart-card (PIV) authentication.
+After installing [KB5004237](https://support.microsoft.com/topic/july-13-2021-kb5004237-os-builds-19041-1110-19042-1110-and-19043-1110-ae798d3c-3de3-4c1f-b9d9-7391b71da889) on domain controllers (DCs) in your environment, some printers, scanners, and multifunction devices might fail to print when using smart-card (PIV) authentication.
 
 ### Solution
 
