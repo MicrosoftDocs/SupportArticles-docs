@@ -19,19 +19,13 @@ appliesto:
 
 # Profile picture not showing in SharePoint Online
 
-## Symptoms
+Your SharePoint Online profile picture isn't displayed on SharePoint sites or in People web parts. To get your profile picture displayed, try the following resolutions.
 
-Your SharePoint Online profile picture is not displayed on SharePoint sites or in People web parts. To get your profile picture displayed, follow the steps below.
-
-- [If you have an Exchange Online mailbox](#exo)
-- [If you don’t have an Exchange Online mailbox](#noexo)
-- [Steps for SharePoint Administrators](#adminsteps)
-
-## Resolution Option 1: Run the Picture Sync Diagnostic
+## Resolution Option 1: Run the Picture Sync diagnostic
 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user photos.
 
-Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+Select **Run Tests**, which will populate the diagnostic in the Microsoft 365 Admin Center.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Picture Sync](https://aka.ms/PillarPictureSync)
@@ -43,10 +37,10 @@ The diagnostic performs a large range of verifications for users who may not be 
   >
   > [Picture Sync Diagnostic Feedback](https://forms.office.com/r/ae2sgsgDhB)
 
-## Resolution Option 2: Select the most relevant option below and follow the steps to correct the issue
+## Resolution Option 2: Select the most relevant option below and follow the steps
 
 <details>
-<summary><b>### <a id="exo">If you have an Exchange Online mailbox</a></b></summary>
+<summary><b>If you have an Exchange Online mailbox</b></summary>
 
 1. Find a photo you want to use and store it on your computer, OneDrive, or other location you can access.
 1. Sign into Microsoft 365 with your work or school account at [office.com](https://office.com).
@@ -62,7 +56,7 @@ Check for the picture to trigger a sync between Exchange Online and SharePoint O
 1. Select the SharePoint icon.
 1. In the **Search in SharePoint** box, search for yourself, then select **Show more results**.
 1. Select the **People** tab.
-1. Wait  24 hours, and then repeat steps 1-5.
+1. Wait 24 hours, and then repeat steps 1-5.
 
 If all these steps have been completed and the photo is not showing within 24 hours of retrying the steps, contact your Microsoft 365 Administrator. If you aren’t sure who that is, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
     
@@ -70,7 +64,7 @@ If all these steps have been completed and the photo is not showing within 24 ho
 
 
 <details>
-<summary><b>### <a id="noexo">If you don’t have an Exchange Online mailbox</a></b></summary>
+<summary><b>If you don't have an Exchange Online mailbox</b></summary>
 
 1. Find a photo you want to use and store it on your computer, OneDrive, or other location you can access.
 1. Sign into Microsoft 365 with your work or school account at [office.com](https://office.com).
@@ -93,7 +87,7 @@ If all these steps have been completed and the photo is still not showing, conta
  </details>
 
 <details>
-<summary><b>### <a id="adminsteps">Steps for SharePoint Administrators</a></b></summary>
+<summary><b>Steps for SharePoint Administrators</b></summary>
 
 If a user is encountering this problem, check that the Picture profile property is set to be user editable. If this is not set to user editable, SharePoint will not sync the pictures with Exchange Online.
 
