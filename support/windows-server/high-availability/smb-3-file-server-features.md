@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cannot failover a group
+ms.custom: sap:cannot-failover-a-group, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # New SMB 3.0 features in the Windows Server file server

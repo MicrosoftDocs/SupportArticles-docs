@@ -1,7 +1,7 @@
 ---
 title: SQL Server in Windows operating system
 description: This article describes how to use SQL Server in Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 environments.
-ms.date: 09/17/2020
+ms.date: 09/16/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.prod: sql
@@ -24,6 +24,7 @@ How to use this article:
 
     |Windows Version/SQL Version --> |SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|More Information/Limitations|
     |---|---|---|---|---|---|---|---|---|
+    |Windows Server 2022  |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |[Additional information for Windows Server 2022 environments](#minimum-sql-server-version-requirements-for-windows-server-2022)|    
     |Windows 10 |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows 10 environments](#minimum-sql-server-version-requirements-for-windows-10-and-windows-server-2016)|
     |Windows Server 2019  |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows Server 2019 environments](#minimum-sql-server-version-requirements-for-windows-server-2019)|
     |Windows Server 2016  |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows Server 2016 environments](#minimum-sql-server-version-requirements-for-windows-10-and-windows-server-2016)|
@@ -51,6 +52,24 @@ How to use this article:
     1. The **Hardware and Software Requirements** page for SQL 2016 confirms that SQL Server 2016 Developer edition is supported on Windows 10 Professional.
   
     1. The More Information/Limitations column for Windows Server 2016 do not call out any additional known issues for this configuration.
+    
+## Minimum SQL Server version requirements for Windows Server 2022
+
+This section describes the minimum version requirements to install SQL Server on a computer that is running Windows Server 2022.
+
+Before you install SQL Server on a computer that is running Windows Server 2022 you must make sure that you fulfill the following minimum requirements, as appropriate for your situation.
+
+- **For SQL Server 2019 on Windows**
+
+    The release is supported at the SQL Server 2019 on Windows RTM Release version.
+
+- **For SQL Server 2017 on Windows**
+
+    The release is supported at the SQL Server 2017 on Windows RTM Release version.
+
+- **For SQL Server 2016** and older versions
+
+    SQL Server 2016 and older versions are not supported on Windows Server 2022.
   
 ## Minimum SQL Server version requirements for Windows Server 2019
 

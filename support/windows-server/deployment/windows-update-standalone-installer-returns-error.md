@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Windows Update Standalone Installer (WUSA) returns 0x5 ERROR_ACCESS_DENIED when deploying .msu files through WinRM and Windows Remote Shell

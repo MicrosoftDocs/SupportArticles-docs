@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, justintu, v-jesits
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8461
@@ -19,7 +19,7 @@ This article describes symptoms, cause, and resolution steps for cases in which 
 > The replication operation was preempted.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2981628
+_Original KB number:_ &nbsp; 2981628
 
 ## Symptoms
 

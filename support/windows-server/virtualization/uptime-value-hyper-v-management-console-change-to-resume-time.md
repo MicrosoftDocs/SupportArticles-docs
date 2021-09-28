@@ -3,14 +3,14 @@ title: The uptime value of the Hyper-V Management console changes to the resume 
 description: Describes an issue that occurs when you back up a virtual machine that is running on a Hyper-V host operating system.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Integration components
+ms.custom: sap:integration-components, csstroubleshoot
 ms.technology: hyper-v
 ---
 # The uptime value of the Hyper-V Management console changes to the resume time of the last pause

@@ -2,7 +2,7 @@
 title: Distributed File System Replication (DFSR) SYSVOL fails to migrate or replicate
 description: Provides a solution to issues where DFSR SYSVOL fails to migrate or replicate, or SYSVOL isn't shared.
 ms.date: 10/12/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # DFSR SYSVOL fails to migrate or replicate, SYSVOL not shared, Event IDs 8028 or 6016

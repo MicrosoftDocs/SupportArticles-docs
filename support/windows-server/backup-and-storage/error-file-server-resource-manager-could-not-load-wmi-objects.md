@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: File Server Resource Manager (FSRM)
+ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # File Server Resource Manager could not load WMI objects in Windows Server
@@ -18,7 +18,7 @@ ms.technology: windows-server-backup-and-storage
 This article helps fix an error that occurs when starting the File Server Resource Manager in Windows Server.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2831687
+_Original KB number:_ &nbsp; 2831687
 
 ## Symptoms
 

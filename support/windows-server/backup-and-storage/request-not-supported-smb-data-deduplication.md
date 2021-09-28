@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Deduplication
+ms.custom: sap:deduplication, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # SMB Read Andx requests for files managed by Data Deduplication error in Windows Server 2012: The request is not supported
@@ -18,7 +18,7 @@ ms.technology: windows-server-backup-and-storage
 This article helps fix the errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2817216
+_Original KB number:_ &nbsp; 2817216
 
 ## Symptoms
 

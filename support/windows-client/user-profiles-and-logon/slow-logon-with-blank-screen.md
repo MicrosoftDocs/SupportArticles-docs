@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Slow logon
+ms.custom: sap:slow-logon, csstroubleshoot
 ms.technology: windows-client-user-profiles
 ---
 # Slow logon with a blank screen in Windows

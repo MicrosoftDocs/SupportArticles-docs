@@ -2,7 +2,7 @@
 title: Prevent domain controllers from dynamically registering DNS names
 description: Describes how to prevent domain controllers from dynamically registering DNS names.
 ms.date: 09/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # How to prevent domain controllers from dynamically registering DNS names

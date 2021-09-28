@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Slow Performance
+ms.custom: sap:slow-performance, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Troubleshooting slow file copying in Windows

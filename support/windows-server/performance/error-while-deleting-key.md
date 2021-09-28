@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-parapa
-ms.prod-support-area-path: Slow Performance
+ms.custom: sap:slow-performance, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Can't delete certain registry keys and Error while deleting key occurs

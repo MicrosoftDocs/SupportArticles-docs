@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Folder redirection
-ms.technology: windows-server-user-profiles 
+ms.custom: sap:folder-redirection, csstroubleshoot
+ms.technology: windows-server-user-profiles
 ---
 # Event ID 101 and Event ID 1000 may be displayed when Folder Redirection is set up with Group Policy
 

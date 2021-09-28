@@ -64,8 +64,6 @@
       href: only-one-app-policy-applied-edge-managed-browser.md
   - name: General help and troubleshooting
     items:
-    - name: LOB app versioning
-      href: lob-app-versioning.md  
     - name: Save application failed error
       href: save-application-failed-error.md
     - name: Build software inventory using Power BI
@@ -78,16 +76,8 @@
       href: troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
       href: troubleshoot-mam.md   
-    - name: Access Denied when accessing Exchange Online & SharePoint Online
-      href: app-protection-options-access-denied.md
-    - name: Access denied configuring Conditional Access
-      href: configure-app-protection-access-denied.md
-    - name: Devices enrolled in Conditional Access policy prompted to enroll in Intune
-      href: device-enroll-intune-app-management-error.md
     - name: Known issue - Fingerprint authentication on Samsung Note 4
       href: no-prompt-for-fingerprint-identity.md
-    - name: Set up and validate iOS app protection policies
-      href: set-up-app-protection-policies-ios-device.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll

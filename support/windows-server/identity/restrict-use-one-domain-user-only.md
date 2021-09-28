@@ -3,14 +3,14 @@ title: Restrict use of a computer to one domain user only
 description: Describes how to restrict use of a computer to one domain user only.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to restrict use of a computer to one domain user only

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cortana and Search
+ms.custom: sap:cortana-and-search, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # Windows Search is disabled by default in Windows Server 2016

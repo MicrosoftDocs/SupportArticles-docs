@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, winciccore
-ms.prod-support-area-path: System Hang
+ms.custom: sap:system-hang, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 

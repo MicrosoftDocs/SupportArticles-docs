@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Boot is slow
+ms.custom: sap:boot-is-slow, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # How to troubleshoot startup problems in Windows Server 2003

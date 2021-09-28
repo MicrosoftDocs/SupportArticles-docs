@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adjudele, cpuckett, kaushika
-ms.prod-support-area-path: Live Migration
+ms.custom: sap:live-migration, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Troubleshoot live migration issues

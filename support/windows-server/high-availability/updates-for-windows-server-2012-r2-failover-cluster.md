@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: cpuckett, kaushika
-ms.prod-support-area-path: Root cause of an unexpected failover
+ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters

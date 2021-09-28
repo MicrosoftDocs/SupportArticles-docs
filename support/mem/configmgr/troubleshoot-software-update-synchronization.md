@@ -160,7 +160,7 @@ Unlike WCM and WSyncMgr, WSUS Control Manager (WSUSCtrl) resides on the software
 To check whether WSUS is functioning as expected, run the following command on the WSUS server. Then review the Application log in Event Viewer for errors:
 
 ```console
-%ProgramFiles%\Update Services\Tools\wsusutil.exe check health
+%ProgramFiles%\Update Services\Tools\wsusutil.exe checkhealth
 ```
 
 ### Check connectivity from the site server to the WSUS server

@@ -3,14 +3,14 @@ title: WSUS 3.0 installation package
 description: Describes how to obtain the WSUS 3.0 installation package.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kimmar
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # The Windows Server Update Services 3.0 installation package is available

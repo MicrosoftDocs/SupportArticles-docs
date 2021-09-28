@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
+ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Deactivate or reactivate a license server by using Terminal Services Licensing

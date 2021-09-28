@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-client-user-profiles
 ---
 # Holding Shift key while shutting down or logging off may not disable automatic logon
@@ -18,7 +18,7 @@ ms.technology: windows-client-user-profiles
 This article helps resolve an issue where you can't disable automatic logon by holding the Shift key while shutting down or logging off from a computer.
 
 _Applies to:_ &nbsp; Windows 10 – all editions  
-_Original KB number:_ &nbsp;2840544
+_Original KB number:_ &nbsp; 2840544
 
 ## Symptoms
 
