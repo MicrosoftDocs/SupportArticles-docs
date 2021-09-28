@@ -75,7 +75,7 @@ If all these steps have been completed and the photo is not showing within 24 ho
 
     :::image type="content" source="./media/profile-picture-not-showing/profile-picture.png" alt-text="Image shows the Picture dialog with the Upload Picture button.":::
 
-    **Note** If you see **Change photo** instead of **Upload picture**, you have an Exchange Online mailbox. Follow the steps in [If you have an Exchange Online mailbox](#exo) instead.
+    **Note** If you see **Change photo** instead of **Upload picture**, you have an Exchange Online mailbox. Follow the steps in **If you have an Exchange Online mailbox** instead.
 
 1. Select the **Basic Information** tab, and then choose **Upload picture**. The **Choose a picture** dialog box is displayed.
 1. Upload a picture to SharePoint Online from the **Choose a picture** dialog box.
