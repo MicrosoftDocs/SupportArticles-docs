@@ -206,6 +206,10 @@
         "system-center/**/*.md": [ "System Center" ],
         "dynamics-365/**/*.md": [ "Dynamics 365" ],
         "power-platform/**/*.md": [ "Power Platform" ]
+      },
+      "ms.search.scope":{
+        "dynamics-365/supply-chain/**/*.md": ["Core","Operations","Supply Chain","ShowInHelp"],
+        "dynamics-365/finance/**/*.md": ["Core","Operations", "Finance","ShowInHelp"]
       }
     },
 
