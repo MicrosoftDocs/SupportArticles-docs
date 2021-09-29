@@ -19,22 +19,25 @@ Assume that an application queries data from a SQL Server database. If the query
 
 ## Explanation
 
-These errors occur on the application side. On the SQL Server side, a query time-out causes an Attention event ([error 3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value is set to *0* (no time limit), the Database Engine executes the query until it's completed. The time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property in .NET Framework.
+These errors occur on the application side. The application sets a time out value and if the time out is reached, it cancels the query. On the SQL Server side, a query cancellation causes an Attention event ([error 3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value is set to *0* (no time limit), the Database Engine will execute the query until it's completed.
 
+- In the [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) namespace of .NET Framework, the time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property.
 - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute of the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function) function.
 - In Java Database Connectivity (JDBC) API, it's set through the [setQueryTimeout](/sql/connect/jdbc/reference/setquerytimeout-method-sqlserverstatement) method.
 
-Query time-out is different from a connection time-out property. The latter controls how long to wait for a successful connection and isn't involved in query execution. See [Query time-out is not the same as connection time-out](#query-time-out-is-not-the-same-as-connection-time-out).
+Query time-out is different from a connection time-out property. The latter controls how long to wait for a successful connection and isn't involved in query execution. For more information, see [Query time-out is not the same as connection time-out](#query-time-out-is-not-the-same-as-connection-time-out).
 
 ## Troubleshooting steps
 
 By far, the most common reason for query time-outs is underperforming queries. This should be the first target of your troubleshooting. Here's how to check queries:
 
 1. Use [Extended Events](/sql/relational-databases/extended-events/extended-events) and [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to identify the queries that cause the time-out errors.
-2. Execute and test the queries in SQLCMD mode or in SQL Server Management Studio (SSMS).
+2. Execute and test the queries in SQLCMD or in SQL Server Management Studio (SSMS).
 
-3. If the queries are also slow in SQLCMD and SSMS, troubleshoot and change the queries.  
-    **Note:** In SQLCMD and SSMS, the time-out value is set to *0* (no time limit) and the queries can be tested and investigated.
+3. If the queries are also slow in SQLCMD and SSMS, troubleshoot and improve the performance of the queries.
+
+   > [!NOTE]
+   > In SQLCMD and SSMS, the time-out value is set to *0* (no time limit) and the queries can be tested and investigated.
 
 4. If the queries are fast in SQLCMD and SSMS, but slow on the application side, change the queries to use the same set options used in SQLCMD and SSMS. Compare the set options by collecting an Extended Events trace (login and connecting events with `collect_options_text`) and check the `options_text` column. Here's an example:
 
@@ -46,7 +49,7 @@ By far, the most common reason for query time-outs is underperforming queries. T
         ACTION(sqlos.system_thread_id,sqlserver.context_info,sqlserver.sql_text))
     ```
 
-5. Check if the `CommandTimeout` setting is smaller than the expected query duration. If the user's setting is fit and time-outs still occur, it's because of a query performance issue. Here's an ADO.NET code example with a time-out value set to *10* seconds:
+5. Check if the `CommandTimeout` setting is smaller than the expected query duration. If the user's setting is correct and time-outs still occur, it's because of a query performance issue. Here's an ADO.NET code example with a time-out value set to *10* seconds:
 
     ```csharp
     using System;
@@ -95,4 +98,4 @@ Query time-out is different from connection time-out or login time-out. The conn
 
 - > Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.
 
-The time-out value is a client-side setting. For more information about how to troubleshoot connection time-out, see [Troubleshooting: Timeout Expired](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). For query timeout troubleshooting, watch this [video](https://channel9.msdn.com/Series/SQL-Workshops/SQL-Server-Command-Timeout-Application-Timeout-Extended-Event-Attention).
+The connection time-out value is a client-side setting and the typical value is 15 seconds. For more information about how to troubleshoot connection time-out, see [troubleshoot connection timeout](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). For query timeout troubleshooting, watch this [video](https://channel9.msdn.com/Series/SQL-Workshops/SQL-Server-Command-Timeout-Application-Timeout-Extended-Event-Attention).
