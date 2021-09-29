@@ -1,7 +1,7 @@
 ---
 title: Common issues syncing SharePoint lists offline
-ms.author: v-matham
-author: prbalusu
+ms.author: prbalusu
+author: v-matham
 manager: dcscontentpm
 ms.date: 09/24/2021
 audience: Admin
