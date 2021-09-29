@@ -17,25 +17,22 @@ appliesto:
 - Outlook for Office 365
 search.appverid: MET150
 ---
-# Shareable links functionality in Outlook
+# Shareable links in Outlook
 
-## Overview
+Microsoft Outlook displays additional information for links to files on OneDrive or SharePoint site that you share in an email message. This information includes a visual indicator for the shareable link, the icon for the file type of the link, and recipients who can access the link. The shareable links functionality in Outlook helps you ensure that the links to other Microsoft 365 apps are shared appropriately without opening those apps to share the files.
 
-Microsoft Outlook conveys additional information for links to OneDrive or SharePoint files in an email message. This article describes details for the following items:
+## How Outlook displays shareable links
 
-- How Outlook conveys the information.
-- How to manage or check the links access for recipients.
-- Advanced tips for the functionality.
-- Troubleshooting issues that you may experience when using the functionality.
+Outlook displays shareable links in the following ways:
 
-## Recognizing links to OneDrive or SharePoint files
+### Recognizing links to OneDrive or SharePoint files
 
 When Outlook detects such a link, it applies a gray background to the link, which makes it stand out to your recipients. It shows that the link has special functionality and options.
 
-Outlook recognizes links to a shareable file in an email through the following ways:
+Outlook recognizes links to a shareable file in an email when you:
 
 - Copy a link to a OneDrive or SharePoint file and paste it into the body of an email message.
-- On the **Message** tab, select **Link** > **Insert Link…** and select a OneDrive or SharePoint file.
+- Navigate to the **Message** tab, select **Link** > **Insert Link…** and select a OneDrive or SharePoint file.
 
     **Note:** If you insert a recently used file under Link, Outlook will share the link by using the [default settings](/sharepoint/turn-external-sharing-on-or-off) of your organization that is set up by the tenant administrator.
 
@@ -43,7 +40,7 @@ Outlook recognizes links to a shareable file in an email through the following w
 - Reply or forward an email with existing links.
 - Resume a draft with existing links. For example, if you started the draft on an earlier version of Outlook and resume it on a newer version.
 
-## URL shortening
+### URL shortening
 
 When Outlook recognizes a link to a shareable file, it automatically adds the file type icon (for example, Word, PowerPoint, or Excel) and shorten the URL to the name of the file.
 
@@ -58,7 +55,7 @@ You can undo this change and show the full URL by using one of the following way
 
     **Note:** It only works if the URL gets shortened before you continue typing.
 
-## Link information
+### Link information
 
 Outlook also provides link information, which pops up automatically after you insert a new link without any editing. This example shows that anyone within your organization can view and edit the link:
 
@@ -66,7 +63,11 @@ Outlook also provides link information, which pops up automatically after you in
 
 **Tip:** If you use a screen-reading app (such as [Windows Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1)), the information will be read out by navigating the cursor into the link.
 
-## Adjusting who can access the link
+## Manage access to shareable links
+
+You can manage access to shareable links, and Outlook will check whether the recipients have access before sending an email message.
+
+### Adjusting who can access the link
 
 In the above example, select the link information to manage who can access the link. When you share the link through OneDrive, SharePoint websites, or other Office 365 apps (such as Word or Excel), the same setting presents as follows:
 
@@ -74,11 +75,11 @@ In the above example, select the link information to manage who can access the l
 
 **Note:** You can also right-click the link or press the Menu key when the cursor is inside the link, and select **Manage Access…** to get the same setting.
 
-## Link permission checking
+### Link permission checking
 
 Outlook checks whether the recipients of your email message can access the link. The check will be finished before you send the email message. There is no error or warning if all recipients can access the link. Otherwise, you will receive one of the three results:
 
-### One or more recipients don't have access
+#### One or more recipients don't have access
 
 The link color shows red and there's a red exclamation mark over the upper right corner of the link. When you select the link, it gives the error message:
 
@@ -99,7 +100,7 @@ In the above example, the recipient is outside of your organization and won't ha
 - The error message for not having access might differ.
 - You can navigate between the links that have the error by pressing Ctrl+Alt+F1.
 
-### Unable to verify recipients' access
+#### Unable to verify recipients' access
 
 If Outlook can't verify whether the recipients have access to a link, it provides a warning. A gray exclamation icon shows over the upper right corner of the link, but the link color doesn't change. In addition, the reason that Outlook can't check the link for recipient access will be displayed when you select the link.
 
@@ -115,7 +116,7 @@ See the following screenshot for an example:
 
 **Note:** Right-click the link or press the Menu key when the cursor is inside the link, you can also get the same error information and options.
 
-### Warning before sending
+#### Warning before sending
 
 If some of your recipients can't access the link in an email message, you receive a warning when you try to send the email message.
 
@@ -143,7 +144,7 @@ You may experience the following issues when you use the functionality in Outloo
 
 - The original sender of the link manually applied a gray background.
 - Your Outlook client doesn't recognize the service that the link points to, but the sender may recognize. For example, if the sender uses a custom domain to host a SharePoint site that isn't hosted on sharepoint.com), then Outlook can't recognize the site. Unless you sign in to an account associated with that domain via **File** > **Office Account** > **Connected Services**.
-- The link is [Safelink wrapped](https://support.microsoft.com/office/advanced-outlook-com-security-for-microsoft-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2). For example, you copy a wrapped link from an email message, and paste it into a new email message. Outlook can't unwrap it to recognize the OneDrive or SharePoint file. But if the email message is viewed or previewed, and you reply or forward, Outlook can unwrap the link. If you turn off the preview pane and don't open the email message before you reply or forward, Outlook can't unwrap it.
+- The link is [Safelink wrapped](https://support.microsoft.com/office/advanced-outlook-com-security-for-microsoft-365-subscribers-882d2243-eab9-4545-a58a-b36fee4a46e2) using the Microsoft standard URL prefix: `https://nam01.safelinks.protection.outlook.com`. For example, you copy a wrapped link from an email message, and paste it into a new email message. Outlook can't unwrap it to recognize the OneDrive or SharePoint file. But if the email message is viewed or previewed, and you reply or forward, Outlook can unwrap the link. If you turn off the preview pane and don't open the email message before you reply or forward, Outlook can't unwrap it.
 
 **Q:** I have a link that points to a OneDrive or SharePoint file, but there is no gray background, and I can't interact with the link as described.
 
