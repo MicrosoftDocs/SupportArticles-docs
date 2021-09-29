@@ -21,7 +21,7 @@ Assume that an application queries data from a SQL Server database. If the query
 
 These errors occur on the application side. The application sets a time out value and if the time out is reached, it cancels the query. On the SQL Server side, a query cancellation causes an Attention event ([error 3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value is set to *0* (no time limit), the Database Engine will execute the query until it's completed.
 
-- In the .NET Framework [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) namespace, the time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property.
+- In .NET Framework [System.Data.SqlClient](/dotnet/api/system.data.sqlclient), the time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property.
 - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute in the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function) function.
 - In Java Database Connectivity (JDBC) API, it's set through the [setQueryTimeout](/sql/connect/jdbc/reference/setquerytimeout-method-sqlserverstatement) method.
 
@@ -98,4 +98,4 @@ Query time-out is different from connection time-out or login time-out. The conn
 
 - > Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out.
 
-The connection time-out value is a client-side setting and the typical value is 15 seconds. For more information about how to troubleshoot connection time-out, see [troubleshoot connection timeout](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). For query timeout troubleshooting, watch this [video](https://channel9.msdn.com/Series/SQL-Workshops/SQL-Server-Command-Timeout-Application-Timeout-Extended-Event-Attention).
+The connection time-out value is a client-side setting and is typically set to is 15 seconds. For more information about how to troubleshoot connection time-out, see [troubleshoot connection timeout](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). For query timeout troubleshooting, watch this [video](https://channel9.msdn.com/Series/SQL-Workshops/SQL-Server-Command-Timeout-Application-Timeout-Extended-Event-Attention).
