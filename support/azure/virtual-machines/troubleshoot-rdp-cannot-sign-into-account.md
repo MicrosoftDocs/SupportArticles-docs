@@ -28,11 +28,11 @@ When you try to connect the Windows VM by using RDP,  you receive the following 
 
 In the Applications Event log, you see Event ID 1511 is logged for each RDP connection attempt.
 
-ID:       1511<br>
-Level:    Error<br>
-Source:   Microsoft-Windows-User Profiles Service<br>
-Machine:  RDPDemo.contoso.net<br>
-Message:  Windows cannot find the local profile and is logging you on with a temporary profile. Changes you make to this profile will be lost when you log off.
+ > ID:       1511<br>
+ > Level:    Error<br>
+ > Source:   Microsoft-Windows-User Profiles Service<br>
+ > Machine:  RDPDemo.contoso.net<br>
+ > Message:  Windows cannot find the local profile and is logging you on with a temporary profile. Changes you make to this profile will be lost when you log off.
 
 ## Cause
 
