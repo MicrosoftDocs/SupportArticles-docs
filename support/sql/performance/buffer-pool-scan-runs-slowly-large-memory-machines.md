@@ -37,7 +37,7 @@ Here are some operations that may trigger a buffer pool scan to occur:
 
 Starting with [SQL Server 2016 SP3](https://support.microsoft.com/help/5003279), [SQL Server 2017 CU23](https://prod.support.services.microsoft.com/topic/kb5000685-cumulative-update-23-for-sql-server-2017-22b653c7-8487-4564-9db2-b5c1bd465145?preview=true#bkmk_13741858) and [SQL Server 2019 CU9](https://support.microsoft.com/topic/kb5000642-cumulative-update-9-for-sql-server-2019-97ad5c3e-e002-4b6d-b566-698bf70ca44a#bkmk_13744390), an error message was added to the SQL Server [Errorlog](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) to indicate that a buffer pool scan took a long time (10 seconds or longer):
 
-    Buffer Pool scan took 14 seconds: database ID 7, command 'BACKUP DATABASE', operation 'FlushCache', scanned buffers 115, total iterated buffers 204640239, wait time 0 ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information.
+>Buffer Pool scan took 14 seconds: database ID 7, command 'BACKUP DATABASE', operation 'FlushCache', scanned buffers 115, total iterated buffers 204640239, wait time 0 ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information.
 
 
 ### Extended Event to diagnose a long scan
