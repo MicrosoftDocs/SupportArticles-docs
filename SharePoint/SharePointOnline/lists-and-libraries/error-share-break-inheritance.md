@@ -4,9 +4,9 @@ description: Fixes an issue in which you can't share or break inheritance of a f
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
-audience: ITPro 
+audience: ITPro
+ms.service: sharepoint-online
 ms.topic: article
-ms.prod: sharepoint-server-itpro 
 localization_priority: Normal
 ms.custom: 
 - CI 114943

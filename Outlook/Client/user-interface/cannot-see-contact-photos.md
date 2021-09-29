@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: robevans
 appliesto:
+- Outlook LTSC 2021
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
@@ -35,7 +36,7 @@ In Microsoft Outlook 2010 and later versions, you discover that contact photos a
 
 You expect the contact photo to be displayed in Outlook, resembling the following.
 
-:::image type="content" source="media/cannot-see-contact-photos/example-2.png" alt-text="Email dispalying contact photo" border="false":::
+:::image type="content" source="media/cannot-see-contact-photos/example-2.png" alt-text="Email displaying contact photo" border="false":::
 
 You also discover that contact photos are missing in Skype for Business or Lync, as shown in the following screenshot.
 
@@ -91,4 +92,4 @@ The **Do not display photograph** setting is managed by the following registry d
   Value: 1
 
 > [!NOTE]
-> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 365 and Office 2019, 15.0 = Office 2013, 14.0 = Office 2010).
+> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
