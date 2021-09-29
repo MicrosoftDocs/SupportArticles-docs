@@ -297,7 +297,7 @@ Review the recommendations and links for all high and medium findings. Learn abo
 
 ### GPU tab
 
-**GPU** tab, only applicable for the HPC scenario, provides information about findings that will be helpful in troubleshooting GPU-related issues.
+**GPU** tab provides information about findings that will be helpful in troubleshooting GPU-related issues.
 
 ![Screenshot of PerfInsights Report GPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-gpu-tab.png)
 
