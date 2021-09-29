@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
+ms.custom: sap:errors-and-troubleshooting-print-output-or-print-failures, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Troubleshoot printing scenarios
@@ -106,8 +106,8 @@ Find out where the slowness occurs by doing a pause queue test.
 
 You may need to enable auditing on the specific objects (printers). Unless you have narrowed the focus of this issue down to certain printers, you will need to enable failure auditing on all printers by performing the following steps:
 
-1. Select Start, and then select **Printers and Faxes**.
-2. Right-click the printer you want to audit, and select **Properties**.
+1. Select the **Start** button, then select **Settings** > **Devices** > **Printers & scanners**.
+2. Select the printer you want to audit and then select **Printer properties**.
 3. Select the **Security** tab, select the **Advanced** button, and then select the **Auditing** tab.
 4. Select the **Add** button, and select all of the user(s) or group(s) whose printer access you wish to audit and select **OK**. The Auditing Entry window will appear to allow you to select the access events that you wish to audit.
 5. Place a check in the **Failure** column for all of the Access actions listed.

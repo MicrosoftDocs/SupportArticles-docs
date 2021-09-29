@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Troubleshoot printing known issues
@@ -139,11 +139,13 @@ The print driver is not listed in the **Add Printer Wizard**'s list of printers,
 1. Download the printer driver to an empty folder.
 2. Expand the files by typing the name of the executable followed by the `-d` switch. For example, if the name of the file is *Nt4prn.exe*, type the following command at a command prompt: `nt4prn -d`.
 3. Read the *Readme.txt* and the *License.txt* files.
-4. Select **Start**, point to **Settings**, and then select **Printers and Faxes**.
-5. Double-click **Add Printer** to start the **Add Printer Wizard**, select **Next** > **Local printer attached to this computer** > **Next**.
-6. Select the port where your printer is attached, and then select **Next**.
-7. Select **Have Disk**, enter the path from Step 1, and then select **OK**.
-8. Select the appropriate printer, select **Next**, and then continue with the **Add Printer Wizard**.
+4. Select the **Start** button, then select **Settings** > **Devices** > **Printers & scanners**.
+5. On the right, under **Related Settings**, select **Print server properties**.
+6. On the **Drivers** tab, see if your printer listed. If it is, you're all set.
+7. If you don't see your printer listed, select **Add**, and in the **Welcome to the Add Printer Driver Wizard**, select **Next**.
+8. In the **Processor Selection** dialog box, select your device's architecture, and then select **Next**.
+9. In the **Printer Driver Selection** dialog box, select **Have Disk** and then select **Browse button**.
+10. Point to the folder where you downloaded the driver in the Step 1, and follow the instructions to add your driver.
 
 ## With printer location tracking enabled, some printers cannot be located
 

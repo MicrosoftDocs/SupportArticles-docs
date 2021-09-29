@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Troubleshoot printing and best practices
@@ -69,7 +69,7 @@ The modularity of the printing architecture makes diagnosing problems fairly eas
     Consider the physical location of your users and their printing needs to determine the number and types of printers and print servers you need, and where to physically locate them.  
 - Using the search for printers utility.
   
-    The best and fastest way to find and connect to a printer is by using the search for printers utility. From the Start menu, select **Search**, then select **For Printers**, and then type the criteria for the printers you are searching for. For more information, see [Connect to a printer published in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc783221(v=ws.10)).  
+    The best and fastest way to find and connect to a printer is by using the search for printers utility. From the **Start** menu, select **Search**, then select **For Printers**, and then type the criteria for the printers you are searching for. For more information, see [Connect to a printer published in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc783221(v=ws.10)).  
 - Installing extra printer drivers.
 
     If you share printers with clients other than Windows clients, install the required extra printer drivers for these clients.

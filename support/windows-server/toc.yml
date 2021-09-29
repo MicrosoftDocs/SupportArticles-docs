@@ -1986,6 +1986,14 @@
   items:
   - name: 'Printing'
     href: ./printing/printing-overview.md
+  - name: Troubleshoot printing issues
+    items:
+    - name: Troubleshoot printing and best practices
+      href: ./printing/troubleshoot-printing-and-best-practices.md
+    - name: Troubleshoot printing scenarios
+      href: ./printing/troubleshoot-printing-scenarios.md
+    - name: Troubleshoot printing known issues
+      href: ./printing/troubleshoot-printing-known-issues.md
   - name: Management and Configuration of installing print drivers
     items:
     - name: Print Spooler errors
@@ -2056,14 +2064,6 @@
     items:
     - name: Use Group Policy to control printers
       href: ./printing/use-group-policy-to-control-ad-printer.md
-  - name: Troubleshoot printing issues
-    items:
-    - name: Troubleshoot printing and best practices
-      href: ./printing/troubleshoot-printing-and-best-practices.md
-    - name: Troubleshoot printing scenarios
-      href: ./printing/troubleshoot-printing-scenarios.md
-    - name: Troubleshoot printing known issues
-      href: ./printing/troubleshoot-printing-known-issues.md
 - name: Remote Desktop Services
   items:
   - name: Remote Desktop Services
