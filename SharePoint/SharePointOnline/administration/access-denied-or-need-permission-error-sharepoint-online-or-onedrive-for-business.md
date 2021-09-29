@@ -90,15 +90,9 @@ Follow the steps below depending on which area you are receiving the error:
       - Once the new user has been deleted, you can restore the original user using [these steps](/azure/active-directory/fundamentals/active-directory-users-restore).
 
     - If you cannot restore the original user and are still in this state,  create a support request using the following steps:
-      - Navigate to the [Microsoft 365 admin center](https://admin.microsoft.com).
-      - In the left navigation pane, select **Support** and then **New Service Request**. This will activate the **Need Help?** pane on the right-hand side of your screen.
-      - In the **Briefly describe your issue** area, enter **"OneDrive Site User ID Mismatch"**.
-      - Select **Contact Support**.
-
-        > [!NOTE]
-        > If you are using the old M365 admin center, you can skip the "Description" step listed below as that field will not exist.
-
-      - Under **Description** enter **"OneDrive Site User ID Mismatch"**. Fill out the remaining information and select **Contact me**.
+      - As an administrator, select the following link, which will populate a help query in the admin center: [OneDrive Site User ID Mismatch](https://admin.microsoft.com/AdminPortal/?searchSolutions=OneDrive%20Site%20User%20ID%20Mismatch).
+      - At the bottom of the pane, select Contact Support, and then select New Service Request.
+      - Leave the description as blank. 
       - Once the ticket has been opened please provide the support agent with the UPN and OneDrive URL that is having the issue.
 
 - **If the user is attempting to access another user's OneDrive site:**
