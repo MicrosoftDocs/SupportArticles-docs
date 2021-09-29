@@ -23,11 +23,9 @@ Microsoft Outlook displays additional information for links to files on OneDrive
 
 ## How Outlook displays shareable links
 
-Outlook displays shareable links in the following ways:
+When Outlook detects such a link, it applies a gray background to the link, which makes it stand out to your recipients. It shows that the link has special functionality and options. The link will be shortened to the name of the file with the file type icon (for example, Word, PowerPoint, or Excel) added and the link permission information displayed.
 
-### Recognizing links to OneDrive or SharePoint files
-
-When Outlook detects such a link, it applies a gray background to the link, which makes it stand out to your recipients. It shows that the link has special functionality and options.
+### When links to a shareable file will be recognized
 
 Outlook recognizes links to a shareable file in an email when you:
 
@@ -40,9 +38,7 @@ Outlook recognizes links to a shareable file in an email when you:
 - Reply or forward an email with existing links.
 - Resume a draft with existing links. For example, if you started the draft on an earlier version of Outlook and resume it on a newer version.
 
-### URL shortening
-
-When Outlook recognizes a link to a shareable file, it automatically adds the file type icon (for example, Word, PowerPoint, or Excel) and shorten the URL to the name of the file.
+### How to undo the link shortening and show the full URL
 
 You can undo this change and show the full URL by using one of the following ways:
 
@@ -55,9 +51,9 @@ You can undo this change and show the full URL by using one of the following way
 
     **Note:** It only works if the URL gets shortened before you continue typing.
 
-### Link information
+### Link permission information
 
-Outlook also provides link information, which pops up automatically after you insert a new link without any editing. This example shows that anyone within your organization can view and edit the link:
+Link permission information will pop up automatically after you insert a new link without any editing. This example shows that anyone within your organization can view and edit the link:
 
 :::image type="content" source="media\shareable-links-functionality-in-outlook\shareable-link-with-information.png" alt-text="Shareable link pops up information automatically after you insert a new link.":::
 
@@ -67,15 +63,15 @@ Outlook also provides link information, which pops up automatically after you in
 
 You can manage access to shareable links, and Outlook will check whether the recipients have access before sending an email message.
 
-### Adjusting who can access the link
+### How to adjust who can access the link
 
-In the above example, select the link information to manage who can access the link. When you share the link through OneDrive, SharePoint websites, or other Office 365 apps (such as Word or Excel), the same setting presents as follows:
+Select the link permission information to manage who can access the link. When you share the link through OneDrive, SharePoint websites, or other Office 365 apps (such as Word or Excel), the same setting presents as follows:
 
 :::image type="content" source="media\shareable-links-functionality-in-outlook\shareable-link-settings.png" alt-text="You can manage access by the link settings.":::
 
 **Note:** You can also right-click the link or press the Menu key when the cursor is inside the link, and select **Manage Access…** to get the same setting.
 
-### Link permission checking
+### Errors and warnings of link permission checking
 
 Outlook checks whether the recipients of your email message can access the link. The check will be finished before you send the email message. There is no error or warning if all recipients can access the link. Otherwise, you will receive one of the three results:
 
