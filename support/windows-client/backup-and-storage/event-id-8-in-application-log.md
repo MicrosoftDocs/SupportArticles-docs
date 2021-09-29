@@ -4,20 +4,20 @@ description: Provides help to solve the Event ID 8 logged in the Application log
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-client-backup-and-storage
 ---
 # Event ID 8 is logged in the Application log
 
 This article provides help to solve the Event ID 8 logged in the Application log.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 317541
 
 ## Symptoms

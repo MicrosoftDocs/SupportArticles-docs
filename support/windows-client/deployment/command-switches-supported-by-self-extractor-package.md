@@ -4,20 +4,20 @@ description: Describes the command line switches supported by a software install
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Command-line switches supported by a software installation package, an update package, or a hotfix package created with Microsoft Self-Extractor
 
 This article describes the command line switches supported by a software installation package, an update package, or a hotfix package that's created by using Microsoft Self-Extractor.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912203
 
 ## Summary

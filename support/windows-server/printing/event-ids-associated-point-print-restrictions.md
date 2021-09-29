@@ -3,21 +3,21 @@ title: Event ID's with point and print restrictions
 description: Provides a resolution for Event ID's commonly associated with point and print restrictions.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Errors and troubleshooting General issues
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Event ID's commonly associated with point and print restrictions
 
 This article provides a resolution for Event ID's commonly associated with point and print restrictions.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2618460
 
 ## Symptoms

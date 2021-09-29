@@ -3,21 +3,21 @@ title: You cannot set page files on a partition that is larger than 2 terabytes
 description: Describes a problem that occurs when you try to set page files on a partition that is larger than 2 terabytes
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adityah, kaushika
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 
 This article provides a workaround for an issue that occurs when you try to set page files on a partition that is larger than 2 terabytes.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 973423
 
 ## Symptoms

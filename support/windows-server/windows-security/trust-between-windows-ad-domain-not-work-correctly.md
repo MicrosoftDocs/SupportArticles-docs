@@ -4,21 +4,21 @@ description: Describes trust configuration issues between a Windows NT 4.0-based
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: slight, kaushika
-ms.prod-support-area-path: Domain and forest trusts
+ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Trust between a Windows NT domain and an Active Directory domain can't be established or it doesn't work as expected
 
 This article describes the trust configuration issues between a Windows NT 4.0-based domain and an Active Directory-based domain.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;889030
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 889030
 
 ## Symptoms
 

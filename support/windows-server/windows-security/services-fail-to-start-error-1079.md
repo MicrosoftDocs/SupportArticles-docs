@@ -4,20 +4,20 @@ description: Fixes error 1079 that occurs when some services fail to start on a 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Service fails to start and you receive an error 1079 on a computer that's running Windows 7
 
 This article helps fix error 1079 that occurs when some services fail to start on a computer that's running Windows 7.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2478117
 
 ## Symptoms

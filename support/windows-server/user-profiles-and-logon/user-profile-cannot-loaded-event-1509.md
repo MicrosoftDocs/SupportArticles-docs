@@ -4,20 +4,20 @@ description: Provides resolutions to fix the error User Profile Service failed t
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User profiles
+ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # User profile cannot be loaded with Event ID 1509: DETAIL - The filename or extension is too long
 
 This article provides resolutions to fix the error "User Profile Service failed the logon. User profile cannot be loaded".
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2536571
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Outlines the default Windows Store apps release cycle for administr
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kledman
-ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
+ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # Windows 8.1 Microsoft Store app package updates available for download
 
 This article outlines the release cycle for administrators to update the Microsoft Store apps installed by default on Windows 8.1-based computers.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2971128
 
 ## More information

@@ -4,20 +4,20 @@ description: Event ID 5719 or Group Policy event 1129 is logged if you have a Gi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-jomcc
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Netlogon event ID 5719 or Group Policy event 1129 is logged when you start a domain member
 
 This article solves the Netlogon event ID 5719 or Group Policy event 1129 that's logged when you start a domain member.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 938449
 
 ## Symptoms

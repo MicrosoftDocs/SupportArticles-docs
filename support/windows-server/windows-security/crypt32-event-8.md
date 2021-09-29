@@ -4,21 +4,21 @@ description: On those products referenced in the Applies To section of this arti
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Crypt32 8 events continuously reported in Windows
 
 This article provides help to solve an issue where Crypt32 event 8 is continuously reported in the Application log.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2253680
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2253680
 
 ## Symptoms
 

@@ -4,20 +4,20 @@ description: Describes how to use Registry Editor to change TCP/IP and NBT confi
 ms.date: 12/03/2020
 uthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # TCP/IP and NBT configuration parameters for Windows XP
 
 This article defines all the registry parameters that are used to configure the protocol driver, Tcpip.sys. Tcpip.sys implements the standard TCP/IP network protocols.
 
-_Original product version:_ &nbsp; Windows XP  
+_Applies to:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 314053
 
 ## Introduction

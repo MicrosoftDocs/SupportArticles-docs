@@ -4,20 +4,20 @@ description: Helps you understand the most common settings that affect establish
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gavinl
-ms.prod-support-area-path: Connecting to a session or desktop
+ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Remote Desktop disconnected or can't connect to remote computer or Remote Desktop server (Terminal Server) that is running Windows Server 2003
 
 This article helps you understand the most common settings that affect establishing a Terminal Services session in an enterprise environment.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 2477023
 
 ## Terminal Server

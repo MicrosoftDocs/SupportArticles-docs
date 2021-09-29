@@ -7,7 +7,9 @@ ms.reviewer: mlaing
 ---
 # How to troubleshoot Internet Explorer 9 installation problems
 
-When you are installing Internet Explorer 9, you may receive an error message such as **0x800F081E**. In this situation, the installation process doesn’t finish. To troubleshoot this problem, go to the following section.
+[!INCLUDE [](../includes/browsers-important.md)]
+
+When you are installing Internet Explorer 9, you may receive an error message such as **0x800F081E**. In this situation, the installation process doesn't finish. To troubleshoot this problem, go to the following section.
 
 _Original product version:_ &nbsp; Internet Explorer 9  
 _Original KB number:_ &nbsp; 2409098
@@ -24,7 +26,7 @@ _Original KB number:_ &nbsp; 2409098
    1. If you excluded Internet Explorer 9 in step 2, run Windows Update, and then install Internet Explorer 9.
    2. Install Internet Explorer 9 from the Download Windows Internet Explorer 9 (64-Bit) from Official Microsoft Download Center website.
 
-   If you still can’t install Internet Explorer 9, go to step 4.
+   If you still can't install Internet Explorer 9, go to step 4.
 
 4. Manually install the [prerequisite components](/troubleshoot/browsers/prerequisites-for-installing-ie-9).
 5. If you still have issues, contact [Microsoft Support](https://support.microsoft.com/contactus/?ws=support).

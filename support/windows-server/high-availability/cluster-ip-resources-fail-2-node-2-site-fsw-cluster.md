@@ -4,13 +4,13 @@ description: This article describes the behavior that occurs when one node of a 
 ms.date: 12/30/2020
 author: Teresa-Motiv
 ms.author: v-tea
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: node removed from the cluster
+ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
 ms.technology: windows-server-high-availability
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
@@ -18,7 +18,7 @@ keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 
 This article describes the behavior that occurs when one node of a two-node, two-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## Symptoms
 
@@ -55,7 +55,7 @@ If the two cluster nodes were in the same site, a similar network disconnect wou
 
 ## Status
 
-This behavior is by design. We recommend that you use four nodes instead of two nodes for multi-site clusters. [Azure AzS HCI](https://docs.microsoft.com/azure-stack/hci/overview) clusters require four nodes.
+This behavior is by design. We recommend that you use four nodes instead of two nodes for multi-site clusters. [Azure AzS HCI](/azure-stack/hci/overview) clusters require four nodes.
 
 ## Workaround
 

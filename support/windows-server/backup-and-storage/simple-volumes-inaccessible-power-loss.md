@@ -3,21 +3,21 @@ title: Simple volumes become inaccessible
 description: Provides a resolution for the issue that simple volumes may become inaccessible if a power loss occurs shortly after creation.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Simple volumes may become inaccessible if a power loss occurs shortly after creation
 
 This article provides a resolution for the issue that simple volumes may become inaccessible if a power loss occurs shortly after creation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2001877
 
 ## Symptoms

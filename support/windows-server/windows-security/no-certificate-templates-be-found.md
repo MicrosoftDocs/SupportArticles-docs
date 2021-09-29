@@ -4,20 +4,20 @@ description: Provides help to solve an error that occurs when you request certif
 ms.date: 10/12/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, spat
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Error when a user requests certificate from CA web enrollment pages: No certificate templates could be found
 
 This article provides help to solve an error "No certificate templates could be found" that occurs when you request certificates from CA web enrollment pages.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 811418
 
 ## Symptoms

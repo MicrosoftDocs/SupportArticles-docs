@@ -4,20 +4,20 @@ description: Discusses the manner in which Windows supports hard disks that have
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows support for hard disks that are larger than 2 TB
 
 This article discusses the manner in which Windows supports hard disks that have a storage capacity of more than 2 TB and explains how to initialize and partition disks to maximize space usage.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2581408
 
 ## Summary

@@ -4,20 +4,20 @@ description: Discusses that a P2V conversion in System Center Virtual Machine Ma
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ms.technology: hyper-v
 ---
 # SCVMM and SCVMM R2 P2V fails with Error 2910 (0x80070005) Access Denied
 
 This article provides a solution to an error 2910 (0x80070005) that occurs when a Physical-to-Virtual conversion (P2V) conversion in Microsoft System Center Virtual Machine Manager 2008 fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969965
 
 ## Symptoms

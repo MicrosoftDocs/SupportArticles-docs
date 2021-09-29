@@ -4,20 +4,20 @@ description: Describes troubleshooting steps to use on Windows 2000 domain contr
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Troubleshoot missing SYSVOL and NETLOGON shares on Windows domain controllers
 
 This article describes troubleshooting steps to use on Windows 2000 domain controllers that are missing netlogon and sysvol shares.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 257338
 
 > [!NOTE]
@@ -123,12 +123,14 @@ Missing netlogon and sysvol shares typically occur on replica domain controllers
 
     Run `NTFRSUTL DS [COMPUTERNAME]` on all replica set members. Subscriber object appears in cn=domain system volume (SYSVOL share),cn=NTFRS Subscriptions,CN=%DCNAME%,OU=Domain Controllers,DC=\<FQDN>. Running this command requires that the machine object exists and has replicated in. NTFRSUTL reports the following when the subscriber object is missing:
 
-    > SUBSCRIPTION: NTFRS SUBSCRIPTIONS DN: cn=ntfrs  
+    ```output
+    SUBSCRIPTION: NTFRS SUBSCRIPTIONS DN: cn=ntfrs  
     subscriptions,cn=W2KPDC,ou=domain controllers,dc=d... Guid:  
     5c44b60b-8f01-48c6-8604c630a695dcdd  
-    Working: f:\\winnt\\ntfrs  
-    Actual Working: f:\\winnt\\ntfrs  
+    Working: f:\winnt\ntfrs  
+    Actual Working: f:\winnt\ntfrs  
     WIN2K-PDC IS NOT A MEMBER OF A REPLICA SET!
+    ```
 
 9. The Replication Schedule must be enabled.
 

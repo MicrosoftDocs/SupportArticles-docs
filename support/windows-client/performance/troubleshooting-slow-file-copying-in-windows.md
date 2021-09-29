@@ -4,20 +4,20 @@ description: Troubleshoots the issue that file copy is slow.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Slow Performance
+ms.custom: sap:slow-performance, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Troubleshooting slow file copying in Windows
 
 This article helps administrators to diagnose and resolve the issue of slow file copy in your organization.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 10118
 
 ## Determine the cause of the issue

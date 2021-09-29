@@ -2,22 +2,22 @@
 title: Troubleshoot AD FS issues
 description: Describes how to troubleshoot authentication issues that may arise for federated users in Azure Active Directory or Office 365. Provides a comprehensive list of symptoms and their solutions.
 ms.date: 10/22/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot AD FS issues in Azure Active Directory and Office 365
 
 This article discusses workflow troubleshooting for authentication issues for federated users in Azure Active Directory or Office 365.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3079872
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Describes an issue that occurs if a change that is made on the loca
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, herbertm
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Description of NTDS replication warning IDs 1083 and 1061, and SAM error ID 12294 because of an Active Directory collision
 
 This article provides help to fix an issue that occurs if a change that is made on the local domain controller is also made on the domain controller that holds the PDC operations master role.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 306091
 
 ## Summary

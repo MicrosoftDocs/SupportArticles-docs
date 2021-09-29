@@ -4,20 +4,20 @@ description: Contains steps and examples of how to set up dynamic boot partition
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # How to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008
 
 This article contains steps and examples of how to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951985
 
 ## Introduction

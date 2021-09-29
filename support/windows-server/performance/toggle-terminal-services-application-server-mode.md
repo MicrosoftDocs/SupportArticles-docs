@@ -3,25 +3,25 @@ title: Terminal Services Application Server mode
 description: Describes the issue when you toggle Terminal Services to Application Server mode, some programs may stop working.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # When you toggle Terminal Services to Application Server mode, some programs may stop working
 
 This article describes the issue that some programs may stop working, when you toggle Terminal Services to Application Server mode.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 252330
 
 > [!note]
-> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle/).
+> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
 ## Summary
 

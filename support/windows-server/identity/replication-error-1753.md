@@ -4,21 +4,21 @@ description: Describes an issue where AD operations fail with Win32 error 1753 (
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory  
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper
 
 This article describes an issue where Active Directory Replications fail with Win32 error 1753: "There are no more endpoints available from the endpoint mapper."
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2089874
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2089874
 
 **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 
@@ -28,16 +28,16 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 1. DCDIAG reports that the Connectivity test, Active Directory Replications test, or KnowsOfRoleHolders test has failed with error 1753: "There are no more endpoints available from the endpoint mapper."
 
-    > Testing server: \<site>\<DC Name>  
+    > Testing server: \<site\>\<DC Name\>  
           Starting test: Connectivity  
              * Active Directory LDAP Services Check  
              * Active Directory RPC Services Check  
-             [<DC Name>] DsBindWithSpnEx() failed with error 1753,  
+             [\<DC Name\>] DsBindWithSpnEx() failed with error 1753,  
              There are no more endpoints available from the endpoint mapper..  
              Printing RPC Extended Error Info:  
-             Error Record 1, ProcessID is <process ID> (DcDiag)  
+             Error Record 1, ProcessID is \<process ID\> (DcDiag)  
                 System Time is: \<date> \<time>  
-                Generating component is 2 (RPC runtime) 
+                Generating component is 2 (RPC runtime)
                 Status is 1753: There are no more endpoints available from the endpoint mapper. Detection location is 500
                 NumberOfParameters is 4  
                 Unicode string: ncacn_ip_tcp  
@@ -51,8 +51,8 @@ This article describes symptoms, cause, and resolution steps for AD operations t
                 NumberOfParameters is 1  
                 Unicode string: 1025
 
-    > [Replications Check,\<DC Name>] A recent replication attempt failed:  
-                From \<source DC> to \<destination DC>  
+    > [Replications Check,\<DC Name\>] A recent replication attempt failed:  
+                From \<source DC\> to \<destination DC>  
                 Naming Context: \<DN path of directory partition>  
                 The replication generated an error (1753):  
                 There are no more endpoints available from the endpoint mapper.  
@@ -83,10 +83,10 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     > DC=contoso,DC=com  
         Default-First-Site-Name\CONTOSO-DC2 via RPC  
             DSA object GUID:  
-            Last attempt @ <date> <time> failed, result 1753 (0x6d9):  
+            Last attempt @ \<date\> \<time\> failed, result 1753 (0x6d9):  
                 There are no more endpoints available from the endpoint mapper.  
             <#> consecutive failure(s).  
-            Last success @ <date> <time>.
+            Last success @ \<date\> \<time\>.
 
 3. The "Check Replication Topology" command in Active Directory Sites and Services returns "there are no more endpoints available from the endpoint mapper."
 

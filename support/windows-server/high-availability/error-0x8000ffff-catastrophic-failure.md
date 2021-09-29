@@ -4,20 +4,20 @@ description: Describes a catastrophic failure error that occurs in Windows Serve
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # "Error 0x8000ffff: Catastrophic failure" when you try to change Shadow Copy settings for a drive in Windows Server 2008
 
 This article provides a solution to an error (Error 0x8000ffff: Catastrophic failure) that occurs when you change Shadow Copy settings for a drive.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2973100
 
 ## Symptoms

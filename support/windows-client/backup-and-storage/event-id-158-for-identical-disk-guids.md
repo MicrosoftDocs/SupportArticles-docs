@@ -4,20 +4,20 @@ description: Discusses that Event ID 158 is logged if identical disk GUIDs are f
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, aarthit, toklima
-ms.prod-support-area-path: Storage hardware
+ms.custom: sap:storage-hardware, csstroubleshoot
 ms.technology: windows-client-backup-and-storage
 ---
 # Event ID 158 is logged for identical disk GUIDs
 
 This article provides a resolution to solve the event ID 158 that's logged for identical disk GUIDs in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2983588
 
 ## Symptoms

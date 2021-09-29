@@ -4,20 +4,20 @@ description: Describe how to find the servers that hold the Flexible Single Mast
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MHUNTER, dhook
-ms.prod-support-area-path: Active Directory FSMO
+ms.custom: sap:active-directory-fsmo, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How To Find Servers That Hold Flexible Single Master Operations Roles
 
 This article describes how to find the servers that hold the Flexible Single Master Operation (FSMO) roles in a forest.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 234790
 
 ## Summary

@@ -4,20 +4,20 @@ description: Describes an issue in which Active Directory communication, includi
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: smondal, kaushika
-ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
+ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory communication fails on multihomed domain controllers
 
 This article describes an issue in which Active Directory communication, including replication fails intermittently.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 272294
 
 ## Symptoms

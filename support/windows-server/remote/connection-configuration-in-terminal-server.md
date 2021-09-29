@@ -4,21 +4,21 @@ description: Discusses the Terminal Server Administration tool, Connection Confi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Connection Configuration in Terminal Server
 
 This article discusses the Terminal Server Administration tool, Connection Configuration.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;186566
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 186566
 
 ## More information
 

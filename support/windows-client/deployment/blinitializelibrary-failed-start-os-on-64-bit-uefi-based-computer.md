@@ -4,20 +4,20 @@ description: Works around a problem that occurs when you install or start an ope
 ms.date: 12/03/2020
 uthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Error (BlInitializeLibrary failed XXX) when you install or start an operating system on a 64-bit UEFI-based computer
 
 This article provides a workaround for an issue where an error (BlInitializeLibrary failed XXX) occurs when you install or start an operating system on a 64-bit UEFI-based computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4020050
 
 ## Symptoms

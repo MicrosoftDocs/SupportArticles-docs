@@ -1,0 +1,20 @@
+- name: Welcome
+  href: welcome-virtual-machine-scale-sets.yml
+
+- name: Troubleshoot scaling errors
+  items:
+  - name: QuotaExceeded error when scaling virtual machine scale sets
+    href: virtual-machine-scale-sets-quota-exceeded.md
+  - name: Resolve errors for resource quotas
+    href: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
+
+- name: Troubleshoot deployment errors
+  items:
+  - name: Public IP count limit exceeded
+    href: vmss-public-ip-count-limit-exceeded.md
+
+- name: Troubleshoot extension issues
+  items:
+  - name: VM extension provisioning errors
+    href: vm-extension-provisioning-errors.md
+

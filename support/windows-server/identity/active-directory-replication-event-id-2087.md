@@ -3,21 +3,21 @@ title: Active Directory replication Event ID 2087 (DNS lookup failure caused rep
 description: Helps you diagnose and solve Active Directory replication Event ID 2087.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail
 
 This article provides a solution to the Active Directory replication Event ID 2087 that occurs when a Domain Name System (DNS) lookup failure causes replication to fail.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469661
 
 ## Symptoms

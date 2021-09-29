@@ -4,20 +4,20 @@ description: Provides a solution to an error that occurs when you manually repli
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Error (Target Principal Name is incorrect) when manually replicating data between domain controllers
 
 This article provides a solution to an error that occurs when you manually replicate data between domain controllers.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 288167
 
 > [!NOTE]

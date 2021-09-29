@@ -4,20 +4,20 @@ description: Describes how to troubleshoot virtualized applications in Microsoft
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.prod-support-area-path:
+ms.custom: sap:management-server-issues, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to troubleshoot applications failing to stream from an App-V management server
 
 This article describes how to troubleshoot virtualized applications in Microsoft Application Virtualization (App-V) that fail to stream from the management server.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2615139
 
 ## Symptoms

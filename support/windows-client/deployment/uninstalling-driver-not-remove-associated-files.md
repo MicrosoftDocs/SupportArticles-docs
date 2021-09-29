@@ -4,20 +4,20 @@ description: Resolves an issue where uninstalling a driver through device manage
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # In all supported versions of Windows, uninstalling a driver through device manager may not remove associated files or applications with that driver
 
 This article provides help to solve an issue where uninstalling a driver through device manager doesn't remove associated files or applications with that driver.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2278714
 
 ## Symptoms

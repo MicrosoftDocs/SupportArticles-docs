@@ -4,20 +4,20 @@ description: Describes an issue in which Bluetooth speakers don't work after upd
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Bluetooth speakers don't work after update 4505903 is installed in Windows 10, version 1903
 
 This article provides help to solve an issue where Bluetooth speakers don't work after update 4505903 is installed in Windows 10, version 1903.
 
-_Original product version:_ &nbsp; Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4518538
 
 ## Symptoms

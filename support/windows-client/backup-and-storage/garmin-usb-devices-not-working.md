@@ -4,20 +4,20 @@ description: Fixes an issue that prevents Garmin wearable devices from working a
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tiquinn, scottmca
-ms.prod-support-area-path: Storage hardware
+ms.custom: sap:storage-hardware, csstroubleshoot
 ms.technology: windows-client-backup-and-storage
 ---
 # Garmin USB devices don't work with Windows 10
 
 This article provides information on how to fix the problem that Garmin wearable devices aren't recognized on Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1709, Windows 10, version 1607  
+_Applies to:_ &nbsp; Windows 10, version 1709, Windows 10, version 1607  
 _Original KB number:_ &nbsp; 3183365
 
 ## Symptoms

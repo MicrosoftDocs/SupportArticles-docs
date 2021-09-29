@@ -8,6 +8,8 @@ ms.topic: troubleshooting
 ---
 # Slow browsing in Internet Explorer because of multiple isInNet function calls
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article helps you resolve the problem where an issue causes Internet Explorer to browse more slowly than expected.
 
 _Applies to:_ &nbsp; Internet Explorer 9, Internet Explorer 10  

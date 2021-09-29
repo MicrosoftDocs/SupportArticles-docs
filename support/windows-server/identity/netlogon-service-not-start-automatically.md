@@ -4,20 +4,20 @@ description: Describes an issue that prevents the Netlogon service on domain con
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain join issues
+ms.custom: sap:domain-join-issues, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Netlogon service doesn't keep settings after an in-place upgrade to Windows Server 2016 or Windows Server 2019
 
 This article provides a resolution for an issue that prevents the Netlogon service on domain controllers from starting automatically after you upgrade to Windows Server 2016 or Windows Server 2019.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 3201247
 
 ## Symptoms

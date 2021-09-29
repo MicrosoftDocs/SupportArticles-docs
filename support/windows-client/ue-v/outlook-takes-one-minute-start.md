@@ -4,20 +4,20 @@ description: Resolves an issue in which you encounter an unexpected one-minute d
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: narafa, winciccore, kaushika
-ms.prod-support-area-path: UEV 2.1
+ms.custom: sap:uev-2.1, csstroubleshoot
 ms.technology: windows-client-user-experience-virtualization-ue-v
 ---
 # Unexpected one-minute startup of Outlook if UE-V is enabled
 
 This article helps resolve an issue where you experience an unexpected one-minute delay for Outlook to start if UE-V is enabled in Windows 10, version 1809 or a later version of Windows.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4569308
 
 ## Symptoms

@@ -4,21 +4,21 @@ description: Describes how to find a compatible printer driver for a computer ru
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
-ms.technology: windows-server-printing 
+ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
+ms.technology: windows-server-printing
 ---
 # How to find a compatible printer driver for a computer that's running a 64-bit version of Windows
 
 This article describes how to find a compatible printer driver for a computer that's running a 64-bit version of Windows.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;895612
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 895612
 
 This article may be useful if you can't obtain a Windows Hardware Quality Labs (WHQL) signed printer driver from the printer manufacturer or from the Microsoft Windows Update Web site. It also provides methods to find a printer driver for a printer that isn't supported on your computer that's running a 64-bit version of Windows.
 

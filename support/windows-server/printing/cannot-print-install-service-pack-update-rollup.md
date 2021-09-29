@@ -4,21 +4,21 @@ description: Describes an issue where you can't print after you install a servic
 ms.date: 04/14/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Users can't print after you install a service pack, update rollup, or printer hotfix on a Windows-based server
 
 This article provides help to solve an issue where you can't print after you install a service pack or printer hotfix on a server.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;832219
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 832219
 
 ## Symptoms
 

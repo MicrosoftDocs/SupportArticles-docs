@@ -1,23 +1,23 @@
 ---
 title: Superseded Certificate Templates and impact on user's AD store
-description: Provides a resolution for the issue superseded Certificate Templates and impact on user's AD store 
+description: Provides a resolution for the issue superseded Certificate Templates and impact on user's AD store
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Superseded Certificate Templates and impact on user's AD store
 
 This article provides a resolution for the issue superseded Certificate Templates and impact on user's AD store.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2884551
 
 ## Symptoms

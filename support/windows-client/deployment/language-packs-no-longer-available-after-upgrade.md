@@ -3,21 +3,21 @@ title: Language packs no longer available
 description: Discusses that previously installed language packs are no longer available after you upgrade from Windows 8 to Windows 8.1. Provides a resolution.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, jerrycif, ianham
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Language packs are no longer available after upgrading
 
 This article discusses that previously installed language packs are no longer available after you upgrade from Windows 8 to Windows 8.1.  
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2910256
 
 ## Symptoms

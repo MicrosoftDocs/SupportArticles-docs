@@ -4,20 +4,20 @@ description: This article introduces the Portqry.exe command-line utility.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, timr, masoudh
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Description of the Portqry.exe command-line utility
 
 Portqry.exe is a command-line utility that you can use to help troubleshoot TCP/IP connectivity issues. The utility reports the port status of TCP and UDP ports on a computer that you select.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 310099
 
 > [!NOTE]

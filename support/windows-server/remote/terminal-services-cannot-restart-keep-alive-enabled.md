@@ -4,20 +4,20 @@ description: Discusses an issue where you can't restart the Remote Desktop Servi
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: sashalon, kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Remote Desktop Service can't be restarted if Keep-Alive feature is enabled
 
 This article provides a solution to an issue where you can't restart the Remote Desktop Services (Terminal Services) if Keep-Alive is enabled.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2507353
 
 ## Symptoms

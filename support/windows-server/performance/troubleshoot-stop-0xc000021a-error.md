@@ -4,13 +4,13 @@ description: This article presents advanced troubleshooting steps for the STOP 0
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # How to troubleshoot a STOP 0xC000021A error in Windows XP or Windows Server 2003
@@ -19,8 +19,8 @@ This article presents advanced troubleshooting steps for the STOP 0xC000021A err
 
 **Home users**: This article is intended for use by support agents and IT professionals. If you're looking for more information about a blue-screen error code while using your computer, see [Troubleshoot blue-screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
 
-_Original product version:_ &nbsp;Windows 10 - all editions,  Windows Server 2012 R2  
-_Original KB number:_ &nbsp;156669
+_Applies to:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 156669
 
 This article is intended for advanced computer users. If you aren't comfortable with advanced troubleshooting, ask someone for help or contact Technical Support.
 

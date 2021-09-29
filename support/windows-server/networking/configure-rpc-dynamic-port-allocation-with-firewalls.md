@@ -4,20 +4,20 @@ description: This article describes how to use the solution together with a fire
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, timball
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # How to configure RPC dynamic port allocation to work with firewalls
 
 This article helps you modify the Remote Procedure Call (RPC) parameters in the registry to make sure RPC dynamic port allocation can work with firewalls.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 154596
 
 ## Summary

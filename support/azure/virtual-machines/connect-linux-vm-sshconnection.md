@@ -82,11 +82,11 @@ Follow these steps:
 1. Delete the VM, keep the disks, mount the system disk to another temporary VM, and then update the files (permissions and ownership) on the temporary VM.
 2. Re-create the VM from disk.
 
-For more information, see [CLI: How to delete and redeploy a VM from VHD (unmanaged disk)](https://docs.microsoft.com/archive/blogs/linuxonazure/az-cli-how-to-delete-and-re-deploy-a-vm-from-vhd).
+For more information, see [CLI: How to delete and redeploy a VM from VHD (unmanaged disk)](/archive/blogs/linuxonazure/az-cli-how-to-delete-and-re-deploy-a-vm-from-vhd).
 
 ### CLI
 
-Use the Command Line Interface (CLI) to inject commands into a VM. There are two versions of CLI. For more information, see [Use the Azure Custom Script Extension with Linux virtual machines](https://docs.microsoft.com/azure/virtual-machines/linux/extensions-customscript).
+Use the Command Line Interface (CLI) to inject commands into a VM. There are two versions of CLI. For more information, see [Use the Azure Custom Script Extension with Linux virtual machines](/azure/virtual-machines/linux/extensions-customscript).
 
 The following example uses the newer CLI version 2. It resets the `/var/empty/sshd` file permissions and ownership by using the customScript extension through CLI. The sshd service is also restarted.
 

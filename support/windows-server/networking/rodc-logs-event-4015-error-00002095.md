@@ -4,20 +4,20 @@ description: Describes event ID 4015 that occurs when you run the Domain Name Se
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # RODC logs DNS event 4015 every three minutes with error code 00002095
 
 This article describes event ID 4015 that occurs when you run the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969488
 
 ## Symptoms

@@ -2,22 +2,22 @@
 title: Ghost NIC built from VMware Templates
 description: Provides a solution to an issue where you have a VMware Virtual Machine that is running Windows Server 2008 R2 or Windows 7, and is configured with a Synthetic NIC (VMXNET3).
 ms.date: 10/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,  johnfern
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Ghost NIC seen on Windows 7/Windows 2008 R2 machines built from VMware Templates when the Template uses a Synthetic NIC (VMXNET3)
 
 This article provides a solution to an issue where you have a VMware Virtual Machine that is running Windows Server 2008 R2 or Windows 7, and is configured with a Synthetic NIC (VMXNET3).
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2526142
 
 ## Symptoms

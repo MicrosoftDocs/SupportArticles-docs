@@ -4,20 +4,20 @@ description: Describes new behavior in Windows Server 2003 SP1 that affects NTLM
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Legacy authentication (NTLM)
+ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # New setting modifies NTLM network authentication behavior
 
 This article describes new behavior that affects NTLM password changes and how to change this behavior by using a registry.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 906305
 
 ## Introduction

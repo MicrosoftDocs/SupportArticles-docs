@@ -3,21 +3,21 @@ title: Jet database errors and recovery steps
 description: Introduces Jet database error messages and troubleshooting steps.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot Jet database errors and recovery steps
 
 This article introduces Jet database error messages and troubleshooting steps.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4042791
 
 ## Summary

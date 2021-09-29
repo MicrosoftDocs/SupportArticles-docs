@@ -3,21 +3,21 @@ title: How to track users logon/logoff
 description: Describes how to track users logon/logoff.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-client-user-profiles
 ---
 # How to track users logon/logoff
 
 This article describes how to track users logon/logoff.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 556015
 
 This article was written by [Yuval Sinay](https://mvp.microsoft.com/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.

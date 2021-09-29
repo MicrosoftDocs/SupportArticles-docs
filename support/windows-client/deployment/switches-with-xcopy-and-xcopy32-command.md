@@ -4,20 +4,20 @@ description: Describes syntax and switches that you can use with xcopy and xcopy
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Switches that you can use with xcopy and xcopy32 commands
 
 This article describes switches that you can use with `xcopy` and `xcopy32` commands.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 289483
 
 ## Summary

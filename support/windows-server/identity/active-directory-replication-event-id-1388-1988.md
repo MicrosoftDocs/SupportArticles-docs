@@ -4,20 +4,20 @@ description: Helps you troubleshoot Active Directory Replication Event ID 1388 a
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication Event ID 1388 or 1988: A lingering object is detected
 
 This article helps you troubleshoot Active Directory replication Event ID 1388 and 1988.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469619
 
 ## Summary

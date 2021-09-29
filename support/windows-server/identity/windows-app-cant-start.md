@@ -2,22 +2,22 @@
 title: Windows App cannot start after ADMT 3.2 security translation runs
 description: Provides a solution to an error that occurs when Windows App cannot start after ADMT 3.2 security translation runs.
 ms.date: 09/17/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10
 
 This article provides a solution to an error that occurs when Windows App cannot start after ADMT 3.2 security translation runs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3145204
 
 ## Symptoms

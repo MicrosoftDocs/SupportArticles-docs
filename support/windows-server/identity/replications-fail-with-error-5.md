@@ -4,20 +4,20 @@ description: Discusses the Access is denied error 5 when Active Directory replic
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot Active Directory replication error 5 in Windows Server: Access is denied
 
 This article describes the symptoms, cause, and resolution of situations in which Active Directory replication fails with error 5: Access is denied.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3073945
 
 ## Symptoms
@@ -109,7 +109,7 @@ Use the generic [DCDIAG](https://technet.microsoft.com/library/cc731968.aspx) co
 To work around this issue, follow these steps:
 
 1. At command prompt, run DCDIAG on the destination domain controller.
-2. Run `DCDAIG /TEST:CheckSecurityError`.
+2. Run `DCDIAG /TEST:CheckSecurityError`.
 3. Run NETDIAG.
 4. Resolve any faults that were identified by DCDIAG and NETDIAG.
 5. Retry the previously failing replication operation.If replications continue to fail, see the "[Causes and solutions](#causes-and-solutions)" section.

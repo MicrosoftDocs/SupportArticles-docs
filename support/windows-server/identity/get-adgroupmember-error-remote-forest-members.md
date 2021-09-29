@@ -1,23 +1,23 @@
 ---
 title: Fail to run Get-ADGroupMember for domain local group
 description: Describes a problem that occurs when you run the Get-ADGroupMember cmdlet in a scenario where a group has a member from a remote forest. A resolution is provided.
-ms.date: 10/22/2020
+ms.date: 09/22/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Get-ADGroupMember returns error for domain local group to members from remote forests
 
 This article helps fix an error that occurs when you run the `Get-ADGroupMember` cmdlet in a scenario where a group has a member from a remote forest.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3171600
 
 ## Symptoms
@@ -30,6 +30,14 @@ Assume that you use the `Get-ADGroupMember` cmdlet to identify the members of a 
 > \+ Get-ADGroupMember -verbose -identity "CN=Test-Local1,OU=Test Accounts,DC=contoso ...  
 > \+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 > \+ CategoryInfo : NotSpecified: (CN=Test-Local1,...bertm-w7,DC=com:ADGroup) [Get-ADGroupMember], ADExceptionon + FullyQualifiedErrorId : ActiveDirectoryServer:0,Microsoft.ActiveDirectory.Management.Commands.GetADGroupMember
+
+> [!NOTE]
+> In a one-way trust, when using the `Get-ADGroupMember` cmdlet on a group from the trusting forest, you receive the following errors if the group contains members from the trusted forest:
+>
+> - "An unspecified error has occurred"
+> - "The server was unable to process the request due to an internal error"
+>
+> As a workaround, use the Active Directory Users and Computers snap-in to view the members of the group, or convert the one-way trust into a two-way trust.
 
 ## Cause
 

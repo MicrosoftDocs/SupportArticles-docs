@@ -4,20 +4,20 @@ description: Describes the logic by which groups fail from one node to another w
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevemat, jeffwade, kaushika
-ms.prod-support-area-path: Root cause of an unexpected failover
+ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Failover behavior on clusters of three or more nodes
 
 This article documents the logic by which groups fail from one node to another when there are three or more cluster node members.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 299631
 
 ## Summary

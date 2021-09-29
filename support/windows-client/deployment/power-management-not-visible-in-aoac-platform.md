@@ -4,20 +4,20 @@ description: Discusses a by-design behavior where the Power Management tab is no
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, match
-ms.prod-support-area-path: Devices and Drivers
-ms.technology: windows-client-deployment 
+ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.technology: windows-client-deployment
 ---
 # Power Management tab is not visible for some Wireless Network adapters with AOAC platforms in Windows 8
 
 This article discusses a by-design behavior where the Power Management tab is no longer available in the Wireless Network advanced properties in an Always-On/Always-Connected (AOAC) platform.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2889143
 
 ## Summary

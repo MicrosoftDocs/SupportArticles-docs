@@ -3,21 +3,21 @@ title: ICS doesn't work after computer or service restarts in Windows 10
 description: Address an issue in which ICS looses settings after computer or service restarts on Windows 10.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # ICS doesn't work after computer or service restarts in Windows 10
 
 This article provides a solution to issues where the Internet Connection Sharing (ICS) settings are lost and the ICS connection doesn't work after you restart the ICS service or the computer that runs Windows 10, version 1709.
 
-_Original product version:_ &nbsp; Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 1709  
 _Original KB number:_ &nbsp; 4055559
 
 ## Symptoms

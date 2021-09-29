@@ -4,20 +4,20 @@ description: Provides help to solve an error that occurs when you activate Windo
 ms.date: 10/12/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Error when you try to activate Windows Server 2003 over the Internet: Message Number 32777
 
 This article provides workarounds to an issue where you see an error when you activate Microsoft Windows Server 2003 over the Internet fails.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816897
 
 ## Symptoms

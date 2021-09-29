@@ -4,20 +4,20 @@ description: This article describes how to troubleshoot Active Directory replica
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 8453: Replication access was denied
 
 This article describes how to troubleshoot a problem where Active Directory replication fails and generates error 8453: Replication access was denied.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2022387
 
 > [!NOTE]

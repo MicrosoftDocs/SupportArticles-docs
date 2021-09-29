@@ -4,20 +4,20 @@ description: Provides a solution to an issue where the computer doesn't start af
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, DIASMITH
-ms.prod-support-area-path: No Boot (not BugChecks)
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # The computer does not start after you change the active partition by using the Disk Management tool
 
 This article provides a solution to an issue where the computer doesn't start after you mark your primary partition as active.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315261
 
 ## Symptoms

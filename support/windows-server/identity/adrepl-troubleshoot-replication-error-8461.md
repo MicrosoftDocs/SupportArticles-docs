@@ -4,13 +4,13 @@ description: This article describes the symptoms, cause, and resolution steps fo
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, justintu, v-jesits
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8461
@@ -18,8 +18,8 @@ ms.technology: windows-server-active-directory
 This article describes symptoms, cause, and resolution steps for cases in which AD Replication is delayed and generates Win32 error 8461:  
 > The replication operation was preempted.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2981628
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2981628
 
 ## Symptoms
 

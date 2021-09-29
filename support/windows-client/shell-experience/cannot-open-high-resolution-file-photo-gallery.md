@@ -4,20 +4,20 @@ description: Provides a solution to an issue where users can't open high-resolut
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DPI and Display Issues
+ms.custom: sap:dpi-and-display-issues, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Unable to open high-resolution file in Windows Photo Gallery
 
 This article provides a solution to an issue where users can't open high-resolution file in Windows Photo Gallery.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 2725211
 
 ## Symptoms

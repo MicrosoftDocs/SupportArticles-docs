@@ -4,20 +4,20 @@ description: Discusses how to configure an L2TP/IPsec server behind a NAT-T devi
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, samirj
-ms.prod-support-area-path: Wireless networking and 802.1X authentication
+ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
 ms.technology: networking
 ---
 # Configure a L2TP/IPsec server behind a NAT-T device
 
 This article describes how to configure a L2TP/IPsec server behind a NAT-T device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 926179
 
 ## Summary

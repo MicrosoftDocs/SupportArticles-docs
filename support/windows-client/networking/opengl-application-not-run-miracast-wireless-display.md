@@ -4,20 +4,20 @@ description: Describes a problem in Windows 10 in which OpenGL applications cann
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ddobyns
-ms.prod-support-area-path: Wireless networking and 802.1X authentication
-ms.technology: windows-client-networking 
+ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.technology: windows-client-networking
 ---
 # OpenGL applications do not run on a Miracast wireless display in Windows 10
 
 This article discusses an issue where OpenGL applications don't run on a Miracast wireless display in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3083829
 
 ## Symptoms

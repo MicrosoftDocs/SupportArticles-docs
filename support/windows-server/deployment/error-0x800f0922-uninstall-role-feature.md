@@ -4,20 +4,20 @@ description: Provides a solution to an issue where uninstalling Windows Server r
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
-ms.technology: windows-server-deployment 
+ms.custom: sap:servicing, csstroubleshoot
+ms.technology: windows-server-deployment
 ---
 # Error 0x800f0922 when trying to uninstall Windows Server roles or features
 
 This article helps fix the error 0x800f0922 that occurs when you uninstall Microsoft Windows Server roles or features.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 4094128
 
 ## Symptoms

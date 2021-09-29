@@ -4,21 +4,21 @@ description: Describes an issue in which shadow copies are deleted on Windows Se
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Shadow copies are deleted on Windows Server when you try to run an FCI classification job
 
 This article describes an issue in which shadow copies are deleted on Windows Server when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;977521
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 977521
 
 ## Symptoms
 

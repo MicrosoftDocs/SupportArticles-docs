@@ -4,13 +4,13 @@ description: Discusses an issue in which virtualization applications don't work 
 ms.date: 03/18/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 1st Party Applications
+ms.custom: sap:1st-party-applications, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard
@@ -22,7 +22,7 @@ These symptoms are introduced when the Hyper-V Hypervisor is running. Some secur
 - Device Guard
 - Credential Guard
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3204980
 
 ## Determine whether the Hyper-V hypervisor is running

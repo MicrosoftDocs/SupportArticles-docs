@@ -3,21 +3,21 @@ title: When you run an LDAP query against a Windows Server 2008-based domain con
 description: Describes a by-design behavior where LDAP queries against a domain controller return partial attribute list.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fengli
-ms.prod-support-area-path: LDAP configuration and interoperability
+ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # When you run an LDAP query against a domain controller, you obtain a partial attribute list
 
 This article provides workarounds for the issue when you run an LDAP query against a domain controller, you obtain a partial attribute list.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976063
 
 ## Symptoms
@@ -28,6 +28,7 @@ When you run a Lightweight Directory Access Protocol (LDAP) request against a Wi
 > You can run this query from the domain controller or from a client computer that is running Windows Vista or Windows Server 2008.
 
 The user account that you use to run the LDAP query has the following properties:
+
 - The account is a member of the built-in Administrators group.
 - The account is not the built-in administrator account.
 - The account is a member of the Domain Admins group.
@@ -62,7 +63,7 @@ For more information about how to specify the value of this security setting, vi
 2. Add the Domain Admins group to this new group.
 3. Grant the Read permission on the domain partition to this new group. To do this, follow these steps:
    1. Click **Start**, click **Run**, type adsiedit.msc, and then click **OK**.
-   2. In the **ADSI Edit** window, right-click **DC=**<Name>**,DC=com**, and then click **Properties**.
+   2. In the **ADSI Edit** window, right-click **DC=**\<Name\>**,DC=com**, and then click **Properties**.
    3. In the **Properties** window, click the **Security** tab.
    4. On the **Security** tab, click **Add**.
    5. Under **Enter the object names to select**, type the name of the new group, and then click **OK**.

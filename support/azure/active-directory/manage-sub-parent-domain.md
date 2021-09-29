@@ -23,15 +23,14 @@ Consider the following scenario:
 To manage the domains in this scenario, follow these steps in the order in which they're given:
 
 1. Submit a support request to break the inheritance at [Azure Customer Support](https://ms.portal.azure.com/).
-2. If you have already verified the parent domain, remove it.
-3. Verify and federate the subdomain.
-4. Verify and federate the parent domain.
+2. Verify and federate the subdomain.
+3. Verify and federate the parent domain.
 
 ## More information
 
 For more information, see the following resources:
 
-- [Verify your custom domain in Azure AD](https://docs.microsoft.com/previous-versions/azure/jj151788(v=azure.100))
-- [Verify your domain in Office 365](https://docs.microsoft.com/microsoft-365/admin/setup/add-domain?view=o365-worldwide&preserve-view=true)
+- [Verify your custom domain in Azure AD](/previous-versions/azure/jj151788(v=azure.100))
+- [Verify your domain in Office 365](/microsoft-365/admin/setup/add-domain?view=o365-worldwide&preserve-view=true)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.

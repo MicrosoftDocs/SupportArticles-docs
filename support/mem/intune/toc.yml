@@ -2,10 +2,6 @@
   href: welcome-intune.yml
 - name: App management
   items:
-  - name: Access denied configuring MAM
-    href: configure-app-protection-access-denied.md
-  - name: Access denied for app protection options
-    href: app-protection-options-access-denied.md
   - name: Android APK app installation fails
     href: app-installation-failed-error.md
   - name: App installation error codes reference
@@ -16,6 +12,8 @@
     href: android-enterprise-enrolled-devices-fails-attaching-photo.md
   - name: Can't create messages in Outlook for Android
     href: creating-message-action-not-allowed.md
+  - name: Can't install apps and run shell scripts in macOS
+    href: cannot-install-macos-apps-and-run-shell-scripts.md
   - name: Can't save corporate data in WIP-allowed apps
     href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: Can't sync apps to Intune
@@ -52,14 +50,10 @@
     href: save-application-failed-error.md
   - name: Saving images locally not restricted
     href: saving-images-locally-not-restricted.md
-  - name: Set up and validate app protection policies
-    href: set-up-app-protection-policies-ios-device.md
   - name: Support tip - Deployment, delivery, and processing of a Win32 application
     href: develop-deliver-working-win32-app-via-intune.md
   - name: Support tip - Build software inventory using Power BI
     href: build-software-inventory-power-bi.md
-  - name: Support tip - Devices enrolled in Intune MAM policy are prompted to enroll
-    href: device-enroll-intune-app-management-error.md
   - name: Troubleshoot app installation issues
     href: troubleshoot-app-install.md
   - name: Troubleshoot app protection policy deployment
@@ -178,6 +172,8 @@
     href: intune-managed-ios-device-backup-encrypted.md
   - name: RemoteWipe CSP fails to send a doWipe command
     href: remotewipe-fails-sending-dowipe-command.md
+  - name: Remove duplicate mobile device management objects
+    href: remove-duplicate-mobile-device-management.md
   - name: Troubleshoot device actions
     href: troubleshoot-device-actions.md
   - name: UPN listed as None for orphaned devices

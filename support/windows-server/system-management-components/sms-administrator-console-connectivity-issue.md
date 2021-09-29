@@ -4,20 +4,20 @@ description: Discusses how to troubleshoot a new or an existing SMS Administrato
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr
-ms.prod-support-area-path: Microsoft Management Console (MMC)
+ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # How to troubleshoot SMS Administrator console connectivity
 
 This article describes how to troubleshoot a new or an existing SMS Administrator console to determine why it cannot connect to the site server.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 317872
 
 ## Summary
@@ -281,4 +281,4 @@ To resolve this issue, configure the client and the server to restrict the range
 
 ## References
 
-For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [Maintaining WMI Security](https://docs.microsoft.com/windows/win32/wmisdk/maintaining-wmi-security).
+For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [Maintaining WMI Security](/windows/win32/wmisdk/maintaining-wmi-security).

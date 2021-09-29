@@ -4,20 +4,20 @@ description: Provides a solution to an issue where DNS Servers may fail to resol
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
-ms.technology: networking 
+ms.custom: sap:dns, csstroubleshoot
+ms.technology: networking
 ---
 # Windows Server 2008 and Windows Server 2008 R2 DNS Servers may fail to resolve queries for some top-level domains
 
 This article provides a solution to an issue where Domain Name System (DNS) Servers may fail to resolve queries for names in certain top-level domains when name resolution is provided by root hints.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968372
 
 ## Symptom

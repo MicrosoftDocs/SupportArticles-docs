@@ -4,20 +4,20 @@ description: Describes how to verify Service Location (SRV) locator resource rec
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # How to verify that SRV DNS records have been created for a domain controller
 
 This article describes how to verify Service Location (SRV) locator resource records for a domain controller after you install the Active Directory directory service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816587
 
 ## Summary

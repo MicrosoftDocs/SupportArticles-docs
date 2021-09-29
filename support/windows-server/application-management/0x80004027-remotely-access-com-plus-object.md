@@ -4,20 +4,20 @@ description: Discusses that you receive a 0x80004027-CO_E_CLASS_DISABLED error w
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM+ administration, configuration, and security
+ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # 0x80004027 error when you try to remotely access COM+ object after you upgrade to Windows Server 2016
 
 This article provides a solution to the 0x80004027-CO_E_CLASS_DISABLED error that occurs when you remotely access COM+ object after you upgrade to Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3182294
 
 ## Symptoms

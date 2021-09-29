@@ -4,20 +4,20 @@ description: Describes a problem in which Event ID 4 and Event ID 1097 are logge
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nandve
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # Error (Target account name is incorrect) when a domain user accesses a share on a file server that is running Windows Server 2012 R2
 
 This article provides a solution to an issue where users fail to access a share on a file server that is running Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3040803
 
 ## Symptoms

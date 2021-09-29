@@ -4,20 +4,20 @@ description: DNS zones aren't loaded on the DNS console. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # DNS zones don't load and event ID 4000 and 4007 are logged
 
 This article solves an issue that event IDs 4000 and 4007 are logged when the DNS zones aren't loaded on the DNS console.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751452
 
 ## Symptoms

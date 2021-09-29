@@ -12,11 +12,7 @@ This article helps you determine which version and service pack level of the Mic
 _Original product version:_ &nbsp; .NET Framework 3.5 Service Pack 1  
 _Original KB number:_ &nbsp; 318785
 
-## Method 1: Use PowerShell
-
-The Microsoft OneScript team has released a script to run in PowerShell that can report the .NET Framework versions are installed on your Windows. For more information about this script, see [How to use PowerShell to determine the version and service pack level of a .NET](https://gallery.technet.microsoft.com/how-to-determine-versions-d3669799) in TechNet Gallery.
-
-## Method 2: Use registry keys
+## Use registry keys
 
 Use the registry information below to determine which version(s) and service pack level(s) of the .NET Framework are installed.
 

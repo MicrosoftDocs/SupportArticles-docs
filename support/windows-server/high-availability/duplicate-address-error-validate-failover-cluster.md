@@ -4,13 +4,13 @@ description: Describes a problem in which a duplicate address error occurs when 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Errors when running the Validation Wizard
+ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # The validation fails when you run a cluster validation wizard for a Windows Server 2008 cluster
@@ -20,8 +20,8 @@ This article provides a resolution for a problem in which a duplicate address er
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;969256
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 969256
 
 ## Symptoms
 

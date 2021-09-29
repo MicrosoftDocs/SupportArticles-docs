@@ -4,20 +4,20 @@ description: Provides a solution to an error that occurs when you use the domain
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain join issues
+ms.custom: sap:domain-join-issues, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Windows 7 or Windows Server 2008 R2 domain join displays error (Changing the Primary Domain DNS name of this computer to "" failed....)
 
 This article provides a solution to an error that occurs when you use the domain join User Interface (UI) to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain name.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2018583
 
 ## Symptoms

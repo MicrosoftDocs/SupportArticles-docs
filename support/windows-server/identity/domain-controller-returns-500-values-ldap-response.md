@@ -4,21 +4,21 @@ description: Provides a solution to an issue where the Windows Server 2008 R2 or
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, nedpyle, rolandw, aconkle, 
-ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
+ms.reviewer: kaushika, nedpyle, rolandw, aconkle
+ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Windows Server 2008 and newer domain controller returns only 5000 values in an LDAP response
 
 This article provides a solution to an issue where the Windows Server 2008 R2 or newer domain controller only returns 5000 values for an LDAP response.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2009267
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2009267
 
 ## Symptoms
 

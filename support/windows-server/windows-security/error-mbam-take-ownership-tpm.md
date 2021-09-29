@@ -4,21 +4,21 @@ description: Describes an issue where an error occurs when MBAM tries to initial
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, yitzhaks, avicar, kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # MBAM fails to take ownership of TPM
 
 This article provides a solution to an error that occurs when MBAM tries to initialize TPM.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
-_Original KB number:_ &nbsp;2640178
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
+_Original KB number:_ &nbsp; 2640178
 
 ## Symptoms
 

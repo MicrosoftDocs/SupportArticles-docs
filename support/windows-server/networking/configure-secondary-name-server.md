@@ -4,20 +4,20 @@ description: Describes how to configure a secondary DNS server.
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # Configure a secondary name server in Windows Server 2003  
 
 This step-by-step article describes how to configure a secondary DNS server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816518
 
 ## Identify the secondary name server

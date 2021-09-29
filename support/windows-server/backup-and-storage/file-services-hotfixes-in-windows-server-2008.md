@@ -4,20 +4,20 @@ description: This article lists the hotfixes that are currently available for us
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: cpuckett, waltere, kaushika
-ms.prod-support-area-path: File Server Resource Manager (FSRM)
+ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2
 
 This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2008-based computer or on a Windows Server 2008 R2-based computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2, Windows Server 2008  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2, Windows Server 2008  
 _Original KB number:_ &nbsp; 2473205
 
 ## Summary

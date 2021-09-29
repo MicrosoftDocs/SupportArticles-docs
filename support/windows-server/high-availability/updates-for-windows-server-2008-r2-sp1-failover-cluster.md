@@ -4,20 +4,20 @@ description: Describes the hotfixes for Windows Server 2008 R2 SP1 Failover Clus
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: ctimon, kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2008 R2 SP1 Failover Clusters
 
 This article documents recommended hotfixes for Windows Server 2008 R2 Service Pack 1 (SP1) Failover Clusters. Applying these fixes can improve the reliability of your high availability solution.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2545685
 
 > [!NOTE]

@@ -4,20 +4,20 @@ description: This article describes Event 1 that is logged about SMB witness cli
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jongrkim
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: networking 
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.technology: networking
 ---
 # Event 1 about SMB witness client initialization when you install Windows Server
 
 This article describes Event ID 1 that occurs during the deployment of Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4483863
 
 ## Symptoms

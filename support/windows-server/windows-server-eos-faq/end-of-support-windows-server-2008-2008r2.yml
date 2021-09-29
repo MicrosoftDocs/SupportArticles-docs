@@ -5,20 +5,20 @@ metadata:
   ms.date: 12/03/2020
   author: Deland-Han
   ms.author: delhan 
-  manager: dscontentpm
+  manager: dcscontentpm
   audience: itpro
   ms.topic: troubleshooting
   ms.prod: windows-server
+  ms.custom: sap:general-information, csstroubleshoot
   localization_priority: medium
-  ms.reviewer: kaushika, squin, suehar, v-jeffbo
-  ms.prod-support-area-path: 
+  ms.reviewer: kaushika, squin, suehar, v-jeffbo  
   ms.technology: windows-server-eos
     
 title: End of support for Windows Server 2008 and Windows Server 2008 R2
 summary: |
   This article provides some information about end of support for Windows Server 2008 and Windows Server 2008 R2.
   
-  _Original product version:_ &nbsp; Windows Server 2012 R2  
+  _Applies to:_ &nbsp; Windows Server 2012 R2  
   _Original KB number:_ &nbsp; 4456235
   
 
@@ -95,6 +95,6 @@ sections:
           [Windows Server 2008 and 2008 R2 documentation](/windows-server/get-started/modernize-windows-server-2008)  
           
       - question: |
-          Migration assistance with the Azure Migration Center
+          Migration assistance with the Azure Migration and Modernization Center
         answer: |
-          The [Azure Migration Center](https://azure.microsoft.com/migration/windows-server/) has a full range of tools available to help you assess your current on-premises environment, migrate your workloads onto Azure, and optimize your Azure usage to best suit your needs. Microsoft also works with many Partners, who are available to help you at every step of the journey.
+          The [Azure Migration and Modernization Center](https://azure.microsoft.com/migration/windows-server/) has a full range of tools available to help you assess your current on-premises environment, migrate your workloads onto Azure, and optimize your Azure usage to best suit your needs. Microsoft also works with many Partners, who are available to help you at every step of the journey.

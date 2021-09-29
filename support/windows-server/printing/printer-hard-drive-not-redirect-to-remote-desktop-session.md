@@ -4,20 +4,20 @@ description: Fixes the printer redirection failure issues and hard drive redirec
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Printer redirection and drive redirection don't work in a Terminal Server session
 
 This article helps fixes the printer redirection failures and hard drive redirection failures because of incorrect registry settings.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2492632
 
 ## Symptoms

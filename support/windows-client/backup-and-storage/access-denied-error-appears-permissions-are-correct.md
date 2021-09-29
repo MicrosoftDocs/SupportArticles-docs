@@ -3,21 +3,21 @@ title: Access is denied error message appears when permissions are correct
 description: Provides a solution for access is denied error message when permissions are correct.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-client-backup-and-storage
 ---
 # Access is denied error message appears when permissions are correct
 
 This article provides a solution for "access is denied" error message when permissions are correct.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 250494
 
 ## Symptoms

@@ -4,13 +4,13 @@ description: A roadmap of ports, protocols, and services that are required by Mi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 adobe-target: true
 ---
@@ -18,7 +18,7 @@ adobe-target: true
 
 This article discusses the required network ports, protocols, and services that are used by Microsoft client and server operating systems, server-based programs, and their subcomponents in the Microsoft Windows Server system. Administrators and support professionals may use this article as a roadmap to determine which ports and protocols Microsoft operating systems and programs require for network connectivity in a segmented network.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 832017
 
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ _Original KB number:_ &nbsp; 832017
 >
 > What this means for you:
 >
-> - If your computer network environment uses only Windows Server 2012, you must enable connectivity over the high port range of 49152 through 65535.
+> - If your computer network environment uses only Windows Server 2012 or a later version of Windows, you must enable connectivity over the high port range of 49152 through 65535.
 > - If your computer network environment uses Windows Server 2012 together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both the following port ranges:  
 > High port range 49152 through 65535  
 > Low port range 1025 through 5000
@@ -123,7 +123,8 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 
 In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
 
-- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit)) = 4 (how many pings are sent before connection is closed)
+- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping)
+- [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit) = 4 (how many pings are sent before connection is closed)
 - [PingWaitTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingwaittimeout) = 2000 ms (how long it waits for the ICMP response)
 - Reference: [LdapSessionOptions Class](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions)
 

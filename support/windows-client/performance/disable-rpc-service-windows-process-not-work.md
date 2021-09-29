@@ -4,20 +4,20 @@ description: Provides a solution to an issue where some Windows procedures don't
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, bhogen
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Some Windows procedures don't work if the Remote Procedure Call service is disabled
 
 This article provides a solution to an issue where some Windows procedures don't work when the Remote Procedure Call (RPC) service is disabled.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 830071
 
 > [!IMPORTANT]

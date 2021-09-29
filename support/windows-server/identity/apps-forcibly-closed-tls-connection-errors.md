@@ -4,20 +4,20 @@ description: Fixes an issue that occurs when an application tries to open a conn
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: sureshka, arrenc, juburke, stacygr, jburchel, diassis, stefze, mastewa, ardenw, kaushika
-ms.prod-support-area-path: Transport Layer Security (TLS)
+ms.custom: sap:transport-layer-security-tls, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows
 
 This article helps fix an issue that occurs when an application tries to open a connection to a SQL Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4557473
 
 ## Symptoms

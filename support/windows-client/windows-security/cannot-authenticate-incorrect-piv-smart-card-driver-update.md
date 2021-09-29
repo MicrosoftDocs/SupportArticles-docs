@@ -1,23 +1,23 @@
 ---
-title: Can't authenticate because of incorrect PIV 
+title: Can't authenticate because of incorrect PIV
 description: Describes how to resolve a problem that is caused by an incorrect driver update. The user can't sign in to Windows until the incorrect driver is removed.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ccraig, wincicadsec, kaushika
-ms.prod-support-area-path: Smart card logon
+ms.custom: sap:smart-card-logon, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Can't authenticate because of an incorrect PIV smart card driver update
 
 This article describes how to resolve a problem where users can't sign in to Windows until the incorrect driver is removed.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4563240
 
 ## Summary

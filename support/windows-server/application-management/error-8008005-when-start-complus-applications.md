@@ -4,20 +4,20 @@ description: Explains that you may receive an error message when you start lots 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM+ administration, configuration, and security
+ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # Error when you start many COM+ applications: Error code 80080005 -- server execution failed
 
 This article provides a workaround for an issue where you receive error code 80080005 when you start many Microsoft COM+ applications manually from a Component Services Microsoft Management Console (MMC) snap-in.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 870655
 
 ## Symptoms
@@ -28,21 +28,23 @@ When you start many Microsoft COM+ applications manually from the Component Serv
 
 You will receive an error message that is similar to the following in the application log of Event Viewer:
 
-> Type: Error  
+```output
+Type: Error
 Source: DCOM
->
-> Category: None  
+
+Category: None
 Event ID: 10010
->
-> Date: 31/03/2004
->
-> Time: 15:13:30
->
-> User: NT AUTHORITY\\SYSTEM
->
-> Computer: MSHSRMSWEBP0007
->
-> Description: The server {F1673109-CF44-468D-9E23-FE4116F84CFA} did not register with DCOM within the required timeout.
+
+Date: 31/03/2004
+
+Time: 15:13:30
+
+User: NT AUTHORITY\SYSTEM
+
+Computer: MSHSRMSWEBP0007
+
+Description: The server {F1673109-CF44-468D-9E23-FE4116F84CFA} did not register with DCOM within the required timeout.
+```
 
 ## Cause
 

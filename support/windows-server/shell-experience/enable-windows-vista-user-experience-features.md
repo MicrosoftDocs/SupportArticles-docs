@@ -4,21 +4,21 @@ description: Describes how to configure Windows Server 2008 as a workstation com
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Media Player
-ms.technology: windows-server-shell-experience 
+ms.custom: sap:windows-media-player, csstroubleshoot
+ms.technology: windows-server-shell-experience
 ---
 # How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 
 This article describes how to configure the user experience features that are available in Windows Vista on a computer that is running Windows Server 2008.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;947036
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 947036
 
 ## Introduction
 

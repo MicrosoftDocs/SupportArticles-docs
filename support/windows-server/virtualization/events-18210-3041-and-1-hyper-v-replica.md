@@ -4,20 +4,20 @@ description: Describes an issue that triggers events in the Application log when
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Hyper-V Replica
+ms.custom: sap:hyper-v-replica, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Events 18210, 3041, and 1 are logged when Hyper-V Replica is configured
 
 This article describes an issue that triggers events in the Application log when you have a Hyper-V host and the Hyper-V Replica feature is configured.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3050765
 
 ## Symptoms

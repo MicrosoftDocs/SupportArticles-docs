@@ -3,21 +3,21 @@ title: How to Turn on Debug Logging of the LDAP Client (Wldap32.dll)
 description: Describes how to turn on debug logging of the LDAP client (Wldap32.dll).
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, herbertm
-ms.prod-support-area-path: LDAP configuration and interoperability
+ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to turn on debug logging of the LDAP client (Wldap32.dll)
 
 This article describes how to turn on debug logging of the LDAP client (Wldap32.dll).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
 _Original KB number:_ &nbsp; 325616
 
 ## Summary

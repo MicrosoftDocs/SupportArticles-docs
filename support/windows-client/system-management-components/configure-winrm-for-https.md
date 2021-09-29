@@ -4,20 +4,20 @@ description: This article describes how to configure WINRM to listen to HTTPS by
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
-ms.prod-support-area-path: WinRM
+ms.custom: sap:winrm, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # How to configure WINRM for HTTPS
 
 This article provides a solution to configuring WINRM for HTTPS.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2019527
 
 ## Summary

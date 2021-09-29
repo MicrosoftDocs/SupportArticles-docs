@@ -169,7 +169,7 @@ For a Key Encryption Key scenario, follow these steps:
     # Load ADAL Assemblies. If the ADAL Assemblies cannot be found, please see the "Install Az PowerShell module" section. 
 
     $adal = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll"  
+    $adalforms = "${env:ProgramFiles}\WindowsPowerShell\Modules\Az.Accounts\1.9.4\PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"  
   
     If ((Test-Path -Path $adal) -and (Test-Path -Path $adalforms)) { 
 
@@ -301,7 +301,7 @@ If you are using the old Az PowerShell module, you must change the two commands 
 | Parameters  | Example  |How to check   |
 |---|---|---|
 |  $keyVaultName | myKeyVault2707  | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint Expand`and check **Settings** and **KeyEncryptionKeyURL** in the output. Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000` |
-|$kekName   |mykey   | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint Expandand` and check **Settings** and **KeyEncryptionKeyURL** in the output.  Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000`|
+|$kekName   |mykey   | Run `Get-AzVM -ResourceGroupName $rgName -Name $vmName -DisplayHint expand` and check **Settings** and **KeyEncryptionKeyURL** in the output.  Here is an example:</br>"KeyEncryptionKeyURL":`https://myKeyVault2707.vault.azure.net/keys/mykey/000072b987145a3b79b0ed415f0000`|
 |$secretName   |7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D  | The name of the secret of the VM key.</br> To find the correct secret name, check the step 6 in the [Decrypt the encrypted OS disk](#decrypt-the-encrypted-os-disk) section.|
 |$bekFilePath   |c:\bek\7EB4F531-5FBA-4970-8E2D-C11FD6B0C69D.BEK |A local path where you want to save the BEK file. In the example, You need to create the "bek" folder before running the script or it will error out.|
 |$adTenant  |contoso.onmicrosoft.com   | FQDN or GUID of your Azure Active Directory that hosts the key vault |

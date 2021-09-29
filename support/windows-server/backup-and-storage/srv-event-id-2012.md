@@ -4,20 +4,20 @@ description: Explains reasons for the system event log srv event ID 2012.
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
-ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: windows-server-backup-and-storage 
+ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
+ms.technology: windows-server-backup-and-storage
 ---
 # Reason for System Event Log srv Event ID: 2012 - While transmitting or receiving data, the server encountered a network error
 
 This article discusses the system event log srv event ID 2012.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2885205
 
 ## Summary
@@ -89,4 +89,4 @@ The file server was not aware of the clients network issue and scavenges the for
 
 For more information about this topic, click the following article number to view the article on the Microsoft Web:
 
-[[MS-CIFS]: Common Internet File System (CIFS) Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-cifs/d416ff7c-c536-406e-a951-4f04b2fd1d2b)
+[[MS-CIFS]: Common Internet File System (CIFS) Protocol](/openspecs/windows_protocols/ms-cifs/d416ff7c-c536-406e-a951-4f04b2fd1d2b)

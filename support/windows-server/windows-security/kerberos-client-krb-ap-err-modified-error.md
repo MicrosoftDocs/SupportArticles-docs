@@ -1,23 +1,23 @@
 ---
 title: Kerberos client receives KRB_AP_ERR_MODIFIED error
-description: Resolve an error (The kerberos client received a KRB_AP_ERR_MODIFIED error from the server) that occurs when you access to NLB virtual IP/NLB Virtual Name.  
+description: Resolve an error (The kerberos client received a KRB_AP_ERR_MODIFIED error from the server) that occurs when you access to NLB virtual IP/NLB Virtual Name.
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # The kerberos client received a KRB_AP_ERR_MODIFIED error from the server
 
 The article helps you to resolve the issue that the kerberos client received a KRB_AP_ERR_MODIFIED error from the server.  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 558115
 
 ## Symptoms
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 558115
 During access to NLB virtual IP/NLB Virtual Name, the user may prompt to a username and password, and the following error may add to the local system event log:
 
 > Event ID: 4  
-Source: Kerbeors  
+Source: Kerberos  
 Type: Error
 >
 > "The kerberos client received a KRB_AP_ERR_MODIFIED error from the server host/myserver.domain.com. This indicates that the password used to encrypt the kerberos service ticket is different than that on the target server. Commonly, this is due to identically named machine accounts in the target realm (domain.com), and the client realm. Please contact your system administrator."

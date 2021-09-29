@@ -4,20 +4,20 @@ description: Discusses the BitLocker Recovery auto-shutdown process in UEFI mode
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rblume
-ms.prod-support-area-path: BitLocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Windows 10 BitLocker Recovery auto-shutdown in UEFI mode
 
 This article discusses a by-design behavior where a computer shuts down after the BitLocker Drive Encryption Recovery screen is displayed for one minute. The one-minute shutdown occurs when the system is in Unified Extensible Firmware Interface (UEFI) mode.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3174095
 
 ## Symptoms

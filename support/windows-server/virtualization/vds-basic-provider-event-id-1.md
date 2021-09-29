@@ -4,20 +4,20 @@ description: Describes an issue in a Hyper-V guest operating system of Windows S
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tyagi, adityah
-ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: hyper-v 
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.technology: hyper-v
 ---
 # VDS Basic Provider event ID 1 is logged in a Hyper-V guest operating system
 
 This article discusses an issue in a Hyper-V guest operating system where Virtual Disk Service (VDS) Basic Provider event ID 1 is logged.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 979391
 
 ## Symptoms

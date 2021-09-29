@@ -4,20 +4,20 @@ description: Explains that when you try to add a trusted domain user to a trusti
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain and forest trusts
+ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Error when you try to add a trusted domain user to a trusting domain in Windows Server 2003 or in Windows 2000: The server is not operational
 
 This article explains that when you try to add a trusted domain user to a trusting domain, you may receive an error message if the guest account on the trusted domain is turned on.
 
-_Original product version:_ &nbsp; Windows 10, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837328
 
 ## Symptoms
@@ -64,4 +64,4 @@ This behavior is by design.
 
 For more information about how to manage trusts in Microsoft Windows Server 2003, see the "How to Manage Trusts" and "Understanding Trusts" topics in the Active Directory section of the Windows Server 2003 product documentation. To view the documentation, visit the following Microsoft Web site:
 
-[Using WUA From a Remote Computer](https://docs.microsoft.com/windows/win32/wua_sdk/using-wua-from-a-remote-computer)
+[Using WUA From a Remote Computer](/windows/win32/wua_sdk/using-wua-from-a-remote-computer)

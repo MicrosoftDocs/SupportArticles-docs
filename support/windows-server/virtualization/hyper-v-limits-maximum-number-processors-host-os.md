@@ -4,21 +4,21 @@ description: Describes Windows OS running in the management partition only use u
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arichard, kaushika
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Hyper-V limits the maximum number of processors in the Hyper-V host OS to 64
 
 This article describes that Windows OS running in the management partition only use up to a maximum of 64 root Virtual Processors (root VPs).
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2812283
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2812283
 
 ## Summary
 

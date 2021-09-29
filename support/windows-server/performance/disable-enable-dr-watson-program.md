@@ -4,20 +4,20 @@ description: Describes how to disable and re-enable the Dr. Watson program for W
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Disable or enable Dr. Watson for Windows
 
 This article describes how to disable and re-enable the Dr. Watson program for Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 188296
 
 > [!IMPORTANT]

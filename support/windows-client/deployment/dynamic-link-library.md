@@ -4,20 +4,20 @@ description: Describes what a DLL is and the various issues that occur when you 
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # What is a DLL
 
 This article describes what a dynamic link library (DLL) is and the various issues that may occur when you use DLLs. It also describes some advanced issues that you should consider when developing your own DLLs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 815065
 
 ## Summary

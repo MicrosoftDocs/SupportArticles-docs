@@ -4,21 +4,21 @@ description: Fixes an issue where a Client Access Point (CAP) in a failover clus
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dewitth, ctimon, eldenc
-ms.prod-support-area-path: Errors when running the Validation Wizard
+ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # "Unable to get Computer Object using GUID" error message when a network name request fails in a Windows Server failover cluster
 
 This article provides a solution to fix an issue where a Client Access Point (CAP) in a failover cluster does not come online as expected.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2008654
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2008654
 
 ## Symptoms
 

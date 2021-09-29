@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # Error in Date value at beginning of DST in certain time zones
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes the error report when converting from standard time to Daylight Saving Time (DST) and provides a solution.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10, Internet Explorer 9  
@@ -41,7 +43,7 @@ When you are concerned only with the day, month, and year, you can work around t
 
 ## More information
 
-The ECMAScript standard can be found at [ECMAScript® 2016 Language Specification](https://www.ecma-international.org/ecma-262/7.0/index.html).
+The ECMAScript standard can be found at [ECMAScript&reg; 2016 Language Specification](https://www.ecma-international.org/ecma-262/7.0/index.html).
 
 [Section 20.3.2](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-date-constructor) defines how the Date constructor is interpreted, including the fact of a conversion of a time value to Coordinated Universal Time (UTC).
 

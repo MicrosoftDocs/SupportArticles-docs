@@ -4,20 +4,20 @@ description: Describes how to set up a clustered print server.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.prod-support-area-path: Print clusters and High Availability Printing
+ms.custom: sap:print-clusters-and-high-availability-printing, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # How to set up a clustered print server
 
 This article describes the steps to set up a clustered print server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 278455
 
 ## More information

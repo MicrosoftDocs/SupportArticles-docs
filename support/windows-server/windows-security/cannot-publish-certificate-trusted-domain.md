@@ -4,20 +4,20 @@ description: Fixes an issue where the issued certificate isn't published in Acti
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Certification Authority configuration to publish certificates in Active Directory of trusted domain
 
 This article solves the issue where the issued certificate isn't published in Active Directory when users from a child domain as a certification authority (CA) request a certificate.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 281271
 
 ## Symptoms

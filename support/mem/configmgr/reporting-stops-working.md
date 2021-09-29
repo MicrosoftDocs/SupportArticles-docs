@@ -39,7 +39,7 @@ To do this, follow these steps:
    - .NET Framework 4.6.2 supports TLS 1.1 and TLS 1.2. No additional changes are required.
    - .NET Framework 4.6 and earlier versions [must be updated](/dotnet/framework/migration-guide/versions-and-dependencies) to support TLS 1.1 and TLS 1.2.
 
-     If you're using .NET Framework 4.5.1 or 4.5.2 on Windows 8.1, Windows RT 8.1, or Windows Server 2012, the relevant updates and details are also available from [the Download Center](https://www.microsoft.com/download/details.aspx?id=42883).
+     If you're using .NET Framework 4.5.1 or 4.5.2 on Windows 8.1, Windows RT 8.1, or Windows Server 2012, the relevant updates and details are also available from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=2898850).
 
    - All Configuration Manager client computers and site systems should have the following registry values set.
 

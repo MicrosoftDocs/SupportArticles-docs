@@ -3,21 +3,21 @@ title: How to download updates that include drivers and hotfixes from the Window
 description: Describes how to obtain updates, WHQL drivers, and hotfixes from the Windows Update Catalog. This information is for advanced users only.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chughes
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to download updates that include drivers and hotfixes from the Windows Update Catalog
 
 This article discusses how to download updates from the Windows Update Catalog.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 323166
 
 ## Introduction

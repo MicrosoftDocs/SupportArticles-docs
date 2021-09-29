@@ -3,21 +3,21 @@ title: Stop error 0x109:CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machin
 description: describes how to fix Stop error 0x109:CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine
 ms.date: 09/10/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, scotto
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Stop error 0x109: CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine
 
 This article provides the resolution of fixing the Stop error 0x109: CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2902739
 
 ## Symptoms

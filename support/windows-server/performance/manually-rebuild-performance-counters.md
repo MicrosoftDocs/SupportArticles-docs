@@ -4,20 +4,20 @@ description: Describes how to manually rebuild performance counters.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Manually rebuild performance counters for Windows Server 2008 64 bit or Windows Server 2008 R2 systems
 
 This article helps solve an issue where some performance counter libraries become corrupted and need to be rebuilt.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2554336
 
 ## Symptoms

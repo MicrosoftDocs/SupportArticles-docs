@@ -3,21 +3,21 @@ title: Support for the leap second
 description: Summarizes Microsoft support for the leap second.
 ms.date: 09/10/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Support for the leap second
 
 This article provides information about Microsoft support for the leap second.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1803, Windows 10, version 1709, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1803, Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2722715
 
 ## Summary

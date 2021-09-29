@@ -4,20 +4,20 @@ description: Root CA certificates distributed using GPO might appear sporadicall
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, philh, herbertm
-ms.prod-support-area-path: Active Directory Certificate Services
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Valid root CA certificates distributed using GPO might intermittently appear as untrusted
 
 This article provides a workaround for an issue where valid root CA certificates that are distributed by using GPO appear as untrusted.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4560600
 
 ## Symptoms

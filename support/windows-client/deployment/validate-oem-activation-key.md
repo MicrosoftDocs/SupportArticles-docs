@@ -4,20 +4,20 @@ description: Describes how to validate the OEM activation key in Windows 10, ver
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, themar
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to validate the OEM activation key in Windows 10
 
 This article introduces how to validate the OEM activation key in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4346763
 
 ## Background

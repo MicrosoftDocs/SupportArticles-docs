@@ -4,20 +4,20 @@ description: Works around an issue where event ID 1500 is logged when SNMP is en
 ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Event 1500 logged when SNMP is enabled on Windows Server
 
 This article provides a workaround for an issue where event ID 1500 is logged when Simple Management Network Protocol (SNMP) is enabled.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002303
 
 ## Symptoms

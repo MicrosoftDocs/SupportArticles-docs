@@ -4,20 +4,20 @@ description: Describes an issue that triggers an error on a Windows-based comput
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: amanjain, kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Error when you try to access a network drive that's mapped to a web share: User has not been authenticated
 
 This article provides a resolution for an issue that occurs on a Windows-based computer when you try to access a mapped web share.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 941050
 
 ## Symptoms

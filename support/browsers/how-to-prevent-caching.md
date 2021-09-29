@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # How to prevent caching in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article describes the use of HTTP headers to control the caching of Web pages in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Explorer  

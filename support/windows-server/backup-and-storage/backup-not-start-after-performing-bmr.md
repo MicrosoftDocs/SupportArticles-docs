@@ -4,20 +4,20 @@ description: Describes a problem that prevents Windows Server Backup from starti
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, takondo, dajiro, chadbee
-ms.prod-support-area-path: Data corruption and disk errors
+ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows Server Backup doesn't start after you perform a BMR in Windows Server 2012
 
 This article provides a solution to a problem that prevents Windows Server Backup from starting after you perform a bare metal recovery (BMR).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2961238
 
 ## Symptoms

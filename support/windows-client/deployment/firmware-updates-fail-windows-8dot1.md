@@ -4,21 +4,21 @@ description: Describes how and why firmware updates occasionally fail in a Windo
 ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Firmware update failures in Windows 8.1
 
 This article describes how and why firmware updates occasionally fail in a Windows 8.1 environment.
 
-_Original product version:_ &nbsp;Windows 8.1  
-_Original KB number:_ &nbsp;2909710
+_Applies to:_ &nbsp; Windows 8.1  
+_Original KB number:_ &nbsp; 2909710
 
 ## Summary
 

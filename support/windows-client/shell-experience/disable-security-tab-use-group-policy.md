@@ -4,21 +4,21 @@ description: Describes how an administrator can disable the Security tab from Wi
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: timtho, kaushika
-ms.prod-support-area-path: File Explorer/Windows Explorer
+ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # How to remove the Security tab by using a group policy  
 
 This article describes how an administrator can disable the **Security** tab from Windows 2000 Professional-based workstations that are members of a Windows 2000 domain.
 
-_Original product version:_ &nbsp;Windows 2000  
-_Original KB number:_ &nbsp;303153
+_Applies to:_ &nbsp; Windows 2000  
+_Original KB number:_ &nbsp; 303153
 
 ## Summary
 

@@ -4,18 +4,18 @@ description: NTFRS deprecation intentionally blocks the promotion of Windows Ser
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # NTFRS deprecation intentionally blocks the installation of Windows Server version 1709 replica DCs
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4023141
 
 ## Symptom

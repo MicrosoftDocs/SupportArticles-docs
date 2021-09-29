@@ -4,20 +4,20 @@ description: Discusses that a change in the DHCP DNS update behavior in Windows 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
+ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
 ms.technology: networking
 ---
 # DHCP dynamic updates of DNS registrations are delayed or not processed
 
 This article discusses that a change in the DHCP Domain Name System (DNS) update behavior may delay DNS registrations and provides help to solve this issue.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3069564
 
 ## Symptoms

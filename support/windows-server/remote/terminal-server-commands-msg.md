@@ -4,20 +4,20 @@ description: Describes syntax and parameters of Terminal Server commands MSG.
 ms.date: 10/12/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Terminal Server commands: MSG
 
 This article introduces syntax and parameters of Terminal Server commands MSG.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 186480
 
 ## Summary

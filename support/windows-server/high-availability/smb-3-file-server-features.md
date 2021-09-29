@@ -4,20 +4,20 @@ description: Describes new features in the next version of the Server Message Bl
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cannot failover a group
+ms.custom: sap:cannot-failover-a-group, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # New SMB 3.0 features in the Windows Server file server
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2709568
 
 ## Summary

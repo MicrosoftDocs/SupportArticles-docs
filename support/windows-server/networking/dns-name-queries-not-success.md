@@ -4,20 +4,20 @@ description: Describes an issue that occurs because of the Extension Mechanisms 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # Some DNS name queries are unsuccessful after you deploy a Windows-based DNS server
 
 This article describes an issue where DNS queries to some domains may not be resolved successfully after you deploy a Windows-based DNS server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 832223
 
 ## Symptoms
@@ -55,7 +55,7 @@ dnscmd /config /enableednsprobes 0
     Command completed successfully.
 
 > [!NOTE]
-> Dnscmd.exe is installed on all Windows-based DNS servers except servers that are running Windows Server 2003 or Windows Server 2003 R2. You can install Dnscmd.exe from the Windows Server 2003 Support Tools. To download the Windows Server 2003 Support Tools, click the following Microsoft Download Center link: [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))
+> Dnscmd.exe is installed on all Windows-based DNS servers except servers that are running Windows Server 2003 or Windows Server 2003 R2. You can install Dnscmd.exe from the Windows Server 2003 Support Tools. To download the Windows Server 2003 Support Tools, click the following Microsoft Download Center link: [Setspn](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))
 
 ## More information
 

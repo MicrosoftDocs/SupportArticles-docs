@@ -4,21 +4,21 @@ description: Provides information about the features and functions that are avai
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Features and functions in version 1.1 of the Client-Side Caching Command-Line Options command-line tool
 
 This article provides information about the features and functions that are available in the offline file management tool CSCCMD 1.1.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;884739
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 884739
 
 ## Introduction
 

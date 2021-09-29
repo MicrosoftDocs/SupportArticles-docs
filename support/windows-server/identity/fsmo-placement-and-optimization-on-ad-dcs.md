@@ -4,20 +4,20 @@ description: Certain operations are optimally done on a single domain controller
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, larryli
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # FSMO placement and optimization on Active Directory domain controllers
 
 Certain operations are best done on a single domain controller. This article describes the placement of Active Directory Flexible Single-Master Operation (FSMO) roles in the domain and forest for these operations.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 223346
 
 ## More information

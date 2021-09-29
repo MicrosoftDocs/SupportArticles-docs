@@ -4,21 +4,21 @@ description: Provides a solution to fix an error that occurs when you use PXE to
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: No Boot (not BugChecks)
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Invalid Boot File Received Error Message When PXE booting from WDS
 
 This article provides help to fix an error that occurs when you use PXE to boot a client computer from a Windows Deployment Services (WDS) server.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
-_Original KB number:_ &nbsp;2602043
+_Applies to:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 2602043
 
 ## Symptoms
 

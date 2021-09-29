@@ -4,20 +4,20 @@ description: The IP address registers an A record for the host name in its prima
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # The host's A record is registered in DNS after you choose not to register the connection's address
 
 This article provides methods to fix an issue where the IP address registers an A record for the host name in its primary DNS suffix zone. This issue occurs after you clear the **Register this connection's address in DNS** check box.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 275554
 
 > [!NOTE]

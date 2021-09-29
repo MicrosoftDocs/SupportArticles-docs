@@ -3,21 +3,21 @@ title: You receive an error message after you put the page file on another drive
 description: Describes a problem in which you receive an error message after you move the page file to another drive other than drive C in a guest operating system.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danma
-ms.prod-support-area-path: Storage configuration
+ms.custom: sap:storage-configuration, csstroubleshoot
 ms.technology: hyper-v
 ---
 # You receive an error message after you put the page file on another drive other than the drive C in a guest operating system
 
 This article helps to fix an error occurs after you move the page file to another drive other than drive C in a guest operating system.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 979386
 
 ## Symptoms

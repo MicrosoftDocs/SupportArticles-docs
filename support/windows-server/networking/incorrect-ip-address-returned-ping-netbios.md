@@ -3,21 +3,21 @@ title: An incorrect IP address is returned
 description: Describes an issue in which an incorrect IP address is returned when you ping a server by using its NetBIOS name.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danma
-ms.prod-support-area-path: IP Address Management (IPAM)
+ms.custom: sap:ip-address-management-ipam, csstroubleshoot
 ms.technology: networking
 ---
 # An incorrect IP address is returned when you ping a server by using its NetBIOS name  
 
 This article provides a resolution for the issue that an incorrect IP address is returned, when you ping a server by using its NetBIOS name.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 981953
 
 ## Symptoms

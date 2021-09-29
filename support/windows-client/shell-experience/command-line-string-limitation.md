@@ -4,20 +4,20 @@ description: This article describes about limiting the maximum string length at 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, djanson
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Command prompt (Cmd. exe) command-line string limitation
 
 This article discusses the limitation to the length of the strings that you use from the command prompt in Command Prompt (Cmd.exe). It also provides methods that you can use to work around this limitation.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 830473
 
 ## More information

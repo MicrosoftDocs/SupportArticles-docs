@@ -4,20 +4,20 @@ description: Describes a problem that occurs if you're behind a proxy server or 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Background Intelligent Transfer Service (BITS)
+ms.custom: sap:background-intelligent-transfer-service-bits, csstroubleshoot
 ms.technology: networking
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 
 This article describes a problem that occurs if you're behind a proxy server or behind a firewall that doesn't support HTTP 1.1 range requests.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 922330
 
 ## Symptoms

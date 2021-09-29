@@ -4,20 +4,20 @@ description: Describes an issue in which Windows 10 builds are excluded from WMI
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # WMI Group Policy filters that compare Win32_OperatingSystem BuildNumber don't work as expected
 
 This article provides a solution to an issue where Windows Management Instrumentation (WMI) Group Policy filters that compare Win32_OperatingSystem BuildNumber don't work as expected in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3119213
 
 ## Symptoms

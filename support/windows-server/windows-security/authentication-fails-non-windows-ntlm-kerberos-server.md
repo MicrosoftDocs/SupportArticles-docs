@@ -4,20 +4,20 @@ description: Fixes an issue in which NTLM and Kerberos servers can't authenticat
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sabinn
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Authentication failure from non-Windows NTLM or Kerberos servers
 
 This article provides a solution to several authentication failure issues in which NTLM and Kerberos servers can't authenticate Windows 7 and Windows Server 2008 R2-based computers. This is caused by differences in the way that Channel Binding Tokens are handles.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 976918
 
 ## Symptoms

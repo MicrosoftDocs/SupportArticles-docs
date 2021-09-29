@@ -4,18 +4,18 @@ description: Describes known issues that occur when you manage a Windows 10 Grou
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-client-active-directory
 ---
 # Known issues managing a Windows 10 Group Policy client in Windows Server 2012 R2
 
-_Original product version:_ &nbsp; Window 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Window 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4015786
 
 ## Summary

@@ -4,20 +4,20 @@ description: Describes how to move a Windows Server cluster from one domain to a
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Initial Cluster Creation or Adding node
+ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Move a Windows Server cluster from one domain to another
 
 Windows clustering provides high availability of server resources. This article describes how to move a Windows Server Cluster from one domain to another.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 269196
 
 > [!NOTE]

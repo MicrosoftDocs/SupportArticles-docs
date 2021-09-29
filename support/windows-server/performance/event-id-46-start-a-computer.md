@@ -4,20 +4,20 @@ description: This article describes an issue with Windows operating system, wher
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cachen
-ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: windows-server-performance 
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.technology: windows-server-performance
 ---
 # Event ID 46 is logged when you start a computer
 
 This article provides a solution to an issue where Event ID 46 is logged when you start a computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2756313
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Describes User Account Control (UAC) and remote restrictions in Win
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Description of User Account Control and remote restrictions in Windows Vista
 
 This article describes User Account Control (UAC) and remote restrictions.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 951016
 
 ## Introduction

@@ -4,20 +4,20 @@ description: You receive the Location is not available error when you try to cop
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jkuehler, pleblanc, arrenc
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Copying files from a mapped drive to a local directory fails with error (Location is not available) if UAC is enabled
 
 This article solves the **Location is not available** error when you try to copy files from a mapped drive.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2019185
 
 ## Symptoms

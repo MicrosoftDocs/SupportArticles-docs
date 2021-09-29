@@ -56,6 +56,12 @@ Use the following steps to resolve this problem:
 ```cpp
 void CTestDlg::OnInitMenuPopup(CMenu *pPopupMenu, UINT nIndex,BOOL bSysMenu)
 {
+    // Make sure this is actually a menu. When clicking the program icon
+    // in the window title bar this function will trigger and pPopupMenu 
+    // will NOT be a menu.
+    if (!IsMenu(pPopupMenu->m_hMenu))
+		return;
+        
     ASSERT(pPopupMenu != NULL);
     // Check the enabled state of various menu items.
 

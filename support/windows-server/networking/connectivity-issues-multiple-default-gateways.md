@@ -4,20 +4,20 @@ description: Describes the connectivity issues that occur when multiple default 
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Multiple default gateways can cause connectivity problems
 
 This article describes the connectivity issues that occur when multiple default gateways are used in TCP/IP configuration options.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 159168
 
 ## Summary

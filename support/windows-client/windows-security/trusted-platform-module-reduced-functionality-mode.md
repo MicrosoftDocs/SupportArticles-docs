@@ -4,21 +4,21 @@ description: Describes an issue in which TPM is in reduced functionality mode af
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: aaroncz, kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # TPM is in reduced functionality mode after successful deployment of Windows 10
 
 This article provides a workaround for an issue in which the Trusted Platform Module (TPM) is in reduced functionality mode after a successful deployment of Windows 10.
 
-_Original product version:_ &nbsp;Windows 10 – all editions  
-_Original KB number:_ &nbsp;4018657
+_Applies to:_ &nbsp; Windows 10 – all editions  
+_Original KB number:_ &nbsp; 4018657
 
 ## Symptoms
 

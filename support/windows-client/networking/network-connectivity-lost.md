@@ -2,22 +2,22 @@
 title: Network connectivity is lost
 description: Information about Microsoft Defender Antivirus antimalware platform update to solve problem of vpn users losing network connectivity.
 ms.date: 09/25/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, yongrhee, ksarens, alexsc, niwelton
-ms.prod-support-area-path: Windows Defender Exploit Guard
+ms.custom: sap:windows-defender-exploit-guard, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Lost internet connectivity using VPN in Windows Defender Exploit Guard - Network Protection
 
 This article provides a solution to an error that occurs when you use the Network Protection feature in Windows Defender Exploit Guard in Audit or Block mode and a virtual private network (VPN).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4560203
 
 ## Symptoms

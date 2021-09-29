@@ -3,21 +3,21 @@ title: Network provider settings are removed during an in-place upgrade to Windo
 description: Discusses an issue in which network provider settings are removed during an in-place upgrade to Windows 10. Provides workarounds.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Network provider settings are removed during an in-place upgrade to Windows 10
 
 This article provides workarounds to an issue in which network provider settings are removed during an in-place upgrade to Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1809, Windows 10, version 1709, Windows 10, version 1703, Windows 10, version 1607  
+_Applies to:_ &nbsp; Windows 10, version 1809, Windows 10, version 1709, Windows 10, version 1703, Windows 10, version 1607  
 _Original KB number:_ &nbsp; 4013822
 
 ## Symptoms

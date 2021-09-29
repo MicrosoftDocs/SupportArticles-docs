@@ -4,20 +4,20 @@ description: Discusses the recommended hotfixes and updates for Windows Server 2
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Replacing hardware and updating the operating system
+ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2008 R2-based server clusters
 
 This article describes the hotfixes and updates that we recommend that you install on each node of a Windows Server 2008 R2-based failover cluster.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2  
+_Applies to:_ &nbsp; Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 980054
 
 ## Summary

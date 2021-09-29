@@ -7,6 +7,8 @@ ms.reviewer: ramakoni
 ---
 # Troubleshooting missing graphic icons on Internet Explorer webpages
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 When you load web applications that use font icons, you notice that the icons are not displayed correctly in Internet Explorer. This problem can occur in webpages that use such popular font icon sources as font-awesome, @font-face, graphic shell icons, and GDI fonts. This article outlines some of these scenarios, potential causes of the problem, and the steps that you can take to resolve the problem.
 
 _Original product version:_ &nbsp; Internet Explorer  
@@ -102,7 +104,3 @@ Related article:
 ## Cause 3 - An antivirus application prevents the font icons from displaying
 
 If neither the Cause 1 nor Cause 2 scenarios help you resolve the missing icons problem, try disabling any installed antivirus application. These applications are known to prevent font icons from displaying in Internet Explorer 11.
-
-If you are using Symantec Data Loss Prevention (DLP), refer to the following article for a resolution that makes changes to the DLP settings:
-
-[Known Issues for DLP Agent Support of Microsoft Windows 10 Creators Update](https://knowledge.broadcom.com/external/article?legacyId=tech240808)

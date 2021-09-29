@@ -2,22 +2,22 @@
 title: Limitations of $WinPeDriver$
 description: Describes limitations of $WinPeDriver$.
 ms.date: 09/15/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Limitations of $WinPeDriver$ when used in conjunction with other driver injection methods
 
 This article provides guidance on including drivers into WinPE and the operating system to be installed so that the driver is available in the WinPE portion of installation and also ends up in the completed operating system installation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2686316
 
 ## Summary

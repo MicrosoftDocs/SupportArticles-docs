@@ -4,20 +4,20 @@ description: Describes an issue where an error occurs when you use the DiskPart 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: chadbee, kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Error message when you use the DiskPart break command to break a mirrored set
 
 This article describes an issue where an error occurs when you use the DiskPart break command to break a mirrored set.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 331494
 
 ## Symptoms

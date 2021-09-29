@@ -4,20 +4,20 @@ description: Describes user authentication issues with Active Directory Service 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Services Interface (ADSI)
+ms.custom: sap:active-directory-services-interface-adsi, csstroubleshoot
 ms.technology: windows-client-administration-management-development
 ---
 # User authentication issues with the Active Directory Service Interfaces WinNT provider
 
 This article describes user authentication issues with Active Directory Service Interfaces (ADSI) WinNT provider.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 218497
 
 ## Summary

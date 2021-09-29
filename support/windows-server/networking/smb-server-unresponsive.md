@@ -3,21 +3,21 @@ title: Windows SMB server is unresponsive
 description: Provides recommendations from Escalation Engineering about what to do when a Windows SMB server is unresponsive
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tatec, amanjain
-ms.prod-support-area-path: TCP/IP communications 
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Windows SMB server is unresponsive
 
 This article explains why a Windows Server Message Block (SMB) server becomes unresponsive and how to troubleshoot the problem.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3061415
 
 ## Symptoms

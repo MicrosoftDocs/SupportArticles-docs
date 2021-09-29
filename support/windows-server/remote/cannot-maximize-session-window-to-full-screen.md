@@ -4,20 +4,20 @@ description: Describes an issue where you can't maximize the Remote Desktop Conn
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
-ms.technology: windows-server-rds 
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
+ms.technology: windows-server-rds
 ---
 # You can't maximize a Remote Desktop Connection session window to full-screen when you use the /v parameter
 
 This article provides a solution to an issue where you can't maximize a Remote Desktop Connection session window to full-screen when you use the [Mstsc](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753907(v=ws.10)) `/v` command.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 980876
 
 ## Symptoms

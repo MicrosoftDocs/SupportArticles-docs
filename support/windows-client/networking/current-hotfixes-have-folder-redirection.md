@@ -2,22 +2,22 @@
 title: Current hotfixes have folder redirection
 description: This article lists the hotfixes that are currently available for Windows 7 clients that are used in an Active Directory environment that makes use of data centralization, including folder redirection, offline files, and file server access.
 ms.date: 10/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rnitsch
-ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Current hotfixes for Windows 7 SP1 enterprise clients that have folder redirection enabled
 
 This article lists the hotfixes that are currently available for Windows 7 clients that are used in an Active Directory environment that makes use of data centralization, including folder redirection, offline files, and file server access.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2820927
 
 ## Summary

@@ -4,20 +4,20 @@ description: Describes an issue in which the Windows Time service doesn't automa
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-client-active-directory
 ---
 # Windows Time service doesn't start automatically on a workgroup computer
 
 This article provides workarounds for an issue where the Windows Time service doesn't automatically start in a stand-alone environment.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2385818
 
 ## Symptoms

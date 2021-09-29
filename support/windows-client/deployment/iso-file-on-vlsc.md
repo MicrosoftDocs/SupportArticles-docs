@@ -4,20 +4,20 @@ description: Describes how to download an ISO file from the Microsoft Volume Lic
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Download and burn an ISO file on the volume licensing site (VLSC)
 
 This article describes how to download and burn an ISO file from the Microsoft Volume Licensing Service Center (VLSC).
 
-_Original product version:_ &nbsp; General  
+_Applies to:_ &nbsp; General  
 _Original KB number:_ &nbsp; 2472143
 
 ## Summary

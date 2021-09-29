@@ -3,21 +3,21 @@ title: Cannot select Windows Server 2016 CA-compatible certificate templates fro
 description: Works around an issue in which the certificate template is not available to clients if you set compatibility to Windows Server 2016.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, v-jesits, v-tea, evalan 
-ms.prod-support-area-path: Active Directory Certificate Services
+ms.reviewer: kaushika, v-jesits, v-tea, evalan
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Cannot select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers
 
 This article provides a workaround for the issue Windows Server 2016 CA-compatible certificate templates cannot be selected from Windows Server 2016 or later-based CAs or CEP servers.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4508802
 
 ## Symptoms

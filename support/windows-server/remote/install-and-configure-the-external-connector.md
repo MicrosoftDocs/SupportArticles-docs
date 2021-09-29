@@ -3,21 +3,21 @@ title: How to install and to configure the external connector for a terminal ser
 description: Provides a step-by-step description of how to configure the external connector for a Windows Server terminal server.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
+ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # How to install and configure the external connector for a terminal server or remote desktop server
 
 This article provides a step-by-step description of how to configure the external connector for a Windows Server terminal server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887432
 
 ## Introduction

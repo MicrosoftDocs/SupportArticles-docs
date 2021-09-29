@@ -130,6 +130,10 @@
       href: ./identity/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
       href: ./identity/workplace-join-fail-error-0x80072ee7.md
+    - name: Fail to connect ADFS service
+      href: ./identity/connection-adfs-failed-set-msoladfscontex.md
+    - name: Fail to convert domain to Standard
+      href: ./identity/convert-domain-federated.md
     - name: Restore IIS and clean up Active Directory
       href: ./identity/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
@@ -168,6 +172,8 @@
       href: ./identity/lds-service-startup-fails.md
     - name: Numerous "Event ID 1216" Events
       href: ./identity/event-id-1216-directory-services-event-log.md
+    - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
+      href: ./identity/problems-with-dc-ad-integrated-dns-zones.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
       href: ./identity/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
@@ -194,6 +200,8 @@
       href: ./identity/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
       href: ./identity/active-directory-replication-error-1256.md
+    - name: Active Directory replication error 8304
+      href: ./identity/active-directory-replication-error-8304.md
     - name: Active Directory Replication Error 8451
       href: ./identity/active-directory-replication-error-8451.md
     - name: Active Directory replication Event ID 1388 or 1988
@@ -500,6 +508,8 @@
       href: ./identity/info-devices-configured-rodcs.md
     - name: Let non-administrators view deleted objects container
       href: ./identity/non-administrators-view-deleted-object-container.md
+    - name: Linux accounts can't get AES encrypted tickes in AD DS
+      href: ./identity/linux-accounts-cannot-get-aes-tickets.md
     - name: Modify filtered properties of an object
       href: ./identity/modify-filtered-properties-of-object.md
     - name: Multiple tabs of user properties are missing
@@ -516,6 +526,8 @@
       href: ./identity/password-reset-fails-error.md
     - name: Password-change protocols in Windows
       href: ./identity/password-change-mechanisms.md
+    - name: Poor performance when calling lookup functions
+      href: ./identity/poor-performance-calling-lookup-functions.md
     - name: Redirect users and computers containers
       href: ./identity/redirect-users-computers-containers.md
     - name: Rename an item after replication collision
@@ -535,9 +547,7 @@
     - name: Use Directory Service to manage AD objects
       href: ./identity/directory-service-manage-objects.md
     - name: UserAccountControl property flags
-      href: ./identity/useraccountcontrol-manipulate-account-properties.md
-    - name: Well-known security identifiers in Windows
-      href: ./identity/security-identifiers-in-windows.md
+      href: ./identity/useraccountcontrol-manipulate-account-properties.md    
   - name: Virtualized domain controller (errors and questions)
     items:
     - name: Host AD DCs in virtual hosting environments
@@ -926,6 +936,8 @@
     items:
     - name: '"Stop 0x0000007B" error'
       href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
+    - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
+      href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
     - name: Can't find the Microsoft Loopback Adapter
       href: ./deployment/microsoft-loopback-adapter-rename.md
     - name: Can't install a VMWare driver on Windows Server 2008 R2
@@ -984,7 +996,7 @@
       href: ./deployment/fix-windows-update-errors.md
     - name: How to block user access to Windows Update
       href: ./deployment/block-user-access-windows-update.md
-    - name: How To use the Recovery Consol
+    - name: How to use the Recovery Console
       href: ./deployment/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
@@ -1085,7 +1097,7 @@
     - name: Use Group Policy to configure automatic logon in Terminal Services
       href: ./group-policy/use-group-policy-configure-automatic-logon.md
     - name: Use Group Policy to deploy a Known Issue Rollback
-      href: ../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md
+      href: ../windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback.md?context=/troubleshoot/windows-server/context/context
     - name: Use Group Policy to remotely install softwares
       href: ./group-policy/use-group-policy-to-install-software.md
   - name: Group Policy management - GPMC or AGPM
@@ -1612,6 +1624,8 @@
     items:
     - name: Network Load Balancing concept and notes
       href: ./networking/network-load-balancing-concept-notes.md
+    - name: Configure network infrastructure to support NLB operation mode
+      href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
     items:
     - name: Certificate requirements when you use EAP-TLS
@@ -1635,11 +1649,13 @@
     - name: L2TP VPN fails with error 787
       href: ./networking/l2tp-vpn-fails-with-error-787.md
     - name: LT2P/IPsec RAS VPN connections fail
-      href: ./networking/lt2p-ipsec-ras-vpn-connections-fail.md
+      href: ./networking/rras-vpn-connections-fail-ms-chapv2-authentication.md
     - name: Set Up Routing and Remote Access for an Intranet
       href: ./networking/set-up-routing-remote-access-intranet.md
     - name: The Routing and Remote Access service doesn't start
       href: ./networking/rras-doesnt-start.md
+    - name: Troubleshoot error 720 when establishing a VPN connection
+      href: ./networking/troubleshoot-error-720-when-establishing-a-vpn-connection.md
     - name: Updates for Windows Server 2012 and 2012 R2 DirectAccess
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
   - name: TCP/IP communications
@@ -1710,6 +1726,12 @@
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
       href: ./networking/system-compatibility-with-dnssec-enabled-root-server.md
+    - name: "Part 1: TCP/IP performance overview"
+      href: ./networking/overview-of-tcpip-performance.md
+    - name: "Part 2: TCP/IP performance underlying network issues"
+      href: ./networking/troubleshooting-tcpip-performance-underlying-network.md
+    - name: "Part 3: TCP/IP performance known issues"
+      href: ./networking/tcpip-performance-known-issues.md
     - name: PortQry version 2.0 features and functions
       href: ./networking/portqry-command-line-port-scanner-v2.md
     - name: Portqry.exe command-line utility
@@ -1822,6 +1844,8 @@
       href: ./performance/memory-dump-file-options.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
+    - name: Stop code DRIVER_VERIFIER_DMA_VIOLATION
+      href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
       href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 0x109 on a VMWare virtual machine
@@ -1852,6 +1876,8 @@
     items:
     - name: Black screen on boot
       href: ./performance/black-screen-on-boot.md
+    - name: Can't boot from the second bootable media on UEFI-based computers
+      href: ./performance/cannot-boot-from-second-media-uefi-computers.md
     - name: Can't format or use a disk partition properly
       href: ./performance/cannot-use-disk-partition-power-failure-system-crash.md
     - name: Computer doesn't start after you mark primary partition as active
@@ -1866,6 +1892,8 @@
       href: ./performance/not-boot-in-normal-mode-driver-issue.md
     - name: Registry troubleshooting for advanced users
       href: ./performance/registry-troubleshooting-advanced-users.md
+    - name: Startup failure when Firmware protection is turned on
+      href: ./performance/startup-failure-firmware-protection-turned-on.md
     - name: STOP 0X0000007B error when booting from an alternate iSCSI adapter
       href: ./performance/0x0000007b-stop-error-switch-alternate-iscsi-adapter.md
     - name: Support for booting from SAN
@@ -1942,6 +1970,8 @@
       href: ./performance/slow-performance-file-server.md
   - name: System Hang
     items:
+    - name: Cannot restart a Windows Server computer that uses Credential Guard and Hyper-V
+      href: ./performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md
     - name: Compress large registry hives
       href: ./performance/compress-bloated-registry.md
     - name: Description of Windows registry
@@ -2204,6 +2234,8 @@
       href: ./remote/install-and-configure-the-external-connector.md
     - name: How to move Terminal Services CALs
       href: ./remote/move-terminal-services-client-access-licenses.md
+    - name: License attributes aren't updated
+      href: ./remote/license-attributes-not-updated-rdsh-server.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
     - name: Remove Terminal Server licenses from RDP client
@@ -2234,6 +2266,8 @@
       href: ./remote/client-disconnected-group-policy-updates.md
     - name: Connection Broker can't be mixed
       href: ./remote/connection-broker-cant-be-mixed.md
+    - name: How to disable warning message for idle remote desktop sessions
+      href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
@@ -2384,6 +2418,8 @@
     items:
     - name: Enter-PSSession cmdlet fails
       href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
+    - name: CJK characters are garbled in PowerShell
+      href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
     - name: error code 0x800706BE
@@ -2530,6 +2566,8 @@
       href: ./virtualization/vm-not-reach-vlan-tagging-enabled-network.md
   - name: High availability virtual machines
     items:
+    - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
+      href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
       href: ./virtualization/mac-address-changes-for-virtual-server.md
   - name: Hyper-V Network Virtualization (HNV)
@@ -2600,6 +2638,8 @@
       href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
   - name: Storage configuration
     items:
+    - name: Can't add a second Fibre Channel adapter
+      href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
@@ -2688,6 +2728,8 @@
       href: ./windows-security/http-error-500-internal-server-error.md
     - name: Add SAN to secure LDAP certificate
       href: ./windows-security/add-san-to-secure-ldap-certificate.md
+    - name: Approval required for certificate renewals
+      href: ./windows-security/approval-required-certificate-renewals-autoenrollment.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./windows-security/cannot-publish-certificate-trusted-domain.md
     - name: Can't request certificate from web enrollment pages
@@ -2754,6 +2796,8 @@
       href: ./windows-security/constrained-delegation-access-denied.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
+    - name: How to disable the Subject Alternative Name for UPN mapping
+      href: ./windows-security/disable-subject-alternative-name-upn-mapping.md
     - name: How to force Kerberos to use TCP instead of UDP
       href: ./windows-security/force-kerberos-use-tcp-instead-udp.md
     - name: KDC event  16 or 27 if DES for Kerberos is disabled
@@ -2806,6 +2850,8 @@
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
   - name: Permissions, access control, and auditing
     items:
+    - name: .bak log files are deleted and lost
+      href: ./windows-security/bak-log-files-deleted-lost.md
     - name: Access checks using Windows APIs return incorrect results
       href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory

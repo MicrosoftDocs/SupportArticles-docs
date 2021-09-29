@@ -4,20 +4,20 @@ description: Discusses how to recover from the accidental deletion of users and 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, v-jomcc
-ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
+ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to restore deleted user accounts and their group memberships in Active Directory
 
 This article provides information on how to restore deleted user accounts and group memberships in Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 840001
 
 ## Introduction

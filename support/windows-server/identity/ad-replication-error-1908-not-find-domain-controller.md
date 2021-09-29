@@ -3,21 +3,21 @@ title: AD Replication error 1908
 description: Provides a resolution for troubleshooting AD Replication error 1908, which is Could not find the domain controller for this domain.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain join issues
+ms.custom: sap:domain-join-issues, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 1908: Could not find the domain controller for this domain.
 
 This article provides a resolution for troubleshooting AD Replication error 1908: Could not find the domain controller for this domain.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2712026
 
 >[!NOTE]

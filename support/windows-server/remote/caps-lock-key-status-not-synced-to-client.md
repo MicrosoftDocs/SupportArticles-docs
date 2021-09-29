@@ -4,20 +4,20 @@ description: The Caps Lock key status change that is triggered by an application
 ms.date: 10/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Redirection (not printer)
+ms.custom: sap:redirection-not-printer, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Caps Lock key unexpectedly inverts characters in a remote desktop session to a Windows Server 2012-based computer
 
 This article provides a solution to an issue where the Caps Lock key status change triggered by an application in a remote computer isn't synchronized back to the client computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3120433
 
 ## Symptoms

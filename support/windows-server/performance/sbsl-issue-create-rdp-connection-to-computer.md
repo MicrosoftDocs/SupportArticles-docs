@@ -3,21 +3,21 @@ title: SBSL issue when you create an RDP connection to Windows Server 2012 R2
 description: Describes an issue in which computer freezes when you create an RDP connection to Windows Server 2012 R2.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, pranayav, amanjain, vineelko
-ms.prod-support-area-path: Boot is slow
+ms.custom: sap:boot-is-slow, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Server freezes or user logon is slow when connecting to Windows Server 2012 R2 by using RDP
 
 This article provides a solution to an issue where a computer freezes or user logon is slow when you connect to the computer by using Remote Desktop Protocol (RDP).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4021856
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Fixes an issue where the `SYSVOL` msDFSR-Member container used by D
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Domain Controller rename doesn't rename all AD DFSR SYSVOL objects
 
 This article provides resolutions to fix the issue where the domain controller rename doesn't rename all AD DFSR `SYSVOL` objects.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 2001271
 
 ## Symptoms

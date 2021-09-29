@@ -2,22 +2,22 @@
 title: SSO with pre-logon fails during user logon after a restart
 description: Wireless and Wired 802.1x Authentication may fail on the first logon after a restart if the client system is configured to use a Single Sign On (SSO) profile with pre-logon.
 ms.date: 09/18/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, waynmc, tfairman
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # SSO with pre-logon fails during user logon after a restart
 
 This article provides a solution to an issue that Single Sign On (SSO) profile with pre-logon fails during user logon after a restart.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3063910
 
 ## Symptoms

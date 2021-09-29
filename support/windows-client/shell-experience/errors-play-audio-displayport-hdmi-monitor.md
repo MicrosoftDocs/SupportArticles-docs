@@ -4,20 +4,20 @@ description: Resolves an issue that occurs when you are playing audio whose sour
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
+ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Error message in the Xbox Music app, Windows Media Player, Groove Music, or Movies &TV when you wake a Windows 10-based or Windows 8-based computer
 
 This article provides a solution to an issue where playing audio whose source is a system that uses a DisplayPort or HDMI monitor fails.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1809, Windows 10, version 1803, Windows 10, version 1709  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1809, Windows 10, version 1803, Windows 10, version 1709  
 _Original KB number:_ &nbsp; 2841997
 
 ## Symptoms

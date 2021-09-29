@@ -4,21 +4,21 @@ description: Describes a problem that occurs because Package Manager can't manag
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: tarekr, cochen, kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Package Manager can install only the first package when you extract two or more packages to the same folder in Windows Vista
 
 This article describes a problem that occurs because Package Manager can't manage two or more packages in the same sandbox.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;932224
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 932224
 
 ## Symptoms
 

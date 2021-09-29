@@ -4,20 +4,20 @@ description: Fixes the System Error 126 that occurs when you start the Windows M
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
-ms.technology: windows-client-deployment 
+ms.custom: sap:servicing, csstroubleshoot
+ms.technology: windows-client-deployment
 ---
 # System Error 126 when you start the Windows Modules Installer service (TrustedInstaller): The specific module could not be found
 
 This article helps fix the System Error 126 that occurs when you start the Windows Modules Installer service.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 959077
 
 ## Symptoms

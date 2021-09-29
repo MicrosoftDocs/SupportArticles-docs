@@ -4,19 +4,19 @@ description: Provides a workaround for the issue where an error occurs when you 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: MSI
+ms.custom: sap:msi, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # Error when trying to uninstall an application: Error opening installation log file. Verify that the specified location exists and is writable
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
-_Original KB number:_ &nbsp;2564571
+_Applies to:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 2564571
 
 ## Summary
 

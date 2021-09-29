@@ -4,20 +4,20 @@ description: Describes an issue that changes to the Advanced sharing settings in
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika，ahamad, vipekkan
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # You can't turn on Network Discovery in Network and Sharing Center
 
 This article provides a resolution for the issue that you can't turn on Network Discovery in Network and Sharing Center.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2722035
 
 ## Symptoms

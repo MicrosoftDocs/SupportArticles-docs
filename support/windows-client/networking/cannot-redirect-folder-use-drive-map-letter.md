@@ -4,21 +4,21 @@ description: Fixes an issue in which folder redirection fails to apply when redi
 ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Folder Redirection fails to apply when redirected to mapped drive letter, instead of UNC path
 
 This article fixes an issue in which folder redirection fails to apply when redirected to mapped drive letter instead of UNC path.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2859465
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2859465
 
 ## Symptoms
 

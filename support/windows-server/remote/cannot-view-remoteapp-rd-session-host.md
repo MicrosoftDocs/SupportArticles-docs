@@ -1,23 +1,23 @@
 ---
-title: You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access 
+title: You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 description: Provides a resolution for the issue that you cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.prod-support-area-path: RDWeb
+ms.custom: sap:rdweb, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 
 This article provides a resolution for the issue that you cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 978322
 
 ## Symptoms

@@ -4,13 +4,13 @@ description: Describes the Remote Desktop Connection 6.1 client update and how i
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: ayesham, kaushika
-ms.prod-support-area-path: Connecting to a session or desktop
+ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Description of the Remote Desktop Connection 6.1 client update for Terminal Services
@@ -20,8 +20,8 @@ This article describes the Remote Desktop Connection 6.1 client update and how i
 > [!NOTE]
 > Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;951616  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 951616  
 
 ## Introduction
 

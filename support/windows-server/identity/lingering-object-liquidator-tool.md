@@ -1,24 +1,24 @@
 ---
 title: Description of the Lingering Object Liquidator tool
 description: Describes the Lingering Object Liquidator (LoL) tool for finding and removing lingering objects.
-ms.date: 09/08/2020
+ms.date: 07/13/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Description of the Lingering Object Liquidator tool
 
 This article describes the Lingering Object Liquidator (LoL) tool for finding and removing lingering objects.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3141939
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 3141939
 
 ## Introduction
 
@@ -172,7 +172,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
  **For questions or feedback on the tool:**  
 
-Add a comment to this [blog post](https://aka.ms/LingeringObjectLiquidator), or submit an idea to our [UserVoice](https://windowsserver.uservoice.com/forums/304621-active-directory) Feedback page--ensure you code the idea using the "Lingering Object Liquidator" category.
+Add a comment to this [blog post](https://aka.ms/LingeringObjectLiquidator), or submit an idea to our [UserVoice](https://www.uservoice.com) Feedback page--ensure you code the idea using the "Lingering Object Liquidator" category.
 
 Access the [Troubleshooting Active Directory Lingering Objects](https://support.microsoft.com/help/910205) TechNet Virtual Lab if you would like practice using this tool in a lab environment containing lingering objects.
 

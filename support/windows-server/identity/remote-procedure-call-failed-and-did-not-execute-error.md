@@ -1,23 +1,23 @@
 ---
-title: Remote procedure call failed and did not execute error 
+title: Remote procedure call failed and did not execute error
 description: Troubleshoot error 1727 that occurs during DC replication on Windows Server. Identify the cause and get to the solution.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute
 
 This article solves the error message **"The remote procedure call failed and did not execute"**. This error occurs during domain controller (DC) replication on Windows Server.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2012 R2, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 4019721
 
 ## Symptoms

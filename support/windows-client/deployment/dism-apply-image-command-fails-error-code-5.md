@@ -3,21 +3,21 @@ title: DISM /Apply-Image command fails with error code 5 (ERROR_ACCESS_DENIED)
 description: Works around an issue that causes the DISM apply image command to fail with error code 5 (ERROR_ACCESS_DENIED). Occurs when you try to apply a Windows 10 1607 image by using the Windows Subsystem for Linux (WSL) feature.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # DISM /Apply-Image command fails with error code 5 (ERROR_ACCESS_DENIED)
 
 This article provides a workaround for an issue where `DISM /Apply-Image` command fails with error code 5 (ERROR_ACCESS_DENIED).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3179598
 
 ## Symptoms

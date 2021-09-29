@@ -4,20 +4,20 @@ description: Windows Modern Applications quit immediately with Event ID 5973.
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, xiangwu
-ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
+ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Windows Store apps may not open and Event ID 5973 is logged in the Application log
 
 This article provides a solution to fix Event ID 5973 that's logged when Windows Store apps can't be opened.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 3064045
 
 ## Symptoms

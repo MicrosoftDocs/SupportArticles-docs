@@ -2,22 +2,22 @@
 title: Rebuild the Tokens.dat file
 description: Describes how to rebuild the Tokens.dat file when you troubleshoot Windows activation issues.
 ms.date: 10/16/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # How to rebuild the Tokens.dat file when you troubleshoot Windows activation issues
 
 When you troubleshoot Windows activation issues, you may have to rebuild the Tokens.dat file.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2736303
 
 ## Rebuild the Tokens.dat file
@@ -34,13 +34,10 @@ _Original KB number:_ &nbsp; 2736303
     2. For Windows 10, Windows Server 2016 and later versions of Windows:  
        `cd %windir%\system32\spp\store\2.0`
 
-       For Windows Server 2012 and Windows Server 2012 R2:  
-       `cd %windir%\ServiceProfiles\LocalService\AppData\Local\Microsoft\WSLicense`
-
-       For Windows 8.1:  
+       For Windows 8.1 and Windows Server 2012 R2:  
        `cd %windir%\system32\spp\store\2.0`
 
-       For Windows 8:  
+       For Windows 8 and Windows Server 2012:  
        `cd %windir%\system32\spp\store`
 
        For Windows 7, Windows Server 2008 and Windows Server 2008 R2:  

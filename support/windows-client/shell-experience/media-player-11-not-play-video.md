@@ -4,20 +4,20 @@ description: Describes error messages and other problems that occur in Windows M
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, bchee
-ms.prod-support-area-path: Windows Media Player
+ms.custom: sap:windows-media-player, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # You receive a codec error message, or audio plays but video doesn't play when you play media files in Windows Media Player 11
 
 This article provides a solution to an issue where the video doesn't play when you play it in Windows Media Player 11.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Media Player 11  
 _Original KB number:_ &nbsp; 926373
 
 ## Symptoms

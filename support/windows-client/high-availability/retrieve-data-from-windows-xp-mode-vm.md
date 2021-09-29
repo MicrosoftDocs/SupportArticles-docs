@@ -4,20 +4,20 @@ description: When you upgrade from Windows 7 to Windows 8, Windows XP Mode is in
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Nested Virtualization
+ms.custom: sap:nested-virtualization, csstroubleshoot
 ms.technology: windows-client-high-availability
 ---
 # How to retrieve data from a Windows XP Mode virtual machine on Windows 8 or Windows 10
 
 This article provides methods to retrieve data from a Windows XP Mode virtual machine in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2724115
 
 ## Summary

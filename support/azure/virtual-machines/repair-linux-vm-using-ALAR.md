@@ -43,7 +43,7 @@ For more information about problems that are caused by a bad /etc/fstab file, se
 This script changes the default kernel. The script replaces the broken kernel with the previously installed version.
 
 
-Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
+Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
 
 
 **initrd**
@@ -83,6 +83,13 @@ These steps create a repair task. In the next step, you will use the `initrd` sc
 > You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
    > - ‘fstab’
    > - ‘fstab,initrd’
+
+## Supported Operating Systems
+- CentOS/Redhat 6.8 - 8.2
+- Ubuntu 16.4 LTS and Ubuntu 18.4 LTS
+- Suse 12 and 15"
+- Debain 9 and 10"
+       
 
 ## Limitations
 - Encrypted images aren't supported.

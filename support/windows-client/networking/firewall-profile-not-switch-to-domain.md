@@ -4,20 +4,20 @@ description: Fixes an issue in which Windows Firewall profile doesn't switch to 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: winciccore, heigen, kaushika
-ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
+ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Windows Firewall profile doesn't always switch to Domain when you use a third-party VPN client
 
 This article addresses an issue in which Windows Firewall profile doesn't switch from Public or Private to Domain when you connect to domain network by using a third-party VPN client.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4550028
 
 ## Symptoms

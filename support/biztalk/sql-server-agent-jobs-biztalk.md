@@ -36,7 +36,7 @@ The following table lists the BizTalk SQL Agent jobs.
 
 ## References
 
-For a list of the SQL Server Agent jobs and their descriptions on BizTalk Server, see [Database Structure and Jobs](https://docs.microsoft.com/biztalk/core/database-structure-and-jobs).
+For a list of the SQL Server Agent jobs and their descriptions on BizTalk Server, see [Database Structure and Jobs](/biztalk/core/database-structure-and-jobs).
 
 > [!NOTE]
 > The BizTalk SQL Agent jobs must be owned by a user who has a System Administrator server role on SQL Server.

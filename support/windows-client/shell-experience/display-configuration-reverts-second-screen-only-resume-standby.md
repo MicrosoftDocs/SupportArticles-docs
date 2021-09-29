@@ -1,23 +1,23 @@
 ---
-title: Display configuration reverts to 
+title: Display configuration reverts to
 description: Describes an issue in which Windows defaults to a different display configuration than expected when you plug an external monitor into a laptop. Provides a workaround.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, philipd, kimnich
-ms.prod-support-area-path: DPI and Display Issues
+ms.custom: sap:dpi-and-display-issues, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Display configuration reverts to "Second screen only" after you resume from standby
 
 This article provides a workaround to an issue in which display configuration reverts to "Second screen only" after you resume from standby.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2890797
 
 ## Symptoms

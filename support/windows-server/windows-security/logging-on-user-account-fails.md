@@ -4,20 +4,20 @@ description: Describes a problem when a user who is a member of more than 1,010 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Kerberos authentication
-ms.technology: windows-server-security 
+ms.custom: sap:kerberos-authentication, csstroubleshoot
+ms.technology: windows-server-security
 ---
 # Logging on a user account that is a member of more than 1,010 groups may fail on a Windows Server-based computer
 
 This article solves an issue where logging on a user account that's a member of more than 1,010 groups fails.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 328889
 
 ## Symptoms

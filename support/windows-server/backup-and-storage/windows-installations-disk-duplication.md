@@ -4,20 +4,20 @@ description: Describes the SID and supported methods for cloning or duplicating 
 ms.date: 10/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: Deduplication
+ms.custom: sap:deduplication, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # The Microsoft policy for disk duplication of Windows installations
 
 This article describes the SID and supported methods for cloning or duplicating a Windows installation.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 314828
 
 ## Summary

@@ -4,21 +4,21 @@ description: Describes how to change the default permissions on Group Policy obj
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sashalon
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to change the default permissions on GPOs in Windows Server
 
 This article discusses how to change the default permissions on Group Policy objects (GPOs).
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;321476
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 321476
 
 ## Summary
 

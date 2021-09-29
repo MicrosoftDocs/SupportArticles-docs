@@ -3,21 +3,21 @@ title: How to extend stand-alone tiered storage spaces
 description: Shows how to extend stand-alone tiered storage spaces
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-mafect
-ms.prod-support-area-path: Storage Spaces
+ms.custom: sap:storage-spaces, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # How to extend stand-alone tiered storage spaces
 
 This article shows how to extend stand-alone tiered storage spaces.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4562879
 
 The following article explains how to expand tiered storage spaces on a stand-alone server. Here's an example of a tiered space created with a 12.1 TB size in Windows Server 2016.  

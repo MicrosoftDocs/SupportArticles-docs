@@ -4,20 +4,20 @@ description: DNSSEC was recently enabled on root servers on the Internet between
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BBenson
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Windows client and server operating system compatibility with DNSSEC enabled root servers
 
 This article describes the impact and compatibility story with DNSSEC enabled root servers for Windows client and server operating systems as well computers hosting the DNS Server role.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028240
 
 ## Summary

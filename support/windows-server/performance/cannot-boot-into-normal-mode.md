@@ -4,21 +4,21 @@ description: Fixes an issue in which machines can't boot into the normal mode an
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: No Boot (not BugChecks)
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Unable to boot into normal mode, machine keeps booting into safe mode
 
 This article provides steps to fix an issue in which machines can't boot into the normal mode and keep on restarting into the safe mode.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2543632
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2543632
 
 ## Symptoms
 

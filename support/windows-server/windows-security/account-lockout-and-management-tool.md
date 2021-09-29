@@ -3,21 +3,21 @@ title: Introduction to Account Lockout and Management Tools
 description: Introduces Account Lockout and Management Tools for Windows Server.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Account lockouts
+ms.custom: sap:account-lockouts, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Introduction to Account Lockout and Management Tools
 
 This article introduces [Account Lockout and Management Tools](https://www.microsoft.com/download/details.aspx?id=18465) for Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469275
 
 ## Summary

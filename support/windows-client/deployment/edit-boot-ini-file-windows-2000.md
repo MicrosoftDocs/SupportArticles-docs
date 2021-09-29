@@ -4,13 +4,13 @@ description: Describes steps to edit the Boot.ini file in a Windows 2000 environ
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: cbutch, kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to edit the Boot.ini file in Windows 2000
@@ -20,8 +20,8 @@ This article describes the steps to edit the Boot.ini file in a Windows 2000 env
 > [!NOTE]
 > This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
-_Original product version:_ &nbsp;Windows 2000  
-_Original KB number:_ &nbsp;311578
+_Applies to:_ &nbsp; Windows 2000  
+_Original KB number:_ &nbsp; 311578
 
 ## Summary
 

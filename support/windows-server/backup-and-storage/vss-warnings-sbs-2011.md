@@ -4,20 +4,20 @@ description: Works around an issue where you get VSS warnings in the Application
 ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # You may get VSS warnings in the Application Event log of SBS 2011 Standard
 
 This article provides a workaround for an issue where you get VSS warnings in the Application Event log of Microsoft Windows Small Business Server 2011 Standard.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2537096
 
 ## Symptoms

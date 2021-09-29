@@ -3,21 +3,21 @@ title: How to Use the Windiff.exe Utility
 description: Describes how to use the Windiff.exe utility, a tool that graphically compares the contents of two ASCII files, or the contents of two folders that contain ASCII files, to verify whether they are the same. The file byte count and the creation date are not reliable indications.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: File Explorer/Windows Explorer
+ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # How to use the Windiff.exe Utility
 
 This article describes how to use the Windiff.exe utility, a tool that graphically compares the contents of two ASCII files, or the contents of two folders that contain ASCII files, to verify whether they are the same. The file byte count and the creation date are not reliable indications.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 159214
 
 ## Summary

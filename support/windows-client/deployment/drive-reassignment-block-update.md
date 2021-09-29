@@ -4,20 +4,20 @@ description: Works around a problem in which Windows Update is blocked for Windo
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
-ms.technology: windows-client-deployment 
+ms.custom: sap:servicing, csstroubleshoot
+ms.technology: windows-client-deployment
 ---
 # Error on a computer that has a USB device or SD card attached: This PC can't be upgraded to Windows 10
 
 This article helps fix an error that occurs on a computer that has a USB device or SD card attached when you try to upgrade to the May 2019 Feature Update for Windows 10 (Windows 10, version 1903).
 
-_Original product version:_ &nbsp; Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4500988
 
 ## Symptoms

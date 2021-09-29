@@ -4,20 +4,20 @@ description: Fixes an issue in which UPX is displayed in the UI on managed Windo
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ningzhan, delhan, christys
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Upgrade and Privacy Experience (UPX) is displayed in the UI on managed Windows 10 device
 
 This article provides a workaround for an issue in which UPX is displayed in the user interface (UI) on a managed Windows 10 device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4016551
 
 > [!NOTE]

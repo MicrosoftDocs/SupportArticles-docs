@@ -3,21 +3,21 @@ title: How to raise Active Directory domain and forest functional levels
 description: Describes how to raise Active Directory domain and forest functional levels.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to raise Active Directory domain and forest functional levels
 
 This article describes how to raise Active Directory domain and forest functional levels.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 322692
 
 ## Summary

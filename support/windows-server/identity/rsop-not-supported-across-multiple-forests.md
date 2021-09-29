@@ -4,20 +4,20 @@ description: Discusses a limitation to RSoP planning mode in a multiple-forest s
 ms.date: 02/16/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Resultant Set of Policy (RSoP) planning mode is not supported in a cross-forest scenario
 
 This article describes limitations to the resultant set of policy (RSoP) planning mode when you try to use it across multiple forests.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 910206
 
 ## Symptoms

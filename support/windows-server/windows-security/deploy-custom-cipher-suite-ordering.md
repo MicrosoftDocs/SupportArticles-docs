@@ -4,20 +4,20 @@ description: Describes how to deploy custom cipher suite ordering in Windows Ser
 ms.date: 12/03/2020
 uthor: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Secure channel issues
+ms.custom: sap:secure-channel-issues, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to deploy custom cipher suite ordering in Windows Server 2016
 
 This article provides information to help you deploy custom cipher suite ordering for Schannel in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4032720
 
 ## Summary

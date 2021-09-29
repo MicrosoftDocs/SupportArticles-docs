@@ -4,20 +4,20 @@ description: Address an issue in which the second monitor connected to a docking
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DPI and Display Issues
+ms.custom: sap:dpi-and-display-issues, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Docking station external monitors not working when a Windows 10 version 1703-based portable computer is connected
 
 This article provides a workaround for an issue where an external monitor connected to a docking station doesn't work when a Windows 10 version 1703-based portable computer is connected.
 
-_Original product version:_ &nbsp; Windows 10  
+_Applies to:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 4051625
 
 ## Symptoms

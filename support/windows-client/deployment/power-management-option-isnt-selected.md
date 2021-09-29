@@ -2,22 +2,22 @@
 title: Power management option isn't selected
 description: Provides a solution to an issue that the **Allow the computer to turn off this device to save power** option doesn't remain selected after you restart the computer.
 ms.date: 10/15/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Power Management
+ms.custom: sap:power-management, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # The Allow the computer to turn off this device to save power option doesn't remain selected after you restart Windows Vista
 
 This article provides a solution to an issue that the **Allow the computer to turn off this device to save power** option doesn't remain selected after you restart the computer.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 930312
 
 ## Symptoms

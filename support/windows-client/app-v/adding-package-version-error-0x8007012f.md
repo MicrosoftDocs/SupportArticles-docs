@@ -4,20 +4,20 @@ description: This article describes the steps to take if error 0x8007012F is ret
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, pfreitas
-ms.prod-support-area-path:
+ms.custom: sap:package-conversion, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # Adding a package version in Microsoft Application Virtualization returns error 0x8007012F
 
 This article provides help to work around an issue where you receive error 0x8007012F when you remove and then add the same package version in the Microsoft Application Virtualization console.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2780304
 
 ## Symptoms

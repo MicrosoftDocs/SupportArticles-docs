@@ -4,20 +4,20 @@ description: Clustered Fileshare resource fails on one or more node(s) of a fail
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Cluster fileshare resource fails on a failover cluster node and the cluster log contains "status 5. Tolerating..."
 
 This article provides a solution to an issue where cluster fileshare resource fails on a failover cluster node.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2867302
 
 ## Symptoms

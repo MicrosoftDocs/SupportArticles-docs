@@ -4,21 +4,21 @@ description: Some networking improvements that were first released in the Window
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: whall, kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # How to troubleshoot advanced network performance features such as RSS and NetDMA
 
 This article troubleshoots some networking improvements that were first released in the Windows Server 2003 Scalable Networking Pack. Because they may cause slow or intermittent network performance if the network drivers that are being used are old or don't support the new features.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2643970
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2643970
 
 ## Summary
 

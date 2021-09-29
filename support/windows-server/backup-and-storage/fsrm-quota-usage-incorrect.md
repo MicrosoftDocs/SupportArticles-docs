@@ -4,20 +4,20 @@ description: Resolves an issue in which the FSRM quota usage is incorrect when y
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, daised
-ms.prod-support-area-path: File Server Resource Manager (FSRM)
+ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # The FSRM quota usage is incorrect when you change the size of the page file in Windows
 
 This article provides a workaround for an issue where the File Server Resource Manager (FSRM) quota usage is incorrect.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3034439
 
 ## Symptoms

@@ -91,3 +91,21 @@ To enable Boot diagnostics on an existing virtual machine, follow these steps:
 ### Enable boot diagnostics using the Azure CLI
 
 You can use the Azure CLI to enable boot diagnostics on an existing Azure virtual machine. For more information, see [az vm boot-diagnostics](/cli/azure/vm/boot-diagnostics).
+
+### Fix boot diagnostics screenshot not refreshing
+
+If you notice the Boot Diagnostics screenshot for your Azure VM is stale in the Azure portal, first make sure the virtual display timeout is disabled in the guest operating system. For example, you may see the time shown on the logon screen is stale for a Windows VM.
+
+#### For Windows, run the following command from elevated CMD:
+
+```console
+powercfg /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
+```
+
+#### For Linux, run the following command:
+
+```console
+xset s off
+```
+
+For Windows VMs, the Azure provisioning agent is different than the VM agent, and it is the provisioning agent that runs the above command during provisioning for VMs created from a generalized image. You can see the evidence of that if you search for powercfg in C:\Windows\Panther\WaSetup.xml, which is the provisioning agent log. But since the provisioning agent does not need to run for VMs created from a specialized VHD, that is a scenario where you would need to run the powercfg command manually to disable the virtual display timeout. Also, it is possible to have a particularly old Azure VM created from generalized image that may not have it set because it was created before the provisioning agent was updated to disable the virtual display timeout.

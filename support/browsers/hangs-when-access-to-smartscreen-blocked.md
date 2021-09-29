@@ -7,6 +7,8 @@ ms.reviewer: sansom
 ---
 # Internet Explorer may stop responding when access to the SmartScreen Filter Service is blocked
 
+[!INCLUDE [](../includes/browsers-important.md)]
+
 This article provides solutions to solve the problem that Internet Explorer is not responding when the SmartScreen filtering service is disabled.
 
 _Original product version:_ &nbsp; Internet Explorer 9  

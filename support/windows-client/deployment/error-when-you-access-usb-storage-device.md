@@ -2,22 +2,22 @@
 title: Error when you access a USB storage device
 description: Provides a solution to an error that occurs when you access a USB storage device after resuming from suspend.
 ms.date: 09/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Error message when you access a USB storage device after resuming from suspend
 
 This article provides a solution to an error that occurs when you access a USB storage device after resuming from suspend.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 323754
 
 ## Symptoms

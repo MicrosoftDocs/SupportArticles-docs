@@ -1,23 +1,23 @@
 ---
-title: Recommended hotfixes and updates for Windows Server 2012 
+title: Recommended hotfixes and updates for Windows Server 2012
 description: Lists the recommended hotfixes and updates for Windows Server 2012 DirectAccess and Windows Server 2012 R2 DirectAccess.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
 # Recommended hotfixes and updates for Windows Server 2012 DirectAccess and Windows Server 2012 R2 DirectAccess
 
 This article documents recommended hotfixes and product updates that are currently available for Windows Server 2012-based and Windows Server 2012 R2-based DirectAccess deployments. It also includes some known issues for Windows Server 2012 and Windows 2012 R2 DirectAccess that don't require a hotfix to resolve.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10  
 _Original KB number:_ &nbsp; 2883952
 
 ## Summary

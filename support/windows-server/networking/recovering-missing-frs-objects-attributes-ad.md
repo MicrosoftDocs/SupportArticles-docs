@@ -3,21 +3,21 @@ title: Recovering missing FRS objects
 description: Provides some information about recovering missing FRS objects and FRS attributes in Active Directory.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: FRS
+ms.custom: sap:frs, csstroubleshoot
 ms.technology: networking
 ---
 # Recovering missing FRS objects and FRS attributes in Active Directory
 
 This article provides some information about recovering missing FRS objects and FRS attributes in Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312862
 
 ## Summary

@@ -4,20 +4,20 @@ description: Describes problem when PXE clients do not start when you use Dynami
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
+ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
 ms.technology: networking
 ---
 # PXE clients computers do not start when you configure the Dynamic Host Configuration Protocol server to use options 60, 66, 67
 
 This article helps fix an issue where Pre-Boot Execution Environment (PXE) clients computers don't start when you configure the Dynamic Host Configuration Protocol server to use options 60, 66, 67.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 259670
 
 ## Symptoms

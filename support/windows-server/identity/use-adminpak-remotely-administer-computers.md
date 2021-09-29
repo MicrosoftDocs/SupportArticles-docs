@@ -4,20 +4,20 @@ description: Discusses how to remotely administer computers that are running Win
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to use the Administration Tools Pack to remotely administer computers that are running Windows Server 2003, Windows XP, or Windows 2000
 
 This article describes how to remotely administer computers by using the Administration Tools Pack.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 304718
 
 ## Summary

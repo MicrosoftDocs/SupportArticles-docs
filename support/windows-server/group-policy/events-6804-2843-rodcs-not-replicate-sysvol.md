@@ -4,20 +4,20 @@ description: Discusses an issue in which Events 6804 and 2843 are logged and ROD
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Events 6804 and 2843 are logged and RODCs do not replicate SYSVOL
 
 This article provides a solution to an issue where events 6804 and 2843 are logged when read-only domain controllers (RODC) don't replicate inbound the system volume (SYSVOL) shared directory.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3212965
 
 ## Symptoms

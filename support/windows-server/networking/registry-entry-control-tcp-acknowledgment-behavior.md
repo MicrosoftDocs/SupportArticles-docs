@@ -4,20 +4,20 @@ description: Introduces the TcpAckFrequency, a new registry entry that determine
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: mkoduri, kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # New registry entry for controlling the TCP Acknowledgment (ACK) behavior in Windows
 
 This article introduces the TcpAckFrequency, a new registry entry that determines the number of TCP acknowledgments (ACKs).
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 328890
 
 ## Summary

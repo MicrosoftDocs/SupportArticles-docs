@@ -4,20 +4,20 @@ description: Describes how attributes that contain a date/time value can be conv
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
-ms.technology: windows-server-active-directory 
+ms.custom: sap:windows-time-service, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # How to convert date/time attributes in Active Directory to standard time format
 
 This article describes how attributes that contain a date/time value can be converted to standard meaningful date/time formats.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 555936
 
 ## Summary

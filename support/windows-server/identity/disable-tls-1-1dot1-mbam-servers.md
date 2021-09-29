@@ -4,20 +4,20 @@ description: Describes steps to disable TLS 1.0 and 1.1 on Microsoft BitLocker A
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Transport Layer Security (TLS)
+ms.custom: sap:transport-layer-security-tls, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Steps to disable TLS 1.0 and 1.1 on MBAM servers and force the use of TLS 1.2
 
 This article describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the Microsoft BitLocker Administration and Monitoring (MBAM) servers and force the use of TLS 1.2.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4558055
 
 ## Symptoms

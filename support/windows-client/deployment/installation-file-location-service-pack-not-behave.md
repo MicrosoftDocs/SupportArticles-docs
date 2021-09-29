@@ -3,21 +3,21 @@ title: Installation File Location not behaves
 description: Describes how to edit the registry to specify the location of the Installation files and the location of the Service Pack Installation files.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client 
+ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # The Specify Windows Installation File Location and the Specify Windows Service Pack Installation File Location Group Policy objects do not behave as described on the Explain tab
 
 This article describes how to edit the registry to specify the location of the Windows Installation files and the location of the Windows Service Pack Installation files.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 833615
 
 > [!NOTE]

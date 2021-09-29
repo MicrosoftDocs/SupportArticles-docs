@@ -117,8 +117,6 @@
       href: admin/revocery-jobs-fail-servers.md
     - name: Back up a database using a VSS backup application
       href: admin/backup-database-using-vss-backup-application.md
-    - name: Troubleshooting Backup and Restore
-      href: admin/backup-restore-operations.md
     - name: Backup operation in the backupset history table
       href: admin/backup-operation-backup-history-table.md
     - name: Compressed backups behavior
@@ -191,6 +189,8 @@
       href: admin/database-mail-fails-send-message.md
     - name: Transaction log file doesn't grow
       href: admin/transaction-log-file-not-grow.md
+    - name: Troubleshoot backup and restore operation issues
+      href: admin/backup-restore-operations.md
     - name: Troubleshoot DBCC errors
       href: admin/troubleshoot-dbcc-errors.md
     - name: Unable to begin a distributed transaction
@@ -425,6 +425,8 @@
       href: replication/oracle-publication-triggers-sends-data.md
     - name: Performance statistics for Log Reader and Distribution Agents
       href: replication/performance-statistics-log-reader-distribution-agents.md
+    - name: Pull subscriptions do not show up in Windows Synchronization Manager
+      href: replication/subscriptions-do-not-show-up-windows-sync-manager.md
     - name: Replication agents can't run
       href: replication/sql-replication-agents-not-run.md
     - name: Script failed error when creating merge publication snapshot
@@ -639,6 +641,10 @@
       href: tools/error-you-run-sqlmaint-utility.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
-    - name: Using SQLIOSim utility to simulate SQL Server disk activity
+    - name: Use SQLIOSim utility to simulate SQL Server disk activity
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem.md
+    - name: Use SQLIOSim utility on Linux
+      href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
+    - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
+      href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
 

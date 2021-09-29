@@ -4,20 +4,20 @@ description: Describes an issue that causes S4U Kerberos authentication to fail 
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ntuttle
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # A TGS request for the krbtgt account fails with KDC_ERR_POLICY and an extended status of STATUS_AUTHENTICATION_FIREWALL_FAILED (0xC0000413)
 
 This article provides help to fix an issue that causes S4U Kerberos authentication to fail for a user in a trusted forest.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2959395
 
 ## Symptoms

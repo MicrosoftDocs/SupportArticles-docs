@@ -4,20 +4,20 @@ description: Describes how to move the client-side caching (CSC) folder to a new
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Move the client-side caching (CSC) folder to a new location in Windows
 
 This article describes how to move the CSC folder in Windows. It also describes how to delete the old cache folder after you move the CSC cache folder to a new location.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1709, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 942960
 
 > [!IMPORTANT]

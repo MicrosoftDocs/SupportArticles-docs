@@ -4,20 +4,20 @@ description: This article describes the changes that have been made to RCM in Wi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Changes to Remote Connection Manager in Windows Server 2016
 
 This article describes Remote Connection Manager (RCM) and the changes to RCM in Microsoft Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 3200967
 
 ## Changes to RCM

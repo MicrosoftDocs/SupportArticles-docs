@@ -1,23 +1,23 @@
 ---
 title: How to enable Windows Remote Shell
-description: Helps you enable Windows Remote Shell.  
+description: Helps you enable Windows Remote Shell.
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # How to enable Windows Remote Shell
 
 This article helps you enable Windows Remote Shell.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555966
 
 This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-us/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.

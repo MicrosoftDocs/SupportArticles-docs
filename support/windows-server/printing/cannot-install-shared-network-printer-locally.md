@@ -4,20 +4,20 @@ description: Describes an issue in which you can't install a shared network prin
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: yongrhee, v-jomcc, kaushika
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Error message when you try to install a shared network printer
 
 This article describes an issue where you can't install a shared network printer locally on a Windows Server or Windows-based computer.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888046
 
 ## Symptoms

@@ -4,21 +4,21 @@ description: Address an issue in which DNS zone transfer options are reset after
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, kardiva, davusa, gopkr, ajayps
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # DNS zone transfer options are reset after you change zone replication scope in Windows Server 2008 R2
 
 This article provides help to solve an issue where DNS zone transfer options are reset after you change the zone replication scope.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;4050194
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 4050194
 
 ## Symptoms
 

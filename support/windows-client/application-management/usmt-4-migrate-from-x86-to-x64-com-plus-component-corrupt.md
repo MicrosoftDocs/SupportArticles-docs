@@ -4,21 +4,21 @@ description: Solves an issue where COM+ component settings will be corrupt when 
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: sgoad, nedpyle, tjung, kaushika
-ms.prod-support-area-path: COM and COM+ performance and stability
+ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
 
 This article helps solve an issue where COM+ component settings will be corrupt when you migrate from an x86 platform to an x64 platform.
 
-_Original product version:_ &nbsp;Windows 10 – all editions  
-_Original KB number:_ &nbsp;2481190
+_Applies to:_ &nbsp; Windows 10 – all editions  
+_Original KB number:_ &nbsp; 2481190
 
 ## Symptoms
 

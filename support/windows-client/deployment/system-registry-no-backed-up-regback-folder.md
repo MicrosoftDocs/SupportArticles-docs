@@ -4,20 +4,20 @@ description: Starting in Windows 10, version 1803, Windows no longer automatical
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803
 
 This article discusses a by-design behavior where Windows no longer automatically backs up the system registry to the RegBack folder starting in Windows 10, version 1803.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4509719
 
 ## Summary

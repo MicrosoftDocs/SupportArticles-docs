@@ -4,20 +4,20 @@ description: Provides a solution to an issue where a COM+ application stops work
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM and COM+ performance and stability
+ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # A COM+ application may stop working in Windows when a user logs off
 
 This article provides a solution to an issue where a COM+ application stops working in Windows when a user logs off.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2287297
 
 ## Symptoms

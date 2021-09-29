@@ -3,21 +3,21 @@ title: Description of the Windows Server Update Services 3.0 Service Pack 1 pack
 description: Describes the Windows Server Update Services 3.0 Service Pack 1 package.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, edwardr, danalb, mandarg, oscarlee, davidhen, sudheer, sivsha, bmoore, cecils
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Description of the Windows Server Update Services 3.0 Service Pack 1 package
 
 This article provides some information about Windows Server Update Services 3.0 Service Pack 1 package.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 948014
 
 ## Introduction

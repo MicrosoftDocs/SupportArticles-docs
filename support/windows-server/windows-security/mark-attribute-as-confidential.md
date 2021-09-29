@@ -4,20 +4,20 @@ description: Describes how to use the confidential attributes feature in Windows
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Mark an attribute as confidential in Windows Server 2003 Service Pack 1
 
 This article describes how to mark an attribute as confidential in Windows Server 2003 Service Pack 1.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 922836
 
 ## Summary
@@ -281,4 +281,4 @@ The attributeSyntax attribute is also required to add new objects to the schema.
 For more information about the attributeSyntax attribute, visit the following Microsoft Web site:  
 [Attribute-Syntax attribute](https://msdn.microsoft.com/library/ms675236%28vs.85%29.aspx)
 
-See the [Search-Flags attribute](https://docs.microsoft.com/windows/win32/adschema/a-searchflags) for more information.
+See the [Search-Flags attribute](/windows/win32/adschema/a-searchflags) for more information.

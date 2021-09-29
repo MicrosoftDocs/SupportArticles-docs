@@ -4,18 +4,18 @@ description: Fixes an issue in which API calls of performance counters are delay
 ms.date: 10/29/2020
 author: v-lianna
 ms.author: v-lianna
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roumaago
-ms.prod-support-area-path: Container
+ms.custom: sap:container, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Application Programming Interface (API) call of performance counters is delayed inside a container
 
-_Original product version:_ &nbsp; Windows Server Containers, Windows Server, version 1709, Windows Server, version 1803, Windows Server, version 1809, Windows Server, version 1903, Windows Server, version 1909, Windows Server, version 2004
+_Applies to:_ &nbsp; Windows Server Containers, Windows Server, version 1709, Windows Server, version 1803, Windows Server, version 1809, Windows Server, version 1903, Windows Server, version 1909, Windows Server, version 2004
 
 ## Symptoms
 

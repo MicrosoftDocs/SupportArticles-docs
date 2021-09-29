@@ -4,13 +4,13 @@ description: Describes an issue in which you receive error 0x8007000D when you r
 ms.date: 03/11/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: herbertm
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Error 0x8007000D when running the Backup-GPO PowerShell CmdLet in Windows Server Core edition
@@ -56,4 +56,4 @@ Here are three workarounds:
 
 ## Reference
 
-For more information on wbadmin syntax, see [wbadmin start systemstatebackup](https://docs.microsoft.com/windows-server/administration/windows-commands/wbadmin-start-systemstatebackup).
+For more information on wbadmin syntax, see [wbadmin start systemstatebackup](/windows-server/administration/windows-commands/wbadmin-start-systemstatebackup).

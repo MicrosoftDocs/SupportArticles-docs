@@ -2,22 +2,22 @@
 title: Issue when you access files with FILE_FLAG_RANDOM_ACCESS
 description: Provides a solution to an issue that operating system performance may degrade when one or more processes access multiple large files using the CreateFile() API and the FILE_FLAG_RANDOM_ACCESS flag.
 ms.date: 09/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
-ms.prod-support-area-path: COM and DCOM programming
+ms.custom: sap:com-and-dcom-programming, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # Performance degrades when you access large files with FILE_FLAG_RANDOM_ACCESS
 
 This article provides a solution to an issue that operating system performance may degrade when one or more processes access multiple large files using the `CreateFile()` API and the `FILE_FLAG_RANDOM_ACCESS` flag.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2549369
 
 ## Symptoms

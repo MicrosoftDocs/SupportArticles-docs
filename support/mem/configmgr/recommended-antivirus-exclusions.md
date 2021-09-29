@@ -1,7 +1,7 @@
 ---
 title: Recommended antivirus exclusions for Configuration Manager
 description: Lists the recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients.
-ms.date: 01/12/2021
+ms.date: 06/21/2021
 ms.prod-support-area-path:
 ms.reviewer: jarrettr, jrosse, keiththo
 ---
@@ -54,6 +54,10 @@ We recommend that you add the following real-time protection exclusions to preve
 - *ConfigMgr installation folder*\Inboxes
 - *ConfigMgr installation folder*\Logs
 - *ConfigMgr installation folder*\EasySetupPayload
+- *ContentLib_drive*\SCCMContentLib
+
+  > [!NOTE]
+  > If you have a remote content library, this folder isn't on the site server. For more information, see [Configure a remote content library for the site server](/mem/configmgr/core/plan-design/hierarchy/the-content-library#bkmk_remote).
 
 ### Folder exclusions for site systems
 
@@ -104,10 +108,14 @@ Process exclusions are necessary only if aggressive antivirus programs consider 
 - *Client installation folder*\RemCtrl\CmRcService.exe (client-side)
 - *ConfigMgr installation folder*\bin\x64\Sitecomp.exe
 - *ConfigMgr installation folder*\bin\x64\Smswriter.exe
-- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\ Smssqlbkup.exe
+- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\Smssqlbkup.exe
 - *ConfigMgr installation folder*\bin\x64\Cmupdate.exe
 - *Client installation folder*\Ccmrepair.exe (client-side)
 - *%windir%*\CCMSetup\Ccmsetup.exe (client-side)
+- *%windir%*\CCMSetup\autoupgrade\Ccmsetup*.exe (client-side)
+
+   > [!NOTE]
+   > Starting in Configuration Manager current branch version 1910, this file name has been changed to *Ccmsetup.\<Packageid>.\<PackageVersion>.exe*.
 
 ## References
 

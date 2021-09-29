@@ -4,20 +4,20 @@ description: Describes an error message that you receive when you try to use Vmc
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # "A connection will not be made because credentials may not be sent to the remote computer" when I use the Virtual Machine Connection tool to connect to a virtual machine on a Windows Server 2008 Hyper-V-based computer
 
 This article provides help to fix an error that you receive when you try to use `Vmconnect.exe` to connect to a virtual machine.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954357
 
 ## Error message description

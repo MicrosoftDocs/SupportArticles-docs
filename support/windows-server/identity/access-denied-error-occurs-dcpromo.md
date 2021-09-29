@@ -2,22 +2,22 @@
 title: Access is denied error occurs with DCPROMO
 description: Provides a solution to an Access is denied error that occurs with DCPROMO.
 ms.date: 10/12/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # DCPROMO fails with error "Access is denied" if the user does the promotion isn't granted the "trusted for delegation" user right
 
 This article provides a solution to an Access is denied error that occurs with DCPROMO (Domain Controller Promoter).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2002413
 
 ## Symptoms
@@ -88,5 +88,5 @@ The user account used to execute DCPROMO hasn't been granted the "Enable compute
 
     | **DCPROMO.LOG**| **DCPROMOUI.LOG** |
     |---|---|
-    |[INFO] Uninstalling the Directory Service<br/>[INFO] Invoking NtdsDemote<br/>...<br/>[INFO] Removing Active Directory Domain Services objects that refer to the local Active Directory Domain Controller from the remote Active Directory Domain Controller \<DNS domain>...<br/>[INFO] Error - Active Directory Domain Services couldn't configure the computer account \<dc being demoted>$ on the remote Active Directory Domain Controller <helper DC>.<DNS domain>. (5)<br/>[INFO] NtdsDemote returned 5<br/>[INFO] DsRolepDemoteDs returned 5<br/>[ERROR] Failed to demote the directory service (5)<br/>....| ....<br/>OperationStatus: 0x5 !0 => error<br/>DisplayString: Active Directory Domain Services couldn't configure the computer account \<dc name>$ on the remote Active Directory Domain Controller \<helper DC>.\<dns domain>.<br/>ServerInstalledSite: (null)<br/>OperationResultsFlags: 0x0<br/>Enter ProgressDialog::UpdateText Active Directory Domain Services couldn't configure the computer account \<dc name>$ on the remote Active Directory Domain Controller VM1-W7.a.com.<br/>Enter State::SetOperationResultsMessage Active Directory Domain Services couldn't configure the computer account \<dc name>$ on the remote Active Directory Domain Controller \<helper DC>.\<DNS domain>.<br/>Enter State::SetOperationResultsFlags 0x0<br/>...<br/>credentials were invalid, hr=0x80070005<br/>Enter GetErrorMessage 80070005<br/>Enter State::GetOperationResultsMessage Active Directory Domain Services couldn't configure the computer account \<dc name>$ on the remote Active Directory Domain Controller \<helper DC>.\<DNS domain>.<br/>Enter State::GetOperation DEMOTE<br/>Enter State::GetParentDomainDnsName|
+    |[INFO] Uninstalling the Directory Service<br/>[INFO] Invoking NtdsDemote<br/>...<br/>[INFO] Removing Active Directory Domain Services objects that refer to the local Active Directory Domain Controller from the remote Active Directory Domain Controller \<DNS domain\>...<br/>[INFO] Error - Active Directory Domain Services couldn't configure the computer account \<dc being demoted\>$ on the remote Active Directory Domain Controller \<helper DC\>.\<DNS domain\>. (5)<br/>[INFO] NtdsDemote returned 5<br/>[INFO] DsRolepDemoteDs returned 5<br/>[ERROR] Failed to demote the directory service (5)<br/>....| ....<br/>OperationStatus: 0x5 !0 => error<br/>DisplayString: Active Directory Domain Services couldn't configure the computer account \<dc name>$ on the remote Active Directory Domain Controller \<helper DC\>.\<dns domain\>.<br/>ServerInstalledSite: (null)<br/>OperationResultsFlags: 0x0<br/>Enter ProgressDialog::UpdateText Active Directory Domain Services couldn't configure the computer account \<dc name\>$ on the remote Active Directory Domain Controller VM1-W7.a.com.<br/>Enter State::SetOperationResultsMessage Active Directory Domain Services couldn't configure the computer account \<dc name\>$ on the remote Active Directory Domain Controller \<helper DC\>.\<DNS domain\>.<br/>Enter State::SetOperationResultsFlags 0x0<br/>...<br/>credentials were invalid, hr=0x80070005<br/>Enter GetErrorMessage 80070005<br/>Enter State::GetOperationResultsMessage Active Directory Domain Services couldn't configure the computer account \<dc name\>$ on the remote Active Directory Domain Controller \<helper DC\>.\<DNS domain\>.<br/>Enter State::GetOperation DEMOTE<br/>Enter State::GetParentDomainDnsName|
     |||

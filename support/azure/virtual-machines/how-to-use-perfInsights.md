@@ -125,12 +125,27 @@ Information about Windows VM, disks or storage pools configuration, performance 
 
 ### Performance diagnostics trace (*)
 
-Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. The following rules are currently supported:
+Runs a rule-based engine in the background to collect data and diagnose ongoing performance issues. Rules are displayed in the report under the Category -> Finding tab. 
 
-- HighCpuUsage rule: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
-- HighDiskUsage rule: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
-- HighResolutionDiskMetric rule: Shows IOPS, throughput, and I/O latency metrics per 50 milliseconds for each physical disk. It helps to quickly identify disk throttling periods.
-- HighMemoryUsage rule: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+Each rule consists of the following:
+- Finding: Description of the finding.
+- Recommendation: Recommendation on what action could be taken for the finding. There are also reference link(s) to documentation that provide more information on the finding and/or recommendation.
+- Impact Level: Represents the potential for having an impact on performance.
+
+The following cateogries of rules are currently supported:
+
+- High resource usage:
+    * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
+    * High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+    * High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+    * High resolution disk usage: Shows IOPS, throughput, and I/O latency metrics per 50 milliseconds for each physical disk. It helps to quickly identify disk throttling periods.
+- Knowledge base: Detects if specific Knowledge Base (KB) articles are not installed.
+- Disk: Detects specific disk configuration settings.
+- SQL: Detects specific SQL settings.
+- Network: Detects specific network settings.
+- Server cluster: Detects specific server cluster configuration settings.
+- System: Detects specific system configuration settings.
+- CLR: Detects long garbage collection pauses on managed processes.
 
 > [!NOTE] 
 > Currently, Windows versions that include the .NET Framework 4.5 or later versions are supported.
@@ -171,6 +186,10 @@ Diskspd I/O workload tests (OS Disk [write] and pool drives [read/write])
    * Windows 10
    * Windows 8.1
    * Windows 8
+
+#### Accessing SQL Server
+
+If the VM has SQL Server instance(s) installed on it, PerfInsights will use the account NT AUTHORITY\SYSTEM to access the SQL Server instance(s) for collecting configuration information and running rules. The account NT AUTHORITY\SYSTEM must be granted View Server State permission and Connect SQL permission for each instance, otherwise PerfInsights will not be able to connect to the SQL Server and the PerfInsights report will not show any SQL Server related information. 
 
 #### Possible problems when you run the tool on production VMs
 

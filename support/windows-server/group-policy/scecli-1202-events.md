@@ -4,20 +4,20 @@ description: Describes ways to troubleshoot and to resolve SCECLI 1202 events.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Troubleshoot SCECLI 1202 events
 
 This article describes ways to troubleshoot and to resolve SCECLI 1202 events.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324383
 
 ## Summary
@@ -107,7 +107,7 @@ To troubleshoot this issue, follow these steps:
 
     Search the output for the GUID that you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
 
-    ```console
+    ```output
     Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
     Policy OK
     Details:
@@ -195,7 +195,7 @@ To troubleshoot this issue, follow these steps:
 
     Search the output for the GUID you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
 
-    ```console
+    ```output
     Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
     Policy OK
     Details:
@@ -274,7 +274,7 @@ To troubleshoot this issue, follow these steps:
 
     Search the output for the GUID that you identified in step 5. The four lines that follow the GUID contain the friendly name of the policy. For example:
 
-    ```console
+    ```output
     Policy {6AC1786C-016F-11D2-945F-00C04FB984F9}
     Policy OK
     Details:

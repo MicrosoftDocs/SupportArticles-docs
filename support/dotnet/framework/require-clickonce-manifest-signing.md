@@ -39,8 +39,6 @@ A non-recommended alternative is to restrict the target machines to exclude the 
 
 - [Caspol.exe (Code Access Security Policy Tool)](/dotnet/framework/tools/caspol-exe-code-access-security-policy-tool)  
 
-- [Security Changes in the .NET Framework](/previous-versions/dotnet/framework/security/security-changes)
-
 - [ClickOnce Manifest Signing and Strong-Name Assembly Signing Using Visual Studio Project Designer's Signing Page](/previous-versions/aa730868(v=vs.80))
 
 - [Configuring ClickOnce Trusted Publishers](/previous-versions/dotnet/articles/ms996418(v=msdn.10))

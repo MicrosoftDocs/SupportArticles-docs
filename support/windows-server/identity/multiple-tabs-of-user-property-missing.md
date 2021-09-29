@@ -4,21 +4,21 @@ description: Provides a solution to an issue where multiple tabs are missing whe
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Windows 7 RSAT: Multiple tabs are missing when viewing user properties in Active Directory Users and Computers
 
 This article provides a solution to an issue where multiple tabs are missing when you view user properties in Active Directory Users and Computers.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2028835
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2028835
 
 ## Symptoms
 

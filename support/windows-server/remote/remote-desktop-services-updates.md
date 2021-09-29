@@ -4,20 +4,20 @@ description: Summarizes the available hotfixes and updates for issues that occur
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Available updates for Remote Desktop Services (Terminal Services) in Windows Server 2008 R2 SP1
 
 This article lists the available hotfixes and updates for issues that occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2601888
 
 ## Summary
