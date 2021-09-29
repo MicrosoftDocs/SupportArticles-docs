@@ -1,5 +1,5 @@
 ---
-title: Buffer pool scan runs slowly on large-memory computers
+title: Buffer pool scan operations runs slowly on large-memory computers
 description: This article describes how a scan of the SQL Server buffer pool might take a long time on a large-memory computer.
 ms.date: 01/15/2021
 ms.prod-support-area-path: Performance
@@ -7,7 +7,7 @@ ms.reviewer: daleche
 ms.topic: article
 ms.prod: sql 
 ---
-# Operations that scan the SQL Server buffer pool are slow on large-memory computers
+# Buffer pool scan operations run slowly on large-memory computers
 
 This article describes how scanning the SQL Server buffer pool might take a long time to finish on large-memory computers.
 
