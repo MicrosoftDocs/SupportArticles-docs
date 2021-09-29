@@ -2,6 +2,30 @@
 
 
 
+## Week of September 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/21/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | added |
+| 9/21/2021 | [Troubleshoot eDiscovery hold errors](/office365/troubleshoot/holds/resolve-ediscovery-hold-issues) | added |
+| 9/21/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | modified |
+| 9/21/2021 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
+| 9/22/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+
+
+## Week of September 13, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/13/2021 | [Set language and region settings for Office 365](/office365/troubleshoot/access-management/set-language-and-region) | modified |
+| 9/13/2021 | [Microsoft 365 reports show anonymous instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name) | modified |
+| 9/15/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | added |
+| 9/17/2021 | [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run) | modified |
+| 9/17/2021 | [Listing some issues for Microsoft 365 Administration](/office365/troubleshoot/o365-admin-welcome) | modified |
+
+
 ## Week of September 06, 2021
 
 

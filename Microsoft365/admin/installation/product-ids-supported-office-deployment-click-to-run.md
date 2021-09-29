@@ -68,47 +68,63 @@ In addition to these product IDs, the following non-Office 365 product IDs are s
 - AccessRetail
 - Access2019Retail
 - Access2019Volume
+- Access2021Volume
 - ExcelRetail
 - Excel2019Retail
 - Excel2019Volume
+- Excel2021Volume
 - HomeBusinessRetail
 - HomeBusiness2019Retail
 - HomeStudentRetail
 - HomeStudent2019Retail
 - O365HomePremRetail
+- OneNoteFreeRetail
 - OneNoteRetail
+- OneNote2021Volume
 - OutlookRetail
 - Outlook2019Retail
 - Outlook2019Volume
+- Outlook2021Volume
 - Personal2019Retail
 - PowerPointRetail
 - PowerPoint2019Retail
 - PowerPoint2019Volume
+- PowerPoint2021Volume
 - ProfessionalRetail
 - Professional2019Retail
 - ProjectProXVolume
 - ProjectPro2019Retail
 - ProjectPro2019Volume
+- ProjectPro2021Volume
 - ProjectStdRetail
 - ProjectStdXVolume
 - ProjectStd2019Retail
 - ProjectStd2019Volume
+- ProjectStd2021Volume
 - ProPlus2019Volume
+- ProPlus2021Volume
+- ProPlusSPLA2021Volume
 - ProPlus2019Retail
 - PublisherRetail
 - Publisher2019Retail
 - Publisher2019Volume
+- Publisher2021Volume
 - Standard2019Volume
+- Standard2021Volume
+- StandardSPLA2021Volume
 - VisioProXVolume
 - VisioPro2019Retail
 - VisioPro2019Volume
+- VisioPro2021Volume
 - VisioStdRetail
 - VisioStdXVolume
 - VisioStd2019Retail
 - VisioStd2019Volume
+- VisioStd2021Volume
 - WordRetail
 - Word2019Retail
 - Word2019Volume
+- Word2021Volume
 
 For managing the Lync or Skype for Business clients, the following table lists the tool version and the correct product ID.
 
@@ -121,3 +137,4 @@ For managing the Lync or Skype for Business clients, the following table lists t
 |Skype for Business 2019           |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusiness2019Retail            |
 |Skype for Business 2019 (volume licensed)         |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusiness2019Volume            |
 |Skype for Business Basic 2019     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessEntry2019Retail            |
+|Skype for Business LTSC 2021|[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)|SkypeforBusiness2021Volume|
