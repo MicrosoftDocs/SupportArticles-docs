@@ -487,6 +487,8 @@
       href: ../mailflow/get-internet-mx-record-smtp-domain-with-nslookup.md
   - name: Migration
     items:
+    - name: Can't access mailbox after adding mailbox server to a DAG
+      href: ../migration/cannot-access-move-mailbox.md
     - name: Can't move a mailbox to a database
       href: ../migration/error-move-mailbox-to-database-exchange-2010.md
     - name: Can't move mailboxes due to Exchange Online limits
