@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, pfreitas
-ms.prod-support-area-path:
+ms.custom: sap:package-conversion, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # Adding a package version in Microsoft Application Virtualization returns error 0x8007012F
