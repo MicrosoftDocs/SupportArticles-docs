@@ -81,7 +81,7 @@ Find out where the slowness occurs by doing a pause queue test.
 4. Visually check and document if antivirus is scanning the Spool folder or `.SHD`, `.SPL`, or `.TMP` files. It can cause many side effects like access is denied, stuck print jobs in the Spool folder.
 5. If you are using printer pooling to handle a large number of jobs, and print jobs are taking a long time to get to the top of queue, consider adding more printers to the pool to distribute the print jobs over a larger set of printers.
 6. > [!WARNING]
-   > before deleting third-party *…\\Print\\Monitors\\\<ABC\>* keys (where ABC is the third-party component) verify that the customer does not have any subkeys below it that define TCP/IP printer ports. Additionally you should search the registry for ABC.  All print drivers that have the "Monitors"="ABC" registry string should be modified so that "Monitor"="" (equal to nothing).
+   > Before deleting third-party *…\\Print\\Monitors\\\<ABC\>* keys (where ABC is the third-party component) verify that the customer does not have any subkeys below it that define TCP/IP printer ports. Additionally you should search the registry for ABC.  All print drivers that have the "Monitors"="ABC" registry string should be modified so that "Monitor"="" (equal to nothing).
 
     1. Removing third-party printing components should be started by removing the printing components that are simple to remove and do not generally reduce print functionality: Print Monitors, Print Processors, Print Providers.
     2. Always export `HKLM\SYSTEM\CurrentControlSet\Control\Print` before manually removing printing components from the registry, then rename the file to `.TXT` to avoid accidentally adding it back.  
