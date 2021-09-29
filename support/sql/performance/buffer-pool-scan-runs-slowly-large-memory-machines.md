@@ -28,7 +28,7 @@ Here are some operations that may trigger a buffer pool scan to occur:
 - Database removal (drop)
 - File removal from a database
 - Full or differential database backup
-- Database restoration 
+- Database restoration
 - Transaction log restoration
 - Online restoration
 - DBCC CheckDB or CheckTable operation
@@ -55,7 +55,7 @@ If a scan takes more than 1 second, the XEvent will be recorded as follows when 
 
 ## Workaround
 
-Currently, no option exists to eliminate this problem. If it's critical that the operation in question finishes quickly, consider clearing the buffer pool by using the following commands:
+Currently, no option exists to eliminate this problem. If it's critical that the operation in question finishes quickly, consider clearing the buffer pool by using the following commands and then execute the desired operation.
 
 1. Run `CHECKPOINT` on each database
 
@@ -76,7 +76,7 @@ DBCC DROPCLEANBUFFERS
 > [!WARNING]
 > Dropping clean buffers from the buffer pool may result in a significant, but temporary, performance degradation. The command removes all unmodified database pages from memory which will cause subsequent query executions to re-read the data from the database files on disk. This process of accessing data via disk I/O will cause queries to be slow. However, once the pages are read into cache again, SQL Server will continue reading them from there.
 
-
+3. Perform the operation that results in a buffer pool scan (e.g. Full database backup)
 
 ## More information
 
