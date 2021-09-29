@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 
+ms.custom: sap:virtual-machine-state, csstroubleshoot
 ms.technology: virtualization
 keywords: Get-VMNetworkAdapter
 ---

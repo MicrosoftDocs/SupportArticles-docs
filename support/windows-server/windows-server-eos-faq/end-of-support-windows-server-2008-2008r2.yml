@@ -9,6 +9,7 @@ metadata:
   audience: itpro
   ms.topic: troubleshooting
   ms.prod: windows-server
+  ms.custom: sap:general-information, csstroubleshoot
   localization_priority: medium
   ms.reviewer: kaushika, squin, suehar, v-jeffbo  
   ms.technology: windows-server-eos
