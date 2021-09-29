@@ -112,9 +112,9 @@ During the upgrade to Visual Studio 2015 Update 3, IIS Express installs a new SH
 
     1. Navigate to the `Certificates - Current User\Trusted Root Certification Authorities\Certificates` folder, and then click **Action**, point to **All Tasks**, and then click **Import**.
 
-    2. In the Certificate Import Wizard, browse to the certificate that you exported (Trusted Root Certification Authority), and then select **Place all certificates in the following store**.
+    2. In the Certificate Import Wizard, browse to the certificate that you exported (Trusted Root Certification Authorities), and then select **Place all certificates in the following store**.
 
-       :::image type="content" source="./media/warnings-untrusted-certificate/place-all-certificates.jpg" alt-text="Screenshot of the page to check Place all certificates in the followin store. The store is Trusted Root Certification Authorities." border="false":::
+       :::image type="content" source="./media/warnings-untrusted-certificate/place-all-certificates.jpg" alt-text="Screenshot of the page to check Place all certificates in the following store. The store is Trusted Root Certification Authorities." border="false":::
 
     3. Click **Next**, verify that you selected the correct certificate, and then click **Finish**.
 
