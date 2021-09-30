@@ -10,23 +10,43 @@ This article provides suggestions for troubleshooting [device enrollment](/mem/i
 
 ## Initial troubleshooting steps
 
-Before you begin troubleshooting, check to make sure that you've configured Intune properly to enable enrollment. You can read about those configuration requirements in:
+Before you start troubleshooting, check to make sure that you've configured Intune properly to enable enrollment. You can read about those configuration requirements in our documentation:
 
-- [Get ready to enroll devices in Microsoft Intune](/mem/intune/fundamentals/setup-steps)
-- [Set up iOS/iPadOS and Mac device management](/mem/intune/enrollment/ios-enroll)
-- [Set up Windows device management](/mem/intune/enrollment/windows-enroll)
-- [Set up Android device management](/mem/intune/enrollment/android-enroll) - No additional steps required
+- [Set up Intune](/mem/intune/fundamentals/setup-steps)
+- [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll)
+- [Set up enrollment for macOS devices in Intune](/mem/intune/enrollment/macos-enroll)
+- [Set up enrollment for Windows devices in Intune](/mem/intune/enrollment/windows-enroll)
+- [Enroll Android devices in Intune](/mem/intune/enrollment/android-enroll) - No additional steps required
 
-You can also make sure that the time and date on the user's device are set correctly:
+### Collect basic information
 
-1. Restart the device.
-2. Make sure that the time and date are set close to GMT standards (+ or - 12 hours) for the end user's time zone.
-3. Uninstall and reinstall the Intune company portal (if applicable).
+It's important to collect some basic information to help better understand the problem and reduce the time to find a resolution.
+
+Collect the following information about the problem:
+
+- What is the exact error message?
+- Where do you see the error message?
+- When did the problem start? Has enrollment ever worked?
+- What platform (Android, iOS/iPadOS, Windows) has the problem?
+- How many users are affected? Are all users affected or just some?
+- How many devices are affected? Are all devices affected or just some?
+- What is the MDM authority?
+- How is enrollment being performed? For example, is it "Bring your own device" (BYOD) or Apple Automated Device Enrollment (ADE) with enrollment profiles?
+
+### Collect diagnostic logs
 
 Your managed device users can collect enrollment and diagnostic logs for you to review. User instructions for collecting logs are provided in:
 
 - [Send Android enrollment errors to your IT admin](/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
 - [Send iOS/iPadOS errors to your IT admin](/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+
+### Check device date and time
+
+You can also make sure that the date and time on the user's device are set correctly:
+
+1. Restart the device.
+1. Make sure that the date and time are set close to GMT standards (+ or - 12 hours) for the end user's time zone.
+1. Uninstall and reinstall the Intune company portal (if applicable).
 
 ## General enrollment issues
 
@@ -239,137 +259,7 @@ Staring in Android 7.0, apps ignore user certificates by default, unless the app
 
 To fix this issue, use a certificate that chains to a publicly trusted root CA in your AD FS server. A list of public CAs on Android can be found at [https://android.googlesource.com/platform/system/ca-certificates/+/master/files/](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
 
-## iOS/iPadOS issues
 
-### iOS/iPadOS enrollment errors
-
-The following table lists errors that end users might see while enrolling iOS/iPadOS devices in Intune.
-
-|Error message|Issue|Resolution|
-|-------------|-----|----------|
-|NoEnrollmentPolicy|No enrollment policy found|Check that all enrollment prerequisites, like the Apple Push Notification Service (APNs) certificate, have been set up and that **iOS/iPadOS as a platform** is enabled. For instructions, see [Set up iOS/iPadOS and Mac device management](/mem/intune/enrollment/ios-enroll).|
-|DeviceCapReached|Too many mobile devices are enrolled already.|The user must remove one of their currently enrolled mobile devices from the Company Portal before enrolling another. See the instructions for the type of device you're using: [Android](/mem/intune/user-help/unenroll-your-device-from-intune-android), [iOS/iPadOS](/mem/intune/user-help/unenroll-your-device-from-intune-ios), [Windows](/mem/intune/user-help/unenroll-your-device-from-intune-windows).|
-|APNSCertificateNotValid|There's a problem with the certificate that lets the mobile device communicate with your company's network.<br /><br />|The Apple Push Notification Service (APNs) provides a channel to contact enrolled iOS/iPadOS devices. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul>Review the information about how to set up users in [Sync Active Directory and add users to Intune](/mem/intune/fundamentals/users-add) and [organizing users and devices](/mem/intune/fundamentals/groups-add).|
-|AccountNotOnboarded|There's a problem with the certificate that lets the mobile device communicate with your company's network.<br /><br />|The Apple Push Notification Service (APNs) provides a channel to contact enrolled iOS/iPadOS devices. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul>For more information, review [Set up iOS/iPadOS and Mac management with Microsoft Intune](/mem/intune/enrollment/ios-enroll).|
-|DeviceTypeNotSupported|The user might have tried to enroll using a non-iOS device. The mobile device type that you're trying to enroll isn't supported.<br /><br />Confirm that device is running iOS/iPadOS version 8.0 or later.<br /><br />|Make sure that your user's device is running iOS/iPadOS version 8.0 or later.|
-|UserLicenseTypeInvalid|The device can't be enrolled because the user's account isn't yet a member of a required user group.<br /><br />|Before users can enroll their devices, they must be members of the right user group. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true:<ol><li>Intune has been set as the mobile device management authority</li><li>they'e using a System Center 2012 R2 Configuration Manager license.</li></ol>Review the following articles for more information:<br /><br />Review [Set up iOS/iPadOS and Mac management with Microsoft Intune](/mem/intune/enrollment/ios-enroll) and information about how to set up users in [Sync Active Directory and add users to Intune](/mem/intune/fundamentals/users-add) and [organizing users and devices](/mem/intune/fundamentals/groups-add).|
-|MdmAuthorityNotDefined|The mobile device management authority hasn't been defined.<br /><br />|The mobile device management authority hasn't been set in Intune.<br /><br />Review item #1 in the **Step 6: Enroll mobile devices and install an app** section in [Get started with a 30-day trial of Microsoft Intune](/mem/intune/fundamentals/free-trial-sign-up).|
-
-### Devices are inactive or the admin console can't communicate with them
-
-**Issue:** iOS/iPadOS devices aren't checking in with the Intune service. Devices must check in periodically with the service to maintain access to protected corporate resources. If devices don't check in:
-
-- They can't receive policy, apps, and remote commands from the Intune service.
-- They show a Management State of **Unhealthy** in the administrator console.
-- Users who are protected by Conditional Access policies might lose access to corporate resources.
-
-**Resolution:** Share the following resolutions with your end users to help them regain access to corporate resources.
-
-When users start the iOS/iPadOS Company Portal app, it can tell if their device has lost contact with Intune. If it detects that there's no contact, it automatically tries to sync with Intune to reconnect (users will see the **Trying to sync…** message).
-
-  ![Trying to sync notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
-
-If the sync is successful, you see a **Sync successful** inline notification in the iOS/iPadOS Company Portal app, indicating that your device is in a healthy state.
-
-  ![Sync successful notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_sync_successful_notification.png)
-
-If the sync is unsuccessful, users see an **Unable to sync** inline notification in the iOS/iPadOS Company Portal app.
-
-  ![Unable to sync notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_unable_to_sync_notification.png)
-
-To fix the issue, users must select the **Set up** button, which is to the right of the **Unable to sync** notification. The **Set up** button takes users to the Company Access Setup flow screen, where they can follow the prompts to enroll their device.
-
-  ![Company Access Setup screen](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_company_access_setup.png)
-
-Once enrolled, the devices return to a healthy state and regain access to company resources.
-
-### Verify WS-Trust 1.3 is enabled
-
-**Issue** Automated Device Enrollment (ADE) iOS/iPadOS devices can't be enrolled
-
-Enrolling ADE devices with user affinity requires WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user tokens. Active Directory enables this endpoint by default. To get a list of enabled endpoints, use the Get-AdfsEndpoint PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
-
-```powershell
-Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
-```
-
-For more information, see [Get-AdfsEndpoint documentation](/powershell/module/adfs/get-adfsendpoint).
-
-For more information, see [Best practices for securing Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). For help with determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider:
-
-- contact Microsoft Support if you use AD FS
-- contact your third-party identity vendor.
-
-### Profile installation failed
-
-**Issue:** A user receives a **Profile installation failed** error on an iOS/iPadOS device.
-
-### Troubleshooting steps for failed profile installation
-
-1. Confirm that the user is assigned an appropriate license for the version of the Intune service that you're using.
-
-2. Confirm that the device isn't already enrolled with another MDM provider.
-
-3. Confirm the device doesn't already have a management profile installed.
-
-4. Navigate to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) and try to install the profile when prompted.
-
-5. Confirm that Safari for iOS/iPadOS is the default browser and that cookies are enabled.
-
-### User's iOS/iPadOS device is stuck on an enrollment screen for more than 10 minutes
-
-**Issue**: An enrolling device may get stuck in either of two screens:
-
-- Awaiting final configuration from "Microsoft"
-- Guided Access app unavailable. Please contact your administrator.
-
-This issue can happen if:
-
-- there's a temporary outage with Apple services, or
-- iOS/iPadOS enrollment is set to use VPP tokens as shown in the table but there's something wrong with the VPP token.
-
-| Enrollment settings | Value |
-| ---- | ---- |
-| Platform | iOS/iPadOS |
-| User Affinity | Enroll with User Affinity |
-|Authenticate with Company Portal instead of Apple Setup Assistant | Yes |
-| Install Company Portal with VPP | Use token: token address |
-| Run Company Portal in Single App Mode until authentication | Yes |
-
-**Resolution**: To fix the problem, you must:
-
-1. Determine if there's something wrong with the VPP token and fix it.
-2. Identify which devices are blocked.
-3. Wipe the affected devices.
-4. Tell the user to restart the enrollment process.
-
-#### Determine if there's something wrong with the VPP token
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
-2. Review the properties to see if any errors similar to the following appear:
-    - This token has expired.
-    - This token is out of Company Portal licenses.
-    - This token is being used by another service.
-    - This token is being used by another tenant.
-    - This token was deleted.
-3. Fix the issues for the token.
-
-#### Identify which devices are blocked by the VPP token
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
-2. Filter the **Profile status** column by **Blocked**.
-3. Make a note of the serial numbers for all the devices that are **Blocked**.
-
-#### Remotely wipe the blocked devices
-
-After you've fixed the issues with the VPP token, you must wipe the devices that are blocked.
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**.
-2. For each blocked device, choose it in the **All devices** list and then choose **Wipe** > **Yes**.
-
-#### Tell the users to restart the enrollment process
-
-After you've wiped the blocked devices, you can tell the users to restart the enrollment process.
 
 ## macOS issues
 
