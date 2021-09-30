@@ -25,10 +25,10 @@ On the SAML-based SSO configuration page, in the **Basic SAML configuration** se
 
 ### Using the Test SSO Function
 
-1. In the Azure AD portal, go to *Enterprise Applications* and click on the application needing troubleshooting.
-2. Navigate to the *Single sign-on* page using the left-hand navigation menu
-3. Click on *test this application* to use the Test SSO functionality.
-4. Copy and paste the error received into the *Resolving Errors* section and click *Get resolution guidance*
+1. In the Azure AD portal, go to **Enterprise Applications** and click on the application needing troubleshooting.
+2. Navigate to the **Single sign-on** page using the left-hand navigation menu
+3. Click on **Test this application** to use the Test SSO functionality.
+4. Copy and paste the error received into the **Resolving Errors** section and click **Get resolution guidance(*
 5. View the difference between the Issuer and Identifier found.
 6. Correct either the Issuer or Identifier.
 
