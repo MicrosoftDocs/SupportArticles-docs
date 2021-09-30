@@ -91,6 +91,7 @@
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
       "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-Support/issues",
       "titleSuffix": "Exchange",
+      "hideEdit": true,
       "searchScope": ["Exchange Support"] 
     },
     "fileMetadata": {},
