@@ -24,7 +24,7 @@ These errors occur on the application side. The application sets a time out valu
 - In .NET Framework [System.Data.SqlClient](/dotnet/api/system.data.sqlclient), the time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property.
 - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute in the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function) function.
 - In Java Database Connectivity (JDBC) API, it's set through the [setQueryTimeout](/sql/connect/jdbc/reference/setquerytimeout-method-sqlserverstatement) method.
-- In OLEDB, it's set through the `DBPROP_COMMANDTIMEOUT` property via the `Propset` function.
+- In OLEDB, it's set through the `DBPROP_COMMANDTIMEOUT` property on the `DBPROP` structure.
 - In VBA (Excel), it's set through the [ADODB.Command.CommandTimeout](/sql/ado/reference/ado-api/commandtimeout-property-ado) property.
 
 Query time-out is different from a connection time-out property. The latter controls how long to wait for a successful connection and isn't involved in query execution. For more information, see [Query time-out is not the same as connection time-out](#query-time-out-is-not-the-same-as-connection-time-out).
