@@ -23,7 +23,7 @@ Ensure that the `Issuer` attribute in the SAML request matches the Identifier va
 
 On the SAML-based SSO configuration page, in the **Basic SAML configuration** section, verify that the value in the Identifier textbox matches the value for the identifier value displayed in the error. Be sure to check if there is a trailing slash at the end -- those count!
 
-### Using the Test SSO Function
+### Using the Test SSO Function in the Azure AD Portal
 
 1. In the Azure AD portal, go to **Enterprise Applications** and click on the application needing troubleshooting.
 2. Navigate to the **Single sign-on** page using the left-hand navigation menu
