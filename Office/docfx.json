@@ -75,6 +75,7 @@
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
       "feedback_product_url": "https://office365.uservoice.com/",
       "titleSuffix": "Office",
+      "hideEdit": true,
       "searchScope": ["Office Support"] 
     },
     "fileMetadata": {},
