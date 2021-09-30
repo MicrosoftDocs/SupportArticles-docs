@@ -32,7 +32,7 @@ The Azure AD Portal can help you troubleshoot SAML configuration errors.
 1. In the Azure AD portal, go to **Enterprise Applications** and click on the application needing troubleshooting.
 2. Navigate to the **Single sign-on** page using the left-hand navigation menu
 3. Click on **Test this application** to use the Test SSO functionality.
-4. Copy and paste the error received into the **Resolving Errors** section and click **Get resolution guidance(*
+4. Copy and paste the error received into the **Resolving Errors** section and click **Get resolution guidance**
 5. View the difference between the Issuer and Identifier found.
 6. Correct either the Issuer or Identifier.
 
