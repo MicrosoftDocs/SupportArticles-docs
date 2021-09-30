@@ -21,9 +21,11 @@ Assume that an application queries data from a SQL Server database. If the query
 
 These errors occur on the application side. The application sets a time out value and if the time out is reached, it cancels the query. On the SQL Server side, a query cancellation causes an Attention event ([error 3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value is set to *0* (no time limit), the Database Engine will execute the query until it's completed.
 
-- In .NET Framework [System.Data.SqlClient](/dotnet/api/system.data.sqlclient), the time-out value is set on the [CommandTimeout](/sql/ado/reference/ado-api/commandtimeout-property-ado) property.
+- In .NET Framework [System.Data.SqlClient](/dotnet/api/system.data.sqlclient), the time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property.
 - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute in the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function) function.
 - In Java Database Connectivity (JDBC) API, it's set through the [setQueryTimeout](/sql/connect/jdbc/reference/setquerytimeout-method-sqlserverstatement) method.
+- In OLEDB, it's set through the `DBPROP_COMMANDTIMEOUT` property via the `Propset` function.
+- In VBA (Excel), it's set through the [ADODB.Command.CommandTimeout](/sql/ado/reference/ado-api/commandtimeout-property-ado) property.
 
 Query time-out is different from a connection time-out property. The latter controls how long to wait for a successful connection and isn't involved in query execution. For more information, see [Query time-out is not the same as connection time-out](#query-time-out-is-not-the-same-as-connection-time-out).
 
