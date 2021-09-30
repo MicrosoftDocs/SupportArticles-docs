@@ -9,10 +9,7 @@ ms.date: 09/30/2021
 
 This article helps Intune administrators understand and troubleshoot problems when enrolling iOS/iPadOS devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for initial troubleshooting steps for general scenarios.  
 
-## Error messages
-
-
-### iOS/iPadOS enrollment errors
+## iOS/iPadOS enrollment errors
 
 The following table lists errors that end users might see while enrolling iOS/iPadOS devices in Intune.
 
@@ -87,60 +84,6 @@ For more information, see [Best practices for securing Active Directory Federati
 
 5. Confirm that Safari for iOS/iPadOS is the default browser and that cookies are enabled.
 
-### User's iOS/iPadOS device is stuck on an enrollment screen for more than 10 minutes
-
-**Issue**: An enrolling device may get stuck in either of two screens:
-
-- Awaiting final configuration from "Microsoft"
-- Guided Access app unavailable. Please contact your administrator.
-
-This issue can happen if:
-
-- there's a temporary outage with Apple services, or
-- iOS/iPadOS enrollment is set to use VPP tokens as shown in the table but there's something wrong with the VPP token.
-
-| Enrollment settings | Value |
-| ---- | ---- |
-| Platform | iOS/iPadOS |
-| User Affinity | Enroll with User Affinity |
-|Authenticate with Company Portal instead of Apple Setup Assistant | Yes |
-| Install Company Portal with VPP | Use token: token address |
-| Run Company Portal in Single App Mode until authentication | Yes |
-
-**Resolution**: To fix the problem, you must:
-
-1. Determine if there's something wrong with the VPP token and fix it.
-2. Identify which devices are blocked.
-3. Wipe the affected devices.
-4. Tell the user to restart the enrollment process.
-
-#### Determine if there's something wrong with the VPP token
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
-2. Review the properties to see if any errors similar to the following appear:
-    - This token has expired.
-    - This token is out of Company Portal licenses.
-    - This token is being used by another service.
-    - This token is being used by another tenant.
-    - This token was deleted.
-3. Fix the issues for the token.
-
-#### Identify which devices are blocked by the VPP token
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
-2. Filter the **Profile status** column by **Blocked**.
-3. Make a note of the serial numbers for all the devices that are **Blocked**.
-
-#### Remotely wipe the blocked devices
-
-After you've fixed the issues with the VPP token, you must wipe the devices that are blocked.
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**.
-2. For each blocked device, choose it in the **All devices** list and then choose **Wipe** > **Yes**.
-
-#### Tell the users to restart the enrollment process
-
-After you've wiped the blocked devices, you can tell the users to restart the enrollment process.
 
 ### Profile Installation Failed. A Network Error Has Occurred.
 

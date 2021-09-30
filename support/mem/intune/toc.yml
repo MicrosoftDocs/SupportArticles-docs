@@ -156,6 +156,10 @@
     items:
     - name: Troubleshoot iOS/iPadOS device enrollment
       href: troubleshoot-ios-enrollment-errors.md
+    - name: iOS/iPadOS devices aren't checking in
+      href: ios-devices-inactive.md
+    - name: Device stuck on enrollment screen
+      href: device-stuck-in-enrollment.md
     - name: Auto-enrollment doesn't start on Apple DEP devices
       href: apple-dep-device-fails-auto-enrollment.md
     - name: DEP enrollment error XPC_TYPE_ERROR
