@@ -17,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# "The remote server returned an error: (401) Rbac check failed" error when trying to manage disposition reviews
+# "(401) Rbac check failed" error when trying to manage disposition reviews
 
 ## Symptoms
 
