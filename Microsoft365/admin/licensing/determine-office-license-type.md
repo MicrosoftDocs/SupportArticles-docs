@@ -13,13 +13,15 @@ search.appverid:
 - MET150
 appliesto:
 - Microsoft 365
+- Office LTSC 2021 suites
 - Office 2019 suites
 - Office 2016 suites
 - Office 2013 suites
 - Excel for Microsoft 365 for Mac 
 - Word for Microsoft 365 for Mac 
 - Outlook for Microsoft 365 for Mac
-- PowerPoint for Microsoft 365 for Mac 
+- PowerPoint for Microsoft 365 for Mac
+- Office LTSC 2021 for Mac
 - Office 2019 for Mac 
 - Excel 2019 for Mac 
 - PowerPoint 2019 for Mac 
@@ -41,7 +43,7 @@ description: Describes how to determine the license type of your Microsoft Offic
 
 ## Summary
 
-This article helps you determine the licensing type of your Microsoft Office product, whether it's Microsoft 365, Office 2019, Office 2016, or Office 2013.
+This article helps you determine the licensing type of your Microsoft Office product, whether it's Microsoft 365, Office LTSC 2021, Office 2019, Office 2016, or Office 2013.
 
 ## License types
 
@@ -53,7 +55,7 @@ To determine whether you have a retail edition or a volume license edition, use 
 
 If you're using a Microsoft 365 product, see [View Microsoft 365 licenses and services with PowerShell](/microsoft-365/enterprise/view-licenses-and-services-with-microsoft-365-powershell). Follow the steps to find your license type and other details about your version of Office.
 
-### Office 2019 and Office 2016
+### Office LTSC 2021, Office 2019 and Office 2016
 
 1. Press Windows logo key+X on your keyboard to open the quick action menu.
 2. Select Command Prompt (Admin).
@@ -87,7 +89,7 @@ If you're using a Microsoft 365 product, see [View Microsoft 365 licenses and se
 This method requires that you have access to the DVD or ISO file that's used to install your Office product.
 
 1. Open File Explorer, and navigate to the DVD or ISO file.
-2. Search for a folder that’s named **Admin**.
+2. Search for a folder that's named **Admin**.
 
    - If the Admin folder exists, this disc is a **volume license** (VL) edition.
    - If the Admin folder does not exist, this disc is a retail edition.
