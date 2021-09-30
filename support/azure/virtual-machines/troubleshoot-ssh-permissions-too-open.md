@@ -54,7 +54,7 @@ If you can't access the VM by using the Azure Serial Console, then the repair mu
 
 1. Follow steps 1-3 of the [VM Repair process](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM. The repair VM will mount a copy of the OS disk for the failed VM automatically.
 1. Connect to the repair VM by using SSH.
-1. Run `lsblk` to identify the root partition of the failed VM. Typically, the root partition is "sdbc1."
+1. Run `lsblk` to identify the root partition of the failed VM. Typically, the root partition is "sdc1."
 1. Create a temporary mount point. For example, run the following command:
 
     ```bash
