@@ -28,4 +28,4 @@ To resolve this problem, follow these steps in Visual Studio .NET:
 1. Click the **Web** tab.
 1. Under **Debuggers**, check the **ASP.NET** checkbox.
 
-   :::image type="content" source="./media/debugger-not-stop-breakpoint/vs-debugger-settings.png" alt-text="Check ASP.NET debugger Checkbox":::
+:::image type="content" source="./media/debugger-not-stop-breakpoint/vs-debugger-settings.png" alt-text="Screenshot of the Web menu with the ASP.NET option checked.":::
