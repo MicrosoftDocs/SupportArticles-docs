@@ -34,7 +34,7 @@ By far, the most common reason for query time-outs is underperforming queries. T
 1. Use [Extended Events](/sql/relational-databases/extended-events/extended-events) or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to identify the queries that cause the time-out errors. You can trace the [attention](/sql/relational-databases/event-classes/attention-event-class) event together with the `sql_batch_completed` and `rpc_completed` extended events, and correlate them on the same `session_id`. If you observe a completed event is immediately followed by an attention event, and the duration of the completed event corresponds approximately to the time-out setting, you have identified the query. Here is an example:
 
    > [!NOTE]
-   > In the example, the `SELECT` query ran for almost exactly 30 seconds and stopped. The attention event following on the same session indicates that the query was canceled by the application.
+   > In the example, the `SELECT` query ran for almost exactly 30 seconds and stopped. The attention event having the same session ID indicates that the query was canceled by the application.
 
    |     Name                   |     Session_id    |     Sql_text                                      |     Duration (microseconds)    |     Timestamp                   |
    |----------------------------|-------------------|---------------------------------------------------|--------------------------------|---------------------------------|
