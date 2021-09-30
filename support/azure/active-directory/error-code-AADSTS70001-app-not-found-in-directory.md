@@ -25,6 +25,10 @@ On the SAML-based SSO configuration page, in the **Basic SAML configuration** se
 
 ### Using the Test SSO Function in the Azure AD Portal
 
+The Azure AD Portal can help you troubleshoot SAML configuration errors.
+
+:::image type="content" source="media/testing-sso-screen.PNG" alt-text="Screenshot of Testing SSO Feature in Azure AD Portal.":::
+
 1. In the Azure AD portal, go to **Enterprise Applications** and click on the application needing troubleshooting.
 2. Navigate to the **Single sign-on** page using the left-hand navigation menu
 3. Click on **Test this application** to use the Test SSO functionality.
