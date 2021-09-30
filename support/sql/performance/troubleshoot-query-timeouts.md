@@ -11,7 +11,7 @@ ms.prod: sql
 
 ## Symptoms
 
-Assume that an application queries data from a SQL Server database. If the query doesn't return any data within the configured time-out value (typically 30 seconds), the application cancels the query, and you receive one of these error messages:
+Assume that an application queries data from a SQL Server database. If the query doesn't return any data within the configured time-out value (typically 30 seconds), the application cancels the query and generates one of these error messages:
 
 - > Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. The statement has been terminated.
 
@@ -31,8 +31,18 @@ Query time-out is different from a connection time-out property. The latter cont
 
 By far, the most common reason for query time-outs is underperforming queries. This should be the first target of your troubleshooting. Here's how to check queries:
 
-1. Use [Extended Events](/sql/relational-databases/extended-events/extended-events) and [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to identify the queries that cause the time-out errors.
-2. Execute and test the queries in SQLCMD or in SQL Server Management Studio (SSMS).
+1. Use [Extended Events](/sql/relational-databases/extended-events/extended-events) or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to identify the queries that cause the time-out errors. You can trace the [attention](/sql/relational-databases/event-classes/attention-event-class) event together with the `sql_batch_completed` and `rpc_completed` extended events, and correlate them on the same `session_id`. If you observe an attention event immediately following a completed event, and the duration of the completed event corresponds approximately to the time-out setting, you have identified the query. Here is an example:
+
+   > [!NOTE]
+   > In the example, the `SELECT` query ran for almost exactly 30 seconds and stopped. The attention event following on the same session indicates that the query was canceled by the application.
+
+   |     Name                   |     Session_id    |     Sql_text                                      |     Duration (microseconds)    |     Timestamp                   |
+   |----------------------------|-------------------|---------------------------------------------------|--------------------------------|---------------------------------|
+   |     sql_batch_started      |     54            |     Select … from Customers WHERE cid = 192937    |     NULL                       |     2021-09-30 09:50:25.0000    |
+   |     sql_batch_completed    |     54            |     Select … from Customers WHERE cid = 192937    |     29999981                   |     2021-09-30 09:50:55.0000    |
+   |     Attention              |     54            |     Select … from Customers WHERE cid = 192937    |     40000                      |     2021-09-30 09:50:55.0400    |
+
+3. Execute and test the queries in SQLCMD or in SQL Server Management Studio (SSMS).
 
 3. If the queries are also slow in SQLCMD and SSMS, troubleshoot and improve the performance of the queries.
 
