@@ -78,7 +78,6 @@
       href: linux-virtual-machine-cannot-start-fstab-errors.md
     - name: Troubleshoot permissions are too open error
       href: troubleshoot-ssh-permissions-too-open.md
-    items:
     - name: Azure virtual machine error '“You must change your password before logging on the first time”'
       href: must-change-password.md
     - name: Cannot RDP into Azure VM because of authentication errors
