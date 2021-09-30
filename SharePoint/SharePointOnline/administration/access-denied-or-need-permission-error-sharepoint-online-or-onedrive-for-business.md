@@ -89,11 +89,11 @@ Follow the steps below depending on which area you are receiving the error:
       - To delete the new UPN, follow the steps in [this article](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
       - Once the new user has been deleted, you can restore the original user using [these steps](/azure/active-directory/fundamentals/active-directory-users-restore).
 
-    - If you cannot restore the original user and are still in this state,  create a support request using the following steps:
-      - As an administrator, select the following link, which will populate a help query in the admin center: [OneDrive Site User ID Mismatch](https://admin.microsoft.com/AdminPortal/?searchSolutions=OneDrive%20Site%20User%20ID%20Mismatch).
-      - At the bottom of the pane, select Contact Support, and then select New Service Request.
-      - Leave the description as blank. 
-      - Once the ticket has been opened please provide the support agent with the UPN and OneDrive URL that is having the issue.
+    - If you can't restore the original user and are still in this state, create a support request using the following steps:
+      1. As an administrator, select [OneDrive Site User ID Mismatch](https://admin.microsoft.com/AdminPortal/?searchSolutions=OneDrive%20Site%20User%20ID%20Mismatch), it will populate a help query in the admin center.
+      1. At the bottom of the pane, select **Contact Support** > **New Service Request**.
+      1. Leave the description blank. 
+      1. After the ticket is opened, provide the support agent with the UPN and OneDrive URL that's having the issue.
 
 - **If the user is attempting to access another user's OneDrive site:**
 
