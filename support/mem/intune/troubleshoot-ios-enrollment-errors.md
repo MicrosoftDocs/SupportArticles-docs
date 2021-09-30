@@ -49,7 +49,7 @@ This section includes token sync errors with:
 
 This section provides troubleshooting steps for these additional scenarios:
 
-- [Verify WS-Trust 1.3 is enabled](#verify-ws-trust-1.3-is-enabled)
+- [Verify WS-Trust 1.3 is enabled](#verify-ws-trust-13-is-enabled)
 - [Company Portal Temporarily Unavailable](#company-portal-temporarily-unavailable)
 - [Device Cap Reached](#device-cap-reached)
 - [Workplace Join failed](#workplace-join-failed)
@@ -58,7 +58,7 @@ This section provides troubleshooting steps for these additional scenarios:
 - [The configuration could not be downloaded...Invalid Profile](#the-configuration-for-your-iphoneipad-could-not-be-downloaded-from-company-name-invalid-profile)
 - [ADE enrollment doesn't start](#ade-enrollment-doesnt-start)
 - [ADE enrollment stuck at user login](#ade-enrollment-stuck-at-user-login)
-- [Authentication doesn’t redirect to the government cloud](#authentication-doesn’t-redirect-to-the-government-cloud)
+- [Authentication doesn’t redirect to the government cloud](#authentication-doesnt-redirect-to-the-government-cloud)
 
 ### Verify WS-Trust 1.3 is enabled
 
