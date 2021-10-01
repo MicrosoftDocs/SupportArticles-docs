@@ -25,7 +25,7 @@ _Original KB number:_&nbsp;4490129
 > Upcoming changes:  
 > 
 > - Starting in July 2021, we'll start to roll out a new relay IP pool, which may affect current SRS rewriting behaviour. Messages that qualify for this relay pool won't be rewritten by SRS, and be sent out of IPs that won't be part of the Microsoft 365 SPF record instead. The main change is for messages that fail SPF checks when they are sent to Office 365. SRS will no longer fix these failures. For more information, check the post about the relay pool change in [Message Center](/microsoft-365/admin/manage/message-center) or see [Outbound delivery pools](/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages#relay-pool).
-> - Starting in October 2021, we'll start to use SRS to rewrite all messages forwarded by using SMTP or mailbox forwarding. This will consolidate the behaviour to use SRS for all forwarding in the service. Due to changes in behavior, disruptions may occur. For example, messages sent to on-premises will no longer be rewritten.
+> - Starting in November 2021, we'll start to use SRS to rewrite all messages forwarded by using SMTP or mailbox forwarding. This will consolidate the behaviour to use SRS for all forwarding in the service. Due to changes in behavior, disruptions may occur. For example, messages sent to on-premises will no longer be rewritten. Read more about the change here: [Announcement](https://techcommunity.microsoft.com/t5/exchange-team-blog/sender-rewriting-scheme-upcoming-changes/ba-p/2632829).
 
 ## Summary
 
@@ -100,5 +100,8 @@ A message is sent from Bob (bob@fabrikam.com) to John's mailbox (john.onprem@con
 |P1 From|bob@fabrikam.com|bob@fabrikam.com|bounces+SRS=44ldt=IX@contoso.com|
 |From header|bob@fabrikam.com|bob@fabrikam.com|bob@fabrikam.com|
 
+### Forwarded messages sent to a customer's on-premises server
+
+By default, SRS deems on-premsies servers to be within the trust boundary and does not rewrite forwarded messages bound for on-premises. However, there are some customers with complex routing configurations that use their on-premises servers to route messages to the internet. As such, forwarded messages will not be rewritten and will be subject to rejections due to SPF failures. To account for this, a setting has been added to allow admins to enable SRS rewriting for traffic flowing through an on-premsies outbound connector. You can read more about this new connector parameter in the announcement here: [Announcement](https://techcommunity.microsoft.com/t5/exchange-team-blog/sender-rewriting-scheme-upcoming-changes/ba-p/2632829). 
 
 Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
