@@ -6,7 +6,7 @@ ms.date: 09/30/2021
 
 # Troubleshoot macOS virtual machine enrollment in Microsoft Intune
 
-This article helps Intune administrators troubleshoot common errors when enrolling macOS virtual machines in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troublehsooting scenarios.  
+This article helps Intune administrators troubleshoot common errors when enrolling macOS virtual machines in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.  
 
 When you try to enroll a macOS virtual machine, you might see one of the following error messages:
 

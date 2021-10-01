@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting certificate issues when enrolling Android devices in Intune
-description: Troubleshoot when an Intune profile fails to install on an iOS or iPadOS device.
+description: Troubleshoot when a user's Android device is missing a require certificate and can't enroll in Microsoft Intune.
 ms.date: 09/30/2021
 ---
 

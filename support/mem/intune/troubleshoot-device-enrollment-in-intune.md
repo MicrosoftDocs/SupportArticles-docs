@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot device enrollment
 description: Suggestions for troubleshooting device enrollment issues in Microsoft Intune.
-ms.date:10/01/2021
+ms.date: 10/01/2021
 ms.reviewer: damionw
 ---
 # Troubleshoot device enrollment in Microsoft Intune
 
-This article provides suggestions for troubleshooting [device enrollment](/mem/intune/enrollment/device-enrollment) issues. Browse the troubleshooting guide for OS-specific enrollment troublehshooting.
+This article provides suggestions for troubleshooting [device enrollment](/mem/intune/enrollment/device-enrollment) issues. Browse other sections of this guide for OS-specific enrollment troubleshooting.
 
 ## Initial troubleshooting steps
 
@@ -57,10 +57,8 @@ A user receives an error during enrollment, such as "DeviceCapReached" or a gene
 **Solution:** Check and adjust number of devices enrolled and allowed. Use these steps to make sure hte user isn't assigned more than the maximum number of devices.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
-
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices the user has enrolled.
-
-3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll anymore until:
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices the user has enrolled.
+1. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll anymore until:
     - [Existing devices are removed](/mem/intune/remote-actions/devices-wipe), or
     - You increase the device limit by [setting device restrictions](/mem/intune/enrollment/enrollment-restrictions-set).
 
@@ -81,48 +79,42 @@ Users receive a **Company Portal Temporarily Unavailable** error on their device
 **Solution:**
 
 1. Remove the Intune Company Portal app from the device.
-
-2. On the device, open the browser, browse to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com), and try a user login.
-
-3. If the user fails to sign in, they should try another network.
-
-4. If that fails, validate that the user's credentials have synced correctly with Azure Active Directory.
-
-5. If the user successfully logs in, an iOS/iPadOS device will prompt you to install the Intune Company Portal app and enroll. On an Android device, you'll need to manually install the Intune Company Portal app, after which you can retry enrolling.
+1. On the device, open the browser, browse to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com), and try a user login.
+1. If the user fails to sign in, they should try another network.
+1. If that fails, validate that the user's credentials have synced correctly with Azure Active Directory.
+1. If the user successfully logs in, an iOS/iPadOS device will prompt you to install the Intune Company Portal app and enroll. On an Android device, you'll need to manually install the Intune Company Portal app, after which you can retry enrolling.
 
 > [!NOTE]
 > This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. If these steps do not resolve the issue, follow the solution steps for [Device cap reached](#device-cap-reached).
 
 ## MDM authority not defined
 
-**Issue:** A user receives an **MDM authority not defined** error.
+A user receives an "MDM authority not defined" error.
 
-**Resolution:**
+**Cause:**  Either the MDM Authority has not been set or there is a user credential issue.
+
+**Solution:**
 
 1. Verify that the MDM Authority has been [set appropriately](/mem/intune/fundamentals/mdm-authority-set).
-
-2. Verify that the user's credentials have synced correctly with Azure Active Directory. You can verify that the user's UPN matches the Active Directory information in the Microsoft 365 admin center.
+1. Verify that the user's credentials have synced correctly with Azure Active Directory. You can verify that the user's UPN matches the Active Directory information in the Microsoft 365 admin center.
     If the UPN doesn't match the Active Directory information:
 
     1. Turn off DirSync on the local server.
-
-    2. Delete the mismatched user from the **Intune Account Portal** user list.
-
-    3. Wait about one hour to allow the Azure service to remove the incorrect data.
-
-    4. Turn on DirSync again and check if the user is now synced properly.
+    1. Delete the mismatched user from the **Intune Account Portal** user list.
+    1. Wait about one hour to allow the Azure service to remove the incorrect data.
+    1. Turn on DirSync again and check if the user is now synced properly.
 
 ## Unable to create policy or enroll devices if the company name contains special characters
 
-**Issue:** You can't create policy or enroll devices.
+You can't create policy or enroll devices.
 
-**Resolution:** In the [Microsoft 365 admin center](https://admin.microsoft.com/), remove the special characters from the company name and save the company information.
+**Solution:** In the [Microsoft 365 admin center](https://admin.microsoft.com/), remove the special characters from the company name and save the company information.
 
 ### Unable to sign in or enroll devices when you have multiple verified domains
 
-**Issue:** This problem may occur when you add a second verified domain to your AD FS. Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
+This problem may occur when you add a second verified domain to your Active Directory Federation Services  (AD FS). Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
 
-**Resolution:** Microsoft 365 customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
+**Solution:** Microsoft 365 customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
 
 - use single sign-on (SSO) through AD FS 2.0, and
 - have multiple top-level domains for users' UPN suffixes within their organization (for example, @contoso.com or @fabrikam.com).
@@ -139,6 +131,26 @@ A [rollup for AD FS 2.0](https://support.microsoft.com/help/2607496) works in co
 1. Confirm that the device isn't already enrolled with another MDM provider.
 1. Confirm that the device doesn't already have a management profile installed.
 1. For iOS/iPadOD devices, confirm that Safari is the default browser and that cookies are enabled. For Android devices, confirm that Chrome is the default browser and that cookies are enabled.
+
+## IT admin needs to assign license for access
+
+Users see the message "Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later."
+
+**Cause:** The device can't be enrolled because the user's account doesn't have the necessary license. The user is either missing a license or has the wrong license type for the MDM authority. For example, they'll see this error if both of the following are true:
+
+- Intune has been set as the mobile device management authority.
+- They're using a System Center 2012 R2 Configuration Manager license.
+
+**Solution:**
+Assign the appropriate license to the user. For more information, see [Assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).
+
+## IT admin needs to set MDM authority
+ 
+Users see the message "Looks like your IT admin hasn't set an MDM authority. Get help from your IT admin or try again later."
+
+**Cause:** The mobile device management authority hasn't been defined in Intune.
+
+**Solution:** [Set the mobile device management authority](/mem/intune/fundamentals/mdm-authority-set).|
 
 ## Enrollment error codes
 

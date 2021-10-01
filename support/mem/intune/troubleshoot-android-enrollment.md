@@ -6,15 +6,7 @@ ms.reviewer: mghadial
 ---
 # Troubleshoot Android Enterprise device problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when Android Enterprise devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troublehsooting scenarios.
-
-<!-- moved from general, need to edit-->
-The following table lists errors that end users might see while enrolling Android devices in Intune.
-
-|Error message|Issue|Resolution|
-|---|---|---|
-|**IT admin needs to assign license for access**<br>Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later.|The device can't be enrolled because the user's account doesn't have the necessary license.|Before users can enroll their devices, they must have been assigned the necessary license. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true:<ol><li>Intune has been set as the mobile device management authority</li><li>They're using a System Center 2012 R2 Configuration Manager license.</li></ol>For more information, see [Assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).|
-|**IT admin needs to set MDM authority**<br>Looks like your IT admin hasn't set an MDM authority. Get help from your IT admin or try again later.|The mobile device management authority hasn't been defined.|The mobile device management authority hasn't been set in Intune. See information about how to [set the mobile device management authority](/mem/intune/fundamentals/mdm-authority-set).|
+This article helps Intune administrators understand and troubleshoot problems when Android Enterprise devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
 
 ## Apps on Android Enterprise devices
 
@@ -40,10 +32,6 @@ This is expected behavior.
 
 This is expected behavior. Only system apps installed in the Work Profile are inventoried in the Discovered Apps blade. To see installed Managed Google Play applications, use the **Managed Apps** blade.
 
-### Are Web Applications supported for work profile enrolled devices?
-
-Yes. For more information, see [Managed Google Play web links](/mem/intune/apps/apps-add-android-for-work#managed-google-play-web-links)
-
 ## Device management
 
 ### File path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files missing on work profile enrolled devices
@@ -56,13 +44,13 @@ Yes. For more information, see [Managed Google Play web links](/mem/intune/apps/
   2. When you're prompted **Send help request with**, select one of the Email apps.
   3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
 
-### Managed Google Play Last Sync time  hasn't been updated in days
+### Managed Google Play Last Sync time hasn't been updated in days
 
 This is expected behavior. The sync is only triggered when you manually do so.
 
-### Encryption is required when a device is enrolled. Can it be turned off?
+### Encryption is required when a device is enrolled
 
-No, Google requires that the device be encrypted to create a work profile.
+This is expected behavior. You cannot turn off encryption: Google requires that the device be encrypted to create a work profile.
 
 ### Samsung devices are blocking the use of third-party keyboards like SwiftKey
 
@@ -76,7 +64,7 @@ This is expected behavior. In the work profile scenario, the MDM provider doesn'
 
 Wipe is supported for [Android Enterprise corporate-owned with work profile devices](/mem/intune/enrollment/android-corporate-owned-work-profile-enroll).
 
-### Is device passcode reset supported?
+### Device passcode reset not supported
 
 For work profile enrolled devices, you can only reset the work profile passcode on Android 8.0 or later devices when:
 
@@ -104,10 +92,3 @@ The Microsoft Launcher app is the default launcher app on Duo devices, so the ap
 When an unenrolled user tries to access corporate data in an app protected by conditional access (CA), the user will be guided to enroll their device. During this enrollment flow, the Edge app is launched to open the Company Portal website. In some cases, the Edge app may prompt the user to sign into Edge, which diverts the user from the enrollment flow.
 
 To avoid this entirely, tell users to enroll in the Company Portal before trying to access their organization’s data. If a user does try to access their organization’s data before enrolling, if Edge prompts the user to sign in, they should skip the Edge sign in step in order to proceed with the enrollment flow. Users can always initiate enrollment in the preinstalled Company Portal app.
-
-## Next steps
-
-- [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
-- [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
-- [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
-- [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

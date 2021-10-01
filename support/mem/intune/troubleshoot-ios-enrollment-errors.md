@@ -7,7 +7,7 @@ ms.date: 09/30/2021
 
 # Troubleshoot iOS/iPadOS device enrollment problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when enrolling iOS/iPadOS devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troublehsooting scenarios.  
+This article helps Intune administrators understand and troubleshoot problems when enrolling iOS/iPadOS devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.  
 
 ## iOS/iPadOS enrollment errors
 
@@ -46,14 +46,14 @@ This section includes token sync errors with:
 | Apple profile not found | Multiple possible causes | Create a new profile, and assign the profile to devices. |
 | Invalid department entry | The department field entry is invalid | Edit the department field for your profiles. |
 
-## Other issues
+## Other errors and issues
 
 This section provides troubleshooting steps for these additional scenarios:
 
 - [Verify WS-Trust 1.3 is enabled](#verify-ws-trust-13-is-enabled)
 - [Workplace Join failed](#workplace-join-failed)
 - [User Name Not Recognized](#user-name-not-recognized)
-- [XPC_TYPE_ERROR Connection invalid](#xpctypeerror-connection-invalid)
+- [XPC_TYPE_ERROR Connection invalid](#xpc_type_error-connection-invalid)
 - [The configuration could not be downloaded...Invalid Profile](#the-configuration-for-your-iphoneipad-could-not-be-downloaded-from-company-name-invalid-profile)
 - [ADE enrollment doesn't start](#ade-enrollment-doesnt-start)
 - [ADE enrollment stuck at user login](#ade-enrollment-stuck-at-user-login)

@@ -4,28 +4,79 @@ description: Suggestions for troubleshooting some of the most common problems wh
 ms.date: 10/01/2021
 ms.reviewer: mghadial
 ---
-# Troubleshoot Windows device enrollment problems in Microsoft Intune
+# Troubleshoot Windows device enrollment error messages in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when enrolling Windows devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troublehsooting scenarios.
+This article helps Intune administrators understand and troubleshoot error messages when enrolling Windows devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
 
-<!-- moved from general, need to rework-->
-## PC Issues
+## This user is not authorized to enroll.
 
-|Error message|Issue|Resolution|
-|---|---|---|
-|**IT admin needs to assign license for access**<br>Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later.|The device can't be enrolled because the user's account doesn't have the necessary license.|Before users can enroll their devices, they must have been assigned the necessary license. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true: <ol><li>Intune has been set as the mobile device management authority</li><li>They're using a System Center 2012 R2 Configuration Manager license.</li></ol>See information about [how to assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).|
+Error 0x801c003: "This user is not authorized to enroll. You can try to do this again or contact your system administrator with the error code (0x801c0003)."
+Error 80180003: "Something went wrong. This user is not authorized to enroll. You can try to do this again or contact your system administrator with error code 80180003."
 
-### The machine is already enrolled - Error hr 0x8007064c
+**Cause:** Any of the following conditions:
 
-**Issue:** Enrollment fails with the error **The machine is already enrolled**. The enrollment log shows error **hr 0x8007064c**.
+- The user has already enrolled the maximum number of devices allowed in Intune.
+- The device is blocked by the device type restrictions.
+- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure AD is only supported on Windows 10 Pro and higher editions.
 
-This failure may occur because the computer:
+**Solution:**
 
-- was previously enrolled, or
-- has the cloned image of a computer that was already enrolled.
-The account certificate of the previous account is still present on the computer.
+There are several possible solutions to this issue:
 
-**Resolution:**
+### Remove devices that were enrolled
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Users** > **All Users**.
+3. Select the affected user account, and then click **Devices**.
+4. Select any unused or unwanted devices, and then click **Delete**.
+
+### Increase the device enrollment limit
+
+> [!NOTE]
+> This method increases the device enrollment limit for all users, not just the affected user.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Devices** > **Enrollment restrictions** > **Default** (under **Device limit restrictions**) > **Properties** > **Edit** (next to **Device limit**) > increase the **Device limit** (maximum 15)> **Review + Save**.
+
+### Check device type restrictions
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
+2. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.
+3. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
+
+    > [!IMPORTANT]
+    > If the current setting is already **Allow**, change it to **Block**, save the setting, and then change it back to **Allow** and save the setting again. This resets the enrollment setting.
+
+4. Wait for approximately 15 minutes, and then enroll the affected device again.
+
+### Upgrade Windows 10 Home
+
+[Upgrade Windows 10 Home to Windows 10 Pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro) or a higher edition.
+
+## Error 0x801c0003: This user is not allowed to enroll.
+
+Error 0x801c0003: "This user is not allowed to enroll. You can try again or contact your system administrator with the error code 801c0003."
+
+**Cause:** The **Users may join devices to Azure AD** setting is set to **None**. It prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails.
+
+**Solution:**
+
+1. Sign in to the [Azure portal](https://portal.azure.com/) as administrator.
+2. Go to **Azure Active Directory** > **Devices** > **Device Settings**.
+3. Set **Users may join devices to Azure AD** to **All**.
+4. Enroll the device again.
+
+## Error hr 0x8007064c: The machine is already enrolled 
+
+Enrollment fails with the error "The machine is already enrolled." The enrollment log shows error **hr 0x8007064c**.
+
+**Cause:** This failure may occur for one of these reasons:
+
+- The computer was previously enrolled
+- The computer has the cloned image of a computer that was already enrolled.
+- The account certificate of the previous account is still present on the computer.
+
+**Solution:**
 
 1. From the **Start** menu, type **Run** -> **MMC**.
 1. Choose **File** > **Add/ Remove Snap-ins**.
@@ -41,97 +92,32 @@ The account certificate of the previous account is still present on the computer
     > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs.
     > For more information about how to back up and restore the registry, read [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756)
 
-
-## Error messages
-
-### This user is not authorized to enroll.
-
-Error 0x801c003: "This user is not authorized to enroll. You can try to do this again or contact your system administrator with the error code (0x801c0003)."
-Error 80180003: "Something went wrong. This user is not authorized to enroll. You can try to do this again or contact your system administrator with error code 80180003."
-
-**Cause:** Any of the following conditions:
-
-- The user has already enrolled the maximum number of devices allowed in Intune.
-- The device is blocked by the device type restrictions.
-- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure AD is only supported on Windows 10 Pro and higher editions.
-
-#### Resolution
-
-There are several possible solutions to this issue:
-
-##### Remove devices that were enrolled
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Users** > **All Users**.
-3. Select the affected user account, and then click **Devices**.
-4. Select any unused or unwanted devices, and then click **Delete**.
-
-##### Increase the device enrollment limit
-
-> [!NOTE]
-> This method increases the device enrollment limit for all users, not just the affected user.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Enrollment restrictions** > **Default** (under **Device limit restrictions**) > **Properties** > **Edit** (next to **Device limit**) > increase the **Device limit** (maximum 15)> **Review + Save**.
-
-##### Check device type restrictions
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
-2. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.
-3. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
-
-    > [!IMPORTANT]
-    > If the current setting is already **Allow**, change it to **Block**, save the setting, and then change it back to **Allow** and save the setting again. This resets the enrollment setting.
-
-4. Wait for approximately 15 minutes, and then enroll the affected device again.
-
-##### Upgrade Windows 10 Home
-
-[Upgrade Windows 10 Home to Windows 10 Pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro) or a higher edition.
-
-### This user is not allowed to enroll.
-
-Error 0x801c0003: "This user is not allowed to enroll. You can try again or contact your system administrator with the error code 801c0003."
-
-**Cause:** The **Users may join devices to Azure AD** setting is set to **None**. It prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails.
-
-#### Resolution
-
-1. Sign in to the [Azure portal](https://portal.azure.com/) as administrator.
-2. Go to **Azure Active Directory** > **Devices** > **Device Settings**.
-3. Set **Users may join devices to Azure AD** to **All**.
-4. Enroll the device again.
-
-### The device is already enrolled.
+### Error 8018000a: The device is already enrolled.
 
 Error 8018000a: "Something went wrong. The device is already enrolled.  You can contact your system administrator with the error code 8018000a."
 
 **Cause:** One of the following conditions is true:
 
-- A different user has already enrolled the device in Intune or joined the device to Azure AD. To determine whether this is the case, go to **Settings** > **Accounts** > **Work Access**. Look for a message that's similar to **Another user on the system is already connected to a work or school. Please remove that work or school connection and try again.**
+- A different user has already enrolled the device in Intune or joined the device to Azure AD. To determine whether this is the case, go to **Settings** > **Accounts** > **Work Access**. Look for a message that's similar to "Another user on the system is already connected to a work or school. Please remove that work or school connection and try again."
 
-#### Resolution
+**Solution:**
 
-Use one of the following methods to resolve this issue:
-
-##### Remove the other work or school account
+Use these steps to remove the other work or school account.
 
 1. Sign out of Windows, then sign in by using the other account that has enrolled or joined the device.
 2. Go to **Settings** > **Accounts** > **Work Access**, then remove the work or school account.
 3. Sign out of Windows, then sign in by using your account.
 4. Enroll the device in Intune or join the device to Azure AD.
 
-### This account is not allowed on this phone.
+## This account is not allowed on this phone.
 
 Error: "This account is not allowed on this phone. Make sure the information you provided is correct, and then try again or request support from your company."
 
 **Cause:** The user who tried to enroll the device doesn't have a valid Intune license.
 
-#### Resolution
+**Solution:** Assign a valid Intune license to the user, and then enroll the device.
 
-Assign a valid Intune license to the user, and then enroll the device.
-
-### Looks like the MDM Terms of Use endpoint is not correctly configured.
+## Looks like the MDM Terms of Use endpoint is not correctly configured.
 
 **Cause:** One of the following conditions is true:
 
@@ -141,22 +127,22 @@ Assign a valid Intune license to the user, and then enroll the device.
   > Looks like we can't connect to the URL for your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.
 - The MDM terms and conditions in Azure AD is blank or doesn't contain the correct URL.
 
-#### Resolution
+**Solution:**
 
 To fix this issue, use one of the following methods:
 
-##### Assign a valid license to the user
+### Assign a valid license to the user
 
 Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or a Microsoft 365 license to the user.
 
-##### Correct the MDM terms of use URL
+### Correct the MDM terms of use URL
 
   1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Azure Active Directory**.
   2. Select **Mobility (MDM and MAM)**, and then click **Microsoft Intune**.
   3. Select **Restore default MDM URLs**, verify that the **MDM terms of use URL** is set to **`https://portal.manage.microsoft.com/TermsofUse.aspx`**.
   4. Choose **Save**.
 
-### Something went wrong.
+## Something went wrong.
 
 Error 80180026: "Something went wrong. Confirm you are using the correct sign-in information and that your organization uses this feature. You can try to do this again or contact your system administrator with the error code 80180026."
 
@@ -165,50 +151,51 @@ Error 80180026: "Something went wrong. Confirm you are using the correct sign-in
 - MDM automatic enrollment is enabled in Azure.
 - The Intune PC software client (Intune PC agent) is installed on the Windows 10 computer.
 
-#### Resolution
+**Solution:**
 
 Use one of the following methods to address this issue:
 
-##### Disable MDM automatic enrollment in Azure.
+### Disable MDM automatic enrollment in Azure.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 2. Go to **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 3. Set **MDM User scope** to **None**, and then click **Save**.
 
-##### Uninstall
+### Uninstall the Intune client
+
 Uninstall the Intune PC software client agent from the computer.
 
-### The software cannot be installed.
+## The software cannot be installed.
 
 Error: "The software cannot be installed, 0x80cf4017."
 
 **Cause:** The client software is out of date.
 
-#### Resolution
+**Solution:**
 
 1. Sign in to [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).
 2. Go to **Admin** > **Client Software Download**, and then click **Download Client Software**.
 3. Save the installation package, and then install the client software.
 
-### The account certificate is not valid and may be expired.
+## The account certificate is not valid and may be expired.
 
 Error: "The account certificate is not valid and may be expired, 0x80cf4017."
 
 **Cause:** The client software is out of date.
 
-#### Resolution
+**Solution:**
 
 1. Sign in to [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).
 2. Go to **Admin** > **Client Software Download**, and then click **Download Client Software**.
 3. Save the installation package, and then install the client software.
 
-### Your organization does not support this version of Windows.
+## Your organization does not support this version of Windows.
 
 Error: "There was a problem. Your organization does not support this version of Windows.  (0x80180014)"
 
 **Cause:** Windows MDM enrollment is disabled in your Intune tenant.
 
-#### Resolution
+**Solution:**
 
 To fix this issue in a stand-alone Intune environment, follow these steps:
 
@@ -216,11 +203,11 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 2. Choose **Properties** > **Edit** (next to **Platform settings**) > **Allow** for **Windows (MDM)**.
 3. Click **Review + Save**.
 
-### A setup failure has occurred during bulk enrollment.
+## A setup failure has occurred during bulk enrollment.
 
 **Cause:** The Azure AD user accounts in the account package (Package_GUID) for the respective provisioning package aren't allowed to join devices to Azure AD. These Azure AD accounts are automatically created when you set up a provisioning package with Windows Configuration Designer (WCD) or the **Set up School PCs** app. And these accounts are then used to join the devices to Azure AD.
 
-#### Resolution
+**Solution:**
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) as administrator.
 2. Go to **Azure Active Directory > Devices > Device Settings**.
@@ -232,7 +219,7 @@ For more information about how to create a provisioning package for Windows Conf
 
 For more information about the **Set up School PCs** app, see [Use the Set up School PCs app](/education/windows/use-set-up-school-pcs-app).
 
-### Auto MDM Enroll: Failed
+## Auto MDM Enroll: Failed
 
 When you try to enroll a Windows 10 device automatically by using Group Policy, you experience the following issues:
 
@@ -252,7 +239,7 @@ When you try to enroll a Windows 10 device automatically by using Group Policy, 
 - The UPN contains an unverified or non-routable domain, such as `.local` (like joe@contoso.local).
 - **MDM user scope** is set to **None**.
 
-#### Resolution
+**Solution:**
 
 If the UPN contains an unverified or non-routable domain, follow these steps:
 
@@ -266,6 +253,7 @@ If the UPN contains an unverified or non-routable domain, follow these steps:
     Import-Module ADSync
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
+
 > [!NOTE]
 > Another solution to this issue is [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id). Be sure to review the article before you decide to implement this solution.
 
@@ -276,11 +264,11 @@ If **MDM user scope** is set to **None**, follow these steps:
 3. Set **MDM user scope** to **All**. Or, set **MDM user scope** to **Some**, and select the Groups that can automatically enroll their Windows 10 devices.
 4. Set **MAM User scope** to **None**.
 
-### An error occurred while creating Autopilot profile.
+## An error occurred while creating Autopilot profile.
 
 **Cause:** The device name template's specified naming format doesn't meet the requirements. For example, you use lowercase for the serial macro, such as %serial% instead of %SERIAL%.
 
-#### Resolution
+**Solution:**
 
 Make sure that the naming format meets the following requirements:
 
@@ -289,26 +277,26 @@ Make sure that the naming format meets the following requirements:
 - Names can't contain blank space.
 - Use the %SERIAL% macro to add a hardware-specific serial number. Or, use the %RAND:<# of digits>% macro to add a random string of numbers, the string contains <# of digits> digits. For example, MYPC-%RAND:6% generates a name such as MYPC-123456.
 
-### Something went wrong. OOBEIDPS.
+## Something went wrong. OOBEIDPS.
 
 **Cause:** This issue occurs if there's a proxy, firewall, or other network device that's blocking access to the Identity Provider (IdP).
 
-#### Resolution
+**Solution:**
 
 Make sure that the required access to internet-based services for Autopilot isn't blocked. For more information, see [Windows Autopilot networking requirements](/mem/autopilot/networking-requirements).
 
-### Autopilot device enrollment failed with error HRESULT = 0x80180022
+## Autopilot device enrollment failed with error HRESULT = 0x80180022
 
 **Cause:** The device being provisioned is running Windows Home Edition
 
-#### Resolution
+**Solution:**
 Update the device to Pro edition or higher
 
-### Registering your device for mobile management (Failed: 3, 0x801C03EA).
+## Registering your device for mobile management (Failed: 3, 0x801C03EA).
 
 **Cause:** The device has a TPM chip that supports version 2.0, but hasn't yet been upgraded to version 2.0.
 
-#### Resolution
+**Solution:**
 
 Upgrade the TPM chip to version 2.0.
 
@@ -316,7 +304,7 @@ If the issue persists, check whether the same device is in two assigned groups, 
 
 For more information about how to deploy a Windows device in kiosk mode with Autopilot, see [Deploying a kiosk using Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
-### Securing your hardware (Failed: 0x800705b4).
+## Securing your hardware (Failed: 0x800705b4).
 
 Error 800705b4:
 
@@ -331,13 +319,13 @@ Error 800705b4:
   - Windows 10 build 1709 or a later version.
   - If Hybrid Azure AD Join is used, Windows 10 build 1809 or a later version.
 
-#### Resolution
+**Solution:**
 
 Make sure that the targeted device meets both requirements that are described in the **Cause** section.
 
 For more information about how to deploy a Windows device in kiosk mode with Autopilot, see [Deploying a kiosk using Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
-### Something went wrong. Error Code 80070774.
+## Something went wrong. Error Code 80070774.
 
 Error 0x80070774: Something went wrong. Confirm you are using the correct sign-in information and that your organization uses this feature. You can try to do this again or contact your system administrator with the error code 80070774.
 
@@ -347,14 +335,14 @@ This issue typically occurs before the device is restarted in a Hybrid Azure AD 
 
 Another possible cause for this error is that the Autopilot object's associated AzureAD device has been deleted. To resolve this issue, delete the Autopilot object and reimport the hash to generate a new one.
 
-#### Resolution
+**Solution:** 1
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
 2. Select the device which is experiencing the issue, and then click the ellipsis (…) on the rightmost side.
 3. Select **Unassign user** and wait for the process to finish.
 4. Verify that the Hybrid Azure AD Autopilot profile is assigned before reattempting OOBE.
 
-#### Second resolution
+**Solution:** 2
 
 If the issue persists, on the server that hosts the Offline Domain Join Intune Connector, check to see if Event ID 30312 is logged within the ODJ Connector Service log. Event 30312 resembles the following event:
 
@@ -397,26 +385,19 @@ This issue is usually caused by incorrectly delegating permissions to the organi
 10. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 11. Select **Next** > **Finish**.
 
-### The Enrollment Status Page times out before the sign-in screen
+## The Enrollment Status Page times out
+
+In this scenario, the Enrollment Status Page (ESP) times out before the sign in screen can load.
 
 **Cause:** This issue can arise if all the following conditions are true:
 
-- You're using the Enrollment Status Page to track Microsoft Store for Business apps.
+- You're using the ESP to track Microsoft Store for Business apps.
 - You have an Azure AD Conditional Access policy that uses the **Require device to be marked as compliant** control.
 - The policy applies to All Cloud apps and Windows.
 
-#### Resolution
+**Solution:**
 
 Try one of the following methods:
 
 - Target your Intune compliance policies to devices. Make sure that compliance can be determined before the user logs on.
 - Use offline licensing for store apps. This way, the Windows client doesn't have to check with the Microsoft Store before determining device compliance.
-
-## Next steps
-
-- [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
-- [Ask a question on the Intune forum](/answers/products/mem)
-- [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
-- [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
-- [Get support in Microsoft Endpoint Manager](/mem/get-support)
-- [Find co-management enrollment errors](/mem/configmgr/comanage/how-to-monitor#enrollment-errors)
