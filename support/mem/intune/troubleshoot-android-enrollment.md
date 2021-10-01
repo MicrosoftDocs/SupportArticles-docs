@@ -1,12 +1,20 @@
 ---
 title: Troubleshoot Android enterprise devices in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll Android devices in Intune.
-ms.date: 02/25/2020
+ms.date: 10/01/2021
 ms.reviewer: mghadial
 ---
 # Troubleshoot Android Enterprise device problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when Android Enterprise devices in Intune.
+This article helps Intune administrators understand and troubleshoot problems when Android Enterprise devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troublehsooting scenarios.
+
+<!-- moved from general, need to edit-->
+The following table lists errors that end users might see while enrolling Android devices in Intune.
+
+|Error message|Issue|Resolution|
+|---|---|---|
+|**IT admin needs to assign license for access**<br>Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later.|The device can't be enrolled because the user's account doesn't have the necessary license.|Before users can enroll their devices, they must have been assigned the necessary license. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true:<ol><li>Intune has been set as the mobile device management authority</li><li>They're using a System Center 2012 R2 Configuration Manager license.</li></ol>For more information, see [Assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).|
+|**IT admin needs to set MDM authority**<br>Looks like your IT admin hasn't set an MDM authority. Get help from your IT admin or try again later.|The mobile device management authority hasn't been defined.|The mobile device management authority hasn't been set in Intune. See information about how to [set the mobile device management authority](/mem/intune/fundamentals/mdm-authority-set).|
 
 ## Apps on Android Enterprise devices
 

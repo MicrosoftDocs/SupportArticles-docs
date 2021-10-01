@@ -1,29 +1,46 @@
 ---
 title: Troubleshooting Windows device enrollment problems in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll Windows devices in Intune.
-ms.date: 12/22/2020
+ms.date: 10/01/2021
 ms.reviewer: mghadial
 ---
 # Troubleshoot Windows device enrollment problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when enrolling Windows devices in Intune.
+This article helps Intune administrators understand and troubleshoot problems when enrolling Windows devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troublehsooting scenarios.
 
-## Prerequisites
+<!-- moved from general, need to rework-->
+## PC Issues
 
-Before you start troubleshooting, it's important to collect some basic information. This information can help you better understand the problem and reduce the time to find a resolution.
+|Error message|Issue|Resolution|
+|---|---|---|
+|**IT admin needs to assign license for access**<br>Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later.|The device can't be enrolled because the user's account doesn't have the necessary license.|Before users can enroll their devices, they must have been assigned the necessary license. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true: <ol><li>Intune has been set as the mobile device management authority</li><li>They're using a System Center 2012 R2 Configuration Manager license.</li></ol>See information about [how to assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).|
 
-Collect the following information about the problem:
+### The machine is already enrolled - Error hr 0x8007064c
 
-- Is a valid Intune license assigned to the user? Before users can enroll their devices, they must have the necessary license assigned.
-- Is the latest update installed on the Windows device? Some features in Intune only work with the latest version of Windows. There are many fixes for known issues available through Windows Update. Applying all the latest updates often fixes a Windows device enrollment problem.
-- What is the exact error message?
-- Where do you see the error message?
-- When did the problem start? Has enrollment ever worked? 
-- What platform (Android, iOS/iPadOS, Windows) has the problem?
-- How many users are affected? Are all users affected or just some?
-- How many devices are affected? Are all devices affected or just some?
-- What is the mobile device management (MDM) authority?
-- How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Automated Device Enrollment (ADE) with enrollment profiles?
+**Issue:** Enrollment fails with the error **The machine is already enrolled**. The enrollment log shows error **hr 0x8007064c**.
+
+This failure may occur because the computer:
+
+- was previously enrolled, or
+- has the cloned image of a computer that was already enrolled.
+The account certificate of the previous account is still present on the computer.
+
+**Resolution:**
+
+1. From the **Start** menu, type **Run** -> **MMC**.
+1. Choose **File** > **Add/ Remove Snap-ins**.
+1. Double-click **Certificates**, choose **Computer account** > **Next**, and select **Local Computer**.
+1. Double-click **Certificates (Local computer)** and choose **Personal/ Certificates**.
+1. Look for the Intune cert issued by Sc_Online_Issuing, and delete it, if present.
+1. If the following registry key exists, delete it: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** and all sub keys.
+1. Try to re-enroll.
+1. If the PC still can't enroll, look for and delete this key, if it exists: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
+1. Try to re-enroll.
+
+    > [!IMPORTANT]
+    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs.
+    > For more information about how to back up and restore the registry, read [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756)
+
 
 ## Error messages
 

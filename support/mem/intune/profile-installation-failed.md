@@ -6,17 +6,7 @@ ms.date: 09/30/2021
 
 # Troubleshooting profile installation failed error on iOS or iPadOS devices
 
-This article gives troubleshooting steps to help you diagnose and resolve when a user receives a **Profile installation failed** error on an iOS/iPadOS device.
-
-## General troubleshooting steps for failed profile installation
-
-Before you continue to scenario-specific troubleshooting steps, complete the following checks.
-
-1. Confirm that the user is assigned an appropriate license for the version of the Intune service that you're using.
-1. Confirm that the device isn't already enrolled with another MDM provider.
-1. Confirm the device doesn't already have a management profile installed.
-1. Navigate to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) and try to install the profile when prompted.
-1. Confirm that Safari for iOS/iPadOS is the default browser and that cookies are enabled.
+This article gives troubleshooting steps to help you diagnose and resolve when a user receives a **Profile installation failed** error on an iOS/iPadOS device. Before you continue to scenario-specific troubleshooting steps, complete the general checks in [Profile installation failed](troubleshoot-device-enrollment-in-intune.md#profile-installation-failed).
 
 ## Error: Profile Installation Failed. A Network Error Has Occurred.
 
@@ -34,7 +24,7 @@ This error message can indicate a few different issues.
 
 Your Intune tenant is configured to only allow corporate-owned devices. 
 
-Solution:
+**Solution:**
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** > **Enroll devices** > **Enrollment restrictions**.
@@ -47,7 +37,7 @@ Solution:
 
 You are enrolling a device that was previously enrolled with a different user account, and the previous user was not appropriately removed from Intune.
 
-Solution:
+**Solution:**
 
 1. Cancel any current profile installation.
 1. Open [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) in Safari.
@@ -60,7 +50,7 @@ Solution:
 
 The device is already enrolled with another MDM provider.
 
-Solution:
+**Solution:**
 
 1. Open **Settings** on the iOS/iPadOS device, go to **General > Device Management**.
 1. Remove any existing management profile.
@@ -70,7 +60,7 @@ Solution:
 
 The user who is trying to enroll the device does not have a Microsoft Intune license.
 
-Solution:
+**Solution:**
 
 1. Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then choose **Users > Active Users**.
 1. Select the user account that you want to assign an Intune user license to, and then choose **Product licenses > Edit**.

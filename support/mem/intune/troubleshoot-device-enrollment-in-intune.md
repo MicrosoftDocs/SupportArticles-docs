@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot device enrollment
 description: Suggestions for troubleshooting device enrollment issues in Microsoft Intune.
-ms.date: 12/11/2020
+ms.date:10/01/2021
 ms.reviewer: damionw
 ---
 # Troubleshoot device enrollment in Microsoft Intune
 
-This article provides suggestions for troubleshooting [device enrollment](/mem/intune/enrollment/device-enrollment) issues. If this information doesn't solve your problem, see [How to get support in Microsoft Endpoint Manager](/mem/get-support) to find more ways to get help.
+This article provides suggestions for troubleshooting [device enrollment](/mem/intune/enrollment/device-enrollment) issues. Browse the troubleshooting guide for OS-specific enrollment troublehshooting.
 
 ## Initial troubleshooting steps
 
@@ -48,23 +48,17 @@ You can also make sure that the date and time on the user's device are set corre
 1. Make sure that the date and time are set close to GMT standards (+ or - 12 hours) for the end user's time zone.
 1. Uninstall and reinstall the Intune company portal (if applicable).
 
-## General enrollment issues
+## Device cap reached
 
-These issues may occur on all device platforms.
+A user receives an error during enrollment, such as "DeviceCapReached" or a general message such as "Company Portal Temporarily Unavailable".
 
-### Device cap reached
+**Cause:** This error indicates that a user is trying to enroll more devices than the device enrollment limit.
 
-**Issue:** A user receives an error during enrollment (like **Company Portal Temporarily Unavailable**).
-
-**Resolution:**
-
-#### Check number of devices enrolled and allowed
-
-Check to see that the user isn't assigned more than the maximum number of devices by following these steps:
+**Solution:** Check and adjust number of devices enrolled and allowed. Use these steps to make sure hte user isn't assigned more than the maximum number of devices.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
 
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
+2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices the user has enrolled.
 
 3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll anymore until:
     - [Existing devices are removed](/mem/intune/remote-actions/devices-wipe), or
@@ -78,11 +72,13 @@ To avoid hitting device caps, be sure to remove stale device records.
 >
 > A user account that is added to Device Enrollment Managers account will not be able to complete enrollment when Conditional Access policy is enforced for that specific user login.
 
-### Company Portal Temporarily Unavailable
+## Company Portal Temporarily Unavailable
 
-**Issue:** Users receive a **Company Portal Temporarily Unavailable** error on their device.
+Users receive a **Company Portal Temporarily Unavailable** error on their device.
 
-**Resolution:**
+**Cause:** The Company Portal app on the device is out of date or corrupted.
+
+**Solution:**
 
 1. Remove the Intune Company Portal app from the device.
 
@@ -94,7 +90,10 @@ To avoid hitting device caps, be sure to remove stale device records.
 
 5. If the user successfully logs in, an iOS/iPadOS device will prompt you to install the Intune Company Portal app and enroll. On an Android device, you'll need to manually install the Intune Company Portal app, after which you can retry enrolling.
 
-### MDM authority not defined
+> [!NOTE]
+> This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. If these steps do not resolve the issue, follow the solution steps for [Device cap reached](#device-cap-reached).
+
+## MDM authority not defined
 
 **Issue:** A user receives an **MDM authority not defined** error.
 
@@ -113,7 +112,7 @@ To avoid hitting device caps, be sure to remove stale device records.
 
     4. Turn on DirSync again and check if the user is now synced properly.
 
-### Unable to create policy or enroll devices if the company name contains special characters
+## Unable to create policy or enroll devices if the company name contains special characters
 
 **Issue:** You can't create policy or enroll devices.
 
@@ -130,195 +129,18 @@ To avoid hitting device caps, be sure to remove stale device records.
 
 A [rollup for AD FS 2.0](https://support.microsoft.com/help/2607496) works in conjunction with the `SupportMultipleDomain` switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers. For more information, see [this blog](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
-## Android issues
+## Profile installation failed
 
-### Android enrollment errors
+**Issue:** A user receives a "Profile installation failed" error.
 
-The following table lists errors that end users might see while enrolling Android devices in Intune.
-
-|Error message|Issue|Resolution|
-|---|---|---|
-|**IT admin needs to assign license for access**<br>Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later.|The device can't be enrolled because the user's account doesn't have the necessary license.|Before users can enroll their devices, they must have been assigned the necessary license. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true:<ol><li>Intune has been set as the mobile device management authority</li><li>They're using a System Center 2012 R2 Configuration Manager license.</li></ol>For more information, see [Assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).|
-|**IT admin needs to set MDM authority**<br>Looks like your IT admin hasn't set an MDM authority. Get help from your IT admin or try again later.|The mobile device management authority hasn't been defined.|The mobile device management authority hasn't been set in Intune. See information about how to [set the mobile device management authority](/mem/intune/fundamentals/mdm-authority-set).|
-
-### Devices fail to check in with the Intune service and display as **Unhealthy** in the Intune admin console
-
-**Issue:** Some Samsung devices that are running Android versions 4.4.x and 5.x might stop checking in with the Intune service. If devices don't check in:
-
-- They can't receive policy, apps, and remote commands from the Intune service.
-- They show a Management State of **Unhealthy** in the administrator console.
-- Users who are protected by Conditional Access policies might lose access to corporate resources.
-
-Samsung Smart Manager software, which ships on certain Samsung devices, can deactivate the Intune Company Portal and its components. When the Company Portal is in a deactivated state, it can't run in the background and can't contact the Intune service.
-
-**Resolution 1:**
-
-Tell your users to start the Company Portal app manually. Once the app restarts, the device checks in with the Intune service.
-
-> [!IMPORTANT]
-> Opening the Company Portal app manually is a temporary solution, because Samsung Smart Manager may deactivate the Company Portal app again.
-
-**Resolution 2:**
-
-Tell your users to try upgrading to Android 6.0. The deactivation issue doesn't occur on Android 6.0 devices. To check if an update is available, go to **Settings** > **About device** > **Download updates manually** > follow the prompts.
-
-**Resolution 3:**
-
-If Resolution 2 doesn't work, have your users follow these steps to make Smart Manager exclude the Company Portal app:
-
-1. Launch the Smart Manager app on the device.
-
-   ![Select Smart Manager icon on device](./media/troubleshoot-device-enrollment-in-intune/smart-manager-app-icon.png)
-
-2. Choose the **Battery** tile.
-
-   ![Select the Battery tile](./media/troubleshoot-device-enrollment-in-intune/smart-manager-battery-tile.png)
-
-3. Under **App power saving** or **App optimization**, select **Detail**.
-
-   ![Select Detail under App power saving or App optimization](./media/troubleshoot-device-enrollment-in-intune/smart-manager-app-power-saving-detail.png)
-
-4. Choose **Company Portal** from the list of apps.
-
-   ![Select Company Portal from the apps list](./media/troubleshoot-device-enrollment-in-intune/smart-manager-company-portal.png)
-
-5. Choose **Turned off**.
-
-   ![Select Turned off from App optimization dialog](./media/troubleshoot-device-enrollment-in-intune/smart-manager-app-optimization-turned-off.png)
-
-6. Under **App power saving** or **App optimization**, confirm that Company Portal is turned off.
-
-   ![Verify that Company Portal is turned off](./media/troubleshoot-device-enrollment-in-intune/smart-manager-verify-comp-portal-turned-off.png)
-
-### Profile installation failed
-
-**Issue:** A user receives a **Profile installation failed** error on an Android device.
-
-**Resolution:**
+**Solution:**
 
 1. Confirm that the user is assigned an appropriate license for the version of the Intune service that you're using.
+1. Confirm that the device isn't already enrolled with another MDM provider.
+1. Confirm that the device doesn't already have a management profile installed.
+1. For iOS/iPadOD devices, confirm that Safari is the default browser and that cookies are enabled. For Android devices, confirm that Chrome is the default browser and that cookies are enabled.
 
-2. Confirm that the device isn't already enrolled with another MDM provider.
-
-3. Confirm that the device doesn't already have a management profile installed.
-
-4. Confirm that Chrome for Android is the default browser and that cookies are enabled.
-
-### Android certificate issues
-
-**Issue**: Users receive the following message on their device:
-**You can't sign in because your device is missing a required certificate.**
-
-**Resolution 1**:
-
-The user might be able to retrieve the missing certificate by following the instructions in [Your device is missing a required certificate](/mem/intune/user-help/your-device-is-missing-an-it-required-certificate-android). If the error persists, try Resolution 2.
-
-**Resolution 2**:
-
-After entering their corporate credentials and getting redirected for federated login, users might still see the missing certificate error. In this case, the error may mean that an intermediate certificate is missing from your Active Directory Federation Services (AD FS) server
-
-The certificate error occurs because Android devices require intermediate certificates to be included in an [SSL Server hello](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Currently, a default AD FS server or WAP - AD FS Proxy server installation sends only the AD FS service SSL certificate in the SSL server hello response to an SSL Client hello.
-
-To fix the issue, import the certificates into the Computers Personal Certificates on the AD FS server or proxies as follows:
-
-1. On the AD FS and proxy servers, right-click **Start** > **Run** > **certlm.msc** to launch the Local Machine Certificate Management Console.
-2. Expand **Personal** and choose **Certificates**.
-3. Find the certificate for your AD FS service communication (a publicly signed certificate), and double-click to view its properties.
-4. Choose the **Certification Path** tab to see the certificate's parent certificate/s.
-5. On each parent certificate, choose **View Certificate**.
-6. Choose **Details** > **Copy to file…**.
-7. Follow the wizard prompts to export or save the public key of the parent certificate to the file location of your choice.
-8. Right-click **Certificates** > **All Tasks** > **Import**.
-9. Follow the wizard prompts to import the parent certificate(s) to **Local Computer\Personal\Certificates**.
-10. Restart the AD FS servers.
-11. Repeat the above steps on all of your AD FS and proxy servers.
-
-To verify a proper certificate installation, you can use the diagnostics tool available on [https://www.digicert.com/help/](https://www.digicert.com/help/). In the **Server Address** box, enter your AD FS server's FQDN, such as `sts.contoso.com`, and then click **Check Server**.
-
-**To validate that the certificate installed correctly**:
-
-The follow steps describe just one of many methods and tools that you can use to validate that the certificate installed correctly.
-
-1. Go to the [free Digicert tool](https://www.digicert.com/help/).
-2. Enter your AD FS server's fully qualified domain name (for example, sts.contoso.com) and select **CHECK SERVER**.
-
-If the Server certificate is installed correctly, you see all check marks in the results. If the problem above exists, you see a red X in the **Certificate Name Matches** and the **SSL Certificate is correctly Installed** sections of the report.
-
-**Resolution 3**:
-
-The users are unable to authenticate in Company Portal. But they can authenticate in Microsoft Authenticator and web browsers.
-
-This issue occurs if your AD FS server uses a user certificate rather than a certificate issued by a public certificate authority (CA).
-
-There are two certificate stores in Android devices:
-
-- The user certificate store
-- The system certificate store
-
-Staring in Android 7.0, apps ignore user certificates by default, unless the apps explicitly opt in. For more information, see [Changes to Trusted Certificate Authorities in Android Nougat](https://android-developers.googleblog.com/2016/07/changes-to-trusted-certificate.html).
-
-To fix this issue, use a certificate that chains to a publicly trusted root CA in your AD FS server. A list of public CAs on Android can be found at [https://android.googlesource.com/platform/system/ca-certificates/+/master/files/](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
-
-
-
-## macOS issues
-
-### macOS enrollment errors
-
-**Error message 1:** *It looks like you're using a virtual machine. Make sure you've fully configured your virtual machine, including serial number and hardware model. If this isn't a virtual machine, please contact support.*  
-
-**Error message 2:** *We're having trouble getting your device managed. This problem could be caused if you're using a virtual machine, have a restricted serial number, or if this device is already assigned to someone else. Learn how to resolve these problems or contact your company support.*
-
-**Issue:** This message could be a result of any of the following reasons:
-
-- A macOS virtual machine (VM) isn't configured correctly  
-- You've enabled device restrictions that require the device to be corporate-owned or have a registered device serial number in Intune  
-- The device has already been enrolled and is still assigned to someone else in Intune  
-
-**Resolution:** First, check with your user to determine which of the issues affects their device. Then complete the most relevant of the following solutions:
-
-- If the user is enrolling a VM for testing, make sure it's been fully configured so that Intune can recognize its serial number and hardware model. Learn more about how to [set up VMs](/mem/intune/enrollment/macos-enroll#enroll-virtual-macos-machines-for-testing) in Intune.
-- If your organization turned on enrollment restrictions that block personal macOS devices, you must manually [add the personal device's serial number](/mem/intune/enrollment/corporate-identifiers-add#manually-enter-corporate-identifiers) to Intune.  
-- If the device is still assigned to another user in Intune, its former owner did not use the Company Portal app to remove or reset it. To clean up the stale device record from Intune:  
-
-    1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with your administrative credentials.
-    2. Choose **Devices** > **All devices**.  
-    3. Find the device with the enrollment problem. Search by device name or MAC/HW Address to narrow your results.
-    4. Select the device > **Delete**. Delete all other entries associated with the device.  
-
-## PC Issues
-
-|Error message|Issue|Resolution|
-|---|---|---|
-|**IT admin needs to assign license for access**<br>Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later.|The device can't be enrolled because the user's account doesn't have the necessary license.|Before users can enroll their devices, they must have been assigned the necessary license. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true: <ol><li>Intune has been set as the mobile device management authority</li><li>They're using a System Center 2012 R2 Configuration Manager license.</li></ol>See information about [how to assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).|
-
-### The machine is already enrolled - Error hr 0x8007064c
-
-**Issue:** Enrollment fails with the error **The machine is already enrolled**. The enrollment log shows error **hr 0x8007064c**.
-
-This failure may occur because the computer:
-
-- was previously enrolled, or
-- has the cloned image of a computer that was already enrolled.
-The account certificate of the previous account is still present on the computer.
-
-**Resolution:**
-
-1. From the **Start** menu, type **Run** -> **MMC**.
-1. Choose **File** > **Add/ Remove Snap-ins**.
-1. Double-click **Certificates**, choose **Computer account** > **Next**, and select **Local Computer**.
-1. Double-click **Certificates (Local computer)** and choose **Personal/ Certificates**.
-1. Look for the Intune cert issued by Sc_Online_Issuing, and delete it, if present.
-1. If the following registry key exists, delete it: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey** and all sub keys.
-1. Try to re-enroll.
-1. If the PC still can't enroll, look for and delete this key, if it exists: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
-1. Try to re-enroll.
-
-    > [!IMPORTANT]
-    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs.
-    > For more information about how to back up and restore the registry, read [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756)
-
-## General enrollment Error codes
+## Enrollment error codes
 
 |Error code|Possible problem|Suggested resolution|
 |--------------|--------------------|----------------------------------------|
@@ -338,7 +160,3 @@ The account certificate of the previous account is still present on the computer
 |0x8004300B, 0x80CF300B|The client software installation package can't run because the version of Windows that is running on the client isn't supported.|Intune doesn't support the version of Windows that is running on the client computer.|
 |0xAB2|The Windows Installer couldn't access VBScript run time for a custom action.|This error is caused by a custom action that is based on Dynamic-Link Libraries (DLLs).|
 |0x80cf0440|The connection to the service endpoint terminated.|Trial or paid account is suspended. Create a new trial or paid account and re-enroll.|
-
-## Next steps
-
-If this troubleshooting information didn't help you, contact Microsoft Support as described in [How to get support in Microsoft Endpoint Manager](/mem/get-support).

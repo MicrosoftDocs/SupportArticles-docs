@@ -7,7 +7,7 @@ ms.date: 09/30/2021
 
 # Troubleshoot iOS/iPadOS device enrollment problems in Microsoft Intune
 
-This article helps Intune administrators understand and troubleshoot problems when enrolling iOS/iPadOS devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for initial troubleshooting steps for general scenarios.  
+This article helps Intune administrators understand and troubleshoot problems when enrolling iOS/iPadOS devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troublehsooting scenarios.  
 
 ## iOS/iPadOS enrollment errors
 
@@ -16,7 +16,8 @@ The following table lists errors that end users might see while enrolling iOS/iP
 |Error message|Issue|Resolution|
 |-------------|-----|----------|
 |NoEnrollmentPolicy|No enrollment policy found| The Apple Push Notification Service (APNs) certificate is missing, invalid, or expired. Check that enrollment has been set up correctly and that **iOS/iPadOS as a platform** is enabled. For instructions, see [Set up iOS/iPadOS and Mac device management](/mem/intune/enrollment/ios-enroll),[Get an Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#steps-to-get-your-certificate), and [Renew Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#renew-apple-mdm-push-certificate).|
-|DeviceCapReached|Too many mobile devices are enrolled already.|The user must remove one of their currently enrolled mobile devices from the Company Portal before enrolling another. See detailed instructions [below](#device-cap-reached).|
+|DeviceCapReached|Too many mobile devices are enrolled already.|The user must remove one of their currently enrolled mobile devices from the Company Portal before enrolling another. See detailed instructions [here](troubleshoot-device-enrollment-in-intune.md#device-cap-reached).|
+|Company Portal Temporarily Unavailable| The Company Portal app on the device is out of date or corrupted.| Remove the app, validate user credentials, and then resinstall the app. See detailed instructions [here](troubleshoot-device-enrollment-in-intune.md#company-portal-temporarily-unavailable).|
 |APNSCertificateNotValid|There's a problem with the certificate that lets the mobile device communicate with your company's network.<br /><br />|The Apple Push Notification Service (APNs) provides a channel to contact enrolled iOS/iPadOS devices. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul>Review the information about how to set up users in [Sync Active Directory and add users to Intune](/mem/intune/fundamentals/users-add) and [organizing users and devices](/mem/intune/fundamentals/groups-add).|
 |AccountNotOnboarded|There's a problem with the certificate that lets the mobile device communicate with your company's network. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul> | 
 Renew the APNs certificate, and then re-enroll the device.<br/>**Important:** Make sure that you renew the APNs certificate. Don't *replace* the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune. For Intune standalone, see [Renew Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#renew-apple-mdm-push-certificate). For Microsoft 365, see [Create an APNs Certificate for iOS devices](/microsoft-365/admin/basic-mobility-security/create-an-apns-certificate-for-ios-devices).|
@@ -50,8 +51,6 @@ This section includes token sync errors with:
 This section provides troubleshooting steps for these additional scenarios:
 
 - [Verify WS-Trust 1.3 is enabled](#verify-ws-trust-13-is-enabled)
-- [Company Portal Temporarily Unavailable](#company-portal-temporarily-unavailable)
-- [Device Cap Reached](#device-cap-reached)
 - [Workplace Join failed](#workplace-join-failed)
 - [User Name Not Recognized](#user-name-not-recognized)
 - [XPC_TYPE_ERROR Connection invalid](#xpctypeerror-connection-invalid)
@@ -71,32 +70,6 @@ Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
 For more information, see [Get-AdfsEndpoint documentation](/powershell/module/adfs/get-adfsendpoint) and [Best practices for securing Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). For help with determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider, contact Microsoft Support if you use AD FS. Otherwise, contact your third-party identity vendor.
-
-### Company Portal Temporarily Unavailable
-
-An error message similar to "Company Portal Temporarily Unavailable. The Company Portal app encountered a problem. If the problem persists, contact your system administrator." indicates that the Company Portal app  on the device is out of date or corrupted.
-
-**Solution:**
-
-1. Remove the Company Portal app from the device.
-2. Download and install the **Microsoft Intune Company Portal** app from **App Store**.
-3. Re-enroll the device.
-
-> [!NOTE]
-> This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. Follow the solution steps for Device Cap Reached below if these steps do not resolve the issue.
-
-### Device Cap Reached
-
-This error indicates that a user is trying to enroll more devices than the device enrollment limit.
-
-**Solution:**
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All Devices**, and check the number of devices the user has enrolled.
-    > [!NOTE]
-    > You should also have the affected user logon to the [Intune user portal](https://portal.manage.microsoft.com/) and check devices that have enrolled. There may be devices that appear in the [Intune user portal](https://portal.manage.microsoft.com/) but not in the [Intune admin portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview), such devices also count toward the device enrollment limit.
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > check the device enrollment limit. By default, the limit is set to 15. 
-3. If the number of devices enrolled has reached the limit, [remove unnecessary devices](/mem/intune/user-help/unenroll-your-device-from-intune-ios), or increase the device enrollment limit. Because every enrolled device consumes an Intune license, we recommend that you always remove unnecessary devices first.
-4. Re-enroll the device.
 
 ### Workplace Join failed
 

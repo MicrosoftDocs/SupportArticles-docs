@@ -148,6 +148,8 @@
     items:
     - name: Troubleshoot Android Enterprise device enrollment
       href: troubleshoot-android-enrollment.md
+    - name: Troubleshoot Android certiicate issues
+      href: troubleshoot-android-certificates.md
     - name: Device ownership is changed to Corporate
       href: device-ownership-changed-to-corporate.md
     - name: End-to-end guide for configuring Android enterprise devices
@@ -168,6 +170,8 @@
       href: dep-enrollment-xpc-type-error.md
     - name: Keychain error -25244 during enrollment
       href: keychain-error-enrolling-macos-devices.md
+  - name: Troubleshoot macOS virtual machine enrollment
+    href: troubleshoot-macos-vm-enrollment.md
   - name: Windows enrollment
     items:
     - name: Troubleshoot Windows device enrollment
