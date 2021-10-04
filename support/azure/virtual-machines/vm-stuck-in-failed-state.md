@@ -16,25 +16,30 @@ ms.author: mimckitt
 This article provides steps to resolve issues where the virtual machine (VM) is stuck in a failed state.
 
 ## Symptom
-
-When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays that the operating system (OS) was unresponsive during a boot with the message **Applying Audit Policy Configuration policy**.
-
-  ![The OS booting with the message: “Applying Audit Policy Configuration policy”](./media/vm-unresponsive-applying-audit-configuration-policy/1.png)
-
-  ![The OS booting in Windows Server 2012 with the message: “Applying Audit Policy Configuration policy”](./media/vm-unresponsive-applying-audit-configuration-policy/2.png)
-
+Virtual Machine (VM) status in the Azure portal is marked as “Failed”. 
 ## Cause
-
-There are conflicting locks when the policy attempts to clean up old user profiles.
-
-> [!NOTE]
-> This applies only to Windows Server 2012 and Windows Server 2012 R2.
-
-Here’s the problematic policy:
-*Computer Configuration\Policies\Administrative Templates\System/User Profiles\Delete user profiles older than a specified number of days on system restart.*
-
+Last operation against the Virtual Machine (VM) failed after the input was accepted.
 ## Solution
 
-Using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) REST API, you can push the latest goal state in hopes of fixing some issues of broken/”failed” VMs or inconsistent state. 
+Using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) REST API, you can push the latest goal state of Virtual Machine (VM) to correct the inconsistent state. 
 
-1. 
+```HTTP
+POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/reapply?api-version=2021-07-01
+```
+
+### Example
+
+```HTTPS
+POST https://management.azure.com/subscriptions/1234567-1234-1234-1234-1232456789abc/resourceGroups/ResourceGroup/providers/Microsoft.Compute/virtualMachines/VMName/reapply?api-version=2021-07-01
+```
+
+### Responses
+
+| Name | Type | Description | 
+|---|---|---|
+| 200 OK | | OK |
+| 202 Accepted | Accepted | 
+| Other Status Codes | [CloudError](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply#clouderror) | Error response describing why the operation failed. | 
+
+## Next steps
+If using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) API was not able to clear the VM failed state, try [redploying to a new host node](virtual-machines/redeploy-to-new-node-linux.md).
