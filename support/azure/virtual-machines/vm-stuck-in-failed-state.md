@@ -42,4 +42,4 @@ POST https://management.azure.com/subscriptions/1234567-1234-1234-1234-123245678
 | Other Status Codes | [CloudError](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply#clouderror) | Error response describing why the operation failed. | 
 
 ## Next steps
-If using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) API was not able to clear the VM failed state, try [redploying to a new host node](virtual-machines/redeploy-to-new-node-linux.md).
+If using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) API was not able to clear the VM failed state, try [redploying to a new host node](redeploy-to-new-node-linux.md).
