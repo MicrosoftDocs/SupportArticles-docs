@@ -2,6 +2,25 @@
 
 
 
+## Week of September 27, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/30/2021 | [MapiFxProxyTransientException when doing migration](/exchange/troubleshoot/move-or-migrate-mailboxes/stalledduetotarget-processor-error-during-migration) | modified |
+
+
+## Week of September 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/22/2021 | [Cautions against bypassing Office 365 spam filters.](/exchange/troubleshoot/antispam-and-protection/cautions-against-bypassing-spam-filters) | modified |
+| 9/22/2021 | Attendees get cancellation followed by meeting update | removed |
+| 9/22/2021 | [OWA or ECP stops working after you install a security update](/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update) | modified |
+| 9/23/2021 | [Delete junk email rules by using MFCMAPI](/exchange/troubleshoot/administration/delete-junk-email-rules-mfcmapi-exchange) | modified |
+
+
 ## Week of September 13, 2021
 
 

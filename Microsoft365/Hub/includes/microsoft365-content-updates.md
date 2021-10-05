@@ -2,6 +2,31 @@
 
 
 
+## Week of September 27, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/30/2021 | [This feature has been disabled by your administrator error in Microsoft Office](/office365/troubleshoot/access-management/office-feature-disabled) | modified |
+| 9/30/2021 | [We can't start this app when installing an Office add-in](/office365/troubleshoot/installation/cannot-install-office-add-in) | modified |
+| 9/30/2021 | [Office LTSC 2021 and Office 2019 perpetual volume license products available as Click-to-Run](/office365/troubleshoot/installation/office-perpetual-volume-license-products) | modified |
+| 9/30/2021 | [Determine the license type of your Microsoft Office product](/office365/troubleshoot/licensing/determine-office-license-type) | modified |
+| 9/30/2021 | [Automatic updating for Microsoft Office is not enabled](/office365/troubleshoot/updates/automatic-updates) | modified |
+| 9/30/2021 | [Office Feature Updates task description and FAQ](/office365/troubleshoot/updates/office-feature-updates-task-faq) | modified |
+
+
+## Week of September 20, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/21/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | added |
+| 9/21/2021 | [Troubleshoot eDiscovery hold errors](/office365/troubleshoot/holds/resolve-ediscovery-hold-issues) | added |
+| 9/21/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | modified |
+| 9/21/2021 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
+| 9/22/2021 | [Troubleshooting common eDiscovery issues](/office365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+
+
 ## Week of September 13, 2021
 
 

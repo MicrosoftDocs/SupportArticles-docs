@@ -17,7 +17,8 @@ appliesto:
 - Office 2013
 - Office 2016
 - Office 2019
-- Office 365
+- Office LTSC 2021
+- Microsoft 365
 search.appverid: MET150
 ---
 # Error messages opening Office documents when fonts are missing from the machine
