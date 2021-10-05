@@ -1,6 +1,6 @@
 ---
 title: Can't use Send to OneNote add-in to save items from Outlook for iOS
-description: Describes an issue where you can't use the Send to OneNote button to save items from Outlook for iOS to OneNote.
+description: Describes an issue in which you can't use the Send to OneNote button to save items from Outlook for iOS to OneNote.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -25,6 +25,6 @@ On an Intune-managed iOS device, when you use the **Send to OneNote** add-in to 
 
 > You cannot access this right now
 
-This error occurs because the add-in isn't able to complete device authentication to satisfy the requirements of conditional access. Because the add-in uses the new Office add-in platform that is HTML/JavaScript-based, authentication doesn't work when conditional policies are in place. Consequently, [WebView](https://developer.apple.com/documentation/webkit/webview) between Outlook and OneNote breaks.
+This error occurs because the add-in can't complete device authentication to satisfy the requirements of conditional access. Because the add-in uses the new Office add-in platform that is HTML and JavaScript-based, authentication doesn't work if conditional policies are used. Therefore, [WebView](https://developer.apple.com/documentation/webkit/webview) between Outlook and OneNote fails.
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
