@@ -13,7 +13,8 @@ ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
-# New features and functionality in PortQry version 2.0  
+
+New features and functionality in PortQry version 2.0  
 
 This article discusses the new features and functionality that are available in PortQry Command Line Port Scanner version 2.0.
 
