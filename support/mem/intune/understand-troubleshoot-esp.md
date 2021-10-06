@@ -1,126 +1,21 @@
 ---
-title: Understand and troubleshoot the Enrollment Status Page
-description: Describes the implementation and workflow behind ESP and provides general troubleshooting guide.
+title: Troubleshoot the Enrollment Status Page (ESP)
+description: General troubleshooting guide for the Enrollment Status Page (ESP) for Windows Autopilot or OOBE for Azure AD Join.
 author: helenclu
 ms.author: luche
 ms.reviewer: ybao
-ms.date: 08/24/2020
+ms.date: 10/06/2021
 ms.prod-support-area-path: Windows enrollment
 ---
-# Understand and troubleshoot the Enrollment Status Page
+# Troubleshooting the Enrollment Status Page
 
-The Enrollment Status Page (ESP) displays the provisioning progress when a new device is enrolled, as well as when new users sign into the device. ESP enables users to track both the completed and remaining tasks in the provisioning process. It also enables IT administrators to block access to the device until the required security policies and applications are installed.
+This article gives guidance for troubleshooting the Enrollment Status Page (ESP). The ESP can be used as part of any Windows Autopilot provisioning scenario. It can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join. For more information about how to configure the ESP, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
-The ESP can be used as part of any Windows Autopilot provisioning scenario. It can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join. For more information about how to configure the ESP, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
+To troubleshoot ESP issues, it's important to get more information about the ESP settings that are received by the device, and the applications and policies that are tracked at each stage. All ESP settings and tracking information are logged in the device registry. In this article, we'll show you how to collect MDM diagnostic log files and look for information in the registry.
 
-## The ESP implementation
+See the Microsoft Intune documentation for a list of [known issues](/mem/intune/enrollment/windows-enrollment-status#known-issues) related to the ESP.
 
-ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track the installation of different apps.
-
-- **EnrollmentStatusTracking CSP**: ./Vendor/MSFT/EnrollmentStatusTracking
-  
-  The `EnrollmentStatusTracking` CSP is supported in Windows 10 version 1903 and later versions. It's used to track the installation of the SideCar agent (Intune Management Extension) and Win32 apps.
-- **FirstSyncStatus CSP**: ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus
-
-  The `FirstSyncStatus` CSP is supported in Windows 10, versions 1709 and later versions. It's responsible for delivering the ESP payload that's configured from Intune. The payload includes ESP settings such as the timeout period, applications that are required to be installed and so on. It also delivers the expected MSI (LOB) applications, Microsoft Store for Business apps, Wi-Fi profiles, and SCEP certificate profile.
-
-## Phases tracked by ESP
-
-There are three phases for which the ESP tracks information.
-
-### Device preparation
-
-The device preparation phase contains the following steps.
-
-> [!NOTE]
-> The first three steps depend on the Windows Autopilot deployment scenario. In user-drive mode, these steps are immediately reported as being completed because they either aren't required or have finished before ESP starts.
-
-1. Secure the hardware
-
-   This step isn't required in Windows Autopilot user-driven mode. It's required in self-deploying mode and white glove deployment.
-
-   At this step, the device completes the Trusted Platform Module (TPM) attestation process and sends its hardware hash to Azure AD to prove its identity. When the hardware hash is imported, the Device Directory Service (DDS) creates the computer object. Then, Azure AD sends a device token to the device. This is the token that will be used in Azure AD join.
-
-   If the device isn't identified by Azure AD, this step will time out and you'll receive a **Securing your hardware failed with error (0x800705b4)** error message. This error may also be caused by an issue that's related to TPM attestation.
-2. Azure AD join
-
-   In user-driven mode, this step is already completed before ESP starts when the user enters the corporate credentials. It's required in self-deploying mode and white glove deployment.
-
-   At this step, the device joins Azure AD by using the token it received in the previous step.
-3. Intune (MDM) enrollment
-  
-   In user-driven mode, this step is already completed before ESP starts when the user enters the corporate credentials. It's required in self-deploying mode and white glove deployment.
-
-   At this step, the device is enrolled in Intune.
-
-   This step may fail and return error **0x801c0003** for one of the following reasons:
-
-    - The user or device is not authorized
-    - In self-deploying mode and white glove deployment, the TPM doesn't meet the minimum requirements. For example, the TPM version isn't 2.0 or the TPM EK certificate is missing.
-  
-   If you receive this error message, check the User Device Registration event logs. Also check the MDM diagnostic log file for any TPM-related error in CertReq_Enrollaik.txt and TpmHliInfo.txt.
-4. Prepare the device for MDM
-
-   At this step, the device calculates the policies and apps that are required to be tracked. In Windows 10, version 1903 and later versions, the device also creates the tracking policy for the SideCar agent, and installs the Intune Management Extension.
-
-### Device setup
-
-The device creates the tracking policy for this phase, calculates all apps and policies targeted to the device context and starts the installation. Before the tracking policy is created, you will see all subtasks in the **Identifying** state.
-
-- Security policies
-
-  ESP doesn't track any security policies such as device restriction. However, these policies are installed in the background. You will always see **(1 of 1) completed** in the UI.
-
-- Certificate profiles
-
-   Only SCEP certificate profiles deployed in device context are installed. If the device can't get the certificate profiles, it will keep trying until a time-out occurs. In this situation, ESP fails.
-
-- Network profiles
-
-   Only Wi-Fi profiles that are deployed in device context are installed. If the Wi-Fi profiles can't be installed, the device will keep trying until a time-out occurs. In this situation, ESP fails.
-
-- Applications
-
-  All LOB, Microsoft Store for Business and Win32 apps that are deployed in device context are installed.
-
-  >[!NOTE]
-  > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.
-
-### Account setup
-
-The device creates the tracking policy for this phase, calculates all apps and policies that are targeted to the user context, and then starts the installation. Before the tracking policy is created, you will see all subtasks in the **Identifying** state.
-
-- Join the organization
-
-  In hybrid Azure AD Autopilot deployment, the device should have been hybrid Azure AD joined by this time. In user-driven mode for hybrid Azure AD join, the user is redirected to the Windows sign-in screen to enter the on-premises credentials to obtain the Primary Refresh Token (PRT). After authentication is completed, the user is brought back to the ESP to finish the remaining subtasks. By using the PRT, the user can communicate with the service and start installing the targeted policies and apps.
-  
-  Typically, it takes Azure AD Connect up to 40 minutes to sync the device from on-premises Active Directory to Azure AD. If the device hasn't been synced, the user can still authenticate but the PRT isn't obtained. Therefore, the user can't communicate with the service to evaluate the targeted apps and policies. Therefore, the account setup is stuck on **Identifying** until the ESP times out and fails.
-  
-  Sometimes, the time that's required to install applications in the device setup phase isn't long enough for Azure AD Connect to sync the device. In this situation, we recommend that you send a custom CSP to disable the account setup phase to avoid the potential time-out.
-
-- Security policies
-
-  Similar to the device setup phase, ESP doesn't track any security policies such as device restriction. However, these policies are installed in the background. You will always see **(1 of 1) completed** in the UI.
-
-- Certificate profiles
-
-   Only SCEP certificate profiles that are deployed in user context are installed. If the device can't get the certificate profiles, it will keep trying until a time-out occurs. In this situation, ESP fails.
-
-- Network profiles
-
-   Only Wi-Fi profiles that are deployed in user context are installed. If the Wi-Fi profiles can't be installed, the device will keep trying until a time-out occurs. In this situation, ESP fails.
-
-- Applications
-
-  All LOB, Microsoft Store for Business and Win32 apps that are deployed in user context are installed. Online-licensed Microsoft Store for Business apps that are deployed in user context can be installed. Again, don't mix LOB and Win32 apps.
-
-## Troubleshooting
-
-There are some [known issues](/mem/intune/enrollment/windows-enrollment-status#known-issues) related to the ESP.
-
-To troubleshoot ESP issues, it's important to get more information about the ESP settings that are received by the device, and the applications and policies that are tracked at each stage. All ESP settings and tracking information are logged in the device registry. In this section, we'll show you how to collect MDM diagnostic log files and look for information in the registry.
-
-### Collect logs
+## Collect logs
 
 You can enable the ability for users to collect ESP logs in the ESP policy. When a timeout occurs in the ESP, the user can select the option to **Collect logs**. Log files can be copied to a USB drive.
 
@@ -163,7 +58,7 @@ Enter the appropriate command, based on your scenario:
   mdmdiagnosticstool.exe -area DeviceProvisioning -cab <pathToOutputCabFile>
   ```
 
-The generated cab file contains several files and event logs. For ESP troubleshooting, the `MDMDiagReport_RegistryDump.Reg` file contains all registry keys that are related to MDM enrollment, such as enrollment information, Autopilot profile settings, policies, and applications that are being installed by Intune.
+The generated cab file contains several files and event logs. For ESP troubleshooting, the `MDMDiagReport_RegistryDump.Reg` file contains all registry keys that are related to MDM enrollment, such as enrollment information, Windows Autopilot profile settings, policies, and applications that are being installed by Intune.
 
 You can find the ESP settings under the following registry subkey in the `MDMDiagReport_RegistryDump.Reg` file:
 
@@ -183,7 +78,7 @@ Here is a short video that shows how to collect Windows Autopilot MDM logs:
 
 > [!VIDEO https://www.youtube.com/embed/ry88Vur6dhE]
 
-### Diagnose Autopilot issues
+## Diagnose Windows Autopilot issues
 
 Use the [Get-AutopilotDiagnostics](https://www.powershellgallery.com/packages/Get-AutopilotDiagnostics/5.6) script to review log files that are captured by using the MDM Diagnostics Tool.
 
@@ -199,7 +94,7 @@ To use the script to examine the generated log file, run the following PowerShel
 Get-AutopilotDiagnostics -CABFile <pathToOutputCabFile>
 ```
 
-### Check the registry for app deployment failures during ESP
+## Check the registry for app deployment failures during ESP
 
 App deployment failures can cause ESP to time out. These failures can occur because of incorrect app configuration, network connectivity issues or device-specific issues.
 
@@ -224,7 +119,7 @@ The `EnrollmentStatusTracking` registry subkey contains the following subkeys:
 
 :::image type="content" source="media/understand-troubleshoot-esp/enrollmentstatustracking.png" alt-text="The EnrollmentStatusTracking key":::
 
-#### The Device subkey
+### The Device subkey
 
 This subkey contains information about the last step in the device preparation phase and the Win32 apps deployment information in the device setup phase.
 
@@ -275,7 +170,7 @@ This subkey contains the following subkeys:
 
   If the value of `InstallationState` for any app is 4, ESP stops installing applications. In this case, check the Intune Management Extension log file for the cause.
 
-#### The `ESPTrackingInfo` subkey
+### The `ESPTrackingInfo` subkey
 
 This subkey contains diagnostics information for all applications and policies that are tracked by ESP and the status of each app and policy during specific timestamps for the device setup and account setup phases.
 
@@ -305,15 +200,15 @@ This subkey contains diagnostics information for all applications and policies t
 
   :::image type="content" source="media/understand-troubleshoot-esp/msfbapp2.png" alt-text="Microsoft Store for Business app status two":::
 
-#### The {*User_SID*} subkey
+### The {*User_SID*} subkey
 
 This subkey is created during the account setup phase if the device setup phase is completed successfully. It  contains the installation state of Win32 apps that are deployed in user context, and the creation status of the tracking policy for the account setup phase.
 
 :::image type="content" source="media/understand-troubleshoot-esp/usersid.png" alt-text="The user SID subkey":::
 
-### Common questions for troubleshooting ESP-related issues
+## Common questions for troubleshooting ESP-related issues
 
-#### Why were my applications not installed and tracked by using the ESP
+### Why were my applications not installed and tracked by using the ESP?
 
 To guarantee that applications are installed and tracked by using the ESP, make sure that the following conditions are true:
 
@@ -321,16 +216,16 @@ To guarantee that applications are installed and tracked by using the ESP, make 
 - You either specify **Block device use until all apps and profiles are installed** or include the app in the **Block device use until these required apps are installed** list.
 - The apps install in device context, and they have no user-context applicability rules.
 
-#### Why is the ESP showing for non-Autopilot deployments, such as when a user logs in for the first time on a Configuration Manager co-management enrolled device
+### Why is the ESP showing for deployments not related to Windows Autopilot, such as when a user logs in for the first time on a Configuration Manager co-management enrolled device?
 
 The ESP lists the installation status for all enrollment methods, including:
 
-- Autopilot
+- Windows Autopilot
 - Configuration Manager co-management
 - when any new user logs into the device that has ESP policy applied for the first time
 - when the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is on and the policy is set, only the first user who signs into the device gets the ESP
 
-#### How can I disable the ESP if it has been configured on the device
+### How can I disable the ESP if it has been configured on the device?
 
 ESP policy is set on a device at the time of enrollment. To disable the ESP, you must disable the user Enrollment Status Page section. To disable the section, create custom OMA-URI settings by using the following configurations:
 

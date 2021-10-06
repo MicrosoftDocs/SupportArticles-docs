@@ -16,14 +16,14 @@ When a user tries to enroll a Windows device, they see one of the following erro
 
 > Error 80180003: "Something went wrong. This user is not authorized to enroll. You can try to do this again or contact your system administrator with error code 80180003."
 
-# Cause
+## Cause
 
 These errors can result from any of the following conditions:
 
-- The user has already enrolled the maximum number of devices allowed in Intune.
-- The device is blocked by the device type restrictions.
-- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure Active Directory (Azure AD) is only supported on Windows 10 Pro and higher editions.
-- The Azure AD setting **Users may join devices to Azure AD** is set to **None**, which prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails.
+- The user has already enrolled the maximum number of devices allowed in Intune. (See (Solution 1)[#solution-1] and (Solution 2)[#solution-2].)
+- The device is blocked by the device type restrictions. (See (Solution 3)[#solution-3].)
+- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure Active Directory (Azure AD) is only supported on Windows 10 Pro and higher editions. (See (Solution 4)[#solution-4].)
+- The Azure AD setting **Users may join devices to Azure AD** is set to **None**, which prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails. (See (Solution 5)[#solution-5].)
 
 Try the following solutions, depending on your scenario.
 

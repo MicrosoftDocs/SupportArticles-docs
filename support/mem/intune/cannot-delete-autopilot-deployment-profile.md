@@ -26,7 +26,7 @@ This issue occurs for either of the following reasons:
 - The group that the Windows Autopilot deployment profile was assigned to was deleted from Azure AD before the group was removed from the **Included groups** of the deployment profile.
 
     > [!NOTE]
-    > In this scenario, you can use [Method 2 in the Resolution section](#method-2-if-the-group-was-deleted-from-azure-ad) to delete the profile immediately. Or, you can wait until the assignment to the deleted group is removed (this usually occurs within seven days), and then delete the profile in Intune.
+    > In this scenario, you can use [Solution 2](#solution-2) to delete the profile immediately. Or, you can wait until the assignment to the deleted group is removed (this usually occurs within seven days), and then delete the profile in Intune.
 
 To fix the issue, use one of the following solutions, depending on whether the group that the Windows Autopilot deployment profile was assigned to still exists in Azure AD.
 

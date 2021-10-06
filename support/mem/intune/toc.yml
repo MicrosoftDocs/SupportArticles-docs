@@ -192,7 +192,7 @@
       href: windows-failed-to-apply-mdm-policy.md
     - name: Can't delete Windows Autopilot deployment profile
       href: cannot-delete-autopilot-deployment-profile.md
-    - name: Understand and troubleshoot the Enrollment Status Page
+    - name: Troubleshoot the Enrollment Status Page
       href: understand-troubleshoot-esp.md
     - name: Error importing Windows Autopilot CSV files
       href: import-windows-autopilot-device-csv-files-errors.md
