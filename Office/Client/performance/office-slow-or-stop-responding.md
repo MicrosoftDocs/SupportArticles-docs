@@ -12,19 +12,22 @@ ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: luche
 appliesto:
-- Office 365
+- Microsoft 365
+- Excel LTSC 2021
 - Excel 2019
 - Excel 2016
 - Excel 2013
 - Excel 2010
 - Microsoft Office Excel 2007
 - Microsoft Office Excel 2003
+- PowerPoint LTSC 2021
 - PowerPoint 2019
 - PowerPoint 2016
 - PowerPoint 2013
 - PowerPoint 2010
 - Microsoft Office PowerPoint 2007
 - Microsoft Office PowerPoint 2003
+- Publisher LTSC 2021
 - Publisher 2019
 - Publisher 2016
 - Publisher 2013
@@ -50,13 +53,14 @@ This behavior may occur if the connection to the network location is lost during
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-To work around this behavior, add the **EnableShellDataCaching** value to the Microsoft Windows registry. To do this, follow these steps: 
+To work around this behavior, add the **EnableShellDataCaching** value to the Microsoft Windows registry. To do this, follow these steps:
+
 1. Close your Office programs.
 1. Click **Start**, and then click **Run**.
 1. In the **Open** box, type regedit, and then click **OK**.
 1. Locate, and then click to select one of the following registry keys accordingly:
 
-   - **Office 365, Office 2019 and Office 2016:**
+   - **Microsoft 365 Apps, Office LTSC 2021, Office 2019 and Office 2016:**
 
       **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Open Find**
    - **Office 2013:**

@@ -2,6 +2,16 @@
 
 
 
+## Week of September 27, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/28/2021 | [Profile picture not showing in SharePoint Online](/sharepoint/troubleshoot/administration/profile-picture-not-showing) | modified |
+| 9/29/2021 | [Common issues syncing SharePoint lists offline](/sharepoint/troubleshoot/lists-and-libraries/common-sync-issues) | added |
+| 9/30/2021 | [Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business) | modified |
+
+
 ## Week of September 20, 2021
 
 
