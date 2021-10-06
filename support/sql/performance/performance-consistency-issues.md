@@ -68,7 +68,7 @@ The following modules can cause performance and stability issues when they are l
 
 - UMPPC*.DLL, SCRIPTCONTROL*.DLL
 
-  These DLL files are loaded into the SQL Server or SQL Server Agent address space if you enable the “Additional User Mode Data” prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might also encounter failures while attempting to launch SQL Server Management Studio.
+  These DLL files are loaded into the SQL Server or SQL Server Agent address space if you enable the “Additional User Mode Data” prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might also encounter failures while attempting to launch SQL Server Management Studio. You may also see that SQL Server fails to launch SQLDumper.exe to generate a memory dumps. 
 
 - Carbon Black relative dll
 
