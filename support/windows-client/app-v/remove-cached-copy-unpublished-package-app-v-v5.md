@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, gautama
-ms.prod-support-area-path: 
+ms.custom: sap:package-conversion, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to remove a cached copy of an unpublished package in Microsoft App-V v5
