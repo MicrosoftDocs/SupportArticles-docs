@@ -1,5 +1,5 @@
 ---
-title: MDM enrollment error 0xcaa9001f 
+title: Troubleshoot MDM enrollment error 0xcaa9001f for co-managed Windows devices
 description: Describes an issue in which MDM enrollment fails and generates error 0xcaa9001f for co-managed Windows devices that are hybrid Azure AD-joined and managed by using Configuration Manager.
 ms.date: 04/16/2020
 ms.prod-support-area-path: Windows enrollment
@@ -8,9 +8,6 @@ ms.reviewer: luche
 # MDM enrollment fails with error 0xcaa9001f for co-managed Windows devices
 
 This article fixes an issue in which MDM enrollment fails and generates error 0xcaa9001f for co-managed Windows devices that are hybrid Azure AD-joined and managed by using Configuration Manager.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4471480
 
 ## Symptoms
 
@@ -44,6 +41,6 @@ This issue occurs in one of the following situations:
 - The Cloud Management Azure service isn't configured in Configuration Manager.
 - Either [AD User Discovery](/mem/configmgr/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigADDiscGeneral) or [Azure AD User Discovery](/mem/configmgr/core/servers/deploy/configure/configure-discovery-methods#azureaadisc) isn't enabled for the affected users. Both discovery methods must be enabled.
 
-## Resolution
+## Solution
 
 To fix the issue, [configure Azure Services for Cloud Management](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard), and make sure that both [AD User Discovery](/mem/configmgr/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigADDiscGeneral) and [Azure AD User Discovery](/mem/configmgr/core/servers/deploy/configure/configure-discovery-methods#azureaadisc) are enabled for the users.

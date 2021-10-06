@@ -148,7 +148,7 @@
     items:
     - name: Troubleshoot Android Enterprise device enrollment
       href: troubleshoot-android-enrollment.md
-    - name: Troubleshoot Android certiicate issues
+    - name: Troubleshoot missing Android certificate
       href: troubleshoot-android-certificates.md
     - name: Device ownership is changed to Corporate
       href: device-ownership-changed-to-corporate.md
@@ -156,7 +156,7 @@
       href: configure-android-enterprise-devices-intune.md
   - name: iOS/iPadOS enrollment
     items:
-    - name: Troubleshoot iOS/iPadOS device enrollment
+    - name: Troubleshoot iOS/iPadOS enrollment errors
       href: troubleshoot-ios-enrollment-errors.md
     - name: iOS/iPadOS devices aren't checking in
       href: ios-devices-inactive.md
@@ -174,34 +174,36 @@
     href: troubleshoot-macos-vm-enrollment.md
   - name: Windows enrollment
     items:
-    - name: Troubleshoot Windows device enrollment
+    - name: Troubleshoot Windows enrollment errors
       href: troubleshoot-windows-enrollment-errors.md
+    - name: Windows user not authorized to enroll
+      href: windows-user-cannot-enroll.md
+    - name: Troubleshoot Windows 10 group policy-based auto-enrollment
+      href: troubleshoot-windows-auto-enrollment.md
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
       href: windows10-enroll-error-80180002b.md
     - name: Can't enroll devices with a non-administrator account
       href: no-permission-to-enroll-windows-devices.md
-    - name: Cannot delete autopilot deployment profile
-      href: cannot-delete-autopilot-deployment-profile.md
-    - name: Error 806 or 808 when importing CSV files
-      href: import-windows-autopilot-device-csv-files-errors.md
     - name: Error 0xcaa9001f in MDM enrollment
       href: mdm-enrollment-error-0xcaa9001f.md
-    - name: Intune Connector for AD doesn't appear
-      href: intune-connector-for-ad-not-appear.md
-    - name: Azure AD device registration and Windows Autopilot
+    - name: Sysprep will not run correctly on MDM enrolled Windows 10 devices
+      href: troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
+    - name: Windows failed to apply the MDM Policy settings
+      href: windows-failed-to-apply-mdm-policy.md
+    - name: Can't delete Windows Autopilot deployment profile
+      href: cannot-delete-autopilot-deployment-profile.md
+    - name: Understand and troubleshoot the Enrollment Status Page
+      href: understand-troubleshoot-esp.md
+    - name: Error importing Windows Autopilot CSV files
+      href: import-windows-autopilot-device-csv-files-errors.md
+    - name: Troubleshoot Azure AD device registration and Windows Autopilot
       href: azure-ad-device-registration-autopilot.md
     - name: Comparison of methods for enrolling a Windows device in Intune
       href: enroll-devices-in-intune-tip.md
-    - name: Sysprep will not run correctly on MDM enrolled Windows 10 devices
-      href: troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
-    - name: Troubleshoot Windows 10 group policy-based auto-enrollment
-      href: troubleshoot-windows-auto-enrollment.md
-    - name: Understand and troubleshoot the Enrollment Status Page
-      href: understand-troubleshoot-esp.md
+    - name: Intune Connector for AD doesn't appear
+      href: intune-connector-for-ad-not-appear.md
     - name: Unexpected error signing in to Intune Connector
       href: intune-connector-signin-unexpected-error.md
-    - name: Windows failed to apply the MDM Policy settings
-      href: windows-failed-to-apply-mdm-policy.md
 - name: Device management
   items:
   - name: Help desk operators can't perform remote tasks

@@ -8,65 +8,7 @@ ms.reviewer: mghadial
 
 This article helps Intune administrators understand and troubleshoot error messages when enrolling Windows devices in Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
 
-## This user is not authorized to enroll.
-
-Error 0x801c003: "This user is not authorized to enroll. You can try to do this again or contact your system administrator with the error code (0x801c0003)."
-Error 80180003: "Something went wrong. This user is not authorized to enroll. You can try to do this again or contact your system administrator with error code 80180003."
-
-**Cause:** Any of the following conditions:
-
-- The user has already enrolled the maximum number of devices allowed in Intune.
-- The device is blocked by the device type restrictions.
-- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure AD is only supported on Windows 10 Pro and higher editions.
-
-**Solution:**
-
-There are several possible solutions to this issue:
-
-### Remove devices that were enrolled
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Users** > **All Users**.
-3. Select the affected user account, and then click **Devices**.
-4. Select any unused or unwanted devices, and then click **Delete**.
-
-### Increase the device enrollment limit
-
-> [!NOTE]
-> This method increases the device enrollment limit for all users, not just the affected user.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Enrollment restrictions** > **Default** (under **Device limit restrictions**) > **Properties** > **Edit** (next to **Device limit**) > increase the **Device limit** (maximum 15)> **Review + Save**.
-
-### Check device type restrictions
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account.
-2. Go to **Devices** > **Enrollment restrictions**, and then select the **Default** restriction under **Device Type Restrictions**.
-3. Select **Platforms**, and then select **Allow** for **Windows (MDM)**.
-
-    > [!IMPORTANT]
-    > If the current setting is already **Allow**, change it to **Block**, save the setting, and then change it back to **Allow** and save the setting again. This resets the enrollment setting.
-
-4. Wait for approximately 15 minutes, and then enroll the affected device again.
-
-### Upgrade Windows 10 Home
-
-[Upgrade Windows 10 Home to Windows 10 Pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro) or a higher edition.
-
-## Error 0x801c0003: This user is not allowed to enroll.
-
-Error 0x801c0003: "This user is not allowed to enroll. You can try again or contact your system administrator with the error code 801c0003."
-
-**Cause:** The **Users may join devices to Azure AD** setting is set to **None**. It prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails.
-
-**Solution:**
-
-1. Sign in to the [Azure portal](https://portal.azure.com/) as administrator.
-2. Go to **Azure Active Directory** > **Devices** > **Device Settings**.
-3. Set **Users may join devices to Azure AD** to **All**.
-4. Enroll the device again.
-
-## Error hr 0x8007064c: The machine is already enrolled 
+## Error hr 0x8007064c: The machine is already enrolled
 
 Enrollment fails with the error "The machine is already enrolled." The enrollment log shows error **hr 0x8007064c**.
 
@@ -335,14 +277,14 @@ This issue typically occurs before the device is restarted in a Hybrid Azure AD 
 
 Another possible cause for this error is that the Autopilot object's associated AzureAD device has been deleted. To resolve this issue, delete the Autopilot object and reimport the hash to generate a new one.
 
-**Solution:** 1
+**Solution 1:**
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
 2. Select the device which is experiencing the issue, and then click the ellipsis (…) on the rightmost side.
 3. Select **Unassign user** and wait for the process to finish.
 4. Verify that the Hybrid Azure AD Autopilot profile is assigned before reattempting OOBE.
 
-**Solution:** 2
+**Solution 2:**
 
 If the issue persists, on the server that hosts the Offline Domain Join Intune Connector, check to see if Event ID 30312 is logged within the ODJ Connector Service log. Event 30312 resembles the following event:
 

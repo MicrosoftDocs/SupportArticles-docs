@@ -1,10 +1,10 @@
 ---
-title: Troubleshooting certificate issues when enrolling Android devices in Intune
+title: Troubleshooting a missing certificate when enrolling Android devices in Intune
 description: Troubleshoot when a user's Android device is missing a require certificate and can't enroll in Microsoft Intune.
 ms.date: 09/30/2021
 ---
 
-# Troubleshooting Android certificate issues
+# Android device is missing a required certificate
 
 When a user tries to sign in to the Company Portal app on Intune-managed Android device, they receive the error message "You can't sign in because your device is missing a required certificate."
 

@@ -110,7 +110,7 @@ You can't create policy or enroll devices.
 
 **Solution:** In the [Microsoft 365 admin center](https://admin.microsoft.com/), remove the special characters from the company name and save the company information.
 
-### Unable to sign in or enroll devices when you have multiple verified domains
+## Unable to sign in or enroll devices when you have multiple verified domains
 
 This problem may occur when you add a second verified domain to your Active Directory Federation Services  (AD FS). Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
 
