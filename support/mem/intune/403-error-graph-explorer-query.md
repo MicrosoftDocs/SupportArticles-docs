@@ -1,15 +1,12 @@
 ---
-title: 403 Forbidden error when inspecting or modifying Intune objects
-description: Describes an issue in which you receive a 403 Forbidden error when running queries in Graph Explorer to inspect or modify Microsoft Intune objects. Provides a resolution.
-ms.date: 06/23/2020
+title: Troubleshoot a 403 Forbidden error when inspecting or modifying Microsoft Intune objects
+description: Provides a resolution for a 403 Forbidden error when running queries in Graph Explorer to inspect or modify Intune objects. 
+ms.date: 10/07/2021
 ms.prod-support-area-path: Intune Graph API
 ---
 # 403 Forbidden error when you use Graph Explorer to inspect or modify Intune objects
 
-This article provides a solution for the issue that a **403 Forbidden** error occurs when you try to use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to inspect or modify Microsoft Intune objects.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4532174
+This article provides a solution for the **403 Forbidden** error that occurs when you try to use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to inspect or modify Microsoft Intune objects.
 
 ## Symptoms
 
@@ -31,11 +28,11 @@ When you try to run queries in [Graph Explorer](https://developer.microsoft.com/
 
 ## Cause
 
-This issue occurs because the required read and read/write permissions to Intune device configuration and policies aren't granted.
+This issue occurs because the account you use to access Graph Explorer doesn't have the required read and read/write permissions to Intune device configuration and policies.
 
-## Resolution
+## Solution
 
-To fix this issue, follow these steps:
+To fix this issue, follow these steps to modify your account permissions.
 
 1. Sign in to Graph Explorer by selecting **Sign In with Microsoft**, if you haven't already done this.
 
@@ -59,7 +56,7 @@ To fix this issue, follow these steps:
 
     :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-1.png" alt-text="Permissions requested":::
 
-1. Select **Accept** to apply the changes that you made in step 3. If you want other Intune administrators to also be granted access to the site, select **Consent on behalf of your organization**.
+1. Select **Accept** to apply the changes that you made in Step 3. If you want other Intune administrators to also be granted access to the site, select **Consent on behalf of your organization**. For details on this selection, see [More information about permissions consent](#more-information-about-permissions-consent) below.
 
 1. Verify that your permissions are set correctly. To do this, select **modify permissions** for your account, and then verify that the following permissions are granted:
 
@@ -68,7 +65,23 @@ To fix this issue, follow these steps:
 
     :::image type="content" source="media/403-error-graph-explorer-query/modify-permissions.png" alt-text="screenshot of Verify permissions":::
 
-## More information
+## Reset your tenant to default settings
+
+If you still cannot resolve this issue, you can reset your tenant to its default settings. Follow these steps to safely delete and re-create a Graph Explorer enterprise application configuration.
+
+> [!IMPORTANT]
+> To avoid issues that affect browser caching, browse in **InPrivate** or **Incognito** mode when you troubleshoot access permissions.
+
+1. Sign in to the Azure portal, go to **Azure Active Directory** > **Enterprise Applications**, and then select **Graph explorer** from the list of applications.
+1. In the Graph explorer settings, select **Manage** > **Properties**.
+1. Select **Delete**, and acknowledge the warning dialog box.
+1. Wait for the **Application Graph explorer was deleted successfully** message from the Azure portal.
+1. Sign in to Graph Explorer by selecting **Sign In with Microsoft**. If the app is successfully deleted, you will be prompted to accept the default permissions.
+
+   > [!NOTE]
+   > There may be several minutes of delay between when you remove access to Graph Explorer to when the permissions become effective in the application.
+
+## More information about permissions consent
 
 The first time that you log on to Graph Explorer, you are prompted by a **Permissions requested** dialog box that resembles the following.
 
@@ -123,20 +136,3 @@ If you select **Consent on behalf of your organization**, you will have the foll
 |Microsoft Graph|Delegated|Have full access to all files that users can access|Admin consent|
 |Microsoft Graph|Delegated|Have full access to user calendars|Admin consent|
 |||||
-
-## Troubleshooting
-
-To reset your tenant to its default settings, you can safely delete and re-create a Graph Explorer enterprise application configuration. To do this, follow these steps:
-
-1. Sign in to the Azure portal, go to **Azure Active Directory** > **Enterprise Applications**, and then select **Graph explorer** from the list of applications.
-
-1. In the Graph explorer settings, select **Manage** > **Properties**.
-1. Select **Delete**, and acknowledge the warning dialog box.
-1. Wait for the **Application Graph explorer was deleted successfully** message from the Azure portal.
-1. Sign in to Graph Explorer by selecting **Sign In with Microsoft**. If the app is successfully deleted, you will be prompted to accept the default permissions.
-
-   > [!NOTE]
-   > There may be several minutes of delay between when you remove access to Graph Explorer to when the permissions become effective in the application.
-
-> [!IMPORTANT]
-> To avoid issues that affect browser caching, browse in **InPrivate** or **Incognito** mode when you troubleshoot access permissions.

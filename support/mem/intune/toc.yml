@@ -98,10 +98,18 @@
     href: troubleshoot-co-management-workloads.md
 - name: Device configuration
   items:
-  - name: 2016341112 -iOS device is currently busy
-    href: 2016341112-ios-device-is-currently-busy.md
+  - name: Troubleshoot policies and profiles
+    href: troubleshoot-policies-in-microsoft-intune.md
+  - name: Troubleshoot CSP custom settings
+    href: troubleshoot-csp-custom-settings.md
+  - name: Troubleshoot email profile issues
+    href: troubleshoot-email-profiles-in-microsoft-intune.md
+  - name: Troubleshoot Wi-Fi profiles
+    href: troubleshoot-wi-fi-profiles.md
   - name: Connectivity issues due to root certificates
     href: fix-connectivity-issues.md
+  - name: 2016341112 iOS device is currently busy
+    href: 2016341112-ios-device-is-currently-busy.md
   - name: Device configuration profile error 2016281112
     href: device-configuration-profile-reports-error-2016281112.md
   - name: Device restriction policy doesn't block iOS Personal Hotspot
@@ -112,30 +120,22 @@
     href: factory-reset-protection-emails-not-enforced.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
-  - name: No password prompt after email password change
+  - name: No password prompt after iOS email password change
     href: no-password-prompt-after-password-change.md
   - name: Password expiration setting doesn't work
     href: password-expiration-setting-not-working.md
-  - name: Restrict USB devices with administrative templates
-    href: restrict-usb-with-administrative-template.md
   - name: SIP address and password can't be saved
     href: sip-address-password-not-saved.md
-  - name: Support tip - Assign device password settings to Android Enterprise fully managed devices
+  - name: Assign device password settings to Android Enterprise fully managed devices
     href: assign-password-setting-android-fully-managed.md
-  - name: Support tip - Deploy OMA-URIs to target a CSP through Intune
-    href: deploy-oma-uris-to-target-csp-via-intune.md
-  - name: Troubleshoot CSP custom settings
-    href: troubleshoot-csp-custom-settings.md
-  - name: Troubleshoot email profile issues
-    href: troubleshoot-email-profiles-in-microsoft-intune.md
-  - name: Troubleshoot policies and profiles
-    href: troubleshoot-policies-in-microsoft-intune.md
-  - name: Troubleshoot Wi-Fi profiles
-    href: troubleshoot-wi-fi-profiles.md
   - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
     href: users-cannot-logon-windows-multi-app-kiosk.md
   - name: Windows feature updates are not offered
     href: windows-feature-updates-never-offered.md
+  - name: Restrict USB devices with administrative templates
+    href: restrict-usb-with-administrative-template.md
+  - name: Deploy OMA-URIs to target a CSP through Intune
+    href: deploy-oma-uris-to-target-csp-via-intune.md
 - name: Device enrollment
   items:
   - name: Can't update enrollment
