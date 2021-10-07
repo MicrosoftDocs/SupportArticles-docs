@@ -42,12 +42,12 @@ The following domains and URLs must be accessible through the firewall or proxy 
 |---|---|
 |service.systemcenteradvisor.com|Port 443|
 |scadvisor.accesscontrol.windows.net|Port 443|
-|scadvisorservice.accesscontrol.windows.net*|Port 443|
-|.blob.core.windows.net/|Port 443|
-|*data.systemcenteradvisor.com|Port 443|
+|scadvisorservice.accesscontrol.windows.net|Port 443|
+|\*.blob.core.windows.net\/\*|Port 443|
+|data.systemcenteradvisor.com|Port 443|
 |ods.systemcenteradvisor.com|Port 443|
-|*.ods.opinsights.azure.com|Port 443|
-|*.systemcenteradvisor.com|Port 443|
+|\*.ods.opinsights.azure.com|Port 443|
+|\*.systemcenteradvisor.com|Port 443|
 |||
 
 #### Large volume scenarios, intelligence packs, and Operations Manager agents
@@ -57,7 +57,7 @@ The following domains and URLs must be accessible through the firewall or proxy 
 
 |URL|Ports|
 |---|---|
-|*.ods.opinsights.azure.com|Port 443|
+|\*.ods.opinsights.azure.com|Port 443|
 |||
 
 > [!NOTE]
@@ -69,10 +69,10 @@ The following domains and URLs must be accessible through the firewall in order 
 
 |Resource|Ports|
 |---|---|
-|*.systemcenteradvisor.com|Ports 80 and 443|
-|*.live.com|Ports 80 and 443|
-|*.microsoft.com|Ports 80 and 443|
-|*.microsoftonline.com|Ports 80 and 443|
+|\*.systemcenteradvisor.com|Ports 80 and 443|
+|\*.live.com|Ports 80 and 443|
+|\*.microsoft.com|Ports 80 and 443|
+|\*.microsoftonline.com|Ports 80 and 443|
 |login.windows.net|Ports 80 and 443|
 |||
 
