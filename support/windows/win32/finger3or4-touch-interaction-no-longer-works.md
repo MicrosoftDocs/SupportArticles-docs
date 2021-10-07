@@ -13,7 +13,7 @@ To support three- or four-finger touch interactions within an application, a new
 
 **Bluetooth & devices > Touch > Three- and four-finger touch gestures**
 
-- When the setting is set to “On” (the default), the system can consume the three- and four-finger interactions and the apps can't use them.
-- When the setting is set to “Off,” the system can't consume the three- and four-finger interactions, and the apps can use them.
+- When the setting is set to “On” (the default), the system can use the three- and four-finger interactions but the apps can't use them.
+- When the setting is set to “Off,” the system can't use the three- and four-finger interactions but the apps can use them.
 
 If your application must support these interactions, we recommend that you inform users of this setting and provide a link that launches the Settings app to the relevant page (ms-settings:devices-touch). For more information, see [Launch the Windows Settings app](/windows/uwp/launch-resume/launch-settings-app).
