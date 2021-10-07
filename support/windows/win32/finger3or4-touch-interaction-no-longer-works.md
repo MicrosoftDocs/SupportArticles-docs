@@ -7,7 +7,8 @@ ms.reviewer: kybeck
 ---
 # Some three- and four-finger touch interactions no longer work in apps by default
 
-Windows 11 uses three- and four-finger touch swipe gestures for various operations such as switching or minimizing windows and changing virtual desktops.  As these interactions are handled at the system level, they are no longer consumable by applications by default, thus some functionalities inside your application(s) might be impacted.
+Windows 11 uses three- and four-finger touch swipe gestures for various operations such as switching or minimizing windows, or changing virtual desktops. As these interactions are handled at the system level, they are no longer consumable by applications by default, thus some functionalities inside your application(s) might be impacted.
+
 To enable the use of three- or four-finger swipe interactions inside an application, there's a new user setting that controls whether or not the system will react to the gestures.  
 
 This setting is: **Bluetooth & devices > Touch > Three- and four-finger touch gestures**
