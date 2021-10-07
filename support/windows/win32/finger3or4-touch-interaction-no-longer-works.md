@@ -3,7 +3,7 @@ title: Some three- and four-finger touch interactions no longer work in apps by 
 description: In Windows 11, some of the three or four finger interactions are no longer consumable by applications by default.
 ms.date: 10/7/2020
 ms.prod-support-area-path: Desktop app UI development
-ms.reviewer: v-kegui
+ms.reviewer: kybeck
 ---
 # Some three- and four-finger touch interactions no longer work in apps by default
 
