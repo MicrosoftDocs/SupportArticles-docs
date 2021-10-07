@@ -37,9 +37,9 @@ POST https://management.azure.com/subscriptions/1234567-1234-1234-1234-123245678
 
 | Name | Type | Description | 
 |---|---|---|
-| 200 OK | | OK |
-| 202 Accepted | Accepted | 
-| Other Status Codes | [CloudError](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply#clouderror) | Error response describing why the operation failed. | 
+| 200 OK | | POST was successful. Recheck the status in the Azure portal to see if VM is no longer in failed state. |
+| 202 Accepted | POST was accepted, reapply should be in progress. | 
+| Other Status Codes | [CloudError](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply#clouderror) | POST operation failed. See response describing why the operation failed. | 
 
 ## Next steps
 If using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) API was not able to clear the VM failed state, try [redploying to a new host node](redeploy-to-new-node-linux.md).
