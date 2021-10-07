@@ -22,6 +22,8 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: Three- or four-finger touch interactions no longer works in apps by default
+      href: finger3or4-touch-interaction-no-longer-works.md
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
     - name: Desktop Bridge app fails to start when running as adminitrator
