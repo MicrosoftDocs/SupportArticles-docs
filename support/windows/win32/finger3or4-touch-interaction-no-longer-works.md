@@ -11,8 +11,8 @@ Windows 11 uses three- and four-finger touch swipe gestures for various operatio
 To enable the use of three- or four-finger swipe interactions inside an application, there's a new user setting that controls whether or not the system will react to the gestures.  
 
 This setting is: **Bluetooth & devices > Touch > Three- and four-finger touch gestures**
-- When set to “On” (the default), the system will consume the three- and four-finger interactions and the apps will not be able to utilize them.
-- When set to “Off,” the system will not consume the three- and four-finger interactions, and the apps will be able to utilize them.
+- When the setting is set to “On” (the default), the system will consume the three- and four-finger interactions and the apps will not be able to utilize them.
+- When the setting is set to “Off,” the system will not consume the three- and four-finger interactions, and the apps will be able to utilize them.
 
 If your application is reliant upon these interactions, you can direct users to this setting to disable the system interactions, allowing your application to behave as it did in Windows 10.
 
