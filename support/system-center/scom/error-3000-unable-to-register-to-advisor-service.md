@@ -45,7 +45,6 @@ The following domains and URLs must be accessible through the firewall or proxy 
 |scadvisorservice.accesscontrol.windows.net|Port 443|
 |\*.blob.core.windows.net\/\*|Port 443|
 |data.systemcenteradvisor.com|Port 443|
-|ods.systemcenteradvisor.com|Port 443|
 |\*.ods.opinsights.azure.com|Port 443|
 |\*.systemcenteradvisor.com|Port 443|
 |||
