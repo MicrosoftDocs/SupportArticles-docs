@@ -22,6 +22,7 @@ When certain modules are loaded into the Microsoft SQL Server process address sp
 - Exceptions (such as access violations), critical error messages about database consistency, assertion messages or unexpected process termination
 - 100% CPU utilization and long database recovery times when you use in-memory OLTP tables in SQL Server
 - Unexpected or unexplained failures when SQL Server processes make Windows API calls
+- Memory dumps triggered for SQLDumper.exe may fail to complete hindering any troubleshooting activity
 
 ## Cause
 
