@@ -21,19 +21,19 @@ search.appverid: MET150
 
 ## Symptoms
 
-When you use the **Disposition** tab from **Records Management** in the Microsoft 365 compliance center to manage [disposition reviews](/microsoft-365/compliance/disposition?view=o365-worldwide), you receive the following error message:
+When you use the **Disposition** tab in **Records Management** in the Microsoft 365 compliance center to manage [disposition reviews](/microsoft-365/compliance/disposition?view=o365-worldwide), you receive the following error message:
 
 > The remote server returned an error: (401) Rbac check failed.
 
 ## Cause
 
-This error occurs when you don't have sufficient permission for disposition reviews, and the role-based access control (RBAC) check fails. Permissions in the compliance center are based on the RBAC permissions model.
+This error occurs if you don't have sufficient permission for disposition reviews, and the role-based access control (RBAC) check fails. Permissions in the compliance center are based on the RBAC permissions model.
 
 ## Resolution
 
-Confirm that the error is caused by the failure of the RBAC check. To do this, reproduce the issue and [capture the associated network activity logs](/microsoft-edge/devtools-guide-chromium/network/#log-network-activity) from Microsoft Edge. Then, check the network logs for the RBAC (401) error message.
+Verify that the error is caused by the failure of the RBAC check. To do this, reproduce the issue, and [capture the associated network activity logs](/microsoft-edge/devtools-guide-chromium/network/#log-network-activity) from Microsoft Edge. Then, check the network logs for the RBAC "401" error message.
 
-If you see the error message, then make sure that either you or the group you belong to is part of the following role groups:
+If you see the error message, make sure that either you or the group that you belong to is part of the following role groups:
 
 - Content Explorer Content Viewer
 - Content Explorer List Viewer
