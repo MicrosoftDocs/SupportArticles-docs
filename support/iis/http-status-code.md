@@ -18,7 +18,7 @@ When you try to access content on a server that is running (IIS) 7.0, 7.5 or lat
 
 The HTTP status code may indicate whether a request is successful or unsuccessful. The HTTP status code may also reveal the exact reason that a request is unsuccessful.
 
-This article is intended for use by support agents and IT professionals. If you're looking for more information about website error messages, see [Get help with website error messages (HTTP errors)](https://support.microsoft.com/hub/4338813).
+This article is intended for use by support agents and IT professionals. If you're looking for more information about website error messages, see [Get help with website error messages (HTTP errors)](https://docs.microsoft.com/en-US/troubleshoot/aspnet/error-logging-http-apis#kinds-of-errors-that-the-http-api-logs).
 
 ## Log file locations
 
