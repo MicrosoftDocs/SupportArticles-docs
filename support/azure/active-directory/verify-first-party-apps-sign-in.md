@@ -17,6 +17,8 @@ For example, when you access **docs.microsoft.com**, the application shown in th
 
 Though the apps listed in sign-in reports are indeed owned by Microsoft, and are not suspicious applications, there is a way that you can verify whether an Azure AD service principal found in your AAD logs is owned by Microsoft.
 
+>[!NOTE] First party Microsoft application does not always result in a service principal created in your tenant. In this case, you will likely continue to see sign-ins to the application. Below we have listed the common first party Microsoft applications.
+
 ## Verify a first-party Microsoft Service Principal in your AAD tenant
 
 1. Visit the [AAD Enterprise Applications blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AllApps/menuId/)
