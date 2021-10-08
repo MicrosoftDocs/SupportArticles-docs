@@ -50,6 +50,16 @@ To fix this issue, configure the sharing settings in Teams and SharePoint as fol
         - **Anyone**
         - **New and existing guests**
 
-If the issue persists, Microsoft 365 administrators can run a [self-diagnostic tool](https://aka.ms/TeamsFilesGuestAccessDiag) within the tenant to verify possible issues with guest users accessing files in Teams.
+### Run a self-diagnostics tool
 
-**Note:** This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with guest users accessing files in Teams.
+
+> [!NOTE]
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: Teams Files Guest Access](https://aka.ms/TeamsFilesGuestAccessDiag)
+
+The diagnostic performs a large range of verifications.
