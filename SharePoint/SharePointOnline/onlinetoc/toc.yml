@@ -99,8 +99,6 @@
       href: ../lists-and-libraries/drag-files-here-option-missing.md
     - name: 0x80070005 error for an online list sync
       href: ../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md
-    - name: An online list item attachment doesn't open in Office
-      href: ../lists-and-libraries/office-app-fails-opening-list-item-attachment.md
     - name: An online list opens the form dialog box when adding items
       href: ../lists-and-libraries/calendar-view-list-opens-dialog-box.md
     - name: Asset library displays a film reel icon for the video content type
