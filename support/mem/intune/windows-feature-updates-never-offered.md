@@ -1,15 +1,12 @@
 ---
-title: Feature updates not offered with error 80070426
-description: Describes an issue in which feature updates are never offered on Intune managed Windows 10 devices that run Windows 10 version 1709 or a later version.
-ms.date: 05/18/2020
+title: Troubleshoot when Windows 10 feature updates are not offered on Intune-managed devices
+description: Helps fix error 80070426 where feature updates are never offered on Intune managed Windows 10 devices that run Windows 10 version 1709 or later.
+ms.date: 10/08/2021
 ms.prod-support-area-path: Windows 10 update rings
 ---
 # Feature updates are not offered on Intune-managed Windows 10 devices
 
-This article fixes an issue in which feature updates are never offered on Intune managed Windows 10 devices that are running Windows 10 version 1709 or a later version.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4489564
+This article fixes an issue in which feature updates are never offered on Intune-managed Windows 10 devices that are running Windows 10 version 1709 or a later version.
 
 ## Symptoms
 
@@ -49,15 +46,17 @@ Error code 80070426 translates to the following:
 
 ## Cause
 
-This issue occurs if the Microsoft Account Sign-In Assistant (MSA or wlidsvc) service is disabled. The DCAT Flighting service (ServiceId: 855E8A7C-ECB4-4CA3-B045-1DFA50104289) relies on the MSA to get the global device ID for the device. If the MSA service isn't running, the global device ID is not generated and sent by the client. Therefore, the search for feature updates never completes successfully.
+This issue occurs if the Microsoft Account sign-in assistant (MSA or wlidsvc) service is disabled. The DCAT Flighting service (ServiceId: 855E8A7C-ECB4-4CA3-B045-1DFA50104289) relies on the MSA to get the global device ID for the device. If the MSA service isn't running, the global device ID is not generated and sent by the client. Therefore, the search for feature updates never completes successfully.
 
-## Resolution
+## Solution
 
 To fix this issue, follow these steps:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), select **Device configuration** > **Profiles**.
-2. Select the profile that's assigned to the affected Windows 10 devices, and then select **Properties** > **Device restrictions** > **Cloud and Storage**.
-3. Set **Microsoft Account sign-in assistant** to **Not configured**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), and select **Device configuration** > **Profiles**.
+
+1. Select the profile that's assigned to the affected Windows 10 devices, and then select **Properties** > **Device restrictions** > **Cloud and Storage**.
+
+1. Set **Microsoft Account sign-in assistant** to **Not configured**.
 
    :::image type="content" source="./media/windows-feature-updates-never-offered/sign-in-assistant.png" alt-text="Screenshot of the Microsoft Account sign-in assistant setting.":::
 

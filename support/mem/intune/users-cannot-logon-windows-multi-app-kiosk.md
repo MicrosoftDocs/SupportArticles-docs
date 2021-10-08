@@ -1,6 +1,6 @@
 ---
 title: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
-description: A user can't log on to an Azure AD joined Windows 10 computer if a multi-app kiosk profile is assigned.
+description: Explains why a user can't log on to an Azure AD joined Windows 10 computer if a multi-app kiosk profile is assigned.
 ms.date: 04/23/2021
 ms.prod-support-area-path: Configure device restrictions
 ms.reviewer: joelste, intunecic, mobazzar
@@ -8,9 +8,6 @@ ms.reviewer: joelste, intunecic, mobazzar
 # Users can't log on to Windows if a multi-app kiosk profile is assigned
 
 This article helps you fix an issue in which a user can't log on to an Azure AD joined Windows 10 computer if a multi-app kiosk profile is assigned.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4493932
 
 ## Symptoms
 
@@ -64,15 +61,14 @@ In this situation, the kiosk profile logon type is **AAD User** or **Group**. Ad
     > Description:  
     > Error Unspecified error applying assigned access for current user, signing out...  
 
-
 ## Cause
 
 This behavior is by design.
 
 This issue occurs because the users are targeted by conditional access policies that require user interaction. For example, multi-factor authentication (MFA), or Terms of Use (TOU).
 
-## Resolution
+## Solution
 
-To fix this issue, exclude the kiosk users from any conditional access policies that require user interaction, such as MFA or TOU.    
+To fix this issue, exclude the kiosk users from any conditional access policies that require user interaction, such as MFA or TOU.
 
 If the kiosk user is enabled for MFA, disable it because MFA is currently not supported in multi-app kiosk mode scenarios.
