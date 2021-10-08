@@ -137,24 +137,9 @@ Set the following registry DWORD values  on any computer that communicates acros
     - "SystemDefaultTlsVersions": **00000001**
     - "SchUseStrongCrypto": **00000001**
 
-## TLS Cipher Suites Supported by Azure Active Directory
-
-TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
-TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 
-TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 
-TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 
-TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA 
-TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA 
-TLS_RSA_WITH_AES_256_GCM_SHA384 
-TLS_RSA_WITH_AES_128_GCM_SHA256 
-TLS_RSA_WITH_AES_256_CBC_SHA256 
-TLS_RSA_WITH_AES_128_CBC_SHA256 
-TLS_RSA_WITH_AES_256_CBC_SHA 
-TLS_RSA_WITH_AES_128_CBC_SHA 
-
-
 For more information, see the following articles:
 
+- [TLS Cipher Suites Supported by Azure Active Directory](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Solving the TLS 1.0 Problem - Security documentation](/security/engineering/solving-tls1-problem)
 - [TLS 1.0/1.1 Deprecation Report](https://servicetrust.microsoft.com/AdminPage/TlsDeprecationReport/Download) (This report shows you some dependencies on older TLS protocols. The site might require you to sign in.)
