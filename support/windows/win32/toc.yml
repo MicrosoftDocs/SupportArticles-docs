@@ -22,7 +22,7 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
-    - name: Three- or four-finger touch interactions doesn't work in Windows 11 by default
+    - name: Three- or four-finger touch interactions doesn't work in Windows 11
       href: finger3or4-touch-interaction-no-longer-works.md
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
