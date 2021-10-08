@@ -22,9 +22,11 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: Three- or four-finger touch interactions doesn't work in Windows 11
+      href: finger3or4-touch-interaction-no-longer-works.md
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
-    - name: Desktop Bridge app fails to start when running as adminitrator
+    - name: Desktop Bridge app fails to start when running as administrator
       href: desktop-bridge-app-fail-start-run-as-administrator.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
@@ -40,7 +42,7 @@
       href: ime-crash-processing-cross-thread-sent-message.md
     - name: PathIsDirectory may be blocked when called by a UNC server
       href: pathisdirectory-may-blocked.md
-    - name: Screen Saver command line arguments
+    - name: Screen Saver command-line arguments
       href: screen-saver-command-line.md
     - name: Warning 1946 when you install an Installer package
       href: warning-1946-when-you-install-installer-package.md
@@ -138,13 +140,13 @@
       href: evtformatmessage-formatted-string-event.md
     - name: Guidelines for dates and times handling
       href: handle-dates-and-times-dst.md
-    - name: MSXML is not supported in .NET applications
+    - name: MSXML isn't supported in .NET applications
       href: msxml-not-support-dotnet-application.md
     - name: SetSystemTimeAdjustment loses adjustments
       href: setsystemtimeadjustment-less-than-16.md
     - name: Troubleshoot errors in Event Viewer
       href: troubleshoot-event-message-not-found.md
-    - name: User32.dll or Kernel32.dll does not initialize
+    - name: User32.dll or Kernel32.dll doesn't initialize
       href: user32-kernel32-not-initialize.md
   - name: Windows administration and management development
     items:
