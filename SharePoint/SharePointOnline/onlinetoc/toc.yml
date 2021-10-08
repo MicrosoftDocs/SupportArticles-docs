@@ -121,6 +121,8 @@
       href: ../lists-and-libraries/library-versioning-setting-changes.md
     - name: Check for Known Folder Move eligibility
       href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
+    - name: Common issues syncing SharePoint lists offline
+      href: ../lists-and-libraries/common-sync-issues.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
     - name: Content Organizer doesn't comply with specified interval
