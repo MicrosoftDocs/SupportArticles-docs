@@ -50,7 +50,7 @@ If you can't use the Azure Serial Console, go to the "[Offline repair](#offline-
 
 ### Offline repair
 
-If you can't access the VM by using the Azure Serial Console, then the repair must be done in offline mode because the VM isn't starting.
+If you can't access the VM by using the Azure Serial Console, then the repair must be done in offline mode because the VM isn't starting, or Serial Console is not enabled.
 
 1. Follow steps 1-3 of the [VM Repair process](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM. The repair VM will mount a copy of the OS disk for the failed VM automatically.
 1. Connect to the repair VM by using SSH.
