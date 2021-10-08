@@ -26,13 +26,13 @@ This article provides some methods that help you fix the sign-in issues in Micro
 1. If you use federated sign-in providers, validate Active Directory Federation Services (AD FS) configuration with the [Office 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in Microsoft Remote Connectivity Analyzer.
 1. Check the error code on the Teams sign-in screen:
     - **0xCAA82EE7** or **0xCAA82EE2**  
-        Make sure that you have the Internet access. To understand endpoints that should be reachable for customers using Teams in Office 365 plans, Government and other clouds, read [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide). To enable the communication to the IP addresses and ports needed for Teams, the administrator can use the [Network assessment tool](https://www.microsoft.com/en-us/download/details.aspx?id=53885) to verify network and network elements between the user location and the Microsoft Network are configured correctly.
+        Make sure that you have the Internet access. To understand endpoints that should be reachable for customers using Teams in Office 365 plans, Government and other clouds, read [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). To enable the communication to the IP addresses and ports needed for Teams, the administrator can use the [Network assessment tool](https://www.microsoft.com/en-us/download/details.aspx?id=53885) to verify network and network elements between the user location and the Microsoft Network are configured correctly.
 
     - **0xCAA20004**  
         Check if conditional access is preventing the sign- in, see [Conditional Access policies for Teams](/microsoftteams/security-compliance-overview#how-conditional-access-policies-work-for-teams) for more information.
 
     - **0xCAA70004** or **0xCAA70007**, or the sign-in issues also occurs in other Office applications.  
-        See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](../../Microsoft365/admin/authentication/connection-issue-when-sign-in-office-2016.md) for troubleshooting steps.
+        See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](../Microsoft365/admin/authentication/connection-issue-when-sign-in-office-2016.md) for troubleshooting steps.
 
     - Check the error codes listed in [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/en-us/topic/a02f683b-61a3-4008-9447-ee60c5593b0f). The article provides the troubleshooting action for each error code to help you fix the issue.
 

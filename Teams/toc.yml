@@ -184,7 +184,7 @@
   - name: Sign-in
     items:
     - name: Can't sign in Teams
-      href: ./known-issues/cannot-sign-in-teams.md
+      href: ./teams-sign-in/cannot-sign-in-teams.md
     - name: Can't start Teams for Surface Hub from Microsoft Store
       href: ./known-issues/teams-for-surface-hub-wont-start-from-store.md
     - name: Sign-in error after password change
