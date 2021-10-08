@@ -2,6 +2,14 @@
 
 
 
+## Week of September 27, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/30/2021 | [MapiFxProxyTransientException when doing migration](/exchange/troubleshoot/move-or-migrate-mailboxes/stalledduetotarget-processor-error-during-migration) | modified |
+
+
 ## Week of September 20, 2021
 
 
