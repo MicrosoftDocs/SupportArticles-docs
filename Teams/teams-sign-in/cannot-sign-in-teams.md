@@ -32,7 +32,7 @@ This article provides some methods that help you fix the sign-in issues in Micro
         Check if conditional access is preventing the sign- in, see [Conditional Access policies for Teams](/microsoftteams/security-compliance-overview#how-conditional-access-policies-work-for-teams) for more information.
 
     - **0xCAA70004** or **0xCAA70007**, or the sign-in issues also occurs in other Office applications.  
-        See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](connection-issue-when-sign-in-office-2016.md) for troubleshooting steps.
+        See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](../../Microsoft365/admin/authentication/connection-issue-when-sign-in-office-2016.md) for troubleshooting steps.
 
     - Check the error codes listed in [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/en-us/topic/a02f683b-61a3-4008-9447-ee60c5593b0f). The article provides the troubleshooting action for each error code to help you fix the issue.
 
