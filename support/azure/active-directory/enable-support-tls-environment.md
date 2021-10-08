@@ -139,7 +139,7 @@ Set the following registry DWORD values  on any computer that communicates acros
 
 For more information, see the following articles:
 
-- [TLS Cipher Suites Supported by Azure Active Directory](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
+- [TLS Cipher Suites supported by Azure AD](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Solving the TLS 1.0 Problem - Security documentation](/security/engineering/solving-tls1-problem)
 - [TLS 1.0/1.1 Deprecation Report](https://servicetrust.microsoft.com/AdminPage/TlsDeprecationReport/Download) (This report shows you some dependencies on older TLS protocols. The site might require you to sign in.)
