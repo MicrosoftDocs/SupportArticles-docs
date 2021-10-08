@@ -97,6 +97,8 @@
       href: ../information-barriers/information-barriers-troubleshooting.md
   - name: MRM & Retention Policies
     items:
+    - name: Can't manage disposition reviews
+      href: ../mrm-rentention-policies/cannot-manage-disposition-reviews.md
     - name: Managed folders disappear
       href: ../mrm-rentention-policies/managed-folders-disappear.md
     - name: MRM and retention policies
