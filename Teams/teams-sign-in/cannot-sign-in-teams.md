@@ -19,7 +19,7 @@ search.appverid:
 ---
 # Can't sign in Teams
 
-This article provides some methods that help you fix the sign-in issues in Microsoft Teams. Try each of the following methods in the order in which they're listed.
+This article provides some methods that help you fix the sign-in issues in Microsoft Teams.
 
 1. Run the Teams sign-in diagnostics: [Diag: Teams Sign-in](https://aka.ms/TeamsSignInDiag), which will populate the diagnostic in the Microsoft 365 Admin Center.
 1. Make sure the [Teams client is updated](https://support.microsoft.com/en-us/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1).
