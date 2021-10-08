@@ -28,7 +28,7 @@ Microsoft has established a joint support relationship for non-Microsoft hardwar
 - Citrix Systems, Inc.
 - Nutanix, Inc.
 - Red Hat, Inc.
-- SUSE Linus Products GmbH
+- SUSE Linux Products GmbH
 - Virtuozzo International GmbH
 - VMware, Inc
 
