@@ -559,9 +559,7 @@
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
-      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
-    - name: Configure client proxy server settings
-      href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md    
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
