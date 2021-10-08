@@ -16,4 +16,4 @@ To support three- or four-finger touch interactions within an application, a new
 - When the setting is set to “On” (the default), the system can use the three- and four-finger interactions but the apps can't use them.
 - When the setting is set to “Off,” the system can't use the three- and four-finger interactions but the apps can use them.
 
-If your application must support these interactions, we recommend that you inform users of this setting and provide a link that launches the Settings app to the relevant page (ms-settings:devices-touch). For more information, see [Launch the Windows Settings app](/uwp/api/windows.system.launcher.launchuriasync?view=winrt-22000).
+If your application must support these interactions, we recommend that you inform users of this setting and provide a link that launches the Settings app to the relevant page (ms-settings:devices-touch). For more information, see [Launch the Windows Settings app](/uwp/api/windows.system.launcher.launchuriasync?view=winrt-22000&preserve-view=true).
