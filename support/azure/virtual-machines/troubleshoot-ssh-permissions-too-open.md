@@ -26,7 +26,7 @@ You can't connect to your Microsoft Azure Linux virtual machine (VM) by using Se
 >shd: error: Could not load host key: /etc/ssh/sshKeyName
 
 ## Cause
-This issue might occur if the /etc/ssh configuration directory or the files in this directory are accessible by users other than the owner. This is usually caused by a running a "chmod" command on the wrong directory or running a "chmod" command that has incorrect parameters.
+This issue might occur if the /etc/ssh configuration directory or the files in this directory are accessible by users other than the owner. This is usually caused by running a "chmod" command on the wrong directory or running a "chmod" command that has incorrect parameters.
 
 ## Resolution
 
