@@ -599,7 +599,9 @@
   - name: Web Application Proxy (WAP) role service
     items:
     - name: Fail to use apps that connect to Internet
-      href: ./networking/use-authenticated-proxy-servers.md    
+      href: ./networking/use-authenticated-proxy-servers.md
+    - name: Use Group Policy to apply WinHTTP proxy settings
+      href: ./networking/use-group-policy-apply-winhttp-proxy-settings.md
   - name: WebClient and WebDAV
     items:
     - name: Can't access WebDAV Web folder
