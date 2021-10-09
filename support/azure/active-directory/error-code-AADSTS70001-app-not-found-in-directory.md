@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS70001 - Application with Identifier was not found in the directory.
 description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is Error AADSTS70001 - Application with Identifier was not found in the directory.
-ms.date: 03/15/2021
+ms.date: 09/30/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
 ---
@@ -21,7 +21,20 @@ The `Issuer` attribute sent from the application to Azure AD in the SAML request
 
 Ensure that the `Issuer` attribute in the SAML request matches the Identifier value configured in Azure AD.
 
-On the SAML-based SSO configuration page, in the **Basic SAML configuration** section, verify that the value in the Identifier textbox matches the value for the identifier value displayed in the error.
+On the SAML-based SSO configuration page, in the **Basic SAML configuration** section, verify that the value in the Identifier textbox matches the value for the identifier value displayed in the error. Be sure to check if there is a trailing slash at the end -- those count!
+
+### Using the Test SSO Function in the Azure AD Portal
+
+The Azure AD Portal can help you troubleshoot SAML configuration errors.
+
+:::image type="content" source="media/testing-sso-screen.PNG" alt-text="Screenshot of Testing SSO Feature in Azure AD Portal.":::
+
+1. In the Azure AD portal, go to **Enterprise Applications** and click on the application needing troubleshooting.
+2. Navigate to the **Single sign-on** page using the left-hand navigation menu
+3. Click on **Test this application** to use the Test SSO functionality.
+4. Copy and paste the error received into the **Resolving Errors** section and click **Get resolution guidance**
+5. View the difference between the Issuer and Identifier found.
+6. Correct either the Issuer or Identifier.
 
 ## More Information
 

@@ -134,6 +134,7 @@ If you didn't enable the root user by following the earlier instructions, you ca
 1. In the shell, enter `mount -o remount,rw /sysroot` to remount the root file system with read/write permissions.
 1. After you boot into single-user mode, enter `chroot /sysroot` to switch into the `sysroot` jail.
 1. You're now at root. You can reset your root password by entering `passwd` and then use the preceding instructions to enter single-user mode.
+1. In RHEL, SELinux enforcing mode protects the OS from any changes. You can run `touch /.autorelabel` to relabel the file system after the password is changed.
 1. After you're done, enter `reboot -f` to reboot.
 
 ![Animated image showing a command-line interface. The user selects a server, locates the end of the kernel line, and enters the specified commands.](./media/serial-console-grub-single-user-mode/virtual-machine-linux-serial-console-rhel-emergency-mount-no-root.gif)
