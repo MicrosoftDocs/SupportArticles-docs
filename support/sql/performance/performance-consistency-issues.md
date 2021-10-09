@@ -18,11 +18,11 @@ _Original KB number:_ &nbsp; 2033238
 When certain modules are loaded into the Microsoft SQL Server process address space (Sqlservr.exe), you may encounter the following symptoms:
 
 - Reports of various hang-related error messages and conditions (for example, SQL Server scheduler message such as 17883, application time-out messages, severe blocking within SQL Server)
-- Slow response from SQL Server even if the concurrent amount of load is not unusually heavy
-- Exceptions (such as access violations), critical error messages about database consistency, assertion messages or unexpected process termination
-- 100% CPU utilization and long database recovery times when you use in-memory OLTP tables in SQL Server
-- Unexpected or unexplained failures when SQL Server processes make Windows API calls
-- Memory dumps triggered for SQLDumper.exe may fail to complete hindering any troubleshooting activity
+- Slow response from SQL Server even if the concurrent amount of load is not unusually heavy.
+- Exceptions (such as access violations), critical error messages about database consistency, assertion messages or unexpected process termination.
+- 100% CPU utilization and long database recovery times when you use in-memory OLTP tables in SQL Server.
+- Unexpected or unexplained failures when SQL Server processes make Windows API calls.
+- Memory dumps triggered for SQLDumper.exe may fail to complete hindering any troubleshooting activity.
 
 ## Cause
 
@@ -69,7 +69,7 @@ The following modules can cause performance and stability issues when they are l
 
 - UMPPC*.DLL, SCRIPTCONTROL*.DLL
 
-  These DLL files are loaded into the SQL Server or SQL Server Agent address space if you enable the “Additional User Mode Data” prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might also encounter failures while attempting to launch SQL Server Management Studio. You may also see that SQL Server fails to launch SQLDumper.exe to generate a memory dumps. 
+  These DLL files are loaded into the SQL Server or SQL Server Agent address space if you enable the “Additional User Mode Data” prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might encounter failures while attempting to launch SQL Server Management Studio. You might also see that SQL Server fails to launch SQLDumper.exe to generate memory dumps. 
 
 - Carbon Black relative dll
 
