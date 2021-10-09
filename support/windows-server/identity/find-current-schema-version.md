@@ -58,6 +58,8 @@ The following information provides a mapping between the **objectVersion** attri
 30 -> Windows Server 2003 RTM, Windows 2003 With Service Pack 1, Windows 2003 With Service Pack 2  
 31 -> Windows Server 2003 R2  
 44 -> Windows Server 2008 RTM
+87 -> Windows Server 2016
+88 -> Windows Server 2019
 
 ## How to find the current Exchange Schema Version
 
