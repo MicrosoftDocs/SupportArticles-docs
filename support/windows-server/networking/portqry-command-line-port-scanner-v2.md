@@ -98,12 +98,12 @@ The following parameters are available in regular command-line mode:
 |`-e <port_number>` |Specify the target port (also known as "endpoint")|<ul><li>The \<*port_number*> value represents the port to query on the destination computer.</li><li>The default value is `80`.</li></ul> |
 |`-o <port_number>,<port_number>` |Specify multiple target ports in a sequence |The \<*port_number*>,\<*port_number*> values represent comma-delimited list of port numbers to query in a sequence. Do not use spaces around the commas. |
 |`-r <port_number>:<port_number>` |Specify a range of target ports |<ul><li>The \<*port_number*>:\<*port_number*> values represent the starting and ending port numbers, separated by a colon. Do not use spaces around the colon.</li><li>The starting port number must be smaller than the ending port number.</li></ul> |
-|`-l <filename.txt>` |Generate a log file |<ul><li>The \<*filename.txt*> value represents the name and extension of the log file. This value cannot include spaces.</li><li>When the command runs, PortQry creates the log file in the directory where it is installed.</li><li>If the file already exists, PortQry asks you to confirm that you want to overwrite it (unless you also use the `-y` parameter).</li></ul> |
+|`-l <filename.txt>` |Generate a log file |<ul><li>The \<*filename.txt*> value represents the name and extension of the log file. This value cannot include spaces.</li><li>When the command runs, PortQry creates the log file in the directory where it's installed.</li><li>If the file already exists, PortQry asks you to confirm that you want to overwrite it (unless you also use the `-y` parameter).</li></ul> |
 |`-y` |Overwrite previous log file |<ul><li>When you use `-y` together with `-l`, PortQry overwrites the existing log file without prompting you to confirm the action.</li><li>If the PortQry command string does not include `-l`, PortQry ignores `-y`.</li></ul> |
 |`-sl` |Wait extra time for response (also known as slow link delay) |Use this parameter to double the time that PortQry waits for a response from a UDP port before PortQry determines that the port is NOT LISTENING or that it's FILTERED. When you query over slow or unreliable network links, the normal wait time may be too short to receive a response. |
 |`-nr` |Skip reverse name lookup |<ul><li>By default, when you use `-n` to specify an IP address for the target computer, PortQry does a reverse name lookup to resolve the IP address to a name. This process may be time-consuming, especially if PortQry can't resolve the IP address. Use `-nr` to skip this step of the query.</li><li>If you use `-n` to specify a computer or domain name, PortQry ignores `-nr`. |
 |`-sp <port_number>` |Query from a specific source port |<ul><li>The \<*port_number*> value represents the port that PortQry uses to send the query.</li><li>PortQry can't use a port that another process is already using. If the port that you specify is already in use, PortQry returns the following error message:<blockquote>Cannot use specified source port.<br/>Port is already in use.<br/>Specify a port that is not in use and run the command again.</blockquote></li><li>In the following cases, PortQry uses the specified port for the first test of the query, but not the second test: <ul><li>RPC (TCP and UDP ports 135)</li><li>LDAP (UDP port 389)</li><li>NetBIOS Adapter status query (UDP port 137)</li></ul>In these cases, PortQry uses an ephemeral port for the second test. When this occurs, PortQry records "Using ephemeral source port" in its output.</li><li>If the computer where PortQry is installed also runs the IPSec policy agent, UDP port 500 may not be available to use as a source port. To temporarily turn off the IPSec policy agent so that you can use port 500, run `net stop PolicyAgent`. When you have finished testing, run `net start PolicyAgent`.</li></ul> |
-|`-cn !<community_name>!` |Query an SMTP community |<ul><li>The \<*community_name*> value represents the name of the SNMP community to query. You must delimit this value by using exclamation points, as shown in the left-hand column.</li><li>If the SNMP service is not listening on the target port, PortQry ignores `-cn`.</li><li>The default community name is `public`.</li></ul>  |
+|`-cn !<community_name>!` |Query an SMTP community |<ul><li>The \<*community_name*> value represents the name of the SNMP community to query. You must delimit this value by using exclamation points, as shown in the left column.</li><li>If the SNMP service is not listening on the target port, PortQry ignores `-cn`.</li><li>The default community name is `public`.</li></ul>  |
 |`-q` |Run PortQry in quiet mode |<ul><li>When you use `-q`, PortQry suppresses all screen output except for error messages.</li><li>To see output other than error messages, use `-q` together with `-l`. PortQry records the normal output in the log file.</li><li>If a log file already exists and you use `-q` together with `-l`, PortQry overwrites the existing log file without prompting you.</li><li>You cannot use `-q` together with `-o`, `-r`, or `-p both`.</li><li>This parameter is especially helpful when you use a batch file to run a PortQry command string.</li></ul> |
 
 ### Remarks for parameters in command-line mode
@@ -131,10 +131,10 @@ The placeholders in this syntax are explained in the following table of local mo
 |Parameter |Description |Comments |
 | - | - | - |
 |`-local` |Retrieve local information |<ul><li>Enumerate all the TCP and UDP port mappings that are currently active on the local computer. This output is similar to the output that the `netstat.exe -an` command generates.</li><li>On computers that support PID-to-port mappings, the output includes the PID of the process that's using the port on the local computer. If you use the verbose option (`-v`), the output also includes the names of the services that the PID belongs to and lists all the modules that the process has loaded. You can use this information to determine which ports are associated with a particular program or service that's running on the computer.</li></ul> |
-|`-wport <port_number>` |Watch port |<ul><li>Monitor a specific port for changes. The \<*port_number*> value represents the port to monitor.</li><li>In the case of a TCP port, PortQry reports changes between the following states:<ul><li>**CLOSE_WAIT**</li><li>**CLOSED**</li><li>**ESTABLISHED**</li><li>**FIN_WAIT_1**</li><li>**LAST_ACK**</li><li>**LISTEN**</li><li>**SYN_RECEIVED**</li><li>**SYN_SEND**</li><li>**TIMED_WAIT**</li></ul></li></li><li>For UDP ports, PortQry reports if a program is bound to the port, but it doesn't report whether the UDP port receives datagrams.</li><li>To stop monitoring, press ESC.</li></ul> |
-|`-wpid <pid>` |Watch process ID (PID) |<ul><li>Monitor a specific PID for changes in the number and state of connections. The \<*process_number*> value represents the PID to monitor.</li><li>To stop monitoring, press ESC.</li></ul> |
+|`-wport <port_number>` |Watch port |<ul><li>Monitor a specific port for changes. The \<*port_number*> value represents the port to monitor.</li><li>In the case of a TCP port, PortQry reports changes between the following states:<ul><li>**CLOSE_WAIT**</li><li>**CLOSED**</li><li>**ESTABLISHED**</li><li>**FIN_WAIT_1**</li><li>**LAST_ACK**</li><li>**LISTEN**</li><li>**SYN_RECEIVED**</li><li>**SYN_SEND**</li><li>**TIMED_WAIT**</li></ul></li></li><li>For UDP ports, PortQry reports if a program is bound to the port, but it doesn't report whether the UDP port receives datagrams.</li><li>To stop monitoring, press Esc.</li></ul> |
+|`-wpid <pid>` |Watch process ID (PID) |<ul><li>Monitor a specific PID for changes in the number and state of connections. The \<*process_number*> value represents the PID to monitor.</li><li>To stop monitoring, press Esc.</li></ul> |
 |`-wt <seconds>` |Check at specific interval |<ul><li>Check the status of the target that's identified by `-wport` or `"-wpid` at the interval that's represented by the /<*seconds*> value.</li><li>The \<*seconds*> value must be between one and 1,200 (inclusive).</li><li>The default value is `60`.</li><li>You cannot use `-wt` by itself or together with `-local`.</li></ul> |
-|`-l <filename.txt>` |Generate a log file |<ul><li>The \<*filename.txt*> value represents the name and extension of the log file. This value cannot include spaces.</li><li>When the command runs, PortQry creates the log file in the directory where it is installed.</li><li>If the file already exists, PortQry asks you to confirm that you want to overwrite it (unless you also use the `-y` parameter).</li></ul> |
+|`-l <filename.txt>` |Generate a log file |<ul><li>The \<*filename.txt*> value represents the name and extension of the log file. This value cannot include spaces.</li><li>When the command runs, PortQry creates the log file in the directory where it's installed.</li><li>If the file already exists, PortQry asks you to confirm that you want to overwrite it (unless you also use the `-y` parameter).</li></ul> |
 |`-y` |Overwrite previous log file |<ul><li>When you use `-y` together with `-l`, PortQry overwrites the existing log file without prompting you to confirm the action.</li><li>If the PortQry command string does not include `-l`, PortQry ignores `-y`.</li></ul> |
 |`-v` |Produce verbose output |PortQry provides additional details to the screen output (and to the log file, if used). |
 
@@ -144,7 +144,7 @@ The placeholders in this syntax are explained in the following table of local mo
 - The `-q` parameter does not function in local mode.
 - In some cases, PortQry may report that the System Idle process (PID 0) is using some TCP ports. This behavior may occur if a local program connects to a TCP port and then stops. Even though the program is no longer running, the program's TCP connection to the port may be left in a "Timed Wait" state for several minutes. In such a case, PortQry may detect that the port is in use, but it can't identify the program that's using the port because the PID has been released. By default, the port remains in a "Timed Wait" state for twice as long as the maximum segment lifetime.
 - For each process, PortQry reports as much information as it can access. Access to some information is restricted. For example, access to module information for the Idle and CSRSS processes is prohibited because their access restrictions prevent user-level code from opening them. For best results, run the local mode command in the context of the local Administrator or of an account that has similar credentials.
-- When you use either `-wport` or `-wpid` together with `-l`, use the ESC key to interrupt and exit PortQry instead of CTRL+C. You must press ESC to make sure that PortQry correctly closes the log file and exits. If you press CTRL+C instead of ESC to stop PortQry, the log file might become empty or corrupted.
+- When you use either `-wport` or `-wpid` together with `-l`, use the Esc key to interrupt and exit PortQry instead of CTRL+C. You must press Esc to make sure that PortQry correctly closes the log file and exits. If you press CTRL+C instead of Esc to stop PortQry, the log file might become empty or corrupted.
 
 ## <a id="interactive"></a>Using PortQry in interactive mode
 
@@ -159,7 +159,6 @@ portqry -i
 ```
 
 The output of this command resembles the following excerpt:
-
 ```output
 Portqry Interactive Mode
 
@@ -224,7 +223,7 @@ set <option>=<value>
 ```
 
 > [!NOTE]  
-> In this command, \<*option*> represents the name of the option to set and \<*value*> represents the new value of the option.
+> In this command, \<*option*> represents the name of the option to set, and \<*value*> represents the new value of the option.
 
 |Option |Description |Comments |
 | - | - | - |
@@ -259,7 +258,7 @@ UDP port 53 (domain service): LISTENING
 >
 ```
 
-## Customizing the associations between ports and services
+## Customizing the association between ports and services
 
 By default, every Windows-based computer has a Services file that's located in the *%SYSTEMROOT%\System32\Drivers\Etc* folder. PortQry uses this file to resolve port numbers to their corresponding service names. PortQry uses this information to select the format for its queries. You can edit this file to direct PortQry to send formatted messages to an alternative port. For example, the following entry appears in a typical Services file:
 
@@ -267,7 +266,7 @@ By default, every Windows-based computer has a Services file that's located in t
 ldap              389/tcp                           #Lightweight Directory Access Protocol
 ```
 
-You can edit this port entry or add an additional entry. To cause PortQry to send LDAP queries to port 1025, modify the entry to the following entry:
+You can edit this port entry or add an additional entry. To force PortQry to send LDAP queries to port 1025, modify the entry as follows:
 
 ```output
 ldap              1025/tcp                           #Lightweight Directory Access Protocol
@@ -275,7 +274,7 @@ ldap              1025/tcp                           #Lightweight Directory Acce
 
 ## Examples
 
-The following examples demonstrate how to use PortQry and its parameters.
+The following examples demonstrate how to use PortQry and its parameters:
 
 **Local mode**
 
@@ -314,9 +313,9 @@ TCP 139 169.254.149.9 ESTABLISHED 169.254.4.253:4310
 TCP 139 169.254.149.9 ESTABLISHED 169.254.74.55:3714  
 ```
 
-### <a id="exlocalrestrict"></a>Query the local computer when access may be restricted
+### <a id="exlocalrestrict"></a>Query the local computer when access might be restricted
 
-When you run PortQry in local mode, as in the previous example, you may see output that resembles the following excerpt. Such output indicates that the security context that PortQry is using doesn't have sufficient permissions to access all of the information that it requested.
+When you run PortQry in local mode, as in the previous example, you might see output that resembles the following excerpt. Such output indicates that the security context that PortQry is using doesn't have sufficient permissions to access all of the information that it requested.
 
 ```output
 Port and Module Information by Process
@@ -356,7 +355,7 @@ portqry.exe -wpid 1276 -wt 2 -v -l pid.txt
 
 As a result, PortQry takes the following actions:
 
-- Identifies the process that has the 1276 PID, and checks the status of the ports that it's using every two seconds until you press ESC.
+- Identifies the process that has the 1276 PID, and checks the status of the ports that it's using every two seconds until you press Esc.
 - Creates the log file *pid.txt*. If a file that has that name already exists, PortQry prompts you to confirm that you want to overwrite the file.
 - Records any output in the log file, including the extra verbose output.
 
@@ -474,13 +473,13 @@ The following command queries TCP port 60897 and UDP port 60897 of a computer th
 portqry -n 192.168.1.20 -p both -e 60897
 ```
 
-The following command queries UDP ports 139, 1025, and 135 (in that sequence) on the computer myServer:
+The following command queries UDP ports 139, 1025, and 135 (in that sequence) on the computer "myServer":
 
 ```console
 portqry -n myServer -p udp -o 139,1025,135
 ```
 
-The following command queries the range of ports from port 135 to port 139 (inclusive) on the computer myServer:
+The following command queries the range of ports from port 135 to port 139 (inclusive) on the computer "myServer":
 
 ```console
 portqry -n myServer -p udp -r 135:139
@@ -562,9 +561,9 @@ As a result, PortQry takes the following actions:
 
 - PortQry uses the Services file in the *%SYSTEMROOT%\System32\Drivers\Etc* folder to resolve UDP port 135 to a service. Using the default configuration, PortQry resolves the port to the RPC endpoint mapper service (Epmap).
 - PortQry sends an unformatted user datagram to UDP port 135 on the destination computer.  
-  PortQry doesn't receive a response from the target port, because the RPC endpoint mapper service only responds to a correctly formatted RPC query. PortQry reports that the port is **LISTENING or FILTERED**.
+  PortQry doesn't receive a response from the target port. This is because the RPC endpoint mapper service responds only to a correctly formatted RPC query. PortQry reports that the port is **LISTENING or FILTERED**.
 - PortQry creates a correctly formatted RPC query that requests all the endpoints that are currently registered with the RPC endpoint mapper. PortQry sends this query to to UDP port 135 on the destination computer.  
-- Depending on the response, PortQry takes one of the following actions:  
+- Depending on the response, PortQry takes one of the following actions:
   - If PortQry receives a response to this query, PortQry returns the whole response to the user and reports that the port is **LISTENING**.
   - If PortQry doesn't receive a response to this query, it reports that the port is **FILTERED**.
 
@@ -601,4 +600,4 @@ UDP port 135 is LISTENING
 From this output, you can determine not only whether the service is listening on the port, but also which services or programs are registered with the RPC endpoint mapper database on the destination computer. The output includes the universal unique identifier (UUID) for each program, the annotated name (if one exists), the protocol that each program uses, the network address that the program is bound to, and the program's endpoint in square brackets.
 
 > [!NOTE]  
-> When you specify the `-r` option in the PortQry command to scan a range of ports, PortQry doesn't query the RPC endpoint mapper for endpoint information. This parameter makes the scan of a range of ports faster.
+> When you specify the `-r` option in the PortQry command to scan a range of ports, PortQry doesn't query the RPC endpoint mapper for endpoint information. This parameter accelerates scanning a range of ports.
