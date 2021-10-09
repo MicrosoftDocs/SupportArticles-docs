@@ -54,7 +54,7 @@ To work around this problem, uninstall and then reinstall the .NET Framework 4.7
 3. In the .NET Framework 4.7 Maintenance wizard, select **Remove.NET Framework 4.7 from this computer**, and then select **Next**.
 4. If the following warning window appears, select **Continue**.
 
-    :::image type="content" source="./media/comexception-error-from-wpf-app/warning.png" alt-text="Warning at uninstalling .NET Framework 4.7":::
+    :::image type="content" source="./media/comexception-error-from-wpf-app/warning.png" alt-text="Screenshot of the warning window, which shows uninstalling Microsoft .NET Framework may cause some applications to cease to function.":::
 
 5. Wait for the uninstallation to complete.
 
@@ -73,11 +73,11 @@ To reinstall the Microsoft .NET Framework 4.7, use one of the following methods.
 2. Select **Check online for updates from Windows Update**.
 3. After the search for updates is complete, select **Optional Updates available**.
 
-    :::image type="content" source="./media/comexception-error-from-wpf-app/optional-updates.png" alt-text="Optional Updates available":::
+    :::image type="content" source="./media/comexception-error-from-wpf-app/optional-updates.png" alt-text="Screenshot of the Windows Update panel, showing the link of optional updates available.":::
 
-4. Locate and select **Microsoft .NET Framework for Windows 7 and Windows Server 2008 R2**, and then select **OK**.
+4. Locate and select **Microsoft .NET Framework 4.7 for Windows 7 and Windows Server 2008 R2**, and then select **OK**.
 
-    :::image type="content" source="./media/comexception-error-from-wpf-app/dot-net-update.png" alt-text=".NET Framework 4.7 in Windows Update":::
+    :::image type="content" source="./media/comexception-error-from-wpf-app/dot-net-update.png" alt-text="Screenshot shows the optional updates, where Microsoft .NET Framework 4.7 for Windows 7 and Windows Server 2008 R2 for x64 (KB3186497) is selected.":::
 
 5. Wait for the installation to complete.
 
