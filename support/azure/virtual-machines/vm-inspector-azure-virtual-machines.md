@@ -48,6 +48,11 @@ VM Inspector is supported on the following operating systems:
 
 [Linux distributions endorsed on Azure](/azure/virtual-machines/linux/endorsed-distros)
 
+## Supported regions
+
+VM Inspector is supported on the following Azure regions:
+Australia East, East US, East US2, North Europe, SouthCental US, SouthEast Asia, UK South, WestCentral US, West Europe, West US2
+
 ## Unsupported scenarios
 
 - Unmanaged OS disks and VMs

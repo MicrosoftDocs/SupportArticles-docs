@@ -52,7 +52,7 @@ If you're using a stand-alone computer or if you want to enable verbose status m
 1. Click **Start** > **Run**.
 2. In the **Open** box, type *gpedit.msc*, and then click **OK**.
 3. Expand **Computer Configuration** > **Administrative Templates**, and then click **System**.
-4. In the right pane, double-click **Verbose vs normal status messages**.
+4. In the right pane, double-click **Display highly detailed status messages**.
 5. Click **Enabled** > **OK**.
 6. Close Group Policy Object Editor, and then click **OK**.
 

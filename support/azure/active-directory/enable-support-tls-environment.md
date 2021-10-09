@@ -158,6 +158,7 @@ Set the following registry DWORD values on any computer that communicates across
 
 For more information, see the following articles:
 
+- [TLS Cipher Suites supported by Azure AD](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)
 - [Solving the TLS 1.0 Problem - Security documentation](/security/engineering/solving-tls1-problem)
