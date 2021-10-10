@@ -2,6 +2,15 @@
 
 
 
+## Week of October 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/5/2021 | [How to download and run Office LTSC installation files not in VLSC](/office/troubleshoot/installation/how-to-download-office-install-not-in-vlsc) | modified |
+| 10/8/2021 | [Error when you create a user name that contains a special character](/office/troubleshoot/office-suite-issues/username-contains-special-character) | modified |
+
+
 ## Week of September 27, 2021
 
 
