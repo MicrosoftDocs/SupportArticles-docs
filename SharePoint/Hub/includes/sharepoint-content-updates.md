@@ -2,6 +2,15 @@
 
 
 
+## Week of October 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/8/2021 | A SharePoint Online list item attachment doesn't open in the Office client app | removed |
+| 10/8/2021 | [Searching private content in Microsoft 365 OneDrive for Business](/sharepoint/troubleshoot/search/search-private-content) | added |
+
+
 ## Week of September 27, 2021
 
 
