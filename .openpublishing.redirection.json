@@ -894,6 +894,11 @@
       "source_path": "support/windows-server/remote/remote-desktop-ip-virtualization-not-work.md",
       "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-ip-virtualization",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/sql-server-windows-8-later-versions.md",
+      "redirect_url": "/troubleshoot/sql/general/use-sql-server-in-windows",
+      "redirect_document_id": true
     }
   ]
 }

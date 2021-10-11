@@ -6,9 +6,9 @@ ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
-# Using SQL Server in Windows 8 and later versions of Windows operating system
+# Using SQL Server in Windows
 
-This article contains guidance about how to use different versions of Microsoft SQL Server on a computer that is running Windows 8 or a later version of the operating system.
+This article contains guidance about how to use different versions of Microsoft SQL Server on a computer that is running Windows operating system.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2681562
@@ -24,7 +24,7 @@ How to use this article:
 
     |Windows Version/SQL Version --> |SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|More Information/Limitations|
     |---|---|---|---|---|---|---|---|---|
-    |Windows Server 2022  |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |[Additional information for Windows Server 2022 environments](#minimum-sql-server-version-requirements-for-windows-server-2022)|    
+    |Windows Server 2022  |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |[Additional information for Windows Server 2022 environments](#minimum-sql-server-version-requirements-for-windows-server-2022)|
     |Windows 10 |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows 10 environments](#minimum-sql-server-version-requirements-for-windows-10-and-windows-server-2016)|
     |Windows Server 2019  |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows Server 2019 environments](#minimum-sql-server-version-requirements-for-windows-server-2019)|
     |Windows Server 2016  |Yes  (RTM) |Yes  (RTM) |Yes (SP2) |Yes (SP3) |Yes (SP4) |Not supported |Not supported |[Additional information for Windows Server 2016 environments](#minimum-sql-server-version-requirements-for-windows-10-and-windows-server-2016)|
@@ -87,20 +87,20 @@ Before you install SQL Server on a computer that is running Windows Server 2019 
 
 - **For SQL Server 2016**
 
-    You must apply SQL Server 2016 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2016](https://support.microsoft.com/help/3177534).
+    You must apply SQL Server 2016 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2016](https://support.microsoft.com/help/3177534).
 
 - **For SQL Server 2014**
 
-    You must apply SQL Server 2014 Service Pack 3 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/help/2958069).  
+    You must apply SQL Server 2014 Service Pack 3 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/help/2958069).  
 
 - **For SQL Server 2012**
 
-    You must apply SQL Server 2012 Service Pack 4 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
+    You must apply SQL Server 2012 Service Pack 4 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
 
     > [!NOTE]
     >
     > - Make sure that you check known setup issues when you install SQL Server 2012 on Windows 10 or Windows Server 2016.
-    > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016.
+    > - The Books Online topic **Hardware and Software Requirements for Installing SQL Server 2012** has not yet been updated to reflect the support for Windows Server 2016.
 
 - **For SQL Server 2008 R2**
 
@@ -166,11 +166,11 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
 
 - **For SQL Server 2016**
 
-    You must apply SQL Server 2016 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2016](https://support.microsoft.com/help/3177534).
+    You must apply SQL Server 2016 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2016](https://support.microsoft.com/help/3177534).
 
 - **For SQL Server 2014**
 
-  You must apply SQL Server 2014 Service Pack 3 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/help/2958069).
+  You must apply SQL Server 2014 Service Pack 3 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/help/2958069).
 
 - **For SQL Server 2012**
 
@@ -211,15 +211,15 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
 
 - **For SQL Server 2016**
 
-    You must apply SQL Server 2016 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2016](https://support.microsoft.com/help/3177534).
+    You must apply SQL Server 2016 Service Pack 2 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2016](https://support.microsoft.com/help/3177534).
 
 - **For SQL Server 2014**
 
-    You must apply SQL Server 2014 Service Pack 3 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/help/2958069).  
+    You must apply SQL Server 2014 Service Pack 3 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2014](https://support.microsoft.com/help/2958069).  
 
 - **For SQL Server 2012**
 
-    You must apply SQL Server 2012 Service Pack 4 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
+    You must apply SQL Server 2012 Service Pack 4 or a later update. For more information, see [How to obtain the latest service pack for SQL Server 2012](https://support.microsoft.com/help/2755533).
 
   > [!NOTE]
   > Please check [known setup issues](/troubleshoot/sql/install/sql-server-2012-setup-issues) when you install SQL Server 2012 on Windows 8 or Windows Server 2012.
@@ -231,7 +231,7 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   > [!NOTE]
   > The RTM installation of the product is supported. However, you have to install the respective service packs after the initial setup is complete. You will see the following message on the Solution Center page:
 
-  ![Solution Center page](./media/sql-server-windows-8-later-versions/solution-center-page-image.png)
+  ![Solution Center page](./media/use-sql-server-in-windows/solution-center-page-image.png)
 
   For more information, see [How to obtain the latest service pack for SQL Server 2008 R2](https://support.microsoft.com/help/2527041).
 
@@ -242,14 +242,14 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   > [!NOTE]
   > The RTM installation of the product is supported. However, you have to install the respective service packs after the initial setup is complete. Your SQL server 2008 installation is not supported unless you apply Service Pack 4 after you install the RTM edition. You will see the following message on the Solution Center page.
 
-  ![the Solution Center page](./media/sql-server-windows-8-later-versions/solution-center-page-image2.png)
+  ![the Solution Center page](./media/use-sql-server-in-windows/solution-center-page-image2.png)
 
   For more information, see [How to obtain the latest service pack for SQL Server 2008](https://support.microsoft.com/help/968382).
 
   > [!IMPORTANT]
   > The following dialog box appears in SQL Server 2008 R2 and SQL Server 2008 when you run the Setup program.
 
-  ![The following dialog box appears in SQL Server 2008 R2 and SQL Server 2008](./media/sql-server-windows-8-later-versions/dialog-box-appears-in-sql-server.png)
+  ![The following dialog box appears in SQL Server 2008 R2 and SQL Server 2008](./media/use-sql-server-in-windows/dialog-box-appears-in-sql-server.png)
 
   After the SQL Server Setup program is finished, you have to install service packs before you run SQL Server on this version of Windows.
 
@@ -317,23 +317,23 @@ The following table summarizes how versions of SQL Server work with some new fea
 ## SQL Server 2005 information
 
 This section provides support information about instances of SQL Server 2005 in Windows 8.1 or Windows 8 environments. It also describes the options that are available for customers who are using SQL Server 2005.
-  
+  
 Microsoft SQL Server 2005 (the release version and service packs) and earlier versions of SQL Server are not supported on Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8. You will receive a warning in the Action Center if Windows 10, Windows 8.1, or Windows 8 detects an instance of SQL Server 2005.
 
-To resolve this issue, upgrade or remove the existing instance of SQL Server 2005. For information about how to upgrade SQL Server, see [Upgrade to SQL Server](/sql/database-engine/install-windows/upgrade-sql-server).
+To resolve this issue, upgrade or remove the existing instance of SQL Server 2005. For information about how to upgrade SQL Server, see [Upgrade to SQL Server](/sql/database-engine/install-windows/upgrade-sql-server).
 
 > [!NOTE]
 > This link points to SQL Server 2014. You can use the version picker tool at the top of the MSDN link (Other Versions) for information about other versions.
 
 For information about the Express editions of SQL Server, go to the following Microsoft websites:
-  
+  
 - [SQL Server 2014 Service Pack 2 Express Edition](https://www.microsoft.com/download/details.aspx?id=53167)
 
 - [SQL Server 2012 Service Pack 3 (SP3) Express Edition](https://www.microsoft.com/download/details.aspx?id=50003)
 
 - [SQL Server 2008 R2 Service Pack 3 (SP3) Express Edition](https://www.microsoft.com/download/details.aspx?id=44271)
 
-For more information about how to uninstall an existing instance of SQL Server 2005, see [How to manually uninstall an instance of SQL Server 2005](/sql/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup) or [How to: Uninstall an Existing Instance of SQL Server 2005 (Setup)](/previous-versions/sql/sql-server-2005/ms143412(v=sql.90)).
+For more information about how to uninstall an existing instance of SQL Server 2005, see [How to manually uninstall an instance of SQL Server 2005](/sql/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup) or [How to: Uninstall an Existing Instance of SQL Server 2005 (Setup)](/previous-versions/sql/sql-server-2005/ms143412(v=sql.90)).
 
 ## Applies to
 
