@@ -31,7 +31,7 @@ Here are some operations that may trigger a buffer pool scan to occur:
 - Database restoration
 - Transaction log restoration
 - Online restoration
-- `DBCC CheckDB` or `CheckTable` operation
+- `DBCC CHECKDB` or `DBCC CHECKTABLE` operation
 
 ### Error log shows that a scan took a long time
 
