@@ -44,7 +44,7 @@ Before proceeding with any of the solutions in this document, back up your VM OS
 
 ### Online repair by using Azure Serial Console
 
-1. Connect to the VM by using the Azure Serial Console, and then [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console doesn't work, connect to the VM by using remote PowerShell. For more information, see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
+1. Connect to the VM using the Azure Serial Console, then [start a PowerShell session]( serial-console-windows.md#use-serial-console). If the Azure Serial Console doesn't work, connect to the VM using remote PowerShell. For more information, see [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
 1. After you connect to the VM, run the following command to list the user profiles entries. Locate any profiles that have the ".bak" extension on the end of the name.
 
