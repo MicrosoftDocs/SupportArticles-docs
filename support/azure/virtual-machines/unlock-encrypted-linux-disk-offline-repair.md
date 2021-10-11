@@ -182,7 +182,9 @@ You need the key file and the header file to unlock the encrypted disk. The key 
    mount /dev/sdb1 /mnt/azure_bek_disk 
    ```
 1. List the available devices again. You will see that the partition you determined to be the BEK volume is now mounted in "/mnt/azure_bek_disk".
-
+   ```bash
+   lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT  
+   ```
 1. View the contents in the "/mnt/azure_bek_disk/" directory.
    ```bash
    ls -l /mnt/azure_bek_disk
@@ -200,29 +202,10 @@ You need the key file and the header file to unlock the encrypted disk. The key 
 
 The boot partition of the encrypted disk contains the header file. You use this file, together with the "LinuxPassPhraseFileName"  key file, to unlock the encrypted disk.
 
-1. Use the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to show selected attributes of the available disks and partitions. Here is an example of the output.
+1. Use the following command to show selected attributes of the available disks and partitions:
 
-   ```output
-   NAME     SIZE LABEL           PARTLABEL            MOUNTPOINT 
-
-   sda       64G 
-   ├─sda1   500M                 EFI System Partition 
-   ├─sda2   500M 
-   ├─sda3     2M 
-   └─sda4    63G 
-
-   sdb       48M 
-   └─sdb1    46M BEK VOLUME                           /mnt/azure_bek_disk 
-
-   sdc       30G 
-   ├─sdc1  29.9G cloudimg-rootfs                      / 
-   ├─sdc14    4M 
-   └─sdc15  106M UEFI                                 /boot/efi 
-
-   sdd       16G 
-   └─sdd1    16G                                      /mnt 
-
-   sr0      628K 
+   ```bash
+   lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT
    ```
 1. On the encrypted disk, identify the OS partition (root partition). This is the largest partition on the encrypted disk. In the previous example output, the OS partition is "sda4." This partition must be specified when you run the unlock command.
 3. In the root directory ("/") of the file structure, create a directory to which to mount the root partition of the encrypted disk. You will use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, give it the name "investigateroot".
@@ -230,7 +213,7 @@ The boot partition of the encrypted disk contains the header file. You use this 
    ```bash
    mkdir /{investigateboot,investigateroot}
    ```
-1. On the encrypted disk, identify the boot partition, which contains the header file. On the encrypted disk, the boot partition is the second largest partition that shows no value in the LABEL or PARTLABEL column. In the previous example output, the boot partition of the encrypted disk is "sda2." In the following example output, the boot partition of the encrypted disk is "sdc2"
+1. On the encrypted disk, identify the boot partition, which contains the header file. On the encrypted disk, the boot partition is the second largest partition that shows no value in the LABEL or PARTLABEL column. In the previous example output, the boot partition of the encrypted disk is "sda2." 
 
 1. Mount the boot partition that you identified in step 4 into the /investigateboot/ directory. In the following example, the boot partition of the encrypted disk is sda2. However, the location on your system might differ.
 
@@ -262,7 +245,7 @@ The boot partition of the encrypted disk contains the header file. You use this 
    ```bash
    cryptsetup luksOpen --key-file /mnt/azure_bek_disk/LinuxPassPhraseFileName --header /investigateboot/luks/osluksheader /dev/sda4 osencrypt 
    ```
-1. Now that you have unlocked the disk, unmount the encrypted disk’s boot partition from the /investigateboot/ directory. You will need to mount this partition to another directory later.
+1. Now that you have unlocked the disk, unmount the encrypted disk's boot partition from the /investigateboot/ directory. You will need to mount this partition to another directory later.
 
       ```bash
       umount /investigateboot/ 
@@ -283,22 +266,8 @@ If the disks use the LVM device mapper framework, you need to take extra steps t
 
 1. Use the `pvs` command to display the properties of the LVM physical volumes. You might see warning messages, as in the following example, that indicate that the unlocked partition ("/dev/mapper/osencrypt") and another device are using duplicate universally unique identifiers (UUIDs). Alternatively, you might see two partitions assigned to rootvg.
 
-   ```output
-   WARNING: Not using lvmetad because duplicate PVs were found. 
-
-   WARNING: Use multipath or vgimportclone to resolve duplicate PVs? 
-
-   WARNING: After duplicates are resolved, run "pvscan --cache" to enable lvmetad. 
-
-   WARNING: PV Nv0rQb-DqIR-t7if-UghJ-Vz97-u48A-C3FCnb on /dev/mapper/osencrypt was already found on /dev/sda4. 
-
-   WARNING: PV Nv0rQb-DqIR-t7if-UghJ-Vz97-u48A-C3FCnb prefers device /dev/sda4 because device is used by LV. 
-
-   PV         VG     Fmt  Attr PSize   PFree 
-
-   /dev/sda4  rootvg lvm2 a--  <63.02g <38.02g 
-   ```
-   You want only the unlocked partition ("osencrypt") to be assigned to the rootvg volume group so that you can access its logical volumes through the chroot utility. To fix this problem, you will temporarily import the partition into a different volume group and activate that volume group. Next, you will rename the current rootvg volume group. Only later, after you enter the chroot environment, will you rename the encrypted disk’s volume group as rootvg. 
+    >[!NOTE]
+    > You want only the unlocked partition ("osencrypt") to be assigned to the rootvg volume group so that you can access its logical volumes through the chroot utility. To fix this problem, you will temporarily import the partition into a different volume group and activate that volume group. Next, you will rename the current rootvg volume group. Only later, after you enter the chroot environment, will you rename the encrypted disk’s volume group as rootvg.
 
 1. Import the newly unlocked partition into a new volume group. In this example, we are temporarily naming the new volume group "rescuemevg".
 Import the newly unlocked partition into a new volume group. In this example, we are temporarily naming the new volume group "rescuemevg".
@@ -306,7 +275,8 @@ Import the newly unlocked partition into a new volume group. In this example, we
 1. Activate the new volume group.
 
    ```bash
-   vgchange -a y rescuemevg 
+   vgimportclone -n rescuemevg /dev/mapper/osencrypt
+   vgchange -a y rescuemevg
    ```
 1. Rename the old rootvg volume group.  In this example, we will use the name "oldvg."
 
@@ -316,13 +286,14 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
 1. Run the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to review the available devices. You will now see both volume groups listed by the names you have assigned them.
 
-6. Mount the rescuemevg/rootlv logical volume to the /investigateroot/ directory without using the duplicate UUIDs. 
+6. Mount the rescuemevg/rootlv logical volume to the /investigateroot/ directory without using the duplicate UUIDs.
 
    ```bash
+   umount /investigateboot
    mount -o nouuid /dev/rescuemevg/rootlv /investigateroot/ 
    ```
 
-   Now the root partition of the failed VM is unlocked and mounted, you can acesss the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline). 
+   Now the root partition of the failed VM is unlocked and mounted, you can access the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline). 
 
    However, if you want to use the chroot utility for troubleshooting, continue with the following steps.
 
@@ -360,12 +331,13 @@ Import the newly unlocked partition into a new volume group. In this example, we
       ```bash
       chroot /investigateroot/
       ```
-13. Rename the rescuemevg to rootvg to avoid conflicts or possible issues with grub and initramfs. Keep the same naming convention when regenerating initramfs.
+13. Rename the rescuemevg to rootvg to avoid conflicts or possible issues with grub and initramfs. Keep the same naming convention when regenerating initramfs. Due to the vg name changes, we will perform on the rescue VM. It will no longer be useful if you restart it. the rescue VM should be considered temporary VM.
       ```bash
       vgrename rescuemevg rootvg
       ```
 
 14. Troubleshoot issues in the chroot environment. For example, you can read logs or run a script. For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager.md#perform-fixes).
+1.  [Exit chroot and swap the OS disk](chroot-logical-volume-manager.md#exit-chroot-and-swap-the-os-disk).
 
 ### <a name="non-lvm"></a> Mount the unlocked disk, and enter the chroot environment (RAW/non-LVM)
 
@@ -429,6 +401,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
    chroot /investigateroot/ 
    ```
 1. Troubleshoot issues in the chroot environment. For example, you can read logs or run a script.  For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager.md#perform-fixes).
+1. [Exit chroot and swap the OS disk](chroot-logical-volume-manager.md#exit-chroot-and-swap-the-os-disk).
 
 ## <a name="method3"></a>Method 3: Re-encrypt the disk to retrieve the key file, and unlock the encrypted disk
 
