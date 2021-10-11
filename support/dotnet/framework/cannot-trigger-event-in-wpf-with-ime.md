@@ -6,7 +6,8 @@ Author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: hirotoh
 ---
-# PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps                                                                                                                                                                                
+# PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps
+
 This article discusses an issue that prevents [PreviewKeyDown](/dotnet/api/system.windows.forms.control.previewkeydown) events of TextBox controls from being triggered by some Microsoft  input method editors (IMEs) in Windows Presentation Foundation (WPF) applications.
 
 _Applies to:_ &nbsp; Windows Presentation Foundation, Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1
@@ -30,15 +31,15 @@ Turn on the **Compatibility** option to revert to the previous version of Micros
 
 1. In the search box on the taskbar, enter *language settings*, and then select **Language settings** in the list of results.
 
-    :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/language-settings.png" alt-text="Search language settings." border="true":::
+    :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/language-settings.png" alt-text="Search language settings in the search box." border="true":::
 
 1. Select **Options** for your language.
 
-    :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/language-options.png" alt-text="Select language option." border="true":::
+    :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/language-options.png" alt-text="Select language options." border="true":::
 
 1. On the language option settings page, select **Options** for the IME that you're using.
 
-    :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/ime-options.png" alt-text="Select IME option." border="true":::
+    :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/ime-options.png" alt-text="Select IME options." border="true":::
 
 1. Select **General**.
 

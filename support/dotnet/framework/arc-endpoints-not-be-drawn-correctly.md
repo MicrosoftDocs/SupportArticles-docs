@@ -69,8 +69,8 @@ Meanwhile the code in line 15 draws a blue line from an absolute coordinate (265
 > [!NOTE]
 > The arc is drawn with misplaced endpoints, even though both the arc and the line use the same pair of starting and finishing points.
 
-![Figure 1: Endpoints of the red arc are misplaced ](./media/endpoints-of-arc-not-be-drawn-correctly/figure1-endpoint-misplaced.jpg)
+:::image type="content" source="./media/endpoints-of-arc-not-be-drawn-correctly/endpoint-misplaced.jpg" alt-text="Figure shows endpoints of the red arc are misplaced.":::
 
 This example is meant to connect two points that are 32 pixels apart using an arc with a 1.7 million pixel radius; which isn't a meaningful approach because these two values are astronomically different. As shown in the following screenshot, the maximum deviation of the arc (AM'B) from the line (AMB) is less than 0.0001 pixel (MM'), which would be small enough to be invisible even if those shapes were drawn with utmost mathematical precision. Therefore in situations like this, drawing a line between these two points would be a far more preferable approach because it would reduce the chance of hitting numeric limitations of internal processing.
 
-:::image type="content" source="./media/endpoints-of-arc-not-be-drawn-correctly/figure2-maximum-deviation-from-line.jpg" alt-text="Figure 2: Maximum deviation of the arc from the line.":::
+:::image type="content" source="./media/endpoints-of-arc-not-be-drawn-correctly/maximum-deviation-from-line.jpg" alt-text="Figure shows the maximum deviation of the arc from the line.":::
