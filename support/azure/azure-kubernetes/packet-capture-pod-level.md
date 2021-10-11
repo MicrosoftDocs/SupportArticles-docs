@@ -2,7 +2,8 @@
 title: How to capture TCP dump from a pod running on an AKS cluster
 description: Describes how to capture TCP traffic from a POD running on an AKS cluster
 ms.date: 07/08/2021
-ms.reviewer: erbookbi
+ms.author: erbookbi
+author: genlin
 ms.service: container-service
 ---
 # Capture TCP packets from a pod on an AKS cluster
@@ -25,21 +26,21 @@ Run `az --version` to verify the version. To install the latest version of the A
     azure-vote-front-848767080-tf34m   1/1       Running   0          31m
     ```
 
-   If you know the namespace that the pod runs in you, you also can run `kubectl get pods -n <namespace> ` to get the list.
+   If you know the namespace that the pod runs in, you also can run `kubectl get pods -n <namespace> ` to get the list.
 
 1. Connect to the pod that you identified in the previous step. The following commands use "azure-vote-front-848767080-tf34m" as the example. You must replace it with the correct pod name.
 
-   ```cli
+   ```azurecli
    kubectl exec azure-vote-front-848767080-tf34m -it -- /bin/bash
    ```
 1. After you connect to the pod, run `tcpdump --version` verify if the TCPdump is installed. If you receive the "command not found" message, run the following command to install the TCPdump in the pod:
 
-    ```cli
+    ```azurecli
     apt-get update && apt-get install tcpdump
     ```
-    If your pod is using Alpine Linux, run the this command to install TCPdump:
+    If your pod is using Alpine Linux, run this command to install TCPdump:
 
-   ```cli
+   ```azurecli
     apk add tcpdump
     ```
 ## Capturing TCP packets and save it to a local directory
@@ -48,6 +49,6 @@ Run `az --version` to verify the version. To install the latest version of the A
 1. Once the packet capture has completed, you can exit out of your pod shell session, to do this press `Ctrl-D` or type `exit`.
 1. Run the following command to save it to your current directory:
 
-    ```cli
+    ```azurecli
     kubectl cp azure-vote-front-848767080-tf34m:/capture.cap capture.cap
     ```
