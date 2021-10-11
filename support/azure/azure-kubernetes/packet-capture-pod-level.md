@@ -12,13 +12,13 @@ This article shows how to take a TCP traffic capture at a pod of an Azure Kubern
 
 ## Prerequisite
 
-You must run The Azure CLI version 2.0.59 or a later version.
+You must run the Azure CLI version 2.0.59 or a later version.
 
 Run `az --version` to verify the version. To install the latest version of the Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
 ## Identify the pod and install TCPdump
 
-1. Identify the name of the pod that you want to capture the TCP packets from. To do this, run `kubectl get pods -A` to see the list of pods in your AKS cluster. The following is an example of the output:
+1. Identify the name of the pod that you want to capture the TCP packets from. To do this, run `kubectl get pods -A` to see the list of pods on your AKS cluster. The following is an example of the output:
 
     ```output
     NAME                               READY     STATUS    RESTARTS   AGE
