@@ -43,7 +43,7 @@ Run `az --version` to verify the version. To install the latest version of the A
    ```azurecli
     apk add tcpdump
     ```
-## Capturing TCP packets and save it to a local directory
+## Capture TCP packets and save it to a local directory
 
 1. Run `tcpdump -s 0 -vvv -w /capture.cap` to start capture TCP packets on your pod.
 1. Once the packet capture has completed, you can exit out of your pod shell session, to do this press `Ctrl-D` or type `exit`.
