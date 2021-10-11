@@ -24,11 +24,11 @@ When `System.Net` SDP package enables the trace feature, it asks the .NET applic
 
 - .NET application configuration file selection dialog box:
 
-    :::image type="content" source="./media/system-dotnet-sdp-package-information/system-net-diagnostic-package.JPG" alt-text=".NET application configuration file selection "border="false":::
+    :::image type="content" source="./media/system-dotnet-sdp-package-information/system-dotnet-config-file-location.JPG" alt-text="Screenshot of the .NET application configuration file selection dialog." border="false":::
 
 - `System.Net` trace output folder:
 
-    :::image type="content" source="./media/system-dotnet-sdp-package-information/system-net-folder-location.JPG" alt-text="System.Net trace output directory." border="false":::
+    :::image type="content" source="./media/system-dotnet-sdp-package-information/system-dotnet-trace-output-folder-location.JPG" alt-text="Screenshot of the System.Net trace output directory." border="false":::
 
 To enable the `System.Net` trace, the SDP package will have to register following `<system.diagnostics>` entry into your .NET application configuration file.
 

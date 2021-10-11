@@ -23,63 +23,57 @@ Applications that connect to an instance of Microsoft SQL Server on the same com
 
 > provider: Shared Memory Provider, error: 15 - Function not supported
 
-## Workaround
-
 To work around this issue, use one of the following methods.
 
-- Method 1
+## Workaround 1
 
-  Disable the **Shared Memory** and **Named Pipes** protocols on the server side to force TCP-only connections to SQL Server. To do this, follow these steps.  
+Disable the **Shared Memory** and **Named Pipes** protocols on the server side to force TCP-only connections to SQL Server. To do this, follow these steps.  
 
-  > [!IMPORTANT]
-  > Before you disable other protocols, make sure that the TCP/IP protocol is enabled.
+> [!IMPORTANT]
+> Before you disable other protocols, make sure that the TCP/IP protocol is enabled.
 
-  1. Start SQL Server Configuration Manager.
+1. Start SQL Server Configuration Manager.
 
-     ![Configuration Manager](./media/error-applications-connect-instance-same-computer/configuration-manager-image.png)
+    :::image type="content" source="./media/error-applications-connect-instance-same-computer/configuration-manager.png" alt-text="SQL Server Configuration Manager.":::
 
-  1. Expand the **SQL Server Network Configuration** node.
+1. Expand the **SQL Server Network Configuration** node.
+1. Select the **Protocols for <**SQLServer_instance**>** node for the instance of SQL Server that you're connecting to.
+1. Right-click **Shared Memory**, and then select **Disable**.
 
-  1. Select the **Protocols for <**SQLServer_instance**>** node for the instance of SQL Server that you're connecting to.
+    :::image type="content" source="./media/error-applications-connect-instance-same-computer/disable-shared-memory.png" alt-text="Screenshot of the sql server configuration manager window, showing menus to disable the protocol item named Shared Memory.":::
 
-  1. Right-click **Shared Memory**, and then select **Disable**.
-
-     ![Shared Memory](./media/error-applications-connect-instance-same-computer/shared-memory-image.png)
-
-  1. Repeat step 4 for **Named Pipes**, if it's enabled.
+1. Repeat step 4 for **Named Pipes**, if it's enabled.
 
      > [!NOTE]
      > TCP/IP should be the only protocol in this list that's enabled.
 
-  1. Select the **SQL Server Services** node.
+1. Select the **SQL Server Services** node.
+1. Right-click the instance of SQL Server that you updated.
+1. Select **Restart**.
 
-  1. Right-click the instance of SQL Server that you updated.
+    :::image type="content" source="./media/error-applications-connect-instance-same-computer/restart-sql-server-service.png" alt-text="Screenshot shows menus to restart a SQL Server instance.":::
 
-  1. Select **Restart**.
+## Workaround 2
 
-       ![Restart](./media/error-applications-connect-instance-same-computer/restart-image.png)
+Create an alias on the server to force TCP protocol for local applications. To do this, see the following MSDN and TechNet topics:
 
-- Method 2
+- [Create or Delete a Server Alias for Use by a Client (SQL Server Configuration Manager)](/previous-versions/sql/sql-server-2012/ms190445(v=sql.110))
 
-  Create an alias on the server to force TCP protocol for local applications. To do this, see the following MSDN and TechNet topics:
+- [Creating a SQL Server alias using the SQL Server Client Network Utility](https://azurecloudai.blog/2013/01/22/creating-a-sql-server-alias-using-the-sql-server-client-network-utility/)
 
-  - [Create or Delete a Server Alias for Use by a Client (SQL Server Configuration Manager)](/previous-versions/sql/sql-server-2012/ms190445(v=sql.110))
+## Workaround 3
 
-  - [Creating a SQL Server alias using the SQL Server Client Network Utility](https://azurecloudai.blog/2013/01/22/creating-a-sql-server-alias-using-the-sql-server-client-network-utility/)
+Disable shared memory from the Client Configuration tool (32-bit and 64-bit). To do this, follow these steps:
 
-- Method 3
+1. Start the Client Configuration tool on the server by typing *cliconfg.exe*.
+1. If it's selected, clear the **Enable shared memory protocol** check box.
 
-  Disable shared memory from the Client Configuration tool (32-bit and 64-bit). To do this, follow these steps:
-
-  1. Start the Client Configuration tool on the server by typing *cliconfg.exe*.
-  1. If it's selected, clear the **Enable shared memory protocol** check box.
-
-     ![SQL Server Client Network Utility dialog box](./media/error-applications-connect-instance-same-computer/client-network-utility-dialog-box.png)  
+    :::image type="content" source="./media/error-applications-connect-instance-same-computer/client-network-utility-dialog-box.png" alt-text="Screenshot of the SQL Server Client Network Utility dialog box. The Enable shared memory protocol check box is cleared.":::  
 
     > [!NOTE]
     > On a 64-bit server, if you run 32-bit applications that connects to SQL Server, you must run this procedure by using the 32-bit Client Configuration tool that is located in the `C:\Windows\SysWOW64` folder.
 
-### Applies to
+## Applies to
 
 This issue applies to users who have the .NET Framework 4.5.2 installed on Windows 8.1, Windows Server 2012 R2, or Windows 2012, and who have applied either of the following December 2016 updates:
 
