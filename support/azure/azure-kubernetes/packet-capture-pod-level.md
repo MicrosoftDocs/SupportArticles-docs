@@ -15,9 +15,9 @@ You must run The Azure CLI version 2.0.59 or a later version.
 
 Run `az --version` to verify the version. To install the latest version of the Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
-## Identify the pod and install Tcpdump
+## Identify the pod and install TCPdump
 
-1. Identify the name of the pod that you want to capture the TCP packets from. To do this, run `kubectl get pods -A` to see the list of pods in your cluster. The following is an example of the output:
+1. Identify the name of the pod that you want to capture the TCP packets from. To do this, run `kubectl get pods -A` to see the list of pods in your AKS cluster. The following is an example of the output:
 
     ```output
     NAME                               READY     STATUS    RESTARTS   AGE
@@ -25,9 +25,9 @@ Run `az --version` to verify the version. To install the latest version of the A
     azure-vote-front-848767080-tf34m   1/1       Running   0          31m
     ```
 
-   If you know the namespace that the pod runs in you, you also run `kubectl get pods -n <namespace> ` to get the list.
+   If you know the namespace that the pod runs in you, you also can run `kubectl get pods -n <namespace> ` to get the list.
 
-1. Connect to the pod that you identified in the previous step. The following commands use "azure-vote-front-848767080-tf34m" as the example. You must replace it with a correct pod name.
+1. Connect to the pod that you identified in the previous step. The following commands use "azure-vote-front-848767080-tf34m" as the example. You must replace it with the correct pod name.
 
    ```cli
    kubectl exec azure-vote-front-848767080-tf34m -it -- /bin/bash
