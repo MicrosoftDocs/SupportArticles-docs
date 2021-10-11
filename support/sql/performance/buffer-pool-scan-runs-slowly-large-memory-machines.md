@@ -1,5 +1,5 @@
 ---
-title: Buffer pool scan operations run slowly on large-memory computers
+title: Operations that trigger buffer pool scan may run slowly on large-memory computers
 description: This article describes how a scan of the SQL Server buffer pool might take a long time on a large-memory computer.
 ms.date: 01/15/2021
 ms.prod-support-area-path: Performance
@@ -7,7 +7,7 @@ ms.reviewer: jopilov
 ms.topic: article
 ms.prod: sql 
 ---
-# Buffer pool scan operations run slowly on large-memory computers
+# Operations that trigger a buffer pool scan may run slowly on large-memory computers
 
 This article describes how scanning the SQL Server buffer pool might take a long time to finish on large-memory computers.
 
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4566579
 
 Certain operations in Microsoft SQL Server trigger a scan of the buffer pool (the cache that stores database pages in memory). On systems that have a large amount of RAM (1 TB of memory or greater), scanning the buffer pool may take a long time. This slows down the operation that triggered the scan.
 
-### The operation that caused the buffer pool scan
+### Operations that cause a buffer pool scan
 
 Here are some operations that may trigger a buffer pool scan to occur:
 
