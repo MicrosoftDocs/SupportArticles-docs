@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kimnich, kaushika
-ms.prod-support-area-path: Multipath I/O (MPIO) and Storport
+ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows Setup in a boot from SAN configuration reports: Setup was unable to create a new system partition or locate an existing system partition
@@ -18,7 +18,7 @@ ms.technology: windows-server-backup-and-storage
 This article provides workarounds for an issue where you can't install Windows in the boot LUN from SAN configuration when there are multiple physical paths to the boot LUN.
 
 _Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
-_Original KB number:_ &nbsp;2826787
+_Original KB number:_ &nbsp; 2826787
 
 ## Symptoms
 

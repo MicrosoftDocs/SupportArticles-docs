@@ -3,14 +3,14 @@ title: Domain controller promotion process shows the Windows Server Technical Pr
 description: Provides a resolution for the issue Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, arrenc
-ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list

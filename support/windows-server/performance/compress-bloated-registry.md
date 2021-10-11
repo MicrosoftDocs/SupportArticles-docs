@@ -1,5 +1,5 @@
 ---
-title: Compress large registry hives 
+title: Compress large registry hives
 description: Describes how to compress large registry hives.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: System Hang
+ms.custom: sap:system-hang, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Compress "Bloated" Registry Hives

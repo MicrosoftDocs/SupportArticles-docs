@@ -2234,6 +2234,8 @@
       href: ./remote/install-and-configure-the-external-connector.md
     - name: How to move Terminal Services CALs
       href: ./remote/move-terminal-services-client-access-licenses.md
+    - name: License attributes aren't updated
+      href: ./remote/license-attributes-not-updated-rdsh-server.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
     - name: Remove Terminal Server licenses from RDP client

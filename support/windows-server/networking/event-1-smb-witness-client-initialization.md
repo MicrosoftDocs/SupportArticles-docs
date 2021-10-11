@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jongrkim
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: networking 
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.technology: networking
 ---
 # Event 1 about SMB witness client initialization when you install Windows Server
 

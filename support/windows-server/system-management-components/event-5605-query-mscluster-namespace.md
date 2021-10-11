@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: WMI
+ms.custom: sap:wmi, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # Warning Event ID 5605 is logged in Application log when querying MSCluster namespace through WMI
@@ -18,7 +18,7 @@ ms.technology: windows-server-system-management-components
 This article describes an issue where Warning Event ID 5605 is logged in Application log when querying MSCluster namespace through WMI.
 
 _Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
-_Original KB number:_ &nbsp;2590230
+_Original KB number:_ &nbsp; 2590230
 
 ## Symptoms
 

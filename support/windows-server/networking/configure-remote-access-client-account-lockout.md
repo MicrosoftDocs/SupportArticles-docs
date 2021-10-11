@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote access
-ms.technology: networking 
+ms.custom: sap:remote-access, csstroubleshoot
+ms.technology: networking
 ---
 # Configure remote access client account lockout
 

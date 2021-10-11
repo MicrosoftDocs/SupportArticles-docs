@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Backup and restore of virtual machines
+ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Error 0x80070005 when you export Hyper-V VMs over the Network

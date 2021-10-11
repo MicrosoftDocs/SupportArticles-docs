@@ -2,7 +2,7 @@
 title: DNS client resolution timeouts
 description: Describes the fallback and timeout behavior that exist when one or more Domain Name System (DNS) Servers IPs are configured on a Windows DNS client.
 ms.date: 10/13/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, dpracht
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # NET: DNS: DNS client resolution timeouts

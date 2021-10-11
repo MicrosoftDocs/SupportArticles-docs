@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: User profiles
+ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # Error occurs during desktop setup and desktop location is unavailable when you log on to Windows for the first time
@@ -18,7 +18,7 @@ ms.technology: windows-server-user-profiles
 This article provides help to solve an issue where profile loading fails when the ntuser.dat or usrclass.dat file is defined as read-only, or the profile user lacks the appropriate permissions for these two .dat files.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3048895
+_Original KB number:_ &nbsp; 3048895
 
 ## Symptoms  
 

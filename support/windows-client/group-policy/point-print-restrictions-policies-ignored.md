@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-client-group-policy
 ---
 # Point and Print Restrictions policies are ignored in Windows
@@ -18,7 +18,7 @@ ms.technology: windows-client-group-policy
 This article provides a solution to an issue where the Point and Print Restrictions policies are ignored when a standard user tries to install a network printer.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2307161
+_Original KB number:_ &nbsp; 2307161
 
 ## Symptoms
 

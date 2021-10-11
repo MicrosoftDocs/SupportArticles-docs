@@ -17,7 +17,7 @@ Setting up Windows Authentication based on the Kerberos authentication protocol 
 
 This article assumes that you are setting up an architecture similar to the one represented in the diagram below:
 
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/architecture-windows-authentication-protocol.png" alt-text="Diagram showing the architecture of Windows Authentication based on the Kerberos authentication protocol." border="true":::
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/architecture-windows-authentication-protocol.png" alt-text="Diagram showing the architecture of Windows Authentication based on the Kerberos authentication protocol.":::
 
 - The **Workstation-Client1** computer is part of the same active directory as primary Web-Server, called **Primary-IIS-SRV** and the backend web server, called **Backend-Web-SRV**.
 - Users of the computer **Workstation-Client1** will log on to the machine using the Windows Active Directory account.
@@ -74,7 +74,7 @@ For compatibility purposes, if you must maintain an application using unconstrai
 
 1. Once the package is unzipped, locate the *Sysvol* folder on your domain controller. The path to the folder is *C:\Windows\SYSVOL\sysvol\\*. Inside the *Sysvol* folder is a folder with the same name as your Active Directory name (in the sample here, **Oddessy.local**). From there, navigate to the **Policies** folder. If it doesn't exist, create a folder called **Policy Definitions** as shown below:
 
-    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policy-definitions-folder.png" alt-text="Screenshot of the policy definitions folder under Policies folder." border="true":::
+    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policy-definitions-folder.png" alt-text="Screenshot of the policy definitions folder under Policies folder.":::
 
 1. Copy the content of the *PolicyDefinitions* folder (which was extracted from the installer to the *PolicyDefinitions* folder) you created inside your domain in the *sysvol* folder on the domain controller.
 
@@ -83,7 +83,7 @@ For compatibility purposes, if you must maintain an application using unconstrai
 
 1. When the transfer is complete, verify that the templates are available in Active Directory. To do this, open the **Group Policy Management** snap-in of the Microsoft Management Console (press Windows+R and then type *gpmc.msc* to launch). Inside the **Group Policy Management**, find a group policy object and edit it.
 
-    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/group-policy-object.png" alt-text="Screenshot of the group policy object in Group Policy Management Editor." border="true":::
+    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/group-policy-object.png" alt-text="Screenshot of the group policy object in Group Policy Management Editor.":::
 
     As shown in the screenshot above, under the **Computer Configuration** node, is a **Policies** node and **Administrative templates** node.
 
@@ -96,19 +96,19 @@ While you may have the **Policy Administrative Templates** on the domain control
 1. Select the version you wish to download from the **channel/version** dropdown. The latest stable version is recommended.
 1. Select the build you want from the **build** dropdown and finally the target operating system from the **platform** dropdown. Once the selection is made, two more buttons (a button and a link) will appear.
 
-    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/download-deploy-microsoft-edge-for-business-page.png" alt-text="Screenshot of download and deploy Microsoft Edge for business page." border="true":::
+    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/download-deploy-microsoft-edge-for-business-page.png" alt-text="Screenshot of download and deploy Microsoft Edge for business page.":::
 
 1. Click **GET POLICY FILES** and accept the license agreement to download the file called *MicrosoftEdgePolicyTemplates.cab*. This file contains the policy definition files for Microsoft Edge.
 1. Double click the file to explore the content (a zip archive with the same name).
 1. Extract the content of the zip archive to a folder on your local disk. The extracted content will contain a folder called *Windows* in which you will find a subfolder called *Admx*. This will contain the administrative templates as well as their localized versions (You should need them in a language other than English).
 
-    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/admx-folder.png" alt-text="Screenshot of the admx folder." border="true":::
+    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/admx-folder.png" alt-text="Screenshot of the admx folder.":::
 
 1. Transfer the *.admx* files inside the same folder under the *Sysvol* directory where the *Administrative Templates* from the previous were transferred to (in the example above: *C:\Windows\SYSVOL\sysvol\odessy.local\Policies\PolicyDefinitions*).
 
 1. Open the Active Directory Group Policy Editor and select an existing group policy object for editing to check the presence of the newly transferred Microsoft Edge templates. These will be located in a folder called **Microsoft Edge** located underneath the **Administrative Templates** folder in the tree view:
 
-    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/microsoft-edge-item.png" alt-text="Screenshot of the Microsoft Edge item in Group Policy Management Editor." border="true":::
+    :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/microsoft-edge-item.png" alt-text="Screenshot of the Microsoft Edge item in Group Policy Management Editor.":::
 
 ### Step 3: Create a new Group Policy object
 
@@ -127,7 +127,7 @@ The final step is to enable the policy that allows the Microsoft Edge browser to
 
 In the Active Directory Group Policy Editor, select the group policy object that will be applied to the computers inside your Active Directory from which you intend to allow end users to authenticate via Kerberos authentication and have their credentials delegated to backend services through unconstrained delegation. The policy that will enable unconstrained delegation from Microsoft Edge is located under the **Http authentication** folder of the **Microsoft Edge** templates as shown below:
 
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/http-authentication.png" alt-text="Screenshot of Http authentication in Group Policy Management Editor." border="true":::
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/http-authentication.png" alt-text="Screenshot of the H T T P authentication folder in Group Policy Management Editor." border="false":::
 
 Use this setting to configure a list of servers for which delegation of Kerberos tickets is allowed.
 
@@ -138,11 +138,11 @@ Use this setting to configure a list of servers for which delegation of Kerberos
 
 After the newly editing group policy object is applied to the client computers inside the domain, go to the test authentication page in [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md) and download from [ASP.NET Authentication test page](/archive/blogs/friis/asp-net-authentication-test-page). It will yield a **ImpersonationLevel** setting of Delegate instead of **Impersonate** signaling that the delegation of credentials is now allowed.
 
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/impersonation-level-setting-page.png" alt-text="Screenshot of ImpersonationLevel setting page" border="true":::
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/impersonation-level-setting-page.png" alt-text="Screenshot of ImpersonationLevel setting page.":::
 
 To test if the policy was applied correctly on the client workstation, open a new Microsoft Edge tab and type *edge://policy*.
 
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policies-page.png" alt-text="Screenshot of edge://policy page." border="true":::
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/policies-page.png" alt-text="Screenshot of edge://policy page.":::
 
 The `AuthNegotiateDelegateAllowlist` policy should be set to indicate the values of the server names for which Microsoft Edge is allowed to perform delegation of Kerberos tickets. If the policy doesn't appear in the list, it hasn't been deployed or was deployed on the wrong computers.
 
@@ -157,7 +157,7 @@ Once the policy has been configured and deployed, the following steps must be ta
     1. Open a new Microsoft Edge window and type *edge://net-export/*.
     1. Use the **Include cookies and credentials** option when tracing. Without this option authentication trace level data will be omitted.
 
-        :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/net-export-page.png" alt-text="Screenshot of edge://net-export/ page." border="true":::
+        :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/net-export-page.png" alt-text="Screenshot of edge://net-export/ page.":::
     1. Click the **Start Logging to Disk** button and provide the file name under which you want to save the trace.
     1. Open another Microsoft Edge tab, navigate to the website against which you wish to perform integrated Windows authentication using Microsoft Edge.
     1. Once you have tried to authenticate, go back to the previous tab where the tracing was enabled and click the **Stop Logging** button. The tracing interface will indicate where the file containing the trace has been written to.

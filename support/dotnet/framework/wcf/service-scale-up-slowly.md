@@ -144,10 +144,11 @@ Monitor the process hosting your WCF service. If you notice a problem scaling up
 |||
 
 You can use the WCF performance counters if you have them enabled as well:
+
 [WCF Performance Counters](/dotnet/framework/wcf/diagnostics/performance-counters/)
 
 It is normal to see a slowly increasing thread count when the arrival rate (client requests pattern) is following the same pattern. It is only when there is an immediate spike of incoming requests and the thread count slowly increases at a rate of two threads per second while the WCF response time increases that a problem exists.
 
 This screenshot shows a worker process that after some time has encountered the .NET IOCP thread pool scalability issue. When the process first started, the IOCP threads are normally created in parallel to the incoming request load. In this AppPool (W3WP.EXE), there were two WCF services running. One service was using the default .NET IOCP thread pool that received a burst of 100 requests at 10:22:14 and again at 10:23:34. The second WCF service was using the above workaround to execute on the .NET Worker thread pool and received a burst of 100 requests at 10:22:54. After entering this state, a process recycle is required to restore the IOCP thread pool to a working, scalable state.
 
-![Worker process after encountering thread pool scalability](./media/wcf-service-scale-up-slowly/performance-monitor-image.jpg)
+:::image type="content" source="./media/wcf-service-scale-up-slowly/performance-monitor.jpg" alt-text="Screenshot shows the worker process after encountering thread pool scalability.":::

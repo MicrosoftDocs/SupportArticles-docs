@@ -10,14 +10,14 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # Reduced networking performance after you enable SMB Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019
 
-This article provides a solution to an issue where networking performance is reduced after you enable Server Message Block (SMB) Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019.
+This article provides a solution to an issue where networking performance is reduced after you enable Server Message Block (SMB) Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019. Windows Server 2022 improves network performance for this scenario.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4458042
 
 ## Symptoms
@@ -98,7 +98,7 @@ If you are deploying in a highly secure environment with Windows Server 2016 and
 
 2. Based on the SMB client and SMB server version, evaluate the most appropriate solution to optimize performance. Be aware that SMB Signing provides message integrity, and SMB Encryption provides message integrity plus privacy to provide the highest level of security.
 
-    - **SMB 3.0 (Windows Server 2012/Windows 8.1)** - SMB Signing will deliver better performance than SMB Encryption.
-    - **SMB 3.1 (Windows Server 2016/Windows 10)** - SMB Encryption will deliver better performance than SMB Signing, and has the added benefit of increased security together with message privacy in addition to message integrity guarantees.
+    - **SMB 3.0 (introduced with Windows Server 2012/Windows 8)** - SMB Signing will deliver better performance than SMB Encryption.
+    - **SMB 3.1 (introduced with Windows Server 2016/Windows 10)** - SMB Encryption will deliver better performance than SMB Signing, and has the added benefit of increased security together with message privacy in addition to message integrity guarantees.
 
 

@@ -27,3 +27,19 @@ landingContent:
             url: ./adal-authenticate-android-devices-fail.md
           - text: Code 403 Forbidden error when using SSO
             url: ./code-403-azure-seamless-sso-win10.md
+
+ # Card
+  - title: Azure AD Hybrid Sync Agent Installation Issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: No privileges to install MSI
+            url: ./azure-ad-hybrid-sync-no-privileges-install-msi.md
+          - text: Cannot start service AADConnectProvisioningAgent
+            url: ./azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
+          - text: The gMSA is set to log on as Service
+            url: ./azure-ad-hybrid-sync-gMSA-set-logon-service.md
+          - text: There is no such object on the server
+            url: ./azure-ad-hybrid-sync-no-such-object-on-server.md
+          - text: Unable to create gMSA because KDS may not be running on domain controller
+            url: ./azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md

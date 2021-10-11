@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # KDC_ERR_C_PRINCIPAL_UNKNOWN Returned in S4U2Self Request
@@ -18,7 +18,7 @@ ms.technology: windows-server-security
 This article provides help to solve an issue where S4U2Self requests fail with the error KDC_ERR_C_PRINCIPAL_UNKNOWN.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2009157
+_Original KB number:_ &nbsp; 2009157
 
 ## Symptoms
 
