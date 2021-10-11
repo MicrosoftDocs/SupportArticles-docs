@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, anwill
-ms.prod-support-area-path: Task Scheduler
+ms.custom: sap:task-scheduler, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # Scheduled tasks reference incorrect user profile paths

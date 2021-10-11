@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffhugh, hisingh
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # A cluster disk resource may fail to come online and run chkdsk when an invalid character is used in the resource name

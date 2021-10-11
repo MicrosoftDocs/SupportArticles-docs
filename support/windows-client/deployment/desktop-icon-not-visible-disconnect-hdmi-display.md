@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Desktop icons may not be visible after disconnecting HDMI display when Desktop is in Extended mode
@@ -18,7 +18,7 @@ ms.technology: windows-client-deployment
 This article helps work around an issue where the Desktop icons aren't visible if the HDMI display is disconnected and the computer is rebooted.
 
 _Applies to:_ &nbsp; Windows 8  
-_Original KB number:_ &nbsp;2864242
+_Original KB number:_ &nbsp; 2864242
 
 ## Symptoms
 

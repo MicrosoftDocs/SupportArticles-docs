@@ -3,14 +3,14 @@ title: Facial recognition logon doesn't work after you apply a Group Policy sett
 description: Fixes an issue that prevents facial recognition logon in Windows 10.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, justintu
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-client-user-profiles
 ---
 # Facial recognition logon doesn't work after you apply a Group Policy setting in Windows 10

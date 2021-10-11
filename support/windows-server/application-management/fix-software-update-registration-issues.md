@@ -2,7 +2,7 @@
 title: Fix software update registration issues
 description: Provides a solution to an issue that repairs or uninstalls for certain products may fail after you install software updates.
 ms.date: 09/29/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: MSI
+ms.custom: sap:msi, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # How to fix MSI software update registration corruption issues

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # NMI_HARDWARE_FAILURE error when an NMI is triggered on Windows

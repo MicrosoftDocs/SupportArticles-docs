@@ -1,16 +1,16 @@
 ---
-title: Event 142 time service stopped advertising 
+title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Event 142: The time service has stopped advertising as a time source

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: No Boot (not BugChecks)
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Use Windows Recovery Environment (WinRE) to troubleshoot common startup issues

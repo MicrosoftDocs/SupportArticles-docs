@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # DNS namespace planning
@@ -18,7 +18,7 @@ ms.technology: networking
 This article describes the design of the DNS namespace in an Active Directory environment.
 
 _Applies to:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp;254680
+_Original KB number:_ &nbsp; 254680
 
 ## Summary
 

@@ -2,7 +2,7 @@
 title: Task manager displays incorrect value for L2/L3 cache
 description: Provides a solution to an issue where task manager may display incorrect value for L2/L3 cache.
 ms.date: 09/25/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jaysenb
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # Windows Server 2019 task manager may display incorrect value for L2/L3 cache

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # You get error 0xC004F074 when you try to activate Windows: The Key Management Server (KMS) is unavailable

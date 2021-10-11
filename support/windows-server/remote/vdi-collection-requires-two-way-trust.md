@@ -2,7 +2,7 @@
 title: VDI collection requires two-way trust
 description: Provides a solution to an error that occurs when you try to add DomainB\RD_USER_GROUP directly to VDI collection in DomainA.
 ms.date: 09/18/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
+ms.custom: sap:virtual-desktop-infrastructure-vdi, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Server 2012 VDI collection require two-way trust when adding user group of external domain

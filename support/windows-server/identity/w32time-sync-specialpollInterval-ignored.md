@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # W32Time: Sync: SpecialPollInterval may be ignored on workgroup computers

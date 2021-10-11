@@ -3,14 +3,14 @@ title: c00002e2 error occurs
 description: Helps to fix the error c00002e2 or "Choose an option" when Domain controller does not start.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
+ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed

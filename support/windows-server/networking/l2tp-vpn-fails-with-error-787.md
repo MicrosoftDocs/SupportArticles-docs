@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
 # L2TP VPN fails with error 787
