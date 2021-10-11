@@ -343,7 +343,7 @@
     items:
     - name: Blocked column is populated for latch waits
       href: performance/blocked-column-populated-latch-waits.md
-    - name: Buffer pool scan runs slowly on large memory machines
+    - name: Buffer pool scan operations run slowly on large memory machines
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
