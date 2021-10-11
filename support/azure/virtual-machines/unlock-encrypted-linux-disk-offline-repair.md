@@ -10,7 +10,7 @@ editor: v-jesits
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 08/24/2021
+ms.date: 10/11/2021
 ms.author: genli
 ---
 # Unlocking an encrypted Linux disk for offline repair
@@ -433,7 +433,11 @@ Import the newly unlocked partition into a new volume group. In this example, we
         | disk-encryption-keyvault  |  diskEncryptionKey:id | /subscriptions/deb73ff9-0000-0000-0000-0000c7a96d37/resourceGroups/Thomas/providers/Microsoft.KeyVault/vaults/ContosoKeyvault |
         | key-encryption-key  | keyEncryptionKey:KeyURI   | https://ContosoKeyvault.vault.azure.net/keys/mykey/00000000987145a3b79b0ed415fa0000|
     
-1. Run `lsblk -f` to check if a new disk is attached. If yes, proceed to [Identify the ADE key file in the BEK volume](#identify-the-header-file) and from that point,  continue following the steps to unlock the disk.
+1. Run the following command to check if a new disk is attached. If yes, proceed to [Identify the ADE key file in the BEK volume](#identify-the-header-file) and from that point,  continue following the steps to unlock the disk.
+     ```bash
+     lsblk -f
+     ```
+    
 
 ## Next steps
 If you're having problems connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection.md).
