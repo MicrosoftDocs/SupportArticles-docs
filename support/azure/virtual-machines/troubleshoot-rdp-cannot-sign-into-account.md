@@ -21,7 +21,7 @@ This article shows how to troubleshoot the error "We can't sign into your accoun
 
 ## Symptoms
 
-When you try to connect the Windows VM by using RDP,  you receive the following error message:
+When you try to connect the Windows VM using RDP, you receive the following error message:
 
  > We can't sign into your account<br>
  > This problem can often be fixed by signing out of your account and then signing back in. If you don't sign out now, any files you create or changes you make will be lost.
