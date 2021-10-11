@@ -58,7 +58,7 @@ For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Ge
 
 You can use the `az vm encryption show` command to check whether ADE is enabled on a VM's disks:
 
-```azureclio
+```azurecli
 az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
 ```
 
@@ -235,12 +235,7 @@ The boot partition of the encrypted disk contains the header file. You use this 
 
 ### <a name="unlock-by-files"></a> Use the ADE key file and the header file to unlock the disk
 
-1. Use the following command to unlock the root partition on the encrypted disk:
-
-   ```bash
-   cryptsetup luksOpen --key-file /mnt/azure_bek_disk/LinuxPassPhraseFileName --header /investigateboot/luks/osluksheader <path to root partition> <new name>
-   ```
-   For example, if the path to the root partition containing the encrypted OS is /dev/sda4, and you want to assign the unlocked partition the name "osencrypt," you would enter the following command:  
+1. Use the `cryptsetup luksOpen` command to unlock the root partition on the encrypted disk. For example, if the path to the root partition containing the encrypted OS is /dev/sda4, and you want to assign the unlocked partition the name "osencrypt," you would enter the following command:  
 
    ```bash
    cryptsetup luksOpen --key-file /mnt/azure_bek_disk/LinuxPassPhraseFileName --header /investigateboot/luks/osluksheader /dev/sda4 osencrypt 
