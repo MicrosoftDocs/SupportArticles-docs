@@ -7,7 +7,10 @@ ms.date: 3/31/2021
 ---
 # DFP and Mobile Device fingerprinting
 
-This article describes Mobile device fingerprinting.
+
+ 
+> [!NOTE]
+> This is a test note.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365 Fraud Protection  
 _Original KB number:_ &nbsp; 4569098
