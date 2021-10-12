@@ -34,14 +34,14 @@ OWA displays the following error message:
 > Something went wrong</br>
 > Your request couldn’t be completed. HTTP Status code: 500
 
-:::image type="content" source="./media/owa-stops-working-after-update/exchangeserver-owa-somethingwentwrong.png" alt-text="Screenshot of the error message.":::
+:::image type="content" source="./media/owa-stops-working-after-update/exchangeserver-owa-somethingwentwrong.png" alt-text="Screenshot of the OWA error message.":::
 
 ECP displays the following error message:
 
 >Server Error in ‘/ecp’ Application.</br>
 Could not load file or assembly ‘Microsoft.Exchange.Common, Version=15.0.0.0 …Culture=neutral, PublicKeyToken=31bf3856ad364e54’ or one of its dependencies. The system cannot find the file specified.
 
-:::image type="content" source="./media/owa-stops-working-after-update/could-not-load-file-or-assembly.png" alt-text="Screenshot of the error message.":::
+:::image type="content" source="./media/owa-stops-working-after-update/could-not-load-file-or-assembly.png" alt-text="Screenshot of the ECP error message.":::
 
 ## Cause
 
