@@ -25,9 +25,7 @@ The issue occurs because SSL 2.0 and TLS 1.2 aren't compatible with each other i
 
 ## Resolution
 
-To use client-side certificates to establish an HTTPS connection over TLS 1.2, you must disable SSL 2.0.
-
-For more information about how to do it, see [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).
+To use client-side certificates to establish an HTTPS connection over TLS 1.2, you must disable SSL 2.0. For more information, see [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).
 
 > [!NOTE]
 > SSL 2.0 is disabled by default.
