@@ -60,7 +60,7 @@ And if you are running Outlook in Online mode, you receive the following error m
 
 > You do not have the permission to send the message on behalf of the specified users.
 
-:::image type="content" source="./media/cannot-send-email-with-full-access/outlook-error-message.png" alt-text="Screenshot shows the error message of You do not have the permission to send the message on behalf of the specified users."border="false":::
+:::image type="content" source="./media/cannot-send-email-with-full-access/outlook-error-message.png" alt-text="Screenshot shows the error message after running Outlook in Online mode."border="false":::
 
 ## Cause
 
