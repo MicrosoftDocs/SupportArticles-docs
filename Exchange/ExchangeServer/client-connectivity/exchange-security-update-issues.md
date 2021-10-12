@@ -143,20 +143,20 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 
 1. On the Client Access Server (CAS), open Internet Information Services (IIS).  
 
-2. Expand **Sites**, select **Default Web Site**, and then click **Bindings** on the **Actions** pane.  
+2. Expand **Sites**, select **Default Web Site**, and then click **Bindings** on the **Actions** pane.
 
 3. In the **Site Bindings** dialog box, open the binding for the following values: </br>
    **Type**: **https**; **Port**: **443**.  
 
 4. Check whether a valid SSL certificate is specified for the default web site. If not, specify a valid SSL certificate, such as **Microsoft Exchange**, and select **OK**.
 
+   ![The SSL certificate for the SSL binding for the default web site on the CAS server.](./media/exchange-security-update-issues/front-end-binding.png)  
+
 5. Run the following command in an elevated PowerShell window to restart IIS:
 
    ```Powershell
    Restart-Service WAS,W3SVC  
    ```
-
-   ![The SSL certificate for the SSL binding for the default web site on the CAS server.](./media/exchange-security-update-issues/front-end-binding.png)  
 
 6. On the Mailbox server, perform the verification steps 1 through 5 for the **Exchange Back End** site.
 
