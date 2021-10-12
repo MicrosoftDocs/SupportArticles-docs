@@ -26,9 +26,9 @@ Note that this article provides a resolution only for the following error messag
 > Line: line number  
 > Error: nature of script error
 
-:::image type="content" source="media/ie-runtime-errors/runtime-error-message-box.png" alt-text="Runtime Error message box" border="false":::
+:::image type="content" source="media/ie-runtime-errors/runtime-error-message-box.png" alt-text="Screenshot of the Runtime Error message box." border="false":::
 
-:::image type="content" source="media/ie-runtime-errors/webpage-error-message-box.png" alt-text="Webpage Error message box" border="false":::
+:::image type="content" source="media/ie-runtime-errors/webpage-error-message-box.png" alt-text="Screenshot of the Webpage Error message box, stating Do you want to debug this webpage." border="false":::
 
 ## Resolution
 
@@ -40,7 +40,7 @@ Because this type of error message does not apply to you, you can prevent it fro
 
 3. Click to select the **Disable script debugging (Internet Explorer)** and **Disable script debugging (Other)** check boxes, and then click to clear the **Display a notification about every script error** check box.
 
-   :::image type="content" source="media/ie-runtime-errors/internet-options.png" alt-text="Internet Options" border="false":::
+   :::image type="content" source="media/ie-runtime-errors/internet-options-browsing-settings.png" alt-text="Screenshot of the Internet Options window. Under Advance tab, the three check boxes are set." border="false":::
 
 4. Click **OK** to close the **Internet Options** dialog box.
 
