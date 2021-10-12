@@ -7,8 +7,9 @@ ms.reviewer: v-jomcc, ericlaw
 ---
 # How to fix runtime errors in Internet Explorer
 
+[!INCLUDE [](../includes/browsers-important.md)]
 
-A runtime error is a software or hardware problem that prevents Internet Explorer from working correctly. Runtime errors can be caused when a website uses HTML code that's not compatible with the web browser functionality.
+A runtime error is a software or hardware problem that prevents Internet Explorer from working correctly. Runtime errors can be caused when a website uses HTML code that's incompatible with the web browser functionality.
 
 _Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 822521
@@ -37,7 +38,7 @@ Because this type of error message doesn't apply to you, you can prevent it from
 
 2. In the **Internet Options** dialog box, select the **Advanced** tab.
 
-3. Click to select the **Disable script debugging (Internet Explorer)** and **Disable script debugging (Other)** check boxes. Then click to clear the **Display a notification about every script error** check box.
+3. Select the **Disable script debugging (Internet Explorer)** and **Disable script debugging (Other)** check boxes. Then clear the **Display a notification about every script error** check box.
 
    :::image type="content" source="media/ie-runtime-errors/internet-options.png" alt-text="Internet Options" border="false":::
 
