@@ -24,14 +24,14 @@ When you troubleshoot printing problems, you can often determine the process tha
 
 ## Troubleshooting checklist
 
-Here's a list of basic steps to resolve most prinitng problems:
+Here's a list of basic steps to resolve most printing problems:
 
 - Verify that the physical printer is operational. If other users can print, the cause is probably not the device or the print server.
 - Verify that the printer on the print server is using the correct printer driver. If print clients are using other operating systems, make sure that you installed all necessary drivers for the other platforms.
 - Verify the following:
-    - The print server is operational
-    - There is sufficient disk space for spooling
-    - The print spool service is running.
+  - The print server is operational.
+  - There is sufficient disk space for spooling.
+  - The print spool service is running.
 - Verify that the client computer has the correct printer driver.
 - Check whether the physical printer is in the ready state (ready to print). Most printers can print a test page to confirm correct operation.
 - Check whether the printer data cable is connected correctly. If the printer is connected directly to the network by using a network adapter, check the status of the light on the card that indicates network connectivity.
@@ -59,7 +59,7 @@ The modularity of the printing architecture makes diagnosing problems fairly eas
 - The client application creates a print job.
 
     1. Check whether the document that the client is trying to print consists of text only or includes graphics. Check the printer driver and the fonts settings.
-    1. Check whether there is a problem that affect the separator page selection.
+    1. Check whether there is a problem that affects the separator page selection.
     1. Try to reproduce the same print job from another client. If the job prints correctly from the other client, the problem is most likely not caused by this process.
     1. Check whether the client system sends the print job to the printer share on the print server.
     1. Check the network transport. For example, check the TCP/IP or NWLink status.
@@ -81,7 +81,7 @@ The modularity of the printing architecture makes diagnosing problems fairly eas
     Create a local *printer\_name* users group that has the Print permission, and then put global groups in the local group.  
 - Removing Print permission from the default group Everyone
 
-    Alternativel, assign the Print permission to the built-in group users. This limits printer use to those users in the domain for which you have created accounts.  
+    Alternatively, assign the Print permission to the built-in group users. This limits printer use to those users in the domain for which you have created accounts.  
 
 - **Distributing the administrative load**
   

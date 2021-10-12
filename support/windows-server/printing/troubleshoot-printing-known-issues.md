@@ -108,7 +108,7 @@ Make sure that the hard disk has enough disk space, or relocate the spool folder
 
 The print spooler might be stalled.
 
-### Reolution
+### Resolution
 
 On the print server, try to stop and restart the Print Spooler service.
 
@@ -167,4 +167,4 @@ Use Active Directory Sites and Services to update the sites and subnets. Then, y
 
 ### Resolution
 
-Active Directory cannot locate a node in the tree of your directory without having a subnet associated with it. If your organization is small enough, this situation isn't a problem because users can search for any printer in the organization. However, for larger organizations or organization that have many printers, you can still enable users to browse the location hierarchy as an aid to locate a printer. To do this, you have to create artificial subnets in Active Directory that correspond to the hierarchy that you want to create.
+Active Directory cannot locate a node in the tree of your directory without having a subnet associated with it. If your organization is small enough, this situation isn't a problem because users can search for any printer in the organization. However, for larger organizations or organization that has many printers, you can still enable users to browse the location hierarchy as an aid to locate a printer. To do this, you have to create artificial subnets in Active Directory that correspond to the hierarchy that you want to create.

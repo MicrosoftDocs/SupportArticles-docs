@@ -42,11 +42,12 @@ Follow these steps on the client computer:
 3. Restart the Spooler service.
 4. Update the printer driver to the latest version from the OEM. However, if the driver that's in use is already the latest version, try switching to a generic in-box driver.
 5. Check the Spool folder to see whether ir contains any old files. When printing is working correctly, the files in the Spool folder are deleted when the jobs are printed. The default Spool folder is: *%systemroot%\\System32\\Spool\\Printers*.
-    - You can verify the Spool folder location by checking the `DefaultSpoolDirectory` registry value in the following registry subkey:
+    1. You can verify the Spool folder location by checking the `DefaultSpoolDirectory` registry value in the following registry subkey:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers`.
-    - Move any old files that are in the Spool folder to see whether the problem still occurs. Corrupted files in the Spool folder can cause Print Spooler service problems.
-      > **Note:** You might have to stop the Print Spooler service to move the files from the Spool folder.
-    - By default, the Print Spooler service is dependent on only the Remote Procedure Call service (RpcSs). To verify the Spooler dependencies, check the `DependOnService` value in the following Registry subkey:
+    2. Move any old files that are in the Spool folder to see whether the problem still occurs. Corrupted files in the Spool folder can cause Print Spooler service problems.
+          > [!NOTE]
+          > You might have to stop the Print Spooler service to move the files from the Spool folder.
+    3. By default, the Print Spooler service is dependent on only the Remote Procedure Call service (RpcSs). To verify the Spooler dependencies, check the `DependOnService` value in the following Registry subkey:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler`.
     4. Verify that the dependent services are started. If there are other dependent services in addition to the RpcSs, edit the `DependOnService` registry value to remove all dependencies except the RpcSs.
     5. It can sometimes be difficult to determine whether a print job is being spooled. Pausing the printer will let the job be spooled but not printed. This will give you time to verify that the print job is being spooled, helping you to further narrow the focus of your troubleshooting.
@@ -63,7 +64,7 @@ Some of the scenarios described in this section:
 - You experience slow printing on Hyper-V, RDS, or Azure.
 - You experience slow printing when you try to print through a custom application.
 
-Detrmine where the slowness occurs by running a *pause queue* test:
+Determine where the slowness occurs by running a *pause queue* test:
 
 - Pause queue on the client and server.
 - On the client, send the job from the application, and measure how quickly it creates the job.
@@ -74,8 +75,8 @@ Detrmine where the slowness occurs by running a *pause queue* test:
 2. You can verify the location of the Spool folder by checking the *DefaultSpoolDirectory* value in the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers`.
 3. Check whether there are any `.SHD` or `.SPL` files in *%systemroot%\\System32\\spool\\printers*. If there are, do the following:
 
-    1. Run *MSINFO32.exe*, and leexamine **Software Environment**, **Print Jobs** to see whether you can determine the printer or job that is the source of the issue.
-    1. MSINFO32 displays local print job information only. Therefore, it will most likely be helpful only for Terminal Server print spooler issues — if the print spooler has not been stopped. Files that are stuck in the Spool folder should be deleted or removed after the spooler is stopped. Any time that you make manual changes (files or registry entries), the spooler should at least be stopped and restarted.
+    1. Run *MSINFO32.exe*, and examine **Software Environment**, **Print Jobs** to see whether you can determine the printer or job that is the source of the issue.
+    1. MSINFO32 displays local print job information only. Therefore, it will most likely be helpful only for Terminal Server print spooler issues—if the print spooler has not been stopped. Files that are stuck in the Spool folder should be deleted or removed after the spooler is stopped. Any time that you make manual changes (files or registry entries), the spooler should at least be stopped and restarted.
     1. Move any old or orphaned files in the Spool folder to learn whether the problem still occurs. Corrupted files in the Spool folder can cause Print Spooler service problems. You might have to stop the Print Spooler service to remove the files from the Spool folder.
 4. Visually check and document whether antivirus is scanning the Spool folder or `.SHD`, `.SPL`, or `.TMP` files. Antivirus programs can cause many side effects, such as  "access denied" errors and stuck print jobs in the Spool folder.
 5. If you're using printer pooling to handle multiple jobs, and print jobs are taking a long time to reach the top of queue, consider adding more printers to the pool to distribute the print jobs over a larger set of printers.
