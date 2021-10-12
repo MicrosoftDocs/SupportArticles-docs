@@ -22,14 +22,14 @@ _Original KB number:_ &nbsp; 289483
 
 ## Summary
 
-The `xcopy` and the `xcopy32` commands have the same switches. This article describes the switches that available when you run the commands:
+The `xcopy` and `xcopy32` commands have the same switches. This article describes the switches that are available when you run the commands:
 
 - outside of Windows (in MS-DOS mode).
 - from an MS-DOS window.
 
 ## Syntax and switches in MS-DOS mode
 
-The following command line includes the syntax and the switches that you can use with the `xcopy` and the `xcopy32` commands in MS-DOS mode:
+The following command line includes the syntax and the switches that you can use with the `xcopy` and `xcopy32` commands in MS-DOS mode:
 
 `xcopy **source** [**destination**] [/a | /m] [/d: **date**] [/p] [/s] [/e] [/v] [/w]`
 
@@ -60,7 +60,7 @@ The following table describes the optional switches you can use with `xcopy` and
 
 ## Syntax and switches in MS-DOS window
 
-The following command line includes the syntax and the switches for the `xcopy` and the `xcopy32` commands when you run it from an MS-DOS window:
+The following command line includes the syntax and the switches for the `xcopy` and `xcopy32` commands when you run it from an MS-DOS window:
 
 `xcopy **source** [ **destination** ] [/a | /m] [/d: **date**] [/p] [/s] [/e] [/w] [/c] [/i] [/q] [/f] [/l] [/h] [/r] [/t] [/u] [/k] [/n]`
 
@@ -81,7 +81,7 @@ The following table describes the optional switches you can use with `xcopy` and
 | /e|Copies any subfolder, even if it's empty.|
 | /w|Prompts you to press a key before copying.|
 | /c|Continues copying even if errors occur.|
-| /i|If the destination doesn't exist, and you're copying more than one file, this switch considers the destination as a folder.|
+| /i|If the destination doesn't exist, and you're copying more than one file, this switch assumes that the destination is a folder.|
 | /q|Doesn't display file names while copying.|
 | /f|Displays full source and destination file names while copying.|
 | /l|Displays files that are going to be copied.|
