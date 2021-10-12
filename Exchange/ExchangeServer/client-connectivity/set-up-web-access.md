@@ -41,7 +41,7 @@ To set up Outlook Web App to access Exchange Server, follow these steps:
     > [!NOTE]
     > This feature is available on Outlook 2010 and Outlook 2013. It depends on the server side settings.
 
-    :::image type="content" source="./media/set-up-web-access/account-information.png" alt-text="Screenshot of the Info page in Outlook. Under "Account and Social Network Settings", there's a URL address: https://mail.contoso.com/owa":::
+    :::image type="content" source="./media/set-up-web-access/account-information.png" alt-text="Screenshot of the Info page in Outlook. Under "Account and Social Network Settings", there's a URL address. https://mail.contoso.com/owa":::
 2. Open a web browser such as Internet Explorer, type the Outlook Web App address in the address bar, and then press Enter.
 3. If you receive the following certificate warning page, click **Continue to this website (not recommended)** to continue to open Outlook Web App.
     >There is a problem with this website's security certificate.</br>
