@@ -78,14 +78,14 @@ The modularity of the printing architecture makes diagnosing problems fairly eas
     If you share printers with clients other than Windows clients, install the required extra printer drivers for these clients.
 - **Using the same guidelines that apply to any shared resource**
 
-    Create a local *printer\_name* users group that has the Print permission, and then put global groups in the local group.  
+    Create a local \<printer_name\> users group that has the Print permission, and then put global groups in the local group.  
 - **Removing Print permission from the default group Everyone**
 
     Alternatively, assign the Print permission to the built-in group users. This limits printer use to those users in the domain for which you have created accounts.  
 
 - **Distributing the administrative load**
   
-    If security is not a concern, assign the *printer\_name* users group the Manage Documents or Manage Printers print permission.  
+    If security is not a concern, assign the \<printer_name\> users group the Manage Documents or Manage Printers print permission.  
 
 - **Maintaining physical security**
 
