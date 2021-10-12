@@ -79,7 +79,7 @@ The modularity of the printing architecture makes diagnosing problems fairly eas
 - **Using the same guidelines that apply to any shared resource**
 
     Create a local *printer\_name* users group that has the Print permission, and then put global groups in the local group.  
-- Removing Print permission from the default group Everyone
+- **Removing Print permission from the default group Everyone**
 
     Alternatively, assign the Print permission to the built-in group users. This limits printer use to those users in the domain for which you have created accounts.  
 
