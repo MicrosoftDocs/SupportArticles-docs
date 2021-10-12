@@ -29,7 +29,7 @@ When guest users try to use the **Files** tab to access shared files in Microsof
 
 ## Cause
 
-In Teams chat and channels, the settings of files sharing are based on the sharing setting of SharePoint and OneDrive in the SharePoint admin center. This issue occurs because the settings are not configured correctly in the SharePoint admin center.
+In Teams chat and channels, the file sharing settings are based on the sharing settings for SharePoint and OneDrive in the SharePoint admin center. This issue occurs because these settings are not made correctly in the SharePoint admin center.
 
 ## Resolution
 
@@ -37,12 +37,12 @@ To fix this issue, configure the sharing settings in Teams and SharePoint as fol
 
 - Enable group owners to add people outside the organization as guests.
 
-    When you create a team, a Microsoft 365 group is created to manage team membership. To let the group owners add people outside the organization to the group as guests, check the **Let group owners add people outside the organization to groups** option from
+    When you create a team, a Microsoft 365 group is created to manage team membership. To let the group owners add people outside the organization to the group as guests, select the **Let group owners add people outside the organization to groups** check box from
 [Microsoft 365 Groups guest settings](/microsoft-365/solutions/collaborate-as-team?view=o365-worldwide#microsoft-365-groups-guest-settings).
 
 - Enable guest sharing from SharePoint admin center:
 
-    1. Sign in [SharePoint admin center](https://admin.microsoft.com/sharepoint?page=sharing&modern=true) as an administrator.
+    1. Sign in to the [SharePoint admin center](https://admin.microsoft.com/sharepoint?page=sharing&modern=true) as an administrator.
     1. In the left navigation pane, select **Policies** > **Sharing**.
     1. Specify the sharing level for SharePoint and OneDrive to one of the following options:
 
@@ -52,14 +52,14 @@ To fix this issue, configure the sharing settings in Teams and SharePoint as fol
 
 ### Run a self-diagnostics tool
 
-Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with guest users accessing files in Teams.
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant. These tools can help users identify issues that might prevent guest users from accessing files in Teams.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Teams Files Guest Access](https://aka.ms/TeamsFilesGuestAccessDiag)
 
-The diagnostic performs a large range of verifications.
+The diagnostic runs a large range of verification checks.
