@@ -26,7 +26,7 @@ After a mailbox is moved to Microsoft Office 365, an on-premises user can't see 
 
 Also, the user can no longer view the Calendar folder, and the user receives a "Could not be updated" error.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-folder-error.png" alt-text="Screenshot shows the user can no longer view the Calendar folder, and receives a "Could not be updated."error.":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-folder-error.png" alt-text="Screenshot shows the user can no longer view the Calendar folder.":::
 
 ## Cause
 
