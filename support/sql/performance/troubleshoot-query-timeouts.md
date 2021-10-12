@@ -19,7 +19,7 @@ Assume that an application queries data from a SQL Server database. If the query
 
 ## Explanation
 
-These errors occur on the application side. The application sets a time out value and if the time out is reached, it cancels the query. On the SQL Server side, a query cancellation causes an Attention event ([error 3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value is set to *0* (no time limit), the Database Engine will execute the query until it's completed.
+These errors occur on the application side. The application sets a time out value and if the time out is reached, it cancels the query. On the SQL Server side, a query cancellation causes an Attention event, error 3617 ([MSSQLSERVER_3617](/sql/relational-databases/errors-events/mssqlserver-3617-database-engine-error)). If the time-out value is set to *0* (no time limit), the Database Engine will execute the query until it's completed.
 
 - In .NET Framework [System.Data.SqlClient](/dotnet/api/system.data.sqlclient), the time-out value is set on the [CommandTimeout](/dotnet/api/system.data.sqlclient.sqlcommand.commandtimeout) property.
 - In ODBC API, it's set through the `SQL_ATTR_QUERY_TIMEOUT` attribute in the [SQLSetStmtAttr](/sql/odbc/reference/syntax/sqlsetstmtattr-function) function.
