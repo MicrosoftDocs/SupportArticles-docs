@@ -343,7 +343,7 @@
     items:
     - name: Blocked column is populated for latch waits
       href: performance/blocked-column-populated-latch-waits.md
-    - name: Buffer pool scan runs slowly on large memory machines
+    - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
@@ -369,6 +369,8 @@
       href: performance/troubleshoot-blocking-caused-compile-locks.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
+    - name: Troubleshoot query time-out errors
+      href: performance/troubleshoot-query-timeouts.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
