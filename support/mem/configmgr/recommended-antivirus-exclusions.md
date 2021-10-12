@@ -49,7 +49,7 @@ Use the installation folder paths below as variables for the recommended exclusi
 | *ConfigMgr installation folder* | %ProgramFiles%\Microsoft Configuration Manager |
 | *MP installation folder* | %ProgramFiles%\SMS_CCM |
 | *Client installation folder* | %Windir%\CCM |
-| *ContentLib_drive* | Location will vary. The default location is usually the C:\ drive. |
+| *ContentLib_drive* | Location will vary. The default location is usually the C: drive. |
 
 ## Exclusions
 
