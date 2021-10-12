@@ -26,7 +26,7 @@ After a mailbox is moved to Microsoft Office 365, an on-premises user can't see 
 
 Also, the user can no longer view the Calendar folder, and the user receives a "Could not be updated" error.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-folder-error.png" alt-text="Screenshot shows the user can no longer view the Calendar folder.":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-folder-error.png" alt-text="Screenshot shows the user can no longer view the Calendar folder and receives a error.":::
 
 ## Cause
 
@@ -46,7 +46,7 @@ If a remote user must be able to see free/busy information for the mailbox, the 
 
 Remote users can see the free/busy data in Scheduling Assistant:
 
-:::image type="content" source="./media/cannot-see-free-busy-information/scheduling-assistant-with-data.png" alt-text="Screenshot shows remote users can see the free/busy data in Scheduling Assistant":::
+:::image type="content" source="./media/cannot-see-free-busy-information/scheduling-assistant-with-data.png" alt-text="Screenshot shows remote users can see the free/busy data in Scheduling Assistant.":::
 
 Or, remote users can see the free/busy data as an additional calendar:
 
@@ -54,14 +54,14 @@ Or, remote users can see the free/busy data as an additional calendar:
 
 A remote user can be granted Calendar folder permissions to obtain additional access to the contents of the Calendar folder:
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-reviewer.png" alt-text="Screenshot shows a remote user can be granted Calendar folder permissions to obtain additional access to the contents of the Calendar folder."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-reviewer.png" alt-text="Screenshot shows the user permissions of the Calendar folder are set to reviewer, which can real Full Details."border="false":::
 
 > [!NOTE]
 > Granting the **Free/Busy time, subject, location (Limited Details)** permission is insufficient in a hybrid environment. The user has to be granted at least **Reviewer** permission to view calendar item details.
 
 The remote user (Test User 1) can now see the mailbox Calendar folder:
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-folder-remote-user.png" alt-text="Screenshot shows the remote user (Test User 1) can now see the mailbox Calendar folder.":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-folder-remote-user.png" alt-text="Screenshot shows the mailbox Calendar folder.":::
 
 ## More Information
 
@@ -75,6 +75,6 @@ There are some differences with contributor permissions when you set the default
 
 When a user is granted contributor rights, the permission level will automatically change to **Custom**. This includes **Free/Busy time**.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-custom.png" alt-text="Screenshot shows when a user is granted contributor rights, the permission level will automatically change to Custom. This includes Free/Busy time."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-custom.png" alt-text="Screenshot the permission level will automatically change to Custom after the user is granted contributor rights, which includes Free/Busy time."border="false":::
 
 This is expected behavior, because users who can create items in a calendar can also see the folder and view free/busy information.
