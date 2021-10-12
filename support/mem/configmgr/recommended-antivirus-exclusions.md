@@ -37,17 +37,23 @@ Possible symptoms include:
 - Software that is deployed to clients cannot be installed.
 - Compliance data for software deployments is inaccurate.
 
-## Exclusions
+## Default installation folders
 
-We recommend that you add the following real-time protection exclusions to prevent these problems.
+Use the installation folder paths below as variables for the recommended exclusions within the article.
 
-### Default installation folders
+  > [!NOTE]
+  > The locations below are default installation paths and may vary within your environment. We recommend to review your environment and configuration to ensure you have the correct paths in place.
 
 | Folder | Path |
 | --- | --- |
-| Configuration Manager installation folder | %ProgramFiles%\Microsoft Configuration Manager |
-| MP installation folder | %ProgramFiles%\SMS_CCM |
-| Client installation folder | %Windir%\CCM |
+| *ConfigMgr installation folder* | %ProgramFiles%\Microsoft Configuration Manager |
+| *MP installation folder* | %ProgramFiles%\SMS_CCM |
+| *Client installation folder* | %Windir%\CCM |
+| *ContentLib_drive* | Location will vary. The default location is usually the C:\ drive. |
+
+## Exclusions
+
+We recommend that you add the following real-time protection exclusions to prevent these problems.
 
 ### Folder exclusions for site servers
 
