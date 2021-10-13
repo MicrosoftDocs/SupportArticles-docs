@@ -38,7 +38,7 @@ To fix this issue, configure the sharing settings in Teams and SharePoint as fol
 - Enable group owners to add people outside the organization as guests.
 
     When you create a team, a Microsoft 365 group is created to manage team membership. To let the group owners add people outside the organization to the group as guests, select the **Let group owners add people outside the organization to groups** check box from
-[Microsoft 365 Groups guest settings](/microsoft-365/solutions/collaborate-as-team?view=o365-worldwide#microsoft-365-groups-guest-settings).
+[Microsoft 365 Groups guest settings](/microsoft-365/solutions/collaborate-as-team#microsoft-365-groups-guest-settings).
 
 - Enable guest sharing from SharePoint admin center:
 
