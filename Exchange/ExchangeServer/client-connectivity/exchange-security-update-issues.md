@@ -150,7 +150,7 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 
 4. Check whether a valid SSL certificate is specified for the default web site. If not, specify a valid SSL certificate, such as **Microsoft Exchange**, and select **OK**.
 
-   ![The SSL certificate for the SSL binding for the default web site on the CAS server.](./media/exchange-security-update-issues/front-end-binding.png)  
+   :::image type="content" source="./media/exchange-security-update-issues/front-end-binding.png" alt-text="The S S L certificate for the S S L binding for the default web site on the C A S server.":::
 
 5. Run the following command in an elevated PowerShell window to restart IIS:
 
@@ -160,7 +160,7 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 
 6. On the Mailbox server, perform the verification steps 1 through 5 for the **Exchange Back End** site.
 
-    ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
+    :::image type="content" source="./media/exchange-security-update-issues/back-end-binding.png" alt-text="The S S L certificate for the S S L binding for the Exchange Back End site on the Mailbox server.":::
 
 For more information, see [this article](https://support.microsoft.com/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
 
