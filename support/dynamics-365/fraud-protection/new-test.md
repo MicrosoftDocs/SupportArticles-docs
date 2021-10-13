@@ -15,13 +15,13 @@ _Original KB number:_ &nbsp; 4569098
 
 This is an introductory file created to understand the different options and features of Visual Studio.
 
-
-
 ## Previewing an .md file
+
 At every stage of creating a topic, you can preview the way it looks. To preview a file:
 
 1. Create a topic.
 1. Add all the required sections.
-1. Click on the :::image type="content" source="support\dynamics-365\media\previewfile\showsourceicon.PNG" alt-text="helps to get a preview of the file.":::
-
-After you make the changes, 
+1. Make the changes and save them.
+1. Click on :::image type="content" source="../media/previewfile/previewfile.PNG" alt-text=""::: in the upper righthand corner or click on preview icon on the blue ribbon.
+ A preview of the actual file is shown. 
+ 
