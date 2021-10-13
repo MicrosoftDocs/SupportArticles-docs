@@ -55,17 +55,17 @@ To recover a user account that was deleted manually, use one of the following me
 - Use the Office 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user).
 - Use the Azure Active Directory Module for Windows PowerShell to recover the user account. To do this, type the following command, and then press Enter:
 
-    **`Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`**
+    `Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`
 
     If this command doesn't work, try the following command:
 
-    **`Restore-MsolUser -UserPrincipalName <string> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`**
+    `Restore-MsolUser -UserPrincipalName <string> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`
 
     > [!NOTE]
     > In these commands, the following conventions are used:
-    > - The *UserPrincipalName* and *ObjectID* parameters uniquely identify the user object to be restored.
-    > - The *AutoReconcileProxyConflicts* parameter is optional and is used in scenarios in which another user object is granted the target user object's proxy address after that address is deleted.
-    > - The *NewUserPrincipalName* parameter is optionally used in scenarios in which another user object is granted by using the target user object's user principal name (UPN) after that UPN was deleted.
+    > - The `UserPrincipalName` and `ObjectID` parameters uniquely identify the user object to be restored.
+    > - The `AutoReconcileProxyConflicts` parameter is optional and is used in scenarios in which another user object is granted the target user object's proxy address after that address is deleted.
+    > - The `NewUserPrincipalName` parameter is optionally used in scenarios in which another user object is granted by using the target user object's user principal name (UPN) after that UPN was deleted.
 
 ### Resolution 2: Recover accounts deleted because scoping changes exclude the on-premises Active Directory user object
 
@@ -94,13 +94,13 @@ To recover an item that was deleted from the on-premises Active Directory schema
             C:\>adrestore.exe UserA
             AdRestore v1.1 by Mark Russinovich
             Sysinternals - www.sysinternals.com
-    
+
             Enumerating domain deleted objects:
             cn: MailboxA
             DEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f
             distinguishedName: CN=UserA\0ADEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f,CN=Deleted Objects,DC=Domain,DC=com
             lastKnownParent: OU=OnPremises,DC=Domain,DC=com
-    
+
             Found 1 item matching search criteria.
             ```
 
@@ -110,35 +110,35 @@ To recover an item that was deleted from the on-premises Active Directory schema
             C:\>adrestore.exe Usera -r
             AdRestore v1.1 by Mark Russinovich
             Sysinternals - www.sysinternals.com
-    
+
             Enumerating domain deleted objects:
             cn: UserA
             DEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f
             distinguishedName: CN=MailboxA\0ADEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f,CN=Deleted Objects,DC=Domain,DC=com
             lastKnownParent: OU=OnPremises,DC=Domain,DC=com
-    
+
             Do you want to restore this object (y/n)? y
             Restore succeeded.
-    
+
             Found 1 item matching search criteria.
             ```
 
 - **Enable the user** object in Active Directory. When the object is restored, it's disabled at first. Therefore, you have to enable it. We recommend that you first reset the user password. To enable the user, follow these steps:
 
-    1. In Active Directory Users and Computers, right-click the user, and then select  **Reset Password.**  
-    1. In the  **New password** and **Confirm password** boxes, enter a new password, and then select **OK**.
-    1. Right-click the user, select  **Enable Account**, and then select **OK**.
+    1. In Active Directory Users and Computers, right-click the user, and then select **Reset Password.**  
+    1. In the **New password** and **Confirm password** boxes, enter a new password, and then select **OK**.
+    1. Right-click the user, select **Enable Account**, and then select **OK**.
 
-       :::image type="content" source="./media/restore-deleted-user-accounts/enable-account.png" alt-text="Screenshot of enabling account in Active Directory. The entry titled Enable Account." border="true":::
+       :::image type="content" source="./media/restore-deleted-user-accounts/enable-account.png" alt-text="Screenshot about how to enable the account in Active Directory." border="true":::
 
-        You receive the following error message (expected):
+       You receive the following error message (expected):
 
-        > Windows cannot enable object \<MailboxName> because:
+       > Windows cannot enable object \<MailboxName> because:
         Unable to update the password. The value provided for the new password does not meet the length, complexity, or history requirements of the domain.
 
-        After you receive this error message, reset the user's password in Active Directory Users and Computers.
+       After you receive this error message, reset the user's password in Active Directory Users and Computers.
 
-- **Configure the user logon name.**
+- **Configure the user logon name**
 
    The user logon name (also known as the user principal name, or UPN) isn't set from the restored user object. You have to update the user logon name, especially if the user is a federated account.
 
@@ -198,10 +198,10 @@ To restore users who are in this state, you can correct the conflict by using th
 
 The Office 365 portal shows the equivalent error messages in the form of the Windows PowerShell "error states" that were mentioned earlier. For example, you receive the following message:
 
-> User name conflict  
-The user you want to restore has the same user name.
+> User name conflict
+> The user you want to restore has the same user name.
 
-:::image type="content" source="./media/restore-deleted-user-accounts/user-name-conflict.png" alt-text="Screenshot that shows the user name conflict error." border="true":::
+:::image type="content" source="./media/restore-deleted-user-accounts/user-name-conflict.png" alt-text="Screenshot that shows the user name is conflict." border="true":::
 
 To restore users who are in this state, complete the information that is requested in the form.
 
