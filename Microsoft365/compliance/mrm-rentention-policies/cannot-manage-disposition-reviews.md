@@ -21,7 +21,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-When you use the **Disposition** tab in **Records Management** in the Microsoft 365 compliance center to manage [disposition reviews](/microsoft-365/compliance/disposition?view=o365-worldwide), you receive the following error message:
+When you use the **Disposition** tab in **Records Management** in the Microsoft 365 compliance center to manage [disposition reviews](/microsoft-365/compliance/disposition), you receive the following error message:
 
 > The remote server returned an error: (401) Rbac check failed.
 

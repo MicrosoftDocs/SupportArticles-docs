@@ -2,6 +2,18 @@
 
 
 
+## Week of October 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/8/2021 | [The remote server returned an error (401) Rbac check failed when you manage disposition of data](/office365/troubleshoot/mrm-rentention-policies/cannot-manage-disposition-reviews) | added |
+| 10/8/2021 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
+| 10/8/2021 | [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run) | modified |
+| 10/8/2021 | [What the UserAgent property value refers to in the unified audit log](/office365/troubleshoot/audit-logs/useragent-property) | modified |
+| 10/8/2021 | [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme) | modified |
+
+
 ## Week of September 27, 2021
 
 
