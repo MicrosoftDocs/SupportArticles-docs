@@ -36,13 +36,13 @@ The default permissions of the Calendar folder are set to **None** or **Contribu
 
 When the default permissions of the Calendar folder are set to **None** or **Contributor**, details can be obtained only when user delegation is used by attaching calendars directly to the calendar view of Outlook. In a hybrid deployment, free/busy and calendar-sharing functionality work differently than when both users are in the same environment. The default permissions determine the kind of free/busy information that users in a remote forest can see. If the default permissions are set to **None** or **Contributor**, no free/busy information is displayed for remote users, and users cannot view the mailbox calendar. This is because neither kind of permission offers any level of free/busy visibility.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor.png" alt-text="Screenshot shows the default permissions are set to Contributor, without offers any level of free/busy visibility."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor.png" alt-text="Screenshot shows the default permissions are set to Contributor, without offers any level of free/busy visibility." border="false":::
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-none.png" alt-text="Screenshot shows the default permissions are set to None, without offers any level of free/busy visibility."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-none.png" alt-text="Screenshot shows the default permissions are set to None, without offers any level of free/busy visibility." border="false":::
 
 If a remote user must be able to see free/busy information for the mailbox, the mailbox owner can work around this issue by changing the default permissions to **Free/Busy time** or **Free/Busy time, subject, location**. This changes the free/busy information that is shared for all remote users. For example, the default permissions can be set to **Free/Busy time**:
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-free-busy-time.png" alt-text="Screenshot of changing the default permissions to Free/Busy time."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-free-busy-time.png" alt-text="Screenshot of changing the default permissions to Free/Busy time." border="false":::
 
 Remote users can see the free/busy data in Scheduling Assistant:
 
@@ -54,7 +54,7 @@ Or, remote users can see the free/busy data as an additional calendar:
 
 A remote user can be granted Calendar folder permissions to obtain additional access to the contents of the Calendar folder:
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-reviewer.png" alt-text="Screenshot shows the user permissions are set to reviewer, which can read Full Details."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-reviewer.png" alt-text="Screenshot shows the user permissions are set to reviewer, which can read Full Details." border="false":::
 
 > [!NOTE]
 > Granting the **Free/Busy time, subject, location (Limited Details)** permission is insufficient in a hybrid environment. The user has to be granted at least **Reviewer** permission to view calendar item details.
@@ -71,10 +71,10 @@ For more information about cross-forest free/busy configuration, click the follo
 
 There are some differences with contributor permissions when you set the default calendar permissions or when you explicitly grant a user calendar permission. When the default calendar permissions are set, the **Free/busy setting** uses **None**.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor-setting.png" alt-text="Screenshot shows when the default calendar permissions are set to Contributor, the Free/busy setting uses None."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor-setting.png" alt-text="Screenshot shows when the default calendar permissions are set to Contributor, the Free/busy setting uses None." border="false":::
 
 When a user is granted contributor rights, the permission level will automatically change to **Custom**. This includes **Free/Busy time**.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-custom.png" alt-text="Screenshot the permission level will automatically change to Custom after the user is granted contributor rights, which include Free/Busy time."border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-custom.png" alt-text="Screenshot the permission level will automatically change to Custom after the user is granted contributor rights, which include Free/Busy time." border="false":::
 
 This is expected behavior, because users who can create items in a calendar can also see the folder and view free/busy information.
