@@ -27,7 +27,7 @@ When you try to modify the **Rating**, **Description** and/or **Notes** fields f
 > Description of the default settings for the MimeMap property and for the ScriptMaps property in IIS  
 > [https://support.microsoft.com](https://support.microsoft.com/)?...
 
-:::image type="content" source="media/apply-property-error/apply-property-error.jpg" alt-text="apply property error" border="false":::
+:::image type="content" source="media/apply-property-error/property-details-apply-property-error.png" alt-text="Screenshot of the support.microsoft.com Properties details and the apply property error.":::
 
 Depending on the following setting(s) modified, the text of the **Apply Property Error** will change:
 
@@ -42,7 +42,7 @@ The text of the error message is:
 >Support.microsoft.com  
 >[https://support.microsoft.com/](https://support.microsoft.com/) **?...**
 
-:::image type="content" source="media/apply-property-error/error-of-description.jpg" alt-text="error of description" border="false":::
+:::image type="content" source="media/apply-property-error/error-writing-description.png" alt-text="Screenshot of the apply property error when changing Description property." border="false":::
 
 **For the Notes setting**  
 The text of the error message is:
@@ -51,7 +51,7 @@ The text of the error message is:
 >Support.microsoft.com  
 >[https://support.microsoft.com/](https://support.microsoft.com/) **?...**
 
-:::image type="content" source="media/apply-property-error/error-of-notes.jpg" alt-text="error of notes" border="false":::
+:::image type="content" source="media/apply-property-error/error-writing-notes.png" alt-text="Screenshot of the apply property error when changing Notes property." border="false":::
 
 **For the Rating setting**  
 The text of the error message is:
@@ -60,13 +60,13 @@ The text of the error message is:
 > Support.microsoft.com  
 > [https://support.microsoft.com/?](https://support.microsoft.com/) **...**
 
-:::image type="content" source="media/apply-property-error/error-of-rating.jpg" alt-text="error of rating" border="false":::
+:::image type="content" source="media/apply-property-error/error-writing-rating.png" alt-text="Screenshot of the apply property error when changing Rating property." border="false":::
 
 ## Resolution
 
 The issue can be alleviated by manually editing the shortcut URL in a text editor such as notepad.exe. Simply copy and paste the desired setting (**Description**, **Notes**, and **Ratings**).
 
-:::image type="content" source="media/apply-property-error/edit-url-in-notepad.jpg" alt-text="edit url in notepad" border="false":::
+:::image type="content" source="media/apply-property-error/edit-url-in-notepad.png" alt-text="Screenshot of a notepad. The Description, Notes and Ratings fields are marked." border="false":::
 
 **For the Description Field**  
 [{5CBF2787-48CF-4208-B90E-EE5E5D420294}]  
@@ -131,12 +131,12 @@ Prop9=19,99
 **ORIGINAL FILE: support.microsoft.com.url**  
 Without modifying Description, Notes, or Ratings.
 
-:::image type="content" source="media/apply-property-error/original-file.jpg" alt-text="original file" border="false":::
+:::image type="content" source="media/apply-property-error/original-file.png" alt-text="Screenshot of the original file and the Properties window where no Description, Notes or Rating.under the Details tab." border="false":::
 
 **MODIFIED FILE (Description and Notes): support.microsoft.com.url**  
 After manually modified with the description text **Add Text Here for Description Field** and the **Notes** Field **Add Text Here for Notes field** and 5 Star Rating.
 
-:::image type="content" source="media/apply-property-error/modified-file.jpg" alt-text="modified file" border="false":::
+:::image type="content" source="media/apply-property-error/modified-file.png" alt-text="Screenshot of the modified file and the Properties window with Description, Notes and Rating under the Details tab." border="false":::
 
 ## More information
 
