@@ -48,7 +48,7 @@ You may experience one of the following symptoms after you update to Microsoft O
 
 When the overall network is working on your devices, Office applications may experience connection issues. You may see a message that resembles the following:
 
-:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message saying you need the internet.":::
+:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message that you'll need the internet for this.":::
 
 To determine whether you're experiencing this kind of issue, follow these steps:
 
@@ -65,7 +65,7 @@ To determine whether you're experiencing this kind of issue, follow these steps:
 
 Then, to determine whether your issue is due to network environment or local firewall/antivirus software, follow these steps:  
   
-1. Open Edge (not Internet Explorer) and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software. 
+1. Open Edge (not Internet Explorer) and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software.
   
 1. Open Edge (not Internet Explorer) in InPrivate mode and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software.
 
@@ -128,7 +128,7 @@ To do a manual recovery of the computer, follow the appropriate steps, dependin
 
     The result should contain the following fields (in Device state):  
 
-    ```AsciiDoc    
+    ```AsciiDoc
     AzureAdJoined : YES
     DomainJoined : YES
     DomainName : <CustomerDomain>
@@ -178,7 +178,7 @@ To do a manual recovery of the computer, follow the appropriate steps, dependin
 
 The Office sign-in workflow stops or shows no on-screen progress. The sign-in window shows a "Signing in" message or a blank authentication screen.
 
-:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/sign-in-page.png" alt-text="Screenshot of the sign in page.":::
+:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/sign-in-page.png" alt-text="Screenshot of the Signing in message in sign in page.":::
 
 This issue occurs because WAM is disabling non-HTTPS traffic to prevent security threats, such as someone stealing user credentials. To verify that you are experiencing this issue, follow these steps:
 
