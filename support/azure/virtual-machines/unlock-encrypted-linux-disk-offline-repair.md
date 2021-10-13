@@ -19,7 +19,7 @@ This article describes how to unlock an Azure Disk Encryption (ADE)-enabled OS d
 
 ## Symptoms
 
-If ADE is enabled on the OS disk, you might see following error messages after you try to mount the disk on a repair VM:  
+If ADE is enabled on the OS disk, you might receive following error messages after you try to mount the disk on a repair VM:  
 
    > mount: wrong fs type, bad option, bad superblock on /dev/sda2, missing codepage or helper program, or other error
   
@@ -27,26 +27,26 @@ If ADE is enabled on the OS disk, you might see following error messages after y
 
 ## Preparation
 
-Before you unlock the encrypted OS disk for offline repair, you need to
+Before you unlock the encrypted OS disk for offline repair, complete the following tasks:
 
 1. [Confirm that ADE is enabled on the disk](#confirm-that-ade-is-enabled-on-the-disk).
 2. [Determine whether the OS disk uses ADE version 0 (dual-pass encryption) or ADE version 1 (single-pass encryption)](#adeversion).
 3. [Determine whether the OS disk is managed or unmanaged](#determine-whether-the-os-disk-is-managed-or-unmanaged).
 1. [Select the method to unlock the encrypted disk](#select-the-method-to-unlock-the-encrypted-disk).
 
-### Confirm that ADE is enabled on the disk
+### Verify that ADE is enabled on the disk
 
-You can perform this step in the Azure portal, PowerShell, or the Azure command-line interface (Azure CLI).
+You can do this step in the Azure portal, PowerShell, or the Azure command-line interface (Azure CLI).
 
 #### Azure portal
 
-View the **Overview** blade for the failed VM in the Azure portal. Beneath **Disk**, **Azure disk encryption** will appear as **Enabled** or **Not Enabled**, as shown in the following screenshot.
+View the **Overview** blade for the failed VM in the Azure portal. Beneath **Disk**, the **Azure disk encryption** entry will appear as either **Enabled** or **Not Enabled**, as shown in the following screenshot.
 
-:::image type="content" source="media/unlock-encrypted-linux-disk-offline-repair/ade-enabled.png" alt-text="Screenshot of the overview blade for a V M in azure portal showing A D E is enabled on the disk.":::
+:::image type="content" source="media/unlock-encrypted-linux-disk-offline-repair/ade-enabled.png" alt-text="Screenshot of the overview blade for a V M in azure portal showing that A D E is enabled on the disk.":::
 
 #### PowerShell
 
-You can use the `Get-AzVmDiskEncryptionStatus` cmdlet to determine whether the OS and/or data volumes for a VM are encrypted by using ADE. The following example output indicates ADE encryption is enabled on the OS volume:
+You can use the `Get-AzVmDiskEncryptionStatus` cmdlet to determine whether the OS or data volumes for a VM are encrypted by using ADE. The following example output indicates that ADE encryption is enabled on the OS volume:
 
 ```PowerShell
 Get-AzVmDiskEncryptionStatus -ResourceGroupName "ResourceGroupName" -VMName "VmName" 
@@ -56,7 +56,7 @@ For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Ge
 
 #### Azure CLI
 
-You can use the `az vm encryption show` command to check whether ADE is enabled on a VM's disks:
+You can use the `az vm encryption show` command to check whether ADE is enabled on VM disks:
 
 ```azurecli
 az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
@@ -64,15 +64,15 @@ az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disk
 
 For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
 
->[!NOTE]
->If ADE is not enabled on the disk, see the following article to attach a disk to a repair VM:
->[Troubleshoot a Linux VM by attaching the OS disk to a repair VM](troubleshoot-recovery-disks-portal-linux.md).
+> [!NOTE]
+> If ADE is not enabled on the disk, see the following article to learn how to attach a disk to a repair VM:
+> [Troubleshoot a Linux VM by attaching the OS disk to a repair VM](troubleshoot-recovery-disks-portal-linux.md).
 
 <a name="adeversion"></a>
 
 ### Determine whether the OS disk uses ADE version 0 (dual-pass encryption) or ADE version 1 (single-pass encryption)
 
-You can identify the ADE version in the Azure portal by opening the properties of the VM, and then clicking **Extensions** to open the **Extensions** blade. On the **Extensions** blade, view the version number of **AzureDiskEncryptionForLinux**.
+You can identify the ADE version in the Azure portal by opening the properties of the VM, and then selecting **Extensions** to open the **Extensions** blade. On the **Extensions** blade, view the version number of **AzureDiskEncryptionForLinux**.
 
 - If the version number is ``0.*``, the disk uses dual-pass encryption.
 - If the version number is `1.*` or a later version, the disk uses single-pass encryption.
@@ -83,19 +83,19 @@ If your disk uses ADE version 1 (dual-pass encryption), use the [Method 3](#meth
 
 If you don't know whether the OS disk is managed or unmanaged, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 
-If the OS disk is an unmanaged disk, follow the steps in the [Method 3](#method3) to unlock the disk.
+If the OS disk is an unmanaged disk, follow the steps in [Method 3](#method3) to unlock the disk.
 
 ### Select the method to unlock the encrypted disk
 
-You should choose one of three methods to unlock the encrypted disk:
+Choose one of the following methods to unlock the encrypted disk:
 
 - If the disk is managed and encrypted by using ADE version 1, and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use [Method 1: Unlock the encrypted disk automatically by using az vm repair command](#method1).
 - If your disk is both managed and encrypted by using ADE version 1, but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Method 2: Unlock the encrypted disk by the Key file in the BEK volume](#method2). Another reason to choose this method is if you lack the permissions to create a resource group in Azure.
-- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), follow the steps in the [Method 3](#method3) to unlock the disk.
+- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), follow the steps in [Method 3](#method3) to unlock the disk.
 
 ## <a name="method1"></a> Method 1: Unlock the encrypted disk automatically by using az vm repair command
 
-This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the OS disk of the failed Linux VM  to that repair VM, and then unlock the disk if it is encrypted. This method requires using a public IP address for the repair VM, and it unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped by using a key encryption key (KEK).  
+This method relies on [az vm repair](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands to automatically create a repair VM, attach the OS disk of the failed Linux VM to that repair VM, and then unlock the disk if it's encrypted. This method requires using a public IP address for the repair VM, and it unlocks the encrypted disk regardless of whether the ADE key is unwrapped or wrapped by using a key encryption key (KEK).  
 
 To repair the VM by using this automated method, follow the steps in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
@@ -107,7 +107,7 @@ To unlock and mount the encrypted disk manually, follow these steps:
 
 1. [Create a new repair VM, and attach the encrypted disk to this VM during VM creation](#create-a-repair-vm).
    
-   You must attach the encrypted disk the during the VM creation create the VM. This is because if you attach the encrypted disk at the time that you create the repair VM, the system detects that the attached disk is encrypted. Therefore, it fetches the ADE key from your Azure key vault, and then creates a new volume that's named "BEK VOLUME" to store the key file.
+   You must attach the encrypted disk when you create the repair VM. This is because the system detects that the attached disk is encrypted. Therefore, it fetches the ADE key from your Azure key vault, and then creates a new volume that's named "BEK VOLUME" to store the key file.
 
 2. [Log in to the repair VM, then unmount any mounted partitions on the encrypted disk](#unmount-any-mounted-partitions-on-the-encrypted-disk).
 3. [Identify the ADE key file in the BEK volume](#unmount-any-mounted-partitions-on-the-encrypted-disk).
@@ -127,7 +127,7 @@ To unlock and mount the encrypted disk manually, follow these steps:
 1. On the **Disks** page of the **Create a Virtual Machine** wizard, attach the new disk (that you just created from the snapshot) as a data disk. 
 
 > [!IMPORTANT]
-> Make sure that you add the new disk during the VM creation. Only, in this case, the encryption settings are detected. This enables a volume that contains the ADE key file to be added to the VM automatically.
+> Make sure that you add the new disk during VM creation. However, in this case, the encryption settings are detected. This enables a volume that contains the ADE key file to be added to the VM automatically.
 
 ### Unmount any mounted partitions on the encrypted disk
 
@@ -144,7 +144,7 @@ To unlock and mount the encrypted disk manually, follow these steps:
    - The disk will not list the root directory ("/") as a mountpoint for any of its partitions.
    - The disk will match the size that you noted when you created it from the snapshot.
 
-   In the following example, the output indicates that "sdd" is the encrypted disk. It's the only disk that has multiple partitions that does not list "/" as a mountpoint.
+   In the following example, the output indicates that "sdd" is the encrypted disk. This is the only disk that has multiple partitions and that does not list "/" as a mountpoint.
 
    ![The image about the first example](media/unlock-encrypted-linux-disk-offline-repair/dev-sample-1.png)
 
@@ -158,7 +158,7 @@ To unlock and mount the encrypted disk manually, follow these steps:
 
 ### Identify the ADE key file
 
-You need the key file and the header file to unlock the encrypted disk. The key file is stored in the BEK volume, and the header file is in the boot partition of the encrypted OS disk.
+You must have both the key file and the header file to unlock the encrypted disk. The key file is stored in the BEK volume, and the header file is in the boot partition of the encrypted OS disk.
 
 1. Determine which partition is the BEK volume.  
 
@@ -171,17 +171,17 @@ You need the key file and the header file to unlock the encrypted disk. The key 
    >sdb1  vfat   BEK VOLUME      04A2-FE67 
    ```
 
-   If no BEK volume is present, re-create the repair VM by having the encrypted disk attached. If the BEK volume still does not attach automatically, [try the method 3](#method3) to retrieve the BEK volume.
-1. Create a directory that's named "azure_bek_disk" under the "/mnt" folder:
+   If no BEK volume exists, re-create the repair VM by having the encrypted disk attached. If the BEK volume still does not attach automatically, [try Method 3](#method3) to retrieve the BEK volume.
 
+1. Create a directory that's named "azure_bek_disk" under the "/mnt" folder:
    ```bash
    mkdir /mnt/azure_bek_disk 
    ```
-1. Mount the BEK volume in the "/mnt/azure_bek_disk" directory. For example, if sdb1 is the BEK volume, you would type the following command: 
+1. Mount the BEK volume in the "/mnt/azure_bek_disk" directory. For example, if sdb1 is the BEK volume, type the following command: 
    ```bash
    mount /dev/sdb1 /mnt/azure_bek_disk 
    ```
-1. List the available devices again. You will see that the partition you determined to be the BEK volume is now mounted in "/mnt/azure_bek_disk".
+1. List the available devices again. You'll see that the partition you determined to be the BEK volume is now mounted in "/mnt/azure_bek_disk".
    ```bash
    lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT  
    ```
@@ -190,7 +190,6 @@ You need the key file and the header file to unlock the encrypted disk. The key 
    ls -l /mnt/azure_bek_disk
    ```
    You see the following files in the output. The ADE key file is "LinuxPassPhraseFileName".
-
    ```output
    >total 1 
 
@@ -200,7 +199,7 @@ You need the key file and the header file to unlock the encrypted disk. The key 
   
 ### Identify the header file
 
-The boot partition of the encrypted disk contains the header file. You use this file, together with the "LinuxPassPhraseFileName"  key file, to unlock the encrypted disk.
+The boot partition of the encrypted disk contains the header file. You will use this file, together with the "LinuxPassPhraseFileName" key file, to unlock the encrypted disk.
 
 1. Use the following command to show selected attributes of the available disks and partitions:
 
@@ -235,28 +234,29 @@ The boot partition of the encrypted disk contains the header file. You use this 
 
 ### <a name="unlock-by-files"></a> Use the ADE key file and the header file to unlock the disk
 
-1. Use the `cryptsetup luksOpen` command to unlock the root partition on the encrypted disk. For example, if the path to the root partition containing the encrypted OS is /dev/sda4, and you want to assign the unlocked partition the name "osencrypt," you would enter the following command:  
+1. Use the `cryptsetup luksOpen` command to unlock the root partition on the encrypted disk. For example, if the path to the root partition containing the encrypted OS is /dev/sda4, and you want to assign the name "osencrypt" to the unlocked partition, enter the following command:
 
    ```bash
    cryptsetup luksOpen --key-file /mnt/azure_bek_disk/LinuxPassPhraseFileName --header /investigateboot/luks/osluksheader /dev/sda4 osencrypt 
    ```
-1. Now that you have unlocked the disk, unmount the encrypted disk's boot partition from the /investigateboot/ directory. You will need to mount this partition to another directory later.
+1. Now that you have unlocked the disk, unmount the encrypted disk's boot partition from the /investigateboot/ directory. You will have to mount this partition to another directory later.
 
       ```bash
       umount /investigateboot/ 
       ```
-      The next step is to mount the partition you have just unlocked. The method you use to mount the partition depends on the device mapper framework (LVM or non-LVM) that used by the disk.
+      The next step is to mount the partition that you have just unlocked. The method that you use to mount the partition depends on the device mapper framework (LVM or non-LVM) that's used by the disk.
 
-1. List the device information with the file system type.
+1. List the device information together with the file system type.
       ```bash
       lsblk -o NAME,FSTYPE 
       ```
-   You will see the unlocked partition with the name you assigned it. In our example, that name is "osencrypt".
+   You will see the unlocked partition and the name that you assigned to it. In our example, that name is "osencrypt."
  
    - For the LVM partition such as "LVM_member", see [Mount the LVM partition](#lvm)[RAW or non-LVM](#non-lvm).
    - For the non-LVM partition, see [Mount the non-LVM partition](#non-lvm).
 
 ### <a name="lvm"></a> Mount the unlocked partition and enter the chroot environment (LVM only) 
+
 If the disks use the LVM device mapper framework, you need to take extra steps to mount the disk and enter the chroot environment. To use the chroot utility with the encrypted disk, the unlocked partition ("osencrypt") and its logical volumes must be recognized as the volume group named rootvg. However, by default, the repair VM’s OS partition and its logical volumes are already assigned to a volume group with the name rootvg. We first need to resolve this conflict.
 
 1. Use the `pvs` command to display the properties of the LVM physical volumes. You might see warning messages, as in the following example, that indicate that the unlocked partition ("/dev/mapper/osencrypt") and another device are using duplicate universally unique identifiers (UUIDs). Alternatively, you might see two partitions assigned to rootvg.
