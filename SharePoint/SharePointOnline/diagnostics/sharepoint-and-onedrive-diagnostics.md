@@ -60,7 +60,7 @@ There are currently diagnostics covering various areas within SharePoint and One
 | **OneDrive Storage limited to 5 TB**| Verifies that a user’s OneDrive site storage is eligible for increased storage capacity beyond 5 TB | [Run Tests: OneDrive Storage Limited to 5TB](https://aka.ms/PillarOneDriveStorageLimited)|[Check OneDrive site storage eligibility for storage beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility)
 | **SharePoint Tenant Storage**| Verifies any issues with your SharePoint Online tenant storage quota displayed in SharePoint admin center and shows how quota is allocated | [Run Tests: Tenant Storage](https://aka.ms/PillarTenantStorage) |
 | **Check User Access**| Validates that the internal/external user has access to the site and checks for known issues that can prevent access. | [Run Tests: Check User Access](https://aka.ms/PillarCheckUserAccess) |[Permission errors when accessing SharePoint or OneDrive](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business)
-| **OneDrive Site Access**| Validates that the user's OneDrive site exists and that there are no known issues accessing the site. | [Run Tests: OneDrive Site Access](https://aka.ms/PillarOneDriveAccess) 
+| **OneDrive Site Access**| Validates that the user's OneDrive site exists, and there are no known issues accessing the site. | [Run Tests: OneDrive Site Access](https://aka.ms/PillarOneDriveAccess) |
 
 > [!NOTE]
 > If a diagnostic detects an issue, and you've implemented a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved. 
