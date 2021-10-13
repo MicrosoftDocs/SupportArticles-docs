@@ -52,4 +52,4 @@ POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/
 
 
 ## Next steps
-If using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) API was not able to clear the VM failed state, try [redploying to a new host node](redeploy-to-new-node-linux.md).
+If reapply was not able to clear the VM failed state, try [redploying to a new host node](redeploy-to-new-node-linux.md).
