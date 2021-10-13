@@ -34,7 +34,7 @@ OWA displays the following error message:
 > Something went wrong</br>
 > Your request couldn’t be completed. HTTP Status code: 500
 
-:::image type="content" source="./media/owa-stops-working-after-update/exchangeserver-owa-somethingwentwrong.png" alt-text="Screenshot of the OWA error message.":::
+:::image type="content" source="./media/owa-stops-working-after-update/exchange-server-owa-something-went-wrong.png" alt-text="Screenshot of the OWA error message.":::
 
 ECP displays the following error message:
 
