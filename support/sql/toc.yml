@@ -491,7 +491,7 @@
   - name: SQL Base Diagnostics Collector
     href: general/sql-base-diagnostics-collector.md
   - name: SQL Server in Windows operating system
-    href: general/sql-server-windows-8-later-versions.md
+    href: general/use-sql-server-in-windows.md
   - name: Support policy for hardware virtualization product
     href: general/support-policy-hardware-virtualization-product.md
   - name: Support policy for SQL Server
