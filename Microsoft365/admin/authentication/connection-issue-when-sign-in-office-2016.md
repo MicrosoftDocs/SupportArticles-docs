@@ -48,6 +48,8 @@ You may experience one of the following symptoms after you update to Microsoft O
 
 When the overall network is working on your devices, Office applications may experience connection issues. You may see a message that resembles the following:
 
+> You'll need the internet for this.
+
 :::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message that you'll need the internet for this.":::
 
 To determine whether you're experiencing this kind of issue, follow these steps:
