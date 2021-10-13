@@ -88,7 +88,7 @@ For example, if the first update for Internet Explorer 9 has been installed, the
 
 You can open the **About Internet Explorer** dialog box by clicking **Help** > **About Internet Explorer**. Or, press Alt + X and then press A.
 
-:::image type="content" source="media/information-about-ie-version/about-internet-Explorer-windows-10.png" alt-text="Screenshot of the About Internet Explorer page in Windows 10 version 1903." border="false":::
+:::image type="content" source="media/information-about-ie-version/about-internet-explorer-windows-10.png" alt-text="Screenshot of the About Internet Explorer page in Windows 10 version 1903." border="false":::
 
 On Windows 10 version 1809 and later, the About Dialog has been updated to use a more modern dialog that reflects the latest installed Operating System updates to provide better accuracy. The updated dialog will reflect the same version information as seen in winver.exe. Update Version is no longer used.
 
