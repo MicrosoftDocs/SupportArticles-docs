@@ -75,6 +75,6 @@ There are some differences with contributor permissions when you set the default
 
 When a user is granted contributor rights, the permission level will automatically change to **Custom**. This includes **Free/Busy time**.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-custom.png" alt-text="Screenshot the permission level will automatically change to Custom after the user is granted contributor rights, which include Free/Busy time." border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-custom.png" alt-text="Screenshot shows the permission level will automatically change to Custom after the user is granted contributor rights, which include Free/Busy time." border="false":::
 
 This is expected behavior, because users who can create items in a calendar can also see the folder and view free/busy information.
