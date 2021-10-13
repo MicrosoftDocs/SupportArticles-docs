@@ -2,7 +2,7 @@
 title: How to capture TCP dump from a pod running on an AKS cluster
 description: Describes how to capture TCP traffic from a POD running on an AKS cluster
 ms.date: 07/08/2021
-ms.author: genlin
+ms.author: genli
 author: y2kdread
 ms.service: container-service
 ---
@@ -26,7 +26,7 @@ Run `az --version` to verify the version. To install the latest version of the A
     azure-vote-front-848767080-tf34m   1/1       Running   0          31m
     ```
 
-   If you know the namespace that the pod runs in, you also can run kubectl get pods -n <namespace> to get a list of pods that are running in that namespace.
+   If you know the namespace that the pod runs in, you also can run `kubectl get pods -n <namespace>` to get a list of pods that are running in that namespace.
 
 1. Connect to the pod that you identified in the previous step. The following commands use "azure-vote-front-848767080-tf34m" as the pod name. You must replace them with the correct pod name. If the pods is not in the default namespace, you must add "--namespace" parameter to the "kubectl exec" command.
 
