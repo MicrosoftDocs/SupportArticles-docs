@@ -21,25 +21,29 @@ Virtual Machine (VM) status in the Azure portal is marked as “Failed”.
 Last operation against the Virtual Machine (VM) failed after the input was accepted.
 ## Solution
 
-Using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) REST API, you can push the latest goal state of Virtual Machine (VM) to correct the inconsistent state. 
 
-```HTTP
+### [CLI](#tab/cli)
+Update the VM objects and properties by running the [az vm update](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest#az_vm_update) command.
+```cli
+az vm update -n <VMName> -g <ResourceGroupname>
+```
+
+### [PowerShell](#tab/powershell)
+Update the VM objects and properties by running the [update-AzVM](https://docs.microsoft.com/powershell/module/az.compute/update-azvm?view=azps-6.5.0) command.
+
+```powershell
+Update-AzVM  -ResourceGroupName <ResourceGroupName> -VM <VMName>
+```
+
+### [REST](#tab/rest)
+
+Update the VM objects and properties by running the [reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) command.
+ 
+```rest
 POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/reapply?api-version=2021-07-01
 ```
+---
 
-### Example
-
-```HTTPS
-POST https://management.azure.com/subscriptions/1234567-1234-1234-1234-1232456789abc/resourceGroups/ResourceGroup/providers/Microsoft.Compute/virtualMachines/VMName/reapply?api-version=2021-07-01
-```
-
-### Responses
-
-| Name | Type | Description | 
-|---|---|---|
-| 200 OK | | POST was successful. Recheck the status in the Azure portal to see if VM is no longer in failed state. |
-| 202 Accepted | POST was accepted, reapply should be in progress. | 
-| Other Status Codes | [CloudError](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply#clouderror) | POST operation failed. See response describing why the operation failed. | 
 
 ## Next steps
 If using the [Reapply](https://docs.microsoft.com/rest/api/compute/virtual-machines/reapply) API was not able to clear the VM failed state, try [redploying to a new host node](redeploy-to-new-node-linux.md).
