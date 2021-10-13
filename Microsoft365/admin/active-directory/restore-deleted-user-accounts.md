@@ -129,7 +129,7 @@ To recover an item that was deleted from the on-premises Active Directory schema
     1. In the  **New password** and **Confirm password** boxes, enter a new password, and then select **OK**.
     1. Right-click the user, select  **Enable Account**, and then select **OK**.
 
-       :::image type="content" source="./media/restore-deleted-user-accounts/enable-account.png" alt-text="Screenshot of enable account in Active Directory. The entry titled Enable Account." border="true":::
+       :::image type="content" source="./media/restore-deleted-user-accounts/enable-account.png" alt-text="Screenshot of enabling account in Active Directory. The entry titled Enable Account." border="true":::
 
         You receive the following error message (expected):
 
