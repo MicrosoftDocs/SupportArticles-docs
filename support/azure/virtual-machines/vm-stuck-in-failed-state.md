@@ -21,6 +21,12 @@ Virtual Machine (VM) status in the Azure portal is marked as “Failed”.
 Last operation against the Virtual Machine (VM) failed after the input was accepted.
 ## Solution
 
+### [Portal](#tab/portal)
+Update the VM objects and properties by running the reapply command in the Azure portal
+1. Navigate to the VM that is stuck in the failed state.
+1. Under **Support + troubleshooting**, select **Redeploy + reapply**.
+1. Select the **Reapply** option.
+:::image type="content" source="./media/troubleshoot-vm-reapply/vm-reapply-portal.png" alt-text="Screenshot of the region options with the difference in pricing and eviction rates as a table.":::
 
 ### [CLI](#tab/cli)
 Update the VM objects and properties by running the [az vm update](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest#az_vm_update) command.
