@@ -198,7 +198,10 @@ To restore users who are in this state, you can correct the conflict by using th
 
 The Office 365 portal shows the equivalent error messages in the form of the Windows PowerShell "error states" that were mentioned earlier. For example, you receive the following message:
 
-:::image type="content" source="./media/restore-deleted-user-accounts/user-name-conflict.png" alt-text="Screenshot of user name conflict page. The selected radio button is Edit user name of the user you want to restore" border="true":::
+> User name conflict  
+The user you want to restore has the same user name.
+
+:::image type="content" source="./media/restore-deleted-user-accounts/user-name-conflict.png" alt-text="Screenshot that shows the user name conflict error." border="true":::
 
 To restore users who are in this state, complete the information that is requested in the form.
 
