@@ -41,7 +41,7 @@ Open a Command Prompt (cmd.exe) console, and then run `powershell.exe`. This ope
 
 ### Workaround 2: Change the font in the PowerShell console
 
-1. Start PowerShell in the normal way.
+1. Start PowerShell in the normal way (either from **Start Menu** -> **PowerShell** (OR) from Run App (**Windows Key** + **R** -> Type **PowerShell**)).
 2. Right-click the top bar of the PowerShell console, select **Properties**, and then select the **Font** tab.
 3. Under **Font**, select **MS Gothic**, and then select **OK**.
 
