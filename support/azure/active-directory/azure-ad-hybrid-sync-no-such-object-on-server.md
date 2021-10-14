@@ -75,7 +75,7 @@ The wizard trace shows the following information:
 Once you verify and confirm that Managed Service account container is present at the domain, a client Lightweight Directory Access Protocol (LDAP) trace shows the following information:
 
 ```output
-9638 [2]0144.1380::04/14/21-14:17:20.2063638 [Microsoft_Windows_LDAP_Client/Debug16 ] Message=ldap_search called for connection 0x4392e0d8: DN is <WKGUID=1eb93889e40c45df9f0c64d23bbb6237,DC=Child,DC=*****,DC=com>. SearchScope is 0x0. AttributesOnly is 0x0. 
+9638 [2]0144.1380::04/14/21-14:17:20.2063638 [Microsoft_Windows_LDAP_Client/Debug16 ] Message=ldap_search called for connection 0x4392e0d8: DN is <WKGUID=1eb93889e40c45df9f0c64d23bbb6237,DC=*****,DC=com>. SearchScope is 0x0. AttributesOnly is 0x0. 
 
 9679 [1]0144.1380::04/14/21-14:17:20.2075574 [Microsoft_Windows_LDAP_Client/Debug16 ] Message=4e 61 6d 65 45 72 72 3a 20 44 53 49 44 2d 30 33  NameErr:.DSID-03
 9680 [1]0144.1380::04/14/21-14:17:20.2076087 [Microsoft_Windows_LDAP_Client/Debug16 ] Message=31 30 30 32 33 38 2c 20 70 72 6f 62 6c 65 6d 20  100238,.problem.
@@ -95,7 +95,7 @@ $ListOWKO.otherwellKnownObjects
 The output of the previous command displays the following results:
 
 ```output
-B:32:1EB93889E40C45DF9F0C64D23BBB6237:CN=Managed Service Accounts\0ADEL:8b637607-65e8-4a80-b194-f738b26b9414,CN=Deleted Objects,DC=child,DC=< name of DC >,DC=com
+B:32:1EB93889E40C45DF9F0C64D23BBB6237:CN=Managed Service Accounts\0ADEL:8b637607-65e8-4a80-b194-f738b26b9414,CN=Deleted Objects,DC=< name of DC >,DC=com
 ```
 
 :::image type="content" source="media/azure-ad-hybrid-sync-no-such-object-on-server/4-powershell-output-for-attribute.png" alt-text="Screenshot of the output for the Active Directory command. The output shows the missing attribute within the other well-known objects." border="true" lightbox="media/azure-ad-hybrid-sync-no-such-object-on-server/4-powershell-output-for-attribute.png":::
