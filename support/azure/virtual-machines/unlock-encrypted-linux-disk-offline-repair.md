@@ -29,10 +29,10 @@ If ADE is enabled on the OS disk, you might receive the following error messages
 
 Before you unlock the encrypted OS disk for offline repair, complete the following tasks:
 
-1. [Confirm that ADE is enabled on the disk](#confirm-that-ade-is-enabled-on-the-disk).
+1. [Confirm that ADE is enabled on the disk](#verify-that-ade-is-enabled-on-the-disk).
 2. [Determine whether the OS disk uses ADE version 0 (dual-pass encryption) or ADE version 1 (single-pass encryption)](#adeversion).
 3. [Determine whether the OS disk is managed or unmanaged](#determine-whether-the-os-disk-is-managed-or-unmanaged).
-1. [Select the method to unlock the encrypted disk](#select-the-method-to-unlock-the-encrypted-disk).
+4. [Select the method to unlock the encrypted disk](#select-the-method-to-unlock-the-encrypted-disk).
 
 ### Verify that ADE is enabled on the disk
 
