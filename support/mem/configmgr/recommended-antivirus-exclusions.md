@@ -39,7 +39,7 @@ Possible symptoms include:
 
 ## Default installation folders
 
-Use the installation folder paths below as variables for the recommended exclusions within the article.
+Use the following installation folder paths as variables for the recommended exclusions that are provided in this article.
 
 > [!NOTE]
 > The following paths are the default installation paths and may vary depending on the environment. We recommend that you review the environment and configuration to ensure you have the correct paths in place.
