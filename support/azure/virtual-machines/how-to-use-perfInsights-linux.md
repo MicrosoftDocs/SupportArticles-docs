@@ -196,7 +196,7 @@ The following cateogries of rules are currently supported:
 >[`*`] Please refer to [Known issues](#known-issues) section
 
 >[!Note]
->[`*`] The HPC scenario relies on the [HPCDiag](https://aka.ms/hpcdiag) tool, so check its support matrix for supported VM sizes and OSes. In particular, note that NDv4 size VMs are not yet supported, and reports for those VMs may show extraneous findings.
+>[`*`] The HPC scenario relies on the [HPCDiag](https://aka.ms/hpcdiag) tool, so check its support matrix for supported VM sizes and OSes. In particular, NDv4 size VMs aren't yet supported and reports for those VMs may show extraneous findings.
 
 ### Known issues
 
