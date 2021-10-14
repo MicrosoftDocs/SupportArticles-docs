@@ -196,7 +196,7 @@ The following cateogries of rules are currently supported:
 >[`*`] Please refer to [Known issues](#known-issues) section
 
 >[!Note]
->[`*`] The HPC scenario relies on the [HPCDiag](https://aka.ms/hpcdiag) tool, so check its support matrix for supported VM sizes and OSes.
+>[`*`] The HPC scenario relies on the [HPCDiag](https://aka.ms/hpcdiag) tool, so check its support matrix for supported VM sizes and OSes. In particular, NDv4 size VMs aren't yet supported and reports for those VMs may show extraneous findings.
 
 ### Known issues
 
@@ -297,7 +297,7 @@ Review the recommendations and links for all high and medium findings. Learn abo
 
 ### GPU tab
 
-**GPU** tab, only applicable for the HPC scenario, provides information about findings that will be helpful in troubleshooting GPU-related issues.
+**GPU** tab provides information about findings that will be helpful in troubleshooting GPU-related issues.
 
 ![Screenshot of PerfInsights Report GPU tab](media/how-to-use-perfinsights-linux/perfinsights-linux-gpu-tab.png)
 
