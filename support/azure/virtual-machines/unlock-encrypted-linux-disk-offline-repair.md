@@ -19,7 +19,7 @@ This article describes how to unlock an Azure Disk Encryption (ADE)-enabled OS d
 
 ## Symptoms
 
-If ADE is enabled on the OS disk, you might receive following error messages after you try to mount the disk on a repair VM:  
+If ADE is enabled on the OS disk, you might receive the following error messages after you try to mount the disk on a repair VM:  
 
    > mount: wrong fs type, bad option, bad superblock on /dev/sda2, missing codepage or helper program, or other error
   
@@ -115,7 +115,7 @@ To unlock and mount the encrypted disk manually, follow these steps:
 4. [Unlock the encrypted disk by using the ADE key file and the header file](#unlock-by-files).
 5. Mount the partition: [LVM](#lvm), [RAW or non-LVM](#non-lvm).
 
-### Create a Repair VM
+### Create a repair VM
 
 1. [Take a snapshot of the encrypted OS disk](troubleshoot-recovery-disks-portal-linux.md#take-a-snapshot-of-the-os-disk).
 1. [Create a disk from the snapshot](troubleshoot-recovery-disks-portal-linux.md#create-a-disk-from-the-snapshot). For the new disk, choose the same location and availability zone as that of the problem VM that you want to repair. 
@@ -127,7 +127,7 @@ To unlock and mount the encrypted disk manually, follow these steps:
 1. On the **Disks** page of the **Create a Virtual Machine** wizard, attach the new disk (that you just created from the snapshot) as a data disk. 
 
 > [!IMPORTANT]
-> Make sure that you add the new disk during VM creation. However, in this case, the encryption settings are detected. This enables a volume that contains the ADE key file to be added to the VM automatically.
+> Because the encryption settings are detected only during the VM creation, make sure that you attach the disk when you create the VM. This enables a volume that contains the ADE key file to be added to the VM automatically.
 
 ### Unmount any mounted partitions on the encrypted disk
 
@@ -160,12 +160,12 @@ To unlock and mount the encrypted disk manually, follow these steps:
 
 You must have both the key file and the header file to unlock the encrypted disk. The key file is stored in the BEK volume, and the header file is in the boot partition of the encrypted OS disk.
 
-1. Determine which partition is the BEK volume.  
+1. Determine which partition is the BEK volume:
 
    ```bash
    lsblk -fs | grep -i bek 
    ```
-   The following example output indicates that sdb1 is the BEK volume: 
+   The following example output indicates that sdb1 is the BEK volume:
 
    ```output
    >sdb1  vfat   BEK VOLUME      04A2-FE67 
@@ -177,19 +177,20 @@ You must have both the key file and the header file to unlock the encrypted disk
    ```bash
    mkdir /mnt/azure_bek_disk 
    ```
-1. Mount the BEK volume in the "/mnt/azure_bek_disk" directory. For example, if sdb1 is the BEK volume, type the following command: 
+1. Mount the BEK volume in the "/mnt/azure_bek_disk" directory. For example, if sdb1 is the BEK volume, enter the following command: 
    ```bash
    mount /dev/sdb1 /mnt/azure_bek_disk 
    ```
-1. List the available devices again. You'll see that the partition you determined to be the BEK volume is now mounted in "/mnt/azure_bek_disk".
+1. List the available devices again:
    ```bash
    lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT  
    ```
-1. View the contents in the "/mnt/azure_bek_disk/" directory.
+   **Note:** You'll see that the partition that you determined to be the BEK volume is now mounted in "/mnt/azure_bek_disk."
+1. View the contents in the "/mnt/azure_bek_disk/" directory:
    ```bash
    ls -l /mnt/azure_bek_disk
    ```
-   You see the following files in the output. The ADE key file is "LinuxPassPhraseFileName".
+   You should see the following files in the output (the ADE key file is "LinuxPassPhraseFileName"):
    ```output
    >total 1 
 
@@ -199,7 +200,7 @@ You must have both the key file and the header file to unlock the encrypted disk
   
 ### Identify the header file
 
-The boot partition of the encrypted disk contains the header file. You will use this file, together with the "LinuxPassPhraseFileName" key file, to unlock the encrypted disk.
+The boot partition of the encrypted disk contains the header file. You'll use this file, together with the "LinuxPassPhraseFileName" key file, to unlock the encrypted disk.
 
 1. Use the following command to show selected attributes of the available disks and partitions:
 
@@ -207,7 +208,7 @@ The boot partition of the encrypted disk contains the header file. You will use 
    lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT
    ```
 1. On the encrypted disk, identify the OS partition (root partition). This is the largest partition on the encrypted disk. In the previous example output, the OS partition is "sda4." This partition must be specified when you run the unlock command.
-3. In the root directory ("/") of the file structure, create a directory to which to mount the root partition of the encrypted disk. You will use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, give it the name "investigateroot".
+3. In the root directory ("/") of the file structure, create a directory to which to mount the root partition of the encrypted disk. You'll use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, give it the name "investigateroot".
 
    ```bash
    mkdir /{investigateboot,investigateroot}
@@ -234,40 +235,44 @@ The boot partition of the encrypted disk contains the header file. You will use 
 
 ### <a name="unlock-by-files"></a> Use the ADE key file and the header file to unlock the disk
 
-1. Use the `cryptsetup luksOpen` command to unlock the root partition on the encrypted disk. For example, if the path to the root partition containing the encrypted OS is /dev/sda4, and you want to assign the name "osencrypt" to the unlocked partition, enter the following command:
+1. Use the `cryptsetup luksOpen` command to unlock the root partition on the encrypted disk. For example, if the path to the root partition that contains the encrypted OS is /dev/sda4, and you want to assign the name "osencrypt" to the unlocked partition, run the following command:
 
    ```bash
    cryptsetup luksOpen --key-file /mnt/azure_bek_disk/LinuxPassPhraseFileName --header /investigateboot/luks/osluksheader /dev/sda4 osencrypt 
    ```
-1. Now that you have unlocked the disk, unmount the encrypted disk's boot partition from the /investigateboot/ directory. You will have to mount this partition to another directory later.
+1. Now that you have unlocked the disk, unmount the encrypted disk's boot partition from the /investigateboot/ directory: 
 
       ```bash
       umount /investigateboot/ 
       ```
-      The next step is to mount the partition that you have just unlocked. The method that you use to mount the partition depends on the device mapper framework (LVM or non-LVM) that's used by the disk.
+   **Note:** You'll have to mount this partition to another directory later.
 
-1. List the device information together with the file system type.
+   The next step is to mount the partition that you have just unlocked. The method that you use to mount the partition depends on the device mapper framework (LVM or non-LVM) that's used by the disk.
+
+1. List the device information together with the file system type:
       ```bash
       lsblk -o NAME,FSTYPE 
       ```
-   You will see the unlocked partition and the name that you assigned to it. In our example, that name is "osencrypt."
+   You'll see the unlocked partition and the name that you assigned to it (in our example, that name is "osencrypt"):
  
    - For the LVM partition such as "LVM_member", see [Mount the LVM partition](#lvm)[RAW or non-LVM](#non-lvm).
    - For the non-LVM partition, see [Mount the non-LVM partition](#non-lvm).
 
 ### <a name="lvm"></a> Mount the unlocked partition and enter the chroot environment (LVM only) 
 
-If the disks use the LVM device mapper framework, you need to take extra steps to mount the disk and enter the chroot environment. To use the chroot utility with the encrypted disk, the unlocked partition ("osencrypt") and its logical volumes must be recognized as the volume group named rootvg. However, by default, the repair VM’s OS partition and its logical volumes are already assigned to a volume group with the name rootvg. We first need to resolve this conflict.
+If the disks use the LVM device mapper framework, you have to take extra steps to mount the disk and enter the chroot environment. To use the chroot tool together with the encrypted disk, the unlocked partition ("osencrypt") and its logical volumes must be recognized as the volume group that's named rootvg. However, by default, the repair VM’s OS partition and its logical volumes are already assigned to a volume group that has the name rootvg. We must resolve this conflict before we can continue.
 
 1. Use the `pvs` command to display the properties of the LVM physical volumes. You might see warning messages, as in the following example, that indicate that the unlocked partition ("/dev/mapper/osencrypt") and another device are using duplicate universally unique identifiers (UUIDs). Alternatively, you might see two partitions assigned to rootvg.
 
     >[!NOTE]
-    > You want only the unlocked partition ("osencrypt") to be assigned to the rootvg volume group so that you can access its logical volumes through the chroot utility. To fix this problem, you will temporarily import the partition into a different volume group and activate that volume group. Next, you will rename the current rootvg volume group. Only later, after you enter the chroot environment, will you rename the encrypted disk’s volume group as rootvg.
+    > You want only the unlocked partition ("osencrypt") to be assigned to the rootvg volume group so that you can access its logical volumes through the chroot utility. To fix this problem, you'll temporarily import the partition into a different volume group, and activate that volume group. Next, you'll rename the current rootvg volume group. Only after you enter the chroot environment will you rename the encrypted disk’s volume group as "rootvg."
+
+### Assigning the unlocked partition (example)
 
 1. Import the newly unlocked partition into a new volume group. In this example, we are temporarily naming the new volume group "rescuemevg".
 Import the newly unlocked partition into a new volume group. In this example, we are temporarily naming the new volume group "rescuemevg".
 
-1. Activate the new volume group.
+1. Activate the new volume group:
 
    ```bash
    vgimportclone -n rescuemevg /dev/mapper/osencrypt
@@ -279,29 +284,29 @@ Import the newly unlocked partition into a new volume group. In this example, we
    vgrename rootvg oldvg 
    ```
 
-1. Run the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to review the available devices. You will now see both volume groups listed by the names you have assigned them.
+1. Run `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to review the available devices. You should now see both volume groups listed by the names that you assigned to them.
 
-6. Mount the rescuemevg/rootlv logical volume to the /investigateroot/ directory without using the duplicate UUIDs.
+6. Mount the rescuemevg/rootlv logical volume to the /investigateroot/ directory without using the duplicate UUIDs:
 
    ```bash
    umount /investigateboot
    mount -o nouuid /dev/rescuemevg/rootlv /investigateroot/ 
    ```
 
-   Now the root partition of the failed VM is unlocked and mounted, you can access the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline). 
+   Now, the root partition of the failed VM is unlocked and mounted, and you should be able to access the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline). 
 
-   However, if you want to use the chroot utility for troubleshooting, continue with the following steps.
+   However, if you want to use the chroot utility for troubleshooting, continue by using the following steps.
 
-7. Mount the encrypted disk’s boot partition to the directory /investigateroot/boot/ without using the duplicate UUIDs. (Remember that the encrypted disk’s boot partition is the second largest that is assigned no partition label.) In our current example, the encrypted disk’s boot partition is sda2.
+7. Mount the encrypted disk’s boot partition to the directory /investigateroot/boot/ without using the duplicate UUIDs. (Remember that the encrypted disk’s boot partition is the second largest that's assigned no partition label.) In our current example, the encrypted disk’s boot partition is sda2.
 
    ```bash
    mount -o nouuid /dev/sda2 /investigateroot/boot
    ```
-1. Mount the encrypted disk’s EFI system partition to the directory /investigateroot/boot/efi. You can identify this partition by its label. In our current example, the EFI system partition is sda1.
+1. Mount the encrypted disk’s EFI system partition to the /investigateroot/boot/efi directory. You can identify this partition by its label. In our current example, the EFI system partition is sda1.
    ```bash
    mount /dev/sda1 /investigateroot/boot/efi
    ```
-1. Mount the remaining unmounted logical volumes in the encrypted disk’s volume group into subdirectories of "/investigateroot/".
+1. Mount the remaining unmounted logical volumes in the encrypted disk’s volume group to subdirectories of "/investigateroot/":
    ```bash
    mount -o nouuid /dev/mapper/rescuemevg-varlv /investigateroot/var
    mount -o nouuid /dev/mapper/rescuemevg-homelv /investigateroot/home
@@ -309,7 +314,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
    mount -o nouuid /dev/mapper/rescuemevg-tmplv /investigateroot/tmp
    mount -o nouuid /dev/mapper/rescuemevg-optlv /investigateroot/opt
    ```
-1. Change the active directory to the mounted root partition on the encrypted disk.
+1. Change the active directory to the mounted root partition on the encrypted disk:
       ```bash
       cd /investigateroot
       ```
@@ -326,7 +331,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
       ```bash
       chroot /investigateroot/
       ```
-13. Rename the rescuemevg to rootvg to avoid conflicts or possible issues with grub and initramfs. Keep the same naming convention when regenerating initramfs. Due to the vg name changes, we will perform on the rescue VM. It will no longer be useful if you restart it. the rescue VM should be considered temporary VM.
+13. Rename the rescuemevg volume group to "rootvg" to avoid conflicts or possible issues with grub and initramfs. Keep the same naming convention when you regenerate initramfs. Because of the vg name changes, work on the rescue VM. It will no longer be useful if you restart it. The rescue VM should be considered to be a temporary VM.
       ```bash
       vgrename rescuemevg rootvg
       ```
@@ -336,23 +341,23 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
 ### <a name="non-lvm"></a> Mount the unlocked disk, and enter the chroot environment (RAW/non-LVM)
 
-1. In the root directory ("/") of the file structure, create a directory into which to mount the root partition of the encrypted disk. You will use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, name it to "investigateroot".
+1. In the root directory ("/") of the file structure, create a directory into which to mount the root partition of the encrypted disk. You'll use this directory later, after the disk is unlocked. To distinguish it from the active OS partition of the repair VM, name it to "investigateroot".
    ```bash
    mkdir /{investigateboot,investigateroot}
    ```
-1. Mount the newly unlocked partition ("osencrypt") to the /investigateroot/ directory.
+1. Mount the newly unlocked partition ("osencrypt") to the /investigateroot/ directory:
 
    ```bash
    mount /dev/mapper/osencrypt /investigateroot/ 
    ```
 
-   If mounting the partition fails with an "wrong fs type, bad option, bad superblock" error, try again by using the mount -o nouuid command: 
+   If mounting the partition fails and returns a "wrong fs type, bad option, bad superblock" error message, try again by using the mount `-o nouuid` command: 
 
    ```bash
    mount -o nouuid /dev/mapper/osencrypt /investigateroot/ 
    ```
 
-1. Attempt to display the contents of the /investigateroot/ directory to verify that the mounted partition is now unlocked. 
+1. Try to display the contents of the /investigateroot/ directory to verify that the mounted partition is now unlocked:
 
    ```bash
    ls /investigateroot/ 
@@ -360,9 +365,9 @@ Import the newly unlocked partition into a new volume group. In this example, we
 
 1.  Now the root partition of the failed VM is unlocked and mounted, you can access the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline).
 
-      However, if you want to use the chroot utility for troubleshooting, continue with the following steps.
+      However, if you want to use the chroot utility for troubleshooting, go to the next step.
    
-1. Use the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to review the available devices. Identify the boot partition on the encrypted disk as the second largest partition that is assigned no label. 
+1. Use the command `lsblk -o NAME,SIZE,LABEL,PARTLABEL,MOUNTPOINT` to review the available devices. Identify the boot partition on the encrypted disk as the second largest partition that's assigned no label. 
 
 1. Mount the boot partition on the encrypted disk to the "/investigateroot/boot/" directory, as in the following example:
 
@@ -370,7 +375,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
    mount /dev/sdc2 /investigateroot/boot/ 
    ```
 
-1. Change the active directory to the mounted root partition on the encrypted disk.
+1. Change the active directory to the mounted root partition on the encrypted disk:
 
    ```bash
    cd /investigateroot 
@@ -395,16 +400,16 @@ Import the newly unlocked partition into a new volume group. In this example, we
    ```bash
    chroot /investigateroot/ 
    ```
-1. Troubleshoot issues in the chroot environment. For example, you can read logs or run a script.  For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager.md#perform-fixes).
+1. Troubleshoot issues in the chroot environment. You can read logs or run a script. For more information, see [Perform fixes in the chroot environment](chroot-logical-volume-manager.md#perform-fixes).
 1. [Exit chroot and swap the OS disk](chroot-logical-volume-manager.md#exit-chroot-and-swap-the-os-disk).
 
 ## <a name="method3"></a>Method 3: Re-encrypt the disk to retrieve the key file, and unlock the encrypted disk
 
 1. Create the repair VM, and attach a copy of the locked disk to a repair VM:
 
-     - For managed disk, see [Troubleshoot a Linux VM by attaching the managed OS disk to a repair VM ](troubleshoot-recovery-disks-portal-linux.md).
-     - For unmanaged disk, use the Storage Explorer to create a copy of the affected VM's OS Disk. For more information, see [Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md).
-1. After you attach the encrypted disk as the data disk to the repair VM, use the Key Vault and Key Encrypted key (KEK) that used for the original VM to re-encrypt this data disk. This process will automatically generate and mount a BEK volume with BKE key file in the repair VM. You must not use the **EncryptFormatAll** option, otherwise the ADE extension could encrypt the boot sector on the data disk.
+     - For a managed disk, see [Troubleshoot a Linux VM by attaching the managed OS disk to a repair VM ](troubleshoot-recovery-disks-portal-linux.md).
+     - For an unmanaged disk, use the Storage Explorer to create a copy of the affected VM's OS disk. For more information, see [Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md).
+1. After you attach the encrypted disk as the data disk to the repair VM, use the Key Vault and Key Encrypted key (KEK) that used for the original VM to re-encrypt this data disk. This process will automatically generate and mount a BEK volume by using a BKE key file in the repair VM. You must not use the **EncryptFormatAll** option because the ADE extension could encrypt the boot sector on the data disk.
 
     - If the original VM is encrypted by **wrapped BEK**, run the following command.
        ```azurecli
@@ -416,23 +421,23 @@ Import the newly unlocked partition into a new volume group. In this example, we
        ```azurecli
       az vm encryption enable -g "resource group" --name "VMName" --disk-encryption-keyvault "keyvault"  --volume-type "data"
       ```
-        To identify the values for **disk-encryption-keyvault** and **key-encryption-key**, run the following command:
+        To determine the values for **disk-encryption-keyvault** and **key-encryption-key**, run the following command:
 
         ```azurecli
         az vm encryption show --name "OriginalVmName" --resource-group "ResourceGroupName"
         ```
-        Check the following table, and find the values in the output . If the **keyEncryptionKey** is blank, your VM is encrypted by **BEK**.
+        In the following table, find the values in the output. If the **keyEncryptionKey** value is blank, your VM is encrypted by **BEK**.
     
         |  Parameter |  Value in the output | example  |
         |---|---|---|
         | disk-encryption-keyvault  |  diskEncryptionKey:id | /subscriptions/deb73ff9-0000-0000-0000-0000c7a96d37/resourceGroups/Thomas/providers/Microsoft.KeyVault/vaults/ContosoKeyvault |
         | key-encryption-key  | keyEncryptionKey:KeyURI   | https://ContosoKeyvault.vault.azure.net/keys/mykey/00000000987145a3b79b0ed415fa0000|
     
-1. Run the following command to check if a new disk is attached. If yes, proceed to [Identify the ADE key file in the BEK volume](#identify-the-header-file) and from that point,  continue following the steps to unlock the disk.
+1. Run the following command to check whether a new disk is attached: 
      ```bash
      lsblk -f
      ```
-    
+    If a new disk is attached, go to [Identify the ADE key file in the BEK volume](#identify-the-header-file), and then continue following the provided steps to unlock the disk.
 
 ## Next steps
 If you're having problems connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection.md).
