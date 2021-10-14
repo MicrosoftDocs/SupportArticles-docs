@@ -76,9 +76,11 @@
       href: reset-network-interface-azure-linux-vm.md
     - name: Troubleshoot fstab errors 
       href: linux-virtual-machine-cannot-start-fstab-errors.md
+    - name: Troubleshoot permissions are too open error
+      href: troubleshoot-ssh-permissions-too-open.md
   - name: Windows
     items:
-    - name: Azure virtual machine error '“You must change your password before logging on the first time”'
+    - name: Cannot RDP becasue "You must change your password before logging on the first time" error
       href: must-change-password.md
     - name: Cannot RDP into Azure VM because of authentication errors
       href: cannot-connect-rdp-azure-vm.md
@@ -434,6 +436,8 @@
         href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
       - name: Azure Linux Auto Repair
         href: repair-linux-vm-using-ALAR.md
+      - name: Unlock the encrypted disk for offline repair
+        href: unlock-encrypted-linux-disk-offline-repair.md
     - name: Repair VM with Nested Hyper-V
       href: troubleshoot-vm-by-use-nested-virtualization.md
 

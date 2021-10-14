@@ -247,6 +247,8 @@
         href: availability-groups/error-9002-transaction-log-large.md
       - name: AlwaysOn DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+      - name: Issues after changing the hostname 
+        href: availability-groups/error-41041-change-hostname.md
       - name: Listener connection times out in multi-subnet
         href: availability-groups/listener-connection-times-out.md
       - name: Query performance degradation on secondary replicas
@@ -343,7 +345,7 @@
     items:
     - name: Blocked column is populated for latch waits
       href: performance/blocked-column-populated-latch-waits.md
-    - name: Buffer pool scan runs slowly on large memory machines
+    - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
@@ -491,7 +493,7 @@
   - name: SQL Base Diagnostics Collector
     href: general/sql-base-diagnostics-collector.md
   - name: SQL Server in Windows operating system
-    href: general/sql-server-windows-8-later-versions.md
+    href: general/use-sql-server-in-windows.md
   - name: Support policy for hardware virtualization product
     href: general/support-policy-hardware-virtualization-product.md
   - name: Support policy for SQL Server
