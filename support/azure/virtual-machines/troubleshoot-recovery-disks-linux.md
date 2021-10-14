@@ -13,7 +13,7 @@ ms.devlang: azurecli
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 09/01/2021
+ms.date: 10/11/2021
 ms.author: genli
 
 ---
