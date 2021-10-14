@@ -10,6 +10,6 @@ metadata:
 productDirectory:
   items:
   - title: Overview of the Visual Studio Code Features
-    url: padmatest\Overviewfeatures.md
+    url: ../padmatest/Overviewfeatures.md
   - title: Options on the Blue Ribbon
-    url: padmatest\Blueribbonoverview.md
+    url: ../padmatest/Blueribbonoverview.md
