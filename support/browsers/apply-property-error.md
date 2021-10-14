@@ -38,18 +38,18 @@ Depending on the following setting(s) modified, the text of the **Apply Property
 **For the Description setting**  
 The text of the error message is:
 
->An error occurred when writing the property 'Description' to the file 'support.microsoft.com'.  
->Support.microsoft.com  
->[https://support.microsoft.com/](https://support.microsoft.com/) **?...**
+> An error occurred when writing the property 'Description' to the file 'support.microsoft.com'.  
+> Support.microsoft.com  
+> [https://support.microsoft.com/](https://support.microsoft.com/) **?...**
 
 :::image type="content" source="media/apply-property-error/error-writing-description.png" alt-text="Screenshot of the apply property error when changing Description property." border="false":::
 
 **For the Notes setting**  
 The text of the error message is:
 
->An error occurred when writing the property 'Notes' to the file 'support.microsoft.com'.  
->Support.microsoft.com  
->[https://support.microsoft.com/](https://support.microsoft.com/) **?...**
+> An error occurred when writing the property 'Notes' to the file 'support.microsoft.com'.  
+> Support.microsoft.com  
+> [https://support.microsoft.com/](https://support.microsoft.com/) **?...**
 
 :::image type="content" source="media/apply-property-error/error-writing-notes.png" alt-text="Screenshot of the apply property error when changing Notes property." border="false":::
 
