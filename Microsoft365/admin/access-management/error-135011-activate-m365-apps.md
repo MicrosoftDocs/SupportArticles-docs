@@ -36,7 +36,7 @@ When you try to sign in to or activate Microsoft 365 apps, you receive the follo
 >
 > `https://wmv.microsoft.com/wamerrors`
 
-:::image type="content" source="media/error-135011-activate-m365-apps/error-135011-activate-m365-apps.png" alt-text="Something went wrong error. ":::
+:::image type="content" source="media/error-135011-activate-m365-apps/error-135011-message.png" alt-text="Screenshot of error 135011.":::
 
 ## Cause
 
