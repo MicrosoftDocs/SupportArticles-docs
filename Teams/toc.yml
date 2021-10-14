@@ -139,6 +139,8 @@
       href: ./meetings/issues-with-webinars.md
   - name: Mobile
     items:
+    - name: Can't make Teams calls with Apple CarPlay
+      href: ./mobile/cannot-make-teams-calls-carplay.md
     - name: Can't see auto-favorited channels in mobile app
       href: ./known-issues/cant-see-auto-favorited-channels-in-mobile.md
     - name: A website with Conditional Access doesn't display when viewed on the Website tab 
