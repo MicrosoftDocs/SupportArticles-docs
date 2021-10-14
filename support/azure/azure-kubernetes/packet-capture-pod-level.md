@@ -33,7 +33,7 @@ Run `az --version` to verify the version. To install the latest version of the A
    ```azurecli
    kubectl exec azure-vote-front-848767080-tf34m -it -- /bin/bash
    ```
-1. After you connect to the pod, run `tcpdump --version` verify if the TCPdump is installed. If you receive the "command not found" message, run the following command to install the TCPdump in the pod:
+1. After you connect to the pod, run `tcpdump --version` to verify if the TCPdump is installed. If you receive the "command not found" message, run the following command to install the TCPdump in the pod:
 
     ```azurecli
     apt-get update && apt-get install tcpdump
