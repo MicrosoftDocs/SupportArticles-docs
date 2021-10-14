@@ -10,7 +10,7 @@ ms.date: 10/14/2021
 _Applies to:_ &nbsp; VSS Features  
 _Original KB number:_ &nbsp; 110
 
-This is an introductory file created to understand the different options and features of Visual Studio. You can create topics, add different elements to the topics, update topics, proofread topics and so on.
+This is an introductory file that explains the different options and features of Visual Studio Code. You can create topics, add different elements to the topics, update topics, proofread topics, troubleshoot warnings, and so on.
 The following topics are covered in this section:
 - Creating a topic
 - Adding different features to a topic
