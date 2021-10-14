@@ -23,5 +23,5 @@ At every stage of creating a topic, you can preview the way it looks. To preview
 1. Create a topic.
 1. Add all the required sections.
 1. Make the changes and save them.
-1. Click on :::image type="content" source="Media/previewfile/previewfile.PNG" alt-text="preview button"::: in the upper right-hand corner or click on preview icon on the Blue ribbon.:::image type="content" source="Media/previewfile/previewinbluetbar.PNG" alt-text="":::
+1. Click on :::image type="content" source="Media/previewfile/previewfile.PNG" alt-text="preview button"::: in the upper right-hand corner or click on preview icon on the Blue ribbon.:::image type="content" source="Media/previewfile/previewinbluetbar.PNG" alt-text="preview file":::
  A preview of the actual file is shown. 
