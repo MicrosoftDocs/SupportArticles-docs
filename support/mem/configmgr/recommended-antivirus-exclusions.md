@@ -41,15 +41,15 @@ Possible symptoms include:
 
 Use the installation folder paths below as variables for the recommended exclusions within the article.
 
-  > [!NOTE]
-  > The locations below are default installation paths and may vary within your environment. We recommend to review your environment and configuration to ensure you have the correct paths in place.
+> [!NOTE]
+> The following paths are the default installation paths and may vary depending on the environment. We recommend that you review the environment and configuration to ensure you have the correct paths in place.
 
 | Folder | Path |
 | --- | --- |
 | *ConfigMgr installation folder* | %ProgramFiles%\Microsoft Configuration Manager |
 | *MP installation folder* | %ProgramFiles%\SMS_CCM |
 | *Client installation folder* | %Windir%\CCM |
-| *ContentLib_drive* | Location will vary. The default location is usually the C: drive. |
+| *ContentLib_drive* | The path will vary. The default path is the C:\ drive. |
 
 ## Exclusions
 
