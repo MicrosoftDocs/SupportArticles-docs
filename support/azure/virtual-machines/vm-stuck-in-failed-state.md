@@ -33,14 +33,14 @@ Update the VM objects and properties by running the reapply command in the Azure
 
 ### [CLI](#tab/cli)
 Update the VM objects and properties by running the [az vm reapply](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest#az_vm_reapply) command.
-```cli
+```azurecli-interactive
 az vm reapply -g MyResourceGroup -n MyVm
 ```
 
 ### [PowerShell](#tab/powershell)
 Update the VM objects and properties by running the [Update-AzVM](https://docs.microsoft.com/powershell/module/az.compute/update-azvm?view=azps-6.5.0#examples) command after applying the reapply parameter.
 
-```powershell
+```azurepowershell-interactive
 $VM = Get-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName>
 Set-AzVM -VM $VM -Reapply
 Update-AzVM -VM $VM
