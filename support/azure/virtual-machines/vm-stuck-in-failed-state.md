@@ -38,7 +38,7 @@ az vm reapply -g MyResourceGroup -n MyVm
 ```
 
 ### [PowerShell](#tab/powershell)
-Update the VM objects and properties by running the [update-AzVM](https://docs.microsoft.com/powershell/module/az.compute/set-azvm?view=azps-6.5.0#examples) command after applying the reapply parameter.
+Update the VM objects and properties by running the [Update-AzVM](https://docs.microsoft.com/powershell/module/az.compute/update-azvm?view=azps-6.5.0#examples) command after applying the reapply parameter.
 
 ```powershell
 $VM = Get-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName>
