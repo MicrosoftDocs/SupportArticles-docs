@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 
 ms.topic: article
-ms.date: 11/19/2019
+ms.date: 10/11/2020
 ms.author: genli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
@@ -62,7 +62,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 ## Step 2: Create the faulty VM on the Rescue VM’s Hyper-V server
 
-1.  [Create a snapshot disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) for the OS disk of the VM that has problem, and then attach the snapshot disk to the recuse VM.
+1.  [Create a snapshot disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) for the OS disk of the VM that has problem, and then attach the snapshot disk to the Rescue VM.
 
 2.  Remote desktop to the Rescue VM.
 
