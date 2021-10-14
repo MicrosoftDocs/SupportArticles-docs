@@ -25,7 +25,7 @@ If users can't use a Microsoft Intune-managed iOS device to [place Teams calls w
 - Allow the device to use the Siri voice assistant:  
     Configure the **[Block Siri](/mem/intune/configuration/device-restrictions-ios#settings-apply-to-all-enrollment-types-1)** setting to **Not configured** (default) for built-in apps.
 
-- Allow the app data transfer from and to any app on the device:
+- Allow the app data transfer from and to any app on the device:  
 Configure the two [app data protection settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection) **(Send Org data to other apps** and **Receive data from other apps**) to **All apps**. The receiving app will have the ability to read and edit the data.
 
 For more information, see [Join a meeting in Teams with CarPlay](https://support.microsoft.com/en-us/office/join-a-meeting-in-teams-1613bb53-f3fa-431e-85a9-d6a91e3468c9#ID0EDBD=Mobile).
