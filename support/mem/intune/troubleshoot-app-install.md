@@ -1,19 +1,19 @@
 ---
-title: Troubleshoot app installation issues
-description: Use the Microsoft Intune troubleshooting pane to help you troubleshoot app installation issues.
-ms.date: 07/13/2020
+title: Troubleshooting app installation issues with Intune
+description: How to use the Microsoft Intune troubleshooting pane to help you troubleshoot app installation issues.
+ms.date: 10/14/2021
 ms.reviewer: mghadial
 ---
-# Troubleshoot app installation issues
+# Troubleshooting Intune app installation issues
 
-On Microsoft Intune MDM-managed devices, sometimes app installations can fail. When these app installs fail, it can be challenging to understand the failure reason or troubleshoot the issue. Microsoft Intune provides app installation failure details that allow help desk operators and Intune administrators to view app information to address user help requests. The troubleshooting pane within Intune provides failure details, including details about managed apps on a user's device. Details about the end-to-end lifecycle of an app are provided under each individual device in the **Managed Apps** pane. You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device.
+This article  app installations fail on devices that are managed with Microsoft Intune. When these app installs fail, it can be challenging to understand the failure reason or troubleshoot the issue. Microsoft Intune provides app installation failure details that allow help desk operators and Intune administrators to view app information to address user help requests. The troubleshooting pane within Intune provides failure details, including details about managed apps on a user's device. Details about the end-to-end lifecycle of an app are provided under each individual device in the **Managed Apps** pane. You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device.
 
 > [!NOTE]
 > For specific app installation error code information, see [Intune app installation error reference](app-install-error-codes.md).
 
 ## App troubleshooting details
 
-Intune provides app troubleshooting details based on the apps installed on a specific user's device.
+Intune provides app troubleshooting details based on the apps installed on a specific user's device. For detailed information, see [Use the troubleshooting portal to help users at your company](/mem/intune/fundamentals/help-desk-operators).
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshoot + support**.
@@ -110,16 +110,3 @@ App types that are supported on ARM64 devices include the following:
 ## Troubleshooting apps from the Microsoft Store
 
 The information in the topic [Troubleshooting packaging, deployment, and query of Microsoft Store apps](/windows/win32/appxpkg/troubleshooting) helps you troubleshoot common problems you might encounter when installing apps from the Microsoft Store, whether by using Intune, or by any other means.
-
-## App troubleshooting resources
-
-- [Deploying Visio and Project as part of your Microsoft 365 Apps Deployment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
-- [Take Action to Ensure MSfB Apps deployed through Intune install on Windows 10 1903](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Take-Action-to-Ensure-MSfB-Apps-deployed-through/ba-p/658864)
-- [Troubleshooting MSI app deployments in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-MSI-App-deployments-in-Microsoft/ba-p/359125)
-- [Best practices for Intune software distribution to Windows PC](software-distribution-best-practices.md)
-
-## Next steps
-
-- For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](/mem/intune/fundamentals/help-desk-operators).
-- Learn about any known issues in Microsoft Intune. For more information, see [Intune Customer Success](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
-- Need extra help? See [How to get support in Microsoft Endpoint Manager](/mem/get-support).

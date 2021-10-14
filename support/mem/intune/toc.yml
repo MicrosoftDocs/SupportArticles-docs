@@ -6,7 +6,7 @@
     href: app-management.yml   
   - name: App installation
     items:
-    - name: App installation error codes reference
+    - name: App installation error codes
       href: app-install-error-codes.md
     - name: Troubleshoot app installation issues
       href: troubleshoot-app-install.md
@@ -62,7 +62,7 @@
       href: managed-browser-policy-triggers-error-0x87d1fde8.md
     - name: Only one app configuration policy applied to Edge or Managed Browser
       href: only-one-app-policy-applied-edge-managed-browser.md
-  - name: General help and troubleshooting
+  - name: General troubleshooting
     items:
     - name: LOB app versioning
       href: lob-app-versioning.md  
