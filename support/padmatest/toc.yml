@@ -1,7 +1,5 @@
 items:
 - name: VSS Features overview
   href: Overviewfeatures.md
-- name: Create a File
-  href: Creatingatopic.md
 - name: Overview of Blue Ribbon
   href: Blueribbonoverview.md
