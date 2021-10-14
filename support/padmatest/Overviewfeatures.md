@@ -2,13 +2,14 @@
 title: New Test File
 description: This article is a new test file.
 ms.topic: article
-ms.reviewer: 
+ms.reviewer: xxx
+ms.prod: padmatest
 ms.date: 10/14/2021
 ---
-# An Overview of VSS Features and Options
-
 _Applies to:_ &nbsp; VSS Features  
 _Original KB number:_ &nbsp; 110
+
+# An Overview of VSS Features and Options
 
 This is an introductory file that explains the different options and features of Visual Studio Code. You can create topics, add different elements to the topics, update topics, proofread topics, troubleshoot warnings, and so on.
 The following topics are covered in this section:
