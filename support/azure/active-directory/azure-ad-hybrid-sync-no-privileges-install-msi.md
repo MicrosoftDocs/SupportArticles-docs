@@ -1,41 +1,41 @@
 ---
 title: Azure AD Hybrid Sync Agent Installation Issues - No privileges to install MSI
-description: This troubleshooting guide focuses on the situation where you have no privileges to install MSI, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
-ms.date: 09/15/2021
+description: This troubleshooting guide focuses on when you have no privileges to install MSI. It helps unblock you to install the Azure AD Connect Provisioning Agent.
+ms.date: 10/13/2021
 ---
 
 # Azure AD Hybrid Sync Agent Installation Issues - No privileges to install MSI
 
-This troubleshooting guide focuses on the situation where you have no privileges to install MSI, which may block you from successfully installing the Azure AD Connect Provisioning Agent.
+This troubleshooting guide focuses on when you don't have privileges to install MSI. Without these privileges, you may be unable to successfully install the Azure AD Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites)
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
 
 ## No privileges to install MSI
 
-While installing Cloud Provisioning Agent, you may encounter the following error:
+While installing Cloud Provisioning Agent, you may get the following error:
 
-> Service 'Microsoft Azure AD Connect Provisioning Agent' (AADConnectProvisioningAgent) could not be installed. Verify that you have sufficient privileges to install system services.
+> Service 'Microsoft Azure AD Connect Provisioning Agent' (AADConnectProvisioningAgent) failed to start. Verify that you have sufficient privileges to start system services.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/1-provisioning-agent-failed-start.png" alt-text="Screenshot of an error window when attempting to install the Microsoft Azure AD Connect Provisioning Agent. The error includes the message Service Microsoft Azure AD Connect Provisioning Agent failed to start. Verify that you have sufficient privileges to install system services." border="true":::
+:::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/1-provisioning-agent-failed-start.png" alt-text="Screenshot of error when installing Microsoft Azure A D Connect Provisioning Agent, about how the Connect Provisioning Agent service failed to start." border="true":::
 
 To verify that you have sufficient privileges:
 
-1. Certify that the user context credentials are set to either Domain Administrator or Enterprise Administrator.
+1. Make sure the user context credentials are set to either Domain Administrator or Enterprise Administrator.
 
-1. Check the Local Security Policy (secpol.msc) through **Open local policies** > **User Rights Assignment** > **Log on as a service**
+1. Open the Local Security Policy snap-in (*secpol.msc*). In the **Security Settings** pane, select **Local policies** > **User Rights Assignment**. Then select the **Log on as a service** policy.
 
-   :::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/2-log-on-service-policy.png" alt-text="Screenshot of the Local Security Policy window, highlighting the Log on as a service policy." border="true":::
+   :::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/2-log-on-service-policy.png" alt-text="Screenshot of the Local Security Policy window, highlighting the 'Log on as a service' policy." border="true":::
 
-1. Verify that NT SERVICE\ALL SERVICES is listed as a **Local Security Setting**.
+1. Select **Action** > **Properties**. Then in **Local Security Setting**, make sure the `NT SERVICE\ALL SERVICES` group appears.
 
-   :::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/3-log-on-service-properties.png" alt-text="Screenshot of the Local Security Setting tab in the Log on as a service Properties window." border="true":::
+   :::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/3-log-on-service-properties.png" alt-text="Screenshot of the Local Security Setting tab in the 'Log on as a service Properties' window. The 'NT SERVICE\ALL SERVICES' group should be present." border="true":::
 
-During Package installation the service **AADConnectProvisioningAgent** is created, and log on credentials are temporarily set to **NT Service\AADConnectProvisioningAgent**.
+During package installation, the service **AADConnectProvisioningAgent** is created, and logon credentials are temporarily set to **NT Service\AADConnectProvisioningAgent**.
 
-If **Log on as a service** doesn't have ALL SERVICES listed, the installation will fail to start with the previously-listed error message.
+If **Log on as a service** doesn't have *ALL SERVICES* listed, the installation fails to start, and it shows the previously listed error message.
 
-To resolve this issue, provide ALL SERVICES user rights to **Log on as a service**.
+To resolve this issue, provide *ALL SERVICES* user rights to **Log on as a service**.
 
-The wizard will now complete successfully.
+The wizard now completes successfully.
