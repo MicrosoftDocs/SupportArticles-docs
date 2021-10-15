@@ -36,9 +36,9 @@ The default permissions of the Calendar folder are set to **None** or **Contribu
 
 When the default permissions of the Calendar folder are set to **None** or **Contributor**, details can be obtained only when user delegation is used by attaching calendars directly to the calendar view of Outlook. In a hybrid deployment, free/busy and calendar-sharing functionality work differently than when both users are in the same environment. The default permissions determine the kind of free/busy information that users in a remote forest can see. If the default permissions are set to **None** or **Contributor**, no free/busy information is displayed for remote users, and users cannot view the mailbox calendar. This is because neither kind of permission offers any level of free/busy visibility.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor.png" alt-text="Screenshot shows the default permissions are set to Contributor, without offers any level of free/busy visibility." border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor.png" alt-text="Screenshot shows the default permission level is set to Contributor, without offers any level of free/busy visibility." border="false":::
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-none.png" alt-text="Screenshot shows the default permissions are set to None, without offers any level of free/busy visibility." border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-none.png" alt-text="Screenshot shows the default permission level is set to None, without offers any level of free/busy visibility." border="false":::
 
 If a remote user must be able to see free/busy information for the mailbox, the mailbox owner can work around this issue by changing the default permissions to **Free/Busy time** or **Free/Busy time, subject, location**. This changes the free/busy information that is shared for all remote users. For example, the default permissions can be set to **Free/Busy time**:
 
