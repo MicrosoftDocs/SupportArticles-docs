@@ -38,7 +38,7 @@ We recommend you use WPAD to configure Windows to use an Internet proxy server. 
 If you prefer to statically configure client computers with their Internet proxy server settings, use one of the following methods:
 
 - Manually configure the settings in Internet Explorer.
-- Configure domain-joined computers by using Group Policy. 
+- Configure domain-joined computers by using Group Policy.
 
 Applications that don't obtain proxy settings from Internet Explorer may have to have settings within each app to configure proxy settings.
 
@@ -52,10 +52,6 @@ Proxy/Firewall client software is specific to the brand of proxy server that you
 
 > [!NOTE]
 > The TMG/ISA firewall client tool is LSP based and will not work with Modern/Microsoft Store apps.
-
-### Command line setting
-
-You can also configure proxy server settings by using the `netsh winhttp set proxy` command. This option is recommended only for testing, because it isn't easy to deploy. The command must be executed at a command prompt by using Administrative credentials. We don't recommend this option for mobile computers. The reason is most users can't change this setting when they connect to a different network.
 
 ## More information
 
