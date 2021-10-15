@@ -34,7 +34,7 @@ To set up Outlook Web App to access Exchange Server, follow these steps:
 
 1. Ask your network administrator or local HelpDesk to see whether your account has Outlook Web App enabled. If Outlook Web App is enabled, ask the administrator or HelpDesk for the address (URL) of Outlook Web App. Usually, the address is in the following form:
 
-    `https://\<Domain Name>/OWA`
+    `https://<Domain Name>/OWA`
 
     Normally, you can find the Outlook Web App URL by clicking File->Info in Outlook.
 
