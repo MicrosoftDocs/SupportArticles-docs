@@ -262,6 +262,14 @@ External dump process returned no errors.
 
 Previously SQL Server would print information for each session/thread when a manual dump was triggered by the user for example.
 
+## Factors that prevent or delay creation of memory dumps
+
+Based on Microsoft CSS support experience, a few factors have been observed to cause delays or prevent creation of memory dumps. 
+
+ - The IO path where memory dumps are written is performing poorly. In such cases investigating and resolving disk I/O performance is the next logical step.
+ - Anti-virus and or other monitoring software is interfering with SQLDumper.exe. CSS has ecountered situations where 3rd party software has detoured [ReadProcessMemory](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) greatly adding to the dump duration. Disabling the software or adding SQLDumper.exe to an exclusion list has helped resolve these issues.
+
+
 ## Dump types
 
 The methods described are able to generate three different types of dumps: [mini dumps](#mini-dumps-with-referenced-memory), [full dumps](#full-dumps), and [filtered dumps](#filtered-dumps).
