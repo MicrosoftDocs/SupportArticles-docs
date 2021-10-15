@@ -71,7 +71,7 @@ For more information about cross-forest free/busy configuration, click the follo
 
 There are some differences with contributor permissions when you set the default calendar permissions or when you explicitly grant a user calendar permission. When the default calendar permissions are set, the **Free/busy setting** uses **None**.
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor-setting.png" alt-text="Screenshot shows when the default calendar permissions are set to Contributor, the Free/busy setting uses None." border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-contributor-setting.png" alt-text="Screenshot shows the Free/busy setting is set to None when the default calendar permissions are set to Contributor." border="false":::
 
 When a user is granted contributor rights, the permission level will automatically change to **Custom**. This includes **Free/Busy time**.
 
