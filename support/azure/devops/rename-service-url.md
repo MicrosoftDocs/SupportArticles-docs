@@ -78,6 +78,6 @@ We will not set up a redirect from your previous Azure DevOps Service URL to the
   > If you use Visual Studio, you may need to refresh Team Explorer.
 
 - Remove and re-configure the self-host agents that point to the previous Azure DevOps service URL.
-  - [Remove and re-configure the self-host Windows agents](/azure/devops/pipelines/agents/v2-windows?view=azure-devops#remove-and-re-configure-an-agent).
-  - [Remove and re-configure the self-host Linux agents](/azure/devops/pipelines/agents/v2-linux?view=azure-devops#remove-and-re-configure-an-agent).
-  - [Remove and re-configure the self-host macOS agents](/azure/devops/pipelines/agents/v2-osx?view=azure-devops#remove-and-re-configure-an-agent).
+  - [Remove and re-configure the self-host Windows agents](/azure/devops/pipelines/agents/v2-windows#remove-and-re-configure-an-agent).
+  - [Remove and re-configure the self-host Linux agents](/azure/devops/pipelines/agents/v2-linux#remove-and-re-configure-an-agent).
+  - [Remove and re-configure the self-host macOS agents](/azure/devops/pipelines/agents/v2-osx#remove-and-re-configure-an-agent).
