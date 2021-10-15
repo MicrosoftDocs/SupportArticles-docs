@@ -24,7 +24,7 @@ To automatically import favorites to Internet Explorer 11, follow these steps:
 
 1. In Internet Explorer 11, click **Import and export** on the **File** menu. If you don't see the **File** menu, press ALT.
 
-    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/import-and-export.png" alt-text="Screenshot of the File menu. The import and export item is highlighted." border="true":::
+    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/import-and-export.png" alt-text="Screenshot of the File menu. The import and export item is highlighted.":::
 
 2. Select **Import from another browser**, and then click **Next**.
 
@@ -48,7 +48,7 @@ To manually import favorites to Internet Explorer 11, follow these steps:
 
 1. In Firefox, click **Bookmarks** on the menu bar, and then click **Organize Bookmarks**.
 
-    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/organize-bookmarks.png" alt-text="Screenshot of Bookmarks menu. The Organize Bookmarks item is selected." border="true":::
+    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/organize-bookmarks.png" alt-text="Screenshot of Bookmarks menu. The Organize Bookmarks item is selected.":::
 
 2. In the **Library** dialog box, click **Export HTML** on the **Import and Backup** drop-down list.
 
@@ -61,7 +61,7 @@ To manually import favorites to Internet Explorer 11, follow these steps:
 4. Close Firefox, and then start Internet Explorer 11.
 5. In Internet Explorer 11, click **Open** on the **File** menu. If you don't see the **File** menu, press ALT.
 
-    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/select-open-on-file-menu.png" alt-text="Screenshot of the File menu. The Open entry is highlighted." border="true":::
+    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/select-open-on-file-menu.png" alt-text="Screenshot of the File menu. The Open entry is highlighted.":::
 
 6. Click **Browse**, and then locate the folder to which you saved the bookmarks.html file.
 
@@ -77,7 +77,7 @@ To manually import favorites to Internet Explorer 11, follow these steps:
 
 9. The file is immediately opened and includes a blue underlined link list. To include one of these links as a favorite, right-click the **entry**, and then click **Add to favorites**.
 
-    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/add-to-favorites.png" alt-text="Screenshot of the bookmarks.html file opened in IE. Add to favorites entry is highlighted." border="true":::
+    :::image type="content" source="media/transfer-bookmarks-from-firefox-to-ie/add-to-favorites.png" alt-text="Screenshot of the bookmarks.html file opened in IE. Add to favorites entry is highlighted.":::
 
 10. Select a folder, and then click **Add**. Repeat steps 9 and 10 for all the bookmarks that you want to transfer.
 

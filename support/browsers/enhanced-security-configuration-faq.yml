@@ -59,13 +59,13 @@ sections:
           
           3. Navigate to the **IE Enhanced Security Configuration** property, select the current setting to open the property page, select the **Off** option button for the desired users, and then select **OK**.
           
-             :::image type="content" source="media/enhanced-security-configuration-faq/ie-esc-off-option-button.png" alt-text="Internet Explorer ESC setting in server manager" border="false":::
+             :::image type="content" source="media/enhanced-security-configuration-faq/ie-esc-on-option-button.png" alt-text="Internet Explorer ESC setting is on in server manager.":::
           
-             :::image type="content" source="media/enhanced-security-configuration-faq/select-off-option.jpg" alt-text="select Off option screenshot" border="false":::
+             :::image type="content" source="media/enhanced-security-configuration-faq/select-off-option.png" alt-text="Screenshot of the IE Enhanced Security Configuration window. The Off option is selected.":::
           
           4. Select the **Refresh** icon on the Server Manager toolbar to see the new settings reflected in the server manager.
           
-             :::image type="content" source="media/enhanced-security-configuration-faq/current-ie-esc-setting.png" alt-text="current Internet Explorer ESC setting in server manager.":::
+             :::image type="content" source="media/enhanced-security-configuration-faq/ie-esc-off-option-button.png" alt-text="Screenshot of current Internet Explorer ESC setting in server manager.":::
           
           The following video demonstrates this procedure:
           
@@ -141,7 +141,7 @@ sections:
           
           1. In the navigation pane, right-click the **Registry** object, and then select **New** > **Registry Item**.
             
-             :::image type="content" source="media/enhanced-security-configuration-faq/new-a-registry-item.png" alt-text="create a new registry":::
+             :::image type="content" source="media/enhanced-security-configuration-faq/new-a-registry-item.png" alt-text="Screenshot shows steps to create a new registry.":::
           
           1. In **IEHarden Properties**, specify the following settings:
               - Location: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap`
@@ -149,7 +149,7 @@ sections:
               - Value Type: **REG_DWORD**
               - Value data: **0** or **00000000**
           
-                :::image type="content" source="media/enhanced-security-configuration-faq/registry-settings.jpg" alt-text="registry settings" border="false":::
+                :::image type="content" source="media/enhanced-security-configuration-faq/registry-settings.png" alt-text="Screenshot of registry settings in IEHarden Properties window." border="false":::
           
           1. Select **Apply** and **OK** to complete this GPP configuration.
           
