@@ -267,7 +267,7 @@ Previously SQL Server would print information for each session/thread when a man
 Based on Microsoft CSS support experience, a few factors are known to cause delays or prevent the creation of memory dumps.
 
 - The IO path where memory dumps are written performs poorly. In such cases, to investigate and resolve disk I/O performance is the next logical step.
-- An anti-virus or other monitoring software is interfering with SQLDumper.exe. There are situations where 3rd party software detour [ReadProcessMemory](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) function. This can dramatically increase the dump duration. Disabling the faulty software or adding SQLDumper.exe to an exclusion list to resolves most of these issues.
+- An anti-virus or other monitoring software is interfering with SQLDumper.exe. There are situations where 3rd party software detour [ReadProcessMemory](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) function. This can dramatically increase the dump duration. To resolve most of these issues, disable the faulty software or add SQLDumper.exe to an exclusion list.
 
 ## Dump types
 
