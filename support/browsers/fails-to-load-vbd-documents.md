@@ -32,13 +32,13 @@ As an example, to allow VBD documents to load in Internet Explorer 9 for the Loc
 
 Step1: Make sure the URL action is in place
 
-:::image type="content" source="media/fails-to-load-vbd-documents/2703.png" alt-text="screenshot of 2703" border="false":::
+:::image type="content" source="media/fails-to-load-vbd-documents/2703-zone-1.png" alt-text="Screenshot of 2703 item under Zones.":::
 
 The URL action is also available in the `HKEY_LOCAL_MACHINE` part of the registry, which is read when the `HKEY_CURRENT_USER` value is not available or the **Security Zones: Use only machine settings** policy is enabled. Additionally, if VBD documents are being loaded from a different zone, for instances, the Local Machine zone, the URL action needs to be set to 0 for that specific zone.
 
 Step 2: Set the feature key accordingly
 
-:::image type="content" source="media/fails-to-load-vbd-documents/clsidsniff.png" alt-text="screenshot of clsidsniff" border="false":::
+:::image type="content" source="media/fails-to-load-vbd-documents/feature-restrict-cdl-clsidsniff.png" alt-text="Screenshot of feature_restrict-col_clsidsniff registry.":::
 
 The above key is created in a 64-bit system and targets the Internet Explorer 9 32-bit version. The following variations need to be considered:
 
