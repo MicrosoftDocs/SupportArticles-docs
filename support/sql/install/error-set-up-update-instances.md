@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem where setting up
 ms.date: 01/15/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.reviewer: 
-ms.topic: troubleshooting
 ms.prod: sql 
 ---
 # Attempted to perform an unauthorized operation error when you set up or update SQL Server instances
