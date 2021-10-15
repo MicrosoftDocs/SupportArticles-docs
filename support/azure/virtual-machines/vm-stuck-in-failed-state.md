@@ -32,13 +32,13 @@ Update the VM objects and properties by running the reapply command in the Azure
 :::image type="content" source="./media/troubleshoot-vm-reapply/vm-reapply-portal.png" alt-text="Screenshot of the region options with the difference in pricing and eviction rates as a table.":::
 
 ### [CLI](#tab/cli)
-Update the VM objects and properties by running the [az vm reapply](/cli/azure/vm?view=azure-cli-latest#az_vm_reapply) command.
+Update the VM objects and properties by running the [az vm reapply](/cli/azure/vm?view=azure-cli-latest#az_vm_reapply&preserve-view=true) command.
 ```azurecli-interactive
 az vm reapply -g MyResourceGroup -n MyVm
 ```
 
 ### [PowerShell](#tab/powershell)
-Update the VM objects and properties by running the [Update-AzVM](/powershell/module/az.compute/update-azvm?view=azps-6.5.0#examples) command after applying the reapply parameter.
+Update the VM objects and properties by running the [Update-AzVM](/powershell/module/az.compute/update-azvm?view=azps-6.5.0#examples&preserve-view=true) command after applying the reapply parameter.
 
 ```azurepowershell-interactive
 $VM = Get-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName>
