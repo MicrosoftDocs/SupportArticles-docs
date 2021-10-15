@@ -124,7 +124,7 @@ The number that appears after `Server process ID` is the process identifier for 
 
 ## Output path for memory dumps
 
-SQLDumper.exe exists primarily to generate memory dumps for the SQL Server process in scenarios where a memory dump is needed to resolve specific problems (exceptions, asserts, non-yielding schedulers, etc.). In such cases SQL Server invokes the SQLDumper.exe to generate a memory dump of its process. The memory dump is stored in the SQL instance *MSSQL\LOG\\* directory by default. 
+SQLDumper.exe exists primarily to generate memory dumps for the SQL Server process in scenarios where a memory dump is needed to resolve specific problems (exceptions, asserts, non-yielding schedulers, etc.). In such cases, SQL Server invokes the SQLDumper.exe to generate a memory dump of its process. The memory dump is stored in the SQL instance *MSSQL\LOG\\* directory by default. 
 
 ### How to change the default path
 If in some cases the dump size is too large, for example, you can modify the path by doing the following:
@@ -266,8 +266,8 @@ Previously SQL Server would print information for each session/thread when a man
 
 Based on Microsoft CSS support experience, a few factors have been observed to cause delays or prevent creation of memory dumps. 
 
- - The IO path where memory dumps are written is performing poorly. In such cases investigating and resolving disk I/O performance is the next logical step.
- - Anti-virus and or other monitoring software is interfering with SQLDumper.exe. CSS has ecountered situations where 3rd party software has detoured [ReadProcessMemory](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) greatly adding to the dump duration. Disabling the software or adding SQLDumper.exe to an exclusion list has helped resolve these issues.
+ - The IO path where memory dumps are written is performing poorly. In such cases, investigating and resolving disk I/O performance is the next logical step.
+ - Anti-virus or other monitoring software is interfering with SQLDumper.exe. CSS has ecountered situations where 3rd party software has detoured [ReadProcessMemory](/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory) greatly adding to the dump duration. Disabling the software or adding SQLDumper.exe to an exclusion list has helped resolve these issues.
 
 
 ## Dump types
