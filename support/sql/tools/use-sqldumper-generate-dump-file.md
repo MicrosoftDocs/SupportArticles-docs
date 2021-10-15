@@ -21,7 +21,7 @@ The Sqldumper.exe utility is included with Microsoft SQL Server. It generates me
 The article also describes two other methods to generate dump files:
 
 - The attached [Powershell script](#how-to-use-a-powershell-script-to-generate-a-dump-file-with-sqldumper) automates SQLDumper.exe command line options.
-- [DBCC STACKDUMP](#how-to-use-dbcc-stackdump) T-SQL command can be used to generate a dump file in SQL Server. For more information, see [How to use DBCC STACKDUMP](#how-to-use-dbcc-stackdump).
+- [DBCC STACKDUMP](#how-to-use-dbcc-stackdump) Transact-SQL (T-SQL) command can be used to generate a dump file in SQL Server.
 
 
 ## How to run the Sqldumper.exe utility manually
@@ -124,7 +124,7 @@ The number that appears after `Server process ID` is the process identifier for 
 
 ## Output path for memory dumps
 
-SQLDumper.exe exists primarily to generate memory dumps for the SQL Server process in scenarios where a memory dump is needed to resolve specific problems (exceptions, asserts, non-yielding schedulers, etc.). In such cases SQL Server invokes the SQLDumper.exe to generate a memory dump of its process. The memory dump is stored in the SQL instance **MSSQL\LOG\\** directory by default. 
+SQLDumper.exe exists primarily to generate memory dumps for the SQL Server process in scenarios where a memory dump is needed to resolve specific problems (exceptions, asserts, non-yielding schedulers, etc.). In such cases SQL Server invokes the SQLDumper.exe to generate a memory dump of its process. The memory dump is stored in the SQL instance *MSSQL\LOG\\* directory by default. 
 
 ### How to change the default path
 If in some cases the dump size is too large, for example, you can modify the path by doing the following:
