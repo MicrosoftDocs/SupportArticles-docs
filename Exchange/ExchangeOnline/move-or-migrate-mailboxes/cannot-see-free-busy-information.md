@@ -54,7 +54,7 @@ Or, remote users can see the free/busy data as an additional calendar:
 
 A remote user can be granted Calendar folder permissions to obtain additional access to the contents of the Calendar folder:
 
-:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-reviewer.png" alt-text="Screenshot shows the user permissions are set to reviewer, which can read Full Details." border="false":::
+:::image type="content" source="./media/cannot-see-free-busy-information/calendar-properties-reviewer.png" alt-text="Screenshot shows the user permission is set to reviewer, which can read Full Details." border="false":::
 
 > [!NOTE]
 > Granting the **Free/Busy time, subject, location (Limited Details)** permission is insufficient in a hybrid environment. The user has to be granted at least **Reviewer** permission to view calendar item details.
