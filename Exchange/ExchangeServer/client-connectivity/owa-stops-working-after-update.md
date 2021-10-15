@@ -41,7 +41,7 @@ ECP displays the following error message:
 >Server Error in ‘/ecp’ Application.</br>
 Could not load file or assembly ‘Microsoft.Exchange.Common, Version=15.0.0.0 …Culture=neutral, PublicKeyToken=31bf3856ad364e54’ or one of its dependencies. The system cannot find the file specified.
 
-:::image type="content" source="./media/owa-stops-working-after-update/could-not-load-file-or-assembly.png" alt-text="Screenshot of the ECP error message.":::
+:::image type="content" source="./media/owa-stops-working-after-update/could-not-load-file-or-assembly.png" alt-text="Screenshot of the E C P error message.":::
 
 ## Cause
 
