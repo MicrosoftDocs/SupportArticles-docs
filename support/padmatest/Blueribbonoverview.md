@@ -12,6 +12,7 @@ _Original KB number:_ &nbsp; 110
 # Elements of the Blue Ribbon
 
 The elements on the Blue Ribbon are very helpful. Following are the features you can add to your topics to make them more informative.
+this is a test line
 
 |Option  |Icon  |
 |Bulleted List     |  :::image type="content" source="support\padmatest\Media\previewfile\bulletlisticon.PNG" alt-text="bulleted list":::       |
