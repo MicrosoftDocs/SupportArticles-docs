@@ -67,7 +67,7 @@ If you're unable to access the VM using the Azure Serial Console or other remote
 
 1. Follow the steps 1-3 of the [VM Repair process](repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to create a Repair VM. A copied OS disk of the failed VM will be attached to the Repair VM automatically. Usually the disk is attached as drive F.
 1. Connect to the Repair VM.
-1. On the Repair VM, start Registry Editor (regedit.exe). Select the **HKEY_LOCAL_MACHINE** key, select **File** > **Load Hive** from the menu. Locate and load the *SOFTWARE* hive file in the *F:\Windows\System32\config* folder, and then provide a name for the hive, example "RepairSOFTWARE".
+1. On the Repair VM, start Registry Editor (regedit.exe). Select the **HKEY_LOCAL_MACHINE** key, select **File** > **Load Hive** from the menu. Locate and load the *SOFTWARE* hive file in the *F:\Windows\System32\config* folder, and then type *RepairSOFTWARE* as the name for the hive.
 1. Navigate to *RepairSOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList*.
 1. Identify the profile entry for the affected user by looking at the value for the key "ProfileImagePath".
 1. Remove the user profile backup entry for the affected user (ends with ".bak"), do not remove entries for the built-in system accounts **S-1-5-18**, **S-1-5-19**, and **S-1-5-20**. 
