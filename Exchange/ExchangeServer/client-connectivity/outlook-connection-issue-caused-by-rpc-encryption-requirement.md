@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp;3032395
 
 The article only applies to the Microsoft Outlook connection issues that are caused by the RPC encryption requirement.
 
-:::image type="content" source="./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/exchange-encryption.png" alt-text="Screenshot about RPC encryption option.":::
+:::image type="content" source="./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/exchange-encryption.png" alt-text="Screenshot about R P C encryption option.":::
 
 
 ## Symptoms
