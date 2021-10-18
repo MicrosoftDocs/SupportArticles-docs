@@ -57,7 +57,7 @@ To disable hardware acceleration, follow these steps:
 
 1. Select the **Advanced** tab, and then select the **Use software rendering instead of GPU rendering** check box under **Accelerated graphics**.
 
-   :::image type="content" source="media/gpu-hardware-acceleration/option-under-accelerated-graphics.png" alt-text="screenshot of the option under Accelerated graphics" border="false":::
+   :::image type="content" source="media/gpu-hardware-acceleration/option-under-accelerated-graphics.png" alt-text="Screenshot of Internet Options window. Under Advanced tab, The Use software rendering instead of GPU rendering for Accelerated graphics is checked." border="false":::
 
 1. Select **Apply**, and then select **OK**.
 
