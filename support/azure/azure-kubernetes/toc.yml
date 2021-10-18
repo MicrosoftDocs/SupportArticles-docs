@@ -1,7 +1,8 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-- name: High CPU consumption
-  items:
-  - name: Identify High CPU consuming containers in AKS 
-    href: identify-high-cpu-consuming-containers-aks.md
+- name: Capture TCP packets from a pod
+  href: packet-capture-pod-level.md
+- name: Identify High CPU consuming containers in AKS
+  href: identify-high-cpu-consuming-containers-aks.md
+   

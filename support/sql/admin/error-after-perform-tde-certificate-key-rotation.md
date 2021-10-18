@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs afte
 ms.date: 01/15/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: liweiyin, ramand
-ms.topic: troubleshooting
 ms.prod: sql 
 ---
 # Msg 33111 error after SQL Server TDE certificate or key rotation
