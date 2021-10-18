@@ -70,7 +70,7 @@ For information about how to reset the Hosts file to the default Hosts file, see
 3. Click **Download** (on the right side of the page).
 4. Click **Save to Disk**, and then save the file to the default location.
 5. On your desktop, double-click the STE56en.exe icon (for Microsoft Windows 98, Microsoft Windows Millennium Edition, and Windows NT) or double-click the Scripten.exe icon (for Microsoft Windows 2000 and Windows XP).
-6. After the installation is complete, you can remove STE56en.exe or Scripten.exe file from your Desktop. To do it, right-click the icon, and then click **Delete**.
+6. After the installation is complete, you can remove STE56en.exe or Scripten.exe file from your Desktop. To do so, right-click the icon, and then click **Delete**.
 7. Restart your computer, and then go to the Windows Update website.
 
 > [!NOTE]
