@@ -52,6 +52,18 @@ Here are the four possible causes of this issue:
 
     These actions force an update of the policy in the back-end environment of Teams. After this change is made, the user should see the dial pad appear under **Calls** within four hours.
 
+### Run a self-diagnostics tool
+
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues with dial pad.
+
+> [!NOTE]
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag)
+
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

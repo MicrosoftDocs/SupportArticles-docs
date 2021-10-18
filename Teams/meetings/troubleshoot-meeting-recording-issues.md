@@ -38,8 +38,15 @@ For more information about user requirements for Teams meeting recording, see [P
 
 ## Run the Meeting Recording Support Diagnostic
 
-1. Sign in to Microsoft 365 admin center, and type **Diag: Meeting Recording** in the **Need Help?** search box.
-2. Enter the Session Initiation Protocol (SIP) address, and select **Run Tests**.
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to validate that the user is properly configured to record a meeting in Teams.
+
+> [!NOTE]
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)
 
 :::image type="content" source="./media/troubleshoot-meeting-recording-issues/diagnostic.png" alt-text="Screenshot of start the Meeting Recording Support Diagnostic.":::
 
