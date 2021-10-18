@@ -27,7 +27,7 @@ Run `az --version` to verify the version. To install the latest version of the A
 
    If you know the namespace that the pod runs in, you also can run `kubectl get pods -n <namespace>` to get a list of pods that are running in that namespace.
 
-1. Connect to the pod that you identified in the previous step. The following commands use "azure-vote-front-848767080-tf34m" as the pod name. Replace them with the correct pod name. If the pod is not in the default namespace, you must add the "--namespace" parameter to the "kubectl exec" command.
+1. Connect to the pod that you identified in the previous step. The following commands use "azure-vote-front-848767080-tf34m" as the pod name. Replace them with the correct pod name. If the pod is not in the default namespace, you must add the `--namespace` parameter to the `kubectl exec` command.
 
    ```azurecli
    kubectl exec azure-vote-front-848767080-tf34m -it -- /bin/bash
