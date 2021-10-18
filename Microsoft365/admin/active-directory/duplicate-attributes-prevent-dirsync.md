@@ -96,7 +96,7 @@ To determine attribute conflicts that are caused by user objects that were creat
    1. Click **Start**, click **Run**, type ldp.exe, and then click **OK**. 
    2. Click **Connection**, click **Connect**, type the computer name of an AD DS domain controller, and then click **OK**.
    3. Click **Connection**, click **Bind**, and then click **OK**.
-   4. Click **View**, click **Tree View**, select the AD DS domain in the **BaseDN**drop-down list, and then click **OK**.
+   4. Click **View**, click **Tree View**, select the AD DS domain in the **BaseDN** drop-down list, and then click **OK**.
    5. In the navigation pane, locate and then double-click the object that isn't syncing correctly. The Details pane on the right side of the window lists all object attributes. The following example shows the object attributes:
 
       :::image type="content" source="./media/duplicate-attributes-prevent-dirsync/object-attributes.png" alt-text="Screenshot shows an example of object attributes."border="false":::
