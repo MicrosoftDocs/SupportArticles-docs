@@ -72,7 +72,7 @@ If you're unable to access the VM using the Azure Serial Console or other remote
 1. Identify the profile entry for the affected user by looking at the value for the key "ProfileImagePath".
 1. Remove the user profile backup entry for the affected user (ends with ".bak"), do not remove entries for the built-in system accounts **S-1-5-18**, **S-1-5-19**, and **S-1-5-20**. 
 1. Use step 5 of the [VM Repair process](repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to mount the repaired OS disk to the failed VM.
-1. Start the failed VM and try to connect to the VM using RDP. If the problem continues to occur, you can try removing all the user profile entries except the built-in system accounts **S-1-5-18**, **S-1-5-19** and **S-1-5-20**.
+1. Start the failed VM and try to connect to the VM using RDP. If the problem continues to occur, you can try removing the user profile entry for the affected user, do not remove entries for the built-in system accounts **S-1-5-18**, **S-1-5-19** and **S-1-5-20**.
 
 
 ## Next steps
