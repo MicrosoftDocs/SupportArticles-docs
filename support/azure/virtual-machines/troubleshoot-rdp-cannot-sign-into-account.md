@@ -52,7 +52,9 @@ Before proceeding with any of the solutions in this document, back up your VM OS
     reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList" /s | more
     ```
 
-1. Remove all the user profile entries that end with ".bak", except for the built-in system accounts S-1-5-18, S-1-5-19 and S-1-5-20:
+1. Identify the profile entry for the affected user by looking at the value for the key "ProfileImagePath".
+
+1. Remove the user profile backup entry for the affected user (ends with ".bak"), do not remove entries for the built-in system accounts **S-1-5-18**, **S-1-5-19**, and **S-1-5-20**:
     ```powershell
     `reg delete "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\ProfileList\<GUID>.bak"`
     ```
