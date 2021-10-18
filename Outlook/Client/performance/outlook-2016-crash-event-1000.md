@@ -1,8 +1,8 @@
 ---
 title: Outlook 2016 crashes and event 1000 after you install a language pack
 description: Describes an issue that causes Outlook 2016 to crash when you start it. Occurs if you apply Outlook 2016 updates before you install the language pack. Workarounds are provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

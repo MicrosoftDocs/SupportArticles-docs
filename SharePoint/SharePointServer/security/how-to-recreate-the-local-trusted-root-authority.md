@@ -1,7 +1,7 @@
 ---
 title: How to re-create the local Trusted Root Authority
 description: Describes that how to re-create the local Trusted Root Authority.  
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2013

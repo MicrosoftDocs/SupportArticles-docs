@@ -1,13 +1,13 @@
 ---
 title: Set language and region settings for Office 365
 description: Describes how to set language and region settings for Office 365 by using Office 365 PowerShell.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
@@ -36,7 +36,7 @@ For all Office 365 services (including OneDrive For Business, Delve, and SharePo
 
 ### For all Office 365 services except Exchange Online
 
-Cloud identity model
+#### Cloud identity model
 
 To sync the settings by using a user ID, run the following example cmdlets after you substitute the actual values:
 
@@ -45,12 +45,12 @@ Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser -PreferredLangu
 Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
 ```
 
-Synchronized identity model
+#### Synchronized identity model
 
-To sync the settings by using an on-premises instance of Azure AD, run the following example cmdlets after you substitute the actual values:
+To sync the settings by using an on-premises instance of Active Directory, run the following example cmdlets after you substitute the actual values:
 
 ```powershell
-Get-ADUser -SearchBase "OU=Italy,OU=Countries,DC=contoso,DC=com" -Filter * -Properties PreferredLanguage | ForEach-Object {Set-ADUser $_.SAMAccountName –replace @{PreferredLanguage="it-it"}}
+Get-ADUser -SearchBase "OU=Italy,OU=Countries,DC=contoso,DC=com" -Filter * | Set-ADUser –replace @{PreferredLanguage="it-it"}
 
 Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
 ```

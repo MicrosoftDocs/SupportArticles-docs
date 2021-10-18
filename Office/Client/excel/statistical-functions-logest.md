@@ -1,7 +1,7 @@
 ---
 title: Excel statistical functions LOGEST
 description: This article describes changes to the LOGEST statistical function in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007

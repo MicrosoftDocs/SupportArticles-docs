@@ -1,7 +1,7 @@
 ---
 title: Sync to SharePoint Workspace is not available
 description: This document describes why Sync to SharePoint Workspace might not display for SharePoint 2010 sites.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: gregjo
 ms.custom: CSSTroubleshoot
 appliesto:

@@ -20,6 +20,9 @@ search.appverid: MET150
 
 _Original KB number:_ &nbsp; 3216404
 
+> [!IMPORTANT]
+> The Unified Messaging service in Exchange Online is out of support as of February 28, 2020, 5 PM Pacific Time. All voicemail accounts have been migrated to Cloud Voicemail service by Microsoft. Any remaining auto attendant traffic won't be monitored and might be disrupted at any time. For more information, see [Exchange Unified Messaging Online migration support](/SkypeForBusiness/plan/exchange-unified-messaging-online-migration-support).
+
 ## Symptoms
 
 Assume that you assigned an Office 365 plan that includes Unified Messaging (UM) to a user. However, when the user opens the **Options** pane in Outlook on the web, the **Voice mail** settings are missing.

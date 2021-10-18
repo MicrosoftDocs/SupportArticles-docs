@@ -24,37 +24,30 @@ This article describes how to collect Exchange ActiveSync device logs to trouble
 
 ## Procedure
 
-To capture ActiveSync device log information, use one of the following methods.
+To capture ActiveSync device log information, follow these steps:
 
-### Method 1: Use Outlook on the web
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Run the [Set-CASMailbox](/powershell/module/exchange/set-casmailbox) cmdlet to enable ActiveSync logging for a specific user:
 
-1. Sign in to the [Office 365 portal](https://outlook.office.com).
-In the upper-right area of the page, click **Settings**, and then click **View all outlook settings**.
-1. In the navigation pane on the left, expand **General**, and then click **Mobile Devices**.
-1. In the list of devices, select the device that you want to track, and then click **Start Logging**.
-1. In the **Information** dialog box, click **Save**.
-1. Reproduce the behavior that you want to capture.
-
-    An email message that contains the log file (EASMailboxLog.txt) as an attachment is sent to your mailbox.
-
-### Method 2: Use Exchange Online PowerShell
-
-1. Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-1. Run the following command to enable ActiveSync logging for a specific user:
-
+    > [!NOTE]
+    > Exchange ActiveSync debug logging is enabled for 48 hours in Exchange Online, and 72 hours in Exchange Server. After the time period expires, the value reverts to `$false`.
+    
     ```powershell
-    Set-CASMailbox alias -ActiveSyncDebugLogging:$true
-    ```
-
-1. Reproduce the behavior that you want to capture.
-1. Run the following command to retrieve the log:
-
-    ```powershell
-    Get-MobileDeviceStatistics -Mailbox alias -GetMailboxLog:$true -NotificationEmailAddresses "admin@contoso.com"
+    Set-CASMailbox tony@contoso.com -ActiveSyncDebugLogging $true
     ```
 
     > [!NOTE]
-    > This command retrieves the statistics for the mobile device that's set up to synchronize with the mailbox of the user who you specified. In this example, it also sends the log file to admin@contoso.com.
+    > This example enables Exchange ActiveSync debug logging for the user tony@contoso.com.
+
+1. Reproduce the behavior that you want to capture.
+1. Run the [Get-MobileDeviceStatistics](/powershell/module/exchange/get-mobiledevicestatistics) cmdlet to retrieve the log:
+
+    ```powershell
+    Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
+    ```
+
+    > [!NOTE]
+    > This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the log file and sends it to the System Administrator at admin@contoso.com.
 
 ## More information
 

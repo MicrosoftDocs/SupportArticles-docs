@@ -1,7 +1,7 @@
 ---
 title: Error (Do you want to download the converter) in Office
 description: Discusses an issue in which you receive an error message to download a converter when you try to open an Excel 2010 workbook (.xlsx), a Word 2010 document (.docx), or a PowerPoint 2010 presentation (.pptx).
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,14 +10,14 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Word 2010
 - Microsoft Excel 2010
 - Microsoft PowerPoint 2010
 ms.reviewer: jenl
 ---
-# Error message (Do you want to download the converter?) when trying to open a file in Word, Excel, or PowerPoint
+# "Do you want to download the converter" error when trying to open a file in Word, Excel, or PowerPoint
 
 _Original KB number:_ &nbsp; 967950
 
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 967950
 > This issue doesn't apply to Office 2013 and newer versions as they support the standard Open XML formats. For more information, see [Open XML Formats and file name extensions](https://support.microsoft.com/office/open-xml-formats-and-file-name-extensions-5200d93c-3449-4380-8e11-31ef14555b18).
 
 > [!note]
-> Support for Office 2010 ended on October 13, 2020. This means that Microsoft no longer provides technical support, bug fixes, or security updates, and customers that continue to use them may face increased security risks and compliance issues over time. Microsoft recommends customers update to either Office 2019 or Microsoft 365 Apps. For more information, see [Support for Office 2010—and Office 2016 for Mac—has ended: Here’s what you need to know - Microsoft 365 Blog](https://www.microsoft.com/microsoft-365/blog/2020/10/13/support-for-office-2010-and-office-2016-for-mac-has-ended-heres-what-you-need-to-know/).
+> Support for Office 2010 ended on October 13, 2020. This means that Microsoft no longer provides technical support, bug fixes, or security updates, and customers that continue to use them may face increased security risks and compliance issues over time. Microsoft recommends customers update to either Microsoft 365 Apps or Office LTSC 2021. For more information, see [Support for Office 2010—and Office 2016 for Mac—has ended: Here's what you need to know - Microsoft 365 Blog](https://www.microsoft.com/microsoft-365/blog/2020/10/13/support-for-office-2010-and-office-2016-for-mac-has-ended-heres-what-you-need-to-know/).
 
 ## Symptoms
 
@@ -40,7 +40,7 @@ When you try to open a file (.docx, .xlsx, or .pptx) in Word 2010, Excel 2010, o
 
 ## Cause
 
-The file you’re trying to open (.docx, .xlsx, or .pptx) may have been created by a third-party (non-Microsoft) software product in compliance with the International Standard ISO/IEC 29500 Office Open XML (OOXML). However, Word 2010, Excel 2010, and PowerPoint 2010 (as well as Word 2007, Excel 2007, and PowerPoint 2007) don't support all ISO/IEC 29500 standards.
+The file you're trying to open (.docx, .xlsx, or .pptx) may have been created by a third-party (non-Microsoft) software product in compliance with the International Standard ISO/IEC 29500 Office Open XML (OOXML). However, Word 2010, Excel 2010, and PowerPoint 2010 (as well as Word 2007, Excel 2007, and PowerPoint 2007) don't support all ISO/IEC 29500 standards.
 
 ## Resolution
 
@@ -55,11 +55,9 @@ To resolve this issue, follow the steps below.
 4. When the file opens, select **Save As** to save the file in the Word 2010, Excel 2010, or PowerPoint 2010 default format.
 
     > [!NOTE]
-    > If you are still experiencing issues after running this procedure, see the following Office Blogs for additional resources that may be useful:
+    > If you are still experiencing issues after running this procedure, see the following Office Blog for additional resources that may be useful:
     >
-    > - [Microsoft Office Word Support Team Blog](https://blogs.technet.microsoft.com/wordonenotesupport/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
-    > - [The Microsoft Excel Support Team Blog](https://blogs.technet.microsoft.com/the_microsoft_excel_support_team_blog/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
-    > - [Business Graphics Products Support Team Blog](https://blogs.technet.microsoft.com/bgp/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
+    > - ["Do you want to download the converter?" when you try to open a file in Excel, Word or PowerPoint KB Article](/archive/blogs/bgp/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article)
 
 ## More information
 

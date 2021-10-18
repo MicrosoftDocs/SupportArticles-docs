@@ -1,8 +1,8 @@
 ---
 title: Image DPI is changed after you print to PDF from Word 2013 or 2010
 description: Works around an issue in which the image DPI is changed after you convert the documents to PDF files by using PDF printer.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

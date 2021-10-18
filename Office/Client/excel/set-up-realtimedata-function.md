@@ -1,7 +1,7 @@
 ---
 title: How to set up and use the RTD function in Excel
 description: Discusses the functionality that the RealTimeData (RTD) function provides in Excel.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel
@@ -22,7 +22,7 @@ appliesto:
 ## Summary
 
 > [!NOTE]
-> The performance of the RealTimeData (RTD) function has been greatly enhanced in Excel M365 version 2002 or later. For more information, see [Excel Performance and Limits Improvements](https://docs.microsoft.com/office/vba/excel/concepts/excel-performance/excel-performance-and-limit-improvements).
+> The performance of the RealTimeData (RTD) function has been greatly enhanced in Excel M365 version 2002 or later. For more information, see [Excel Performance and Limits Improvements](/office/vba/excel/concepts/excel-performance/excel-performance-and-limit-improvements).
 
 This article describes the functionality that the RealTimeData (RTD) function provides. Microsoft Office Excel provides a worksheet function, RealTimeData (RTD). This function enables you to call a Component Object Model (COM) Automation server to retrieve data in real time.
 
@@ -92,10 +92,6 @@ For Microsoft Office Excel 2003 and in Microsoft Excel 2002, the load behavior c
 
 ## References
 
-For more information about RTD and Excel security, click the following article number to view the article in the Microsoft Knowledge Base:
+For more information about RTD and Excel security, see [How to set up and use the RTD function in Excel](set-up-realtimedata-function.md).
 
-[286259](https://support.microsoft.com/help/286259) Security settings and Excel RealTimeData servers
-
-For more information about creating an RTD server, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[285339](https://support.microsoft.com/help/285339) How to create a RealTimeData server for Excel
+For more information about creating an RTD server, see [How to create a RealTimeData server for Excel](/previous-versions/office/troubleshoot/office-developer/create-realtimedata-server-in-excel).

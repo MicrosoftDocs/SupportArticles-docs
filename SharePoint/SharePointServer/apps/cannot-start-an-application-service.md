@@ -1,7 +1,7 @@
 ﻿---
 title: You can't start the SharePoint Foundation Web Application service
 description: Describes an issue in which the SharePoint Foundation Web Application service gets stuck during startup in SharePoint Server 2013 and 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013

@@ -1,16 +1,16 @@
 ---
 title: We can't open this add-in from localhost
 description: When loading an Office Add-in from localhost or using Fiddler, you may see an error stating that a problem occurred while trying to reach your add-in.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
+ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office Web Apps
 ---

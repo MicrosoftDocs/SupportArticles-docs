@@ -13,9 +13,12 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Access for Microsoft 365
+- Access 2019
 - Access 2016
+- Access 2013
 - Access 2010
-- Microsoft Office Access 2007
+- Access 2007
 search.appverid: MET150
 ---
 # Access Error: Data on the Clipboard is damaged, so Microsoft Access can't paste it
@@ -43,7 +46,7 @@ This issue occurs when the following two conditions are true:
 
 **Scenario 2**
 
-The Excel sheet name contains a single quote character.
+The Excel sheet name contains a single quote character, or an apostrophe character.
 
 ## Workaround
 

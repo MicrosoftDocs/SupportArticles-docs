@@ -1,7 +1,7 @@
 ---
 title: Build dynamic query with values from search form
 description: Explains how to create a search form and how to use it to dynamically build the appropriate SQL string by using the BuildCriteria method and values from the search form.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: FELIXL 
 appliesto:
 - Access for Office 365

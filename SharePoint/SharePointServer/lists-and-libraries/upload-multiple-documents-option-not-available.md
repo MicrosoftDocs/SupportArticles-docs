@@ -1,8 +1,8 @@
 ---
 title: Upload Multiple Documents option isn't available
 description: Provides a workaround for an issue in which you cannot upload multiple documents to a document library through the Upload Multiple Documents option in SharePoint Server 2013.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Cannot Access Newly Purchased Project Online with License
 description: If the Office365 Administrator has purchased just one license for you to access Project Online, you may have trouble gaining access until the site is properly configured.  Here are the steps to configure your new Project Online site.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

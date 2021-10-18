@@ -1,7 +1,7 @@
 ---
 title: The Outlook meeting tracking tab is not updated
 description: In Outlook, the meeting tracking tab for a meeting that you organized is not updated with the attendees' responses. And, the responses may unexpectedly remain in the Inbox, even though the option is enabled to delete meeting responses that were processed.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot

@@ -1,7 +1,7 @@
 ---
 title: SSL certificate authentication issues
 description: This article provides solutions for resolving SSL certificate authentication issues.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
@@ -39,10 +39,6 @@ Consider the following scenarios.
 ## Solution
 
 To resolve this problem, update your operating system or device by installing the Baltimore CyberTrust root certificate, or update your solution to accept the Baltimore CyberTrust Root certificate to authenticate with SharePoint Online.
-
-You can download the Baltimore CyberTrust Root certificate from the following website:
-
-https://cacert.omniroot.com/bc2025.crt
 
 > [!NOTE]
 > As a best practice, we recommend that you don't hard-code trusted root lists for certificate validation. Instead, you should use policy-based root certificate validation that can be updated as industry standards or certificate authorities change.

@@ -1,7 +1,7 @@
 ---
 title: This feature has been disabled by your administrator error in Microsoft Office
 description: Describes an issue that triggers an error in Office 2013 applications when you try to sign in or share a file. This issue involves certain registry settings. A resolution is provided.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,16 +9,21 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom:
 - CSSTroubleshoot
 - CI 124941
 appliesto:
-- Word O365
-- Excel O365
-- Outlook O365
-- PowerPoint O365
-- Publisher O365
+- Word for Microsoft 365
+- Excel for Microsoft 365
+- Outlook for Microsoft 365
+- PowerPoint for Microsoft 365
+- Publisher for Microsoft 365
+- Word LTSC 2021
+- Excel LTSC 2021
+- Outlook LTSC 2021
+- PowerPoint LTSC 2021
+- Publisher LTSC 2021
 - Word 2019
 - Excel 2019
 - Outlook 2019
@@ -42,7 +47,7 @@ appliesto:
 
 ## Symptoms
 
-When you try to perform certain actions in Microsoft Office O365, 2019, 2016, or 2013 applications, you receive the following error message:
+When you try to perform certain actions in Microsoft 365 Apps, Office LTSC 2021, Office 2019, Office 2016, or Office 2013 applications, you receive the following error message:
 
 > This feature has been disabled by your administrator.
 
@@ -52,14 +57,14 @@ The actions that trigger this error message may include the following:
 - On the **File** menu, you click **Share**, and then you click **Present Online**.
 - On Microsoft SharePoint Server or in OneDrive for Business, you click **Sync Now**.
 
-In Office 2013, Office 2016, and Office 2019, this error affects connected experience. In Office 365 ProPlus, this error affects Office licensing and connected experience.
+In Office 2013, Office 2016, Office 2019, and Office LTSC 2021, this error affects connected experience. In Microsoft 365 Apps, this error affects Office licensing and connected experience.
 
 ## Cause
 
 This issue occurs if one of the following registry values is configured as specified:
 
 > [!NOTE]
-> The *xx* placeholder in the following registry entry is **15** for Office 2013 and 16 for Office 2016, Office 2019, and Office 365 ProPlus.
+> The *xx* placeholder in the following registry entry is **15** for Office 2013 and 16 for Office 2016, Office 2019, Office LTSC 2021 and Microsoft 365 Apps.
 
 - `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Common\Internet`
 
@@ -92,6 +97,7 @@ To resolve this issue, follow these steps to modify the registry:
 1. Exit Microsoft Outlook.
 1. Start Registry Editor. To do this, use one of the following procedures, as appropriate for your version of Windows:
 
+   - Windows 10: In the search box on the taskbar, type **regedit**, then select **Registry Editor** (Desktop app) from the results.
    - Windows 8: Press Windows Key+R to open a **Run** dialog box. Then, type **regedit.exe**,and then press **OK**.
    - Windows 7: Click **Start**, type **regedit.exe** in the search box, and then press Enter.
 
@@ -100,7 +106,7 @@ To resolve this issue, follow these steps to modify the registry:
    `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Common\Internet`
 
    > [!NOTE]
-   > The *xx* placeholder is **15** for Office 2013 and **16** for Office 2016, Office 2019, and Office 365 ProPlus.
+   > The *xx* placeholder is **15** for Office 2013, and **16** for Office 2016, Office 2019, Office LTSC 2021, and Microsoft 365 Apps.
 
 1. Locate and then double-click the following value: `UseOnlineContent`.
 1. In the **Value Data** box, type **2**, and then click **OK**.
@@ -109,9 +115,9 @@ To resolve this issue, follow these steps to modify the registry:
    `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Common\SignIn`
 
    > [!NOTE]
-   > The *xx* placeholder is **15** for Office 2013 and **16** for Office 2016, Office 2019, and Office 365 ProPlus.
+   > The *xx* placeholder is **15** for Office 2013 and **16** for Office 2016, Office 2019, Office LTSC 2021, and Microsoft 365 Apps.
 
-   For Office 365 ProPlus, you also locate and select this subkey:
+   For Microsoft 365 Apps, you also locate and select this subkey:
 
    `HKEY_CURRENT_USER\Software\Policies\Microsoft\Cloud\Office\16.0\Common\SignIn`
 
@@ -129,7 +135,7 @@ The `UseOnlineContent` setting controls users' access to the Office online featu
 - 0 = Don't allow Office to connect to the Internet. Office applications don't connect to the Internet to access online services or to download the latest online content from Office.com. Connected features of Office are disabled.
 - 2 = Allow Office to connect to the Internet. Office applications use online services and download the latest online content from Office.com when users' computers are connected to the Internet. Connected features of Office are enabled. This option enforces the default configuration.
 
-The `SignInOptions` setting controls whether users can provide credentials to Office by using either their Windows Live ID or the user ID that was assigned by their organization (Org ID) for accessing Office 365. This setting can be configured by using the following values:
+The `SignInOptions` setting controls whether users can provide credentials to Office by using either their Windows Live ID or the user ID that was assigned by their organization (Org ID) for accessing Microsoft 365. This setting can be configured by using the following values:
 
 - 0 = Both IDs allowed
 - 1 = Microsoft Account only (see the note below)
@@ -137,4 +143,4 @@ The `SignInOptions` setting controls whether users can provide credentials to Of
 - 3 = Users can't sign in by using either ID (see the note below)
 
 > [!NOTE]
-> Based on the [recent license improvements](https://techcommunity.microsoft.com/t5/office-365-blog/office-365-client-licensing-and-activation-improvements/ba-p/763694), users are required to sign in to activate Office on their devices. We don't recommend using options **1** and **3** for `SignInOptions` in Office 365 ProPlus. Either of these options will block sign-ins that use work accounts or Azure Active Directory (AAD) accounts and users won't be able to access Office clients.
+> Based on the [recent license improvements](https://techcommunity.microsoft.com/t5/office-365-blog/office-365-client-licensing-and-activation-improvements/ba-p/763694), users are required to sign in to activate Office on their devices. We don't recommend using options **1** and **3** for `SignInOptions` in Microsoft 365 Apps. Either of these options will block sign-ins that use work accounts or Azure Active Directory (AAD) accounts and users won't be able to access Office clients.

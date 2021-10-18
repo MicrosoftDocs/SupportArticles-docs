@@ -1,8 +1,8 @@
 ---
 title: ArchiveStatus is set to None for an active archive mailbox
 description: In some scenarios, the ArchiveStatus property may be set to None even though you enabled an active archive for a user's mailbox in Office 365.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

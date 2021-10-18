@@ -57,7 +57,7 @@ If you are affected by ransomware, try the following:
    - OneDrive: See [Restore a OneDrive library](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15)
 
 > [!NOTE]
-> SharePoint Online retains backups of all content for 14 additional days beyond actual deletion. [If content cannot be restored](https://support.office.com/article/Restore-a-previous-version-of-an-item-or-file-in-SharePoint-F66DBDA0-81F4-4D1E-B08C-793265C58934), an administrator can [contact Microsoft Support](https://support.microsoft.com/contactus/) to request a restore any time inside the 14-day window. Be sure to note the following details:
+> SharePoint Online retains backups of all content for 14 additional days beyond actual deletion. [If content cannot be restored](https://support.office.com/article/Restore-a-previous-version-of-an-item-or-file-in-SharePoint-F66DBDA0-81F4-4D1E-B08C-793265C58934), an administrator can contact Microsoft Support to request a restore any time inside the 14-day window. Be sure to note the following details:
 > - What site collection URL(s) that have been affected by ransomware?
 > - When was the last known time the files were not modified by the ransomware?
 

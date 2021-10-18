@@ -1,7 +1,7 @@
 ---
 title: Certain Microsoft SharePoint Server 2013 installation scenarios are not supported
 description: Describes SharePoint Server 2013 installation scenarios that are not supported.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013

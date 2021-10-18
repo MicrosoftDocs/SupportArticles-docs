@@ -1,7 +1,7 @@
 ---
 title: Privilege not exist in service account configuration
 description: Describes an issue in which you receive A privilege that the service requires to function properly does not exist in the service account configuration error. Provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: dakova, clake, v-thomr
 ms.custom: 
 - CSSTroubleshoot

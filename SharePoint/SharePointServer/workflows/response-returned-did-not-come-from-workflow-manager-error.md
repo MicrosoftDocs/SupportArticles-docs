@@ -24,7 +24,7 @@ description: Describes how to resolve the error "A response was returned that di
 
 When you set up SharePoint Server 2016 on Windows Server 2016 with a single WFM server, then install and configure a workflow manager with SharePoint, registering it to use "SP-WorkflowService", the workflows using SharePoint Designer fails with the following error:
 
-```
+```output
 Microsoft.Workflow.Client.AuthenticationException: A response was returned that did not come from the Workflow Manager. Status code = 401:
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -37,19 +37,22 @@ body{marg
 ```
 
 ## Cause
+
 The "Anonymous" authentication has been disabled on the WFM server in your DEV farm.
 
 ## Resolution
-Reenabling "Anonymous" authentication should fix the issue.
+
+Re-enabling "Anonymous" authentication should fix the issue.
 
 ## More information
 
 ### How we narrowed down the issue
 
-- We used Fiddler's ability to act as proxy and listen to end point calls between SharePoint and Workflow Manager. (https://docs.microsoft.com/sharepoint/dev/general-development/debugging-sharepoint-server-workflows) 
-- Fiddler revealed that we were failing while putting up/updating scope information for the given workflow and its URL in WFM.
-```
- 
+We used Fiddler's ability to act as proxy and listen to end point calls between SharePoint and Workflow Manager. For more information, see [Debugging SharePoint workflows](/sharepoint/dev/general-development/debugging-sharepoint-server-workflows).
+
+Fiddler revealed that we were failing while putting up/updating scope information for the given workflow and its URL in WFM.
+
+```output
 Client (SharePoint) Request
 =======================
 
@@ -67,11 +70,12 @@ Server: Microsoft-IIS/10.0
 <h2>401 - Unauthorized: Access is denied due to invalid credentials.</h2>
   <h3>You do not have permission to view this directory or page using the credentials that you supplied.</h3>
 ```
-**(Note "HTTP/1.1 401 Unauthorized" under the Server Response.)**
 
-- In **working** condition, we are updating scope information as such.
+Note **HTTP/1.1 401 Unauthorized** under the Server Response.
 
-```
+In **working** condition, we're updating scope information as such.
+
+```output
 Client (SharePoint) Request
 ======================
 
@@ -86,13 +90,14 @@ HTTP/1.1 201 Created
 Location: http://wfm.contoso.com:12291/SharePoint/default/09d8c9b6-1994-4dad-bf46-cf5de701c0c8
 Server: Microsoft-IIS/10.0
 ```
-**(Note "HTTP/1.1 201 Created" under the Server Response.)**
 
-- We captured ETL traces to read workflow manager internal activities while publishing the workflow.
-- Failing condition revealed that the request was not even reaching WFM internally.
-- In working condition, we are updating scope information as such.
+Note **HTTP/1.1 201 Created** under the Server Response.
 
-```
+We captured ETL traces to read workflow manager internal activities while publishing the workflow. Failing condition revealed that the request wasn't even reaching WFM internally.
+
+In working condition, we are updating scope information as such.
+
+```output
 WFM Server Internal Activities 
 =========================
 
@@ -119,15 +124,14 @@ Gateway sending HTTP response: StatusCode: 201, ReasonPhrase: 'Created', Version
  Server: Microsoft-WF/1.0.1
 }
 ```
-**(Note "Successfully created scope /SharePoint/default/09d8c9b6-1994-4dad-bf46-cf5de701c0c8" and "returning status code 201 (Created)" references above.)**
+
+Note "Successfully created scope /SharePoint/default/09d8c9b6-1994-4dad-bf46-cf5de701c0c8" and "returning status code 201 (Created)" references above.
 
 ![Output](media/response-returned-did-not-come.jpg)
 
+This proved that the request was reaching WFM server but not going deep further to SB or backend. Hence the component in question was IIS. We captured IIS log on WFM in house while publishing the workflow. It revealed that IIS has events in fact while publishing.
 
-- This proved that the request was reaching WFM server but not going deep further to SB or backend. Hence the component in question was IIS. 
-- We captured IIS log on WFM in house while publishing the workflow. It revealed that IIS has events in fact while publishing. 
-
-```
+```output
 2019-07-25 05:28:49 192.168.2.104 PUT /$Scope - 12291 - 192.168.2.102 Microsoft-WF/1.0.1 - 401 0 0 1477
 2019-07-25 05:28:52 192.168.2.104 PUT /$Scope - 12291 - 192.168.2.102 Microsoft-WF/1.0.1 - 201 0 0 562
 2019-07-25 05:28:52 192.168.2.104 PUT /$Scope - 12291 - 192.168.2.102 Microsoft-WF/1.0.1 - 201 0 0 78
@@ -136,11 +140,10 @@ Gateway sending HTTP response: StatusCode: 201, ReasonPhrase: 'Created', Version
 2019-07-25 05:29:06 192.168.2.104 GET /$Scope - 12291 - 192.168.2.102 Microsoft-WF/1.0.1 - 200 0 0 15
 ```
 
-- Based on the error "You do not have permission to view this directory or page using the credentials that you supplied", we explored permissions of the "Workflow Management Site" IIS virtual server on WFM in our lab. We have "Anonymous" and "Windows Authentication" set as enabled.
-- Disabling "Anonymous" authentication instantly reproduced the error.
-- If you are using Claims authentication (Windows claims, Forms authentication or a Trusted Identity provider), the application will be configured for Forms authentication in the web.config, along with ensuring that Anonymous Authentication and Forms Authentication are enabled in IIS configuration. 
-- We by default use windows claim authentication starting SP 2013 and WFM > SP communication happens over Oauth on top of that. 
-- We identified that "Anonymous" authentication was disabled on WFM server in your DEV farm. Enabling it fixed the issue.
-- We were able to publish and run the workflows successfully. 
+Based on the error "You do not have permission to view this directory or page using the credentials that you supplied", we explored permissions of the "Workflow Management Site" IIS virtual server on WFM in our lab. We have "Anonymous" and "Windows Authentication" set as enabled. Disabling "Anonymous" authentication instantly reproduced the error.
+
+If you're using Claims authentication (Windows claims, Forms authentication or a Trusted Identity provider), the application will be configured for Forms authentication in the web.config, along with ensuring that Anonymous Authentication and Forms Authentication are enabled in IIS configuration.
+
+We by default use windows claim authentication starting SP 2013 and WFM > SP communication happens over Oauth on top of that. We identified that "Anonymous" authentication was disabled on WFM server in your DEV farm. Enabling it fixed the issue. We were able to publish and run the workflows successfully.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

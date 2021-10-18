@@ -25,20 +25,21 @@ It's common for users to switch devices or for an enterprise to add or change M3
 > [!NOTE]
 > To automatically perform all of the checks listed below and run the appropriate scripts needed to reset the activation state, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeActivation-Reset).
 
-## Step 1: Remove Office 365 license for subscription -based installations
+## Step 1: Remove Office 365 license for subscription-based installations
 
 > [!NOTE]
 > If Shared Computer Activation (SCA) is enabled and running, you shouldn't see any product keys installed during the procedure. If you're trying to set up SCA on a computer, make sure to clean up existing keys first.
 
-Here's how to remove the Office 365 license:
+You can use the `ospp.vbs` script to remove the Office 365 license. The `ospp.vbs` script is located in the `Program Files\Microsoft Office\Office16` folder. If you installed the 32-bit version of Office on a 64-bit operating system, go to the `Program Files (x86)\Microsoft Office\Office16` folder.
 
-> [!NOTE]
-> The `ospp.vbs` script is in the \<Program Files\Microsoft Office\Office16> folder. If the 32-bit version of Office is installed on a 64-bit operating system, the script is in the \<Program Files (x86)\Microsoft Office\Office16 folder>. Before running the `ospp.vbs` command, set the correct directory by using one of these commands, based on your Office version:
+> [!IMPORTANT]
+> Before you run the ospp.vbs, make sure that:
 >
-> - `cd C:\Program Files (x86)\Microsoft Office\Office16`
-> - `cd C:\Program Files\Microsoft Office\Office16`
+> - If you want to run the script on a remote computer, the Windows firewall allows Windows Management Instrumentation (WMI) traffic on the remote computer.
+> - The user account you will use is a member of the Administrators group on the computer on which you run the script. 
+> - You run ospp.vbs script from an elevated command prompt. 
 
-1. In an elevated command window, run the cd command based on your install location:
+1. In an elevated command prompt, set the correct directory by using one of these commands, based on your Office installation location:
 
    ```console
    cd "C:\Program Files (x86)\Microsoft Office\Office16"
@@ -50,7 +51,7 @@ Here's how to remove the Office 365 license:
    cd "C:\Program Files\Microsoft Office\Office16"
    ```
 
-1. Run the following script command:
+1. Run the following command:
 
    ```vbs
    cscript ospp.vbs /dstatus
@@ -84,8 +85,7 @@ Here's how to remove the Office 365 license:
    If the output contains the message "product key uninstall successful", close the Command Prompt window and go to Step 2.
 
 > [!NOTE]
-> For Shared Computer Activation (SCA), remove the tokens listed here:
-%localappdata%\Microsoft\Office\16.0\Licensing
+> For Shared Computer Activation (SCA), remove the tokens listed under %localappdata%\Microsoft\Office\16.0\Licensing.
 
 ## Step 2: Remove cached identities in HKCU registry
 
@@ -178,4 +178,19 @@ To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.co
 > [!NOTE]
 > This tool removes all SSO accounts in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
 
-Additional Information: [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
+### Prevent Workplace Join on your device
+
+After Office successfully authenticates and activates, the **Stay signed in to all your apps** dialog pops up. By default, the **Allow my organization to manage the devices** checkbox is selected. This registers your device in Azure AD while adding your account to Workplace Join.
+
+To prevent your device from being Azure AD registered, clear **Allow my organization to manage my device**, select **No, sign in to this app only**, and then select **OK**.
+
+:::image type="content" source="media/reset-office-365-proplus-activation-state/prevent-azure-join.png" alt-text="Prevent Azure AD registration":::
+
+To automate this configuration, add the following registry value to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin`:
+
+"BlockAADWorkplaceJoin"=dword:00000001
+
+For more information, see the following articles:
+
+- [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Device identity and desktop virtualization](/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure#non-persistent-vdi)

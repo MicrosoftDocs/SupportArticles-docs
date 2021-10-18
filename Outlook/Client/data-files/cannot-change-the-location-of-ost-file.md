@@ -1,8 +1,8 @@
 ---
 title: Cannot change the location of .ost file
 description: Describes and provides a workaround for an issue in which you can't change the location of the offline Outlook Data File (.ost) in Microsoft Outlook 2013 or later versions.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,6 +17,7 @@ appliesto:
 - Outlook 2016
 - Outlook 2013
 - Outlook for Office 365
+- Outlook LTSC 2021
 search.appverid: MET150
 ---
 # You can't change the location of the offline Outlook Data File (.ost) in Microsoft Outlook
@@ -94,7 +95,7 @@ To set the `ForceOSTPath` registry entry in order to change the location of the 
 2. Locate and then select the registry subkey: `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook`
 
    > [!NOTE]
-   > The *xx*.0 placeholder represents your version of Office (16.0 = Office 2016, Office 365 and Office 2019, 15.0 = Office 2013).
+   > The *xx*.0 placeholder represents your version of Office (16.0 = Office 2016, Office 365, Office 2019, or Office LTSC 2021, 15.0 = Office 2013).
 
 3. Right-click **Outlook**, select **New**, and then select **Expandable String Value**.
 4. Type *ForceOSTPath*, and then press Enter.

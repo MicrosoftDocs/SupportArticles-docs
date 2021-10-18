@@ -1,8 +1,8 @@
 ---
 title: Outlook connection fails when certificate is required
 description: This article explains that Outlook doesn't support using the Windows certificate store as a credential to connect Exchange Server, and provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 4488049
 After you configure a network device to require certificate validation between Outlook and Exchange Server 2019, 2016, or 2013, you experience connection failures in Outlook clients.
 
 > [!NOTE]
-> The network device can be a load balancer or another network device, as described in [Certificate Selection and Validation](https://docs.microsoft.com/dotnet/framework/network-programming/certificate-selection-and-validation).
+> The network device can be a load balancer or another network device, as described in [Certificate Selection and Validation](/dotnet/framework/network-programming/certificate-selection-and-validation).
 
 This problem occurs especially if the network device is configured to require the client to present a certificate during the SSL handshake in the network layer instead of passing the traffic directly to the server that is running Exchange Server.
 

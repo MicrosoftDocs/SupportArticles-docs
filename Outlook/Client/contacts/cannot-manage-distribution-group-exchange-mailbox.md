@@ -1,8 +1,8 @@
 ---
 title: Can't manage distribution group from Outlook
 description: Describes causes for the issue that Outlook users may be unable to change the membership of groups for which they are listed as the managers after Microsoft Exchange Server 2010 is installed, and provides solutions.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 
@@ -42,9 +42,9 @@ To resolve this issue, see [How to manage groups that I already own in Exchange 
 
 ### Cause 2
 
-Distribution groups are configured to be managed by other distribution and security groups. Unfortunately, when Exchange 2010 adopted the RBAC model, you could no longer have a group manage other groups. In Exchange Server 2010, Exchange Server 2013 and Exchange Server 2016, you must list your group managers and individual users instead of a group.
+Distribution groups are configured to be managed by other distribution and security groups. However, in Exchange Server 2010 and later, you can only use mail-enabled security groups or individual users to manage distribution groups. 
 
-To resolve this issue, see [How to manage groups with groups in Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/how-to-manage-groups-with-groups-in-exchange-2010/ba-p/585757).
+To resolve this issue, convert the required distribution or security group to a mail-enabled security group.
 
 ### Cause 3
 

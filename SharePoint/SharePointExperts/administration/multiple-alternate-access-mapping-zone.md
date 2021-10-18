@@ -1,7 +1,7 @@
 ---
 title: Behavior when using Office Online Server and SharePoint with multiple zones
 description: This article describes the behavior when using Office Online Server and SharePoint with multiple zones.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

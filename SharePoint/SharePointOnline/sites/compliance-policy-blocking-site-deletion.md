@@ -1,7 +1,7 @@
 ---
-title: Error 'A compliance policy is currently blocking this site deletion' when trying to delete a SharePoint site
+title: Error "A compliance policy is currently blocking this site deletion" when deleting a site
 description: This article describes how to resolve an issue when there's an error when trying to delete a SharePoint site.
-author: v-miegge
+author: helenclu
 ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal
@@ -18,13 +18,13 @@ appliesto:
 - SharePoint Online
 ---
 
-# Error 'A compliance policy is currently blocking this site deletion' when trying to delete a SharePoint site
+# "A compliance policy is currently blocking this site deletion" when deleting a SharePoint site
 
 ## Symptoms
 
 When you try to delete a SharePoint site, the following message appears:
 
-**Can’t delete site.**
+**Can't delete site.**
 
 **A compliance policy is currently blocking this site deletion.**
 
@@ -47,22 +47,21 @@ If you receive the **Compliance policy** error message, contact your [Microsoft 
 
 ### Administrators
 
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
 If you're an administrator, and you're unable to delete the site:
 
-1. Go to the [Microsoft Admin site](https://admin.microsoft.com).
+1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
 
-2. In the navigation pane, select **Support**, and then select **New Service Request**.
+   > [!div class="nextstepaction"]
+   > [Run Tests: Invalid Retention Hold](https://aka.ms/PillarInvalidRetention)
 
-   > [!Note]
-   > This selection activates the **Need Help?** pane on the right side of the screen.
-
-3. In the **Briefly describe your issue** area, enter **invalid retention policy**, and then select **Enter**.
-
-4. In the Run diagnostic section, type or paste the **SharePoint site URL**, and then select **Run Tests**.
+2. In the Run diagnostic section, type or paste the **SharePoint site URL**, and then select **Run Tests**.
 
    ![Run diagnostics window asking for SharePoint URL information](./media/compliance-policy-blocking-site-deletion/run-diagnostics.png)
 
-5. If the test finds an **invalid retention policy**, and the policy is blocking the site deletion, you may choose to remove the policy.
+3. If the test finds an **Invalid retention policy**, and the policy is blocking the site deletion, you may choose to remove the policy.
 
    ![Run diagnostics window asking to update settings](./media/compliance-policy-blocking-site-deletion/invalid-retention-policies-on-tenant.png)
 

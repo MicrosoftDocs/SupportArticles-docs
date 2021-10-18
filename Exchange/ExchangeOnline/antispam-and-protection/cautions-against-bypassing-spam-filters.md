@@ -5,7 +5,7 @@ author: simonxjx
 audience: ITPro
 ms.service: o365-proplus-itpro
 ms.topic: article
-ms.author: luche
+ms.author: v-six
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
@@ -22,9 +22,10 @@ appliesto:
 
 This article discusses why you should not bypass spam filters in Microsoft Office 365. This article applies to both users and administrators who do the following:
 
-- Enable Allow or blocklists in Spam Filter policies.
+- [Manage the Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list?view=o365-worldwide&preserve-view=true).
+- Enable Allow or block lists in [Spam Filter policies](/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide&preserve-view=true).
 - Skip scanning in Transport Rules.
-- Enable Safe and Blocked senders in Outlook or Outlook on the Web.
+- Enable Safe and Blocked senders in Outlook or [Outlook on the Web](https://support.microsoft.com/office/block-senders-or-unblock-senders-in-outlook-on-the-web-9bf812d4-6995-4d19-901a-76d6e26939b0).
 
 If you use these lists or options, consider the following guidelines:
 

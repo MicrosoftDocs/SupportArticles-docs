@@ -1,8 +1,8 @@
 ---
 title: Outlook for iOS and Android with ABQ rules are quarantined
 description: Describes a problem in which Exchange Online users who use Outlook for iOS and Android and who also use Device Access (ABQ) rules are unexpectedly quarantined.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -57,5 +57,7 @@ Or, use one of the following methods to unblock the device:
   3. In your remote PowerShell session, run the function. To do this, type *FixUnblock*, and then press Enter.
 
 ## More information
+
+Users with modern authentication-enabled accounts need to follow the steps in [Account setup with modern authentication in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/setup-with-modern-authentication) to set up their Outlook for iOS and Android accounts.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

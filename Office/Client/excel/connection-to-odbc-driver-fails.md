@@ -1,14 +1,14 @@
 ---
 title: Connection to ODBC driver fails in PowerPivot for Excel
 description: Resolve an issue in which you receive Login failed for user and Invalid connection string attribute error messages when you create a connection an ODBC driver in PowerPivot for Excel 2010 or Excel 2013.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: haidongh, lauraho
 search.appverid: 
 - MET150

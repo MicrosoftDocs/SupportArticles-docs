@@ -1,8 +1,8 @@
 ---
 title: You are over Junk E-mail list limit
 description: Describes the issue that you are over Junk E-mail list limit, and provides resolutions.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting 
@@ -16,7 +16,7 @@ ms.reviewer: gregmans, wbrandt
 search.appverid: 
 - MET150
 appliesto:
-- Outlook for Office 365
+- Outlook for Microsoft 365
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
@@ -50,46 +50,43 @@ Considering this limit, there are four known causes of these errors:
 - You have a large number of entries in your Safe Senders, Blocked Senders, and Safe Recipients lists.
 
     By default, you have a cumulative limit of 510 KB for all your Junk E-mail lists. If you have a large number of entries in these lists (cumulatively), you may receive one of these error messages when you try to add more items to the lists.
+- The `Max Extended Rule Size` registry value is incorrectly configured on the Exchange server.
 
-- The `Max Extended Rule Size` registry value is incorrectly configured on the Exchange server.  
+  > [!NOTE]
+  > The `Max Extended Rule Size` registry value doesn't apply to Exchange Server 2013 and later versions.
 
-    On an Exchange server, you can configure the following registry data:
+  On an Exchange server, you can configure the following registry data:
 
-  - Registry key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\MSExchangeIS\ParametersSystem`
-  - Value: `Max Extended Rule Size`  
-  - Type: DWORD
-  - Data: an integer specifying the maximum size, in *bytes*, you want to allow for the junk e-mail rule
+  > Registry key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\MSExchangeIS\ParametersSystem`  
+  > Value: `Max Extended Rule Size`  
+  > Type: DWORD  
+  > Data: an integer specifying the maximum size, in *bytes*, you want to allow for the junk e-mail rule
 
-    The value that you enter in the registry is interpreted as the maximum rule size in bytes. Therefore, if you want to specify a limit that is larger than the default 510 KB, you must enter a value that's greater than 522240 (decimal).
+  The value that you enter in the registry is interpreted as the maximum rule size in bytes. Therefore, if you want to specify a limit that's larger than the default 510 KB, you must enter a value greater than 522240 (decimal).
 
-    This error may occur when you unintentionally specify a value lower than the default limit. For example, you might enter a value of 1024 under the assumption that this is double the default limit of 510 KB. However, because the value is interpreted as the number of *bytes*, you have configured a limit of 1024 bytes, and this is substantially lower than the default limit of 510 KB.
-
-    > [!NOTE]
-    > The `Max Extended Rule Size` registry value does not apply to Exchange Server 2013.
-
+  This error may occur when you unintentionally specify a value lower than the default limit. For example, you might enter a value of 1024 under the assumption that this is double the default limit of 510 KB. However, because the value is interpreted as the number of *bytes*, you have configured a limit of 1024 bytes, and this is substantially lower than the default limit of 510 KB. 
 - The **PR_RULE_MSG_STATE** property of the Junk E-mail Rule message is incorrectly configured.
 
-    In an Exchange mailbox, your junk email settings are stored in a hidden message in the associated contents table of your Inbox folder. The subject of this hidden message is Junk E-mail Rule. This message has a **PR_RULE_MSG_STATE** property, and the default value of this property is 49 (decimal) or 0x31 (hexadecimal). If you disable junk email filtering in Outlook Web App, the value of this property becomes 48 (decimal) or 0x30 (hexadecimal). Therefore, if the value that's specified for this property is something other than 48 or 49 (decimal), you may receive one of these error messages.
-
+  In an Exchange mailbox, your junk email settings are stored in a hidden message in the associated contents table of your Inbox folder. The subject of this hidden message is Junk E-mail Rule. This message has a **PR_RULE_MSG_STATE** property, and the default value of this property is 49 (decimal) or 0x31 (hexadecimal). If you disable junk email filtering in Outlook Web App, the value of this property becomes 48 (decimal) or 0x30 (hexadecimal). If the value that's specified for this property is something other than 48 or 49 (decimal), you may receive one of these error messages.
 - The **Also trust e-mail from my Contacts** option is enabled in Outlook.
 
-    On the Safe Senders tab of the Junk E-mail Options dialog box, you'll see the **Also trust e-mail from my Contacts** option. If this option is enabled, and you have a large number of contacts in your Contacts folder, you may unintentionally exceed the 510-KB limit on your mailbox. When this option is enabled, Outlook tries to add all the email addresses for your contacts to the Safe Senders list.
+  On the Safe Senders tab of the Junk E-mail Options dialog box, you'll see the **Also trust e-mail from my Contacts** option. If this option is enabled, and you have a large number of contacts in your Contacts folder, you may unintentionally exceed the 510-KB limit on your mailbox. When this option is enabled, Outlook tries to add all the email addresses for your contacts to the Safe Senders list.
 
 ## Resolution
 
 Because there are four possible causes of this problem, follow these steps to determine the cause of the problem.
 
 > [!NOTE]
-> Skip steps 1 and 2 if you are using Exchange Server 2013. The `Max Extended Rule Size` registry value applies only to earlier versions of Exchange Server.
+> Skip steps 1 and 2 if you're using Exchange Server 2013 or later versions. The `Max Extended Rule Size` registry value applies only to earlier versions of Exchange Server.
 
 1. Check the registry on your Exchange server to see whether an incorrect value is used for `Max Extended Rule Size`.
 
-    - Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\MSExchangeIS\ParametersSystem`
-    - Value: `Max Extended Rule Size`  
-    - Type: DWORD
-    - Data: an integer specifying the maximum size, in bytes, you want to allow for the junk e-mail rule
+   > Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\MSExchangeIS\ParametersSystem`  
+   > Value: `Max Extended Rule Size`  
+   > Type: DWORD  
+   > Data: an integer specifying the maximum size, in bytes, you want to allow for the junk e-mail rule
 
-    The value that you enter in the registry is interpreted as the maximum rule size in *bytes*. Therefore, if you want to specify a limit that is larger than the default 510 KB, you must enter a value that's greater than 522240 (decimal). For example, if you want to double the default limit, specify a value of 1044480.
+   The value that you enter in the registry is interpreted as the maximum rule size in *bytes*. If you want to specify a limit that is larger than the default 510 KB, enter a value that's greater than 522240 (decimal). For example, if you want to double the default limit, specify a value of 1044480.
 
     > [!NOTE]
     > You must restart the Microsoft Exchange Information Store service for this change to take effect.
@@ -101,7 +98,7 @@ Because there are four possible causes of this problem, follow these steps to de
 
     1. Download the MFCMAPI tool on a computer on which you have an Outlook profile configured for the mailbox in question.
 
-        For more information about MFCMAPI, see [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
+        For more information about MFCMAPI, see [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 
     2. Create an Online mode profile for the mailbox.
     3. Start MFCMAPI.
@@ -112,9 +109,7 @@ Because there are four possible causes of this problem, follow these steps to de
     8. In the **Extra Properties** dialog box, click **Add**.
     9. In the **Property Tag Editor** dialog box, enter *0x0E9B0003* in the **Property Tag** field.
 
-        This is the value that corresponds to the **PR_EXTENDED_RULE_SIZE_LIMIT** property.
-
-        After you type this value into the **Property Tag** field, the remaining fields in the **Property Tag Editor** should automatically fill in to match the values that are shown in the following screenshot:
+        This value corresponds to the **PR_EXTENDED_RULE_SIZE_LIMIT** property. After you type this value into the **Property Tag** field, the remaining fields in the **Property Tag Editor** should automatically fill in to match the values that are shown in the following screenshot:
 
         ![Screenshot of Property Tag Editor dialog box](./media/outlook-error-over-junk-emial-list-limit/property-tag-editor-details.jpg)
 
@@ -126,7 +121,7 @@ Because there are four possible causes of this problem, follow these steps to de
 
         The value of this property as displayed in the **Value** column. In this screenshot, the default limit of 522240 is being used.
 
-    If the `Max Extended Rule Size` registry value does not exist on your Exchange server, or if the value is correctly configured, go on to step 2.
+    If the `Max Extended Rule Size` registry value doesn't exist on your Exchange server, or if the value is correctly configured, go on to step 2.
 
 2. If there are many cumulative entries in the Safe Senders, Blocked Senders and Safe Recipients lists, you can probably isolate this problem to a small number of mailboxes. For example, if only a few users encounter the errors that are described in the [Symptoms](#symptoms) section, you should examine the Safe Senders, Blocked Senders, and Safe Recipients lists in Outlook to determine whether there is a large number of entries in the lists (in total).
 
@@ -137,14 +132,14 @@ Because there are four possible causes of this problem, follow these steps to de
     - Type: DWORD
     - Data: an integer specifying the maximum size, in bytes, you want to allow for the junk e-mail rule
 
-    The value that you enter in the registry is interpreted as the maximum rule size in bytes. Therefore, if you want to specify a limit that is larger than the default 510 KB, you must enter a value that's greater than 522240 (decimal).
+    The value that you enter in the registry is interpreted as the maximum rule size in bytes. If you want to specify a limit that is larger than the default 510 KB, enter a value that's greater than 522240 (decimal).
 
     > [!NOTE]
     > You must restart the Microsoft Exchange Information Store service for this change to take effect.
 
     This change affects all mailboxes that are located on the Exchange server on which this registry change is performed.
 
-    If there are not many entries (cumulatively) in the Safe Senders, Blocked Senders, and Safe Recipients lists, go on to step 3.
+    If there are not many entries (cumulatively) in the Safe Senders, Blocked Senders, and Safe Recipients lists, go to step 3.
 
 3. If the `Max Extended Rule Size` registry value is configured correctly, and there are not many entries in the Safe Senders, Blocked Senders, and Safe Recipients lists, the problem may involve the Trust e-mail from my Contacts setting in Outlook. This setting is shown in the following screenshot:
 
@@ -152,25 +147,22 @@ Because there are four possible causes of this problem, follow these steps to de
 
     If this option is enabled, and you have a large number of contacts in your Contacts folder, you may unintentionally exceed the default 510-KB limit on your mailbox. When this option is enabled, Outlook tries to add all the email addresses for your contacts to the Safe Senders list. If you clear this check box, and the problem no longer occurs, you can either leave this option disabled or use the `Max Extended Rule Size` registry value on your Exchange server to increase the default limit.
 
-    - Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\MSExchangeIS\ParametersSystem`
-    - Value:`Max Extended Rule Size`  
-    - Type: DWORD
-    - Data: an integer specifying the maximum size, in bytes, you want to allow for the junk e-mail rule
+    > Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\MSExchangeIS\ParametersSystem`  
+    > Value:`Max Extended Rule Size`    
+    > Type: DWORD  
+    > Data: an integer specifying the maximum size, in bytes, you want to allow for the junk e-mail rule
 
-    The value that you enter in the registry is interpreted as the maximum rule size in bytes. Therefore, if you want to specify a limit that's larger than the default 510 KB, you must enter a value that's greater than 522240 (decimal).
+    The value that you enter in the registry is interpreted as the maximum rule size in bytes. If you want to specify a limit that's larger than the default 510 KB, you must enter a value that's greater than 522240 (decimal).
 
     > [!NOTE]
     > You must restart the Microsoft Exchange Information Store service for this change to take effect.
 
-4. If you are still experiencing this problem after you review or implement steps 1-3, the hidden Junk E-mail Rule message in your mailbox may have an incorrectly configured value in the **PR_RULE_MSG_STATE** property. To determine whether your mailbox contains an incorrectly configured value for this property, follow these steps.
+4. If you still experience this problem after you review or implement steps 1-3, the hidden Junk E-mail Rule message in your mailbox may have an incorrectly configured value in the **PR_RULE_MSG_STATE** property. To determine whether your mailbox contains an incorrectly configured value for this property, follow these steps.
 
     > [!NOTE]
     > The following procedure assumes that you're using the November 2011 version (15.0.0.1029) of MFCMAPI or a later version.
 
-    1. Download the MFCMAPI tool on a computer on which you have an Outlook profile configured for the mailbox in question.
-
-        For more information about MFCMAPI, see [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
-
+    1. Download the MFCMAPI tool on a computer on which you have an Outlook profile configured for the mailbox in question. For more information about MFCMAPI, see [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
     2. Create an Online mode profile for the mailbox.
     3. Exit Outlook if it's currently running.
     4. Start MFCMAPI.
@@ -179,23 +171,19 @@ Because there are four possible causes of this problem, follow these steps to de
     7. In the list of accounts, double-click the entry that has the email address for the mailbox.
 
         :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/double-click-email-address-for-mailbox.jpg" alt-text="Screenshot of selecting the email address for the mailbox.":::
-
     8. Expand **Root Container**, and then expand **Top of Information Store**.
     9. Right-click the **Inbox** folder, and then click **Open associated contents table**.
 
         :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/select-open-associated-contents-table.jpg" alt-text="Screenshot of clicking Open associated contents table.":::
-
     10. In the **Inbox** dialog box, locate and select the message whose **Subject** is *Junk E-mail Rule*.
     11. In the bottom pane, locate and select the **PR_RULE_MSG_STATE** property.
 
         ![Screenshot of selecting the PR_RULE_MSG_STATE property](./media/outlook-error-over-junk-emial-list-limit/select-pr-rule-msg-state-property.jpg)
 
-        The default value of the **PR_RULE_MSG_STATE** property is 49 (decimal) as shown in this screenshot. If you do not see a value of 49 for this property, go on to step d.
-
+        The default value of the **PR_RULE_MSG_STATE** property is 49 (decimal) as shown in this screenshot. If you do not see a value of 49 for this property, go on to step l.
     12. Right-click **PR_RULE_MSG_STATE** and then click **Delete property**.
 
         :::image type="content" source="./media/outlook-error-over-junk-emial-list-limit/delete-property-option.jpg" alt-text="Screenshot of selecting Delete property option.":::
-
     13. Click **OK** when you're prompted to delete the property.
     14. Close all windows that are open in MFCMAPI.
     15. Start Outlook.

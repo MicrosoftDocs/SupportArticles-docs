@@ -1,7 +1,7 @@
 ---
 title: Private items aren't displayed in a shared mailbox in Outlook
 description: Provides workarounds to an issue in which Private items aren't displayed in a shared mailbox in Outlook.
-author: helenclu
+author: simonxjx
 ms.author: shmcdani
 manager: dcscontentpm
 audience: ITPro
@@ -41,7 +41,9 @@ To work around this issue, use any of the following methods:
     ```powershell
     Add-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User laura@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate,CanViewPrivateItems
     ```
-
+    > [!NOTE]
+    > Although this cmdlet specifies **Calendar** as the target folder, it also enables you to view private items in the **Inbox** folder.
+    
     In Outlook:
 
     1. Select **File** > **Account Settings** > **Delegate Access**

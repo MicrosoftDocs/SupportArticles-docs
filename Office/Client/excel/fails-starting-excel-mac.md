@@ -1,7 +1,7 @@
 ---
 title: Unable to start Excel for Mac
 description: Cannot start Excel for Mac with the error "Excel has encountered a problem and needs to close."
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel for Mac
 ---
@@ -64,7 +64,7 @@ When you are finished, click the red button in the upper-left corner and go to s
    > [!NOTE]
    > The **Library** folder is hidden in Mac OS X Lion. To display this folder, hold down the OPTION key while you click the **Go** menu.
 10. Open **Preferences**.
-11. Open **Microsoft**, and then drag *com.microsoft.Excel.prefs.plist* to the desktop. If you cannot locate the file, Excel is using the default preferences. Go to step 13.
+11. Open **Microsoft**, and then drag *com.microsoft.Excel.prefs.plist* to the desktop. If you cannot locate the file, Excel is using the default preferences. Go to **Method 2**.
 12. Open Excel, and check whether the problem still occurs. If the problem still occurs, quit Excel, restore the file to its original location, and go to **Method 2**. If the problem is resolved, drag *com.microsoft.Excel,prefs.plist* to the **Trash**.
 
 ### Method 2

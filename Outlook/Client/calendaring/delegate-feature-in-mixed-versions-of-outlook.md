@@ -1,8 +1,8 @@
 ---
 title: Delegate feature in mixed versions of Outlook
 description: Describes a recommendation for Outlook scenarios in which you use delegates. These recommendations cover both Outlook for Windows clients and Entourage and Outlook 2011 for Mac.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

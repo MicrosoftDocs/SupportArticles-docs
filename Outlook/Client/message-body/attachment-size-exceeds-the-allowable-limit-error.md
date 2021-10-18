@@ -1,8 +1,8 @@
 ---
 title: Attachment size exceeds the allowable limit error
 description: Describes the circumstances surrounding an error that occurs when you add a large attachment to an email message in Outlook. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: sercast
 appliesto:
+- Outlook LTSC 2021
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
@@ -58,12 +59,12 @@ To modify the default attachment limit size in Outlook for an Internet email acc
 2. Start Registry Editor.
 3. Locate and then select one of the following registry subkeys:
 
-   HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Preferences  
+   HKEY_CURRENT_USER\Software\Microsoft\Office\\<x.0>\Outlook\Preferences  
    HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\ *x.0* \Outlook\Preferences
 
    > [!NOTE]
    >
-   > - The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 365 and Office 2019, 15.0 = Office 2013).
+   > - The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013).
    > - Manually create the path in the registry if it does not currently exist.
 
 4. Add the following registry data under this subkey:
@@ -89,7 +90,7 @@ If you are using an Exchange Server account, the 20-MB attachment limit for Inte
 > - These steps apply to Exchange Server 2007. Similar steps should be used for other versions of Exchange.
 > - This Exchange Server setting applies to all versions of Outlook.
 >
->    Note Outlook 2016 is not supported when connected to Exchange Server 2007. For more information, see [Error: Stop, you should wait to install Office 2016. You won’t be able to receive mail from a current mailbox](https://support.microsoft.com/office/error-stop-you-should-wait-to-install-office-2016-you-won-t-be-able-to-receive-mail-from-a-current-mailbox-2ab9e8ef-4cd9-4041-9426-73e8f6c5aacc).
+>    Note Outlook 2016 is not supported when connected to Exchange Server 2007. For more information, see [Error: Stop, you should wait to install Office 2016. You won't be able to receive mail from a current mailbox](https://support.microsoft.com/office/error-stop-you-should-wait-to-install-office-2016-you-won-t-be-able-to-receive-mail-from-a-current-mailbox-2ab9e8ef-4cd9-4041-9426-73e8f6c5aacc).
 >
 > - You must be an Exchange administrator to make the changes in the following steps. Regular users do not have access to the Exchange Management Console.
 

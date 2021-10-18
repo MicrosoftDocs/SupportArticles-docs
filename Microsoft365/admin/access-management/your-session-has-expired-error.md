@@ -1,7 +1,7 @@
 ---
 title: Your session has expired in Office Online
 description: If you begin IP address enforcement for OneDrive for Business, you'll receive a Your session has expired error in Office Online after 15 minutes.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - Office apps for the web
 ---

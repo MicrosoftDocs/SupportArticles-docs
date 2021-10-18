@@ -1,7 +1,7 @@
 ---
 title: Inquire COM add-in options do not respond in Excel 2013
 description: Works around an issue in which options on the INQUIRE tab in the Inquire COM add-in do not respond in Excel 2013.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: xl15beta, brampson, jenl
 appliesto:
 - Excel 2013

@@ -1,7 +1,7 @@
 ---
 title: Office 2010 product key change error step by step
 description: Fixes an issue in which the previously installed version of Office 2010 prompts the user to change the product key.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Office Home and Student 2010

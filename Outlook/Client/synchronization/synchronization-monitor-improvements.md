@@ -1,8 +1,8 @@
 ---
 title: Synchronization monitor improvements
 description: Describes how the October public updates for Outlook 2016 and Outlook 2013 include substantial changes in an internal feature that affects mail synchronization. Lists the changes and the controls that are associated with them.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

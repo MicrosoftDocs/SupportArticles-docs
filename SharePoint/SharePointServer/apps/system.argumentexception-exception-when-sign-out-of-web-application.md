@@ -1,7 +1,7 @@
 ---
 title: System.ArgumentException exception when you sign out of a SharePoint 2013 web application
 description: Fixes an issue that occurs if a SharePoint 2013 web application is configured by multiple authentication providers.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013

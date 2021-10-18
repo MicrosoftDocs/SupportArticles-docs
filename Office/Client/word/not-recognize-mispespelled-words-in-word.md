@@ -1,7 +1,7 @@
 ---
 title: Spell Check not working in Word 2010
 description: Provides steps to resolve an issue where the spell checker does not catch spelling mistakes in Word 2010.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Word 2010
@@ -32,7 +32,7 @@ Spell Check does not recognize misspelled words.
 When you select the **Spelling & Grammar** button in the **Proofing** group on the **Review** tab, you receive one of the following messages:
 
 - The spelling and grammar check is complete.
-- Proofing Tools are not installed for <default language>, try re-installing proofing tools.
+- Proofing Tools are not installed for \<default language\>, try re-installing proofing tools.
 
 ## Cause
 
@@ -73,9 +73,9 @@ To install the proofing tools, follow these steps:
     ![Screenshot of the Installation Option page, selecting Run all from My Computer.](./media/not-recognize-mispespelled-words-in-word/run-all-from-my-computer.png)
 
 ### Method 2: Enable the speller EN-US add-in
- 
+
 To enable the add-in, follow these steps:
- 
+
 1. Select the **File** tab, and then select **Options**.
 2. On the left, select **Add-Ins**.
 3. At the bottom of the **Word Options** dialog box, select the down arrow under **Manage**, change the selection from **COM Add-ins** to **Disabled items**, and then select **Go**.
@@ -84,12 +84,12 @@ To enable the add-in, follow these steps:
 
 4. In the **Disabled Items** dialog box, check whether **Speller EN-US (nlsdata0009.dll)** is available in the **Select the ones you wish to re-enable** box.
 5. If **Speller EN-US (nlsdata0009.dll)** is listed, select it, and then select **Enable**.
-6. Select **Close**, and then select **OK**. 
+6. Select **Close**, and then select **OK**.
 
 ### Method 3: Enable "Check spelling as you type"
- 
+
 To enable Spell Check as you type, follow these steps:
- 
+
 1. Select the **File** tab, and then select **Options**.
 2. In the **Word Options** dialog box, select **Proofing**.
 3. Make sure that the **Check spelling as you type** check box is selected in the **When correcting spelling and grammar in Word** section.
@@ -103,9 +103,9 @@ To enable Spell Check as you type, follow these steps:
 5. Select **OK**.
 
 ### Method 4: Select language and clear "Do not check spelling or grammar"  
- 
+
 To clear the "Do not check spelling or grammar check box, follow these steps:
- 
+
 1. Select the entire contents of the document.
 2. On the **Review** tab, select **Language** in the **Language** group, and then select **Set Proofing Language**.
 3. In the **Language** dialog box, select the language that you want.
@@ -130,9 +130,9 @@ To fix this problem yourself, follow these steps:
 2. In the **Run** box, enter **regedit**, and then press Enter.
 3. Locate and then right-click the following registry subkey:
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Shared Tools\Proofing Tools\1.0\Override**
-1. Select Registry Editor.
-1. Exit and then restart Word.
+    **`HKEY_CURRENT_USER\Software\Microsoft\Shared Tools\Proofing Tools\1.0\Override`**
+4. Select Registry Editor.
+5. Exit and then restart Word.
 
 ## More information
 

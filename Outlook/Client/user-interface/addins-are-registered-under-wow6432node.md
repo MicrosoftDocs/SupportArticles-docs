@@ -1,8 +1,8 @@
 ---
 title: Add-ins are registered under \Wow6432Node
 description: Discusses a behavior that add-ins for Office programs may be registered under the \Wow6432Node.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

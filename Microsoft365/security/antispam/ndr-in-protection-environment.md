@@ -1,8 +1,8 @@
 ---
 title: Users in an Exchange Online Protection environment receive NDRs when they send mail to a recipient environment that uses the China Anti-Spam Alliance service.
 description: Discusses a scenario in which users in an Exchange Online Protection environment receive NDRs when they send email messages to a recipient whose messaging environment uses the China Anti-Spam Alliance (CASA) service for mail security.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

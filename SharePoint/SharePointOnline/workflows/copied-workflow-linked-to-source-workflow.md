@@ -1,7 +1,7 @@
 ---
 title: A copied SharePoint Online workflow is linked to the source workflow
 description: A SharePoint Online workflow that was copied and pasted from a Workflows Site Object in SharePoint Designer is linked to the source workflow, so when you change or delete one of these workflows, both are changed or removed.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---

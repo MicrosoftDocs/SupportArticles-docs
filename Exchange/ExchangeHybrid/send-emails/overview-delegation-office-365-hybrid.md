@@ -47,7 +47,7 @@ This article describes the necessary configuration, administration details, and
 - The following differences apply, depending on how a user tries to access an additional mailbox:
 
   - Adding as an additional mailbox requires a mailbox in another forest to be ACLable in the user's forest. For more information, see [Configure Exchange to support delegated mailbox permissions in a hybrid deployment](/exchange/hybrid-deployment/set-up-delegated-mailbox-permissions).
-  - Auto-mapping will not work until all mailboxes are moved to Exchange Online. For more information, see [Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com/help/3080561).
+  - Auto-mapping will not work until all related mailboxes are moved to Exchange Online. Any mailboxes that receive permissions from another mailbox need to be moved at the same time as the granting mailbox. If a mailbox receives permissions from multiple mailboxes, that mailbox, and all of the mailboxes granting permissions to it, need to be moved at the same time. For more information, see [Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com/help/3080561) and [Permissions in Exchange hybrid deployments](/Exchange/permissions).
   - In some scenarios, a user will see only free/busy information for a calendar to which they have additional permissions. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](../calendars/cannot-view-cross-forest-calendar-data.md).
   - The user cannot send on behalf of another user after they add a mailbox as an additional account. For more information, see [Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server](../../ExchangeServer/mailflow/cannot-send-email-with-full-access.md).
 
@@ -77,7 +77,7 @@ This article describes the necessary configuration, administration details, and
 
   - The Calendar folder works differently in Outlook than other folders do. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](../calendars/cannot-view-cross-forest-calendar-data.md).
   - Private items are viewable only if the user is configured correctly as a delegate. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](./delegates-not-listed-correctly-in-outlook-after-migration.md).
-  - The user cannot view the calendar of a hidden mailbox in Excshange Online. For more information, see [Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](../user-and-shared-mailboxes/cannot-access-hidden-mailbox-in-outlook-after-migration.md).
+  - The user cannot view the calendar of a hidden mailbox in Exchange Online. For more information, see [Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](../user-and-shared-mailboxes/cannot-access-hidden-mailbox-in-outlook-after-migration.md).
 
 ### Send on Behalf of
 

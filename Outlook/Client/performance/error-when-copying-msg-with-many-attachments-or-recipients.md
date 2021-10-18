@@ -52,4 +52,4 @@ The process of archiving email to an MSG format does not contain desirable trait
 
 For developers seeking to export messaging data, the only workaround is to avoid using MSG to archive messages. Instead, develop your own file format to preserve the important properties on a message.
 
-For more detailed information about this subject, see the Microsoft blog post [No MSG For You!](https://docs.microsoft.com/archive/blogs/stephen_griffin/no-msg-for-you)
+For more detailed information about this subject, see the Microsoft blog post [No MSG For You!](/archive/blogs/stephen_griffin/no-msg-for-you).

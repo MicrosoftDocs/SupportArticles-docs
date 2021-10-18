@@ -1,7 +1,7 @@
 ---
 title: Cannot remove domain from Office 365
 description: Fixes an issue in which you receive a <DomainName> can't be removed because you're using it for your SharePoint Online website error message when you try to remove a domain from Office 365.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appliesto:
 - SharePoint Online
 - Office 365 Domain management

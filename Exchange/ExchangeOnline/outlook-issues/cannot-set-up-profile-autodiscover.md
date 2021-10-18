@@ -92,7 +92,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
     [Remote Connectivity Analyzer Outlook Autodiscover test](https://testconnectivity.microsoft.com/tests/O365Ola/input)
 2. Complete all the required fields on the form, and then click **Perform Test**.
 
-    :::image type="content" source="./media/cannot-set-up-profile-autodiscover/credentials.jpg" alt-text="Screenshot of enter test credentials":::
+    :::image type="content" source="media/cannot-set-up-profile-autodiscover/outlook-connectivity-required-fields.png" alt-text="Screenshot of the Outlook Connectivity form, showing required fields of email address, authentication type and credentials.":::
 
 3. When the test is finished, determine whether it's successful.
 
@@ -105,7 +105,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
 
 #### Method 4: Make sure that the user's attributes in Active Directory are set correctly
 
-You can use the [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox) cmdlet to determine the whether the following attributes are set correctly for the user. Common issues occur when a value is not set for one or more of these attributes. The following is an example of the correct attributes.
+If you have an Exchange hybrid deployment, you can use the [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox) cmdlet to determine whether the following attributes are set correctly for the user. Common issues occur when a value isn't set for one or more of these attributes. The following is an example of the correct attributes.
 
 |Attribute| Example |
 |-|-|

@@ -1,7 +1,7 @@
 ---
 title: Use SetOption to disable warning messages
 description: Describes how to use the Application.SetOption method to disable warning messages in an Access application.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: REBC
 appliesto:
 - Access 2007

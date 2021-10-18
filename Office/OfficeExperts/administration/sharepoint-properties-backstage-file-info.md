@@ -12,7 +12,8 @@ ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: warrenr
 appliesto:
-- Office 365
+- Microsoft 365
+- Office LTSC 2021
 - Office 2019
 - Office 2016
 ---
@@ -23,7 +24,7 @@ This article was written by [Warren Rath](https://social.technet.microsoft.com/p
 
 ## Symptoms
 
-In Microsoft Office 365, Office 2019, or Office 2016, when you try to open a document from SharePoint that has SharePoint metadata properties of type (for example, **Lookup** type > Multiple value selections), you don't see and set these properties on the Office Backstage area (**File** > **Info**).
+In Microsoft 365 Apps, Office LTSC 2021, Office 2019, or Office 2016, when you try to open a document from SharePoint that has SharePoint metadata properties of type (for example, **Lookup** type > Multiple value selections), you don't see and set these properties on the Office Backstage area (**File** > **Info**).
 
 ## Cause
 

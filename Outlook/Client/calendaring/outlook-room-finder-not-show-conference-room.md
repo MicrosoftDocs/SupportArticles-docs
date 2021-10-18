@@ -1,8 +1,8 @@
 ---
 title: Outlook Room Finder doesn't show conference rooms
 description: This article discusses an issue where using an older version of Microsoft Exchange Server to generate offline address book files may cause conference rooms to not appear in Microsoft Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

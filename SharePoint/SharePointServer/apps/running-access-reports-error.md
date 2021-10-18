@@ -1,7 +1,7 @@
 ---
 title: Unable to run a report in an Access 2010 Web database
 description: Access Services reports are not enabled when running a report in an Access 2010 Web database.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Server
 ---

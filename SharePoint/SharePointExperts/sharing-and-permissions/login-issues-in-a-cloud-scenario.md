@@ -1,7 +1,7 @@
 ---
 title: SharePoint Designer 2013 login Issues in a cloud scenario
 description: Describes the login issues in a cloud scenario of SharePoint Designer 2013.
-author: simonxjx
+author: helenclu
 ms.author: joergsi
 manager: dcscontentpm
 localization_priority: Normal

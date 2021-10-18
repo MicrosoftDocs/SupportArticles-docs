@@ -1,8 +1,8 @@
 ---
 title: Search logic change to "Title" property in the Security and Compliance Centerx
 description: Describes a change to the "Title" property when conducting eDiscovery searches in the Security and Compliance Center. 
-ms.author: luche
-author: helenclu
+ms.author: v-maqiu
+author: MaryQiu1987
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

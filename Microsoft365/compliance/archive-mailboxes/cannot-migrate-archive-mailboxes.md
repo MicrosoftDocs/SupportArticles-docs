@@ -1,8 +1,8 @@
 ---
 title: Cannot migrate on-premises archive mailboxes to Office 365 in a hybrid migration
 description: This article describes an issue in which you cannot migrate an on-premises archive mailbox to Office 365 in a hybrid migration. Provides a workaround.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

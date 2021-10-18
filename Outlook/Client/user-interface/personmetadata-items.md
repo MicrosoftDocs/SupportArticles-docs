@@ -74,9 +74,9 @@ Notice that MFCMAPI may seem to stop responding for an extended time while it pe
 
 ### Method 2: Run the EWS script as an administrator
 
-This method requires you to configure a service account to [impersonate the user](https://docs.microsoft.com/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange). See this [article](https://docs.microsoft.com/exchange/client-developer/exchange-web-services/how-to-configure-impersonation) to learn how to configure impersonation.
+This method requires you to configure a service account to [impersonate the user](/exchange/client-developer/exchange-web-services/impersonation-and-ews-in-exchange). See this [article](/exchange/client-developer/exchange-web-services/how-to-configure-impersonation) to learn how to configure impersonation.
 
-1. [Download and install the EWS Managed API](https://www.microsoft.com/download/details.aspx?id=42951) on the computer where you will run the EWS script.
+1. [Download and install the EWS Managed API](https://www.nuget.org/packages/Microsoft.Exchange.WebServices/) on the computer where you will run the EWS script.
 2. Download the [EWS script](https://github.com/guruxp/CleanPersonMetadata/raw/main/CleanPersonMetadata.zip).
 3. Run the following cmdlet as an administrator to install the latest Exchange Online PowerShell management module:
 
@@ -97,5 +97,13 @@ This method requires you to configure a service account to [impersonate the user
     ```powershell
     Import-CSV UserList.csv | .\CleanPersonMetadata.ps1 -Confirm:$false
     ```
+
+    **Note**: If you get an error that the module cannot be found, you need to update the script to match the file path to the module. The script currently has the following path:
+
+    `Import-Module "C:\Program Files\WindowsPowerShell\Modules\ExchangeOnlineManagement\<module_version>\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" -force`
+
+    Update the path in the script at line #639 as follows:
+
+    `Import-Module "C:\Program Files\WindowsPowerShell\Modules\ExchangeOnlineManagement\<module_version>\netFramework\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" -force`
 
 5. When you're prompted, enter the credentials of the service account that you configured for impersonation.

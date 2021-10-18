@@ -1,7 +1,7 @@
 ---
 title: Known issues in Rooms 
-ms.author: v-lanac
-author: lanachin
+ms.author: luche
+author: helenclu
 ms.reviewer: sohailta
 manager: serdars
 audience: ITPro
@@ -20,13 +20,13 @@ ms.custom:
 search.appverid: 
 - MET150
 ---
-# Known issues in Rooms 
+# Known issues in Rooms
 
 This article lists the known issues for Microsoft Teams Rooms, by feature area.
 <!-- If we get word that one of these issues no longer applies, contact meerak@microsoft.com or msmets@microsoft.com and let them know to EoL the corresponding KB  -->
 
 <a name="update"> </a>  
-## Update 
+## Update
 
 | Issue title |  Behavior \/ Symptom | Known workaround | KB Article |
 |  ---        |      ---             |   ---            | --- |
@@ -35,14 +35,12 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 |  Device updated to unsupported version of Windows 10   |    Windows 10 device updated from version 1803 to version 1809, which is not supported. The supported version is 1903. |   This can happen if the [Group Policy or MDM setting for DeferFeatureUpdatesPeriodinDays](/windows/deployment/update/waas-configure-wufb) setting, which lets you defer feature updates for a specified number of days, is set to the maximum of 365 days. <br><br> Windows 10 version 1809 isn't supported with Microsoft Teams Rooms, while version 1903 is supported. However, as of March 27, 2020, version 1809 is over 365 days old. If this setting isn't changed, Windows attempts to install version 1809, which may cause issues with Microsoft Teams Rooms.<br><br>To avoid this situation, **remove** any Group Policy or MDM setting for deferring updates. This allows Windows to update to the latest, supported OS version. <br><br>**IMPORTANT** The Group Policy or MDM setting must be **removed** (left unconfigured) and **not set to 0**. If the policy is set to 0, Windows takes the latest available version which may not be supported. |  None |
 |||||
 
-
-
 <a name="OS-conflicts"> </a>  
-## User interface 
+## User interface
 
 | Issue title |  Behavior \/ Symptom | Known workaround | KB Article |
 |  ---        |      ---             |   ---            | --- |
-|Virtual keyboard missing   | The virtual keyboard doesn't appear when you need to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install 2020-04 Cumulative Update for Windows 10, version 1903 for x64-based Systems through Windows Updates.  | None | 
+|Virtual keyboard missing   | The virtual keyboard doesn't appear when you need to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install 2020-04 Cumulative Update for Windows 10, version 1903 for x64-based Systems through Windows Updates.  | None |
 |||||
 
 <a name="Hardware"> </a>  
@@ -66,7 +64,7 @@ If you desire a front of room display to automatically switch to an active video
 
 ***
 
-Always use a wired 1-Gbps network connection to assure you have the needed bandwidth. 
+Always use a wired 1-Gbps network connection to assure you have the needed bandwidth.
 
 ***
 

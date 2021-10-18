@@ -1,7 +1,7 @@
 ---
 title: Invalid URL when clicking a SharePoint Online Promoted Link
 description: You cannot open a link to a local file that uses the file:// protocol in the Promoted Links list.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

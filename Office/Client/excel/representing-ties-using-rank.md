@@ -1,7 +1,7 @@
 ---
 title: Excel statistical functions Representing ties by using RANK
 description: Describes how to use RANK to give an average rank value to tied observations.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Excel
 ---

@@ -1,13 +1,13 @@
 ---
 title: COM add-ins are not displayed in the COM Add-Ins dialog box
 description: Works around an issue in which the COM Add-Ins dialog box in Excel 2013 and Excel 2016 does not display built-in COM add-ins as expected.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: lauraho, jenl
 ms.custom: CSSTroubleshoot
 search.appverid: 

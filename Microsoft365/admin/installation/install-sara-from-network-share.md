@@ -1,7 +1,7 @@
 ---
 title: Install and maintain SaRA tool from a network share
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
-author: helenclu
+author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
@@ -39,7 +39,7 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
 2. Type the path to SaraSetup.exe, and then press **Enter**.
     > [!NOTE]
     >
-    > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.<br />
+    > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.</br>
     > :::image type="content" source="media/install-sara-from-network-share/120760-1.png" alt-text="SaRA cmd line setup.":::
     > If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
     > :::image type="content" source="media/install-sara-from-network-share/120760-2.png" alt-text="SaRA runs in quiet mode.":::
@@ -57,11 +57,10 @@ To manually install the SaRA tool, follow these steps:
 1. Double-click **SaraSetup.exe**.
 1. Select **Install**.
    :::image type="content" source="media/install-sara-from-network-share/120760-5.png" alt-text="SaRA setup screen.":::
-1.	Wait for the download and installation process to finish.
+1. Wait for the download and installation process to finish.
    :::image type="content" source="media/install-sara-from-network-share/120760-6.png" alt-text="SaRA setup installation progress.":::
-1.	After the installation is complete, and the End User License agreement has been accepted, the first Support and Recovery screen will be displayed.
+1. After the installation is complete, and the End User License agreement has been accepted, the first Support and Recovery screen will be displayed.
    :::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
-
 
 ## Maintaining the SaRA installation folder and updating SaRA
 
@@ -83,7 +82,6 @@ Any computer that has SaRA already installed can now be updated by using the fol
 SaRA is now installed and ready to run troubleshooting scenarios.
 :::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
 
-
 ## SaRA version history
 
 One or two times a month, a new build of SaRA is available through the download link that is provided at the beginning of this article. To keep SaRA updated to have the latest version, we recommend that you follow the steps in the "Maintaining the SaRA installation folder and updating SaRA" section every month.
@@ -92,6 +90,9 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|October 7, 2021|17.00.7332.000|
+|July 12, 2021|17.00.6880.004|
+|June 30, 2021|17.00.6805.016|
 |March 16, 2021|17.00.6271.008|
 |February 11, 2021|17.00.6125.006|
 |January 25, 2021|17.00.5991.013|

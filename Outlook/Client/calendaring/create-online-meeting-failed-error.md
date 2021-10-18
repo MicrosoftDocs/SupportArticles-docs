@@ -1,8 +1,8 @@
 ---
 title: Create online meeting failed error
 description: Describes an issue that triggers an error when you try to create an online meeting in Outlook while you're running Lync 2013 or Lync 2010. This issue involves Group Policy. A resolution is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

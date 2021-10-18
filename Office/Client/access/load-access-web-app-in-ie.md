@@ -1,7 +1,7 @@
 ---
 title: An error has occurred when you load an Access web app in Internet Explorer
 description: Describes an issue that triggers an Error has occurred. Sorry, something went wrong. Please try again later error. Occurs when you try to load a Microsoft Access web app in Internet Explorer. A resolution is provided.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
@@ -9,7 +9,7 @@ search.appverid:
 - MET150
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Access for Office 365

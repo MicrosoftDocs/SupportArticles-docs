@@ -1,8 +1,8 @@
 ---
 title: Outlook can't set OOF status or view Free busy
 description: Resolves an issue in which users may be unable to view free or busy data in an Exchange Server 2010 and Exchange Server 2013 coexistence environment.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,14 +1,14 @@
 ---
 title: Can't create PivotTable when field names contain similar characters
 description: Describes and provides a workaround for an issue in which you cannot insert a PivotTable into a workbook in Excel 2013. This issue occurs when you select a source range in which the field names contain similar characters.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: xl15beta, diego
 search.appverid: 
 - MET150

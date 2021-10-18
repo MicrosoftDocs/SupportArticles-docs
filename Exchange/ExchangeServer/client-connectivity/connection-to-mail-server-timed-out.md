@@ -1,6 +1,6 @@
 ---
-title: “The connection to your mail server timed out” error in Outlook for iOS or Outlook for Android
-description: You get the error “The connection to your mail server timed out” when you use Outlook for iOS or Outlook for Android to sign in to Exchange Server.
+title: The connection to your mail server timed out error in Outlook for iOS or Outlook for Android
+description: You get the error The connection to your mail server timed out when you use Outlook for iOS or Outlook for Android to sign in to Exchange Server.
 author: v-matham
 ms.author: v-matham
 manager: dcscontentpm
@@ -10,6 +10,7 @@ ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
 - CI 146711
+- CI 147050
 - Exchange Server
 - CSSTroubleshoot
 ms.reviewer: taruns, daweiler, jeffkalv
@@ -21,7 +22,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# “The connection to your mail server timed out” error in Outlook for iOS or Outlook for Android
+# "The connection to your mail server timed out" error in Outlook for iOS or Outlook for Android
 
 ## Symptoms
 
@@ -35,7 +36,7 @@ Also, mailbox synchronization might stop unexpectedly if your Exchange account i
 
 This issue occurs if either of the following conditions is true:
 
-- The version of Exchange Server that you’re running uses TLS 1.1 or 1.0.
+- The version of Exchange Server that you're running uses TLS 1.1 or 1.0.
 - The version of Windows Server that's hosting the on-premises Exchange Server is version 2008 or an earlier version, and is using TLS 1.1 or 1.0.
 
 [Both TLS 1.0 and 1.1 are deprecated](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365).
@@ -55,5 +56,5 @@ Although Exchange Server version 2010 and later versions can be updated to enabl
 
 If your environment already uses TLS 1.2 or later versions, do the following:
 
-- Check whether you’re using a valid TLS certificate, and whether it's installed correctly. For more information, see [Certificate procedures in Exchange Server](/exchange/architecture/client-access/certificate-procedures).
+- Check whether you're using a valid TLS certificate, and whether it's installed correctly. For more information, see [Certificate procedures in Exchange Server](/exchange/architecture/client-access/certificate-procedures).
 - If the TLS certificate is expired, renew the certificate by following the steps that are provided in [Renew an Exchange Server certificate](/exchange/architecture/client-access/renew-certificates).

@@ -1,6 +1,6 @@
 ---
-title: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
-description: Discusses how to troubleshoot slow performance on Windows 8 or Windows Server 2012 when you use the "Open with Explorer" command.
+title: Slow "View in File Explorer" performance on Windows 8 or Windows Server 2012
+description: Discusses how to troubleshoot slow performance on Windows 8 or Windows Server 2012 when you use the "View in File Explorer" command.
 author: helenclu
 manager: dcscontentpm
 ms.date: 02/14/2020
@@ -10,7 +10,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ms.custom: 
@@ -18,11 +18,11 @@ ms.custom:
 - CSSTroubleshoot 
 ---
 
-# Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
+# Slow "View in File Explorer" performance on Windows 8 or Windows Server 2012
 
 ## Symptoms
 
-The list of files and directories in a SharePoint Online document library loads slowly when you select Open with Explorer on a Windows 8-based or Windows Server 2012-based computer. 
+The list of files and directories in a SharePoint Online document library loads slowly when you select **View in File Explorer** on a Windows 8-based or Windows Server 2012-based computer. 
 
 ## Resolution
 

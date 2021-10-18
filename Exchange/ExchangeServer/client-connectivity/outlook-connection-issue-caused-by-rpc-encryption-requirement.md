@@ -30,7 +30,8 @@ _Original KB number:_ &nbsp;3032395
 
 The article only applies to the Microsoft Outlook connection issues that are caused by the RPC encryption requirement.
 
-![Screenshot about RPC encryption option](./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/exchange-encryption.png)
+:::image type="content" source="./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/exchange-encryption.png" alt-text="Screenshot about R P C encryption option.":::
+
 
 ## Symptoms
 
@@ -50,7 +51,7 @@ However, if you're using a cached mode profile, Outlook doesn't display an error
 
 - Outlook starts in the **Disconnected** state (the lower-right corner of the Outlook windows displays "Disconnected," the screenshot for the state is shown below).
 
-    ![Screenshot for the lower-right corner of the Outlook windows](./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/disconnected-state.jpg)
+    :::image type="content" source="./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/disconnected-state.png" alt-text="Screenshot for the error in the lower-right corner of the Outlook window.":::
 
 - Outlook starts and you can send and receive email messages. However, you only see two connections within the "Microsoft Exchange Connection Status" and you may see the Type Directory displayed as Disconnected/Connecting.
 
@@ -88,7 +89,7 @@ To manually update an existing Outlook profile so that it uses RPC encryption, f
 1. In the Microsoft Exchange dialog box, select the **Security** tab.
 1. Select **Encrypt data between Microsoft Office Outlook and Microsoft Exchange** > **OK** (A screenshot for this step can be seen here).
 
-    ![Screenshot with Encrypt data between Microsoft Office Outlook and Microsoft Exchange selected](./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/select-encrypt-data-between-outlook-exchange.jpg)
+    :::image type="content" source="./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/select-encrypt-data-between-outlook-exchange.png" alt-text="Screenshot with Encrypt data between Microsoft Office Outlook and Microsoft Exchange selected.":::
 
 1. Select **Next** > **Finish**.
 1. Select **Close** > **Close** > **OK**.
@@ -117,7 +118,7 @@ The default Group Policy template for Outlook 2010 contains the Group Policy set
 1. Under **User Configuration**, expand **Administrative Templates (ADM)** to locate the policy node for your template. By using the Outlk14.adm template, this node will be named Microsoft Outlook 2010.
 1. Under **Account Settings**, select the **Exchange** node (A screenshot for this step can be seen here).
 
-    :::image type="content" source="./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/select-exchange-node-2010.jpg" alt-text="Screenshot with the Exchange node under Outlook 2010 selected.":::
+    :::image type="content" source="./media/outlook-connection-issue-caused-by-rpc-encryption-requirement/select-exchange-node-2010.png" alt-text="Screenshot with the Exchange node under Outlook 2010 selected.":::
 
 1. Double-click the **Enable RPC encryption** policy setting.
 1. On the **Setting** tab, select **Enabled**.
@@ -204,7 +205,7 @@ To disable the required encryption between Outlook and Exchange, follow these st
     To re-enable the RPC encryption requirement on your Exchange servers that have the **Client Access Server** role, run the following command in the Exchange Management Shell:
 
     ```powershell
-     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True -EncryptionRequired:$True
+     Set-RpcClientAccess -Server <Exchange server name> -EncryptionRequired:$True
     ```
 
     > [!NOTE]

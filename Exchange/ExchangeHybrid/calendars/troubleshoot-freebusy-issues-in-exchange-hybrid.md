@@ -298,7 +298,7 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 1. On the Exchange 2010/2013 CAS, run the following command in the Exchange Management Shell:
 
     ```powershell
-    Get-OrganizationReationship -Identity "On Premises to Exchange Online Organization Relationship"
+    Get-OrganizationRelationship -Identity "On Premises to Exchange Online Organization Relationship"
     ```
 
 The output should resemble the following:
@@ -606,7 +606,7 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 From the Exchange 2010/2013 CAS, run the following command in Exchange Management Shell:
 
 ```powershell
-Get-OrganizationReationship -Identity "On Premises to Exchange Online Organization Relationship"
+Get-OrganizationRelationship -Identity "On Premises to Exchange Online Organization Relationship"
 ```
 
 The output should resemble the following:
@@ -654,6 +654,7 @@ Other useful resources:
 - [Remote Connectivity Analyzer tool](https://testconnectivity.microsoft.com/tests/o365)
 - [How to troubleshoot issues that prevent a user from viewing other users' free/busy information in Office Outlook 2007 and in Outlook 2010 in Microsoft 365](https://support.microsoft.com/office/how-to-troubleshoot-issues-that-prevent-a-user-from-viewing-other-users-free-busy-information-in-office-outlook-2007-and-in-outlook-2010-in-microsoft-365-02249bf3-bca1-47b3-8403-c38b8b59ea4e?ui=en-us&rs=en-us&ad=us)
 - [Video: Troubleshooting Issues with Free/Busy Information in Office Outlook Clients for Microsoft 365](https://www.youtube.com/watch?v=Sjp3KCVPMso)
+- [Free/busy lookups stop working in a cross-premises environment or in an Exchange Server hybrid deployment](freebusy-lookups-stop-working.md)
 
 ### Tools and resources
 

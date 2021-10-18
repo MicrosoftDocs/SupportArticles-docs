@@ -50,7 +50,7 @@ To fix this problem, you must change the MSExchangeMailboxReplication.exe.config
 
 1. Locate the MSExchangeMailboxReplication.exe.config file in the following path:
 
-   \<Exchange Installation Path>\Program Files\Microsoft\Exchange Server\V14\Bin\MSExchangeMailboxReplication.exe.config
+   \<Exchange Installation Path>\Program Files\Microsoft\Exchange Server\V15\Bin\MSExchangeMailboxReplication.exe.config
 
 2. Change the **DataImportTimeout** setting from the default value to **20**.
 3. Save the changes to the file.

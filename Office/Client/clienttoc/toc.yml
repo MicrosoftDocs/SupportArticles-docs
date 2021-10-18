@@ -13,6 +13,8 @@
           href: ../access/access-2010-crashes.md
         - name: Access database engine cannot find input table
           href: ../access/database-engine-not-find-input-table.md
+        - name: Access error String data, right truncation (#0)
+          href: ../access/string-data-right-truncation.md
         - name: Access freezes when opening a linked table
           href: ../access/access-freezes-when-open-linked-table.md
         - name: ActiveX component can't create object
@@ -22,7 +24,7 @@
         - name: Ambiguous name detected
           href: ../access/ambiguous-name-detected.md
         - name: Automate the process of selecting printer for a report
-          href: ../access/automate-selecte-printer-for-report.md
+          href: ../access/automate-selected-printer-for-report.md
         - name: Build a dynamic query with values from a search form
           href: ../access/build-dynamic-query-from-search-form.md
         - name: Can't add new records programmatically
@@ -295,6 +297,8 @@
           href: ../activation/cant-activate-on-new-computer.md
         - name: Can't verify the license for this product
           href: ../activation/license-issue-when-start-office-application.md
+        - name: Errors activating Microsoft 365 on older Windows versions
+          href: ../activation/errors-activating-on-older-windows.md
         - name: Office activation process issues
           href: ../activation/office-activation-process-issues.md
         - name: Issue when activating Microsoft 365 Apps for enterprise
@@ -343,6 +347,8 @@
           href: ../excel/cant-add-refedit-control-to-vba-userform..md
         - name: Can't create a PivotTable in Excel 2013
           href: ../excel/cannot-create-pivottable.md
+        - name: Can't edit certain cells in a protected worksheet using Excel for Mac
+          href: ../excel/unable-to-edit-protected-ranges-on-mac.md
         - name: Can't export to Excel from SharePoint Online
           href: ../excel/cannot-export-to-excel.md
         - name: Can't modify oData connection in PowerPivot
@@ -601,6 +607,8 @@
           href: ../excel/use-shared-workbook.md
         - name: Use startup folders
           href: ../excel/use-startup-folders.md
+        - name: User info in @mentions doesn't resolve
+          href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
         - name: Workbook isn't activated when you run a macro
@@ -625,7 +633,7 @@
           href: ../installation/error-1935-when-install-office-2010.md
         - name: Error when you install an Office program
           href: ../installation/error-run-office-setup-program.md
-        - name: How to download and run Office 2019 installation files not in VLSC
+        - name: How to download and run Office LTSC installation files not in VLSC
           href: ../installation/how-to-download-office-install-not-in-vlsc.md
         - name: ForceUpgrade and ForceDowngrade attributes
           href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
@@ -647,8 +655,6 @@
       items:
         - name: Can't pass the Welcome Screen in Office for Mac
           href: ../office-for-mac/office-for-mac-welcome-screen.md
-        - name: Error when you open files from SharePoint in Office client
-          href: ../office-for-mac/files-fail-to-open.md
         - name: Known issues with Office for Mac
           href: ../office-for-mac/office-for-mac-issues-macos-10-7.md
         - name: Office 2016 for Mac 64-bit upgrade
@@ -725,10 +731,12 @@
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Error when installing Office 2013
           href: ../office-suite-issues/office-2013-installation-error.md
-        - name: Error when installing VS2010 Toos for Office Runtime
+        - name: Error when installing VS2010 Tools for Office Runtime
           href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
         - name: Error when opening a document
           href: ../office-suite-issues/error-open-document.md
+        - name: Error when you open files from SharePoint in Office client
+          href: ../office-suite-issues/files-fail-to-open.md
         - name: FAQ about Office Activation Wizard
           href: ../office-suite-issues/faq-about-office-activation-wizard.md
         - name: Features to enable collaboration
@@ -783,7 +791,7 @@
           href: ../office-suite-issues/office-suite-setup-not-restart.md
         - name: Office End User License Agreement always appears
           href: ../office-suite-issues/office-end-user-license-agreement.md
-        - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+        - name: Office error “could not create the work file”
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
         - name: Office files with RMS protection crash
           href: ../office-suite-issues/rms-protected-files-crash.md
@@ -877,6 +885,8 @@
           href: ../powerpoint/slide-transition-sounds-missing.md
         - name: Troubleshoot a damaged presentation
           href: ../powerpoint/damaged-presentation.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
     - name: Project
       items:
         - name: Calculate work and duration with resource assignment changes
@@ -1027,6 +1037,8 @@
           href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
         - name: How to merge multiple documents
           href: ../word/merge-word-documents.md
+        - name: How to recover unsaved Word documents
+          href: ../word/recover-lost-unsaved-corrupted-document.md
         - name: Image DPI is changed after you print to PDF
           href: ../word/image-dpi-change-after-print-to-pdf.md
         - name: In-place edit of an embedded Word document with ActiveX control causes flickering
@@ -1039,16 +1051,12 @@
           href: ../word/merge-word-documents.md
         - name: Object may not appear in Word 2010
           href: ../word/object-not-appear-in-word-2010.md
-        - name: Opening file is blocked by registry policy
-          href: ../word/opening-file-blocked-by-registry-policy.md
         - name: Operating parameter limitations and specifications
           href: ../word/operating-parameter-limitation.md
         - name: Performance issues with AutoRecover location
           href: ../word/performance-issue-on-autorecover-location.md
         - name: Print failures in Word
           href: ../word/print-failures-in-word.md
-        - name: Recover a lost, unsaved, or corrupted Word document
-          href: ../word/recover-lost-unsaved-corrupted-document.md
         - name: relationship rID8 was not found
           href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
         - name: Reset user options and registry settings in Word
@@ -1061,6 +1069,8 @@
           href: ../word/track-changes-disabled.md
         - name: Troubleshoot print failures in Word for Office 365 on Windows 10
           href: ../word/print-failures-word-for-office-365-on-win-10.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
         - name: Word slows or stops responding

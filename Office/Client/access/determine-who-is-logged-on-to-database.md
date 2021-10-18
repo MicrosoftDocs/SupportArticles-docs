@@ -1,7 +1,7 @@
 ---
 title: Determine who is logged on to a database
 description: Describes how to determine who is logged on to a database by using Microsoft Jet UserRoster in Access.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: KSWALLOW 
 appliesto:
 - Access 2007
@@ -60,35 +60,34 @@ To determine who is logged onto a database, follow these steps:
 4. Type or paste the following code:
 
     **Note** The sample code in this article uses Microsoft ActiveX Data Objects. For this code to run properly, you must reference the Microsoft ActiveX Data Objects 2.1 or later version Library. To do so, click **References** on the **Tools** menu in the Visual Basic Editor, and make sure that the **Microsoft ActiveX Data Objects 2.1 Library** check box is selected.
+
     ```vb
     Sub ShowUserRosterMultipleUsers()
         Dim cn As New ADODB.Connection
         Dim rs As New ADODB.Recordset
-        Dim i, j As Long
-    
-    Set cn = CurrentProject.Connection
-    
-    ' The user roster is exposed as a provider-specific schema rowset
-        ' in the Jet 4.0 OLE DB provider.  You have to use a GUID to
+
+        Set cn = CurrentProject.Connection
+
+        ' The user roster is exposed as a provider-specific schema rowset
+        ' in the Jet 4.0 OLE DB provider. You have to use a GUID to
         ' reference the schema, as provider-specific schemas are not
         ' listed in ADO's type library for schema rowsets
-    
-    Set rs = cn.OpenSchema(adSchemaProviderSpecific, _
+
+        Set rs = cn.OpenSchema(adSchemaProviderSpecific, _
         , "{947bb102-5d43-11d1-bdbf-00c04fb92675}")
-    
-    'Output the list of all users in the current database.
-    
-    Debug.Print rs.Fields(0).Name, "", rs.Fields(1).Name, _
+
+        'Output the list of all users in the current database.
+
+        Debug.Print rs.Fields(0).Name, "", rs.Fields(1).Name, _
         "", rs.Fields(2).Name, rs.Fields(3).Name
-    
-    While Not rs.EOF
+
+        While Not rs.EOF
             Debug.Print rs.Fields(0), rs.Fields(1), _
             rs.Fields(2), rs.Fields(3)
             rs.MoveNext
-        Wend
-    
+        WEnd
+
     End Sub
-    
     ```
 
 5. Save the module as ShowUsers.   

@@ -1,8 +1,8 @@
 ---
 title: The address list cannot be displayed error
 description: Fixes an issue in which you can't view the contacts of a public folder in Outlook.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

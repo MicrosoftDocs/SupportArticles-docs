@@ -1,8 +1,8 @@
 ---
 title: Outlook issues because of the ExtractOrganizedMeetings registry value
 description: Describes meeting issues that may occur with Outlook when the ExtractOrganizedMeetings registry value is present.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

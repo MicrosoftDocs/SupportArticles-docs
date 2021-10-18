@@ -1,7 +1,7 @@
 ---
 title: Office 365 Sway tile still appears in App Launcher even after it's disabled
 description: Describes an issue in which the Office 365 Sway tile is still displayed in the Office 365 App Launcher even after it's disabled.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 appiesto:
 - Sway
 ---

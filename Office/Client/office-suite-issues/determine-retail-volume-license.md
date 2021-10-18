@@ -1,16 +1,16 @@
 ---
 title: How to determine whether you have a retail edition or a volume license edition of a 2007 or a 2010 Microsoft Office suite
 description: Describes how to determine which type of license was used to purchase a 2007 or a 2010 Office suite.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.topic: troubleshoot
+ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Office Home and Business 2010
 - Office Home and Student 2010

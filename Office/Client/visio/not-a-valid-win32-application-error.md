@@ -1,7 +1,7 @@
 ---
 title: This is not a valid win32 application
 description: Discusses an issue that occurs when you try to install Microsoft 365 Apps for enterprise, Visio Pro for Office 365, or Project for Office 365.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft 365 Apps for enterprise
 - Visio Pro for Office 365

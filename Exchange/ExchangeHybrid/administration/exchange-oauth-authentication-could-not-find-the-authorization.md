@@ -59,24 +59,18 @@ To fix this issue, follow these steps:
 3. Create a new certificate. To do this, run the following command:
 
    ```powershell
-   New-ExchangeCertificate -KeySize 2048 -SubjectName "cn= Microsoft Exchange ACS Certificate" -FriendlyName "Microsoft Exchange Server ACS Certificate" -PrivateKeyExportable $true -Services SMTP -DomainName fabrikam.com
+   New-ExchangeCertificate -KeySize 2048 -SubjectName "cn= Microsoft Exchange Server Auth Certificate" -FriendlyName "Microsoft Exchange Server Auth Certificate" -PrivateKeyExportable $true -Services SMTP -DomainName fabrikam.com
    ```
 
 4. Set the new certificate that you created to be used for OAuth authentication. To do this, run the following commands:
 
    Command 1:
 
-   ```console
-   $date=get-date
+   ```powershell
+   Set-AuthConfig -NewCertificateThumbprint <ThumbprintFromStep4A> -NewCertificateEffectiveDate (Get-Date)
    ```
 
    Command 2:
-
-   ```powershell
-   Set-AuthConfig -NewCertificateThumbprint <ThumbprintFromStep4A> -NewCertificateEffectiveDate $date
-   ```
-
-   Command 3:
 
    ```powershell
    Set-AuthConfig -PublishCertificate

@@ -1,7 +1,7 @@
 ---
 title: Long numbers are displayed incorrectly in Excel
 description: Describes how to show long numbers in Excel cells.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2010
 - Microsoft Office Excel 2007
@@ -62,5 +62,9 @@ When you enter a long number, type a single quotation mark (**'**) first in the 
 For example, type **'1234567890123456789** and the quotation mark will not be displayed after you press ENTER.
 
 ![Example](./media/long-numbers-incorrectly-in-excel/example-2.png)
+
+## Related articles
+
+[Format numbers as text in Excel for Mac](https://support.microsoft.com/office/format-numbers-as-text-in-excel-for-mac-dfbe20dc-e7b1-44b2-80fe-2072d074e2a3)
 
 Your opinion is important to us!Do not hesitate to tell us what you think of this article using the comment field located at the bottom of the document. This will allow us to improve the content. Thank you in advance!

@@ -42,7 +42,7 @@ This problem occurs if the dynamic distribution group was set up before the envi
 Use the `Set-DynamicDistributionGroup` cmdlet to update the filters for the dynamic distribution group to include mail-enabled users. For example, run the following command:
 
 ```powershell
-Set-DynamicDistributionGroup -Identity sales@contoso.com -IncludedRecipients "MailboxUsers,MailContacts" -RecipientFilter {((RecipientType -eq 'UserMailbox' -or 'MailUser' -or 'MailContact'))}
+Set-DynamicDistributionGroup -Identity sales@contoso.com -RecipientFilter {(RecipientType -eq 'UserMailbox') -or (RecipientType -eq 'MailUser') -or (RecipientType -eq 'MailContact')}
 ```
 
 > [!IMPORTANT]

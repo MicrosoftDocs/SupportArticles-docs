@@ -70,10 +70,10 @@
     "globalMetadata": {
       "breadcrumb_path": "/office/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
-      "feedback_product_url": "https://office365.uservoice.com/",
+      "recommendations": true,
+      "feedback_system": "None",
       "titleSuffix": "Office",
+      "hideEdit": true,
       "searchScope": ["Office Support"] 
     },
     "fileMetadata": {},

@@ -62,7 +62,7 @@ Additionally, you must meet the second condition ("certificate-based connector 
 
     For example, contoso.com is your organization's domain. A user on your organization's on-premises server, kate@contoso.com, enables forwarding for all messages to kate@tailspintoys.com. When john@fabrikam.com sends a message to kate@contoso.com, the message is automatically forwarded to kate@tailspintoys.com.
 
-    From the point of view of Office 365, the message is sent from john@fabrikam.com to  kate@tailspintoys.com. Because Kate's mail is forwarded, neither the sender domain nor the recipient domain belongs to your organization.
+    From the point of view of Office 365, the message is sent from john@fabrikam.com to kate@tailspintoys.com. Because Kate's mail is forwarded, neither the sender domain nor the recipient domain belongs to your organization.
   
 ![email forwarding](./media/office-365-notice/email-forwarding.png)
 

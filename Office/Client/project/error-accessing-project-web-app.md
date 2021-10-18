@@ -1,8 +1,8 @@
 ---
 title: Error occurs when accessing Project Web App
 description: Introduces how to give access to PWA and permissions.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

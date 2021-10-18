@@ -1,7 +1,7 @@
 ---
 title: No default mail client error
 description: Describes an issue in which you receive No default mail client error when you attempt to send a file from Office programs. Provides a solution.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Microsoft Office
 ---
@@ -34,20 +34,20 @@ This problem occurs when the following registry data is present on your computer
 - 32-bit versions of Microsoft Office on 32-bit versions of Windows, or 64-bit versions of Microsoft Office on 64-bit versions of Windows
 
     Key: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Messaging Subsystem\MSMapiApps**
-    
+
     REG_SZ: **Version**
-    
-    Data value: <no data>
+
+    Data value: \<no data\>
 
 - 32-bit versions of Microsoft Office on 64-bit versions of Windows
 
     Key: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows Messaging Subsystem\MSMapiApps**
-    
-    REG_SZ: **Version**
-    
-    Data value: <no data>   
 
-**NOTE**: If you do not find the **Version** value with no data associated with it, or the **Version** value does not exist at all under this registry path, then there is a different cause of the error. Please search the Microsoft Knowledge Base for additional causes of this error. 
+    REG_SZ: **Version**
+
+    Data value: \<no data\>
+
+**NOTE**: If you do not find the **Version** value with no data associated with it, or the **Version** value does not exist at all under this registry path, then there is a different cause of the error. Please search the Microsoft Knowledge Base for additional causes of this error.
 
 ## Resolution
 
@@ -56,21 +56,21 @@ This problem occurs when the following registry data is present on your computer
   
 To resolve this problem, delete the Version value from under the \MSMapiApps key using the following steps:
 
-- 32-bit versions of Microsoft Office on 32-bit versions of Windows, or 64-bit versions of Microsoft Office on 64-bit versions of Windows   
+- 32-bit versions of Microsoft Office on 32-bit versions of Windows, or 64-bit versions of Microsoft Office on 64-bit versions of Windows
 
-  1. Start Registry Editor.   
+  1. Start Registry Editor.
   2. Locate and select the following key in the registry:
 
-     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Messaging Subsystem\MSMapiApps**
+     **`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Messaging Subsystem\MSMapiApps`**
 
-  3. Right-click the REG_SZ value called **Version** under the **MSMapiApps** key and select **Rename**.   
-  4. Rename the **Version** value to **Version_Renamed**.   
-  5. Exit Registry Editor.   
-- 32-bit versions of Microsoft Office on 64-bit versions of Windows   
-  1. Start Registry Editor.   
+  3. Right-click the REG_SZ value called **Version** under the **MSMapiApps** key and select **Rename**.
+  4. Rename the **Version** value to **Version_Renamed**.
+  5. Exit Registry Editor.
+- 32-bit versions of Microsoft Office on 64-bit versions of Windows
+  1. Start Registry Editor.
   2. Locate and select the following key in the registry:
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows Messaging Subsystem\MSMapiApps**
-  3. Right-click the REG_SZ value called Version under the **MSMapiApps** key and select **Rename**.   
-  4. Rename the **Version** value to **Version_Renamed**   
-  5. Exit Registry Editor.   
+    **`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows Messaging Subsystem\MSMapiApps`**
+  3. Right-click the REG_SZ value called Version under the **MSMapiApps** key and select **Rename**.
+  4. Rename the **Version** value to **Version_Renamed**.
+  5. Exit Registry Editor.

@@ -1,9 +1,9 @@
 ---
 title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
 description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
-author: simonxjx
-ms.author: luche
-ms.date: 2/26/2020
+author: MaryQiu1987
+ms.author: v-maqiu
+ms.date: 10/4/2021
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -20,8 +20,6 @@ appliesto:
 ---
 
 # List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -52,12 +50,12 @@ The following table lists Office 365 and Microsoft 365 plan names and the correc
 |Office 365 Enterprise E4     |O365ProPlusRetail   |
 |Office 365 Enterprise E5     |O365ProPlusRetail   |
 |Office 365 Midsize           |O365ProPlusRetail   |
-|Office 365 Business          |O365BusinessRetail  |
-|Office 365 Business Premium  |O365BusinessRetail  |
+|Microsoft 365 Apps for business          |O365BusinessRetail  |
+|Microsoft 365 Business Standard |O365BusinessRetail  |
 |Office Small Business Premium|O365SmallBusPremRetail |
 |Microsoft 365 E3 | O365ProPlusRetail|
 |Microsoft 365 E5 | O365ProPlusRetail |
-|Microsoft 365 Business | O365BusinessRetail |
+|Microsoft 365 Business Premium | O365BusinessRetail |
 
 
 In addition to these product IDs, the following non-Office 365 product IDs are supported by this tool:
@@ -67,56 +65,89 @@ In addition to these product IDs, the following non-Office 365 product IDs are s
 
 - AccessRetail
 - Access2019Retail
+- Access2021Retail
 - Access2019Volume
+- Access2021Volume
 - ExcelRetail
 - Excel2019Retail
+- Excel2021Retail
 - Excel2019Volume
+- Excel2021Volume
 - HomeBusinessRetail
 - HomeBusiness2019Retail
+- HomeBusiness2021Retail
 - HomeStudentRetail
 - HomeStudent2019Retail
+- HomeStudent2021Retail
 - O365HomePremRetail
+- OneNoteFreeRetail
 - OneNoteRetail
+- OneNote2021Volume
 - OutlookRetail
 - Outlook2019Retail
+- Outlook2021Retail
 - Outlook2019Volume
+- Outlook2021Volume
 - Personal2019Retail
+- Personal2021Retail
 - PowerPointRetail
 - PowerPoint2019Retail
+- PowerPoint2021Retail
 - PowerPoint2019Volume
+- PowerPoint2021Volume
 - ProfessionalRetail
 - Professional2019Retail
+- Professional2021Retail
 - ProjectProXVolume
 - ProjectPro2019Retail
+- ProjectPro2021Retail
 - ProjectPro2019Volume
+- ProjectPro2021Volume
 - ProjectStdRetail
 - ProjectStdXVolume
 - ProjectStd2019Retail
+- ProjectStd2021Retail
 - ProjectStd2019Volume
+- ProjectStd2021Volume
 - ProPlus2019Volume
+- ProPlus2021Volume
+- ProPlusSPLA2021Volume
+- ProPlus2019Retail
+- ProPlus2021Retail
 - PublisherRetail
 - Publisher2019Retail
+- Publisher2021Retail
 - Publisher2019Volume
+- Publisher2021Volume
 - Standard2019Volume
+- Standard2021Volume
+- StandardSPLA2021Volume
 - VisioProXVolume
 - VisioPro2019Retail
+- VisioPro2021Retail
 - VisioPro2019Volume
+- VisioPro2021Volume
 - VisioStdRetail
 - VisioStdXVolume
 - VisioStd2019Retail
+- VisioStd2021Retail
 - VisioStd2019Volume
+- VisioStd2021Volume
 - WordRetail
 - Word2019Retail
+- Word2021Retail
 - Word2019Volume
+- Word2021Volume
 
 For managing the Lync or Skype for Business clients, the following table lists the tool version and the correct product ID.
 
 |**Product**                       |**Version of the Office Deployment Tool**      |**Product ID**     |
 |----------------------------------|-----------------------------------------------|-------------------|
-|Skype for Business Basic 2015     |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/en-us/download/details.aspx?id=36778)             |LyncEntryRetail     |
-|Skype for Business 2015           |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/en-us/download/details.aspx?id=36778)             |LyncRetail          |
-|Skype for Business 2016     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessRetail       |
-|Skype for Business Basic 2016     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessEntryRetail       |
-|Skype for Business 2019           |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusiness2019Retail            |
-|Skype for Business 2019 (volume licensed)         |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusiness2019Volume            |
-|Skype for Business Basic 2019     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessEntry2019Retail            |
+|Skype for Business Basic 2015     |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/download/details.aspx?id=36778)             |LyncEntryRetail     |
+|Skype for Business 2015           |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/download/details.aspx?id=36778)             |LyncRetail          |
+|Skype for Business 2016     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessRetail       |
+|Skype for Business Basic 2016     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessEntryRetail       |
+|Skype for Business 2019           |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusiness2019Retail            |
+|Skype for Business 2019 (volume licensed)         |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusiness2019Volume            |
+|Skype for Business Basic 2019     |[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)      |SkypeforBusinessEntry2019Retail            |
+|Skype for Business LTSC 2021|[Office Deployment Tool](https://go.microsoft.com/fwlink/p/?LinkID=626065)|SkypeforBusiness2021Volume|

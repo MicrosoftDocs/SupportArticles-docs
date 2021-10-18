@@ -1,7 +1,7 @@
 ---
 title: Error when accessing SharePoint or OneDrive
 description: Describes how to resolve an issue when unable to SharePoint or OneDrive
-author: v-miegge
+author: helenclu
 ms.author: prbalusu
 manager: dcscontentpm
 localization_priority: Normal

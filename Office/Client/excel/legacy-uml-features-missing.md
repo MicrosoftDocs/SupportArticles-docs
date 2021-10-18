@@ -1,13 +1,13 @@
 ---
 title: Legacy UML features are missing
 description: Describes an issue in which you are limited to edit a UML or database diagram in Visio 2013. This issue occurs when the UML or database diagram is created in Visio 2010 or in earlier versions of Visio.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: jennc, offspmna
 search.appverid: 

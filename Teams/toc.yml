@@ -17,14 +17,20 @@
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name:  Can't send messages to a group chat
       href: ./teams-administration/unable-send-message-group-chat.md
+    - name: Error switching a tenant to Teams Only mode
+      href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
-    - name: Organizations can't prevent users from changing profile photos
-      href: ./known-issues/cant-prevent-users-from-changing-profile-picture.md
+    - name: Issues receiving messages and calls
+      href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Public team list doesn't display all teams
       href: ./known-issues/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
+    - name: Troubleshoot connectivity issues
+      href: /microsoftteams/connectivity-issues?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: Troubleshoot installation and update issues
+      href: /microsoftteams/troubleshoot-installation?context=/MicrosoftTeams/troubleshoot/context/context
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
     - name: User information isn't updated
@@ -89,24 +95,24 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
-  - name: Direct Routing 
-    items: 
-    - name: Issues with SBC connectivity
-      href: ./direct-routing/sip-options-tls-certificate-issues.md
   - name: Exchange integration
     items:
+    - name: External federated contacts don’t appear in Teams search
+      href: ./exchange-integration/external-contacts-not-in-search.md
     - name: Teams and Exchange interaction issues
-      href: ./known-issues/teams-exchange-interaction-issue.md
+      href: ./exchange-integration/teams-exchange-interaction-issue.md
   - name: Files
     items:
-    - name: Error when accessing OneDrive storage
+    - name: Error uploading files to chats
       href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Error when selecting Files tab
-      href: ./files/object-specified-not-belong-to-list.md
+      href: ./files/access-files-tab-errors.md
     - name: Can't open files in a chat window
       href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
+    - name: Guest user can't access Files tab
+      href: ./files/guests-cannot-access-files.md
   - name: Forms
     items:
     - name: Can't send or respond a poll
@@ -127,10 +133,10 @@
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
   - name: Meetings
     items:
-    - name: How to join a Microsoft Teams meeting
-      href: ./meetings/how-to-join-a-teams-meeting.md
-    - name: Troubleshoot Teams meeting recording issues
+    - name: Issues with meeting recordings
       href: ./meetings/troubleshoot-meeting-recording-issues.md
+    - name: Issues with webinars
+      href: ./meetings/issues-with-webinars.md
   - name: Mobile
     items:
     - name: Can't see auto-favorited channels in mobile app
@@ -149,6 +155,22 @@
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
+  - name: Phone System
+    items: 
+    - name: Dial Plans
+      items: 
+      - name: Errors when trying to manage dial plans
+        href: ./phone-system/dial-plans/errors-managing-dial-plans.md
+    - name: Direct Routing
+      items:
+      - name: Issues with call transfers
+        href: ./phone-system/direct-routing/issues-with-call-transfers.md
+      - name: Issues with LMO
+        href: ./phone-system/direct-routing/issues-with-lmo.md
+      - name: Issues with outbound calls
+        href: ./phone-system/direct-routing/issues-with-outbound-calls.md
+      - name: Issues with SBC connectivity
+        href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
   - name: Provisioning
     items:
     - name: Can't create a team 
@@ -182,7 +204,7 @@
     - name: Websites aren't viewable
       href: ./known-issues/cannot-view-website-teams-web-client.md
     - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
-      href: /SharePoint/SharePointOnline/Sites/err-invalid-response-accessing-sharepoint-site.md
+      href: /sharepoint/troubleshoot/sites/err-invalid-response-accessing-sharepoint-site?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Tabs
     items:
     - name: Can't rename legacy OneNote tabs

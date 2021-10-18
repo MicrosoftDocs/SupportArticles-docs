@@ -1,6 +1,6 @@
 ---
 title: You receive a "Sorry, something went wrong" or "A schedule cannot be enabled for a workbook with no external data sources" error when you try to schedule a data refresh by using PowerPivot for SharePoint 2016 
-author: simonxjx
+author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal

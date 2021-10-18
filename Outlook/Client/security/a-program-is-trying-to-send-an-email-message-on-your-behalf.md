@@ -1,8 +1,8 @@
 ---
 title: Program is trying to send an e-mail message on your behalf
 description: Discusses an issue in which you receive an error when you send an email message from another program such as Microsoft Excel. Provides a resolution.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: tasitae
 appliesto:
+- Outlook LTSC 2021
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
@@ -25,7 +26,7 @@ _Original KB number:_ &nbsp; 3189806
 
 ## Symptoms
 
-In Microsoft Outlook 2019, Outlook for Office 365, Outlook 2016, and Outlook 2013, when you send an email message from another program such as Microsoft Excel, you receive the following warning message:
+In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook for Office 365, Outlook 2016, and Outlook 2013, when you send an email message from another program such as Microsoft Excel, you receive the following warning message:
 
 > A program is trying to send an e-mail message on your behalf. If this is unexpected, click Deny and verify your antivirus software is up-to-date.
 
@@ -81,7 +82,7 @@ Same bitness (32-bit Office running on 32-bit Windows or 64-bit Office running o
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\<x.0>\Outlook\Security`
 
 > [!NOTE]
-> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013)
+> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, 15.0 = Office 2013)
 
 DWORD: **ObjectModelGuard**  
 

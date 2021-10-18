@@ -1,6 +1,6 @@
 ﻿---
 title: A "The virtual path maps to another application, which is not allowed." error when you run a scheduled data refresh
-author: simonxjx
+author: helenclu
 ms.author: zakirh
 manager: dcscontentpm
 localization_priority: Normal

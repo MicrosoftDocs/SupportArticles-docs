@@ -1,6 +1,6 @@
 ---
 title: A custom HTML login page doesn't render correctly in an Office application
-author: simonxjx
+author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

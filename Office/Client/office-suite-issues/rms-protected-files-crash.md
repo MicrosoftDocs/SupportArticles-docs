@@ -1,7 +1,7 @@
 ---
 title: Office files with RMS protection crash
 description: Resolves the issue when Office files that have RMS protection seem to crash.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Excel 2010
 - Word 2010

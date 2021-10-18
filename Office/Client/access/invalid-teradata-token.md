@@ -1,7 +1,7 @@
 ---
 title: Not a valid Teradata SQL token error when you run outer join queries
 description: Fixes an issue when executing outer join queries that utilize linked tables with the Teradata ODBC driver 15.10 or later
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Access for Office 365

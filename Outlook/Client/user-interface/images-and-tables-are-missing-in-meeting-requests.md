@@ -1,8 +1,8 @@
 ---
 title: Images and tables missing in meeting requests
 description: Describes an issue that causes images and tables in Outlook meeting requests to go missing. Occurs when a meeting request is sent from Outlook 2016 and is received in Outlook 2013 or Outlook 2010. A workaround is provided.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

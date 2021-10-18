@@ -1,7 +1,7 @@
 ---
 title: Asset Library displays a film reel icon for the Video content type
 description: This article describes an issue where SharePoint Online Asset Library displays a film reel icon for the Video content type in Office 365 and provides solutions.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---

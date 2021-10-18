@@ -1,7 +1,7 @@
 ---
 title: Shared items are missing in SharePoint Online search results
 description: you have a SharePoint group that contains many users, and the group is used to define permissions for the resource that is missing from search results.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---

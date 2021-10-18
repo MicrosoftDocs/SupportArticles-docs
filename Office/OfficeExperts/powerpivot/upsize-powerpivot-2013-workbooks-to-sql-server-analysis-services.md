@@ -1,6 +1,6 @@
 ---
 title: Upsize PowerPivot 2013 workbooks to SQL Server Analysis Services (SSAS)
-author: simonxjx
+author: helenclu
 ms.author: warrenr
 manager: dcscontentpm
 localization_priority: Normal

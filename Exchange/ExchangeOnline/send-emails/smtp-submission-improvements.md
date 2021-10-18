@@ -50,9 +50,14 @@ Additional throttling limits for the SMTP Authentication protocol are:
 - 30 messages per minute
 - Recipient rate limit of 10,000 recipients per day
 
-Exceeding these limits causes the following error:  
+Exceeding these limits will cause the following issues:
 
-> 554 5.2.0 STOREDRV.Submission.Exception:SubmissionQuotaExceededException
+- Exceeding the per minute limit causes email delivery delays, any excess in message submission will be throttled and successively carried over to the following minutes.
+- Exceeding the per day limit causes the following error message:
+
+  > 554 5.2.0 STOREDRV.Submission.Exception:SubmissionQuotaExceededException
+
+For more information, see [sending limits in Exchange Online](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 This change for concurrent connections will better protect the service from large bursts of email messages that are sent by automated systems within a short time period. This change will not affect most SMTP Authenticated Submission users who only send from one email client or multifunction device for a given mailbox.
 
@@ -71,10 +76,6 @@ These changes to the protocol will cause messages to take a new route through o
 For example, submission behavior could change if the Reply or Mail From address isn't surrounded by angle brackets ("<" and ">") or if the sender display name contains an invalid character, such as the at sign (@), that isn't surrounded by quotation marks. Printers or devices that don't fully adhere to the RFC standard can generate sending errors.
 
 This can often be fixed by updating the settings on the device or printer by adding angle brackets ("<" and ">") around the Reply or Mail From address.
-
-Additionally, messages might arrive at the recipient with a different display name than they did before the change. Messages that are sent by using SMTP Authenticated Submission protocol will now behave in the same way as other submission protocols in Office 365, such as the protocol that is used when emails are sent by using Outlook on the web. As a result, the sender's Office 365 display name will now be shown as part of the **From** address.
-
-To change the sender's display name that message recipients will see, you can change the Display Name setting on the sender's mailbox to the desired display name.
 
 ## Reference
 

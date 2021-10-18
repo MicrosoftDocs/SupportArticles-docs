@@ -1,7 +1,7 @@
 ---
 title: Win32API_PtrSafe with 64-bit Support
 description: Link-to Win32API help download for one file containing both 32-bit and 64-bit compatible Declare statements, Type declarations and Global constant declarations for both 32-bit and 64-bit versions of Microsoft Office
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 ms.reviewer: Rtaylor
 appliesto:
 - Office 2010

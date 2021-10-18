@@ -1,7 +1,7 @@
 ---
 title: How to block OneDrive.exe from being advertised after you install Office 2016
 description: Describes how to block OneDrive.exe from being advertised after you install Microsoft Office 2016.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - OneDrive

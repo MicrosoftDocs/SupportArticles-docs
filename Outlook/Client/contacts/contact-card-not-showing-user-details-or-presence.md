@@ -1,8 +1,8 @@
 ---
 title: Contact card doesn't show user photo, details, or presence
 description: You can't see user's photo, details, or presence information in Outlook contact card, in Search People box, or in the TO field when a policy is applied.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

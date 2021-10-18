@@ -27,14 +27,14 @@ appliesto:
 
 A user who is granted full access permissions to a shared mailbox can't read encrypted or restricted email messages that are sent to the shared mailbox in Microsoft Outlook. The user may receive a redirection message in the Outlook client that points to Outlook on the Web (OWA). However, OWA can't successfully load the messages.
 
-> [!NOTE] 
+> [!NOTE]
 > Users who are included as recipients in encrypted or restricted email messages can read the messages from their mailbox in Outlook.
 
 ## Cause
 
 Outlook and the Azure Information Protection unified labeling client require the user to have full access permissions and have automapping enabled. However, automapping isn't enabled for users who are granted the full access permissions through a security group.
 
-For more information, see the “Can I open encrypted messages sent to a shared mailbox?” section of [Message Encryption FAQ](https://docs.microsoft.com/microsoft-365/compliance/ome-faq?view=o365-worldwide&preserve-view=true#can-i-open-encrypted-messages-sent-to-a-shared-mailbox).
+For more information, see the “Can I open encrypted messages sent to a shared mailbox?” section of [Message Encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide&preserve-view=true#can-i-open-encrypted-messages-sent-to-a-shared-mailbox).
 
 ## Workaround
 
@@ -42,4 +42,3 @@ To fix this issue, use either of the following workarounds:
 
 - Use the **Open another mailbox** option to open the message in OWA.
 - Enable automapping by granting full access permissions directly to the user.
-

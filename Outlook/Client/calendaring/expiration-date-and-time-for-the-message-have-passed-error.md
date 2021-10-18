@@ -1,8 +1,8 @@
 ---
 title: Expiration date and time for the message have passed error
 description: Describes an issue that triggers an error when you try to update meetings in Outlook. This issue occurs when the .
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

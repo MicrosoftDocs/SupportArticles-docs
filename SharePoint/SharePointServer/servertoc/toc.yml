@@ -1,6 +1,8 @@
 - name: SharePoint Server Troubleshooting
   href: ../sharepoint-server-welcome.md
   items:
+  - name: SharePoint troubleshooting content updates
+    href: ../sharepoint-troubleshooting-content-updates.md
   - name: Administration
     items:
     - name: '"Upgrade Available" status in farms'
@@ -103,6 +105,8 @@
       href: ../installation-and-setup/sharepoint-server-setup-fails.md
     - name: Setup error with .NET Framework 4.6
       href: ../installation-and-setup/setup-error-if-.net-framework-4.6-is-installed.md
+    - name: Upgrade Windows on a SharePoint Server
+      href: ../installation-and-setup/upgrade-windows-with-sharepoint.md
   - name: Lists and Libraries
     items:
     - name: '"Request timed out" when uploading a large file'

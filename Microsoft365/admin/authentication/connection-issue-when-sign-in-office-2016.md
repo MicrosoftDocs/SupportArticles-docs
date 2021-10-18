@@ -1,7 +1,7 @@
 ---
 title: Connection issues in sign-in after update to Office 2016 build 16.0.7967
 description: Office Web Account Manager (WAM) sign-in issues after you update to Office 2016 build 16.0.7967 or later on Windows 10.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft 365 Apps for enterprise
@@ -48,7 +48,11 @@ You may experience one of the following symptoms after you update to Microsoft O
 
 When the overall network is working on your devices, Office applications may experience connection issues. You may see a message that resembles the following:
 
-:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message saying you need the internet.":::
+> You'll need the internet for this.  
+> We couldn't connect to one of the services we needed to sign you in. Please check your connection and try again.  
+> 0xCAA70007
+
+:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message shows that you will need the internet for this.":::
 
 To determine whether you're experiencing this kind of issue, follow these steps:
 
@@ -65,7 +69,7 @@ To determine whether you're experiencing this kind of issue, follow these steps:
 
 Then, to determine whether your issue is due to network environment or local firewall/antivirus software, follow these steps:  
   
-1. Open Edge (not Internet Explorer) and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software. 
+1. Open Edge (not Internet Explorer) and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software.
   
 1. Open Edge (not Internet Explorer) in InPrivate mode and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software.
 
@@ -128,7 +132,7 @@ To do a manual recovery of the computer, follow the appropriate steps, dependin
 
     The result should contain the following fields (in Device state):  
 
-    ```AsciiDoc    
+    ```AsciiDoc
     AzureAdJoined : YES
     DomainJoined : YES
     DomainName : <CustomerDomain>
@@ -178,7 +182,7 @@ To do a manual recovery of the computer, follow the appropriate steps, dependin
 
 The Office sign-in workflow stops or shows no on-screen progress. The sign-in window shows a "Signing in" message or a blank authentication screen.
 
-:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/sign-in-page.png" alt-text="Screenshot of the sign in page.":::
+:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/sign-in-page.png" alt-text="Screenshot of the page that shows the Signing in status.":::
 
 This issue occurs because WAM is disabling non-HTTPS traffic to prevent security threats, such as someone stealing user credentials. To verify that you are experiencing this issue, follow these steps:
 
@@ -186,7 +190,7 @@ This issue occurs because WAM is disabling non-HTTPS traffic to prevent security
 2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.
 3. In the Operational logs, locate the following message:
 
-    **Navigation to non-SSL destination. Non-secure communication is prohibited. Canceling navigation.**
+    > Navigation to non-SSL destination. Non-secure communication is prohibited. Canceling navigation.
 
 To resolve this issue and secure user credentials, we recommend that you enable HTTPS on the Identity servers.
 
@@ -194,7 +198,7 @@ To resolve this issue and secure user credentials, we recommend that you enable 
 
 You have a non-persistent Virtual Desktop Infrastructure (VDI) environment that has a federated Identity Provider (IdP) that is configured as Single-Sign On (SSO). You do not expect to be prompted to activate or sign in because SSO is configured. However, you are prompted to sign in for each new session. [Office ULS logs](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) display the following error message:
 
-**{"Action": "BlockedRequest", "HRESULT": "0xc0f10005"**
+> {"Action": "BlockedRequest", "HRESULT": "0xc0f10005"
 
 > [!NOTE]
 > Please open a support case if you experience this issue. We require more log entry reports to help isolate the issue.

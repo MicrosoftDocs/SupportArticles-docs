@@ -41,7 +41,7 @@ To delete a junk email rule, follow these steps:
 
 2. Export the list of addresses that contain safe senders and blocked senders to a text (.txt) file.
 
-3. Download MFCMAPI from [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi).
+3. Download MFCMAPI from [MFCMAPI](https://github.com/stephenegriffin/mfcmapi).
 
     > [!NOTE]
     > Only an Exchange administrator who has full permissions of a mailbox can use the MFCMAPI tool to remove a junk email rule.
@@ -66,11 +66,8 @@ To delete a junk email rule, follow these steps:
     6. Right-click **Inbox** and select **Open associated contents table**. A new MFCMAPI window will open.
     7. Sort the top pane by the **Message Class** column and locate **IPM.ExtendedRule.Message**. Only one Inbox will be displayed.
     8. Select **IPM.ExtendedRule.Message**  on the top pane.
-    9. In the bottom pane, sort by the **Tag** column and locate **0x65EB001E**. This tag corresponds to the **JunkEmailRule** value. (The screenshot for this step is listed below).
-
-        :::image type="content" source="./media/delete-junk-email-rules-mfcmapi-exchange/sort-by-tag-column.jpg" alt-text="Screenshot for sorting Tag column.":::
-
-    10. After you locate the junk email rule by locating the **0x65EB001E** tag, click to select **IPM.ExtendedRule.Message** again in the top pane.
+    9. In the bottom pane, sort by the **Tag** column and locate **0x65EB001F**. This tag corresponds to the **JunkEmailRule** value.
+    10. After you locate the junk email rule by locating the **0x65EB001F** tag, select **IPM.ExtendedRule.Message** again in the top pane.
     11. Right-click **IPM.ExtendedRule.Message** and select **Delete message**. The **Delete Item** window will open.
     12. In the **Deletion style** drop-down list, select **Permanent delete passing DELETE_HARD_DELETE (unrecoverable)**, and then click **OK**. (The screenshot for this step is listed below).
 

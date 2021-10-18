@@ -1,13 +1,13 @@
 ---
 title: Error 25004, The product key you entered cannot be used on this machine
 description: Resolves an issue in which you cannot install Microsoft Office 2013. Specifically, you receive an Error 25004. The product key you entered cannot be used on this machine error message.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: gregak, mmaxey, tomol
 ms.custom: CSSTroubleshoot
 search.appverid: 

@@ -1,8 +1,8 @@
 ---
 title: You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)
 description: Explains why you might receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext).
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 

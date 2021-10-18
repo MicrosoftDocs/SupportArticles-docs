@@ -1,12 +1,12 @@
 ---
 title: Information about Teams known issues
 description: This article lists Microsoft Teams related issues.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.service: msteams
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -32,6 +32,7 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 - [Removed user appears as "Unknown user" in Microsoft Teams](./known-issues/removed-user-appears-as-unknown.md)
 - [Dial pad is missing in Microsoft Teams](./teams-conferencing/no-dial-pad.md)
 - [Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>](./teams-sign-in/error-missing-out-sign-in-teams.md)
+- [Known issues that affect Teams webinars](./meetings/issues-with-webinars.md)
 
 ## More Teams content
 

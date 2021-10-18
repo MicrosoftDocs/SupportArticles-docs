@@ -1,8 +1,8 @@
 ---
 title: Cannot start Outlook in cached mode
 description: Describes an issue in which you receive a Cannot start Microsoft Outlook error when trying to start Outlook in cached mode or create a new cached mode profile.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -42,7 +42,7 @@ This property is located on Top of Information Store in the default store. Every
 
 To resolve this problem, remove the data in the PR_OST_OSTID binary property. To do this, follow these steps:
 
-1. Download and extract the [MFCMAPI](https://archive.codeplex.com/?p=mfcmapi) tool.
+1. Download and extract the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool.
 2. Launch Mfcmapi.exe, and then select **OK**  to move through the introduction screen.
 3. On the **Tools** menu, select **Options**.
 4. Enable the following options, and then select **OK**:

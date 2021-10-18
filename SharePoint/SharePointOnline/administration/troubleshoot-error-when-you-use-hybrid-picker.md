@@ -1,7 +1,7 @@
 ﻿---
 title: error when you use the SharePoint Hybrid Picker
 description: Describes an issue when you use the SharePoint Hybrid Picker.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 appliesto:
 - SharePoint Online
 ---

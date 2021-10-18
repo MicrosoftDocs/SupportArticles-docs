@@ -1,15 +1,15 @@
 ---
 title: SharePoint Online Public Websites to be discontinued
 description: This article contains information about changes to the SharePoint Online Public Websites feature in Office 365.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: sharepoint-server-itpro
+ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

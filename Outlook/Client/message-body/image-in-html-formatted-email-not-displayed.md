@@ -1,8 +1,8 @@
 ---
 title: Image in HTML-formatted email not shown
 description: Resolves an issue in which an image in an HTML-formatted email message is not displayed in Outlook 2013. This issue occurs when you use a proxy server that is configured to use basic authentication.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

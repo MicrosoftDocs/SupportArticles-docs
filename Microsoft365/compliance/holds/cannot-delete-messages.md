@@ -1,8 +1,8 @@
 ---
 title: Litigation Hold users cannot delete messages in Office 365 Dedicated
 description: Describes mailbox performance issues that occur when the Litigation Hold feature is enabled for users in Office 365 Dedicated who are in an Exchange Online environment. Provides resolutions.
-author: simonxjx
-ms.author: v-six
+author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

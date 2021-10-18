@@ -1,7 +1,7 @@
 ---
 title: SharePoint on-premises content isn't displayed in SharePoint Online search results
 description: Describes an issue in which SharePoint on-premises content isn't displayed as expected in a SharePoint Online search. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013

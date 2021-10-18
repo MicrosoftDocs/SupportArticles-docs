@@ -1,7 +1,7 @@
 ---
 title: ID is increment every time you add field to table
 description: Describes a problem in which the ID field is increment by one every time that a field is added to a new table in Datasheet view in Access 2007 or in Access 2010. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -12,7 +12,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.reviewer: acckb12
 appliesto:
 - Access for Office 365

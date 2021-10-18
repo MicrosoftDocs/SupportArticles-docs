@@ -1,8 +1,8 @@
 ---
 title: Outlook 2010 connection delays or failures
 description: Describes an issue in which you may experience Outlook 2010 connection delays or failures. The Outlook status bar may display the message.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

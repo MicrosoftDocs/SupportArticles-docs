@@ -1,6 +1,7 @@
 ---
 title: How To query and update Excel data using ADO from ASP
-author: simonxjx
+description: Describes how to query and update information in an Excel spreadsheet using ActiveX Data Objects (ADO) from an Active Server Pages (ASP) page.
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -8,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel
@@ -41,6 +42,7 @@ To access the data in your Excel spreadsheet for this sample, use the Microsoft 
 
   > [!NOTE]
   > If a column in your Excel spreadsheet contains both text and numbers, the Excel ODBC driver cannot correctly interpret which data type the column should be. Please make sure that all the cells in a column are of the same data type. The following three errors can occur if each cell in a column is not of the same type or you have the types mixed between "text" and "general":
+  >
   > 1. Microsoft OLE DB Provider for ODBC Drivers error '80040e21' The request properties can not be supported by this ODBC Driver.
   > 2. Microsoft OLE DB Provider for ODBC Drivers error '80004005' The query is not updateable because it contains no searchable columns to use as a hopeful key.
   > 3. Microsoft OLE DB Provider for ODBC Drivers error '80004005' Query based update failed. The row to update could not be found.
@@ -61,6 +63,7 @@ To access the data in your Excel spreadsheet for this sample, use the Microsoft 
   |ee|works|25|
 
   > [!NOTE]
+  >
   > - ADO assumes that the first row in an Excel query contains the column headings. Therefore, the Named Range must include the column headings. This is different behavior from DAO.
   > - Column headings cannot be a number. The Excel driver cannot interpret them and, instead, returns a cell reference. For example, a column heading of "F1" would be misinterpreted.
 
@@ -74,10 +77,10 @@ To access the data in your Excel spreadsheet for this sample, use the Microsoft 
   6. Click "Select Workbook...", browse to the ADOTest.xls file, and click OK.
   7. Click the "Options>>" button and clear the "Read Only" check box.
   8. Click OK and then click OK again.
- 
+
 - Set permissions on the ADOTest.xls file.
 
-If your Active Server Page is accessed anonymously, you need to make sure that the Anonymous Account (IUSR_<MachineName>) has at least Read/Write (RW) access to the spreadsheet. If you want to delete information from the spreadsheet, you need to grant the permissions accordingly.
+If your Active Server Page is accessed anonymously, you need to make sure that the Anonymous Account (IUSR_\<MachineName\>) has at least Read/Write (RW) access to the spreadsheet. If you want to delete information from the spreadsheet, you need to grant the permissions accordingly.
 
 If you are authenticating access to your Active Server Page, you need to ensure that all users accessing your application have the appropriate permissions.
 

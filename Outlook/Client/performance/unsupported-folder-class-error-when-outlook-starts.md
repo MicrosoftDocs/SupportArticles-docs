@@ -1,8 +1,8 @@
 ---
 title: Unsupported folder class error when Outlook starts
 description: After you configure Outlook 2007 or Outlook 2010 to access your Apple iCloud email, contacts, or calendar, and you try to configure the iCloud data file as the default, Outlook displays an error at startup.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

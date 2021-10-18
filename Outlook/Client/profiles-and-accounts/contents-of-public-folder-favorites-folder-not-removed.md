@@ -1,8 +1,8 @@
 ---
 title: Contents of Public Folder Favorites folder not removed
 description: Explains that the Public Folder Favorites folder still has contents even if the Download Public Folder Favorites option is turned off in Outlook. You must manually clear the items from your local folders to work around this problem.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

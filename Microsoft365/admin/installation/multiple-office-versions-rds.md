@@ -1,7 +1,7 @@
 ---
 title: No support for multiple Office versions installed on a machine with RDS
 description: Describes installing multiple Office versions on a computer with RDS is not supported.
-author: simonxjx
+author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.author: v-six
+ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft 365 Apps for enterprise

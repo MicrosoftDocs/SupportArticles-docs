@@ -2,8 +2,8 @@
 title: MAPI is the only way to change profiles
 description: You can only use Extended MAPI to programmatically change profiles.
 ms.date: 08/05/2020
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

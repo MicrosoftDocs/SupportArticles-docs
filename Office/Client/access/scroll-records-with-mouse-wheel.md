@@ -1,7 +1,7 @@
 ---
 title: Can't scroll records with mouse wheel
 description: Describes that you cannot use the mouse wheel to scroll through records in an Access 2007 or Access 2010 form. This is expected behavior in Access 2003 and earlier versions. Provides a workaround.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: v-six
+ms.author: luche
 appliesto:
 - Access 2010
 - Office Access 2007

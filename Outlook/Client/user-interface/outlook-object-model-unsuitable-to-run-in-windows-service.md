@@ -1,8 +1,8 @@
 ---
 title: Outlook Object Model cannot run in a Windows service
 description: This article describes the limitations of the Outlook Object Model that make it unsuitable for use in a Windows NT service.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

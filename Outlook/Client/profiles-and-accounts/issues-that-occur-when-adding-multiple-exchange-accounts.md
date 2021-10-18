@@ -1,8 +1,8 @@
 ---
 title: Issues when adding multiple accounts in a profile
 description: Outlook 2010 introduced a new feature that lets you add multiple Exchange accounts to the same messaging profile. This article describes three distinct scenarios in which this can cause unexpected behavior.
-author: simonxjx
-ms.author: v-six
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

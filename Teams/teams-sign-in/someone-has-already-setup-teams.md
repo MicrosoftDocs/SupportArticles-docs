@@ -36,7 +36,7 @@ This issue has multiple possible causes and resolutions, including the following
 
 **Resolution 2:** Try to create a Teams account in a new private or incognito browser window. To do this, right-click [this Teams link](https://teams.microsoft.com), select the appropriate option depending on your browser (for example, select **Open link in inPrivate window** in Edge), and then enter the credentials for your work or school account instead of for your personal account to sign in. If that doesn't work, you must unlink the two accounts to create a free Teams account. For more information, see the "I want to use a different email address or phone number to sign in" section in [Change the email address or phone number for your Microsoft account](https://support.microsoft.com/help/12407/microsoft-account-change-email-phone-number).<br>
 
-**Cause 3:** You're trying to sign up for your work account by using a free tenant.
+**Cause 3:** You're trying to sign up for your work account by using a free tenant. For more information about tenant, see [Tenants](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings?view=o365-worldwide&preserve-view=true#tenants).
 
 **Resolution 3:** Use your organization's tenant for this account. For personal use, create a free Teams account by using a personal email address.
 

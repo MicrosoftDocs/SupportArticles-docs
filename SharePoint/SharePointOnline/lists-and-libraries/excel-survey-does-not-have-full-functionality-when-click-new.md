@@ -1,7 +1,7 @@
 ---
 title: Excel survey does not have full functionality when you click new in a SharePoint Online library
 description: Describes an issue in which you Excel survey does not have full functionality when you click new in a SharePoint Online library.
-author: simonxjx
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
-ms.author: v-six
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
