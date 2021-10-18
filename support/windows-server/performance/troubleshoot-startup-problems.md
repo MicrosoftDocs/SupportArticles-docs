@@ -132,7 +132,7 @@ The System Information tool displays a comprehensive view of the computer's hard
 
         Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.  
 
-4. If no problem devices or device conflicts are reported by the System Information tool, look for programs that start automatically when Windows starts. To do it, follow these steps:
+4. If no problem devices or device conflicts are reported by the System Information tool, look for programs that start automatically when Windows starts. To do so, follow these steps:
    1. In the console tree, expand Software Environment, and then select Startup Programs.
 
       Programs that start automatically when Windows starts are listed in the right pane.
@@ -167,15 +167,15 @@ To start Device Manager, follow these steps.
 
     > [!NOTE]
     > To disable a device in Device Manager, right-click the device, and then select Disable .
-3. Investigate possible device conflicts. To do it, double-click the device in the right pane, and then select the Resources tab.
+3. Investigate possible device conflicts. To do so, double-click the device in the right pane, and then select the Resources tab.
 
     If a device conflict exists, it's listed under **Conflicting device list**.
 
-    Note the **Use automatic settings** check box. If Windows successfully detects a device, this check box is selected, and the device functions correctly. However, if the resource settings are based on Basic Configuration **n** (where **n** is any number from 0 to 9), you may have to change the configuration. To do it, either select a different basic configuration from the list or manually change the resource settings.
+    Note the **Use automatic settings** check box. If Windows successfully detects a device, this check box is selected, and the device functions correctly. However, if the resource settings are based on Basic Configuration **n** (where **n** is any number from 0 to 9), you may have to change the configuration. To do so, either select a different basic configuration from the list or manually change the resource settings.
     > [!WARNING]
     > This procedure may require you to change the computer's complementary metal oxide semiconductor (CMOS) settings and the basic input/output system (BIOS) settings. Incorrect changes to the BIOS of the computer can result in serious problems. Change the computer's CMOS settings at your own risk.
 
-    If Windows can't resolve a resource conflict, verify that the computer is configured to allow Windows to enumerate the devices in the computer. To do it, enable the **Plug and Play OS** setting in the Setup tool of the computer's BIOS. To change the computer's BIOS settings, see the computer documentation or contact your computer manufacturer.
+    If Windows can't resolve a resource conflict, verify that the computer is configured to allow Windows to enumerate the devices in the computer. To do so, enable the **Plug and Play OS** setting in the Setup tool of the computer's BIOS. To change the computer's BIOS settings, see the computer documentation or contact your computer manufacturer.
 
 4. If you identify a problem device, disable it, and then restart the computer in normal mode.
 
@@ -255,7 +255,7 @@ To troubleshoot System Services, follow these steps.
 4. Select Disable All, select OK, and then restart your computer.
 5. Select Start > Run, type `msconfig` in the Open box, and then select OK.
 6. Select the Services tab.
-7. elect the check box of a service to turn it on, and then select OK.
+7. Select the check box of a service to turn it on, and then select OK.
 8. Restart your computer, and see whether the problem occurs.
 9. Repeat steps 5 through 8 for each service until the problem occurs. When the problem occurs, you'll know that the last service that you turned on is causing the problem. Note this service, and then go to step 10.
 10. Select Enable All, the check box next to the faulty service, clear the check boxes of any other services that you noted in step 3, select OK, and then restart your computer.
@@ -343,7 +343,7 @@ To use Recovery Console, follow these steps.
     - Access the drives on your computer.
     - Enable or disable device drivers or services.
     - Copy files from the Windows Server 2003 installation CD or copy files from other removable media. For example, you can copy a file that you need that was deleted.
-    - Create a new boot sector and a new master boot record (MBR). You might have to do it if there are problems starting from the existing boot sector.  
+    - Create a new boot sector and a new master boot record (MBR). You might have to do so if there are problems starting from the existing boot sector.  
 
 ## Confirm that your hard disk or file system is not damaged
 
@@ -422,7 +422,7 @@ To repair your installation of Windows, follow these steps.
 4. If you're prompted to start your computer from the CD, do so.
 
     > [!NOTE]
-    > You must be able to start your computer from the Windows Server 2003 CD-ROM to run Windows Setup. Your CD drive or DVD drive must be configured to do it. For information about how to configure your computer to start from the CD drive or DVD drive, see the documentation that is included with your computer, or contact your computer manufacturer.
+    > You must be able to start your computer from the Windows Server 2003 CD-ROM to run Windows Setup. Your CD drive or DVD drive must be configured to do so. For information about how to configure your computer to start from the CD drive or DVD drive, see the documentation that is included with your computer, or contact your computer manufacturer.
 
 5. After Setup starts, press Enter to continue the setup process.
 6. Press ENTER to select the following option:
