@@ -509,6 +509,8 @@
     href: oom-swap-file-linux-vm.md
   - name: Upgrade VM to contain more than 64 vCPUs
     href: vm-cannot-upgrade-64-vcpu.md
+  - name: VM stuck in failed state
+    href: vm-stuck-in-failed-state.md
   - name: Redeploy a VM
     items:
     - name: Linux
