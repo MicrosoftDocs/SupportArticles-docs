@@ -88,15 +88,16 @@ The sample code in this article illustrates how to create a control that support
             // Prevent a negative value.
             if (value < 0)
             {
-                min = 0;
+                value = 0;
             }
 
             // Make sure that the minimum value is never set higher than the maximum value.
             if (value > max)
             {
-                min = value;
-                min = value;
+                max = value;
             }
+            
+            min = value;
 
             // Ensure value is still in range
             if (val < min)
