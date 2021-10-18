@@ -10,5 +10,16 @@ _Applies to:_ &nbsp; Blue Ribbon
 _Original KB number:_ &nbsp; 110
 
 # Elements of the Blue Ribbon
-The elements on the Blue Ribbon are very helpful. These are quick aspects that you can add to your files to make it more interactive.
 
+The elements on the Blue Ribbon are very helpful. Following are the features you can add to your topics to make them more interactive.
+
+|Option  |Icon  |
+|---------|---------|
+|Bulleted List     |         |
+|Bolderize Text     |         |
+|Italicize Text     |         |
+|Add Notes, Warnings, Important, Tip, or Warning     |         |
+|Numbered List     |         |
+|Insert Link     |         |
+Insert Image     |         |
+Insert Include     |         |
