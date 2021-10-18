@@ -39,7 +39,7 @@ For more information about user requirements for Teams meeting recording, see [P
 1. Sign in to Microsoft 365 admin center, and type **Diag: Meeting Recording** in the **Need Help?** search box.
 2. Enter the Session Initiation Protocol (SIP) address, and select **Run Tests**.
 
-:::image type="content" source="./media/troubleshoot-meeting-recording-issues/diagnostic.png" alt-text="Screenshot of start the Meeting Recording Support Diagnostic.":::
+:::image type="content" source="media/troubleshoot-meeting-recording-issues/diagnostic.png" alt-text="Screenshot of starting the Meeting Recording Support Diagnostic from Need help panel.":::
 
 If the diagnostic reports that your organization is configured for Microsoft Stream storage, but you're in a region or country that isn't supported yet by Stream, use one of the following options:
 
@@ -61,7 +61,7 @@ If the issue isn't resolved by an update, use the following workaround for the a
   1. Select the profile picture at the top of the Teams app, and then select **Settings**.
   2. On the **General** tab, clear the **Turn on new meeting experience (New meetings and calls will open in separate windows. Requires restarting Teams.)** check box.
 
-     :::image type="content" source="./media/troubleshoot-meeting-recording-issues/feature.png" alt-text="Screenshot of disabling the new experience.":::
+     :::image type="content" source="media/troubleshoot-meeting-recording-issues/new-meeting-experience.png" alt-text="Screenshot of disabling the new meeting experience under General tab.":::
 
   3. Right-click the Teams icon in the Windows task bar or Cmd-click the Teams icon in the Mac dock.
   4. Select **Quit**.
@@ -82,11 +82,11 @@ If the meeting recording link still isn't visible, use either of the following m
 1. Sign in to [Microsoft Stream](https://stream.microsoft.com).
 2. In the Stream navigation bar, select **My content** > **Meetings** to open the Meetings page.
 
-   ![Screenshot of the Meeting button under My content](./media/troubleshoot-meeting-recording-issues/stream-meetings.png)
+    :::image type="content" source="media/troubleshoot-meeting-recording-issues/stream-meetings.png" alt-text="Screenshot of the Meetings button under My content.":::
 
    The options from the **My content** menu appear on a bar at the top of each page. You can pivot to Teams meeting recordings from any page by selecting the **Meetings** tab on the bar.
 
-   ![Screenshot of the Meeting button from other pages under My content](./media/troubleshoot-meeting-recording-issues/tabs.png)
+    :::image type="content" source="media/troubleshoot-meeting-recording-issues/meetings-tab.png" alt-text="Screenshot of the Meetings button from other pages under My content.":::
 
 For more information, see [Find meetings in Microsoft Stream](/stream/portal-filter-meetings).
 
@@ -96,7 +96,7 @@ For more information, see [Find meetings in Microsoft Stream](/stream/portal-fil
 
   Example: <*Recording user's OneDrive for Business*>/My files/Recordings
 
-  ![Screenshot of the OneDrive location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/onedrive-location.png)
+  :::image type="content" source="media/troubleshoot-meeting-recording-issues/onedrive-location.png" alt-text="Screenshot of the OneDrive location for storing meeting recordings.":::
 
 - For channel meetings, the recording is stored in the Teams site documentation library in the **Recordings** folder in SharePoint.
 
@@ -104,10 +104,11 @@ For more information, see [Find meetings in Microsoft Stream](/stream/portal-fil
 
   Example in Teams: <*Teams channel name*>/Files/Recordings
 
-  ![Screenshot of the Teams location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/teams-way.png)
-
-  Administrators can also find the recording link for users directly in SharePoint from the **Recordings** folder under **Documents**.
-
-  Example in SharePoint: <*SharePoint/Documents/Channel name*>/Recordings
-
-  ![Screenshot of the SharePoint location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/sharepoint-location.png)
+    :::image type="content" source="media/troubleshoot-meeting-recording-issues/teams-channel-location.png" alt-text="Screenshot of the Teams location for storing meeting recordings.":::
+  
+    Administrators can also find the recording link for users directly in SharePoint from the **Recordings** folder under **Documents**.
+  
+    Example in SharePoint: <*SharePoint/Documents/Channel name*>/Recordings
+  
+    :::image type="content" source="media/troubleshoot-meeting-recording-issues/sharepoint-location.png" alt-text="Screenshot of the SharePoint location for storing meeting recordings.":::
+  
