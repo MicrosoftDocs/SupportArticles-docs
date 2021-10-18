@@ -40,7 +40,7 @@ You can determine whether this feature is contributing to the problem by checkin
 
 Shell-icons-0.4.0.eot
 
-:::image type="content" source="media/troubleshoot-missing-graphic-icons/CSS3111-error.png" alt-text="CSS3111 error screenshot":::
+:::image type="content" source="media/troubleshoot-missing-graphic-icons/CSS3111-error.png" alt-text="Screenshot of CSS3111 error.":::
 
 [CSS3114](/previous-versions/windows/internet-explorer/ie-developer/samples/hh180764(v=vs.85)): @font-face failed OpenType embedding permission check. Permission must be Installable.
 

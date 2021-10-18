@@ -12,13 +12,13 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 08/19/2019
+ms.date: 10/11/2021
 ms.author: genli
 
 ---
 
 # Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal
-If your Linux virtual machine (VM) encounters a boot or disk error, you may need to perform troubleshooting steps on the virtual hard disk itself. A common example would be an invalid entry in `/etc/fstab` that prevents the VM from being able to boot successfully. This article details how to use the Azure portal to connect your virtual hard disk to another Linux VM to fix any errors, then re-create your original VM.
+If your Linux virtual machine (VM) encounters a boot or disk error, you may need to perform troubleshooting steps on the virtual hard disk itself. A common example would be an invalid entry in `/etc/fstab` that prevents the VM from being able to boot successfully. This article details how to use the Azure portal to connect your virtual hard disk to another Linux VM to fix any errors, then re-create your original VM. 
 
 ## Recovery process overview
 The troubleshooting process is as follows:
@@ -32,7 +32,7 @@ The troubleshooting process is as follows:
 1. Swap the OS disk for the VM.
 
 > [!NOTE]
-> This article does not apply to the VM with unmanaged disk.
+> This article does not apply to the VM with unmanaged disk. For an encrypted Linux disk, see [Unlocking an encrypted Linux disk for offline repair](unlock-encrypted-linux-disk-offline-repair.md).
 
 ## Determine boot issues
 Examine the boot diagnostics and VM screenshot to determine why your VM is not able to boot correctly. A common example would be an invalid entry in `/etc/fstab`, or an underlying virtual hard disk being deleted or moved.

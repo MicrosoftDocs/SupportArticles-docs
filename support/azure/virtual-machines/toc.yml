@@ -436,6 +436,8 @@
         href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
       - name: Azure Linux Auto Repair
         href: repair-linux-vm-using-ALAR.md
+      - name: Unlock the encrypted disk for offline repair
+        href: unlock-encrypted-linux-disk-offline-repair.md
     - name: Repair VM with Nested Hyper-V
       href: troubleshoot-vm-by-use-nested-virtualization.md
 
@@ -507,6 +509,8 @@
     href: oom-swap-file-linux-vm.md
   - name: Upgrade VM to contain more than 64 vCPUs
     href: vm-cannot-upgrade-64-vcpu.md
+  - name: VM stuck in failed state
+    href: vm-stuck-in-failed-state.md
   - name: Redeploy a VM
     items:
     - name: Linux
