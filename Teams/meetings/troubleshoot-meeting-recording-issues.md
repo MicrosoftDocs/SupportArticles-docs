@@ -58,7 +58,7 @@ If the issue isn't resolved by an update, use the following workaround for the a
 
 - Leave and rejoin the meeting. This might restore the recording functionality.
 - Use the [Teams web client](https://teams.microsoft.com/) to join and record the meeting.
-- Make sure that you're trying to record a meeting, and not a 1:1 call. Call recording is controlled by the `AllowCloudRecordingForCalls` parameter of Teams calling policies. 
+- Make sure that you're trying to record a meeting, and not a 1:1 call. Call recording is controlled by the `AllowCloudRecordingForCalls` parameter of Teams calling policies.
 - Run the 1:1 Call Recording Diagnostic for an impacted user:
   1. Sign in to Microsoft 365 admin center, and type **Diag: Teams 1:1 Call Recording** in the **Need Help?** search box.
   2. Enter the Session Initiation Protocol (SIP) address, and then select **Run Tests**.
@@ -69,7 +69,7 @@ Try again to record the meeting. If the issue still isn't resolved, ask your adm
 
 In high-volume chat sessions, a known issue prevents the meeting recording link from appearing for one or more users.
 
-Try scrolling up to the top of the chat window and then scrolling back to the bottom. This action might trigger a chat service event and restore the meeting recording link.
+Try scrolling up to the top of the chat window and then scrolling back to the bottom. This action might trigger a chat service event and restore the meeting recording link...
 
 If the meeting recording link still isn't visible, use either of the following methods to locate the recording, depending on your storage location. The location is provided in the diagnostic report.
 
