@@ -13,18 +13,22 @@ _Original KB number:_ &nbsp; 110
 
 This is an introductory file that explains the different options and features of Visual Studio Code. You can create topics, add different elements to the topics, update topics, proofread topics, troubleshoot warnings, and so on.
 The following topics are covered in this section:
+
 - Creating a topic
 - Adding different features to a topic
 - Updating a topic
 
-## Creating a topic
-You can create a topic. 
+## Creating-a-topic
+
+You can create a topic.
+
 1. Click in the folder where you want to add a topic.
 1. Select **New File** from the **File** menu. You can also right-click and select **New File**. You could also use **Ctrl+N** to create a new file.
-1. In the placeholder, type the name of the file. 
+1. In the placeholder, type the name of the file.
 1. Provide the required extension. For example, enter .md (markdown).
 
-## Previewing a file
+## Previewing-a-file
+
 At every stage of creating a topic, you can preview the way it looks. To preview a file:
 
 1. In the new file, add all the required sections.
