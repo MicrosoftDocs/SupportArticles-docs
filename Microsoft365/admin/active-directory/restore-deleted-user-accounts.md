@@ -30,9 +30,9 @@ A user account that was accidentally deleted from Microsoft Office 365, Microsof
 
 #### Before you start  
 
-When users are deleted from Azure Active Directory (Azure AD), they are moved to a “deleted” state and no longer appear in the user list. However, they are not completely removed, and they can be recovered within 30 days. 
+When users are deleted from Azure Active Directory (Azure AD), they are moved to a "deleted" state and no longer appear in the user list. However, they are not completely removed, and they can be recovered within 30 days. 
 
-Use Office 365 and the Azure Active Directory Module for PowerShell as follows to determine whether a user is eligible to be recovered from “deleted” status:
+Use Office 365 and the Azure Active Directory Module for PowerShell as follows to determine whether a user is eligible to be recovered from "deleted" status:
 
 1. In the **Office 365** portal, look up user accounts that were deleted through the portal. To do this, follow these steps:
    1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com/)) by using administrative credentials.
@@ -55,21 +55,21 @@ To recover a user account that was deleted manually, use one of the following me
 - Use the Office 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user).
 - Use the Azure Active Directory Module for Windows PowerShell to recover the user account. To do this, type the following command, and then press Enter:
 
-    **`Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`**
+    `Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`
 
-    If this command doesn’t work, try the following command:
+    If this command doesn't work, try the following command:
 
-    **`Restore-MsolUser -UserPrincipalName <string> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`**
+    `Restore-MsolUser -UserPrincipalName <string> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`
 
     > [!NOTE]
     > In these commands, the following conventions are used:
-    > - The *UserPrincipalName* and *ObjectID* parameters uniquely identify the user object to be restored.
-    > - The *AutoReconcileProxyConflicts* parameter is optional and is used in scenarios in which another user object is granted the target user object’s proxy address after that address is deleted.
-    > - The *NewUserPrincipalName* parameter is optionally used in scenarios in which another user object is granted by using the target user object’s user principal name (UPN) after that UPN was deleted.
+    > - The `UserPrincipalName` and `ObjectID` parameters uniquely identify the user object to be restored.
+    > - The `AutoReconcileProxyConflicts` parameter is optional and is used in scenarios in which another user object is granted the target user object's proxy address after that address is deleted.
+    > - The `NewUserPrincipalName` parameter is optionally used in scenarios in which another user object is granted by using the target user object's user principal name (UPN) after that UPN was deleted.
 
 ### Resolution 2: Recover accounts deleted because scoping changes exclude the on-premises Active Directory user object
 
-To recover deleted user accounts, make sure that directory synchronization filtering (scoping) is set in such a way that the scope includes the objects that you want to recover. 
+To recover deleted user accounts, make sure that directory synchronization filtering (scoping) is set in such a way that the scope includes the objects that you want to recover.
 
 For more information, see [Azure AD Connect sync: Configure filtering](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering).
 
@@ -86,67 +86,67 @@ To recover an item that was deleted from the on-premises Active Directory schema
 - If the Active Directory recycle bin is unavailable, or if the object in question is no longer in the recycle bin, try to recover the deleted item by using the AdRestore tool. To do this, follow these steps:
 
    1. Install the [AdRestore](/sysinternals/downloads/adrestore) tool.
-   2. Use AdRestore together with a search filter to locate the deleted on-premises user object. The following examples use a “UserA” string to search for usernames that match.
+   2. Use AdRestore together with a search filter to locate the deleted on-premises user object. The following examples use a "UserA" string to search for usernames that match.
 
         1. Use AdRestore to enumerate all user objects that have a "UserA" string in their name:
 
-        ```console
-        C:\>adrestore.exe UserA
-        AdRestore v1.1 by Mark Russinovich
-        Sysinternals - www.sysinternals.com
+            ```console
+            C:\>adrestore.exe UserA
+            AdRestore v1.1 by Mark Russinovich
+            Sysinternals - www.sysinternals.com
 
-        Enumerating domain deleted objects:
-        cn: MailboxA
-        DEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f
-        distinguishedName: CN=UserA\0ADEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f,CN=Deleted Objects,DC=Domain,DC=com
-        lastKnownParent: OU=OnPremises,DC=Domain,DC=com
+            Enumerating domain deleted objects:
+            cn: MailboxA
+            DEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f
+            distinguishedName: CN=UserA\0ADEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f,CN=Deleted Objects,DC=Domain,DC=com
+            lastKnownParent: OU=OnPremises,DC=Domain,DC=com
 
-        Found 1 item matching search criteria.
-        ```
+            Found 1 item matching search criteria.
+            ```
 
-        2. 2.	Use AdRestore together with the **-r** switch to restore the user object.
+        2. Use AdRestore together with the **-r** switch to restore the user object.
 
-        ```console
-        C:\>adrestore.exe Usera -r
-        AdRestore v1.1 by Mark Russinovich
-        Sysinternals - www.sysinternals.com
+            ```console
+            C:\>adrestore.exe Usera -r
+            AdRestore v1.1 by Mark Russinovich
+            Sysinternals - www.sysinternals.com
 
-        Enumerating domain deleted objects:
-        cn: UserA
-        DEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f
-        distinguishedName: CN=MailboxA\0ADEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f,CN=Deleted Objects,DC=Domain,DC=com
-        lastKnownParent: OU=OnPremises,DC=Domain,DC=com
+            Enumerating domain deleted objects:
+            cn: UserA
+            DEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f
+            distinguishedName: CN=MailboxA\0ADEL:3c45a0ae-ebc5-490d-a4b4-4b20d3e34a3f,CN=Deleted Objects,DC=Domain,DC=com
+            lastKnownParent: OU=OnPremises,DC=Domain,DC=com
 
-        Do you want to restore this object (y/n)? y
-        Restore succeeded.
+            Do you want to restore this object (y/n)? y
+            Restore succeeded.
 
-        Found 1 item matching search criteria.
-        ```
+            Found 1 item matching search criteria.
+            ```
 
 - **Enable the user** object in Active Directory. When the object is restored, it's disabled at first. Therefore, you have to enable it. We recommend that you first reset the user password. To enable the user, follow these steps:
 
-    1. In Active Directory Users and Computers, right-click the user, and then select  **Reset Password.**  
-    1. In the  **New password** and **Confirm password** boxes, enter a new password, and then select **OK**.
-    1. Right-click the user, select  **Enable Account**, and then select **OK**.
+    1. In Active Directory Users and Computers, right-click the user, and then select **Reset Password.**  
+    1. In the **New password** and **Confirm password** boxes, enter a new password, and then select **OK**.
+    1. Right-click the user, select **Enable Account**, and then select **OK**.
 
-       ![Screen shot of Enable account in Active Directory](./media/restore-deleted-user-accounts/enable-account.jpg)
+       :::image type="content" source="./media/restore-deleted-user-accounts/enable-account.png" alt-text="Screenshot about how to enable the account in Active Directory." border="true":::
 
-        You receive the following error message (expected):
+       You receive the following error message (expected):
 
-        > Windows cannot enable object \<MailboxName> because:
+       > Windows cannot enable object \<MailboxName> because:
         Unable to update the password. The value provided for the new password does not meet the length, complexity, or history requirements of the domain.
 
-        After you receive this error message, reset the user's password in Active Directory Users and Computers.
+       After you receive this error message, reset the user's password in Active Directory Users and Computers.
 
-- **Configure the user logon name.**
-   
+- **Configure the user logon name**
+
    The user logon name (also known as the user principal name, or UPN) isn't set from the restored user object. You have to update the user logon name, especially if the user is a federated account.
 
    To configure the user logon name, follow these steps:
 
    1. In Active Directory Users and Computers, right-click the user, and then select **Properties**.  
-   2. Select **Account**, enter a name in the User logon name box, and then select **OK**. 
-      
+   2. Select **Account**, enter a name in the User logon name box, and then select **OK**.
+
    Finally, if you can't recover the deleted user account through the Active Directory recycle bin or by using the AdRestore tool, run an authoritative restore of the deleted user objects in Active Directory.
 
 ### Warnings and cautions
@@ -155,7 +155,7 @@ To recover an item that was deleted from the on-premises Active Directory schema
 
     For more information about how to run an authoritative restore of Active Directory objects, see [Performing an Authoritative Restore of Active Directory Objects](/previous-versions/windows/it-pro/windows-server-2003/cc779573(v=ws.10)).
 
-- After you restore the object by using any Resolution 3 method, the object may not have all service attributes (such as Exchange Online and Skype for Business Online) automatically restored. 
+- After you restore the object by using any Resolution 3 method, the object may not have all service attributes (such as Exchange Online and Skype for Business Online) automatically restored.
 
     For example, for a user that was formerly mail-enabled in Exchange Online, you can use Windows PowerShell cmdlets to repopulate the Exchange Online attributes.
 
@@ -196,9 +196,12 @@ To restore users who are in this state, you can correct the conflict by using th
 > [!NOTE]
 > When you use the `AutoReconcileProxyConflicts` parameter, any conflicting email addresses are removed from the deleted user so that you can continue the recovery process.
 
-The Office 365 portal shows the equivalent error messages in the form of the Windows PowerShell “error states” that were mentioned earlier. For example, you receive the following message:
+The Office 365 portal shows the equivalent error messages in the form of the Windows PowerShell "error states" that were mentioned earlier. For example, you receive the following message:
 
-![Screen shot of user name conflict page](./media/restore-deleted-user-accounts/conflict.jpg)
+> User name conflict
+> The user you want to restore has the same user name.
+
+:::image type="content" source="./media/restore-deleted-user-accounts/user-name-conflict.png" alt-text="Screenshot that shows the user name is conflict." border="true":::
 
 To restore users who are in this state, complete the information that is requested in the form.
 

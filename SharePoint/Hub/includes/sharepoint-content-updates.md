@@ -2,6 +2,14 @@
 
 
 
+## Week of October 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/14/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+
+
 ## Week of October 04, 2021
 
 
