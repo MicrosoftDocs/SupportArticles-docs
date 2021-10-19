@@ -60,7 +60,7 @@ If neither workaround fixes the issue, open a support ticket that contains the f
 
 ### Run a self-diagnostics tool
 
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues with user presence.
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect user presence.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
