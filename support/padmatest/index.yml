@@ -5,7 +5,7 @@ summary: A quick guide to using the VSS Interface
 metadata:
    ms.topic: hub-page
    services: service
-   ms.prod: 
+   ms.prod: testprod
 
 productDirectory:
   items:
