@@ -30,8 +30,6 @@
       href: onedrive-attaches-corporate-protected-data-imessage.md
     - name: Mismatch between value type and configuration value
       href: mismatch-error-configuration-value-ampersand.md
-    - name: OneDrive for iOS supports Open-in protection on unenrolled devices
-      href: open-in-protection-unenrolled-devices.md
     - name: Saving images locally not restricted
       href: saving-images-locally-not-restricted.md
   - name: macOS apps
