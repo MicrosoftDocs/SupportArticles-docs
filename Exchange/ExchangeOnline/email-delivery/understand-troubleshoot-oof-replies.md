@@ -260,7 +260,7 @@ If two different OOF messages are sent, and you don't find an additional Inbox r
 1. In the Outlook client, select **File** > **Automatic Replies** > **Rules**.
 2. Select the OOF rule and then select **Delete Rule**.
 
-    :::image type="content" source="media/understand-troubleshoot-oof-replies/auto-reply-rule.png" alt-text="Screenshot shows the steps of deleting the automatic reply rule.":::
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/auto-reply-rule.png" alt-text="Screenshot shows steps to delete the automatic reply rule.":::
 
 ### Automatic replies cannot be enabled and an error message is received
 
