@@ -29,7 +29,7 @@ Approx Thread CPU Used: kernel 70203 ms, user 0 ms. Process Utilization 69%. Sys
 
 To fix this issue, [enable the Lock Pages in Memory option](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) for the SQL Server service account to keep data in physical memory. This operation will prevent the system from paging the data to virtual memory on disk. To enable the lock pages in memory option, follow the steps:
 
-1. On the **Start** menu, click **Run**, and type *gpedit.msc*.
+1. Press Win+R, in the **Open** box, type *gpedit.msc*.
 1. On the Local Group Policy Editor console, expand **Computer Configuration** > **Windows Settings**.
 1. Expand **Security Settings** > **Local Policies**.
 1. Select the **User Rights Assignment** folder.
@@ -42,4 +42,4 @@ To fix this issue, [enable the Lock Pages in Memory option](/sql/database-engine
 
 See the following screenshot of the Local Group Policy Editor console.
 
-:::image type="content" source="./media/non-yielding-error-lock-pages-disable/lock-page-in-memeory.png" alt-text="Screenshot of the Lock pages in memory Properties option in Local Group Policy Editor console." border="false":::
+:::image type="content" source="./media/non-yielding-error-lock-pages-disable/lock-page-in-memeory.png" alt-text="Screenshot of Local Group Policy Editor console where the lock pages in memory option in the User Rights Assignment folder is selected." border="false":::
