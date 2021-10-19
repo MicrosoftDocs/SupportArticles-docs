@@ -3,7 +3,7 @@ title: Overview of Blue Ribbon
 description: This file provides a brief description of the various options on the Blue Ribbon.
 ms.topic: article
 ms.reviewer: 
-ms.date: 10/18/2021
+ms.date: 10/19/2021
 ---
 
 _Applies to:_ &nbsp; Blue Ribbon  
@@ -12,7 +12,6 @@ _Original KB number:_ &nbsp; 110
 # Elements of the Blue Ribbon
 
 The elements on the Blue Ribbon are very helpful. Following are the features you can add to your topics to make them more informative.
-this is a test line
 
 |Action  |Icon  |
 |---------|---------|
