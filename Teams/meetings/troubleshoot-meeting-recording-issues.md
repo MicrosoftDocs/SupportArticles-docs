@@ -38,7 +38,7 @@ For more information about user requirements for Teams meeting recording, see [P
 
 ## Run the Meeting Recording Support Diagnostic
 
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to validate that the user is properly configured to record a meeting in Teams.
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify that the user is correctly configured to record a meeting in Teams.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
