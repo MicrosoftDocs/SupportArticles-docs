@@ -38,13 +38,13 @@ For more information about how to copy or move library files by using "Open with
 
 When you browse to a SharePoint Online document library, you may receive intermittent connectivity issues, and you may receive one of the following error messages:
 
-> - Your client does not support opening this list with Windows Explorer.
+- > Your client does not support opening this list with Windows Explorer.
 
-> - We're having a problem opening this location in File Explorer. Add this web site to your Trusted Sites list and try again.
+- > We're having a problem opening this location in File Explorer. Add this web site to your Trusted Sites list and try again.
 
-> - We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see [https://support.microsoft.com/kb/2629108]().
+- > We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see [https://support.microsoft.com/kb/2629108]().
 
-> - We're having trouble opening this library in File Explorer. Syncing this library will give you a better experience.
+- > We're having trouble opening this library in File Explorer. Syncing this library will give you a better experience.
 
    :::image type="content" source="media/troubleshoot-issues-using-open-with-explorer/error-have-trouble-open-library.png" alt-text="Screenshot of the error dialog, showing We're having trouble opening this library in File Explorer." border="false":::
 
