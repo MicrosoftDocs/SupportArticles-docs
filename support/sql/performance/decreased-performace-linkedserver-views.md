@@ -9,6 +9,8 @@ ms.prod: sql
 
 # Performance issue when querying views across linked servers
 
+_Applies to:_ &nbsp; SQL Server
+
 ## Symptoms
 
 Executing a query against views on a [linked server](/sql/relational-databases/linked-servers/linked-servers-database-engine) remotely takes more time than executing the same query directly against a base table on the linked server.
