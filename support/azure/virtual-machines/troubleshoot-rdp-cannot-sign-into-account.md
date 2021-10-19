@@ -17,7 +17,7 @@ ms.author: genli
 
 #  Can't sign into your account when you try to connect to an Azure Windows VM
 
-This article shows how to troubleshoot the error "We can't sign into your account" when you try to connect to an Azure Windows VM using Remote Desktop Protocol (RDP).
+This article discusses how to troubleshoot the error "We can't sign into your account" when you try to connect to an Azure Windows VM using Remote Desktop Protocol (RDP).
 
 ## Symptoms
 
