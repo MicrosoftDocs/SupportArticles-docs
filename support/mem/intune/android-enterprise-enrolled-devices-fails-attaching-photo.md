@@ -1,16 +1,13 @@
 ---
-title: Unable to add attachment due to IO error 
-description: Provide a workaround for the issue where Android Enterprise enrolled devices can't attach photos to applications.
-ms.date: 05/18/2020
+title: Unable to add attachment due to IO error - Android Enterprise device in Intune
+description: Gives a workaround for the issue where Android Enterprise enrolled devices can't attach photos to applications.
+ms.date: 10/18/2021
 ms.prod-support-area-path: Use app protection policies
 ms.reviewer: kakimble, intunecic, joelste
 ---
-# You can't attach photos to applications on Android Enterprise work profile enrolled devices
+# Can't attach photos to applications on Android Enterprise work profile enrolled devices
 
-This article fixes an issue in which Android Enterprise enrolled devices can't attach photos to applications.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4491870
+This article fixes an issue in which you can't attach photos to applications on an Android Enterprise enrolled device.
 
 ## Symptoms
 
@@ -24,7 +21,7 @@ On an Android Enterprise work profile enrolled device, when you try to attach a 
 
 This occurs because Android requires an additional application in the workspace to open photos.
 
-## Resolution
+## Solution
 
 To resolve this issue, approve and assign a File Explorer application (such as [File Explorer application by Google](https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.files)) from the managed Google Play store to your device.
 

@@ -1,15 +1,12 @@
 ---
-title: macOS LOB apps aren't deployed
-description: Describes an issue in which macOS LOB apps aren't installed on targeted devices and no error messages are shown in Intune.
-ms.date: 05/14/2020
+title: macOS LOB apps aren't deployed in Intune
+description: Describes an issue in which macOS line-of-business (LOB) apps aren't installed on targeted devices and no error messages are shown in Intune.
+ms.date: 10/19/2021
 ms.prod-support-area-path: Manage Apps
 ---
 # macOS LOB apps aren't deployed in Microsoft Intune
 
-This article provides the information to solve the issue that the macOS line-of-business (LOB) apps cannot be deployed on the devices.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4344141
+This article give troubleshooting steps to help resolve when Microsoft Intune cannot deploy a macOS line-of-business (LOB) app to targeted devices.
 
 ## Symptoms
 
@@ -24,7 +21,7 @@ The issue occurs if your .pkg package doesn't contain the following information:
 
 This information is required so that Intune can deploy the app on targeted devices.
 
-To check whether your .pkg package contains the required information, follow these steps:
+Use the following steps to check whether your .pkg package contains the required information.
 
 1. On a macOS device, use the following `IntuneAppUtil` command within the [Intune App Wrapping Tool for Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac) to extract the detected parameters and version for the created *.intunemac* file:
 
@@ -59,11 +56,9 @@ To check whether your .pkg package contains the required information, follow the
     > \<pkg-info identifier="com.microsoft.OneDrive" version="17.3.6760" install-location="/Applications">  
     > \<bundle path="./OneDrive.app" id="com.microsoft.OneDrive" CFBundleShortVersionString="17.3.6760" CFBundleVersion="6760.105"/>
 
-## Resolution
+## Solution
 
-To fix the issue, contact your app developer to rebuild the .pkg package to include the required information.
-
-For Apple-specific developer documentation, see [https://developer.apple.com/](https://developer.apple.com/).
+To fix the issue, contact your app developer to rebuild the .pkg package to include the required information. For Apple-specific developer documentation, see [https://developer.apple.com/](https://developer.apple.com/).
 
 ## More information
 

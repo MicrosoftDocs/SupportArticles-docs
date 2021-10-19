@@ -511,6 +511,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/open-in-protection-unenrolled-devices.md",
+      "redirect_url": "/mem/intune/apps/data-transfer-between-apps-manage-ios",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/index.md",
       "redirect_url": "/support/mem/intune/welcome-intune",
       "redirect_document_id": false
