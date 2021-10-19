@@ -22,7 +22,7 @@ search.appverid:
 
 # External federated contacts don't appear in Teams search
 
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues with federation.
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect federation.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
