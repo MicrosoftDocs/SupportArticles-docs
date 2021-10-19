@@ -83,7 +83,7 @@ OOF rules templates in MFCMapi:
 
 An OOF response is sent one time per recipient. The list of recipients to whom the OOF response is sent are stored in the OOF history, which is cleared out either when the OOF state changes (enabled or disabled) or when the OOF rule is modified. OOF history is stored in the user's mailbox, and can be viewed by using the MFCMapi tool at: **Freebusy Data** > **PR_DELEGATED_BY_RULE**.
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-response-history.png" alt-text="Screenshot shows the OOF response history can be viewed by using the MFCMapi tool at: Freebusy Data > PR_DELEGATED_BY_RULE.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-response-history.png" alt-text="Screenshot of the OOF response history that's stored in the Freebusy Data.":::
 
 > [!NOTE]
 > If you want to send a response to the sender every time instead of only one time, you can apply the "have server reply using a specific message" mailbox server-side rule instead of using the OOF rule. This alternative rule sends a response every time that a message is received.
@@ -112,7 +112,7 @@ Because OOF rules have a blank (<>) return path, the OOF rule unexpectedly match
 To fix this issue, change the "Match sender address in message" transport rule property to "Header or envelope", so that the checks will also be done against the **From**(also known as "Header From"), **Sender**, or **Reply-To** fields. For more information about mail flow rule conditions, see the "Senders" section of
 [this article](/Exchange/policy-and-compliance/mail-flow-rules/conditions-and-exceptions).
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/header-or-envelope.png" alt-text="Screenshot to select Header on the Match sender address in message page.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/rule-property-header.png" alt-text="Screenshot to select Header on the Match sender address in message page.":::
 
 ### JournalingReportNdrTo mailbox setting
 
@@ -157,7 +157,7 @@ For more information about these OOF types, see the **AllowedOOFType** entry in 
 
 You can check the OOF reply type from **Exchange Admin Center** > **Mail flow** > **Remote domains**.
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-reply-type.png" alt-text="Screenshot of checking OOF reply type using portal." border="false":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/oof-reply-type.png" alt-text="Screenshot of Out of Office automatic reply types." border="false":::
 
 Alternatively, you can run the following PowerShell cmdlet:
 
@@ -183,7 +183,7 @@ Another setting on remote domains is one that you use to allow or prevent messag
 
 This setting can be found in **Exchange Admin Center** > **Mail flow** > **Remote domains**.
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/automatic-replies-setting.png" alt-text="Screenshot of checking OOF reply blocking using portal.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/automatic-replies-setting.png" alt-text="Screenshot of Automatic replies setting.":::
 
 Alternatively, you can run the following PowerShell cmdlet:
 

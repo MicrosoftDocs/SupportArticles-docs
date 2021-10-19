@@ -22,7 +22,7 @@ appliesto:
 
 If your organization has a hybrid deployment (on-premises plus Microsoft Office 365), you frequently have to relay email messages to the Internet through Office 365. That is, messages that you send from your on-premises environment (mailboxes, applications, scanners, fax machines, and so on) to Internet recipients are first routed to Office 365, and then sent out.
 
-:::image type="content" source="./media/office-365-notice/email-to-the-internet.png" alt-text="Figure shows email relayed from your on-premises email servers to the Internet through Office 365." border="false":::
+:::image type="content" source="./media/office-365-notice/email-routing.png" alt-text="Figure shows email relayed from your on-premises email servers to the Internet through Office 365." border="false":::
 
 Figure: Email relayed from your on-premises email servers to the Internet through Office 365
 
