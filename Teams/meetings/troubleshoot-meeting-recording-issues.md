@@ -69,7 +69,7 @@ Try again to record the meeting. If the issue still isn't resolved, ask your adm
 
 In high-volume chat sessions, a known issue prevents the meeting recording link from appearing for one or more users.
 
-Try scrolling up to the top of the chat window and then scrolling back to the bottom. This action might trigger a chat service event and restore the meeting recording link...
+Try scrolling up to the top of the chat window and then scrolling back to the bottom. This action might trigger a chat service event and restore the meeting recording link.
 
 If the meeting recording link still isn't visible, use either of the following methods to locate the recording, depending on your storage location. The location is provided in the diagnostic report.
 
