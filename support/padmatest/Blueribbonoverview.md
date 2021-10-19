@@ -16,11 +16,11 @@ this is a test line
 
 |Action  |Icon  |
 |---------|---------|
-|Bulleted List  |:::image type="content" source="Media\previewfile\bulletlisticon.PNG" alt-text="bulleted list":::|
-|Bolderize Text |:::image type="content" source="Media\previewfile\boldicon.PNG" alt-text="Bolderize text":::|
-|Italicize Text |:::image type="content" source="Media\previewfile\italicizeicon.PNG" alt-text="Bolderize text":::|
+|Bulleted List  |:::image type="content" source="Media\previewfile\bulletlisticon.PNG" alt-text="used for unordered list":::|
+|Bolderize Text |:::image type="content" source="Media\previewfile\boldicon.PNG" alt-text="highlight text as bold":::|
+|Italicize Text |:::image type="content" source="Media\previewfile\italicizeicon.PNG" alt-text="make text unique by italicizing text":::|
 |Add Notes, Warnings, Important, Tip, or Warning |:::image type="content" source="Media\previewfile\warningicon.PNG" alt-text="insert warning, tip, information, note":::|
 |Numbered List |:::image type="content" source="Media\previewfile\numberedlisticon.PNG" alt-text="helps you insert numbered lists":::|
 |Insert Link|:::image type="content" source="Media\previewfile\linkicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::|
-Insert Image     |         |
-Insert Include     |         |
+Insert Image  |:::image type="content" source="Media\previewfile\imageicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::|
+Insert Include     |:::image type="content" source="Media\previewfile\includeicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::         |
