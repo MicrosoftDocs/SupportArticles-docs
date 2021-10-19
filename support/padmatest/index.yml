@@ -5,11 +5,14 @@ summary: A quick guide to using the VSS Interface
 metadata:
    ms.topic: hub-page
    services: service
-   ms.prod: testprod
-
+   ms.service: microsoft
+   ms.author: padmatest
+   
 productDirectory:
   items:
   - title: Overview of the Visual Studio Code Features
+    imageSrc: "Media/previewfile/codeicon.png"
     url: ../padmatest/Overviewfeatures.md
   - title: Options on the Blue Ribbon
+    imageSrc: "Media/previewfile/codeicon.png"
     url: ../padmatest/Blueribbonoverview.md
