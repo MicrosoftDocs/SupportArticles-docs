@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; SQL Server 2016, SQL Server 2017 on Windows, SQL Server 201
 
 ## Symptoms
 
-On a server hosting a SQL Server instance with a large amount of memory, the SQL server frequently allocates and frees memory. In this scenario, if the [Lock Pages in Memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#lock-pages-in-memory-lpim) option is not enabled for the SQL Server service account, the SQL Server may encounter a non-yielding scheduler condition and generate a memory dump file. The SQL Server error log displays this entry:
+On a server hosting a SQL Server instance with a large amount of memory, the SQL Server frequently allocates and frees memory. In this scenario, if the [Lock Pages in Memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#lock-pages-in-memory-lpim) option is not enabled for the SQL Server service account, the SQL Server may encounter a non-yielding scheduler condition and generate a memory dump file. The SQL Server error log displays this entry:
 
 ```output
 Process 0:0:0 (<ProcessID>) Worker <WorkerID> appears to be non-yielding on Scheduler 1. 
