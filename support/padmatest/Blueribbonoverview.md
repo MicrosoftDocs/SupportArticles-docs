@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 110
 The elements on the Blue Ribbon are very helpful. Following are the features you can add to your topics to make them more informative.
 this is a test line
 
-|Option  |Icon  |  
-   
-|Bulleted List|:::image type="content" source="Media\previewfile\bulletlisticon.PNG" alt-text="bulleted list":::|
-|Bolderize Text|  :::image type="content" source="Media\previewfile\boldicon.PNG" alt-text="Bolderize text":::|
-|Italicize Text     |         |
-|Add Notes, Warnings, Important, Tip, or Warning     |  :::image type="content" source="support\padmatest\Media\previewfile\warningicon.PNG" alt-text="option to insert warning, tip, information, note":::       |
-|Numbered List     |:::image type="content" source="support\padmatest\Media\previewfile\numberedlisticon.PNG" alt-text="helps you insert numbered lists":::         |
-|Insert Link     |    :::image type="content" source="support\padmatest\Media\previewfile\linkicon.PNG" alt-text="helps you insert bookmarks and hyyperlinks":::     |
+|Action  |Icon  |
+|---------|---------|
+|Bulleted List  |:::image type="content" source="Media\previewfile\bulletlisticon.PNG" alt-text="bulleted list":::|
+|Bolderize Text |:::image type="content" source="Media\previewfile\boldicon.PNG" alt-text="Bolderize text":::|
+|Italicize Text |:::image type="content" source="Media\previewfile\italicizeicon.PNG" alt-text="Bolderize text":::|
+|Add Notes, Warnings, Important, Tip, or Warning |:::image type="content" source="Media\previewfile\warningicon.PNG" alt-text="insert warning, tip, information, note":::|
+|Numbered List |:::image type="content" source="Media\previewfile\numberedlisticon.PNG" alt-text="helps you insert numbered lists":::|
+|Insert Link|:::image type="content" source="Media\previewfile\linkicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::|
 Insert Image     |         |
 Insert Include     |         |
