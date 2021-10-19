@@ -36,11 +36,11 @@ Here are the four possible causes of this issue:
 
 ## Resolution
 
-- Make sure the user has been assigned a [Teams license](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
-- Make sure the user has been assigned a [Calling Plan](/microsoftteams/calling-plan-landing-page).
+- Make sure that the user has been assigned a [Teams license](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
+- Make sure that the user has been assigned a [Calling Plan](/microsoftteams/calling-plan-landing-page).
 - Enable the user for [Enterprise Voice](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-enterprise-voice-online-and-phone-system-voicemail).
 - For more information about Islands mode, see [Understand Microsoft Teams and Skype for Business coexistence and interoperability](/microsoftteams/teams-and-skypeforbusiness-coexistence-and-interoperability).
-- Teams administrators should remove the user's **OnlineVoiceRoutingPolicy** value and set the correct value for the policy as shown in this example:
+- Teams administrators should remove the user's **OnlineVoiceRoutingPolicy** value and set the correct value for the policy as shown in the following example:
 
     ```powershell
     Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName $Null
@@ -54,7 +54,7 @@ Here are the four possible causes of this issue:
 
 ### Run a self-diagnostics tool
 
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues with dial pad.
+Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect the dial pad.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
