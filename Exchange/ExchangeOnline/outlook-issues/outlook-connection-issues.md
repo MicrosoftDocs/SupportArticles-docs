@@ -45,7 +45,7 @@ We can diagnose and fix several common Outlook connectivity issues for you. If o
 
 |||||
 |:-----|:-----|:-----|:-----|
-|:::image type="icon" source="media/outlook-connection-issues/support-icon.png":::|**Let us fix your issue** <br/>[Support and Recovery Assistant for Office 365](https://diagnostics.office.com/#/)|[:::image type="icon" source="media/outlook-connection-issues/help-icon.png":::](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)|**Need more help?** <br/> [Contact support for business products - Admin Help](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
+|[:::image type="icon" source="media/outlook-connection-issues/support-icon.png":::](https://diagnostics.office.com/#/)|**Let us fix your issue** <br/>[Support and Recovery Assistant for Office 365](https://diagnostics.office.com/#/)|[:::image type="icon" source="media/outlook-connection-issues/help-icon.png":::](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)|**Need more help?** <br/> [Contact support for business products - Admin Help](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 |||||
 
 ## Fix software update and profile issues
