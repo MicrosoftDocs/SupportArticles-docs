@@ -284,7 +284,7 @@ To help narrow down this issue, follow these steps:
     Get-mailbox -identity <mailbox> | fl RulesQuota
     ```
 
-    :::image type="content" source="media/understand-troubleshoot-oof-replies/check mailbox-identity.png" alt-text="Screenshot of checking mailbox identity.":::
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/check-mailbox-identity.png" alt-text="Screenshot of checking mailbox identity.":::
 
     By default, the RulesQuota parameter has a maximum value of 256 KB (262,144 bytes). This is determined by the size of the rules, not the number of rules.
 
