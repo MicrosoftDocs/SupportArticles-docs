@@ -206,7 +206,8 @@
         "mem/configmgr/**/*.md": [ "ConfigMgr" ],
         "system-center/**/*.md": [ "System Center" ],
         "dynamics-365/**/*.md": [ "Dynamics 365" ],
-        "power-platform/**/*.md": [ "Power Platform" ]
+        "power-platform/power-apps/*.md": [ "Power Apps" ],
+        "power-platform/power-automate/*.md": [ "Power Automate" ]
       }
     },
 
