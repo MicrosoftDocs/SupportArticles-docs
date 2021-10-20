@@ -1,6 +1,6 @@
 ---
 title: Performance issue when querying views across linked servers
-description: This article provides explanation and resolution on decreased performance for running linked servers against views compared to running them against tables. This is because cardinality estimation for views used constant values.
+description: This article provides explanation and resolution on decreased performance for running linked servers against views compared to running them against tables.
 ms.date: 09/21/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: ramakoni, jopilov
