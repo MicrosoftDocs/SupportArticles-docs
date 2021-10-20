@@ -97,6 +97,7 @@ This method requires that you have access to the DVD or ISO file that's used to 
     > [!NOTE]
     > Retail media includes a lowercase "r" before the ".WW" in the folder name and before the "WW.msi" in the MSI file name.
     For example, the installation file for Proplus retail is Proplus**r**WW.msi in the Proplus**r**WW folder. Proplus non-retail is ProplusWW.msi in the PlusplusWW.
+    >
     > :::image type="content" source="media/determine-office-license-type/proplus-installation-file.png" alt-text="Screenshot of an example of Proplus non-retail which named proplusww.":::
 
 #### Method 2: Use the command-line interface
