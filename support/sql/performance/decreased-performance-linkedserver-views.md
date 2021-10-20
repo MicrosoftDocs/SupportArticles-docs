@@ -5,6 +5,7 @@ ms.date: 09/21/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: ramakoni, jopilov
 ms.prod: sql
+ms.topic: troubleshooting
 ---
 
 # Performance issue when querying views across linked servers
@@ -21,7 +22,7 @@ Executing a query against a view and a base table results in a different behavio
 
 ### Cardinality estimation on a base table queried by linked servers
 
-The Microsoft OLE DB Provider (SQLOLEDB) (no longer maintained) or [Microsoft® OLE DB Driver 18 for SQL Server®](/sql/connect/oledb/download-oledb-driver-for-sql-server) (MSOLEDBSQL) both support distribution statistics on base tables. SQL Server can utilize the statistics and histogram over linked servers in the same way as any regular query does. For example, if you create a linked server called *LS1* that has the `AdventureWorks2019` database with the `Sales.SalesOrderDetail` table, the following queries can utilize the statistical histogram:
+The Microsoft OLE DB Provider (SQLOLEDB) (no longer maintained) or [Microsoft&reg; OLE DB Driver 18 for SQL Server&reg;](/sql/connect/oledb/download-oledb-driver-for-sql-server) (MSOLEDBSQL) both support distribution statistics on base tables. SQL Server can utilize the statistics and histogram over linked servers in the same way as any regular query does. For example, if you create a linked server called *LS1* that has the `AdventureWorks2019` database with the `Sales.SalesOrderDetail` table, the following queries can utilize the statistical histogram:
 
 ```tsql
 SELECT * FROM LS1.AdventureWorks2019.Sales.SalesOrderDetail;
@@ -30,7 +31,7 @@ SELECT * FROM LS1.AdventureWorks2019.Sales.SalesOrderDetail WHERE SalesOrderID=4
 
 The following graphical query plans show the estimated number of rows returned on each remote query.
 
-:::image type="content" source="media/decreased-performace-linkedserver-views/linked-server-query-table.png" alt-text="Screenshot of the query for table in linked server.":::
+:::image type="content" source="media/decreased-performance-linkedserver-views/linked-server-query-table.png" alt-text="Screenshot of the query for table in linked server.":::
 
 ### Cardinality estimation on views queried by linked servers
 
@@ -54,7 +55,7 @@ Linked server queries against views don't utilize statistics-based cardinality e
 
 3. The cardinality estimation of the query shows exactly **10,000** rows.
 
-    :::image type="content" source="media/decreased-performace-linkedserver-views/linked-server-query-view.png" alt-text="Screenshot of the query for view in linked server.":::
+    :::image type="content" source="media/decreased-performance-linkedserver-views/linked-server-query-view.png" alt-text="Screenshot of the query for view in linked server.":::
 
 ### Cardinality estimation on a view queried by linked servers with WHERE clause
 
@@ -80,7 +81,7 @@ OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));
 
 See the following cardinality estimation of the queries for an example.
 
-:::image type="content" source="media/decreased-performace-linkedserver-views/linked-server-query-viewce.png" alt-text="Screenshot of the query for view CE in linked server.":::
+:::image type="content" source="media/decreased-performance-linkedserver-views/linked-server-query-viewce.png" alt-text="Screenshot of the query for view CE in linked server.":::
 
 ## Resolution
 
@@ -124,7 +125,7 @@ In most cases, no action is needed because most application workloads won't be i
 
     See the following cardinality estimation of the query for an example.
 
-    :::image type="content" source="media/decreased-performace-linkedserver-views/linked-server-query-indexed-view.png" alt-text="Screenshot of the query for indexed view in linked server.":::
+    :::image type="content" source="media/decreased-performance-linkedserver-views/linked-server-query-indexed-view.png" alt-text="Screenshot of the query for indexed view in linked server.":::
 
 2. If you execute a query with the `WHERE` clause, you can increase the cardinality estimation by using the `Query Hint OPTION` (`USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`). This approach may help in some cases especially when joining with large tables.
 
