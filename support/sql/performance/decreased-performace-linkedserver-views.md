@@ -61,7 +61,7 @@ Linked server queries against views don't utilize statistics-based cardinality e
 If you execute a query with the `WHERE` clause against views on a linked server, the cardinality estimation against views is also a constant value. However, the value varies depending on the compatibility level of the database.
 
 > [!NOTE]
-> The value won't be impacted by the compatibility level of database where the view is defined.
+> The cardinality estimation value won't be impacted by the compatibility level of database where the view is defined.
 
 - For a database compatibility level of 120 or higher ([new version of cardinality estimator](/sql/relational-databases/performance/cardinality-estimation-sql-server#versions-of-the-ce)), the cardinality estimation is 100.
 - For a database compatibility level of 110 or lower (legacy cardinality estimator), the cardinality estimation is 1,000.
