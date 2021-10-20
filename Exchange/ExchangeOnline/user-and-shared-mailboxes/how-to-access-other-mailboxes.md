@@ -17,6 +17,7 @@ appliesto:
 - Microsoft 365
 search.appverid: MET150
 ---
+
 # Accessing other people's mailboxes in Microsoft 365
 
 _Original KB number:_ &nbsp; 10048
@@ -125,9 +126,9 @@ The following procedure shows how to assign full permissions to a user mailbox:
 Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 admin for Enterprises, Midsize, or Education, you can also access EAC by selecting **Admin** > **Exchange** in the Microsoft Online Portal.
 
 1. In the EAC, navigate to **Recipients** > **Mailboxes**.
-2. In the list of mailboxes, select the mailbox that you want to assign permissions for, and then select **Edit**![Edit icon](./media/how-to-access-other-mailboxes/edit-icon.gif).
+2. In the list of mailboxes, select the mailbox that you want to assign permissions for, and then select **Edit** (:::image type="icon" source="media/how-to-access-other-mailboxes/edit-icon.gif":::).
 3. On the mailbox properties page, select **Mailbox Delegation**.
-4. To assign permissions to delegates, select **Add**![Add icon](./media/how-to-access-other-mailboxes/add-icon.gif) under **Full Access** to display a page that lists all recipients in your Exchange organization that can be assigned the permission. Select the recipients you want, add them to the list, and then select **OK**. You can also search for a specific recipient by typing the recipient's name in the search box and then selecting **Search** ![Search icon](./media/how-to-access-other-mailboxes/search-icon.gif).
+4. To assign permissions to delegates, select **Add** (:::image type="icon" source="media/how-to-access-other-mailboxes/add-icon.gif":::) under **Full Access** to display a page that lists all recipients in your Exchange organization that can be assigned the permission. Select the recipients you want, add them to the list, and then select **OK**. You can also search for a specific recipient by typing the recipient's name in the search box and then selecting **Search** ![Search icon](./media/how-to-access-other-mailboxes/search-icon.gif).
 
    The **Full Access** permission allows a delegate to open a user's mailbox and access the contents of the mailbox.
 
