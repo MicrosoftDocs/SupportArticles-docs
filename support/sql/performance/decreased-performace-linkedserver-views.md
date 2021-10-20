@@ -21,7 +21,7 @@ Executing a query against a view and a base table results in a different behavio
 
 ### Cardinality estimation on a base table queried by linked servers
 
-The Microsoft OLE DB Provider (SQLOLEDB) or Driver (MSOLEDBSQL) for SQL Server supports distribution statistics on base tables. SQL Server can utilize the statistics and histogram over linked servers in the same way as any regular query does. For example, if you create a linked server of the OLE DB Provider called *LS1* that has the `AdventureWorks2019` database with the `Sales.SalesOrderDetail` table, the following queries can utilize the statistical histogram:
+The Microsoft OLE DB Provider (SQLOLEDB) (no longer maintained) or [Microsoft® OLE DB Driver 18 for SQL Server®](/sql/connect/oledb/download-oledb-driver-for-sql-server) (MSOLEDBSQL) both support distribution statistics on base tables. SQL Server can utilize the statistics and histogram over linked servers in the same way as any regular query does. For example, if you create a linked server called *LS1* that has the `AdventureWorks2019` database with the `Sales.SalesOrderDetail` table, the following queries can utilize the statistical histogram:
 
 ```tsql
 SELECT * FROM LS1.AdventureWorks2019.Sales.SalesOrderDetail;
