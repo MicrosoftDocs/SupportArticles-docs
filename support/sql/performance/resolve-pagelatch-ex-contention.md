@@ -3,6 +3,7 @@ title: Resolve PAGELATCH_EX contention
 description: This article describes how to resolve last-page insert PAGELATCH_EX contention in SQL Server.
 ms.date: 02/17/2020
 ms.prod-support-area-path: Performance
+ms.reviewer: PijoCoder
 ms.prod: sql
 ---
 # Resolve last-page insert PAGELATCH_EX contention in SQL Server
@@ -76,11 +77,121 @@ For more information, see [Diagnosing and Resolving Latch Contention on SQL Serv
 
 To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.
 
+
+### 1. Confirm the contention on PAGELATCH_EX and identify the contention resource:
+
+This T-SQL script helps you discover if there are PAGELATCH_EX waits on the system with multiple session (say 5 or more) with significant wait time (say 10 ms or more). It also helps you discover which object and index the contention is on using sys.dm_exec_requests and DBCC PAGE () or sys.fn_PageResCracker and sys.dm_db_page_info (SQL Server 2019 only).
+
+
+```tsql
+SET NOCOUNT on 
+DECLARE @dbname SYSNAME, @dbid int, @objectid int, @indexid int, @indexname sysname, @sql varchar(8000), @manul_identification varchar(8000)
+
+if (convert(int, SERVERPROPERTY('ProductMajorVersion')) >= 15)
+BEGIN
+
+    drop table if exists #PageLatchEXContention
+
+    SELECT DB_NAME(page_info.database_id) DbName, r.db_id DbId, page_info.[object_id] ObjectId, page_info.index_id IndexId
+    into #PageLatchEXContention
+    FROM sys.dm_exec_requests AS er
+        CROSS APPLY sys.dm_exec_sql_text(er.sql_handle) AS st 
+        CROSS APPLY sys.fn_PageResCracker (er.page_resource) AS r  
+        CROSS APPLY sys.dm_db_page_info(r.[db_id], r.[file_id], r.page_id, 'DETAILED') AS page_info
+    WHERE er.wait_type = 'PAGELATCH_EX' and page_info.database_id not in (db_id('master'),db_id('msdb'), db_id('model'), db_id('tempdb')) 
+    GROUP BY DB_NAME(page_info.database_id), r.db_id, page_info.[object_id], page_info.index_id
+    HAVING COUNT(er.session_id) > 5 AND Max (er.wait_time) > 10
+
+    select * from #PageLatchEXContention 
+    
+    IF EXISTS (select 1 from #PageLatchEXContention) 
+    begin
+    
+        DECLARE optimize_for_seq_key_cursor CURSOR FOR
+            select DbName, DbId, ObjectId, IndexId from #PageLatchEXContention 
+
+        OPEN optimize_for_seq_key_cursor
+
+        FETCH NEXT FROM optimize_for_seq_key_cursor into @dbname, @dbid, @objectid , @indexid 
+
+        WHILE @@FETCH_STATUS = 0
+        BEGIN
+            select 'Consider using below statement to enable OPTIMIZE_FOR_SEQUENTIAL_KEY for the indexes in the "' + @dbname + '" database' as Recommendation
+            select @sql =  'select ''use ' + @dbname + '; ALTER INDEX '' + i.name + '' ON ' + OBJECT_NAME(@objectid, @dbid) + ' SET (OPTIMIZE_FOR_SEQUENTIAL_KEY = ON )'' as Corrective_Action from #PageLatchEXContention pl join ' + @dbname+'.sys.indexes i on pl.ObjectID = i.object_id where object_id = ' + convert(varchar, @objectid) + ' and index_id = ' + convert(varchar, @indexid)
+                
+            --select @sql
+            EXECUTE (@sql) 
+            FETCH NEXT FROM optimize_for_seq_key_cursor into @dbname, @dbid, @objectid , @indexid 
+
+        END
+
+        CLOSE optimize_for_seq_key_cursor
+        DEALLOCATE optimize_for_seq_key_cursor
+    
+    end
+    ELSE
+        select 'No PAGELATCH_EX contention found on user databases on in SQL Server at this time'
+END
+ELSE
+BEGIN
+    
+    if OBJECT_ID('tempdb..#PageLatchEXContentionLegacy') is not null
+        drop table #PageLatchEXContentionLegacy
+    
+    select 'dbcc traceon (3604); dbcc page(' + replace(wait_resource,':',',') + ',3); dbcc traceoff (3604)' TSQL_Command
+    into #PageLatchEXContentionLegacy
+    FROM sys.dm_exec_requests er
+    WHERE er.wait_type = 'PAGELATCH_EX' and er.database_id not in (db_id('master'),db_id('msdb'), db_id('model'), db_id('tempdb')) 
+    GROUP BY wait_resource
+    HAVING COUNT(er.session_id) > 5 AND Max (er.wait_time) > 10
+
+    select * from #PageLatchEXContentionLegacy
+    
+
+    IF EXISTS(select 1 from #PageLatchEXContentionLegacy)
+    BEGIN
+        select 'On SQL Server 2017 or lower versions, you can manually identify the object where contention is occurring using DBCC PAGE locate the m_objId = ??. Then SELECT OBJECT_NAME(object_id_identified) and locate indexes with sequential values in this object' as Recommendation
+        
+        DECLARE get_command CURSOR FOR
+            select TSQL_Command from #PageLatchEXContentionLegacy 
+
+        OPEN get_command
+
+        FETCH NEXT FROM get_command into @sql
+
+        WHILE @@FETCH_STATUS = 0
+        BEGIN
+            select @sql as Step1_Run_This_Command_To_Find_Object
+            SELECT 'select OBJECT_NAME(object_id_identified)' as Step2_Find_Object_Name_From_ID
+            
+            
+            FETCH NEXT FROM get_command into @sql
+
+        END
+
+        CLOSE get_command
+        DEALLOCATE get_command
+
+        select 'Follow https://docs.microsoft.com/troubleshoot/sql/performance/resolve-pagelatch-ex-contention for resolution recommendations that fits your environment best' Step3_Apply_KB_article
+        
+    END
+    ELSE
+        select 'No PAGELATCH_EX contention found on user databases on in SQL Server at this time'
+
+END
+```
+
+### Choose a method to resolve the issue
+
+One of the following methods will help you resolve the issue. Choose the one that best fits your circumstances.
+
+### Method 1: Use OPTIMIZE_FOR_SEQUENTIAL_KEY index option (SQL Server 2019 only)
+
 In SQL Server 2019, a new index option (OPTIMIZE_FOR_SEQUENTIAL_KEY) was added that can help resolve this issue without using any of the following methods. See [Behind the Scenes on OPTIMIZE_FOR_SEQUENTIAL_KEY](https://techcommunity.microsoft.com/t5/SQL-Server/Behind-the-Scenes-on-OPTIMIZE-FOR-SEQUENTIAL-KEY/ba-p/806888) for more information.
 
-### Method 1
+### Method 2: Move Primary Key off Identity Column
 
-Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This is the easiest method to do, and it directly achieves the goal.
+Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This is the easiest method to follow, and it directly achieves the goal.
 
 For example, assume that you have the following table that was defined by using a clustered primary key on an Identity column.
 
@@ -101,7 +212,7 @@ add constraint pk_Cust1
 primary key NONCLUSTERED (CustomerID)
 ```
 
-### Method 2
+### Method 3: Make the leading key a non-sequential column
 
 Reorder the clustered index definition in such a way that the leading column isn't the sequential column. This requires that the clustered index be a composite index. For example, in a customer table, you can make a **CustomerLastName** column be the leading column, followed by the **CustomerID**. We recommend that you thoroughly test this method to make sure that it meets performance requirements.
 
@@ -111,7 +222,7 @@ add constraint pk_Cust1
 primary key clustered (CustomerLastName, CustomerID)
 ```
 
-### Method 3
+### Method 4: Add a non-sequential value as a leading key
 
 Add a nonsequential hash value as the leading index key. This will also spread out the inserts. A hash value is generated as a modulo that matches the number of CPUs on the system. For example, on a 16-CPU system, you can use a modulo of 16. This method spreads out the INSERT operations uniformly against multiple database pages.
 
@@ -129,14 +240,14 @@ ADD CONSTRAINT pk_table1
 PRIMARY KEY CLUSTERED (HashValue, CustomerID)
 ```
 
-### Method 4
+### Method 5: Use a GUID as a leading key
 
 Use a GUID as the leading key column of an index to ensure the uniform distribution of inserts.
 
 > [!NOTE]
 > Although it achieves the goal, we don't recommend this method because it presents multiple challenges, including a large index key, frequent page splits, low page density, and so on.
 
-### Method 5
+### Method 6: Use table partitioning and a computed column with a hash value
 
 Use table partitioning and a computed column that has a hash value to spread out the INSERT operations. Because this method uses table partitioning, it's usable only on Enterprise editions of SQL Server.
 
@@ -165,7 +276,7 @@ ON Customers (CustomerID, HashID) ON ps_hash(HashID)
 GO
 ```
 
-### Method 6
+### Method 7: Switch to In-Memory OLTP
 
 Alternatively, use In-Memory OLTP particularly if the latch contention is high. This technology eliminates the latch contention overall. However, you have to redesign and migrate the specific table(s), where page latch contention is observed, to a memory-optimized table. You can use the [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor?view=sql-server-2017&preserve-view=true) and [Transaction Performance Analysis Report](/sql/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp?view=sql-server-2017&preserve-view=true) to determine whether migration is possible and the effort involved to do the migration. For more information about how In-Memory OLTP eliminates latch contention, download and review the document in [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).
 
