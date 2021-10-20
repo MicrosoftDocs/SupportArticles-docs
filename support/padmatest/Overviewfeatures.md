@@ -18,7 +18,7 @@ The following topics are covered in this section:
 - Adding different features to a topic
 - Updating a topic
 
-## Creating-a-topic
+## Creating a topic
 
 You can create a topic.
 
@@ -27,11 +27,11 @@ You can create a topic.
 1. In the placeholder, type the name of the file.
 1. Provide the required extension. For example, enter .md (markdown).
 
-## Previewing-a-file
+## Previewing a file
 
 At every stage of creating a topic, you can preview the way it looks. To preview a file:
 
 1. In the new file, add all the required sections.
 1. Make the changes and save them.
-1. Click on :::image type="content" source="Media/previewfile/previewfile.PNG" alt-text="preview button"::: in the upper right-hand corner or click on preview icon on the Blue ribbon.:::image type="content" source="Media/previewfile/previewinbluetbar.PNG" alt-text="preview file":::
+1. Click on :::image type="content" source="Media/previewfile/previewfile.PNG" alt-text="preview button"::: in the upper right-hand corner or click on preview icon on the Blue ribbon:::image type="content" source="Media/previewfile/previewinbluetbar.PNG" alt-text="preview file":::
  A preview of the actual file is shown.
