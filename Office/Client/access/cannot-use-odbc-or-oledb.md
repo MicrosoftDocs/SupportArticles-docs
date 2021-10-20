@@ -35,7 +35,7 @@ When you try to create an ODBC DSN for drivers that are provided by Microsoft Ac
 - You receive an "Unable to load odbcji32.dll" error message.    
 - You receive a "The driver of this User DSN does not exist. It can only be removed" error message together with the platform showing **N/A**.
 
-    ![Error with ODBC](./media/cannot-use-odbc-or-oledb/error-with-odbc.png)
+    :::image type="content" source="./media/cannot-use-odbc-or-oledb/error-with-odbc.png" alt-text="Screenshot of the ODBC Data Sources  Administrator, which shows "The driver of this User DSN does not exist. It can only be removed" error message.":::
 
 Affected drivers:
 
@@ -57,13 +57,13 @@ Beginning with Microsoft 365 Apps for Enterprise Version 2009, work has been com
 
 Use the following table to understand if additional components are necessary to access these intefaces within your environment:
 
-| Current Office Installation |	Additional components needed |	Recommended Additional Installation |
+| Current Office Installation |    Additional components needed |    Recommended Additional Installation |
 |:----------------------------|:----------------------------:|:-----------------------------------:|
-| Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Version 2009 or later |	No	| - |
-| Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Prior to Version 2009 | Yes |	[Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
-| Office 2016/2019 Pro Plus C2R (Volume License) |	Yes |	[Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
-| Office 2010/2013/2016 MSI |	No |	- |
-| No Office installation |	Yes |	[Microsoft 365 Access Runtime](https://support.microsoft.com/en-us/office/download-and-install-microsoft-365-access-runtime-185c5a32-8ba9-491e-ac76-91cbe3ea09c9) |
+| Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Version 2009 or later |    No    | - |
+| Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Prior to Version 2009 | Yes |    [Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
+| Office 2016/2019 Pro Plus C2R (Volume License) |    Yes |    [Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
+| Office 2010/2013/2016 MSI |    No |    - |
+| No Office installation |    Yes |    [Microsoft 365 Access Runtime](https://support.microsoft.com/en-us/office/download-and-install-microsoft-365-access-runtime-185c5a32-8ba9-491e-ac76-91cbe3ea09c9) |
 
 > [!NOTE]
 > - The [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) is not provided as a recommended solution for the indicated scenarios as both the Access Database Engine 2016 and M365 Apps use the same major version identifier (16.0) which may introduce unexpected behaviors. Office side-by-side detection will also prevent the installation from proceeding if this scenario is detected.
