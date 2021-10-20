@@ -36,7 +36,6 @@ If you suspect you should have more storage than is displayed in the Microsoft 3
 **Note** This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
 > [!div class="nextstepaction"]
-               
 > [Run Tests: Tenant Storage](https://aka.ms/PillarTenantStorage)
 
 To troubleshoot any issues with your storage limits, see [Manage site storage limits](/sharepoint/manage-site-collection-storage-limits).
