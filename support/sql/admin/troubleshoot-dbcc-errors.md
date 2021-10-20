@@ -5,7 +5,7 @@ ms.date: 09/25/2021
 ms.prod-support-area-path: Administration and Management
 ms.prod: sql
 ---
-# Troubleshoot database consistency errors reported by DBCC CHECKB
+# Troubleshoot database consistency errors reported by DBCC CHECKDB
 
 This article explains how to troubleshoot errors reported by the `DBCC CHECKDB` command.
 

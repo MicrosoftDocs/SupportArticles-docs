@@ -208,6 +208,10 @@
         "dynamics-365/**/*.md": [ "Dynamics 365" ],
         "power-platform/power-apps/*.md": [ "Power Apps" ],
         "power-platform/power-automate/*.md": [ "Power Automate" ]
+      },
+      "ms.search.scope":{
+        "dynamics-365/supply-chain/**/*.md": ["Core","Operations","Supply Chain","ShowInHelp"],
+        "dynamics-365/finance/**/*.md": ["Core","Operations", "Finance","ShowInHelp"]
       }
     },
 
