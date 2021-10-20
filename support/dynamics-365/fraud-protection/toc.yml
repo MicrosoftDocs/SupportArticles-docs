@@ -4,3 +4,5 @@
   items:
     - name: Mobile Device Fingerprinting
       href: mobile-device-fingerprinting.md
+    - name: Mobile Test Device
+      href: mobiletestdevice.md
