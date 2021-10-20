@@ -348,7 +348,7 @@
     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
     - name: Decreased performance when querying view across linked servers
-      href: performance/decreased-performace-linkedserver-views.md      
+      href: performance/decreased-performance-linkedserver-views.md      
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
     - name: External modules can cause performance issues
