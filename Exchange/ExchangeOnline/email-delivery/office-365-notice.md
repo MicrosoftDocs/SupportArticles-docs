@@ -47,7 +47,7 @@ If neither of the conditions in step 3 is true, Office 365 can't determine whet
 
 Beginning July 5, 2017, Office 365 no longer supports relaying email messages if a hybrid environment customer has not configured their environment for either of the step 3 conditions. Such messages are rejected and trigger the following error message:  
 
-> 550 5.7.64 Relay Access Denied ATTR36. For more details please refer to [KB 3169958](https://support.microsoft.com/kb/3169958).
+> 550 5.7.64 Relay Access Denied ATTR36. For more information, see [KB 3169958](https://support.microsoft.com/kb/3169958).
 
 Additionally, you must meet the second condition ("certificate-based connector configuration") in step 3 in the [Introduction](#introduction) section if your organization requires that any of the following scenarios continue to work after July 5, 2017.
 
@@ -93,7 +93,7 @@ To create or change a certificate-based connector, follow these steps:
     > [!NOTE]
     > This creates a connector that indicates that your on-premises server is the sending source for your messages.
 
-    :::image type="content" source="./media/office-365-notice/mail-flow-scenario.png" alt-text="Screenshot of the Select your mail flow scenario page, which selects Your organization's email server in the From box, and then selects Office 365 in the To box." border="false":::
+    :::image type="content" source="./media/office-365-notice/mail-flow-scenario.png" alt-text="Screenshot of the Select your mail flow scenario page, which selects your organization's email server in the From box, and then selects Office 365 in the To box." border="false":::
 4. Enter the connector name and other information, and then click **Next**.
 5. On the **New connector** or **Edit connector** page, select the first option to use a Transport Layer Security (TLS) certificate to identify the sender source of your organization's messages. The domain name in the option should match the CN name or SAN in the certificate that you're using.
 
