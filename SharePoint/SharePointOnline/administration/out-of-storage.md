@@ -45,4 +45,4 @@ To troubleshoot any issues with your storage limits, see [Manage site storage li
 
 - [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
 
-- [Add storage space for your subscription](/microsoft-365/commerce/add-storage-space?view=o365-worldwide)
+- [Add storage space for your subscription](/microsoft-365/commerce/add-storage-space)
