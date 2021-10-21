@@ -3,7 +3,7 @@ title: Advanced troubleshooting Windows boot problems with LiveRE tool
 description: Learn to troubleshoot when Windows can't boot with the help of LiveRE tool.
 author: Deland-Han
 ms.author: delhan
-ms.reviewer: visohra
+ms.reviewer: visohra, kaushika
 manager: dcscontentpm
 audience: itpro
 ms.prod: windows-client
@@ -40,7 +40,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 - Processor: 1.4Ghz 64-bit processor
 - RAM: 512 MB
 - Disk Space: 32 GB
-- Network: Gigabit (10/100/1000baseT) Ethernet adapter, 1Gbps connection is ideal. 
+- Network: Gigabit (10/100/1000baseT) Ethernet adapter, 1Gbps connection is ideal.
 - Optical Storage: DVD drive (if installing the OS from DVD media)
 - USB Flash Drive 3.0 8GB or more.
 - Video: Super VGA (1024 x 768) or higher-resolution (optional)
@@ -50,7 +50,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 ## Configuring the USB drive
 
 1. Download the [LiveRE image](https://download.microsoft.com/download/7/e/b/7ebcc4f5-e67f-45b1-b00f-48870d9350a5/LiveRE.wim).
-2. Connect the USB Flashdrive.
+2. Connect a USB flash drive.
 3. Find out if the affected (non-booting) machine is setup for BIOS boot or UEFI Boot.
 4. Format the USB drive accordingly:
 
@@ -59,7 +59,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
      ```console
      Diskpart
      List disk
-     Sel disk <Number for flash drive>
+     Sel disk <the number of the flash drive>
      Clean
      Convert gpt
      Create part pri
@@ -73,7 +73,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
      ```console
      Diskpart
      List disk
-     Sel disk <number for flash drive>
+     Sel disk <the number of the flash drive>
      Clean
      Convert mbr
      Create part pri
@@ -88,17 +88,17 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 5. Run the following commands:
 
    ```console
-   dism /Apply-Image /ImageFile:<Complete path\LiveOS.wim> /Index:1 /ApplyDir:<Flashdrive letter>:\
-   <Flash Drive letter>:\Windows\System32\bcdboot <Flash Drive letter>:\Windows /s <Flash Drive letter>: /f ALL
+   dism /Apply-Image /ImageFile:<complete path of the LiveOS.wim> /Index:1 /ApplyDir:<flash drive letter>:\
+   <flash drive letter>:\Windows\System32\bcdboot <flash drive letter>:\Windows /s <flash drive letter>: /f ALL
    ```
 
-After the flash drive is ready, start the affected server from the USB drive.
+After the flash drive is ready, start the affected server from the flash drive.
 
 ## Create User for remote access
 
 The following steps help create a user to allow remote access through a jump server:
 
-1. Boot the non-booting machine via and accept EULA to get to the Help Console.
+1. Start the non-booting machine via <!-- via? -->. Accept EULA to get to the Help Console.
 2. Press Enter to get to powershell.
 3. Run the following cmdlets:
 
@@ -121,7 +121,7 @@ The machine is now all set for remote access through a jump server.
 
    :::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-ip-address-from-live-re.png" alt-text="Get IP address":::
 
-2. From a working machine in the same network as the non-booting machine, open powershell ISE and run the following piece of script:
+2. From a working machine in the same network as the non-booting machine, open PowerShell ISE and run the following script:
 
    ```powershell
    $ip = "172.25.80.68"
@@ -135,14 +135,14 @@ The machine is now all set for remote access through a jump server.
 
    :::image type="content" source="./media/live-re-troubleshoot-windows-boot/connect-to-broken-computer-using-winrm.png" alt-text="Connect via WinRM":::
 
-5. If you are experiencing issues connecting using WinRM, you can run the following commands on working machine to fix the same:
+If you are experiencing issues connecting using WinRM, use these steps on the working computer to fix them:
 
-If winrm is not enabled, you can use the command `winrm qc` to enable winrm. If you get errors that reassemble the following:
+If winrm is not enabled, you can use the command `winrm qc` to enable winrm. If you receive an error message that reassembles the following, this means the network connections is set to Public.
 
 :::image type="content" source="./media/live-re-troubleshoot-windows-boot/run-winrm-qc-error-0x80338169.png" alt-text="0x80338169 error when enabling WinRM":::
 
-This means the network connections is set to Public, we can find which one using the following command:
-
+You can find which one using the following command:
+  
 ```powershell
 Get-NetConnectionProfile | select InterfaceAlias, NetworkCategory
 ```
@@ -163,11 +163,11 @@ Set-NetConnectionProfile -interfacealias "vEthernet (Internal LAN)" -NetworkCate
 
    :::image type="content" source="./media/live-re-troubleshoot-windows-boot/run-get-volume-to-find-drive-letter.png" alt-text="Get-Volume to find drive letter":::
 
-2. Run the following command
+2. Run the following command:
 
-```powershell
-Unlock-bitlocker -mountpoint <Drive letter> -recoverypassword XXX
-```
+   ```powershell
+   Unlock-bitlocker -mountpoint <Drive letter> -RecoveryPassword XXX
+   ```
 
 ## Disk Configuration
 
@@ -182,11 +182,9 @@ For more information see, [Windows Storage Management-specific cmdlets](/powersh
 
 ## Registry configuration
 
-There is no registry editor is Live OS. In order to change the registry, you should access the share for affected OS drive using:
+There is no registry editor is Live OS. In order to change the registry, you should access the share for affected OS drive using *\\\\\<IP Address\>\\c$*.
 
-*\\\\\<IP Address\>\\c$*
-
-Get the hives from *\\windows\\system32\\config*, make the changes to the hives, and then proceed further.
+Get the hives from *\\windows\\system32\\config*, make the changes to the hives, and then proceed with the further steps.
 
 ## Accessing Shadow Copies
 
@@ -217,7 +215,7 @@ In case of a RAID disk setup, we need to install RAID drivers from OEM to make t
 
 In LiveRE, you can just extract the RAID drivers to the folder *\<USB\>:\\CopyDriversHere* folder.
 
-Then, when you are booted in LiveRE, Pressing 4 will install the drivers.
+Then, when you are booted in LiveRE, press the 4 key to install the drivers.
 
 Another way to install drivers is:
 
@@ -227,5 +225,5 @@ Another way to install drivers is:
    ```powershell
    pnputil /add-driver <location of raid driver.inf>
    
-   Add-WindowsDriver -Path <Flash Drive letter>:\ -Driver <path of driver folder> -Recurse
+   Add-WindowsDriver -Path <flash drive letter>:\ -Driver <path of driver folder> -Recurse
    ```
