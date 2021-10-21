@@ -49,7 +49,7 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 
 ## Configuring the USB drive
 
-1. Download the [LiveRE image](http://download.microsoft.com/download/7/e/b/7ebcc4f5-e67f-45b1-b00f-48870d9350a5/LiveRE.wim).
+1. Download the [LiveRE image](https://download.microsoft.com/download/7/e/b/7ebcc4f5-e67f-45b1-b00f-48870d9350a5/LiveRE.wim).
 2. Connect the USB Flashdrive.
 3. Find out if the affected (non-booting) machine is setup for BIOS boot or UEFI Boot.
 4. Format the USB drive accordingly:
@@ -178,13 +178,13 @@ Since *Diskpart.exe* is not available in the LiveRE, use PowerShell to achieve s
 3. Set a partition to active: `Set-Partition -DiskNumber <number> -PartitionNumber <number> -IsActive $true`.
 4. Check properties of a partition: `Get-Partition -DiskNumber <number> -PartitionNumber <number> |fl`.
 
-For more information see, [Windows Storage Management-specific cmdlets](https://docs.microsoft.com/powershell/module/storage/?view=windowsserver2019-ps)
+For more information see, [Windows Storage Management-specific cmdlets](/powershell/module/storage/)
 
 ## Registry configuration
 
-There is no registry editor is Live OS. In order to change the registry, you should access the share for affected OS drive using 
+There is no registry editor is Live OS. In order to change the registry, you should access the share for affected OS drive using:
 
-*\\\\\<IP Address>\\c$*
+*\\\\\<IP Address\>\\c$*
 
 Get the hives from *\\windows\\system32\\config*, make the changes to the hives, and then proceed further.
 
