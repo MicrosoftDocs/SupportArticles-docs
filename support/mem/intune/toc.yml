@@ -10,6 +10,8 @@
       href: app-install-error-codes.md
     - name: Troubleshoot app installation issues
       href: troubleshoot-app-install.md
+    - name: Troubleshoot Win32 app installation
+      href: troubleshoot-win32-app-install.md
     - name: Android APK app installation fails
       href: app-installation-failed-error.md
   - name: Windows apps
