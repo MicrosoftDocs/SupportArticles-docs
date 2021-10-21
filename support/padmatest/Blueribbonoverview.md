@@ -6,7 +6,6 @@ ms.reviewer: xxx
 ms.prod: padmatest
 ms.date: 10/19/2021
 ---
-
 # Elements of the Blue Ribbon
 
 The elements on the Blue Ribbon are very helpful. Following are the aspects you can add to your topics to make them more informative.
@@ -19,5 +18,5 @@ The elements on the Blue Ribbon are very helpful. Following are the aspects you 
 |Add Notes, Warnings, Important, Tip, or Warning |:::image type="content" source="Media\previewfile\warningicon.PNG" alt-text="insert warning, tip, information, note":::|
 |Numbered List |:::image type="content" source="Media\previewfile\numberedlisticon.PNG" alt-text="helps you insert numbered items":::|
 |Insert Link|:::image type="content" source="Media\previewfile\linkicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::|
-Insert Image  |:::image type="content" source="Media\previewfile\imageicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::|
-Insert Include     |:::image type="content" source="Media\previewfile\includeicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::|
+Insert Image  |:::image type="content" source="Media\previewfile\imageicon.PNG" alt-text="helps you insert images":::|
+Insert Include     |:::image type="content" source="Media\previewfile\includeicon.PNG" alt-text="helps you insert include variables":::|
