@@ -77,11 +77,9 @@ For more information, see [Diagnosing and Resolving Latch Contention on SQL Serv
 
 To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.
 
+### 1. Confirm the contention on PAGELATCH_EX and identify the contention resource
 
-### 1. Confirm the contention on PAGELATCH_EX and identify the contention resource:
-
-This T-SQL script helps you discover if there are PAGELATCH_EX waits on the system with multiple session (say 5 or more) with significant wait time (say 10 ms or more). It also helps you discover which object and index the contention is on using sys.dm_exec_requests and DBCC PAGE () or sys.fn_PageResCracker and sys.dm_db_page_info (SQL Server 2019 only).
-
+This T-SQL script helps you discover if there are `PAGELATCH_EX` waits on the system with multiple sessions (say 5 or more) with significant wait time (say 10 ms or more). It also helps you discover which object and index the contention is on using [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [DBCC PAGE](https://techcommunity.microsoft.com/t5/sql-server/how-to-use-dbcc-page/ba-p/383094) or [sys.fn_PageResCracker](/sql/relational-databases/system-functions/sys-fn-pagerescracker-transact-sql) and [sys.dm_db_page_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql) (SQL Server 2019 only).
 
 ```tsql
 SET NOCOUNT on 
@@ -181,15 +179,15 @@ BEGIN
 END
 ```
 
-### Choose a method to resolve the issue
+### 2. Choose a method to resolve the issue
 
 One of the following methods will help you resolve the issue. Choose the one that best fits your circumstances.
 
 ### Method 1: Use OPTIMIZE_FOR_SEQUENTIAL_KEY index option (SQL Server 2019 only)
 
-In SQL Server 2019, a new index option (OPTIMIZE_FOR_SEQUENTIAL_KEY) was added that can help resolve this issue without using any of the following methods. See [Behind the Scenes on OPTIMIZE_FOR_SEQUENTIAL_KEY](https://techcommunity.microsoft.com/t5/SQL-Server/Behind-the-Scenes-on-OPTIMIZE-FOR-SEQUENTIAL-KEY/ba-p/806888) for more information.
+In SQL Server 2019, a new index option (`OPTIMIZE_FOR_SEQUENTIAL_KEY`) was added that can help resolve this issue without using any of the following methods. See [Behind the Scenes on OPTIMIZE_FOR_SEQUENTIAL_KEY](https://techcommunity.microsoft.com/t5/SQL-Server/Behind-the-Scenes-on-OPTIMIZE-FOR-SEQUENTIAL-KEY/ba-p/806888) for more information.
 
-### Method 2: Move Primary Key off Identity Column
+### Method 2: Move primary key off identity column
 
 Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This is the easiest method to follow, and it directly achieves the goal.
 
