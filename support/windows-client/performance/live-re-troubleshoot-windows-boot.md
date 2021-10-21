@@ -209,7 +209,7 @@ $sobj="<DeviceObject>" + "\"
 cmd /c mklink /d c:\shadowcopy "$sobj"
 ```
 
-You can now access the previous versions of the file from PowerShell by browsing to *\\\\<IP>\\c$\\shadowcopy*.
+You can now access the previous versions of the file from PowerShell by browsing to *\\\\\<IP\>\\c$\\shadowcopy*.
 
 ## Injecting Drivers
 
