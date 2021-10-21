@@ -5,7 +5,6 @@ ms.date: 9/10/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: ramakoni
 editor: v-jesits
-ms.topic: how-to
 ms.prod: sql
 ---
 # Troubleshoot SQL Server backup and restore operations  

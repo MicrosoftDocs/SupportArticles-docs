@@ -4,7 +4,7 @@ description: This article describes that Update statements may be replicated as 
 ms.date: 09/21/2020
 ms.prod-support-area-path: Replication
 ms.reviewer: RAJUGIRD
-ms.topic: article
+ms.topic: reference-architecture
 ms.prod: sql
 ---
 # UPDATE statements may be replicated as DELETE/INSERT pairs
