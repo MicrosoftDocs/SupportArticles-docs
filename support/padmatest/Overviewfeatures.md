@@ -1,15 +1,13 @@
 ---
-title: New Test File
-description: This article is a new test file.
+title: Creating, Updating and Previewing Topics
+description: This article is a new test file. It provides an overview of the different aspects related to a topic.
 ms.topic: article
 ms.reviewer: xxx
 ms.prod: padmatest
 ms.date: 10/18/2021
 ---
-_Applies to:_ &nbsp; VSS Features  
-_Original KB number:_ &nbsp; 110
 
-# An Overview of VSS Features and Options
+# An Overview of Topics and related options
 
 This is an introductory file that explains the different options and features of Visual Studio Code. You can create topics, add different elements to the topics, update topics, proofread topics, troubleshoot warnings, and so on.
 The following topics are covered in this section:
@@ -27,11 +25,11 @@ You can create a topic.
 1. In the placeholder, type the name of the file.
 1. Provide the required extension. For example, enter .md (markdown).
 
-## Previewing a file
+## Previewing a topic
 
 At every stage of creating a topic, you can preview the way it looks. To preview a file:
 
 1. In the new file, add all the required sections.
 1. Make the changes and save them.
 1. Click on :::image type="content" source="Media/previewfile/previewfile.PNG" alt-text="preview button"::: in the upper right-hand corner or click on preview icon on the Blue ribbon:::image type="content" source="Media/previewfile/previewinbluetbar.PNG" alt-text="preview file":::
- A preview of the actual file is shown.
+A preview of the actual file is shown.
