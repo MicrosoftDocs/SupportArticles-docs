@@ -3,7 +3,7 @@ title: Azure VM is unresponsive with C01A001D error when applying Windows Update
 description: This article provides steps to resolve issues where Windows update generates an error and becomes unresponsive in an Azure VM.
 services: virtual-machines
 documentationcenter: ''
-author: jc-mackin
+author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
@@ -12,8 +12,8 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.date: 07/14/2021
-ms.author: v-jcmackin
+ms.date: 10/14/2021
+ms.author: genli
 ---
 
 # VM is unresponsive with "C01A001D" error after applying Windows Update
@@ -49,7 +49,7 @@ To prevent the problem described above from occurring in the first place, comple
 
 ![About Windows dialog box with OS build highlighted](./media/unresponsive-vm-apply-windows-update/about-windows.png)
 
-3. After the OS build is updated to [April 13, 2021—KB5001347 (OS Build 14393.4350)](https://support.microsoft.com/topic/april-13-2021-kb5001347-os-build-14393-4350-ee0e6301-3428-4a14-8e67-d69c5b31c66a) or [May 11, 2021—KB5003197 (OS Build 14393.4402)](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697), download and run the [Known Issue Rollback 062521 01.msi](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697) on the VM that applies local or domain policy. Note the appearance of **KB5001347 Issue 001 Evaluation.admx** in the *%systemroot%\policydefinitions* folder after the item is installed.
+3. After the OS build is updated to [April 13, 2021—KB5001347 (OS Build 14393.4350)](https://support.microsoft.com/topic/april-13-2021-kb5001347-os-build-14393-4350-ee0e6301-3428-4a14-8e67-d69c5b31c66a) or [May 11, 2021—KB5003197 (OS Build 14393.4402)](https://support.microsoft.com/topic/may-11-2021-kb5003197-os-build-14393-4402-672e4557-b496-4ec7-bf26-3268aaf16697), download and run the [Known Issue Rollback 062521 01.msi](https://download.microsoft.com/download/e/c/6/ec684975-1ad7-4d6f-a228-2da17b0a72b3/Windows%2010%20(1607)%20Known%20Issue%20Rollback%20062521%2001.msi) on the VM that applies local or domain policy. This msi file applies to both Windows 10 and Windows Server 2016. Note the appearance of **KB5001347 Issue 001 Evaluation.admx** in the *%systemroot%\policydefinitions* folder after the item is installed.
 4. Open a policy editor and enable the following setting in local or domain policy:
 
     - **Path**: Computer configuration\Administrative Templates
