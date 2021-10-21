@@ -19,4 +19,4 @@ The elements on the Blue Ribbon are very helpful. Following are the aspects you 
 |Numbered List |:::image type="content" source="Media\previewfile\numberedlisticon.PNG" alt-text="helps you insert numbered items":::|
 |Insert Link|:::image type="content" source="Media\previewfile\linkicon.PNG" alt-text="helps you insert bookmarks and hyperlinks":::|
 Insert Image  |:::image type="content" source="Media\previewfile\imageicon.PNG" alt-text="helps you insert images":::|
-Insert Include     |:::image type="content" source="Media\previewfile\includeicon.PNG" alt-text="helps you insert include variables":::|
+Insert Include|:::image type="content" source="Media\previewfile\includeicon.PNG" alt-text="helps you insert include variables":::|
