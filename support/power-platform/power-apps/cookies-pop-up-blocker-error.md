@@ -65,6 +65,6 @@ You can open this website ([WhatIsMyBrowser](https://www.whatismybrowser.com/)) 
     - `https://apps.*.powerapps.com`
     - `https://apps.powerapps.com`
 
-For more information about the instructions for other web browsers, see [troubleshooting startup issues for Power Apps](/powerapps/troubleshooting-startup-issues#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
+For more information about the instructions for other web browsers and iOS devices, see [troubleshooting startup issues for Power Apps](/powerapps/troubleshooting-startup-issues#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
