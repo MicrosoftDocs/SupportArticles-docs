@@ -99,7 +99,7 @@ To resolve error **0x8004010F**, identify the current location of your default O
    :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/add.png" alt-text="Screenshot of the Mail dialog box. The Add button is selected." border="false":::
 
 4. In the **New Profile** dialog box, type a new profile name, and then select **OK**.
-5. In the **Add New Account** dialog box, select **Manually configure server settings or additional server types**, and then select **Next**.
+5. In the **Add Account** dialog box, select **Manually configure server settings or additional server types**, and then select **Next**.
 
    :::image type="content" source="media/error-0x8004010f-when-sending-or-receiving-emails/manually-configure-server-settings-or-additional-server-types.png" alt-text="Screenshot of the Add Account dialog box. The Manually configure server settings or additional server types option is selected." border="false":::
 
