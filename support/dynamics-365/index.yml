@@ -11,8 +11,6 @@ productDirectory:
   items:
   - title: Dynamics 365 Fraud Protection
     imageSrc: "../media/hub-landing/fraud-protection.svg"
-    title: Mobile Test Device 1
-    imageSrc: "../media/hub-landing/fraud-protection1.svg"
     summary: Troubleshooting articles for Dynamics 365 Fraud Protection
     url: fraud-protection/welcome-fraud-protection.yml
   - title: Dynamics 365 Marketing
