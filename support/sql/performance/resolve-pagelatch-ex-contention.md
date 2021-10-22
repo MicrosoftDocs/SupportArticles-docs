@@ -79,7 +79,7 @@ To resolve this contention, the overall strategy is to prevent all concurrent IN
 
 ### 1. Confirm the contention on PAGELATCH_EX and identify the contention resource
 
-This T-SQL script helps you discover if there are `PAGELATCH_EX` waits on the system with multiple sessions (say 5 or more) with significant wait time (say 10 ms or more). It also helps you discover which object and index the contention is on using [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [DBCC PAGE](https://techcommunity.microsoft.com/t5/sql-server/how-to-use-dbcc-page/ba-p/383094) or [sys.fn_PageResCracker](/sql/relational-databases/system-functions/sys-fn-pagerescracker-transact-sql) and [sys.dm_db_page_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql) (SQL Server 2019 only).
+This T-SQL script helps you discover if there are `PAGELATCH_EX` waits on the system with multiple sessions (5 or more) with significant wait time (10 ms or more). It also helps you discover which object and index the contention is on using [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [DBCC PAGE](https://techcommunity.microsoft.com/t5/sql-server/how-to-use-dbcc-page/ba-p/383094) or [sys.fn_PageResCracker](/sql/relational-databases/system-functions/sys-fn-pagerescracker-transact-sql) and [sys.dm_db_page_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql) (SQL Server 2019 only).
 
 ```tsql
 SET NOCOUNT on 
