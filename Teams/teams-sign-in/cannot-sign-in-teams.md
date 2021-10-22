@@ -23,7 +23,11 @@ This article is meant to be used by tenant administrators.
 
 This article provides some methods that help administrators fix the sign-in issues in Microsoft Teams.
 
-1. Sign in the [Microsoft 365 admin center](https://admin.microsoft.com/), run the Teams sign-in diagnostics: [Diag: Teams Sign-in](https://aka.ms/TeamsSignInDiag), which will populate the diagnostic.
+1. Administrators can use the following diagnostic tool that they can run within the tenant. This tool can help administrator to verify possible issues that might prevent users from signing in Teams. Select the **Run Tests** link, which will populate the diagnostic tool in the [Microsoft 365 admin center](https://admin.microsoft.com/).
+
+    > [!div class="nextstepaction"]
+    > [Run Tests: Diag: Teams Sign-in](https://aka.ms/TeamsSignInDiag)
+
 1. Make sure the [Teams client is updated](https://support.microsoft.com/en-us/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1).
 1. If you use federated sign-in providers, validate Active Directory Federation Services (AD FS) configuration with the [Office 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in Microsoft Remote Connectivity Analyzer.
 1. Check the error code on the Teams sign-in screen. If you don't see the error code here in the list below, see [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/en-us/topic/a02f683b-61a3-4008-9447-ee60c5593b0f) for more error codes and known issues.
