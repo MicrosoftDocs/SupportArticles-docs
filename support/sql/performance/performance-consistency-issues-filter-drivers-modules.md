@@ -21,7 +21,7 @@ Consider one of the following scenarios:
 In the scenarios, you may experience performance degradation and consistency issues of SQL Server Database Engine.
 
 - Reports of various hang-related error messages and conditions (SQL Server scheduler message such as [17883](/sql/relational-databases/errors-events/mssqlserver-17883-database-engine-error), application time-out messages, severe blocking within SQL Server).
-- Slow response from SQL Server even if the concurrent amount of load or activity is not unusually heavy.
+- Slow response from SQL Server even if the concurrent amount of load or activity isn't unusually heavy.
 - Exceptions (such as access violations), critical error messages about database consistency, assertion messages or unexpected process termination.
 - 100% CPU utilization and long database recovery times when you use In-Memory OLTP tables in SQL Server.
 - High CPU usage for the SQL Server process, especially privileged processor time.
@@ -49,7 +49,7 @@ Under some conditions, these requests may either take a long time to complete or
 
 To work around these issues, identity the filter driver or the module that is causing the issues. Then, try all or one of the following methods appropriately:
 
-- Configure the filter driver or the associated application in such a way that it does not interfere with the SQL Server workload or operations.
+- Configure the filter driver or the associated application in such a way that it doesn't interfere with the SQL Server workload or operations.
 - Disable the filter driver from loading into the system.
 - Configure the application not to load the specific module into the SQL Server process.
 - Contact the vendor of the module, filter driver, or application to check for updates. Apply any updates that are available.
