@@ -99,7 +99,7 @@ The following list helps you to identity the filter drivers and modules that can
 
     This filter driver is used for the `McAfee Anti-Virus Mini-Firewall` feature in the products McAfee VirusScan Enterprise and McAfee McShield. If you have this feature enabled, you will notice that sqlservr.exe is among the list of processes monitored by the `Anti-Virus` feature. If you have this filter driver on a system that is running SQL Server, you must perform the actions that are specified in the [Workaround](#workaround) section. You could also consider adding SQL Server processes to the low risk process list in the Anti-Virus configuration.
 
-Reference
+## Reference
 
 - [Types of WDM Drivers](/windows-hardware/drivers/kernel/types-of-wdm-drivers)
 - [How to temporarily deactivate the kernel mode filter driver in Windows](../../windows-server/performance/deactivate-kernel-mode-filter-driver.md)
@@ -107,3 +107,5 @@ Reference
 - [How to run a DLL-based COM object outside the SQL Server process](../admin/run-dll-based-com-object.md)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
