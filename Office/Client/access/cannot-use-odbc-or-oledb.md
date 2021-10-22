@@ -35,7 +35,7 @@ When you try to create an ODBC DSN for drivers that are provided by Microsoft Ac
 - You receive an "Unable to load odbcji32.dll" error message.    
 - You receive a "The driver of this User DSN does not exist. It can only be removed" error message together with the platform showing **N/A**.
 
-    :::image type="content" source="./media/cannot-use-odbc-or-oledb/error-with-odbc.png" alt-text="Screenshot of the ODBC Data Sources  Administrator, which shows the error message together with the platform.":::
+    :::image type="content" source="./media/cannot-use-odbc-or-oledb/error-with-odbc.png" alt-text="Screenshot of the ODBC Data Sources Administrator, which shows the error message together with the platform.":::
 
 Affected drivers:
 
