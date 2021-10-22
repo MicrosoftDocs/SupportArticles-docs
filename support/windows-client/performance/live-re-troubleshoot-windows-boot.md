@@ -13,14 +13,14 @@ ms.topic: troubleshooting
 ms.date: 10/30/2021
 ms.localizationpriority: medium
 ---
-# Use LiveRE tool to troubleshooting Windows boot problems
+# Use LiveRE tool to troubleshoot Windows boot problems
 
 The LiveRE tool is an image that can be used to boot a machine from USB. This tool is helpful in troubleshooting No-Boot issues. It can also be used to allow remote access to support professionals, access to non-booting machine through a jump server.
 
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals.
 
-## Comparison of LiveRE to the existing Windows Recovery Environment
+## LiveRE to WinRE comparison
 
 Here is a comparison of Live RE to the existing Windows Recovery Environment that comes with Windows ISOs.
 
