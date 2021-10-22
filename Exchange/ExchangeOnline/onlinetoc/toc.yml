@@ -157,8 +157,6 @@
       href: ../calendars/activesync-not-downloading-attachments-to-calendar-items.md
     - name: Attendees receive multiple meeting invitations
       href: ../calendars/attendees-receive-multiple-meeting-invitations.md
-    - name: Attendees get cancellation followed by a meeting update
-      href: ../calendars/attendees-receive-meeting-cancellation-followed-by-meeting-update.md
     - name: Calendar on mobile device isn't synced to Online mailbox
       href: ../calendars/calendar-on-mobile-device-not-synced-to-online-mailbox.md
     - name: Can't accept a meeting invitation for a room mailbox
@@ -387,6 +385,8 @@
       href: ../outlook-issues/connection-to-microsoft-exchange-is-unavailable-error.md
     - name: Control PST use and creation
       href: ../outlook-issues/control-pst-use.md
+    - name: Create and book a workspace
+      href: ../outlook-issues/create-book-workspace-outlook.md
     - name: Emails sent to wrong account if profile has many accounts
       href: ../outlook-issues/emails-sent-to-wrong-account-if-has-many-accounts.md
     - name: Encrypted connection unavailable
@@ -465,16 +465,26 @@
     items:
     - name: "\"550 5.7.13\" error when sending emails to MEPF"
       href: ../public-folders/cannot-send-emails-to-mail-enabled-public-folder.md
+    - name: Can't access contact list from public folder
+      href: ../public-folders/cannot-access-contact-list.md
     - name: Can't add or expand public folders
       href: ../public-folders/cannot-expand-add-public-folder.md
     - name: Can't add reviewer permission to calendars
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
+    - name: Can't create migration endpoint
+      href: ../public-folders/error-create-migration-endpoint.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: Can't send email to public folder contact list
       href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
+    - name: Duplicate PF mailbox migration requests
+      href: ../public-folders/duplicate-public-folder-mailbox-migration-request.md
+    - name: Emails with the "HierarchySync_" subject
+      href: ../public-folders/pf-hierarchy-sync-emails.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
+    - name: Migration fails with mailbox GUID
+      href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
     - name: Permissions and settings don't propagate in EAC
       href: ../public-folders/permissions-settings-not-propagate-eac.md
     - name: Public folder couldn't be mail-enabled

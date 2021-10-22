@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: gregmans
 appliesto:
+- Outlook LTSC 2021
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
@@ -32,23 +33,23 @@ Presence information or presence icons do not appear in Microsoft Outlook.
 
 This problem can occur if any of the following registry values are configured on the computer running Outlook.
 
-Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\**x.0**\Common\IM  
-or Policy key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\**x.0**\Common\IM  
+Key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\IM`  
+or Policy key: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Common\IM`  
 DWORD: TurnOffPresenceIcon  
 Value: 1 (turn off presence icons in email messages, but leave them on in the contact card), or 2 (turn off presence icons everywhere)
 
-Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\**x.0**\Common\IM  
-or Policy Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\**x.0**\Common\IM  
+Key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\IM`  
+or Policy Key: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Common\IM`  
 DWORD: TurnOffPresenceIntegration  
 Value: 1 (turn off presence integration everywhere in Outlook)
 
-Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\**x.0**\Common\PersonaMenu  
-or Policy Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\**x.0**\Common\PersonaMenu  
+Key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\PersonaMenu`  
+or Policy Key: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Common\PersonaMenu`  
 DWORD: Enabled  
 Value: 0 (turn off presence icons in email messages, but leave them on in the contact card)
 
 > [!NOTE]
-> The **x.0** placeholder represents your version of Office (16.0 = Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 = Office 2013, 14.0 = Office 2010).
+> The <x.0> placeholder represents your version of Office (16.0 = Outlook 2016, Outlook 2019, Outlook LTSC 2021, or Outlook for Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
 
 ## Resolution
 
@@ -57,7 +58,7 @@ Value: 0 (turn off presence icons in email messages, but leave them on in the co
 
 To resolve this problem, either remove the group policies controlling presence integration in Outlook, or change the non-policy registry values to the following.
 
-Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\**x.0**\Common\IM
+Key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\IM`
 
 DWORD: TurnOffPresenceIcon  
 Value: 0
@@ -65,10 +66,10 @@ Value: 0
 DWORD: TurnOffPresenceIntegration  
 Value: 0
 
-Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\**x.0**\Common\PersonaMenu
+Key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\PersonaMenu`
 
 DWORD: Enabled  
 Value: 1
 
 > [!NOTE]
-> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 365 and Office 2019, 15.0 = Office 2013, 14.0 = Office 2010).
+> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010).

@@ -89,7 +89,7 @@ Microsoft Teams service uses the Exchange Autodiscover service to locate the EWS
 
 If the test fails, you must first resolve the Autodiscover issue.
 
-:::image type="content" source="media/teams-exchange-interaction-issue/image1.png" alt-text="Screenshot of RCA.":::
+:::image type="content" source="media/teams-exchange-interaction-issue/outlook-connectivity.png" alt-text="Screenshot of the Outlook Connectivity page of Microsoft Remote Connectivity Analyzer.":::
 
 > [!NOTE]
 > For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue and Teams presence issue, the affected user's mailbox is the target mailbox to test.
@@ -111,7 +111,7 @@ For a mailbox hosted on-premises, the EWS URL should point to the on-premises ex
 >
 > \-------- ---
 >
-> EWS <https://mail.contoso.com/EWS/Exchange.asmx>
+> EWS \<`https://mail.contoso.com/EWS/Exchange.asmx`\>
 
 If this test fails, or if the EWS URL is incorrect, review the [Prerequisites](#prerequisites) section. This is because the problem is likely caused by an Exchange hybrid configuration issue, or a firewall or reverse proxy that is blocking external requests.
 
@@ -223,11 +223,11 @@ If you verified that there's no problem with the prerequisites or configurations
 
 1. Open Microsoft Teams admin center, go to **Users** and select **View policies** for the affected user.
 
-    :::image type="content" source="media/teams-exchange-interaction-issue/image2.png" alt-text="Screenshot of teams users.":::
+    :::image type="content" source="media/teams-exchange-interaction-issue/teams-admin-center-policies.png" alt-text="Screenshot of Microsoft Teams admin center windows. Assigned polices under Polices tab are listed.":::
 
 2. Select the **App setup policy** assigned to that user. In the example above, the global (Org-Wide default) policy is being used. Confirm that the calendar App (ID `ef56c0de-36fc-4ef8-b417-3d82ba9d073c`) is displayed.
 
-    :::image type="content" source="media/teams-exchange-interaction-issue/image3.png" alt-text="Screenshot of teams policy.":::
+    :::image type="content" source="media/teams-exchange-interaction-issue/teams-apps-setup-policies.png" alt-text="Screenshot of Teams apps setup policies, showing the calendar App.":::
 
     If the calendar App is missing, restore it. For more information, see [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies).
 
@@ -237,13 +237,13 @@ If you verified that there's no problem with the prerequisites or configurations
 2. Go to **Users**, and select the affected user.
 3. Verify that the **Coexistence mode** setting is a value other than **Skype for Business only** or **Skype for Business with Teams collaboration**.
 
-    :::image type="content" source="media/teams-exchange-interaction-issue/image4.png" alt-text="Screenshot of teams policy2.":::
+    :::image type="content" source="media/teams-exchange-interaction-issue/coexistence-mode.png" alt-text="Screenshot shows Coexistence mode option under Account tab in Users item.":::
 
 4. If the user Coexistence mode was set to **Use Org-wide settings**, the default tenant Coexistence mode will be used.
 5. Go to **Org-wide settings**, and select **Teams Upgrade**.
 6. Verify that the default **Coexistence mode** setting is a value other than **Skype for Business only** or **Skype for Business with Teams collaboration**.
 
-    :::image type="content" source="media/teams-exchange-interaction-issue/image5.png" alt-text="Screenshot of teams users island.":::
+    :::image type="content" source="media/teams-exchange-interaction-issue/teams-upgrade.png" alt-text="Screenshot shows the Coexistence mode setting under Teams upgrade.":::
 
 #### Step 3: Verify that Teams isn't blocked from accessing EWS for the entire organization
 
@@ -289,7 +289,7 @@ If the **EwsEnabled** parameter is set to **False**, you have to set it to **Tru
 
 If the test fails, you should attempt to resolve the issue and rerun the test.
 
-:::image type="content" source="media/teams-exchange-interaction-issue/calendar-test.png" alt-text="Screenshot of testing calendar":::
+:::image type="content" source="media/teams-exchange-interaction-issue/teams-calendar-app-test.png" alt-text="Screenshot of Teams Calendar App page of Microsoft Remote Connectivity Analyzer.":::
 
 #### Step 6: Escalate the issue
 
@@ -315,13 +315,12 @@ Try to access the REST API URL from a browser in the external network. If you ge
 #### Step 2: Verify that the Teams Presence Based on Calendar Events test is successful
 
 1. Ask the user to go to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) section of **Microsoft Remote Connectivity Analyzer**.
-
-:::image type="content" source="media/teams-exchange-interaction-issue/presence-test-RCA.png" alt-text="Screenshot of Teams Presence test":::
-
 2. Input the requested information.
 3. Select the **Perform Test** button to start the Teams Presence Based on Calendar Events test.
 
 If the test fails, you should attempt to resolve the issue and rerun the test.
+
+:::image type="content" source="media/teams-exchange-interaction-issue/teams-calendar-events-based-presence-test.png" alt-text="Screenshot of Teams Calendar Events Based Presence page of Microsoft Remote Connectivity Analyzer.":::
 
 #### Step 3: Verify that Teams isn't blocked from accessing EWS for the entire organization
 

@@ -12,7 +12,7 @@ search.appverid:
 - MET150
 ms.custom:
 - CSSTroubleshoot
-- - CI 148976
+- CI 148976
 appliesto:
 - Office 365
 ---

@@ -34,14 +34,14 @@ OWA displays the following error message:
 > Something went wrong</br>
 > Your request couldn’t be completed. HTTP Status code: 500
 
-:::image type="content" source="./media/owa-stops-working-after-update/exchangeserver-owa-somethingwentwrong.png" alt-text="Something went wrong. Your request couldn’t be completed. HTTP Status code: 500":::
+:::image type="content" source="./media/owa-stops-working-after-update/exchange-server-owa-something-went-wrong.png" alt-text="Screenshot of the OWA error message.":::
 
 ECP displays the following error message:
 
 >Server Error in ‘/ecp’ Application.</br>
 Could not load file or assembly ‘Microsoft.Exchange.Common, Version=15.0.0.0 …Culture=neutral, PublicKeyToken=31bf3856ad364e54’ or one of its dependencies. The system cannot find the file specified.
 
-:::image type="content" source="./media/owa-stops-working-after-update/could-not-load-file-or-assembly.png" alt-text="Server Error in ecp Application Could not load file or assembly Microsoft.Exchange.Common":::
+:::image type="content" source="./media/owa-stops-working-after-update/could-not-load-file-or-assembly.png" alt-text="Screenshot of the E C P error message.":::
 
 ## Cause
 
@@ -72,7 +72,7 @@ If the ECP error message continues to display, do the following:
 1. Replace the paths with the following paths:
 
     >*C:\Program Files\Microsoft\Exchange Server\V15\bin;<br/>
-    C:\Program Files\Microsoft\ExchangeServer\V15\bin\CmdletExtensionAgents;<br/>
+    C:\Program Files\Microsoft\Exchange Server\V15\bin\CmdletExtensionAgents;<br/>
     C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess\Owa\bin*
 
     **Note** The paths must point to where Exchange Server is installed. The following examples assume that the program is installed on drive C and that the version is Microsoft Exchange Server 2013. If it is installed on a different drive on your server, or if you’re using a different version such as Microsoft Exchange Server 2010, then use the path and version information that's appropriate for your installation.

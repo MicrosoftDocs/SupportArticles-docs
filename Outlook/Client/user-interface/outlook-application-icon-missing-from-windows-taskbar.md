@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: gregmans
 appliesto:
+- Outlook LTSC 2021
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
@@ -50,11 +51,11 @@ To change your Outlook configuration so that the Outlook icon is displayed in th
 
 The **Hide When Minimized** option is controlled by the following registry data.
 
-Key: HKEY_CURRENT_USER\software\Microsoft\office\x.0\Outlook\Preferences  
+Key: `HKEY_CURRENT_USER\software\Microsoft\office\<x.0>\Outlook\Preferences`  
 DWORD: MinToTray  
 Values:  
 0 (or missing DWORD value) = Outlook icon displayed in the taskbar when Outlook is running  
 1 = Outlook icon is not displayed in the taskbar when Outlook is running and you minimize the Outlook window
 
 > [!NOTE]
-> The **x.0** placeholder represents your version of Office (16.0 = Office 2016, Office 365 and Office 2019, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).
+> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).

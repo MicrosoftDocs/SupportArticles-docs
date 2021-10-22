@@ -2,61 +2,52 @@
 
 
 
-## Week of May 10, 2021
+## Week of October 11, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 5/10/2021 | [Error (The seeding operation failed) when running Add-MailboxDatabaseCopy command](/exchange/troubleshoot/administration/add-database-copy-seeding-operation-failed) | modified |
-| 5/10/2021 | [Unable to migrate mailboxes using IMAP](/exchange/troubleshoot/move-or-migrate-mailboxes/imap-mailbox-migration-fails) | added |
-| 5/11/2021 | [Troubleshoot issues using diagnostics](/exchange/troubleshoot/administration/self-help-diagnostics) | added |
-| 5/12/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
-| 5/13/2021 | Outlook or OWA cannot connect to Public Folders | removed |
-| 5/14/2021 | [401 Access denied when running Test-OAuthConnectivity](/exchange/troubleshoot/administration/401-access-denied-error-when-running-test-oauthconnectivity) | modified |
-| 5/14/2021 | [Reduce malware threats via file attachment blocking](/exchange/troubleshoot/antispam-and-protection/how-to-reduce-malware-threats-via-file-attachment-blocking) | modified |
-| 5/14/2021 | [554 5.6.0 Invalid message content in Office 365](/exchange/troubleshoot/email-delivery/invalid-message-ndr) | modified |
-| 5/14/2021 | [Accessing other people's mailboxes](/exchange/troubleshoot/user-and-shared-mailboxes/how-to-access-other-mailboxes) | modified |
-| 5/14/2021 | [REST API is not yet supported error](/exchange/troubleshoot/user-and-shared-mailboxes/rest-api-is-not-yet-supported-for-this-mailbox-error) | modified |
+| 10/15/2021 | [Delegates not listed correctly after migration](/exchange/troubleshoot/send-emails/delegates-not-listed-correctly-in-outlook-after-migration) | modified |
+| 10/15/2021 | [Users can't see free/busy information after a mailbox is moved to Office 365](/exchange/troubleshoot/move-or-migrate-mailboxes/cannot-see-free-busy-information) | modified |
+| 10/15/2021 | [OWA or ECP stops working after you install a security update](/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update) | modified |
+| 10/15/2021 | [How to set up Outlook on the web to access Exchange Server](/exchange/troubleshoot/client-connectivity/set-up-web-access) | modified |
+| 10/15/2021 | [Can't send email message when Full Access is granted to a shared mailbox](/exchange/troubleshoot/mailflow/cannot-send-email-with-full-access) | modified |
 
 
-## Week of May 03, 2021
+## Week of September 27, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 5/6/2021 | [Manually update scan engines](/exchange/troubleshoot/setup/manually-update-scan-engines) | modified |
-| 5/7/2021 | [Search-AdminAuditLog or Search-MailboxAuditLog with parameter returns empty results in Exchange Server](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
+| 9/30/2021 | [MapiFxProxyTransientException when doing migration](/exchange/troubleshoot/move-or-migrate-mailboxes/stalledduetotarget-processor-error-during-migration) | modified |
 
 
-## Week of April 26, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/26/2021 | [Email messages stuck in the Poison queue](/exchange/troubleshoot/mailflow/emails-placed-in-poison-queue) | added |
-| 4/27/2021 | [Email messages stuck in the Poison queue](/exchange/troubleshoot/mailflow/emails-placed-in-poison-queue) | modified |
-| 4/28/2021 | [Duplicate Outlook contacts show in iOS Contacts app](/exchange/troubleshoot/outlook-issues/duplicate-contacts-in-ios-contacts-app) | added |
-| 4/28/2021 | [Site mailbox retirement FAQs](/exchange/troubleshoot/administration/site-mailbox-retirement-faq) | added |
-| 4/28/2021 | [Site mailbox retirement FAQs](/exchange/troubleshoot/administration/site-mailbox-retirement-faq) | modified |
-| 4/29/2021 | [Duplicate Outlook contacts show in iOS Contacts app](/exchange/troubleshoot/mobile-devices/duplicate-contacts-in-ios-contacts-app) | renamed |
-| 4/29/2021 | [Cannot send emails to an external recipient](/exchange/troubleshoot/antispam-and-protection/cannot-send-emails-to-external-recipients) | modified |
-| 4/29/2021 | [Updates to Client Access Rules in Office 365](/exchange/troubleshoot/administration/update-of-client-access-rules-for-office-365-customers) | modified |
-| 4/29/2021 | [Duplicate Outlook contacts appear in iOS Contacts app](/exchange/troubleshoot/mobile-devices/duplicate-contacts-in-ios-contacts-app) | modified |
-
-
-## Week of April 19, 2021
+## Week of September 20, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 4/21/2021 | [Troubleshoot free/busy issues in Exchange hybrid](/exchange/troubleshoot/calendars/troubleshoot-freebusy-issues-in-exchange-hybrid) | modified |
+| 9/22/2021 | [Cautions against bypassing Office 365 spam filters.](/exchange/troubleshoot/antispam-and-protection/cautions-against-bypassing-spam-filters) | modified |
+| 9/22/2021 | Attendees get cancellation followed by meeting update | removed |
+| 9/22/2021 | [OWA or ECP stops working after you install a security update](/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update) | modified |
+| 9/23/2021 | [Delete junk email rules by using MFCMAPI](/exchange/troubleshoot/administration/delete-junk-email-rules-mfcmapi-exchange) | modified |
 
 
-## Week of April 12, 2021
+## Week of September 13, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 4/12/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
-| 4/13/2021 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
-| 4/14/2021 | [Add-ins will stop working in Outlook on the web](/exchange/troubleshoot/client-connectivity/add-ins-will-stop-working-outlook-on-the-web) | added |
+| 9/12/2021 | [Can't access contact list from public folder](/exchange/troubleshoot/public-folders/cannot-access-contact-list) | added |
+| 9/12/2021 | [Can't access or move a mailbox after mailbox server is added to a DAG](/exchange/troubleshoot/migration/cannot-access-move-mailbox) | added |
+| 9/12/2021 | [MapiExceptionCorruptData error when cross-forest move fails](/exchange/troubleshoot/migration/cannot-move-mailbox-to-exchange-2013-database) | added |
+| 9/12/2021 | [Public folder items are deleted automatically after batch migration](/exchange/troubleshoot/public-folders/items-deleted-public-folder-batch-migration) | added |
+| 9/13/2021 | [Public folder hierarchy synchronization messages](/exchange/troubleshoot/public-folders/pf-hierarchy-sync-emails) | modified |
+| 9/13/2021 | [Organization Preparation FAILED error](/exchange/troubleshoot/setup/organization-preparation-failed) | modified |
+| 9/14/2021 | [Can't access contact list from public folder](/exchange/troubleshoot/public-folders/cannot-access-contact-list) | modified |
+| 9/14/2021 | [Can't access or move a mailbox after mailbox server is added to a DAG](/exchange/troubleshoot/migration/cannot-access-move-mailbox) | modified |
+| 9/14/2021 | [Public folder items are deleted automatically after batch migration](/exchange/troubleshoot/public-folders/items-deleted-public-folder-batch-migration) | modified |
+| 9/16/2021 | [User photos aren't synced to Exchange Online](/exchange/troubleshoot/administration/user-photos-not-synced-to-exchange-online) | modified |
+| 9/16/2021 | [Messages sent from a shared mailbox aren't saved to the Sent Items folder](/exchange/troubleshoot/user-and-shared-mailboxes/sent-mail-is-not-saved) | modified |
+| 9/17/2021 | [Duplicate public folder mailbox migration request](/exchange/troubleshoot/public-folders/duplicate-public-folder-mailbox-migration-request) | modified |
+| 9/17/2021 | [The connection to your mail server timed out error in Outlook for iOS or Outlook for Android](/exchange/troubleshoot/client-connectivity/connection-to-mail-server-timed-out) | modified |

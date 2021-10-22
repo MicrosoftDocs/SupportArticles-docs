@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom:
 - CI 148047
 - CSSTroubleshoot
-ms.reviewer: zebamehdi
+ms.reviewer: zebamehdi; brandisi
 appliesto:
 - Office 365
 search.appverid: MET150
