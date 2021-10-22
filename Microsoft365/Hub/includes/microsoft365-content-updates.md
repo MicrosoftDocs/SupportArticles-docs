@@ -2,6 +2,15 @@
 
 
 
+## Week of October 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/15/2021 | [How to restore deleted user accounts in Office 365, Azure, and Intune](/office365/troubleshoot/active-directory/restore-deleted-user-accounts) | modified |
+| 10/15/2021 | [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016) | modified |
+
+
 ## Week of October 04, 2021
 
 
@@ -49,13 +58,3 @@
 | 9/15/2021 | [Troubleshooting communications and information barriers](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | added |
 | 9/17/2021 | [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run) | modified |
 | 9/17/2021 | [Listing some issues for Microsoft 365 Administration](/office365/troubleshoot/o365-admin-welcome) | modified |
-
-
-## Week of September 06, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/7/2021 | [Enable or disable hyperlink warning messages in Office programs](/office365/troubleshoot/administration/enable-disable-hyperlink-warning) | modified |
-| 9/8/2021 | [Fix pending state issue with Directory synchronization for Microsoft 365, Azure, or Intune](/office365/troubleshoot/active-directory/pending-state-issue-with-directory-synchronization) | modified |
-| 9/8/2021 | [How to run the Fiddler Trace after installing SaRA](/office365/troubleshoot/diagnostic-logs/run-fiddler-trace) | modified |

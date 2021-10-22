@@ -20,11 +20,11 @@ appliesto:
 - SharePoint Online
 description: Describes how to resolve an issue where a SharePoint file checked out from an online or local folder opens as read only.
 ---
-# SharePoint files open as read-only 
+# SharePoint files open as read-only
 
 ## Symptoms
 
-At times, you may find that when you open files from SharePoint or OneDrive for Business they open in read-only mode. 
+At times, you may find that when you open files from SharePoint or OneDrive for Business they open in read-only mode.
 
 ## Cause
 
@@ -41,10 +41,12 @@ To resolve this issue, one of the following methods may help:
 - Instead of selecting the document title, select **Open Menu** (the three dots), and then select **Edit**.
 - If the file is stored on OneDrive and your OneDrive storage space is full, you will be unable to save the document until your storage space is below your allowance. Check your free space on OneDrive by selecting the OneDrive icon in the notification center and choosing **Manage storage**, or go to http://onedrive.live.com, sign in, and note the amount of used space in the lower-left corner of the screen.
 - If Office is not activated, or if your subscription has expired, you might be in read-only **Reduced Functionality Mode**. For information on how to Activate Office, see [Unlicensed Product and activation errors in Office](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380).
-- Right-click the file and choose **Properties**. If the Read-only attribute is checked, uncheck it and select **OK**.<br/>
-![Uncheck the read-only box. ](media/files-open-as-read-only/files-open-as-read-only.jpg)
+- Right-click the file and choose **Properties**. If the Read-only attribute is checked, uncheck it and select **OK**.
+
+    :::image type="content" source="media/files-open-as-read-only/read-only-attribute.png" alt-text="Screenshot of the Properties dialog, where you can clear the read-only attribute check box.":::
 
 ### Other methods to try
+
 - Restart your computer.
 - [Check that all Office updates are installed](https://support.office.com/article/Update-Office-with-Microsoft-Update-f59d3f9d-bd5d-4d3b-a08e-1dd659cf5282).
 - [Perform an Online repair of Office](https://support.office.com/Article/Repair-an-Office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
