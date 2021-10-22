@@ -34,7 +34,7 @@ appliesto:
 
 By default, installations of Microsoft Office are configured to automatically update your Office installation when new updates are made publicly available. However, if you examine the Account section of the backstage, you may see that updates are disabled or that the command to manage updates is disabled or hidden. For example, the following figure indicates that updates are disabled in the backstage.
 
-![updates are disabled in the backstage](./media/automatic-updates/updates-are-disabled-in-the-backstage.jpg)
+:::image type="content" source="./media/automatic-updates/updates-are-disabled-in-the-backstage.png" alt-text="Screenshot indicates that updates are disabled in the backstage.":::
 
 ## Cause
 
@@ -59,7 +59,7 @@ We recommend that you keep automatic updating enabled for Office installations b
 
   If you cannot follow the steps in the "Manually configure automatic updates" section, this is because the **Update Options** control is disabled or missing due to a Group Policy. For example, the following figure shows the **Update Options** control when the **Enable Updates** option is hidden through a Group Policy:
 
-  ![Enable Updates](./media/automatic-updates/enable-updates.jpg)
+     :::image type="content" source="./media/automatic-updates/update-options.png" alt-text="Screenshot shows the Update Options control when the Enable Updates option is hidden through a Group Policy.":::
 
   To examine the registry data that is associated with the Group Policy settings which control this feature, follow these steps:
 
