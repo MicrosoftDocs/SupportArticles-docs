@@ -58,7 +58,7 @@ This object must have the same name, alias, and user principal name (UPN) as the
 For example, run the following command:  
 
 ```powershell
-New-Remotemailbox -Name "<Shared mailbox>" -Alias <sharedmailbox> -UserPrincipleName <sharedmailbox@contoso.com> -Remoteroutingaddress <sharedmailbox@contoso.mail.onmicrosoft.com> -Shared
+New-Remotemailbox -Name "<Shared mailbox>" -Alias <sharedmailbox> -UserPrincipalName <sharedmailbox@contoso.com> -Remoteroutingaddress <sharedmailbox@contoso.mail.onmicrosoft.com> -Shared
 ```
 
 ## More information

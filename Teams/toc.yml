@@ -111,6 +111,8 @@
       href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
+    - name: Guest user can't access Files tab
+      href: ./files/guests-cannot-access-files.md
   - name: Forms
     items:
     - name: Can't send or respond a poll

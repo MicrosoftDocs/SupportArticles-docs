@@ -2,6 +2,23 @@
 
 
 
+## Week of October 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/14/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+
+
+## Week of October 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/8/2021 | A SharePoint Online list item attachment doesn't open in the Office client app | removed |
+| 10/8/2021 | [Searching private content in Microsoft 365 OneDrive for Business](/sharepoint/troubleshoot/search/search-private-content) | added |
+
+
 ## Week of September 27, 2021
 
 
