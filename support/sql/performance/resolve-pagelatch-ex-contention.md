@@ -82,99 +82,89 @@ To resolve this contention, the overall strategy is to prevent all concurrent IN
 This T-SQL script helps you discover if there are `PAGELATCH_EX` waits on the system with multiple sessions (5 or more) with significant wait time (10 ms or more). It also helps you discover which object and index the contention is on using [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) and [DBCC PAGE](https://techcommunity.microsoft.com/t5/sql-server/how-to-use-dbcc-page/ba-p/383094) or [sys.fn_PageResCracker](/sql/relational-databases/system-functions/sys-fn-pagerescracker-transact-sql) and [sys.dm_db_page_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql) (SQL Server 2019 only).
 
 ```tsql
-SET NOCOUNT on 
-DECLARE @dbname SYSNAME, @dbid int, @objectid int, @indexid int, @indexname sysname, @sql varchar(8000), @manul_identification varchar(8000)
+SET NOCOUNT ON 
+DECLARE @dbname SYSNAME, @dbid INT, @objectid INT, @indexid INT, @indexname SYSNAME, @sql VARCHAR(8000), @manul_identification VARCHAR(8000)
 
-if (convert(int, SERVERPROPERTY('ProductMajorVersion')) >= 15)
+IF (CONVERT(INT, SERVERPROPERTY('ProductMajorVersion')) >= 15)
 BEGIN
 
-    drop table if exists #PageLatchEXContention
+    DTOP TABLE IF EXISTS #PageLatchEXContention
 
     SELECT DB_NAME(page_info.database_id) DbName, r.db_id DbId, page_info.[object_id] ObjectId, page_info.index_id IndexId
-    into #PageLatchEXContention
+    INTO #PageLatchEXContention
     FROM sys.dm_exec_requests AS er
         CROSS APPLY sys.dm_exec_sql_text(er.sql_handle) AS st 
         CROSS APPLY sys.fn_PageResCracker (er.page_resource) AS r  
         CROSS APPLY sys.dm_db_page_info(r.[db_id], r.[file_id], r.page_id, 'DETAILED') AS page_info
-    WHERE er.wait_type = 'PAGELATCH_EX' and page_info.database_id not in (db_id('master'),db_id('msdb'), db_id('model'), db_id('tempdb')) 
+    WHERE er.wait_type = 'PAGELATCH_EX' AND page_info.database_id not in (db_id('master'),db_id('msdb'), db_id('model'), db_id('tempdb')) 
     GROUP BY DB_NAME(page_info.database_id), r.db_id, page_info.[object_id], page_info.index_id
     HAVING COUNT(er.session_id) > 5 AND Max (er.wait_time) > 10
 
-    select * from #PageLatchEXContention 
-    
-    IF EXISTS (select 1 from #PageLatchEXContention) 
-    begin
-    
+    SELECT * FROM #PageLatchEXContention 
+    IF EXISTS (SELECT 1 FROM #PageLatchEXContention) 
+    BEGIN
         DECLARE optimize_for_seq_key_cursor CURSOR FOR
-            select DbName, DbId, ObjectId, IndexId from #PageLatchEXContention 
-
+            select DbName, DbId, ObjectId, IndexId FROM #PageLatchEXContention 
+            
         OPEN optimize_for_seq_key_cursor
-
         FETCH NEXT FROM optimize_for_seq_key_cursor into @dbname, @dbid, @objectid , @indexid 
-
         WHILE @@FETCH_STATUS = 0
         BEGIN
-            select 'Consider using below statement to enable OPTIMIZE_FOR_SEQUENTIAL_KEY for the indexes in the "' + @dbname + '" database' as Recommendation
-            select @sql =  'select ''use ' + @dbname + '; ALTER INDEX '' + i.name + '' ON ' + OBJECT_NAME(@objectid, @dbid) + ' SET (OPTIMIZE_FOR_SEQUENTIAL_KEY = ON )'' as Corrective_Action from #PageLatchEXContention pl join ' + @dbname+'.sys.indexes i on pl.ObjectID = i.object_id where object_id = ' + convert(varchar, @objectid) + ' and index_id = ' + convert(varchar, @indexid)
+            SELECT 'Consider using below statement to enable OPTIMIZE_FOR_SEQUENTIAL_KEY for the indexes in the "' + @dbname + '" database' AS Recommendation
+            SELECT @sql =  'select ''use ' + @dbname + '; ALTER INDEX '' + i.name + '' ON ' + OBJECT_NAME(@objectid, @dbid) + ' SET (OPTIMIZE_FOR_SEQUENTIAL_KEY = ON )'' AS Corrective_Action from #PageLatchEXContention pl JOIN ' + @dbname+'.sys.indexes i ON pl.ObjectID = i.object_id WHERE object_id = ' + CONVERT(VARCHAR, @objectid) + ' AND index_id = ' + CONVERT(VARCHAR, @indexid)
                 
-            --select @sql
+            --SELECT @sql
             EXECUTE (@sql) 
-            FETCH NEXT FROM optimize_for_seq_key_cursor into @dbname, @dbid, @objectid , @indexid 
+            FETCH NEXT FROM optimize_for_seq_key_cursor INTO @dbname, @dbid, @objectid , @indexid 
 
         END
 
         CLOSE optimize_for_seq_key_cursor
         DEALLOCATE optimize_for_seq_key_cursor
     
-    end
+    END
     ELSE
-        select 'No PAGELATCH_EX contention found on user databases on in SQL Server at this time'
+        SELECT 'No PAGELATCH_EX contention found on user databases on in SQL Server at this time'
 END
 ELSE
 BEGIN
     
-    if OBJECT_ID('tempdb..#PageLatchEXContentionLegacy') is not null
-        drop table #PageLatchEXContentionLegacy
+    IF OBJECT_ID('tempdb..#PageLatchEXContentionLegacy') IS NOT NULL
+        DROP TABLE #PageLatchEXContentionLegacy
     
-    select 'dbcc traceon (3604); dbcc page(' + replace(wait_resource,':',',') + ',3); dbcc traceoff (3604)' TSQL_Command
-    into #PageLatchEXContentionLegacy
+    SELECT 'dbcc traceon (3604); dbcc page(' + replace(wait_resource,':',',') + ',3); dbcc traceoff (3604)' TSQL_Command
+    INTO #PageLatchEXContentionLegacy
     FROM sys.dm_exec_requests er
-    WHERE er.wait_type = 'PAGELATCH_EX' and er.database_id not in (db_id('master'),db_id('msdb'), db_id('model'), db_id('tempdb')) 
+    WHERE er.wait_type = 'PAGELATCH_EX' AND er.database_id NOT IN (db_id('master'),db_id('msdb'), db_id('model'), db_id('tempdb')) 
     GROUP BY wait_resource
     HAVING COUNT(er.session_id) > 5 AND Max (er.wait_time) > 10
 
-    select * from #PageLatchEXContentionLegacy
+    SELECT * FROM #PageLatchEXContentionLegacy
     
-
-    IF EXISTS(select 1 from #PageLatchEXContentionLegacy)
+    IF EXISTS(SELECT 1 FROM #PageLatchEXContentionLegacy)
     BEGIN
-        select 'On SQL Server 2017 or lower versions, you can manually identify the object where contention is occurring using DBCC PAGE locate the m_objId = ??. Then SELECT OBJECT_NAME(object_id_identified) and locate indexes with sequential values in this object' as Recommendation
+        SELECT 'On SQL Server 2017 or lower versions, you can manually identify the object where contention is occurring using DBCC PAGE locate the m_objId = ??. Then SELECT OBJECT_NAME(object_id_identified) and locate indexes with sequential values in this object' AS Recommendation
         
         DECLARE get_command CURSOR FOR
             select TSQL_Command from #PageLatchEXContentionLegacy 
 
         OPEN get_command
-
         FETCH NEXT FROM get_command into @sql
-
         WHILE @@FETCH_STATUS = 0
         BEGIN
-            select @sql as Step1_Run_This_Command_To_Find_Object
-            SELECT 'select OBJECT_NAME(object_id_identified)' as Step2_Find_Object_Name_From_ID
-            
-            
-            FETCH NEXT FROM get_command into @sql
-
+            SELECT @sql AS Step1_Run_This_Command_To_Find_Object
+            SELECT 'select OBJECT_NAME(object_id_identified)' AS Step2_Find_Object_Name_From_ID
+            FETCH NEXT FROM get_command INTO @sql
         END
 
         CLOSE get_command
         DEALLOCATE get_command
 
-        select 'Follow https://docs.microsoft.com/troubleshoot/sql/performance/resolve-pagelatch-ex-contention for resolution recommendations that fits your environment best' Step3_Apply_KB_article
+        SELECT 'Follow https://docs.microsoft.com/troubleshoot/sql/performance/resolve-pagelatch-ex-contention for resolution recommendations that fits your environment best' Step3_Apply_KB_article
         
     END
     ELSE
-        select 'No PAGELATCH_EX contention found on user databases on in SQL Server at this time'
+        SELECT 'No PAGELATCH_EX contention found on user databases on in SQL Server at this time'
 
 END
 ```
