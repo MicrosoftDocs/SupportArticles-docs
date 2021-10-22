@@ -2,6 +2,14 @@
 
 
 
+## Week of October 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/5/2021 | [Can't use Send to OneNote add-in to save items from Outlook for iOS](/outlook/troubleshoot/add-ins/cannot-save-to-onenote) | added |
+
+
 ## Week of September 20, 2021
 
 
