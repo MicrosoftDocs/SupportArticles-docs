@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 ---
 # Use LiveRE tool to troubleshooting Windows boot problems
 
-The LiveRE tool is an image that can be used to boot a machine from USB. This tool is helpful in troubleshooting No-Boot issues. It can also be used to allow remote access to support professionals, access to non-booting machine through a jump server.
+The LiveRE tool is an image that can be used to boot a machine from USB. This tool is helpful in troubleshooting No-Boot issues. It can also be used to allow remote access to support professionals, access to non-booting computer through a jump server.
 
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals.
@@ -24,7 +24,7 @@ The LiveRE tool is an image that can be used to boot a machine from USB. This to
 
 Here is a comparison of Live RE to the existing Windows Recovery Environment that comes with Windows ISOs.
 
-| Feature | WinRE/WinPE | iDRAC/ILO | LiveOS |
+| Feature | WinRE/WinPE | iDRAC/ILO | Live operating system (OS) |
 |---------|-------------|-----------|--------|
 | Availability | With DVD | Special hardware | Flash-drive |
 | Remote Access | No | Yes | Yes |
@@ -47,12 +47,11 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 - Input Devices: Keyboard and mouse (optional)
 - Internet: Broadband access (optional)
 
-## Configuring the USB drive
+## Set up the USB flash drive
 
 1. Download the [LiveRE image](https://download.microsoft.com/download/7/e/b/7ebcc4f5-e67f-45b1-b00f-48870d9350a5/LiveRE.wim).
 2. Connect a USB flash drive.
-3. Find out if the affected (non-booting) machine is setup for BIOS boot or UEFI Boot.
-4. Format the USB drive accordingly:
+3. Check whether the non-booting computer is set up for BIOS boot or UEFI boot. Format the USB drive accordingly:
 
    - For UEFI:
 
@@ -85,21 +84,21 @@ Here is a comparison of Live RE to the existing Windows Recovery Environment tha
 
      Format the partition as NTFS file system.
 
-5. Run the following commands:
+4. Run the following commands:
 
    ```console
    dism /Apply-Image /ImageFile:<complete path of the LiveOS.wim> /Index:1 /ApplyDir:<flash drive letter>:\
    <flash drive letter>:\Windows\System32\bcdboot <flash drive letter>:\Windows /s <flash drive letter>: /f ALL
    ```
 
-After the flash drive is ready, start the affected server from the flash drive.
+After the USB flash drive is ready, start the affected server from the flash drive.
 
-## Create User for remote access
+## Create user account for remote access
 
 The following steps help create a user to allow remote access through a jump server:
 
-1. Start the non-booting machine via <!-- via? -->. Accept EULA to get to the Help Console.
-2. Press Enter to get to powershell.
+1. Start the non-booting computer by using the USB flash drive. Accept EULA to get to the Help Console.
+2. Press Enter to get to PowerShell.
 3. Run the following cmdlets:
 
    ```powershell
@@ -109,19 +108,20 @@ The following steps help create a user to allow remote access through a jump ser
    Add-LocalGroupMember -Group "Administrators" -Member "user_name"
    ```
 
-   Enter Password after the first cmdlet.
+   > [!NOTE]
+   > Enter Password after the first cmdlet.
+
+The computer is now all set for remote access through a jump server. The following is a sample:
 
 :::image type="content" source="./media/live-re-troubleshoot-windows-boot/live-re-input-add-user.png" alt-text="Run cmdlet in LiveRE":::
 
-The machine is now all set for remote access through a jump server.
-
-## Connect from jump server
+## Connect from the jump server
 
 1. Get the IP address from the LiveRE screen:
 
    :::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-ip-address-from-live-re.png" alt-text="Get IP address":::
 
-2. From a working machine in the same network as the non-booting machine, open PowerShell ISE and run the following script:
+2. From a working machine in the same network as the non-booting computer, open PowerShell ISE and run the following script:
 
    ```powershell
    $ip = "172.25.80.68"
@@ -135,9 +135,9 @@ The machine is now all set for remote access through a jump server.
 
    :::image type="content" source="./media/live-re-troubleshoot-windows-boot/connect-to-broken-computer-using-winrm.png" alt-text="Connect via WinRM":::
 
-If you are experiencing issues connecting using WinRM, use these steps on the working computer to fix them:
+If you are experiencing issues connecting using WinRM, check whether WinRM is enabled. If not, you can use the command `winrm qc` to enable WinRM. 
 
-If winrm is not enabled, you can use the command `winrm qc` to enable winrm. If you receive an error message that reassembles the following, this means the network connections is set to Public.
+If you receive an error message that reassembles the following, this means the network connections is set to **Public**.
 
 :::image type="content" source="./media/live-re-troubleshoot-windows-boot/run-winrm-qc-error-0x80338169.png" alt-text="0x80338169 error when enabling WinRM":::
 
@@ -147,17 +147,17 @@ You can find which one using the following command:
 Get-NetConnectionProfile | select InterfaceAlias, NetworkCategory
 ```
 
-Sample output:
+The following is a sample output:
 
 :::image type="content" source="./media/live-re-troubleshoot-windows-boot/get-netconnectionprofile-output.png" alt-text="Output of Get-NetConnectionProfile cmdlet":::
 
-You can either disable the ones that are showing public or change them to private after taking permission from customer, command is:
+You can either disable the ones that are showing public or change them to private after taking permission from customer. To do so, use this command:
 
 ```powershell
 Set-NetConnectionProfile -interfacealias "vEthernet (Internal LAN)" -NetworkCategory Private
 ```
 
-## Unlock BitLocker Drives from LiveRE
+## Unlock BitLocker drives from LiveRE
 
 1. Run `Get-Volume` to find the drive letter:
 
@@ -166,10 +166,10 @@ Set-NetConnectionProfile -interfacealias "vEthernet (Internal LAN)" -NetworkCate
 2. Run the following command:
 
    ```powershell
-   Unlock-bitlocker -mountpoint <Drive letter> -RecoveryPassword XXX
+   Unlock-BitLocker -MountPoint <drive letter> -RecoveryPassword <recovery password>
    ```
 
-## Disk Configuration
+## Disk configuration
 
 Since *Diskpart.exe* is not available in the LiveRE, use PowerShell to achieve similar results. Here are a few commands:
 
@@ -178,15 +178,15 @@ Since *Diskpart.exe* is not available in the LiveRE, use PowerShell to achieve s
 3. Set a partition to active: `Set-Partition -DiskNumber <number> -PartitionNumber <number> -IsActive $true`.
 4. Check properties of a partition: `Get-Partition -DiskNumber <number> -PartitionNumber <number> |fl`.
 
-For more information see, [Windows Storage Management-specific cmdlets](/powershell/module/storage/)
+For more information, see [Windows Storage Management-specific cmdlets](/powershell/module/storage/)
 
 ## Registry configuration
 
-There is no registry editor is Live OS. In order to change the registry, you should access the share for affected OS drive using *\\\\\<IP Address\>\\c$*.
+There is no registry editor is Live OS. In order to change the registry, access the share for affected OS drive by using the *\\\\\<IP Address\>\\c$* path.
 
-Get the hives from *\\windows\\system32\\config*, make the changes to the hives, and then proceed with the further steps.
+Get the hives from *\\windows\\system32\\config*, make the changes to the hives, and then proceed with further steps.
 
-## Accessing Shadow Copies
+## Access shadow copies
 
 LiveRE allows access to shadow copies from disks of a machine which is not booting, this can be used to replace previous versions of files.
 
@@ -198,9 +198,9 @@ Get-Volume | select Driveletter,path to get the volume name association with Vol
 ```
 
 > [!NOTE]
-> The Date and Time has to be adjusted as per time zone to get the correct date and time, LiveOS uses GMT zone.
+> The OS date and time has to be adjusted as per time zone to get the correct date and time, LiveOS uses Greenwich Mean Time (GMT) zone.
 
-Copy the DeviceObject for the shadow copy you want to access and then run the command
+Copy the DeviceObject for the shadow copy you want to access, and then run these commands:
 
 ```console
 $sobj="<DeviceObject>" + "\"
@@ -211,9 +211,9 @@ You can now access the previous versions of the file from PowerShell by browsing
 
 ## Injecting Drivers
 
-In case of a RAID disk setup, we need to install RAID drivers from OEM to make the Volumes visible to OS.
+If you have a Redundant Array of Independent Disk (RAID) disk setup, we need to install RAID drivers from Original Equipment Manufacturer (OEM) to make the volumes visible to OS.
 
-In LiveRE, you can just extract the RAID drivers to the folder *\<USB\>:\\CopyDriversHere* folder.
+In LiveRE, you can just extract the RAID drivers to the folder *\<USB\>:\\\<driver folder\>* folder.
 
 Then, when you are booted in LiveRE, press the 4 key to install the drivers.
 
