@@ -40,13 +40,13 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
     > [!NOTE]
     >
     > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.</br>
-    > :::image type="content" source="media/install-sara-from-network-share/120760-1.png" alt-text="SaRA cmd line setup.":::
+    > :::image type="content" source="media/install-sara-from-network-share/install-sara-by-using-command.png" alt-text="Microsoft Support and Recovery Assistant cmd line setup.":::
     > If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
-    > :::image type="content" source="media/install-sara-from-network-share/120760-2.png" alt-text="SaRA runs in quiet mode.":::
+    > :::image type="content" source="media/install-sara-from-network-share/sarasetup-runs-in-background.png" alt-text="Microsoft Support and Recovery Assistant runs in quiet mode.":::
     > - To run the installation and see output from the setup process in the Command Prompt window, use **/d** or **/debug** instead of **/q** (or **/quiet**) at the command prompt. For example, see the following screenshot.
-    > :::image type="content" source="media/install-sara-from-network-share/120760-3.png" alt-text="SaRA installation using debug mode.":::
+    > :::image type="content" source="media/install-sara-from-network-share/install-sara-by-using-debug-mode.png" alt-text="Microsoft Support and Recovery Assistant installation using debug mode.":::
     > - Use the **/?**, **/h**, or **/help** switches to display the following window that shows all available command-line switches for SaraSetup.exe.
-    > :::image type="content" source="media/install-sara-from-network-share/120760-4.png" alt-text="/q or /quiet - no UI displayed during install, /d or /debug - debug console shown instead of UI, /? /h or /help - displays help information":::
+    > :::image type="content" source="media/install-sara-from-network-share/all-command-line-switches-for-sarasetup.png" alt-text="All available command-line switches for SaraSetup.exe.":::
     If SaRA is installed by using the /q, /quiet, /d, or /debug switches, the End User License Agreement (EULA) is displayed when the Support and Recovery Assistant is started for the first time.
 
 ### Manual installation
@@ -56,11 +56,11 @@ To manually install the SaRA tool, follow these steps:
 1. On the computer on which you want to install SaRA, browse to the shared folder.
 1. Double-click **SaraSetup.exe**.
 1. Select **Install**.
-   :::image type="content" source="media/install-sara-from-network-share/120760-5.png" alt-text="SaRA setup screen.":::
+   :::image type="content" source="media/install-sara-from-network-share/manual-installation-of-sara.png" alt-text="Microsoft Support and Recovery Assistant manual setup page.":::
 1. Wait for the download and installation process to finish.
-   :::image type="content" source="media/install-sara-from-network-share/120760-6.png" alt-text="SaRA setup installation progress.":::
+   :::image type="content" source="media/install-sara-from-network-share/sara-installation-process-status.png" alt-text="Microsoft Support and Recovery Assistant setup installation progress.":::
 1. After the installation is complete, and the End User License agreement has been accepted, the first Support and Recovery screen will be displayed.
-   :::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
+   :::image type="content" source="media/install-sara-from-network-share/the-first-screen-shown-after-sara-installation-complete.png" alt-text="The Support and Recovery screen.":::
 
 ## Maintaining the SaRA installation folder and updating SaRA
 
@@ -75,12 +75,13 @@ Any computer that has SaRA already installed can now be updated by using the fol
 1. Start SaRA on a computer on which it's already installed.
 2. Select **OK**, and wait for the update to finish.
 
-   :::image type="content" source="media/install-sara-from-network-share/3.png" alt-text="Application update.":::
+   :::image type="content" source="media/install-sara-from-network-share/update-sara.png" alt-text="Microsoft Support and Recovery Assistant application update.":::
 
-   :::image type="content" source="media/install-sara-from-network-share/5.png" alt-text="Installation progress bar.":::
+   :::image type="content" source="media/install-sara-from-network-share/sara-update-progress-status.png" alt-text="Microsoft Support and Recovery Assistant updating progress bar.":::
 
 SaRA is now installed and ready to run troubleshooting scenarios.
-:::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
+
+:::image type="content" source="media/install-sara-from-network-share/the-first-screen-shown-after-sara-installation-complete.png" alt-text="The Support and Recovery screen.":::
 
 ## SaRA version history
 
@@ -90,6 +91,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|October 20, 2021|17.00.7405.002|
 |October 7, 2021|17.00.7332.000|
 |July 12, 2021|17.00.6880.004|
 |June 30, 2021|17.00.6805.016|
