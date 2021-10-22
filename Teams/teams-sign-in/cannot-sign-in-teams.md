@@ -23,7 +23,7 @@ This article is meant to be used by tenant administrators.
 
 This article provides some methods that help administrators fix the sign-in issues in Microsoft Teams.
 
-1. Sign in the [Microsoft 365 admin center](https://admin.microsoft.com/), run the Teams sign-in diagnostics: : [Diag: Teams Sign-in](https://aka.ms/TeamsSignInDiag), which will populate the diagnostic.
+1. Sign in the [Microsoft 365 admin center](https://admin.microsoft.com/), run the Teams sign-in diagnostics: [Diag: Teams Sign-in](https://aka.ms/TeamsSignInDiag), which will populate the diagnostic.
 1. Make sure the [Teams client is updated](https://support.microsoft.com/en-us/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1).
 1. If you use federated sign-in providers, validate Active Directory Federation Services (AD FS) configuration with the [Office 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in Microsoft Remote Connectivity Analyzer.
 1. Check the error code on the Teams sign-in screen. If you don't see the error code here in the list below, see [Why am I having trouble signing in to Microsoft Teams](https://support.microsoft.com/en-us/topic/a02f683b-61a3-4008-9447-ee60c5593b0f) for more error codes and known issues.
@@ -37,7 +37,7 @@ This article provides some methods that help administrators fix the sign-in issu
     - **0xCAA70004** or **0xCAA70007**, or the sign-in issues also occurs in other Office applications.  
         See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/Microsoft365/admin/authentication/connection-issue-when-sign-in-office-2016) for troubleshooting steps.
 
-1. If the sign-in issue only occurs in Microsoft Teams, check the resolution in [Microsoft Teams is stuck in a login loop](sign-in-loop.md) to fix the issue. Alternatively, reinstall Teams as follows:
+1. If the sign-in issue only occurs in Microsoft Teams, check the resolution in [Microsoft Teams is stuck in a login loop](sign-in-loop.md) to fix the issue. Alternatively, reinstall Teams as follows:
 
     1. [Uninstall or remove Teams](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98).
     1. Browse to the *%appdata%\Microsoft* folder on the computer and delete the Teams folder.
