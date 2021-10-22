@@ -47,7 +47,7 @@ Under some conditions, these requests may either take a long time to complete or
 > [!WARNING]
 > This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We don't recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
-To work around these issues, identity the filter driver or the module that is causing the issues. Then, try all or one of the following methods appropriately:
+To work around these issues, identity the filter driver or the module that is causing the issues. Then, try all or one of the following methods appropriately. To help you identity the filter driver or the module, check the [list of some possible filter drivers and modules](#list-of-filter-drivers-and-modules-that-can-cause-the-issues) for more information.
 
 - Configure the filter driver or the associated application in such a way that it doesn't interfere with the SQL Server workload or operations.
 - Disable the filter driver from loading into the system.
@@ -87,9 +87,7 @@ The following list helps you to identity the filter drivers and modules that can
 
 - *MFEBOPK.SYS*
 
-    This filter driver is used for the `Buffer Overflow Protection` feature in McAfee VirusScan Enterprise. If you have this feature enabled, you will notice that sqlservr.exe is among the list of processes protected by `Buffer Overflow Protection`. If you have this filter driver on a system that is running SQL Server, you must perform the actions that are specified in the [Workaround](#workaround) section. For more information, see following link:
-
-    [High Impact Issue: Servers may become unresponsive due to multiple issues](https://techcommunity.microsoft.com/t5/ask-the-performance-team/high-impact-issue-servers-may-become-unresponsive-due-to/ba-p/374567)
+    This filter driver is used for the `Buffer Overflow Protection` feature in McAfee VirusScan Enterprise. If you have this feature enabled, you will notice that sqlservr.exe is among the list of processes protected by `Buffer Overflow Protection`. If you have this filter driver on a system that is running SQL Server, you must perform the actions that are specified in the [Workaround](#workaround) section. For more information, see [High Impact Issue: Servers may become unresponsive due to multiple issues](https://techcommunity.microsoft.com/t5/ask-the-performance-team/high-impact-issue-servers-may-become-unresponsive-due-to/ba-p/374567).
 
 - *NLEMSQL64.SYS* and *NLEMSQL.SYS*
 
