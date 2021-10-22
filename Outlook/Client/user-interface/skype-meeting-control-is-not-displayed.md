@@ -36,7 +36,7 @@ To resolve this issue, you can manually enable the Skype Meeting Add-in for Micr
 
 If you do not see the Skype Meeting Add-in for Microsoft Office 2016 entry in the **COM Add-Ins** dialog box, see [Skype Meeting Add-in for Microsoft Office 2016 entry is missing in COM Add-Ins](#skype-meeting-add-in-for-microsoft-office-2016-entry-is-missing-in-com-add-ins) this section for the resolution. The entry should be displayed as it is in the following screenshot:
 
-:::image type="content" source="media/skype-meeting-control-is-not-displayed/com-add-ins-window.png" alt-text="the Skype Meeting Add-in for Microsoft Office 2016 option" border="false":::
+:::image type="content" source="media/skype-meeting-control-is-not-displayed/com-add-ins-window.png" alt-text="Screenshot of the Skype Meeting Add-in for Microsoft Office 2016 option in COM Add-ins dialog." border="false":::
 
 > [!NOTE]
 > You may receive the following error message during step 5:  
@@ -85,7 +85,7 @@ To resolve this issue, examine the applicable registry subkey for the Skype Meet
 
 Select the **File** tab in Outlook, and then select **Office Account**.
 
-:::image type="content" source="media/skype-meeting-control-is-not-displayed/office-account.png" alt-text="Office Account" border="false":::
+:::image type="content" source="media/skype-meeting-control-is-not-displayed/office-account.png" alt-text="Screenshot shows the Office Product Information section.":::
 
 If you see Office Updates in the Product Information area, you have a Click-to-Run installation of Office 2016.
 
