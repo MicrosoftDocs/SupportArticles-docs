@@ -22,6 +22,8 @@ search.appverid: MET150
 
 # "PublicFolderSizeExceedsTargetQuotaException" error when moving public folders to Exchange Online
 
+## Symptoms
+
 When you move public folders from an on-premises Exchange server to Exchange Online, you receive the following error message:
 
 > FailureType : PublicFolderSizeExceedsTargetQuotaException  
@@ -37,7 +39,14 @@ When you move public folders from an on-premises Exchange server to Exchange Onl
 
 Additionally, all public folders are migrated to the target primary public folder mailbox, regardless of the structure provided in the .csv mapping file.
 
-This issue occurs for one of the following reasons. You can fix this issue depending on the cause respectively:
+## Cause
 
-- A public folder with a size larger than 100 gigabytes (GB) is mapped to a single public folder mailbox. In this scenario, split the public folder, and then resume the migration.
-- The name of a source public folder contains the *@* character. In this scenario, rename the public folder.
+This issue occurs for one of the following reasons:
+
+Cause 1: The source may have public folder that contains the @ character in the name.
+
+Cause 2: A public folder at the source may be larger than 100 gigabytes (GB).
+
+## Resolution
+
+To fix this issue, use the [Source Side Validation script](https://aka.ms/ssv2) to perform check on source before starting the public folder migration. The script will scan any public folders that have the @ character in the name and public folders that are larger than 100 GB, and report issues along with action to fix the issues.
