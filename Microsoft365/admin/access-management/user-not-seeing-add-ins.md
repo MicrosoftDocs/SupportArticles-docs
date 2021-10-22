@@ -33,11 +33,11 @@ If the add-in supports add-in commands, the commands appear on the Office ribbon
   
 If the deployed add-in doesn't support add-in commands or if you want to view all deployed add-ins, you can view them via **My Add-ins** from the **Insert** tab. 
   
-:::image type="content" source="./media/user-not-seeing-add-ins/my-add-ins.png" alt-text="Screenshot shows you can view add-ins in My Add-ins from the Insert tab."border="false":::
+:::image type="content" source="./media/user-not-seeing-add-ins/my-add-ins.png" alt-text="Screenshot shows you can view add-ins in My Add-ins from the Insert tab." border="false":::
   
 Then select the **Admin Managed** tab along the top in the Office Add-ins window. If add-in is not there, select **Refresh** in the top right corner. 
   
-:::image type="content" source="./media/user-not-seeing-add-ins/refresh-if-your-add-in-is-not-present.png" alt-text="Screenshot of Refresh in the top right corner."border="false":::
+:::image type="content" source="./media/user-not-seeing-add-ins/refresh-if-your-add-in-is-not-present.png" alt-text="Screenshot of Refresh in the top right corner." border="false":::
   
 ## For Outlook 2016, Outlook 2019 and Outlook for Microsoft 365
 
