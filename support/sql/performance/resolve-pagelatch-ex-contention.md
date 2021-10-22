@@ -88,7 +88,7 @@ DECLARE @dbname SYSNAME, @dbid INT, @objectid INT, @indexid INT, @indexname SYSN
 IF (CONVERT(INT, SERVERPROPERTY('ProductMajorVersion')) >= 15)
 BEGIN
 
-    DTOP TABLE IF EXISTS #PageLatchEXContention
+    DROP TABLE IF EXISTS #PageLatchEXContention
 
     SELECT DB_NAME(page_info.database_id) DbName, r.db_id DbId, page_info.[object_id] ObjectId, page_info.index_id IndexId
     INTO #PageLatchEXContention
