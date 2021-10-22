@@ -42,7 +42,7 @@ A user may have additional permissions to a calendar folder. For example, a user
 
 For example, if the default permissions are set to **Free/Busy time**, all users in the remote forest see only the free/busy time:
 
-:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/freebusy-time.png" alt-text="A screenshot of the free/busy time":::
+:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/freebusy-time.png" alt-text="Screenshot of the free/busy time.":::
 
 The cross-forest user cannot open the calendar directly and cannot view details based on their individually granted permissions. However, they can do these things by adding another folder in Outlook. To do this, a user selects **File** > **Open** > **Other User's Folder**. If the cross-forest user is granted reviewer or other permissions, the user can see details about the items in the calendar.
 
@@ -51,11 +51,11 @@ The cross-forest user cannot open the calendar directly and cannot view details 
 
 The user may see the subjects of the meetings from the calendar:
 
-:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/meeting-subjects.png" alt-text="A screenshot of the subjects of the meetings from the calendar" border="false":::
+:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/meeting-subjects.png" alt-text="Screenshot of the subjects of the meetings from the calendar" border="false.":::
 
 The user can also open and change calendar items:
 
-:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/open-and-change-calendar-items.png" alt-text="A screenshot of a calendar that you can open or change":::
+:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/open-and-change-calendar-items.png" alt-text="Screenshot of a calendar that you can open or change.":::
 
 > [!NOTE]
 > Folder-level permissions are transferred when a mailbox is migrated to the cloud. Or, the permissions can be added if the object that represents the other user is mail-enabled and can be monitored by an access control list (that is, if the value of the `msExchRecipientDisplayType` attribute is set to **-1073741818**).
@@ -86,10 +86,10 @@ Sharing policies will function similarly for remote organizations. For more info
 
 The user controls how much free/busy information is displayed to users in a remote forest by using the **Permissions** tab in **Calendar Properties** in Outlook.
 
-:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/permissions-tab-in-calendar-properties.png" alt-text="A screenshot of the Permission tab" border="false":::
+:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/permissions-tab-in-calendar-properties.png" alt-text="Screenshot of the Permission tab" border="false.":::
 
 Scheduling Assistant displays the free/busy details that are configured by using the default permissions:
 
-:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/freebusy-details.png" alt-text="A screenshot of the free/busy details":::
+:::image type="content" source="media/users-can-see-only-basic-freebusy-mailbox-information/freebusy-details.png" alt-text="Screenshot of the free/busy details.":::
 
 For more information about cross-forest free/busy configuration, see [Users can't see free/busy information after a mailbox is moved to Microsoft 365](/exchange/troubleshoot/move-mailboxes/cannot-see-free-busy-information).
