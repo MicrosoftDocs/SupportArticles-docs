@@ -83,10 +83,10 @@ To create or change a certificate-based connector, follow these steps:
 
     - If there are no connectors, click :::image type="icon" source="./media/office-365-notice/plus-shape.png"::: (**Add**) to create a connector.
 
-        :::image type="content" source="./media/office-365-notice/add-connector.png" alt-text="Screenshot shows there are no connectors in the Exchange admin center, click Add icon like plus shape to create a connector.":::
+        :::image type="content" source="./media/office-365-notice/add-connector.png" alt-text="Screenshot shows there are no connectors in the Exchange admin center, click Add icon likes plus shape to create a connector.":::
     - If a connector already exists, select it, and then click :::image type="icon" source="./media/office-365-notice/pen-shape.png"::: (**Edit**).
 
-        :::image type="content" source="./media/office-365-notice/edit-connector.png" alt-text="Screenshot shows selecting the connector in the Exchange admin center, and then clicking Edit icon like pen shape.":::
+        :::image type="content" source="./media/office-365-notice/edit-connector.png" alt-text="Screenshot shows selecting the connector in the Exchange admin center, and then clicking Edit icon likes pen shape.":::
 
 3. On the **Select your mail flow scenario** page, select **Your organization's email server** in the **From** box, and then select **Office 365** in the **To** box.
 
