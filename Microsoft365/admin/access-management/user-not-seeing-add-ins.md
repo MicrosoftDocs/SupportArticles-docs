@@ -29,7 +29,7 @@ Now that you've deployed the add-in, your end users can start using it in their 
 
 If the add-in supports add-in commands, the commands appear on the Office ribbon. In the following example, the command appears for the People Graph add-in in the **Insert** tab. The add-in command can appear on any tab. 
   
-:::image type="content" source="./media/user-not-seeing-add-ins/people-graph.png" alt-text="Screenshot of People Graph in the Insert tab."border="false":::
+:::image type="content" source="./media/user-not-seeing-add-ins/people-graph.png" alt-text="Screenshot of People Graph in the Insert tab." border="false":::
   
 If the deployed add-in doesn't support add-in commands or if you want to view all deployed add-ins, you can view them via **My Add-ins** from the **Insert** tab. 
   
@@ -43,7 +43,7 @@ Then select the **Admin Managed** tab along the top in the Office Add-ins window
 
 On the **Home** ribbon, select **Store**, as shown here. Select **Admin-managed** in the left nav. 
   
-:::image type="content" source="./media/user-not-seeing-add-ins/store-button.png" alt-text="Screenshot of the Store button."border="false":::
+:::image type="content" source="./media/user-not-seeing-add-ins/store-button.png" alt-text="Screenshot of the Store button." border="false":::
   
 Users can't see add-in? Try one of these:
   
