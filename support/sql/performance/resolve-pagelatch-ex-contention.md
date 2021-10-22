@@ -104,7 +104,7 @@ BEGIN
     IF EXISTS (SELECT 1 FROM #PageLatchEXContention) 
     BEGIN
         DECLARE optimize_for_seq_key_cursor CURSOR FOR
-            select DbName, DbId, ObjectId, IndexId FROM #PageLatchEXContention 
+            SELECT DbName, DbId, ObjectId, IndexId FROM #PageLatchEXContention 
             
         OPEN optimize_for_seq_key_cursor
         FETCH NEXT FROM optimize_for_seq_key_cursor into @dbname, @dbid, @objectid , @indexid 
@@ -113,7 +113,7 @@ BEGIN
             SELECT 'Consider using below statement to enable OPTIMIZE_FOR_SEQUENTIAL_KEY for the indexes in the "' + @dbname + '" database' AS Recommendation
             SELECT @sql =  'select ''use ' + @dbname + '; ALTER INDEX '' + i.name + '' ON ' + OBJECT_NAME(@objectid, @dbid) + ' SET (OPTIMIZE_FOR_SEQUENTIAL_KEY = ON )'' AS Corrective_Action from #PageLatchEXContention pl JOIN ' + @dbname+'.sys.indexes i ON pl.ObjectID = i.object_id WHERE object_id = ' + CONVERT(VARCHAR, @objectid) + ' AND index_id = ' + CONVERT(VARCHAR, @indexid)
                 
-            --SELECT @sql
+            -- SELECT @sql
             EXECUTE (@sql) 
             FETCH NEXT FROM optimize_for_seq_key_cursor INTO @dbname, @dbid, @objectid , @indexid 
 
@@ -146,7 +146,7 @@ BEGIN
         SELECT 'On SQL Server 2017 or lower versions, you can manually identify the object where contention is occurring using DBCC PAGE locate the m_objId = ??. Then SELECT OBJECT_NAME(object_id_identified) and locate indexes with sequential values in this object' AS Recommendation
         
         DECLARE get_command CURSOR FOR
-            select TSQL_Command from #PageLatchEXContentionLegacy 
+            SELECT TSQL_Command from #PageLatchEXContentionLegacy 
 
         OPEN get_command
         FETCH NEXT FROM get_command into @sql
