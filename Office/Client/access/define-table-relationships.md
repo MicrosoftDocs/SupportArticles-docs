@@ -69,13 +69,13 @@ A one-to-many relationship is created if only one of the related columns is a pr
 
 In the relationship window in Access, the primary key side of a one-to-many relationship is denoted by a number 1. The foreign key side of a relationship is denoted by an infinity symbol.
 
-![An example for one-to-many relationships](./media/define-table-relationships/4052397_en_1.png)
+:::image type="content" source="./media/define-table-relationships/one-to-many-relationships.png" alt-text="Screenshot of an example for one-to-many relationships in the relationships window in Access.":::
 
 #### Many-to-many relationships
 
 In a many-to-many relationship, a row in table A can have many matching rows in table B, and vice versa. You create such a relationship by defining a third table that is called a junction table. The primary key of the junction table consists of the foreign keys from both table A and table B. For example, the "Authors" table and the "Titles" table have a many-to-many relationship that is defined by a one-to-many relationship from each of these tables to the "TitleAuthors" table. The primary key of the "TitleAuthors" table is the combination of the **au_ID** column (the "Authors" table's primary key) and the **title_ID** column (the "Titles" table's primary key).
 
-![An example for many-to-many relationships](./media/define-table-relationships/4052401_en_1.png)
+:::image type="content" source="./media/define-table-relationships/many-to-many-relationships.png" alt-text="Screenshot of an example for many-to-many relationships in the relationships window in Access.":::
 
 #### One-to-one relationships
 
@@ -170,7 +170,7 @@ If you select the **Cascade Delete Related Records** check box when you define 
 
 There are three join types. You can see them in the following screen shot:
 
-![Join types.](./media/define-table-relationships/4052403_en_1.png)
+:::image type="content" source="./media/define-table-relationships/join-properties.png" alt-text="Screenshot of Join Properties, which shows three join types.":::
 
 Option 1 defines an inner join. An inner join is a join in which records from two tables are combined in a query's results only if values in the joined fields meet a specified condition. In a query, the default join is an inner join that selects records only if values in the joined fields match.
 

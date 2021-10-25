@@ -2,31 +2,27 @@
 
 
 
+## Week of October 18, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/20/2021 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/exchange-integration/teams-exchange-interaction-issue) | modified |
+| 10/20/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
+| 10/20/2021 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer, Google Chrome, Firefox or Safari](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+
+
+## Week of October 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/13/2021 | [Guests can't access Files tab for shared files in Teams](/microsoftteams/troubleshoot/files/guests-cannot-access-files) | added |
+
+
 ## Week of October 04, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/5/2021 | [Error when uploading files to a Teams chat](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
-
-
-## Week of September 13, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/15/2021 | [Issues with Teams webinars](/microsoftteams/troubleshoot/meetings/issues-with-webinars) | modified |
-| 9/16/2021 | [Website tab in Teams causes customer confusion](/microsoftteams/troubleshoot/known-issues/website-tabs-cause-confusion-teams) | modified |
-| 9/17/2021 | [Can't access the Files tab on a Teams channel](/microsoftteams/troubleshoot/files/access-files-tab-errors) | modified |
-| 9/17/2021 | [Error when uploading files to a Teams chat](/microsoftteams/troubleshoot/files/cannot-upload-files-or-access-onedrive) | modified |
-| 9/17/2021 | [Error (You don't have access to this file) when opening a file in Teams](/microsoftteams/troubleshoot/known-issues/do-not-have-access-to-this-file-teams) | modified |
-| 9/18/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
-
-
-## Week of September 06, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/7/2021 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
-| 9/7/2021 | [Issues with call transfers](/microsoftteams/troubleshoot/phone-system/direct-routing/issues-with-call-transfers) | added |
